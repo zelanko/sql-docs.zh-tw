@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3f655fc9d0a88ab0c4f11e7b6adbeb0bb405467
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 299c2e0d7306fb1cca33eac4a26c1d3b04dca83c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>記憶體內部 OLTP 資料庫的高可用性支援
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 不論是否具有原生編譯的預存程序，包含經記憶體最佳化的資料表的資料庫皆可完整支援 Always On 可用性群組。  設定中並沒有任何差異，但與不含的情況相比，包含原生編譯的預存程序還支援包含 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 物件的資料庫。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+不論是否具有原生編譯的預存程序，包含記憶體最佳化資料表的資料庫皆可完整支援 AlwaysOn 可用性群組。  設定中並沒有任何差異，但與不含的情況相比，包含原生編譯的預存程序還支援包含 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 物件的資料庫。  
   
  在 AlwaysOn 可用性群組組態中部署記憶體內部 OLTP 資料庫時，主要複本上記憶體最佳化資料表的變更會以記憶體內部方式套用至次要複本上的資料表 (套用 REDO 時)。 這表示容錯移轉至次要複本可能會非常快速，因為資料已在記憶體中。 此外，資料表可供已設定讀取權限之次要複本上的查詢使用。  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56771eba840963660eb0160e6c5e5c45e98980b4
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 831efec8d02c212f5a037423c42148e0c93fd072
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>在 OPENXML 中使用 value () 和 nodes () 方法
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 您可以在 **SELECT** 子句的 **xml** 資料類型上使用多重 **value()** 方法，以產生擷取值的資料列集。 **nodes()** 方法會針對可用於額外查詢的每個選定節點，各產生一個內部參考。 在產生資料列集時，如果所產生的資料列集會有數個資料行，且用來產生資料列集的路徑運算式很複雜時，合併 **nodes()** 和 **value()** 方法會比較有效率。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+您可以在 **SELECT** 子句的 **xml** 資料類型上使用多重 **value()** 方法，以產生擷取值的資料列集。 **nodes()** 方法會針對可用於額外查詢的每個選定節點，各產生一個內部參考。 在產生資料列集時，如果所產生的資料列集會有數個資料行，且用來產生資料列集的路徑運算式很複雜時，合併 **nodes()** 和 **value()** 方法會比較有效率。  
   
  **nodes()** 方法會產生特殊 **xml** 資料類型的執行個體，其中每個執行個體都將其內容設定至不同的選取節點。 這種 XML 執行個體可支援 **query()**、**value()**、**nodes()** 和 **exist()** 方法，並可用於 **count(\*)** 彙總。 所有其他用法都會導致錯誤。  
   

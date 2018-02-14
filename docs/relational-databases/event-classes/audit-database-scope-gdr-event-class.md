@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Database Scope GDR event class
+helpviewer_keywords:
+- Audit Database Scope GDR event class
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef5786b65cfc6a8718ed01a5df4f6741c422b8c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7fe601abc220ce29ed3e1a0a9513fcf39060b24b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 每當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何使用者，對於授與資料庫權限的資料庫專有動作，對陳述式權限發出 GRANT、REVOKE 或 DENY 時，就會發生 **Audit Database Scope GDR** 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+每當  的任何使用者，對於授與資料庫權限的資料庫專有動作，對陳述式權限發出 GRANT、REVOKE 或 DENY 時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for database-only actions such as granting permissions on a database.  
   
 ## <a name="audit-database-scope-gdr-event-class-data-columns"></a>Audit Database Scope GDR 事件類別資料行  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |**TargetLoginName**|**nvarchar**|對於目標為登入的動作 (例如，加入新登入)，這是目標登入的名稱。|42|是|  
 |**TargetLoginSid**|**image**|對於目標為登入的動作 (例如，加入新登入)，這是目標登入的安全性識別碼 (SID)。|43|是|  
 |**TargetUserName**|**nvarchar**|對於目標為資料庫使用者的動作 (例如，授與使用者權限)，這是該使用者的名稱。|39|是|  
-|**TextData**|**ntext**|Grant/Revoke/Deny 陳述式的 SQL 文字。|1|是|  
+|**TextData**|**ntext**|Grant/Revoke/Deny 陳述式的 SQL 文字。|@shouldalert|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   

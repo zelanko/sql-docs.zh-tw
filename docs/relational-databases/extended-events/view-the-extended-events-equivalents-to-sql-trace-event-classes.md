@@ -18,16 +18,16 @@ helpviewer_keywords:
 - extended events [SQL Server], SQL Trace equivalents
 - extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f35f2596f1dd2cdbe08ff5ea2f1b346b775893b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d179d2b485a69fabb747ed02a2e77c420db053fa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>檢視同等於 SQL 追蹤事件類別的擴充事件項目
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

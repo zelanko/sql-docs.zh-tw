@@ -8,7 +8,8 @@ ms.service:
 ms.component: service-broker
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - status information [SQL Server], event notifications
 - metadata [SQL Server], event notifications
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6b8528f6239db6e6de9352cada8a1b63fbf6590
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e8a2f7837c7f18293afe66c168b5d52c8b03da9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="get-information-about-event-notifications"></a>取得事件通知詳細資訊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 下列目錄檢視可用以查詢事件通知的中繼資料。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+下列目錄檢視可用以查詢事件通知的中繼資料。  
   
  **若要取得非伺服器層級的事件通知資訊**  
   

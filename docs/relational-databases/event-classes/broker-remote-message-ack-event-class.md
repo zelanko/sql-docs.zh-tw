@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Broker:Remote Message Ack event class
+helpviewer_keywords:
+- Broker:Remote Message Ack event class
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29b784120a82e5ff41bc2fe8244a133f4629ea9e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e319ab0359c3a12d268f7fdacb6e6c4c88f645bc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 傳送或接收訊息收條時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Broker:Remote Message Ack** 事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 傳送或接收訊息收條時，會產生 **Broker:Remote Message Ack** 事件。  
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Broker:Remote Message Ack 事件類別資料行  
   
-|資料行|型別|說明|資料行編號|可篩選|  
+|資料行|類型|描述|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**BigintData1**|**bigint**|包含收條之訊息的序號。|52|否|  

@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: event classes [SQL Server], QN:Template
+helpviewer_keywords:
+- event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6351cab3f6b1316f1e7128b593f19ee421230d2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2169d940b03d317493f3894c42e24307c324d952
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="qntemplate-event-class"></a>QN:Template 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] QN:Template 事件會報告查詢範本的內部使用資訊。 查詢範本是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 用以共用通知查詢定義的機制。 這些範本是與參數資料表一起建立的。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在建立、使用或終結查詢範本時，會建立此類型的事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+QN:Template 事件會報告查詢範本的內部使用資訊。 查詢範本是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 用以共用通知查詢定義的機制。 這些範本是與參數資料表一起建立的。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在建立、使用或終結查詢範本時，會建立此類型的事件。  
   
 ## <a name="qntemplate-event-class-data-columns"></a>QN:Template 事件類別資料行  
   
-|資料行|型別|說明|資料行編號|可篩選|  
+|資料行|類型|描述|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |ClientProcessID|**int**|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
@@ -50,6 +53,6 @@ ms.lasthandoff: 11/17/2017
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果應用程式使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 會顯示 "Login1"，而 LoginName 則會顯示 "Login2"。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|**ntext**|傳回包含這個事件相關資訊的 XML 文件。 這份文件符合 [SQL Server 查詢通知 Profiler 事件結構描述](http://go.microsoft.com/fwlink/?LinkId=63331) 網頁上所提供的 XML 結構描述。|1|是|  
+|TextData|**ntext**|傳回包含這個事件相關資訊的 XML 文件。 這份文件符合 [SQL Server 查詢通知 Profiler 事件結構描述](http://go.microsoft.com/fwlink/?LinkId=63331) 網頁上所提供的 XML 結構描述。|@shouldalert|是|  
   
   

@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b880084271d88a23e7b31a7a82ea51fda388f2b5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 441a0e2050acc61575ecf7386302b731d31090b8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="load-xml-data"></a>載入 XML 資料
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 您可以透過幾種方式將 XML 資料傳送到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 例如：  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+您可以透過幾種方式將 XML 資料傳送到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 例如：  
   
 -   如果您將資料放在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [n]text 或 image 資料行中，則可使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]將資料表匯入更新的版本。 使用 ALTER TABLE 陳述式將資料行類型變更為 XML。  
   

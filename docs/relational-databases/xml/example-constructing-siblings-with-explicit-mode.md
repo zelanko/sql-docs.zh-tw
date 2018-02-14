@@ -8,24 +8,27 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: EXPLICIT FOR XML mode
+helpviewer_keywords:
+- EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8edc9f350dea037b60d66add0b97ada84241f1e
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 8fa42e6f30f7a37a2e438bb76b52916c8d710504
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>範例：使用 EXPLICIT 模式建構同層級
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 假設您想要建構提供銷售訂單資訊的 XML。 請注意，<`SalesPerson`> 與 <`OrderDetail`> 元素為同層級。 每個 Order 都有一個 <`OrderHeader`> 元素、一個 <`SalesPerson`> 元素，以及一或多個 <`OrderDetail`> 元素。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+假設您想要建構提供銷售訂單資訊的 XML。 請注意，<`SalesPerson`> 與 <`OrderDetail`> 元素為同層級。 每個 Order 都有一個 <`OrderHeader`> 元素、一個 <`SalesPerson`> 元素，以及一或多個 <`OrderDetail`> 元素。  
   
 ```  
 <OrderHeader SalesOrderID=... OrderDate=... CustomerID=... >  

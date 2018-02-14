@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Login Change Property event class
+helpviewer_keywords:
+- Audit Login Change Property event class
 ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c700162bd66e1d8280f10b52f93cc17077dbc37
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f92e1ef79f71bc123a71c67a9cbea5489c6d5a1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-login-change-property-event-class"></a>Audit Login Change Property 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當您使用 **sp_defaultdb** 預存程序、**sp_defaultlanguage** 預存程序或 ALTER LOGIN 陳述式來修改登入的屬性時，就會發生 **Audit Login Change Property** 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+當您使用 **sp_defaultdb** 預存程序、 **sp_defaultlanguage** 預存程序或 ALTER LOGIN 陳述式來修改登入的屬性時，就會發生 **Audit Login Change Property** 事件類別。  
   
 ## <a name="audit-login-change-property-event-class-data-columns"></a>Audit Login Change Property 事件類別資料行  
   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Database Object Take Ownership event class
+helpviewer_keywords:
+- Audit Database Object Take Ownership event class
 ms.assetid: 26409a60-9616-484b-b608-ca554aef08f6
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5dd736048bf30cca9d3dcf8c6c7164cf8a4ee09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff4ed4f03369ce0182b74d724af09e640008156c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-database-object-take-ownership-event-class"></a>Audit Database Object Take Ownership 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Database Object Take Ownership** 事件類別會在資料庫範圍內的物件擁有者有所變更時發生。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Audit Database Object Take Ownership** 事件類別會在資料庫範圍內的物件擁有者有所變更時發生。  
   
 ## <a name="audit-database-object-take-ownership-event-class-data-columns"></a>Audit Database Object Take Ownership 事件類別資料行  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 表示權限檢查成功，值為 0 表示該檢查失敗。|23|是|  
 |**TargetUserName**|**nvarchar**|對於目標為資料庫使用者的動作 (例如，授與使用者權限)，這是該使用者的名稱。|39|是|  
-|**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
+|**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   

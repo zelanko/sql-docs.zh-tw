@@ -8,24 +8,27 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: HIDE directive
+helpviewer_keywords:
+- HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a729cdd52ceb4e3e19f5ea1f0b1c1609b2fe8219
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: b447c0927860e7fe1e4c49e0c0157099349113ce
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-hide-directive"></a>範例：指定 HIDE 指示詞
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 此範例說明 **HIDE** 指示詞的用法。 當您希望查詢可以傳回由查詢傳回的通用資料表中，用以排序資料列的屬性，但又不希望在最後的結果 XML 文件中看見該屬性時，此指示詞就相當有用。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+此範例說明 **HIDE** 指示詞的用法。 當您希望查詢可以傳回由查詢傳回的通用資料表中，用以排序資料列的屬性，但又不希望在最後的結果 XML 文件中看見該屬性時，此指示詞就相當有用。  
   
  此查詢會建構以下 XML：  
   

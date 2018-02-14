@@ -58,11 +58,11 @@ author: MikeRayMSFT
 ms.author: MikeRayMSFT
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 85893d6f71a6caf270a56910418fe8217906ed76
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 32412d70d3dcf52fb467c5c4854526feb2fafe9d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ ms.lasthandoff: 01/18/2018
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
 |FD 啟動器 (全文檢索搜尋)|[LOCAL SERVICE](#Local_Service)|[虛擬帳戶](#VA_Desc)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOCAL SYSTEM](#Local_System)|[LOCAL SYSTEM](#Local_System)|  
 |[!INCLUDE[rsql_extensions](../../includes/rsql-extensions-md.md)]|NTSERVICE\MSSQLLaunchpad|NTSERVICE\MSSQLLaunchpad|  
 |PolyBase 引擎  |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
@@ -161,7 +161,7 @@ ms.lasthandoff: 01/18/2018
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)|  
 |FD 啟動器 (全文檢索搜尋)|[LOCAL SERVICE](#Local_Service)|[虛擬帳戶](#VA_Desc)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOCAL SYSTEM](#Local_System)|[LOCAL SYSTEM](#Local_System)|  
 
 ####  <a name="Changing_Accounts"></a> 變更帳戶內容
@@ -195,7 +195,7 @@ ms.lasthandoff: 01/18/2018
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-    虛擬帳戶 (從 Windows Server 2008 R2 和 Windows 7 開始) 為「受管理的本機帳戶」  ，並會提供下列功能來簡化服務管理工作。 虛擬帳戶是自動管理的，而且虛擬帳戶可以在網域環境中存取網路。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安裝期間針對服務帳戶使用預設值，則會使用以執行個體名稱作為服務名稱的虛擬帳戶，其格式為 **NT SERVICE\\****\<服務名稱>。 以虛擬帳戶執行的服務，會利用電腦帳戶的認證存取網路資源，其格式為 <網域名稱>****\\***<電腦名稱>***$**。  指定虛擬帳戶啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請讓密碼空白。 如果虛擬帳戶無法註冊服務主要名稱 (SPN)，請手動註冊 SPN。 如需手動註冊 SPN 的詳細資訊，請參閱 [手動 SPN 註冊](https://msdn.microsoft.com/library/ms191153.aspx)。  
+    虛擬帳戶 (從 Windows Server 2008 R2 和 Windows 7 開始) 為「受管理的本機帳戶」  ，並會提供下列功能來簡化服務管理工作。 虛擬帳戶是自動管理的，而且虛擬帳戶可以在網域環境中存取網路。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安裝期間針對服務帳戶使用預設值，則會使用以執行個體名稱作為服務名稱的虛擬帳戶，其格式為 **NT SERVICE\\****\<服務名稱>。 以虛擬帳戶執行的服務，會利用電腦帳戶的認證存取網路資源，其格式為 <網域名稱>__\\__<電腦名稱>__$__。  指定虛擬帳戶啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請讓密碼空白。 如果虛擬帳戶無法註冊服務主要名稱 (SPN)，請手動註冊 SPN。 如需手動註冊 SPN 的詳細資訊，請參閱 [手動 SPN 註冊](https://msdn.microsoft.com/library/ms191153.aspx)。  
   
     > [!NOTE]  
     >  虛擬帳戶無法用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，因為虛擬帳戶在叢集的每一個節點上不會有相同的 SID。  
@@ -207,7 +207,7 @@ ms.lasthandoff: 01/18/2018
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的預設執行個體|**NT SERVICE\MSSQLSERVER**|  
     |名為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之 **之**服務的具名執行個體|**NT SERVICE\MSSQL$PAYROLL**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
-    |名為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 **執行個體上的**Agent 服務|**NT SERVICE\SQLAGENT$PAYROLL**|  
+    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 **之**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
  如需受管理的服務帳戶和虛擬帳戶的詳細資訊，請參閱[服務帳戶的逐步指南](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)的**受管理的服務帳戶和虛擬帳戶概念**一節，以及[受管理的服務帳戶常見問題集 (FAQ)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx)。  
   
@@ -636,7 +636,7 @@ Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](.
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器  
   
 -   SQL 寫入器  
   

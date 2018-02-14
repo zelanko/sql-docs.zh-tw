@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: 'TM: Commit Tran Completed event class'
+helpviewer_keywords:
+- 'TM: Commit Tran Completed event class'
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 222a60758258f428c7068185f823af3318c84a2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dd0d440229fd85390e14d0166d1113d8273b990f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] TM: Commit Tran Completed 事件類別指出已完成 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+TM: Commit Tran Completed 事件類別指出已完成 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
   
 ## <a name="tm-commit-tran-completed-event-class-data-columns"></a>TM: Commit Tran Completed 事件類別資料行  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |成功|**int**|1 = 成功。 0 = 失敗 (例如，1 表示權限檢查成功，而 0 表示該檢查失敗)。|23|是|  
-|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
+|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|**bigint**|描述目前交易的 Token。|50|是|  
   

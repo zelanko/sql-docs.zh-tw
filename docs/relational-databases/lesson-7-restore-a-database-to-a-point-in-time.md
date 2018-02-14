@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b321e64b93a696f9a21ceef3279a6b89bea90974
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2341db7864a6122ae9bb182afe664f10fd73359
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>第 7 課：將資料庫還原至某個時間點
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您會將 AdventureWorks2014 資料庫還原至兩個交易記錄備份之間的某個時間點。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在這一課，您會將 AdventureWorks2014 資料庫還原至兩個交易記錄備份之間的某個時間點。  
   
 使用傳統備份時，為了完成時間點還原，您必須使用完整資料庫備份 (可能是差異備份)，以及您想要還原的時間點之前及剛好超過此時間點的所有交易記錄檔。 使用檔案快照集備份時，您只需要兩個相鄰的記錄備份檔案，這兩個檔案會提供您想要還原的時間點之前時間範圍的目標張貼內容。 您只需要兩個記錄檔案快照集備份組，因為每個記錄備份都會建立每個資料庫檔案的檔案快照集 (每個資料檔案和記錄檔)。  
   

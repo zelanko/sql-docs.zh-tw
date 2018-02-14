@@ -8,24 +8,27 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], directories
+helpviewer_keywords:
+- FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce2247de6d55d26b7e2360d4b68149106024e8e0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: fc785c40fae67d160fd8dff1947e964a58c78d67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>使用 FileTables 中的目錄與路徑
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 描述在 FileTable 中儲存檔案的目錄結構。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+描述在 FileTable 中儲存檔案的目錄結構。  
   
 ##  <a name="HowToDirectories"></a> 如何：使用 FileTables 中的目錄與路徑  
  您可使用下列三項函數在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 FileTable 目錄：  

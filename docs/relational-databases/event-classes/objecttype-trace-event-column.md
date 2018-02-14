@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1c0753ed19215c5d45610aa5582fbce2c906cd6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 追蹤事件資料行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Object Type 追蹤事件資料行會用於各種追蹤事件。 此主題描述此資料行和其相關聯定義的可能值。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Object Type 追蹤事件資料行會用於各種追蹤事件。 此主題描述此資料行和其相關聯定義的可能值。  
   
 ## <a name="object-type-column-values"></a>Object Type 資料行值  
   
-|值|定義|  
+|ReplTest1|定義|  
 |-----------|----------------|  
 |8259|檢查條件約束|  
 |8260|預設 (條件約束或獨立)|  
@@ -46,8 +48,8 @@ ms.lasthandoff: 11/17/2017
 |8278|檢視|  
 |8280|擴充預存程序|  
 |16724|CLR 觸發程序|  
-|16964|資料庫|  
-|16975|物件|  
+|16964|[資料庫]|  
+|16975|Object|  
 |17222|全文檢索目錄|  
 |17232|CLR 預存程序|  
 |17235|結構描述|  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |20821|唯一的條件約束|  
 |21057|應用程式角色|  
 |21059|憑證|  
-|21075|Server|  
+|21075|[伺服器]|  
 |21076|Transact-SQL 觸發程序|  
 |21313|組件|  
 |21318|CLR 純量函數|  
@@ -105,7 +107,7 @@ ms.lasthandoff: 11/17/2017
 |22601|索引|  
 |22604|憑證登入|  
 |22611|XMLSchema|  
-|22868|型別|  
+|22868|類型|  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

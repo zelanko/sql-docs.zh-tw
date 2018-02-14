@@ -8,25 +8,27 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.COLUMNMASTERKEY.PAGE.F1
 - SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1
 - SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1
-helpviewer_keywords: Always Encrypted, configure with SSMS
+helpviewer_keywords:
+- Always Encrypted, configure with SSMS
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7a6e6764d71d632cb4f232eecd34e16f38bede57
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 1eb393d92d3ca1beb3e7419706dec3bb4c8001f4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ SSMS 不支援下列兩者之間的角色隔離：管理資料庫的人員 (DBA)
 
 ## <a name="configuring-always-encrypted-using-the-always-encrypted-wizard"></a>使用永遠加密精靈設定永遠加密
 
-[永遠加密精靈](../../../relational-databases/security/encryption/always-encrypted-wizard.md) 是一個功能強大的工具，可讓您設定所選取資料庫資料行的所需加密組態。 根據目前永遠加密組態和所要的目標組態，精靈可以加密資料行、將其解密 (移除加密) 或重新加密 (例如，使用新的資料行加密金鑰，或與針對資料行設定的目前類型不同的加密類型)。 在精靈的單一執行中，可以設定多個資料行。
+[[永遠加密精靈](../../../relational-databases/security/encryption/always-encrypted-wizard.md)] 是一個功能強大的工具，可讓您設定所選取資料庫資料行的所需加密組態。 根據目前永遠加密組態和所要的目標組態，精靈可以加密資料行、將其解密 (移除加密) 或重新加密 (例如，使用新的資料行加密金鑰，或與針對資料行設定的目前類型不同的加密類型)。 在精靈的單一執行中，可以設定多個資料行。
 
 如果您尚未佈建永遠加密的任何金鑰，精靈將會自動產生金鑰。 您只需要挑選資料行主要金鑰的金鑰存放區：Windows 憑證存放區或 Azure 金鑰保存庫。 精靈將自動產生資料庫中金鑰和其中繼資料物件的名稱。 如果您需要深入控制如何佈建您的金鑰 (以及含有資料行主要金鑰之金鑰存放區的更多選擇)，則可以先使用 [新增資料行主要金鑰]  和 [新增資料行加密金鑰]  對話方塊 (如下所述) 來佈建金鑰，再啟動精靈。 在 [永遠加密精靈] 中，您接著可以挑選現有的資料行加密金鑰。
 

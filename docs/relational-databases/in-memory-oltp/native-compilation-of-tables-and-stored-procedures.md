@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ac27d37604a2245346b307b0dff8d648de26ebd
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f9cbe1802a5a4a353ad4af72abcb092187aa8e0a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>資料表和預存程序的原生編譯
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 記憶體內部 OLTP 導入了原生編譯的概念。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可原生編譯用來存取記憶體最佳化資料表的預存程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以透過原生方式編譯記憶體最佳化資料表。 與解譯的 (傳統) [!INCLUDE[tsql](../../includes/tsql-md.md)]相較之下，原生編譯可提供更快速的資料存取並且更有效率地執行查詢。 資料表和預存程序的原生編譯會產生 DLL。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+記憶體中 OLTP 導入了原生編譯的概念。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可原生編譯用來存取記憶體最佳化資料表的預存程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以透過原生方式編譯記憶體最佳化資料表。 與解譯的 (傳統) [!INCLUDE[tsql](../../includes/tsql-md.md)]相較之下，原生編譯可提供更快速的資料存取並且更有效率地執行查詢。 資料表和預存程序的原生編譯會產生 DLL。
 
 另外也支援記憶體最佳化資料表類型的原生編譯。 如需詳細資訊，請參閱 [使用記憶體最佳化加快暫存資料表與資料表變數的速度](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)。
 

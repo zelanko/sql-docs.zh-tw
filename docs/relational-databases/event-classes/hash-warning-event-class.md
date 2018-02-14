@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Hash Warning event class
+helpviewer_keywords:
+- Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e96888456d728f0ac572e526fdc00218d6e3b7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 78d4b5e927ac53e0a76ef758f9acb0028fc818e7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Hash Warning 事件類別可用來監視在雜湊作業期間何時發生雜湊遞迴或雜湊停止 (雜湊釋出)。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Hash Warning 事件類別可用來監視在雜湊作業期間發生雜湊遞迴或雜湊停止 (Hash Bailout) 的時間。  
   
  當建立輸入不符合可用記憶體時，會發生雜湊遞迴，因而將輸入分割為多個需要個別處理的資料分割。 如果這些資料分割中仍有任何資料分割不符合可用記憶體，則這些資料分割會再分為子資料分割，仍是需要個別處理。 這個分割處理會繼續進行，直到每個資料分割都符合可用記憶體或達到最大遞迴等級為止 (顯示於 IntegerData 資料行)。  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |ClientProcessID|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 若用戶端有提供用戶端處理序識別碼，就會填入此資料行。|9|是|  
-|DatabaseID|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，而且伺服器可供使用，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|DatabaseID|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|**nvarchar**|正在執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|**int**|事件類型 = 55。|27|否|  
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  

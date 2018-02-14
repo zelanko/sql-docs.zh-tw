@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ddl
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - DDL triggers, events
 - events [SQL Server], DDL
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1a9d0788789ff16b6f3fad859c13d690f87220a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9ab16db537c4033f0dd68ddd457e9e1a341a7449
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-events"></a>DDL 事件
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 下表列出可用以引發 DDL 觸發程序或事件通知的 DDL 事件。 請注意，每個事件都會對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或預存程序，且陳述式語法已修改為在關鍵字之間加上了底線字元 (_)。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+下表列出可用以引發 DDL 觸發程序或事件通知的 DDL 事件。 請注意，每個事件都會對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或預存程序，且陳述式語法已修改為在關鍵字之間加上了底線字元 (_)。  
   
 > [!IMPORTANT]  
 >  執行類似 DDL 作業的系統預存程序也可以引發 DDL 觸發程序和事件通知。 請測試 DDL 觸發程序和事件通知，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序都會引發基於 CREATE_TYPE 事件而建立的 DDL 觸發程序或事件通知。  

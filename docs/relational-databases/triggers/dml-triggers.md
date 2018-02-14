@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - DML triggers, about DML triggers
 - triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: afb92fc71dcb3581024950cfaac84c5b2dac7968
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 52773af792848bd628c238e0120f08f7441c2d6f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dml-triggers"></a>DML 觸發程序
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] DML 觸發程序是一種特殊類型的預存程序，會在影響觸發程序中所定義之資料表或檢視表的資料操作語言 (DML) 事件執行時自動執行。 DML 事件包括 INSERT、UPDATE 或 DELETE 陳述式。 DML 觸發程序可用以強制執行商務規則和資料完整性、查詢其他資料表，以及包括複雜的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 觸發程序和引發它的陳述式會被視為單一交易處理，而這樣的交易可以從觸發程序內部回復。 如果偵測到伺服器錯誤 (例如，磁碟空間不足)，整個交易就會自動回復。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+DML 觸發程序是一種特殊類型的預存程序，會在影響觸發程序中所定義之資料表或檢視表的資料操作語言 (DML) 事件執行時自動執行。 DML 事件包括 INSERT、UPDATE 或 DELETE 陳述式。 DML 觸發程序可用以強制執行商務規則和資料完整性、查詢其他資料表，以及包括複雜的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 觸發程序和引發它的陳述式會被視為單一交易處理，而這樣的交易可以從觸發程序內部回復。 如果偵測到伺服器錯誤 (例如，磁碟空間不足)，整個交易就會自動回復。  
   
 ## <a name="dml-trigger-benefits"></a>DML 觸發程序的優點  
  DML 觸發程序與條件約束類似，兩者都可強制執行實體完整性或網域完整性。 實體完整性一般應由最低層級的索引強制執行，且應為 PRIMARY KEY 和 UNIQUE 條件約束的一部分，或是與條件約束完全無關。 網域完整性應透過 CHECK 條件約束來強制執行，而參考完整性 (RI) 則應透過 FOREIGN KEY 條件約束來強制執行。 當條件約束所支援的功能無法滿足應用程式的功能需求時，DML 觸發程序即可發揮它的作用。  

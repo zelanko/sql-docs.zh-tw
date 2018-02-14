@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c4b42e36bb09b3fd5a642c5350287dd207d73f0
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 7c46c3a21aa5d2bed2f21b07a7085c4559bb164a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-sql-server"></a>XML 資料 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了功能強大的平台，可針對半結構化的資料管理來開發豐富的應用程式。 支援將 XML 整合至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的所有元件，並包含下列項目：  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了功能強大的平台，可針對半結構化的資料管理來開發豐富的應用程式。 支援將 XML 整合至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的所有元件，並包含下列項目：  
   
 -   **xml** 資料類型。 XML 值可用原生方式儲存在 **xml** 資料類型資料行中，依照 XML 結構描述的集合來設定類型，或維持為不具類型。 您可以對 XML 資料行建立索引。  
   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: 'TM: Rollback Tran Completed event class'
+helpviewer_keywords:
+- 'TM: Rollback Tran Completed event class'
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b71e871f7209b402399ac186b89e35ea82459ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a5244f8a17a280792e7a645ccd6943859adfbdfb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] TM: Rollback Tran Completed 事件類別指出 ROLLBACK TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出新交易是否會在目前交易回復之後啟動。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+TM: Rollback Tran Completed 事件類別指出 ROLLBACK TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出新交易是否會在目前交易回復之後啟動。  
   
 ## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Rollback Tran Completed 事件類別資料行  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |ClientProcessID|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
-|DatabaseID|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，而且伺服器可供使用，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|DatabaseID|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|**nvarchar**|正在執行使用者陳述式的資料庫名稱。|35|是|  
 |錯誤|**int**|給定事件的錯誤號碼。 通常這是存放在 sys.messages 資料表中的錯誤號碼。|31|是|  
 |EventClass|**int**|事件類型 = 188。|27|否|  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |成功|**int**|1 = 成功。 0 = 失敗 (例如：1 表示權限檢查成功，而 0 表示檢查失敗)。|23|是|  
-|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
+|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|**bigint**|描述目前交易的 Token。|50|是|  
   

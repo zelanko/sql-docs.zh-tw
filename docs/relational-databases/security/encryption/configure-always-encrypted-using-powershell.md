@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac3904e6dff2383dac9bbaa09621095b9b2ec11f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5116e95d422b182ddc8f9c102cae7cc286d5a4b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ SqlServer PowerShell 模組提供 Cmdlet 讓您在 Azure SQL Database 與 SQL Se
 
 [此頁面底部](#aecmdletreference)的連結。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 在未裝載 SQL Server 執行個體的安全電腦上安裝 [SqlServer 模組](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) 。 此模組可以直接從 PowerShell 資源庫進行安裝。  如需更多詳細資料，請參閱[下載](../../../ssms/download-sql-server-ps-module.md)指示。
 
@@ -153,7 +154,7 @@ $database | Get-SqlColumnMasterKey
 
 ## <a name="additional-resources"></a>其他資源
 
-- [一律加密 (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted (資料庫引擎)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [永遠加密的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [搭配 .NET Framework Data Provider for SQL Server 使用永遠加密](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [使用 SQL Server Management Studio 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)

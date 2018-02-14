@@ -20,16 +20,17 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4df806bf334669e1faf22111db1a03e192ff80c7
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 42259b77a2b40001824a88ab4e8bf744f25cf720
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 地理位置空間資料類型 (**geography**) 代表圓形表面座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 .NET Common Language Runtime (CLR) 資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型會儲存橢圓體 (圓形地球) 資料，例如 GPS 經緯度座標。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+地理位置空間資料類型 ( **geography**) 代表圓形表面座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 .NET Common Language Runtime (CLR) 資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型會儲存橢圓體 (圓形地球) 資料，例如 GPS 經緯度座標。  
   
  **geography** 類型已預先定義，而且可在每一個資料庫中使用。 您可以建立 **geography** 類型的資料表資料行，並使用與其他系統提供之類型相同的方式來操作 **geography** 資料。  
   

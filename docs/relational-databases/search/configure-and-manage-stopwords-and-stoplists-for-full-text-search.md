@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-caps.latest.revision: "81"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 524988d25f9517d32729b7f10a238c3ece02f243
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df60c8809510a17664f5a5a541cd2c497782c750
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>設定及管理全文檢索搜尋的停用字詞與停用字詞表
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 為精簡全文檢索索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有一種機制，可捨棄無助於搜尋卻經常出現的字串。 這些捨棄的字串稱為 *「停用字詞」*(Stopword)。 在索引建立期間，全文檢索引擎會從全文檢索索引省略停用字詞。 這代表全文檢索查詢不會搜尋停用字詞。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+為精簡全文檢索索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有一種機制，可捨棄無助於搜尋卻經常出現的字串。 這些捨棄的字串稱為 *「停用字詞」*(Stopword)。 在索引建立期間，全文檢索引擎會從全文檢索索引省略停用字詞。 這代表全文檢索查詢不會搜尋停用字詞。  
    
 **停用字詞**。 停用字詞可能是具有特定語言意義的字詞。 例如，在英文中，"a"、"and"、"is" 及 "the" 等字會排除在全文檢索索引外，因為一般而言這些字都無助於搜尋。 停用字詞也可能是不具有語言意義的 *Token*。  
 
@@ -128,7 +130,7 @@ ms.lasthandoff: 11/17/2017
   
 |Word|位置|  
 |----------|--------------|  
-|Instructions|1|  
+|Instructions|@shouldalert|  
 |are|2|  
 |applicable|3|  
 |to|4|  

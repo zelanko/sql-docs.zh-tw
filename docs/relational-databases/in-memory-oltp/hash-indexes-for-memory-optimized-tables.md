@@ -8,25 +8,26 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4cb9c34d3abdc3aee0f51e09b39bca286ed099e9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: def4dc86dc3dfe3d0d7f15f84f6ad503df11ce4e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>為記憶體最佳化資料表的雜湊索引進行疑難排解
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-## <a name="prerequisite"></a>先決條件  
+## <a name="prerequisite"></a>必要條件  
   
 了解這篇文章的重要內容資訊位於︰  
   
@@ -76,7 +77,7 @@ go
   
 ### <a name="monitor-statistics-for-chains-and-empty-buckets"></a>監視鏈結和空值區的統計資料  
   
-您可以執行下列 T-SQL SELECT，來監視雜湊索引的統計健康狀況。 SELECT 會使用名為 **sys.dm_db_xtp_hash_index_stats** 的資料管理檢視 (DMV)。  
+您可以執行下列 T-SQL SELECT，來監視雜湊索引的統計健康狀況。 SELECT 會使用名為 **sys.dm_db_xtp_hash_index_stats**的資料管理檢視 (DMV)。  
   
 ```sql
 SELECT  
@@ -120,7 +121,7 @@ ORDER BY [table], [index];
 2. 在資料表中填入數千個資料列。  
     A. 模數運算子可用來設定 StatusCode 資料行中重複值的比率。  
     B. 迴圈大約會在 1 分鐘內插入 262,144 個資料列。  
-3. 列印 (PRINT) 訊息會要求您執行先前來自 **sys.dm_db_xtp_hash_index_stats** 的 SELECT。  
+3. 列印 (PRINT) 訊息會要求您執行先前來自 **sys.dm_db_xtp_hash_index_stats**的 SELECT。  
   
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  

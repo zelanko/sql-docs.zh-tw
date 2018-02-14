@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - RAW mode, specifying root element example
 - RAW mode, with FOR XML example
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab879d8d0ca97d0f1002441fc83281749a1cafeb
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: fcdaa21682f435291c6e491cc1ac0d230831b81e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>範例：為 FOR XML 產生的 XML 指定根元素
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 藉由在 `FOR XML` 查詢中指定 `ROOT` 選項，您可以要求在產生的 XML 中傳回單一的最上層項目，如下列查詢所示。 為 `ROOT` 指示詞所指定的引數會提供根元素的名稱。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+藉由在 `ROOT` 查詢中指定 `FOR XML` 選項，您可以要求在產生的 XML 中傳回單一的最上層元素，如下列查詢所示。 為 `ROOT` 指示詞所指定的引數會提供根元素的名稱。  
   
 ## <a name="example"></a>範例  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e8a9a30e4221c0c425c45d46b1e3bdddda9a66e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [範例中的記憶體和磁碟空間使用量](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/17/2017
   
 -   「計算資料行」 - 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
 
-    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化資料表和索引支援計算資料行。
 
   
@@ -468,10 +469,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|預設值|94|  
+|MEMORYCLERK_XTP|預設|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|預設值|0|  
-|MEMORYCLERK_XTP|預設值|0|  
+|MEMORYCLERK_XTP|預設|0|  
+|MEMORYCLERK_XTP|預設|0|  
   
  預設記憶體 Clerk 包含全系統記憶體結構，且規模相對較小。 使用者資料庫 (在本例中為識別碼 5 的資料庫) 的記憶體 Clerk 約為 900MB。  
   
@@ -517,10 +518,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|預設值|146|  
+|MEMORYCLERK_XTP|預設|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|預設值|0|  
-|MEMORYCLERK_XTP|預設值|0|  
+|MEMORYCLERK_XTP|預設|0|  
+|MEMORYCLERK_XTP|預設|0|  
   
  如您所見，SQL Server 針對範例資料庫中的記憶體最佳化資料表和索引使用小於 8GB 的記憶體。  
   
@@ -563,10 +564,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|預設值|2261|  
+|MEMORYCLERK_XTP|預設|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|預設值|0|  
-|MEMORYCLERK_XTP|預設值|0|  
+|MEMORYCLERK_XTP|預設|0|  
+|MEMORYCLERK_XTP|預設|0|  
   
  這是預期的結果：當交易式工作負載執行時，才會回收記憶體。  
   
@@ -582,10 +583,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|預設值|1863|  
+|MEMORYCLERK_XTP|預設|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|預設值|0|  
-|MEMORYCLERK_XTP|預設值|0|  
+|MEMORYCLERK_XTP|預設|0|  
+|MEMORYCLERK_XTP|預設|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>記憶體最佳化資料表的磁碟使用狀況  
  您可以使用下列查詢，找到給定時間下，資料庫的檢查點檔案在磁碟上的整體大小：  
@@ -641,8 +642,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**計數**|**在磁碟上的大小 (MB)**|  
 |已預先建立|DATA|16|2048|  
 |已預先建立|DELTA|16|128|  
-|建構中|DATA|1|128|  
-|建構中|DELTA|1|8|  
+|建構中|DATA|@shouldalert|128|  
+|建構中|DELTA|@shouldalert|8|  
   
  如您所見，預先建立的資料和差異檔案使用了大部分空間。 SQL Server 會針對每個邏輯處理器預先建立一組 (資料和差異) 檔案。 此外，系統會為資料檔案預留 128MB 的大小，並為差異檔案預留 8MB 的大小，以便更有效率地將資料插入這些檔案。  
   
@@ -687,8 +688,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**計數**|**在磁碟上的大小 (MB)**|  
 |已預先建立|DATA|16|2048|  
 |已預先建立|DELTA|16|128|  
-|建構中|DATA|1|128|  
-|建構中|DELTA|1|8|  
+|建構中|DATA|@shouldalert|128|  
+|建構中|DELTA|@shouldalert|8|  
   
  我們還有 16 組預先建立的檔案，準備在關閉檢查點之後填入。  
   

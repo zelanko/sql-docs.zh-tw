@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - computed columns, XML
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 825a0a87683ec6913a6985804c6111af0543dc79
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: eb0cca121576000f3f7c5ba42eb4161c7d38f207
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-xml-in-computed-columns"></a>使用計算資料行中的 XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] XML 執行個體可依計算資料行的來源或依計算資料行的類型顯示。 本主題的範例將示範如何搭配計算資料行使用 XML。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+XML 執行個體可依計算資料行的來源或依計算資料行的類型顯示。 本主題的範例將示範如何搭配計算資料行使用 XML。  
   
 ## <a name="creating-computed-columns-from-xml-columns"></a>從 XML 資料行建立計算資料行  
  在下列 `CREATE TABLE` 陳述式中，從 `xml` 計算出`col2`類型資料行 ( `col1`)：  

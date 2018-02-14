@@ -8,27 +8,29 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
-caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cc368641ee1d96d51d9b34a4f29e097b3fb55fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d26accbe02ac42a01dbb4c8bf832facec5b1b99e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mirroring-connection-event-class"></a>資料庫鏡像連接事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Database Mirroring Connection** 事件，以報告資料庫鏡像所管理的傳輸連線狀態。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生**資料庫鏡像連接**事件，以報告資料庫鏡像所管理的傳輸連線狀態。  
   
 ## <a name="database-mirroringconnection-event-class-data-columns"></a>資料庫鏡像：連接事件類別資料行  
   
-|資料行|型別|說明|資料行編號|可篩選|  
+|資料行|類型|描述|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**ClientProcessID**|**int**|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |**錯誤**|**int**|**sys.messages** 中針對事件內文字的訊息識別碼。 如果此事件報告錯誤，這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤號碼。|31|否|  
 |**EventClass**|**int**|擷取的事件類別類型。 **資料庫鏡像連接** 一律為 **151**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
-|**EventSubClass**|**nvarchar**|此連線的連線狀態。 對於此事件，子類別將為下列其中一個值：<br /><br /> **連接中**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在起始傳輸連接。<br /><br /> **Connected**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已建立傳輸連接。<br /><br /> **Connect Failed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法建立傳輸連接。<br /><br /> **Closing**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在關閉傳輸連接。<br /><br /> **Closed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經關閉傳輸連接。<br /><br /> **Accept**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經接受另一個執行個體的傳輸連接。<br /><br /> **Send IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在傳送訊息時遭遇到傳輸錯誤。<br /><br /> **Receive IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在接收訊息時遭遇到傳輸錯誤。|21|是|  
+|**EventSubClass**|**nvarchar**|此連線的連線狀態。 對於此事件，子類別將為下列其中一個值：<br /><br /> **Connecting**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在起始傳輸連接。<br /><br /> **Connected**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已建立傳輸連接。<br /><br /> **Connect Failed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法建立傳輸連接。<br /><br /> **Closing**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在關閉傳輸連接。<br /><br /> **Closed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經關閉傳輸連接。<br /><br /> **Accept**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經接受另一個執行個體的傳輸連接。<br /><br /> **Send IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在傳送訊息時遭遇到傳輸錯誤。<br /><br /> **Receive IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在接收訊息時遭遇到傳輸錯誤。|21|是|  
 |**GUID**|**uniqueidentifier**|此連線的結束點識別碼。|54|否|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 **HOST_NAME** 函數。|8|是|  
 |**IntegerData**|**int**|此連線已經關閉的次數|25|是|  
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**TextData**|**ntext**|與此事件相關的錯誤訊息文字。 對於未報告錯誤的事件，此欄位是空白的。 錯誤訊息有可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息或是 Windows 錯誤訊息。|1|是|  
+|**TextData**|**ntext**|與此事件相關的錯誤訊息文字。 對於未報告錯誤的事件，此欄位是空白的。 錯誤訊息有可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息或是 Windows 錯誤訊息。|@shouldalert|是|  
 |**TransactionID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
   

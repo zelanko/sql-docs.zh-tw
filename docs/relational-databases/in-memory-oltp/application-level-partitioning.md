@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f27dbf8d8a6deb04fc9f45af51d0a90f694e4ef
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b10dd4f325b79672d4b0c880186f9331bc71dc1b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="application-level-partitioning"></a>應用程式層級資料分割
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 此應用程式會處理訂單。 未在最近的訂單上進行多項處理。 舊訂單上未進行多項處理。 最近的訂單位於記憶體最佳化的資料表中。 舊訂單位於磁碟資料表中。 *hotDate* 之後的所有訂單都位於記憶體最佳化資料表中。 *hotDate* 之前的所有訂單都位於磁碟資料表中。 假設有一個具有許多並行交易的極端 OLTP 工作負載。 即使有數項並行交易嘗試變更 *hotDate*，仍必須強制執行此商務規則 (記憶體最佳化資料表中最近的訂單)。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+此應用程式會處理訂單。 未在最近的訂單上進行多項處理。 舊訂單上未進行多項處理。 最近的訂單位於記憶體最佳化的資料表中。 舊訂單位於磁碟資料表中。 *hotDate* 之後的所有訂單都位於記憶體最佳化資料表中。 *hotDate* 之前的所有訂單都位於磁碟資料表中。 假設有一個具有許多並行交易的極端 OLTP 工作負載。 即使有數項並行交易嘗試變更 *hotDate*，仍必須強制執行此商務規則 (記憶體最佳化資料表中最近的訂單)。  
   
  此範例不會針對磁碟資料表使用分割區資料表，但會使用第三個資料表來追蹤兩個資料表之間的明確分割點。 分割點可用來確定新插入的資料一律會根據日期插入適當的資料表。 其也可用來判斷資料的位置。 晚抵達的資料仍會插入適當的資料表。  
   

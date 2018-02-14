@@ -18,16 +18,17 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1f78e577a704b4d1dc8bb62e0edf0f6c60c785ee
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 97c9aa05a5dc7eba5a47a616f15ba5e4faca0b16
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援空間資料和空間索引。 *「空間索引」* (Spatial Index) 是一種類型的擴充索引，可讓您建立空間資料行的索引。 空間資料行是包含空間資料類型資料的資料表資料行，例如 **geometry** 或 **geography**。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援空間資料和空間索引。 *「空間索引」* (Spatial Index) 是一種類型的擴充索引，可讓您建立空間資料行的索引。 空間資料行是包含空間資料類型資料的資料表資料行，例如 **geometry** 或 **geography**。  
   
 > [!IMPORTANT]  
 >  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中導入的空間功能 (包括影響空間索引的功能) 的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  

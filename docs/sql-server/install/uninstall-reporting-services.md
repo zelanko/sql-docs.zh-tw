@@ -14,19 +14,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: bc1a63bdee67c094d21c05f23e9ae2da32af7fbe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89bd9331c7e4d8d89bdd617200dbce2664f00074
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-reporting-services"></a>解除安裝 Reporting Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 解除安裝不會移除您已建立的內容或已修改的設定。 不過，如果有解除安裝完成之後需要的內容，建議您先建立內容的複本，然後再開始進行解除安裝程序。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會移除您已建立的內容或是您已修改的組態。 不過，如果有解除安裝完成之後需要的內容，建議您先建立內容的複本，然後再開始進行解除安裝程序。  
   
 ## <a name="uninstall-sharepoint-mode"></a>解除安裝 SharePoint 模式  
  解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式時會一併移除下列各項：  

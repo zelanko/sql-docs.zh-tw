@@ -8,25 +8,29 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: sql13.swb.configurelogs.errorlog.f1
-helpviewer_keywords: Log File Viewer
+f1_keywords:
+- sql13.swb.configurelogs.errorlog.f1
+helpviewer_keywords:
+- Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36d31e8fe3a5403342c244df36810de2e76f8cb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63be87acc6f5ef1f550f7ec9d03cad7eab93e6a6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="log-file-viewer-f1-help"></a>記錄檔檢視器 F1 說明
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 記錄檔檢視器會顯示許多不同元件的記錄資訊。 當記錄檔檢視器開啟時，使用 **[選取記錄]** 窗格以選取您要顯示的記錄檔。 每個記錄檔都會顯示適用於該記錄檔類型的資料行。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+記錄檔檢視器會顯示許多不同元件的記錄資訊。 當記錄檔檢視器開啟時，使用 **[選取記錄]** 窗格以選取您要顯示的記錄檔。 每個記錄檔都會顯示適用於該記錄檔類型的資料行。  
   
  可用的記錄檔取決於記錄檔檢視器的開啟方式而定。 如需詳細資訊，請參閱[開啟記錄檔檢視器](../../relational-databases/logs/open-log-file-viewer.md)。  
   
@@ -39,7 +43,7 @@ ms.lasthandoff: 11/17/2017
  **匯出**  
  開啟對話方塊，以讓您將 [記錄檔摘要] 格線中所顯示的資訊匯出至文字檔。  
   
- **重新整理**  
+ **[重新整理]**  
  重新整理所選取之記錄檔的檢視。 當套用任何篩選設定時， **[重新整理]** 按鈕會從目標伺服器重新讀取選取的記錄檔。  
   
  **篩選**  

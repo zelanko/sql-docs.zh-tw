@@ -8,37 +8,40 @@ ms.service:
 ms.component: synonyms
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords: sql13.swb.synonym.general.f1
+f1_keywords:
+- sql13.swb.synonym.general.f1
 helpviewer_keywords:
 - creating synonyms
 - synonyms [SQL Server], creating
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4f05aad6b7b3bfd4a69beffb623d98f46f8bc46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7eebe7f6edfc447f36ea4256e392822f288e3acb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-synonyms"></a>建立同義字
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立同義字。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立同義字。  
   
  **本主題內容**  
   
 -   **開始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要使用下列項目來建立同義字：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> 安全性  
  若要以給定結構描述建立同義字，使用者必須擁有 CREATE SYNONYM 權限，並擁有該結構描述或 ALTER SCHEMA 權限。 CREATE SYNONYM 權限是可授與的權限。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -90,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的現有資料表建立同義字。 然後，此同義字將用於後續範例中。  
   
 ```  

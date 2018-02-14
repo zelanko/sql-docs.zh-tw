@@ -17,16 +17,16 @@ helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91fd4695d0b68aabf95f3ba43d2cb30c18595bb8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cff6cc262957d8bffbdc0955a3d276b92b1094f6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="extended-events-tools"></a>擴充事件工具
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者。 這是一項功能強大的工具，可讓您用來建立、更改和管理「擴充事件」工作階段。 如需詳細資訊，請參閱 [針對擴充事件使用 PowerShell 提供者](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 這可讓您建立及執行「擴充事件」主題中所提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體時提供 SQL Server 登入。 這可讓您建立及執行「擴充事件」主題中所提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)。  
   
  除了您所建立的工作階段以外，伺服器上也會有預設系統健康工作階段存在。 此工作階段會收集系統資料，讓您能夠用來協助排除效能問題。 如需詳細資訊，請參閱 [使用 system_health 工作階段](../../relational-databases/extended-events/use-the-system-health-session.md)。  
   
 ## <a name="ddl-statements"></a>DDL 陳述式  
  使用下列 DDL 陳述式，以建立、變更和卸除「擴充事件」工作階段。  
   
-|名稱|描述|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)|建立「擴充事件」工作階段物件，此物件可識別事件的來源、事件工作階段目標及事件工作階段參數。|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)|啟動或停止事件工作階段，或是變更事件工作階段組態。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="catalog-views"></a>目錄檢視  
  使用下列目錄檢視，以取得當您建立事件工作階段時所建立的中繼資料。  
   
-|名稱|描述|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|列出所有事件工作階段定義。|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|針對事件工作階段之每個事件的每個動作傳回資料列。|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  這些檢視要等到工作階段啟動之後，才會包含工作階段資料。  
   
-|名稱|描述|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md)|傳回有關工作階段發送器集區的資訊。|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)|針對事件封裝所公開的每個物件，各傳回一個資料列。|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="system-tables"></a>系統資料表  
  使用下列系統資料表，取得有關 SQL 追蹤事件類別與資料行之「擴充事件」對等項目的資訊。  
   
-|名稱|描述|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|針對對應至 SQL 追蹤事件類別的每個「擴充事件」事件包含一個資料列。|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|針對對應到 SQL 追蹤資料行識別碼的每個擴充事件動作包含一個資料列。|  

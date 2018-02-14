@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SP:CacheInsert event class
+helpviewer_keywords:
+- SP:CacheInsert event class
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 582c3e32438c44a178408186815960f46d703d06
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a162db1162eb99902b7afab84aa42f83205ba5ee
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SP:CacheInsert 事件類別指出已將預存程序插入至程序快取。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SP:CacheInsert 事件類別指出已將預存程序插入至程序快取。  
   
 ## <a name="spcacheinsert-event-class-data-columns"></a>SP:CacheInsert 事件類別資料行  
   
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 這個資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Windows 登入。|64|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|**ntext**|所快取之 SQL 程式碼的文字。|1|是|  
+|TextData|**ntext**|所快取之 SQL 程式碼的文字。|@shouldalert|是|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|**bigint**|描述目前交易的 Token。|50|是|  
   

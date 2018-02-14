@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Showplan XML event class
+helpviewer_keywords:
+- Showplan XML event class
 ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38dd57838cab286714f85716e71b617e493c551c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9034829fb4c0d5174cc66eff34eefe22b4adb22
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan XML 事件類別。 加入此 Showplan XML 事件類別，可識別 Showplan 運算子。 此事件類別會以定義妥善的 XML 文件來儲存每一個事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan XML 事件類別。 加入此 Showplan XML 事件類別，可識別 Showplan 運算子。 此事件類別會以定義妥善的 XML 文件來儲存每一個事件。  
   
  當追蹤中包含 Showplan XML 事件類別時，負擔量將會明顯妨礙效能。 Showplan XML 會在最佳化查詢時儲存所建立的查詢計畫。 若要使造成的負擔降到最低，請將此事件類別限用於追蹤對特定問題的短期監視。  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |BinaryData|**image**|查詢的預估成本。|2|否|  
 |ClientProcessID|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
-|DatabaseID|**int**|由 *database* 陳述式所指定的資料庫識別碼；如果沒有針對指定執行個體發出 USE *database*陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，而且伺服器可供使用，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|DatabaseID|**int**|由 *database* 陳述式所指定的資料庫識別碼；如果沒有針對指定執行個體發出 USE *database*陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|**nvarchar**|資料庫的名稱。|35|否|  
 |Event Class|**int**|事件類型 = 122。|27|否|  
 |EventSequence|**int**|要求中之給定事件的順序。|51|否|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
+|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|**bigint**|用來描述目前交易的 Token。|50|是|  
   

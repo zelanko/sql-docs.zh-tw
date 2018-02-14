@@ -8,35 +8,38 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SP:StmtCompleted event class
+helpviewer_keywords:
+- SP:StmtCompleted event class
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03cc98635538469e135a0b1546005fa218be2d81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f236e410647dc6c00fb381d16e49e4bc268674f6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SP:StmtCompleted 事件類別指出已完成預存程序內的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SP:StmtCompleted 事件類別指出已完成預存程序內的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 ## <a name="spstmtcompleted-event-class-data-columns"></a>SP:StmtCompleted 事件類別資料行  
   
-|資料行名稱|**資料類型**|描述|資料行識別碼|可篩選|  
+|資料行名稱|**Data type**|描述|資料行識別碼|可篩選|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |ClientProcessID|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
 |CPU|**int**|事件所用的 CPU 時間 (以毫秒為單位)。|18|是|  
 |DatabaseID|**int**|執行預存程序之資料庫的識別碼。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|**nvarchar**|執行預存程序之資料庫的名稱。|35|是|  
-|有效期間|**bigint**|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
+|Duration|**bigint**|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
 |EndTime|**datetime**|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。|15|是|  
 |EventClass|**int**|事件類型 = 45。|27|否|  
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 |SourceDatabaseID|**int**|物件所在的資料庫識別碼。|62|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
+|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |Writes|**bigint**|伺服器代表事件執行的實體磁碟寫入數。|17|是|  
 |XactSequence|**bigint**|描述目前交易的 Token。|50|是|  

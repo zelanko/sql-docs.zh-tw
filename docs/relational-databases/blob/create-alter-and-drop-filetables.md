@@ -8,7 +8,8 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e9c1bcfec7bd2d009af31b69317f9fd23b68843
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e402ae5344d8dcae116954856644d206d62f0e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 描述如何建立新的 FileTable，或是改變或卸除現有的 FileTable。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+描述如何建立新的 FileTable，或是改變或卸除現有的 FileTable。  
   
 ##  <a name="BasicsCreate"></a> 建立 FileTable  
  FileTable 是一種特殊化使用者資料表，它具有預先定義且固定的結構描述。 這個結構描述會儲存 FILESTREAM 資料、檔案和目錄資訊，以及檔案屬性。 如需有關 FileTable 結構描述的詳細資訊，請參閱＜ [FileTable Schema](../../relational-databases/blob/filetable-schema.md)＞。  

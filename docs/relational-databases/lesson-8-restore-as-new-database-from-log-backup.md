@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65e5464a1a3ee36420d92b23268ab9aa7cb88c02
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2fccaf04b123ec7ba354ffabef8d21ee6c35845
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>第 8 課： 從記錄備份還原為新的資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您會從檔案快照集交易記錄備份將 AdventureWorks2014 資料庫還原為新的資料庫。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在這一課，您會從檔案快照集交易記錄備份將 AdventureWorks2014 資料庫還原為新的資料庫。  
   
 在此情況下，您會基於商務分析和報告在不同的虛擬機器上執行還原至 SQL Server 執行個體。 還原至不同虛擬機器上的不同執行個體，會基於此目的，將工作負載卸載至專用虛擬機器並進行大小調整，方法是從交易式系統中移除其資源需求。  
   

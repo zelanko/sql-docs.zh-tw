@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Broker:Activation event class
+helpviewer_keywords:
+- Broker:Activation event class
 ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9edc45ac32dee41a04ea0cf615e65d5f3ee15215
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba970c01720a8813e8ab66dcaad239626ddf260c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當佇列監視器啟動一個啟用預存程序、傳送 QUEUE_ACTIVATION 通知或佇列監視器所啟動的一個啟用預存程序結束時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Broker:Activation** 事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當佇列監視器啟動一個啟用預存程序、傳送 QUEUE_ACTIVATION 通知或佇列監視器所啟動的一個啟用預存程序結束時，會產生 **Broker:Activation** 事件。  
   
 ## <a name="brokeractivation-event-class-data-columns"></a>Broker:Activation 事件類別資料行  
   
-|資料行|型別|說明|資料行編號|可篩選|  
+|資料行|類型|描述|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ClientProcessID**|**int**|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database*陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|擁有產生此事件之連接的使用者名稱。|6|是|  
-|**ObjectID**|**int**|與此事件相關聯的佇列。|22|否|  
+|**Exchange Spill**|**int**|與此事件相關聯的佇列。|22|否|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  

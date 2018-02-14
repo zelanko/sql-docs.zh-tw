@@ -8,7 +8,8 @@ ms.service:
 ms.component: udf
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-udf
+ms.technology:
+- dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], viewing
 - status information [SQL Server], user-defined functions
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a71d45d8d304c52592b8ee693525950c3bfed28
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ee41a96246e6808d214b4d421401bd2dff6c6718
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，取得 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用者定義函數之定義或屬性的相關資訊。 您可能需要查看函數的定義才能了解如何從來源資料表衍生出資料；或是查看函數所定義的資料。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用者定義函數之定義或屬性的相關資訊。 您可能需要查看函數的定義才能了解如何從來源資料表衍生出資料；或是查看函數所定義的資料。  
   
 > [!IMPORTANT]  
 >  如果變更函數所參考的物件名稱，就必須修改該函數，使其文字反映新的名稱。 因此，在改變物件名稱時，首先要檢視此物件的相依性以了解是否有相關的函數受到影響。  
@@ -41,11 +43,11 @@ ms.lasthandoff: 11/17/2017
   
 -   **開始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **使用下列方法取得函數的相關資訊：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  若要使用 **sys.sql_expression_dependencies** 尋找函數的所有相依性，需要資料庫的 VIEW DEFINITION 權限以及資料庫之 **sys.sql_expression_dependencies** 的 SELECT 權限。 系統物件定義是公開可見的，就像 OBJECT_DEFINITION 中傳回的定義一樣。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
      下列屬性會出現在 [函數屬性 - *函數名稱*] 對話方塊中。  
   
-     **資料庫**  
+     **[資料庫備份]**  
      包含此函數之資料庫的名稱。  
   
      **Server**  
@@ -164,7 +166,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     USE AdventureWorks2012;  

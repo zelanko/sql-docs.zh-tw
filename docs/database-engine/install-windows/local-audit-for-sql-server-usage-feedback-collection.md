@@ -8,24 +8,28 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Local Audit
+helpviewer_keywords:
+- Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e7f97c11f27f8eb1773c8535ace8e409290750d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1d579ced53344bc871e640de8ab81246ed652325
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用意見收集的本機稽核
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 ## <a name="introduction"></a>簡介
 
 Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能可能會收集　電腦或裝置的相關資訊 (「標準電腦資訊」) 並將此資訊傳送至 Microsoft。 [SQL Server 使用意見收集](http://support.microsoft.com/kb/3153756) 的本機稽核元件會將服務收集的資料寫入至指定的資料夾，代表將傳送給 Microsoft 的資料 (記錄)。 本機稽核的目的是要讓客戶看到 Microsoft 以此功能收集的所有資料，以用於相容性、法規或隱私權驗證的理由。  

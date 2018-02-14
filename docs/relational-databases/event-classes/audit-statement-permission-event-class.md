@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Statement Permission event class
+helpviewer_keywords:
+- Audit Statement Permission event class
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52413975715c122017d32d4a1d6901a044d606f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db99329ebf08184c1be6c17138cfeab80ecef889
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 每當使用陳述式權限時 (如 CREATE TABLE)，就會發生 **Audit Statement Permission** 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+每當使用陳述式權限時 (如 CREATE TABLE)，就會發生 **Audit Statement Permission** 事件類別。  
   
  未來的 **版本可能會移除** Audit Statement Permission [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件類別。 建議您改用 **Audit Schema Object Management** 事件類別。  
   
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
-|**TextData**|**ntext**|需要陳述式權限的 SQL 陳述式文字。|1|是|  
+|**TextData**|**ntext**|需要陳述式權限的 SQL 陳述式文字。|@shouldalert|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   

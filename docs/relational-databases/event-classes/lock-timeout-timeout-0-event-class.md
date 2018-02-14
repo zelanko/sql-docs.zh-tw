@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Timeout event class
+helpviewer_keywords:
+- Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7a88b0bd22adc4e39e17a0b4353d80962a1970a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30cd2031c1ebe36385f4a7f99fea9461ef5d6a48
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Lock:Timeout (逾時 > 0)** 事件類別表示資源 (例如分頁) 上的鎖定要求已逾時，原因是其他交易在所需資源上已有封鎖的鎖定。 此事件類別與 **Lock:Timeout** 事件類別的操作方式相同，差別在於不包括逾時值為 0 的事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Lock:Timeout (逾時 > 0)** 事件類別表示資源 (例如分頁) 上的鎖定要求已逾時，原因是其他交易在所需資源上已有封鎖的鎖定。 此事件類別與 **Lock:Timeout** 事件類別的操作方式相同，差別在於不包括逾時值為 0 的事件。  
   
  如果追蹤使用鎖定探查或逾時值為 0 的其他處理序，請在追蹤中包含 **Lock:Timeout (逾時 > 0)** 事件類別。 這可讓您查看實際逾時發生的地方，但不查看 0 的逾時值。  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |ClientProcessID|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
 |DatabaseID|**int**|發生逾時的資料庫識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|**nvarchar**|發生逾時之資料庫的名稱。|35|是|  
-|有效期間|**bigint**|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
+|Duration|**bigint**|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
 |EndTime|**datetime**|事件結束的時間。 啟動事件類別 (如 **SQL:BatchStarting** 或 **SP:Starting**) 不會擴展這個資料行。|15|是|  
 |EventClass|**int**|事件類型=189。|27|否|  
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |IsSystem|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
 |LoginName|**nvarchar**|使用者登入的名稱 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN\username 格式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入認證)。|11|是|  
 |LoginSid|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 sys.server_principals 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
-|模式|**int**|事件已接收或正在要求的狀態。<br /><br /> 0=NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|是|  
+|[模式]|**int**|事件已接收或正在要求的狀態。<br /><br /> 0=NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|是|  
 |NTDomainName|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |NTUserName|**nvarchar**|Windows 使用者名稱。|6|是|  
 |ObjectID|**int**|物件的識別碼 (如果有且適用的話)。|22|是|  
@@ -59,9 +62,9 @@ ms.lasthandoff: 11/17/2017
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
+|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
-|型別|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|是|  
+|類型|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|是|  
   
 ## <a name="see-also"></a>另請參閱  
  [Lock:Timeout 事件類別](../../relational-databases/event-classes/lock-timeout-event-class.md)   

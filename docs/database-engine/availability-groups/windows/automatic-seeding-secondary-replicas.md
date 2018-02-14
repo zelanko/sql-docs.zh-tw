@@ -10,20 +10,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86282a01e4c9027d9dc340d348a814f61c0f4b3b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>自動植入次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +37,7 @@ ms.lasthandoff: 01/18/2018
 使用自動植入的考量包括：
 
 * [對主要複本的效能和交易記錄影響](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [磁碟配置](#disk-layout)
+* [磁碟配置](#disklayout)
 * [Security](#security)
 
 
@@ -154,9 +156,6 @@ ALTER AVAILABILITY GROUP [<AGName>]
 <a name="sql-server-log"></a> 除了後文所述的[動態管理檢視](#dynamic-management-views)，SQL Server 記錄檔中還可以看到開始和完成自動植入：
 
 ![SQL 伺服器記錄][2]
-
-
-
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>使用自動植入合併備份並還原
 

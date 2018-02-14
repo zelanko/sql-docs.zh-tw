@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a285b7ece1c5f8c84c7cfc1292f4e5a4dffdc6f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入或刪除的資料表
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] DML 觸發程序陳述式使用兩個特殊的資料表：已刪除的資料表和已插入的資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存、常駐記憶體的資料表來測試某些資料修改的效果，以及設定 DML 觸發程序動作的條件。 您無法直接修改這些資料表的資料，或是在這些資料表上執行資料定義語言 (DDL) 作業，例如 CREATE INDEX。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+DML 觸發程序陳述式使用兩個特殊的資料表：已刪除的資料表和已插入的資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存、常駐記憶體的資料表來測試某些資料修改的效果，以及設定 DML 觸發程序動作的條件。 您無法直接修改這些資料表的資料，或是在這些資料表上執行資料定義語言 (DDL) 作業，例如 CREATE INDEX。  
   
  在 DML 觸發程序中，inserted 和 deleted 資料表主要是用來執行下列動作：  
   

@@ -8,27 +8,30 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dc.reporthistory.calendar.f1
+f1_keywords:
+- sql13.swb.dc.reporthistory.calendar.f1
 helpviewer_keywords:
 - collection sets [SQL Server], viewing reports
 - reports [SQL Server], viewing collection set
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c69ab26114e9029be54fd7084a650832f9ee522
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 537ccf1648d36229ead7680826f63d081663c998
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>檢視收集組報表 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 設定管理資料倉儲之後，您就可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中檢視收集組報表。 這些報表是針對安裝期間所安裝的系統資料收集組提供的。 這些報表包括：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+設定管理資料倉儲之後，您就可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中檢視收集組報表。 這些報表是針對安裝期間所安裝的系統資料收集組提供的。 這些報表包括：  
   
 -   磁碟使用量摘要  
   

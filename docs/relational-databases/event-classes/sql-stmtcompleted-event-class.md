@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SQL:StmtCompleted event class
+helpviewer_keywords:
+- SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7deed62adbd5bd5ebbdc11165027372e63f2fb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea9c327fcaf3d29b9ab282f1e7b018f457e2737f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SQL:StmtCompleted 事件類別指出已完成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SQL:StmtCompleted 事件類別指出已完成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 ## <a name="sqlstmtcompleted-event-class-data-columns"></a>SQL:StmtCompleted 事件類別資料行  
   
@@ -34,9 +37,9 @@ ms.lasthandoff: 11/17/2017
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |ClientProcessID|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
 |CPU|**int**|事件所用的 CPU 時間 (以毫秒為單位)。|18|是|  
-|DatabaseID|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，而且伺服器可供使用，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|DatabaseID|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|**nvarchar**|正在執行使用者陳述式的資料庫名稱。|35|是|  
-|有效期間|**bigint**|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
+|Duration|**bigint**|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
 |EndTime|**datetime**|事件結束的時間。|15|是|  
 |EventClass|**int**|事件類型 = 41。|27|否|  
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|**ntext**|已執行的陳述式文字。|1|是|  
+|TextData|**ntext**|已執行的陳述式文字。|@shouldalert|是|  
 |TransactionID|**bigint**|如果陳述式是在交易內執行的，就會是交易的識別碼。|4|是|  
 |Writes|**bigint**|SQL 陳述式發出的頁面寫入數目。|17|是|  
 |XactSequence|**bigint**|描述目前交易的 Token。|50|是|  

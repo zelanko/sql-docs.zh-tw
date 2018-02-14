@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - SQL Server event classes, CLR event category
 - CLR event category [SQL Server]
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48f2d0be0235dfce085e5bc8304e2b022423a46c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 80a97394ab64177fbdaf6607880cf2f51ff65a37
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clr-event-category"></a>CLR 事件類別目錄
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CLR** 事件類別目錄包含了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內執行 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 物件時，所產生的事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**CLR** 事件類別目錄包含了在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Common Language Runtime (CLR) 物件時，所產生的事件類別。  
  
  ## <a name="assembly-load-event-class"></a>Assembly Load 事件類別 
   在執行載入組件的要求時，會發生 **Assembly Load** 事件類別。  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |**LoginSID**|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 **sys.server_principals** 目錄檢視中找到此項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  
-|**ObjectID**|**int**|組件識別碼。|22|是|  
+|**Exchange Spill**|**int**|組件識別碼。|22|是|  
 |**ObjectName**|**nvarchar**|組件的完整名稱。|34|是|  
 |**RequestID**|**int**|包含陳述式之要求的識別碼。|49|是|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|指出組件載入成功 (1) 或失敗 (0)。|23|是|  
-|**TextData**|**ntext**|如果載入成功則為「組件載入成功」；否則為「組件載入失敗」。|1|是|  
+|**TextData**|**ntext**|如果載入成功則為「組件載入成功」；否則為「組件載入失敗」。|@shouldalert|是|  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   

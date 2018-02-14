@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - Audit Database Mirroring Login event class
 - database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d845ba23a517b6afd3e74d9d807dc3cac3f3a794
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e224b60ca56dab7ce2c46d6bf3a554690bc3b0c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Audit Database Mirroring Login** 事件來報告與資料庫鏡像傳輸安全性有關的稽核訊息。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立 **Audit Database Mirroring Login** 事件來報告與資料庫鏡像傳輸安全性有關的稽核訊息。  
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login 事件類別資料行  
   
-|資料行|型別|說明|資料行編號|可篩選|  
+|資料行|類型|描述|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|在此事件類別中未使用。|10|是|  
 |**ClientProcessID**|**int**|在此事件類別中未使用。|9|是|  
@@ -59,9 +61,9 @@ ms.lasthandoff: 11/17/2017
   
  下表列出此事件類別的子類別值。  
   
-|ID|子類別|說明|  
+|ID|子類別|描述|  
 |--------|--------------|-----------------|  
-|1|Login Success|Login Success 事件會報告鄰近之資料庫鏡像登入程序已成功完成。|  
+|@shouldalert|Login Success|Login Success 事件會報告鄰近之資料庫鏡像登入程序已成功完成。|  
 |2|Login Protocol Error|Login Protocol Error 事件會報告資料庫鏡像登入收到格式完整，但對於登入程序之目前狀態而言無效的訊息。 此訊息可能已遺失或未按照順序送出。|  
 |3|Message Format Error|Message Format Error 事件會報告資料庫鏡像登入已收到不符合預期格式的訊息。 訊息可能已損壞，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的程式正將訊息傳送到資料庫鏡像使用的通訊埠。|  
 |4|Negotiate Failure|Negotiate Failure 事件會報告本機資料庫鏡像端點與遠端資料庫鏡像端點支援互斥層級的驗證。|  

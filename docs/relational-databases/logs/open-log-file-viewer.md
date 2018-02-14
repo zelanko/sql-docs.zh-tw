@@ -8,24 +8,27 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Log File Viewer, opening
+helpviewer_keywords:
+- Log File Viewer, opening
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58798cfeb515819c081be5fe24261209d96f18fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 171e5c05bef7c98c2e0ba8402ecd0c3354028c58
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="open-log-file-viewer"></a>開啟記錄檔檢視器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用記錄檔檢視器，以存取下列記錄中所擷取之錯誤和事件的相關資訊：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用記錄檔檢視器，以存取下列記錄中所擷取之錯誤和事件的相關資訊：  
   
 -   稽核集合  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   作業記錄  
   
--   SQL Server  
+-   [SQL Server]  
   
 -   SQL Server Agent  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
  若要存取離線 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記錄檔，您必須具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間以及儲存記錄檔之資料夾的讀取權限。 如需詳細資訊，請參閱 [檢視離線記錄檔](../../relational-databases/logs/view-offline-log-files.md)主題的＜安全性＞一節。  
   
-### <a name="security"></a>安全性  
+### <a name="security"></a>Security  
  需要 securityadmin 固定伺服器角色中的成員資格。  
   
 ### <a name="view-log-files"></a>檢視記錄檔  

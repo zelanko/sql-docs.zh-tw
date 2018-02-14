@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ddl
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - DDL event groups
 - DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec4272b36c365f38793bcf8ccd5692e5933e3164
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c3ffbbf2c2aa0fb781bc6f3a5927d95d4975092f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-event-groups"></a>DDL 事件群組
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 下表列出可用來執行 DDL 觸發程序或事件通知的 DDL 事件群組，以及它們所涵蓋的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 請注意這些事件群組的內含本質。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 觸發程序或事件通知會涵蓋 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 觸發程序或事件通知會涵蓋 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 類型底下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+下表列出可用來執行 DDL 觸發程序或事件通知的 DDL 事件群組，以及它們所涵蓋的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 請注意這些事件群組的內含本質。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 觸發程序或事件通知會涵蓋 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 觸發程序或事件通知會涵蓋 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 類型底下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
 >  執行類似 DDL 作業的某些系統預存程序也可以引發 DDL 觸發程序或事件通知。 請測試 DDL 觸發程序和事件通知，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序都會引發在 CREATE_TYPE 事件上建立的 DDL 觸發程序或事件通知。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 ||||  
 |-|-|-|  
-|parent_type|型別|name|  
+|parent_type|型別|NAME|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

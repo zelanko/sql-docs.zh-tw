@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 107ccdd35c7ba36b74af7121b67b6c17e009cfb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f61ec563867912a713504af1a291bc26507888ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="management-data-warehouse"></a>管理資料倉儲
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 管理資料倉儲是一種關聯式資料庫，其中包含從伺服器 (它是資料收集目標) 收集而來的資料。 這項資料是用來產生系統資料收集組的報表，而且也可用來建立自訂報表。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+管理資料倉儲是一種關聯式資料庫，其中包含從伺服器 (它是資料收集目標) 收集而來的資料。 這項資料是用來產生系統資料收集組的報表，而且也可用來建立自訂報表。  
   
  資料收集器基礎結構會定義實作資料庫管理員所定義之保留原則所需的作業和維護計畫。  
   

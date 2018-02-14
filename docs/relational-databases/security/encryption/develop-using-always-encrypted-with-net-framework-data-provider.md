@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 531989070a8e3f416fee19af797555284294e7da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff8a5cd7317b34e5f5cb09c5fc1b85b3580e7fa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>搭配使用 Always Encrypted 與 .NET Framework Data Provider 進行開發
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 [永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 .NET Framework Data Provider for SQL Server 等啟用了 [永遠加密] 的驅動程式，以清晰簡明的方式加密與解密用戶端應用程式中的敏感性資料，達成此目的。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 [一律加密 (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 在資料庫中設定永遠加密。 這牽涉到佈建永遠加密金鑰，以及設定加密所選資料庫資料行。 如果您的資料庫尚未設定 [永遠加密]，請遵循 [Getting Started with Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5)(永遠加密快速入門) 中的指示操作。
 - 請確定您的開發電腦上安裝了 .NET Framework 4.6 版或更新版本。 如需詳細資料，請參閱 [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx)。 您也需要確定 .NET Framework 4.6 版或更新版本已設定為開發環境中的目標 .NET Framework 版本。 如果使用 Visual Studio，請參閱 [如何：以 .NET Framework 版本為目標](https://msdn.microsoft.com/library/bb398202.aspx)。 
@@ -553,7 +554,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|名稱|描述|導入 .NET 版本
+|[屬性]|描述|導入 .NET 版本
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Windows 憑證存放區的金鑰存放區提供者。|  4.6
 |[SqlColumnEncryptionCngProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Microsoft 加密 API：新一代 (CNG) 的金鑰存放區提供者。|  4.6.1
@@ -573,7 +574,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>另請參閱
 
-- [一律加密 (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted (資料庫引擎)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [永遠加密部落格](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL Database 教學課程︰以 [永遠加密] 保護敏感性資料](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

@@ -29,13 +29,13 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色 (SSIS 服務)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供特定固定資料庫層級角色來協助保護對於儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的封裝的存取。 可用的角色根據您將封裝儲存在 SSIS 目錄資料庫 (SSISDB) 或 msdb 資料庫而有所不同。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供某些固定資料庫層級角色，以協助保護對儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之套件的存取。 可用的角色根據您將封裝儲存在 SSIS 目錄資料庫 (SSISDB) 或 msdb 資料庫而有所不同。  
   
 ## <a name="roles-in-the-ssis-catalog-database-ssisdb"></a>SSIS 目錄資料庫 (SSISDB) 中的角色  
  SSIS 目錄資料庫 (SSISDB) 提供下列固定資料庫層級角色，來協助保護對於封裝和封裝相關資訊的存取。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
      檢視清單包括：[catalog].[projects]、[catalog].[packages]、[catalog].[operations]、[catalog].[extended_operation_info]、[catalog].[operation_messages]、[catalog].[event_messages]、[catalog].[execution_data_statistics]、[catalog].[execution_component_phases]、[catalog].[execution_data_taps]、[catalog].[event_message_context]、[catalog].[executions]、[catalog].[executables]、[catalog].[executable_statistics]、[catalog].[validations]、[catalog].[execution_parameter_values] 和 [catalog].[execution_property_override_values]。  
   
 ## <a name="roles-in-the-msdb-database"></a>msdb 資料庫中的角色  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含以下三個固定資料庫層級角色： **db_ssisadmin**、 **db_ssisltduser**和 **db_ssisoperator**，可用於控制對儲存至 **msdb** 資料庫之封裝的存取。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]將角色指派給封裝。 角色指派會儲存到 **msdb** 資料庫。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含以下三個固定資料庫層級角色：**db_ssisadmin**、**db_ssisltduser** 和 **db_ssisoperator**，可用於控制對儲存至 **msdb** 資料庫之套件的存取。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]將角色指派給封裝。 角色指派會儲存到 **msdb** 資料庫。  
   
 ### <a name="read-and-write-actions"></a>讀取和寫入動作  
  下表描述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中 Windows 及固定資料庫層級角色的讀取和寫入動作。  

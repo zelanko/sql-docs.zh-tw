@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ac5a72654c11211df09c5e15eef3c4e6f02d314
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d95799838948ebbffa9141049d6c75cc1a44227
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指導
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/02/2018
 大量載入具有下列內建的效能最佳化方式：
 -   **平行載入：**您可以執行多個並行大量載入 (bcp 或大量插入)，其中每個載入作業都會載入不同的資料檔案。 與資料列存放區大量載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同的是，您不需要指定 `TABLOCK`，這是因為每個大量匯入執行緒都會專門將資料載入不同的資料列群組 (壓縮或差異資料列群組)，且對其具有獨占鎖定。 使用 `TABLOCK` 會在資料表上強制進行獨佔鎖定，而您無法以平行方式匯入資料。  
 -   **最低限度記錄：**大量載入會對直接進入壓縮資料列群組的資料使用最低限度記錄。 進入差異資料列群組的所有資料則會完整記錄。 這包括任何少於 102,400 個資料列的批次大小。 不過，大量載入的目標是要讓大部分的資料略過差異資料列群組。  
--   **鎖定最佳化︰**載入壓縮資料列群組時，會取資料列群組的 X 鎖定。 然而，當大量載入差異資料列群組時，已取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定「頁/範圍」的鎖定，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
+-   **鎖定最佳化︰**載入壓縮資料列群組時，會取得 資料列群組的 X 鎖定。 然而，當大量載入差異資料列群組時，已取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定「頁/範圍」的鎖定，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
   
 如果您在資料行存放區索引上有一個非叢集 B 型樹狀結構索引，對於索引本身而言，沒有任何鎖定或記錄最佳化，但仍然會有如上所述的叢集資料行存放區索引最佳化。  
   

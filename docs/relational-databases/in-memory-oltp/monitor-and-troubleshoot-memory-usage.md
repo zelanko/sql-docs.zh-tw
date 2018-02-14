@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3158ac5784d00ce59964e3de010d68dd873c21c7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b1e30a7ef6ebf2ee0f2a586950b50e4b1b1744b5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 耗用記憶體的模式與磁碟資料表不同。 您可以使用針對記憶體和記憶體回收子系統提供的 DMV 或效能計數器，監視資料庫中記憶體最佳化資料表和索引所配置和使用的記憶體數量。  如此就能讓您同時深入查看系統和資料庫層級，並且讓您防止因記憶體耗盡而發生問題。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 耗用記憶體的模式與磁碟資料表不同。 您可以使用針對記憶體和記憶體回收子系統提供的 DMV 或效能計數器，監視資料庫中記憶體最佳化資料表和索引所配置和使用的記憶體數量。  如此就能讓您同時深入查看系統和資料庫層級，並且讓您防止因記憶體耗盡而發生問題。  
   
  本主題將涵蓋監視您的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體使用量。  
   

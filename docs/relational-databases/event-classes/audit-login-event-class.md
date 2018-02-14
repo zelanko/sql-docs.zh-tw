@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Login event class
+helpviewer_keywords:
+- Audit Login event class
 ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ebd824d18fe11a2b188bca9acb11902454688ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0fa928aa50d296cfdfadff980e78369f85a0e86
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-login-event-class"></a>Audit Login 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Login** 事件類別表示使用者已成功登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Audit Login** 事件類別表示使用者已順利登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。  
   
 ## <a name="audit-login-event-class-data-columns"></a>Audit Login 事件類別資料行  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|1 = 成功。 0 = 失敗。 這個事件永遠會顯示成功。|23|是|  
-|**TextData**|**ntext**|以分號分隔的所有設定選項清單。|1|是|  
+|**TextData**|**ntext**|以分號分隔的所有設定選項清單。|@shouldalert|是|  
 |**GroupID**|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -8,25 +8,29 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
-helpviewer_keywords: signing stored procedures tutorial [SQL Server]
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 449406b286ef546488574c250723ddf106e77a64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a4a1172ed0ad9dd1f5d8328a4cdd57bf8a04d70
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教學課程：使用憑證簽署預存程序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 這個教學課程說明如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 產生的憑證來簽署預存程序。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+這個教學課程說明如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]產生的憑證來簽署預存程序。  
   
 > [!NOTE]  
 > 若要執行本教學課程中的程式碼，您必須設定使用混合模式安全性，並已安裝 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。 狀況  

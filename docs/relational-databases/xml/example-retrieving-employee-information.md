@@ -8,24 +8,27 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: EXPLICIT mode
+helpviewer_keywords:
+- EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 069bf210891435de0cdd60e5c715ebbdd16ecc19
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c3c7b4150738ac5dbf878014004c3bda20092e33
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-retrieving-employee-information"></a>範例：擷取員工資訊
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 此範例會擷取每個員工的員工識別碼及員工名稱。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，employeeID 可以從 Employee 資料表中的 BusinessEntityID 資料行取得。 員工名稱可以從 Person 資料表取得。 BusinessEntityID 資料行可用於聯結資料表。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+此範例會擷取每個員工的員工識別碼及員工名稱。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，employeeID 可以從 Employee 資料表中的 BusinessEntityID 資料行取得。 員工名稱可以從 Person 資料表取得。 BusinessEntityID 資料行可用於聯結資料表。  
   
  假設想要 FOR XML EXPLICIT 轉換產生 XML，如下所示：  
   

@@ -8,21 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: pages
+helpviewer_keywords:
+- pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0da734a4a4ae5acde02874ea6c4cd53ec52d79f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1561e7c3cea406881dc9722f26a4dfa4cefe0310
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="reading-pages"></a>讀取分頁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

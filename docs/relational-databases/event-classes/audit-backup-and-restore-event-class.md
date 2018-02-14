@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Backup/Restore event class
+helpviewer_keywords:
+- Audit Backup/Restore event class
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb46ef25e7e30bc6e8b65a143db50092661c54cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f4bd2c78aa172e898e6939e899f835a4ec622f8b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-backup-and-restore-event-class"></a>Audit Backup 和 Restore 事件類別
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 每當發出備份或還原命令時，會發生 **Audit Backup/Restore** 事件類別。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+每當發出備份或還原命令時，會發生 **Audit Backup/Restore** 事件類別。  
   
 ## <a name="audit-backuprestore-event-class-data-columns"></a>Audit Backup/Restore 事件類別資料行  
   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: MultiPoint geometry subtype [SQL Server]
+helpviewer_keywords:
+- MultiPoint geometry subtype [SQL Server]
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a88fe4695cf9de09cbd9b43ae9fd476508fb46fe
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 974c077a3086b0ad0bf62a5748eb66c12453175a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="multipoint"></a>MultiPoint
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **MultiPoint** 是零或多個點的集合。 **MultiPoint** 執行個體的界限是空的。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**MultiPoint** 是零或多個點的集合。 **MultiPoint** 執行個體的界限是空的。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立具有 SRID 23 和兩個點的 `geometry MultiPoint` 執行個體：一個點的座標為 (2, 3)，另一個點的座標為 (7, 8)，而 Z 值為 9.5。  

@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data File Auto Shrink event class
+helpviewer_keywords:
+- Data File Auto Shrink event class
 ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47c05cf969cf8b76f8905b097bd07d86fc0baa4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca97f272a4dc24c7e1f610ef33bbd1242cfa2242
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Data File Auto Shrink** 事件類別指出已壓縮資料檔案。 如果資料檔由於有明確指定 ALTER DATABASE 陳述式而進行壓縮，便不會觸發這個事件。 請在監視資料檔大小變更的追蹤中，包含 **Data File Auto Shrink** 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Data File Auto Shrink** 事件類別指出已壓縮資料檔。 如果資料檔由於有明確指定 ALTER DATABASE 陳述式而進行壓縮，便不會觸發這個事件。 請在監視資料檔大小變更的追蹤中，包含 **Data File Auto Shrink** 事件類別。  
   
  如果追蹤中包含 **Data File Auto Shrink** 事件類別，除非資料檔經常壓縮，否則所產生的負擔量不高。  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**有效期間**|**bigint**|壓縮檔案的時間 (以毫秒為單位)。|13|是|  
 |**EndTime**|**datetime**|自動壓縮結束的時間。|18|是|  
 |**EventClass**|**int**|記錄的事件類型 = 94。|27|否|  
-|**EventSequence**|**整數**|批次中的事件類別順序。|51|否|  
+|**EventSequence**|**int**|批次中的事件類別順序。|51|否|  
 |**檔名**|**nvarchar**|所壓縮之檔案的邏輯名稱。|36|是|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，就會填入此資料行。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IntegerData**|**int**|檔案中以 8 KB 為單位減少的分頁數。|25|是|  

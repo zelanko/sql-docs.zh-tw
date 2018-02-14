@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Database Principal Management event class
+helpviewer_keywords:
+- Audit Database Principal Management event class
 ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 390c9b67cfc5746de4a124cc229ff074f743e177
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 404a0b01294facff15f3f09ba3b6d98ba5e1d567
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 從資料庫建立、改變或卸除主體 (例如使用者) 時，就會發生 **Audit Database Principal Management** 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+從資料庫建立、改變或卸除主體 (例如使用者) 時，就會發生 **Audit Database Principal Management** 事件類別。  
   
 ## <a name="audit-database-principal-management-event-class-data-columns"></a>Audit Database Principal Management 事件類別資料行  
   

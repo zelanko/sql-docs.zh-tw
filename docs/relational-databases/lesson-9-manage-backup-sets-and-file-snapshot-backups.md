@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 766a0846-db15-4346-b814-4049039bcbfc
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2e16cd4312b50b700363be0dc85a67d2740a889
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc5bfc42ce8ab0329e923aeb867f46e81cc0e74b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>第 9 課︰管理備份組和檔案快照集備份
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您將會使用 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 系統預存程序來刪除備份組。 這個系統預存程序會刪除備份檔案以及與這個備份組相關聯的每個資料庫檔案上的檔案快照集。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在這一課，您將會使用 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 系統預存程序來刪除備份組。 這個系統預存程序會刪除備份檔案以及與這個備份組相關聯的每個資料庫檔案上的檔案快照集。  
   
 > [!NOTE]  
 > 如果您只是刪除 Azure Blob 容器中的備份檔案來嘗試刪除備份組，則只會刪除備份檔案本身，相關聯的檔案快照集將會予以保留。 如果您發現自己處於這種情況，請使用 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 系統函數來識別孤立檔案快照集 URL，以及使用 [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 系統預存程序來刪除每個孤立檔案快照集。 如需詳細資訊，請參閱  [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  開啟新的查詢視窗，並連接到您的 Azure 虛擬機器中資料庫引擎的 SQL Server 2016 執行個體 (或具有這個容器之讀取和寫入權限的任何 SQL Server 2016 執行個體)。  
   
-3.  將下列 Transact-SQL 指令碼複製並貼入查詢視窗中。 選取您想要刪除的記錄備份與其相關聯的檔案快照集。 適當地修改儲存體帳戶名稱以及您在第 1 課中所指定容器的 URL，並提供記錄備份檔案名稱，然後執行此指令碼。  
+3.  將下列 Transact-SQL 指令碼複製並貼入 [查詢] 視窗中。 選取您想要刪除的記錄備份與其相關聯的檔案快照集。 適當地修改儲存體帳戶名稱以及您在第 1 課中所指定容器的 URL，並提供記錄備份檔案名稱，然後執行此指令碼。  
   
     ```  
   

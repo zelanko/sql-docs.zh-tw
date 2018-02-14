@@ -8,24 +8,27 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 289eada63f153a03f39c58e005a5459b743517ae
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 78de6a2a9f403c08f30ce72f5db8194563ec318a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免與 FILESTREAM 應用程式中的資料庫作業相衝突
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 SqlOpenFilestream() 來開啟 Win32 檔案控制代碼以便讀取或寫入 FILESTREAM BLOB 資料的應用程式可能會與在一般交易中管理的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式發生衝突錯誤。 這包括需要很長時間才能執行完成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 MARS 查詢。 若要有效避免這些衝突類型，您必須仔細地設計應用程式。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用 SqlOpenFilestream() 來開啟 Win32 檔案控制代碼以便讀取或寫入 FILESTREAM BLOB 資料的應用程式可能會與在一般交易中管理的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式發生衝突錯誤。 這包括需要很長時間才能執行完成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 MARS 查詢。 若要有效避免這些衝突類型，您必須仔細地設計應用程式。  
   
  當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或應用程式嘗試開啟 FILESTREAM BLOB 時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會檢查相關聯的交易內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會根據開啟作業是使用 DDL 陳述式、DML 陳述式、擷取資料或管理交易，允許或拒絕此要求。 下表將顯示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根據交易所開啟的檔案類型來判斷允許或拒絕 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   

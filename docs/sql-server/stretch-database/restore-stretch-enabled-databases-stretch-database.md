@@ -8,23 +8,25 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdc75117d959e1f4360d2e801e88ac369476f790
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ffd0968e84119b266c987361847ebcd7e1f8e3ce
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>還原已啟用 Stretch 的資料庫 (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   有必要復原許多類型的失敗、錯誤和嚴重損壞時，請還原備份的資料庫。
   
@@ -50,7 +52,7 @@ Azure 的 SQL Server Stretch Database 服務使用 Azure 儲存體快照集至�
 3. 瀏覽並選取您的資料庫。
 4. 在 [資料庫] 刀鋒視窗頂端，按一下 [還原]。
 5. 指定新的**資料庫名稱**，選取 [還原點] 然後按一下 [建立]。
-6. 資料庫還原程序就會開始，您可以使用 **NOTIFICATIONS** 監視。
+6. 資料庫還原程序就會開始，您可以使用 **NOTIFICATIONS**監視。
 
 ### <a name="recover-a-deleted-azure-database"></a>復原刪除的 Azure 資料庫
 Azure 的 SQL Server Stretch Database 服務，會在卸除資料庫前擷取資料庫快照集，並保留 7 天。 此後即不再保留即時資料庫的快照集。 這可讓您將已刪除的資料庫還原到刪除的時點。

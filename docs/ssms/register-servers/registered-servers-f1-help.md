@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9aab10b621b2981534645a036bb87cf94f83160
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fec25c98a971d3f38d4113042d50a25469e56777
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [已註冊的伺服器] 元件的 F1 說明。 它描述各種選項。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中 [已註冊的伺服器] 元件的 F1 說明。 它描述各種選項。
   
  若要了解已註冊的伺服器，並取得如何處理它們的連結，請移至 [註冊伺服器](../../tools/sql-server-management-studio/register-servers.md) 主題。 
  

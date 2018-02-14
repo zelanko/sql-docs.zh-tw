@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,16 +33,16 @@ helpviewer_keywords:
 - LOB data [SQL Server], defragmenting
 - clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bb6b2fa33306275a158eae801a7ef1afe8e8c828
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6418330e6a0cb588cf1ca84b96838a8b5266eae4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新組織與重建索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

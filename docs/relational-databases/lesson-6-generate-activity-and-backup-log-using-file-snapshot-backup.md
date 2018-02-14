@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ba32c2a03abab77de366687c5e4fe3e72834204
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7deac98fa7bef4e087647aad142c735f01747c67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>第 6 課︰使用檔案快照集備份來產生活動和備份記錄
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在本課程中，您將使用檔案快照集備份，在 AdventureWorks2014 資料庫中產生活動並定期建立交易記錄備份。 如需如何使用檔案快照集備份的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在本課程中，您將使用檔案快照集備份，在 AdventureWorks2014 資料庫中產生活動並定期建立交易記錄備份。 如需如何使用檔案快照集備份的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 若要使用檔案快照集備份，在 AdventureWorks2014 資料庫中產生活動並定期建立交易記錄備份，請遵循下列步驟：  
   

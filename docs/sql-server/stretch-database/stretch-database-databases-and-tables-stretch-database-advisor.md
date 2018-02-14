@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7793add9d2d6e8aceee795cf19e80347df5c14a9
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: c5b4c49b5b2e1c098503bab4e61c8bad0d75f891
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>使用 Data Migration Assistant 識別適用於 Stretch Database 的資料庫和資料表
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   若要識別適用於 Stretch Database 的資料庫和資料表，以及潛在的封鎖問題，請下載並執行 Microsoft Data Migration Assistant。
   

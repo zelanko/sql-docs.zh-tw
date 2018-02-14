@@ -21,14 +21,15 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6fa6e9e16be729fba7334b26b130c8e22525e479
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2701a951f0c8847b028e3a87717ad9ac3a965529
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>變更資料庫相容性模式並使用查詢存放區
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，某些變更只在[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)變更後才啟用。 有數種原因可以完成這項作業：  
   
@@ -37,8 +38,10 @@ ms.lasthandoff: 02/03/2018
 - 查詢處理器的變更會有複雜的影響。 即使對系統進行「良好」變更對多數工作負載而言可能有益，但可能造成其他工作負載的重要查詢發生無法接受的迴歸。 將此邏輯與升級程序區隔可讓功能 (例如查詢存放區) 快速降低計畫選擇迴歸，或甚至在生產伺服器中予以完全避免。  
   
 > [!IMPORTANT]  
-> 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果使用者資料庫在升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100，這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援的最低相容性層級)。 tempdb、model、msdb 和 Resource 資料庫的相容性層級在升級之後會設定為目前相容性層級。
-> master 系統資料庫會繼續保有升級前的相容性層級。 
+> 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。    
+> 如果使用者資料庫在升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100，這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援的最低相容性層級)。    
+> tempdb、model、msdb 和 Resource 資料庫的相容性層級在升級之後會設定為目前相容性層級。   
+> master 系統資料庫會繼續保有升級前的相容性層級。    
   
 啟用新查詢處理器功能的升級程序與產品的發行後服務模型有關。  其中某些修正是在[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) 下所發行。  需要修正程式的客戶可以選擇這些修正程式，而不會造成其他客戶的非預期衰退。 查詢處理器 Hotfix 的發行後服務模型記載在 [這裡](http://support.microsoft.com/kb/974006)。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，移到新的相容性層級表示不再需要追蹤旗標 4199，原因是現在預設會在最新的相容性層級中啟用那些修正。 因此，在升級程序期間，一定要確認在升級程序完成之後未啟用 4199。  
 

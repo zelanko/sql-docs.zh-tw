@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bcdb9f2df0955ff0bb30f9b55d0080b9446391e
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: f8140cdb2a53142fd48765bd4747fe3aa25244fd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>參考內建 XML 結構描述集合 (sys)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 您建立的每一個資料庫，在 **sys** 關聯式結構描述中，都有一個預先定義的**sys** XML 結構描述集合。 此集合會保留這些預先定義的結構描述，所以從其他使用者建立的任何 XML 結構描述集合都能存取這些結構描述。 這些預先定義的結構描述中使用的前置詞在 XQuery 中是有意義的。 只有 **xml** 是保留的前置詞。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+您建立的每一個資料庫，在 **sys** 關聯式結構描述中，都有一個預先定義的 **sys** XML 結構描述集合。 此集合會保留這些預先定義的結構描述，所以從其他使用者建立的任何 XML 結構描述集合都能存取這些結構描述。 這些預先定義的結構描述中使用的前置詞在 XQuery 中是有意義的。 只有 **xml** 是保留的前置詞。  
   
 ```  
 xml = http://www.w3.org/XML/1998/namespace  

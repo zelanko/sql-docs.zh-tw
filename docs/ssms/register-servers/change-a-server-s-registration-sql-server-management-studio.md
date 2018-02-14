@@ -8,26 +8,28 @@ ms.service:
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - modifying registered server connection information
 - Registered Servers [SQL Server], connection information changes
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f059747c1cfc9700207ccc74759bd159f2c63760
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 052fe228bedd393748bd41ac6c51832c51fb23be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>變更伺服器的註冊 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中變更伺服器的註冊。 您隨時可以變更已註冊伺服器的連接資訊。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中變更伺服器的註冊。 您隨時可以變更已註冊伺服器的連接資訊。  
   
 ##  <a name="SSMSProcedure"></a>  
   

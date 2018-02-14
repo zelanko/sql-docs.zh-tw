@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,18 +22,21 @@ helpviewer_keywords:
 - deleting remote logins
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a6a5cbbe3366a14878086d24b1bddd52ec83ee13
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f849361162d08b14091ffd4ef43f4c6a104b6836
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重新命名主控 SQL Server 獨立執行個體的電腦
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 當您變更了執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦名稱之後，便會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間辨識這個新名稱。 您不必重新執行安裝程式，即可重設電腦名稱。 請改用下列步驟來更新儲存在 sys.servers 中而且由系統函式 @@SERVERNAME 所報告的系統中繼資料。 您可以更新系統中繼資料，以便反映使用 @@SERVERNAME 或從 sys.servers 中查詢伺服器名稱之遠端連接和應用程式的電腦名稱變更。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+當您變更了執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦名稱之後，便會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間辨識這個新名稱。 您不必重新執行安裝程式，即可重設電腦名稱。 請改用下列步驟來更新儲存在 sys.servers 中而且由系統函式 @@SERVERNAME 所報告的系統中繼資料。 您可以更新系統中繼資料，以便反映使用 @@SERVERNAME 或從 sys.servers 中查詢伺服器名稱之遠端連接和應用程式的電腦名稱變更。  
   
 您不能使用下列步驟重新命名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 這些步驟只能用來重新命名執行個體名稱中與電腦名稱相對應的部分。 例如，您可以將主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (名為 Instance1) 的電腦名稱 MB1 改成其他名稱，例如 MB2。 不過，該名稱中的執行個體部分 Instance1 將保持不變。 在這個範例中， \\\\*ComputerName*\\*InstanceName* 會從 \\\MB1\Instance1 變更為 \\\MB2\Instance1。  
   

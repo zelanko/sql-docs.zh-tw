@@ -8,26 +8,28 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3570b0da26e256c7ea814e833d7e4bd0d768ef9a
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 5026800fe6d7c37a8d02559b605d3d1039d508b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polygon"></a>多邊形
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Polygon** 是儲存為一連串點的二維介面，這些點可定義一個外部週框環形以及零個或多個內部環形。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Polygon** 是儲存為一連串點的二維度介面，這些點可定義一個外部週框環形以及零個或多個內部環形。  
   
 ## <a name="polygon-instances"></a>Polygon 執行個體  
  **Polygon** 執行個體可以從環形組成 (此環形至少有三個相異點)。 **Polygon** 執行個體也可以是空的。  

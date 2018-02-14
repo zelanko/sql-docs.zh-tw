@@ -8,23 +8,26 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 795e9e627916e62545c95be34c30f79fb4c45d2d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0bcea823209741e5fb675ff770cd89d7ad44d194
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 安裝的新增功能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 只支援安裝 x64 處理器。 如需詳細資訊，請參閱[安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ 只支援安裝 x64 處理器。 如需詳細資訊，請參閱[安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
   
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的安裝會提示您指定目錄，用來儲存所擷取的封裝。 如未輸入位置，伺服器會預設為電腦的系統磁碟機。 在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安裝完成之後，仍會保留所擷取的檔案。  
   

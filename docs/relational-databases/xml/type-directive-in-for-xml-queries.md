@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ade0766fd94e302d6df6204d64acd94b98522ed
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 20d3894f0f2eecbf491e20f10b0258686848b401
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於 [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 的支援，可讓您藉由指定 TYPE 指示詞，選擇性地要求以 **xml** 資料類型傳回 FOR XML 查詢的結果。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、將結果指派至 **xml** 類型變數或撰寫 [巢狀 FOR XML 查詢](../../relational-databases/xml/use-nested-for-xml-queries.md)。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於 [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 的支援，可讓您藉由指定 TYPE 指示詞，選擇性地要求以 **xml** 資料類型傳回 FOR XML 查詢的結果。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、將結果指派至 **xml** 類型變數或撰寫 [巢狀 FOR XML 查詢](../../relational-databases/xml/use-nested-for-xml-queries.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 XML 資料類型的執行個體資料至用戶端，作為不同伺服器建構的結果，例如使用 TYPE 指示詞的 FOR XML 查詢，或使用 **xml** 資料類型從 SQL 資料表資料行和輸出參數傳回 XML 執行個體資料值。 在用戶端應用程式中，ADO.NET 提供者要求以二進位編碼從伺服器傳送此 XML 資料類型資訊。 然而，如果您使用沒有 TYPE 指示詞的 FOR XML，XML 資料會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。 請注意，不含 TYPE 指示詞的最上層 FOR XML 無法與資料指標一起使用。  

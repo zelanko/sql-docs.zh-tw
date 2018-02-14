@@ -19,16 +19,16 @@ helpviewer_keywords:
 - extended events [SQL Server], locks
 - objects [SQL Server], locks
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4ad77913a7e7356c1a04654c17e749261e8a9f4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3bb0a5bf64e10535da964820b5a5ee51c55cc9e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>尋找持有最多鎖定的物件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/17/2017
   
  當此程序中的陳述式完成之後，查詢編輯器的 **[結果]** 索引標籤會顯示以下資料行：  
   
--   name  
+-   NAME  
   
 -   object_id  
   

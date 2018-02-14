@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,21 @@ helpviewer_keywords:
 - 32-bit edition [SQL Server]
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 74f813be2551a06099969a7b49ac6de2a585f6ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ccae571c9784b781197bf5ec462b6a8142d56452
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多個版本和執行個體
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援同一部電腦上的多個[!INCLUDE[ssDE](../../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 您也可以升級舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或在已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需支援的升級案例，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援同一部電腦上的多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 您也可以升級舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或在已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需支援的升級案例，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
 ## <a name="version-components-and-numbering"></a>版本元件和編號  
  下列概念對於了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並存執行個體的行為很有幫助。  

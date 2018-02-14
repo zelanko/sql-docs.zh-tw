@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PreConnect:Completed Event Class
+helpviewer_keywords:
+- PreConnect:Completed Event Class
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ba5e00939d88a810ac709c451d3d9a26706d218
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 380092bc284bdd6ba85f7f7a3d624734b65559ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] PreConnect:Completedevent 類別會指出 LOGON 觸發程序或 Resource Governor 分類函數執行完成。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+PreConnect:Completedevent 類別會指出 LOGON 觸發程序或資源管理員分類函數執行完成。  
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>PreConnect:Completed 事件類別資料行  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |EventSubClass|**int**|1 代表使用者定義的分類函數。|21|是|  
 |StartTime|**datetime**|使用者定義分類函數啟動的時間。|14|是|  
 |EndTime|**datetime**|使用者定義分類函數啟動的時間。|15|是|  
-|有效期間|**bigint**|分類函數使用的時間量 (以百萬分之一秒為單位)。|13|是|  
+|Duration|**bigint**|分類函數使用的時間量 (以百萬分之一秒為單位)。|13|是|  
 |ObjectID|**int**|使用者定義之分類物件的識別碼。|22|是|  
 |CPU|**int**|CPU 使用量 (以毫秒為單位)。|18|是|  
 |Reads|**int**|邏輯讀取的數目。|16|是|  

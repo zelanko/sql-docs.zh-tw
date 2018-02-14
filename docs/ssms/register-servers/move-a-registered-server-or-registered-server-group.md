@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: acc83458670e254fcbbc25f683684621b513f08e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 6cf97c1bdf28d3f6ab6523d463c44a92a6ba7a87
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>移動已註冊的伺服器或已註冊的伺服器群組
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何透過在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中移動已註冊伺服器或伺服器群組的方式，組織 [已註冊的伺服器] 中的伺服器。 伺服器群組可以包含已註冊的伺服器或其他伺服器群組。 伺服器和伺服器群組都可以從一個伺服器群組移到另一個伺服器群組中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主題描述如何透過在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中移動已註冊伺服器或伺服器群組的方式，組織 [已註冊的伺服器] 中的伺服器。 伺服器群組可以包含已註冊的伺服器或其他伺服器群組。 伺服器和伺服器群組都可以從一個伺服器群組移到另一個伺服器群組中。  
   
 ##  <a name="SSMSProcedure"></a>  
   

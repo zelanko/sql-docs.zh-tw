@@ -8,26 +8,28 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Point geometry subtype [SQL Server]
 - geometry data type [SQL Server], spatial data
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f41ebcc7735bfbc3c53789d572f22313dca8a893
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 3fd20af212e94f33bf72ca35f6cf674bb46e50d0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="point"></a>點
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間資料中，**Point** 是一個代表單一位置的 0 維度物件，而且可包含 Z (高度) 和 M (測量) 值。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間資料中， **Point** 是一個代表單一位置的 0 維度物件，而且可包含 Z (高度) 和 M (測量) 值。  
   
 ## <a name="geography-data-type"></a>Geography 資料類型  
  geography 資料類型的 Point 類型代表單一位置，其中 *Lat* 和 *Long* 分別表示緯度和經度。 緯度和經度值會以度數測量。 緯度的值一定會在 [-90, 90] 間隔內，在這個範圍之外輸入的值將會擲回例外狀況。 經度的值一定會在 [-180, 180] 間隔內，在這個範圍之外的輸入值會折返，以配合這個範圍。 例如，如果輸入 190 當作經度，則它會折返到 -170 值。 *SRID* 表示要傳回之 **geography** 例項的空間參考識別碼。  

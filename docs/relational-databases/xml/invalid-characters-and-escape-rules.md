@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, invalid characters
 - FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6a9ee0756ac9e1bfaed51412f82cb9c99c88c3e
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 1490c56f7df93aee63d9a8f90e0902893d2b7d08
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="invalid-characters-and-escape-rules"></a>無效的字元和逸出規則
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 本主題描述 FOR XML 子句如何處理無效的 XML 字元，並列出 XML 名稱中無效字元的逸出規則。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+此主題描述 FOR XML 子句如何處理無效的 XML 字元，並列出 XML 名稱中無效字元的逸出規則。  
   
 ## <a name="for-xml-and-invalid-characters"></a>XML 和無效的字元  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在不使用 TYPE 指示詞的 FOR XML 查詢中傳回無效的 XML 字元時，會將這些字元實體化。  

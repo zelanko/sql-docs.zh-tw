@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Broker:Conversation event class
+helpviewer_keywords:
+- Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 092d248289e6376e8fe889303d17d45c4b35783d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d021508d5b8774e3f3fa0f416819dfee48cc6918
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Conversation** 事件以報告 Service Broker 交談的進度。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Conversation** 事件以報告 Service Broker 交談的進度。  
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation 事件類別資料行  
   
-|資料行|型別|說明|資料行編號|可篩選|  
+|資料行|類型|描述|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**ClientProcessID**|**int**|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |**Severity**|**int**|如果此事件報告錯誤，即為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤嚴重性。|29|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端相關之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**TextData**|**ntext**|交談的目前狀態。 可以具有下列其中一個值：|1|是|  
+|**TextData**|**ntext**|交談的目前狀態。 可以具有下列其中一個值：|@shouldalert|是|  
 |||**SO**。 已開始傳出。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已處理此交談的 BEGIN CONVERSATION，但尚未傳送任何訊息。|||  
 |||**SI**。 已起始傳入。 另一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體啟動了與目前執行個體的新交談，但是目前的執行個體尚未完成第一個訊息的接收動作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果第一個訊息被分割或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到訊息的順序不正確，就可能會建立處於此狀態的交談。 然而，如果收到交談的第一次傳輸包含完整的第一則訊息，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會建立 CO 狀態的交談。|||  
 |||**CO**。 正在交談。 已建立交談，且交談兩端可以傳送訊息。 一般服務的大部分通訊都發生在這個狀態的交談中。|||  
@@ -63,9 +66,9 @@ ms.lasthandoff: 11/17/2017
   
  下表列出此事件類別的子類別值。  
   
-|ID|子類別|說明|  
+|ID|子類別|描述|  
 |--------|--------------|-----------------|  
-|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行 SEND 陳述式時，會產生** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
+|@shouldalert|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行 SEND 陳述式時，會產生** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行未包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生** END CONVERSATION [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生** END CONVERSATION WITH ERROR [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每當 **建立錯誤訊息時，會產生** Broker Initiated Error [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。 例如，當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 未能成功地路由傳送對話的訊息時，Broker 會針對該對話建立一個錯誤訊息，並產生此事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果應用程式結束交談時發生錯誤，不會產生此事件。|  

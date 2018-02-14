@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SQL:StmtRecompile event class
+helpviewer_keywords:
+- SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 359ca7f1f54a28241adc2322c76f027d760a7a1b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df67c9972328d7e418a5f68315bcd46d8d60e369
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SQL:StmtRecompile 事件類別表示所有批次類型造成的陳述式層級重新編譯：預存程序、觸發程序、特定批次及查詢。 使用 sp_executesql、動態 SQL、Prepare 方法、Execute 方法或類似介面可以提交查詢。 應該使用 SQL:StmtRecompile 事件類別來取代 SP:Recompile 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SQL:StmtRecompile 事件類別表示所有批次類型造成的陳述式層級重新編譯：預存程序、觸發程序、特定批次及查詢。 使用 sp_executesql、動態 SQL、Prepare 方法、Execute 方法或類似介面可以提交查詢。 應該使用 SQL:StmtRecompile 事件類別來取代 SP:Recompile 事件類別。  
   
 ## <a name="sqlstmtrecompile-event-class-data-columns"></a>SQL:StmtRecompile 事件類別資料行  
   
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |SPID|**int**|連接的伺服器處理序識別碼。|12|是|  
 |SqlHandle|**varbinary**|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 sys.dm_exec_sql_text()，以便擷取相關聯的 SQL 文字。|63|否|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|**ntext**|重新編譯的 Transact-SQL 陳述式文字。|1|是|  
+|TextData|**ntext**|重新編譯的 Transact-SQL 陳述式文字。|@shouldalert|是|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|**bigint**|描述目前交易的 Token。|50|是|  
   

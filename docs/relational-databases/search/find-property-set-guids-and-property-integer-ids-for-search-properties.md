@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 881c663038225af57b33aeb655306f6ef1d1f1f4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a36b99483ece6d73dd94e9f5d218fdcf8ce4c743
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 本主題討論如何取得將屬性新增至搜尋屬性清單，使全文檢索搜尋能夠進行搜尋所需的值。 這些值包括文件屬性的屬性集 GUID 和屬性整數識別碼。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本主題將討論如何取得將屬性加入至搜尋屬性清單，使全文檢索搜尋能夠進行搜尋所需的值。 這些值包括文件屬性的屬性集 GUID 和屬性整數識別碼。  
   
  IFilter 從二進位資料 (也就是儲存在 **varbinary**、 **varbinary(max)** (包括 **FILESTREAM**) 或 **image** 資料類型資料行中的資料) 擷取的文件屬性可供全文檢索搜尋使用。 若要使擷取的屬性可搜尋，則必須手動將屬性加入至搜尋屬性清單。 同時，搜尋屬性清單必須與一個或多個全文檢索索引產生關聯。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|給定項目的一位或多位作者。|  
 |Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|指派給項目的關鍵字集合 (也稱為標記)。|  
-|型別|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|以正式類型為基礎的認知檔案類型。|  
+|類型|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|以正式類型為基礎的認知檔案類型。|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|項目的標題。 例如文件的標題、郵件的主旨、相片的標題或音樂曲目的名稱。|  
   
  為了鼓勵檔案格式的一致性，Microsoft 已經針對許多文件類別識別了常用且高優先順序的文件屬性子集。 這些類別包括通訊、連絡人、文件、音樂檔案、圖片和視訊。 如需每個類別目錄前幾項排名屬性的詳細資訊，請參閱 Windows Search 文件集中的 [system-defined properties for custom file formats](http://go.microsoft.com/fwlink/?LinkId=144336) (自訂檔案格式的系統定義屬性)。  

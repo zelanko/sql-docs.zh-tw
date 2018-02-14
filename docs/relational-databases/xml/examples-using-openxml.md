@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce5f1474f03cad13c45eefe88202d15e706eb7bc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="examples-using-openxml"></a>範例：使用 OPENXML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 本主題中的範例示範如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+在此主題下的範例將說明如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
 ## <a name="examples"></a>範例  
  在擷取資料時， *rowpattern* 是用來識別 XML 文件中決定資料列的節點。 另外， *rowpattern* 是以 XPath 模式語言表示，該語言使用於 MSXML XPath 實作中。 例如，如果模式結尾是元素或屬性，則會為 *rowpattern*所選取的每一個元素或屬性節點建立一個資料列。  

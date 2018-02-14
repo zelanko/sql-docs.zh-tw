@@ -8,26 +8,29 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: change data capture [SQL Server], other SQL Server features and
+helpviewer_keywords:
+- change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 016d7eb7afb4b95c6a6635d24235d85025ccc4e2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 62ad0bdefa2264f69cddb2ad60ca408e5e91b6a1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>異動資料擷取和其他 SQL Server 功能
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 本主題描述下列功能如何與異動資料擷取互動：  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+此主題描述下列功能如何與變更資料擷取互動：  
   
--   [Change tracking](#ChangeTracking)  
+-   [變更追蹤](#ChangeTracking)  
   
 -   [資料庫鏡像](#DatabaseMirroring)  
   

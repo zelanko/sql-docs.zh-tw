@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: OLEDB Errors event class
+helpviewer_keywords:
+- OLEDB Errors event class
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c10abdfd9ab278115d8f82e84e21036249de7558
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91e0272bfabcf627048567ef9366d5f0306a0236
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 對 OLE DB 提供者的呼叫若傳回錯誤，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中就會發生 OLEDB Errors 事件類別。 在追蹤中包含此事件類別，以檢視 OLE DB 提供者的失敗 HRESULT。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+對 OLE DB 提供者的呼叫若傳回錯誤， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中就會產生 OLEDB Errors 事件類別。 在追蹤中包含此事件類別，以檢視 OLE DB 提供者的失敗 HRESULT。  
   
  當追蹤中包含 OLEDB Errors 事件類別時，效能負擔需視追蹤期間資料庫發生 OLE DB 提供者錯誤的頻率決定。 如果經常發生這類錯誤，追蹤可能會嚴重妨礙效能。  
   
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|**nvarchar**|在 OLE DB 呼叫中傳送與接收的參數。|1|否|  
+|TextData|**nvarchar**|在 OLE DB 呼叫中傳送與接收的參數。|@shouldalert|否|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

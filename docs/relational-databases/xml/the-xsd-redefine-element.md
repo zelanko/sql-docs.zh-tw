@@ -8,24 +8,27 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: xsd:redefine element
+helpviewer_keywords:
+- xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e820b9e1fe5fc0e2f05866258f1e7ac5b27fee1f
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 3865dc2690b6d78acb0d24fc5190ab394dfc0a83
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 項目
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] W3C XSD **redefine** 元素支援重新定義結構描述元件。 不過，此指示詞的支援可能會使效能大幅降低，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也需要重新驗證所有  資料類型執行個體 (其已與重新定義的結構描述建立關聯)。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 伺服器將會拒絕包含 **\<xsd:redefine>** 項目的 XML 結構描述。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+W3C XSD **redefine** 元素支援重新定義結構描述的元件。 不過，此指示詞的支援可能會使效能大幅降低，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也需要重新驗證所有  資料類型執行個體 (其已與重新定義的結構描述建立關聯)。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 伺服器將會拒絕包含 **\<xsd:redefine>** 項目的 XML 結構描述。  
   
  若要更新結構描述或是其元件，您可以改為執行下列動作：  
   

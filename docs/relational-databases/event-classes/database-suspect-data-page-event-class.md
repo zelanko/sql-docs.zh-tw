@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Suspect Data Page event class
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b6882a854d3cb6ea7f4febf7d66ecf09f20e9e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb75bd05b77432f1ca68294bca96e79820f7642e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Database Suspect Data Page** 事件類別指出何時要將頁面新增至 [msdb](../../relational-databases/databases/msdb-database.md) 中的 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 資料表。 請在監視可疑頁面出現的追蹤中包含此事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Database Suspect Data Page** 事件類別指出何時要將頁面加入 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 中的 [suspect_pages](../../relational-databases/databases/msdb-database.md)資料表。 請在監視可疑頁面出現的追蹤中包含此事件類別。  
   
 > [!NOTE]  
 >  這個事件會以非同步的方式發出，與將對應的資料列插入到 **suspect_pages** 資料表無關。 因此，接聽此事件的作業可能無法立即找到對應的 **suspect_pages** 項目。  
@@ -42,10 +44,10 @@ ms.lasthandoff: 11/17/2017
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|已經引發可疑頁面事件之資料庫的識別碼。 這和 **suspect_pages** 資料表的 **database_id** 資料行相同。|3|是|  
 |**EventClass**|**int**|事件的類型是 213。|27|否|  
-|**EventSequence**|**整數**|批次中的事件類別順序。|51|否|  
+|**EventSequence**|**int**|批次中的事件類別順序。|51|否|  
 |**SPID**|**int**|遇到可疑頁面之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件發生的時間。|14|是|  
-|**ObjectID**|**int**|包含可疑頁面之資料庫檔案的識別碼。 這和 **suspect_pages** 資料表的 **file_id** 資料行相同。|22|是|  
+|**Exchange Spill**|**int**|包含可疑頁面之資料庫檔案的識別碼。 這和 **suspect_pages** 資料表的 **file_id** 資料行相同。|22|是|  
 |**ObjectID2**|**int**|檔案內可疑頁面的識別碼。 這和 **suspect_pages** 資料表的 **page_id** 資料行相同。|56|是|  
 |**錯誤**|**int**|發生的錯誤類型。 這個值與 **suspect_pages** 資料表中頁面的 **event_type** 值相同。|31|是|  
   

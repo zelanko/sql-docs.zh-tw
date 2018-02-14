@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Add Member to DB Role event class
+helpviewer_keywords:
+- Audit Add Member to DB Role event class
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e7c3383c6976479b7a5ff01c81d14378293ea12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5be4589264cba5226119a1d46145f8cb77d3181e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當登入新增至資料庫角色或從其中移除時，就會發生 **Audit Add Member to DB Role** 事件類別。 這個事件類別是與 **sp_addrolemember**、 **sp_changegroup**及 **sp_droprolemember** 預存程序搭配使用。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+當登入加入到資料庫角色或從其中移除時，就會發生 **Audit Add Member to DB Role** 事件類別。 這個事件類別是與 **sp_addrolemember**、 **sp_changegroup**及 **sp_droprolemember** 預存程序搭配使用。  
   
 ## <a name="audit-add-member-to-db-role-event-class-data-columns"></a>Audit Add Member to DB Role 事件類別資料行  
   

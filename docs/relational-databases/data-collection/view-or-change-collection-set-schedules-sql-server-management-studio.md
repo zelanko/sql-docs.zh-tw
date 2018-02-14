@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - collection sets [SQL Server], viewing schedules
 - schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 100857d728b87ba771a52c78c20622315a7e6847
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f58af1ebf8e039b935c235ef35118a62f725053
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>檢視或變更收集組排程 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視或變更收集組排程。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來檢視或變更收集組排程。  
   
  收集模式 (快取或非快取) 可決定您要如何對排程進行變更。 快取模式會使用個別的排程來進行收集和上傳。 非快取模式會使用相同的排程來進行收集和上傳。 每一個系統資料收集組的收集模式類型如下：  
   
