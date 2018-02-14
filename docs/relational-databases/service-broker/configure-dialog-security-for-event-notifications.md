@@ -8,24 +8,27 @@ ms.service:
 ms.component: service-broker
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: event notifications [SQL Server], security
+helpviewer_keywords:
+- event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1245278976e4befc38913410d1769bcfeadd1f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7f03652828e07ca4f89d8c6259e4a682735e947
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>設定事件通知的對話安全性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您應該針對傳送訊息到遠端伺服器上 Service Broker 的事件通知，設定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話安全性。 對話方塊安全性必須根據 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話方塊完整安全性模型來手動設定。 完整安全性模型使傳送到遠端伺服器和自遠端伺服器傳送的訊息得以加密和解密。 雖然事件通知是以單一方向傳送，但也會以相反方向傳回其他訊息 (例如錯誤)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話安全性。 對話方塊安全性必須根據 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話方塊完整安全性模型來手動設定。 完整安全性模型使傳送到遠端伺服器和自遠端伺服器傳送的訊息得以加密和解密。 雖然事件通知是以單一方向傳送，但也會以相反方向傳回其他訊息 (例如錯誤)。  
   
 ## <a name="configuring-dialog-security-for-event-notifications"></a>設定事件通知的對話方塊安全性  
  下列步驟描述實作事件通知對話方塊安全性所需的程序。 這些步驟包括要對來源伺服器和目標伺服器採取的動作。 來源伺服器就是建立事件通知的伺服器。 目標伺服器是接收事件通知訊息的伺服器。 在繼續下一步之前，您必須為來源伺服器和目標伺服器完成每一個步驟的動作。  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |-------------------|-------------------|  
 |選擇或建立資料庫來保存事件通知和主要金鑰。|選擇或建立資料庫來保存主要金鑰。|  
 |如果來源資料庫沒有主要金鑰，請 [建立主要金鑰](../../t-sql/statements/create-master-key-transact-sql.md)。 來源和目標資料庫上必須有主要金鑰才能協助保護其個別憑證。|如果目標資料庫沒有主要金鑰，請建立主要金鑰。|  
-|為來源資料庫[建立登入](../../t-sql/statements/create-login-transact-sql.md) 和對應的 [使用者](../../t-sql/statements/create-user-transact-sql.md)。|為目標資料庫建立登入和對應的使用者。|  
+|為來源資料庫[建立登入](../../t-sql/statements/create-login-transact-sql.md) 和對應的 [使用者](../../t-sql/statements/create-user-transact-sql.md) 。|為目標資料庫建立登入和對應的使用者。|  
 |[建立憑證](../../t-sql/statements/create-certificate-transact-sql.md) ，這是來源資料庫的使用者所擁有的憑證。|建立憑證，這是目標資料庫的使用者所擁有的憑證。|  
 |[備份憑證](../../t-sql/statements/backup-certificate-transact-sql.md) 到可供目標伺服器存取的檔案。|備份憑證到可供來源伺服器存取的檔案。|  
 |[建立使用者](../../t-sql/statements/create-user-transact-sql.md)時，指定目標資料庫的使用者和 WITHOUT LOGIN。 此使用者將擁有要從備份檔案建立的目標資料庫憑證。 使用者不必對應到登入，因為此使用者唯一的目的是要擁有接下來的步驟 3 所建立的目標資料庫憑證。|建立使用者時，指定來源資料庫的使用者和 WITHOUT LOGIN。 此使用者將擁有要從備份檔案建立的來源資料庫憑證。 使用者不必對應到登入，因為此使用者唯一的目的是要擁有接下來的步驟 3 所建立的來源資料庫憑證。|  
