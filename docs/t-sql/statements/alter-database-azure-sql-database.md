@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Azure SQL Database) |Microsoft 文件"
 ms.custom: 
-ms.date: 12/20/2017
+ms.date: 02/13/2018
 ms.prod: 
 ms.prod_service: sql-database
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER DATABASE { database_name }
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
+    | EDITION = { 'basic' | 'standard' | 'premium' }   
     | SERVICE_OBJECTIVE = 
                  {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
@@ -69,8 +69,7 @@ ALTER DATABASE { database_name }
    }  
 
 <service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' }
 
 ```  
   
@@ -210,8 +209,10 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
- 修改 (版本 **=**  ['basic' |[標準] |「 高階 」 |premiumrs'])    
- 變更資料庫的服務層。 下列範例會變更版本到`premium`:
+ 修改 (版本 **=**  ['basic' |[標準] |premium'])    
+ 變更資料庫的服務層。 已移除 'premiumrs' 的支援。 如有問題，請使用此電子郵件別名： premium-rs@microsoft.com。
+
+下列範例會變更版本到`premium`:
   
 ```  
 ALTER DATABASE current 
@@ -223,7 +224,7 @@ ALTER DATABASE current
  MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  指定資料庫的大小上限。 大小上限必須符合資料庫的有效 EDITION 屬性值集合。 變更資料庫的大小上限可能也會造成資料庫版本變更。 下表列出 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服務層支援的 MAXSIZE 值與預設值 (D)：  
   
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1 P6 和 PRS1 PRS6**|**P11-P15**|  
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -266,7 +267,7 @@ ALTER DATABASE current
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- 可用的服務目標的值為： `S0`， `S1`， `S2`， `S3`， `S4`， `S6`， `S7`， `S9`， `S12`， `P1`， `P2`，`P4`， `P6`， `P11`， `P15`， `PRS1`， `PRS2`， `PRS4`，和`PRS6`。 服務目標描述和大小、 版本及服務目標組合的詳細資訊，請參閱[Azure SQL Database 服務層和效能層級](http://msdn.microsoft.com/library/azure/dn741336.aspx)。 如果版本不支援指定的 SERVICE_OBJECTIVE，您會收到錯誤。 若要將 SERVICE_OBJECTIVE 值從某一層變更為另一層 (例如，從 S1 到 P1)，您還必須變更 EDITION 值。  
+ 可用的服務目標的值為： `S0`， `S1`， `S2`， `S3`， `S4`， `S6`， `S7`， `S9`， `S12`， `P1`， `P2`，`P4`， `P6`， `P11`，或`P15`。 服務目標描述和大小、 版本及服務目標組合的詳細資訊，請參閱[Azure SQL Database 服務層和效能層級](http://msdn.microsoft.com/library/azure/dn741336.aspx)。 如果版本不支援指定的 SERVICE_OBJECTIVE，您會收到錯誤。 若要將 SERVICE_OBJECTIVE 值從某一層變更為另一層 (例如，從 S1 到 P1)，您還必須變更 EDITION 值。 已移除的 PR 服務目標的支援。 如有問題，請使用此電子郵件別名： premium-rs@microsoft.com。 
   
  MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
  要將現有的資料庫加入至彈性集區中，資料庫的 SERVICE_OBJECTIVE 設 ELASTIC_POOL 並提供彈性集區的名稱。 您也可以使用這個選項的資料庫變更至同一部伺服器內不同彈性集區。 如需詳細資訊，請參閱[建立及管理 SQL Database 彈性集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。 若要從彈性集區中移除資料庫，使用 ALTER DATABASE 將 service_objective，將設定為單一資料庫的效能層級。  
@@ -277,7 +278,7 @@ ALTER DATABASE current
  與 ALLOW_CONNECTIONS {所有 |**否**}  
  當未指定 ALLOW_CONNECTIONS 時，它會設定為否，根據預設。 如果它將所有設定，它是唯讀的資料庫，可讓所有連接的適當權限的登入。  
   
- 與 SERVICE_OBJECTIVE {'S0' |'S1' |'S2' |' S3"|'S4' |'S6' |'S7' |'S9' |'S12' |'P1' |'P2' |'P4' |'P6' |'P11' |'P15' |'PRS1' |'PRS2' |'PRS4' |PRS6'}  
+ 與 SERVICE_OBJECTIVE {'S0' |'S1' |'S2' |' S3"|'S4' |'S6' |'S7' |'S9' |'S12' |'P1' |'P2' |'P4' |'P6' |'P11' |P15'}  
  當未指定 SERVICE_OBJECTIVE 時，次要資料庫會建立在與主要資料庫相同的服務層級。 當指定 SERVICE_OBJECTIVE 時，次要資料庫會建立在指定層級。 此選項支援建立具有成本較低服務層級的地理複寫的次要資料庫。 指定的 SERVICE_OBJECTIVE 必須位在相同的版本做為來源。 例如，您無法指定 S0 如果版本是 premium。  
   
  ELASTIC_POOL (name = \<elastic_pool_name)  
