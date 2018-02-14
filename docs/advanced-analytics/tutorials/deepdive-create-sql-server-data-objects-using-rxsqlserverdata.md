@@ -65,7 +65,7 @@ ms.lasthandoff: 02/11/2018
     sqlFraudTable <- "ccFraudSmall"
     ```
   
-    因為已將執行個體和資料庫名稱指定為連接字串的一部分，所以當您合併兩個變數時，新資料表的「完整」名稱會變成 _instance.database.schema.ccFraudSmall_.。
+    因為已將執行個體和資料庫名稱指定為連接字串的一部分，所以當您合併兩個變數時，新資料表的「完整」名稱會變成 _instance.database.schema.ccFraudSmall_。
   
 3.  具現化資料來源物件之前，請加入一行，指定額外的參數 *rowsPerRead*。  *rowsPerRead* 參數可控制每個批次讀取的資料列數目。
   
