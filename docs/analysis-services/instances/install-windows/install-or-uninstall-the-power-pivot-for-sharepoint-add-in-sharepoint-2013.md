@@ -181,7 +181,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
  您可以使用下列其中一個方法來解除安裝或修復 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]：  
   
-1.  **Windows 控制台：選取 [[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013]****。 按一下 **[解除安裝]** 或 **[修復]**。  
+1.  Windows 控制台： 選取 [[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)][!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013]。 按一下 **[解除安裝]** 或 **[修復]**。  
   
 2.  執行 spPowerPivot.msi，然後選取 **[移除]** 選項或 **[修復]** 選項。  
   
