@@ -1,14 +1,15 @@
 ---
 title: "bcp 公用程式 |Microsoft 文件"
 ms.custom: 
-ms.date: 09/26/2016
+ms.date: 02/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,22 +30,24 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1598d16877f42d0aef9f4a997e47492bd3fee1c7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d394c689e4f4220781342dca687906d46a673c8e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 如需舊版的 SQL Server 相關的內容，請參閱[bcp 公用程式](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)。
 
+
+ > 如需使用 Azure SQL 資料倉儲中的 bcp 的詳細資訊，請參閱[載入資料有 bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
   **b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定格式，在 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
   
@@ -66,6 +69,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#E">-E</a>]
     [<a href="#f">-f format_file</a>]
     [<a href="#F">-F first_row</a>]
+    [<a href="#G">-G Azure Active Directory Authentication</a>]
     [<a href="#h">-h"hint [,...n]"</a>]
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
@@ -112,7 +116,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  ***owner***<a name="schema"></a>  
  這是資料表或檢視表的擁有者名稱。 如果執行該作業的使用者擁有指定的資料表或檢視表，則可選擇是否要使用*owner* 。 如果未指定 *owner*，且執行作業的使用者並不擁有指定的資料表或檢視表，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會傳回錯誤訊息，並取消作業。  
   
-**"** ***query*** **"**<a name="query"></a> Is a [!INCLUDE[tsql](../includes/tsql-md.md)] query that returns a result set. 如果查詢傳回多個結果集，則只會將第一個結果集複製到資料檔案中，並會忽略接下來的結果集。 請利用雙引號括住查詢，利用單引號括住內嵌在查詢中的任何項目。 從查詢中複製大量資料時，也必須指定**queryout** 。  
+**「** ***查詢*** **"** <a name="query"> </a>是[!INCLUDE[tsql](../includes/tsql-md.md)]傳回結果集的查詢。 如果查詢傳回多個結果集，則只會將第一個結果集複製到資料檔案中，並會忽略接下來的結果集。 請利用雙引號括住查詢，利用單引號括住內嵌在查詢中的任何項目。 從查詢中複製大量資料時，也必須指定**queryout** 。  
   
  只要在預存程序內參考的所有資料表在 bcp 陳述式執行之前就已存在，查詢就可以參考預存程序。 例如，如果預存程序產生暫存資料表，則 **bcp** 陳述式會失敗，這是因為暫存資料表只可在執行階段使用，而無法在陳述式執行階段使用。 在此種情況下，請考慮將預存程序的結果插入資料表中，然後使用 **bcp** 將資料表的資料複製到資料檔案。  
   
@@ -177,10 +181,49 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  如果 *format_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-f** 與 *format_file* 值之間加上空格。  
   
- **-F** ***first_row***<a name="F"></a>  
+**-F** ***first_row***<a name="F"></a>  
  指定要從資料表匯出或從資料檔案匯入之第一個資料列的號碼。 這個參數需要大於 (>) 0、小於 (<) 或等於 (=) 總列數的值。 如果沒有這個參數，預設值是檔案中的第一個資料列。  
   
  *first_row* 可以是值高達 2^63-1 的正整數。 **-F** *first_row* 是以 1 為基底。  
+
+**-G**<a name="G"></a>  
+ 這個參數是用戶端使用連接到 Azure SQL Database 或 Azure SQL 資料倉儲時，指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要[14.0.3008.27 版本或更新版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp-v。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證的驗證的 SQL 資料庫或 SQL 資料倉儲](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
+
+> [!TIP]
+>  若要檢查您的 bcp 版本是否包含 Azure Active Directory 驗證 (AAD) 類型的支援**bcp-** (bcp\<空間 >\<虛線 >\<虛線 >)，並確認您看到-G 的清單中提供的引數。
+
+- **Azure Active Directory 使用者名稱和密碼：** 
+
+    當您想要使用 Azure Active Directory 使用者名稱和密碼時，您可以提供 **-G** 選項，並同時提供 **-U** 和 **-P** 選項來使用使用者名稱和密碼。 
+
+    下列範例會匯出資料，使用 Azure AD 使用者名稱和使用者名稱和密碼是 AAD 認證的密碼。 此範例會將匯出資料表`bcptest`從資料庫`testdb`從 Azure 伺服器`aadserver.database.windows.net`，並將資料儲存在檔案中`c:\last\data1.dat`:
+    ``` 
+    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ``` 
+
+    下列範例會使用 Azure AD 使用者名稱的資料匯入和使用者名稱和密碼是 AAD 認證的密碼。 此範例從檔案匯入資料`c:\last\data1.dat`插入資料表`bcptest`資料庫`testdb`Azure 伺服器上`aadserver.database.windows.net`使用 Azure AD 使用者/密碼：
+    ```
+    bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ```
+
+
+
+- **Azure Active Directory 整合式** 
+ 
+    對於 Azure Active Directory 整合式驗證，提供**-G**選項但沒有使用者名稱或密碼。 此設定會假設目前的 Windows 使用者帳戶 （帳戶下執行的 bcp 命令） 會與 Azure AD 同盟： 
+
+    下列範例會匯出資料，使用 Azure AD 整合的帳戶。 此範例會將匯出資料表`bcptest`從資料庫`testdb`使用從 Azure 伺服器的 Azure AD 整合式驗證`aadserver.database.windows.net`，並將資料儲存在檔案中`c:\last\data2.dat`:
+
+    ```
+    bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
+    下列範例會匯入資料，使用 Azure AD 整合式的驗證此範例從檔案匯入資料`c:\last\data2.txt`插入資料表`bcptest`資料庫`testdb`Azure 伺服器上`aadserver.database.windows.net`使用 Azure AD 整合式的驗證：
+
+    ```
+    bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> 指定要在資料大量匯入資料表或檢視之中的期間使用的提示。  
   
@@ -321,7 +364,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **90** = [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]  
   
- **100** = [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+ **100**  =  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
   
  **110** = [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
@@ -329,7 +372,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **130** = [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
- 例如，若要產生 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]不支援但在新版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中所引入的資料類型，請使用 -V80 選項。  
+ 例如，若要產生 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] 不支援但在新版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中所引入的資料類型，請使用 -V80 選項。  
   
  如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   

@@ -4,7 +4,7 @@ description: "請檢查並設定在 Linux 上的 SQL Server 2017 來源儲存機
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/07/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定安裝與升級 SQL Server on Linux 的儲存機制
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/13/2018
 > [!IMPORTANT]
 > 如果您先前安裝 CTP 或 RC 版本的 SQL Server 2017，您必須使用本文章中的步驟來註冊通用版本上市 (GA) 存放庫和升級或重新安裝。 SQL Server 2017 的 preview 版本不支援，而且將到期。
 
-## <a id="repositories"></a>儲存機制
+## <a id="repositories"></a> 儲存機制
 
 當您安裝 SQL Server on Linux 時，您必須設定 Microsoft 儲存機制。 這個儲存機制用來取得資料庫引擎的封裝， **mssql 伺服器**，和相關的 SQL Server 封裝。 目前有三個主要的儲存機制：
 
@@ -181,8 +181,5 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 > [!IMPORTANT]
 > 此時，如果您選擇使用其中安裝文件中，例如[快速入門](sql-server-linux-setup.md#platforms)，請記住您已設定目標存放庫。 教學課程中不重複該步驟。 特別是如果您設定的 GDR 儲存機制，因為快速入門使用 CU 儲存機制。
-
-> [!IMPORTANT]
-> 任何版本的 SQL Server 2017 CTP 2.1 之前必須先升級至最少 2.1 升級至 GA 之前 另一個選擇是備份您的資料庫，解除安裝先前的版本，然後再執行 GA 版本的全新安裝。
 
 如需有關如何在 Linux 上安裝 SQL Server 2017 的詳細資訊，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。

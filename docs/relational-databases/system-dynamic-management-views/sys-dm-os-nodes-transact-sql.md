@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 02/13/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -27,29 +27,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2abdd42300c8264f87513f428c7c6f4aa22645d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 53d10c2bc54517db851ef1fe40cb727c799ef223
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  名為 SQLOS 的內部元件會建立模擬硬體處理器位置的節點結構。 您可以使用軟體 NUMA 來建立自訂節點配置，藉以變更這些結構。  
+名為 SQLOS 的內部元件會建立模擬硬體處理器位置的節點結構。 這些結構可以透過變更[NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)來建立自訂節點配置。  
+
+> [!NOTE]
+> 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]會自動使用軟體 NUMA 的特定硬體設定。 如需詳細資訊，請參閱[自動軟體式 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)。
   
- 下表提供有關這些節點的資訊。  
+下表提供有關這些節點的資訊。  
   
-> **注意：**呼叫從這個 DMV[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_nodes**。  
+> [!NOTE]
+> 若要呼叫從這個 DMV[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_nodes**。  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|節點的識別碼。|  
-|node_state_desc|**nvarchar(256)**|節點狀態的描述。 系統會先顯示互斥的值，然後再顯示可結合的值。 例如：<br /><br /> Online, Thread Resources Low, Lazy Preemptive<br /><br /> 有四個互斥的 node_state_desc 值。 列在底下與它們的描述。<br /><br /> 節點已上線的線上：<br /><br /> 離線： 節點已離線<br /><br /> 閒置： 節點沒有任何暫止的工作要求，而且已進入閒置狀態。<br /><br /> IDLE_READY： 節點沒有任何暫止的工作要求，並已準備好進入閒置狀態。<br /><br /> 有五個可結合的 node_state_desc 值，其描述與下面所列。<br /><br /> DAC： 此節點被保留給專用管理連接。<br /><br /> THREAD_RESOURCES_LOW： 新的執行緒上建立這個節點由於記憶體不足的狀況。<br /><br /> HOT ADDED： 表示已加入節點來回應 hot add CPU 事件。|  
-|memory_object_address|**varbinary(8)**|與這個節點相關聯之記憶體物件的位址。 與 sys.dm_os_memory_objects.memory_object_address 的一對一關聯。|  
-|memory_clerk_address|**varbinary(8)**|與這個節點相關聯之記憶體 Clerk 的位址。 與 sys.dm_os_memory_clerks.memory_clerk_address 的一對一關聯。|  
-|io_completion_worker_address|**varbinary(8)**|指派給這個節點之 IO 完成的工作者位址。 與 sys.dm_os_workers.worker_address 的一對一關聯。|  
-|memory_node_id|**smallint**|這個節點所屬之記憶體節點的識別碼。 與 sys.dm_os_memory_nodes.memory_node_id 的一對多關聯。|  
+|node_state_desc|**nvarchar(256)**|節點狀態的描述。 系統會先顯示互斥的值，然後再顯示可結合的值。 例如：<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />有四個互斥的 node_state_desc 值。 列在底下與它們的描述。<br /><ul><li>節點已上線的線上：<li>離線： 節點已離線<li>閒置： 節點沒有任何暫止的工作要求，而且已進入閒置狀態。<li>IDLE_READY： 節點沒有任何暫止的工作要求，並已準備好進入閒置狀態。</li></ul><br />有三個可結合的 node_state_desc 值，其描述與下面所列。<br /><ul><li>DAC： 此節點保留給[專用管理連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。<li>THREAD_RESOURCES_LOW： 新的執行緒上建立這個節點由於記憶體不足的狀況。<li>HOT ADDED： 表示已加入節點來回應 hot add CPU 事件。</li></ul>|  
+|memory_object_address|**varbinary(8)**|與這個節點相關聯之記憶體物件的位址。 一對一關聯性[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address。|  
+|memory_clerk_address|**varbinary(8)**|與這個節點相關聯之記憶體 Clerk 的位址。 一對一關聯性[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address。|  
+|io_completion_worker_address|**varbinary(8)**|指派給這個節點之 IO 完成的工作者位址。 一對一關聯性[sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address。|  
+|memory_node_id|**smallint**|這個節點所屬之記憶體節點的識別碼。 多對一關聯性[sys.dm_os_memory_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md).memory_node_id。|  
 |cpu_affinity_mask|**bigint**|識別與這個節點相關之 CPU 的點陣圖。|  
 |online_scheduler_count|**smallint**|這個節點所管理之線上排程器的數目。|  
 |idle_scheduler_count|**smallint**|沒有使用中工作者之線上排程器的數目。|  
@@ -67,11 +71,7 @@ ms.lasthandoff: 02/03/2018
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
   
-## <a name="see-also"></a>另請參閱  
-  
+## <a name="see-also"></a>另請參閱    
  [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [軟體 NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
-  
-
-
