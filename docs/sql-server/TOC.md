@@ -47,6 +47,7 @@
 ### [[SQL Server]](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [SQL Server 資料庫引擎](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [SQL Server 安全性](https://blogs.msdn.microsoft.com/sqlsecurity/)
+### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## 意見反應及說明
 ### [SQL Server 的建議](https://feedback.azure.com/forums/908035-sql-server)

@@ -92,20 +92,18 @@
 ## [追蹤事件](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # Developer
-## 表格式模型
-### [相容性層級 1200 及以上的表格式模型程式設計](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [表格式模型指令碼語言 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
-#### [表格式模型指令碼語言 (TMSL) 命令](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [表格式模型指令碼語言 (TMSL) 物件](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
-### [相容性層級 1050 及 1103 的表格式模型程式設計](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+## [相容性層級 1200 及以上的表格式模型程式設計](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [表格式模型指令碼語言 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
+### [表格式模型指令碼語言 (TMSL) 命令](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [表格式模型指令碼語言 (TMSL) 物件](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+## [相容性層級 1050 及 1103 的表格式模型程式設計](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
-## 多維度模型
-### [Analysis Services 指令碼語言 (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
-### [分析管理物件 +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
-### [OLAP 邏輯 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
-### [OLAP 實體 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
-### [擴充 OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+## [Analysis Services 指令碼語言 (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+## [分析管理物件 (AMO)+](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+## [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+## [OLAP 邏輯 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+## [OLAP 實體 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+## [擴充 OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [結構描述資料列集](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services 指令碼語言 (ASSL for XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)

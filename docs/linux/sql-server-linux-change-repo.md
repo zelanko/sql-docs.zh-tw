@@ -9,18 +9,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 82a1f6d840897311dbb52ffbbf2620c8ec3994ec
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定安裝與升級 SQL Server on Linux 的儲存機制
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明如何在 Linux 上設定 SQL Server 2017 安裝與升級的正確儲存機制。
 
@@ -37,7 +39,7 @@ ms.lasthandoff: 02/09/2018
 | **CU** | **mssql-server-2017** | SQL Server 2017 累計更新 (CU) 儲存機制。 |
 | **GDR** | **mssql-server-2017-gdr** | SQL Server 2017 GDR 儲存機制僅適用於重要更新。 |
 
-## <a id="cuversusgdr"></a>與 GDR 累計更新
+## <a id="cuversusgdr"></a> 與 GDR 累計更新
 
 請務必注意，有兩種類型的儲存機制的每個散發：
 
@@ -50,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 > 您可以更新從 GDR 發行 CU 釋放隨時藉由變更儲存機制。 更新不支援從 CU GDR 發行的版本。 
 
-## <a id="configure"></a>將設定儲存機制
+## <a id="configure"></a> 將設定儲存機制
 
 下列章節說明如何確認及設定下列支援的平台的儲存機制：
 
@@ -58,7 +60,7 @@ ms.lasthandoff: 02/09/2018
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#sles)
 
-## <a id="rhel"></a>設定 RHEL 儲存機制
+## <a id="rhel"></a> 設定 RHEL 儲存機制
 您可以使用下列步驟來設定儲存機制上 Red Hat Enterprise Server (RHEL)。
 
 ### <a name="check-for-previously-configured-repositories-rhel"></a>請檢查先前設定的儲存機制 (RHEL)
@@ -97,7 +99,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 | **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
-## <a id="sles"></a>設定 SLES 儲存機制
+## <a id="sles"></a> 設定 SLES 儲存機制
 使用下列步驟來設定儲存機制上 SLES。
 
 ### <a name="check-for-previously-configured-repositories-sles"></a>請檢查先前設定的儲存機制 (SLES)
@@ -128,7 +130,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 | **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
-## <a id="ubuntu"></a>設定 Ubuntu 儲存機制
+## <a id="ubuntu"></a> 設定 Ubuntu 儲存機制
 使用下列步驟來設定儲存機制在 Ubuntu 上。
 
 ### <a name="check-for-previously-configured-repositories-ubuntu"></a>請檢查先前設定的儲存機制 (Ubuntu)
