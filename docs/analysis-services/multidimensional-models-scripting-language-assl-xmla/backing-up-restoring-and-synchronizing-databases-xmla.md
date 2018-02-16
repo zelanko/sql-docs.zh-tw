@@ -1,7 +1,7 @@
 ---
 title: "備份、 還原和同步處理資料庫 (XMLA) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a01f7dc9f661ffde071b54a4c738557c4f2c8dad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>備份、還原和同步處理資料庫 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 XML for Analysis，有三個命令所備份、 還原和同步處理資料庫：  
+  在 XML for Analysis 中，有三個命令分別可用來備份、還原和同步處理資料庫：  
   
 -   [備份](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令會備份[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]備份檔案 (.abf)，一節中所述[備份資料庫](#backing_up_databases)。  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Synchronize](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)命令會同步處理某個[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]一節中所述，使用的資料和中繼資料的另一個資料庫，資料庫[同步處理資料庫](#synchronizing_databases)。  
   
-##  <a name="backing_up_databases"></a>備份資料庫  
+##  <a name="backing_up_databases"></a> 備份資料庫  
  如先前所述，**備份**命令會指定備份[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫備份至備份檔案。 **備份**命令具有各種屬性，可讓您指定要備份的資料庫備份檔案使用時，如何備份安全性定義，以及要備份的遠端資料分割。  
   
 > [!IMPORTANT]  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  值**安全性**屬性僅限於一個下表所列的字串。  
   
-|ReplTest1|描述|  
+|Value|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|在備份檔案中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在備份檔案中納入安全性定義與成員資格資訊。|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  要備份的每個遠端資料來源，您可以指定其對應的備份檔案包括[位置](../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)中的項目[位置](../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md)屬性**備份**命令。 **位置**項目應該有其**檔案**屬性設為遠端備份檔案的 UNC 路徑和檔案名稱及其[DataSourceID](../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)屬性設定為識別項遠端資料來源資料庫中定義。  
   
-##  <a name="restoring_databases"></a>還原資料庫  
+##  <a name="restoring_databases"></a> 還原資料庫  
  **還原**命令還原指定[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫從備份檔案。 **還原**命令具有各種屬性，可讓您指定要使用、 如何還原安全性定義、 要儲存的遠端資料分割和重新配置備份檔案還原的資料庫關聯式 OLAP (ROLAP)物件。  
   
 > [!IMPORTANT]  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|在資料庫中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在資料庫中納入安全性定義與成員資格資訊。|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
  您可以使用**位置**中的項目**還原**重新放置 ROLAP 物件的命令。 每個**位置**用來放置資料來源，項目**DataSourceType**屬性必須明確設定為*本機*。 您也必須設定**ConnectionString**屬性**位置**至新位置的連接字串的項目。 在還原期間，**還原**命令將會取代所識別的資料來源的連接字串**DataSourceID**屬性**位置**項目其值為**ConnectionString**屬性**位置**項目。  
   
-##  <a name="synchronizing_databases"></a>同步處理資料庫  
+##  <a name="synchronizing_databases"></a> 同步處理資料庫  
  **Synchronize**命令會同步處理的資料和中繼資料指定的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]與另一個資料庫的資料庫。 **Synchronize**命令具有各種屬性，可讓您指定來源資料庫中，如何同步處理安全性定義、 同步處理，遠端資料分割和同步處理 ROLAP 物件。  
   
 > [!NOTE]  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/08/2018
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|在目的地資料庫中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在目的地資料庫中納入安全性定義與成員資格資訊。|  
@@ -150,12 +151,12 @@ ms.lasthandoff: 01/08/2018
 ### <a name="synchronizing-rolap-objects"></a>同步處理 ROLAP 物件  
  **Synchronize**命令無法同步處理彙總或使用 ROLAP 儲存，因為這類資訊儲存在基礎關聯式資料來源的資料表中的物件資料。 不過，可以同步處理 ROLAP 物件的中繼資料。 同步處理中繼資料， **Synchronize**命令會重新建立關聯式資料來源上的資料表結構。  
   
- 您可以使用**位置**同步處理 ROLAP 物件的同步處理命令中的項目。 每個**位置**用來放置資料來源，項目**DataSourceType**屬性必須明確設定為*本機*。 執行個體時提供 SQL Server 登入。 您也必須設定**ConnectionString**屬性**位置**至新位置的連接字串的項目。 同步處理期間， **Synchronize**命令將會取代所識別的資料來源的連接字串**DataSourceID**屬性**位置**具有值的項目**ConnectionString**屬性**位置**項目。  
+ 您可以使用**位置**同步處理 ROLAP 物件的同步處理命令中的項目。 每個**位置**用來放置資料來源，項目**DataSourceType**屬性必須明確設定為*本機*。 。 您也必須設定**ConnectionString**屬性**位置**至新位置的連接字串的項目。 同步處理期間， **Synchronize**命令將會取代所識別的資料來源的連接字串**DataSourceID**屬性**位置**具有值的項目**ConnectionString**屬性**位置**項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Backup 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Restore 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Synchronize 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [同步處理項目 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [備份與還原 Analysis Services 資料庫](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

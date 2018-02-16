@@ -20,13 +20,14 @@ ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>以 Power Pivot 模式安裝 Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主題中的程序將引導您透過單一伺服器安裝[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的伺服器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 部署模式。 這些步驟包含執行 [SQL Server 安裝精靈]，以及使用 SharePoint 管理中心的設定工作。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本主題中的程序會引導您完成 SharePoint 部署 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式之 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器的單一伺服器安裝。 這些步驟包含執行 [SQL Server 安裝精靈]，以及使用 SharePoint 管理中心的設定工作。  
   
 ##  <a name="bkmk_background"></a> 背景  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 是中間層及後端服務的集合物件，可以在 SharePoint 2016 或 SharePoint 2013 伺服器陣列中提供 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料存取功能。  

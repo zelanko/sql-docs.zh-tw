@@ -1,7 +1,7 @@
 ---
 title: "程式設計 AMO 基礎物件 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - server objects [AMO]
 - programming [AMO]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9ab80bdbb2a2cc6e27ce76577bdf7739e1b9b8b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>程式設計 AMO 基礎物件
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]基礎物件通常是簡單且直接的物件。 通常會建立和具現化這些物件，然後當不再需要時，使用者會將它們中斷連接。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 在 AMO 基礎物件中唯一屬於複雜物件的是 <xref:Microsoft.AnalysisServices.DataSourceView>，這需要詳細資料以建立代表資料來源檢視的抽象模型。  
+  基礎物件通常是簡單且直接的物件。 通常會建立和具現化這些物件，然後當不再需要時，使用者會將它們中斷連接。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 在 AMO 基礎物件中唯一屬於複雜物件的是 <xref:Microsoft.AnalysisServices.DataSourceView>，這需要詳細資料以建立代表資料來源檢視的抽象模型。  
   
  通常需要 <xref:Microsoft.AnalysisServices.Server> 與 <xref:Microsoft.AnalysisServices.Database> 物件以使用所含物件做為 OLAP 物件或是資料採礦物件。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [DataSourceView 物件](#DSV)  
   
-##  <a name="ServerObjects"></a>伺服器物件  
+##  <a name="ServerObjects"></a> 伺服器物件  
  使用 <xref:Microsoft.AnalysisServices.Server> 物件需要下列步驟：連接到伺服器、確認 <xref:Microsoft.AnalysisServices.Server> 物件是否連接到伺服器，如果已連接，則從伺服器中斷連接 <xref:Microsoft.AnalysisServices.Server>。  
   
 ### <a name="connecting-to-the-server-object"></a>連接到伺服器物件  
@@ -109,7 +110,7 @@ if ( (svr != null) && ( svr.Connected))
 }  
 ```  
   
-###  <a name="AMO"></a>AmoException 例外狀況物件  
+###  <a name="AMO"></a> AmoException 例外狀況物件  
  AMO 在找到不同的問題時將會擲回例外狀況。 如需例外狀況的詳細說明，請參閱[AMO 其他類別和方法](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)。 下列範例程式碼顯示在 AMO 中擷取例外狀況的正確方法：  
   
 ```  
@@ -148,7 +149,7 @@ catch (  AMOException e)
 }  
 ```  
   
-##  <a name="DatabaseObjects"></a>資料庫物件  
+##  <a name="DatabaseObjects"></a> 資料庫物件  
  使用 <xref:Microsoft.AnalysisServices.Database> 物件非常簡單且直接。 您可以從 <xref:Microsoft.AnalysisServices.Server> 物件的資料庫集合取得現有的資料庫。  
   
 ### <a name="creating-dropping-and-finding-a-database"></a>建立、卸除和尋找資料庫  
@@ -195,7 +196,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource"></a>DataSource 物件  
+##  <a name="DataSource">DataSource 物件</a>  
  <xref:Microsoft.AnalysisServices.DataSource> 物件是 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 與資料所在的資料庫之間的連結。 代表 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 基礎模型的結構描述是由 <xref:Microsoft.AnalysisServices.DataSourceView> 物件所定義。 可以將 <xref:Microsoft.AnalysisServices.DataSource> 物件視為連至資料所在的資料庫之連接字串。  
   
  下列範例程式碼會示範如何建立 <xref:Microsoft.AnalysisServices.DataSource> 物件。 此範例會確認伺服器是否仍然存在、<xref:Microsoft.AnalysisServices.Server> 物件是否已連接，以及資料庫是否已存在。 如果 <xref:Microsoft.AnalysisServices.DataSource> 物件存在，則會先予以卸除然後重新建立。 會建立有相同名稱與內部識別碼的 <xref:Microsoft.AnalysisServices.DataSource> 物件。 在此範例中，不會在連接字串上執行檢查以進行確認。  
@@ -218,7 +219,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV"></a>DataSourceView 物件  
+##  <a name="DSV">DataSourceView 物件</a>  
  <xref:Microsoft.AnalysisServices.DataSourceView> 物件負責保存 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的結構描述模型。 對於保存結構描述的 <xref:Microsoft.AnalysisServices.DataSourceView> 物件，必須先建構結構描述。 結構描述會從 System.Data 命名空間，透過 DataSet 物件建構。  
   
  下列範例程式碼將建立部分的結構描述，此結構描述會包含在以 AdventureWorks 為基礎的 Analysis Services 範例專案中。 此範例會建立資料表、計算資料行、關聯和複合關聯的結構描述定義。 結構描述是保存的資料集。  
@@ -558,7 +559,7 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO 基礎類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   

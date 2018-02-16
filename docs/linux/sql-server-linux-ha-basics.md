@@ -15,10 +15,10 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
 ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 部署的 SQL Server 可用性基本概念
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/13/2018
 
 從開始[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]適用於 Linux 和 Windows。 例如 windows[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]資料庫和執行個體必須要在 Linux 高可用性。 本文章涵蓋計劃和部署高可用性的技術層面 linux[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]資料庫和執行個體，以及從 windows 安裝的差異。 因為[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 專業人員以及 Linux 可能新增的可能新[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]專業人員，文件有時候介紹可能是有些熟悉而且給其他人不熟悉的概念。
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 部署的可用性選項
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 部署的可用性選項
 除了備份與還原，相同的三個可用性功能可在 Linux 上與 Windows 為基礎的部署：
 -   Alwayson 可用性群組 (Ag)
 -   Alwayson 容錯移轉叢集執行個體 (Fci)
@@ -43,16 +43,16 @@ ms.lasthandoff: 02/13/2018
 2. 執行動作的多個通用和安全性做出明智的方式是使用`sudo`之前執行的任何項目。 在此範例的許多發行項使用`sudo`。
 
 每一個都有各種參數和選項，可以線上研究一些常用命令：
--   `cd`– 將目錄變更
--   `chmod`-變更檔案或目錄的權限
--   `chown`-變更檔案或目錄的擁有權
--   `ls`– 顯示目錄的內容
--   `mkdir`– 磁碟機上建立資料夾 （目錄）
--   `mv`– 將檔案從一個位置移至另一個
--   `ps`– 顯示所有的工作處理序
--   `rm`– 刪除在本機伺服器上的檔案
--   `rmdir`– 刪除資料夾 （目錄）
--   `systemctl`– 啟動、 停止或啟動服務
+-   `cd` – 將目錄變更
+-   `chmod` -變更檔案或目錄的權限
+-   `chown` -變更檔案或目錄的擁有權
+-   `ls` – 顯示目錄的內容
+-   `mkdir` – 磁碟機上建立資料夾 （目錄）
+-   `mv` – 將檔案從一個位置移至另一個
+-   `ps` – 顯示所有的工作處理序
+-   `rm` – 刪除在本機伺服器上的檔案
+-   `rmdir` – 刪除資料夾 （目錄）
+-   `systemctl` – 啟動、 停止或啟動服務
 -   文字編輯器命令。 在 Linux 上有各種文字編輯器選項，例如 vi 和 emacs。
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>一般工作的可用性組態[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]on Linux
@@ -96,9 +96,9 @@ Samba，也就是伺服器訊息區 (SMB) 的 Linux 變體，也可用來建立�
 | 138         | UDP      | Samba （如果使用） – NetBIOS 資料包                                                                                          |
 | 139         | TCP      | Samba （如果使用） – NetBIOS 工作階段                                                                                           |
 | 445         | TCP      | Samba （如果使用） – SMB over TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 預設連接埠。如有需要，可以變更與`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 預設連接埠。如有需要，可以變更與 `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP、UDP | NFS （如果使用）                                                                                                               |
-| 2224        | TCP      | Pacemaker – 使用`pcsd`                                                                                                |
+| 2224        | TCP      | Pacemaker – 使用 `pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker – 需要有 Pacemaker 遠端節點                                                                    |
 | 3260        | TCP      | iSCSI 啟動器 （如果使用） – 可以更改中`/etc/iscsi/iscsid.config`(RHEL)，但應該符合的 iSCSI 目標的連接埠 |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -AG 端點; 使用預設通訊埠建立端點時，可以變更                                |
@@ -203,15 +203,15 @@ WSFCs 監視參與節點的狀態，並處理這類問題發生時。 更新版�
 
 #### <a name="cluster-log-location"></a>叢集記錄檔位置
 Pacemaker 叢集記錄檔的位置而有所不同分佈。
--   RHEL 和 SLES-`/var/log/cluster/corosync.log`
--   Ubuntu –`/var/log/corosync/corosync.log`
+-   RHEL 和 SLES- `/var/log/cluster/corosync.log`
+-   Ubuntu – `/var/log/corosync/corosync.log`
 
 若要變更預設的記錄位置，請修改`corosync.conf`。
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>計劃 Pacemaker 叢集[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>計劃 Pacemaker 叢集 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 本章節討論規劃 Pacemaker 叢集的重點。
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>以 Linux 為基礎的虛擬化 Pacemaker 叢集以提供[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>以 Linux 為基礎的虛擬化 Pacemaker 叢集以提供 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 使用虛擬機器來部署以 Linux 為基礎[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]相同的規則與 Windows 架構的與其所涵蓋的 Ag 和 Fci 的部署。 沒有一組基本的規則可支援性的虛擬化[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]由 Microsoft 提供的部署[Microsoft 支援知識庫 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)。 不同的 hypervisor，例如 Microsoft 的 HYPER-V 和 VMware 的 ESXi 可能會在該的變異，因為其本身的平台差異。
 
 當談到 Ag 和 Fci 在虛擬化時，請指定 Pacemaker 叢集中的節點，設定反親和性。 當設定為高可用性在 AG 或 FCI 組態中，裝載的 Vm[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]永遠不應該在同一台 hypervisor 主機上執行。 例如，如果兩個節點 FCI 部署時，會需要*至少*三個 hypervisor 主機，所以的某處主控節點的 vm 主機失敗，請移至其中一個特別是當使用的功能類似 Live移轉或 vMotion。
