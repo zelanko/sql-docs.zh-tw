@@ -19,10 +19,10 @@ ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
 ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>專案設定 （型別對應） (OracleToSQL)
 類型對應 頁面**專案設定**對話方塊包含自訂 SSMA 如何轉換到 Oracle 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
