@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5f7a99df396ecef55f0ba6a4529416354cdccda1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 匯入精靈匯入資料採礦專案
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述如何從另一部伺服器上，使用範本，現有的資料採礦專案匯入中繼資料建立新的資料採礦專案**從伺服器 （多維度和資料採礦） 匯入**，中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主題描述如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用 [從伺服器匯入 (多維度和資料採礦)] 範本，從另一部伺服器上的現有資料採礦專案匯入中繼資料來建立新的資料採礦專案。  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>從現有的資料採礦專案匯入資料來源、採礦結構和採礦模型  
  當您使用 [從伺服器匯入 (多維度和資料採礦)] 範本時，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會建立新的資料採礦專案，然後從指定的資料採礦專案複製中繼資料。 新的專案所包含的資料來源、資料來源檢視、採礦結構和採礦模型與您匯入的來源 ssASnoversion 資料庫相同。 但是，要等到您依照以下所述的內容更新某些屬性及處理物件之後，才能使用專案：  
@@ -58,13 +59,13 @@ ms.lasthandoff: 01/08/2018
     > [!WARNING]  
     >  您不能指定您想要匯入的物件；當您選擇現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫時，所有多維度和資料採礦物件都會匯入。  
   
-     按 [下一步] 。  
+     按一下 **[下一步]**。  
   
 5.  **[正在完成精靈]**頁面會顯示匯入作業的進度。 您不能取消此作業或是變更正在匯入的物件。 完成時按一下 **[完成]** 。  
   
      隨即使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]自動開啟新的專案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [專案屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

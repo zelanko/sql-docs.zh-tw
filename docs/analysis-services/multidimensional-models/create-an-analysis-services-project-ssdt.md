@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, defining projects [Analysis Services]
 - items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>建立 Analysis Services 專案 (SSDT)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以定義[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案範本或使用匯入[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫精靈，可讀取的內容[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 如果目前在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中未載入任何方案，則建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案會自動建立新的方案； 否則會將新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案加入至現有的方案。 方案開發的最佳作法需要為不同類型的應用程式資料建立個別的專案，並在專案相關時使用單一方案。 例如，您可以擁有一個方案，其中包含 Integration Services 封裝、Analysis Services 資料庫及 Reporting Services 報表的不同專案，以供相同的商務應用程式使用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案範本，或使用 [匯入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫精靈] 讀取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的內容，來定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 如果目前在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中未載入任何方案，則建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案會自動建立新的方案； 否則會將新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案加入至現有的方案。 方案開發的最佳作法需要為不同類型的應用程式資料建立個別的專案，並在專案相關時使用單一方案。 例如，您可以擁有一個方案，其中包含 Integration Services 封裝、Analysis Services 資料庫及 Reporting Services 報表的不同專案，以供相同的商務應用程式使用。  
   
  Analysis Services 專案包含單一 Analysis Services 資料庫中所使用的物件。 專案的部署屬性指定伺服器和資料庫名稱，專案中繼資料會透過這些名稱部署為具現化的物件。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
      若要建立新的方案，請在 [方案] 下拉式清單中，選取 [建立新方案]。 若要對新的方案建立新的資料夾，請選取 [為方案建立目錄]。 在 [方案名稱] 中，輸入新方案的名稱。  
   
-6.  按一下 [確定] 。  
+6.  按一下 **[確定]**。  
   
 ##  <a name="bkmk_NewUsingWizard"></a> 使用現有的 Analysis Services 資料庫建立新專案  
  使用 [匯入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫精靈]，根據現有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的物件建立專案。 當您根據現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時，會在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案中開啟該資料庫的中繼資料。 然後可以在專案中修改這些物件，而不會影響原始物件；之後可以部署到相同的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫 (如果部署屬性指定該資料庫) 或新建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，以便進行比較測試。 所做的變更要等到部署之後，才會影響現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  在 [新增專案] 對話方塊的 [Visual Studio 安裝的範本] 類別目錄中，選取 [匯入 Analysis Services 資料庫]。  
   
-3.  輸入專案和方案的屬性資訊，包括檔案的名稱和位置。 按一下 [確定] 。  
+3.  輸入專案和方案的屬性資訊，包括檔案的名稱和位置。 按一下 **[確定]**。  
   
 4.  在 [歡迎使用匯入 Analysis Services 資料庫精靈] 頁面上，按一下 [下一步]。  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 01/08/2018
 2.  選取 .dwproj 檔案以加入至方案。  
   
 ##  <a name="bkmk_buildDeploy"></a> 建立及部署方案  
- 依預設， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會將專案部署到本機電腦上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設執行個體。 您可以變更這個部署目的地，其方式是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的 [屬性頁] 對話方塊來變更 [伺服器] 組態屬性。  
+ 依預設，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會將專案部署到本機電腦上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設執行個體。 您可以變更這個部署目的地，其方式是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的 [屬性頁] 對話方塊來變更 [伺服器] 組態屬性。  
   
 > [!NOTE]  
 >  依預設，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在部署方案時，只會處理由部署指令碼所變更的物件和相依物件。 您可以變更這項功能，其方式是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的 [屬性頁] 對話方塊來變更 [處理選項] 組態屬性。  
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_ProjectFolders"></a> Analysis Services 專案資料夾  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案包含下列資料夾，這些資料夾是用於組織專案中所含的項目。  
   
-|資料夾|描述|  
+|資料夾|說明|  
 |------------|-----------------|  
 |資料來源|包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的資料來源。 您可以使用資料來源精靈建立這些物件，並以資料來源設計師來編輯。|  
 |資料來源檢視|包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的資料來源檢視。 您可以使用資料來源檢視精靈建立這些物件，並以資料來源檢視設計師來編輯。|  
@@ -138,7 +139,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的專案資料夾可以包含下表所列的檔案類型。  
   
-|檔案類型|描述|  
+|檔案類型|Description|  
 |---------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案定義檔 (.dwproj)|包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中所定義及包含的項目、組態及組件參考的相關中繼資料。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案使用者設定 (.dwproj.user)|包含特定使用者之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的組態資訊。|  
@@ -156,7 +157,7 @@ ms.lasthandoff: 01/08/2018
   
  [加入新項目] 對話方塊的 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案項目] 類別目錄中會提供下表所列的項目範本。  
   
-|類別目錄|項目範本|描述|  
+|類別目錄|項目範本|Description|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案項目|Cube|啟動 [Cube 精靈]，將新的 Cube 加入到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中。|  
 ||資料來源|啟動 [資料來源精靈]，將新的資料來源加入到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中。|  
@@ -165,9 +166,9 @@ ms.lasthandoff: 01/08/2018
 ||維度|啟動 [維度精靈]，將新的資料庫維度加入到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中。|  
 ||採礦結構|啟動 [資料採礦精靈]，將新的採礦結構和關聯的採礦模型加入到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [建立 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [建置 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [部署 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

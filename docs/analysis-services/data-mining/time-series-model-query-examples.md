@@ -22,19 +22,20 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="time-series-model-query-examples"></a>時間序列模型查詢範例
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立針對資料採礦模型的查詢時，您可以建立內容查詢，來提供有關分析期間所發現之模式的詳細資料，或您可以建立預測查詢，為新的資料進行預測模型中使用的模式。 例如，時間序列模型的內容查詢可能會提供有關所偵測到之週期性結構的其他詳細資料，而預測查詢則為您提供下 5-10 個時間配量的預測。 您也可以使用查詢來擷取有關模型的中繼資料。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，時間序列模型的內容查詢可能會提供有關所偵測到之週期性結構的其他詳細資料，而預測查詢則為您提供下 5-10 個時間配量的預測。 您也可以使用查詢來擷取有關模型的中繼資料。  
   
  本章節將說明如何針對以 Microsoft 時間序列演算法為根據的模型來建立兩種查詢。  
   
@@ -104,17 +105,17 @@ WHERE NODE_NAME = 'TA00000007'
   
  範例結果：  
   
-|簡短的方程式|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|簡短的方程式|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|@shouldalert|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- 如需如何解譯這項資訊的詳細資訊，請參閱 [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 如需如何解譯這項資訊的詳細資訊，請參閱[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
   
 ###  <a name="bkmk_Query3"></a> 範例查詢 3：擷取 ARTXP 模型的方程式  
- 如果是 ARTxp 模型，每一層的樹狀結構上會儲存不同的資訊。 如需 ARTxp 模型的結構及如何解譯方程式內資訊的詳細資訊，請參閱 [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 如果是 ARTxp 模型，每一層的樹狀結構上會儲存不同的資訊。 如需 ARTxp 模型的結構及如何解譯方程式內資訊的詳細資訊，請參閱[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
  下列 DMX 陳述式會擷取屬於 ARTxp 樹狀結構之一部分的資訊，該資訊代表在歐洲銷售之 R250 型號的數量。  
   
@@ -131,7 +132,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- 如需如何解譯這項資訊的詳細資訊，請參閱 [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 如需如何解譯這項資訊的詳細資訊，請參閱[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>建立時間序列模型的預測  
@@ -221,19 +222,19 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |預測函數|使用方式|  
-|[Lag &#40;DMX&#41;](../../dmx/lag-dmx.md)|傳回目前案例的日期與定型集的最後日期之間的時間配量數目。<br /><br /> 這個函數的典型用法就是用來識別最近的定型案例，好讓您可以擷取有關案例的詳細資料。|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|傳回指定之可預測資料行的節點識別碼。<br /><br /> 這個函數的典型用法就是用來識別產生特定預測值的節點，好讓您可以檢閱與此節點有關的案例，或擷取方程式和其他詳細資料。|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|傳回指定之可預測資料行中預測的標準差。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|傳回指定之可預測資料行中預測的變異數。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
-|[PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|傳回時間序列的預測記錄值或未來預測值。<br /><br /> 您也可以使用一般預測函數 [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) 來查詢時間序列模型。|  
+|[Lag &#40; DMX &#41;](../../dmx/lag-dmx.md)|傳回目前案例的日期與定型集的最後日期之間的時間配量數目。<br /><br /> 這個函數的典型用法就是用來識別最近的定型案例，好讓您可以擷取有關案例的詳細資料。|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|傳回指定之可預測資料行的節點識別碼。<br /><br /> 這個函數的典型用法就是用來識別產生特定預測值的節點，好讓您可以檢閱與此節點有關的案例，或擷取方程式和其他詳細資料。|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|傳回指定之可預測資料行中預測的標準差。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|傳回指定之可預測資料行中預測的變異數。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
+|[PredictTimeSeries &#40; DMX &#41;](../../dmx/predicttimeseries-dmx.md)|傳回時間序列的預測記錄值或未來預測值。<br /><br /> 您也可以使用一般預測函數 [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) 來查詢時間序列模型。|  
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法通用函數的清單，請參閱[一般預測函數 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)。 如需特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [時間序列模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

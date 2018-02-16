@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>設定 Windows 防火牆以允許 Analysis Services 存取
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]第一個的必要步驟，進行[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]或[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]在網路上可用的是，以判斷您是否要解除封鎖通訊埠在防火牆中的。 大部分安裝都要求您至少建立一個傳入防火牆規則來允許連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 在網路上可供使用的第一個必要步驟為判斷您是否需要在防火牆中解除封鎖通訊埠。 大部分安裝都要求您至少建立一個傳入防火牆規則來允許連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
  防火牆組態需求視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]安裝方式而異：  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 01/08/2018
   
 7.  在 [名稱] 中輸入此規則的描述性名稱 (例如 **SQL Server Browser Service (tcp-in) 2382**)，然後按一下 [完成]。  
   
-8.  若要確認有無啟用遠端連接，開啟 SQL Server Management Studio 或 Excel 不同的電腦上並連接到 Analysis Services 藉由指定伺服器的網路名稱和執行個體名稱採用下列格式：\<伺服器名稱 >\\< instancename\>。 例如，在名稱為 **AW-SRV01** 且具有 **Finance** 具名執行個體的伺服器上，伺服器名稱為 **AW-SRV01\Finance**。  
+8.  若要確認有無啟用遠端連接，開啟 SQL Server Management Studio 或 Excel 不同的電腦上並連接到 Analysis Services 藉由指定伺服器的網路名稱和執行個體名稱採用下列格式：\<伺服器名稱 >\\< instancename\>。 例如，在名稱為 **AW-SRV01** 且具有 **Finance**具名執行個體的伺服器上，伺服器名稱為 **AW-SRV01\Finance**。  
   
  **選項 2：針對具名執行個體使用固定通訊埠**  
   
@@ -237,7 +238,7 @@ ms.lasthandoff: 01/08/2018
   
  如果您是使用 SharePoint 2010，就不必開啟 Windows 防火牆中的通訊埠。 SharePoint 會開啟它所需要的連接埠，而且增益集 (例如 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint) 會在 SharePoint 環境中運作。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2010 安裝中， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務會獨佔使用在相同電腦上一併安裝的本機 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服務執行個體。 其會使用本機連線 (而非網路連線) 存取本機 Analysis Services 引擎服務，而該服務會載入、查詢及處理 SharePoint 伺服器上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料。 若要從用戶端應用程式要求 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料，這些要求會透過 SharePoint 安裝程式所開啟的連接埠來傳送 (具體而言，是定義輸入規則以允許存取 SharePoint – 80、SharePoint 管理中心 v4、SharePoint Web 服務和 SPUserCodeV4)。 由於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 服務是在 SharePoint 伺服陣列中運作，因此要遠端存取 SharePoint 伺服陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料，使用 SharePoint 防火牆規則已經足夠。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Browser 服務 &#40;Database Engine 和 SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  

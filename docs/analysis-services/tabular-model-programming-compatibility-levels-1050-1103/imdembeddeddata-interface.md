@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData 介面
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]IMDEmbeddedData 介面是用來管理內嵌的公用介面[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料庫或表格式模型資料庫。 此介面繼承自**IPersistStream**介面。 允許下列作業：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+IMDEmbeddedData 介面是用來管理內嵌的公用介面[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料庫或表格式模型資料庫。 此介面繼承自**IPersistStream**介面。 允許下列作業：  
   
 -   取得容器文件中之內嵌資料流的識別碼。  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 -   將本機或同處理序資料庫儲存至容器文件中的內嵌資料流。 繼承自**IPersistStream**。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>참조  
  下列參考文件**IMDEmbeddedData**介面中，呈現**msmd.h**標頭檔。  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>來源檔案：PXOEmbeddedData.idl  
@@ -88,7 +90,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  取得主應用程式用來識別容器文件中之內嵌資料流的識別碼。  
   
 #### <a name="parameters"></a>參數  
@@ -110,13 +112,13 @@ HRESULT GetStreamIdentifier (
   
  DBPROP_MSMD_EMBEDDED_DATA 的可能值如下：  
   
-|[屬性]|ReplTest1|定義|  
+|名稱|Value|定義|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|沒有可用的內嵌資料庫|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|目前應用程式包含內嵌資料庫|  
 |DBPROPVAL_EMBED_LINKED|0x02|內嵌資料庫裝載於遠端應用程式 (即 SharePoint Server)|  
   
-#### <a name="source"></a>來源  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -132,7 +134,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  設定包含內嵌資料流之檔案的 URL。  
   
 #### <a name="parameters"></a>參數  
@@ -146,7 +148,7 @@ HRESULT SetContainerURL (
  **E_FAIL**  
  設定容器 URL 時發生錯誤。  
   
-#### <a name="source"></a>來源  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -162,7 +164,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  設定旗標，指出內嵌應用程式是否在主控環境中。  
   
 #### <a name="parameters"></a>參數  
@@ -176,7 +178,7 @@ HRESULT SetHosted (
  **E_FAIL**  
  設定旗標時發生錯誤。  
   
-#### <a name="source"></a>來源  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -192,7 +194,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  設定內嵌應用程式所使用之暫存檔的路徑。  
   
 #### <a name="parameters"></a>參數  
@@ -206,7 +208,7 @@ HRESULT SetTempDirPath (
  **E_FAIL**  
  設定路徑時發生錯誤。  
   
-#### <a name="source"></a>來源  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -220,7 +222,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  取消目前的內嵌資料庫作業。  
   
 #### <a name="parameters"></a>參數  
@@ -236,7 +238,7 @@ HRESULT Cancel ( void )
  **E_FAIL**  
  取消內嵌作業時發生錯誤。  
   
-#### <a name="source"></a>來源  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -251,7 +253,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  取得要用來儲存內嵌物件之資料流的估計大小 (以位元組為單位)。 繼承自**IPersistStream**。  
   
 #### <a name="parameters"></a>參數  
@@ -271,7 +273,7 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  確認內嵌資料庫自上次儲存後是否已經變更。 繼承自**IPersistStream**。  
   
 #### <a name="parameters"></a>參數  
@@ -295,7 +297,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  將內嵌資料庫載入至本機或同處理序引擎。 繼承自**IPersistStream**。  
   
 #### <a name="parameters"></a>參數  
@@ -321,7 +323,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  將本機或同處理序資料庫儲存至容器文件中的內嵌資料流。 繼承自**IPersistStream**。  
   
 #### <a name="parameters"></a>參數  

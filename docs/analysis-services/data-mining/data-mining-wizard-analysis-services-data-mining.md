@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>資料採礦精靈 (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]中的資料採礦精靈[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]啟動每次您將新的採礦結構加入至資料採礦專案。 此精靈可幫助您選擇資料來源及設定資料來源檢視來定義用於分析的資料，然後幫助您建立初始模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+每次將新的採礦結構加入至資料採礦專案時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的資料採礦精靈就會啟動。 此精靈可幫助您選擇資料來源及設定資料來源檢視來定義用於分析的資料，然後幫助您建立初始模型。  
   
  在精靈的最後一個階段，您可以選擇將資料分成定型集和測試集，並啟用類似鑽研的功能。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="choosing-an-algorithm"></a>選擇演算法  
  接下來，您必須決定要使用哪一個演算法來處理資料。 這個決定可能很困難。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的每一個演算法都有不同的功能而且會產生不同的結果，所以您可以試驗並嘗試幾個不同模型，然後再決定哪一個模型最適合您的資料和商業問題。 如需每一個演算法最適合之工作的說明，請參閱以下主題：  
   
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  同樣地，您可以使用不同的演算法建立多個模型，或變更演算法的參數以建立不同的模型。 系統不會限制您的演算法選擇，針對相同資料建立幾個不同模型也是很好的作法。  
   
@@ -110,20 +111,20 @@ ms.lasthandoff: 01/08/2018
 ## <a name="related-content"></a>相關內容  
  若要深入了解當您建立資料採礦模型時所需要做的決策，請參閱以下連結：  
   
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [內容類型 (資料採礦)](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [內容類型 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [資料類型 (資料採礦)](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [資料類型 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [特徵選取 &#40;資料採礦&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [特徵選取 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [遺漏值 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
  [採礦模型的鑽研](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料採礦工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

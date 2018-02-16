@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - incremental updates [Analysis Services]
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>資料分割 (Analysis Services - 多維度資料)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料分割是量值群組資料之一部分的容器。 無法從 MDX 查詢看到資料分割；所有的查詢都會反映量值群組的完整內容，不論針對此量值群組定義了多少個資料分割。 資料分割的資料內容是由資料分割的查詢繫結及分割運算式所定義。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+資料分割是量值群組資料之一部分的容器。 無法從 MDX 查詢看到資料分割；所有的查詢都會反映量值群組的完整內容，不論針對此量值群組定義了多少個資料分割。 資料分割的資料內容是由資料分割的查詢繫結及分割運算式所定義。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Partition> 物件是由基本資訊、分割定義、彙總設計等項目組成。 基本資訊包括資料分割的名稱、儲存模式、處理模式等等。 分割定義是指定 Tuple 或集合的 MDX 運算式。 分割定義與 StrToSet MDX 函數有相同的限制。 分割定義結合了 CONSTRAINED 參數，便可以在 Cube 中使用維度、階層、層級和成員名稱、索引鍵、唯一名稱或其他具名物件，但是不能使用 MDX 函數。 彙總設計是可在多個資料分割之間共用之彙總定義的集合。 預設值是取自父 Cube 的彙總設計。  
   
@@ -71,8 +73,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="incremental-updates"></a>累加式更新  
  當您在多資料分割量值群組中建立和管理資料分割時，必須採取特別注意事項以確保 Cube 資料正確。 雖然這些注意事項通常都不會套用到單一資料分割量值群組，但是當您以累加方式更新資料分割時則會予以套用。 當您以累加方式更新資料分割時，會建立新的暫存資料分割，而這個資料分割的結構與來源資料分割的結構相同。 這時會處理暫存資料分割，再與來源資料分割合併。 因此，您必須確定擴展暫存資料分割的處理查詢不會複製已經存在於現有資料分割中的任何資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定量值屬性](../../analysis-services/multidimensional-models/configure-measure-properties.md)   
- [多維度模型中的 Cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
+ [多維度模型中的 cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

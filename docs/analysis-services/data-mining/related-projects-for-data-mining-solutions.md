@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>資料採礦方案的相關專案
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所需的資料採礦方案的最小值是資料採礦專案，它會定義資料來源、 資料來源檢視、 採礦結構和採礦模型。 但是，當使用資料採礦模型進行每日決策時，資料採礦一定要與預測性分析方案的其他部分整合，該方案可包含這些程序和元件：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+資料採礦方案至少需要資料採礦專案，專案中會定義資料來源、資料來源檢視、採礦結構和採礦模型。 但是，當使用資料採礦模型進行每日決策時，資料採礦一定要與預測性分析方案的其他部分整合，該方案可包含這些程序和元件：  
   
 -   準備及選取資料和變數。 包括資料清理、中繼資料管理及整合多個資料來源，以及將資料轉換、合併和上傳到資料倉儲中。  
   
@@ -108,11 +109,11 @@ ms.lasthandoff: 01/08/2018
   
  如需有關如何搭配資料來源形式的 DMX 查詢使用 Reporting Services 的詳細資訊，請參閱以下連結：  
   
- [從資料採礦模型擷取資料 &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [擷取資料，從資料採礦模型 &#40; DMX &#41;&#40;SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [DMX &#40; analysis Services 連接類型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  但是，使用 DMX 當做資料來源並不是必要的。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的資料採礦元件也支援將預測查詢結果儲存到關聯式資料庫。 如果您已經使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立更新模型的工作流程，則將預測和其他資料採礦查詢結果保存到 SQL Server 可讓您啟用報告用的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 以及不與 DMX 接觸的其他工具。  
   
@@ -206,8 +207,8 @@ ms.lasthandoff: 01/08/2018
   
 -   並非所有全文檢索語言都支援語意索引。 如需受支援語言的清單，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)。  
   
-## <a name="see-also"></a>請參閱  
- [多維度模型方案 &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [表格式模型方案 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+## <a name="see-also"></a>另請參閱  
+ [多維度模型方案 &#40;Ssas&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [表格式模型方案 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

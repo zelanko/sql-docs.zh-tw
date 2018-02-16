@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 58d6481958138346ee40b9815b8209cb41bf2bae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>後續安裝組態 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]安裝 Analysis Services 之後，進一步設定才能完整運作並可供一般使用，讓伺服器。 本節將介紹完成安裝所需的這些額外設定工作。 視連接需求而定，您可能還必須設定驗證 (請參閱 [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md))。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+安裝 Analysis Services 之後，還必須進一步設定才能讓伺服器可完整運作並可供一般使用。 本節將介紹完成安裝所需的這些額外設定工作。 視連接需求而定，您可能還必須設定驗證 (請參閱 [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md))。  
   
  之後，如果您的資料庫已就緒可供部署，就必須執行額外的工作。 也就是說，您必須為資料庫設定角色成員資格讓使用者能存取資料、設計資料庫備份和復原策略，以及判斷是否需要排程處理工作負載來定期重新整理資料。 如需資料庫部署和管理的詳細資訊，請參閱下列連結︰[多維度模型資料庫 &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) 和[表格式模型資料庫 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)。  
   
@@ -43,10 +44,10 @@ ms.lasthandoff: 01/08/2018
 |[判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|在安裝期間，您必須選擇在伺服器上執行的伺服器模式，這個模式會決定模型的類型 (多維度或表格式)。 如果您不確定伺服器模式，請透過本主題中的資訊來判斷已安裝的模式。|  
 |[重新命名 Analysis Services 執行個體](../../analysis-services/instances/rename-an-analysis-services-instance.md)|如果多個執行個體的伺服器模式都不相同，您可以使用描述性名稱加以區別，也可以區分組織中的部門或小組主要使用的執行個體。 如果希望變更執行個體名稱讓您在管理安裝時更容易，請透過本主題中的資訊來了解要如何變更名稱。|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  了解如何使用用戶端程式庫，從 Microsoft 應用程式或自訂應用程式連接至 Analysis Services。 視方案需求而定，您可能還必須為服務設定 Kerberos 驗證。 有跨網域界限需求的連接就需要 HTTP 存取。 如需有關後續步驟的指示，請參閱＜ [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md) ＞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 安裝](../../database-engine/install-windows/installation-for-sql-server-2016.md)   
  [以多維度及資料採礦模式安裝 Analysis Services](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [安裝 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   

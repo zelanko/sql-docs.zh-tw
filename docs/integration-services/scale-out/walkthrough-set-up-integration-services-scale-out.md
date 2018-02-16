@@ -19,10 +19,10 @@ ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f8abf2424f8bb1c9c8fb2e04d649e385dd30a024
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>逐步解說︰設定 Integration Services (SSIS) Scale Out
 完成下列工作，以設定 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out。 

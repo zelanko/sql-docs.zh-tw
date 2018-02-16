@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - aggregations [Analysis Services], about aggregations
 - storage [Analysis Services], aggregations
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - storing data [Analysis Services], aggregations
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f88fe2a55b2c6e56cd36db492d56893319c6bed5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="aggregations-and-aggregation-designs"></a>彙總和彙總設計
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]<xref:Microsoft.AnalysisServices.AggregationDesign>物件會定義一組可以橫跨多個資料分割的彙總定義。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+<xref:Microsoft.AnalysisServices.AggregationDesign> 物件會定義可在多個資料分割之間共用的一組彙總定義。  
   
  <xref:Microsoft.AnalysisServices.Aggregation> 物件表示在維度的某個資料粒度上之量值群組資料的摘要。  
   
@@ -48,13 +50,13 @@ ms.lasthandoff: 01/08/2018
  雖然預先計算 Cube 內所有可能的彙總可能會提供所有查詢的最快可能回應時間，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以輕鬆地從其他預先計算的彙總中計算出某些彙總值。 此外，計算所有可能的彙總需要大量處理時間和儲存體。 因此，在儲存需求與預先計算的可能彙總百分比之間會需要有所取捨。 如果未預先計算任何彙總 (0%)，則 Cube 所需的處理時間和儲存空間數量會減至最少，但是因為必須從分葉資料格中擷取回答每一個查詢所需的資料，然後在查詢時加以彙總來回答每一個查詢，所以查詢回應時間可能會變慢。 例如，傳回單一數字來回答前面所問的問題 (「1998 年西北地區 X 產品的銷售如何？」) 可能需要讀取數千個資料列，並擷取資料行的值 (此資料行是用來提供每個資料列的銷售量值)，然後計算總和。 此外，擷取該資料所需的時間長度可能會不同，視選擇的資料儲存模式而定 (MOLAP、HOLAP 或 ROLAP)。  
   
 ## <a name="designing-aggregations"></a>設計彙總  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]併入複雜的演算法，若要選取預先計算的彙總，以便從預先計算的值可以快速地計算其他彙總。 例如，如果針對時間階層的月份層級預先計算出彙總，則季查詢的計算只需要加總三個數字，就可以視需要快速計算出來。 這個技巧可節省處理時間，並減少儲存需求，且對查詢回應時間的影響最小。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 併入複雜的演算法，若要選取預先計算的彙總，以便從預先計算的值可以快速地計算其他彙總。 例如，如果針對時間階層的月份層級預先計算出彙總，則季查詢的計算只需要加總三個數字，就可以視需要快速計算出來。 這個技巧可節省處理時間，並減少儲存需求，且對查詢回應時間的影響最小。  
   
  彙總設計精靈會提供選項讓您指定演算法的儲存體和百分比條件約束，以在查詢回應時間與儲存需求之間達成令人滿意的取捨。 不過，彙總設計精靈的演算法假設所有可能的查詢都同樣適合。 基於使用方式的最佳化精靈可讓您分析用戶端應用程式所提交的查詢，以調整量值群組的彙總設計。 使用這個精靈來微調 Cube 的彙總，即可增加常見查詢的回應能力，以及減少不常見之查詢的回應能力，而不會對 Cube 的儲存需求有太大影響。  
   
  雖然彙總是使用精靈所設計，但是除非已處理好所設計之彙總的資料分割，否則不會實際計算彙總。 建立彙總之後，如果 Cube 的結構變更，或是在 Cube 的來源資料表中加入或變更資料，則通常會需要檢閱 Cube 的彙總並再次處理該 Cube。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料分割儲存模式及處理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
   

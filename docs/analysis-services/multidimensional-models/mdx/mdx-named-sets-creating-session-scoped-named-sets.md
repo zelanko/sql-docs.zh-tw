@@ -15,19 +15,20 @@ helpviewer_keywords:
 - CREATE SET statement
 - session-scoped named sets [MDX]
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 372990a1016616c72768cd51cb8c6eedb2008a58
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>MDX 命名集-建立工作階段範圍命名集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]若要建立可在整個多維度運算式 (MDX) 工作階段取得的命名的集，您使用[CREATE SET](../../../mdx/mdx-data-definition-create-set.md)陳述式。 使用 CREATE SET 陳述式建立的命名集，直到 MDX 工作階段結束後才會移除。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+若要建立可在整個多維度運算式 (MDX) 工作階段取得的命名集，您可以使用 [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) 陳述式。 使用 CREATE SET 陳述式建立的命名集，直到 MDX 工作階段結束後才會移除。  
   
  如同本主題所討論，WITH 關鍵字的語法直接且使用簡單。  
   
@@ -58,7 +59,7 @@ create Session set [Store].[SetCities_2_3] as
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [建立查詢範圍命名集 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
+## <a name="see-also"></a>另請參閱  
+ [建立查詢範圍命名集 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

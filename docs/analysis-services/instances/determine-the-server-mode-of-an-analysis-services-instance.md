@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 559a3a65f9a24077bbcac1e0c45506179d2e3da8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>判斷 Analysis Services 執行個體的伺服器模式
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services 可以安裝在三種伺服器模式之一： 多維度和資料採礦 （預設）、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services 可安裝為以下三種伺服器模式之一：多維度和資料採礦 (預設模式)、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
   
  伺服器模式決定您所建立和部署的方案類型。 如果您沒有安裝伺服器軟體並且想要知道伺服器的安裝模式，可以使用本主題中的資訊來判斷模式。 如需特定模式下功能可用性的詳細資訊，請參閱[比較表格式和多維度解決方案 &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
@@ -46,21 +47,21 @@ ms.lasthandoff: 01/08/2018
   
  這個屬性的有效值包括：  
   
-|ReplTest1|描述|  
+|Value|설명|  
 |-----------|-----------------|  
 |0|這是預設值。 它指定多維度模式，用於服務使用 MOLAP、HOLAP 和 ROLAP 儲存以及資料採礦模型的多維度資料庫。|  
-|@shouldalert|指定要與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署一起安裝的 Analysis Services 執行個體。 請不要變更 Analysis Services 執行個體的部署模式屬性，因為它是屬於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝的一部分。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 如果您變更模式，資料將不再於伺服器上執行。|  
+|1|指定要與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署一起安裝的 Analysis Services 執行個體。 請不要變更 Analysis Services 執行個體的部署模式屬性，因為它是屬於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝的一部分。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 如果您變更模式，資料將不再於伺服器上執行。|  
 |2|指定用於裝載使用記憶體中儲存或 DirectQuery 儲存之表格式模型資料庫的表格式模式。|  
   
  每個模式彼此之間是獨佔的。 設定為表格式模式的伺服器無法執行包含 Cube 和維度的 Analysis Services 資料庫。 如果基礎電腦硬體可以支援它，您就可以在相同的電腦上安裝多個 Analysis Services 執行個體，並將每個執行個體設定為使用不同的部署模式。 請記住，Analysis Services 是非常耗用資源的應用程式。 建議在相同的系統上，僅針對高階伺服器部署多個執行個體。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安裝 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [以多維度及資料採礦模式安裝 Analysis Services](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Power Pivot for SharePoint 2010 安裝](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [表格式模型方案 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
  [多維度模型方案 &#40;Ssas&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [採礦模型 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

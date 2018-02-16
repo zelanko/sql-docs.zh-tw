@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d30e4644eed3d695db28a246aa9d05cba6e2cecc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>設定檔案上傳的大小上限 (Power Pivot for SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿經常包含大量資料所產生的檔案會超出 SharePoint 上傳允許的最大檔案大小。 當您嘗試上傳的檔案超出上限時，您將會得到以下 SharePoint 錯誤：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿經常包含大量的資料，這些資料產生的檔案會超出 SharePoint 上傳所允許的檔案大小上限。 當您嘗試上傳的檔案超出上限時，您將會得到以下 SharePoint 錯誤：  
   
 -   「指定的檔案超過支援的檔案大小上限。」  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
      您可以指定的最大值是 2 GB (或是管理中心內指定的 2047 MB)。  
   
-7.  按一下 [確定] 。  
+7.  按一下 **[確定]**。  
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>設定 SharePoint Web 應用程式的檔案大小上限  
   
@@ -69,6 +70,6 @@ ms.lasthandoff: 01/08/2018
   
 6.  將此屬性設定為與 Excel Services 中 [最大活頁簿大小] 相同或更大的數字。  
   
-7.  按一下 [確定] 。  
+7.  按一下 **[確定]**。  
   
   

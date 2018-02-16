@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
+# <a name="spn-registration-for-an-analysis-services-instance"></a>為 Analysis Services 執行個體註冊 SPN
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 可唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
   
  對透過 Kerberos 驗證連接至 Analysis Services 的用戶端應用程式而言，Analysis Services 用戶端程式庫會使用連接字串中的主機名稱和所有 Analysis Services 之指定版本中固有的已知變數 (例如服務類別) 來建構 SPN。  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
  下表說明 Analysis Services SPN 的每一個部分。  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |服務類別|MSOLAPSvc.3 會將服務識別為 Analysis Services 執行個體， 其中 .3 是 Analysis Services 傳輸時所使用 XMLA-over-TCP/IP 通訊協定版本的參考， 與產品版本無關。 因此，除非通訊協定本身有異動，否則 MSOLAPSvc.3 都會是 SQL Server 2005、2008、2008 R2、2012 以及未來所有 Analysis Services 版本的正確服務類別。|  
 |主機名稱|識別執行服務的電腦。 可以是完整網域名稱或 NetBIOS 名稱 您應該針對這兩者註冊 SPN。<br /><br /> 當您針對伺服器的 NetBIOS 名稱註冊 SPN 時，請務必使用 `SetupSPN –S` 來檢查是否有重複註冊。 樹系中可能會有重複的 NetBIOS 名稱，而重複的 SPN 註冊將會導致連接失敗。<br /><br /> 如果是 Analysis Services 負載平衡叢集，主機名稱必須是指派給叢集的虛擬名稱。<br /><br /> 請絕對不要使用 IP 位址來建立 SPN， 因為 Kerberos 會使用 DNS 網域解析功能， 如果指定 IP 位址則會略過這項功能。|  
@@ -168,17 +169,17 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Analysis Services 執行個體只能接聽單一通訊埠， 因此不支援使用多個通訊埠。 如需通訊埠組態的詳細資訊，請參閱＜ [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)＞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft BI 驗證及識別委派](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [相互驗證使用 Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
+ [使用 Kerberos 進行相互驗證](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [如何設定 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 使用 Kerberos 驗證](http://support.microsoft.com/kb/917409)   
- [服務主體名稱 (Spn) SetSPN 語法 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [請勿使用何種 SPN 和其運作方式那里嗎？](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [服務主體名稱 (SPN) SetSPN 語法 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [我應使用何種 SPN？其運作方式為何？](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [服務帳戶的逐步指南](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [如何設定 Internet Information Services 上所裝載的 Web 應用程式時使用 Spn](http://support.microsoft.com/kb/929650)   
- [新功能的服務帳戶](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [設定 Kerberos 驗證適用於 SharePoint 2010 產品 （白皮書）](http://technet.microsoft.com/library/ff829837.aspx)  
+ [在設定 Internet Information Services 所裝載的 Web 應用程式時如何使用 SPN](http://support.microsoft.com/kb/929650)   
+ [服務帳戶的新功能](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [設定適用於 SharePoint 2010 產品的 Kerberos 驗證 (白皮書)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

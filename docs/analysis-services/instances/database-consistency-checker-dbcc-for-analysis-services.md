@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 的 database Consistency Checker (DBCC)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC 提供隨選驗證多維度和表格式資料庫的 Analysis Services 執行個體。 您可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查詢視窗中執行 DBCC，並在 SSMS 的 SQL Server Profiler 或 xEvent 工作階段中追蹤 DBCC 輸出。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+DBCC 提供適用於 Analysis Services 執行個體上之多維度和表格式資料庫的隨選驗證。 您可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查詢視窗中執行 DBCC，並在 SSMS 的 SQL Server Profiler 或 xEvent 工作階段中追蹤 DBCC 輸出。  
 此命令會接受物件定義，並傳回空的結果集或詳細錯誤資訊 (如果物件已損毀)。   在本文中，您將了解如何執行命令、解譯結果，以及解決任何發生的問題。  
   
  對於表格式資料庫，DBCC 所執行的一致性檢查相當於每次重新載入、同步處理或還原資料庫時自動發生的內建驗證。  相反地，多維度資料庫的一致性檢查只會在您依照需求執行 DBCC 時發生。  
@@ -172,7 +173,7 @@ Execution complete
   
 4.  在 SQL Server Profiler 中，DBCC 活動係透過擁有 DBCC 事件子類別的 **Command** 事件來表示︰  
   
-     ![ssas dbcc profiler 位 eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas dbcc profiler 位 eventsubclass")  
+     ![ssas-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
   
      事件代碼 32 代表 DBCC 執行。  
   
@@ -224,8 +225,8 @@ Execution complete
 ||||  
 |-|-|-|  
 |**物件**|**DBCC 檢查描述**|**失敗錯誤**|  
-|[資料庫]|檢查資料庫中的資料表數目。  小於零的值表示損毀。|儲存層發生損毀。 '%{parent/}' 資料庫中的資料表集合已損毀。|  
-|[資料庫]|檢查用來追蹤參考完整性的內部結構，並在大小不正確時擲回錯誤。|資料庫檔案無法通過一致性檢查。|  
+|資料庫|檢查資料庫中的資料表數目。  小於零的值表示損毀。|儲存層發生損毀。 '%{parent/}' 資料庫中的資料表集合已損毀。|  
+|資料庫|檢查用來追蹤參考完整性的內部結構，並在大小不正確時擲回錯誤。|資料庫檔案無法通過一致性檢查。|  
 |Table|檢查用來判斷資料表是維度資料表或事實資料表的內部值。  超出已知範圍的值表示損毀。|檢查資料表統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
 |Table|檢查資料表之區段對應中的分割區數目是否與資料表的已定義分割區數目相符。|儲存層發生損毀。 '%{parent/}' 資料表中的分割區集合已損毀。|  
 |Table|如果表格式資料庫是從 PowerPivot for Excel 2010 建立或匯入，且其分割區計數大於一，該狀況將引發錯誤，因為分割區支援是在更新版本中加入，而這就表示損毀。|檢查區段對應時資料庫一致性檢查 (DBCC) 失敗。|  
@@ -236,17 +237,17 @@ Execution complete
 |階層|如果階層的排序次序是不可辨識的值，便引發錯誤。|檢查 '%{hier/}' 階層時資料庫一致性檢查 (DBCC) 失敗。|  
 |階層|針對階層執行的檢查取決於使用的階層對應配置內部類型。<br /><br /> 檢查所有階層的已處理狀態是否正確，即階層存放區存在，且適用於資料識別碼至階層位置轉換的資料結構存在。<br /><br /> 假設以上所有檢查均通過，便移動階層結構來確認階層中的每個位置都指向正確的成員。<br />如果有任何未通過的測試，便引發錯誤。|檢查 '%{hier/}' 階層時資料庫一致性檢查 (DBCC) 失敗。|  
 |使用者定義階層|檢查階層層級名稱是否已設定。<br /><br /> 如果階層已處理，便檢查內部階層資料存放區內是否有正確的格式。  確認內部階層存放區是否不含任何無效的資料值。<br /><br /> 如果階層標示為未處理，確認此狀態適用於舊資料結構且階層的所有層級均標示為空白。|檢查 '%{hier/}' 階層時資料庫一致性檢查 (DBCC) 失敗。|  
-|「資料行」|如果未將資料行使用的編碼設定成已知的值，便引發錯誤。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|「資料行」|檢查記憶體中引擎是否已壓縮資料行。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|「資料行」|檢查資料行的壓縮類型是否為已知的值。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|「資料行」|當「Token 化」資料行未設定成已知的值時，便引發錯誤。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|「資料行」|如果儲存的資料行資料字典識別碼範圍與資料字典中的值數目不符或超出允許的範圍，便引發錯誤。|檢查資料字典時資料庫一致性檢查 (DBCC) 失敗。|  
-|「資料行」|檢查資料行的資料區段數目是否與所屬之資料表的資料區段數目相符。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
-|「資料行」|檢查資料行的分割區數目是否與資料行之資料區段對應的分割區數目相符。|檢查區段對應時資料庫一致性檢查 (DBCC) 失敗。|  
-|「資料行」|確認資料行區段中的記錄數目是否與儲存在該資料行區段之索引中的記錄計數相符。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
-|「資料行」|如果資料行沒有區段統計資料，便引發錯誤。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|「資料行」|如果資料行沒有壓縮資訊或區段儲存體，便引發錯誤。|資料庫檔案無法通過一致性檢查。|  
-|「資料行」|如果資料行的區段統計資料與最小資料識別碼、最大資料識別碼、相異值數目、資料列數目或 NULL 值目前狀態的實際資料行值不符，便回報錯誤。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|資料行|如果未將資料行使用的編碼設定成已知的值，便引發錯誤。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|資料行|檢查記憶體中引擎是否已壓縮資料行。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|資料行|檢查資料行的壓縮類型是否為已知的值。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|資料行|當「Token 化」資料行未設定成已知的值時，便引發錯誤。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|資料行|如果儲存的資料行資料字典識別碼範圍與資料字典中的值數目不符或超出允許的範圍，便引發錯誤。|檢查資料字典時資料庫一致性檢查 (DBCC) 失敗。|  
+|資料行|檢查資料行的資料區段數目是否與所屬之資料表的資料區段數目相符。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
+|資料行|檢查資料行的分割區數目是否與資料行之資料區段對應的分割區數目相符。|檢查區段對應時資料庫一致性檢查 (DBCC) 失敗。|  
+|資料行|確認資料行區段中的記錄數目是否與儲存在該資料行區段之索引中的記錄計數相符。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
+|資料行|如果資料行沒有區段統計資料，便引發錯誤。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|資料行|如果資料行沒有壓縮資訊或區段儲存體，便引發錯誤。|資料庫檔案無法通過一致性檢查。|  
+|資料行|如果資料行的區段統計資料與最小資料識別碼、最大資料識別碼、相異值數目、資料列數目或 NULL 值目前狀態的實際資料行值不符，便回報錯誤。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
 |ColumnSegment|如果最小資料識別碼或最大資料識別碼小於系統保留的 NULL 值，便將資料行區段資訊標示為損毀。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
 |ColumnSegment|如果這個區段沒有資料列，資料行的最小和最大資料值應設定為系統保留的 NULL 值。  如果值不是 null，便會引發錯誤。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
 |ColumnSegment|如果資料行具有資料列和至少一個非 null 值，便檢查資料行的最小和最大資料識別碼是否大於系統保留的 NULL 值。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
@@ -258,8 +259,8 @@ Execution complete
 |DBCC 資料表|針對驗證中的資料表，檢查資料行數目是否小於零，如果為 true，便引發錯誤。  如果資料表中資料行的資料行存放區是 NULL，也會引發錯誤。|儲存層發生損毀。 '%{parent/}' 資料表中的資料行集合已損毀。|  
 |DBCC 分割區|檢查驗證中之分割區所屬的資料表，如果資料表的資料行數目小於零，表示資料表的資料行集合已損毀。 如果資料表中資料行的資料行存放區是 NULL，也會引發錯誤。|儲存層發生損毀。 '%{parent/}' 資料表中的資料行集合已損毀。|  
 |DBCC 分割區|針對選取之分割區的每個資料行執行迴圈，並檢查分割區的每個區段具有資料行區段結構的有效連結。  如果有任何包含 NULL 連結的區段，便將分割區視為損毀。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
-|「資料行」|如果資料行類型不正確，便傳回錯誤。|發現錯誤的區段類型。|  
-|「資料行」|如果任何有資料行之資料行中的區段數目為負數計數，抑或是指向區段之資料行區段結構的指標含有 NULL 連結，便傳回錯誤。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
+|資料行|如果資料行類型不正確，便傳回錯誤。|發現錯誤的區段類型。|  
+|資料行|如果任何有資料行之資料行中的區段數目為負數計數，抑或是指向區段之資料行區段結構的指標含有 NULL 連結，便傳回錯誤。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
 |DBCC 命令|DBCC 命令在透過 DBCC 作業進行時，將會回報多個狀態訊息。  它會在啟動之前回報狀態訊息，包括資料庫、資料表或物件的資料行名稱，然後在每個物件的檢查完成後再回報一次。|正在檢查的一致性\<objectname > \<objecttype >。 階段︰前置檢查。<br /><br /> 正在檢查的一致性\<objectname > \<objecttype >。 階段︰後置檢查。|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>解決錯誤狀況的常見方法  
@@ -302,7 +303,7 @@ Execution complete
 > [!NOTE]  
 >  在根據需求執行命令時，這項設定不會對 DBCC 產生任何影響。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [處理資料庫、資料表或資料分割 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [監視 Analysis Services 執行個體](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   

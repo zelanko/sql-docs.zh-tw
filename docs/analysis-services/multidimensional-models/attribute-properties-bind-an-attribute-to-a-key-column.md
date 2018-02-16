@@ -16,19 +16,20 @@ helpviewer_keywords:
 - renaming attributes
 - attributes [Analysis Services], renaming
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 059527f4f36552b2247cb156458d3e839cc67e39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>屬性內容-屬性繫結至索引鍵資料行
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]此程序描述如何變更的設定**名稱**維度中屬性的屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+此程序描述如何在維度中，變更屬性 (attribute) 的 **Name** 屬性 (property) 設定。  
   
 ### <a name="to-bind-an-attribute-to-a-key-column"></a>若要將屬性繫結至索引鍵資料行  
   

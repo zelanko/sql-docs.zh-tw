@@ -15,19 +15,20 @@ helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3aaee6261a0209a2c6504c7b0809e2dc57c079d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX 查詢及 Slicer 軸-指定 Slicer 軸的內容
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Slicer 軸會篩選多維度運算式 (MDX) SELECT 陳述式，限制傳回的資料，以便將會傳回與指定成員交集的資料只有所傳回的資料。 它可以視為查詢中隱藏的額外軸。 Slicer 軸定義在 MDX SELECT 陳述式的 WHERE 子句中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Slicer 軸會篩選多維度運算式 (MDX) SELECT 陳述式傳回的資料，限制傳回的資料，以便只傳回與指定成員交集的資料。 它可以視為查詢中隱藏的額外軸。 Slicer 軸定義在 MDX SELECT 陳述式的 WHERE 子句中。  
   
 ## <a name="slicer-axis-syntax"></a>Slicer 軸語法  
  若要明確指定 Slicer 軸，您可以在 MDX 中使用 `<SELECT slicer axis clause>` ，如以下語法所述：  

@@ -21,19 +21,20 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fd3dee20e57342542e271cfb3f153b1c35c0764d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 羅吉斯迴歸演算法技術參考
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]羅吉斯迴歸演算法是一種[!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法，其中*HIDDEN_NODE_RATIO*參數設為 0。 此設定會建立不包含隱藏層的類神經網路模型，而這相等於羅吉斯迴歸。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的演變，其中 *HIDDEN_NODE_RATIO* 參數設為 0。 此設定會建立不包含隱藏層的類神經網路模型，而這相等於羅吉斯迴歸。  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft 羅吉斯迴歸演算法的實作  
  假設可預測資料行只包含兩個狀態，但您仍然想要執行迴歸分析，使輸入資料行與可預測資料行將包含特定狀態的機率相關。 下列圖表說明如果您指定 1 和 0 給可預測資料行的狀態時將得到的結果，請計算資料行將包含特定狀態的機率，並對輸入屬性執行線性迴歸。  
@@ -153,15 +154,15 @@ WHERE NODE_TYPE = 23
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法支援特定輸入資料行內容類型、可預測資料行內容類型和模型旗標，這些都會在下表中列出。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|「資料行」|內容類型|  
+|資料行|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Continuous、Discrete、Discretized、Key、Table|  
 |可預測屬性|Continuous、Discrete、Discretized|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft 羅吉斯迴歸演算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [羅吉斯迴歸模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Microsoft 類神經網路演算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

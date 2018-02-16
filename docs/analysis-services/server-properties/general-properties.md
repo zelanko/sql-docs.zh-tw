@@ -40,19 +40,20 @@ helpviewer_keywords:
 - StatisticsStoreSize property
 - RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 286999ab145671370f458f0ffb8f5f2db85d0461
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="general-properties"></a>一般屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援下表中列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **適用於** ：多維度與表格式伺服器模式 (除非另有指示)  
   
@@ -101,10 +102,10 @@ ms.lasthandoff: 01/08/2018
   
  這個屬性的有效值包括：  
   
-|ReplTest1|描述|  
+|Value|설명|  
 |-----------|-----------------|  
 |0|這是預設值。 它指定多維度模式，用於服務使用 MOLAP、HOLAP 和 ROLAP 儲存以及資料採礦模型的多維度資料庫。|  
-|@shouldalert|指定要與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署一起安裝的 Analysis Services 執行個體。 請不要變更 Analysis Services 執行個體的部署模式屬性，因為它是屬於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝的一部分。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 如果您變更模式，資料將不再於伺服器上執行。|  
+|1|指定要與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署一起安裝的 Analysis Services 執行個體。 請不要變更 Analysis Services 執行個體的部署模式屬性，因為它是屬於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝的一部分。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 如果您變更模式，資料將不再於伺服器上執行。|  
 |2|指定用於裝載使用記憶體中儲存或 DirectQuery 儲存之表格式模型資料庫的表格式模式。|  
   
  每個模式彼此之間是獨佔的。 設定為表格式模式的伺服器無法執行包含 Cube 和維度的 Analysis Services 資料庫。 如果基礎電腦硬體可以支援它，您就可以在相同的電腦上安裝多個 Analysis Services 執行個體，並將每個執行個體設定為使用不同的部署模式。 請記住，Analysis Services 是非常耗用資源的應用程式。 建議在相同的系統上，僅針對高階伺服器部署多個執行個體。  
@@ -178,7 +179,7 @@ ms.lasthandoff: 01/08/2018
  **StatisticsStoreSize**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

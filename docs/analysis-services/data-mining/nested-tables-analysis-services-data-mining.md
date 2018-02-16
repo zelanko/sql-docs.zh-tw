@@ -16,19 +16,20 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 945ded7d4323d509f20fec89574fcfff98654a1b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>巢狀資料表 (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，資料必須為一系列的案例資料表內所包含的情況下傳送至資料採礦演算法。 不過，並非所有的案例都可以由單一資料列描述。 例如，案例可能從兩個資料表衍生：一個資料表包含客戶資訊，而另一個資料表包含客戶購買資訊。 客戶資訊表中的單一客戶在客戶購買資料表中可能有多筆購買項目，所以很難以單一資料列描述資料。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供獨特方法來處理這些情況下，使用*巢狀資料表*。 下圖展示巢狀資料表的概念。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，資料必須當作包含在案例資料表內的一系列案例，傳送至資料採礦演算法。 不過，並非所有的案例都可以由單一資料列描述。 例如，案例可能從兩個資料表衍生：一個資料表包含客戶資訊，而另一個資料表包含客戶購買資訊。 客戶資訊表中的單一客戶在客戶購買資料表中可能有多筆購買項目，所以很難以單一資料列描述資料。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供獨特方法來處理這些情況下，使用*巢狀資料表*。 下圖展示巢狀資料表的概念。  
   
  ![兩個資料表使用巢狀的資料表結合](../../analysis-services/data-mining/media/nested-tables.gif "利用巢狀的資料表來組合兩個資料表")  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
  您可以使用資料採礦延伸模組 (DMX) 或分析管理物件 (AMO)，以程式設計方式來建立巢狀資料表，或使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的資料採礦精靈和資料採礦設計師來建立巢狀資料表。  
   
 ## <a name="using-nested-table-columns-in-a-mining-model"></a>在採礦模型中使用巢狀資料表資料行  
- 在案例資料表中，索引鍵通常是客戶識別碼、產品名稱或數列中的日期，也就是能在資料表中唯一識別資料列的資料。 . 不過，在巢狀資料表中，索引鍵通常不是關聯式索引鍵 (或外部索引鍵)，而是代表您正在建模之屬性的資料行。  
+ 在案例資料表中，索引鍵通常是客戶識別碼、產品名稱或數列中的日期，也就是能在資料表中唯一識別資料列的資料。 。 不過，在巢狀資料表中，索引鍵通常不是關聯式索引鍵 (或外部索引鍵)，而是代表您正在建模之屬性的資料行。  
   
  例如，如果案例資料表包含訂單，而巢狀資料表包含訂單中的項目，則您會想針對多個訂單的巢狀資料表所儲存項目之間的關聯性來建立模型 (這些訂單是儲存在案例資料表中)。 因此，雖然 **Items** 巢狀資料表會依照關聯式索引鍵 **OrderID** 聯結到 **Orders**案例資料表，但您不該使用 **OrderID** 作為巢狀資料表索引鍵。 而是應該選取 **Items** 資料行作為巢狀資料表索引鍵，因為該資料行包含您要建立模型的資料。 大多數的情況下，您都可以忽略採礦模型中的 **OrderID** 而不會發生問題，因為案例資料表和巢狀資料表之間的關聯性已藉由資料來源檢視定義而建立。  
   
@@ -71,8 +72,8 @@ ms.lasthandoff: 01/08/2018
   
  如需如何建立及使用模型篩選的詳細資訊，請參閱[採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

@@ -18,19 +18,20 @@ helpviewer_keywords:
 - custom member formulas [Analysis Services]
 - CustomRollupColumn property
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: acec3f91c8229acc6c17f5989b63677b394b6129
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>BI 精靈-自訂成員公式的維度中的屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]將自訂成員公式增強功能加入至 cube 或維度以取代多維度運算式 (MDX) 運算式的結果具有的維度成員相關聯的預設彙總。 (在維度中，此增強功能會於指定的屬性上設定 **CustomRollupColumn** 屬性。)  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+將自訂成員公式增強功能加入至 Cube 或維度以取代預設彙總，預設彙總與使用多維度運算式 (MDX) 運算式之結果的維度成員相關聯。 (在維度中，此增強功能會於指定的屬性上設定 **CustomRollupColumn** 屬性。)  
   
 > [!NOTE]  
 >  只有以現有資料來源為基礎的維度，才可以使用自訂成員公式。 針對不使用資料來源而建立的維度，您必須執行結構描述產生精靈來建立資料來源檢視後，才能加入自訂成員公式。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="enabling-a-custom-member-formula"></a>啟用自訂成員公式  
  在第二個 [建立自訂成員公式] 頁面上，您將包含自訂成員公式的來源資料行與維度中的一個或多個屬性相關聯。 在 [屬性] 資料行中，選取您要與自訂成員公式資料行相關聯之屬性旁的核取方塊。 選取每個屬性之後，精靈會顯示 [選取資料行] 對話方塊。 在此對話方塊中，按一下包含公式之維度資料表中的資料行。 如果您要在關閉 [選取資料行] 對話方塊後變更選取項目，請按一下您要變更的 [來源資料行] 資料格，然後按一下省略符號 ([...]) 再次開啟 [選取資料行] 對話方塊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用商業智慧精靈增強維度](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
   
   

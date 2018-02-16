@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 864e795be41ccc9e68df3d1fc33b05f73e0695c7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot for SharePoint (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的伺服器[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]模式提供的伺服器裝載[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]SharePoint 伺服陣列中的資料。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料是您使用下列其中一個項目建立的分析資料模型：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器提供將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料裝載於 SharePoint 伺服器陣列的功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料是您使用下列其中一個項目建立的分析資料模型：  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 增益集  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 01/08/2018
   
  [SQL Server 2016 Business Intelligence 的授權拓撲和成本範例](http://msdn.microsoft.com/library/682b8711-407a-48d1-9807-415d4c24dad6)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Power Pivot 規劃和部署](http://go.microsoft.com/fwlink/?linkID=220972)   
  [Power pivot for SharePoint 災害復原](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   

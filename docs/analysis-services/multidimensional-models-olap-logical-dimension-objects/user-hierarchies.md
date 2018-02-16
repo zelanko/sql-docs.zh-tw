@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - members [Analysis Services], hierarchies
 - dimensions [Analysis Services], hierarchies
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - multilevel hierarchies [Analysis Services]
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 01f5e5b5a73a8888d24d3ee46127c67327ec75da
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-hierarchies"></a>使用者階層
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用者定義階層是使用者定義的屬性中所使用的階層[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度的成員組織成階層式結構，並提供 cube 中的導覽路徑。 例如，下表定義時間維度的維度資料表， 此維度資料表支援三個屬性，名為年份、季度和月份。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用者定義階層是使用者定義的屬性中所使用的階層[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度的成員組織成階層式結構，並提供 cube 中的導覽路徑。 例如，下表定義時間維度的維度資料表， 此維度資料表支援三個屬性，名為年份、季度和月份。  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -99,9 +101,9 @@ ms.lasthandoff: 01/08/2018
   
  使用者自訂階層中的層級數目會決定使用者可看到的層級數目，而父子式階層則與使用者自訂階層不同，是由屬性階層的單一層級所定義，而這個單一層級中的值會產生使用者可看到的多個層級。 顯示之層級的數目，會視儲存成員索引鍵和父索引鍵之維度資料表資料行的內容而定。 維度資料表中的資料變更時，層級的數目可能會變更。 如需詳細資訊，請參閱[父子式維度](../../analysis-services/multidimensional-models/parent-child-dimension.md)，和[父子式階層中的屬性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立使用者定義階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [使用者階層屬性](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
- [維度屬性內容參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性 （Property） 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

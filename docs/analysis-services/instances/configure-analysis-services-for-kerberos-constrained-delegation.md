@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>設定 Analysis Services 進行 Kerberos 限制委派
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在設定 Analysis Services 進行 Kerberos 驗證，即最有可能想要達到其中一個或兩項結果： 讓 Analysis Services 模擬使用者識別資料; 查詢或由 Analysis Services 將使用者識別委派給下層服務。 每一種情況的組態需求略有不同。 這兩種情況都需要驗證以確保組態設定正確。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+將 Analysis Services 設定為 Kerberos 驗證時，若能獲致下列其中一項或兩項結果，對您來說可能最有用處：讓 Analysis Services 在查詢資料時模擬使用者識別，或是由 Analysis Services 將使用者識別委派給下層服務。 每一種情況的組態需求略有不同。 這兩種情況都需要驗證以確保組態設定正確。  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_impersonate"></a> 允許 Analysis Services 模擬使用者識別  
  若要允許上層服務 (如 Reporting Services、IIS 或 SharePoint) 模擬 Analysis Services 的使用者身分識別，您必須為這些服務設定 Kerberos 限制委派。 在此情況下，Analysis Services 會使用委派服務提供的身分識別來模擬目前的使用者，根據該使用者身分識別的角色成員資格傳回結果。  
   
-|工作|描述|  
+|工作|Description|  
 |----------|-----------------|  
 |步驟 1：確認帳戶適合於委派|確認用以執行服務的帳戶在 Active Directory 中具有正確的屬性。 服務帳戶在 Active Directory 中不得標示為機密帳戶，或是明確地從委派狀況排除。 如需詳細資訊，請參閱 [了解使用者帳戶](http://go.microsoft.com/fwlink/?LinkId=235818)。<br /><br /> 注意：一般而言，所有的帳戶及伺服器必須屬於相同的 Active Directory 網域或相同樹系中的受信任網域。 不過，由於 Windows Server 2012 支援跨網域界限委派，若網域功能層級是 Windows Server 2012，您就可以設定跨網域界限的 Kerberos 限制委派。 另一種替代方式則是設定 Analysis Services 進行 HTTP 存取並對用戶端連接使用 IIS 驗證方法。 如需詳細資訊，請參閱 [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)(Microsoft BI 驗證及識別委派)。|  
 |步驟 2：註冊 SPN|設定限制委派之前，您必須為 Analysis Services 執行個體註冊服務主要名稱 (SPN)。 在您為中介層服務設定 Kerberos 限制委派時，將需要 Analysis Services SPN。 如需相關指示，請參閱＜ [SPN registration for an Analysis Services instance](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md) ＞。<br /><br /> 服務主要名稱 (SPN) 係指定某項服務在設定為 Kerberos 驗證之網域中的唯一識別。 使用整合式安全性的用戶端連接通常會在 SSPI 驗證期間要求 SPN。 如果用戶端出示的 SPN 與 Active Directory 中的 SPN 註冊相符，此要求便會轉送至 Active Directory 網域控制站 (DC)，並由 KDC 授與票證。|  
@@ -117,11 +118,11 @@ ms.lasthandoff: 01/08/2018
   
  此外，如需 Active Directory 物件內容對話方塊之 [委派] 索引標籤中每個選項的完整描述，請參閱 [Active Directory 中最易混淆的對話方塊](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) 。 本文也說明如何使用 LDP 來測試和解譯測試結果。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft BI 驗證及識別委派](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [相互驗證使用 Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
+ [使用 Kerberos 進行相互驗證](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 執行個體的 SPN 註冊](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [連接字串屬性 &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [連接字串屬性 &#40;Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

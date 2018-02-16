@@ -24,26 +24,27 @@ helpviewer_keywords:
 - members [Analysis Services], groups
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e8b7d2277c53293d0ff0a34b1fa6e04c309e37dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---group-attribute-members"></a>屬性內容-群組屬性成員
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]成員群組是由系統產生的連續維度成員集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以透過稱為分隔的處理序，將屬性的成員分組成許多成員群組。 階層中的層級包含成員群組或成員，但不會同時包含兩者。 商務使用者瀏覽含有成員群組的層級時，他們會看到成員群組的名稱和資料格值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生以支援成員群組的成員稱為群組成員，看起來就像一般成員。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+成員群組是系統產生之連續維度成員的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以透過稱為分隔的處理序，將屬性的成員分組成許多成員群組。 階層中的層級包含成員群組或成員，但不會同時包含兩者。 商務使用者瀏覽含有成員群組的層級時，他們會看到成員群組的名稱和資料格值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生以支援成員群組的成員稱為群組成員，看起來就像一般成員。  
   
  屬性 (Attribute) 上的 **DiscretizationMethod** 屬性 (Property)，控制如何將成員群組。  
   
-|**DiscretizationMethod** 設定|描述|  
+|**DiscretizationMethod** 設定|Description|  
 |--------------------------------------|-----------------|  
 |**無**|顯示成員。|  
-|**自動**|請選取最適合代表資料的方法： **EqualAreas** 方法或 **Clusters** 方法。|  
+|**Automatic**|請選取最適合代表資料的方法： **EqualAreas** 方法或 **Clusters** 方法。|  
 |**EqualAreas**|嘗試將屬性中的成員分成包含相同成員數目的群組。|  
 |**Clusters**|取樣培訓資料、初始化為一些隨機點，然後執行最大期望 (EM) 群集演算法的數次反覆運算，嘗試將屬性中的成員分成群組。<br /><br /> 這個方法適用於任何分佈曲線，所以十分有用，但是需要較多的處理時間。|  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
  `<Bucket name>` 參數是一個字串運算式，其中可以納入一組變數，在其成員群組名稱中代表成員或成員群組資訊：  
   
-|變數|描述|  
+|變數|說明|  
 |--------------|-----------------|  
 |%{First bucket member}|要包含在目前成員群組中之第一個成員的成員名稱。|  
 |%{Last bucket member}|要包含在目前成員群組中之最後一個成員的成員名稱。|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/08/2018
   
 -   如果更新包含成員群組之維度的維度資料表，然後又完全處理維度，就會產生新的成員群組集。 新成員群組的名稱與子系，可能會與舊的成員群組不同。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

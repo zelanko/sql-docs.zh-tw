@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d4c4be707a45efa922109e695bad0991e4416e6a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-a-template-to-create-an-action"></a>使用範本建立動作
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**動作**Cube 設計工具檢視中的包含數個範本可讓您建立一般動作。 您可從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取 Cube 設計師。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cube 設計師的 [動作] 檢視包含可用來建立一般動作的一些範本。 您可從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取 Cube 設計師。  
   
 > [!NOTE]  
 >  在建立動作之後，您必須先更新或重新處理 Cube，使用者才能使用動作。 如需詳細資訊，請參閱[處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 -   填入必要資訊，以完成建置以範本為基礎的動作。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動作 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
   
   

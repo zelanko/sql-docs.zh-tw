@@ -18,19 +18,20 @@ helpviewer_keywords:
 - UPDATE CUBE statement
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f658740766736a83dd374cf647523ea9f8e2bfe4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>MDX 資料修改為使用 Cube 回寫
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]使用更新 cube[更新 CUBE](../../../mdx/mdx-data-manipulation-update-cube.md)陳述式。 您可以使用此陳述式，來更新具有特定值的 Tuple。 若要有效地使用 UPDATE CUBE 陳述式更新 Cube，您必須了解陳述式的語法、可能發生的錯誤狀況，以及更新在 Cube 上所會產生的影響。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+您可以使用 [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) 陳述式更新 Cube。 您可以使用此陳述式，來更新具有特定值的 Tuple。 若要有效地使用 UPDATE CUBE 陳述式更新 Cube，您必須了解陳述式的語法、可能發生的錯誤狀況，以及更新在 Cube 上所會產生的影響。  
   
 ## <a name="update-cube-statement-syntax"></a>UPDATE CUBE 陳述式語法  
  以下語法描述 UPDATE CUBE 陳述式：  
@@ -122,7 +123,7 @@ USE_EQUAL_ALLOCATION
   
 -   變更回寫中包含之維度的維度資料粒度。  
   
-## <a name="see-also"></a>請參閱  
- [修改資料 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+## <a name="see-also"></a>另請參閱  
+ [修改資料 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

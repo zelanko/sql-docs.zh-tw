@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ready-only cube view
 - OLAP objects [Analysis Services], perspectives
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - visibility [Analysis Services]
 - storage [Analysis Services], perspectives
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 815d1c6d75613855d84e9bb7ab6e5c369d97bf81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="perspectives"></a>「檢視方塊」
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]檢視方塊是可讓使用者更簡單的方式查看 cube 的定義。 檢視方塊是 Cube 功能的子集。 檢視方塊可讓管理員建立 Cube 的檢視，幫助使用者將焦點放在最相關的資料上。 檢視方塊包含了 Cube 中所有物件的子集。 檢視方塊不能包含父 Cube 中未定義的元素。  
+# <a name="perspectives"></a>檢視方塊
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+檢視方塊是可讓使用者以更簡單的方式查看 Cube 的定義。 檢視方塊是 Cube 功能的子集。 檢視方塊可讓管理員建立 Cube 的檢視，幫助使用者將焦點放在最相關的資料上。 檢視方塊包含了 Cube 中所有物件的子集。 檢視方塊不能包含父 Cube 中未定義的元素。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Perspective> 物件是由以下項目所組成：基本資訊、維度、量值群組、計算、KPI 和動作。 基本資訊包括檢視方塊的名稱和預設量值。 維度是 Cube 維度的子集。 量值群組是 Cube 量值群組的子集。 計算是 Cube 計算的子集。 KPI 是 Cube KPI 的子集。 動作是 Cube 動作的子集。  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 -   量值群組  
   
--   量值  
+-   [量值]  
   
 -   關鍵效能指標 (KPI)  
   

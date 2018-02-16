@@ -22,19 +22,20 @@ helpviewer_keywords:
 - mining model content, neural network models
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述使用 Microsoft 類神經網路演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>類神經網路模型的採礦模型內容 (Analysis Services - 資料採礦)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主題描述使用 Microsoft 類神經網路演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md) (採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>了解類神經網路模型的結構  
  每個類神經網路模型都有一個代表模型及其中繼資料的單一父節點，以及一個提供輸入屬性之相關描述性統計資料的臨界統計資料節點 (NODE_TYPE = 24)。 臨界統計資料節點相當實用，因為該節點摘要輸入的相關資訊，您就不需要從個別節點查詢資料。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |臨界統計資料|空白|  
 |輸入層|空白|  
 |輸入節點|輸入屬性名稱|  
-|隱藏層|空白|  
+|hidden layer|空白|  
 |隱藏節點|空白|  
 |輸出層|空白|  
 |輸出節點|輸出屬性名稱|  
@@ -94,9 +95,9 @@ ms.lasthandoff: 01/08/2018
  NODE_TYPE  
  類神經網路模型會輸出下列節點類型：  
   
-|節點類型識別碼|描述|  
+|節點類型識別碼|說明|  
 |------------------|-----------------|  
-|@shouldalert|模型。|  
+|1|模型。|  
 |17|子網路的組合管理節點。|  
 |18|輸入層的組合管理節點。|  
 |19|隱藏層的組合管理節點。|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/08/2018
 |臨界統計資料|空白|  
 |輸入層|空白|  
 |輸入節點|輸入屬性名稱|  
-|隱藏層|空白|  
+|hidden layer|空白|  
 |隱藏節點|指出隱藏節點清單中，隱藏節點順序的整數。|  
 |輸出層|空白|  
 |輸出節點|如果輸出屬性是連續的，則包含輸出屬性的名稱。<br /><br /> 如果輸出屬性是離散或離散化的，則包含輸出屬性的名稱和值。|  
@@ -242,8 +243,8 @@ ms.lasthandoff: 01/08/2018
   
  **連續屬性** ：NODE_DISTRIBUTION 資料表的最後兩個資料列包含屬性的平均值、整個節點的係數，以及係數的變異數。  
   
-## <a name="see-also"></a>請參閱  
- [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+## <a name="see-also"></a>另請參閱  
+ [Microsoft 類神經網路演算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft 類神經網路演算法技術參考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [類神經網路模型查詢範例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   

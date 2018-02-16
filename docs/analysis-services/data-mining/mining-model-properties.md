@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-properties"></a>採礦模型屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]採礦模型都有下列幾種屬性：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+採礦模型具有以下種類的屬性：  
   
 -   繼承自採礦結構的屬性，這些屬性可定義此模型所使用之資料的資料類型和內容類型。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="properties-of-models"></a>模型的屬性  
  下表描述採礦模型特有的屬性。 此外，也有一些屬性可以在採礦的個別資料行中設定。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |**演算法**|設定採礦模型的演算法類型。|  
 |**AlgorithmParameters**|設定每一種演算法類型可用的演算法參數的值。|  
@@ -56,20 +57,20 @@ ms.lasthandoff: 01/08/2018
 ## <a name="properties-of-model-columns"></a>模型資料行的屬性  
  針對採礦模型中的每一個資料行，您可以設定下列資料採礦特有的屬性。 針對採礦結構中的每一個採礦模型，您可以將這些屬性設定為不同的值。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |**說明**|描述採礦資料行的目的。|  
 |**名稱**|設定採礦模型資料行的名稱。 您可以輸入新名稱，為採礦模型資料行提供別名。|  
 |**ModelingFlags**|設定資料行的任何演算法特定旗標。|  
 |**SourceColumnID**|代表模型資料行所依據之採礦結構資料行的名稱。<br /><br /> 此屬性是唯讀的。|  
-|**Usage**|設定採礦模型如何使用資料行。|  
+|**使用方式**|設定採礦模型如何使用資料行。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)   
- [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [變更採礦模型的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
- [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)   
+ [資料採礦工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [建立關聯式採礦結構](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [建立模型資料行的別名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   

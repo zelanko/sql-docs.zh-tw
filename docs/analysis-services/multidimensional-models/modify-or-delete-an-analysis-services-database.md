@@ -19,19 +19,20 @@ helpviewer_keywords:
 - databases [Analysis Services], deleting
 - modifying databases
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 88e23e63ccea23fd175371629d95dd2c1dc46a33
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>修改或刪除 Analysis Services 資料庫
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以變更名稱和描述[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署前於資料庫[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]和中的部署之後[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 您也可以調整 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的其他設定，視環境而定。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的部署之前和在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署之後，您可以變更 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料庫的名稱和描述。 您也可以調整 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的其他設定，視環境而定。  
   
 > [!NOTE]  
 >  在線上模式中，您無法使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 來變更資料庫屬性。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
   
-## <a name="see-also"></a>請參閱  
- [記錄和編寫 Analysis Services 資料庫的指令碼](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
+## <a name="see-also"></a>另請參閱  
+ [文件和編寫 Analysis Services 資料庫的指令碼](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
   

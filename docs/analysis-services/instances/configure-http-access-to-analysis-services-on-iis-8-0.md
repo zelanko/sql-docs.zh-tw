@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>設定 IIS 8.0 上 Analysis services 的 HTTP 存取
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本文說明如何設定 HTTP 端點來存取 Analysis Services 執行個體。 您可以設定 MSMDPUMP.dll (這是在 Internet Information Services (IIS) 中執行的一個 ISAPI 擴充程式，可以在用戶端應用程式與 Analysis Services 伺服器之間來回提取資料) 來啟用 HTTP 存取。 此方法會在您的 BI 方案需要下列功能時，提供連接至 Analysis Services 的替代方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本文說明如何設定 HTTP 端點來存取 Analysis Services 執行個體。 您可以設定 MSMDPUMP.dll (這是在 Internet Information Services (IIS) 中執行的一個 ISAPI 擴充程式，可以在用戶端應用程式與 Analysis Services 伺服器之間來回提取資料) 來啟用 HTTP 存取。 此方法會在您的 BI 方案需要下列功能時，提供連接至 Analysis Services 的替代方式。  
   
 -   用戶端存取是透過網際網路或外部網路連接進行，但會限制可啟用的通訊埠。  
   
@@ -128,11 +129,11 @@ ms.lasthandoff: 01/08/2018
   
 4.  請確認您 Web 伺服器上的 \inetpub\wwwroot\OLAP 資料夾中包含下列內容：MSMDPUMP.DLL、MSMDPUMP.INI，以及 Resources 資料夾。 您的資料夾結構看起來應該像這樣：  
   
-    -   \<磁碟機 >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<磁碟機 >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<磁碟機 >: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> 步驟 2：在 IIS 中建立應用程式集區與虛擬目錄  
  接下來，為幫浦建立應用程式集區和端點。  
@@ -163,7 +164,7 @@ ms.lasthandoff: 01/08/2018
   
      ![設定轉換應用程式](../../analysis-services/instances/media/ssas-httpaccess-convertedapp.png "轉換應用程式的設定")  
   
-4.  按一下 [確定] 。 重新整理網站，並注意「OLAP」資料夾現在是在「預設的網站」底下的應用程式。 現在即已建立 MSMDPUMP 檔案的虛擬路徑。  
+4.  按一下 **[確定]**。 重新整理網站，並注意「OLAP」資料夾現在是在「預設的網站」底下的應用程式。 現在即已建立 MSMDPUMP 檔案的虛擬路徑。  
   
      ![應用程式的轉換後的 OLAP 資料夾](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "至應用程式轉換後的 OLAP 資料夾")  
   
@@ -315,7 +316,7 @@ ms.lasthandoff: 01/08/2018
   
  最後一個步驟是確實使用更嚴格的測試進行後續追蹤，方法是，使用在連接來源之網路環境中執行的用戶端電腦。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [論壇文章 (使用 msmdpump 和基本驗證的 HTTP 存取)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
  [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [物件和作業的存取權授權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   

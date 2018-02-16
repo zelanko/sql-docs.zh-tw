@@ -22,19 +22,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 決策樹演算法技術參考
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法是一種混合式演算法，其中併入建立樹狀目錄中的不同方法，並支援多種分析工作，包括迴歸、 分類以及關聯。 Microsoft 決策樹演算法支援製作離散和連續屬性的模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是一種混合式演算法，其中併入建立樹狀結構的不同方法，並支援多種分析工作，包括迴歸、分類以及關聯。 Microsoft 決策樹演算法支援製作離散和連續屬性的模型。  
   
  本主題說明演算法的實作、描述如何針對不同的工作自訂演算法的行為，以及提供查詢決策樹模型其他資訊的連結。  
   
@@ -155,9 +156,9 @@ ms.lasthandoff: 01/08/2018
  *SCORE_METHOD*  
  決定用來計算分岔準則的方法。 下列是可以使用的選項：  
   
-|ID|[屬性]|  
+|ID|名稱|  
 |--------|----------|  
-|@shouldalert|熵|  
+|1|熵|  
 |3|使用 K2 優先的貝氏|  
 |4|使用統一優先的貝氏狄氏等價 (Bayesian Dirichlet Equivalent，BDE)<br /><br /> (預設值)|  
   
@@ -168,9 +169,9 @@ ms.lasthandoff: 01/08/2018
  *SPLIT_METHOD*  
  決定用來分岔節點的方法。 下列是可以使用的選項：  
   
-|ID|[屬性]|  
+|ID|名稱|  
 |--------|----------|  
-|@shouldalert|**Binary:** 表示不管屬性的實際數目為何，樹狀結構都會分岔為兩個分支。|  
+|1|**Binary:** 表示不管屬性的實際數目為何，樹狀結構都會分岔為兩個分支。|  
 |2|**Complete:** 表示樹狀結構可以建立與屬性值一樣多的分岔。|  
 |3|**Both:** 指定 Analysis Services 可以決定應該使用二進位還是完整分岔來產生最佳的結果。|  
   
@@ -179,7 +180,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="modeling-flags"></a>模型旗標  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
   
-|模型旗標|描述|  
+|模型旗標|說明|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|表示資料行將被視為擁有兩個可能狀態： **Missing** 和 **Existing**。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
@@ -199,7 +200,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|「資料行」|內容類型|  
+|資料行|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Continuous、Cyclical、Discrete、Discretized、Key、Ordered、Table|  
 |可預測屬性|Continuous、Cyclical、Discrete、Discretized、Ordered、Table|  
@@ -207,9 +208,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  系統支援 Cyclical 和 Ordered 內容類型，但是演算法將它們視為離散值，因此不會執行特殊處理。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft 決策樹演算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [決策樹模型查詢範例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [決策樹模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

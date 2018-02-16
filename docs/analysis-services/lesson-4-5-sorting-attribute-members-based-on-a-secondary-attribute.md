@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 33d0192fa992a8f9e6ebb8bfeb7e9155e9b2fc32
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>課程 4-5-根據次要屬性排序屬性成員
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在第 3 課，您將學會如何排序屬性成員名稱或索引鍵值為基礎。 您也學會如何使用複合成員索引鍵來影響屬性成員和排序次序。 如需詳細資訊，請參閱 [修改 Date 維度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 不過，如果屬性的名稱或索引鍵都無法提供想要的排序次序，您可以使用次要屬性來達成所需的排序次序。 藉由定義屬性之間的關聯性，您可以使用次要屬性排序第一個屬性的成員。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+在第 3 課，您學會如何根據名稱或索引鍵值排序屬性成員。 您也學會如何使用複合成員索引鍵來影響屬性成員和排序次序。 如需詳細資訊，請參閱 [修改 Date 維度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 不過，如果屬性的名稱或索引鍵都無法提供想要的排序次序，您可以使用次要屬性來達成所需的排序次序。 藉由定義屬性之間的關聯性，您可以使用次要屬性排序第一個屬性的成員。  
   
 屬性關聯性定義屬性之間的關聯性或相依性。 在以單一關聯式資料表為基礎的維度中，所有屬性通常都是透過索引鍵屬性而彼此相關。 這是因為維度的所有屬性會提供有關成員的資訊，這些成員會由維度的索引鍵屬性連結到各個相關量值群組之事實資料表中的事實。 在以多份資料表為基礎的維度中，屬性通常是依據資料表之間的聯結索引鍵來連結。 如果基礎資料支援屬性關聯性，相關屬性可用來指定排序次序。 例如，您可以建立提供相關屬性排序邏輯的新屬性。  
   

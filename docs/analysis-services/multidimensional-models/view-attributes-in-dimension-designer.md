@@ -17,19 +17,20 @@ helpviewer_keywords:
 - formats [Analysis Services], Attribute pane
 - modifying Attribute pane format
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5ab0bd75d302d9436f9c875172d8847607f4dc44
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-attributes-in-dimension-designer"></a>在維度設計師中檢視屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]此程序描述如何變更屬性的維度設計師中顯示方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+此程序會描述如何變更維度設計師中顯示屬性的方式。  
   
 ### <a name="to-change-the-format-of-the-attributes-pane-in-dimension-designer"></a>在維度設計師中變更屬性窗格的格式  
   

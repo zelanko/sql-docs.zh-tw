@@ -18,19 +18,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3f6e0b1540d9dc1072e7370b50cfa8736894b712
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>邏輯架構 (Analysis Services – 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料採礦是涉及多個元件互動的程序。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+資料採礦是涉及多個元件互動的程序。  
   
 -   您可以存取 SQL Server 資料庫或任何其他資料來源中的資料來源，以供定型、測試或預測使用。  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
  如需詳細資訊，請參閱 [多維度模型組件管理](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)。  
   
  **自訂預存程序**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料採礦支援使用預存程序來處理資料採礦物件。 您可以建立自己的預存程序來擴充功能，並更輕鬆地處理預測查詢和內容查詢所傳回的資料。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦支援使用預存程序來處理資料採礦物件。 您可以建立自己的預存程序來擴充功能，並更輕鬆地處理預測查詢和內容查詢所傳回的資料。  
   
  [定義預存程序](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
@@ -104,15 +105,15 @@ ms.lasthandoff: 01/08/2018
  此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也包含許多系統預存程序，可在內部用來進行資料採礦。 雖然系統預存程序供內部使用，但是您可能會發現這些是非常實用的捷徑。 Microsoft 保留視需要變更這些預存程序的權利；因此在實際使用上，我們建議您最好使用 DMX、AMO 或 XMLA 建立查詢。  
   
  **建立外掛程式演算法**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供一個機制來建立您自己的演算法，及將演算法當做新的資料採礦服務的伺服器執行個體。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一個機制讓您建立自己的演算法，然後將演算法當做新的資料採礦服務加入伺服器執行個體。  
   
  Analysis Services 會使用 COM 介面與外掛程式演算法通訊。 若要深入了解如何實作新的演算法，請參閱 [外掛程式演算法](../../analysis-services/data-mining/plugin-algorithms.md)。  
   
  您必須先註冊每一個新的演算法，然後才能使用。 若要註冊演算法，請在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的 .ini 檔案中加入演算法的必要中繼資料。 您必須在您打算使用新演算法的每一個執行個體中加入該資訊。 在您加入演算法之後，您可以重新啟動執行個體，然後使用 MINING_SERVICES 結構描述資料列集來檢視新的演算法，包括演算法所支援的選項和提供者。  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [資料採礦延伸模組 &#40; DMX &#41;參考](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

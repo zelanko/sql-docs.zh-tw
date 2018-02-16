@@ -18,19 +18,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]動作可以屬於不同類型，而且必須據此建立。 動作可以是：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+動作可以屬於不同類型，而且必須據此來建立。 動作可以是：  
   
 -   鑽研動作，該動作會傳回一組資料列，這些資料列表示動作發生所在之 Cube 中選定資料格的基礎資料。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="types-of-actions"></a>動作的類型  
  下表列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中所含的動作類型：  
   
-|動作類型|描述|  
+|動作類型|說明|  
 |-----------------|-----------------|  
 |CommandLine|在命令提示字元執行命令。|  
 |資料集|將資料集傳回用戶端應用程式。|  
@@ -71,13 +72,13 @@ ms.lasthandoff: 01/08/2018
 |專屬|使用不同於此資料表列出的介面來執行作業。|  
 |報表|將一個以 URL 為基礎的參數化要求，提交給報表伺服器，然後將報表傳回用戶端應用程式。|  
 |資料列集|將資料列集傳回用戶端應用程式。|  
-|引數|執行 OLE DB 命令。|  
+|Statement|執行 OLE DB 命令。|  
 |URL|在網際網路瀏覽器中顯示動態網頁。|  
   
 ## <a name="resolving-and-executing-actions"></a>解析及執行動作  
  商務使用者存取定義其命令物件的物件時，雖然會自動解析與該動作相關的陳述式，讓用戶端應用程式可使用該陳述式，但是不會自動執行該動作。 只有當商務使用者執行起始動作的用戶端特定作業時，才會執行該動作。 例如，在商務使用者以滑鼠右鍵按一下特定成員或資料格時，用戶端應用程式可能會以快顯功能表形式來顯示動作清單。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [多維度模型中的動作](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

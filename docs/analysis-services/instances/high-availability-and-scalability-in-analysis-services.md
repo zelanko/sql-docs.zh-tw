@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services 的高可用性與延展性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本文說明提高 Analysis Services 資料庫的最常用的技術的可用性和彈性。 雖然您可以個別達成每個目標，但實際上這兩個目標經常相互關聯︰可針對大型查詢或處理工作負載擴充的部署通常預期要有高可用性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本文說明提高 Analysis Services 資料庫可用性與延展性的最常用技術。 雖然您可以個別達成每個目標，但實際上這兩個目標經常相互關聯︰可針對大型查詢或處理工作負載擴充的部署通常預期要有高可用性。  
   
  不過反之則不一定。 當任務關鍵性但中等的查詢工作負載有嚴格的服務等級協定時，可以將不含延展性的高可用性當做唯一的目標。  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
  
  下列白皮書提供在容錯移轉叢集中部署 Analysis Services 的深入指示和背景資訊︰ [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)(如何將 SQL Server Analysis Services 叢集化)。 雖然本指引是針對 SQL Server 2012 所撰寫，但仍適用於較新版本的 Analysis Services。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [同步處理 Analysis Services 資料庫](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [Analysis Services 表格式資料庫強制執行 NUMA 相似性](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
  [Analysis Services 案例研究： 在大規模商業解決方案中使用表格式模型](https://msdn.microsoft.com/library/dn751533.aspx)  

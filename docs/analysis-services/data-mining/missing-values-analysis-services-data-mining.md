@@ -19,19 +19,20 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>遺漏值 (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]處理*遺漏值*正確是有效模型中很重要的一部分。 本節描述何謂遺漏值，以及您在建立資料採礦結構及採礦模型時，可用來處理遺漏值的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 功能。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+正確地處理  *「遺漏值」* (Missing value) 是有效模型中很重要的一部分。 本節描述何謂遺漏值，以及您在建立資料採礦結構及採礦模型時，可用來處理遺漏值的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 功能。  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>資料採礦中遺漏值的定義  
  遺漏值可能代表許多不同的情況。 可能是欄位不適用、事件未發生或資料無法使用。 輸入資料的人員可能不知道正確的值，或者未注意欄位是否填入。  
@@ -54,10 +55,10 @@ ms.lasthandoff: 01/08/2018
   
  例如，下表顯示針對 Bike Buyer 教學課程所建立的決策樹模型中 (All) 節點的值散發。 在範例案例中，[Bike Buyer] 資料行是可預測的屬性，其中 1 代表「是」，而 0 代表「否」。  
   
-|ReplTest1|案例|  
+|Value|案例|  
 |-----------|-----------|  
 |0|9296|  
-|@shouldalert|9098|  
+|1|9098|  
 |Missing|0|  
   
  此散發顯示大約一半的客戶已購買腳踏車，另一半則沒有。 這個特定資料集非常清楚，因此每個案例在 [Bike Buyer] 資料行中都有一個值，而 **Missing** 值為 0。 不過，如果任何案例在 [Bike Buyer] 欄位中有一個 Null 值，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將該資料行計為具有 **Missing** 值的案例。  
@@ -70,10 +71,10 @@ ms.lasthandoff: 01/08/2018
 ## <a name="adjusting-probability-for-missing-states"></a>調整遺漏狀態的機率  
  除了計算值以外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也可以計算整個資料集中任何值的機率。 **Missing** 值的情況也是如此。 例如，下列資料表顯示前述範例中案例的機率：  
   
-|ReplTest1|案例|機率|  
+|Value|案例|機率|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
-|@shouldalert|9098|49.42%|  
+|1|9098|49.42%|  
 |Missing|0|0.03%|  
   
  當案例數為 0 時， **Missing** 值的機率計算為 0.03% 可能看起來很奇怪。 事實上，這個行為是經過設計的，代表可讓模型正常處理未知值的調整。  
@@ -114,13 +115,13 @@ ms.lasthandoff: 01/08/2018
   
 |工作|連結|  
 |-----------|-----------|  
-|將旗標加入個別模型資料行，以控制遺漏值的處理|[檢視或變更模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|將旗標加入個別模型資料行，以控制遺漏值的處理|[檢視或變更模型旗標 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |設定採礦模型的屬性以控制遺漏值的處理|[變更採礦模型的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|了解如何在 DMX 中指定模型旗標|[模型旗標 &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
+|了解如何在 DMX 中指定模型旗標|[模型旗標 &#40; DMX &#41;](../../dmx/modeling-flags-dmx.md)|  
 |改變採礦結構處理遺漏值的方式|[變更採礦結構的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
-## <a name="see-also"></a>請參閱  
- [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+## <a name="see-also"></a>另請參閱  
+ [採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [模型旗標 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

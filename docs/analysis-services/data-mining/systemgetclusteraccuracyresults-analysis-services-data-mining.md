@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SystemGetClusterAccuracyResults
 - cross-validation [data mining]
 ms.assetid: e1701738-50d5-46b4-b406-f1e800545abb
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 47272107eea7905a1e0414f42ff450e7a1ebbdb9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]傳回採礦結構和相關的群集模型的交叉驗證精確度標準。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+針對採礦結構和所有相關的叢集模型傳回交叉驗證精確度的度量。  
   
  此預存程序會將整個資料集的度量當做單一資料分割來傳回。 若要將資料集分割成交叉區段，並傳回每個資料分割的度量，請使用 [SystemGetClusterCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)。  
   
@@ -82,7 +83,7 @@ SystemGetClusterAccuracyResults(
   
  下表列出 **SystemGetClusterAccuracyResults**所傳回的資料行。 若要深入了解如何解譯預存程序所傳回資訊的詳細資訊，請參閱 [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |ModelName|已測試的模型名稱。 [全部] 表示結果是所有模型的彙總。|  
 |AttributeName|不適用於叢集模型。|  
@@ -91,14 +92,14 @@ SystemGetClusterAccuracyResults(
 |PartitionCases|指示已經測試了多少案例的整數。|  
 |測試|已執行的測試類型。|  
 |[量值]|測試所傳回之量值的名稱。 每一個模型的量值取決於模型類型及可預測值的類型。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱[交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。<br /><br /> 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。|  
-|ReplTest1|指示群集案例可能性的機率分數。|  
+|Value|指示群集案例可能性的機率分數。|  
   
 ## <a name="remarks"></a>備註  
  下表提供您可以在用於交叉驗證的採礦結構內指定資料的值範例。 如果您想要將測試案例用於交叉驗證，採礦結構必須已經包含測試資料集。 如需在建立採礦結構時如何定義測試資料集的相關資訊，請參閱 [定型和測試資料集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
-|整數值|描述|  
+|整數值|Description|  
 |-------------------|-----------------|  
-|@shouldalert|只會使用定型案例。|  
+|1|只會使用定型案例。|  
 |2|只會使用測試案例。|  
 |3|定型案例和測試案例都會使用。|  
 |4|組合無效。|  
@@ -121,7 +122,7 @@ CALL SystemGetClusterAccuracyResults (
   
  範例結果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|量值|ReplTest1|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|量值|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |叢集 1|||0|5545|群集|案例概似值|0.796514342249313|  
 |群集 2|||0|5545|群集|案例概似值|0.732122471228572|  
@@ -129,7 +130,7 @@ CALL SystemGetClusterAccuracyResults (
 ## <a name="requirements"></a>需求  
  從 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 開始，交叉驗證只能在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中使用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   

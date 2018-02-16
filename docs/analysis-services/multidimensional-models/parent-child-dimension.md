@@ -22,19 +22,20 @@ helpviewer_keywords:
 - members [Analysis Services], data
 - parent-child dimensions [Analysis Services]
 ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 2c9416e3035d42db5e2087d14358344671288bb6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="parent-child-dimension"></a>父子式維度
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]父子式階層是標準的維度，其中包含父屬性中的階層。 父屬性描述維度主資料表內的「自我參考關聯性」或「自我聯結」。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層中之成員的位置是由父屬性 (attribute) 的 **KeyColumns** 和 **RootMemberIf** 屬性 (property) 所決定，而層級中之成員的位置是由父屬性 (attribute) 的 **OrderBy** 屬性 (property) 所決定。 如需屬性 (attribute) 之屬性 (property) 的詳細資訊，請參閱 [屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+父子式階層是位於包含父屬性之標準維度中的階層。 父屬性描述維度主資料表內的「自我參考關聯性」或「自我聯結」。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層中之成員的位置是由父屬性 (attribute) 的 **KeyColumns** 和 **RootMemberIf** 屬性 (property) 所決定，而層級中之成員的位置是由父屬性 (attribute) 的 **OrderBy** 屬性 (property) 所決定。 如需屬性 (attribute) 之屬性 (property) 的詳細資訊，請參閱 [屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   
  因為在父子式階層內有層級之間的父子式關聯性，所以除了有彙總自子成員的資料以外，部分非分葉成員還可能會有衍生自基礎資料來源的資料。  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
  但是父子式階層除了彙總自子成員的資料以外，也可能會有部分非分葉成員的資料是衍生自基礎資料來源。 針對父子式階層中的這些非分葉成員，可以建立特殊、由系統產生的子成員，其中包含基礎事實資料表的資料。 這些特殊子成員稱為 *資料成員*，包含與非分葉成員直接相關聯而且與非分葉成員的下階導出之摘要值無關的值。 如需資料成員的詳細資訊，請參閱 [父子式階層中的屬性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [父子式階層中的屬性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
  [資料庫維度屬性](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 865e6d06-b99a-41f3-9d6f-c3c97b529b23
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e2a7f1392931ec5edd41803f6df6d98aa95403dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="invoke-processtable-cmdlet"></a>Invoke-ProcessTable Cmdlet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]進行**程序**作業**資料表**具有特定**RefreshType**。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在具有特定 **RefreshType** 的 **Table** 上進行 **Process**作業。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="parameters"></a>參數  
   
-### <a name="-tablename-string"></a>-TableName\<字串 >  
+### <a name="-tablename-string"></a>-TableName \<string>  
  資料分割隸屬的必要處理資料表名稱。  
   
 |||  
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-databasename-string"></a>-DatabaseName\<字串 >  
+### <a name="-databasename-string"></a>-DatabaseName \<string>  
  指定資料表所屬的資料庫。  
   
 |||  
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-servermicrosoftanalysissevicesserver"></a>伺服器\<Microsoft.AnalysisSevices.Server >  
+### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server>  
  選擇性地指定如果您不是使用 **SQLAS** 提供者目錄作為內容時要連接的伺服器執行個體。  
   
 |||  
@@ -69,13 +70,13 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType >  
+### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType>  
  指定表格式資料庫的處理類型。  有效值為 Full、ClearValues、Calculate、DataOnly、Automatic、Add 和 Defragment。 如需說明與指引，請參閱[處理資料庫、資料表或資料分割 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)。  
   
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  

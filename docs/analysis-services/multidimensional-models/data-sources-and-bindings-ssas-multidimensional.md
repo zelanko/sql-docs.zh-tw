@@ -35,19 +35,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>資料來源和繫結 (SSAS 多維度)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cube、 維度和其他[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件可以繫結至資料來源。 資料來源可為下列其中一個物件：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cube、維度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件都可繫結至資料來源。 資料來源可為下列其中一個物件：  
   
 -   關聯式資料來源。  
   
@@ -62,12 +63,12 @@ ms.lasthandoff: 01/08/2018
 ## <a name="analysis-services-data-types"></a>Analysis Services 資料類型  
  繫結中所用的資料類型必須與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所支援的資料類型相符。 下列資料類型定義於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中：  
   
-|Analysis Services 資料類型|描述|  
+|Analysis Services 資料類型|Description|  
 |---------------------------------|-----------------|  
 |BigInt|64 位元帶正負號的整數。 這個資料類型會對應至 Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int64 資料類型和 OLE DB 內部的 DBTYPE_I8 資料類型。|  
 |Bool|布林值。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Boolean 資料類型和 OLE DB 內部的 DBTYPE_BOOL 資料類型。|  
 |CURRENCY|貨幣值，範圍從 -263 (或 -922,337,203,685,477.5808) 到 263-1 (或 +922,337,203,685,477.5807)，正確率為貨幣單位的千分之十。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Decimal 資料類型和 OLE DB 內部的 DBTYPE_CY 資料類型。|  
-|date|儲存成雙精確度浮點數的日期資料。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 DateTime 資料類型和 OLE DB 內部的 DBTYPE_DATE 資料類型。|  
+|日期|儲存成雙精確度浮點數的日期資料。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 DateTime 資料類型和 OLE DB 內部的 DBTYPE_DATE 資料類型。|  
 |Double|在 -1.79E +308 到 1.79E +308 範圍中的雙精確度浮點數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Double 資料類型和 OLE DB 內部的 DBTYPE_R8 資料類型。|  
 |Integer|32 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int32 資料類型和 OLE DB 內部的 DBTYPE_I4 資料類型。|  
 |Single|在 -3.40E +38 到 3.40E +38 範圍中的單精確度浮點數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Single 資料類型和 OLE DB 內部的 DBTYPE_R4 資料類型。|  
@@ -174,7 +175,7 @@ ms.lasthandoff: 01/08/2018
   
  非正規繫結的指定方式，是使用處理命令來包含選擇性 **Bindings** 集合物件。 選擇性 **Bindings** 集合包含下列元素。  
   
-|屬性|基數|類型|描述|  
+|屬性|基數|型別|Description|  
 |--------------|-----------------|----------|-----------------|  
 |**繫結**|0-n|**繫結**|提供新繫結的集合。|  
 |**DataSource**|0-1|**DataSource**|取代原本會使用之伺服器中的 **DataSource** 。|  

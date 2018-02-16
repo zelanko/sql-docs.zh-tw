@@ -1,5 +1,5 @@
 ---
-title: "Get-powerpivotsystemservice 指令程式 |Microsoft 文件"
+title: Get-PowerPivotSystemService cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 33231250-3880-4d75-936b-d70662a01855
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 20c13c68abadafcbe4cc357345a4b3ba7d0668f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="get-powerpivotsystemservice-cmdlet"></a>Get-PowerPivotSystemService 指令程式
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]傳回的全域屬性[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]伺服陣列中的系統服務物件。 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+傳回伺服器陣列中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務物件的全域屬性。 
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -37,12 +38,12 @@ ms.lasthandoff: 01/08/2018
 Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  Get-PowerPivotSystemService Cmdlet 會傳回 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務物件的全域屬性。 每個伺服器陣列只有一個父物件，但是每個伺服器陣列中可以有多個在伺服器陣列中個別應用程式伺服器上執行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務執行個體。 父物件顯示的伺服器陣列層級設定不因執行個體而改變。 如果伺服器陣列包含多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝，逗號分隔的執行個體清單會指出伺服器陣列中有多少個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務執行個體。  
   
 ## <a name="parameters"></a>參數  
   
-### <a name="-identity-powerpivotmidtierservicepipebind"></a>識別\<PowerPivotMidTierServicePipeBind >  
+### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identity \<PowerPivotMidTierServicePipeBind>  
  指定要取得的父物件。 此值必須是可在伺服器陣列中唯一識別物件的有效 GUID。  
   
 |||  
@@ -53,7 +54,7 @@ Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<Com
 |接受管線輸入？|true|  
 |接受萬用字元？|false|  
   
-### <a name="commonparameters"></a>\<一般參數 >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  這個指令程式支援一般參數：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 如需詳細資訊，請參閱 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>輸入和輸出  

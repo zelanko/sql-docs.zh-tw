@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining model content, linear regression models
 - regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f44a257eb21427252cd611e4bd7cbb052f27df2a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線性迴歸模型的採礦模型內容 (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述使用的模型專用的採礦模型內容[!INCLUDE[msCoName](../../includes/msconame-md.md)]線性迴歸演算法。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>了解線性迴歸模型的結構  
  線性迴歸模型的結構相當簡單。 每個模型都擁有代表模型及其中繼資料的單一父節點，以及包含每個可預測屬性之迴歸公式的迴歸樹模式 (NODE_TYPE = 25)。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/08/2018
  NODE_TYPE  
  線性迴歸模型會輸出下列節點類型：  
   
-|節點類型識別碼|類型|描述|  
+|節點類型識別碼|型別|Description|  
 |------------------|----------|-----------------|  
 |25|迴歸樹根節點|包含描述輸入和輸出變數之間關聯性的公式。|  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 01/08/2018
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
+|Yearly Income|遺漏|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Age|471.687717702463|0|0|126.969442359327|7|  
 |Age|234.680904692439|0|0|0|8|  
@@ -192,8 +193,8 @@ ms.lasthandoff: 01/08/2018
   
  因此，假設平均年齡為 45 歲左右，迴歸公式的截距 (VALUETYPE = 11) 會告訴您平均收入。  
   
-## <a name="see-also"></a>請參閱  
- [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另請參閱  
+ [採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 線性迴歸演算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  

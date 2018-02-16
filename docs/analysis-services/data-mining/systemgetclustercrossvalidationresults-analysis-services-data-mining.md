@@ -16,19 +16,20 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: 79de9b81-9f2e-4f20-ace9-e3b19d6a9759
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fdd5623be105cba70aa9404aba2c4d87cd0574cc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料分割成交叉區段，指定數目的採礦結構的每個資料分割中，為模型定型，，然後傳回每個資料分割的精確度度量。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+將採礦結構分割成指定數目的交叉區段、定型每一個資料分割的模型，然後傳回每一個資料分割的精確度度量。  
   
  **注意** ：這個預存程序只能搭配至少包含一個叢集模型的採礦結構使用。 若要交叉驗證非叢集模型，您必須使用 [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)。  
   
@@ -93,7 +94,7 @@ SystemGetClusterCrossValidationResults(
   
  下表描述傳回的資料行。  
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |ModelName|已測試的模型名稱。|  
 |AttributeName|可預測的資料行名稱。 若為叢集模型，一律為 **null**。|  
@@ -102,7 +103,7 @@ SystemGetClusterCrossValidationResults(
 |PartitionSize|指示每一個資料分割內包含了多少案例數的整數。|  
 |測試|已執行的測試類型。|  
 |[量值]|測試所傳回之量值的名稱。 每一個模型的量值都取決於可預測值的類型。 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱 [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
-|ReplTest1|指定之測試量值的值。|  
+|Value|指定之測試量值的值。|  
   
 ## <a name="remarks"></a>備註  
  若要傳回整個資料集的精確度度量，請使用 [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)。  
@@ -129,22 +130,22 @@ CALL SystemGetClusterCrossValidationResults(
   
  範例結果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|量值|ReplTest1|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|量值|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|叢集 1|||@shouldalert|3025|群集|案例概似值|0.930524511864121|  
+|叢集 1|||1|3025|群集|案例概似值|0.930524511864121|  
 |叢集 1|||2|3025|群集|案例概似值|0.919184178430778|  
 |叢集 1|||3|3024|群集|案例概似值|0.929651120490248|  
-|群集 2|||@shouldalert|1289|群集|案例概似值|0.922789726933607|  
+|群集 2|||1|1289|群集|案例概似值|0.922789726933607|  
 |群集 2|||2|1288|群集|案例概似值|0.934865535691068|  
 |群集 2|||3|1288|群集|案例概似值|0.924724595688798|  
   
 ## <a name="requirements"></a>需求  
  從 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 開始，交叉驗證只能在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中使用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

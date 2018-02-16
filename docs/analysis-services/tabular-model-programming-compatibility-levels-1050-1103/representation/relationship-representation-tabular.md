@@ -11,23 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c0fef50d7a63d51955dcc523e07957c237d530ff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="relationship-representation-tabular"></a>關聯性表示法 (表格式)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]關聯性是兩個資料表之間的連線。 關聯性會建立兩個資料表中的資料相互關聯的方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。  
   
- 請參閱[關聯性表示法 （表格式）](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md)如需如何建立及操作關聯性表示法的詳細說明。  
+ 如需有關如何建立和操作關聯性表示法的詳細說明，請參閱＜ [Relationship Representation (Tabular)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) ＞。  
   
 ## <a name="relationship-representation"></a>關聯性表示法  
  在表格式模型中，可以在兩個資料表之間定義多個關聯性。 定義兩個資料表之間的多個關聯性時，只有一個關聯性可以定義為模型的預設關聯性，而且它會稱為作用中的關聯性；所有其他關聯性則稱為非作用中的關聯性。  

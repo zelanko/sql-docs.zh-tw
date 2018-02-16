@@ -25,10 +25,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: c56a813ec873293fec2dc846da851fc9d36f2dae
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo 存取傳回值
 下表列出 C 語言 #defines *fInfoType*引數和傳回對應值**SQLGetInfo**。 這項資訊可以擷取傳遞列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需有關所傳回的值**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  

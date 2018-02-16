@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0159070eb0405e49f9813828aa82b1483008b61f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>瀏覽 Cube 中的資料和中繼資料
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用**瀏覽器** 索引標籤，Cube 設計工具來瀏覽 cube 資料。 您可以使用此檢視檢查 Cube 的結構，並檢查資料庫物件的資料、計算、格式及安全性。 您可以像是使用者在報表工具或其他用戶端應用程式檢視 Cube 一樣，快速檢查 Cube。 當您瀏覽 Cube 資料時，您可以檢視不同的維度、向下鑽研至成員，以及配量維度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用 Cube 設計師的 [瀏覽器] 索引標籤瀏覽 Cube 資料。 您可以使用此檢視檢查 Cube 的結構，並檢查資料庫物件的資料、計算、格式及安全性。 您可以像是使用者在報表工具或其他用戶端應用程式檢視 Cube 一樣，快速檢查 Cube。 當您瀏覽 Cube 資料時，您可以檢視不同的維度、向下鑽研至成員，以及配量維度。  
   
  在瀏覽 Cube 之前，您必須對其進行處理及重新連接。 處理後，請開啟 Cube 設計師的 [瀏覽器] 索引標籤。 按一下工具列上的 [重新連接] 按鈕，重新整理連接。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
  指定階層之後，請指定運算子和篩選運算式。 下表描述運算子和篩選運算式。  
   
-|運算子|篩選運算式|描述|  
+|運算子|篩選運算式|說明|  
 |--------------|-----------------------|-----------------|  
 |等於|一個或多個成員|值必須等於指定的成員<br /><br /> (為父子式階層以外的屬性階層提供多個成員選取，並為其他階層提供單一成員選取)。|  
 |Not Equal|一個或多個成員|值不得等於指定的成員<br /><br /> (為父子式階層以外的屬性階層提供多個成員選取，並為其他階層提供單一成員選取)。|  

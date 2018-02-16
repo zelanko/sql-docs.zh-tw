@@ -16,19 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>時序叢集模型查詢範例
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立針對資料採礦模型的查詢時，您可以建立內容查詢，來提供模型中儲存之資訊的詳細資料，或您可以建立預測查詢，根據新資料做出預測模型中使用的模式您提供。 對於時序群集模型，內容查詢通常會提供找到之群集的其他詳細資料，或提供這些群集中的轉換。 您也可以使用查詢來擷取有關模型的中繼資料。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關模型中排序之資訊的詳細資料，或是建立預測查詢來使用模型中的模式，根據所提供的新資料進行預測。 對於時序群集模型，內容查詢通常會提供找到之群集的其他詳細資料，或提供這些群集中的轉換。 您也可以使用查詢來擷取有關模型的中繼資料。  
   
  時序群集模型的預測查詢通常會根據轉換的時序、包含在模型中的非時序屬性，或者時序與非時序屬性的組合，做出建議。  
   
@@ -95,7 +96,7 @@ AND [PARENT_UNIQUE_NAME] = 0
   
 |NODE_UNIQUE_NAME|產品 1|時序支援|時序機率|  
 |------------------------|---------------|----------------------|--------------------------|  
-|1081327|Missing|0|#######|  
+|1081327|遺漏|0|#######|  
 |1081327|All-Purpose Bike Stand|17|0.00111|  
 |1081327|Bike Wash|64|0.00418|  
 |1081327|(資料列 4-36 省略)|||  
@@ -238,7 +239,7 @@ AS t
   
 |Expression.$Sequence|Expression.Line Number|Expression.Model|  
 |--------------------------|----------------------------|----------------------|  
-|@shouldalert||Cycling Cap|  
+|1||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
 |4||Long-Sleeve Logo Jersey|  
@@ -264,23 +265,23 @@ AS t
 |[ClusterDistance &#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|傳回輸入案例與指定之群集的距離；如果沒有指定任何群集，則會傳回輸入案例與最可能之群集的距離。<br /><br /> 此函數可以搭配任何種類的叢集模型 (EM、K-Means 等) 使用，但是結果會隨著演算法而有所不同。|  
 |[ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|傳回輸入案例屬於指定之群集的機率。|  
 |[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|指示指定的節點是否包含目前案例。|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|傳回指定狀態的已調整機率。|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|傳回指定狀態的已調整機率。|  
 |[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|預測關聯的成員資格。|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|傳回輸入案例符合現有模型的可能性。|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|傳回表示給定資料行的預測長條圖的資料表。|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|傳回案例分類之節點的 Node_ID。|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|傳回指定狀態的機率。|  
+|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|傳回表示給定資料行的預測長條圖的資料表。|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|傳回案例分類之節點的 Node_ID。|  
+|[[Predictprobability] &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|傳回指定狀態的機率。|  
 |[PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md)|預測指定之時序資料集合的未來時序值。|  
 |[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|傳回指定之資料行的預測標準差。|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|傳回指定之資料行的變異數。|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|傳回指定之資料行的變異數。|  
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法通用函數的清單，請參閱[一般預測函數 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)。 如需特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 時序群集演算法技術參考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft 時序群集演算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [時序群集模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

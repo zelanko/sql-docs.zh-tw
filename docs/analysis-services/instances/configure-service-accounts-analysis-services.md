@@ -17,19 +17,20 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>設定服務帳戶 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]全產品帳戶佈建記載於[設定 Windows 服務帳戶和權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)，提供完整的服務帳戶資訊的所有主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務，包括[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 如需了解有效的帳戶類型、由安裝程式指派的 Windows 權限、檔案系統權限、登錄權限等，請參閱該主題。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中記載如何佈建適用於整個產品範圍的帳戶，該主題提供適用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務 (包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 的全方位服務帳戶資訊。 如需了解有效的帳戶類型、由安裝程式指派的 Windows 權限、檔案系統權限、登錄權限等，請參閱該主題。  
   
  本主題提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的補充資訊，包含表格式和叢集安裝所需的其他權限。 其中也涵蓋支援伺服器作業所需的權限。 例如，您可以在服務帳戶底下設定要排除的處理和查詢作業 - 在這個情況下，您將需要授與其他權限來讓這個動作生效。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="logon-account-recommendations"></a>登入帳戶建議  
  在容錯移轉叢集中，Analysis Services 的所有執行個體都應該都設定為使用 Windows 網域使用者帳戶。 將相同的帳戶指派給所有執行個體。 請參閱 [如何將 Analysis Services 叢集化](http://msdn.microsoft.com/library/dn736073.aspx) 如需詳細資訊。  
   
- 獨立執行個體應該使用預設的虛擬帳戶 **NT Service\MSSQLServerOLAPService** 作為預設執行個體，或使用 **NT Service\MSOLAP$***instance-name* 作為具名執行個體。 這項建議適用於所有伺服器模式中的 Analysis Services 執行個體，作業系統為 Windows Server 2008 R2 和更新版本，而 Analysis Services 為 SQL Server 2012 和更新版本。  
+ 獨立執行個體應該使用預設虛擬帳戶， **NT Service\MSSQLServerOLAPService**的預設執行個體，或 **NT Service\MSOLAP$ * * * 執行個體名稱*的具名執行個體。 這項建議適用於所有伺服器模式中的 Analysis Services 執行個體，作業系統為 Windows Server 2008 R2 和更新版本，而 Analysis Services 為 SQL Server 2012 和更新版本。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>授與權限給 Analysis Services  
  本節說明 Analysis Services 對於本機的內部作業 (例如啟動可執行檔、讀取組態檔，以及從資料目錄載入資料庫) 所需的權限。 如果您是要尋找為外部資料存取設定權限，以及與其他服務和應用程式的互通性的指引，請參閱本主題中的 [授與特定伺服器作業的其他權限](#bkmk_tasks) 。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_FilePermissions"></a> 指派給 Analysis Services 服務帳戶的檔案系統權限  
   
 > [!NOTE]  
->  如需與每個程式資料夾相關聯的權限清單，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
+>  如需與每個程式資料夾相關聯的權限清單，請參閱[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
 >   
 >  如需與 IIS 組態和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 相關的檔案權限資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
@@ -154,10 +155,10 @@ ms.lasthandoff: 01/08/2018
 |回寫|將服務帳戶新增到在遠端伺服器上定義的 Analysis Services 資料庫角色|在用戶端應用程式中啟用時，回寫是多維度模型功能，可在資料分析期間建立新的資料值。 如果已在維度或 Cube 內啟用回寫， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶就必須針對來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的回寫資料表具備寫入權限。 如果這個資料表不存在而需要建立，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，也必須有建立資料表的權限。|  
 |寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的查詢記錄資料表|建立服務帳戶的資料庫登入並指派查詢記錄表格的寫入權限|您可以啟用查詢記錄，以收集資料庫資料表中的使用量資料進行後續分析。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶對指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的查詢記錄資料表，必須具有寫入權限。 如果這個資料表不存在而需要建立，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 登入帳戶在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，也必須有建立資料表的權限。 如需詳細資訊，請參閱 [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard (部落格)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) 和 [Query Logging in Analysis Services (部落格)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server 服務帳戶和個別服務 SID （部落格）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server 使用服務 SID 提供服務隔離 （知識庫文章）](http://support.microsoft.com/kb/2620201)   
+ [SQL Server 服務帳戶和個別服務 SID (部落格)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server 使用服務 SID 提供服務隔離 (知識庫文件)](http://support.microsoft.com/kb/2620201)   
  [存取 Token (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
  [安全性識別碼 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
  [存取 Token (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   

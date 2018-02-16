@@ -15,46 +15,47 @@ helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1c4f6573ce8f72c0fa907f58a1f4264709809f11
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="supported-mdx-mdx"></a>支援的 MDX (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多維度運算式 (MDX) 指令碼內支援下列陳述式和函式：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+多維度運算式 (MDX) 指令碼內支援下列陳述式及函數：  
   
- [&#40;註解&#41; &#40;MDX&#41;](../../../mdx/comment-mdx-double-slash.md)  
+ [&#40;註解 &#41;&#40;MDX &#41;](../../../mdx/comment-mdx-double-slash.md)  
   
- [-- &#40;註解&#41; &#40;MDX&#41;](../../../mdx/comment-mdx-operator-reference.md)  
+ [-&#40;註解 &#41;&#40;MDX &#41;](../../../mdx/comment-mdx-operator-reference.md)  
   
- [註解 &#40;MDX&#41;](../../../mdx/comment-mdx.md)  
+ [註解 &#40;MDX &#41;](../../../mdx/comment-mdx.md)  
   
- [ALTER CUBE 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-alter-cube.md)  
+ [ALTER CUBE 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-alter-cube.md)  
   
 > [!NOTE]  
 >  MDX 指令碼中只支援改變預設成員。  
   
- [CALCULATE 陳述式 &#40;MDX&#41;](../../../mdx/mdx-scripting-calculate.md)  
+ [計算陳述式 &#40;MDX &#41;](../../../mdx/mdx-scripting-calculate.md)  
   
- [CASE 陳述式 &#40;MDX&#41;](../../../mdx/case-statement-mdx.md)  
+ [CASE 陳述式 &#40;MDX &#41;](../../../mdx/case-statement-mdx.md)  
   
- [CREATE CELL CALCULATION 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [建立 CELL CALCULATION 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
- [CREATE MEMBER 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)  
+ [建立 MEMBER 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)  
   
- [CREATE SET 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)  
+ [建立 SET 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-set.md)  
   
- [EXISTING 關鍵字 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
+ [EXISTING 關鍵字 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
   
- [FREEZE 陳述式 &#40;MDX&#41;](../../../mdx/mdx-scripting-freeze.md)  
+ [FREEZE 陳述式 &#40;MDX &#41;](../../../mdx/mdx-scripting-freeze.md)  
   
- [IF 陳述式 &#40;MDX&#41;](../../../mdx/mdx-scripting-if.md)  
+ [如果陳述式 &#40;MDX &#41;](../../../mdx/mdx-scripting-if.md)  
   
  [此 &#40;MDX&#41;](../../../mdx/this-mdx.md)  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
  [SCOPE 陳述式 &#40;MDX&#41;](../../../mdx/mdx-scripting-scope.md)  
   
-## <a name="see-also"></a>請參閱  
- [基本 MDX 指令碼 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [基本 MDX 指令碼 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
   

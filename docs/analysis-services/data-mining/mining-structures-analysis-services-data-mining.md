@@ -23,19 +23,20 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: "77"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6b7467be225e2468be21603f3e40de04050dc6b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>採礦結構 (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]採礦結構定義從中建立採礦模型的資料： 它會指定來源資料檢視、 數目和類型的資料行，以及選用的資料分割成定型集和測試設定。 單一採礦結構可支援共用相同網域的多個採礦模型。 下列圖表說明資料採礦結構與資料來源及其所構成資料採礦模型間的關聯性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+採礦結構定義從中建立採礦模型的資料：此結構會指定來源資料檢視、資料行的數目和類型，並將選用的資料分割指定為定型集和測試集。 單一採礦結構可支援共用相同網域的多個採礦模型。 下列圖表說明資料採礦結構與資料來源及其所構成資料採礦模型間的關聯性。  
   
  ![資料處理： 來源到結構到模型](../../analysis-services/data-mining/media/dmcon-modelarch.gif "資料處理： 來源到結構到模型")  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 01/08/2018
   
  如果快取很大，或您想移除詳細的資料，您可以選擇在處理後捨棄此快取。 如果不要快取資料，您可以將採礦結構的 **CacheMode** 屬性變更為 **ClearAfterProcessing**。 這樣一來就會在處理任何模型之後將快取終結。 將 **CacheMode** 屬性設定為 **ClearAfterProcessing** 會從採礦模型停用鑽研。  
   
- 但是在您終結快取之後，則無法將新模型加入至採礦結構。 如果您將新的採礦模型加入至結構，或變更現有模型的屬性，則需要先重新處理採礦結構。 如需詳細資訊，請參閱[處理需求和考量 &#40;資料採礦&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
+ 但是在您終結快取之後，則無法將新模型加入至採礦結構。 如果您將新的採礦模型加入至結構，或變更現有模型的屬性，則需要先重新處理採礦結構。 如需詳細資訊，請參閱 [Processing Requirements and Considerations &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md) (處理需求和考量 (資料採礦))。  
   
 ### <a name="viewing-mining-structures"></a>檢視採礦結構  
  您無法使用檢視器來瀏覽採礦結構中的資料。 但是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您可以使用資料採礦設計師的 **[採礦結構]** 索引標籤，檢視結構資料行和其定義。 如需詳細資訊，請參閱 [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)。  
@@ -120,14 +121,14 @@ ms.lasthandoff: 01/08/2018
   
 |工作|連結|  
 |-----------|-----------|  
-|使用關聯式採礦結構|[建立新的關聯式採礦結構](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [將巢狀資料表新增至採礦結構](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
+|使用關聯式採礦結構|[建立新的關聯式採礦結構](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [加入巢狀的資料表至採礦結構](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
 |使用以 OLAP Cube 為基礎的採礦結構|[建立新的 OLAP 採礦結構](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
-|使用採礦結構中的資料行|[將資料行新增至採礦結構](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [從採礦結構中移除資料行](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
+|使用採礦結構中的資料行|[資料行加入採礦結構](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [從採礦結構中移除資料行](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |變更或查詢採礦結構屬性和資料|[變更採礦結構的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
 |使用基礎資料來源及更新來源資料|[編輯用於採礦結構的資料來源檢視](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [處理採礦結構](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [採礦模型 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

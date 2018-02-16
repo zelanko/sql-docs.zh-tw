@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的記錄作業
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services 執行個體將會記錄伺服器通知、 錯誤和警告至 msmdsrv.log 檔案 – 所安裝的每個執行個體的其中一個。 管理員可以參考此記錄檔，獲得例行和異常等事件的深入見解。 最新版本的記錄功能已經過增強，可以加入更多資訊。 記錄檔記錄現在包含產品版本和版本資訊，以及處理器、記憶體、連接及封鎖事件。 您可以在 [記錄改進](http://support.microsoft.com/kb/2965035)檢閱整個變更清單。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services 執行個體會將伺服器通知、錯誤和警告記錄至 msmdsrv.log 檔案 – 所安裝的各執行個體都有一個。 管理員可以參考此記錄檔，獲得例行和異常等事件的深入見解。 最新版本的記錄功能已經過增強，可以加入更多資訊。 記錄檔記錄現在包含產品版本和版本資訊，以及處理器、記憶體、連接及封鎖事件。 您可以在 [記錄改進](http://support.microsoft.com/kb/2965035)檢閱整個變更清單。  
   
  除了內建的記錄功能，許多管理員和開發人員也使用 Analysis Services 社群所提供的工具來收集有關伺服器作業 (例如 **ASTrace**) 的資料。 請參閱 [Microsoft SQL Server 社群範例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) 以取得下載連結。  
   
@@ -158,10 +159,10 @@ ms.lasthandoff: 01/08/2018
   
  最有可能遭到修改的組態設定是用來判斷是否會產生記憶體傾印檔案的 **CreateAndSendCrashReports** 設定。  
   
-|ReplTest1|描述|  
+|Value|설명|  
 |-----------|-----------------|  
 |0|關閉記憶體傾印檔案。 將會忽略 Exception 區段下的所有其他設定。|  
-|@shouldalert|(預設值) 啟用，但不會傳送記憶體傾印檔案。|  
+|1|(預設值) 啟用，但不會傳送記憶體傾印檔案。|  
 |2|啟用並自動傳送錯誤報告給 Microsoft。|  
   
  **CrashReportsFolder** 是將傾印檔案的位置。 根據預設，可以在 \Olap\Log 資料夾中找到一個 .mdmp 檔以及相關聯的記錄檔記錄。  

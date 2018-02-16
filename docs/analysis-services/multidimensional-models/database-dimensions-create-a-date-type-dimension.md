@@ -19,19 +19,20 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>資料庫維度-建立日期類型維度
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，時間維度是其屬性代表時間週期，例如年、 半年度、 季、 月和日的維度類型。 時間維度中的週期，會為分析和報表提供時間層級的資料粒度。 屬性會組織在階層中，而時間維度的資料粒度多半取決於記錄資料的商務和報表需求。 例如，商業智慧應用程式中的大部份財務和商務資料，都使用每月或每季的資料粒度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，時間維度是其屬性代表時間週期的維度類型，例如年、學期、季、月和日。 時間維度中的週期，會為分析和報表提供時間層級的資料粒度。 屬性會組織在階層中，而時間維度的資料粒度多半取決於記錄資料的商務和報表需求。 例如，商業智慧應用程式中的大部份財務和商務資料，都使用每月或每季的資料粒度。  
   
  通常， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 Cube 會將時間維度併入某個表單或其他表單中。 Cube 可能會包含多個時間維度，或來自相同時間維度的數個階層，視資料的資料粒度和報表需求而定。 不過，並非所有 Cube 都需要時間維度。 因為活動式維度的成本估計是根據活動，而非時間，所以有些 OLAP 應用程式 (例如活動式成本估計) 並不需要時間維度。  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
  您可以在維度設計師中，手動建構這些不同的日曆。 不過，維度精靈有提供數個階層範本，當您建立時間維度或伺服器時間維度時，可以使用這些範本來自動產生數種類型的日曆。 下表描述可由維度精靈產生的各種日曆。  
   
-|日曆|描述|  
+|日曆|Description|  
 |--------------|-----------------|  
 |標準日曆|12 個月的西曆，從 1 月 1 日開始，到 12 月 31 日結束。<br /><br /> 不論您使用維度精靈來建立時間維度或伺服器時間維度，在您定義代表維度時間週期的屬性之後，精靈都會產生標準日曆的階層。 如果您使用維度精靈來建立伺服器時間維度，您可以調整標準日曆的起始日期，成為從 1 月 1 日以外的日期開始。|  
 |會計日曆|十二月份會計日曆。 當您選取此日曆時，請指定組織所使用會計年度起始日期和月份。<br /><br /> 注意：唯有使用維度精靈建立伺服器時間維度時，才能使用這個日曆。|  
@@ -73,8 +74,8 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  您不能使用商業智慧精靈將時間智慧加入至伺服器時間維度。 商業智慧精靈會加入支援時間智慧的階層，而此階層必須繫結到時間維度資料表的資料行。 伺服器時間維度沒有對應的時間維度資料表，因此無法支援此額外階層。  
   
-## <a name="see-also"></a>請參閱  
- [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+## <a name="see-also"></a>另請參閱  
+ [產生時間資料表來建立時間維度](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [商業智慧精靈 F1 說明](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [維度類型](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   

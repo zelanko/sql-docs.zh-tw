@@ -32,19 +32,20 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="microsoft-association-algorithm"></a>Microsoft Association Algorithm
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]關聯分析演算法是對於建議引擎所使用的演算法。 建議引擎會依據客戶已購買或感興趣的項目向客戶建議項目。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法對於購物籃分析也很有用。   
+# <a name="microsoft-association-algorithm"></a>Microsoft 關聯分析演算法
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法是常用於建議引擎的演算法。 建議引擎會依據客戶已購買或感興趣的項目向客戶建議項目。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法對於購物籃分析也很有用。   
   
  關聯模型是建立在包含個別案例和案例所含項目之識別碼的資料集上。 案例中的項目群組稱為 *「項目集」*(itemset)。 關聯模型是由一系列項目集和規則所組成，這些規則描述那些項目在案例內如何分組。 演算法識別的規則可依據客戶購物車已有的項目，來預測客戶未來可能購買的項目。 下列圖表顯示項目集內的一系列規則。  
   
@@ -76,14 +77,14 @@ ms.lasthandoff: 01/08/2018
 ## <a name="viewing-an-association-model"></a>檢視關聯模型  
  若要瀏覽此模型，您可以使用 [Microsoft 關聯檢視器]。 當您檢視關聯模型時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會從不同的角度展示關聯，使您可以更了解資料中的關聯性和規則。 檢視器中的 [項目集] 窗格會提供最常見組合或項目集的詳細細目。 [規則] 窗格可用來表示已從資料產生的規則清單、加入機率的計算，並依照相對重要性排列規則的次序。 相依性網路檢視器則可用來以視覺方式探索不同的個別項目的連接方式。 如需詳細資訊，請參閱 [使用 Microsoft 叢集檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)。  
   
- 如果想要知道有關任何項目集和規則的詳細資訊，可以在 [Microsoft 一般內容樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中瀏覽此模型。 針對此模型所儲存的內容包括每個項目集的支援、每個規則的分數以及其他的統計資料。 如需詳細資訊，請參閱 [關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)(itemset)。  
+ 如果想要知道有關任何項目集和規則的詳細資訊，可以在 [Microsoft 一般內容樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中瀏覽此模型。 針對此模型所儲存的內容包括每個項目集的支援、每個規則的分數以及其他的統計資料。 如需詳細資訊，請參閱[關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)。  
   
 ## <a name="creating-predictions"></a>建立預測  
  當模型經過處理之後，就可以使用規則和項目集來進行預測。 在關聯模型中，預測可告訴您在有指定的項目時可能會發生什麼項目，而該預測可能包含機率、支援或重要性之類的資訊。 如需如何根據關聯模型建立查詢的範例，請參閱 [關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)。  
   
  如需如何針對資料採礦模型建立查詢的一般資訊，請參閱 [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)。  
   
-## <a name="performance"></a>[效能]  
+## <a name="performance"></a>效能  
  建立項目集和計算關聯性的過程可能很耗費時間。 雖然 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法會使用最佳化技巧來節省空間及加速處理，但您應該要知道在下列情況會發生效能問題：  
   
 -   資料集很大且具有許多個別的項目。  
@@ -102,8 +103,8 @@ ms.lasthandoff: 01/08/2018
   
 -   支援建立資料採礦維度。  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [瀏覽模型，使用 Microsoft 關聯規則檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [關聯模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Microsoft 關聯分析演算法技術參考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   

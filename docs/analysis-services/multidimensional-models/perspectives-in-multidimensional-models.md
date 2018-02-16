@@ -22,19 +22,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], perspectives
 - deleting perspectives
 ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 94508cf2bb7347d3b8cef15ce5c743f33c04a018
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多維度模型中的檢視方塊
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]檢視方塊是針對特定應用程式或使用者群組建立 cube 的子集。 Cube 本身是預設檢視方塊。 檢視方塊會以 Cube 的形式向用戶端公開。 檢視方塊在使用者檢視時，會顯示成另一個 Cube 的樣子。 透過在檢視方塊中回寫，對 Cube 資料所做的任何變更，都是對原始 Cube 的變更。 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中之檢視的詳細資訊，請參閱[檢視方塊](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+檢視方塊是針對特定應用程式或使用者的群組所建立之 Cube 的子集。 Cube 本身是預設檢視方塊。 檢視方塊會以 Cube 的形式向用戶端公開。 檢視方塊在使用者檢視時，會顯示成另一個 Cube 的樣子。 透過在檢視方塊中回寫，對 Cube 資料所做的任何變更，都是對原始 Cube 的變更。 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中之檢視的詳細資訊，請參閱[檢視方塊](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)。  
   
  使用 Cube 設計師中的 [檢視方塊] 索引標籤，即可建立或修改 Cube 中的檢視方塊。 [檢視方塊] 索引標籤的第一個資料行是 [Cube 物件] 資料行，會列出 Cube 中的所有物件。 這會對應到 Cube 的預設檢視方塊，也就是 Cube 本身。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
  若要檢視任何物件，請展開 [Cube 物件] 之下，任何物件類型的類別目錄 ([量值群組]、[維度]、[KPI]、[計算] 或 [動作])。 若要檢視維度中的階層或屬性，請先展開維度，然後展開 [階層] 或 [屬性] 資料列。 若要檢視量值群組中的量值，請展開量值群組。  
   
-## <a name="see-also"></a>請參閱  
- [多維度模型中的 Cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
+## <a name="see-also"></a>另請參閱  
+ [多維度模型中的 cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   
