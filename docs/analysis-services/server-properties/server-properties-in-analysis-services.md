@@ -20,19 +20,20 @@ helpviewer_keywords:
 - properties [Analysis Services], configuration
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 4db4d5d2e57f5f4a967a2099ef11efa0ca10ca21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 中的伺服器屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]系統管理員可以修改預設伺服器組態屬性的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 每一個執行個體都有自己的組態屬性，與同一部伺服器上的其他執行個體分開設定。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的預設伺服器組態屬性。 每一個執行個體都有自己的組態屬性，與同一部伺服器上的其他執行個體分開設定。  
   
  若要設定伺服器，請使用 SQL Server Management Studio，或是編輯特定執行個體的 msmdsrv.ini 檔。  
  
@@ -76,7 +77,7 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
   
  下列主題說明各種 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態屬性：  
   
-|主題|描述|  
+|主題|說明|  
 |-----------|-----------------|  
 |[一般屬性](../../analysis-services/server-properties/general-properties.md)|一般屬性是基本和進階屬性，並且包含定義資料目錄、備份目錄和其他伺服器行為的屬性。|  
 |[資料採礦屬性](../../analysis-services/server-properties/data-mining-properties.md)|資料採礦屬性控制要啟用和停用哪些資料採礦演算法。 依預設，會啟用所有的演算法。| 
@@ -85,14 +86,14 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
 |[功能屬性](../../analysis-services/server-properties/feature-properties.md)|與產品功能有關的功能屬性，大部分是進階屬性，包含控制伺服器執行個體間之連結的屬性。|  
 |[Filestore 屬性](../../analysis-services/server-properties/filestore-properties.md)|檔案存放區屬性僅供進階使用。 其中包含進階記憶體管理設定。|  
 |[鎖定管理員屬性](../../analysis-services/server-properties/lock-manager-properties.md)|鎖定管理員屬性定義與鎖定和逾時有關的伺服器行為。 這些屬性大部分僅供進階使用。|  
-|[記錄屬性](../../analysis-services/server-properties/log-properties.md)|記錄屬性控制在伺服器上是否記錄事件、記錄於何處以及如何記錄。 這包含錯誤記錄、例外狀況記錄、飛行記錄器、查詢記錄和追蹤。|  
+|[記錄檔內容](../../analysis-services/server-properties/log-properties.md)|記錄屬性控制在伺服器上是否記錄事件、記錄於何處以及如何記錄。 這包含錯誤記錄、例外狀況記錄、飛行記錄器、查詢記錄和追蹤。|  
 |[記憶體屬性](../../analysis-services/server-properties/memory-properties.md)|記憶體屬性控制伺服器如何使用記憶體。 這些屬性主要是供進階使用。|  
 |[網路屬性](../../analysis-services/server-properties/network-properties.md)|網路屬性控制與網路有關的伺服器行為，包含控制壓縮和二進位 XML 的屬性。 這些屬性大部分僅供進階使用。|  
 |[OLAP 屬性](../../analysis-services/server-properties/olap-properties.md)|OLAP 屬性控制 Cube 和維度處理、延遲處理、資料快取，以及查詢行為。 這些包含基本和進階屬性。|  
 |[安全性屬性](../../analysis-services/server-properties/security-properties.md)|安全性區段包含定義存取權限的基本和進階屬性。 這包含與管理員和使用者有關的設定。|  
 |[執行緒集區屬性](../../analysis-services/server-properties/thread-pool-properties.md)|執行緒集區屬性控制伺服器會建立多少執行緒。 這些屬性主要是進階屬性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 執行個體管理](../../analysis-services/instances/analysis-services-instance-management.md)   
  [指定方案部署的組態設定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

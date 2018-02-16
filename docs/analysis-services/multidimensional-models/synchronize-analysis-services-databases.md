@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步處理 Analysis Services 資料庫
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]包含資料庫同步處理功能，讓兩個[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫會將資料和中繼資料的來源伺服器上的資料庫複製到目的地伺服器上的資料庫相等。 使用同步處理資料庫功能可完成下列任何一項工作：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含資料庫同步處理功能，此功能藉由將來源伺服器上資料庫的資料和中繼資料複製到目的地伺服器上的資料庫，讓兩個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫相等。 使用同步處理資料庫功能可完成下列任何一項工作：  
   
 -   將資料庫從暫存伺服器部署到實際伺服器。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  以下針對舊版 Analysis Services 所撰寫的技術白皮書依然適用於使用 SQL Server 2012 所建立的可擴充式多維度方案。 如需詳細資訊，請參閱 [使用 Analysis Services 向外延展查詢](http://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用唯讀資料庫向外延展查詢 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
  在您起始資料庫同步處理的目的地 (或目標) 伺服器上，您必須是 Analysis Services 伺服器管理員角色的成員。 在來源伺服器上，您的 Windows 使用者帳戶必須擁有來源資料庫的完整控制權限。 如果您以互動方式同步處理資料庫，請記得同步處理是在 Windows 使用者識別的安全性內容之下執行。 如果系統拒絕您的帳戶存取特定物件，這些物件將會從作業中排除。 如需伺服器系統管理員角色和資料庫權限的詳細資訊，請參閱[將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[授與資料庫權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)。  
   
  TCP 通訊埠 2383 必須已在兩部伺服器上開啟，好讓預設執行個體之間能夠進行遠端連接。 如需在 Windows 防火牆中建立例外狀況的詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 01/08/2018
   
      如果來源伺服器的磁碟機 C 上已安裝分割區集，此精靈可讓您將此分割區集複製到目的地伺服器上的其他位置。 如果您不要變更預設的位置，精靈會將來源伺服器上之每個 Cube 內的量值群組分割區部署到目的地伺服器上的相同位置。 同樣的，如果來源伺服器使用遠端分割區，則目的地伺服器上也會使用相同的遠端分割區。  
   
-     [位置] 選項會顯示一個方格，其中列出來源資料夾、目的資料夾，以及要儲存在目的地執行個體上之本機資料分割的預估大小。 方格包含下列資料行：  
+     [位置] 選項會顯示一個方格，其中列出來源資料夾、目的資料夾，以及要儲存在目的地執行個體上之本機資料分割的預估大小。 此方格包含下列資料行：  
   
      **來源資料夾**  
      顯示來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上，包含本機資料分割的資料夾名稱。 如果資料行包含值「(預設)」，來源執行個體的預設位置就包含本機分割區。  
@@ -133,7 +134,7 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  唯有當至少有一個遠端資料分割是由來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的指定資料庫所管理時，此頁面才會顯示。  
   
-     [位置] 選項會顯示一個方格，其中列出有關來源資料庫之遠端資料分割之儲存位置的詳細資訊，包括來源和目的地資訊，以及各個位置所使用的儲存體大小 (從選取的資料庫取得)。 方格包含下列資料行：  
+     [位置] 選項會顯示一個方格，其中列出有關來源資料庫之遠端資料分割之儲存位置的詳細資訊，包括來源和目的地資訊，以及各個位置所使用的儲存體大小 (從選取的資料庫取得)。 此方格包含下列資料行：  
   
      **同步處理**  
      選取以納入在同步處理期間包含遠端分割區的位置。  
@@ -160,7 +161,7 @@ ms.lasthandoff: 01/08/2018
      **大小**  
      顯示在此位置處儲存之遠端分割區的估計大小。  
   
-     [在指定位置的資料分割] 會顯示一個方格，其中描述在來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上，在 [位置] 中所選取資料列之 [來源資料夾] 資料行中所指定的位置處，儲存的遠端資料分割。 方格包含下列資料行：  
+     [在指定位置的資料分割] 會顯示一個方格，其中描述在來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上，在 [位置] 中所選取資料列之 [來源資料夾] 資料行中所指定的位置處，儲存的遠端資料分割。 此方格包含下列資料行：  
   
      **Cube**  
      顯示包含分割區之 Cube 的名稱。  
@@ -189,12 +190,12 @@ ms.lasthandoff: 01/08/2018
   
 8.  按一下 [完成] 即可同步處理。 在確認 [正在完成精靈] 頁面上的選項之後，再按一下 [完成]。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  如果您並未同步處理角色或成員資格，請記得要指定目的地資料庫目前的使用者存取權限。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Synchronize 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [使用 XMLA 部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [使用部署精靈來部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [使用部署精靈部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

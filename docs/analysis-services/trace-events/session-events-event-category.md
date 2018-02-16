@@ -16,21 +16,22 @@ helpviewer_keywords:
 - Session Events event category
 - session events [Analysis Services]
 ms.assetid: 9d42e4e4-26ed-4719-9c80-8cf9189451d1
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f8fac25235fe11aca4e5e45cd908b0a5100e28c4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="session-events-event-category"></a>工作階段事件的事件類別目錄
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]工作階段事件的事件類別目錄具有下表中所述的事件類別。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+工作階段事件的事件類別目錄具有下表所述的事件類別。  
   
-|Event Class|事件識別碼|描述|  
+|Event Class|事件識別碼|說明|  
 |-----------------|--------------|-----------------|  
 |Existing Connection|41|收集自從啟動追蹤之後的所有連接事件。|  
 |現有的工作階段|42|收集自從啟動追蹤之後的所有工作階段事件。|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
  如需與每個「工作階段事件」事件類別相關聯之資料行的資訊，請參閱 [工作階段事件資料行](../../analysis-services/trace-events/session-events-data-columns.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 追蹤事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

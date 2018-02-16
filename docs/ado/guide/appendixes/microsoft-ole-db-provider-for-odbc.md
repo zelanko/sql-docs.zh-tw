@@ -22,10 +22,10 @@ ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
 ADO 或 RDS 程式設計人員，理想的世界中就是每個資料來源會公開 OLE DB 介面，可讓 ADO 無法呼叫直接將資料來源。 雖然越來越多個資料庫廠商實作的 OLE DB 介面，但某些資料來源不是尚未公開這種方式。 不過，現今使用的大部分 DBMS 系統可以透過 ODBC 存取。

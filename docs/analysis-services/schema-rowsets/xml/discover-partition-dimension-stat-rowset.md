@@ -11,30 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: bf4626b3-4d6b-4795-bb01-df335fb9c09a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 42bbe583c494830308c021c1adc385ec48491007
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>DISCOVER_PARTITION_DIMENSION_STAT 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回與資料分割相關之維度的統計資料  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+傳回與資料分割相關聯之維度的統計資料。  
   
  **適用於：**表格式模型、 多維度模型  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_PARTITION_DIMENSION_STAT**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|描述|  
+|資料行名稱|類型指標|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**資料庫名稱**|**DBTYPE_WSTR**|必要項|資料庫的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|必要項|資料庫的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|必要項|Cube 或表格式模型的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|必要項|量值群組的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
 |**PARTITION_NAME**|**DBTYPE_WSTR**|必要項|資料分割的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
@@ -51,12 +53,12 @@ ms.lasthandoff: 01/08/2018
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd8e-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionDimensionStat|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

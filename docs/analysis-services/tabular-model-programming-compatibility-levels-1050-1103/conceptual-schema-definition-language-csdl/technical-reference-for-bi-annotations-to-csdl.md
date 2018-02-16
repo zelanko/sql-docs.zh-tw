@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4d2f4c509035a2d806704757ddda6ed4610f048f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>CSDL 之 BI 註解的技術參考
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]此區段會列出項目、 屬性及屬性在 CSDL 中的，用來表示[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]表格式模型。 某些元素是新增的，其他元素則已加上註解或擴充，可支援商業智慧模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本節列出了 CSDL 中用於表示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 表格式模型的元素、屬性 (Attribute) 和屬性 (Property)。 某些元素是新增的，其他元素則已加上註解或擴充，可支援商業智慧模型。  
   
  如需表格式模型，以及如何在 CSDL 中表示實體、 關聯性和公式的概觀，請參閱[Business Intelligence &#40; 的 CSDL 註解CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
@@ -87,7 +89,7 @@ ms.lasthandoff: 01/08/2018
 |Stability|[屬性項目 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/property-element-csdlbi.md)|  
 |SortDirection|[BaseProperty 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/baseproperty-element-csdlbi.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CSDLBI 概念](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md)  
   
   

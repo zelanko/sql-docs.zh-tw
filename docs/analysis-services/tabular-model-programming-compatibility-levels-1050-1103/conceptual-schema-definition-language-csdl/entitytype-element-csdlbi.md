@@ -11,28 +11,30 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**EntityType**元素是複雜類型表示的高層級的實體，例如客戶或訂單，資料模型中的結構。 **Bi: EntityType**項目延伸的定義[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)用於[實體資料架構](http://msdn.microsoft.com/library/bb399567.aspx)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+**EntityType**元素是複雜類型表示的高層級的實體，例如客戶或訂單，資料模型中的結構。 **Bi: EntityType**項目延伸的定義[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)用於[實體資料架構](http://msdn.microsoft.com/library/bb399567.aspx)。  
   
  系統必須針對資料模型中包含的每個實體指定 EntityType 元素。 EntityType 的子元素會描述資料表中的資料行和量值。 資料表之間的關聯性都會納入**EntityContainer**。  
   
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出的項目和屬性，定義**EntityType**項目。 另請參閱適用於屬性[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)項目。  
   
-|[屬性]|是否必要|描述|  
+|[屬性]|是否必要|Description|  
 |----------|-----------------|-----------------|  
 |目錄|否|字串，其中包含資料行中可能的資料類型。 此值衍生自資料模型中 DimensionAttributeTypeEnumType 的值。<br /><br /> 如果 DimensionAttributeTypeEnumType 的值為 "ExtendedType"，則 Contents 的值會衍生自 DimensionAttribute 的 ExtendedType 元素。 用戶端不需要回應這些值。|  
 |DefaultDetails|否|屬性參考的清單，代表資料表中的資料行集。<br /><br /> 請參閱[DefaultDetails 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  實體 (資料行) 的內容可以是下列任何值：  
   
-|ReplTest1|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |一般|未另行定義。|  
 |Time|代表時間週期的屬性，例如年數、半年數、季數、月數或日數。|  
@@ -127,7 +129,7 @@ ms.lasthandoff: 01/08/2018
 </EntityType>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [CSDL 之 BI 註解的技術參考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Csdl 的 BI 註解的技術參考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

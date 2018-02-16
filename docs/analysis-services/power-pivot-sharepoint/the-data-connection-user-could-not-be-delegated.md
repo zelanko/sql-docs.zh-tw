@@ -12,28 +12,29 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9f54b444beb513ec4cc81432d3a58c27b4f6fc43
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-data-connection-user-could-not-be-delegated"></a>無法委派使用者的資料連接
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]包含的 Excel 活頁簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料，Excel Services 會傳回這個錯誤，如果無法連線到[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]在 SharePoint 中的伺服器執行個體。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+如果是包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 活頁簿，Excel Services 會在無法連接到 SharePoint 中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器執行個體時傳回這個錯誤。  
   
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
 |適用對象|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
-|產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|제품 버전|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|嘗試使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料提供者時發生連接失敗。|  
-|訊息文字|資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理︰ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料|  
+|메시지 텍스트|資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理︰ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料|  
   
 ## <a name="explanation"></a>說明  
  這個錯誤訊息有多個原因。 所有原因背後的共同因素就是 Excel Services 無法從 SharePoint 中的宣告 Token 取得有效的 Windows 使用者識別。 如果是包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 活頁簿，下列任何條件存在時就會發生這個錯誤：  
@@ -65,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
     2.  如果對 Windows Token Service 的宣告未在執行中，則啟動它。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 Power Pivot 服務帳戶](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

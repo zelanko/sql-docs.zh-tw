@@ -22,25 +22,26 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-and-measure-groups"></a>量值和量值群組
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cube 包含*量值*中*量值群組*，商務邏輯，以及將內容提供評估量值所提供的數值資料的維度集合。 量值和量值群組均為 Cube 的重要元件。 Cube 的存在至少須具備其中一項元件。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cube 包含「量值群組」中的「量值」、商務邏輯，以及可以在求取量值所提供之數值資料的值時提供內容的維度集合。 量值和量值群組均為 Cube 的重要元件。 Cube 的存在至少須具備其中一項元件。  
   
  本主題描述 [量值](#bkmk_measure) 和 [量值群組](#bkmk_mg)。 它也包含下表，表內有連結可供取得建立及設定量值和量值群組的程序步驟。  
   
 |**連結**|**說明**|  
 |--------------|---------------------|  
-|[在多維度模型中建立量值和量值群組](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|您有數種方法可以用來建立量值和量值群組。|  
+|[多維度模型中建立量值和量值群組](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|您有數種方法可以用來建立量值和量值群組。|  
 |[設定量值屬性](../../analysis-services/multidimensional-models/configure-measure-properties.md)|若是使用 [Cube 精靈] 啟動您的 Cube 時，您必須變更彙總方法、套用資料格式、設定是否要在用戶端應用程式中顯示量值，或可能需要在彙總值之前，先新增量值運算式來操作資料。|  
 |[設定量值群組屬性](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|在多維度模型中，量值群組等於來源資料倉儲中的事實資料表。 量值群組的屬性可讓您指定在量值群組層級之快取行為、儲存體及處理指示詞的整體運作方式。 磁碟分割設定有部分取決於您對量值群組物件設定的屬性。|  
 |[使用彙總函式](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|了解可以指派給量值的彙總方法。|  
@@ -71,8 +72,8 @@ ms.lasthandoff: 01/08/2018
   
  簡單的 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件由群組名稱、儲存模式及處理模式等基本資訊組成。 其同時包含其構成部分：量值、維度，以及組成量值群組組合的資料分割。  
   
-## <a name="see-also"></a>請參閱  
- [多維度模型中的 Cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [在多維度模型中建立量值和量值群組](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
+## <a name="see-also"></a>另請參閱  
+ [多維度模型中的 cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
+ [多維度模型中建立量值和量值群組](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   

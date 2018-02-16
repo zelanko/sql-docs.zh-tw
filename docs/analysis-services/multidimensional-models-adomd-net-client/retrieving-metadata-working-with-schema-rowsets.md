@@ -1,7 +1,7 @@
 ---
 title: "Working with Schema Rowsets in ADOMD.NET |Microsoft 文件"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dcb2905c471751275b6dae19737541b798e2b68b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 279cc537776f6c96193026d5f0bccafcbd8f0c8b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>擷取中繼資料-使用 結構描述資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您需要比 ADOMD.NET 物件模型中可用的中繼資料時，ADOMD.NET 提供的功能來擷取完整範圍的 XML for Analysis (XMLA)、 OLE DB、 OLE DB for OLAP 和 OLE DB for Data Mining 結構描述資料列：  
+  當您需要的中繼資料比 ADOMD.NET 物件模型所提供的還要多時，ADOMD.NET 提供的功能，可擷取完整範圍的 XML for Analysis (XMLA)、OLE DB、OLE DB for OLAP 以及 OLE DB for Data Mining 結構描述資料列集：  
   
  **XML for Analysis 中繼資料**  
  XML for Analysis 結構描述資料列集提供擷取有關伺服器低階資訊的方法。 可用的資訊包括伺服器上可用的資料來源、提供者保留的關鍵字、提供者支援的常值等等。 您甚至可以使用 XML for Analysis 結構描述資料列集，以探索提供者支援的所有結構描述資料列集。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
  [!code-cs[Adomd.NetClient#GetActions](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/retrieving-metadata-work_0_1.cs)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從分析資料來源擷取中繼資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

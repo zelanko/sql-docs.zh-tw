@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>課程 2-5-部署 Analysis Services 專案
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/22/2018
     > [!NOTE]  
     > 如果部署期間遇到錯誤，請使用 SQL Server Management Studio 檢查資料庫權限。 您為資料來源連接所指定的帳戶必須有 SQL Server 執行個體的登入。 按兩下登入以檢視 [使用者對應] 屬性。 此帳戶必須有 **AdventureWorksDW2012** 資料庫的 db_datareader 權限。  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會先建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案，然後利用部署指令碼將該專案部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 部署的進度會顯示在兩個視窗中：[輸出] 視窗和 [部署進度 - Analysis Services Tutorial] 視窗。  
+    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會先建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案，然後使用部署指令碼將該專案部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 部署的進度會顯示在兩個視窗中：[輸出] 視窗和 [部署進度 - Analysis Services Tutorial] 視窗。  
   
     如有必要，請按一下 [檢視] 功能表上的 [輸出]，開啟 [輸出] 視窗。 [輸出] 視窗會顯示整體部署進度。 [部署進度 – Analysis Services Tutorial] 視窗會顯示部署期間所執行之每個步驟的詳細資料。 如需詳細資訊，請參閱[建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md) 和[部署 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)。  
   

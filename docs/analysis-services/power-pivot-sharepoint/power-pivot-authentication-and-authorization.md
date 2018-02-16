@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>PowerPivot 驗證及授權
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的 SharePoint 2010 伺服陣列中執行的部署會使用 SharePoint 伺服器所提供的驗證子系統和授權模型。 由於所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相關的內容都儲存在 SharePoint 內容資料庫中，而且 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相關的所有作業都在伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共用服務上執行，因此 SharePoint 安全性基礎結構會延伸到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 內容和作業。 使用者若要求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的活頁簿，就會使用以其 Windows 使用者識別為基礎的 SharePoint 使用者識別進行驗證。 活頁簿上的檢視權限會決定授與或拒絕要求。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 SharePoint 2010 伺服陣列中執行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署會使用 SharePoint 伺服器所提供的驗證子系統和授權模型。 由於所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相關的內容都儲存在 SharePoint 內容資料庫中，而且 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相關的所有作業都在伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共用服務上執行，因此 SharePoint 安全性基礎結構會延伸到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 內容和作業。 使用者若要求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的活頁簿，就會使用以其 Windows 使用者識別為基礎的 SharePoint 使用者識別進行驗證。 活頁簿上的檢視權限會決定授與或拒絕要求。  
   
  由於自助式資料分析必須與 Excel Services 整合，所以您也必須了解 Excel Services 安全性，才能保護 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器的安全。 當使用者查詢具有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之資料連接的樞紐分析表時，Excel Services 會轉送資料連接要求到伺服陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器以載入資料。 您必須了解如何設定這兩部伺服器的安全性設定，才能進行伺服器間的互動。  
   
@@ -106,17 +107,17 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  與安全性最相關的設定會套用至信任的位置。 如果您要保留預設值或在不同的網站使用不同的值，您可以針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的網站建立其他信任的位置，然後只針對該網站進行下列設定。 如需詳細資訊，請參閱 [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
-|區域|設定|描述|  
+|區域|設定|Description|  
 |----------|-------------|-----------------|  
 |Web 應用程式|Windows 驗證提供者|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 會將它從 Excel Services 取得的宣告 Token 轉換為 Windows 使用者識別。 將 Excel Services 當做資源使用的所有 Web 應用程式都必須設定為使用 Windows 驗證提供者。|  
 |信任的位置|位置類型|此值必須設為 **[Microsoft SharePoint Foundation]**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器會擷取 .xlsx 檔案的複本，並將其載入伺服陣列中的 Analysis Services 伺服器。 伺服器只能從內容庫擷取 .xlsx 檔。|  
 ||允許外部資料|此值必須設為 **[信任的資料連線庫與內嵌連線]**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料連接內嵌在活頁簿中。 如果您不允許內嵌連接，使用者可以檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 快取，但是他們將無法與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料進行互動。|  
 ||重新整理時警告|如果您要使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫儲存活頁簿與報表，應該停用此值。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫包含文件預覽功能，開啟時重新整理與重新整理時警告同時關閉時效果最好。|  
-|信任的資料提供者|MSOLAP.4<br /><br /> MSOLAP.5|預設隨附 MSOLAP.4，但是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取需要 MSOLAP.4 提供者為 SQL Server 2008 R2 版。<br /><br /> MSOLAP.5 會隨 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 版安裝。<br /><br /> 請不要從信任的資料提供者清單中移除這些提供者。 在某些情況下，您可能需要在伺服器陣列中的其他 SharePoint 伺服器上，安裝此提供者的額外複本。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。|  
+|信任的資料提供者|MSOLAP.4<br /><br /> MSOLAP.5|預設隨附 MSOLAP.4，但是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取需要 MSOLAP.4 提供者為 SQL Server 2008 R2 版。<br /><br /> MSOLAP.5 會隨 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 版安裝。<br /><br /> 請不要從信任的資料提供者清單中移除這些提供者。 在某些情況下，您可能需要在伺服器陣列中的其他 SharePoint 伺服器上，安裝此提供者的額外複本。 如需詳細資訊，請參閱＜ [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)＞。|  
 |信任的資料連線庫|選擇性。|您可以使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中的 Office 資料連接 (.odc) 檔案。 如果您使用 .odc 檔案來提供本機 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的連接資訊，就可以將相同的 .odc 檔案加入至這個連線庫。|  
 |使用者定義函數組件|不適用。|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會忽略您為 Excel Services 建立部署的使用者定義函數組件。 如果您依賴使用者定義的組件執行特定行為，請注意 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查詢處理不會使用您建立的使用者定義函數。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 Power Pivot 服務帳戶](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [設定 Powerpivot 無人看管的資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   

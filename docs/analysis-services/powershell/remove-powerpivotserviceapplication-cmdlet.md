@@ -1,5 +1,5 @@
 ---
-title: "Remove-powerpivotserviceapplication 指令程式 |Microsoft 文件"
+title: Remove-PowerPivotServiceApplication cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7078a7733c7764b77667628071c66c8313aae85a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-powerpivotserviceapplication-cmdlet"></a>Remove-PowerPivotServiceApplication 指令程式
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]刪除[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+刪除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -37,14 +38,14 @@ ms.lasthandoff: 01/08/2018
 Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBind>] [-DeleteAll <switch>] [-RemoveData <switch>] [-Confirm <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  Remove-PowerPivotServiceApplication Cmdlet 會從伺服器陣列中刪除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 使用 DeleteAll 一次刪除所有服務應用程式，或使用 Identity 參數移除單一執行個體。 若要取得執行個體資訊，請執行 Get-PowerPivotServiceApplication 以傳回伺服器陣列中的所有執行個體。  
   
  使用 RemoveData 參數可以選擇性地移除服務應用程式資料庫和快取檔案。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 一旦移除服務應用程式之後，活頁簿會保留在內容庫中，但不再運作。  
   
 ## <a name="parameters"></a>參數  
   
-### <a name="-identity-spgeminiserviceapplicationpipebind"></a>識別\<SPGeminiServiceApplicationPipeBind >  
+### <a name="-identity-spgeminiserviceapplicationpipebind"></a>-Identity \<SPGeminiServiceApplicationPipeBind>  
  指定伺服器陣列中單一 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式的 GUID。 如果您只要移除一個應用程式，讓其他服務應用程式保持不變，則必須指定 GUID。  
   
 |||  
@@ -55,7 +56,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |接受管線輸入？|true|  
 |接受萬用字元？|false|  
   
-### <a name="-confirm-switch"></a>確認\<切換 >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  在執行命令之前提示您確認。 此值預設是啟用的。 若要在命令中略過確認回應，請在命令上指定 Confirm:$false。  
   
 |||  
@@ -77,7 +78,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-removedata-switch"></a>-RemoveData\<切換 >  
+### <a name="-removedata-switch"></a>-RemoveData \<switch>  
  移除包含下列項目的服務應用程式資料庫：資料重新整理排程、活頁簿使用量資料、用於追蹤哪些資料庫已載入的執行個體對應，以及其他內部資料。  
   
 |||  
@@ -88,7 +89,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="commonparameters"></a>\<一般參數 >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  這個指令程式支援一般參數：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 如需詳細資訊，請參閱 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>輸入和輸出  

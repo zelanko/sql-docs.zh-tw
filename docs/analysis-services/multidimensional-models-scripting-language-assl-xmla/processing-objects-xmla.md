@@ -1,7 +1,7 @@
 ---
 title: "處理物件 (XMLA) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - errors [XML for Analysis]
 - objects [XML for Analysis]
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - processing objects [XML for Analysis]
 - XMLA, objects
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72d5bdfcfc7c3d461dc3bc986c7ff6106e3da51
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-objects-xmla"></a>處理物件 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 處理是在步驟或一系列的步驟將資料轉換成供商務分析資訊。 處理會因物件類型而異，但是處理永遠都是將資料轉換為資訊的一部分。  
+  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 處理是在步驟或一系列的步驟將資料轉換成供商務分析資訊。 處理會因物件類型而異，但是處理永遠都是將資料轉換為資訊的一部分。  
   
  處理序[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件，您可以使用[程序](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)命令。 **程序**命令可以處理下列物件上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體：  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="examples"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  下列範例會完整處理 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 範例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
 ### <a name="code"></a>程式碼  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/08/2018
 </Process>  
 ```  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  下列範例以累加方式處理**Internet_Sales_2004**資料分割中**Internet Sales**量值群組**Adventure Works DW** 中的cube[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]範例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 **程序**命令會將彙總加入訂單日期晚於 2006 年 12 月 31 日到分割區使用中的 out (out-of-line） 查詢繫結**繫結**屬性**程序**命令，以擷取事實資料表資料列，從而產生要加入資料分割的彙總。  
   
 ### <a name="code"></a>程式碼  

@@ -1,7 +1,7 @@
 ---
 title: "使用分析管理物件 (AMO) 來開發 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Management Objects, programming
 - AMO, programming
 ms.assetid: 91354fc9-22da-4724-b97f-3b1e7b0e69d3
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 998561ab67d1bd28a9ac86c5cc402da1e0f12ef1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4a44da0b795bcb7e8ed05510d8caf0178bb789e5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="developing-with-analysis-management-objects-amo"></a>使用分析管理物件 (AMO) 來開發
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]分析管理物件 (AMO) 是以程式設計方式存取物件的可讓應用程式管理的執行個體的完整程式庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。
+分析管理物件 (AMO) 是以程式設計方式存取物件的可讓應用程式管理的執行個體的完整程式庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。
 
 本章節說明的 AMO 概念著重在主要物件，並且會包括使用的方式與時機，以及這些物件互相關聯的方式。 如需有關特定物件或類別的詳細資訊，請參閱：
 
@@ -42,6 +43,6 @@ ms.lasthandoff: 01/08/2018
 
 自訂指令碼以及針對較早版本的 AMO 所撰寫的應用程式將繼續運作並進行任何修改。 不過，如果您有指令碼或應用程式目標的 SQL Server 2016 具體來說，或是您需要重新建置自訂解決方案，務必將新的組件和命名空間加入至專案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [開發使用 Analysis Services 指令碼語言 &#40;ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md) 
 [使用 Analysis Services 中的 XMLA 進行開發](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)

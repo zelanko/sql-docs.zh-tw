@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>New-RestoreLocation 指令程式
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]指定用來還原資料庫的資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+指定用來還原資料庫的資訊。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -36,12 +37,12 @@ ms.lasthandoff: 01/08/2018
   
  一般參數 (例如 -Verbose、-Debug)、錯誤和警告參數、-Whatif 和 -Confirm 都記載於 Windows PowerShell 參考中。 如需詳細資訊，請參閱 [about_CommonParameters](http://technet.microsoft.com/library/dd315352.aspx)。  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  New-RestoreLocation 指令程式包含用來還原資料庫的資訊，包括伺服器和資料庫的連接字串、資料來源屬性，以及與所還原之資料庫相關聯的檔案和資料夾。  
   
 ## <a name="parameters"></a>參數  
   
-### <a name="-file-string"></a>-檔案\<字串 >  
+### <a name="-file-string"></a>-File \<string>  
  指定您要還原之備份檔案的名稱。  
   
 |||  
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-datasourceid-string"></a>-DataSourceId\<字串 >  
+### <a name="-datasourceid-string"></a>-DataSourceId \<string>  
   
 |||  
 |-|-|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-connectionstring-string"></a>-ConnectionString\<字串 >  
+### <a name="-connectionstring-string"></a>-ConnectionString \<string>  
  指定遠端 Analysis Services 執行個體的連接字串。  
   
 |||  
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<AS.RestoreDataSourceType >  
+### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<AS.RestoreDataSourceType>  
  指定資料來源是遠端或本機 (根據資料分割的位置)。  
   
 |||  
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-folders-asrestorefolder"></a>-資料夾\<AS.RestoreFolder >  
+### <a name="-folders-asrestorefolder"></a>-Folders \<AS.RestoreFolder>  
  指定本機或遠端執行個體上的資料分割資料夾。  
   
 |||  
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter >  
+### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter>  
  指定是否應該在記憶體中建立物件並傳回物件。  
   
 |||  
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-server-string"></a>伺服器\<字串 >  
+### <a name="-server-string"></a>-Server \<string>  
  指定指令程式將會連接並執行的 Analysis Services 執行個體。 如果沒有提供伺服器名稱，將會建立 localhost 的連接。 若為預設執行個體，請單獨指定伺服器名稱。 若為具名執行個體，請使用格式 servername\instancename。 若為 HTTP 連接，請使用格式 http[s]://server[:port]/virtualdirectory/msmdpump.dll。  
   
 |||  

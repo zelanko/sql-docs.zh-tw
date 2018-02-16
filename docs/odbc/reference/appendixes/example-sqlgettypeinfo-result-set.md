@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0953a2a8de3dce18d404929ee23d054192a2e3e7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>範例 SQLGetTypeInfo 結果集
 應用程式呼叫**SQLGetTypeInfo**判斷哪些資料類型是否支援資料來源，這些資料類型的特性。 下表顯示範例結果集所傳回**SQLGetTypeInfo**如 SQL_CHAR、 SQL_LONGVARCHAR、 SQL_DECIMAL、 SQL_REAL、 SQL_DATETIME SQL_INTERVAL_YEAR 和 SQL_INTERVAL_DAY_TO_SECOND 所支援的資料來源。  

@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: a36b4d3b-6a6c-489b-8a46-2e6b925b568f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b004e611448db0100186a9f6d7fa9812d3de9c15
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="navigationproperty-element-csdlbi"></a>NavigationProperty 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]NavigationProperty 元素是複雜類型擴充 CSDL Member 類型，以支援商業智慧資料模型中導覽。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+NavigationProperty 元素是複雜類型，它會擴充 CSDL Member 類型，以支援在商業智慧資料模型中導覽。  
   
 > [!WARNING]  
 >  此元素適用於報告，無法加以修改或操作。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 NavigationProperty 元素的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|說明|  
 |----------|-----------------|-----------------|  
 |CollectionCaption|否|複數名稱，用於參考導覽屬性的一組執行個體。<br /><br /> 如果省略此屬性，則會使用基底 Member 的 Caption 屬性。|  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 01/08/2018
 </NavigationProperty>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解表格式物件模型在相容性層級 1050年透過 1103](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

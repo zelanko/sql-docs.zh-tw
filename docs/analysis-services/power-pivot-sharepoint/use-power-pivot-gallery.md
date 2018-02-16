@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c6397bfd177a5d5901fdda29f4b34c9f6b7ffa7d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-power-pivot-gallery"></a>使用 Power Pivot 圖庫
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]圖庫是特殊的 SharePoint 文件庫，提供豐富的預覽與文件管理已發行 Excel 活頁簿和 Reporting Services 報表，其中包含[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一種特殊的 SharePoint 文件庫，針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  
   
 > [!NOTE]  
 >  根據您伺服器設定的方式，可能會在特定文件的預覽區域中看到警告或錯誤訊息。 如果 Excel 活頁簿設定為每次開啟時都自動重新整理其資料，可能會出現訊息。 如果設定 Excel Services 來顯示資料重新整理時警告的錯誤訊息，資料重新整理警告訊息將會以預覽影像的形式出現。 伺服陣列或服務管理員可以修改組態設定，讓實際工作表的預覽可以顯示出來。 如需詳細資訊，請參閱 [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="icons"></a> Power Pivot 圖庫中的圖示  
  圖示會提供有關內容可用性和狀態的視覺指標。  
   
-|圖示|描述|  
+|圖示|Description|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|在文件中產生每一個頁面的縮圖影像時，將會出現沙漏圖示。 重新整理頁面以顯示更新的影像。|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|當活頁簿或報表的頁面數多於可以顯示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中的頁數時，將會出現頁面圖示。 若要檢視所有頁面，您必須使用用戶端應用程式。|  
@@ -165,7 +166,7 @@ ms.lasthandoff: 01/08/2018
   
  [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫文件] 內容類型不會自動加入至文件庫。除非您手動啟用不支援的內容類型，否則不會發生這個問題。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [刪除 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
  [建立及自訂 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   

@@ -1,5 +1,5 @@
 ---
-title: "Update-powerpivotsystemservice 指令程式 |Microsoft 文件"
+title: Update-PowerPivotSystemService cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a90f1158-68d3-4330-98c1-fb0f81e13328
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 045979085e6d8e1622fef2a961f6c9fdb21d772a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="update-powerpivotsystemservice-cmdlet"></a>Update-PowerPivotSystemService 指令程式
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]升級的父物件[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]伺服陣列中的系統服務。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+升級伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務父物件。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  **Update-PowerPivotSystemService** Cmdlet 會在伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務父物件、執行個體和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式上執行一系列升級動作。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署中所有的中間層服務和應用程式都必須在相同的功能等級執行。 這個指令程式會在所有這些物件上執行升級動作。  
   
  在執行 SQL Server 安裝程式以安裝新版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 之後，或在伺服器上套用累積更新之後，就可以執行這個 Cmdlet 。 若要檢查是否需要進行升級，請執行 `Get-PowerPivotSystemService` 檢閱 **NeedsUpgrade** 屬性。 如果 **NeedsUpgrade** 為 true，則應該執行此 Cmdlet，以升級伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中間層物件。  
@@ -48,7 +49,7 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
   
 ## <a name="parameters"></a>參數  
   
-### <a name="-confirm-switch"></a>確認\<切換 >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  在執行命令之前提示您確認。 此值預設是啟用的。 若要在命令中略過確認回應，請在命令上指定 Confirm:$false。  
   
 |||  
@@ -59,10 +60,10 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="commonparameters"></a>\<一般參數 >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  這個指令程式支援下列參數：  
   
--   「詳細資訊」  
+-   Verbose  
   
 -   偵錯  
   

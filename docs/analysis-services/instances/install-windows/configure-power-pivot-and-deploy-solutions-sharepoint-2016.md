@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>設定 PowerPivot 及部署方案 (SharePoint 2016)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主題描述如何部署和設定中介層增強功能[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中的功能[!INCLUDE[SPS2016](../../../includes/sps2016-md.md)]包括[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]圖庫、 排程資料重新整理、 管理儀表板和資料提供者。 請執行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 組態** 工具以完成下列作業：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本主題將描述如何部署和設定 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 功能的中介層增強功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 圖庫、排程資料重新整理、管理儀表板和資料提供者。 請執行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 組態** 工具以完成下列作業：  
   
 -   部署 SharePoint 方案檔。  
   

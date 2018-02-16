@@ -1,7 +1,7 @@
 ---
 title: "使用 連接和 ADOMD.NET 中的工作階段 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - sessions [ADOMD.NET]
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 46135ecf59b66a3e742d3241489e1967152ad952
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a4f51a9e0939612e490ed96c93c06a6931fa3f21
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>Connections in ADOMD.NET-使用連接與工作階段
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 XML for Analysis (XMLA) 中，工作階段會提供支援分析資料存取期間可設定狀態的作業。 工作階段會為分析資料來源界定命令與交易的範圍和內容。 用來管理工作階段的 XMLA 元素[BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)，[工作階段](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)，和[EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)。  
+  在 XML for Analysis (XMLA) 中，工作階段可支援分析資料存取期間可設定狀態的作業。 工作階段會為分析資料來源界定命令與交易的範圍和內容。 用來管理工作階段的 XMLA 元素[BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)，[工作階段](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)，和[EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)。  
   
  ADOMD.NET 會在您開始工作階段時、在工作階段期間查詢或是擷取資料時，以及關閉工作階段時分別使用這三個 XMLA 工作階段元素。  
   
@@ -109,7 +110,7 @@ static string CreateSession(string connectionString)
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 ADOMD.NET 中建立連接](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)  
   
   

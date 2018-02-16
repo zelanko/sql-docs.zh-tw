@@ -11,28 +11,30 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>DISCOVER_STORAGE_TABLES 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]允許用戶端決定在表格式或 SharePoint 模式下執行 Analysis Services 資料庫中所包含的資料表。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+允許用戶端決定在表格式或 SharePoint 模式下執行之 Analysis Services 資料庫中所包含的資料表。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_STORAGE_TABLES**資料列集包含下列資料行。  
   
 |**資料行名稱**|**類型指標**|**長度**|**說明**|  
 |---------------------|------------------------|----------------|---------------------|  
-|**資料庫名稱**|**DBTYPE_WSTR**||指定包含資料表的資料庫名稱。<br /><br /> **DISCOVER_STORAGE_TABLES**資料列集可能會限制使用此資料行。 如果未使用此資料行來限制資料列集，則會使用目前的資料庫。|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**||指定包含資料表的資料庫名稱。<br /><br /> **DISCOVER_STORAGE_TABLES**資料列集可能會限制使用此資料行。 如果未使用此資料行來限制資料列集，則會使用目前的資料庫。|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||指定包含資料表的 Cube 或模型。<br /><br /> **DISCOVER_STORAGE_TABLES**資料列集可能會限制使用此資料行。|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**||量值群組的名稱。|  
 |**PARTITION_NAME**|**DBTYPE_WSTR**||資料分割的名稱。|  
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 |**資料行名稱**|**類型指標**|**限制狀態**|  
 |---------------------|------------------------|---------------------------|  
-|**資料庫名稱**|**DBTYPE_WSTR**|選擇性。|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|選擇性|  
 |**PARTITION_NAME**|**DBTYPE_WSTR**|選擇性|  
@@ -63,7 +65,7 @@ ORDER BY TABLE_ID DESC
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 結構描述資料列集](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

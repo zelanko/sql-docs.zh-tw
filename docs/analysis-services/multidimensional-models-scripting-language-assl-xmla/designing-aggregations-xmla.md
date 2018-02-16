@@ -1,7 +1,7 @@
 ---
 title: "設計彙總 (XMLA) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - statistical information [XML for Analysis]
 - batches [XML for Analysis]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fdc973309fe87792aa135813c23e4e68d7650043
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-xmla"></a>設計彙總 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]彙總設計與相關聯的特定量值群組，並確定資料分割在儲存彙總時，會使用相同的結構資料分割。 資料分割使用相同的儲存體結構可讓您輕鬆地定義合併資料分割可以稍後使用[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 如需彙總設計的詳細資訊，請參閱[彙總和彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
+  彙總設計會與特定量值群組的資料分割關聯，以確保資料分割在儲存彙總時會使用相同的結構。 資料分割使用相同的儲存體結構可讓您輕鬆地定義合併資料分割可以稍後使用[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 如需彙總設計的詳細資訊，請參閱[彙總和彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   
  若要定義的彙總設計的彙總，您可以使用[DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) XML for Analysis (XMLA) 命令。 **DesignAggregations**命令具有識別要做為參考，以及如何控制設計程序，根據該參考的彙總設計的屬性。 使用**DesignAggregations**命令和其屬性，您可以反覆或批次中，設計彙總，然後檢視 產生的設計統計資料，以評估設計程序。  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="specifying-queries"></a>指定查詢  
  DesignAggregations 命令包括下列一個或多個支援基於使用方式的最佳化命令**查詢**中的項目[查詢](../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)屬性。 **查詢**屬性可以包含一或多個[查詢](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)項目。 如果**查詢**屬性不包含任何**查詢**中指定的項目，彙總設計**物件**元素會使用預設的結構，其中包含組一般彙總。 這組一般彙總為了符合指定準則**最佳化**和**儲存體**屬性**DesignAggregations**命令。  
   
- 每個 **Query** 元素都代表一個目標查詢，而且設計處理序會使用此查詢來定義以最常用查詢為目標的彙總。 您可以指定您自己的目標查詢，或者您可以使用執行個體所儲存的資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]擷取有關最常用的資訊的查詢記錄中使用查詢。 「 基於使用方式的最佳化精靈 」 會使用查詢記錄擷取目標查詢，會在傳送時，根據時間、 使用方式或指定的使用者**DesignAggregations**命令。 如需詳細資訊，請參閱[基於使用方式的最佳化精靈 F1 說明](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763)。  
+ 每個 **Query** 元素都代表一個目標查詢，而且設計處理序會使用此查詢來定義以最常用查詢為目標的彙總。 您可以指定自己的目標查詢，也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體在查詢記錄中儲存的資訊來擷取有關最常用查詢的資訊。 「 基於使用方式的最佳化精靈 」 會使用查詢記錄擷取目標查詢，會在傳送時，根據時間、 使用方式或指定的使用者**DesignAggregations**命令。 如需詳細資訊，請參閱[基於使用方式的最佳化精靈 F1 說明](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763)。  
   
  如果您反覆設計彙總，您只需要將目標查詢傳入第一個**DesignAggregations**指令，因為[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體儲存這些目標查詢，並在後續期間使用這些查詢**DesignAggregations**命令。 當您將目標查詢傳入反覆處理序的第一個 **DesignAggregations** 命令之後，任何在 **DesignAggregations** 屬性中包含目標查詢的後續 **Queries** 命令就會產生錯誤。  
   
@@ -108,18 +109,18 @@ ms.lasthandoff: 01/08/2018
 ## <a name="returning-design-statistics"></a>傳回設計統計資料  
  當**DesignAggregations**命令會將控制權還給用戶端應用程式，此命令會傳回包含單一資料列代表命令的設計統計資料的資料列集。 資料列集包含下表中列出的資料行。  
   
-|「資料行」|資料類型|描述|  
+|資料行|資料類型|Description|  
 |------------|---------------|-----------------|  
 |步驟|Integer|在將控制權還給用戶端應用程式之前，命令所使用的步驟數目。|  
 |Time|長整數|在將控制權還給用戶端應用程式之前，命令所花費的毫秒數目。|  
 |Optimization|Double|在將控制權還給用戶端應用程式之前，命令所達成的效能改善估計百分比。|  
-|Storage|長整數|在將控制權還給用戶端應用程式之前，命令所使用的位元組估計數目。|  
+|儲存空間|長整數|在將控制權還給用戶端應用程式之前，命令所使用的位元組估計數目。|  
 |Aggregations|長整數|在將控制權還給用戶端應用程式之前，命令所定義的彙總數目。|  
 |LastStep|布林|指出在資料列集中的資料是否代表設計程序中的最後一個步驟。 如果**具體化**命令的屬性已設為 true，此資料行的值設定為 true。|  
   
  您可以使用設計統計資料之後為每個傳回的資料列中所包含的**DesignAggregations**命令在反覆或批次設計。 在反覆設計中，您可以使用設計統計資料以判斷和顯示進度。 當您以批次方式設計彙總時，可以使用設計統計資料來判斷命令所建立的彙總數目。  
   
-## <a name="see-also"></a>請參閱  
- [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

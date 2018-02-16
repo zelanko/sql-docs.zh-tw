@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e4e6be04453ddacfedfefbae3aaa070614349e7a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>管理中心的 Power Pivot 伺服器管理和組態
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]伺服器管理與組態由 SharePoint 服務應用程式管理員使用 SharePoint 管理中心。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 伺服器管理與組態是由 SharePoint 服務應用程式管理員使用 SharePoint 管理中心所執行。  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint，然後才能使用。 在您使用 SQL Server 安裝程式安裝 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 之後，您可以使用下列任何方法加以設定：  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="related-tasks"></a>相關工作  
   
-|連結|類型|工作描述|  
+|連結|型別|工作描述|  
 |----------|----------|----------------------|  
 |[將 Power Pivot 方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|必要項|這個步驟會安裝方案檔，這些檔案會將程式檔和應用程式頁面加入至伺服器陣列和網站集合。|  
 |[在管理中心建立和設定 Power Pivot 服務應用程式](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|必要項|這個步驟會佈建 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 系統服務。|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/08/2018
 |[建立及自訂 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)|選擇性|如果是手動設定的安裝，這個程序會說明如何建立 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 圖庫，以顯示其中所包含之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿的影像縮圖。|  
 |[將 BI 語意模型連接內容類型加入至文件庫 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|選擇性|說明如何擴充文件庫來支援 BI 語意模型連接檔案的建立。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Power Pivot for SharePoint 2010 安裝](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [組態設定參考 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Power pivot for SharePoint 災害復原](http://go.microsoft.com/fwlink/p/?LinkId=389570)  

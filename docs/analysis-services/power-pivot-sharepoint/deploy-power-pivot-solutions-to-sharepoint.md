@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>將 Power Pivot 方案部署到 SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用下列指示手動部署兩個方案套件新增[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]SharePoint Server 2010 環境的功能。 部署方案是在 SharePoint 2010 伺服器上設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的必要步驟。 若要檢視所需步驟的完整清單，請參閱 [管理中心的 Power Pivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用下列指示手動部署兩個方案套件，將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能加入至 SharePoint Server 2010 環境。 部署方案是在 SharePoint 2010 伺服器上設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的必要步驟。 若要檢視所需步驟的完整清單，請參閱 [管理中心的 Power Pivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
   
  或者，您可以使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具部署方案。 使用組態工具對於單一伺服器安裝來說，是較簡單且更有效率的方式，不過，如果您習慣使用熟悉的工具或是要同時設定多項功能，則建議您使用管理中心和 PowerShell。 如需組態工具用法的詳細資訊，請參閱 [Power Pivot 組態工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
@@ -112,7 +113,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 4.  在 [部署位置] 中，選取您要加入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能支援的 SharePoint Web 應用程式。  
   
-5.  按一下 [確定] 。  
+5.  按一下 **[確定]**。  
   
 6.  針對其他也支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的 SharePoint Web 應用程式重複以上步驟。  
   
@@ -148,12 +149,12 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  此 Web 應用程式方案一開始會部署到管理中心，隨後會將後續方案部署到支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料要求的其他任何 Web 應用程式。 若要將 Web 應用程式方案部署到管理中心，您必須使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具或 PowerShell Cmdlet。 如果是所有其他 Web 應用程式，您可以使用管理中心或 PowerShell 來手動部署 Web 應用程式方案。  
   
-|方案|描述|  
+|方案|Description|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|將 Microsoft.AnalysisServices.SharePoint.Integration.dll 加入至全域組件。<br /><br /> 將 Microsoft.AnalysisServices.ChannelTransport.dll 加入至全域組件。<br /><br /> 安裝功能和資源檔，並註冊內容類型。<br /><br /> 加入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫和資料摘要庫的文件庫範本。<br /><br /> 為服務應用程式組態、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板、資料重新整理及 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫加入應用程式頁面。|  
 |[powerpivotwebapp.wsp]|將 Microsoft.AnalysisServices.SharePoint.Integration.dll 資源檔加入至 Web 前端的 Web Server Extensions 資料夾。<br /><br /> 將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 服務加入至 Web 前端。<br /><br /> 加入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫產生的縮圖影像。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [升級 Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [管理中心的 PowerPivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [使用 Windows PowerShell 的 Power Pivot 組態](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  

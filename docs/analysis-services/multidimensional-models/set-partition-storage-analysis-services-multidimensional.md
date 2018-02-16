@@ -27,19 +27,20 @@ helpviewer_keywords:
 - ROLAP
 - medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 42823cdd118d3fb52df6265671eaca0fd25be96c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>設定分割區儲存 (Analysis Services - 多維度)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供數個標準儲存組態的儲存模式和快取選項。 這些會提供更新通知、延遲以及重建資料的常用組態。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供數個標準儲存組態的儲存模式和快取選項。 這些會提供更新通知、延遲以及重建資料的常用組態。  
   
  您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]之 Cube 的 [分割區] 索引標籤，或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的分割區屬性頁面上，指定分割區儲存。  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="storage-settings-descriptions"></a>儲存設定描述  
   
-|標準儲存設定|描述|  
+|標準儲存設定|說明|  
 |------------------------------|-----------------|  
 |即時 ROLAP|OLAP 係即時進行。 詳細資料和彙總會以關聯式格式儲存。 當資料變更時，伺服器會接聽通知，且所有查詢會反映資料的目前狀態 (零延遲)。<br /><br /> 此設定通常用於會經常和持續更新、且使用者需要最新資料的資料來源。 視用戶端應用程式所產生的查詢類型而定，此方法的回應時間可能最慢。|  
 |即時 HOLAP|OLAP 係即時進行。 詳細資料會以關聯式格式儲存，而彙總會以多維度格式儲存。 當資料變更時，伺服器會接聽通知，並視需要重新整理多維度 OLAP (MOLAP) 彙總。 不會建立 MOLAP 快取。 在重新整理彙總之前，每當更新資料來源時，伺服器會切換到即時關聯式 OLAP (ROLAP)。 所有查詢會反映資料的目前狀態 (零延遲)。<br /><br /> 此設定通常用於會經常和持續更新 (但不像即時 ROLAP 需要那麼頻繁)、且使用者需要最新資料的資料來源。 此方法通常會比 ROLAP 儲存提供更好的整體效能。 如果資料來源的無回應時間夠久，此設定可讓使用者達到 MOLAP 的效能。|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 01/08/2018
   
  如果您選取 [套用設定至維度] 核取方塊，相同的儲存設定就會套用至與量值群組相關的維度。 維度值一開始與分割區值相同。  
   
-## <a name="see-also"></a>請參閱  
- [多維度模型中的分割區](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
+## <a name="see-also"></a>另請參閱  
+ [多維度模型中的資料分割](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

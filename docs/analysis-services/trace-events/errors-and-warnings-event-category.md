@@ -18,27 +18,28 @@ helpviewer_keywords:
 - errors events [Analysis Services]
 - warnings events [Analysis Services]
 ms.assetid: cf7fd5a7-b189-47c3-8e5c-3195897c7eab
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 06a1d7ef68cd2b996165b5940139221897634669
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="errors-and-warnings-event-category"></a>錯誤和警告事件類別目錄
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]錯誤和警告事件類別目錄具有下表中所述的事件類別。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[錯誤和警告] 事件類別目錄具有下表所描述的事件類別。  
   
-|Event Class|事件識別碼|描述|  
+|Event Class|事件識別碼|說明|  
 |-----------------|--------------|-----------------|  
 |錯誤|17|記錄自從啟動追蹤之後的所有新錯誤事件。|  
   
  如需與每個錯誤和警告事件類別相關聯之資料行的資訊，請參閱 [錯誤和警告事件資料行](../../analysis-services/trace-events/errors-and-warnings-events-data-columns.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 追蹤事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

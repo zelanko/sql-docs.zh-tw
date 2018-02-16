@@ -11,28 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Analysis Services Scripting Language XML Data Types
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Analysis Services Scripting Language XML Data Types
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, data types
 - Analysis Services Scripting Language, data types
 - data types [Analysis Services Scripting Language]
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9baa60a57d8ef59bb7bb24afc82c0a3e5435a56d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Analysis Services 指令碼語言 XML 資料類型 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]這個參考章節包含每個項目，可做為 Analysis Services 指令碼語言 (ASSL) 結構描述中的類型的語法和使用方式資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+這個參考章節包含在「Analysis Services 指令碼語言」(ASSL) 結構描述中當做類型之每個元素的語法和使用方式資訊。  
   
  雖然 ASSL 結構描述僅包含 XML 元素，從開發人員的觀點來看，這一節所述的元素對應至類型，例如**繫結**和**權限**，這是用來定義子項目和其他物件的屬性。  
   
@@ -59,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 |[ClrAssembly 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)|定義衍生的資料類型，表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]與相關聯的組件[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)或[伺服器](../../../analysis-services/scripting/objects/server-element-assl.md)項目|  
 |[ClrAssemblyFile 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)|定義代表其中一個檔案組成的基本資料類型[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]組件 ([ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)項目)。|  
 |[ColumnBinding 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/columnbinding-data-type-assl.md)|定義代表資料來源檢視中的資料行的繫結的衍生的資料類型[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)項目。|  
-|[ComAssembly 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/comassembly-data-type-assl.md)|定義代表與相關聯之 COM 程式庫的衍生的資料類型[伺服器](../../../analysis-services/scripting/objects/server-element-assl.md)或[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)項目。|  
+|[ComAssembly 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/comassembly-data-type-assl.md)|定義代表與 [Server](../../../analysis-services/scripting/objects/server-element-assl.md) 或 [Database](../../../analysis-services/scripting/objects/database-element-assl.md) 元素相關聯之 COM 程式庫的衍生資料類型。|  
 |[CubeAttribute 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/cubeattribute-data-type-assl.md)|定義代表屬性相關聯的基本資料類型[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)項目。|  
 |[CubeAttributeBinding 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/cubeattributebinding-data-type-assl.md)|定義代表 Cube 維度中某個屬性與動作或採礦結構資料行之繫結的衍生資料類型。|  
 |[CubeBinding 資料類型 &#40;-單行 &#41;&#40;ASSL &#41;](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|定義表示之間的關聯性的基本資料型別[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)項目和[DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md)項目。|  
@@ -129,7 +133,7 @@ ms.lasthandoff: 01/08/2018
 |[Translation 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/translation-data-type-assl.md)|定義代表當地語系化翻譯的基本資料類型。|  
 |[UserDefinedGroupBinding 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/userdefinedgroupbinding-data-type-assl.md)|定義代表某個屬性之使用者定義群組的衍生資料類型。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "取消命令 (XMLA) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [XML for Analysis]
 - associated connections [XML for Analysis]
@@ -25,19 +26,19 @@ helpviewer_keywords:
 - server process IDs [XML for Analysis]
 - sessions [XML for Analysis]
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d22ac809814cbcf6115d2ae8350967ab444a3ede
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0751c7216716f46e12e8b864386adc3e4806b0cb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="canceling-commands-xmla"></a>取消命令 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]視發出命令的使用者的系統管理權限[取消](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)命令在 XML for Analysis (XMLA) 可以取消工作階段，工作階段、 連接、 伺服器處理序或相關聯的工作階段上的命令或連接。  
+  視發出命令的使用者的系統管理權限[取消](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)命令在 XML for Analysis (XMLA) 可以取消工作階段，工作階段、 連接、 伺服器處理序或相關聯的工作階段上的命令或連接。  
   
 ## <a name="canceling-commands"></a>取消命令  
  使用者可以取消目前執行的命令在目前的明確工作階段的內容傳送**取消**命令沒有指定屬性。  
@@ -67,8 +68,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="canceling-associated-sessions-and-connections"></a>取消關聯的工作階段和連接。  
  您可以設定[CancelAssociated](../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)屬性設定為 true，若要取消連接、 工作階段和連接、 工作階段或在指定的 SPID 相關聯的命令**取消**命令。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [探索方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
- [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

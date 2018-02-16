@@ -11,25 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - properties [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, properties
 - ASSL, properties
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1f616fb67d0e22bba33d22d0d59eb2ed19a4d88e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-assl"></a>屬性 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]這個參考章節包含每個項目，可做為 Analysis Services 指令碼語言 (ASSL) 結構描述中物件屬性的語法和使用方式資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+這個參考章節包含在「Analysis Services 指令碼語言」(ASSL) 結構描述中當做物件屬性之每個元素的語法和使用方式資訊。  
   
  雖然 ASSL 結構描述僅包含 XML 元素，但是從開發人員的觀點而言，本節中描述的元素會對應至描述物件的屬性。  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
-|元素|描述|  
+|元素|Description|  
 |-------------|-----------------|  
 |[Access 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/access-element-assl.md)|表示層級的存取權提供給[CellPermission](../../../analysis-services/scripting/objects/cellpermission-element-assl.md)項目。|  
 |[Account 元素 &#40; ImpersonationInfo &#41;&#40;ASSL &#41;](../../../analysis-services/scripting/properties/account-element-impersonationinfo-assl.md)|包含的使用者帳戶名稱[ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md)資料型別。|  
@@ -180,7 +182,7 @@ ms.lasthandoff: 01/08/2018
 |[LogFileSize 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/logfilesize-element-assl.md)|指定最大記錄檔大小 (以 MB 為單位)。|  
 |[ManagedProvider 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/managedprovider-element-assl.md)|包含衍生自項目所使用的 managed 提供者名稱**DataSource**資料型別。|  
 |[ManufacturingExtraMonthQuarter 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingextramonthquarter-element-assl.md)|定義要指派延長月份的月份之製造週期**TimeBinding**項目。|  
-|[ManufacturingFirstMonth 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstmonth-element-assl.md)|定義的第一個製造月份**TimeBinding**項目。|  
+|[ManufacturingFirstMonth 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstmonth-element-assl.md)|定義 **TimeBinding** 元素的第一個製造月份。|  
 |[ManufacturingFirstWeekOfMonth 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstweekofmonth-element-assl.md)|定義之製造月份的第一週**TimeBinding**項目。|  
 |[MasterDatasourceID 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/masterdatasourceid-element-assl.md)|包含主要資料來源識別碼**資料庫**項目。|  
 |[Materialization 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/materialization-element-assl.md)|指出量值群組與參考維度之間關聯性的類型。|  
@@ -285,7 +287,7 @@ ms.lasthandoff: 01/08/2018
 |[寫入項目 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/write-element-assl.md)|判斷是否可寫入資料或中繼資料的指定**CubeDimensionPermission**或**權限**項目。|  
 |[WriteEnabled 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/writeenabled-element-assl.md)|指出是否可以使用維度回寫 (受限於安全性權限)。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   

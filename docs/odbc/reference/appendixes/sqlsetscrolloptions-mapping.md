@@ -22,10 +22,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 57d4bb7747803f1fe65276ddb86c574763627906
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions 對應
 當應用程式呼叫**SQLSetScrollOptions**透過 ODBC 3*.x*驅動程式和驅動程式不支援**SQLSetScrollOptions**，呼叫  

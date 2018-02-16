@@ -14,10 +14,10 @@ ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
 ms.openlocfilehash: d289af96467634c144c7d0bc5ee362968c646333
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 資料庫的連接模組
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 12/09/2017
 
 - Linux (Ubuntu)
 - MacOS
-- Windows
+- 視窗
 
 
 #### <a name="oop-to-relational-mismatch"></a>OOP 到關聯式的不相符
@@ -56,11 +56,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 
 | 語言 | 下載 SQL 驅動程式 |
 | :------- | :---------------------- |
-| C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core，for Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core，如 MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core for Windows](https://www.microsoft.com/net/core) |
+| C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core，for Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core for Windows](https://www.microsoft.com/net/core) |
 | C++      | [ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Node.js 驅動程式、 安裝指示](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *作業系統：*<br /><br />[Windows 的 PHP 驅動程式](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu 或 MacOS PHP 驅動程式，從 Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| PHP      | *作業系統：*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu 或 MacOS PHP 驅動程式，從 Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
 | Python   | [pyodbc、 安裝指示](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[下載 ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [拼音驅動程式、 安裝指示](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Ruby 的下載頁面](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |

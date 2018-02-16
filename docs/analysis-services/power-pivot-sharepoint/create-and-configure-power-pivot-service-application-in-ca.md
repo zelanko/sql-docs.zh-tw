@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>建立及設定 Power Pivot 服務應用程式，在 CA 中
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式是共用的服務執行個體的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]系統服務。 每一個服務應用程式都有它自己的應用程式識別、組態設定、屬性以及內部資料儲存位置。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務的共用服務執行個體。 每一個服務應用程式都有它自己的應用程式識別、組態設定、屬性以及內部資料儲存位置。  
   
  本主題包含下列幾節：  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
      如需服務關聯的詳細資訊，請參閱 [在管理中心將 Power Pivot 服務應用程式連接到 SharePoint Web 應用程式](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
-10. 按一下 **[確定].** 此服務將會與伺服器陣列服務應用程式清單中的其他受管理的服務一起顯示。  
+10. 按一下 **[確定]**。 此服務將會與伺服器陣列服務應用程式清單中的其他受管理的服務一起顯示。  
   
 ##  <a name="ConfigApp"></a> 設定 Power Pivot 服務應用程式  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式是使用預設組態所建立。 在大部分的情況下建議使用預設值。 只有在您遇到回應時間變慢或已捨棄連接時，或是如果您要改變特定 SharePoint Web 應用程式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務組態時，才變更它們。  
@@ -147,7 +148,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  若是 **[custom]**，請選取您想要使用的每個服務應用程式連接旁邊的核取方塊。 如果您具有多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式 (由設為 [Power Pivot 服務應用程式 Proxy] 的類型指出)，請務必只選擇一個。  
   
-6.  按一下 [確定] 。  
+6.  按一下 **[確定]**。  
   
 ##  <a name="EditGSA"></a> 編輯服務應用程式屬性  
  使用下列指示來重新開啟屬性頁，以指定服務的應用程式名稱、應用程式集區、資料庫設定以及服務關聯。  
@@ -158,7 +159,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  在功能區上按一下 **[屬性]** 。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理中心的 Power Pivot 伺服器管理和設定](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

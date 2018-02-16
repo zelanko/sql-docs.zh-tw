@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>用於追蹤內的 Analysis Services 物件類型代碼
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]此頁面會列出 Analysis Services 資料模型中每個物件的物件類型 （六位數數字）。 追蹤記錄檔中會出現這些程式碼，可用於識別與特定鎖定相關聯的物件類型。 例如，資料庫上的鎖定逾時會指出物件類型 100002 (也就是資料庫物件類型)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+此頁面會列出 Analysis Services 資料模型中，每個物件的物件類型 (六位數數字)。 追蹤記錄檔中會出現這些程式碼，可用於識別與特定鎖定相關聯的物件類型。 例如，資料庫上的鎖定逾時會指出物件類型 100002 (也就是資料庫物件類型)。  
   
 > [!NOTE]  
 >  以下列出的程式碼數，超過追蹤記錄檔中實際出現的數目。 以下清單是每個物件的類型程式碼之完整清單，但只有採用鎖定的物件才會出現在追蹤記錄中內的物件類型程式碼。  
@@ -33,9 +34,9 @@ ms.lasthandoff: 01/08/2018
   
 |物件類型|物件名稱|  
 |-----------------|-----------------|  
-|100000|[伺服器]|  
-|100001|命令|  
-|100002|[資料庫]|  
+|100000|Server|  
+|100001|Command|  
+|100002|資料庫|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
 |100005|角色|  
@@ -73,13 +74,13 @@ ms.lasthandoff: 01/08/2018
 |100047|CubeAttributePermission|  
 |100048|CellPermission|  
 |100049|CubeDimensionPermission|  
-|100050|追蹤|  
+|100050|Trace|  
 |100051|ServerAssembly|  
 |100052|CubeAssembly|  
-|100053|命令|  
+|100053|Command|  
 |100054|KPI|  
 |100055|DataSourceView|  
-|100056|Perspective|  
+|100056|檢視方塊|  
 |100100|CommandCollection|  
 |100101|DatabaseCollection|  
 |100102|DataSourceCollection|  

@@ -16,10 +16,10 @@ ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
 caps.latest.revision: 
 ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore"></a>備份與還原
 說明資料如何備份和還原運作的 SQL Server Parallel Data Warehouse (PDW)。 備份和還原作業可用於災害復原。 備份與還原也可用來將資料庫從一個工具複製到另一部應用裝置。  

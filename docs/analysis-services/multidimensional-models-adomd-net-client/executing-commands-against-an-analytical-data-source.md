@@ -1,7 +1,7 @@
 ---
 title: "對分析資料來源執行命令 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/04/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - AdomdCommand object
 - commands [ADOMD.NET]
 - ADOMD.NET, commands
 ms.assetid: 1a958e5f-fc18-480b-9706-fc44e3b1d534
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a280ee70cd6c2545abc6a50da15d1eb938090e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23c14b71b321ee8358d542bd10f8b6cb73ee9a9f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>針對分析資料來源執行命令
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]建立分析資料來源的連接後，您可以使用<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>執行命令，並從該資料來源傳回結果的物件。 這些命令可以透過使用多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 甚或是有限的 SQL 語法，來擷取資料。 此外，您可以使用 Analysis Services 指令碼語言 (ASSL) 命令修改基礎資料庫。  
+  建立分析資料來源的連接後，您可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 物件，針對該資料來源執行命令並從中傳回結果。 這些命令可以透過使用多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 甚或是有限的 SQL 語法，來擷取資料。 此外，您可以使用 Analysis Services 指令碼語言 (ASSL) 命令修改基礎資料庫。  
   
 ## <a name="creating-a-command"></a>建立命令  
  在執行命令之前，您必須先建立它。 您可以使用以下兩種方法之一來建立命令：  

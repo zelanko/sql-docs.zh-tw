@@ -1,7 +1,7 @@
 ---
 title: "管理連接與工作階段 (XMLA) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - statefulness [XML for Analysis]
 - statelessness [XML for Analysis]
@@ -20,19 +21,19 @@ helpviewer_keywords:
 - XMLA, sessions
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 444890daf7e8410b6fbb51b9ee793200888d4ad6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 761618d7a0d651fb24257e03c5fcb261fde051c6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理連接與工作階段 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Statefulness*是在伺服器保留之身分識別與內容的用戶端方法呼叫之間的條件。 *Statelessness*是在伺服器不會記住之身分識別與內容的用戶端方法呼叫完成之後的條件。  
+  *Statefulness*是在伺服器保留之身分識別與內容的用戶端方法呼叫之間的條件。 *Statelessness*是在伺服器不會記住之身分識別與內容的用戶端方法呼叫完成之後的條件。  
   
  若要提供 statefulness，XML for Analysis (XMLA) 支援*工作階段*，允許一系列陳述式一起執行。 這樣一系列的陳述式範例，將會建立用於後續查詢的導出成員。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
  World Wide Web Consortium (W3C) 簡易物件存取通訊協定 (SOAP) 規格建議使用 SOAP 標頭，在 SOAP 訊息上面建立新的通訊協定。 下表列出 XMLA 為起始、維護和關閉工作階段，所定義的 SOAP 標頭元素與屬性。  
   
-|SOAP 標頭|描述|  
+|SOAP 標頭|Description|  
 |-----------------|-----------------|  
 |BeginSession|此標頭要求提供者建立新的工作階段。 提供者應該建構新的工作階段，並在 SOAP 回應中，將工作階段識別碼與 Session 標頭一起傳回。|  
 |SessionId|值區域包含的工作階段識別碼，必須用於工作階段其餘部分的每個方法呼叫。 在 SOAP 回應中的提供者會傳送這個標記，而用戶端也必須將這個屬性與每個 Session 標頭元素一起傳送。|  
@@ -112,7 +113,7 @@ ms.lasthandoff: 01/08/2018
     </SOAP-ENV:Header>  
     ```  
   
-## <a name="see-also"></a>請參閱  
- [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

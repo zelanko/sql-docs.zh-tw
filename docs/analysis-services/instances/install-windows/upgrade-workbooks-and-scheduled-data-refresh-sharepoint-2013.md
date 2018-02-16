@@ -19,13 +19,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升級活頁簿和排程的資料重新整理 (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主題說明在先前建立的活頁簿的使用者經驗[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]環境以及如何升級[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]活頁簿，讓您可以利用此版本中引進的新功能。 若要深入了解新功能，請參閱 [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917)(PowerPivot 的新功能)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本主題將說明在先前 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 環境中建立之活頁簿的使用者體驗，以及如何升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿，以便讓您運用這個版本所導入的新功能。 若要深入了解新功能，請參閱 [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917)(PowerPivot 的新功能)。  
   
 > [!WARNING]  
 >  您不能針對在伺服器上自動升級的活頁簿回復升級。 一旦升級活頁簿之後，它就會保持升級的狀態。 若要使用之前的版本，可以將之前的活頁簿重新發行至 SharePoint、還原之前的版本或回收活頁簿。 如需有關在 SharePoint 中還原或回收文件的詳細資訊，請參閱＜ [規劃如何使用資源回收筒及版本設定功能保護內容](http://go.microsoft.com/fwlink/?LinkId=238669)＞。  

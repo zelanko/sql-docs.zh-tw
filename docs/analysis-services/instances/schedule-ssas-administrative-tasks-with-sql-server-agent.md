@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d8872cadbcbd7da67212fa26417ac66debc5f79c
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server Agent 排程 SSAS 管理工作
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用 SQL Server Agent 服務，您可以排程[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]需要執行的順序和時間，您的系統管理工作。 為工作排程可協助您將處理自動化，以便定期或依照可預測的週期執行。 您可以排程管理工作 (例如 Cube 處理) 在商務活動較少的時間執行。 此外，您也可以在 SQL Server Agent 作業內建立作業步驟，決定工作執行的順序。 例如，您可以先處理 Cube，然後再執行 Cube 的備份。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+您可以使用 SQL Server Agent 服務來為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理工作排程，以便按照所需的順序和時間執行工作。 為工作排程可協助您將處理自動化，以便定期或依照可預測的週期執行。 您可以排程管理工作 (例如 Cube 處理) 在商務活動較少的時間執行。 此外，您也可以在 SQL Server Agent 作業內建立作業步驟，決定工作執行的順序。 例如，您可以先處理 Cube，然後再執行 Cube 的備份。  
   
  作業步驟可以讓您控制執行的流程。 如果一項作業失敗，您可以設定 SQL Server Agent 繼續執行其餘工作或停止執行。 您也可以設定 SQL Server Agent 傳送有關作業執行成功或失敗的通知。  
   

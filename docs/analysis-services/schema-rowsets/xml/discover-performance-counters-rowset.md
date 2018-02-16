@@ -11,28 +11,30 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1d769567a033eedd98eff41aee9cde5306c9b7ea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回一或多個效能計數器的值。 它不支援隨著時間傳回使用量相關資訊的計數器 (例如每秒磁碟讀取次數以及 CPU 使用量的百分比)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+傳回一個或多個效能計數器的值。 它不支援隨著時間傳回使用量相關資訊的計數器 (例如每秒磁碟讀取次數以及 CPU 使用量的百分比)。  
   
  **適用於：**表格式模型、 多維度模型  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_PERFORMANCE_COUNTERS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|描述|  
+|資料行名稱|類型指標|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**PERF_COUNTER_NAME**|**DBTYPE_WSTR**|必要項|效能計數器的名稱。|  
 |**PERF_COUNTER_VALUE**|**DBTYPE_DOUBLE**||效能計數器的值。|  
@@ -44,12 +46,12 @@ ms.lasthandoff: 01/08/2018
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd2e-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PerformanceCounters|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

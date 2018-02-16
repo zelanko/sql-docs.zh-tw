@@ -17,19 +17,20 @@ helpviewer_keywords:
 - expressions [MDX], scripts
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 22da0a7df618db320214f19a73e2047ea4b37922
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 指令碼 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多維度運算式 (MDX) 指令碼會定義中之 cube 的計算處理序[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 MDX 指令碼有以下兩種類型：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+多維度運算式 (MDX) 指令碼可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中定義 Cube 的計算處理序。 MDX 指令碼有以下兩種類型：  
   
  **預設的 MDX 指令碼**  
  當您建立 Cube 時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會為那個 Cube 建立預設的 MDX 指令碼。 此指令碼會定義整個 Cube 的計算行程。  
@@ -58,18 +59,18 @@ ms.lasthandoff: 01/08/2018
  所有 MDX 指令碼陳述式  
  在 MDX 指令碼中，MDX 指令碼陳述式可控制計算的內容及範圍，還能管理 MDX 指令碼中其他陳述式的行為。 此類別目錄包括以下陳述式：  
   
--   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
+-   [計算](../../../mdx/mdx-scripting-calculate.md)  
   
--   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
+-   [凍結](../../../mdx/mdx-scripting-freeze.md)  
   
--   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
+-   [範圍](../../../mdx/mdx-scripting-scope.md)  
   
  如需 MDX 指令碼陳述式的詳細資訊，請參閱 [MDX 指令碼陳述式 &#40;MDX&#41;](../../../mdx/mdx-scripting-statements-mdx.md)。  
   
- [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
+ [建立成員](../../../mdx/mdx-data-definition-create-member.md)  
  CREATE MEMBER 陳述式可建立導出成員。 如需如何建立導出成員的詳細資訊，請參閱[在 MDX 中建立導出成員 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)。  
   
- [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
+ [建立集合](../../../mdx/mdx-data-definition-create-set.md)  
  CREATE SET 陳述式可建立命名集。 如需如何建立命名集的詳細資訊，請參閱[在 MDX 中建立命名集 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md)。  
   
  條件陳述式  
@@ -95,8 +96,8 @@ ms.lasthandoff: 01/08/2018
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 語言參考 &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [MDX 指令碼基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 語言參考 &#40;MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [MDX 指令碼基礎觀念 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8010e9c0412b50c8d65a67c87c176bff02d1a887
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]DefaultDetails 元素代表屬性參考會共同定義 「 預設欄位集 」 資料表中的資料行的清單。 每個屬性只能參考一個量值或資料行。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+DefaultDetails 元素代表屬性參考清單，這些屬性參考會共同定義資料表中資料行的「預設欄位集」。 每個屬性只能參考一個量值或資料行。  
   
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 DefaultDetails 元素的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|說明|  
 |----------|-----------------|-----------------|  
 |DefaultDetailsPosition|否|指出在集合中存在與位置的正整數。|  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/08/2018
 </EntityType>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解表格式物件模型在相容性層級 1050年透過 1103](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [CSDLBI 概念](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md)  
   

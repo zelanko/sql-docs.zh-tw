@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附錄 b: ODBC 狀態轉換表
 本附錄的表格會顯示如何 ODBC 函數會造成的環境、 連接、 陳述式，以及描述項狀態的轉換。 環境、 連接、 陳述式或描述元的狀態通常會規定使用控制代碼 （環境、 連接、 陳述式或描述元） 的對應類型的函式可以呼叫時。 環境、 連接、 陳述式，以及描述項狀態重疊大約在下圖所示。 例如，完全重疊的連線狀態 C5 和 C6 且陳述式說明 S1 S12 透過資料來源而定，因為交易在不同的時間開始，針對不同的資料來源，並描述項狀態 D1i （隱含地配置描述元） 而定陳述式與描述項相關聯的狀態，而 state D1e （明確配置描述項） 是獨立狀態的任何陳述式。 如需每個狀態的說明，請參閱[環境轉換](../../../odbc/reference/appendixes/environment-transitions.md)，[連接轉換](../../../odbc/reference/appendixes/connection-transitions.md)，[陳述式轉換](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述元轉換](../../../odbc/reference/appendixes/descriptor-transitions.md)稍後在本附錄中。  
@@ -49,10 +49,10 @@ ms.lasthandoff: 02/12/2018
   
  轉換資料表中的每個項目可以是下列值之一：  
   
--   **--**— 狀態之後執行函式保持不變。  
+-   **--** — 狀態之後執行函式保持不變。  
   
 -   **E**  
-     ***n*****C*n * * *，**S*n***，或**D * n***  — 環境、 連接、 陳述式或描述項狀態移至指定的狀態。  
+     ***n*** **C*n * * *，**S*n***，或**D * n***  — 環境、 連接、 陳述式或描述項狀態移至指定的狀態。  
   
 -   **(KARTRIS)** -無效的控制代碼傳遞給函式。 如果控制代碼的 null 控制代碼是否有效的控制代碼類型錯誤-需要陳述式控制代碼時，例如，傳遞連接控制代碼 — 函式會傳回 SQL_INVALID_HANDLE;否則行為未定義，而且可能嚴重。 是唯一可能的呼叫函式中指定的狀態結果時，會顯示此錯誤。 此錯誤不會變更狀態，會持續偵測此 dt 由驅動程式管理員，括號所示。  
   

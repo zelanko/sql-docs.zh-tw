@@ -1,7 +1,7 @@
 ---
 title: "ADOMD.NET 用戶端功能 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - functionality [ADOMD.NET]
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2d5cc63c0c6385a6457d725194f6fe0e7604c672
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 59d5086aaba3fbf1ebe8581031f30f3313a51938
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 用戶端功能
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET 中，如同其他[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework 資料提供者，可做為應用程式與資料來源之間的橋樑。 不過，ADOMD.NET 與其他 .NET Framework 資料提供者不同的是，ADOMD.NET 可處理分析資料。 為了處理分析資料，ADOMD.NET 支援與其他 .NET Framework 資料提供者非常不一樣的功能。 ADOMD.NET 不僅可讓您擷取資料，還可以擷取中繼資料並變更分析資料存放區的結構：  
+  ADOMD.NET 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 資料提供者一樣，可做為應用程式與資料來源之間的橋樑。 不過，ADOMD.NET 與其他 .NET Framework 資料提供者不同的是，ADOMD.NET 可處理分析資料。 為了處理分析資料，ADOMD.NET 支援與其他 .NET Framework 資料提供者非常不一樣的功能。 ADOMD.NET 不僅可讓您擷取資料，還可以擷取中繼資料並變更分析資料存放區的結構：  
   
  **擷取中繼資料**  
  應用程式可以進一步了解使用結構描述資料列集或是物件模型，透過中繼資料擷取從資料來源擷取的資料。 每個可用的關鍵效能指標 (KPI) 類型、在 Cube 中的維度以及採礦模型所需的參數等資訊全部都是可探索的。 中繼資料，是最重要*動態*需要使用者輸入，以決定要擷取類型、 深度和資料範圍的應用程式。 範例包括 Query Analyzer、Microsoft Excel 及其他查詢工具。 中繼資料是較不重要*靜態*執行一組預先定義的動作的應用程式。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
  [!code-cs[Adomd.NetClient#ReturnCommandUsingCellSet](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/adomd-net-client-functio_1.cs)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADOMD.NET 用戶端程式設計](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   

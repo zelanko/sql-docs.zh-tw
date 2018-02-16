@@ -20,19 +20,20 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 98e15a75b97eae9c4b2fa4093f03f9c8ccf92000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services 追蹤事件
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以透過擷取然後分析執行個體所產生的追蹤事件遵循 Microsoft SQL Server Analysis Services (SSAS) 執行個體的活動。  追蹤事件已分組，因此您可以更輕鬆地找到相關追蹤事件。  每個追蹤事件都包含與該事件相關的一組資料；並不是所有資料片段都與所有事件相關。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+您可以透過擷取然後分析執行個體所產生的追蹤事件，來追蹤 Microsoft SQL Server Analysis Services (SSAS) 執行個體的活動。  追蹤事件已分組，因此您可以更輕鬆地找到相關追蹤事件。  每個追蹤事件都包含與該事件相關的一組資料；並不是所有資料片段都與所有事件相關。  
   
  追蹤事件可透過 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**來啟動和擷取 (請參閱 [使用 SQL Server Profiler 監視 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md))，也可以從 XMLA 命令啟動做為 **SQL Server 擴充事件** 並在稍後分析 (請參閱 [使用 SQL Server 擴充事件監視 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md))。  
   
@@ -174,7 +175,7 @@ ms.lasthandoff: 01/08/2018
   
 |**事件識別碼**|**事件名稱**|**事件描述**|  
 |------------------|--------------------|---------------------------|  
-|@shouldalert|稽核登入|收集自啟動追蹤後的所有新連接事件，例如當用戶端要求連接到執行 SQL Server 執行個體的伺服器時。|  
+|1|稽核登入|收集自啟動追蹤後的所有新連接事件，例如當用戶端要求連接到執行 SQL Server 執行個體的伺服器時。|  
 |2|稽核登出|收集自啟動追蹤後的所有新中斷連接事件，例如當用戶端發出中斷連接命令時。|  
 |4|稽核伺服器的啟動和停止|記錄服務關閉、啟動與暫停活動。|  
 |18|稽核物件權限事件|記錄物件權限之變更。|  
@@ -190,7 +191,7 @@ ms.lasthandoff: 01/08/2018
 |42|現有的工作階段|現有的工作階段。|  
 |43|工作階段初始化|工作階段初始化。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Profiler 監視 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

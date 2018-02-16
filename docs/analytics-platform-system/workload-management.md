@@ -17,10 +17,10 @@ ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
 caps.latest.revision: 
 ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="workload-management"></a>工作負載管理
 SQL Server PDW 的工作負載管理功能可讓使用者和系統管理員將指派到預先設定的記憶體和並行處理設定要求。 使用工作負載管理來改善效能的負載，一致或 mixed 時，允許要求而不會佔用任何要求永遠將適當的資源。  

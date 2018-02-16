@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services 會決定不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境的伺服器部署模式運作。 伺服器模式是在安裝期間決定。 **多維度和資料採礦模式**支援傳統 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合的模式**做為已安裝的 Analysis Services 的執行個體是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint，使用載入和查詢 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]活頁簿內的資料模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services 會以伺服器部署模式運作，該模式可判斷不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境。 伺服器模式是在安裝期間決定。 **多維度和資料採礦模式**支援傳統 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合的模式**做為已安裝的 Analysis Services 的執行個體是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint，使用載入和查詢 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]活頁簿內的資料模型。  
   
  本主題說明 Analysis Services 以多維度和資料採礦模式運作時的基本架構。 如需有關其他模式的詳細資訊，請參閱[表格式模型化 &#40;Ssas&#41;](../../../analysis-services/tabular-models/tabular-models-ssas.md)和[比較表格式和多維度方案 &#40;Ssas&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
  圍繞 Cube 的較小英數字值是該維度的成員。 範例成員為 ground (Route 維度的成員)、Africa (Source 維度的成員) 和 1st quarter (Time 維度的成員)。  
   
-### <a name="measures"></a>量值  
+### <a name="measures"></a>[量值]  
  Cube 資料格內的值代表 Packages 和 Last 兩個量值。 封裝量值代表匯入的封裝數目和**總和**函數用來彙總事實。 最後一個量值代表回條、 日期和**Max**函數用來彙總事實。  
   
 ### <a name="dimensions"></a>維度  
@@ -93,7 +95,7 @@ ms.lasthandoff: 01/08/2018
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-3-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|6 月-20-99|Jun-28-99|  
 ||2nd half||13937|3570|10367|Dec-29-99|Dec-22-99|Dec-29-99|  
-|||3rd quarter|6119|1444|4675|Sep-30-99|9 月-18-99|Sep-30-99|  
+|||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
  定義 Cube 之後，您可以建立新的彙總，或變更現有的彙總以設定選項 (例如，在查詢的處理或計算期間，是否要預先計算彙總)。 **相關的主題：**[彙總和彙總設計](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
@@ -117,12 +119,12 @@ ms.lasthandoff: 01/08/2018
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|Packages|最後一個|  
-|3516987|@shouldalert|6|@shouldalert|15|年 1 月-10-99|  
-|3554790|@shouldalert|6|@shouldalert|40|年 1 月 19-99 之間|  
-|3572673|@shouldalert|6|@shouldalert|34|Jan-27-99|  
-|3600974|@shouldalert|6|@shouldalert|45|Feb-02-99|  
-|3645541|@shouldalert|6|@shouldalert|20|Feb-09-99|  
-|3674906|@shouldalert|6|@shouldalert|36|Feb-17-99|  
+|3516987|1|6|1|15|年 1 月-10-99|  
+|3554790|1|6|1|40|年 1 月 19-99 之間|  
+|3572673|1|6|1|34|Jan-27-99|  
+|3600974|1|6|1|45|Feb-02-99|  
+|3645541|1|6|1|20|Feb-09-99|  
+|3674906|1|6|1|36|Feb-17-99|  
   
  上表中，每個資料列都有相同的值**RouteKey**， **SourceKey**，和**TimeKey**資料行，表示這些資料列，會造成相同的 cube 資料格。  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 01/08/2018
   
  此處所顯示的範例只包含單一事實資料表。 當 Cube 具有多份事實資料表時，會將每份事實資料表的量值組成量值群組，並根據定義的維度關聯性讓量值群組與特定的維度集產生關聯。 而透過指定資料來源檢視的參與資料表和關聯性的資料粒度，即可建立這些關聯性。 **相關的主題：**[維度關聯性](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
-## <a name="see-also"></a>請參閱  
- [多維度模型資料庫 &#40;Ssas&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+## <a name="see-also"></a>另請參閱  
+ [多維度模型資料庫 &#40;SSAS&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

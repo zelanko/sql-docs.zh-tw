@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5a7e94aeb9f547220a3b3bc836e59ef81ce3bfe9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 可用性和災害復原
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]可用性和災害復原計畫[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]主要取決於您的 SharePoint 伺服器陣列、 不同元件可接受的停機時間和工具和針對 SharePoint 可用性所實作的最佳作法的設計。 本主題將摘要說明相關技術，並包含為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署規劃可用性和災害復原時所要考量的範例拓撲圖表。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的可用性和災害復原計畫主要取決於您的 SharePoint 伺服器陣列的設計、不同元件可接受的停機時間以及針對 SharePoint 可用性所實作的工具和最佳作法。 本主題將摘要說明相關技術，並包含為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署規劃可用性和災害復原時所要考量的範例拓撲圖表。  
   
 ||  
 |-|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  ![sharepoint 2010 中的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "sharepoint 2010 中的 powerpivot 可用性")  
   
--   **(1)** Web 前端伺服器。 在每部伺服器上安裝資料提供者。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。  
+-   **(1)** Web 前端伺服器。 在每部伺服器上安裝資料提供者。 如需詳細資訊，請參閱＜ [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)＞。  
   
 -   **(2)** 兩個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共用服務和 **(4)** Windows 服務 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 都會安裝在 SharePoint 應用程式伺服器上。  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 01/08/2018
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 同步鏡像的可用性。|支援，但不建議使用。 建議在「同步認可模式」模式下使用 AlwaysOn。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 處於「同步認可模式」模式|支援和建議。|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同步鏡像或記錄傳送至另一個伺服器陣列以進行災害復原。|支援。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 在非同步認可下的災害復原|支援|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 在非同步認可下的災害復原|Supported|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   

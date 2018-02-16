@@ -11,29 +11,31 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 21e11773cfe402d85d661c009bf1b6a2fef7235a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Hierarchy 元素是可連結到彼此會形成階層的資料表中的欄位的邏輯容器。 Hierarchy 元素衍生自 CSDL Member 元素而且已擴充，可支援商業智慧資料模型中建立的階層。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Hierarchy 元素是資料表中可彼此連結以構成階層之欄位的邏輯容器。 Hierarchy 元素衍生自 CSDL Member 元素而且已擴充，可支援商業智慧資料模型中建立的階層。  
   
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 Hierarchy 元素的元素和屬性  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|說明|  
 |----------|-----------------|-----------------|  
 |文件集|否|階層的描述。|  
-|層級|是|一個或多個 Level 元素，會定義階層中所使用的資料行。<br /><br /> 請參閱 [Level 元素 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md)。|  
+|Level|是|一個或多個 Level 元素，會定義階層中所使用的資料行。<br /><br /> 請參閱 [Level 元素 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md)。|  
   
 ## <a name="remarks"></a>備註  
  在表格式模型中，您可以在相同資料表的資料行之間指定父子式關聯性，藉以建立階層。 如需詳細資訊，請參閱[階層 &#40;SSAS 表格式&#41;](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
@@ -87,7 +89,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解表格式物件模型在相容性層級 1050年透過 1103](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [了解 DAX 中的父子式階層的函數](http://msdn.microsoft.com/en-us/b11f0cff-cee4-4ae7-a5b3-ebe288fc42d3)   
  [設定 &#40;所有 &#41;屬性階層層級](../../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  

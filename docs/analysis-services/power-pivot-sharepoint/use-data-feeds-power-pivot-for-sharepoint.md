@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用資料摘要 (Power Pivot for SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料摘要是一或多個資料流是從線上資料來源產生並串流至目的地文件或應用程式。 如果您使用的是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
   
  您使用資料摘要的方式，取決於您是使用支援 Atom 資料摘要之應用程式中的內建匯出功能，還是建立並使用自訂資料服務。 能夠發行並讀取 Atom XML 資料的應用程式提供完美的資料傳輸，隱藏資料摘要與資料服務的機制，讓使用者看不到。 對使用者來說，只是將資料從一個應用程式移到另一個。  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Microsoft SharePoint 2010 提供可用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的資料摘要。 您可以使用本主題中的資訊來了解如何從您已經擁有的報表與清單中存取資料摘要。  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Microsoft SharePoint 2010 提供的資料摘要，可用於[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿。 您可以使用本主題中的資訊來了解如何從您已經擁有的報表與清單中存取資料摘要。  
   
  本主題包含下列幾節：  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  輸入 [資料表名稱]，每個摘要各使用一個資料表。 這是必要的值。 資料表名稱是由取用資料摘要的用戶端應用程式所使用。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中，資料表名稱用來命名 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中，將包含已匯入之資料的資料表。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在管理中心為網站集合啟用 Power Pivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [使用資料摘要庫共用資料摘要 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   

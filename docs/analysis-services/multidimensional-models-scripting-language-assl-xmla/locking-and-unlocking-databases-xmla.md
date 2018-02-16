@@ -1,7 +1,7 @@
 ---
 title: "鎖定和解除鎖定資料庫 (XMLA) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,31 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - locking [XML for Analysis]
 - XML for Analysis, locking
 - XMLA, locking
 - unlocking objects
 ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0d4a50d1e4732a0b93f0fd536aa0ddfb950ca695
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 05a2627f13306e59a6369e2bafa206f82977c186
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>鎖定和解除鎖定資料庫 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以鎖定與解除鎖定資料庫分別使用、[鎖定](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)和[解除鎖定](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)XML for Analysis (XMLA) 中的命令。 一般而言，其他 XMLA 命令會視需要自動鎖定和解除鎖定物件，以便在執行期間完成命令。 您可以明確地鎖定或解除鎖定資料庫，執行單一交易內的多個命令，例如[批次](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令，以防止其他應用程式資料庫將寫入交易認可。  
+  您可以鎖定與解除鎖定資料庫分別使用、[鎖定](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)和[解除鎖定](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)XML for Analysis (XMLA) 中的命令。 一般而言，其他 XMLA 命令會視需要自動鎖定和解除鎖定物件，以便在執行期間完成命令。 您可以明確地鎖定或解除鎖定資料庫，執行單一交易內的多個命令，例如[批次](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令，以防止其他應用程式資料庫將寫入交易認可。  
   
 ## <a name="locking-databases"></a>鎖定資料庫  
- **鎖定**命令會鎖定物件，以便共用或獨佔使用，目前使用中交易內容中。 鎖定物件會防止認可交易，直到移除鎖定為止。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援兩種類型的鎖定，共用的鎖定和獨佔鎖定。 如需有關所支援的鎖定類型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請參閱[Mode 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  
+ **鎖定**命令會鎖定物件，以便共用或獨佔使用，目前使用中交易內容中。 鎖定物件會防止認可交易，直到移除鎖定為止。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援兩種類型的鎖定，共用的鎖定和獨佔鎖定。 如需有關所支援的鎖定類型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請參閱[Mode 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 僅允許鎖定資料庫。 [物件](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)元素必須包含的物件參考[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 如果**物件**未指定項目或**物件**元素參考資料庫以外的物件發生錯誤。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 允許對鎖定的資料庫。 [物件](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)元素必須包含的物件參考[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 如果**物件**未指定項目或**物件**元素參考資料庫以外的物件發生錯誤。  
   
 > [!IMPORTANT]  
 >  只有資料庫管理員或伺服器管理員可以明確發出**鎖定**命令。  
@@ -50,9 +51,9 @@ ms.lasthandoff: 01/08/2018
   
  所有鎖定都會保存在目前交易的內容中。 當目前的交易經過認可或回復時，就會自動釋放在交易內部定義的所有鎖定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Lock 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
  [解除鎖定元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
- [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

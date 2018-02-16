@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解適用於多維度模型的 Power View
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本文描述 SQL Server 中的多維度模型功能的 Power View 和 BI 專業人員和系統管理員想要在組織中實作多維度模型的 Power View 提供重要資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本文描述 SQL Server 中的 [多維度模型的 Power View] 功能，並為想要在組織中實作 Power View 的 BI 專業人員和系統管理員提供重要資訊。  
   
  多維度模型提供領先業界的 OLAP 資料模型化、儲存體和分析解決方案。 SQL Server 中的多維度模型透過 Microsoft Power View 支援特定資料分析、探索和視覺效果。  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Power View 的多維度模型架構](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View 的多維度模型架構")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
  **伺服器需求**  
   
 -   以多維度模式執行的 Microsoft SQL Server 2016 Analysis Services。  
@@ -61,14 +62,14 @@ ms.lasthandoff: 01/08/2018
   
 |多維度物件|表格式物件|  
 |-----------------------------|--------------------|  
-|Cube|[模型]|  
+|Cube|模型|  
 |Cube 維度|Table|  
-|維度屬性(索引鍵、名稱)|「資料行」|  
+|維度屬性(索引鍵、名稱)|資料行|  
 |量值群組|資料表|  
 |[量值]|量值|  
 |不含量值群組的量值|在名為量值的資料表中|  
 |量值群組 Cube 維度關聯性|關聯性|  
-|Perspective|遠近景深|  
+|檢視方塊|遠近景深|  
 |KPI|KPI|  
 |使用者/父子式階層|階層|  
 |顯示資料夾|顯示資料夾|  
@@ -223,7 +224,7 @@ ms.lasthandoff: 01/08/2018
   
  DISCOVER_CSDL_METADATA 要求具有下列限制：  
   
-|[屬性]|必要項|描述|  
+|名稱|必要項|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|是|目錄\資料庫名稱。|  
 |PERSPECTIVE_NAME|是，如果 Cube 包含一個以上的檢視方塊。 如果只有一個 Cube 或有預設檢視方塊，則為選擇性。|多維度資料庫中的 Cube 名稱或檢視方塊名稱。|  

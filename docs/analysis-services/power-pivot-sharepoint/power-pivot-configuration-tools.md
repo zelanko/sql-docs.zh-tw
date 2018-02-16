@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e2df021da6f2cf8c32e0b0581c5d5d61a422d5ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot 組態工具
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]設定、 修復或移除[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]與[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]組態工具。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具設定、修復或移除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
  [ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈] 不會為 SharePoint 安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。 組態工具在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]未來的版本中將可供下載。  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
  這些工具僅能搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]執行個體使用。 請勿將它們用於 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 安裝。  
   
-|[屬性]|支援的 SharePoint 版本|詳細組態|  
+|名稱|支援的 SharePoint 版本|詳細組態|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態|SharePoint 2013|[設定或修復 Power Pivot for SharePoint 2013 &#40;Power Pivot 組態工具&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具|SharePoint 2010 含 SharePoint 2010|[設定或修復 Power Pivot for SharePoint 2010 (Power Pivot 組態工具)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)|  

@@ -11,28 +11,30 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d0f63e52-7330-4b2c-a929-7a517acc6921
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7f28d100ef59df6fe73b8dd93d1fbfebdb87bbb7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="baseproperty-element-csdlbi"></a>BaseProperty 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]BaseProperty 元素是做為其他元素的基底複雜型別。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+BaseProperty 元素為複雜類型，可做為其他元素的基底。  
   
  其屬性可以出現在資料行和量值中。  
   
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 BaseProperty 元素的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|說明|  
 |----------|-----------------|-----------------|  
 |Alignment|否|成員 (資料行、量值、導覽屬性、階層或層級) 的名稱，藉由實作 Member 類型所定義。|  
 |FormatString|否|成員的顯示名稱。|  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="alignment-element"></a>Alignment 元素  
  此簡單類型會定義用於區分成員的命名格式。  
   
-|ReplTest1|描述|  
+|Value|說明|  
 |-----------|-----------------|  
 |無|使用屬性名稱。|  
 |內容|使用內送關聯性名稱。|  
@@ -52,13 +54,13 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sortdirection-element"></a>SortDirection 元素  
  此簡單類型會定義用於區分成員的命名格式。  
   
-|ReplTest1|描述|  
+|Value|說明|  
 |-----------|-----------------|  
 |無|使用屬性名稱。|  
 |內容|使用內送關聯性名稱。|  
 |合併式|串連內送關聯性名稱和屬性名稱。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解表格式物件模型在相容性層級 1050年透過 1103](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

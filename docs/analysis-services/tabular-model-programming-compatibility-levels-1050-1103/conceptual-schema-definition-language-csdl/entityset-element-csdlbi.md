@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d4703c9e-5594-472e-a85b-0f5bd0d73d6f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4ae8366ecec5bf25e1fd27a63d22ac796c080660
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entityset-element-csdlbi"></a>EntitySet 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]EntitySet 元素會定義 CSDLBI 資料模型中實體的特定類型的集合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+EntitySet 元素會定義 CSDLBI 資料模型中特殊類型的實體集合。  
   
  EntitySet 必須指定資料模型中包含的每個實體類型。 有關這些模型實體的資訊是透過列出 Entity 元素類型的子實體來指定。 如需詳細資訊，請參閱 [EntityType 元素 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md)。  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 EntitySet 的元素和屬性。  
   
-|屬性名稱|是否必要|描述|  
+|屬性名稱|是否必要|說明|  
 |--------------------|-----------------|-----------------|  
 |Caption|否|使用者易記的實體集描述。|  
 |CollectionCaption|否|包含複數實體名稱的字串。|  
@@ -77,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 </EntitySet>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [CSDL 之 BI 註解的技術參考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Csdl 的 BI 註解的技術參考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

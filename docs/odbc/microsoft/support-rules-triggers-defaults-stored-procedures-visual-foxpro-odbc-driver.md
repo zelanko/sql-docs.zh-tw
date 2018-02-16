@@ -37,10 +37,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>規則、 觸發程序，預設值和預存程序 （Visual FoxPro ODBC 驅動程式） 支援
 您無法建立 Visual FoxPro 規則、 觸發程序、 預設值或使用 Visual FoxPro ODBC 驅動程式的預存程序。 不過，您的應用程式可能會與互動現有的規則、 觸發程序、 預設值或預存程序，因為它會將插入、 更新或刪除儲存在資料庫中的 Visual FoxPro 資料。  

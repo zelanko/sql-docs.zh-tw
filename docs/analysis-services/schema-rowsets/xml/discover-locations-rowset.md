@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 61f69caeab165c4d6822f8f25667ad544d6014ec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverlocations-rowset"></a>DISCOVER_LOCATIONS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回備份檔案的內容的相關資訊。 您必須擁有存取備份檔案位置的權限。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+傳回備份檔案的內容資訊。 您必須擁有存取備份檔案位置的權限。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_LOCATIONS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|描述|  
+|資料行名稱|類型指標|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|必要項，請參閱下文。|備份檔案的位置。|  
 |**LOCATION_PARTITION_OBJECTPATH**|**DBTYPE_WSTR**||相對於 data 資料夾的資料分割路徑。|  
@@ -56,12 +58,12 @@ ms.lasthandoff: 01/08/2018
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd92-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|位置|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

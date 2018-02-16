@@ -12,27 +12,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remote-processing-analysis-services"></a>遠端處理 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以執行排程或自動處理對遠端[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體，其處理要求來自一部電腦，但在相同網路上的另一部電腦上執行。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+您可以執行遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的排程處理或自動處理，其只會處理某電腦所發出的要求，但會在同一網路中的另一部電腦上執行。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   您的每部電腦上若各自執行不同版本的 SQL Server，則用戶端程式庫的版本與處理此模型之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的版本必須相符。
   
 -   遠端伺服器必須啟用 [允許遠端連線到此電腦]  ，而發出處理要求的帳戶必須列名為允許的使用者。  
   
--   Windows 防火牆規則必須設定為允許 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的傳入連線。 確認您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接遠端 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體。 請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+-   Windows 防火牆規則必須設定為允許 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的傳入連線。 確認您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接遠端 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體。 請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 -   解決現有的本機處理錯誤，然後再嘗試遠端處理。 確認當處理要求來自本機時，可以順利從外部關聯式資料來源擷取資料。 如需指定用來擷取資料之認證相關指示，請參閱[設定模擬選項 (SSAS - 多維度)](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。  
   
@@ -96,8 +97,8 @@ ms.lasthandoff: 01/08/2018
   
 2.  最後一個步驟是將作業修改成依照您所義的排程執行，並新增管理作業所需的警示或通知。 您也可能想要精簡處理指令碼，或在作業中建立多個步驟來單獨處理物件。  
   
-## <a name="see-also"></a>請參閱  
- [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+## <a name="see-also"></a>另請參閱  
+ [SQL Server Agent 元件](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [使用 SQL Server Agent 排程 SSAS 管理工作](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [批次處理 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

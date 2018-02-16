@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="subselects-in-queries"></a>查詢中的子選擇
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]子選擇運算式是 cube 的用來限制從正在評估外部 SELECT 空間的巢狀 SELECT 運算式。 子選擇可讓您定義評估所有計算的新空間。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+子選擇運算式是巢狀 SELECT 運算式，用於限制評估外部 SELECT 的 Cube 空間。 子選擇可讓您定義評估所有計算的新空間。  
   
 ## <a name="subselects-by-example"></a>子選擇範例  
  首先，我們先來看一個範例，了解子選擇如何協助產生所要的結果。 假設您受他人之託為多年來前 10 項暢銷產品的銷售行為產生資料表。  

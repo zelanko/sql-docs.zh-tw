@@ -18,19 +18,20 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 資料格屬性 FORMAT_STRING 內容
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**FORMAT_STRING**資料格屬性可格式化**值**資料格屬性，建立的值**FORMATTED_VALUE**資料格屬性。 **FORMAT_STRING** 資料格屬性能處理原始的字串及原始數值，對該值套用格式運算式，以傳回格式化的 **FORMATTED_VALUE** 資料格屬性值。 下列資料表詳述了用來處理字串和數值的語法和格式字元。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+**FORMAT_STRING** 資料格屬性可格式化 **VALUE** 資料格屬性，建立 **FORMATTED_VALUE** 資料格屬性的值。 **FORMAT_STRING** 資料格屬性能處理原始的字串及原始數值，對該值套用格式運算式，以傳回格式化的 **FORMATTED_VALUE** 資料格屬性值。 下列資料表詳述了用來處理字串和數值的語法和格式字元。  
   
 ## <a name="string-values"></a>字串值  
  字串的格式運算式可以有一個區段或以分號 (;) 分隔的兩個區段。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
  下列資料表中描述的字元可出現於字元字串的格式字串。  
   
-|字元|描述|  
+|字元|Description|  
 |---------------|-----------------|  
 |@|代表會顯示字元或空格的字元預留位置。 如果字串在格式字串中 @ 符號的位置會有一個字元，格式化字串就會顯示該字元。 否則，格式化字串就會在那個位置顯示一個空格。 預留位置是由右向左填入，除非格式字串中有一個驚嘆號 (!)。|  
 |&|代表會顯示字元或空格的字元預留位置。 如果字串在格式字串中 & 符號的位置會有一個字元，格式化字串就會顯示該字元。 否則，格式化字串就會顯示空格。 預留位置是由右向左填入，除非格式字串中有一個驚嘆號 (!)。|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
   
  下表會識別數值格式的格式字串中可出現的字元。  
   
-|字元|描述|  
+|字元|Description|  
 |---------------|-----------------|  
 |無|顯示沒有格式的數字。|  
 |**0**|代表會顯示數字或零 (0) 的數字預留位置。<br /><br /> 如果數值在格式字串中 0 出現的位置有一個數字，格式值便會顯示該數字。 否則，格式值就會在那個位置顯示一個零。<br /><br /> 如果該數值比格式字串中零的位數還少 (在小數點任何一邊)，格式值便會在開頭或尾端顯示零。<br /><br /> 如果該數值小數點右邊的位數比格式運算式小數點右邊零的位數還多，那麼格式值便會將數值四捨五入到與零相同的小數位數。<br /><br /> 如果該數值小數點左邊的位數比格式運算式小數點左邊零的位數還多，那麼格式值就會顯示未經修改的額外位數。|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="named-numeric-formats"></a>具名數值格式  
  下表會識別預先定義的數值格式名稱：  
   
-|格式名稱|描述|  
+|格式名稱|Description|  
 |-----------------|-----------------|  
 |`General Number`|顯示不含千位分隔符號的數字。|  
 |`Currency`|顯示具有千位分隔符號的數字 (適用的話)。 顯示小數點右側的兩位數。 輸出是以系統地區設定為基礎。|  
@@ -107,7 +108,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="date-values"></a>日期值  
  下列資料表列出了可以出現在日期/時間格式之格式字串的字元。  
   
-|字元|描述|  
+|字元|Description|  
 |---------------|-----------------|  
 |**:**|代表時間分隔符號，其會在格式化時間值的時候區隔時、分 和秒。<br /><br /> 在格式化輸出中實際做為時間分隔符號使用的字元，是由電腦的系統設定來決定。<br /><br /> 注意：在某些地區設定中，可能是使用其他字元做為時間分隔符號。|  
 |**/**|代表日期分隔符號，其會在格式化日期值的時候區隔年、月、日。<br /><br /> 在格式化輸出中實際做為日期分隔符號使用的字元，是由電腦的系統設定來決定。<br /><br /> 注意：在某些地區設定中，可能是使用其他字元來代表日期分隔符號。|  
@@ -144,7 +145,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="named-date-formats"></a>具名日期格式  
  下表會識別預先定義的日期與時間格式名稱：  
   
-|格式名稱|描述|  
+|格式名稱|Description|  
 |-----------------|-----------------|  
 |`General Date`|顯示日期及/或時間。 針對實數來顯示日期和時間，例如 4/3/93 05:34 PM。 如果沒有小數部分，則只會顯示日期，例如 4/3/93。 如果沒有整數部分，則只會顯示時間，例如 05:34 PM。 日期顯示的格式是由系統設定所決定。|  
 |`Long Date`|依據系統的完整日期格式來顯示日期。|  
@@ -154,10 +155,10 @@ ms.lasthandoff: 01/08/2018
 |`Medium Time`|使用時、分和 AM/PM 指示項的 12 小時格式來顯示時間。|  
 |`Short Time`|使用 24 小時格式來顯示時間，例如 17:45。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LANGUAGE 及 FORMAT_STRING FORMATTED_VALUE 上](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [使用資料格屬性 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [建立和使用屬性值 &#40;MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

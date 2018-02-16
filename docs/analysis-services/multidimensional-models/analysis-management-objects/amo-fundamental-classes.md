@@ -1,7 +1,7 @@
 ---
 title: "AMO 基礎類別 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - data sources [AMO]
 - AMO, database objects
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - AMO, data sources
 - Analysis Management Objects, data sources
 ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2549f0581c8f428e91014c64dc4e8cc90dbe373a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bd2d58e6791a7dd576523f3400264e538ac01307
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-fundamental-classes"></a>AMO 基礎類別
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]基礎類別是使用與 「 分析管理物件 」 (AMO) 的起始點。 透過這些類別，就可以為應用程式內將使用的其餘物件建立環境。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。  
+  基礎類別是使用分析管理物件 (AMO) 的起點。 透過這些類別，就可以為應用程式內將使用的其餘物件建立環境。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。  
   
  下圖顯示在本主題中說明的類別關聯性。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [DataSource 與 DataSourceView 物件](#DSandDSV)  
   
-##  <a name="ServerObjects"></a>伺服器物件  
+##  <a name="ServerObjects"></a> 伺服器物件  
  此外，您將可以存取下列方法：  
   
 -   連接管理：Connect、Disconnect、Reconnect 和 GetConnectionState。  
@@ -65,23 +66,23 @@ ms.lasthandoff: 01/08/2018
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Server>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-##  <a name="DatabaseObjects"></a>資料庫物件  
+##  <a name="DatabaseObjects"></a> 資料庫物件  
  若要在您的應用程式中使用 <xref:Microsoft.AnalysisServices.Database> 物件，您必須從父伺服器資料庫集合中取得資料庫的執行個體。 若要建立資料庫，可以將 <xref:Microsoft.AnalysisServices.Database> 物件加入伺服器資料庫集合，並將新執行個體更新到伺服器。 若要刪除資料庫，可以使用資料庫自己的 Drop 方法來卸除 <xref:Microsoft.AnalysisServices.Database> 物件。  
   
  透過使用 BackUp 方法 (從 <xref:Microsoft.AnalysisServices.Database> 物件或是從 <xref:Microsoft.AnalysisServices.Server> 物件)，可以備份資料庫；但是只能從 <xref:Microsoft.AnalysisServices.Server> 物件的 Restore 方法進行還原。  
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Database>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-##  <a name="DSandDSV"></a>DataSource 與 DataSourceView 物件  
+##  <a name="DSandDSV">DataSource 與 DataSourceView 物件</a>  
  透過從資料庫類別使用 <xref:Microsoft.AnalysisServices.DataSourceCollection> 來管理資料來源。 可以使用 <xref:Microsoft.AnalysisServices.DataSource> 物件的 Add 方法來建立 <xref:Microsoft.AnalysisServices.DataSourceCollection> 的執行個體。 可以使用 <xref:Microsoft.AnalysisServices.DataSource> 物件的 Remove 方法來刪除 <xref:Microsoft.AnalysisServices.DataSourceCollection> 的執行個體。  
   
  <xref:Microsoft.AnalysisServices.DataSourceView> 物件是從資料庫類別中的 <xref:Microsoft.AnalysisServices.DataSourceViewCollection> 物件來管理。  
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.DataSource>＞中的＜<xref:Microsoft.AnalysisServices.DataSourceView>＞與＜<xref:Microsoft.AnalysisServices>＞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [AMO 基礎物件的程式設計](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)  
+ [程式設計 AMO 基礎物件](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)  
   
   

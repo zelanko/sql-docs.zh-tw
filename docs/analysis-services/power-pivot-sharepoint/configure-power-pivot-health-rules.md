@@ -12,20 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>設定 PowerPivot 健全狀況規則
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]for SharePoint 包含的 SharePoint 健全狀況規則可幫助您監控及修復伺服器可用性與組態問題。 套用至 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 的健全狀況規則會出現在 [檢閱規則定義] 頁面中。  
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 包含的 SharePoint 健全狀況規則可幫助您監控及修復伺服器可用性與組態問題。 套用至 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 的健全狀況規則會出現在 [檢閱規則定義] 頁面中。  
   
  健全狀況規則可以早期偵測最終可能導致服務中斷的伺服器問題。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 提供數個規則來協助您在影響使用者之前，先識別並修正問題。 您可以自訂這些規則中的多個規則，以納入部署的唯一特性。 例如，如果您想要更多時間來處理磁碟空間的警告，可以將可用磁碟空間百分比從 5% 提高到 10%，讓您可以提前收到警告。  
   
@@ -49,7 +49,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [設定用於評估應用程式穩定性的健全狀況規則 (PowerPivot 服務應用程式)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
  您必須是服務應用程式管理員，才能變更 Analysis Services 執行個體與 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式的組態屬性。  
   
 ##  <a name="bkmk_view"></a> 檢視 PowerPivot 健全狀況規則  
@@ -134,7 +134,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 使用量資料並未以預期的頻率更新]。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定磁碟空間使用量 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [Power Pivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   

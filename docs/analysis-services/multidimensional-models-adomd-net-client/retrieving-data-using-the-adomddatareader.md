@@ -1,7 +1,7 @@
 ---
 title: "使用 AdomdDataReader 擷取資料 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - retrieving data
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66058488afc823095c2868b45d4156d723fb6ae6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3e536803b34715bdfc4beb87de40cda0380a589e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>使用 AdomdDataReader 擷取資料
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當擷取分析資料，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>物件可提供負擔與互動性的良好平衡。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件會從分析資料來源擷取唯讀、順向且扁平化的資料流。 這個未緩衝的資料流可讓程序邏輯有效且循序地處理來自分析資料來源的結果。 當擷取大量資料以供顯示之用時，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 是不錯的選擇，因為資料不會快取至記憶體。  
+  擷取分析資料時，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件可提供負擔與互動性的良好平衡。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件會從分析資料來源擷取唯讀、順向且扁平化的資料流。 這個未緩衝的資料流可讓程序邏輯有效且循序地處理來自分析資料來源的結果。 當擷取大量資料以供顯示之用時，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 是不錯的選擇，因為資料不會快取至記憶體。  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 也可以增加應用程式效能，方法是一旦資料變成可用時便擷取它，而不是等待傳回查詢的完整結果。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 也可降低系統負擔，因為依預設，這個讀取器在記憶體中一次只會儲存一個資料列。  
   
@@ -122,7 +123,7 @@ foreach (DataRow objRow in schemaTable.Rows)
 ## <a name="retrieving-multiple-result-sets"></a>擷取多個結果集  
  資料採礦支援巢狀資料表的概念，ADOMD.NET 會公開成巢狀資料列集。 若要擷取與每個資料列關聯的巢狀資料列集，可以呼叫 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDataReader%2A> 方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從分析資料來源擷取資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [使用資料格集擷取資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
  [使用 XmlReader 擷取資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  

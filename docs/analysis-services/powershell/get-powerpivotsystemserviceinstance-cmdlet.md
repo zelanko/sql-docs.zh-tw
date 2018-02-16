@@ -1,5 +1,5 @@
 ---
-title: "Get-powerpivotsystemserviceinstance 指令程式 |Microsoft 文件"
+title: Get-PowerPivotSystemServiceInstance cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 56027a8e-1949-4349-b616-68c8b1d2963c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5043f2f3966182853decdde119a6914f59e1c12d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="get-powerpivotsystemserviceinstance-cmdlet"></a>Get-PowerPivotSystemServiceInstance 指令程式
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]傳回的一或多個執行個體[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]伺服陣列中的應用程式伺服器上執行的系統服務。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+傳回在伺服器陣列中的應用程式伺服器上執行的一或多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務執行個體。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -37,12 +38,12 @@ ms.lasthandoff: 01/08/2018
 Get-PowerPivotSystemServiceInstance [-Identity <PowerPivotMidTierServiceInstancePipeBind>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  Get-PowerPivotSystemServiceInstance Cmdlet 會傳回在伺服器陣列中執行的一或多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務執行個體的屬性。 此指令程式會報告應用程式類型、狀態 (線上或離線) 和識別。 若要檢視特定執行個體的其他屬性，請將 Identity 參數和 format-list 選項加入至指令程式中。  
   
 ## <a name="parameters"></a>參數  
   
-### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>識別\<PowerPivotMidTierServiceInstancePipeBind >  
+### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identity \<PowerPivotMidTierServiceInstancePipeBind>  
  指定要取得的服務執行個體。 值必須是可在伺服器陣列中唯一識別物件的有效 GUID。  
   
 |||  
@@ -53,7 +54,7 @@ Get-PowerPivotSystemServiceInstance [-Identity <PowerPivotMidTierServiceInstance
 |接受管線輸入？|true|  
 |接受萬用字元？|false|  
   
-### <a name="commonparameters"></a>\<一般參數 >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  這個指令程式支援一般參數：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 如需詳細資訊，請參閱 [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>輸入和輸出  
