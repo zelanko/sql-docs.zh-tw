@@ -11,10 +11,10 @@ ms.prod_service: sql-non-specified
 ms.component: 
 ms.date: 02/03/2018
 ms.openlocfilehash: 827399587a8147c59caf6bf31bf8b10f10c83211
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新的與最近的更新： SQL Server on Linux 的文件
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/13/2018
 
 如果符合這些條件，而裝載主要複本的伺服器失敗，AG 會變成同步複本的擁有權。 同步複本的行為 (其中可以有三個的總計： 一個主要和兩個次要複本) 可以進一步控制`required_synchronized_secondaries_to_commit`。 這適用於 Windows 和 Linux 上 Ag，但設定完全不同。 On Linux，值會自動根據本身的 AG 資源上的叢集設定。
 
-**設定唯讀複本和仲裁**
+設定唯讀複本和仲裁
 
 
 新 SQL Server 2017 年 CU1 中也設定唯讀複本。 因為 Pacemaker 不同 WSFC，尤其是當談到仲裁和需要 STONITH，只要雙節點設定設定無法運作時 AG。 使用 fci，Pacemaker 所提供的仲裁機制可能沒問題，因為所有的 FCI 容錯移轉仲裁會發生在叢集的圖層。 AG，對於 Linux 底下的仲裁會進行中的所有中繼資料儲存所在的 SQL Server。 這是設定唯讀複本會發揮作用。
