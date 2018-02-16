@@ -18,19 +18,20 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>使用 SQL Server 擴充事件監視 Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]擴充事件 (*xEvents*) 是輕量型追蹤和效能監視會使用系統資源非常少的系統，以便診斷問題生產與測試伺服器上的理想工具。 它也具備高擴充性且可設定，而且在 SQL Server 2016 中，可以更輕鬆地透過新的內建工具支援來使用。 在 SQL Server Management Studio 中與 Analysis Services 執行個體的連接上，您可以設定、執行和監視即時追蹤，類似於使用 SQL Server Profiler。 增加更好的工具應該能夠讓 xEvents 更合理地成為 SQL Server Profiler 的取代項目，並且在診斷資料庫引擎和 Analysis Services 工作負載的問題方式中建立更多的對稱。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+擴充事件 (*xEvent*) 是輕量型追蹤和效能監視系統，其使用的系統資源非常少，因此可成為在生產與測試伺服器上用來診斷問題的理想工具。 它也具備高擴充性且可設定，而且在 SQL Server 2016 中，可以更輕鬆地透過新的內建工具支援來使用。 在 SQL Server Management Studio 中與 Analysis Services 執行個體的連接上，您可以設定、執行和監視即時追蹤，類似於使用 SQL Server Profiler。 增加更好的工具應該能夠讓 xEvents 更合理地成為 SQL Server Profiler 的取代項目，並且在診斷資料庫引擎和 Analysis Services 工作負載的問題方式中建立更多的對稱。  
   
  除了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，您也可以透過 XMLA 指令碼，使用舊方法來設定  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 擴充事件工作階段 (如同舊版本中所支援)。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  [設定] 是對話方塊中最右側的選項。  
   
- ![ssas xevents 設定](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas xevents 設定")  
+ ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
   
  在組態中，於 [事件欄位] 索引標籤上選取 [TextData]，如此一來，此欄位會出現在事件相鄰位置並顯示傳回值，其中包括在伺服器上執行的查詢。  
   
@@ -170,7 +171,7 @@ ms.lasthandoff: 01/08/2018
 |-|  
 |![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容](#bkmk_top)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
   

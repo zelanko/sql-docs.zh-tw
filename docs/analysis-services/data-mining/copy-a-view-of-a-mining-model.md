@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], clipboards
 - copying mining models to clipboard
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c1b439df2696fc44552d42680e1d4642e4728aa9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>複製採礦模型的檢視
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**採礦模型檢視器** 索引標籤中的資料採礦設計師的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]每種類型的採礦模型使用個別的檢視器。 有幾個檢視器含有一些元件，您可將其內容複製至剪貼簿，再將剪貼簿內容複製到文件或影像操作軟體。 下列元件可以使用此功能：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，資料採礦設計師的 [採礦模型檢視器] 索引標籤，對每一種類型的採礦模型都會使用個別的檢視器。 有幾個檢視器含有一些元件，您可將其內容複製至剪貼簿，再將剪貼簿內容複製到文件或影像操作軟體。 下列元件可以使用此功能：  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集檢視器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集檢視器中的群集圖表  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  再次以滑鼠右鍵按一下 [節點詳細資料] 窗格，然後選取 [複製]。  
   
-## <a name="see-also"></a>請參閱  
- [採礦模型檢視器工作和操作說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+## <a name="see-also"></a>另請參閱  
+ [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

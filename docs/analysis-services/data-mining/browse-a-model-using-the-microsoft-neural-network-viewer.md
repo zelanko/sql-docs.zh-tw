@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Neural Network Viewer [Analysis Services]
 - neural network model [Analysis Services]
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f7c8416b54fe5501dcae1e4a333ec7291e530576
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>使用 Microsoft 類神經網路檢視器瀏覽模型
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路檢視器中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]顯示採礦模型所建置的[!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立可分析多個輸入和輸出的分類和迴歸採礦模型，對於開放式分析和瀏覽十分有用。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)＞。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路檢視器，會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立可分析多個輸入和輸出的分類和迴歸採礦模型，對於開放式分析和瀏覽十分有用。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)＞。  
   
  在您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路檢視器瀏覽模型時，通常會選擇某個目標屬性和狀態，然後使用該檢視器來查看輸入屬性是如何影響結果。  
   
@@ -81,11 +82,11 @@ ms.lasthandoff: 01/08/2018
   
  [回到頁首](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>請參閱  
- [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+## <a name="see-also"></a>另請參閱  
+ [Microsoft 類神經網路演算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)   
+ [資料採礦工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

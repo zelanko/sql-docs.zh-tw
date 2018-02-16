@@ -17,19 +17,20 @@ helpviewer_keywords:
 - input column mapping [Analysis Services]
 - mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>選擇和對應模型測試資料
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]若要建立精確度圖表中的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您必須選擇將用來測試模型，並將資料對應至模型的資料。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立精確度圖表，您必須選擇將用來測試模型的資料，並將資料對應至模型。  
   
  根據預設，只要您在建立採礦結構時建立了鑑效組資料集， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會使用採礦模型測試資料。 建立鑑效組測試集是測試根據相同採礦結構之模型的最簡單方式，因為資料行名稱和資料類型永遠符合模型，並且您可以合理地確定資料分佈是相似的。 此外，設計工具將自動建立輸入和模型資料行之間的關聯性。  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的資料採礦設計師中，按兩下包含您想要建立圖表之模型的採礦結構。  
   
-2.  選取 **[採礦精確度圖表]** 索引標籤。  
+2.  選取 [採礦精確度圖表] 索引標籤。  
   
 3.  在 [採礦精確度圖表] 檢視的 [輸入選擇] 索引標籤中，選取下列其中一個選項：  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 01/08/2018
   
      新的資料行對應會顯示在 [指定資料行對應] 對話方塊中。 您可以選取資料行之間的線，然後按 DELETE 鍵來移除對應。 您可以在 [採礦結構] 資料表中選取資料行，並將它拖曳到 [選取輸入資料表] 資料表中的對應資料行，以建立新的連接。  
   
-## <a name="see-also"></a>請參閱  
- [測試及驗證工作與操作方法 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+## <a name="see-also"></a>另請參閱  
+ [測試和驗證工作及操作方式 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

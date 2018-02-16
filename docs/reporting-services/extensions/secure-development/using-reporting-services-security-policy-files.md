@@ -28,10 +28,10 @@ ms.author: maghan
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2a7354eba000f4982753d0253dd9dfbc70aa09bf
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全性原則檔
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會將元件安全性原則資訊儲存在安裝過程中複製到檔案系統的三個組態檔內。 這些組態檔可能會包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中程式碼組件之內部使用和使用者定義安全性原則的組合。 這三個組態檔會對應至 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的三個安全性實體元件：報表伺服器和 Windows 服務、報表管理員 Web 應用程式，以及報表設計師預覽視窗。  

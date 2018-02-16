@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e36a632-0750-4247-92b6-1fe38c7a4ce2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: da59f6eddb113c8af70e3ddcf3bcb3f35d6a6123
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-powerpivot-and-power-view---multi-tier-sharepoint-2016-farm"></a>部署 PowerPivot 和 Power View 的多層 SharePoint 2016 伺服器陣列
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**摘要：**摘要： 這份技術白皮書提供 SharePoint 系統管理員和架構設計人員的詳細逐步指示部署和設定 Microsoft BI 示範環境中多部伺服器的 SharePoint 伺服器陣列根據 SharePoint Server 2016、 Office Online Server 以及 SharePoint 2016 的 SQL Server 2016 BI 堆疊的 Preview 版本。 在簡單介紹重要架構變更和對應系統相依性之後，同時概述軟體和組態需求，以及建議的部署路徑來透過三個主要階段啟用和驗證 BI 功能。 這份技術白皮書也會討論 SharePoint Server 2016 Beta 2、Office Online Server Preview 和 SQL Server 2016 CTP 3.1 版本中的已知問題，以及建議適當的因應措施。 最終產品版本將不再需要這些因應措施。 部署 RTM 版本時，請檢查這份白皮書的更新版本。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  **摘要︰** 這份技術白皮書提供 SharePoint 系統管理員和架構設計人員有關下列作業的詳細逐步指示：在具有多部伺服器的 SharePoint 伺服器陣列中部署和設定 Microsoft BI 示範環境 (根據 SharePoint Server 2016 的預覽版本、Office Online Server 以及 SharePoint 2016 的 SQL Server 2016 BI 堆疊)。 在簡單介紹重要架構變更和對應系統相依性之後，同時概述軟體和組態需求，以及建議的部署路徑來透過三個主要階段啟用和驗證 BI 功能。 這份技術白皮書也會討論 SharePoint Server 2016 Beta 2、Office Online Server Preview 和 SQL Server 2016 CTP 3.1 版本中的已知問題，以及建議適當的因應措施。 最終產品版本將不再需要這些因應措施。 部署 RTM 版本時，請檢查這份白皮書的更新版本。  
   
  **作者：**Kay Unkroth, Jason Haak  
   

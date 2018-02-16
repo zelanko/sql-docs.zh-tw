@@ -15,19 +15,20 @@ helpviewer_keywords:
 - tables [Analysis Services], prediction queries
 - Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>為預測查詢選擇和對應輸入資料
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您從採礦模型建立預測時，通常您透過饋送新資料至模型。 (時間序列模型是例外，它只能根據歷程記錄資料進行預測)。若要提供新資料給模型，您必須確保資料是做為資料來源檢視的一部分提供。 如果您事先知道哪些資料要用於預測，可以將資料包含在用於建立模型的資料來源檢視中。 否則，您可能需要建立新的資料來源檢視。 如需詳細資訊，請參閱 [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)(多維度模型中的資料來源檢視)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+從採礦模型建立預測時，通常是透過饋送新資料至模型  (時間序列模型是例外，它只能根據歷程記錄資料進行預測)。若要提供新資料給模型，您必須確保資料是做為資料來源檢視的一部分提供。 如果您事先知道哪些資料要用於預測，可以將資料包含在用於建立模型的資料來源檢視中。 否則，您可能需要建立新的資料來源檢視。 如需詳細資訊，請參閱 [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)(多維度模型中的資料來源檢視)。  
   
  有時候，所需資料可能包含在一對多聯結中的多個資料表內。 當資料用於關聯模型或時序叢集模型，而其中所用的案例資料表連結至包含產品或交易詳細資料的巢狀資料表時，就是這種情況。 如果您的模型使用案例巢狀資料表結構，則用於預測的資料也必須具有案例巢狀資料表結構。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  在 [資料表/檢視名稱] 之下，選取包含您要用來測試模型之資料的資料表。  
   
-4.  按一下 [確定] 。  
+4.  按一下 **[確定]**。  
   
      採礦結構中的資料行，會自動對應到輸入資料表中之名稱相同的資料行。  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  從外部資料來源的可用資料行清單中，選取新的資料行。 選取清單中的空白項目來刪除資料行對應。  
   
-5.  按一下 [確定] 。  
+5.  按一下 **[確定]**。  
   
      新的資料行對應會在設計師中顯示。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  按一下 **[移除關聯性]**。  
   
-4.  按一下 [確定] 。  
+4.  按一下 **[確定]**。  
   
      即移除案例資料表和巢狀資料表之間的關聯性。  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 01/08/2018
   
      如果關聯性已經存在，採礦模型中的資料行就會自動對應到輸入資料表中的同名資料行。 您可以按一下 **[修改聯結]**，這會開啟 **[建立關聯性]** 對話方塊，在其中修改巢狀資料表和案例資料表之間的關聯性。  
   
-## <a name="see-also"></a>請參閱  
- [預測查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+## <a name="see-also"></a>另請參閱  
+ [預測查詢 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

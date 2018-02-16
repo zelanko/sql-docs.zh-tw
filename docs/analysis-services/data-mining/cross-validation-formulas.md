@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2d472fce002938f8305d0429937482181cee990d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cross-validation-formulas"></a>交叉驗證公式
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您產生交叉驗證報表時，它會包含每個模型，根據採礦模型 （也就是用來建立模型的演算法） 的類型、 可預測屬性和可預測屬性的資料類型的精確度量值值，如果有的話。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+當您產生交叉驗證報表時，報表會根據採礦模型類型包含每一個模型的精確度量值 (也就是之前用來建立模型的演算法)、可預測屬性的資料類型，以及可預測的屬性值 (如果有的話)。  
   
  本節列出交叉驗證報表中所使用的量值，並描述計算的方法。  
   
@@ -50,8 +51,8 @@ ms.lasthandoff: 01/08/2018
 |**均方根誤差**|離散屬性。 您可以指定目標值，但並非必要條件。|機率分數補數平方之平均數的平方根，除以資料分割中的案例數目，不包括目標屬性擁有遺漏值的資料列。|  
 |**均方根誤差**|離散屬性，沒有指定的目標。|機率分數補數平方之平均數的平方根，除以資料分割中的案例數目，不包括目標屬性擁有遺漏值的案例。|  
   
-## <a name="see-also"></a>請參閱  
- [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+## <a name="see-also"></a>另請參閱  
+ [測試和驗證 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   

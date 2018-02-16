@@ -16,19 +16,20 @@ helpviewer_keywords:
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d1975eb94bc8ad2d69808279a5358b7a40180866
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義邏輯關聯性 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料來源檢視精靈] 和 [資料來源檢視設計師會自動定義加入至資料來源檢視 (DSV) 基礎資料庫關聯性或名稱比對您指定的準則為基礎的資料表之間的關聯性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[資料來源檢視精靈] 和資料來源檢視設計工具會根據基礎資料庫關聯性，或是根據您所指定的名稱比對準則，自動定義加入到資料來源檢視 (DSV) 之資料表之間的關聯性。  
   
  在使用多個資料來源之資料的情況下，您可能需要在 DSV 中手動定義邏輯關聯性，以補充那些自動定義的關聯性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要關聯性來識別事實資料表和維度資料表、建構查詢以從基礎資料來源擷取資料和中繼資料，以及利用進階的商業智慧功能。  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_addRel"></a> 在資料表、具名查詢或檢視表之間加入關聯性  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟含有您想在其中加入邏輯關聯性之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟含有您想在其中加入邏輯關聯性之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
 2.  在方案總管中，展開 [資料來源檢視] 資料夾，然後按兩下資料來源檢視在 [資料來源檢視設計工具] 中開啟檢視。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  以滑鼠右鍵按一下您要修改的關聯性，然後按一下 [編輯關聯性]。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

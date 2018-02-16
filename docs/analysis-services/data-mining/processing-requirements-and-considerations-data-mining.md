@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f55e2d47bcc8228111b35f86ec620a6623b68cad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>處理需求和考量 (資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述處理資料採礦物件時，請記住一些技術考量。 如需什麼是處理以及如何將處理套用至資料採礦的一般說明，請參閱 [處理資料採礦物件](../../analysis-services/data-mining/processing-data-mining-objects.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+此主題描述在處理資料採礦物件時要記住的一些技術考量。 如需什麼是處理以及如何將處理套用至資料採礦的一般說明，請參閱 [處理資料採礦物件](../../analysis-services/data-mining/processing-data-mining-objects.md)。  
   
  [查詢關聯式存放區](#bkmk_QueryReqs)  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  如需詳細資訊，請參閱 [處理採礦結構](../../analysis-services/data-mining/process-a-mining-structure.md)。  
   
- 如果您希望節省硬碟空間，請注意 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在本機保留採礦結構快取。 亦即，它會將所有培訓資料寫出至本機硬碟。 如果不要快取資料，您可以設定採礦結構的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性，將預設值變更為 **ClearAfterProcessing**。 這會在處理模型之後終結快取，但是，它也會在採礦結構上停用鑽研。 如需詳細資訊，請參閱 [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 如果您希望節省硬碟空間，請注意 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在本機保留採礦結構快取。 亦即，它會將所有培訓資料寫出至本機硬碟。 如果不要快取資料，您可以設定採礦結構的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性，將預設值變更為 **ClearAfterProcessing**。 這會在處理模型之後終結快取，但是，它也會在採礦結構上停用鑽研。 如需詳細資訊，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
  同時，如果您清除快取，將無法使用鑑效組測試集；如果已經定義一個鑑效組測試集，將會遺失該測試集資料分割的定義。 如需鑑效組測試集的詳細資訊，請參閱 [定型和測試資料集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
@@ -92,9 +93,9 @@ ms.lasthandoff: 01/08/2018
   
  如需詳細資訊，請參閱 [匯出和匯入資料採礦物件](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)。  
   
-## <a name="see-also"></a>請參閱  
- [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另請參閱  
+ [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

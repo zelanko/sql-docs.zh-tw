@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 89a8d2a3edf4cf3d875f582918d714c2e6dc72e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="prediction-queries-data-mining"></a>預測查詢 (資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]一般資料採礦專案的目標是使用採礦模型進行預測。 例如，您可以預測特定伺服器叢集的預期停機時間，或產生分數以指出特定客戶是否可能回應廣告宣傳活動。 若要執行所有這些作業，您需要建立預測查詢。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+典型資料採礦專案的目標是要使用採礦模型來進行預測。 例如，您可以預測特定伺服器叢集的預期停機時間，或產生分數以指出特定客戶是否可能回應廣告宣傳活動。 若要執行所有這些作業，您需要建立預測查詢。  
   
  就功能而言，SQL Server 中支援不同類型的預測查詢 (視查詢的輸入類型而定)：  
   
@@ -153,8 +154,8 @@ FROM
   
  如果提供者無法處理階層式資料列集，則您可以在預測查詢中使用 FLATTEN 關鍵字將結果扁平化。 如需包括扁平化資料列集範例的詳細資訊，請參閱 [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)。  
   
-## <a name="see-also"></a>請參閱  
- [內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [資料定義查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+## <a name="see-also"></a>另請參閱  
+ [內容查詢 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [資料定義查詢 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

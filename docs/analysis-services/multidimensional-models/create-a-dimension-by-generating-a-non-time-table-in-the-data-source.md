@@ -17,19 +17,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], creating without data source
 - standard dimensions [Analysis Services]
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>在資料來源中產生非時間資料表來建立維度
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以使用 「 維度精靈 」，在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不使用現有的資料來源建立維度。 方法是，選取精靈之 [選取建立方法] 頁面的 [在資料來源中產生非時間資料表] 選項。 若要在基礎資料來源中建立新的維度資料表，您必須擁有在基礎資料來源中建立物件的權限。 在沒有預先定義之資料來源檢視的情況下定義維度時，可以從頭開始定義維度或使用維度範本。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [維度精靈] 建立維度，而不需使用現有的資料來源。 方法是，選取精靈之 [選取建立方法] 頁面的 [在資料來源中產生非時間資料表] 選項。 若要在基礎資料來源中建立新的維度資料表，您必須擁有在基礎資料來源中建立物件的權限。 在沒有預先定義之資料來源檢視的情況下定義維度時，可以從頭開始定義維度或使用維度範本。  
   
  「維度精靈」提供了一些維度範本範例，讓您可以建立常見的維度類型。 您可以從以下維度類型中選擇：  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 -   客戶  
   
--   date  
+-   日期  
   
 -   部門  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
  當您選取 [這是變更維度] 核取方塊時，[維度精靈] 會定義下表中指出的屬性：  
   
-|attribute|類型|  
+|Attribute|型別|  
 |---------------|----------|  
 |SCD OriginalID|SCDOriginalID|  
 |SCD 結束日期|SCDEndDate|  
@@ -109,8 +110,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="completing-the-dimension-wizard"></a>完成維度精靈  
  在 [正在完成精靈] 頁面上，輸入新維度的名稱，然後檢視維度結構。 選取 [立即產生結構描述] 核取方塊，在您按一下 [完成] 後即可啟動 [結構描述產生精靈]。 在大多數情況下，如果您計畫建立其他物件，則不應選取此核取方塊。 如果您並未選取此核取方塊，也可在稍後使用維度設計師來產生結構描述。  
   
-## <a name="see-also"></a>請參閱  
- [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+## <a name="see-also"></a>另請參閱  
+ [產生時間資料表來建立時間維度](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [產生時間資料表來建立時間維度](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   
   

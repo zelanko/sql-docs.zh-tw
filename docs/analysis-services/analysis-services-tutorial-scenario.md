@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 85890ac9d5264bdce01f5bf10a0060532da00646
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教學課程案例
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]本教學課程根據[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，一家虛構公司。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司，專門生產及批發金屬和合成器材自行車給北美、歐洲和亞洲的商場。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的總公司在華盛頓 Bothell，該公司雇用 500 位員工。 另外， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 它的市場還雇用了一些地區銷售團隊。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+這個教學課程是以一家虛構的公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]為基礎。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型多語系製造公司，製造及批發金屬和合成器材自行車給北美、歐洲和亞洲的商場。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的總公司在華盛頓 Bothell，該公司雇用 500 位員工。 另外， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 它的市場還雇用了一些地區銷售團隊。  
   
 在最近幾年， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 購買了一間墨西哥的小型製造工廠 Importadores Neptuno。 Importadores Neptuno 為 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 產品線製造幾項重要的子零件。 這些子零件運送到 Bothell 地點進行最後產品組裝。 在 2005 年，Importadores Neptuno 成為自行車產品類的唯一製造商和批發商。  
   
@@ -69,8 +71,8 @@ ms.lasthandoff: 01/08/2018
   
 Analysis Services 教學課程中的課程提供建立符合這些所有目標之 Cube 資料庫的指導方針。 若要開始使用，請繼續進行第一課： [第 1 課：建立新的表格式模型專案](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)。  
   
-## <a name="see-also"></a>請參閱  
-[多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+## <a name="see-also"></a>另請參閱  
+[多維度模型化 &#40;Adventure Works 教學課程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

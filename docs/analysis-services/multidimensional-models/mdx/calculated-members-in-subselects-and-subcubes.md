@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]導出的成員是維度成員，其值計算的運算式在執行階段，並可在子選擇和 subcube 中的以更精確地定義查詢的 cubespace。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+導出成員是值在執行階段從運算式計算而來的維度成員，它能用在子選擇和 Subcube 中以更精確地定義查詢的 Cubespace。  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>啟用子空間中的導出成員  
  **子查詢**中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROPMSMDSUBQUERIES**屬性[支援 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)定義的行為或允許使用導出的成員或導出的集合在子選擇或 subcube。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
@@ -33,9 +34,9 @@ ms.lasthandoff: 01/08/2018
   
 |||  
 |-|-|  
-|ReplTest1|描述|  
+|Value|설명|  
 |0|子選擇或 Subcube 中不允許使用導出成員。<br /><br /> 評估子選擇或 Subcube 時，如果參考導出成員就會引發錯誤。|  
-|@shouldalert|子選擇或 Subcube 中允許使用導出成員，但是在傳回的子空間中未導入上階成員。|  
+|1|子選擇或 Subcube 中允許使用導出成員，但是在傳回的子空間中未導入上階成員。|  
 |2|子選擇或 Subcube 中允許使用導出成員，而且在傳回的子空間中導入上階成員。 此外，在選取導出成員時允許使用混合資料粒度。|  
   
  如果在 SubQueries 屬性中使用值 1 或 2，即可允許導出成員用來篩選子選擇的傳回子空間。  
@@ -128,7 +129,7 @@ Where [Measures].[Reseller Sales Amount]
 ### <a name="remarks"></a>備註  
  子選擇或 Subcube 運算式中只允許使用全域或工作階段導出成員。 如果 MDX 運算式中擁有查詢導出成員，在評估子選擇或 Subcube 運算式時就會引發錯誤。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [在查詢中的子選擇](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
  [支援的 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  

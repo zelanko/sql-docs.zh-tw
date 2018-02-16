@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 31ac0cffe6656c5d644b5424b56f150572dc9af6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>從模型檢視器使用鑽研
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]根據模型類型，您可以使用從瀏覽檢視器鑽研上**採礦模型檢視器**資料採礦設計師來瀏覽採礦模型中使用的案例，或查看採礦結構中的其他資料行的索引標籤。 雖然因為模型中的模式無法直接連結到特定案例，導致許多模型類型不支援鑽研，但下列模型類型支援鑽研。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+根據模型類型，您可以從資料採礦設計師的 [採礦模型檢視器] 索引標籤上的瀏覽檢視器中使用鑽研，以瀏覽採礦模型中使用的案例或查看採礦結構中的其他資料行。 雖然因為模型中的模式無法直接連結到特定案例，導致許多模型類型不支援鑽研，但下列模型類型支援鑽研。  
   
  請注意，模型上必須已啟用鑽研，而且您必須擁有適當的權限。 無論模型是否以前已處理並具有內容，如果模型處於未處理狀態，鑽研選項也可能會停用。 若要透過使用鑽研擷取模型案例資料，結構和模型的快取必須是最新狀態。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  以滑鼠右鍵按一下結果中的任何位置，然後選取 [全部複製]，將結果儲存至剪貼簿。 如果模型包含巢狀資料表資料行，只會貼上巢狀資料表資料行的名稱；若要擷取每個案例的巢狀資料表資料行內的資料值，您必須對模型內容建立查詢。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [採礦模型的鑽研](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
  [採礦結構的鑽研](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  

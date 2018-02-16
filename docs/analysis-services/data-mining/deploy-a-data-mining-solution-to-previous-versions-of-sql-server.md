@@ -20,19 +20,20 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 - deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f082d488439f1331c009352bc7d691b7703f0e32
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>將資料採礦方案部署到舊版的 SQL Server
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本章節描述當您嘗試將資料採礦模型或資料採礦結構中的執行個體所建立的部署時可能遇到的已知的相容性問題[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]來使用 SQL Server 2005 Analysis Services 的資料庫，或當您部署建立 SQL Server 2005 中的執行個體的模型[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本章節描述當您嘗試將 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 執行個體內建立的資料採礦模型或資料採礦結構部署到使用 SQL Server 2005 Analysis Services 的資料庫，或是當您將 SQL Server 2005 中建立的模型部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體時，可能發生的相容性問題。  
   
  不支援部署到 SQL Server 2000 Analysis Services 的執行個體。  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 01/08/2018
   
  如果您嘗試同步處理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫，伺服器會傳回錯誤，而且資料庫同步處理會失敗。  
   
-## <a name="see-also"></a>請參閱  
- [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
+## <a name="see-also"></a>另請參閱  
+ [Analysis Services 回溯相容性](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

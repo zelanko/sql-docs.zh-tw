@@ -15,19 +15,20 @@ helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 910a1fc1ddcd7eee478c5a16ed1243801e482203
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>處理的工具和方式 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]處理是 Analysis Services 查詢關聯式資料來源和擴展 Analysis Services 物件使用該資料的作業。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+處理是 Analysis Services 查詢關聯式資料來源，然後使用該資料來擴展 Analysis Services 物件的作業。  
   
  身為 Analysis Services 系統管理員的您，可以使用這些方法執行及監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的處理：  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  或者，按一下 **[變更設定]** 來修改處理順序、相對於特定類型錯誤的處理行為，以及其他設定。  
   
-6.  按一下 [確定] 。  
+6.  按一下 **[確定]**。  
   
      [處理進度] 對話方塊會提供每個命令的進行中狀態。 如果狀態訊息遭到截斷，您可以按一下 **[檢視詳細資料]** 來讀取完整訊息。  
   
@@ -162,7 +163,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  編輯工作，以指定資料庫連接、要處理的物件和處理選項。 如需有關如何實作這項工作的詳細資訊，請參閱＜ [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)＞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>設定磁碟空間使用量 (PowerPivot for SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署會使用主機電腦的磁碟空間來快取[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]重新載入更快速的資料庫。 在記憶體中載入的每個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫都會先快取至磁碟中，因此稍後可以快速重新載入該資料庫來服務新的要求。 依預設， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用所有可用磁碟空間來快取其資料庫，但是您可以藉由設定限制磁碟空間使用量的屬性來修改這個行為。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署會使用主機電腦的磁碟空間來快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫，讓重新載入更快速。 在記憶體中載入的每個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫都會先快取至磁碟中，因此稍後可以快速重新載入該資料庫來服務新的要求。 依預設， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用所有可用磁碟空間來快取其資料庫，但是您可以藉由設定限制磁碟空間使用量的屬性來修改這個行為。  
   
  本主題說明如何設定磁碟空間使用量的限制。  
   
@@ -96,10 +97,10 @@ ms.lasthandoff: 01/08/2018
   
 5.  按一下 **[確定]** 儲存您的變更。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝提供健全狀況規則，讓您可以在伺服器健全狀況、組態或可用性中偵測到問題時，採取更正動作。 這些規則中，有部分規則使用組態設定來決定觸發健全狀況規則的條件。 如果您積極地調整伺服器效能，可能也會想要檢閱這些設定，以確保預設值是對您系統最好的選擇。 如需詳細資訊，請參閱 [設定 Power Pivot 健全狀況規則](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理中心的 Power Pivot 伺服器管理和設定](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

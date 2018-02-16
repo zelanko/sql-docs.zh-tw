@@ -18,10 +18,10 @@ ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: fca144fd34a3b0e506ab19daba46c16b3760a0e8
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>選擇用於分析及報告的 Microsoft 商業智慧 (BI) 工具
 選擇適當的商業智慧工具可能勢在必行。 了解不同的 Microsoft 產品，並找出最適合您需求的一種。

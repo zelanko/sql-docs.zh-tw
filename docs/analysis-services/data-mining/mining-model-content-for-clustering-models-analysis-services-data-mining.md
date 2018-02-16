@@ -17,19 +17,20 @@ helpviewer_keywords:
 - mining model content, clustering models
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4f00b10d96682d72fde39277ceeeabb866d460e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>叢集模型的採礦模型內容 (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述使用 Microsoft 群集演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主題說明使用 Microsoft 叢集演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>了解叢集模型的結構  
  叢集模型有簡單的結構。 每個模型都擁有代表模型及其中繼資料的單一父節點，而每個父節點則擁有群集的一般清單 (NODE_TYPE = 5)。 下列影像顯示這個組織。  
@@ -43,11 +44,11 @@ ms.lasthandoff: 01/08/2018
   
  父節點包含有用的統計資料，可描述所有培訓案例的實際散發。 這些統計資料可在巢狀資料表資料行 NODE_DISTRIBUTION 中找到。 例如，下表顯示 NODE_DISTRIBUTION 資料表的數個資料列，描述叢集模型 `TM_Clustering`(您在 [資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中建立) 的客戶人口統計分佈：  
   
-|ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
-|Age|Missing|0|0|0|1 (遺漏)|  
-|Age|44.9016152716593|12939|@shouldalert|125.663453102554|3 (連續)|  
-|Gender|Missing|0|0|0|1 (遺漏)|  
+|Age|遺漏|0|0|0|1 (遺漏)|  
+|Age|44.9016152716593|12939|1|125.663453102554|3 (連續)|  
+|Gender|遺漏|0|0|0|1 (遺漏)|  
 |Gender|F|6350|0.490764355823479|0|4 (離散)|  
 |Gender|M|6589|0.509235644176521|0|4 (離散)|  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  變異數代表叢集的總變異數。 當變異數的值很小時，代表資料行中大多數的值都相當接近平均值。 若要取得標準差，請計算變異數的平方根。  
   
- 請注意，每個屬性都有一個 **遺漏** 值類型，告訴您該屬性有多少沒有資料的案例。 遺漏的資料可能很多，而且視資料類型而會對計算造成不同的影響。 如需詳細資訊，請參閱 [遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)預先定義的模型旗標外，協力廠商外掛程式也可能擁有其他的模型旗標。  
+ 請注意，每個屬性都有一個 **遺漏** 值類型，告訴您該屬性有多少沒有資料的案例。 遺漏的資料可能很多，而且視資料類型而會對計算造成不同的影響。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
 ## <a name="model-content-for-a-clustering-model"></a>叢集模型的模型內容  
  本章節僅針對採礦模型內容中與叢集模型相關的資料行，提供詳細資料和範例。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
  NODE_TYPE  
  叢集模型會輸出下列節點類型：  
   
-|節點識別碼和名稱|描述|  
+|節點識別碼和名稱|Description|  
 |----------------------|-----------------|  
 |1 (模型)|模型的根節點。|  
 |5 (群集)|包含群集中的案例計數、群集中的案例特性以及描述群集值的統計資料。|  
@@ -164,8 +165,8 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  不論您使用的叢集方法或參數為何，模型的結構和內容都會保持相同。  
   
-## <a name="see-also"></a>請參閱  
- [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另請參閱  
+ [採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Microsoft 群集演算法](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)  
