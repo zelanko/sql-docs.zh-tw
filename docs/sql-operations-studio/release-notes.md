@@ -2,7 +2,7 @@
 title: "Microsoft SQL 作業 Studio （預覽） 版本資訊 |Microsoft 文件"
 description: "Microsoft SQL 作業 Studio （預覽） 版本資訊"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,15 +14,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eded99dffd8029431a127e6cbf4b125ab5e0ac97
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 作業 Studio （預覽） 版本資訊
 
-**[下載年 1 月公開預覽](download.md)**
+**[下載年 2 月公開預覽](download.md)**
+
+## <a name="february-2018-february-public-preview"></a>2 月版 2018 （年 2 月公開預覽）
+
+發行日期： 2018 年 2 月 15，  
+版本： 0.26.7
+
+*年 2 月公用預覽*含有一些功能建議和高優先順序的 bug 修正。 此版本包含下列增強功能：
+
+- 簡介安裝自動更新，這樣會提供通知可用於下載新版本時 
+- 連接對話方塊 'Database' 欄位現在是以動態方式填入的下拉式清單將包含從指定的伺服器填入資料庫清單。
+- 修正[發出 6](https://github.com/Microsoft/sqlopsstudio/issues/6)： 使連接與選取的資料庫開啟新查詢索引標籤。
+- 修正[發出 22](https://github.com/Microsoft/sqlopsstudio/issues/22): ' Server Name' 和資料庫名稱-可以這些是下拉式清單而不是文字方塊？
+- 修正[發出 549](https://github.com/Microsoft/sqlopsstudio/issues/549)： 無訊息/非常無訊息安裝會導致在安裝之後開啟應用程式。
+- 修正[發出 481](https://github.com/Microsoft/sqlopsstudio/issues/481)： 加入 「 檢查更新 」 選項。
+- SQL 編輯器顏色標示和自動完成修正：
+   - 修正[發出 584](https://github.com/Microsoft/sqlopsstudio/issues/584): 「 完整 」 不反白顯示的 intellisense 的關鍵字。
+   - 修正[發出 345](https://github.com/Microsoft/sqlopsstudio/issues/345)： 以色彩標示 SQL 函式，在編輯器中的。
+   - 修正[發出 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] 最新"]"將會顯示綠色。
+   - 修正[發出 225](https://github.com/Microsoft/sqlopsstudio/issues/225)： 關鍵字色彩不相符。
+   - 修正[發出 60](https://github.com/Microsoft/sqlopsstudio/issues/60)： 無效的 sql 語法色彩反白顯示時使用 from 子句中的暫存資料表。
+- 導入連線擴充性 API。
+- VS 程式碼編輯器 1.19 整合。
+- 更新拾取幾項查詢計劃檢視器改良 JustinPealing/html-查詢計劃元件。
+
 
 ## <a name="january-2018-january-public-preview"></a>年 1 月 2018 （年 1 月公開預覽）
 

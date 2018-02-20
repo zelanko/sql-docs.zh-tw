@@ -1,7 +1,7 @@
 ---
 title: "機器學習伺服器獨立或 R Server 獨立安裝 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 02/14/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 275bda79d9c8cb74d871a4d13612847dc58592e8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2ecb60bd02b3fc1ee7ac7101749fa7affc2523bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>安裝機器學習伺服器 （獨立） 或 R 伺服器 （獨立）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺
 + [升級現有的 Microsoft R Server 執行個體](#bkmk_upgrade)
 + [協助我決定要安裝的項目](#bkmk_tips)
 
-##  <a name="bkmk_installMLServer"></a>安裝機器學習服務伺服器 （獨立）
+##  <a name="bkmk_installMLServer"></a> 安裝機器學習服務伺服器 （獨立）
 
 這項功能需要的企業授權或對等**SQL Server 2017**。
 
@@ -114,7 +114,7 @@ SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺
     
 5.  在 [準備安裝]  頁面上，確認您的選項並按一下 [安裝] 。
 
-## <a name="bkmk_upgrade"></a>升級現有的 R 伺服器執行個體
+## <a name="bkmk_upgrade"></a> 升級現有的 R 伺服器執行個體
 
 如果您已安裝舊版的 Microsoft R Server （獨立），您可以升級使用較新版的 R 元件執行個體。 升級也會變更為使用現代軟體生命週期支援原則的支援原則。 這可讓更新更頻繁地在不同的排程上比 SQL Server 版本的執行個體。
 
@@ -125,7 +125,7 @@ SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺
 
 2. 執行安裝程式並遵循指示進行。 在您用來選取要安裝的功能頁面上，選取您想要升級的 R 伺服器的每個執行個體。
 
-## <a name ="bkmk_tips"></a>安裝的提示與後續工作
+## <a name ="bkmk_tips"></a> 安裝的提示與後續工作
 
 本節提供與設定相關的其他資訊。
 
@@ -151,11 +151,12 @@ SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺
 |----|----|----|
 |R Server (Standalone) |SQL Server 2016 安裝程式精靈|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (Standalone) |Windows 的獨立安裝程式|`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|Machine Learning 伺服器 (獨立式) |  SQL Server 2017 安裝精靈 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning 伺服器 (獨立式) |  SQL Server 2017 安裝精靈中，與 R 語言選項 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning 伺服器 (獨立式) |  SQL Server 2017 安裝精靈中，使用 Python 語言選項 |`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Machine Learning 伺服器 (獨立式) |  Windows 的獨立安裝程式 |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services (資料庫內) |SQL Server 2016 安裝程式精靈|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Machine Learning 服務 (資料庫內) |SQL Server 2017 安裝精靈|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`或`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-
+|Machine Learning 服務 (資料庫內) |SQL Server 2017 安裝精靈中，與 R 語言選項|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  |
+|Machine Learning 服務 (資料庫內) |SQL Server 2017 安裝精靈中，使用 Python 語言選項| `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 ### <a name="development-tools"></a>開發工具
 
 開發 IDE 不會安裝成在安裝程序。 不需要額外的工具，包含所有的標準工具時，就會提供與 R 或 Python 的分佈。
@@ -182,7 +183,7 @@ SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺
 
 如果您遇到此問題，您可以將套用所述的修正[KB3164398](https://support.microsoft.com/kb/3164398)將 R 功能新增至 Windows Server Core 上的現有執行個體。   如需詳細資訊，請參閱 [無法在 Windows Server Core 作業系統上安裝 Microsoft R 伺服器 (獨立式)](https://support.microsoft.com/kb/3168691)。
 
-###  <a name="bkmk_Uninstall"></a>從較舊版本的 Microsoft R Server 升級
+###  <a name="bkmk_Uninstall"></a> 從較舊版本的 Microsoft R Server 升級
 
 如已安裝 Microsoft R Server 發行前版本，您必須先解除安裝它，才能升級至較新版本。
 

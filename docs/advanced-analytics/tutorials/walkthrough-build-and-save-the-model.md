@@ -20,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>建立 R 模型，並儲存至 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,9 +51,7 @@ ms.lasthandoff: 02/11/2018
 
      *結果*
 
-     *羅吉斯迴歸結果： 傾斜 ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*資料： featureDataSource （RxSqlServerData 資料來源）*
+     *羅吉斯迴歸結果： 傾斜 ~ passenger_count + trip_distance + trip_time_in_secs +* direct_distance *   <br/>*資料： featureDataSource （RxSqlServerData 資料來源）*
      <br/>*Dependent variable(s)： 傾斜*
      <br/>*總計的獨立變數： 5*
      <br/>*有效的觀察值的數目： 17068*
@@ -210,7 +208,7 @@ ms.lasthandoff: 02/11/2018
     只需要 INSERT 陳述式，就可以將模型儲存至資料表。 但是，所以更容易，這類包裝在預存程序中，當_PersistModel_。
 
     > [!NOTE]
-    > 如果您收到錯誤，例如"的 EXECUTE 權限遭拒的物件 PersistModel 」，請確定您的登入具有權限。 您可以執行這樣的 T-SQL 陳述式來授與的明確權限只預存程序：`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > 如果您收到錯誤，例如"的 EXECUTE 權限遭拒的物件 PersistModel 」，請確定您的登入具有權限。 您可以執行這樣的 T-SQL 陳述式來授與的明確權限只預存程序： `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. 建立模型，並儲存在資料庫中，您可以直接從呼叫之後[!INCLUDE[tsql](../../includes/tsql-md.md)]程式碼，使用系統預存程序， [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 

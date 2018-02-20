@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>自動的安裝的機器學習服務 （資料庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,9 +49,9 @@ ms.lasthandoff: 02/11/2018
 
 > [!IMPORTANT]
 > 
-> 若要啟用此功能安裝完成之後，不需要額外的步驟。 這些包括重新設定，然後重新啟動執行個體。 確定，檢閱 [後續安裝步驟] 上一節中的所有項目 (#bkmk_PostInstall)，以判斷動作需要在安裝完成後。
+> 若要啟用此功能安裝完成之後，不需要額外的步驟。 這些包括重新設定，然後重新啟動執行個體。 請務必檢閱上一節中的所有項目[後續安裝步驟](#bkmk_PostInstall)以判斷安裝完成之後，需要的動作。
 
-## <a name="bkmk_NewInstall"></a>命令列安裝的 SQL Server 2017
+## <a name="bkmk_NewInstall"></a>  命令列安裝的 SQL Server 2017
 
 下列範例中包含**最小**必要的功能。
 
@@ -97,7 +97,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MPY
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>SQL Server 2016 命令列安裝
+## <a name="OldInstall"></a> SQL Server 2016 命令列安裝
  
 下列範例示範加入之 R 語言安裝的 SQL Server 2016 的執行無訊息方式，自動安裝所需的引數。
 

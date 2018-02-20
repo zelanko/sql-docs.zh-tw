@@ -2,7 +2,7 @@
 title: "下載並安裝 Microsoft SQL 作業 Studio （預覽） |Microsoft 文件"
 description: "下載和安裝 Microsoft SQL 作業 Studio （預覽） for Windows、 macOS 或 Linux"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8828b5f94c5500aa7ef3bffd48556e599e41124
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: dda75f01b68816c971d31354f08686381597271f
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>下載並安裝 SQL 作業 Studio （預覽）
 
-[!INCLUDE[name-sos](../includes/name-sos.md)]在 Windows、 macOS 和 Linux 上執行。
+[!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
-下載並安裝最新版本中，*年 1 月公用預覽*:
+下載並安裝最新版本中，*年 2 月公用預覽*:
 
-|平台|下載|發行日期|
-|:---|:---|:---|
-|視窗|[安裝程式](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|2018 年 1 月 17 日 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|2018 年 1 月 17 日 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|2018 年 1 月 17 日|
+|平台|下載|發行日期| 版本 |
+|:---|:---|:---|:---|
+|視窗|[安裝程式](https://go.microsoft.com/fwlink/?linkid=867998)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=867997)|2018 年 2 月 15 日 |0.26.7|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=867999)|2018 年 2 月 15 日 |0.26.7|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=868002)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=868001)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=868000)|2018 年 2 月 15 日|0.26.7|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
@@ -40,27 +40,27 @@ ms.lasthandoff: 01/19/2018
 
 **安裝程式**
 
-1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=866480)。
+1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=867998)。
 1. 啟動[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]應用程式。
 
 
 **.zip 檔案**
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=866479)。
+1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=867997)。
 2. 瀏覽至下載的檔案，並將它解壓縮。
 3. 執行 `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>取得 macOS SQL 作業 Studio （預覽）
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]如 macOS](https://go.microsoft.com/fwlink/?linkid=866481)。
+1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]如 macOS](https://go.microsoft.com/fwlink/?linkid=867999)。
 2. 若要展開的 zip 內容，請按兩下它。
 3. 讓[!INCLUDE[name-sos](../includes/name-sos-short.md)]用於*啟動控制板*，拖曳*sqlops.app*至*應用程式*資料夾。
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>取得 SQL 作業 Studio （預覽） for Linux
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux](https://go.microsoft.com/fwlink/?linkid=866482)。
+1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux](https://go.microsoft.com/fwlink/?linkid=868000)。
 1. 擷取檔案和啟動[!INCLUDE[name-sos](../includes/name-sos-short.md)]，開啟新的終端機視窗，然後輸入下列命令：
 
    ```bash
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/19/2018
 
 ## <a name="supported-operating-systems"></a>支援的作業系統
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]在 Windows、 macOS 和 Linux 上執行，並支援下列平台：
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上執行，並支援下列平台：
 
 ### <a name="windows"></a>視窗
 - Windows 10 (64 位元)
