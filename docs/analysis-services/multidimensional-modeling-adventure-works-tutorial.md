@@ -1,7 +1,7 @@
 ---
 title: "多維度模型化 （Adventure Works 教學課程） |Microsoft 文件"
 ms.custom: 
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -22,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1a6323632e17efab87ecf64358b5055288dfa5db
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af9371e71223eedc44b7b7ec8cbeb3ab20423da8
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多維度模型化 (Adventure Works 教學課程)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 歡迎使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程。 這個教學課程描述如何使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 來開發和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案，所有範例都使用虛構公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 。  
   
-## <a name="what-you-will-learn"></a>學習內容  
+## <a name="what-you-learn"></a>您了解的內容  
 在本教學課程中，您將學會下列作業：  
   
 -   如何在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]專案中定義資料來源、資料來源檢視、維度、屬性、屬性關聯性、階層和 Cube。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/15/2018
 |[第 10 課： 定義管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)|15 分鐘|  
   
 > [!NOTE]  
-> 您將在此教學課程中建立的 Cube 資料庫是簡化的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度模型專案版本，此專案是 Adventure Works 範例資料庫的一部分，可在 codeplex 網站下載。 Adventure Works 多維度資料庫的教學課程版本經過簡化，更著重在您想要立即熟練的特定技巧上。 完成此教學課程之後，請考慮自行瀏覽多維度模型專案，以更了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度模型。  
+> 您將在本教學課程中建立的 cube 資料庫是簡化的版本[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多維度模型專案是 Adventure Works 範例資料庫可供下載 GitHub 上的一部分。 Adventure Works 多維度資料庫的教學課程版本經過簡化，更著重在您想要立即熟練的特定技巧上。 完成此教學課程之後，請考慮自行瀏覽多維度模型專案，以更了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度模型。  
   
 ## <a name="next-step"></a>下一個步驟  
 若要開始本教學課程，請繼續進行第一課： [第 1 課：在 Analysis Services 專案內定義資料來源檢視](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
