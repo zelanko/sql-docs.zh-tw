@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b30e94db3ce6fcd84e39524f8a302c1749c42e3a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f91b4b356e97cbd70503394952d910d1fa66dff8
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 連接類型 (SSRS)
   若要在報表中包含來自 XML 資料來源的資料，您必須具有以 XML 類型之報表資料來源為基礎的資料集。 此內建資料來源類型是以 XML 資料延伸模組為基礎。 請使用此資料來源類型連接至 XML 文件、Web 服務或內嵌在查詢中的 XML，並從中擷取資料。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/09/2018
 |XML 文件|`http://localhost/XML/Customers.xml`|  
 |內嵌 XML 文件|*Empty*|  
   
- 如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ##  <a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。  

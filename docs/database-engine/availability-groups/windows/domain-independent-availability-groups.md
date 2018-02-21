@@ -8,21 +8,23 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], domain independent
+helpviewer_keywords:
+- Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 950e7cb62718b2c1fedfc5415544f21f85205cf6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="domain-independent-availability-groups"></a>網域獨立的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,63 +87,81 @@ Windows Server 2016 引進以「已中斷連結 Active Directory 的叢集」為
 1. [使用本連結的指示](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/)，部署 Workgroup 叢集以包含所有要參與可用性群組的伺服器。 設定 Workgroup 叢集之前，請確定已設定一般 DNS 尾碼。
 2. 在要參與可用性群組的每個執行個體上[啟用 AlwaysOn 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)功能。 這需要重新啟動每個 SQL Server 執行個體。
 3. 將裝載主要複本的每個執行個體都需要資料庫主要金鑰。 如果還沒有主索引鍵，請執行下列命令：
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. 在將為主要複本的執行個體上，建立憑證，以用於次要複本上的傳入連接，以及用於保護主要複本上的端點。
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. 備份憑證。 如有需要，您也可以使用私密金鑰進一步保護它。 此範例未使用私密金鑰。
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. 重複步驟 4 和 5，以使用適當的憑證名稱來建立和備份每個次要複本的憑證，例如 InstanceB_Cert。
 7. 在主要複本上，您必須建立可用性群組之每個次要複本的登入。 這個登入將會獲授與連接至「網域獨立的可用性群組」所使用端點的權限。 例如，針對名為 InstanceB 的複本：
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. 在每個次要複本上，建立主要複本的登入。 此登入會獲授與連接至端點的權限。 例如，在名為 InstanceB 的複本上：
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. 在所有執行個體上，為所建立的每個登入建立使用者。 這會在還原憑證時使用。 例如，建立主要複本的使用者：
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. 針對可能是主要的任何複本，在所有相關的次要複本上建立登入和使用者。
 11. 在每個執行個體上，還原已建立登入和使用者之其他執行個體的憑證。 在主要複本上，還原所有次要複本憑證。 在每個次要複本上，以及可能是主要複本的任何其他複本上，還原主要複本的憑證。 例如：
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. 建立要由每個執行個體上將為複本之可用性群組使用的端點。 針對可用性群組，端點必須有一種類型的 DATABASE_MIRRORING。 端點會使用步驟 4 中針對該執行個體所建立的憑證來進行驗證。 如下顯示的範例語法會使用憑證來建立端點。 使用適當的加密方法以及您環境的其他相關選項。 如需可用選項的詳細資訊，請參閱 [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)。
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
     LISTENER_PORT = 5022,
     LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
     AUTHENTICATION = CERTIFICATE InstanceX_Cert,
     ROLE = ALL
-)
-```
+         )
+   ```
+
 13. 將可以連接至端點的權限指派給步驟 9 中於該執行個體上建立的每位使用者。 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. 設定基礎憑證和端點安全性之後，請使用慣用方法來建立可用性群組。 建議您手動備份、複製和還原用來初始化次要的備份，或使用[自動植入](automatically-initialize-always-on-availability-group.md)。 使用精靈來初始化次要複本，涉及使用伺服器訊息區塊 (SMB) 檔案，這在使用未加入網域的 Workgroup 叢集時可能未運作。
 15. 如果建立接聽程式，請確定已在 DNS 中註冊其名稱和其 IP 位址。
 

@@ -12,6 +12,7 @@
 # [介面區組態](surface-area-configuration.md)  
 # [SQL 插入式攻擊](sql-injection.md)
 # [SQL 漏洞評量](sql-vulnerability-assessment.md)  
+# [SQL 資料探索與分類](sql-data-discovery-and-classification.md)  
 # [TRUSTWORTHY 資料庫屬性](trustworthy-database-property.md)  
 # [權限](permissions-database-engine.md)  
 # [權限階層](permissions-hierarchy-database-engine.md)  
