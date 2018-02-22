@@ -7,7 +7,8 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.component: search
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
 
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
      斷詞工具已經重新設計過，而且經測試顯示，新的斷詞工具會比先前的斷詞工具提供較佳的語意品質。 這會增加重新叫用精確度。  
   
--   大部分語言的斷詞工具都已包含在 SQL Server 中而且預設已啟用。  
+-   大部分語言的文字分隔都已包含在 SQL Server 中而且預設為啟用。  
   
  如需 SQL Server 包含斷詞工具和詞幹分析器的語言清單，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
   
 ##  <a name="breaking"></a> 斷詞  
- 斷詞工具會針對文字分界 (語言特有) 將索引的文字 Token 化。 因此，不同語言之間的斷詞行為便有所差異。 如果您使用某種語言 x 來索引一些語言 {x、y 和 z}，某些行為可能會產生非預期的結果。 例如，在某種語言中，破折號 (-) 或逗號 (,) 可能是棄而不用的斷詞元素，但在另一種語言中則不是。 此外，由於給定的字詞可能會在不同的語言中以不同方式進行詞幹分析，因此有時可能也會發生非預期的詞幹分析行為。 例如，在英文中，文字分界通常是空白字元或某種形式的標點符號。 在其他語言中，例如德文，字詞或字元可能會結合在一起。 因此，您所選擇的資料行層級語言應該代表您預期會儲存在該資料行之資料列中的語言。  
+ 文字分隔會針對文字分界 (語言特有) 將索引的文字 Token 化。 因此，不同語言之間的斷詞行為便有所差異。 如果您使用某種語言 x 來編制一些語言的索引 {x、y 和 z}，某些行為可能會產生非預期的結果。 例如，在某種語言中，破折號 (-) 或逗號 (,) 可能是棄而不用的斷詞元素，但在另一種語言中則不是。 此外，由於給定的字詞可能會在不同的語言中以不同方式進行詞幹分析，因此有時可能也會發生非預期的詞幹分析行為。 例如，在英文中，文字分界通常是空白字元或某種形式的標點符號。 在其他語言中，例如德文，字詞或字元可能會結合在一起。 因此，您所選擇的資料行層級語言應該代表您預期會儲存在該資料行之資料列中的語言。  
   
 ### <a name="western-languages"></a>西方語言  
  對於西方語系而言，如果您不確定哪些語言會儲存在資料行中，或者您預期會儲存多種語言，一般的解決方法是使用可能儲存在資料行中之最複雜語言的斷詞工具。 例如，您可能預期會在單一資料行中儲存英文、西班牙文和德文的內容。 這三種西方語言都擁有非常相似的斷詞模式，其中德文的模式最複雜。 因此，在這個情況下，使用德文斷詞工具是不錯的選擇，因為它能夠正確地處理英文和西班牙文的文字。 相較之下，英文斷詞工具可能無法完美地處理德文的文字，因為德文含有複合字。  
