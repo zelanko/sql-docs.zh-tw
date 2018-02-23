@@ -12,25 +12,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bd176479745f786197782bc489b45ea2c1e74429
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: df0547a4e9665040cea0aff190586759d6a24cd4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升級 Power Pivot for SharePoint
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題概述將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署升級至 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 所需的步驟。 特定步驟取決於您環境目前執行的 SharePoint 版本，並包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerPivot.msi**)。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  本文摘要說明將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署升級至 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 所需的步驟。 特定步驟取決於您環境目前執行的 SharePoint 版本，並包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerPivot.msi**)。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
  如需版本資訊，請參閱 [SQL Server 2016 版本資訊](http://go.microsoft.com/fwlink/?LinkID=398124)。  
   
- **本主題內容：**  
+ **本文內容：**  
   
  [必要條件](#bkmk_prereq)  
   
@@ -54,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
 -   如果您要升級含有兩個 (含) 以上 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體的多伺服器 SharePoint 2010 伺服器陣列，必須在繼續升級下一部伺服器 **之前** ，完整升級每部伺服器。 完整升級包括執行 SQL Server 安裝程式來升級 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 程式檔案，然後再執行 SharePoint 升級動作來設定已升級的服務。 在適當的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具或 Windows PowerShell 中執行升級動作之前，伺服器可用性會受到限制。  
   
--   SharePoint 2010 伺服陣列中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務與 Analysis Services 的所有執行個體版本必須都一樣。 如需如何驗證版本的詳細資訊，請參閱本主題中的 [驗證 Power Pivot 元件和服務的版本](#bkmk_verify_versions) 一節。  
+-   SharePoint 2010 伺服陣列中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務與 Analysis Services 的所有執行個體版本必須都一樣。 如需如何驗證版本的資訊，請參閱本文的[驗證 Power Pivot 元件和服務的版本](#bkmk_verify_versions)一節。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具是 SQL Server 共用功能之一，所有共用功能都會同時升級。 如果您在升級過程中選取需要共用功能升級的其他 SQL Server 執行個體或功能，則 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具也會一併升級。 如果升級 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具但未升級 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 執行個體，可能會發生問題。 如需 SQL Server 共用功能的詳細資訊，請參閱[使用安裝精靈升級為 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
@@ -139,7 +142,7 @@ ms.lasthandoff: 01/08/2018
   
     -   [Power Pivot for SharePoint 的 PowerShell 參考](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-5.  透過執行升級後步驟以及檢查伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器版本，來確認升級成功。 如需詳細資訊，請參閱本主題中的 [Post-upgrade verification tasks](#verify) 和下列章節：  
+5.  透過執行升級後步驟以及檢查伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器版本，來確認升級成功。 如需詳細資訊，請參閱本文的[升級後的驗證工作](#verify)和下列章節：  
   
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> 升級現有的 SharePoint 2010 伺服器陣列  
  若要將部署在 SharePoint 2010 中的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 升級，請執行下列動作：  
@@ -207,7 +210,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  針對伺服器陣列中的每個 SQL Server Analysis Services (**) 服務** 重複此程序[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]：1) 執行 SQL Server 安裝程式 2) 執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。  
   
-9. 透過執行升級後步驟以及檢查伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器版本，來確認升級成功。 如需詳細資訊，請參閱本主題中的 [Post-upgrade verification tasks](#verify) 和下列章節：  
+9. 透過執行升級後步驟以及檢查伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器版本，來確認升級成功。 如需詳細資訊，請參閱本文的[升級後的驗證工作](#verify)和下列章節：  
   
 10. **疑難排解錯誤**  
   
@@ -319,7 +322,7 @@ Get-PowerPivotSystemService
   
  升級第一部伺服器之後，尚未升級的其他伺服器 **將會變成無法使用**。 在所有伺服器執行相同層級之後，即可恢復使用。  
   
- SQL Server 安裝程式會就地升級實體電腦上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案檔，但若要升級伺服器陣列使用的方案，則必須使用本主題前面章節中所描述的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。  
+ SQL Server 安裝程式會就地升級實體電腦上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案檔，但若要升級伺服器陣列使用的方案，則必須使用本文上一節所述的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設定工具。  
   
 ##  <a name="qfe"></a> 將 QFE 套用至伺服器陣列中的 Power Pivot 執行個體  
  修補 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器，會將現有的程式檔案更新成包含特定問題修正的較新版本。 將 QFE 套用至多重伺服器拓撲時，沒有您必須先開始的主要伺服器。 只要您將相同的 QFE 套用至伺服器陣列中的其他 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器，就可以從任何伺服器開始。  

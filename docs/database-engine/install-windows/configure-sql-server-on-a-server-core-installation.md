@@ -8,32 +8,36 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a23b32644a51bf4e46cab280c7d382d2cb1c786
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a453e4c8a5ec3bc3e93d5c7f7e6ce6f1e354d21c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題涵蓋在 Server Core 安裝上設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的詳細資料。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+本文涵蓋在 Server Core 安裝上設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的詳細資料。  
 
 ##  <a name="BKMK_ConfigureWindows"></a> 在 Windows Server 上設定及管理 Server Core  
-本節提供有助於設定及管理 Server Core 安裝的主題參考。  
+本節提供有助於設定及管理 Server Core 安裝的文章參考。  
   
 並非所有 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 功能都在 Server Core 模式中受到支援。  部分功能可以安裝在用戶端電腦或是未執行 Server Core 的另一部伺服器上，並且連接到 Server Core 上安裝的 Database Engine 服務。  
   
-如需有關在遠端設定及管理 Server Core 安裝的詳細資訊，請參閱以下主題：  
+如需遠端設定及管理 Server Core 安裝的詳細資訊，請參閱以下文章：  
   
 - [安裝 Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
@@ -227,10 +231,10 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> 使用疑難排解工具  
  您可以使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md) ，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視您的伺服器一段時間，或為伺服器的特定問題疑難排解。 SQLdiag 用於加速和簡化 Microsoft 客戶支援服務部門對診斷資訊的收集過程。  
   
- 您可以在 Server Core 上的系統管理員命令提示字元中，使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md)主題中指定的語法啟動此公用程式。  
+ 您可以在 Server Core 上的系統管理員命令提示字元中，使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md)一文中指定的語法來法啟動此公用程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 Server Core 上安裝 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [安裝的使用說明主題](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [安裝的使用方法文章](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

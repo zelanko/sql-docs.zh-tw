@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1ba94eb985130eb7e3f8ad020756c7387df297c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b6451f3d322ff92ee928e6a9ed98759df0bcc2e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 伺服器與目錄
   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將含有那些封裝的專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
  如需 SSISDB 目錄功能的概觀，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
 ## <a name="high-availability"></a>高可用性  
- 與其他使用者資料庫一樣， **SSISDB** 資料庫也支援資料庫鏡像和複寫。 如需鏡像及複寫的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ **SSISDB** 資料庫和其他使用者資料庫一樣，也支援資料庫鏡像和複寫。 如需鏡像及複寫的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
- 您也可以利用 SSIS 和 Always On 可用性群組，以提供 SSISDB 及其內容的高可用性。 如需詳細資訊，請參閱這篇 Matt Masson 撰寫的部落格文章：[SSIS 與 AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)，網址為 blogs.msdn.com。  
+ 您也可以利用 SSIS 和 Always On 可用性群組，以提供 SSISDB 及其內容的高可用性。 如需詳細資訊，請參閱[適用於 SSIS 目錄 (SSISDB) 的 AlwaysOn](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另請參閱這篇 Matt Masson 撰寫的部落格文章：[SSIS 與 AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)，網址為 blogs.msdn.com。  
   
 ##  <a name="ssms"></a> SQL Server Management Studio 中的 Integration Services Server  
  當您連接到主控 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫之 **ssDEnoversion** 執行個體時，您會在 [物件總管] 中看到以下物件：  

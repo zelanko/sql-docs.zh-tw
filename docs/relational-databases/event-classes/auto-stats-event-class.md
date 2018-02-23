@@ -1,9 +1,10 @@
 title: "Auto Stats Event Class | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: "sql-non-specified" ms.prod_service: "database-engine, sql-database" ms.service: "" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
   - "database-engine" ms.tgt_pltfrm: "" ms.topic: "article" helpviewer_keywords: 
-  - "Auto Stats event class" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "JennieHubbard" ms.author: "jhubbard" manager: "jhubbard" ms.workload: "Inactive"
+  - "Auto Stats event class" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: "craigg" ms.workload: "Inactive"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Auto Stats** 事件類別表示索引和資料行統計資料已發生自動更新。  **Auto Stats** 也會在載入統計資料以供最佳化工具使用時引發。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Auto Stats** 事件類別表示索引和資料行統計資料已發生自動更新。  **Auto Stats** 也會在載入統計資料以供最佳化工具使用時引發。
   
 ## <a name="auto-stats-event-class-data-columns"></a>Auto Stats 事件類別資料行  
   

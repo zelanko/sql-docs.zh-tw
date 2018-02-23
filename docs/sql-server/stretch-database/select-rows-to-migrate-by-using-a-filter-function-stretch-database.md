@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a898c757120d29a8c64de5623cec02c35c5b5ac1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: efb55816db5f692231b66ca53780ab26318da90c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用篩選函數選取要移轉的資料列 (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  若您將原始資料儲存在其他資料表中，您可以設定 Stretch Database 以移轉整個資料表。 若您的資料表同時包含作用及原始資料，則可以指定篩選器述詞，以選取要移轉的資料列。 篩選器述詞是內嵌資料表值函數。 本主題說明如何撰寫內嵌資料表值函數，以選取要遷移的資料列。  
+
+  若您將原始資料儲存在其他資料表中，您可以設定 Stretch Database 以移轉整個資料表。 若您的資料表同時包含作用及原始資料，則可以指定篩選器述詞，以選取要移轉的資料列。 篩選器述詞是內嵌資料表值函數。 本文描述如何撰寫內嵌資料表值函式，以選取要移轉的資料列。  
   
 > [!IMPORTANT]
 > 若您提供執行狀況不佳的篩選函數，資料移轉也無法順利執行。 Stretch Database 使用 CROSS APPLY 運算子，將篩選函數套用至資料表。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
 -   結束精靈之後，請執行 ALTER TABLE 陳述式來指定篩選函數。  
   
- 本主題稍後會說明用於新增函數的 ALTER TABLE 語法。  
+ 本文稍後會描述用於新增函式的 ALTER TABLE 語法。  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>篩選函數的基本需求  
  Stretch Database 篩選器述詞需要的內嵌資料表值函數如同下列範例所示。  

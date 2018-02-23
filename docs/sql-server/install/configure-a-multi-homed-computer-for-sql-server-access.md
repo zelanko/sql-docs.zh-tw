@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +17,26 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 64c02e1d3e2c0304acebd9d8c8c9a60982841c10
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>設定多重主目錄電腦進行 SQL Server 存取
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 當伺服器必須提供兩個或多個網路或子網路的連線時，一般會使用多重主目錄電腦。 這部電腦通常位於周邊網路 (也稱為 DMZ、非軍事區域，或篩選的子網路) 中。 此主題描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連接。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  當伺服器必須提供兩個或多個網路或子網路的連接時，一般會使用多重主目錄電腦。 這部電腦通常位於周邊網路 (也稱為 DMZ、非軍事區域，或篩選的子網路) 中。 本文描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連線。  
   
 > [!NOTE]  
 >  多重主目錄電腦具有多張網路介面卡，或者已經設定成針對單一網路介面卡使用多個 IP 位址。 雙重主目錄電腦具有兩張網路介面卡，或者已經設定成針對單一網路介面卡使用兩個 IP 位址。  
   
- 繼續進行本主題之前，您應該先熟悉 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)主題中提供的資訊。 這個主題包含有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件如何使用防火牆的基本資訊。  
+ 繼續本文之前，您應該先熟悉[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)一文中提供的資訊。 本文包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件如何使用防火牆的基本資訊。  
   
  **這個範例假設：**  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  IPv4 位址是一連串稱為八位元資料組的四個數字。 每個數字都小於 255，並以句號隔開，例如 127.0.0.1。 IPv6 位址是一連串八個十六進位數字 (以冒號隔開)，例如 fe80:4898:23:3:49a6:f5c1:2452:b994。  
   
--   防火牆規則可能會允許透過特定通訊埠存取，例如通訊埠 1433。 或者，防火牆規則可能會允許存取 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 程式 (sqlservr.exe)。 這兩種方法各有優點。 由於周邊網路中的伺服器會比內部網路上的伺服器更容易遭受攻擊，因此本主題會假設您想要擁有更精確的控制權，而且分別選取您所開啟的通訊埠。 基於上述原因，本主題會假設您要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為接聽固定通訊埠。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用連接埠的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+-   防火牆規則可能會允許透過特定通訊埠存取，例如通訊埠 1433。 或者，防火牆規則可能會允許存取 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 程式 (sqlservr.exe)。 這兩種方法各有優點。 由於周邊網路的伺服器比內部網路的伺服器更容易遭受攻擊，因此本文假設您想要擁有更精確的控制權，並分別選取您所開啟的通訊埠。 基於上述原因，本文假設您要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為接聽固定通訊埠。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用連接埠的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 -   這則範例會使用 TCP 通訊埠 1433 來設定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的存取權。 您可以使用相同的一般步驟來設定不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所使用的其他通訊埠。  
   

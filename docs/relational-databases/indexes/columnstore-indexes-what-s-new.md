@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65aaaf68cd32204b7447807ebce247ba3e977459
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/03/2018
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 新增這些新功能。
 
 ### <a name="functional"></a>功能
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支援叢集資料行存放區索引中的非保存計算資料行。 叢集資料行存放區索引不支援保存的資料行。您無法在具有計算資料行的資料行存放區索引上建立非叢集索引。 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 在叢集資料行存放區索引中支援非保存計算資料行。 叢集資料行存放區索引不支援保存的資料行。您無法在具有計算資料行的資料行存放區索引上建立非叢集索引。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 會加入索引鍵增強功能，以改善資料行存放區索引的效能和彈性。 這些改善會強化資料倉儲案例，並進行即時作業分析。  
@@ -125,7 +126,7 @@ ms.lasthandoff: 01/03/2018
 -   至於記憶體中資料表，針對資料行存放區索引的查詢只能在 InterOP 模式中執行，不是在記憶體中原生模式中執行。 支援平行執行。  
   
 ## [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 引進叢集資料行存放區索引，作為主要的儲存體格式。 這允許一般的負載以及更新、刪除和插入作業。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 將叢集資料行存放區索引作為主要的儲存體格式。 這允許一般的負載以及更新、刪除和插入作業。  
   
 -   資料表可以使用叢集資料行存放區索引作為主要的資料表儲存體。 資料表上不允許其他索引，但是叢集資料行存放區索引是可以更新的，所以您可以執行一般的載入並對個別資料列進行變更。  
 -   非叢集資料行存放區索引繼續保有在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的相同功能，但現在可在批次模式中執行其他運算子。 而除非重建和使用資料分割切換，否則仍然不能更新。 只有磁碟資料表支援非叢集資料行存放區索引，記憶體中資料表不支援。  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/03/2018
 -   這些運算子可在批次模式下執行多執行緒查詢︰scan、filter、project、join、group by 和 union all。  
   
 ## [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進非叢集資料行存放區索引，作為資料列存放區資料表的另一個索引類型和批次處理資料行存放區資料的查詢。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 將非叢集資料行存放區索引作為資料列存放區資料表和批次處理的另一個索引類型，以查詢資料行存放區資料。  
   
 -   資料列存放區資料表可以有一個非叢集資料行存放區索引。  
 -   資料行存放區索引是唯讀的。 建立資料行存放區索引之後，您無法執行 `INSERT`、`DELETE` 和 `UPDATE` 作業來更新資料表；若要執行這些作業，您必須卸除索引，並更新資料表，然後重建資料行存放區索引。 您可以切換資料分割，在資料表中載入其他資料。 資料分割切換的優點是您可以載入資料，卻不用卸除和重建資料行存放區索引。  

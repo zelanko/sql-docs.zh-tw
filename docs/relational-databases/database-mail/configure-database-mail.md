@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,19 +42,20 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5a22d5c69dd9e3250f559dc0d08ae639ed2ff2da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [Database Mail 設定精靈] 來啟用及設定 Database Mail，並使用範本來建立 Database Mail 設定指令碼。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主題說明如何使用 Database Mail 組態精靈來啟用及設定 Database Mail，並使用範本建立 Database Mail 組態指令碼。  
   
 -   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
   
@@ -146,7 +148,7 @@ ms.lasthandoff: 11/17/2017
  **帳戶名稱**  
  輸入新帳戶的名稱。  
   
- **描述**  
+ **說明**  
  輸入帳戶的描述。 描述是選擇性的。  
   
  **電子郵件地址**  
@@ -159,7 +161,7 @@ ms.lasthandoff: 11/17/2017
  鍵入將用來回覆給由這個帳戶傳送之電子郵件訊息的電子郵件地址。 回覆電子郵件是選擇性的。 例如，回覆給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 帳戶的郵件，可能會傳送給資料庫管理員 danw@Adventure-Works.com。  
   
  **伺服器名稱**  
- 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，此格式類似於 **smtp.<貴公司>****.com**。如需相關說明，請洽詢您的郵件管理員。  
+ 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，這會使用類似 **smtp.<您的公司>.com** 的格式。如需相關說明，請洽詢您的郵件管理員。  
   
  **通訊埠編號**  
  輸入此帳戶之 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  
@@ -193,10 +195,10 @@ ms.lasthandoff: 11/17/2017
  **帳戶名稱**  
  選取要檢視、更新或刪除的帳戶。  
   
- **Delete**  
+ **刪除**  
  刪除選取的帳戶。 您必須從相關聯的設定檔移除這個帳戶，或先刪除相關聯的設定檔，再刪除選取的帳戶。  
   
- **描述**  
+ **說明**  
  檢視或更新帳戶的描述。 描述是選擇性的。  
   
  **電子郵件地址**  
@@ -223,7 +225,7 @@ ms.lasthandoff: 11/17/2017
  **基本驗證**  
  指定 SMTP 伺服器所需的使用者名稱和密碼。  
   
- **使用者名稱**  
+ **User name**  
  檢視或更新 Database Mail 用來登入 SMTP 伺服器的使用者名稱。 如果 SMTP 伺服器需要基本驗證，則使用者名稱是必要的。  
   
  **密碼**  
@@ -245,7 +247,7 @@ ms.lasthandoff: 11/17/2017
  **設定檔名稱**  
  輸入新設定檔的名稱。 系統會使用此名稱來建立設定檔。 請勿使用現有設定檔的名稱。  
   
- **描述**  
+ **說明**  
  鍵入設定檔的描述。 描述是選擇性的。  
   
  **SMTP 帳戶**  
@@ -273,7 +275,7 @@ ms.lasthandoff: 11/17/2017
  **設定檔名稱**  
  選取要管理之設定檔的名稱。  
   
- **Delete**  
+ **刪除**  
  刪除選取的設定檔。 系統會提示您選取 [是] 來刪除選取的設定檔，並將任何未送出的郵件設為失敗，或選取 [否]，只有在沒有未送出的郵件時才刪除選取的設定檔。  
   
  **說明**  
@@ -282,7 +284,7 @@ ms.lasthandoff: 11/17/2017
  **SMTP 帳戶**  
  為設定檔選擇一或多個帳戶。 容錯移轉優先權會設定在發生容錯移轉時，Database Mail 使用帳戶的順序。  
   
- **加入**  
+ **[加入]**  
  將帳戶加入至設定檔。  
   
  **移除**  
@@ -367,7 +369,7 @@ ms.lasthandoff: 11/17/2017
   
  設定檔可能是預設設定檔。 在此情況下，使用者或角色不必明確指定設定檔，就能使用設定檔傳送電子郵件。 如果傳送電子郵件訊息的使用者或角色有預設的私人設定檔，Database Mail 就會使用該設定檔。 如果使用者或角色沒有預設的私人設定檔， **sp_send_dbmail** 會使用 **msdb** 資料庫的預設公用設定檔。 如果沒有使用者或角色的預設私人設定檔，而且沒有資料庫的預設公用設定檔， **sp_send_dbmail** 會傳回錯誤。  
   
- **使用者名稱**  
+ **User name**  
  選取 **msdb** 資料庫中使用者或角色的名稱。  
   
  **存取**  
@@ -424,7 +426,7 @@ ms.lasthandoff: 11/17/2017
  [Database Mail 組態精靈](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- 使用 [從 <執行個體名稱> 傳送測試電子郵件] 頁面，以使用指定的 Database Mail 設定檔傳送電子郵件訊息。 只有 **系統管理員** 固定伺服器角色的成員，才可以使用此頁面來傳送測試電子郵件。  
+ 透過 [從 <執行個體名稱> 傳送測試電子郵件]****** 頁面使用指定的 Database Mail 設定檔傳送電子郵件訊息。 只有 **系統管理員** 固定伺服器角色的成員，才可以使用此頁面來傳送測試電子郵件。  
   
  **Database Mail 設定檔**  
  從清單中選取 Database Mail 設定檔。 這是必要的欄位。 如果未顯示任何設定檔，就表示沒有設定檔，或者您沒有設定檔的存取權限。 使用 **[Database Mail 組態精靈]** 來建立及設定設定檔。 如果未列出任何設定檔，請使用 Database Mail 組態精靈來建立供您使用的設定檔。  

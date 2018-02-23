@@ -8,34 +8,38 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd45301f5ce4497a672ffd4a684f972b08ac8013
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a10e7d35aa5a72f9dcc7ba34b11b6486fb9ac1cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>計劃和測試資料庫引擎升級計畫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要成功執行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 升級，不論使用何種方法，都需要適當規劃。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ 若要成功執行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 升級，不論使用何種方法，都需要適當規劃。  
   
 ## <a name="release-notes-and-known-upgrade-issues"></a>版本資訊與已知升級問題  
  升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之前，請檢閱：
 
 - [SQL Server 2017 版本資訊](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 版本資訊](../../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 資料庫引擎回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)主題。  
+- [SQL Server 資料庫引擎回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)一文。  
   
 ## <a name="pre-upgrade-planning-checklist"></a>升級前的計劃檢查清單  
- 升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，請檢閱下列檢查清單及相關主題。 這些主題適用於所有升級，不論使用何種升級方法，都能協助您決定最適當的升級方法：輪流升級、新安裝升級或就地升級。 例如，您可能無法執行就地升級或輪流升級 (若您要升級作業系統)、從 SQL Server 2005 升級，或是從 32 位元版本的 SQL Server 升級。 對於決策樹，請參閱 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
+ 升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之前，請檢閱下列檢查清單及相關文章。 這些文章適用於所有升級，不論使用何種升級方法，都能協助您從輪流升級、新安裝升級或就地升級當中，決定最適當的升級方法。 例如，您可能無法執行就地升級或輪流升級 (若您要升級作業系統)、從 SQL Server 2005 升級，或是從 32 位元版本的 SQL Server 升級。 對於決策樹，請參閱 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
   
--   **硬體與軟體需求：** 檢閱安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的硬體與軟體需求。 您可在以下頁面找到這些需求：[安裝 SQL Server 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 任何升級規劃的週期都有一部分是要考慮升級硬體 (較新的硬體較快，且可能由於處理器較少或資料庫與伺服器的調節，而減少授權) 和升級作業系統。 這類的硬體和軟體變更會影響您所選擇之升級方法的類型。  
+-   **硬體與軟體需求：** 檢閱安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的硬體與軟體需求。 您可在以下頁面找到這些需求：[安裝 SQL Server 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 在任何升級規劃的週期當中，都會涉及升級硬體 (較新的硬體較快，且可能由於處理器較少或資料庫與伺服器的合併而減少授權) 和升級作業系統的考量。 這類的硬體和軟體變更會影響您所選擇之升級方法的類型。  
   
 -   **目前環境︰** 研究您的目前環境，以了解正在使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件和連線到您環境的用戶端。  
   
@@ -52,7 +56,7 @@ ms.lasthandoff: 01/18/2018
    >[!NOTE]
    >前面的清單也適用於 [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)]。
   
--   **協力廠商元件︰** 判斷協力廠商元件的相容性，例如整合式備份。  
+-   **協力廠商元件︰**判斷協力廠商元件的相容性，例如整合式備份。  
   
 -   **目標環境︰** 確認您的目標環境符合硬體和軟體需求，且能夠支援原始系統的需求。 例如，您的升級可能包含多個 SQL Server 執行個體對單一執行個體的調節、新的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 執行個體，或是將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境虛擬化至私人或公用雲端。  
   
@@ -61,7 +65,7 @@ ms.lasthandoff: 01/18/2018
     > [!NOTE]  
     >  當您從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 升級 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 時，請選擇 [Enterprise Edition: 核心授權] 和 [Enterprise Edition]。 這些 Enterprise Edition 只有在授權模式方面不同。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
--   **回溯相容性︰** 請檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 資料庫引擎回溯相容性主題，以檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 與您要升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之間的行為變更。 請參閱 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)。  
+-   **回溯相容性︰**請檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 資料庫引擎回溯相容性文章，以檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 與您要升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之間的行為變更。 請參閱 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)。  
   
 -   **升級建議程式：**  執行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 升級建議程式來協助診斷可能封鎖升級程序，或現有指令碼或應用程式因重大變更而需要修改等原因造成的問題。 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 包含新版的升級建議程式，以協助客戶為現有的系統備妥升級。  此工具也能夠檢查現有資料庫，以查看其升級後是否能夠利用新功能 (如延伸資料表)。   
     您可以在 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]這裡  [下載](https://www.microsoft.com/en-us/download/details.aspx?id=48119)升級建議程式。  

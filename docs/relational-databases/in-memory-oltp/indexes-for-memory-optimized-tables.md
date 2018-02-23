@@ -8,25 +8,26 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a7c3e4fb4a7082a1874c9fc320ff67a1ce6031b0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 52c415b0c4c7f4913e8d675ce9fe86ad6051e233
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-所有經記憶體最佳化的資料表都必須至少有一個索引，因為它是將資料列連接在一起的索引。 在記憶體最佳化資料表上，每個索引也會進行記憶體最佳化。 有數種方式可用來區分記憶體最佳化索引上的索引和以磁碟為基礎之資料表上的傳統索引：  
+所有記憶體最佳化資料表都必須至少有一個索引，因為它是將資料列連線在一起的索引。 在記憶體最佳化資料表上，每個索引也會進行記憶體最佳化。 有數種方式可用來區分記憶體最佳化索引上的索引和以磁碟為基礎之資料表上的傳統索引：  
 
 - 資料列不會儲存在頁面上，因此沒有頁面或數量單位的集合，沒有可以參照以取得資料表所有頁面的資料分割或配置單位。 索引頁面的概念是可用類型的索引之一，但其儲存方式不同於以磁碟為基礎之資料表的索引。 其不會在網頁內產生傳統類型的的片段，因此不具填滿因數。
 - 在資料操作期間，對經記憶體最佳化的資料表上索引的變更永遠不會寫入磁碟。 只有資料列和資料的變更會寫入交易記錄。 
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/02/2018
             DURABILITY = SCHEMA\_AND_DATA);  
     ```
 > [!NOTE]  
-> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 針對每個經記憶體最佳化的資料表或資料表類型最多可以有 8 個索引。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中不再有特定於經記憶體最佳化的資料表和資料表類型的索引數目限制。
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 且 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 每個經記憶體最佳化的資料表或資料表類型都有 8 個索引的限制。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中不再有特定於經記憶體最佳化的資料表和資料表類型的索引數目限制。
   
 ### <a name="code-sample-for-syntax"></a>語法的程式碼範例  
   
@@ -203,11 +204,11 @@ WHERE col1 = 'dn';
   
 下表列出各種索引類型支援的所有運算。 「是」表示索引可以有效率地為要求提供服務，「否」則表示索引無法有效率地滿足要求。 
   
-| 作業 | 記憶體最佳化， <br/> 雜湊 | 記憶體最佳化， <br/> 非叢集 | 以磁碟為基礎， <br/> (非)叢集 |  
+| 作業 | 記憶體最佳化、 <br/> hash (雜湊) | 記憶體最佳化、 <br/> 非叢集 | 以磁碟為基礎、 <br/> (非)叢集 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | 索引掃描，擷取所有資料表資料列。 | 是 | 是 | 是 |  
 | 等號比較述詞 (=) 的索引搜尋。 | 是 <br/> (需要有完整索引鍵。) | 是  | 是 |  
-| 不等比較和範圍述詞的索引搜尋 <br/> (>, <, <=, >=, `BETWEEN`)。 | 否 <br/> (造成索引掃描。) | 是 <sup>1</sup> | 是 |  
+| 不等比較和範圍述詞的索引搜尋 <br/> (>, <, <=, >=, `BETWEEN`)。 | 否 <br/> (產生索引掃描。) | 是 <sup>1</sup> | 是 |  
 | 依照排序次序擷取符合索引定義的資料列。 | 否 | 是 | 是 |  
 | 依照排序次序擷取符合相反索引定義的資料列。 | 否 | 否 | 是 |  
 

@@ -19,11 +19,11 @@ ms.date: 09/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 1c0f95e02d7b214d9a1ed295c55e42f8416451f0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 18a740fa623665b6978bf5897f5654657602270d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 高可用性和災害復原夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/03/2018
 | --- | --- | --- |
 |![azure][5] |**Azure Site Recovery**<br>Site Recovery 會複寫在虛擬機器或實體伺服器上執行的工作負載，讓這些工作負載無法在主要站台使用時，仍可在次要位置使用。 您可以將 SQL Server 虛擬機器從內部部署資料中心複寫及容錯移轉到 Azure 或其他內部部署資料中心，或從一個 Azure 資料中心複寫及容錯移轉到另一個 Azure 資料中心。<br><br> Enterprise 和 Standard 版的 SQL Server 2008 R2 - SQL Server 2016|[網站][azure_website]<br>[Marketplace][azure_marketplace]<br>[資料工作表][azure_datasheet]<br>[Twitter][azure_twitter]<br>[影片][azure_youtube]|
 |![dh2i][2] |**DH2i**<br>DxEnterprise 是適用於 Windows、Linux 和 Docker 的智慧型可用性軟體，有助於您幾乎完全避免規劃和未規劃的停機、節省大量成本、大幅簡化管理，並讓您兼具實體和邏輯彙總。<br><br>SQL Server 2005+、Windows Server 2008R2+、Ubuntu 16+、RHEL 7+、CentOS 7+|[網站][dh2i_website]<br>[資料工作表][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[影片][dh2i_youtube]|
-|![hpe][4] |**HPE Serviceguard**<br>使用 HPE Serviceguard for Linux (SGLX)，可在不同距離的實體和虛擬環境間發現大量的基礎結構和應用程式錯誤，以防止在 Linux ® 上重要的 SQL Server 2017 工作負載發生規劃和未規劃的停機。 HPE SGLX 是 Beta 程式的一部分，會針對容錯移轉叢集執行個體和 Always On 可用性群組 SQL Server 工作負載，提供內容相關性監視和復原選項。 HPE SGLX 讓運作時間最大化，同時仍顧及資料完整性和效能。<br><br>Linux 上的 SQL Server 2017 - RedHat 7.3、7.4、SUSE 12 SP2、SP3|[網站][hpe_website]<br>[資料工作表][hpe]<br>[下載 Beta][hpe_download]<br>[部落格][hpe_download]<br>[Twitter][hpe_twitter]
+|![hpe][4] |**HPE Serviceguard**<br>使用 HPE Serviceguard for Linux (SGLX)，可在不同距離的實體和虛擬環境間發現大量的基礎結構和應用程式錯誤，以防止在 Linux ® 上重要的 SQL Server 2017 工作負載發生規劃和未規劃的停機。 針對容錯移轉叢集執行個體和 AlwaysOn 可用性群組 SQL Server 工作負載，HPE SGLX A.12.20.00 和更新版本提供內容相關性監視和復原選項。 HPE SGLX 讓運作時間最大化，同時仍顧及資料完整性和效能。<br><br>Linux 上的 SQL Server 2017 - RedHat 7.3、7.4、SUSE 12 SP2、SP3|[網站][hpe_website]<br>[資料工作表][hpe]<br>[下載評估][hpe_download]<br>[部落格][hpe_download]<br>[Twitter][hpe_twitter]
 |![idera][3]|**IDERA**<br>SQL Safe Backup 是適用於 SQL Server 的高效能備份和復原解決方案，透過減少資料庫備份的時間和備份檔案大小，以及提供備份檔案內資料庫的立即讀取和立即寫入存取權，來省下大筆費用。<br><br>Microsoft SQL Server：2005 SP1 或更新版、2008、2008 R2、2012、2014、2016；所有版本 |[網站][idera_website]|
 |![nec][7]|**NEC**<br>ExpressCluster 是全方位且完全自動化的高可用性和災害復原解決方案，可處理所有主要失敗，包括在實體電腦上或在內部部署或雲端環境中虛擬機器上執行之 SQL Server 和相關應用程式的硬體、軟體、網路和站台失敗。<br><br>Microsoft SQL Server：2005 或更新版；所有版本 |[網站][necec_website]<br>[資料工作表][necec_datasheet]<br>[影片][necec_youtube]<br>[下載][necec_download]|
 |![portworx][6] |**Portworx**<br>Portworx 是在生產環境中執行之具狀態容器的解決方案。 Portworx 可讓使用者使用任何容器排程器 (包括 Kubernetes、Mesosphere DC/OS 和 Docker Swarm)，在任何基礎結構上管理任何資料庫或具狀態服務。 Portworx 解決了 DevOps 小組在生產環境中執行容器化資料庫和其他具狀態服務時最常遇到的五個問題：持續性、高可用性、資料自動化、多個資料存放區和基礎結構的支援，以及安全性。<br><br>Docker 上的 SQL Server 2017 |[網站][portworx_website]<br>[文件集][portworx_docs]<br>[影片][portworx_youtube]|
@@ -104,7 +104,7 @@ ms.lasthandoff: 02/03/2018
 [portworx_docs]: http://docs.portworx.com/
 
 <!--Download links-->
-[hpe_download]: http://downloads.linux.hpe.com/SDR/project/sglx/sglx-beta/
+[hpe_download]: https://h20392.www2.hpe.com/portal/swdepot/displayProductInfo.do?productNumber=SGLX-DEMO
 [necec_download]: https://www.necam.com/ExpressCluster/30daytrial/
 <!--Blog links-->
 [hpe_blog]: https://community.hpe.com/t5/Servers-The-Right-Compute/SQL-Server-for-Linux-Is-Here-and-A-New-Chapter-for-Mission/ba-p/6977571#.WiHWW0xFwUE

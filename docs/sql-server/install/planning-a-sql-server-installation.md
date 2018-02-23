@@ -8,23 +8,27 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: installing SQL Server, planning
+helpviewer_keywords:
+- installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 5f45fe1c93f33f8f4666791c9014c1ca3f4a5aec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6fa512799bf19e284b25b7f847d71d3f6e5aab7a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="planning-a-sql-server-installation"></a>規劃 SQL Server 安裝
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請遵循以下步驟：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  若要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請遵循以下步驟：  
   
 -   檢閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的安裝需求、系統組態檢查與安全性考量。  
   
@@ -41,25 +45,25 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="in-this-section"></a>本節內容  
  [SQL Server 安裝的新增功能](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
- 本主題描述有關這一版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中新增或改進安裝功能的詳細資料。  
+ 本文描述此版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的新增或改善功能詳細資料。  
   
  [安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- 本主題列出安裝和執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的最低軟硬體需求。  
+ 本文列出安裝和執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的最低軟硬體需求。  
   
  [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
- 本主題說明您在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前及安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後應該考慮的一些安全性最佳做法。  
+ 本文描述您在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前及安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後應該考慮的一些安全性最佳做法。  
   
  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
- 本主題描述此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的預設服務組態，以及可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間和安裝完成後設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務組態選項。  
+ 本文描述此版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設服務設定，以及可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間和安裝完成後設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務設定選項。  
   
  [網路通訊協定和網路程式庫](../../sql-server/install/network-protocols-and-network-libraries.md)  
- 本主題描述這一版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中網路通訊協定的預設組態，以及可用的組態選項。  
+ 本文描述此版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中網路通訊協定的預設設定，以及可用的設定選項。  
   
  [使用 SQL Server 的多個版本和執行個體](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
- 本主題描述安裝多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本及執行個體的考量。  
+ 本文描述安裝多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本及執行個體的考量。  
   
  [SQL Server 中的地區語言版本](../../sql-server/install/local-language-versions-in-sql-server.md)  
- 本主題描述有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的當地語系化版本。  
+ 本文描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的當地語系化版本。  
   
 ## <a name="related-sections"></a>相關章節  
  [安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md)  

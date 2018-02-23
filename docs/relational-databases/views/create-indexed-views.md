@@ -24,11 +24,11 @@ caps.latest.revision:
 author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d291e4ab071aeafd6db43f48749e4e9ff9bcfd25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dc562d47b04c20a3878bc0e1b8c63bf5d1151e09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,73 +37,73 @@ ms.lasthandoff: 02/03/2018
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  以下是建立索引檢視表所需要的步驟，這些步驟對於能否順利完成索引檢視表的實作是很重要的：  
   
-1.  確認檢視表中所要參考之所有現有資料表的 SET 選項是正確的。   
-2.  先確認工作階段之 SET 選項的設定是正確的，再建立任何資料表和檢視表。  
-3.  確認檢視表定義具決定性。  
-4.  使用 `WITH SCHEMABINDING` 選項建立檢視表。  
-5.  在檢視表上建立唯一的叢集索引。  
+1.  確認檢視表中所要參考之所有現有資料表的 SET 選項是正確的。    
+2.  先確認工作階段之 SET 選項的設定是正確的，再建立任何資料表和檢視表。   
+3.  確認檢視表定義具決定性。   
+4.  使用 `WITH SCHEMABINDING` 選項建立檢視表。   
+5.  在檢視表上建立唯一的叢集索引。   
 
 > [!IMPORTANT]
-> 在大量索引檢視表或較少但非常複雜的索引檢視表所參考的資料表上執行 DML<sup>1</sup> 時，這些參考的索引檢視表必須一併更新。 如此一來，DML 查詢效能可能會降低顯著，在某些情況下，甚至無法產生查詢計畫。
-> 在這種情況下，請在生產環境使用之前測試 DML 查詢、分析查詢計畫並微調/簡化 DML 陳述式。
->
-> <sup>1</sup> 例如 UPDATE、DELETE 或 INSERT 作業。
+> 在大量索引檢視表或較少但非常複雜的索引檢視表所參考的資料表上執行 DML<sup>1</sup> 時，這些參考的索引檢視表必須一併更新。 如此一來，DML 查詢效能可能會降低顯著，在某些情況下，甚至無法產生查詢計畫。   
+> 在這種情況下，請在生產環境使用之前測試 DML 查詢、分析查詢計畫並微調/簡化 DML 陳述式。   
+>   
+> <sup>1</sup> 例如 UPDATE、DELETE 或 INSERT 作業。   
   
 ###  <a name="Restrictions"></a> 需要索引檢視表的 SET 選項  
- 如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 `CONCAT_NULL_YIELDS_NULL` 設為 ON 之後，運算式 **'**abc**'** + NULL 會傳回 NULL 值。 不過，將 `CONCAT_NULL_YIEDS_NULL` 設為 OFF 之後，相同的運算式則會產生 **'**abc**'**。  
+如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 `CONCAT_NULL_YIELDS_NULL` 設為 ON 之後，運算式 `'abc' + NULL` 會傳回 `NULL` 值。 不過，將 `CONCAT_NULL_YIEDS_NULL` 設為 OFF 之後，相同的運算式則會產生 `'abc'`。  
   
- 若要確定檢視表可以正確地維護並傳回一致的結果，索引檢視表需要數個 SET 選項的固定值。 發生下列狀況時，必須將下表中的 SET 選項設為 [必要值] 欄中所顯示的值：  
+若要確定檢視表可以正確地維護並傳回一致的結果，索引檢視表需要數個 SET 選項的固定值。 發生下列狀況時，必須將下表中的 SET 選項設為 [必要值] 欄中所顯示的值：  
   
--   建立檢視表和檢視表的後續索引。  
+-   建立檢視表和檢視表的後續索引。    
   
--   建立資料表時檢視中所參考的基底資料表。  
+-   建立資料表時檢視中所參考的基底資料表。    
   
--   有在任何參與索引檢視表的資料表上執行的任何插入、更新或刪除作業。 這項需求包括大量複製、複寫及分散式查詢等作業。  
+-   有在任何參與索引檢視表的資料表上執行的任何插入、更新或刪除作業。 這項需求包括大量複製、複寫及分散式查詢等作業。    
   
--   查詢最佳化工具會利用索引檢視表來產生查詢計劃。  
+-   查詢最佳化工具會利用索引檢視表來產生查詢計劃。   
   
-    |Set 選項|必要值|預設伺服器值|預設<br /><br /> OLE DB 與 ODBC 值|預設<br /><br /> DB-Library 值|  
-    |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
-    |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|Set 選項|必要值|預設伺服器值|預設<br /><br /> OLE DB 與 ODBC 值|預設<br /><br /> DB-Library 值|  
+|-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
+|ANSI_NULLS|ON|ON|ON|OFF|  
+|ANSI_PADDING|ON|ON|ON|OFF|  
+|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
+|ARITHABORT|ON|ON|OFF|OFF|  
+|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
   
-     <sup>1</sup> 將 `ANSI_WARNINGS` 設為 ON 會隱含地將 `ARITHABORT` 設為 ON。  
+<sup>1</sup> 將 `ANSI_WARNINGS` 設為 ON 會隱含地將 `ARITHABORT` 設為 ON。  
   
- 如果您要使用 OLE DB 或 ODBC 伺服器連線，唯一必須修改的值是 `ARITHABORT` 設定。 必須在伺服器層級利用 **sp_configure** 來正確地設定所有 DB-Library 值，或者，必須從應用程式利用 SET 命令來正確地設定所有 DB-Library 值。  
+如果您要使用 OLE DB 或 ODBC 伺服器連線，唯一必須修改的值是 `ARITHABORT` 設定。 必須在伺服器層級利用 **sp_configure** 來正確地設定所有 DB-Library 值，或者，必須從應用程式利用 SET 命令來正確地設定所有 DB-Library 值。  
   
 > [!IMPORTANT]  
 > 強烈建議您在伺服器之任何資料庫的計算資料行上建立第一個索引檢視表或索引之後，立即在伺服器範圍將 `ARITHABORT` 使用者選項設為 ON。  
   
 ### <a name="deterministic-views"></a>具決定性的檢視  
- 索引檢視表的定義必須具決定性。 如果選取清單及 `WHERE` 和 `GROUP BY` 子句中的所有運算式都具決定性，則檢視表也具決定性。 每當利用一組特定的輸入值來評估具決定性的運算式時，具決定性的運算式一律傳回相同的結果。 只有具決定性的函數可以參與具決定性的運算式。 例如，`DATEADD` 函式具決定性，因為它會針對它的三個參數之任何一組給定的引數值一律傳回相同的結果。 `GETDATE` 不具決定性，因為它一律被相同的引數叫用，但是，每當它被執行時，它所傳回的值都會變更。  
+索引檢視表的定義必須具決定性。 如果選取清單及 `WHERE` 和 `GROUP BY` 子句中的所有運算式都具決定性，則檢視表也具決定性。 每當利用一組特定的輸入值來評估具決定性的運算式時，具決定性的運算式一律傳回相同的結果。 只有具決定性的函數可以參與具決定性的運算式。 例如，`DATEADD` 函式具決定性，因為它會針對它的三個參數之任何一組給定的引數值一律傳回相同的結果。 `GETDATE` 不具決定性，因為它一律被相同的引數叫用，但是，每當它被執行時，它所傳回的值都會變更。  
   
- 若要判斷檢視表資料行是否具決定性，請使用 **COLUMNPROPERTY** 函數的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 屬性。 若要判斷含有結構描述繫結之檢視表中的具決定性資料行是否為精確資料行，請利用 COLUMNPROPERTY 函數的 **IsPrecise** 屬性。 如果是 TRUE，COLUMNPROPERTY 會傳回 1；如果是 FALSE，則傳回 0；如果輸入無效，則傳回 NULL。 這表示這個資料行不具決定性或不是精確資料行。  
+若要判斷檢視表資料行是否具決定性，請使用 **COLUMNPROPERTY** 函數的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 屬性。 如果檢視表含有結構描述繫結，您可以利用 `COLUMNPROPERTY` 函式的 **IsPrecise** 屬性來判斷其中具決定性的資料行是否精確。 如果是 TRUE，`COLUMNPROPERTY` 會傳回 1；如果是 FALSE，則傳回 0；如果輸入無效，則傳回 NULL。 這表示這個資料行不具決定性或不是精確資料行。  
   
- 即使運算式具決定性，如果它包含浮點運算式，確切的結果仍取決於處理器架構或微碼的版本而定。 若要確保資料完整性，這類運算式在參與時可以只做為索引檢視表的非索引鍵資料行。 未含浮點運算式之具決定性的運算式稱為精確運算式。 只有精確之具決定性的運算式可以參與索引鍵資料行和索引檢視表的 WHERE 或 GROUP BY 子句。  
+即使運算式具決定性，如果它包含浮點運算式，確切的結果仍取決於處理器架構或微碼的版本而定。 若要確保資料完整性，這類運算式在參與時可以只做為索引檢視表的非索引鍵資料行。 未含浮點運算式之具決定性的運算式稱為精確運算式。 只有精確的具決定性運算式可以參與索引鍵資料行和索引檢視表的 `WHERE` 或 `GROUP BY` 子句。  
 
 ### <a name="additional-requirements"></a>其他需求  
- 除了 SET 選項和具決定性函數的需求以外，下列需求也必須符合：  
+除了 SET 選項和具決定性函數的需求以外，下列需求也必須符合：  
   
--   執行 `CREATE INDEX` 的使用者必須是檢視表的擁有者。  
+-   執行 `CREATE INDEX` 的使用者必須是檢視表的擁有者。    
   
--   當您建立索引時，`IGNORE_DUP_KEY` 選項必須設定為 OFF (預設值)。  
+-   當您建立索引時，`IGNORE_DUP_KEY` 選項必須設定為 OFF (預設值)。    
   
--   在檢視表定義中，兩部分名稱 *schema***.***tablename* 必須參考資料表。  
+-   在檢視表定義中，兩部分名稱 *schema***.***tablename* 必須參考資料表。    
   
--   檢視表中所參考的使用者定義函式，必須使用 `WITH SCHEMABINDING` 選項來建立。  
+-   檢視表中所參考的使用者定義函式，必須使用 `WITH SCHEMABINDING` 選項來建立。    
   
--   檢視表中參考的任何使用者定義函式，必須透過兩部分名稱 *schema***.***function* 加以參考。  
+-   檢視表中所參考的任何使用者定義函式，必須透過 \<結構描述>****.\<函式>**** 這兩部分名稱加以參考。   
   
--   使用者定義函式的資料存取屬性必須是 `NO SQL`，而外部存取屬性必須是 `NO`。  
+-   使用者定義函式的資料存取屬性必須是 `NO SQL`，而外部存取屬性必須是 `NO`。   
   
--   Common Language Runtime (CLR) 函數可以在檢視的選取清單中出現，但是不可以是叢集索引鍵定義的一部分。 CLR 函數不能出現在檢視的 WHERE 子句或檢視中之 JOIN 作業的 ON 子句。  
+-   Common Language Runtime (CLR) 函數可以在檢視的選取清單中出現，但是不可以是叢集索引鍵定義的一部分。 CLR 函數不能出現在檢視的 WHERE 子句或檢視中之 JOIN 作業的 ON 子句。   
   
--   用於檢視定義中的 CLR 函數和 CLR 使用者定義型別的方法必須有下表所示的屬性。  
+-   用於檢視定義中的 CLR 函數和 CLR 使用者定義型別的方法必須有下表所示的屬性。   
   
     |屬性|附註|  
     |--------------|----------|  
@@ -138,12 +138,12 @@ ms.lasthandoff: 02/03/2018
 -   如果檢視表定義包含`GROUP BY` 子句，唯一叢集索引的索引鍵則只能參考 `GROUP BY` 子句中指定的資料行。  
   
 > [!IMPORTANT]  
-> 不支援在時態查詢 (使用 `FOR SYSTEM_TIME` 子句的查詢) 上方的索引檢視表  
+> 時態查詢 (使用 `FOR SYSTEM_TIME` 子句的查詢) 不支援索引檢視表。  
 
 ###  <a name="Recommendations"></a> 建議  
  當您在索引檢視中參考 **datetime** 和 **smalldatetime** 字串常值時，我們建議您使用決定性的日期格式樣式，將常值明確轉換成您想要的日期類型。 如需具有決定性之日期格式樣式的清單，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。 如需決定性與非決定性運算式的詳細資訊，請參閱此頁面中的[考量](#nondeterministic)一節。
 
-在大量索引檢視表或較少但非常複雜的索引檢視表所參考的資料表上執行 DML (例如 UPDATE、DELETE 或 INSERT) 時，這些索引檢視表必須在 DML 執行期間一併更新。 如此一來，DML 查詢效能可能會降低顯著，在某些情況下，甚至無法產生查詢計畫。 在這種情況下，請在生產環境使用之前測試 DML 查詢、分析查詢計畫並微調/簡化 DML 陳述式。
+在大量索引檢視表或較少但非常複雜的索引檢視表所參考的資料表上執行 DML (例如 `UPDATE`、`DELETE` 或 `INSERT`) 時，這些索引檢視表必須在 DML 執行期間一併更新。 如此一來，DML 查詢效能可能會降低顯著，在某些情況下，甚至無法產生查詢計畫。 在這種情況下，請在生產環境使用之前測試 DML 查詢、分析查詢計畫並微調/簡化 DML 陳述式。
   
 ###  <a name="Considerations"></a> 考量  
  索引檢視表中資料行的 **large_value_types_out_of_row** 選項設定是繼承基底資料表中對應的資料行設定。 此值可透過 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)設定。 由運算式形成的資料行其預設值為 0。 這表示大數值類型是以資料列的方式儲存。  
@@ -161,7 +161,7 @@ ms.lasthandoff: 02/03/2018
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 權限  
- 至少必須有資料庫中的 CREATE VIEW 權限，以及正在建立之檢視表所在之結構描述的 ALTER 權限。  
+ 至少必須具備資料庫的 **CREATE VIEW** 權限，以及要在其中建立檢視表之結構描述的 **ALTER** 權限。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -220,7 +220,7 @@ ms.lasthandoff: 02/03/2018
     GO  
     ```  
   
- 如需詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
+如需詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

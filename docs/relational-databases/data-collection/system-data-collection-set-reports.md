@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73dc17666d055ffbd4646befb43ff2a40ab77053
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>系統資料收集組報表
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 資料收集器會針對每個系統資料收集組提供歷程記錄報表。 下列每份報表都會使用儲存在管理資料倉儲中的資料：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+資料收集器會針對每個系統資料收集組提供歷程記錄報表。 下列每份報表都會使用儲存在管理資料倉儲中的資料：  
   
 -   [磁碟使用量摘要](#Disk)  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 11/17/2017
  圖表下方的資料表會列出資料收集時間和對應的使用量資料。  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>資料庫的磁碟使用量: <database_name> 子報表  
- 當您在 [磁碟使用量收集組] 報表的摘要資料表中按一下資料庫名稱時，就會顯示 [資料庫的磁碟使用量: <資料庫名稱>] 子報表。 這份報表會提供資料庫資料和交易記錄檔之空間使用量的數值與圖形細目。 資料檔的空間使用量會分類成配置給索引頁面、未配置空間、資料頁面和未使用空間的百分比。 這些類別目錄的定義方式如下：  
+ 當您在 [磁碟使用量收集組] 報表的摘要資料表中按一下資料庫名稱時，會顯示 [資料庫的磁碟使用量: <資料庫名稱>]****** 子報表。 這份報表會提供資料庫資料和交易記錄檔之空間使用量的數值與圖形細目。 資料檔的空間使用量會分類成配置給索引頁面、未配置空間、資料頁面和未使用空間的百分比。 這些類別目錄的定義方式如下：  
   
 |類別目錄|定義|  
 |--------------|----------------|  
 |索引|用來保存索引頁面的磁碟空間量。|  
 |未配置|可供資料庫使用但尚未配置給任何物件的磁碟空間量。|  
-|資料|資料頁面所使用的磁碟空間量。|  
+|data|資料頁面所使用的磁碟空間量。|  
 |未使用|配置給一個或多個物件但尚未使用的磁碟空間量。|  
   
  交易記錄檔的空間使用量會分類成使用空間和未使用空間。  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cb3c2ded87c3dd16f302aeab8e14c9ba09f92e88
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 24b9cf5cb7fd7a8359b7a946219b5e4a5eb5c037
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都擁有交易記錄檔來記錄所有交易，以及交易在資料庫中所作的修改。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有交易記錄來記錄所有交易及每項交易所作的資料庫修改。
   
 交易記錄是資料庫的重要元件。 若系統故障，您便需要該記錄檔讓資料庫返回一致的狀態。 
 

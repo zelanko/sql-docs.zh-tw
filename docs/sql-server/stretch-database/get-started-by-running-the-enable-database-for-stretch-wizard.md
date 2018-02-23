@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -25,21 +26,22 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9097c3213bf64185c24814156e38d10584a7c20c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>開始執行啟用資料庫的延展功能精靈
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- 若要設定資料庫以使用 Stretch Database，請執行「啟用資料庫的延展功能精靈」。  本主題說明您必須輸入的資訊，以及必須在精靈中進行的選擇。  
+
+ 若要設定資料庫以使用 Stretch Database，請執行「啟用資料庫的延展功能精靈」。  本文描述您必須輸入的資訊，以及必須在精靈中進行的選擇。  
   
  若要深入了解 Stretch Database，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。 
  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Stretch Database 精靈的 [選取資料表] 頁面](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 精靈的 [選取資料表] 頁面")  
   
-|資料行|描述|  
+|「資料行」|描述|  
 |------------|-----------------|  
 |(沒有標題)|檢查此資料行的核取方塊，以啟用針對 Stretch 選取的資料表。|  
 |**名稱**|指定資料庫中資料表的名稱。|  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 
 ![定義篩選述詞之後的 [選取資料表] 頁面](../../sql-server/stretch-database/media/stretch-wizard-2b.png "定義篩選述詞之後的 [選取資料表] 頁面")
 
-如果您想要使用不同類型的篩選函數來選取要遷移的資料列，請執行下列其中一項操作。  
+如果您想要使用不同類型的篩選函數來選取要移轉的資料列，請執行下列其中一項操作。  
   
 -   結束精靈，然後執行 ALTER TABLE 陳述式來啟用資料表的延展功能以及指定篩選函數。 如需詳細資訊，請參閱 [為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
   
@@ -186,7 +188,7 @@ ms.lasthandoff: 12/05/2017
  **Stretch Database 精靈失敗。**  
  如果尚未在伺服器層級啟用 Stretch Database，而您在執行精靈來啟用它時未具備系統管理員權限，則精靈會失敗。 請要求系統管理員，在本機伺服器執行個體上啟用 Stretch Database，然後再次執行精靈。 如需詳細資訊，請參閱＜ [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)＞。  
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
  針對 Stretch Database 啟用額外資料表。 監視資料移轉以及管理已啟用 Stretch 的資料庫和資料表。  
   
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 以啟用額外資料表。  

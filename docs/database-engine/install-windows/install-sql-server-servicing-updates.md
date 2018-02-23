@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a277fd883b517c238052ee0a328fbb0b4feb95ce
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d543239bfec50ec6b5466bf8e57d98fba542e8b7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-servicing-updates"></a>安裝 SQL Server 服務更新
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題提供安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 更新的相關資訊。 本節提供下列作業的相關資訊：  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+本文提供安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 更新的資訊。 本節提供下列作業的相關資訊：
   
 - 在進行新安裝期間安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 的更新。  
   
@@ -56,7 +60,7 @@ ms.lasthandoff: 01/18/2018
 當您透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新收到更新時，它會以自動模式將所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能更新至最新版本。 如果您需要更多彈性，或者是無法存取網際網路或 WSUS，就必須從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心取得更新。  
   
 ## <a name="see-also"></a>另請參閱  
-[從 [安裝精靈] &#40;安裝程式&#41; 安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
-[將功能新增至 SQL Server 的執行個體 &#40;安裝程式&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)   
+[從安裝精靈安裝 SQL Server &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+[將功能新增至 SQL Server 的執行個體 &#40;安裝程式&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
 [修復失敗的 SQL Server 安裝](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,30 +26,31 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 90d281884a092adda6f50777dd5403e275611bf4
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
  > 如需舊版 SQL Server 的相關內容，請參閱[設定 Windows 防火牆以允許 SQL Server 存取](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx)。
 
 防火牆系統有助於預防未經授權存取電腦資源。 如果防火牆已開啟，但是設定不正確，則嘗試連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為可能會被封鎖。  
   
-若要透過防火牆存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，您必須在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 防火牆是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的元件。 您也可以安裝來自其他公司的防火牆。 雖然本主題將討論如何設定 Windows 防火牆，但是基本原則也適用於其他防火牆程式。  
+若要透過防火牆存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，您必須在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 防火牆是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的元件。 您也可以安裝來自其他公司的防火牆。 本文討論 Windows 防火牆的設定方法；其中的基本原則也適用於其他防火牆程式。  
   
 > [!NOTE]  
->  本主題會提供防火牆組態的概觀，並且摘要列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員感興趣的資訊。 如需有關防火牆的詳細資訊以及授權的防火牆資訊，請參閱防火牆文件集，例如 [具有進階安全性的 Windows 防火牆和 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)。  
+>  本文提供防火牆設定的概觀，並且摘要說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員有興趣的資訊。 如需有關防火牆的詳細資訊以及授權的防火牆資訊，請參閱防火牆文件集，例如 [具有進階安全性的 Windows 防火牆和 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)。  
   
- 熟悉 [控制台] 中 [Windows 防火牆] 項目與 [具有進階安全性的 Windows 防火牆] Microsoft Management Console (MMC) 嵌入式管理單元，以及知道自己想要設定之防火牆設定的使用者，可以直接移至下列清單中的主題：  
+ 如果使用者已熟悉 [控制台] 中的 [Windows 防火牆] 項目與具有進階安全性的 Windows 防火牆 Microsoft Management Console (MMC) 嵌入式管理單元，並清楚自己想要設定的防火牆設定，即可直接移至下列清單中的文章：  
   
 -   [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
@@ -65,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 -   管理員設定防火牆的例外。 這樣會允許存取在電腦上執行的指定程式，或存取電腦上的指定連接通訊埠。 在此情況下，當此電腦當做伺服器、接聽程式或對等運作時，它就會接受未經要求的內送傳輸。 這是必須完成才能連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的組態類型。  
   
- 選擇防火牆策略比單獨決定給定的通訊埠應該開啟或關閉更複雜。 為企業設計防火牆策略時，請務必考慮所有適用的規則和組態選項。 本主題不會檢閱所有可能的防火牆選項。 我們建議您檢閱下列文件：  
+ 選擇防火牆策略比單獨決定給定的通訊埠應該開啟或關閉更複雜。 為企業設計防火牆策略時，請務必考慮所有適用的規則和組態選項。 本文不會檢閱所有可能的防火牆選項。 我們建議您檢閱下列文件：  
   
  [具有進階安全性的 Windows 防火牆入門指南](http://go.microsoft.com/fwlink/?LinkId=116080)  
   
@@ -84,11 +86,11 @@ ms.lasthandoff: 12/05/2017
 
 -  **Microsoft Management Console (MMC)**  
   
-     [具有進階安全性的 Windows 防火牆] MMC 嵌入式管理單元可讓您設定更多進階的防火牆設定。 這個嵌入式管理單元會以容易使用的方式呈現大部分防火牆選項，而且它會呈現所有防火牆設定檔。 如需詳細資訊，請參閱本主題稍後的 [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) (使用具有進階安全性的 Windows 防火牆嵌入式管理單元)。  
+     [具有進階安全性的 Windows 防火牆] MMC 嵌入式管理單元可讓您設定更多進階的防火牆設定。 這個嵌入式管理單元會以容易使用的方式呈現大部分防火牆選項，而且它會呈現所有防火牆設定檔。 如需詳細資訊，請參閱本文稍後的[使用具有進階安全性的 Windows 防火牆嵌入式管理單元](#BKMK_WF_msc)。  
   
 -   **netsh**  
   
-     系統管理員可以使用 **netsh.exe** 工具，在命令提示字元中設定及監視 Windows 電腦，或是利用批次檔執行此作業**。** 藉由使用 **netsh** 工具，您可以指示輸入適當協助程式的內容命令，讓協助程式執行該命令。 協助程式為一動態連結程式庫 (.dll) 檔案，可為一或多項服務、公用程式或通訊協定提供組態、監視與支援，從而延伸 **netsh** 工具的功能。 所有支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的作業系統都有防火牆協助程式。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 也提供進階防火牆協助程式，稱為 **advfirewall**。 本主題將不會討論使用 **netsh** 的詳細資料。 不過，您可以使用 **netsh**設定本文所描述的許多組態選項。 例如，在命令提示字元中執行下列指令碼，即可開啟  
+     系統管理員可以使用 **netsh.exe** 工具，在命令提示字元中設定及監視 Windows 電腦，或是利用批次檔執行此作業**。** 藉由使用 **netsh** 工具，您可以指示輸入適當協助程式的內容命令，讓協助程式執行該命令。 協助程式為一動態連結程式庫 (.dll) 檔案，可為一或多項服務、公用程式或通訊協定提供組態、監視與支援，從而延伸 **netsh** 工具的功能。 所有支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的作業系統都有防火牆協助程式。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 也提供進階防火牆協助程式，稱為 **advfirewall**。 本文不會討論使用 **netsh** 的詳細資料。 不過，您可以使用 **netsh**設定本文所描述的許多組態選項。 例如，在命令提示字元中執行下列指令碼，即可開啟  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -116,7 +118,7 @@ ms.lasthandoff: 12/05/2017
   
 |狀況|通訊埠|註解|  
 |--------------|----------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體|TCP 通訊埠 1433|這是允許通過防火牆最常見的通訊埠。 它適用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]預設安裝的一般連接，或在電腦上唯一執行之執行個體的具名執行個體 (具名執行個體具有特殊考量。 請參閱本主題稍後的 [動態通訊埠](#BKMK_dynamic_ports) 。)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體|TCP 通訊埠 1433|這是允許通過防火牆最常見的通訊埠。 它適用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]預設安裝的一般連接，或在電腦上唯一執行之執行個體的具名執行個體 (具名執行個體具有特殊考量。 請參閱本文稍後的[動態通訊埠](#BKMK_dynamic_ports)。)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體|此 TCP 通訊埠是在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 啟動時決定的動態通訊埠。|請參閱下面「 [動態通訊埠](#BKMK_dynamic_ports)」一節的討論。 當您使用具名執行個體時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務可能會需要 UDP 通訊埠 1434。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體|管理員所設定的通訊埠編號。|請參閱下面「 [動態通訊埠](#BKMK_dynamic_ports)」一節的討論。|  
 |專用管理員連接|TCP 通訊埠 1434 (預設執行個體)。 其他通訊埠則用於具名執行個體。 請檢查錯誤記錄檔，以取得通訊埠編號。|根據預設，系統不會啟用專用管理員連接 (DAC) 的遠端連接。 若要啟用遠端 DAC，請使用介面區組態 Facet。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)＞。|  
@@ -124,7 +126,7 @@ ms.lasthandoff: 12/05/2017
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|可以在建立 HTTP 端點時指定。 預設值為 TCP 通訊埠 80 (用於 CLEAR_PORT 傳輸) 和 443 (用於 SSL_PORT 傳輸)。|用於透過 URL 進行 HTTP 連接。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體|TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用安全通訊端層 (SSL) 的 HTTP 連接。|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 通訊埠 4022。 若要確認使用的通訊埠，請執行下列查詢：<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]沒有預設連接埠，但這是線上叢書範例中的傳統組態。|  
-|資料庫鏡像|管理員所選擇的通訊埠。 若要判斷此通訊埠，請執行下列查詢：<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|雖然資料庫鏡像沒有預設通訊埠，不過《線上叢書》範例會使用 TCP 通訊埠 5022 或 7022。 請務必避免中斷使用中的鏡像端點，尤其是在具有自動容錯移轉的高安全性模式中。 您的防火牆組態必須避免中斷仲裁。 如需詳細資訊，請參閱[指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。|  
+|資料庫鏡像|管理員所選擇的通訊埠。 若要判斷此通訊埠，請執行下列查詢：<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|雖然資料庫鏡像沒有預設通訊埠，不過《線上叢書》範例會使用 TCP 通訊埠 5022 或 7022。 請務必避免中斷使用中的鏡像端點，尤其是在具有自動容錯移轉的高安全性模式中。 您的防火牆組態必須避免中斷仲裁。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。|  
 |複寫|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的複寫連接會使用一般的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通訊埠 (例如，預設執行個體的 TCP 通訊埠 1433)。<br /><br /> 複寫快照集的 Web 同步處理和 FTP/UNC 存取需要在防火牆上開啟其他通訊埠。 為了將初始資料和結構描述從某個位置傳送至另一個位置，複寫可能會使用 FTP (TCP 通訊埠 21)、透過 HTTP 同步處理 (TCP 通訊埠 80) 或檔案共用。 檔案共用會使用 UDP 通訊埠 137 和 138，以及 TCP 通訊埠 139 (如果使用 NetBIOS)。 檔案共用使用 TCP 通訊埠 445。|若為透過 HTTP 同步處理，複寫會使用 IIS 端點 (其通訊埠可設定，但預設為通訊埠 80)，不過 IIS 處理序會透過預設執行個體的標準通訊埠 (1433) 連接至後端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 在使用 FTP 進行 Web 同步處理期間，FTP 傳送是介於 IIS 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者之間，而非介於訂閱者與 IIS 之間。|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具|TCP 通訊埠 135<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」<br /><br /> 可能也需要「 [IPsec](#BKMK_IPsec) 」例外。|如果您正在使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，也必須在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 主機電腦上，將 **Devenv.exe** 加入至「例外」清單並開啟 TCP 通訊埠 135。<br /><br /> 如果您正在使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，也必須在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 主機電腦上，將 **ssms.exe** 加入至「例外」清單並開啟 如需詳細資訊，請參閱 [先設定防火牆規則再執行 TSQL 偵錯工具](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。|  
   
@@ -143,13 +145,13 @@ ms.lasthandoff: 12/05/2017
 
 1. 在右窗格的 [動作] 下，按一下 [新增規則...]。[新增輸入規則精靈] 隨即開啟。
 
-1. 在 [規則類型] 上，按一下 [程式]。 按一下 **[下一步]**。
+1. 在 [規則類型] 上，按一下 [程式]。 按 [下一步] 。
 
 1. 在 [程式] 上，按一下 [這個程式路徑]。 按一下 [瀏覽] 找出您的 SQL Server 執行個體。 此程式稱為 sqlservr.exe。 它通常位於：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
-   按一下 **[下一步]**。
+   按 [下一步] 。
 
 1. 在 [動作] 上，按一下 [允許連線]。  
 

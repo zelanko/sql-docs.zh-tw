@@ -8,30 +8,32 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea4a52220729ad7d0fa69ef4e0784fd676aa3f5a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 754e4cb8c56b3c118f7c3d0716b250b860fd73f6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   若要設定現有的資料庫以使用 Stretch Database，請在 SQL Server Management Studio 中為資料庫選取 [工作 | 延展 | 啟用]，開啟 [啟用資料庫的延展功能精靈]。 您也可以使用 Transact-SQL 來為資料庫啟用 Stretch Database。  
   
- 如果您為個別資料表選取 [工作 | 延展 | 啟用]，而您尚未針對 Stretch Database 啟用資料庫，精靈會針對 Stretch Database 設定資料庫，並且在程序中讓您選取資料表。 請依照本主題中的步驟，而不是 [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)中的步驟。  
+ 如果您為個別資料表選取 [工作 | 延展 | 啟用]，而您尚未針對 Stretch Database 啟用資料庫，精靈會針對 Stretch Database 設定資料庫，並且在程序中讓您選取資料表。 請遵循本文中的步驟，而非[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 中的步驟。  
   
  在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料庫上啟用 Stretch Database 也需要 CONTROL DATABASE 權限。  
 
@@ -138,7 +140,7 @@ GO
     GO
     ```  
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 以啟用額外資料表。  
   
 -   [監視和疑難排解資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 以查看資料移轉狀態。  

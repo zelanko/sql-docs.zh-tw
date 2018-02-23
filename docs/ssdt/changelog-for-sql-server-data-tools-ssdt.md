@@ -1,32 +1,58 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/22/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssdt
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄檔。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
+
+## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT for Visual Studio 2017 (15.5.2)
+組建編號︰14.0.16156.0
+  
+### <a name="whats-new"></a>新功能
+
+**SSIS**
+1.  修正將 SSAS 和 SSIS 安裝到相同 VS 2017 執行個體時 SSIS 2008 專案移轉會失敗的問題。
+2.  修正將 RDLC 報表設計師和 SSIS 安裝到相同 VS 2017 執行個體時不能建立 RDLC 專案的問題。
+3.  修正無法更新註解色彩的問題。
+4.  修正 Hadoop 連線管理員編輯器會截斷其他語言某些字串的問題。
+5.  修正 OData 連線管理員編輯器會截斷某些字串的問題。
+6.  修正 [Integration Services 匯入專案精靈] 視窗會截斷某些字串的問題。
+7.  修正 SSIS 工具箱資訊視窗的標題問題。
+8.  修正 [Integration Services 部署精靈] 視窗會截斷某些字串的問題。 
+
+**安裝程式**
+- 修正有時無法下載承載並會出現「系統找不到指定的檔案 (0x80070002)」錯誤的問題。  
+
+### <a name="known-issues"></a>已知問題
+- 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1551"></a>適用於 Visual Studio 2017 (15.5.1) 的 SSDT
 組建編號︰14.0.16148.0

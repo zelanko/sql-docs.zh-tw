@@ -8,25 +8,29 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安裝精靈升級 SQL Server (安裝程式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 提供將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件就地升級至最新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的單一功能樹狀目錄。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 提供將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件就地升級至最新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的單一功能樹狀目錄。  
   
 >[!WARNING]  
 >當您升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會覆寫舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，因此它不再存在於電腦上。 
@@ -109,7 +113,7 @@ ms.lasthandoff: 01/18/2018
   
      **安裝的執行個體**  ：此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的具名執行個體。  
   
-13. 本主題其餘部分的工作流程會因您針對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定。  
+13. 根據您針對安裝所指定的功能而定，本文其餘部分的工作流程會有所不同。 您可能不會看到所有頁面，端視您的選取項目而定。  
   
 14. [伺服器組態 - 服務帳戶] 頁面上會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的預設服務帳戶。 在這個頁面上所設定的實際服務隨著您要升級的功能而不同。  
   

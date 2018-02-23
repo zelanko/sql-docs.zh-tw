@@ -20,16 +20,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題涵蓋如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、新增或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主題涵蓋如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
 
 ##  <a name="MonitorSpaceUse"></a>監視記錄空間的使用  
 使用 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) 來監視記錄空間的使用。 這個 DMV 會傳回目前使用之記錄空間量的相關資訊，並指出交易記錄需要截斷的時機。 
@@ -102,13 +103,13 @@ ms.lasthandoff: 01/18/2018
   
       |Version|預設值|  
       |-------------|--------------------|  
-      |從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始|資料 64 MB。 記錄檔 64 MB。|  
-      |從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始|資料 1 MB。 記錄檔 10%。|  
-      |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|資料 10%。 記錄檔 10%。|  
+      |從下列版本起 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|資料 64 MB。 記錄檔 64 MB。|  
+      |從下列版本起 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|資料 1 MB。 記錄檔 10%。|  
+      |下列版本以前 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|資料 10%。 記錄檔 10%。|  
 
--   小型的成長增量可能會產生太多小型 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，且可能會降低效能。 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到必要大小的所需成長增量，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
+-   小型的成長增量可能會產生太多小型 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，且可能會降低效能。 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到所需大小的必要成長增量，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
 
--   大型的成長增量可能會產生太少且大型的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，且亦可能會降低效能。 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到必要大小的所需成長增量，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。 
+-   大型的成長增量可能會產生太少且大型的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，且亦可能會降低效能。 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到所需大小的必要成長增量，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。 
 
 -   如果無法成長得夠快速以滿足查詢的需求，即使已啟用 autogrow，您還是可能收到訊息，指出交易記錄檔已滿。 如需變更成長增量的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41; 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 

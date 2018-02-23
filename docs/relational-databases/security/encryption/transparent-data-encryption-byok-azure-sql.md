@@ -19,11 +19,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 01/31/2018
 ms.author: aliceku
-ms.openlocfilehash: 8c192f5d1114ddab7d75761b385e91c0f22e481b
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰 (PREVIEW) 支援
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -59,9 +59,8 @@ ms.lasthandoff: 02/01/2018
 
 ### <a name="general-guidelines"></a>一般指導方針
 - 請確定 Azure Key Valut 和 Azure SQL Database 會在同一個租用戶之中。  **不支援**跨租用戶金鑰保存庫與伺服器的互動。
-
 - 為需要的資源決定使用哪一個訂用帳戶。若稍後要在訂用帳戶之間移動伺服器，必須重新設定使用 BYOK 的 TDE。
-- 為 SQL Database TDE 保護裝置專門設定單一訂用帳戶的 Azure Key Valut。  與邏輯伺服器建立關聯的所有資料庫都會使用相同的 TDE 保護裝置，因此必須考量連至邏輯伺服器的資料庫群組。 
+- 透過 BYOK 設定 TDE 時，請務必考量重複 wrap/unwrap 作業對金鑰保存庫產生的負載。 例如，由於與邏輯伺服器建立關聯的所有資料庫都使用相同的 TDE 保護裝置，因此該伺服器的容錯移轉會對保存庫觸發伺服器資料庫中的所有金鑰作業。 根據我們的經驗與記載的[金鑰保存庫服務限制](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)，建議您最多將 500 標準資料庫或 200 個高階資料庫與單一訂用帳戶的一個 Azure Key Vault 建立關聯，以確保在存取保存庫中的 TDE 保護裝置時擁有持續的高可用性。 
 - 建議：在內部部署保留一份 TDE 保護裝置複本。  這需要使用硬體安全模組 (HSM) 裝置在本機建立 TDE 保護裝置，以及使用金鑰委付系統儲存 TDE 保護裝置的本機複本。
 
 
@@ -86,7 +85,8 @@ ms.lasthandoff: 02/01/2018
 - 於金鑰委付系統中委付金鑰。  
 - 將加密金鑰檔案 (.pfx、.byok 或 .backup) 匯入 Azure Key Vault。 
     
-    >[!NOTE] 
+
+>[!NOTE] 
     >為了測試之用，可以使用 Azure Key Vault 建立金鑰，但這組金鑰無法委付，因為私密金鑰必須一律留在金鑰保存庫。  請一律備份並委付用來加密產品資料的金鑰，因為金鑰的遺失 (在金鑰保存庫中意外刪除、到期等等) 會導致資料永久遺失。
     >
     
@@ -148,3 +148,5 @@ ms.lasthandoff: 02/01/2018
    -ResourceGroup <SQLDatabaseResourceGroupName>
    ```
 若要深入了解 SQL 資料庫的備份復原，請參閱[復原 Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)。 若要深入了解 SQL 資料倉儲的備份復原，請參閱[復原 Azure SQL 資料倉儲](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview)。
+
+備份記錄檔的其他考量：即使已輪用 TDE 保護裝置且資料庫現在是使用新的 TDE 保護裝置，備份記錄檔仍會維持以原始 TDE 加密程式加密的狀態。  進行還原時，您需要使用這兩個金鑰才能還原資料庫。  如果記錄檔是使用儲存在 Azure Key Vault 中的 TDE 保護裝置，即使資料庫已在同時變更為使用受管服務的 TDE，在還原時仍需要使用這個金鑰。   

@@ -8,26 +8,28 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 225e2dafcaac744ed1ecd67ec928d13490472c7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e87fd686f9962562af63a50f216254081a17581
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-offline-log-files"></a>檢視離線記錄檔
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當目標執行個體已離線或無法啟動時，您就可以從本機或遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，當目標執行個體已離線或無法啟動時，您就可以從本機或遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔。  
   
  您可以從 [已註冊的伺服器] 存取離線記錄檔，也可以透過 WMI 和 WQL (WMI 查詢語言) 查詢以程式設計方式存取。  
   
@@ -78,11 +80,11 @@ ms.lasthandoff: 11/17/2017
   
     2.  在 [變更受管理的電腦]  對話方塊中，按一下 [另一台電腦] 。  
   
-    3.  輸入遠端電腦名稱，然後按一下 [確定]。  
+    3.  輸入遠端電腦名稱，然後按一下 [確定] 。  
   
-3.  以滑鼠右鍵按一下 [WMI 控制 (本機)] 或 **[WMI 控制 (***遠端電腦名稱***)]**，然後按一下 [內容]。  
+3.  以滑鼠右鍵按一下 [WMI 控制 (本機)] 或 [WMI 控制 (遠端電腦名稱)]，然後按一下 [屬性]。  
   
-4.  在 [WMI Control Properties (WMI 控制內容)] 對話方塊中，按一下 [安全性] 索引標籤。  
+4.  在 [WMI Control Properties (WMI 控制內容)]  對話方塊中，按一下 [安全性]  索引標籤。  
   
 5.  在命名空間樹狀目錄中，找出下列命名空間，然後按一下：  
   
