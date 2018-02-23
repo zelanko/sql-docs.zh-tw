@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 3f9435a43e57cc8d528e70c7376ba9ccd1c85c95
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e0dc1d24963e1e00018d5b5ac1418d68a4a22577
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>安裝 SQL Server 和 Ubuntu 上建立資料庫
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本快速入門中，您先安裝 SQL Server 2017 Ubuntu 16.04 上。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
+本快速入門中，您先安裝 SQL Server 2017 Ubuntu 16.04 上。 然後與 **sqlcmd**連線來建立您的第一個資料庫並執行查詢。
 
 > [!TIP]
 > 本教學課程需要使用者輸入和網際網路連線。 如果您有興趣[自動](sql-server-linux-setup.md#unattended)或[離線](sql-server-linux-setup.md#offline)安裝程序，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
@@ -126,9 +126,9 @@ ms.lasthandoff: 02/09/2018
 > [!TIP]
 > **Sqlcmd**是一個工具連接到 SQL Server 來執行查詢，並執行管理和開發工作。 其他工具包括：
 >
-> * [SQL Server 作業 Studio （預覽）](../sql-operations-studio/what-is.md)
+> * [SQL Server Operations Studio (預覽)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
 > * [Visual Studio 程式碼](sql-server-linux-develop-use-vscode.md)。
-> * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+> * [mssql-cli (預覽)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

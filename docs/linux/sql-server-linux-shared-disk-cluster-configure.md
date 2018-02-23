@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: ccb754ce5b37e3364ebe68b7b2065ce7b68d050f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體的 SQL Server 上 Linux (RHEL)
 
@@ -41,7 +41,7 @@ SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-若要完成以下的端對端案例中，您需要將兩個節點叢集和儲存體的另一部伺服器部署的兩部電腦。 下列步驟概述這些伺服器設定的方式。
+若要完成下列端對端案例中，您需要將兩個節點叢集和儲存體的另一部伺服器部署的兩部電腦。 下列步驟概述這些伺服器設定的方式。
 
 ## <a name="set-up-and-configure-linux"></a>安裝及設定 Linux
 
@@ -63,7 +63,7 @@ SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可
     > [!NOTE] 
     > 在時間設定，伺服器主要金鑰產生 SQL Server 執行個體，而且位於`var/opt/mssql/secrets/machine-key`。 On Linux，一律以呼叫 mssql 本機帳戶執行 SQL Server。 因為它是本機帳戶，其識別身分不被共用在節點之間。 因此，您要複製的加密金鑰從主要節點，每個次要節點讓每個本機 mssql 帳戶可以存取它來解密 Server 主要金鑰。 
 
-1.  主要節點上，為 Pacemaker 建立 SQL server 登入並授與登入執行的權限`sp_server_diagnostics`。 若要確認哪一個節點執行 SQL Server，pacemaker 會使用此帳戶。 
+1.  主要節點上，為 Pacemaker 建立 SQL server 登入並授與登入執行的權限`sp_server_diagnostics`。 Pacemaker 來確認哪一個節點正在執行 SQL Server 使用此帳戶。 
 
     ```bash
     sudo systemctl start mssql-server
@@ -207,7 +207,7 @@ FCI 會建立資源群組中。 這是有點更容易，因為資源群組的必
 
     \<FolderToMountNFSShare > 是要掛接磁碟的資料夾 （如系統資料庫和預設位置，它會是 /var/opt/mssql/data）
 
-     範例如下所示：
+    以下顯示一個範例：
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr

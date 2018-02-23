@@ -1,6 +1,6 @@
 ---
 title: "在 Linux 上的 SQL Server 2017 的版本資訊 |Microsoft 文件"
-description: "本主題包含的版本資訊，並支援在 Linux 上執行的 SQL Server 2017 的功能。 版本資訊會包含最新的版次和數個先前發行的版本。"
+description: "本文章包含版本資訊，並支援在 Linux 上執行的 SQL Server 2017 的功能。 版本資訊會包含最新的版次和數個先前發行的版本。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,21 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: e8160ec17a856a3c14d1177085c95c329e5d2b3b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 3d53adc21ff54f8fe6171f361fbfba3208a427d1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
-下列版本資訊適用於 SQL Server 2017 在 Linux 上執行。 下列主題會分成區段，每個版本。 GA 版本具有可支援性和詳細的已知問題所列。 每個累計更新 (CU) 發行版本有描述 CU 變更以及連結至 Linux 封裝會下載支援主題的連結。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+下列版本資訊適用於 SQL Server 2017 在 Linux 上執行。 這篇文章會分成區段，每個版本。 GA 版本具有可支援性和詳細的已知問題所列。 每個累計更新 (CU) 發行版本有支援文件，說明了 CU 變更以及 Linux 套件下載連結的連結。
 
 ## <a name="supported-platforms"></a>支援的平台
 
@@ -56,7 +58,7 @@ ms.lasthandoff: 02/09/2018
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <a id="cuinstall"></a>如何安裝累計更新
+## <a id="cuinstall"></a> 如何安裝累計更新
 
 如果您已設定的累計更新儲存機制，您會收到 SQL Server 封裝的最新累積更新時執行的新安裝。 累計更新儲存機制是所有 SQL Server on Linux 的封裝安裝發行項的預設值。 如需儲存機制設定的詳細資訊，請參閱[儲存機制設定 SQL Server on Linux](sql-server-linux-change-repo.md)。
 
@@ -67,7 +69,7 @@ ms.lasthandoff: 02/09/2018
 - [安裝 SQL Server 代理程式套件](sql-server-linux-setup-sql-agent.md)
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
-## <A id="CU2"></a>累計更新 3 (年 1 月 2018)
+## <A id="CU2"></a> 累計更新 3 (年 1 月 2018)
 
 這是 SQL Server 2017 的累積更新 3 (CU3) 版本。 此版本的 SQL Server 引擎版本是 14.0.3015.40。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987)。
 
@@ -81,7 +83,7 @@ ms.lasthandoff: 02/09/2018
 | SLES RPM 套件 | 14.0.3015.40-1 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 封裝 | 14.0.3015.40-1 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <A id="CU2"></a>累計更新 2 (第 2017 年 11 月)
+## <A id="CU2"></a> 累計更新 2 (第 2017 年 11 月)
 
 這是 SQL Server 2017 的累計更新 2 (CU2) 版本。 此版本的 SQL Server 引擎版本是 14.0.3008.27。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)。
 
@@ -95,7 +97,7 @@ ms.lasthandoff: 02/09/2018
 | SLES RPM 套件 | 14.0.3008.27-1 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 封裝 | 14.0.3008.27-1 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <A id="CU1"></a>累計更新 1 (第 2017 年 10 月)
+## <A id="CU1"></a> 累計更新 1 (第 2017 年 10 月)
 
 這是 SQL Server 2017 的累計更新 1 (CU1) 版本。 此版本的 SQL Server 引擎版本是 14.0.3006.16。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634)。
 
@@ -109,7 +111,7 @@ ms.lasthandoff: 02/09/2018
 | SLES RPM 套件 | 14.0.3006.16-3 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 封裝 | 14.0.3006.16-3 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3006.16-3_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3006.16-3_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3006.16-3_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3006.16-3_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GA"></a>GA (第 2017 年 10 月)
+## <a id="GA"></a> GA (第 2017 年 10 月)
 
 這是 SQL Server 2017 的通用版本上市 (GA) 版本。 此版本的 SQL Server 引擎版本是 14.0.1000.169。
 
@@ -128,13 +130,13 @@ ms.lasthandoff: 02/09/2018
 | SLES RPM 套件 | 14.0.1000.169-2 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 封裝 | 14.0.1000.169-2 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-### <a name="Unsupported"></a>不支援的功能和服務
+### <a name="Unsupported"></a> 不支援的功能和服務
 
 下列功能和服務並不適用於 Linux 這一次。 經過一段時間會逐漸啟用這些功能的支援。
 
 | 區域 | 不支援的功能或服務 |
 |-----|-----|
-| **資料庫引擎** | 異動複寫 |
+| 資料庫引擎 | 異動複寫 |
 | &nbsp; | 合併式複寫 |
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
@@ -227,7 +229,7 @@ ms.lasthandoff: 02/09/2018
 
 1. 來源執行個體已在核心中停用 IPv6。 若要確認您的系統是否在核心中啟用 IPv6 的情況，必須通過所有下列測試：
 
-   - `cat /proc/cmdline`將會列印目前的核心的開機 cmdline。 輸出不能包含`ipv6.disable=1`。
+   - `cat /proc/cmdline` 將會列印目前的核心的開機 cmdline。 輸出不能包含`ipv6.disable=1`。
    - Proc/sys/網路/ipv6/目錄必須存在。
    - C 程式中呼叫`socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)`應該會成功-syscall 必須傳回 fd ！ =-1，而且不會因 EAFNOSUPPORT。
 

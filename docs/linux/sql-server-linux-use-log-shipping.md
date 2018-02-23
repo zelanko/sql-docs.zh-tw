@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 48f1782ca1da3e730181402ed947453b6eeefc35
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: af88c21dc246238274ab66b47bb76302f0a86f06
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 
@@ -30,7 +30,7 @@ SQL Server 記錄傳送是 HA 組態資料庫從主要伺服器複寫到一個�
   ![記錄傳送](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-如上圖所述，記錄傳送工作階段包含下列步驟：
+此中所述的圖片，記錄傳送工作階段包含下列步驟：
 
 - 備份交易記錄檔，主要 SQL Server 執行個體
 - 將交易記錄備份檔案透過網路複製到一或多個次要 SQL Server 執行個體

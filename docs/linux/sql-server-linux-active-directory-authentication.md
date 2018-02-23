@@ -9,18 +9,18 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Active Directory 驗證與 SQL Server on Linux
 
@@ -157,7 +157,7 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
   
 5. 請確認您現在可以收集使用者資訊從網域中，您可以取得 Kerberos 票證來當做該使用者。
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   下列範例會使用**識別碼**，  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**，和 **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** 這個命令。
 
    ```bash
    id user@contoso.com
@@ -182,7 +182,7 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>建立 AD 使用者輸入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和設定 SPN
 
   > [!NOTE]
-  > 在下一個步驟中，我們將使用您[完整的網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您在**Azure**，您必須**[建立一個](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**在繼續之前。
+  > 下一個步驟會使用您[完整的網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您在**Azure**，您必須**[建立一個](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**在繼續之前。
 
 1. 在您的網域控制站上執行[New-aduser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 命令，建立新的 AD 使用者的密碼永久有效。 這個範例會命名帳戶 」"mssql，但帳戶名稱可以是任何您喜歡的項目。 系統會提示您輸入新密碼的帳戶：
 
@@ -195,7 +195,7 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
    > [!NOTE]
    > 它是安全性最佳作法，專用的 AD 帳戶的 SQL Server，以便與其他服務使用相同的帳戶不共用的 SQL Server 認證。 不過，您可以重複使用現有的 AD 帳戶如果您想要的話，如果您知道帳戶的密碼 （需要在下一個步驟中產生 keytab 檔案）。
 
-2. 設定使用此帳戶的 ServicePrincipalName (SPN)`setspn.exe`工具。 SPN 格式必須完全依指定，在下列範例： 您可以找到的完整的網域名稱[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦執行`hostname --all-fqdns`上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機和 TCP 連接埠應為 1433年除非您已設定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用不同的連接埠號碼。
+2. 設定使用此帳戶的 ServicePrincipalName (SPN)`setspn.exe`工具。 SPN 必須確實以指定在下列範例中格式化。 您可以找到的完整的網域名稱[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦執行`hostname --all-fqdns`上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機和 TCP 連接埠應為 1433年除非您已設定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用不同的連接埠號碼。
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -218,7 +218,7 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. 建立 AD 使用者，您在上一個步驟中建立的 keytab 檔案。 若要這樣做，我們將使用 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**。 出現提示時，輸入該 AD 帳戶的密碼。
+2. 建立的 keytab 檔案 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 您在上一個步驟中建立 AD 使用者。 出現提示時，輸入該 AD 帳戶的密碼。
 
    ```bash
    sudo ktutil
@@ -267,9 +267,9 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
 
 用戶端電腦使用您的網域認證登入。 現在您可以連接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]無需重新輸入您的密碼，利用 AD 驗證。 如果您建立的 AD 群組的登入，該群組的成員任何 AD 使用者可以連線相同的方式。
 
-特定的連接字串參數，用戶端使用 AD 驗證取決於您所使用的驅動程式。 一些範例如下。
+特定的連接字串參數，用戶端使用 AD 驗證取決於您所使用的驅動程式。 請考量下列範例：
 
-* `sqlcmd`已加入網域的 Linux 用戶端上
+* `sqlcmd` 已加入網域的 Linux 用戶端上
 
    登入加入網域的 Linux 用戶端使用`ssh`和您的網域認證：
 
