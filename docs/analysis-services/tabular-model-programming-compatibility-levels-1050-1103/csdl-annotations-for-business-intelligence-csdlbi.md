@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec23a28ccf5a6fc115ae9aac984c6e9a30eea694
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: dfc70006520f0d4a9e47661de5c065aecf59356f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>商業智慧的 CSDL 註解 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,9 +34,9 @@ ms.lasthandoff: 02/15/2018
   
  雖然 CSDL 符合實體資料架構標準，但您不需要了解實體關聯性模型，也不需要任何特殊工具來建置表格式模型或以模型為基礎的報表。 您會透過使用用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，或像是 AMO 這類應用程式開發介面) 建立模型，並且將模型部署至伺服器。 用戶端會使用模型定義檔連接至模型，通常該檔案會發佈至可供報表設計師與報表取用者使用的 SharePoint 文件庫。 如需詳細資訊，請參閱下列連結：  
   
--   [表格式模型方案 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+-   [表格式模型方案](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
--   [表格式模型方案部署 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [Power Pivot BI 語意模型連接 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   

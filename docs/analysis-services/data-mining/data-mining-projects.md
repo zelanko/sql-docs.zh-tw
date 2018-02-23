@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>資料採礦專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -220,11 +220,11 @@ ms.lasthandoff: 02/15/2018
 |提供有關每一個採礦模型檢視器之資訊的連結|[資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |了解如何建立增益圖、收益圖或分類矩陣，或是測試採礦結構|[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |了解如何處理選項和權限|[處理資料採礦物件](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|提供有關 Analysis Services 的詳細資訊|[多維度模型資料庫 &#40;Ssas&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|提供有關 Analysis Services 的詳細資訊|[多維度模型資料庫 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦設計師](../../analysis-services/data-mining/data-mining-designer.md)   
  [建立使用 SQL Server Data Tools &#40; 多維度模型SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [工作空間資料庫 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [工作空間資料庫](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

@@ -17,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 559a3a65f9a24077bbcac1e0c45506179d2e3da8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c51a35297b1a079ec026c6bcd8ac0fbd0ea7169e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>判斷 Analysis Services 執行個體的伺服器模式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 Analysis Services 可安裝為以下三種伺服器模式之一：多維度和資料採礦 (預設模式)、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
   
- 伺服器模式決定您所建立和部署的方案類型。 如果您沒有安裝伺服器軟體並且想要知道伺服器的安裝模式，可以使用本主題中的資訊來判斷模式。 如需特定模式下功能可用性的詳細資訊，請參閱[比較表格式和多維度解決方案 &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
+ 伺服器模式決定您所建立和部署的方案類型。 如果您沒有安裝伺服器軟體並且想要知道伺服器的安裝模式，可以使用本主題中的資訊來判斷模式。 如需功能可用性的特定模式的詳細資訊，請參閱[比較表格式和多維度解決方案](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
  如果您不要使用所安裝的伺服器模式，則必須解除安裝，然後選擇偏好的模式並重新安裝軟體。 或者，您可以在同一部電腦上安裝 Analysis Services 的其他執行個體，以便讓多個執行個體執行不同模式。  
   
@@ -60,8 +60,8 @@ Analysis Services 可安裝為以下三種伺服器模式之一：多維度和�
  [以多維度及資料採礦模式安裝 Analysis Services](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Power Pivot for SharePoint 2010 安裝](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [表格式模型方案 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
- [多維度模型方案 &#40;Ssas&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [表格式模型方案](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
+ [多維度模型方案 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [採礦模型 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

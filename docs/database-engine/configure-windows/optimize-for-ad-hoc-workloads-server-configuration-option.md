@@ -8,28 +8,30 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: optimize for ad hoc workloads option
+helpviewer_keywords:
+- optimize for ad hoc workloads option
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c02a8cc0852cc8e772bcf9a6f4d0c4084e8851bc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c2b8c7645880d3e6a1ff2ee9d48e2666d7659c68
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>針對特定工作負載最佳化伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  **optimize for ad hoc workloads** 選項是用來針對包含許多使用一次特定批次的工作負載，改善計畫快取的效率。 如果這個選項設定為 1， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會在首次編譯批次時，將小型已編譯計畫虛設常式 (而非完整的已編譯計畫) 儲存在計畫快取中。 這會透過避免計畫快取填滿不重複使用的已編譯計畫，協助減輕記憶體不足的壓力。  
+  **optimize for ad hoc workloads** 選項是用來針對包含許多使用一次特定批次的工作負載，改善計畫快取的效率。 如果這個選項設定為 1， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會在首次編譯批次時，將小型已編譯計畫虛設常式 (而非完整的已編譯計畫) 儲存在計畫快取中。 這會透過避免計畫快取填滿不重複使用的已編譯計畫，協助減輕記憶體不足的壓力。 
   
- 已編譯計畫虛設常式可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 辨識出這個特定批次先前已經編譯，但是只儲存已編譯計畫虛設常式，如此再次叫用 (編譯或執行) 這個批次時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會編譯此批次、從計畫快取中移除已編譯計畫虛設常式，並且將完整的已編譯計畫加入至計畫快取。 
+  已編譯計畫虛設常式可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 辨識出這個特定批次先前已經編譯，但是只儲存已編譯計畫虛設常式，如此再次叫用 (編譯或執行) 這個批次時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會編譯此批次、從計畫快取中移除已編譯計畫虛設常式，並且將完整的已編譯計畫加入至計畫快取。 
   
  已編譯計畫虛設常式是 sys.dm_exec_cached_plans 目錄檢視所顯示的其中一個 cacheobjtype。 它具有唯一的 SQL 控制代碼和計畫控制代碼。 已編譯計畫虛設常式沒有相關聯的執行計畫，因此查詢計畫控制代碼將不會傳回 XML 執行程序表。  
   
@@ -39,6 +41,8 @@ ms.lasthandoff: 01/18/2018
 >  如果大型快取為其他記憶體取用者 (例如緩衝集區) 提供較少的記憶體，追蹤旗標 8032 可能會導致效能降低。  
 
 ## <a name="recommendations"></a>建議
+請避免在計畫快取中有大量的單次使用計畫。 此問題經常是查詢參數的資料類型未一致定義所致。 這特別適用於字串的長度，但可套用至具有長度上限、有效位數或小數位數的任何資料類型。 例如，如果名為 @Greeting 的參數在某次呼叫時作為 Nvarchar(10) 傳遞，並在下次呼叫時作為 Nvarchar(20) 傳遞，則會為每個參數大小建立個別的計畫。 如果查詢具有數個參數，而且其在呼叫時未一致定義，則每個查詢可能存在大量的查詢計畫。 每個曾使用之查詢參數資料類型和長度的組合都可能存在計畫。
+
 如果一次性計畫的數目佔用 OLTP 伺服器中絕大部分的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 記憶體，且這些計畫為特定計畫，請使用此伺服器選項來降低這些物件的記憶體使用量。
 若要找到一次性快取計畫的數目，請執行下列查詢：
 

@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 19a73d527750f53dbff5f5054848933e77668234
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f328102326537d201daa4bb627d818a3a58661dc
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>資料庫物件 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +77,7 @@ A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](
   
 ## <a name="see-also"></a>另請參閱  
  [支援的資料來源 &#40;SSAS-多維度 &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [多維度模型方案 &#40;Ssas&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [多維度模型方案 ](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [資料採礦方案](../../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

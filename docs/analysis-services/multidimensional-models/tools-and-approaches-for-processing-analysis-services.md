@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 910a1fc1ddcd7eee478c5a16ed1243801e482203
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2cf9e507347a28aa36f96b1d2499ec0ff0ee741f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>處理的工具和方式 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/15/2018
  處理是可高度設定的作業，由決定在物件層級上發生完整處理或累加式處理的一組處理選項所控制。 如需處理選項和物件的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) 和[處理 Analysis Services 物件](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
   
 > [!NOTE]  
->  此主題描述用於處理多維度模型的工具和方法。 如需處理表格式模型的詳細資訊，請參閱[處理資料庫、資料表或資料分割 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) 和[處理資料和 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
+>  此主題描述用於處理多維度模型的工具和方法。 如需有關處理表格式模型的詳細資訊，請參閱[處理資料庫、 資料表或分割區 &#40;Analysis Services &#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)和[處理資料](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中處理物件  
   

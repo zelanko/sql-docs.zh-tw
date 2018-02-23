@@ -22,17 +22,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: dacdeff9764aaa11277118cb494900bf6f42e6aa
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
 Analysis Services 會以伺服器部署模式運作，該模式可判斷不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境。 伺服器模式是在安裝期間決定。 **多維度和資料採礦模式**支援傳統 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合的模式**做為已安裝的 Analysis Services 的執行個體是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint，使用載入和查詢 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]活頁簿內的資料模型。  
   
- 本主題說明 Analysis Services 以多維度和資料採礦模式運作時的基本架構。 如需有關其他模式的詳細資訊，請參閱[表格式模型化 &#40;Ssas&#41;](../../../analysis-services/tabular-models/tabular-models-ssas.md)和[比較表格式和多維度方案 &#40;Ssas&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ 本主題說明 Analysis Services 以多維度和資料採礦模式運作時的基本架構。 如需有關其他模式的詳細資訊，請參閱[表格式模型化](../../../analysis-services/tabular-models/tabular-models-ssas.md)和[比較表格式和多維度解決方案](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
 ## <a name="basic-architecture"></a>基本架構  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體可包含多個資料庫，而且資料庫可同時有 OLAP 物件和資料採礦物件。 應用程式會連接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體和指定的資料庫。 伺服器電腦可主控多個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 執行個體[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]名為"\<ServerName >\\< InstanceName\>"。 下圖顯示之間所有提及的關聯性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件。  
@@ -133,6 +133,6 @@ Analysis Services 會以伺服器部署模式運作，該模式可判斷不同�
  此處所顯示的範例只包含單一事實資料表。 當 Cube 具有多份事實資料表時，會將每份事實資料表的量值組成量值群組，並根據定義的維度關聯性讓量值群組與特定的維度集產生關聯。 而透過指定資料來源檢視的參與資料表和關聯性的資料粒度，即可建立這些關聯性。 **相關的主題：**[維度關聯性](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型資料庫 &#40;SSAS&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多維度模型資料庫 ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

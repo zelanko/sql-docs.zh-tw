@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>設定 Analysis Services 進行 Kerberos 限制委派
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_delegate"></a> 設定 Analysis Services 進行受信任委派  
  設定 Analysis Services 進行 Kerberos 限制委派讓本服務得以模擬下層服務如關聯式資料庫引擎的用戶端識別，從而能夠有如用戶端直接連接般地查詢資料。  
   
- Analysis Services 的委派狀況乃限制為設定 **DirectQuery** 模式的表格式模型。 唯有在此狀況下 Analysis Services 才能將委派的認證傳遞給其他服務。 在其他所有案例 (如上一節提及的 SharePoint 案例) 中，Analysis Services 位於委派鏈結的接收端。 如需 DirectQuery 的詳細資訊，請參閱 [DirectQuery 模式 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。  
+ Analysis Services 的委派狀況乃限制為設定 **DirectQuery** 模式的表格式模型。 唯有在此狀況下 Analysis Services 才能將委派的認證傳遞給其他服務。 在其他所有案例 (如上一節提及的 SharePoint 案例) 中，Analysis Services 位於委派鏈結的接收端。 如需有關 DirectQuery 的詳細資訊，請參閱[DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。  
   
 > [!NOTE]  
 >  經常造成誤解的是，ROLAP 儲存、處理作業或遠端資料分割的存取會因不明原因而有限制委派的需求。 事實並非如此。 這些作業全部是由服務帳戶 (亦稱為處理帳戶) 自行直接執行。 如果 Analysis Services 中的這些作業的權限會直接授與服務帳戶 (例如關聯式資料庫上的 granting db_datareader 權限，讓服務可以處理資料)，這些作業就不需要委派。 如需伺服器作業和權限的詳細資訊，請參閱[設定服務帳戶 &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。  

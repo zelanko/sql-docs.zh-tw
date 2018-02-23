@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77a8043d96f99543428121c3b98a58a7704ec0b2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6d84e48d30af647f8a07e514492ce9d883f33249
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="roles-and-permissions-analysis-services"></a>角色與權限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,6 +64,6 @@ ms.lasthandoff: 02/15/2018
 -   [授與自訂資料 &#40; 的儲存格的存取Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [建立及管理角色 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
+ [建立及管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
   
   

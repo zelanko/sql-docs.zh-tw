@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比較表格式和多維度解決方案
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -122,7 +122,7 @@ ms.lasthandoff: 02/15/2018
   
  若要檢視您可以匯入至每個模型中的外部資料來源清單，請參閱下列主題：  
   
--   [支援的資料來源 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+-   [支援的資料來源](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
 
 -   [支援的資料來源 &#40;SSAS - 多維度&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   

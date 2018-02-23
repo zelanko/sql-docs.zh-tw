@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21e11773cfe402d85d661c009bf1b6a2fef7235a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 230e5438e9494a873a0045eebb2870597834b5be
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ Hierarchy 元素是資料表中可彼此連結以構成階層之欄位的邏輯�
 |Level|是|一個或多個 Level 元素，會定義階層中所使用的資料行。<br /><br /> 請參閱 [Level 元素 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md)。|  
   
 ## <a name="remarks"></a>備註  
- 在表格式模型中，您可以在相同資料表的資料行之間指定父子式關聯性，藉以建立階層。 如需詳細資訊，請參閱[階層 &#40;SSAS 表格式&#41;](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
+ 在表格式模型中，您可以在相同資料表的資料行之間指定父子式關聯性，藉以建立階層。 如需詳細資訊，請參閱[階層](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
   
 ## <a name="example"></a>範例  
  **表格式**  
