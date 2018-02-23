@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,30 +17,32 @@ f1_keywords:
 - sys.dm_tran_version_store_space_usage
 - dm_tran_version_store_space_usage
 - dm_tran_version_store_space_usage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_version_store_space_usage dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_version_store_space_usage dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: cfdd2caa03fdd12501580c2584d68f374ee54222
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 3108394b7848047bac97ece004bf9c168b0e045c
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
+# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-傳回資料表，以顯示在 tempdb 版本存放區記錄所使用的每個資料庫中的總空間。 **sys.dm_tran_version_store_space_usage**有效率、 高效能執行，因為它不會瀏覽個別的版本存放區會記錄，並傳回每個資料庫 tempdb 中取用的彙總的版本存放區空間。
+傳回資料表，以顯示在 tempdb 版本存放區記錄所使用的每個資料庫中的總空間。 **sys.dm_tran_version_store_space_usage**是有效率且不耗費資源，若要執行，它不會不瀏覽個別的版本存放區記錄，並傳回彙總每個資料庫 tempdb 中取用的版本存放區空間。
   
-每一個版本控制記錄是以二進位資料連同一些追蹤或狀態資訊儲存在一起。 與資料庫資料表中的記錄類似，版本存放區記錄也是儲存在 8192 位元組的頁面中。 如果記錄超出 8192 位元組，該記錄便會分割成兩個不同的記錄。  
+每個版本控制記錄會儲存為二進位資料，連同一些追蹤或狀態資訊。 與資料庫資料表中的記錄類似，版本存放區記錄也是儲存在 8192 位元組的頁面中。 如果記錄超出 8192 位元組，該記錄便會分割成兩個不同的記錄。  
   
 因為版本控制記錄是以二進位儲存，所以不同資料庫的不同定序不會造成問題。 使用**sys.dm_tran_version_store_space_usage**根據 SQL Server 執行個體中的資料庫版本存放區空間使用量的監視和規劃的 tempdb 大小。
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|資料庫的資料庫識別碼。|  
 |**reserved_page_count**|**bigint**|Tempdb 的版本中保留的頁面的總計數存放區資料庫的記錄。|  
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/02/2018
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
 
 ## <a name="examples"></a>範例  
- 下列查詢可用來判斷使用 tempdb 中空間由 SQL Server 執行個體中每個資料庫的版本存放區。 
+ 下列查詢可判斷在 tempdb 中，使用的空間供版本存放區中每個資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 
   
 ```sql  
 SELECT 
@@ -70,7 +73,7 @@ AdventureWorks2016DW      0                    0
 WideWorldImporters        20                   160             
 ```
  
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

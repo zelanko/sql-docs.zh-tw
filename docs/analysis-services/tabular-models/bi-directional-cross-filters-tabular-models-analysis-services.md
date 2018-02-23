@@ -1,7 +1,7 @@
 ---
-title: "雙向交叉篩選-表格式模型的 Analysis Services |Microsoft 文件"
+title: "雙向交叉篩選在表格式模型 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e0ffd9fce046edae4098f965f2cc2967fa7f1e3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b3d4854a602dc3eb7b02a50dc760409243a64313
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>雙向交叉篩選-表格式模型的 Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]新 SQL Server 2016 中已內建方法啟用*雙向交叉篩選*在表格式模型中，因而不須對手工 DAX 因應措施的資料表關聯性之間傳播篩選內容。  
+# <a name="bi-directional-cross-filters-in-tabular-models"></a>在表格式模型中的雙向交叉篩選
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+SQL Server 2016 中有內建的新方法可以啟用表格式模型中的「雙向交叉篩選」，因此不需要透過自訂 DAX 因應措施在資料表關聯性之間散佈篩選內容。  
   
  此概念可分解成以下元件組件：「交叉篩選」是指根據相關資料表中的值設定資料表篩選內容的功能，而「雙向」是指將篩選內容傳遞至資料表關聯性另一端的第二個相關資料表。 正如其名，您有兩種方向可以切入關聯性，而不是只有一種方向。  就內部而言，雙向篩選會展開篩選內容來查詢資料的超集。  
   
- ![SSAS BIDI 1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS BIDI 1-Filteroption")  
+ ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- 交叉篩選有兩種類型：單向和雙向篩選。 「單向」是關聯性中事實和維度資料表之間傳統的多對一篩選方向。 「雙向」是是一種交叉篩選，可讓某項關聯性的篩選內容能做為另一項資料表關聯性的篩選內容，也就是兩項關聯性共用一個資料表。  
+ 有兩種類型的交叉篩選： 單向和雙向篩選。 「單向」是關聯性中事實和維度資料表之間傳統的多對一篩選方向。 「雙向」是是一種交叉篩選，可讓某項關聯性的篩選內容能做為另一項資料表關聯性的篩選內容，也就是兩項關聯性共用一個資料表。  
   
  假設 **DimDate** 和 **DimProduct** 與 **FactOnlineSales**有外部索引鍵關聯性，則雙向篩選等同於同時使用 **FactOnlineSales-to-DimDate** 加上 **FactOnlineSales-to-DimProduct** 。  
   
@@ -65,18 +66,18 @@ ms.lasthandoff: 01/08/2018
 ## <a name="walkthrough-an-example"></a>範例逐步說明  
  了解雙向交叉篩選的最佳方法是透過範例。 請考慮以下來自 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)的資料集，其反映預設建立的基數和交叉篩選。  
   
- ![SSAS BIDI-2 模式](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2-模型")  
+ ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   
 > [!NOTE]  
 >  根據預設，在匯入資料期間，會以衍生自事實資料表和相關維度資料表之間的外部索引鍵和主索引鍵關聯性的多對一設定，來建立資料表關聯性。  
   
  請注意篩選方向是從維度資料表到事實資料表 -- 促銷、產品、日期、客戶及客戶地理位置都是有效的篩選。  
   
- ![ssas bidi 3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas bidi 3-defaultrelationships")  
+ ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
  對於這個簡單的星型結構描述，在 Excel 中測試可確認從資料列和資料行上的維度資料表，篩選到由位在中心 **FactOnlineSales** 資料表的 **Sum of Sales** 量值所提供的彙總資料時，資料會正確地切割。  
   
- ![ssas bidi 4-excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas bidi 4-excelSumSales")  
+ ![ssas-bidi-4-excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas-bidi-4-excelSumSales")  
   
  只要量值是從事實資料表提取，且篩選內容終止於事實資料表，對此模型的彙總就會正確篩選。 如果您想在其他位置建立量值 (例如在 products 或 customer 資料表中的特殊計數，或 promotion 資料表中的 average discount)，並讓現有的篩選內容擴充到該量值，則會發生什麼事。  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  選擇 [ContosoRetailDW] 資料庫。  
   
-4.  按 [下一步] 。  
+4.  按一下 **[下一步]**。  
   
 5.  選取資料表時，按下 Ctrl 並選取下列資料表：  
   
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/08/2018
   
      如果您想要它們在模型中更容易閱讀，可以在此步驟編輯名稱。  
   
-     ![ssas bidi-7 ImportData](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "ssas bidi-7 ImportData")  
+     ![ssas-bidi-7-ImportData](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "ssas-bidi-7-ImportData")  
   
 6.  匯入資料  
   
@@ -146,11 +147,11 @@ ms.lasthandoff: 01/08/2018
 ### <a name="review-default-table-relationships"></a>檢閱預設資料表關聯性  
  切換至圖表檢視︰[模型] > [模型檢視] > [圖表檢視]。 基數和作用中的關聯性是以視覺化方式表示。 所有關聯性都是任兩個相關資料表之間的一對多關聯。  
   
- ![SSAS BIDI-2 模式](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2-模型")  
+ ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   
  或者，按一下 [資料表] > [管理關聯性] 以在表格配置中檢視相同的資訊。  
   
- ![ssas bidi 3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas bidi 3-defaultrelationships")  
+ ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
 ### <a name="create-measures"></a>建立量值  
  您將需要彙總來以維度資料的不同 Facet 的加總銷售量。 在 **DimProduct** 中，您可以建立計算產品的量值，並將它用於產品推銷的分析，顯示針對指定的年份、指定的地區或客戶類型所銷售之產品的計數。  
@@ -197,14 +198,14 @@ ms.lasthandoff: 01/08/2018
   
  您現在應該會看到產品計數和銷售都以相同的篩選內容篩選，其中不只包含來自 **DimProducts** 的製造商，也包含來自 **DimDate**的日曆年度。  
   
-## <a name="conclusion-and-next-steps"></a>結論與後續步驟  
+## <a name="next-steps"></a>後續的步驟  
  了解雙向交叉篩選可以當作試誤學習的時機與方法，以明白它在您的案例中會如何運作。 有時候，您會發現內建行為並不足夠，且必須回到 DAX 計算上以完成工作。 在＜另請參閱＞  一節中，您會找到一些關於此主題的其他資源的連結。  
   
  實際上來說，交叉篩選能夠啟用通常只有透過多對多建構才能提供的資料瀏覽格式。 然而，請務必了解雙向交叉篩選不是多對多建構。  此版本的表格式模型設計仍不支援實際的多對多資料表設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 Power BI Desktop 建立並管理關聯性](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [如何處理簡單多對多關聯性，在 Power Pivot 和 SSAS 表格式模型中的實際範例](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [如何處理簡單多對多關聯性，Powerpivot 和表格式模型中的實際範例](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [正在解析多對多關聯性利用 DAX 交叉資料表篩選](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
  [多對多革命 （SQLBI 部落格）](http://www.sqlbi.com/articles/many2many/)  
   

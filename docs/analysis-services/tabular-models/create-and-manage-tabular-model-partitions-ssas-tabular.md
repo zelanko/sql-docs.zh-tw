@@ -1,7 +1,7 @@
 ---
-title: "建立及管理表格式模型資料分割 (SSAS 表格式) |Microsoft 文件"
+title: "建立及管理表格式模型資料分割 |Microsoft 文件"
 ms.custom: 
-ms.date: 05/31/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1fc4d1caf2aacf96a44b33d44e6d95cc98e955c4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1dfe0ae7dd1ee92cd365a34cf6502d8358c474cb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>建立及管理表格式模型資料分割
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
 -   在 [資料分割] 對話方塊的 [資料分割] 清單中，選取您要刪除的資料分割，然後按一下 [刪除] 按鈕。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型資料分割](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
  [處理表格式模型資料分割](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   

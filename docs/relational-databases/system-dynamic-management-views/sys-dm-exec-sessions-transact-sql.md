@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Permissions  
 每個人都可以查看他們自己的工作階段資訊。  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:**需要`VIEW SERVER STATE`權限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]以查看在伺服器上的所有工作階段。  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:**需要`VIEW DATABASE STATE`若要查看目前資料庫的所有連接。 `VIEW DATABASE STATE`無法授與在`master`資料庫。 
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:**需要`VIEW DATABASE STATE`若要查看目前資料庫的所有連接。 `VIEW DATABASE STATE` 無法授與在`master`資料庫。 
   
   
 ## <a name="remarks"></a>備註  
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/03/2018
  如果沒有啟用這個選項，這些資料行會傳回 null 值。 如需如何設定此伺服器組態選項的詳細資訊，請參閱[通用條件符合已啟用伺服器組態選項](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)。  
  
  
- Azure SQL Database 的系統管理連線會看到每個已驗證的工作階段的一個資料列，而非系統管理員連線只會看到他們的資料庫使用者工作階段的相關資訊。 
+ Azure SQL Database 的系統管理連線會看到每個已驗證的工作階段的一個資料列。 "Sa"工作階段，會出現在結果集，並沒有任何影響上的使用者配額為工作階段。 非系統管理員連線只會看到他們的資料庫使用者工作階段的相關資訊。
  
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  

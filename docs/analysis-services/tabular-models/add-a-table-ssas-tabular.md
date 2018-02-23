@@ -1,7 +1,7 @@
 ---
-title: "加入資料表 (SSAS 表格式) |Microsoft 文件"
+title: "將資料表加入 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 71a4385d5f6ab0a2fd396b78651a8609d55e74ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e8a168359f76db1b0871a6a4ba2b8d25d2973a1a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="add-a-table-ssas-tabular"></a>加入資料表 (SSAS 表格式)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述如何將資料表加入資料來源的從中先前匯入資料模型。 若要從相同的資料來源加入資料表，您可以使用現有的資料來源連接。 從單一資料來源匯入任何數目的資料表時，建議您一律使用單一連接。  
+# <a name="add-a-table"></a>加入資料表
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文說明如何將資料表加入資料來源的從中先前匯入資料模型。 若要從相同的資料來源加入資料表，您可以使用現有的資料來源連接。 從單一資料來源匯入任何數目的資料表時，建議您一律使用單一連接。  
   
 ### <a name="to-add-a-table-from-an-existing-data-source"></a>若要從現有的資料來源加入資料表  
   
@@ -44,8 +45,8 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  同時從單一資料來源匯入多個資料表時，系統將自動在模型中建立這些位於來源之資料表之間的任何關聯性。 不過，之後加入資料表時，您可能必須在模型中手動建立新加入資料表與先前匯入資料表之間的關聯性。  
   
-## <a name="see-also"></a>請參閱  
- [匯入資料 (SSAS 表格式)](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)   
- [刪除資料表 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
+## <a name="see-also"></a>另請參閱  
+ [匯入資料](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)   
+ [刪除資料表](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
   
   

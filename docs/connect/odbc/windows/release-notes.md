@@ -1,7 +1,7 @@
 ---
-title: "版本資訊 |Microsoft 文件"
+title: "版本資訊 (ODBC Driver for SQL Server) |Microsoft 文件"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,11 +17,11 @@ caps.latest.revision:
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: 44c73c4d632fd434fcd296dc6fc2cc70af26086c
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 2b0846781a17fdad4c8cf9e39cab743595a20e7e
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="release-notes"></a>版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -50,6 +50,7 @@ SQL Azure 受管理的執行個體 （擴充私人預覽中） 的支援。
 > -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] 不支援
 > -   錯誤訊息都會顯示在英文中，不論語言為何設定 （如同 Azure） 
   
+
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>新功能的[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows 上  
  ODBC Driver 13.1 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]新增支援[永遠加密](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)和[Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)時用於搭配 Microsoft SQL Server 2016。  共用的關鍵字/屬性中所述的對應連接[驅動程式知道連線集區中的 ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)。
 

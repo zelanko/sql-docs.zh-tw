@@ -1,7 +1,7 @@
 ---
 title: "匯入資料使用原生查詢 (Analysis Services) |Microsoft 文件"
 ms.custom: 
-ms.date: 10/26/2017
+ms.date: 02/20/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -16,14 +16,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1200775d4b80639c3e6e2cb5ab127e3d1bb5254
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: be1de1271558dd840f12214b8986be85572ebe6d
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="import-data-by-using-a-native-query"></a>使用原生查詢匯入資料
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]對於表格式 1400年模型中，Visual Studio Analysis Services 專案中新的 [取得資料] 功能提供極大的彈性如何混用您的資料匯入期間。 本文說明建立資料來源的連接，然後再建立原生 SQL 查詢來指定資料匯入。
+[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
+對於表格式 1400年模型中，Visual Studio Analysis Services 專案中新的 [取得資料] 功能提供極大的彈性如何混用您的資料匯入期間。 本文說明建立資料來源的連接，然後再建立原生 SQL 查詢來指定資料匯入。
 
 若要完成本文章中所述的工作，請確定您使用最新版的 SSDT。 如果您使用 Visual Studio 2017，請確定您已下載並安裝年 9 月 2017年或更新版本的 Microsoft Analysis Services 專案 VSIX。
 

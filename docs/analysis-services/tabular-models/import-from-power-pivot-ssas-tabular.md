@@ -1,5 +1,5 @@
 ---
-title: "從 Power Pivot (SSAS 表格式) 匯入 |Microsoft 文件"
+title: "從 Power Pivot 匯入 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.importfromppt.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71de8ff892ff328abe134069d0ffd703846721c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cf23e21dfa0a87af7702bf07961d71184e6a59c2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="import-from-power-pivot-ssas-tabular"></a>從 Power Pivot 匯入 (SSAS 表格式)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述如何建立新的表格式模型專案匯入中繼資料和資料從[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用從匯入活頁簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中的專案範本[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+# <a name="import-from-power-pivot"></a>從 Power Pivot 匯入 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文說明如何建立新的表格式模型專案匯入中繼資料和資料從[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用從匯入活頁簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中的專案範本[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>從 Power Pivot for Excel 檔案建立新的表格式模型  
  從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿匯入來建立新的表格式模型專案時，會使用定義活頁簿結構的中繼資料來建立及定義 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中表格式模型專案的結構。 資料表、資料行、量值和關聯性等物件會保留，並以其在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的顯示方式出現在表格式模型專案中。 .xlsx 活頁簿檔案將不會做任何變更。  
@@ -51,8 +53,8 @@ ms.lasthandoff: 01/08/2018
   
 4.  在 [開啟] 對話方塊中，選取包含您要匯入之模型中繼資料和資料的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 檔案，然後按一下 [開啟]。  
   
-## <a name="see-also"></a>請參閱  
- [工作空間資料庫 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
- [複製並貼上資料 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
+## <a name="see-also"></a>另請參閱  
+ [工作空間資料庫](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
+ [複製及貼上資料](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   

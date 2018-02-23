@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77f18549714e52e2d5681084b0b2246c838b5467
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c54a97a7b84dcb4d9873ee2537e31714b6f62172
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/03/2018
  結果集中的資料行，共分成資源和要求兩個主要群組。 資源群組描述鎖定要求所針對的資源，而要求群組則描述該鎖定要求。  
   
 > [!NOTE]  
->  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_tran_locks**。  
+> 若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_tran_locks**。  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
@@ -70,8 +70,6 @@ ms.lasthandoff: 02/03/2018
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
  
-
-  
 ## <a name="remarks"></a>備註  
  如果是已授與的要求狀態，表示已將資源鎖定授與要求器。 而等待中的要求，表示尚未授與該要求。 傳回下列等候要求類型**request_status**資料行：  
   
@@ -295,7 +293,7 @@ ms.lasthandoff: 02/03/2018
 ### <a name="a-using-sysdmtranlocks-with-other-tools"></a>A. 使用 sys.dm_tran_locks 與其他工具  
  下列範例將使用更新作業遭其他交易封鎖的案例。 使用**sys.dm_tran_locks**和其他工具，提供有關鎖定資源的資訊。  
   
-```  
+```sql  
 USE tempdb;  
 GO  
   
@@ -333,7 +331,7 @@ BEGIN TRAN
   
  下列查詢將會顯示鎖定資訊。 值`<dbid>`應該取代成**database_id**從**sys.databases**。  
   
-```  
+```sql  
 SELECT resource_type, resource_associated_entity_id,  
     request_status, request_mode,request_session_id,  
     resource_description   
@@ -351,7 +349,7 @@ SELECT object_name(object_id), *
   
  下列查詢將會顯示封鎖資訊。  
   
-```  
+```sql  
 SELECT   
         t1.resource_type,  
         t1.resource_database_id,  
@@ -366,7 +364,7 @@ SELECT
   
  透過回復交易的方式來釋放資源。  
   
-```  
+```sql  
 -- Session 1  
 ROLLBACK;  
 GO  
@@ -379,7 +377,7 @@ GO
 ### <a name="b-linking-session-information-to-operating-system-threads"></a>B. 將工作階段資訊連結到作業系統執行緒  
  下列範例會傳回與 Windows 執行緒識別碼的工作階段識別碼相關聯的資訊。 執行緒的效能可以再 Windows 效能監視器中監視。 這項查詢不會傳回目前睡眠中的工作階段識別碼。  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
     FROM sys.dm_os_tasks AS STasks  
     INNER JOIN sys.dm_os_threads AS SThreads  
@@ -391,9 +389,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
-  
-
-

@@ -1,7 +1,7 @@
 ---
-title: "建立及管理檢視方塊 (SSAS 表格式) |Microsoft 文件"
+title: "建立及管理檢視方塊 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,33 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.perspectivedb.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c414c0edae99923b8c8e3d370a1d998fe39ccef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5149052156082507c6c970512ab7db0194209ab5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-perspectives-ssas-tabular"></a>建立及管理檢視方塊 (SSAS 表格式)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]檢視方塊會定義可檢視之模型子集提供有焦點，商務特有或應用程式特定的模型視點。 本主題中的工作會描述如何使用模型設計師中的 **[檢視方塊]** 對話方塊，建立及管理檢視方塊。  
-  
- 本主題也包括下列工作：  
-  
--   [加入檢視方塊](#bkmk_add)  
-  
--   [若要編輯檢視方塊](#bkmk_edit)  
-  
--   [重新命名檢視方塊](#bkmk_rename)  
-  
--   [刪除檢視方塊](#bkmk_delete)  
-  
--   [複製檢視方塊](#bkmk_copy)  
+# <a name="create-and-manage-perspectives"></a>建立及管理檢視方塊 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+檢視方塊會定義可檢視之模型子集，對模型提供具體的商務特有或應用程式特有視點。 本主題中的工作會描述如何使用模型設計師中的 **[檢視方塊]** 對話方塊，建立及管理檢視方塊。  
   
 ## <a name="tasks"></a>工作  
  若要建立檢視方塊，請使用 **[檢視方塊]** 對話方塊，即可在其中加入、編輯、刪除、複製及查看檢視方塊。 若要在 **中檢視** [檢視方塊] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]對話方塊，請按一下 **[模型]** 功能表，然後按一下 **[檢視方塊]**。  
@@ -64,8 +54,8 @@ ms.lasthandoff: 01/08/2018
   
 -   當您將滑鼠停留在檢視方塊的資料行標頭上方時， **[複製]** 按鈕隨即顯示。 若要複製檢視方塊，請按一下 **[複製]** 按鈕。 在現有檢視方塊的右邊就會加入選定檢視方塊的副本，做為新檢視方塊。 新檢視方塊會繼承原本檢視方塊的名稱，並且於名稱結尾處加上 *- 複本* 註記。 例如，建立 *Sales* 檢視方塊的副本時，新的檢視方塊名稱會是 *Sales – 複製*。  
   
-## <a name="see-also"></a>請參閱  
- [檢視方塊 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [階層 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
+## <a name="see-also"></a>另請參閱  
+ [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [階層架構](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   

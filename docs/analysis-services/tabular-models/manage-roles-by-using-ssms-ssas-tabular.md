@@ -1,5 +1,5 @@
 ---
-title: "使用 （SSAS 表格式） SSMS 管理角色 |Microsoft 文件"
+title: "使用 SSMS 管理角色 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc580d8e36284f9c2527257d2e87bd3d16ec603a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9472bef0e1971c3f8868902b5cd91189256e860d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="manage-roles-by-using-ssms-ssas-tabular"></a>使用 SSMS 管理角色 (SSAS 表格式)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]您可以建立、 編輯和管理已部署的表格式模型角色使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+# <a name="manage-roles-by-using-ssms"></a>使用 SSMS 管理角色 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+對於部署的表格式模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立、編輯和管理角色。  
   
  本主題的工作：  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  在 [為這個角色設定資料庫權限] 中，選取下列其中一個權限選項：  
   
-    |權限|描述|  
+    |權限|說明|  
     |----------------|-----------------|  
     |**完整控制權 (管理員)**|成員可以對模型結構描述進行修改，也可以檢視所有資料。|  
     |**處理資料庫**|成員可以執行「處理」和「全部處理」作業。 無法修改模型結構描述，也無法檢視資料。|  
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 8.  在 [資料列篩選] 視窗中，選取資料表，然後按一下 [ **DAX 篩選**] 欄位中，然後在**DAX 篩選- \<tablename >**欄位中，輸入 DAX 公式。  
   
     > [!NOTE]  
-    >  [DAX 篩選- \<tablename >] 欄位不包含自動完成查詢編輯器或插入函數功能。 若要在撰寫 DAX 公式時使用自動完成功能，您必須在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式編輯器。  
+    >  [DAX 篩選- \<tablename >] 欄位不包含自動完成查詢編輯器或插入函數功能。 若要在撰寫 DAX 公式時使用自動完成功能，您必須在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中使用 DAX 公式編輯器。  
   
 9. 按一下 [確定]，儲存角色。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 01/08/2018
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，展開包含您要刪除之角色的表格式模型資料庫，然後展開 [角色]，再以滑鼠右鍵按一下此角色，然後按一下 [刪除]。  
   
-## <a name="see-also"></a>請參閱  
- [角色 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+## <a name="see-also"></a>另請參閱  
+ [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

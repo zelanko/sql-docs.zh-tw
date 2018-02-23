@@ -1,5 +1,5 @@
 ---
-title: "角色 (SSAS 表格式) |Microsoft 文件"
+title: "角色 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bbbcfdbaafa7e5cbc17defc91b5dc7e391d92ad6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="roles"></a>角色
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]角色、 表格式模型中定義成員模型的權限。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+表格式模型中的角色定義模型的成員權限。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。 
   
  SQL Server Analysis services，角色包含使用者成員依 Windows 使用者名稱或 Windows 群組和權限 （讀取、 處理程序、 系統管理員）。 Azure Analysis services，使用者必須在您的 Azure Active Directory 和使用者名稱和指定的群組都必須是組織的電子郵件地址的 UPN。 
   
@@ -46,14 +47,14 @@ ms.lasthandoff: 01/08/2018
   
  根據預設，當您建立新的表格式模型專案時，模型專案沒有任何角色。 角色可以使用 SSDT 中的 [角色管理員] 對話方塊來定義。 在模型撰寫期間定義角色時，會將這些角色套用至模型工作空間資料庫。 部署模型時，會將相同的角色套用至已部署的模型。 在部署模型之後，伺服器角色 （[Analysis Services 系統管理員） 和資料庫管理員的成員可以管理與模型相關聯的角色以及使用 SSMS 相關聯的每個角色的成員。  
   
-##  <a name="bkmk_permissions"></a> 權限  
+##  <a name="bkmk_permissions"></a> Permissions  
  每一個角色都有一個已定義的資料庫權限 (但不包括「讀取和處理」結合權限)。 新角色的預設權限為「無」。 換句話說，成員一旦加入至具有「無」權限的角色後，除非授與其他權限，否則將無法修改資料庫、執行處理作業、查詢資料或查看資料庫。  
   
  群組或使用者可以是任意數目的角色，每個具有不同的權限的角色成員。 當使用者是多個角色的成員時，針對每個角色定義的權限會累計。 例如，如果某位使用者是具有「讀取」權限之角色的成員，同時也是具有「無」權限之角色的成員，則該使用者將具有「讀取」權限。  
   
  每個角色可以定義下列其中一個權限：  
   
-|Permissions|描述|使用 DAX 的資料列篩選|  
+|Permissions|Description|使用 DAX 的資料列篩選|  
 |-----------------|-----------------|----------------------------|  
 |無|成員無法對模型資料庫結構描述進行任何修改，也無法查詢資料。|不會套用資料列篩選。 此角色的使用者看不到任何資料|  
 |讀取|允許成員查詢資料 (根據資料列篩選)，但是無法在 SSMS 中看到模型資料庫，也無法對模型資料庫結構描述做任何變更，使用者也無法處理模型。|可套用資料列篩選。 使用者只能看到資料列篩選 DAX 公式中指定的資料。|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 01/08/2018
   
  若要實現動態安全性，您可以使用以下函數做為 DAX 公式的一部分，來傳回目前登入使用者的使用者名稱，或傳回連接字串中的 CustomData 屬性：  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |[USERNAME 函數 (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)|傳回目前登入使用者的 domain\username。|  
 |[CUSTOMDATA 函數 (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|傳回連接字串中的 CustomData 屬性。|  
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/08/2018
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|@shouldalert|Corporate|  
+|1|Corporate|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
 |4|Manufacturing|  
@@ -124,11 +125,11 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[建立及管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|此主題中的工作描述如何使用 [角色管理員] 對話方塊來建立及管理角色。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [在 Excel 中進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
  [USERNAME 函數 (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   

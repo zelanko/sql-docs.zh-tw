@@ -1,7 +1,7 @@
 ---
 title: "字串儲存體和表格式模型中的定序 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3b6a2cd9235163e6586edb21e71f24bc8d1d1c4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f84b7fb415372066b820119280dd3728d340322d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="string-storage-and-collation-in-tabular-models"></a>表格式模型中的字串儲存和定序
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]字串 （文字值） 會儲存在高度壓縮的格式，在表格式模型中;由於此壓縮，您可以取得非預期的結果，當您擷取整個或部分字串時。 此外，因為字串地區設定和定序是繼承自階層結構上最接近的父物件，所以如果未明確定義字串語言，父物件的地區設定和定序可能會影響各字串的儲存方式以及字串是唯一還是與父定序所定義的相似字串合併。  
+# <a name="string-storage-and-collation-in-tabular-models"></a>字串儲存體和表格式模型中的定序
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+字串 (文字值) 以高度壓縮的格式儲存在表格式模型中；由於此壓縮，您在擷取整個或部分字串時可能會得到意外結果。 此外，因為字串地區設定和定序是繼承自階層結構上最接近的父物件，所以如果未明確定義字串語言，父物件的地區設定和定序可能會影響各字串的儲存方式以及字串是唯一還是與父定序所定義的相似字串合併。  
   
- 此主題描述壓縮和儲存字串的機制，並且提供一些範例，說明定序和語言如何影響表格式模型中文字公式的結果。  
+ 本文描述的字串會壓縮和儲存的機制，並提供的定序和語言如何影響表格式模型中文字公式的結果範例。  
   
 ## <a name="storage"></a>儲存空間  
  在表格式模型中，所有資料都是高度壓縮，以更好地放入記憶體中。 因此，可視為語彙相等的所有字串只儲存一次。 該字串的第一個執行個體做為標準表示，並將此後每個相等字串編制索引為與第一次出現字串相同的壓縮值。  

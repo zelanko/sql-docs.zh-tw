@@ -1,5 +1,5 @@
 ---
-title: "設定 Power View 報表 (SSAS 表格式) 的資料表行為屬性 |Microsoft 文件"
+title: "設定 Power View 報表的資料表行為屬性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-設定報表的資料表行為屬性
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]如果您使用表格式模型當做資料模型的[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，您可以設定資料表行為屬性，以公開更細微的層級的詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊 (例如姓名、相片識別碼或標誌影像) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+如果您要將表格式模型當作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 的資料模型使用，可以設定資料表行為屬性，在更細微的層級公開詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊 (例如姓名、相片識別碼或標誌影像) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 不同於其他報表應用程式，因為它會在報表設計期間自動群組項目，方法是根據您所使用的呈現格式來評估您將哪些資料行放在報表欄位清單中。 在大多數情況下，預設群組行為會產生最佳的結果。 但對於某些資料表 (主要是包含詳細資料的資料表)，預設群組行為有時會將不應群組的資料列群組在一起。 如果是這類資料表，您可以設定屬性來變更評估群組的方式。  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
 -   從矩陣報表中移除不必要的小計。 欄位層級的預設群組會針對每個欄位建立小計。 如果您只要在資料列層級計算的單一小計，設定 [資料列識別碼] 會產生此結果。  
   
- 已標記為日期資料表的資料表不能設定資料列識別碼。 日期資料表的資料列識別碼是在標記為日期資料表時指定。 如需詳細資訊，請參閱[標記為日期資料表對話方塊 &#40;SSAS&#41;](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)。  
+ 已標記為日期資料表的資料表不能設定資料列識別碼。 日期資料表的資料列識別碼是在標記為日期資料表時指定。 如需詳細資訊，請參閱[標記為日期資料表對話方塊](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)。  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>設定保留唯一資料列屬性  
  這個屬性可讓您指定哪些資料行以區分資料列的方式來傳達識別資訊 (例如員工姓名或產品代碼)。 在多個資料列看起來相同的案例中 (例如兩個同名的客戶)，您為這個屬性指定的資料行會在報表資料表中重複。  
@@ -104,11 +106,11 @@ ms.lasthandoff: 01/08/2018
 ### <a name="tables-are-missing-one-or-more-rows"></a>資料表遺漏一個或多個資料列  
  有時預設群組行為會產生與預期相反的結果；具體地說，出現在模型中的詳細資料列未出現在報表中。 依預設， [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 會將您加入畫布中的資料行進行群組。 如果您將 **國家/地區名稱** 加入報表，每個國家/地區在畫布中都只會出現一次，即使基礎資料表中可能有數千個資料列包含每個國家/地區名稱的多個例項也一樣。 在這個案例中，預設的群組行為會產生正確的結果。  
   
- 但假設不同的範例中，您可能要顯示某個資料列的多個例項，因為基礎資料列事實上包含不同實體的資料。 在此範例中，假設有兩個客戶的姓名都是 **Jon Yang**。 使用預設群組行為時，報表中只會顯示一個 **Jon Yang** 執行個體。 而且因為清單中只顯示一個執行個體，所以 **年收入量** 值是兩個客戶的該值總和。  
+ 但假設不同的範例中，您可能要顯示某個資料列的多個例項，因為基礎資料列事實上包含不同實體的資料。 在此範例中，假設有兩個客戶的姓名都是 **Jon Yang**。 使用預設群組行為時，報表中只會顯示一個 **Jon Yang** 執行個體。 而且因為清單中只顯示一個執行個體，所以**年收入量**值是兩個客戶的該值總和。  
   
  ![預設群組會將 2 合併成 1](../../analysis-services/tabular-models/media/ssas-jonyang-norowid.gif "預設群組會將 2 合併為 1")  
   
- 若要變更預設群組行為，請設定 [資料列識別碼] 和 [保留唯一資料列] 屬性。 在 [保留唯一資料列] 中，選擇 [姓氏] 資料行，讓資料列可重複此值，即使在其他資料列中已經出現此值也一樣。 在變更屬性及重新發行活頁簿之後，您可以建立相同的報表，不過此時會顯示兩個同名客戶 **Jon Yang**，並為每個客戶正確配置 **年收入** 。  
+ 若要變更預設群組行為，請設定 [資料列識別碼] 和 [保留唯一資料列] 屬性。 在 [保留唯一資料列] 中，選擇 [姓氏] 資料行，讓資料列可重複此值，即使在其他資料列中已經出現此值也一樣。 在變更屬性及重新發行活頁簿之後，您可以建立相同的報表，不過此時會顯示兩個同名客戶 **Jon Yang**，並為每個客戶正確配置**年收入**。  
   
  ![資料列包含資料列識別碼為基礎的重複項目資料](../../analysis-services/tabular-models/media/ssas-jonyang.gif "資料列包含資料列識別碼為基礎的重複項目資料。")  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 01/08/2018
   
  ![圖表會根據資料列識別碼群組](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "圖表會根據資料列識別碼群組")  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  在評估模型中的資料表，並對包含永遠應該顯示為個別項目之詳細資料列的資料表設定資料表行為屬性之後，您可以進一步透過其他屬性或設定來最佳化模型。  
   
   

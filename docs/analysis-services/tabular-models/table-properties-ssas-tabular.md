@@ -1,5 +1,5 @@
 ---
-title: "資料表屬性 (SSAS 表格式) |Microsoft 文件"
+title: "資料表屬性 |Microsoft 文件"
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
@@ -11,21 +11,23 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tableprop.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 864075fb43cd0912a581daa36d996b577c7beaae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 202902448a31fda27ab2c4d8c0bc894cc50da3db
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="table-properties-ssas-tabular"></a>資料表屬性 (SSAS 表格式)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述表格式模型資料表屬性。 這裡所述的屬性與 [編輯資料表屬性] 對話方塊中的屬性不同，後者會定義從來源匯入的資料行。  
+# <a name="table-properties"></a>Table Properties 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+這篇文章描述表格式模型資料表屬性。 這裡所述的屬性與 [編輯資料表屬性] 對話方塊中的屬性不同，後者會定義從來源匯入的資料行。  
   
  本主題的章節：  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_properties"></a> 資料表屬性  
  **Basic**  
   
-|屬性|預設值|描述|  
+|屬性|預設值|說明|  
 |--------------|---------------------|-----------------|  
 |**連接名稱**|\<連線名稱 >|資料表之資料來源連接的名稱。<br /><br /> 若要編輯連接，請按一下此按鈕。|  
 |**Hidden**|False|指定是否在報表用戶端欄位清單中隱藏資料表。|  
@@ -47,9 +49,9 @@ ms.lasthandoff: 01/08/2018
   
  **報表屬性**  
   
- 如需報表屬性的詳細描述和組態資訊，請參閱 [Power View 報表屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)。  
+ 如需詳細的說明與報表屬性的組態資訊，請參閱[Power View 報表屬性](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)。  
   
-|屬性|預設值|描述|  
+|屬性|預設值|說明|  
 |--------------|---------------------|-----------------|  
 |**預設欄位集**|||  
 |資料表行為|||  

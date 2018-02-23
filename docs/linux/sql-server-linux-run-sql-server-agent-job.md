@@ -4,7 +4,7 @@ description: "本教學課程會示範如何在 Linux 上執行 SQL Server Agent
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: b812c67d693d6cf9670160c6d0d795e22a9b202f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>建立和執行在 Linux 上的 SQL Server Agent 作業
 
@@ -47,23 +47,22 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
 * 使用 SSMS 的 Windows 電腦：
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)選擇性 SSMS 步驟。
 
-## <a name="install-sql-server-agent"></a>安裝 SQL Server 代理程式
+## <a name="enable-sql-server-agent"></a>啟用 SQL Server 代理程式
 
-若要在 Linux 上使用 SQL Server 代理程式，您必須先安裝**mssql server agent**已安裝的 SQL Server 2017 機器上的封裝。
+若要在 Linux 上使用 SQL Server 代理程式，您必須先啟用 SQL Server 代理程式已安裝的 SQL Server 2017 機器上。
 
-1. 安裝**mssql server agent**與 Linux 作業系統的適當命令。
-
-   | 平台 | 安裝命令 |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. 若要啟用 SQL Server 代理程式，請遵循下面的步驟。
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. 使用下列命令，重新啟動 SQL Server:
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> 從 SQL Server 2017 CU4 開始，SQL Server 代理程式隨附於**mssql 伺服器**封裝，並預設會停用。 針對設定代理程式之前 CU4 造訪[Linux 上安裝 SQL Server Agent](sql-server-linux-setup-sql-agent.md)。
 
 ## <a name="create-a-sample-database"></a>建立範例資料庫
 
