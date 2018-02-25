@@ -17,7 +17,7 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
 ms.openlocfilehash: 1f018dd2b60365d89e912e7ef38499f8a4d14d9b
 ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/19/2018
 ---
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/19/2018
 > [!NOTE]
 > 本快速入門會將重點放在 mssql-server-**linux** 映像的使用方式上。 Windows 映像則不涵蓋在內，但您可於 [mssql-server-windows-developer Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)進一步加以了解。
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> 必要條件
 
 - 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
 - 至少 2 GB 的磁碟空間
@@ -75,7 +75,7 @@ ms.lasthandoff: 02/19/2018
 
    下表提供了前述 `docker run` 範例的參數描述：
 
-   | 參數 | 描述 |
+   | 매개 변수 | Description |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](http://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
    | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
@@ -269,7 +269,7 @@ docker rm sql1
 
 > [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 如需如何將資料庫備份檔案還原至容器中的教學課程，請參閱[在 Linux Docker 容器中還原 SQL Server 資料庫](tutorial-restore-backup-in-sql-server-container.md)。 若要探索其他案例，例如執行多個容器、資料持續性及疑難排解，請參閱[在 Docker 上設定 SQL Server 2017 容器映像](sql-server-linux-configure-docker.md)。
 
