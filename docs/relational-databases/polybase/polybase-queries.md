@@ -26,16 +26,16 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 439eb6561409ab10072f35013126e42bb5df2a41
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  以下是使用 SQL Server 2016 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)功能的查詢範例。 使用這些範例之前，您也必須了解設定 PolyBase 所需的 T-SQL 陳述式 (請參閱 [PolyBase T-SQL 物件](../../relational-databases/polybase/polybase-t-sql-objects.md))。
+  下文提供使用 SQL Server 2016 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 功能的查詢範例。 使用這些範例之前，您也必須了解設定 PolyBase 所需的 T-SQL 陳述式 (請參閱 [PolyBase T-SQL 物件](../../relational-databases/polybase/polybase-t-sql-objects.md))。
   
 ## <a name="queries"></a>查詢  
  對外部資料表執行 Transact-SQL 陳述式，或使用 BI 工具來查詢外部資料表。

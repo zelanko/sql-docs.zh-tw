@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 組態 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/13/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -12,17 +12,15 @@ ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 80ff73c1-2861-438b-a13f-309155f3d6e1
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f46ca117e763d5ec6d4bb76eb4beff6c3b15f358
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a202fe4cb2a6f6bd24ce6279259e6cbc46a622f6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="polybase-configuration"></a>PolyBase 設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,9 @@ ms.lasthandoff: 02/12/2018
  您必須確定可從 SQL Server 連線到外部資料來源。 連線類型能大幅影響查詢效能。 例如，針對 PolyBase 查詢，10Gbit 乙太網路連結將產生比 1Gbit 乙太網路連結更快速的回應時間。  
   
  您必須使用 **sp_configure**設定 SQL Server，以連接到 Hadoop 版本或 Azure Blob 儲存體。 PolyBase 支援兩種 Hadoop 散發：Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。  如需支援的外部資料來源的完整清單，請參閱 [PolyBase 組態 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
-1 請注意：PolyBase 不支援 Cloudera 加密區域。 
+
+請注意，從 SQL Server 2016 SP1 CU7 和 SQL Server 2017 開始，PolyBase 支援 Hadoop 加密區域。
+
   
 ### <a name="run-spconfigure"></a>執行 sp_configure  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/12/2018
 4. 針對所有 CDH 5.X 版本，您需要將 **mapreduce.application.classpath** 組態參數新增至 **yarn.site.xml 檔案**結尾或 **mapred-site.xml 檔案**。 HortonWorks 會將這些組態包含在 **yarn.application.classpath** 組態內。
 
 ## <a name="connecting-to-hadoop-cluster-with-hadooprpcprotection-setting"></a>使用 Hadoop.RPC.Protection 設定連接到 Hadoop 叢集
-hadoop 叢集中保護通訊的常見方式，是將 hadoop.rpc.protection 組態變更為「私人」或「完整性」。 根據預設，PolyBase 會假設組態設定為「驗證」。 若要覆寫此預設值，您需要將下列屬性新增至 core-site.xml 檔案。 變更此組態可保護 hadoop 節點間以及 SSL 連線到 SQL Server 的資料傳輸。
+hadoop 叢集中保護通訊的常見方式，是將 hadoop.rpc.protection 組態變更為「私人」或「完整性」。 根據預設，PolyBase 假設設定是設定為「驗證」。 若要覆寫此預設值，請將下列屬性新增至 core-site.xml 檔案。 變更此設定可保護 Hadoop 節點之間的資料傳輸以及與 SQL Server 的 SSL 連線。
 
 ```
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
@@ -192,7 +192,7 @@ hadoop 叢集中保護通訊的常見方式，是將 hadoop.rpc.protection 組�
 ```
   
 ## <a name="kerberos-configuration"></a>Kerberos 設定  
-請注意，向 Kerberos 受保護叢集驗證 PolyBase 時，我們需要將 hadoop.rpc.protection 設定設為 authentication。 這會導致 Hadoop 節點之間的資料通訊未加密。 
+請注意，根據預設，向 Kerberos 受保護叢集驗證 PolyBase 時，需要 hadoop.rpc.protection 設定為「驗證」。 這會導致 Hadoop 節點之間的資料通訊未加密。 若要使用 hadoop.rpc.protection 的「隱私權」或「完整性」設定，請更新 PolyBase 伺服器上的 core-site.xml 檔案。 如需詳細資訊，請參閱上一節：[連線至 Hadoop 叢集與 Hadoop.rpc.protection](#connecting-to-hadoop-cluster-with-hadooprpcprotection-setting)。
 
  連接到由 Kerberos 保護的 Hadoop 叢集 [使用 MIT KDC]：
    

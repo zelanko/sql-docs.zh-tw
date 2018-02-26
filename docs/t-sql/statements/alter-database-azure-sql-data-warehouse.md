@@ -1,32 +1,34 @@
 ---
-title: "ALTER DATABASE （Azure SQL 資料倉儲） |Microsoft 文件"
+title: "ALTER DATABASE (Azure SQL 資料倉儲) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/15/2018
 ms.prod: 
 ms.prod_service: sql-data-warehouse
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.openlocfilehash: 71737beb817cfeebed195c90d056768aef678a3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: b70750eebf7727348f9058bea2aecd0508d544bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE （Azure SQL 資料倉儲）
+# <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-修改名稱、 大小上限或資料庫的服務目標。  
+修改資料庫的名稱、大小上限或服務目標。  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,49 +60,49 @@ ALTER DATABASE database_name
 指定要修改的資料庫名稱。  
 
 MODIFY NAME = *new_database_name*  
-重新命名資料庫名稱指定為*new_database_name*。  
+使用指定為 *new_database_name* 的名稱來重新命名資料庫。  
   
 MAXSIZE  
-預設值為 10240 GB (10 TB)。  
+預設為 245,760 GB (240 TB)。  
 
-**適用於：**彈性效能層針對最佳化
+**適用於：**最佳化彈性效能層級
 
-資料庫的允許大小上限。 資料庫無法增長超過 MAXSIZE。 
+資料庫的允許大小上限。 資料庫不可增大超過 MAXSIZE。 
 
-**適用於：**針對計算效能層最佳化
+**適用於：**最佳化計算效能層級
 
-在資料庫中的資料列存放區資料的可允許大小上限。 資料儲存在資料列存放區資料表、 資料行存放區索引的差異存放區或非叢集資料行存放區索引的非叢集索引不得成長超過 MAXSIZE。  壓縮成資料行存放區格式的資料不受限於 MAXSIZE，就不需要的大小限制。 
+資料庫中資料列存放區資料的允許大小上限。 儲存在資料列存放區資料表的資料、資料行存放區索引的差異存放區，或叢集資料行存放區索引的非叢集索引，不可增大超過 MAXSIZE。  壓縮成資料行存放區格式的資料大小沒有大小限制，因此不受 MAXSIZE 限制。 
   
 SERVICE_OBJECTIVE  
-指定效能等級。 如需服務目標[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，請參閱[效能層](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
+指定效能等級。 如需 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 服務目標的詳細資訊，請參閱[效能層級](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
 ## <a name="permissions"></a>Permissions  
-需要這些權限：  
+需要下列權限：  
   
--   伺服器層級主體登入 （由佈建程序建立一個），或  
+-   由佈建程序建立的伺服器層級主體登入，或  
   
--   成員的`dbmanager`資料庫角色。  
+-   `dbmanager` 資料庫角色的成員。  
   
-資料庫的擁有者不能改變資料庫，除非擁有者是屬於`dbmanager`角色。  
+除非資料庫擁有者是 `dbmanager` 角色的成員，否則無法變更資料庫。  
   
 ## <a name="general-remarks"></a>一般備註  
-目前的資料庫必須是不同的資料庫，您會改變，因此比**連接到 master 資料庫時，就必須執行 ALTER**。  
+目前資料庫必須是與您變更的資料庫不同的資料庫，因此**必須在連線至 master 資料庫時執行 ALTER**。  
   
-SQL 資料倉儲設定為 COMPATIBILITY_LEVEL 130，而且無法變更。 如需詳細資訊，請參閱[改善查詢效能與 Azure SQL Database 中的相容性層級 130](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
+SQL 資料倉儲設定為 COMPATIBILITY_LEVEL 130，而且不可變更。 如需詳細資料，請參閱 [Azure SQL Database 中改善的查詢效能與相容性層級 130](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
   
-若要減少資料庫大小，請使用[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
+若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
-若要執行 ALTER DATABASE，資料庫必須在線上，且不能處於暫停狀態。  
+若要執行 ALTER DATABASE，資料庫必須在線上，而且不能處於暫停狀態。  
   
-ALTER DATABASE 陳述式必須在自動認可模式，這是預設交易管理模式執行。 這是設定的連線設定。  
+ALTER DATABASE 陳述式必須以自動認可模式 (即預設交易管理模式) 執行。 這是設定於連線設定中。  
   
 ALTER DATABASE 陳述式不能是使用者定義交易的一部分。
 
 您無法變更資料庫定序。  
   
 ## <a name="examples"></a>範例  
-執行這些範例之前，請確定會改變的資料庫不是目前的資料庫。 目前的資料庫必須是不同的資料庫，您會改變，因此比**連接到 master 資料庫時，就必須執行 ALTER**。  
+執行這些範例之前，請確定您要變更的資料庫不是目前資料庫。 目前資料庫必須是與您變更的資料庫不同的資料庫，因此**必須在連線至 master 資料庫時執行 ALTER**。  
 
 ### <a name="a-change-the-name-of-the-database"></a>A. 變更資料庫的名稱  
 
@@ -115,19 +117,19 @@ MODIFY NAME = Northwind;
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );  
 ```  
   
-### <a name="c-change-the-performance-level"></a>C. 變更效能層級  
+### <a name="c-change-the-performance-level"></a>C. 變更效能等級  
   
 ```  
 ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-### <a name="d-change-the-max-size-and-the-performance-level"></a>D. 變更大小上限和效能層級  
+### <a name="d-change-the-max-size-and-the-performance-level"></a>D. 變更大小上限和效能等級  
   
 ```  
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[CREATE DATABASE （Azure SQL 資料倉儲）](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-[SQL 資料倉儲清單的參考主題](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
+[CREATE DATABASE (Azure SQL 資料倉儲)](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+[SQL 資料倉儲參考主題清單](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
   
