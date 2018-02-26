@@ -2,9 +2,10 @@
 
 # 概觀
 ## [版本資訊](sql-server-linux-release-notes.md)
-## [此版本有什麼新功能？](sql-server-linux-whats-new.md)
+## [新功能](sql-server-linux-whats-new.md)
 ## [新增及更新的發行項](new-updated-linux.md)
 ## [版本和支援的功能](sql-server-linux-editions-and-components-2017.md)
+## [常見問題集](sql-server-linux-faq.md)
 
 # 快速入門
 ## [安裝與連線 - Red Hat](quickstart-install-connect-red-hat.md)
@@ -89,6 +90,7 @@
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [開始使用安全性功能](sql-server-linux-security-get-started.md)
+### [Active Directory 驗證](sql-server-linux-active-directory-auth-overview.md)
 ### [為連線加密](sql-server-linux-encrypted-connections.md)
 
 ## [效能]
@@ -102,7 +104,6 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # 資源
-## [常見問題集](sql-server-linux-faq.md)
 ## [疑難排解](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server 文件](../sql-server/sql-server-technical-documentation.md)
 ## 夥伴
