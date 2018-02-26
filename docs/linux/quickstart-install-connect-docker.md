@@ -79,8 +79,8 @@ ms.lasthandoff: 02/19/2018
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](http://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
    | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
-   | **-p 1401:1433** | 將主機環境上的 TCP 連接埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在本範例中，SQL Server 接聽了容器中的 TCP 1433，這會向主機上的連接埠 1401 公開。 |
-   | **--name sql1** | 為容器指定自訂名稱，而不使用隨機產生的名稱。 若您執行數個容器，就無法使用此相同名稱。 |
+   | **-p 1401:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在此範例中，SQL Server 會在容器中接聽 TCP 1433 連接埠，同時向主機上 1401 連接埠公開。 |
+   | **--name sql1** | 指定容器名稱，而不隨機產生名稱。 執行多個容器時無法重複使用此相同名稱。 |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux 容器映像。 |
 
 1. 若要檢視 Docker 容器，請使用 `docker ps` 命令。

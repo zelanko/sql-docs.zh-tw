@@ -17,7 +17,7 @@ ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
 ms.openlocfilehash: 71efe59db9de4b60389f40ee6718627817ecee37
 ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/21/2018
 ---
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/21/2018
 
 SQL Server 2017 現在會在 Linux 上執行。 它是相同的 SQL Server 資料庫引擎，有許多類似的功能與服務，不論您的作業系統。
 
-## <a name="install"></a>Install
+## <a name="install"></a>安裝
 
 若要開始使用，請安裝 SQL Server on Linux 使用其中一種下列快速入門：
 
@@ -46,7 +46,7 @@ SQL Server 2017 現在會在 Linux 上執行。 它是相同的 SQL Server 資�
 
 | 工具 | 教學課程 |
 |-----|-----|
-| Visual Studio 程式碼 (VS Code) | [使用 VS 程式碼和 SQL Server on Linux](sql-server-linux-develop-use-vscode.md) |
+| Visual Studio Code (VS Code) | [使用 VS Code 和 SQL Server on Linux](sql-server-linux-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [在 Windows 上使用 SSMS 連接到 SQL Server on Linux](sql-server-linux-develop-use-ssms.md) |
 | SQL Server Data Tools (SSDT) | [使用 SSDT 搭配 SQL Server on Linux](sql-server-linux-develop-use-ssdt.md) |
 
@@ -58,8 +58,8 @@ SQL Server 2017 所有支援的平台，包括 Linux 上有相同的基礎資料
 
 ##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) 與 SQL Server 工程團隊交流
 
-- [DBA 堆疊 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)： 提問資料庫管理
-- [堆疊溢位](http://stackoverflow.com/questions/tagged/sql-server)： 開發提問
+- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)：提問資料庫管理
+- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)： 開發提問
 - [MSDN 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)： 詢問技術問題
 - [提交意見反應](https://feedback.azure.com/forums/908035-sql-server)： 報告錯誤和要求的功能
 - [Reddit](https://www.reddit.com/r/SQLServer/)： 討論 SQL Server
