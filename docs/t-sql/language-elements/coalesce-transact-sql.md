@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-評估順序的引數，並傳回一開始未評估的第一個運算式的目前值`NULL`。 例如，`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');`傳回第三個值，因為第三個值不是 null 的第一個值。 
+依序評估引數，並傳回第一個運算式中，第一個不為 `NULL` 的值。 例如，`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');`傳回第三個值，因為第三個值為最先發現的非 null 值。 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,16 +47,16 @@ COALESCE ( expression [ ,...n ] )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)任何型別。  
+ 是任何型別的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回的資料型別*運算式*具有最高的資料類型優先順序。 如果所有運算式都不可為 Null，結果的類型也是不可為 Null。  
+ 傳回的*運算式*資料型別為最高優先序的資料類型。 如果所有運算式都不可為 Null，結果的類型也是不可為 Null。  
   
 ## <a name="remarks"></a>備註  
- 如果所有引數`NULL`，`COALESCE`傳回`NULL`。 至少一個 null 的值必須是具型別的`NULL`。  
+ 如果所有引數皆為`NULL`，則`COALESCE`傳回`NULL`。 至少一個 null 的值必須是具型別的`NULL`。  
   
 ## <a name="comparing-coalesce-and-case"></a>比較 COALESCE 和 CASE  
- `COALESCE`運算式是的語法捷徑`CASE`運算式。  也就是程式碼`COALESCE`(*expression1*，*...n*) 重寫查詢最佳化工具，如下所示`CASE`運算式：  
+ `COALESCE`運算式是`CASE`運算式的語法捷徑。  也就是查詢最佳化工具會將程式碼`COALESCE`(*expression1*，*...n*) 重寫成如下所示的`CASE`運算式：  
   
  ```sql  
  CASE  
@@ -67,7 +67,7 @@ COALESCE ( expression [ ,...n ] )
  END  
  ```  
   
- 這表示輸入的值 (*expression1*， *expression2*， *expressionN*等等) 而評估多次。 此外，為了符合 SQL 標準，包含子查詢的值運算式會視為不具決定性，且會評估子查詢兩次。 不論是哪一種情況，第一次評估和後續評估之間都可能傳回不同的結果。  
+ 這表示輸入的值 (*expression1*， *expression2*， *expressionN*等等) 會經過多次評估。此外，為了符合 SQL 標準，包含子查詢的值運算式會視為不具決定性，子查詢也會經過兩次評估。不論是哪一種情況，第一次評估和後續評估之間都可能傳回不同的結果。   
   
  例如，執行程式碼 `COALESCE((subquery), 1)` 時，會評估子查詢兩次。 因此，您會根據查詢的隔離等級取得不同的結果。 例如，程式碼可以傳回`NULL`下`READ COMMITTED`多使用者環境中的隔離等級。 若要確保傳回的結果穩定，請使用`SNAPSHOT ISOLATION`隔離層級或取代`COALESCE`與`ISNULL`函式。 或者，您可以撰寫查詢，以將子查詢推入子選擇，如下列範例所示：  
   
