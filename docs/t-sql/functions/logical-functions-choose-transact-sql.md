@@ -1,5 +1,5 @@
 ---
-title: "選擇 (TRANSACT-SQL) |Microsoft 文件"
+title: "CHOOSE (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHOOSE
 - CHOOSE_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CHOOSE function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 96e231ed5770e44018dac403e0ac895d85f00393
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="logical-functions---choose-transact-sql"></a>邏輯函數的選擇 (TRANSACT-SQL)
+# <a name="logical-functions---choose-transact-sql"></a>邏輯函數的CHOOSE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中從數值清單傳回指定之索引的項目。  

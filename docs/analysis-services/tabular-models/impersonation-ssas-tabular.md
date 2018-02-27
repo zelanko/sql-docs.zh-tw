@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>模擬 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題會提供表格式模型作者了解如何登入認證 Analysis services 連接時使用的資料來源匯入和處理 （重新整理） 資料。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文章提供表格式模型作者了解如何登入認證 Analysis services 連接時使用的資料來源匯入和處理 （重新整理） 資料。  
 
-##  <a name="bkmk_conf_imp_info"></a>設定模擬  
+##  <a name="bkmk_conf_imp_info"></a> 設定模擬  
  其中，而在有哪些內容可讓您決定設定模擬資訊的方式。 建立新的模型專案時，模擬被設定在 SQL Server Data Tools (SSDT)，當您連接到資料來源匯入資料。 一旦部署模型時，可以設定模擬模型資料庫連接字串屬性中使用 SQL Server Management Studio (SSMS)。 Azure Analysis Services 中的表格式模型，您可以使用 SSMS 或**以檢視： 指令碼**瀏覽器為基礎的設計工具在編輯 JSON Model.bim 檔案中的模式。
   
-##  <a name="bkmk_how_imper"></a>模擬的使用方式  
+##  <a name="bkmk_how_imper"></a> 模擬的使用方式  
  *「模擬」* (Impersonation) 是伺服器應用程式 (例如 Analysis Services) 假設用戶端應用程式身分識別的功能。 可以執行 analysis Services 會使用執行服務帳戶，不過，伺服器建立的資料來源，連接時，它會使用模擬，讓資料匯入和處理的存取檢查。  
   
  用於模擬的認證會與您目前登入使用的認證不同。 登入的認證會製作模型時使用特定的用戶端作業的使用者。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
   
 **1400 （含） 以上的表格式模型**
  
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |**模擬帳戶**|指定模型使用的 Windows 使用者帳戶匯入或處理來自資料來源的資料。 網域和使用者帳戶的名稱使用下列格式：**\<網域名稱 >\\< 使用者帳戶名稱\>**。|  
 |**模擬目前的使用者**|指定應該從資料來源使用的傳送要求之使用者的身分識別存取資料。 此模式僅適用於直接查詢模式。|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 
 **表格式 1200年模型**
  
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |**特定的 Windows 使用者名稱和密碼**|這個選項會指定模型使用 Windows 使用者帳戶匯入或處理來自資料來源的資料。 網域和使用者帳戶的名稱使用下列格式：**\<網域名稱 >\\< 使用者帳戶名稱\>**。 使用 [資料表匯入精靈] 建立新模型這是預設選項。|  
 |**服務帳戶**|此選項會指定模型使用與管理該模型之 Analysis Services 服務執行個體相關聯的安全性認證。|  
@@ -89,6 +90,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>另請參閱  
  [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [資料來源](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [表格式模型解決方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

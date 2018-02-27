@@ -1,11 +1,11 @@
 ---
 title: "SQL Server Always On 可用性群組部署模式 |Microsoft 文件"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組組態的高可用性與資料保護
 
@@ -70,7 +70,7 @@ SQL Server 2017 導入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資�
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要是 R / W |自動容錯移轉。 新的主要是 R / W |自動容錯移轉。 新的主要不是適用於使用者交易，直到復原先前主要資料庫加入可用性群組做為次要。 
 |一個次要複本中斷  | 主要是 R / W 如果主要沒有自動容錯移轉會失敗。 |主要是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 
-<sup>*</sup>預設值
+<sup>*</sup> 預設值
 
 <a name="twoSynch"></a>
 
@@ -87,7 +87,7 @@ SQL Server 2017 導入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資�
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要是 R / W| 自動容錯移轉。 新的主要不是適用於使用者交易，直到復原先前主要資料庫加入可用性群組做為次要。
 |一個次要複本中斷  |主要是 R/W，以公開方式執行資料遺失。 |主要不適用於使用者交易直到次要的復原。
-<sup>*</sup>預設值
+<sup>*</sup> 預設值
 
 >[!NOTE]
 >先前的案例是在 SQL Server 2017 CU 1 之前的行為。 
@@ -117,7 +117,7 @@ SQL Server 2017 導入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資�
 |次要複本中斷 | 主要是 R/W，公開執行資料遺失 （如果主要失敗，且無法復原）。 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 沒有任何容錯移轉至主要複本也會失敗。 
 |組態的唯一複本中斷 | 主要是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要是 R / W 如果主要沒有自動容錯移轉也會失敗。 
 |同步的次要 + 組態只複本中斷| 主要不適用於使用者交易。 沒有自動容錯移轉。 | 主要不適用於使用者交易。 如果容錯移轉沒有任何複本主要也會失敗。 
-<sup>*</sup>預設值
+<sup>*</sup> 預設值
 
 >[!NOTE]
 >裝載組態的唯一複本的 SQL Server 執行個體也可以裝載其他資料庫。 它也可以做為多個可用性群組的組態資料庫。 
@@ -142,7 +142,7 @@ SQL Server 2017 導入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資�
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>了解 SQL Server 資源 pacemaker 代理程式
 
-加入 SQL Server 2017 CTP 1.4`sequence_number`至`sys.availability_groups`允許 Pacemaker 來識別如何最新的次要複本都會與主要複本。 `sequence_number`已開始的單純遞增的 bigint 表示如何最新的本機可用性群組複本。 Pacemaker 更新`sequence_number`與每個可用性群組組態變更。 組態變更的範例包括容錯移轉，複本新增或移除。 數字是在主要伺服器上，更新，然後再複寫至次要複本。 因此具有最新組態的次要複本具有相同的順序編號，與主要資料庫。 
+加入 SQL Server 2017 CTP 1.4`sequence_number`至`sys.availability_groups`允許 Pacemaker 來識別如何最新的次要複本都會與主要複本。 `sequence_number` 已開始的單純遞增的 bigint 表示如何最新的本機可用性群組複本。 Pacemaker 更新`sequence_number`與每個可用性群組組態變更。 組態變更的範例包括容錯移轉，複本新增或移除。 數字是在主要伺服器上，更新，然後再複寫至次要複本。 因此具有最新組態的次要複本具有相同的順序編號，與主要資料庫。 
 
 當 Pacemaker 決定升級為主要複本時，會先傳送*預先升級*通知給所有複本。 複本傳回的序號。 接下來，當 Pacemaker 實際上會嘗試升級為主要複本，複本只會升級本身如果其序號最高的序號。 如果它自己的序號不符合最高的序號，複本會拒絕升級作業。 如此一來，只有序號最高的複本可以升級為主要複本，確保不會遺失資料。 
 

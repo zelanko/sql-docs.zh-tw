@@ -1,7 +1,7 @@
 ---
 title: "SSMS 中啟用 DirectQuery 模式 |Microsoft 文件"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2779e5f09f447e0499e2eeb87ec89ba698cc8628
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 544725a89521eb86f61fcfd3194c3d56be9da606
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>在 SSMS 中啟用 DirectQuery 模式
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]您可以變更資料存取屬性的已部署，表格式模型啟用 DirectQuery 模式，其中查詢針對後端關聯式資料來源執行而不是位於記憶體中資料快取。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+您可以變更已部署的表格式模型資料存取屬性，藉此啟用 DirectQuery 模式，讓查詢針對後端關聯是資料來源執行，而不是針對位於記憶體內部的快取資料。  
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，DirectQuery 設定的步驟會因為模型的相容性層級而有所不同。 您可以在下方看到適用於所有相容性層級的步驟。  
   
- 本主題假設您已建立並驗證相容性層級 1200年或更高，而且只需要啟用 DirectQuery 存取並更新連接字串在記憶體中表格式模型。 如果您是從較低的相容性層級開始，則需要先手動升級。 相關步驟請參閱 [升級 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) 。  
+ 本文假設您已建立並驗證相容性層級 1200年或更高，而且只需要啟用 DirectQuery 存取並更新連接字串在記憶體中表格式模型。 如果您是從較低的相容性層級開始，則需要先手動升級。 相關步驟請參閱 [升級 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) 。  
   
 > [!IMPORTANT]  
 >  建議您使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 而非 Management Studio，來切換資料儲存區模式。 當您使用  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 變更模型，並持續使用到伺服器部署，模型和資料庫就會保持同步。此外，變更模型中的儲存體模式可讓您檢閱發生的任何驗證錯誤。 如本文所述使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 時，則不會回報驗證錯誤。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
 -   確認模型沒有可能在 DirectQuery 模式中造成錯誤的功能，然後將模型上的資料儲存區模式從記憶體內部變更為 DirectQuery。  
   
-     [DirectQuery 模式 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md) 記載了功能限制清單。  
+     功能限制清單中會說明[DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。  
   
 -   檢閱連接字串和已部署資料庫使用的認證，以從後端外部資料庫擷取資料。 請確認連線只有一個，而且其設定適用於查詢執行。  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
 -   在快取和關聯式資料來源都可用時，您可以設定慣用連接方法，但最終還是由用戶端控制所使用的資料來源 (利用 DirectQueryMode 連接字串屬性)。  
   
--   您可以在快取上設定資料分割區，如此便永遠不會處理用於 DirectQuery 模式的主要分割區，並且主要分割區必須永遠參考關聯式來源。 有許多方法可以使用資料分割來最佳化模型設計和報表體驗。 如需詳細資訊，請參閱[在 DirectQuery 模式中定義分割區 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)。  
+-   您可以在快取上設定資料分割區，如此便永遠不會處理用於 DirectQuery 模式的主要分割區，並且主要分割區必須永遠參考關聯式來源。 有許多方法可以使用資料分割來最佳化模型設計和報表體驗。 如需詳細資訊，請參閱[DirectQuery 模型中定義的資料分割](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)。  
   
 -   部署模型之後，您可以變更慣用連接方法。 例如，您可以使用混合模式來進行測試，並且只在全面測試了使用該模型的所有報表或查詢後，才將模型切換到 **[僅限 DirectQuery]** 模式。 如需詳細資訊，請參閱 [設定或變更 DirectQuery 的慣用連接方法](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751)。  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  在物件總管中展開 [連線]，然後按兩下連線以檢視其屬性。  
   
-     對於 DirectQuery 模型，必須只為資料庫定義了一個連線，而且資料來源必須為關聯式，並屬於支援的資料庫類型。 相關步驟請參閱 [支援的資料來源 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)記載了功能限制清單。  
+     對於 DirectQuery 模型，必須只為資料庫定義了一個連線，而且資料來源必須為關聯式，並屬於支援的資料庫類型。 請參閱[支援的資料來源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)。  
   
 2.  **連接字串** 應指定伺服器、資料庫名稱，以及 DirectQuery 作業中使用的驗證方法。 如果您使用 SQL Server 驗證，就可以在此處指令資料庫登入。  
   
@@ -131,9 +132,9 @@ ms.lasthandoff: 01/08/2018
 3.  您應該會在追蹤中看到在關聯式資料庫上執行查詢的證據。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [支援的資料來源 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
- [擴充事件](../../relational-databases/extended-events/extended-events.md)   
+ [相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+ [支援的資料來源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [擴充的事件](../../relational-databases/extended-events/extended-events.md)   
  [監視 Analysis Services 執行個體](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

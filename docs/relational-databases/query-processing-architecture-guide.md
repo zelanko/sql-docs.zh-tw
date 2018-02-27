@@ -1,7 +1,7 @@
 ---
 title: "查詢處理架構指南 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,40 @@ ms.lasthandoff: 02/09/2018
 ## <a name="sql-statement-processing"></a>SQL 陳述式處理
 
 處理單一 SQL 陳述式是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行 SQL 陳述式最基本的方法。 用於處理僅參考本機基底資料表 (非檢視表或遠端資料表) 之單一 `SELECT` 陳述式的步驟可說明這個基本程序。
+
+#### <a name="logical-operator-precedence"></a>邏輯運算子優先順序
+
+當陳述式中使用一個以上的邏輯運算子，`NOT` 會第一個計算，接下來是 `AND`，最後才是 `OR`。 先處理算術以及位元運算子，接著才處理邏輯運算子。 如需詳細資訊，請參閱[運算子優先順序](../t-sql/language-elements/operator-precedence-transact-sql.md)。
+
+在下列範例中，色彩條件與產品型號 21 相關，但不與產品型號 20 相關，原因是 `AND` 的優先順序高於 `OR`。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+您可以加上括號，強迫陳述式先執行 `OR` 來變更查詢的意義。 下列查詢只會尋找型號 20 和 21 下的紅色產品。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+即使非必要，也建議您使用括號，以改善查詢的可讀性，及減少因為運算子優先順序而不知不覺失誤的機會。 使用括號對效能不會有太大的負面影響。 下面的範例與原始範例雖然在句法上並無不同，但其可讀性更高。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>最佳化 SELECT 陳述式
 
@@ -49,7 +83,6 @@ ms.lasthandoff: 02/09/2018
 * 包含來源資料的資料表。 這指定於 `FROM` 子句中。
 * 資料表如何在邏輯上與 `SELECT` 陳述式的目的產生關聯。 這定義於聯結規格中，其可能出現在 `WHERE` 後面的 `ON` 子句或 `FROM`子句中。
 * 來源資料表中的資料列必須滿足才能符合 `SELECT` 陳述式的條件。 這些條件指定於 `WHERE` 和 `HAVING` 子句中。
-
 
 查詢執行計畫是用以定義下列項目： 
 
@@ -1045,4 +1078,5 @@ GO
  [擴充事件](../relational-databases/extended-events/extended-events.md)  
  [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基數估計](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [彈性查詢處理](../relational-databases/performance/adaptive-query-processing.md)
+ [彈性查詢處理](../relational-databases/performance/adaptive-query-processing.md)   
+ [運算子優先順序](../t-sql/language-elements/operator-precedence-transact-sql.md)

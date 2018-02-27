@@ -8,7 +8,10 @@
 
 # [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
+# [mssql-cli (命令列查詢工具)](mssql-cli.md)
+
 # [組態管理員](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+# [mssql-conf (Linux)](../linux/sql-server-linux-configure-mssql-conf.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
 # [Database Engine Tuning Advisor (dta)](../tools/dta/dta-utility.md)
 # [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
@@ -20,7 +23,7 @@
 ## [osql 公用程式](osql-utility.md)  
 ## [Profiler 公用程式](profiler-utility.md)  
 ## [sqlagent90 應用程式](sqlagent90-application.md)  
-## [sqlcmd 公用程式](sqlcmd-utility.md)  
+## [sqlcmd 工用程式](sqlcmd-utility.md)  
 ## [SQLdiag 公用程式](sqldiag-utility.md)  
 ## [sqlmaint 公用程式](sqlmaint-utility.md)  
 ## [sqllogship 應用程式](sqllogship-application.md)  

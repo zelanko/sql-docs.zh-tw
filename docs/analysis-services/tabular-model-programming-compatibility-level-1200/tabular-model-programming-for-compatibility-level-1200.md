@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 30122388bc5e1c82f26bbaa37452330b97a77077
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7e1ec3e7ef85cb567d70e96d5c9f3bdd6655f3d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>表格式模型程式設計相容性層級 1200年針對和更新版本
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]從開始相容性層級 1200年時，表格式中繼資料用來描述模型建構，為表格式模型物件的描述元取代歷程記錄的多維度中繼資料。 資料表、 資料行及關聯性的中繼資料是資料表、 資料行和關聯性，而非對應的多維度 （維度和屬性）。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+從開始相容性層級 1200年時，表格式中繼資料用來描述模型建構，為表格式模型物件的描述元取代歷程記錄的多維度中繼資料。 資料表、 資料行及關聯性的中繼資料是資料表、 資料行和關聯性，而非對應的多維度 （維度和屬性）。  
   
 您可以建立新模型相容性層級 1200年或更高藉由使用 Microsoft.AnalysisServices.Tabular Api，最新版本的 SQL Server Data Tools (SSDT)，或變更**CompatibilityLevel**的現有表格式若要升級它 （也可以在 SSDT 中） 的模型。 這樣的模型繫結至較新版本的伺服器、 工具和程式設計介面。   
   
@@ -54,10 +55,10 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Analysis Services 管理物件 (AMO)、 ADOMD.NET 和表格式物件模型 (TOM) 用戶端程式庫現在 runtime 為目標的.NET 4.0。   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 開發人員文件](../../analysis-services/analysis-services-developer-documentation.md)   
  [表格式模型設計程式的相容性層級 1050年透過 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [技術參考 &#40;Ssas&#41;](../../analysis-services/powershell/technical-reference-ssas.md)[升級 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [技術參考](../../analysis-services/powershell/technical-reference-ssas.md)[升級 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [相容性層級的表格式模型和資料庫](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

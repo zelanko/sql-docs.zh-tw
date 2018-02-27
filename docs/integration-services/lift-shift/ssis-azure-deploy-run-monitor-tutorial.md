@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>部署、執行和監視 Azure 上的 SSIS 套件
 本教學課程示範如何將 SQL Server Integration Services 專案部署至 Azure SQL Database 上的 SSISDB 目錄資料庫、在 Azure SSIS Integration Runtime 中執行套件，以及監視執行中的套件。
@@ -89,7 +89,9 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="deploy-a-project-with-powershell"></a>使用 PowerShell 部署專案
 
-若要使用 PowerShell 將專案部署到 Azure SQL Database 上的 SSISDB，請根據您的需求調整下列指令碼：
+若要使用 PowerShell 將專案部署到 Azure SQL Database 上的 SSISDB，請根據您的需求調整下列指令碼。 指令碼會列舉 `$ProjectFilePath` 下的子資料夾及各個子資料夾中的專案，然後在 SSISDB 中建立相同資料夾，並將專案部署到這些資料夾。
+
+此指令碼要求在您執行指令碼的電腦上，安裝 SQL Server Data Tools 17.x 版或 SQL Server Management Studio。
 
 ```powershell
 # Variables

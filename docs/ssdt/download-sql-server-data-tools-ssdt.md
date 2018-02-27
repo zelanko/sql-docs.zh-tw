@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5195d0dd1449a86402263921930d7679fab036f2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 448f9f3f86dec25001be11f309718bd04a4d3f08
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下載 SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ SSDT 15.5.2 是獨立式網頁安裝體驗，適用於 Visual Studio 2017 15.5 �
 |||
 
 > [!IMPORTANT]
-> 請先解除安裝「Microsoft Analysis Services 專案」和「Microsoft Reporting Services 專案」延伸模組 (如果 VS 2017 上已安裝)，並關閉所有 VS 執行個體，再安裝 SSDT for Visual Studio 2017 (15.5.2)。 
+> 請先將「Microsoft Analysis Services 專案」和「Microsoft Reporting Services 專案」延伸模組 (如果 VS 2017 上已安裝) 解除安裝，並關閉所有 VS 執行個體，再安裝 SSDT for Visual Studio 2017 (15.5.2)。 
 > 
 > 非英文版的 SSDT for Visual Studio 2017 15.5.x 不支援從英文版 15.4.0 Preview 升級，您必須先解除安裝英文版 15.4.0 Preview，再安裝其他語言的 15.5.x。 
 
