@@ -4,7 +4,7 @@ description: "本快速入門會示範如何使用 Docker 來執行 SQL Server 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,13 +15,13 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 1f018dd2b60365d89e912e7ef38499f8a4d14d9b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.openlocfilehash: 971f6ed4b728f4be127bf9a23e8a7499ec308d90
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="run-the-sql-server-2017-container-image-with-docker"></a>以 Docker 執行 SQL Server 2017 容器映像
+# <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>快速入門： 執行 SQL Server 2017 容器映像使用 Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
