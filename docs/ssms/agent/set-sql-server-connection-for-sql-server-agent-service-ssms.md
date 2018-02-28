@@ -22,13 +22,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c75ea4b77160a1b34bbbfffe32f83aff55081514
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>設定 SQL Server Agent 服務的 SQL Server 連線 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 和 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 之間的連線。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務可使用「Windows 驗證」連接到 SQL Server 的本機執行個體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+此主題描述如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中使用 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 設定 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] Agent 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]之間的連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務可使用「Windows 驗證」連接到 SQL Server 的本機執行個體。  
   
 **本主題內容**  
   
