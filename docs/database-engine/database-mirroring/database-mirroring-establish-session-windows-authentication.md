@@ -22,18 +22,18 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c58ad04d7b1574d6954e31f8117ff23827ab1375
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>資料庫鏡像 - 建立工作階段 - Windows 驗證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 。  
   
- 準備好鏡像資料庫之後 (請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md))，就可以建立資料庫鏡像工作階段。 主體、鏡像及見證伺服器執行個體必須是個別的伺服器執行個體，且應位於個別的主機系統上。  
+ 準備好鏡像資料庫之後 (請參閱 [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md))，就可以建立資料庫鏡像工作階段。 主體、鏡像及見證伺服器執行個體必須是個別的伺服器執行個體，且應位於個別的主機系統上。  
   
 > [!IMPORTANT]  
 >  我們建議您將資料庫鏡像作業排定在離峰時間執行，因為設定鏡像會影響效能。  

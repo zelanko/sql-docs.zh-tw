@@ -29,13 +29,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8cebfe2bb8751a2aebff7b71d5b1e661a751014f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-agent-security-model"></a>複寫代理程式安全性模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫代理程式安全性模型允許精確控制複寫代理程式執行並建立連線所使用的帳戶：您可為每個代理程式指定不同的帳戶。 如需如何指定帳戶的詳細資訊，請參閱[管理複寫的登入與密碼](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+複寫代理程式安全性模型允許精確控制複寫代理程式執行並建立連接所使用的帳戶：您可為每個代理程式指定不同的帳戶。 如需如何指定帳戶的詳細資訊，請參閱[管理複寫的登入與密碼](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)。  
   
 > [!IMPORTANT]  
 >  當 **系統管理員 (sysadmin)** 固定伺服器角色的成員設定複寫時，複寫代理程式可以設定為模擬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 帳戶。 完成這項作業的方法，就是不指定複寫代理程式的登入和密碼；不過，我們不建議此方式。 反之，就安全性最佳做法而言，我們建議您為每個具有最小權限的代理程式指定帳戶；本主題稍後的＜代理程式所需的權限＞一節會描述最小權限。  

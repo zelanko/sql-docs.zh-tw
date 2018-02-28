@@ -43,13 +43,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9d46ba6ce2dfe1af2454b95d05bd82f3d8b1ce2f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此主題與下列情況有關：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+此主題與下列情況有關：  
   
 -   設定 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性群組的可用性複本。  
   
@@ -213,13 +214,13 @@ ms.lasthandoff: 01/18/2018
   
 -   作業使用的登入  
   
-     若要建立或執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，您必須先將作業所需的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至目的地伺服器執行個體。 如需詳細資訊，請參閱 [設定使用者可建立及管理 SQL Server Agent 作業](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)。  
+     若要建立或執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，您必須先將作業所需的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至目的地伺服器執行個體。 如需詳細資訊，請參閱[設定使用者可建立及管理 SQL Server Agent 作業](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動帳戶  
   
      服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會以指定的使用者帳戶執行。 Agent 服務的內容會影響作業及其執行環境的設定。 此帳戶必須具有作業所需之資源 (例如，網路共用) 的存取權。 如需如何選取和修改服務啟動帳戶的相關資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7)。  
   
-     為了正確運作，服務啟動帳戶必須設定成具有正確的網域、檔案系統和登錄權限。 此外，作業可能會需要使用必須針對服務帳戶設定的共用網路資源。 如需相關資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+     為了正確運作，服務啟動帳戶必須設定成具有正確的網域、檔案系統和登錄權限。 此外，作業可能會需要使用必須針對服務帳戶設定的共用網路資源。 如需相關資訊，請參閱[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務 (與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定執行個體相關聯) 具有自己的登錄區，而且它的作業通常會相依於此登錄區中的一或多項設定。 為了如預期方式運作，作業會需要使用這些登錄設定。 如果您使用指令碼在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務中重新建立作業，其登錄可能不會有該作業的正確設定。 為了讓重新建立的作業在目的地伺服器執行個體上正確運作，原始和目的地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務都應該具有相同的登錄設定。  
   

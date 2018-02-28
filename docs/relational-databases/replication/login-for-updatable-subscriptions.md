@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bd0c4bab5c8a4474a3864df385af997febf656d9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新訂閱的登入
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 如果您在此精靈的 [可更新的訂閱] 頁面上選取 [複寫]，就必須以訂閱者端指定帳戶，並使用此帳戶建立發行者的連線，以進行立即更新。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+如果您在此精靈的 [可更新的訂閱] 頁面上選取 [複寫]，就必須以訂閱者端指定帳戶，並使用此帳戶建立發行者的連接，以進行立即更新。 
   
  在訂閱者端引發的觸發程序，會使用這些連接將變更傳播至發行者。 即使您已選取 [可更新的訂閱] 頁面上的 [佇列變更且盡可能認可]，仍需要此帳戶。 [新增訂閱精靈] 依預設會設定已排入佇列的更新能夠視需要切換到立即更新。  
   

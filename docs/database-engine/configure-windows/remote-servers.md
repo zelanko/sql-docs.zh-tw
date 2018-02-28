@@ -25,13 +25,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remote-servers"></a>遠端伺服器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 基於回溯相容性，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支援遠端伺服器。 新應用程式應該改用連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+基於回溯相容性，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支援遠端伺服器。 新應用程式應該改用連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
   
  遠端伺服器設定可讓連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的用戶端不須建立另一個連接，就可以在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上執行預存程序。 而且，與用戶端連接的伺服器會接受用戶端的要求，並以用戶端的身分將要求傳送至遠端伺服器。 遠端伺服器會處理要求並將任何結果傳回到原始伺服器。 此伺服器接著就會將結果傳遞至用戶端。 設定遠端伺服器組態時，您應該也要考慮如何建立安全性。  
   

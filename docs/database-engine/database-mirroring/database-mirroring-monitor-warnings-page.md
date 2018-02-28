@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f150d44a28915741ffd45b4e8c4506deb41a5a51
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>資料庫鏡像監視器 (警告頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 顯示一份唯讀清單，列出資料庫鏡像事件所支援的警告和指定的警告臨界值 (如果有的話)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+會顯示一份唯讀清單，列出資料庫鏡像事件所支援的警告和指定的警告臨界值 (如果有的話)。  
   
  **若要使用 SQL Server Management Studio 監視資料庫鏡像**  
   

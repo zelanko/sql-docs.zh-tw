@@ -21,13 +21,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 57985ae3903c8c27b702818897e9889ecc0c01bf
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 是建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫快照集的唯一方式。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援建立資料庫快照集。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫快照集的唯一方式。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援建立資料庫快照集。  
   
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  

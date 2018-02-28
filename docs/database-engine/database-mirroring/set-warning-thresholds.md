@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-warning-thresholds"></a>設定警告臨界值
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用這個對話方塊可針對 [資料庫鏡像監視器] 對話方塊內瀏覽樹狀目錄中選取的資料庫，啟用並設定一或多個警告閾值。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用這個對話方塊可針對 **[資料庫鏡像監視器]** 對話方塊內導覽樹狀目錄中選取的資料庫，啟用並設定一或多個警告臨界值。  
   
  這個對話方塊會嘗試連接到兩個伺服器執行個體。 這些連接是以非同步方式建立的。 對話方塊中會顯示每個夥伴的連接狀態。 如果夥伴處於未連接狀態，您可以按一下 **[連接]**。  
   

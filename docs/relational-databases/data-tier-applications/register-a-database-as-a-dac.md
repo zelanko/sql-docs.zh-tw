@@ -29,13 +29,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [註冊資料層應用程式精靈] 或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有資料庫中的物件，並在 **msdb** 系統資料庫 (在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中為 **master**) 中註冊 DAC 定義。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+您可以使用 [註冊資料層應用程式精靈] 或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有資料庫中的物件，並在 **msdb** 系統資料庫 (在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中為 **master**) 中註冊 DAC 定義。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   

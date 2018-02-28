@@ -23,13 +23,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1fb890bc73be0a4d27c5ea9cafe1e2fbed930679
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>第 2 課：建立合併式發行集的訂閱
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立訂閱。 接著，您將在訂閱資料庫上設定權限，並手動為新訂閱產生已篩選資料快照集。 您必須先完成上一課 [第 1 課：使用合併式複寫發行資料](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)，才能進行這一課。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立訂閱。 接著，您將在訂閱資料庫上設定權限，並手動為新訂閱產生已篩選資料快照集。 您必須先完成上一課 [第 1 課：使用合併式複寫發行資料](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)，才能進行這一課。  
   
 ### <a name="to-create-the-subscription"></a>建立訂閱  
   

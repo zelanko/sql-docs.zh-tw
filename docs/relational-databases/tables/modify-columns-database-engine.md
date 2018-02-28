@@ -23,10 +23,10 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: ecb1fc7a70ee318e88354dfaf191227e104be62e
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="modify-columns-database-engine"></a>修改資料行 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d670b9efc8bcbe67bb12758318fb72cf99c2218f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="register-mirrored-database"></a>註冊鏡像資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用這個對話方塊可在特定的伺服器執行個體上註冊一或多個鏡像資料庫，只要將資料庫新增至「資料庫鏡像監視器」即可。 加入資料庫之後，「資料庫鏡像監視器」就會在本機快取有關資料庫、其夥伴以及如何連接到夥伴的資訊。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用這個對話方塊可在特定的伺服器執行個體上註冊一或多個鏡像資料庫，只要將資料庫加入至「資料庫鏡像監視器」即可。 加入資料庫之後，「資料庫鏡像監視器」就會在本機快取有關資料庫、其夥伴以及如何連接到夥伴的資訊。  
   
 > [!IMPORTANT]  
 >  如果您在主體伺服器執行個體上是 **系統管理員** 固定伺服器角色的成員，但是在鏡像伺服器執行個體上不是該角色的成員，則只能在主體伺服器執行個體上查看狀態。  

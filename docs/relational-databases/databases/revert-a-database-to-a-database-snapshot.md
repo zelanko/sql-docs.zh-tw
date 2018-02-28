@@ -22,13 +22,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 如果線上資料庫中的資料已經損毀，在某些情況下，將資料庫還原成發生損毀之前的資料庫快照集可能是從備份還原資料庫的正確替代方式。 例如，還原資料庫可用於反轉最近發生的嚴重使用者錯誤，例如誤將資料表卸除。 不過，在快照集之後進行的所有變更都將遺失。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+如果線上資料庫中的資料已經損毀，在某些情況下，將資料庫還原成發生損毀之前的資料庫快照集可能是從備份還原資料庫的正確替代方式。 例如，還原資料庫可用於反轉最近發生的嚴重使用者錯誤，例如誤將資料表卸除。 不過，在快照集之後進行的所有變更都將遺失。  
   
 -   **開始之前：**  
   

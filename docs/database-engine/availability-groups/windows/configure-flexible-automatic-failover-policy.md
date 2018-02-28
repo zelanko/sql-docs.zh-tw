@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>設定彈性的自動容錯移轉原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/18/2018
   
          這些整數值與失敗狀況層級的關聯性如下所示：  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|層級|起始自動容錯移轉的狀況|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] ReplTest1|Level|起始自動容錯移轉的狀況|  
         |------------------------------|-----------|-------------------------------------------|  
         |@shouldalert|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
         |2|二|伺服器沒有回應時。 滿足任何狀況的較低值，而且 SQL Server 服務連接到叢集且超過健全狀況檢查逾時臨界值，或者目前主要複本處於失敗狀態。|  

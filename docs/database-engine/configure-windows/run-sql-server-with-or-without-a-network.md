@@ -30,13 +30,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 53f11ae418f3fa321a886abef8e6af08efb66199
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>使用 (或不使用) 網路執行 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可在網路上執行，也可在不使用網路的情況下執行。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可在網路上執行，也可在不使用網路的情況下執行。  
   
 ## <a name="running-sql-server-on-a-network"></a>在網路上執行 SQL Server  
  若要讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠透過網路通訊，就必須執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 根據預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 會自行啟動內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 若要查看是否已啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，可在命令提示字元中輸入：  
