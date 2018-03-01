@@ -25,13 +25,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e34811ab5bdff948a59bcf69a7abc1f7d5b8827c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 錯誤記錄檔。  
+# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>檢視 SQL Server Agent 錯誤記錄檔 (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+此主題描述如何使用  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Agent 錯誤記錄檔。  
   
 記錄檔檢視器會顯示許多不同元件的記錄資訊。 當記錄檔檢視器開啟時，使用 **[選取記錄]** 窗格以選取您要顯示的記錄檔。 每個記錄檔都會顯示適用於該記錄檔類型的資料行。 可用的記錄檔取決於記錄檔檢視器的開啟方式而定。  
   
