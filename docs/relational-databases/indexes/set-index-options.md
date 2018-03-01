@@ -32,10 +32,10 @@ ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d196c359725787681324409666eb30ae74d1cd58
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-index-options"></a>設定索引選項
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

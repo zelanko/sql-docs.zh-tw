@@ -71,17 +71,17 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 **適用於：**最佳化計算效能層級
 
-資料庫中資料列存放區資料的允許大小上限。 儲存在資料列存放區資料表的資料、資料行存放區索引的差異存放區、或叢集資料行存放區索引的非叢集索引，不可增大超過 MAXSIZE。  壓縮成資料行存放區格式的資料大小沒有大小限制，所以不受 MAXSIZE 限制。
+資料庫中資料列存放區資料的允許大小上限。 儲存在資料列存放區資料表的資料、資料行存放區索引的差異存放區，或叢集資料行存放區索引的非叢集索引，不可增大超過 MAXSIZE。  壓縮成資料行存放區格式的資料大小沒有大小限制，因此不受 MAXSIZE 限制。
   
 SERVICE_OBJECTIVE  
-指定效能等級。 如需 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的服務目標相關資訊，請參閱[效能層級](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
+指定效能等級。 如需 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 服務目標的詳細資訊，請參閱[效能層級](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
 ## <a name="general-remarks"></a>一般備註  
 使用 [DATABASEPROPERTYEX &#40;TRANSACT-SQL &#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 以查看資料庫屬性。  
   
 使用 [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) 在之後變更大小上限或服務目標值。   
 
-SQL 資料倉儲設定為 COMPATIBILITY_LEVEL 130，而且不可變更。 如需詳細資訊，請參閱[Azure SQL Database 中改善的查詢效能與相容性層級 130](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
+SQL 資料倉儲設定為 COMPATIBILITY_LEVEL 130，而且不可變更。 如需詳細資料，請參閱 [Azure SQL Database 中改善的查詢效能與相容性層級 130](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
   
 ## <a name="permissions"></a>Permissions  
 必要權限：  

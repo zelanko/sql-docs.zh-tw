@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-tier-applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-tier-apps
+ms.technology:
+- dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - export DAC
 - data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d4318ad30d660b9e04aa53100061fd6ed6036bc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5c20a0e2757366b22b4c81885106d1b9c6d362f6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的另一個執行個體或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 您可以合併匯出/匯入作業，以在執行個體之間移轉 DAC、建立封存或針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署的資料庫建立內部部署複本。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的另一個執行個體或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 您可以合併匯出/匯入作業，以在執行個體之間移轉 DAC、建立封存或針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署的資料庫建立內部部署複本。  
   
 ## <a name="before-you-begin"></a>開始之前  
  匯出程序會使用兩個階段來建立 DAC 匯出檔。  

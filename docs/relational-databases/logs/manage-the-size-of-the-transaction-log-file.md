@@ -23,10 +23,10 @@ ms.author: jhubbard
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

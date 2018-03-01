@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: ac1dcd75aa97cb12142d142c82d5c0c6d3f59791
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>SQL Server 2012 SP1 Release Notes
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 這份版本資訊文件描述您在安裝或對 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 進行疑難排解之前應該閱讀的已知問題。 這份版本資訊文件僅於線上提供，安裝媒體中並不提供，而且會定期更新。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+這份版本資訊文件說明您在安裝或對 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 進行疑難排解之前應該閱讀的已知問題。 這份版本資訊文件僅於線上提供，安裝媒體中並不提供，而且會定期更新。  
   
 ## <a name="bkmk_top"></a>目錄  
 [1.0 安裝之前](#bmk_Install)  

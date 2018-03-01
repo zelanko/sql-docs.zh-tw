@@ -26,10 +26,10 @@ ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: d8ec65be74b3fefe8e3da66e1952012f8598b4b3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
