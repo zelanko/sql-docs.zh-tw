@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 上安裝新的 Python 封裝 |Microsoft 文件"
-ms.date: 01/04/2018
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,22 +16,22 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 68c3c0c3699455854ac23fed7befb042eaf17155
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安裝新的 Python 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明如何在 SQL Server 2017 的執行個體上安裝新的 Python 封裝。
 
-它也會描述如何列出已安裝在目前的環境中的封裝。
+一般情況下，安裝新套件的程序是類似於標準的 Python 環境。 不過，一些額外的步驟所需，如果伺服器沒有網際網路連線。
+
+如需了解封裝的安裝位置，或者哪些封裝已安裝的說明，請參閱[檢視安裝的 R 或 Python 封裝](../r/determine-which-packages-are-installed-on-sql-server.md)。
 
 ## <a name="prerequisites"></a>필수 구성 요소
-
-安裝新套件的程序非常類似的標準的 Python 環境中。 不過，一些額外的步驟所需，如果伺服器沒有網際網路連線。
 
 + 您必須安裝機器學習服務 （資料庫） 與 Python 語言選項。 如需指示，請參閱[Python 機器學習服務設定](setup-python-machine-learning-services.md)。
 
@@ -39,7 +39,11 @@ ms.lasthandoff: 02/11/2018
 
 + 決定使用 Python 3.5 和 Windows 環境中，您想要使用的封裝是否會運作。 
 
-    一般情況下，有幾項限制，您可以匯入，並在 SQL Server 環境中使用的封裝。 可能的問題包括具有無法在 Windows 電腦安裝的相依性或在伺服器或防火牆，使用已封鎖的網路功能的封裝。
++ 評估封裝是否適合用來在 SQL Server 環境中使用。 通常資料庫伺服器支援多個服務和應用程式，而且檔案系統上的資源可能會限制，以及連線到伺服器。 在許多情況下是完全封鎖網際網路存取。
+
+    其他常見的問題包括使用的網路上伺服器或防火牆或封裝無法在 Windows 電腦安裝的相依性與封鎖的功能。 
+
+    一些受歡迎的 Python 封裝 （例如酒瓶） 執行工作，例如 web 程式開發更好獨立的環境中執行。 我們建議您使用 Python 資料庫內的工作，例如 machine learning 中，需要大量的資料處理與 database engine 從緊密整合獲益，而不是直接查詢資料庫。
 
 + 伺服器的系統管理權限才能安裝封裝。
 
@@ -62,28 +66,31 @@ ms.lasthandoff: 02/11/2018
 
     例如，在個別電腦上，您可以下載 WHL 檔案從這個站台[https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然後將檔案複製`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 電腦上的本機資料夾。
 
-+ SQL Server 2017 使用 Python 3.5。 請務必取得封裝的 Windows 版本和 Python 3.5 與相容的版本。
++ SQL Server 2017 使用 Python 3.5。 
+
+> [!IMPORTANT]
+> 請確定您取得封裝的 Windows 版本。 如果檔案結尾.gz，很可能不正確的版本。
 
 此頁面包含多個平台與多個的 Python 版本的下載：[設定 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### <a name="step-2-open-a-python-command-prompt"></a>步驟 2： 開啟 Python 命令提示字元
 
-找出 SQL Server 所使用的預設 Python 程式庫位置。 如果您已安裝多個執行個體，請務必找出您要加入封裝的執行個體的 PYTHON_SERVICE 資料夾。
+找出 SQL Server 所使用的預設 Python 程式庫位置。 如果您已安裝多個執行個體，找出您要加入封裝的執行個體的 PYTHON_SERVICE 資料夾。
 
 例如，如果機器學習服務已安裝，使用預設值，和機器學習服務已啟用預設執行個體上，路徑會，如下所示：
 
-    `C:\Program Files\Microsoft SQL  Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 開啟 Python 命令提示字元中執行個體相關聯。
 
 > [!TIP]
-> 我們建議您設定的 Python 環境特有的機器學習 Server 或 SQL Server。
+> 未來偵錯和測試，您可能想要設定 Python 環境的特定執行個體文件庫。
 
 ### <a name="step-3-install-the-package-using-pip"></a>步驟 3： 使用 pip 安裝套件
 
 + 如果您習慣使用 Python 命令列，使用 PIP.exe 來安裝新的封裝。 您可以找到**pip**安裝程式中的`Scripts`子資料夾。 
 
-    如果您收到錯誤， **pip**無法辨識為內部或外部命令，您可以加入的 PATH 變數中 Windows 的 Python 可執行檔和 Python 指令碼資料夾的路徑。
+    如果您收到錯誤，`pip`無法辨識為內部或外部命令，您可以加入的 PATH 變數中 Windows 的 Python 可執行檔和 Python 指令碼資料夾的路徑。
 
     完整路徑**指令碼**預設安裝中的資料夾如下所示：
 
@@ -91,9 +98,11 @@ ms.lasthandoff: 02/11/2018
 
 + 如果您正在使用 Visual Studio 2017 或 Visual Studio 2015 的 Python 擴充功能，您可以執行`pip install`從**Python 環境**視窗。 按一下**封裝**，並在文字方塊中，提供的名稱或要安裝之封裝的位置。 您不需要輸入`pip install`; 它會為您自動填入。 
 
-    - 如果電腦沒有網際網路存取，請提供封裝的名稱或為特定套件和版本的 URL。 例如，若要安裝的版本支援適用於 Windows 和 Python 3.5 CNTK，您可以指定的下載 URL:`https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+    - 如果電腦沒有網際網路存取，請提供封裝的名稱或為特定套件和版本的 URL。 
+    
+    例如，若要安裝的版本支援適用於 Windows 和 Python 3.5 CNTK，指定的下載 URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
 
-    - 如果電腦沒有網際網路存取，您應該已經下載 WHL 檔案事先。 然後，指定的本機檔案路徑和名稱。 例如，貼上的下列路徑和檔案，以安裝從網站下載的 WHL 檔案：`"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
+    - 如果電腦沒有網際網路存取，您必須下載 WHL 檔案開始安裝之前。 然後，指定的本機檔案路徑和名稱。 例如，貼上的下列路徑和檔案，以安裝從網站下載的 WHL 檔案： `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
 
 您可能會提示您提升權限來完成安裝。
 
@@ -108,7 +117,6 @@ Collecting cntk==2.1 from https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp3
 Installing collected packages: cntk
 Successfully installed cntk-2.1
 ```
-
 
 
 ### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>步驟 4： 載入封裝或其函式做為您的指令碼的一部分
@@ -131,7 +139,7 @@ cntk._version_
 
 如果您使用 Python 命令列，您可以使用**conda**封裝管理員，就會包含與 SQL Server 安裝程式新增 Anaconda Python 環境。
 
-若要檢視已安裝目前的環境中的 Python 封裝，請從命令提示字元視窗執行此命令：
+若要檢視已安裝目前的環境中的 Python 封裝，請從命令提示字元執行這個命令：
 
 ```python
 conda list

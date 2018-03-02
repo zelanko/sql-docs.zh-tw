@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux 的安全性功能的逐步解說
 
@@ -66,7 +66,7 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-現在登入 Jerry 可以建立多個登入，以及使用者 Jerry 可以建立更多使用者。
+登入 Larry 現在可以建立多個登入和使用者 Jerry 可以建立更多的使用者。
 
 
 ## <a name="granting-access-with-least-privileges"></a>使用最低權限授與存取權

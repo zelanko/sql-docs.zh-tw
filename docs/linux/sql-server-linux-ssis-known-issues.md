@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>限制與已知的問題適用於 Linux 上的 SSIS
 
@@ -132,3 +132,8 @@ SQL Server 記錄提供者僅支援 SQL 驗證。不支援 Windows 驗證。
 -   如果您沒有提供路徑，記錄提供者會寫入目前的目錄中的主機。 如果目前使用者沒有主應用程式的目前目錄的寫入權限，記錄提供者會引發錯誤。
 -   您無法使用環境變數中的檔案路徑。 如果您指定的環境變數，您指定的常值文字會出現在檔案路徑。 例如，如果您指定`%TMP%/log.txt`，記錄提供者會將常值的文字附加`/%TMP%/log.txt`為目前的主機目錄。
 
+## <a name="related-content-about-ssis-on-linux"></a>有關 SSIS 在 Linux 上的相關的內容
+-   [擷取、 轉換和載入與 SSIS Linux 上的資料](sql-server-linux-migrate-ssis.md)
+-   [Linux 上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [使用 ssis conf，設定 Linux 上的 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [排程 SQL Server Integration Services 封裝執行 Linux 上的 cron](sql-server-linux-schedule-ssis-packages.md)

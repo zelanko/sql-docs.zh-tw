@@ -1,6 +1,6 @@
 ---
 title: "開始使用雲端中的 SQL Server 2017 |Microsoft 文件"
-description: "本快速入門教學課程會示範如何在您選擇的雲端中的 Linux 上執行 SQL Server 2017。"
+description: "本快速入門示範如何在您選擇的雲端中的 Linux 上執行 SQL Server 2017。"
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -12,17 +12,17 @@ ms.component:
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="run-the-sql-server-2017-in-the-cloud"></a>在雲端中執行 SQL Server 2017
+# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>快速入門： 在雲端中執行 SQL Server 2017
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在本快速入門教學課程中，您將安裝 SQL Server 2017 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 或您選擇的雲端中的 Ubuntu 上。 移至[佈建 Azure 入口網站中的 Linux SQL Server 虛擬機器](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)在 Azure 中 Linux 上執行 SQL Server。
+本快速入門中，您將安裝 SQL Server 2017 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 或您選擇的雲端中的 Ubuntu 上。 移至[佈建 Azure 入口網站中的 Linux SQL Server 虛擬機器](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)在 Azure 中 Linux 上執行 SQL Server。
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)

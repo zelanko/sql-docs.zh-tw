@@ -4,7 +4,7 @@ description: "提供在 Linux 上使用 SQL Server 2017 疑難排解秘訣。"
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 01/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,20 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文件說明如何疑難排解 Microsoft SQL Server on Linux 或 Docker 容器中執行。 當疑難排解 SQL Server on Linux，請記得要檢閱的已知的限制的支援的功能[SQL Server on Linux 版本資訊](sql-server-linux-release-notes.md)。
+
+> [!TIP]
+> 常見問題的解答，請參閱[Linux 常見問題集 > 的 SQL Server](sql-server-linux-faq.md)。
 
 ## <a id="connection"></a> 連接錯誤進行疑難排解
 如果您無法連線到您的 Linux SQL Server，有幾件事檢查。 
@@ -200,12 +203,4 @@ SQL 傾印
    資源：[特殊字元](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>支援
-
-支援是透過社群和受監視的工程團隊。 如有特定問題，使用下列資源：
-
-- [DBA 堆疊 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)： 提問資料庫管理
-- [堆疊溢位](http://stackoverflow.com/questions/tagged/sql-server)： 開發提問
-- [MSDN 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)： 詢問技術問題
-- [提交意見反應](https://feedback.azure.com/forums/908035-sql-server)： 報告錯誤和要求的功能
-- [Reddit](https://www.reddit.com/r/SQLServer/)： 討論 SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

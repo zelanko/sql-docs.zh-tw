@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 40699608d068895cdcee736c87aa4c2bd405b807
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 87c28ec845a59ea13acce0585bc9b249f100a4a5
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>擷取、 轉換和載入與 SSIS Linux 上的資料
 
@@ -111,7 +111,13 @@ SSIS 包含下列功能：
 
 若要開始使用 SSIS，下載最新版[SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md)。
 
-## <a name="see-also"></a>另請參閱
+若要深入了解 SSIS，請參閱下列文章：
 - [深入了解 SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) 開發和管理工具](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Server Integration Services 教學課程](../integration-services/integration-services-tutorials.md)
+
+## <a name="related-content-about-ssis-on-linux"></a>有關 SSIS 在 Linux 上的相關的內容
+-   [Linux 上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [使用 ssis conf，設定 Linux 上的 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [限制與已知的問題適用於 Linux 上的 SSIS](sql-server-linux-ssis-known-issues.md)
+-   [排程 SQL Server Integration Services 封裝執行 Linux 上的 cron](sql-server-linux-schedule-ssis-packages.md)

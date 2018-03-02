@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlcmd
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,22 +29,23 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 如需 SQL Server 2014 和較低，請參閱[sqlcmd 公用程式](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx)。
 
+ > 使用 sqlcmd 在 Linux 上，請參閱[Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
   **Sqlcmd**公用程式可讓您在中，輸入 TRANSACT-SQL 陳述式、 系統程序和指令碼檔案，在命令提示字元中，**查詢編輯器**SQLCMD 模式、 Windows 指令碼檔案或 SQL Server Agent 作業的作業系統 (Cmd.exe) 作業步驟。 此公用程式利用 ODBC 執行 TRANSACT-SQL 批次。 
   
@@ -55,14 +57,14 @@ ms.lasthandoff: 01/17/2018
   若要在 SSMS 中執行 sqlcmd 陳述式，請從上方導覽 [查詢] 功能表的下拉式清單中選取 [SQLCMD 模式]。  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) 利用 Microsoft[!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)]適用於執行一般和 SQLCMD 模式中的 SqlClient**查詢編輯器**。 從命令列執行 **sqlcmd** 時， **sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 利用 Microsoft[!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)]適用於執行一般和 SQLCMD 模式中的 SqlClient**查詢編輯器**。 從命令列執行 **sqlcmd** 時， **sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
 >   
   
  目前， **sqlcmd** 不需要在命令列選項與值之間保留一個空格。 但是在未來的版本中，可能會需要在命令列選項與值之間空一個空格。  
  
  其他主題：
 - [啟動 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [使用 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [使用 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>語法  
   
@@ -406,7 +408,7 @@ sqlcmd
   
 -   **varchar(n** *n* **)**, where 1<=n<=8000  
   
--   **nvarchar(n** *n* **)**, where 1<=n<=4000  
+-   **nvarchar (n**  *n*  **)**，其中 1 < = n < = 4000  
   
 -   **varbinary(n** *n* **)**, where 1<=n\<=4000  
   
@@ -452,7 +454,7 @@ sqlcmd
   
  其中：  
   
- `x`= SQL Server 所處理的交易數目。  
+ `x` = SQL Server 所處理的交易數目。  
   
  `t1` = 所有交易的總時間。  
   
@@ -688,7 +690,7 @@ sqlcmd
  移至表示批次結束及執行任何快取的 TRANSACT-SQL 陳述式。執行批次多次以不同的批次。您無法在單一批次中多次宣告的變數。
   
  **其他命令**  
-  **:r \<** *filename***>**  
+  **: r \<**  *檔名* **>**  
  剖析其他 TRANSACT-SQL 陳述式和**sqlcmd**命令所指定的檔案從 **\< ***filename***>**到陳述式快取。  
   
  如果該檔案包含 TRANSACT-SQL 陳述式未緊接著**移**，您必須輸入**移**後面的那一行上**: r**。  

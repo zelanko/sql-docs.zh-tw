@@ -1,32 +1,33 @@
 ---
 title: "JDBC 驅動程式的概觀 |Microsoft 文件"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/18/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5caebf50c2f7ec29bef49b2b42bbd5a1452218a8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3783933de0579de9c0da9f227280656b3583b7b7
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC Driver 概觀
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Microsoft JDBC Driver for SQL Server 是類型 4 Java 資料庫連線 (JDBC) 4.2 相容驅動程式可提供對 SQL Server 2016、 SQL Server 2014、 SQL Server 2012、 SQL Server 2008 R2、 SQL Server 2008 和 Azure SQL Database 穩固的資料存取。  
+  Microsoft JDBC Driver for SQL Server 是類型 4 Java 資料庫連線 (JDBC) 4.2 相容驅動程式可提供對 SQL Server 2017、 SQL Server 2016、 SQL Server 2014、 SQL Server 2012、 SQL Server 2008 R2、 SQL Server 2008 和 Azure SQL Database 穩固的資料存取.  
   
  本節中的主題會提供此 JDBC 驅動程式的一般概觀，包括使用它的系統需求、使用的方式以及可取得詳細資訊的位置。  
   
@@ -44,8 +45,9 @@ ms.lasthandoff: 11/18/2017
 |[尋找其他 JDBC Driver 資訊](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|說明何處可以找到 Microsoft JDBC Driver 的其他資源，包括外部資源的連結。|  
 |[Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft JDBC Driver for SQL Server 的支援對照表與支援週期原則。|  
 |[常見問題集問題 &#40;常見問題集 &#41;JDBC 驅動程式](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver 的常見問題集。|  
-  
-## <a name="see-also"></a>請參閱＜  
+|[Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server 的功能相依性。|
+
+## <a name="see-also"></a>另請參閱  
  [JDBC 驅動程式 GitHub 儲存機制](https://github.com/microsoft/mssql-jdbc)  
  [JDBC 驅動程式 API 參考](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

@@ -35,17 +35,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d394c689e4f4220781342dca687906d46a673c8e
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: 57dc975f2307a4f05afc3e71a8a9514d2aa84302
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 如需舊版的 SQL Server 相關的內容，請參閱[bcp 公用程式](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)。
 
+ > Bcp 公用程式最新版本，請參閱[for SQL Server 的 Microsoft 命令列公用程式 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
+
+ > 使用 bcp on Linux，請參閱[Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
  > 如需使用 Azure SQL 資料倉儲中的 bcp 的詳細資訊，請參閱[載入資料有 bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
@@ -497,18 +500,18 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
 ### <a name="example-test-conditions"></a>**範例測試條件**
 以下範例針對 SQL Server (從 2016 開始) 和 Azure SQL Database 利用 `WideWorldImporters` 範例資料庫。  `WideWorldImporters` 可以從 [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)下載。  如需還原範例資料庫的語法，請參閱 [RESTORE (TRANSACT-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 。  除非另有指定，否則範例假設您使用 Windows 驗證，且有信任連接通往您在執行 **bcp** 命令的伺服器執行個體。  名為 `D:\BCP` 的目錄將用於許多範例。
 
-下面的指令碼會建立 `WorlWideImporters.Warehouse.StockItemTransactions` 資料表的空複本，然後新增主索引鍵條件約束。  在 SQL Server Management Studio (SSMS) 中執行下列 T-SQL 指令碼
+下面的指令碼會建立 `WideWorldImporters.Warehouse.StockItemTransactions` 資料表的空複本，然後新增主索引鍵條件約束。  在 SQL Server Management Studio (SSMS) 中執行下列 T-SQL 指令碼
 
 ```tsql  
-USE WorlWideImporters;  
+USE WideWorldImporters;  
 GO  
 
 SET NOCOUNT ON;
 
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')     
 BEGIN
-    SELECT * INTO WorlWideImporters.Warehouse.StockItemTransactions_bcp
-    FROM WorlWideImporters.Warehouse.StockItemTransactions  
+    SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
+    FROM WideWorldImporters.Warehouse.StockItemTransactions  
     WHERE 1 = 2;  
 
     ALTER TABLE Warehouse.StockItemTransactions_bcp 
@@ -520,7 +523,7 @@ END
 > [!NOTE]
 > 視需要截斷 `StockItemTransactions_bcp` 資料表。
 >
-> TRUNCATE TABLE WorlWideImporters.Warehouse.StockItemTransactions_bcp;
+> TRUNCATE TABLE WideWorldImporters.Warehouse.StockItemTransactions_bcp;
 
 ### <a name="a--identify-bcp-utility-version"></a>A.  識別 **bcp** 公用程式版本
 請在命令提示字元之下，輸入下列命令：
@@ -529,14 +532,14 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. 將資料表資料列複製到資料檔案中 (使用信任連接)  
-下列範例說明 **資料表上的** out `WorlWideImporters.Warehouse.StockItemTransactions` 選項。
+下列範例說明 `WideWorldImporters.Warehouse.StockItemTransactions` 資料表上的 **out** 選項。
 
 - **Basic**  
 這個範例會建立一個名稱為 `StockItemTransactions_character.bcp` 的資料檔案，且會利用 **字元** 格式，將資料表的資料複製到這個資料檔案中。
 
   請在命令提示字元之下，輸入下列命令：
   ```
-  bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
+  bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
  
  - **展開**  
@@ -544,30 +547,30 @@ bcp -v
 
     請在命令提示字元之下，輸入下列命令：
     ```
-    bcp WorlWideImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
+    bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
     ``` 
  
 檢閱 `Error_out.log` 和 `Output_out.log`。  `Error_out.log` 應為空白。  比較 `StockItemTransactions_character.bcp` 和 `StockItemTransactions_native.bcp`之間的檔案大小。 
    
 ### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>C. 將資料表資料列複製到資料檔案中 (使用混合模式驗證)  
-下列範例說明 **資料表上的** out `WorlWideImporters.Warehouse.StockItemTransactions` 選項。  這個範例會建立一個名稱為 `StockItemTransactions_character.bcp` 的資料檔案，且會利用 **字元** 格式，將資料表的資料複製到這個資料檔案中。  
+下列範例說明 **資料表上的** out `WideWorldImporters.Warehouse.StockItemTransactions` 選項。  這個範例會建立一個名稱為 `StockItemTransactions_character.bcp` 的資料檔案，且會利用 **字元** 格式，將資料表的資料複製到這個資料檔案中。  
   
  此範例假設您使用的是混合模式驗證，您必須使用 **-U** 參數指定您的登入識別碼。 同時，除非您要連接到本機電腦上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體，否則請使用 **-S** 參數指定系統名稱，並選擇性地指定執行個體名稱。  
 
 在命令提示字元中，輸入下列命令︰ \(系統會提示您輸入密碼。\)
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
+bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
   
 ### <a name="d-copying-data-from-a-file-to-a-table"></a>D. 將檔案資料複製到資料表中  
-下列範例會使用上方建立的檔案說明 **資料表上的** in `WorlWideImporters.Warehouse.StockItemTransactions_bcp` 選項。
+下列範例會使用上方建立的檔案說明 `WideWorldImporters.Warehouse.StockItemTransactions_bcp` 資料表上的 **in** 選項。
   
 - **Basic**  
 這個範例會使用先前建立的 `StockItemTransactions_character.bcp` 資料檔案。
 
   請在命令提示字元之下，輸入下列命令：
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
   ```  
 
 - **展開**  
@@ -575,7 +578,7 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransa
   
   請在命令提示字元之下，輸入下列命令：
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
   ```    
   檢閱 `Error_in.log` 和 `Output_in.log`。
    
@@ -585,39 +588,39 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransa
 請在命令提示字元之下，輸入下列命令：
   
 ```  
-bcp "SELECT StockItemTransactionID FROM WorlWideImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
+bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```  
   
 ### <a name="f-copying-a-specific-row-into-a-data-file"></a>F. 將特定資料列複製到資料檔案中  
-若要複製特定資料列，您可以使用 **queryout** 選項。 下列範例只會將 `Amy Trefl` 資料表中名稱為 `WorlWideImporters.Application.People` 之連絡人的資料列複製到 `Amy_Trefl_c.bcp`資料檔案中。  注意︰ **-d** 參數用來識別資料庫。
+若要複製特定資料列，您可以使用 **queryout** 選項。 下列範例只會將 `WideWorldImporters.Application.People` 資料表中名稱為 `Amy Trefl` 之連絡人的資料列複製到 `Amy_Trefl_c.bcp` 資料檔案中。  注意︰ **-d** 參數用來識別資料庫。
   
 請在命令提示字元之下，輸入下列命令： 
 ```  
-bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WorlWideImporters -c -T
+bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```  
   
 ### <a name="g-copying-data-from-a-query-to-a-data-file"></a>G. 將查詢的資料複製到資料檔案中  
-若要將 Transact-SQL 陳述式的結果集複製到資料檔案中，請使用 **queryout** 選項。  下列範例會依照全名的方式，將 `WorlWideImporters.Application.People` 資料表中的名稱複製到 `People.txt` 資料檔案中。  注意︰ **-t** 參數用來建立以逗號分隔的檔案。
+若要將 Transact-SQL 陳述式的結果集複製到資料檔案中，請使用 **queryout** 選項。  下列範例會依照全名的方式，將 `WideWorldImporters.Application.People` 資料表中的名稱複製到 `People.txt` 資料檔案中。  注意︰ **-t** 參數用來建立以逗號分隔的檔案。
   
 請在命令提示字元之下，輸入下列命令：
 ```  
-bcp "SELECT FullName, PreferredName FROM WorlWideImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
+bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```  
   
 ### <a name="h-creating-format-files"></a>H. 建立格式檔案  
-下列範例會針對 `Warehouse.StockItemTransactions` 資料庫中的 `WorlWideImporters` 資料表來建立三個不同的格式檔案。  檢閱每個建立檔案的內容。
+下列範例會針對 `WideWorldImporters` 資料庫中的 `Warehouse.StockItemTransactions` 資料表來建立三個不同的格式檔案。  檢閱每個建立檔案的內容。
   
 請在命令提示字元之下，輸入下列命令：
   
 ```  
 REM non-XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
 REM non-XML native format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
 
 REM XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
  
 ```  
   
@@ -631,7 +634,7 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stock
   
 請在命令提示字元之下，輸入下列命令：
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
 ```  
   
 > [!NOTE]  

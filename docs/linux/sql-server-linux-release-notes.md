@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: a661da062d65ca699627bc2b5bf0683e5fe08806
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
-ms.translationtype: HT
+ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
@@ -39,13 +39,9 @@ ms.lasthandoff: 02/21/2018
 > [!TIP]
 > 如需詳細資訊，請檢閱[系統需求](sql-server-linux-setup.md#system)for SQL Server on Linux。 SQL Server 2017 最新的支援原則，請參閱[Microsoft SQL Server 的技術支援人員原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
 
-## <a name="supported-client-tools"></a>支援的用戶端工具
+## <a name="tools"></a>工具
 
-| 工具 | 最小版本 |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) for Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 |
+目標 SQL Server 的大部分現有用戶端工具，可順暢地鎖定目標在 Linux 上執行的 SQL Server。 某些工具可能會有適用於 Linux 的特定版本需求。 如需 SQL Server 工具的完整清單，請參閱[SQL Tools 和 SQL Server 公用程式](../tools/overview-sql-tools.md)。
 
 ## <a name="release-history"></a>發行記錄
 
@@ -180,6 +176,7 @@ ms.lasthandoff: 02/21/2018
 | &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
+| &nbsp; | 分散式的交易協調器 (DTC) |
 
 ## <a name="known-issues"></a>已知問題
 
@@ -332,3 +329,5 @@ ms.lasthandoff: 02/21/2018
 - [執行 docker](quickstart-install-connect-ubuntu.md)
 - [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [執行與連線 - 雲端](quickstart-install-connect-clouds.md)
+
+常見問題的解答，請參閱[Linux 常見問題集 > 的 SQL Server](sql-server-linux-faq.md)。

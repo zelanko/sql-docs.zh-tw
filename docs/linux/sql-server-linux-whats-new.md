@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: 5b94646e5e58db531369dcf498ada5f85b6a7902
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的新功能
 
@@ -70,8 +70,9 @@ ms.lasthandoff: 02/21/2018
 - [執行 docker](quickstart-install-connect-docker.md)
 - [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-如需 SQL Server on Linux 其他資訊，請參閱[概觀](sql-server-linux-overview.md)。 如需下載套件不支援的功能和已知的問題的清單，請參閱[版本資訊](sql-server-linux-release-notes.md)。
-
 若要查看其他 SQL Server 2017 中導入的增強功能，請參閱[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)。
+
+> [!TIP]
+> 常見問題的解答，請參閱[Linux 常見問題集 > 的 SQL Server](sql-server-linux-faq.md)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

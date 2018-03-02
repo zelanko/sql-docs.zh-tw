@@ -1,33 +1,42 @@
 ---
 title: "SSMA for SAP ASE (SybaseToSQL) 中最新消息 |Microsoft 文件"
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55733de35eb8b138d1aef999c59bbc7bdc016a0b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd8bd705a767095e28a55dc22d6b26fcd079baf6
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE (SybaseToSQL) 中最新消息
 本主題列出每個版本中的 SAP ASE (先前稱為 SSMA for Sybase) 變更 SSMA。 
+
+## <a name="ssma-v77"></a>SSMA v7.7
+SAP ASE v7.7 版的 SSMA 包含下列變更：
+- SSMA for SAP ASE 已經增強，改善品質和轉換的度量資訊的目標解決。
+- 32 位元版本的 SSMA for SAP ASE 根據需要常用，已經恢復。 相較於之前的實作 （前 v7.4)，有兩個安裝程式套件，但是它們無法並存安裝。 如此一來，您必須選擇最適當版本根據連接元件。 一律最好是盡可能使用 64 位元版本。
+
+> [!IMPORTANT]
+> SSMA v7.4 和更新版本，.Net 4.5.2 是安裝必要條件。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 SAP ASE v7.6 版的 SSMA 包含下列變更：
@@ -71,7 +80,7 @@ V7.2 版的 SSMA for Sybase 包含下列變更：
 - 改善的品質和轉換的度量根據客戶的意見反應目標的修正程式。
 - 遙測增強功能提供更好的資料點，來解決客戶問題，並改善 SSMA 的轉換比率。
 
-## <a name="ssma-v71"></a>SSMA 7.1 版
+## <a name="ssma-v71"></a>SSMA v7.1
 SSMA for Access 的 7.1 版發行版本包含下列變更：
 - 在 Windows 和 Linux CTP1 上的 SQL Server 2017 已移轉的支援的目標平台。 這項功能是 technical preview 中，並支援結構描述和資料移動到目標 SQL 伺服器。
 - SSMA 現在支援自動更新，以下載最新版本的 SSMA，如有的話。
@@ -207,5 +216,5 @@ May 2007 版的 SSMA for Sybase 包含下列變更：
 ## <a name="july-2006"></a>2006 年 7 月  
 2006 年 7 月版的 SSMA for Sybase 是最早的版本。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [開始使用 SSMA for Sybase &#40;SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

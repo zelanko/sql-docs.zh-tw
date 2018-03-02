@@ -8,20 +8,21 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 81176070a9363e54dc469dd050891335edcb92af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="building-the-connection-url"></a>建立連接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -79,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>具名和多個 SQL Server 執行個體  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]允許的多個資料庫執行個體，每一部伺服器上安裝。 並以特定的名稱識別每個執行個體。 若要連接到具名執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 您可以指定具名執行個體 （慣用） 的通訊埠編號，或您可以指定執行個體名稱為 JDBC URL 屬性或**datasource**屬性。 如果沒有指定執行個體名稱或通訊埠號碼屬性，則會建立預設執行個體的連接。 請參閱下列範例：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允許在每個伺服器上安裝多個資料庫執行個體。 並以特定的名稱識別每個執行個體。 若要連接到具名執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 您可以指定具名執行個體 （慣用） 的通訊埠編號，或您可以指定執行個體名稱為 JDBC URL 屬性或**datasource**屬性。 如果沒有指定執行個體名稱或通訊埠號碼屬性，則會建立預設執行個體的連接。 請參閱下列範例：  
   
  若要使用通訊埠號碼，請執行下列：  
   
@@ -97,12 +98,12 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  大括弧內的空格是常值，不會被修剪。  
   
-##  <a name="Connectingintegrated"></a>使用 Windows 整合式驗證進行連接  
+##  <a name="Connectingintegrated"></a> 使用 Windows 整合式驗證進行連接  
  JDBC 驅動程式支援在 Windows 作業系統上使用類型 2 整合式驗證，方法是透過 integratedSecurity 連接字串屬性。 若要使用整合式驗證，請將 sqljdbc_auth.dll 檔複製到安裝 JDBC 驅動程式的電腦上 Windows 系統路徑中的目錄。  
   
  sqljdbc_auth.dll 檔會安裝在下列位置：  
   
- \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \auth\  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
   
  支援的任何作業系統[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，請參閱[使用 Kerberos 整合式驗證來連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)中新增一項功能的說明[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]，可讓應用程式連接至透過類型 4 Kerberos 整合式的驗證的資料庫。  
   
@@ -111,7 +112,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  或者，您也可以設定 java.libary.path 系統屬性來指定 sqljdbc_auth.dll 的目錄。 例如，如果 JDBC Driver 安裝在預設目錄中，您就可以在 Java 應用程式啟動時，使用下列虛擬機器 (VM) 引數來指定 DLL 的位置：  
   
- `-Djava.library.path=C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
+ `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
 ## <a name="connecting-with-ipv6-addresses"></a>以 IPv6 位址連接  
  JDBC 驅動程式支援使用 IPv6 位址搭配連接屬性集合，以及搭配 serverName 連接字串屬性。 初始 serverName 值，例如 jdbc:*sqlserver*://*serverName*，不支援連接字串中的 IPv6 位址。 使用的名稱*serverName*而不是使用原始 IPv6 位址會適用於所有連線中的情況。 下列範例提供詳細資訊。  
@@ -128,7 +129,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

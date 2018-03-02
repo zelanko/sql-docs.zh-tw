@@ -4,7 +4,7 @@ description: "本文章會提供在 Linux 上執行 SQL Server 相關常見問�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: b5dd38c166f869cfff730d091cee091582507114
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3fad3fb2892e5a91e42eefb5f00932c39d00064f
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux 常見問題集 (FAQ)
 
@@ -30,7 +30,11 @@ ms.lasthandoff: 02/13/2018
 
 1. **支援哪些 Linux 平台？**
 
-   Red Hat Enterprise Server、 SUSE Linux Enterprise Server 和 Ubuntu 上目前支援 SQL Server。 如需有關支援版本的最新資訊，請參閱[支援的平台](sql-server-linux-setup.md#supportedplatforms)。
+   Red Hat Enterprise Server、 SUSE Linux Enterprise Server 和 Ubuntu 上目前支援 SQL Server。 它也會在使用 Docker 容器中執行。 如需有關支援版本的最新資訊，請參閱[支援的平台](sql-server-linux-setup.md#supportedplatforms)。
+
+1. **會使用其他平台上的 SQL Server on Linux**嗎？
+
+   您可能可以安裝並執行 SQL Server 上其他 Linux 散發。 例如，CentOS 與密切相關 Red Hat Enterprise Server，因此您可能會安裝 RPM SQL Server 封裝。 這可能是適用於其他密切相關的發佈。 主要的問題是測試及支援。 SQL Server 只測試和 Red Hat Enterprise Linux、 SUSE Linux Enterprise Server 和 Ubuntu 上才支援。
 
 1. **在 Linux 上支援的 SQL Server 功能？**
 
@@ -130,6 +134,4 @@ ms.lasthandoff: 02/13/2018
 
    我們不支援變更從預設安裝的 SQL Server 目錄和檔案的擁有權。 Mssql 帳戶和群組特別適用於 SQL Server，沒有互動式登入的存取。
 
-## <a name="next-steps"></a>後續的步驟
-
-如需有關如何在 Linux 上執行 SQL Server 的詳細資訊，請參閱[概觀的 SQL Server on Linux](sql-server-linux-overview.md)。
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

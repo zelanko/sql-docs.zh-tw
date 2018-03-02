@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
 
@@ -29,6 +29,8 @@ ms.lasthandoff: 02/13/2018
 
 > [!TIP]
 > 若要快速地開始，跳至其中的快速入門[RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)， [Ubuntu](quickstart-install-connect-ubuntu.md)，或[Docker](quickstart-install-connect-docker.md)。
+
+常見問題的解答，請參閱[Linux 常見問題集 > 的 SQL Server](../linux/sql-server-linux-faq.md)。
 
 ## <a id="supportedplatforms"></a> 支援的平台
 
@@ -40,6 +42,9 @@ ms.lasthandoff: 02/13/2018
 | **SUSE Linux Enterprise Server** | v12 SP2 | [取得 SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [取得 Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker 引擎** | 1.8+ | [取得 Docker](http://www.docker.com/products/overview)
+
+> [!NOTE]
+> 它有時可能是安裝和其他密切相關 Linux 平台上，執行 SQL Server，但只測試，在上表中所列的平台上支援 SQL Server。
 
 Microsoft 僅支援部署及管理 SQL Server 容器使用 OpenShift 和 Kubernetes。
 
@@ -53,7 +58,7 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 |-----|-----|
 | **記憶體** | 2 GB |
 | **檔案系統** | **XFS**或**EXT4** (其他檔案系統，例如**BTRFS**，不支援) |
-| 磁碟空間 | 6 GB |
+| **磁碟空間** | 6 GB |
 | **處理器速度** | 2 GHz |
 | **處理器核心** | 2 核心 |
 | **處理器類型** | 只有 x64-相容 |

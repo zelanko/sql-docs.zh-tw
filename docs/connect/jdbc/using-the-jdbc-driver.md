@@ -1,27 +1,28 @@
 ---
 title: "使用 JDBC 驅動程式 |Microsoft 文件"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 018679acc5c3e0119755e5ab5e0378c6f3fec7f0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9118a82f333b14f9ba468c039255ff3e6a1280d7
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,25 +30,44 @@ ms.lasthandoff: 11/18/2017
   本節提供快速入門指示來進行的簡單連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫使用[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。 在連接之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]必須先安裝在本機電腦或伺服器上，而且必須在本機電腦上安裝 JDBC 驅動程式。  
   
 ## <a name="choosing-the-right-jar-file"></a>選擇正確的 JAR 檔案  
+ 提供 SQL Server 的 Microsoft JDBC 驅動程式 6.4 **mssql-jdbc-6.4.0.jre7.jar**， **mssql-jdbc-6.4.0.jre8.jar**，和**mssql-jdbc-6.4.0.jre9.jar**類別庫根據您慣用的 Java Runtime Environment (JRE) 設定使用的檔案。  
+ 
  提供 SQL Server 的 Microsoft JDBC 驅動程式 6.2 **mssql-jdbc-6.2.1.jre7.jar**，和**mssql-jdbc-6.2.1.jre8.jar**類別，可根據您慣用的 Java 執行階段程式庫檔案Environment (JRE) 設定。  
   
   Microsoft JDBC Drivers 6.0 與 4.2 for SQL Server 提供**sqljdbc41.jar**，和**sqljdbc42.jar**類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定。  
   
  Microsoft JDBC Driver 4.1 for SQL Server 提供**sqljdbc41.jar**類別程式庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定。  
-  
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 提供**sqljdbc.jar**和**sqljdbc4.jar**類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定。  
-  
+    
  您的選擇也會決定可用的功能。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="setting-the-classpath"></a>設定 Classpath  
- JDBC Driver 不屬於 Java SDK 的一部分。 如果您想要使用它，您必須設定 classpath 以包含**sqljdbc.jar**檔案， **sqljdbc4.jar**檔案， **sqljdbc41.jar**檔案，或**sqljdbc42.jar**檔案。 如果使用 JDBC 驅動程式 6.2，設定 classpath 以包含**mssql-jdbc-6.2.1.jre7.jar**或**mssql-jdbc-6.2.1.jre8.jar**。 如果 classpath 遺漏一個項目，則您的應用程式會擲回常見的「找不到類別」例外狀況。  
+ JDBC Driver 不屬於 Java SDK 的一部分。 如果您想要使用它，您必須設定 classpath 以包含**sqljdbc.jar**檔案， **sqljdbc4.jar**檔案， **sqljdbc41.jar**檔案，或**sqljdbc42.jar**檔案。 如果使用 JDBC 驅動程式 6.2，設定 classpath 以包含**mssql-jdbc-6.2.1.jre7.jar**或**mssql-jdbc-6.2.1.jre8.jar**。 如果使用 JDBC 驅動程式 6.4，設定 classpath 以包含**mssql-jdbc-6.4.0.jre7.jar**， **mssql-jdbc-6.4.0.jre8.jar**或**mssql-jdbc-6.4.0.jre9.jar**。 如果 classpath 遺漏一個項目，則您的應用程式會擲回常見的「找不到類別」例外狀況。  
   
-### <a name="for-microsoft-jdbc-driver-62"></a>Microsoft JDBC driver 6.2
+### <a name="for-microsoft-jdbc-driver-64"></a>For Microsoft JDBC Driver 6.4
+ **Mssql-jdbc-6.4.0.jre7.jar**， **mssql-jdbc-6.4.0.jre8.jar**或**mssql-jdbc-6.4.0.jre9.jar**檔案會安裝在下列位置：  
+  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre7.jar 
+  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre8.jar
+ 
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre9.jar
+  
+ 以下是用於 Windows 應用程式的 CLASSPATH 陳述式範例：  
+  
+ `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre9.jar`  
+  
+ 以下是用於 Unix/Linux 應用程式的 CLASSPATH 陳述式範例：  
+  
+ `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
+  
+ 您必須確定 CLASSPATH 陳述式包含只有一個[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 mssql-jdbc-6.4.0.jre7.jar、 mssql-jdbc-6.4.0.jre8.jar 或 mssql-jdbc-6.4.0.jre9.jar。   
+
+### <a name="for-microsoft-jdbc-driver-62"></a>For Microsoft JDBC Driver 6.2
  **Mssql-jdbc-6.2.1.jre7.jar**或**mssql-jdbc-6.2.1.jre8.jar**檔案會安裝在下列位置：  
   
- \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \mssql-jdbc-6.2.1.jre7.jar 
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.2.1.jre7.jar 
   
- \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \mssql-jdbc-6.2.1.jre8.jar
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.2.1.jre8.jar
   
  以下是用於 Windows 應用程式的 CLASSPATH 陳述式範例：  
   
@@ -59,16 +79,16 @@ ms.lasthandoff: 11/18/2017
   
  您必須確定 CLASSPATH 陳述式包含只有一個[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 mssql-jdbc-6.2.1.jre7.jar 或 mssql-jdbc-6.2.1.jre8.jar。  
 
-### <a name="for-microsoft-jdbc-driver-40-41-42-and-60"></a>Microsoft JDBC driver 4.0、 4.1、 4.2 與 6.0
+### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Microsoft JDBC driver 4.1、 4.2 與 6.0
  sqljdbc.jar 檔案、sqljdbc4.jar 檔案、sqljdbc41.jar 或 sqljdbc42.jar 檔案安裝於下列位置：  
   
- \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \sqljdbc.jar  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc.jar  
   
- \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \sqljdbc4.jar  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc4.jar  
   
- \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \sqljdbc41.jar  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc41.jar  
   
- \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \sqljdbc42.jar  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc42.jar  
   
  以下是用於 Windows 應用程式的 CLASSPATH 陳述式範例：  
   
@@ -117,7 +137,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
   
  如需如何連接資料來源及使用連接 URL 的詳細資訊，請參閱[建立連接 URL](../../connect/jdbc/building-the-connection-url.md)和[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
