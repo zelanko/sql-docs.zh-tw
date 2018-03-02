@@ -22,10 +22,7 @@
 ## [SQL Server 2017 資訊](sql-server-2017-release-notes.md)
 ## [SQL Server 2016 資訊](sql-server-2016-release-notes.md)
 ## [SQL Server 2014 資訊](sql-server-2014-release-notes.md)
-## [SQL Server 2012 SP4 資訊](sql-server-2012-sp4-release-notes.md)
-## [SQL Server 2012 SP3 資訊](sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2012 SP2 資訊](sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP1 資訊](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 Service Pack 版本資訊](sql-server-2012-sp4-release-notes.md)
 ## [SQL Server 2012 資訊](sql-server-2012-release-notes.md)
 ## [SQL Server 2008 R2 SP2 資訊](sql-server-2008-r2-sp2-release-notes.md)
 
