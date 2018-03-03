@@ -1,8 +1,8 @@
 ---
-title: "Active Directory 驗證 Linux 上的 SQL server |Microsoft 文件"
+title: "Active Directory 驗證教學課程中的 SQL Server on Linux |Microsoft 文件"
 description: "本教學課程提供的 SQL Server on Linux 的 AAD 驗證的設定步驟。"
 author: meet-bhagdev
-ms.date: 01/30/2018
+ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
@@ -16,24 +16,17 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="active-directory-authentication-with-sql-server-on-linux"></a>Active Directory 驗證與 SQL Server on Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程： 使用 Active Directory 驗證與 SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本教學課程說明如何設定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]on Linux 支援 Active Directory (AD) 驗證，也稱為整合式驗證。 AD 驗證可讓已加入網域的用戶端的 Windows 或 Linux 向[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用其網域認證和 Kerberos 通訊協定。
-
-AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證：
-
-* 使用者驗證透過單一登入，而不會提示輸入密碼。   
-* 藉由建立的 AD 群組的登入，您可以管理存取權與權限[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 群組成員資格。  
-* 每位使用者都有單一識別您的組織，因此您不需要追蹤其中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入對應至哪些使用者。   
-* AD 可讓您強制執行組織的集中式的密碼原則。   
+本教學課程說明如何設定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]on Linux 支援 Active Directory (AD) 驗證，也稱為整合式驗證。 如需概觀，請參閱[Active Directory 驗證的 SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md)。
 
 本教學課程包含下列工作：
 
@@ -49,17 +42,12 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
 設定 AD 驗證之前，您需要：
 
 * 設定您的網路上的 AD 網域控制站 (Windows)  
-* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* 安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-> [!IMPORTANT]
-> 限制：
-> - 此時，資料庫鏡像端點支援的唯一的驗證方法是憑證。 在未來版本中，將會啟用 WINDOWS 驗證方法。
-> - 第三方 AD 工具 Centrify，Powerbroker，等 Vintela 不支援 
-
-## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD 網域的主機
+## <a id="join"></a> 加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD 網域的主機
 
 使用下列步驟來加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Active Directory 網域的主機：
 
@@ -179,7 +167,7 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
 
 如需詳細資訊，請參閱 Red Hat 文件[發掘和聯結的身分識別網域](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)。 
 
-## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>建立 AD 使用者輸入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和設定 SPN
+## <a id="createuser"></a> 建立 AD 使用者輸入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和設定 SPN
 
   > [!NOTE]
   > 下一個步驟會使用您[完整的網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您在**Azure**，您必須**[建立一個](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**在繼續之前。
@@ -208,7 +196,7 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
 
 3. 如需詳細資訊，請參閱 [註冊 Kerberos 連接的服務主體名稱](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。
 
-## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>設定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服務 keytab
+## <a id="configurekeytab"></a> 設定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服務 keytab
 
 1. 檢查先前的步驟中建立的 AD 帳戶金鑰的版本號碼 (kvno)。 它通常是 2，但它可能是另一個整數，如果您變更帳戶的密碼多次。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦上，執行下列命令：
 
@@ -249,7 +237,7 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
    sudo systemctl restart mssql-server
    ```
 
-## <a name="create-ad-based-logins-in-transact-sql"></a>在 TRANSACT-SQL 中建立 AD 為基礎的登入
+## <a id="createsqllogins"></a> 在 TRANSACT-SQL 中建立 AD 為基礎的登入
 
 1. 連接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]並建立新的 AD 為基礎的登入：
 
@@ -263,7 +251,7 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
    SELECT name FROM sys.server_principals;
    ```
 
-## <a name="connect-to-includessnoversionincludesssnoversion-mdmd-using-ad-authentication"></a>連接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 驗證
+## <a id="connect"></a> 連接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 驗證
 
 用戶端電腦使用您的網域認證登入。 現在您可以連接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]無需重新輸入您的密碼，利用 AD 驗證。 如果您建立的 AD 群組的登入，該群組的成員任何 AD 使用者可以連線相同的方式。
 
