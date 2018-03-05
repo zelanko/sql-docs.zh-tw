@@ -66,7 +66,7 @@ ms.lasthandoff: 02/15/2018
   
  \<*path*>|\<*path*>  
   
- 您也可以使用萬用字元來指定多個檔案或資料夾。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\*.txt。  
+ 您也可以使用萬用字元來指定多個檔案或資料夾。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\\*.txt。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   

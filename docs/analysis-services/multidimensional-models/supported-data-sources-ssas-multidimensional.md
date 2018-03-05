@@ -53,7 +53,7 @@ ms.lasthandoff: 02/23/2018
   
  \* 多維度方案不支援 ODBC 資料來源。 雖然 Analysis Services 本身會處理連接，但是 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中用於建立方案的設計工具無法連接至 ODBC 資料來源，即使使用 MSDASQL 驅動程式亦然。 如果您的業務需求包含 ODBC 資料來源，請考慮改為建立表格式方案。  
   
- **部分功能需要在內部部署環境執行的 SQL Server 關聯式資料庫。 具體而言，回寫和 ROLAP 儲存會要求基礎資料來源為 SQL Server 關聯式資料庫。  
+ \*\* 部分功能需要在內部部署環境執行的 SQL Server 關聯式資料庫。 具體而言，回寫和 ROLAP 儲存會要求基礎資料來源為 SQL Server 關聯式資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
  [支援的資料來源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
