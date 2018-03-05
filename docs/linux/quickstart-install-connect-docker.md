@@ -97,7 +97,7 @@ ms.lasthandoff: 02/24/2018
 
    ![Docker ps 命令輸出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-1. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](sql-server-linux-configure-docker.md#troubleshooting)。
+1. 如果**狀態**資料行會顯示狀態為**向上**、 然後 SQL Server 正在執行中容器和接聽的通訊埠中指定**連接埠**資料行。 如果**狀態**資料行的 SQL Server 容器節目**Exited**，請參閱[疑難排解 > 一節的設定指南](sql-server-linux-configure-docker.md#troubleshooting)。
 
 `-h` (主機名稱) 參數也相當實用，但為求簡明因此未在本教學課程中使用。 此參數可將容器的內部名稱變更為自訂值。 這是您在下列 Transact-SQL 查詢中會看到的傳回名稱：
 
@@ -227,7 +227,7 @@ SELECT @@SERVERNAME,
 
 1. 找出裝載您容器之電腦的 IP 位址。 在 Linux 上，使用**ifconfig** 或 **ip addr**。在 Windows 上，使用 **ipconfig**。
 
-1. 執行 sqlcmd 來指定 IP 位址，以及對應至您容器連接埠 1433 的連接埠。 在此範例中即為主機電腦上的連接埠 1401。
+1. 執行 sqlcmd 來指定 IP 位址和容器中 1433 通訊埠所對應的連接埠。 在此範例中，即是指主機上的 1401 連接埠。
 
    ```bash
    sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourNewStrong!Passw0rd>'
@@ -261,7 +261,7 @@ docker rm sql1
 ```
 
 > [!WARNING]
-> 停止及移除容器會永久刪除容器中的所有 SQL Server 資料。 如須保留資料，[請建立備份檔案並將其複製到容器外](tutorial-restore-backup-in-sql-server-container.md)，或使用[容器資料持續性技術](sql-server-linux-configure-docker.md#persist)。
+> 停止及移除容器會永久刪除容器中的所有 SQL Server 資料。 如果您要保留您的資料，請[建立備份檔案並複製至容器之外](tutorial-restore-backup-in-sql-server-container.md)，或使用[容器資料持續性技術](sql-server-linux-configure-docker.md#persist)。
 
 ## <a name="docker-demo"></a>Dock 示範
 
