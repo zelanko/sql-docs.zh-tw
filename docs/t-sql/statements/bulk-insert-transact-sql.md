@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - BULK INSERT
 - BULK_INSERT_TSQL
 - BULK
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - tables [SQL Server], importing data into
 - inserting files
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: "153"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
 ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/03/2018
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DBCC
 - DBCC_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transactional consistency
 - Database Console Command statements
@@ -37,14 +39,14 @@ helpviewer_keywords:
 - progress reporting [DBCC statements]
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 24092c692e25010d284d083a1632cffbfe0ed599
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
