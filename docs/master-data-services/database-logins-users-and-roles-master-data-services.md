@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - database [Master Data Services], logins
 - security [Master Data Services], database logins
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a894b57cbe4c6111ff0c3c986d8761228c3ff86e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c22d739812318cf6c29559164df18fc4c07fe834
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>資料庫登入、使用者和角色 (Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含的登入、使用者和角色會自動安裝在主控 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體上。 不應對這些登入、使用者和角色進行修改。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含的登入、使用者和角色會自動安裝在主控 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 執行個體上。 不應對這些登入、使用者和角色進行修改。  
   
 ## <a name="logins"></a>登入  
   

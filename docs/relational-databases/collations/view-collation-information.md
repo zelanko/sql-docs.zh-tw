@@ -16,15 +16,15 @@ helpviewer_keywords:
 - collations [SQL Server], view
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 349830726079ebdcd820d2c76bc1c5f76c74c7c7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4095965899da005d767bb124806fbb116379a1f6
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="view-collation-information"></a>檢視定序資訊
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

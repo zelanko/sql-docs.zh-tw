@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 141c09b1b809468aaf17455b7180f711ae2b2fc0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6900e6cd61c5ea332c515fff99a802a63ccaf655
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>驗證資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您發行資料時，會進行下列兩種驗證類型：  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
  如需其他狀態的資訊，請參閱[驗證狀態 &#40;Master Data Services&#41;](../../master-data-services/validation-statuses-master-data-services.md)。  
   
-|狀態|說明|  
+|[狀態]|描述|  
 |------------|-----------------|  
 |驗證失敗|對 MDS 管理員所定義的商務規則，資料列中一個或多個值的驗證失敗。|  
 |驗證成功|資料列中的所有值已經通過商務規則驗證。|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="input-statuses"></a>輸入狀態  
  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，可能出現下列幾種輸入狀態：  
   
-|狀態|說明|  
+|[狀態]|描述|  
 |------------|-----------------|  
 |錯誤|資料列中一個或多個值不符合系統需求，如長度或資料類型。 MDS 儲存機制中的值未更新。|  
 |新資料列|資料列中的值尚未發行到 MDS 儲存機制。|  

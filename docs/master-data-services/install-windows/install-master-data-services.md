@@ -8,20 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: "32"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d26d76d4f363a5ae77c9c10cedd85afac56ffd81
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a0b5d444d3f1f28d4453a8c266b19beaf080440
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services 的安裝工作
   本文概述安裝工作以及指示的連結。 如需安裝和設定 Master Data Services 的逐步解說，請參閱 [Master Data Services 安裝和組態](../../master-data-services/master-data-services-installation-and-configuration.md)。 

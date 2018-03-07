@@ -8,20 +8,21 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: smartysanthosh
-ms.author: nagavo
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8cd77bb7366fb1bb09d8f119a1b740bd8456344
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
 
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/20/2017
 
 WSFC 是一種功能，可改善應用程式和服務的高可用性。 它包含一組獨立的 Windows Server 執行個體，而且這些執行個體上執行 Microsoft 容錯移轉叢集服務。 Windows Server 執行個體 (或偶而呼叫的節點) 會連接以彼此通訊，而且可以進行失敗偵測。 WSFC 提供失敗偵測和容錯移轉功能。 如果叢集中的節點或服務失敗，則會偵測到失敗，而且另一個節點自動或手動開始提供失敗節點上所裝載的服務。 因此，使用者只會發生最少的服務中斷，進而改善服務可用性。  
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>Prerequisites
 
 Windows Server 作業系統安裝於所有執行個體上，並修補所有更新。
 
@@ -215,7 +216,7 @@ AG 可增強資料庫層級高可用性。 AG (一組使用者資料庫) 和其�
 FCI 可增強執行個體層級高可用性。 SQL Server 服務和相關服務會註冊為 WSFC 中的資源。 此外，FCI 解決方案需要對稱共用磁碟儲存體 (例如 SAN 或 SMB 檔案共用)，而且 WFC 叢集中的所有節點都必須使用這些磁碟儲存體。
 
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>Prerequisites
 
 -   在所有節點上安裝 SQL Server。 如需詳細資訊，請參閱[安裝 SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server)。
 
@@ -319,9 +320,9 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
 8.  在 [指定複本] 頁面上，按一下 [接聽程式] 索引標籤，然後執行下列動作。 請參閱圖 18。
 
-    a.  按一下 [建立可用性群組接聽程式]，設定 MDS 資料庫連接的可用性群組接聽程式。
+    A.  按一下 [建立可用性群組接聽程式]，設定 MDS 資料庫連接的可用性群組接聽程式。
 
-    b.  輸入 [接聽程式 DNS 名稱]，例如 MDSSQLServer。
+    B.  輸入 [接聽程式 DNS 名稱]，例如 MDSSQLServer。
 
     c.  在 [連接埠] 文字方塊中，輸入預設 SQL 連接埠 1433。
 
