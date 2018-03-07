@@ -1,7 +1,7 @@
 ---
 title: "下載 SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 02/15/2018
+ms.date: 02/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc8fe6a41661acd176c43cdf1de2a857846a7b83
-ms.sourcegitcommit: 03021482208259e6c67599b47df23fbbe8f3a393
+ms.openlocfilehash: de6d0b4d679dab1f008ef53afef4a173311ea20e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -106,14 +106,12 @@ SSMS 17.5 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSM
 
 
 
-
-
 ## <a name="supported-sql-offerings"></a>支援的 SQL 供應項目
 
 * 此版本的 SSMS 適用於所有[支援的 SQL Server 2008 - SQL Server 2017 版本](https://support.microsoft.com/lifecycle?C2=1044)，並提供最高層級的支援以使用 Azure SQL Database 中最新的雲端功能，以及 Azure SQL 資料倉儲。
-* SQL Server 2000 或 SQL Server 2005 並未受到明確限制，但有些功能可能無法正常運作。
+* 使用 SSMS 17.x 以連線至 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)。
 * 此外，SSMS 17.x 可以與 SSMS 16.x 或 SQL Server 2014 SSMS 及更早的版本並存安裝。
-* SQL Server Integration Services (SSIS) - SSMS 17.x 版不支援連線至舊版 SQL Server Integration Services 服務。 若要連線至舊版 Integration Services 的舊版本，請使用與 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 連線至舊版 SQL Server 2016 Integration Services 服務。 SSMS 17.x 和 SSMS 16.x 可以並存安裝在相同電腦上。 自 SQL Server 2012 發行之後，建議使用 SSIS Catalog 資料庫 SSISDB 來儲存、管理、執行和監視 Integration Services 套件。
+* SQL Server Integration Services (SSIS) - SSMS 17.x 版不支援連線至舊版 SQL Server Integration Services 服務。 若要連線至舊版 Integration Services 的舊版本，請使用與 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 連線至舊版 SQL Server 2016 Integration Services 服務。 SSMS 17.x 和 SSMS 16.x 可以並存安裝在相同電腦上。 自 SQL Server 2012 發行之後，建議使用 SSIS Catalog 資料庫 SSISDB 來儲存、管理、執行和監視 Integration Services 套件。 如需詳細資訊，請參閱 [SSIS 目錄](../integration-services/catalog/ssis-catalog.md)。
 
 ## <a name="supported-operating-systems"></a>支援的作業系統
   

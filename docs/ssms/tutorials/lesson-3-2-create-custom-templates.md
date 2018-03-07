@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 757a6b2aebe68dc32ddc493c3e6649a8b589be3e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>課程 3-2 - 建立自訂範本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 7.  在 [查詢編輯器] 中，輸入下列指令碼來建立查閱特定零件的訂單之預存程序，這裡的零件是刀片 (Blade)。 (您可以從 [教學課程] 視窗中複製和貼上程式碼)。  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -73,11 +73,11 @@ ms.lasthandoff: 01/17/2018
   
 8.  按 F5 鍵來執行此指令碼，並建立 **WorkOrdersForBlade** 程序。  
   
-9. 在物件總管中，以滑鼠右鍵按一下您的伺服器，然後按一下 [新增查詢]。 此時會開啟一個新的 [查詢編輯器] 視窗。  
+9. 在物件總管中，以滑鼠右鍵按一下 **AdventureWorks2012** 資料庫，然後按一下 [新增查詢]。 此時會開啟一個新的 [查詢編輯器] 視窗。  
   
 10. 在 [查詢編輯器] 中，輸入 **EXECUTE dbo.WorkOrdersForBlade**，然後按 F5 鍵來執行查詢。 確認 [結果] 窗格會傳回刀鋒視窗的工單清單。  
   
-11. 編輯範本指令碼 (步驟 7 中的指令碼)，在四個位置中，利用 ***\<*product_name**, **nvarchar(50)**, **name*>*** 參數來取代產品名稱 Blade。  
+11. 編輯範本指令碼 (步驟 7 中的指令碼)，在四個位置中，以 **\<product_name, nvarchar(50), name>** 參數來取代產品名稱 Blade。  
   
     > [!NOTE]  
     > 參數具備三個元素：想要取代的參數名稱、參數的資料類型和參數的預設值。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/17/2018
 12. 現在，指令碼看起來應該如下：  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   

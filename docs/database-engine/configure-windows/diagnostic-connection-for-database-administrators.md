@@ -29,13 +29,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7b2ada96d38f3653433aca10f15bfb0e87f165ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為系統管理員提供了特殊的診斷連線，可在伺服器的標準連線失效時使用。 這個診斷連接可讓系統管理員存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以執行診斷查詢和排解疑難問題，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未回應標準連接要求。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為系統管理員提供了特殊的診斷連接，可在伺服器的標準連接失效時使用。 這個診斷連接可讓系統管理員存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以執行診斷查詢和排解疑難問題，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未回應標準連接要求。  
   
  此專用管理員連接 (DAC) 支援加密以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他安全性功能。 DAC 只允許將使用者內容變更為其他管理使用者。  
   
