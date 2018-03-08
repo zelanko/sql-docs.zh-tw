@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>將 SQL Server Integration Services 工作負載隨即轉移至雲端
 您現在可以將 SQL Server Integration Services (SSIS) 套件和工作負載移至 Azure 雲端。
@@ -64,7 +65,7 @@ Data Factory 也支援其他類型的 Integration Runtime。 若要深入了解 
 > [!NOTE]
 > 當您將套件部署至 Azure 時，[套件部署精靈] 一律會將套件升級至最新套件格式。
 
-如需 Azure 中必要條件的詳細資訊，請參閱[將 SQL Server Integration Services (SSIS) 套件隨即轉移至 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
+如需 Azure 中的必要條件詳細資訊，請參閱[將 SSIS 套件部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。
 
 ## <a name="ssis-features-on-azure"></a>Azure 上的 SSIS 功能
 
@@ -81,7 +82,7 @@ Data Factory 也支援其他類型的 Integration Runtime。 若要深入了解 
 ## <a name="common-tasks"></a>一般工作
 
 ### <a name="provision"></a>佈建
-您必須佈建 SSISDB 目錄資料庫和 Azure SSIS Integration Runtime，才能在 Azure 中部署和執行 SSIS 套件。 請遵循本文中的佈建步驟：[將 SQL Server Integration Services (SSIS) 套件隨即轉移至 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
+您必須佈建 SSISDB 目錄資料庫和 Azure SSIS Integration Runtime，才能在 Azure 中部署和執行 SSIS 套件。 請遵循此文章中的佈建步驟：[將 SSIS 套件部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。
 
 ### <a name="deploy-and-run-packages"></a>部署和執行套件
 若要在 SQL Database 上部署專案並執行套件，您可以使用數個熟悉的工具和指令碼選項中的其中一個：
@@ -105,5 +106,5 @@ Data Factory 也支援其他類型的 Integration Runtime。 若要深入了解 
 
 ## <a name="next-steps"></a>後續步驟
 若要在 Azure 上開始使用 SSIS 工作負載，請參閱下列文章：
--   [將 SQL Server Integration Services (SSIS) 套件隨即轉移至 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [將 SSIS 套件部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 -   [部署、執行和監視 Azure 上的 SSIS 套件](ssis-azure-deploy-run-monitor-tutorial.md)

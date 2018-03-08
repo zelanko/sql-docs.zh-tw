@@ -11,18 +11,19 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76dd2b0dd77061e029dc5b7092a21d484ac7f7ed
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 21898c90044ec62c1a7d55fbcfa0cf03d46ba7ce
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 開發人員文件
   尋找有關如何撰寫程式碼以自訂您和您的使用者與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 互動之方式的資訊。 了解如何：  
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
  有關如何建立工作流程處理常式組件、如何設定並啟動 SQL Server MDS 工作流程整合服務，以及如何在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中建立啟動自訂工作流程之商務規則的指示。  
   
 ## <a name="web-server-namespaces"></a>Web 伺服器命名空間  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 會將一組組件安裝在 Web 伺服器電腦上。 這些組件包含可用於進階案例的命名空間，這些案例會自訂 Web 伺服器電腦的行為。 下表描述這些命名空間。  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 會將一組組件安裝在網路伺服器電腦上。 這些組件包含可用於進階案例的命名空間，這些案例會自訂 Web 伺服器電腦的行為。 下表描述這些命名空間。  
   
 |命名空間|描述|  
 |---------------|-----------------|  

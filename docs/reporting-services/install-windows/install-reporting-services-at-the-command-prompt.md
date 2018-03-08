@@ -1,7 +1,7 @@
 ---
-title: "在命令提示字元安裝 Reporting Services | Microsoft Docs"
+title: "在命令提示字元安裝 Reporting Services 2016 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 01/09/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
@@ -11,20 +11,21 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: command line
+helpviewer_keywords:
+- command line
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20a34323b2803bf9d68dd94eb058d5ac158961a4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 66248bb4a109f6c1f70918c9f3b798568b97beee
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="install-reporting-services-at-the-command-prompt"></a>在命令提示字元安裝 Reporting Services
+# <a name="install-reporting-services-2016-at-the-command-prompt"></a>在命令提示字元安裝 Reporting Services 2016
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/09/2018
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能需要的 SQL Server Agent。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]特有的命令列安裝範例。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體時提供 SQL Server 登入。  
   
 ```  
 Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /UPDATEENABLED="False" /INSTANCENAME="MSSQLSERVER" /FEATURES="SQLEngine,Adv_SSMS,RS" /RSINSTALLMODE="DefaultNativeMode" /SQLSVCACCOUNT="[DOMAIN\ACCOUNT]" /SQLSVCPASSWORD="[PASSWORD]" /AGTSVCACCOUNT="[DOMAIN\ACCOUNT]" /AGTSVCPASSWORD="[PASSWORD]" /SQLSYSADMINACCOUNTS="[DOMAIN\ACCOUNT]"  

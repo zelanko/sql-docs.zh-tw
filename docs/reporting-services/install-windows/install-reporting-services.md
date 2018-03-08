@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2f09b475d42657c8c9ce8ef60d6b5b7c36b30cc2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d3f53de12e07925af838b5188e9b889ae44eb090
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>安裝 SQL Server Reporting Services (2017 和更新版本)
 
@@ -38,7 +38,7 @@ SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報�
 
 ## <a name="install-your-report-server"></a>安裝報表伺服器
 
-安裝報表伺服器簡潔明瞭。 安裝檔案只要幾個步驟。
+安裝報表伺服器的過程簡潔明瞭。 安裝檔案只要幾個步驟。
 
 > [!NOTE]
 > 安裝時不需要使用 SQL Server 資料庫引擎伺服器。 安裝之後需要一部來設定 Reporting Services。

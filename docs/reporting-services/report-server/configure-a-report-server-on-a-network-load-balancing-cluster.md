@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], network load balancing
+helpviewer_keywords:
+- report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3576aec75cab9961b6d7423b65c66e885834ff88
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在網路負載平衡叢集上設定報表伺服器
   如果您要將報表伺服器向外延展設定為在網路負載平衡 (NLB) 叢集上執行，就必須進行下列動作：  
@@ -49,27 +50,24 @@ ms.lasthandoff: 01/09/2018
 |7|確認伺服器可透過您指定的主機名稱存取。|本主題中的[確認報表伺服器存取](#Verify) 。|  
   
 ##  <a name="ViewState"></a> 如何設定檢視狀態驗證  
- 若要在 NLB 叢集上執行向外延展部署，您必須設定檢視狀態驗證，好讓使用者可以檢視互動式 HTML 報表。 您必須針對報表伺服器和報表管理員執行這項工作。  
+ 若要在 NLB 叢集上執行向外延展部署，您必須設定檢視狀態驗證，好讓使用者可以檢視互動式 HTML 報表。
   
  檢視狀態驗證是由 ASP.NET 所控制。 依預設會啟用檢視狀態驗證，並使用 Web 服務的識別來執行驗證。 但是在 NLB 叢集案例中，會有多個服務執行個體和 Web 服務識別在不同的電腦上執行。 因為此服務識別會因每個節點而異，所以您不能依賴單一處理序識別來執行驗證。  
   
  為了解決此問題，您可以產生任意驗證金鑰來支援檢視狀態驗證，然後手動將每個報表伺服器節點設定為使用相同的金鑰。 您可以使用任何隨機產生的十六進位序列。 驗證演算法 (例如 SHA1) 會決定十六進位序列必須包含的長度。  
+
+1.  使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的自動產生功能來產生驗證金鑰和解密金鑰。 最後，您必須擁有單一 \<**MachineKey**> 項目，以便針對向外延展部署中的每個報表伺服器執行個體張貼到 RSReportServer.config 檔案中。
   
-1.  使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的自動產生功能來產生驗證金鑰和解密金鑰。 最後，您必須擁有單一 \<**machineKey**> 項目，以便針對向外延展部署中的每個報表管理員執行個體貼到 Web.config 檔案中。  
-  
-     下列範例說明您必須取得的值。 請勿將此範例複製到組態檔中，因為這些金鑰值是無效的。  
+     下列範例說明您必須取得的值。 請勿將此範例複製到組態檔中，因為這些金鑰值是無效的。 報表伺服器需要正確的大小寫。
   
     ```  
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-    ```  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    ```   
+2.  儲存檔案。  
   
-2.  開啟報表管理員的 Web.config 檔案，並在 \<**system.web**> 區段中貼上您產生的 \<**machineKey**> 項目。 根據預設，報表管理員的 Web.config 檔案位於 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config。  
+3.  針對向外延展部署中的每個報表伺服器重複以上步驟。  
   
-3.  儲存檔案。  
-  
-4.  針對向外延展部署中的每個報表伺服器重複以上步驟。  
-  
-5.  確認 \Reporting Services\Report Manager 資料夾中的所有 Web.Config 檔案在 \<**system.web**> 區段中包含相同的 \<**machineKey**> 項目。  
+4.  請驗證 \Reporting Services\Report Server 資料夾中的所有 RSReportServer.config 檔案均包含相同的 \<**MachineKey**> 元素。  
   
 ##  <a name="SpecifyingVirtualServerName"></a> 如何設定 Hostname 和 UrlRoot  
  若要在 NLB 叢集上設定報表伺服器向外延展部署，您必須定義單一虛擬伺服器名稱，以便提供伺服器叢集的單一存取點。 然後向您所在環境中的網域名稱伺服器 (DNS) 註冊這個虛擬伺服器名稱。  
