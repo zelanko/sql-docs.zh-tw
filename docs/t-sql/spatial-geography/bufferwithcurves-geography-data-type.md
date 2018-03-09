@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BufferWithCurves
 - BufferWithCurves_TSQL
-dev_langs: TSQL
-helpviewer_keywords: BufferWithCurves method (geography)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12b9abd82133c7f2c42f43dd436e223b1b0173f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0978418fe682728d02f7c65b5bff581154ae231c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引數  
- *距離*  
+ *distance*  
  是**float**指出點形成緩衝區的最大距離可以與 geography 執行個體。  
   
 ## <a name="return-types"></a>傳回類型  
@@ -66,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |distance < 0|零或一維|空白**GeometryCollection**執行個體|  
 |距離\<0|二維或以上|A **CurvePolygon**或**GeometryCollection**具有負數緩衝的執行個體。<br /><br /> 注意： 負數緩衝可能會建立空**GeometryCollection**|
 |distance = 0|所有維度|叫用的複製**geography**執行個體|  
-|距離 > 0|所有維度|**CurvePolygon**或**GeometryCollection**執行個體|  
+|distance > 0|所有維度|**CurvePolygon**或**GeometryCollection**執行個體|  
   
 > [!NOTE]  
 >  因為*距離*是**float**，非常小的值可等同於零的計算中。  當發生這種情況，然後呼叫副本**geography**會傳回執行個體。  
@@ -143,7 +146,7 @@ ms.lasthandoff: 11/17/2017
   
  請注意，上述兩個範例傳遞字串常值至 `BufferWithCurves()` 方法。 第一個範例可行，因為字串常值可轉換為數值。 但是，第二個範例會擲回 `ArgumentException`。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Geography 執行個體上的擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [BufferWithCurves &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   

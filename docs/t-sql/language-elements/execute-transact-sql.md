@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - EXECUTE_TSQL
 - EXECUTE
 - EXEC_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - remote stored procedures [SQL Server]
 - command strings [SQL Server]
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: "104"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c8099f3a7e05a2cce9acc6186c4311ab0f3fc061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e974faeb95631f73cd8f902194329c6eb54e825f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,7 +187,7 @@ Execute a character string
   
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
@@ -206,12 +208,12 @@ Execute a character string
   
  當用來叫用純量值使用者定義函數時，@*return_status*變數可以是任何純量資料類型。  
   
- *適於*  
+ *module_name*  
  這是您要呼叫的預存程序或純量值使用者定義函數的完整或不完整名稱。 模組名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 無論伺服器定序為何，擴充預存程序的名稱一定有大小寫區分。  
   
  已在另一個資料庫建立的模組，如果執行它的使用者擁有它，或者具有適當的權限可以在該資料庫執行它，就可以執行這個模組。 如果執行某個模組的使用者，具有適當的權限可以使用該伺服器 (遠端存取)，以及在該資料庫中執行該模組，就可以在另一個執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器上執行該模組。 如果指定了伺服器名稱，但沒有指定資料庫名稱，則 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會在該使用者的預設資料庫中尋找該模組。  
   
- ;*數目*  
+ ;*number*  
 **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  這是用來將同名程序分組的選擇性整數。 這個參數不用於擴充預存程序。  
@@ -226,7 +228,7 @@ Execute a character string
   
  這可以是保存的原生編譯純量使用者定義函數名稱的變數。  
   
- @*參數*  
+ @*parameter*  
  是參數*適於*，如在模組中定義。 參數名稱前面必須加上 @ 記號 (@)。 當搭配 @*parameter_name*=*值*表單，參數名稱和常數不必提供模組中定義的順序。 不過，如果 @*parameter_name*=*值*表單會使用任何參數，必須用於所有後續的參數。  
   
  依預設，參數可為 Null。  
@@ -242,7 +244,7 @@ Execute a character string
   
  預設值也可以是 NULL。 通常，模組定義會指定當參數值為 NULL 時，應該採取什麼動作。  
   
- @*變數*  
+ @*variable*  
  這是儲存參數或傳回參數的變數。  
   
  OUTPUT  
@@ -265,7 +267,7 @@ Execute a character string
  [N] '*tsql_string*'  
  常數字串。 *tsql_string*可以是任何**nvarchar**或**varchar**資料型別。 如果包含 N，則字串會解譯為**nvarchar**資料型別。  
   
- AS \<context_specification >  
+ AS \<context_specification>  
  指定執行陳述式的內容。  
   
  登入  
@@ -273,13 +275,13 @@ Execute a character string
   
  指定您要模擬的內容是登入。 模擬範圍是伺服器。  
   
- 使用者  
+ USER  
  指定您要模擬的內容是目前資料庫中的使用者。 模擬範圍僅限於目前資料庫。 通往資料庫使用者的內容切換不會繼承該使用者的伺服器層級權限。  
   
 > [!IMPORTANT]  
 >  如果通往資料庫使用者的內容切換在使用中，任何人想要存取資料庫以外的資源，都會導致陳述式失敗。 這包括使用*資料庫*陳述式、 分散式的查詢和使用三或四部分識別碼來參考另一個資料庫的查詢。  
   
- '*名稱*'  
+ '*name*'  
  有效的使用者或登入名稱。 *名稱*必須是 sysadmin 固定的伺服器角色的成員，或者以主體形式存在於[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)或[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)分別。  
   
  *名稱*不得為內建帳戶，例如 NT AUTHORITY\LocalService、 NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
@@ -292,12 +294,12 @@ Execute a character string
  [?]  
  指出的參數的值中提供\<引數清單 > EXEC('...', \<arg-list>) 在中使用的傳遞命令的\<at > 陳述式。  
   
- 在*linked_server_name*  
+ AT *linked_server_name*  
 **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定*command_string*針對執行*linked_server_name*和結果，如果有的話，會傳回至用戶端。 *linked_server_name*必須參考本機伺服器中現有的連結的伺服器定義。 您可以使用連結的伺服器定義[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。  
   
- 與\<execute_option >  
+ WITH \<execute_option>  
  可能的執行選項。 INSERT…EXEC 陳述式中不可指定 RESULT SETS 選項。  
   
 |詞彙|定義|  
@@ -305,7 +307,7 @@ Execute a character string
 |RECOMPILE|在執行模組之後，強制編譯、使用和捨棄新計畫。 如果該模組有現有的查詢計畫，這個計畫便會保留在快取中。<br /><br /> 如果您所提供的參數不合規則，或者如果資料已經大幅變更，請使用這個選項。 這個選項不適用於擴充預存程序。 我們建議您少用這個選項，因為它的成本很高。<br /><br /> **注意：**您無法使用 WITH RECOMPILE 時呼叫的預存程序會使用 OPENDATASOURCE 語法。 指定物件名稱四部分時，會忽略 WITH RECOMPILE 選項。<br /><br /> **注意：**原生編譯純量使用者定義函數不支援 RECOMPILE。 如果您需要重新編譯時，使用[sp_recompile &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**未定義的結果集**|**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 這個選項不保證會傳回何種結果 (如果有的話)，也不提供定義。 如果傳回任何結果或未傳回結果，陳述式會正確無誤地執行。 如果未提供 result_sets_option，RESULT SETS UNDEFINED 是預設行為。<br /><br /> 進行解譯純量使用者定義函式和原生編譯純量使用者定義函數，這個選項不是操作因為函式永遠不會傳回結果集。|  
 |RESULT SETS NONE|**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證 Execute 陳述式不會傳回任何結果。 如果傳回任何結果，會中止批次。<br /><br /> 進行解譯純量使用者定義函式和原生編譯純量使用者定義函數，這個選項不是操作因為函式永遠不會傳回結果集。|  
-|*\<result_sets_definition >*|**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證結果會依 result_sets_definition 中所指定傳回。 針對陳述式傳回多個結果集，提供多個*result_sets_definition*區段。 將每個*result_sets_definition*括弧括住，以逗號分隔。 如需詳細資訊，請參閱\<result_sets_definition > 本主題稍後。<br /><br /> 此選項一律會產生錯誤，而原生編譯純量使用者定義函數，因為函式永遠不會傳回結果集。|
+|*\<result_sets_definition>*|**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證結果會依 result_sets_definition 中所指定傳回。 針對陳述式傳回多個結果集，提供多個*result_sets_definition*區段。 將每個*result_sets_definition*括弧括住，以逗號分隔。 如需詳細資訊，請參閱\<result_sets_definition > 本主題稍後。<br /><br /> 此選項一律會產生錯誤，而原生編譯純量使用者定義函數，因為函式永遠不會傳回結果集。|
   
 \<result_sets_definition >**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -356,7 +358,7 @@ Execute a character string
   
  您對資料庫內容所做的變更，只會維持到 EXECUTE 陳述式結束為止。 例如，當下面這個陳述式中的 `EXEC` 執行之後，資料庫內容為 master。  
   
-```tsql  
+```sql  
 USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
@@ -467,7 +469,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
 ### <a name="e-using-execute-with-a-stored-procedure-variable"></a>E. 使用 EXECUTE 與預存程序變數  
  下列範例會建立一個代表預存程序名稱的變數。  
   
-```tsql  
+```sql  
 DECLARE @proc_name varchar(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  
@@ -726,7 +728,7 @@ EXEC ProcWithParameters @color = N'Black', @name = N'%arm%';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
@@ -735,11 +737,11 @@ GO
  [還原 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
- [SUSER_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [USER_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
+ [OPENDATASOURCE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   

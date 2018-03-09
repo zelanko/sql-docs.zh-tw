@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - RESTORE
 - RESTORE_LOG_TSQL
 - RESTORE LOG
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - RESTORE DATABASE, see RESTORE statement
 - full backups [SQL Server]
@@ -40,16 +42,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: "248"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b5f6424589d13652095b43ffcefa63e8916ecf39
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -266,7 +268,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   為資料庫鏡像準備鏡像資料庫  
   
-     如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+     如需詳細資訊，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
 -   線上還原  
   
@@ -396,7 +398,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  如需詳細資訊，請參閱[將資料庫還原成資料庫快照集](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  備份作業可以選擇性地指定媒體集的密碼及 (或) 備份組的密碼。 當在媒體集或備份組上定義密碼時，您必須在 RESTORE 陳述式中，指定一個或多個正確的密碼。 這些密碼可以防止他人利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具，在未獲授權的情況下，在媒體上執行還原作業及附加備份組。 不過，BACKUP 陳述式的 FORMAT 選項可以覆寫密碼所保護的媒體。  
   
 > [!IMPORTANT]  
@@ -405,7 +407,7 @@ Note: URL is the format used to specify the location and the file name for the W
 >  SQL Server 備份及還原與 Windows Azure Blob 儲存體的特定資訊，請參閱[SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 ### <a name="permissions"></a>Permissions  
- 如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。  
+ 如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在 (若是 FROM DATABASE_SNAPSHOT 選項，資料庫一律存在)，預設會將 RESTORE 權限授與 **sysadmin** 和 **dbcreator** 固定伺服器角色的成員，以及資料庫的擁有者 (**dbo**)。  
   
  RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
@@ -538,7 +540,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
  [&#91;頂端的範例 &#93;](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a>G. 將交易記錄還原到標記  
+###  <a name="restoring_transaction_log_to_mark"></a> G. 將交易記錄還原到標記  
  下列範例會將交易記錄還原到名為 `ListPriceUpdate`的標示交易中之標示。  
   
 ```  
@@ -576,7 +578,7 @@ RESTORE LOG AdventureWorks2012
   
  [&#91;頂端的範例 &#93;](#examples)  
   
-###  <a name="restoring_using_TAPE"></a>H. 使用 TAPE 語法進行還原  
+###  <a name="restoring_using_TAPE"></a> H. 使用 TAPE 語法進行還原  
  下列範例會從 `TAPE` 備份裝置還原完整的資料庫備份。  
   
 ```  
@@ -586,7 +588,7 @@ RESTORE DATABASE AdventureWorks2012
   
  [&#91;頂端的範例 &#93;](#examples)  
   
-###  <a name="restoring_using_FILE_n_FG"></a>我。 使用 FILE 與 FILEGROUP 語法進行還原  
+###  <a name="restoring_using_FILE_n_FG"></a> I. 使用 FILE 與 FILEGROUP 語法進行還原  
  下列範例會還原名為 `MyDatabase` 的資料庫，此資料庫擁有兩個檔案，一個次要檔案群組和一個交易記錄， 而且使用完整復原模式。  
   
  資料庫備份是在名為 `MyDatabaseBackups` 的邏輯備份裝置上，媒體集中的第九個備份組。 接下來是三個記錄備份，它們分別位於 `10` 裝置的後三個備份組中 (`11`、`12` 和 `MyDatabaseBackups`)，並且利用 `WITH NORECOVERY` 而還原。 在還原最後一個記錄備份之後，資料庫就可以復原。  
@@ -628,7 +630,7 @@ GO
   
  [&#91;頂端的範例 &#93;](#examples)  
   
-###  <a name="reverting_from_db_snapshot"></a>J. 從資料庫快照集還原  
+###  <a name="reverting_from_db_snapshot"></a> J. 從資料庫快照集還原  
  下列範例會將資料庫還原到某個資料庫快照集。 這個範例假設資料庫目前只有一個快照集。 如需如何建立這個資料庫快照集的範例，請參閱[建立資料庫快照集 &#40;TRANSACT-SQL &#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 > **注意：**正在還原成快照集卸除所有全文檢索目錄。  
@@ -642,10 +644,10 @@ GO
 
  [&#91;頂端的範例 &#93;](#examples)  
   
-###  <a name="Azure_Blob"></a>K。 從 Microsoft Azure Blob 儲存體服務進行還原  
+###  <a name="Azure_Blob"></a> K. 從 Microsoft Azure Blob 儲存體服務進行還原  
 下列範例牽涉到使用 Microsoft Azure 儲存體服務。  儲存體帳戶名稱為 `mystorageaccount`。  資料檔案的容器會呼叫`myfirstcontainer`。  備份檔案的容器會呼叫`mysecondcontainer`。  已建立具有讀取、 寫入、 刪除和清單中，針對每個容器的權限的預存的存取原則。  建立使用共用存取簽章與預存存取原則相關聯的 SQL Server 認證。  SQL Server 備份及還原與 Microsoft Azure Blob 儲存體的特定資訊，請參閱[SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
 
-**K1。從 Microsoft Azure 儲存體服務還原完整資料庫備份**  
+**K1.從 Microsoft Azure 儲存體服務還原完整資料庫備份**  
 完整資料庫備份，位於`mysecondcontainer`的`Sales`將會還原到`myfirstcontainer`。  `Sales`目前不存在伺服器上。 
 ```
 RESTORE DATABASE Sales
@@ -655,7 +657,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K2。從 Microsoft Azure 儲存體服務還原完整資料庫備份至本機儲存體**  
+**K2.從 Microsoft Azure 儲存體服務還原完整資料庫備份至本機儲存體**  
 完整資料庫備份，位於`mysecondcontainer`的`Sales`將會還原到本機儲存體。  `Sales`目前不存在伺服器上。
 ```
 RESTORE DATABASE Sales
@@ -665,7 +667,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
   
-**K3。從本機儲存體還原完整資料庫備份至 Microsoft Azure 儲存體服務**  
+**K3.從本機儲存體還原完整資料庫備份至 Microsoft Azure 儲存體服務**  
 ```
 RESTORE DATABASE Sales
   FROM DISK = 'E:\BAK\Sales.bak'
@@ -682,7 +684,7 @@ RESTORE DATABASE Sales
  - [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 
 - [備份和還原系統資料庫 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) 
  - [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
- - [備份並還原全文檢索目錄與索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ - [備份並還原全文檢索目錄與索引。](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  - [備份及還原複寫的資料庫](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  - [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   

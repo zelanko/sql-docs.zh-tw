@@ -6,3 +6,4 @@
 # [ODBC 參考和詳細資料 +](../../odbc/microsoft-open-database-connectivity-odbc.md)
 # [下載 ODBC Driver for SQL Server](download-odbc-driver-for-sql-server.md)
 
+# [DSN 連接字串的關鍵字及屬性](dsn-connection-string-attribute.md)

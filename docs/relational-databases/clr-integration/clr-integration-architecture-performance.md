@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 485a37af0cb6d9d5f7d34986f99db151e59c4628
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 整合架構效能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題討論某些設計選擇，可增強的效能[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與整合[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework common language runtime (CLR)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主題討論某些設計選擇，可增強的效能[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與整合[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework common language runtime (CLR)。  
   
 ## <a name="the-compilation-process"></a>編譯程序  
  編譯 SQL 運算式期間，碰到 Managed 常式的參考時，就會產生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language (MSIL) 虛設常式。 此虛設常式包含的程式碼可將常式參數從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封送處理到 CLR、叫用函數，並傳回結果。 這個「黏附」程式碼是以參數類型以及參數方向 (in、out 或參考) 為基礎。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料指標必須往返的資料當做陣列表示更為容易時，可以透過大幅提高效能使用 Managed 程式碼。  
   
 ### <a name="string-data"></a>字串資料  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元資料，例如**varchar**，可以是 managed 函數中 SqlString 或 SqlChars 類型。 SqlString 變數會在記憶體中建立整個值的執行個體。 SqlChars 變數會提供資料流介面，不需要透過在記憶體中建立整個值的執行個體，就可以用於達到更好的效能與延展性。 這對於大型物件 (LOB) 資料而言，變得特別重要。 此外，伺服器 XML 資料可以透過所傳回的資料流介面來存取**SqlXml.CreateReader()**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元資料，例如**varchar**，可以是 managed 函數中 SqlString 或 SqlChars 類型。 SqlString 變數會在記憶體中建立整個值的執行個體。 SqlChars 變數會提供資料流介面，不需要透過在記憶體中建立整個值的執行個體，就可以用於達到更好的效能與延展性。 這對於大型物件 (LOB) 資料而言，變得特別重要。 此外，伺服器 XML 資料可以透過所傳回的資料流介面來存取**SqlXml.CreateReader()**。  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 與擴充預存程序  
  允許 Managed 程序將結果集傳回用戶端之 Microsoft.SqlServer.Server 應用程式開發介面 (API) 的執行效能比擴充預存程序所使用的開放式資料服務 (ODS) API 更好。 此外，System.Data.SqlServer Api 支援資料類型例如**xml**， **varchar （max)**， **nvarchar （max)**，和**varbinary （max)**中導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，而 ODS Api 尚未擴充為支援新的資料類型。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="scalable-memory-usage"></a>可擴充的記憶體使用量  
  為了讓 Managed 記憶體回收在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中妥善執行與調整，請避免使用大型的單一配置。 其大小大於 88 KB 的配置將會放在大型物件堆積上，這會讓記憶體回收的執行與調整比許多較小的配置差很多。 例如，如果您需要配置大型的多維度陣列，最好配置不規則 (散佈) 陣列。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

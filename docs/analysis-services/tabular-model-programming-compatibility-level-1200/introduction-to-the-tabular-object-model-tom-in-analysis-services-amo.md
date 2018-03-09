@@ -8,25 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3f8399c5430cf34d947e881586bacef5ade46587
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO 中表格式物件模型 (TOM) 簡介
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表格式物件模型 (TOM) 是 Analysis Services 管理物件 (AMO) 用戶端程式庫，以支援建置在相容性層級 1200年 （含） 以上的表格式模型程式設計案例建立擴充功能。 如同 AMO，TOM 提供程式設計的方式來處理管理功能，例如建立模型、 匯入和重新整理資料，及指派角色和權限。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+表格式物件模型 (TOM) 是 Analysis Services 管理物件 (AMO) 用戶端程式庫，以支援建置在相容性層級 1200年 （含） 以上的表格式模型程式設計案例建立擴充功能。 如同 AMO，TOM 提供程式設計的方式來處理管理功能，例如建立模型、 匯入和重新整理資料，及指派角色和權限。  
   
 TOM 公開原生的表格式中繼資料，例如**模型**，**資料表**，**資料行**，和**關聯性**物件。  物件模型樹狀結構，以下提供的概要說明之元件部分的關聯方式。  
   
@@ -55,7 +54,7 @@ TOM 建置 AMO 基礎結構，也適用於多維度和相容性層級低於 1200
 
 ### <a name="tom-and-xmla"></a>TOM 和 XMLA
 
-在線上，TOM 會使用 XMLA 通訊協定，通訊與 Analysis Services 伺服器，以及管理物件。 當管理非表格式物件時，會使用 TOM [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md)，Analysis Services 指令碼語言擴充功能的 XMLA。 當管理表格式物件，TOM 使用 SSAS 表格式通訊協定，也 XMLA 的延伸模組。 請參閱[MS-SSAS T SQL Server Analysis Services 表格式通訊協定文件](https://msdn.microsoft.com/library/mt719260.aspx)如需詳細資訊。
+在線上，TOM 會使用 XMLA 通訊協定，通訊與 Analysis Services 伺服器，以及管理物件。 當管理非表格式物件時，會使用 TOM [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md)，Analysis Services 指令碼語言擴充功能的 XMLA。 當管理表格式物件，TOM 使用 MS SSAS 表格式通訊協定，也 XMLA 的延伸模組。 請參閱[MS-SSAS T SQL Server Analysis Services 表格式通訊協定文件](https://msdn.microsoft.com/library/mt719260.aspx)如需詳細資訊。
 
 ### <a name="tom-and-json"></a>TOM 和 JSON
 
@@ -67,7 +66,7 @@ TOM 建置 AMO 基礎結構，也適用於多維度和相容性層級低於 1200
 
 在決定来使用其中一個會您需求的細節。 TOM 程式庫提供更豐富的功能相較於 TMSL。 具體來說，而 TMSL 只提供了資料庫、 資料表、 資料分割或角色層級的廣泛作業，TOM 會允許作業更精細太多。 若要產生或以程式設計方式更新模型，您必須使用 TOM 文件庫中的應用程式開發介面的完整範圍。
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [相容性層級 1200年的表格式模型程式設計](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)   
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
 [Analysis Services PowerShell](../../analysis-services/powershell/analysis-services-powershell-reference.md)

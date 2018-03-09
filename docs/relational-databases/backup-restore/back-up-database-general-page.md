@@ -8,24 +8,27 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.backupdatabase.general.f1
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6096d9cbe627276898de55425c60b98a327de947
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: acb78ba1abb462f76dd26cd87062732b386f547e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [備份資料庫] 對話方塊的 [一般] 頁面，即可檢視或修改資料庫備份作業的設定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用 **[備份資料庫]** 對話方塊上的 **[一般]** 頁面，檢視或修改資料庫備份作業設定。  
   
  如需基本備份概念的詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
@@ -45,12 +48,12 @@ ms.lasthandoff: 11/17/2017
   
 -   如需部分備份，您必須使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 陳述式搭配 PARTIAL 選項。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="source"></a>來源  
  **[來源]** 面板的選項會識別資料庫，並指定備份作業的備份類型和元件。  
   
- **資料庫**  
+ **[資料庫備份]**  
  選取要備份的資料庫。  
   
  **復原模式**  
@@ -69,7 +72,7 @@ ms.lasthandoff: 11/17/2017
  選取此選項，即可建立只複製備份。 「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
   
 > [!NOTE]  
->  選取 [差異] 選項時，您無法建立只複製備份。  
+>  選取 **[差異]** 選項時，您無法建立「只複製」備份。  
   
  **備份元件**  
  選取要備份的資料庫元件。 如果 **[備份類型]** 清單中已選取 **[交易記錄]** ，則不會啟動此選項。  
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|**資料庫**|指定備份整個資料庫。|  
+|**[資料庫備份]**|指定備份整個資料庫。|  
 |**檔案與檔案群組**|指定備份指定的檔案和 (或) 檔案群組。<br /><br /> 選取這個選項會開啟 **[選取檔案與檔案群組]** 對話方塊。 在選取了要備份的檔案群組或檔案，並按一下 **[確定]**之後，選取項目就會出現在 **[檔案群組與檔案]** 方塊中。|  
   
 ### <a name="destination"></a>目的地  

@@ -21,12 +21,12 @@ ms.assetid:
 caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: aeb43f32eba3a900be154abf3beeb457836d730a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 9faba068fd3712b2ada9dbe3260795d4ecd19a6c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>設定分散式交易的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 不能防止可用性群組中的資料庫分散式交易，即使未針對分散式交易設定可用性群組。 但是當未針對分散式交易設定可用性群組時，容錯移轉在某些情況下可能不會成功。 特別是新的主要複本 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體可能無法從 DTC 取得交易結果。 若要在容錯移轉之後，讓 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體從 DTC 取得可疑交易的結果，請針對分散式交易設定可用性群組。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 設定可用性群組支援分散式交易之前，必須先符合下列必要條件：
 
@@ -86,7 +86,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -187,7 +187,7 @@ following the guideline for Troubleshooting DTC Transactions.
 
 如需解析可疑交易的詳細資訊，請參閱[手動解析交易](http://technet.microsoft.com/library/cc754134.aspx)。
 
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 
 [分散式交易](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

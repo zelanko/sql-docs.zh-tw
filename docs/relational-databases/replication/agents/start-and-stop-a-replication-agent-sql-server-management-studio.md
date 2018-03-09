@@ -16,15 +16,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], starting
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 06eac6965538fde73b0f7fc1806429898c3f80ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 25bcd6e945bb311de9df1735d63ef58dc6d92600
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>啟動及停止複寫代理程式 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [作業] 資料夾和 [複寫] 資料夾，以及從複寫監視器啟動和停止代理程式。 啟動和停止下列代理程式和作業：  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  如需啟動合併代理程式和散發代理程式的詳細資訊，請參閱[同步處理發送訂閱](../../../relational-databases/replication/synchronize-a-push-subscription.md)和[同步處理提取訂閱](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。 如需維護作業的詳細資訊，請參閱[執行複寫維護作業 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)。  
   
- 如需啟動複寫監視器的資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-or-log-reader-agent-from-management-studio"></a>若要從 Management Studio 啟動和停止快照集代理程式或記錄讀取器代理程式  
   

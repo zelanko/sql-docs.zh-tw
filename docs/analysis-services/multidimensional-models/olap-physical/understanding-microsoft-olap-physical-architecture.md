@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6ae41adbf6e7b2ed51f7ed66ed2bd30bfdf8ad6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ac363f5b35199506917a3d12b4c6cb9970e62da1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-microsoft-olap-physical-architecture"></a>了解 Microsoft OLAP 實體架構
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="in-this-section"></a>本節內容  
  下列主題提供的架構的詳細資訊[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]方案。  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[OLAP 引擎伺服器元件](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)|描述 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器的元件。|  
 |[本機 Cube &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)|描述如何在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 方案之下實作獨立 Cube 及這類實作的範圍。|  

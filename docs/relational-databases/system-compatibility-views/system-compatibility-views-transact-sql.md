@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - compatibility views [SQL Server]
 - system tables [SQL Server], compatibility views
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - compatibility [SQL Server], system tables
 - user IDs [SQL Server]
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1337914bca53cde4aa374d838b22a08ace940a79
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0d05a2c3c720b1acbd806f2898c9bf160083aa70
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="system-compatibility-views-transact-sql"></a>系統的相容性檢視 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
 |**uid**|**sysobjects**|**sys.objects**|  
 |**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
-|**授與者**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**grantor**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
 |**uid**|**systypes**|**sys.types**|  
 |**uid**|**sysusers**|**sys.database_principals**|  
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  範例： 如果使用者建立名為的使用者資料表**syslanguages**使用者資料庫，在 SQL Server 2008 中，陳述式中`SELECT * from dbo.syslanguages;`在該資料庫會從使用者資料表傳回值。 從 SQL Server 2012 開始，這種作法會傳回資料系統檢視表**sys.syslanguages**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [將系統資料表對應至系統檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   

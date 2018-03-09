@@ -5,29 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9e5ea91f535ca2897e0b0de7859647992a1bd388
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7783dd3fabfe32359b8d2da35ad9eda25a91057f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-access"></a>Power Pivot 資料存取
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題說明從擷取資料的方式[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿發行至 SharePoint 文件庫。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主題描述從發佈到 SharePoint 文件庫的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿擷取資料的方法。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料儲存在 Excel 活頁簿中。 連接字串是 SharePoint 網站上活頁簿的 URL。  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中的所有資料並非都會由 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 處理。 Excel Services 會處理工作表中的資料表與資料格資料。 只有針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的樞紐分析表、樞紐分析圖和交叉分析篩選器，會由 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所處理。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [表格式模型資料存取](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   

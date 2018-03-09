@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_appdomains
 - dm_clr_appdomains_TSQL
 - sys.dm_clr_appdomains_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_appdomains dynamic management dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16f729bc78a42984716d2f30fc2bf30badc1ade5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +44,17 @@ ms.lasthandoff: 11/27/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary （8)**|位址**AppDomain**。 所有受管理的資料庫使用者所擁有的物件永遠都會載入相同**AppDomain**。 您可以使用此資料行，查詢這中目前載入的組件**AppDomain**中**sys.dm_clr_loaded_assemblies**。|  
+|**appdomain_address**|**varbinary(8)**|位址**AppDomain**。 所有受管理的資料庫使用者所擁有的物件永遠都會載入相同**AppDomain**。 您可以使用此資料行，查詢這中目前載入的組件**AppDomain**中**sys.dm_clr_loaded_assemblies**。|  
 |**appdomain_id**|**int**|識別碼**AppDomain**。 每個**AppDomain**有唯一的識別碼。|  
 |**appdomain_name**|**varchar(386)**|名稱**AppDomain**所指派[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**creation_time**|**datetime**|時間**AppDomain**所建立。 因為**Appdomain**會快取並重複使用，以提升效能、 **creation_time**不一定是已在執行的程式碼時的時間。|  
 |**db_id**|**int**|這個資料庫的識別碼**AppDomain**所建立。 儲存在兩個不同資料庫中的程式碼不能共用同一個**AppDomain**。|  
 |**user_id**|**int**|其物件可以在這個中執行的使用者識別碼**AppDomain**。|  
-|**狀態**|**nvarchar （128)**|目前狀態的描述元**AppDomain**。 任一 AppDomain 在從建立到刪除的期間，都可以有不同的狀態。 請參閱本主題的＜備註＞一節，以取得詳細資訊。|  
+|**狀態**|**nvarchar(128)**|目前狀態的描述元**AppDomain**。 任一 AppDomain 在從建立到刪除的期間，都可以有不同的狀態。 請參閱本主題的＜備註＞一節，以取得詳細資訊。|  
 |**strong_refcount**|**int**|強式參考數目**AppDomain**。 這反映出目前執行使用此選項的批次的數目**AppDomain**。 請注意，將會建立此檢視執行**強式參考計數**; 即使目前執行中以及沒有程式碼**strong_refcount**會有值為 1。|  
 |**weak_refcount**|**int**|弱式參考數目**AppDomain**。 這表示物件數目**AppDomain**會快取。 當您執行 managed 的資料庫物件，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]放入快取內**AppDomain**供日後使用。 這可改善效能。|  
-|**成本**|**int**|成本的**AppDomain**。 成本愈高，越有可能這**AppDomain**記憶體不足的壓力而卸載。 成本通常取決於不需要多少記憶體，重新建立此**AppDomain**。|  
-|**值**|**int**|值**AppDomain**。 值越小，越有可能這**AppDomain**記憶體不足的壓力而卸載。 值通常取決於多少連接或批次正在使用此**AppDomain**。|  
+|**cost**|**int**|成本的**AppDomain**。 成本愈高，越有可能這**AppDomain**記憶體不足的壓力而卸載。 成本通常取決於不需要多少記憶體，重新建立此**AppDomain**。|  
+|**value**|**int**|值**AppDomain**。 值越小，越有可能這**AppDomain**記憶體不足的壓力而卸載。 值通常取決於多少連接或批次正在使用此**AppDomain**。|  
 |**total_processor_time_ms**|**bigint**|自處理序啟動以來，在目前應用程式定義域中執行之所有執行緒所用的處理器總時間 (以毫秒為單位)。 這相當於**System.AppDomain.MonitoringTotalProcessorTime**。|  
 |**total_allocated_memory_kb**|**bigint**|自應用程式定義域建立以來，它所進行的所有記憶體配置總大小 (以 KB 為單位)，不減去已回收的記憶體。 這相當於**System.AppDomain.MonitoringTotalAllocatedMemorySize**。|  
 |**survived_memory_kb**|**bigint**|在上次完整區塊回收中存活下來且已知為目前應用程式定義域所參考的 KB 數。 這相當於**System.AppDomain.MonitoringSurvivedMemorySize**。|  
@@ -79,7 +82,7 @@ ms.lasthandoff: 11/27/2017
   
 |State|Description|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已要求 CLR 卸載**AppDomain**，通常是因為包含 managed 的資料庫物件的組件已改變或卸除。|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已要求 CLR 卸載**AppDomain**，通常是因為包含 managed 的資料庫物件的組件已改變或卸除。|  
 |E_APPDOMAIN_UNLOADED|CLR 已卸載**AppDomain**。 這通常是因為擴大程序的結果**ThreadAbort**， **OutOfMemory**，或在使用者程式碼中處理的例外狀況。|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain**在 CLR 中卸載及設定終結的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |E_APPDOMAIN_DESTROY|**AppDomain**正在被終結[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
@@ -113,8 +116,8 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sys.dm_clr_loaded_assemblies &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Common Language Runtime 相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

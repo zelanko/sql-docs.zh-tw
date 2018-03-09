@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DTCTransaction event class
+helpviewer_keywords:
+- DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87a52c7d2055b583cfdbf8eda47021e58a1de23b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: caa5c28313a53eb2a49de9d723f31979df9ff2a4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 使用 **DTCTransaction** 事件類別，可監視透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (DTC) 進行協調之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 交易的狀態。 這些包括牽涉到同一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中兩個以上資料庫的交易，以及牽涉到兩個以上 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的分散式交易。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+使用 **DTCTransaction** 事件類別，可監視透過 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 分散式交易協調器 (DTC) 進行協調之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 交易的狀態。 這些包括牽涉到同一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中兩個以上資料庫的交易，以及牽涉到兩個以上 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的分散式交易。  
   
 ## <a name="dtctransaction-event-class-data-columns"></a>DTCTransaction 事件類別資料行  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |**SessionLoginName**|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件的開始時間 (如果可以取得的話)。|14|是|  
-|**TextData**|**ntext**|專門在 DTC 內識別這個交易的 UOW 的文字表示法。|1|是|  
+|**TextData**|**ntext**|專門在 DTC 內識別這個交易的 UOW 的文字表示法。|@shouldalert|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   

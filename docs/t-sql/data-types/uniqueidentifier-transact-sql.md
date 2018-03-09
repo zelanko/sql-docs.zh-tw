@@ -1,35 +1,37 @@
 ---
 title: "uniqueidentifier (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 7/23/2017
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.service: 
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - uniqueidentifier
 - uniqueidentifier_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - uniqueidentifier data type
 - globally unique identifiers [SQL Server]
 - GUIDs [SQL Server]
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92d6795e0317930e2235847d5f7373db52812b01
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 76f7a3c784c0d05e1a6f94da0b33207bfbb1efec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="remarks"></a>備註  
 資料行或本機變數**uniqueidentifier**資料型別可以下列方式初始化為一個值：
--   使用 NEWID 函數。  
+-   使用[NEWID](../../t-sql/functions/newid-transact-sql.md)或[NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md)函式。    
 -   從字串常數形式轉換*xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*- *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx*，每位*x*是範圍 0-9 或 a-f 的十六進位數字。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 是有效**uniqueidentifier**值。  
   
 比較運算子可以搭配**uniqueidentifier**值。 不過排序並不是比較兩值的位元模式加以實作的。 可以針對執行的運算只有**uniqueidentifier**值是一種比較 (=、 <>， \<，>， \<=、 > =) 以及檢查 NULL （IS NULL 和 IS NOT NULL）。 其他算術運算子一律不能使用。 所有資料行條件約束和身分識別，以外的屬性，可以用於**uniqueidentifier**資料型別。
@@ -86,8 +88,8 @@ String                                       TruncatedValue
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [NEWID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md) 
-[設定@local_variable&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
+[NEWSEQUENTIALID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   
   

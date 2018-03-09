@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ROLLBACK
 - ROLLBACK_TSQL
 - ROLLBACK_TRANSACTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction rollbacks [SQL Server]
 - ROLLBACK TRANSACTION statement
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: be1bbb9e63ccb710b42e007c91c1c588a1e8ae1d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0df2fdf3d3e4aa7915fbfef3ff921d12b2851044
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -57,13 +59,13 @@ ROLLBACK { TRAN | TRANSACTION }
  *transaction_name*  
  指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name*必須符合識別碼規則，但使用的交易名稱的前 32 個字元。 當建立巢狀交易， *transaction_name*必須是從最外層的 BEGIN TRANSACTION 陳述式的名稱。 *transaction_name*一定是區分大小寫，即使執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不區分大小寫。  
   
- **@***tran_name_variable*  
+ **@** *tran_name_variable*  
  這是包含有效交易名稱之使用者定義變數的名稱。 變數必須宣告與**char**， **varchar**， **nchar**，或**nvarchar**資料型別。  
   
  *savepoint_name*  
  是*savepoint_name*從 SAVE TRANSACTION 陳述式。 *savepoint_name*必須符合識別碼的規則。 使用*savepoint_name*條件式回復時應該會影響屬於交易。  
   
- **@***savepoint_variable*  
+ **@** *savepoint_variable*  
  這是包含有效儲存點名稱之使用者自訂變數的名稱。 變數必須宣告與**char**， **varchar**， **nchar**，或**nvarchar**資料型別。  
   
 ## <a name="error-handling"></a>錯誤處理  
@@ -105,7 +107,7 @@ ROLLBACK { TRAN | TRANSACTION }
  ROLLBACK TRANSACTION 陳述式指定*savepoint_name*釋放於儲存點，但是擴大和轉換除外之後所取得的鎖定。 這些鎖定不會被釋放，也不會轉換回之前的鎖定模式。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。  
+ 需要 **public** 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例顯示回復具名交易的作用。 之後建立的資料表，下列陳述式啟動具名的交易、 插入兩個資料列，並會復原交易在變數中名為@TransactionName。 具名交易外的另一個陳述式會插入兩個資料列。 查詢會傳回前一個陳述式的結果。   
@@ -137,9 +139,9 @@ value
 ```  
   
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
- [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
+ [BEGIN TRANSACTION (TRANSACT-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [認可工作 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK WORK &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   

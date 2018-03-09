@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_xtp_transactions (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/29/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_xtp_transactions_TSQL
 - dm_db_xtp_transactions
 - dm_db_xtp_transactions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_transactions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_transactions dynamic management view
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf60a655ecd15b438281ccf4cff2fb20c4096c72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b9f584e03b7e16458409a6710bcab18625651b76
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -68,19 +71,19 @@ ms.lasthandoff: 11/17/2017
 |scan_area|**int**|僅供內部使用|  
 |scan_area_desc|**nvarchar**|僅供內部使用|  
 |scan_location|**int**|僅供內部使用。|  
-|dependent_1_address|**varbinary （8)**|僅供內部使用|  
-|dependent_2_address|**varbinary （8)**|僅供內部使用|  
-|dependent_3_address|**varbinary （8)**|僅供內部使用|  
-|dependent_4_address|**varbinary （8)**|僅供內部使用|  
-|dependent_5_address|**varbinary （8)**|僅供內部使用|  
-|dependent_6_address|**varbinary （8)**|僅供內部使用|  
-|dependent_7_address|**varbinary （8)**|僅供內部使用|  
-|dependent_8_address|**varbinary （8)**|僅供內部使用|  
+|dependent_1_address|**varbinary(8)**|僅供內部使用|  
+|dependent_2_address|**varbinary(8)**|僅供內部使用|  
+|dependent_3_address|**varbinary(8)**|僅供內部使用|  
+|dependent_4_address|**varbinary(8)**|僅供內部使用|  
+|dependent_5_address|**varbinary(8)**|僅供內部使用|  
+|dependent_6_address|**varbinary(8)**|僅供內部使用|  
+|dependent_7_address|**varbinary(8)**|僅供內部使用|  
+|dependent_8_address|**varbinary(8)**|僅供內部使用|  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW DATABASE STATE 權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [記憶體最佳化的資料表動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

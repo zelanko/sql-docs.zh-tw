@@ -3,27 +3,27 @@ title: "Alwayson 可用性群組的 SQL Server on Linux |Microsoft 文件"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 3c708d4e06f32515b96b22099990007d58db20f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性群組
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明 Alwayson 可用性群組 (Ag) 的特性下以 Linux 為基礎[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]安裝。 其中也涵蓋 Linux 和 Windows Server 容錯移轉叢集 (WSFC) 之間的差異-基礎 Ag。 請參閱[Windows 為基礎的文件](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)的基本概念的 Ag，為他們在 Windows 和 Linux 除了 WSFC 上的運作方式相同。
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 
 叢集類型會儲存在[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]動態管理檢視 (DMV) `sys.availability_groups`，資料行中`cluster_type`和`cluster_type_desc`。
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>需要\_同步\_次要\_至\_認可
+## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
 
 新手[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是設定，可由呼叫 Ag `required_synchronized_secondaries_to_commit`。 這會告訴 AG 必須與主要 lockstep 的次要複本的數目。 這可讓之類的自動容錯移轉 （只有在與叢集類型為外部 Pacemaker 整合），並控制的主要可用性之類的行為，如果正確的次要複本的數目是線上或離線。 若要了解有關其運作方式的詳細資訊，請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。 `required_synchronized_secondaries_to_commit`值是預設設定和維護的 Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 您可以手動覆寫此值。
 
@@ -65,9 +65,9 @@ ms.lasthandoff: 12/21/2017
 -   1-一個次要複本必須位於與主要; 已同步處理狀態可能會自動容錯移轉。 同步次要複本可以使用之前，主要資料庫是無法使用。
 -   2 – 在三個或多個節點 AG 組態兩個次要複本必須與主要; 同步處理可能會自動容錯移轉。
 
-`required_synchronized_secondaries_to_commit`控制不只具有同步複本，但資料遺失容錯移轉行為。 值為 1 或 2，次要複本永遠需要。 同步處理，因此資料備援性 這表示不會遺失資料。
+`required_synchronized_secondaries_to_commit` 控制不只具有同步複本，但資料遺失容錯移轉行為。 值為 1 或 2，次要複本永遠需要。 同步處理，因此資料備援性 這表示不會遺失資料。
 
-若要變更的值`required_synchronized_secondaries_to_commit`，使用下列語法。
+若要變更的值`required_synchronized_secondaries_to_commit`，使用下列語法：
 
 >[!NOTE]
 >變更值，會導致重新啟動，資源表示短暫中斷。 若要避免此狀況的唯一方式是將設定不受叢集暫時資源。
@@ -132,7 +132,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 
 接聽程式是 AG 的選用功能。 如此應用程式和使用者不需要知道哪個伺服器主控資料，它提供所有連接 （讀取/寫入主要複本和/或唯讀次要複本） 的單一進入點。 在 WSFC 中，這可以是網路名稱資源和 IP 資源，然後登錄於 AD DS （如果需要） 的組合以及 DNS。 AG 資源本身的結合，它會提供該抽象概念。 如需有關接聽程式的詳細資訊，請參閱[接聽程式、 用戶端連接性及應用程式容錯移轉](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。
 
-在 Linux 接聽程式的設定不同，但其功能都相同。 沒有 Pacemaker，網路名稱資源的概念，也建立在 AD DS; 中的物件沒有剛 IP 位址資源可以在任一節點執行的 Pacemaker 中建立。 需要建立相關聯的 「 易記名稱 」 在 DNS 中的接聽程式 IP 資源的項目。 接聽程式 IP 資源只能是裝載該可用性群組的主要複本的伺服器上使用中。
+在 Linux 接聽程式的設定不同，但其功能都相同。 沒有 Pacemaker，網路名稱資源的概念，也建立在 AD DS; 中的物件沒有剛 IP 位址資源可以在任一節點執行的 Pacemaker 中建立。 您必須建立相關聯的 「 易記名稱 」 在 DNS 中的接聽程式 IP 資源的項目。 接聽程式 IP 資源只能是裝載該可用性群組的主要複本的伺服器上使用中。
 
 如果，Pacemaker 建立 IP 位址資源所關聯的接聽程式，會有短暫中斷如下的 IP 位址在一部伺服器上停止，並在另一個，開始其是否可以自動或手動容錯移轉。 這可透過單一的名稱和 IP 位址的組合的抽象概念，而它不會加上遮罩中斷。 應用程式必須能夠處理中斷連線，讓特定類型的偵測，並重新連接的功能。
 
@@ -147,11 +147,11 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 
 有叢集類型的外部或正在 WSFC AG 不能跨平台及其複本。 這是 true AG 是否[!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]或[!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]。 這表示具有基礎叢集的傳統 AG 組態中，一個複本不可以是 WSFC 和其他與 Pacemaker Linux 上。
 
-叢集類型為 None AG 可以跨 OS 界限，因此相同的 AG 中可能有兩個 Linux 和 Windows 架構的複本及其複本。 範例如下所示，主要複本是 Windows 為基礎，在 Linux 散發套件的其中一個次要資料庫時。
+叢集類型為 NONE AG 可以跨 OS 界限，因此相同的 AG 中可能有兩個 Linux 和 Windows 架構的複本及其複本。 以下是範例其中的主要複本時，Windows 為基礎，次要資料庫是 Linux 散發套件的其中一個。
 
 ![混合式無](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分散式的 AG 也可以跨 OS 界限。 基礎 Ag 由繫結規則的設定方式，例如一個設定為外部正在 Linux 僅限，但無法使用 WSFC 來設定它聯結至 AG。 下列為範例。
+分散式的 AG 也可以跨 OS 界限。 基礎 Ag 由繫結規則的設定方式，例如一個設定為外部正在 Linux 僅限，但無法使用 WSFC 來設定它聯結至 AG。 請設想下列範例：
 
 ![混合式 Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
@@ -160,7 +160,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->
  
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 [設定可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
 
 [設定向外延展讀取可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
@@ -170,4 +170,6 @@ If using automatic seeding with a distributed availability group that crosses OS
 [SLES 上加入可用性群組叢集資源](sql-server-linux-availability-group-cluster-sles.md)
 
 [在 Ubuntu 上加入可用性群組叢集資源](sql-server-linux-availability-group-cluster-ubuntu.md)
+
+[設定跨平台可用性群組](sql-server-linux-availability-group-cross-platform.md)
 

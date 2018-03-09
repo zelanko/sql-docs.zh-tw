@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: "31"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d641ec2dacd6f0296199e9f547bce6baa1c0cb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34becf7210dd08dbf663d99e6cf5cd1b7f57c190
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自訂應用程式中使用 RSClientPrint 控制項
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控制項 **RSPrintClient** 提供在 HTML 檢視器中檢視的報表之用戶端列印。 它提供 [列印] 對話方塊，讓使用者能夠起始列印工作、預覽報表、指定要列印的頁面，以及變更邊界。 在用戶端列印作業期間，報表伺服器會在影像 (EMF) 轉譯延伸模組中轉譯報表，然後使用作業系統的列印功能來建立列印工作，並將它傳送到印表機。  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 屬性  
   
-|屬性|類型|RW|預設值|Description|  
+|屬性|類型|RW|預設|描述|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|報表設定|取得或設定左邊界。 如果開發人員未設定或報表中未指定，則預設值為 12.2 公釐。|  
 |MarginRight|Double|RW|報表設定|取得或設定右邊界。 如果開發人員未設定或報表中未指定，則預設值為 12.2 公釐。|  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
 |PageWidth|Double|RW|報表設定|取得或設定頁寬。 如果開發人員未設定或是報表定義為 215.9 公釐，則為預設值。|  
 |PageHeight|Double|RW|報表設定|取得或設定頁高。 如果開發人員未設定或是報表定義為 279.4 公釐，則為預設值。|  
 |Culture|Int32|RW|瀏覽器地區設定|指定地區設定識別碼 (LCID)。 此值會決定使用者輸入的度量單位。 例如，若使用者鍵入 **3**，當語言為法文時，此值的度量單位是公釐，若語言為英文 (美國)，則度量單位是英吋。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
-|UICulture|字串|RW|用戶端文化特性|指定對話方塊的字串當地語系化。 [列印] 對話方塊中的文字會採用下列語言的當地語系化：簡體中文、繁體中文、英文、法文、德文、義大利文、日文、韓文和西班牙文。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
+|UICulture|String|RW|用戶端文化特性|指定對話方塊的字串當地語系化。 [列印] 對話方塊中的文字會採用下列語言的當地語系化：簡體中文、繁體中文、英文、法文、德文、義大利文、日文、韓文和西班牙文。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
 |Authenticate|布林|RW|False|指定控制項是否對報表伺服器發出 GET 命令，以起始連接來執行工作階段外的列印。|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>何時設定驗證屬性  
@@ -111,11 +109,11 @@ ms.lasthandoff: 12/05/2017
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient 支援 Print 方法  
  **RSClientPrint** 物件支援用來啟動 [列印] 對話方塊的 **Print** 方法。 **Print** 方法具有下列引數。  
   
-|引數|I/O|類型|Description|  
+|引數|I/O|類型|描述|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|字串|指定報表伺服器虛擬目錄 (例如 `https://adventure-works/reportserver`)。|  
-|ReportPathParameters|In|字串|在報表伺服器資料夾命名空間內指定報表的全名，包括參數在內。 報表是透過 URL 存取來擷取。 例如："/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
-|ReportName|In|字串|報表的簡短名稱 (在上述範例中，簡短名稱為 Employee Sales Summary)。 它會出現在 [列印] 對話方塊及列印佇列中。|  
+|ServerPath|In|String|指定報表伺服器虛擬目錄 (例如 `https://adventure-works/reportserver`)。|  
+|ReportPathParameters|In|String|在報表伺服器資料夾命名空間內指定報表的全名，包括參數在內。 報表是透過 URL 存取來擷取。 例如："/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportName|In|String|報表的簡短名稱 (在上述範例中，簡短名稱為 Employee Sales Summary)。 它會出現在 [列印] 對話方塊及列印佇列中。|  
   
 ### <a name="example"></a>範例  
  下列 HTML 範例顯示如何在 JavaScript 中指定 .cab 檔、**Print** 方法和屬性：  

@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: PIVOT_TSQL
+f1_keywords:
+- PIVOT_TSQL
 helpviewer_keywords:
 - FROM clause, UNPIVOT operator
 - unpivoting tables
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - FROM clause, PIVOT operator
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4555a892c55ae8ef40e8fd0c3658412e3641d973
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1feee91c251b5c1f326e8e69569186c049007d9e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="from---using-pivot-and-unpivot"></a>從-使用 PIVOT 和 UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -209,8 +211,8 @@ VendorID    Employee    Orders
   
  `Sales.vSalesPersonSalesByFiscalYears`檢視中[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]範例資料庫會使用`PIVOT`傳回每個會計年度的每位銷售員的銷售總額。 若要編寫指令碼中的檢視[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在**物件總管 中**，找出下的檢視**檢視**資料夾[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。 檢視名稱，以滑鼠右鍵按一下，然後選取**做為指令碼檢視**。  
   
-## <a name="see-also"></a>請參閱＜  
- [從 (TRANSACT-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [案例 (TRANSACT-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   

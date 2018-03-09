@@ -7,23 +7,26 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 9d6654109e3cb5ff2e2c174dc37fd02bfc02dcb3
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: eee99c95b17438fa810501b653a83538e658b205
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R 和 SQL Server 的端對端資料科學逐步解說
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在本逐步解說中，您要開發 Microsoft R 與 SQL Server 2016 或 SQL Server 2017 為基礎的預測模型的端對端解決方案。
 
@@ -57,7 +60,7 @@ ms.lasthandoff: 12/20/2017
 + 所有 SQL 與 R 指令碼都會包含項目。
 + 您可能需要修改指令碼，在您的環境中執行中的字串。 您可以使用任何程式碼編輯器，例如[Visual Studio Code](https://code.visualstudio.com/Download)。
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>필수 구성 요소
 
 + 您必須存取的 SQL Server 2016 中，執行個體或 SQL Server 2017 評估版。
 + SQL Server 電腦上必須至少有一個執行個體已安裝 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。

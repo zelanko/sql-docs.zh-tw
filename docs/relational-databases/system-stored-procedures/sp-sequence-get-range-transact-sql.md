@@ -8,30 +8,32 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_sequence_get_range
 - sp_sequence_get_range_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2af750abc8715d2bcf2240ef08f765c6d2d7bff3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 58c36ec947eab4fbcc9511c67efae1af858ab6d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   從順序物件傳回順序值的範圍。 順序物件會產生及發出要求的值數目，並將範圍相關的中繼資料提供給應用程式。  
   
@@ -55,28 +57,28 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@sequence_name**  =] **N**'*順序*'  
+ [ **@sequence_name** = ] **N**'*sequence*'  
  順序物件的名稱。 此結構描述是選擇性的。 *sequence_name*是**nvarchar(776)**。  
   
- [  **@range_size**  =] *range_size*  
+ [ **@range_size** = ] *range_size*  
  要從順序擷取的值數目。 **@range_size**是**bigint**。  
   
- [  **@range_first_value**  =] *range_first_value*  
+ [ **@range_first_value** = ] *range_first_value*  
  輸出參數會傳回用以計算要求範圍的順序物件之第一個值 (最小值或最大值)。 **@range_first_value**是**sql_variant**與要求中所用順序物件的基底類型相同。  
   
- [  **@range_last_value**  =] *range_last_value*  
+ [ **@range_last_value** = ] *range_last_value*  
  選擇性輸出參數會傳回所要求的範圍的最後一個值。 **@range_last_value**是**sql_variant**與要求中所用順序物件的基底類型相同。  
   
- [  **@range_cycle_count**  =] range_cycle_count  
+ [ **@range_cycle_count** = ] range_cycle_count  
  選擇性輸出參數會傳回順序物件循環次數，以傳回要求的範圍。 **@range_cycle_count**是**int**。  
   
- [  **@sequence_increment**  =] *sequence_increment*  
+ [ **@sequence_increment** = ] *sequence_increment*  
  選擇性輸出參數會傳回順序物件的增量，用來計算要求的範圍。 **@sequence_increment**是**sql_variant**與要求中所用順序物件的基底類型相同。  
   
- [  **@sequence_min_value**  =] *sequence_min_value*  
+ [ **@sequence_min_value** = ] *sequence_min_value*  
  選擇性輸出參數會傳回順序物件的最小值。 **@sequence_min_value**是**sql_variant**與要求中所用順序物件的基底類型相同。  
   
- [  **@sequence_max_value**  =] *sequence_max_value*  
+ [ **@sequence_max_value** = ] *sequence_max_value*  
  選擇性輸出參數會傳回順序物件的最大值。 **@sequence_max_value**是**sql_variant**與要求中所用順序物件的基底類型相同。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -192,7 +194,7 @@ Console.WriteLine(firstValueInRange.Value);
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [卸除順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   

@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c26004fdfa5f2607235ffe7dddb7826a77f38b31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL 和不明 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,25 +41,25 @@ ms.lasthandoff: 11/17/2017
   
 -   Null 值不能做為區別在資料表中，例如主索引鍵，或用來散發資料列，例如散發索引鍵資訊的另一個資料列的資料表中的一個資料列所需的資訊。  
   
- 當資料中包含 Null 值時，邏輯與比較運算子可能會傳回第三種結果 UNKNOWN，而非只有 TRUE 或 FALSE。 這種三重數值邏輯的需要是造成應用程式錯誤的來源。 下表大致說明導入 Null 比較的結果。  
+ 當資料中包含 Null 值時，邏輯與比較運算子可能會傳回第三種結果 UNKNOWN，而非只有 TRUE 或 FALSE。 這種三重數值邏輯的需要是造成應用程式錯誤的來源。 除非運算子的結果不需依賴未知的運算式，包括突發情況的布林運算式中的邏輯運算子會傳回 UNKNOWN。 這些資料表會提供這種行為的範例。  
   
- 下表顯示將 AND 運算子套用到兩個布林運算元的結果，其中一個運算元會傳回 NULL。  
+ 下表顯示將 AND 運算子套用至兩個布林運算式的結果，其中一個運算式會傳回 UNKNOWN。  
   
-|Operand 1|運算元 2|結果|  
+|運算式 1|Expression 2|結果|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- 下表顯示將 OR 運算子套用到兩個布林運算元的結果，其中一個運算元會傳回 NULL。  
+ 下表顯示將 OR 運算子套用至兩個布林運算式的結果，其中一個運算式會傳回 UNKNOWN。  
   
-|Operand 1|運算元 2|結果|  
+|運算式 1|Expression 2|結果|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [和 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   
  [或者 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/or-transact-sql.md)   
  [不 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/not-transact-sql.md)   

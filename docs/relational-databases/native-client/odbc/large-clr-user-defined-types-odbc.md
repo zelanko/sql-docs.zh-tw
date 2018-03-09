@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|ODBC
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef77c1006995e8acbe2e5de12efd52807ee5589e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4da32a24c00ca9539cca04c3886d19f73f9ab578
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 使用者定義型別 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  下表顯示參數和結果集內的資料類型對應：  
   
-|SQL Server 資料類型|SQL 資料類型|值|  
+|SQL Server 資料類型|SQL 資料類型|Value|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 11/17/2017
 |來回轉換：|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|支援 *|  
-|SQL_C_BINARY|支援|  
+|SQL_C_BINARY|Supported|  
 |SQL_C_CHAR|支援 *|  
   
  \*二進位資料會轉換成十六進位字串。  
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/17/2017
 |來回轉換：|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|支援 *|  
-|SQL_C_BINARY|支援|  
+|SQL_C_BINARY|Supported|  
 |SQL_C_CHAR|支援 *|  
   
  \*二進位資料轉換成十六進位字串，就會發生。  
@@ -219,7 +219,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  針對 UDT 傳回的值如下所示：  
   
-|SQL 資料類型|類型|子類型|長度|有效位數|小數位數|  
+|SQL 資料類型|型別|子類型|長度|有效位數|小數位數|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -239,7 +239,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT 允許的值如下所示：  
   
-|SQL 資料類型|類型|子類型|長度|有效位數|小數位數|  
+|SQL 資料類型|型別|子類型|長度|有效位數|小數位數|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -247,7 +247,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  
  針對資料行 DATA_TYPE、TYPE_NAME、COLUMN_SIZE、BUFFER_LENGTH 和 DECIMAL_DIGTS UDT 傳回的值如同本主題稍早的「SQLColumns 和 SQLProcedureColumns 傳回的資料行中繼資料 (目錄中繼資料)」一節所述。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [大型 CLR 使用者定義型別](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

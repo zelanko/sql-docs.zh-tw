@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ddbddfefdaf6b51cbd9cc60eb9111a6c07cfaac8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5e80abbfc587b66c0059b2ae329e2ddfd009bf10
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 運算子參考 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[-&#40;註解 &#41;&#40;MDX &#41;](../mdx/comment-mdx-operator-reference.md)|指出使用者提供的註解文字。|  
 |[-&#40;除了 &#41;&#40;MDX &#41;](../mdx/except-mdx-operator.md)|執行集合運算，傳回兩個集合間的差異、移除重複的成員。|  

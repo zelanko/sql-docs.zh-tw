@@ -8,24 +8,28 @@ ms.service:
 ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: bcp_bind
-apilocation: sqlncli11.dll
+apiname:
+- bcp_bind
+apilocation:
+- sqlncli11.dll
 apitype: DLLExport
-helpviewer_keywords: bcp_bind function
+helpviewer_keywords:
+- bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3f6005104620c3a55d34c39b114517dab6750d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7bba3e1785df98b4f023d5296205503202cbc59c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -123,9 +127,53 @@ bcp_bind(hdbc, szName, 0,
   
  *EDataType*參數會列舉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sqlncli.h 中的資料類型 token、 不 ODBC C 資料類型列舉值。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLINT2 來指定兩個位元組的整數 ODBC 類型 SQL_C_SHORT。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]導入 SQLXML 和 SQLUDT 資料類型 token 中的支援***eDataType***參數。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入 SQLXML 和 SQLUDT 資料類型 token 中的支援***eDataType***參數。  
+ 
+ 下表列出有效的列舉的資料型別和對應的 ODBC C 資料類型。
   
- *並將 idxServerCol*  
+|eDataType|C 類型|  
+|-----------------------|------------|  
+|SQLTEXT|char *|  
+|SQLNTEXT|wchar_t *|  
+|SQLCHARACTER|char *|  
+|SQLBIGCHAR|char *|  
+|SQLVARCHAR|char *|  
+|SQLBIGVARCHAR|char *|  
+|SQLNCHAR|wchar_t *|  
+|SQLNVARCHAR|wchar_t *|  
+|SQLBINARY|不帶正負號 char *|  
+|SQLBIGBINARY|不帶正負號 char *|  
+|SQLVARBINARY|不帶正負號 char *|  
+|SQLBIGVARBINARY|不帶正負號 char *|  
+|SQLBIT|char|  
+|SQLBITN|char|  
+|SQLINT1|char|  
+|SQLINT2|short int|  
+|SQLINT4|int|  
+|SQLINT8|_int64|  
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2 來<br /> 4: SQLINT4<br /> 8: SQLINT8|  
+|SQLFLT4|float|  
+|SQLFLT8|float|  
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
+|SQLDECIMALN|SQL_NUMERIC_STRUCT|  
+|SQLNUMERICN|SQL_NUMERIC_STRUCT|  
+|SQLMONEY|DBMONEY|  
+|SQLMONEY4|DBMONEY4|  
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|  
+|SQLTIMEN|SQL_SS_TIME2_STRUCT|  
+|SQLDATEN|SQL_DATE_STRUCT|  
+|SQLDATETIM4|DBDATETIM4|  
+|SQLDATETIME|DBDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
+|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
+|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
+|SQLIMAGE|不帶正負號 char *|  
+|SQLUDT|不帶正負號 char *|  
+|SQLUNIQUEID|SQLGUID|  
+|SQLVARIANT|*以外的任何資料類型：*<br />-   text<br />-   ntext<br />-映像<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLXML|*支援的 C 資料類型：*<br />-   char*<br />-wchar_t *<br />-不帶正負號 char *|  
+  
+ *idxServerCol*  
  這是資料庫資料表中要將資料複製到其中之資料行的序數位置。 資料表中的第一個資料行是資料行 1。 資料行的序數位置由報告[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)。  
   
 ## <a name="returns"></a>傳回值  
@@ -134,7 +182,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>備註  
  使用**bcp_bind**的快速、 有效率的方法，將程式變數中的資料複製到資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- 呼叫[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)之前呼叫這個或其他任何大量複製函數。 呼叫**bcp_init**設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大量複製的目標資料表。 當呼叫**bcp_init**搭配**bcp_bind**和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)、 **bcp_init** *szDataFile*參數，指出資料檔設為 NULL。**bcp_init***eDirection*參數設定為 DB_IN。  
+ 呼叫[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)之前呼叫這個或其他任何大量複製函數。 呼叫**bcp_init**設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大量複製的目標資料表。 當呼叫**bcp_init**搭配**bcp_bind**和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)、 **bcp_init** *szDataFile*參數，指出資料檔設為 NULL。**bcp_init * * * eDirection*參數設定為 DB_IN。  
   
  個別**bcp_bind**呼叫每個資料行中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您要複製的資料表。 必要之後**bcp_bind**呼叫已做了，然後呼叫**bcp_sendrow**傳送的資料列從程式變數到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支援重新繫結資料行。  
   
@@ -254,7 +302,7 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

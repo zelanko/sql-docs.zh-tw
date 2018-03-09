@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>建立資料表 （Azure SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -109,7 +111,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
    
 ### <a name="ColumnOptions"></a>資料行選項
 
- `COLLATE`*Windows_collation_name*  
+ `COLLATE` *Windows_collation_name*  
  指定運算式的定序。 定序必須是所支援的 Windows 定序之一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需所支援的 Windows 定序的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[Windows 定序名稱 (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/)。  
   
  `NULL` | `NOT NULL`  
@@ -133,7 +135,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `HEAP`   
   將資料表儲存為堆積。 這是預設值[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
   
- `CLUSTERED INDEX`( *index_column_name* [，...*n* ] )  
+ `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  將資料表儲存為叢集索引與一個或多個索引鍵資料行。 這是由資料列所儲存的資料。 使用*index_column_name*索引中指定的一或多個索引鍵資料行名稱。  如需詳細資訊，請參閱 < 一般備註中的資料列存放區資料表。
  
  `LOCATION = USER_DB`   
@@ -142,7 +144,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="TableDistributionOptions"></a>資料表分佈選項
 若要了解如何選擇最佳散發方法，並使用分散式的資料表，請參閱[散發 Azure SQL 資料倉儲中的資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)。
 
-`DISTRIBUTION = HASH`( *distribution_column_name* )   
+`DISTRIBUTION = HASH` ( *distribution_column_name* )   
 指派給一個發佈的每個資料列，雜湊值儲存在所*distribution_column_name*。 這表示永遠雜湊到相同發佈相同的值，此演算法為具決定性。  散發資料行應定義為 NOT NULL，因為 NULL 會指派給相同的通訊群組的所有資料列。
 
 `DISTRIBUTION = ROUND_ROBIN`   
@@ -154,7 +156,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="TablePartitionOptions"></a>資料表資料分割選項
 如需使用資料表資料分割的指引，請參閱[SQL 資料倉儲中的資料表資料分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
- `PARTITION`( *partition_column_name* `RANGE` [ `LEFT`  |  `RIGHT` ] `FOR VALUES` ([ *boundary_value* [，...*n*] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 建立一或多個資料表資料分割。 這些是水平資料表配量可讓您執行的資料列，不論是否儲存為堆積、 叢集的索引或叢集資料行存放區索引的資料表子集的作業。 與散發 資料行不同的是資料表資料分割不會決定每個資料列所在的散發。 相反地，資料表資料分割所決定的資料列群組和儲存在每個發佈的方式。  
  
 | 引數 | 說明 |
@@ -162,7 +164,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 |*partition_column_name*| 指定的資料行，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]將分割的資料列。 此資料行可以是任何資料類型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]資料分割資料行值，以遞增順序排序。 從低到高順序下移`LEFT`至`RIGHT`的用途的`RANGE`規格。 |  
 | `RANGE LEFT` | 指定的界限值屬於左 （較低的值） 上的磁碟分割。 預設值為 LEFT。 |
 | `RANGE RIGHT` | 指定的界限值屬於資料分割上的權限 （更高的值）。 | 
-| `FOR VALUES`( *boundary_value* [，...*n*] ) | 指定資料分割的界限值。 *boundary_value*是常數運算式。 它不能是 NULL。 它必須符合或可隱含轉換成的資料型別*partition_column_name*。 它無法截斷隱含轉換期間，這樣的大小和小數位數的值不相符的資料型別*partition_column_name*<br></br><br></br>如果您指定`PARTITION`子句，但未指定界限值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]將一個資料分割使用建立分割區的資料表。 如果適用的話，您分割成兩個資料分割在稍後的資料表。<br></br><br></br>如果您指定一個界限值，產生的資料表有兩個磁碟分割。其中一個值低於界限值，另一個用於高於界限值的值。 請注意，是否您將資料分割移到非資料分割的資料表時，非資料分割的資料表會接收資料，但不是會有資料分割界限中它的中繼資料。| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | 指定資料分割的界限值。 *boundary_value*是常數運算式。 它不能是 NULL。 它必須符合或可隱含轉換成的資料型別*partition_column_name*。 它無法截斷隱含轉換期間，這樣的大小和小數位數的值不相符的資料型別*partition_column_name*<br></br><br></br>如果您指定`PARTITION`子句，但未指定界限值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]將一個資料分割使用建立分割區的資料表。 如果適用的話，您分割成兩個資料分割在稍後的資料表。<br></br><br></br>如果您指定一個界限值，產生的資料表有兩個磁碟分割。其中一個值低於界限值，另一個用於高於界限值的值。 請注意，是否您將資料分割移到非資料分割的資料表時，非資料分割的資料表會接收資料，但不是會有資料分割界限中它的中繼資料。| 
  
  請參閱[建立分割區的資料表](#PartitionedTable)範例 > 一節中。
 
@@ -447,7 +449,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a>G. 建立複寫的資料表  
+### <a name="Replicated"></a> G. 建立複寫的資料表  
  下列範例會建立複寫的資料表類似於先前的範例。 複寫的資料表中完整複製到每個計算節點。 使用此版每個計算節點上時，資料移動會降低查詢。 這個範例會建立具有叢集索引，這可提供更好的資料壓縮比堆積，而且不能包含足夠的資料列，以達成良好的叢集資料行存放區索引壓縮。  
   
 ```  
@@ -467,7 +469,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>資料表資料分割的範例
 
-###  <a name="PartitionedTable"></a>H. 建立分割區的資料表  
+###  <a name="PartitionedTable"></a> H. 建立分割區的資料表  
  下列範例會建立在同一個資料表，加上的 RANGE LEFT 資料分割上的範例 A 中所示`id`資料行。 它會指定四個資料分割的界限值，結果會在五個資料分割。  
   
 ```  
@@ -501,7 +503,7 @@ WITH
 -   資料分割 4: 30 < = 資料行 < 40   
 -   分割區 5: 40 < = 資料行  
   
-### <a name="OnePartition"></a>我。 建立一個磁碟分割的資料分割的資料表  
+### <a name="OnePartition"></a> I. 建立一個磁碟分割的資料分割的資料表  
  下列範例會建立一個磁碟分割的資料分割的資料表。 它並未指定任何界限的值，結果會在一個資料分割。  
   
 ```  
@@ -517,7 +519,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a>J. 建立具有日期資料分割的資料表  
+### <a name="DatePartition"></a> J. 建立具有日期資料分割的資料表  
  下列範例會建立新的資料表，名為`myTable`中的資料分割上`date`資料行。 藉由使用 RANGE RIGHT 及日期的界限值，它會將一個月的資料放在每個資料分割。  
   
 ```  

@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: fdd28279b99f0dd39a0b971412d1252feb978413
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>自動的安裝的機器學習服務 （資料庫）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明如何使用 SQL Server 安裝程式中的命令列引數，若要安裝的機器學習服務元件。
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/20/2017
 
 **適用於： SQL Server 2017 機器學習服務 （資料庫），SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>필수 구성 요소
 
 + 您必須在您將在其中使用機器學習服務每個執行個體上安裝資料庫引擎。
 
@@ -48,9 +49,9 @@ ms.lasthandoff: 12/20/2017
 
 > [!IMPORTANT]
 > 
-> 若要啟用此功能安裝完成之後，不需要額外的步驟。 這些包括重新設定，然後重新啟動執行個體。 確定，檢閱 [後續安裝步驟] 上一節中的所有項目 (#bkmk_PostInstall)，以判斷動作需要在安裝完成後。
+> 若要啟用此功能安裝完成之後，不需要額外的步驟。 這些包括重新設定，然後重新啟動執行個體。 請務必檢閱上一節中的所有項目[後續安裝步驟](#bkmk_PostInstall)以判斷安裝完成之後，需要的動作。
 
-## <a name="bkmk_NewInstall"></a>命令列安裝的 SQL Server 2017
+## <a name="bkmk_NewInstall"></a>  命令列安裝的 SQL Server 2017
 
 下列範例中包含**最小**必要的功能。
 
@@ -96,7 +97,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MPY
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>SQL Server 2016 命令列安裝
+## <a name="OldInstall"></a> SQL Server 2016 命令列安裝
  
 下列範例示範加入之 R 語言安裝的 SQL Server 2016 的執行無訊息方式，自動安裝所需的引數。
 

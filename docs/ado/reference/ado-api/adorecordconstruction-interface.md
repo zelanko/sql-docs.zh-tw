@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ADORecordConstruction
-helpviewer_keywords: ADORecordConstruction interface [ADO]
+f1_keywords:
+- ADORecordConstruction
+helpviewer_keywords:
+- ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cedc7639b0b5c1559fe137be96c822287a3ff82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7bfe02588a73f6c896b8947298483766c6a8a01e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 介面
 **ADORecordConstruction**介面用來建構 ADO**記錄**從 OLE DB 物件**列**C/c + + 應用程式中的物件。  
@@ -36,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|唯寫。<br />設定 OLE DB 的容器**列**上此 ADO 物件**記錄**物件。|  
-|[資料列](../../../ado/reference/ado-api/row-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**列**物件上此 ADO/從**記錄**物件。|  
+|[Row](../../../ado/reference/ado-api/row-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**列**物件上此 ADO/從**記錄**物件。|  
   
 ## <a name="methods"></a>方法  
  無。  
@@ -77,6 +80,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  **版本：** ADO 2.0 和更新版本  
   
- **程式庫：** msado15.dll  
+ **Library:** msado15.dll  
   
  **UUID:** 00000567-0000-0010-8000-00AA006D2EA4

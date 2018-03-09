@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_proxy
 - sp_help_proxy_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf5dd28e001919a43d39685e2e50eaeb03e877af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 19f4df348037b923ac5e7daf643b5ed114256324
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +50,22 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@proxy_id**  =]*識別碼*  
+ [ **@proxy_id** = ] *id*  
  要列出資訊的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
   
- [  **@proxy_name**  =] **'***proxy_name***'**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  要列出資訊的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
   
- [  **@subsystem_name**  =] '*subsystem_name*'  
+ [ **@subsystem_name** = ] '*subsystem_name*'  
  要列出 Proxy 的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 NULL。 當*subsystem_name*指定，則*名稱*也必須指定。  
   
  下表列出每個子系統的值。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX Script|  
 |CmdExec|作業系統 (CmdExec)|  
-|快照式|複寫快照集代理程式|  
+|快照集|複寫快照集代理程式|  
 |LogReader|複寫記錄讀取器代理程式|  
 |Distribution|複寫散發代理程式|  
 |合併式|複寫合併代理程式|  
@@ -72,7 +75,7 @@ sp_help_proxy
 |Dts|SSIS 封裝執行|  
 |PowerShell|PowerShell 指令碼|  
   
- [  **@name**  =] '*名稱*'  
+ [ **@name** = ] '*name*'  
  要列出 Proxy 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 名稱是**nvarchar （256)**，預設值是 NULL。 當*名稱*指定，則*subsystem_name*也必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -85,9 +88,9 @@ sp_help_proxy
 |**proxy_id**|**int**|Proxy 識別碼。|  
 |**name**|**sysname**|Proxy 的名稱。|  
 |**credential_identity**|**sysname**|Proxy 相關認證的 Microsoft Windows 網域名稱和使用者名稱。|  
-|**已啟用**|**tinyint**|是否啟用這個 Proxy。 { **0** = 未啟用， **1** = 啟用}|  
-|**描述**|**nvarchar （1024)**|這個 Proxy 的描述。|  
-|**credential_identity**|**varbinary(85)**|這個 Proxy 的 Windows 使用者之 Windows 安全性識別碼。|  
+|**enabled**|**tinyint**|是否啟用這個 Proxy。 { **0** = 未啟用， **1** = 啟用}|  
+|**描述**|**nvarchar(1024)**|這個 Proxy 的描述。|  
+|**user_sid**|**varbinary(85)**|這個 Proxy 的 Windows 使用者之 Windows 安全性識別碼。|  
 |**credential_id**|**int**|這個 Proxy 的相關認證識別碼。|  
 |**credential_identity_exists**|**int**|credential_identity 是否存在。 { 0 = 不存在，1 = 存在 }|  
   
@@ -129,9 +132,9 @@ EXEC dbo.sp_help_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_proxy &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

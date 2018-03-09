@@ -7,29 +7,30 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: r-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a159a3198037e21664bb9b07647a01b1d5317d22
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>自動的安裝的 Python 機器學習服務 （資料庫）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題描述如何使用 SQL Server 2017 安裝程式中的命令列引數，若要使用機器學習服務，並將 Python，使用無訊息模式安裝的 SQL Server database engine。
 
 > [!NOTE]
 > 別忘了要包含授權合約，一個用於 Python，另一個適用於 SQL Server 的命令列引數。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>필수 구성 요소
 
 開始安裝程序之前，請注意下列需求：
 

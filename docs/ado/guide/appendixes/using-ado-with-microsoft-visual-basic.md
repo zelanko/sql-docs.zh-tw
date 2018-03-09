@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5f3652eba15968b40a6d8a33902e1ca757275dd8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: abeb037ed89277082fce38c833baadc5a4170e3c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic 和 Visual Basic 中使用 ADO 的應用程式
 設定 ADO 專案，並撰寫 ADO 程式碼相似的。 您是否使用 Visual Basic 或 Visual Basic 應用程式 本主題說明使用 Visual Basic 和 Visual Basic 使用 ADO 的應用程式，並且資訊的任何差異。
@@ -47,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 
     -   OLE Automation
 
-3.  按一下 [確定] 。
+3.  按一下 **[確定]**。
 
  您可以使用 ADO 很容易與 Visual Basic 應用程式，例如使用 Microsoft Access。
 
@@ -65,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 
     -   Microsoft DAO 3.5 物件程式庫 （或更新版本）
 
-4.  按一下 [確定] 。
+4.  按一下 **[確定]**。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>在 Visual Basic 中建立 ADO 物件
  若要建立的自動化變數和物件，該變數的執行個體，您可以使用兩種方法： **Dim**或**CreateObject**。
@@ -119,5 +121,5 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
 ## <a name="visual-basic-examples"></a>Visual Basic 範例
  許多 Visual Basic 範例隨附的 ADO 文件。 如需詳細資訊，請參閱[ADO 程式碼範例在 Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [使用 ADO 搭配 Microsoft Visual c + +](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [使用 ADO 搭配指令碼語言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

@@ -4,38 +4,37 @@ ms.date: 10/19/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 14a6ca056a079b4a51813783883cc09c5f53e8ad
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>表格式模型設計師 (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表格式模型設計師屬於[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、 整合與 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，具有特別用來開發專業表格式模型方案的額外專案類型範本。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 可從 Web 免費下載安裝。 如需詳細資訊，請參閱[下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+此表格式模型設計師是與 Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]整合之 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的一部分，具有特別用來開發專業表格式模型方案的額外專案類型範本。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 可從 Web 免費下載安裝。 如需詳細資訊，請參閱[下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。    
   
 ##  <a name="bkmk_benefits"></a> 優點  
  當您安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]時，用來建立表格式模型的專案範本會加入至可用的專案類型中。 在使用其中一個範本建立新的表格式模型專案之後，您可以使用表格式模型設計師工具和精靈開始撰寫模型。  
   
  除了用於撰寫專業多維度和表格式模型方案的新範本和工具之外， [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境也提供偵錯和專案週期功能，確保您能為組織建立最強大的 BI 方案。 如需 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的詳細資訊，請參閱 [Visual Studio 使用者入門](http://go.microsoft.com/fwlink/?LinkId=206389)。  
   
-##  <a name="bkmk_proj_temp"></a>專案範本  
+##  <a name="bkmk_proj_temp"></a> 專案範本  
  當您安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]時，下列表格式模型專案範本會加入至商業智慧專案類型中：  
   
  **Analysis Services 表格式專案**  
@@ -99,7 +98,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [量值]  
   
- [專案屬性] 僅會顯示 [屬性] 視窗中的專案名稱和專案資料夾。 專案也具有您可以使用強制回應屬性對話方塊設定的其他部署選項和部署伺服器設定。 若要檢視這些屬性，請以滑鼠右鍵按一下方案總管中的專案，然後按一下 [屬性]。  
+ 專案屬性會在 [屬性] 視窗中顯示只有專案名稱和專案資料夾。 專案也具有您可以使用強制回應屬性對話方塊設定的其他部署選項和部署伺服器設定。 若要檢視這些屬性，請以滑鼠右鍵按一下方案總管中的專案，然後按一下 [屬性]。  
   
  [屬性] 視窗中的欄位包含內嵌控制項，當您按一下欄位時，即會開啟這些控制項。 編輯控制項的類型會隨著特定屬性而不同。 這些控制項包含編輯方塊、下拉式清單和自訂對話方塊的連結。 呈暗灰色的屬性是唯讀的。  
   
@@ -129,7 +128,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="toolbar"></a>工具列  
  Analysis Services 工具列可輕鬆快速地存取最常用的模型撰寫命令。  
   
-##  <a name="bkmk_vsint"></a>Visual Studio 整合  
+##  <a name="bkmk_vsint"></a> Visual Studio 整合  
  **原始檔控制**  
  Analysis Services 專案會與選取的原始檔控制外掛程式整合。 如果您已設定 Visual Studio 使用原始檔控制，則可以從 [方案總管] 使用簽入/簽出。 若要設定使用 Team Foundation Server，請參閱 [Configure Visual Studio with Team Foundation Version Control](http://msdn.microsoft.com/library/ms253064.aspx)(使用 Team Foundation 版本控制設定 Visual Studio)。 此外，也支援許多協力廠商原始檔控制外掛程式。  
   
@@ -140,7 +139,7 @@ ms.lasthandoff: 12/08/2017
  您可以透過 [工具] -> [選項] -> [鍵盤] 對話方塊，設定/重新對應 Analysis Services 鍵盤快速鍵。 表格式模型設計師內容支援如建立、儲存、偵錯、新增專案等一些通用的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 快速鍵。 其他表格式模型設計師的特定快速鍵則會在 Analysis Services 內容中。  
   
 ## <a name="see-also"></a>另請參閱  
- [表格式模型專案 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [表格式模型專案](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [屬性](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

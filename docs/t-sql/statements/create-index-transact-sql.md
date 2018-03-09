@@ -1,14 +1,15 @@
 ---
 title: "建立索引 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - INDEX
 - INDEX_TSQL
 - CREATE_INDEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE XML INDEX statement
 - PRIMARY XML INDEX statement
@@ -54,26 +56,28 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: "223"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
-ms.translationtype: MT
+ms.openlocfilehash: 48d755dcd5257a3208c087db44df1e9fd262ddcc
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  在資料表或檢視表上建立關聯式索引。 因為它是其中一個非叢集或非叢集 btree 索引時，也稱為資料列存放區索引。 資料表中有資料之前，您可以建立資料列存放區索引。 若要改善查詢效能，特別是在查詢從特定資料行中選取，或需要特定的順序排序值時，才使用資料列存放區索引。  
-  
+在資料表或檢視表上建立關聯式索引。 也稱為資料列存放區索引，因為它是其中一個非叢集或非叢集 B 型樹狀目錄索引。 資料表中有資料之前，您可以建立資料列存放區索引。 若要改善查詢效能，特別是在查詢從特定資料行中選取，或需要特定的順序排序值時，才使用資料列存放區索引。  
   
 > [!NOTE]  
->  Azure SQL 資料倉儲和平行處理資料倉儲目前不支援 Unique 條件約束。 參考唯一的條件約束的任何範例僅適用於 SQL Server 和 Azure SQL Database    
-  
+> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]目前不支援 Unique 條件約束。 參考唯一的條件約束的任何範例僅適用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。    
+
+> [!TIP]
+> 索引設計指導方針的相關資訊，請參閱[SQL Server 索引設計指南](../../relational-databases/sql-server-index-design-guide.md)。
+
  **簡單的範例：**  
   
 ```  
@@ -95,17 +99,15 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
   
  **重要的案例：**  
   
--   在 SQL Server 2016 和 Azure SQL Database 中，使用非叢集索引資料行存放區索引來改善資料倉儲查詢效能。 請參閱[資料行存放區索引的資料倉儲](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
+-   從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，使用資料行存放區索引上的非叢集索引來改善資料倉儲查詢效能。 如需詳細資訊，請參閱[資料行存放區索引的資料倉儲](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)。  
   
- **需要建立不同類型的索引？**  
+**需要建立不同類型的索引？**  
   
 -   [建立 XML 索引 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)  
-  
 -   [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
+-   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)     
   
--   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-  
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -168,12 +170,12 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 <range> ::=   
 <partition_number_expression> TO <partition_number_expression>  
   
-Backward Compatible Relational Index  
-Important   The backward compatible relational index syntax structure 
-will be removed in a future version of SQL Server. Avoid using this 
-syntax structure in new development work, and plan to modify 
-applications that currently use the feature. Use the syntax structure 
-specified in <relational_index_option> instead.  
+Backward Compatible Relational Index
+
+> [!IMPORTANT]
+> The backward compatible relational index syntax structure will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+> Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature. 
+> Use the syntax structure specified in <relational_index_option> instead.  
   
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )   
@@ -206,17 +208,16 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
         ( { column [ ASC | DESC ] } [ ,...n ] )  
     WITH ( DROP_EXISTING = { ON | OFF } )  
 [;]  
-  
 ```  
   
 ## <a name="arguments"></a>引數  
- UNIQUE  
- 在資料表或檢視表上建立唯一索引。 在唯一索引中，任兩個資料列都不能有相同的索引鍵值。 檢視表中的叢集索引必須是唯一的。  
+UNIQUE  
+在資料表或檢視表上建立唯一索引。 在唯一索引中，任兩個資料列都不能有相同的索引鍵值。 檢視表中的叢集索引必須是唯一的。  
   
  不論 IGNORE_DUP_KEY 是否設為 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 都不允許在已包含重複值的資料行上建立唯一索引。 如果嘗試執行這項作業，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會顯示錯誤訊息。 必須先移除重複值，才能在資料行上建立唯一索引。 唯一索引中使用的資料行應設為 NOT NULL，因為當建立唯一索引時，多個 Null 值會被視為重複值。  
   
- CLUSTERED  
- 建立一個索引，在該索引中，索引鍵值的邏輯順序會決定資料表中對應資料列的實體順序。 叢集索引的層級 (底部或分葉) 包含資料表的實際資料列。 資料表或檢視表一次只允許一個叢集索引。  
+CLUSTERED  
+建立一個索引，在該索引中，索引鍵值的邏輯順序會決定資料表中對應資料列的實體順序。 叢集索引的層級 (底部或分葉) 包含資料表的實際資料列。 資料表或檢視表一次只允許一個叢集索引。  
   
  含有唯一叢集索引的檢視表稱為索引檢視表。 在檢視表上建立唯一叢集索引，可將檢視表實際具體化。 必須先在檢視表上建立唯一叢集索引，才能在相同檢視表上定義任何其他索引。 如需詳細資訊，請參閱 [建立索引檢視表](../../relational-databases/views/create-indexed-views.md)。  
   
@@ -225,18 +226,18 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  如果未指定 CLUSTERED，就會建立非叢集索引。  
   
 > [!NOTE]  
->  因為叢集的索引和資料頁的分葉層級是以相同方式定義，建立叢集的索引，並使用 ON *partition_scheme_name*或 ON *filegroup_name*子句有效從建立資料表的檔案群組的資料表移到新的分割區配置或檔案群組中。 在特定檔案群組上建立資料表或索引之前，請先確認檔案群組是可用的，而且它們有足夠的空間可供索引使用。  
+> 因為叢集的索引和資料頁的分葉層級是以相同方式定義，建立叢集的索引，並使用 ON *partition_scheme_name*或 ON *filegroup_name*子句有效從建立資料表的檔案群組的資料表移到新的分割區配置或檔案群組中。 在特定檔案群組上建立資料表或索引之前，請先確認檔案群組是可用的，而且它們有足夠的空間可供索引使用。  
   
  在某些情況下，建立叢集索引可啟用先前停用的索引。 如需詳細資訊，請參閱[Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)和[停用索引和條件約束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。  
   
- **非叢集**  
- 建立索引來指定資料表的邏輯排序。 如果是非叢集索引，資料列的實體順序和它們的索引順序無關。  
+**非叢集**  
+建立索引來指定資料表的邏輯排序。 如果是非叢集索引，資料列的實體順序和它們的索引順序無關。  
   
  不論索引的建立方式為何，每一份資料表最多只能有 999 個非叢集索引：以隱含的方式使用 PRIMARY KEY 和 UNIQUE 條件約束或以明確的方式使用 CREATE INDEX。  
   
  如果是索引檢視表，只能在已定義唯一叢集索引的檢視表上建立非叢集索引。  
   
- 預設值是 NONCLUSTERED。  
+ 如果未指定，預設的索引類型為 NONCLUSTERED。  
   
  *index_name*  
  這是索引的名稱。 在資料表或檢視表內，索引名稱必須是唯一的，但在資料庫內就不一定要是唯一的。 索引名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
@@ -278,18 +279,18 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  已篩選的索引不適用於 XML 索引和全文檢索索引。 如果是 UNIQUE 索引，只有選取的資料列必須有唯一的索引值。 已篩選的索引不允許 IGNORE_DUP_KEY 選項。  
   
- ON *partition_scheme_name***(***column_name***)**  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ON *partition_scheme_name* **( *column_name* )**  
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定分割區配置來定義要做為分割區索引之分割區對應目標的檔案群組。 資料分割配置必須存在於資料庫中執行[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)或[ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)。 *column_name*指定資料分割的索引將會分割依據的資料行。 此資料行必須符合資料類型、 長度和有效位數引數的資料分割函式， *partition_scheme_name*使用。 *column_name*未限制為索引定義中的資料行。 基底資料表中的任何資料行都可以指定，但在分割唯一索引， *column_name*必須選擇從做的唯一索引鍵。 這項限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。  
   
 > [!NOTE]  
->  當您分割一個非唯一的叢集索引時，如果尚未指定分割區資料行，依預設，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它加入至叢集索引鍵清單。 當您分割一個非唯一的非叢集索引時，如果尚未指定分割區資料行，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它新增為索引的非索引鍵 (內含) 資料行。  
+> 當您分割一個非唯一的叢集索引時，如果尚未指定分割區資料行，依預設，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它加入至叢集索引鍵清單。 當您分割一個非唯一的非叢集索引時，如果尚未指定分割區資料行，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它新增為索引的非索引鍵 (內含) 資料行。  
   
  如果*partition_scheme_name*或*檔案群組*未指定和資料表資料分割，此索引會放在相同的資料分割配置，使用相同的分割資料行，做為基礎的資料表。  
   
 > [!NOTE]  
->  您無法在 XML 索引上指定分割區配置。 如果基底資料表已分割，XML 索引會使用與資料表相同的分割區配置。  
+> 您無法在 XML 索引上指定分割區配置。 如果基底資料表已分割，XML 索引會使用與資料表相同的分割區配置。  
   
  如需有關資料分割索引， [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
@@ -366,7 +367,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  只有在建立或重建索引時才會套用 FILLFACTOR 設定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會動態保留頁面中空白空間的指定百分比。 若要檢視填滿因數設定，請使用[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視。  
   
 > [!IMPORTANT]  
->  利用小於 100 的 FILLFACTOR 來建立叢集索引，會影響資料所佔用的儲存空間數量，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在建立叢集索引時會轉散發資料。  
+> 利用小於 100 的 FILLFACTOR 來建立叢集索引，會影響資料所佔用的儲存空間數量，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在建立叢集索引時會轉散發資料。  
   
  如需詳細資訊，請參閱 [指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
@@ -412,12 +413,12 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  若要還原自動統計資料更新，請將 STATISTICS_NORECOMPUTE 設為 OFF，或執行不含 NORECOMPUTE 子句的 UPDATE STATISTICS。  
   
 > [!IMPORTANT]  
->  停用散發統計資料的自動重新計算，可防止查詢最佳化工具取得與資料表有關之查詢的最佳執行計畫。  
+> 停用散發統計資料的自動重新計算，可防止查詢最佳化工具取得與資料表有關之查詢的最佳執行計畫。  
   
  在與舊版本相容的語法中，WITH STATISTICS_NORECOMPUTE 相當於 WITH STATISTICS_NORECOMPUTE = ON。  
   
- STATISTICS_INCREMENTAL = {ON |**OFF** }  
- 當**ON**，建立的統計資料是以每個分割區統計資料。 當**OFF**，卸除統計資料樹狀結構和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新計算統計資料。 預設值是**OFF**。  
+STATISTICS_INCREMENTAL = {ON |**OFF** }  
+當**ON**，建立的統計資料是以每個分割區統計資料。 當**OFF**，卸除統計資料樹狀結構和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新計算統計資料。 預設值是**OFF**。  
   
  如果不支援每個分割區區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：  
   
@@ -429,8 +430,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 -   在內部資料表上建立的統計資料。  
 -   使用空間索引或 XML 索引建立的統計資料。  
   
- DROP_EXISTING = {ON |**OFF** }  
- 是要卸除和重建現有的叢集或非叢集索引，以修改資料行規格，並保留相同名稱的索引選項。 預設值為 OFF。  
+DROP_EXISTING = {ON |**OFF** }  
+是要卸除和重建現有的叢集或非叢集索引，以修改資料行規格，並保留相同名稱的索引選項。 預設值為 OFF。  
   
  ON  
  若要卸除和重建現有索引中，必須具有相同的名稱做為參數指定*index_name*。  
@@ -438,23 +439,22 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  指定不卸除和重建現有的索引。 如果指定的索引名稱已經存在，SQL Server 就會顯示錯誤。  
   
- 您可以利用 DROP_EXISTING，變更：  
+您可以利用 DROP_EXISTING，變更：  
   
 -   叢集資料列存放區索引的非叢集資料列存放區索引。  
   
- With DROP_EXISTING，您無法變更：  
+With DROP_EXISTING，您無法變更：  
   
 -   非叢集資料列存放區索引做為叢集資料列存放區索引。  
-  
 -   任何類型的資料列存放區索引的叢集資料行存放區索引。  
   
- 在與舊版本相容的語法中，WITH DROP_EXISTING 相當於 WITH DROP_EXISTING = ON。  
+在與舊版本相容的語法中，WITH DROP_EXISTING 相當於 WITH DROP_EXISTING = ON。  
   
- ONLINE = {ON |**OFF** }  
- 指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。  
+ONLINE = {ON |**OFF** }  
+指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 線上索引作業不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ON  
  索引作業持續期間不會保留長期資料表鎖定。 在索引作業的主要階段期間，來源資料表上只保留意圖共用 (IS) 鎖定。 這可使基礎資料表和索引的查詢或更新能夠進行。 在作業開始時，共用 (S) 鎖定會在來源物件上保留一段很短的時間。 在作業結束時，如果正在建立非叢集索引，則有一段短時間會在來源上取得 S (共用) 鎖定；或者，當以線上方式建立或卸除叢集索引時，以及正在重建叢集索引或非叢集索引時，則會取得 SCH-M (結構描述修改) 鎖定。 建立本機暫存資料表的索引時，ONLINE 不可設為 ON。  
@@ -473,10 +473,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 -   如果基礎資料表包含 LOB 資料類型的叢集的索引：**映像**， **ntext**，**文字**，以及空間類型。  
 -   **varchar （max)**和**varbinary （max)**資料行不能是索引的一部分。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ) 然後在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，當資料表包含**varchar （max)**或**varbinary （max)**可以有資料行，包含其他資料行的叢集索引建立或重新使用**線上**選項。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不允許**線上**選項時，基底資料表包含**varchar （max)**或**varbinary （max)**資料行。  
   
- 如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
+如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
- ALLOW_ROW_LOCKS = { **ON** |OFF}  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ALLOW_ROW_LOCKS = { **ON** |OFF}  
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定是否允許資料列鎖定。 預設值是 ON。  
   
@@ -486,8 +486,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  不使用資料列鎖定。  
   
- ALLOW_PAGE_LOCKS = { **ON** |OFF}  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ALLOW_PAGE_LOCKS = { **ON** |OFF}  
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定是否允許頁面鎖定。 預設值是 ON。  
   
@@ -497,14 +497,14 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  不使用頁面鎖定。  
   
- MAXDOP = *max_degree_of_parallelism*  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+MAXDOP = *max_degree_of_parallelism*  
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  覆寫**的最大平行處理原則程度**索引作業期間的組態選項。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
   
  *max_degree_of_parallelism*可以是：  
   
- 1  
+ @shouldalert  
  隱藏平行計畫的產生。  
   
  \>1  
@@ -516,7 +516,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]  
->  並非每個版本都可使用平行索引作業[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 並非每個版本都可使用平行索引作業[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[版本和支援 SQL Server 2016 的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和[版本與支援功能的 SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  DATA_COMPRESSION  
  針對指定的索引、分割區編號或分割區範圍指定資料壓縮選項。 選項如下：  
@@ -532,22 +532,21 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  如需有關壓縮的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
- 在資料分割上**(** {\<編號運算式 > |\<範圍 >}[ **,**... *n*  ] **)** **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+在資料分割上**(** {\<編號運算式 > |\<範圍 >}[ **,**...*n* ] **)**      
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此索引，ON PARTITIONS 引數將會產生錯誤。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 選項會套用到分割區索引的所有分割區。  
   
  \<編號運算式 > 可以下列方式指定：  
   
 -   提供分割區的編號，例如：ON PARTITIONS (2)。  
-  
 -   為數個個別分割區提供以逗號分隔的分割區編號，例如：ON PARTITIONS (1, 5)。  
-  
 -   同時提供範圍和個別分割區，例如：ON PARTITIONS (2, 4, 6 TO 8)。  
   
  \<範圍 > 可以指定為資料分割數分隔的例如： ON PARTITIONS (6 TO 8)。  
   
  若要為不同的分割區設定不同類型的資料壓縮，請指定 DATA_COMPRESSION 選項一次以上，例如：  
-  
+ 
 ```  
 REBUILD WITH   
 (  
@@ -585,7 +584,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  如果您要在分割區資料表上建立索引，且不指定要從中放置索引的檔案群組，則索引的分割區方式與基礎資料表相同。 這是因為索引及其基礎資料表預設會置於同一個檔案群組內，且索引會供相同分割區配置中，使用相同分割區資料行的分割區資料表使用。 當索引使用相同分割區配置及分割資料行的資料表時，則索引是*對齊*與資料表。  
   
 > [!WARNING]  
->  您可以對包含超過 1,000 個分割區的資料表，建立及重建不以資料表為準的索引，但不予支援。 此做法可能會導致在作業期間效能降低或耗用過多記憶體。 建議當分割區數超過 1,000 時，一律使用以資料表為準的索引。  
+> 您可以對包含超過 1,000 個分割區的資料表，建立及重建不以資料表為準的索引，但不予支援。 此做法可能會導致在作業期間效能降低或耗用過多記憶體。 建議當分割區數超過 1,000 時，一律使用以資料表為準的索引。  
   
  分割區不是唯一的叢集索引時若未指定分割區資料行，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設會將其加入叢集索引鍵清單。  
   
@@ -600,12 +599,10 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  每當發生下列任何一個狀況時，都需要必要值資料行中的 SET 選項：  
   
 -   建立已篩選的索引。  
-  
 -   INSERT、UPDATE、DELETE 或 MERGE 作業修改已篩選之索引中的資料。  
-  
 -   篩選的索引用於查詢最佳化工具產生查詢計劃。  
   
-    |Set 選項|必要值|預設伺服器值|預設值<br /><br /> OLE DB 與 ODBC 值|預設值<br /><br /> DB-Library 值|  
+    |Set 選項|必要值|預設伺服器值|預設<br /><br /> OLE DB 與 ODBC 值|預設<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -620,9 +617,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  當 SET 選項不正確時，可能會發生下列狀況：  
   
 -   不會建立已篩選的索引。  
-  
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生錯誤，並回復可變更索引中資料的 INSERT、UPDATE、DELETE 或 MERGE 陳述式。  
-  
 -   查詢最佳化工具不會針對任何 Transact-SQL 陳述式考量執行計畫中的索引。  
   
  如需篩選索引的詳細資訊，請參閱[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
@@ -639,7 +634,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  非叢集索引可將非索引鍵資料行併入索引的分葉層級中。 這些資料行不會考慮[!INCLUDE[ssDE](../../includes/ssde-md.md)]時計算索引鍵大小。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
 > [!NOTE]  
->  分割資料表時，如果分割區索引鍵資料行原本不存在非唯一的叢集索引中，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會將它們加入至索引。 在非唯一的叢集索引中，索引資料行 (不計算包含的資料行) 再加上任何加入之分割區資料行的組合大小不得超過 1800 個位元組。  
+> 分割資料表時，如果分割區索引鍵資料行原本不存在非唯一的叢集索引中，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會將它們加入至索引。 在非唯一的叢集索引中，索引資料行 (不計算包含的資料行) 再加上任何加入之分割區資料行的組合大小不得超過 1800 個位元組。  
   
 ## <a name="computed-columns"></a>計算資料行  
  索引可以在計算資料行上建立。 此外，計算資料行可以有 PERSISTED 屬性。 這表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將計算值儲存在資料表中，並在更新計算資料行所根據的任何其他資料行時更新這些計算值。 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在資料行上建立某索引，且查詢中參考該索引時，它會使用這些保存值。  
@@ -647,7 +642,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  若要為計算資料行建立索引，則計算資料行必須具決定性且精確。 不過，您可以利用 PERSISTED 屬性，擴充可建立索引的計算資料行類型，使其包括：  
   
 -   根據 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR 函數及使用者標示為具決定性的 CLR 使用者定義型別方法所產生的計算資料行。  
-  
 -   根據具決定性 (如 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 所定義) 但不精確的運算式所產生的計算資料行。  
   
  保存的計算資料行需要設定前一節＜需要索引檢視表的 SET 選項＞中所示的下列 SET 選項。  
@@ -658,14 +652,14 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  在計算資料行上建立索引，可能會使先前有效的插入或更新作業失敗。 當計算資料行導致算術錯誤時，就可能發生這類失敗。 例如在下表中，雖然計算資料行 `c` 導致算術錯誤，但 `INSERT` 陳述式仍可運作。  
   
-```  
+```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
 INSERT INTO t1 VALUES (1, 0);  
 ```  
   
  但是，如果在建立資料表之後，您在計算資料行 `c` 上建立索引，相同的 `INSERT` 陳述式在這種情況下則會失敗。  
   
-```  
+```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
 CREATE UNIQUE CLUSTERED INDEX Idx1 ON t1(c);  
 INSERT INTO t1 VALUES (1, 0);  
@@ -677,13 +671,11 @@ INSERT INTO t1 VALUES (1, 0);
  您可以將非索引鍵資料行 (稱為內含資料行) 加入至非叢集索引的分葉層級，以處理查詢來提升查詢效能。 換句話說，查詢中參考的所有資料行都會併入索引中當做索引鍵資料行或非索引鍵資料行。 這可讓查詢最佳化工具從索引掃描中尋找所有的必要資訊；但不存取資料表或叢集索引。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
 ## <a name="specifying-index-options"></a>指定索引選項  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入新的索引選項，並修改選項的指定方式。 在回溯相容語法中，WITH *option_name*相當於 WITH **(** \<option_name >  **=**  ON **)**. 當您設定索引選項時，適用下列規則： 
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入新的索引選項，並修改選項的指定方式。 在回溯相容語法中，WITH *option_name*相當於 WITH **(** \<option_name > **= ON)**。 當您設定索引選項時，適用下列規則： 
   
--   新的索引選項只能指定使用 WITH **(***option_name*  **=**  ON |關閉**)**。  
-  
--   不能在相同的陳述式中同時利用與舊版本相容的語法和新語法來指定選項。 例如，指定 WITH **(**DROP_EXISTING**，**線上 **=**  ON**)**會導致陳述式失敗。  
-  
--   當您建立 XML 索引時，必須使用與指定的選項**(***option_name*  **=**  ON |關閉**)**。  
+-   新的索引選項只能指定使用 WITH (***option_name* = ON |關閉**)。  
+-   不能在相同的陳述式中同時利用與舊版本相容的語法和新語法來指定選項。 例如，指定 WITH (**DROP_EXISTING，ONLINE = ON**) 會導致陳述式失敗。  
+-   當您建立 XML 索引時，必須使用與指定的選項 (***option_name*= ON |關閉**)。  
   
 ## <a name="dropexisting-clause"></a>DROP_EXISTING 子句  
  您可以利用 DROP_EXISTING 子句來重建索引、加入或卸除資料行、修改選項、修改資料行排序次序，或變更分割區配置或檔案群組。  
@@ -702,9 +694,7 @@ INSERT INTO t1 VALUES (1, 0);
  以線上方式執行索引作業時，適用下列方針：  
   
 -   當線上索引作業進行中時，不能變更、截斷或卸除基礎資料表。  
-  
 -   在索引作業進行期間，需要其他暫存磁碟空間。  
-  
 -   線上作業可在下列索引上執行：分割區索引，以及包含保存的計算資料行或內含資料行的索引。  
   
  如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
@@ -721,19 +711,14 @@ INSERT INTO t1 VALUES (1, 0);
  主題會說明資料壓縮[資料壓縮](../../relational-databases/data-compression/data-compression.md)。 以下是考量的幾個要點：  
   
 -   壓縮可讓更多的資料列儲存在頁面上，但是不會變更最大資料列大小。  
-  
 -   索引的非分葉頁面不會進行頁面壓縮，但是可以進行資料列壓縮。  
-  
 -   每一個非叢集索引都有個別的壓縮設定，而且不會繼承基礎資料表的壓縮設定。  
-  
 -   在堆積上建立叢集索引時，此叢集索引會繼承堆積的壓縮狀態，除非指定了替代的壓縮狀態。  
   
  下列限制適用於分割區索引：  
   
 -   您無法在資料表具有非對齊索引時變更單一分割區的壓縮設定。  
-  
 -   ALTER INDEX\<索引 >...REBUILD PARTITION ... 語法會重建此索引的指定資料分割。  
-  
 -   ALTER INDEX\<索引 >...REBUILD WITH ... 語法會重建此索引的所有資料分割。  
   
  若要評估變更壓縮狀態如何影響資料表、索引或分割區，請使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 預存程序。  
@@ -744,22 +729,21 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="limitations-and-restrictions"></a>限制事項  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，您無法建立：  
   
--   資料倉儲資料表已存在的資料行存放區索引上的叢集或非叢集資料列存放區索引。 此行為是不同於 SMP SQL Server 可讓要共存於相同的資料表上的資料列存放區和資料行存放區索引。  
-  
+-   資料倉儲資料表已存在的資料行存放區索引上的叢集或非叢集資料列存放區索引。 此行為是不同於 SMP[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可讓要共存於相同的資料表上的資料列存放區和資料行存放區索引。  
 -   您無法在檢視上建立索引。  
   
 ## <a name="metadata"></a>中繼資料  
  若要檢視現有索引上的資訊，您可以查詢[sys.indexes &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視。  
   
 ## <a name="version-notes"></a>版本資訊  
- SQL Database 不支援的檔案群組和 filestream 選項。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不支援的檔案群組和 filestream 選項。  
   
 ## <a name="examples-all-versions-uses-the-adventureworks-database"></a>範例： 所有版本。 使用的 AdventureWorks 資料庫。  
   
 ### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>A. 建立簡單的非叢集資料列存放區索引  
  下列範例會建立非叢集索引上`VendorID`資料行`Purchasing.ProductVendor`資料表。  
   
-```  
+```sql  
 CREATE INDEX IX_VendorID ON ProductVendor (VendorID);  
 CREATE INDEX IX_VendorID ON dbo.ProductVendor (VendorID DESC, Name ASC, Address DESC);  
 CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);  
@@ -768,21 +752,21 @@ CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);
 ### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>B. 建立簡單的非叢集資料列存放區的複合索引  
  下列範例會建立非叢集複合索引上`SalesQuota`和`SalesYTD`的資料行`Sales.SalesPerson`資料表。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerson (SalesQuota, SalesYTD);  
 ```  
   
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. 另一個資料庫中的資料表上建立索引  
  下列範例會建立非叢集索引上`VendorID`資料行`ProductVendor`資料表中`Purchasing`資料庫。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);   
 ```  
   
 ### <a name="d-add-a-column-to-an-index"></a>D. 資料行加入索引  
  下列範例會建立索引 IX_FF 含有 dbo 的兩個資料行。FactFinance 資料表。  下一個陳述式會重建多個資料行索引，並保留現有的名稱。  
   
-```  
+```sql  
 CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey ASC, DateKey ASC );  
   
 --Rebuild and add the OrganizationKey  
@@ -795,14 +779,14 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 建立唯一的非叢集索引  
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Name` 資料表的 `Production.UnitMeasure` 資料行上建立唯一非叢集索引。 索引會強制將資料上的唯一性插入 `Name` 資料行中。  
   
-```  
+```sql  
 CREATE UNIQUE INDEX AK_UnitMeasure_Name   
     ON Production.UnitMeasure(Name);  
 ```  
   
  下列查詢會藉由嘗試插入與現有資料列具有相同值的資料列，以測試條件約束的唯一性。  
   
-```  
+```sql  
 --Verify the existing value.  
 SELECT Name FROM Production.UnitMeasure WHERE Name = N'Ounces';  
 GO  
@@ -820,7 +804,7 @@ Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_Un
 ### <a name="f-use-the-ignoredupkey-option"></a>F. 使用 IGNORE_DUP_KEY 選項  
  下列範例分別利用兩種不同的選項設定 (先將選項設為 `IGNORE_DUP_KEY`，再將選項設為 `ON`) 將多個資料列插入暫存資料表中，示範 `OFF` 選項的效果。 單一資料列會插入 `#Test` 資料表中，該資料表則會在第二個多重資料列 `INSERT` 陳述式執行時刻意造成重複的值。 資料表中的資料列計數會傳回所插入的資料列數目。  
   
-```  
+```sql  
 CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);  
 GO  
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)  
@@ -849,7 +833,7 @@ Number of rows
   
  重新執行相同的陳述式，但將 `IGNORE_DUP_KEY` 設為 `OFF`。  
   
-```  
+```sql  
 CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);  
 GO  
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)  
@@ -881,20 +865,19 @@ Number of rows
 ### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. 使用 DROP_EXISTING 卸除及重新建立索引  
  下列範例會利用 `ProductID` 選項，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Production.WorkOrder` 資料表的 `DROP_EXISTING` 資料行上卸除及重新建立現有的索引。 也會設定 `FILLFACTOR` 和 `PAD_INDEX` 選項。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_WorkOrder_ProductID  
     ON Production.WorkOrder(ProductID)  
     WITH (FILLFACTOR = 80,  
         PAD_INDEX = ON,  
         DROP_EXISTING = ON);  
 GO  
-  
 ```  
   
 ### <a name="h-create-an-index-on-a-view"></a>H. 在檢視上建立索引  
  下列範例會在該檢視表上建立檢視表和索引。 內含使用索引檢視的兩項查詢。  
   
-```  
+```sql  
 --Set the options to support indexed views.  
 SET NUMERIC_ROUNDABORT OFF;  
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT,  
@@ -937,13 +920,12 @@ FROM Sales.SalesOrderDetail AS od
 GROUP BY OrderDate  
 ORDER BY OrderDate ASC;  
 GO  
-  
 ```  
   
 ### <a name="i-create-an-index-with-included-non-key-columns"></a>I. 建立內含 （非索引鍵） 資料行索引  
  下列範例會利用一個索引鍵資料行 (`PostalCode`) 和四個非索引鍵資料行 (`AddressLine1`、`AddressLine2`、`City`、`StateProvinceID`) 來建立非叢集索引。 其後有一個由索引處理的查詢。 若要顯示所選取的查詢最佳化工具在索引**查詢**功能表[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，選取**顯示實際執行計畫**之前執行查詢。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_Address_PostalCode  
     ON Person.Address (PostalCode)  
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
@@ -959,7 +941,7 @@ GO
   
 **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID  
     ON Production.TransactionHistory (ReferenceOrderID)  
     ON TransactionsPS1 (TransactionDate);  
@@ -969,7 +951,7 @@ GO
 ### <a name="k-creating-a-filtered-index"></a>K. 建立篩選的索引  
  下列範例會對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 Production.BillOfMaterials 資料表建立篩選的索引。 篩選述詞可以包含在已篩選之索引中不是索引鍵資料行的資料行。 此範例中的述詞只會選取 EndDate 不是 NULL 的資料列。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
@@ -978,7 +960,7 @@ CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"
 ### <a name="l-create-a-compressed-index"></a>L. 建立壓縮的索引  
  下列範例會使用資料列壓縮，在非分割區資料表上建立索引。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_INDEX_1   
     ON T1 (C2)  
 WITH ( DATA_COMPRESSION = ROW ) ;   
@@ -987,7 +969,7 @@ GO
   
  下列範例會在索引的所有分割區上使用資料列壓縮，以便在分割區資料表上建立索引。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_PartTab2Col1  
 ON PartitionTable1 (Col1)  
 WITH ( DATA_COMPRESSION = ROW ) ;  
@@ -996,7 +978,7 @@ GO
   
  下列範例會在分割區資料表上建立索引，其方式是在索引的分割區 `1` 上使用頁面壓縮，並在索引的分割區 `2` 到 `4` 上使用資料列壓縮。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_PartTab2Col1  
 ON PartitionTable1 (Col1)  
 WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),  
@@ -1008,7 +990,7 @@ GO
   
 ### <a name="m-basic-syntax"></a>M. 基本語法  
   
-```  
+```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
 CREATE INDEX IX_VendorID   
@@ -1020,7 +1002,7 @@ CREATE INDEX IX_VendorID
 ### <a name="n-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>N. 目前資料庫中的資料表上建立非叢集索引  
  下列範例會建立非叢集索引上`VendorID`資料行`ProductVendor`資料表。  
   
-```  
+```sql  
 CREATE INDEX IX_ProductVendor_VendorID   
     ON ProductVendor (VendorID);   
 ```  
@@ -1028,12 +1010,14 @@ CREATE INDEX IX_ProductVendor_VendorID
 ### <a name="o-create-a-clustered-index-on-a-table-in-another-database"></a>O. 在另一個資料庫中的資料表上建立叢集的索引  
  下列範例會建立非叢集索引上`VendorID`資料行`ProductVendor`資料表中`Purchasing`資料庫。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID   
     ON Purchasing..ProductVendor (VendorID);   
 ```  
   
 ## <a name="see-also"></a>請參閱  
+ [SQL Server 索引設計指南](../../relational-databases/sql-server-index-design-guide.md)   
+ [索引和 ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   

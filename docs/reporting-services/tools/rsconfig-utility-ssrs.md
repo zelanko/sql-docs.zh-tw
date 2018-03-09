@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d47221585f9bf08f4493043224390ff2d82bb30e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 公用程式 (SSRS)
   **rsconfig.exe** 公用程式會加密連接和帳戶值，並會將它們儲存在 RSReportServer.config 檔中。 加密的值包括自動處理報表的程序所用的報表伺服器資料庫連接資訊和帳戶值。  
@@ -60,7 +58,7 @@ rsconfig {-?}
 |**-e**|如果未使用 **-c** 引數，這就是必要的。|指定自動報表執行帳戶。<br /><br /> 此引數沒有取得值。 不過，命令列必須包括其他引數，以便指定組態檔中所加密的值。<br /><br /> 您可以搭配 **-e** 來指定的引數，包括 **-u** 和 **-p**。 您也可以設定 **-t**。|  
 |**-m** <電腦名稱>|如果您在設定遠端報表伺服器執行個體，這就是必要的。|指定主控報表伺服器的電腦名稱。 如果省略這個引數，預設值就是 **localhost**。|  
 |**-s**  <伺服器名稱>|必要。|指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
-|**-i**  <執行個體名稱>|如果您使用具名執行個體，這就是必要的。|如果您利用具名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來主控報表伺服器資料庫，這個值會指定具名執行個體。|  
+|**-i**  <執行個體名稱>|如果您使用具名執行個體，這就是必要的。|如果您使用具名的 Reporting Services 執行個體，這個值會指定 Reporting Services 執行個體的名稱。|  
 |**-d**  <資料庫名稱>|必要。|指定報表伺服器資料庫的名稱。|  
 |**-a**  <驗證方法>|必要。|指定報表伺服器用來連接到報表伺服器資料庫的驗證方法。 有效值如下： **Windows** 或 **SQL** (這個引數不區分大小寫)。<br /><br /> **Windows** 指定報表伺服器使用 Windows 驗證。<br /><br /> **SQL** 指定報表伺服器使用 SQL Server 驗證。|  
 |**-u**  [網域\\]使用者名稱|對 **-e** 而言，這是必要的；對 **-c**而言，這是選擇性的。|指定報表伺服器資料庫連接或自動帳戶的使用者帳戶。<br /><br /> 若為 **rsconfig -e**，此引數是必要的。 它必須是網域使用者帳戶。<br /><br /> 若為 **rsconfig -c** 及 **-a SQL**，此引數必須指定一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。<br /><br /> 若為 **rsconfig -c** 及 **-a Windows**，此引數可能會指定網域使用者、內建帳戶或服務帳戶認證。 如果您指定網域帳戶，請以 <網域>\<使用者名稱> 的格式指定 <網域> 和 <使用者名稱>。 如果您是使用內建帳戶，這個引數就是選擇性的。 如果您要使用服務帳戶認證，請省略這個引數。|  
@@ -73,16 +71,16 @@ rsconfig {-?}
 ## <a name="file-location"></a>檔案位置  
  Rsconfig.exe 位於 **\Program Files\Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  Rsconfig.exe 有兩個用途：  
   
 -   修改報表伺服器用來連接報表伺服器資料庫的連接資訊。  
   
 -   設定特殊帳戶，供報表伺服器在無法使用其他認證時，用來登入遠端資料庫伺服器。  
   
- 您可以在**的本機或遠端執行個體上執行** rsconfig [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]公用程式。 您無法使用 **rsconfig** 公用程式解密及檢視已設定的值。  
+您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的本機或遠端執行個體上執行**rsconfig** 公用程式。 您無法使用 **rsconfig** 公用程式解密及檢視已設定的值。  
   
- 在執行這個公用程式之前，您必須先將 Windows Management Instrumentation (WMI) 安裝在您要設定的電腦中。  
+在執行這個公用程式之前，您必須先將 Windows Management Instrumentation (WMI) 安裝在您要設定的電腦中。  
   
 ## <a name="examples"></a>範例  
  下列範例說明 **rsconfig**的使用方式。  

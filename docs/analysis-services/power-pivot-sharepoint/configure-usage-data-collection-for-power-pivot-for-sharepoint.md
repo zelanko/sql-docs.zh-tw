@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f939c078a2b21cfa16a4f36228b46822f2bc8457
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>設定使用量資料收集的對象 (PowerPivot for SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用量資料收集是伺服陣列層級的 SharePoint 功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用並擴充此系統來支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的報表，以便顯示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服器陣列管理員必須啟用使用量記錄，以建立會顯示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的使用量資料。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用量資料收集是伺服陣列層級的 SharePoint 功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用並擴充此系統來支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的報表，以便顯示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服器陣列管理員必須啟用使用量記錄，以建立會顯示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的使用量資料。  
   
  如需 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中使用量資料的相關資訊，請參閱 [Power Pivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  在 **[要記錄的事件]** 區段中，選取或清除核取方塊以啟用或停用下列 Analysis Services 事件：  
   
-    |事件|說明|  
+    |事件|Description|  
     |-----------|-----------------|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 連接**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 連接事件是用來監視以使用者身分建立的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器連接。|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 載入資料使用量**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 載入資料使用量是用來監視將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料載入伺服器記憶體的要求。 從內容資料庫或從快取載入的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料檔案會產生載入事件。|  
@@ -190,15 +188,15 @@ ms.lasthandoff: 12/08/2017
   
 |設定|預設值|型別|有效範圍|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<啟用 >|布林|啟用或停用這些值。|  
+|**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<enabled>|布林|啟用或停用這些值。|  
 |**查詢報告間隔**|300 (以秒為單位)|整數|1 到任何正整數。 預設值是 5 分鐘。|  
-|**Usage data history**|365 (以天為單位)|整數|0 表示無限制，但是您也可以設定歷程記錄資料到期的上限，並設成可自動刪除資料。 有限的保留週期有效值為 1 到 5000 (以天為單位)。|  
-|簡單式回應時間上限|500 (以毫秒為單位)|整數|設定會定義簡單式要求-回應交換的上限。 任何介於 0 到 500 毫秒之間完成的要求都是簡單式要求，報告用途會加以忽略。|  
-|快速回應時間上限|1000 (以毫秒為單位)|整數|設定會定義快速要求-回應交換的上限。|  
-|預期回應時間上限|3000 (以毫秒為單位)|整數|設定會定義預期要求-回應交換的上限。|  
-|長時間執行回應的上限|10000 (以毫秒為單位)|整數|設定會定義長時間執行要求-回應交換的上限。 任何超過此上限的要求，都會歸類到沒有上限臨界值的「已超過」類別目錄。|  
+|**Usage data history**|365 (以天為單位)|Integer|0 表示無限制，但是您也可以設定歷程記錄資料到期的上限，並設成可自動刪除資料。 有限的保留週期有效值為 1 到 5000 (以天為單位)。|  
+|簡單式回應時間上限|500 (以毫秒為單位)|Integer|設定會定義簡單式要求-回應交換的上限。 任何介於 0 到 500 毫秒之間完成的要求都是簡單式要求，報告用途會加以忽略。|  
+|快速回應時間上限|1000 (以毫秒為單位)|Integer|設定會定義快速要求-回應交換的上限。|  
+|預期回應時間上限|3000 (以毫秒為單位)|Integer|設定會定義預期要求-回應交換的上限。|  
+|長時間執行回應的上限|10000 (以毫秒為單位)|Integer|設定會定義長時間執行要求-回應交換的上限。 任何超過此上限的要求，都會歸類到沒有上限臨界值的「已超過」類別目錄。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [組態設定參考 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Power Pivot 使用量資料收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   

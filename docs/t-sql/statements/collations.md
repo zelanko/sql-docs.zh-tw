@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COLLATE
 - COLLATE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4192928157e3f6e534b8fb50c34e349dac3f5b8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="collations"></a>定序
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,14 +42,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
 ```  
   
 ## <a name="arguments"></a>引數  
- *sys.databases*  
+ *collation_name*  
  套用至運算式、資料行定義或資料庫定義之定序的名稱。 *sys.databases*可以只指定*Windows_collation_name*或*SQL_collation_name*。 *sys.databases*必須是常值。 *sys.databases*無法由變數或運算式。  
   
  *Windows_collation_name*的定序名稱[Windows 定序名稱](../../t-sql/statements/windows-collation-name-transact-sql.md)。  
@@ -87,11 +88,11 @@ COLLATE { <collation_name> | database_default }
   
  COLLATE 會使用*collate_name*以參考 SQL Server 定序或 Windows 定序套用至運算式、 資料行定義或資料庫定義的名稱。 *sys.databases*可以只指定*Windows_collation_name*或*SQL_collation_name*而且此參數必須包含常值。 *sys.databases*無法由變數或運算式。  
   
- 定序通常是用定序名稱來識別，但在安裝程式中除外。 在安裝程式中，您會改為指定 Windows 定序的根定序指示項 (定序地區設定)，然後再指定區分或不區分大小寫或腔調字的排序選項。  
+ 定序通常是用定序名稱來識別，但在安裝程式中除外。 在安裝程式，您可以改為指定 Windows 定序時，根定序指示項 （定序地區設定），然後指定 區分或不區分大小寫或腔調字的排序選項。  
   
  您可以執行系統函數[fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)擷取 Windows 定序和 SQL Server 定序的所有有效定序名稱的清單：  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -104,16 +105,18 @@ FROM fn_helpcollations();
   
 -   當還原或附加資料庫、 資料庫的預設定序和任何定序**char**， **varchar**，和**文字**資料行或在資料庫中的參數必須支援的作業系統。  
   
-     字碼頁翻譯支援**char**和**varchar**資料類型，但不適用於**文字**資料型別。 不會報告字碼頁轉換期間所遺失的資料。  
+> [!NOTE]
+> 字碼頁翻譯支援**char**和**varchar**資料類型，但不適用於**文字**資料型別。 不會報告字碼頁轉換期間所遺失的資料。  
   
- 如果指定的定序或所參考物件使用的定序使用 Windows，不支援的字碼頁[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會顯示錯誤。  
+> [!NOTE]
+> 如果指定的定序或所參考物件使用的定序使用 Windows，不支援的字碼頁[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會顯示錯誤。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specifying-collation-during-a-select"></a>A. 在選取時指定定序  
  下列範例會建立簡單的資料表並且插入 4 個資料列。 然後範例會在從資料表選取資料時套用兩個定序，並且示範如何以不同的方式排序 `Chiapas`。  
   
-```tsql  
+```sql  
 CREATE TABLE Locations  
 (Place varchar(15) NOT NULL);  
 GO  
@@ -132,39 +135,39 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- 以下是第一個查詢的結果。  
+以下是第一個查詢的結果。  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- 以下是第二個查詢的結果。  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+以下是第二個查詢的結果。  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### <a name="b-additional-examples"></a>B. 其他範例  
- 如需使用的其他範例**COLLATE**，請參閱[CREATE DATABASE &#40;SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)範例**G.建立資料庫並指定定序名稱和選項**，和[ALTER TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md)範例**V.變更資料行定序**。  
+ 如需使用的其他範例**COLLATE**，請參閱[CREATE DATABASE &#40;SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples)範例**G.建立資料庫並指定定序名稱和選項**，和[ALTER TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column)範例**V.變更資料行定序**。  
   
-## <a name="see-also"></a>請參閱＜  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)   
- [定序優先順序 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [常數 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [資料表 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+ [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [定序優先順序 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [常數 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [資料表 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

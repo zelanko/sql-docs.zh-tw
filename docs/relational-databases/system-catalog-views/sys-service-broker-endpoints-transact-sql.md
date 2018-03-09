@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - service_broker_endpoints
 - service_broker_endpoints_TSQL
 - sys.service_broker_endpoints
-dev_langs: TSQL
-helpviewer_keywords: sys.service_broker_endpoints catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.service_broker_endpoints catalog view
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7f9fdc08d74c9ca3e8c469462451fdd7bc5e49b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4bb8361040ebdaf9b7e7dc98aab3e40ea9152c4b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysservicebrokerendpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +43,11 @@ ms.lasthandoff: 11/17/2017
 |**\<繼承資料行 >**|**--**|繼承資料行從[sys.endpoints &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_message_forwarding_enabled**|**bit**|端點支援訊息轉送。 這一開始會設定為**0** （停用）。 不是 NULLABLE。|  
 |**message_forwarding_size**|**int**|最大 mb 數**tempdb**允許轉遞訊息時使用的空間。 這一開始會設定為**10**。 不是 NULLABLE。|  
-|**connection_auth**|**tinyint**|與這個端點連接所需的連接驗證類型，它有下列幾種：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -交涉<br /><br /> **4** -憑證<br /><br /> **5** -NTLM、 CERTIFICATE<br /><br /> **6** -KERBEROS、 CERTIFICATE<br /><br /> **7** -NEGOTIATE、 CERTIFICATE<br /><br /> **8** -CERTIFICATE、 NTLM<br /><br /> **9** -CERTIFICATE、 KERBEROS<br /><br /> **10** -CERTIFICATE、 NEGOTIATE<br /><br /> 不是 NULLABLE。|  
-|**connection_auth_desc**|**nvarchar （60)**|與這個端點連接所需之連接類型的描述，它有下列幾種：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE<br /><br /> NULLABLE。|  
+|**connection_auth**|**tinyint**|與這個端點連接所需的連接驗證類型，它有下列幾種：<br /><br /> **1** - NTLM<br /><br /> **2** - KERBEROS<br /><br /> **3** -交涉<br /><br /> **4** -憑證<br /><br /> **5** -NTLM、 CERTIFICATE<br /><br /> **6** -KERBEROS、 CERTIFICATE<br /><br /> **7** -NEGOTIATE、 CERTIFICATE<br /><br /> **8** -CERTIFICATE、 NTLM<br /><br /> **9** -CERTIFICATE、 KERBEROS<br /><br /> **10** -CERTIFICATE、 NEGOTIATE<br /><br /> 不是 NULLABLE。|  
+|**connection_auth_desc**|**nvarchar(60)**|與這個端點連接所需之連接類型的描述，它有下列幾種：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE<br /><br /> NULLABLE。|  
 |**certificate_id**|**int**|驗證所用的憑證識別碼 (如果有的話)。<br /><br /> 0 = 正在使用 Windows 驗證。|  
-|**encryption_algorithm 指定**|**tinyint**|加密演算法。 以下是可能的值，其描述和對應的 DDL 選項。<br /><br /> **0** ： 無。 對應的 DDL 選項： 已停用。<br /><br /> **1** : RC4。 對應的 DDL 選項: {需要 &#124;必要的演算法 RC4}。<br /><br /> **2** : AES。 對應的 DDL 選項： 所需的演算法 AES。<br /><br /> **3** : NONE、 RC4。 對應的 DDL 選項: {支援 &#124;支援的演算法 RC4}。<br /><br /> **4** : NONE、 AES。 對應的 DDL 選項： 支援 AES 演算法。<br /><br /> **5** : RC4、 AES。 對應的 DDL 選項： 所需的演算法 RC4 AES。<br /><br /> **6** : AES、 RC4。 對應的 DDL 選項： 必要的演算法 AES RC4。<br /><br /> **7** : NONE、 RC4、 AES。 對應的 DDL 選項： 支援的演算法 RC4 AES。<br /><br /> **8** : NONE、 AES、 RC4。 對應的 DDL 選項： 支援的演算法 AES RC4。<br /><br /> 不是 NULLABLE。|  
-|**encryption_algorithm_desc**|**nvarchar （60)**|加密演算法描述。 以下列出可能的值和其相對應的 DDL 選項：<br /><br /> NONE： 已停用<br /><br /> RC4: {需要 &#124;必要的演算法 RC4}<br /><br /> AES： 必要的演算法 AES<br /><br /> NONE、 RC4: {支援 &#124;支援的演算法 RC4}<br /><br /> NONE、 AES： 支援的演算法 AES<br /><br /> RC4、 AES： 必要的演算法 RC4 AES<br /><br /> AES、 RC4： 必要的演算法 AES RC4<br /><br /> NONE、 RC4、 AES： 支援的演算法 RC4 AES<br /><br /> NONE、 AES、 RC4： 支援的演算法 AES RC4<br /><br /> NULLABLE。|  
+|**encryption_algorithm**|**tinyint**|加密演算法。 以下是可能的值，其描述和對應的 DDL 選項。<br /><br /> **0** ： 無。 對應的 DDL 選項： 已停用。<br /><br /> **1** :  RC4. 對應的 DDL 選項: {需要 &#124;必要的演算法 RC4}。<br /><br /> **2** : AES。 對應的 DDL 選項： 所需的演算法 AES。<br /><br /> **3** : NONE、 RC4。 對應的 DDL 選項: {支援 &#124;支援的演算法 RC4}。<br /><br /> **4** : NONE、 AES。 對應的 DDL 選項： 支援 AES 演算法。<br /><br /> **5** : RC4、 AES。 對應的 DDL 選項： 所需的演算法 RC4 AES。<br /><br /> **6** : AES、 RC4。 對應的 DDL 選項： 必要的演算法 AES RC4。<br /><br /> **7** : NONE、 RC4、 AES。 對應的 DDL 選項： 支援的演算法 RC4 AES。<br /><br /> **8** : NONE、 AES、 RC4。 對應的 DDL 選項： 支援的演算法 AES RC4。<br /><br /> 不是 NULLABLE。|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|加密演算法描述。 以下列出可能的值和其相對應的 DDL 選項：<br /><br /> NONE： 已停用<br /><br /> RC4: {需要 &#124;必要的演算法 RC4}<br /><br /> AES： 必要的演算法 AES<br /><br /> NONE、 RC4: {支援 &#124;支援的演算法 RC4}<br /><br /> NONE、 AES： 支援的演算法 AES<br /><br /> RC4、 AES： 必要的演算法 RC4 AES<br /><br /> AES、 RC4： 必要的演算法 AES RC4<br /><br /> NONE、 RC4、 AES： 支援的演算法 RC4 AES<br /><br /> NONE、 AES、 RC4： 支援的演算法 AES RC4<br /><br /> NULLABLE。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -54,8 +57,8 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)  
+ [建立端點 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)  
   
   

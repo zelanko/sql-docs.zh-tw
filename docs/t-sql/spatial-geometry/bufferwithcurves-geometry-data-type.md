@@ -8,22 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: BufferWithCurves method (geometry)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68384a06978c598754d96752cfa26449549cc93
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d248c248d4b5d9b4a4e90954e01f15841d305319
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引數  
- *距離*  
+ *distance*  
  是**float**點形成緩衝區的最大距離，表示可以從**幾何**執行個體。  
   
 ## <a name="return-types"></a>傳回類型  
@@ -67,7 +70,7 @@ SQL Server 傳回類型：**幾何**
 |distance < 0|零或一維|空白**GeometryCollection**執行個體|  
 |distance < 0|二維或以上|A **CurvePolygon**或**GeometryCollection**具有負數緩衝的執行個體。 **注意：**負數緩衝可能會建立空**GeometryCollection**|  
 |distance = 0|所有維度|叫用的複製**幾何**執行個體|  
-|距離 > 0|所有維度|**CurvePolygon**或**GeometryCollection**執行個體|  
+|distance > 0|所有維度|**CurvePolygon**或**GeometryCollection**執行個體|  
   
 > [!NOTE]  
 >  因為*距離*是**float**，非常小的值可等同於零的計算中。 當發生這種情況再呼叫一份**幾何**會傳回執行個體。 請參閱[float 和 real &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
@@ -159,6 +162,6 @@ SQL Server 傳回類型：**幾何**
   
  前兩個**選取**陳述式會傳回`GeometryCollection`執行個體，因為參數*距離*小於或等於 1/2 的距離兩個點 (1 1) 和 (1 4)。 第三個**選取**陳述式會傳回`CurvePolygon`執行個體，因為緩衝的執行個體的兩個點 (1 1) 和 (1 4) 重疊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  

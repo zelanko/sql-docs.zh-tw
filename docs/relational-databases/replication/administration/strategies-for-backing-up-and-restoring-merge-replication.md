@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - restoring [SQL Server replication], merge replication
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93e06006d649fac0046a2e2df8953d9356acfa5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5690ea80bfe12a6995e80987e11bdaa59a30d150
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>備份與還原合併式複寫的策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 對於合併式複寫，請定期備份下列資料庫：  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/17/2017
  使用以上方法之一確定在執行還原之後，「發行者」與所有「訂閱者」均保持同步。  
   
 > [!NOTE]  
->  如果任何資料表都包含識別欄位，則必須確定在還原後指派的識別範圍正確。 如需詳細資訊，請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)。  
+>  如果任何資料表都包含識別欄位，則必須確定在還原後指派的識別範圍正確。 如需詳細資訊，請參閱[複寫識別資料欄](../../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   
 ### <a name="synchronizing-the-publication-database"></a>同步處理發行集資料庫  
  將訂閱資料庫與發行集資料庫同步處理，可讓您從一或多個訂閱資料庫中上傳之前在發行集資料庫中所作、但在還原的備份中未顯示的變更。 可以上傳的資料視發行集的篩選方式而定：  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/17/2017
  當資料庫從「發行者」來訂閱資料並轉而將相同的資料發行至其他訂閱資料庫時，該資料庫便是一個重新發行集資料庫。 還原重新發行的資料庫時，請遵循本主題中＜備份與還原發行集資料庫＞以及＜備份與還原訂閱資料庫＞兩節所描述的指導方針。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 資料庫的備份和還原](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [SQL Server 資料庫的備份與還原](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [備份及還原複寫的資料庫](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   
   

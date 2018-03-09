@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5ed59cf792bb62b1930ce3bcf6cf9ea0e505b028
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07c04ef8576eaeec00b629c045c54136cb10e463
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---level-function"></a>報表產生器函式 - Level 函式
   傳回遞迴階層中之目前所在的層級。  
@@ -45,7 +43,7 @@ Level(scope)
 ## <a name="return-type"></a>傳回類型  
  傳回 **Integer**。 如果 *scope* 指定資料集或資料區，或指定非遞迴群組 (亦即，沒有 **Parent** 元素的群組)， **Level** 會傳回 0。 如果省略 *scope* ，則會傳回目前範圍的層級。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **Level** 函數傳回的值是以零為基礎；亦即，階層中的第一個層級是 0。  
   
  **Level** 函數可以在遞迴階層 (例如員工清單) 中提供縮排。  

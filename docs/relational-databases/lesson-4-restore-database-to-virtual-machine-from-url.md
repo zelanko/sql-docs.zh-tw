@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad780f4f49f99c0537e5ff560d1addab59627d9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57394ec4dcc62b6d7e8bdd490fb95bfdcfe30def
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>第 4 課︰從 URL 將資料庫還原至虛擬機器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您會將 AdventureWorks2014 資料庫還原至 AdventureWorks2014 資料庫所在之 Azure 虛擬機器中的 SQL Server 2016 執行個體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在本課程中，您會將 AdventureWorks2014 資料庫還原至 Azure 虛擬機器中的 SQL Server 2016 執行個體。
   
 > [!NOTE]  
 > 為了簡化本教學課程，我們將使用與資料庫備份時所用的相同資料和記錄檔容器。 在生產環境中，您可能會使用多個容器，通常也可能會使用多個資料檔案。 使用 SQL Server 2016 時，您也可以考慮將備份等量分割到多個 Blob，以提升備份大型資料庫時的備份效能。  
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  開啟新的查詢視窗，並連接到您 Azure 虛擬機器中資料庫引擎的 SQL Server 2016 執行個體。  
   
-3.  將下列 Transact-SQL 指令碼複製並貼入查詢視窗中。 適當地修改儲存體帳戶名稱以及您在第 1 課中所指定容器的 URL，然後執行此指令碼。  
+3.  將下列 Transact-SQL 指令碼複製並貼入 [查詢] 視窗中。 適當地修改儲存體帳戶名稱以及您在第 1 課中所指定容器的 URL，然後執行此指令碼。  
   
     ```  
   

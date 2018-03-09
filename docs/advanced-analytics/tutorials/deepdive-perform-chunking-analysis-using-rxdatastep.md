@@ -7,26 +7,28 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 4290ee5f-be90-446a-91e8-3095d694bd82
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7e47db93c014f2512f40afc88d9e9fb0f2031976
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 5b5ba8c59ca5dfb84a7c062a8c09b40e0528fb5d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-and-r-deep-dive"></a>執行區塊使用 rxDataStep （SQL 與 R 深入探討） 的分析
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是資料科學深入探討教學課程中，有關如何使用一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
 
@@ -100,9 +102,9 @@ ms.lasthandoff: 12/20/2017
 
 **部分結果**
 
-|      |    @shouldalert  |   2   |  3   |  4   |  5  |   6   |  7 |
+|      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
 | --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
-| @shouldalert | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
+| 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
 | 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |
 
 9. 若要計算所有區塊的最終結果，請加總資料行，然後在主控台中顯示結果。
@@ -113,7 +115,7 @@ ms.lasthandoff: 12/20/2017
     ```
 
  **結果**
-  @shouldalert  |   2  |   3  |   4  |   5  |   6  |   7
+  1  |   2  |   3  |   4  |   5  |   6  |   7
 ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
 97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 

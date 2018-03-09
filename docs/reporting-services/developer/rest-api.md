@@ -9,19 +9,17 @@ ms.component: developer
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: e9578035ee2974ae9188a162236523b2aa088467
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 304d2e2c00703f98dd894e1a2d3e4688d87822f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 進行開發
 
@@ -66,7 +64,7 @@ REST API 要求/回應配對可分成五個元件：
 
 用於測試 HTTP 要求/回應訊息的工具之一是 [Fiddler](http://www.telerik.com/fiddler)。 Fiddler 是可攔截 REST 要求的免費 Web 偵錯 Proxy，讓您輕鬆就能診斷 HTTP 要求/回應訊息。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 在 [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) 上檢閱可用的 API。
 

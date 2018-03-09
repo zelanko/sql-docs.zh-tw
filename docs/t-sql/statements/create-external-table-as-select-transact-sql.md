@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>建立外部 TABLE AS SELECT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -81,7 +82,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  [[ *database_name* 。 [ *schema_name* ]。 ] |*schema_name* 。 ] *table_name*  
  一至三位在資料庫中建立資料表的部分名稱。 外部資料表，資料表中繼資料會儲存在關聯式資料庫。  
   
- 位置 = '*hdfs_folder*'  
+ LOCATION =  '*hdfs_folder*'  
  指定要寫入外部資料來源上的 SELECT 陳述式的結果。 資料夾名稱，並且可以選擇性地包含在 Hadoop 叢集或 Azure 儲存體 Blob 的根資料夾的相對路徑。  PolyBase 會建立路徑和資料夾不存在。  
   
  外部檔案會寫入至*hdfs_folder*和具名*QueryID_date_time_ID.format*，其中*識別碼*是累加識別碼和*格式*是匯出的資料格式。 例如，QID776_20160130_182739_0.orc。  
@@ -131,7 +132,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   載入失敗與失敗的 50%的資料列之後嘗試載入 200 個資料列，其大於指定 30%的限制。  
   
- 與*common_table_expression*  
+ WITH *common_table_expression*  
  指定稱為通用資料表運算式 (CTE) 的暫存具名結果集。 如需詳細資訊，請參閱[common_table_expression &#40; 與TRANSACT-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  選取\<select_criteria > 填入新資料表的 SELECT 陳述式的結果。 *select_criteria*是判斷哪些資料来複製到新資料表的 SELECT 陳述式的主體。 SELECT 陳述式的相關資訊，請參閱[SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
@@ -254,7 +255,7 @@ ON ( T1.CustomerKey = T2.CustomerKey )
 OPTION ( HASH JOIN );  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   

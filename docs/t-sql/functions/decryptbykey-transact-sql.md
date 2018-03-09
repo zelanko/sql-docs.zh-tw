@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYKEY (TRANSACT-SQL) |Microsoft 文件"
+title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DecryptByKey_TSQL
 - DECRYPTBYKEY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - symmetric keys [SQL Server], DecryptByKey function
 - decryption [SQL Server], keys
 - decryption [SQL Server], symmetric keys
 - DECRYPTBYKEY function
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a1275be81fdf2a8405d0f744da962c3cf874eea2
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
@@ -48,31 +50,31 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>引數  
- *加密文字*  
- 這是已經利用金鑰加密的資料。 *加密文字*是**varbinary**。  
+ *ciphertext*  
+ 這是已經利用金鑰加密的資料。 *ciphertext* 為 **varbinary**。  
   
  **@ciphertext**  
- 這類型的變數**varbinary**包含已經利用金鑰加密的資料。  
+ 為 **varbinary** 類型的變數，其中包含已利用金鑰加密的資料。  
   
  *add_authenticator*  
- 指出驗證器是否要與純文字一起加密。 必須是加密資料時傳遞至 EncryptByKey 的相同值。 *add_authenticator*是**int**。  
+ 指出驗證器是否要與純文字一起加密。 必須是加密資料時傳遞至 EncryptByKey 的相同值。 *add_authenticator*為 **int**。  
   
- *驗證器*  
- 這是要產生驗證器的資料。 必須符合已提供給 EncryptByKey 的值。 *驗證器*是**sysname**。  
+ *authenticator*  
+ 這是要產生驗證器的資料。 必須符合已提供給 EncryptByKey 的值。 *authenticator* 為 **sysname**。  
   
  **@authenticator**  
  這是含有要產生驗證器之資料的變數。 必須符合已提供給 EncryptByKey 的值。  
   
 ## <a name="return-types"></a>傳回類型  
- **varbinary** 8,000 個位元組的大小上限。  
+ **varbinary**，大小上限為 8,000 位元組。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  DecryptByKey 使用對稱金鑰。 這個對稱金鑰必須已在資料庫中開啟。 同時可以開啟多個金鑰。 為加密文字解密之前，您不需立即開啟金鑰。  
   
  對稱加密和解密相當快速，而且很適合處理大量資料。  
   
 ## <a name="permissions"></a>Permissions  
- 要求對稱金鑰已經在目前的工作階段中開啟。 如需詳細資訊，請參閱[OPEN SYMMETRIC KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+ 要求對稱金鑰已經在目前的工作階段中開啟。 如需詳細資訊，請參閱 [ SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -117,8 +119,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [ENCRYPTBYKEY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   

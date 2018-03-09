@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 - UDTs [CLR integration], user-defined aggregates
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a46a1a0e60c7fbe667904388a4c1c8cae93ab827
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 204a01f25e90be1885bad41361aa41d919159bd0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR 使用者定義彙總的需求
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Common language runtime (CLR) 組件中的型別可以註冊為使用者定義的彙總函式，只要它會實作需要的彙總合約。 本合約所組成**SqlUserDefinedAggregate**屬性和彙總合約方法。 彙總合約包括機制可儲存的中繼狀態的彙總，以及累積新值，其中包含四個方法的機制： **Init**，**累積**， **合併**，和**終止**。 當您已符合這些需求時，您將能夠充分利用中的使用者定義彙總[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主題的下列章節提供關於如何建立和使用使用者定義彙總的其他相關資訊。 如需範例，請參閱[Invoking CLR User-Defined 彙總函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在 Common Language Runtime (CLR) 組件中的類型只要實作需要的彙總合約，就可以註冊為使用者定義彙總函式。 本合約所組成**SqlUserDefinedAggregate**屬性和彙總合約方法。 彙總合約包括機制可儲存的中繼狀態的彙總，以及累積新值，其中包含四個方法的機制： **Init**，**累積**， **合併**，和**終止**。 當您已符合這些需求時，您將能夠充分利用中的使用者定義彙總[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主題的下列章節提供關於如何建立和使用使用者定義彙總的其他相關資訊。 如需範例，請參閱[Invoking CLR User-Defined 彙總函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)。  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
  如需詳細資訊，請參閱[SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626)。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 |方法|語法|Description|  
 |------------|------------|-----------------|  
-|**初始化**|`public void Init();`|查詢處理器使用這個方法將彙總計算初始化。 這個方法針對查詢處理器正在彙總的每個群組叫用一次。 查詢處理器為了計算多個群組彙總，可能選擇重複使用彙總類別之相同執行個體。 **Init**方法應該執行任何清理視上次使用的這個執行個體，並讓它重新啟動新的彙總計算。|  
+|**Init**|`public void Init();`|查詢處理器使用這個方法將彙總計算初始化。 這個方法針對查詢處理器正在彙總的每個群組叫用一次。 查詢處理器為了計算多個群組彙總，可能選擇重複使用彙總類別之相同執行個體。 **Init**方法應該執行任何清理視上次使用的這個執行個體，並讓它重新啟動新的彙總計算。|  
 |**累積**|`public void Accumulate ( input-type value[, input-type value, ...]);`|代表函數參數的一個或多個參數。 *input_type*應該是 managed[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型，相當於原生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所指定的資料類型*input_sqltype*中**CREATE AGGREGATE**陳述式. 如需詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。<br /><br /> 如果是使用者定義型別 (UDT)，輸入類型則是 UDT 類型。 查詢處理器使用這個方法來累積彙總值。 在群組中正在彙總的每一個值都會叫用一次。 查詢處理器一律會呼叫這只有在呼叫之後**Init**方法上指定彙總類別的執行個體。 這個方法的實作應該會更新執行個體的狀態，以反映傳入的引數值之累積狀況。|  
 |**合併式**|`public void Merge( udagg_class value);`|這個方法可用於將此彙總類別的其他執行個體與目前的執行個體合併。 查詢處理器使用這個方法合併多個不完全的彙總計算。|  
 |**終止**|`public return_type Terminate();`|這個方法會完成彙總計算，並傳回彙總的結果。 *Return_type*應該是 managed[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型，它是受管理的對等*return_sqltype*中所指定**CREATE AGGREGATE**陳述式。 *Return_type*也可以是使用者定義型別。|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |---------------------|  
 |已更新的描述**累積**方法; 該方法現在接受一個以上的參數。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [叫用 CLR 使用者定義彙總函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)  
   

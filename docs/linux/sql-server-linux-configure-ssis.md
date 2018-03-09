@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 015c170e998fc824a8816010288b33be33d89005
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d71490df718bfcb6f8ce35c7d087bac4d5961aff
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>使用 ssis conf，設定 Linux 上的 SQL Server Integration Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 在您執行`ssis-conf`Red Hat Enterprise Linux 和 Ubuntu 安裝 SQL Server Integration Services (SSIS) 時的設定指令碼。 如需安裝 SSIS 的詳細資訊，請參閱[安裝 SQL Server Integration Services (SSIS) 在 Linux 上](sql-server-linux-setup-ssis.md)。
 
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|
-| set 版本 | 設定版本的 SQL Server                                       |
+| set-edition | 設定版本的 SQL Server                                       |
 | 遙測   | 啟用或停用 SQL Server Integration Services 遙測服務 |
 | 安裝程式       | 初始化與設定 Microsoft SQL Server Integration Services      |
 |||
@@ -116,7 +118,7 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 
 若要執行`setup`命令提示字元的語言，您希望，您可以指定地區設定。 例如，若要以中文收到提示，請執行下列命令： `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`。
 
-## <a name="ssisconf-format"></a>ssis.conf 格式
+## <a name="ssisconf-format"></a>ssis.conf format
 
 下列`/var/opt/ssis/ssis.conf`每個設定檔提供的範例。
 
@@ -143,3 +145,9 @@ enabled = Y
                        
 lcid = 2052
 ```
+
+## <a name="related-content-about-ssis-on-linux"></a>有關 SSIS 在 Linux 上的相關的內容
+-   [擷取、 轉換和載入與 SSIS Linux 上的資料](sql-server-linux-migrate-ssis.md)
+-   [Linux 上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [限制與已知的問題適用於 Linux 上的 SSIS](sql-server-linux-ssis-known-issues.md)
+-   [排程 SQL Server Integration Services 封裝執行 Linux 上的 cron](sql-server-linux-schedule-ssis-packages.md)

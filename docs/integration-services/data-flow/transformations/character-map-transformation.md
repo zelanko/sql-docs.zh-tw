@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34c666dc86e9026c5981a6a45f32fc06759de061
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3ad5ceb9c851baab0ddb229787afc23568239325
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
   「字元對應」轉換會套用字串函數，例如從小寫轉換成大寫、字元資料。 此轉換只能在字串資料類型的資料行資料上操作。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="mapping-operations"></a>對應作業  
  下表描述「字元對應」轉換支援的對應作業。  
   
-|運算|說明|  
+|作業|描述|  
 |---------------|-----------------|  
 |位元組反轉|反轉位元組的順序。|  
 |全形|將半形字元對應到全形字元。|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/20/2017
   
 -   指定套用至各資料行的作業。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/20/2017
  **目的地**  
  指定字串作業之結果的儲存方式為就地儲存、使用現有的資料行儲存，或將修改的資料儲存為新的資料行。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |新增資料行|將資料儲存在新的資料行中。 在 **[輸出別名]**之下指派資料行名稱。|  
 |就地變更|將修改的資料儲存在現有的資料行中。|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/20/2017
  **運算**  
  從字串函數要套用至資料行資料的清單中選取。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |小寫|轉換為小寫。|  
 |大寫|轉換為大寫。|  

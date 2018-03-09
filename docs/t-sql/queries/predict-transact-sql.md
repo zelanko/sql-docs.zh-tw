@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>預測 (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ MODEL = @model | model_literal
 
 使用 R 或 Python 或其他工具，可以建立模型物件。
 
-**資料**
+**data**
 
 資料參數用來指定用於計分或預測的資料。 資料會指定查詢中的資料表來源的形式。 資料表、 資料表別名，CTE 別名、 檢視或資料表值函式，可以是資料表來源。
 
-**參數**
+**parameters**
 
 參數的參數用來指定用於計分或預測選擇性使用者定義參數。
 
@@ -73,7 +73,7 @@ MODEL = @model | model_literal
 
 > [注意]這個選項不支援的 SQL Server 2017 發行前版本，並隨附僅供向前相容性。
 
-**使用 ( \<result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 在 WITH 子句用來指定所傳回的輸出結構描述`PREDICT`函式。
 

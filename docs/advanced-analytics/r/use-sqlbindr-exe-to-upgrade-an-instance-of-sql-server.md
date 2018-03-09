@@ -7,23 +7,25 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016 CTP3)
+applies_to:
+- SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e83922e15c8bea5f26dcc5c1992acc0529daf18c
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>升級 SQL Server 執行個體中的機器學習元件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明的程序_繫結_，可用來升級機器學習 SQL Server 中所使用的元件。 更新頻率，根據機器學習伺服器版本的繫結程序鎖定伺服器，而不是使用 SQL Server 版本和更新排程。
 
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/20/2017
 
 升級的機器學習服務元件的程序指**繫結**，因為它會變更為使用新的現代化軟體生命週期原則的 SQL Server 機器學習元件支援模型。 
 
-一般情況下，切換到新的授權模式可確保資料科學家可以一律使用最新版本的 R 或 Python。 如需現代的生命週期原則的術語的詳細資訊，請參閱[Microsoft R Server 的支援時間表](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
+一般情況下，切換到新的服務模型可確保資料科學家可以一律使用最新版本的 R 或 Python。 如需現代的生命週期原則的術語的詳細資訊，請參閱[Microsoft R Server 的支援時間表](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
 
 > [!NOTE]
 > 升級不會變更的 SQL Server 資料庫的支援模型並不會變更的 SQL Server 版本。
@@ -189,7 +191,7 @@ ms.lasthandoff: 12/20/2017
 
 ### <a name="parameters"></a>參數
 
-|[屬性]|描述|
+|名稱|Description|
 |------|------|
 |*list*| 顯示目前電腦上所有 SQL 資料庫執行個體識別碼的清單|
 |*bind*| 將指定的 SQL 資料庫執行個體升級到最新版 R Server，並確保執行個體自動取得 R Server 的未來升級|

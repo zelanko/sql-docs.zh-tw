@@ -1,51 +1,39 @@
 ---
-title: "連接到表格式模型資料庫 (SSAS) |Microsoft 文件"
+title: "連接到表格式模型資料庫 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4848d36fffe5d7b6e70b5be937874bbfe6537cb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e733d7e8964dcdd714ac095dc44a4432ac4835b7
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="connect-to-a-tabular-model-database-ssas"></a>連接到表格式模型資料庫 (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]您建立表格式模型，並將它部署到 Analysis Services 表格式模式伺服器之後，您需要設定提供給用戶端應用程式的權限。 此主題說明如何設定權限和如何從用戶端應用程式連接到資料庫。  
+# <a name="connect-to-a-tabular-model-database"></a>連接到表格式模型資料庫  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+建置表格式模型，並將其部署到 Analysis Services 表格式模式伺服器之後，您需要設定權限，使其可供用戶端應用程式使用。 這篇文章說明如何權限，以及如何從用戶端應用程式連接到資料庫。  
   
 > [!NOTE]  
->  根據預設，在設定防火牆之前，無法使用 Analysis Services 的遠端連接。 如果您要為用戶端連接設定具名或預設的執行個體，請確認您已經開放適當的連接埠。 如需詳細資訊，請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
-  
- 本主題包含下列幾節：  
-  
- [資料庫的使用者權限](#bkmk_userpermissions)  
-  
- [伺服器的管理權限](#bkmk_admin)  
-  
- [從 Excel 或 SharePoint 連接](#bkmk_excelconn)  
-  
- [連接問題的疑難排解](#bkmk_Tshoot)  
+>  根據預設，在設定防火牆之前，無法使用 Analysis Services 的遠端連接。 如果您要為用戶端連接設定具名或預設的執行個體，請確認您已經開放適當的連接埠。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 ##  <a name="bkmk_userpermissions"></a> 資料庫的使用者權限  
  連接到在表格式資料庫的使用者必須擁有指定讀取權限的資料庫角色成員資格。  
   
- 當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中撰寫模型時定義角色，對於已部署的模型，則透過使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 定義角色，有時也要定義角色成員資格。 如需使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的角色管理員建立角色的詳細資訊，請參閱[建立及管理角色 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。 如需為已部署的模型建立及管理角色的詳細資訊，請參閱[表格式模型角色 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
+ 當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中撰寫模型時定義角色，對於已部署的模型，則透過使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]定義角色，有時也要定義角色成員資格。 如需有關建立角色的使用中的角色管理員[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，請參閱[建立及管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。 如需建立及管理角色已部署模型的詳細資訊，請參閱[表格式模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
   
 > [!CAUTION]  
 >  透過在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中使用 [角色管理員] 定義的角色重新部署表格式模型專案，將會覆寫已部署表格式模型中定義的角色。  
@@ -98,17 +86,17 @@ ms.lasthandoff: 12/08/2017
   
 5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型] Cube。 按一下 [下一步]，然後按一下 [完成]。  
   
- 建立連接之後，您可以使用資料來建立樞紐分析表或樞紐分析圖。 如需詳細資訊，請參閱本主題稍後的 [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)中的 [角色管理員] 對話方塊來定義角色的表格式模型作者。  
+ 建立連接之後，您可以使用資料來建立樞紐分析表或樞紐分析圖。 如需詳細資訊，請參閱[在 Excel 中的進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
 ##  <a name="bkmk_sharepoint"></a> 從 SharePoint 連接  
  如果您要使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，可以在 SharePoint 中建立 BI 語意模型連接檔案，這個檔案會重新導向至 Analysis Services 表格式模式伺服器上執行的資料庫。 BI 語意模型連接會提供 HTTP 端點給資料庫。 它也會針對例行使用 SharePoint 網站之文件的知識工作者，簡化表格式模型存取。 知識工作者只需要知道 BI 語意模型連接檔案的位置或其 URL，就可以存取表格式模型資料庫。 關於伺服器位置或資料庫名稱的詳細資料，都會封裝在 BI 語意模型連接中。 如需建立及使用 BI 語意模型連接檔案的詳細資訊，請參閱 [Power Pivot BI 語意模型連接 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) 和[建立與表格式模型資料庫的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
   
-##  <a name="bkmk_Tshoot"></a> 連接問題的疑難排解  
+##  <a name="bkmk_Tshoot"></a> 疑難排解連線問題  
  本節提供連接到表格式模型資料庫時發生之問題的原因和解決步驟。  
   
  **「資料連線精靈」無法從指定的資料來源取得資料庫清單。**  
   
- 匯入資料時，如果您嘗試使用此精靈連接到遠端 Analysis Services 伺服器上的表格式模型資料庫，而且您沒有足夠的權限，就會發生這個 Microsoft Excel 錯誤。 若要解決這個錯誤，您必須擁有資料庫的使用者存取權限。 如需授與使用者對資料的存取權，請參閱本主題稍早所提供的指示。  
+ 當匯入資料，當您嘗試使用精靈，以連接到遠端 Analysis Services 伺服器上的表格式模型資料庫，而且您沒有足夠的權限時，就會發生這個 Microsoft Excel 錯誤。 若要解決這個錯誤，您必須擁有資料庫的使用者存取權限。 如需授與使用者對資料的存取權，請參閱本主題稍早所提供的指示。  
   
  **嘗試建立與外部資料來源之間的連接時，發生錯誤。下列連接無法重新整理：\<模型名稱 > 沙箱**  
   
@@ -120,9 +108,9 @@ ms.lasthandoff: 12/08/2017
   
  **嘗試建立與活頁簿中所使用之外部資料來源間的連接時，發生錯誤。**  
   
- 在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為使用者在活頁簿上沒有足夠的 SharePoint 權限。 使用者必須具有 [讀取] (含) 以上的權限。 [僅供檢視] 權限不足以進行資料存取。  
+ 在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為使用者在活頁簿上沒有足夠的 SharePoint 權限。 使用者必須具有 [讀取]\(含) 以上的權限。 [僅供檢視] 權限不足以進行資料存取。  
   
-## <a name="see-also"></a>請參閱  
- [表格式模型方案部署 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+## <a name="see-also"></a>另請參閱  
+ [表格式模型解決方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

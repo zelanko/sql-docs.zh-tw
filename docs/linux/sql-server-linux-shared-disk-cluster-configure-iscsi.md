@@ -3,26 +3,26 @@ title: "設定容錯移轉叢集執行個體儲存體 iSCSI SQL Server on Linux 
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9d4ab14772f78370563c6117553ea9e45203a8b9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-iSCSI-SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明如何在 Linux 上設定 iSCSI 儲存體容錯移轉叢集執行個體 (FCI)。 
 
@@ -51,7 +51,7 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
-    ![7 setiscsinetwork][6]
+    ![7-setiscsinetwork][6]
  
 2.  編輯`/var/lib/iscsi/ifaces/iSCSIIfaceName`。 請確定它擁有完整填寫下列值：
 
@@ -99,7 +99,7 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  在 iSCSI 磁碟上建立的實體磁區。
 
@@ -200,7 +200,7 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     ls /var/opt/mssql/data
     ```
 
-    ![45 CopyMove][8]
+    ![45-CopyMove][8]
  
    *    型別`exit`切換回根使用者。
 
@@ -210,7 +210,7 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > 磁碟區群組的名稱和\<LogicalVolumeName > 是建立邏輯磁碟區的名稱。 下列範例語法符合上面所建立的邏輯磁碟區與磁碟區群組。
+    \<VolumeGroupName > 磁碟區群組的名稱和\<LogicalVolumeName > 是建立邏輯磁碟區的名稱。 下列的範例語法比對前一個命令的邏輯磁碟區與磁碟區群組。
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -324,7 +324,7 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
 
    *    若要測試，請在該資料夾中建立的資料庫。 如下所示的範例會使用 sqlcmd 建立資料庫，切換至該內容，確認檔案存在於作業系統層級，然後再刪除暫存位置。 您可以使用 SSMS。
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    取消掛接共用 
 
@@ -358,7 +358,7 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
 
     \<ListOfVGsNotUsedByPacemaker > 不會使用 fci 的步驟為 20，輸出中的磁碟區群組的清單。 將以引號括住和個別的每個以逗號分隔。 下列為範例。
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. Linux 啟動時，它將會掛接檔案系統。 若要確保只有 Pacemaker 可以掛上的 iSCSI 磁碟，重建根檔案系統映像。 

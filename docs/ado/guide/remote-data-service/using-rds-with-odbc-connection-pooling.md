@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: connection pooling in RDS [ADO]
+helpviewer_keywords:
+- connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3098b4ea9bc73a4193eb5c00ad8e2a1efaf991c9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 40a7469e2d5a264138b108d4ba8ea274b3c0b7ae
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS 使用 ODBC 連接共用
 如果您使用 ODBC 資料來源，您可以使用連接共用選項在網際網路資訊服務 (IIS) 以達到高效能處理的用戶端負載。 連接共用是資源管理員的連線，維護常用的連接上開啟的狀態。  
@@ -47,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-specify-the-tcpip-socket-network-library-on-the-sql-server-computer"></a>若要指定 SQL Server 電腦上的 TCP/IP 通訊端的網路程式庫  
   
-### <a name="in-microsoft-sql-server-65"></a>Microsoft SQL server 6.5:  
+### <a name="in-microsoft-sql-server-65"></a>In Microsoft SQL Server 6.5:  
   
 1.  從 開始 功能表中，指向 程式、 指向 Microsoft SQL Server 6.5 中，然後按一下 SQL 安裝程式。  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 5.  按一下 [完成] 繼續並結束安裝程式。  
   
-### <a name="in-microsoft-sql-server-70"></a>Microsoft SQL server 7.0:  
+### <a name="in-microsoft-sql-server-70"></a>In Microsoft SQL Server 7.0:  
   
 1.  從 開始 功能表中，指向程式、 指向 Microsoft SQL Server 7.0、，然後按一下 伺服器網路公用程式。  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-configure-the-web-server-all-sql-servers"></a>若要設定網頁伺服器 (所有 SQL Server)  
   
-### <a name="for-microsoft-sql-server-65"></a>Microsoft SQL server 6.5:  
+### <a name="for-microsoft-sql-server-65"></a>For Microsoft SQL Server 6.5:  
   
 1.  從 開始 功能表中，指向 程式、 指向 Microsoft SQL Server 6.5 中，然後按一下 SQL 用戶端組態公用程式。  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  按一下 儲存變更並結束此公用程式來完成。  
   
-### <a name="for-microsoft-sql-server-70"></a>Microsoft SQL server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
   
 1.  從 開始 功能表中，指向程式、 指向 Microsoft SQL Server 7.0、，然後按一下 用戶端網路公用程式。  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-configure-the-web-server-a-specific-sql-server"></a>若要設定網頁伺服器 (特定 SQL Server)  
   
-### <a name="for-microsoft-sql-server-65"></a>Microsoft SQL server 6.5:  
+### <a name="for-microsoft-sql-server-65"></a>For Microsoft SQL Server 6.5:  
   
 1.  從 開始 功能表中，指向 程式、 指向 Microsoft SQL Server 6.5 中，然後按一下 SQL 用戶端組態公用程式。  
   
@@ -116,7 +118,7 @@ ms.lasthandoff: 12/21/2017
   
 6.  按一下 [完成]。  
   
-### <a name="for-microsoft-sql-server-70"></a>Microsoft SQL server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
   
 1.  從 開始 功能表中，指向程式、 指向 Microsoft SQL Server 7.0、，然後按一下 用戶端組態公用程式。  
   
@@ -128,7 +130,7 @@ ms.lasthandoff: 12/21/2017
   
 5.  按一下 [確定]，然後確定要結束此公用程式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

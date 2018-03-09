@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceb014c72f6354ab5a6a65e041e99c4014b72545
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2acc8c52d6e16cf17c05cc421faf5ea52b20e71
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>舊版 SQL Server 的增強型日期/時間類型行為 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 ||Time(7)|SQL_C_TIME|失敗 – 無效的時間間隔。|確定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|失敗 – 無效的時間間隔。|確定 (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|確定|確定 (1)|  
-||Datetime2 （7)|SQL_C_TYPE_TIMESTAMP|確定|用戶端轉換會將值捨入為 1/300 秒。|  
+||Datetime2(7)|SQL_C_TYPE_TIMESTAMP|確定|用戶端轉換會將值捨入為 1/300 秒。|  
 |Smalldatetime|日期|SQL_C_TYPE_DATE|確定|確定|  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|確定|確定|  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="down-level-server-behavior"></a>下層伺服器行為  
  連接到舊版 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的伺服器執行個體時，嘗試使用新的伺服器類型或相關聯的中繼資料程式碼和描述元欄位都會傳回 SQL_ERROR。 系統將會產生包含 SQLSTATE HY004 和訊息「連接時，伺服器版本的 SQL 資料類型無效」的診斷記錄，或包含 07006 和訊息「限制的資料類型屬性違規」的診斷記錄。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [日期和時間增強功能 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

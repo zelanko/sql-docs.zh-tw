@@ -5,29 +5,27 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d5c41c13232807dd492d7297a67d9061f8f1bc8b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de9f32a826273ed1efaf9395c8a0e67030b1b573
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="delete-power-pivot-gallery"></a>刪除 Power Pivot 圖庫
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]刪除[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]圖庫也會刪除所有的項目，包括資料重新整理記錄，如[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]設定排程的資料重新整理的活頁簿。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+刪除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫也會刪除其所有項目，包括為排程的資料重新整理所設定之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的資料重新整理記錄。  
   
 > [!NOTE]  
 >  本主題提供如何刪除 SharePoint 文件庫的指示。 如需如何刪除文件庫中個別文件的指示，請參閱 [使用 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)。  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Power Pivot 圖庫](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)  
   
   

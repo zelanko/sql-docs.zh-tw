@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
 - ALTER QUEUE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - number of queue readers
 - modifying queues
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - unavailable queues [SQL Server]
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2774da9a0a75c4645a4bd64237ec99a7cf92d771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7f97bd0a341ecc5e960c94c4c8bdabe30b572fd9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +95,7 @@ WITH
  *database_name* （物件）  
  這是要變更之佇列所在的資料庫名稱。 若未*database_name*提供預設值為目前的資料庫。  
   
- *schema_name* （物件）  
+ *schema_name* (object)  
  這是新佇列所屬的結構描述名稱。 若未*schema_name*提供預設值為目前使用者的預設結構描述。  
   
  *queue_name*  
@@ -133,7 +135,7 @@ WITH
   
  會將佇列內部資料表 （索引） 移至使用者指定的檔案群組。  新的檔案群組必須不是唯讀狀態。  
   
- PROCEDURE_NAME =\<程序 >  
+ PROCEDURE_NAME = \<procedure>  
  指定在佇列包含要處理的訊息時，將啟動的預存程序名稱。 這個值必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。  
   
  *database_name* （程序）  
@@ -142,7 +144,7 @@ WITH
  *schema_name* （程序）  
  這是擁有預存程序的結構描述名稱。  
   
- *<*  
+ *stored_procedure_name*  
  這是預存程序的名稱。  
   
  MAX_QUEUE_READERS =*max_reader*  
@@ -260,7 +262,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [卸除佇列 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

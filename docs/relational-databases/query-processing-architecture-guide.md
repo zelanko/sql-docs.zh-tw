@@ -1,30 +1,31 @@
 ---
 title: "查詢處理架構指南 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: "5"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +35,40 @@ ms.lasthandoff: 01/02/2018
 ## <a name="sql-statement-processing"></a>SQL 陳述式處理
 
 處理單一 SQL 陳述式是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行 SQL 陳述式最基本的方法。 用於處理僅參考本機基底資料表 (非檢視表或遠端資料表) 之單一 `SELECT` 陳述式的步驟可說明這個基本程序。
+
+#### <a name="logical-operator-precedence"></a>邏輯運算子優先順序
+
+當陳述式中使用一個以上的邏輯運算子，`NOT` 會第一個計算，接下來是 `AND`，最後才是 `OR`。 先處理算術以及位元運算子，接著才處理邏輯運算子。 如需詳細資訊，請參閱[運算子優先順序](../t-sql/language-elements/operator-precedence-transact-sql.md)。
+
+在下列範例中，色彩條件與產品型號 21 相關，但不與產品型號 20 相關，原因是 `AND` 的優先順序高於 `OR`。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+您可以加上括號，強迫陳述式先執行 `OR` 來變更查詢的意義。 下列查詢只會尋找型號 20 和 21 下的紅色產品。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+即使非必要，也建議您使用括號，以改善查詢的可讀性，及減少因為運算子優先順序而不知不覺失誤的機會。 使用括號對效能不會有太大的負面影響。 下面的範例與原始範例雖然在句法上並無不同，但其可讀性更高。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>最佳化 SELECT 陳述式
 
@@ -48,7 +83,6 @@ ms.lasthandoff: 01/02/2018
 * 包含來源資料的資料表。 這指定於 `FROM` 子句中。
 * 資料表如何在邏輯上與 `SELECT` 陳述式的目的產生關聯。 這定義於聯結規格中，其可能出現在 `WHERE` 後面的 `ON` 子句或 `FROM`子句中。
 * 來源資料表中的資料列必須滿足才能符合 `SELECT` 陳述式的條件。 這些條件指定於 `WHERE` 和 `HAVING` 子句中。
-
 
 查詢執行計畫是用以定義下列項目： 
 
@@ -267,7 +301,7 @@ FROM CompanyData.dbo.Customers
 WHERE CustomerID = @CustomerIDParameter;
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法預測每次執行程序時，`@CustomerIDParameter` 參數將提供的索引鍵值。 因為索引鍵值無法預測，所以查詢處理器也無法預測必須存取哪個成員資料表。 為了處理這種情形，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 建立了具有條件式邏輯的執行計畫 (稱為動態篩選)，可根據輸入參數值來控制存取的成員資料表。 假設 `GetCustomer` 預存程序是在 Server1 上執行，則執行計畫邏輯就能以下列形式來表示：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法預測每次執行程序時 `@CustomerIDParameter` 參數會提供的索引鍵值。 因為索引鍵值無法預測，所以查詢處理器也無法預測必須存取哪個成員資料表。 為了處理這種情形，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 建立了具有條件式邏輯的執行計畫 (稱為動態篩選)，可根據輸入參數值來控制存取的成員資料表。 假設 `GetCustomer` 預存程序是在 Server1 上執行，則執行計畫邏輯就能以下列形式來表示：
 
 ```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
@@ -278,7 +312,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
    Retrieve row from linked table Server3.CustomerData.dbo.Customer_99
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有時候甚至會為尚未參數化的查詢建立這些動態執行計畫類型。 查詢最佳化工具可能會參數化查詢以重複使用執行計畫。 如果查詢最佳化工具將對參考資料分割檢視的查詢進行參數化，則查詢最佳化工具不會再假設需要的資料列將取自指定的基底資料表。 接著在執行計畫中必須使用動態篩選。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有時候甚至會為尚未參數化的查詢建立這類動態執行計畫。 查詢最佳化工具可能會參數化查詢以重複使用執行計畫。 如果查詢最佳化工具將對參考資料分割檢視的查詢進行參數化，則查詢最佳化工具不會再假設需要的資料列將取自指定的基底資料表。 接著在執行計畫中必須使用動態篩選。
 
 ## <a name="stored-procedure-and-trigger-execution"></a>預存程序與觸發程序執行
 
@@ -299,7 +333,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行任何 SQL 陳述式時，關聯式引擎會先尋找整個計畫快取，以確認相同 SQL 陳述式的現有執行計畫是否存在。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 找到任何現有的計畫，就會重複使用它，如此可省下重新編譯 SQL 陳述式的負擔。 如果沒有現有的執行計畫，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為查詢建立新執行計畫。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一個非常有效率的演算法，可為任何特定 SQL 陳述式尋找現有的執行計畫。 在大部分的系統中，這個掃描所使用的最少資源，比能夠重複使用現有計畫來取代編譯每個 SQL 陳述式所節省下來的資源還少。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一個非常有效率的演算法，可尋找任何特定 SQL 陳述式的現有執行計畫。 在大部分的系統中，這個掃描所使用的最少資源，比能夠重複使用現有計畫來取代編譯每個 SQL 陳述式所節省下來的資源還少。
 
 此演算法若要能使得新的 SQL 陳述式符合快取中現有、未使用的執行計畫，所有的物件參考必須是完整的。 例如，這些 `SELECT` 陳述式的第一個不符合現有計畫，而第二個則符合：
 
@@ -599,7 +633,7 @@ WHERE ProductID = 63;
 
 ## <a name="parallel-query-processing"></a>平行查詢處理
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供平行查詢，讓擁有多個處理器 (CPU) 的電腦，也能獲得最佳的查詢執行和索引作業。 因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可利用數個作業系統背景工作執行緒平行地執行查詢或索引作業，所以可快速而有效率地完成作業。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供平行查詢功能，讓擁有多個微處理器 (CPU) 的電腦，也能獲得最佳的查詢執行和索引作業。 因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可利用數個作業系統背景工作執行緒平行地執行查詢或索引作業，所以可快速而有效率地完成作業。
 
 在查詢最佳化期間，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會搜尋得益於平行執行的查詢或索引作業。 對於這些查詢，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在查詢執行計畫中插入交換運算子，以準備平行執行的查詢。 所謂的交換運算子，是指查詢執行計畫中，提供存取管理、資料重新散佈以及流量控制的運算子。 交換運算子包括當做子類型的 `Distribute Streams`、 `Repartition Streams`及 `Gather Streams` 邏輯運算子，其中的一或多個可以出現在平行查詢之查詢計畫的執行程序表輸出中。 
 
@@ -740,7 +774,7 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 > [!NOTE]
 > 只有從 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 開始的 Enterprise Edition 才支援平行索引作業。
  
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用與其他查詢相同的演算法來判斷索引作業的平行處理原則程度 (要執行的個別背景工作執行緒總數)。 索引作業的平行處理原則最大程度受限於 [平行處理原則的最大程度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 伺服器組態選項。 您可以在 CREATE INDEX、ALTER INDEX、DROP INDEX 和 ALTER TABLE 陳述式中設定 MAXDOP 索引選項，來覆寫個別索引作業的 [平行處理原則的最大程度] 值。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用與其他查詢相同的演算法，來判斷索引作業的平行處理原則程度 (要執行的個別背景工作執行緒總數)。 索引作業的平行處理原則最大程度受限於 [平行處理原則的最大程度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 伺服器組態選項。 您可以在 CREATE INDEX、ALTER INDEX、DROP INDEX 和 ALTER TABLE 陳述式中設定 MAXDOP 索引選項，來覆寫個別索引作業的 [平行處理原則的最大程度] 值。
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 建立索引執行計畫時，會將平行作業的數目設定為下列項目中的最低值： 
 
@@ -782,7 +816,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 OLE DB 在關聯式引擎與儲存引擎間進行通訊。 關聯式引擎會將每個 Transact-SQL 陳述式分解為簡單 OLE DB 資料列集上的一連串作業，而儲存引擎可從基底資料表加以開啟。 這是表示關聯式引擎也可以在任何 OLE DB 資料來源上，開啟簡單的 OLE DB 資料列集。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用 OLE DB 在關聯式引擎與儲存引擎間進行通訊。 關聯式引擎會將每個 Transact-SQL 陳述式分解為簡單 OLE DB 資料列集上的一連串作業，而儲存引擎可從基底資料表加以開啟。 這是表示關聯式引擎也可以在任何 OLE DB 資料來源上，開啟簡單的 OLE DB 資料列集。  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 關聯式引擎使用 OLE DB 應用程式開發介面 (API) 來開啟連結伺服器上的資料列集、提取資料列、以及管理交易。
 
@@ -794,11 +828,11 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可
 
 如果可能，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將關聯式作業 (例如聯結、限制、投影、排序和依作業分組) 推送至 OLE DB 資料來源。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會預設為將基底資料表掃描到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並自行執行關聯式作業。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會查詢 OLE DB 提供者以判斷它支援的 SQL 語法層級，然後根據該資訊，盡可能推送最多關聯式作業給提供者。 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 為 OLE DB 提供者指定一種可傳回統計資料的機制，以指出在 OLE DB 資料來源中如何散發索引鍵值。 這讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具能根據各 SQL 陳述式的需求，分析資料來源中的資料模式，並加強查詢最佳化工具產生最佳執行計畫的能力。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為 OLE DB 提供者指定一種可傳回統計資料的機制，以指出在 OLE DB 資料來源中如何散發索引鍵值。 這讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具能根據各 SQL 陳述式的需求，分析資料來源中的資料模式，並加強查詢最佳化工具產生最佳執行計畫的能力。 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>分割資料表和索引上的查詢處理增強功能
 
-[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 針對許多平行計畫提升了資料分割資料表上的查詢處理效能、變更了平行計畫和序列計畫的表示方式，並增強了編譯時間和執行階段執行計畫內所提供的資料分割資訊。 本主題將描述這些改進的功能、提供如何解譯資料分割資料表和索引之查詢執行計畫的指引，以及提供用來改善資料分割物件上之查詢效能的最佳做法。 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 針對許多平行計畫改善資料分割資料表上的查詢處理效能、變更平行計畫和序列計畫的表示方式，並強化編譯時間和執行階段執行計畫中所提供的資料分割資訊。 本主題將描述這些改進的功能、提供如何解譯資料分割資料表和索引之查詢執行計畫的指引，以及提供用來改善資料分割物件上之查詢效能的最佳做法。 
 
 > [!NOTE]
 > 只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise、Developer 和 Evaluation 版本才支援資料分割資料表和索引。
@@ -839,7 +873,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 #### <a name="partition-information-enhancements"></a>資料分割資訊增強
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 同時針對編譯時間和執行階段的執行計畫提供了增強的資料分割資訊。 執行計畫現在會提供下列資訊：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 同時針對編譯時間和執行階段的執行計畫提供了強化的資料分割資訊。 執行計畫現在會提供下列資訊：
 
 * 選擇性的 `Partitioned` 屬性，其指出在資料分割的資料表上執行像是 `seek`、 `scan`、 `insert`、 `update`、 `merge`或 `delete`等運算子。  
 * 新的 `SeekPredicateNew` 元素搭配 `SeekKeys` 子元素，其中包含 `PartitionID` 做為前置的索引鍵資料行，以及在 `PartitionID`上指定範圍搜尋的篩選條件。 兩個 `SeekKeys` 子元素的存在表示會使用 `PartitionID` 上的略過掃描作業。   
@@ -1044,4 +1078,5 @@ GO
  [擴充事件](../relational-databases/extended-events/extended-events.md)  
  [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基數估計](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [彈性查詢處理](../relational-databases/performance/adaptive-query-processing.md)
+ [彈性查詢處理](../relational-databases/performance/adaptive-query-processing.md)   
+ [運算子優先順序](../t-sql/language-elements/operator-precedence-transact-sql.md)

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.Distributor.SubscriptionSummary.merge.f1
 ms.assetid: 0308bbd2-03ce-4f03-974d-e54ebd6c7f58
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cfaa2f06e1053a1392a2d1b45bed123c408d0c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9cfcbdc99683b46010a56daa81ee23b9bcf017b6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-info-subscription-watch-list-merge-pub-sql-2005"></a>散發者資訊、訂閱監看清單 (合併式發行集，SQL 2005+)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 合併式發行集的訂閱資訊會包括「發行者」的名稱。 否則，這個對話方塊提供的功能和資訊會與在「發行者」檢視相同。 如需如何使用這個對話方塊的詳細資訊，請參閱[發行者資訊、訂閱監看清單 &#40;合併式發行集，SQL Server 2005 和更新版本&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md)。  

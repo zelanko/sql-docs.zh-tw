@@ -1,7 +1,7 @@
 ---
 title: "統計資料 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,22 +26,22 @@ helpviewer_keywords:
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 caps.latest.revision: "70"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 73102f9a2640a9d3481b9e5fd0b613d50c6b1710
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2ed0124e677f79bd25b11a4ac994f60e65f8fe82
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="statistics"></a>Statistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須建立其他統計資料或修改查詢設計，以便獲得最佳結果。 本主題將討論有效使用查詢最佳化統計資料的概念和指導方針。  
   
 ##  <a name="DefinitionQOStatistics"></a> 元件和概念  
 ### <a name="statistics"></a>Statistics  
- 查詢最佳化的統計資料是指包含資料表或索引檢視表之一個或多個資料行中值分佈相關統計資料的物件。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的*基數*或資料列數目。 這些*基數估計值*可讓查詢最佳化工具建立高品質的查詢計劃。 例如，根據您的述詞而定，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子，而且這樣做會改善查詢效能。  
+ 查詢最佳化的統計資料是指包含資料表或索引檢視表之一或多個資料行中值分佈相關統計資料的二進位大型物件 (BLOB)。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的*基數*或資料列數目。 這些*基數估計值*可讓查詢最佳化工具建立高品質的查詢計劃。 例如，根據您的述詞而定，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子，而且這樣做會改善查詢效能。  
   
  每個統計資料物件都是針對一或多個資料表資料行的清單所建立，其中包含「長條圖」以顯示第一個資料行中的值分佈狀態。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」) 衍生自資料行值之相異資料列的數目。 
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/27/2017
 
 下列長條圖顯示包含六個步驟的長條圖。 第一個上限值左側的區域就是第一個步驟。
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "長條圖") 
   
 針對上述每一個長條圖步驟：
 -   粗線代表上限值 (*range_high_key*) 以及其所發生的次數 (*equal_rows*)  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/27/2017
   
 -   虛線代表用來預估範圍內相異值總數的取樣值 (*distinct_range_rows*) 以及範圍內的值總數 (*range_rows*)。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。   
   
-#### <a name="density"></a> 密度向量  
+#### <a name="density"></a>密度向量  
 **密度**是給定資料行或組合資料行中的重複項目數量資訊，其計算方式為 1/(相異值數目)。 查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 密度向量針對統計資料物件中資料行的每個前置詞各包含一個密度。 
 
 > [!NOTE]
@@ -89,16 +89,16 @@ ms.lasthandoff: 11/27/2017
 
 ### <a name="filtered-statistics"></a>篩選的統計資料  
  對於從定義完善的資料子集中選取的查詢而言，篩選的統計資料可以改善查詢效能。 篩選的統計資料會使用篩選述詞來選取統計資料中所含的資料子集。 設計完善的篩選統計資料可以改善查詢執行計畫 (相較於完整資料表統計資料而言)。 如需篩選述詞的詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。 如需有關何時建立篩選統計資料的詳細資訊，請參閱本主題的 [何時建立統計資料](#CreateStatistics) 一節。  
-  
+ 
 ### <a name="statistics-options"></a>統計資料選項  
  您可以設定三個選項來影響何時及如何建立和更新統計資料。 這些選項只會在資料庫層級設定。  
   
-#### <a name="autocreatestatistics-option"></a>AUTO_CREATE_STATISTICS 選項  
+#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS 選項  
  開啟自動建立統計資料選項 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 時，查詢最佳化工具就會視需要針對查詢述詞中的個別資料行來建立統計資料，以便改善查詢計劃的基數估計值。 這些單一資料行統計資料是針對在現有統計資料物件中尚未具有[長條圖](#histogram)的資料行建立的。 AUTO_CREATE_STATISTICS 選項不會判斷系統是否針對索引建立了統計資料。 這個選項也不會產生篩選的統計資料。 它會嚴格套用至完整資料表的單一資料行統計資料。  
   
  當查詢最佳化工具因使用 AUTO_CREATE_STATISTICS 選項而產生統計資料時，統計資料名稱就會以 `_WA` 作為開頭。 您可以使用下列查詢來判斷查詢最佳化工具是否已經針對查詢述詞資料行建立統計資料。  
   
-```t-sql  
+```sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -118,8 +118,8 @@ ORDER BY s.name;
 
 * 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始並 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 之下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。 這是以 1,000 的平方根乘以目前的資料表基數來計算。 透過這項變更，大型資料表上的統計資料會經常更新。 不過，如果資料庫的相容性層級低於 130，便會套用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 臨界值。  
 
-  > [!IMPORTANT]
-  > 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 低於 130 之下，從 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 開始至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或是從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，使用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。
+> [!IMPORTANT]
+> 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 低於 130 之下，從 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 開始至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或是從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，使用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。
   
 在編譯查詢及執行快取查詢計劃之前，查詢最佳化工具會檢查是否有過期的統計資料。 在編譯查詢之前，查詢最佳化工具會使用查詢述詞中的資料行、資料表和索引檢視表來判斷哪些統計資料可能已過期。 在執行快取查詢計劃之前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。  
   
@@ -143,25 +143,19 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
   
 * 您的應用程式遇到等候更新統計資料之一或多個查詢所造成的用戶端要求逾時。 在某些情況下，等候同步統計資料可能會造成具有彙總逾時的應用程式失敗。  
   
-#### <a name="incremental-stats"></a>累加統計資料  
- 開啟 (ON) 時，所建立的統計資料是依據每個分割區區的統計資料。 關閉 (OFF) 時，會卸除統計資料樹狀結構，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 OFF。 此設定會覆寫資料庫層級 INCREMENTAL 屬性。  
+#### <a name="incremental"></a>INCREMENTAL  
+ 當 CREATE STATISTICS 的 INCREMENTAL 選項為 ON 時，所建立的統計資料會依據每個分割區統計資料累加。 關閉 (OFF) 時，會卸除統計資料樹狀結構，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 OFF。 此設定會覆寫資料庫層級 INCREMENTAL 屬性。 如需建立累加統計資料的詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。 如需自動建立每個分割區統計資料的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) 和 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 
   
  當新的分割區區加入到大型資料表時，應更新統計資料，以包含新的分割區區。 但是掃描整個資料表 (FULLSCAN 或 SAMPLE 選項) 所需的時間可能會很長。 此外，由於可能只需要新分割區區的統計資料，所以不需要掃描整個資料表。 累加選項會以每個分割區區為基礎，建立及儲存統計資料，更新時只會重新整理需要新統計資料之分割區區的統計資料。  
   
  如果不支援每個分割區區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：  
   
 * 建立統計資料時，所使用的索引未與基底資料表進行分割區對齊。  
-  
 * 在 AlwaysOn 可讀取次要資料庫上建立的統計資料。  
-  
 * 在唯讀資料庫上建立的統計資料。  
-  
 * 在篩選的索引上建立的統計資料。  
-  
 * 在檢視上建立的統計資料。  
-  
 * 在內部資料表上建立的統計資料。  
-  
 * 使用空間索引或 XML 索引建立的統計資料。  
   
 **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
@@ -179,12 +173,9 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
   
 當下列任何情況適用時，請考慮使用 CREATE STATISTICS 陳述式來建立統計資料：  
 
-* [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 建議您建立統計資料。  
-
+* [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 建議您建立統計資料。 
 * 查詢述詞包含多個尚未存在相同索引中的相互關聯資料行。  
-
 * 查詢會從資料子集中選取。  
-
 * 查詢具有遺失的統計資料。  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>查詢述詞包含多個相互關聯的資料行  
@@ -196,7 +187,7 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
   
 若要建立對於基數估計值有用的密度，查詢述詞中的資料行必須與統計資料物件定義的其中一個資料行前置詞相符。 例如，下列命令會針對 `LastName`、 `MiddleName`和 `FirstName`資料行建立多重資料行統計資料物件。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -223,7 +214,7 @@ GO
   
 查詢最佳化工具可以使用 `BikeWeights` 篩選統計資料，來針對下列會選取所有重量超過 `25` 之腳踏車的查詢，改善其查詢計劃。  
   
-```t-sql  
+```sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -241,9 +232,7 @@ GO
  如果統計資料已遺失，請執行下列步驟：  
   
 * 確認已開啟 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 和 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics)。  
-  
 * 確認資料庫不是唯讀的。 若資料庫為唯讀，將無法儲存新統計資料物件。  
-  
 * 使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式來建立遺失的統計資料。  
   
 如果唯讀資料庫或唯讀快照集上的統計資料遺漏或過時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在 **tempdb**中建立及維護暫時性統計資料。 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 建立暫時統計資料時，統計資料名稱會附加後置詞 *_readonly_database_statistic*，以便區分暫時統計資料與永久統計資料。 後置詞 *_readonly_database_statistic* 會保留給由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的統計資料使用。 暫時統計資料的指令碼可以在讀寫資料庫上建立和複製。 已編寫指令碼時，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會將統計資料名稱的後置詞從 *_readonly_database_statistic* 變更為 *_readonly_database_statistic_scripted*。  
@@ -251,7 +240,6 @@ GO
 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以建立和更新暫時統計資料。 但是，您可以使用永久統計資料所使用的相同工具來刪除暫時統計資料及監控統計資料屬性：  
   
 * 使用 [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) 陳述式刪除暫時統計資料。  
-  
 * 使用 **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** 和 **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** 目錄檢視來監視統計資料。 **sys_stats** 包含 **is_temporary** 資料行，以指示哪些統計資料為永久性及哪些統計資料為暫時性。  
   
  因為暫時統計資料會儲存在 **tempdb**中，所以重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會導致所有暫時統計資料消失。  
@@ -268,11 +256,9 @@ GO
  在下列狀況中，請考慮更新統計資料：  
   
 * 查詢執行時間很慢。  
-  
 * 插入作業針對遞增或遞減索引鍵資料行進行。  
-  
 * 在維護作業之後。  
-  
+
 ### <a name="query-execution-times-are-slow"></a>查詢執行時間很慢  
  如果查詢回應時間很慢或無法預測，請先確定查詢具有最新的統計資料，然後再執行其他疑難排解步驟。  
   
@@ -316,7 +302,7 @@ GO
   
      例如，下列預存程序 `Sales.GetRecentSales` 會在 `@date` 為 NULL 時變更 `@date` 參數的值。  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -335,7 +321,7 @@ GO
   
      如果預存程序 `Sales.GetRecentSales` 的第一次呼叫傳遞 NULL 給 `@date` 參數，查詢最佳化工具就會使用 `@date = NULL` 的基數估計值來編譯此預存程序，即使沒有使用 `@date = NULL` 來呼叫查詢述詞也一樣。 這個基數估計值可能會與實際查詢結果中的資料列數目具有大幅差異。 因此，查詢最佳化工具可能會選擇到次佳的查詢計劃。 為了協助避免這種情況發生，您可以將此預存程序重新撰寫成兩個程序，如下所示：  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -365,7 +351,7 @@ GO
   
  對於某些應用程式而言，每次執行查詢都重新編譯查詢可能會花費太多時間。 即使您沒有使用 `RECOMPILE` 選項，`OPTIMIZE FOR` 查詢提示仍然有所幫助。 例如，您可以將 `OPTIMIZE FOR` 選項加入至預存程序 Sales.GetRecentSales，以便指定特定日期。 下列範例會將 `OPTIMIZE FOR` 選項加入至 Sales.GetRecentSales 程序。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -401,4 +387,5 @@ GO
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
- 
+ [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)

@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 404c939db56bfee93b0db53850bf4cb519e873e3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f04c236ea1534ce5f2d33313117dd082cb75bd6c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>設定適用於 Excel 之 Master Data Services 增益集的屬性
   Master Data Services Add-in for Excel 設定會決定如何從 MDS 將資料載入 Excel 增益集，以及如何從 Excel 增益集將資料發行到 MDS。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/20/2017
   
 ||||  
 |-|-|-|  
-|索引標籤和區段|設定|說明|  
+|索引標籤和區段|設定|描述|  
 |設定：發行|在發行時顯示 [發行並註解] 對話方塊|在您按一下 [發行] 之後，選取此選項可顯示 [發行並註解] 對話方塊，好讓您輸入所有變更的單一註解，或輸入每一項變更的註解。<br /><br /> 取消選取此選項可指定發行程序已起始，而不必顯示 [發行並註解] 對話方塊。 您將沒有機會輸入註解。|  
 |設定：版本|版本選取項目|選取將載入 Excel 增益集中之主要資料的版本。 可為以下項目：<br /><br /> [無] 表示具有未預設為任何版本的版本<br /><br /> [最舊] 表示預設為最舊的版本；[最新] 表示預設為最新的版本。|  
 |設定：記錄|開啟詳細記錄|啟用從 MDS 將主要資料載入 Excel 增益集之程序的記錄，好讓服務中每一個命令的結果都會記錄下來。|  

@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sysmergepartitioninfoview
 - sysmergepartitioninfoview_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmergepartitioninfoview view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmergepartitioninfoview view
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a6c4dab4fd8f840d4c646bb1b9ec07a38da275a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ee0a46b7ec48d16bb2af2d528b4e832298c36a39
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|發行項的名稱。|  
-|**型別**|**tinyint**|指出發行項類型，它可以是下列項目之一：<br /><br /> **0x0a** = 資料表。<br /><br /> **0x20** = 僅限程序結構描述。<br /><br /> **0x40** = 僅限檢視結構描述或僅限索引檢視表結構描述。<br /><br /> **0x80** = 僅限函數結構描述。|  
+|**type**|**tinyint**|指出發行項類型，它可以是下列項目之一：<br /><br /> **0x0a** = 資料表。<br /><br /> **0x20** = 僅限程序結構描述。<br /><br /> **0x40** = 僅限檢視結構描述或僅限索引檢視表結構描述。<br /><br /> **0x80** = 僅限函數結構描述。|  
 |**objid**|**int**|已發行的物件之識別碼。|  
 |**sync_objid**|**int**|代表同步處理資料集的檢視之物件識別碼。|  
 |**view_type**|**tinyint**|檢視的類型：<br /><br /> **0** = 不是檢視; 使用所有基底物件。<br /><br /> **1** = 永久檢視。<br /><br /> **2** = 暫存檢視。|  
@@ -45,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |**描述**|**nvarchar(255)**|發行項的簡要描述。|  
 |**pre_creation_command**|**tinyint**|當在訂閱資料庫中建立發行項時，所採取的預設動作。<br /><br /> **0** = 無-如果訂閱者端已有資料表，會採取任何動作。<br /><br /> **1** = drop-卸除資料表，然後再重新建立它。<br /><br /> **2** = delete-刪除根據子集篩選中的 WHERE 子句的問題。<br /><br /> **3** = 截斷-與 2，但刪除頁面而非資料列相同。 不過，它不用 WHERE 子句。|  
 |**pubid**|**uniqueidentifier**|目前發行項所屬發行集的識別碼。|  
-|**別名**|**int**|發行項識別的暱稱對應。|  
+|**nickname**|**int**|發行項識別的暱稱對應。|  
 |**column_tracking**|**int**|指出是否實作發行項的資料行追蹤。|  
 |**status**|**tinyint**|指出發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 未同步-下次發行資料表的初始處理指令碼會執行下一次執行快照集代理程式。<br /><br /> **2** = active-已執行發行資料表的初始處理指令碼。|  
 |**conflict_table**|**sysname**|包含目前發行項的衝突記錄之本機資料表的名稱。 提供這份資料表只供參考，自訂衝突解決常式可以修改或刪除它的內容，管理員也可以直接修改或刪除它的內容。|  
@@ -58,16 +62,16 @@ ms.lasthandoff: 11/17/2017
 |**select_proc**|**sysname**|合併代理程式用來實現鎖定以及尋找發行項的資料行和資料列之自動產生預存程序的名稱。|  
 |**metadata_select_proc**|**sysname**|用來存取合併式複寫系統資料表中的中繼資料之自動產生預存程序的名稱。|  
 |**delete_proc**|**sysname**|在同步處理期間，用來刪除資料列的程序。|  
-|**schema_option**|**binary （8)**|給定發行項之結構描述產生選項的點陣圖。 如需支援*schema_option*值，請參閱[sp_addmergearticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**binary(8)**|給定發行項之結構描述產生選項的點陣圖。 如需支援*schema_option*值，請參閱[sp_addmergearticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|在訂閱者端建立之資料表的名稱。|  
 |**destination_owner**|**sysname**|目的地物件的擁有者名稱。|  
 |**resolver_clsid**|**nvarchar(50)**|自訂衝突解析程式的識別碼。 如果是商務邏輯處理常式，這個值便是 NULL。|  
-|**subset_filterclause**|**nvarchar （1000)**|這個發行項的篩選子句。|  
+|**subset_filterclause**|**nvarchar(1000)**|這個發行項的篩選子句。|  
 |**missing_col_count**|**int**|發行項所遺漏的已發行資料行數目。|  
 |**missing_cols**|**varbinary(128)**|描述發行項所遺漏之資料行的點陣圖。|  
 |**excluded_cols**|**varbinary(128)**|發行項所排除之資料行的點陣圖。|  
 |**excluded_col_count**|**int**|發行項所排除的資料行數目。|  
-|**資料行**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**columns**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**deleted_cols**|**varbinary(128)**|描述發行項所刪除之資料行的點陣圖。|  
 |**resolver_info**|**nvarchar(255)**|自訂衝突解析程式所需要之其他資訊的儲存體。|  
 |**view_sel_proc**|**nvarchar(290)**|合併代理程式用來初始擴展動態篩選發行集的發行項以及列舉任何篩選發行集中已變更之資料列的預存程序名稱。|  
@@ -84,15 +88,15 @@ ms.lasthandoff: 11/17/2017
 |**processing_order**|**int**|指出合併式發行集; 集中之發行項的處理順序值**0**表示發行項並未排序，而且發行項的處理順序從最低到最高的值。 如果兩個發行項有相同的值，就會同時處理它們。 如需詳細資訊，請參閱[指定合併發行項的處理順序](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。|  
 |**upload_options**|**tinyint**|定義是否能在訂閱者端進行變更或從訂閱者上傳變更，它可以是下列值之一。<br /><br /> **0** = 訂閱者端進行的更新沒有限制; 所有的變更會上傳到 「 發行者 」。<br /><br /> **1** = 允許在 「 訂閱者 」 進行變更，但未上傳到 「 發行者 」。<br /><br /> **2** = 不允許在訂閱者端進行變更。|  
 |**published_in_tran_pub**|**bit**|指出合併式發行集中的發行項也在交易式發行集中發行。<br /><br /> **0** = 發行項不發行在交易式發行項中。<br /><br /> **1** = 發行項也發行在交易式發行項中。|  
-|**輕量型**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|在更新之前，資料表的檢視之識別碼。|  
 |**delete_tracking**|**bit**|指出是否複寫刪除。<br /><br /> **0** = 不複寫刪除。<br /><br /> **1** = 複寫刪除，這是合併式複寫的預設行為。<br /><br /> 當值*delete_tracking*是**0**、 訂閱者端刪除的資料列必須手動移除在 「 發行者 」 和 「 訂閱者 」 必須手動移除在發行者端刪除的資料列。<br /><br /> 附註： 值為**0**導致無法聚合。|  
 |**compensate_for_errors**|**bit**|指出在同步處理期間發現錯誤時，是否採取補償動作。<br /><br /> **0** = Compensating 動作會停用。<br /><br /> **1** = 無法套用在 「 訂閱者 」 或 「 發行者 」 一定會導致發生補償動作恢復這些變更，這是合併式複寫的預設行為的變更。<br /><br /> 附註： 值為**0**導致無法聚合。|  
-|**sp_changearticle**|**bigint**|發行者識別範圍大小。|  
-|**範圍**|**bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
-|**臨界值**|**int**|識別範圍臨界值百分比。|  
+|**pub_range**|**bigint**|發行者識別範圍大小。|  
+|**range**|**bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
+|**threshold**|**int**|識別範圍臨界值百分比。|  
 |**stream_blob_columns**|**bit**|指出是否使用二進位大型物件資料行的資料流最佳化。 **1**表示會嘗試最佳化。|  
 |**preserve_rowguidcol**|**bit**|指出複寫是否使用現有的 rowguid 資料行。 值為**1**表示會使用現有的 ROWGUIDCOL 資料行。 **0**表示複寫加入了 ROWGUIDCOL 資料行。|  
 |**partition_view_id**|**int**|識別用來定義訂閱者資料分割的檢視。|  
@@ -111,11 +115,11 @@ ms.lasthandoff: 11/17/2017
 |**partition_options**|**tinyint**|定義發行項資料進行資料分割的方式，當所有資料列只屬於單一資料分割或單一訂閱時，能夠使效能最佳化。 *Partition_options*可以是下列值之一。<br /><br /> **0** = 發行項篩選是靜態或不會產生唯一的子集之資料的每個資料分割，也就是 「 重疊 」 的資料分割。<br /><br /> **1** = 資料分割重疊，而且訂閱者端進行的 DML 更新無法變更資料列所屬的資料分割。<br /><br /> **2** = 發行項會產生非重疊資料分割，但多個訂閱者可以接收相同的資料分割的篩選。<br /><br /> **3** = 篩選發行項會產生對每個訂閱而言是唯一的非重疊資料分割。|  
 |**name**|**sysname**|資料分割的名稱。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [管理合併式發行集使用參數化篩選的資料分割](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
  [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepartition &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_helpmergepartition &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
+ [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   
   

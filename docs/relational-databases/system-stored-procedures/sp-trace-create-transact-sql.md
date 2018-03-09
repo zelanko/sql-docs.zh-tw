@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_create_TSQL
 - sp_trace_create
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_create
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ca00a949b0fe0122f6aba9b8fecfa072374e96f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d370ebe5730f9b87d7303c067b9edc1a14d27509
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +54,10 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  是指派的數字[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]給新追蹤。 系統會忽略任何使用者所提供的輸入。 *trace_id*是**int**，預設值是 NULL。 使用者會利用*trace_id*值來識別、 修改和控制這個預存程序所定義的追蹤。  
   
- [  **@options=** ] *option_value*  
+ [ **@options=** ] *option_value*  
  指定追蹤所設定的選項。 *option_value*是**int**，沒有預設值。 使用者可以指定所取用選項的總值，來選擇這些選項的組合。 例如，若要開啟這兩個 TRACE_FILE_ROLLOVER 和 SHUTDOWN_ON_ERROR 選項，指定**6**如*option_value*。  
   
  下表列出選項、描述及其值。  
@@ -65,14 +68,14 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|指定追蹤因故無法寫入檔案時，SQL Server 便關機。 當執行安全性稽核追蹤時，這個選項非常有用。|  
 |TRACE_PRODUCE_BLACKBOX|**8**|指定伺服器將所產生最後 5 MB 的追蹤資訊記錄儲存起來。 TRACE_PRODUCE_BLACKBOX 與所有其他選項不相容。|  
   
- [  **@tracefile=** ] *'**trace_file**'*  
+ [ **@tracefile=** ] *'**trace_file**'*  
  指定將寫入追蹤的位置和檔案名稱。 *trace_file*是**nvarchar(245)**沒有預設值。 *trace_file*可以是本機目錄 （如 N 'C:\MSSQL\Trace\trace.trc') 或共用或路徑的 UNC (N'\\\\*Servername*\\*Sharename*\\*目錄*\trace.trc')。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將會附加**.trc**延伸至所有的追蹤檔名稱。 如果 TRACE_FILE_ROLLOVER 選項和*max_file_size*都有指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原始追蹤檔成長到其大小上限時，會建立新的追蹤檔案。 新的檔案具有相同名稱的原始檔案，但 _ *n* 附加以指出其順序，從**1**。 例如，如果第一個追蹤檔案名為**filename.trc**，第二個追蹤檔案名為**filename_1.trc**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會附加**.trc**延伸至所有的追蹤檔名稱。 如果 TRACE_FILE_ROLLOVER 選項和*max_file_size*都有指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原始追蹤檔成長到其大小上限時，會建立新的追蹤檔案。 新的檔案具有相同名稱的原始檔案，但 _ *n* 附加以指出其順序，從**1**。 例如，如果第一個追蹤檔案名為**filename.trc**，第二個追蹤檔案名為**filename_1.trc**。  
   
  如果使用了 TRACE_FILE_ROLLOVER 選項，建議您不要在原始追蹤檔名稱中使用底線字元。 若您使用底線字元，便會發生下列行為：  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]不會自動載入或提示您載入換用檔案 （如果已經設定任何這些檔案換用選項）。  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 不會自動載入或提示您載入換用檔案 （如果已經設定任何這些檔案換用選項）。  
   
 -   Fn_trace_gettable 函數不會載入換用檔案 (當指定利用*number_files*引數) 的原始檔案名稱以底線加上數值的結束位置。 (若為檔案換用時自動附加的底線及數值，則不在此列)。  
   
@@ -81,17 +84,17 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *trace_file*無法使用 TRACE_PRODUCE_BLACKBOX 選項時指定。  
   
- [  **@maxfilesize=** ] *max_file_size*  
+ [ **@maxfilesize=** ] *max_file_size*  
  指定追蹤檔所能成長的大小上限 (以 MB 為單位)。 *max_file_size*是**bigint**，預設值是**5**。  
   
  如果指定這個參數是不含 TRACE_FILE_ROLLOVER 選項，追蹤就會停止記錄到檔案時使用的磁碟空間超過指定的數量*max_file_size*。  
   
- [  **@stoptime=** ] **'***stop_time***'**  
+ [ **@stoptime=** ] **'***stop_time***'**  
  指定追蹤的停止日期和時間。 *stop_time*是**datetime**，預設值是 NULL。 如果是 NULL，追蹤就會執行到手動停止或伺服器關機為止。  
   
  如果兩個*stop_time*和*max_file_size*都有指定，而且 TRACE_FILE_ROLLOVER 不指定，追蹤便當指定的停止時間 」 或 「 最大檔案大小上限。 如果*stop_time*， *max_file_size*，並指定 TRACE_FILE_ROLLOVER，追蹤就會停止在指定的停止時間，假設追蹤不會填滿的磁碟機。  
   
- [  **@filecount=** ] **'***max_rollover_files***'**  
+ [ **@filecount=** ] **'***max_rollover_files***'**  
  指定利用相同的基礎檔案名稱來維護的最大追蹤檔數目。 *max_rollover_files*是**int**，大於 1。 只有在指定了 TRACE_FILE_ROLLOVER 選項時，這個參數才有效。 當*max_rollover_files*指定，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]嘗試使維護否以上*max_rollover_files*追蹤檔的開啟新的追蹤檔之前，請先刪除最舊的追蹤檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在基礎檔案名稱上附加數字來追蹤這些追蹤檔的存在時間。  
   
  例如，當*trace_file*參數指定為"c:\mytrace"，名稱為"c:\mytrace_123.trc"的檔案是早於具有名稱"c:\mytrace_124.trc"的檔案。 如果*max_rollover_files*是設定為 2，則 SQL Server 刪除"c:\mytrace_123.trc"檔再建立追蹤檔"c:\mytrace_125.trc"。  
@@ -145,7 +148,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **啟動批次**  
   
-    -   **例外狀況**  
+    -   **Exception**  
   
     -   **注意**  
   
@@ -156,8 +159,8 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="permissions"></a>Permissions  
  使用者必須有 ALTER TRACE 權限。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_trace_generateevent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   

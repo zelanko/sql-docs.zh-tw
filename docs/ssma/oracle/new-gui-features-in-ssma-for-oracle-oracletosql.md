@@ -1,7 +1,7 @@
 ---
 title: "SSMA for Oracle (OracleToSQL) 中的新 GUI 功能 |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: b7b491eb65f76d0bed615cc5a75ba62f54845ef8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6de8f6e3ccb01838117aa1696c873aec117bbb81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) 中的新 GUI 功能
 本章節描述 SSMA 使用者介面的新功能。  

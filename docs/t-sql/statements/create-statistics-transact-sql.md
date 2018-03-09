@@ -1,14 +1,15 @@
 ---
 title: "建立統計資料 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - STATISTICS_TSQL
 - CREATE STATISTICS
 - CREATE_STATISTICS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], creating
 - indexed views [SQL Server], statistics
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - creating statistics [SQL Server]
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: "105"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 088b79e73be6258afc5c664aaf14ba3cad9d2f5f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,9 +67,10 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
-          | STATS_STREAM = stats_stream ] ]   
+          | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ]
     ] ;  
   
 <filter_predicate> ::=   
@@ -84,6 +87,11 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
   
 <comparison_op> ::=  
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
+    
+<update_stats_stream_option> ::=  
+    [ STATS_STREAM = stats_stream ]  
+    [ ROWCOUNT = numeric_constant ]  
+    [ PAGECOUNT = numeric_contant ] 
 ```  
   
 ```  
@@ -138,11 +146,11 @@ CREATE STATISTICS statistics_name
   
  以下是 Production.BillOfMaterials 資料表之篩選述詞的一些範例：  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ * `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+ * `WHERE ComponentID IN (533, 324, 753)`  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+ * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
  如需有關篩選器述詞的詳細資訊，請參閱[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
@@ -184,28 +192,38 @@ CREATE STATISTICS statistics_name
  如果不支援依據每個分割區區的統計資料，則會產生錯誤。 針對下列統計資料類型，不支援累加統計資料：  
   
 -   建立統計資料時，所使用的索引未與基底資料表進行分割區對齊。  
-  
 -   在 AlwaysOn 可讀取次要資料庫上建立的統計資料。  
-  
 -   在唯讀資料庫上建立的統計資料。  
-  
 -   在篩選的索引上建立的統計資料。  
-  
 -   在檢視上建立的統計資料。  
-  
 -   在內部資料表上建立的統計資料。  
-  
 -   使用空間索引或 XML 索引建立的統計資料。  
   
 **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
+MAXDOP = *max_degree_of_parallelism*  
+**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3)。  
+  
+ 覆寫**的最大平行處理原則程度**組態選項的統計資料作業的持續時間。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
+  
+ *max_degree_of_parallelism*可以是：  
+  
+ @shouldalert  
+ 隱藏平行計畫的產生。  
+  
+ \>1  
+ 限制指定的數目或更少根據目前的系統工作負載的統計資料平行作業中使用的處理器的數目上限。  
+  
+ 0 (預設值)  
+ 根據目前的系統工作負載，使用實際數目或比實際數目更少的處理器。  
+  
+ \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
 ## <a name="permissions"></a>Permissions  
  需要這些權限之一：  
   
 -   ALTER TABLE  
-  
 -   使用者是資料表擁有者  
-  
 -   中的成員資格**db_ddladmin**固定的資料庫角色  
   
 ## <a name="general-remarks"></a>一般備註  
@@ -224,8 +242,9 @@ CREATE STATISTICS statistics_name
  [Sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)目錄檢視追蹤篩選的統計資料述詞做參考相依性中的每個資料行。 請在建立篩選統計資料之前先考慮要在資料表資料行上執行的作業，因為在篩選統計資料述詞中定義的資料表資料行是無法卸除、重新命名或變更定義的。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
-*  外部資料表不支援更新統計資料。 若要更新統計資料的外部資料表，卸除並重新建立統計資料。  
-*  您可以列出每個統計資料物件的最多 64 個資料行。
+* 外部資料表不支援更新統計資料。 若要更新統計資料的外部資料表，卸除並重新建立統計資料。  
+* 您可以列出每個統計資料物件的最多 64 個資料行。
+* MAXDOP 選項不在與 STATS_STREAM、 資料列計數和 PAGECOUNT 選項相容。
   
 ## <a name="examples"></a>範例  
 
@@ -234,7 +253,7 @@ CREATE STATISTICS statistics_name
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. 搭配 SAMPLE 數目 PERCENT 使用 CREATE STATISTICS  
  下列範例會建立 `ContactMail1` 統計資料，其方式是使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `BusinessEntityID` 資料表內，`EmailPromotion` 和 `Contact` 資料行的 5% 隨機取樣。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
@@ -243,7 +262,7 @@ CREATE STATISTICS ContactMail1
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. 搭配 FULLSCAN 和 NORECOMPUTE 使用 CREATE STATISTICS  
  下列範例會針對 `ContactMail2` 資料表的 `BusinessEntityID` 和 `EmailPromotion` 資料行中的所有資料列來建立 `Contact` 統計資料，且會停用統計資料的自動重新計算。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
@@ -252,7 +271,7 @@ CREATE STATISTICS NamePurchase
 ### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>C. 使用 CREATE STATISTICS 來建立篩選的統計資料  
  下列範例會建立篩選的統計資料 `ContactPromotion1`。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會取樣百分之 50 的資料，然後選取 `EmailPromotion` 等於 2 的所有資料列。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -265,7 +284,7 @@ GO
   
  因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入資料至暫存資料表建立統計資料，完整掃描選項的外部資料表將花更長時間。 在大型資料表，預設取樣方法通常已足夠。  
   
-```t-sql  
+```sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
@@ -276,7 +295,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. 使用 CREATE STATISTICS 搭配 FULLSCAN 和 PERSIST_SAMPLE_PERCENT  
  下列範例會建立`ContactMail2`統計資料的所有資料列`BusinessEntityID`和`EmailPromotion`的資料行`Contact`資料表，並設定所有的後續更新執行不明確地指定取樣百分之 100 取樣百分比百分比。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
@@ -287,14 +306,14 @@ CREATE STATISTICS NamePurchase
 ### <a name="f-create-statistics-on-two-columns"></a>F. 在兩個資料行上建立統計資料  
  下列範例會建立`CustomerStats1`統計資料，根據`CustomerKey`和`EmailAddress`的資料行`DimCustomer`資料表。 根據具有統計價值的取樣中的資料列建立統計資料`Customer`資料表。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. 使用完整掃描來建立統計資料  
  下列範例會建立`CustomerStatsFullScan`統計資料，根據掃描中的資料列的所有`DimCustomer`資料表。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
@@ -302,12 +321,12 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. 藉由指定取樣百分比建立統計資料  
  下列範例會建立`CustomerStatsSampleScan`統計資料，根據掃描中的資料列的 50%`DimCustomer`資料表。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [統計資料](../../relational-databases/statistics/statistics.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   

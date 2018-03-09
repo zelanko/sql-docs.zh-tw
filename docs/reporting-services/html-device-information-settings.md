@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6f105f34e6e5d5c06159c40c8958f097ca5b2512
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd273c3dd52eb3feb0ab4f5db30b4569744e78c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-device-information-settings"></a>HTML 裝置資訊設定
 下表列出以 HTML 格式轉譯的裝置資訊設定。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 > [!IMPORTANT]  
 >  下表所列出帶有 **(\*)** 的裝置資訊設定已被取代，不應在新的應用程式中使用。 如需詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
-|設定|Value|  
+|設定|ReplTest1|  
 |-------------|-----------|  
 |**AccessibleTablix**|指出是否要使用其他可存取性中繼資料來轉譯，以搭配螢幕助讀員使用。 其他可存取性中繼資料會使得轉譯的報表與下列文件內的技術標準相容：＜Electronic and Information Technology Accessibility Standards＞文件 (章節 508) 的＜Web-based Intranet and Internet Information and Applications＞章節 (1194.22)。<br /><br /> (g) 應該針對資料表識別資料列和資料行標頭。<br /><br /> (h) 如果資料表具有兩個或多個邏輯層的資料列或資料行標頭，應該使用標記來讓資料格與標頭資料格產生關聯。|  
 |**ActionScript(\*)**|指定發生動作事件 (例如鑽研或書籤點擊) 時所要使用之 JavaScript 函數的名稱。 如果指定這個參數，動作事件便會觸發具名 JavaScript 函數，而非回傳至伺服器。|  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 |**ExpandContent**|指出報表是否應該包括在限制水平大小的表格結構中。|  
 |**FindString**|報表中要搜尋的文字。 這個參數的預設值為空字串。|  
 |**GetImage (\*)**|取得 HTML 檢視器使用者介面的特定圖示。|  
-|**HTMLFragment**|指出是否建立 HTML 片段來取代完整的 HTML 文件。 HTML 片段會在 TABLE 元素中包含報表內容，並省略 HTML 和 BODY 元素。 預設值是 **false**秒。 如果您使用 SOAP API 的 **M:ReportExecution2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@, ReportExecution2005.Warning[]@,System.String[]@)** 方法來轉譯為 HTML，而且若是轉譯的報表含有影像，則需要將此裝置資訊設定為 **true** 。 轉譯時使用含有將 **HTMLFragment** 屬性設定為 **true** 的 SOAP，會建立包含工作階段的資訊，這些資訊可用以正確地要求影像。 影像必須是報表伺服器資料庫中上傳的資源。|  
+|**HTMLFragment**|指出是否建立 HTML 片段來取代完整的 HTML 文件。 HTML 片段會在 TABLE 元素中包含報表內容，並省略 HTML 和 BODY 元素。 預設值為 **false**。 如果您使用 SOAP API 的 **M:ReportExecution2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@, ReportExecution2005.Warning[]@,System.String[]@)** 方法來轉譯為 HTML，而且若是轉譯的報表含有影像，則需要將此裝置資訊設定為 **true** 。 轉譯時使用含有將 **HTMLFragment** 屬性設定為 **true** 的 SOAP，會建立包含工作階段的資訊，這些資訊可用以正確地要求影像。 影像必須是報表伺服器資料庫中上傳的資源。|  
 |**ImageConsolidation**|指出是否要將轉譯的圖表、地圖、量測計和指標影像合併成一個大型影像。 當報表包含許多資料視覺效果項目時，影像的合併有助於改良用戶端瀏覽器中報表的效能。 對於大多數最新型的瀏覽器而言，預設值為 **true** 。|  
 |**JavaScript**|指出在轉譯的報表中是否支援 JavaScript。 預設值為 **true**。|  
 |**LinkTarget**|報表中超連結的目標。 透過提供視窗名稱，可將視窗或框架作為目標，像是 **LinkTarget**=*window_name*或是您可以使用 **LinkTarget**=_blank 以新視窗為目標。 其他有效的目標名稱包括 _self, _parent, and _top。|  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 |**ResourceStreamRoot(\*)**|所有影像資源 (例如切換或排序的影像) 的 URL 前面所要加上的字串。|  
 |**章節**|要轉譯之報表的頁碼。 **0** 的值表示轉譯報表的所有區段。 預設值是 **1**秒。|  
 |**StreamRoot (\*)**|這個路徑會加在報表伺服器傳回的 HTML 報表中的 IMG 元素之 **src** 屬性值前面。 依預設，報表伺服器會提供路徑。 您可以使用此設定為在報表中的影像指定根路徑 (例如，**http://\<伺服器名稱>/resources/companyimages**)。|  
-|**StyleStream**|指出是否將樣式和指令碼建立成不同的資料流，而不是在文件中。 預設值是 **false**秒。|  
+|**StyleStream**|指出是否將樣式和指令碼建立成不同的資料流，而不是在文件中。 預設值為 **false**。|  
 |**工具列**|指出是否要顯示或隱藏工具列。 這個參數的預設值為 **true**。 如果這個參數的值為 **false**，則會忽略所有剩餘的選項 (文件引導模式除外)。 如果您省略這個參數，工具列就會自動顯示以轉譯支援該參數的格式。<br /><br /> 當您使用 URL 存取來轉譯報表時，會轉譯報表檢視器工具列。 工具列不是透過 SOAP API 來轉譯。 不過， **Toolbar** 裝置資訊設定會影響使用 SOAP **Render** 方法時顯示報表的方式。 如果此參數值在使用 SOAP 轉譯為 HTML 時為 **true** ，則會轉譯報表的第一個區段。 如果值是 **false**，則會將整個 HTML 報表轉譯為單一 HTML 頁面。|  
 |**UserAgent**|提出要求之瀏覽器的 **user-agent** 字串，該字串可在 HTTP 要求中找到。|  
 |**Zoom (\*)**|報表縮放值，以整數百分比或字串常數表示。 標準字串值包括 **Page Width** 和 **Whole Page**。 Internet Explorer 5.0 之前的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 版本和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 瀏覽器都會忽略這個參數。 此參數的預設值為 **100**。|  

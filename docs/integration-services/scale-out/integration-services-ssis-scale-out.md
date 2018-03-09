@@ -1,7 +1,8 @@
 ---
 title: SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs
+ms.description: This article provides an overview of the SQL Server Integration Services (SSIS) Scale Out feature, which provides high-performance execution of SSIS packages
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
@@ -15,20 +16,39 @@ ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0277d312ce4dab14e7ba64529e3eb2251a0d2d02
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3dc41da860382173076afafd768de09bd20366e
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) 相應放大
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 相應放大透過將執行分散到多部電腦，來提供高效能套件執行。 您可以在 SQL Server Management Studio 中提交多個套件執行的要求。 這些套件將會以相應放大模式平行執行。  
+SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out 透過將套件執行散佈到多部電腦，來提供 SSIS 套件的高效能執行。 設定 Scale Out 之後，您可以從 SQL Server Management Studio (SSMS)，透過相應放大模式來平行執行多個套件執行。
 
-[!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out 包含一部 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out 主機及一或多個 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out 背景工作角色。 相應放大主機負責相應放大管理，以及接收來自使用者的套件執行要求。 相應放大背景工作會從相應放大主機提取執行工作，並執行套件執行工作。 如需詳細資訊，請參閱[相應放大主機](integration-services-ssis-scale-out-master.md)和[相應放大背景工作](integration-services-ssis-scale-out-worker.md)。
+## <a name="components"></a>Components
+[!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out 包含一個 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Master 及一或多個 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Worker。
 
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out 可以在一部電腦上設定，而電腦上同時設定 Scale Out 主機和 Scale Out背景工作角色。 相應放大也可以在多部電腦上執行，其中，每個相應放大背景工作都是位在不同的電腦上。
-- [逐步解說：設定 Integration Services 相應放大](walkthrough-set-up-integration-services-scale-out.md)
+-   相應放大主機負責相應放大管理，以及接收來自使用者的套件執行要求。 如需詳細資訊，請參閱 [Scale Out Master](integration-services-ssis-scale-out-master.md)。
 
-相應放大支援在 SSISDB 目錄中平行執行多個套件。 如需詳細資訊，請參閱[在相應放大中執行套件](run-packages-in-integration-services-ssis-scale-out.md)。
+-   Scale Out Worker 會從 Scale Out Master 提取執行工作，並執行套件。 如需詳細資訊，請參閱 [Scale Out Worker](integration-services-ssis-scale-out-worker.md)。
+
+## <a name="configuration-options"></a>設定選項
+您可以在下列設定中設定 Scale Out：
+
+-   **在單一電腦上**，其中，Scale Out Master 和 Scale Out Worker 是在同一部電腦上並排執行。
+
+-   **在多部電腦上**其中，每個 Scale Out Worker 都在不同的電腦上。
+
+## <a name="what-you-can-do"></a>您可以採取的方法
+設定 Scale Out 之後，您可以執行下列動作：
+
+-   平行執行多個部署至 SSISDB 目錄的套件。 如需詳細資訊，請參閱 [在 Scale Out 中執行套件](run-packages-in-integration-services-ssis-scale-out.md)。
+
+-   管理 Scale Out Manager 應用程式中的 Scale Out 拓撲。 如需詳細資訊，請參閱 [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md)。
+
+## <a name="next-steps"></a>後續步驟
+-   [在單一電腦上開始使用 Integration Services (SSIS) Scale Out](get-started-with-ssis-scale-out-onebox.md)
+
+-   [逐步解說：設定 Integration Services 相應放大](walkthrough-set-up-integration-services-scale-out.md)

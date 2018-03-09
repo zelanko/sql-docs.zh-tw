@@ -1,27 +1,28 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server 支援對照表 |Microsoft 文件"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9867704e5fe3b5522d22c70cc1b79b495de1bfa5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 30e750a2f69b52c04907c91aa0d47f2a3a60be91
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支援對照表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/18/2017
   此頁面包含 Microsoft JDBC Driver for SQL Server 的支援對照表與支援週期原則。  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Microsoft JDBC Driver 支援生命週期對照表及原則  
- Microsoft 支援週期 (MSL) 原則為 Microsoft 產品的支援生命週期提供透明而可預測的資訊。 JDBC 驅動程式 3.0 版與 4.x 版自發行日開始，會提供五年的主要支援。 主要支援會在 Microsoft 支援週期網站上定義。  
+ Microsoft 支援週期 (MSL) 原則為 Microsoft 產品的支援生命週期提供透明而可預測的資訊。 JDBC 驅動程式 3.0 版、 4.x 和 6.x 有五年的驅動程式的主要支援的發行日期。 主要支援會在 Microsoft 支援週期網站上定義。  
   
  Microsoft JDBC Driver 不提供延長支援與自訂支援選項。  
     
@@ -37,6 +38,7 @@ ms.lasthandoff: 11/18/2017
   
 |驅動程式名稱|驅動程式套件版本|適用於 JAR(s)|結束主流支援|
 |-|-|-|-|  
+|Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 1 月 22 日|    
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 年 6 月 30 日|    
 |Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 年 7 月 14 日|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020 年 8 月 24 日|  
@@ -56,20 +58,21 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="sql-version-compatibility"></a>SQL 的版本相容性  
   
-|驅動程式版本|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|  
-|-|-|-|-|-|-|-|-|-| 
-|6.2|Y|Y|Y|Y|Y|Y|Y|Y|  
-|6.1|Y|Y|Y|Y|Y|Y|Y|N|  
-|6.0|Y|Y|Y|Y|Y|Y|Y|N|  
-|4.2|Y|Y|Y|Y|Y|Y|Y|N|  
-|4.1|Y|Y|Y|Y|Y|Y|Y|N|  
-|4.0|Y|Y|Y|Y|Y|Y|Y|N|  
-|3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|  
-|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|  
-|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|  
-|1.1|N|N|N|N|N|N|N|N|  
-|1.0|N|N|N|N|N|N|N|N|  
-|2000|N|N|N|N|N|N|N|N|  
+|驅動程式版本|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL azure 受管理的執行個體 （擴充私人預覽中）|  
+|-|-|-|-|-|-|-|-|-|-|
+|6.4|N|Y|Y|Y|Y|Y|Y|Y|Y|  
+|6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
+|6.1|Y|Y|Y|Y|Y|Y|Y|N|N|
+|6.0|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.2|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.1|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.0|Y|Y|Y|Y|Y|Y|Y|N|N|
+|3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|N|
+|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|N|
+|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|N|
+|1.1|N|N|N|N|N|N|N|N|N|  
+|1.0|N|N|N|N|N|N|N|N|N|  
+|2000|N|N|N|N|N|N|N|N|N|  
   
  <sup>1</sup>Microsoft SQL Server JDBC Driver 3.0 版可以連接到 SQL Server 2012 做為下層用戶端。  
   
@@ -85,6 +88,7 @@ ms.lasthandoff: 11/18/2017
   
 |JDBC 驅動程式版本|JRE 版本|JDBC API 版本| 
 |-|-|-|  
+|6.4|1.7, 1.8, 1.9|4.1、 4.2、 4.3 （部分）|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  

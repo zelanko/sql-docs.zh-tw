@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
 - CREATE_EXTERNAL_FILE_FORMAT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d7b64d907e0474361a342dbdbc6e581f2c898ed
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 8fd2fa33a8a9107c86cfda7e0a628ab282efa534
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>建立外部檔案格式 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -106,22 +108,22 @@ WITH (
  *file_format_name*  
  指定外部檔案格式的名稱。
   
- FORMAT_TYPE 指定外部資料的格式。
+ FORMAT_TYPE = [PARQUET |ORC |RCFILE |PARQUET] 指定外部資料的格式。
   
- PARQUET 指定 Parquet 格式。
+   -   PARQUET 指定 Parquet 格式。
   
- ORC  
- 指定最佳化的資料列單欄式 (ORC) 格式。 此選項需要 Hive 0.11 或外部的 Hadoop 叢集上更高版本。 在 Hadoop，ORC 檔案格式會提供更好的壓縮和效能比 RCFILE 檔案格式。
-  
- RCFILE (搭配 SERDE_METHOD = *SERDE_method*) 指定的單欄式記錄的檔案格式 (RcFile)。 此選項需要您指定的 hive 控制檔的序列化和還原序列化程式 (SerDe) 方法。 如果您使用 Hadoop Hive/HiveQL 查詢 RC 檔，這項需求都相同。 請注意，SerDe method 會區分大小寫。
-  
- 使用 PolyBase 支援兩種 SerDe 方法指定 RCFile 範例。
-  
--   FORMAT_TYPE = RCFILE，SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
-  
--   FORMAT_TYPE = RCFILE，SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
-  
- DELIMITEDTEXT 指定資料行分隔符號與文字格式也稱為欄位結束字元。
+   -   ORC  
+   指定最佳化的資料列單欄式 (ORC) 格式。 此選項需要 Hive 0.11 或外部的 Hadoop 叢集上更高版本。 在 Hadoop，ORC 檔案格式會提供更好的壓縮和效能比 RCFILE 檔案格式。
+
+   -   RCFILE (搭配 SERDE_METHOD = *SERDE_method*) 指定的單欄式記錄的檔案格式 (RcFile)。 此選項需要您指定的 hive 控制檔的序列化和還原序列化程式 (SerDe) 方法。 如果您使用 Hadoop Hive/HiveQL 查詢 RC 檔，這項需求都相同。 請注意，SerDe method 會區分大小寫。
+
+   使用 PolyBase 支援兩種 SerDe 方法指定 RCFile 範例。
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+
+   -   DELIMITEDTEXT 指定資料行分隔符號與文字格式也稱為欄位結束字元。
   
  FIELD_TERMINATOR = *field_terminator*僅適用於分隔的文字檔。 欄位結束字元文字分隔檔案中指定一個或多個標記的每個欄位 （資料行） 結尾的字元。 預設值是管道字元 ꞌ | ꞌ。 如需保證支援，我們建議使用一或多個 ascii 字元。
   
@@ -152,7 +154,7 @@ WITH (
   
 -   STRING_DELIMITER = '0x7E0x7E'-兩個波狀符號 (例如，~ ~)
   
- 日期\_格式 = *fieldinfo*指定分隔的文字檔案中可能會出現的所有日期和時間資料的自訂格式。 如果原始程式檔會使用預設的日期時間格式，不需要這個選項。 只有一個自訂的日期時間格式允許每個檔案。 您無法指定每個檔案的多個自訂日期時間格式。 不過，您可以使用多個日期時間格式，如果每個外部資料表定義中其各自的資料類型的預設格式。
+日期\_格式 = *fieldinfo*指定分隔的文字檔案中可能會出現的所有日期和時間資料的自訂格式。 如果原始程式檔會使用預設的日期時間格式，不需要這個選項。 只有一個自訂的日期時間格式允許每個檔案。 您無法指定每個檔案的多個自訂日期時間格式。 不過，您可以使用多個日期時間格式，如果每個外部資料表定義中其各自的資料類型的預設格式。
 
 PolyBase 只會使用自訂日期格式匯入資料。 它不使用自訂格式以將資料寫入至外部檔案。
 
@@ -182,34 +184,34 @@ PolyBase 只會使用自訂日期格式匯入資料。 它不使用自訂格式�
   
 |Date 類型|範例|Description|  
 |---------------|-------------|-----------------|  
-|DateTime|DATE_FORMAT = 'yyyy MM dd HH:mm:ss.fff'|除了 年、 月、 日，此日期格式包含 00-24 小時，00-59 分鐘、 00-59 秒，而 3 位數 （毫秒）。|  
+|DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|除了 年、 月、 日，此日期格式包含 00-24 小時，00-59 分鐘、 00-59 秒，而 3 位數 （毫秒）。|  
 |DateTime|DATE_FORMAT = 'yyyy MM dd hh:mm:ss.ffftt'|除了 年、 月、 日，此日期格式包含 00-12 小時，00-59 分鐘、 00-59 秒、 毫秒和 AM，3 位數 am、 PM、 或 pm。 |  
-|SmallDateTime|DATE_FORMAT = ' yyyy-MM-dd hh: mm '|除了 年、 月和日，此日期格式包含 00-23 小時，00-59 分鐘的時間。|  
+|SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|除了 年、 月和日，此日期格式包含 00-23 小時，00-59 分鐘的時間。|  
 |SmallDateTime|DATE_FORMAT = 'yyyy MM dd hh:mmtt'|除了 年、 月和日，此日期格式包含 00-11 小時，00-59 分鐘、 沒有秒，且 AM、 am、 PM、 或 pm。|  
 |日期|DATE_FORMAT = ' yyyy-MM-dd'|年、 月和日。 沒有任何時間項目會包含項目。|  
 |日期|DATE_FORMAT = ' yyyy-MMM-dd'|年、 月和日。 指定月份時，使用 3 M，輸入的值是一項或字串年 1 月、 年 2 月、 3 月、 年 4 月、 5、 6 月、 年 7 月、 年 8 月 8，9 月、 年 10 月、 年 11 月或年 12 月。|  
-|datetime2|DATE_FORMAT = 'yyyy MM dd: ss.fffffff'|除了 年、 月和日，此日期格式包含 00-23 小時，00-59 分鐘、 00-59 秒，而 7 位數毫秒。|  
+|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|除了 年、 月和日，此日期格式包含 00-23 小時，00-59 分鐘、 00-59 秒，而 7 位數毫秒。|  
 |datetime2|DATE_FORMAT = 'yyyy MM dd hh:mm:ss.ffffffftt'|除了 年、 月和日，此日期格式包含 00-11 個小時，00-59 分鐘、 00-59 秒、 毫秒和 AM，7 位數 am、 PM、 或 pm。|  
-|DateTimeOffset|DATE_FORMAT = 'yyyy MM dd: ss.fffffff zzz'|除了 年、 月和日，此日期格式包含 00-23 小時，00-59 分鐘、 00-59 秒，而 7 位數毫秒，且您放在做為輸入檔中將時區時差`{+&#124;-}HH:ss`。 例如，不含日光節約 Los Angeles 以來節省是 8 小時 utc 值為-08:00，在輸入檔中的指定為 Los Angeles 時區。|  
+|DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|除了 年、 月和日，此日期格式包含 00-23 小時，00-59 分鐘、 00-59 秒，而 7 位數毫秒，且您放在做為輸入檔中將時區時差`{+&#124;-}HH:ss`。 例如，不含日光節約 Los Angeles 以來節省是 8 小時 utc 值為-08:00，在輸入檔中的指定為 Los Angeles 時區。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy MM dd hh:mm:ss.ffffffftt zzz'|除了 年、 月和日，此日期格式包含 00-11 個小時，00-59 分鐘、 00-59 秒、 毫秒、 （AM、 am、 PM、 或 pm），7 位數和時區時差。 請參閱先前的資料列中的描述。|  
-|Time|DATE_FORMAT = 'Hh: mm:'|沒有日期值，只為 00-23 小時，00-59 分鐘和 00-59 秒。|  
+|Time|DATE_FORMAT = 'HH:mm:ss'|沒有日期值，只為 00-23 小時，00-59 分鐘和 00-59 秒。|  
   
  所有支援的日期格式：
   
 |datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
-|[[M] M]M-[d] d-[yy] yy hh: mm: [.fff]|[[M] M]M-[d] d-[yy] yy hh: mm [: 00]|[[M] M]M-[d] d-[yy] yy|[[M] M]M-[d] d-[yy] yy hh: mm: [.fffffff]|[[M] M]M-[d] d-[yy] yy hh: mm: [.fffffff] zzz|  
-|[[M] M]M-[d] d-[yy] yy hh: mm: [.fff] [tt]|[[M] M]M-[d] d-[yy] yy hh: mm [: 00] [tt]||[[M] M]M-[d] d-[yy] yy hh: mm: [.fffffff] [tt]|[[M] M]M-[d] d-[yy] yy hh: mm: [.fffffff] [tt] zzz|  
-|[[M] M]M [yy] yy-[d] d hh: mm: [.fff]|[[M] M]M [yy] yy-[d] d hh: mm [: 00]|[[M] M]M [yy] yy-[d] d|[[M] M]M [yy] yy-[d] d hh: mm: [.fffffff]|[[M] M]M [yy] yy-[d] d hh: mm: [.fffffff] zzz|  
-|[[M] M]M-[yy] yy-[d] d hh: mm: [.fff] [tt]|[[M] M]M-[yy] yy-[d] d hh: mm [: 00] [tt]||[[M] M]M-[yy] yy-[d] d hh: mm: [.fffffff] [tt]|[[M] M]M-[yy] yy-[d] d hh: mm: [.fffffff] [tt] zzz|  
-|[yy] yy-[[M] M] M-[d] d hh: mm: [.fff]|[yy] yy-[[M] M] M-[d] d hh: mm [: 00]|[yy] yy-[[M] M] M-[d] d|[yy] yy-[[M] M] M-[d] d hh: mm: [.fffffff]|[yy] yy-[[M] M] M-[d] d hh: mm: [.fffffff] zzz|  
-|[yy] yy-[[M] M] M-[d] d hh: mm: [.fff] [tt]|[yy] yy-[[M] M] M-[d] d hh: mm [: 00] [tt]||[yy] yy-[[M] M] M-[d] d hh: mm: [.fffffff] [tt]|[yy] yy-[[M] M] M-[d] d hh: mm: [.fffffff] [tt] zzz|  
-|[yy] yy-[d] d-[[M] M] M hh: mm: [.fff]|[yy] yy-[d] d-[[M] M] M hh: mm [: 00]|[yy] yy-d [d]-[[M] M] M|[yy] yy-[d] d-[[M] M] M hh: mm: [.fffffff]|[yy] yy-[d] d-[[M] M] M ss [.fffffff] zzz|  
-|[yy] yy-[d] d-[[M] M] M hh: mm: [.fff] [tt]|[yy] yy-[d] d-[[M] M] M hh: mm [: 00] [tt]||[yy] yy-[d] d-[[M] M] M hh: mm: [.fffffff] [tt]|[yy] yy-[d] d-[[M] M] M hh: mm: [.fffffff] [tt] zzz|  
-|[d] d-[[M] M] M-[yy] yy hh: mm: [.fff]|[d] d-[[M] M] M-[yy] yy hh: mm [: 00]|[d] d-[[M] M] M-[yy] yy|[d] d-[[M] M] M-[yy] yy hh: mm: [.fffffff]|[d] d-[[M] M] M-[yy] yy hh: mm: [.fffffff] zzz|  
-|[d] d-[[M] M] M-[yy] yy hh: mm: [.fff] [tt]|[d] d-[[M] M] M-[yy] yy hh: mm [: 00] [tt]||[d] d-[[M] M] M-[yy] yy hh: mm: [.fffffff] [tt]|[d] d-[[M] M] M-[yy] yy hh: mm: [.fffffff] [tt] zzz|  
-|[d] d-[yy] yy-[[M] M] M hh: mm: [.fff]|[d] d-[yy] yy-[[M] M] M hh: mm [: 00]|[d] d-[yy] yy-[[M] M] M|[d] d-[yy] yy-[[M] M] M hh: mm: [.fffffff]|[d] d-[yy] yy-[[M] M] M ss [.fffffff] zzz|  
-|[d] d-[yy] yy-[[M] M] M hh: mm: [.fff] [tt]|[d] d-[yy] yy-[[M] M] M hh: mm [: 00] [tt]||[d] d-[yy] yy-[[M] M] M hh: mm: [.fffffff] [tt]|[d] d-[yy] yy-[[M] M] M hh: mm: [.fffffff] [tt] zzz|  
+|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
+|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fff]|[M[M]]M-[yy]yy-[d]d HH:mm[:00]|[M[M]]M-[yy]yy-[d]d|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff]|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fff][tt]|[[M] M]M-[yy] yy-[d] d hh: mm [: 00] [tt]||[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt]|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt] zzz|  
+|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fff]|[yy]yy-[M[M]]M-[d]d HH:mm[:00]|[yy]yy-[M[M]]M-[d]d|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fff][tt]|[yy] yy-[[M] M] M-[d] d hh: mm [: 00] [tt]||[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt]|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt] zzz|  
+|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fff]|[yy]yy-[d]d-[M[M]]M HH:mm[:00]|[yy]yy-[d]d-[M[M]]M|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm[:00][tt]||[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
+|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fff]|[d]d-[M[M]]M-[yy]yy HH:mm[:00]|[d]d-[M[M]]M-[yy]yy|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff]|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm[:00][tt]||[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
+|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fff]|[d]d-[yy]yy-[M[M]]M HH:mm[:00]|[d]d-[yy]yy-[M[M]]M|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm[:00][tt]||[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
   
  詳細資料：  
   
@@ -244,25 +246,25 @@ PolyBase 只會使用自訂日期格式匯入資料。 它不使用自訂格式�
  
  DELIMITEDTEXT 格式類型支援這些壓縮方式：
   
--   資料壓縮 = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
--   資料壓縮 = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
 
  RCFILE 格式類型支援這種壓縮方式：
   
--   資料壓縮 = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
  ORC 檔案格式類型支援這些壓縮方式：
   
--   資料壓縮 = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
--   資料壓縮 = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
  PARQUET 檔案格式類型支援以下壓縮方式：
   
--   資料壓縮 = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
--   資料壓縮 = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
 ## <a name="permissions"></a>Permissions  
  需要 ALTER ANY EXTERNAL FILE FORMAT 權限。
@@ -346,7 +348,7 @@ WITH (
 );  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [建立外部 TABLE AS SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

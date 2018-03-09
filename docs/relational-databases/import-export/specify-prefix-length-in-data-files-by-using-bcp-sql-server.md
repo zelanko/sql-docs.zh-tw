@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e27fceed483f3f66d1f167c5971a536bc4aa6a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf8736be942f9edd7c23da9f7acf6191b6eab625
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定資料檔的前置長度 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 為了讓原生格式的資料大量匯出至資料檔案時，能夠有最精簡的檔案儲存方式，**bcp** 命令會在每個欄位前面都加上一或多個字元，指出欄位的長度。 這些字元稱作 *「長度前置字元」*(Length prefix characters)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+為了讓原生格式的資料大量匯出至資料檔時，能夠有最精簡的檔案儲存方式， **bcp** 命令會在每個欄位前面都加上一個或多個字元，指出欄位的長度。 這些字元稱作 *「長度前置字元」*(Length prefix characters)。  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>前置長度的 bcp 提示字元  
  如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 (**-f**) 或資料格式參數 (**-n**、 **-c**、 **-w**或 **-N**)，此命令就會提示您輸入每個資料欄位的前置長度，如下所示：  
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
  當您大量匯出資料並以原生資料類型或字元格式儲存時，請使用下表所示的前置詞長度。  
   
-|SQL Server<br /><br /> 資料類型|原生格式<br /><br /> NOT NULL|原生格式<br /><br /> NULL|字元格式<br /><br /> NOT NULL|字元格式<br /><br /> NULL|  
+|[SQL Server]<br /><br /> 資料類型|原生格式<br /><br /> NOT NULL|原生格式<br /><br /> NULL|字元格式<br /><br /> NOT NULL|字元格式<br /><br /> NULL|  
 |------------------------------|--------------------------------|----------------------------|-----------------------------------|-------------------------------|  
 |**char**|2|2|2|2|  
 |**varchar**|2|2|2|2|  
@@ -67,21 +69,21 @@ ms.lasthandoff: 11/17/2017
 |**binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
 |**image***|4|4|4|4|  
-|**datetime**|0|1|0|1|  
-|**smalldatetime**|0|1|0|1|  
-|**decimal**|1|1|1|1|  
-|**numeric**|1|1|1|1|  
-|**float**|0|1|0|1|  
-|**real**|0|1|0|1|  
-|**int**|0|1|0|1|  
-|**bigint**|0|1|0|1|  
-|**smallint**|0|1|0|1|  
-|**tinyint**|0|1|0|1|  
-|**money**|0|1|0|1|  
-|**smallmoney**|0|1|0|1|  
-|**bit**|0|1|0|1|  
-|**uniqueidentifier**|1|1|0|1|  
-|**timestamp**|1|1|1|1|  
+|**datetime**|0|@shouldalert|0|@shouldalert|  
+|**smalldatetime**|0|@shouldalert|0|@shouldalert|  
+|**decimal**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**numeric**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**float**|0|@shouldalert|0|@shouldalert|  
+|**real**|0|@shouldalert|0|@shouldalert|  
+|**int**|0|@shouldalert|0|@shouldalert|  
+|**bigint**|0|@shouldalert|0|@shouldalert|  
+|**smallint**|0|@shouldalert|0|@shouldalert|  
+|**tinyint**|0|@shouldalert|0|@shouldalert|  
+|**money**|0|@shouldalert|0|@shouldalert|  
+|**smallmoney**|0|@shouldalert|0|@shouldalert|  
+|**bit**|0|@shouldalert|0|@shouldalert|  
+|**uniqueidentifier**|@shouldalert|@shouldalert|0|@shouldalert|  
+|**timestamp**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
 |**varchar(max)**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  
 |**UDT** (使用者定義資料類型)|8|8|8|8|  

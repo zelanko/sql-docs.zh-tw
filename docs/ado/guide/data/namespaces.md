@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: namespaces in ADO
+helpviewer_keywords:
+- namespaces in ADO
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b5921d1c91ee326810041c612097c41e9e099e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c34bb680f7a066eeb694cf62fba39cabb0d4cbea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="namespaces"></a>命名空間
 在 ADO 中的 XML 持續性格式會使用下列四個命名空間。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  在 ADO 中的 XML 持續性格式會使用下列四個命名空間。  
   
-|Prefix|描述|  
+|Prefix|Description|  
 |------------|-----------------|  
 |s|是指 「 XML 資料 」 命名空間包含的項目和目前資料錄集的結構描述定義的屬性。|  
 |dt|參考的資料型別定義的規格。|  
@@ -50,5 +52,5 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
   
  使用者可以定義為任何名稱，只要整個 XML 文件便固定使用此名稱。 ADO 永遠會寫出"s，""rs 」，「 dt 」，"z，"但這些前置詞名稱不是硬式編碼成載入元件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

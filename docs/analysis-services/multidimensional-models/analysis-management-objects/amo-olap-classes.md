@@ -1,37 +1,36 @@
 ---
 title: "AMO OLAP 類別 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d2d64c16bac9814a78a525c43693c6fb10507b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 609958fd81ee7c703d7608f9a353c15658c1528b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP 類別
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]分析管理物件 (AMO) OLAP 類別可協助您建立、 修改、 刪除和處理 cube、 維度和相關的物件，例如關鍵效能指標 (Kpi)、 動作和主動式快取。  
+  分析管理物件 (AMO) OLAP 類別可協助您建立、修改、刪除和處理 Cube、維度及相關的物件，例如關鍵效能指標 (KPI)、動作和主動式快取。  
   
  如需設定 AMO 程式設計環境，如何與伺服器建立連線，存取資料庫，或是定義資料來源和資料來源檢視，請參閱[AMO 基礎類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)。  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="basic-classes"></a>基本類別  
   
-###  <a name="Dimensions"></a>維度物件  
+###  <a name="Dimensions"></a> 維度物件  
  建立維度的方式是將它加入父資料庫的維度集合，並使用 Update 方法將 <xref:Microsoft.AnalysisServices.Dimension> 物件更新到伺服器。  
   
  若要移除維度，必須使用 <xref:Microsoft.AnalysisServices.Dimension> 的 Drop 方法來卸除它。 使用 Remove 方法從資料庫的維度集合移除 <xref:Microsoft.AnalysisServices.Dimension>，並不會將它從伺服器刪除，只會從 AMO 物件模型刪除。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 12/08/2017
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Dimension>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-###  <a name="Cubes"></a>Cube 物件  
+###  <a name="Cubes"></a> Cube 物件  
  建立 Cube 的方式是將它加入資料庫的 Cube 集合，然後使用 Update 方法將 <xref:Microsoft.AnalysisServices.Cube> 物件更新到伺服器。 Cube 的 Update 方法可以包括參數 UpdateOptions.ExpandFull，以確保 Cube 中所有修改過的物件，都會因這個更新動作而更新到伺服器。  
   
  若要移除 Cube，必須使用 <xref:Microsoft.AnalysisServices.Cube> 的 Drop 方法來卸除它。 從集合移除 Cube 並不會影響伺服器。  
@@ -83,24 +82,24 @@ ms.lasthandoff: 12/08/2017
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Cube>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-###  <a name="MeasureGroups"></a>MeasureGroup 物件  
+###  <a name="MeasureGroups">MeasureGroup 物件</a>  
  建立量值群組的方式是將它加入 Cube 的量值群組集合，然後使用它自己的 Update 方法將 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件更新到伺服器。 可以使用 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件自己的 Drop 方法來移除它。  
   
  可以在建立 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件之後處理它。 <xref:Microsoft.AnalysisServices.MeasureGroup> 可以使用自己的 Process 方法加以處理，或者可以在父物件使用自己的 Process 方法處理自己時來處理它。  
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.MeasureGroup>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-###  <a name="Partition"></a>分割區物件  
+###  <a name="Partition">分割區物件</a>  
  建立 <xref:Microsoft.AnalysisServices.Partition> 物件的方式是將它加入父量值群組的資料分割集合，然後使用 Update 方法更新伺服器上的 <xref:Microsoft.AnalysisServices.Partition> 物件。 可以使用 Drop 方法來移除 <xref:Microsoft.AnalysisServices.Partition> 物件。  
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Partition>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-###  <a name="AggregationDesign"></a>AggregationDesign 物件  
+###  <a name="AggregationDesign">AggregationDesign 物件</a>  
  彙總設計是從 <xref:Microsoft.AnalysisServices.AggregationDesign> 物件使用 AggregationDesign 方法來建構。  
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.AggregationDesign>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-###  <a name="Aggregation"></a>Aggregation 物件  
+###  <a name="Aggregation">Aggregation 物件</a>  
  建立 <xref:Microsoft.AnalysisServices.Aggregation> 物件的方式是將它加入父量值群組的彙總設計集合，然後使用 Update 方法更新伺服器上的父量值群組物件。 透過使用 Remove 方法或是 RemoveAt 方法從 <xref:Microsoft.AnalysisServices.AggregationCollection> 移除彙總。  
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Aggregation>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
@@ -120,7 +119,7 @@ ms.lasthandoff: 12/08/2017
   
  AMO 是用以為此增強的行為設定定義，但是實際的經驗是由實作所有這些增強功能的瀏覽用戶端所定義。  
   
-###  <a name="Action"></a>動作物件  
+###  <a name="Action">動作物件</a>  
  建立 <xref:Microsoft.AnalysisServices.Action> 物件的方式是將它加入 Cube 的動作集合，然後使用 Update 方法將 <xref:Microsoft.AnalysisServices.Cube> 物件更新到伺服器。 Cube 的更新方法可以包括參數 UpdateOptions.ExpandFull，以確保 Cube 中所有修改過的物件，都會因這個更新動作而更新到伺服器。  
   
  若要移除 <xref:Microsoft.AnalysisServices.Action> 物件，必須將它從集合移除，而且必須更新父 Cube。  
@@ -129,7 +128,7 @@ ms.lasthandoff: 12/08/2017
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Action>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-###  <a name="KPI"></a>Kpi 物件  
+###  <a name="KPI"></a> Kpi 物件  
  建立 <xref:Microsoft.AnalysisServices.Kpi> 物件的方式是將它加入 Cube 的 KPI 集合，然後使用 Update 方法將 <xref:Microsoft.AnalysisServices.Cube> 物件更新到伺服器。 Cube 的 Update 方法可以包括參數 UpdateOptions.ExpandFull，以確保 Cube 中所有修改過的物件，都會隨這個更新動作更新到伺服器。  
   
  若要移除 <xref:Microsoft.AnalysisServices.Kpi> 物件，必須將它從集合移除，然後必須更新父 Cube。  
@@ -138,7 +137,7 @@ ms.lasthandoff: 12/08/2017
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Kpi>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-###  <a name="Perspective"></a>檢視方塊物件  
+###  <a name="Perspective">檢視方塊物件</a>  
  建立 <xref:Microsoft.AnalysisServices.Perspective> 物件的方式是將它加入 Cube 的檢視方塊集合，然後使用 Update 方法將 <xref:Microsoft.AnalysisServices.Cube> 物件更新到伺服器。 Cube 的 Update 方法可以包括參數 UpdateOptions.ExpandFull，以確保 Cube 中所有修改過的物件，都會隨這個更新動作更新到伺服器。  
   
  若要移除 <xref:Microsoft.AnalysisServices.Perspective> 物件，必須將它從集合移除，然後必須更新父 Cube。  
@@ -147,14 +146,14 @@ ms.lasthandoff: 12/08/2017
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Perspective>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-###  <a name="Translation"></a>翻譯物件  
+###  <a name="Translation">翻譯物件</a>  
  建立 <xref:Microsoft.AnalysisServices.Translation> 物件的方式是將它加入所需物件的翻譯集合，然後使用 Update 方法將最接近的主要父物件更新到伺服器。 最接近的父物件之 Update 方法可以包括參數 UpdateOptions.ExpandFull，以確保已修改的所有子系物件，都會隨這個更新動作更新到伺服器。  
   
  若要移除 <xref:Microsoft.AnalysisServices.Translation> 物件，必須將它從集合移除，然後必須更新最接近的父物件。  
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Translation>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-###  <a name="ProactiveCaching"></a>ProactiveCaching 物件  
+###  <a name="ProactiveCaching">ProactiveCaching 物件</a>  
  建立 <xref:Microsoft.AnalysisServices.ProactiveCaching> 物件的方式是將它加入維度或資料分割的主動式快取物件集合，然後使用 Update 方法將維度或資料分割物件更新到伺服器。  
   
  若要移除 <xref:Microsoft.AnalysisServices.ProactiveCaching> 物件，必須將它從集合移除，然後必須更新父物件。  
@@ -163,7 +162,7 @@ ms.lasthandoff: 12/08/2017
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.ProactiveCaching>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [程式設計 AMO OLAP 基本物件](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)   

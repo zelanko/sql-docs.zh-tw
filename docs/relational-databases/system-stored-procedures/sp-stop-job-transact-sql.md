@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_stop_job_TSQL
 - sp_stop_job
-dev_langs: TSQL
-helpviewer_keywords: sp_stop_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7e84b7df3ec1ae8d504a026569d75ee8fa379715
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1276a936bece39cc875e5f80e8da5465f51bb4ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +51,19 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  這是要停止的作業名稱。 *job_name*是**sysname**，預設值是 NULL。  
   
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  這是要停止的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。  
   
- [  **@originating_server =**] **'***master_server***'**  
+ [ **@originating_server =**] **'***master_server***'**  
  主要伺服器的名稱。 如果指定的話，會停止所有多伺服器作業。 *master_server*是**nvarchar （128)**，預設值是 NULL。 只有當呼叫時，才指定這個參數**sp_stop_job**目標伺服器上。  
   
 > [!NOTE]  
 >  您只能指定前三個參數的其中一個。  
   
- [  **@server_name =**] **'***target_server***'**  
+ [ **@server_name =**] **'***target_server***'**  
  這是要停止多伺服器作業之特定目標伺服器的名稱。 *target_server*是**nvarchar （128)**，預設值是 NULL。 只有當呼叫時，才指定這個參數**sp_stop_job**在多伺服器作業的主要伺服器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -99,11 +102,11 @@ EXEC dbo.sp_stop_job
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_delete_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_start_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

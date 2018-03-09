@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4dff68e0c4e50a755ec058602bd61208ccd9b7de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b0cb350ffccb7ad61335de314765f2b85dc0821
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>建立 DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -94,7 +94,7 @@ WITH IDENTITY = 'identity_name'
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. 建立資料庫範圍認證您的應用程式。
  下列範例會建立資料庫範圍認證呼叫`AppCred`。 資料庫範圍認證包含 Windows 使用者`Mary5`和密碼。  
   
-```tsql  
+```sql  
 -- Create a db master key if one does not already exist, using your own password.  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';  
   
@@ -106,7 +106,7 @@ GO
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 建立資料庫範圍認證的共用的存取簽章。   
 下列範例會建立可以用來建立資料庫範圍認證[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md)，可以執行大量作業，例如[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)和[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). 共用的存取簽章不能使用 PolyBase，SQL Server、 AP 或 SQL DW 中。
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -118,7 +118,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 Azure 資料湖存放區會進行服務驗證使用 Azure Active Directory 應用程式。
 請[建立 AAD 應用程式](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)和記錄 client_id、 OAuth_2.0_Token_EndPoint，與索引鍵，再重新建立資料庫範圍認證。
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'

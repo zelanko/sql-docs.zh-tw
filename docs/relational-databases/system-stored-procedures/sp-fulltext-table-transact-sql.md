@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
 - sp_fulltext_table
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6ca014dd3d76c57402fe8a3af7bb8bb33fa4fce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   標示或取消標示全文檢索索引的資料表。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md)， [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)，和[DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md)， [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)，和[DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md)改為。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,13 +55,13 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@tabname=**] **'***qualified_table_name***'**  
+ [ **@tabname=**] **'***qualified_table_name***'**  
  這是一或兩部分的資料表名稱。 資料表必須在目前的資料庫中。 *qualified_table_name*是**nvarchar （517)**，沒有預設值。  
   
- [  **@action=**] **'***動作***'**  
+ [ **@action=**] **'***action***'**  
  這是要執行的動作。 *動作*是**nvarchar （50)**，沒有預設值，它可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**建立**|建立所參考的資料表的全文檢索索引的中繼資料*qualified_table_name* ，並指定這份資料表的全文檢索索引資料應該位於*fulltext_catalog_name*。 這個動作也會指定使用*unique_index_name*全文檢索索引鍵資料行。 這個唯一索引必須已經存在，且必須在資料表的某個資料行中定義。<br /><br /> 在擴展全文檢索目錄之前，您無法執行這份資料表的全文檢索搜尋。|  
 |**Drop**|卸除全文檢索索引的中繼資料*qualified_table_name*。 如果全文檢索索引在使用中，在卸除之後，也會自動停用。 在卸除全文檢索索引之前，不需要移除資料行。|  
@@ -69,14 +72,14 @@ sp_fulltext_table
 |**update_index**|將目前追蹤的這組變更傳播給全文檢索索引。|  
 |**start_background_updateindex**|在發生追蹤的變更時，開始將這些變更傳播給全文檢索索引。|  
 |**stop_background_updateindex**|在發生追蹤的變更時，停止將這些變更傳播給全文檢索索引。|  
-|**start_incremental**|啟動資料表的全文檢索索引的完整擴展。|  
+|**start_full**|啟動資料表的全文檢索索引的完整擴展。|  
 |**start_incremental**|啟動資料表的全文檢索索引的累加擴展。|  
 |**停止**|停止完整或累加擴展。|  
   
- [  **@ftcat=**] **'***fulltext_catalog_name***'**  
+ [ **@ftcat=**] **'***fulltext_catalog_name***'**  
  是一個有效、 現有的全文檢索目錄名稱**建立**動作。 所有其他動作的這個參數都必須是 NULL。 *fulltext_catalog_name*是**sysname**，預設值是 NULL。  
   
- [  **@keyname=**] **'***unique_index_name***'**  
+ [ **@keyname=**] **'***unique_index_name***'**  
  有效的單一索引鍵資料行的唯一非 null 索引*qualified_table_name*如**建立**動作。 所有其他動作的這個參數都必須是 NULL。 *unique_index_name*是**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -134,12 +137,12 @@ EXEC sp_fulltext_table 'Production.Document', 'drop';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_help_fulltext_tables &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [sp_helpindex &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [全文檢索搜尋和語意搜尋預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

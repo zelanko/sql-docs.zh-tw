@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DataFactory configuration in RDS [ADO]
+helpviewer_keywords:
+- DataFactory configuration in RDS [ADO]
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5ca6d71ee4d714cabb482b09f686e7616618c18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 34b33a8b1d729a97fd246edcb4d6056954130c27
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>為安全 Safe 或不受限制的模式設定 DataFactory
 > [!IMPORTANT]
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  執行之後 handsafe.reg，您必須停止並重新啟動 World Wide Web Publishing 服務，在 Web 伺服器上，在命令提示字元視窗中輸入下列命令:"NET 停止 W3SVC"和"NET 啟動 W3SVC"。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81427a1ae80ddf6a3d3135e8d814dc9944413e60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 44e9a7db02aacfbccbca74377a6f0ee33fc5d02c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
   「模糊查閱」轉換會執行資料清除工作，例如標準化資料、更正資料及提供遺漏值。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
  此轉換有一個輸入和一個輸出。  
   
- 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**除外。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)＞。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型的資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行是有效的，但將具有 **DT_WSTR** 資料類型的資料行聯結到具有 **int** 資料類型的資料行則是無效的。  
+ 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**除外。 如需詳細資訊，請參閱 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型的資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行是有效的，但將具有 **DT_WSTR** 資料類型的資料行聯結到具有 **int** 資料類型的資料行則是無效的。  
   
  您可以指定最大記憶體數量、資料列比較演算法，以及轉換使用的索引和參考資料表快取，以自訂此轉換。  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/20/2017
   
  下表描述相符索引選項。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|建立、儲存並維護新索引。 轉換會在參考資料表上安裝觸發程序，以讓參考資料表與索引資料表同步。|  
 |**GenerateAndPersistNewIndex**|建立並儲存新索引，但不對其進行維護。|  
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/20/2017
  如果此轉換所使用的資料表和索引在本機電腦上，則轉換的效能會有所改進。 如果「模糊查閱」轉換所使用的參考資料表在生產伺服器上，則應考量將資料表複製到非生產伺服器，並設定「模糊查閱」轉換存取該副本。 如此一來，您就可避免查閱查詢耗用生產伺服器上的資源。 此外，如果「模糊查閱」轉換維護相符索引 (也就是說，如果將 MatchIndexOptionsis 設為 **GenerateAndMaintainNewIndex**)，則轉換可能會在資料清除作業期間鎖定參考資料表，以防止其他使用者和應用程式存取該資料表。  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>設定模糊查閱轉換  
- 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新連線。  
   
  **新增**  
- 使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
+ 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
   
  **產生新的索引**  
  指定轉換應建立新的索引以用來查閱。  

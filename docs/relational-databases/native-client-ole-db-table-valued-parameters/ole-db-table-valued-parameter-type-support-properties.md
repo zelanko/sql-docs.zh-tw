@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-ole-db-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6971a7d9ed971ee09d930569f46ed7a8d7acc0b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 365ed52a0ea01d2ec62c001eda9de5ec9874c4de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 資料表值參數類型支援 (屬性)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  沒有在資料表值參數資料列集物件中實作的屬性不會列在此處。 如需屬性的完整清單，請參閱 OLE DB 文件集中的＜Windows Data Access Components＞。  
   
-|屬性識別碼|值|  
+|屬性識別碼|Value|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -76,9 +76,9 @@ ms.lasthandoff: 11/17/2017
 |DBPROP_STRONGIDENTITY|VARIANT_TRUE|  
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
-|DBPROP_UPDATABILITY|分別為 DBPROPVAL_UP_CHANGE &#124;DBPROPVAL_UP_DELETE &#124;DBPROPVAL_UP_INSERT|  
+|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
   
-## <a name="property-sets"></a>屬性集  
+## <a name="property-sets"></a>속성 집합  
  下列屬性集支援資料表值參數。  
   
 ### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 |SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W：讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 類型： VT_UI2 &#124;VT_ARRAY<br /><br /> 描述：取用者會使用這個屬性來指定要將資料列集中的哪組資料行視為預設值。 系統不會針對這些資料行傳送任何值。 從取用者資料列集物件中提取資料時，提供者不需要使用此類資料行的繫結。<br /><br /> 陣列的每個元素都應該是資料列集物件中的資料行序數。 在命令執行階段，無效的序數將會導致錯誤。|  
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W：讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 類型： VT_UI2 &#124;VT_ARRAY<br /><br /> 描述：取用者會使用此屬性來提供提示給伺服器，指出資料行資料的排序次序。 提供者不會執行任何驗證，並假設取用者符合所提供的規格。 伺服器會使用這個屬性來執行最佳化。<br /><br /> 每個資料行的資料行順序資訊都會以陣列中的一組元素表示。 配對中的第一個元素是資料行的數目。 配對中的第二個元素將為 1 (遞增的順序) 或 2 (遞減的順序)。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 資料表值參數類型支援](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [使用資料表值參數 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

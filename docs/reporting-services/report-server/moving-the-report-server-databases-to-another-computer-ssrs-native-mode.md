@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bf0061fb7a02901f24f75e7627d35f0916a843ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3449aa8547e62e89e3fc40ab893e1eb2fefcfd6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
 
@@ -210,22 +208,22 @@ GO
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並開啟報表伺服器的連接。  
   
-2.  在 [資料庫] 頁面上，按一下 **[變更資料庫]**。 按一下 **[下一步]**。  
+2.  在 [資料庫] 頁面上，按一下 **[變更資料庫]**。 按 [下一步] 。  
   
-3.  按一下 **[選擇現有報表伺服器資料庫]**。 按一下 **[下一步]**。  
+3.  按一下 **[選擇現有報表伺服器資料庫]**。 按 [下一步] 。  
   
-4.  選取現在主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後按一下 **[測試連接]**。 按一下 **[下一步]**。  
+4.  選取現在主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後按一下 **[測試連接]**。 按 [下一步] 。  
   
-5.  在 [資料庫名稱] 中，選取您想要使用的報表伺服器資料庫。 按一下 **[下一步]**。  
+5.  在 [資料庫名稱] 中，選取您想要使用的報表伺服器資料庫。 按 [下一步] 。  
   
-6.  在 [認證] 中，指定報表伺服器將用來連接至報表伺服器資料庫的認證。 按一下 **[下一步]**。  
+6.  在 [認證] 中，指定報表伺服器將用來連接至報表伺服器資料庫的認證。 按 [下一步] 。  
   
 7.  按 **[下一步]** ，然後按一下 **[完成]**。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體必須包含 **RSExecRole** 角色。 當您透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定報表伺服器資料庫連接時，會產生角色建立、登入註冊以及角色指派等動作。 如果您使用其他方法 (尤其是使用 rsconfig.exe 命令提示字元公用程式) 來設定連接，報表伺服器將不會處於工作狀態。 您可能必須撰寫 WMI 程式碼，才能讓報表伺服器可供使用。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [建立 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
 [啟動與停止 Report Server 服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   

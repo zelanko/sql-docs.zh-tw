@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86e4fb934f5f583314e5d3bc69a9275d911e5dfe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e5ffcd33369b9dc948ecce36c36085bd383c91d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (大於或等於) (SSIS 運算式)
   執行比較來決定第一個運算式是否大於或等於第二個運算式。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  
@@ -52,7 +53,7 @@ expression1 >= expression2
 ## <a name="result-types"></a>結果類型  
  DT_BOOL  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果比較中的任一個運算式為 Null，則比較結果為 Null。 如果兩個運算式都是 Null，結果則為 Null。  
   
  運算式集 *expression1* 與 *expression2*必須遵循下列規則之一：  

@@ -1,5 +1,5 @@
 ---
-title: "bcp_gettypename |Microsoft 文件"
+title: bcp_gettypename | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f452b3c5e12b76ba2d1327b59f1cfa17f16bb46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccb5d8652421aa0d52fd941e99cbcd01a0cfb6b2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,10 +43,10 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>引數  
- *語彙基元*  
+ *token*  
  指出 BCP 類型 Token 的值。  
   
- *欄位*  
+ *field*  
  指出要求的 Token 是否為最大值類型。  
   
 ## <a name="returns"></a>傳回值  
@@ -62,12 +62,12 @@ RETCODE bcp_gettypename (
 |**SQLDECIMAL**|之前或之後|**decimal**|  
 |**SQLNUMERIC**|之前或之後|**numeric**|  
 |**SQLINT1**|之前或之後|**tinyint**|  
-|**SQLINT2 來**|之前或之後|**smallint**|  
+|**SQLINT2**|之前或之後|**smallint**|  
 |**SQLINT4**|之前或之後|**int**|  
 |**SQLMONEY**|之前或之後|**money**|  
 |**SQLFLT8**|之前或之後|**float**|  
 |**SQLDATETIME**|之前或之後|**datetime**|  
-|**SQLBITN**|之前或之後|**位元 null**|  
+|**SQLBITN**|之前或之後|**bit-null**|  
 |**SQLBIT**|之前或之後|**bit**|  
 |**SQLBIGCHAR**|否|**char**|  
 |**SQLCHARACTER**|否|**char**|  
@@ -79,10 +79,10 @@ RETCODE bcp_gettypename (
 |**SQLBIGVARBINARY**|否|**Varbinary**|  
 |**SQLVARBINARY**|否|**Varbinary**|  
 |**SQLIMAGE**|之前或之後|**映像**|  
-|**SQLINTN**|之前或之後|**int null**|  
-|**SQLDATETIMN**|之前或之後|**datetime null**|  
-|**SQLMONEYN**|之前或之後|**money null**|  
-|**SQLFLTN**|之前或之後|**float null**|  
+|**SQLINTN**|之前或之後|**int-null**|  
+|**SQLDATETIMN**|之前或之後|**datetime-null**|  
+|**SQLMONEYN**|之前或之後|**money-null**|  
+|**SQLFLTN**|之前或之後|**float-null**|  
 |**SQLAOPSUM**|之前或之後|**Sum**|  
 |**SQLAOPAVG**|之前或之後|**Avg**|  
 |**SQLAOPCNT**|之前或之後|**Count**|  
@@ -115,7 +115,7 @@ RETCODE bcp_gettypename (
   
  如需詳細資訊，請參閱[日期和時間增強功能 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

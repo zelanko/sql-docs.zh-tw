@@ -1,5 +1,5 @@
 ---
-title: "bcp_collen |Microsoft 文件"
+title: bcp_collen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_collen function
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f759ddc3c65bfce8094dde221432d0af9e678f7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1528b71e05a77034235606f43c9dc455521d79b1
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpcollen"></a>bcp_collen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ RETCODE bcp_collen (
  *cbData*  
  這是資料在程式變數中的長度，不包括任何長度指標或結束字元的長度。 設定*cbData*為 SQL_NULL_DATA 表示複製到伺服器的所有資料列包含資料行的 NULL 值。 將它設定為 SQL_VARLEN_DATA 表示系統將會使用字串結束字元或其他方法來判斷已複製之資料的長度。 如果長度指標與結束字元同時存在，系統會使用造成複製的資料較少的那一個結果。  
   
- *並將 idxServerCol*  
+ *idxServerCol*  
  這是資料表中要將資料複製到其中之資料行的序數位置。 第一個資料行是 1。 資料行的序數位置由報告[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)。  
   
 ## <a name="returns"></a>傳回值  
@@ -63,7 +63,7 @@ RETCODE bcp_collen (
   
  您必須呼叫**bcp_collen**一次是針對您想要修改的資料長度資料表中每個資料行。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

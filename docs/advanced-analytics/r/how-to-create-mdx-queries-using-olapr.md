@@ -7,25 +7,25 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology:
-- analysis-services
-- r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e7c526a1a273cb00d702a702db1ee4d73ae434d1
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>如何建立使用 olapR MDX 查詢
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)套件支援對裝載在 SQL Server Analysis Services cube 的 MDX 查詢。 您可以建置針對現有的 cube 的查詢、 瀏覽維度和其他的 cube 物件，並貼上現有的 MDX 查詢以擷取資料。
 

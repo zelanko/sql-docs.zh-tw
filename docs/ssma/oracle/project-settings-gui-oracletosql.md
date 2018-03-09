@@ -1,7 +1,7 @@
 ---
 title: "專案設定 (GUI) (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ba214028361300a0599289cfc565a7138a2b2926
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2f97219f1039eb027646119c223cfbc09e81c2f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui-oracletosql"></a>專案設定 (GUI) (OracleToSQL)
 GUI 專案設定可讓您設定資料上顯示的方式**資料** 索引標籤，以及是否要顯示轉換後的評估報告，或不。  

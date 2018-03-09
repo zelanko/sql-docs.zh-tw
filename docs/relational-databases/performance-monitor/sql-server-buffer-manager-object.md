@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5e2ac02420b0ca701c1de5a70b54a1cedc628bec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 492c60be544246d0f94e5a8eba4198bca2815e95
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server 的 Buffer Manager 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Buffer Manager** 物件提供了可監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用情形的計數器：  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="buffer-manager-performance-objects"></a>Buffer Manager 效能物件  
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** 效能物件。  
   
-|SQL Server Buffer Manager 計數器|說明|  
+|SQL Server Buffer Manager 計數器|描述|  
 |----------------------------------------|-----------------|  
 |**Background writer pages/sec**|為了強制執行復原間隔設定而排清的頁數。| 
 |**Buffer cache hit ratio**|表示不需讀取磁碟即可在緩衝區快取中找到之頁面的百分比。 此比率是過去數千個分頁存取中，快取叫用總數除以快取查閱所得的結果。 時間一久，比率的變動會越來越小。 從快取讀取遠比從磁碟讀取節省成本，因此您會希望此比率越高越好。 通常，您可以藉由增加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用的記憶體數量或是使用緩衝集區擴充功能，來提高緩衝區快取叫用比率。|  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
  [SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server 的 Plan Cache 物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
- [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [監視資源使用量 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [緩衝集區擴充](../../database-engine/configure-windows/buffer-pool-extension.md)  
   

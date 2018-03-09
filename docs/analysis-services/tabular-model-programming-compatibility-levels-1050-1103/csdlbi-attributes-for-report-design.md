@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>報表設計的 CSDLBI 屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本章節描述表格式模型化以及影響的 CSDL 延伸模組中的屬性[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]查詢設計。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本節描述表格式模型化的 CSDL 延伸模組中影響 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 查詢設計的屬性。  
   
 ## <a name="model-attributes"></a>模型屬性  
  這些屬性在 csdl 的子元素上定義[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)項目。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/08/2017
 |**SortDirection**|Enum|值，表示一般的欄位值排序方式。 可能的值為**預設**，**遞增**，**遞減**。 如果省略，預設值會根據欄位的資料類型來指派排序方向。|  
 |**IsRightToLeft**|布林|表示欄位是否包含應該由右至左讀取的文字。 如果省略，則採用模型設定。|  
 |**OrderBy**|MemberRef|模型內另一個欄位的參考，該欄位定義此欄位之值的排序次序。 這兩個欄位的值必須具有 1:1 對應，否則排序行為是未定義的。 如果省略，欄位就會根據自己的值來排序。|  
-|**目錄**|Enum|列舉，描述欄位的子類型或內容。 如果省略，則假設沒有特定的子類型，除非該欄位的資料類型為 Binary，在此情況下，則假設使用 Image。 如需支援的內容類型完整清單，請參閱 AMO 文件集。|  
+|**內容**|Enum|列舉，描述欄位的子類型或內容。 如果省略，則假設沒有特定的子類型，除非該欄位的資料類型為 Binary，在此情況下，則假設使用 Image。 如需支援的內容類型完整清單，請參閱 AMO 文件集。|  
 |**DefaultAggregateFunction**|Enum|值，表示通常用於彙總此欄位的預設函數 (如果有)。 可能的值為**無**，**總和**，**平均**，**計數**， **Min**， **Max**. 如果省略，**總和**數值欄位，會假設**無**的所有其他欄位。|  
 |**IsSimpleMeasure**|布林|表示量值是否只是數值欄位的簡單彙總。 這類彙總可以視需要在查詢中輕鬆地定義，因此應該從模型定義中省略以提高效能。 如果省略， **false**假設。|  
 |**Kpi**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|Subelement|表示量值元素要做為 KPI。 KPI 子元素使用 KpiGoal 和 KpiStauts 元素以定義相關的顯示影像和目標範圍。|  

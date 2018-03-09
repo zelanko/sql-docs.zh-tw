@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Mirroring State Change event class
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 121371d0836b3cdfa47eb5d0e9efd4363b7eba23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cccd5bf6328a97283940ad6782aa98fbdb90ebd3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Database Mirroring State Change** 事件類別指出鏡像資料庫狀態的變更。 請在監視鏡像資料庫狀況的追蹤中包含此事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Database Mirroring State Change** 事件類別指出鏡像資料庫狀態的變更。 請在監視鏡像資料庫狀況的追蹤中包含此事件類別。  
   
  當追蹤中包含 **Database Mirroring State Change** 事件類別時，負擔會相對的低。 但如果鏡像資料庫的狀態數目增加，負擔將會提高。  
   
@@ -38,9 +40,9 @@ ms.lasthandoff: 11/17/2017
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**DatabaseName**|**nvarchar**|鏡像資料庫名稱。|35|是|  
-|**EventClass**|**整數**|事件類型 = 167。|27|否|  
-|**EventSequence**|**整數**|批次中的事件類別順序。|51|否|  
-|**IntegerData**|**整數**|舊的狀態識別碼。|25|是|  
+|**EventClass**|**int**|事件類型 = 167。|27|否|  
+|**EventSequence**|**int**|批次中的事件類別順序。|51|否|  
+|**IntegerData**|**int**|舊的狀態識別碼。|25|是|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 **sys.server_principals** 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**RequestID**|**int**|包含陳述式之要求的識別碼。|49|是|  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**State**|**整數**|新鏡像作業的狀態識別碼：<br /><br /> 0 = Null 通知<br /><br /> 1 = 已同步處理主體伺服器，有見證伺服器監督<br /><br /> 2 = 已同步處理主體伺服器，沒有見證伺服器監督<br /><br /> 3 = 已同步處理鏡像伺服器，有見證伺服器監督<br /><br /> 4 = 已同步處理鏡像伺服器，沒有見證伺服器監督<br /><br /> 5 = 主體伺服器連接中斷<br /><br /> 6 = 鏡像伺服器連接中斷<br /><br /> 7 = 手動容錯移轉<br /><br /> 8 = 自動容錯移轉<br /><br /> 9 = 鏡像作業暫停<br /><br /> 10 = 無仲裁伺服器<br /><br /> 11 = 正在同步處理鏡像伺服器<br /><br /> 12 = 執行中的主體伺服器已公開|30|是|  
-|**TextData**|**ntext**|狀態變更描述。|1|是|  
+|**TextData**|**ntext**|狀態變更描述。|@shouldalert|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

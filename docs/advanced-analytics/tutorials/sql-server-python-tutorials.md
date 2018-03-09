@@ -1,20 +1,32 @@
 ---
 title: "SQL Server Python 教學課程 |Microsoft 文件"
-ms.custom: SQL2016_New_Updated
-ms.date: 09/19/2017
-vapplies_to: SQL Server 2017
-dev_langs: Python
-caps.latest.revision: "1"
+titleSuffix: SQL Server
+ms.custom: 
+ms.date: 03/06/2018
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
+ms.tgt_pltfrm: 
+ms.topic: tutorial
+applies_to:
+- SQL Server 2017
+dev_langs:
+- Python
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 60b17dd267e5b6bbb940a335aa89b74585b24dcc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: a9ba77cd6ec26e21136aa8ebfebfe67725b94ba2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 教學課程
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文提供教學課程和範例，示範如何使用 Python 與 SQL Server 2017 的清單。 透過這些範例和示範中，您將學習：
 
@@ -34,15 +46,15 @@ ms.lasthandoff: 12/20/2017
 
 + [建立機器學習中使用 revoscalepy Python 模型](use-python-revoscalepy-to-create-model.md)
 
-   您將建立模型，使用**rxLinMod**，從新**revoscalepy**程式庫。 您將會啟動遠端的 Python 終端機中的程式碼，但模型，就會進行 SQL Server 計算內容中。
+   這一課將示範您如何執行程式碼從遠端的 Python 終端機中，使用 SQL Server 計算內容。 您應該熟悉的 Python 工具和環境。 範例程式碼所提供，會建立模型，使用**rxLinMod**，從新**revoscalepy**程式庫。 
 
 + [在資料庫 Python 分析的 SQL 開發人員](sqldev-in-database-python-for-sql-developers.md)
 
-  新增！ 建置完整的 Python 解決方案使用 T-SQL 預存程序。 所有的 Python 程式碼包含項目。
+    本端對端逐步解說示範如何建置完整的 Python 解決方案使用 T-SQL 預存程序的程序。 所有的 Python 程式碼包含項目。
 
 + [部署和使用 Python 模型](..\python\publish-consume-python-code.md)
 
-  了解如何部署使用 Microsoft Machine Learning 伺服器的最新版本的 Python 模型。
+  了解如何部署為 web 服務時，使用最新版的 Microsoft 機器學習 Server Python 模型。
 
 ## <a name="python-samples"></a>Python 範例
 
@@ -61,22 +73,26 @@ ms.lasthandoff: 12/20/2017
 
 ## <a name="bkmk_Prerequisites"></a>必要條件
 
-若要使用這些教學課程，您必須已安裝 SQL Server 2017 機器學習服務 （資料庫）。 SQL Server 2017 支援 R 或 Python。 不過，您必須安裝支援機器學習的擴充性架構，並選取要安裝的語言為 Python。 您可以在同一部電腦上安裝 R 和 Python。
+若要使用這些教學課程，您必須擁有 SQL Server 2017，，您必須明確地安裝，然後啟用該功能，機器學習服務 （資料庫）。 
 
-> [!NOTE]
->
-> Python 支援是 SQL Server 2017 中的新功能，而且需要 CTP 2.0 或更新版本。 雖然此功能是發行前版本並不支援實際執行環境中，我們邀請您現在就試試看，並傳送意見反應。
+SQL Server 2017 支援 R 和 Python 語言，但兩者都不是安裝或預設為啟用。 執行 Python 需要啟用擴充性架構，並且必須 Python 選取為要安裝的語言。 
 
-**SQL Server 2017**
+### <a name="post-installation-configuration-tips"></a>安裝後設定秘訣
 
-執行 SQL Server 安裝程式，別忘了下列重要步驟：
+執行 SQL Server 安裝程式之後，您可能需要執行一些額外的步驟，以確保 Python 和 SQL Server 進行通訊：
 
 + 執行啟用外部指令碼執行功能`sp_configure 'external scripts enabled', 1`。
-+ 重新啟動伺服器。
-+ 請確定呼叫外部執行階段的服務具有必要權限。
++ 重新啟動伺服器。 
++ 開啟**服務**面板來檢查是否已啟動 [啟動列]。 
++ 請確定呼叫外部執行階段的服務具有必要權限。 如需詳細資訊，請參閱[啟用隱含的驗證](../r/add-sqlrusergroup-to-database.md)。
++ 開啟防火牆上的連接埠的 SQL Server，並啟用必要的網路通訊協定。
 + 請確定您的 SQL 登入或 Windows 使用者帳戶具有必要權限連接到伺服器，來讀取資料，並建立此範例所需的任何資料庫物件。
 
-如果您遇到問題，請參閱本文章的一些常見問題：[疑難排解機器學習服務](../machine-learning-troubleshooting-faq.md)
+請參閱本文章的一些常見問題：[疑難排解機器學習服務](../machine-learning-troubleshooting-faq.md)
+
+### <a name="resource-management"></a>資源管理
+
+您可以在相同的電腦上安裝 R 和 Python，但同時執行，可能需要大量資源。 如果您收到 「 記憶體不足 」 錯誤，或是執行機器學習工作是主體想要使用的伺服器，您可以減少配置給資料庫引擎的記憶體數量。 如需詳細資訊，請參閱[管理及監視 SQL Server 中的 Python](../python/managing-and-monitoring-python-solutions.md)。
 
 ## <a name="see-also"></a>另請參閱
 

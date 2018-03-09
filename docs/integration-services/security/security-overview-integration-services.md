@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b40010fd76da5b1f040ab5e5311ac655d111d660
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 234895749b48f44601cddb76e4ca95783602a6e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 |威脅或弱點|定義|降低|  
 |-----------------------------|----------------|----------------|  
-|封裝來源|封裝的來源是指建立此封裝的個人或組織。 執行來自未知或不受信任來源的封裝可能會有風險。|使用數位簽章來識別封裝的來源，並且只執行來自已知且信任來源的封裝。 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。|  
+|封裝來源|封裝的來源是指建立此封裝的個人或組織。 執行來自未知或不受信任來源的封裝可能會有風險。|使用數位簽章來識別封裝的來源，並且只執行來自已知且信任來源的封裝。 如需詳細資訊，請參閱 [Identify the Source of Packages with Digital Signatures](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)(使用數位簽章識別封裝來源)。|  
 |封裝內容|封裝內容包括封裝中的元素及其屬性。 這些屬性可能會包含機密資料，例如密碼或連接字串。 SQL 陳述式等封裝元素可能會顯示資料庫的結構。|進行下列步驟來控制封裝及內容的存取權：<br /><br /> 1) 若要控制封裝本身的存取權，請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性功能套用至儲存在 **執行個體之** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的封裝。 對於儲存在檔案系統中的封裝，請套用檔案系統安全性功能，例如存取控制清單 (ACL)。<br /><br /> 2) 若要控制封裝內容的存取權，請設定封裝的保護等級。<br /><br /> 如需詳細資訊，請參閱[安全性概觀 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) 和[封裝中的敏感性資料存取控制](../../integration-services/security/access-control-for-sensitive-data-in-packages.md)。|  
 |封裝輸出|當您將封裝設定成使用組態、檢查點和記錄時，此封裝就會在封裝外部儲存這項資訊。 儲存在封裝外部的資訊可能會包含機密資料。|若要保護封裝儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表的組態和記錄，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性功能。<br /><br /> 若要控制檔案的存取權，請使用檔案系統所提供的存取控制清單 (ACL)。<br /><br /> 如需詳細資訊，請參閱 [Access to Files Used by Packages](#files)|  
   

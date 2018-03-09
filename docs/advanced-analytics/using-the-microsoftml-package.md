@@ -8,29 +8,31 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: "132"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d2b01b0e1618dc92bdfe11060f1b4c9d9eb17dbc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>搭配 SQL Server 使用 MicrosoftML 封裝
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction)套件會提供 Microsoft R Server 與 SQL Server 2017 包含多個機器學習演算法。 這些 Api 為內部的機器學習服務應用程式，由 Microsoft 所開發，而且已調整過數年來支援高效能巨量資料，使用多核心的處理和快速的資料流。 MicrosoftML 也包含許多轉換文字和映像處理。
 
 在 SQL Server 2017 CTP 2.0 中，已加入之 Python 語言的支援。 **Microsoftml** Python 包含函式相當於 MicrosoftML 封裝中的 r 封裝 
 
-+ **MicrosoftML**
++ **MicrosoftML for R**
 
     簡介與封裝的參考： [MicrosoftML： 機器學習 R 演算法](https://docs.microsoft.com/en-us/r-server/r-reference/microsoftml/microsoftml-package)
 

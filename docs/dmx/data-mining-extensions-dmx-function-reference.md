@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -24,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f459409c538db56df0664c86022bff36b6250eeb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b5aa5b45c71d32f711e3facecd3846d32b70a769
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>資料採礦延伸模組 (DMX) 函數參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援資料採礦延伸模組 (DMX) 語言中的數個函數。 函數會展開預測查詢的結果，以包含更深入描述預測的資訊。 函數也提供如何傳回預測結果的更多控制。 下表提供資源的連結，以協助您了解如何在 DMX 中使用函數。  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)|列出可以搭配所有模型類型使用的函數，並提供關於如何查詢特定採礦模型類型之詳細資訊的連結。|  
 |[DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|提供關於如何使用 DMX 建構預測查詢的概觀。|  
@@ -43,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
  下表列出 DMX 支援的函數。  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)|依據次序運算式，以遞增次序順序傳回資料表，其中包含資料表運算式的最後 n 個項目資料列。|  
 |[BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)|依據次序運算式，以遞增次序順序傳回資料表，其中包含符合指定百分比運算式之最小數目的最底部資料列。|  
@@ -76,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 |[TopPercent &#40; DMX &#41;](../dmx/toppercent-dmx.md)|依據次序運算式，以遞減次序順序傳回資料表，其中包含符合指定百分比運算式之最小數目的最頂部資料列。|  
 |[TopSum &#40; DMX &#41;](../dmx/topsum-dmx.md)|依據次序運算式，以遞減次序順序傳回資料表，其中包含符合指定總和運算式之最小數目的最頂部資料列。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
  [資料採礦延伸模組 &#40; DMX &#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

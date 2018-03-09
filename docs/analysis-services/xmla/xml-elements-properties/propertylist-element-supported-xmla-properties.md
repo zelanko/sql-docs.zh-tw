@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -25,16 +23,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e29ed3613253db0f93580717f126dbc53a37c108
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1076c683c164c2d084b431f4190c549d0a5a0cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>PropertyList 元素-支援 XMLA 屬性
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下表中列出的屬性。 使用列出的屬性用於[屬性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)元素[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)和[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
-|名稱|Description|類型|值|  
+|[屬性]|描述|類型|值|  
 |----------|-----------------|----------|------------|  
 |AxisFormat|決定用於格式[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)結果集中用於描述多維度資料集中的座標軸。 這個屬性可以具有下表中所列的值。<br /><br /> 這個屬性可以搭配**Execute**方法。|選擇性的唯寫**字串**屬性|*ClusterFormat*: **MDDataSet**軸所組成的一或多個[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)項目。<br /><br /> *CustomFormat*: <br />                          [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用*TupleFormat*格式，這項設定。<br /><br /> *TupleFormat*預設值。 **MDDataSet**座標軸包含一個或多個[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)項目。|  
 |BeginRange|包含以零為起始的整數值對應至**CellOrdinal**屬性值。 ( **CellOrdinal**屬性屬於[儲存格](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)中的項目[CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)區段**MDDataSet**。)<br /><br /> 這個屬性的預設值為-1。<br /><br /> 這個屬性可以搭配**Execute**方法。<br /><br /> 搭配**EndRange**屬性，用戶端應用程式可以使用這個屬性來限制為特定範圍的資料格的命令所傳回的 OLAP 資料集。 如果指定-1，則所有的資料格為止中指定**EndRange**屬性會傳回。|選擇性的唯寫**整數**屬性||  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/08/2017
 |EndRange|指定以零為起始的整數值對應至**CellOrdinal**屬性值。 ( **CellOrdinal**屬性屬於**儲存格**中的項目**CellData**區段**MDDataSet**)。<br /><br /> 搭配**BeginRange**屬性，用戶端應用程式可以使用這個屬性來限制為特定範圍的資料格的命令所傳回的 OLAP 資料集。 如果指定-1，則所有資料格從中指定的儲存格**BeginRange**屬性會傳回。<br /><br /> 這個屬性的預設值為-1。<br /><br /> 這個屬性可以搭配**Execute**方法。|選擇性的唯寫**整數**屬性||  
 |ExecutionMode|保留供日後使用。<br /><br /> 這個屬性的預設值是*Execute*。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯寫**字串**屬性||  
 |ForceCommitTimeout|決定在強制先前發出的命令回復之前，目前執行中 XMLA 命令之認可階段等候的時間長度 (以秒為單位)。 認可階段對應至 XMLA 命令，例如**陳述式**或**程序**。<br /><br /> 值為零 (0) 表示執行個體會永遠等候。<br /><br /> 這個屬性的預設值為零 (0)。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯寫**整數**屬性||  
-|格式|決定結果集所傳回的型別**探索**和**Execute**方法。<br /><br /> 這個屬性的預設值是*原生*。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯寫**字串**屬性|此屬性可以有下列的值：<br /><br /> *表格式*： 傳回的結果集使用[資料列集](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)資料型別。<br /><br /> *多維度*： 傳回資料列集使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)資料型別。<br /><br /> *原生*： 明確指定沒有任何格式。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會針對此命令傳回適當的格式。 實際的結果類型是由結果的命名空間加以識別。|  
+|[格式]|決定結果集所傳回的型別**探索**和**Execute**方法。<br /><br /> 這個屬性的預設值是*原生*。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯寫**字串**屬性|此屬性可以有下列的值：<br /><br /> *表格式*： 傳回的結果集使用[資料列集](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)資料型別。<br /><br /> *多維度*： 傳回資料列集使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)資料型別。<br /><br /> *原生*： 明確指定沒有任何格式。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會針對此命令傳回適當的格式。 實際的結果類型是由結果的命名空間加以識別。|  
 |ImpactAnalysis|保留供日後使用。<br /><br /> 這個屬性的預設值為零 (0)。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯寫**布林**屬性||  
 |LocaleIdentifier|讀取或設定所使用的地區設定識別碼 (LCID)**探索**或**Execute**方法。 如需語言識別碼的完整十六進位清單，請在 MSDN Library 中搜尋「語言識別碼」。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**整數**屬性||  
 |MaximumRows|保留供日後使用。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯寫**整數**屬性||  
@@ -125,7 +123,7 @@ ms.lasthandoff: 12/08/2017
 |MdxMissingMemberMode|指出是否要在 MDX 陳述式中忽略遺漏的成員。<br /><br /> 這個屬性就相當於 OLE DB 屬性 DBPROP_MDX_MISSING_MEMBER_MODE。<br /><br /> 這個屬性的預設值是*預設*。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯寫**字串**屬性|此屬性可以有下列其中一個值：<br /><br /> *預設*： 使用所產生的值[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。<br /><br /> *錯誤*： 產生錯誤。<br /><br /> *忽略*： 永遠忽略遺漏的成員。|  
 |MDXSupport|指定描述 MDX 支援程度的列舉。<br /><br /> 這個屬性的預設值是*核心*。<br /><br /> 這個屬性可以搭配**探索**方法。<br /><br /> 請注意，目前，唯一有效的值，這個列舉型別的*核心*。 這個列舉型別在未來可能定義其他的值。|選擇性的唯讀**字串**屬性|這個屬性可以具有下列值：<br /><br /> *核心*： 支援所有 MDX 選項。|  
 |NonEmptyThreshold|保留供日後使用。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**整數**屬性||  
-|密碼|這個屬性不再受到支援。<br /><br /> 回溯相容性，而不會產生錯誤與搭配使用時忽略這個屬性**Execute**或**探索**方法。|選擇性的唯寫**字串**屬性||  
+|[密碼]|這個屬性不再受到支援。<br /><br /> 回溯相容性，而不會產生錯誤與搭配使用時忽略這個屬性**Execute**或**探索**方法。|選擇性的唯寫**字串**屬性||  
 |ProviderName|這個屬性就相當於 OLE DB 屬性 DBPROP_DBMSNAME。<br /><br /> 這個屬性的預設值是 "OLAP Server"。<br /><br /> 這個屬性可以搭配**探索**方法。|選擇性的唯讀**字串**屬性||  
 |ProviderType|這個屬性就相當於 OLE DB 屬性 DBPROP_DATASOURCE_TYPE。<br /><br /> 這個屬性的預設值為 6。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯讀**整數**屬性||  
 |ProviderVersion|這個屬性就相當於 OLE DB 屬性 DBPROP_DBMSVER。<br /><br /> 這個屬性的預設值為 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體的版本。<br /><br /> 這個屬性可以搭配**探索**方法。|選擇性的唯讀**字串**屬性||  

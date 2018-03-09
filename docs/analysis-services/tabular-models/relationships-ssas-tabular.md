@@ -1,32 +1,31 @@
 ---
-title: "關聯性 (SSAS 表格式) |Microsoft 文件"
+title: "關聯性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="relationships-ssas-tabular"></a>關聯性 (SSAS 表格式)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格式模型中，關聯性是兩個資料表之間的連線。 關聯性會建立兩個資料表中的資料相互關聯的方式。 例如，Customers 資料表和 Orders 資料表可以產生關聯，以便顯示彼此有關聯性的客戶名稱。  
+# <a name="relationships"></a>關聯性 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在表格式模型中，關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。 例如，Customers 資料表和 Orders 資料表可以產生關聯，以便顯示彼此有關聯性的客戶名稱。  
   
  當使用 [資料表匯入精靈] 從相同資料來源匯入時，您選擇要匯入之資料表 (位於資料來源) 中已存在的關聯性會在模型中重新建立。 您可以使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊，檢視偵測到且自動重新建立的關聯性。 您也可以使用 [圖表檢視] 中的模型設計師或使用 [建立關聯性] 或 [管理關聯性] 對話方塊，手動建立資料表之間的新關聯性。  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="single-active-relationship-between-tables"></a>資料表之間的單一使用中關聯性  
  多個關聯性可能會在資料表之間造成模稜兩可的相依性。 若要建立精確的計算，您需要從一個資料表到下一個資料表的單一路徑。 因此，每一對資料表之間只能有一個使用中的關聯性。 例如，在 AdventureWorks DW 2012 中，資料表 DimDate 包含一個資料行 DateKey，這個資料行與資料表 FactInternetSales 中的三個不同資料行相關：OrderDate、DueDate 與 ShipDate。 如果您嘗試匯入這些資料表，會成功建立第一個關聯性，但是對於包含相同資料行的後續關聯性，則會收到下列錯誤：  
   
- \*關聯性： 資料表 [column 1]-> table [column 2]-狀態： 錯誤-原因： 無法建立資料表之間的關聯性\<資料表 1 > 和\<表格 2 >。 兩個資料表之間只能有一個直接或間接關聯性。  
+ \* 關聯性： 資料表 [column 1]-> table [column 2]-狀態： 錯誤-原因： 無法建立資料表之間的關聯性\<資料表 1 > 和\<表格 2 >。 兩個資料表之間只能有一個直接或間接關聯性。  
   
  如果您有兩個資料表，而且在這兩個資料表之間有多個關聯性，則您需要匯入包含查閱資料行之資料表的多個複本，然後在每對資料表之間建立一個關聯性。  
   

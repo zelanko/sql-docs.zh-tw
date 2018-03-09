@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwsource.connection.f1
+f1_keywords:
+- sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eba966d7321d44088c197d0f5a8829ff591a9bdd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0373c0142f2b466b12dd6c2ff1619f09b2b8b26f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 來源編輯器 (連接管理員頁面)
   使用 **[SAP BW 來源編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 來源的 SAP BW 連接管理員。 在這個頁面上，您也可以選取執行模式以及從 SAP Netweaver BW 系統中擷取資料所用的參數。  
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/20/2017
  **執行模式**  
  指定從來源中擷取資料的方法。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**P - 觸發處理鏈結**|觸發處理序鏈結。 在此情況下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝會啟動擷取處理序。|  
 |**W - 等候通知**|等候來自 SAP Netweaver BW 系統的通知，以便開始擷取資料。 在此情況下，SAP Netweaver BW 系統會啟動擷取處理序。|  
@@ -95,7 +97,7 @@ ms.lasthandoff: 11/20/2017
  **程式識別碼**  
  輸入與 RFC 目的地相關聯的程式識別碼。  
   
- **[查閱]**  
+ **查閱**  
  使用 [查閱 RFC 目的地] 對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
   
 #### <a name="process-chain-options"></a>處理序鏈結選項  
@@ -104,7 +106,7 @@ ms.lasthandoff: 11/20/2017
  **處理序鏈結**  
  輸入要由來源觸發之處理序鏈結的名稱。  
   
- **[查閱]**  
+ **查閱**  
  使用 [查閱 ProcessChain] 對話方塊來查閱處理序鏈結。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md)＞。  
   
 ### <a name="execution-mode--w---wait-for-notify"></a>執行模式 = W - 等候通知  
@@ -121,7 +123,7 @@ ms.lasthandoff: 11/20/2017
  **程式識別碼**  
  輸入與 RFC 目的地相關聯的程式識別碼。  
   
- **[查閱]**  
+ **查閱**  
  使用 [查閱 RFC 目的地] 對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
   
 ### <a name="execution-mode--e---extract-only"></a>執行模式 = E - 僅限擷取  

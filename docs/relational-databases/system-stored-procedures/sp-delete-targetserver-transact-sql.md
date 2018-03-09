@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetserver
 - sp_delete_targetserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_targetserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_targetserver
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fbe2a49724fd45ac8c635fc758323b5d34b8eb9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f95d6489635c40a7ba478e4100cb672dc6938c2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +48,13 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@server_name=** ] **'***伺服器***'**  
+ [ **@server_name=** ] **'***server***'**  
  做為可用的目標伺服器，將予以移除的伺服器名稱。 *伺服器*是**nvarchar （30)**，沒有預設值。  
   
  [  **@clear_downloadlist=** ] *clear_downloadlist*  
  指定是否要清除目標伺服器的下載清單。 *clear_downloadlist*是型別**元**，預設值是**1**。 當*clear_downloadlist*是**1**，程序刪除伺服器之前，清除伺服器的下載清單。 當*clear_downloadlist*是**0**，不會清除下載清單。  
   
- [  **@post_defection=** ] *post_defection*  
+ [ **@post_defection=** ] *post_defection*  
  指定是否要將脫離指示公佈至目標伺服器。 *post_defection*是型別**元**，預設值是 1。 當*post_defection*是**1**，程序將脫離指示公佈至目標伺服器刪除伺服器之前。 當*post_defection*是**0**，程序不會不將脫離指示公佈至目標伺服器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -79,8 +82,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_targetserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [sp_msx_defect &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_help_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

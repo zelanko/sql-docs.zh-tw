@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 03d58a82-021c-4e13-b265-c084f42a8bb2
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: daaf3178159cec654490b0ec51b89a3d39e08550
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c4b8975c64d8fecd6227368ee0147e94496cb1df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-asdatabase-cmdlet"></a>Backup-ASDatabase 指令程式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/08/2017
   
  `Backup-ASDatabase –Database <Microsoft.AnalysisServices.Database> [-AllowOverwrite <SwitchParameter>] [-BackupRemotePartitions <SwitchParameter>] [-ApplyCompression <SwitchParameter>] [-FilePassword <SecureString>] [-Locations <Microsoft.AnalysisServices.BackupLocation[]>] [-Server <string>] [-Credential <PSCredential>] [<CommonParameters>]`  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  讓 Analysis Services 系統管理員能夠將多維度或表格式資料庫備份至備份檔案。 如果未指定位置，則會使用在安裝期間指定的預設備份位置。  
   
  備份的檔案可以加密。 使用 –FilePassword 來加密檔案。 稍後在還原檔案時，必須提供指定用來加密的相同密碼。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|1|  
+|位置？|@shouldalert|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  

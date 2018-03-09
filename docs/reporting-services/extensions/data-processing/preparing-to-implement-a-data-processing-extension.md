@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae9b5358621f27a8a7f90ae60e63b23c75421bc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 424e36f6be32da0aafb6981e923f66aed7c22139
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>準備實作資料處理延伸模組
   在您實作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組之前，應該定義要實作的介面。 您可能會想要提供整組介面的延伸模組特定實作，或者您可能會直接將實作的集點放在子集上，例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 與 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 介面，其中用戶端主要會與作為 **DataReader** 物件的結果集互動，而且將使用 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 資料處理延伸模組作為結果集與資料來源之間的橋樑。  
@@ -73,19 +71,19 @@ ms.lasthandoff: 12/05/2017
 ## <a name="available-extension-interfaces"></a>可用的延伸模組介面  
  下表描述可用的介面，以及實作是否為必要或為選擇性。  
   
-|介面|Description|實作|  
+|介面|描述|實作|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|代表資料來源的唯一工作階段。 在用戶端/伺服器資料庫系統的情況下，此工作階段可能相當於伺服器的網路連接。|Required|  
+|IDbConnection|代表資料來源的唯一工作階段。 在用戶端/伺服器資料庫系統的情況下，此工作階段可能相當於伺服器的網路連接。|必要項|  
 |IDbConnectionExtension|代表有關安全性與驗證之 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 資料處理延伸模組所實作的其他連接屬性。|選擇性|  
-|IDbTransaction|表示本機交易。|Required|  
+|IDbTransaction|表示本機交易。|必要項|  
 |IDbTransactionExtension|代表可由 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 資料處理延伸模組所實作的其他交易屬性。|選擇性|  
-|IDbCommand|代表當連接到資料來源時所使用的查詢或命令。|Required|  
+|IDbCommand|代表當連接到資料來源時所使用的查詢或命令。|必要項|  
 |IDbCommandAnalysis|代表分析查詢和傳回用於查詢的參數名稱清單的其他命令資訊。|選擇性|  
-|IDataParameter|代表傳遞到命令或查詢的參數或名稱/值組。|Required|  
-|IDataParameterCollection|代表所有與命令或查詢相關的參數集合。|Required|  
-|IDataReader|提供一種方法，可順向且唯讀地讀取來自資料來源的資料流。|Required|  
+|IDataParameter|代表傳遞到命令或查詢的參數或名稱/值組。|必要項|  
+|IDataParameterCollection|代表所有與命令或查詢相關的參數集合。|必要項|  
+|IDataReader|提供一種方法，可順向且唯讀地讀取來自資料來源的資料流。|必要項|  
 |IDataReaderExtension|提供方法來讀取一或多個藉由在資料來源處執行命令所取得的順向資料流之結果集。 這個介面會提供其他支援的欄位彙總。|選擇性|  
-|IExtension|提供 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組的基底類別。 另外也可讓實作者包括當地語系化的延伸模組名稱，並將組態設定從組態檔傳遞到延伸模組。|Required|  
+|IExtension|提供 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組的基底類別。 另外也可讓實作者包括當地語系化的延伸模組名稱，並將組態設定從組態檔傳遞到延伸模組。|必要項|  
   
  資料處理延伸模組介面會盡可能與 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者介面、方法及屬性的子集相同。 如需有關實作完整 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者的詳細資訊，請參閱＜[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 軟體開發套件 (SDK) 文件集中的＜實作 .NET Framework 資料提供者＞。  
   

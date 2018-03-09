@@ -8,25 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 932ac3a8337af5871910c9aabd7a906508b1455d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>將搜索所使用的斷詞工具還原為舊版
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 對於全文檢索搜尋支援的所有語言 (韓文除外)，都會安裝並啟用特定版本的斷詞工具和詞幹分析器。 本主題描述的是如何從此版本的元件切換成舊版，或從舊版切換回新版。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 對於全文檢索搜尋支援的所有語言 (韓文除外)，都會安裝並啟用特定版本的斷詞工具和字幹分析器。 本文描述如何從這些元件的這個版本切換成舊版，或從舊版切換回新版。  
   
- 本主題不討論以下語言：  
+ 本文不討論以下語言：  
   
 -   **英文**。 若要還原英文元件，請參閱＜ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)＞。  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  如需斷詞工具與字幹分析器的一般資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
 ##  <a name="overview"></a> 還原斷詞工具和字幹分析器的概觀  
- 還原斷詞工具和字幹分析器的指示取決於語言。 下表摘要說明還原為舊版元件可能需要的 3 組動作。  
+ 還原斷詞工具和字幹分析器的指示取決於語言。 下表摘要說明還原為舊版元件可能需要的三組動作。  
   
 |目前檔案|舊版檔案|受影響語言的數目|檔案的動作|登錄項目的動作|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  如果您以其他版本取代目前版本的 NaturalLanguage6.dll 檔案，則使用此檔案的所有語言的行為都會受到影響。  
   
- 本主題所描述的檔案是安裝在 `MSSQL\Binn` 執行個體之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料夾中的 DLL 檔案。 完整路徑通常是以下路徑：  
+ 本文描述的檔案是安裝在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 `MSSQL\Binn` 資料夾中的 DLL 檔案。 完整路徑通常是以下路徑：  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -228,7 +230,7 @@ ms.lasthandoff: 11/17/2017
 |舊版 CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |舊版檔案名稱|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |目前 CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|目前檔案名稱|MSWB7.dll|MSWB7.dll|  
+|目前檔案名稱|MsWb7.dll|MSWB7.dll|  
   
  **日文 (jpn)，LCID 1041**  
   
@@ -246,7 +248,7 @@ ms.lasthandoff: 11/17/2017
 |舊版 CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |舊版檔案名稱|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |目前 CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|目前檔案名稱|MSWB7.dll|MSWB7.dll|  
+|目前檔案名稱|MsWb7.dll|MSWB7.dll|  
   
  **俄文 (rus)，LCID 1049**  
   
@@ -255,7 +257,7 @@ ms.lasthandoff: 11/17/2017
 |舊版 CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |舊版檔案名稱|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |目前 CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|目前檔案名稱|MSWB7.dll|MSWB7.dll|  
+|目前檔案名稱|MsWb7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> 舊版或目前檔案名稱都不是 NaturalLanguage6.dll 的語言  
  在下表中的語言，舊版斷詞工具和字幹分析器的檔案名稱不同於新版檔案名稱。 舊版或目前檔案名稱都不是 NaturalLanguage6.dll。 您不必取代任何檔案，因為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式會將目前版本和舊版元件都複製到 Binn 資料夾。 不過，您必須變更一組登錄項目，以指定舊版或目前版本的元件。  

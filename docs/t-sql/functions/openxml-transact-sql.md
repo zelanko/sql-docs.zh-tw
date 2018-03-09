@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENXML_TSQL
 - OPENXML
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OPENXML statement
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b1fb1d28c4bddb679bd4aab8ce6cb11f21caca5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +55,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *rowpattern*  
  是用來識別之節點的 XPath 模式 (在 XML 文件控制代碼會傳入*idoc*參數) 處理成資料列。  
   
- *旗標*  
+ *flags*  
  表示應該使用在 XML 資料和關聯式資料列集之間的對應，以及應如何填入溢出的資料行。 *旗標*是選擇性的輸入的參數，而且可以是下列值之一。  
   
 |位元組值|Description|  
@@ -64,12 +66,12 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|可以和 XML_ATTRIBUTES 或 XML_ELEMENTS 合併使用 (邏輯 OR)。 在擷取的內容，這個旗標表示耗用的資料不會複製到溢位屬性 **@mp:xmltext** 。|  
   
  *SchemaDeclaration*  
- 在表單的結構描述定義： *ColName**Colpattern* [*ColPattern* | *中繼屬性*] [*ColNameColType* [*ColPattern* | *中繼屬性*]...]  
+ 在表單的結構描述定義： *ColName * * Colpattern* [*ColPattern* | *中繼屬性*] [**，* * *ColNameColType* [*ColPattern * |*中繼屬性*]...]  
   
  *ColName*  
  這是資料列集中的資料行名稱。  
   
- *Colpattern*  
+ *ColType*  
  這是資料列集中資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如果資料行類型與不同的基礎**xml**屬性、 類型強制型轉的資料類型，就會發生。  
   
  *ColPattern*  
@@ -79,7 +81,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  為指定的一般 XPath 模式*ColPattern*也支援中繼屬性。  
   
- *中繼屬性*  
+ *MetaProperty*  
  這是 OPENXML 提供的中繼屬性之一。 如果*中繼屬性*指定，則資料行包含的中繼屬性所提供的資訊。 中繼屬性可讓您擷取 XML 節點的相關資訊 (如相對位置和命名空間資訊)。 這提供比文字表示更詳細的資訊。  
   
  *TableName*  
@@ -90,11 +92,11 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  下表描述的結構**邊緣**資料表。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|這是文件節點的唯一識別碼。<br /><br /> 根元素的識別碼值為 0。 負的識別碼值會保留。|  
 |**parentid**|**bigint**|識別節點的父系。 這個識別碼所識別的父系不一定是父元素，這要視其父系由這個識別碼所識別之節點的 NodeType 而定。 例如，如果節點是文字節點，則其父系可能是屬性節點。<br /><br />  如果節點位於 XML 文件的最上層，其 ParentID 為 NULL。|  
-|**節點類型**|**int**|識別節點類型。 這是對應到 XML DOM 節點類型編號的整數。<br /><br /> 節點類型有：<br /><br /> 1 = 元素節點<br /><br /> 2 = 屬性節點<br /><br /> 3 = 文字節點|  
+|**nodetype**|**int**|識別節點類型。 這是對應到 XML DOM 節點類型編號的整數。<br /><br /> 節點類型有：<br /><br /> 1 = 元素節點<br /><br /> 2 = 屬性節點<br /><br /> 3 = 文字節點|  
 |**localname**|**nvarchar**|提供元素或屬性的本機名稱。 如果 DOM 物件不具有名稱，則為 NULL。|  
 |**prefix**|**nvarchar**|這是節點名稱的命名空間前置詞。|  
 |**namespaceuri**|**nvarchar**|這是節點的命名空間 URI。 如果值是 NULL，表示沒有命名空間。|  
@@ -249,7 +251,7 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [範例：使用 OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   
   

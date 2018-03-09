@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Boolean expressions
 - expressions [SQL Server], about expressions
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bc14512bf2ab1eaa2eaa6b51891361f26189314d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 49efa9c940ff4428747942c88259bdd58b96a658
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,12 +89,12 @@ ms.lasthandoff: 11/17/2017
   
 |詞彙|定義|  
 |----------|----------------|  
-|*常數*|這是代表單一特定資料值的符號。 如需詳細資訊，請參閱[常數 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md).|  
+|*constant*|這是代表單一特定資料值的符號。 如需詳細資訊，請參閱[常數 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|是的單位[!INCLUDE[tsql](../../includes/tsql-md.md)]語法，提供特定的服務，並傳回單一值。 *scalar_function*可以是內建的純量函數，例如 SUM、 GETDATE 或 CAST 函式或純量使用者定義函數。|  
-|[ *table_name***。** ]|這是資料表的名稱或別名。|  
-|*資料行*|這是資料行的名稱。 運算式中只能使用資料行的名稱。|  
-|*變數*|這是變數或參數的名稱。 如需詳細資訊，請參閱 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
-|**(** *運算式***)** |這是符合這個主題所定義的任何有效運算式。 括號是分組運算子，可確保會先評估運算式在括號內的所有運算子之後，才組合各個產生的運算式。|  
+|[ *table_name***.** ]|這是資料表的名稱或別名。|  
+|*column*|這是資料行的名稱。 運算式中只能使用資料行的名稱。|  
+|*variable*|這是變數或參數的名稱。 如需詳細資訊，請參閱 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
+|**(** *expression*  **)**|這是符合這個主題所定義的任何有效運算式。 括號是分組運算子，可確保會先評估運算式在括號內的所有運算子之後，才組合各個產生的運算式。|  
 |**(** *scalar_subquery* **)**|這是傳回單一值的子查詢。 例如：<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|一元運算子只適用於會評估得出數值資料類型類別目錄之任何資料類型的運算式。 這是只有單一數值運算元的運算子：<br /><br /> + 表示正數。<br /><br /> - 表示負數。<br /><br /> ~ 表示運算元的補充運算子。|  
 |{ *binary_operator* }|這是定義組合兩個運算式來產生單一結果之方式的運算子。 *binary_operator*可以是算術運算子、 指派運算子 （=）、 位元運算子、 比較運算子、 邏輯運算子、 字串串連運算子 （+） 或一元運算子。 如需有關運算子的詳細資訊，請參閱[運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
@@ -133,18 +135,18 @@ GO
   
  在結果集的每個資料列中，`1+2` 運算式都會評估得出 `3`。 雖然 `ProductID` 運算式會在每個結果集資料列中產生唯一值，但每個資料列都只有 `ProductID` 的一個值。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [TIME ZONE &AMP;#40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [案例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [聯合 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [資料類型轉換 &#40; Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [資料類型優先順序 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [像 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [NULLIF &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

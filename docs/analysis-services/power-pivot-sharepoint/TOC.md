@@ -1,4 +1,4 @@
-# [概觀](power-pivot-for-sharepoint-ssas.md)  
+# [Power Pivot for SharePoint](power-pivot-for-sharepoint-ssas.md)  
 # [管理中心的 Power Pivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  
 ## [將 Power Pivot 解決方案部署到 SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
 ## [建立和設定 Power Pivot 服務應用程式](create-and-configure-power-pivot-service-application-in-ca.md)  

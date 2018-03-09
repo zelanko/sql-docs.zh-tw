@@ -8,29 +8,30 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8c6c84a9efe60ffc7d9ebda818ddeabf833d05a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 68cee85e74159fc68783aded9f117c415d1bd15a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-logical-not-ssis-expression"></a>! (邏輯 Not) (SSIS 運算式)
   執行布林運算元的否定運算。  
   
 > [!NOTE]  
->  ! 運算子不可搭配其他運算子使用。 例如，您不可以將 ! 及 > 運算子結合至 !>。 運算子。  
+>  ! 運算子不可搭配其他運算子使用。 例如，您不可以將 !  及 > 運算子結合至 !>。 運算子。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,12 +43,12 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="arguments"></a>引數  
  *boolean_expression*  
- 是任何評估結果為布林的有效運算式。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+ 是任何評估結果為布林的有效運算式。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="result-types"></a>結果類型  
  DT_BOOL  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  下表顯示 ! 運算的結果 事件。  
   
 |原始布林運算式|套用 ! 運算子之後|  

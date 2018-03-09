@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 caps.latest.revision: "121"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ca2d47a09cdd724713d87f778469e1785675dd69
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8e003b5e3e50b8c19bfbbb059926b73e4113280b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的瀏覽器支援
 
@@ -104,7 +102,7 @@ ms.lasthandoff: 12/05/2017
 |**Microsoft Internet Explorer**|交涉, Kerberos, NTLM, 基本|交涉|是的。 搭配 Internet Explorer 使用預設驗證設定。|
 |**Google Chrome**(+)|交涉, NTLM, 基本|交涉|是的。 預設驗證設定適用於 Chrome。|
 |**Mozilla Firefox**(+)|NTLM，基本|NTLM|是的。 搭配 Firefox 使用預設驗證設定。|
-|**Apple Safari**(+)|NTLM，基本|Basic|是的。 搭配 Safari 使用預設驗證設定。|
+|**Apple Safari**(+)|NTLM，基本|[基本]|是的。 搭配 Safari 使用預設驗證設定。|
 
  **(+)** 最新的公開發行版本
 
@@ -154,7 +152,7 @@ ms.lasthandoff: 12/05/2017
 
  如需 SharePoint 2016 瀏覽器支援的詳細資訊，請參閱 [Plan browser support in SharePoint 2013](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)(在 SharePoint 2013 中規劃瀏覽器支援)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [在入口網站中尋找和檢視報表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  

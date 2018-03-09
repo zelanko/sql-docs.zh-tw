@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,14 +19,14 @@ helpviewer_keywords:
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: e4a32e6dc9401db120557c7f7cd3988f57fb2418
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 998426333430c4b082a4ac2a265672dcd48175bd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="authentication-with-the-report-server"></a>使用報表伺服器驗證
 
@@ -39,12 +37,12 @@ ms.lasthandoff: 12/05/2017
 ## <a name="authentication-types"></a>驗證類型  
  所有要求存取至報表伺服器內容或作業的使用者或應用程式都必須在允許存取前，使用報表伺服器上設定的驗證類型驗證完畢。 下表描述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支援的驗證類型。  
   
-|AuthenticationType 名稱|HTTP 驗證層的值|預設使用|說明|  
+|AuthenticationType 名稱|HTTP 驗證層的值|預設使用|描述|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|交涉|是|先嘗試使用 Windows 整合式驗證的 Kerberos 驗證，但是如果 Active Directory 無法將用戶端要求的票證授與報表伺服器，就會回到 NTLM。 只有當票證無法使用時，Negotiate 才會回到 NTLM。 如果第一次嘗試所產生的錯誤並不是遺失票證，報表伺服器不會進行第二次的嘗試。|  
 |EnableAuthPersistance|NTLM|是|使用 Windows 整合式驗證的 NTLM。<br /><br /> 將不會在其他要求上委派或模擬認證。 後續的要求將遵循新的挑戰-回應序列。 根據網路安全性設定，系統可能會提示使用者輸入認證，否則將會以透明的方式處理驗證要求。|  
 |RSWindowsKerberos|Kerberos|否|使用 Windows 整合式驗證的 Kerberos。 您必須藉由設定服務帳戶的安裝程式服務主要名稱 (SPN)，才能設定 Kerberos，而這需要具有網域管理員權限。 如果您使用 Kerberos 設定識別委派，要求報表之使用者的 Token 也可以用於提供資料給報表之外部資料來源的其他連接。<br /><br /> 在您指定 RSWindowsKerberos 之前，請確定您所使用的瀏覽器類型實際上可支援它。 如果您使用 Microsoft Edge 或 Internet Explorer，則只能透過 Negotiate 支援 Kerberos 驗證。 Microsoft Edge 或 Internet Explorer 不會構成一個直接指定 Kerberos 的驗證要求。|  
-|RSWindowsBasic|Basic|否|基本驗證定義在 HTTP 通訊協定中，而且只能用於驗證報表伺服器的 HTTP 要求。<br /><br /> 認證會以 base64 編碼的形式傳入 HTTP 要求中。 如果您使用基本驗證，請利用安全通訊端層 (SSL) 來加密使用者帳戶資訊，然後再透過網路傳送這項資訊。 SSL 提供了透過 HTTP TCP/IP 連接將連接要求從用戶端傳送到報表伺服器的加密通道。 如需詳細資訊，請參閱 [TechNet 網站上的](http://go.microsoft.com/fwlink/?LinkId=71123) 使用 SSL 加密機密資料 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。|  
+|RSWindowsBasic|[基本]|否|基本驗證定義在 HTTP 通訊協定中，而且只能用於驗證報表伺服器的 HTTP 要求。<br /><br /> 認證會以 base64 編碼的形式傳入 HTTP 要求中。 如果您使用基本驗證，請利用安全通訊端層 (SSL) 來加密使用者帳戶資訊，然後再透過網路傳送這項資訊。 SSL 提供了透過 HTTP TCP/IP 連接將連接要求從用戶端傳送到報表伺服器的加密通道。 如需詳細資訊，請參閱 [TechNet 網站上的](http://go.microsoft.com/fwlink/?LinkId=71123) 使用 SSL 加密機密資料 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。|  
 |Custom|(Anonymous)|否|匿名驗證會指引報表伺服器忽略 HTTP 要求中的驗證標頭。 報表伺服器會接受所有的要求，但是會在您提供的自訂 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 表單驗證上呼叫來驗證使用者。<br /><br /> 只有當您部署自訂驗證模組來處理報表伺服器上的所有驗證要求時，才能指定 **Custom** 。 您不能搭配預設 Windows 驗證延伸模組來使用 Custom 驗證類型。|  
   
 ## <a name="unsupported-authentication-methods"></a>支援的驗證方法  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/05/2017
 |設定表單型驗證或是自訂驗證類型。|[設定報表伺服器上的自訂或表單驗證](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
 |啟用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 以處理自訂驗證狀況。|[設定入口網站傳遞自訂驗證 Cookie](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

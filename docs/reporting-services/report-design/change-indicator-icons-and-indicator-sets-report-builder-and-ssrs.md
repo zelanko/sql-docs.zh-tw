@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e2439245c62a0ac0fe4e0ba3490f8a14d9e0b408
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 80fe34a56f00d45d659dade8e1613cf6d559b85d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>變更指標圖示和指標集合 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 針對分頁報表所提供的預先設定指標集合，在已傳遞的報表中可能不一定會有效地描述您的資料，運作也不一定良好。 本主題提供變更指標圖示外觀，以及變更指標集合以加入不同、更多或更少之指標圖示的程序。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
      如果您按一下 [更多色彩]，[選取色彩] 對話方塊隨即開啟，讓您從中選擇色彩。 如需其選項的詳細資訊，請參閱[選取色彩對話方塊 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)。 按一下 [確定] 關閉 [選取色彩] 對話方塊。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 ## <a name="to-change-the-icon"></a>若要變更圖示  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
      您可以選擇按一下 **「運算式」**\(*fx*) 按鈕來編輯設定 **[圖示]** 選項值的運算式。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 ## <a name="to-use-a-custom-image-as-an-indicator-icon"></a>若要使用自訂影像做為指標圖示  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
     -   若要使用資料庫中的影像，請在 [使用此欄位] 清單中， 選取清單中的欄位，然後在 [使用此 MIME 類型] 清單中，選取影像的 MIME 類型。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 ## <a name="to-add-an-icon-to-the-indicator-set"></a>若要將圖示加入至指標集合  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
   
      設定指標使用您想要的圖示和色彩。 本主題稍早的程序描述執行這項操作的步驟。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 ## <a name="to-delete-an-icon-to-the-indicator-set"></a>若要從指標集合刪除圖示  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  選取要刪除的圖示，然後按一下 [刪除]。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

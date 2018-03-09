@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2a93e5d4c038db3620e78a4141ca8235d703263
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50fdbc0168430a4119da86582258c5dff333a1f0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **Oracle** 資料來源。 您可以使用數個資料提供者來連線至 Oracle。
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 ![使用 .NET 提供者連線至 Oracle](../../integration-services/import-export-data/media/connect-to-oracle-with-net-provider.jpg)
 
 ## <a name="connect-to-oracle-with-the-microsoft-odbc-driver-for-oracle"></a>使用 Microsoft ODBC Driver for Oracle 連線至 Oracle
-ODBC 驅動程式並未列在下拉式資料來源清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源] 和 [選擇目的地] 頁面上，將 [.NET Framework Data Provider for ODBC] 選取為資料來源。 此提供者的作用為 ODBC 驅動程式的包裝函式。
+ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源] 或 [選擇目的地] 頁面上，將 [.NET Framework Data Provider for ODBC] 選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
 
 以下是您選取 .NET Framework Data Provider for ODBC 之後會立即顯示的一般畫面。
 
@@ -54,7 +55,7 @@ ODBC 驅動程式並未列在下拉式資料來源清單中。 若要使用 ODBC
 ### <a name="options-to-specify-odbc-driver-for-oracle"></a>要指定的選項 (ODBC Driver for Oracle)
 
 > [!NOTE]
-> 不論 Oracle 是您的來源還是目的地，此資料提供者和 ODBC 驅動程式的連線選項都會相同。 也就是說，您在精靈的 [選擇資料來源] 和 [選擇目的地] 頁面上會看到一樣的選項。
+> 不論 Oracle 是您的來源還是目的地，此資料提供者和 ODBC 驅動程式的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源] 和 [選擇目的地] 頁面上看到的選項會相同。
 
 若要使用 ODBC Driver for Oracle 連線至 Oracle，請組合出包含下列設定與設定值的連接字串。 完整連接字串的格式緊接在設定清單後面。
 
@@ -89,12 +90,12 @@ Oracle 伺服器的名稱。
 
 `SELECT host_name FROM v$instance`
 
-或
+中的多個
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 
-## <a name="other-data-providers-and-more-info"></a>其他資料提供者和詳細資訊
-若要了解如何使用此處未列出的資料提供者連線至 Oracle 的資訊，請參閱 [Oracle connection strings](https://www.connectionstrings.com/oracle/) (Oracle 連接字串)。 這個協力廠商網站也包含本頁面所述的資料提供者和連線參數的詳細資訊。
+## <a name="other-data-providers-and-more-info"></a>其他資料提供者和其他資訊
+若要了解如何使用此處未列出的資料提供者連線至 Oracle 的資訊，請參閱 [Oracle connection strings](https://www.connectionstrings.com/oracle/) (Oracle 連接字串)。 此協力廠商網站也會包含此頁面上所述之資料提供者和連線參數的詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

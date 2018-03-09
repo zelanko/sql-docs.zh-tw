@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -16,18 +17,20 @@ helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 992a6dcf93bba9eba91297c894700d00b82186b7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: ccbcbc7c58b940a5438cf5ff2c42d8da8da89ec5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server"></a>安裝 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
  > 如需舊版 SQL Server 的相關內容，請參閱[安裝 SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx)。
 
  從 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 開始，[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 才可以用作 64 位元應用程式。 下列重要詳細資料說明如何取得 SQL Server 及其安裝方式。
@@ -51,40 +54,40 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝方式
  
-|Title|Description|  
+|Title|描述|  
 |-----------|-----------------|  
-|[在 Server Core 上安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-on-server-core.md)|檢閱本主題了解如何在 Windows Server Core 上安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]。|  
+|[在 Server Core 上安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-on-server-core.md)|檢閱本文以了解如何在 Windows Server Core 上安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]。|  
 |[檢查 System Configuration Checker 的參數](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|討論系統組態檢查 (SCC) 的功能。|  
-|[從安裝精靈安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|使用安裝精靈進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 標準安裝的程序主題。|  
-|[從命令提示字元安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|提供用來執行自動安裝之範例語法和安裝參數的程序主題。|  
-|[使用組態檔安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|提供用來透過組態檔執行安裝程式之範例語法和安裝參數的程序主題。|  
-|[使用 SysPrep 安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|提供用來透過 SysPrep 執行安裝程式之範例語法和安裝參數的程序主題。|  
-|[將功能新增至 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 執行個體 &#40;安裝程式&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|用於更新現有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 執行個體元件的程序主題。|  
-|[修復失敗的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|用於修復損毀之 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝的程序主題。|  
-|[重新命名主控 SQL Server 獨立式執行個體的電腦](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|用於更新儲存在 sys.servers 中之系統中繼資料的程序主題。|  
-|[安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 服務更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)|安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 更新的程序主題。|  
-|[檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|用於檢查安裝記錄檔中之錯誤的程序主題。|  
+|[從安裝精靈安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|使用 [安裝精靈] 進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 標準安裝的程序文章。|  
+|[從命令提示字元安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|提供用來執行自動安裝之範例語法和安裝參數的程序文章。|  
+|[使用組態檔安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|提供用來透過設定檔執行安裝程式之語法例範和安裝參數的程序文章。|  
+|[使用 SysPrep 安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|提供用來透過 SysPrep 執行安裝程式之語法範例和安裝參數的程序文章。|  
+|[將功能新增至 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 執行個體 &#40;安裝程式&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|用於更新現有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 執行個體元件的程序文章。|  
+|[修復失敗的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|用於修復損毀之 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝的程序文章。|  
+|[重新命名主控 SQL Server 獨立式執行個體的電腦](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|用於更新儲存在 sys.servers 中之系統中繼資料的程序文章。|  
+|[安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 服務更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)|安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 更新的程序文章。|  
+|[檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|用於檢查安裝記錄檔中之錯誤的程序文章。|  
 |[驗證 SQL Server 安裝](../../database-engine/install-windows/validate-a-sql-server-installation.md)|檢閱 SQL 探索報告的使用狀況，以驗證電腦上所安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。|  
   
   
 ## <a name="how-to-install-individual-components"></a>如何安裝個別的元件  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[安裝 SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md)|描述如何安裝及設定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
 |[安裝 SQL Server 複寫](../../database-engine/install-windows/install-sql-server-replication.md)|描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication。|  
-|[安裝 Distributed Replay - 概觀](../../tools/distributed-replay/install-distributed-replay-overview.md)|列出安裝 Distributed Replay 功能的主題。|  
+|[安裝 Distributed Replay - 概觀](../../tools/distributed-replay/install-distributed-replay-overview.md)|列出說明 Distributed Replay 功能安裝的文章。|  
 |[安裝 SQL Server 管理工具與 SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
 |[安裝 SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|描述安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 元件時的考量。|  
   
 
 ## <a name="how-to-configure-sql-server"></a>如何設定 SQL Server  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
-|[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|本主題提供防火牆組態及如何設定 Windows 防火牆的概觀。|  
-|[設定多重主目錄電腦進行 SQL Server 存取](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|此主題描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連接。|  
-|[設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|您可以遵循本主題所提供的步驟，設定通訊埠和防火牆設定，以允許存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。|  
+|[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|本文提供防火牆設定及如何設定 Windows 防火牆的概觀。|  
+|[設定多重主目錄電腦進行 SQL Server 存取](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|本文描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連線。|  
+|[設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|您可以遵循本文所提供的步驟，設定通訊埠和防火牆設定，以允許存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。|  
   
 ## <a name="related-sections"></a>相關章節  
 [ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  

@@ -8,21 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bbc725ce1d2f5999486f46f4ab30f6e3fb98f42d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>補充課程-設定 Power View 報表的報表屬性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/08/2017
   
 完成本課程的估計時間： **30 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>필수 구성 요소  
 這個補充課程是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  
 為了完成這個特殊補充課程，您也必須具備以下條件：  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="default-field-set"></a>預設欄位集  
 預設欄位集是預先定義的資料行和資料表的資料表上按一下報表欄位清單中時會自動加入至報表畫布的量值清單。 基本上來說，當此資料表在 Power View 報表中視覺化時，您可以指定使用者想要看到的預設資料行、量值和欄位順序。  在 Internet Sales 模型中，您將會針對 Customer、Geography 和 Product 資料表定義預設欄位集和順序。 只包含使用者在使用 Power View 報表分析 Adventure Works Internet Sales 資料時，想要看到的最常見資料行。  
   
-如需 [預設欄位集] 的詳細資訊，請參閱《SQL Server 線上叢書》中的[設定 Power View 報表的預設欄位集 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)。  
+如需預設欄位集的詳細資訊，請參閱[設定預設欄位集 Power View 報表的](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)SQL Server 線上叢書 》 中。  
   
 #### <a name="to-set-default-field-set-for-tables"></a>若要為資料表設定預設欄位集  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="table-behavior"></a>資料表行為  
 您可以使用 [資料表行為] 屬性來變更不同視覺效果類型的預設行為，以及變更 Power View 報表中使用之資料表的群組行為。 如此可讓識別資訊 (如名稱、影像或標題) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
   
-如需資料表行為屬性的詳細資訊，請參閱《SQL Server 線上叢書》中的[設定 Power View 報表的資料表行為屬性 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)。  
+如需資料表行為屬性的詳細資訊，請參閱[Power View 報表的設定資料表行為屬性](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)SQL Server 線上叢書 》 中。  
   
 #### <a name="to-set-table-behavior"></a>若要設定資料表行為 
   
@@ -139,7 +140,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="reporting-properties-for-columns"></a>資料行的報表屬性  
 在資料行上可設定許多基本資料行屬性和特定報表屬性來改善模型報表體驗。 例如，使用者可能不需要看到每一個資料表中的每一個資料行。 就如同您之前使用資料行的 [隱藏] 屬性來隱藏 [Product Category] 和 [Product Subcategory] 資料表一樣，您也可以隱藏資料表中的特定資料行。 其他屬性 (例如 [資料格式] 和 [依資料行排序]) 也會影響資料行資料出現在報表中的方式。 您現在即將在特定資料行上設定部分屬性。 有一些資料行不需要任何動作，所以不會顯示在底下。  
   
-您只會在這裡設定幾個不同的資料行屬性，但是還有許多其他屬性。 如需資料行報表屬性的詳細資訊，請參閱《SQL Server 線上叢書》中的[資料行屬性 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/column-properties-ssas-tabular.md)。  
+您只會在這裡設定幾個不同的資料行屬性，但是還有許多其他屬性。 如需詳細資料行報表屬性的相關資訊，請參閱[資料行屬性](../analysis-services/tabular-models/column-properties-ssas-tabular.md)SQL Server 線上叢書 》 中。  
   
 #### <a name="to-set-properties-for-columns"></a>若要設定資料行的屬性  
   
@@ -163,7 +164,7 @@ ms.lasthandoff: 12/08/2017
     **日期**  
   
     > [!NOTE]  
-    > 因為在第 7 課：＜標記為日期資料表＞中 [Date] 資料表已使用 [標記為日期資料表] 設定選取為模型日期資料表，而且 [Date] 資料表中的 [Date] 資料行會當做唯一識別碼的資料行使用，所以 [Date] 資料行的 [資料列識別碼] 屬性將會自動設定為 True 而且無法變更。 當您在 DAX 公式中使用時間智慧函數時，您必須指定日期資料表。 在此模型中，您已使用時間智慧函數建立許多量值，以計算各個不同期間的銷售資料 (例如上一季和當季) 並用於 KPI 中。 如需指定日期資料表的詳細資訊，請參閱《SQL Server 線上叢書》中的[指定標記為日期資料表以搭配時間智慧使用 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
+    > 因為在第 7 課：＜標記為日期資料表＞中 [Date] 資料表已使用 [標記為日期資料表] 設定選取為模型日期資料表，而且 [Date] 資料表中的 [Date] 資料行會當做唯一識別碼的資料行使用，所以 [Date] 資料行的 [資料列識別碼] 屬性將會自動設定為 True 而且無法變更。 當您在 DAX 公式中使用時間智慧函數時，您必須指定日期資料表。 在此模型中，您已使用時間智慧函數建立許多量值，以計算各個不同期間的銷售資料 (例如上一季和當季) 並用於 KPI 中。 如需有關指定日期資料表的詳細資訊，請參閱[指定標記為日期資料表的使用時間智慧使用](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server 線上叢書 》 中。  
   
     |資料行|屬性|Value|  
     |----------|------------|---------|  

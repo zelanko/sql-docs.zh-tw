@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="language-elements"></a>語言元素
 TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
@@ -35,10 +35,10 @@ TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行�
 * [保留的關鍵字](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [定序](https://msdn.microsoft.com/library/ff848763.aspx)
 * [註解](../t-sql/language-elements/comment-transact-sql.md)
-* [常數](../t-sql/data-types/constants-transact-sql.md)
+* [constants](../t-sql/data-types/constants-transact-sql.md)
 * [資料類型](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [運算式](../t-sql/language-elements/expressions-transact-sql.md)
+* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [識別屬性因應措施](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -55,13 +55,13 @@ TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行�
 * [TRY...CATCH](../t-sql/language-elements/try-catch-transact-sql.md)
 * [WHILE](../t-sql/language-elements/while-transact-sql.md)
 
-## <a name="operators"></a>操作員
+## <a name="operators"></a>運算子
 * [+ (加)](../t-sql/language-elements/add-transact-sql.md)
 * [+ (字串串連)](../t-sql/language-elements/string-concatenation-transact-sql.md)
 * [- (負)](../t-sql/language-elements/unary-operators-negative.md)
 * [- (減)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (乘)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/ （除法）](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (Divide)](../t-sql/language-elements/divide-transact-sql.md)
 * [模數](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>萬用字元相符的字元
@@ -76,10 +76,10 @@ TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行�
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
-* [是[不](../t-sql/queries/is-null-transact-sql.md)
+* [不是](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [或](../t-sql/language-elements/or-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>位元運算子
 * [& (位元 AND)](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -235,7 +235,7 @@ TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行�
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>交易
-* [交易](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>診斷工作階段
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
@@ -285,7 +285,7 @@ TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行�
 * [將交易隔離層級](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 如需詳細參考資訊，請參閱[T-SQL 陳述式](tsql-statements.md)和[T-SQL 系統檢視表](tsql-system-views.md)。
 
 <!--Image references-->

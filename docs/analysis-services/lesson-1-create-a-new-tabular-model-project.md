@@ -8,30 +8,31 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 57d2db22484a8c6a8b8301e11cbd4799aae6bd91
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 課：建立新的表格式模型專案
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中建立新的空白表格式模型專案。 建立新專案之後，您就可以使用 [資料表匯入精靈] 開始加入資料。 這一課也可讓您的表格式模型撰寫環境在 SSDT 中的簡介。  
   
-完成本課程的估計時間： **10 分鐘**  
+完成本課程的估計時間：**10 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>필수 구성 요소  
 本主題是表格式模型撰寫教學課程的第一課。 若要完成這一課，您必須使用 SQL Server 執行個體上安裝 AdventureWorksDW 範例資料庫。 若要進一步了解，請參閱[表格式模型化 &#40;Adventure Works 教學課程 &#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>建立新的表格式模型專案  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/08/2017
       
 6.  在 [相容性層級] 中，確認已選取 [SQL Server 2016 (1200)]，然後按一下 [確定]。   
  
-    ![做為表格式-第 1 課-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
+    ![as-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
       
     如果您沒有看到 SQL Server 2016 RTM (1200) 相容性層級清單方塊中，您不使用最新版的 SQL Server Data Tools。 若要取得最新版本，請參閱 [安裝 SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)。  
 
@@ -67,15 +68,15 @@ ms.lasthandoff: 12/08/2017
   
 您的專案建立之後，它會在 SSDT 中開啟。 在右側，在**表格式模型總管**，您會看到的物件樹狀結構檢視模型中。 您還沒有匯入資料，因為資料夾將為空白。 您可以滑鼠右鍵按一下要執行動作，類似於功能表列物件的資料夾。 當您逐步完成本教學課程，您將使用表格式模型總管 來瀏覽在模型專案中的不同的物件。
 
-![做為表格式-第 1 課-所時間](../analysis-services/media/as-tabular-lesson1-tme.png)
+![as-tabular-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
 
 按一下**方案總管 中** 索引標籤。在這裡，您會看到您**Model.bim**檔案。 如果您看不到左 （Model.bim 索引標籤的空視窗），設計工具視窗中**方案總管 中**下**AW Internet Sales 專案**，連按兩下**Model.bim**檔案。 Model.bim 檔案包含所有模型專案的中繼資料。 
 
-![做為表格式-第 1 課-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![as-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
 讓我們看看模型屬性。 按一下 **方案總管**中建立新的空白表格式模型專案。 在**屬性**視窗中，您會看到[模型屬性的](../analysis-services/tabular-models/model-properties-ssas-tabular.md)、 最重要的是**DirectQuery 模式**屬性。 此屬性指定模型是以 In-Memory 模式 (關閉) 或是 DirectQuery 模式 (開啟) 部署。 在本教學課程中，您將撰寫及部署記憶體中模式的模型。
 
-![做為表格式-第 1 課的屬性](../analysis-services/media/as-tabular-lesson1-properties.png)
+![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 當您建立新的模型時，根據資料模型化，可以指定自動設定某些模型屬性**工具** > **選項** 對話方塊。 [資料備份]、[工作空間保留] 和 [工作空間伺服器] 屬性會指定備份、在記憶體中保留以及建立工作空間資料庫 (您的模型撰寫資料庫) 的方式和位置。 您稍後可以視需要變更這些設定，但目前讓這些屬性保持不變。  
 
@@ -91,7 +92,7 @@ ms.lasthandoff: 12/08/2017
 
 
 ## <a name="additional-resources"></a>其他資源
-若要深入了解不同類型的表格式模型專案，請參閱[表格式模型專案 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)。 若要深入了解表格式模型撰寫環境，請參閱[表格式模型設計師 &#40;SSAS&#41;](../analysis-services/tabular-models/tabular-model-designer-ssas.md)。  
+若要深入了解不同類型的表格式模型專案，請參閱[表格式模型專案](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)。 若要深入了解表格式模型撰寫環境，請參閱[表格式模型設計師](../analysis-services/tabular-models/tabular-model-designer-ssas.md)。  
   
 
 ## <a name="whats-next"></a>下一步

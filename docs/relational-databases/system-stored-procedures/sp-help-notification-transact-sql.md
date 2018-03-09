@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e54750ac4174f054d87c5a1994f40bd3b5cfeec0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +51,16 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@object_type =**] **'***object_type***'**  
+ [ **@object_type =**] **'***object_type***'**  
  要傳回的資訊類型。 *object_type*是**char(9)**，沒有預設值。 *object_type*可能是 ALERTS 會列出指派給所提供之操作員名稱的警示*，* OPERATORS 會列出負責所提供之警示名稱的操作員或*。*  
   
- [  **@name =**] **'***名稱***'**  
+ [ **@name =**]  **'***name***'**  
  運算子名稱 (如果*object_type*是 OPERATORS) 或警示名稱 (如果*object_type*是 ALERTS)。 *名稱*是**sysname**，沒有預設值。  
   
- [  **@enum_type =**] **'***enum_type***'**  
+ [ **@enum_type =**] **'***enum_type***'**  
  *Object_type*傳回的資訊。 *enum_type*在大部分情況下是 ACTUAL。 *enum_type*是**char （10)**，沒有預設值，它可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ACTUAL|只列出*object_types*聯*名稱*。|  
 |ALL|列出所有*object_types*包括未與相關聯的那些*名稱*。|  
@@ -66,14 +69,14 @@ sp_help_notification
  [  **@notification_method =**] *notification_method*  
  用來決定要傳回之通知方法資料行的數值。 *notification_method*是**tinyint**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|電子郵件： 只會傳回**use_email**資料行。|  
 |**2**|呼叫器： 只傳回**use_pager**資料行。|  
 |**4**|NetSend： 只傳回**use_netsend**資料行。|  
 |**7**|全部：傳回所有資料行。|  
   
- [  **@target_name =**] **'***target_name***'**  
+ [ **@target_name =**] **'***target_name***'**  
  要搜尋的警示名稱 (如果*object_type*是 ALERTS) 或要搜尋的操作員名稱 (如果*object_type*是 OPERATORS)。 *target_name*才需要*enum_type*是目標。 *target_name*是**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-valves"></a>傳回碼值  
@@ -85,10 +88,10 @@ sp_help_notification
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警示識別碼。|  
-|**a**|**sysname**|警示名稱。|  
-|**use_email**|**int**|利用電子郵件來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**use_pager**|**int**|利用呼叫器來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**use_netsend**|**int**|利用網路快顯視窗來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**alert_name**|**sysname**|警示名稱。|  
+|**use_email**|**int**|利用電子郵件來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = No|  
+|**use_pager**|**int**|利用呼叫器來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = No|  
+|**use_netsend**|**int**|利用網路快顯視窗來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = No|  
 |**has_email**|**int**|這個警示所傳送的電子郵件通知數目。|  
 |**has_pager**|**int**|這個警示所傳送的呼叫器通知數目。|  
 |**has_netsend**|**int**|數目**網路傳送**這個警示所傳送的通知。|  
@@ -99,12 +102,12 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|操作員識別碼。|  
 |**operator_name**|**sysname**|操作員名稱。|  
-|**use_email**|**int**|利用電子郵件來傳送操作員的通知：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**use_pager**|**int**|利用呼叫器來傳送操作員的通知：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**use_netsend**|**int**|這是用來通知操作員的網路快顯視窗：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**has_email**|**int**|操作員有電子郵件地址：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**has_pager**|**int**|操作員具有呼叫器號碼：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**has_netsend**|**int**|操作員已設定了 net send 通知。<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**use_email**|**int**|利用電子郵件來傳送操作員的通知：<br /><br /> **1** = 是<br /><br /> **0** = No|  
+|**use_pager**|**int**|利用呼叫器來傳送操作員的通知：<br /><br /> **1** = 是<br /><br /> **0** = No|  
+|**use_netsend**|**int**|這是用來通知操作員的網路快顯視窗：<br /><br /> **1** = 是<br /><br /> **0** = No|  
+|**has_email**|**int**|操作員有電子郵件地址：<br /><br /> **1** = 是<br /><br /> **0** = No|  
+|**has_pager**|**int**|操作員具有呼叫器號碼：<br /><br /> **1** = 是<br /><br /> **0** = No|  
+|**has_netsend**|**int**|操作員已設定了 net send 通知。<br /><br /> **1** = 是<br /><br /> **0** = No|  
   
 ## <a name="remarks"></a>備註  
  這個預存程序必須從執行**msdb**資料庫。  
@@ -144,10 +147,10 @@ EXEC sp_help_notification
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_add_notification &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

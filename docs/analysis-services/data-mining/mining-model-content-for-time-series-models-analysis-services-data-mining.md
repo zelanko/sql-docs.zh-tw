@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>時間序列模型的採礦模型內容 (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所有的採礦模型會使用相同的結構來儲存其內容。 這個結構是根據資料採礦內容結構描述資料列集所定義。 不過，在該標準結構內，包含資訊的節點會以不同的方式排列，以便代表各種樹狀結構。 本主題描述如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法為基礎的採礦模型組織節點，以及每個節點的意義。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+所有採礦模型都會使用相同的結構來儲存其內容。 這個結構是根據資料採礦內容結構描述資料列集所定義。 不過，在該標準結構內，包含資訊的節點會以不同的方式排列，以便代表各種樹狀結構。 本主題描述如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法為基礎的採礦模型組織節點，以及每個節點的意義。  
   
  如需適用於所有模型類型之一般採礦模型內容的說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
@@ -129,7 +128,7 @@ ms.lasthandoff: 12/08/2017
   
  **ARTXP**  
   
-|節點類型識別碼|說明|  
+|節點類型識別碼|Description|  
 |------------------|-----------------|  
 |1 (模型)|時間序列|  
 |3 (內部)|代表 ARTXP 時間序列樹中的內部分支。|  
@@ -138,7 +137,7 @@ ms.lasthandoff: 12/08/2017
   
  **ARIMA**  
   
-|節點類型識別碼|說明|  
+|節點類型識別碼|Description|  
 |------------------|-----------------|  
 |27 (ARIMA 根)|ARIMA 樹狀結構的最上層節點。|  
 |28 (ARIMA 週期結構)|描述單一週期結構之 ARIMA 樹狀結構的元件。|  
@@ -212,7 +211,7 @@ ms.lasthandoff: 12/08/2017
  **ARIMA**：支援目前週期結構的案例計數。 支援的值會在目前週期結構的所有節點中重複。  
   
  MSOLAP_MODEL_COLUMN  
- 在節點中表示之資料序列的可預測屬性 (與 ATTRIBUTE_NAME 的值相同)。  
+ 在節點中表示之資料序列的可預測屬性  (與 ATTRIBUTE_NAME 的值相同)。  
   
  MSOLAP_NODE_SCORE  
  指出樹狀結構或分割之資訊值特性的數值。  
@@ -254,7 +253,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="elements-of-the-artxp-time-series-formula"></a>ARTXP 時間序列公式的元素  
  若要檢視 ARTXP 樹狀結構或分支的完整公式，我們建議您使用 [Microsoft 時間序列檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)的 [採礦圖例]，這項功能會以可讀取的格式呈現所有常數。  
   
--   [檢視時間序列模型的公式 &#40;資料採礦&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [檢視時間序列公式模式 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  以下章節將呈現範例方程式並說明基本詞彙。  
   
@@ -379,7 +378,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>ARIMA 的時間序列公式  
  若要檢視任何 ARIMA 節點的完整公式，我們建議您使用 [Microsoft 時間序列檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)的 [採礦圖例]，這項功能會以一致的格式呈現已經撰寫之方程式的自動迴歸順序、移動平均和其他元素。  
   
--   [檢視時間序列模型的公式 &#40;資料採礦&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [檢視時間序列公式模式 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  本章節將呈現範例方程式並說明基本詞彙。  
   
@@ -444,8 +443,8 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ## <a name="remarks"></a>備註  
  從 ARTXP 樹狀結構中擷取資訊可能會很困難，因為每個分割的資訊都位於樹狀結構內的不同位置。 因此，您必須透過 ARTXP 模型取得所有片段，然後進行某些處理，才能重新組成完整的公式。 從 ARIMA 模型中擷取方程式會比較方便，因為您在整個樹狀結構中都可以使用此公式。 如需如何建立查詢來擷取這項資訊的資訊，請參閱 [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)。  
   
-## <a name="see-also"></a>請參閱  
- [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另請參閱  
+ [採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  

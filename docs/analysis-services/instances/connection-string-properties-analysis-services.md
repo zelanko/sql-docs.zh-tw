@@ -5,29 +5,27 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>連接字串屬性 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題將說明您可能會在某個設計工具或管理工具 中設定，或查詢建立的用戶端應用程式連接到 Analysis Services 資料的連接字串中看到的連接字串屬性。 因此，本文內容只涵蓋可用屬性的子集。 完整的清單包含許多伺服器和資料庫屬性，可讓您針對特定應用程式自訂連接，而不必在乎伺服器上設定執行個體或資料庫的方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主題將說明您可能會在某個設計工具或管理工具中設定的連接字串屬性，或是在連接到 Analysis Services 以查詢資料的用戶端應用程式所建立的連接字串中看到的連接字串屬性。 因此，本文內容只涵蓋可用屬性的子集。 完整的清單包含許多伺服器和資料庫屬性，可讓您針對特定應用程式自訂連接，而不必在乎伺服器上設定執行個體或資料庫的方式。  
   
  開發人員若要透過撰寫應用程式的程式碼以建立自訂連接字串，應該檢閱適用於 ADOMD.NET 用戶端的 API 文件以檢視更詳細的清單： <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_common"></a> 常用的連接參數  
  下表描述建立連接字串時最常用的屬性。  
   
-|屬性|說明|範例|  
+|屬性|Description|範例|  
 |--------------|-----------------|-------------|  
 |**Data Source** 或 **DataSource**|指定伺服器執行個體。 此屬性是所有連接的必要項。 有效值包括伺服器的網路名稱或 IP 位址、本機連接的 local 或 localhost 值、設定為 HTTP 或 HTTPS 存取之伺服器的 URL，或是本機 Cube (.cub) 檔案的名稱。|`Data source=AW-SRV01` 代表預設執行個體及通訊埠 (TCP 2383)。<br /><br /> `Data source=AW-SRV01$Finance:8081` 代表具名執行個體 ($Finance) 及固定連接埠。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` 代表完整網域名稱，假設是預設執行個體及通訊埠。<br /><br /> `Data source=172.16.254.1` 代表伺服器的 IP 位址，略過 DNS 伺服器查閱，對於疑難排解連接問題相當實用。|  
 |**Initial Catalog** 或 **Catalog**|指定要連接的 Analysis Services 資料庫的名稱。 資料庫必須部署在 Analysis Services 上，而且您必須具有連接到該資料庫的權限。 此屬性對於 AMO 連接而言為選擇項，但卻是 ADOMD.NET 的必要項。|`Initial catalog=AdventureWorks2016`|  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/08/2017
   
  屬性是依照字母順序列出。  
   
-|屬性|說明|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**EffectiveUserName**|當伺服器上必須模擬使用者識別時使用。 以「網域\使用者」的格式指定帳戶。 若要使用此屬性，呼叫端必須具有 Analysis Services 的系統管理權限。 如需有關從 SharePoint 的 Excel 活頁簿中使用此屬性的資訊，請參閱＜ [在 SharePoint Server 2013 中使用 Analysis Services EffectiveUserName](http://go.microsoft.com/fwlink/?LinkId=311905)＞。 如需有關如何搭配 Reporting Services 使用此屬性的說明，請參閱 [使用 EffectiveUserName 在 SSAS 中模擬](http://go.microsoft.com/fwlink/?LinkId=301385)。<br /><br /> **EffectiveUserName** 是在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝中用於擷取使用方式資訊。 使用者識別會提供給伺服器，從而可將包含使用者識別的事件或錯誤記錄於記錄檔。 就 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]而言，它並非用於授權用途。|  
 |**加密密碼**|指定是否使用本機密碼加密本機 Cube。 有效值為 True 或 False。 預設值是 False。|  
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/08/2017
   
  屬性是依照字母順序列出。  
   
-|屬性|說明|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**應用程式名稱**|設定與連接相關聯的應用程式名稱。 此值有助於監視追蹤事件，尤其是多個應用程式存取相同資料庫的情況。 例如，在連接字串中加入 Application Name='test' 會使 SQL Server Profiler 追蹤內出現 'test'，如以下螢幕擷取畫面所示：<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 此屬性的別名包括 **sspropinitAppName**和 **AppName**。 如需詳細資訊，請參閱 [連接到 SQL Server 時使用 Application Name 參數](http://go.microsoft.com/fwlink/?LinkId=301699)。|  
 |**AutoSyncPeriod**|設定用戶端與伺服器快取同步處理的頻率 (以毫秒為單位)。 ADOMD.NET 會為記憶體負擔最低的常用物件提供用戶端快取功能。 這有助於減少與伺服器之間的往返次數。 預設值為 10000 毫秒 (或 10 秒)。 如果設定為 null 或 0，則會關閉自動同步處理。|  

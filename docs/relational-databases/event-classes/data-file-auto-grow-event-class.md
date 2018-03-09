@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data File Auto Grow event class
+helpviewer_keywords:
+- Data File Auto Grow event class
 ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4db8b0d9d12f763f78fb530d3bc914190cc907ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4fbd4c3c6cf403ae8f61c0f9cd77568ed0b8acf1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Data File Auto Grow** 事件類別指出資料檔案已自動成長。 如果使用 ALTER DATABASE 陳述式讓資料檔明確成長，則不會觸發這個事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Data File Auto Grow** 事件類別指出資料檔自動成長。 如果使用 ALTER DATABASE 陳述式讓資料檔明確成長，則不會觸發這個事件。  
   
  請將 **Data File Auto Grow** 事件類別加入監視資料檔成長的追蹤。  
   

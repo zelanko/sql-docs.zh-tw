@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: "88"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5c661e39ca7e011e185b68867be5955e2cfc280
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c524b1ad61453b835402816102a8f428adfe42d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題中的程序，會構成設定合併式複寫之 Web 同步處理時所採取的第二個步驟。 請在啟用 Web 同步處理的發行集之後執行這個步驟。 如需組態處理序的概觀，請參閱＜ [[設定 Web 同步處理]](../../relational-databases/replication/configure-web-synchronization.md)＞。 完成本主題中的程序之後，請繼續執行第三個步驟，即設定訂閱來使用 Web 同步處理。 第三個步驟在下列主題中描述：  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
     4.  完成「Web 伺服器憑證精靈」。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
  如果您無法從 CA 取得伺服器憑證，您可以指定憑證來進行測試。 若要設定 IIS 6.0 來進行測試，請利用 SelfSSL 公用程式來安裝憑證。 IIS 6.0 資源套件中有提供此公用程式。 您可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=30958)下載這些工具。 如需 IIS 5.0，請移至 [Microsoft 說明及支援](http://go.microsoft.com/fwlink/?LinkId=46229)。  
   
@@ -161,9 +161,9 @@ ms.lasthandoff: 11/17/2017
   
     1.  在 **[別名]** 方塊中輸入虛擬目錄的別名。  
   
-    2.  在 **[路徑]** 方塊中輸入虛擬目錄的路徑。 例如，如果您在 [別名]  方塊中輸入 **websync1** ，請在 [路徑]  方塊中輸入 **C:\Inetpub\wwwroot\websync1** 。 按一下 **[下一步]**。  
+    2.  在 **[路徑]** 方塊中輸入虛擬目錄的路徑。 例如，如果您在 [別名]  方塊中輸入 **websync1** ，請在 [路徑]  方塊中輸入 **C:\Inetpub\wwwroot\websync1** 。 按 [下一步] 。  
   
-    3.  在兩個對話方塊中，按一下 **[是]**。 這會指定您要建立新資料夾，並指定您要複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 ＞。  
+    3.  在兩個對話方塊中，按一下 **[是]**。 這會指定您要建立新資料夾，並指定您要複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 執行個體時提供 SQL Server 登入。  
   
 7.  在 **[驗證的存取]** 頁面中：  
   
@@ -276,7 +276,7 @@ ms.lasthandoff: 11/17/2017
   
     6.  選取不需要存取目錄的使用者或群組，然後按一下 **[移除]**。  
   
-    7.  按一下 **[確定]**。  
+    7.  按一下 [確定] 。  
   
 4.  在 **[Internet Information Services (IIS) 管理員]**中建立應用程式集區：  
   
@@ -300,7 +300,7 @@ ms.lasthandoff: 11/17/2017
   
     4.  在 **[使用者名稱]** 和 **[密碼]** 欄位中，輸入步驟 1 中建立的帳戶和密碼。  
   
-    5.  按一下 **[確定]**。  
+    5.  按一下 [確定] 。  
   
 6.  將應用程式集區與 Web 同步處理所使用的虛擬目錄相關聯：  
   
@@ -310,7 +310,7 @@ ms.lasthandoff: 11/17/2017
   
     3.  在 [\<VirtualDirectoryName> 屬性] 對話方塊的 [虛擬目錄] 索引標籤上，從 [應用程式集區] 下拉式清單選取步驟 5 中建立的應用程式集區。  
   
-    4.  按一下 **[確定]**。  
+    4.  按一下 [確定] 。  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>測試與 replisapi.dll 的連接  
  在診斷模式下執行 Web 同步處理，以測試執行 IIS 之電腦的連接，並確定安全通訊端層 (SSL) 憑證已正確安裝。 若要在診斷模式下執行 Web 同步處理，您必須是執行 IIS 之電腦上的管理員。  
@@ -327,9 +327,9 @@ ms.lasthandoff: 11/17/2017
   
     4.  如果使用 Proxy 伺服器，請選取 **[在 LAN 中使用 Proxy 伺服器]** 和 **[本機位址不使用 Proxy 伺服器]**。  
   
-    5.  按一下 **[確定]**。  
+    5.  按一下 [確定] 。  
   
-2.  在訂閱者端的 Internet Explorer 中，將 `?diag` 附加至 replisapi.dll 的位址，以便在診斷模式下連接伺服器。 例如： `https://server.domain.com/directory/replisapi.dll?diag`。  
+2.  在訂閱者端的 Internet Explorer 中，將 `?diag` 附加至 replisapi.dll 的位址，以便在診斷模式下連接伺服器。 例如： `https://server.domain.com/directory/replisapi.dll?diag`＞。  
   
 3.  如果 Windows 作業系統無法辨識您先前為 IIS 指定的憑證，則會出現 **[安全性警示]** 對話方塊。 發生此警示的可能是因為該憑證是測試憑證，或者該憑證是由 Windows 無法辨識的憑證授權單位 (CA) 所發行。  
   

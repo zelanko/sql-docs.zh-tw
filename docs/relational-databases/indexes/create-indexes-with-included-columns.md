@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 064df7a689cbb3da0323448eb5efc8d0fdace5be
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,13 +95,13 @@ ms.lasthandoff: 01/02/2018
   
 6.  按一下 **[索引鍵資料行]** 索引標籤底下的 **[加入]**。  
   
-7.  在 [從 *table_name* 選取資料行] 對話方塊中，選取要加入索引之一或多個資料表資料行的核取方塊。  
+7.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至索引之一或多個資料表資料行的核取方塊。  
   
 8.  按一下 [確定] 。  
   
 9. 按一下 **[包含的資料行]** 索引標籤底下的 **[加入]**。  
   
-10. 在 [從 *table_name* 選取資料行] 對話方塊中，選取要加入至索引中作為非索引鍵資料行之資料表資料行的核取方塊。  
+10. 在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至索引中作為非索引鍵資料行之資料表資料行的核取方塊。  
   
 11. 按一下 [確定] 。  
   

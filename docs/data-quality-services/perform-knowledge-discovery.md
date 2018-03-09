@@ -18,15 +18,15 @@ f1_keywords:
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2071dfc0ea042138a9f6b5f00261b81847f7f909
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9c9cb4fb01f38cf1a65069dbd41ccc4d5d0aa91b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="perform-knowledge-discovery"></a>執行知識探索
   此主題描述如何透過知識探索來建立知識庫。 在探索程序中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 會透過電腦輔助的程序來分析範例資料來源中的資料，並將它所獲得的知識加入至知識庫。 您可以在知識探索活動或定義域管理活動的 **[管理定義域值]** 步驟中修改及增強這項知識。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立知識庫。  
   
 ##  <a name="FirstStep"></a> 第一步：開始知識探索  
@@ -184,7 +184,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  **加入新的定義域值**：若要將新的值加入至定義域，請按一下 **[加入新的定義域值]** 按鈕，在資料表結尾加入資料列。 在您輸入值之後，此資料列將會依字母順序重新定位。  
   
-8.  **從 Excel 匯入定義域值**：若要從 Excel 試算表加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[從 Excel 匯入定義域值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 如需詳細資訊，請參閱 [將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
+8.  **從 Excel 匯入定義域值**：若要從 Excel 試算表加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[從 Excel 匯入定義域值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 如需詳細資訊，請參閱 [Import Values from an Excel File into a Domain](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
 9. **匯入專案值**：若要從資料品質專案加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[匯入專案值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]**。 隨即顯示匯入的值。 按一下 **[完成]**。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,16 +33,16 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 72a38ba6fa45a5b7d6c6003100b27398c60ed522
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
   「Foreach 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **Foreach** 迴圈的結構類似。 在封裝中，迴圈是使用 Foreach 列舉值啟用。  「Foreach 迴圈」容器會為指定列舉值的每個成員重複控制流程。  
@@ -101,11 +102,11 @@ ms.lasthandoff: 11/20/2017
 |Foreach ADLS 檔案|指定包含要列舉之檔案的 Azure Data Lake Store 目錄。|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>使用 Foreach 迴圈容器將列舉新增至控制流程
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括 Foreach 迴圈容器，該容器為控制流程項目，可簡化在套件的控制流程中包括列舉檔案及物件的迴圈建構。 如需詳細資訊，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)＞。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括 Foreach 迴圈容器，該容器為控制流程元素，可簡化在封裝的控制流程中包括列舉檔案及物件的迴圈建構。 如需詳細資訊，請參閱 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)。  
   
  「Foreach 迴圈」容器不提供功能，僅提供可在其中建立可重複控制流程、指定列舉類型並設定列舉值的結構。 若要提供容器功能，必須在「Foreach 迴圈」容器中至少包括一個工作。 如需詳細資訊，請參閱 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  
   
- 「Foreach 迴圈」容器可以包括具有多個工作的控制流程及其他容器。 將工作及容器加入「Foreach 迴圈」容器與將它們加入封裝類似，只是您要將工作及容器拖曳至「Foreach 迴圈」容器而不是封裝。 如果「Foreach 迴圈」容器包含一個以上的工作或容器，則您可以如同在封裝中所做的一樣，使用優先順序條件約束來連接它們。 如需詳細資訊，請參閱 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ 「Foreach 迴圈」容器可以包括具有多個工作的控制流程及其他容器。 將工作及容器加入「Foreach 迴圈」容器與將它們加入封裝類似，只是您要將工作及容器拖曳至「Foreach 迴圈」容器而不是封裝。 如果「Foreach 迴圈」容器包含一個以上的工作或容器，則您可以如同在封裝中所做的一樣，使用優先順序條件約束來連接它們。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
   
 ### <a name="add-and-configure-a-foreach-loop-container"></a>新增與設定 Foreach 迴圈容器
   
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/20/2017
   
 8.  (選擇性) 按一下 [運算式] 頁面上的 [運算式]，建立 Foreach 迴圈容器之屬性的屬性運算式。 如需詳細資訊，請參閱[加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
   
-9. 按一下 **[確定]**。  
+9. 按一下 [確定] 。  
 
 ## <a name="general-page---foreach-loop-editor"></a>一般頁面 - Foreach 迴圈編輯器
 使用 **[Foreach 迴圈編輯器]** 對話方塊的 **[一般]** 頁面，即可命名並描述 Foreach 迴圈容器，使用指定的列舉值為集合的每一個成員重複工作流程。  
@@ -204,7 +205,7 @@ ms.lasthandoff: 11/20/2017
  **列舉值**  
  從清單中選取列舉值類型。 此屬性具有下表所列的選項：  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Foreach 檔案列舉值**|列舉檔案。 選取這個值就會在 **[Foreach 檔案列舉值]**區段中顯示動態選項。|  
 |**Foreach 項目列舉值**|列舉項目中的值。 選取這個值就會在 **[Foreach 項目列舉值]**區段中顯示動態選項。|  
@@ -297,7 +298,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  變數必須為物件資料類型，否則會發生錯誤。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **第一個資料表的資料列**  
  選取此選項即可只列舉第一個資料表的資料列。  
@@ -311,7 +312,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>列舉值 = Foreach ADO.NET 結構描述資料列集列舉值  
  Foreach ADO.NET 結構描述資料列集列舉值可用來列舉所指定之資料來源的結構描述。 例如，如果 Foreach 迴圈包括「執行 SQL」工作，您可以使用 Foreach ADO.NET 結構描述資料列集列舉值來列舉結構描述 (例如 **AdventureWorks** 資料庫中的資料行)，以及使用「執行 SQL」工作來取得結構描述權限。  
   
- **連接**  
+ **[連接]**  
  在清單中選 ADO.NET 連線管理員，或按一下 [\<新增連線...>]，以建立新的 ADO.NET 連線管理員。  
   
 > [!IMPORTANT]  
@@ -331,9 +332,9 @@ ms.lasthandoff: 11/20/2017
  Foreach From Variable 列舉值可用來列舉所指定之變數中可列舉的物件。 例如，如果 Foreach 迴圈包括執行查詢並將結果儲存在變數中的「執行 SQL」工作，您可以使用 Foreach From Variable 列舉值來列舉查詢結果。  
   
  **變數**  
- 在清單中選取變數，或按一下 [\<新增變數...>]，以建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>列舉值 = Foreach NodeList 列舉值  
  Foreach Nodelist 列舉值可用來列舉因為將 XPath 運算式套用至 XML 檔案而產生的 XML 節點集合。 例如，如果 Foreach 迴圈包括指令碼工作，則您可使用 Foreach NodeList 列舉值將符合 XPath 運算式條件的值從 XML 檔案傳送給該指令碼工作。  
@@ -345,7 +346,7 @@ ms.lasthandoff: 11/20/2017
  **DocumentSourceType**  
  選取 XML 文件的來源類型。 此屬性具有下表所列的選項：  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -365,7 +366,7 @@ ms.lasthandoff: 11/20/2017
  **EnumerationType**  
  從清單中選取列舉類型。 此屬性具有下表所列的選項：  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Navigator**|使用 XPathNavigator 列舉。|  
 |**節點**|列舉 XPath 作業傳回的節點。|  
@@ -375,7 +376,7 @@ ms.lasthandoff: 11/20/2017
  **OuterXPathStringSourceType**  
  選取 XPath 字串的來源類型。 此屬性具有下表所列的選項： 
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -398,7 +399,7 @@ ms.lasthandoff: 11/20/2017
  **InnerXPathStringSourceType**  
  選取內部 XPath 字串的來源類型。 此屬性具有下表所列的選項：  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -418,7 +419,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="enumerator--foreach-smo-enumerator"></a>列舉值 = Foreach SMO 列舉值  
  Foreach SMO 列舉值可用來列舉 SQL Server 管理物件 (SMO) 物件。 例如，如果 Foreach 迴圈包括「執行 SQL」工作，您可以使用 Foreach SMO 列舉值來列舉 **AdventureWorks** 資料庫中的資料表，並執行用來計算每個資料表中資料列數目的查詢。  
   
- **連接**  
+ **[連接]**  
  選取現有的 ADO.NET 連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
  [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)＞  
@@ -514,7 +515,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  索引是以 0 為基底。  
   
-**Delete**  
+**刪除**  
  選取變數，然後按一下 [刪除]。  
 
 ## <a name="schema-restrictions-dialog-box-adonet"></a>結構描述限制對話方塊 (ADO.NET)
@@ -542,7 +543,7 @@ ms.lasthandoff: 11/20/2017
  **資料類型**  
  選取資料類型。  
   
- **加入**  
+ **[加入]**  
  加入新資料行。  
   
  **移除**  

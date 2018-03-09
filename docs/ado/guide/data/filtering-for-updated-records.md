@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: filtering for updated records [ADO]
+helpviewer_keywords:
+- filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37ad79ea1018a2e272cb9071bde61176ddf6348e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6fee8a407c5cc01e768eb86854c07d215fc420d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtering-for-updated-records"></a>篩選的更新記錄
 在呼叫 UpdateBatch 之前，您可以使用資料錄集的篩選條件屬性，以檢視這些資料錄集開啟之後已經變更的記錄或 UpdateBatch 在上次呼叫。 若要這樣做，請設定篩選等於 adFilterPendingRecords 來判斷將更新的多少筆記錄，請在下一節中的程式碼範例所示。  
@@ -59,5 +61,5 @@ ms.lasthandoff: 12/21/2017
 'EndFilterPend  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [批次模式](../../../ado/guide/data/batch-mode.md)

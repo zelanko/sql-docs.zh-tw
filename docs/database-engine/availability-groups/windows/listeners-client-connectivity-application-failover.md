@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b83e4fedf8ee39ceb90b2156852de4698ae273a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>接聽程式、用戶端連接和應用程式容錯移轉
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題包含有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用戶端連線和應用程式容錯移轉功能的考量資訊。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+此主題包含有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用戶端連接和應用程式容錯移轉功能的考量資訊。  
   
 > [!NOTE]  
 >  對於大多數的一般接聽程式組態，您只需要使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式或 PowerShell 指令程式，就可以建立第一個可用性群組接聽程式。 如需詳細資訊，請參閱本主題稍後的 [相關工作](#RelatedTasks)。  
@@ -121,7 +123,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  「唯讀路由」是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的功能，可將對可用性群組接聽程式的內送連接路由至設為允許唯讀工作負載的次要複本。 只有在下列條件成立時，參考可用性群組接聽程式名稱的內送連接才會自動路由至唯讀複本：  
   
 -   至少一個次要複本設定為唯讀存取，而且每個唯讀次要複本和主要複本都設定為支援唯讀路由。 如需詳細資訊，請參閱本節稍後的 [若要將可用性複本設定為唯讀路由](#ConfigureARsForROR)。  
-  
+
+-   連接字串會參考可用性群組中的相關資料庫。 您有一個替代方案，就是將資料庫設定為連線所使用之登入的預設資料庫。 如需詳細資訊，請參閱[演算法如何使用唯讀路由](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)一文。
+
 -   連接字串參考可用性群組接聽程式，而且內送連接的應用程式意圖設定為唯讀，例如，透過在 ODBC 或 OLEDB 連接字串或連接屬性 (attribute) 或屬性 (property) 中使用 **Application Intent=ReadOnly** 關鍵字。 如需詳細資訊，請參閱本節稍後的 [唯讀應用程式意圖和唯讀路由](#ReadOnlyAppIntent)。  
   
 ###  <a name="ConfigureARsForROR"></a> 若要將可用性複本設定為唯讀路由  
@@ -137,7 +141,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 ####  <a name="RelatedTasksROR"></a> 相關工作  
   
--   [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [設定可用性複本的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 -   [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
@@ -152,7 +156,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 在這個連接字串範例中，用戶端嘗試連接到通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式。  若連接字串的 **ApplicationIntent** 屬性設定為 **ReadOnly**，會將此字串設為「讀取意圖的連接字串」。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
+ 在這個連接字串範例中，用戶端嘗試透過通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式，連線到 AdventureWorks 資料庫。  若連接字串的 **ApplicationIntent** 屬性設定為 **ReadOnly**，會將此字串設為「讀取意圖的連接字串」。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
   
  可用性群組的主要資料庫會處理內送唯讀路由要求，並嘗試找出已聯結至主要複本並設定為唯讀路由的線上唯讀複本。  用戶端會從主要複本伺服器接收連接資訊，並連接到已識別的唯讀複本。  
   
@@ -234,13 +238,13 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [移除可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
--   [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [設定可用性複本的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 -   [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原解決方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [可用性群組接聽程式簡介](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (SQL Server AlwaysOn 團隊部落格)  
   

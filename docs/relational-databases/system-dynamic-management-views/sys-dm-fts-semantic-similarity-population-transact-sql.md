@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_fts_semantic_similarity_population (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_fts_semantic_similarity_population
 - dm_fts_semantic_similarity_population
 - sys.dm_fts_semantic_similarity_population_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_semantic_similarity_population dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_semantic_similarity_population dynamic management view
 ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e65423e36f930c7b077264ae11da976dcdc7ce52
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3ad5ff1a253c702f28f73e8b3e684e716e90bb9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftssemanticsimilaritypopulation-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="metadata"></a>中繼資料  
  如需詳細狀態資訊的語意索引，查詢[sys.dm_fts_index_population &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  
@@ -72,7 +75,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [管理及監視語意搜尋](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

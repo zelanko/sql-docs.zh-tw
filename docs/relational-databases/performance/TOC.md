@@ -55,4 +55,8 @@
 ## [刪除計畫指南](delete-a-plan-guide.md)  
 ## [啟用或停用計畫指南](enable-or-disable-a-plan-guide.md)  
 
-#[監視資源使用狀況 (系統監視器)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [監視資源使用狀況 (系統監視器)](../performance-monitor/monitor-resource-usage-system-monitor.md)    
+
+# [聯結](joins.md)   
+
+# [子查詢](subqueries.md)    

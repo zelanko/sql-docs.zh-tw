@@ -8,31 +8,31 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Services Scripting Language, elements
 - elements [Analysis Services Scripting Language]
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2415205d4898e4c16d9a6b5d004f3ff75082ead9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 87d59c2d4041cbb7267054d2a691e0e39745827a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Analysis Services 指令碼語言 XML 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]雖然 Analysis Services 指令碼語言 (ASSL) 結構描述僅包含 XML 元素，從開發人員的觀點來看，這些元素會對應到下列概念：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+雖然「Analysis Services 指令碼語言」(ASSL) 結構描述僅包含 XML 元素，但是從開發人員的觀點而言，這些元素會對應至下列概念：  
   
 -   物件，例如**資料庫**， **Cube**，和**維度**的執行個體所包含的物件階層中的物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 |[集合 &#40;ASSL &#41;](../../analysis-services/scripting/collections/collections-assl.md)|包含在 ASSL 結構描述中當做集合之每個元素的語法和使用方式資訊。|  
 |[屬性 &#40;ASSL &#41;](../../analysis-services/scripting/properties/properties-assl.md)|包含在 ASSL 結構描述中當做物件屬性之每個元素的語法和使用方式資訊。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
  [Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

@@ -8,31 +8,33 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 89d5ee0f084b48c48a116bf983770e6dbb55bf94
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c4514baae490912c82b2c8b8b34e7f5f780570a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 透過下列問題和答覆可以了解複寫的資料庫管理員所面臨的各種工作。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+透過下列問題和答覆可以了解複寫的資料庫管理員所面臨的各種工作。  
   
 ## <a name="configuring-replication"></a>設定複寫  
   
 ### <a name="does-activity-need-to-be-stopped-on-a-database-when-it-is-published"></a>當活動發行後，是否需要在資料庫中停止該活動？  
- 否。 在建立發行集期間，可在資料庫中繼續保留活動。 請注意，產生快照集可能需要大量資源，因此最好在資料庫中活動較少的時間產生快照集 (依預設，在您完成「新增發行集精靈」時產生快照集)。  
+ 資料分割 在建立發行集期間，可在資料庫中繼續保留活動。 請注意，產生快照集可能需要大量資源，因此最好在資料庫中活動較少的時間產生快照集 (依預設，在您完成「新增發行集精靈」時產生快照集)。  
   
 ### <a name="are-tables-locked-during-snapshot-generation"></a>資料表是否在快照集產生期間鎖定？  
  鎖定的時間長短視所用的複寫類型而定：  
@@ -100,7 +102,7 @@ ms.lasthandoff: 11/17/2017
  此資訊可透過 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]和數個複寫預存程序獲得。 如需詳細資訊，請參閱 [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)。  
   
 ### <a name="does-replication-encrypt-data"></a>複寫是否會加密資料？  
- 否。 複寫不會對儲存在資料庫或透過網路傳送的資料加密。 如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../../../relational-databases/replication/security/security-overview-replication.md) 主題中的＜加密＞一節。  
+ 資料分割 複寫不會對儲存在資料庫或透過網路傳送的資料加密。 如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../../../relational-databases/replication/security/security-overview-replication.md) 主題中的＜加密＞一節。  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>如何透過網際網路複寫資料？  
  使用下列方式，透過網際網路複寫資料：  
@@ -120,7 +122,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="logins-and-object-ownership"></a>登入和物件擁有權  
   
 ### <a name="are-logins-and-passwords-replicated"></a>登入和密碼是否會被複寫？  
- 否。 您可以建立 DTS 封裝以將登入和密碼從「發行者」傳送給一個或多個「訂閱者」。  
+ 資料分割 您可以建立 DTS 封裝以將登入和密碼從「發行者」傳送給一個或多個「訂閱者」。  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>結構描述什麼是以及它們是如何進行複寫的？  
  從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *「結構描述」* 具有兩重含義：  
@@ -139,7 +141,7 @@ ms.lasthandoff: 11/17/2017
   
 -   針對使用字元模式快照集之發行集內的發行項 (用於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者和 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 訂閱者)：依預設，會將擁有者保留空白。 擁有者預設為與散發代理程式或合併代理程式用於連接到訂閱者之帳戶相關聯的擁有者。  
   
- 物件擁有者可以透過 **[發行項屬性 -\<**<發行項>**>]** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)和[檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+ 物件擁有者可以透過 [發行項屬性 -\<發行項>] 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)和[檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>如何將訂閱資料庫中的授權設定為與發行集資料庫中的授權相符？  
  依預設，複寫不執行訂閱資料庫中的 GRANT 陳述式。 如果您要使訂閱資料庫中的授權與發行集資料庫中的授權相符，請使用以下其中一種方法：  

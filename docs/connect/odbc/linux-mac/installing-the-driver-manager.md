@@ -1,39 +1,41 @@
 ---
-title: "Installing the Driver Manager |Microsoft 文件"
+title: "Installing the Driver Manager (ODBC Driver for SQL Server) |Microsoft 文件"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Driver Manager, installing
+helpviewer_keywords:
+- Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0a866499618569023ba6839148dd73844d0ddaed
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 36f432e883b56759d46304239715a00c06334d3a
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="installing-the-driver-manager"></a>安裝驅動程式管理員
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-本主題包含安裝 Microsoft ODBC Driver 11、 13、 或 13.1 for SQL Server on Linux 及 macOS unixODBC 驅動程式管理員使用的指示。  
+本文章包含隨所有版本的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS 安裝 unixODBC 驅動程式管理員使用的指示。  
 
 > [!IMPORTANT]  
 > 在安裝 unixODBC 驅動程式管理員之前，請先刪除您的電腦上安裝的任何驅動程式管理員封裝。 安裝 unixodbc 驅動程式管理員可能會導致現有的驅動程式管理員失敗。  
 
-## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-130-and-131"></a>安裝 Microsoft ODBC Driver 13.0 / 13.1 的驅動程式管理員
-驅動程式管理員相依性便會自動解除封裝管理系統當您安裝 Microsoft ODBC 驅動程式 13.0 或 13.1 for SQL Server on Linux 或 macOS 中指示[安裝 Microsoft ODBC 驅動程式針對 SQL Server on Linux 或 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。 
+## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-13-131-and-17"></a>安裝 Microsoft ODBC Driver 13、 13.1，/ 17 的驅動程式管理員
+驅動程式管理員相依性便會自動解除封裝管理系統中的指示安裝 Microsoft ODBC Driver 13、 13.1 或如 SQL Server on Linux 或 macOS 17 時[安裝 Microsoft ODBC 驅動程式針對 SQL Server on Linux 或 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。 
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-11-for-sql-server"></a>安裝 Microsoft ODBC Driver 11 for SQL Server 的驅動程式管理員  
 
@@ -58,13 +60,13 @@ ms.lasthandoff: 11/18/2017
 
 如果您的電腦無法存取外部透過 FTP 網站，取得`unixODBC-2.3.0.tar.gz`。 您可以取得`unixODBC-2.3.0.tar.gz`從[http://www.unixodbc.org](http://www.unixodbc.org/)。按一下**下載**来移至下載頁面的頁面左側的連結。 然後，按一下適當的連結，以下載 unixODBC-2.3.0 (不是 unixODBC-2.3.1)。 此版本不支援 unixodbc-2.3.1 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 執行下列命令，以便開始進行 unixODBC 驅動程式管理員安裝： **./build_dm.sh-下載 url = file://unixODBC-2.3.0.tar.gz**。  
 
-6.  型別**是**繼續將檔案解壓縮。 這部分的程序最多需要 5 分鐘才能完成。  
+6.  型別**是**繼續將檔案解壓縮。 這部分的程序可能需要五分鐘的時間才能完成。  
 
 7.  指令碼停止執行之後，請依照畫面上的指示安裝 unixODBC 驅動程式管理員。
 
-您現在已可開始安裝驅動程式。 請參閱[安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)如需詳細資訊。  
+您現在已可開始安裝驅動程式。 如需詳細資訊，請參閱[安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。  
 
-**手動安裝**
+手動安裝
 
 如果安裝指令碼無法完成，請自行設定並建置適當的驅動程式管理員。
 
@@ -86,9 +88,9 @@ ms.lasthandoff: 11/18/2017
   
 9. 在命令提示字元 （登入為根），執行下列命令：**做安裝**。  
 
-您現在已可開始安裝驅動程式。 請參閱[安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)如需詳細資訊。  
+您現在已可開始安裝驅動程式。 如需詳細資訊，請參閱[安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。  
   
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 [安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [此驅動程式版本的已知問題](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)

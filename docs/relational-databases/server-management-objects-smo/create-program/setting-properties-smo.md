@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,33 +17,35 @@ helpviewer_keywords:
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5174b61d138f94c795da64be18556258c53ad3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cd919d2a53a2731e348c1570ef80ffe1714ff0e5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="setting-properties---smo"></a>設定內容-SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]屬性是儲存之物件的描述性資訊的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]組態選項都由<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>物件的屬性。 您可以使用屬性集合來直接或間接地存取屬性。 直接存取屬性會使用下列語法：  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  屬性是儲存有關物件之描述性資訊的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]組態選項都由<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>物件的屬性。 您可以使用屬性集合來直接或間接地存取屬性。 直接存取屬性會使用下列語法：  
   
  `objInstance.PropertyName`  
   
  您可以根據屬性是否具有讀/寫存取權或唯讀存取權來修改或擷取屬性值。 也必須先設定特定的屬性，才能建立物件。 如需詳細資訊，請參閱該特定物件的 SMO 參考。  
   
 > [!NOTE]  
->  子物件的集合會顯示為物件的屬性。 例如， **Tables** 集合是 **Server** 物件的屬性。 如需詳細資訊，請參閱[使用集合](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)。  
+>  子物件的集合會顯示為物件的屬性。 例如， **Tables** 集合是 **Server** 物件的屬性。 如需詳細資訊，請參閱 [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)。  
   
  物件的屬性是 Properties 集合的成員。 Properties 集合可用來反覆運算物件的每個屬性。  
   
  有時屬性會因為下列原因而無法使用：  
   
--   伺服器版本不支援該屬性，例如您在舊版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上嘗試存取的屬性代表新增的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
+-   伺服器版本不支援該屬性，例如您在舊版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上嘗試存取的屬性代表新增的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能。  
   
--   伺服器不提供資料的屬性，例如，如果您嘗試存取的屬性代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]未安裝的元件。  
+-   伺服器沒有提供該屬性的資料，例如您嘗試存取的屬性代表未安裝的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 元件。  
   
  您可以藉由捕捉 <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> 和 <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> SMO 例外狀況來處理這些情況。  
   

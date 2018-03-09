@@ -1,35 +1,34 @@
 ---
-title: "建立兩個資料表 (SSAS 表格式) 之間的關聯性 |Microsoft 文件"
+title: "建立關聯性 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.createrelatdb.f1
 - sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79aa7bc1e5dff61693c4d7f5a671bffa49416bf6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3936d29e4d547db75e7a92020c82d8c5c5854503
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>建立兩個資料表之間的關聯性 (SSAS 表格式)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]如果您的資料來源中的資料表並沒有現有的關聯性，或如果您加入新的資料表，您可以使用模型設計師中的工具來建立新的關聯性。 如需如何在表格式模型中使用關聯性的資訊，請參閱 [關聯性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
+# <a name="create-a-relationship"></a>建立關聯性 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+如果您資料來源中的資料表並沒有關聯性存在，或如果您要新增資料表，則可以使用模型設計師中的工具來建立新的關聯性。 如需如何在表格式模型中使用關聯性資訊，請參閱[關聯性](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>建立兩個資料表之間的關聯性  
   
@@ -77,8 +76,8 @@ ms.lasthandoff: 12/08/2017
   
 6.  按一下 **[建立]**。  
   
-## <a name="see-also"></a>請參閱  
- [刪除關聯性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
- [關聯性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
+## <a name="see-also"></a>另請參閱  
+ [刪除關聯性](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
+ [關聯性](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   
   

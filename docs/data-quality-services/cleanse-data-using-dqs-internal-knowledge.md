@@ -18,15 +18,15 @@ f1_keywords:
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75eb80e656e390cd6ad931e29b94776630214708
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e837002fb9060fa87bdd2588e8c72570687345
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS (內部) 知識清理資料
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用資料品質專案來清理資料。 資料清理是使用已針對高品質資料集內建在 DQS 中的知識庫，於來源資料上執行。 如需詳細資訊，請參閱 [建立知識庫](../data-quality-services/building-a-knowledge-base.md)。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能執行資料清理。  
   
 ##  <a name="Create"></a> 建立清理資料品質專案  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/20/2017
   
  根據信賴等級，這些值會顯示在下列五個索引標籤之下：  
   
-|索引標籤|說明|  
+|索引標籤|描述|  
 |---------|-----------------|  
 |**建議**|顯示以下情況的定義域值：DQS 找到信賴等級高於 *自動建議臨界值* ，但低於 *自動更正臨界值* 的建議值。<br /><br /> 建議值會針對原始值顯示在 **[更正為]** 資料行中。 您可以在上方方格中，針對某個值按一下 **[核准]** 或 **[拒絕]** 資料行中的選項按鈕，以接受或拒絕該值所有出現地方的建議。 在此情況下，接受的值會移到 **[更正]** 索引標籤，而拒絕的值則會移到 **[無效]** 索引標籤。|  
 |**新增**|顯示以下情況的有效定義域：DQS 沒有足夠的資訊，因此無法對應至其他任何索引標籤。此外，此索引標籤也包含信賴等級低於 *自動建議臨界值* ，但夠高而可以標示為有效的值。<br /><br /> 如果您認為此值是正確的，請按一下 **[核准]** 資料行中的選項按鈕。 否則，請按一下 **[拒絕]** 資料行中的選項按鈕。 接受的值會移到 **[正確]** 索引標籤，而拒絕的值則會移到 **[無效]** 索引標籤。您也可以在 [更正為] 資料行中，針對該值手動輸入正確值來取代原始值，然後按一下 [核准] 資料行中的選項按鈕，以接受變更。 在此情況下，此值會移到 **[更正]** 索引標籤。|  

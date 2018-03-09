@@ -8,26 +8,28 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: "78"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7fd9182030c2be57d0d059a0807b06d24637cbba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>監視資料庫鏡像 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本節介紹「資料庫鏡像監視器」和 **sp_dbmmonitor** 系統預存程序、說明資料庫鏡像監視功能 (包括 [資料庫鏡像監視器作業]) 的運作方式，以及摘要說明您可以監視的資料庫鏡像工作階段相關資訊。 另外，本節還會介紹如何為一組預先定義的資料庫鏡像事件定義警告臨界值，以及如何在任何資料庫鏡像事件上設定警示。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本節介紹「資料庫鏡像監視器」和 **sp_dbmmonitor** 系統預存程序、說明資料庫鏡像監視功能 (包括 [資料庫鏡像監視器作業] ) 的運作方式，以及摘要說明您可以監視的資料庫鏡像工作階段相關資訊。 另外，本節還會介紹如何為一組預先定義的資料庫鏡像事件定義警告臨界值，以及如何在任何資料庫鏡像事件上設定警示。  
   
  您可以在鏡像工作階段期間監視鏡像資料庫，以便確認資料流程是否正常。 若要針對伺服器執行個體上的一個或多個鏡像資料庫設定並管理監視作業，您可以使用「資料庫鏡像監視器」或 **sp_dbmmonitor** 系統預存程序。  
   
@@ -118,7 +120,7 @@ ms.lasthandoff: 11/20/2017
   
  建立 **[資料庫鏡像監視器作業]** 之後，假設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行，則預設會每分鐘呼叫此作業一次。 然後，此作業就會呼叫 **sp_dbmmonitorupdate** 系統預存程序。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 預設會每分鐘呼叫 [資料庫鏡像監視器作業]  一次，而且此作業會呼叫 **sp_dbmmonitorupdate** 來更新狀態資料表。 系統管理員可以使用 **sp_dbmmonitorchangemonitoring** 系統預存程序來變更更新週期，而且可以使用 **sp_dbmmonitorchangemonitoring** 系統預存程序來檢視目前的更新週期。 如需詳細資訊，請參閱 [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) 和 [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 預設會每分鐘呼叫 [資料庫鏡像監視器作業] 一次，而且此作業會呼叫 **sp_dbmmonitorupdate** 來更新狀態資料表。 系統管理員可以使用 **sp_dbmmonitorchangemonitoring** 系統預存程序來變更更新週期，而且可以使用 **sp_dbmmonitorchangemonitoring** 系統預存程序來檢視目前的更新週期。 如需詳細資訊，請參閱 [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) 和 [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)。  
   
 #### <a name="monitoring-database-mirroring-status-by-system-administrators"></a>監視資料庫鏡像狀態 (系統管理員)  
  **sysadmin** 固定伺服器角色的成員可以檢視並更新狀態資料表。  

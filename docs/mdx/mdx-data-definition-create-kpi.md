@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f7fd8ce02b518de663949765ad3dc4ad51c4970
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6a97fbc894a0b88511ab551aa231fcfb3746d52c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 資料定義-建立 KPI
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -96,15 +96,15 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |圖形的用法|KPI 圖形的名稱|狀態的數目|  
 |--------------------|-------------------------|----------------------|  
-|狀態|圖形|3|  
-|狀態|號誌燈|3|  
-|狀態|道路標誌|3|  
-|狀態|量測計|3|  
-|狀態|反向量測計|5|  
-|狀態|溫度計|3|  
-|狀態|圓柱|3|  
-|狀態|笑臉|3|  
-|狀態|變異箭頭|3|  
+|[狀態]|圖形|3|  
+|[狀態]|號誌燈|3|  
+|[狀態]|道路標誌|3|  
+|[狀態]|量測計|3|  
+|[狀態]|反向量測計|5|  
+|[狀態]|溫度計|3|  
+|[狀態]|圓柱|3|  
+|[狀態]|笑臉|3|  
+|[狀態]|變異箭頭|3|  
 |趨勢|標準箭頭|3|  
 |趨勢|狀態箭頭|3|  
 |趨勢|反向狀態箭頭|5|  

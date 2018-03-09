@@ -8,35 +8,35 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4f41d6d697299ad964912fe1df86db9b0581cdda
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dfc70006520f0d4a9e47661de5c065aecf59356f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>商業智慧的 CSDL 註解 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援稱為概念結構定義語言商業智慧註解 (CSDLBI) 的 XML 格式的表格式模型的定義呈現方式。 此主題提供 CSDLBI 的概觀，及其搭配 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型的用法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援 XML 格式中稱為「概念結構定義語言商業智慧註解」(CSDLBI) 的表格式模型定義表示法。 此主題提供 CSDLBI 的概觀，及其搭配 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型的用法。  
   
 ## <a name="understanding-the-role-of-csdl"></a>了解 CSDL 的角色  
  概念結構定義語言 (CSDL) 是一種 XML 語言，描述實體、關聯性與功能。 CSDL 會定義為實體資料架構的一部分。 BI 註解是延伸模組，其設計在於支援使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的資料模型。  
   
  雖然 CSDL 符合實體資料架構標準，但您不需要了解實體關聯性模型，也不需要任何特殊工具來建置表格式模型或以模型為基礎的報表。 您會透過使用用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，或像是 AMO 這類應用程式開發介面) 建立模型，並且將模型部署至伺服器。 用戶端會使用模型定義檔連接至模型，通常該檔案會發佈至可供報表設計師與報表取用者使用的 SharePoint 文件庫。 如需詳細資訊，請參閱下列連結：  
   
--   [表格式模型方案 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+-   [表格式模型方案](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
--   [表格式模型方案部署 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [Power Pivot BI 語意模型連接 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 -   視覺效果和導覽屬性。 例如，已加入屬性，可支援自訂排序欄位、預設影像  
   
- **CSDLBI 1.1 版**  
+ **CSDLBI 1.1**  
   
  此版本 CSDLBI 結構描述包括可支援多維度資料庫 (例如 OLAP Cube) 的新增功能。 新元素和屬性如下：  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/08/2017
   
  如需 CSDLBI 註解中個別項目的詳細資訊，請參閱[csdl 之 BI 註解的技術參考](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)。 如需有關核心 CSDL 規格的詳細資訊，請參閱[CSDL 規格](http://go.microsoft.com/fwlink/?LinkId=205855)MSDN 上。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解表格式物件模型在相容性層級 1050年透過 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [CSDLBI 概念](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md)   
  [了解表格式物件模型在相容性層級 1050年透過 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  

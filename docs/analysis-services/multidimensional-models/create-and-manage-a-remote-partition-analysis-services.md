@@ -5,32 +5,30 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>建立及管理遠端分割區 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當資料分割的量值群組，您可以設定次要資料庫在遠端[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]作為分割區儲存的執行個體。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+分割量值群組時，您可以在遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上設定次要資料庫作為分割區儲存。  
   
  Cube (稱為 master 資料庫) 的遠端分割區，會儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 遠端執行個體上的專用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫 (稱為次要資料庫) 中。  
   
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
 -   這兩個伺服器執行個體的版本必須相同。 這兩個資料庫應該是相同的功能層級。  
   
--   這兩個執行個體必須設定 TCP 連接。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不支援使用 HTTP 通訊協定建立遠端資料分割。  
+-   這兩個執行個體必須設定 TCP 連接。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]不支援使用 HTTP 通訊協定建立遠端分割區。  
   
 -   這兩部電腦上的防火牆設定必須設為接受外部連接。 如需設定防火牆的資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -140,7 +138,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  雖然結構描述資料列集不會顯示專用於儲存遠端分割區的資料庫，但是使用分析管理物件 (AMO) 的應用程式仍可使用 XML for Analysis Discover 命令探索專用資料庫。 任何使用 TCP 或 HTTP 用戶端直接傳送至專用資料庫的 CREATE 或 DELETE 命令會成功完成，但是伺服器會傳回警告，指出這些動作可能會損毀此密切管理的資料庫。  
   
-## <a name="see-also"></a>請參閱  
- [資料分割 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另請參閱  
+ [分割區 &#40;Analysis Services-多維度資料 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

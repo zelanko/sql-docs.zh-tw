@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - BULK INSERT
 - BULK_INSERT_TSQL
 - BULK
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - tables [SQL Server], importing data into
 - inserting files
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: "153"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: da5449283269e7ff018e7a4b394eb4c26b69e590
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,7 +129,7 @@ BULK INSERT
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)]建議您指定在每個資料行的定序名稱[格式檔案](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。  
   
-|CODEPAGE 值|Description|  
+|CODEPAGE 值|描述|  
 |--------------------|-----------------|  
 |ACP|資料行的**char**， **varchar**，或**文字**資料型別會從轉換[!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] / [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字碼頁。|  
 |OEM (預設值)|資料行的**char**， **varchar**，或**文字**資料型別會從系統 OEM 字碼頁轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字碼頁。|  
@@ -323,7 +325,7 @@ GO
   
  電腦會不斷變化，因此，我們建議您利用您的資料負荷量測試各種批次大小來找出最適合您的狀況。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="security-account-delegation-impersonation"></a>委派安全性帳戶 (模擬)  
  如果使用者是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，則會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序帳戶的安全性設定檔。 使用 SQL Server 驗證的登入無法於 Database Engine 外部進行驗證。 因此，一旦使用 SQL Server 驗證的登入起始 BULK INSERT 命令，將會使用 SQL Server 處理序帳戶 (即 SQL Server Database Engine 服務所使用的帳戶) 的安全性內容建立與資料的連接。 為了能夠成功讀取來源資料，您必須授與 SQL Server Database Engine 所使用的帳戶對來源資料的存取權。相反地，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者是使用 Windows 驗證登入，則該使用者只能讀取其使用者帳戶可存取的檔案，而與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的安全性設定檔無關。  
@@ -335,7 +337,7 @@ GO
  如需有關這個主題以及使用 BULK INSERT 其他安全性考量的詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET &#40; 匯入大量資料BULK_ &#41;&#40;SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Permissions  
- 需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：  
+ 需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 Azure SQL Database、 插入和資料庫 ADMINISTER BULK OPERATIONS 權限都必須的。 另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：  
   
 -   有條件約束存在而且未指定 CHECK_CONSTRAINTS 選項。  
   
@@ -415,7 +417,7 @@ WITH (FORMAT = 'CSV');
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. 從 Azure blob 儲存體中的檔案匯入資料   
 下列範例會示範如何從 csv 檔案，在 Azure blob 儲存體位置中，已設定為外部資料來源載入資料。 這需要使用資料庫範圍認證使用共用的存取簽章。    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -447,11 +449,11 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
   
 -   [使用格式檔案略過資料表資料行 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
--   [使用格式檔案將資料表資料行對應至資料檔欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 公用程式](../../tools/bcp-utility.md)   
  [匯入或匯出資料 &#40; 的格式檔案SQL Server &#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

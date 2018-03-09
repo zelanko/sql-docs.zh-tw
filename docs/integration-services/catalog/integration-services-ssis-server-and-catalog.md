@@ -8,23 +8,24 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3acc096ee41bed29d37cc0949a22f9666edf50a
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b6451f3d322ff92ee928e6a9ed98759df0bcc2e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 伺服器與目錄
   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將含有那些封裝的專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
@@ -38,9 +39,9 @@ ms.lasthandoff: 12/12/2017
  如需 SSISDB 目錄功能的概觀，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
 ## <a name="high-availability"></a>高可用性  
- 與其他使用者資料庫一樣， **SSISDB** 資料庫也支援資料庫鏡像和複寫。 如需鏡像及複寫的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ **SSISDB** 資料庫和其他使用者資料庫一樣，也支援資料庫鏡像和複寫。 如需鏡像及複寫的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
- 您也可以利用 SSIS 和 Always On 可用性群組，以提供 SSISDB 及其內容的高可用性。 如需詳細資訊，請參閱 blogs.msdn.com 上這篇 Matt Masson 撰寫的部落格文章：[SSIS 與 Always On](http://go.microsoft.com/fwlink/?LinkId=255873) \(英文\)。  
+ 您也可以利用 SSIS 和 Always On 可用性群組，以提供 SSISDB 及其內容的高可用性。 如需詳細資訊，請參閱[適用於 SSIS 目錄 (SSISDB) 的 AlwaysOn](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另請參閱這篇 Matt Masson 撰寫的部落格文章：[SSIS 與 AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)，網址為 blogs.msdn.com。  
   
 ##  <a name="ssms"></a> SQL Server Management Studio 中的 Integration Services Server  
  當您連接到主控 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫之 **ssDEnoversion** 執行個體時，您會在 [物件總管] 中看到以下物件：  
@@ -62,6 +63,6 @@ ms.lasthandoff: 12/12/2017
 -   [執行 Integration Services (SSIS) 套件](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>相關內容  
- blogs.msdn.com 上的部落格文章：[SSIS 與 Always On](http://go.microsoft.com/fwlink/?LinkId=255873) \(英文\)。  
+ 部落格內容：[SSIS 與 AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)，網址為 blogs.msdn.com。  
   
   

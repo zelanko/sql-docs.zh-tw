@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b6afa16b339241460c33beb459fed74946a1238
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 概觀
 Microsoft Jet OLE DB 提供者可讓 ADO 可以存取 Microsoft Jet 資料庫。
@@ -48,7 +49,7 @@ Microsoft.Jet.OLEDB.4.0
 
  字串，包含這些關鍵字：
 
-|關鍵字|描述|
+|關鍵字|Description|
 |-------------|-----------------|
 |**提供者**|指定 Microsoft Jet OLE DB 提供者。|
 |**資料來源**|指定資料庫的路徑和檔案名稱 (例如， `c:\Northwind.mdb`)。|
@@ -63,7 +64,7 @@ Microsoft.Jet.OLEDB.4.0
 
  下表列出這些屬性以及括號中相對應的 OLE DB 屬性名稱。
 
-|參數|描述|
+|매개 변수|Description|
 |---------------|-----------------|
 |Jet OLEDB:Compact 回收的空間量 (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|表示估計量的空間，以位元組為單位，可以回收壓縮資料庫。 建立資料庫連接之後，這個值才有效。|
 |Jet OLEDB:Connection 控制項 (DBPROP_JETOLEDB_CONNECTIONCONTROL)|指出使用者是否可以連線到資料庫。|
@@ -97,7 +98,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>提供者特定資料錄集和命令屬性
  Jet 提供者也支援數個提供者專屬**資料錄集**和**命令**屬性。 存取這些屬性，透過設定**屬性**集合**資料錄集**或**命令**物件。 此資料表列出的 ADO 屬性名稱，以及在括號中的其對應 OLE DB 屬性名稱。
 
-|屬性名稱|描述|
+|屬性名稱|Description|
 |-------------------|-----------------|
 |Jet OLEDB:Bulk 交易 (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|指出是否已交易的大量 SQL 作業。 當交易，因為資源的延遲，大規模的大量作業可能會失敗。|
 |Jet OLEDB:Enable Fat 資料指標 (DBPROP_JETOLEDB_ENABLEFATCURSOR)|指出是否 Jet 應該快取多個資料列擴展的遠端資料來源的資料錄集時。|
@@ -152,7 +153,7 @@ Microsoft.Jet.OLEDB.4.0
 |資料列大小上限|DBPROP_MAXROWSIZE|
 |資料列大小上限包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |在選取的最大資料表|DBPROP_MAXTABLESINSELECT|
-|[模式]|DBPROP_INIT_MODE|
+|模式|DBPROP_INIT_MODE|
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|
 |多個結果|DBPROP_MULTIPLERESULTS|
 |多個儲存體物件|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -165,7 +166,7 @@ Microsoft.Jet.OLEDB.4.0
 |ORDER BY 選取清單中的資料行|DBPROP_ORDERBYCOLUMNSINSELECT|
 |輸出參數使用|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |傳址存取子|DBPROP_BYREFACCESSORS|
-|[密碼]|DBPROP_AUTH_PASSWORD|
+|密碼|DBPROP_AUTH_PASSWORD|
 |持續性的識別碼型別|DBPROP_PERSISTENTIDTYPE|
 |準備中止行為|DBPROP_PREPAREABORTBEHAVIOR|
 |準備認可行為|DBPROP_PREPARECOMMITBEHAVIOR|

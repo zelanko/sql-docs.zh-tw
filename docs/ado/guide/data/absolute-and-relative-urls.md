@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0bbd79ff71ffe17c9fb33903501ab7302766fbf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 Url
 URL 指定的位置儲存在本機或網路的電腦上的目標。 目標可以是檔案、 目錄、 HTML 網頁、 影像、 程式及等等*。*  
@@ -38,16 +39,16 @@ URL 指定的位置儲存在本機或網路的電腦上的目標。 目標可以
   
  相對的 URL 通常只包含*路徑*，並選擇性地*資源*，但沒有*配置*或*伺服器*。 下表定義完整的 URL 格式的各個部分。  
   
- *配置*  
+ *scheme*  
  指定如何*資源*存取。  
   
  *伺服器*  
  指定的電腦名稱其中*資源*所在。  
   
- *路徑*  
+ *path*  
  指定連至目標目錄序列。 如果*資源*已省略，目標是中的最後一個目錄*路徑*。  
   
- *資源*  
+ *resource*  
  如果包含，*資源*是目標，且通常是檔案的名稱。 它可能是*簡單的檔案，*包含單一的二進位資料流的位元組，或*結構化文件，*包含一或多個儲存體和二進位資料流的位元組。  
   
 ## <a name="url-scheme-registration"></a>URL 配置註冊  
@@ -93,7 +94,7 @@ recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect
   
  ADO 支援辨識其本身的 URL 結構描述的 OLE DB 提供者。 例如， [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*，*存取 「 發行 」 的 Windows 2000 檔案會辨識現有 HTTP 配置。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

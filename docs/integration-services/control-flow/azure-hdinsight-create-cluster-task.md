@@ -8,23 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpcreatecltask.f1
 - sql14.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c92d57984e0cb929a28ab441e40341d0eb8635df
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 1ebb5a3dc59784ecf19a16f541539250fd975f75
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 建立叢集工作
 [Azure HDInsight 建立叢集工作] 可讓 SSIS 套件在指定的 Azure 訂用帳戶和資源群組中建立 Azure HDInsight 叢集。
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/01/2017
 |ClusterSize|指定要在叢集中建立的節點數目。|  
 |BlobContainer|指定要與 HDInsight 叢集建立關聯的預設儲存體容器名稱。|  
 |UserName|指定連線至 HDInsight 叢集要使用的使用者名稱。|  
-|密碼|指定連線至 HDInsight 叢集要使用的密碼。|
+|[密碼]|指定連線至 HDInsight 叢集要使用的密碼。|
 |SshUserName|指定從遠端存取使用 SSH 的 HDInsight 叢集時所用的使用者名稱。|
 |SshPassword|指定從遠端存取使用 SSH 的 HDInsight 叢集時所用的密碼。|
 |FailIfExists|指定若叢集已存在則工作是否會失敗。|  

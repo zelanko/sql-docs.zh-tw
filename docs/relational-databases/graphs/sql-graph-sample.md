@@ -9,28 +9,29 @@ ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, tsql reference
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale
-manager: jhubbard
+ms.author: shkale;barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a093d431510891d0bac9616aa1058134cb168ec7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>建立圖形資料庫並執行某些模式比對使用 T-SQL 查詢
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-此範例提供[!INCLUDE[tsql-md](../../includes/tsql-md.md)]節點和邊緣以建立圖表的資料庫，然後使用新的比對條件比對某些模式，來瀏覽圖形的指令碼。 這個範例指令碼將在這兩個 Azure SQL Database 上運作，[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+此範例提供[!INCLUDE[tsql-md](../../includes/tsql-md.md)]節點和邊緣以建立圖表的資料庫，然後使用新的比對條件比對某些模式，來瀏覽圖形的指令碼。 這個範例指令碼將在這兩個 Azure SQL Database 上運作， [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>範例結構描述  
 這個範例會建立假設的社交網路的人員、 餐廳和縣 （市） 節點中圖 1 顯示的圖形結構描述。 這些節點連線到使用朋友，彼此喜歡，LivesIn 和 LocatedIn 邊緣。 

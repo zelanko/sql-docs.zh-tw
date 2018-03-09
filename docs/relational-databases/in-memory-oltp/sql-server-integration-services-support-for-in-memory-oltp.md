@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24f5b67b776e6ea2cdb8684a0732fd9f76114cb2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57a7662de278ed7122583bc62ab02895f29aeb8f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>In-Memory OLTP 的 SQL Server Integration Services 支援
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 您可以使用經記憶體最佳化的資料表、參考經記憶體最佳化的資料表的檢視，或是原生編譯預存程序作為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 套件的來源或目的地。 您可以使用 SSIS 封裝的資料流程中的 [ADO NET 來源](../../integration-services/data-flow/ado-net-source.md)、 [OLE DB 來源](../../integration-services/data-flow/ole-db-source.md)或 [ODBC 來源](../../integration-services/data-flow/odbc-source.md) ，並且設定來源元件從記憶體最佳化資料表或檢視擷取資料，或是指定 SQL 陳述式執行原生編譯預存程序。 同樣地，您可以使用 [ADO NET 目的地](../../integration-services/data-flow/ado-net-destination.md)、 [OLE DB 目的地](../../integration-services/data-flow/ole-db-destination.md)或 [ODBC 目的地](../../integration-services/data-flow/odbc-destination.md) 將資料載入記憶體最佳化資料表或檢視，或是指定 SQL 陳述式執行原生編譯預存程序。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+您可以使用記憶體最佳化資料表、參考記憶體最佳化資料表的檢視，或是原生編譯預存程序作為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 封裝的來源或目的地。 您可以使用 SSIS 封裝的資料流程中的 [ADO NET 來源](../../integration-services/data-flow/ado-net-source.md)、 [OLE DB 來源](../../integration-services/data-flow/ole-db-source.md)或 [ODBC 來源](../../integration-services/data-flow/odbc-source.md) ，並且設定來源元件從記憶體最佳化資料表或檢視擷取資料，或是指定 SQL 陳述式執行原生編譯預存程序。 同樣地，您可以使用 [ADO NET 目的地](../../integration-services/data-flow/ado-net-destination.md)、 [OLE DB 目的地](../../integration-services/data-flow/ole-db-destination.md)或 [ODBC 目的地](../../integration-services/data-flow/odbc-destination.md) 將資料載入記憶體最佳化資料表或檢視，或是指定 SQL 陳述式執行原生編譯預存程序。  
   
  您可以在 SSIS 封裝中設定上述來源和目的地元件從記憶體最佳化資料表和檢視讀取或寫入其中，方式就如同讀寫其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表和檢視。 不過，使用原生編譯預存程序時，需要注意下一節的重點。  
   

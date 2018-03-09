@@ -1,5 +1,5 @@
 ---
-title: "sys.query_store_wait_stats (TRANSACT-SQL) |Microsoft 文件"
+title: sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/21/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,31 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- SYS.QUERY_STORE_WAIT_STATS_TSQL
-- QUERY_STORE_WAIT_STATS_TSQL
-- SYS.QUERY_STORE_WAIT_STATS
-- QUERY_STORE_WAIT_STATS
-dev_langs: TSQL
+- sys.query_store_wait_stats
+- query_store_wait_stats
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: AndrejsAnt
 ms.author: AndrejsAnt
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a75e00467fbee053a05144d67f9d9a68469daeed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3133014e12f52b58e3beacdc0ba09083c661ff63
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
+# <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   包含有關查詢等候資訊的詳細資訊。  
@@ -43,10 +43,10 @@ ms.lasthandoff: 11/17/2017
 |**plan_id**|**bigint**|外部索引鍵。 加入[sys.query_store_plan &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|外部索引鍵。 加入[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|等候類型分類使用下表，並再等待時間彙總之間這些等候類別目錄。 不同的等候類別需要不同的後續操作分析來解決問題，但同類別的等候類型會導致非常類似的疑難排解體驗，而提供受影響的前幾項查詢可能就是順利完成大部分這類調查所缺少的片段。|
-|**wait_category_desc**|**nvarchar （128)**|等候類別目錄欄位的文字描述，請檢閱下表。|
+|**wait_category_desc**|**nvarchar(128)**|等候類別目錄欄位的文字描述，請檢閱下表。|
 |**execution_type**|**tinyint**|判斷執行查詢的類型：<br /><br /> 0 – 正常執行 （成功完成）<br /><br /> 3 – 由用戶端起始已中止執行<br /><br /> 4-例外狀況已中止執行|  
-|**execution_type_desc**|**nvarchar （128)**|執行類型欄位的文字描述：<br /><br /> 0 – 一般<br /><br /> 3 – 中止<br /><br /> 4-例外狀況|  
-|**total_query_wait_time_ms**|**bigint**|CPU 總計的彙總間隔內的查詢計畫的等候時間，並等候類別目錄 （以毫秒為單位來報告）。|
+|**execution_type_desc**|**nvarchar(128)**|執行類型欄位的文字描述：<br /><br /> 0 – 一般<br /><br /> 3 – 中止<br /><br /> 4 -  Exception|  
+|**total_query_wait_time_ms**|**bigint**|CPU 總計的彙總間隔內的查詢計畫的等候時間，並等候類別目錄 （以毫秒為單位報告）。|
 |**avg_query_wait_time_ms**|**float**|平均等候查詢計劃，每個彙總間隔，並等候類別中 （以毫秒為單位報告） 的執行持續時間。|
 |**last_query_wait_time_ms**|**bigint**|上一次的等候持續時間的彙總間隔內的查詢計劃，並等候類別目錄 （以毫秒為單位報告）。|
 |**min_query_wait_time_ms**|**bigint**|最小 CPU 彙總間隔內的查詢計畫的等候時間，並等候類別目錄 （以毫秒為單位報告）。|
@@ -61,19 +61,19 @@ ms.lasthandoff: 11/17/2017
 |**0**|**Unknown**|Unknown |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**背景工作執行緒**|THREADPOOL|
-|**3**|**鎖定**|LCK_M_ %|
-|**4**|**閂鎖**|提供 LATCH_ %|
-|**5**|**緩衝區閂鎖**|PAGELATCH_ %|
-|**6**|**緩衝區 IO**|PAGEIOLATCH_ %|
+|**3**|**Lock**|LCK_M_%|
+|**4**|**Latch**|LATCH_%|
+|**5**|**緩衝區閂鎖**|PAGELATCH_%|
+|**6**|**緩衝區 IO**|PAGEIOLATCH_%|
 |**7**|**編譯***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**SQL CLR**|CLR %，SQLCLR %|
-|**9**|**鏡像**|DBMIRROR %|
+|**8**|**SQL CLR**|CLR%, SQLCLR%|
+|**9**|**鏡像**|DBMIRROR%|
 |**10**|**Transaction**|XACT %、 %DTC、 TRAN_MARKLATCH_ %、 MSQL_XACT_ %、 TRANSACTION_MUTEX|
-|**11**|**閒置**|第 %SLEEP_ LAZYWRITER_SLEEP、 SQLTRACE_BUFFER_FLUSH、 SQLTRACE_INCREMENTAL_FLUSH_SLEEP、 SQLTRACE_WAIT_ENTRIES、 FT_IFTS_SCHEDULER_IDLE_WAIT、 XE_DISPATCHER_WAIT、 REQUEST_FOR_DEADLOCK_SEARCH、 LOGMGR_QUEUE、 ONDEMAND_TASK_QUEUE、 CHECKPOINT_佇列 XE_TIMER_EVENT|
-|**12**|**先佔式**|PREEMPTIVE_ %|
+|**11**|**Idle**|第 %SLEEP_ LAZYWRITER_SLEEP、 SQLTRACE_BUFFER_FLUSH、 SQLTRACE_INCREMENTAL_FLUSH_SLEEP、 SQLTRACE_WAIT_ENTRIES、 FT_IFTS_SCHEDULER_IDLE_WAIT、 XE_DISPATCHER_WAIT、 REQUEST_FOR_DEADLOCK_SEARCH、 LOGMGR_QUEUE、 ONDEMAND_TASK_QUEUE、 CHECKPOINT_佇列 XE_TIMER_EVENT|
+|**12**|**Preemptive**|PREEMPTIVE_ %|
 |**13**|**Service Broker**|BROKER_ % **（但不是 BROKER_RECEIVE_WAITFOR）**|
 |**14**|**交易記錄 IO**|LOGMGR、 LOGBUFFER、 LOGMGR_RESERVE_APPEND、 LOGMGR_FLUSH、 LOGMGR_PMM_LOG CHKPT、 WRITELOGF|
-|**15**|**網路 IO**|ASYNC_NETWORK_IO，NET_WAITFOR_PACKET，PROXY_NETWORK_IO EXTERNAL_SCRIPT_NETWORK_IOF|
+|**15**|**網路 IO**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
 |**16**|**平行處理原則**|CXPACKET EXCHANGE|
 |**17**|**記憶體**|RESOURCE_SEMAPHORE、 CMEMTHREAD、 CMEMPARTITIONED、 EE_PMOLOCK、 MEMORY_ALLOCATION_EXT RESERVED_MEMORY_ALLOCATION_EXT、 MEMORY_GRANT_UPDATE|
 |**18**|**使用者等候**|WAITFOR，WAIT_FOR_RESULTS，BROKER_RECEIVE_WAITFOR|
@@ -89,14 +89,14 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Permissions  
  需要**VIEW DATABASE STATE**權限。  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.database_query_store_options &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢存放區預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   

@@ -8,11 +8,14 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - SSIS Script task, development environment
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: "81"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2bccd7c5b39ff2614eb390ed60ebb41653127f81
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a3ff34e28c937c83e43860129f8185ae0ed1b1d6
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="coding-and-debugging-the-script-task"></a>指令碼工作的程式碼撰寫和偵錯
   在 [指令碼工作編輯器] 中設定指令碼工作之後，於指令碼工作開發環境中撰寫自訂程式碼。  
@@ -206,10 +209,10 @@ To open Help, press F1.
  指令碼工作專案可以包含預設 **ScriptMain** 項目以外的項目。 您可以將類別、模組和程式碼檔案加入專案。 您也可以使用資料夾來組織項目的群組。 所有您加入的項目都會保存在封裝內。  
   
 ### <a name="references-in-the-script-task-project"></a>指令碼工作專案中的參考  
- 您可以在 [專案總管] 中以滑鼠右鍵按一下指令碼工作專案，然後按一下 [新增參考]，新增受控組件的參考。 如需詳細資訊，請參閱[參考指令碼解決方案中的其他組件](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)。  
+ 您可以在 [專案總管] 中以滑鼠右鍵按一下「指令碼」工作專案，再按 [新增參考]，新增 Managed 組件的參考。 如需詳細資訊，請參閱[參考指令碼解決方案中的其他組件](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)。  
   
 > [!NOTE]  
->  您可以在 VSTA IDE 中的 [類別檢視] 或 [專案總管] 中，檢視專案參考。 您可以從 [檢視] 功能表中開啟任一個視窗。 您可以從 [專案] 功能表、[專案總管] 或 [類別檢視] 中新增參考。  
+>  您可以在 VSTA IDE 中的 [類別檢視] 或 [專案總管] 中，檢視專案參考。 您可以從 [檢視] 功能表中開啟任一個視窗。 您可以從 [專案] 功能表、[專案總管] 或 [類別檢視] 新增參考。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>與指令碼工作中的封裝互動  
  指令碼工作使用全域 **Dts** 物件 (即 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 類別的執行個體) 和其成員，以與包含套件和 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段互動。  
@@ -228,7 +231,7 @@ To open Help, press F1.
   
  <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 類別也包含一些您可能不會使用的公用成員。  
   
-|成員|Description|  
+|成員|描述|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性會提供更為便利的變數存取方式。 雖然您可以使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>，但是必須明確地呼叫方法以鎖定和解除鎖定要讀取和寫入的變數。 當您使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性時，指令碼工作會為您處理鎖定語意。|  
   
@@ -236,7 +239,7 @@ To open Help, press F1.
  若要偵錯指令碼工作中的程式碼，請在程式碼中設定至少一個中斷點，然後關閉 VSTA IDE 以便在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中執行封裝。 當封裝執行進入指令碼工作時，VSTA IDE 會在唯讀模式下重新開啟和顯示您的程式碼。 在執行到達中斷點之後，您可以檢查變數值並逐步完成其餘的程式碼。  
   
 > [!WARNING]  
->  您可以在以 64 位元模式執行封裝時，為指令碼工作偵錯。  
+>  您無法在以 64 位元模式執行套件時，為指令碼工作偵錯。  
   
 > [!NOTE]  
 >  您必須執行封裝以進入指令碼工作中偵錯。 如果您只執行個別的工作，則會忽略指令碼工作程式碼內的中斷點。  
@@ -249,7 +252,7 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>外部資源  
   
--   blogs.msdn.com 上的部落格文章：[SSIS 2008 和 R2 安裝的 VSTA 設定與設定問題](http://go.microsoft.com/fwlink/?LinkId=215661)。  
+-   blogs.msdn.com 上的部落格文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (SSIS 2008 和 R2 安裝的 VSTA 安裝與設定問題)。  
   
 ## <a name="see-also"></a>另請參閱  
  [參考指令碼解決方案中的其他組件](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   

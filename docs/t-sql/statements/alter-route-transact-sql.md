@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ROUTE_TSQL
 - ALTER ROUTE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER ROUTE statement
 - dropping routes
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - removing routes
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 221fcf4d801d062d491935c8380abd4f75b83285
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +83,13 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- 存留期 **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將路由保留在路由表中的時間量 (以秒為單位)。 在存留期間結束時，路由會到期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在選擇新交談的路由時，不會再考慮這個路由。 如果省略這個子句，路由的存留期間會維持不變。  
   
- 位址**='***next_hop_address'*  
+ ADDRESS **='***next_hop_address'*  
  指定這個路由的網路位址。 *Next_hop_address*指定 TCP/IP 位址，格式如下：  
   
- **TCP: / /** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
  指定*port_number*必須符合的通訊埠編號[!INCLUDE[ssSB](../../includes/sssb-md.md)]的執行個體的端點[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在指定電腦。 這可以在選取的資料庫中執行下列查詢來取得：  
   
@@ -111,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  指定的主體伺服器會在鏡像組之鏡像伺服器的網路位址*next_hop_address*。 *Next_hop_mirror_address*指定 TCP/IP 位址，格式如下：  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  指定*port_number*必須符合的通訊埠編號[!INCLUDE[ssSB](../../includes/sssb-md.md)]的執行個體的端點[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在指定電腦。 這可以在選取的資料庫中執行下列查詢來取得：  
   
@@ -181,7 +183,7 @@ ALTER ROUTE ExpenseRoute
      ADDRESS = 'TCP://www.Adventure-Works.com:1234';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [DROP ROUTE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

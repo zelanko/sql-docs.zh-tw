@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_pdw_sql_requests (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_pdw_sql_requests (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: 
@@ -8,34 +8,36 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4cdf51b635fb1b7e29ab20a65704fc560ce8496
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f345dbbdda12ade363b4d5f8a52f5cca80e564f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (TRANSACT-SQL)
+# <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   在查詢中會保存 SQL 步驟的所有 SQL Server 查詢發佈的相關資訊。  
   
 |資料行名稱|資料類型|Description|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar （32)**|此 SQL 的查詢分佈所屬之查詢的唯一識別碼。<br /><br /> request_id、 step_index 和 distribution_id 形成這個檢視的索引鍵。|請參閱中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|此 SQL 的查詢分佈所屬之查詢的唯一識別碼。<br /><br /> request_id、 step_index 和 distribution_id 形成這個檢視的索引鍵。|請參閱中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|此分佈是一部分的查詢步驟索引。<br /><br /> request_id、 step_index 和 distribution_id 形成這個檢視的索引鍵。|請參閱在 step_index [sys.dm_pdw_request_steps &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |pdw_node_id|**int**|執行此查詢發佈節點唯一識別碼。|請參閱中的 node_id [sys.dm_pdw_nodes &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**int**|執行此查詢發佈的發佈唯一識別碼。<br /><br /> request_id、 step_index 和 distribution_id 形成這個檢視的索引鍵。|請參閱在 distribution_id [sys.pdw_distributions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md). 設定為-1 可執行在節點範圍內，未散發範圍的要求。|  
-|status|**nvarchar （32)**|查詢分佈的目前狀態。|暫止狀態，執行失敗，已取消，完成，已中止 CancelSubmitted|  
+|status|**nvarchar(32)**|查詢分佈的目前狀態。|暫止狀態，執行失敗，已取消，完成，已中止 CancelSubmitted|  
 |error_id|**nvarchar(36)**|如果有任何與此查詢發佈，相關聯錯誤的唯一識別碼。|請參閱在 error_id [sys.dm_pdw_errors &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). 如果沒有發生錯誤，請設為 NULL。|  
 |start_time|**datetime**|哪一個查詢發佈開始時間執行。|此查詢發佈較小或等於目前的時間，大於或等於查詢步驟的 start_time 隸屬於|  
 |end_time|**datetime**|在此查詢散發完成執行、 已取消，或失敗的時間。|大於或等於開始時間，或如果查詢分佈是進行中或已佇列設為 NULL。|  
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  這份檢視所保留的最大資料列的相關資訊，請參閱中的系統檢視的最大值 」 一節[最小和最大值 (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9)主題。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

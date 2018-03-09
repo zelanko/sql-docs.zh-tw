@@ -1,36 +1,34 @@
 ---
 title: "支援的 Analysis Services 表格式模型的資料類型 |Microsoft 文件"
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5dcf73586ff73b24e121d517e8bc56c71c2156c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 79cb9eb46d0561ab6dd94ba6e001b97fe3ae801f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>支援表格式模型中的資料類型
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本文描述可以使用表格式模型中的資料類型，並討論時計算或 Data Analysis Expressions (DAX) 公式中使用資料的資料類型隱含轉換。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文描述可用於表格式模型中的資料類型，並討論在 Data Analysis Expressions (DAX) 公式中計算或使用資料時，隱含的資料類型轉換。  
 
   
-##  <a name="bkmk_data_types"></a>在表格式模型中使用的資料類型  
+##  <a name="bkmk_data_types"></a> 在表格式模型中使用的資料類型  
 當您在公式中匯入資料或使用值時，即使原始資料來源包含不同的資料類型，該資料還是會轉換成下列其中一種資料類型。 由公式所產生的值也會使用這些資料類型。  
   
  一般來說，實作這些資料類型是為了在導出資料行中達成精確的計算，而且相同的限制會套用到模型中的其餘資料上以保持一致性。  
@@ -45,10 +43,10 @@ ms.lasthandoff: 12/08/2017
 |布林|布林|True 或 False 值。|  
 |Text|字串|Unicode 字元資料字串。 可以是字串、 數字或以文字格式表示的日期。|  
 |日期|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
-|貨幣|貨幣|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
-|不適用|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
+|CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
+|해당 사항 없음|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
- \*如果您嘗試匯入有大數值的資料，匯入可能會失敗，發生下列錯誤：  
+ \* 如果您嘗試匯入有大數值的資料，匯入可能會失敗，發生下列錯誤：  
   
  記憶體中資料庫錯誤： '\<資料行名稱 >' 的資料行'\<資料表名稱 >' 資料表包含的值 ' 1.7976931348623157 e + 308'，但不支援。 已取消作業。  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="table-data-type"></a>資料表資料類型  
  此外，DAX 還使用 *「資料表」* (Table) 資料類型。 DAX 會在許多函數中使用這個資料類型，例如彙總與時間智慧計算。 有些函數需要使用資料表的參考；有些函數則會傳回之後可當做其他函數輸入使用的資料表。 在需要資料表當做輸入的部分函數中，您可以指定評估為資料表的運算式；對於某些函數，則需要基底資料表的參考。 如需特定函數需求的相關資訊，請參閱 [DAX 函數參考](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)。  
   
-##  <a name="bkmk_implicit"></a>DAX 公式中隱含和明確的資料類型轉換
+##  <a name="bkmk_implicit"></a> DAX 公式中隱含和明確的資料類型轉換
   
  每個 DAX 函數對於當做輸入與輸出使用之資料的類型都有特定需求。 例如，某些函數需要整數做為部分引數並需要日期做為其他引數；其他函數則需要文字或資料表。  
   
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
 |-|-|-|-|-|  
 |運算子 (+)|INTEGER|貨幣|REAL|日期/時間|  
 |INTEGER|INTEGER|貨幣|REAL|日期/時間|  
-|貨幣|貨幣|貨幣|REAL|日期/時間|  
+|CURRENCY|CURRENCY|CURRENCY|REAL|日期/時間|  
 |REAL|REAL|REAL|REAL|日期/時間|  
 |日期/時間|日期/時間|日期/時間|日期/時間|日期/時間|  
   
@@ -111,7 +109,7 @@ ms.lasthandoff: 12/08/2017
 |-|-|-|-|-|  
 |運算子 (-)|INTEGER|貨幣|REAL|日期/時間|  
 |INTEGER|INTEGER|貨幣|REAL|REAL|  
-|貨幣|貨幣|貨幣|REAL|REAL|  
+|CURRENCY|CURRENCY|CURRENCY|REAL|REAL|  
 |REAL|REAL|REAL|REAL|REAL|  
 |日期/時間|日期/時間|日期/時間|日期/時間|日期/時間|  
   
@@ -126,8 +124,8 @@ ms.lasthandoff: 12/08/2017
 |-|-|-|-|-|  
 |運算子 (*)|INTEGER|貨幣|REAL|日期/時間|  
 |INTEGER|INTEGER|貨幣|REAL|INTEGER|  
-|貨幣|貨幣|REAL|貨幣|貨幣|  
-|REAL|REAL|貨幣|REAL|REAL|  
+|CURRENCY|CURRENCY|REAL|CURRENCY|CURRENCY|  
+|REAL|REAL|CURRENCY|REAL|REAL|  
   
  例如，如果在乘法運算中結合整數與實數，兩個值都會轉換為實數，因此傳回值也是 REAL。  
   
@@ -137,8 +135,8 @@ ms.lasthandoff: 12/08/2017
 ||||||  
 |-|-|-|-|-|  
 |運算子 (/)<br /><br /> (資料列/資料行)|INTEGER|貨幣|REAL|日期/時間|  
-|INTEGER|REAL|貨幣|REAL|REAL|  
-|貨幣|貨幣|REAL|貨幣|REAL|  
+|INTEGER|REAL|CURRENCY|REAL|REAL|  
+|CURRENCY|CURRENCY|REAL|CURRENCY|REAL|  
 |REAL|REAL|REAL|REAL|REAL|  
 |日期/時間|REAL|REAL|REAL|REAL|  
   
@@ -147,15 +145,15 @@ ms.lasthandoff: 12/08/2017
 #### <a name="comparison-operators"></a>比較運算子  
 支援僅提供有限的比較作業的混合的資料型別組合。 若要深入了解，請參閱 [DAX 運算子參考](https://msdn.microsoft.com/library/ee634237.aspx)。  
   
-## <a name="bkmk_hand_blanks"></a>空白、 空字串與零值的處理  
+## <a name="bkmk_hand_blanks"></a> 空白、 空字串與零值的處理  
  下表摘要說明之間的差異 DAX 並在 Microsoft Excel 中空白處理方式：  
   
 ||||  
 |-|-|-|  
 |運算式|DAX|Excel|  
-|BLANK + BLANK|空白|0 (零)|  
+|BLANK + BLANK|BLANK|0 (零)|  
 |BLANK +5|5|5|  
-|BLANK * 5|空白|0 (零)|  
+|BLANK * 5|BLANK|0 (零)|  
 |5/BLANK|無限|錯誤|  
 |0/BLANK|NaN|錯誤|  
 |BLANK/BLANK|空白|錯誤|  
@@ -163,8 +161,8 @@ ms.lasthandoff: 12/08/2017
 |FALSE AND BLANK|FALSE|FALSE|  
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
-|BLANK OR BLANK|空白|錯誤|  
-|BLANK AND BLANK|空白|錯誤|  
+|BLANK OR BLANK|BLANK|錯誤|  
+|BLANK AND BLANK|BLANK|錯誤|  
   
  如需特定函數或運算子如何處理空白的詳細資訊，請參閱 [DAX 函數參考](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)一節中，每個 DAX 函數的個別主題。  
   

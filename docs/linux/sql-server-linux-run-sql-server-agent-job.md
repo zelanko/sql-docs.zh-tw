@@ -3,27 +3,27 @@ title: "建立和執行 SQL Server on Linux 作業 |Microsoft 文件"
 description: "本教學課程會示範如何在 Linux 上執行 SQL Server Agent 作業。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: fe2705d9d1bfefd9953ff03da123621dd4ef95f3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>建立和執行在 Linux 上的 SQL Server Agent 作業
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資料庫中。 本教學課程提供如何在 Linux 上建立 SQL Server Agent 作業的範例使用 TRANSACT-SQL 和 SQL Server Management Studio (SSMS)。
 
@@ -35,7 +35,7 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
 
 如需與 SQL Server Agent，在 Linux 上的已知問題，請參閱[版本資訊](sql-server-linux-release-notes.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
 若要完成本教學課程中，需要下列必要條件：
 
@@ -47,23 +47,22 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
 * 使用 SSMS 的 Windows 電腦：
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)選擇性 SSMS 步驟。
 
-## <a name="install-sql-server-agent"></a>安裝 SQL Server 代理程式
+## <a name="enable-sql-server-agent"></a>啟用 SQL Server 代理程式
 
-若要在 Linux 上使用 SQL Server 代理程式，您必須先安裝**mssql server agent**已安裝的 SQL Server 2017 機器上的封裝。
+若要在 Linux 上使用 SQL Server 代理程式，您必須先啟用 SQL Server 代理程式已安裝的 SQL Server 2017 機器上。
 
-1. 安裝**mssql server agent**與 Linux 作業系統的適當命令。
-
-   | 平台 | 安裝命令 |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. 若要啟用 SQL Server 代理程式，請遵循下面的步驟。
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. 使用下列命令，重新啟動 SQL Server:
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> 從 SQL Server 2017 CU4 開始，SQL Server 代理程式隨附於**mssql 伺服器**封裝，並預設會停用。 針對設定代理程式之前 CU4 造訪[Linux 上安裝 SQL Server Agent](sql-server-linux-setup-sql-agent.md)。
 
 ## <a name="create-a-sample-database"></a>建立範例資料庫
 

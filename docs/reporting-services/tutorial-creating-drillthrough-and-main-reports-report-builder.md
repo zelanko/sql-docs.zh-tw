@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85b1c63c9b6ab18018b9d31143ab53503ad64ae1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32ff76d9fd8d90b780d66ed1e12c5a4d33deca7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
 本教學課程將教導您如何建立兩種 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表：鑽研報表和主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 
@@ -103,7 +103,7 @@ ms.lasthandoff: 12/05/2017
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 按一下 **[下一步]**。  
+14. 按 [下一步] 。  
   
 ## <a name="DMDXQuery"></a>1b. 建立 MDX 查詢  
 在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
@@ -172,7 +172,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  在查詢設計工具工具列上，按一下 **[執行 (!)]**。  
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 ## <a name="DLayout"></a>1c. 將資料組織為群組  
 當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
@@ -198,7 +198,7 @@ ms.lasthandoff: 12/05/2017
   
     步驟 4 和步驟 5 指定了矩陣中要顯示的資料。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 ## <a name="DTotals"></a>1d. 加入小計和總計  
 建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您也可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
@@ -209,7 +209,7 @@ ms.lasthandoff: 12/05/2017
   
     精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  
   
-2.  按一下 **[下一步]**。  
+2.  按 [下一步] 。  
   
 2.  按一下 **[完成]**。  
   
@@ -394,7 +394,7 @@ ms.lasthandoff: 12/05/2017
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 按一下 **[下一步]**。  
+14. 按 [下一步] 。  
   
 ## <a name="MMDXQuery"></a>1b. 建立 MDX 查詢  
 接著，建立內嵌的資料集。 若要這樣做，您將使用查詢設計工具建立篩選、參數、導出成員，以及資料集本身。  
@@ -492,7 +492,7 @@ ms.lasthandoff: 12/05/2017
   
     檢閱查詢結果集。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 ## <a name="MLayout"></a>1c. 將資料組織為群組  
 當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
@@ -522,7 +522,7 @@ ms.lasthandoff: 12/05/2017
   
     精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  當您執行報表時，每個資料列都會以下列方式顯示：第一個資料列是資料行群組、第二個資料列包含資料行標題、第三個資料列包含產品類別目錄資料 (`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`，而第四個資料列包含總計。  
   
-2.  按一下 **[下一步]**。  
+2.  按 [下一步] 。  
   
 3.  按一下 **[完成]**。  
   

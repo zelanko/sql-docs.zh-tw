@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_start_job
 - sp_start_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_start_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 115e4738a6cca1b0578bf2edb86859f2e7b2a7d5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5939e906cee691c2b6f13ff10677eb4f4129622f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,22 +52,22 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  要啟動的作業名稱。 任一*job_id*或*job_name*必須指定，但不可同時指定兩者。 *job_name*是**sysname**，預設值是 NULL。  
   
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  要啟動的作業識別碼。 任一*job_id*或*job_name*必須指定，但不可同時指定兩者。 *job_id*是**uniqueidentifier**，預設值是 NULL。  
   
- [  **@error_flag=** ] *error_flag*  
+ [ **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@server_name=** ] **'***server_name***'**  
+ [ **@server_name=** ] **'***server_name***'**  
  這是要在其中啟動作業的目標伺服器。 *server_name*是**nvarchar （128)**，預設值是 NULL。 *server_name*必須是其中一項作業目前針對目標伺服器。  
   
- [  **@step_name=** ] **'***step_name***'**  
+ [ **@step_name=** ] **'***step_name***'**  
  作業開始執行的步驟名稱。 只適用於本機作業。 *step_name*是**sysname**，預設值是 NULL  
   
- [  **@output_flag=** ] *output_flag*  
+ [ **@output_flag=** ] *output_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -100,11 +103,11 @@ EXEC dbo.sp_start_job N'Weekly Sales Data Backup' ;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sp_delete_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_stop_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

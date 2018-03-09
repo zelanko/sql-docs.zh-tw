@@ -23,15 +23,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5c13f332469856a9467e1694e59024a3222d5b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7ba445a69a1bbb019b73676bf843a1dafc0884e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ GO
   
 |十進位值|二進位位元遮罩|允許 SQL Server 執行緒的處理器數目|  
 |-------------------|---------------------|--------------------------------------------|  
-|1|00000001|0|  
+|@shouldalert|00000001|0|  
 |3|00000011|0 與 1|  
 |7|00000111|0、1 與 2|  
 |15|00001111|0、1、2 與 3|  
@@ -139,7 +139,7 @@ GO
  如果指定的相似性遮罩在執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令期間違反授權原則，就會將錯誤訊息回報至用戶端工作階段和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔，並要求資料庫管理員重新設定相似性遮罩。 在此情況下，不會接受任何 RECONFIGURE WITH OVERRIDE 命令。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [監視資源使用量 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

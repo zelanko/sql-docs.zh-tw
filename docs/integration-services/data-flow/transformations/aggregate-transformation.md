@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c52546eab7dc5c52fb38e03616df648d3d5d67d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7262db9da133a2aa6f82f501e8dab3228de16efb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
   「彙總」轉換會將彙總函式 (例如 Average) 套用至資料行值，並將結果複製到轉換輸出。 除了彙總函式外，該轉換還提供 GROUP BY 子句，讓您用來指定要彙總的群組。  
@@ -38,10 +39,10 @@ ms.lasthandoff: 11/20/2017
 ## <a name="operations"></a>作業  
  「彙總」轉換支援下列作業。  
   
-|運算|說明|  
+|作業|描述|  
 |---------------|-----------------|  
 |群組依據|將資料集分割成群組。 任何資料類型的資料行都可用於群組。 如需詳細資訊，請參閱 [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md)。|  
-|Sum|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md)。|  
+|SUM|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md)。|  
 |平均值|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md)。|  
 |Count|傳回群組中的項目數。 如需詳細資訊，請參閱 [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md)。|  
 |計算相異|傳回群組中唯一非 Null 值的數目。|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
  「彙總」轉換有一個輸入，以及一個或多個輸出。 它不支援錯誤輸出。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **索引鍵小數位數**  
  在 [進階] 顯示中，選擇性地指定彙總可以寫入的大約索引鍵數目。 根據預設，此選項的值為 **[未指定]**。 如果 [索引鍵小數位數] 和 [索引鍵] 屬性都有設定，會優先使用 [索引鍵]。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 [索引鍵小數位數] 屬性。|  
 |低|彙總可寫入大約 500,000 個索引鍵。|  
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/20/2017
  **運算**  
  使用下表作為指南，從可用的作業清單中選擇。  
   
-|運算|說明|  
+|作業|描述|  
 |---------------|-----------------|  
 |**GroupBy**|將資料集分割成群組。 具有任何資料類型的資料行可用於分組。 如需詳細資訊，請參閱 GROUP BY。|  
 |**Sum**|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 SUM。|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
  **Count Distinct Scale**  
  可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果 [CountDistinctScale] 和 [CountDistinctKeys] 都有指定，會優先使用 [CountDistinctKeys]。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 **CountDistinctScale** 屬性。|  
 |低|彙總可寫入大約 500,000 個相異值。|  
@@ -216,7 +217,7 @@ ms.lasthandoff: 11/20/2017
  **[索引鍵小數位數]**  
  選擇性地指定彙總預期的近似索引鍵數目。 轉換時會使用此資訊來最佳化初始快取大小。 根據預設，此選項的值為 **[未指定]**。 如果 **[索引鍵小數位數]** 和 **[索引鍵數目]** 都有指定，會優先使用 **[索引鍵數目]** 。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 **[索引鍵小數位數]** 屬性。|  
 |低|彙總可寫入大約 500,000 個索引鍵。|  
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/20/2017
  **[計算相異小數位數]**  
  可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果 **[計算相異小數位數]** 和 **[計算相異索引鍵]** 都有指定，會優先使用 **[計算相異索引鍵]** 。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 CountDistinctScale 屬性。|  
 |低|彙總可寫入大約 500,000 個相異值。|  

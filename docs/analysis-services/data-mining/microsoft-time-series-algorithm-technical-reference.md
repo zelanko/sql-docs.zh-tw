@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,19 +29,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a38c2585e2da3c1086ce15f220e13741bd7e9e71
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 時間序列演算法技術參考
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法包括兩個不同的演算法來分析時間序列：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法包括兩種不同的演算法來分析時間序列：  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中所導入的 ARTXP 演算法是為了預測數列中的下一個可能值而最佳化。  
   
@@ -96,7 +95,7 @@ ms.lasthandoff: 12/08/2017
 >  Microsoft 時間序列演算法可用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，但是某些進階功能 (包括自訂時間序列分析的參數) 只在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中受支援。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 版本支援的功能](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。  
   
 ### <a name="detection-of-seasonality"></a>季節性的偵測  
- ARIMA 和 ARTXP 演算法支援季節性或週期性的偵測。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用快速傅立葉變換，在定型之前偵測季節性。 不過，您可以設定演算法參數來影響季節性偵測以及時間序列分析的結果。  
+ ARIMA 和 ARTXP 演算法支援季節性或週期性的偵測。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用快速傅立葉變換，在定型之前偵測季節性。 不過，您可以設定演算法參數來影響季節性偵測以及時間序列分析的結果。  
   
 -   藉由變更 *AUTODETECT_SEASONALITY*的值，您就可以影響產生之可能時間區段的數目。  
   
@@ -174,9 +173,9 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  系統支援 Cyclical 和 Ordered 內容類型，但是演算法將它們視為離散值，因此不會執行特殊處理。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [時間序列模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

@@ -7,25 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 0bee2bcdee8eb5b46d59e43699399fa68cdf3d24
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>步驟 2： 將資料匯入 SQL Server 使用 PowerShell
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章的教學課程中，屬於[SQL 開發人員的資料庫中的 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/20/2017
     - 名稱或位址[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]已安裝使用 Python 的機器學習服務執行個體。
     - 執行個體上之帳戶的使用者名稱和密碼。 您使用的帳戶必須具有建立資料庫、 建立資料表和預存程序，並大量載入資料至資料表的能力。 
     - 如果您未提供使用者名稱和密碼，您的 Windows 身分識別用來登入 SQL Server，而且您會提升輸入密碼。
-    - 您剛才下載之範例資料檔案的路徑和檔案名稱。 例如，使用 IPv4 位址的 `C:\temp\pysql\nyctaxi1pct.csv`
+    - 您剛才下載之範例資料檔案的路徑和檔案名稱。 例如， `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > 若要成功地載入資料時，程式庫 xmlrw.dll 必須 bcp.exe 相同資料夾中。

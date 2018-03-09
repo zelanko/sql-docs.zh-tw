@@ -16,15 +16,15 @@ helpviewer_keywords:
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56a9141ce472f9419eca3504dae859dab886689
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>預設 SQL Server 網路通訊協定組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 為了加強安全性，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 會為某些新安裝停用網路連線。 如果您正在使用 Enterprise、Standard、Evaluation 或 Workgroup Edition 或是 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的舊版安裝仍然存在，就不會停用使用 TCP/IP 的網路連接。 所有的安裝都會啟用共用記憶體通訊協定，以允許本機連接到伺服器。 視安裝條件和安裝選項而定， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服務有可能會停止。
@@ -41,11 +41,11 @@ ms.lasthandoff: 11/20/2017
 Enterprise  | 新安裝  | 已啟用   | 已啟用   | 針對網路連接停用。
 Standard    | 新安裝  | 已啟用   | 已啟用   | 針對網路連接停用。
 Web | 新安裝  | 已啟用   | 已啟用   | 針對網路連接停用。
-開發人員   | 新安裝  | 已啟用   | 已停用  | 針對網路連接停用。
+Developer   | 新安裝  | 已啟用   | 已停用  | 針對網路連接停用。
 Evaluation  | 新安裝  | 已啟用   | 已啟用   | 針對網路連接停用。
 SQL Server Express  | 新安裝  | 已啟用   | 已停用  | 針對網路連接停用。
 所有版本    | 存在舊版安裝，但未升級   | 與新安裝相同  | 與新安裝相同  | 與新安裝相同
-所有版本    | 升級   | 已啟用   | 保留舊版安裝的設定。    | 保留舊版安裝的設定。
+所有版本    | UPGRADE   | 已啟用   | 保留舊版安裝的設定。    | 保留舊版安裝的設定。
 
 
 >[!NOTE]

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 660fe866db09675916d90cdf8130b2b99980b2ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>XML 文件使用的 sql 中排除結構描述項目： 對應
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]每個元素和屬性在 XSD 結構描述對應到資料庫資料表/檢視表和資料行由於預設對應。 如果您想要在 XSD 結構描述，不會對應到任何資料庫資料表 （檢視） 或資料行，不會出現在 XML 中建立項目，您可以指定**sql： 對應**註解。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您想要在 XSD 結構描述，不會對應到任何資料庫資料表 （檢視） 或資料行，不會出現在 XML 中建立項目，您可以指定**sql： 對應**註解。  
   
  **Sql： 對應**如果無法修改結構描述，或者如果結構描述來驗證 XML，從其他來源，而且不包含不會儲存在資料庫中的資料註解會特別實用。 **Sql： 對應**註釋不同於**sql: is-constant<**在於未對應的元素和屬性不會出現在 XML 文件。  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
  請注意，ContactID、 FirstName 和 LastName 存在，但是 HomeAddress 不是，因為對應結構描述指定 0 **sql： 對應**屬性。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [XSD 元素和屬性對資料表和資料行 &#40; 的預設對應SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

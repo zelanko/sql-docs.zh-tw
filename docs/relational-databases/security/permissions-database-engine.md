@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a1648f5ecd3170b2b60c157e4debb25d7c7f793a
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -421,7 +422,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 7.  如果您沒有拒絕 **必要權限** ，而且 **必要權限** 包含 **權限空間** 中任何物件 **安全性內容**之任何識別的直接或隱含 GRANT 或 GRANT WITH GRANT 權限，就會通過權限檢查。  
 
-## <a name="secial-considerations-for-column-level-permissions"></a>資料行層級權限的 Secial 考量
+## <a name="special-considerations-for-column-level-permissions"></a>資料行層級權限的特殊考量
 
 資料行層級權限授與使用語法 *<table_name>(\<column _name>)*。 例如：
 ```sql

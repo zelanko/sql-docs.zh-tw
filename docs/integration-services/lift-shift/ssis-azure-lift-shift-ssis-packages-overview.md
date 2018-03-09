@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>將 SQL Server Integration Services 工作負載隨即轉移至雲端
 您現在可以將 SQL Server Integration Services (SSIS) 套件和工作負載移至 Azure 雲端。
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="architecture-overview"></a>架構概觀
 下表強調顯示內部部署環境上的 SSIS 與 Azure 上的 SSIS 之間的差異。 最明顯的差異在於區隔儲存與運算。
 
-| 儲存空間 | 執行階段 | 延展性 |
+| Storage | 執行階段 | 延展性 |
 |---|---|---|
 | 內部部署 (SQL Server) | SQL Server 所裝載的 SSIS 執行階段 | SSIS Scale Out (在 SQL Server 2017 和更新版本中)<br/><br/>自訂解決方案 (在舊版 SQL Server 中) |
 | 在 Azure 上 (SQL Database) | Azure SSIS Integration Runtime，即 Azure Data Factory 第 2 版的元件 | SSIS IR 的縮放選項 |
@@ -54,7 +55,7 @@ Azure Data Factory 會裝載 Azure 上 SSIS 套件的執行階段引擎。 執�
 
 Data Factory 也支援其他類型的 Integration Runtime。 若要深入了解 SSIS IR 和其他類型的整合執行階段，請參閱 [Azure Data Factory 中的整合執行階段](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 本文中所述的功能不需要 SQL Server 2017 或 SQL Server 2016。
 
 這些功能需要下列 SQL Server Data Tools (SSDT) 版本：
@@ -64,11 +65,11 @@ Data Factory 也支援其他類型的 Integration Runtime。 若要深入了解 
 > [!NOTE]
 > 當您將套件部署至 Azure 時，[套件部署精靈] 一律會將套件升級至最新套件格式。
 
-如需 Azure 中必要條件的詳細資訊，請參閱[將 SQL Server Integration Services (SSIS) 套件隨即轉移至 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
+如需 Azure 中的必要條件詳細資訊，請參閱[將 SSIS 套件部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。
 
 ## <a name="ssis-features-on-azure"></a>Azure 上的 SSIS 功能
 
-當您佈建 SQL Database 執行個體來裝載 SSISDB 時，也會安裝 Azure Feature Pack for SSIS 以及 Access 可轉散發套件。 除了內建元件所支援的資料來源之外，這些元件還會提供與 **Excel 和 Access** 檔案以及各種 **Azure** 資料來源的連線。 您無法同時安裝 SSIS 的**協力廠商元件** (包含 Microsoft 的協力廠商元件，例如 Attunity 和 SAP BI 元件)。
+當您佈建 SQL Database 執行個體來裝載 SSISDB 時，也會安裝 Azure Feature Pack for SSIS 以及 Access 可轉散發套件。 除了內建元件所支援的資料來源之外，這些元件還會提供與 **Excel 和 Access** 檔案以及各種 **Azure** 資料來源的連線。 目前您無法安裝 SSIS 的**協力廠商元件** (包含來自 Microsoft 的協力廠商元件，例如 Attunity 的 Oracle 及 Teradata 元件，以及 SAP BI 元件)。
 
 裝載 SSISDB 的「SQL Database 名稱」會變成要在部署和管理 SSDT 和 SSMS 中的套件時使用之名稱 (共由四個部分組成) 的第一個部分 - `<sql_database_name>.database.windows.net`。
 
@@ -81,7 +82,7 @@ Data Factory 也支援其他類型的 Integration Runtime。 若要深入了解 
 ## <a name="common-tasks"></a>一般工作
 
 ### <a name="provision"></a>佈建
-您必須佈建 SSISDB 目錄資料庫和 Azure SSIS Integration Runtime，才能在 Azure 中部署和執行 SSIS 套件。 請遵循本文中的佈建步驟：[將 SQL Server Integration Services (SSIS) 套件隨即轉移至 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
+您必須佈建 SSISDB 目錄資料庫和 Azure SSIS Integration Runtime，才能在 Azure 中部署和執行 SSIS 套件。 請遵循此文章中的佈建步驟：[將 SSIS 套件部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。
 
 ### <a name="deploy-and-run-packages"></a>部署和執行套件
 若要在 SQL Database 上部署專案並執行套件，您可以使用數個熟悉的工具和指令碼選項中的其中一個：
@@ -103,7 +104,7 @@ Data Factory 也支援其他類型的 Integration Runtime。 若要深入了解 
 
 如需詳細資訊，請參閱[排程 Azure 上的 SSIS 套件執行](ssis-azure-schedule-packages.md)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 若要在 Azure 上開始使用 SSIS 工作負載，請參閱下列文章：
--   [將 SQL Server Integration Services (SSIS) 套件隨即轉移至 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [將 SSIS 套件部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 -   [部署、執行和監視 Azure 上的 SSIS 套件](ssis-azure-deploy-run-monitor-tutorial.md)

@@ -12,7 +12,7 @@
 ## [查詢處理架構](query-processing-architecture-guide.md)
 ## [執行緒和工作架構](thread-and-task-architecture-guide.md)
 ## [交易記錄架構與管理](sql-server-transaction-log-architecture-and-management-guide.md)
-## 交易鎖定與資料列版本設定指南
+## [交易鎖定與資料列版本設定指南](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [備份與還原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [BLOB](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -47,7 +47,7 @@
 # [階層式資料](hierarchical-data-sql-server.md)  
 # [匯入和匯出](../relational-databases/import-export/overview-import-export.md)
 # [記憶體內部 OLTP](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-# [索引](../relational-databases/indexes/indexes.md)
+# [[索引]](../relational-databases/indexes/indexes.md)
 # [JSON](../relational-databases/json/json-data-sql-server.md)
 # [連結的伺服器](../relational-databases/linked-servers/linked-servers-database-engine.md)
 # [維護計畫](../relational-databases/maintenance-plans/maintenance-plans.md)
@@ -55,6 +55,7 @@
 ## [資料庫生命週期管理](database-lifecycle-management.md)  
 ## [使用中央管理伺服器管理多部伺服器](administer-multiple-servers-using-central-management-servers.md)  
 
+# [聯結](../relational-databases/performance/joins.md)
 # [資料分割](../relational-databases/partitions/partitioned-tables-and-indexes.md)
 # [[效能]](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [原則式管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
@@ -63,7 +64,7 @@
 # [資源管理員](../relational-databases/resource-governor/resource-governor.md)
 # [指令碼](../relational-databases/scripting/database-engine-scripting.md)
 # [搜尋](../relational-databases/search/full-text-search.md)
-# [安全性](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
+# [Security](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [序號](../relational-databases/sequence-numbers/sequence-numbers.md)
 # [Service Broker](../relational-databases/service-broker/event-notifications.md)
 # [Showplan 運算子](showplan-logical-and-physical-operators-reference.md)  
@@ -71,6 +72,7 @@
 # [SQL 追蹤](../relational-databases/sql-trace/sql-trace.md)
 # [統計資料](../relational-databases/statistics/statistics.md)
 # [預存程序](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+# [子查詢](../relational-databases/performance/subqueries.md)
 # [同義字](../relational-databases/synonyms/synonyms-database-engine.md)
 # [系統目錄檢視](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 # [系統相容性檢視](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)

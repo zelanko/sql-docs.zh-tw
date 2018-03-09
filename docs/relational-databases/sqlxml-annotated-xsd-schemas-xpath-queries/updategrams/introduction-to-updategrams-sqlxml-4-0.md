@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b5a9ef6b56ee32f31b277273fb644a03925fdf0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 簡介 (SQLXML 4.0) 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]您可以修改 （插入、 更新或刪除） 中的資料庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]從現有的 XML 文件使用 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函式。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+您可以修改 （插入、 更新或刪除） 中的資料庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]從現有的 XML 文件使用 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函式。  
   
  OPENXML 函數可透過切割現有的 XML 文件，並提供可以傳遞到 INSERT、UPDATE 或 DELETE 陳述式之資料列集來修改資料庫。 利用 OPENXML，可以針對資料庫資料表直接執行作業。 因此，每當資料列集提供者 (例如資料表) 可以當做來源顯示時，OPENXML 最適合。  
   
@@ -66,13 +68,13 @@ ms.lasthandoff: 11/17/2017
   
  下列定義描述每個區塊的角色：  
   
- **\<之前 >**  
+ **\<before>**  
  識別記錄執行個體的目前狀態 (也稱為「之前的狀態」)。  
   
- **\<之後 >**  
+ **\<after>**  
  識別所要變更資料的新狀態。  
   
- **\<同步處理 >**  
+ **\<sync>**  
  包含**\<之前 >**和**\<之後 >**區塊。 A **\<同步 >**區塊可以包含多個一組**\<之前 >**和**\<之後 >**區塊。 如果有一個以上的集**\<之前 >**和**\<之後 >**區塊，這些區塊 （即使它們是空的） 必須成對指定。 此外，一個 updategram 可以有多個**\<同步 >**區塊。 每個**\<同步 >**區塊是一個交易單位 (這表示可能是所有項目中**\<同步 >**區塊完成，或執行任何動作)。 如果您指定多個**\<同步 >**封鎖在 updategram 中，其中一個失敗**\<同步 >**區塊不會影響其他**\<同步處理>**區塊。  
   
  Updategram 是否刪除、 插入或更新記錄執行個體取決於內容**\<之前 >**和**\<之後 >**區塊：  
@@ -177,7 +179,7 @@ ms.lasthandoff: 11/17/2017
   
 -   當做 OLE DB 命令提交它。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Updategram 安全性考量 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

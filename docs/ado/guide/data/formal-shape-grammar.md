@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09f578dc3467c10be247e34c4ebb89807543052f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9eb99feba381701f7e590add3906cd0285b2720
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="formal-shape-grammar"></a>型式圖形文法
 這是建立任何圖形命令的正式文法：  
@@ -47,33 +48,33 @@ ms.lasthandoff: 12/21/2017
   
 |詞彙|定義|  
 |----------|----------------|  
-|\<shape 命令 >|圖形 [\<資料表 exp > [[AS]\<別名 >]] [\<圖形動作 >]|  
-|\<資料表 exp >|{\<提供者命令文字 >} &#124;<br /><br /> (\<shape 命令 >) &#124;<br /><br /> 資料表\<加上引號名稱 > &#124;<br /><br /> \<加上引號名稱 >|  
-|\<圖形動作 >|附加\<別名欄位清單 > &#124;<br /><br /> 計算\<別名欄位清單 > [依\<欄位清單 >]|  
-|\<別名欄位清單 >|\<別名欄位 > [，\<別名欄位 … >]|  
-|\<別名欄位 >|\<欄位 exp > [[AS]\<別名 >]|  
-|\<欄位 exp >|(\<關聯 exp >) &#124;<br /><br /> \<計算 exp > &#124;<br /><br /> \<彙總 exp > &#124;<br /><br /> \<新 exp >|  
-|< relation_exp >|\<資料表 exp > [[AS]\<別名 >]<br /><br /> 有關\<關聯體清單 >|  
-|\<關聯性條件清單 >|\<關聯性條件 > [，\<關聯體 >...]|  
-|\<關聯性條件 >|\<欄位名稱 > TO\<子 ref >|  
-|\<子 ref >|\<欄位名稱 > &#124;<br /><br /> 參數\<param ref >|  
-|\<param ref >|\<數字 >|  
-|\<欄位清單 >|\<欄位名稱 > [，\<欄位名稱 >]|  
-|\<彙總 exp >|SUM (\<限定欄位名稱 >) &#124;<br /><br /> AVG (\<限定欄位名稱 >) &#124;<br /><br /> MIN (\<限定欄位名稱 >) &#124;<br /><br /> 最大值 (\<限定欄位名稱 >) &#124;<br /><br /> 計數 (\<限定別名 > &#124;\<限定名稱 >) &#124;<br /><br /> Stdev 函數 (\<限定欄位名稱 >) &#124;<br /><br /> 任何 (\<限定欄位名稱 >)|  
-|\<計算 exp >|計算 (\<運算式 >)|  
-|\<限定欄位名稱 >|\<別名 >。[\<別名 >...]\<欄位名稱 >|  
-|\<別名 >|\<加上引號名稱 >|  
-|\<欄位名稱 >|\<加上引號名稱 > [[AS]\<別名 >]|  
-|\<加上引號名稱 >|「\<字串 >"&#124;<br /><br /> '\<字串 >' &#124;<br /><br /> [\<字串 >] &#124;<br /><br /> \<名稱 >|  
-|\<限定名稱 >|別名 [.alias...]|  
-|\<名稱 >|alpha [alpha &#124; 數字 &#124; _ &#124; # &#124;: &#124;...]|  
-|\<數字 >|數字 [數字...]|  
-|\<新 exp >|新\<欄位類型 > [(\<數字 > [，\<數目 >])]|  
-|\<欄位類型 >|OLE DB 或 ADO 資料類型。|  
-|\<字串 >|unicode 字元 [unicode 字元...]|  
-|\<運算式 >|Visual Basic 中為應用程式的運算元都是相同的資料列中的其他非計算資料行的運算式的。|  
+|\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
+|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape 命令 >) &#124;<br /><br /> 資料表\<加上引號名稱 > &#124;<br /><br /> \<quoted-name>|  
+|\<shape-action>|附加\<別名欄位清單 > &#124;<br /><br /> 計算\<別名欄位清單 > [依\<欄位清單 >]|  
+|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
+|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
+|\<field-exp>|(\<關聯 exp >) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELATE \<relation-cond-list>|  
+|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond>|\<field-name> TO \<child-ref>|  
+|\<child-ref>|\<欄位名稱 > &#124;<br /><br /> PARAMETER \<param-ref>|  
+|\<param-ref>|\<number>|  
+|\<field-list>|\<field-name> [, \<field-name>]|  
+|\<aggregate-exp>|SUM (\<限定欄位名稱 >) &#124;<br /><br /> AVG (\<限定欄位名稱 >) &#124;<br /><br /> MIN (\<限定欄位名稱 >) &#124;<br /><br /> 最大值 (\<限定欄位名稱 >) &#124;<br /><br /> 計數 (\<限定別名 > &#124;\<限定名稱 >) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
+|\<calculated-exp>|CALC(\<expression>)|  
+|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
+|\<alias>|\<quoted-name>|  
+|\<field-name>|\<加上引號名稱 > [[AS]\<別名 >]|  
+|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
+|\<qualified-name>|alias[.alias...]|  
+|\<name>|alpha [alpha &#124; 數字 &#124; _ &#124; # &#124;: &#124;...]|  
+|\<number>|digit [digit...]|  
+|\<new-exp>|新\<欄位類型 > [(\<數字 > [，\<數目 >])]|  
+|\<field-type>|OLE DB 或 ADO 資料類型。|  
+|\<string>|unicode 字元 [unicode 字元...]|  
+|\<expression>|Visual Basic 中為應用程式的運算元都是相同的資料列中的其他非計算資料行的運算式的。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [存取資料列中的階層式資料錄集](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [資料成形概觀](../../../ado/guide/data/data-shaping-overview.md)   
  [提供者所需的資料成形](../../../ado/guide/data/required-providers-for-data-shaping.md)   

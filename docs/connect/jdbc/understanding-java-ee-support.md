@@ -1,27 +1,28 @@
 ---
 title: "了解 Java EE 支援 |Microsoft 文件"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5f692489b6d8e701e13c6700d63de6df0b9607a5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: cb98529d22b17ad21bfcab786064a8c8882f3b5b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支援
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/18/2017
  首先，請確認您的 Java 環境 (JDK、JRE) 包含 javax.sql 封裝。 這是使用選用 API 的任何 JDBC 應用程式所需的封裝。 JDK 1.5 和更新版本已經包含這個封裝，因此，您不必另外安裝該封裝。  
   
 ## <a name="driver-name"></a>驅動程式名稱  
- 驅動程式類別名稱是**com.microsoft.sqlserver.jdbc.SQLServerDriver**。 JDBC 驅動程式 4.0、 4.1、 4.2 與 6.0，驅動程式包含在 sqljdbc.jar、 sqljdbc4.jar、 sqljdbc41.jar 或 sqljdbc42.jar 檔案中。 JDBC 驅動程式 6.2，如 mssql-jdbc-6.2.1.jre7.jar 或 mssql-jdbc-6.2.1.jre8.jar 中所包含的驅動程式。
+ 驅動程式類別名稱是**com.microsoft.sqlserver.jdbc.SQLServerDriver**。 JDBC 驅動程式 4.1 for 4.2，和 6.0，驅動程式被包含在 sqljdbc.jar、 sqljdbc4.jar、 sqljdbc41.jar 或 sqljdbc42.jar 檔案中。 JDBC 驅動程式 6.2，如 mssql-jdbc-6.2.1.jre7.jar 或 mssql-jdbc-6.2.1.jre8.jar 中所包含的驅動程式。 JDBC 驅動程式 6.4，為驅動程式包含在 mssql-jdbc-6.4.0.jre7.jar、 mssql jdbc 6.4.0.jre8.jar 或 mssql-jdbc-6.4.0.jre9.jar。
   
  每當您載入具有 JDBC DriverManager 類別的驅動程式，會使用類別名稱。 每當您必須在任何驅動程式設定中指定驅動程式的類別名稱時，也會使用此類別名稱。 例如，在 Java EE 應用程式伺服器中設定資料來源可能需要您輸入驅動程式類別名稱。  
   
@@ -68,7 +69,7 @@ Connection c = ds.getConnection("user", "pwd");
   
  如需有關資料來源屬性的詳細資訊，請參閱[設定資料來源屬性](../../connect/jdbc/setting-the-data-source-properties.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

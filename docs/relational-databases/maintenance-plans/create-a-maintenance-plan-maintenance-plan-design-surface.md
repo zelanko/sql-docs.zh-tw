@@ -8,24 +8,27 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Maintenance Plan Design Surface
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9368c1af9cc0288868523d413d698816c7babc18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>建立維護計畫 (維護計畫設計介面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的維護計畫設計介面，建立單一伺服器或多伺服器維護計畫。 雖然 **[維護計畫精靈]** 最適用於建立基本的維護計畫，但使用設計介面建立計畫時可讓您利用加強的工作流程。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫設計介面，建立單一伺服器或多伺服器維護計畫。 雖然 **[維護計畫精靈]** 最適用於建立基本的維護計畫，但使用設計介面建立計畫時可讓您利用加強的工作流程。  
   
  **本主題內容**  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制事項](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   [使用維護計畫設計介面建立維護計畫](#SSMSProcedure)  
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  若要建立或管理維護計畫，您必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 只有在使用者是 **sysadmin** 固定伺服器角色的成員時，[物件總管] 才會顯示 **[維護計畫]** 節點。  
   
 ##  <a name="SSMSProcedure"></a> 使用維護計畫設計介面  
@@ -106,7 +109,7 @@ ms.lasthandoff: 11/17/2017
      **[名稱]**  
      子計畫的名稱。  
   
-     **描述**  
+     **說明**  
      子計畫的簡短描述。  
   
      **排程**  
@@ -220,7 +223,7 @@ ms.lasthandoff: 11/17/2017
   
         1.  如果您選取 **[產生文字檔報表]**，請選取 **[建立新檔案]** 或 **[附加至檔案]**。  
   
-        2.  根據上述選項，透過在 **[資料夾]** 或 **[檔案名稱]** 方塊中輸入資訊，輸入新檔案或要附加之檔案的名稱和完整路徑。 或者，按一下省略符號 **(...)**，然後從 [尋找資料夾 - *server_name*] 或 [尋找資料庫檔案 - *server_name*] 對話方塊中選取資料夾或檔案名稱的路徑。  
+        2.  根據上述選項，透過在 **[資料夾]** 或 **[檔案名稱]** 方塊中輸入資訊，輸入新檔案或要附加之檔案的名稱和完整路徑。 或者，按一下省略符號 **(...)**，然後從 [尋找資料夾 - <伺服器名稱>] 或 [尋找資料庫檔案 - <伺服器名稱>] 對話方塊中選取資料夾或檔案名稱的路徑。  
   
         3.  如果您選取 **[傳送報表至電子郵件收件者]**，請在 **[代理程式操作員]** 清單中選取電子郵件報表的收件者。  
   
@@ -235,7 +238,7 @@ ms.lasthandoff: 11/17/2017
   
 12. 若要在記錄檔檢視器中檢視結果，請在物件總管中以滑鼠右鍵按一下 [維護計畫] 資料夾或特定維護計畫，然後選取 [檢視記錄]。  
   
-     [記錄檔檢視器 - *server_name*] 對話方塊有下列選項。  
+     [記錄檔檢視器 - <伺服器名稱>] 對話方塊有下列選項。  
   
      **載入記錄**  
      開啟對話方塊供您指定所要載入的記錄檔。  
@@ -243,7 +246,7 @@ ms.lasthandoff: 11/17/2017
      **匯出**  
      開啟對話方塊，以讓您將 [記錄檔摘要] 格線中所顯示的資訊匯出至文字檔。  
   
-     **重新整理**  
+     **[重新整理]**  
      重新整理所選取之記錄檔的檢視。 當套用任何篩選設定時， **[重新整理]** 按鈕會從目標伺服器重新讀取選取的記錄檔。  
   
      **篩選**  
@@ -258,7 +261,7 @@ ms.lasthandoff: 11/17/2017
      **記錄檔摘要**  
      此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]**。 若篩選已套用到記錄檔，則會看到下列文字：**篩選記錄項目的準則:** \<篩選準則>。  
   
-     **日期**  
+     **Date**  
      顯示事件的日期。  
   
      **Source**  

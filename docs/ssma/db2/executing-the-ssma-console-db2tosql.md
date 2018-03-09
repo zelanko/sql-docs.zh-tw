@@ -1,7 +1,7 @@
 ---
 title: "執行 SSMA 主控台 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1346ccef45d9a8de619293da09a3d4a148bc9cf8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>執行 SSMA 主控台 (DB2ToSQL)
 Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 這可確保各節詳細說明相同。 主控台應用程式會使用某些標準的指令碼檔案命令做為列舉這一節。  
@@ -168,7 +168,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
   metabase="<source/target>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <force-load>  
@@ -281,7 +281,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <generate-assessment-report  
@@ -353,7 +353,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <convert-schema  
@@ -419,7 +419,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
 </migrate-data>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <migrate-data  
@@ -529,7 +529,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target  
@@ -538,7 +538,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
    object-type="<object-category>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target>  
@@ -594,7 +594,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database  
@@ -603,7 +603,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
    object-type="<object-category>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database>  
@@ -653,7 +653,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <save-as-script  
@@ -729,7 +729,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
 </convert-sql-statement>  
 ```  
-或  
+中的多個  
   
 ```  
 <convert-sql-statement  
@@ -752,7 +752,7 @@ DB2 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟 建�
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-或  
+中的多個  
   
 ```  
 <convert-sql-statement  

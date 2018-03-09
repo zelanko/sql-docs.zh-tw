@@ -23,13 +23,13 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: "55"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab5346433b15163cf6bf9a757923e06d32d0985
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 99a526a432e0e7567022891e28129a12d5b09ef3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>資料庫鏡像的必要條件、限制和建議事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
 -   鏡像工作階段中的所有伺服器執行個體都應該使用相同的主要字碼頁和定序。 如果有差異，可能會在鏡像設定期間發生問題。  
   
--   另外，也可以估計容錯移轉資料庫的時間，確定系統組態將會提供所需的效能。 如需詳細資訊，請參閱[預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。  
+-   另外，也可以估計容錯移轉資料庫的時間，確定系統組態將會提供所需的效能。 如需詳細資訊，請參閱 [預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)的程序交換。  
   
 -   為達最佳效能，請為鏡像使用專用的網路介面卡 (NIC)。  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  當您確信非同步作業符合您的商務需求時，可能會想要嘗試同步作業來提升資料保護。 當您測試同步鏡像如何在環境中運作時，建議您先測試不含自動容錯移轉的高安全性模式。 這項測試的主要目的是要了解同步作業如何影響資料庫效能。 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
-3.  等候啟用自動容錯移轉，直到您確信不含自動容錯移轉的高安全性模式已符合商務需求，而且網路錯誤不會導致失敗為止。 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)(資料庫鏡像和記錄傳送) 技術白皮書。  
+3.  等候啟用自動容錯移轉，直到您確信不含自動容錯移轉的高安全性模式已符合商務需求，而且網路錯誤不會導致失敗為止。 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)版本都可使用見證伺服器執行個體。  
   
   
 ## <a name="see-also"></a>另請參閱  

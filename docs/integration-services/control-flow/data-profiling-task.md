@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.f1
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about Data Profiling task
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c047b4a34bc300c7caacd020dd4c1833077dd5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-profiling-task"></a>資料分析工作
   資料分析工作會計算各種設定檔，協助您熟悉資料來源並在資料中識別必須修復的問題。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
  下列五個設定檔會分析個別的資料行。  
   
-|分析個別資料行的設定檔|說明|  
+|分析個別資料行的設定檔|描述|  
 |----------------------------------------------|-----------------|  
 |資料行長度散發設定檔|報告選取之資料行中所有不同的字串值長度，以及該資料表中每個長度所代表之資料列的百分比。<br /><br /> 這個設定檔可協助您識別資料中的問題，例如無效的值。 例如，您分析了應該是兩個字元之美國州名代碼的資料行，並發現長度大於兩個字元的值。|  
 |資料行 Null 比例設定檔|報告選取之資料行中 Null 值的百分比。<br /><br /> 這個設定檔可協助您識別資料中的問題，例如某個資料行中 Null 值的比例過高。 舉例來說，您分析了「郵遞區號」資料行並發現遺漏郵遞區號的百分比過高。|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  下列三個設定檔會分析多個資料行或資料行和資料表之間的關聯性。  
   
-|分析多個資料行的設定檔|說明|  
+|分析多個資料行的設定檔|描述|  
 |--------------------------------------------|-----------------|  
 |候選索引鍵設定檔|報告資料行或資料行集合是否為選取之資料表的索引鍵或近似索引鍵。<br /><br /> 這個設定檔也可協助您識別資料中的問題，例如潛在索引鍵資料行中重複的值。|  
 |功能相依性設定檔|報告某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。<br /><br /> 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了包含「美國郵遞區號」之資料行與「美國州名」之資料行之間的相依性。 相同的郵遞區號應該永遠具有相同的州名，但是此設定檔卻發現了這個相依性的違規。|  
@@ -116,7 +118,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>資料分析工作上所提供的自訂記錄訊息  
  下表列出資料分析工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|說明|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|提供有關此工作之狀態的描述性資訊。 訊息包括下列資訊：<br /><br /> 開始處理要求<br /><br /> 查詢開始<br /><br /> 查詢結束<br /><br /> 完成計算要求|  
   

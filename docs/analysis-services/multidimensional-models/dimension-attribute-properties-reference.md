@@ -5,34 +5,32 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f9acd136bdeb7c286ec4d110b3f5b4b70018685f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="dimension-attribute-properties-reference"></a>維度屬性 (Attribute) 屬性 (Property) 參考
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，有許多屬性，以決定維度和維度屬性函式。 下表列出與描述每一項屬性 (Attribute) 的屬性 (Property)。  
+# <a name="dimension-attribute-properties-reference"></a>維度屬性 (attribute) 屬性 (property) 參考
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，有許多屬性 (property) 可用來決定維度和維度屬性 (attribute) 如何運作。 下表列出與描述每一項屬性 (Attribute) 的屬性 (Property)。  
   
-|屬性|說明|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|識別向使用者顯示相關聯屬性階層的資料夾。|  
 |**AttributeHierarchyEnabled**|決定是否由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生屬性的屬性階層。 如果屬性階層未啟用，則不能在使用者自訂階層中使用該屬性，也不能在多維度運算式 (MDX) 陳述式中參考此屬性階層。|  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 |**DiscretizationMethod**|定義用於分隔的方法。|  
 |**EstimatedCount**|指定屬性中的估計成員數目。 在您執行彙總設計精靈之前，預設值為零。 您可以讓精靈來計算記錄的數目，或輸入估計的值。 如果您知道成員的數目，且想要節省查詢資料庫以找出該計數所需的時間，請手動輸入值。 如果使用的是實際資料的測試子集，則可使用實際資料的計數，這樣會針對實際資料 (而非測試資料) 最佳化彙總設計。|  
 |**GroupingBehavior**|使用者定義的值，可對用戶端應用程式提供有關如何群組屬性的提示。|  
-|**ID**|包含維度的唯一識別碼 (ID)。|  
+|**識別碼**|包含維度的唯一識別碼 (ID)。|  
 |**InstanceSelection**|提供用戶端應用程式提示，以根據清單中的預期項目數目來如何顯示項目清單。 可用的選項如下：<br /><br /> **None** ：不會對用戶端應用程式提供任何提示。 這是預設值。<br /><br /> **DropDown** ：項目數目夠小，可顯示在下拉式清單中。<br /><br /> **List** ：項目數目對於下拉式 **清單**而言太大，但不需要篩選。<br /><br /> **FilteredList** ：項目數目夠大，因此使用者必須篩選要顯示的項目。<br /><br /> **MandatoryFilter** ：項目數目非常大，一律必須篩選才能顯示。|  
 |**IsAggregatable**|指定是否可彙總屬性成員的值。 預設值是 **True**，表示屬性階層包含 (全部) 層級。 如果此屬性的值為 **False**，則屬性階層不會包含 (全部) 層級。|  
 |**KeyColumns**|包含表示屬性之索引鍵的一或多個資料行，這是繫結屬性之資料來源檢視的基礎關聯式資料表中的資料行。 除非已指定 **NameColumn** 屬性的值，否則會向使用者顯示每個成員之這個資料行的值。|  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  當查詢中並未明確包含階層中的成員時，會使用屬性的預設成員來評估運算式。 屬性的預設成員由該屬性的 **DefaultMember** 屬性指定。 只要查詢內包含來自維度的階層，對應到該階層內各層級之屬性的所有預設成員都會忽略。 如果查詢內並未包含維度的階層，則預設成員會用於維度中的所有屬性。 如需預設成員的詳細資訊，請參閱 [定義預設成員](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

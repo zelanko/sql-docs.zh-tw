@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, reference
+helpviewer_keywords:
+- ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bb0aaf354496017ef96d50bd03f8bb7e926cfa9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ca0e6125f9e6f2288156698a15ec434be5a5ff59
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-api-reference"></a>ADO 應用程式開發介面參考
 ADO 文件的這一節包含每個 ADO 物件、 集合、 屬性、 動態屬性、 方法、 事件和列舉的主題。 此外，它包含一份 ADO 語法索引，以搭配 Microsoft Visual c + + 和 Windows Foundation 類別 (WFC)。  
@@ -49,7 +51,7 @@ ADO 文件的這一節包含每個 ADO 物件、 集合、 屬性、 動態屬�
   
 -   [ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [附錄 d: ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [附錄 c： 使用 ADO 進行程式設計](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   

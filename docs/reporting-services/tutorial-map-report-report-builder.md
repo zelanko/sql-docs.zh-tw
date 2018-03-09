@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2250158376315b0eb05dc0b95bc7cd78a333aec9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您會了解在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表的地理背景上，可用來顯示資料的地圖功能。 
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 8.  接受 [選擇空間資料及地圖檢視選項] 頁面上的預設值，然後按一下 [下一步]。 
  
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     > 只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 7.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]**。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 12/05/2017
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
-10. 按一下 **[下一步]**。  
+10. 按 [下一步] 。  
   
     此時會為您建立名為 DataSet1 的報表資料集。 在完成精靈後，可以在 [報表資料] 窗格看到其欄位集合。  
   
@@ -196,9 +196,9 @@ ms.lasthandoff: 12/05/2017
   
     地圖檢視會顯示圓形，以標示每一家商店的位置。  
   
-12. 按一下 **[下一步]**。  
+12. 按 [下一步] 。  
   
-13. 在 [選擇地圖視覺效果] 頁面上，針對地圖類型按一下 [泡泡地圖]，就會根據資料顯示大小不同的標記。 按一下 **[下一步]**。  
+13. 在 [選擇地圖視覺效果] 頁面上，針對地圖類型按一下 [泡泡地圖]，就會根據資料顯示大小不同的標記。 按 [下一步] 。  
   
 14. 在 [選擇分析資料集] 頁面上，按一下 [DataSet1]，然後按一下 [下一步]。 此資料集同時包含將在新的點圖層上顯示的分析資料和空間資料。   
   
@@ -251,7 +251,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  在 [選擇與 SQL Server 空間資料來源的連線] 上，選取您在第一個程序中使用的資料來源。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 7.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]**。 查詢設計工具會切換為以文字為基礎的模式。  
   
@@ -264,7 +264,7 @@ ms.lasthandoff: 12/05/2017
        -73.4728622833178 44.7028831413324)' AS geography) as Route  
     ```  
   
-9. 按一下 **[下一步]**。  
+9. 按 [下一步] 。  
   
     路徑會出現在地圖上，並且連接三家商店。  
   
@@ -272,7 +272,7 @@ ms.lasthandoff: 12/05/2017
   
     地圖檢視會顯示從紐約州北部某家商店到紐約州南部某家商店的路徑。  
   
-11. 按一下 **[下一步]**。  
+11. 按 [下一步] 。  
   
 12. 在 **[選擇地圖視覺效果]** 頁面上，按一下 **[基本線條地圖]**，然後按 **[下一步]**。  
   
@@ -545,7 +545,7 @@ ms.lasthandoff: 12/05/2017
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 以上總結如何將地圖加入至報表的逐步解說。  
   
 如需詳細資訊，請參閱[地圖 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  

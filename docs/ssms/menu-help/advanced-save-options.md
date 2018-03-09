@@ -17,13 +17,13 @@ ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 394f15a46fe16b06585c262ea5dbf542746e614b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb0587036168b77e50da5e1ed26cb9eac66a9b9c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="advanced-save-options"></a>進階儲存選項
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此對話方塊即可選取語言編碼配置，以及指定要在每行行尾插入的字元。 若要存取 [進階儲存選項] 對話方塊，請在 [檔案] 功能表上，按一下 [另存 <query name>.sql 為] 開啟 [另存新檔] 對話方塊，按一下 [儲存] 按鈕上的向下箭號，然後再按一下 [使用編碼方式儲存]。  

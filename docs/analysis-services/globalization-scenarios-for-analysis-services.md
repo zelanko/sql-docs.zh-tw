@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81fd021deaed75731aa79f48a5a3ef8669e4c18a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f577134d61829f5c491462901c96f69f0f1e9973
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services 的全球化案例
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]儲存及操作多國語言資料和這兩個表格式和多維度資料模型的中繼資料。 資料是以 Unicode (UTF-16) 儲存，也就是儲存在使用 Unicode 編碼的字元集中。 如果您將 ANSI 資料載入資料模型，則會使用對等的 Unicode 字碼指標來儲存字元。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可儲存及操作表格式和多維度資料模型中的多語系資料和中繼資料。 資料是以 Unicode (UTF-16) 儲存，也就是儲存在使用 Unicode 編碼的字元集中。 如果您將 ANSI 資料載入資料模型，則會使用對等的 Unicode 字碼指標來儲存字元。  
   
  Unicode 支援是指 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可使用 Windows 用戶端和伺服器作業系統支援的任何語言來儲存資料，並可讀取、寫入、排序及比較 Windows 電腦上所使用之任何字元集中的資料。 使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料的 BI 用戶端應用程式可以使用者選擇的語言來表示資料 (假設該語言的資料存在於模型中)。  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/08/2017
 |實作翻譯支援|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立，以產生您填入並匯回模型中的翻譯檔案。<br /><br /> 如需詳細資訊，請參閱[表格式模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)。|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立，以定義標題和描述的翻譯，以及 Cube、量值、維度及屬性的帳戶類型。<br /><br /> 如需詳細資訊，請參閱[多維度模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)。 您可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程的[第 9 課：定義檢視方塊和翻譯](../analysis-services/lesson-9-defining-perspectives-and-translations.md)中，找到如何使用這項功能的課程。|  
 |貨幣轉換|無法使用。|貨幣轉換是透過特製化的 MDX 指令碼，來轉換含有貨幣資料的量值。 您可以使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的 [商業智慧精靈] 來產生 MDX 指令碼，該指令碼使用維度、屬性和量值群組中的資料和中繼資料組合，來轉換含有貨幣資料的量值。 請參閱[貨幣轉換 &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md)。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 中的翻譯支援](../analysis-services/translation-support-in-analysis-services.md)   
  [Windows 應用程式的國際化](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [Go Global 開發人員中心](http://msdn.microsoft.com/goglobal/bb871628.aspx)   

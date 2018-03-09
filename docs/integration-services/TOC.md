@@ -25,11 +25,11 @@
 
 # [將 SSIS 套件隨即轉移至 Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [教學課程 - 部署、執行和監視 Azure 上的套件](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [連線到 Azure 上的 SSIS 目錄](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [在 Azure 上排程套件執行](lift-shift/ssis-azure-schedule-packages.md)
-## [驗證部署到 Azure 的套件](lift-shift/ssis-azure-validate-packages.md)
 ## [使用 Windows 驗證連線到資料來源](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [連接到檔案及檔案共用](lift-shift/ssis-azure-files-file-shares.md)
+## [驗證部署到 Azure 的套件](lift-shift/ssis-azure-validate-packages.md)
+## [連線到 Azure 上的 SSIS 目錄](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [在 Azure 上排程套件執行](lift-shift/ssis-azure-schedule-packages.md)
 
 # [安裝或升級](../integration-services/install-windows/install-integration-services.md)
 
@@ -75,7 +75,7 @@
 
 # [目錄和伺服器](catalog/integration-services-ssis-server-and-catalog.md)
 # [服務 (舊版)](../integration-services/service/integration-services-service-ssis-service.md)
-# [安全性](../integration-services/security/security-overview-integration-services.md)
+# [Security](../integration-services/security/security-overview-integration-services.md)
 # [[效能]](../integration-services/performance/monitor-running-packages-and-other-operations.md)
 # [疑難排解](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
 # [系統檢視表](../integration-services/system-views/views-integration-services-catalog.md)
@@ -175,11 +175,8 @@
 #### [課程 3-3 - 測試部署的套件](lesson-3-3-testing-the-deployed-packages.md)
 
 # 資源
-## 追蹤部落格
-### [SSIS 小組部落格](https://blogs.msdn.microsoft.com/ssis/)
-## 取得說明
-### [MSDN 上的 SSIS 論壇](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [Stack Overflow 上的 SSIS 標記](http://stackoverflow.com/questions/tagged/ssis)  
-## 提供意見
-### [Microsoft Connect (英文)](https://connect.microsoft.com/SQLServer/Feedback)  
+## [在 SSIS 論壇中取得協助](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [在 Stack Overflow 取得協助](http://stackoverflow.com/questions/tagged/ssis)  
+## [關注 SSIS 團隊部落格](https://blogs.msdn.microsoft.com/ssis/)
+## [回報問題及建議功能](https://feedback.azure.com/forums/908035-sql-server)
 ## [在您的電腦上取得文件](../sql-server/sql-server-help-installation.md)

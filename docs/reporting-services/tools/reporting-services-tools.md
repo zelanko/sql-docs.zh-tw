@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,26 +23,26 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: "80"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9cc8974ff85c595e97de7fc795a8a7908c983300
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d5027e12a7cc0bfe310c4eb6b291667cfa4d0c4f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一組圖形和指令碼工具，支援在受管理的環境中開發與使用豐富的報表功能。 此工具集包含開發工具、組態與管理工具，以及報表檢視工具。 本主題提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中各個工具與其存取方式的簡短概觀。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一組圖形和指令碼工具，支援在受控環境中開發與使用豐富的報表功能。 此工具集包含開發工具、組態與管理工具，以及報表檢視工具。 本主題提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中各個工具與其存取方式的簡短概觀。  
   
  如需立即找到工具，請參閱[教學課程：如何尋找及啟動 Reporting Services 工具 &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)。  
   
 ## <a name="tools-for-report-authoring"></a>報表撰寫工具  
  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中可用於報表撰寫的工具。  
   
-|工具|說明|如何存取|  
+|工具|描述|如何存取|  
 |----------|-----------------|-------------------|  
 |[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]|使用 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]，您可以建立行動報表，以配合您的螢幕或瀏覽器視窗大小動態調整內容，並適當縮放成任何螢幕大小。<br /><br /> 您可以在可調整格線列和欄，並具有彈性的行動報表元素的設計介面上，建立行動報表。<br /><br /> 如需詳細資訊，請參閱 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。|下載 [SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkId=733527)|  
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|互動式的資料探索和視覺呈現體驗設計為可讓您建立以及與依據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型的報表進行互動。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 SharePoint 模式中。 Sliverlight 瀏覽器|  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="native-mode"></a>原生模式  
  下表列出可用以管理部署於原生模式中報表伺服器的工具。  
   
-|工具|說明|如何存取|  
+|工具|描述|如何存取|  
 |----------|-----------------|-------------------|  
 |Reporting Services 組態管理員|請使用此工具設定 Reporting Services 安裝。 可用的工作包括：<br /><br /> 設定本機和遠端報表伺服器執行個體<br /><br /> 設定報表伺服器服務帳戶。<br /><br /> 建立及設定一個或多個 Web 服務 URL。<br /><br /> 設定報表管理員 URL。<br /><br /> 建立及設定報表伺服器資料庫。<br /><br /> 設定向外延展部署。<br /><br /> 備份、還原或取代用於加密已儲存之連接字串和認證的對稱金鑰。<br /><br /> 設定自動執行帳戶。<br /><br /> 設定電子郵件傳遞的 SMTP 伺服器。<br /><br /> <br /><br /> 注意：Reporting Services 組態管理員不會協助您管理報表伺服器內容、啟用其他功能，或授與伺服器的存取權。<br /><br /> 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。|開始功能表|  
 |Transact-SQL|使用此工具即可在單一環境中管理一個或多個報表伺服器執行個體，包括：<br /><br /> 管理本機和遠端報表伺服器執行個體<br /><br /> 設定報表伺服器屬性<br /><br /> 修改角色定義<br /><br /> 關閉您不要使用的報表伺服器功能<br /><br /> 管理作業<br /><br /> 管理共用排程|開始功能表|  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="sharepoint-integrated-mode"></a>SharePoint 整合模式  
  在 SharePoint 模式中，Reporting Services 是在 SharePoint 架構中的服務應用程式，並且直接透過 SharePoint 進行管理  
   
-|工具|說明|如何存取|  
+|工具|描述|如何存取|  
 |----------|-----------------|-------------------|  
 |SharePoint 管理中心|使用 SharePoint 管理中心可建立、查詢及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的共用服務應用程式。<br /><br /> 如需詳細資訊，請參閱[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。|前往管理中心之 SharePoint 網站 URL 的瀏覽器|  
 |PowerShell Cmdlet|使用 PowerShell Cmdlet 可建立、查詢及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的共用服務應用程式。<br /><br /> 如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。|SharePoint 2010 管理命令介面|  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="tools-for-report-content-management"></a>用於報表內容管理的工具  
  一組圖形和指令碼工具可用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的內容。 所使用工具取決於報表伺服器的部署模式。  
   
-|工具|說明|如何存取|  
+|工具|描述|如何存取|  
 |----------|-----------------|-------------------|  
 |報表伺服器 Web 服務 URL|使用此工具可在一般項目瀏覽頁面的報表目錄中瀏覽內容。<br /><br /> 如需詳細資訊，請參閱 [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)。|瀏覽器|  
 |入口網站|**(僅限於原生模式)** 使用此工具可從遠端位置透過 HTTP 連線管理單一報表伺服器執行個體。 您可以執行下列工作：<br /><br /> 檢視、搜尋、列印與訂閱報表。<br /><br /> 建立、保護和維護資料夾階層，以組織伺服器上的項目。<br /><br /> 設定以角色為基礎的安全性，此安全性決定對項目與作業的存取權。<br /><br /> 設定報表執行屬性、報表記錄和報表參數。<br /><br /> 建立可連接並可從 Microsoft SQL Server Analysis Services 資料來源或從 SQL Server 關聯式資料來源擷取資料的報表模型。<br /><br /> 設定模型項目安全性以存取模型中的特定項目，或將項目對應到您事先建立之預先定義的點選連結報表。<br /><br /> 建立共用排程與共用資料來源，讓排程與資料來源連接更容易管理。<br /><br /> 建立資料驅動訂閱，將報表傳遞至大型收件者清單。<br /><br /> 建立連結報表，以重複使用並以不同的方式重新決定現有報表的用途。<br /><br /> 啟動報表產生器來建立可以在報表伺服器上儲存與執行的報表。 如需詳細資訊，請參閱 [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)。| 瀏覽器  

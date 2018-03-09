@@ -1,14 +1,15 @@
 ---
 title: "sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 09/18/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_wait_stats
 - sys.dm_os_wait_stats
 - sys.dm_os_wait_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_wait_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: "111"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
+ms.openlocfilehash: afc91e5254a85d0863f2461e50d9ec55e0cb5bbd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +43,12 @@ ms.lasthandoff: 11/29/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar （60)**|等候類型的名稱。 如需詳細資訊，請參閱[等候類型](#WaitTypes)稍後在本主題中。|  
+|wait_type|**nvarchar(60)**|等候類型的名稱。 如需詳細資訊，請參閱[等候類型](#WaitTypes)稍後在本主題中。|  
 |waiting_tasks_count|**bigint**|這個等候類型的等候次數。 這個計數器是從每次開始等候時逐量遞增計算。|  
 |wait_time_ms|**bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這個時間包括 signal_wait_time_ms 在內。|  
 |max_wait_time_ms|**bigint**|這個等候類型的等候時間上限。|  
 |signal_wait_time_ms|**bigint**|從等候執行緒接獲訊號到開始執行的時間。|  
-|pdw_node_id|**int**|此發行版本上的節點識別碼。 <br/> **適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|此發行版本上的節點識別碼。 <br/> **適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Permissions  
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/29/2017
   
  您可以執行下列命令，重設這份動態管理檢視的內容：  
   
-``` t-sql  
+```sql  
 DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);  
 GO  
 ```  
@@ -127,7 +130,7 @@ GO
 |BROKER_FORWARDER |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |BROKER_INIT |初始化每個作用中的資料庫中的 Service Broker 時，就會發生。 這種情況不常發生。| 
 |BROKER_MASTERSTART |當工作正在等候啟動 Service Broker 的主要事件處理常式，就會發生。 發生的時間相當短暫。| 
-|BROKER_RECEIVE_WAITFOR |當 RECEIVE WAITFOR 在等候時發生。 如果沒有任何訊息可以接收，則此為標準值。| 
+|BROKER_RECEIVE_WAITFOR |當 RECEIVE WAITFOR 在等候時發生。 這可能表示，沒有任何訊息則要在佇列中接收或鎖定爭用使它無法從佇列接收訊息。| 
 |BROKER_REGISTERALLENDPOINTS |在 Service Broker 連接端點初始化時發生。 發生的時間相當短暫。| 
 |BROKER_SERVICE |與目標服務相關聯的 Service Broker 目的地清單已更新或重新設定優先權時發生。| 
 |BROKER_SHUTDOWN |Service Broker 計畫的關閉時發生。 即使發生，時間也相當短暫。| 
@@ -169,7 +172,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |COUNTRECOVERYMGR |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |CREATE_DATINISERVICE |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|CXPACKET  |當同步處理查詢處理器交換重複，以及產生及取用資料列會發生平行查詢計畫。 如果等候時間過長，而且無法透過微調查詢 (例如加入索引) 來縮短，請考慮調整平行處理原則的成本臨界值，或降低平行處理原則的程度。| 
+|CXCONSUMER |當取用者執行緒在等候傳送的資料列產生者執行緒發生平行查詢計畫。 這是平行查詢執行的一部分。 <br /> **適用於**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET  |當同步處理查詢處理器交換重複，以及產生及取用資料列會發生平行查詢計畫。 如果等候時間過長，而且無法透過微調查詢 (例如加入索引) 來縮短，請考慮調整平行處理原則的成本臨界值，或降低平行處理原則的程度。<br /> **注意：**中[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，CXPACKET 只適用於同步處理查詢處理器交換重複，並產生資料列的取用者執行緒。 取用者執行緒都會個別追蹤中 CXCONSUMER 等候類型。| 
 |CXROWSET_SYNC |在平行範圍掃描期間發生。| 
 |DAC_INIT |當專用管理員連接正在初始化時發生。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -224,7 +228,7 @@ GO
 |EXTERNAL_SCRIPT_NETWORK_IO |TBD <br /> **適用於**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]到目前。| 
 |EXTERNAL_SCRIPT_PREPARE_SERVICE |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |EXTERNAL_SCRIPT_SHUTDOWN |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|EXTERNAL_WAIT_ON_LAUNCHER， |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|EXTERNAL_WAIT_ON_LAUNCHER, |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |FABRIC_HADR_TRANSPORT_CONNECTION |TBD <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |FABRIC_REPLICA_CONTROLLER_LIST |TBD <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |FABRIC_REPLICA_CONTROLLER_STATE_AND_CONFIG |TBD <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -1023,7 +1027,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
     
  [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys.dm_db_wait_stats &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
 - sp_update_notification
-dev_langs: TSQL
-helpviewer_keywords: sp_updatenotification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44b2755dca0a8d3cd2dae7d11e12cc16a708fe1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9574169f49b8ae2c0736a99d657fd7ef5d17cc48
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +50,16 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@alert_name =**] **'***警示***'**  
+ [ **@alert_name =**] **'***alert***'**  
  與此通知相關聯的警示名稱。 *警示*是**sysname**，沒有預設值。  
   
- [  **@operator_name =**] **'***運算子***'**  
+ [ **@operator_name =**]  **'***operator***'**  
  發生警示時所要通知的操作員。 *運算子*是**sysname**，沒有預設值。  
   
- [  **@notification_method =**]*通知*  
+ [ **@notification_method =**] *notification*  
  用來通知操作員的方法。 *通知*是**tinyint**，沒有預設值，它可以是下列一或多個這些值。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|電子郵件|  
 |**2**|呼叫器|  
@@ -88,10 +91,10 @@ EXEC dbo.sp_update_notification
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_add_notification &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

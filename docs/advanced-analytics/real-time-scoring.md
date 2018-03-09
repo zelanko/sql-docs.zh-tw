@@ -8,20 +8,21 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9136aee11d5104fd0723521a3466361f06ce26d6
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: a8a37b57e5704136280360258223927c7d960eea
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="realtime-scoring"></a>即時計分
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題說明在 SQL Server 2016 和 SQL Server 2017 支援 幾近即時的機器學習模型中的 計分中提供的功能。
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/20/2017
 3. 您可以提供新的輸入的資料，表格式或單一資料列，做為模型的輸入。
 4. 若要產生分數，請呼叫 sp_rxPredict 預存程序。
 
-## <a name="get-started"></a>快速入門
+## <a name="get-started"></a>開始使用
 
 如需程式碼範例和指示，請參閱[如何執行原生計分或即時計分](r/how-to-do-realtime-scoring.md)。
 
@@ -80,15 +81,15 @@ SQL Server 上，您必須啟用即時事先計分功能。 這是因為此功�
 
 + RevoScaleR 模型
 
-  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)\*
-  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)\*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
   + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
-  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
-  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)\*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
   模型標示\*也支援使用預測函數的原生計分。
 
-+ MicrosoftML 模型
++ MicrosoftML models
 
   + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
@@ -101,7 +102,7 @@ SQL Server 上，您必須啟用即時事先計分功能。 這是因為此功�
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [類別](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
@@ -119,6 +120,6 @@ SQL Server 上，您必須啟用即時事先計分功能。 這是因為此功�
 
 + `sp_rxPredict`當做模型傳遞 NULL 值時，傳回不正確的訊息: 「 System.Data.SqlTypes.SqlNullValueException:Data 中 Null 」。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [如何執行即時計分](r/how-to-do-realtime-scoring.md)

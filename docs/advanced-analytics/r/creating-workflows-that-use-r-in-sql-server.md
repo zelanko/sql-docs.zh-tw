@@ -1,28 +1,30 @@
 ---
 title: "使用 R 建立 BI 工作流程 |Microsoft 文件"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f9d289d2a5eaf2e04f771f0a51309e50d2821184
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>使用 R 建立 BI 工作流程
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 關聯式資料庫是高度最佳化的技術，適用於提供可調整的方案，以進行交易處理、儲存及資料查詢。
 
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/20/2017
 
 此部落格文章示範操作 R 程式碼使用的基本技術[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: 
 
-+ 呼叫使用 「 執行 SQL 」 工作，以產生資料並儲存到 R[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ 呼叫使用 「 執行 SQL 」 工作，以產生資料並儲存到 R [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 + 使用預存程序來訓練 R 模型，並將它儲存在資料庫中
 
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/20/2017
 
 使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，您便可以透過各種企業報告工具 (包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Power BI) 都能輕鬆取用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，在 R 中執行複雜的作業。
 
-+ 將使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]從 R 指令碼傳回的圖形物件視覺化
++ 以視覺化方式檢視所傳回的 R 指令碼使用的圖形物件 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 + 使用 Power BI 中的資料表
 
 ### <a name="examples"></a>範例

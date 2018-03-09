@@ -8,26 +8,29 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 77b8a5621b71eec40546d79d73ab1672dfff6a7e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-指定使用者定義階層中的屬性關聯性
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]因為您已學到在此教學課程中，您可以組織成使用者階層在 cube 中的使用者提供導覽路徑內的層級的屬性階層。 使用者階層可代表自然階層，例如縣 (市)、省份和國家 (地區)，或只代表導覽路徑，例如員工姓名、職稱和部門名稱。 對於導覽階層的使用者而言，這兩種類型的使用者階層是一樣的。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+如同您在這個教學課程中已學到的，您可以將屬性階層組織成使用者階層內的層級，在 Cube 中為使用者提供導覽路徑。 使用者階層可代表自然階層，例如縣 (市)、省份和國家 (地區)，或只代表導覽路徑，例如員工姓名、職稱和部門名稱。 對於導覽階層的使用者而言，這兩種類型的使用者階層是一樣的。  
   
-透過自然階層，當您在構成層級的屬性之間定義屬性關聯性時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可使用一個屬性的彙總來取得相關屬性的結果。 如果屬性之間沒有定義關聯性， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將從索引鍵屬性中彙總所有非索引鍵屬性。 因此，如果基礎資料支援屬性關聯性，您就應該定義屬性之間的屬性關聯性。 定義屬性關聯性可改善維度、資料分割和查詢處理效能。 如需詳細資訊，請參閱 [定義屬性關聯性](../analysis-services/multidimensional-models/attribute-relationships-define.md) 和 [屬性關聯性](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+透過自然階層，當您在構成層級的屬性之間定義屬性關聯性時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可使用一個屬性的彙總來取得相關屬性的結果。 如果屬性之間沒有定義關聯性， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將從索引鍵屬性中彙總所有非索引鍵屬性。 因此，如果基礎資料支援屬性關聯性，您就應該定義屬性之間的屬性關聯性。 定義屬性關聯性可改善維度、資料分割和查詢處理效能。 如需詳細資訊，請參閱[定義屬性關聯性](../analysis-services/multidimensional-models/attribute-relationships-define.md)和[屬性關聯性](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 當您定義屬性關聯性時，可以指定彈性或固定的關聯性。 如果您定義固定關聯性，當維度更新時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會保留彙總。 如果定義為固定的關聯性實際上有所變更，除非已完全處理維度，否則在處理期間， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會產生錯誤。 指定適當的關聯性和關聯性屬性可增加查詢和處理效能。 如需詳細資訊，請參閱 [定義屬性關聯性](../analysis-services/multidimensional-models/attribute-relationships-define.md)和 [使用者階層屬性](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
   

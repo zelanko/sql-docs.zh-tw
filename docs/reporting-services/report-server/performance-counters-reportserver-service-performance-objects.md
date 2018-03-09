@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 caps.latest.revision: "21"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 065094438fe24e2916597d4e853ddc3cfbedc0f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4f956b1f0dc970529912844681af784e2b495a5e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>效能計數器 - ReportServer Service 效能物件
   本主題說明 **ReportServer:Service** 和 **ReportServerSharePoint:Service** 效能物件的效能計數器，這些效能物件是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 部署的一部分。  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |**Active connections**|目前在伺服器上作用中的連接數目。|  
 |**Bytes Received Total**|伺服器所接收的位元組數目。 這個計數器會計算報表管理員和報表伺服器所接收的原始位元組總計。|  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |**Memory Pressure State**||  
 |**Memory Shrink Amount**||  

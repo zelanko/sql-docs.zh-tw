@@ -3,7 +3,7 @@ title: "tablediff 公用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: tabledif
 ms.reviewer: 
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e239a3d36e5e4eed3304d953e887d737b5edd8d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff**公用程式用來比較兩個資料表資料的非聚合狀況，並特別適用於疑難排解複寫拓撲中的非聚合。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
@@ -85,7 +85,7 @@ tablediff
  傳回支援的參數清單。  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- 這是來源伺服器的名稱。 指定 *預設執行個體的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 *具名執行個體的***\\***source_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 這是來源伺服器的名稱。 指定 *預設執行個體的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*source_server_name***\\***instance_name*的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **-sourcedatabase** *source_database*  
  這是來源資料庫的名稱。  
@@ -109,7 +109,7 @@ tablediff
  在比較期間，來源資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 *具名執行個體的***\\***destination_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*destination_server_name***\\***instance_name*的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **-destinationdatabase** *subscription_database*  
  這是目的地資料庫的名稱。  
@@ -170,7 +170,7 @@ tablediff
   
 ## <a name="return-value"></a>傳回值  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|嚴重錯誤|  

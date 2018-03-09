@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5805f3fa68e7b37b48edc294bf487a61aeb19ac4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e6e92aa871347938f49c0a5e1d345e4a8d98377
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新增執行個體精靈
   新增執行個體精靈是用來建立 CDC 服務的新執行個體。 您會從 CDC 設計工具主控台開啟 [建立 Oracle CDC 執行個體] 精靈。 您可以在新增執行個體精靈中執行以下動作。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [產生鏡像資料表和 CDC 擷取執行個體](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
--   [完成](../../integration-services/change-data-capture/finish.md)  
+-   [[完成]](../../integration-services/change-data-capture/finish.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  

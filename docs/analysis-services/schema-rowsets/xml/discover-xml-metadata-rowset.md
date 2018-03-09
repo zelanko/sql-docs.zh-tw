@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_XML_METADATA
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae0b5c6375fe196d780a8b13b13178157161ebfb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 64fe5c240808b727c0985f432bb634d83cb68e91
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverxmlmetadata-rowset"></a>DISCOVER_XML_METADATA 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回描述要求之物件的 XML 文件。 傳回的資料列集永遠都是由一個資料列與一個資料行所組成。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_XML_METADATA**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|Description|  
+|資料行名稱|類型指標|長度|描述|  
 |-----------------|--------------------|------------|-----------------|  
 |**中繼資料**|**DBTYPE_WSTR**||描述限制要求的物件之 XML 文件。|  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/08/2017
   
  限制**ObjectExpansion**，適用於每個主要物件的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 用戶端通常會使用限制來描述要傳回 DDL 的 OLAP 物件，並使用**ObjectExpansion**限制傳回 DDL 中定義的擴充程度。 下表會指出是否允許列舉值[Alter 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)命令。  
   
-|列舉值|Description|  
+|列舉值|描述|  
 |-----------------------|-----------------|  
 |**ReferenceOnly**|只會為要求的物件以及所有下階主要物件，遞迴地傳回要求的名稱/識別碼/時間戳記/狀態。|  
 |**ObjectProperties**|展開沒有參考所含物件的要求物件 (包括已展開的次要所含物件)。|  

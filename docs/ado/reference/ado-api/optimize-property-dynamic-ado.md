@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Optimize property [ADO]
+helpviewer_keywords:
+- Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e18837dc119c2bdc1af557cf1385131ff78fd9d4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ded694b5bbc332483e2363be6212381f27035af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-dynamic-ado"></a>最佳化屬性動態 (ADO)
 指定是否應該在建立索引[欄位](../../../ado/reference/ado-api/field-object.md)。  
@@ -54,7 +56,7 @@ fld.Properties("Optimize") = False   'Delete an index
 ## <a name="applies-to"></a>適用於  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [最佳化屬性範例 (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
  [最佳化屬性範例 （VC + +）](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [篩選屬性](../../../ado/reference/ado-api/filter-property.md)   

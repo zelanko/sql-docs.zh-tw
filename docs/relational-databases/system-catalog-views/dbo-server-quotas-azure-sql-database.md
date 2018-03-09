@@ -1,14 +1,14 @@
 ---
 title: "dbo.server_quotas (Azure SQL Database) |Microsoft 文件"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 08/02/2016
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +16,21 @@ f1_keywords:
 - dbo.server_quotas_TSQL
 - server_quotas
 - server_quotas_TSQL
-dev_langs: TSQL
-helpviewer_keywords: server_quotas
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- server_quotas
 ms.assetid: 34423903-1aaa-4a55-88a6-8228315d84e7
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 612f4d0a819c1271ca9b5e8b9fda8f224ae6fbe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b2ca11631b83cc1aa132856d8a514efe94e2c8e0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="permissions"></a>Permissions  
  這個檢視可用於所有的使用者角色有權連接到虛擬**主要**資料庫。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [管理高階資料庫](http://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

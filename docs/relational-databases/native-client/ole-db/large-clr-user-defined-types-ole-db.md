@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e016e0f7d6250f25f1c92d3f2527f68dc91c69e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6bdb5767937e4fbfdf7dd92cc683fe7830e066a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 使用者定義型別 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/17/2017
   
  下表顯示參數和資料列集內的資料類型對應：  
   
-|SQL Server 資料類型|OLE DB 資料類型|記憶體配置|值|  
+|SQL Server 資料類型|OLE DB 資料類型|記憶體配置|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR UDT|DBTYPE_UDT|BYTE [] （位元組陣列\)|132 (oledb.h)|  
+|CLR UDT|DBTYPE_UDT|BYTE[](byte array\)|132 (oledb.h)|  
   
  UDT 值會表示為位元組陣列。 支援與十六進位字串之間的來回轉換。 常值會表示為具有 "0x" 前置詞的十六進位字串。 十六進位字串是基底 16 的二進位資料文字表示法。 一個範例就是從伺服器類型轉換**varbinary(10)**至 DBTYPE_STR，這會導致 20 個字元，其中每一組字元都代表單一位元組的十六進位表示法。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  傳回以 DBPARAMINFO 結構透過資訊**prgParamInfo**如下所示：  
   
-|參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*將 dwFlags* DBPARAMFLAGS_ISLONG|  
+|參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|"DBTYPE_UDT"|*n*|未定義|未定義|清除|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|"DBTYPE_UDT"|~0|未定義|未定義|集合|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  以 DBPARAMBINDINFO 結構所提供的資訊必須與下列相符：  
   
-|參數類型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*將 dwFlags* DBPARAMFLAGS_ISLONG|  
+|參數類型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|忽略|忽略|如果要使用 DBTYPE_IUNKNOWN 傳遞此參數，則必須設定。|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|忽略|忽略|忽略|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
  下列資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|類型|Description|  
+|資料行識別碼|型別|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  以 DBCOLUMNINFO 結構所傳回的資訊如下：  
   
-|參數類型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*將 dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
+|參數類型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
 |DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|~0|~0|Clear|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|~0|~0|將|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
   
  下列其他資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|類型|Description|  
+|資料行識別碼|型別|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -126,13 +126,13 @@ ms.lasthandoff: 11/17/2017
 |繫結資料類型|UDT 到伺服器|非 UDT 到伺服器|從伺服器中的 UDT|從伺服器中的非 UDT|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支援 (5)|錯誤 (1)|支援 (5)|錯誤 (4)|  
-|DBTYPE_BYTES|支援 (5)|不適用|支援 (5)|不適用|  
-|DBTYPE_WSTR|支援 (2)、(5)|不適用|支援 (3)、(5)、(6)|不適用|  
-|DBTYPE_BSTR|支援 (2)、(5)|不適用|支援 (3)、 (5)|不適用|  
-|DBTYPE_STR|支援 (2)、(5)|不適用|支援 (3)、 (5)|不適用|  
-|DBTYPE_IUNKNOWN|支援 (6)|不適用|支援 (6)|不適用|  
-|DBTYPE_VARIANT (VT_UI1 &#124;VT_ARRAY)|支援 (5)|不適用|支援 (3)、 (5)|不適用|  
-|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|不適用|不適用|N/A|  
+|DBTYPE_BYTES|支援 (5)|해당 사항 없음|支援 (5)|해당 사항 없음|  
+|DBTYPE_WSTR|支援 (2)、(5)|해당 사항 없음|支援 (3)、(5)、(6)|해당 사항 없음|  
+|DBTYPE_BSTR|支援 (2)、(5)|해당 사항 없음|支援 (3)、 (5)|해당 사항 없음|  
+|DBTYPE_STR|支援 (2)、(5)|해당 사항 없음|支援 (3)、 (5)|해당 사항 없음|  
+|DBTYPE_IUNKNOWN|支援 (6)|해당 사항 없음|支援 (6)|해당 사항 없음|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援 (5)|해당 사항 없음|支援 (3)、 (5)|해당 사항 없음|  
+|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|해당 사항 없음|不適用|N/A|  
   
 ### <a name="key-to-symbols"></a>符號的索引鍵  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 11/17/2017
   
  當**DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) 設定為"80"，大型 UDT 類型如同它們在下層用戶端會對用戶端。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [大型 CLR 使用者定義型別](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

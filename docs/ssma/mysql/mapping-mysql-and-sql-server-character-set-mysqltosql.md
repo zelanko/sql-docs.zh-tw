@@ -1,7 +1,7 @@
 ---
 title: "MySQL 及 SQL Server 字元對應設定 (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3845c66ea4407b48e371f8b2ec0ad7b9da7edfa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL 及 SQL Server 字元對應設定 (MySQLToSQL)
 字元集 (Charset) 可以指定之 MySQL 字元資料類型、 運算式和常值。  
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/05/2017
     |cp 1251|Windows 斯拉夫文|CHAR/VARCHAR （預設值）|  
     |cp 1256|Windows 阿拉伯文|CHAR/VARCHAR （預設值）|  
     |cp 1257|Windows 波羅的海文|CHAR/VARCHAR （預設值）|  
-    |binary|二進位虛擬字元集|CHAR/VARCHAR （預設值）|  
+    |BINARY|二進位虛擬字元集|CHAR/VARCHAR （預設值）|  
     |geostd8|GEOSTD8 喬治亞文|CHAR/VARCHAR （預設值）|  
     |cp932|對於 Windows 日文 SJIS|NCHAR/NVARCHAR （預設值）|  
     |eucjpms|對於 Windows 日文 UJIS|NCHAR/NVARCHAR （預設值）|  

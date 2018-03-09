@@ -1,7 +1,7 @@
 ---
 title: "全域設定 （[輸出] 視窗） (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d0e2f9503e00575d78dc13cc2e7df2e02861a29
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3c3a649a4d5d70454a5d3aa737d0ce95608863ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-output-window-accesstosql"></a>全域設定 （[輸出] 視窗） (AccessToSQL)
 使用**通用設定**對話方塊來指定 SSMA 的設定。  

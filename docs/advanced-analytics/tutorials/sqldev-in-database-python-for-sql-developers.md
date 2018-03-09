@@ -7,25 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: c6e59f8e3e1b59b9225a95dbe787698dd5bf4f9e
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>在資料庫 Python 分析的 SQL 開發人員
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本逐步解說的目標是提供 SQL 程式設計者建立的機器學習解決方案使用 SQL Server 中執行的 Python 的實際操作體驗。 在本逐步解說，您將學習如何將 Python 程式碼加入至預存程序，並執行預存程序來建置，並預測模型。
 
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/20/2017
 
 資料是來自已知 NYC 計程車資料集。 若要讓這個逐步解說中，快速且輕鬆，取樣資料。 您將建立二元分類模型來預測特定路線是否有可能取得提示，根據資料行，例如一天、 距離和收取位置的時間。
 
-所有工作，都才可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]熟悉環境中的預存程序[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+所有工作，都才可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]熟悉環境中的預存程序 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [步驟 1︰下載範例資料](sqldev-py1-download-the-sample-data.md)
 
@@ -76,7 +78,7 @@ ms.lasthandoff: 12/20/2017
 
 ## <a name="requirements"></a>需求
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>필수 구성 요소
 
 + 機器學習服務與啟用的 Python 安裝 SQL Server 2017 的執行個體。 如需詳細資訊，請參閱[設定 SQL Server 機器學習服務使用 Python](../python/setup-python-machine-learning-services.md)。
 + 您用於本逐步解說的登入必須具有權限，可以建立資料庫和其他物件、上傳資料、選取資料，以及執行預存程序。
@@ -121,6 +123,6 @@ PowerShell 的一些知識會很有幫助。
 |訓練和儲存模型，使用 T-SQL|0:15|
 |實施模型|0:40|
 
-## <a name="get-started"></a>快速入門
+## <a name="get-started"></a>開始使用
 
   [步驟 1︰下載範例資料](sqldev-py1-download-the-sample-data.md)

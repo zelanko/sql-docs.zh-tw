@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8013a03e8f108a8ae625a8946fca148c65ed8ea8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 39914679c931086a526a4bf88ec159b984fb5273
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---countrows-function"></a>報表產生器函式 - CountRows 函式
   傳回指定之範圍中的資料列數目，包括具有 Null 值的資料列。  
@@ -48,7 +46,7 @@ CountRows(scope, recursive)
 ## <a name="return-type"></a>傳回類型  
  傳回 **Integer**。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **CountRows** 會計算指定之範圍中所有資料列的數目，包括具有 Null 值的資料列。  
   
  *scope* 的值不能為運算式，且必須參考目前的範圍或包含範圍。  

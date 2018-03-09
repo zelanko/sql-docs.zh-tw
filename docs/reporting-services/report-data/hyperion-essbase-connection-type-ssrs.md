@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d89029ffc521d08ea3152ca164d3985de4644a32
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b70d9cbcbca9a8898d6b838f667f786cecf64805
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 連接類型 (SSRS)
   若要在報表中包含來自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源的資料，您必須具有以 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]類型之報表資料來源為基礎的資料集。 這種內建資料來源類型的建構基礎是 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的資料延伸模組，而這個延伸模組可以讓您從 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源擷取多維度資料。  
@@ -89,12 +87,12 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**屬性**|**型別**|**描述或預期的值**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**物件**|指定欄位的資料值。<br /><br /> 若是維度屬性，這會對應到 MEMBER_CAPTION。 若是量值，則會對應到資料值。|  
+|**ReplTest1**|**物件**|指定欄位的資料值。<br /><br /> 若是維度屬性，這會對應到 MEMBER_CAPTION。 若是量值，則會對應到資料值。|  
 |**IsMissing**|**布林**|指出在產生的資料集裡是否有找到欄位。|  
-|**FormattedValue**|**字串**|傳回關鍵數值的格式化值。<br /><br /> 從 MDX 運算式中的 FORMATTED_VALUE 對應。|  
-|**BackgroundColor**|**字串**|傳回資料庫中為欄位定義的背景色彩。<br /><br /> 從 MDX 運算式中的 BACK_COLOR 對應。|  
-|**Color**|**字串**|傳回資料庫中為項目定義的前景色彩。<br /><br /> 從 MDX 運算式中的 FORE_COLOR 對應。|  
-|**UniqueName**|**字串**|傳回層級的完整名稱。<br /><br /> 從 MDX 運算式中的 MEMBER_UNIQUE_NAME 對應。|  
+|**FormattedValue**|**String**|傳回關鍵數值的格式化值。<br /><br /> 從 MDX 運算式中的 FORMATTED_VALUE 對應。|  
+|**BackgroundColor**|**String**|傳回資料庫中為欄位定義的背景色彩。<br /><br /> 從 MDX 運算式中的 BACK_COLOR 對應。|  
+|**Color**|**String**|傳回資料庫中為項目定義的前景色彩。<br /><br /> 從 MDX 運算式中的 FORE_COLOR 對應。|  
+|**UniqueName**|**String**|傳回層級的完整名稱。<br /><br /> 從 MDX 運算式中的 MEMBER_UNIQUE_NAME 對應。|  
   
  如需如何在運算式中使用欄位及欄位屬性的詳細資訊，請參閱 [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md) (運算式中的內建集合 (報表產生器及 SSRS))。  
   
@@ -110,7 +108,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**屬性**|**型別**|**描述或預期的值**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**字串**|在量值上的定義，這是可當做 String 類型使用的 **FormattedValue** 。|  
+|**FORMAT_STRING**|**String**|在量值上的定義，這是可當做 String 類型使用的 **FormattedValue** 。|  
   
   
 ##  <a name="Remarks"></a> 備註  

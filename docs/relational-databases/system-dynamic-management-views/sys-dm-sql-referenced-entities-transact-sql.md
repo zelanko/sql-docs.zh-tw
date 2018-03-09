@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_sql_referenced_entities (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referenced_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 -   資料分割函數  
   
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -91,7 +94,7 @@ sys.dm_sql_referenced_entities (
 |referenced_id|**int**|受參考實體的識別碼。 當 referenced_minor_id 不是 0 時，referenced_id 就是在其中定義資料行的實體。<br /><br /> 若為跨伺服器參考，則一律是 NULL。<br /><br /> 因為資料庫離線或者找不到實體，無法判斷識別碼時，若為跨資料庫參考，則為 NULL。<br /><br /> 無法判斷識別碼時，若為資料庫中的參考，則為 NULL。 非結構描述繫結參考的識別碼時，無法解析參考的實體不存在資料庫中，或名稱解析是呼叫端相依。  在後者的情況下，is_caller_dependent 會設定為 1。<br /><br /> 若為結構描述繫結的參考，則永遠不會是 NULL。|  
 |referenced_minor_id|**int**|當受參考實體是資料行時，就是資料行識別碼，否則便是 0。 例如，在列出受參考實體本身的資料列中，referenced_minor_is 是 0。<br /><br /> 若為非結構描述繫結參考，則只有在所有受參考的實體都可以繫結時，才會報告資料行相依性。 如果無法繫結任何受參考的實體，就不會報告任何資料行層級相依性，而且 referenced_minor_id 就是 0。 請參閱範例 D。|  
 |referenced_class|**tinyint**|受參考實體的類別。<br /><br /> 1 = 物件或資料行<br /><br /> 6 = 類型<br /><br /> 10 = XML 結構描述集合<br /><br /> 21 = 資料分割函數|  
-|referenced_class_desc|**nvarchar （60)**|受參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|referenced_class_desc|**nvarchar(60)**|受參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|指出在執行階段發生之受參考實體的結構描述繫結。因此，實體識別碼的解析會相依於呼叫端的結構描述。 當受參考的實體為預存程序、擴充預存程序，或在 EXECUTE 陳述式內部呼叫的使用者定義函數時，就會發生這個事件。<br /><br /> 1 = 受參考的實體是呼叫端相依，而且在執行階段解析。 在此情況下，referenced_id 是 NULL。<br /><br /> 0 = 受參考的實體識別碼不是呼叫端相依。 若為結構描述繫結參考，以及明確指定結構描述名稱的跨資料庫和跨伺服器參考，則一律是 0。 例如，採用 `EXEC MyDatabase.MySchema.MyProc` 格式的實體參考與呼叫端無關。 不過，採用 `EXEC MyDatabase..MyProc` 格式的參考即與呼叫端相關。|  
 |is_ambiguous|**bit**|指出參考模稜兩可，而且可以在執行階段解析成的使用者定義函數、 使用者定義型別 (UDT) 或類型的資料行的 xquery 參考**xml**。 例如，假設 `SELECT Sales.GetOrder() FROM Sales.MySales` 陳述式是在預存程序中定義。 在執行該預存程序之前，不知道 `Sales.GetOrder()` 是 `Sales` 結構描述中的使用者自訂函數，還是名為 `Sales`、類型是 UDT 而且具有名為 `GetOrder()` 之方法的資料行。<br /><br /> 1 = 使用者定義函數或資料行與使用者定義型別 (UDT) 方法的參考模糊不清。<br /><br /> 0 = 參考不會模糊不清，或者在呼叫函數時，可成功繫結實體。<br /><br /> 若為結構描述繫結的參考，一律是 0。|  
 |is_selected|**bit**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 選取物件或資料行。|  
@@ -125,7 +128,7 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|是*|是|  
 |檢視|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序**|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序 * *|是|是|  
 |CLR 預存程序|否|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數|是|是|  
 |CLR 使用者定義函數|否|是|  
@@ -152,7 +155,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. 傳回資料庫層級 DDL 觸發程序所參考的實體  
  下列範例會傳回資料庫層級 DDL 觸發程序 `ddlDatabaseTriggerLog` 所參考的實體 (資料表和資料行)：  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +167,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. 傳回物件所參考的實體  
  下列範例會傳回使用者定義函數 `dbo.ufnGetContactInformation` 所參考的實體。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +179,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>C. 傳回資料行相依性  
  下列範例會以計算資料行 `Table1` 定義為資料行 `c` 和 `a` 的總和，建立資料表 `b`。 然後系統會呼叫 `sys.dm_sql_referenced_entities` 檢視表。 接著，此檢視表會傳回兩個資料列 (針對計算資料行中定義的每個資料行各傳回一個資料列)。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +208,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. 傳回非結構描述繫結的資料行相依性  
  下列範例會卸除 `Table1` 並建立 `Table2` 和預存程序 `Proc1`。 此程序會參考 `Table2` 和不存在的資料表 `Table1`。 然後，系統會執行檢視表 `sys.dm_sql_referenced_entities`，並將預存程序指定成參考實體。 結果集會針對 `Table1` 顯示一個資料列，並針對 `Table2` 顯示 3 個資料列。 因為 `Table1` 不存在，所以無法解析資料行相依性，而且會傳回錯誤 2020。 `is_all_columns_found` 資料行會針對 `Table1` 傳回 0，表示有資料行找不到。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +242,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. 示範動態相依性維護  
  下列範例會擴充範例 D，以便展示如何以動態方式維護相依性。 此範例首先會重新建立 `Table1` (之前在範例 D 中卸除)。然後，系統會再次執行 `sys.dm_sql_referenced_entities`，並將預存程序指定成參考實體。 結果集顯示，資料表以及其在預存程序中定義的各自資料行都會傳回。 此外，`is_all_columns_found` 資料行會針對所有物件和資料行傳回 1。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -272,7 +275,7 @@ GO
   
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   
@@ -292,7 +295,7 @@ FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalIn
  Employee      Gender              0           1          0
  ```
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

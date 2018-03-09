@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_sql_referencing_entities (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referencing_entities_TSQL
 - sys.dm_sql_referencing_entities_TSQL
 - dm_sql_referencing_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referencing_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e4b889d1ee7ec8480c9f41a730ffafcd5888ef4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   伺服器層級 DDL 觸發程序  
   
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,7 +86,7 @@ sys.dm_sql_referencing_entities (
 |referencing_entity_name|**sysname**|參考實體的名稱。 不可為 Null。|  
 |referencing_id|**int**|參考實體的識別碼。 不可為 Null。|  
 |referencing_class|**tinyint**|參考實體的類別。 不可為 Null。<br /><br /> 1 = 物件<br /><br /> 12 = 資料庫層級 DDL 觸發程序<br /><br /> 13 = 伺服器層級 DDL 觸發程序|  
-|referencing_class_desc|**nvarchar （60)**|參考實體之類別的描述。<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar(60)**|參考實體之類別的描述。<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|指出在執行階段發生之受參考實體識別碼的解析，因為它會相依於呼叫端的結構描述。<br /><br /> 1 = 參考實體可能會參考此實體。不過，受參考實體識別碼的解析是呼叫端相依而且無法判斷。 只有預存程序的非結構描述繫結參考、擴充預存程序，或在 EXECUTE 陳述式內部呼叫的使用者定義函數，才會發生這個事件。<br /><br /> 0 = 受參考的實體不是呼叫端相依。|  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -106,7 +109,7 @@ sys.dm_sql_referencing_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|是*|是|  
 |檢視|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序**|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序 * *|是|是|  
 |CLR 預存程序|否|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數|是|是|  
 |CLR 使用者定義函數|否|是|  
@@ -148,7 +151,7 @@ sys.dm_sql_referencing_entities (
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. 傳回參考給定實體的實體  
  下列範例會傳回目前資料庫中參考指定資料表的實體。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -159,7 +162,7 @@ GO
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 傳回參考給定類型的實體  
  下列範例會傳回參考別名類型 `dbo.Flag` 的實體。 結果集會顯示有兩個預存程序使用這個類型。 `dbo.Flag`類型也會在數個資料行中定義`HumanResources.Employee`資料表; 但是，因為類型不是計算資料行、 CHECK 條件約束或 DEFAULT 條件約束的資料表中的定義中，不會傳回資料列`HumanResources.Employee`資料表。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -177,7 +180,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

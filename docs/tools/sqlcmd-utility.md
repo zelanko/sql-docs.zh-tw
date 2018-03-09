@@ -3,12 +3,13 @@ title: "sqlcmd 公用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlcmd
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,39 +29,42 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fbf609bb0bfba5f49a38e942deb566377b066864
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 如需 SQL Server 2014 和較低，請參閱[sqlcmd 公用程式](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx)。
 
+ > 使用 sqlcmd 在 Linux 上，請參閱[Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
   **Sqlcmd**公用程式可讓您在中，輸入 TRANSACT-SQL 陳述式、 系統程序和指令碼檔案，在命令提示字元中，**查詢編輯器**SQLCMD 模式、 Windows 指令碼檔案或 SQL Server Agent 作業的作業系統 (Cmd.exe) 作業步驟。 此公用程式利用 ODBC 執行 TRANSACT-SQL 批次。 
   
 > [!NOTE]
 > sqlcmd 公用程式的最新版本 (Web 版本) 可從 [下載中心](http://go.microsoft.com/fwlink/?LinkID=825643)取得。 您需要的版本 13.1 或更高版本支援永遠加密 (`-g`) 和 Azure Active Directory 驗證 (`-G`)。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
 
+因為預設預先安裝，您可以嘗試從 Azure 雲端殼層 sqlcmd 公用程式： [![啟動雲端殼層](https://shell.azure.com/images/launchcloudshell.png "啟動雲端殼層")](https://shell.azure.com)
+
   若要在 SSMS 中執行 sqlcmd 陳述式，請從上方導覽 [查詢] 功能表的下拉式清單中選取 [SQLCMD 模式]。  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) 利用 Microsoft[!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)]適用於執行一般和 SQLCMD 模式中的 SqlClient**查詢編輯器**。 從命令列執行 **sqlcmd** 時， **sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 利用 Microsoft[!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)]適用於執行一般和 SQLCMD 模式中的 SqlClient**查詢編輯器**。 從命令列執行 **sqlcmd** 時， **sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
 >   
   
  目前， **sqlcmd** 不需要在命令列選項與值之間保留一個空格。 但是在未來的版本中，可能會需要在命令列選項與值之間空一個空格。  
  
  其他主題：
 - [啟動 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [使用 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [使用 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>語法  
   
@@ -117,7 +121,7 @@ sqlcmd
 ## <a name="command-line-options"></a>命令列選項  
  **登入相關選項**  
   **-A**  
- 記錄中，以利用專用的管理員連接 (DAC) 的 SQL Server。 這種連接可用以進行伺服器的疑難排解。 只有在支援 DAC 的伺服器電腦上才可進行。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 選項不支援使用-G 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不是 Azure Active Directory 系統管理員的了。
+ 記錄中，以利用專用的管理員連接 (DAC) 的 SQL Server。 這種連接可用以進行伺服器的疑難排解。 只有在支援 DAC 的伺服器電腦上才可進行。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱[資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 選項不支援使用-G 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不是 Azure Active Directory 系統管理員的了。
   
  **-C**  
  這個參數由用戶端所設定，以隱含方式信任伺服器憑證而且不進行驗證。 這個選項相當於 ADO.NET 選項 `TRUSTSERVERCERTIFICATE = true`。  
@@ -217,11 +221,11 @@ sqlcmd
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  指定要連接 SQL Server 執行的個體。 它會設定 **sqlcmd** 指令碼變數 SQLCMDSERVER。  
   
- 指定*server_name*連接到 SQL Server 的預設執行個體，該伺服器電腦上。 指定*server_name* [  **\\**  *instance_name* ] 連接到該伺服器電腦上的 SQL Server 的具名執行個體。 如果未不指定任何伺服器電腦，則**sqlcmd**會連接到本機電腦上的 SQL Server 預設執行個體。 當您從網路的遠端電腦執行 **sqlcmd** 時，需要這個選項。  
+ 指定*server_name*連接到 SQL Server 的預設執行個體，該伺服器電腦上。 指定*server_name* [**\\* * * instance_name* ] 連接到該伺服器電腦上的 SQL Server 的具名執行個體。 如果未不指定任何伺服器電腦，則**sqlcmd**會連接到本機電腦上的 SQL Server 預設執行個體。 當您從網路的遠端電腦執行 **sqlcmd** 時，需要這個選項。  
   
  *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。  
   
- 如果您未指定*server_name* [  **\\**  *instance_name* ] 啟動時**sqlcmd**，檢查是否有 SQL Server，並使用 SQLCMDSERVER 環境變數。  
+ 如果您未指定*server_name* [**\\* * * instance_name* ] 啟動時**sqlcmd**，檢查是否有 SQL Server，並使用 SQLCMDSERVER 環境變數。  
   
 > [!NOTE]  
 >  保留 OSQLSERVER 環境變數的目的是為了與舊版相容。 SQLCMDSERVER 環境變數優先於 OSQLSERVER 環境變數；這表示您可以先後使用 **sqlcmd** 和 **osql** ，它們不會互相干擾，舊的指令碼仍能運作。  
@@ -262,7 +266,7 @@ sqlcmd
   
  在命令提示字元下輸入 **chcp** ，以驗證 Cmd.exe 的字碼頁。  
   
- **-i** *input_file*[**、***input_file2*...]  
+ **-i** *input_file*[**,***input_file2*...]  
  識別包含 SQL 陳述式或預存程序的批次之檔案。 您可以指定多個檔案，它們會依照順序加以讀取和處理。 檔案名稱之間不能有空格。 **sqlcmd** 會先檢查指定的檔案是否全部存在。 如果有一個或多個檔案不存在， **sqlcmd** 會結束作業。 -i 和 -Q/-q 為互斥選項。  
   
  路徑範例：  
@@ -275,7 +279,7 @@ sqlcmd
   
  包含空格的檔案路徑必須用引號括住。  
   
- 這個選項可以使用一次以上： **-i***input_file* **-I***I input_file*。  
+ 這個選項可能會使用一次以上: **-i * * * input_file* **-我 * * * 我輸入檔案。*  
   
  **-o** *output_file*  
  識別用來接收 **sqlcmd**輸出的檔案。  
@@ -319,7 +323,7 @@ sqlcmd
 > [!IMPORTANT]  
 >  請勿在查詢中使用 GO 結束字元。  
   
- 如果使用此選項時指定 **-b** ， **sqlcmd** 會發生錯誤，並結束作業。 本主題稍後將說明**-b** 。  
+ 如果使用此選項時指定 **-b** ， **sqlcmd** 會發生錯誤，並結束作業。 本主題稍後將說明 **-b**。  
   
  **-Q"** *cmdline query* **"**  
  啟動 **sqlcmd** 時執行查詢，然後立即結束 **sqlcmd**。 可以執行多項以分號分隔的查詢。  
@@ -338,13 +342,13 @@ sqlcmd
  如果使用此選項時指定 **-b** ， **sqlcmd** 會發生錯誤，並結束作業。 本主題稍後將說明**-b** 。  
   
  **-t** *query_timeout*  
- 指定命令 (或 SQL 陳述式) 逾時之前的秒數。這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，命令不會逾時。*query**time_out* 必須是介於 1 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **sqlcmd** 就會產生錯誤訊息。  
+ 指定命令 (或 SQL 陳述式) 逾時之前的秒數。這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，命令不會逾時。*查詢 * * time_out*必須是介於 1 到 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **sqlcmd** 就會產生錯誤訊息。  
   
 > [!NOTE]  
 >  實際逾時值可能與指定的 *time_out* 值之間有幾秒的差異。  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- 建立 **sqlcmd**指令碼中所能使用的 **sqlcmd** 指令碼變數。 如果值包含空格，請用引號括住該值。 您可以指定多個 ***var***=**"***values***"** 值。 如果指定的任何值發生錯誤， **sqlcmd** 會產生一則錯誤訊息，並結束作業。  
+ 建立 **sqlcmd**指令碼中所能使用的 **sqlcmd** 指令碼變數。 如果值包含空格，請用引號括住該值。 您可以指定多個***var***=**"***值***"**值。 如果指定的任何值發生錯誤， **sqlcmd** 會產生一則錯誤訊息，並結束作業。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -404,7 +408,7 @@ sqlcmd
   
 -   **varchar(n** *n* **)**, where 1<=n<=8000  
   
--   **nvarchar(n** *n* **)**, where 1<=n<=4000  
+-   **nvarchar (n**  *n*  **)**，其中 1 < = n < = 4000  
   
 -   **varbinary(n** *n* **)**, where 1<=n\<=4000  
   
@@ -450,7 +454,7 @@ sqlcmd
   
  其中：  
   
- `x`= SQL Server 所處理的交易數目。  
+ `x` = SQL Server 所處理的交易數目。  
   
  `t1` = 所有交易的總時間。  
   
@@ -686,8 +690,8 @@ sqlcmd
  移至表示批次結束及執行任何快取的 TRANSACT-SQL 陳述式。執行批次多次以不同的批次。您無法在單一批次中多次宣告的變數。
   
  **其他命令**  
-  **:r \<** *filename***>**  
- 剖析其他 TRANSACT-SQL 陳述式和**sqlcmd**命令所指定的檔案從 **\<**  *filename***>**到陳述式快取。  
+  **: r \<**  *檔名* **>**  
+ 剖析其他 TRANSACT-SQL 陳述式和**sqlcmd**命令所指定的檔案從 **\< ***filename***>**到陳述式快取。  
   
  如果該檔案包含 TRANSACT-SQL 陳述式未緊接著**移**，您必須輸入**移**後面的那一行上**: r**。  
   
@@ -745,7 +749,7 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd 檔案名稱  
  您可以使用**sqlcmd** 選項或 **sqlcmd** 命令指定 **sqlcmd** 輸入檔。 輸出檔則可以使用 **-o** 選項或 **:Error**、 **:Out** 和 **:Perftrace** 命令予以指定。 以下列出使用這些檔案的幾項指導方針：  
   
--   **:Error**、 **:Out** 和 **:Perftrace** 應該使用不同的 **\<***filename***>**。 如果使用相同的 **\<***filename***>** ，命令所產生的輸入可能會混合在一起。  
+-   **: Error**， **: Out**和**: Perftrace**應使用不同 **\< ***filename***>**。 如果相同 **\< ***filename*** >** 是使用之命令的輸入可能這些固定文字混合。  
   
 -   如果從本機電腦的 **sqlcmd** 呼叫位於遠端伺服器上的輸入檔，且檔案中包含磁碟機檔案路徑 (例如 :out c:\OutputFile.txt)， 便會在本機電腦建立輸出檔案，而不是在遠端伺服器建立。  
   

@@ -8,26 +8,31 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: AdvancedProperties Property (SqlService Class)
-apilocation: sqlmgmproviderxpsp2up.mof
-helpviewer_keywords: AdvancedProperties property
+apiname:
+- AdvancedProperties Property (SqlService Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
+helpviewer_keywords:
+- AdvancedProperties property
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02122c47eb587ec5329562d2b7798af67081db97
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4d5bbd73a215d072dac4d992928d48becaf6510
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 屬性 (SqlService 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]取得包含之進階的屬性的物件參考的陣列**SqlService**物件。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+取得包含之進階的屬性的物件參考的陣列**SqlService**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +50,7 @@ object.AdvancedProperties [= value]
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [啟動及停止服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

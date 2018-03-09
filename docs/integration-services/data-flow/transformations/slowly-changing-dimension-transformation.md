@@ -8,26 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.slowlychangingdimtrans.f1
+f1_keywords:
+- sql13.dts.designer.slowlychangingdimtrans.f1
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
 - slowly changing dimensions
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8061b07985e3d8d85656ddb85996384b5b6ee257
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0b0582426598b30ed955bc1a2e2aae47c963097
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換
   「緩時變維度」轉換可在資料倉儲維度資料表中協調記錄的更新與插入。 例如，您可利用此轉換來設定轉換輸出，該轉換輸出會使用 AdventureWorks OLTP 資料庫中 Production.Products 資料表的資料，在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 資料庫的 DimProduct 資料表內插入和更新記錄。  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
  下表描述轉換輸出及其後續資料流程的需求。 該需求會描述「緩時變維度精靈」建立的資料流程。  
   
-|輸出|說明|資料流程需求|  
+|輸出|描述|資料流程需求|  
 |------------|-----------------|----------------------------|  
 |**[變更屬性更新輸出]**|會更新查閱資料表中的記錄。 此輸出用於變更屬性資料列。|「OLE DB 命令」轉換會使用 UPDATE 陳述式更新記錄。|  
 |**[固定屬性輸出]**|不得變更之資料列中的值與查閱資料表中的值不相符。 此輸出用於固定屬性資料列。|不會建立任何預設資料流程。 如果轉換已設定為遇到固定屬性資料行的變更之後繼續，則應該建立擷取這些資料列的資料流程。|  
@@ -87,10 +89,10 @@ ms.lasthandoff: 11/20/2017
  如需如何改善緩時變維度轉換效能的建議，請參閱 [資料流程效能功能](../../../integration-services/data-flow/data-flow-performance-features.md)。  
   
 ## <a name="troubleshooting-the-slowly-changing-dimension-transformation"></a>疑難排解緩時變維度轉換  
- 您可以記錄緩時變維度轉換對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解緩時變維度轉換對外部資料來源執行的連接、命令和查詢。 若要記錄緩時變維度轉換對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄緩時變維度轉換對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解緩時變維度轉換對外部資料來源執行的連接、命令和查詢。 若要記錄緩時變維度轉換對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation"></a>設定緩時變維度轉換  
- 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

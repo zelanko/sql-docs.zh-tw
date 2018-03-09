@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的功能與工具，可讓您在完成及部署封裝之後，用以疑難排解封裝的執行問題。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **使用交易協助確保資料的完整性**。 如需詳細資訊，請參閱 [Integration Services 交易](../../integration-services/integration-services-transactions.md)。  
   
--   **使用檢查點從失敗點重新啟動封裝**。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+-   **使用檢查點從失敗點重新啟動封裝**。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>使用事件處理常式擷取及處理封裝錯誤  
  您可以使用事件處理常式，回應封裝以及封裝中的物件所引發的許多事件。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **啟用記錄功能**。 您可以只選取想要擷取其資訊的事件與項目，藉以精簡記錄輸出。 如需詳細資訊，請參閱 [Integration Services (SSIS) 記錄](../performance/integration-services-ssis-logging.md)。  
   
--   **選取封裝的 [診斷] 事件以疑難排解提供者問題。** 現在有可幫助您疑難排解封裝與外部資料來源之間互動的記錄訊息。 如需詳細資訊，請參閱 [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md)。  
+-   **選取封裝的 [診斷] 事件以疑難排解提供者問題。** 現在有可幫助您疑難排解封裝與外部資料來源之間互動的記錄訊息。 如需詳細資訊，請參閱 [疑難排解工具封裝連接](troubleshooting-tools-for-package-connectivity.md)。  
   
 -   **增強預設的記錄輸出**。 每次執行封裝時，記錄功能通常會將資料列附加至記錄目的地。 雖然記錄輸出的每一個資料列都會以封裝的名稱和唯一識別碼來識別封裝，並且以唯一的 ExecutionID 來識別封裝的執行，但單一清單中若有大量記錄輸出，分析就會變得很困難。  
   
@@ -83,14 +84,14 @@ ms.lasthandoff: 11/20/2017
   
     1.  **建立可記錄封裝每次執行作業的父資料表**。 在這個父資料表中，封裝的各次執行作業只能分別記錄在單一資料列，並使用 ExecutionID 連結到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 記錄資料表中的子記錄。 您可以在每個封裝的開頭使用執行 SQL 工作，以建立這個新的資料列，並記錄開始時間； 接著再於封裝結尾使用另一個執行 SQL 工作，以結束時間、期間與狀態更新資料列。  
   
-    2.  **將稽核資訊加入資料流程**。 您可以使用「稽核」轉換將建立或修改每一個資料列的封裝執行資訊，加入資料流程中的資料列。 「稽核」轉換可提供九項資訊，包括 PackageName 和 ExecutionInstanceGUID。 如需詳細資訊，請參閱 [稽核轉換](../../integration-services/data-flow/transformations/audit-transformation.md)。 為了進行稽核，如果您有想要加入每個資料列的自訂資訊，便可以使用「衍生的資料行」轉換將這項資訊加入資料流程中的資料列。 如需詳細資訊，請參閱 [衍生的資料行轉換](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
+    2.  **將稽核資訊加入資料流程**。 您可以使用「稽核」轉換將建立或修改每一個資料列的封裝執行資訊，加入資料流程中的資料列。 「稽核」轉換可提供九項資訊，包括 PackageName 和 ExecutionInstanceGUID。 如需詳細資訊，請參閱 [稽核轉換](../../integration-services/data-flow/transformations/audit-transformation.md)。 為了進行稽核，如果您有想要加入每個資料列的自訂資訊，便可以使用「衍生的資料行」轉換將這項資訊加入資料流程中的資料列。 如需詳細資訊，請參閱[衍生的資料行轉換](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
   
     3.  **考慮擷取資料列計數資料**。 請考慮另外建立資料表以存放資料列計數資訊，在此資料表中，是以封裝的 ExecutionID 識別封裝執行的每個執行個體。 使用「資料列計數」轉換，在資料流程的關鍵點將資料列計數儲存到一系列變數中。 資料流程結束後，請使用執行 SQL 工作將這一系列的值插入資料表中的資料列，以供稍後進行分析及製作報表。  
   
      如需此方法的詳細資訊，請參閱《 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮書》 [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(專案 REAL：Business Intelligence ETL 設計練習) 中的 "ETL Auditing and Logging" (＜ETL 稽核和記錄＞) 一節。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用偵錯傾印檔案針對封裝執行進行疑難排解  
- 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 如需相關資訊，請參閱 [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 如需相關資訊，請參閱 [產生封裝執行的傾印檔案](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>疑難排解執行階段驗證的問題  
  有時候在尚未執行封裝中的優先工作之前，您可能無法連接到資料來源，或者無法驗證封裝的某些部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含下列功能，可協助您避免因這些狀況而造成的驗證錯誤：  

@@ -1,33 +1,31 @@
 ---
-title: "設定資料類型資料行 (SSAS 表格式) |Microsoft 文件"
+title: "設定資料行的資料類型 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ca2bd5f49f3d8a756e213f9e8ae46dcd5a25f6a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>設定資料行的資料類型 (SSAS 表格式)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]當您匯入資料，或將資料貼到模型時，模型設計師會自動偵測並套用資料類型。 將資料加入至模型之後，您可以手動修改資料行的資料類型，以變更資料儲存的方式。 如果您只要變更資料顯示方式的格式，而不要變更其儲存方式，可以只變更該顯示格式。  
+# <a name="set-the-data-type-of-a-column"></a>設定資料行的資料類型 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+當您將資料匯入或貼上模型時，模型設計師會自動偵測並套用資料類型。 將資料加入至模型之後，您可以手動修改資料行的資料類型，以變更資料儲存的方式。 如果您只要變更資料顯示方式的格式，而不要變更其儲存方式，可以只變更該顯示格式。  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>若要變更資料行的資料類型或顯示格式  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/08/2017
   
  下列是商業智慧語意模型中可用的資料類型：  
   
--   **Text**  
+-   **文字**  
   
 -   **十進位數字**  
   
@@ -82,9 +80,9 @@ ms.lasthandoff: 12/08/2017
   
  如果資料類型受到支援，但是模型設計師卻發現不受新資料類型支援的值，您會接到另一項錯誤，並將需要修正資料值，才能再繼續進行。  
   
- 如需商業智慧語意模型中使用的資料類型、如何以隱含方式轉換這些資料類型，以及如何在公式內使用不同資料類型等的詳細資訊，請參閱 [支援的資料類型 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
+ 如需使用商業智慧語意模型中的資料類型的詳細資訊，它們都是隱含轉換以及不同資料類型的方式公式中使用，請參閱[支援的資料類型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
   
-## <a name="see-also"></a>請參閱  
- [支援的資料類型 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+## <a name="see-also"></a>另請參閱  
+ [支援的資料類型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

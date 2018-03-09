@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_proxy_for_subsystem_TSQL
 - sp_enum_proxy_for_subsystem
-dev_langs: TSQL
-helpviewer_keywords: sp_enum_proxy_for_subsystems
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b708d467cf246a221d14802abb839c96de85ffe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bf94c94aed1f43e747703d5f82a7b842252dafef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +50,16 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@proxy_id**  =] *proxy_id*  
+ [ **@proxy_id** = ] *proxy_id*  
  要列出資訊之 Proxy 的識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
   
- [  **@proxy_name**  =] **'***proxy_name***'**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  要列出資訊的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
   
- [  **@subsystem_id**  =] *syssubsystems*  
+ [ **@subsystem_id** = ] *subsystem_id*  
  要列出資訊之子系統的識別碼。 *Syssubsystems*是**int**，預設值是 NULL。 任一*syssubsystems*或*subsystem_name*可指定。  
   
- [  **@subsystem_name**  =] **'***subsystem_name***'**  
+ [ **@subsystem_name** = ] **'***subsystem_name***'**  
  要列出資訊的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 NULL。 任一*syssubsystems*或*subsystem_name*可指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -66,7 +69,7 @@ sp_enum_proxy_for_subsystem
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**syssubsystems**|**int**|子系統識別碼。|  
+|**subsystem_id**|**int**|子系統識別碼。|  
 |**subsystem_name**|**sysname**|子系統的名稱。|  
 |**proxy_id**|**int**|Proxy 識別碼。|  
 |**proxy_name**|**sysname**|Proxy 的名稱。|  
@@ -109,7 +112,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sp_grant_proxy_to_subsystem &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

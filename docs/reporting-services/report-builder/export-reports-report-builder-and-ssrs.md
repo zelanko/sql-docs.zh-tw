@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10437"
@@ -18,13 +16,13 @@ ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: be5b29f8f01eaaee1f1ea225ec47c0665762984f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ed5a8e47a39df2d7d521181fff55fe6734062ce8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>匯出報表 (報表產生器及 SSRS)
 
@@ -121,11 +119,11 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="ExportFormats"></a> 可在檢視報表時匯出的格式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供轉譯延伸模組，可將報表轉譯成各種不同格式。 您應該針對所選的檔案格式進行報表設計最佳化。  下表列出您可以從使用者介面匯出的格式。  有一些額外格式可以與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱搭配使用，或者，從 URL 存取匯出時也會有一些額外格式。  請參閱本主題中的 [匯出報表的其他方式](#OtherWaysExportingReports)一節。  
   
-|格式|轉譯延伸模組類型|說明|  
+|[格式]|轉譯延伸模組類型|描述|  
 |------------|------------------------------|-----------------|  
 |Acrobat (PDF) 檔案|手動分頁|PDF 轉譯延伸模組會將報表轉譯成可在 Adobe Acrobat 與支援 PDF 1.3 之其他協力廠商 PDF 檢視器中開啟的檔案。 雖然 PDF 1.3 與 Adobe Acrobat 4.0 和更新版本相容，但是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只支援 Adobe Acrobat 6 或更新版本。 轉譯延伸模組不需要 Adobe 軟體就能轉譯報表。 不過，必須使用 PDF 檢視器 (例如 Adobe Acrobat) 才能檢視或列印 PDF 格式的報表。<br /><br /> 如需詳細資訊，請參閱[匯出至 PDF 檔案](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)。|  
-|Atom|資料|Atom 轉譯延伸模組會從報表產生與 Atom 相符的資料摘要。 資料摘要可以透過可使用與 Atom 相符之資料摘要的應用程式 (例如 Power Pivot 或 Power BI) 讀取和交換。<br /><br /> 輸出結果為 Atom 服務文件，其中會列出可從報表取得的資料摘要。 針對報表中的每一個資料區，至少會建立一個資料摘要。 根據資料區的類型以及該資料區顯示的資料而定，可能會產生多個資料摘要。<br /><br /> 如需詳細資訊，請參閱[從多個報表產生資料摘要](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。|  
-|CSV|資料|逗號分隔值 (CSV) 轉譯延伸模組會將報表從多數應用程式都可輕易讀取與交換的標準化純文字格式報表，轉譯為扁平化表示的資料。<br /><br /> 如需詳細資訊，請參閱[匯出至 CSV 檔案](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。|  
+|Atom|data|Atom 轉譯延伸模組會從報表產生與 Atom 相符的資料摘要。 資料摘要可以透過可使用與 Atom 相符之資料摘要的應用程式 (例如 Power Pivot 或 Power BI) 讀取和交換。<br /><br /> 輸出結果為 Atom 服務文件，其中會列出可從報表取得的資料摘要。 針對報表中的每一個資料區，至少會建立一個資料摘要。 根據資料區的類型以及該資料區顯示的資料而定，可能會產生多個資料摘要。<br /><br /> 如需詳細資訊，請參閱[從多個報表產生資料摘要](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。|  
+|CSV|data|逗號分隔值 (CSV) 轉譯延伸模組會將報表從多數應用程式都可輕易讀取與交換的標準化純文字格式報表，轉譯為扁平化表示的資料。<br /><br /> 如需詳細資訊，請參閱[匯出至 CSV 檔案](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。|  
 |EXCELOPENXML|軟分頁|檢閱報表時，在匯出功能表中顯示為 "Excel"。 Excel 轉譯延伸模組會將報表轉譯成與 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 相容的 Excel 文件 (.xlsx)。  如需詳細資訊，請參閱[匯出至 Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。|  
 |PowerPoint|手動分頁|PowerPoint 轉譯擴充功能會將報表轉譯成與 PowerPoint 2013 相容的 PowerPoint 文件 (.pptx)。|  
 |TIFF 檔案|手動分頁|影像轉譯延伸模組會將報表轉譯成點陣圖或中繼檔。 依預設，影像轉譯延伸模組會產生報表的 TIFF 檔，可在多個頁面中檢視。 當用戶端接收到影像時，可以在影像檢視器中顯示和列印影像。<br /><br /> 影像轉譯延伸模組可產生 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]支援的任何格式檔案：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。<br /><br /> 如需詳細資訊，請參閱[匯出至影像檔](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)。|  
@@ -147,7 +145,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Word  
   
--   Excel  
+-   [匯出]  
   
 -   影像/TIFF  
   
@@ -194,7 +192,7 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
   
  如需詳細資訊，請參閱 [Export a Report Using URL Access](../../reporting-services/export-a-report-using-url-access.md)。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [控制分頁符號、標題、資料行和資料列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
 [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f7d13bdd9c8d5abd19e6b64d92e45bcd688feeef
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="operators-mdx-syntax"></a>運算子 (MDX 語法)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/27/2017
   
 -   DISTINCT  
   
--   :  
+-   所解碼的字元：  
   
 -   ^  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/27/2017
   
 -   XOR  
   
--   OR  
+-   或  
   
  如需 MDX 運算子的詳細資訊，請參閱[MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/27/2017
   
 |原始類型|所需類型|轉換|  
 |-------------------|-----------------|----------------|  
-|Level|將|\<層級 >.members|  
+|層級|將|\<層級 >.members|  
 |階層|成員|\<階層 >.defaultmember|  
 |成員|Tuple|(\<成員 >)|  
 |Tuple|成員|\<tuple >.item(0)|  

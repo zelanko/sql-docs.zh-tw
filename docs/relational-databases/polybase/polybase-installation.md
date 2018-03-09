@@ -8,21 +8,23 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PolyBase, installation
+helpviewer_keywords:
+- PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 982594dc9a0f3ec83dcecef9738b2d4cda1fad83
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-installation"></a>安裝 PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +53,8 @@ ms.lasthandoff: 01/02/2018
 在 SQL Server 執行個體上開始安裝 PolyBase 時，最好規劃是要單一節點安裝還是 PolyBase 向外延展群組安裝。 針對 PolyBase 向外延展群組，您需要確定： 
 - 相同網域上的所有電腦。
 - 您可以在安裝期間使用相同的服務帳戶和密碼。
-- 而 SQL Server 執行個體可以透過網路彼此通訊。
+- 您的 SQL Server 執行個體可透過網路彼此通訊。
+- SQL Server 執行個體皆為同一個 SQL server 版本。
 
 PolyBase 一旦安裝為獨立項目或安裝於向外延展群組中，就無法再進行變更。 您必須將功能解除安裝之後再重新安裝，才能變更此設定。
 

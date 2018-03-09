@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b1ae1a57e05d8953c4bd5f93b9e247419ee986c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a880757dcdaa945cbe9fdb100bb1ded80e584227
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>課程 4-4-隱藏及停用屬性階層
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]根據預設，在維度中，每個屬性建立屬性階層，而且每個階層都可用來測量事實資料。 這個階層是由「全部」層級和詳細資料層級 (含階層的所有成員) 所組成。 如同您已學到的，您可以將屬性組織成使用者自訂階層，在 Cube 中提供導覽路徑。 在某些情況下，您可以停用或隱藏某些屬性及其階層。 例如，某些屬性如保險號碼或身分證號碼、薪水、出生日期和登入資訊等，使用者不能利用這些屬性來建立 Cube 資訊的維度。 相反地，這項資訊通常只是做為特定屬性成員的詳細資料來檢視。 您可以隱藏這些屬性階層，讓屬性只顯示成特定屬性的成員屬性。 您也可以讓其他屬性的成員 (例如客戶名稱或郵遞區號) 只透過使用者階層而非透過獨立屬性階層來檢視。 這麼做的原因是為了顯示屬性階層中的全部相異成員。 最後，為了增進處理效能，您應該將使用者不再用來瀏覽的屬性階層停用。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+根據預設，系統會在維度中建立每個屬性的屬性階層，而且每個階層都可用來建立事實資料的維度。 這個階層是由「全部」層級和詳細資料層級 (含階層的所有成員) 所組成。 如同您已學到的，您可以將屬性組織成使用者自訂階層，在 Cube 中提供導覽路徑。 在某些情況下，您可以停用或隱藏某些屬性及其階層。 例如，某些屬性如保險號碼或身分證號碼、薪水、出生日期和登入資訊等，使用者不能利用這些屬性來建立 Cube 資訊的維度。 相反地，這項資訊通常只是做為特定屬性成員的詳細資料來檢視。 您可以隱藏這些屬性階層，讓屬性只顯示成特定屬性的成員屬性。 您也可以讓其他屬性的成員 (例如客戶名稱或郵遞區號) 只透過使用者階層而非透過獨立屬性階層來檢視。 這麼做的原因是為了顯示屬性階層中的全部相異成員。 最後，為了增進處理效能，您應該將使用者不再用來瀏覽的屬性階層停用。  
   
 **AttributeHierarchyEnabled** 屬性的值決定是否建立屬性階層。 如果這個屬性設為 **False**，則不建立屬性階層，且屬性不得做為使用者階層中的一個層級；屬性階層只得以成員屬性的身分存在。 不過，已停用的屬性階層仍然可以用來排序另一個屬性的成員。 如果 **AttributeHierarchyEnabled** 屬性的值設為 **True**，則 **AttributeHierarchyVisible** 屬性的值將決定是否不論屬性階層在使用者自訂階層中的用法為何皆會顯示。  
   
@@ -86,7 +89,7 @@ ms.lasthandoff: 12/08/2017
   
     ![AttributeHierarchyEnabled 屬性設為 False](../analysis-services/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled 屬性設為 False")  
   
-5.  在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
+5.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 6.  順利完成處理之後，切換到 [瀏覽器] 索引標籤、按一下 [重新連接]，然後試著瀏覽已修改的屬性階層。  
   
@@ -98,13 +101,13 @@ ms.lasthandoff: 12/08/2017
   
 2.  確認下列屬性階層有出現在 [階層] 清單中：  
   
-    -   **全名**  
+    -   **完整名稱**  
   
     -   **Postal Code**  
   
 3.  切換到 [維度結構] 索引標籤，然後使用 CTRL 鍵同時選取多個屬性，來選取 [屬性] 窗格中的下列屬性：  
   
-    -   **全名**  
+    -   **完整名稱**  
   
     -   **Postal Code**  
   
@@ -133,7 +136,7 @@ ms.lasthandoff: 12/08/2017
     請注意，[郵遞區號] 和 [全名] 這兩個隱藏的層級會出現在使用者自訂階層中。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[依次要屬性來排序屬性成員](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+[排序依據次要屬性的屬性成員](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   
   

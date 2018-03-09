@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee66a454da8bfdc23e9beb382c0ac22939268e80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08f93380356d54659d9e851ed124e8c257c10c8e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>記憶體內部 OLTP 的初始區域調查
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
 您稍後可以瀏覽下列示範記憶體內部 OLTP 效能提升的各篇文章：  
   
 - [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供小規模示範來示範較大的潛在效能提升。  
-- [記憶體內部 OLTP 的範例資料庫](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) 提供較大規模示範。  
+- [記憶體內部 OLTP 的範例資料庫](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供較大規模示範。  
   
   
   
@@ -253,14 +254,14 @@ CREATE PROCEDURE 陳述式上的 T-SQL 關鍵字 NATIVE_COMPILATION 是建立原
 ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移除資料行。  
   
 - CREATE INDEX 和 DROP INDEX 無法針對記憶體最佳化資料表執行，請改用 ALTER TABLE ...ADD/DROP INDEX。  
-- 如需詳細資料，請參閱[修改記憶體最佳化資料表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)。  
+- 如需詳細資料，請參閱 [修改記憶體最佳化資料表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)。  
   
   
 #### <a name="plan-your-memory-optimized-tables-and-indexes"></a>規劃您的記憶體最佳化資料表及索引  
   
   
 - [記憶體最佳化資料表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
-- [記憶體內部 OLTP 不支援的 Transact-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+- [記憶體中的 OLTP 不支援 Transact-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
   
@@ -414,30 +415,25 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
 - [應用程式層級資料分割](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [分割記憶體最佳化資料表的應用程式模式](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
-  
 <a name="trade-offs-of-native-procs-38p"></a>  
   
 ### <a name="trade-offs-of-native-procs"></a>原生程序的取捨  
   
-  
 - 原生編譯的預存程序無法存取磁碟資料表。 原生程序只能存取記憶體最佳化資料表。  
 - 當原生程序在伺服器或資料庫最近恢復上線之後第一次執行時，必須將原生程序重新編譯一次。 這會造成在原生程序開始執行之前出現延遲。  
-  
   
 <a name="advanced-considerations-for-memory-optimized-tables-39n"></a>  
   
 ## <a name="advanced-considerations-for-memory-optimized-tables"></a>記憶體最佳化資料表的進階考量  
   
-  
-[記憶體最佳化資料表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) 有些部分與傳統磁碟之資料表上的索引不同。  
-  
-- 只有在記憶體最佳化資料表上才能使用[雜湊索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 。  
-  
+[記憶體最佳化資料表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) 有些部分與傳統磁碟之資料表上的索引不同。 只有在記憶體最佳化資料表上才能使用雜湊索引。
+    
+- [記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)
+- [記憶體最佳化資料表的非叢集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
 您必須加以規劃，以確保有足夠的使用中記憶體可供您規劃的記憶體最佳化資料表和其索引使用。 請參閱：  
   
 - [建立及管理記憶體最佳化物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
   
 記憶體最佳化資料表可以使用 DURABILITY = SCHEMA_ONLY 進行宣告：  
   
@@ -445,17 +441,13 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
 - 當資料庫恢復上線時，記憶體最佳化資料表會載入回使用中記憶體，但其中不包含任何資料。  
 - 包含數千個資料列時，SCHEMA_ONLY 資料表可以是 tempdb 中 [#temporary 資料表](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) 的較佳替代項目。  
   
-  
 資料表變數也可以宣告為記憶體最佳化。 請參閱：  
   
 - [使用記憶體最佳化加快暫存資料表與資料表變數的速度](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
-  
-  
 <a name="advanced-considerations-for-natively-compiled-modules-40k"></a>  
   
 ## <a name="advanced-considerations-for-natively-compiled-modules"></a>原生編譯模組的進階考量  
-  
   
 可透過 Transact-SQL 使用的原生編譯模組類型為：  
   
@@ -465,7 +457,6 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
   - 記憶體最佳化資料表中只允許使用原生編譯的觸發程序。  
 - 原生編譯的 [資料表值函式](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
   - [使用記憶體最佳化提升暫存資料表與資料表變數效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
-  
   
 原生編譯使用者定義函數 (UDF) 的執行速度比解譯的 UDF 還要快。 以下是使用 UDF 時所需考慮的數個事項：  
   
@@ -477,17 +468,15 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
 如需原生 UDF 效能的測試資料和說明，請參閱︰  
   
   - [在 SQL Server 2016 中使用原生編譯的 UDF 來降低 RBAR 影響](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - [Gail Shaw 撰寫的優秀部落格文章](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)，張貼日期為2016 年 1 月。  
-  
+  - [原生編譯使用者定義函式](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)部落格文章，作者 Gail Shaw，日期為 2016 年 1 月。  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
 ## <a name="documentation-guide-for-memory-optimized-tables"></a>記憶體最佳化資料表的文件指南  
   
+請參閱下列其他討論記憶體最佳化資料表特殊考量的文章：  
   
-以下是其他討論記憶體最佳化資料表之特殊考量的文章連結：  
-  
-- [移轉至記憶體內部 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+- [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [判斷是否應將資料表或預存程序移植至記憶體內部 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - SQL Server Management Studio 中的交易效能分析報告可協助您評估記憶體內部 OLTP 是否能改善您資料庫應用程式的效能。  
   - 請使用 [記憶體最佳化建議程式](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 協助您將磁碟資料庫資料表移轉至記憶體內部 OLTP。   
@@ -498,9 +487,7 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
 - [記憶體內部 OLTP 的 Transact-SQL 支援](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - 記憶體最佳化資料表和原生程序支援及不支援的 T-SQL 和資料類型。  
 - [將包含記憶體最佳化資料表的資料庫繫結至資源集區](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)中會討論選擇性的進階考量。  
-  
-  
-  
+
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## <a name="documentation-guide-for-native-procs"></a>原生程序的文件指南  
@@ -513,9 +500,8 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
   
 ## <a name="related-links"></a>相關連結  
   
-- 內部文章： [記憶體內部 OLTP (記憶體內部最佳化)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+- 內部文章：[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+    
 下列文章提供程式碼，示範您可以使用記憶體內部 OLTP 達到的效能提升︰  
   
 - [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供小規模示範來示範較大的潛在效能提升。  

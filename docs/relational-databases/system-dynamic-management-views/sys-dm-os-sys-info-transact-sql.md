@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_os_sys_info (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/24/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_os_sys_info
 - dm_os_sys_info_TSQL
 - sys.dm_os_sys_info
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_os_sys_info dynamic management view
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7cc99a6d0f31d19909d41bde4dcd354d1e045215
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -64,18 +66,18 @@ ms.lasthandoff: 11/17/2017
 |**scheduler_count**|**int**|代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中設定的使用者排程器數目。 不可為 Null。|  
 |**scheduler_total_count**|**int**|代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排程器總數。 不可為 Null。|  
 |**deadlock_monitor_serial_number**|**int**|指定目前死結監視順序的識別碼。 不可為 Null。|  
-|**: sqlserver_start_time_ms_ticks**|**bigint**|代表**ms_tick**數目時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上次啟動。 與目前的 ms_ticks 資料行比較。 不可為 Null。|  
+|**sqlserver_start_time_ms_ticks**|**bigint**|代表**ms_tick**數目時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上次啟動。 與目前的 ms_ticks 資料行比較。 不可為 Null。|  
 |**sqlserver_start_time**|**datetime**|指定上一次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的日期和時間。 不可為 Null。|  
 |**affinity_type**|**int**|**適用於： [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定目前使用中伺服器 CPU 處理序相似性的類型。 不可為 Null。 如需詳細資訊，請參閱[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 描述**affinity_type**資料行。 不可為 Null。<br /><br /> MANUAL = 已經至少為一個 CPU 設定相似性。<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以自由地在 CPU 之間移動執行緒。|  
 |**process_kernel_time_ms**|**bigint**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過 [！包含 [s]**(../Token/ssCurrent_md.md)]。<br /><br /> 核心模式中所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒所使用的總時間，以毫秒為單位。 因為這個值包含伺服器上所有處理器的時間，所以它可能會大於單一處理器時脈。 不可為 Null。|  
 |**process_user_time_ms**|**bigint**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 使用者模式中所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒所使用的總時間，以毫秒為單位。 因為這個值包含伺服器上所有處理器的時間，所以它可能會大於單一處理器時脈。 不可為 Null。|  
 |**time_source**|**int**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於擷取時鐘時間的 API。 不可為 Null。<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
-|**time_source_desc**|**nvarchar （60)**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 描述**time_source**資料行。 不可為 Null。<br /><br /> QUERY_PERFORMANCE_COUNTER = [QueryPerformanceCounter](http://go.microsoft.com/fwlink/?LinkId=163095) API 會擷取時鐘時間。<br /><br /> MULTIMEDIA_TIMER =[多媒體計時器](http://go.microsoft.com/fwlink/?LinkId=163094)擷取時鐘時間的 API。|  
+|**time_source_desc**|**nvarchar(60)**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 描述**time_source**資料行。 不可為 Null。<br /><br /> QUERY_PERFORMANCE_COUNTER = [QueryPerformanceCounter](http://go.microsoft.com/fwlink/?LinkId=163095) API 會擷取時鐘時間。<br /><br /> MULTIMEDIA_TIMER =[多媒體計時器](http://go.microsoft.com/fwlink/?LinkId=163094)擷取時鐘時間的 API。|  
 |**virtual_machine_type**|**int**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否在虛擬化環境中執行。  不可為 Null。<br /><br /> 0 = NONE<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
-|**virtual_machine_type_desc**|**nvarchar （60)**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 描述**virtual_machine_type**資料行。 不可為 Null。<br /><br /> NONE =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並未在虛擬機器內執行。<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行於 Hypervisor 內部，也就是硬體輔助虛擬化。 安裝 Hyper_V 角色時，Hypervisor 會裝載作業系統，以便在主機作業系統上執行的執行個體會在 Hypervisor 中執行。<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行於沒有採用硬體助理的虛擬機器內部，例如 Microsoft Virtual PC。|  
+|**virtual_machine_type_desc**|**nvarchar(60)**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 描述**virtual_machine_type**資料行。 不可為 Null。<br /><br /> NONE =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並未在虛擬機器內執行。<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行於 Hypervisor 內部，也就是硬體輔助虛擬化。 安裝 Hyper_V 角色時，Hypervisor 會裝載作業系統，以便在主機作業系統上執行的執行個體會在 Hypervisor 中執行。<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行於沒有採用硬體助理的虛擬機器內部，例如 Microsoft Virtual PC。|  
 |**softnuma_configuration**|**int**|**適用於：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 指定已設定的方式 NUMA 節點。 不可為 Null。<br /><br /> 0 = OFF 指出硬體預設值<br /><br /> 1 = 自動軟體 NUMA<br /><br /> 2 = 透過登錄的手動軟體 NUMA|  
-|**softnuma_configuration_desc**|**nvarchar （60)**|**適用於：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> OFF = NUMA 功能是關閉<br /><br /> 在 = SQL Server 會自動決定軟體 NUMA 的 NUMA 節點大小<br /><br /> 手動 = 手動設定的軟體 NUMA|
+|**softnuma_configuration_desc**|**nvarchar(60)**|**適用於：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> OFF = NUMA 功能是關閉<br /><br /> 在 = SQL Server 會自動決定軟體 NUMA 的 NUMA 節點大小<br /><br /> 手動 = 手動設定的軟體 NUMA|
 |**process_physical_affinity**|**nvarchar(3072)** |**適用於： 開頭為[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]** 。<br /><br />尚未將於提供的資訊。 |
 |**sql_memory_model**|**int**|**適用於： [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 且開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1**。<br /><br />指定 SQL Server 用來配置記憶體的記憶體模型。 不可為 Null。<br /><br />1 = 傳統記憶體模型<br />2 = 鎖定記憶體分頁<br /> 3 = 記憶體中的大型分頁|
 |**sql_memory_model_desc**|**nvarchar(120)**|**適用於： [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 且開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1**。<br /><br />指定 SQL Server 用來配置記憶體的記憶體模型。 不可為 Null。<br /><br />**傳統**= SQL Server 是否使用傳統記憶體模型配置記憶體。 當 SQL Server 服務帳戶未具備鎖定分頁記憶體的權限在啟動期間，這是預設 sql 記憶體模型。<br />**LOCK_PAGES** = SQL server 使用記憶體中鎖定分頁配置記憶體。 SQL Server 服務帳戶在 SQL Server 啟動期間記憶體的權限擁有鎖定的分頁時，這是預設 sql 記憶體管理員。<br /> **LARGE_PAGES** = SQL Server 使用大型分頁記憶體中配置記憶體。 SQL Server 會使用大型分頁配置器配置記憶體，只能使用 Enterprise edition 時 SQL Server 服務帳戶會持有記憶體的權限鎖定分頁在伺服器啟動期間與追蹤旗標 834 已開啟。|
@@ -89,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
  在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]標準和基本層需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]系統管理員帳戶。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

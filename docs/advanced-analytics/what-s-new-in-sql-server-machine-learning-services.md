@@ -1,28 +1,29 @@
 ---
 title: "什麼 &#39; s 機器學習服務的新功能 |Microsoft 文件"
-ms.date: 11/16/2017
+ms.date: 01/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>新功能 SQL Server 中的機器學習服務
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 SQL Server 2016 中，Microsoft 導入了 SQL Server R 服務，支援企業級資料科學，藉由整合 R 語言與 SQL Server 資料庫引擎的功能。
 
@@ -34,9 +35,11 @@ ms.lasthandoff: 12/20/2017
 
 SQL Server 中的機器學習伺服器提供用於建置及部署 Python 或 R 中的機器學習解決方案的完整支援。 以下是此版本的重點：
 
-### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>新功能 SQL Server 2017 累計更新 1
+### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>新功能 SQL Server 2017 累積更新 3
 
-您現在可以升級到機器學習伺服器 9.2.1.24 的 Python 和 R 元件。 此版本主打許多增強功能**revoscalepy**和**RevoScaleR**，包括效能改進。
+這個版本包含 Python 和 R 元件的更新。 
+
++ 已新增的支援 Python 模型中進行序列化 revoscalepy，使用 rx_serialize_model 函式
 
 ### <a name="in-database-python-integration"></a>資料庫 Python 整合
 
@@ -58,7 +61,7 @@ SQL Server 開發人員可以存取的更詳盡的 Python 程式庫的開放原�
 
 + Python 支援在 Microsoft Machine Learning 伺服器 （獨立）
 
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]包含安裝 Microsoft Machine Learning 伺服器的獨立版本的選項。 使用機器學習伺服器，您就可以發佈，並調整 R 或 Python 程式碼，而不需要使用 SQL Server。
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] 包含安裝 Microsoft Machine Learning 伺服器的獨立版本的選項。 使用機器學習伺服器，您就可以發佈，並調整 R 或 Python 程式碼，而不需要使用 SQL Server。
 
 ### <a name="linux-support"></a>Linux 支援
 
@@ -84,7 +87,7 @@ SQL Server 開發人員可以存取的更詳盡的 Python 程式庫的開放原�
 
     **Mrsdeploy**封裝[!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]和[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]支援做為 web 服務的 Python 模型和指令碼部署。 如需其運作方式的範例，請參閱[發行和取用的 Python 程式碼](python/publish-consume-python-code.md)。
 
-+ [效能]
++ 效能
 
     Microsoft 已推入的效能分數的界限。 使用中資料庫計分，我們會處理每百萬個資料列使用 R 模型的第二個。 在本版中的新功能**即時計分**和**原生計分**支援在單一資料列和批次計分的更佳的效能。
 
@@ -122,7 +125,7 @@ SQL Server 開發人員可以存取的更詳盡的 Python 程式庫的開放原�
 
 如需詳細資訊，請參閱[封裝管理](r/r-package-management-for-sql-server-r-services.md)。
 
-### <a name="get-started"></a>快速入門
+### <a name="get-started"></a>開始使用
 
 + [設定 SQL Server 機器學習服務中的 Python](../advanced-analytics/python/setup-python-machine-learning-services.md)
 

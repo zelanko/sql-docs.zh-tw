@@ -3,7 +3,7 @@ title: "SQLdiag 公用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqldiag
 ms.reviewer: 
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2533811a2ccc47ac836079c4a4972bfc1f9e5bd7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd4a4a1627a4a92a6d2f1942cfd9ad618105422d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**SQLdiag**公用程式是可當做主控台應用程式或服務執行的一般用途診斷集合公用程式。 您可以使用 **SQLdiag** ，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視一段時間的伺服器，或對伺服器的特定問題進行疑難排解。 **SQLdiag** 的用途是為了加速及簡化 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務的診斷資訊收集工作。  
@@ -54,11 +54,11 @@ ms.lasthandoff: 12/05/2017
   
 -   Windows 事件記錄檔  
   
--   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 追蹤  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]追蹤  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 封鎖資訊  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]封鎖資訊  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態資訊  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]組態資訊  
   
  您可以編輯組態檔 SQLDiag.xml，指定您希望 **SQLdiag** 收集的資訊類型，後續的章節會有相關說明。  
   
@@ -300,7 +300,7 @@ SQLDIAG STOP /A Instance1
 >  請使用 **SQLDiag STOP** 或 **SQLDIAG STOP_ABORT** 停止 **SQLdiag** 服務。 請勿使用 Windows 服務主控台停止 **SQLdiag** 或其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務。  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>自動啟動和停止 SQLdiag  
- 若要在指定時間自動啟動及停止診斷資料收集，請使用 **/B***start_time* 和 **/E***stop_time* 引數，並採用 24 小時制標記法。 例如，如果您要針對大約在 02:00:00 一致出現的問題進行疑難排解，您可以將 **SQLdiag** 設定成在 01:00 自動開始收集診斷資料且在 03:00:00 自動停止。 請利用 **/B** 和 **/E** 引數來指定開始和停止時間。 請利用 24 小時標記法來指定開始和停止的確切日期和時間，格式為 YYYYMMDD_HH:MM:SS。 若要指定相對的開始或停止時間，請依照下列範例所示，在開始和停止時間之前附加 **+** ，並省略日期部分 (YYYYMMDD_)，如此會讓 **SQLdiag** 等候 1 小時再開始收集資訊，之後會收集 3 小時的資訊，再停止並結束：  
+ 若要自動啟動及停止診斷資料集合在指定的時間，使用 **/B * * * start_time*和 **/E * * * stop_time*引數，使用 24 小時標記法。 例如，如果您要針對大約在 02:00:00 一致出現的問題進行疑難排解，您可以將 **SQLdiag** 設定成在 01:00 自動開始收集診斷資料且在 03:00:00 自動停止。 請利用 **/B** 和 **/E** 引數來指定開始和停止時間。 請利用 24 小時標記法來指定開始和停止的確切日期和時間，格式為 YYYYMMDD_HH:MM:SS。 若要指定相對的開始或停止時間，請依照下列範例所示，在開始和停止時間之前附加 **+** ，並省略日期部分 (YYYYMMDD_)，如此會讓 **SQLdiag** 等候 1 小時再開始收集資訊，之後會收集 3 小時的資訊，再停止並結束：  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -361,10 +361,10 @@ SQLDIAG START /A Instance1
  不支援暫停 **SQLdiag** 服務。  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>執行 SQLdiag 的多個執行個體  
- 在相同電腦的命令列上指定 **/A** SQLdiag_application_name **，執行多個***SQLdiag* 的執行個體。 這對於同時從相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體收集不同的診斷集很有幫助。 例如，您可以設定 **SQLdiag** 的具名執行個體，持續執行輕量型資料收集。 之後，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上發生特定的問題，您可以執行預設的 **SQLdiag** 執行個體來收集該問題的診斷資訊，或蒐集 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務要求您搜尋的一組診斷來診斷問題。  
+ 執行多個執行個體**SQLdiag**藉由指定的相同電腦上 **/ * * * SQLdiag_application_name*命令列上。 這對於同時從相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體收集不同的診斷集很有幫助。 例如，您可以設定 **SQLdiag** 的具名執行個體，持續執行輕量型資料收集。 之後，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上發生特定的問題，您可以執行預設的 **SQLdiag** 執行個體來收集該問題的診斷資訊，或蒐集 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務要求您搜尋的一組診斷來診斷問題。  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>從叢集 SQL Server 執行個體收集診斷資料  
- **SQLdiag** 支援從叢集的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中收集診斷資料。 若要收集診斷從叢集[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體，請確定**"。"**指定**名稱**屬性**\<機器 >**項目在組態檔 SQLDiag.Xml，且未指定**/G**命令列上的引數。 預設會在組態檔中對 **name** 屬性指定 **"."** ，且會關閉 **/G** 引數。 通常，從叢集的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中收集時，您不需要編輯組態檔或變更命令列引數。  
+ **SQLdiag** 支援從叢集的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中收集診斷資料。 若要收集診斷從叢集[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體，請確定**"。"**指定**名稱**屬性**\<機器 >**項目在組態檔 SQLDiag.Xml，且未指定**/G**命令列上的引數。 預設會在組態檔中對 **name** 屬性指定 **"."**，且會關閉 **/G** 引數。 通常，從叢集的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中收集時，您不需要編輯組態檔或變更命令列引數。  
   
  當 **"."** 指定為機器名稱時， **SQLdiag** 會偵測到它執行於叢集上，同時會從安裝在叢集上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有虛擬執行個體，擷取診斷資訊。 如果您想要從只有一個虛擬執行個體收集診斷資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行的電腦上，指定這個虛擬[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]如**名稱**屬性**\<機器 >** SQLDiag.Xml 中的項目。  
   

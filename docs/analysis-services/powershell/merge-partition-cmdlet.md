@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 15c7b069-897d-4bc8-a808-59cbeeabe4d8
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 56eb9bbfe5102048cee91bb7d54a0afe78f20194
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 897104785c82686879a83811d070c3e1ce8391ae
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="merge-partition-cmdlet"></a>Merge-Partition 指令程式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]將一或多個來源資料分割的資料合併到目標分割區，然後刪除來源資料分割。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/08/2017
   
  `Merge-ASDatabase -TargetPartition <Microsoft.AnalysisServices.Partition> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  Merge-Partition 指令程式會將一個或多個來源資料分割的資料合併至目標資料分割中，然後刪除來源資料分割。 只能合併符合下列所有準則的資料分割：  
   
 -   資料分割位於相同的量值群組中。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|1|  
+|位置？|@shouldalert|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  

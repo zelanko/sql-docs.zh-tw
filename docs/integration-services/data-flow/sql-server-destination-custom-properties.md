@@ -8,38 +8,39 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61f7caddb59fc68399b274a71db5ee740d0f21c9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b591be99afa39117d61454b0cad2a2124d88ee2b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 目的地自訂屬性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地同時具有自訂屬性，以及所有資料流程元件通用的屬性。  
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|說明|  
+|屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |AlwaysUseDefaultCodePage|布林|強制使用 DefaultCodePage 屬性值。 此屬性的預設值為 **False**。|  
-|BulkInsertCheckConstraints|布林|一個值，指定大量插入是否會檢查條件約束。 此屬性的預設值為 **True**。|  
+|BulkInsertCheckConstraints|布林|一個值，指定大量插入是否會檢查條件約束。 這個屬性的預設值為 **True**。|  
 |BulkInsertFireTriggers|布林|一個值，指定大量插入是否會引發資料表上的觸發程序。 此屬性的預設值為 **False**。|  
 |BulkInsertFirstRow|Integer|一個值，指定要插入的第一個資料列。 此屬性的預設值是 **-1**，表示未指派任何值|  
 |BulkInsertKeepIdentity|布林|一個值，指定值是否可插入識別欄位中。 此屬性的預設值為 **False**。|  
 |BulkInsertKeepNulls|布林|一個值，指定大量插入是否會保留 Null 值。 此屬性的預設值為 **False**。|  
 |BulkInsertLastRow|Integer|一個值，指定要插入的最後一個資料列。 此屬性的預設值是 **-1**，表示未指派任何值。|  
 |BulkInsertMaxErrors|Integer|一個值，指定停止大量插入之前可以發生的錯誤數目。 此屬性的預設值是 **-1**，表示未指派任何值。|  
-|BulkInsertOrder|字串|排序資料行的名稱。 每個資料行都可依遞增或遞減順序來排序。 如果使用了多個排序資料行，這些資料行名稱會以逗號隔開。|  
-|BulkInsertTableName|字串|要將資料複製到其中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表或檢視表。|  
+|BulkInsertOrder|String|排序資料行的名稱。 每個資料行都可依遞增或遞減順序來排序。 如果使用了多個排序資料行，這些資料行名稱會以逗號隔開。|  
+|BulkInsertTableName|String|要將資料複製到其中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表或檢視表。|  
 |BulkInsertTablock|布林|一個值，指定在進行大量插入期間是否會鎖定資料表。 此屬性的預設值為 **True**。|  
 |DefaultCodePage|Integer|無法從資料來源中取得字碼頁資訊時要使用的字碼頁。|  
 |MaxInsertCommitSize|Integer|一個值，指定要在批次中插入的資料列數目上限。 當此值為零時，就會在單一批次中插入所有資料列。|  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/20/2017
  如需詳細資訊，請參閱 [SQL Server 目的地](../../integration-services/data-flow/sql-server-destination.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

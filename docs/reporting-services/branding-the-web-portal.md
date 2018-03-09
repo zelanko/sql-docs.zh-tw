@@ -8,18 +8,18 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a3f7f0f6e67ffb9c3b9460241f84f46ada29e746
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c01c3c7f6c05e0005f92addf82fb7e45d142b338
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 
@@ -97,7 +97,7 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 介面區段分成下列群組。  
   
-|章節|說明|  
+|章節|描述|  
 |---|---|  
 |primary|按鈕和暫留色彩。|  
 |次要|標題列、搜尋列、左邊功能表 (如果顯示) 及這些項目的文字色彩|  

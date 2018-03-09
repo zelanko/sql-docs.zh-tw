@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45124fb2e318cee317d496a525094b63651716d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d336c8e61a51967c84535bac977f2cd85fbcf570
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="conversions-performed-from-server-to-client"></a>從伺服器到用戶端執行的轉換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,13 +35,13 @@ ms.lasthandoff: 11/17/2017
   
 |目標 -><br /><br /> 來源|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|日期|1,7|確定|-|-|1|1,3|1,7|-|[確定] (VT_BSTR)|確定|確定|4|4|  
-|Time|5,6,7|-|9|確定|6|3,6|5,6|-|[確定] (VT_BSTR)|確定|確定|4|4|  
+|日期|1,7|確定|-|-|1|1,3|1,7|-|OK (VT_BSTR)|確定|確定|4|4|  
+|Time|5,6,7|-|9|確定|6|3,6|5,6|-|OK (VT_BSTR)|確定|確定|4|4|  
 |Smalldatetime|7|8|9,10|10|確定|3|7|-|7 (VT_DATE)|確定|確定|4|4|  
 |Datetime|5,7|8|9,10|10|確定|3|7|-|7 (VT_DATE)|確定|確定|4|4|  
-|Datetime2|5,7|8|9,10|10|7|3|5,7|-|[確定] (VT_BSTR)|確定|確定|4|4|  
-|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|確定|5,7,11|-|[確定] (VT_BSTR)|確定|確定|4|4|  
-|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|不適用|不適用|不適用|不適用|不適用|不適用|  
+|Datetime2|5,7|8|9,10|10|7|3|5,7|-|OK (VT_BSTR)|確定|確定|4|4|  
+|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|確定|5,7,11|-|OK (VT_BSTR)|確定|確定|4|4|  
+|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|해당 사항 없음|不適用|不適用|不適用|不適用|해당 사항 없음|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|確定|3|7|-|7 (VT_DATE)|確定|確定|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|確定|3|7|-|7 (VT_DATE)|確定|確定|4|4|  
 |Sql_variant<br /><br /> (date)|1,7|確定|2|2|1|1,3|1,7|-|OK(VT_BSTR)|確定|確定|4|4|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |12|此字串會剖析為 ISO 常值，並轉換為目標類型。 如果失敗，字串會剖析為 OLE 日期常值 (也有時間元件)，並從 OLE 日期 (DBTYPE_DATE) 轉換為目標類型。 字串必須符合進行 ISO 格式剖析所允許之目標類型常值的語法才會成功。 若要讓 OLE 剖析成功，字串必須符合 OLE 所識別的語法。 如果無法剖析字串，則會設定 DBSTATUS_E_CANTCONVERTVALUE。 如果任何元件值超出範圍，會設定 DBSTATUS_E_DATAOVERFLOW。|  
 |13|此字串會剖析為 ISO 常值，並轉換為目標類型。 如果失敗，字串會剖析為 OLE 日期常值 (也有時間元件)，並從 OLE 日期 (DBTYPE_DATE) 轉換為目標類型。 除非目的地為 DBTYPE_DATE 或 DBTYPE_DBTIMESTAMP，否則字串必須符合日期時間常值的語法。 如果是這種狀況，ISO 格式剖析允許使用日期時間或時間嘗試才會成功。 若要讓 OLE 剖析成功，字串必須符合 OLE 所識別的語法。 如果無法剖析字串，則會設定 DBSTATUS_E_CANTCONVERTVALUE。 如果任何元件值超出範圍，會設定 DBSTATUS_E_DATAOVERFLOW。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [繫結和轉換 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

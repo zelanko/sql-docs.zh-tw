@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - LIKE
 - ESCAPE_TSQL
 - LIKE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ESCAPE keyword
 - '% (wildcard - character(s) to match)'
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - matching patterns [SQL Server]
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ca323b2431d493edd3db513502f197580b4149d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 4fa2299a1efade9f44de85d02c60286a25aad8d0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +69,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)字元資料類型。  
   
- *模式*  
+ *pattern*  
  要搜尋的字元的特定字串*match_expression*，而且可以包含下列有效的萬用字元。 *模式*最多可有 8,000 個位元組。  
   
 |萬用字元|Description|範例|  
@@ -91,7 +93,7 @@ match_expression [ NOT ] LIKE pattern
   
  使用包含的模式字串比較**char**和**varchar**資料可能無法通過 LIKE 比較，因為資料的儲存方式。 您應該了解每個資料類型的儲存體以及 LIKE 比較可能失敗的情況。 下列範例會傳遞區域變數**char**變數設為預存程序，再利用模式比對來尋找所有員工的姓氏開頭指定的一組字元。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +111,7 @@ GO
   
  不過，下列範例會成功，因為尾端空白不會加入至**varchar**變數。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +139,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  下列範例會顯示 ASCII 和 Unicode LIKE 模式比對所傳回之資料列的差異。  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +170,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  例如，下列查詢會顯示 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的所有動態管理檢視，因為它們的開頭全是 `dm` 字母。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +209,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. 使用 LIKE 搭配 % 萬用字元  
  下列範例會在 `415` 資料表中，尋找區域碼是 `PersonPhone` 的所有電話號碼。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +243,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>B. 使用 NOT LIKE 搭配 % 萬用字元  
  下列範例會在 `PersonPhone` 資料表中，尋找區域碼不是 `415` 的所有電話號碼。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +274,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
  下列範例會利用 `ESCAPE` 子句和逸出字元來尋找 `10-15%` 資料表 `c1` 資料行中完全相符的 `mytbl2` 字元字串。  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +299,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>D. 使用 [ ] 萬用字元  
  下列範例會尋找員工上`Person`資料表的第一個名稱`Cheryl`或`Sheryl`。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +310,7 @@ GO
   
  下列範例會在 `Person` 資料表上尋找姓氏為 `Zheng` 或 `Zhang` 的員工。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +325,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. 使用 LIKE 搭配 % 萬用字元  
  下列範例會尋找所有員工的`DimEmployee`資料表開頭的電話號碼與`612`。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -333,9 +335,9 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. 使用 NOT LIKE 搭配 % 萬用字元  
- 下列範例會尋找所有電話號碼中的`DimEmployee`資料表，不會啟動`612`。  執行個體時提供 SQL Server 登入。  
+ 下列範例會尋找所有電話號碼中的`DimEmployee`資料表，不會啟動`612`。  。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +349,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. 使用 LIKE 搭配 _ 萬用字元  
  下列範例會尋找有區域碼開頭的所有電話號碼`6`中和結束`2`中`DimEmployee`資料表。 請注意，%萬用字元也包含在搜尋模式的結尾因為區碼是電話號碼的第一個部分，而且其他字元後存在的資料行值中。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -356,9 +358,9 @@ WHERE phone LIKE '6_2%'
 ORDER by LastName;   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  

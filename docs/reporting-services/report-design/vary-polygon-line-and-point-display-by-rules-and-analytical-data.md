@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,13 +25,13 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 464731c279d55f20b725193cde9db1e5f2974bf2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>使用規則與分析資料更改多邊形、線條與點顯示
   地圖圖層上多邊形、線條與點的顯示選項是透過設定圖層的選項、設定圖層上地圖元素的規則，或是覆寫圖層上特定內嵌地圖元素的選項來控制。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  不論地圖元素是否內嵌在報表定義中，在多邊形圖層、線條圖層與點圖層上設定的選項都會套用到該圖層上的所有地圖元素。  
   
-2.  針對規則設定的選項會套用到圖層上的所有地圖元素。 所有資料視覺效果選項都只會套用到與空間資料相關聯的地圖元素。 資料視覺效果選項會要求您指定資料欄位做為顯示變數的基礎。 您必須已經為分析資料與空間資料設定符合欄位，才能套用資料視覺效果規則。 如需詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
+2.  針對規則設定的選項會套用到圖層上的所有地圖元素。 所有資料視覺效果選項都只會套用到與空間資料相關聯的地圖元素。 資料視覺效果選項會要求您指定資料欄位做為顯示變數的基礎。 您必須已經為分析資料與空間資料設定符合欄位，才能套用資料視覺效果規則。 如需詳細資訊，請參閱[地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
 3.  您為所選內嵌地圖元素設定的選項。 請注意，當您覆寫圖層選項時，您對報表定義所做的變更無法復原。 您可以變更資料欄位值，也可以覆寫顯示選項來自訂特定多邊形、線條和點顯示在圖層上的方式。  
   
@@ -129,7 +127,7 @@ ms.lasthandoff: 12/05/2017
   
  下表顯示您可以使用之不同格式的範例。  
   
-|關鍵字與格式|說明|在圖例中顯示為文字的範例|  
+|關鍵字與格式|描述|在圖例中顯示為文字的範例|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|顯示沒有小數位數之總值的貨幣|$400|  
 |`#FROMVALUE {C2}`|顯示兩個小數位數之總值的貨幣。|$400.55|  

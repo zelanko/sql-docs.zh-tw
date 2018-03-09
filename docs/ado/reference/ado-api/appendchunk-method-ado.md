@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Parameter::AppendChunk
 - Field20::AppendChunk
-helpviewer_keywords: AppendChunk method [ADO]
+helpviewer_keywords:
+- AppendChunk method [ADO]
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 733dbd43501211c631fad51f993b8d663da0d844
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 32430fd62de54adfba22af5d3ea5447a70fd75a7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 將資料附加至大型文字或二進位資料[欄位](../../../ado/reference/ado-api/field-object.md)，或[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  
@@ -58,7 +60,7 @@ object.AppendChunk Data
 > [!NOTE]
 >  **AppendChunk**方法不能進行**欄位**物件[記錄 Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)物件。 它不會執行任何作業，並會產生執行階段錯誤。  
   
-## <a name="parameter"></a>參數  
+## <a name="parameter"></a>매개 변수  
  如果**adParamLong**位元**屬性**屬性**參數**物件設定為**true**，您可以使用**AppendChunk**該參數的方法。  
   
  第一個**AppendChunk**上呼叫**參數**物件會將資料寫入至參數，覆寫任何現有的資料。 後續**AppendChunk**上呼叫**參數**物件加入至現有的參數資料。 **AppendChunk**傳遞 null 值的呼叫就會捨棄所有參數的資料。  
@@ -69,7 +71,7 @@ object.AppendChunk Data
 |-|-|  
 |[Field 物件](../../../ado/reference/ado-api/field-object.md)|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppendChunk 和 GetChunk 方法範例 (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk 和 GetChunk 方法範例 （VC + +）](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [屬性的內容 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c213a3cf52c65b83609bb5f7a0a1acc1cbbc906
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c805ba92cc4b83e09b4328ab2cffa9947eb93c33
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性
   SharePoint 提供內建安全性功能，可用來存取 SharePoint 網站和文件庫中的報表伺服器項目。 如果您已經指定網站和清單權限給使用者，則在設定 SharePoint 和報表伺服器之間的整合設定之後，那些相同的使用者就能立即存取報表伺服器項目和作業。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="securable-items"></a>安全性實體項目  
  您可以使用在網站或文件庫上定義的權限來授與報表伺服器項目的存取權。 不過，如果您要保護個別項目的安全，可以設定下列內容類型的權限：  
   
-|檔案類型|說明|  
+|檔案類型|描述|  
 |---------------|-----------------|  
 |.rdl|報表定義檔案，定義報表配置和用來擷取資料的命令。 報表定義會在處理報表時，使用資料來源連接資訊擷取資料。 如果報表定義是先前在報表產生器中建立的特定報表，則報表會與在轉譯報表中，設定資料瀏覽範圍的報表模型 (.smdl) 檔案配對。|  
 |.smdl|報表模型檔案，描述資料結構與彼此相關聯的方式， 可用來建立和執行報表產生器報表。|  

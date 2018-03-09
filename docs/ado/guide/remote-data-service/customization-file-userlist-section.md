@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d9e2ea77de53256e075db07b8f809298e74628d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f883b100d522f90ae802578256108ee9e658b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-userlist-section"></a>自訂檔案 UserList > 一節
 **Userlist**區段屬於**連接**區段中具有相同的區段*識別碼*參數。  
@@ -37,15 +38,15 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>語法  
  格式是使用者存取項目：  
   
- *使用者名稱***=**   
+ *userName* **=**   
  ***accessRights***  
   
-|部分|描述|  
+|部分|Description|  
 |----------|-----------------|  
-|*使用者名稱*|*使用者名*採用此連接的人員。 有效的使用者名稱使用 IIS 建立**Service Manager**對話方塊。|  
+|*userName*|*使用者名*採用此連接的人員。 有效的使用者名稱使用 IIS 建立**Service Manager**對話方塊。|  
 |***accessRights***|其中一個的下列存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** — 使用者可以讀取的資料來源。<br />-   **ReadWrite** — 使用者可讀取或寫入至資料來源。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

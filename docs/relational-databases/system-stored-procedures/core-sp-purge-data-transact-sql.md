@@ -1,5 +1,5 @@
 ---
-title: "core.sp_purge_data (TRANSACT-SQL) |Microsoft 文件"
+title: core.sp_purge_data (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
 - sp_purge_data
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_purge_data
 - management data warehouse, data collector stored procedures
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b03e5ef5984431f3fe2867e2dc303ca2ba710435
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb74c4993f7a7d013e56061e3a572052c2939a99
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +56,12 @@ core.sp_purge_data
  [@retention_days =] *retention_days*  
  要將資料保留在管理資料倉儲資料表中的天數。 資料的時間戳記早於*retention_days*已移除。 *retention_days*是**smallint**，預設值是 NULL。 如果已指定，此值必須是正數。 如果為 NULL，core.snapshots 檢視表中 valid_through 資料行的值就會決定適合移除的資料列。  
   
- [@instance_name =] '*instance_name*'  
+ [@instance_name = ] '*instance_name*'  
  收集組的執行個體名稱。 *instance_name*是**sysname**，預設值是 NULL。  
   
  *instance_name*必須是完整的執行個體名稱，其中包含電腦名稱與執行個體名稱，表單*computername*\\*instancename*。 如果為 NULL，就會使用本機伺服器上的預設執行個體。  
   
- [@collection_set_uid =] '*collection_set_uid*'  
+ [@collection_set_uid = ] '*collection_set_uid*'  
  收集組的 GUID。 *collection_set_uid*是**uniqueidentifier**，預設值是 NULL。 如果為 NULL，就會從所有收集組中移除合格的資料列。 若要取得這個值，請查詢 syscollector_collection_sets 目錄檢視。  
   
  [@duration =]*持續時間*  
@@ -112,7 +114,7 @@ EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = 
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

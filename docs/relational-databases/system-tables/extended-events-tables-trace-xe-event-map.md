@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - trace_xe_event_map_TSQL
 - trace_xe_event_map
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace_xe_event_map
 - extended events [SQL Server], tables
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53de5be9963850d073e2b223058085805928e360
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 76925048b9913579acb6eea6293d73260afd1b18
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="extended-events-tables---tracexeeventmap"></a>擴充事件目錄資料表-trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +40,8 @@ ms.lasthandoff: 11/27/2017
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |trace_event_id|**smallint**|正在對應之 SQL 追蹤事件類別的識別碼。|  
-|package_name|**nvarchar （60)**|對應事件所在之擴充事件封裝的名稱。|  
-|xe_event_name|**nvarchar （60)**|對應至 SQL 追蹤事件類別之「擴充事件」事件的名稱。|  
+|package_name|**nvarchar(60)**|對應事件所在之擴充事件封裝的名稱。|  
+|xe_event_name|**nvarchar(60)**|對應至 SQL 追蹤事件類別之「擴充事件」事件的名稱。|  
   
 ## <a name="remarks"></a>備註  
  您可以使用下列查詢來識別相當於 SQL 追蹤事件類別的「擴充事件」事件：  
@@ -64,7 +66,7 @@ WHERE xe.trace_event_id IS NULL
   
  在先前查詢中，傳回的事件類別大部分都是稽核相關的。 我們建議您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 進行稽核。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 會使用擴充事件來協助建立稽核。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)  
   
   

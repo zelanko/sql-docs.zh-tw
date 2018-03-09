@@ -1,38 +1,37 @@
 ---
 title: "監視追蹤 (XMLA) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, traces
 - XMLA, traces
 - monitoring traces [XMLA]
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3895ae75a7e7e34456756ea9dfb5b2fe4198e32c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitoring-traces-xmla"></a>監視追蹤 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以使用[訂閱](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md)XML for Analysis (XMLA) 來監視現有的執行個體上定義的追蹤命令[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 **訂閱**命令會傳回成資料列集追蹤的結果。  
+  您可以使用[訂閱](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md)XML for Analysis (XMLA) 來監視現有的執行個體上定義的追蹤命令[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 **訂閱**命令會傳回成資料列集追蹤的結果。  
   
 ## <a name="specifying-a-trace"></a>指定追蹤  
  [物件](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)屬性**訂閱**命令必須包含物件參考為[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體或上的追蹤[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 如果**物件**未指定屬性，或在未指定追蹤識別碼**物件**屬性，**訂閱**命令監視的預設工作階段追蹤指定命令的 SOAP 標頭中的明確工作階段。  
@@ -76,11 +75,11 @@ ms.lasthandoff: 12/08/2017
 |NTCanonicalUserName|字串|與事件相關聯之使用者的 Windows 標準使用者名稱。|  
 |SPID|字串|發生事件之工作階段的伺服器處理序識別碼 (SPID)。 此資料行的值會直接對應到發生事件的 XMLA 訊息之 SOAP 標頭中，所指定的工作階段識別碼。|  
 |TextData|字串|與事件相關聯的文字資料。 這個資料行的內容會隨著事件類別與事件子類別而不同。|  
-|ServerName|字串|發生事件之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。|  
+|ssSqlProfiler|字串|發生事件之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。|  
 |RequestParameters|字串|發生事件的參數化查詢或是 XMLA 命令的參數。|  
 |RequestProperties|字串|發生事件之 XMLA 方法的屬性。|  
   
-## <a name="see-also"></a>請參閱  
- [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

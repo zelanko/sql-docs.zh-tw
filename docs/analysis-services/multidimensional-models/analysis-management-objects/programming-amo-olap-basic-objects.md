@@ -1,38 +1,37 @@
 ---
 title: "程式設計 AMO OLAP 基本物件 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e92a5a964dc95906cc6d74e983723868e7b48c61
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>設計 AMO OLAP 基本物件的程式
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]建立複雜[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件既簡單又直接，但是需要注意細節。 本主題說明 OLAP 基本物件的程式設計詳細資料。 本主題包含下列幾節：  
+  建立複雜的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件既簡單又直接，但是需要注意細節。 本主題說明 OLAP 基本物件的程式設計詳細資料。 本主題包含下列幾節：  
   
 -   [維度物件](#Dim)  
   
@@ -44,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Aggregation 物件](#AD)  
   
-##  <a name="Dim"></a>維度物件  
+##  <a name="Dim"></a> 維度物件  
  若要管理或是處理維度，請設計 <xref:Microsoft.AnalysisServices.Dimension> 物件的程式。  
   
 ### <a name="creating-dropping-and-finding-a-dimension"></a>建立、卸除和尋找維度  
@@ -181,7 +180,7 @@ static void UpdateAllDimensions(Database db)
 }  
 ```  
   
-##  <a name="Cub"></a>Cube 物件  
+##  <a name="Cub"></a> Cube 物件  
  若要管理或是處理 Cube，請設計 <xref:Microsoft.AnalysisServices.Cube> 物件的程式。  
   
 ### <a name="creating-dropping-and-finding-a-cube"></a>建立、卸除和尋找 Cube  
@@ -266,7 +265,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG"></a>MeasureGroup 物件  
+##  <a name="MG">MeasureGroup 物件</a>  
  若要管理或是處理量值群組，請設計 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件的程式。  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>建立、卸除和尋找 MeasureGroup  
@@ -435,7 +434,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part"></a>分割區物件  
+##  <a name="Part">分割區物件</a>  
  若要管理或是處理資料分割，請設計 <xref:Microsoft.AnalysisServices.Partition> 物件的程式。  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>建立、卸除和尋找資料分割  
@@ -486,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 }  
 ```  
   
-###  <a name="ProcPart"></a>處理資料分割  
+###  <a name="ProcPart"></a> 處理資料分割  
  處理資料分割就像使用 <xref:Microsoft.AnalysisServices.Partition> 物件的 Process 方法一樣簡單。  
   
  如需有關處理選項的詳細資訊，請參閱[處理物件 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)和[處理多維度模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
@@ -534,7 +533,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD"></a>Aggregation 物件  
+##  <a name="AD">Aggregation 物件</a>  
  若要設計彙總並將它套用至一或多個資料分割，請設計 <xref:Microsoft.AnalysisServices.Aggregation> 物件的程式。  
   
 ### <a name="creating-and-dropping-aggregations"></a>建立和捨棄彙總  
@@ -570,7 +569,7 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP 類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   

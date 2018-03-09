@@ -7,20 +7,21 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 40554878da331bd975164a6ece13cd92ca251182
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>若要支援 Python 整合 SQL Server 中的元件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 機器學習服務從 SQL Server 2017，做為外部語言，可以從 T-SQL、 執行或執行當成計算內容使用遠端 SQL Server 支援 Python。
 
@@ -116,7 +117,7 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
 
 指令碼包含已內嵌在預存程序之後，可以進行呼叫的預存程序的任何應用程式可以初始化執行 Python 程式碼。  此後[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]管理程式碼執行，在下圖將摘要說明。
 
-![指令碼中 db python](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Python 執行階段的要求會以參數`@language='Python'`傳遞至預存程序。 SQL Server Launchpad 服務来傳送此要求。
 2. Launchpad 服務啟動適當的啟動器。在此情況下，PythonLauncher。
@@ -124,7 +125,7 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
 4. BxlServer 協調 Python 執行階段管理交換資料，與工作結果的儲存體。
 5. SQL 附屬管理相關工作的通訊並處理具有[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。
 6. BxlServer 使用 SQL Satellite 來與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 進行狀態和結果的通訊。
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 會取得結果，並關閉相關工作和處理序。
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 取得結果，並關閉相關的工作和程序。
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>從遠端用戶端執行 Python 指令碼
 
@@ -135,7 +136,7 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
 
 從遠端電腦傳送指令碼時下, 圖摘要說明整體的工作流程。
 
-![遠端-sqlcc-從-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. 中支援的函式**revoscalepy**，Python 執行階段呼叫連結的函式，也就會呼叫 BxlServer。
 2. BxlServer 隨附機器學習服務 （資料庫），並且會在個別的處理序中執行來自 Python 執行階段。
@@ -145,8 +146,8 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
 6. PythonLauncher 會呼叫執行個體已安裝 Python[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]電腦。
 7. 結果會傳回 BxlServer。
 8. SQL Satellite 管理與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的通訊，並清理相關的工作物件。
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 將結果傳遞回用戶端。
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 結果傳回給用戶端。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [SQL Server 中的 python 架構概觀](architecture-overview-sql-server-python.md)

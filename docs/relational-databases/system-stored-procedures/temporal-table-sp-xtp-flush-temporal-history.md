@@ -1,5 +1,5 @@
 ---
-title: "sp_xtp_flush_temporal_history |Microsoft 文件"
+title: sp_xtp_flush_temporal_history | Microsoft Docs
 ms.custom: 
 ms.date: 02/21/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016 CTP3)
+applies_to:
+- SQL Server (starting with 2016 CTP3)
 f1_keywords:
 - sp_xtp_flush_temporal_history
 - sp_xtp_flush_temporal_history_TSQL
 - sys.sp_xtp_flush_temporal_history
 - sys.sp_xtp_flush_temporal_history_TSQL
-helpviewer_keywords: sp_xtp_flush_temporal_history
+helpviewer_keywords:
+- sp_xtp_flush_temporal_history
 ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75a2394e72a0990a9f5108af6b77feb1fb3c44d6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f68bb1a07ba3edb33c99339b53b0f85e343576ad
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="temporal-table---spxtpflushtemporalhistory"></a>時態表-sp_xtp_flush_temporal_history
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,7 +61,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ## <a name="permissions"></a>Permissions  
  需要 db_owner 權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [記憶體最佳化系統版本設定時態表的效能考量](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)  
   
   

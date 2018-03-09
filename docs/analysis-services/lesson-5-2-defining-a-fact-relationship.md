@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0223be3eb321aee4ecae975fe77a776082ed495f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5ffe10857e0111735cd92fefdae106641ad2954e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>課程 5-2-定義事實關聯性
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]使用者有時也要能夠建立量值維度的事實資料表中的資料項目或查詢事實資料表中的特定的其他相關資訊，例如發票號碼或購買特定銷售事實相關的訂單號碼。 當您依據這樣的事實資料表項目來定義維度時，這種維度稱為「事實維度」。 事實維度也稱為變質維度。 事實維度對於將相關事實資料表資料列 (例如，與特定發票號碼相關的所有資料列) 分組很有幫助。 雖然您可以將這項資訊放在關聯式資料庫的個別維度資料表中，但為這項資訊建立個別的維度資料表並無好處，因為維度資料表與事實資料表的成長速率一樣，只會建立重複資料和產生不必要的複雜性而已。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+使用者有時候想要按事實資料表中的資料項目建立量值維度，或查詢事實資料表中的其他特定相關資訊，例如與特定銷售事實相關的發票號碼或訂單號碼。 當您依據這樣的事實資料表項目來定義維度時，這種維度稱為「事實維度」。 事實維度也稱為變質維度。 事實維度對於將相關事實資料表資料列 (例如，與特定發票號碼相關的所有資料列) 分組很有幫助。 雖然您可以將這項資訊放在關聯式資料庫的個別維度資料表中，但為這項資訊建立個別的維度資料表並無好處，因為維度資料表與事實資料表的成長速率一樣，只會建立重複資料和產生不必要的複雜性而已。  
   
 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，您可以決定是否要在 MOLAP 維度結構中重複事實維度資料來增加查詢效能，或是否要將事實維度定義成 ROLAP 維度，以犧牲查詢效能的代價來節省儲存空間。 當您以 MOLAP 儲存模式來儲存維度時，所有維度成員除了儲存在量值群組的資料分割外，還會以高度壓縮的 MOLAP 結構而儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體。 當您以 ROLAP 儲存模式來儲存維度時，只有維度定義會儲存在 MOLAP 結構中—維度成員本身是在查詢階段接受基礎關聯式事實資料表的查詢。 您可以依據事實維度查詢的頻率、一般查詢傳回的資料列數、查詢的效能和處理成本，來決定適當的儲存模式。 將維度定義為 ROLAP 並不需要所有使用該維度的 Cube 都以 ROLAP 儲存模式來儲存。 每個維度的儲存模式可獨立設定。  
   

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31cd1294590d81c25a0a09d67a7746ea7dee49ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48c7d177acea6812a7b10610a2ab67930b3e9e2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用原則式管理來監視和強制最佳做法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 原則式管理可讓您監視 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的最佳做法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供一組原則檔讓您當作最佳做法原則匯入，然後為包含執行個體、執行個體物件、資料庫或資料庫物件的目標集評估原則。 您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |SQL Server 登入模式|[選擇驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)|  
 |SQL Server 平行處理原則的最大程度|[設定平行處理原則的最大程度選項來取得最佳效能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)|  
 |32 位元 SQL Server 2000 的 SQL Server 最大工作者執行緒|[確認最大工作者執行緒設定](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
-|64 位元 SQL Server 2000 的 SQL Server 最大工作者執行緒|[確認最大工作者執行緒設定](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
+|64 位元 SQL Server 2000 的 SQL Server 最大工作者執行緒|[驗證最大工作者執行緒設定](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |SQL Server 2005 和更新版本的 SQL Server 最大工作者執行緒|[確認最大工作者執行緒設定](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |SQL Server 網路封包大小|[網路封包大小不應超過 8060 個位元組](../../relational-databases/policy-based-management/network-packet-size-should-not-exceed-8060-bytes.md)|  
 |SQL Server 密碼逾期|[SQL Server 登入密碼逾期](../../relational-databases/policy-based-management/sql-server-login-password-expiration.md)|  

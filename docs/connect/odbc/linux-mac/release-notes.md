@@ -8,21 +8,48 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 895280e7c7c8924ec2ec5eea55049f87d9206c4f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Microsoft ODBC Driver for SQL Server on Linux 及 macOS 的版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>新功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]的 ODBC 驅動程式 17 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux 及 macOS
+
+**支援的新發佈**: macOS 高利也和 Ubuntu 17.10 
+
+**效能改進**： 大於 10 倍時從-8/16/驅動程式將轉換的效能改進。
+
+**加入功能**:
+
+永遠加密的 BCP API 的支援
+
+新的連接字串屬性 UseFMTOnly 會導致驅動程式需要暫存資料表的特殊案例中使用傳統的中繼資料。
+
+SQL Azure 受管理的執行個體 （擴充私人預覽中） 的支援。 
+> [!NOTE]
+> 使用受管理的執行個體時，有一些差異：
+> -   不支援 FILESTREAM 
+> -   不支援，但所需 tracefiles 之類的本機檔案系統存取 
+> -   建立 UDT，從本機路徑不支援 
+> -   不支援 Windows 整合式驗證 
+> -   不支援 DTC 
+> -   帳戶 'sa' 不存在 （預設的帳戶稱為 'cloudSA'）
+> -   TDS token 的錯誤 (0xAA) 傳回不正確的伺服器名稱
+> -   不支援在 資料庫名稱的特殊字元 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] 不支援
+> -   錯誤訊息都會顯示在英文中，不論語言為何設定 （如同 Azure） 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>新功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux 及 macOS  
 

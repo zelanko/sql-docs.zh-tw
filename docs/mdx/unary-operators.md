@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a2dd50160dbe0185056988cfd866f119d7e330c4
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9c729af732238916a2cb88795fb94d0729ce9f85
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="unary-operators"></a>一元運算子
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/27/2017
   
  MDX 支援下表中列出的一元運算子。  
   
-|運算子|Description|  
+|運算子|描述|  
 |--------------|-----------------|  
 |[- (負)](../mdx/negative-mdx.md)|傳回數值運算式的負值。|  
 |[+ (正)](../mdx/positive-mdx.md)|傳回數值運算式的正值。|  

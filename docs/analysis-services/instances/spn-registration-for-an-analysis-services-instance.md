@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>為 Analysis Services 執行個體註冊 SPN
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 可唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
   
  對透過 Kerberos 驗證連接至 Analysis Services 的用戶端應用程式而言，Analysis Services 用戶端程式庫會使用連接字串中的主機名稱和所有 Analysis Services 之指定版本中固有的已知變數 (例如服務類別) 來建構 SPN。  
   
@@ -171,17 +169,17 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Analysis Services 執行個體只能接聽單一通訊埠， 因此不支援使用多個通訊埠。 如需通訊埠組態的詳細資訊，請參閱＜ [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)＞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft BI 驗證及識別委派](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [相互驗證使用 Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
+ [使用 Kerberos 進行相互驗證](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [如何設定 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 使用 Kerberos 驗證](http://support.microsoft.com/kb/917409)   
- [服務主體名稱 (Spn) SetSPN 語法 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [請勿使用何種 SPN 和其運作方式那里嗎？](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [服務主體名稱 (SPN) SetSPN 語法 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [我應使用何種 SPN？其運作方式為何？](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [服務帳戶的逐步指南](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [如何設定 Internet Information Services 上所裝載的 Web 應用程式時使用 Spn](http://support.microsoft.com/kb/929650)   
- [新功能的服務帳戶](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [設定 Kerberos 驗證適用於 SharePoint 2010 產品 （白皮書）](http://technet.microsoft.com/library/ff829837.aspx)  
+ [在設定 Internet Information Services 所裝載的 Web 應用程式時如何使用 SPN](http://support.microsoft.com/kb/929650)   
+ [服務帳戶的新功能](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [設定適用於 SharePoint 2010 產品的 Kerberos 驗證 (白皮書)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

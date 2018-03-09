@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: "31"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7aeaa7ce698d5fd2b7f0d9823fb89a201bed96eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3851cd1793ddb98c29fddd82654adfba887b44d3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：離線建立快速圖表報表 (報表產生器)
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
  ![報表產生器快速圓形圖](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "報表產生器快速圓形圖")  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  不論您使用的是 XML 資料或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，都需要具備報表產生器的存取權。 您可以在原生模式或 SharePoint 整合模式中從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 報表伺服器啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，或者從 Microsoft 下載中心下載 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 。 如需詳細資訊，請參閱 [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)。  
   
 ##  <a name="TwoWays"></a> 進行此教學課程的兩種方式  
@@ -119,7 +117,7 @@ ms.lasthandoff: 12/05/2017
   
      ![報表產生器設計查詢](../../reporting-services/report-builder/media/rb-designquery.png "報表產生器設計查詢")  
   
-12. 按一下 **[下一步]**。  
+12. 按 [下一步] 。  
   
 13. 在 [選擇圖表類型] 頁面中，按一下 [圓形圖]，然後按一下 [下一步]。  
   
@@ -181,7 +179,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您圖表所依據的資料。  
   
-9. 按一下 **[下一步]**。  
+9. 按 [下一步] 。  
   
 10. 在 [選擇圖表類型] 頁面中，按一下 [圓形圖]，然後按一下 [下一步]。  
   
@@ -225,7 +223,7 @@ ms.lasthandoff: 12/05/2017
 
 5. 在 [字型] 索引標籤上，選取 [粗體]，並將 [色彩] 變更為 [白色]。
 
-6. 按一下 **[確定]**。     
+6. 按一下 [確定] 。     
   
  如需自訂圖表標籤和圖例的詳細資訊，請參閱 [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和[變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
@@ -238,7 +236,7 @@ ms.lasthandoff: 12/05/2017
   
  開始之前，閱讀一些概念和詞彙的相關資訊可能會有所協助。 請參閱[報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)。 此外，在您建立第一份報表之前，請花點時間規劃一下。 這是值得花費的時間。 請參閱[規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  

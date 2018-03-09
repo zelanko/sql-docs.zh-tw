@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Supports
 - Recordset15::Supports
-helpviewer_keywords: Supports method [ADO]
+helpviewer_keywords:
+- Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27c415490b1193a5dcbc8ef20e5975149a8519f3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5b78cb1325b720207f6a18201971ef627314bfee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supports-method"></a>支援方法
 決定指定[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件支援特定類型的功能。  
@@ -54,7 +56,7 @@ boolean = recordset.Supports(CursorOptions )
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [支援的方法範例 (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
  [支援的方法範例 （VC + +）](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType 屬性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

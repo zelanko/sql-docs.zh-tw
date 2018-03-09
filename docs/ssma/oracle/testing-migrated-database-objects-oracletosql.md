@@ -1,7 +1,7 @@
 ---
 title: "測試移轉的資料庫物件 (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4b5f343234e77639e0b10eb07bce8281da9010f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b20c1f5d47388a92e92402faa9017dc6b042a1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>測試移轉的資料庫物件 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]適用於 Oracle 軟體測試人員 （SSMA 軟體測試人員） 的移轉小幫手會自動測試轉換資料庫物件和所做的 SSMA 資料移轉。 所有 SSMA 的移轉步驟都完成之後，請確認已轉換的物件運作的方式相同，而且已正確地傳送的所有資料使用 SSMA 軟體測試人員。  
@@ -51,7 +51,7 @@ SSMA 軟體測試人員執行測試 Oracle 和其對應項目上選取物件[!IN
 > [!NOTE]  
 > 注意 ！ 絕對不要使用實際系統上的 SSMA 軟體測試人員。 測試人員執行期間會修改來源結構描述和資料。 同時，可能無法針對部分類型的測試的程式碼的完整還原為原始狀態。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 如果您想要使用 SSMA Tester，安裝 SSMA Oracle 延伸模組組件與**安裝軟體測試人員資料庫**選項開啟。  
   
 若要啟用所產生的資料表資料的比較，設定**產生 ROWID 資料行**選項設定為**是**啟動結構描述轉換之前。 SSMA 會將所有資料表加入 ROWID 資料行執行期間**轉換結構描述**命令。  
@@ -64,7 +64,7 @@ SSMA 軟體測試人員執行測試 Oracle 和其對應項目上選取物件[!IN
   
 請注意，目前版本的 SSMA Tester 不支援平行執行由不同使用者在相同的來源或目標伺服器上。  
   
-## <a name="getting-started"></a>快速入門  
+## <a name="getting-started"></a>使用者入門  
 [建立測試案例 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>請參閱  

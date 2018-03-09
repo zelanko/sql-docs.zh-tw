@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: "115"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
   「執行 SQL」工作會執行封裝中的 SQL 陳述式或預存程序。 工作可以包含逐次執行的單一 SQL 陳述式或多重 SQL 陳述式。 您可將執行 SQL 工作用於下列用途：  
@@ -51,13 +52,13 @@ ms.lasthandoff: 11/20/2017
 ## <a name="connect-to-a-data-source"></a>連線到資料來源  
  執行 SQL 工作可使用不同類型的連接管理員，以連接到其執行 SQL 陳述式或預存程序的資料來源。 此工作可使用下表中列出的連接類型。  
   
-|連接類型|[ODBC 目的地編輯器]|  
+|連接類型|[ODBC 來源編輯器]|  
 |---------------------|------------------------|  
-|EXCEL|[Excel 連接管理員](../../integration-services/connection-manager/excel-connection-manager.md)|  
+|EXCEL|[Excel 連線管理員](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |OLE DB|[OLE DB 連接管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
-|ODBC|[ODBC 連接管理員](../../integration-services/connection-manager/odbc-connection-manager.md)|  
-|ADO|[ADO 連接管理員](../../integration-services/connection-manager/ado-connection-manager.md)|  
-|ADO.NET|[ADO.NET 連接管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
+|ODBC|[ODBC 連線管理員](../../integration-services/connection-manager/odbc-connection-manager.md)|  
+|ADO|[ADO 連線管理員](../../integration-services/connection-manager/ado-connection-manager.md)|  
+|ADO.NET|[ADO.NET 連線管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[SQL Server Compact Edition 連線管理員](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
   
 ## <a name="create-sql-statements"></a>建立 SQL 陳述式  
@@ -149,7 +150,7 @@ ms.lasthandoff: 11/20/2017
   
  **相關主題** [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)、 [ODBC 連線管理員](../../integration-services/connection-manager/odbc-connection-manager.md)、 [ADO 連線管理員](../../integration-services/connection-manager/ado-connection-manager.md)、 [ADO.NET 連線管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)、 [SQL Server Compact Edition 連線管理員](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **連接**  
+ **[連接]**  
  從已定義的連接管理員清單中選擇連接。 若要建立新的連線，請選取 [\<新增連線...>]。  
   
  **SQLSourceType**  
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/20/2017
   
  這個屬性具有下表中所列的選項。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為 Transact-SQL 陳述式。 選取此值會顯示動態選項 [SQLStatement]。|  
 |**檔案連接**|選取包含 Transact-SQL 陳述式的檔案。 選取此選項會顯示動態選項 [FileConnection]。|  
@@ -200,7 +201,7 @@ ms.lasthandoff: 11/20/2017
  **SourceVariable**  
  選取現有的變數，或按一下 [\<新增變數...>] 以建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>參數對應頁面 - 執行 SQL 工作編輯器
 使用 [執行 SQL 工作編輯器] 對話方塊的 [參數對應] 頁面，即可將變數對應到 SQL 陳述式中的參數。  
@@ -227,7 +228,7 @@ ms.lasthandoff: 11/20/2017
   
  此設計可確保提供者能為可變長度的參數值配置足夠的空間。  
   
- **加入**  
+ **[加入]**  
  按一下即可加入參數對應。  
   
  **移除**  
@@ -248,7 +249,7 @@ ms.lasthandoff: 11/20/2017
  **變數名稱**  
  選取變數來將結果集對應至變數，或是按一下 [\<新增變數...>]，使用 [新增變數] 對話方塊來新增新的變數。  
   
- **加入**  
+ **[加入]**  
  按一下即可新增結果集對應。  
   
  **移除**  
@@ -337,7 +338,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
     |-------------------------------|--------------------|  
     |DBDATE|**date**|  
     |DBTIME2|**time**|  
-    |DBTIMESTAMP|**datetime**、 **datetime2**|  
+    |DBTIMESTAMP|**datetime**、**datetime2**|  
     |DBTIMESTAMPOFFSET|**datetimeoffset**|  
   
  如果資料沒有以適當的輸入或輸出參數儲存，則封裝會失敗。  
@@ -464,7 +465,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
     > [!IMPORTANT]  
     >  參數對應的順序必須與參數在 SQL 陳述式中出現的順序相同。  
   
-14. 按一下 **[確定]**。  
+14. 按一下 [確定] 。  
 
 ##  <a name="Return_codes"></a> 取得傳回碼的值  
  預存程序可以傳回稱為傳回碼的整數值，以指出程序的執行狀態。 若要在「執行 SQL」工作中實作傳回碼，請使用 **ReturnValue** 類型的參數。  
@@ -529,7 +530,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 |---------------------|---------------------------|--------------------|  
 |單一資料列|與結果集之類型資料行相容的任何類型。|不適用|  
 |完整結果集|**物件**|如果工作使用原生連接管理員 (包括 ADO、OLE DB、Excel 與 ODBC 連接管理員)，則傳回的物件是 ADO **Recordset**。<br /><br /> 如果工作使用 Managed 連線管理員 (例如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員)，傳回的物件便會是 **System.Data.DataSet**。<br /><br /> 您可以使用指令碼工作來存取 **System.Data.DataSet** 物件，如下列範例所示。<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**字串**|**字串**|  
+|XML|**String**|**String**|  
 |XML|**物件**|如果工作使用原生連接管理員 (包括 ADO、OLE DB、Excel 與 ODBC 連接管理員)，則傳回的物件是 **MSXML6.IXMLDOMDocument**。<br /><br /> 如果工作使用 Managed 連線管理員 (例如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員)，傳回的物件便會是 **System.Xml.XmlDocument**。|  
   
  變數可在執行 SQL 工作或封裝範圍內定義。 如果變數包含封裝範圍，則結果集可用於該封裝內的其他工作和容器，並可用於「執行封裝」或「執行 DTS 2000 封裝」工作所執行的任何封裝。  
@@ -565,10 +566,10 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
      一般而言，您可以使用資料行名稱做為結果集名稱，也可以資料行清單中資料行的序數位置做為結果集。 使用資料行名稱做為結果集名稱的功能取決於將該工作設定為使用的提供者。 並非所有的提供者可以使用資料行名稱做為結果集名稱。  
   
-11. 按一下 **[確定]**。  
+11. 按一下 [確定] 。  
 
 ## <a name="troubleshoot-the-execute-sql-task"></a>針對執行 SQL 工作進行疑難排解  
- 您可以記錄執行 SQL 工作對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解執行 SQL 工作所執行的 SQL 命令。 若要記錄「執行 SQL」工作對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄執行 SQL 工作對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解執行 SQL 工作所執行的 SQL 命令。 若要記錄「執行 SQL」工作對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
  有時 SQL 命令或預存程序會傳回多個結果集。 這些結果集不只包括屬於 **SELECT** 查詢結果的資料列集，也包括屬於 **RAISERROR** 或 **PRINT** 陳述式之錯誤結果的單一值。 工作是否忽略發生在第一個結果集之後之結果集中的錯誤，將取決於所使用的連接管理員類型：  
   
@@ -579,7 +580,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 ### <a name="custom-log-entries"></a>自訂記錄項目  
  下表描述「執行 SQL」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|說明|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|提供 SQL 陳述式執行階段的相關資訊。 寫入記錄項目的時機包括在工作取得資料庫連接時、在工作開始準備 SQL 陳述式時，以及在 SQL 陳述式執行完成之後。 準備階段的記錄項目包含工作所使用的 SQL 陳述式。|  
 

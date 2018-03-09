@@ -7,24 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d10d27aa32125bd85e4694741c8dc765ff5c123e
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>建立 R 模型，並儲存至 SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在此步驟中，您將學習如何建立機器學習模型，並將儲存在模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
@@ -48,9 +51,7 @@ ms.lasthandoff: 12/20/2017
 
      *結果*
 
-     *羅吉斯迴歸結果： 傾斜 ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*資料： featureDataSource （RxSqlServerData 資料來源）*
+     *羅吉斯迴歸結果： 傾斜 ~ passenger_count + trip_distance + trip_time_in_secs +* direct_distance *   <br/>*資料： featureDataSource （RxSqlServerData 資料來源）*
      <br/>*Dependent variable(s)： 傾斜*
      <br/>*總計的獨立變數： 5*
      <br/>*有效的觀察值的數目： 17068*
@@ -58,11 +59,11 @@ ms.lasthandoff: 12/20/2017
      <br/>*-2\*LogLikelihood: 23540.0602 （17063 自由度上剩餘的差）*
      <br/>*係數：*
      <br/>*Estimate Std.錯誤 z 值 Pr (> | z |)*
-     <br/>*(Intercept)-2.509e-03 3.223e-02-0.078 0.93793*
-     <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1.23 e-07\*\*\**
-     <br/>*trip_distance-3.896e-02 1.466e-02-2.658 0.00786\*\**
-     <br/>*trip_time_in_secs 2.115e-04 4.336e-05 4.878 1.07e-06\*\*\**
-     <br/>*direct_distance 6.156e-02 2.076e-02 2.966 0.00302\*\**
+     <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
+     <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
+     <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
+     <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
+     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      <br/>*---*
      <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’0.1 ‘ ’ 1*
      <br/>*條件的最後一個差異共變數矩陣數目： 48.3933*
@@ -207,7 +208,7 @@ ms.lasthandoff: 12/20/2017
     只需要 INSERT 陳述式，就可以將模型儲存至資料表。 但是，所以更容易，這類包裝在預存程序中，當_PersistModel_。
 
     > [!NOTE]
-    > 如果您收到錯誤，例如"的 EXECUTE 權限遭拒的物件 PersistModel 」，請確定您的登入具有權限。 您可以執行這樣的 T-SQL 陳述式來授與的明確權限只預存程序：`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > 如果您收到錯誤，例如"的 EXECUTE 權限遭拒的物件 PersistModel 」，請確定您的登入具有權限。 您可以執行這樣的 T-SQL 陳述式來授與的明確權限只預存程序： `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. 建立模型，並儲存在資料庫中，您可以直接從呼叫之後[!INCLUDE[tsql](../../includes/tsql-md.md)]程式碼，使用系統預存程序， [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 

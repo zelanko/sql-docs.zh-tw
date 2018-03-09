@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bde831aea891db84e76ae4d00612663ed315d869
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 175199b7090abc373e0ac39d1e99e81480df4e2e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="write-enabled-dimensions"></a>可寫入維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  連結維度不支援維度回寫。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  唯一可以更新可寫入維度的商務使用者，是那些在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色中被授權對該維度有讀取/寫入權限的使用者。 針對每個角色，您可以控制哪些成員可以或不可以被更新。 針對要更新可寫入維度的商務使用者，其用戶端應用程式必須支援此能力。 如果是這類使用者，可寫入維度必須包含在該維度上次變更之後處理過的 Cube 中。 如需詳細資訊，請參閱[物件和作業的存取權授權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)。  
   
  管理員角色中所含的使用者和群組可以更新可寫入維度的屬性成員，即使該維度未包括在 Cube 中也一樣。  
@@ -72,6 +70,6 @@ ms.lasthandoff: 12/08/2017
 ## <a name="see-also"></a>請參閱  
  [資料庫維度屬性](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [可寫入的資料分割](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [維度 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [維度 &#40;Analysis Services-多維度資料 &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

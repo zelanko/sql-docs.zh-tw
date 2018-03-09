@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: "141"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
 ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 安裝 SQL Server 容錯移轉叢集之前，您必須先選取硬體以及要執行 SQL Server 的作業系統。 您也必須設定 Windows Server 容錯移轉叢集 (WSFC)，並檢閱要在容錯移轉叢集上執行之其他軟體的網路、安全性及考量。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+安裝 SQL Server 容錯移轉叢集之前，您必須先選取硬體以及要執行 SQL Server 的作業系統。 您也必須設定 Windows Server 容錯移轉叢集 (WSFC)，並檢閱要在容錯移轉叢集上執行之其他軟體的網路、安全性及考量。  
   
  如果 Windows 叢集有本機磁碟機，而且同一個磁碟機代號在一個或多個叢集節點上也做為共用磁碟機使用時，您無法將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝在該磁碟機上。  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 |主題說明|主題|  
 |-----------------------|-----------|  
 |說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows 容錯移轉叢集概念，並提供連結至相關的內容及工作。|[AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
-|說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉原則概念，並提供連結設定容錯移轉原則，以符合您組織的需求。|[容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
+|說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉原則概念，並提供連結設定容錯移轉原則，以符合您組織的需求。|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |說明如何維護以及您現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。|[容錯移轉叢集執行個體管理及維護](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |說明如何在 Windows Server 容錯移轉叢集 (WSFC) 上安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|[如何將 SQL Server Analysis Services 叢集化](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 12/05/2017
   
 ##  <a name="WSFC"></a> 設定 Windows Server 容錯移轉叢集  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 您至少必須在伺服器叢集的一個節點上設定 Cluster Service (WSFC)。 您也必須結合 WSFC 一併執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise 最多支援含有 16 個節點的容錯移轉叢集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 支援兩個節點的容錯移轉叢集。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service (WSFC)。 您也必須結合 WSFC 一併執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise 最多支援含有 16 個節點的容錯移轉叢集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 支援兩個節點的容錯移轉叢集。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的資源 DLL 會匯出兩個函數，可讓 WSFC 叢集管理員用來檢查 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的可用性。 如需詳細資訊，請參閱 [容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)。  
   

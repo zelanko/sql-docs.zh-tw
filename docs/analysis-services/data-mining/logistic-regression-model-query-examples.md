@@ -5,31 +5,30 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2255369fe9a3e8c74088a13efba5eaab19f7bb53
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>羅吉斯迴歸模型查詢範例
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立針對資料採礦模型的查詢時，您可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或您可以建立預測查詢來使用新資料做出預測，模型中使用的模式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，也可以建立預測查詢來使用模型中的模式，透過新的資料進行預測。  
   
  本節說明如何針對以 Microsoft 羅吉斯迴歸演算法為基礎的模型建立查詢。  
   
@@ -46,9 +45,9 @@ ms.lasthandoff: 12/08/2017
  [針對離散值進行預測](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> 取得有關羅吉斯迴歸模型的資訊  
- 羅吉斯迴歸模型是使用 Microsoft 類神經網路演算法搭配一組特殊的參數所建立。因此，羅吉斯迴歸模型所擁有的部分資訊與類神經網路模型相同，但是較不複雜。 若要了解模型內容的結構，以及哪一種節點類型會儲存那一種資訊，請參閱 [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
+ 羅吉斯迴歸模型是使用 Microsoft 類神經網路演算法搭配一組特殊的參數所建立。因此，羅吉斯迴歸模型所擁有的部分資訊與類神經網路模型相同，但是較不複雜。 若要了解模型內容的結構，以及哪一種節點類型會儲存那一種資訊，請參閱[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
- 若要依照查詢案例進行，您可以建立羅吉斯迴歸模型，如＜中繼資料採礦教學課程＞的下節所述： [第五課：建立類神經網路和羅吉斯迴歸模型 &#40;中繼資料採礦教學課程&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)。  
+ 若要依照查詢案例進行，您可以建立羅吉斯迴歸模型，如＜中繼資料採礦教學課程＞的下節所述：[第五課：建立類神經網路和羅吉斯迴歸模型 &#40;中繼資料採礦教學課程&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)。  
   
  您也可以使用 [資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)的採礦結構：目標郵寄。  
   
@@ -107,7 +106,7 @@ FROM [TM_Logistic Regression].CONTENT
 |Commute Distance|遺漏|0|0|0|1|  
 |Commute Distance|5-10 英哩|3033|0.173472889|0|4|  
   
- 實際查詢會傳回更多資料列，但是，這個範例說明關於輸入所提供之資訊的類型。 若為離散輸入，每個可能值都會列在資料表中。 若為連續值輸入 (例如 Age)，就無法列出完整清單，因此輸入會離散化為平均值。 如需如何使用臨界統計資料節點中資訊的詳細資訊，請參閱 [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
+ 實際查詢會傳回更多資料列，但是，這個範例說明關於輸入所提供之資訊的類型。 若為離散輸入，每個可能值都會列在資料表中。 若為連續值輸入 (例如 Age)，就無法列出完整清單，因此輸入會離散化為平均值。 如需如何使用臨界統計資料節點中資訊的詳細資訊，請參閱[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
 > [!NOTE]  
 >  這些結果已經過扁平化，讓檢視更為容易，但是如果您的提供者支援階層式資料列集，則可以在單一資料行中傳回巢狀資料表。  
@@ -138,7 +137,7 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 |||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- 如需巢狀 NODE_DISTRIBUTION 資料表之機率、支援及標準差值的詳細資訊，請參閱 [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
+ 如需巢狀 NODE_DISTRIBUTION 資料表之機率、支援及標準差值的詳細資訊，請參閱[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
 ###  <a name="bkmk_Query4"></a> 範例查詢 4：針對離散值進行預測  
  羅吉斯迴歸通常用於您要分析提供二進位結果之因數的案例中。 雖然教學課程中所使用的模型會預測連續值 **ServiceGrade**，不過在實際案例中，您可能會想要設定模型來預測服務等級是否符合某個離散化目標值。 或者，您可能會先使用連續值來輸出預測，然後再將預測的結果分組成 **良好**、 **普通**或 **差**。  
@@ -198,24 +197,24 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |預測函數|使用方式|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|確定某個節點是否為模型中另一個節點的子系。|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|傳回指定狀態的已調整機率。|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|傳回指定之資料行的一個或一組預測值。|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|傳回指定狀態的機率。|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|傳回預測值的標準差。|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|傳回指定之資料行的變異數。|  
+|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|確定某個節點是否為模型中另一個節點的子系。|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|傳回指定狀態的已調整機率。|  
+|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|傳回指定之資料行的一個或一組預測值。|  
+|[[Predictprobability] &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|傳回指定狀態的機率。|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|傳回預測值的標準差。|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|傳回指定之資料行的變異數。|  
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法通用函數的清單，請參閱[一般預測函數 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)。 如需特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
 > [!NOTE]  
 >  若是類神經網路與羅吉斯迴歸模型，[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md) 函數會傳回代表整個模型之定型集大小的單一值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 羅吉斯迴歸演算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Microsoft 羅吉斯迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [羅吉斯迴歸模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [第 5 課： 建立類神經網路和羅吉斯迴歸模型 &#40; 中繼資料採礦教學課程 &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

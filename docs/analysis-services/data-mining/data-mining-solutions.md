@@ -5,35 +5,34 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 - data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4b806912f80b6e95a455456a992979953113a330
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-solutions"></a>資料採礦方案
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料採礦方案是[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]包含一或多個資料採礦專案的方案。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+資料採礦方案是包含一個或多個資料採礦專案的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案。  
   
  本節的主題會提供有關如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來設計及實作整合式資料採礦方案的資訊。 如需資料採礦設計程序與相關工具的概觀，請參閱 [資料採礦概念](../../analysis-services/data-mining/data-mining-concepts.md)。  
   
- 如需有關對資料採礦非常實用之其他專案類型的詳細資訊，請參閱 [資料採礦方案的相關專案](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)。  
+ 如需有關對資料採礦非常實用之其他專案類型的詳細資訊，請參閱[資料採礦方案的相關專案](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)。  
   
  [關聯式與多維度方案](#bkmk_RelMD)  
   
@@ -75,9 +74,9 @@ ms.lasthandoff: 12/08/2017
   
  [處理資料採礦物件](../../analysis-services/data-mining/processing-data-mining-objects.md)  
   
- [資料採礦方案的相關專案](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ [資料採礦方案的相關的專案](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
- [部署資料採礦方案](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)  
+ [資料採礦方案部署](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)  
   
 ## <a name="related-tasks-and-topics"></a>相關工作和主題  
  在您建立基本的資料採礦方案 (包括資料來源和採礦結構) 之後，您可以在此方案上加入新的模型、測試和比較模型、建立預測及試驗資料子集來進行建置。  
@@ -89,10 +88,10 @@ ms.lasthandoff: 12/08/2017
 |測試您建立的模型、驗證定型資料的品質，然後建立代表資料採礦模型精確度的圖表。|[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |將資料填入結構和相關模型中來定型模型。 使用新的資料來更新和擴充模型。|[處理資料採礦物件](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |將篩選套用到定型資料、選擇不同的演算法或是設定進階演算法參數來自訂採礦模型。|[自訂採礦模型和結構](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|將篩選套用到定型模式時所使用的資料來自訂採礦模型。|[將採礦模型加入結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|將篩選套用到定型模式時所使用的資料來自訂採礦模型。|[將採礦模型加入結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |更新和管理資料採礦方案。|Link TBD|  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦教學課程 &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦教學課程 &#40;Analysis Services &#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

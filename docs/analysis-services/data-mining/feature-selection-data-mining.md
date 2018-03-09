@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +23,20 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 851262d2141413487aafe45456cba7748440fde6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*特徵選取*是機器學習中很重要的一部分。 特徵選取指的是減少處理序和分析的輸入，或尋找最有意義之輸入的過程。 相關詞彙： *特徵工程設計* (或 *功能擷取*)，指的是從現有資料擷取實用資訊或功能的過程。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  *特徵選取*是機器學習中很重要的一部分。 特徵選取指的是減少處理序和分析的輸入，或尋找最有意義之輸入的過程。 相關詞彙： *特徵工程設計* (或 *功能擷取*)，指的是從現有資料擷取實用資訊或功能的過程。  
   
 ## <a name="why-do-feature-selection"></a>為何執行特徵選取？  
  特徵選取對於建立優良的模型十分重要，而原因有多個。 其中一個原因是特徵選取隱含某種程度的「基數減少」，在建置模型時，可以考量強制截止屬性的數目。 資料幾乎一律會包含比建立模型所需的更詳細資訊，或包含錯誤的資訊類型。 例如，您可能必須具有 500 個資料行的資料集來描述客戶特性；不過，如果某些部分資料行中的資料非常疏鬆，您幾乎無法從將它們加入模型中得到好處；而且如果部分資料行對彼此進行複製，使用這兩個資料行可能會影響模型。  
@@ -139,7 +138,7 @@ ms.lasthandoff: 12/08/2017
   
  除了這些特徵選取方法之外，您也可以透過在模型上設定「模型旗標」，或透過在結構上設定「散發旗標」，來改進演算法識別或提升有意義屬性的能力。 如需這些概念的詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md) 和[資料行散發 &#40;資料採礦&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂採礦模型和結構](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   

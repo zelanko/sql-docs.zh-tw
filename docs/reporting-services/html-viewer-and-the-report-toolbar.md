@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bbb4d1492bb3abf35d9e3bc3047b9f1d4f3fcfa5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a00f751dbb765e8835fa40430dfdd00a8079f3c6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 檢視器和報表工具列
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了 HTML 檢視器，可用來從報表伺服器要求報表時，視需要顯示這些報表。 HTML 檢視器提供以 HTML 檢視報表的架構。 其中包含報表工具列、參數區段、認證區段以及文件對應。 HTML 檢視器中的報表工具列含有可用來處理報表的功能，包括可以讓您以非 HTML 格式檢視報表的匯出選項。 只有在開啟設定為使用參數和文件引導模式控制項的報表時，才會顯示參數區段和文件引導模式。  
@@ -62,13 +60,13 @@ ms.lasthandoff: 12/05/2017
   
  預設的報表伺服器安裝中，有包含下列匯出格式。 您可用的匯出格式清單，可能會與此處所列的清單有所不同。  
   
-|匯出格式|說明|  
+|匯出格式|描述|  
 |-------------------|-----------------|  
 |XML|以 XML 語法檢視報表。 在新的瀏覽器視窗中，以 XML 檢視報表。|  
 |CSV|以逗號分隔格式來檢視報表。 報表會在與 CSV 檔案類型相關聯的應用程式中開啟。|  
 |PDF|使用用戶端 PDF 檢視器來檢視報表。 您必須擁有協力廠商 PDF 檢視器 (例如 Adobe Acrobat Reader)，才能使用此格式。|  
 |MHTML|以 MIME 編碼的 HTML 格式檢視報表，在報表中保留影像和連結的內容。|  
-|Excel|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 中檢視報表 (為 .xlsx 格式的檔案)。|  
+|[匯出]|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 中檢視報表 (為 .xlsx 格式的檔案)。|  
 |PowerPoint|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] PowerPoint 中檢視報表 (為 .pptx 格式的檔案)。|  
 |TIFF 檔案|以預設的 TIFF 檢視器檢視報表。 對於某些 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 用戶端來說，這會是 Windows 圖片和傳真檢視器。 選取此格式就能夠以頁面導向的配置來檢視報表。|  
 |Word|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 中檢視報表 (為 .docx 格式的檔案)。|  

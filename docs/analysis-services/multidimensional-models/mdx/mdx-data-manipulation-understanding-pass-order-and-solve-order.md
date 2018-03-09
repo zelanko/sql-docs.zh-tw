@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +20,20 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c3b028eb658f2f75d6e70ec9057f3f156ca5f05
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 資料操作-了解傳遞順序與解決順序
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]當 cube 的計算方式為 MDX 指令碼的結果時，來進行多階段的計算根據所使用的各種計算相關功能。 每個階段都稱為一個計算行程。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+當 Cube 做為 MDX 指令碼的計算結果時，Cube 會根據所使用的各種計算相關功能來進行多個計算階段。 每個階段都稱為一個計算行程。  
   
  計算行程可以是序數位置，稱為計算行程數目。 完整計算 Cube 中所有資料格所需的計算行程數目稱為 Cube 的計算行程深度。  
   
@@ -221,10 +219,10 @@ FROM [Adventure Works]
 ## <a name="additional-considerations"></a>其他考量  
  若 Cube 有大量的維度，並牽涉到導出成員、自訂積存公式或導出資料格時，處理解決順序會是非常複雜的問題。 當 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估 MDX 查詢時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會考慮給定行程內牽涉到的所有項目 (包括 MDX 查詢中指定之 Cube 的維度) 的解決順序值。  
   
-## <a name="see-also"></a>請參閱  
- [CalculationCurrentPass &#40;MDX&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
+## <a name="see-also"></a>另請參閱  
+ [CalculationCurrentPass &#40;MDX &#41;](../../../mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue &#40;MDX &#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [CREATE MEMBER 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [操作資料 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [建立 MEMBER 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [操作資料 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

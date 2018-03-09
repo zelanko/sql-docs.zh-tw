@@ -7,21 +7,22 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 4887d79f60a8fd418fd4a5543bbac9dec0af3ebc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>佈建虛擬機器上 Azure 機器學習
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 Azure 上的虛擬機器是快速設定機器學習解決方案的完整伺服器環境的方便選項。
 
@@ -85,9 +86,7 @@ ms.lasthandoff: 12/20/2017
 
 ### <a name="using-machine-learning-in-azure-sql-database"></a>使用 Azure SQL database 中的機器學習服務
 
-中的開始在 2017年，Azure SQL Database 支援使用 R 來定型模型，並將它們用於預測。 
-
-R 服務中-資料庫可做為預覽功能，並有一些限制，因此相較於內部部署版本的 SQL Server。 如需詳細資訊，請參閱[Azure SQL DB](../r/using-r-in-azure-sql-database.md)。
+目前，Azure SQL 中的 R 支援預覽暫止的進行中的開發工作。 如需詳細資訊，請參閱[Azure SQL DB](../r/using-r-in-azure-sql-database.md)。
 
 ### <a name="can-i-upgrade-the-sql-server-version-on-a-virtual-machine"></a>可以升級虛擬機器上的 SQL Server 版本嗎？
 
@@ -135,7 +134,7 @@ RevoScaleR、 MicrosoftML 或 revoscalepy 發行新的升級，您可以升級�
 
 目前，下列虛擬機器可供 SQL server 的機器學習：
 
-|[屬性]| 註解|
+|名稱| 註解|
 |----|----|----|
 | **SQL Server 2016**| ***  |
 |SQL Server 2016 SP1 Enterprise on Windows|整合式的進階分析的 R 服務。|
@@ -144,8 +143,8 @@ RevoScaleR、 MicrosoftML 或 revoscalepy 發行新的升級，您可以升級�
 | Data Science 虛擬機器 Windows 2012|包含常用的工具，用於資料科學，包括 Microsoft R Server Developer Edition、 SQL Server 2016 Developer edition、 Anaconda Python 發佈、 Julia Pro developer edition 和 Jupyter 筆記本如。| 
 | Data Science 虛擬機器 Windows 2016|包含 SQL Server 2016 Developer Edition 支援資料庫內部 R 分析。|
 |**SQL Server 2017**| ***   |
-|SQL Server 2017 企業的 Windows Server 2016| 機器學習服務，具有 Python 和 R 語言支援。|
-|BYOL SQL Server 2017 企業的 Windows Server 2016|機器學習服務，具有 Python 和 R 語言支援。|
+|SQL Server 2017 Enterprise Windows Server 2016| 機器學習服務，具有 Python 和 R 語言支援。|
+|BYOL SQL Server 2017 Enterprise Windows Server 2016|機器學習服務，具有 Python 和 R 語言支援。|
 | 在 Windows 伺服器上可用的 SQL Server 授權： SQL Server 2017 Developer|機器學習服務，具有 Python 和 R 語言支援。|
 | **其他**| *** |
 | 機器學習伺服器只有 SQL Server 2017 Enterprise|類似於 SQL Server 2016 Enterprise 映像，但包含 Server 機器學習的獨立版本，並有核心 ScaleR 和實施功能適用於 Windows 的環境最佳化。|

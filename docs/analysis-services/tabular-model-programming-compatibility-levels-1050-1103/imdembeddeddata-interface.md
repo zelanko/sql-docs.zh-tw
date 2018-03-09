@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77bad0900d5d636a06ed1b836697e96120d0a7cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData 介面
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]IMDEmbeddedData 介面是用來管理內嵌的公用介面[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料庫或表格式模型資料庫。 此介面繼承自**IPersistStream**介面。 允許下列作業：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+IMDEmbeddedData 介面是用來管理內嵌的公用介面[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料庫或表格式模型資料庫。 此介面繼承自**IPersistStream**介面。 允許下列作業：  
   
 -   取得容器文件中之內嵌資料流的識別碼。  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
 -   將本機或同處理序資料庫儲存至容器文件中的內嵌資料流。 繼承自**IPersistStream**。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>참조  
  下列參考文件**IMDEmbeddedData**介面中，呈現**msmd.h**標頭檔。  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>來源檔案：PXOEmbeddedData.idl  
@@ -112,7 +112,7 @@ HRESULT GetStreamIdentifier (
   
  DBPROP_MSMD_EMBEDDED_DATA 的可能值如下：  
   
-|名稱|值|定義|  
+|名稱|Value|定義|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|沒有可用的內嵌資料庫|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|目前應用程式包含內嵌資料庫|  

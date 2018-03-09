@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df78363c57e6ba59b4ff2878144c4e99b221e0a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa4a078b2e5e130e8bc4f739dab5b515b37852ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="results-detailed-view-dialog-box"></a>結果詳細檢視對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 當您使用 [評估原則] 對話方塊來執行原則並按一下 [評估] 之後，此對話方塊會顯示原則評估的結果。 此對話方塊是唯讀的，而且可幫助您了解哪一個部分的屬性運算式可能失敗。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **AndOr**  
  當有一個以上的屬性運算式存在時，指出屬性運算式為累積或替代式。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
  **欄位**  
  正在模型化之 Facet 的屬性。  
   
- **運算子**  
+ **[運算子]**  
  運算式的運算子，例如 **=** 或 **Like**。  
   
  **預期的值**  

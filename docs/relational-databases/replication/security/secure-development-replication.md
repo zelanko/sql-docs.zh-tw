@@ -16,15 +16,15 @@ helpviewer_keywords:
 - development security [SQL Server replication]
 ms.assetid: 2322d39c-6689-4fb6-b23b-eae51cbb0222
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70f8828cd4d9d17caa449bbfa912982d33e15834
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f444b1d0fb41a31cefd9cf6aa04f5d7b92300b6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-development-replication"></a>安全程式開發 (複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本節提供的資訊可協助您規劃更安全的複寫拓撲。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
  說明複寫拓撲所需的最低安全性權限以及角色。  
   
- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [複寫安全性最佳作法](../../../relational-databases/replication/security/replication-security-best-practices.md)  
  提供一般資訊，可協助您規劃更安全的複寫拓撲。  
   
 ## <a name="see-also"></a>另請參閱  

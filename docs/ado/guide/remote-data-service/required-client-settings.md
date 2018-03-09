@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DataFactory handler in RDS [ADO]
+helpviewer_keywords:
+- DataFactory handler in RDS [ADO]
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae0e7f5ebf8126168c8d759ca7b5e8c17864fb26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f542390110169a88b387856ca887a8b3183e01b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="required-client-settings"></a>必要的用戶端設定
 > [!IMPORTANT]
@@ -73,14 +75,14 @@ rs.CursorLocation = adUseClient
   
  指定[處理常式屬性 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)屬性或關鍵字;[提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)屬性或關鍵字; 而*CustomerById*和*CustomerDatabase*識別項。 然後開啟**資料錄集**物件  
   
- rs。開啟 「 CustomerById(4) 」，「 處理常式 = MSDFMAP。處理常式; 」 （& s) _  
+ rs.Open "CustomerById(4)", "Handler=MSDFMAP.Handler;" & _  
   
 ```  
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  
 "Remote Server=http://yourServer"  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自訂檔案 UserList > 一節](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

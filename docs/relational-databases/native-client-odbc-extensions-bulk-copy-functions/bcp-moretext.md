@@ -1,5 +1,5 @@
 ---
-title: "bcp_moretext |Microsoft 文件"
+title: bcp_moretext | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cf6f4c23f600403c7061d9ed5cb2bfd337660e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a273980a28a31334653feec576fde85de007c38
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ RETCODE bcp_moretext (
 ## <a name="remarks"></a>備註  
  此函式可以用於搭配[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long、 可變長度的資料將值複製到 SQL Server 中的較小的區塊數。 **bcp_moretext**可以搭配具有下列的 SQL Server 資料類型的資料行：**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，使用者定義型別 (UDT) 和 XML。 **bcp_moretext**不支援資料轉換，請提供的資料必須符合目標資料行的資料類型。  
   
- 如果**bcp_bind**呼叫具有非 Null *pData*所支援的資料型別參數**bcp_moretext**， **bcp_sendrow**傳送整個資料值，而不論長度為何。 如果，不過， **bcp_bind**有 NULL *pData*支援的資料類型的參數**bcp_moretext**可用來從成功傳回之後，立即複製資料**bcp_sendrow**指出已經處理任何具有資料繫結的資料行。  
+ 如果**bcp_bind**呼叫具有非 NULL *pData*所支援的資料型別參數**bcp_moretext**， **bcp_sendrow**傳送整個資料值，而不論長度為何。 如果，不過， **bcp_bind**有 NULL *pData*支援的資料類型的參數**bcp_moretext**可用來從成功傳回之後，立即複製資料**bcp_sendrow**指出已經處理任何具有資料繫結的資料行。  
   
  如果您使用**bcp_moretext**傳送一個支援的資料類型資料行的資料列中，您必須也將它傳送的資料列中的所有其他支援的資料類型資料行。 不能略過任何資料行。 支援的資料類型為 SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT 和 SQLXML。 如果此資料行分別為 varchar(max)、nvarchar(max) 或 varbinary(max)，則 SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY 和 SQLVARBINARY 也會列入這個類別目錄。  
   
@@ -168,7 +168,7 @@ nRowsProcessed = bcp_done(hdbc);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

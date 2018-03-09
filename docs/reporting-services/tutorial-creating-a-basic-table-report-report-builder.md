@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 197954e502e00b4402243f89ba1549aae75293f8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a94fabf2c89005a3125cc73c54b55d537dc2458b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
 本教學課程將教導您根據範例銷售資料建立基本資料表報表。 下圖顯示您將建立的報表。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/05/2017
   
     您會回到 [選擇與資料來源的連線] 頁面，並選取了新的資料來源。  
   
-9. 按一下 **[下一步]**。  
+9. 按 [下一步] 。  
   
 ## <a name="Query"></a>1b. 在資料表精靈中建立查詢  
 在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在此一報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
@@ -139,7 +139,7 @@ ms.lasthandoff: 12/05/2017
   
     在結果集中，欄標題是依據查詢中的名稱而定。 在資料集中，欄標題會變成欄位名稱，並且儲存在報表中。 完成精靈後，您可以使用 [報表資料] 窗格檢視資料集欄位的集合。  
   
-4.  按一下 **[下一步]**。  
+4.  按 [下一步] 。  
   
 ## <a name="Groups"></a>1c. 在資料表精靈中將資料組織成群組  
 選取做為群組對象的欄位時，您會設計包含資料列和資料行的資料表，以顯示詳細資料和彙總資料。  
@@ -166,7 +166,7 @@ ms.lasthandoff: 12/05/2017
   
     步驟 4 和 5 會先依日期，再依該日期的產品子類別組織欄位的值。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 ## <a name="Subtotals"></a>1d. 在資料表精靈中加入小計和總計資料列  
 建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
@@ -359,7 +359,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 2.  確認活頁簿索引標籤的名稱是 **Product Sales Excel**。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 以上總結如何建立基本資料表報表的逐步解說。 如需資料表的詳細資訊，請參閱[資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  

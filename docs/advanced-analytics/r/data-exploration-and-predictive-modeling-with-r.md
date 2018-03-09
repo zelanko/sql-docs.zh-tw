@@ -1,28 +1,30 @@
 ---
 title: "使用 R 進行資料探索和建立預測模型 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c1586c23850daa679aa6804d946ceb0d0a98ad51
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d7c5430e585d7324e94ebe64e5138246e26049c4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>使用 R 的資料探索和預測模型
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題說明資料科學程序可以透過與 SQL Server 整合的增強功能。
 
@@ -106,7 +108,7 @@ RevoScaleR 封裝也支援變更 *「執行內容」*(execution context)。 這�
 
 通常，部署程序一開始會清理您的指令碼，以排除生產環境不需要的程式碼。 當您移動靠近計算的資料時，您可能會發現更有效率地移動、 摘要或呈現比執行 r 中的所有資料的方式 我們建議，資料科學家，請洽詢資料庫開發人員有關如何改善效能，尤其是這個解決方案會執行資料清理或工程的功能可能會在 SQL 中更有效率。 您可能需要對 ETL 程序進行變更，以確保用於模型建置或評分的工作流程不會失敗，並且輸入資料是以正確的格式提供。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [比較基底 R 與 ScaleR 函數](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 

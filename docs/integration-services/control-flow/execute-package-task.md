@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 703f8c2dbcc954c4603ec0ff73b0928c6afaf70c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-package-task"></a>執行封裝工作
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
  子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 **[指令碼工作編輯器]** 的 **[指令碼]**頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。  
   
 ## <a name="configuring-the-execute-package-task"></a>設定執行封裝工作  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
@@ -174,12 +175,12 @@ ms.lasthandoff: 11/20/2017
  **位置**  
  選取子封裝的位置。 這個屬性具有下表中所列的選項。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
-|**SQL Server**|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。|  
+|**[SQL Server]**|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。|  
 |**檔案系統**|設定檔案系統的位置。|  
   
- **連接**  
+ **[連接]**  
  選取子封裝的儲存位置類型。  
   
  **PackageNameReadOnly**  
@@ -192,7 +193,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="location-dynamic-options"></a>位置動態選項  
   
 ##### <a name="location--sql-server"></a>位置 = SQL Server  
- **連接**  
+ **[連接]**  
  在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>] 建立新的連線管理員。  
   
  **相關主題：**[OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -201,7 +202,7 @@ ms.lasthandoff: 11/20/2017
  輸入子封裝的名稱，或按一下省略符號 (…)，然後找出該封裝。  
   
 ##### <a name="location--file-system"></a>位置 = 檔案系統  
- **連接**  
+ **[連接]**  
  在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
  **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -220,7 +221,7 @@ ms.lasthandoff: 11/20/2017
  **繫結參數或變數**  
  選取包含您要傳遞到子封裝之值的參數或變數。  
   
- **加入**  
+ **[加入]**  
  按一下此選項可將參數或變數對應到子封裝參數。  
   
  **移除**  

@@ -1,6 +1,7 @@
 ---
 title: "RDS 屬性 |Microsoft 文件"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 167812e66df35eda1127cf4d0d1d075871e00ab8
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: ee22ac8887a628d4b1ada9bf7f42b58e3c997274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-properties"></a>RDS 屬性
 > [!IMPORTANT]
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/20/2017
 |[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|表示要要求逾時前等候毫秒的數。|  
 |[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|表示進度**DataControl**物件提取資料到其**資料錄集**物件。|  
 |[資料錄集和 SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|指出**資料錄集**傳回自訂的商務物件的物件。|  
-|[伺服器 (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|指出 Internet Information Services (IIS) 名稱與通訊的通訊協定。|  
+|[Server (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|指出 Internet Information Services (IIS) 名稱與通訊的通訊協定。|  
 |[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|指出哪些資料行來排序記錄。|  
 |[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|表示排序順序為遞增或遞減。|  
 |[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|表示用來擷取查詢字串**資料錄集**。|  

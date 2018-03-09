@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac5c385cfdff8c4c024c02534d8c040534c400ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63a14e8eb3342d0d03f61028d20aea9ba018f3a8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 除了考慮[增強一般複寫效能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中所述的一般效能提示之外，還要考慮異動複寫特定的以下幾個其他方面。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   在專用伺服器上設定散發者。  
   
-     透過設定遠端「散發者」可以降低「發行者」端的處理負擔。 如需詳細資訊，請參閱[設定散發](../../../relational-databases/replication/configure-distribution.md)。  
+     透過設定遠端「散發者」可以降低「發行者」端的處理負擔。 如需詳細資訊，請參閱 [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)＞。  
   
 -   適當調整散發資料庫的大小。  
   
@@ -106,6 +106,6 @@ ms.lasthandoff: 11/17/2017
   
 -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

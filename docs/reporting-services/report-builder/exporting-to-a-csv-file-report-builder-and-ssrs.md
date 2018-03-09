@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a41d99b7087463d5583e9cbb194175118dcab583
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ff683e7c226812f8e5045464ea7f226dabb2fee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>匯出至 CSV 檔案 (報表產生器及 SSRS)
   逗號分隔值 (CSV) 轉譯延伸模組會將分頁報表從多個應用程式都可輕易讀取與交換的標準化純文字格式報表，轉譯為扁平化表示的資料。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
 -   線條  
   
--   映像  
+-   image  
   
 -   矩形  
   
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/05/2017
   
   
 ##  <a name="RenderingModes"></a> 轉譯器模式  
- CSV 轉譯延伸模組可以在兩種模式下操作：一種會針對 Excel 最佳化，而另一種則會針對需要 CSV 嚴格遵循 RFC 4180 中 CSV 規格的協力廠商應用程式最佳化。 根據所使用的模式，對等資料區域的處理方式也會不同。  
+ CSV 轉譯延伸模組可以在兩種模式下操作：一種會針對 Excel 最佳化，而另一種則會針對需要 CSV 嚴格遵循 RFC 4180 中 CSV 合規性的協力廠商應用程式最佳化。 根據所使用的模式，對等資料區域的處理方式也會不同。  
   
 ### <a name="default-mode"></a>預設模式  
  預設模式會針對 Excel 最佳化。 以預設模式進行轉譯時，報表會轉譯為包含多個 CSV 轉譯資料區塊的 CSV 檔。 每個對等區域都會以一個空行分隔。 報表主體內的對等資料區域在 CSV 檔中，會轉譯為個別的資料區塊。 結果是 CSV 檔，而其中：  

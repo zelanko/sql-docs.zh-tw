@@ -1,19 +1,18 @@
 ---
 title: "執行批次作業 (XMLA) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - multiple projects
 - XML for Analysis, batches
@@ -24,29 +23,29 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09f95f71f20800f5a0250aec83c505e8aaf99be1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f2730fb8396f63e123bf8d896ea9a648ad22016d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>執行批次作業 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以使用[批次](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML for Analysis (XMLA) 執行多個 XMLA 命令使用的單一 XMLA 命令[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 您可以執行多個命令中包含**批次**命令視為單一交易或個別的交易，每個命令中、 以序列或是平行。 您也可以指定-單行繫結和其他內容**批次**命令處理多個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件。  
+  您可以使用[批次](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML for Analysis (XMLA) 執行多個 XMLA 命令使用的單一 XMLA 命令[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 您可以執行多個命令中包含**批次**命令視為單一交易或個別的交易，每個命令中、 以序列或是平行。 您也可以指定-單行繫結和其他內容**批次**命令處理多個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件。  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>執行交易式與非交易式批次命令  
  **批次**命令上執行命令的其中一種：  
   
- **異動**  
+ **交易式**  
  如果**交易**屬性**批次**命令設定為 true，**批次**命令執行命令的命令所包含的所有**批次**命令在單一交易中 —*異動*批次。  
   
  如果交易式批次中的任何命令失敗[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中回復任何命令**批次**失敗命令前執行的命令和**批次**命令會立即結束。 中的任何命令**批次**尚未執行的命令不會執行。 之後**批次**命令結束，**批次**命令會報告任何錯誤發生的失敗的命令。  
   
- **非交易式**  
+ **Nontransactional**  
  如果**交易**屬性設定為 false，**批次**命令執行所包含的每個命令**批次**命令不同的異動中 — *非交易式*批次。 如果非交易式批次中的任何命令失敗**批次**命令會繼續執行命令之後的命令失敗。 之後**批次**命令嘗試執行的所有命令，**批次**命令包含，**批次**命令會報告發生任何錯誤。  
   
  中的命令所傳回的所有結果**批次**命令會傳回相同的順序中所含的命令**批次**命令。 所傳回的結果**批次**命令異**批次**命令是交易式或非交易式。  
@@ -68,7 +67,7 @@ ms.lasthandoff: 12/08/2017
   
  若要以平行方式執行命令，您將命令加入至要平行執行[平行](../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)屬性**批次**命令。 目前，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可以執行連續且循序[程序](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)命令以平行方式。 任何其他 XMLA 命令，例如[建立](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)或[Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)，包含在**平行**屬性以序列方式執行。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]嘗試執行所有**程序**命令中包含**平行**屬性以平行方式，但是無法保證所有包含**程序**命令可以平行執行。 執行個體會分析每個**程序**命令和執行個體判斷無法執行命令，以平行方式，**程序**命令以序列方式執行。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 嘗試執行所有**程序**命令中包含**平行**屬性以平行方式，但是無法保證所有包含**程序**命令可以平行執行。 執行個體會分析每個**程序**命令和執行個體判斷無法執行命令，以平行方式，**程序**命令以序列方式執行。  
   
 > [!NOTE]  
 >  若要執行命令以平行方式，**交易**屬性**批次**命令必須設定成 true，因為[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援只有一個使用中的交易，每個連線和非交易式不同的異動中執行每個命令的批次。 如果您包含**平行**非交易式批次中的屬性，就會發生錯誤。  
@@ -128,10 +127,10 @@ ms.lasthandoff: 12/08/2017
     > [!IMPORTANT]  
     >  A**程序**命令不能包含**繫結**， **DataSource**， **DataSourceView**，或**ErrorConfiguration**屬性，如果**程序**命令包含在**批次**命令。 如果您必須指定這些屬性**程序**命令，提供必要的資訊中的對應屬性**批次**命令，以包含**程序**命令。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [批次元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
  [Process 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

@@ -14,22 +14,22 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1a24073b312835faab6b54874dedfa0fc58d1ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01a15e3ebf54cae459aad00052e009774d125c56
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>記錄傳送交易記錄備份設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此對話方塊來設定和修改記錄傳送設定的交易記錄備份設定。  
   
  如需記錄傳送概念的說明，請參閱 [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **備份資料夾的網路路徑**  
  在此方塊中輸入備份資料夾的網路共用。 儲存交易記錄備份的本機資料夾必須共用，記錄傳送複製作業才能將這些檔案複製至次要伺服器。 您必須將此網路共用的讀取權限授與 Proxy 帳戶，在此帳戶下，複製作業將會在次要伺服器執行個體上執行。 依預設，這是次要伺服器執行個體的 SQLServerAgent 服務帳戶，但是管理員可以為此作業選擇另一個 Proxy 帳戶。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
  **作業名稱**  
  顯示用來建立記錄傳送之交易記錄備份的 SQL Server Agent 作業的名稱。 首次建立作業時，您可以在此方塊中輸入名稱來修改其名稱。  
   
- **排程**  
+ **[排程]**  
  顯示備份主要資料庫之交易記錄的目前排程。 建立備份作業之前，按一下 [排程...] 即可修改此排程。建立備份作業之後，按一下 [編輯作業...] 即可修改此排程。  
   
 ### <a name="backup-job"></a>備份作業  

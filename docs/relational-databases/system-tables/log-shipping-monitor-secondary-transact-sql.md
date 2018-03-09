@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_secondary_TSQL
 - log_shipping_monitor_secondary
-dev_langs: TSQL
-helpviewer_keywords: log_shipping_monitor_secondary system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- log_shipping_monitor_secondary system table
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 913796ba13f2440b511ee036a9d9b8e8e67c1bfb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cc4e82d41a48bf7b7f17a1678c9a17ccaa7a729e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="logshippingmonitorsecondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +48,10 @@ ms.lasthandoff: 11/17/2017
 |**restore_threshold**|**int**|在產生警示之前，還原作業之間所能經歷的時間 (以分鐘為單位)。|  
 |**threshold_alert**|**int**|當超出還原臨界值時所產生的警示。|  
 |**threshold_alert_enabled**|**bit**|決定是否啟用還原臨界值警示。 1 = 已啟用。<br /><br /> 0 = 已停用。|  
-|**last_copied_file**|**nvarchar （500)**|前一個複製到次要伺服器的備份檔之檔案名稱。|  
+|**last_copied_file**|**nvarchar(500)**|前一個複製到次要伺服器的備份檔之檔案名稱。|  
 |**last_copied_date**|**datetime**|在次要伺服器中，前一個複製作業的日期和時間。|  
 |**last_copied_date_utc**|**datetime**|在次要伺服器中，前一個複製作業的日期和時間 (以國際標準時間 (UTC) 為單位)。|  
-|**last_restored_file**|**nvarchar （500)**|前一個還原到次要資料庫的備份檔之檔案名稱。|  
+|**last_restored_file**|**nvarchar(500)**|前一個還原到次要資料庫的備份檔之檔案名稱。|  
 |**last_restored_date**|**datetime**|在次要資料庫中，前一個還原作業的日期和時間。|  
 |**last_restored_date_utc**|**datetime**|在次要資料庫中，前一個還原作業的日期和時間 (以國際標準時間 (UTC) 為單位)。|  
 |**last_restored_latency**|**int**|在主要資料庫中建立記錄備份和在次要資料庫中還原這個記錄備份，其間所經歷的時間 (以分鐘為單位)。<br /><br /> 初始值是 NULL。|  
@@ -57,15 +60,15 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  除了儲存在遠端監視伺服器上，以及次要伺服器的相關資訊也儲存在次要伺服器上其**log_shipping_monitor_secondary**資料表。  
   
-## <a name="see-also"></a>請參閱＜  
- [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_refresh_log_shipping_monitor &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [sp_add_log_shipping_secondary_database &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [關於記錄傳送 &#40;SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [sp_add_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_change_log_shipping_secondary_database &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [sp_help_log_shipping_secondary_database &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
- [sp_help_log_shipping_monitor_secondary &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [sp_help_log_shipping_monitor_secondary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [系統資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

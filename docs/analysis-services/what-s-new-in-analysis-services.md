@@ -8,23 +8,25 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: "97"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services 的新功能
-[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services 包含許多新的增強功能提供更佳的效能、 更容易撰寫的方案、 自動化的資料庫管理，增強的關聯性具有雙向交叉篩選，平行資料分割處理和執行更多。 此版本中的大多數增強功能的核心是針對表格式模型資料庫新增的相容性層級 1200。     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
+SQL Server 2016 Analysis Services 包含許多新的增強功能提供更佳的效能、 更容易撰寫的方案、 自動化的資料庫管理，增強的關聯性具有雙向交叉篩選，平行資料分割處理和執行更多。 此版本中的大多數增強功能的核心是針對表格式模型資料庫新增的相容性層級 1200。     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 2016 SQL PASS 會議中宣告 Analysis Services 現為雲端 Azure 服務。 **Azure Analysis Services**支援在 1200年或更高的相容性層級的表格式模型。 DirectQuery、資料分割、資料列層級安全性、雙向關聯性和翻譯全都支援。 如需深入了解並免費試用，請參閱 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)。 
@@ -75,7 +77,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
  ### <a name="calculated-tables-in-ssdt"></a>SSDT 中的導出資料表    
 「導出資料表」  是以 SSDT 中的 DAX 運算式或查詢為基礎的僅限模型建構。 部署於資料庫時，無法區別計算資料表與一般資料表。    
 
- 計算資料表有數個用途，包括建立新的資料表，以特定角色公開現有的資料表。 典型的範例是在多個內容 (訂單日期、出貨日期等) 中運作的日期資料表。 藉由建立特定角色的計算資料表，您現在可以啟動資料表關聯性，以使用計算資料表來促進查詢或資料互動。 計算資料表的另一個用途是將現有資料表的各部分合併成只存在於模型中的全新資料表。  如需詳細資訊，請參閱[建立導出資料表 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md)。    
+ 計算資料表有數個用途，包括建立新的資料表，以特定角色公開現有的資料表。 典型的範例是在多個內容 (訂單日期、出貨日期等) 中運作的日期資料表。 藉由建立特定角色的計算資料表，您現在可以啟動資料表關聯性，以使用計算資料表來促進查詢或資料互動。 計算資料表的另一個用途是將現有資料表的各部分合併成只存在於模型中的全新資料表。  請參閱[建立導出資料表](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md)如需詳細資訊。    
  ### <a name="formula-fixup"></a>公式修復    
  利用表格式 1200 模型的公式修復，SSDT 會自動更新目前參考已重新命名的資料行或資料表的所有量值。    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Visual Studio 組態管理員支援    
@@ -85,9 +87,9 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
  ### <a name="administer-tabular-1200-models-in-ssms"></a>管理 SSMS 中的表格式 1200 模型    
  在此版本中，表格式伺服器模式中的 Analysis Services 執行個體可以執行任何相容性層級 (1100、1103、1200) 的表格式模型。 最新版的 [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) 已更新，可以顯示屬性並提供 1200 相容性層級之表格式模型的資料庫模型管理。    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>平行處理表格式模型中的多個資料表資料分割    
- 此版本為具有兩個或多個資料分割的資料表提供新的平行處理功能，以提高處理效能。 此功能沒有任何組態設定。 如需設定資料分割和處理資料表的詳細資訊，請參閱[表格式模型資料分割 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)。    
+ 此版本為具有兩個或多個資料分割的資料表提供新的平行處理功能，以提高處理效能。 此功能沒有任何組態設定。 如需有關設定分割和處理資料表的詳細資訊，請參閱[表格式模型資料分割](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)。    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>在 SSMS 中將電腦帳戶新增為系統管理員    
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 系統管理員現在可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 將電腦帳戶設定為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Administrators 群組的成員。 在 [選取使用者或群組]  對話方塊中，設定電腦網域的 [位置]  ，然後新增 [電腦]  物件類型。 如需詳細資訊，請參閱 [將伺服器系統管理員權限授與 Analysis Services 執行個體](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 系統管理員現在可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 將電腦帳戶設定為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrators 群組的成員。 在 [選取使用者或群組]  對話方塊中，設定電腦網域的 [位置]  ，然後新增 [電腦]  物件類型。 如需詳細資訊，請參閱 [將伺服器系統管理員權限授與 Analysis Services 執行個體](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。    
  ### <a name="dbcc-for-analysis-services"></a>DBCC for Analysis Services    
  Database Consistency Checker (DBCC) 會在內部執行，以偵測資料庫負載的潛在資料損毀問題，但如果您懷疑您的資料或模型有問題，也可以視需要執行。 DBCC 會依據模型為表格式或多維度模型而執行不同的檢查。 如需詳細資訊，請參閱 [Database Consistency Checker &#40;DBCC&#41; for Analysis Services 表格式和多維度資料庫](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md)。    
  ### <a name="extended-events-updates"></a>擴充事件更新    
@@ -130,7 +132,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
 
 在資料庫層級，CREATE、ALTER 和 DELETE 命令會在熟悉的 XMLA 視窗中輸出 TMSL 指令碼。  其他命令 (例如 Process) 也可以在此版本中建立指令碼。 未來版本中可能新增許多其他動作的指令碼支援。    
 
-**可編寫指令碼的命令** | **描述**
+**可編寫指令碼的命令** | **說明**
 --------------- | ----------------
 建立|新增資料庫、連線或分割區。 ASSL 對等項目為 CREATE。
 createOrReplace|藉由覆寫先前的版本來更新現有的物件定義 (資料庫、連線或分割區)。 ASSL 對等項目為 ALTER，其 AllowOverwrite 設定為 true 且 ObjectDefinition 設定為 ExpandFull。
@@ -204,7 +206,7 @@ Visual Studio 2015 中的 [程式碼檢視] 現在會針對表格式 1200 模型
 ### <a name="new-data-sources-for-directquery-mode"></a>DirectQuery 模式的新資料來源    
  現在支援 DirectQuery 模式中表格式 1200年模型的資料來源包括 Oracle、 Teradata 和 Microsoft 分析平台 （之前稱為平行資料倉儲）。    
     
-如需詳細資訊，請參閱 [DirectQuery 模式 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。    
+若要進一步了解，請參閱[DirectQuery 模式](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。    
 
 ## <a name="see-also"></a>另請參閱
 [Analysis Services 團隊部落格](http://blogs.msdn.microsoft.com/analysisservices/)    

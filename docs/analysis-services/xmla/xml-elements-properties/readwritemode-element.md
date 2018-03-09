@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ed345b4e0562fd61b7995d91bd2db12cad4cd57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05a5397987761530d783097ec76914b01fe5356c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 元素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]**ReadWriteMode**資料庫屬性會指定資料庫是否位在**ReadWrite**模式或**ReadOnly**模式。 此屬性只有這兩種可能的值。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|ReadWrite|  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[資料庫](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
+|父元素|[[資料庫]](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
  值**ReadWriteMode**元素僅限於一個下表所列的字串。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |*ReadOnly*|您就無法將任何變更或更新套用至該資料庫。|  
 |*ReadWrite*|您可以將變更或更新套用至該資料庫。|  

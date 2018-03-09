@@ -8,24 +8,26 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: contained database, threats
+helpviewer_keywords:
+- contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c18410a29b500b3fd4fadfac987b1e94503ec7bb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>自主資料庫的安全性最佳做法
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   自主資料庫具有一些 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 系統管理員應該了解並降低的獨特威脅。 其中大部分威脅都與 **USER WITH PASSWORD** 驗證處理序相關，而這個處理序會將驗證界限從 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 層級移至資料庫層級。  
   
@@ -61,7 +63,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>建立重複登入的使用者  
  如果您使用與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入相同的名稱來建立具有密碼之自主資料庫使用者，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入連接時指定自主資料庫做為初始目錄，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入將無法連接。 系統會將此連接評估為自主資料庫上具有密碼主體之自主資料庫使用者，而不是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入為基礎的使用者。 這可能會導致系統蓄意或意外阻斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的服務。  
   
--   最佳作法是系統管理員 ( **sysadmin** ) 固定伺服器角色的成員應該考慮永遠不使用初始目錄選項來連接。 這樣會將登入連接至 master 資料庫，並且避免資料庫擁有者濫用登入嘗試的任何嘗試行為。 然後，系統管理員就可以使用 **USE***\<資料庫>* 陳述式來變更為自主資料庫。 此外，您也可以將登入的預設資料庫設定為自主資料庫，以便完成登入 **master**的作業，然後將登入傳送至自主資料庫。  
+-   最佳作法是系統管理員 ( **sysadmin** ) 固定伺服器角色的成員應該考慮永遠不使用初始目錄選項來連接。 這樣會將登入連接至 master 資料庫，並且避免資料庫擁有者濫用登入嘗試的任何嘗試行為。 然後，系統管理員可以透過使用 **USE**\<資料庫>** 陳述式變更為自主資料庫。 此外，您也可以將登入的預設資料庫設定為自主資料庫，以便完成登入 **master**的作業，然後將登入傳送至自主資料庫。  
   
 -   最佳作法是不要使用具有密碼且與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入具有相同名稱之自主資料庫使用者。  
   

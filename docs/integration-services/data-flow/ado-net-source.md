@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff6aab3608b1bebd61e9750ea8769dda0fbf2f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
   ADO NET 來源會從 .NET 提供者取用資料，並使該資料可供資料流程使用。  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/20/2017
   
  ADO NET 來源有一個一般輸出和一個錯誤輸出。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/20/2017
  **資料存取模式**  
  從來源中指定選取資料的方法。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |資料表或檢視|從 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 資料來源中的資料表或檢視擷取資料。|  
 |SQL (命令)|使用 SQL 查詢從 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 資料來源中擷取資料。|  
@@ -176,7 +177,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 ADO NET 來源。  
+2.  在 [資料流程] 索引標籤上，按兩下 ADO NET 來源。  
   
 3.  在 [ADO NET 來源編輯器] 中，按一下 [錯誤輸出]。  
   

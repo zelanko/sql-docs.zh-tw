@@ -1,34 +1,33 @@
 ---
-title: "從 SQL Server Data Tools (SSAS 表格式) 部署 |Microsoft 文件"
+title: "從 SQL Server Data Tools 部署 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.deploystatus.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c74177752bf4a880f6857b987abfdc050a2f252
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c009ba69247d754c95f98732f41e4023db0fcaa4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>從 SQL Server 資料工具部署
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]使用本主題中的工作，若要使用 [部署] 命令在 SSDT 中部署表格式模型方案。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+使用本主題中的工作，若要使用 [部署] 命令在 SSDT 中部署表格式模型方案。  
   
 ##  <a name="bkmk_deploy"></a> 設定部署選項與部署伺服器屬性  
  在您部署表格式模型方案之前，必須先指定 [部署選項] 與 [部署伺服器] 屬性。 如需部署屬性和設定的詳細資訊，請參閱[表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
@@ -45,12 +44,12 @@ ms.lasthandoff: 12/08/2017
     > [!NOTE]  
     >  您無法在 DirectQuery 模式下指定模型的 [模擬設定]。  
   
-3.  在 [部署伺服器] 中，指定 [伺服器] (名稱)、[版本]、[資料庫] (名稱) 及 [Cube 名稱] 屬性設定 (如果與預設設定不同)，然後按一下 [確定]。  
+3.  在 [部署伺服器] 中，指定 [伺服器] \(名稱)、[版本]、[資料庫] \(名稱) 及 [Cube 名稱] 屬性設定 (如果與預設設定不同)，然後按一下 [確定]。  
   
 > [!NOTE]  
->  您也可以指定 [預設部署伺服器] 屬性設定，自動將您建立的任何新專案部署至指定的伺服器。 如需詳細資訊，請參閱[設定預設資料模型化和部署屬性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
+>  您也可以指定 [預設部署伺服器] 屬性設定，自動將您建立的任何新專案部署至指定的伺服器。 如需詳細資訊，請參閱[設定預設資料模型和部署屬性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
-##  <a name="bkmk_deploy_proc"></a>部署表格式模型  
+##  <a name="bkmk_deploy_proc"></a> 部署表格式模型  
   
 #### <a name="to-deploy-a-tabular-model"></a>若要部署表格式模型
   
@@ -70,8 +69,8 @@ ms.lasthandoff: 12/08/2017
  **停止部署**  
  按一下可停止部署作業。 如果部署作業耗費時間過長，或者如果有太多錯誤，這個選項會很有用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)   
- [設定預設的資料模型化和部署屬性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+ [設定預設的資料模型和部署屬性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
   
   

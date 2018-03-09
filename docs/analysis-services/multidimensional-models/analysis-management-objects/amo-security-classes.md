@@ -1,37 +1,36 @@
 ---
 title: "AMO 安全性類別 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Management Objects, security
 - security [AMO]
 - AMO, security
 ms.assetid: e3d5012a-8121-40de-9244-1fc824228693
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c47924ca1262c6d6e283034ed281edf9e790b21b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 151642efa920091a95002f0dad8857986ed98861
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-security-classes"></a>AMO 安全性類別
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主題包含下列各節：  
+  本主題包含下列幾節：  
   
 -   [Role 和 RoleMember 物件](#RolesMembers)  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 12/08/2017
   
  如需有關可用方法和屬性的詳細資訊，請參閱 <xref:Microsoft.AnalysisServices.Permission> 中的 <xref:Microsoft.AnalysisServices>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices>   
  [程式設計 AMO 安全性物件](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)   
  [權限和存取權限 &#40;Analysis Services-多維度資料 &#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   

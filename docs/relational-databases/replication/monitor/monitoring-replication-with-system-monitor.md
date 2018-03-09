@@ -17,22 +17,22 @@ helpviewer_keywords:
 - performance counters [SQL Server replication]
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c4cfd607d49e4a9e3c5534eef93bdd773e774f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ce2cd6d57f3d8f5c2e08930a96f118341172fafc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>使用系統監視器監視複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 系統監視器可讓您使用圖形、圖表和報表來量測電腦的效率、識別可能的問題並進行疑難排解 (例如不平衡的資源用量、硬體不足或不良的程式設計)，以及規劃其他硬體需求。 如需詳細資訊，請參閱[監視資源使用狀況 &#40;系統監視器&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)。  
   
  「系統監視器」使用效能物件和計數器，這些工具可以提供各種處理之效能的資訊。 您可以透過與複寫代理程式相關的計數器來衡量複寫效能：  
   
-|代理程式|效能物件|計數器|描述|  
+|Agent|效能物件|計數器|描述|  
 |-----------|------------------------|-------------|-----------------|  
 |所有代理程式|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫代理程式|執行中|目前正在執行的複寫代理程式數。|  
 |快照集代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫快照|Snapshot:Delivered Cmds/sec|每秒傳送到散發者的命令數。|  
@@ -43,9 +43,9 @@ ms.lasthandoff: 11/17/2017
 |散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist:Delivered Cmds/sec|每秒傳遞至「訂閱者」的命令數。|  
 |散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist:Delivered Trans/sec|每秒傳遞至「訂閱者」的交易數。|  
 |散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist:Delivery Latency|目前從交易傳送到分配者到交易在「訂閱者」套用所經過的時間 (毫秒)。|  
-|合併代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫合併|Conflicts/sec|合併處理期間每秒所發生的衝突數。|  
-|合併代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫合併|Downloaded Changes/sec|每秒從「發行者」複寫至「訂閱者」的資料列數。|  
-|合併代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫合併|Uploaded Changes/sec|每秒從「訂閱者」複寫至「發行者」的資料列數。|  
+|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫合併|Conflicts/sec|合併處理期間每秒所發生的衝突數。|  
+|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫合併|Downloaded Changes/sec|每秒從「發行者」複寫至「訂閱者」的資料列數。|  
+|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫合併|Uploaded Changes/sec|每秒從「訂閱者」複寫至「發行者」的資料列數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [監視 &#40;複寫&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  

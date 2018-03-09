@@ -8,7 +8,8 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d235f0af092b5780686abbe2b8d191f04547fd6a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 含有 PolyBase 的獨立 SQL Server 執行個體會在處理 Hadoop 或 Azure Blob 儲存體中的大量資料集時成為效能瓶頸。 PolyBase 群組功能可讓您建立 SQL Server 執行個體的叢集，利用向外延展方式處理來自外部資料來源 (例如 Hadoop 或 Azure Blob 儲存體) 的大型資料集，以提高查詢效能。  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+含有 PolyBase 的獨立 SQL Server 執行個體會在處理 Hadoop 或 Azure Blob 儲存體中的大量資料集時成為效能瓶頸。 PolyBase 群組功能可讓您建立 SQL Server 執行個體的叢集，利用向外延展方式處理來自外部資料來源 (例如 Hadoop 或 Azure Blob 儲存體) 的大型資料集，以提高查詢效能。  
   
  請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) 和 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/18/2017
  前端節點包含要提交 PolyBase 查詢的目標 SQL Server 執行個體。 每個 PolyBase 群組只能包含一個前端節點。 前端節點是 SQL Server 執行個體上 SQL Database Engine、PolyBase Engine 及 PolyBase Data Movement Service 的邏輯群組。  
   
 ### <a name="compute-node"></a>計算節點  
- 計算節點包含 SQL Server 執行個體，可協助處理外部資料上的向外延展查詢。 計算節點是 SQL Server 執行個體上 SQL Server 和 PolyBase Data Movement Service 的邏輯群組。 一個 PolyBase 群組可以有多個計算節點。  
+ 計算節點包含 SQL Server 執行個體，可協助處理外部資料上的向外延展查詢。 計算節點是 SQL Server 執行個體上 SQL Server 和 PolyBase Data Movement Service 的邏輯群組。 一個 PolyBase 群組可以有多個計算節點。  前端節點和計算節點全都必須執行同一個 SQL Server 版本。
   
 ### <a name="distributed-query-processing"></a>分散式查詢處理  
  PolyBase 查詢會提交到前端節點上的 SQL Server。 參考外部資料表之查詢的這一部分會交付至 PolyBase Engine。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="to-configure-a-polybase-group"></a>設定 PolyBase 群組  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
   
 -   位於相同網域的 N 部電腦  
   
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/18/2017
   
 ### <a name="steps"></a>步驟  
   
-1.  在 N 部電腦上安裝含有 PolyBase 的 SQL Server。  
+1.  在 N 部電腦上安裝同一個含有 PolyBase 的 SQL Server 版本。  
   
 2.  選取一個 SQL Server 執行個體做為前端節點。 只可在執行 SQL Server Enterprise 的執行個體中指定前端節點。  
   
@@ -134,7 +136,7 @@ ms.lasthandoff: 11/18/2017
   
 5.  在 PQTH4A-CMP01 上執行 DMV sys.dm_exec_compute_nodes，確認節點已移除。 現在，PQTH4A-CMP02 將可用來做為獨立的前端節點  
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
  如需疑難排解，請參閱 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)。  
   
 ## <a name="see-also"></a>另請參閱  

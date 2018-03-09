@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c1ec4e43ebc62a5c64477cb372ad82f9d1bf26a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>設定彈性的自動容錯移轉原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
   
 |工作|Permissions|  
 |----------|-----------------|  
@@ -90,9 +91,9 @@ ms.lasthandoff: 11/20/2017
   
          這些整數值與失敗狀況層級的關聯性如下所示：  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|Level|起始自動容錯移轉的狀況|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] ReplTest1|Level|起始自動容錯移轉的狀況|  
         |------------------------------|-----------|-------------------------------------------|  
-        |1|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
+        |@shouldalert|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
         |2|二|伺服器沒有回應時。 滿足任何狀況的較低值，而且 SQL Server 服務連接到叢集且超過健全狀況檢查逾時臨界值，或者目前主要複本處於失敗狀態。|  
         |3|三|發生嚴重伺服器錯誤時。 滿足任何狀況的較低值，或者發生內部嚴重伺服器錯誤。<br /><br /> 這是預設層級。|  
         |4|四|發生一般伺服器錯誤時。 滿足任何狀況的較低值，或者發生一般伺服器錯誤。|  
@@ -112,13 +113,13 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要設定彈性容錯移轉原則**  
   
-1.  設定預設值 (**cd**) 為裝載主要複本的伺服器執行個體。  
+1.  將預設值 (**cd**) 設定為裝載主要複本的伺服器執行個體。  
   
 2.  將可用性複本加入可用性群組中時，請使用 **New-SqlAvailabilityGroup** Cmdlet。 修改現有的可用性複本時，請使用 **Set-SqlAvailabilityGroup** Cmdlet。  
   
     -   若要設定容錯移轉狀況層級，請使用 **FailureConditionLevel***level* 參數，其中 *level* 是下列其中一個值：  
   
-        |值|Level|起始自動容錯移轉的狀況|  
+        |ReplTest1|Level|起始自動容錯移轉的狀況|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
         |**OnServerUnresponsive**|二|伺服器沒有回應時。 滿足任何狀況的較低值，而且 SQL Server 服務連接到叢集且超過健全狀況檢查逾時臨界值，或者目前主要複本處於失敗狀態。|  

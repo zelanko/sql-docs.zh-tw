@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysoledbusers_TSQL
 - sysoledbusers
 - sysoledbusers_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysoledbusers system table
 - sys.sysoledbusers compatibility view
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b711395050bca928f018215eefd953f35389060f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 97cad6b87bbcad6bbc551ce675cf0c84850e7f3d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +46,13 @@ ms.lasthandoff: 11/27/2017
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|伺服器的安全性識別碼 (SID)。|  
-|**rmtloginame**|**nvarchar (**128**)**|遠端登入名稱的**loginsid**連結會對應至**rmtservid**。|  
-|**rmtpassword**|**nvarchar (**128**)**|傳回 NULL。|  
-|**loginsid**|**varbinary (**85**)**|所要對應的本機登入 SID。|  
+|**rmtloginame**|**nvarchar(**128**)**|遠端登入名稱的**loginsid**連結會對應至**rmtservid**。|  
+|**rmtpassword**|**nvarchar(**128**)**|傳回 NULL。|  
+|**loginsid**|**varbinary(**85**)**|所要對應的本機登入 SID。|  
 |**status**|**smallint**|如果是 1，則對應應該使用使用者的認證。|  
 |**changedate**|**datetime**|上次變更對應資訊的日期。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

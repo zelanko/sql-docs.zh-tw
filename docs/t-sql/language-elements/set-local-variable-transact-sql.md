@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET @local_variable
 - variables [SQL Server], assigning
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b7d855f491a4f9482308df6f3ed2dcca8b067398
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>設定@local_variable(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +76,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>引數  
- **@***local_variable*  
+ **@** *local_variable*  
  以外的任何類型的變數名稱**游標**，**文字**， **ntext**，**映像**，或**資料表**。 變數名稱開頭必須是 @ 記號 (**@**)。 變數名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
   
  *property_name*  
@@ -92,7 +94,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *method_name* **(** *引數*[ **，**...*n* ] **)**  
  這是利用一個或多個引數來修改類型執行個體狀態的使用者定義型別。 靜態方法必須是公用的。  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  這是類型位於組件中的變數。 如需詳細資訊，請參閱 [Common Language Runtime &#40;CLR&#41; 整合程式設計概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)。  
   
  *mutator_method*  
@@ -181,7 +183,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  變數只能用在運算式中，不能用在物件名稱或關鍵字中。 若要建構動態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，請使用 EXECUTE。  
   
- 集合的語法規則 **@**  *cursor_variable*不包括 LOCAL 和 GLOBAL 關鍵字。 當集合 **@**  *cursor_variable* = CURSOR...語法時，資料指標建立成 GLOBAL 或 LOCAL，隨著 default to local cursor 資料庫選項設定而不同。  
+ 集合的語法規則 **@ * * * cursor_variable*不包括 LOCAL 和 GLOBAL 關鍵字。 當集合 **@ * * * cursor_variable* = CURSOR...語法時，資料指標建立成 GLOBAL 或 LOCAL，隨著 default to local cursor 資料庫選項設定而不同。  
   
  資料指標變數一律是區域變數，即使它們參考了全域資料指標也是如此。 當資料指標變數參考全域資料指標時，資料指標會同時有全域和本機資料指標參考。 如需詳細資訊，請參閱「範例 C」一節。  
   
@@ -192,7 +194,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  請勿使用 SELECT 陳述式中的變數來串連值 (也就是計算彙總值)。 可能會發生非預期的查詢結果。 這是因為 SELECT 清單中的所有運算式 (包括指派) 都不保證能夠剛好針對每個輸出資料列執行一次。 如需詳細資訊，請參閱[這篇知識庫文章](http://support.microsoft.com/kb/287515)。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 public 角色中的成員資格。 所有使用者都可以都使用集 **@**  *local_variable*。  
+ 需要 public 角色中的成員資格。 所有使用者都可以都使用集 **@ * * * local_variable*。  
   
 ## <a name="examples"></a>範例  
   
@@ -366,7 +368,7 @@ SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

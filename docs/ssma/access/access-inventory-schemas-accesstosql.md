@@ -1,7 +1,7 @@
 ---
 title: "存取清查結構描述 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -47,11 +47,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d22835bef06693ecf2fef51240f4bd9d9607a8e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>存取清查結構描述 (AccessToSQL)
 下列章節將說明當您匯出要存取結構描述時所建立的 SSMA 資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="databases"></a>資料庫  
 資料庫中繼資料匯出至**SSMA_Access_InventoryDatabases**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|可唯一識別每個資料庫的 GUID。 此資料行也是資料表的主索引鍵。|  
 |**DatabaseName**|**nvarchar(4000)**|存取資料庫的名稱。|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="tables"></a>資料表  
 資料表中繼資料匯出至**SSMA_Access_InventoryTables**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此資料表的資料庫。|  
 |**TableId**|**uniqueidentifier**|唯一識別資料表的 GUID。 此資料行也是資料表的主索引鍵。|  
@@ -94,10 +94,10 @@ ms.lasthandoff: 12/05/2017
 |**LinkedTable**|**nvarchar(4000)**|另一個資料表，如果有的話，與資料表相連結。 連結資料表可允許新增、 刪除及更新的其他資料表使用此資料表。|  
 |**ExternalSource**|**nvarchar(4000)**|資料來源，如果有的話，會與資料表相關聯。 如果資料表有關聯，它會有此欄位中指定外部資料來源。|  
   
-## <a name="columns"></a>資料行  
+## <a name="columns"></a>[資料行]  
 資料行中繼資料匯出至**SSMA_Access_InventoryColumns**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此資料行的資料庫。|  
 |**TableId**|**uniqueidentifier**|識別包含此資料行的資料表。|  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="indexes"></a>索引  
 索引中繼資料匯出至**SSMA_Access_InventoryIndexes**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此索引的資料庫。|  
 |**TableId**|**uniqueidentifier**|識別包含此索引的資料表。|  
@@ -127,7 +127,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="foreign-keys"></a>外部索引鍵  
 外部索引鍵的中繼資料匯出至**SSMA_Access_InventoryForeignKeys**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此外部索引鍵的資料庫。|  
 |**TableId**|**uniqueidentifier**|識別包含此外部索引鍵的資料表。|  
@@ -143,7 +143,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="queries"></a>查詢  
 查詢中繼資料匯出至**SSMA_Access_InventoryQueries**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此查詢的資料庫。|  
 |**QueryId**|**int**|識別查詢的遞增整數。 此資料行是資料表的主索引鍵。|  
@@ -156,7 +156,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="forms"></a>表單  
 表單的中繼資料匯出至**SSMA_Access_InventoryForms**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此表單的資料庫。|  
 |**FormId**|**int**|識別表單的遞增整數。 此資料行是資料表的主索引鍵。|  
@@ -165,7 +165,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="macros"></a>巨集  
 巨集的中繼資料匯出至**SSMA_Access_InventoryMacros**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含巨集的資料庫。|  
 |**MacroId**|**int**|識別巨集的遞增整數。 此資料行是資料表的主索引鍵。|  
@@ -174,7 +174,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="reports"></a>報表  
 報表中繼資料匯出至**SSMA_Access_InventoryReports**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含報表的資料庫。|  
 |**ReportId**|**int**|識別報表的遞增整數。 此資料行是資料表的主索引鍵。|  
@@ -183,7 +183,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="modules"></a>模組  
 模組中繼資料匯出至**SSMA_Access_InventoryModules**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含模組的資料庫。|  
 |**ModuleId**|**int**|遞增整數可識別模組。 此資料行是資料表的主索引鍵。|  

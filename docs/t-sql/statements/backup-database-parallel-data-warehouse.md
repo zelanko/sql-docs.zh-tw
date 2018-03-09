@@ -8,20 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ced03c90d0f30a1e8749d09f00d293bdee53b06e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>備份資料庫 (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -63,7 +64,7 @@ BACKUP DATABASE database_name
  *database_name*  
  建立備份的資料庫名稱。 資料庫可以是主要資料庫或使用者資料庫。  
   
- 磁碟 = '\\\\*UNC_path*\\*backup_directory*'  
+ TO DISK = '\\\\*UNC_path*\\*backup_directory*'  
  網路路徑及目錄的[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]將寫入備份檔案。 例如，'\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。  
   
 -   備份目錄名稱的路徑必須存在，而且必須指定為完整的通用命名慣例 (UNC) 路徑。  
@@ -76,7 +77,7 @@ BACKUP DATABASE database_name
   
 -   必須指定伺服器或主機，IP 位址。  您無法指定它做為主機或伺服器名稱。  
   
- 描述 = **'***文字***'**  
+ DESCRIPTION = **'***text***'**  
  指定備份的文字描述。 文字的最大長度為 255 個字元。  
   
  描述儲存在中繼資料，而且 RESTORE HEADERONLY 還原備份標頭時，會顯示。  
@@ -160,11 +161,11 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>中繼資料  
  這些動態管理檢視包含所有備份、 還原的相關資訊和載入作業。 資訊會保留在系統重新啟動。  
   
--   [sys.pdw_loader_backup_runs &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>效能  
  若要執行備份，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]第一個備份中繼資料，然後執行平行備份儲存在計算節點上的資料庫資料。 資料是直接從每個計算節點複製到備份目錄。 若要達成最佳效能將資料從運算節點移到備份目錄中，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]控制要同時複製資料的計算節點的數目。  
@@ -246,7 +247,7 @@ WITH (
 ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [還原資料庫 &#40;平行資料倉儲 &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   

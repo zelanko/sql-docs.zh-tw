@@ -8,24 +8,26 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - catalog views [SQL Server], AlwaysOn Availability Groups
 - YY
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c878c87e85d66fdd4c0c99d17d2d68d5270a3b38
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9cca8b7732d42f183462d5b1f7964b64b16d679d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 可用性群組目錄檢視 (TRANSACT-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +46,9 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  聯結的可用性資料庫的相關資訊，請參閱**replica_id**和**group_database_id**中的資料行[sys.databases (TRANSACT-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.databases (TRANSACT-SQL)](sys-databases-transact-sql.md)   
- [sys.database_mirroring_endpoints (TRANSACT-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)   
+ [sys.database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
  [AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [監視可用性群組 (TRANSACT-SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On 可用性群組動態管理檢視和函數 (TRANSACT-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  

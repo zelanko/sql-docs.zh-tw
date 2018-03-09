@@ -3,27 +3,27 @@ title: "操作容錯移轉叢集執行個體-SQL Server on Linux |Microsoft 文�
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: aba3ca214a1ea96d18aa17285ed40235bf2f7bdb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5e557c2ef6005a9e2822b973748928bae991875c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>操作容錯移轉叢集執行個體-SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明如何運作的 SQL Server 容錯移轉叢集執行個體 (FCI) 在 Linux 上。 如果您沒有在 Linux 上建立 SQL Server FCI，請參閱[設定容錯移轉叢集執行個體-SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)。 
 
@@ -38,7 +38,7 @@ Fci 的容錯移轉是類似於 Windows Server 容錯移轉叢集 (WSFC)。 如�
 - [RHEL 或 Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
-## <a name = "#rhelFailover"></a>手動容錯移轉 （RHEL 或 Ubuntu）
+## <a name = "#rhelFailover"></a> 手動容錯移轉 （RHEL 或 Ubuntu）
 
 若要執行的手動容錯移轉，onn Red Hat Enterprise Linux (RHEL) 或 Ubuntu 伺服器執行下列步驟。
 1.  發出下列命令： 
@@ -59,7 +59,7 @@ Fci 的容錯移轉是類似於 Windows Server 容錯移轉叢集 (WSFC)。 如�
 
 \<FCIResourceName > fci Pacemaker 資源名稱。 
 
-## <a name = "#slesFailover"></a>手動容錯移轉 (SLES)
+## <a name = "#slesFailover"></a> 手動容錯移轉 (SLES)
 
 
 在 「 Suse Linux Enterprise Server 」 (SLES) 使用`migrate`命令手動容錯移轉至 SQL Server FCI。 例如：

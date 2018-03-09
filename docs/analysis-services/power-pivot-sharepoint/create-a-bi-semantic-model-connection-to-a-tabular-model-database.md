@@ -5,29 +5,27 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: feb8740550ba5488ff07425ce20036140d84e3dc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>建立與表格式模型資料庫的 BI 語意模型連接
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]若要設定重新導向至 SharePoint 伺服器陣列外部的 Analysis Services 執行個體上執行的表格式模型資料庫的 BI 語意模型連接中使用本主題中的資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用本主題的資訊可設定 BI 語意模型連接，重新導向至 SharePoint 伺服器陣列外部的 Analysis Services 執行個體上執行的表格式模型資料庫。  
   
  在您建立 BI 語意模型連接並且設定 SharePoint 和 Analysis Services 權限之後，人們可以將其當做 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表的資料來源使用。  
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  在 SQL Server Management Studio 中，連接到 Analysis Services 執行個體。  
   
-2.  以滑鼠右鍵按一下伺服器名稱，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下伺服器名稱，然後選取 **[屬性]**。  
   
 3.  按一下 [安全性]，然後按一下 [加入]。 輸入用來執行服務應用程式的 Windows 使用者帳戶。  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_BISM"></a> 授與表格式模型資料庫的讀取權限  
  由於資料庫在伺服器陣列外部的伺服器上執行，因此在設定連接的過程中，將會包含授與後端 Analysis Services 伺服器的資料庫使用者權限。 Analysis Services 會使用以角色為基礎的權限模型。 連接到模型資料庫的使用者必須使用「讀取」權限或更高的權限，透過授與讀取權限給其成員的角色來進行。  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立模型時會定義角色 (有時也會定義角色成員資格)。 您不能使用 SQL Server Management Studio 建立角色，但是可以用來將成員加入至已經定義的角色。 如需建立角色的詳細資訊，請參閱[建立及管理角色 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立模型時會定義角色 (有時也會定義角色成員資格)。 您不能使用 SQL Server Management Studio 建立角色，但是可以用來將成員加入至已經定義的角色。 如需有關建立角色的詳細資訊，請參閱[建立及管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
   
 #### <a name="assign-role-membership"></a>指派角色成員資格  
   
@@ -151,7 +149,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_next"></a> 後續步驟  
  在建立 BI 語意模型連接並且確保其安全之後，可以將此連接指定為資料來源。 如需詳細資訊，請參閱 [在 Excel 或 Reporting Services 使用 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Power Pivot BI 語意模型連接 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [建立與 Power Pivot 活頁簿的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

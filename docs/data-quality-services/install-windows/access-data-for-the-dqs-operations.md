@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bb59f0303f904426d3077af2fa96edd5ebea67f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf4ccaec030d6db0db4b3e83b8051e4ca97b5b2f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="access-data-for-the-dqs-operations"></a>存取用於 DQS 作業的資料
   若要使用您的來源資料進行 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 作業，並匯出已處理的資料，您可以執行下列任一項操作：  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/20/2017
   
 -   使用您自己的資料庫做為 DQS 作業的來源資料以及匯出已處理資料的目的地。 若要執行此作業，請確定您的資料庫位於和 Data Quality Server 資料庫相同的 SQL Server 執行個體中。 否則，在 Data Quality Client 中，該資料庫將無法用於進行 DQS 作業。 此外，必須授與您的 Windows 使用者帳戶 DQS_STAGING_DATA 資料庫的權限，才可匯出比對結果，因為比對結果會以兩階段匯出：首先會將比對結果先匯出到 DQS_STAGING_DATA 資料庫中的暫存資料表，然後再將其移到目的地資料庫中的資料表。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   您必須執行 DQSInstaller.exe 檔案，才可以完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 的安裝。 如需詳細資訊，請參閱 [執行 DQSInstaller.exe 完成 Data Quality Server 安裝](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  在 **[登入屬性]** 對話方塊中，按一下 **[確定]** 套用變更。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
  嘗試執行存取資料庫做為 DQS 作業之資料來源的 DQS 作業，然後將處理過的資料匯出到資料庫。  
   
 ## <a name="see-also"></a>另請參閱  

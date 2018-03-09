@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Member::Children
 - Children
-helpviewer_keywords: Children property [ADO MD]
+helpviewer_keywords:
+- Children property [ADO MD]
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa5413bb0769fa3a0f57d246d1baf967c58d3d2f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 39c1ba30aab6f6a972241c0e564a7a0680165828
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="children-property-ado-md"></a>子系屬性 (ADO MD)
 傳回[成員](../../../ado/reference/ado-md-api/members-collection-ado-md.md)集合目前[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)階層中的父系。  
@@ -40,5 +42,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="applies-to"></a>適用於  
  [Member 物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ChildCount 屬性 (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)

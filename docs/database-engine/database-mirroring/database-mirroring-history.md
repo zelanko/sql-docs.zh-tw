@@ -16,13 +16,13 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c06fd5ffe8a889b1decb3083f517c5ecae86bc0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-history"></a>資料庫鏡像記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用這個對話方塊，可檢視指定的伺服器執行個體上某個鏡像資料庫的鏡像狀態記錄。  
@@ -31,11 +31,11 @@ ms.lasthandoff: 11/20/2017
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **伺服器執行個體**  
  正在報告記錄的伺服器執行個體名稱。  
   
- **資料庫**  
+ **[資料庫備份]**  
  正在報告之記錄所屬的資料庫名稱。  
   
  **依下列項目篩選清單**  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
 -   所有記錄  
   
- **重新整理**  
+ **[重新整理]**  
  按一下即可重新整理記錄清單。  
   
 > [!NOTE]  

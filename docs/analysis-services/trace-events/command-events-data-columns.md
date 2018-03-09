@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Command Events event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ca478c82617a39b311e0f627320e363a5f7127f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7f3c3be311e1f0ce7b53bd35b90fb94dfc03f07b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="command-events-data-columns"></a>命令事件資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]下表列出的資料行中每個事件類別**命令事件**事件類別目錄。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_1"></a> 命令開始類別—資料行  
   
-|資料行|說明|  
+|資料行|描述|  
 |-----------------|-----------------|  
 |ConnectionID|包含與命令事件相關聯的唯一連接識別碼。|  
 |TextData|包含與命令事件相關聯的文字資料。|  
@@ -55,14 +55,14 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_2"></a> 命令結束類別—資料行  
   
-|資料行|說明|  
+|資料行|描述|  
 |-----------------|-----------------|  
 |ConnectionID|包含與命令事件相關聯的唯一連接識別碼。|  
 |TextData|包含與命令事件相關聯的文字資料。|  
 |ServerName|包含發生命令事件之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。|  
 |CurrentTime|包含命令事件的目前時間。 篩選的格式為 *YYYY*-*MM*-*DD* 和 *YYYY*-*MM*-*DD HH*:*MM*:*SS*。|  
 |DatabaseName|包含執行命令之資料庫的名稱。|  
-|有效期間|包含在命令開始和命令結束事件之間的大約時間量。|  
+|Duration|包含在命令開始和命令結束事件之間的大約時間量。|  
 |EndTime|包含命令事件結束的時間。 篩選的格式為 *YYYY*-*MM*-*DD* 和 *YYYY*-*MM*-*DD HH*:*MM*:*SS*。|  
 |EventSubclass|包含命令事件中之事件的類別。 支援的值為：<br /><br /> 0：建立<br /><br /> 1：變更<br /><br /> 2：刪除<br /><br /> 3：處理<br /><br /> 4：DesignAggregations<br /><br /> 5：WBInsert<br /><br /> 6：WBUpdate<br /><br /> 7：WBDelete<br /><br /> 8：備份<br /><br /> 9：還原<br /><br /> 10：MergePartitions<br /><br /> 11：訂閱<br /><br /> 12：批次<br /><br /> 13：BeginTransaction<br /><br /> 14：CommitTransaction<br /><br /> 15：RollbackTransaction<br /><br /> 16：GetTransactionState<br /><br /> 17：取消<br /><br /> 18：同步處理<br /><br /> 19：Import80MiningModels<br /><br /> 20：附加<br /><br /> 21︰卸離<br /><br /> 22：SetAuthContext<br /><br /> 23：ImageLoad<br /><br /> 24：ImageSave<br /><br /> 10000：其他|  
 |NTCanonicalUserName|包含與命令事件相關聯的 Windows 使用者名稱。 使用者名稱採用標準格式。 例如，engineering.microsoft.com/software/user。|  

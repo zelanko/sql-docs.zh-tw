@@ -8,12 +8,11 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - regular attributes [Analysis Services]
 - parent attributes [Analysis Services]
@@ -27,19 +26,20 @@ helpviewer_keywords:
 - attributes [Analysis Services]
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 18621eba78a2e4c95de6373485044b5f88e1f744
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>屬性和屬性階層
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]維度是屬性，繫結至資料表中的一個或多個資料行或資料來源檢視中的檢視的集合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+維度是屬性的集合，這些屬性會繫結至資料來源檢視中資料表或檢視內的一或多個資料行。  
   
 ## <a name="key-attribute"></a>索引鍵屬性  
  每一個維度都有包含索引鍵屬性， 每一個屬性已繫結至維度資料表中的一或多個資料行。 索引鍵屬性是維度中的一個屬性，它會識別維度主資料表中，用於外部索引鍵與事實資料表之關聯性的資料行。 通常，索引鍵屬性會代表維度資料表中的主索引鍵資料行。 您可以在資料來源檢視中的資料表上定義邏輯主索引鍵，只要其基礎資料來源中沒有實體主索引鍵。 **如需詳細資訊**，請參閱[定義邏輯主索引鍵中資料來源檢視 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). 定義索引鍵屬性時，Cube 精靈和維度精靈會嘗試使用資料來源檢視中，維度資料表的主索引資料行。 如果維度資料表沒有定義邏輯主索引鍵或實體主索引鍵，精靈就無法正確地定義維度的索引鍵屬性。  
@@ -55,9 +55,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>屬性關聯性、星狀結構描述和雪花式結構描述  
  依預設，星狀結構描述中的所有屬性都與索引鍵屬性直接相關，如此可讓使用者根據維度中的任何屬性階層在 Cube 中瀏覽事實。 在雪花式結構描述中，如果其基礎資料表直接連結到事實資料表，則屬性就會直接連結到索引鍵屬性；否則會透過繫結到基礎資料表內索引鍵的屬性間接進行連結，將雪花資料表連結到直接連結的資料表。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立使用者定義階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [定義屬性關聯性](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
- [維度屬性內容參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性 （Property） 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

@@ -8,30 +8,30 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - collections [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, collections
 - ASSL, collections
 ms.assetid: 072b8c6b-1550-4cab-ae64-ba0e3e60b059
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be1fe8952758379ec471b22e60c2c643f87013c4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7f121fbcd03bf3dace4c09c20925b7ce3d52baf5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="collections-assl"></a>集合 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]這個參考章節包含每個項目，可做為集合中的 Analysis Services 指令碼語言 (ASSL) 結構描述的語法和使用方式資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+這個參考章節包含在「Analysis Services 指令碼語言」(ASSL) 結構描述中當做集合之每個元素的語法和使用方式資訊。  
   
  雖然 ASSL 結構描述僅包含 XML 元素，從開發人員的觀點來看，這一節所述的元素會對應至物件的集合，例如**維度**和**Cube**集合。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 |[Files 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/files-element-assl.md)|包含集合[檔案](../../../analysis-services/scripting/objects/file-element-assl.md)構成項目[ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)項目。|  
 |[ForeignKeyColumns 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/foreignkeycolumns-element-assl.md)|包含可識別關聯式資料來源父資料表之聯結的資料行集合。|  
 |[Groups 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/groups-element-assl.md)|包含繫結至屬性之成員群組的集合。|  
-|[Hierarchies 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|包含集合[階層](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)元素與父元素相關聯。|  
+|[Hierarchies 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|包含與父元素相關聯之 [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) 元素的集合。|  
 |[IncrementalProcessingNotifications 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/incrementalprocessingnotifications-element-assl.md)|包含集合[IncrementalProcessingNotification](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md)項目提供資訊給[ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)有關判斷的進度所執行的查詢項目累加式處理。|  
 |[KeyColumns 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)|包含集合[KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)元素定義的父物件。|  
 |[Kpis 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/kpis-element-assl.md)|包含集合[Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md)元素與父元素相關聯。|  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/08/2017
 |[Translations 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/translations-element-assl.md)|包含集合[轉譯](../../../analysis-services/scripting/objects/translation-element-assl.md)元素與父元素相關聯。|  
 |[UnknownMemberTranslations 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/unknownmembertranslations-element-assl.md)|包含標題的翻譯集合[UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md)維度的項目。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   

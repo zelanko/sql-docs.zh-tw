@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SP:Completed event class
+helpviewer_keywords:
+- SP:Completed event class
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 002d9a57db13a06b47a00cb50e52d6b0be10a610
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e87b6ec0a5e7dd45cdaec7c30193c048f5380074
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SP:Completed 事件類別指出預存程序已完成執行。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SP:Completed 事件類別指出預存程序已完成執行。  
   
 ## <a name="spcompleted-event-class-data-columns"></a>SP:Completed 事件類別資料行  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |ClientProcessID|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
 |DatabaseID|**int**|執行預存程序之資料庫的識別碼。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|**nvarchar**|執行預存程序之資料庫的名稱。|35|是|  
-|有效期間|**bigint**|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
+|Duration|**bigint**|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
 |EndTime|**datetime**|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。|15|是|  
 |EventClass|**int**|事件類型 = 43。|27|否|  
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |SourceDatabaseID|**int**|物件所存在之資料庫的識別碼。|62|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|**ntext**|預存程序呼叫的文字。|1|是|  
+|TextData|**ntext**|預存程序呼叫的文字。|@shouldalert|是|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|**bigint**|描述目前交易的 Token。|50|是|  
   

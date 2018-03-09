@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
 - sp_addumpdevice
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3e7996f56f71b3028022b869b3e3c3a5480fb5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dad0547ea803cfbf709b36f078d552435c848900
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +54,18 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@devtype=** ] **'***device_type***'**  
+ [ **@devtype=** ] **'***device_type***'**  
  這是備份裝置的類型。 *device_type*是**varchar （20)**，沒有預設值，它可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**磁碟**|做為備份裝置的硬碟檔。|  
-|**磁帶**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 所支援的任何磁帶裝置。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**disk**|做為備份裝置的硬碟檔。|  
+|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 所支援的任何磁帶裝置。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
   
- [  **@logicalname =** ] **'***logical_name***'**  
+ [ **@logicalname =** ] **'***logical_name***'**  
  這是 BACKUP 和 RESTORE 陳述式所用之備份裝置的邏輯名稱。 *logical_name*是**sysname**，沒有預設值，不能是 NULL。  
   
- [  **@physicalname =** ] **'***physical_name***'**  
+ [ **@physicalname =** ] **'***physical_name***'**  
  這是備份裝置的實體名稱。 實體名稱必須遵照作業系統檔案名稱或網路裝置通用命名慣例的規則，且必須包括完整路徑。 *physical_name*是**nvarchar （260)**，沒有預設值的值，而且不能是 NULL。  
   
  當在遠端網路位置建立備份裝置時，請確定用來啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的名稱有遠端電腦的適當寫入功能。  
@@ -73,10 +75,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  此程序將指定的實體名稱輸入目錄中。 此程序不會試著存取或建立裝置。  
   
- [  **@cntrltype =** ] **'***controller_type***'**  
+ [ **@cntrltype =** ] **'***controller_type***'**  
  已過時。 若指定，則會忽略此參數。 支援這個項目的目的，只是為了與舊版相容。 初次使用**sp_addumpdevice**應該省略此參數。  
   
- [  **@devstatus =** ] **'***device_status***'**  
+ [ **@devstatus =** ] **'***device_status***'**  
  已過時。 若指定，則會忽略此參數。 支援這個項目的目的，只是為了與舊版相容。 初次使用**sp_addumpdevice**應該省略此參數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -148,7 +150,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [定義磁碟檔案的邏輯備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: "sys.syscacheobjects (TRANSACT-SQL) |Microsoft 文件"
+title: sys.syscacheobjects (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syscacheobjects
 - syscacheobjects
 - syscacheobjects_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aee1092010168413f316e3b42083bb752f2d9cfa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: afc20f732375a4ecd04075c1dbd228139b0005d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|值區識別碼。 值表示 0 至 (目錄大小 - 1) 的範圍。 目錄大小是雜湊表的大小。|  
 |**cacheobjtype**|**nvarchar(17)**|快取中的物件類型：<br /><br /> 編譯的計畫<br /><br /> 可執行的計畫<br /><br /> 剖析樹狀結構<br /><br /> 資料指標<br /><br /> 擴充預存程序|  
-|**objtype**|**nvarchar （8)**|物件的類型：<br /><br /> 預存程序<br /><br /> 準備陳述式<br /><br /> 隨選查詢 ([!INCLUDE[tsql](../../includes/tsql-md.md)]提交為語言事件從**sqlcmd**或**osql**公用程式，而不是遠端程序呼叫)<br /><br /> ReplProc (複寫程序)<br /><br /> 觸發程序<br /><br /> 檢視<br /><br /> 預設值<br /><br /> 使用者資料表<br /><br /> 系統資料表<br /><br /> 檢查<br /><br /> 規則|  
+|**objtype**|**nvarchar(8)**|物件的類型：<br /><br /> 預存程序<br /><br /> 準備陳述式<br /><br /> 隨選查詢 ([!INCLUDE[tsql](../../includes/tsql-md.md)]提交為語言事件從**sqlcmd**或**osql**公用程式，而不是遠端程序呼叫)<br /><br /> ReplProc (複寫程序)<br /><br /> 觸發程序<br /><br /> 檢視<br /><br /> 預設值<br /><br /> 使用者資料表<br /><br /> 系統資料表<br /><br /> 檢查<br /><br /> 規則|  
 |**objid**|**int**|用來查閱快取中物件的主要索引鍵之一。 這是的物件識別碼儲存在**sysobjects**資料庫物件 （程序、 檢視、 觸發程序等等）。 針對特定或準備 SQL 之類的快取物件**objid**是內部產生的值。|  
 |**dbid**|**smallint**|快取物件編譯所在的資料庫識別碼。|  
 |**dbidexec**|**smallint**|執行查詢時所在的資料庫識別碼。<br /><br /> 大部分的物件，如**dbidexec**具有相同的值做為**dbid**。<br /><br /> 對於系統檢視表， **dbidexec**是執行查詢的資料庫識別碼。<br /><br /> 針對臨機操作查詢， **dbidexec**為 0。 這表示**dbidexec**具有相同的值做為**dbid**。|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 11/27/2017
 |**sqlbytes**|**int**|提交的程序定義或批次的長度 (以位元組為單位)。|  
 |**sql**|**nvarchar(3900)**|模組定義或提交之批次的前 3900 個字元。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

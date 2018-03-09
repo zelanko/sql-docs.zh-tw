@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text indexes [SQL Server], about
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 25599964a3e210e59fcbb2a1eade782e2109502b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 本主題描述如何建立、填入和管理 SQL Server 中的全文檢索索引。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本主題描述如何建立、填入和管理 SQL Server 中的全文檢索索引。
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>先決條件 - 建立全文檢索目錄
 您需要有全文檢索目錄，才能建立全文檢索索引。 目錄是一或多個全文檢索索引的虛擬容器。 如需詳細資訊，請參閱[建立及管理全文檢索目錄](../../relational-databases/search/create-and-manage-full-text-catalogs.md)。
@@ -131,7 +134,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>尋找全文檢索索引鍵資料行的識別碼  
   
-每個啟用全文檢索的資料表都具有一個用來強制資料表之唯一資料列的資料行 (「唯一索引鍵資料行」)。 從 OBJECTPROPERTYEX 函數中取得的 **TableFulltextKeyColumn** 屬性會包含唯一索引鍵資料行的資料行識別碼。  
+每個啟用全文檢索的資料表都具有一個用來強制資料表之唯一資料列的資料行 (*unique**key column*)。 從 OBJECTPROPERTYEX 函數中取得的 **TableFulltextKeyColumn** 屬性會包含唯一索引鍵資料行的資料行識別碼。  
  
 若要取得這個識別碼，您可以使用 SELECT 陳述式來呼叫 OBJECTPROPERTYEX 函數。 請使用 OBJECT_ID 函數，將資料表的名稱 (*table_name*) 轉換成資料表識別碼，並且指定 **TableFulltextKeyColumn** 屬性，如下所示：  
   

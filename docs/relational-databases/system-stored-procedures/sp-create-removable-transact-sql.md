@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
 - sp_create_removable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_create_removable
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 792413d9fc09f565dba0b73bbe5d10824e5ddd28
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   建立抽取式媒體資料庫。 建立三個或更多檔案 (系統目錄資料表和交易記錄各有一個檔案，資料表有一個或多個檔案)，將資料庫放在這些檔案中。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]我們建議您改用[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)改為。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,36 +62,36 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@dbname=** ] **'***dbname***'**  
+ [ **@dbname=** ] **'***dbname***'**  
  這是您要建立以便在抽取式媒體上使用的資料庫名稱。 *dbname*是**sysname**。  
   
- [  **@syslogical=** ] **'***syslogical***'**  
+ [ **@syslogical=** ] **'***syslogical***'**  
  這是系統目錄資料表所在檔案的邏輯名稱。 *syslogical*是**sysname**。  
   
- [  **@sysphysical=** ] **'***sysphysical***'**  
+ [ **@sysphysical=** ] **'***sysphysical***'**  
  這是實體名稱。 其中包括系統目錄資料表所在檔案的完整路徑。 *sysphysical*是**nvarchar （260)**。  
   
- [  **@syssize=** ] *syssize*  
+ [ **@syssize=** ] *syssize*  
  這是系統目錄資料表所在檔案的大小 (以 MB 為單位)。 *syssize*是**int**。最小值*syssize*為 1。  
   
- [  **@loglogical=** ] **'***loglogical***'**  
+ [ **@loglogical=** ] **'***loglogical***'**  
  這是交易記錄所在檔案的邏輯名稱。 *loglogical*是**sysname**。  
   
- [  **@logphysical=** ] **'***logphysical***'**  
+ [ **@logphysical=** ] **'***logphysical***'**  
  這是實體名稱。 其中包括交易記錄所在檔案的完整路徑。 *logphysical*是**nvarchar （260)**。  
   
- [  **@logsize=** ] *logsize*  
+ [ **@logsize=** ] *logsize*  
  這是交易記錄所在檔案的大小 (以 MB 為單位)。 *logsize*是**int**。最小值*logsize*為 1。  
   
- [  **@datalogical1=** ] **'***datalogical***'**  
+ [ **@datalogical1=** ] **'***datalogical***'**  
  這是資料表所在檔案的邏輯名稱。 *datalogical*是**sysname**。  
   
  必須有 1 至 16 個資料檔。 當預期資料庫較大，必須分散到多個磁碟時，通常會建立一個以上的資料檔。  
   
- [  **@dataphysical1=** ] **'***dataphysical***'**  
+ [ **@dataphysical1=** ] **'***dataphysical***'**  
  這是實體名稱。 其中包括資料表所在檔案的完整路徑。 *dataphysical*是**nvarchar （260)**。  
   
- [  **@datasize1=** ] **'***datasize***'**  
+ [ **@datasize1=** ] **'***datasize***'**  
  這是資料表所在檔案的大小 (以 MB 為單位)。 *datasize*是**int**。最小值*datasize*為 1。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -132,14 +135,14 @@ EXEC sp_create_removable 'inventory',
 10;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [sp_detach_db &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

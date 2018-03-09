@@ -8,20 +8,21 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-caps.latest.revision: "8"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 533a68638853c9703966e7c6eb8ea815950d7108
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f462b0563e37d528808f43b180435fa75a15dc3
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>停用 SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何在資料庫和執行個體層級停用或暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
 ```  
 EXEC msdb.managed_backup.sp_backup_config_basic  
@@ -54,7 +55,7 @@ GO
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 下列範例會識別 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 是否於執行個體層級進行設定，所有的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 是否啟用執行個體的資料庫，該範例還會執行系統預存程序 **sp_backup_config_basic** 以停用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 下列範例會識別 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 是否於執行個體層級進行設定，所有的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 是否啟用執行個體的資料庫，該範例還會執行系統預存程序 **sp_backup_config_basic** 以停用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
 ```  
 -- Create a working table to store the database names  
@@ -77,7 +78,8 @@ SELECT db_name
        FROM   
   
        msdb.managed_backup.fn_backup_db_config (NULL)  
-       WHERE is_managed_backup_enabled = 1  
+       WHERE is_managed_backup_enabled = 1 
+       AND is_dropped = 0
   
        --Select DBName from @DBNames  
   
@@ -121,7 +123,7 @@ GO
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     EXEC msdb.managed_backup.sp_backup_config_basic  

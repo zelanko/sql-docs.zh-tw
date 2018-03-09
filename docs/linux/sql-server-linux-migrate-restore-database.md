@@ -3,27 +3,27 @@ title: "從 Windows 的 SQL Server 資料庫移轉至 Linux |Microsoft 文件"
 description: "本教學課程會示範如何取得 Windows 上的 SQL Server 資料庫備份，並將它還原到執行 SQL Server 2017 Linux 機器。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: 6d54a849630bece0fba6456a516cbd68aecf2eb5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>從 Windows 的 SQL Server 資料庫移轉至 Linux 使用備份與還原
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 的備份和還原功能會從 SQL Server 在 Windows 上的資料庫移轉至 SQL Server 2017 Linux 上的建議的方式。 在本教學課程中，您將逐步進行備份時，將資料庫移至 Linux 和還原技術所需的步驟。
 
@@ -34,7 +34,9 @@ SQL Server 的備份和還原功能會從 SQL Server 在 Windows 上的資料庫
 > * 使用 TRANSACT-SQL Linux 上的備份檔案還原
 > * 執行查詢，以驗證移轉
 
-## <a name="prerequisites"></a>必要條件
+您也可以建立 SQL Server Alwayson 可用性群組將從 Windows 的 SQL Server 資料庫移轉至 Linux。 請參閱[sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)。
+
+## <a name="prerequisites"></a>필수 구성 요소
 
 若要完成本教學課程中，需要下列必要條件：
 
@@ -86,7 +88,7 @@ SQL Server 的備份和還原功能會從 SQL Server 在 Windows 上的資料庫
 
 1. 在 Windows 上開啟 Bash 工作階段。
 
-## <a id="scp"></a>將備份檔案複製到 Linux
+## <a id="scp"></a> 將備份檔案複製到 Linux
 
 1. 在您 Bash 工作階段中，瀏覽至包含您的備份檔案的目錄。 例如：
 
@@ -195,6 +197,7 @@ SQL Server 的備份和還原功能會從 SQL Server 在 Windows 上的資料庫
 > * 若要準備還原備份的檔案重新放置
 > * 使用**sqlcmd**執行 Transact SQL 命令
 > * 使用還原資料庫備份**RESTORE DATABASE**命令 
+> * 執行查詢，以驗證移轉
 
 接下來，瀏覽其他移轉案例適用於 SQL Server on Linux。 
 

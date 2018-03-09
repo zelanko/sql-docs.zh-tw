@@ -3,26 +3,26 @@ title: "設定容錯移轉叢集執行個體存放區 SMB-SQL Server on Linux |M
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8043cd57758749399500b206410694c1735b30e8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-SMB-SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明如何在 Linux 上設定容錯移轉叢集執行個體 (FCI) 的 SMB 存放裝置。 
  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/01/2017
 - SMB 共用必須提供高可用性。
 - 安全性必須設定 SMB 共用上的正確。 以下是共用的範例 /etc/samba/smb.conf，SQLData1 所在名稱。
 
-![05 smbsource][1]
+![05-smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/01/2017
     mkdir <TempDir>
     ```
 
-    <TempDir>是資料夾的名稱。 下列範例會建立名為 /var/opt/mssql/tmp 的資料夾。
+    <TempDir> 是資料夾的名稱。 下列範例會建立名為 /var/opt/mssql/tmp 的資料夾。
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -172,7 +172,7 @@ ms.lasthandoff: 12/01/2017
     sudo systemctl status mssql-server
     ```
  
-   *    若要進一步測試，建立資料庫，以確定是正常的權限。 以下範例使用 Transact SQL。您可以使用 SSMS。
+   *    若要進一步測試，建立資料庫，以確定是正常的權限。 下列範例使用 Transact SQL。您可以使用 SSMS。
 
     ![10_testcreatedb][2] 
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 12/01/2017
  
    * 輸入 exit，不再是超級使用者。
 
-   * 若要測試，請在該資料夾中建立的資料庫。 如下所示的範例會使用 sqlcmd 建立資料庫，切換至該內容，確認檔案存在於作業系統層級，然後再刪除暫存位置。 您可以使用 SSMS。
+   * 若要測試，請在該資料夾中建立的資料庫。 下列範例會使用 sqlcmd 建立資料庫，切換至該內容，確認檔案存在於作業系統層級，然後再刪除暫存位置。 您可以使用 SSMS。
  
    * 取消掛接共用 
 

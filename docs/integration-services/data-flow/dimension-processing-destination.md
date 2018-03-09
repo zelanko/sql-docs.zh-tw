@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Dimension Processing
 - dimensions [Analysis Services], processing
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2f91bc4c236d2593bf3779968a0c27e0b9d68c5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6cb11b490a2ec920d61f55bd403cbbd7c4a36e8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dimension-processing-destination"></a>維度處理目的地
   「維度處理」目的地會載入及處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 維度。 如需維度的詳細資訊，請參閱[維度 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/20/2017
  **處理方法**  
  選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]**。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**加入 (累加)**|執行維度的累加處理。|  
 |**[完整]**|執行維度的完整處理。|  
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/20/2017
  **索引鍵錯誤動作**  
  指定如何處理具有無法接受之索引鍵值的記錄。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|將無法接受的索引鍵值轉換為 **UnknownMember** 值。|  
 |**DiscardRecord**|捨棄記錄。|  
@@ -124,7 +125,7 @@ ms.lasthandoff: 11/20/2017
  **發生錯誤時要執行的動作**  
  如果您已選取 [發生錯誤時停止]，則指定到達錯誤臨界值時要採取的動作。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**StopProcessing**|停止處理。|  
 |**StopLogging**|停止記錄錯誤。|  
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/20/2017
  **找不到索引鍵**  
  針對找不到索引鍵錯誤，指定要採取的動作。 依預設，此值為 **ReportAndContinue**。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  
@@ -141,7 +142,7 @@ ms.lasthandoff: 11/20/2017
  **重複的索引鍵**  
  針對重複索引鍵錯誤，指定要採取的動作。 依預設，此值為 **IgnoreError**。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
  **Null 索引鍵已轉換為未知**  
  指定當 Null 索引鍵轉換為 **UnknownMember** 值的時候應採取的動作。 依預設，此值為 **IgnoreError**。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/20/2017
  **不允許 Null 索引鍵**  
  指定在不允許 Null 索引鍵的情況下如果發現 Null 索引鍵，所要採取的動作。 依預設，此值為 **ReportAndContinue**。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  

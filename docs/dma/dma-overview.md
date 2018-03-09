@@ -1,34 +1,39 @@
 ---
 title: "資料移轉小幫手 (SQL Server) 的概觀 |Microsoft 文件"
 ms.custom: 
-ms.date: 10/04/2017
+ms.date: 02/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, overview
+helpviewer_keywords:
+- Data Migration Assistant, overview
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>資料移轉小幫手的概觀
 
 資料移轉小幫手 (DMA) 可讓您升級至現代化資料平台，就會偵測相容性問題，可能會影響資料庫的新版本的 SQL Server 和 Azure SQL Database 的功能。 DMA 效能和可靠性的改進您的目標環境的建議，並可讓您將您的結構描述、 資料和非內含性的物件從來源伺服器移至您的目標伺服器。
 
+> [!NOTE] 
+> 為大型 （依據資料庫的大小和數量） 移轉，建議使用[Azure 資料庫移轉服務](https://docs.microsoft.com/en-us/azure/dms/dms-overview)，大規模的資料庫的移轉。
+  
 ## <a name="capabilities"></a>Capabilities
 
 - 評估在內部部署移轉至 Azure SQL 資料庫的 SQL Server 執行個體。 評估工作流程可協助您偵測到下列問題，可能會影響 Azure SQL database 移轉，並提供如何解決這些問題的詳細指導方針。
@@ -37,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 
   - 部分支援或不支援的功能： 偵測到目前正在使用來源 SQL Server 執行個體中的部分支援或不受支援的功能。 DMA 提供完整設定的建議，可在 Azure 中和補救步驟的替代方法，讓您可以併入您的移轉專案。
 
-- 探索可能會影響升級至內部部署 SQL Server 的問題。  這些所謂的相容性問題，並分成下列類別：
+- 探索可能會影響升級至內部部署 SQL Server 的問題。 這些所謂的相容性問題，並分成下列類別：
 
   - 重大變更
 
@@ -47,11 +52,11 @@ ms.lasthandoff: 12/21/2017
 
 - 探索目標 SQL Server 平台的資料庫可以受益於在升級後的新功能。 這些功能的建議形式被描述，並分成下列類別：
 
-  - [效能]
+  - 效能
 
   - Security
 
-  - Storage
+  - 儲存空間
 
 - 將內部部署 SQL Server 執行個體移轉至的現代的 SQL Server 執行個體，裝載在內部部署或在 Azure 虛擬機器 (VM) 可從您的內部部署網路存取。 可以使用 VPN 或其他技術來存取 Azure VM。 移轉工作流程可協助您移轉下列元件：
 
@@ -76,11 +81,13 @@ DMA 取代所有舊版的 SQL Server Upgrade Advisor，並適用於大多數的 
 - SQL Server 2012 
 - SQL Server 2014
 - SQL Server 2016
+- SQL Server 2017 on Windows
 
 **目標**
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
+- 在 Windows 和 Linux 上的 SQL Server 2017
 - Azure SQL Database
 
 ## <a name="installation"></a>安裝

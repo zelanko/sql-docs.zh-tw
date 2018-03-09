@@ -8,25 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1a28cf4fcb0f9cd7ba5d00f74e6957302768c17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datasources-object-tmsl"></a>資料來源物件 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定義模型將資料加入至模型，或傳遞透過 DirectQuery 模式查詢中的匯入期間所使用的資料來源的連接。  在 DirectQuery 模式的模型只能有一個**DataSource**物件。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+定義模型將資料加入至模型，或傳遞透過 DirectQuery 模式查詢中的匯入期間所使用的資料來源的連接。  在 DirectQuery 模式的模型只能有一個**DataSource**物件。  
   
  除非您要建立、 取代或改變資料來源物件本身，在您的指令碼 （例如，在資料分割的指令碼） 中參考的任何資料來源必須是現有**DataSource**模型中的物件。  
   
@@ -187,9 +186,9 @@ ms.lasthandoff: 12/08/2017
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [DirectQuery 模式 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [設定 HTTP 存取 Analysis Services 上 Internet Information Services &#40; IIS &#41;8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

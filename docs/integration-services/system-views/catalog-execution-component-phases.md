@@ -8,27 +8,28 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cbf125c6e69af8faac15d0aa0fe5a11afe72e41
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e625abfc3e1defea478c62a024587b4fe126866
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示資料流程元件在每個執行階段所花費的時間。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|階段的唯一識別碼 (ID)。|  
 |execution_id|**bigint**|執行執行個體的唯一識別碼 (ID)。|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 |end_time|**datetimeoffset(7)**|階段結束的時間。|  
 |execution_path|**nvarchar(max)**|資料流程工作的執行路徑。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  此檢視針對資料流程元件的每個執行階段，各顯示一個資料列，例如：Validate、Pre-Execute、Post-Execute、PrimeOutput 和 ProcessInput。 每個資料列都會顯示特定執行階段的開始和結束的時間。  
   
 ## <a name="example"></a>範例  
@@ -67,7 +68,7 @@ order by package_name, task_name, subcomponent_name, execution_path
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **sysadmin** 伺服器角色的成員資格  
+-   **系統管理員**伺服器角色的成員資格  
   
 > [!NOTE]  
 >  當您擁有在伺服器上執行操作的權限時，也會具有檢視作業資訊的權限。 強制使用資料列層級安全性，只會顯示您具有檢視權限的資料列。  

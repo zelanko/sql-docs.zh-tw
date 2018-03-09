@@ -8,7 +8,8 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17c60845cbb26234bc6c52e7fe0e192973689e86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 空間索引可以更有效率地在 **geometry** 或 **geography** 資料類型的資料行 (「空間資料行」) 上執行某些作業。 可以在空間資料行上指定一個以上的空間索引。 這對於類似在單一資料行上為不同鑲嵌式參數建立索引會很有用處。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+空間索引可以更有效率地在 **geometry** 或 **geography** 資料類型的資料行 (「空間資料行」) 上執行某些作業。 可以在空間資料行上指定一個以上的空間索引。 這對於類似在單一資料行上為不同鑲嵌式參數建立索引會很有用處。  
   
  建立空間索引有一些限制。 如需詳細資訊，請參閱本主題中的 [空間索引的限制](#restrictions) 。  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
 11. 在 [空間] 頁面上，指定您想要用於索引之空間屬性的值。  
   
-     當您在 **geometry** 類型資料行上建立索引時，您必須指定週框方塊的 **(***X-min***,***Y-min***)** 和 **(***X-max***,***Y-max***)** 座標。 如果是 **geography** 類型資料行上的索引，在您指定**地理方格**鑲嵌式配置之後，週框方塊欄位會變成唯讀，因為地理方格鑲嵌式不會使用週框方塊。  
+     當您在 **geometry** 類型資料行上建立索引時，您必須指定週框方塊的 **(***X-min***,***Y-min***)** 和 **(***X-max***,***Y-max***)** 座標。 如果是 **geography** 類型資料行上的索引，在您指定 **地理方格** 鑲嵌式配置之後，週框方塊欄位會變成唯讀，因為地理方格鑲嵌式不會使用週框方塊。  
   
      您可以選擇性地針對 [每一物件的資料格] 欄位及鑲嵌式配置的任何方格密度等級指定非預設值。 每一物件的資料格預設數目為 16 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或 8 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或更高，而預設方格密度是 [中] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)])。  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
      如需這些屬性的詳細資訊，請參閱 [索引屬性 F1 說明](../../relational-databases/indexes/index-properties-f1-help.md)。  
   
-12. 按一下 **[確定]**。  
+12. 按一下 [確定] 。  
   
 > [!NOTE]  
 >  若要在相同或不同空間資料行上建立另一個空間索引，請重複上述步驟。  

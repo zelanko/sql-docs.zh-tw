@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - fulltext_indexes_TSQL
 - sys.fulltext_indexes_TSQL
 - sys.fulltext_indexes
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fulltext_indexes catalog view
 - full-text indexes [SQL Server], properties
 ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b076a1b71cf60974fae4d18c7736be9f2d33b1d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6f19f05239629553594f52f30fe2eb4ef0854cb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,14 +45,14 @@ ms.lasthandoff: 11/17/2017
 |**unique_index_id**|**int**|相對應的唯一、非全文檢索索引的識別碼，該索引可將全文檢索索引關聯到資料列。|  
 |**fulltext_catalog_id**|**int**|全文檢索索引所在的全文檢索目錄之識別碼。|  
 |**is_enabled**|**bit**|1 = 全文檢索索引目前是在啟用狀態。|  
-|**change_tracking_state**|**char （1)**|變更追蹤的狀態。<br /><br /> M = 手動<br /><br /> A = 自動<br /><br /> O = 關閉|  
-|**change_tracking_state_desc**|**nvarchar （60)**|變更追蹤的狀態描述。<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
+|**change_tracking_state**|**char(1)**|變更追蹤的狀態。<br /><br /> M = 手動<br /><br /> A = 自動<br /><br /> O = 關閉|  
+|**change_tracking_state_desc**|**nvarchar(60)**|變更追蹤的狀態描述。<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
 |**has_crawl_completed**|**bit**|全文檢索索引完成的前次搜耙 (母體擴展)。|  
-|**crawl_type**|**char （1)**|目前或前次搜耙的類型。<br /><br /> F = 完整搜耙<br /><br /> I = 累加、以時間戳記為基礎的搜耙<br /><br /> U = 以通知為根據的更新搜耙<br /><br /> P = 暫停完整搜耙。|  
-|**crawl_type_desc**|**nvarchar （60)**|目前或前次搜耙類型的描述。<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
+|**crawl_type**|**char(1)**|目前或前次搜耙的類型。<br /><br /> F = 完整搜耙<br /><br /> I = 累加、以時間戳記為基礎的搜耙<br /><br /> U = 以通知為根據的更新搜耙<br /><br /> P = 暫停完整搜耙。|  
+|**crawl_type_desc**|**nvarchar(60)**|目前或前次搜耙類型的描述。<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|目前或前次搜耙的開始。<br /><br /> NULL = 無。|  
 |**crawl_end_date**|**datetime**|目前或前次搜耙的結束。<br /><br /> NULL = 無。|  
-|**incremental_timestamp**|**binary （8)**|下一個累加搜耙所用的時間戳記值。<br /><br /> NULL = 無。|  
+|**incremental_timestamp**|**binary(8)**|下一個累加搜耙所用的時間戳記值。<br /><br /> NULL = 無。|  
 |**stoplist_id**|**int**|識別碼[停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)與這個全文檢索索引相關聯。|  
 |**data_space_id**|**int**|這個全文檢索索引所在的檔案群組。|  
 |**property_list_id**|**int**|與這個全文檢索索引相關聯之搜尋屬性清單的識別碼。 NULL 表示沒有搜尋屬性清單與此全文檢索索引相關聯。 取得這個搜尋屬性清單的詳細資訊，請使用[sys.registered_search_property_lists &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)目錄檢視。|  
@@ -72,14 +74,14 @@ SELECT object_id, property_list_id, stoplist_id FROM sys.fulltext_indexes
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.fulltext_index_fragments &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
- [sys.fulltext_index_catalog_usages &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
+ [sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
  [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
+ [DROP FULLTEXT INDEX &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   

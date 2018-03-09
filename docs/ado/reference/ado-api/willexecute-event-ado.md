@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - WillExecute
 - Connection::WillExecute
-helpviewer_keywords: WillExecute event [ADO]
+helpviewer_keywords:
+- WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dafc71b9f9da6dde5cf9ef7acf7909236441f656
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
 **WillExecute**事件被呼叫之前暫止命令的連接上執行。  
@@ -48,7 +50,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) ，其中包含的鎖定類型**資料錄集**，將會開啟。 使用這個參數，您可以變更鎖定期間的任何型別為**RecordsetOpen**作業。 *LockType*將忽略任何其他作業。  
   
- *選項*  
+ *選項。*  
  A**長**值，指出選項，可用來執行命令或開啟**資料錄集**。  
   
  *adStatus*  
@@ -69,11 +71,11 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute**可讓您檢查並修改暫止執行的參數。 此事件可能會傳回取消暫止命令的要求。  
   
 > [!NOTE]
->  如果原始來源**命令**是所指定的資料流[CommandStream 屬性 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性，指派新字串給**WillExecute** *來源*參數變更的來源**命令**。 **CommandStream**會清除屬性和[CommandText 屬性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性將會更新與新的來源。 所指定的原始資料流**CommandStream**就會發行並無法存取。  
+>  如果原始來源**命令**是所指定的資料流[CommandStream 屬性 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性，指派新字串給 **WillExecute * * * 來源*參數會變更的來源**命令**。 **CommandStream**會清除屬性和[CommandText 屬性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性將會更新與新的來源。 所指定的原始資料流**CommandStream**就會發行並無法存取。  
   
  如果新的來源字串的方言與不同的原始設定[方言屬性](../../../ado/reference/ado-api/dialect-property.md)屬性 (其對應到**CommandStream**)，您必須指定正確的方言設定**方言**屬性所參考的命令物件*pCommand*。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

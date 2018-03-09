@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4cc8bdd0f4c3a4b212661e4ac9363ce6bdefb64f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7ca0b129013f5bdced79d8fb8245893a3db7ff06
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertransactions-rowset"></a>DISCOVER_TRANSACTIONS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回目前的一組暫止交易系統上。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+傳回系統上目前的暫止交易集。  
   
  **適用於：**表格式模型、 多維度模型  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
 |**資料行名稱**|**類型指標**|**限制狀態**|  
 |---------------------|------------------------|---------------------------|  
-|**ID**|**DBTYPE_WSTR**|選擇性。|  
+|**識別碼**|**DBTYPE_WSTR**|選擇性。|  
 |**SESSION_ID**|**DBTYPE_WSTR**|選擇性。|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>使用 ADOMD.NET 傳回資料列集  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |GUID|a07ccd28-8148-11d0-87bb-00c04fc33942|  
 |字串|DISCOVER_TRANSACTIONS|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

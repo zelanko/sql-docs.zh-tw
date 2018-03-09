@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e273a9963b26f5c6361cf459bba54010ad58d56
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ddb9ea039218fa967132572df461103957300161
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-full-text-indexing"></a>疑難排解全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   索引子找不到或無法載入篩選或斷詞工具元件。 如果資料表資料列包含尚未向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體註冊之某個語言的文件格式或內容，會發生此失敗。 在載入已註冊的斷詞工具或篩選元件時，如果該元件尚未進行簽署或無法進行簽章驗證，也會發生此失敗。  
   
--   元件 (例如斷詞工具或篩選) 失敗，並將錯誤傳回給索引子。 如果正在進行檢索的文件損毀，且篩選無法從文件中擷取文字，則會發生這個狀況。 當元件無法處理超過特定大小之單一資料列的內容時 (因全文檢索篩選背景程式主機 (fdhost.exe) 的記憶體限制)，也可能發生這個狀況。  
+-   元件 (例如斷詞工具或篩選) 失敗，並將錯誤傳回給索引子。 如果正在進行檢索的文件損毀，且篩選無法從文件擷取文字，則會發生此失敗。 當元件無法處理超過特定大小之單一資料列的內容時，因全文檢索篩選精靈主機 (fdhost.exe) 的記憶體限制，也可能發生此失敗。  
   
  搜耙記錄檔會包含每個資料列層級失敗原因的詳細資料。 且會在完整或累加母體擴展結束時彙總說明錯誤計數。  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   內含在進行全文檢索索引之資料表的檔案群組離線或變成唯讀。  
   
- 您應該在結束任何大量全文檢索索引母體擴展作業時，或發現母體擴展未完成時，檢視搜耙記錄檔。  
+ 您應該在結束任何大量全文檢索索引母體擴展作業時，或發現母體擴展未完成時，檢視編目記錄檔。  
   
 ### <a name="unsigned-components"></a>未簽署的元件  
  依預設，全文檢索索引子需要有它可載入以進行簽署的篩選和斷詞工具。 如果這些元件未進行簽署，則有時安裝自訂元件時，您必須設定全文檢索索引子以略過簽章驗證。  

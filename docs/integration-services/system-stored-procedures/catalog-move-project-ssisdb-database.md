@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a7cc5e2b529f503c0a4182f43e1436fc355ab4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c59650d75d9abc212bedbb8a147592760049674
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB 資料庫
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **sysadmin** 伺服器角色的成員資格  
+-   **系統管理員**伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會造成預存程序引發錯誤的某些條件：  
@@ -72,7 +73,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   使用者未具備適當的權限  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當專案從來源資料夾移動到目的地資料夾時，來源資料夾中的專案和對應環境參考將遭到刪除。 目的地資料夾中會建立相同的專案和環境參考。 移動之後，相對環境參考將解析成不同的資料夾。 移動之後，絕對參考會解析成相同的資料夾。  
   
 > [!NOTE]  

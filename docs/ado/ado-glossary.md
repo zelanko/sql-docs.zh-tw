@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1b27ecc0b3905a12d453cc53d6ac941fc80708f9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary-terms"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。
@@ -141,7 +143,7 @@ ms.lasthandoff: 11/17/2017
 
  一般而言，階層的階層是一種等級的結構與上方層級和從屬層級。 在 ADO 中，階層式**資料錄集**用來表示第一筆記錄之間的父子式關聯性。 在 ADO 中，而且**記錄**和**資料流**物件可以用來存取功能的階層樹狀結構，例如資料夾和文件。 ADO MD 也包含**階層**表示 OLAP cube 中維度的層級之間的關聯性物件。 另請參閱階層式資料錄集父子式關聯性、 章、 樹狀結構。
 
-## <a name="i-l"></a>我-L
+## <a name="i-l"></a>I-L
  為網際網路的伺服器，例如執行 Microsoft® 網際網路資訊服務 (IIS) Windows NT® Server/Windows 2000 Server 的函式的 ISAPI （網際網路伺服器應用程式開發介面） 的集合。
 
  索引鍵資料行或資料表的資料行可唯一識別資料列，通常用來編製索引的資料表。

@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - attribute axis [SQL Server]
 - axis step [XQuery]
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d19dec5b1ea98242c96ca43e3c295290827a8bcf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>路徑運算式-指定軸
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +54,12 @@ ms.lasthandoff: 12/05/2017
   
 |座標軸|Description|  
 |----------|-----------------|  
-|**子系**|傳回內容節點的子系。|  
-|**子系**|傳回內容節點的所有下階。|  
-|**父代**|傳回內容節點的父系。|  
-|**屬性**|傳回內容節點的屬性。|  
-|**自我**|傳回內容節點本身。|  
-|**下階或本身**|傳回內容節點及內容節點的所有下階。|  
+|**child**|傳回內容節點的子系。|  
+|**descendant**|傳回內容節點的所有下階。|  
+|**parent**|傳回內容節點的父系。|  
+|**attribute**|傳回內容節點的屬性。|  
+|**self**|傳回內容節點本身。|  
+|**descendant-or-self**|傳回內容節點及內容節點的所有下階。|  
   
  所有的這些軸，除了**父**軸是順向軸。 **父**軸是反向軸，因為它會向後搜尋文件階層。 例如，相對路徑運算式 `child::ProductDescription/child::Summary` 有兩個步驟，而且每個步驟都指定 `child` 軸。 第一個步驟會擷取\<p > 元素子系內容節點。 每個\<p > 項目 節點中，第二步會擷取\<摘要 > 元素節點子系。  
   

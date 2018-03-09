@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a05b62e5c2ffb8c5a268ac8030e703d3a192742
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   **SSISDB** 目錄是處理您已部署至 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器之 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 專案的中心點。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 12/12/2017
   
 -   [目錄組態](../../integration-services/catalog/ssis-catalog.md#Configuration)  
   
--   [權限](../../integration-services/catalog/ssis-catalog.md#Permissions)  
+-   [Permissions](../../integration-services/catalog/ssis-catalog.md#Permissions)  
   
 -   [資料夾](../../integration-services/catalog/ssis-catalog.md#Folders)  
   
@@ -382,7 +383,7 @@ ms.lasthandoff: 12/12/2017
 #### <a name="options"></a>選項。  
  下表描述對話方塊中的特定屬性，以及 catalog.catalog_property 檢視表中的對應屬性。  
   
-|屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_property 檢視表)|說明|  
+|屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_property 檢視表)|描述|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |加密演算法名稱|ENCRYPTION_CLEANUP_ENABLED|指定用來加密目錄中敏感性參數值的加密類型。 以下是可能的值：<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (預設)|  
 |驗證逾時 (秒)|VALIDATION_TIMEOUT|指定專案驗證或套件驗證在停止之前可以執行的秒數上限。 預設值為 300 秒。<br /><br /> 執行驗證是非同步作業。 專案或套件越大，驗證所需時間越長。<br /><br /> 如需有關驗證專案和封裝的詳細資訊，請參閱＜ [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)＞。|  
@@ -425,7 +426,7 @@ ms.lasthandoff: 12/12/2017
   
     1.  在物件總管中，展開 [資料庫] 節點，然後展開 [master] > [可程式性] > [預存程序] 節點。  
   
-    2.  以滑鼠右鍵按一下 [dbo.sp_ssis_startup]，然後按一下 [產生預存程序的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
+    2.  以滑鼠右鍵按一下 **dbo.sp_ssis_startup**，然後按一下 [編寫預存程序的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
   
 6.  確認已啟動 SQL Server Agent  
   
@@ -638,9 +639,9 @@ ms.lasthandoff: 12/12/2017
 3.  請確定 SQL Server 版本為 13.0 或更新版本。 只有在 SQL Server 2016 和更新版本上，SSIS 才會支援 Always On。
 
 ###  <a name="Upgrade"></a> 在可用性群組中升級 SSISDB  
- 如果您要從先前的版本升級 SQL Server，而且 SSISDB 在 AlwaysOn 可用性群組中，則您的升級可能會遭到「SSISDB 在 AlwaysOn 可用性群組中檢查」規則所封鎖。 因為升級是在單一使用者模式中執行，而可用性資料庫必須是多使用者資料庫，就會發生此封鎖。 因此，在升級或修補期間，所有的可用性資料庫 (包括 SSISDB) 都要離線，而且不會進行升級或修補。 若要讓升級繼續，請先從可用性群組移除 SSISDB，再升級或修補每個節點，然後將 SSISDB 加回可用性群組。  
+ 如果您要從先前的版本升級 SQL Server，而且 SSISDB 在 AlwaysOn 可用性群組中，則您的升級可能會遭到「SSISDB 在 AlwaysOn 可用性群組中檢查」規則所封鎖。 因為升級是在單一使用者模式中執行，而可用性資料庫必須是多使用者資料庫，就會發生此封鎖。 因此，在升級或修補期間，所有的可用性資料庫 (包括 SSISDB) 都要離線，而且不會進行升級或修補。 若要讓升級繼續，請先從可用性群組移除 SSISDB，再升級或修補每個節點，然後將 SSISDB 新增回可用性群組。  
   
- 如果您被「Always On 可用性群組中的 SSISDB 檢查」規則封鎖，就必須依照這些步驟來升級 SQL Server。  
+ 如果您被「AlwaysOn 可用性群組中的 SSISDB 檢查規則」封鎖，就必須遵循這些步驟來升級 SQL Server。  
   
 1.  從可用性群組中移除 SSISDB 資料庫。 如需詳細資訊，請參閱[將次要資料庫從可用性群組移除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md) 和[將主要資料庫從可用性群組移除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。  
   

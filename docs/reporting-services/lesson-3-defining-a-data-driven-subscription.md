@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 22674e21246c98201fdb1ed9ae56d303e4f66756
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 在這個 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將利用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 入口網站資料驅動訂閱頁面來連接訂閱資料來源、建立擷取訂閱資料的查詢，以及將結果集對應至報表和傳遞選項。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 1.  在 [描述] 中，輸入 **銷售訂單傳遞** 。
 ## <a name="type"></a>類型
 1.  按一下 [資料驅動訂閱]。  
-## <a name="schedule"></a>排程
+## <a name="schedule"></a>[排程]
 1. 在 [排程] 區段中，按一下 [報表特定排程]。
 2. 按一下 [編輯排程]。
 3.  在 **[排程詳細資料]**中，按一下 **[一次]**。  
@@ -85,17 +85,17 @@ ms.lasthandoff: 12/05/2017
 ---------|---------|---------
 **檔案名稱**     |從資料集取得值 | 單     
 **路徑**     | 輸入值  | 在 [值] 中，輸入您擁有寫入權限之公用檔案共用的名稱 (例如 `\\mycomputer\public\myreports`)。 
-**轉譯格式** | 從資料集取得值 | 格式
+**轉譯格式** | 從資料集取得值 | [格式]
 **寫入模式**| 輸入值| 自動遞增    
 **副檔名** |輸入值 |True
 **[使用者名稱]** | 輸入值 | 輸入網域使用者帳戶。 請以此格式來輸入：\<網域>\\\<帳戶>。 使用者帳戶必須擁有您設定之路徑的權限。 
-**[密碼]** | 輸入值 | 輸入密碼
+**密碼** | 輸入值 | 輸入密碼
 
 ## <a name="report-parameters"></a>報表參數
  1. 在 [OrderNumber] 欄位中，選取 [從資料集取得值]。 在 [值] 中，選取 **[Order]**。 
  2. 按一下 [建立訂閱]。
    
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 當訂閱執行時，會將四個報表檔傳遞至您指定的檔案共用，「訂閱者」  資料來源中的每筆訂單各一個。 在資料 (資料應該隨著訂單而不同)、轉譯格式及檔案格式等方面，每項傳遞都應該是唯一的。 您可以開啟共用資料夾中的每一份報表，確認每個版本都是根據您定義的訂閱選項來自訂的。  
   
 ![訂閱建立的檔案清單](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "訂閱建立的檔案清單")  

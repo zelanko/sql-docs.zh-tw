@@ -14,15 +14,15 @@ ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4318861dc0a6eb8037b041789d9e737a7be9878e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4bec50ff9f626b38b994dd6dbd09f8091fa5e41c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-9---summary---basic-navigation"></a>課程 1-9 - 摘要 - 基本導覽
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以根據個人的喜好設定和工作需求來自訂 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設計介面。  

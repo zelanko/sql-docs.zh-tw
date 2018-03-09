@@ -8,29 +8,32 @@ ms.service:
 ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: "sql server 新功能"
+keywords:
+- "sql server 新功能"
 helpviewer_keywords:
 - new features [SQL Server]
 - SQL Server, what's new
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: "224"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ffdc6534621597002d4b3f54a5b3c1960c9ccad8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] 使用 SQL Server 2016，您可以使用內建所有功能 (從記憶體內部效能和進階安全性到資料庫內分析) 的可調整混合式資料庫平台，建置智慧型的任務關鍵應用程式。 SQL Server 2016 版本新增了新的安全性功能、查詢能力、Hadoop 和雲端整合、R 分析等等，以及許多改進和增強功能。 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+ 使用 SQL Server 2016，您可以使用內建所有功能 (從記憶體內部效能和進階安全性到資料庫內分析) 的可調整混合式資料庫平台，建置智慧型的任務關鍵應用程式。 SQL Server 2016 版本新增了新的安全性功能、查詢能力、Hadoop 和雲端整合、R 分析等等，以及許多改進和增強功能。 
 
 此頁面會提供摘要資訊，以及能針對每個 SQL Server 元件提供詳細資料的 SQL Server 2016 新功能資訊連結。 
 
@@ -101,7 +104,7 @@ Microsoft 在此版本中徹底翻新了 Reporting Services。
 
 請參閱 [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) \(機器翻譯\)。
 
-## <a name="next-steps"></a>後續的步驟   
+## <a name="next-steps"></a>後續步驟   
 - [SQL Server 安裝程式](../database-engine/install-windows/installation-for-sql-server-2016.md)   
 - [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md) 
 - [SQL Server 2016 資料工作表](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)

@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a64a3cfa445d2f79560245a674352209dc0a9624
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 82eb2c26504cee7920e0c0d67fb6faa00af70b26
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>取得資料連接的替代方式 (報表產生器)
 資料連接包含連接至外部資料來源的資訊，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 通常您會向資料來源擁有者取得連接資訊以及要使用的認證類型。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  若要確認您能夠連接至資料來源，請按一下 **[測試連接]**。 「成功建立連接」訊息就會出現。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  按一下 **[下一步]**。  
+4.  按 [下一步] 。  
   
     如有需要，請輸入您的認證。 若要在本機儲存認證，請選取 [儲存連接的密碼]。 如果您未選取此選項，則會在每次執行報表時提示您提供認證  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
     「成功建立連接」訊息就會出現。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 8.  如果提示您提供使用者名稱和密碼，請輸入您的認證。 若要在本機儲存認證，請選取 [儲存連接的密碼]。  
   

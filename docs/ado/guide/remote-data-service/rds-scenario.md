@@ -1,10 +1,11 @@
 ---
-title: "RDS 案例 |Microsoft 文件"
+title: RDS Scenario | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10c9ee41428ab7a43beae2269060618f7d6e296b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-scenario"></a>RDS 案例
 > [!IMPORTANT]
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  此案例假設您知道如何使用 ActiveX 控制項的基本 HTML 配置標記、 使用 DHTML 資料繫結技術和程式。  
   
- 如果您已經安裝 SDK，可以在 samples\dataaccess\rds\AddressBook\AddressBook.asp SDK 目錄中找到通訊錄範例應用程式的完整原始程式碼。 若要檢視的通訊錄案例，請在 Internet Explorer 4.0 或更新版本中，輸入 **http://*webserver*/RDS/AddressBook/AddressBook.asp** 其中*webserver*名稱提供給 Windows NT 4.0 或 Windows 2000 Web 伺服器電腦正在執行 Internet Information Services (IIS) 和 ASP。  
+ 如果您已經安裝 SDK，可以在 samples\dataaccess\rds\AddressBook\AddressBook.asp SDK 目錄中找到通訊錄範例應用程式的完整原始程式碼。 若要檢視的通訊錄案例，請在 Internet Explorer 4.0 或更新版本中，輸入**http://*webserver*/RDS/AddressBook/AddressBook.asp**其中*webserver*是指定的名稱Windows NT 4.0 或 Windows 2000 Web 伺服器電腦執行的 Internet Information Services (IIS) 和 ASP。  
   
 ## <a name="introduction-to-address-book"></a>Introduction to 通訊錄  
  通訊錄範例應用程式提供一個簡單線上通訊錄，您可以使用內部網路上發佈可搜尋的目錄。 通訊錄的設計，讓使用者能夠輸入搜尋字串中，要求有關員工資訊的一或多個欄位。 若要顯示的遠端資料服務的基本功能，範例應用程式是刻意保持在最少，使用物件和搜尋欄位的最小數目。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [通訊錄導覽按鈕](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [通訊錄應用程式的系統需求](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [RDS 的基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

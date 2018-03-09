@@ -1,45 +1,31 @@
 ---
-title: "建立及管理量值 (SSAS 表格式) |Microsoft 文件"
+title: "建立及管理量值 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e0f4139b090b70ec3f76dc5613abfe3dfabb77cc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0e61c65d65723b1500140a2c2493a479b0e2a640
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-measures-ssas-tabular"></a>建立及管理量值 (SSAS 表格式)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]量值是針對使用報表或 Excel 樞紐分析表 （或樞紐分析圖） 中所建立的公式。 量值可以用標準彙總函式 (例如 COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 此主題中的工作描述如何使用資料表的量值方格建立及管理量值。  
-  
- 本主題也包括下列工作：  
-  
--   [使用標準彙總公式建立量值](#bkmk_create_stand)  
-  
--   [使用自訂公式建立量值](#bkmk_create_custom)  
-  
--   [編輯量值屬性](#bkmk_edit)  
-  
--   [重新命名量值](#bkmk_rename)  
-  
--   [刪除量值](#bkmk_delete)  
+# <a name="create-and-manage-measures"></a>建立及管理量值 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+量值是為了在報表或 Excel 樞紐分析表 (或樞紐分析圖) 中使用而建立的公式。 量值可以用標準彙總函式 (例如 COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 此主題中的工作描述如何使用資料表的量值方格建立及管理量值。  
   
 ## <a name="tasks"></a>工作  
  若要建立及管理量值，您可以使用資料表的量值方格。 您只能在模型設計師的 [資料檢視] 中，檢視資料表的量值方格。 您無法在 [圖表檢視] 中建立量值或檢視量值方格；但是，您可以在 [圖表檢視] 中檢視現有的量值。 若要顯示資料表的量值方格，請按一下 **[資料表]** 功能表，然後按一下 **[顯示量值方格]**。  
@@ -68,9 +54,9 @@ ms.lasthandoff: 12/08/2017
   
 -   在量值方格的量值上按一下滑鼠右鍵，然後按一下 [刪除]。  
   
-## <a name="see-also"></a>請參閱  
- [量值 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [KPI &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [導出資料行 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+## <a name="see-also"></a>另請參閱  
+ [量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

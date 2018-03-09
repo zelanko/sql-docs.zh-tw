@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_allitems_TSQL
 - sysmail_allitems
-dev_langs: TSQL
-helpviewer_keywords: sysmail_allitems database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba8deb3b11b01cf9f53e02024815150fa4441b6d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: fb11426c67ddb253a1aa76ae3ea435e115b6fa69
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +45,19 @@ ms.lasthandoff: 11/27/2017
 |**收件者**|**varchar(max)**|訊息收件者的電子郵件地址。|  
 |**copy_recipients**|**varchar(max)**|訊息副本收件者的電子郵件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|名稱未顯示於訊息標頭之訊息副本收件者的電子郵件地址。|  
-|**主體**|**nvarchar(510)**|訊息的主旨。|  
-|**主體**|**varchar(max)**|訊息的主體。|  
-|**body_format**|**varchar （20)**|訊息的主體格式。 可能的值是 TEXT 和 HTML。|  
-|**重要性**|**varchar(6)**|**重要性**訊息參數。|  
-|**敏感度**|**varchar(12)**|**敏感度**訊息參數。|  
+|**subject**|**nvarchar(510)**|訊息的主旨。|  
+|**body**|**varchar(max)**|訊息的主體。|  
+|**body_format**|**varchar(20)**|訊息的主體格式。 可能的值是 TEXT 和 HTML。|  
+|**importance**|**varchar(6)**|**重要性**訊息參數。|  
+|**sensitivity**|**varchar(12)**|**敏感度**訊息參數。|  
 |**file_attachments**|**varchar(max)**|附加至電子郵件訊息中的檔案名稱清單，用分號分隔各檔案名稱。|  
-|**attachment_encoding**|**varchar （20)**|郵件附加檔案的類型。|  
-|**查詢**|**varchar(max)**|郵件程式執行的查詢。|  
+|**attachment_encoding**|**varchar(20)**|郵件附加檔案的類型。|  
+|**query**|**varchar(max)**|郵件程式執行的查詢。|  
 |**execute_query_database**|**sysname**|郵件程式執行查詢所在的資料庫內容。|  
 |**attach_query_result_as_file**|**bit**|當值是 0 時，查詢結果會包含在電子郵件訊息的主體中，在主體的內容之後。 當值是 1 時，會以附加檔案的方式傳回結果。|  
 |**query_result_header**|**bit**|當值是 1 時，查詢結果會包含資料行標頭。 當值是 0 時，查詢結果不會包含資料行標頭。|  
 |**query_result_width**|**int**|**Query_result_width**訊息參數。|  
-|**query_result_separator**|**char （1)**|在查詢輸出中用來分隔資料行的字元。|  
+|**query_result_separator**|**char(1)**|在查詢輸出中用來分隔資料行的字元。|  
 |**exclude_query_output**|**bit**|**Exclude_query_output**訊息參數。 如需詳細資訊，請參閱[sp_send_dbmail &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|**Append_query_error**訊息參數。 0 表示如果查詢中有錯誤，則 Database Mail 不應傳送電子郵件訊息。|  
 |**send_request_date**|**datetime**|訊息置於郵件佇列的日期和時間。|  

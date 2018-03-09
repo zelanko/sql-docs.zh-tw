@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 911c44b3cbacf3fa9a59ed8b78c77acf8532bd6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 13d16f3c7cee8e344917238bf8637cfef202432a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-executables-concepts"></a>複寫代理程式可執行檔概念
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ ms.lasthandoff: 11/17/2017
   
 -   [複寫記錄讀取器代理程式](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [複寫合併代理程式](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
 -   [複寫佇列讀取器代理程式](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
--   [複寫快照集代理程式](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
- 叫用複寫代理程式時，您可以使用效能設定檔，將一組定義的參數自動傳遞到代理程式可執行檔。 如需詳細資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+ 叫用複寫代理程式時，您可以使用效能設定檔，將一組定義的參數自動傳遞到代理程式可執行檔。 如需相關資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例顯示如何從命令提示字元叫用複寫代理程式。 複寫代理程式也可以透過 Replication Management Objects (RMO) 來叫用。 如需詳細資訊，請參閱[同步處理訂閱 &#40;複寫&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)。  

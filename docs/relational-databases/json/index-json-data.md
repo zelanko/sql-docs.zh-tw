@@ -4,32 +4,32 @@ ms.custom:
 ms.date: 06/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d89fd1ad109ab0017b49dd9993aa3cafec85d15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b6df549ab64edfcc766b4839cf17cc1814efa36
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="index-json-data"></a>索引 JSON 資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-在 SQL Server 2016 中，JSON 並非內建的資料類型，而且 SQL Server 2016 並沒有自訂 JSON 索引。 不過，您可使用標準索引最佳化所有 JSON 文件的查詢。 
+在 SQL Server 和 SQL Database 中，JSON 並非內建的資料類型，而且 SQL Server 並沒有自訂 JSON 索引。 不過，您可使用標準索引最佳化所有 JSON 文件的查詢。 
 
 資料庫索引可改善篩選和排序作業的效能。 若不使用索引，則 SQL Server 在您每次查詢資料時必須執行完整的資料表掃描。  
   
@@ -70,7 +70,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
   
 請務必使用您計劃在查詢中所用的相同運算式，建立計算資料行 - 在此範例中，運算式為 `JSON_VALUE(Info, '$.Customer.Name')`。  
   
-您無須重寫查詢。 若您使用具有 `JSON_VALUE` 函數的運算式，則 SQL Server 會發現有一個具有相同運算式的同等計算資料行，並盡可能套用索引。
+您無須重寫查詢。 若您使用具有 `JSON_VALUE` 函式的運算式 (如之前的範例查詢所示)，則 SQL Server 會發現有一個具有相同運算式的同等計算資料行，並盡可能套用索引。
 
 ### <a name="execution-plan-for-this-example"></a>此範例中的執行計畫
 以下是此範例中的查詢執行計畫。  
@@ -80,7 +80,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 SQL Server 會使用索引搜尋非叢集索引，並尋找滿足指定條件的資料列，而不會使用完整資料表掃描。 接著，其會在 `SalesOrderHeader` 資料表中使用索引鍵查詢，以擷取查詢中參考的其他資料行 -  在此範例中為 `SalesOrderNumber` 和 `OrderDate`。  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>利用內含資料行進一步最佳化索引
-若您在索引中新增必要資料行，則可避免資料表執行此額外查詢作業。 您可新增這些資料行作為標準內含資料行 (如下列範例所示)，以擴充上方顯示的 `CREATE INDEX` 範例。  
+若您在索引中新增必要資料行，則可避免資料表執行此額外查詢作業。 您可新增這些資料行作為標準內含資料行 (如下列範例所示)，以擴充之前的 `CREATE INDEX` 範例。  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -88,12 +88,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-在此情況下，SQL Server 不必讀取來自 `SalesOrderHeader` 資料表的其他資料，這是因為在非叢集 JSON 索引中已包含所有需要的資訊。 這是在查詢中合併 JSON 與資料行資料，以及針對工作負載建立最佳化索引的理想方法。  
+在此情況下，SQL Server 不必讀取來自 `SalesOrderHeader` 資料表的其他資料，這是因為在非叢集 JSON 索引中已包含所有需要的資訊。 此索引類型是在查詢中合併 JSON 與資料行資料，以及針對工作負載建立最佳化索引的理想方法。  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON 索引是感知定序的索引  
 JSON 資料之索引的重要功能是索引能夠感知定序。 您在建立計算資料行時所使用的 `JSON_VALUE` 函數的結果為文字值，其繼承來自輸入運算式的定序。 因此，在索引中的值會使用來源資料行中定義的定序規則加以排序。  
   
-為了示範這點，下列範例會建立具有主索引鍵與 JSON 內容的簡單集合物件資料表。  
+為了示範索引能夠感知定序，下列範例會建立具有主索引鍵與 JSON 內容的簡單集合資料表。  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -147,11 +147,24 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  雖然查詢具有 `ORDER BY` 子句，但執行計畫不會使用 Sort 運算子。 JSON 索引已根據塞爾維亞文 (斯拉夫) 規則執行排序。 因此，SQL Server 可在已排序的結果中，使用非叢集索引。  
   
- 不過，若我們變更 `ORDER BY` 運算式的定序 (例如在 `JSON_VALUE` 函數後方加上 `COLLATE French_100_CI_AS_SC`)，則會得到不同的查詢執行計畫。  
+ 不過，若您變更 `ORDER BY` 運算式的定序 (例如在 `JSON_VALUE` 函式後方新增 `COLLATE French_100_CI_AS_SC`)，則會得到不同的查詢執行計畫。  
   
  ![執行計畫](../../relational-databases/json/media/jsonindexblog3.png "執行計畫")  
   
  由於索引中的值順序不符合法文定序規則，因此 SQL Server 無法使用索引來排序結果。 因此，其會使用法文定序規則新增 Sort 運算子來排序結果。  
  
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
-如需更多特定的解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>深入了解 SQL Server 和 Azure SQL Database 中的 JSON  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft 部落格文章  
+  
+如需特定的解決方案、使用案例和建議，請參閱這些[部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)，了解 SQL Server 和 Azure SQL Database 中的內建 JSON 支援。  
+
+### <a name="microsoft-videos"></a>Microsoft 影片
+
+如需 SQL Server 和 Azure SQL Database 中內建 JSON 支援的觀看式簡介，請參閱下列影片：
+
+-   [SQL Server 2016 與 JSON 支援](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [使用 SQL Server 2016 和 Azure SQL Database 中的 JSON](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [NoSQL 與關聯式領域之間的橋樑 JSON](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)

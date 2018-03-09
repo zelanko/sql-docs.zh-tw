@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PRINT_TSQL
 - PRINT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PRINT statement
 - user-defined messages [SQL Server]
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bc40ee58fe6037d7ad29ced76232f84fe91c2c15
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9f78f85fc8697062c628a22736a7ae0d31d53792
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,8 +53,8 @@ PRINT msg_str | @local_variable | string_expr
  *msg_str*  
  這是一個字元字串或 Unicode 字串常數。 如需詳細資訊，請參閱[常數 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
- **@***local_variable*  
- 這是任何有效字元資料類型的變數。 **@***local_variable*必須**char**， **nchar**， **varchar**，或**nvarchar**，或必須是能夠在隱含地轉換成這些資料類型。  
+ **@** *local_variable*  
+ 這是任何有效字元資料類型的變數。 **@ * * * local_variable*必須**char**， **nchar**， **varchar**，或**nvarchar**，或必須是能夠在隱含地轉換成這些資料類型。  
   
  *string_expr*  
  這是傳回字串的運算式。 它可以包括串連的常值、函數和變數。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
@@ -115,7 +117,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [RAISERROR &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  

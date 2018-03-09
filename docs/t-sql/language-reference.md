@@ -1,5 +1,5 @@
 ---
-title: "TRANSACT-SQL 參考 (Database Engine) |Microsoft 文件"
+title: "Transact-SQL 參考 (資料庫引擎) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/03/2017
 ms.prod: sql-non-specified
@@ -8,47 +8,50 @@ ms.service:
 ms.component: t-sql
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sql13.tsqlref.f1
 - devlang-tsql
-helpviewer_keywords: Transact-SQL
+helpviewer_keywords:
+- Transact-SQL
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db6310309c694a856727672cd5d1e5ad80ae6b49
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 9bc588f23d4a78d035a46c7e5c1adcb600af1ce2
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 參考 (資料庫引擎)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-本主題提供有關如何尋找並使用 Microsoft TRANSACT-SQL (T-SQL) 參考主題的基本概念。 T-SQL 是使用 Microsoft SQL 產品和服務的核心。 所有工具和應用程式與 SQL 資料庫通訊，都這樣會傳送 T-SQL 命令。  
+本主題說明如何尋找及使用 Microsoft Transact-SQL (T-SQL) 參考主題的基本概念。 對於使用 Microsoft SQL 產品和服務而言，T-SQL 相當重要。 所有與 SQL 資料庫通訊的工具和應用程式都透過傳送 T-SQL 命令與 SQL 資料庫通訊。  
 
 ## <a name="tools-that-use-t-sql"></a>使用 T-SQL 的工具
 
-發出 T-SQL 命令的 Microsoft 工具的部分包括：
+發出 T-SQL 命令的一些 Microsoft 工具如下：
 
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
+- [Transact-SQL](../ssms/download-sql-server-management-studio-ssms.md)
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。  
-- [sqlcmd](../tools/sqlcmd-utility.md)。  
+- [sqlcmd](../tools/sqlcmd-utility.md).  
+- [SQL Operations Studio (預覽)](https://docs.microsoft.com/sql/sql-operations-studio/download)。  
   
  
-## <a name="locate-the-transact-sql-reference-topics"></a>找出 TRANSACT-SQL 參考主題  
+## <a name="locate-the-transact-sql-reference-topics"></a>尋找 Transact-SQL 參考主題  
   
-T-SQL 主題，請使用搜尋在頂端這樣的頁面上，或頁面的左邊使用的目錄。 您也可以在 Management Studio 查詢編輯器視窗中，輸入 T-SQL 金鑰文字，然後按下 F1。 
+若要尋找 T-SQL 主題，請使用此頁面右上方的搜尋，或使用頁面左邊的目錄尋找。 您也可以在 Management Studio 查詢編輯器視窗中，鍵入 T-SQL 關鍵字，然後按下 F1。 
   
 
-## <a name="find-system-views"></a>尋找系統檢視表
+## <a name="find-system-views"></a>尋找系統檢視
 
-若要尋找系統資料表、 檢視、 函數和程序，請參閱 < > 中的這些連結[使用關聯式資料庫](../relational-databases/database-features.md)SQL 文件集。
+若要尋找系統資料表、檢視、函式和程序，請參閱 SQL 文件之[使用關聯式資料庫](../relational-databases/database-features.md)一節中的這些連結。
 
 - [系統目錄檢視](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [系統相容性檢視](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
@@ -59,27 +62,27 @@ T-SQL 主題，請使用搜尋在頂端這樣的頁面上，或頁面的左邊�
 - [系統資料表](../relational-databases/system-tables/system-tables-transact-sql.md)
 
  
-## <a name="applies-to-references"></a>「 適用於 」 參考  
- T-SQL 參考主題包含多個版本的 SQL Server 2008 中，從開始，以及其他 Azure SQL 服務。 每個主題頂端附近是一個區段指出哪些產品和服務支援主題的主旨。 
+## <a name="applies-to-references"></a>「適用於」參考  
+ T-SQL 參考主題包含多個 SQL 版本 (從 2008 版開始)，以及其他 Azure SQL 服務。 在接近每個主題的頂端會有一節說明適用於該主題主旨的產品和服務種類。 
 
-例如，本主題適用於所有版本，並具有下列的標籤。 
+例如，本主題適用於所有版本，並具有下列標籤。 
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-另一個範例中，下列標籤表示僅適用於 Azure SQL 資料倉儲和平行處理資料倉儲的主題。
+另一個範例如下，下列標籤指出主題僅適用於 Azure SQL 資料倉儲與平行處理資料倉儲。
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   
-在某些情況下，主題同時適用於產品或服務，但所有的引數不支援。 在此情況下，額外**適用於**區段插入適當的引數中的說明主題的主體。  
+在某些情形下，主題適用於某產品或服務，但卻不支援所有引數。 在此情況下，就會在主題本文中適當的引數描述中，插入額外的適用於**一節。  
  
-## <a name="get-help-from-the-msdn-forum"></a>從 MSDN 論壇取得協助  
+## <a name="get-help-from-the-msdn-forum"></a>從 MSDN 論壇取得說明  
   
-線上說明，請參閱[MSDN TRANSACT-SQL 論壇](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)。  
+如需線上說明，請參閱 [MSDN Transact-SQL 論壇](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)。  
  
-## <a name="see-other-language-references"></a>請參閱 < 其他語言參考
+## <a name="see-other-language-references"></a>查看其他語言參考
 
-SQL 文件包括這些語言參考：
+SQL 文件包括這些其他語言參考：
   
 - [XQuery 語言參考](../xquery/xquery-language-reference-sql-server.md)
 - [Integration Services 語言參考](../integration-services/integration-services-language-reference.md)
@@ -87,12 +90,12 @@ SQL 文件包括這些語言參考：
 - [Analysis Services 語言參考](../mdx/analysis-services-language-reference.md)  
 
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
-既然您了解如何尋找 T-SQL 參考主題，您即做好準備：
+既然您已經了解如何尋找 T-SQL 參考主題，那麼就可：
 
-- 透過簡短的教學課程中，有關如何撰寫 T-SQL，請參閱工作[教學課程： 撰寫 TRANSACT-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)。 
-- 檢視[TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+- 透過簡短教學課程逐步了解如何撰寫 T-SQL，請參閱[教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)。 
+- 檢視 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
 
   
   

@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - scripts [Analysis Services], creating
 - scripts [MDX], creating
 ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 097d318ddf841e09f53ca90b0266bbd3806f59dc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ec19c9f3c826910b7c5d8a3d5a3737e09228b664
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立及執行 MDX 指令碼
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]建立及執行 MDX 指令碼[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您必須在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]且已建立 cube，並準備就緒可供編輯。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立和執行 MDX 指令碼，您必須是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中且已建立 Cube，並準備就緒可供編輯。  
   
 ### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>若要建立多維度運算式 (MDX) 指令碼  
   
@@ -43,8 +41,8 @@ ms.lasthandoff: 12/08/2017
   
 4.  若要執行 MDX 指令碼，請使用新的 MDX 指令碼變更來部署和處理 Cube。  
   
-## <a name="see-also"></a>請參閱  
- [基本 MDX 指令碼 &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+## <a name="see-also"></a>另請參閱  
+ [基本 MDX 指令碼 &#40;MDX &#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
  [MDX 指令碼基礎觀念 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [MDX 指令碼陳述式 &#40;MDX &#41;](../../mdx/mdx-scripting-statements-mdx.md)  
   

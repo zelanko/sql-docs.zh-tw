@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="provider-errors"></a>提供者錯誤
 發生提供者錯誤時，會傳回-2147467259 的執行階段錯誤。 當您收到這個錯誤時，請檢查**錯誤**作用中的集合**連接**物件，會包含一個或多個描述所發生的錯誤。  
@@ -70,12 +71,12 @@ End Function
 ## <a name="the-error-object"></a>Error 物件  
  藉由檢查**錯誤**物件，您可以決定發生的錯誤，而且更重要的是，哪些應用程式或哪些物件造成錯誤。 **錯誤**物件具有下列屬性：  
   
-|屬性名稱|描述|  
+|屬性名稱|Description|  
 |-------------------|-----------------|  
 |**說明**|發生錯誤的文字描述。|  
 |**HelpContext，說明檔**|指的說明主題，並說明檔案，含有發生之錯誤的描述。|  
 |**NativeError**|提供者特定錯誤號碼。|  
-|**數字**|長整數，表示數字 (列在**ErrorValueEnum**) 發生的錯誤。|  
+|**Number**|長整數，表示數字 (列在**ErrorValueEnum**) 發生的錯誤。|  
 |**Source**|表示產生錯誤的應用程式之物件的名稱。|  
 |**SQLState**|提供者會傳回 SQL 陳述式的程序期間的五個字元的錯誤程式碼。|  
   

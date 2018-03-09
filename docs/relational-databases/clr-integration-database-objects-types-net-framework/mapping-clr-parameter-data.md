@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,25 +28,26 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: "71"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bee49e277d3492dc93bcdf29b65c1c3007cebe50
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型、 common language runtime (CLR) 中的對應項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**System.Data.SqlTypes**命名空間，並在其原生 CLR 對等用法[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型、 common language runtime (CLR) 中的對應項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**System.Data.SqlTypes**命名空間，其原生 CLR 對等項目中[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework。  
   
 ||||  
 |-|-|-|  
 |**SQL Server 資料類型**|類型 (在 System.Data.SqlTypes 或 Microsoft.SqlServer.Types 中)|**CLR 資料類型 (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64，可為 Null\<Int64 >**|  
-|**binary**|**SqlBytes、 SqlBinary**|**Byte]**|  
+|**binary**|**SqlBytes、 SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**布林值，可為 Null\<布林值 >**|  
 |**char**|無|無|  
 |**cursor**|無|無|  
@@ -66,9 +67,9 @@ ms.lasthandoff: 11/17/2017
 |**ntext**|無|無|  
 |**numeric**|**SqlDecimal**|**Decimal、 可為 Null\<十進位 >**|  
 |**nvarchar**|**SqlChars SqlString**<br /><br /> **SQLChars**是比較適合資料傳輸和存取權，以及**SQLString**是比較適合執行字串作業。|**String，Char]**|  
-|**nvarchar(1)、 nchar(1)**|**SqlChars SqlString**|**Char、 String，Char []，可為 Null\<char >**|  
+|**nvarchar(1), nchar(1)**|**SqlChars SqlString**|**Char、 String，Char []，可為 Null\<char >**|  
 |**real**|**SqlSingle** (範圍**SqlSingle**，不過，大於**真實**)|**單一、 可為 Null\<單一 >**|  
-|**rowversion**|無|**Byte]**|  
+|**rowversion**|無|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16，可為 Null\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**Decimal、 可為 Null\<十進位 >**|  
 |**sql_variant**|無|**物件**|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 |**tinyint**|**SqlByte**|**可為 Null 位元組\<位元組 >**|  
 |**uniqueidentifier**|**SqlGuid**|**Guid，可為 Null\<Guid >**|  
 |**使用者定義 type(UDT)**|無|繫結到相同組件或相依組件中之使用者定義型別的相同類別。|  
-|**varbinary**|**SqlBytes、 SqlBinary**|**Byte]**|  
+|**varbinary**|**SqlBytes、 SqlBinary**|**Byte[]**|  
 |**varbinary(1)、 binary(1)**|**SqlBytes、 SqlBinary**|**位元組、 Byte []，可為 Null\<位元組 >**|  
 |**varchar**|無|無|  
 |**xml**|**SqlXml**|無|  
@@ -116,9 +117,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 資料類型 (SQL Server)**|**SQL Server 資料類型**|  
-|**小數點**|smallmoney|  
+|**Decimal**|smallmoney|  
 |**SqlMoney**|smallmoney|  
-|**小數點**|money|  
+|**Decimal**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   
@@ -128,7 +129,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |---------------------|  
 |加入**SqlGeography**， **SqlGeometry**，和**SqlHierarchyId**對應資料表中的類型。|  
   
-## <a name="see-also"></a>請參閱＜  
- [.NET Framework 的 SQL Server 資料類型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+## <a name="see-also"></a>另請參閱  
+ [.NET Framework 中的 SQL Server 資料類型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

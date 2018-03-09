@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,39 +18,39 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab522abece6300345819649380be206a277a456
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c3b7e33486bc8a5cc283a101893aec4287062c2f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、 CALC 函式和 NEW 關鍵字
 資料成形支援下列函數。 要處理指派章節包含的資料行的名稱是*章別名*。  
   
  章別名可以是完整，導致章節包含每個章節資料行名稱所組成*資料行名稱，*以句號分隔。 例如，如果父章 chap1，包含子章節，chap2，都具有 amount 資料行時，amt，就限定的名稱會是 chap1.chap2.amt。  
   
-|彙總函式|描述|  
+|彙總函式|Description|  
 |-------------------------|-----------------|  
 |SUM (*章別名*。*資料行名稱*)|計算指定的資料行中的所有值的總和。|  
 |AVG (*章別名*。*資料行名稱*)|計算指定的資料行中的所有值的平均值。|  
 |最大值 (*章別名*。*資料行名稱*)|計算指定的資料行中的最大值。|  
-|MIN (*章別名*。*資料行名稱*)|計算指定的資料行中的最小值。|  
+|MIN(*chapter-alias*.*column-name*)|計算指定的資料行中的最小值。|  
 |計數 (*章別名*[。*資料行名稱*])|計算指定的別名中的資料列數目。 如果指定資料行，則該資料行的非 Null 唯一資料列會包含在計數中。|  
-|Stdev 函數 (*章別名*。*資料行名稱*)|計算標準差，指定資料行中。|  
+|STDEV(*chapter-alias*.*column-name*)|計算標準差，指定資料行中。|  
 |任何 (*章別名*。*資料行名稱*)|指定的資料行的值。 任何在資料行的值是相同的章節中的所有資料列時，才有可預測的值。<br /><br /> **請注意**資料行不包含所有一章中的資料列的相同值，如果 SHAPE 命令任意傳回其中一個值的任何函式的值。|  
   
-|計算的運算式|描述|  
+|計算的運算式|Description|  
 |---------------------------|-----------------|  
-|計算 (*運算式*)|計算的任意的運算式，但只能出現在資料列**資料錄集**包含 CALC 函式。 使用這些任何運算式[Visual Basic for Applications (VBA) 函數](../../../ado/guide/data/visual-basic-for-applications-functions.md)允許。|  
+|CALC(*expression*)|計算的任意的運算式，但只能出現在資料列**資料錄集**包含 CALC 函式。 使用這些任何運算式[Visual Basic for Applications (VBA) 函數](../../../ado/guide/data/visual-basic-for-applications-functions.md)允許。|  
   
-|NEW 關鍵字|描述|  
+|NEW 關鍵字|Description|  
 |-----------------|-----------------|  
-|新*欄位類型*[(*寬度*&#124;*標尺*&#124;*精確度*&#124;*錯誤*[，*標尺*&#124;*錯誤*])]|加入空白資料行指定的型別**資料錄集**。|  
+|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|加入空白資料行指定的型別**資料錄集**。|  
   
  *欄位類型*傳遞包含新的關鍵字可以是任何一個下列資料類型。  
   
@@ -73,12 +74,12 @@ ms.lasthandoff: 12/21/2017
 |DBTYPE_DBTIME|adDBTime|  
 |DBTYPE_DBTIMESTAMP|adDBTimeStamp|  
 |DBTYPE_VARNUMERIC|adVarNumeric|  
-|DBTYPE_FILETIME|AdFileTime|  
+|DBTYPE_FILETIME|adFileTime|  
 |DBTYPE_ERROR|adError|  
   
  當新欄位的型別 decimal （OLE db DBTYPE_DECIMAL，或在 ADO 中，adDecimal） 時，您必須指定有效位數和小數位數的值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
  [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

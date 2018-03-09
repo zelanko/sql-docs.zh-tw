@@ -8,27 +8,30 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - unordered expressions [XQuery]
 - ordered expressions [XQuery]
 - expressions [XQuery], ordered
 - expressions [XQuery], unordered
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f00040200f39fdc1f6b61703fdd12aab02f4e51c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 817177c377690395082429c04ca6148863f5cddb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Ordered 和 Unordered 運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  其他**排序**和**未排序**不支援的 XQuery 規格中所述的語法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XQuery 運算式](../xquery/xquery-expressions.md)   
  [FLWOR 陳述式和反覆項目 &#40;XQuery &#41;](../xquery/flwor-statement-and-iteration-xquery.md)   
  [路徑運算式 &#40;XQuery &#41;](../xquery/path-expressions-xquery.md)  

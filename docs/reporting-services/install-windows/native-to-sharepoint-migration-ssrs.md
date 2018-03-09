@@ -8,22 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c9b8e85da6a482740c59cc4ab1df4d4b298a9de4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f7418326fb11d712ad8cea0bd77fb4479e3020f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>原生至 SharePoint 移轉 (SSRS)
 
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/05/2017
   
  下表概述可以用指令碼來移轉的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 物件：  
   
-|物件|可撰寫指令碼|註解|  
+|Object|可撰寫指令碼|註解|  
 |------------|---------------------|--------------|  
 |報表|是|在移轉之後，重新輸入資料來源的密碼。|  
 |資料來源|是|在移轉之後，將報表重新連結至資料來源。|  

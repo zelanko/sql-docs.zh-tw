@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -24,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b750c1ba7fb7f0557b69aa70e768fd323e2de2c5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 488c6dd83f34623a6f2a4fb026ff45a39f806c40
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>資料採礦延伸模組 (DMX) 運算子參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   中的資料採礦延伸模組 (DMX) 語言[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援算術、 指派、 比較、 邏輯及一元運算子。 下表會列出 DMX 支援的運算子。  
   
-|運算子|Description|  
+|運算子|描述|  
 |--------------|-----------------|  
 |[+ &#40;新增 &#41;&#40; DMX &#41;](../dmx/add-dmx.md)|將兩個數目相加的算術運算子。|  
 |[-&#40;減去 &#41;&#40; DMX &#41;](../dmx/subtract-dmx.md)|從一個數目減掉另一個數目的算術運算子。|  
@@ -56,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 |[-&#40;註解 &#41;&#40; DMX &#41;摘要](../dmx/comment-dmx-summary.md)|指出 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不應執行的文字字串。 您可以在 DMX 陳述式內巢狀註解、在程式碼行的尾端包含註解，或者將註解插入單獨的一行。|  
 |[斜線星狀 &#40;註解 &#41;&#40; DMX &#41;](../dmx/slash-star-comment-dmx.md)|指出 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不應執行的文字字串。 您可以在 DMX 陳述式內巢狀註解、在程式碼行的尾端包含註解，或者將註解插入單獨的一行。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   

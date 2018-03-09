@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEADD
 - DATEADD_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - add interval to date or time [SQL Server]
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-caps.latest.revision: "71"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5499d73b4eab7ff4ba3079469412cc30a111a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,23 +56,23 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>引數  
 *日期部份*  
-是的一部分*日期*的**整數***數目*加入。 下表列出所有有效*datepart*引數。 使用者自訂變數對等項目無效。
+是的一部分*日期*的 **整數 * * * 數目*加入。 下表列出所有有效*datepart*引數。 使用者自訂變數對等項目無效。
   
 |*日期部份*|縮寫|  
 |---|---|
-|**年份**|**yy**， **yyyy**|  
-|**季**|**qq**， **q**|  
-|**月份**|**mm**， **m**|  
-|**dayofyear**|**dy**， **y**|  
-|**一天**|**dd**， **d**|  
-|**週**|**wk**， **ww**|  
-|**週間日**|**dw**， **w**|  
-|**小時**|**hh**|  
-|**分鐘**|**mi**，**n**|  
-|**第二個**|**ss**， **s**|  
-|**毫秒**|**ms**|  
-|**微秒**|**mcs**|  
-|**奈秒**|**ns**|  
+|**year**|**yy**, **yyyy**|  
+|**quarter**|**qq**, **q**|  
+|**月份**|**mm**, **m**|  
+|**dayofyear**|**dy**, **y**|  
+|**day**|**dd**, **d**|  
+|**week**|**wk**, **ww**|  
+|**weekday**|**dw**， **w**|  
+|**hour**|**hh**|  
+|**minute**|**mi**，**n**|  
+|**second**|**ss**， **s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *number*  
 運算式是可解析成[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)加入至*datepart*的*日期*。 使用者自訂的變數有效。  
@@ -93,24 +95,24 @@ DATEADD (datepart , number , date )
 如果*datepart*是**月份**和*日期*月有更多的天數比傳回月份和*日期*日期傳回月份，在不存在會傳回傳回月份的最後一天。 例如，九月有 30 天。因此，下列陳述式會傳回 2006-09-30 00:00:00.000：
   
 ```sql
-SELECT DATEADD(month, 1, '2006-08-30');
-SELECT DATEADD(month, 1, '2006-08-31');
+SELECT DATEADD(month, 1, '20060830');
+SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>number 引數  
 *數目*引數不能超過範圍**int**。下列陳述式的引數*數目*超過範圍**int** 1。 系統會傳回下列錯誤訊息："`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
-SELECT DATEADD(year,2147483648, '2006-07-31');  
-SELECT DATEADD(year,-2147483649, '2006-07-31');  
+SELECT DATEADD(year,2147483648, '20060731');  
+SELECT DATEADD(year,-2147483649, '20060731');  
 ```  
   
 ## <a name="date-argument"></a>date 引數  
 *日期*引數不得遞增為其資料類型的範圍以外的值。 下列陳述式，*數目*值加入至*日期*值超過範圍*日期*資料型別。 系統會傳回下列錯誤訊息："`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`."
   
 ```sql
-SELECT DATEADD(year,2147483647, '2006-07-31');  
-SELECT DATEADD(year,-2147483647, '2006-07-31');  
+SELECT DATEADD(year,2147483647, '20060731');  
+SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>smalldatetime date 和 second 或小數秒數 datepart 的傳回值  

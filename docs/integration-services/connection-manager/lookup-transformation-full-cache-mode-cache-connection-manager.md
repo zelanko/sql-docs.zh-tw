@@ -8,21 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Lookup transformation [Integration Services]
+helpviewer_keywords:
+- Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 804b0ab72a0e52c9ddcd10f8261998e0e8847d9f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5669f4f0a0226599b717c4cce5358f5c9ddd7245
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式 - 快取連線管理員
   您可以將查閱轉換設定為使用完整快取模式以及快取連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
@@ -109,7 +111,7 @@ ms.lasthandoff: 11/20/2017
   
     2.  按兩下來源或前一個轉換以設定元件。  
   
-    3.  按兩下 [查閱轉換]，然後在 [查閱轉換編輯器] 的 [一般] 頁面上，選取 [完整快取]。  
+    3.  按兩下查閱轉換，然後在 [查閱轉換編輯器] 的 [一般] 頁面上，選取 [完整快取]。  
   
     4.  在 [連接類型] 區域中選取 [快取連線管理員]。  
   
@@ -123,7 +125,7 @@ ms.lasthandoff: 11/20/2017
         >  「查閱」轉換會自動對應具有相同名稱和相同資料類型的資料行。  
   
         > [!NOTE]  
-        >  資料行必須具有要對應的相符資料類型。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+        >  資料行必須具有要對應的相符資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
     8.  在 [可用的查閱資料行] 清單中選取資料行。 然後在 [查閱作業] 清單中，指定查閱資料行的值是否要取代輸入資料行中的值，或要寫入至新的資料行。  
   
@@ -143,7 +145,7 @@ ms.lasthandoff: 11/20/2017
   
      視需要設定資料來源。  
   
-4.  按兩下 [快取轉換]，然後在 [快取轉換編輯器] 中，按一下 [連線管理員] 頁面上的 [新增]，建立新的快取連線管理員。  
+4.  按兩下快取轉換，然後在 [快取轉換編輯器] 中，按一下 [連線管理員] 頁面上的 [新增]，建立新的快取連線管理員。  
   
 5.  在 [快取連線管理員編輯器] 的 [一般] 索引標籤上，藉由設定下列選項來設定快取連線管理員：  
   
@@ -154,14 +156,14 @@ ms.lasthandoff: 11/20/2017
          如果輸入的檔案路徑不存在，系統就會在執行封裝時建立該檔案。  
   
     > [!NOTE]  
-    >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱[對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
+    >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
   
 6.  按一下 [資料行] 索引標籤，然後使用 [索引位置] 選項，指定哪些資料行是索引資料行。  
   
      如果是非索引資料行，索引位置為 0。 如果是索引資料行，則索引位置是循序的正數。  
   
     > [!NOTE]  
-    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱 [快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱[快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
   
 7.  視需要設定快取轉換。 如需詳細資訊，請參閱[快取轉換編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) 和[快取轉換編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)。  
   
@@ -209,7 +211,7 @@ ms.lasthandoff: 11/20/2017
         >  「查閱」轉換會自動對應具有相同名稱和相同資料類型的資料行。  
   
         > [!NOTE]  
-        >  資料行必須具有要對應的相符資料類型。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+        >  資料行必須具有要對應的相符資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
     8.  在 [可用的查閱資料行] 清單中選取資料行。 然後在 [查閱作業] 清單中，指定查閱資料行的值是否要取代輸入資料行中的值，或要寫入至新的資料行。  
   
@@ -240,7 +242,7 @@ ms.lasthandoff: 11/20/2017
     -   在 [檔案名稱] 中，輸入檔案路徑或是按一下 [瀏覽] 選取檔案。  
   
     > [!NOTE]  
-    >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱[對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
+    >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
   
 6.  按一下 [資料行] 索引標籤，然後使用 [索引位置] 選項，指定哪些資料行是索引資料行。  
   
@@ -274,7 +276,7 @@ ms.lasthandoff: 11/20/2017
         >  「查閱」轉換會自動對應具有相同名稱和相同資料類型的資料行。  
   
         > [!NOTE]  
-        >  資料行必須具有要對應的相符資料類型。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+        >  資料行必須具有要對應的相符資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
     8.  在 [可用的查閱資料行] 清單中選取資料行。 然後在 [查閱作業] 清單中，指定查閱資料行的值是否要取代輸入資料行中的值，或要寫入至新的資料行。  
   

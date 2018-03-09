@@ -15,13 +15,13 @@ ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 caps.latest.revision: "4"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a014146048e59e437167b340dc34e3be64d0665
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a4bcc3df84094ff17bf2239e278f559458a7a568
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>連接至 Microsoft Azure 訂用帳戶
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [連線至 Microsoft 訂用帳戶] 向 SQL Server 執行個體註冊現有的 Azure blob 容器。  對話方塊會在 Azure blob 容器上建立共用的存取簽章和預存的存取原則，再建立 SQL Server 認證。  從 SQL Server Management Studio 使用 [備份或還原] 工作，且作業牽涉到 URL 裝置時，就會出現此對話方塊。
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="limitation"></a>限制
 [連接至 Microsoft 訂用帳戶] 只適用於透過服務管理 (傳統) 部署模型建立的 Azure 儲存體帳戶。  如需有關 Azure 部署模型的詳細資訊，請參閱 [Azure Resource Manager vs. 傳統部署：了解資源的部署模型和狀態](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/)。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 **登入**     
 使用適當的 Azure 帳戶登入。
 

@@ -1,30 +1,34 @@
 ---
 title: "使用 TRANSACT-SQL (R SQL 快速入門) 中的 R 程式碼 |Microsoft 文件"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 08/20/2017
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 413eefaf65d2d1547635e9bd3ceb2214cf6eb039
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>使用 TRANSACT-SQL (R SQL 快速入門) 中的 R 程式碼
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本教學課程會逐步引導您完成從 T-SQL 預存程序呼叫 R 指令碼的基本機制。
 
@@ -39,7 +43,7 @@ ms.lasthandoff: 12/20/2017
 
 30 分鐘 (不包括設定)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>필수 구성 요소
 
 您必須具有存取 SQL server 執行個體已經安裝下列其中一種：
 
@@ -50,7 +54,7 @@ ms.lasthandoff: 12/20/2017
 
 若要執行 SQL 查詢，以包含 R 指令碼，您可以使用其他任何應用程式可以連接到資料庫並執行 T-SQL 程式碼。 SQL 專業人員可以使用 SQL Server Management Studio (SSMS) 或 Visual Studio。
 
-此教學課程中，以顯示 執行 R SQL 伺服器內是多麼的輕鬆我們使用新**mssql 擴充 Visual Studio 程式碼**。 VS Code 是免費的開發環境可以在 Linux、 macOS、 或 Windows 上執行。 **Mssql*** 延伸模組是執行 Sql 查詢的輕量級擴充功能。 若要安裝它，請參閱這篇文章︰[使用適用於 Visual Studio Code 的 mssql 擴充功能 (英文)](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
+此教學課程中，以顯示 執行 R SQL 伺服器內是多麼的輕鬆我們使用新**mssql 擴充 Visual Studio 程式碼**。 VS Code 是免費的開發環境可以在 Linux、 macOS、 或 Windows 上執行。 **Mssql**延伸模組是輕量型的延伸模組執行 T-SQL 查詢。 若要安裝它，請參閱這篇文章︰[使用適用於 Visual Studio Code 的 mssql 擴充功能 (英文)](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>連線到資料庫並執行 Hello World 測試指令碼
 

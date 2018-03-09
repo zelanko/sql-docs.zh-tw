@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Jobs object
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 077245e1ece089fa0a0b4ef98f2dd1fa6b9ec0d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f372eced96ca17d4fd547a11a56cfefd732394b9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理程式、作業物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server Agent 的 **Jobs** 效能物件包含效能計數器，用來報告 SQL Server Agent 作業的相關資訊。 下表列出這個物件包含的計數器。  
   
  下表包含 **SQLAgent:Jobs** 計數器。  
   
-|名稱|描述|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |**Active Jobs**|此計數器報告目前執行中的作業數目。|  
 |**Failed jobs**|此計數器報告因失敗而結束的作業數目。|  

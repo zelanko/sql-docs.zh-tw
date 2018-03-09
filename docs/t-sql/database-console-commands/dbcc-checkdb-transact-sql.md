@@ -1,14 +1,15 @@
 ---
 title: "DBCC CHECKDB (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 09/21/2016
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CHECKDB_TSQL
 - DBCC CHECKDB
 - CHECKDB
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHECKDB [DBCC statement]
 - database objects [SQL Server], checking
@@ -35,46 +37,41 @@ helpviewer_keywords:
 - checking database objects
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: "144"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d2d28362462825c1e39d0a7a41f6a57f810c107e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  藉由執行下列作業，檢查指定資料庫中所有物件的邏輯完整性和實體完整性：    
-    
-> **注意：** DBCC CHECKDB 的資料庫包含記憶體最佳化資料表支援，但是驗證只會發生以磁碟為基礎的資料表上。 不過，在資料庫備份和復原的過程中，會針對記憶體最佳化檔案群組中的檔案執行 CHECKSUM 驗證。    
->     
->  因為 DBCC 修復選項無法用於記憶體最佳化資料表，所以您必須定期備份資料庫，並測試備份。 如果記憶體最佳化資料表中發生資料完整性問題，您必須從最後已知的良好備份還原。    
+藉由執行下列作業，檢查指定資料庫中所有物件的邏輯完整性和實體完整性：    
     
 -   執行[DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)在資料庫上。    
-    
 -   執行[DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)上每個資料表和檢視資料庫中的。    
-    
 -   執行[DBCC CHECKCATALOG](../../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)在資料庫上。    
-    
 -   驗證資料庫中每一索引檢視的內容。    
-    
 -   儲存時，會驗證資料表中繼資料和檔案系統目錄和檔案之間的連結層級一致性**varbinary （max)**使用 FILESTREAM 的檔案系統中的資料。    
-    
 -   驗證資料庫中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 資料。    
     
- 這表示 DBCC CHECKALLOC、DBCC CHECKTABLE 或 DBCC CHECKCATALOG 命令不需要與 DBCC CHECKDB 分開獨立執行。 如需有關這些命令執行之檢查的詳細資訊，請參閱這些命令的描述。    
-    
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+這表示 DBCC CHECKALLOC、DBCC CHECKTABLE 或 DBCC CHECKCATALOG 命令不需要與 DBCC CHECKDB 分開獨立執行。 如需有關這些命令執行之檢查的詳細資訊，請參閱這些命令的描述。    
+ 
+> [!NOTE]
+> 在包含記憶體最佳化資料表的資料庫中，可支援 DBCC CHECKDB，但是只會在磁碟資料表上進行驗證。 不過，在資料庫備份和復原的過程中，會針對記憶體最佳化檔案群組中的檔案執行 CHECKSUM 驗證。    
+>     
+> 因為 DBCC 修復選項無法用於記憶體最佳化資料表，所以您必須定期備份資料庫，並測試備份。 如果記憶體最佳化資料表中發生資料完整性問題，您必須從最後已知的良好備份還原。    
+
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>語法    
     
 ```    
-    
 DBCC CHECKDB     
     [ ( database_name | database_id | 0    
         [ , NOINDEX     
@@ -98,62 +95,58 @@ DBCC CHECKDB
  *database_name* | *database_id* | 0  
  這是要執行完整性檢查的資料庫識別碼或名稱。 若未指定，或指定 0，就會使用目前的資料庫。 資料庫名稱必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
     
- NOINDEX  
+NOINDEX  
  指定不應該執行使用者資料表之非叢集索引的大量檢查。 這會減少整體的執行時間。 NOINDEX 不會影響系統資料表，因為系統資料表索引一律會執行完整性檢查。  
     
- REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
+REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
  指定 DBCC CHECKDB 修復發現的錯誤。 最好不要使用這些 REPAIR 選項。 指定的資料庫必須為單一使用者模式，才能使用下列修復選項之一。  
     
- REPAIR_ALLOW_DATA_LOSS  
+REPAIR_ALLOW_DATA_LOSS  
  嘗試修復所有報告的錯誤。 這些修復可能會造成某些資料的遺失。  
     
 > [!WARNING]
-> - REPAIR_ALLOW_DATA_LOSS 選項是支援的功能，但它可能永遠無法將資料庫帶到實體一致的狀態的最佳選項。 
-> -如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 
+> REPAIR_ALLOW_DATA_LOSS 選項是支援的功能，但它可能永遠無法將資料庫帶到實體一致的狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 
 >
-> - [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，做為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項無法取代從已知良好的備份還原方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，做為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項無法取代從已知良好的備份還原方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
 >     
->  - 某些只能透過 REPAIR_ALLOW_DATA_LOSS 選項修復的錯誤，可能需要取消配置資料列、頁面或一系列頁面，才能清除錯誤。 使用者將無法再存取或復原任何已取消配置的資料，也無法判斷其確切內容。 因此，取消配置任何資料列或頁面之後，參考完整性可能會不正確，因為在這項修復作業期間不會檢查或維護外部索引鍵條件約束。 使用者在使用 REPAIR_ALLOW_DATA_LOSS 選項之後，必須檢查其資料庫的參考完整性 (使用 DBCC CHECKCONSTRAINTS)。    
+> 某些只能透過 REPAIR_ALLOW_DATA_LOSS 選項修復的錯誤，可能需要取消配置資料列、頁面或一系列頁面，才能清除錯誤。 使用者將無法再存取或復原任何已取消配置的資料，也無法判斷其確切內容。 因此，取消配置任何資料列或頁面之後，參考完整性可能會不正確，因為在這項修復作業期間不會檢查或維護外部索引鍵條件約束。 使用者在使用 REPAIR_ALLOW_DATA_LOSS 選項之後，必須檢查其資料庫的參考完整性 (使用 DBCC CHECKCONSTRAINTS)。    
 >     
->  - 在執行修復之前，請建立屬於這個資料庫的檔案實體複本。 這包括主要資料檔 (.mdf)、任何次要資料檔 (.ndf)、所有交易記錄檔 (.ldf) 以及其他構成資料庫的容器，包括全文檢索目錄、檔案資料流資料夾、記憶體最佳化的資料等。    
+> 在執行修復之前，請建立屬於這個資料庫的檔案實體複本。 這包括主要資料檔 (.mdf)、任何次要資料檔 (.ndf)、所有交易記錄檔 (.ldf) 以及其他構成資料庫的容器，包括全文檢索目錄、檔案資料流資料夾、記憶體最佳化的資料等。    
 >     
->  - 在執行修復之前，請考慮將資料庫的狀態變更為「緊急」模式，並嘗試從關鍵資料表中擷取盡可能最多的資訊，然後儲存該資料。    
+> 在執行修復之前，請考慮將資料庫的狀態變更為「緊急」模式，並嘗試從關鍵資料表中擷取盡可能最多的資訊，然後儲存該資料。    
     
- REPAIR_FAST  
+REPAIR_FAST  
  維護這個語法的目的，只是為了與舊版相容。 不會執行任何修復動作。  
     
- REPAIR_REBUILD  
+REPAIR_REBUILD  
  執行不可能造成資料遺失的修復， 這可包括快速修復 (例如，修復非叢集索引中遺失的資料列) 以及更耗時的修復 (例如，重建索引)。  
  這個引數不會修復與 FILESTREAM 資料有關的錯誤。  
     
 > [!IMPORTANT] 
 > 由於搭配任何 REPAIR 選項的 DBCC CHECKDB 已完整記錄下來並可復原，因此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律會建議使用者在交易內 (執行命令前先執行 BEGIN TRANSACTION) 搭配任何 REPAIR 選項使用 CHECKDB，以便使用者可以確認要接受作業的結果。 接著使用者可執行 COMMIT TRANSACTION，來認可修復作業完成的所有工作。 如果使用者不想接受作業的結果，可執行 ROLLBACK TRANSACTION 恢復修復作業的結果。    
 >     
->  若要修復錯誤，我們建議您從備份中還原。 修復作業並不考慮資料表或資料表之間的任何條件約束。 如果指定的資料表涉及一或多項條件約束，建議您在修復作業之後，執行 DBCC CHECKCONSTRAINTS。 如果您必須使用 REPAIR，請執行不含修復選項的 DBCC CHECKDB 來尋找要使用的修復層級。 如果您使用 REPAIR_ALLOW_DATA_LOSS 層級，建議您在搭配這個選項執行 DBCC CHECKDB 之前，先備份資料庫。    
+> 若要修復錯誤，我們建議您從備份中還原。 修復作業並不考慮資料表或資料表之間的任何條件約束。 如果指定的資料表涉及一或多項條件約束，建議您在修復作業之後，執行 DBCC CHECKCONSTRAINTS。 如果您必須使用 REPAIR，請執行不含修復選項的 DBCC CHECKDB 來尋找要使用的修復層級。 如果您使用 REPAIR_ALLOW_DATA_LOSS 層級，建議您在搭配這個選項執行 DBCC CHECKDB 之前，先備份資料庫。    
     
- ALL_ERRORMSGS  
- 根據每個物件顯示所有報告的錯誤。 系統預設會顯示所有錯誤訊息。 指定或省略這個選項沒有任何作用。 錯誤訊息會依照物件識別碼，從產生的訊息除外[tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)。  
-    
-> [!NOTE] 
-> 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，傳回的最大錯誤訊息數目是 1000。 當您指定 ALL_ERRORMSGS 時，我們建議您藉由執行 DBCC 命令[sqlcmd 公用程式](../../tools/sqlcmd-utility.md)或藉由排程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業來執行命令，並將輸出導向至檔案。 執行任何其中一種方式，都可確保執行一次命令將能回報所有錯誤訊息。    
+ALL_ERRORMSGS  
+ 根據每個物件顯示所有報告的錯誤。 系統預設會顯示所有錯誤訊息。 指定或省略這個選項沒有任何作用。 錯誤訊息會依照物件識別碼，從產生的訊息除外[tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)。     
 
- EXTENDED_LOGICAL_CHECKS  
+EXTENDED_LOGICAL_CHECKS  
  如果相容性層級為 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，則會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯一致性檢查。  
- 如需詳細資訊，請參閱本主題稍後「備註」一節中的「對索引執行邏輯一致性檢查」。  
+ 如需詳細資訊，請參閱*執行邏輯一致性檢查索引*，請在[備註](#remarks)本主題稍後的章節。  
     
- NO_INFOMSGS  
+NO_INFOMSGS  
  隱藏所有參考訊息。  
     
- TABLOCK  
+TABLOCK  
  使 DBCC CHECKDB 取得鎖定，而不使用內部資料庫快照集。 這包括資料庫上的短期獨佔 (X) 鎖定。 TABLOCK 可讓 DBCC CHECKDB 在負載沉重的資料庫上執行得快一些，但 DBCC CHECKDB 執行時，資料庫可用的並行會降低。  
     
 > [!IMPORTANT] 
 > TABLOCK 會限制執行的檢查；不會對資料庫執行 DBCC CHECKCATALOG，也不會驗證 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 資料。
     
- ESTIMATEONLY  
+ESTIMATEONLY  
  顯示所需的所有其他指定選項執行 DBCC CHECKDB 的 tempdb 空間估計的量。 不會執行實際的資料庫檢查。  
     
- PHYSICAL_ONLY  
+PHYSICAL_ONLY  
  將檢查限制於頁面實體結構、記錄標頭的完整性，以及資料庫配置的一致性。 這是設計來對資料庫實體一致性提供少量負擔檢查，這項檢查還能偵測到可能危及使用者資料的損毀頁、總和檢查碼失敗以及常見的硬體錯誤。  
  完整執行 DBCC CHECKDB 所需要的完成時間可能比舊版長許多。 此行為的發生狀況如下：  
  -   邏輯檢查更完整。  
@@ -165,7 +158,7 @@ DBCC CHECKDB
 > [!WARNING] 
 > 指定 PHYSICAL_ONLY 會造成 DBCC CHECKDB 略過 FILESTREAM 資料的所有檢查。
     
- DATA_PURITY  
+DATA_PURITY  
  使 DBCC CHECKDB 檢查資料庫，找出無效或超出範圍的資料行值。 例如，DBCC CHECKDB 偵測到大於或小於的可接受範圍的日期和時間值的資料行**datetime**資料類型，或**十進位**或近似數值資料類型具有無效的小數位數或有效位數值的資料行。  
  預設會啟用資料行值的完整性檢查，而不需要 DATA_PURITY 選項。 對於從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級的資料庫，在毫無錯誤的情況下完成對資料庫執行 DBCC CHECKDB WITH DATA_PURITY 之前，依預設不啟用資料行值的完整性檢查。 此後，依預設 DBCC CHECKDB 會檢查資料行值的完整性。 如需有關從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級資料庫可能對 CHECKDB 造成何種影響的詳細資訊，請參閱本主題稍後的「備註」一節。  
     
@@ -175,7 +168,7 @@ DBCC CHECKDB
  這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 有關手動更正這些錯誤的詳細資訊，請參閱知識庫文件 923247: [SQL Server 2005 和更新版本中的疑難排解 DBCC 錯誤 2570年](http://support.microsoft.com/kb/923247)。  
     
  MAXDOP  
- **適用於**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
     
  覆寫**的最大平行處理原則程度**組態選項的**sp_configure**陳述式。 MAXDOP 可以超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用資源管理員所設定的值[!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]使用資源管理員 MAXDOP 值中所述[ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
  
@@ -183,10 +176,13 @@ DBCC CHECKDB
 > 如果 MAXDOP 設定為零，SQL Server 會選擇要使用的平行處理原則的最大程度。    
 
 ## <a name="remarks"></a>備註    
-DBCC CHECKDB 不會檢查停用的索引。 如需已停用索引的詳細資訊，請參閱[停用索引和條件約束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。
-如果使用者定義型別標示為按位元組排序，該使用者定義型別只能有一個序列。 按位元組排序之使用者定義型別如果沒有一致的序列，DBCC CHECKDB 執行期間將會發生錯誤 2537。 如需詳細資訊，請參閱[使用者定義型別需求](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)。
-因為[Resource 資料庫](../../relational-databases/databases/resource-database.md)只在單一使用者模式中，命令不能是直接在其上執行的 DBCC CHECKDB 可修改。 不過，當執行 DBCC CHECKDB 對[master 資料庫](../../relational-databases/databases/master-database.md)，Resource 資料庫也在內部執行第二個 CHECKDB。 這表示 DBCC CHECKDB 可能會傳回額外的結果。 這個命令在未設定選項或僅設定 PHYSICAL_ONLY 或 ESTIMATEONLY 選項其中之一時，會傳回額外的結果集。
-在 SP2 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本中，執行 DBCC CHECKDB 會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 在 SP2 及更新版本中，執行 DBCC CHECKDB 不會清除計畫快取。
+DBCC CHECKDB 不會檢查停用的索引。 如需已停用索引的詳細資訊，請參閱[停用索引和條件約束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。    
+
+如果使用者定義型別標示為按位元組排序，該使用者定義型別只能有一個序列。 按位元組排序之使用者定義型別如果沒有一致的序列，DBCC CHECKDB 執行期間將會發生錯誤 2537。 如需詳細資訊，請參閱[使用者定義型別需求](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)。    
+
+因為[Resource 資料庫](../../relational-databases/databases/resource-database.md)只在單一使用者模式中，命令不能是直接在其上執行的 DBCC CHECKDB 可修改。 不過，當執行 DBCC CHECKDB 對[master 資料庫](../../relational-databases/databases/master-database.md)，Resource 資料庫也在內部執行第二個 CHECKDB。 這表示 DBCC CHECKDB 可能會傳回額外的結果。 這個命令在未設定選項或僅設定 PHYSICAL_ONLY 或 ESTIMATEONLY 選項其中之一時，會傳回額外的結果集。    
+
+從開始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]SP2 中，執行 DBCC CHECKDB**不再**清除計畫快取執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 之前[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]SP2 中，執行 DBCC CHECKDB 會清除計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>對索引執行邏輯一致性檢查    
 對索引進行的邏輯一致性檢查會根據資料庫的相容性層級而異，如下所示：
@@ -216,7 +212,7 @@ DBCC CHECKDB 使用內部資料庫快照集來維護執行這些檢查時所需�
 我們建議您在實際執行系統上，使用 PHYSICAL_ONLY 選項做為常用的選項。 使用 PHYSICAL_ONLY 可以大幅縮減在大型資料庫上執行 DBCC CHECKDB 所需的時間。 我們也建議您不搭配使用任何選項，定期執行 DBCC CHECKDB。 執行這些作業的頻率是依個別公司及其實際執行環境而定。
     
 ## <a name="checking-objects-in-parallel"></a>平行檢查物件    
-依預設，DBCC CHECKDB 會執行物件的平行檢查。 查詢處理器會自動判斷平行處理原則的程度。 最大平行處理原則程度的設定方式與平行查詢相同。 若要限制 DBCC 檢查可用的處理器數目上限，請使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 您可以利用追蹤旗標 2528 來停用平行檢查。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+依預設，DBCC CHECKDB 會執行物件的平行檢查。 查詢處理器會自動判斷平行處理原則的程度。 最大平行處理原則程度的設定方式與平行查詢相同。 若要限制 DBCC 檢查可用的處理器數目上限，請使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 您可以利用追蹤旗標 2528 來停用平行檢查。 如需詳細資訊，請參閱[追蹤旗標&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
     
 > [!NOTE]
 > 並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需詳細資訊，請參閱 < 平行一致性檢查的 RDBMS 管理能力 > 一節中[支援的 SQL Server 2016 的版本功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。    
@@ -234,12 +230,14 @@ DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ss
 |5|發生使 DBCC 命令終止的未知錯誤。|    
     
 ## <a name="error-reporting"></a>錯誤報告    
-傾印檔案 (SQLDUMP*nnnn*.txt) 中建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每當 DBCC CHECKDB 偵測到損毀錯誤時的記錄檔目錄。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已啟用「功能使用方式」資料收集及「錯誤報告」功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
-傾印檔案包含 DBCC CHECKDB 命令的結果以及其他診斷輸出。 存取限於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶和系統管理員角色的成員。 根據預設，系統管理員角色包含 Windows BUILTIN\Administrators 群組和本機系統管理員群組的所有成員。 如果資料收集程序失敗，DBCC 命令不會失敗。
+傾印檔案 (`SQLDUMP*nnnn*.txt`) 中建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每當 DBCC CHECKDB 偵測到損毀錯誤時的記錄檔目錄。 當*功能使用方式*資料收集和*錯誤報告*功能已啟用的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，檔案會自動轉送到[!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
+傾印檔案包含 DBCC CHECKDB 命令的結果以及其他診斷輸出。 存取限於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶和系統管理員角色的成員。 根據預設，系統管理員角色包含 Windows 的所有成員`BUILTIN\Administrators`群組和本機系統管理員群組。 如果資料收集程序失敗，DBCC 命令不會失敗。
     
 ## <a name="resolving-errors"></a>解決錯誤    
-如果 DBCC CHECKDB 報告任何錯誤，建議您從資料庫備份還原資料庫，而不要設定下列 REPAIR 選項之一來執行 REPAIR。 如果沒有任何備份，執行修復可以更正所報告的錯誤。 要用的 REPAIR 選項指定在報告的錯誤清單尾端。 不過，利用 REPAIR_ALLOW_DATA_LOSS 選項來更正錯誤，可能需要刪除某些頁面，因而也需要刪除某些資料。
-在某些情況下，可能會將對資料行的資料類型無效或超出範圍的值輸入資料庫中。 DBCC CHECKDB 可以偵側到對所有資料行資料類型無效的資料行值。 因此，配合 DATA_PURITY 選項對從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級的資料庫執行 DBCC CHECKDB，可以發現預先存在的資料行值錯誤。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法自動修復這些錯誤，所以資料行值必須手動更新。 如果 CHECKDB 偵測到這類錯誤，CHECKDB 會傳回警告、錯誤碼 2570，以及識別受影響之資料列和手動更正錯誤的資訊。
+如果 DBCC CHECKDB 報告任何錯誤，建議您從資料庫備份還原資料庫，而不要設定下列 REPAIR 選項之一來執行 REPAIR。 如果沒有任何備份，執行修復可以更正所報告的錯誤。 要用的 REPAIR 選項指定在報告的錯誤清單尾端。 不過，利用 REPAIR_ALLOW_DATA_LOSS 選項來更正錯誤，可能需要刪除某些頁面，因而也需要刪除某些資料。    
+
+在某些情況下，可能會將對資料行的資料類型無效或超出範圍的值輸入資料庫中。 DBCC CHECKDB 可以偵側到對所有資料行資料類型無效的資料行值。 因此，配合 DATA_PURITY 選項對從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級的資料庫執行 DBCC CHECKDB，可以發現預先存在的資料行值錯誤。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法自動修復這些錯誤，所以資料行值必須手動更新。 如果 CHECKDB 偵測到這類錯誤，CHECKDB 會傳回警告、錯誤碼 2570，以及識別受影響之資料列和手動更正錯誤的資訊。    
+
 修復動作可在某項使用者交易之下執行，讓使用者可以回復所做的變更。 如果回復修復，資料庫仍會包含錯誤，且必須從備份中還原。 修復動作完成之後，請備份資料庫。
     
 ## <a name="resolving-errors-in-database-emergency-mode"></a>以資料庫緊急模式解決錯誤    
@@ -254,7 +252,7 @@ DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ss
 -   如果資料庫復原因交易記錄損毀而無法成功，就會重建交易記錄。 重建交易記錄可能會導致無法維持交易一致性。    
     
 > [!WARNING]
-> REPAIR_ALLOW_DATA_LOSS 選項是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的功能。 不過，這個選項不一定是讓資料庫處於實體一致狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，做為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項無法取代從已知良好的備份還原方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
+> REPAIR_ALLOW_DATA_LOSS 選項是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的功能。 不過，這個選項不一定是讓資料庫處於實體一致狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，做為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項是**不**或者從已知完好的備份還原。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
 >     
 >  重建記錄檔之後，不保證會有完整的 ACID。    
 >     
@@ -283,7 +281,7 @@ DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ss
 ## <a name="result-sets"></a>結果集    
 DBCC CHECKDB 會傳回下列結果集。 這些值可能會不同，除非指定了 ESTIMATEONLY、PHYSICAL_ONLY 或 NO_INFOMSGS 選項：
     
-```sql
+```
  DBCC results for 'model'.    
     
  Service Broker Msg 9675, Level 10, State 1: Message Types analyzed: 13.    
@@ -337,13 +335,13 @@ DBCC CHECKDB 會傳回下列結果集。 這些值可能會不同，除非指定
 
 指定 NO_INFOMSGS 時，DBCC CHECKDB 會傳回下列結果集 (訊息)：
     
-```sql
+```
  The command(s) completed successfully.
  ```
  
 指定 PHYSICAL_ONLY 時，DBCC CHECKDB 會傳回下列結果集：
     
-```sql
+```
  DBCC results for 'model'.    
     
  CHECKDB found 0 allocation errors and 0 consistency errors in database 'master'.  
@@ -353,7 +351,7 @@ DBCC CHECKDB 會傳回下列結果集。 這些值可能會不同，除非指定
  
 指定 ESTIMATEONLY 時，DBCC CHECKDB 會傳回下列結果集。
     
-```sql
+```
  Estimated TEMPDB space needed for CHECKALLOC (KB)    
     
  -------------------------------------------------  
@@ -398,9 +396,9 @@ DBCC CHECKDB WITH NO_INFOMSGS;
 GO    
 ```    
     
-## <a name="see-also"></a>請參閱＜    
+## <a name="see-also"></a>另請參閱    
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [檢視資料庫快照集的疏鬆檔案大小 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
-[sp_helpdb &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
+[sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
 [系統資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 

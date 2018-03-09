@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdbmaintplans_TSQL
 - sysdbmaintplans
-dev_langs: TSQL
-helpviewer_keywords: sysdbmaintplans system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdbmaintplans system table
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c9e9dd779b6a84f76844d27cef19ae8ff7c7f9d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6297a26f046c82b628bc65de8131bc21dd6f59fd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |**remote_history_server**|**sysname**|可寫入記錄報表之遠端伺服器的名稱。|  
 |**max_remote_history_rows**|**int**|在遠端伺服器系統資料表中，可寫入記錄報表的資料列最大配置列數。|  
 |**user_defined_1**|**int**|預設值是 NULL。|  
-|**user_defined_2**|**nvarchar （100)**|預設值是 NULL。|  
+|**user_defined_2**|**nvarchar(100)**|預設值是 NULL。|  
 |**user_defined_3**|**datetime**|預設值是 NULL。|  
 |**user_defined_4**|**uniqueidentifier**|預設值是 NULL。|  
 |**log_shipping**|**bit**|記錄傳送狀態：<br /><br /> **0** = 已停用**1** = 啟用|  

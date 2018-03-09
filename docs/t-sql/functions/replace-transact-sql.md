@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - REPLACE_TSQL
 - REPLACE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - first string expression [SQL Server]
 - replacing string expression
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - second string expressions [SQL Server]
 - REPLACE function
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a50c0b7220eba654df21349e2fd3cd57b9a0d7d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 330a3d79893bd24e3253eced054fa029b7f8d1d9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,10 +52,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string_expression*  
  是字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)搜尋。 *string_expression*可以是字元或二進位資料類型。  
   
- *string_*模式  
+ *string_*pattern  
  這是要尋找的子字串。 *string_pattern*可以是字元或二進位資料類型。 *string_pattern*不可為空字串 （"），而且不得超過頁面所容納的位元組數目上限。  
   
- *string_*取代  
+ *string_*replacement  
  這是取代字串。 *string_replacement*可以是字元或二進位資料類型。  
   
 ## <a name="return-types"></a>傳回類型  
@@ -101,7 +103,16 @@ This is a desk
 ```  
 
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
+ [CONCAT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   

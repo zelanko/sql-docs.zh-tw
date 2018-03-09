@@ -8,7 +8,8 @@ ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CHECKTABLE_TSQL
 - DBCC CHECKTABLE
 - CHECKTABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - indexed views [SQL Server], DBCC CHECKTABLE
 - page integrity checks [SQL Server]
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9d6ef6adb1d9a10b93e938842de2661eb9202d16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 495a31fc5f95cd5e3a81e5c14dd6dc469de66d6a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,8 +49,7 @@ ms.lasthandoff: 11/17/2017
     
 ## <a name="syntax"></a>語法    
     
-```sql
-    
+```    
 DBCC CHECKTABLE     
 (    
     table_name | view_name    
@@ -72,72 +73,74 @@ DBCC CHECKTABLE
  *table_name* | *view_name*  
  這是要執行完整性檢查的資料表或索引檢視。 資料表或檢視名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
     
- NOINDEX  
+NOINDEX  
  指定不應該執行使用者資料表之非叢集索引的大量檢查。 這會減少整體的執行時間。 NOINDEX 不會影響系統資料表，因為所有系統資料表索引一律會執行完整性檢查。  
     
  *index_id*  
  這是要執行完整性檢查的索引識別 (ID) 碼。 如果*index_id*指定，DBCC CHECKTABLE 會執行完整性檢查，只在這個索引及堆積或叢集的索引上。  
     
- REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
+REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
  指定 DBCC CHECKTABLE 修復找到的錯誤。 若要使用修復選項，資料庫必須在單一使用者模式中。  
     
- REPAIR_ALLOW_DATA_LOSS  
+REPAIR_ALLOW_DATA_LOSS  
  嘗試修復所有報告的錯誤。 這些修復可能會造成某些資料的遺失。  
     
- REPAIR_FAST  
+REPAIR_FAST  
  保留語法的目的，只是為了與舊版相容。 不會執行任何修復動作。  
     
- REPAIR_REBUILD  
+REPAIR_REBUILD  
  執行不可能造成資料遺失的修復， 這可包括快速修復 (例如，修復非叢集索引中遺失的資料列) 以及更耗時的修復 (例如，重建索引)。  
  這個引數不會修復與 FILESTREAM 資料有關的錯誤。  
     
  > [!NOTE]  
- >  最好不要使用這些 REPAIR 選項。 若要修復錯誤，我們建議您從備份中還原。 修復作業並不考慮資料表或資料表之間的任何條件約束。 如果指定的資料表涉及一或多項條件約束，建議您在修復作業之後，執行 DBCC CHECKCONSTRAINTS。 如果您必須使用 REPAIR，請執行不含修復選項的 DBCC CHECKTABLE 來尋找要使用的修復層級。 如果您要使用 REPAIR_ALLOW_DATA_LOSS 層級，建議您在搭配這個選項執行 DBCC CHECKTABLE 之前，先備份資料庫。  
+ > 最好不要使用這些 REPAIR 選項。 若要修復錯誤，我們建議您從備份中還原。 修復作業並不考慮資料表或資料表之間的任何條件約束。 如果指定的資料表涉及一或多個條件約束中，我們建議您執行`DBCC CHECKCONSTRAINTS`修復作業後。
+ > 如果您必須使用 REPAIR，請執行`DBCC CHECKTABLE`不含修復選項來尋找要使用的修復層級。 如果您要使用 REPAIR_ALLOW_DATA_LOSS 層級，我們建議您執行之前，先備份資料庫`DBCC CHECKTABLE`使用此選項。  
     
- ALL_ERRORMSGS  
+ALL_ERRORMSGS  
  顯示沒有限制的錯誤數目。 系統預設會顯示所有錯誤訊息。 指定或省略這個選項沒有任何作用。  
     
- EXTENDED_LOGICAL_CHECKS  
+EXTENDED_LOGICAL_CHECKS  
  如果相容性層級為 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，則會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯一致性檢查。  
- 如需詳細資訊，請參閱本主題稍後「備註」一節中的「對索引執行邏輯一致性檢查」。  
+ 如需詳細資訊，請參閱*執行邏輯一致性檢查索引*中[備註](#remarks)本主題稍後的章節。  
     
- NO_INFOMSGS  
+NO_INFOMSGS  
  隱藏所有參考訊息。  
     
- TABLOCK  
+TABLOCK  
  使 DBCC CHECKTABLE 取得共用資料表鎖定，而不使用內部資料庫快照集。 TABLOCK 會使 DBCC CHECKTABLE 在負荷很重的情況下，仍能在資料表上執行得比較快，但當 DBCC CHECKTABLE 在執行中，它會降低資料表上所能使用的並行性。  
     
- ESTIMATEONLY  
+ESTIMATEONLY  
  顯示使用所有其他指定的選項執行 DBCC CHECKTABLE 所需的 tempdb 空間估計的量。  
     
- PHYSICAL_ONLY  
+PHYSICAL_ONLY  
  將檢查限制於頁面實體結構、記錄標頭和 B 型樹狀目錄之實體結構的完整性。 這個項目是專為了提供資料表實體一致性的小型負擔檢查而設計的，這項檢查也能夠偵測到損毀的頁面以及可能危及資料的一般硬體失敗。 完整執行 DBCC CHECKTABLE 所需要的時間可能比舊版多許多。 這個行為的原因如下：  
  -   邏輯檢查更完整。  
  -   部分要檢查的基礎結構更複雜。  
  -   導入了許多新的檢查，以包含新的功能。  
    
- 因此，使用 PHYSICAL_ONLY 選項可能使大型資料表 DBCC CHECKTABLE 的執行階段縮短許多，因此，建議您在實際系統上經常使用它。 我們仍建議您定期完整執行 DBCC CHECKTABLE。 這些執行動作的頻率取決於個別商務和實際執行環境特有的因素。 PHYSICAL_ONLY 一律隱含 NO_INFOMSGS，不允許使用任何修復選項。  
+因此，使用 PHYSICAL_ONLY 選項可能使大型資料表 DBCC CHECKTABLE 的執行階段縮短許多，因此，建議您在實際系統上經常使用它。 我們仍建議您定期完整執行 DBCC CHECKTABLE。 這些執行動作的頻率取決於個別商務和實際執行環境特有的因素。 PHYSICAL_ONLY 一律隱含 NO_INFOMSGS，不允許使用任何修復選項。  
     
  > [!NOTE]  
- >  指定 PHYSICAL_ONLY 會造成 DBCC CHECKTABLE 略過 FILESTREAM 資料的所有檢查。  
+ > 指定 PHYSICAL_ONLY 會造成 DBCC CHECKTABLE 略過 FILESTREAM 資料的所有檢查。  
     
- DATA_PURITY  
+DATA_PURITY  
  使 DBCC CHECKTABLE 檢查資料表，找出無效或超出範圍的資料行值。 例如，DBCC CHECKTABLE 偵測到大於或小於的可接受範圍的日期和時間值的資料行**datetime**資料類型，或**十進位**或近似數值資料類型具有無效的小數位數或有效位數值的資料行。  
  預設會啟用資料行值的完整性檢查，而不需要 DATA_PURITY 選項。 對於從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級的資料庫，您可以使用 DBCC CHECKTABLE WITH DATA_PURITY 尋找並更正特定資料表的錯誤，不過，必須先在毫無錯誤的情況下完成對資料庫執行 DBCC CHECKDB WITH DATA_PURITY，否則依預設不對資料表啟用資料行值檢查。 此後，依預設 DBCC CHECKDB 和 DBCC CHECKTABLE 會檢查資料行值的完整性。  
  這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 有關手動更正這些錯誤的詳細資訊，請參閱知識庫文件 923247: [SQL Server 2005 和更新版本中的疑難排解 DBCC 錯誤 2570年](http://support.microsoft.com/kb/923247)。  
  如果指定 PHYSICAL_ONLY，則不會執行資料行完整性檢查。  
     
- MAXDOP  
- **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 透過[新版](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+MAXDOP  
+ **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+ 
  覆寫**的最大平行處理原則程度**組態選項的**sp_configure**陳述式。 MAXDOP 可以超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用資源管理員所設定的值，Database Engine 會使用資源管理員 MAXDOP 值，ALTER WORKLOAD GROUP (TRANSACT-SQL) 中所述。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
     
- > [!CAUTION]  
- >  如果 MAXDOP 設定為零，則伺服器會選擇平行處理原則的最大程度。  
+ > [!NOTE]  
+ > 如果 MAXDOP 設定為零，則伺服器會選擇平行處理原則的最大程度。  
     
 ## <a name="remarks"></a>備註    
     
 > [!NOTE]    
->  若要在資料庫中的每個資料表執行 DBCC CHECKTABLE，使用[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。    
+> 若要在資料庫中的每個資料表執行 DBCC CHECKTABLE，使用[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。    
     
 DBCC CHECKTABLE 會確認指定資料表的下列項目：
 -   已正確連結索引、in-row、LOB 和資料列溢位資料頁面。    
@@ -157,8 +160,8 @@ DBCC CHECKTABLE 會確認指定資料表的下列項目：
          這些邏輯一致性檢查會交叉檢查索引物件的內部索引資料表 (其中包含它所參考的使用者資料表)。 若要尋找外圍的資料列，則會建構內部查詢來執行內部和使用者資料表的完整交集。 執行這個查詢對於效能會有極大的影響，而且無法追蹤其進度。 因此，只有當您懷疑發生了與實體損毀無關的索引問題，或是頁面層級總和檢查碼已經關閉，而且您懷疑發生了資料行層級的硬體損毀時，才建議您指定 WITH EXTENDED_LOGICAL_CHECKS。    
     -   如果此索引為已篩選的索引，DBCC CHECKDB 會執行一致性檢查，以確認索引項目可滿足篩選述詞。   
       
-- 從 SQL Server 2016 開始，保存計算資料行、 UDT 資料行和篩選的索引上額外的檢查不會執行預設以避免昂貴的運算式評估。 這項變更可大幅減少 CHECKDB 期間，針對包含這些物件的資料庫。 不過，這些物件的實體一致性檢查一律會完成。 指定 EXTENDED_LOGICAL_CHECKS 選項時，才將運算式評估執行除了已經存在的邏輯檢查 （索引檢視表、 XML 索引和空間索引） EXTENDED_LOGICAL_CHECKS 選項的一部分。
--  如果相容性層級為 90 以下，則除非指定了 NOINDEX，否則 DBCC CHECKTABLE 會針對單一資料表或索引檢視表及它的所有非叢集索引和 XML 索引進行實體和邏輯一致性檢查。 不支援空間索引。
+- 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，以避免昂貴的運算式評估的預設不會執行其他檢查保存計算資料行、 UDT 資料行和篩選的索引。 這項變更可大幅減少 CHECKDB 期間，針對包含這些物件的資料庫。 不過，這些物件的實體一致性檢查一律會完成。 指定 EXTENDED_LOGICAL_CHECKS 選項時，才將運算式評估執行除了已經存在的邏輯檢查 （索引檢視表、 XML 索引和空間索引） EXTENDED_LOGICAL_CHECKS 選項的一部分。
+-  如果相容性層級為 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) 或更少，除非指定了 NOINDEX，否則 DBCC CHECKTABLE 會針對單一資料表或索引的檢視和所有它的非叢集的實體和邏輯一致性檢查和 XML 索引。 不支援空間索引。
     
  **若要了解資料庫的相容性層級**    
 [檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
@@ -176,10 +179,10 @@ DBCC CHECKTABLE 會利用內部資料庫快照集來提供執行這些檢查所�
     
 ## <a name="checking-objects-in-parallel"></a>平行檢查物件    
 依預設，DBCC CHECKTABLE 會執行物件的平行檢查。 查詢處理器會自動判斷平行處理原則的程度。 最大平行處理原則程度的設定方式與平行查詢相同。 若要限制 DBCC 檢查可用的處理器數目上限，請使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
-您可以利用追蹤旗標 2528 來停用平行檢查。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+您可以利用追蹤旗標 2528 來停用平行檢查。 如需詳細資訊，請參閱[追蹤旗標&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
     
 > [!NOTE]    
->  在 DBCC CHECKTABLE 作業期間，儲存在按位元組排序之使用者定義型別資料行的位元組，必須等於使用者定義型別值的計算序列化。 如果不是這樣，DBCC CHECKTABLE 常式將會報告一致性錯誤。    
+> 在 DBCC CHECKTABLE 作業期間，儲存在按位元組排序之使用者定義型別資料行的位元組，必須等於使用者定義型別值的計算序列化。 如果不是這樣，DBCC CHECKTABLE 常式將會報告一致性錯誤。    
     
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 錯誤訊息    
 DBCC CHECKTABLE 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息中會指出命令已經終止，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
@@ -194,7 +197,7 @@ DBCC CHECKTABLE 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes
 |5|發生使 DBCC 命令終止的未知錯誤。|    
     
 ## <a name="error-reporting"></a>錯誤報告    
-小型傾印檔案 (SQLDUMP*nnnn*.txt) 中建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每當 DBCC CHECKTABLE 偵測到損毀錯誤時的記錄檔目錄。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已啟用「功能使用方式」資料收集及「錯誤報告」功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
+小型傾印檔案 (`SQLDUMP*nnnn*.txt`) 中建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每當 DBCC CHECKTABLE 偵測到損毀錯誤時的記錄檔目錄。 當*功能使用方式*資料收集和*錯誤報告*功能已啟用的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，檔案會自動轉送到[!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
 傾印檔案包含 DBCC CHECKTABLE 命令的結果以及其他診斷輸出。 這個檔案具有限制的任意存取控制清單 (DACL)。 存取限於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶和系統管理員角色的成員。 根據預設，系統管理員角色包含 Windows BUILTIN\Administrators 群組和本機系統管理員群組的所有成員。 如果資料收集程序失敗，DBCC 命令不會失敗。
     
 ## <a name="resolving-errors"></a>解決錯誤    
@@ -204,7 +207,7 @@ DBCC CHECKTABLE 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes
 ## <a name="result-sets"></a>結果集    
 DBCC CHECKTABLE 會傳回下列結果集。 如果您只指定了資料表名稱或任何選項，就會傳回相同的結果集。
     
-```sql
+```
 DBCC results for 'HumanResources.Employee'.    
 There are 288 rows in 13 pages for object 'Employee'.    
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    
@@ -212,7 +215,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
     
 如果指定了 ESTIMATEONLY 選項，DBCC CHECKTABLE 會傳回下列結果集：
     
-```sql
+```
 Estimated TEMPDB space needed for CHECKTABLES (KB)     
 --------------------------------------------------     
 21    
@@ -253,8 +256,8 @@ SET @indid = (SELECT index_id
 DBCC CHECKTABLE ('Production.Product',@indid);    
 ```    
     
-## <a name="see-also"></a>請參閱＜    
-[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
+## <a name="see-also"></a>另請參閱    
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)     
+[DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
     
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - application logs [Reporting Services]
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 caps.latest.revision: "32"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee91a42ddd7abc16d39afdf5a6f6d3259a8f2fb5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 45ca587aa84cc078639a683b8c747f41a983913d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="windows-application-log"></a>Windows 應用程式記錄檔
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將事件訊息寫入 Windows 應用程式記錄。 您可以利用寫入應用程式記錄檔的訊息資訊，來了解在本機系統上執行的報表伺服器應用程式所產生的事件。  
@@ -47,9 +45,9 @@ ms.lasthandoff: 12/05/2017
   
  下表描述報表伺服器寫入應用程式事件記錄的事件類型。  
   
-|事件類型|說明|  
+|事件類型|描述|  
 |----------------|-----------------|  
-|資訊|描述作業成功的事件 (例如，當報表伺服器服務啟動時)。|  
+|[資訊]|描述作業成功的事件 (例如，當報表伺服器服務啟動時)。|  
 |警告|表示有潛在問題的事件 (例如，磁碟空間不足)。|  
 |錯誤|描述嚴重問題的事件 (例如，服務未啟動)。|  
 |稽核成功|描述登入成功的安全性事件。|  

@@ -23,22 +23,22 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: "69"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 859646732d7add898319c11193aedebb77c7239a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae3c32d0636b37afb15005eb823629f7dfd5194e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>參數化篩選 - 參數化資料列篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 參數化資料列篩選允許將不同的資料分割傳送到不同的訂閱者，而不需要建立多個發行集 (參數化篩選在舊版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中稱為動態篩選)。 資料分割是資料表中資料列的子集；根據建立參數化資料列篩選時選取的設定，已發行資料表中的每個資料列可僅屬於一個資料分割 (產生不重疊資料分割)，也可屬於兩個或兩個以上的資料分割 (產生重疊資料分割)。  
   
  不重疊資料分割可以在訂閱之間共用，或限制其僅讓一個訂閱能收到給定資料分割。 本主題之後的「使用適當的篩選選項」一節中會描述控制資料分割行為的設定。 透過使用這些設定，您可以依據應用程式及效能需求量身訂作參數化篩選。 一般來說，重疊資料分割允許較大的彈性，而複寫到單一訂閱的不重疊資料分割則會提供較佳的效能。  
   
- 參數化篩選用於單一資料表，通常與聯結篩選組合以將篩選擴充到相關資料表。 如需詳細資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
+ 參數化篩選用於單一資料表，通常與聯結篩選組合以將篩選擴充到相關資料表。 如需相關資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
  若要定義或修改參數化資料列篩選，請參閱＜ [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
   
@@ -184,7 +184,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   在聯結篩選階層中，有重疊資料分割的發行項無法在有不重疊資料分割之發行項的上方顯示。 換句話說，如果子發行項使用不重疊資料分割，則父發行項也必須如此。 如需聯結篩選的詳細資訊，請參閱＜ [Join Filters](../../../relational-databases/replication/merge/join-filters.md)＞。  
   
--   如果不重疊資料分割在聯結篩選中是子系，則必須將 **聯結唯一索引鍵** 屬性設定為 1。 如需詳細資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
+-   如果不重疊資料分割在聯結篩選中是子系，則必須將 **聯結唯一索引鍵** 屬性設定為 1。 如需相關資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
 -   發行項應僅含有一個參數化篩選或聯結篩選。 允許含有參數化篩選且在聯結篩選中為父系。 不允許含有參數化篩選且在聯結篩選中為子系。 同樣也不允許有一個以上的聯結篩選。  
   

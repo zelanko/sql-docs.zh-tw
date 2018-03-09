@@ -1,5 +1,5 @@
 ---
-title: "SET IDENTITY_INSERT (TRANSACT-SQL) |Microsoft 文件"
+title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - SET_IDENTITY_INSERT_TSQL
 - IDENTITY_INSERT_TSQL
 - IDENTITY_INSERT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - IDENTITY_INSERT option
 - SET IDENTITY_INSERT statement
 - identity values [SQL Server], explicit values
 - identity columns [SQL Server], explicit values
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fb788c885cee9f082c18ebd315d05a4a961e88b3
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
@@ -58,7 +60,7 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *table*  
  這是含識別欄位之資料表的名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  不論何時，工作階段中只能有一份資料表將 IDENTITY_INSERT 屬性設為 ON。 如果已有資料表的這個屬性設為 ON，又針對另一份資料表發出 SET IDENTITY_INSERT ON 陳述式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回一則錯誤訊息，指出 SET IDENTITY_INSERT 已設為 ON，且會報告設為 ON 所針對的資料表。  
   
  如果輸入的值大於資料表目前的識別值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動利用新插入的值來作為目前的識別值。  
@@ -117,7 +119,7 @@ DROP TABLE dbo.Tool;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   

@@ -8,12 +8,11 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - hybrid OLAP
@@ -26,19 +25,20 @@ helpviewer_keywords:
 - MOLAP
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eab4af44192304701687c7796448407eaacdaa96
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>資料分割-磁碟分割儲存模式及處理
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料分割的儲存模式會影響查詢及處理效能、 儲存體需求，以及資料分割及其父量值群組和 cube 的儲存位置。 儲存模式的選擇也會影響處理選擇。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+資料分割的儲存模式會影響查詢及處理效能、儲存需求，以及此資料分割的儲存位置及其父量值群組和 Cube。 儲存模式的選擇也會影響處理選擇。  
   
  資料分割可以使用三種基本儲存模式之一：  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
 -   混合式 OLAP (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援所有的三種基本儲存模式。 另外也支援主動式快取，可以讓您結合 ROLAP 和 MOLAP 儲存的特性，提供資料的立即性和查詢效能。 如需詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援所有的三種基本儲存模式。 另外也支援主動式快取，可以讓您結合 ROLAP 和 MOLAP 儲存的特性，提供資料的立即性和查詢效能。 如需詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
   
 ## <a name="molap"></a>MOLAP  
  MOLAP 儲存模式會產生資料分割的彙總，並在處理此資料分割時，將其來源資料的副本儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的多維度結構中； 這個 MOLAP 結構會高度最佳化，以發揮最大的查詢效能。 儲存位置可以在定義資料分割的電腦上，或是在執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的另一部電腦上。 由於來源資料的副本會位於多維度結構中，所以可以在不存取資料分割之來源資料的情況下解析查詢； 查詢回應時間會因為使用彙總而大幅縮減。 此資料分割之 MOLAP 結構中的資料只會維持在與此資料分割的最新處理一樣的最新狀態。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/08/2017
   
     -   QUOTED_IDENTIFIER  
   
--   在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中，索引鍵的大小總計不可能超過 900 個位元組。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]將判斷提示以固定的長度索引鍵資料行時，CREATE INDEX 陳述式會處理這個狀況。 不過，如果在索引鍵中有可變長度資料行[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]也會判斷提示這個狀況的基底資料表每次更新。 因為不同彙總有不同的檢視定義，所以會依彙總設計而定，使用索引檢視的 ROLAP 處理可能成功也可能失敗。  
+-   在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中，索引鍵的大小總計不可能超過 900 個位元組。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 將判斷提示以固定的長度索引鍵資料行時，CREATE INDEX 陳述式會處理這個狀況。 不過，如果在索引鍵中有可變長度資料行[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]也會判斷提示這個狀況的基底資料表每次更新。 因為不同彙總有不同的檢視定義，所以會依彙總設計而定，使用索引檢視的 ROLAP 處理可能成功也可能失敗。  
   
 -   建立索引檢視的工作階段必須將下列選項設為 ON：ARITHABORT、CONCAT_NULL_YEILDS_NULL、QUOTED_IDENTIFIER、ANSI_NULLS、ANSI_PADDING 和 ANSI_WARNING。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中變更這項設定。  
   
@@ -92,9 +92,9 @@ ms.lasthandoff: 12/08/2017
   
  因為儲存為 HOLAP 的資料分割不包含來源資料，所以會比同等的 MOLAP 資料分割還小，而且針對涉及摘要資料之查詢的回應速度也會比 ROLAP 資料分割還快。 HOLAP 儲存模式一般是適用於 Cube 中的資料分割，而這類資料分割需要根據大量來源資料以快速回應摘要查詢。 但是，如果使用者產生必須接觸分葉層級資料的查詢 (例如計算中間值)，MOLAP 通常是較好的選擇。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [主動式快取 &#40;分割區 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [同步處理 Analysis Services 資料庫](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [資料分割 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分割區 &#40;Analysis Services-多維度資料 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_os_memory_objects (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_os_memory_objects (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_memory_objects
 - sys.dm_os_memory_objects_TSQL
 - dm_os_memory_objects_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_objects dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_objects dynamic management view
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 92d9fc9b94f74a08f84c6f39307a4f88e48b847b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b0a468001a048f627996e65a5743d3f136e96909
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,27 +40,27 @@ ms.lasthandoff: 11/17/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**memory_object_address**|**varbinary （8)**|記憶體物件的位址。 不可為 Null。|  
-|**parent_address**|**varbinary （8)**|父記憶體物件的位址。 可為 Null。|  
+|**memory_object_address**|**varbinary(8)**|記憶體物件的位址。 不可為 Null。|  
+|**parent_address**|**varbinary(8)**|父記憶體物件的位址。 可為 Null。|  
 |**pages_allocated_count**|**int**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 這個物件所配置的頁數。 不可為 Null。|  
 |**pages_in_bytes**|**bigint**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 這個記憶體物件執行個體所配置的記憶體數量 (以位元組為單位)。 不可為 Null。|  
 |**creation_options**|**int**|僅供內部使用。 可為 Null。|  
 |**bytes_used**|**bigint**|僅供內部使用。 可為 Null。|  
-|**型別**|**nvarchar （60)**|記憶體物件的類型。<br /><br /> 這表示這個記憶體物件所屬的某個元件，或是記憶體物件的函數。 可為 Null。|  
-|**name**|**varchar （128)**|僅供內部使用。 可為 Null。|  
-|**sys.dm_os_memory_clerks**|**smallint**|這個記憶體物件正在使用之記憶體節點的識別碼。 不可為 Null。|  
+|**type**|**nvarchar(60)**|記憶體物件的類型。<br /><br /> 這表示這個記憶體物件所屬的某個元件，或是記憶體物件的函數。 可為 Null。|  
+|**name**|**varchar(128)**|僅供內部使用。 可為 Null。|  
+|**memory_node_id**|**smallint**|這個記憶體物件正在使用之記憶體節點的識別碼。 不可為 Null。|  
 |**creation_time**|**datetime**|僅供內部使用。 可為 Null。|  
 |**max_pages_allocated_count**|**int**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 這個記憶體物件所配置的最大頁數。 不可為 Null。|  
 |**page_size_in_bytes**|**int**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 這個物件所配置的頁面大小 (以位元組為單位)。 不可為 Null。|  
 |**max_pages_in_bytes**|**bigint**|這個記憶體物件所使用的最大記憶體數量。 不可為 Null。|  
-|**page_allocator_address**|**varbinary （8)**|頁面配置器的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱[sys.dm_os_memory_clerks &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
-|**creation_stack_address**|**varbinary （8)**|僅供內部使用。 可為 Null。|  
+|**page_allocator_address**|**varbinary(8)**|頁面配置器的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱[sys.dm_os_memory_clerks &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
+|**creation_stack_address**|**varbinary(8)**|僅供內部使用。 可為 Null。|  
 |**sequence_num**|**int**|僅供內部使用。 可為 Null。|  
 |**partition_type**|**int**|磁碟分割類型：<br /><br /> 0-非可分割記憶體物件<br /><br /> 1-可分割記憶體物件，目前沒有資料分割<br /><br /> 2-可分割記憶體物件，由 NUMA 節點分割。 在單一 NUMA 節點的環境中這相當於 1。<br /><br /> 3-可分割記憶體物件，依 CPU 分割。|  
 |**contention_factor**|**real**|使用 0 表示沒有爭用的情況，這個記憶體物件，指定競爭的值。 每次時指定的記憶體配置數目不會反映在該期間內的競爭，將更新的值。 僅適用於安全執行緒記憶體物件。|  
 |**waiting_tasks_count**|**bigint**|這個記憶體物件的等候次數。 此計數器就會遞增，每當從這個記憶體物件配置記憶體。 增量是目前正在等候存取這個記憶體物件的工作數目。 僅適用於安全執行緒記憶體物件。 這是最佳的投入時間值，而不正確性保證。|  
 |**exclusive_access_count**|**bigint**|指定這個記憶體物件頻率獨佔存取。 僅適用於安全執行緒記憶體物件。  這是最佳的投入時間值，而不正確性保證。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
  **partition_type**， **contention_factor**， **waiting_tasks_count**，和**exclusive_access_count**尚未實作中[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
@@ -84,9 +87,9 @@ ORDER BY 'Bytes Used' DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
   [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
+ [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
 

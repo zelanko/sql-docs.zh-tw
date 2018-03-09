@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 445c28ab59dd3f66f46a0ad43aff40da5696ee0a
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server 中 R 的架構概觀
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本章節提供 SQL Server 2016 R Services 和 SQL Server 2017 機器學習服務架構的概觀。
 
@@ -56,7 +57,7 @@ SQL Server 會攔截所有的工作要求、 工作和使用 Windows 工作物�
 
 藉由強制執行 SQL Server 資料表、 資料庫和執行個體層級的安全性相容性界限內保留資料。 資料庫管理員可以控制誰執行 R 工作的能力，以及誰可以安裝或共用的 R 封裝的能力。 系統管理員也可以監視使用 R 指令碼，遠端或本機使用者和監視和管理所使用的資源。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [支援 R 整合的元件](new-components-in-sql-server-to-support-r.md)
 

@@ -1,6 +1,6 @@
 ---
-title: "使用 Windows 驗證連線至內部部署資料來源和 Azure 檔案共用 | Microsoft Docs"
-ms.date: 11/27/2017
+title: "使用 Windows 驗證連線至資料來源和檔案共用 | Microsoft Docs"
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,21 +8,29 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 87f8b79fd8e950038658c13b502f5f26ac9a8f87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>使用 Windows 驗證連線至內部部署資料來源和 Azure 檔案共用
 本文描述如何在 Azure SQL Database 上設定 SSIS 目錄以執行套件，這些套件會使用 Windows 驗證來連線至內部部署資料來源和 Azure 檔案共用。 無論是在內部部署和 Azure 虛擬機器上及 Azure 檔案中，您都可以使用 Windows 驗證來連線至與 Azure SSIS Integration Runtime 相同虛擬網路中的資料來源。
 
-遵循本文步驟所提供的網域認證適用於 SQL Database 執行個體上的所有套件執行，直到您變更或移除這些認證為止。
+> [!WARNING]
+> 如果您未如本文所述執行 `catalog`.`set_execution_credential` 為 Windows 驗證提供有效的網域認證，則相依於 Windows 驗證的套件就無法連線到資料來源，而且會在執行階段失敗。
+
+## <a name="you-can-only-use-one-set-of-credentials"></a>您只能使用一組認證
+
+目前，一個套件只能使用一組認證。 遵循本文步驟將所提供的網域認證套用於 SQL Database 執行個體上的所有套件執行 (互動或排程)，直到您變更或移除這些認證為止。 如果您的套件使用不同組認證連線到多個資料來源，您可能必須將套件分成多個套件。
+
+如果您的其中一個資料來源是 Azure 檔案服務，您可於套件執行階段時使用 `net use` (或執行處理工作中的對等項目) 掛接 Azure 檔案共用，來解決這項限制。 如需詳細資訊，請參閱[掛接 Azure 檔案共用並在 Windows 中存取共用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)。
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>提供 Windows 驗證的網域認證
 若要提供網域認證，讓套件使用 Windows 驗證以連線至內部部署資料來源，請執行下列動作：
@@ -80,7 +88,7 @@ ms.lasthandoff: 12/12/2017
 
 3.  從 SSMS 中，檢查是否可以連線至您想要使用的內部部署 SQL Server。
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>Prerequisites
 若要從 Azure 上執行的套件連線到內部部署 SQL Server，您必須啟用下列必要條件：
 
 1.  在 SQL Server 組態管理員中，啟用 TCP/IP 通訊協定。
@@ -129,7 +137,7 @@ ms.lasthandoff: 12/12/2017
     catalog.set_execution_credential @domain = N'Azure', @user = N'<storage-account-name>', @password = N'<storage-account-key>'
     ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 - 部署套件。 如需詳細資訊，請參閱[使用 SQL Server Management Studio (SSMS) 部署 SSIS 專案](../ssis-quickstart-deploy-ssms.md)。
 - 執行套件。 如需詳細資訊，請參閱[使用 SQL Server Management Studio (SSMS) 執行 SSIS 套件](../ssis-quickstart-run-ssms.md)。
 - 排程套件。 如需詳細資訊，請參閱[排程 Azure 上的 SSIS 套件執行](ssis-azure-schedule-packages.md)。

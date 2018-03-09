@@ -1,5 +1,5 @@
 ---
-title: "案例 (TRANSACT-SQL) |Microsoft 文件"
+title: CASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CASE_TSQL
 - CASE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CASE expression [Transact-SQL]
 - simple CASE expression
 - comparing expressions
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0036e0ddf54eeef950bf81da2bf4a8997b4bef3c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,13 +81,13 @@ END
  *input_expression*  
  這是使用簡單的 CASE 格式時，所評估的運算式。 *input_expression*是任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 當*when_expression*  
+ WHEN *when_expression*  
  簡單運算式*input_expression*使用簡單的 CASE 格式時進行比較。 *when_expression*是任何有效運算式。 資料類型的*input_expression* ，而且每個*when_expression*必須相同，或必須是隱含的轉換。  
   
- 然後*result_expression*  
+ THEN *result_expression*  
  所傳回的運算式時*input_expression*等於*when_expression*評估為 TRUE，或*Boolean_expression*評估為 TRUE。 *結果運算式*是任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 其他*else_result_expression*  
+ ELSE *else_result_expression*  
  這是沒有比較運算的評估結果是 TRUE 時，所傳回的運算式。 如果省略這個引數，且沒有比較運算得出 TRUE，CASE 就會傳回 NULL。 *else_result_expression*是任何有效運算式。 資料類型的*else_result_expression*和任何*result_expression*必須相同，或必須是隱含的轉換。  
   
  當*Boolean_expression*  
@@ -122,7 +124,7 @@ END
   
  CASE 陳述式會依序評估其條件，並在滿足其條件的第一個條件時停止。 在某些情況下，運算式會在 CASE 陳述式收到運算式的結果做為其輸入之前進行評估。 評估這些運算式是否可能時發生錯誤。 針對 CASE 陳述式，出現在 WHEN 引數中的彙總運算式會先進行評估，然後再提供給 CASE 陳述式。 例如，下列查詢會在產生 MAX 彙總的值時，產生除以零的錯誤。 這個情況會在評估 CASE 運算式之前發生。  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   
@@ -354,12 +356,12 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [聯合 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [IIF &#40;TRANSACT-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [選擇 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

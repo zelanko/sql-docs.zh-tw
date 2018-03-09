@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2b5e88e9a77c1d192709bde2fe6dcc9be3887aa3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>表格式模型 (Analysis Services) 中的翻譯
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]新增翻譯字串支援表格式模型。 模型中的單一物件可具有多個名稱或描述翻譯，因此可在模型定義中支援多語言版本。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 新增翻譯字串支援表格式模型。 模型中的單一物件可具有多個名稱或描述翻譯，因此可在模型定義中支援多語言版本。  
   
  翻譯字串僅適用於諸如 Excel 樞紐分析表清單等用戶端工具中顯示的物件中繼資料 (資料表與資料行的名稱及說明)。  為了使用翻譯字串，用戶端連線會指定文化特性。 在 [Analysis in Excel (Excel 中的分析)] 功能中，您可從下拉式清單選擇語言。 針對其他工具，您可能必須在連接字串中指定文化特性。  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  按一下 [匯出語言檔案] 。  提供檔案名稱和位置。  
   
- ![ssas-表格式-轉換-匯出](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-表格式-轉換-匯出")  
+ ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
   
 ## <a name="add-translations"></a>新增翻譯  
  空白 JSON 轉譯檔案包含特定語言翻譯的中繼資料。 在模型定義末尾的 **Culture** 區段，會指定物件名稱與描述的翻譯預留位置。 您可針對下列項目新增翻譯：  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
  下列範例顯示適用於 **DimProduct** 和 **DimCustomer** 資料表的已翻譯標題及描述。  
   
- ![ssas-表格式-轉換-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-表格式-轉換-json")  
+ ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
   
 > [!TIP]  
 >  您可使用任何 JSON 編輯器來開啟檔案，不過建議您使用 Visual Studio 中的 JSON 編輯器，如此一來您亦可在方案總管中使用 [檢視程式碼] 命令，檢視 SSDT 中的表格式模型定義。 若要取得 JSON 編輯器，您必須 [安裝 Visual Studio 2015 完整版](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)。 免費的 Community Edition 包含 JSON 編輯器。  
@@ -111,13 +112,13 @@ ms.lasthandoff: 12/08/2017
   
 2.  在 [Excel 連接] 對話方塊中，選擇模型中存在的字串翻譯文化特性。 Excel 會偵測模型中定義的文化特性，並據以填入下拉式清單。  
   
-     ![ssas-表格式-轉譯為 excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-表格式-轉譯為 excel")  
+     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
   
      您建立樞紐分析表時，應會看見已翻譯的資料表與資料行名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services 的全球化案例](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [在 Excel 中進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

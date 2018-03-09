@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5388ca7a351b0e5a0f9d3c820598cb9c42c9d8e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 86894e5f3c0d438a5a97c45e3927e3996ee6a6ab
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Restore-ASDatabase 指令程式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]將多維度或表格式資料庫備份 (.abf) 檔案還原到 Analysis Services 執行個體。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="syntax"></a>語法  
  `Restore-ASDatabase [-RestoreFile] <string> [-Name] <string> [-AllowOverwrite <SwitchParameter>] Locations <Microsoft.AnalysisServices.RestoreLocation[]>] [-Security <Microsoft.AnalysisServices.RestoreSecurity>] [-Password <System.SecureString>] [-StorageLocation <System.string>] [-Server <string>] [-Credential <PSCredential>] [<CommonParameters>]`  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  讓 Analysis Services 系統管理員將多維度或表格式資料庫從備份 (.abf) 檔案還原到本機或遠端伺服器執行個體。 如果您要還原的檔案已加密，可以使用 -FilePassword 來提供解密檔案所用的密碼。  
   
  此指令程式支援 –Credential 參數，如果您設定 Analysis Services 執行個體用於 HTTP 存取，就可以使用它。 –Credential 參數會採用提供 Windows 使用者識別的 PSCredential 物件。 然後在連接到 Analysis Services 時，IIS 會模擬此使用者。 此識別必須具有 Analysis Services 執行個體的系統管理員權限，才能還原檔案。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|1|  
+|位置？|@shouldalert|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  

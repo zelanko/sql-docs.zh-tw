@@ -1,7 +1,7 @@
 ---
 title: "連接至 DB2 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92b8b90baea054039b22fb6db6c4761e85fa7aee
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-db2-db2tosql"></a>連接至 DB2 (DB2ToSQL)
 使用**連接到 DB2**對話方塊連接到您想要移轉的 DB2 資料庫。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/05/2017
   
 這是標準模式選項。  
   
-**使用者名稱**  
+**User name**  
 輸入 SSMA 將用來連接到 DB2 資料庫的使用者名稱。  
   
 **密碼**  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce5968efc9238e44be3d66b2533da8951e28c907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定關聯性 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]關聯的 XML 文件中的項目。 元素可以是巢狀階層，而且在元素之間可以指定 ID、IDREF 或 IDREFS 關聯性。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XML 文件中的元素可以是相關聯的。 元素可以是巢狀階層，而且在元素之間可以指定 ID、IDREF 或 IDREFS 關聯性。  
   
  例如，在 XSD 結構描述， **\<客戶 >**元素包含**\<順序 >**子項目。 當結構描述對應到 AdventureWorks 資料庫中， **\<客戶 >**元素會對應到 Sales.Customer 資料表和**\<順序 >**元素會對應到Sales.SalesOrderHeader 資料表。 Sales.Customer 和 Sales.SalesOrderHeader 這些基礎資料表是相關聯的，因為客戶下了訂單。 Sales.SalesOrderHeader 資料表中的 CustomerID 是外部索引鍵，參考 Sales.Customer 資料表中的 CustomerID 主索引鍵。 您可以建立使用對應結構描述元素之間的關聯性**sql: relationship**註解。  
   
@@ -62,16 +64,16 @@ ms.lasthandoff: 11/17/2017
  **父系**  
  指定父關聯 (資料表)。 這是選用的屬性；如果未指定此屬性，會從文件之子階層中的資訊取得父資料表名稱。 如果結構描述指定使用相同的兩個父子式階層 **\<sql: relationship >**但不同的父項目，您沒有指定的父屬性 **\<sql:關聯性 >**。 這項資訊是從結構描述的階層中取得。  
   
- **父索引鍵**  
+ **parent-key**  
  指定父系的父索引鍵。 如果父索引鍵由多個資料行所組成，值就會用資料行之間的空格指定。 在指定給多重資料行索引鍵和其對應之子索引鍵的值之間有位置性對應。  
   
- **子系**  
+ **Child**  
  指定子關聯 (資料表)。  
   
- **子索引鍵**  
+ **child-key**  
  在參考父系中之 parent-key 的子系中指定子索引鍵。 如果子索引鍵由多個屬性 (資料行) 所組成，則 child-key 的值就會用屬性或資料行之間的空格指定。 在指定給多重資料行索引鍵和其對應之父索引鍵的值之間有位置性對應。  
   
- **反向**  
+ **Inverse**  
  這個屬性上指定 **\<sql: relationship >**由 updategrams 所使用。 如需詳細資訊，請參閱[sql: relationship 指定 sql: inverse 屬性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
  **Sql: key-fields-欄位**註解必須指定在項目中包含子元素，具有 **\<sql: relationship >**定義元素與子系，且會提供在父元素中指定之資料表的主索引鍵。 即使未指定結構描述 **\<sql: relationship >**，您必須指定**sql: key-fields-欄位**來產生適當的階層。 如需詳細資訊，請參閱[使用 sql: key-fields 來識別索引鍵資料行的欄位](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  
@@ -392,7 +394,7 @@ ms.lasthandoff: 11/17/2017
   
  **\<順序 >**元素是子元素**\<客戶 >**項目。 **\<sql: relationship >**上指定**\<順序 >**子元素; 因此，客戶的訂單顯示為的子元素**\<客戶 >**.  
   
- **\<順序 >**元素包含 **\<OrderDetail >**子項目。 **\<sql: relationship >**上指定 **\<OrderDetail >**子元素，因此訂單的訂單詳細資料會顯示為子元素， **\<順序>**項目。  
+ **\<順序 >**元素包含 **\<OrderDetail >**子項目。 **\<sql: relationship >**上指定 **\<OrderDetail >**子元素，因此訂單的訂單詳細資料會顯示為子元素， **\<順序 >**項目。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

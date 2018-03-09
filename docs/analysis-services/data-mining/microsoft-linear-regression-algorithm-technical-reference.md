@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e68aa664039d9fa7531c6563025c108687c2868
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ad96596830cc3bb091a7f57639c0a7d0d84dd9c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線性迴歸演算法技術參考
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]線性迴歸演算法是 Microsoft 決策樹演算法適用於連續屬性的模型配對的特殊版本。 本主題說明演算法的實作、描述如何自訂演算法的行為，以及提供查詢模型其他資訊的連結。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 Microsoft 決策樹演算法的特殊版本，適用於連續屬性的模型配對。 本主題說明演算法的實作、描述如何自訂演算法的行為，以及提供查詢模型其他資訊的連結。  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>線性迴歸演算法的實作  
  Microsoft 決策樹演算法可用於多種工作：線性迴歸、分類或關聯分析。 若要針對線性迴歸的用途實作這個演算法，演算法的參數會受到控制，以限制樹狀結構的成長並將模型中的所有資料保存在單一節點中。 換句話說，雖然線性迴歸是以決策樹為基礎，但是此樹狀結構僅包含一個單一節點，而且沒有任何分支：所有資料都在根節點中。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表列出針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法提供的參數。  
   
-|參數|說明|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|定義演算法在叫用特徵選取之前，可以處理的輸入屬性數目。 將此值設定為 0 可關閉特徵選取。<br /><br /> 預設值是 255。|  
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|定義演算法在叫用特徵選取之前，可以處理的輸出屬性數目。 將此值設定為 0 可關閉特徵選取。<br /><br /> 預設值是 255。|  
@@ -92,9 +91,9 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  系統支援**Cyclical** 和 **Ordered** 內容類型，但是演算法將它們視為離散值，因此不會執行特殊處理。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft 線性迴歸演算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

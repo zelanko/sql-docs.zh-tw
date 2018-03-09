@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ed6e04bacbe8ee1fcf911d0e2e4b73da12fc585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5eb8f74023e90966200aca7603b82f685e0eb9db
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |database_id|**int**|目前在 sys.databases 檢視資料庫的識別碼。|  
 |start_date|**datetimeoffset**|地區 SQL Database 資料中心起始資料庫複製時的 UTC 時間|  
-|modify_date|**datetimeoffset**|完成 database 地理複寫地區的 SQL Database 資料中心的 UTC 時間。 在此時間之後的主要資料庫會同步處理新的資料庫。 執行個體時提供 SQL Server 登入。|  
+|modify_date|**datetimeoffset**|完成 database 地理複寫地區的 SQL Database 資料中心的 UTC 時間。 在此時間之後的主要資料庫會同步處理新的資料庫。 。|  
 |link_guid|**uniqueidentifier**|異地複寫連結的唯一識別碼。|  
 |partner_server|**sysname**|包含地理複寫資料庫的邏輯伺服器的名稱。|  
 |partner_database|**sysname**|連結的邏輯伺服器上進行地理複寫資料庫的名稱。|  
@@ -69,7 +70,7 @@ SELECT
 FROM sys.geo_replication_links;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.dm_geo_replication_link_status &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys.dm_operation_status &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  

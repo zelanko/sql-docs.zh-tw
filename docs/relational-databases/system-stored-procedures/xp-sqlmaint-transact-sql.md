@@ -1,5 +1,5 @@
 ---
-title: "xp_sqlmaint (TRANSACT-SQL) |Microsoft 文件"
+title: xp_sqlmaint (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - xp_sqlmaint
 - xp_sqlmaint_TSQL
-dev_langs: TSQL
-helpviewer_keywords: xp_sqlmaint
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_sqlmaint
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b32c6c32d3af26713713d513fa3c8255cfd3ef9d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b39c93aa08d46dd31b2a063631ce567593319df4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +58,7 @@ xp_sqlmaint 'switch_string'
  無。 如果傳回錯誤**sqlmaint**公用程式會失敗。  
   
 ## <a name="remarks"></a>備註  
- 如果使用者登入使用 SQL Server 驗證時，會呼叫此程序**-U"***login_id***"**和**-P"** *密碼***"**參數附加*switch_string*之前執行。 如果使用者以 Windows 驗證登入*switch_string*傳遞不會變更至**sqlmaint**。  
+ 如果使用者登入使用 SQL Server 驗證時，會呼叫此程序**-U"***login_id***"**和**-P"***密碼***"**參數前面加上了*switch_string*之前執行。 如果使用者以 Windows 驗證登入*switch_string*傳遞不會變更至**sqlmaint**。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
@@ -74,7 +77,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [sqlmaint 公用程式](../../tools/sqlmaint-utility.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

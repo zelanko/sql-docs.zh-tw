@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0cb92bcd2ea9580fa8824a50b15a1f60cdf35c3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 06b3a79e97c50df8c7eed17b1343030ca2280426
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-sql-section"></a>自訂檔案 SQL > 一節
 **Sql**區段只能包含新的 SQL 字串，取代用戶端的命令字串。 如果沒有 SQL 字串的區段中，將會忽略 > 一節。  
@@ -48,15 +49,15 @@ SQL = " "
 ## <a name="syntax"></a>語法  
  格式是取代 SQL 字串的項目：  
   
- **SQL =**   
+ **SQL=**   
  ***sqlString***  
   
-|部分|描述|  
+|部分|Description|  
 |----------|-----------------|  
 |**SQL**|常值字串，表示這是 SQL 區段項目。|  
 |***sqlString***|SQL 字串，取代用戶端的字串。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 UserList > 一節](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

@@ -1,32 +1,144 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/19/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssdt
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 06b6fbdbf9d53273abe660ca6d16ba2afb51fa26
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄檔。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
+
+## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT for Visual Studio 2017 (15.5.2)
+組建編號︰14.0.16156.0
+  
+### <a name="whats-new"></a>新功能
+
+**SSIS**
+1.  修正將 SSAS 和 SSIS 安裝到相同 VS 2017 執行個體時 SSIS 2008 專案移轉會失敗的問題。
+2.  修正將 RDLC 報表設計師和 SSIS 安裝到相同 VS 2017 執行個體時不能建立 RDLC 專案的問題。
+3.  修正無法更新註解色彩的問題。
+4.  修正 Hadoop 連線管理員編輯器會截斷其他語言某些字串的問題。
+5.  修正 OData 連線管理員編輯器會截斷某些字串的問題。
+6.  修正 [Integration Services 匯入專案精靈] 視窗會截斷某些字串的問題。
+7.  修正 SSIS 工具箱資訊視窗的標題問題。
+8.  修正 [Integration Services 部署精靈] 視窗會截斷某些字串的問題。 
+
+**安裝程式**
+- 修正有時無法下載承載並會出現「系統找不到指定的檔案 (0x80070002)」錯誤的問題。  
+
+### <a name="known-issues"></a>已知問題
+- 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+
+
+
+
+## <a name="ssdt-for-visual-studio-2017-1551"></a>適用於 Visual Studio 2017 (15.5.1) 的 SSDT
+組建編號︰14.0.16148.0
+  
+### <a name="whats-new"></a>新功能
+
+Visual Studio 2017 (15.5.1) 是與 15.5.0 版相同的版本，但安裝程式的下列 Bug 修正除外：
+
+1.  修正安裝程式在 SQL Server Integration Services 後續安裝上停止回應的問題。
+2.  修正安裝程式因下列錯誤訊息而失敗的問題：「不支援所要求的中繼檔作業 (0x800707D3)」。
+
+除了這兩個 Bug 修正之外，15.5.0 的下列詳細資料仍然會套用至 15.5.1
+
+## <a name="ssdt-for-visual-studio-2017-1550"></a>適用於 Visual Studio 2017 (15.5.0) 的 SSDT
+組建編號︰14.0.16146.0
+  
+### <a name="whats-new"></a>新功能
+
+適用於 Visual Studio 2017 (15.5.0) 的 SSDT 會從預覽移至正式運作 (GA)。
+
+**安裝程式**
+1. 安裝程式 UI 已經當地語系化。
+1. 將圖示取代為較高品質的版本。
+
+**Integration Services (IS)**
+1. 在 ADF 中部署至 Azure SSIS IR 時，已在 [部署精靈] 中新增套件驗證步驟，這可探索要在 Azure SSIS IR 中執行之 SSIS 套件中的潛在相容性問題。 如需詳細資訊，請參閱[驗證部署到 Azure 的 SSIS 套件](..\integration-services\lift-shift\ssis-azure-validate-packages.md)。
+1. 已將 SSIS 延伸模組當地語系化。
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**Integration Services (IS)**
+1. 已修正 OLEDB 和 ADO.NET 連線管理員版面配置損毀的問題。
+2. 已修正嘗試編輯維度處理工作時引發找不到組件錯誤的問題。
+
+### <a name="known-issues"></a>已知問題
+
+ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+
+
+
+## <a name="ssdt-174-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT 17.4
+組建編號︰14.0.61712.050
+
+### <a name="whats-new"></a>新功能
+
+**Analysis Services (AS) 專案**
+- 已在表格式專案中新增三個新的選項 (在 [選項] > [Analysis Services 表格式] > [資料匯入] 下方)：
+  - 啟用舊版資料來源 - 可讓使用者在較新的相容性模式中建立較舊的「1200 相容性模式」資料來源。
+  - 自動類型偵測 - 啟用時，現代資料來源的查詢編輯器將在載入非結構化查詢時嘗試偵測其資料類型。 如果偵測成功，可能會將新的步驟新增至查詢。
+  - 執行背景分析 - 啟用時，如果載入查詢以分析查詢的輸出結構描述，則現代資料來源的查詢編輯器將對資料來源執行查詢。
+
+**Integration Services (IS)**
+- 在 ADF 中部署至 Azure SSIS IR 時，已在 [部署精靈] 中新增套件驗證步驟，這可探索要在 Azure SSIS IR 中執行之 SSIS 套件中的潛在相容性問題。 如需詳細資訊，請參閱[驗證部署到 Azure 的 SSIS 套件](..\integration-services\lift-shift\ssis-azure-validate-packages.md)。
+
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**Analysis Services (AS) 專案：**
+- 已修正將模型變更存回 TFS 時可能導致未處理例外狀況的問題。
+- 已修正將具有複雜 M 運算式的資料表新增至 1400 模型時造成例外狀況的問題。
+- 已修正在模型圖表檢視中搜尋中繼資料時可能造成 Visual Studio 損毀的問題。
+- 已修正將變更儲存至資料分割 M 查詢時可能導致從資料表定義中移除計算結果欄的 1400 模型問題。
+- 已修正在 [取得資料]\[資料表編輯器 UI] 的 1400 模型上使用重新命名查詢時可能在驗證與目前資料模型的相容性時凍結的問題。
+- 已修正將 1400 模型部署至 Azure Analysis Service 時造成遺漏 Newtonsoft 組件參考的問題。
+- 已修正導致在某些情況下透過 PQ 將資料匯入至 1400 模型時發生錯誤的問題。
+- 已修正在設定 Windows 調整時出現的 PowerQuery 使用者介面對話方塊調整問題。
+- 已修正重新命名角色問題。
+- 已修正可能導致在某些情況下未將變更適當地儲存\同步處理的專案設定問題。
+- 已修正 PowerQuery 編輯器中已自動新增「變更類型」步驟的問題。
+- 已修正在切換至\自整合式工作區模式後開啟 BIM 檔案時導致錯誤的問題。
+- 表格式模型中的資料來源現在可看見 MaxConnections 屬性。
+- 增加 PowerQuery 編輯器視窗的初始大小。
+- PowerQuery 編輯器中 "Source" 這類 M 查詢關鍵字現在會顯示為當地語系化。
+- 使用 1400 模型和結構化資料來源而不需要輸入每個所編輯資料表的相同認證時的快取認證。
+
+**RS 專案：**
+- 已修正防止在多報表專案中部署單一報表的問題
+- 已修正可能導致部署問題的共用資料來源問題
+- 已修正復原管理員在程式碼檢視、設計檢視與查詢編輯器視窗之間切換時可能損毀的問題
+- 已修正可能導致參數窗格在執行階段錯誤之後消失的問題
+- 已修正可能會讓報表專案遺失原始檔控制對應的問題
+
+**Integration Services：**
+- 已修正可能在 Analysis Services 處理工作上切換連線時發生的問題
+- 已修正未適當地當地語系化一些工作/元件的問題。
+- 已修正套用可新增 \__$command\_id 資料行之 CDC 的 SQL 修正程式之後的CDC 元件中斷問題。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>適用於 Visual Studio 2017 (15.4.0 預覽) 的 SSDT
@@ -165,7 +277,6 @@ ms.lasthandoff: 12/05/2017
 - SSIS 未當地語系化。
 - 當 *ExecuteOutofProcess* 設定為 *True* 時，SSIS 執行封裝工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
 - 如需變更的完整清單，請參閱[變更記錄](changelog-for-sql-server-data-tools-ssdt.md)。
-- 在 [SSDT Connect 意見反應](https://connect.microsoft.com/SQLServer/Feedback)網站報告問題。
 - 包含協力廠商延伸模組的 SSIS 套件無法切換，以將目標設為其他伺服器版本。
 
 
@@ -271,7 +382,7 @@ ms.lasthandoff: 12/05/2017
         - 啟用舊版重新導向 (預設值為 false - 設為 true 時，交互式 Web 應用程式引擎會遵循可能不安全的 HTTP 重新導向。  例如，從 HTTPS 至 HTTP URI 的重新導向)  
         - 以 Null 傳回錯誤值 (預設值為 false - 設為 true 時，資料格層級的錯誤會以 null 傳回。 設為 false 時，所引發的例外狀況是資料格包含錯誤)  
     - 使用 PowerQuery 的額外資料來源 (檔案資料來源)
-        - Excel 
+        - [匯出] 
         - 文字/CSV 
         - XML 
         - Json 

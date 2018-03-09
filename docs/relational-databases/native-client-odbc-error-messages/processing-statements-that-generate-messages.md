@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-error-messages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - SQLExecDirect function
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4c9e37cf7dac46d7739da4e8b11740df24b974c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a9deaa7c1890c327de38663e99e83f6ce526491
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="processing-statements-that-generate-messages"></a>處理產生訊息的陳述式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,7 +154,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  如果 PRINT 或 RAISERROR 陳述式是在 SQL 陳述式 （例如 SELECT 陳述式） 之後, 則 PRINT 或 RAISERROR 資訊時，會傳回[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)位置的結果集，其中包含錯誤。 **SQLMoreResults**根據訊息的嚴重性會傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR。 訊息藉由呼叫擷取**SQLGetDiagRec**直到傳回 sql_no_data 為止。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [處理錯誤與訊息](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

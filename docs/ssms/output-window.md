@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Object Explorer [SQL Server Management Studio]
 ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
 caps.latest.revision: "1"
-author: shueybubbles
-ms.author: davidshi
-manager: kenvh
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 915b63d0913131bf817c06d7980c35c5904daf30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 723128aeff26897aeb6a5d835eebc744791f6e4f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>SQL Server Management Studio 中的輸出視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用按鍵組合 Ctrl+Alt+O 從 [檢視] 功能表開啟輸出視窗。 有多個輸出通道可供使用。

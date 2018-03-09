@@ -5,28 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>資料採礦專案
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料採礦專案屬於[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]方案。 在設計過程中，您在此專案中建立的物件可當做工作空間資料庫的一部分來測試及查詢。 當您希望使用者能夠查詢或瀏覽專案中的物件時，您必須將此專案部署到以多維度模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+資料採礦專案為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案的一部分。 在設計過程中，您在此專案中建立的物件可當做工作空間資料庫的一部分來測試及查詢。 當您希望使用者能夠查詢或瀏覽專案中的物件時，您必須將此專案部署到以多維度模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
  本主題為您提供理解及建立資料採礦專案所需的基本資訊。  
   
@@ -131,7 +130,7 @@ ms.lasthandoff: 12/08/2017
 > [!WARNING]  
 >  如果您要篩選資料，您可以在資料來源檢視中進行，但是也可以在採礦模型層級建立資料的篩選。 因為篩選定義儲存在採礦模型中，所以使用模型篩選器會更容易判斷之前用來定型模型的資料。 此外，您也可以使用不同的篩選準則建立多個相關模型。 如需詳細資訊，請參閱[採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
- 請注意，您建立的資料來源檢視可以包含未直接用於分析的其他資料。 例如，您可能會將用於測試、預測或鑽研的資料加入至資料來源檢視。 如需這些用途的詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md) 和 [鑽研](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 請注意，您建立的資料來源檢視可以包含未直接用於分析的其他資料。 例如，您可能會將用於測試、預測或鑽研的資料加入至資料來源檢視。 如需這些用途的詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md) 和[鑽研](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
   
 ###  <a name="bkmk_Structures"></a> Mining Structures  
@@ -195,7 +194,7 @@ ms.lasthandoff: 12/08/2017
   
  請注意，這些報表和圖表不會與專案一起儲存或儲存在 ssASnoversion 資料庫中，所以如果您需要保留或複製結果，您應該儲存結果，或是使用 DMX 或 AMO 來撰寫物件的指令碼。 您也可以使用預存程序進行交叉驗證。  
   
- 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
+ 如需詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
   
 ###  <a name="bkmk_Predict"></a> Create Predictions  
@@ -216,16 +215,16 @@ ms.lasthandoff: 12/08/2017
 |工作|主題|  
 |-----------|------------|  
 |描述如何處理採礦結構資料行|[建立關聯式採礦結構](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|提供有關如何加入新的採礦模型及處理結構和模型的詳細資訊|[將採礦模型加入結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|提供有關如何加入新的採礦模型及處理結構和模型的詳細資訊|[將採礦模型加入結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |提供資源的連結，這些資源可幫助您自訂演算法來建立採礦模型|[自訂採礦模型和結構](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |提供有關每一個採礦模型檢視器之資訊的連結|[資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |了解如何建立增益圖、收益圖或分類矩陣，或是測試採礦結構|[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |了解如何處理選項和權限|[處理資料採礦物件](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|提供有關 Analysis Services 的詳細資訊|[多維度模型資料庫 &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|提供有關 Analysis Services 的詳細資訊|[多維度模型資料庫 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
-## <a name="see-also"></a>請參閱  
- [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
- [使用 SQL Server 資料工具 &#40;SSDT&#41; 建立多維度模型](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [工作空間資料庫 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦設計師](../../analysis-services/data-mining/data-mining-designer.md)   
+ [建立使用 SQL Server Data Tools &#40; 多維度模型SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [工作空間資料庫](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

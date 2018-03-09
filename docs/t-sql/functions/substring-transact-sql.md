@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SUBSTRING
 - SUBSTRING_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - portion of expression returned [SQL Server]
 - part of expression returned [SQL Server]
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4407538e956f268f4d9bb868c1fcb70c2447cf6b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,10 +54,10 @@ SUBSTRING ( expression ,start , length )
  *expression*  
  是**字元**，**二進位**，**文字**， **ntext**，或**映像**[運算式](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *啟動*  
+ *start*  
  是整數或**bigint**運算式，指定開始傳回的字元的位置。 （編號為 1 的基礎，代表運算式中的第一個字元是 1）。 如果*啟動*小於 1，傳回的運算式會在中指定的第一個字元開始*運算式*。 在此情況下，傳回字元的數目會最大值的總和的*啟動* + *長度*-1 或 0。 如果*啟動*數目大於值運算式中的字元，長度為零則會傳回運算式。  
   
- *length*  
+ *長度*  
  這是一個正整數或**bigint**運算式，指定的字元數*運算式*會傳回。 如果*長度*是負數，則會產生錯誤並終止陳述式。 如果總和*啟動*和*長度*中的字元數大於*運算式*、 開始的整個值運算式*啟動*傳回。  
   
 ## <a name="return-types"></a>傳回類型  
@@ -63,9 +65,9 @@ SUBSTRING ( expression ,start , length )
   
 |指定的運算式|傳回類型|  
 |--------------------------|-----------------|  
-|**char**/**varchar**/**文字**|**varchar**|  
+|**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
-|**二進位**/**varbinary**/**映像**|**varbinary**|  
+|**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>備註  
  值*啟動*和*長度*中的字元數必須指定**ntext**， **char**，或**varchar**資料類型與位元組**文字**，**映像**，**二進位**，或**varbinary**資料型別。  
@@ -92,7 +94,7 @@ WHERE database_id < 5;
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
-|tempdb  |t  |管理組件 |
+|tempdb  |t  |mp |
 |model   |m  |de |
 |msdb    |m  |db |
 
@@ -221,7 +223,13 @@ x
 bcd
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [權限 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

@@ -8,29 +8,57 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 785491c26c65252756c49e7b405d10cdbece831c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d4ec18d40f6777a2d72b838030e3b4305c891e6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="return-data-from-a-stored-procedure"></a>從預存程序傳回資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > 如需舊版 SQL Server 的相關內容，請參閱[從預存程序傳回資料](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)。
 
-  將結果集或資料從程序傳回至呼叫端程式的方式有兩種：輸出參數和傳回碼。 本主題提供有關這兩種方法的詳細資訊。  
+  將資料從程序傳回至呼叫端程式的方式有三種：結果集、輸出參數和傳回碼。 本主題提供有關這三種方法的資訊。  
+  
+  ## <a name="returning-data-using-result-sets"></a>使用結果集傳回資料
+ 如果您的預存程序主體中包含 SELECT 陳述式 (但不是 SELECT ...INTO 或 INSERT...SELECT)，SELECT 陳述式所指定的資料列會直接傳送到用戶端。  如果是大型結果集，在結果集完全傳送至用戶端之前，預存程序執行將不會繼續到下一個陳述式。  如果是小型結果集，結果會進行多工緩衝處理以傳回至用戶端，而執行則會繼續進行。  如果在預存程序執行期間執行多個這類 SELECT 陳述式，則會將多個結果集傳送至用戶端。  此行為也適用於巢狀 TSQL 批次、巢狀預存程序和最上層 TSQL 批次。
+ 
+ 
+ ### <a name="examples-of-returning-data-using-a-result-set"></a>使用結果傳回資料的範例 
+  下列範例顯示的預存程序會針對也出現在 vEmployee 檢視中的所有 SalesPerson 資料列，傳回 LastName 和 SalesYTD 值。
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
+
   
 ## <a name="returning-data-using-an-output-parameter"></a>使用輸出參數傳回資料  
  如果在程序定義中為參數指定 OUTPUT 關鍵字，程序就可以在結束時將參數目前的值傳回至呼叫端程式。 若要將參數值儲存在可供呼叫端程式使用的變數中，呼叫端程式在執行程序時必須使用 OUTPUT 關鍵字。 如需何種資料類型可做為輸出參數的詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)。  
@@ -114,7 +142,7 @@ GO
   
 ### <a name="examples-of-cursor-output-parameters"></a>Cursor 輸出參數的範例  
  在下列範例中，會建立一個程序，其使用 **cursor** 資料類型指定輸出參數 `@currency_cursor`。 然後在批次中呼叫程序。  
-  
+ 
  首先，建立在 Currency 資料表上宣告並隨後開啟資料指標的程序。  
   
 ```  
@@ -161,7 +189,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- 傳回碼常用於程序的流程控制區塊中，以設定每個可能錯誤狀況的傳回碼值。 您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之後使用 @@ERROR，來偵測陳述式執行過程中是否曾發生錯誤。  
+ 傳回碼常用於程序的流程控制區塊中，以設定每個可能錯誤狀況的傳回碼值。 您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之後使用 @@ERROR，來偵測陳述式執行過程中是否曾發生錯誤。  在 TSQL 傳回碼中引入 TRY/CATCH/THROW 錯誤處理之前，有時候必須先判斷預存程序成功或失敗。  預存程序應該一律使用錯誤 (必要時利用 THROW/RAISERROR 產生) 來表示失敗，而不仰賴傳回碼來表示失敗。  也請勿使用傳回碼來傳回應用程式資料。
   
 ### <a name="examples-of-return-codes"></a>傳回碼的範例  
  下列範例顯示具有可為各種錯誤設定特別傳回碼值之錯誤處理的 `usp_GetSalesYTD` 程序。 下表顯示由程序指派給每個可能錯誤的整數值，以及每個值對應的意義。  
@@ -169,7 +197,7 @@ EXECUTE @result = my_proc;
 |傳回碼值|意義|  
 |-----------------------|-------------|  
 |0|成功執行。|  
-|1|未指定必要的參數值。|  
+|@shouldalert|未指定必要的參數值。|  
 |2|指定的參數值無效。|  
 |3|取得銷售值時發生錯誤。|  
 |4|銷售人員有 NULL 銷售值。|  

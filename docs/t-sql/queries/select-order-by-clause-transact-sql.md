@@ -1,14 +1,15 @@
 ---
 title: "ORDER BY 子句 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - BY_TSQL
 - ORDER
 - ORDER BY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ad-hoc query paging
 - OFFSET clause
@@ -39,16 +41,16 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: "68"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ba5d93e724e11887397fef9a6e3a6a33426c88c6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>選取-ORDER BY 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,9 +63,12 @@ ms.lasthandoff: 11/17/2017
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY 不支援在選取 / 到或建立資料表 AS 選取 (CTAS) 中的陳述式[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。
+
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -103,10 +108,10 @@ ORDER BY order_by_expression
  COLLATE *sys.databases*  
  指定應該根據中指定的定序執行 ORDER BY 作業*sys.databases*，而不是根據資料表或檢視表中定義之資料行的定序。 *sys.databases*可以是 Windows 定序名稱或 SQL 定序名稱。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 會只適用於類型的資料行**char**， **varchar**， **nchar**，和**nvarchar**。  
   
- **ASC** |DESC  
+ **ASC** | DESC  
  指定指定之資料行的值應該以遞增或遞減順序排序。 ASC 從最低值到最高值進行排序。 DESC 從最高值到最低值進行排序。 ASC 是預設排序次序。 Null 值會當做最低的可能值來處理。  
   
- 位移 { *integer_constant* | *offset_row_count_expression* } {資料列 |資料列}  
+ OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  指定要略過的資料列數目，然後才開始從查詢運算式傳回資料列。 值可以是大於或等於零的整數常數或運算式。  
   
 **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
@@ -117,7 +122,7 @@ ORDER BY order_by_expression
   
  在查詢執行計畫，位移資料列計數值會顯示在**位移**TOP 查詢運算子的屬性。  
   
- 擷取 {第一個 |下一步} { *integer_constant* | *fetch_row_count_expression* } {資料列 |只有資料列}  
+ FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  指定要在已處理 OFFSET 子句之後傳回的資料列數目。 值可以是大於或等於一的整數常數或運算式。  
   
 **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -131,7 +136,7 @@ ORDER BY order_by_expression
  在查詢執行計畫，位移資料列計數值會顯示在**列**或**頂端**TOP 查詢運算子的屬性。  
   
 ## <a name="best-practices"></a>最佳作法  
- 避免將 ORDER BY 子句中的整數指定為選取清單中資料行的位置表示。 例如，雖然如 `SELECT ProductID, Name FROM Production.Production ORDER BY 2` 的陳述式有效，但相較於指定實際資料行名稱，此陳述式比較不容易為其他人了解。 此外，對選取清單的變更，例如變更資料行順序或加入新資料行，將需要修改 ORDER BY 子句，以避免非預期的結果。  
+ 避免將 ORDER BY 子句中的整數指定為選取清單中資料行的位置表示。 例如，雖然如 `SELECT ProductID, Name FROM Production.Production ORDER BY 2` 的陳述式有效，但相較於指定實際資料行名稱，此陳述式比較不容易為其他人了解。 此外，變更為選取清單中，例如變更資料行順序，或加入新資料行，需要修改 ORDER BY 子句，以避免非預期的結果。  
   
  在 SELECT TOP (*N*) 陳述式中，永遠使用 ORDER BY 子句。 這是以預測的方式指示哪些資料列受到 TOP 影響的唯一方法。 如需詳細資訊，請參閱[TOP &#40;TRANSACT-SQL &#41;](../../t-sql/queries/top-transact-sql.md).  
   
@@ -159,9 +164,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- 另外，當此陳述式包括 UNION、EXCEPT 或 INTERSECT 運算子時，必須在第一個 (左邊) 查詢的選取清單中指定資料行名稱或資料行別名。  
+ 此外，當此陳述式包括 UNION、 EXCEPT 或 INTERSECT 運算子、 資料行名稱或資料行別名必須指定第一個 （左邊） 查詢的選取清單中。  
   
- 在使用 UNION、EXCEPT 或 INTERSECT 運算子的查詢中，只在陳述式結尾處允許 ORDER BY。 此限制只適用於最上層查詢中指定 UNION、EXCEPT 和 INTERSECT 時，不適用於子查詢中。 請參閱稍後的＜範例＞一節。  
+ 在使用 UNION、EXCEPT 或 INTERSECT 運算子的查詢中，只在陳述式結尾處允許 ORDER BY。 這項限制只適用於當您指定 UNION、 EXCEPT 和 INTERSECT 最上層查詢中，而不是在子查詢。 請參閱稍後的＜範例＞一節。  
   
  除非同時也指定 TOP 或 OFFSET 和 FETCH 子句，否則 ORDER BY 子句在檢視表、內嵌函數、衍生資料表和子查詢中為無效。 在這些物件中使用 ORDER BY 子句時，這個子句只能用來判斷 TOP 子句或 OFFSET 和 FETCH 子句傳回的資料列。 除非同時在查詢本身指定 ORDER BY 子句，否則 ORDER BY 子句並不保證在查詢上述建構時會傳回排序的結果。  
   
@@ -267,8 +272,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-a-ascending-order"></a>B. 指定遞增順序  
- 下列範例會依據資料行 `Name` 以遞增順序來排序結果集。 請注意，字元會以字母順序排序，而不是以數值順序排序。 也就是說，10 會排序在 2 之前。  
+#### <a name="b-specifying-an-ascending-order"></a>B. 指定以遞增的順序  
+ 下列範例會依據資料行 `Name` 以遞增順序來排序結果集。 依字母順序、 不是以數值排序的字元。 也就是說，10 會排序在 2 之前。  
   
 ```  
 USE AdventureWorks2012;  
@@ -313,7 +318,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a>指定條件順序  
- 下列範例在 ORDER BY 子句中使用 CASE 運算式，以根據給定的資料行值，有條件地決定資料列的排序次序。 在第一則範例中，系統會評估 `SalariedFlag` 資料表之 `HumanResources.Employee` 資料行的值。 將 `SalariedFlag` 設定為 1 的員工會以 `BusinessEntityID` 的遞減順序傳回。 將 `SalariedFlag` 設定為 0 的員工會以 `BusinessEntityID` 的遞增順序傳回。 在第二則範例中，結果集會依照資料行 `TerritoryName` 排序 (當資料行 `CountryRegionName` 等於 'United States' 時) 以及依照 `CountryRegionName` 排序 (針對所有其他資料列)。  
+ 下列範例在 ORDER BY 子句中使用 CASE 運算式，以條件方式判斷根據給定的資料行值的資料列的排序次序。 在第一則範例中，系統會評估 `SalariedFlag` 資料表之 `HumanResources.Employee` 資料行的值。 將 `SalariedFlag` 設定為 1 的員工會以 `BusinessEntityID` 的遞減順序傳回。 將 `SalariedFlag` 設定為 0 的員工會以 `BusinessEntityID` 的遞增順序傳回。 在第二則範例中，結果集會依照資料行 `TerritoryName` 排序 (當資料行 `CountryRegionName` 等於 'United States' 時) 以及依照 `CountryRegionName` 排序 (針對所有其他資料列)。  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -543,7 +548,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   

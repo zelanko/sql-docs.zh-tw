@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_alert_job_TSQL
 - sp_add_log_shipping_alert_job
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_shipping_alert_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_shipping_alert_job
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aadb7f1864ca16a8e0de22632e36f9a223b0a8b0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0f35b1b1993a7bba16e72ac8c99bcb9d8b8f1caa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogshippingalertjob-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_add_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@alert_job_id =** ] *alert_job_id*輸出  
+ [ **@alert_job_id =** ] *alert_job_id* OUTPUT  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式的記錄傳送警示作業的作業識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -68,8 +71,8 @@ GO
 EXEC sp_add_log_shipping_alert_job;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>另請參閱  
+ [關於記錄傳送 &#40;SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,12 +8,11 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - write-enabled partitions [Analysis Services]
@@ -22,19 +21,20 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 512e5321c0be221e06988dfc1991409a044166bb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82cafa346d2347afa9022a61d9ffce018d9d0dd8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---write-enabled-partitions"></a>資料分割-寫入的資料分割
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cube 中的資料是通常是唯讀的。 但是在某些狀況下，您可能會希望資料分割是可寫入的。 可寫入的資料分割可讓商務使用者藉由變更資料格值及分析變更對 Cube 資料的影響，以瀏覽一些狀況。 當您啟用資料分割的寫入功能時，用戶端應用程式可在資料分割中記錄資料的變更。 這些變更稱為回寫資料，是儲存在個別資料表中，不會覆寫量值群組中任何現有的資料。 不過，它們會併入到查詢結果中，就好像它們是 Cube 資料的一部分。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cube 中的資料通常是唯讀的； 但是在某些狀況下，您可能會希望資料分割是可寫入的。 可寫入的資料分割可讓商務使用者藉由變更資料格值及分析變更對 Cube 資料的影響，以瀏覽一些狀況。 當您啟用資料分割的寫入功能時，用戶端應用程式可在資料分割中記錄資料的變更。 這些變更稱為回寫資料，是儲存在個別資料表中，不會覆寫量值群組中任何現有的資料。 不過，它們會併入到查詢結果中，就好像它們是 Cube 資料的一部分。  
   
  您可以啟用整個 Cube 或是只有 Cube 中某些資料分割的寫入功能； 可寫入維度是不同但互補的功能。 可寫入的資料分割讓使用者得以更新資料分割資料格，而可寫入維度則讓使用者得以更新維度成員， 您也可以搭配使用這兩項功能。 例如，可寫入的 Cube 或可寫入的資料分割不需要包含任何可寫入的維度。 **相關的主題：**[Write-Enabled 維度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
   
@@ -59,13 +59,13 @@ ms.lasthandoff: 12/08/2017
   
 -   捨棄它，使資料分割回到其原始狀態。 此動作使資料分割成為唯讀的。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  只有在商務使用者屬於對 Cube 資料格具有讀取/寫入權限的角色時，才可以在 Cube 的回寫資料表中記錄變更。 對於每一個角色，您可以控制哪些 Cube 資料格可以更新，哪些不可以更新。 如需詳細資訊，請參閱[授與 cube 或模型權限 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟用寫入的維度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [彙總和彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
- [資料分割 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [可寫入維度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
+ [分割區 &#40;Analysis Services-多維度資料 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [啟用寫入的維度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

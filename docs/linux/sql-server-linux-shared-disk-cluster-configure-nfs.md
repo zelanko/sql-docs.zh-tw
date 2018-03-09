@@ -3,26 +3,26 @@ title: "設定容錯移轉叢集執行個體存放區 NFS-SQL Server on Linux |M
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1b944d36e968234d5ea77a861c595e440cbbb15b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-NFS-SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明如何在 Linux 上設定容錯移轉叢集執行個體 (FCI) 的 NFS 存放裝置。 
 
@@ -33,8 +33,8 @@ NFS 或網路檔案系統中，為共用磁碟 Linux 世界，但不是一的 Wi
 裝載 NFS （在 Linux 伺服器或其他項目） 的來源必須使用/符合 4.2 版或更新版本。 舊版不適用於 SQL Server on Linux。
 
 當設定 NFS 伺服器上共用資料夾，請確定它們會遵照這些方針的一般選項：
-- `rw`以確保該資料夾可以是讀取和寫入
-- `sync`若要確保保證寫入至資料夾
+- `rw` 以確保該資料夾可以是讀取和寫入
+- `sync` 若要確保保證寫入至資料夾
 - 請勿使用`no_root_squash`做為選項; 它會被視為有安全性風險
 - 請確認資料夾擁有完整權限 (777) 套用
 
@@ -124,7 +124,7 @@ NFS 或網路檔案系統中，為共用磁碟 Linux 世界，但不是一的 Wi
 
     \<IPAddressOfNFSServer > 是您要使用的 NFS 伺服器的 IP 位址 
 
-    \<FolderOnNFSServer > NFS 共用的名稱。 下列範例語法符合 NFS 資訊從步驟 2。
+    \<FolderOnNFSServer > NFS 共用的名稱。 下列的範例語法符合 NFS 資訊從步驟 2。
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -167,7 +167,7 @@ NFS 或網路檔案系統中，為共用磁碟 Linux 世界，但不是一的 Wi
     sudo systemctl status mssql-server
     ```
     
-   * 建立測試安全性已正確設定資料庫。 下列範例會顯示完成後透過 TRANSACT-SQL;它可以透過 SSMS 來完成。
+   * 建立測試安全性已正確設定資料庫。 下列範例會顯示正在進行透過 TRANSACT-SQL;它可以透過 SSMS 來完成。
  
     ![CreateTestdatabase][3]
 
@@ -230,9 +230,9 @@ NFS 或網路檔案系統中，為共用磁碟 Linux 世界，但不是一的 Wi
   
    * 輸入 exit，不再是超級使用者。
 
-   * 若要測試，請在該資料夾中建立的資料庫。 如下所示的範例會使用 sqlcmd 建立資料庫，切換至該內容，確認檔案存在於作業系統層級，然後再刪除暫存位置。 您可以使用 SSMS。
+   * 若要測試，請在該資料夾中建立的資料庫。 下列範例會使用 sqlcmd 建立資料庫，切換至該內容，確認檔案存在於作業系統層級，然後再刪除暫存位置。 您可以使用 SSMS。
 
-    ![15 createtestdatabase][4]
+    ![15-createtestdatabase][4]
  
    * 取消掛接共用 
 

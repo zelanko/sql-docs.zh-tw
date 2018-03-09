@@ -1,37 +1,36 @@
 ---
 title: "使用 XmlReader 擷取資料 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - retrieving data
 - XmlReader object
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dbcce4f4a75d2aa8aefedfff4c3b8b8de81d1fe6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b5bfef8a355dea36e3444afe4ff32a1e783f96da
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>使用 XmlReader 擷取資料
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**XmlReader**類別，一部分**System.Xml** Microsoft.NET Framework 類別庫的命名空間是類似於<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>類別， **XmlReader**類別也提供快速、 非快取、 順向的資料存取。 如果不需要取得資料使用的記憶體中的分析檢視<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>物件**XmlReader**物件也非常適合用以擷取 XML 資料，特別是針對大量資料。 因為**XmlReader**串流資料， **XmlReader**不必擷取和之前公開給呼叫端的資料快取的所有資料，因為可以則<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>物件用來轉換XML for Analysis 回應的分析物件模型表示法。  
+  **XmlReader**類別，一部分**System.Xml** Microsoft.NET Framework 類別庫的命名空間是類似於<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>類別， **XmlReader**類別也提供快速、 非快取、 順向的資料存取。 如果不需要取得資料使用的記憶體中的分析檢視<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>物件**XmlReader**物件也非常適合用以擷取 XML 資料，特別是針對大量資料。 因為**XmlReader**串流資料， **XmlReader**不必擷取和之前公開給呼叫端的資料快取的所有資料，因為可以則<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>物件用來轉換XML for Analysis 回應的分析物件模型表示法。  
   
  **XmlReader**類別可直接存取 XML for Analysis 回應 ADOMD.NET 收到時<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A>方法<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>稱為物件。 因為擷取的資料是原始 XML，所以您必須手動剖析資料與中繼資料。 已擷取的資料，如**XmlReader**物件應該關閉。  
   
@@ -55,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
  [!code-cs[Adomd.NetClient#OutputDataWithXML](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/retrieving-data-using-th_1_1.cs)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從分析資料來源擷取資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [使用資料格集擷取資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
  [使用 AdomdDataReader 擷取資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader.md)  

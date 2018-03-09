@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_query_optimizer_memory_gateways (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Microsoft Docs
 description: "傳回目前用來進行節流處理並行的查詢最佳化資源信號的狀態"
 ms.custom: 
 ms.date: 04/06/2017
@@ -9,7 +9,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,24 +18,26 @@ f1_keywords:
 - dm_exec_query_optimizer_memory_gateways
 - sys.dm_exec_query_optimizer_memory_gateways_TSQL
 - sys.dm_exec_query_optimizer_memory_gateways
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_optimizer_memory_gateways dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf31a066798e1c88d0d6d475edda87f2df08ba05
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b65e22d1cd2f403e2ed3aa1bd1dc14faa90079b9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (TRANSACT-SQL)
+# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 傳回目前用來進行節流處理並行的查詢最佳化資源信號的狀態。
 
-|資料行|類型|Description|  
+|資料行|型別|Description|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|在 資源管理員的資源集區識別碼|  
 |**name**|**sysname**|編譯閘道名稱 （小型、 中型閘道大閘道）|
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**active_count**|**int**|編譯此閘道中的目前計數|
 |**waiter_count**|**int**|此閘道中的等候者數目|
 |**threshold_factor**|**bigint**|定義查詢最佳化所使用的最大記憶體部分臨界值比例。  小型的閘道，threshold_factor 表示最大最佳化工具記憶體使用量，以位元組為單位的一個查詢要求來存取在小型閘道前。  中型和大型閘道 threshold_factor 會顯示總伺服器記憶體可供此閘道的一部分。 計算此閘道的記憶體使用量閾值時，它做為除數。|
-|**臨界值**|**bigint**|下一個臨界值以位元組為單位的記憶體。  查詢，才能存取此閘道如果其記憶體耗用量到達此臨界值。  "-1"如果查詢不需要存取這個閘道器。|
+|**threshold**|**bigint**|下一個臨界值以位元組為單位的記憶體。  查詢，才能存取此閘道如果其記憶體耗用量到達此臨界值。  "-1"如果查詢不需要存取這個閘道器。|
 |**is_active**|**bit**|是否將目前的閘道，或不需要查詢。|
 
 
@@ -70,7 +73,7 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ```  
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
  [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [如何使用 DBCC MEMORYSTATUS 命令來監視 SQL Server 2005 上的記憶體使用量](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)

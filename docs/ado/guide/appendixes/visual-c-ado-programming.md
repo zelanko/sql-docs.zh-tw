@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae662529fc9297fa709d1a185b63d0648b0af903
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-ado-programming"></a>Visual c + + ADO 程式設計
 ADO 應用程式開發介面參考描述 ADO 應用程式開發介面 (API) 的語法以 Microsoft Visual Basic 類似的功能。 適用對象是所有使用者，雖然 ADO 程式設計人員採用各種不同的語言，例如 Visual Basic、 Visual c + + (逾時或無**#import**指示詞)，和 Visual J + + （與 ADO/WFC 類別封裝）。  
@@ -44,7 +46,7 @@ ADO 應用程式開發介面參考描述 ADO 應用程式開發介面 (API) 的�
   
  每個作業內的類別 （也就是方法或屬性呼叫），也無需來呼叫作業直接 （也就是 「 原始 」 形式的作業），在宣告呼叫未經處理的作業，並擲回 COM 錯誤，如果作業無法執行 succ 宣告essfully。 如果作業是屬性，所以通常建立的 Visual Basic 語法的操作替代語法的編譯器指示詞。  
   
- 擷取屬性值的作業有的名稱格式，**取得***屬性*。 設定屬性值的作業有的名稱格式，**放***屬性*。 具有指標的屬性值設定為 ADO 物件的作業有的名稱格式， **PutRef***屬性*。  
+ 擷取屬性值的作業有的名稱格式，**取得 * * * 屬性*。 設定屬性值的作業有的名稱格式，**Put * * * 屬性*。 具有指標的屬性值設定為 ADO 物件的作業有的名稱格式，**PutRef * * * 屬性*。  
   
  您可以取得或設定具有呼叫種形式的屬性：  
   
@@ -69,13 +71,13 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```  
   
- 編譯器會產生適當**取得***-*，**放**-，或**PutRef***屬性*呼叫根據哪些替代語法宣告和屬性是否正在讀取或寫入。  
+ 編譯器會產生適當 **Get * * *-*，**放**-，或 **PutRef * * * 屬性*呼叫根據宣告哪些替代語法，以及屬性是否為正在讀取或寫入。  
   
  **__Declspec(property...)**編譯器指示詞只可以宣告**取得**，**放**，或**取得**和**放**函式的替代語法。 唯讀作業只能有**取得**宣告; 唯寫的作業只能有**放**宣告; 作業都讀取及寫入同時具有**取得**和**放**宣告。  
   
- 只能使用兩個宣告具有此指示詞。不過，每一個屬性可能有三個屬性函式：**取得***屬性*，**放***屬性*，和**PutRef***屬性*。 在此情況下，只有兩種形式的屬性有替代語法。  
+ 只能使用兩個宣告具有此指示詞。不過，每一個屬性可能有三個屬性函式: **取得 * * * 屬性*，**Put * * * 屬性*，和 **PutRef * * * 屬性*。 在此情況下，只有兩種形式的屬性有替代語法。  
   
- 例如，**命令**物件**ActiveConnection**屬性宣告的替代語法與**取得***ActiveConnection*和**PutRef***ActiveConnection*。 **PutRef**-的語法是不錯的選擇，因為在實務上，您通常想要將開啟**連接**物件 (也就是**連接**物件指標) 在此屬性。 相反地，**資料錄集**物件具有**取得**-，**放**-，以及**PutRef***ActiveConnection*作業，但沒有替代的語法。  
+ 例如，**命令**物件**ActiveConnection**屬性宣告的替代語法與 **取得 * * * ActiveConnection*和 **PutRef ** * ActiveConnection*。 **PutRef**-的語法是不錯的選擇，因為在實務上，您通常想要將開啟**連接**物件 (也就是**連接**物件指標) 在此屬性。 相反地，**資料錄集**物件具有**取得**-，**放**-，以及 **PutRef * * * ActiveConnection*作業，但沒有替代方案語法。  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>集合、 GetItem 方法中，與項目屬性  
  ADO 定義數個集合，包括**欄位**，**參數**，**屬性**，和**錯誤**。 Visual c + + **GetItem (***索引***)**方法會傳回集合的成員。 *索引*是**Variant**，其值為集合中成員的數值索引或字串，包含成員的名稱。  
@@ -437,7 +439,7 @@ cn.Close
 End Sub  
 ```  
   
- 此 Visual c + + 範例示範**取得**/**放**/**PutRef***屬性*。  
+ 此 Visual c + + 範例示範**取得**/**放**/**PutRef * * * 屬性*。  
   
 #### <a name="notes"></a>注意  
  下列附註會對應至程式碼範例中加上註解區段。  

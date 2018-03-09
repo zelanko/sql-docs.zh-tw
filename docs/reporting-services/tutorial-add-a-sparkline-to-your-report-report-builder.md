@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2821641b938291ac67fefb08e4e174f8113db033
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2a9f819427b4abb5e9ee4032a990842a4137611f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/05/2017
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. 按一下 **[下一步]**。  
+13. 按 [下一步] 。  
   
 ## <a name="Query"></a>2.在資料表精靈中建立查詢和資料表配置  
 在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
@@ -131,7 +131,7 @@ ms.lasthandoff: 12/05/2017
   
     查詢隨即執行，並顯示 **SalesDate**、 **Subcategory**、 **Product**、 **Sales**和 **Quantity**欄位的結果集。  
   
-5.  按一下 **[下一步]**。  
+5.  按 [下一步] 。  
   
 6.  在 [排列欄位] 頁面上，將 [Sales] 拖曳至 [值]。  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 12/05/2017
 
     ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
-9. 按一下 **[下一步]**。  
+9. 按 [下一步] 。  
   
 10. 在 **[選擇配置]** 頁面的 **[選項]**下方，確定已選取 **[顯示小計和總計]** 。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
-11. 按一下 **[下一步]**。  
+11. 按 [下一步] 。  
   
 12. 按一下 **[完成]**。  
   
@@ -244,7 +244,7 @@ ms.lasthandoff: 12/05/2017
   
      這是將每個走勢圖內的橫條高度設定成彼此的相對值。 
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 5.  以滑鼠右鍵按一下走勢圖，然後按一下 [水平軸屬性]。  
   
@@ -252,7 +252,7 @@ ms.lasthandoff: 12/05/2017
   
     這是將每個走勢圖內的橫條寬度設定成彼此的相對值。 如果某些走勢圖的橫條數目較少，則這些走勢圖將以空白代表缺資料。  
   
-7.  按一下 **[確定]**。  
+7.  按一下 [確定] 。  
   
 8.  按一下 [執行] 來重新預覽報表。  
   
@@ -323,7 +323,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  按一下 **[儲存]**。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 
 這總結本教學課程：建立含走勢圖的資料表報表。 如需走勢圖的詳細資訊，請參閱[走勢圖和資料橫條](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   

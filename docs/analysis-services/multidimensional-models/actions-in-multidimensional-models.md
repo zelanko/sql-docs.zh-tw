@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - drillthrough actions [Analysis Services]
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 078c21b0af6caeed8700861e315aeeefa53c108f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6c68c3d8eba2ec1519c38a89c7a1b0b71f3be4e3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-in-multidimensional-models"></a>多維度模型中的動作
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]動作是使用者起始的作業選取的 cube 或 cube 中的一部分。 這個作業可以使用所選取項目做為參數來啟動應用程式，或擷取關於所選取項目的資訊。 如需動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+動作是使用者在所選取的 Cube 或部分 Cube 上所起始的作業。 這個作業可以使用所選取項目做為參數來啟動應用程式，或擷取關於所選取項目的資訊。 如需動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
   
  使用 Cube 設計師的 [動作] 索引標籤來建立 Cube 的動作。 指定下列項目：  
   
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/08/2017
  **動作內容**  
  選取動作的類型。 下表摘要可以使用的類型。  
   
-|型別|說明|  
+|型別|Description|  
 |----------|-----------------|  
 |資料集|擷取資料集。|  
 |專屬|使用不同於此資料表列出的介面來執行作業。|  
@@ -79,7 +77,7 @@ ms.lasthandoff: 12/08/2017
  **其他屬性**  
  選取屬性。 下表摘要可以使用的屬性。  
   
-|屬性|說明|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**引動過程**|指定動作如何執行。 預設為互動式，會指定使用者存取物件時執行的動作。 可能的設定有：<br /><br /> 批次<br /><br /> 互動式<br /><br /> 開啟時|  
 |**應用程式**|描述動作的應用程式。|  
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/08/2017
  **報表伺服器**  
  下表中描述的屬性是為報表伺服器指定的。  
   
-|屬性|說明|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**伺服器名稱**|正在執行報表伺服器的電腦名稱。|  
 |**伺服器路徑**|報表伺服器所公開的路徑。|  
@@ -135,7 +133,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  **鑽研資料行**  
  選取一或多個維度，並針對每一個維度，選取由動作傳回到用戶端應用程式的鑽研資料行。  
   
-## <a name="see-also"></a>請參閱  
- [多維度模型中的 Cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
+## <a name="see-also"></a>另請參閱  
+ [多維度模型中的 cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

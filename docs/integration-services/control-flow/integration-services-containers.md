@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32617273341026d55a6ac63baa99c2a2d02c4a6e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 79759c7f5ec38bb2c729f092248866b87bf9e611
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-containers"></a>整合服務容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的物件，可提供結構給封裝，並提供服務給工作。 它們支援封裝中的重複控制流程，且會將工作和容器分組成有意義的工作單位。 除了工作外，容器還可包含其他容器。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="container-types"></a>容器類型  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供四種用於建立封裝的容器類型。 下表列出這些容器類型。  
   
-|容器|說明|  
+|容器|描述|  
 |---------------|-----------------|  
 |[Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)|使用列舉值重複執行控制流程。|  
 |[For 迴圈容器](../../integration-services/control-flow/for-loop-container.md)|藉由測試條件重複執行控制流程。|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="summary-of-container-properties"></a>容器屬性摘要  
  所有容器類型都有通用的屬性集。 如果您使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的圖形工具建立封裝，[屬性] 視窗會列出下列「Foreach 迴圈」、「For 迴圈」以及「時序」容器的屬性。 工作主機容器屬性會做為設定該工作主機封裝之工作的一部分來設定。 在您設定工作時，可同時設定「工作主機」屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**DelayValidation**|布林值，指出是否延遲至執行階段才驗證容器。 這個屬性的預設值為 **False**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>為止。|  
 |**說明**|容器描述。 該屬性包含字串，但可能空白。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>為止。|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/20/2017
  可執行檔指的是容器層級工作，以及容器內的任何容器。 可執行檔可以是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所提供的其中一個工作和容器，也可以是自訂工作。 如需詳細資訊，請參閱 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  
   
 ### <a name="precedence-constraints"></a>優先順序條件約束  
- 優先順序條件約束可將相同父容器中的工作，連結成已排序的控制流程。 如需詳細資訊，請參閱 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ 優先順序條件約束可將相同父容器中的工作，連結成已排序的控制流程。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
   
 ### <a name="event-handlers"></a>事件處理常式  
  容器層級的事件處理常式，可回應由容器或其中所含物件所引發的事件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 事件處理常式](../../integration-services/integration-services-ssis-event-handlers.md)。  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6919cb9eea7da37cb3967b4e06d945a66ab6c1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb2645f7db1b7e65c1fea7f72ab70b79b7565bdb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---first-function"></a>報表產生器函式 - First 函式
   傳回所指定運算式給定範圍中的第一個值。  
@@ -48,7 +46,7 @@ First(expression, scope)
 ## <a name="return-type"></a>傳回類型  
  由運算式的類型決定。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **First** 函數會在指定的範圍已套用過所有的排序和篩選之後，傳回一組資料中的第一個值。  
   
  **First** 函數無法在群組篩選運算式中使用目前 (預設) 範圍以外的範圍。  

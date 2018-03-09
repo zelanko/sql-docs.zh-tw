@@ -1,6 +1,7 @@
 ---
 title: "SQL Server 中的外部指令碼執行的一般問題 |Microsoft 文件"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 10/11/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
@@ -8,21 +9,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4f515ba26c4eeae70eaf9244c0eaedaa954954b4
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server 中的外部指令碼執行的一般問題
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文包含已知的問題與 SQL Server 中執行 R 或 Python 程式碼的常見問題的清單。
 
@@ -191,9 +193,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. 重新啟動服務時，通常可以修正問題，以便在機器學習指令碼執行。 如果重新啟動，仍無法解決問題，請記下的路徑中的引數**二進位路徑**屬性，然後執行下列動作：
 
-    A. 檢閱啟動器的.config 檔案，並確定工作目錄無效。
+    a. 檢閱啟動器的.config 檔案，並確定工作目錄無效。
 
-    B. 請確定 [啟動列] 由 Windows 群組可以連接到 SQL Server 執行個體中所述[上一節](#bkmk_LaunchpadTS)。
+    b. 請確定 [啟動列] 由 Windows 群組可以連接到 SQL Server 執行個體中所述[上一節](#bkmk_LaunchpadTS)。
 
     c. 如果您變更任何服務內容，請重新啟動啟動控制板服務。
 
@@ -317,16 +319,16 @@ EXEC sp_execute_external_script @language = N'R',
 
 *STDOUT message(s) from external script:*
 
-*[1]"c:\\程式檔案\\Microsoft SQL Server\\MSSQL13。SQL2016\\R_SERVICES"*
+*[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
 
-*[1]"c: / Program 檔案/Microsoft SQL Server/MSSQL13。SQL2016/R_SERVICES/媒體櫃 」*
+*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 
 若要解決此問題，您必須重新安裝至 SQL Server 執行個體文件庫套件。
 
 >[!NOTE]
 >如果您已升級使用 Microsoft R 最新版本的 SQL Server 2016 的執行個體，預設程式庫位置將會不同。 如需詳細資訊，請參閱[升級 R Services 的執行個體使用 SqlBindR](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [機器學習服務疑難排解和已知的問題](machine-learning-troubleshooting-faq.md)
 

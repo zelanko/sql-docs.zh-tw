@@ -8,26 +8,27 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8803b1a18ce1a0987c9ebfcbd718345cfc3ef60
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>資料來源精靈畫面 3
 
 指定預設資料庫、驅動程式所使用的各種 ANSI 選項及鏡像伺服器的名稱。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 ### <a name="change-the-default-database-to"></a>變更預設資料庫為
 
@@ -82,6 +83,10 @@ Ansi_padding 時，結尾的空格**varchar**值和結尾的零**varbinary**值�
 ### <a name="column-encryption"></a>資料行加密。
 
 啟用自動解密和加密與加密資料行的資料傳輸[永遠加密](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)功能可在 SQL Server 2016 及更新版本。
+
+### <a name="use-fmtonly-metadata-discovery"></a>使用 FMTONLY 中繼資料探索：
+
+當連接到 SQL Server 2012 或更新版本時，請使用舊版的 SET FMTONLY 中繼資料探索方法。 使用不支援的查詢時，才啟用此[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)，例如包含暫存資料表。 
 
 ### <a name="next"></a>下一個
 

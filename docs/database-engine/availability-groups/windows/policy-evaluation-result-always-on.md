@@ -18,13 +18,13 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b0bd0ff787235f331a614b3766f99b215b13fcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1820f927883befa7acb15fded38f5eb6463f374
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="policy-evaluation-result-always-on"></a>原則評估結果 (AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 |![UI 圖示︰錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示︰錯誤")|嚴重|  
 |![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|警告|  
   
- **描述**  
+ **說明**  
  此方格會顯示所選問題的簡短說明。  
   
  **其他資訊**  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfecde5790f25c254428d53ec613b968d7d3efd9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3217fe03497c2d72f3ce0a2c321df5e089ce4e1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>連線至 Access 資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft Access** 資料來源。
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
  **瀏覽**  
  使用 [開啟] 對話方塊來找出資料庫檔案。  
   
- **使用者名稱**  
+ **User name**  
 如果工作群組資訊檔案是與資料庫建立關聯，則請提供有效的使用者名稱。  
   
  **密碼**  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/20/2017
 在 [資料連結屬性] 對話方塊中，指定進階選項 (例如資料庫密碼或非預設工作群組資訊檔案)。  
 
 ## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>我在資料來源清單中看不到 Access
-如果您在資料來源清單中看不到 Access，則您正在執行 64 位元精靈嗎？ Excel 和 Access 的提供者一般是 32 位元，而且在 64 位元精靈中看不到。 請改為執行 32 位元精靈。
+如果您在資料來源清單中看不到 Access，則您正在執行 64 位元精靈嗎？ Excel 和 Access 的提供者一般是 32 位元，而且在 64 位元精靈中看不到。 請改執行 32 位元精靈。
 
 > [!NOTE]
 > 若要使用 64 位元版本的 [SQL Server 匯入和匯出精靈]，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，而且只會安裝 32 位元檔案 (包含 32 位元版本的精靈)。
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/20/2017
 
 1.  在 [選擇資料來源] 或 [選擇目的地] 頁面上，按一下 [進階] 按鈕以開啟 [資料連結屬性] 對話方塊。  
 2.  在 [資料連結屬性] 對話方塊中，選取 [全部] 索引標籤。  
-3.  在屬性和值的清單中，選取 [Jet OLEDB:Database Password] (Jet OLEDB:Database 密碼)。   
+3.  在屬性和值的清單中，選取 [Jet OLEDB:Database 密碼] 。   
     
     ![指定 Access 密碼、畫面 1](../../integration-services/import-export-data/media/specify-access-password-screen-1.jpg) 
 4.  按一下 [編輯值] 開啟 [編輯屬性值] 對話方塊。  

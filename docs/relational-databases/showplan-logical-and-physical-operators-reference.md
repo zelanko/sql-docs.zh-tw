@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -137,19 +138,20 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e90365c7328e85782a818b3dc07462ef185c9ec
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 605d3ff10ac725358ec51e28357f8b03cfcee094
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>執行程序邏輯和實體運算子參考
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 運算子描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何執行查詢或資料操作語言 (DML) 陳述式。 查詢最佳化工具會使用運算子來建立查詢計畫，以便建立查詢所指定的結果，或執行 DML 陳述式所指定的作業。 查詢計畫是由實體運算子所組成的樹狀目錄。 您可使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的圖形執行計畫選項 SET SHOWPLAN 陳述式，以及 SQL Server Profiler Showplan 事件類別，檢視查詢計畫。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+運算子說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何執行查詢或資料操作語言 (DML) 陳述式。 查詢最佳化工具會使用運算子來建立查詢計畫，以便建立查詢所指定的結果，或執行 DML 陳述式所指定的作業。 查詢計畫是由實體運算子所組成的樹狀目錄。 您可使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的圖形執行計畫選項 SET SHOWPLAN 陳述式，以及 SQL Server Profiler Showplan 事件類別，檢視查詢計畫。  
   
  運算子可分為邏輯與實體運算子兩種。  
   
@@ -185,7 +187,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="operator-descriptions"></a>運算子描述  
  本節包含邏輯與實體運算子的說明：  
   
-|圖形執行計畫圖示|Showplan 運算子|Description|  
+|圖形執行計畫圖示|Showplan 運算子|描述|  
 |-----------------------------------|-----------------------|-----------------|  
 |![自適性聯結運算子圖示](../relational-databases/media/AdaptiveJoin.gif "自適性聯結運算子圖示")|**自適性聯結**|**自適性聯結**運算子可讓選擇的雜湊聯結或巢狀迴圈聯結方法，延後到已掃描的第一個輸入之後。 | 
 |無|**Aggregate**|**Aggregate** 運算子會計算包含 MIN、MAX、SUM、COUNT 或 AVG 的運算式。 **Aggregate** 運算子可以是邏輯運算子或實體運算子。|  
@@ -216,7 +218,7 @@ ms.lasthandoff: 11/27/2017
 |![資料指標 catchall 資料指標運算子圖示](../relational-databases/media/cursor-catch-all.gif "資料指標 catchall 資料指標運算子圖示")|**雜物箱**|產生圖形執行程序表的邏輯若找不到適當的 Iterator 圖示，就會顯示 [雜物箱] 圖示。 [雜物箱] 圖示不一定會指出錯誤條件。 [雜物箱] 圖示有三種：藍色 (Iterator)、橙色 (資料指標) 與綠色 ( [!INCLUDE[tsql](../includes/tsql-md.md)] 語言項目)。|  
 |無|**資料指標**|「資料指標」邏輯與實體運算子可用來說明與資料指標作業有關的查詢或更新將如何執行。 實體運算子是說明用來處理資料指標的實體實作演算法，例如使用索引鍵集衍生資料指標。 資料指標執行的每個步驟都有一個實體運算子。 邏輯運算子會說明資料指標的屬性，如資料指標是唯讀的。<br /><br /> 邏輯運算子包括非同步、開放式、主要、唯讀、捲動鎖定及次要與同步。<br /><br /> 實體運算子包括動態、提取查詢、索引鍵集、母體擴展查詢、重新整理查詢與快照集。|  
 |![宣告語言項目圖示](../relational-databases/media/declare-32x.gif "宣告語言項目圖示")|**宣告**|「宣告」運算子會在查詢計畫中配置區域變數。 「宣告」是語言元素。|  
-|![刪除 (資料庫引擎) 運算子圖示](../relational-databases/media/delete-32x.gif "刪除 (資料庫引擎) 運算子圖示")|**Delete**|會從滿足 **Argument** 資料行之選擇性述詞的物件資料列，刪除「刪除」運算子。|  
+|![刪除 (資料庫引擎) 運算子圖示](../relational-databases/media/delete-32x.gif "刪除 (資料庫引擎) 運算子圖示")|**刪除**|會從滿足 **Argument** 資料行之選擇性述詞的物件資料列，刪除「刪除」運算子。|  
 |![刪除掃描運算子圖示](../relational-databases/media/delete-scan-32x.gif "刪除掃描運算子圖示")|**刪除的掃描**|「刪除的掃描」運算子會掃描觸發程序中已刪除的資料表。|  
 |無|**Distinct**|「相異」運算子可從資料列集或從值集合移除重複的項目。 「相異」是邏輯運算子。|  
 |無|**相異排序**|「相異排序」邏輯運算子會掃描輸入，移除重複項，並依 **Argument** 資料行中 DISTINCT ORDER BY:() 述詞所指定的資料行排序。 **相異排序** 是邏輯運算子。|  

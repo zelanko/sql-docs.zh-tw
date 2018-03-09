@@ -1,7 +1,7 @@
 ---
 title: "全域設定 （編輯器） (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6963ad8ee8eea9b6e79c633bd2af54d03b438d36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3fad4c5437b998b6a8d13957fad529fb82c7a91c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-oracletosql"></a>（編輯器） (OracleToSQL) 的全域設定
 使用的編輯器頁面**通用設定**對話方塊來指定程式碼編輯器視窗的設定。  

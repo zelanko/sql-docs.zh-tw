@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66d86e3583b81069f2c1f77a616dac91a022ff9c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供有關表格式中執行之 Analysis Services 資料庫所用的儲存體資料表資料行和區段層級的資訊或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模式。 此資料列集主要用於疑難排解和分析。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+提供有關表格式中執行之 Analysis Services 資料庫所用的儲存體資料表資料行和區段層級的資訊或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模式。 此資料列集主要用於疑難排解和分析。  
   
  **適用於：** 表格式模型  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/08/2017
   
 |**資料行名稱**|**類型指標**|**限制**|**說明**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|**資料庫名稱**|**DBTYPE_WSTR**|是|指定表格式資料庫。<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS**資料列集可能會限制使用此資料行。 如果省略，就會使用目前的資料庫。|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|是|指定表格式資料庫。<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS**資料列集可能會限制使用此資料行。 如果省略，就會使用目前的資料庫。|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|是|模型的名稱。<br /><br /> **DISCOVER_STORAGE_TABLES**資料列集可能會限制使用此資料行。|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|是|量值群組的名稱。|  
 |**PARTITION_NAME**|**DBTYPE_WSTR**|是|資料分割的名稱。|  
@@ -74,7 +74,7 @@ ORDER BY TABLE_ID
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 結構描述資料列集](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

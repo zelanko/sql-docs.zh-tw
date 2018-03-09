@@ -1,7 +1,7 @@
 ---
 title: "sp_rename (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,21 +51,21 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @objname =] '*object_name*'  
+ [ @objname = ] '*object_name*'  
  這是使用者物件或資料類型目前的完整或非完整名稱。 如果要重新命名的物件是在資料表中，資料行*object_name*格式必須為*table.column*或*schema.table.column*。 如果要重新命名的物件是索引， *object_name*格式必須為*table.index*或*schema.table.index*。 如果要重新命名的物件是條件約束， *object_name*格式必須為*schema.constraint*。  
   
  只有在指定限定物件時，才需要引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *object_name*是**nvarchar(776)**，沒有預設值。  
   
- [ @newname =] '*new_name*'  
+ [ @newname = ] '*new_name*'  
  這是指定物件的新名稱。 *new_name*必須是單部分名稱，且必須遵照識別碼的規則。 *newname*是**sysname**，沒有預設值。  
   
 > [!NOTE]  
 >  觸發程序名稱的開頭不能是 # 或 ##。  
   
- [ @objtype =] '*object_type*'  
+ [ @objtype = ] '*object_type*'  
  這是要重新命名的物件類型。 *object_type*是**varchar(13)**，預設值是 NULL，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |COLUMN|要重新命名的資料行。|  
 |DATABASE|使用者定義資料庫。 當重新命名資料庫時，需要這個物件類型。|  
@@ -84,9 +84,9 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  您可以利用 sp_rename 來重新命名主要和次要 XML 索引。  
   
- 重新命名預存程序、 函數、 檢視或觸發程序並不會變更對應的物件名稱中的 definition 資料行名稱[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視。 因此，我們建議您不要利用 sp_rename 來重新命名這些物件類型。 相反地，請卸除物件，再利用它的新名稱來重新建立物件。  
+ 重新命名預存程序、 函數、 檢視或觸發程序不會變更對應的物件名稱中的 definition 資料行[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視，或使用取得[OBJECT_定義](../../t-sql/functions/object-definition-transact-sql.md)內建函式。 因此，我們建議您不要利用 sp_rename 來重新命名這些物件類型。 相反地，請卸除物件，再利用它的新名稱來重新建立物件。  
   
- 重新命名資料表或資料行之類的物件，不會自動重新命名指向這個物件的參考。 您必須手動修改任何參考重新命名之物件的物件。 例如，如果您重新命名資料表資料行，且有觸發程序參考這個資料行，您必須修改觸發程序來反映新的資料行名稱。 使用[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)清單相依性物件上再重新命名它。  
+ 重新命名資料表或資料行之類的物件，不會自動重新命名指向這個物件的參考。 您必須手動修改任何參考重新命名之物件的物件。 例如，如果您重新命名資料表資料行，且有觸發程序參考這個資料行，您必須修改觸發程序來反映新的資料行名稱。 在重新命名物件之前，請利用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 來列出其相依性。  
   
 ## <a name="permissions"></a>Permissions  
  若要重新命名物件、資料行和索引，需要物件的 ALTER 權限。 若要重新命名使用者類型，需要這個類型的 CONTROL 權限。 若要重新命名資料庫，需要系統管理員 (sysadmin) 或資料庫建立者 (dbcreator) 固定伺服器角色中的成員資格。  
@@ -207,7 +207,7 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

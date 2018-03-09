@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET IMPLICIT_TRANSACTIONS
 - IMPLICIT_TRANSACTIONS_TSQL
 - SET_IMPLICIT_TRANSACTIONS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - implicit transactions
 - transactions [SQL Server], implicit
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - SET IMPLICIT_TRANSACTIONS statement
 - IMPLICIT_TRANSACTIONS option
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d46d60c67556fe5c779fdd4e68e7f4993074198
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: c86a7a8108e94d07341f5b6ced498b56ab934405
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,8 +57,8 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |-|-|-|  
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT (請參閱底下的例外狀況)。|  
-|CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
+|CREATE|Insert|TRUNCATE TABLE|  
+|Delete|OPEN|UPDATE|  
 |DROP|執行個體時提供 SQL Server 登入。|執行個體時提供 SQL Server 登入。|  
   
  當設為 OFF，每個先前的 T-SQL 陳述式會受限於看不見的 BEGIN TRANSACTION 和 COMMIT TRANSACTION 陳述式看不見。 時，我們稱交易模式是*自動認可*。 如果您的 T-SQL 程式碼會明顯地發出 BEGIN TRANSACTION，我們稱交易模式是*明確*。  
@@ -86,7 +88,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## <a name="examples"></a>範例  
  下列的 TRANSACT-SQL 指令碼會執行幾個不同的測試案例。 也提供文字輸出，其中顯示詳細的行為並從每個測試案例結果。  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -169,7 +171,7 @@ go
   
  接下來是前述的 TRANSACT-SQL 指令碼的文字輸出。  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  
@@ -200,7 +202,7 @@ go
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

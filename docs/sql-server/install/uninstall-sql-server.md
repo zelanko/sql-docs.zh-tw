@@ -8,39 +8,42 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8ed0d929eaddd1bc4a324a30c47af87164c290b3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 45e1659402e9eaf04a67772624a1a639bc9d99d2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-sql-server"></a>解除安裝 SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 遵循以下的主題完整地解除安裝現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，並將系統準備好以便重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  請遵循下列文章，完整解除安裝現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，並將系統準備好以便重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="in-this-section"></a>本節內容  
  [解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
- 此主題描述如何手動解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的獨立執行個體。  
+ 本文描述如何手動解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體。  
   
  [解除安裝 PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)  
- 本主題描述如何手動解除安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。  
+ 本文描述如何手動解除安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。  
   
  [解除安裝 Reporting Services](../../sql-server/install/uninstall-reporting-services.md)  
- 本主題描述如何解除安裝 SharePoint 模式和原生模式伺服器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器。  
+ 本文描述如何解除安裝 SharePoint 模式和原生模式伺服器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器。  
   
  [解除安裝及移除 Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md)  
- 本主題描述從本機電腦解除安裝及移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 的程序。  
+ 本文描述從本機電腦解除安裝及移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 的程序。  
   
  [移除 Data Quality Server 物件](../../sql-server/install/remove-data-quality-server-objects.md)  
- 本主題描述如何在解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 或只解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DQS) 中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 元件之後，手動移除 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 物件。  
+ 本文描述如何在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或只解除安裝 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 元件之後，手動移除 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 物件。  
   
 ## <a name="related-sections"></a>相關章節  
   

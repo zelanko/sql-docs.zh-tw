@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6f344eb67b56558467303535964b5ca97d172bb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 64aafbee1cae4cbdf8a2d43c7367fdbae6e40b27
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -55,13 +57,13 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果*擁有者*未指定目前使用者並未擁有指定的資料表和*名稱*，此程序會尋找指定的資料表*名稱*擁有的資料庫擁有者。 如果資料表存在，就會傳回它的資料行。  
   
- [ @qualifier=] '*限定詞*'  
+ [ @qualifier=] '*qualifier*'  
  這是資料表限定詞的名稱。 *限定詞*是**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*q*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [ @col_type=] '*col_type*'  
  這是資料行類型。 *col_type*是**char (**1**)**，預設值是。 類型 R 會傳回最佳資料行或資料行集合，從資料行或資料行擷取值，允許對於指定的任何資料列用來唯一識別資料表。 資料行可以是專為了這個目的而設計的虛擬資料行，也可以是資料表任何唯一索引的一個或多個資料行。 類型 V 會傳回在指定的資料表中 (如果有的話)，當任何交易更新資料列中的任何值時，資料來源所自動更新的一個或多個資料行。  
   
- [ @scope=] '*範圍*'  
+ [ @scope=] '*scope*'  
  這是 ROWID 的最小必要範圍。 *範圍*是**char (**1**)**，預設值是 t。 範圍 C 指定 ROWID 只有在位於這個資料列時才有效。 範圍 T 指定 ROWID 只對交易有效。  
   
  [ @nullable=] '*可為 null*'  
@@ -81,8 +83,8 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|每個資料行的資料行名稱*資料表*傳回。 這個欄位一律會傳回值。|  
 |DATA_TYPE|**smallint**|ODBC SQL 資料類型。|  
 |TYPE_NAME|**sysname**|資料來源相關的資料型別名稱。例如， **char**， **varchar**， **money**，或**文字**。|  
-|PRECISION|**Int**|資料來源之資料行的有效位數。 這個欄位一律會傳回值。|  
-|LENGTH|**Int**|長度，以位元組為單位，所需的資料來源，其二進位形式的資料類型，例如 10 **char (**10**)**、 4 的**整數**，和 2 **smallint**.|  
+|PRECISION|**整數**|資料來源之資料行的有效位數。 這個欄位一律會傳回值。|  
+|LENGTH|**整數**|長度，以位元組為單位，所需的資料來源，其二進位形式的資料類型，例如 10 **char (**10**)**、 4 的**整數**，和 2 **smallint**.|  
 |SCALE|**smallint**|資料來源之資料行的小數位數。 小數位數不適用的資料類型會傳回 NULL。|  
 |PSEUDO_COLUMN|**smallint**|指出資料行是否為虛擬資料行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律會傳回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
@@ -101,7 +103,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 EXEC sp_special_columns_100 @table_name = 'FactFinance';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲預存程序](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
   
   

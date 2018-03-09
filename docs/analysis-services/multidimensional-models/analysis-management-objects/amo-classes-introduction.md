@@ -1,36 +1,35 @@
 ---
 title: "AMO 類別簡介 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bcaa0f01f487eeb028ec93792f29a9a8598ca6a6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b288d323d4de3272afb434f3782c1df133e304af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-classes---introduction"></a>AMO 類別-簡介
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]分析管理物件 (AMO) 是一個設計來管理的執行個體的類別庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]從用戶端應用程式。 AMO 類別是您將用以管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件 (例如資料庫、維度、Cube、採礦結構與模型、角色與權限、例外狀況等等) 的類別。  
+  分析管理物件 (AMO) 是一個設計來管理的執行個體的類別庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]從用戶端應用程式。 AMO 類別是您將用以管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件 (例如資料庫、維度、Cube、採礦結構與模型、角色與權限、例外狀況等等) 的類別。  
   
  下圖顯示在本主題中說明的類別關聯性。  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 |[AMO 安全性類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|描述可讓您控制對其他物件之存取與維護安全性的類別。|  
 |[AMO 其他類別和方法](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|描述可協助 OLAP 或資料採礦管理員完成其每日工作的類別與方法。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices>   
  [邏輯架構 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [資料庫物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   

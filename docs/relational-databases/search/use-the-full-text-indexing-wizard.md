@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cfca84ed59bd6922a6667a0b214668836e421ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85be544c13310a98863b03d8bd515c5a1990a5ba
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SSMS 中的 [全文檢索索引精靈] 會提供一系列的逐步說明，以協助您建立全文檢索索引。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SSMS 中的 [全文檢索索引精靈] 會提供一系列的逐步說明，以協助您建立全文檢索索引。  
   
 ## <a name="create-a--full-text-index"></a>建立全文檢索索引 
 
@@ -84,15 +86,15 @@ ms.lasthandoff: 11/17/2017
 
      **選取目錄：** 從清單中選取全文檢索目錄。 資料庫的預設目錄是清單中預設選取的項目。 如果沒有任何目錄可以使用，系統就會停用此清單，而且會核取及停用 **[建立新的目錄]** 核取方塊。  
   
-  OR
+  或
   
  10. **[建立新的目錄]**
  - 選取全文檢索目錄。  
   
-    a. **名稱**  
+    A. **名稱**  
      輸入新全文檢索目錄的名稱。  
   
-     b. **設定為預設目錄**  
+     B. **設定為預設目錄**  
      選取即可讓此目錄成為這個資料庫的預設目錄。  
   
      c. **區分腔調字**  
@@ -102,7 +104,7 @@ ms.lasthandoff: 11/17/2017
      指定要在上面建立全文檢索索引的檔案群組。  
   
      E. 選取值：  
-      |Value|描述|  
+      |ReplTest1|描述|  
       |-----------|-----------------|
       |**<default>**| 如果資料表或檢視未分割，請選取此值，以便與基礎資料表或檢視使用的相同檔案群組。 如果已分割資料表或檢視表，則會使用主要檔案群組|
       |**PRIMARY**|選取即可針對新的全文檢索索引使用主要檔案群組。|
@@ -112,11 +114,11 @@ ms.lasthandoff: 11/17/2017
  11. **選取全文檢索停用字詞表**  
      指定要針對全文檢索索引使用的停用字詞表，或停用停用字詞表。  
   
-     資料庫中的停用字詞是使用稱為停用字詞表的物件來管理。 「停用字詞表」是停用字詞的清單，與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。 如需詳細資訊，請參閱[設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
+     資料庫中的停用字詞是使用稱為停用字詞表的物件來管理。 「停用字詞表」是停用字詞的清單，與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
      選取下列其中一個值：  
   
-   |Value|描述|  
+   |ReplTest1|描述|  
     |-----------|-----------------|  
     |**<system>**|選取即可針對新的全文檢索索引使用系統停用字詞表。 這是預設值。|  
     |**<off>**|選取即可針對新的全文檢索索引停用停用字詞表。|  
@@ -135,7 +137,7 @@ ms.lasthandoff: 11/17/2017
      **編輯**  
      編輯排程。  
   
-     **Delete**  
+     **刪除**  
      刪除排程。  
   
 5.  檢視或控制全文檢索索引精靈的進度。  

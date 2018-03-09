@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - INTO
 - INTO clause
 - INTO_clause_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - copying data [SQL Server], into a new table
 - INTO clause
@@ -29,19 +31,19 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: "63"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 410e71466944f1744d0c8092f0ad030ffa1da29b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT 的 INTO 子句 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT INTO 會在預設的檔案群組中建立新的資料表，然後將查詢的結果資料列插入其中。 若要檢視完整的 SELECT 語法，請參閱[SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 11/17/2017
  *new_table*  
  根據選取清單中的資料行以及從資料來源中選擇的資料列，指定要建立之新資料表的名稱。  
  
-  *檔案群組*
+  *filegroup*
  
  指定將建立新的資料表檔案群組的名稱。 指定的檔案群組應該存在於其他資料庫 SQL Server 引擎會擲回錯誤。 從開始才支援這個選項[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。
  
@@ -99,7 +101,7 @@ ms.lasthandoff: 11/17/2017
  當選取清單包括計算資料行時，新資料表變數中對應的資料行並不是計算資料行。 新資料行中的值是執行 SELECT...INTO 時所計算的值。  
   
 ## <a name="logging-behavior"></a>記錄行為  
- SELECT...INTO 的記錄數量主要取決於資料庫目前使用的復原模式。 在簡單復原模式或大量記錄復原模式下，大量作業會進行最低限度記錄。 使用最低限度記錄，使用 選取... 陳述式可以比建立資料表，然後填入資料表的 INSERT 陳述式更有效率。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ SELECT...INTO 的記錄數量主要取決於資料庫目前使用的復原模式。 在簡單復原模式或大量記錄復原模式下，大量作業會進行最低限度記錄。 使用最低限度記錄，使用 選取... 陳述式可以比建立資料表，然後填入資料表的 INSERT 陳述式更有效率。 如需詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要目的地資料庫中的 CREATE TABLE 權限。  
@@ -109,7 +111,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. 指定多個來源的資料行，藉以建立資料表  
  下列範例會從各個員工相關和地址相關的資料表中選取七個資料行，藉以建立 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的`dbo.EmployeeAddresses` 資料表。  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +130,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. 使用最低限度記錄來插入資料列  
  下列範例會建立 `dbo.NewProducts` 資料表，然後插入 `Production.Product` 資料表的資料列。 此範例會假設 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的復原模式設定為 FULL。 為了確保使用最低限度記錄，[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的復原模式會在插入資料列之前設定為 BULK_LOGGED，然後在 SELECT...INTO 陳述式之後重設為 FULL。 此程序可確保 SELECT...INTO 陳述式會在交易記錄中使用最小的空間並有效率地執行作業。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +146,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. 使用 IDENTITY 函數來建立識別欄位  
  下列範例會使用 IDENTITY 函數，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的新資料表 `Person.USAddress` 中建立識別欄位。 因為定義此資料表的 SELECT 陳述式包含聯結，導致 IDENTITY 屬性無法傳送至新的資料表，所以需要進行此步驟。 請注意，在 IDENTITY 函數中指定的初始和遞增值與來源資料表 `AddressID` 中 `Person.Address` 資料行的初始和遞增值不同。  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +175,7 @@ WHERE name = 'AddressID';
   
  **適用於：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +218,7 @@ GO
   
  **適用於：** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -230,11 +232,11 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 建立新的資料表做為另一個資料表的複本並將其載入指定的檔案群組
-下列範例是做為另一個資料表的複本建立新的資料表，並將它載入到指定的檔案群組不同於使用者的預設檔案群組。
+下列範例會示範做為另一個資料表的複本建立新的資料表，並將它載入到指定的檔案群組不同於使用者的預設檔案群組。
 
  **適用於：**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
@@ -247,7 +249,7 @@ GO
 SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ```
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [精選的範例 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

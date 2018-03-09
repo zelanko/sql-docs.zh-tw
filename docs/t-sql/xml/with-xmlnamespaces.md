@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WITH_XMLNAMESPACES_TSQL
 - WITH XMLNAMESPACES
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - adding XML namespaces
 - XML namespace declarations [SQL Server]
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db002fd372fd69972b4f150c14c95342686f85f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 2ac45cd469430bd6fd9852ca6eb6b58831b29fef
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +69,7 @@ DEFAULT <xml_namespace_uri>
 ```  
   
 ## <a name="arguments"></a>引數  
- *_ u*  
+ *xml_namespace_uri*  
  識別所宣告之 XML 命名空間的統一資源識別碼 (URI)。 *_ u*是 SQL 字串。  
   
  *xml_namespace_prefix*  
@@ -105,7 +107,7 @@ DEFAULT <xml_namespace_uri>
 ## <a name="examples"></a>範例  
  如需範例，請參閱[查詢使用 WITH XMLNAMESPACES 新增命名空間](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

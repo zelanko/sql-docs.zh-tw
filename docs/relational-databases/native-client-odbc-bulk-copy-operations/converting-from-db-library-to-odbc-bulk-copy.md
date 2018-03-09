@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e861e35bbc32f5f97cad5c637a1f0815ee1ee55c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: abdb8b529914a3ebb09ed0d5d933c30e0ef43f9d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>從 DB-Library 轉換成 ODBC 大量複製
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援 Db-library 訊息和錯誤處理常式; 您必須呼叫**SQLGetDiagRec**以取得錯誤和 ODBC 大量複製函數所引發的訊息。 大量複製函數的 ODBC 版本會傳回標準的大量複製傳回碼 SUCCEED 或 FAILED，而非 ODBC 樣式的傳回碼，例如 SQL_SUCCESS 或 SQL_ERROR。  
   
--   Db-library 針對指定的值[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*參數解譯方式與 ODBC **bcp_bind***cbData*參數。  
+-   Db-library 針對指定的值[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*參數解譯方式與 ODBC **bcp_bind * * * cbData*參數。  
   
     |指示的條件|Db-library *varlen*值|ODBC *cbData*值|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
      資料程式庫中*varlen*值-1 表示的可變長度資料所提供，而在 ODBC *cbData*則解譯成表示提供只有 NULL 值。 變更任何 Db-library *varlen*規格為-1 為 SQL_VARLEN_DATA 以及任何*varlen* 0 為 SQL_NULL_DATA 的規格。  
   
--   Db-library **bcp_colfmt***file_collen*和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData*有相同的問題**bcp_bind***varlen*和*cbData*先前所述的參數。 變更任何 Db-library *file_collen*規格為-1 為 SQL_VARLEN_DATA 以及任何*file_collen* 0 為 SQL_NULL_DATA 的規格。  
+-   Db-library  **bcp_colfmt * * * file_collen*和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * 有相同的問題 **bcp_bind * * * varlen*和*cbData*先前所述的參數。 變更任何 Db-library *file_collen*規格為-1 為 SQL_VARLEN_DATA 以及任何*file_collen* 0 為 SQL_NULL_DATA 的規格。  
   
 -   *IValue* ODBC 參數[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)函式是 void 指標。 資料程式庫中*iValue*是整數。 值轉換為 ODBC *iValue* void *。  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
 -   當輸出流通時**money**字元格式、 ODBC 大量複製函數會提供四位數的精確度和沒有逗號區隔; 中的值Db-library 版本僅提供兩個位數的精確度，以及包含逗號分隔符號。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [執行大量複製作業 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   

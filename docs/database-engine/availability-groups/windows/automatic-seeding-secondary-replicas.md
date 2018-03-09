@@ -10,20 +10,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2dc72a3874e9742b3bf73d0bdaf2b3d0e00f33c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>自動植入次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +37,8 @@ ms.lasthandoff: 11/20/2017
 使用自動植入的考量包括：
 
 * [對主要複本的效能和交易記錄影響](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [磁碟配置](#disk-layout)
-* [安全性](#security)
+* [磁碟配置](#disklayout)
+* [Security](#security)
 
 
 ### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>對主要複本的效能和交易記錄影響
@@ -85,7 +87,7 @@ ms.lasthandoff: 11/20/2017
 
 若要還原到 SQL Server 2016 和舊版的行為，請啟用追蹤旗標 9571。 如需如何啟用追蹤旗標的資訊，請參閱 [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)。
 
-### <a name="security"></a>安全性
+### <a name="security"></a>Security
 
 安全性權限隨複本初始化的類型而不同：
 
@@ -154,9 +156,6 @@ ALTER AVAILABILITY GROUP [<AGName>]
 <a name="sql-server-log"></a> 除了後文所述的[動態管理檢視](#dynamic-management-views)，SQL Server 記錄檔中還可以看到開始和完成自動植入：
 
 ![SQL 伺服器記錄][2]
-
-
-
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>使用自動植入合併備份並還原
 
@@ -249,7 +248,7 @@ GO
 
 下表列出與自動植入相關的擴充事件。
 
-|名稱|描述|
+|[屬性]|描述|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|正在植入要求訊息。|
 |hadr_physical_seeding_backup_state_change|實體植入備份端的狀態變更。|

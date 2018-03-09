@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - RESTORE_FILELISTONLY_TSQL
 - FILELISTONLY
 - FILELISTONLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backups [SQL Server], file lists
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: "83"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 陳述式-FILELISTONLY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +90,10 @@ FROM <backup_device>
   
 |資料行名稱|資料類型|Description|  
 |-|-|-|  
-|LogicalName|**nvarchar （128)**|檔案的邏輯名稱。|  
-|PhysicalName|**nvarchar （260)**|檔案的實體或作業系統名稱。|  
-|類型|**char （1)**|這是檔案的類型，它有下列幾種：<br /><br /> **L** = Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料檔案<br /><br /> **F** = 全文檢索目錄<br /><br /> **S** = FileStream、 FileTable 或[!INCLUDE[hek_2](../../includes/hek-2-md.md)]容器|  
-|FileGroupName|**nvarchar （128)**|檔案所在的檔案群組名稱。|  
+|LogicalName|**nvarchar(128)**|檔案的邏輯名稱。|  
+|PhysicalName|**nvarchar(260)**|檔案的實體或作業系統名稱。|  
+|型別|**char(1)**|這是檔案的類型，它有下列幾種：<br /><br /> **L** = Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料檔案<br /><br /> **F** = 全文檢索目錄<br /><br /> **S** = FileStream、 FileTable 或[!INCLUDE[hek_2](../../includes/hek-2-md.md)]容器|  
+|FileGroupName|**nvarchar(128)**|檔案所在的檔案群組名稱。|  
 |大小|**numeric(20,0)**|目前的大小 (以位元組為單位)。|  
 |MaxSize|**numeric(20,0)**|允許的大小上限 (以位元組為單位)。|  
 |FileID|**bigint**|檔案的識別碼，它在資料庫中是唯一的。|  
@@ -111,7 +113,7 @@ FROM <backup_device>
 |TDEThumbprint|**varbinary(32)**|顯示資料庫加密金鑰的指模。 加密程式指模是用來加密金鑰的憑證 SHA-1 雜湊。 資料庫加密的相關資訊，請參閱[透明資料加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)**|FILE_SNAPSHOT 備份中包含的資料庫檔案 Azure 快照集 URL。 如果沒有 FILE_SNAPSHOT 備份，則傳回 NULL。|  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  備份作業可以選擇性地指定媒體集的密碼及 (或) 備份組的密碼。 當在媒體集或備份組上定義密碼時，您必須在 RESTORE 陳述式中，指定一個或多個正確的密碼。 這些密碼防止未經授權的還原作業，而且未經授權的附加至媒體使用的備份組[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具。 不過，密碼無法防止使用者利用 BACKUP 陳述式的 FORMAT 選項來覆寫媒體。  
   
 > [!IMPORTANT]  
@@ -129,7 +131,7 @@ RESTORE FILELISTONLY FROM AdventureWorksBackups
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   

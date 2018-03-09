@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Report Designer [Reporting Services], report creation
@@ -18,13 +16,13 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: "77"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2b881a5ae4058c9b1be144ff4d38709f9320d181
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0fca00b134b3e17458933dfb6e3c14a61a1cc218
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Reporting Services 分頁的報表與報表設計工具 (SSRS) 的設計
 
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是一個用戶端工具。 您可以本機測試電腦上的報表方案，將其部署至測試環境以測試伺服器方案，然後將其部署至實際執行環境。 部署後，請確認資料來源處理延伸模組和資料來源認證已針對報表伺服器環境進行設定。 您可以使用組態管理員，以協助您管理不同部署的屬性。 如需詳細資訊，請參閱 [SQL Server Data Tools &#40;SSDT&#41; 中的 Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。  
   
- 如需詳細資訊，請參閱 [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
    
 ##  <a name="bkmk_SharedDatasets"></a> 共用資料集  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 定義及部署報表方案的共用資料集。 透過使用 **OverwriteDatasets** 和 **TargetDatasetFolder** 屬性，即可從專案中的其他項目獨立部署共用資料集。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
@@ -177,17 +175,17 @@ ms.lasthandoff: 12/05/2017
   
  下表列出這些錯誤層級。  
   
-|錯誤層級|說明|  
+|錯誤層級|描述|  
 |-----------------|-----------------|  
 |0|最嚴重而且無法避免的建立問題，這些問題會導致無法預覽和部署報表。|  
-|1|嚴重的建立問題，這些問題會徹底變更報表配置。|  
+|@shouldalert|嚴重的建立問題，這些問題會徹底變更報表配置。|  
 |2|較不嚴重的建立問題，這些問題會大幅變更報表配置。|  
 |3|輕微的建立問題，這些問題會以可能不會注意到的次要方式變更報表配置。|  
 |4|僅用於發行警告。|  
   
  當您嘗試預覽或部署的報表包含 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]中新的報表項目時，可以從報表移除這些報表項目。 根據預設，組態的 ErrorLevel 屬性設為 2，這會在移除對應時，使報表的建立失敗。 不過，如果您將 ErrorLevel 屬性的值變更為 0 或 1，就會卸除對應、發出警告，並繼續建立程序。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
 [SQL Server Data Tools 中的 reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   

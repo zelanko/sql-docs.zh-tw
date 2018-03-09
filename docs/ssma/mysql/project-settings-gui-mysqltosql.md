@@ -1,7 +1,7 @@
 ---
 title: "專案設定 (GUI) (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dff457f225799ce121729d7247e7927eef882d61
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3631366693d295e11b740a5ae1a27850d07cc365
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui--mysqltosql"></a>專案設定 (GUI) (MySQLToSQL)
 GUI 專案設定可讓您設定資料上顯示的方式**資料** 索引標籤，如果加入報告的評估報告資料。  

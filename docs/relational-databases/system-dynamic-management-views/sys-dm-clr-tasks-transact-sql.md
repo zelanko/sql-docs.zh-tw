@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_tasks_TSQL
 - dm_clr_tasks
 - dm_clr_tasks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_tasks dynamic management view
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45aad56182dd79b9b5787e78964b23d7469344d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2a3c99ffd172c97c5738ed2dd19bc8b07f303470
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrtasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,12 +40,12 @@ ms.lasthandoff: 11/17/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**task_address**|**varbinary （8)**|CLR 工作的位址。|  
-|**sos_task_address**|**varbinary （8)**|基礎 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次工作的位址。|  
-|**appdomain_address**|**varbinary （8)**|執行這項工作的應用程式網域的位址。|  
-|**狀態**|**nvarchar （128)**|工作的目前狀態。|  
-|**abort_state**|**nvarchar （128)**|中止目前的狀態 (如果已取消工作)。中止工作時有多個相關的狀態。|  
-|**型別**|**nvarchar （128)**|工作類型。|  
+|**task_address**|**varbinary(8)**|CLR 工作的位址。|  
+|**sos_task_address**|**varbinary(8)**|基礎 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次工作的位址。|  
+|**appdomain_address**|**varbinary(8)**|執行這項工作的應用程式網域的位址。|  
+|**狀態**|**nvarchar(128)**|工作的目前狀態。|  
+|**abort_state**|**nvarchar(128)**|中止目前的狀態 (如果已取消工作)。中止工作時有多個相關的狀態。|  
+|**type**|**nvarchar(128)**|工作類型。|  
 |**affinity_count**|**int**|工作的相似性。|  
 |**forced_yield_count**|**int**|強制產生工作的次數。|  
   
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 層需要資料庫的 VIEW DATABASE STATE 權限。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]標準和基本層需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]系統管理員帳戶。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Common Language Runtime 相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   

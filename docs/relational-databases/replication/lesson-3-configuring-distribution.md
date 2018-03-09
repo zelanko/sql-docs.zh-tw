@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e7941463e0d36954a0a137be9f003845d9eff1dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2888c3f576159def2fb141802aafc1853ce9b50f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-configuring-distribution"></a>第 3 課：設定散發
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您將在「發行者」端設定散發，並在發行集和散發資料庫上設定所需權限。 如果您已經設定「散發者」，則必須先停用發行和散發，再開始進行本課。 如果您必須保留現有的複寫拓撲，請勿執行上述動作。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在這一課，您將在「發行集」端設定散發，並在發行集和散發資料庫上設定所需權限。 如果您已經設定「散發者」，則必須先停用發行和散發，再開始進行本課。 如果您必須保留現有的複寫拓撲，請勿執行上述動作。  
   
 利用遠端「散發者」設定「發行者」已超出本教學課程的範圍之外。  
   
@@ -43,9 +47,9 @@ ms.lasthandoff: 11/17/2017
   
 3.  在 [散發者] 頁面上，選取 ['<伺服器名稱>' 將扮演本身的散發者; SQL Server 將建立散發資料庫和記錄]，然後按一下 [下一步]。  
   
-4.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未執行，請在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動] 頁面上選取 [是]，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。 按一下 **[下一步]**。  
+4.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未執行，請在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動] 頁面上選取 [是]，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。 按 [下一步] 。  
   
-5.  在 [快照集資料夾] 文字方塊中，輸入 **\\\\**\<*電腦名稱>***\repldata**，其中 \<*電腦名稱>* 是「發行者」的名稱，然後按一下 [下一步]。  
+5.  在 [快照集資料夾] 文字方塊中，輸入 **\\\\**\<電腦名稱>**\repldata**，其中 \<電腦名稱> 是「發行者」的名稱，然後按一下 [下一步]。  
   
 6.  接受精靈其餘頁面上的預設值。  
   
@@ -55,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中展開 [安全性]，並以滑鼠右鍵按一下 [登入]，然後選取 [新增登入]。  
   
-2.  在 [一般] 頁面上，按一下 [搜尋]，並在 [輸入要選取的物件名稱] 方塊中輸入 \<*電腦名稱>***\repl_snapshot** (其中 \<*電腦名稱>* 是本機「發行者」伺服器的名稱)，按一下 [檢查名稱]，然後按一下 [確定]。  
+2.  在 [一般] 頁面上，按一下 [搜尋]，並在 [輸入要選取的物件名稱] 方塊中輸入 \<電腦名稱>**\repl_snapshot** (其中 \<電腦名稱> 是本機「發行者」伺服器的名稱)，按一下 [檢查名稱]，然後按一下 [確定]。  
   
 3.  在 [使用者對應] 頁面上，從 [已對應到此登入的使用者] 清單中選取 **distribution** 和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 這兩個資料庫。  
   

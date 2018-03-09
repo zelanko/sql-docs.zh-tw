@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Execute21 method [RDS]
+helpviewer_keywords:
+- Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b94d4cdb75cbdcfaa2dfece8d7172e2935d6759d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute21-method-rds"></a>Execute21 方法 (RDS)
 執行要求，並在 ADO 中 2.1 建立用於 ADO 資料錄集。  
@@ -39,13 +41,13 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
 ```  
   
 #### <a name="parameters"></a>參數  
- *連接字串*  
+ *ConnectionString*  
  字串，用來連接到 OLE DB 提供者要求執行的傳送位置。 如果處理常式會指定使用*HandlerString*，它可以編輯或取代連接字串。  
   
  *HandlerString*  
  此字串會識別要搭配此執行的處理常式。 此字串包含兩個部分。 第一個部分包含要使用的處理常式的名稱 (ProgID)。 字串的第二個部分包含要傳遞至處理常式的引數。 如何解譯引數字串是特定的處理常式。 （雖然引數字串可以包含額外的逗號分隔） 以第一個執行個體，在字串中的逗號分隔的兩個部分。 引數是選擇性的。  
   
- *查詢字串*  
+ *QueryString*  
  連接字串中識別 OLE DB 提供者所支援的命令語言中的命令。 對於以 SQL 為基礎的提供者，它可能包含[!INCLUDE[tsql](../../../includes/tsql_md.md)]命令陳述式，但對於非 SQL 提供者 (例如，MSDataShape) 這可能不是[!INCLUDE[tsql](../../../includes/tsql_md.md)]查詢陳述式。  
   
  此外，如果正在使用的處理常式 （且強烈建議使用的處理常式），此處理常式可以改變，或取代此處指定的值。 例如，處理常式通常會取代*QueryString*含查詢字串，從其.ini 檔。 根據預設，會使用 Msdfmap.ini 檔案。  

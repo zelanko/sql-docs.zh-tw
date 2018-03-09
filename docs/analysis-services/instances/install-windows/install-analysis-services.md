@@ -8,23 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c988142d87edfe702fa9a0346331c7a1b3b71c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cdc4deb033afe212103a80a0e5b8413c13000433
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>安裝 SQL Server Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services 是裝載表格式模型、 多維度 cube 和資料採礦模型，您可以從報表、 試算表和儀表板存取的分析資料庫伺服器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services 是裝載表格式模型、 多維度 cube 和資料採礦模型，您可以從報表、 試算表和儀表板存取的分析資料庫伺服器。  
   
  Analysis Services 是多執行個體，表示您可以在單一電腦上安裝多個複本，或執行新舊版本的並存。 您安裝的任何執行個體都是以三種模式中的其中一種來執行 (在安裝期間決定)︰多維度和資料採礦、表格式或 SharePoint。 如果您想要使用多種模式，則每種模式都需要個別執行個體。  
   
@@ -72,7 +73,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** 區分大小寫。  所有值都必須以大寫形式表示。 下表描述 **ASSERVERMODE**的有效值。  
   
-|值|描述|  
+|Value|Description|  
 |-----------|-----------------|  
 |TABULAR|這是預設值。 如果您未設定**ASSERVERMODE**，在表格式模式中安裝的伺服器。|
 |MULTIDIMENSIONAL|此為選擇性的值。|  
@@ -81,6 +82,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 ## <a name="see-also"></a>另請參閱  
  [判斷 Analysis Services 執行個體的伺服器模式](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [表格式模型化 (SSAS 表格式)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
+ [表格式模型化](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   

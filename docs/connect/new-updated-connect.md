@@ -1,41 +1,34 @@
 ---
 title: "已更新-連接到 SQL Server 文件 |Microsoft 文件"
 description: "顯示更新的內容，如需連接到 Microsoft SQL Server 中最近變更過的文件的程式碼片段。"
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.suite: sql
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.topic: article
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: connect-to-sql
-ms.openlocfilehash: d8fb5f5cfbd94cc9d2bd86c4dfe1cbc15bc68d34
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: connect
+ms.date: 02/03/2018
+ms.openlocfilehash: cc4eb05dc4dcd74623c8ce7dfa7b7842449d79b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-connect-to-sql-server"></a>新增和更新最近： 連接到 SQL Server
 
 
 
-Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.com/) 文件網站上更新一些現有文章。 本文會顯示最近更新文章的摘錄。 可能也會列出新文章的連結。
+幾乎每日 Microsoft 某些現有發行項上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文件網站。 這篇文章會顯示從最近已更新的發行項的摘錄。 可能也會列出新的文章連結。
 
-本文是透過定期重新執行的程式所產生。 摘錄中偶爾會出現示不完整的格式，或顯示為來自來源文章的 Markdown。 影像永遠不會顯示在這裡。
+這篇文章會定期重新執行程式所產生的。 偶爾摘錄會顯示具有完美的格式，或 markdown 從來源文件。 影像永遠不會顯示在這裡。
 
-新的更新會報告下列日期範圍和主旨：
+新的更新會報告下列日期範圍和主體：
 
 
 
-- *更新的日期範圍：* &nbsp; **2017-09-28** &nbsp; 到 &nbsp; **2017-12-02**
+- *日期範圍的更新：* &nbsp; **2017年-12-03** &nbsp; -到- &nbsp; **2018年-02-03**
 - *主旨區域：* &nbsp; **連接到 SQL Server**。
 
 
@@ -43,28 +36,24 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>最近建立的新文章
+## <a name="new-articles-created-recently"></a>最近才建立新的發行項
 
 下列連結會跳至最近新增的新文章。
 
 
-1. [資料來源精靈 畫面 1](odbc/windows/dsn-wizard-1.md)
-2. [資料來源精靈螢幕 2](odbc/windows/dsn-wizard-2.md)
-3. [資料來源精靈畫面 3](odbc/windows/dsn-wizard-3.md)
-4. [資料來源精靈畫面 4](odbc/windows/dsn-wizard-4.md)
-5. [SQL Server 登入對話方塊 (ODBC)](odbc/windows/sql-server-login-dialog.md)
+***目前無新文章列出。***
 
 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>更新文章與摘要
+## <a name="updated-articles-with-excerpts"></a>更新的發行項、 只有摘要
 
 本節會顯示從最近發生大規模更新的文章所收集的更新摘錄。
 
-此處顯示的摘錄不同於其適當語意內容。 此外，有時摘錄也與實際文件四周的重要 Markdown 語法不同。 因此，這些摘錄僅適用於一般指導方針。 摘錄只能讓您知道您感興趣的項目，是否值得花時間按一下並瀏覽實際文章。
+此處顯示的摘錄顯示分隔其適當語意的內容。 此外，有時摘錄分開四周實際文件中的重要的 markdown 語法。 因此，這些摘錄適用於一般指導方針。 摘錄只會讓您知道您的興趣是否值得花時間按一下，瀏覽實際的發行項。
 
-由於這些和其他原因，請勿從這些摘錄中複製程式碼，而且不要將任何文字摘錄視為確切事實。 請改瀏覽實際文章。
+如需這些和其他原因，不要複製程式碼從這些摘錄中，而且不採用確切真為任何文字摘錄。 相反地，請瀏覽實際的發行項。
 
 
 
@@ -74,14 +63,11 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>最近更新文章的壓縮清單
+### <a name="compact-list-of-articles-updated-recently"></a>Compact 文件最近才更新清單
 
 此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [PDOStatement::bindParam](#TitleNum_1)
-2. [PDOStatement::bindValue](#TitleNum_2)
-3. [sqlsrv_prepare](#TitleNum_3)
-4. [sqlsrv_query](#TitleNum_4)
+1. [搭配使用一律加密 with the ODBC Driver for SQL Server](#TitleNum_1)
 
 
 
@@ -92,189 +78,41 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-pdostatementbindparamphppdostatement-bindparammd"></a>1.&nbsp;[Pdostatement:: Bindparam](php/pdostatement-bindparam.md)
+### <a name="1-nbsp-using-always-encrypted-with-the-odbc-driver-for-sql-serverodbcusing-always-encrypted-with-the-odbc-drivermd"></a>1.&nbsp;[搭配使用一律加密 with the ODBC Driver for SQL Server](odbc/using-always-encrypted-with-the-odbc-driver.md)
 
-*更新日期︰ 2017年-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([下一步](#TitleNum_2))
+*更新日期︰ 2018年-01-22* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
 
-<!-- Source markdown line 119.  ms.author= "genemi".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 2792d149331f5326f6914721c86687d545685488 e363544e2c6f73277b7f2ca05b9269a4139d1fac  (PR=3663  ,  Filename=pdostatement-bindparam.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
-
-
-
-> [!NOTE]
-> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。
-
-**範例**
-
-此程式碼範例示範如何將繫結十進位值做為輸入參數。
-
-```php
-<?php
-$database = "Test";
-$server = "(local)";
-$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");
-
-// Assume TestTable exists with a decimal field
-$input = 9223372036854.80000;
-$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
-// by default it is PDO::PARAM_STR, rounding of a large input value may
-// occur if PDO::PARAM_INT is specified
-$stmt->bindParam(1, $input, PDO::PARAM_STR);
-$stmt->execute();
-```
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### <a name="2-nbsp-pdostatementbindvaluephppdostatement-bindvaluemd"></a>2.&nbsp;[PDOStatement::bindValue](php/pdostatement-bindvalue.md)
-
-*更新日期︰ 2017年-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_1) | [下一步](#TitleNum_3))
-
-<!-- Source markdown line 77.  ms.author= "genemi".  -->
+<!-- Source markdown line 524.  ms.author= "v-chojas".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c1d5ff4d5bfdbfbf1635cf14d71b4d583164075a 6cd5fc88860ae9ffca25ee15e8eeaeba29991fda  (PR=3663  ,  Filename=pdostatement-bindvalue.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
+<!-- git diff --ignore-all-space --unified=0 a52abae2a8f27c3b5bc411ef758610116a608f9f 352368eb269b98ab5ca3a9791fae2e70bf26277a  (PR=4686  ,  Filename=using-always-encrypted-with-the-odbc-driver.md  ,  Dirpath=docs\connect\odbc\  ,  MergeCommitSha40=82c9868b5bf95e5b0c68137ba434ddd37fc61072) -->
 
 
 
-> [!NOTE]
-> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。
+**在使用 SQLGetData 組件中擷取資料**
 
-**範例**
+SQL server ODBC 驅動程式 17 加密之前使用 SQLGetData 組件中無法擷取字元和二進位資料行。 可以進行只有一個呼叫 SQLGetData，以包含整個資料行的資料長度足夠的緩衝區。
 
-此程式碼範例示範如何將繫結十進位值做為輸入參數。
+**將資料傳送 SQLPutData 使用組件中**
 
-```php
-<?php
-$database = "Test";
-$server = "(local)";
-$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");
+插入或比較資料無法傳送 SQLPutData 使用組件中。 可以進行 SQLPutData 只有一個呼叫，以包含整個資料緩衝區。 Long 資料插入加密的資料行中，使用下一節中所述，與輸入的資料檔大量複製 API。
 
-// Assume TestTable exists with a decimal field
-$input = 9223372036854.80000;
-$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
-// by default it is PDO::PARAM_STR, rounding of a large input value may
-// occur if PDO::PARAM_INT is specified
-$stmt->bindValue(1, $input, PDO::PARAM_STR);
-$stmt->execute();
-```
+**加密的 money 和 smallmoney**
+
+加密**money**或**smallmoney**資料行不能為目標的參數，因為沒有任何特定 ODBC 資料類型並對應至這些型別，造成運算元類型衝突錯誤。
+
+**大量複製加密的資料行**
 
 
+使用[SQL 大量複製函數](odbc/../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)和**bcp**公用程式使用 永遠加密後 ODBC 驅動程式 17 for SQL Server 支援。 純文字 （插入上加密和解密上擷取） 和加密文字 （逐字傳輸） 可插入和擷取使用大量複製 （bcp_ *） 應用程式開發介面和**bcp**公用程式。
 
-&nbsp;
+- 要擷取密碼文字形式 （例如，用於大量載入不同的資料庫） varbinary （max）、 連接，而不`ColumnEncryption`選項 (或將它設定為`Disabled`) 和執行 BCP OUT 作業。
 
-&nbsp;
+- 插入和擷取純文字，並讓此驅動程式會明確地執行加密和解密為必要項目，設定`ColumnEncryption`至`Enabled`已足夠。 BCP API 的功能則未變更。
 
----
-
-<a name="TitleNum_3"/>
-
-### <a name="3-nbsp-sqlsrvpreparephpsqlsrv-preparemd"></a>3. &nbsp; [sqlsrv_prepare](php/sqlsrv-prepare.md)
-
-*更新日期︰ 2017年-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_2) | [下一步](#TitleNum_4))
-
-<!-- Source markdown line 219.  ms.author= "genemi".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 7811e459efec90ef79340375d5fb34364130466b 3d28b3d320dc7fe5df12300da5cb9579abf6839a  (PR=3663  ,  Filename=sqlsrv-prepare.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
-
-
-
-> [!NOTE]
-> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。
-
-**範例**
-
-此程式碼範例示範如何將繫結十進位值做為輸入參數。
-
-```php
-<?php
-$serverName = "(local)";
-$connectionInfo = array("Database"=>"YourTestDB");
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-if ($conn === false) {
-    echo "Could not connect.\n";
-    die(print_r(sqlsrv_errors(), true));
-}
-
-// Assume TestTable exists with a decimal field
-$input = "9223372036854.80000";
-$params = array($input);
-$stmt = sqlsrv_prepare($conn, "INSERT INTO TestTable (DecimalCol) VALUES (?)", $params);
-sqlsrv_execute($stmt);
-
-sqlsrv_free_stmt($stmt);
-sqlsrv_close($conn);
-
-?>
-```
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-### <a name="4-nbsp-sqlsrvqueryphpsqlsrv-querymd"></a>4. &nbsp; [sqlsrv_query](php/sqlsrv-query.md)
-
-*更新日期︰ 2017年-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_3))
-
-<!-- Source markdown line 163.  ms.author= "genemi".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 07a84878c07af0b6ad7e247337be5b4567ce03c3 127af26a8a054a45dda51d90f43f08652949ba18  (PR=3663  ,  Filename=sqlsrv-query.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
-
-
-
-> [!NOTE]
-> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。
-
-**範例**
-
-此程式碼範例示範如何將繫結十進位值做為輸入參數。
-
-```php
-<?php
-$serverName = "(local)";
-$connectionInfo = array("Database"=>"YourTestDB");
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-if ($conn === false) {
-     echo "Could not connect.\n";
-     die(print_r(sqlsrv_errors(), true));
-}
-
-// Assume TestTable exists with a decimal field
-$input = "9223372036854.80000";
-$params = array($input);
-$stmt = sqlsrv_query($conn, "INSERT INTO TestTable (DecimalCol) VALUES (?)", $params);
-
-sqlsrv_free_stmt($stmt);
-sqlsrv_close($conn);
-
-?>
-```
+- 若要在 varbinary （max） 的形式 （例如上方處擷取） 插入加密文字，請設定`BCPMODIFYENCRYPTED`選項設定為 TRUE，並執行 BCP IN 作業。 為了讓未產生資料，請確認目的地資料行的 CEK 是原先取得從中加密文字相同。
 
 
 
@@ -282,47 +120,45 @@ sqlsrv_close($conn);
 
 
 
-
-## <a name="similar-articles"></a>類似的文章
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>新的或更新的發行項相關的類似文件
 
 本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-- [新文章 + 更新文章 (3+14)：**SQL 的進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章 + 更新文章 (1+0)：**Analysis Services for SQL** 文件](../analysis-services/new-updated-analysis-services.md)
-- [新文章 + 更新文章 (87+0)：**SQL 的分析平台系統**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章 + 更新文章 (5+4)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
-- [新文章 + 更新文章 (0+1)：**SQL 的資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
-- [新文章 + 更新文章 (2+2)：**SQL 的 Integration Services** 文件](../integration-services/new-updated-integration-services.md)
-- [新文章 + 更新文章 (10+9)：**SQL 適用的 Linux** 文件](../linux/new-updated-linux.md)
-- [新文章 + 更新文章 (2+4)：**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
-- [新文章 + 更新文章 (4+2)：**SQL 的 Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
-- [新文章 + 更新文章 (0+1)：**SQL 範例**文件](../sample/new-updated-sample.md)
-- [新文章 + 更新文章 (21+0)：**SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章 + 更新文章 (5+1)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
-- [新文章 + 更新文章 (0+1)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新文章 + 更新文章 (1+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
-- [新文章 + 更新文章 (0+1)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新文章 + 更新文章 (0+2)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主旨區域，*不要*new 或最近更新發行項
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
+
+- [新 + 更新 (1 + 3):&nbsp; **Advanced Analytics sql**文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新 + 更新 (0 + 1):&nbsp; **Analytics Platform System sql**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新 + 更新 (0 + 1):&nbsp; **連接到 SQL**文件](../connect/new-updated-connect.md)
+- [新 + 更新 (0 + 1):&nbsp; **sql 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新 + 更新 (12 + 1): **sql Integration Services**文件](../integration-services/new-updated-integration-services.md)
+- [新 + 更新 (6 + 2):&nbsp; **sql Linux**文件](../linux/new-updated-linux.md)
+- [新 + 更新 (15 + 0):**適用於 SQL PowerShell**文件](../powershell/new-updated-powershell.md)
+- [新 + 更新 (2 + 9):&nbsp; **關聯式資料庫供 SQL**文件](../relational-databases/new-updated-relational-databases.md)
+- [新 + 更新 (1 + 0):&nbsp; **Reporting Services SQL**文件](../reporting-services/new-updated-reporting-services.md)
+- [新 + 更新 (1 + 1):&nbsp; **SQL 作業 Studio**文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新 + 更新 (1 + 1):&nbsp; **Microsoft SQL Server**文件](../sql-server/new-updated-sql-server.md)
+- [新 + 更新 (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)**文件](../ssdt/new-updated-ssdt.md)
+- [新 + 更新 (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)**文件](../ssms/new-updated-ssms.md)
+- [新 + 更新 (0 + 2):&nbsp; **TRANSACT-SQL**文件](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主旨區域執行*不*有任何新的或最近的更新發行項
+
 
 - [新文章 + 更新文章 (0+0)：**SQL 資料移轉小幫手 (DMA)** 文件](../dma/new-updated-dma.md)
-- [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
-- [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
-- [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)
+- [新 + 更新 (0 + 0): **ActiveX Data Objects (ADO) 的 SQL**文件](../ado/new-updated-ado.md)
+- [新文章 + 更新文章 (0+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新 + 更新 (0 + 0): **SQL 的 Data Quality Services**文件](../data-quality-services/new-updated-data-quality-services.md)
+- [新 + 更新 (0 + 0):**資料採礦延伸模組 (DMX)，sql**文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
-- [新文章 + 更新文章 (0+0)：**SQL 多維度運算式 (MDX)** 文件](../mdx/new-updated-mdx.md)
-- [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
-- [新文章 + 更新文章 (0+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
+- [新 + 更新 (0 + 0):**多維度運算式 (MDX) 的 SQL**文件](../mdx/new-updated-mdx.md)
+- [新 + 更新 (0 + 0): **ODBC （開放式資料庫連接） 的 SQL**文件](../odbc/new-updated-odbc.md)
+- [新 + 更新 (0 + 0):**範例 sql**文件](../sample/new-updated-sample.md)
+- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)**文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
-- [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
+- [新 + 更新 (0 + 0): **sql XQuery**文件](../xquery/new-updated-xquery.md)
 
 

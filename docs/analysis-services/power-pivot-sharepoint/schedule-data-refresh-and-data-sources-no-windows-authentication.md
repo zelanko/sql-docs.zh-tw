@@ -5,29 +5,27 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c165409874271ef7ab60428976f74212a3b3f431
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9dadc46f53cff296a0332069165a9faa876e6180
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>排程資料重新整理與資料來源-沒有 Windows 驗證
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題說明的工作流程[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint 排程資料重新，可以使用資料來源**不**支援 Windows 驗證。 例如，Oracle 或 IDM DB2 資料來源。 雖然本主題的圖例和步驟參考的是 Oracle 資料來源，但是相同的工作流程也適用於其他資料來源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主題描述 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 排程資料重新整理的工作流程，而且這項作業可以使用「不」  支援 Windows 驗證的資料來源。 例如，Oracle 或 IDM DB2 資料來源。 雖然本主題的圖例和步驟參考的是 Oracle 資料來源，但是相同的工作流程也適用於其他資料來源。  
   
 ||  
 |-|  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 -   **(4)** PowerePivot 活頁簿會使用 Oracle 資料。 活頁簿重新整理設定會指定要將目標應用程式 **(2)** 用於認證的資料來源連接。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式存在。  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  在 [管理]  頁面上，按一下 [新增] 。 ![as_powerpivot_refresh_sss_new_target_application](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application")  
   
-4.  在 [建立新的 Secure Store 目標應用程式]  頁面上，設定下列值：  
+4.  在 [建立新的 Secure Store 目標應用程式] 頁面上，設定下列值：  
   
     -   **目標應用程式識別碼** ：PowerPivotDataRefresh。  
   
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
 10. 新的目標應用程式識別碼就會加入至清單。 選取目標應用程式識別碼，然後按一下**設定認證**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")。  
   
-11. 輸入 Windows 使用者名稱和 Windows 密碼，然後按一下 [確定] 。  
+11. 輸入 Windows 使用者名稱和 Windows 密碼，然後按一下 [確定]。  
   
 ## <a name="to-create-a-target-application-id-that-uses-oracle-credentials"></a>若要建立使用 Oracle 認證的目標應用程式識別碼  
   
@@ -95,7 +93,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  在**管理**頁面上，按一下**新增**![as_powerpivot_refresh_sss_new_target_application](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application").  
   
-4.  在 [建立新的 Secure Store 目標應用程式]  頁面上，設定下列值：  
+4.  在 [建立新的 Secure Store 目標應用程式] 頁面上，設定下列值：  
   
     -   **目標應用程式識別碼：** OracleAuthentication。  
   
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/08/2017
   
 10. 新的目標應用程式識別碼就會加入至清單。 選取目標應用程式識別碼，然後按一下**設定認證**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")。  
   
-11. 輸入 Oracle 使用者識別碼和 Oracle 密碼，然後按一下 [確定] 。  
+11. 輸入 Oracle 使用者識別碼和 Oracle 密碼，然後按一下 [確定]。  
   
  如需詳細資訊，請參閱 [Use Secure Store with SQL Server Authentication (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (搭配 SQL Server 驗證使用 Secure Store (SharePoint Server 2013)) (http://technet.microsoft.com/library/gg298949.aspx) 中的＜To Create a target application for SQL Server Authentication＞ (建立 SQL Server 驗證的目標應用程式) 一節。  
   
@@ -141,7 +139,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  瀏覽至您的活頁簿中[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]組件庫，然後按一下**管理資料重新整理**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
   
-2.  如果您看見 [資料重新整理記錄]  頁面，請按一下 [設定排程] 。  
+2.  如果您看見 [資料重新整理記錄] 頁面，請按一下 [設定排程]。  
   
 3.  按一下 [啟用] 。  
   

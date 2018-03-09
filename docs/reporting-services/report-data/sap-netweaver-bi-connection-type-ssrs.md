@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3a004db77f5c137742542a729ced6e79c708c43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22a2d5eec19c545771fb5791b37aa50b90124b94
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 連接類型 (SSRS)
   若要在報表中加入來自 SAP NetWeaver® Business Intelligence 外部資料來源的資料，您必須具有以 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型的建構基礎為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]的資料延伸模組。  
@@ -91,15 +89,15 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
 |**屬性**|**型別**|**描述或預期的值**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**物件**|指定欄位的資料值。|  
+|**ReplTest1**|**物件**|指定欄位的資料值。|  
 |**IsMissing**|**布林**|指出在產生的資料集裡是否有找到欄位。|  
-|**FormattedValue**|**字串**|傳回關鍵數值的格式化值。|  
-|**BackgroundColor**|**字串**|傳回資料庫中為欄位定義的背景色彩。|  
-|**Color**|**字串**|傳回資料庫中為項目定義的前景色彩。|  
+|**FormattedValue**|**String**|傳回關鍵數值的格式化值。|  
+|**BackgroundColor**|**String**|傳回資料庫中為欄位定義的背景色彩。|  
+|**Color**|**String**|傳回資料庫中為項目定義的前景色彩。|  
 |**索引鍵**|**物件**|傳回層級的索引鍵。|  
 |**LevelNumber**|**Integer**|如果是父子式階層，則會傳回層級或維度編號。|  
-|**ParentUniqueName**|**字串**|如果是父子式階層，會傳回父層級的完整名稱。|  
-|**UniqueName**|**字串**|傳回層級的完整名稱。 例如，某一位員工的 **UniqueName** 值可能是 *[0D_Company].[10D_Department].[11]*。|  
+|**ParentUniqueName**|**String**|如果是父子式階層，會傳回父層級的完整名稱。|  
+|**UniqueName**|**String**|傳回層級的完整名稱。 例如，某一位員工的 **UniqueName** 值可能是 *[0D_Company].[10D_Department].[11]*。|  
   
  如需在運算式中使用欄位及欄位屬性的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
@@ -135,7 +133,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
- [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
   

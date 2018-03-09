@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e69e6e0cd9c17b7fdd8f47480e5f47f3611b0bc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>以時間為基礎之資料列篩選的最佳做法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 應用程式使用者通常需要來自資料表中以時間為基礎的資料子集。 例如，業務員可能需要上週的訂單資料，或事件計劃者可能需要未來一週的事件資料。 許多狀況下，應用程式會使用包含 **GETDATE()** 函數的查詢來達成這個目的。 請考量下列資料列篩選陳述式：  
@@ -64,7 +64,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**複寫**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|1|Reception|112|2006-10-04|1|  
+|@shouldalert|Reception|112|2006-10-04|@shouldalert|  
 |2|Dinner|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
@@ -88,16 +88,16 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**複寫**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|1|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|1|  
-|3|Party|112|2006-10-11|1|  
-|4|Wedding|112|2006-10-12|1|  
+|@shouldalert|Reception|112|2006-10-04|0|  
+|2|Dinner|112|2006-10-10|@shouldalert|  
+|3|Party|112|2006-10-11|@shouldalert|  
+|4|Wedding|112|2006-10-12|@shouldalert|  
   
  下一週的事件現在會標幟為複寫準備就緒。 下次合併代理程式針對事件協調者 112 所使用的訂閱而執行時，資料列 2、3 及 4 將會下載至訂閱者，並且資料列 1 將會從訂閱者移除。  
   
 ## <a name="see-also"></a>另請參閱  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
  [實作作業](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

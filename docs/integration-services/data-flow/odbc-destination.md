@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
   ODBC 目的地會將資料大量載入到 ODBC 支援的資料庫資料表。 ODBC 目的地使用 ODBC 連接管理員來連接到資料來源。  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="options"></a>選項。  
   
-#### <a name="connection-manager"></a>[ODBC 目的地編輯器]  
+#### <a name="connection-manager"></a>[ODBC 來源編輯器]  
  從清單中選取現有的 ODBC 連接管理員，或按一下 [新增] 建立新的連接。 此連接可以指向任何 ODBC 支援的資料庫。  
   
 #### <a name="new"></a>新增  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="data-access-mode"></a>資料存取模式  
  選取將資料載入目的地的方法。 下表將顯示這些選項：  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |資料表名稱 - 批次|若要將 ODBC 目的地設定成以批次模式運作，請選取此選項。 當您選取此選項時，可以使用下列選項：|  
 ||**資料表或檢視的名稱**：從清單中選取可用的資料表或檢視表。<br /><br /> 此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (\*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。<br /><br /> **批次大小**：輸入大量載入的批次大小。 這是當做批次載入的資料列數目。|  
@@ -157,7 +158,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="inputoutput"></a>輸入/輸出  
  檢視資料來源的名稱。  
   
-#### <a name="column"></a>資料行  
+#### <a name="column"></a>「資料行」  
  未使用。  
   
 #### <a name="error"></a>錯誤  
@@ -166,7 +167,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="truncation"></a>截斷  
  選取 ODBC 目的地應該如何處理流程中的截斷：忽略失敗、重新導向資料列，或使元件失效。  
   
-#### <a name="description"></a>說明  
+#### <a name="description"></a>描述  
  檢視錯誤的描述。  
   
 #### <a name="set-this-value-to-selected-cells"></a>將這個值設定到選取的資料格  

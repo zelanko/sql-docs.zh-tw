@@ -8,24 +8,27 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: spatial indexes [SQL Server]
+helpviewer_keywords:
+- spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d312b518c0dd48cbdf2a536ee02391ba77ba447f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97c9aa05a5dc7eba5a47a616f15ba5e4faca0b16
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援空間資料和空間索引。 *「空間索引」* (Spatial Index) 是一種類型的擴充索引，可讓您建立空間資料行的索引。 空間資料行是包含空間資料類型資料的資料表資料行，例如 **geometry** 或 **geography**。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援空間資料和空間索引。 *「空間索引」* (Spatial Index) 是一種類型的擴充索引，可讓您建立空間資料行的索引。 空間資料行是包含空間資料類型資料的資料表資料行，例如 **geometry** 或 **geography**。  
   
 > [!IMPORTANT]  
 >  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中導入的空間功能 (包括影響空間索引的功能) 的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 >  當資料庫相容性層級設定為 100 以下時，空間索引的方格密度會顯示在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目錄檢視的 level_1_grid、level_2_grid、level_3_grid 和 level_4_grid 資料行中。 **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** 鑲嵌式配置選項不會填入這些資料行。 使用自動方格選項時，sys.spatial_index_tessellations 目錄檢視的這些資料行會包含 **NULL** 值。  
   
 ###  <a name="tessellation"></a> 鑲嵌  
- 將索引空間分解成方格階層之後，空間索引會從空間資料行讀取資料 (逐列讀取)。 在讀取空間物件 (或執行個體) 的資料之後，空間索引會針對該物件執行 *「鑲嵌程序」* (Tessellation Process)。 鑲嵌程序會將此物件納入方格階層中，方式是將此物件與它所接觸的一組方格資料格 (*「接觸的資料格」*(touched cell)) 產生關聯。 從方格階層的層級 1 開始，鑲嵌程序就會跨越此層級繼續進行 *「廣度優先」* (Breadth First)。 此程序可能繼續到所有的四個層級 (一次一個層級)。  
+ 將索引空間分解成方格階層之後，空間索引會從空間資料行讀取資料 (逐列讀取)。 在讀取空間物件 (或執行個體) 的資料之後，空間索引會針對該物件執行 *「鑲嵌程序」* (Tessellation Process)。 鑲嵌程序會將此物件納入方格階層中，透過的方式是將此物件與它所接觸的一組方格資料格 (「接觸的資料格」(Touched Cell)) 建立關聯。 從方格階層的層級 1 開始，鑲嵌程序就會跨越此層級繼續進行 *「廣度優先」* (Breadth First)。 此程序可能繼續到所有的四個層級 (一次一個層級)。  
   
  鑲嵌程序的輸出是一組接觸的資料格，這些資料格會記錄在物件的空間索引內。 藉由參考這些記錄的資料格，空間索引就可以在同時儲存於索引內的空間資料行中，在相對於其他物件的空間內找出此物件。  
   
@@ -104,7 +107,7 @@ ms.lasthandoff: 11/17/2017
   
  例如，以上圖為例，圖中顯示一個八邊形完全納入層級 1 方格的資料格 15。 在此圖中，已經鑲嵌資料格 15，將此八邊形分解成九個層級 2 的資料格。 這個圖假設每個物件的資料格限制為 9 以上 (含)。 但是，如果每個物件的資料格限制為 8 以下 (含)，將不會鑲嵌資料格 15，而且此物件只會計算該資料格 15。  
   
- 根據預設，每一物件的資料格限制為 16 個資料格，這會在大多數空間索引的空間和精確度之間提供令人滿意的取捨。 但是， [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式支援 CELLS_PER_OBJECT**=***n* 子句，該子句可讓您指定 1 和 8192 之間 (含) 的每個物件的資料格限制。  
+ 根據預設，每一物件的資料格限制為 16 個資料格，這會在大多數空間索引的空間和精確度之間提供令人滿意的取捨。 但是，[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式支援 CELLS_PER_OBJECT**=***n* 子句，該子句可讓您指定 1 和 8192 之間 (含) 的每個物件的資料格限制。  
   
 > [!NOTE]  
 >  空間索引的 **cells_per_object** 設定可以在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目錄檢視中看到。  
@@ -133,7 +136,7 @@ ms.lasthandoff: 11/17/2017
 >  您可以使用 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句來明確指定這個鑲嵌式配置。  
   
 ##### <a name="the-bounding-box"></a>週框方塊  
- 幾何資料會佔據可以是無限的平面。 但是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空間索引需要有限的空間。 若要建立要分解的有限空間，幾何方格鑲嵌式配置需要矩形 *「週框方塊」*(Bounding Box)。 週框方塊是由四個座標 **(***x-min***,***y-min***)** 和 **(***x-max***,***y-max***)**所定義，這些會儲存為空間索引的屬性。 這些座標表示以下項目：  
+ 幾何資料會佔據可以是無限的平面。 但是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空間索引需要有限的空間。 若要建立要分解的有限空間，幾何方格鑲嵌式配置需要矩形 *「週框方塊」*(Bounding Box)。 週框方塊是由四個座標 **(***x-min***,***y-min***)** 和 **(***x-max***,***y-max***)** 所定義，這些會儲存為空間索引的屬性。 這些座標表示以下項目：  
   
 -   *x-min* 是週框方塊左下角的 X 座標。  
   

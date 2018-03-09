@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +19,20 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], how-to topics
 - Mining Model Viewer [Analysis Services]
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 61bcf404f76a25b4003bbf96be87a2191c903b0f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 49b33d951d759ea941ad8944db5f9e515698bfc7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>採礦模型檢視器工作和使用說明
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包含數個工具可讓您瀏覽採礦模型。 下列主題提供逐步指示，教您如何完成在設計師中使用 [採礦模型檢視器] 索引標籤的特定工作。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師包含數個工具，您可以用來瀏覽採礦模型。 下列主題提供逐步指示，教您如何完成在設計師中使用 [採礦模型檢視器] 索引標籤的特定工作。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -41,20 +40,20 @@ ms.lasthandoff: 12/08/2017
   
 -   [複製採礦模型的檢視](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)  
   
--   [在相依性網路中尋找特定節點](../../analysis-services/data-mining/find-a-specific-node-in-a-dependency-network.md)  
+-   [相依性網路中尋找特定節點](../../analysis-services/data-mining/find-a-specific-node-in-a-dependency-network.md)  
   
--   [篩選關聯規則模型中的規則](../../analysis-services/data-mining/filter-a-rule-in-an-association-rules-model.md)  
+-   [篩選條件的規則，關聯規則模型](../../analysis-services/data-mining/filter-a-rule-in-an-association-rules-model.md)  
   
--   [篩選關聯規則模型中的項目集](../../analysis-services/data-mining/filter-an-itemset-in-an-association-rules-model.md)  
+-   [篩選項目集在關聯規則模型](../../analysis-services/data-mining/filter-an-itemset-in-an-association-rules-model.md)  
   
--   [鑽研採礦模型的案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)  
+-   [從採礦模型鑽研到案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)  
   
--   [檢視時間序列模型的公式 &#40;資料採礦&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [檢視時間序列公式模式 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [變更資料採礦檢視器中使用的色彩](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)   
+## <a name="see-also"></a>另請參閱  
+ [基本資料採礦教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)   
  [採礦模型檢視器 &#40; 資料採礦模型設計工具 &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
   
   

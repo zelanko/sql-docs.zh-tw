@@ -8,26 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff62bf4280fb1e01c6df47e2f748038ec92378fd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="property-element-csdlbi"></a>Property 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在 CSDLBI Property 元素是複雜類型，提供的 CSDL Property 元素，以支援商業智慧資料模型的新增項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+CSDLBI 中的 Property 元素是複雜類型，它為 CSDL Property 元素提供了新增功能，以支援商業智慧資料模型。  
   
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 CSDLBI Property 元素的元素和屬性。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="groupingbehavior"></a>GroupingBehavior  
  下表列出 GroupingBehavior 簡單類型的值。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |GroupOnValue|依 xthe 屬性的值分組。|  
 |GroupOnEntityKey|依實體索引鍵分組。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="stability"></a>Stability  
  下表列出的值**穩定性**簡單類型。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Stable|屬性在重新整理作業之間會維持不變。|  
 |RowNumber|屬性包含資料列號碼。|  
@@ -134,7 +134,7 @@ ms.lasthandoff: 12/08/2017
   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [CSDL 之 BI 註解的技術參考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Csdl 的 BI 註解的技術參考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

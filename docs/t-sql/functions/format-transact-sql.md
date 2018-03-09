@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FORMAT_TSQL
 - FORMAT
-dev_langs: TSQL
-helpviewer_keywords: FORMAT function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 43d702accc0611030c1c7ad0eda74d456711b694
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,12 +48,12 @@ FORMAT ( value, format [, culture ] )
  *value*  
  要格式化之受支援資料類型的運算式。 如需有效類型的清單，請參閱下面＜備註＞一節中的表格。  
   
- *格式*  
+ *<格式>*  
  **nvarchar**格式模式。  
   
  *格式*引數必須包含有效的.NET Framework 格式字串，以標準格式字串 （例如，"C"或"D"），或作為自訂字元模式的日期與數值 (例如，"MMMM DD，yyyy (dddd)"). 不支援複合格式。 如需這些格式模式的完整說明，請參閱在一般字串格式、 自訂日期和時間格式，以及自訂數字格式的.NET Framework 文件。 很好的起點是主題"[格式類型](http://go.microsoft.com/fwlink/?LinkId=211776)。 」  
   
- *文化特性*  
+ *culture*  
  選擇性**nvarchar**引數指定文化特性。  
   
  如果*文化特性*未提供引數，會使用目前的工作階段的語言。 此語言是以 SET LANGUAGE 陳述式隱含或明確加以設定。 *文化特性*做為引數;.NET Framework 所支援的任何文化特性並不限於使用明確支援的語言[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果*文化特性*引數無效，FORMAT 會引發錯誤。  
@@ -73,7 +76,7 @@ FORMAT ( value, format [, culture ] )
   
  下表列出的可接受的資料類型*值*以及其.NET Framework 對應對等型別引數。  
   
-|類別目錄|類型|.NET 類型|  
+|類別目錄|型別|.NET 類型|  
 |--------------|----------|---------------|  
 |數值|bigint|Int64|  
 |數值|int|Int32|  
@@ -210,7 +213,9 @@ SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

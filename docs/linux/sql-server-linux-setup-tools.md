@@ -1,29 +1,29 @@
 ---
 title: "Linux 上安裝 SQL Server 命令列工具 |Microsoft 文件"
-description: "本主題描述如何在 Linux 上安裝 SQL Server 工具。"
+description: "本文說明如何在 Linux 上安裝 SQL Server 工具。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 410d3c7c51e1b5fc0824da8c5d3f788ccb77f104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 和 bcp 的 SQL Server 命令列工具 Linux 上安裝
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 下列步驟安裝命令列工具、 Microsoft ODBC 驅動程式，以及它們的相依性。 **Mssql 工具**封裝包含：
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/01/2017
 - [macOS](#macos)
 - [Docker](#docker)
 
-本主題描述如何安裝命令列工具。 如果您要尋找的使用方式的範例**sqlcmd**或**bcp**，請參閱[連結](#next-steps)本主題的結尾。
+本文說明如何安裝命令列工具。 如果您要尋找的使用方式的範例**sqlcmd**或**bcp**，請參閱[連結](#next-steps)本主題的結尾。
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>RHEL 7 上安裝工具
 
@@ -180,15 +180,18 @@ ms.lasthandoff: 12/01/2017
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>MacOS 上安裝工具
+## <a id="macos"></a> MacOS 上安裝工具
 
 預覽**sqlcmd**和**bcp** macOS 上現已提供。 如需詳細資訊，請參閱[公告](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)。
+
+*安裝[Homebrew](https://brew.sh)如果您還沒有它：*
+
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 若要針對 Mac El Capitan 和利也安裝工具，使用下列命令：
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew untap microsoft/mssql-preview if you installed the preview version 
+# brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install --no-sandbox mssql-tools
@@ -196,7 +199,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 從 SQL Server 2017 CTP 2.0 開始，SQL Server 命令列工具隨附的 Docker 映像。 如果您附加至影像的互動式命令提示字元中，您可以在本機執行工具。
 
@@ -206,7 +209,7 @@ brew install --no-sandbox mssql-tools
 
 下表提供最新工具封裝的位置：
 
-| 工具套件 | Version | 下載 |
+| 工具套件 | 版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 工具套件 | 14.0.5.0-1 | [mssql 工具 RPM 套件](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | SLES RPM 工具套件 | 14.0.5.0-1 | [mssql 工具 RPM 套件](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -215,7 +218,7 @@ brew install --no-sandbox mssql-tools
 
 這些封裝相依於**msodbcsql**，而且必須先安裝。 **Msodbcsql**套件也具有相依性  **unixODBC 對內**(RPM) 或**unixodbc dev** (Debian)。 位置**msodbcsql**下表列出封裝：
 
-| msodbcsql 封裝 | Version | 下載 |
+| msodbcsql 封裝 | 版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM msodbcsql 封裝 | 13.1.6.0-1 | [msodbcsql RPM 套件](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM msodbcsql 封裝 | 13.1.6.0-1 | [msodbcsql RPM 套件](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -261,7 +264,7 @@ brew install --no-sandbox mssql-tools
 
 ## <a name="next-steps"></a>後續的步驟
 
-如需如何使用的範例**sqlcmd**若要連接到 SQL Server，並建立資料庫，請參閱下列快速的其中一個開始教學課程：
+如需如何使用的範例**sqlcmd**若要連接到 SQL Server，並建立資料庫，請參閱下列快速入門：
 
 - [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)

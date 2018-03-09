@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b0796abf5c9b5c2e0c0f0d56459adc59c4cc6297
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: baf43094e4e937cd9e11d40dd1c9f02d839b4448
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---count-function"></a>報表產生器函式 - Count 函式
   傳回運算式指定的非 Null 值的計數 (在給定範圍的內容中評估)。  
@@ -51,7 +49,7 @@ Count(expression, scope, recursive)
 ## <a name="return-type"></a>傳回類型  
  傳回 **Integer**。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  *scope* 的值必須是字串常數，而且不得為運算式。 如果是未指定其他彙總的外部彙總， *scope* 必須參考目前的範圍或是包含的範圍。 如果是彙總的彙總，巢狀彙總可以指定子範圍。  
   
  *Expression* 可以包含巢狀彙總函式的呼叫，其中包含下列例外和條件：  
@@ -70,7 +68,7 @@ Count(expression, scope, recursive)
   
  範例  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  下列程式碼範例顯示的運算式會針對預設範圍及父群組範圍，計算 `Size` 的非 Null 值數目。 運算式會加到屬於子群組 `GroupbySubcategory`的資料列中的資料格。 父群組是 `GroupbyCategory`。 運算式會先顯示 `GroupbySubcategory` (預設範圍) 的結果，再顯示 `GroupbyCategory` (父群組範圍) 的結果。  
   
 > [!NOTE]  

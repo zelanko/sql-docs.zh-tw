@@ -1,32 +1,31 @@
 ---
-title: "在 DirectQuery 模式 (SSAS 2016) 中的 DAX 公式相容性 |Microsoft 文件"
+title: "在 DirectQuery 模式中的 DAX 公式相容性 |Microsoft 文件"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ba414696dffec7b1477487e19b0ff4e45f6213e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92c5801fe05dfa19e136e15f15227e50af64f769
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery 模式中的 DAX 公式相容性 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]針對表格式 1200年 （含） 以上模型在 DirectQuery 模式中，在舊版本的許多功能限制不再適用。 特別針對 DAX 公式︰
+# <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式中的 DAX 公式相容性 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+針對表格式 1200年 （含） 以上模型在 DirectQuery 模式中，在舊版本的許多功能限制不再適用。 特別針對 DAX 公式︰
 
 - DirectQuery 現在會產生較簡單的查詢，提供更佳的效能。
 - 在 DirectQuery 模式中現在支援資料列層級安全性 (RLS)。
@@ -350,7 +349,7 @@ DirectQuery 模式會將 DAX TRIM 函數轉譯成 SQL 陳述式 `LTRIM(RTRIM(<co
 
 
 ## <a name="see-also"></a>另請參閱  
-[DirectQuery 模式 (SSAS 表格式)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery 模式](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

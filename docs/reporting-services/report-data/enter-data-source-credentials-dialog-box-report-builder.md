@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,21 +16,21 @@ f1_keywords:
 - sql13.rtp.rptdesigner.runtimecredentials.f1
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f138527af00fdc334b316feb07071c356da840a8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 986fa8f8fa16b75d8a565ec1e9a18bd97d0ce45a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>輸入資料來源認證對話方塊 (報表產生器)
   使用 [輸入資料來源認證] 對話方塊，即可提供認證，讓您可以從資料來源擷取資料。  
   
 ## <a name="options"></a>選項。  
- **使用者名稱**  
+ **User name**  
  輸入使用者名稱，即可登入資料來源。  
   
  **密碼**  

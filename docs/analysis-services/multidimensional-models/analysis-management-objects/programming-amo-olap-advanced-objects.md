@@ -1,38 +1,37 @@
 ---
 title: "設計 AMO OLAP 進階物件 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 924f2a618b029d3724a2435fa1a27287d454247e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>設計 AMO OLAP 進階物件的程式
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主題會說明分析管理物件 (AMO) 程式設計詳細資料的 OLAP 進階物件。 本主題包含下列幾節：  
+  本主題說明 OLAP 進階物件的分析管理物件 (AMO) 程式設計詳細資料。 本主題包含下列幾節：  
   
 -   [動作物件](#Action)  
   
@@ -44,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [翻譯物件](#Transl)  
   
-##  <a name="Action"></a>動作物件  
+##  <a name="Action">動作物件</a>  
  動作類別是用以在瀏覽 Cube 的某些區域時，建立主動式回應。 動作物件可以使用 AMO 來定義，但是是從瀏覽資料的用戶端應用程式來使用這些物件。 動作可以屬於不同類型，而且必須據其類型來建立。 動作可以是：  
   
 -   鑽研動作，該動作會傳回一組資料列，這些資料列表示動作發生所在之 Cube 中選定資料格的基礎資料。  
@@ -192,7 +191,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI"></a>Kpi 物件  
+##  <a name="KPI">Kpi 物件</a>  
  關鍵效能指標 (KPI) 是用來評估商務成就的計算集合，這些計算與 Cube 中的量值群組相關聯。 <xref:Microsoft.AnalysisServices.Kpi> 物件可以使用 AMO 來定義，但是是從瀏覽資料的用戶端應用程式來使用這些物件。  
   
  建立 <xref:Microsoft.AnalysisServices.Kpi> 物件需要下列步驟：  
@@ -351,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp"></a>檢視方塊物件  
+##  <a name="Persp">檢視方塊物件</a>  
  <xref:Microsoft.AnalysisServices.Perspective> 物件可以使用 AMO 來定義，但是是從瀏覽資料的用戶端應用程式來使用這些物件。  
   
  建立 <xref:Microsoft.AnalysisServices.Perspective> 物件需要下列步驟：  
@@ -414,7 +413,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC"></a>ProactiveCaching 物件  
+##  <a name="PC">ProactiveCaching 物件</a>  
  <xref:Microsoft.AnalysisServices.ProactiveCaching> 物件可由 AMO 定義。  
   
  建立 <xref:Microsoft.AnalysisServices.ProactiveCaching> 物件需要下列步驟：  
@@ -471,7 +470,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a>翻譯物件  
+##  <a name="Transl">翻譯物件</a>  
  翻譯物件可以使用 AMO 來定義，但是是從瀏覽資料的用戶端應用程式來使用這些物件。 翻譯物件是非常容易撰寫程式的物件。 物件標題的翻譯是由「地區設定識別碼」與「已翻譯標題」配對所提供。 任何標題都可以啟用多個翻譯。 翻譯可以提供給大部分的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件使用，例如維度、屬性、階層、Cube、量值群組、量值等等。  
   
  下列程式碼範例為屬性 Product Name 的名稱提供西班牙文的翻譯。  
@@ -490,7 +489,7 @@ static public void CreateTranslations(Database db)
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP 類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   

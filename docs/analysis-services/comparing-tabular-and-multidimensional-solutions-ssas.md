@@ -5,29 +5,28 @@ ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比較表格式和多維度解決方案
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services 提供多種方法，以建立商業智慧語意模型： 表格式、 多維度和 Power Pivot for SharePoint。
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services 提供多種方法，以建立商業智慧語意模型： 表格式、 多維度和 Power Pivot for SharePoint。
   
  利用多種方法可讓您視不同的商務和使用者需求，量身訂做模型化體驗。 多維度是建基於開放標準的成熟技術，且受到許多 BI 軟體廠商的愛戴，但很難駕馭。 表格式提供許多開發人員認為更具直覺性的關聯式模型化方法。 Power Pivot 甚至更加簡易，除了在 Excel 中提供視覺化的資料模型外，還透過 SharePoint 提供伺服器支援。  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 12/08/2017
   
  若要檢視您可以匯入至每個模型中的外部資料來源清單，請參閱下列主題：  
   
--   [支援的資料來源 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+-   [支援的資料來源](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
 
 -   [支援的資料來源 &#40;SSAS - 多維度&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
@@ -152,7 +151,7 @@ ms.lasthandoff: 12/08/2017
   
 -   多維度模型資料庫可以使用維度和資料格層級安全性，使用以角色為基礎的權限。  
 
--   系統會使用 SharePoint 權限在檔案層級維護[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿的安全。  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿的安全。  
   
  [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿可以還原成表格式模式伺服器。 一旦還原檔案之後，它是與 SharePoint 分離，好讓您使用所有表格式模型化功能，包括資料列層級安全性。  
   
@@ -169,7 +168,7 @@ ms.lasthandoff: 12/08/2017
  
  如果您正在使用 Reporting Services，則報表功能和可用性會因版本和伺服器模式而異。 因此，您想要建立的報表類型可能會影響您選擇安裝的伺服器模式。  
   
- SharePoint 2010 伺服器陣列中部署的報表伺服器上有提供[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)](也就是在 SharePoint 中執行的 Reporting Services 撰寫工具)。 唯一可以搭配此報表使用的資料來源類型為 Analysis Services 表格式模型資料庫或 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿。 這表示，您必須擁有表格式模式伺服器或 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 伺服器，才能裝載此報表類型所使用的資料來源。 您不能將多維度模型當做 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表的資料來源使用。 您必須建立 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] BI 語意模型連線或 Reporting Services 共用資料來源，作為 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表的資料來源使用。  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)](也就是在 SharePoint 中執行的 Reporting Services 撰寫工具)。 唯一可以搭配此報表使用的資料來源類型為 Analysis Services 表格式模型資料庫或 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿。 這表示，您必須擁有表格式模式伺服器或 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 伺服器，才能裝載此報表類型所使用的資料來源。 您不能將多維度模型當做 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表的資料來源使用。 您必須建立 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] BI 語意模型連線或 Reporting Services 共用資料來源，作為 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表的資料來源使用。  
   
  報表產生器和報表設計師可以使用任何 Analysis Services 資料庫，包括在 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 上裝載的 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿。  
   
@@ -177,7 +176,7 @@ ms.lasthandoff: 12/08/2017
  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 執行個體管理](../analysis-services/instances/analysis-services-instance-management.md)   
  [Analysis Services 的新功能](../analysis-services/what-s-new-in-analysis-services.md)     
 

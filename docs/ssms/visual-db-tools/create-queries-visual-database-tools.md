@@ -16,13 +16,13 @@ ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c000e41faca9bcc3442cd67695f13d9a33e7366f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 813673a5b992a27fe9d93f480024cb988136ab3a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-visual-database-tools"></a>建立查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查詢可讓您從資料庫的資料表和檢視中擷取資料。 您可以在查詢和檢視表設計工具中建立並使用查詢，這包含四個窗格：[[圖表] 窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)、[[SQL] 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)、[[準則] 窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)及 [[結果] 窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)。  

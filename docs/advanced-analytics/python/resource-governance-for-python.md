@@ -7,20 +7,21 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f270c173922c4b444e1d48e465f3f650fc7438f5
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-python"></a>資源管理針對 Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 因為 Python 透過啟用相同的擴充性架構實作 SQL Server 2016 中的 R 語言，您可以使用現有的工具在 SQL Server，例如資源管理員、 Dmv，以及擴充的事件、 監視執行中的 PythonSQL Server 中的指令碼。
 
@@ -82,7 +83,7 @@ ms.lasthandoff: 12/20/2017
 
 萬一失控的指令碼，您可以停用所有的指令碼執行。 只要反向執行此程序，並將屬性設定`external scripts enabled`為 FALSE 或 0，執行個體上的。 這會立即停用任何外部指令碼執行。 您應該保留此選項的安全性問題，或在其中系統管理員需要立即以緩解資源問題的情況。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
 

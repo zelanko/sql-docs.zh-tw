@@ -3,27 +3,27 @@ title: "VDI 備份規格 SQL Server on Linux |Microsoft 文件"
 description: "SQL Server 備份的虛擬裝置介面規格。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 31fc2a5d96f38cbbcd0c4b616bcfc75c552c1340
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 用戶端 SDK 規格上的 SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文件包含 Linux 虛擬裝置介面 (VDI) 用戶端 SDK 上的 SQL Server 所提供的介面。 獨立軟體廠商 (Isv) 可以使用虛擬備份裝置的應用程式發展介面 (API)，若要將 SQL Server 整合到他們的產品。 一般情況下，在 Linux 上的 VDI 運作起來就像在 Windows 上的 VDI 以下列變更：
 
@@ -110,7 +110,7 @@ ms.lasthandoff: 12/01/2017
 
 | 參數 | 引數 | 說明
 | ----- | ----- | ------ |
-| | **逾時** | 這是以毫秒為單位的逾時。 若要避免逾時，使用無限值或任何負數的整數。
+| | **timeout** | 這是以毫秒為單位的逾時。 若要避免逾時，使用無限值或任何負數的整數。
 | | **cfg** | 成功執行後，這包含選取之伺服器的組態。 如需詳細資訊，請參閱本文件稍後的 < 組態 >。
 
 | 傳回值 | 引數 | 說明
@@ -165,7 +165,7 @@ ms.lasthandoff: 12/01/2017
 
 | 參數 | 引數 | 說明
 | ----- | ----- | ------ |
-| |**逾時** |這是等候，以毫秒為單位的時間。 使用 INFINTE 無限期地等待。 使用 0 輪詢命令。 如果目前使用任何命令，會傳回 VD_E_TIMEOUT。 如果發生逾時，用戶端會決定下一個動作。
+| |**timeout** |這是等候，以毫秒為單位的時間。 使用 INFINTE 無限期地等待。 使用 0 輪詢命令。 如果目前使用任何命令，會傳回 VD_E_TIMEOUT。 如果發生逾時，用戶端會決定下一個動作。
 | |**逾時** |這是等候，以毫秒為單位的時間。 使用 INFINTE 或負數值無限期地等待。 使用 0 輪詢命令。 如果沒有使用命令的逾時到期前，會傳回 VD_E_TIMEOUT。 如果發生逾時，用戶端會決定下一個動作。
 | |**ppCmd** |當命令成功傳回時，此參數會傳回要執行的命令的位址。 傳回的記憶體為唯讀。 當命令完成時，此指標會傳遞給 CompleteCommand 常式。 如需每個命令的詳細資訊，請參閱本文件稍後的 「 命令 」。
         
@@ -199,7 +199,7 @@ ms.lasthandoff: 12/01/2017
 | |**pCmd** |這是所傳回 ClientVirtualDevice::GetCommand 命令的位址。
 | |**completionCode** |這是狀態碼表示的完成狀態。 這個參數就必須傳回所有命令。 傳回的程式碼應該就適用於正在執行的命令。 ERROR_SUCCESS 在所有情況下用於表示已成功執行的命令。 可能的程式碼的完整清單，請參閱該檔案，vdierror.h。 每個命令的一般狀態碼清單會出現在 「 命令 」 中，在本文件稍後。
 | |**bytesTransferred** |這是成功傳送的位元組數目。 這會傳回只命令讀取和寫入的資料傳輸。
-| |**位置** |這是只有 GetPosition 命令的回應。
+| |**position** |這是只有 GetPosition 命令的回應。
         
 | 傳回值 | 引數 | 說明
 | ----- | ----- | ------ |

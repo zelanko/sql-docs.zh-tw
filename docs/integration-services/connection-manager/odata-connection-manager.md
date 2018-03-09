@@ -8,23 +8,24 @@ ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: "9"
+caps.latest.revision: 
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38e19fec56bb0392435adb1b6c6313fed59770b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 331cf4ff00eeda4b1c1d22c021138ae67d6d23b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
  使用 OData 連線管理員連線到 OData 資料來源。 OData 來源元件會使用 OData 連線管理員連線到 OData 資料來源，並取用服務中的資料。 如需詳細資訊，請參閱＜ [OData Source](../../integration-services/data-flow/odata-source.md)＞。  
@@ -65,10 +66,10 @@ ms.lasthandoff: 11/20/2017
   
 |||  
 |-|-|  
-|屬性|說明|  
+|屬性|描述|  
 |Url|服務文件的 URL。|  
 |UserName|如有必要，驗證使用使用者名稱。|  
-|密碼|如有必要，驗證使用密碼。|  
+|[密碼]|如有必要，驗證使用密碼。|  
 |ConnectionString|包括連線管理員的其他屬性。|  
   
 ## <a name="odata-connection-manager-editor"></a>OData 連線管理員編輯器

@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
   套件管理包含監視、管理、匯入和匯出套件。  
@@ -201,7 +202,7 @@ ms.lasthandoff: 11/20/2017
  **封裝位置**  
  選取要匯入封裝之儲存位置的類型。 下列是可以使用的選項：  
   
- **SQL Server**  
+ **[SQL Server]**  
   
  **檔案系統**  
   
@@ -219,7 +220,7 @@ ms.lasthandoff: 11/20/2017
  **驗證類型**  
  選取驗證類型。  
   
- **使用者名稱**  
+ **User name**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱。  
   
  **密碼**  
@@ -232,7 +233,7 @@ ms.lasthandoff: 11/20/2017
  選擇性地重新命名封裝。 預設名稱是要匯入的封裝名稱。  
   
  **保護等級**  
- 按一下瀏覽按鈕 **(...)** 並更新 **[封裝保護等級]** 對話方塊中的保護等級。 如需詳細資訊，請參閱[封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
+ 按一下瀏覽按鈕 **(...)** 並更新 **[封裝保護等級]** 對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>匯出封裝對話方塊 UI 參考
   使用 **[匯出封裝]** 對話方塊 (可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中存取)，即可匯出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝到不同的位置，並選擇性地修改封裝的保護等級。  
@@ -241,9 +242,9 @@ ms.lasthandoff: 11/20/2017
  **封裝位置**  
  選取要用來儲存所匯出之封裝的儲存體類型。 下列是可以使用的選項：  
   
- **SQL Server**  
+ **[SQL Server]**  
   
- **檔案系統**  
+ **[File System]**  
   
  **SSIS 封裝儲存體**  
   
@@ -259,7 +260,7 @@ ms.lasthandoff: 11/20/2017
  **驗證類型**  
  選取驗證類型。  
   
- **使用者名稱**  
+ **User name**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱。  
   
  **密碼**  
@@ -269,7 +270,7 @@ ms.lasthandoff: 11/20/2017
  輸入封裝路徑，或按一下瀏覽按鈕 **(…)** ，並找出要儲存封裝的資料夾。  
   
  **保護等級**  
- 按一下瀏覽按鈕 **(...)** 並更新 [封裝保護等級] 對話方塊中的保護等級。 如需詳細資訊，請參閱[封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
+ 按一下瀏覽按鈕 **(...)** 並更新 [封裝保護等級] 對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
 
 ## <a name="back-up-and-restore-packages"></a>備份和還原套件
   

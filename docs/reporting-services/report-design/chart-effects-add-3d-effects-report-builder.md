@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d9e23f2274189f355e92c1db1463b58b823e2eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec6a2c4e4b26069d25874fabb0e3222b778c50ee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>圖表效果 - 新增 3D 效果 (報表產生器)
   三維 (3D) 效果可用來針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中的圖表提供深度及增加視覺效果。 例如，若要強調分裂式圓形圖的特殊扇區，則可以旋轉及變更圖表的檢視方塊，讓使用者能首先注意該扇區。 將 3D 效果套用至圖表時，所有的漸層色彩和影線樣式都會停用。  
@@ -39,13 +37,13 @@ ms.lasthandoff: 12/05/2017
   
 3.  (選擇性) 在 [3D 選項] 中，可以設定多種與 3D 角度及場景選項相關的屬性。 如需這些屬性的詳細資訊，請參閱 [圖表中的 3D、浮凸和其他效果 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 ## <a name="to-apply-3d-effects-to-a-funnel-chart"></a>將 3D 效果套用到漏斗圖  
   
 1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取 [3D 效果]。 [圖表區域屬性] 對話方塊隨即出現。  
   
-2.  在 [3D 選項] 中，選取 [啟用 3D] 選項。 按一下 **[確定]**。  
+2.  在 [3D 選項] 中，選取 [啟用 3D] 選項。 按一下 [確定] 。  
   
 3.  (選擇性) 若要自訂漏斗圖的視覺外觀，可以移至 [屬性] 窗格，然後變更漏斗圖特定的屬性。  
   
@@ -63,23 +61,23 @@ ms.lasthandoff: 12/05/2017
   
 1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取 [3D 效果]。 [圖表區域屬性] 對話方塊隨即出現。  
   
-2.  在 [3D 選項] 中，選取 [啟用 3D] 選項。 按一下 **[確定]**。  
+2.  在 [3D 選項] 中，選取 [啟用 3D] 選項。 按一下 [確定] 。  
   
 3.  (選擇性) 在 [旋轉] 中鍵入整數值，代表圓形圖的水平旋轉。  
   
 4.  (選擇性) 在 [傾斜] 中鍵入整數值，代表圓形圖的垂直傾斜旋轉。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 ## <a name="to-apply-3d-effects-to-a-bar-or-column-chart"></a>將 3D 效果套用到橫條圖或直條圖  
   
 1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取 [3D 效果]。 [圖表區域屬性] 對話方塊隨即出現。  
   
-2.  選取 [啟用 3D] 選項。 按一下 **[確定]**。  
+2.  選取 [啟用 3D] 選項。 按一下 [確定] 。  
   
 3.  (選擇性) 選取 [啟用數列群集] 選項。 如果圖表包含多個橫條圖或直條圖數列，則這個選項會將數列顯示為群集。 依預設，多個橫條或直條數列會並列顯示。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 5.  (選擇性) 若要對橫條圖或直條圖加入圓柱效果，請依照下列步驟執行：  
   

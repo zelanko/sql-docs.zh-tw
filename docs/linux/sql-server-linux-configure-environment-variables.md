@@ -1,29 +1,29 @@
 ---
 title: "使用環境變數設定 SQL Server 設定 |Microsoft 文件"
-description: "本主題描述如何在 Linux 上設定特定的 SQL Server 2017 設定使用環境變數。"
+description: "本文說明如何在 Linux 上設定特定的 SQL Server 2017 設定使用環境變數。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 07/21/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 44c33e0f5619349dfa32b48d7745ae6f9ddcc155
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>使用 Linux 上的環境變數設定 SQL Server 設定
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 若要在 Linux 上設定 SQL Server 2017，您可以使用數個不同的環境變數。 兩個案例中使用這些變數：
 
@@ -49,7 +49,11 @@ ms.lasthandoff: 12/01/2017
 | **MSSQL_DATA_DIR** | 會建立新的 SQL Server 資料庫資料檔案 (.mdf) 將目錄變更。 |
 | **MSSQL_LOG_DIR** | 變更建立新的 SQL Server 資料庫記錄檔 (.ldf) 檔案所在的目錄。 |
 | **MSSQL_DUMP_DIR** | 變更其中 SQL Server 將存款記憶體傾印和其他的疑難排解檔預設目錄。 |
-| **MSSQL_ENABLE_HADR** | 啟用可用性群組。 |
+| **MSSQL_ENABLE_HADR** | 啟用可用性群組。 例如，'1' 已啟用，而 '0' 已停用 |
+| **MSSQL_AGENT_ENABLED** | 啟用 SQL Server 代理程式。 例如，啟用則 '為 true' 和 'false' 的已停用。 根據預設，代理程式已停用。  |
+| **MSSQL_MASTER_DATA_FILE** | 設定 master 資料庫資料檔案的位置。 |
+| **MSSQL_MASTER_LOG_FILE** | 設定 master 資料庫記錄檔的位置。 |
+
 
 ## <a name="example-initial-setup"></a>範例： 初始設定
 
@@ -86,7 +90,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> 執行容器中的實際執行版本的程序有些許不同。 如需詳細資訊，請參閱[容器映像執行生產](sql-server-linux-configure-docker.md#production)。
+> 在容器中執行生產版本的程序將有些微差異。 如需詳細資訊，請參閱[執行生產容器映像](sql-server-linux-configure-docker.md#production)。
 
 ## <a name="next-steps"></a>後續的步驟
 

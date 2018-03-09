@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: cubes [Analysis Services], defining
@@ -21,16 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f051a3372b965e2652dfd6ea4c57826212509c1d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b87146458e6aee0cac066078f1d0dfb302f186d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-cube-attribute-properties"></a>定義 Cube 屬性 (Attribute) 屬性 (Property)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cube 屬性 (property) 可讓您在同一資料庫維度為基礎的 cube 維度中指定唯一設定維度屬性。 下表描述 Cube 屬性 (Attribute) 的屬性 (Property)。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**AggregationUsage**|指定 [彙總設計精靈] 將如何設計這個屬性的彙總。 預設值為 **Default**。 此屬性可以有下列的值：<br /><br /> **預設值**：<br />                    [彙總設計精靈] 會根據屬性的類型來套用預設規則 (Full 代表索引鍵，Unrestricted 代表其他項目)。<br /><br /> **無**：<br />                    此 Cube 不應該有任何彙總包含這個屬性。<br /><br /> **不受限制**：<br />                    [彙總設計精靈] 沒有任何限制<br /><br /> **完整**：<br />                    此 Cube 的每一個彙總都必須包含這個屬性。|  
 |**AttributeHierarchyEnabled**|識別這個 Cube 維度上是否啟用此屬性階層， 如此可允許在特定 Cube 或維度角色上停用屬性階層。 如果已停用基礎屬性階層，這個設定不會有任何作用。 預設值為 [True]。|  

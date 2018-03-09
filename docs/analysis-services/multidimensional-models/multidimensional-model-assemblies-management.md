@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,19 +23,20 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 73dfb81f267fea0d246ff1f7c7e48abb8d1dcccc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多維度模型組件管理
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供許多的內建函數搭配多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言，設計來完成從標準統計計算所有項目階層中周遊成員。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供許多的內建函數搭配多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言，設計來完成從標準統計計算周遊成員在階層中的所有項目。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
   
  因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您將組件加入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或資料庫中。 組件可讓您使用任何 Common Language Runtime (CLR) 語言 (例如 Microsoft Visual Basic .NET 或 Microsoft Visual C#) 來建立外部使用者自訂函數。 您也可以使用元件物件模型 (COM) 自動化語言 (例如 Microsoft Visual Basic 或 Microsoft Visual C++)。  
   
@@ -97,7 +95,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主機層級原則，是系統組件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 固定原則，以及使用者組件的使用者指定原則的組合。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主機原則之使用者自訂部份根據的是指定每個組件之下列其中一種權限值區 (共三種) 的組件擁有者：  
   
-|權限設定|說明|  
+|權限設定|Description|  
 |------------------------|-----------------|  
 |**Safe**|提供內部計算權限。 這個權限值區不會指派權限，來存取 .NET Framework 中的所有受保護資源。 如果未使用 **PermissionSet** 屬性指定任何權限，這就會是組件的預設權限值區。|  
 |**ExternalAccess**|提供和 **Safe** 設定相同的存取權，並附帶存取外部系統資源的能力。 這個權限值區不提供安全性保證 (雖然是可以確保此情況的安全)，但是可以提供可靠性的保證。|  
@@ -121,8 +119,8 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  因為應用程式網域界限和每個網域中的組件都是由實作所定義，所以您不應該依賴在同一應用程式網域中尋找組件。  
   
-## <a name="see-also"></a>請參閱  
- [設定預存程序的安全性](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+## <a name="see-also"></a>另請參閱  
+ [正在設定預存程序安全性](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [定義預存程序](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.replicationutilities.selectdistributor.f1
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5fc3ea91c6a657c0bdc09c6b8f927aa2b74489fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eda1d3fc60baeea0f657561febb9f188ea78b16a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor"></a>散發者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [散發者] 頁面會出現在 [設定散發精靈] 和 [新增發行集精靈] 中。 散發者是包含散發資料庫的伺服器，而且會儲存所有類型之複寫的中繼資料和記錄資料。 散發者也會儲存異動複寫的交易。 散發者可以是與發行者相同的伺服器 (本機散發者)，也可以是與發行者不同的伺服器 (遠端散發者)。 散發者的角色會視您實作的複寫類型而定。 一般而言，它的角色用於異動複寫的機會，遠大於合併式複寫和快照式複寫。 合併式複寫和快照式複寫通常使用本機散發者，但在非常忙碌的電腦上進行異動複寫時，可以使用遠端散發者提高效益。  
@@ -44,14 +44,14 @@ ms.lasthandoff: 11/17/2017
  **使用下列伺服器做為散發者 (注意：您選取的伺服器必須已經設定為散發者)**  
  選取此選項，然後按一下下面的伺服器名稱，即可將其他伺服器設定為散發者。  
   
- **加入**  
+ **[加入]**  
  如果沒有列出您要用來作為散發者的伺服器，請按一下 **[加入]** ，以識別該伺服器並將其加入清單。  
   
 > [!NOTE]  
 >  若要使用遠端伺服器作為散發者，該遠端伺服器必須已經設定為散發者。 執行此精靈的伺服器，在該發行者上必須啟用為散發者。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定散發](../../relational-databases/replication/configure-distribution.md)   
+ [[設定散發]](../../relational-databases/replication/configure-distribution.md)   
  [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
   

@@ -1,27 +1,28 @@
 ---
 title: "開始使用 SQL Server 中的機器學習 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/28/2018
 ---
-# <a name="getting-started-with-machine-learning-in-sql-server"></a>開始使用 SQL Server 中的機器學習服務
+# <a name="getting-started-with-machine-learning-in-sql-server"></a>開始使用 SQL Server 中的機器學習
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 可擴充組：
 
@@ -36,7 +37,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
   從 SQL Server 2017 開始，您現在可以使用 Python 程式碼中 SQL Server。 若要反映更廣泛的支援方案中多個語言 （敬請期待 ！），並在名稱已變更為[!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]。 現在您可以使用 SQL 工具來執行 R 或 Python 程式碼來自動化機器學習工作。 或者，使用 SQL Server 電腦，做為_計算內容_從遠端的開發環境中啟動的工作。
 
-    + [SQL Server 中的 python 架構概觀](/python/architecture-overview-sql-server-python.md)
+    + [SQL Server 中的 python 架構概觀](../advanced-analytics/python/architecture-overview-sql-server-python.md)
     + [設定 SQL Server R 服務或機器學習服務](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016
@@ -83,7 +84,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
 + [機器學習教學課程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  從這裡開始了解使用機器學習解決方案中找到的所有資源清單[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]或[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]。
+  從這裡開始了解使用 SQL Server 2016 和 SQL Server 2017 的機器學習解決方案找不到的所有資源清單。
 
 ### <a name="r-tutorials"></a>R 教學課程
 
@@ -95,7 +96,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
 + [瀏覽 25 精簡函式中 R 和 ScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   不熟悉 R 嗎？ 想知道如何 Microsoft R （或 RevoScaleR） 與比較標準 R 嗎？ R 伺服器，請參閱這些快速啟動。
+   不熟悉 R 嗎？ 想知道如何 Microsoft R （或 RevoScaleR） 與比較標準 R 嗎？ 針對 R 伺服器和機器學習伺服器，請參閱這些快速啟動。
 
 ### <a name="python-tutorials"></a>Python 教學課程
 

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e664c24d37f41986789998bdd20db49232b05609
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b035b11167895581588de96db1c1db3f65931307
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-trace"></a>SQL 追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在 SQL 追蹤中，如果事件是列在追蹤定義中之事件類別的執行個體，就會收集這些事件。 您可將這些事件篩選掉，也可以放入分配目的地的佇列中。 目的地可以是檔案或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO)，後者會在用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的應用程式中使用這些追蹤資訊。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="use-data-columns-to-describe-returned-events"></a>使用資料行描述傳回的事件  
  SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件。 下表描述的是 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，這些資料行與 SQL 追蹤使用的資料行相同，同時也會指出預設會選取的資料行。  
   
-|資料行|資料行編號|Description|  
+|資料行|資料行編號|描述|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的名稱。|  
 |**BigintData1**|52|值 (**bigint** 資料類型)，會視追蹤指定的事件類別而定。|  
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
 |**TargetLoginName**|42|對於目標為登入的動作，這是目標登入的名稱；例如，要加入新登入。|  
 |**TargetLoginSid**|43|對於目標為登入的動作，這是目標登入的 SID；例如，要加入新登入。|  
 |**TargetUserName**|39|對於目標為資料庫使用者的動作，這是該使用者的名稱；例如，要授與使用者權限。|  
-|**TextData**|1|文字值，依據在追蹤中所擷取的事件類別而定。 但是，如果是追蹤參數化查詢， **TextData** 資料行就不會顯示變數與資料值。|  
+|**TextData**|@shouldalert|文字值，依據在追蹤中所擷取的事件類別而定。 但是，如果是追蹤參數化查詢， **TextData** 資料行就不會顯示變數與資料值。|  
 |**Transaction ID**|4|系統指派的交易識別碼。|  
 |**型別**|57|相依於追蹤所擷取之事件類別的整數值。|  
 |**Writes**|17|伺服器代表事件所執行的實體磁碟寫入作業次數。|  

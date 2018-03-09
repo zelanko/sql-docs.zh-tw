@@ -10,24 +10,26 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: b2251e306098c2f4e9c0fe7a7cbe0200eddf8a4e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7543c17a0ac9a1014658f83f0c8595bff2cda608
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>排程 SQL Server Integration Services 封裝執行 Linux 上的 cron
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 當您在 Windows 上執行 SQL Server Integration Services (SSIS) 和 SQL Server 時，您可以使用 SQL Server Agent 自動化 SSIS 封裝的執行。 當您在 Linux 上執行 SQL Server 和 SSIS 時，不過，SQL Server 代理程式公用程式無法排程在 Linux 上的作業。 相反地，您可以使用自動化封裝執行廣泛使用在 Linux 平台的 cron 服務。
 
 這篇文章會提供示範如何讓 SSIS 封裝執行自動化的範例。 範例會在 Red Hat Enterprise 上執行寫入。 針對其他 Linux 發行版本，例如 Ubuntu 相似的程式碼。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
 使用 cron 服務執行作業之前，請檢查是否正在執行您的電腦上。
 
@@ -78,3 +80,9 @@ Cron 作業是您可以設定定期依指定的間隔執行的工作。 作業�
 以下是部分的範例，可協助說明本文章中的範例的輸出：
 
 ![詳細的說明部分 crontab 格式](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+
+## <a name="related-content-about-ssis-on-linux"></a>有關 SSIS 在 Linux 上的相關的內容
+-   [擷取、 轉換和載入與 SSIS Linux 上的資料](sql-server-linux-migrate-ssis.md)
+-   [Linux 上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [使用 ssis conf，設定 Linux 上的 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [限制與已知的問題適用於 Linux 上的 SSIS](sql-server-linux-ssis-known-issues.md)

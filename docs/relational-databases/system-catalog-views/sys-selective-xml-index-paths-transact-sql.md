@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - xml_schema_attributes
 - sys.xml_schema_attributes_TSQL
 - sys.xml_schema_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_attributes catalog view
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c2f8156f9821bb6d4d0f70ae1af200a33ce3cb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f71e46667c56b628965eab154af0c3e15c421f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +55,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**object_id**|**int**|具有 XML 資料行之資料表的識別碼。|  
 |**index_id**|**int**|選擇性 xml 索引的唯一識別碼。|  
 |**path_id**|**int**|升級 XML 路徑識別碼。|  
-|**路徑**|**nvarchar(4000)**|升級路徑。 例如，'/a/b/c/d/e'。|  
+|**path**|**nvarchar(4000)**|升級路徑。 例如，'/a/b/c/d/e'。|  
 |**name**|**sysname**|路徑名稱。|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|根據**path_type** 'XQUERY' 或 'SQL' 值。|  
@@ -66,14 +69,14 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**user_type_id**|**tinyint**|資料行之使用者類型的識別碼。|  
 |**max_length**|**smallint**|類型的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行的資料類型是 varchar(max)、nvarchar(max)、varbinary(max) 或 xml。|  
 |**有效位數**|**tinyint**|如果是以數值為基礎，便是類型的最大有效位數。 否則為 0。|  
-|**小數位數**|**tinyint**|如果是以數值為基礎，便是類型的最大小數位數。 否則為 0。|  
-|**sys.databases**|**sysname**|如果是以字元為基礎，便是類型的定序名稱。 否則為 NULL。|  
+|**scale**|**tinyint**|如果是以數值為基礎，便是類型的最大小數位數。 否則為 0。|  
+|**collation_name**|**sysname**|如果是以字元為基礎，便是類型的定序名稱。 否則為 NULL。|  
 |**is_singleton**|**bit**|0 = SINGLETON 提示未出現。<br /><br /> 1 = SINGLETON 最佳化提示已套用。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [XML 結構描述 &#40;XML 類型系統 &#41;目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   

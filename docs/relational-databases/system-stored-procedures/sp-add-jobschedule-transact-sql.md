@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobschedule
 - sp_add_jobschedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_jobschedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b2680a591628811fb9617077700d05981ece2a2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,25 +58,25 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  要加入排程的作業識別碼。 *job_id*是**uniqueidentifier**，沒有預設值。  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  要加入排程的作業名稱。 *job_name*是**nvarchar （128)**，沒有預設值。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
   
- [  **@name=** ] **'***名稱***'**  
+ [ **@name=** ] **'***name***'**  
  排程的名稱。 *名稱*是**nvarchar （128)**，沒有預設值。  
   
- [  **@enabled=** ] *enabled_flag*  
+ [ **@enabled=** ] *enabled_flag*  
  指出排程的目前狀態。 *enabled_flag*是**tinyint**，預設值是**1** （啟用）。 如果**0**，未啟用排程。 停用排程時，就不會執行作業。  
   
- [  **@freq_type=** ] *frequency_type*  
+ [ **@freq_type=** ] *frequency_type*  
  指出作業執行時間的值。 *frequency_type*是**int**，預設值是**0**，而且可以是下列值之一：  
   
-|ReplTest1|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**4**|每日|  
@@ -83,10 +86,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動時執行。|  
 |**128**|在電腦閒置時執行。|  
   
- [  **@freq_interval=** ] *frequency_interval*  
+ [ **@freq_interval=** ] *frequency_interval*  
  執行作業的天數。 *frequency_interval*是**int**，預設值是 0，而定的值*frequency_type*下表所示：  
   
-|ReplTest1|效果|  
+|Value|效果|  
 |-----------|------------|  
 |**1** （一次）|*frequency_interval*未使用。|  
 |**4** （每天）|每個*frequency_interval*天。|  
@@ -96,24 +99,24 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64** (當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 服務啟動)|*frequency_interval*未使用。|  
 |**128**|*frequency_interval*未使用。|  
   
- [  **@freq_subday_type=** ] *frequency_subday_type*  
+ [ **@freq_subday_type=** ] *frequency_subday_type*  
  指定的單位*frequency_subday_interval*。 *frequency_subday_type*是**int**，沒有預設值，它可以是下列值之一：  
   
-|ReplTest1|描述 (單位)|  
+|Value|描述 (單位)|  
 |-----------|--------------------------|  
 |**0x1**|在指定的時間|  
 |**0x4**|Minutes|  
 |**0x8**|小時|  
   
- [  **@freq_subday_interval=** ] *frequency_subday_interval*  
+ [ **@freq_subday_interval=** ] *frequency_subday_interval*  
  數目*frequency_subday_type*期間每次執行作業之間發生。 *frequency_subday_interval*是**int**，預設值是 0。  
   
- [  **@freq_relative_interval=** ] *frequency_relative_interval*  
+ [ **@freq_relative_interval=** ] *frequency_relative_interval*  
  進一步定義*frequency_interval*時*frequency_type*設**32** （每月相對）。  
   
  *frequency_relative_interval*是**int**，沒有預設值，它可以是下列值之一：  
   
-|ReplTest1|描述 (單位)|  
+|Value|描述 (單位)|  
 |-----------|--------------------------|  
 |**1**|第一個|  
 |**2**|第二個|  
@@ -123,27 +126,27 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval*表示的間隔發生。 例如，如果*frequency_relative_interval*設**2**， *frequency_type*設為**32**，和*frequency_間隔*設**3**，排程的工作就會在每個月的第二個星期二發佈。  
   
- [  **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
+ [ **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
  作業的各排程執行之間的週數或月數。 *frequency_recurrence_factor*才會使用*frequency_type*設**8**， **16**，或**32**。 *frequency_recurrence_factor*是**int**，預設值是 0。  
   
- [  **@active_start_date=** ] *active_start_date*  
+ [ **@active_start_date=** ] *active_start_date*  
  作業執行可以開始的日期。 *active_start_date*是**int**，沒有預設值。 日期格式為 YYYYMMDD。 如果*active_start_date*設定日期必須大於或等於 19900101。  
   
  建立排程之後，檢閱開始日期，並確認該日期正確。 如需詳細資訊，請參閱 「 排程開始日期 」 一節中[建立及附加排程至作業](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)。  
   
- [  **@active_end_date=** ] *active_end_date*  
+ [ **@active_end_date=** ] *active_end_date*  
  作業執行可以停止的日期。 *active_end_date*是**int**，沒有預設值。 日期格式為 YYYYMMDD。  
   
- [  **@active_start_time=** ] *active_start_time*  
+ [ **@active_start_time=** ] *active_start_time*  
  之間任何一天時間*active_start_date*和*active_end_date*開始執行作業。 *active_start_time*是**int**，沒有預設值。 時間格式為使用 24 小時制的 HHMMSS。  
   
- [  **@active_end_time=***active_end_time*  
+ [ **@active_end_time=***active_end_time*  
  之間任何一天時間*active_start_date*和*active_end_date*結束執行作業。 *active_end_time*是**int**，沒有預設值。 時間格式為使用 24 小時制的 HHMMSS。  
   
- [  **@schedule_id=***schedule_id***輸出**  
+ [ **@schedule_id=***schedule_id***OUTPUT**  
  成功建立排程時，指派給這個排程的排程識別碼。 *schedule_id*是 output 變數的型別**int**，沒有預設值。  
   
- [  **@schedule_uid** =] *schedule_uid***輸出**  
+ [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
  排程的唯一識別碼。 *schedule_uid*這類型的變數**uniqueidentifier**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -178,15 +181,15 @@ EXEC msdb.dbo.sp_add_jobschedule
         @active_start_time = 20000 -- 2:00 AM
 ```
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立並附加排程至作業](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
  [排程的作業](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [建立排程](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
  [SQL Server Agent 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_update_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

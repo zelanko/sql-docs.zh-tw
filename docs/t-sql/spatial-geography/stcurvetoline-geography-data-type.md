@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STCurveToLine_TSQL
 - STCurveToLine
-dev_langs: TSQL
-helpviewer_keywords: STCurveToLine method (geography)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STCurveToLine method (geography)
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67b5f37ac6dd928f114ac1c224806387074ea97d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d503d7c7ad67e56ddfd38495f40e8960daa13561
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
  ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [STLength &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
  [STNumPoints &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
  [空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)  

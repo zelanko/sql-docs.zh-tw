@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - CREATE SPATIAL INDEX
 - CREATE_SPATIAL_INDEX_TSQL
 - SPATIAL_INDEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - spatial indexes [SQL Server], creating
 - index creation [SQL Server], spatial indexes
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: "89"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b1b92761aa72e4d001ddfb2845c593c3d99f79a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -286,8 +288,8 @@ BOUNDING_BOX = ( {
  只能在 geography 資料類型的資料行上指定。  這是此資料類型的預設值，而且不需要加以指定。  
   
 ### <a name="with-options"></a>WITH 選項  
- BOUNDING_BOX  
- 指定定義週框方塊之四個座標的四個數值 Tuple：左下角的 x-min 和 y-min 座標及右上角的 x-max 和 y-max 座標。  
+BOUNDING_BOX  
+指定定義週框方塊之四個座標的四個數值 Tuple：左下角的 x-min 和 y-min 座標及右上角的 x-max 和 y-max 座標。  
   
  *xmin*  
  指定週框方塊左下角的 X 座標。  
@@ -313,13 +315,14 @@ BOUNDING_BOX = ( {
  YMAX =*ymax*  
  針對週框方塊右上角的 Y 座標指定屬性名稱和值。  
   
- 週框方塊座標只適用於 USING GEOMETRY_GRID 子句內。  
-  
- *xmax*必須大於*xmin*和*ymax*必須大於*ymin*。 您可以指定任何有效[float](../../t-sql/data-types/float-and-real-transact-sql.md)值表示法，前提： *xmax* > *xmin*和*ymax*  >  *ymin*。 否則會引發適當的錯誤。  
-  
- 沒有預設值。  
-  
- 週框方塊屬性名稱不區分大小寫，不論資料庫定序為何。  
+ > [!NOTE]
+ > 週框方塊座標只適用於 USING GEOMETRY_GRID 子句內。  
+ >
+ > *xmax*必須大於*xmin*和*ymax*必須大於*ymin*。 您可以指定任何有效[float](../../t-sql/data-types/float-and-real-transact-sql.md)值表示法，前提： *xmax* > *xmin*和*ymax*  >  *ymin*。 否則會引發適當的錯誤。  
+ > 
+ > 沒有預設值。  
+ >
+ > 週框方塊屬性名稱不區分大小寫，不論資料庫定序為何。  
   
  若要指定屬性名稱，您必須一次指定一個，而且只能指定一次。 您可以依照任何順序來指定它們。 例如，下列子句是相等的：  
   
@@ -327,8 +330,8 @@ BOUNDING_BOX = ( {
   
 -   BOUNDING_BOX = (XMIN =*xmin*，XMAX =*xmax*，YMIN =*ymin*，YMAX =*ymax*)  
   
- GRIDS  
- 定義鑲嵌式配置之每一個層級上的方格密度。 已選取 GEOMETRY_AUTO_GRID 和 GEOGRAPHY_AUTO_GRID 時，會停用這個選項。  
+GRIDS  
+定義鑲嵌式配置之每一個層級上的方格密度。 已選取 GEOMETRY_AUTO_GRID 和 GEOGRAPHY_AUTO_GRID 時，會停用這個選項。  
   
  如需有關鑲嵌的詳細資訊，請參閱[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
@@ -355,12 +358,14 @@ BOUNDING_BOX = ( {
  HIGH  
  針對給定層級的方格指定可能的最高密度。 HIGH 等於 256 個資料格 (16x16 方格)。  
   
- 使用層級名稱可讓您依照任何順序指定層級以及省略層級。 如果您使用任何層級的名稱，您就必須使用您指定之任何其他層級的名稱。 如果您省略層級，它的密度預設為 MEDIUM。  
+> [!NOTE] 
+> 使用層級名稱可讓您依照任何順序指定層級以及省略層級。 如果您使用任何層級的名稱，您就必須使用您指定之任何其他層級的名稱。 如果您省略層級，它的密度預設為 MEDIUM。  
   
- 如果指定了無效的密度，將會引發錯誤。  
+> [!WARNING] 
+> 如果指定了無效的密度，將會引發錯誤。  
   
- CELLS_PER_OBJECT =*n*  
- 指定可供鑲嵌式程序用於索引內單一空間物件之每一物件的鑲嵌式資料格數目。 *n*可以是介於 1 到 8192 (含) 之間的任何整數。 如果傳遞了無效的數目，或是此數目大於指定之鑲嵌的最大資料格數目，就會引發錯誤。  
+CELLS_PER_OBJECT =*n*  
+指定可供鑲嵌式程序用於索引內單一空間物件之每一物件的鑲嵌式資料格數目。 *n*可以是介於 1 到 8192 (含) 之間的任何整數。 如果傳遞了無效的數目，或是此數目大於指定之鑲嵌的最大資料格數目，就會引發錯誤。  
   
  CELLS_PER_OBJECT 的預設值如下：  
   
@@ -375,8 +380,8 @@ BOUNDING_BOX = ( {
   
  CELLS_PER_OBJECT 值會由每一物件的資料格鑲嵌式規則所使用。 鑲嵌式規則的相關資訊，請參閱[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
- PAD_INDEX = {ON |**OFF** }  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+PAD_INDEX = {ON |**OFF** }  
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定索引填補。 預設值為 OFF。  
   
@@ -388,7 +393,7 @@ BOUNDING_BOX = ( {
   
  只有在指定 FILLFACTOR 時，才能使用 PAD_INDEX 選項，因為 PAD_INDEX 會使用 FILLFACTOR 所指定的百分比。 如果 FILLFACTOR 所指定的百分比不夠，無法允許一個資料列，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在內部覆寫該百分比以允許最小值。 中繼索引頁上的資料列數目絕不會是小於兩個，不論如何低的值為何*填滿因數*。  
   
- 填滿因數 =*填滿因數*  
+填滿因數 =*填滿因數*  
  **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定用以指出建立或重建索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 填滿各索引頁面分葉層級之程度的百分比。 *填滿因數*必須是介於 1 到 100 之間的整數值。 預設值是 0。 如果*填滿因數*是 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]會利用已填滿容量的分葉頁面建立索引。  
@@ -399,12 +404,12 @@ BOUNDING_BOX = ( {
  只有在建立或重建索引時才會套用 FILLFACTOR 設定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會動態保留頁面中空白空間的指定百分比。 若要檢視填滿因數設定，請使用[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視。  
   
 > [!IMPORTANT]  
->  利用小於 100 的 FILLFACTOR 來建立叢集索引，會影響資料所佔用的儲存空間數量，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在建立叢集索引時會轉散發資料。  
+> 利用小於 100 的 FILLFACTOR 來建立叢集索引，會影響資料所佔用的儲存空間數量，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在建立叢集索引時會轉散發資料。  
   
  如需詳細資訊，請參閱 [指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
- SORT_IN_TEMPDB = {ON |**OFF** }  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+SORT_IN_TEMPDB = {ON |**OFF** }  
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定是否要將暫時排序結果儲存在 tempdb 中。 預設值為 OFF。  
   
@@ -416,11 +421,11 @@ BOUNDING_BOX = ( {
   
  除了在建立索引時，使用者資料庫中所需的空間以外，tempdb 還需要大約相同數量的額外空間來容納中繼排序結果。 如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
   
- IGNORE_DUP_KEY =**OFF**  
- 對於空間索引沒有任何作用，因為索引類型絕對不是唯一的。 請勿將這個選項設定為 ON，否則會引發錯誤。  
+IGNORE_DUP_KEY =**OFF**  
+對於空間索引沒有任何作用，因為索引類型絕對不是唯一的。 請勿將這個選項設定為 ON，否則會引發錯誤。  
   
- STATISTICS_NORECOMPUTE = {ON |**OFF**}  
- 指定是否要重新計算散發統計資料。 預設值為 OFF。  
+STATISTICS_NORECOMPUTE = {ON |**OFF**}  
+指定是否要重新計算散發統計資料。 預設值為 OFF。  
   
  ON  
  不會自動重新計算過期的統計資料。  
@@ -431,10 +436,10 @@ BOUNDING_BOX = ( {
  若要還原自動統計資料更新，請將 STATISTICS_NORECOMPUTE 設為 OFF，或執行不含 NORECOMPUTE 子句的 UPDATE STATISTICS。  
   
 > [!IMPORTANT]  
->  停用散發統計資料的自動重新計算，可防止查詢最佳化工具取得與資料表有關之查詢的最佳執行計畫。  
+> 停用散發統計資料的自動重新計算，可防止查詢最佳化工具取得與資料表有關之查詢的最佳執行計畫。  
   
- DROP_EXISTING = {ON |**OFF** }  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+DROP_EXISTING = {ON |**OFF** }  
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定要卸除及重建預先存在的具名空間索引。 預設值為 OFF。  
   
@@ -446,16 +451,16 @@ BOUNDING_BOX = ( {
   
  您無法利用 DROP_EXISTING 來變更索引類型。  
   
- ONLINE =**OFF**  
- 指定在索引作業期間，基礎資料表和相關聯的索引無法供查詢和資料修改使用。 在這一版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，空間索引不支援線上索引建立。 如果此選項針對空間索引設定為 ON，就會引發錯誤。 請省略 ONLINE 選項，或是將 ONLINE 設定為 OFF。  
+ONLINE =**OFF**  
+指定在索引作業期間，基礎資料表和相關聯的索引無法供查詢和資料修改使用。 在這一版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，空間索引不支援線上索引建立。 如果此選項針對空間索引設定為 ON，就會引發錯誤。 請省略 ONLINE 選項，或是將 ONLINE 設定為 OFF。  
   
  建立、重建或卸除空間索引的離線索引作業會取得資料表的結構描述修改 (Sch-M) 鎖定。 這可防止所有使用者在作業持續期間存取基礎資料表。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- ALLOW_ROW_LOCKS = { **ON** |OFF}  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ALLOW_ROW_LOCKS = { **ON** |OFF}  
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定是否允許資料列鎖定。 預設值是 ON。  
   
@@ -465,8 +470,8 @@ BOUNDING_BOX = ( {
  OFF  
  不使用資料列鎖定。  
   
- ALLOW_PAGE_LOCKS = { **ON** |OFF}  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ALLOW_PAGE_LOCKS = { **ON** |OFF}  
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定是否允許頁面鎖定。 預設值是 ON。  
   
@@ -476,17 +481,17 @@ BOUNDING_BOX = ( {
  OFF  
  不使用頁面鎖定。  
   
- MAXDOP =*max_degree_of_parallelism*  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+MAXDOP =*max_degree_of_parallelism*  
+**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  針對索引作業持續時間覆寫 `max degree of parallelism` 組態選項。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
   
 > [!IMPORTANT]  
->  雖然 MAXDOP 選項在語法上有受到支援，但是 CREATE SPATIAL INDEX 目前一定只會使用單一處理器。  
+> 雖然 MAXDOP 選項在語法上有受到支援，但是 CREATE SPATIAL INDEX 目前一定只會使用單一處理器。  
   
  *max_degree_of_parallelism*可以是：  
   
- 1  
+ @shouldalert  
  隱藏平行計畫的產生。  
   
  \>1  
@@ -498,14 +503,14 @@ BOUNDING_BOX = ( {
  如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]  
->  並非每個版本都可使用平行索引作業[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 並非每個版本都可使用平行索引作業[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- DATA_COMPRESSION = {NONE | ROW | PAGE}  
- **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+DATA_COMPRESSION = {NONE | ROW | PAGE}  
+**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  決定索引使用的資料壓縮層級。  
   
- NONE  
+ 無  
  索引不會將壓縮用於資料上。  
   
  ROW  
@@ -520,7 +525,7 @@ BOUNDING_BOX = ( {
  在資料表的每一個空間資料行上最多可以建立 249 個空間索引。 例如，要針對單一資料行中的不同鑲嵌式參數建立索引時，在特定空間資料行上建立一個以上的空間索引可能會很有用處。  
   
 > [!IMPORTANT]  
->  建立空間索引時，有許多其他限制。 如需詳細資訊，請參閱[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)。  
+> 建立空間索引時，有許多其他限制。 如需詳細資訊，請參閱[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
  索引建立無法利用可用的處理序平行處理原則。  
   
@@ -559,7 +564,7 @@ BOUNDING_BOX = ( {
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. 在幾何資料行上建立空間索引  
  下列範例會建立一個名為資料表`SpatialTable`包含**幾何**類型資料行`geometry_col`。 然後，此範例會在 `SIndx_SpatialTable_geometry_col1` 上建立空間索引 `geometry_col`。 此範例會使用預設鑲嵌式配置，並指定週框方塊。  
   
-```  
+```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1   
    ON SpatialTable(geometry_col)  
@@ -569,7 +574,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
 ### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. 在幾何資料行上建立空間索引  
  下列範例會在 `SIndx_SpatialTable_geometry_col2` 資料表的 `geometry_col` 上建立第二個空間索引 `SpatialTable`。 此範例會指定 `GEOMETRY_GRID` 做為鑲嵌式配置。 此範例也會指定週框方塊、不同方格層級上的不同密度，以及每一物件 64 個資料格。 此範例也會將索引填補設定為 `ON`。  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2  
    ON SpatialTable(geometry_col)  
    USING GEOMETRY_GRID  
@@ -583,7 +588,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. 在幾何資料行上建立空間索引  
  下列範例會在 `SIndx_SpatialTable_geometry_col3` 資料表的 `geometry_col` 中建立第三個空間索引 `SpatialTable`。 此範例會使用預設鑲嵌式配置。 此範例會指定週框方塊，並在第三和第四層上使用不同的資料格密度，同時使用每一物件的預設資料格數目。  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  
    ON SpatialTable(geometry_col)  
    WITH (  
@@ -594,7 +599,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
 ### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. 變更空間索引所特有的選項  
  下列範例會使用 DROP_EXISTING = ON 來指定新的 `SIndx_SpatialTable_geography_col3` 密度，藉以重建上述範例中所建立的空間索引 `LEVEL_3`。  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable(geography_col)  
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ),  
@@ -605,7 +610,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. 在地理資料行上建立空間索引  
  下列範例會建立一個名為資料表`SpatialTable2`包含**geography**類型資料行`geography_col`。 然後，此範例會在 `SIndx_SpatialTable_geography_col1` 上建立空間索引 `geography_col`。 此範例會使用 GEOGRAPHY_AUTO_GRID 鑲嵌式配置的預設參數值。  
   
-```  
+```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1   
    ON SpatialTable2(object);  
@@ -617,7 +622,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
 ### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. 在地理資料行上建立空間索引  
  下列範例會在 `SIndx_SpatialTable_geography_col2` 資料表的 `geography_col` 上建立第二個空間索引 `SpatialTable2`。 此範例會指定 `GEOGRAPHY_GRID` 做為鑲嵌式配置。 此範例也會在不同層級上指定不同方格密度，並指定每一物件 64 個資料格。 此範例也會將索引填補設定為 `ON`。  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2  
    ON SpatialTable2(object)  
    USING GEOGRAPHY_GRID  
@@ -630,13 +635,13 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
 ### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. 在地理資料行上建立空間索引  
  然後此範例會在 `SIndx_SpatialTable_geography_col3` 資料表的 `geography_col` 中建立第三個空間索引 `SpatialTable2`。 此範例會使用預設鑲嵌式配置 GEOGRAPHY_GRID 及預設 CELLS_PER_OBJECT 值 (16)。  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable2(object)  
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   

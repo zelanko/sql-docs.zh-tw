@@ -3,27 +3,27 @@ title: "Red Hat Enterprise Linux 共用的叢集運作的 SQL Server |Microsoft 
 description: "藉由設定 Red Hat Enterprise Linux 共用的磁碟叢集的 SQL Server 實作高可用性。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: 439f906eaec98fe6b67c15842441f598ee6d8da5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>適用於 SQL Server 運作 Red Hat Enterprise Linux 共用的磁碟叢集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文件說明如何在 Red Hat Enterprise Linux 共用的磁碟容錯移轉叢集上，執行下列工作適用於 SQL Server。
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/01/2017
 
 ![Red Hat Enterprise Linux 7 共用磁碟的 SQL 叢集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-如需叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 ## <a name = "failManual"></a>手動容錯移轉叢集化
 
@@ -73,7 +73,7 @@ sudo pcs status
 sudo crm_mon 
 ```
 
-檢視中的資源代理程式記錄檔`/var/log/cluster/corosync.log`
+檢視中的資源代理程式記錄檔 `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>將節點加入至叢集
 
@@ -105,7 +105,7 @@ sudo crm_mon
 
 1. 請依照下列指示掛接到共用位置的資料庫檔案目錄：
 
-   從 NFS 伺服器上，安裝`nfs-utils`
+   從 NFS 伺服器上，安裝 `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -184,7 +184,7 @@ sudo crm_mon
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    下列範例廣告節點名為**vm3**到叢集。
+    下列範例會將名為的節點**vm3**到叢集。
 
     ```bash
     sudo pcs    cluster auth  
@@ -224,7 +224,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 ### <a name="current-cluster-status"></a>目前的叢集狀態 
 
-`sudo pcs status`傳回每個節點的叢集、 仲裁、 節點、 資源和服務精靈狀態相關的基本資訊。 
+`sudo pcs status` 傳回每個節點的叢集、 仲裁、 節點、 資源和服務精靈狀態相關的基本資訊。 
 
 狀況良好的 pacemaker 仲裁輸出的範例，就是：
 
@@ -253,9 +253,9 @@ pacemaker: active/enabled
 
 在範例中，`partition with quorum`表示的節點多數仲裁在線上。 如果叢集遺失節點多數仲裁`pcs status`會傳回`partition WITHOUT quorum`，也會停止所有資源。 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`傳回目前參與叢集的所有節點的名稱。 如果未加入任何節點，`pcs status`傳回`OFFLINE: [<nodename>]`。
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` 傳回目前參與叢集的所有節點的名稱。 如果未加入任何節點，`pcs status`傳回`OFFLINE: [<nodename>]`。
 
-`PCSD Status`顯示每個節點的叢集狀態。
+`PCSD Status` 顯示每個節點的叢集狀態。
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>節點可能離線的原因
 
@@ -265,7 +265,7 @@ pacemaker: active/enabled
 
     下列連接埠必須開啟 Pacemaker 能夠進行通訊的所有節點上。
     
-    - * * TCP: 2224年 3121、 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker 或 Corosync 服務執行**
 

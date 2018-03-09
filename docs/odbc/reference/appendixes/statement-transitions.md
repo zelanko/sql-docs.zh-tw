@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 328529660d13c324e0d69749285c9e0022a04405
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 50a20cb922b3f608a9d16cd24d5c288b096e01ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statement-transitions"></a>陳述式轉換
 ODBC 陳述式具有下列狀態。  
   
-|State|Description|  
+|State|描述|  
 |-----------|-----------------|  
 |S0|未配置的陳述式。 （C4、 C5 或 C6，必須是連接狀態。 如需詳細資訊，請參閱[連接轉換](../../../odbc/reference/appendixes/connection-transitions.md)。)|  
 |S1|配置陳述式。|  

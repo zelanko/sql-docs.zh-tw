@@ -3,35 +3,35 @@ title: "設定 SQL Server SLES 共用的磁碟叢集 |Microsoft 文件"
 description: "藉由設定適用於 SQL Server 的 SUSE Linux Enterprise Server (SLES) 共用的磁碟叢集實作高可用性。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 71671e0103916d6a539b730ce4bac141d29c417e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>設定 SQL Server SLES 共用的磁碟叢集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本指南提供指示來建立適用於 SQL Server 上 SUSE Linux Enterprise Server (SLES) 的兩個節點共用的磁碟叢集。 叢集的圖層根據 SUSE[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)之上[Pacemaker](http://clusterlabs.org/)。 
 
-如需叢集設定、 資源代理程式的選項、 管理、 最佳做法和建議的詳細資訊，請參閱[SUSE Linux Enterprise 高可用性延伸 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
+如需有關叢集設定、 資源代理程式的選項、 管理、 最佳做法和建議的詳細資訊，請參閱[SUSE Linux Enterprise 高可用性延伸 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
-若要完成以下的端對端案例中，您需要部署兩個節點叢集與另一部伺服器來設定 NFS 共用的兩部電腦。 下列步驟概述這些伺服器設定的方式。
+若要完成下列端對端案例中，您需要部署兩個節點叢集與另一部伺服器來設定 NFS 共用的兩部電腦。 下列步驟概述這些伺服器設定的方式。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>安裝和設定每個叢集節點上的作業系統
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/01/2017
 
     > [!NOTE]
     > 伺服器主要金鑰是於安裝時期，產生 SQL Server 執行個體，並且在置於`/var/opt/mssql/secrets/machine-key`。 On Linux，一律以呼叫 mssql 本機帳戶執行 SQL Server。 因為它是本機帳戶，其識別身分不被共用在節點之間。 因此，您要複製的加密金鑰從主要節點，每個次要節點讓每個本機 mssql 帳戶可以存取它來解密 Server 主要金鑰。
-4. 主要節點上，為 Pacemaker 建立 SQL server 登入並授與登入執行的權限`sp_server_diagnostics`。 若要確認哪一個節點執行 SQL Server，pacemaker 會使用此帳戶。
+4. 主要節點上，為 Pacemaker 建立 SQL server 登入並授與登入執行的權限`sp_server_diagnostics`。 Pacemaker 來確認哪一個節點正在執行 SQL Server 使用此帳戶。
 
     ```bash
     sudo systemctl start mssql-server
@@ -203,7 +203,7 @@ ms.lasthandoff: 12/01/2017
 - **SQL Server Resource Name>**： 叢集的 SQL Server 資源的名稱。 
 - **逾時值**： 逾時值是叢集等候資源上線的時間量。 SQL Server，這是您預期要讓 SQL Server 的時間`master`資料庫上線。 
 
-更新您的環境下的指令碼中的值。 若要設定並啟動叢集的服務的一個節點上執行。
+更新下列指令碼，為您的環境中的值。 若要設定並啟動叢集的服務的一個節點上執行。
 
 ```bash
 sudo crm configure

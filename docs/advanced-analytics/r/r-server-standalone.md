@@ -1,28 +1,31 @@
 ---
 title: "R Server (獨立式) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 06/22/2017
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-vms.technology: r-services
+vms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa740dc305bf3a34afac42371dbd1ba554b11924
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-server-standalone"></a>R Server (Standalone)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2016 中，Microsoft 發行**R 伺服器 （獨立）**，它支援企業級分析的平台的一部分。  Microsoft R Server 提供延展性和安全性的 R 語言，並會解決開放原始碼 r 的記憶體限制SQL Server R 服務，例如 Microsoft R Server （獨立） 會提供平行和區塊處理的資料，讓 R 使用者使用遠大於可放入記憶體的資料。
 
@@ -100,7 +103,7 @@ SQL Server 機器學習的企業使用者可以使用可下載的 Microsoft R Se
 
 範例、 教學課程中，與 Microsoft R Server 的詳細資訊，請參閱[Microsoft R 產品](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
  [SQL Server R 服務](../../advanced-analytics/r/sql-server-r-services.md)
 

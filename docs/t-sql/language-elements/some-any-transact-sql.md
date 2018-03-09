@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -17,7 +18,8 @@ applies_to:
 f1_keywords:
 - SOME
 - SOME_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - scalar values
 - comparing scalar with single-column set
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f962702faec170262f50c3c2ca5c328af3bc266d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,14 +63,14 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  指定應該進行比較。  
   
- *子查詢*  
+ *subquery*  
  這是有單一資料行結果集的子查詢。 傳回的資料行的資料類型必須是相同的資料類型*scalar_expression*。  
   
 ## <a name="result-types"></a>結果類型  
  **布林**  
   
 ## <a name="result-value"></a>結果值  
- SOME 或 ANY 傳回**TRUE**時指定的比較為 TRUE 的任何一對 (*scalar_expression***，***x*) 其中*x*是單一資料行集中的值; 否則傳回**FALSE**。  
+ SOME 或 ANY 傳回**TRUE**時指定的比較為 TRUE 的任何一對 (*scalar_expression***，***x*) 其中*x*是中的值單一資料行集。反之則傳回**FALSE**。  
   
 ## <a name="remarks"></a>備註  
  SOME 需要*scalar_expression*正面比較至少一個子查詢所傳回的值。 需要的陳述式*scalar_expression*正面比較到子查詢會傳回每個值，請參閱[所有 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md). 例如，如果子查詢傳回 2 和 3 個值*scalar_expression* = SOME （子查詢） 會評估為 TRUE 的*scalar_express*為 2。 如果子查詢傳回 2 和 3 個值*scalar_expression* = ALL （子查詢） 會評估為 FALSE，因為部分子查詢 （即值 3） 的值不符合準則的運算式。  
@@ -147,13 +149,13 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [所有 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [案例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [在 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   

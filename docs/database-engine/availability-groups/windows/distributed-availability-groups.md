@@ -1,7 +1,7 @@
 ---
 title: "分散式可用性群組 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 01/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -16,13 +16,13 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 245eb466e756017c3ae70a5fc408d4ce876370d4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b91fb1cb4699158b69db18a9a86e407f1de97cc6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 分散式可用性群組是 SQL Server 2016 中引進的新功能，為現有 AlwaysOn 可用性群組功能的變異。 本文釐清分散式可用性群組的某些層面，並補充現有 [SQL Server 文件](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)。
@@ -147,7 +147,11 @@ ms.lasthandoff: 11/20/2017
 
 在這兩個上述範例中，這三個可用性群組最多可能共會有 27 個複本，而且全部都可以用於唯讀查詢。 
 
-[唯讀路由]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)目前無法與分散式可用性群組搭配運作。 如果所有查詢都使用接聽程式連接，請移至主要複本。 否則，您必須設定每個複本都允許次要複本的所有連接，並直接存取它們。 在 SQL Server 2016 更新或 SQL Server 的未來版本中，可能會變更此行為。
+[唯讀路由]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)無法完全與分散式可用性群組搭配運作。 具體來說：
+
+1. 唯讀路由可加以設定，並用於分散式可用性群組的主要可用性群組。 
+2. 唯讀路由可加以設定，但無法用於分散式可用性群組的次要可用性群組。 查詢若使用接聽程式連線到次要可用性群組，則會全部移至次要可用性群組的主要複本。 否則，您必須設定每個複本都允許次要複本的所有連接，並直接存取它們。 不過，如果次要可用性群組在容錯移轉之後成為主要，則可以使用唯讀路由。 在 SQL Server 2016 更新或 SQL Server 的未來版本中，可能會變更此行為。
+
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>初始化分散式可用性群組中的次要可用性群組
 
@@ -260,7 +264,7 @@ and ag.is_distributed = 1
 ![分散式可用性群組的效能資訊][13]
 
 
-### <a name="next-steps"></a>後續的步驟 
+### <a name="next-steps"></a>後續步驟 
 
 * [使用可用性群組精靈 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 

@@ -8,22 +8,20 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4eb8037bfbb7f1fd3edebcd108c59fe8168ffeff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6dd79986579847f890ec4387602c833b4f48d7cb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -154,7 +152,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  在 **[報表路徑]**中，指定正斜線，後面緊跟著資料夾路徑與報表名稱。 請 **勿** 加入伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟 Adventure Works 資料夾中的 ‘Company Sales’ 報表，請指定 **/Adventure Works/Company Sales**。 以下是 ‘Products’ 報表位於報表伺服器根資料夾 **/Products**的另一個範例。  
   
-9. 按一下 **[確定]**。  
+9. 按一下 [確定] 。  
   
 #### <a name="add-report-explorer-and-connect-to-report-viewer"></a>加入報表總管並連接到報表檢視器  
   
@@ -166,7 +164,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  您可以選擇性地設定 **[起始路徑]**。 起始路徑是報表伺服器資料夾階層中的資料夾。 如果您要讓預設頁面成為比資料夾階層以下的資料夾，您可以指定起始路徑。 路徑開頭必須是正斜線。 您必須指定以報表伺服器資料夾階層之根節點開始的完整路徑，但是不包含伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟根節點正下方，名稱為 Adventure Works 的資料夾，請在 [起始路徑] 中指定 **/Adventure Works** 。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 6.  報表總管將會顯示報表伺服器中的報表項目清單。 根據預設，如果您按一下報表的名稱，系統將會在新視窗中開啟報表。 如果您想要將報表總管連接到報表檢視器，請完成下列步驟。如此一來，當您在報表總管中按一下報表名稱時，它就會顯示在報表檢視器中。  
   

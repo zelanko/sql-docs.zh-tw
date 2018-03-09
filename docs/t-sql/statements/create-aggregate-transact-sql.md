@@ -1,5 +1,5 @@
 ---
-title: "建立彙總 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - CREATE AGGREGATE
 - AGGREGATE_TSQL
 - AGGREGATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE AGGREGATE statement
 - aggregate functions [SQL Server], user-defined
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 877e72a18d11fbf31a6ea61f6abed515f5b746f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 07509e36b76aad995297cfae0147df7e8db41c20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  這是您要建立之彙總函式的名稱。  
   
- **@***param_name*  
+ **@** *param_name*  
  使用者定義彙總中的一或多個參數。 在執行彙總函式時，使用者必須提供參數的值。 指定參數名稱，使用"at"記號 (**@**) 作為第一個字元。 參數名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 這些參數是函數的本機參數。  
   
  *system_scalar_type*  
@@ -83,7 +85,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  這是目前資料庫中已建立之 CLR 使用者自訂類型的名稱。 如果*udt_schema_name*未指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]假設類型屬於目前使用者的結構描述。  
   
- *assembly_name* [ **。***class_name* ]  
+ *assembly_name* [ **.***class_name* ]  
  指定要繫結使用者定義彙總函式的組件，以及 (選擇性) 組件所屬的結構描述名稱和實作使用者自訂彙總的組件中之類別名稱。 這個組件必須已利用 CREATE ASSEMBLY 陳述式建立在資料庫中。 *class_name*必須是有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別碼，且符合組件中現有的類別名稱。 *class_name*可能是命名空間限定名稱，如果用來撰寫類別的程式設計語言使用命名空間，例如 C#。 如果*class_name*未指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]假設它是與相同*aggregate_name*。  
   
 ## <a name="remarks"></a>備註  
@@ -120,7 +122,7 @@ EXTERNAL NAME [StringUtilities].[Microsoft.Samples.SqlServer.Concatenate];
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [卸除彙總 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

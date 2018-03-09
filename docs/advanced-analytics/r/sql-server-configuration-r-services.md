@@ -7,22 +7,23 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b65eb600060a5d7e12d3095d145a23f5b8b3290b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>使用 R 與 SQL Server 組態
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是說明兩個案例研究為基礎的 R 服務的效能最佳化的數列中的第二個。  本文章提供用來執行 SQL Server R Services 的電腦的硬體與網路設定的相關指引。 它也包含有關如何設定 SQL Server 執行個體、 資料庫或資料表用於方案中的相關資訊。 使用 SQL Server 中的 NUMA 模糊的硬體和資料庫最佳化的關係之間的線，因為第三個區段會討論詳細 CPU 分配和資源控管。
 
@@ -99,7 +100,7 @@ IO 效能通常可以提升使用壓縮或單欄式資料存放區。 一般而�
 
 + [資料行存放區索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
-### <a name="memory-optimized-tables"></a>記憶體最佳化的資料表
+### <a name="memory-optimized-tables"></a>記憶體最佳化資料表
 
 Screen 鍵則記憶體已不再現代電腦的問題。 繼續改善硬體規格，它是相對較容易到達良好值的 RAM。 不過，在相同的時間，則會被比以往，更快速地產生資料，而且必須與低度延遲處理資料。
 

@@ -7,26 +7,27 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5c29edc6f5b89b35e2242f9d80caf56c90426d9f
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>Python 與 SQL Server 的互通性
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題說明如果您啟用此功能會安裝 Python 元件**機器學習服務 （資料庫）**並選取 Python 語言。
 
 ## <a name="python-components"></a>Python 元件
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]不會修改 Python 可執行檔。 Python 執行階段安裝獨立 SQL 工具，並執行的外部[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]程序。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 不會修改 Python 可執行檔。 Python 執行階段安裝獨立 SQL 工具，並執行的外部[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]程序。
 
 具有特定相關聯之發佈[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]執行個體位於執行個體相關聯的資料夾。
 
@@ -71,6 +72,6 @@ Python 的輸入的資料必須是表格式。 必須的形式傳回所有 Pytho
 
 使用 Python 的機器學習服務安裝的一部分，您必須同意 GNU Public License 中的條款。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Python 程式庫和資料類型](python-libraries-and-data-types.md)

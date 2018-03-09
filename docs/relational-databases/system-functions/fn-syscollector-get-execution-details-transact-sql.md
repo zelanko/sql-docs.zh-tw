@@ -1,5 +1,5 @@
 ---
-title: "f (TRANSACT-SQL) |Microsoft 文件"
+title: fn_syscollector_get_execution_details (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_details_TSQL
 - fn_syscollector_get_execution_details
-dev_langs: TSQL
-helpviewer_keywords: fn_syscollector_get_execution_details function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd44ed098f4dbf15e529df6cbe4026d065dfa2a5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 98d6fd075e060b9c25863137eccdd1cd86b4c45e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +46,12 @@ fn_syscollector_get_execution_details ( log_id )
 ```  
   
 ## <a name="arguments"></a>引數  
- *g _ i d*  
+ *log_id*  
  執行記錄的本機唯一識別碼。 *g _ i d*是**int**。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|記錄項目的唯一識別碼。|  
 |event|**sysname**|產生記錄項目的事件名稱。|  
@@ -66,8 +69,8 @@ fn_syscollector_get_execution_details ( log_id )
 ## <a name="permissions"></a>Permissions  
  需要 SELECT 權限**dc_operator**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [啟用封裝記錄中的 SQL Server 資料工具](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
- [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
+ [資料收集](../../relational-databases/data-collection/data-collection.md)  
   
   

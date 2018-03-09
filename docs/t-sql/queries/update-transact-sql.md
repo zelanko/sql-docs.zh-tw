@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
 - UPDATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DML [SQL Server], UPDATE statement
 - data updates [SQL Server], UPDATE statement
@@ -38,16 +40,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: "91"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 671eb95a5c1772ec790886d923112d491bbd2a35
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -119,12 +121,12 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引數  
- 與\<common_table_expression >  
+ WITH \<common_table_expression>  
  指定定義在 UPDATE 陳述式範圍內的暫存具名結果集或檢視表，也稱為通用資料表運算式 (CTE)。 CTE 結果集是從簡單查詢衍生而來，由 UPDATE 陳述式來加以參考。  
   
  另外，一般資料表運算式也可以搭配 SELECT、INSERT、DELETE 和 CREATE VIEW 等陳述式來使用。 如需詳細資訊，請參閱[common_table_expression &#40; 與TRANSACT-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(** *運算式***)** [百分比]  
+ TOP **(** *expression***)** [ PERCENT ]  
  指定的數字或更新資料列的百分比。 *expression* 可以是一個數字，也可以是資料列的百分比。  
   
  搭配 INSERT、UPDATE 或 DELETE 使用的 TOP 運算式所參考的資料列並不依照任何順序來排列。  
@@ -134,7 +136,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *table_alias*  
  在 FROM 子句中指定的別名，代表要更新資料列的資料表或檢視表。  
   
- *伺服器名稱*  
+ *server_name*  
  是伺服器的名稱 (利用連結的伺服器名稱或[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)函數當做伺服器名稱) 的資料表或檢視所在。 如果*server_name*指定，則*database_name*和*schema_name*所需。  
   
  *database_name*  
@@ -149,7 +151,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *rowset_function_limited*  
  可能是[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)或[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)函式，提供者功能而定。  
   
- 與**(** \<Table_Hint_Limited > **)**  
+ WITH **(** \<Table_Hint_Limited> **)**  
  指定目標資料表允許使用的一個或多個資料表提示。 WITH 關鍵字和括號都是必要的。 不允許使用 NOLOCK 和 READUNCOMMITTED。 如需有關資料表提示的資訊，請參閱[資料表提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
@@ -172,9 +174,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
  複合指派運算子：  
- + = 加入並指派  
+ += 加入並指派  
  -= 減去並指派  
- * = 乘以並指派  
+ *= 乘以並指派  
  / = 除以並指派  
  %= 模除並指派  
  & = 位元 AND 並指派  
@@ -190,7 +192,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *引數*[ **，**...*n*] **)**  
  非靜態公用 mutator 方法*udt_column_name*接受一或多個引數。  
   
- **.**寫入**(***運算式***，***@Offset***，** *@Length***)**  
+ **.**WRITE **(***expression***,***@Offset***,***@Length***)**  
  指定值的區段*column_name*要修改。 *運算式*取代 *@Length* 單位從開始 *@Offset* 的*column_name*。 只有資料行的**varchar （max)**， **nvarchar （max)**，或**varbinary （max)**可以使用這個子句來指定。 *column_name*不能是 NULL，也不限定資料表名稱或資料表別名。  
   
  *運算式*是複製到的值*column_name*。 *運算式*必須評估成或能夠隱含地轉換成*column_name*型別。 如果*運算式*設為 NULL，  *@Length* 會被忽略中的值和*column_name*會截斷在指定 *@Offset*.  
@@ -201,15 +203,15 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  如需詳細資訊，請參閱＜備註＞。  
   
- **@***變數*  
+ **@** *variable*  
  宣告的變數設為所傳回的值*運算式*。  
   
- 設定 **@** *變數* = *資料行* = *運算式*設定至相同的變數為資料行的值。 這有別於 SET  **@** *變數* = *資料行*，*資料行* =  *運算式*，它會設定變數來更新之前的資料行的值。  
+ 設定 **@ * * * 變數* = *資料行* = *運算式*將變數設為資料行相同的值。 這有別於 SET **@ * * * 變數* = *資料行*，*資料行* = *運算式*，將更新之前的資料行值的變數。  
   
- \<OUTPUT_Clause >  
+ \<OUTPUT_Clause>  
  在 UPDATE 作業中，傳回更新資料或以更新資料為基礎的運算式。 任何目標是遠端資料表或檢視表的 DML 陳述式都不支援 OUTPUT 子句。 如需詳細資訊，請參閱[OUTPUT 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
- 從\<t >  
+ FROM \<table_source>  
  指定利用資料表、檢視表或衍生資料表來源來提供更新作業的準則。 如需詳細資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。  
   
  如果更新的物件與 FROM 子句中的物件相同，且只有一個參考指向 FROM 子句中的物件，就不一定要指定物件別名。 如果更新的物件在 FROM 子句中重複出現，就正好只有一個指向這個物件的參考不能指定資料表別名。 所有其他指向 FROM 子句中之物件的參考，都必須包括物件別名。  
@@ -226,7 +228,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
 -   定位更新利用 CURRENT OF 子句來指定資料指標。 更新作業發生在資料指標目前的位置上。  
   
-\<s >  
+\<search_condition>  
  指定要更新之資料列的相符條件。 搜尋條件也可以是聯結的基礎條件。 搜尋條件中所能包括的述詞數目沒有限制。 如需有關述詞和搜尋條件的詳細資訊，請參閱[搜尋條件 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 CURRENT OF  
@@ -243,7 +245,7 @@ GLOBAL
 *cursor_variable_name*  
  這是資料指標變數的名稱。 *cursor_variable_name*必須參考允許更新的資料指標。  
   
-選項**(** \<query_hint > [ **，**...*n* ] **)**  
+OPTION **(** \<query_hint> [ **,**... *n* ] **)**  
  指定利用最佳化工具提示來自訂 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳作法  
@@ -334,7 +336,7 @@ GO
 >  **Ntext**，**文字**，和**映像**的未來版本將移除的資料型別[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ### <a name="updating-large-value-data-types"></a>更新大數值資料類型  
- 使用**。**寫入 (*運算式***，**  *@Offset*  **，***@Length*) 子句執行的部分或完整更新**varchar （max)**， **nvarchar （max)**，和**varbinary （max)**資料型別。 例如，部分更新**varchar （max)**資料行可能會刪除或修改資料行的前 200 個字元，而完整的更新會刪除或修改資料行中的所有資料。 **.**WRITE 如果資料庫復原模式設為大量記錄或簡單就會進行最低限度記錄，插入或附加新資料更新。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ 使用**。**寫入 (*運算式 *** *@Offset***，***@Length*) 子句來執行的部分或完整更新**varchar （max)**， **nvarchar （max)**，和**varbinary （max)**資料型別。 例如，部分更新**varchar （max)**資料行可能會刪除或修改資料行的前 200 個字元，而完整的更新會刪除或修改資料行中的所有資料。 **.**WRITE 如果資料庫復原模式設為大量記錄或簡單就會進行最低限度記錄，插入或附加新資料更新。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  當 UPDATE 陳述式造成下列情況時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將部分更新轉換成完整更新：  
 -   變更資料分割檢視或資料表的索引鍵資料行。  
@@ -346,7 +348,7 @@ GO
   
 若要有最佳效能，建議您以 8040 個位元組倍數的片段大小來插入或更新資料。  
   
-如果修改的資料行**。**寫入子句中參考 OUTPUT 子句，將資料行的完整值可以是中的影像之前**刪除。***column_name*或後的置資料影像中**插入。***column_name*，傳回資料表變數中的指定資料行。 請參閱以下的範例 R。  
+如果修改的資料行**。**寫入子句中參考 OUTPUT 子句，將資料行的完整值可以是中的影像之前 **刪除。 * * * column_name*或後的置資料影像中 **插入。 * * * column_name*，就會傳回資料表變數中的指定資料行。 請參閱以下的範例 R。  
   
 若要達到相同的功能**。**撰寫和其他字元或二進位資料類型，請使用[東西 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md).  
   
@@ -464,7 +466,7 @@ ID     Value
 ## <a name="logging-behavior"></a>記錄行為  
  記錄 UPDATE 陳述式。不過，部分更新大數值資料類型使用**。**WRITE 子句會使用最低限度記錄。 如需詳細資訊，請參閱前面＜資料類型＞一節中的＜更新大數值資料類型＞。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要目標資料表的 UPDATE 權限。 也是必要如果 UPDATE 陳述式包含 WHERE 子句，或是正在更新之資料表的 SELECT 權限*運算式*集中子句，請使用資料表中的資料行。  
@@ -920,7 +922,7 @@ SET Location = CONVERT(Point, '12.3:46.2')
 WHERE Name = 'Anchorage';  
 ```  
   
-#### <a name="w-invoking-a-method"></a>W 叫用方法  
+#### <a name="w-invoking-a-method"></a>W. 叫用方法  
  您可以叫用使用者定義型別的方法 (標示為 mutator) 來執行更新，藉以更新 UDT。 下列範例會叫用名稱為 `Point` 的 `SetXY` 類型之 mutator 方法。 這會更新類型執行個體的狀態。  
   
 ```sql  
@@ -929,7 +931,7 @@ SET Location.SetXY(23.5, 23.5)
 WHERE Name = 'Anchorage';  
 ```  
   
-#### <a name="x-modifying-the-value-of-a-property-or-data-member"></a>X。 修改屬性或資料成員的值  
+#### <a name="x-modifying-the-value-of-a-property-or-data-member"></a>X. 修改屬性或資料成員的值  
  您可以修改使用者定義型別的已註冊屬性值或公用資料成員值，藉以更新 UDT。 提供值的運算式必須可隱含地轉換成屬性的類型。 下列範例會修改使用者定義型別 `X` 的 `Point` 屬性值。  
   
 ```sql  
@@ -944,7 +946,7 @@ WHERE Name = 'Anchorage';
 > [!CAUTION]  
 >  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最好的查詢執行計畫，因此，我們建議資深的開發人員和資料庫管理員只將提示當做最後的解決辦法。  
   
-#### <a name="y-specifying-a-table-hint"></a>Y。 指定資料表提示  
+#### <a name="y-specifying-a-table-hint"></a>Y. 指定資料表提示  
  下列範例會指定[資料表提示](../../t-sql/queries/hints-transact-sql-table.md)TABLOCK。 這個提示會指定在 `Production.Product` 資料表上採用共用鎖定，並且將鎖定保留到 UPDATE 陳述式結束為止。  
   
 ```sql  
@@ -957,7 +959,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-#### <a name="z-specifying-a-query-hint"></a>Z。 指定查詢提示  
+#### <a name="z-specifying-a-query-hint"></a>Z. 指定查詢提示  
  下列範例會指定[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)`OPTIMIZE FOR (@variable)` UPDATE 陳述式中。 這個提示會指示查詢最佳化工具在查詢進行編譯和最佳化時，使用特定的區域變數值。 只有在查詢最佳化期間，才使用這個值，在查詢執行期間，不使用這個值。  
   
 ```sql  
@@ -1036,7 +1038,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>AC。 在 TRY…CATCH 區塊中使用 UPDATE  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. 在 TRY…CATCH 區塊中使用 UPDATE  
  下列範例會使用 UPDATE 陳述式中再試一次...CATCH 區塊來處理更新作業期間可能發生執行錯誤。  
   
 ```sql  
@@ -1070,7 +1072,7 @@ GO
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="ad-using-a-simple-update-statement"></a>AD。 使用簡單的 UPDATE 陳述式  
+### <a name="ad-using-a-simple-update-statement"></a>AD. 使用簡單的 UPDATE 陳述式  
  下列範例會顯示所有資料列，能夠如何影響當 WHERE 子句不是指定要更新的資料列 （或資料列）。  
   
  這個範例會更新中的值`EndDate`和`CurrentFlag`資料行中的所有資料列`DimEmployee`資料表。  
@@ -1102,7 +1104,7 @@ SET FirstName = 'Gail'
 WHERE EmployeeKey = 500;  
 ```  
   
-### <a name="af-using-the-update-statement-with-label"></a>AF。 使用 UPDATE 陳述式標籤  
+### <a name="af-using-the-update-statement-with-label"></a>AF. 使用 UPDATE 陳述式標籤  
  下列範例顯示 UPDATE 陳述式的標籤使用。  
   
 ```sql  
@@ -1216,7 +1218,7 @@ DROP TABLE CTAS_acs
 ;
 ```
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [資料指標 &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   

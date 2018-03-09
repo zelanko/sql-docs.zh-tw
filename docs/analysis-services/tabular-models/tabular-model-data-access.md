@@ -5,31 +5,29 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4c1fa9b4e4f9003b193628d114ad6832436a7c8f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-data-access"></a>表格式模型資料存取
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在 Analysis Services 表格式模型資料庫可以存取受到大部分相同的用戶端、 介面及您使用多維度模型中擷取資料或中繼資料的語言。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Analysis Services 中的表格式模型資料庫可由您用來擷取多維度模型中之資料或中繼資料的大部分相同用戶端、介面和語言所存取。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
   
- 本主題描述搭配表格式模型使用的用戶端、查詢語言，以及程式設計介面。  
+ 本文說明用戶端、 查詢語言和程式設計介面，使用表格式模型。  
   
 ## <a name="clients"></a>用戶端  
  下列 Microsoft 用戶端應用程式支援 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型資料庫的原生連接。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="excel"></a>Excel  
  您可以使用 Excel 中的資料視覺效果與分析功能，從 Excel 連接至表格式模型資料庫，以處理您的資料。 若要存取資料，您要定義 Analysis Services 資料連接、指定在表格式伺服器模式下執行的伺服器，然後選擇您要使用的資料庫。 如需詳細資訊，請參閱＜ [連接到 SQL Server Analysis Services 或是從中匯入資料](http://go.microsoft.com/fwlink/?linkID=215150)＞。  
   
- Excel 也是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中瀏覽表格式模型的建議應用程式。 這個工具包含 [在 Excel 中進行分析] 選項，此選項可啟動新的 Excel 執行個體、建立 Excel 活頁簿，並開啟活頁簿與模型工作空間資料庫之間的資料連接。 在 Excel 中瀏覽表格式模型資料時，請注意 Excel 會使用 Excel 樞紐分析表用戶端，針對模型發出查詢。 因此，Excel 活頁簿中的作業會導致 MDX 查詢傳送給工作空間資料庫，而不是 DAX 查詢。 如果您要使用 SQL Profiler 或其他監視工具來監視查詢，您預期可以在 Profiler 追蹤內看到 MDX 而非 DAX。 如需 [在 Excel 中進行分析] 功能的詳細資訊，請參閱[在 Excel 中進行分析 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
+ Excel 也是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中瀏覽表格式模型的建議應用程式。 這個工具包含 [在 Excel 中進行分析] 選項，此選項可啟動新的 Excel 執行個體、建立 Excel 活頁簿，並開啟活頁簿與模型工作空間資料庫之間的資料連接。 在 Excel 中瀏覽表格式模型資料時，請注意 Excel 會使用 Excel 樞紐分析表用戶端，針對模型發出查詢。 因此，Excel 活頁簿中的作業會導致 MDX 查詢傳送給工作空間資料庫，而不是 DAX 查詢。 如果您要使用 SQL Profiler 或其他監視工具來監視查詢，您預期可以在 Profiler 追蹤內看到 MDX 而非 DAX。 如需在 excel 中進行分析的詳細資訊，請參閱[在 Excel 中的進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
 ### <a name="power-view"></a>Power View  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是一個在 SharePoint 2010 環境下執行的 Reporting Services 報告用戶端應用程式。 它可將資料瀏覽、查詢設計和簡報配置結合成整合式的隨選報表體驗。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 可以使用表格式模型當做資料來源，不論此模型是否裝載於以表格式模式執行的 Analysis Services 執行個體上，或者是否使用 DirectQuery 模式從關聯式資料存放區擷取模型資料。 若要連接至 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]中的表格式模型，您必須建立一個包含伺服器位置和資料庫名稱的連接檔案。 您可以在 SharePoint 中建立 Reporting Services 共用資料來源或 BI 語意模型連接檔案。 如需 BI 語意模型連接的詳細資訊，請參閱 [Power Pivot BI 語意模型連接 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)。  
@@ -93,11 +91,11 @@ ms.lasthandoff: 12/08/2017
 ### <a name="data-and-metadata"></a>資料和中繼資料  
  您可以在 Managed 應用程式中使用 ADOMD.NET 從表格式模型擷取資料和中繼資料。 
   
--   [使用動態管理檢視 &#40;DMV&#41; 監視 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [使用動態管理檢視 &#40; Dmv &#41;監視 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  您可以在 Unmanaged 用戶端應用程式中使用 Analysis Services 9.0 OLE DB 提供者支援 OLE DB 存取表格式模型。 需要更新版本的 Analysis Services OLE DB 提供者來啟用表格式模型存取。 如需與表格式模型搭配使用之提供者的詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 。  
   
- 您也可以直接從 Analysis Services 執行個體擷取 XML 架構格式的資料。 您可以使用 DISCOVER_CSDL_METADATA 資料列集來擷取表格式模型的結構描述，或者搭配現有的 ASSL 元素、物件或屬性使用 EXECUTE 或 DISCOVER 命令。 如需詳細資訊，請參閱下列資源：  
+ 您也可以直接從 Analysis Services 執行個體擷取 XML 架構格式的資料。 您可以使用 DISCOVER_CSDL_METADATA 資料列集來擷取表格式模型的結構描述，或者搭配現有的 ASSL 元素、物件或屬性使用 EXECUTE 或 DISCOVER 命令。 자세한 내용은 다음 리소스를 참조하십시오.  
   
 -   [商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
@@ -126,15 +124,15 @@ ms.lasthandoff: 12/08/2017
   
 -   [MDSCHEMA_HIERARCHIES 資料列集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     新的 **STRUCTURE_TYPE** 列舉可支援在表格式模型中建立之使用者定義階層的識別。 如需詳細資訊，請參閱[階層 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
+     新的 **STRUCTURE_TYPE** 列舉可支援在表格式模型中建立之使用者定義階層的識別。 如需詳細資訊，請參閱[階層](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
   
  這個版本中的 OLE DB for Data Mining 結構描述資料列集沒有更新。  
   
 > [!WARNING]  
 >  您不能在已經於 DirectQuery 模式下部署的資料庫中使用 MDX 或 DMX 查詢；因此，如果您需要使用結構描述資料列集來針對 DirectQuery 模式執行查詢，您應該使用 XMLA 而不是關聯的 DMV。 如果是整體會傳回伺服器結果的 DMV，例如來自 $system.DBSCHEMA_CATALOGS 或 DISCOVER_TRACES 的 SELECT *，您可以在快取模式中部署的資料庫內容中執行查詢。  
   
-## <a name="see-also"></a>請參閱  
- [連接到表格式模型資料庫 &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
+## <a name="see-also"></a>另請參閱  
+ [連接到表格式模型資料庫 ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [Power Pivot 資料存取](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   

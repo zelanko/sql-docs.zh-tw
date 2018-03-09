@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_objects_disabled_on_compatibility_level_change_TSQL
 - sys.dm_db_objects_disabled_on_compatibility_level_change
 - sys.dm_db_objects_disabled_on_compatibility_level_change_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bafca706c9fa8aa1f90bfb38b16df067c317a475
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f52daf2257ac6a2d8ea34d61ed2dd869b0363bce
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間資料-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
@@ -51,11 +54,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**類別**|**int**|1 = 條件約束<br /><br /> 7 = 索引和堆積|  
-|**class_desc**|**nvarchar （60)**|條件約束的 OBJECT 或 COLUMN<br /><br /> 索引和堆積的 INDEX|  
-|**則 major_id 就**|**int**|條件約束的 OBJECT ID<br /><br /> 包含索引和堆積的資料表 OBJECT ID|  
+|**class**|**int**|1 = 條件約束<br /><br /> 7 = 索引和堆積|  
+|**class_desc**|**nvarchar(60)**|條件約束的 OBJECT 或 COLUMN<br /><br /> 索引和堆積的 INDEX|  
+|**major_id**|**int**|條件約束的 OBJECT ID<br /><br /> 包含索引和堆積的資料表 OBJECT ID|  
 |**minor_id**|**int**|條件約束的 NULL<br /><br /> 索引和堆積的 Index_id|  
-|**相依性**|**nvarchar （60)**|導致條件約束或索引停用的相依性說明。 升級期間所引發的警示也會使用相同的值。 範例包括：<br /><br /> 內建的 "space"<br /><br /> 系統 UDT 的 "geometry"<br /><br /> 系統 UDT 之方法的 "geography::Parse"|  
+|**dependency**|**nvarchar(60)**|導致條件約束或索引停用的相依性說明。 升級期間所引發的警示也會使用相同的值。 範例包括：<br /><br /> 內建的 "space"<br /><br /> 系統 UDT 的 "geometry"<br /><br /> 系統 UDT 之方法的 "geography::Parse"|  
   
 ## <a name="general-remarks"></a>一般備註  
  當相容性層級變更時，將會停用使用內建函數的保存計算資料行。 除此之外，當資料庫升級時，也會停用使用幾何或地理方法的保存計算資料行。  
@@ -143,7 +146,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  由於無法停用單一資料行，因此，如果要停用整份資料表，必須停用叢集索引或堆積。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要 VIEW DATABASE STATE 權限。  
@@ -151,7 +154,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ## <a name="example"></a>範例  
  下列範例示範查詢**sys.dm_db_objects_disabled_on_compatibility_level_change**尋找受到變更為 120 的相容性層級的物件。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
 GO  
   

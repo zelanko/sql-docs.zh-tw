@@ -8,30 +8,33 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.warningsandalerts.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c99baee0acea3b6a05f15b5c2ae33cdb347ee1bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f150d44a28915741ffd45b4e8c4506deb41a5a51
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>資料庫鏡像監視器 (警告頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 顯示一份唯讀清單，列出資料庫鏡像事件所支援的警告和指定的警告臨界值 (如果有的話)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+會顯示一份唯讀清單，列出資料庫鏡像事件所支援的警告和指定的警告臨界值 (如果有的話)。  
   
  **若要使用 SQL Server Management Studio 監視資料庫鏡像**  
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="columns"></a>資料行  
+## <a name="columns"></a>[資料行]  
  **警告**  
  可定義臨界值的警告包括：  
   
@@ -52,8 +55,8 @@ ms.lasthandoff: 11/20/2017
   
  如需詳細資訊，請參閱此主題稍後的「備註」。  
   
-## <a name="remarks"></a>備註  
- 如果伺服器執行個體目前無法使用資訊，則對應之 **[於...的臨界值]** 資料行的資料格便會顯示灰色背景和浮水印文字。 如果監視器未連接到伺服器執行個體，則每個資料格中的方格會依據該執行個體是預設執行個體還是具名執行個體而顯示 [未連接至 *<SYSTEM_NAME>*] 或 [未連接至 *<SYSTEM_NAME>***\\***<instance_name>*]。 如果監視器正在等候查詢傳回資料，則每個資料格中的方格會顯示 **[正在等候資料]** 。  
+## <a name="remarks"></a>Remarks  
+ 如果伺服器執行個體目前無法使用資訊，則對應之 **[於...的臨界值]** 資料行的資料格便會顯示灰色背景和浮水印文字。 如果監視器未連線到伺服器執行個體，則每個資料格中的方格會依據該執行個體是預設執行個體還是具名執行個體而顯示 [未連線至 <系統名稱>] 或 [未連線至<系統名稱>****\\****<執行個體名稱>]。 如果監視器正在等候查詢傳回資料，則每個資料格中的方格會顯示 **[正在等候資料]** 。  
   
  當資訊可以使用時，每個警告的資料格會顯示指定的臨界值 (和度量單位) 或 [未啟用]。  
   

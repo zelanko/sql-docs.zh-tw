@@ -8,33 +8,34 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e544436126d299182760f94ef46304c334d448b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 658fee9ba05b4cd0a31099c4dafe303c541bec58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 **SSISDB** 目錄中出現的所有套件顯示詳細資料。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|封裝的唯一識別碼 (ID)。|  
-|name|**nvarchar(256)**|封裝的唯一名稱。|  
+|NAME|**nvarchar(256)**|封裝的唯一名稱。|  
 |package_guid|**uniqueidentifier**|用來識別封裝的全域唯一識別碼 (GUID)。|  
 |description|**nvarchar(1024)**|封裝的選擇性描述。|  
 |package_format_version|**int**|用來開發封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|驗證的狀態。|  
 |last_validation_time|**datetimeoffset(7)**|上一次驗證的時間。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個檢視會顯示目錄中每個封裝的資料列。  
   
 ## <a name="permissions"></a>Permissions  

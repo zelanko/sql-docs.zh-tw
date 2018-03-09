@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset21::Seek
 - Recordset21::raw_Seek
-helpviewer_keywords: Seek method [ADO]
+helpviewer_keywords:
+- Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d94cf588916667e2cf82992b6a3ac6b601e8f84
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: af29a65772019a31c495fedc546b204e98455809
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seek-method"></a>搜尋方法
 搜尋的索引[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)來快速找出符合指定的值，並變更該資料列目前資料列位置的資料列。  
@@ -39,7 +41,7 @@ recordset.Seek KeyValues, SeekOption
 ```  
   
 #### <a name="parameters"></a>參數  
- *Parentkeyvalue*  
+ *KeyValues*  
  陣列**Variant**值。 索引包含一或多個資料行，且此陣列包含要比較每個對應的資料行的值。  
   
  *SeekOption*  
@@ -57,7 +59,7 @@ recordset.Seek KeyValues, SeekOption
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [搜尋方法和索引屬性範例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [搜尋方法和索引屬性的範例 （VC + +）](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   

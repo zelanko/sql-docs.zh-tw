@@ -16,19 +16,19 @@ helpviewer_keywords:
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: 2c5e3f669cd2789676e334beedb4e8ee410c5cd6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/07/2017
   
  儘管我們推薦線上作業，但您應該評估您的環境與特定要求。 離線執行索引作業可能會是最佳方式。 若要達到這種方式，在作業期間，使用者僅能有限地存取資料，但是將更快完成作業且使用較少的資源。  
   
- 在執行 SQL Server 2016 的多處理器電腦上，索引陳述式可能會如同其他查詢，使用更多處理器來執行與索引陳述式建立關聯的掃描和排序作業。 您可以使用 MAXDOP 索引選項控制線上索引作業專用的處理器數目。 以此方式，您就可以平衡索引作業所使用的資源以及使用者並行所使用的資源。 如需詳細資訊，請參閱 [線上執行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。 如需支援平行索引作業之 SQL Server 版本的詳細資訊，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ 在執行 SQL Server 2016 的多處理器電腦上，索引陳述式可能會如同其他查詢，使用更多處理器來執行與索引陳述式建立關聯的掃描和排序作業。 您可以使用 MAXDOP 索引選項控制線上索引作業專用的處理器數目。 以此方式，您就可以平衡索引作業所使用的資源以及使用者並行所使用的資源。 如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。 如需支援平行索引作業之 SQL Server 版本的詳細資訊，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  因為索引作業的最終階段會保留 S-lock 或 Sch-M 鎖定，所以在明確的使用者交易 (例如 BEGIN TRANSACTION...COMMIT 區塊) 內執行線上索引作業時要特別小心。 這樣做導致交易完後才執行鎖定，而妨礙使用者進行並行作業。  
   
@@ -95,8 +95,7 @@ ms.lasthandoff: 12/07/2017
 ## <a name="resumable-index-rebuild-considerations"></a>可繼續索引重建考量
 
 > [!NOTE]
-> 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 
->
+> 可繼續索引選項適用於 SQL Server (從 SQL Server 2017 開始) 和 SQL Database。 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 
 
 當您執行可繼續的線上索引重建時，將適用下列指導方針：
 -   管理、規劃和擴充索引的維護期間。 您可以暫停和重新啟動索引重建作業多次，以符合您的維護期間。
@@ -108,7 +107,6 @@ ms.lasthandoff: 12/07/2017
 
 > [!IMPORTANT]
 > 可繼續的重建不需要您持續開啟長時間執行的交易，允許在此作業期間執行記錄截斷，而讓記錄空間管理的效能更佳。 利用新的設計，我們設法將資料庫中的必要資料與重新啟動可繼續作業所需的所有參考保存在一起。
->
 
 一般而言，可繼續和不可繼續的線上索引重建之間沒有效能差異。 若在索引重建作業暫停時，更新可繼續的索引：
 - 對於最常讀取的工作負載，效能影響微不足道。 

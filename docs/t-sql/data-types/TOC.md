@@ -45,7 +45,7 @@
 
 # [sql_variant](sql-variant-transact-sql.md)  
 
-# [Table](table-transact-sql.md)  
+# [[資料表]](table-transact-sql.md)  
 
 # [uniqueidentifier](uniqueidentifier-transact-sql.md)  
 

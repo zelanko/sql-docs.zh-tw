@@ -8,24 +8,27 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.registermirroreddb.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e967a036c5dd230c2ea5c84d0a69b98b368a0ec7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d670b9efc8bcbe67bb12758318fb72cf99c2218f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="register-mirrored-database"></a>註冊鏡像資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用這個對話方塊可在特定的伺服器執行個體上註冊一或多個鏡像資料庫，只要將資料庫新增至「資料庫鏡像監視器」即可。 加入資料庫之後，「資料庫鏡像監視器」就會在本機快取有關資料庫、其夥伴以及如何連接到夥伴的資訊。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用這個對話方塊可在特定的伺服器執行個體上註冊一或多個鏡像資料庫，只要將資料庫加入至「資料庫鏡像監視器」即可。 加入資料庫之後，「資料庫鏡像監視器」就會在本機快取有關資料庫、其夥伴以及如何連接到夥伴的資訊。  
   
 > [!IMPORTANT]  
 >  如果您在主體伺服器執行個體上是 **系統管理員** 固定伺服器角色的成員，但是在鏡像伺服器執行個體上不是該角色的成員，則只能在主體伺服器執行個體上查看狀態。  
@@ -34,14 +37,14 @@ ms.lasthandoff: 11/20/2017
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **伺服器執行個體**  
  從包含「資料庫鏡像監視器」已經儲存連接之伺服器執行個體的清單中選取一個伺服器執行個體，或是按一下 [連接] 。 若要為清單中所列的伺服器執行個體指定新的認證，請按一下 [連接]  並使用新的認證來連接。  
   
 > [!NOTE]  
 >  若要在多個伺服器執行個體上註冊資料庫，當您檢查完其中一個伺服器執行個體所需的資料庫之後，請按一下 [套用] ，然後選取另一個伺服器執行個體。  
   
- **Connect**  
+ **[連接]**  
  若要為伺服器執行個體指定新的認證，請按一下 [連接]  並使用新的認證來連接。 在連接到伺服器執行個體時，「資料庫鏡像監視器」會顯示 [正在等候資料] 。  
   
  **鏡像資料庫**  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |**註冊**|檢查您要註冊的每一個資料庫。 如果資料庫目前受到監視，則其核取方塊為已選取和停用狀態。<br /><br /> 注意：若要取消註冊資料庫，請關閉 [註冊鏡像資料庫]  對話方塊，在導覽樹狀目錄中選取資料庫，然後選取 [動作]  功能表中的 [取消註冊]  。|  
-|**資料庫**|選取之伺服器執行個體上的鏡像資料庫名稱。|  
+|**[資料庫備份]**|選取之伺服器執行個體上的鏡像資料庫名稱。|  
 |**目前的角色**|資料庫目前在選取之伺服器執行個體上的鏡像角色，可為 [主體] 或 [鏡像]。|  
 |**夥伴 (連接為)**|資料庫的容錯移轉夥伴名稱。 在括弧內會顯示 [主控台使用者的 Windows 驗證] 或 [登入 '\<登入名稱>' 的 SQL Server 驗證]。 如果之前已加入這個執行個體，則這是目前使用的驗證資訊；如果尚未將這個執行個體加入至監視器，則這是將要使用的驗證資訊。|  
   

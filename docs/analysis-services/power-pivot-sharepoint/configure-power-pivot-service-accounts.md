@@ -5,29 +5,27 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 016909afa00382f9b1a0905e95423eb82007b758
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>設定 Power Pivot 服務帳戶
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  
   
  此外，您必須針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式指定第二個帳戶，此服務應用程式是一種共用 Web 服務，其會以 SharePoint 伺服器陣列中的應用程式集區身分識別執行。 此帳戶是在使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]組態工具或 PowerShell 來設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝時所指定。  
   
@@ -108,7 +106,7 @@ ms.lasthandoff: 12/08/2017
   
 #### <a name="analysis-services-service-account"></a>Analysis Services 服務帳戶  
   
-|需求|說明|  
+|需求|Description|  
 |-----------------|-----------------|  
 |提供需求|此帳戶必須在 SQL Server 安裝程式執行期間，使用安裝精靈中的 [Analysis Services - 組態] 頁面 (或是命令列安裝程式中的 **ASSVCACCOUNT** 安裝參數) 加以指定。<br /><br /> 您可以使用管理中心、PowerShell 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，來修改使用者名稱或密碼。 不支援使用其他工具來變更帳戶和密碼。|  
 |網域使用者帳戶需求|此帳戶必須是 Windows 網域使用者帳戶。 禁止使用內建電腦帳戶 (如，網路服務或本機服務)。 只要指定電腦帳戶，SQL Server 安裝程式就會封鎖安裝，以強制滿足網域使用者帳戶需求。|  
@@ -117,7 +115,7 @@ ms.lasthandoff: 12/08/2017
   
 #### <a name="power-pivot-service-application-pool"></a>Power Pivot 服務應用程式集區  
   
-|需求|說明|  
+|需求|Description|  
 |-----------------|-----------------|  
 |提供需求|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務是在伺服器陣列上的共用資源，並會在建立服務應用程式時提供使用。 建立服務應用程式時，必須指定服務應用程式集區。 您可透過兩種方法指定：使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，或透過 PowerShell 命令。<br /><br /> 您可能已經設定應用程式集區識別在唯一帳戶下執行。 如果未指定，請考慮立即將它變更為在不同帳戶下執行。|  
 |網域使用者帳戶需求|應用程式集區識別必須是 Windows 網域使用者帳戶。 禁止使用內建電腦帳戶 (如，網路服務或本機服務)。|  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  在 SQL Server Management Studio 中，連接到 Analysis Services 執行個體\<伺服器名稱 > \POWERPIVOT。  
   
-2.  以滑鼠右鍵按一下伺服器名稱，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下伺服器名稱，然後選取 **[屬性]**。  
   
 3.  按一下 **[安全性]**。  
   
@@ -188,7 +186,7 @@ ms.lasthandoff: 12/08/2017
   
  如果已安裝 Reporting Services，請使用 Reporting Services 組態管理員更新報表伺服器的密碼，以及報表伺服器資料庫的連接。 如需詳細資訊，請參閱[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟動或停止 Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
  [設定 Power Pivot 自動資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   

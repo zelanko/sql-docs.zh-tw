@@ -19,6 +19,7 @@
 ## [尋找其他 JDBC Driver 資訊](finding-additional-jdbc-driver-information.md)
 ## [Microsoft JDBC Driver for SQL Server 支援對照表](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
 ## [JDBC Driver 常見問題集 (FAQ)](frequently-asked-questions-faq-for-jdbc-driver.md)
+## [Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
 
 # [保護 JDBC Driver 應用程式](securing-jdbc-driver-applications.md)
 ## [保護連接字串](securing-connection-strings.md)
@@ -36,6 +37,7 @@
 ## [使用陳述式及結果集](working-with-statements-and-result-sets.md)
 ## [使用適應性緩衝](using-adaptive-buffering.md)
 ## [疏鬆資料行](sparse-columns.md)
+## [備妥的 JDBC Driver 陳述式中繼資料快取](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 # [診斷 JDBC Driver 問題](diagnosing-problems-with-the-jdbc-driver.md)
 ## [處理錯誤](handling-errors.md)
@@ -63,6 +65,7 @@
 # [JDBC SQL Driver 的相容性和法律](compliance-and-legal-for-the-jdbc-sql-driver.md)
 ## [適用於 JDBC Driver 的 JDBC 4.1 相容性](jdbc-4-1-compliance-for-the-jdbc-driver.md)
 ## [適用於 JDBC Driver 的 JDBC 4.2 相容性](jdbc-4-2-compliance-for-the-jdbc-driver.md)
+## [JDBC Driver 的 JDBC 4.3 合規性](jdbc-4-3-compliance-for-the-jdbc-driver.md)
 
 # [JDBC SQL Driver 程式設計指南](programming-guide-for-jdbc-sql-driver.md)
 ## [使用 JDBC Driver 連接到 SQL Server](connecting-to-sql-server-with-the-jdbc-driver.md)
@@ -125,3 +128,5 @@
 ### [設定 java.sql.Time 值如何傳送給伺服器](configuring-how-java-sql-time-values-are-sent-to-the-server.md)
 ### [使用 SQL 逸出序列](using-sql-escape-sequences.md)
 ### [搭配使用陳述式與預存程序](using-statements-with-stored-procedures.md)
+### [Azure Key Vault 範例版本 6.0.0](azure-key-vault-sample-version-6.0.0.md)
+### [Azure Key Vault 範例版本 6.2.2](azure-key-vault-sample-version-6.2.2.md)

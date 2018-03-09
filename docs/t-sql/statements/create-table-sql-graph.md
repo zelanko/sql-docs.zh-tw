@@ -1,5 +1,5 @@
 ---
-title: "建立資料表 （SQL 圖形） |Microsoft 文件"
+title: CREATE TABLE (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -23,7 +24,8 @@ f1_keywords:
 - EDGE_TSQL
 - AS_EDGE
 - AS_EDGE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - graph
 - SQL graph
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - EDGE
 - SQL graph, CREATE TABLE statement
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 92a586a3612934a4f66e5a616d969454afc87eac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fe8ace1b8f8c55c14d4807514fcb1436f6966fed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-sql-graph"></a>建立資料表 （SQL 圖形）
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +69,7 @@ CREATE TABLE
 ## <a name="arguments"></a>引數  
 本文件列出只屬於 SQL 圖形的引數。 如需完整清單和支援的引數的描述，請參閱[CREATE TABLE (TRANSACT-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
- *資料庫名稱*    
+ *database_name*    
  資料表據以建立之資料庫的名稱。 *database_name*必須指定現有資料庫的名稱。 如果未指定， *database_name*預設為目前的資料庫。 目前連接的登入必須與所指定的資料庫中的現有使用者識別碼相關聯*database_name*，而且該使用者識別碼必須具有 CREATE TABLE 權限。  
   
  *schema_name*    
@@ -123,8 +125,8 @@ Stretch database 不支援的節點或邊緣資料表。
 ```
 
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [插入 （SQL 圖形）](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [處理與 SQL Server 2017 圖形](../../relational-databases/graphs/sql-graph-overview.md)
 

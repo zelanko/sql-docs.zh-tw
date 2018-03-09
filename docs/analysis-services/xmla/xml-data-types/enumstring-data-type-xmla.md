@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: EnumString Data Type
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4018f8cafb3daed98c05d9d59c12a0cfb1998e7a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b00fa29ae9dc0bb4529e013f9767451c3d0f1720
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString 資料類型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]定義代表給定列舉值的一組具名常數的衍生的資料類型。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>資料類型特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|**string**|  
 |衍生資料類型|無|  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
   
  下表描述執行個體所支援之列舉值[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
-|列舉值|Description|  
+|列舉值|描述|  
 |----------------|-----------------|  
 |ProviderType|支援的提供者類型資料行[DISCOVER_DATASOURCES](../../../analysis-services/schema-rowsets/xml/discover-datasources-rowset.md)結構描述資料列集，可傳回的資料類型會決定[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。<br /><br /> 這個列舉型別也支援 XMLA 屬性， **ProviderType**，以決定支援的提供者類型[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。 此外，這個列舉還會用於 DISCOVER_DATASOURCES 結構描述資料列集中。<br /><br /> 如需有關**ProviderType**，請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |AuthenticationMode|支援 DISCOVER_DATASOURCES 結構描述資料列集中的 AuthenticationMode 資料行，而此資料行會決定必須傳遞才能存取 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體的安全性認證。|  

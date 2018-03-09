@@ -1,27 +1,28 @@
 ---
 title: "SQL Server 中的機器學習的安全性考量 |Microsoft 文件"
-ms.date: 11/16/2017
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 40c19b91730a42348ae6235e619b4c33a4e35305
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 4ed20a8267a8f89e1ab64c19ddafee28cb66c375
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>SQL Server 中的機器學習的安全性考量
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文列出的系統管理員或架構設計人員應該牢記使用機器學習服務時的安全性考量。
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/20/2017
 
 ## <a name="authentication-methods-supported-for-remote-compute-contexts"></a>遠端計算內容所支援的驗證方法
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]建立之間的連線時，支援 Windows 整合式驗證和 SQL 登入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和遠端資料科學用戶端。
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 建立之間的連線時，支援 Windows 整合式驗證和 SQL 登入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和遠端資料科學用戶端。
 
 例如，假設您在您的膝上型電腦上開發 R 解決方案，而且想要 SQL Server 電腦上執行計算。 您也會使用時，建立 SQL Server 資料來源**rx**函式和定義連接字串取決於您的 Windows 認證。
 
@@ -50,9 +51,9 @@ ms.lasthandoff: 12/20/2017
  一般情況下，[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]啟動外部指令碼執行階段，並執行它自己的帳戶下的指令碼。 不過，如果外部執行階段會 ODBC 呼叫，[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]模擬傳送命令，以確保 ODBC 呼叫不會失敗的使用者認證。 這稱為「隱含驗證」。
  
  > [!IMPORTANT]
- > 為了使隱含驗證成功，包含背景工作帳戶的 Windows 使用者群組 (預設為 **SQLRUser**)，必須有該執行個體之 master 資料庫中的帳戶，且此帳戶必須具有連線到該執行個體的權限。
+ > 隱含驗證成功，包含背景工作帳戶的 Windows 使用者群組 (根據預設， **SQLRUserGroup**) 必須擁有 master 資料庫中的帳戶，執行個體，且此帳戶必須是指定權限連接到執行個體。
  > 
- > 群組**SQLRUser**也會使用執行 Python 指令碼時。 
+ > 群組**SQLRUserGroup**也會使用執行 Python 指令碼時。 
 
 一般情況下，我們建議您事先，移至 SQL Server 的較大的資料集，而不要試著使用 RODBC 或另一個文件庫讀取資料。 此外，使用 SQL Server 查詢或檢視表做為主要資料來源，以提升效能。 
 

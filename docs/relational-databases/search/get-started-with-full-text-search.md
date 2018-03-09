@@ -8,7 +8,8 @@ ms.component: search
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 50274b346c5a404c9d2c8f82dbd8d75664fa6bbe
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e87ac827013d4aa9abff8a0fb66ac3c8fc9bce62
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 預設會啟用 SQL Server 資料庫的全文檢索功能。 不過，您必須先建立全文檢索目錄，並在您想要搜尋的資料表或索引檢視表上建立全文檢索索引，才能執行全文檢索查詢。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+預設會啟用 SQL Server 資料庫的全文檢索功能。 不過，您必須先建立全文檢索目錄，並在您想要搜尋的資料表或索引檢視表上建立全文檢索索引，才能執行全文檢索查詢。
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>使用兩個步驟設定全文檢索搜尋
 設定全文檢索搜尋有兩個基本步驟︰  

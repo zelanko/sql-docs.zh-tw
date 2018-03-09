@@ -23,22 +23,22 @@ helpviewer_keywords:
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8ed9f06fc87d159af34b32ebeb061a872eb9429
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 928ac23212fc1941db34ee409d6adec44142b79e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 原則式管理是用於管理一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的原則式系統。 其用法是為了建立包含條件運算式的條件。 然後，建立將這些條件套用至資料庫目標物件的原則。  
 
 例如，身為資料庫管理員，您可能想要確定特定伺服器未啟用 Database Mail，以便建立設定該伺服器選項的條件和原則。 
    
- > **重要！！** 原則可能會影響某些功能的運作方式。 例如，異動資料擷取和異動複寫都會使用沒有索引的 systranschemas 資料表。 如果您啟用了所有資料表都必須擁有索引的原則，則強制符合此原則將會造成這些功能失敗。  
+ > **重要！！** 原則可能會影響某些功能的運作方式。 例如，異動資料擷取和異動複寫都會使用沒有索引的 systranschemas 資料表。 如果您啟用了所有資料表都必須擁有索引的原則，則強制此原則的合規性將會造成這些功能失敗。  
   
  使用 SQL Server Management Studio 建立和管理原則，以執行下列動作：
   

@@ -1,30 +1,31 @@
 ---
 title: "將範例資料加入至設計模式中的 DirectQuery 模型 |Microsoft 文件"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 962cadeac40c4cd450265d6c617a2bdcf1afa9ac
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 068366df63bbe37d658345c1157a9d02eb7e5187
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>在設計模式中將範例資料加入 DirectQuery 模型中
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在 DirectQuery 模式中，資料表資料分割可用來建立範例資料子集的模型設計期間使用或建立的完整資料檢視的替代方案。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在 DirectQuery 模式中，資料表資料分割可用來建立模型設計期間所使用的範例資料子集，或建立完整資料檢視的替代品。
  
  部署 DirectQuery 表格式模型時，每個資料表只允許有一個資料分割，且該資料分割必須是完整資料檢視。 任何其他的資料分割都是完整資料檢視或範例資料的替代品。 在本主題中，我們將描述如何使用資料子集來建立範例資料分割。
  

@@ -1,7 +1,7 @@
 ---
-title: "搭配使用一律加密 with the ODBC Driver 13.1 for SQL Server |Microsoft 文件"
+title: "搭配使用一律加密 with the ODBC Driver for SQL Server |Microsoft 文件"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,20 +17,27 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 4e56c987938aa3cb8645dc9bef94f2f97b8c0649
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/22/2018
 ---
-# <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>搭配使用一律加密 with the ODBC Driver 13.1 for SQL Server
+# <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用一律加密 with the ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-本文提供有關如何開發使用 ODBC 應用程式資訊[一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
+### <a name="applicable-to"></a>適用於
 
-[永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 啟用 永遠加密驅動程式，例如 SQL server ODBC Driver 13.1 的做法是明確地加密和解密用戶端應用程式中的機密資料。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
+- ODBC Driver 13.1 for SQL Server
+- ODBC Driver for SQL Server 17
 
-### <a name="prerequisites"></a>必要條件
+### <a name="introduction"></a>簡介
+
+本文提供有關如何開發使用 ODBC 應用程式資訊[一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
+
+[永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 啟用 永遠加密驅動程式，例如 ODBC Driver for SQL Server，進而達成此目的透過無障礙地加密與解密用戶端應用程式中的機密資料。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
+
+### <a name="prerequisites"></a>필수 구성 요소
 
 在資料庫中設定永遠加密。 這牽涉到佈建永遠加密金鑰，以及設定加密所選資料庫資料行。 如果您的資料庫尚未設定 [永遠加密]，請遵循 [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)(永遠加密快速入門) 中的指示操作。 特別是，您的資料庫應該包含資料行主要金鑰 (CMK)、 資料行加密金鑰 (CEK) 和資料表包含一個或多個使用該 CEK 加密的資料行的中繼資料定義。
 
@@ -282,11 +289,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 - 呼叫資料行主要金鑰存放區以存取資料行主要金鑰。
 
-本節說明內建效能最佳化 ODBC Driver 13.1 for SQL Server 和如何控制上述兩個因素對效能的影響。
+本節描述 ODBC 驅動程式中的內建效能最佳化，適用於 SQL Server 和如何控制上述兩個因素對效能的影響。
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制反覆存取以擷取中繼資料的查詢參數
 
-如果連接啟用一律加密時，ODBC Driver 13.1 根據預設，SQL Server 將呼叫[sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)每個參數化查詢，將傳遞查詢陳述式 （不含任何參數SQL server 數值）。 這個預存程序會分析查詢陳述式，以找出，如果任何參數需要加密，而且如果是，傳回每個參數，以允許驅動程式才能將其加密的加密相關資訊。 上述行為可確保高透明度，用戶端應用程式： 應用程式 （及應用程式開發人員） 不需要留意哪些查詢存取加密資料行，只要以加密的資料行為目標的值會傳遞至參數中的驅動程式。
+如果連線已啟用永遠加密，驅動程式會根據預設，呼叫[sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)每個參數化查詢，將查詢陳述式 （不含任何參數值） 傳遞至 SQL Server。 這個預存程序會分析查詢陳述式，以找出，如果任何參數需要加密，而且如果是，傳回每個參數，以允許驅動程式才能將其加密的加密相關資訊。 上述行為可確保高透明度，用戶端應用程式： 應用程式 （及應用程式開發人員） 不需要留意哪些查詢存取加密資料行，只要以加密的資料行為目標的值會傳遞至參數中的驅動程式。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>每個陳述式永遠加密行為
 
@@ -294,7 +301,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 若要控制永遠加密行為的陳述式，呼叫 設定 SQLSetStmtAttr`SQL_SOPT_SS_COLUMN_ENCRYPTION`陳述式屬性，以下列值之一：
 
-|值|Description|
+|Value|Description|
 |-|-|
 |`SQL_CE_DISABLED` (0)|永遠加密已停用陳述式|
 |`SQL_CE_RESULTSETONLY` (1)|只有解密。 結果集和傳回值都會解密，並不會加密參數|
@@ -329,7 +336,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 若要減少資料行主要金鑰存放區來解密資料行加密金鑰的呼叫次數，驅動程式會快取在記憶體中的純文字 Cek。 從接收之後 ECEK 資料庫中繼資料，驅動程式會先嘗試尋找純文字 CEK 值對應的加密金鑰快取中。 驅動程式會呼叫金鑰存放區包含 CMK，只有當快取中找不到對應的純文字 CEK。
 
 > [!NOTE]
-> 在 SQL Server ODBC Driver 13.1，兩個小時逾時後收回快取中的項目。 這表示給定 ECEK，為驅動程式會連絡一次金鑰存放區的應用程式或每隔兩小時的存留期間，少者為準。
+> ODBC Driver for SQL Server 中，在兩個小時逾時後收回快取中的項目。 這表示給定 ECEK，為驅動程式會連絡一次金鑰存放區的應用程式或每隔兩小時的存留期間，少者為準。
 
 ## <a name="working-with-column-master-key-stores"></a>使用資料行主要金鑰存放區
 
@@ -339,12 +346,12 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ### <a name="built-in-keystore-providers"></a>內建金鑰存放區提供者
 
-適用於 SQL Server ODBC Driver 13.1 附有下列內建金鑰存放區提供者：
+ODBC Driver for SQL Server 都附有下列內建金鑰存放區提供者：
 
 | 名稱 | Description | 提供者 （中繼資料） 名稱 |可用性|
 |:---|:---|:---|:---|
 |Azure 金鑰保存庫 |在 Azure 金鑰保存庫中儲存 Cmk | `AZURE_KEY_VAULT` |Windows、 Linux macOS|
-|Windows 憑證存放區|本機儲存在 Windows 的金鑰存放區的 Cmk| `MSSQL_CERTIFICATE_STORE`|Windows|
+|Windows 憑證存放區|本機儲存在 Windows 的金鑰存放區的 Cmk| `MSSQL_CERTIFICATE_STORE`|視窗|
 
 - 您 （或您的 DBA） 需要確定提供者名稱，在資料行主要金鑰中繼資料中，設定正確，而且資料行主要金鑰路徑符合指定的提供者的金鑰路徑格式。 建議您使用 SQL Server Management Studio 等工具設定金鑰，這樣在發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) 陳述式時，會自動產生有效的提供者名稱和金鑰路徑。
 
@@ -352,7 +359,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ### <a name="using-the-azure-key-vault-provider"></a>使用 Azure 金鑰保存庫提供者
 
-Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 Linux、 macOS 和 Windows 上的 SQL Server ODBC Driver 13.1 包含 Azure 金鑰保存庫內建的資料行主要金鑰存放區提供者。 請參閱[逐步解說 – Azure 金鑰保存庫](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)，[開始使用金鑰保存庫](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)，和[Azure 金鑰保存庫中建立資料行主要金鑰](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)如需有關設定 Azure 金鑰保存庫的永遠加密功能。
+Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 ODBC Driver for SQL Server on Linux、 macOS 和 Windows 包含內建的資料行主要金鑰存放區提供者為 Azure 金鑰保存庫。 請參閱[Azure 金鑰保存庫-Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)，[開始使用金鑰保存庫](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)，和[Azure 金鑰保存庫中建立資料行主要金鑰](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)如需有關設定 Azure 金鑰保存庫的永遠加密功能。
 
 此驅動程式支援 Azure 金鑰保存庫使用下列認證類型驗證：
 
@@ -364,7 +371,7 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 
 |認證類型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|使用者名稱/密碼| `KeyVaultPassword`|使用者主體名稱|密碼|
+|Username/password| `KeyVaultPassword`|使用者主體名稱|密碼|
 |用戶端識別碼/密碼| `KeyVaultClientSecret`|用戶端識別碼|密碼|
 
 #### <a name="example-connection-strings"></a>範例連接字串
@@ -377,7 +384,7 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**使用者名稱/密碼**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -387,11 +394,11 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 
 ### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 憑證存放區提供者
 
-在 Windows 上的 SQL server ODBC Driver 13.1 包含內建的資料行主要金鑰存放區提供者的 Windows 憑證存放區，名為`MSSQL_CERTIFICATE_STORE`。 （此提供者並不適用於 macOS 或 Linux）。與此提供者，CMK 儲存在本機用戶端電腦上，且不需要額外的組態，應用程式所使用的驅動程式所需。 不過，應用程式必須存取憑證和私密金鑰存放區中。 請參閱[建立及儲存資料行主要金鑰 （永遠加密）](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)如需詳細資訊。
+ODBC Driver for SQL Server on Windows 包含內建的資料行主要金鑰存放區提供者的 Windows 憑證存放區，名為`MSSQL_CERTIFICATE_STORE`。 （此提供者並不適用於 macOS 或 Linux）。與此提供者，CMK 儲存在本機用戶端電腦上，且不需要額外的組態，應用程式所使用的驅動程式所需。 不過，應用程式必須存取憑證和私密金鑰存放區中。 請參閱[建立及儲存資料行主要金鑰 （永遠加密）](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)如需詳細資訊。
 
 ### <a name="using-custom-keystore-providers"></a>使用自訂金鑰存放區提供者
 
-適用於 SQL Server ODBC Driver 13.1 也支援自訂的協力廠商金鑰存放區提供者使用 CEKeystoreProvider 介面。 這可讓應用程式載入時，查詢中，並設定金鑰存放區提供者，以便供驅動程式來存取加密資料行。 應用程式可能也會直接互動都會加密 SQL Server 中的儲存體和執行工作存取加密資料行使用 ODBC; 的金鑰存放區提供者如需詳細資訊，請參閱[自訂金鑰存放區提供者](../../connect/odbc/custom-keystore-providers.md)。
+ODBC Driver for SQL Server 也支援自訂的協力廠商金鑰存放區提供者使用 CEKeystoreProvider 介面。 這可讓應用程式載入時，查詢中，並設定金鑰存放區提供者，以便供驅動程式來存取加密資料行。 應用程式可能也會直接互動都會加密 SQL Server 中的儲存體和執行工作存取加密資料行使用 ODBC; 的金鑰存放區提供者如需詳細資訊，請參閱[自訂金鑰存放區提供者](../../connect/odbc/custom-keystore-providers.md)。
 
 兩個連接屬性用來與自訂金鑰存放區提供者互動。 其中包括：
 
@@ -515,11 +522,44 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>使用永遠加密時的 ODBC 驅動程式的限制
 
-### <a name="bulk-copy-function-usage"></a>大量複製函數使用方式
-使用[SQL 大量複製函數](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)永遠加密時，使用 ODBC 驅動程式時，不支援。 不透明的加密/解密會在 SQL 大量複製函數所使用的加密資料行上進行。
-
 ### <a name="asynchronous-operations"></a>非同步作業
 當 ODBC 驅動程式將會允許使用[非同步作業](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)透過永遠加密，效能造成影響的作業時沒有啟用 永遠加密。 若要呼叫`sys.sp_describe_parameter_encryption`為決定加密中繼資料會封鎖陳述式，並會導致驅動程式等候伺服器傳回中繼資料，再傳回`SQL_STILL_EXECUTING`。
+
+### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>在使用 SQLGetData 組件中擷取資料
+SQL server ODBC 驅動程式 17 加密之前使用 SQLGetData 組件中無法擷取字元和二進位資料行。 可以進行只有一個呼叫 SQLGetData，以包含整個資料行的資料長度足夠的緩衝區。
+
+### <a name="send-data-in-parts-with-sqlputdata"></a>將資料傳送 SQLPutData 使用組件中
+插入或比較資料無法傳送 SQLPutData 使用組件中。 可以進行 SQLPutData 只有一個呼叫，以包含整個資料緩衝區。 Long 資料插入加密的資料行中，使用下一節中所述，與輸入的資料檔大量複製 API。
+
+### <a name="encrypted-money-and-smallmoney"></a>加密的 money 和 smallmoney
+加密**money**或**smallmoney**資料行不能為目標的參數，因為沒有任何特定 ODBC 資料類型並對應至這些型別，造成運算元類型衝突錯誤。
+
+## <a name="bulk-copy-of-encrypted-columns"></a>大量複製加密的資料行
+
+使用[SQL 大量複製函數](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)和**bcp**公用程式使用 永遠加密後 ODBC 驅動程式 17 for SQL Server 支援。 純文字 （插入上加密和解密上擷取） 和加密文字 （逐字傳輸） 可插入和擷取使用大量複製 （bcp_ *） 應用程式開發介面和**bcp**公用程式。
+
+- 要擷取密碼文字形式 （例如，用於大量載入不同的資料庫） varbinary （max）、 連接，而不`ColumnEncryption`選項 (或將它設定為`Disabled`) 和執行 BCP OUT 作業。
+
+- 插入和擷取純文字，並讓此驅動程式會明確地執行加密和解密為必要項目，設定`ColumnEncryption`至`Enabled`已足夠。 BCP API 的功能則未變更。
+
+- 若要在 varbinary （max） 的形式 （例如上方處擷取） 插入加密文字，請設定`BCPMODIFYENCRYPTED`選項設定為 TRUE，並執行 BCP IN 作業。 為了讓未產生資料，請確認目的地資料行的 CEK 是原先取得從中加密文字相同。
+
+當使用**bcp**公用程式： 控制`ColumnEncryption`設定，請使用-D 選項，並指定包含所需的值的 DSN。 若要插入的加密文字，請確定`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`啟用使用者的設定。
+
+加密的資料行上運作時下, 表提供動作的摘要：
+
+|`ColumnEncryption`|BCP 方向|Description|
+|----------------|-------------|-----------|
+|`Disabled`|OUT （至用戶端）|擷取密碼文字。 觀察到的資料類型是**varbinary （max)**。|
+|`Enabled`|OUT （至用戶端）|擷取純文字。 驅動程式會解密資料行的資料。|
+|`Disabled`|在 （伺服器）|將插入的加密文字。 這被為了透明而不需要移動加密的資料解密。 如果作業會失敗`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`選項未設定使用者，或連接控制代碼上未設定 BCPMODIFYENCRYPTED。 如需詳細資訊，請參閱下方內容。|
+|`Enabled`|在 （伺服器）|將純文字。 驅動程式會加密資料行的資料。|
+
+### <a name="the-bcpmodifyencrypted-option"></a>BCPMODIFYENCRYPTED 選項
+
+若要避免資料損毀，伺服器通常不允許直接插入加密的資料行的加密文字，因此嘗試這樣做將會失敗。不過，對於大量載入加密資料使用 BCP API，設定`BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)為 TRUE 的選項將允許所有直接插入的加密文字，並降低加密的資料損毀高於設定的風險`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`使用者帳戶上的選項。 然而，金鑰必須符合資料而且最好先執行一些唯讀檢查的插入的資料大量插入後，才能進一步使用。
+
+請參閱[移轉保護的敏感性資料透過永遠加密](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)如需詳細資訊。
 
 ## <a name="always-encrypted-api-summary"></a>一律加密 API 摘要
 
@@ -552,8 +592,14 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD （2 個位元組）|0|當 0 （預設值）： 決策，來加密此參數由加密中繼資料的可用性。<br><br>當為非零： 如果加密中繼資料可供此參數，它會加密。 否則，要求會失敗，錯誤 [CE300] [Microsoft] [ODBC Driver 13 for SQL Server] 強制加密已指定參數，但伺服器未提供任何加密中繼資料。|
 
-## <a name="see-also"></a>請參閱＜
+### <a name="bcpcontrol-options"></a>bcp_control 選項
 
-- [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+|選項名稱|預設值|Description|
+|-|-|-|
+|`BCPMODIFYENCRYPTED` (21)|FALSE|若為 TRUE，允許 varbinary （max） 值插入加密的資料行。 若為 FALSE，防止插入提供正確型別和加密的中繼資料。|
+
+## <a name="see-also"></a>另請參閱
+
+- [Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [永遠加密部落格](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

@@ -1,28 +1,30 @@
 ---
 title: "SQL Server on Linux 的效能最佳做法 |Microsoft 文件"
-description: "本主題提供在 Linux 上執行 SQL Server 2017 的效能最佳做法和方針。"
+description: "本文提供在 Linux 上執行 SQL Server 2017 的效能最佳做法和方針。"
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>效能最佳作法和 Linux 上的 SQL Server 2017 的設定指導方針
 
-本主題會提供最佳做法和建議將用於連接到 SQL Server on Linux 的資料庫應用程式的效能最大化。 這些建議專屬於 Linux 平台上執行。 所有標準 SQL Server，例如索引設計仍適用於建議。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+本文章提供最佳做法和建議將用於連接到 SQL Server on Linux 的資料庫應用程式的效能最大化。 這些建議專屬於 Linux 平台上執行。 所有標準 SQL Server，例如索引設計仍適用於建議。
 
 下列指導方針包含設定 SQL Server 和 Linux 作業系統的建議。
 
@@ -64,19 +66,19 @@ ms.lasthandoff: 12/07/2017
 
 下表提供 CPU 設定的建議：
 
-| 設定 | 值 | 詳細資訊 |
+| 設定 | Value | 詳細資訊 |
 |---|---|---|
 | CPU 頻率管理員 | 效能 | 請參閱**cpupower**命令 |
 | ENERGY_PERF_BIAS | 效能 | 請參閱**x86_energy_perf_policy**命令 |
 | min_perf_pct | 100 | 在 intel p 狀態上看到您的文件 |
-| C 狀態 | 只有 C1 | 如何確保只有 C 狀態設為 C1 上看到您的 Linux 或系統文件 |
+| C-States | 只有 C1 | 如何確保只有 C 狀態設為 C1 上看到您的 Linux 或系統文件 |
 
 下表提供磁碟設定的建議：
 
-| 設定 | 值 | 詳細資訊 |
+| 設定 | Value | 詳細資訊 |
 |---|---|---|
 | 磁碟 readahead | 4096 | 請參閱**blockdev**命令 |
-| sysctl 設定 | kernel.sched_min_granularity_ns 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 請參閱**sysctl**命令 |
+| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 請參閱**sysctl**命令 |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>平衡的多節點 NUMA 系統的核心設定自動 numa
 

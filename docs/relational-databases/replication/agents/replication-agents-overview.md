@@ -27,15 +27,15 @@ helpviewer_keywords:
 - Snapshot Agent
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a2bd500548b85a292006c4ca94a519a15d8483b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e5939006ffc38b5d3ced2028feb544ead35b447f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agents-overview"></a>複寫代理程式概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫使用了許多名為代理程式的獨立程式，以執行與追蹤變更和散發資料有關的工作。 依預設，複寫代理程式作為在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 中排定的作業來執行，且必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 方可執行這些作業。 複寫代理程式也可以從命令列執行，或透過使用 Replication Management Objects (RMO) 的應用程式執行。 複寫代理程式可以透過「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]進行管理。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="distribution-agent"></a>散發代理程式  
  「散發代理程式」(Distribution Agent) 可搭配快照式複寫和異動複寫來使用。 它可將初始快照集套用至「訂閱者」，並將散發資料庫中的交易移至「訂閱者」。 「散發代理程式」在發送訂閱的「散發者」端或是提取訂閱的「訂閱者」端執行。 如需詳細資訊，請參閱 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
-## <a name="merge-agent"></a>合併代理程式  
+## <a name="merge-agent"></a>[合併代理程式]  
  「合併代理程式」(Merge Agent) 可搭配合併式複寫使用。 它可將初始快照集套用到「訂閱者」，移動並使累加的資料變更一致。 每個合併訂閱都有其「合併代理程式」，以連接「發行者」和「訂閱者」，並更新這兩者。 「合併代理程式」在發送訂閱的「散發者」端或是提取訂閱的「訂閱者」端執行。 依預設，「合併代理程式」將變更從「訂閱者」上傳到「發行者」，然後再將變更從「發行者」下載至「訂閱者」。 如需詳細資訊，請參閱 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
 ## <a name="queue-reader-agent"></a>佇列讀取器代理程式  

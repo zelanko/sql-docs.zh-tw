@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
 - sp_update_operator
-dev_langs: TSQL
-helpviewer_keywords: sp_update_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a297d3a5dd0252dce89a5cf5a779c8b3fa06d8d5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +60,13 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @name=] '*名稱*'  
+ [ @name=] '*name*'  
  要修改的操作員名稱。 *名稱*是**sysname**，沒有預設值。  
   
  [ @new_name=] '*new_name*'  
  操作員的新名稱。 這個名稱必須是唯一的。 *new_name*是**sysname**，預設值是 NULL。  
   
- [ @enabled=]*啟用*  
+ [ @enabled=] *enabled*  
  數字，指出操作員目前狀態 (**1**目前已啟用，如果**0**如果沒有)。 *啟用*是**tinyint**，預設值是 NULL。 如果未啟用，操作員不會收到警示通知。  
   
  [ @email_address=] '*email_address*'  
@@ -93,7 +96,7 @@ sp_update_operator
  [ @pager_days=] *pager_days*  
  指定操作員能夠接收呼叫的日子 (遵照指定的開始/結束時間)。 *pager_days*是**tinyint**，預設值是 NULL，而且必須是介於**0**透過**127**。 *pager_days*的計算方式是加入必要天數的個別值。 例如，從星期一到星期五是**2**+**4**+**8**+**16** + **32** = **64**。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
@@ -106,7 +109,7 @@ sp_update_operator
  [ @netsend_address=] '*netsend_address*'  
  要傳送網路訊息的目標操作員網路位址。 *netsend_address*是**nvarchar （100)**，預設值是 NULL。  
   
- [ @category_name=] '*類別*'  
+ [ @category_name=] '*category*'  
  這個警示的類別目錄名稱。 *類別*是**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -136,10 +139,10 @@ EXEC dbo.sp_update_operator
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_add_operator &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

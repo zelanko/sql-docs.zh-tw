@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_targetserver_TSQL
 - sp_help_targetserver
-dev_langs: TSQL
-helpviewer_keywords: sp_help_targetserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_targetserver
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1542bc54c6c40b44f0738e249b4f609ac36b3b67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c45b6bc34b8003d78cd60916b9db22557fb0f4b1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@server_name=** ] **'***server_name***'**  
+ [ **@server_name=** ] **'***server_name***'**  
  這是要傳回資訊的伺服器名稱。 *server_name*是**nvarchar （30)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -56,15 +59,15 @@ sp_help_targetserver
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|伺服器識別碼。|  
-|**伺服器名稱**|**nvarchar （30)**|伺服器名稱。|  
-|**位置**|**nvarchar(200)**|指定伺服器的位置。|  
+|**server_name**|**nvarchar(30)**|伺服器名稱。|  
+|**location**|**nvarchar(200)**|指定伺服器的位置。|  
 |**time_zone_adjustment**|**int**|相對於格林威治標準時間 (GMT) 的時區調整 (以小時為單位)。|  
 |**enlist_date**|**datetime**|指定伺服器的編列日期。|  
 |**last_poll_date**|**datetime**|前次輪詢伺服器來尋找作業的日期。|  
 |**status**|**int**|指定伺服器的狀態。|  
 |**unread_instructions**|**int**|伺服器是否有未讀的指示。 如果您已下載所有資料列，這個資料行是**0**。|  
 |**local_time**|**datetime**|目標伺服器的本機日期和時間，以前次輪詢主要伺服器之後的目標伺服器本機時間為基礎。|  
-|**enlisted_by_nt_user**|**nvarchar （100)**|編列了目標伺服器的 Microsoft Windows 使用者。|  
+|**enlisted_by_nt_user**|**nvarchar(100)**|編列了目標伺服器的 Microsoft Windows 使用者。|  
 |**poll_interval**|**int**|目標伺服器輪詢主要 SQLServerAgent 服務來下載作業和上傳作業狀態的頻率 (以秒為單位)。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -94,11 +97,11 @@ EXEC dbo.sp_help_targetserver N'SEATTLE2' ;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_add_targetservergroup &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetserver 來 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_delete_targetservergroup &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [dbo.sysdownloadlist &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

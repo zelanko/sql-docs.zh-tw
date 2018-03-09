@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4992c9a621964f8125178f114a930b1f4e007179
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>安裝、 散佈及參考表格式物件模型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本文說明如何下載、 參考以及轉散發 Analysis Services 表格式物件模型 (TOM)，來建立及管理表格式模型與資料庫中的 managed 程式碼的 C# 程式庫。  
@@ -39,7 +37,7 @@ SQL Server 2016 重構，並擴大要包含新的核心、 表格式和 JSON 組
 組件  |功能  |重要類別 |
 ---------|---------|--------------  |
 核心 <br/>Microsoft.AnalysisServices.Core.dll | 常見的表格式和多維度資料庫。 <br/><br/>提供例外狀況處理、 泛型連接到 Analysis Services 執行個體和資料庫，以及存取通用屬性和伺服器和資料庫物件的方法。 <br/><br/>目標 SQL Server 2016 任何 AMO 解決方案所需。 | 核心&nbsp;伺服器<br/>核心&nbsp;資料庫<br/>AmoException
-TOM<br/> Microsoft.AnalysisServices.Tabular.dll、 13.0.1601.5 版本或更新版本。| 建立及管理表格式中繼資料物件。 | TOM&nbsp;伺服器 <br/>TOM&nbsp;資料庫<br /> 模型<br /> Table<br /> 資料行<br /> 關聯性
+TOM<br/> Microsoft.AnalysisServices.Tabular.dll、 13.0.1601.5 版本或更新版本。| 建立及管理表格式中繼資料物件。 | TOM&nbsp;伺服器 <br/>TOM&nbsp;資料庫<br /> [模型]<br /> Table<br /> 「資料行」<br /> 關聯性
   AMO<br /> Microsoft.AnalysisServices.dll| 建立和管理多維度中繼資料物件，包括表格式 1050年-1103年資料庫。 | AMO&nbsp;伺服器 <br />AMO&nbsp;資料庫 <br /> Cube <br /> 維度 <br /> MeasureGroup 
 Json<br/>Microsoft.AnalysisServices.Tabular.Json.dll | 協助程式 DLL 包裝 NewtonSoftJson.dll (JSON.NET) 來控制更新 Analysis Services 工作負載中的 JSON 序列化中引進的功能變更的風險。 <br /> <br />這個 DLL 為 TOM 的相依性存在，而且不打算直接用於程式碼。 | 無。  
   
@@ -106,7 +104,7 @@ Json<br/>Microsoft.AnalysisServices.Tabular.Json.dll | 協助程式 DLL 包裝 N
    * Microsoft.AnalysisServices.Tabular  
    * Microsoft.AnalysisSerivces.Tabular.Json  
   
-3. 按一下 **[確定]**。  在**方案總管 中**，確認組件都在 參考 資料夾。
+3. 按一下 [確定] 。  在**方案總管 中**，確認組件都在 參考 資料夾。
   
 4. 在您的程式碼 頁面上，加入 Microsoft.AnalysisServces.Tabular 命名空間，即使資料庫和模型為表格式 1200年或更高的相容性層級。 
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - MaxThreads property
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25a741e35b7efa0b3bb13047853f6f39d8300c3c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b7cf85d5e9c8be15a74d99c1e4181b0e206d869
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用多執行緒處理許多作業，以平行方式執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 為許多作業使用多執行緒處理，透過平行執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。  
   
  每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體各自維護一組執行緒集區。 表格式執行個體和多維度執行個體使用執行緒集區的方式不同。 例如，只有多維度執行個體使用 **IOProcess** 執行緒集區。 因此，如同本主題所述， **PerNumaNode** 屬性對於表格式執行個體沒有意義。 在下面的 [屬性參考](#bkmk_propref) 區段中，會呼叫每個屬性的模式需求。
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 12/08/2017
     > [!NOTE]  
     >  您可以使用任何剖析集區中的執行緒來執行查詢。 快速執行的查詢 (例如快速探索或取消要求) 有時會立即執行，而不會排入查詢執行緒集區的佇列中。 
   
--   **ThreadPool \ Query** 是執行剖析執行緒集區不會處理之所有要求的執行緒集區。 此執行緒集區中的執行緒會執行所有類型的作業，例如探索、DAX、MDX、DMX 和 DDL 命令。 A
+-   **ThreadPool \ Query** 是執行剖析執行緒集區不會處理之所有要求的執行緒集區。 此執行緒集區中的執行緒會執行所有類型的作業，例如探索、DAX、MDX、DMX 和 DDL 命令。 只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，
   
 -   **ThreadPool \ IOProcess** 用於與多維度引擎中之儲存引擎查詢相關聯的 IO 作業。 這些執行緒完成的工作預期不會相依於其他執行緒。 這些執行緒通常會掃描單一分割區區段，並對區段資料執行篩選和彙總。 **IOProcess** 執行緒對 NUMA 硬體組態特別敏感。 因此，此執行緒集區具有 **PerNumaNode** 組態屬性，可視需要用來微調效能。 
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
  屬性是依照字母順序列出。  
   
-|名稱|型別|說明|預設值|指引|  
+|名稱|型別|Description|預設值|指引|  
 |----------|----------|-----------------|-------------|--------------|  
 |**IOProcess** \ **Concurrency**|double|此為雙精確度浮點數值，決定可以一次佇列之執行緒數目的設定目標演算法。|2.0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 並行可用來初始化執行緒集區，會透過 Windows 的 I/O 完成通訊埠來實作。 如需詳細資料，請參閱 [I/O 完成連接埠](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。<br /><br /> 僅適用於多維度模型。|  
 |**IOProcess** \ **GroupAffinity**|string|對應至系統上之處理器群組的十六進位值陣列，可用來設定 IOProcess 執行緒集區中的執行緒與每個處理器群組中的邏輯處理器之相似性。|無|您可以使用此屬性來建立自訂相似性。 此屬性預設為空白。<br /><br /> 如需詳細資訊，請參閱＜ [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity) ＞。<br /><br /> 僅適用於多維度模型。|  
@@ -283,7 +284,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  如需如何設定屬性的指示，請參閱 [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關於處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [多個處理器](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [處理器群組](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   

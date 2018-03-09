@@ -1,32 +1,35 @@
 ---
 title: "ALTER WORKLOAD GROUP (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 01/19/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_WORKLOAD_GROUP_TSQL
 - ALTER WORKLOAD GROUP
-dev_langs: TSQL
-helpviewer_keywords: ALTER WORKLOAD GROUP statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bfb6ca0200095860acec2b275020012e4b96284
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -53,36 +55,34 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>引數  
- *group_name* |「**預設**"  
+ *group_name* | "**default**"  
  這是現有使用者定義之工作負載群組的名稱，或是資源管理員預設工作負載群組的名稱。  
   
 > [!NOTE]  
->  當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資源管理員就會建立此 "default" 和內部群組。  
+> 當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資源管理員就會建立此 "default" 和內部群組。  
   
  搭配 ALTER WORKLOAD GROUP 使用時，"default" 選項必須加上引號 ("") 或方括號 ([]) 才能避免與系統保留字 DEFAULT 產生衝突。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
 > [!NOTE]  
->  預先定義的工作負載群組和資源集區都會使用小寫名稱，例如 "default"。 如果是使用區分大小寫之定序的伺服器，則應該將此列入考量。 具有不區分大小寫之定序 (如 SQL_Latin1_General_CP1_CI_AS) 的伺服器會將 "default" 和 "Default" 視為相同。  
+> 預先定義的工作負載群組和資源集區都會使用小寫名稱，例如 "default"。 如果是使用區分大小寫之定序的伺服器，則應該將此列入考量。 具有不區分大小寫之定序 (如 SQL_Latin1_General_CP1_CI_AS) 的伺服器會將 "default" 和 "Default" 視為相同。  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  指定要求在工作負載群組中的相對重要性。 重要性為下列其中一項：  
   
 -   LOW  
-  
 -   MEDIUM (預設值)  
-  
 -   HIGH  
   
 > [!NOTE]  
->  每個重要性設定在內部都會儲存為計算所使用的數字。  
+> 每個重要性設定在內部都會儲存為計算所使用的數字。  
   
  IMPORTANCE 的資源集區範圍為本機；相同資源集區內部不同重要性的工作負載群組會彼此影響，但不會影響另一個資源集區中的工作負載群組。  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*值*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  指定單一要求可由集區中獲取的記憶體最大數量。 這個百分比相對於 MAX_MEMORY_PERCENT 所指定的資源集區大小。  
   
 > [!NOTE]  
->  指定的數量僅參考查詢執行授與記憶體。  
+> 指定的數量僅參考查詢執行授與記憶體。  
   
  *值*必須是 0 或正整數。 允許的範圍*值*是從 0 到 100。 預設設定*值*為 25。  
   
@@ -101,11 +101,14 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  請注意，如果伺服器沒有足夠的實體記憶體，這兩種情況都會受限於逾時錯誤 8645。  
   
- REQUEST_MAX_CPU_TIME_SEC =*值*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *值*必須是 0 或正整數。 預設設定*值*為 0，表示無限制。  
   
 > [!NOTE]  
->  資源管理員不會在超過最大時間時阻止要求繼續執行。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[CPU Threshold Exceeded Event Class<](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。  
+> 根據預設，資源管理員不會防止要求繼續如果超過最大時間。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[CPU Threshold Exceeded Event Class<](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。 
+
+> [!IMPORTANT]
+> 從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3，並使用[追蹤旗標 2422年](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，超過最大時間時，資源管理員將中止要求。
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*值*  
  指定查詢能夠等待記憶體授權 (工作緩衝區記憶體) 變成可用的最大時間 (以秒為單位)。  
@@ -115,7 +118,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *值*必須是正整數。 預設設定*值*，0，會使用內部計算根據查詢成本來決定最大時間。  
   
- MAX_DOP =*值*  
+ MAX_DOP =*value*  
  為平行要求指定平行處理原則的最大程度 (DOP)。 *值*必須是 0 或正整數，1 到 255。 當*值*是 0，則伺服器會選擇平行處理原則的最大程度。 這是預設值且為建議的設定。  
   
 > [!NOTE]  
@@ -136,7 +139,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  DOP 經過設定後，在授與記憶體不足的壓力下，僅能將其降低。 在授與記憶體佇列中等候時，看不到工作負載群組的重新組態。  
   
- GROUP_MAX_REQUESTS =*值*  
+ GROUP_MAX_REQUESTS =*value*  
  指定在工作負載群組中可允許執行的最大同時要求數。 *值*必須是 0 或正整數。 預設設定*值*，0，允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。  
   
  使用 { *pool_name* |「**預設**"}  
@@ -191,7 +194,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   

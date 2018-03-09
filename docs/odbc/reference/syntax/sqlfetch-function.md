@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4da263d0f7511aef2e01b66667761a9e364e9720
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 函數
 **一致性**  
@@ -55,7 +55,7 @@ SQLRETURN SQLFetch(
   
  針對所有這些 Sqlstate 可傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除了 01xxx Sqlstate)，如果上一個或多個，但不是全部資料列的多重資料列的作業，就會發生錯誤，而且如果發生錯誤時，會傳回 SQL_ERROR，會傳回 SQL_SUCCESS_WITH_INFO單一資料列作業。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|字串或資料行所傳回的二進位資料會導致非空白的字元或二進位資料為非 NULL 的截斷。 如果是字串值，它就是向右截斷。|  
@@ -107,7 +107,7 @@ SQLRETURN SQLFetch(
   
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
-|開始之前|1|  
+|開始之前|@shouldalert|  
 |*CurrRowsetStart* \< =  *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|結束後|  
 |結束後|結束後|  
@@ -178,7 +178,7 @@ SQLRETURN SQLFetch(
   
  下列的值會傳回資料列狀態陣列中。  
   
-|資料列狀態陣列值|Description|  
+|資料列狀態陣列值|描述|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|已成功擷取的資料列，以及自從上一次提取此結果集未變更。|  
 |SQL_ROW_SUCCESS_WITH_INFO|已成功擷取的資料列，以及自從上一次提取此結果集未變更。 不過，資料列相關的傳回警告。|  
@@ -270,6 +270,6 @@ SQLRETURN SQLFetch(
 |傳回結果集資料行|[SQLNumResultCols 函式](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |準備執行陳述式|[SQLPrepare 函式](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

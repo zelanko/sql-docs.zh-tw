@@ -3,6 +3,7 @@
 # [SSDT 的變更記錄](changelog-for-sql-server-data-tools-ssdt.md)
 # [資料層應用程式架構 - 授權條款](data-tier-application-framework-license-terms.md)
 # [舊版的 SSDT 和 SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
+# [Azure Active Directory 支援](azure-active-directory.md)
 # [SQL Server 工具](sql-server-tools.md)
 # [授權條款 - SSDT](sql-server-data-tools-license-terms.md)
 # [授權條款 - SSDT (VS 2017)](sql-server-data-tools-license-terms-vs2017.md)

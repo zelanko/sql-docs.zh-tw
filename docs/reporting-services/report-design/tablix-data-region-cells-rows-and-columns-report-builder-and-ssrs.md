@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,13 +20,13 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 456f5fe95d2b5899360efaf0f2ab1d2ba492c228
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2ab98b38e62004a5537515b1963f61d01b820697
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 資料區資料格、資料列及資料行 (報表產生器及 SSRS)
   若要控制 Tablix 資料區的資料列和資料行如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中顯示資料，您必須了解如何指定詳細資料、群組資料以及標籤和總計的資料列與資料行。 在許多情況下，您可以使用資料表、矩陣或清單的預設結構來顯示您的資料。 如需詳細資訊，請參閱[資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)、[矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)或[清單](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="row-and-column-handles"></a>資料列和資料行控點  
  當您選取 Tablix 資料區域時，資料列和資料行控點圖形會指出每個資料列和資料行的用途。 控點表示群組內部或群組外部的資料列和資料行。 下表顯示各種控點顯示。  
   
-|圖示|Description|  
+|圖示|描述|  
 |----------|-----------------|  
 |![具有詳細資料列之三條平行線的資料列代碼](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "具有詳細資料列之三條平行線的資料列代碼")|只有資料列群組階層上的詳細資料群組|  
 |![具有詳細資料列及一個外部群組的資料列代碼](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "具有詳細資料列及一個外部群組的資料列代碼")|一個外部群組和詳細資料子群組|  

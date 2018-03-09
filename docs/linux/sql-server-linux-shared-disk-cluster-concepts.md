@@ -3,25 +3,27 @@ title: "容錯移轉叢集執行個體的 SQL Server on Linux |Microsoft 文件"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: c99b850b9733eba6baadb1d5bb893e6479fe4dea
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a9e8964b16eff5da35ef3abac6f493afc7615903
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體的 SQL Server on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明有關 SQL Server 容錯移轉叢集執行個體 (FCI) 在 Linux 上的概念。 
 
@@ -36,17 +38,17 @@ ms.lasthandoff: 12/01/2017
 
 * SLES，在叢集的圖層根據 SUSE Linux Enterprise[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)。
 
-    如需叢集設定、 資源代理程式的選項、 管理、 最佳做法和建議的詳細資訊，請參閱[SUSE Linux Enterprise 高可用性延伸 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
+    如需有關叢集設定、 資源代理程式的選項、 管理、 最佳做法和建議的詳細資訊，請參閱[SUSE Linux Enterprise 高可用性延伸 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
 RHEL HA 附加元件和 SUSE HAE 之上[Pacemaker](http://clusterlabs.org/)。
 
-如下圖所顯示存放裝置會呈現至兩個伺服器。 -Corosync 以及 Pacemaker-叢集元件協調通訊和資源管理。 其中一個伺服器具有作用中連接的儲存體資源，以及 SQL Server。 當 Pacemaker 偵測到失敗時叢集的元件管理將資源移動到另一個節點。  
+如下列圖表所示，存放裝置會呈現至兩個伺服器。 -Corosync 以及 Pacemaker-叢集元件協調通訊和資源管理。 其中一個伺服器具有作用中連接的儲存體資源，以及 SQL Server。 當 Pacemaker 偵測到失敗時叢集的元件管理將資源移動到另一個節點。  
 
 ![Red Hat Enterprise Linux 7 共用磁碟的 SQL 叢集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> 此時，不是與使用 Windows 上的 WSFC 為結合與 Pacemaker Linux 上的 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知，所有的協調流程外中，服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是屬於 WSFC、 沒有對等的 Pacemaker 中相同。 預期的是，@@servername和 sys.servers 返回節點名稱，而叢集 dmv sys.dm_os_cluster_nodes 並且 sys.dm_os_cluster_properties，不將任何記錄。 若要使用連接字串指向字串伺服器名稱並不會使用 IP，則必須註冊在他們的 DNS 伺服器 IP 用來建立所選的伺服器名稱與虛擬 IP 資源 （如下所述）。
+> 此時，不是與使用 Windows 上的 WSFC 為結合與 Pacemaker Linux 上的 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知，所有的協調流程外中，服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是屬於 WSFC、 沒有對等的 Pacemaker 中相同。 預期的是，@@servername和 sys.servers 返回節點名稱，而叢集 dmv sys.dm_os_cluster_nodes 並且 sys.dm_os_cluster_properties，不將任何記錄。 若要使用連接字串指向字串伺服器名稱並不會使用 IP，則必須在其 DNS 伺服器將 IP 登錄用來建立虛擬 IP 資源 （如下列各節所述） 所選的伺服器名稱。
 
 ## <a name="number-of-instances-and-nodes"></a>執行個體數目和節點
 
@@ -57,7 +59,7 @@ Pacemaker 叢集只能有最多 16 個節點包含 Corosync，因此單一 FCI �
 在 SQL Server FCI，SQL Server 執行個體是在上一個節點或其他作用中。
 
 ## <a name="ip-address-and-name"></a>IP 位址和名稱
-在 Linux Pacemaker 叢集上，每個 SQL Server FCI 需要自己唯一的 IP 位址和名稱。 如果 FCI 設定跨越多個子網路，一個 IP 位址就必須針對每個子網路。 唯一的名稱和 IP 位址可用來存取 FCI，使應用程式和使用者不需要知道 Pacemaker 叢集中的哪一個基礎伺服器。
+在 Linux Pacemaker 叢集上，每個 SQL Server FCI 都需要自己唯一的 IP 位址和名稱。 如果 FCI 設定跨越多個子網路，一個 IP 位址就必須針對每個子網路。 唯一的名稱和 IP 位址可用來存取 FCI，使應用程式和使用者不需要知道 Pacemaker 叢集中的哪一個基礎伺服器。
 
 在 FCI 在 DNS 中的名稱應該與 FCI 資源建立 Pacemaker 叢集中的名稱相同。
 名稱和 IP 位址必須在 DNS 中登錄。

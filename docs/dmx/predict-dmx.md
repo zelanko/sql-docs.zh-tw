@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PREDICT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7130d9a4dd3d89e456c53b47c49e14734b670f85
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +45,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>傳回類型  
  \<純量資料行參考 >  
   
- 或  
+ 中的多個  
   
  \<資料表資料行參考 >  
   
@@ -64,7 +62,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  INCLUDE_NODE_ID 參數會在結果中傳回 $NODEID 資料行。 NODE_ID 是針對特定案例執行預測的內容節點。 資料表資料行上使用預測時，這個參數是選擇性的。  
   
- *n* 參數適用於資料表資料行。 它會根據預測類型設定傳回的資料列數。 如果基礎資料行順序，它會呼叫**PredictSequence**函式。 如果基礎資料行是時間序列，它會呼叫**PredictTimeSeries**函式。 對於關聯類型的預測，它會呼叫**PredictAssociation**函式。  
+  *n* 參數適用於資料表資料行。 它會根據預測類型設定傳回的資料列數。 如果基礎資料行順序，它會呼叫**PredictSequence**函式。 如果基礎資料行是時間序列，它會呼叫**PredictTimeSeries**函式。 對於關聯類型的預測，它會呼叫**PredictAssociation**函式。  
   
  **預測**函數支援多型。  
   
@@ -92,14 +90,14 @@ FROM     [Association]
   
  此查詢會傳回包含一個資料行 `Expression` 之資料的單一資料列，但是該資料行包含下列巢狀資料表。  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016331743|0.252695851192499|  
 |Water Bottle|2866|0.192620471805901|0.175205052318795|  
 |Patch Kit|2113|0.142012232004839|0.132389356196586|  
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  

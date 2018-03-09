@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performance-counters-ssas"></a>效能計數器 (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用效能監視器，您可以使用效能計數器監視 Microsoft SQL Server Analysis Services (SSAS) 執行個體的效能。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用效能監視器可以透過效能計數器來監視 Microsoft SQL Server Analysis Services (SSAS) 執行個體的效能。  
   
  效能監視器是追蹤資源使用方式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) 嵌入式管理單元。 您可以啟動這個 MMC 嵌入式管理單元，方法是在命令提示字元中輸入 **PerfMon** ，或是從 [控制台] 按一下 **[系統管理工具]**然後按一下 **[效能監視器]**。 效能監視器可讓您使用預先定義的物件和計數器來追蹤伺服器和處理序效能與活動，並利用使用者定義的計數器來監視事件。 效能監視器會收集計數而非關於事件的資料，例如，記憶體使用量、使用中交易數目或 CPU 活動。 您也可在特定計數器上設定臨界值，以產生通知操作員的警示。  
   

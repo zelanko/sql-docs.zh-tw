@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 22d01847cb4d2a4bc6e1019fda0d29458af751c8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-properties"></a>ADO 屬性
 |||  
@@ -36,24 +37,24 @@ ms.lasthandoff: 12/21/2017
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|表示欄位值的實際長度。|  
 |[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)|表示物件的一或多個特性。|  
 |[BOF 和 EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF**指出目前的記錄位置是在資料錄集物件中的第一個資料錄之前。<br /><br /> **EOF**表示目前的記錄位置之後的資料錄集物件最後一筆記錄。|  
-|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|指出目前的記錄中的唯一識別書籤**資料錄集**物件或設定目前資料錄**資料錄集**有效書籤所識別的記錄中的物件。|  
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|指出目前的記錄中的唯一識別書籤**資料錄集**物件或設定目前資料錄**資料錄集**有效書籤所識別的記錄中的物件。|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|表示記錄數目**資料錄集**本機快取在記憶體中的物件。|  
 |[本文章節](../../../ado/reference/ado-api/chapter-property-ado.md)|取得或設定 OLE DB**章**物件上從 / **ADORecordsetConstruction**物件。|  
-|[字元集](../../../ado/reference/ado-api/charset-property-ado.md)|指出字元集所在的文字內容**資料流**應轉譯。|  
+|[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|指出字元集所在的文字內容**資料流**應轉譯。|  
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|表示做為輸入資料流**命令**物件。|  
 |[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|表示要對提供者發出命令的文字。|  
 |[CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|表示在終止嘗試並產生錯誤之前，執行命令時要等待的時間。|  
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|表示的類型**命令**物件。|  
 |[ConnectionString 屬性](../../../ado/reference/ado-api/connectionstring-property-ado.md)|表示用來連接到資料來源的資訊。|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|表示在終止嘗試並產生錯誤之前，建立連接時要等待的時間。|  
-|[計數](../../../ado/reference/ado-api/count-property-ado.md)|指出集合中的物件數目。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|指出集合中的物件數目。|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|指出資料指標服務的位置。|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|表示使用中的資料指標類型**資料錄集**物件。|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|表示將會從所參考的物件擷取的資料成員名稱**DataSource**屬性。|  
-|[資料來源](../../../ado/reference/ado-api/datasource-property-ado.md)|表示物件，包含表示為資料**資料錄集**物件。|  
-|[預設資料庫](../../../ado/reference/ado-api/defaultdatabase-property.md)|表示的預設資料庫**連接**物件。|  
+|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|表示物件，包含表示為資料**資料錄集**物件。|  
+|[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|表示的預設資料庫**連接**物件。|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|表示的資料容量**欄位**物件。|  
-|[描述](../../../ado/reference/ado-api/description-property.md)|描述**錯誤**物件。|  
+|[說明](../../../ado/reference/ado-api/description-property.md)|描述**錯誤**物件。|  
 |[方言](../../../ado/reference/ado-api/dialect-property.md)|表示語法和一般的規則，提供者將用來剖析**CommandText**或**CommandStream**屬性。|  
 |[方向](../../../ado/reference/ado-api/direction-property.md)|指出是否**參數**代表輸入的參數、 輸出參數，或兩者，或如果參數是預存程序的傳回值。|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|指出目前記錄的編輯狀態。|  
@@ -68,9 +69,9 @@ ms.lasthandoff: 12/21/2017
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|表示要封送處理至伺服器的記錄。|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|表示要傳回的記錄數目上限**資料錄集**從查詢。|  
 |[模式](../../../ado/reference/ado-api/mode-property-ado.md)|表示可用的權限中修改資料**連接**，**記錄**，或**資料流**物件。|  
-|[[名稱]](../../../ado/reference/ado-api/name-property-ado.md)|表示物件的名稱。|  
+|[名稱](../../../ado/reference/ado-api/name-property-ado.md)|表示物件的名稱。|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|表示為特定的提供者特有的錯誤程式碼**錯誤**物件。|  
-|[數字](../../../ado/reference/ado-api/number-property-ado.md)|表示唯一識別數字**錯誤**物件。|  
+|[Number](../../../ado/reference/ado-api/number-property-ado.md)|表示唯一識別數字**錯誤**物件。|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|表示中的數值小數位數**參數**或**欄位**物件。|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|值會指出**欄位**，存在於記錄中進行任何變更之前。|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|表示網頁的資料數量**資料錄集**包含物件。|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 |[提供者](../../../ado/reference/ado-api/provider-property-ado.md)|指出提供者的名稱**連接**物件。|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|表示中的記錄數目**資料錄集**物件。|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|表示的類型**記錄**物件。|  
-|[資料列](../../../ado/reference/ado-api/row-property-ado.md)|取得或設定 OLE DB**列**物件上從 / **ADORecordConstruction**物件。|  
+|[Row](../../../ado/reference/ado-api/row-property-ado.md)|取得或設定 OLE DB**列**物件上從 / **ADORecordConstruction**物件。|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|取得或設定 OLE DB **RowPosition**物件上從 / **ADORecordsetConstruction**物件。|  
 |[資料列集](../../../ado/reference/ado-api/rowset-property-ado.md)|取得或設定 OLE DB**資料列集**物件上從 / **ADORecordsetConstruction**物件。|  
 |[來源 （ADO 錯誤）](../../../ado/reference/ado-api/source-property-ado-error.md)|表示原始產生錯誤的應用程式之物件的名稱。|  
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/21/2017
 |[值](../../../ado/reference/ado-api/value-property-ado.md)|指派給的值會指出**欄位**，**參數**，或**屬性**物件。|  
 |[版本](../../../ado/reference/ado-api/version-property-ado.md)|指示 ADO 版本號碼。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

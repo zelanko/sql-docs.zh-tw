@@ -8,20 +8,21 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e7f2945bcceefdd7613a44a292fa5794554607ce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba3bc1642b2b266c030f8ec326d001a8fb56b4ab
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="temporal-tables"></a>時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **範例:**  
   
-    -   [建立系統建立版本的時態表](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)  
+    -   [建立系統設定版本時態表](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)  
   
     -   [使用記憶體最佳化的系統版本設定時態表](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)  
   
@@ -123,7 +124,7 @@ CREATE TABLE dbo.Employee
 >  系統 datetime2 資料行中所記錄的時間是依據交易本身的開始時間。 例如，在單一交易中插入的所有資料列，在資料行中都會記錄相同的 UTC 時間，且對應到 **SYSTEM_TIME** 。  
   
 ## <a name="how-do-i-query-temporal-data"></a>如何查詢時態表？  
- **SELECT** 陳述式 **FROM***\<資料表>* 子句具有新子句 **FOR SYSTEM_TIME** 並附帶五個時態特定的子子句，以在目前和歷程記錄資料表之間查詢資料。 這個新 **SELECT** 陳述式語法直接受到單一資料表支援，透過多個聯結以及在多個時態表上檢視進行傳播。  
+ **SELECT** 陳述式 **FROM***\<資料表>* 子句具有新子句 **FOR SYSTEM_TIME** 附帶五個時態特定的次子句，以在目前和歷程記錄資料表之間查詢資料。 這個新 **SELECT** 陳述式語法直接受到單一資料表支援，透過多個聯結以及在多個時態表上檢視進行傳播。  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -144,7 +145,7 @@ SELECT * FROM Employee
   
  在下表中，合格資料列資料行中的 SysStartTime 代表所查詢資料表中 **SysStartTime** 資料行中的值，而 **SysEndTime** 代表所查詢資料表中 **SysEndTime** 資料行中的值。 如需完整的語法和範例，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 和 [查詢系統建立版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)現在可加以支援。  
   
-|運算式|查詢資料列|Description|  
+|運算式|查詢資料列|描述|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<日期時間>|SysStartTime \<= date_time AND SysEndTime > date_time|傳回含有資料列的資料表，資料列內含的值是過去指定時間點的實際 (目前) 值。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回資料列中的值，該資料列在 *<date_time>* 參數所指定的時間點為有效。 當 *system_start_time_column_name* 的值小於或等於 *<date_time>* 參數的值，且 *system_end_time_column_name* 的值大於 *<date_time>* 參數的值，資料列的值即視為有效。|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|傳回資料表，其中內含所有資料列版本的值，該值在所指定的時間範圍內有效，而不論其是否在 FROM 引數的 *<start_date_time>* 參數值之前為作用中，或是在 TO 引數的 *<end_date_time>* 參數值之後就不在作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 不包含恰好在 FROM 端點所定義的範圍下限變為作用中的資料列，也不包含恰好在 TO 端點所定義的範圍上限變為作用中的資料列。|  
@@ -153,7 +154,7 @@ SELECT * FROM Employee
 |**ALL**|所有資料列|傳回屬於目前和歷程記錄資料表的資料列聯集。|  
   
 > [!NOTE]  
->  您可以選擇隱藏這些期間資料行，讓未明確參考這些期間資料行的查詢不會傳回這些資料行 (**SELECT \* FROM***\<資料表>*案例)。 若要傳回隱藏的資料行，只需明確地參考查詢中的隱藏資料行。 同樣地， **INSERT** 和 **BULK INSERT** 陳述式將繼續進行，就如同這些新期間資料行不存在一般 (且資料行值將會自動填入)。 如需使用 **HIDDEN** 子句的詳細資料，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)現在可加以支援。  
+>  您可以選擇隱藏這些期間資料行，讓未明確參考這些期間資料行的查詢不會傳回這些資料行 (**SELECT \* FROM***\<資料表>* 案例)。 若要傳回隱藏的資料行，只需明確地參考查詢中的隱藏資料行。 同樣地， **INSERT** 和 **BULK INSERT** 陳述式將繼續進行，就如同這些新期間資料行不存在一般 (且資料行值將會自動填入)。 如需使用 **HIDDEN** 子句的詳細資料，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)現在可加以支援。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
  您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  

@@ -1,5 +1,5 @@
 ---
-title: "sys.service_contract_usages (TRANSACT-SQL) |Microsoft 文件"
+title: sys.service_contract_usages (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.service_contract_usages
 - sys.service_contract_usages_TSQL
 - service_contract_usages_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.service_contract_usages catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.service_contract_usages catalog view
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ccd866cd412780f6761c6065751a6120c6bb3f3a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8f8224122646b11d962e19159fd28cbd9667b9a4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysservicecontractusages-transact-sql"></a>sys.service_contract_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/27/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**service_contract_id**|**int**|使用合約的服務識別碼。 不是 NULLABLE。|  
+|**service_id**|**int**|使用合約的服務識別碼。 不是 NULLABLE。|  
 |**service_contract_id**|**int**|服務所用合約的識別碼。 不是 NULLABLE。|  
   
 ## <a name="permissions"></a>Permissions  

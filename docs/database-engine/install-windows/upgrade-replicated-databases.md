@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +19,21 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 7bbf6e3432dd66e45173afa4c955ee0269b531ca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 372c5003b349984098a8d02e6655659e6af3ef58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 支援從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級複寫資料庫。升級節點時，不需要停止其他節點上的活動。 請確定您遵守有關拓撲中支援之版本的規則：  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 支援從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級複寫資料庫。升級節點時，不需要停止其他節點上的活動。 請確定您遵守有關拓撲中支援之版本的規則：  
   
 -   散發者可以是任何版本，只要其高於或等於發行者版本 (在許多情況下，散發者與發行者為同一執行個體)。  
   
@@ -42,7 +46,7 @@ ms.lasthandoff: 11/20/2017
     -   合併式發行集的訂閱者可以是小於或等於發行者版本的任何版本。  
   
 > [!NOTE]  
->  有關這個主題，請參閱「安裝說明」文件集和《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。 在「安裝說明」文件集中，以粗體文字表示的主題連結只會參考線上叢書中的主題。 **您可以使用本[文章](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**中所述的選項來設計「發行者」、「訂閱者」和「散發者」的升級策略。 
+>  如需本文，參閱「安裝說明」文件和《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。 「安裝說明」文件中以粗體文字表示的文章連結，表示僅可於《線上叢書》取得的文章。 **您可以使用本[文章](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**中所述的選項來設計「發行者」、「訂閱者」和「散發者」的升級策略。 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>在升級之前執行異動複寫的記錄讀取器代理程式  
  升級 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 之前，您必須確定所有來自已發行資料表的認可交易都已經由記錄讀取器代理程式處理過。 若要確定已經處理過所有交易，請針對每個包含交易式發行集的資料庫執行下列步驟：  
@@ -66,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
  合併式複寫會將發行集與訂閱中繼資料儲存在發行集與訂閱資料庫中的許多系統資料表內。 執行快照集代理程式會更發行集中繼資料，而執行合併代理程式會更新訂閱中繼資料。 只有要產生發行集快照集時才需要它。 如果合併式發行集使用參數化篩選，則每個資料分割也會有快照集。 您不需要更新這些分割快照集  
   
- 您可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、複寫監視器或命令列執行代理程式。 如需有關執行快照集代理程式的詳細資訊，請參閱下列主題：  
+ 您可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、複寫監視器或命令列執行代理程式。 如需如何執行快照集代理程式的詳細資訊，請參閱下列文章：  
   
 -   [建立和套用初始快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
@@ -76,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [複寫代理程式可執行檔概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
- 如需有關執行合併代理程式的詳細資訊，請參閱下列主題：  
+ 如需如何執行合併代理程式的詳細資訊，請參閱下列文章：  
   
 -   [同步處理提取訂閱](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   

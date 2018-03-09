@@ -8,24 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.oledbcommandtrans.f1
+f1_keywords:
+- sql13.dts.designer.oledbcommandtrans.f1
 helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad315b1ac024edc88c7a095a8ac029607391bf4b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b759d86a0a501364cdb5f4a1544ac2eb3df8d717
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令轉換
   OLE DB 命令轉換為資料流程中每個資料列執行 SQL 陳述式。 例如，可以執行在資料庫資料表中插入、更新或刪除資料列的 SQL 陳述式。  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/20/2017
  這個轉換有一個輸入、一個規則輸出及一個錯誤輸出。  
   
 ## <a name="logging"></a>記錄  
- 您可以記錄 OLE DB 命令轉換對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解 OLE DB 命令轉換對外部資料來源執行的連接和命令。 若要記錄 OLE DB 命令轉換對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 OLE DB 命令轉換對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解 OLE DB 命令轉換對外部資料來源執行的連接和命令。 若要記錄 OLE DB 命令轉換對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
  您可以使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或物件模型來設定轉換。 如需有關以程式設計方式來設定此轉換的詳細資訊，請參閱《開發人員指南》。  
@@ -101,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
     -   按一下 **[資料行對應]** ，然後將 **[可用的輸入資料行]** 清單中的資料行對應至 **[可用的目的地資料行]** 清單中的參數。  
   
-14. 按一下 **[確定]**。  
+14. 按一下 [確定] 。  
   
 15. 若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[儲存]** 。  
   

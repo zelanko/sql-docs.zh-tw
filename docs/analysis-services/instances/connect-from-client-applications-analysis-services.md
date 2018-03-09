@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,19 +16,20 @@ f1_keywords:
 - sql13.swb.connecttoas.connectionproperties.f1
 - sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e893df8d4edada2a28d16c341cc8353fd3478625
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3aaccfe1f58568bde946c9ddf112b3e83bf8b9e1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>從用戶端應用程式連接 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您不熟悉 Analysis services，本主題中使用的資訊來連接到現有的執行個體[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用常用的工具和應用程式。 本主題也說明如何以不同的使用者識別進行連接，方便測試之用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+如果您不熟悉 Analysis Services，請透過本主題中的資訊，使用常用的工具和應用程式連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 現有的執行個體。 本主題也說明如何以不同的使用者識別進行連接，方便測試之用。  
   
 -   [使用 SQL Server Management Studio (SSMS) 連接](#bkmk_SSMS)  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [物件和作業的存取權授權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授權的存取權的物件和作業 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> 使用 SQL Server Management Studio (SSMS) 連接  
  您可以使用 SSMS 連接至 Analysis Services，以互動方式管理伺服器執行個體和資料庫。 您也可以執行 XMLA 或 MDX 查詢，以執行管理工作或擷取資料。 相較於在傳送查詢時只會載入資料庫的其他工具和應用程式，SSMS 會在您連接到伺服器時載入所有資料庫，前提是您有權檢視資料庫。 這表示，如果您在伺服器上擁有許多表格式資料庫，當您使用 SSMS 連接時，所有資料庫都會載入系統記憶體中。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  驗證一定會是 Windows 驗證，而且使用者識別一定會是透過 Management Studio 連接的 Windows 使用者。  
   
-     為了要讓連接成功，您必須擁有存取伺服器或伺服器上之資料庫的權限。 您要在 Management Studio 中執行的大部分工作都需要管理權限， 因此請確定您所連接的帳戶為伺服器管理員角色的成員。 如需詳細資訊，請參閱[將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
+     為了要讓連接成功，您必須擁有存取伺服器或伺服器上之資料庫的權限。 您要在 Management Studio 中執行的大部分工作都需要管理權限， 因此請確定您所連接的帳戶為伺服器管理員角色的成員。 如需詳細資訊，請參閱 [將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
 4.  按一下 [連接屬性] 指定特定的資料庫、設定逾時值或加密選項。 選擇性連接資訊包括只用於目前連接的連接屬性。  
   
@@ -132,7 +130,7 @@ ms.lasthandoff: 12/08/2017
   
      若要測試，請使用 Excel 或 SSMS 並指定 Analysis Services 執行個體使用的 IP 位址和通訊埠，然後連接到遠端電腦。 如果可以連接，表示防火牆規則允許執行個體的傳入連接，而且執行個體也允許遠端連接。  
   
-     此外，使用 TCP/IP 做為連接通訊協定時，請記住用戶端必須位於相同網域或信任網域中才能連接 Analysis Services。 如果連接是跨安全性界限進行，您就必須設定 HTTP 存取。 如需詳細資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+     此外，使用 TCP/IP 做為連接通訊協定時，請記住用戶端必須位於相同網域或信任網域中才能連接 Analysis Services。 如果連接是跨安全性界限進行，您就必須設定 HTTP 存取。 如需詳細資訊，請參閱 [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)(Microsoft BI 驗證及識別委派)。  
   
 -   您是否能使用一些工具連接，但是其他工具就不行？ 這個問題可能是用戶端程式庫版本錯誤。 您可以從 SQL Server 功能套件下載頁面取得用戶端程式庫。  
   
@@ -140,10 +138,10 @@ ms.lasthandoff: 12/08/2017
   
  [Resolving Common Connectivity Issues in SQL Server 2005 Analysis Services Connectivity Scenarios](http://technet.microsoft.com/library/cc917670.aspx)(在 SQL Server 2005 Analysis Services 連接狀況中解決常見的連接問題)。 這份文件已經有一些歲月，但是其中的資訊和方法仍然適用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [模擬 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [建立資料來源 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [模擬](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [建立資料來源 &#40;SSAS 多維度 &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

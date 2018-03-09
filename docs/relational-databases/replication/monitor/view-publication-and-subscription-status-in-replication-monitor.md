@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea47f9f50242003e4aa933da2e5657bb7e2ed5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab769d9d4a6c5c311fa6695056ef503999455d8f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在複寫監視器中檢視發行集和訂閱狀態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器會顯示發行集和訂閱的狀態資訊：  
@@ -68,12 +68,12 @@ ms.lasthandoff: 11/17/2017
 ## <a name="publication-status-values"></a>發行集狀態值  
  下表按優先權順序顯示發行集狀態值及其對應的圖示。  
   
-|狀態|圖示|  
+|[狀態]|圖示|  
 |------------|----------|  
 |錯誤|![UI 圖示︰錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示︰錯誤")|  
 |效能嚴重不足|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
 |正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
-|確定|無|  
+|[確定]|無|  
   
 ## <a name="subscription-status-values"></a>訂閱狀態值  
  下列各資料表按優先權順序顯示訂閱狀態值及其對應的圖示。 訂閱可同時處於兩種狀態，例如 **「即將過期/已過期」** 和 **「正在重試失敗的命令」**；此時會顯示最高優先權的狀態。  
@@ -82,11 +82,11 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="transactional-subscriptions"></a>交易式訂閱  
   
-|狀態|圖示|  
+|[狀態]|圖示|  
 |------------|----------|  
 |錯誤|![UI 圖示︰錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示︰錯誤")|  
 |效能嚴重不足|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|即將過期/已過期|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
+|「即將過期/已過期」|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
 |未初始化的訂閱|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
 |正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
 |未執行|![UI 圖示︰複寫代理程式已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 圖示︰複寫代理程式已停止")|  
@@ -94,12 +94,12 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="merge-subscriptions"></a>合併訂閱  
   
-|狀態|圖示|  
+|[狀態]|圖示|  
 |------------|----------|  
 |錯誤|![UI 圖示︰錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示︰錯誤")|  
 |效能嚴重不足|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
 |長期執行合併|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|即將過期/已過期|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
+|「即將過期/已過期」|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
 |未初始化的訂閱|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
 |正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
 |正在同步處理|![UI 圖示︰複寫代理程式執行中](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 圖示︰複寫代理程式執行中")|  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="snapshot-subscriptions"></a>快照集訂閱  
   
-|狀態|圖示|  
+|[狀態]|圖示|  
 |------------|----------|  
 |錯誤|![UI 圖示︰錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示︰錯誤")|  
 |即將過期/已過期|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  

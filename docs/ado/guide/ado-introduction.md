@@ -11,18 +11,19 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, programming
+helpviewer_keywords:
+- ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: MightyPen
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01aeb96879bf7822b8dde24a5d7e7605484947f2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f20d7d3a90d524cbb452fc081a9a6cdcaa1ebe0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 概觀和優點
 ActiveX Data Objects (ADO) 是高階、 以方便使用 OLE DB 介面。 OLE DB 是各種資料存放區的低層級、 高效能介面。 ADO 和 OLE DB 使用關聯式 （表格式） 與非關聯式 (階層式或資料流) 資料。

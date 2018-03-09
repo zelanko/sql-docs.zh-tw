@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: InstanceName Property
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: InstanceName property
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f5dea28d9944b365f5e3caa14b06259bdd21c67
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 03f89e6ef658f36b577c95c5a50eae7a96f30dbc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-property---instancename"></a>ConfigurationSetting 屬性 - InstanceName
   指定特定電腦上報表伺服器執行個體的名稱。 唯讀。  

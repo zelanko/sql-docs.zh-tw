@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], disconnecting
 - disconnecting registered servers [SQL Server]
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bf0da9d7c848a48c5626469e4ec3ef95d70fd9f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a41c28806be100d553a77362db504b0807647575
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>中斷與註冊伺服器的連接 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中隨時從伺服器中斷物件總管的連線。 中斷 [物件總管] 的連接，並不會中斷其他 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 元件 (例如 SQL 編輯器) 的連接。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主題描述如何 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中隨時從伺服器中斷 [物件總管] 的連接。 中斷 [物件總管] 的連接，並不會中斷其他 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 元件 (例如 SQL 編輯器) 的連接。  
   
 ##  <a name="SSMSProcedure"></a>  
   

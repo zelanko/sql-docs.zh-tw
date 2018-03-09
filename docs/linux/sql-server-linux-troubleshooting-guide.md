@@ -3,31 +3,34 @@ title: "疑難排解 SQL Server on Linux |Microsoft 文件"
 description: "提供在 Linux 上使用 SQL Server 2017 疑難排解秘訣。"
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文件說明如何疑難排解 Microsoft SQL Server on Linux 或 Docker 容器中執行。 疑難排解 SQL Server on Linux，請務必檢閱支援的功能與中的已知的限制[SQL Server on Linux 版本資訊](sql-server-linux-release-notes.md)。
+本文件說明如何疑難排解 Microsoft SQL Server on Linux 或 Docker 容器中執行。 當疑難排解 SQL Server on Linux，請記得要檢閱的已知的限制的支援的功能[SQL Server on Linux 版本資訊](sql-server-linux-release-notes.md)。
 
-## <a id="connection"></a>連接錯誤進行疑難排解
+> [!TIP]
+> 常見問題的解答，請參閱[Linux 常見問題集 > 的 SQL Server](sql-server-linux-faq.md)。
+
+## <a id="connection"></a> 連接錯誤進行疑難排解
 如果您無法連線到您的 Linux SQL Server，有幾件事檢查。 
 
 - 請確認伺服器名稱或 IP 位址是從用戶端電腦。
@@ -51,7 +54,7 @@ ms.lasthandoff: 12/01/2017
 
 - 請確認的使用者名稱和密碼不包含任何拼字錯誤或額外的空格或不正確的大小寫。
 
-- 嘗試明確地設定通訊協定和連接埠號碼的伺服器名稱，如下所示： **tcp:servername，1433年**。
+- 嘗試明確地設定通訊協定和連接埠號碼的伺服器名稱，如下列範例： **tcp:servername，1433年**。
 
 - 連接錯誤及逾時，也可能會導致網路連線問題。 確認您的連接資訊和網路連線能力後, 再次嘗試連線。
 
@@ -61,7 +64,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>管理在 Red Hat Enterprise Linux (RHEL) 和 Ubuntu mssql 伺服器服務 
 
-檢查 SQL Server 服務使用這個命令的狀態，狀態：
+檢查 SQL Server 服務使用這個命令的狀態：
 
    ```bash
    sudo systemctl status mssql-server
@@ -77,7 +80,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>管理 mssql Docker 容器的執行
 
-您可以執行下列命令 （識別碼會是 「 容器識別碼 」 資料行底下），以取得最新版本建立 SQL Server Docker 容器的狀態和容器識別碼：
+您可以執行下列命令，以取得最新版本建立 SQL Server Docker 容器的狀態和容器識別碼 (ID 低於**容器識別碼**資料行):
 
    ```bash
    sudo docker ps -l
@@ -151,7 +154,7 @@ SQL 傾印
 > [!WARNING]  
 >  以 "mssql" 使用者身分啟動 Linux 上的 SQL Server，以免未來發生啟動問題。 例如，"sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" 
 
-如果您不小心與其他使用者啟動 SQL Server，您必須將 SQL Server 資料庫檔案的擁有權變更回之前啟動 SQL Server 與 systemd 'mssql' 使用者。 例如，若要變更 'mssql' 使用者 /var/opt/mssql 底下的所有資料庫檔案的擁有權，執行下列命令
+如果您不小心與其他使用者啟動 SQL Server，您必須回到之前啟動 SQL Server 與 systemd 'mssql' 使用者變更 SQL Server 資料庫檔案的擁有權。 例如，若要變更 'mssql' 使用者 /var/opt/mssql 底下的所有資料庫檔案的擁有權，執行下列命令
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
@@ -159,9 +162,9 @@ SQL 傾印
 
 ## <a name="common-issues"></a>常見的問題
 
-1. 您無法連線到遠端的 SQL Server 執行個體。
+1. 您無法連接到遠端的 SQL Server 執行個體。
 
-   請參閱疑難排解一節的主題，[連接到 SQL Server on Linux](#connection)。
+   請參閱疑難排解一節的發行項[連接到 SQL Server on Linux](#connection)。
 
 2. 錯誤： 主機名稱必須為 15 個字元或更少。
 
@@ -169,10 +172,10 @@ SQL 傾印
 
 3. 重設的系統管理 (SA) 密碼。
 
-   如果您忘記系統管理員 (SA) 密碼，或需要重設某些其他原因，請遵循下列步驟。
+   如果您忘記系統管理員 (SA) 密碼，或需要重設它因其他原因，請遵循下列步驟。
 
    > [!NOTE]
-   > 下列步驟將會停止 SQL Server 服務暫時。
+   > 下列步驟會暫時停止 SQL Server 服務。
 
    登入主機終端機中，執行下列命令，並遵循提示以重設的 SA 密碼：
 
@@ -200,12 +203,4 @@ SQL 傾印
    資源：[特殊字元](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>支援
-
-支援是透過社群和受監視的工程團隊。 如有特定問題，使用下列資源：
-
-- [DBA 堆疊 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)： 提問資料庫管理
-- [堆疊溢位](http://stackoverflow.com/questions/tagged/sql-server)： 開發提問
-- [MSDN 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)： 詢問技術問題
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)： 報告錯誤和要求的功能
-- [Reddit](https://www.reddit.com/r/SQLServer/)： 討論 SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

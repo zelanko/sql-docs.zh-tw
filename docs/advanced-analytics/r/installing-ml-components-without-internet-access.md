@@ -1,28 +1,29 @@
 ---
 title: "安裝沒有網際網路存取的機器學習元件 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/30/2017
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 93adacb061b3bf4c77606294ae8341144eaf24c9
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d7d218dcb5efeddf248230abff85b46da23d389a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>安裝沒有網際網路存取的機器學習服務元件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 因為 R，並將 Python 元件提供 SQL Server 2016 和 SQL Server 2017 的開放原始碼，Microsoft 不會依預設安裝 R 或 Python 的元件。 相反地，我們會提供相關的安裝程式，並為了方便起見，Microsoft 下載中心和其他受信任的站台上建立封裝。 您必須同意將適當的授權，然後 SQL Server 安裝程式會為您的 R 或 Python 的元件。
 
@@ -46,16 +47,18 @@ ms.lasthandoff: 12/20/2017
 
 ### <a name="step-1-obtain-additional-installers"></a>步驟 1： 取得額外的安裝程式
 
+一般情況下，不同的安裝程式是開放原始碼和提供專屬的元件。 SQL Server 安裝精靈可確保它們會安裝在正確的順序。 不過，某些版本中，可能會更新一組元件。 請參閱[資料表的安裝程式](#bkmk_2017Installers)每個版本，如需詳細資訊。
+
 **R**
 
-SQL Server 2016 和 SQL Server 2017 可支援的 R 語言。 兩個不同的安裝程式所需，開放原始碼和專屬的元件。 SQL Server 安裝精靈可確保它們會安裝在正確的順序。
+在 SQL Server 2016 和更新版本支援的 R 語言。 
 
 + 安裝程式與**SRO**名稱中提供的開放原始碼的元件。
 + 安裝程式與**SRS**名稱中包含由 Microsoft，包括用於資料庫整合提供的元件。
 
 **Python**
 
-Python 語言只支援 SQL Server 2017。 同樣地也有兩個不同的安裝程式，您必須下載。
+Python 語言需要 2017年或更新版本的 SQL Server。 
 
 + 安裝程式與**SPO**名稱中適用於 Microsoft Python 開啟，並提供開放原始碼元件。
 + 安裝程式與**SPS**名稱中是與 Microsoft Python 伺服器，並包含 Microsoft，包括用於資料庫整合所提供的元件。
@@ -78,19 +81,18 @@ SQL Server 2016 中的 R 服務的離線安裝程序的逐步解說，我們建�
 3. 對話方塊隨即開啟，提示您輸入**安裝路徑**的所需的封裝。
 4. 按一下**瀏覽**找出包含您之前複製的安裝程式檔案的資料夾。
 5. 如果找到正確的檔案，您可以按一下 [下一步] 來指出元件可用。
-10. 完成 SQL Server 安裝精靈。
-11. 執行必要的後續安裝步驟，以確定服務已啟用。
+6. 完成 SQL Server 安裝精靈。
+7. 執行必要的後續安裝步驟，以確定服務已啟用。
 
 ## <a name="installerlocs"></a>若要下載機器學習服務元件的位置
 
-> [!NOTE]
-> 請務必取得符合您要安裝的 SQL Server 版本的檔案。
-> 
-> 從 SQL Server 2017 CTP 2.0 提供的 Python 的支援。 舊版本中，包括 SQL Server 2016 中，不支援 Python。
+請務必取得符合您要安裝的 SQL Server 版本的檔案。
 
 + [取得 SQL Server 2016 中的 R 元件](#bkmk_2016Installers)
 
 + [若要取得 SQL Server 2017 R 或 Python 元件](#bkmk_2017Installers)
+
+從 SQL Server 2017 CTP 2.0 提供的 Python 的支援。 舊版本中，包括 SQL Server 2016 中，不支援 Python。
 
 ### <a name="bkmk_2017Installers"></a>下載適用於 SQL Server 2017
 
@@ -109,32 +111,42 @@ Microsoft R Server     |[SRS_9.0.2.100_1033.cab](https://go.microsoft.com/fwlink
 Microsoft R Open     |[SRO_3.3.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842800)
 Microsoft R Server     |[SRS_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842799)
 開啟 Microsoft Python     |[SPO_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842828)
-Microsoft Python 伺服器    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
+Microsoft Python Server    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
 **SQL Server 2017 RC1** |
 Microsoft R Open     |[SRO_3.3.3.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851503)|
 Microsoft R Server     |[SRS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851498)|
 開啟 Microsoft Python     |[SPO_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851499)|
-Microsoft Python 伺服器    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
+Microsoft Python Server    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
 **SQL Server 2017 RC 2** |
 Microsoft R Open     |[SRO_3.3.3.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851493)|
 Microsoft R Server     |[SRS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851505)|
 開啟 Microsoft Python     |[SPO_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851506)|
-Microsoft Python 伺服器    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
+Microsoft Python Server    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
 **SQL Server 2017 RTM** |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 開啟 Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python 伺服器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |使用上一個|
+Microsoft R Open     |不是變更，使用上一個|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-開啟 Microsoft Python     |使用上一個 |
-Microsoft Python 伺服器    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+開啟 Microsoft Python     |不是變更，使用上一個 |
+Microsoft Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 **SQL Server 2017 CU2** |
-Microsoft R Open     |使用上一個|
-Microsoft R Server      |使用上一個|
-開啟 Microsoft Python     |使用上一個 |
-Microsoft Python 伺服器    |使用上一個|
+Microsoft R Open     |不是變更，使用上一個|
+Microsoft R Server      |不是變更，使用上一個|
+開啟 Microsoft Python     |不是變更，使用上一個|
+Microsoft Python Server    |不是變更，使用上一個|
+**SQL Server 2017 CU3** |
+Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
+開啟 Microsoft Python     |不是變更，使用上一個|
+Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
+**SQL Server 2017 CU4** |
+Microsoft R Open     |不是變更，使用上一個|
+Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
+開啟 Microsoft Python     |不是變更，使用上一個|
+Microsoft Python Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
 
 ### <a name="bkmk_2016Installers"></a>下載適用於 SQL Server 2016
 
@@ -187,13 +199,13 @@ Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlin
 Microsoft R Open     |不是變更，使用上一個|
 Microsoft R Server    |不是變更，使用上一個 |
 
-如果您想要檢視 Microsoft 的原始程式碼，它是可供下載的封存.tar 格式：[下載 R Server 安裝程式](https://docs.microsoft.com/r-server/install/r-server-install-windows#download)
+如果您想要檢視 Microsoft 的原始程式碼，它是可供下載的封存.tar 格式：[下載 R Server 安裝程式](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
 ### <a name = "bkmk_OtherComponents"></a>其他必要條件
 
 根據您的環境，您可能需要針對下列必要條件製作安裝程式的本機複本。
 
-元件  |Version
+元件  |版本
 ---------|---------
 [Microsoft AS OLE DB Provider for SQL Server 2016](https://go.microsoft.com/fwlink/?linkid=834405)     |  13.0.1601.5
 [Microsoft .NET Core](https://go.microsoft.com/fwlink/?linkid=834319)     | 1.0.1
@@ -217,7 +229,7 @@ Microsoft R Server    |不是變更，使用上一個 |
     > 此問題適用於僅為早期版本，而且已在較新版本中修正。
     > **只有當安裝程式傳回的訊息，它無法安裝正確的語言時，才能使用這個因應措施。**
 
-+ **適用於 SQL Server 2017**
++ **For SQL Server 2017**
 
     下載。R 或 Python 元件的封包檔。
     
@@ -229,7 +241,7 @@ Microsoft R Server    |不是變更，使用上一個 |
 
 + 如果伺服器無法存取網際網路，您必須在更新程序開始「之前」下載 SQL Server 安裝程式，然後下載對應的 R 元件安裝程式版本。  根據預設，使用 SQL Server 不包含的 R 元件。
 
-+ 如果您是*加入*這些元件*現有*安裝中，使用 SQL Server 安裝程式的更新的版本，然後對應更新版本的其他元件。 當您指定 R 功能是要安裝時，安裝程式會尋找符合的機器學習服務元件的安裝程式的版本。
++ 如果您要將這些元件加入現有安裝，請使用更新的版本的 SQL Server 安裝程式，以及對應的其他元件的更新的版本。 當您指定 R 功能是要安裝時，安裝程式會尋找符合的機器學習服務元件的安裝程式的版本。
 
 ## <a name="command-line-arguments-for-specifying-component-locations"></a>命令列引數指定元件的位置
 
@@ -237,27 +249,26 @@ Microsoft R Server    |不是變更，使用上一個 |
 
 **安裝程式的位置**
 
-- `/UPDATESOURCE`若要指定包含 SQL Server 更新的安裝程式的本機檔案的位置
-- `/MRCACHEDIRECTORY`若要指定包含 R 元件封包檔的資料夾
-- `/MPYCACHEDIRECTORY`若要指定包含 Python 元件封包檔的資料夾
+- `/UPDATESOURCE` 若要指定包含 SQL Server 更新的安裝程式的本機檔案的位置
+- `/MRCACHEDIRECTORY` 若要指定包含 R 元件封包檔的資料夾
+- `/MPYCACHEDIRECTORY` 若要指定包含 Python 元件封包檔的資料夾
 
 **SQL Server 2016 中的 R 元件**
 
-- `/ADVANCEDANALYTICS`若要取得引擎支援的外部指令碼
-- `/IACCEPTROPENLICENSETERMS="True"`若要接受授權合約的個別 R
+- `/ADVANCEDANALYTICS` 若要取得引擎支援的外部指令碼
+- `/IACCEPTROPENLICENSETERMS="True"` 若要接受授權合約的個別 R
 
 **在 SQL Server 2017 的 R 元件**
 
-- `/ADVANCEDANALYTICS`若要取得引擎支援的外部指令碼
-- `/SQL_INST_MR`若要使用 R
-- `/IACCEPTROPENLICENSETERMS="True"`若要接受授權合約的個別 R
+- `/ADVANCEDANALYTICS` 若要取得引擎支援的外部指令碼
+- `/SQL_INST_MR` 若要使用 R
+- `/IACCEPTROPENLICENSETERMS="True"` 若要接受授權合約的個別 R
 
 **在 SQL Server 2017 Python 元件**
 
-- `/ADVANCEDANALYTICS`若要取得引擎支援的外部指令碼
-- `/SQL_INST_MPY`若要使用 Python
-- `/IACCEPTPYTHONLICENSETERMS="True"`若要接受授權合約的個別 Python
-
+- `/ADVANCEDANALYTICS` 若要取得引擎支援的外部指令碼
+- `/SQL_INST_MPY` 若要使用 Python
+- `/IACCEPTPYTHONLICENSETERMS="True"` 若要接受授權合約的個別 Python
 
 > [!NOTE]
 > 您無法在 SQL Server 安裝程式中使用參數，針對 [啟動列] 變更服務帳戶。 我們建議您安裝使用預設的服務帳戶，並修改使用 SQL Server 組態管理員的服務帳戶。 之後，請務必重新啟動控制板服務。

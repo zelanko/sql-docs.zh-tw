@@ -8,27 +8,30 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: Azure SQL Database
-f1_keywords: sys.elastic_pool_resource_stats catalog view
+applies_to:
+- Azure SQL Database
+f1_keywords:
+- sys.elastic_pool_resource_stats catalog view
 helpviewer_keywords:
 - sys.elastic_pool_resource_stats_TSQL
 - sys.elastic_pool_resource_stats
 - elastic_pool_resource_stats_TSQL
 - elastic_pool_resource_stats
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9505470a81f88e457a8b2f0b9429cee60cef7dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7af69bdd1f98560d3a6ae9699551b4f3062f68c6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|表示 15 秒的報告時間間隔開始的 UTC 時間。|  
 |**end_time**|**datetime2**|指出 15 秒的報告時間間隔結束的 UTC 時間。|  
-|**elastic_pool_name**|**nvarchar （128)**|彈性資料庫集區名稱。|  
+|**elastic_pool_name**|**nvarchar(128)**|彈性資料庫集區名稱。|  
 |**avg_cpu_percent**|**decimal(5,2)**|平均計算使用率，以百分比為單位的集區限制。|  
 |**avg_data_io_percent**|**decimal(5,2)**|以百分比為單位的集區限制為基礎的計算平均 I/O 使用率。|  
 |**avg_log_write_percent**|**decimal(5,2)**|平均寫入資源使用率，以百分比為單位的集區限制。|  
@@ -78,7 +81,7 @@ WHERE elastic_pool_name = '<your pool name>'
 ORDER BY end_time DESC;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [彈性資料庫 tame 爆炸性成長](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [建立及管理 SQL Database 彈性資料庫集區 （預覽）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
  [sys.resource_stats &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   

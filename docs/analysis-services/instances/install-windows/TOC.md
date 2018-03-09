@@ -13,4 +13,4 @@
 ## [檢查清單：使用 PowerShell 驗證 Power Pivot for SharePoint](checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)  
 ## [在 SharePoint 2016 中部署 SQL Server 2016 PowerPivot 和 Power View](deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)  
 ## [在多層式 SharePoint 2016 伺服器陣列中部署 SQL Server 2016 PowerPivot 和 Power View](deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)  
-# [安裝 Analysis Services 資料提供者 (AMO、ADOMD.NET、MSOLAP)](install-analysis-services-data-providers-amo-adomd-net-msolap.md)  
+# [安裝用戶端程式庫 (AMO、ADOMD.NET、MSOLAP)](../data-providers-used-for-analysis-services-connections.md)  

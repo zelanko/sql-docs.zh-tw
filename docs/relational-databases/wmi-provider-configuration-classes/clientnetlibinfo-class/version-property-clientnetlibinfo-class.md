@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Version Property (ClientNetLibInfo Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- Version Property (ClientNetLibInfo Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: Version property
+helpviewer_keywords:
+- Version property
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b5bca1ff2a2ae5d847168531d4c8f2da86d0155
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 075c7d34ffedbac6792cad1ac480470cfc699f7b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version 屬性 (ClientNetLibInfo 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]取得用戶端網路程式庫檔案的版本。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+取得用戶端網路程式庫檔案的版本。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +51,7 @@ object.Version [= value]
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定用戶端通訊協定](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

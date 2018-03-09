@@ -1,14 +1,15 @@
 ---
 title: "sys.dm_hadr_database_replica_states (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 11/08/2017
+ms.date: 02/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_hadr_database_states
 - dm_hadr_database_states
 - dm_hadr_database_states_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: "84"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b57d7550f007eb4a85f7db698aae84f133726c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c69d36319ca4273fad7b1c4890bf27e4e4fa0797
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +49,17 @@ ms.lasthandoff: 11/17/2017
 |**replica_id**|**uniqueidentifier**|可用性群組中可用性複本的識別碼。|  
 |**group_database_id**|**uniqueidentifier**|可用性群組中資料庫的識別碼。 這個識別碼在此資料庫聯結的每個複本上都相同。|  
 |**is_local**|**bit**|可用性資料庫是否為本機，下列其中一個值：<br /><br /> 0 = 資料庫不在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的本機。<br /><br /> 1 = 資料庫在伺服器執行個體的本機。|  
-|**is_primary_replica**|**bit**|如果複本是主要，則會傳回 1，或者如果它是次要複本，則會傳回 0。 適用 SQL server 2014 和更新版本。|  
-|**synchronization_state**|**tinyint**|資料移動狀態，下列值之一。<br /><br /> 0 = 未同步處理。 如果是主要資料庫，表示資料庫尚未準備好要將其交易記錄與對應的次要資料庫同步處理。 如果是次要資料庫，表示資料庫尚未開始記錄同步處理，原因是因為連接問題、處於暫停狀態，或在啟動或角色切換期間正在移轉狀態。<br /><br /> 1 = 正在同步處理。 如果是主要資料庫，表示此資料庫準備好接受次要資料庫的掃描要求。 如果是次要資料庫，表示資料庫正在進行資料移動作業。<br /><br /> 2 = 已同步處理。 主要資料庫會顯示 SYNCHRONIZED 而非 SYNCHRONIZING。 當本機快取表示資料庫已做好容錯移轉的準備而且正在同步處理時，同步認可次要資料庫就會顯示已同步處理。<br /><br /> 3 = 正在還原。 表示當次要資料庫積極取得主要資料庫的頁面時，復原程序中的階段。 **注意：**當次要複本上的資料庫處於 REVERTING 狀態時，強制容錯移轉至次要複本會將資料庫保留在其中它無法啟動為主要資料庫的狀態。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。<br /><br /> 4 = 正在初始化。 表示次要資料庫跟上復原 LSN 所需的交易記錄正在傳送而且在次要複本上強行寫入時的復原階段。 **注意：**當次要複本上的資料庫處於 INITIALIZING 狀態時，強制容錯移轉至次要複本保留狀態中的資料庫中啟動做為主要資料庫。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。|  
-|**synchronization_state_desc**|**nvarchar （60)**|資料移動狀態的描述，下列其中一個值：<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
+|**is_primary_replica**|**bit**|如果複本是主要，則會傳回 1，或者如果它是次要複本，則會傳回 0。<br /><br />**適用於：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**synchronization_state**|**tinyint**|資料移動狀態，下列值之一。<br /><br /> 0 = 未同步處理。 如果是主要資料庫，表示資料庫尚未準備好要將其交易記錄與對應的次要資料庫同步處理。 如果是次要資料庫，表示資料庫尚未開始記錄同步處理，原因是因為連接問題、處於暫停狀態，或在啟動或角色切換期間正在移轉狀態。<br /><br /> 1 = 正在同步處理。 如果是主要資料庫，表示此資料庫準備好接受次要資料庫的掃描要求。 如果是次要資料庫，表示資料庫正在進行資料移動作業。<br /><br /> 2 = 已同步處理。 主要資料庫會顯示 SYNCHRONIZED 而非 SYNCHRONIZING。 當本機快取表示資料庫已做好容錯移轉的準備而且正在同步處理時，同步認可次要資料庫就會顯示已同步處理。<br /><br /> 3 = 正在還原。 表示當次要資料庫積極取得主要資料庫的頁面時，復原程序中的階段。<br />**注意：**當次要複本上的資料庫處於 REVERTING 狀態時，強制容錯移轉至次要複本會將資料庫保留在其中它無法啟動為主要資料庫的狀態。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。<br /><br /> 4 = 正在初始化。 表示次要資料庫跟上復原 LSN 所需的交易記錄正在傳送而且在次要複本上強行寫入時的復原階段。<br />**注意：**當次要複本上的資料庫處於 INITIALIZING 狀態時，強制容錯移轉至次要複本保留狀態中的資料庫中啟動做為主要資料庫。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。|  
+|**synchronization_state_desc**|**nvarchar(60)**|資料移動狀態的描述，下列其中一個值：<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = 未根據此資料庫同步處理交易認可。<br /><br /> 1 = 根據此資料庫同步處理交易認可。<br /><br /> 如果是非同步認可可用性複本上的資料庫，這個值一定是 0。<br /><br /> 如果是同步認可可用性複本上的資料庫，這個值僅在主要資料庫上才正確。|  
 |**synchronization_health**|**tinyint**|反映聯結至可用性群組之可用性複本上資料庫的同步處理狀態和可用性複本 （同步認可或非同步認可模式） 的其中一個的可用性模式的交集下列的值。<br /><br /> 0 = 狀況不好。 **Synchronization_state**資料庫是 0 (NOT SYNCHRONIZING)。<br /><br /> 1 = 部分狀況良好。 同步認可可用性複本上的資料庫會被視為部分狀況良好如果**synchronization_state**為 1 (SYNCHRONIZING)。<br /><br /> 2 = Healthy。 同步認可可用性複本上的資料庫會被視為狀況良好如果**synchronization_state**為 2 (SYNCHRONIZED)，而非同步認可可用性複本上的資料庫會被視為狀況良好如果**synchronization_state**為 1 (SYNCHRONIZING)。|  
-|**synchronization_health_desc**|**nvarchar （60)**|描述**synchronization_health**可用性資料庫。<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
+|**synchronization_health_desc**|**nvarchar(60)**|描述**synchronization_health**可用性資料庫。<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**database_state**|**tinyint**|0 = 線上<br /><br /> 1 = 還原中<br /><br /> 2 = 復原中<br /><br /> 3 = 復原暫止<br /><br /> 4 = 可疑<br /><br /> 5 = 緊急<br /><br /> 6 = 離線<br /><br /> **注意：**相同**狀態**sys.databases 中的資料行。|  
-|**database_state_desc**|**nvarchar （60)**|描述**database_state**可用性複本。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **注意：**相同**狀態**sys.databases 中的資料行。|  
+|**database_state_desc**|**nvarchar(60)**|描述**database_state**可用性複本。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **注意：**相同**state_desc** sys.databases 中的資料行。|  
 |**is_suspended**|**bit**|資料庫狀態，下列其中一個值：<br /><br /> 0 = 已繼續<br /><br /> 1 = 已暫停|  
 |**suspend_reason**|**tinyint**|如果資料庫已暫停，則為已暫停狀態的原因，由下列其中一個值表示：<br /><br /> 0 = 使用者動作<br /><br /> 1 = 暫停協力廠商<br /><br /> 2 = 重做<br /><br /> 3 = 擷取<br /><br /> 4 = 套用<br /><br /> 5 = 重新啟動<br /><br /> 6 = 恢復<br /><br /> 7 = 重新驗證<br /><br /> 8 = 計算次要複本同步處理點時發生錯誤|  
-|**suspend_reason_desc**|**nvarchar （60)**|資料庫暫停狀態原因的描述，由下列其中一個值表示：<br /><br /> SUSPEND_FROM_USER = 使用者手動暫停資料移動<br /><br /> SUSPEND_FROM_PARTNER = 資料庫複本在強制容錯移轉之後暫停<br /><br /> SUSPEND_FROM_REDO = 取消復原階段發生錯誤<br /><br /> SUSPEND_FROM_APPLY = 將記錄寫入檔案時發生錯誤 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_CAPTURE = 在主要複本上擷取記錄時發生錯誤<br /><br /> SUSPEND_FROM_RESTART = 資料庫複本在資料庫重新啟動之前已暫停 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_UNDO = 復原階段發生錯誤 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_REVALIDATION = 重新連接時偵測到記錄變更不一致 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_XRF_UPDATE = 找不到通用記錄點 (請查看錯誤記錄檔)|  
+|**suspend_reason_desc**|**nvarchar(60)**|資料庫暫停狀態原因的描述，由下列其中一個值表示：<br /><br /> SUSPEND_FROM_USER = 使用者手動暫停資料移動<br /><br /> SUSPEND_FROM_PARTNER = 資料庫複本在強制容錯移轉之後暫停<br /><br /> SUSPEND_FROM_REDO = 取消復原階段發生錯誤<br /><br /> SUSPEND_FROM_APPLY = 將記錄寫入檔案時發生錯誤 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_CAPTURE = 在主要複本上擷取記錄時發生錯誤<br /><br /> SUSPEND_FROM_RESTART = 資料庫複本在資料庫重新啟動之前已暫停 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_UNDO = 復原階段發生錯誤 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_REVALIDATION = 重新連接時偵測到記錄變更不一致 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_XRF_UPDATE = 找不到通用記錄點 (請查看錯誤記錄檔)|  
 |**recovery_lsn**|**numeric(25,0)**|在主要複本上，主要資料庫在復原或容錯移轉後、寫入任何新記錄檔記錄前，交易記錄的結尾。 對於給定的次要資料庫而言，如果這個值小於目前強行寫入的 LSN (last_hardened_lsn)，recovery_lsn 是這個次要資料庫需要同步處理 (亦即還原及重新初始化) 的值。 如果這個值大於或等於目前強行寫入的 LSN，則不需要且不會發生重新同步處理。<br /><br /> **recovery_lsn**會反映填滿零的記錄區塊識別碼。 這不是實際的記錄序號 (LSN)。 如需如何衍生此值，請參閱[了解 LSN 資料行值](#LSNcolumns)稍後在本主題中。|  
 |**truncation_lsn**|**numeric(25,0)**|在主要複本上，若為主要資料庫，則反映所有對應次要資料庫之間的最小記錄截斷 LSN。 如果已封鎖本機記錄截斷 (例如由備份作業封鎖)，則此 LSN 可能會高於本機截斷 LSN。<br /><br /> 若為給定的次要資料庫，則反映該資料庫的截斷點。<br /><br /> **truncation_lsn**會反映填滿零的記錄區塊識別碼。 這不是實際的記錄序號。|  
 |**last_sent_lsn**|**numeric(25,0)**|記錄檔區塊識別碼，指示主要複本已傳送所有記錄檔區塊到哪一點。 這是將傳送之下一個記錄檔區塊的識別碼，而不是最近傳送之記錄檔區塊的識別碼。<br /><br /> **last_sent_lsn**會反映記錄檔區塊識別碼會以零填補，並不是實際記錄序號。|  
@@ -77,21 +79,21 @@ ms.lasthandoff: 11/17/2017
 |**last_commit_lsn**|**Numeric(25,0)**|實際記錄序號，對應到交易記錄中的上一個認可記錄。<br /><br /> 在主要資料庫上，這會對應到上一次處理的認可記錄。 次要資料庫的資料列會顯示次要複本傳送至主要複本的記錄序號。<br /><br /> 在次要複本上，這是上一次重做的認可記錄。|  
 |**last_commit_time**|**datetime**|對應到上一個認可記錄的時間。<br /><br /> 在次要資料庫上，此時間與主要資料庫上的時間相同。<br /><br /> 在主要複本上，每一個次要資料庫資料列都會顯示裝載該次要資料庫的次要複本回報給主要複本的時間。 主要資料庫資料列與給定的次要資料庫資料列之間的時間差異大致代表復原時間目標 (RPO)，但必須假設重做程序趕上進度，而且次要複本已將進度回報給主要複本。|  
 |**low_water_mark_for_ghosts**|**bigint**|資料庫的一個單純遞增的數字，表示主要資料庫上的準刪除清除所使用的下限標準。 如果這個數字不會隨著時間而遞增，則表示可能不會進行準刪除清除作業。 為了決定所要清除的準刪除資料列，主要複本會針對所有可用性複本 (包括主要複本) 中的這個資料庫，使用這個資料行的最小值。|  
-|**secondary_lag_seconds**|**bigint**|在次要複本未同步處理期間落後主要複本的秒數。|  
+|**secondary_lag_seconds**|**bigint**|在次要複本未同步處理期間落後主要複本的秒數。<br /><br />**適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
   
-##  <a name="LSNcolumns"></a>了解 LSN 資料行值  
+##  <a name="LSNcolumns"></a> 了解 LSN 資料行值  
  值**end_of_log_lsn**， **last_hardened_lsn**， **last_received_lsn**， **last_sent_lsn**，**復原_lsn**，和**truncation_lsn**資料行不是實際的記錄序號 (Lsn)。 每一個值都會反映填滿零的記錄檔區塊識別碼。  
   
  **end_of_log_lsn**， **last_hardened_lsn**，和**recovery_lsn**為排清 Lsn。 例如， **last_hardened_lsn**表示超過已在磁碟的區塊的下一個區塊的開頭。  因此任何 LSN < 值**last_hardened_lsn**磁碟上。  大於等於這個值的 LSN 則不會排清。  
   
  所傳回的 LSN 值**sys.dm_hadr_database_replica_states**，則只**last_redone_lsn**是真正的 LSN。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   

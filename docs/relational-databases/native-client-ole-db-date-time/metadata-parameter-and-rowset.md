@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d45c0eafa873e0697c791d478eeffada7cfd91a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0de69450f5aecceb87e56a76b9edb0e46a146d35
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="metadata---parameter-and-rowset"></a>中繼資料的參數和資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,18 +32,18 @@ ms.lasthandoff: 11/17/2017
   
 -   DBBINDING 結構  
   
--   **Icommandwithparameters:: Getparameterinfo**  
+-   **ICommandWithParameters::GetParameterInfo**  
   
--   **Icommandwithparameters:: Setparameterinfo**  
+-   **ICommandWithParameters::SetParameterInfo**  
   
--   **Icolumnsrowset:: Getcolumnsrowset**  
+-   **IColumnsRowset::GetColumnsRowset**  
   
--   **Icolumnsinfo:: Getcolumninfo**  
+-   **IColumnsInfo::GetColumnInfo**  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  下列資訊會以 DBPARAMINFO 結構透過傳回*prgParamInfo*:  
   
-|參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*將 dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|將|  
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 結構會傳回下列資訊：  
   
-|參數類型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*將 dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|參數類型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|將|  
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/17/2017
   
  新的旗標 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 所提供的*dwFlags*以允許應用程式判斷伺服器類型的資料行，其中*wType*是 DBTYPE_DBTIMESTAMP。 *bScale*也必須用來識別伺服器類型。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [中繼資料 &#40; OLE DB &#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

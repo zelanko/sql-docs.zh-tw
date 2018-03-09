@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aea4b25c91b2282085070152da6f7c34d2373848
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0796a4b0f07f249e2f7e882ec11b9a843a2e29ca
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="request-log"></a>要求記錄檔
   使用 **[要求記錄檔]** 對話方塊可以檢視對 SAP Netweaver BW 系統提出資料取樣要求期間記錄的事件。 如果您需要疑難排解 SAP BW 來源的組態，這項資訊可能很有用。  
@@ -54,13 +55,13 @@ ms.lasthandoff: 11/20/2017
  **型別**  
  顯示記錄的事件類型。 下表列出可能的事件類型。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |S|成功訊息。|  
 |E|錯誤訊息|  
 |W|警告訊息。|  
 |I|參考資訊。|  
-|A|作業已中止。|  
+|只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，|作業已中止。|  
   
  **訊息**  
  顯示與記錄之事件相關聯的訊息文字。  

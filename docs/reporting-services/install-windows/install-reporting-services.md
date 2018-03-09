@@ -1,33 +1,31 @@
 ---
-title: "安裝 SQL Server Reporting Services | Microsoft Docs"
-ms.date: 10/10/2017
+title: "安裝 SQL Server Reporting Services (2017 和更新版本) | Microsoft Docs"
+ms.date: 12/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+ms.topic: get-started-article
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3cc3d78c22bbb4b32696692074e2dad2d6809a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d3f53de12e07925af838b5188e9b889ae44eb090
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="install-sql-server-reporting-services"></a>安裝 SQL Server Reporting Services
+# <a name="install-sql-server-reporting-services-2017-and-later"></a>安裝 SQL Server Reporting Services (2017 和更新版本)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報表項目、轉譯報表，以及處理訂閱和其他報表服務。  了解如何安裝 Power BI 報表伺服器。
+SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報表項目、轉譯報表，以及處理訂閱和其他報表服務。 
 
 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)下載 SQL Server 2017 Reporting Services。
 
@@ -40,7 +38,7 @@ SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報�
 
 ## <a name="install-your-report-server"></a>安裝報表伺服器
 
-安裝報表伺服器簡潔明瞭。 安裝檔案只要幾個步驟。
+安裝報表伺服器的過程簡潔明瞭。 安裝檔案只要幾個步驟。
 
 > [!NOTE]
 > 安裝時不需要使用 SQL Server 資料庫引擎伺服器。 安裝之後需要一部來設定 Reporting Services。
@@ -55,11 +53,11 @@ SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報�
 
     ![選擇版本](media/install-reporting-services/report-server-install-edition.png)
 
-    您可以從下拉式清單中選擇 Evaluation 或 Developer 版本。
+    在免費版本中，從下拉式清單中選擇 Evaluation 或 Developer。
 
     ![Evaluation 或 Developer 版本](media/install-reporting-services/report-server-install-edition-select.png)
 
-    或者可以輸入產品金鑰。
+    否則，請輸入產品金鑰。 [尋找 SQL Server 2017 Reporting Services 的產品金鑰](find-reporting-services-product-key-ssrs.md).
 
 4. 閱讀並同意授權條款，然後選取 [下一步]。
 
@@ -106,7 +104,7 @@ URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組�
 
 |部分|描述|
 |----------|-----------------|
-|前置詞|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|
+|Prefix|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|
 |主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器接受解析為電腦任何主機名稱之指定連接埠上的任何 HTTP 要求，包括 `http://<computername>/reportserver`、`http://localhost/reportserver` 或 `http://<IPAddress>/reportserver.`|
 |通訊埠|預設連接埠是 80。 如果您使用連接埠 80 以外的任何連接埠，當您在瀏覽器視窗中開啟入口網站時，就必須明確將此連接埠新增至 URL 中。|
 |虛擬目錄|根據預設，系統會建立虛擬目錄，報表伺服器 Web 服務使用 ReportServer 格式，入口網站使用 Reports 格式。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 入口網站的預設虛擬目錄為 **reports**。|
@@ -135,7 +133,7 @@ URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組�
 
 如需如何安裝 SQL Server 2016 Reporting Services 原生模式的資訊，請參閱[安裝 Reporting Services 原生模式報表伺服器](install-reporting-services-native-mode-report-server.md)。 如需如何在 SharePoint 整合模式中安裝 SQL Server 2016 Reporting Services 的資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 安裝好報表伺服器後，開始建立報表並將它們部署到報表伺服器。 如需如何開始何用報表產生器的資訊，請參閱[安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)。
 

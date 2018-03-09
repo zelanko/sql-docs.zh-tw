@@ -4,30 +4,32 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: data section [ADO]
+helpviewer_keywords:
+- data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 486c936681adca59a90dae6a5e304be6f8b4dba5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8da8004ffc31efb53db196e37f48ae0942a872f6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-section"></a>資料區段
 資料區段定義以及任何暫止的更新、 插入或刪除資料列集的資料。 資料區段可以包含零或多個資料列。 它只能包含一個資料列集結構描述所定義的資料列所在的資料。 此外，如之前所述，就可以省略資料行沒有任何資料。 如果屬性或子元素用於資料區段中，而且尚未在結構描述 」 一節中定義該建構，則會以無訊息模式忽略。  
   
-## <a name="string"></a>String  
+## <a name="string"></a>字串  
  必須使用適當字元實體取代文字資料中保留的 XML 字元。 比方說，在 公司名稱"Joe 的機庫"單引號必須由實體取代。 實際的資料列，如下所示：  
   
 ```  
@@ -89,5 +91,5 @@ ms.lasthandoff: 12/21/2017
   
  更新一律包含後面接著已變更的資料列資料的整個原始資料列資料。 已變更的資料列可能包含的所有資料行或已實際變更這些資料行。 在上述範例中，託運商 2 的資料列不會變更，且 Phone 資料行已變更的託運商 3 的值，所以包含在已變更的資料列的唯一資料行。 貨運公司 12、 13 和 14 的插入資料列是批次在一起的下一個 rs： 插入標記。 請注意，刪除的資料列也批次處理，雖然這不會顯示在上述範例中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

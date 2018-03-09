@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f7ede2f08bd7f09eb4a3dd0be273225dc5ba6b8d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b733d6f858f3d631c25b7861cc7f7b5546482ee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密金鑰 - 儲存加密的報表伺服器資料
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會在報表伺服器資料庫和組態檔中儲存加密值。 大部份加密值是用於存取將資料提供給報表之外部資料來源的認證。 本主題將描述哪些值會進行加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所使用的加密功能，以及您應該知道的其他預存機密資料類型。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
  在報表伺服器向外延展部署中，如果多個報表伺服器執行個體共用相同的報表伺服器資料庫，則所有報表伺服器節點都使用單一對稱金鑰。 每個節點都必須有共用對稱金鑰的副本。 設定向外延展部署時，會自動為每個節點建立對稱金鑰的副本。 每個節點都會利用 Windows 服務帳戶之特定金鑰組的公開金鑰來加密其對稱金鑰副本。 若要深入了解如何為單一執行個體和向外延展部署建立對稱金鑰，請參閱[初始化報表伺服器 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 > [!NOTE]  
->  當您變更報表伺服器 Windows 服務帳戶時，非對稱金鑰可能會變成無效，因而中斷伺服器作業。 若要避免此問題，請永遠利用 Reporting Services 組態工具來修改服務帳戶設定。 當您使用組態工具時，系統會自動為您更新金鑰。 如需詳細資訊，請參閱[設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+>  當您變更報表伺服器 Windows 服務帳戶時，非對稱金鑰可能會變成無效，因而中斷伺服器作業。 若要避免此問題，請永遠利用 Reporting Services 組態工具來修改服務帳戶設定。 當您使用組態工具時，系統會自動為您更新金鑰。 如需詳細資訊，請參閱《 [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
 ## <a name="other-sources-of-confidential-data"></a>其他機密資料的來源  
  報表伺服器會儲存其他未加密的資料，可能包含您想要保護的機密資訊。 尤其是報表記錄快照集與報表執行快照集所包含的查詢結果，可能包含要供授權使用者使用的資料。 如果您在包含機密資料的報表使用快照集功能，請注意，可以開啟報表伺服器資料庫中之資料表的使用者，就有可能檢查資料表內容來檢視預存報表的部份。  

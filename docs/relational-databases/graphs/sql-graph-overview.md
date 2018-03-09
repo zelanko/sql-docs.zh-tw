@@ -8,28 +8,29 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale
-manager: jhubbard
+ms.author: shkale;barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab17b98a23afa3d209716145d7de39a6955cdf6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>處理使用 SQL Server 和 Azure SQL Database 的圖形
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供圖形塑造多對多關聯性的資料庫功能。 圖形的關聯性已整合到[!INCLUDE[tsql-md](../../includes/tsql-md.md)]和使用的益處[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為基礎的資料庫管理系統。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供圖形塑造多對多關聯性的資料庫功能。 圖形的關聯性已整合到[!INCLUDE[tsql-md](../../includes/tsql-md.md)]和使用的益處[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為基礎的資料庫管理系統。
 
 
 ## <a name="what-is-a-graph-database"></a>什麼是圖形資料庫？  
@@ -46,12 +47,12 @@ ms.lasthandoff: 11/17/2017
 -   您的應用程式具有複雜的多對多關聯性;當應用程式的發展，就會加入新的關聯性。
 -   您需要分析互連的資料和關聯性。
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>圖形中所引進的功能[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>圖形中所引進的功能 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 我們已經開始圖形擴充功能加入 SQL Server，若要簡化儲存和查詢的圖形資料。 在第一個版本中推出了下列功能。 
 
 
 ### <a name="create-graph-objects"></a>建立圖形物件
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]擴充功能可讓使用者建立節點或邊緣資料表。 節點和邊緣可以有與它們相關聯的屬性。 因為節點和邊緣會儲存為資料表中，節點或邊緣的資料表上都支援關聯式資料表才支援的所有作業。 範例如下：  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 擴充功能可讓使用者建立節點或邊緣資料表。 節點和邊緣可以有與它們相關聯的屬性。 因為節點和邊緣會儲存為資料表中，節點或邊緣的資料表上都支援關聯式資料表才支援的所有作業。 範例如下：  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

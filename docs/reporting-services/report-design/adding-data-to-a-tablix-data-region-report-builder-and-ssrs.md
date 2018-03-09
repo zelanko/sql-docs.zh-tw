@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc72748fdcb76e456c9c8155a5d91c83a1ad2483
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2bf18d57ac033120507c9c2ab5df9b98bf5cc2db
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>將資料加入至 Tablix 資料區 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，若要在資料表或矩陣中顯示報表資料集的資料，請在每個資料格中，指定要顯示之資料集欄位的名稱。 您可以顯示詳細資料或群組資料。 如果您將群組加入到資料表或矩陣，則會自動加入群組值與群組資料的資料列和資料行。 接著，您可以加入資料的小計與總計。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
  若要加入群組或資料區域的標籤，請在您要標示的群組外部，加入資料列或資料行。 標籤資料列和資料行類似您為顯示總計加入的資料列和資料行。 如需詳細資訊，請參閱[插入或刪除資料列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) 或[插入或刪除資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)。  
   
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>從其他報表加入現有的 Tablix 資料區域  
- 您可以從其他報表複製資料區域，並將其貼到新的或現有的報表中。 貼上資料區域之後，您必須確定資料區域所使用的資料集已定義，並確定資料集欄位的名稱和資料類型與原始報表中的名稱和資料類型相同。 您不能將一個報表中的資料集複製到另一個報表，但是如果您的報表使用共用資料來源，您可以快速複製另一個報表中的資料集。 此外，您也可以針對擷取資料集資料的查詢來匯入查詢文字，讓您輕鬆地複製報表中的查詢。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。  
+ 您可以從其他報表複製資料區域，並將其貼到新的或現有的報表中。 貼上資料區域之後，您必須確定資料區域所使用的資料集已定義，並確定資料集欄位的名稱和資料類型與原始報表中的名稱和資料類型相同。 您不能將一個報表中的資料集複製到另一個報表，但是如果您的報表使用共用資料來源，您可以快速複製另一個報表中的資料集。 此外，您也可以針對擷取資料集資料的查詢來匯入查詢文字，讓您輕鬆地複製報表中的查詢。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

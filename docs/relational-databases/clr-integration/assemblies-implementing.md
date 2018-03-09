@@ -8,24 +8,26 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: assemblies [CLR integration], implementing
+helpviewer_keywords:
+- assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dadb7fe14a03bfd94350ea280cca94494e3c163b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---implementing"></a>-實作組件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題提供有關下列領域，可協助您實作和使用資料庫中的組件的資訊：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主題提供下列部分的資訊，協助您實作和使用資料庫中的組件：  
   
 -   建立組件  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
  只有成員**db_owner**和**db_ddlowner**固定的資料庫角色可以執行使用 WITH UNCHECKED DATA 子句執行 ALTER ASSEMBLY。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在 Windows 應用程式事件記錄公佈訊息，說明已使用資料表中未檢查的資料修改過組件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接著會在有未檢查的資料時，標示任何包含與組件相依的資料之資料表。 **Has_unchecked_assembly_data**資料行**sys.tables**目錄檢視包含資料表，其中包含未選取的資料，以 0 代表沒有未檢查資料的值 1。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 張貼訊息至 Windows 應用程式事件記錄檔未選取資料表中的資料已修改 組件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接著會在有未檢查的資料時，標示任何包含與組件相依的資料之資料表。 **Has_unchecked_assembly_data**資料行**sys.tables**目錄檢視包含資料表，其中包含未選取的資料，以 0 代表沒有未檢查資料的值 1。  
   
  若要解決未檢查資料的完整性，請針對具有每個資料表執行 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS 未檢查的資料。 如果 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS 失敗，則必須刪除無效或修改的組件程式碼，來解決問題的資料表資料列，並接著發出其他 ALTER ASSEMBLY 陳述式。  
   
@@ -117,7 +119,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [組件 &#40; Database engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [取得組件的相關資訊](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   

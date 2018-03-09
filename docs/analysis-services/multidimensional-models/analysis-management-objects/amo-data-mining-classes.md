@@ -1,37 +1,36 @@
 ---
 title: "AMO 資料採礦類別 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7f7e5ed96e4d25d33d8d69124f9f94ccccdcef1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-data-mining-classes"></a>AMO 資料採礦類別
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]資料採礦類別可協助您建立、 修改、 刪除和處理資料採礦物件。 處理資料採礦物件包括建立資料採礦結構、建立資料採礦模型和處理模型。  
+  資料採礦類別可協助您建立、修改、刪除和處理資料採礦物件。 處理資料採礦物件包括建立資料採礦結構、建立資料採礦模型和處理模型。  
   
  如需有關如何設定環境，以及大約<xref:Microsoft.AnalysisServices.Server>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataSource>，和<xref:Microsoft.AnalysisServices.DataSourceView>物件，請參閱[AMO 基礎類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)。  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
  ![AMO 資料採礦類別](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "AMO 資料採礦類別")  
   
-##  <a name="MiningStructure"></a>MiningStructure 物件  
+##  <a name="MiningStructure">MiningStructure 物件</a>  
  採礦結構是採礦模型的容器。 此結構會定義採礦模型會使用的所有可能資料行。 每個採礦模型都會從結構中定義的資料行集合定義自己的資料行。  
   
  簡單的 <xref:Microsoft.AnalysisServices.MiningStructure> 物件是由下列項目所組成的：基本資訊、資料來源檢視、一或多個 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>、零個或多個 <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> 以及 <xref:Microsoft.AnalysisServices.MiningModelCollection>。  
@@ -99,7 +98,7 @@ ms.lasthandoff: 12/08/2017
   
  若要移除 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>，必須從父 <xref:Microsoft.AnalysisServices.MiningStructure> 的集合移除它，而且必須使用 Update 方法將父 <xref:Microsoft.AnalysisServices.MiningStructure> 物件更新到伺服器。  
   
-##  <a name="MiningModel"></a>MiningModel 物件  
+##  <a name="MiningModel">MiningModel 物件</a>  
  <xref:Microsoft.AnalysisServices.MiningModel> 這個物件可讓您從結構中選擇要使用的資料行、要使用的演算法，以及 (選擇性) 要調整模型的特定參數。 例如，您可能需要在使用相同演算法的相同採礦結構中定義幾個採礦模型，但是要忽略來自某個模型之採礦結構的一些資料行，在其他模型中將它們做為輸入，並在第三個模型中將它們做為輸入並進行預測。 如果在某個採礦模型中，您想要將資料行視為連續，但是在其他模型中，卻想要將資料行視為離散化，這可能會非常有用。  
   
  簡單的 <xref:Microsoft.AnalysisServices.MiningModel> 物件是由以下項目所組成：基本資訊、演算法定義和資料行。  
@@ -116,7 +115,7 @@ ms.lasthandoff: 12/08/2017
   
  建立完成後，<xref:Microsoft.AnalysisServices.MiningModel> 可以使用自己的處理方法進行處理，或者也可以在父物件使用其處理方法自行處理時，一併加以處理。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices>   
  [AMO 基礎類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [程式設計 AMO 資料採礦物件](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)   

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -25,33 +27,33 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: b8cca7419cce15dcbb83b4aa72dc551e5eb89eb1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   從資料庫擷取資料列，並可讓您選取一個或多個資料列或從一個或多個資料表中的資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 SELECT 陳述式的完整語法很複雜，但主要子句可摘要如下：  
   
-[使用 {[XMLNAMESPACES，] [ \<common_table_expression >]}]
+[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
- 選取*select_list* [INTO *new_table* ]  
+ SELECT *select_list* [ INTO *new_table* ]  
   
- [從*t* ] [其中*s* ]  
+ [ FROM *table_source* ] [ WHERE *search_condition* ]  
   
- [群組依據*group_by_expression* ]  
+ [ GROUP BY *group_by_expression* ]  
   
- [具有*s* ]  
+ [ HAVING *search_condition* ]  
   
- [ORDER BY *order_expression* [ASC |DESC]]  
+ [ ORDER BY *order_expression* [ ASC | DESC ] ]  
   
  UNION、 EXCEPT 和 INTERSECT 運算子可用來結合或比較其結果成為一個結果集的查詢之間。  
   
@@ -109,7 +111,7 @@ SELECT <select_criteria>
   
 |||  
 |-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[具有](../../t-sql/queries/select-having-transact-sql.md)|  
+|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
 |[SELECT 子句](../../t-sql/queries/select-clause-transact-sql.md)|[等位](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
 |[INTO 子句](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT 和 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
 |[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
@@ -267,7 +269,7 @@ HAVING OrderDateKey > 20010000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [精選的範例 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
   

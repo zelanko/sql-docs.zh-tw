@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>限制與已知的問題適用於 Linux 上的 SSIS
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明目前的限制與已知的問題 SQL Server Integration Services (SSIS) 在 Linux 上。
 
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/08/2017
 
 如需其他限制和 SSIS 在 Linux 上的已知的問題，請參閱[版本資訊](sql-server-linux-release-notes.md#ssis)。
 
-## <a name="components"></a>支援和不支援的元件
+## <a name="components"></a> 支援和不支援的元件
 
 Linux 支援下列的內建 Integration Services 元件。 下表中所述，其中部分可以具有 Linux 平台上的限制。
 
@@ -55,7 +57,7 @@ Linux 支援下列的內建 Integration Services 元件。 下表中所述，其
 - 運算式工作
 - FTP 工作
 - Web 服務工作
-- XML 工作
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>支援有限制的控制流程工作
 
@@ -130,3 +132,8 @@ SQL Server 記錄提供者僅支援 SQL 驗證。不支援 Windows 驗證。
 -   如果您沒有提供路徑，記錄提供者會寫入目前的目錄中的主機。 如果目前使用者沒有主應用程式的目前目錄的寫入權限，記錄提供者會引發錯誤。
 -   您無法使用環境變數中的檔案路徑。 如果您指定的環境變數，您指定的常值文字會出現在檔案路徑。 例如，如果您指定`%TMP%/log.txt`，記錄提供者會將常值的文字附加`/%TMP%/log.txt`為目前的主機目錄。
 
+## <a name="related-content-about-ssis-on-linux"></a>有關 SSIS 在 Linux 上的相關的內容
+-   [擷取、 轉換和載入與 SSIS Linux 上的資料](sql-server-linux-migrate-ssis.md)
+-   [Linux 上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [使用 ssis conf，設定 Linux 上的 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [排程 SQL Server Integration Services 封裝執行 Linux 上的 cron](sql-server-linux-schedule-ssis-packages.md)

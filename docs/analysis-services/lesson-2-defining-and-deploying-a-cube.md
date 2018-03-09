@@ -8,24 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1daca588189dfd90ba4d1a238f17d7b3aa5757e8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8ccb4cd8fc3b9c71b2edec58b57172c4ecb60515
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>第 2 課：定義和部署 Cube
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在定義中的資料來源檢視之後您[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案中，您準備好要定義初始[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]cube。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中定義資料來源檢視之後，您可以開始定義初始 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube。  
   
 您可以使用 Cube 精靈，在單一行程中定義 Cube 及其維度。 或者，您也可以定義一或多個維度，然後使用 Cube 精靈來定義使用這些維度的 Cube。 如果您要設計複雜的方案，通常會從定義維度開始。 如需詳細資訊，請參閱 [多維度模型中的維度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md) 或 [多維度模型中的 Cube](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)。  
   
@@ -53,14 +56,14 @@ ms.lasthandoff: 12/08/2017
 在此工作中，您會使用 Excel 或 MDX 查詢設計工具來瀏覽 Cube 和維度資料。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 3 課：修改量值、屬性和階層](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+[第 3 課︰ 修改量值、 屬性和階層](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多維度模型化 &#40;Adventure Works 教學課程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [多維度模型中的維度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
-[多維度模型中的 Cube](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
-[設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+[多維度模型中的 cube](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
+[設定 Analysis Services 專案屬性 &#40;SSDT &#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
 [建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
 [部署 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

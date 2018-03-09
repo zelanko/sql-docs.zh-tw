@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66ea2fcf5a1c2c220e90d3b6d0c1c7879c9c10fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b30cc7798d28ce9b13f9448f583891170f7309fd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>第 1 課：使用合併式複寫發行資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立合併式發行集，以發行 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中 **Employee**、**SalesOrderHeader** 和 **SalesOrderDetail** 資料表的子集。 這些資料表是以參數化資料列篩選器加以篩選，讓每一個訂閱包含唯一的資料分割。 此外，您也會將合併代理程式所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至發行集存取清單 (PAL)。 本教學課程要求您，先完成上一個教學課程 [準備伺服器進行複寫](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立合併式發行集，以發行 **範例資料庫中**Employee **、**SalesOrderHeader **和** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的子集。 這些資料表是以參數化資料列篩選器加以篩選，讓每一個訂閱包含唯一的資料分割。 此外，您也會將合併代理程式所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至發行集存取清單 (PAL)。 本教學課程要求您，先完成上一個教學課程 [準備伺服器進行複寫](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>建立發行集並定義發行項  
   
@@ -89,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
 21. 選取 [立即建立快照集]，清除 [排程快照集代理程式在下列時間執行]，然後按一下 [下一步]。  
   
-22. 在 [代理程式安全性] 頁面上，按一下 [安全性設定]，在 [處理帳戶] 方塊中輸入 \<*電腦名稱>***\repl_snapshot**，提供此帳戶的密碼，然後按一下 [確定]。 按一下 **[完成]**。  
+22. 在 [代理程式安全性] 頁面上，按一下 [安全性設定]，在 [處理帳戶] 方塊中鍵入 \<電腦名稱>**\repl_snapshot**，提供此帳戶的密碼，然後按一下 [確定]。 按一下 **[完成]**。  
   
 23. 在 [完成精靈] 頁面的 [發行集名稱] 方塊中輸入 **AdvWorksSalesOrdersMerge**，然後按一下 [完成]。  
   
@@ -111,11 +115,11 @@ ms.lasthandoff: 11/17/2017
   
     [發行集屬性] 對話方塊隨即顯示。  
   
-3.  選取 [發行集存取清單] 頁面，然後按一下 [加入]。  
+3.  選取 [發行集存取清單] 頁面，然後按一下 [新增]。  
   
-4.  在 [加入發行集存取] 對話方塊中，選取 <電腦名稱>**\repl_merge**，然後按一下 [確定]。 按一下 **[確定]**。  
+4.  在 [新增發行集存取] 對話方塊中，選取 <電腦名稱>**\repl_merge** ，然後按一下 [確定]。 按一下 [確定] 。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 您已順利建立合併式發行集。 下一步，您將訂閱此發行集。 請參閱 [第 2 課：建立合併式發行集的訂閱](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
   
 ## <a name="see-also"></a>另請參閱  

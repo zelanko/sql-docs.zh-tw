@@ -15,12 +15,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
-ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>自動初始化 AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2016 引進了自動植入可用性群組。 當您使用自動植入
 
 如需背景資訊，請參閱[自動植入次要複本](automatic-seeding-secondary-replicas.md)。
  
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 在 SQL Server 2016 中，自動植入要求參與可用性群組之每個 SQL Server 執行個體上的資料和記錄檔案路徑都必須相同。 在 SQL Server 2017 中，您可以使用不同的路徑，不過當所有複本都裝載於相同平台時 (例如 Windows 或 Linux)，Microsoft 建議使用相同的路徑。 跨平台可用性群組為複本使用不同的路徑。 如需詳細資料，請參閱[磁碟配置](automatic-seeding-secondary-replicas.md#disklayout)。
 
@@ -215,7 +215,7 @@ GO
 
 下表列出與自動植入相關的擴充事件： 
 
-| 名稱 | 描述|
+| [屬性] | 描述|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  正在植入要求訊息。
 |hadr_physical_seeding_backup_state_change |    實體植入備份端的狀態變更。

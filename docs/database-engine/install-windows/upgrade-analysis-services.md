@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,18 +22,21 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: ec21983a07b5f61359912f90a4e32731de7ce8b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Analysis Services 執行個體可以升級至相同伺服器模式的 SQL Server 版本，以利用目前版本中所採用的功能，如 [Analysis Services 的新功能](../../analysis-services/what-s-new-in-analysis-services.md)中所述。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Analysis Services 執行個體可以升級至相同伺服器模式的 SQL Server 版本，以利用目前版本中所採用的功能，如 [Analysis Services 的新功能](../../analysis-services/what-s-new-in-analysis-services.md)中所述。  
   
  您可以就地升級每個執行個體，相同硬體上執行的執行個體皆與其他執行個體無關。 但大部分的系統管理員會為應用程式測試選擇安裝新版本的新執行個體，然後再對新的伺服器傳輸實際執行的工作負載。 但是對於開發或測試伺服器而言，就地升級就可能會比較方便。  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
  表格式與多維度資料庫走不同的版本路徑。 但多維度與表格式模型都有相同編號的相容性層級。  如果功能變更只影響其中一個模式，則模式會上升至不同的費率。  
   
- 因為背景的原因，下表摘要說明了相容性層級，但您應檢閱詳細主題以了解每個層級所提供的功能。  
+ 由於背景的不同，下表摘要說明相容性層級；請檢閱詳細文章以了解每個層級所提供的功能。  
   
 ||||  
 |-|-|-|  

@@ -1,38 +1,36 @@
 ---
-title: "刪除資料行 (SSAS 表格式) |Microsoft 文件"
+title: "刪除資料行 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e8b03c05cb27cdd2e736ad8bc57225408334827e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c18504b3e6430807f124938b60d7f022a8050379
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-a-column-ssas-tabular"></a>刪除資料行 (SSAS 表格式)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述如何從表格式模型資料表刪除資料行。  
+# <a name="delete-a-column"></a>刪除資料行 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文說明如何從表格式模型資料表刪除資料行。  
   
 ## <a name="delete-a-model-table-column"></a>刪除模型資料表資料行  
   
 > [!NOTE]  
->  從模型資料表中刪除資料行時，並不會從資料分割查詢定義中刪除該資料行。 如果您要刪除的資料行屬於資料分割的一部分，就必須從資料分割查詢定義中手動刪除該資料行。 如果沒有從資料分割查詢定義中刪除資料行，將會導致系統在處理作業期間查詢該資料行並且傳回資料，但是不會擴展至模型資料表。 如需詳細資訊，請參閱 [資料分割 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
+>  從模型資料表中刪除資料行時，並不會從資料分割查詢定義中刪除該資料行。 如果您要刪除的資料行屬於資料分割的一部分，就必須從資料分割查詢定義中手動刪除該資料行。 如果沒有從資料分割查詢定義中刪除資料行，將會導致系統在處理作業期間查詢該資料行並且傳回資料，但是不會擴展至模型資料表。 如需詳細資訊，請參閱[分割](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
 #### <a name="to-delete-a-model-table-column"></a>若要刪除模型資料表資料行  
   
@@ -46,8 +44,8 @@ ms.lasthandoff: 12/08/2017
   
 3.  在 [編輯資料表屬性] 對話方塊的 [資料表預覽] 視窗中，取消核取您想要刪除的資料行，然後按一下 [確定]。  
   
-## <a name="see-also"></a>請參閱  
- [將資料行加入至資料表 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
- [資料分割 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
+## <a name="see-also"></a>另請參閱  
+ [將資料行加入資料表](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
+ [資料分割](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

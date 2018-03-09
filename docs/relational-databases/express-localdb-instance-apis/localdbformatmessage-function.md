@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBFormatMessage
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBFormatMessage
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9387eff0f7249d443f145d2416b35c40f3760a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df02d647b06b45d2de772ff11737dbba9504a184
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]傳回指定之 SQL Server Express LocalDB 錯誤的當地語系化文字描述。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+傳回指定之 SQL Server Express LocalDB 錯誤的當地語系化文字描述。  
   
  **標頭檔：** sqlncli.h  
   
@@ -47,7 +51,7 @@ HRESULT LocalDBFormatMessage(
  *hrLocalDB*  
  [輸入] LocalDB 錯誤碼。  
   
- *將 dwFlags*  
+ *dwFlags*  
  [輸入] 指定此函數行為的旗標。  
   
  可用的旗標：  
@@ -89,7 +93,7 @@ HRESULT LocalDBFormatMessage(
 ## <a name="remarks"></a>備註  
  如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

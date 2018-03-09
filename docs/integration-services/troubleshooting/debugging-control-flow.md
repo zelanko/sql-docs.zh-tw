@@ -8,10 +8,12 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.setbreakpoints.f1
+f1_keywords:
+- sql13.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3fbeb43740b012eb4af3b9bb38252a4e18006ba2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9aba628aa426093485d820ea4383dd04076481cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含您可用於疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中之控制流程的功能及工具。  
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供您可以在所有工作及容器上啟用的十個中斷條件。 在 [設定中斷點] 對話方塊中，您可以在滿足下列條件時啟用中斷點：  
   
-|中斷條件|說明|  
+|中斷條件|描述|  
 |---------------------|-----------------|  
 |當容器收到 **OnPreExecute** 事件時。|即將執行工作時呼叫。 工作或容器會在即將執行之前引發此事件。|  
 |當容器收到 **OnPostExecute** 事件時。|在工作的執行邏輯完成之後立即呼叫。 工作或容器會在執行之後立即引發此事件。|  
@@ -72,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
  下表描述叫用計數類型。  
   
-|叫用計數類型|說明|  
+|叫用計數類型|描述|  
 |--------------------|-----------------|  
 |永遠|叫用中斷點時，一律暫停執行。|  
 |叫用計數等於|當中斷點發生的次數等於叫用計數時，暫停執行。|  
@@ -113,7 +115,7 @@ ms.lasthandoff: 11/20/2017
   
  下表描述這些視窗。  
   
-|視窗|說明|  
+|視窗|描述|  
 |------------|-----------------|  
 |中斷點|列出封裝中的中斷點，並提供啟用及刪除中斷點的選項。|  
 |輸出|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中顯示各功能的狀態訊息。|  
@@ -155,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **叫用計數類型**  
  指定中斷點生效的時間。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**永遠**|叫用中斷點時，一律暫停執行。|  
 |**叫用計數等於**|當中斷點發生的次數等於叫用計數時，暫停執行。|  

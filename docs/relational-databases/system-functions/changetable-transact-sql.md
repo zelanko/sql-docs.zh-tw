@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
 - CHANGETABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6fa552ec5c819773153118be3b45374570b5d6e2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +75,7 @@ CHANGETABLE (
  版本*資料表*，{< 鍵值 >}  
  針對指定的資料列傳回最新的變更追蹤資訊。 主索引鍵值必須識別資料列。 <主索引鍵值> 會識別主索引鍵資料行和指定值。 您可以用任何順序指定主索引鍵資料行名稱。  
   
- *[資料表]*  
+ *Table*  
  可取得其變更追蹤資訊的使用者定義資料表。 您必須在資料表上啟用變更追蹤。 可以使用一部分、兩部分、三部分或四部分資料表名稱。 資料表名稱可以是資料表的同義字。  
   
  *column_name*  
@@ -82,7 +84,7 @@ CHANGETABLE (
  *值*  
  主索引鍵的值。 如果有多個主索引鍵資料行，值必須在其中指定相同的順序顯示資料行*column_name*清單。  
   
- [AS]*table_alias* [(*column_alias* [，...*n* ] ) ]  
+ [AS] *table_alias* [ (*column_alias* [ ,...*n* ] ) ]  
  提供 CHANGETABLE 所傳回之結果的名稱。  
   
  *table_alias*  
@@ -99,7 +101,7 @@ CHANGETABLE (
 ### <a name="changetable-changes"></a>CHANGETABLE CHANGES  
  指定 CHANGES 時，會傳回具有下列資料行的零個或多個資料列。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|與資料列最後變更相關聯的版本值|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|與最後插入作業相關聯的版本值。|  
@@ -111,7 +113,7 @@ CHANGETABLE (
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  指定 VERSION 時，會傳回具有下列資料行的一個資料列。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|與資料列相關聯的目前變更版本值。<br /><br /> 如果尚未針對比變更追蹤保留週期長的任何週期進行變更，或者資料列在啟用變更追蹤以來尚未經過變更，則值為 NULL。|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|您可以使用 WITH 子句當做 INSERT、UPDATE 或 DELETE 陳述式一部分選擇性指定的變更內容資訊。|  
@@ -214,11 +216,11 @@ WHERE
         0);  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
+ [追蹤資料變更 &#40;SQL Server &#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

@@ -8,25 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e447f20374700fa1e6e64837a336ba17d2b7570b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d2f92077fd1424827866820a0627ac62447e3f2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-flow-components"></a>ODBC 流程元件
   此主題描述使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- 適用於 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 Connector for Open Database Connectivity (ODBC) by Attunity 有助於 SSIS 開發人員輕鬆建立封裝，從 ODBC 支援的資料庫載入及卸載資料。  
+ 適用於 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 Connector for Open Database Connectivity (ODBC) 有助於 SSIS 開發人員輕鬆建立套件，從 ODBC 支援的資料庫載入及卸載資料。  
   
  此 ODBC 連接器設計目的是為了在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]內容中對 ODBC 支援的資料庫載入或卸載資料時達到最佳效能。  
   
@@ -93,11 +94,11 @@ ms.lasthandoff: 11/20/2017
   
 -   在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 中開啟新的 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
--   建立 ODBC 連線管理員，其使用本機安裝的 Sybase ODBC 驅動程式，以及指向本機或遠端 Sybase 資料庫的 DSN。 此資料庫是擷取資料的來源資料庫。  
+-   建立 ODBC 連接管理員，其使用本機安裝的 Sybase ODBC 驅動程式，以及指向本機或遠端 Sybase 資料庫的 DSN。 此資料庫是擷取資料的來源資料庫。  
   
 -   建立 OLE DB 連線管理員，連接到要載入資料的目的地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
--   將 ODBC 來源拖曳到設計介面，然後設定來源從含有要複製之資料的 Sybase 資料表取得資料。 使用先前建立的 ODBC 連線管理員。  
+-   將 ODBC 來源拖曳到設計介面，然後設定來源從含有要複製之資料的 Sybase 資料表取得資料。 使用先前建立的 ODBC 連接管理員。  
   
 -   將 OLE DB 目的地拖曳到設計介面，將來源輸出連接到 OLE DB 目的地，然後設定目的地將資料載入含有從 Sybase 資料庫擷取之資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 使用先前建立的 OLE DB 連線管理員。  
   

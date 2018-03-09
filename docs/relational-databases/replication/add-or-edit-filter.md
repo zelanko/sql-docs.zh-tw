@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a859ba6929e849ea753b3cf5c86c428afbaaadfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0461e699bbf3593f87567d3972aa7e260bca3111
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-filter"></a>加入或編輯篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [新增篩選] 和 [編輯篩選] 對話方塊可讓您新增和編輯靜態資料列篩選與參數化資料列篩選器。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  使用資料列篩選，您可以指定要從資料表發行的資料列子集。 資料列篩選可用來刪除使用者不需要查看的資料列 (例如包含敏感性或機密性資訊的資料列)，或建立傳送給不同訂閱者之資料的不同資料分割。 發行資料的不同資料分割給不同的訂閱者，也有助於避免多個訂閱者更新相同資料所引起的衝突。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  此對話方塊包含交易式發行集與快照集發行集的兩個步驟處理序，以及合併式發行集的三個步驟處理序。 所有的發行集類型都需要您選取要篩選的資料表，以及一或多個要包含在篩選中的資料行；此篩選定義為標準的 WHERE 子句。  
   
 1.  **選取要篩選的資料表**  
@@ -66,9 +66,9 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [檢視和修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [篩選發行的資料](../../relational-databases/replication/publish/filter-published-data.md)   
- [聯結篩選](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

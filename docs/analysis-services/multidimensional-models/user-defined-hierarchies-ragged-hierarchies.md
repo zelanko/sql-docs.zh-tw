@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: ragged hierarchies [Analysis Services]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4b3ffa23cdd185c57a86bc34921c3e489870cd2d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1a8c252af66d893a6fe540da71d05fcb09ad8e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>使用者定義階層-不完全階層
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]不完全的階層是使用者定義階層層級中以不平均的數目。 常見範例包括組織圖 (高階主管同時擁有部門主管級和非主管級直屬員工)，或由國家/地區-區域-城市組成的地理階層 (其中部分城市缺少父州或省，例如華盛頓特區、梵蒂岡或新德里)。  
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]。 將 **HideMemberIf** 設定為底下描述的其中一個值。  
   
-    |HideMemberIf 設定|說明|  
+    |HideMemberIf 設定|描述|  
     |--------------------------|-----------------|  
     |**永不**|永不隱藏層級成員。 這是預設值。|  
     |**OnlyChildWithNoName**|當層級成員是父系的唯一子系，且其名稱是 Null 或空白字串時，會隱藏層級成員。|  
@@ -73,7 +70,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_Mdx"></a> 設定 MDX 相容性以決定如何在用戶端應用程式中表示預留位置  
  在階層層級上設定 **HideMemberIf** 之後，您也應該在從用戶端應用程式傳送的連接字串中設定 **MDX Compatibility** 屬性。 **MDX Compatibility** 設定決定是否使用 **HideMemberIf** 。  
   
-|MDX 相容性設定|說明|使用方式|  
+|MDX 相容性設定|描述|使用方式|  
 |-------------------------------|-----------------|-----------|  
 |**1**|顯示預留位置的值。|這是 Excel、SSDT 和 SSMS 使用的預設值。 它會指示伺服器在不完全階層中向下鑽研空的層級時，傳回預留位置的值。 如果您按一下預留位置的值，您可以繼續往下前往子節點 (分葉節點)。<br /><br /> Excel 擁有用來連接到 Analysis Services 的連接字串，而且它永遠都會針對每個新的連接將 **MDX Compatibility** 設定為 1。 這個行為會保留回溯相容性。|  
 |**2**|隱藏預留位置的值 (Null 值或父層級的重複)，但是會顯示具有相關值的其他層級和節點。|就不完全階層而言，**MDX Compatibility**=2 通常會視為慣用設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和某些協力廠商用戶端應用程式可以保留這項設定。|  

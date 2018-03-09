@@ -16,15 +16,15 @@ helpviewer_keywords:
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0871c2e084749a9ceb79192e55e3a99cb24eb351
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fece12352dc2691fdab3906a00f8cb64151590b2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-column-sets"></a>使用資料行集
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -133,7 +133,7 @@ GO
   
  **  不適用 = 在資料行集上的選取作業期間，沒有任何值是這些屬性的輸出。 當提供給插入或更新作業內資料行集的 XML 表示中的呼叫端指定這個屬性的值時，將會產生錯誤。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  資料行集之安全性模型的運作方式，類似於資料表和資料行之間存在的安全性模型。 資料行集可視為一個迷你資料表，而選取作業就像是此迷你資料表上的 SELECT * 作業。 但是，資料行集與疏鬆資料行之間的關聯性是一種群組關聯性，而不限為容器。 此安全性模型會檢查資料行集資料行上的安全性，並接受基礎疏鬆資料行上的 DENY 作業。 此安全性模型的其他特性如下：  
   
 -   可以從資料行集資料行授與及撤銷安全性權限，類似於資料表中的任何其他資料行。  

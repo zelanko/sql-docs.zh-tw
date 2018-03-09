@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: "41"
-ms.openlocfilehash: 234c1ee3b13f3440e3f8a0377f3423ccf937acbc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 
+ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>設定 Windows Server Update Services (WSUS)
 這些指示會引導您完成使用 Windows Server Update Services (WSUS) 設定精靈設定 WSUS Analytics Platform System 的步驟。 您需要將 WSUS 設定之前您可以將軟體更新套用至應用裝置。 VMM 虛擬機器應用裝置上已安裝 WSUS。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
     1.  在**伺服器管理員儀表板**上**工具**功能表上，按一下  **Windows Server Update Services**。  
   
-    2.  在左窗格中**Update Services**視窗中，按一下以展開虛擬機器管理節點伺服器 (***appliance_domain*VMM**)，然後按一下  **選項**。  
+    2.  在左窗格中**Update Services**視窗中，按一下以展開虛擬機器管理節點伺服器 (***appliance_domain *-VMM**)，然後按一下 **選項**。  
   
     3.  在**選項**] 窗格中，按一下 [ **WSUS 伺服器設定精靈**啟動組態精靈。  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/21/2017
   
     #### <a name="to-update-by-using-microsoft-update"></a>若要使用 Microsoft Update 來更新  
   
-    1.  如果您選擇使用 Microsoft Update 同步處理，您不需要進行任何變更**選擇上游伺服器**頁面。 按 [下一步] 。  
+    1.  如果您選擇使用 Microsoft Update 同步處理，您不需要進行任何變更**選擇上游伺服器**頁面。 按一下 **[下一步]**。  
   
         ![WSUS 上游伺服器同步處理](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 12/21/2017
   
     取消選取所有選取的更新。  
   
-    選取**SQL Server 2014**， **Windows Server 2012 R2**，和**System Center 2012 R2 Virtual Machine Manager**，然後按一下 **下一步**。  
+    選取**SQL Server 2014**， **SQL Server 2016**， **Windows Server 2012 R2**，和**System Center 2012 R2 Virtual Machine Manager**，和然後按一下 **下一步**。  
   
 9. 選擇分類。  
   

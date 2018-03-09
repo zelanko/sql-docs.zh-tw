@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-compute-clause"></a>圖形 COMPUTE 子句
 圖形 COMPUTE 子句產生父代**資料錄集**，其資料行所組成之子系的參考**資料錄集**; 選擇性資料行內容的章節中，新的、 或導出資料行，或子系上執行彙總函式的結果**資料錄集**或先前形狀**資料錄集**; 以及從子系的任何資料行**資料錄集**中所列選擇性的 BY 子句。  
@@ -38,10 +39,10 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  這個子句的部分如下所示：  
   
- *子命令*  
+ *child-command*  
  包含下列其中一項：  
   
 -   在大括號 （"{}"） 則會傳回子查詢命令**資料錄集**物件。 命令發行至基礎資料提供者，並且它的語法取決於該提供者的需求。 這通常會是 SQL 語言，雖然 ADO 不需要任何特殊的查詢語言。  
@@ -52,13 +53,13 @@ SHAPE child-command [AS] child-alias
   
 -   資料表關鍵字，後面接著資料提供者中的資料表名稱。  
   
- *子別名*  
+ *child-alias*  
  用來參考別名**資料錄集**傳回*子命令。* *子別名*COMPUTE 子句中的資料行清單中必要參數，定義父系和子系之間的關聯性**資料錄集**物件。  
   
- *附加資料行清單*  
+ *appended-column-list*  
  在其中每個項目定義產生的父代中的資料行清單。 每個項目包含的章節資料行、 新的資料行、 導出資料行或所產生的子系上的彙總函式值**資料錄集**。  
   
- *群組欄位清單*  
+ *grp-field-list*  
  父系和子系中的資料行清單**資料錄集**指定資料列應該如何群組之子系的物件。  
   
  每個資料行中*群組欄位清單，*沒有對應的資料行中的子系和父系**資料錄集**物件。 每個資料列的父**資料錄集**、*群組欄位清單*資料行具有唯一的值與子系**資料錄集**參考的父資料列僅包含子資料列的*群組欄位清單*資料行具有與父資料列相同的值。  
@@ -75,22 +76,22 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
   
  不論哪種方式父**資料錄集**形成 （使用計算或使用附加），它會包含用來關聯至子系的章節資料行**資料錄集**。 如果您想，父系**資料錄集**也可能包含透過子資料列包含彙總 （SUM、 MIN、 MAX 和等等） 的資料行。 父和子系**資料錄集**可能包含資料行包含在中的資料列的運算式**資料錄集**，以及空的資料行，新的和一開始。  
   
-## <a name="operation"></a>作業  
+## <a name="operation"></a>運算  
  *子命令*發行給提供者，則會傳回子**資料錄集**。  
   
  COMPUTE 子句指定的父資料行**資料錄集**，這可能是子系的參考**資料錄集**，一或多個彙總、 計算的運算式或新的資料行。 如果沒有包含 BY 子句，它定義的資料行也會附加至父**資料錄集**。 BY 子句會指定如何在子系的資料列**資料錄集**分組。  
   
  例如，假設您有一個資料表，名為人口統計資料，包括狀態、 縣市和母體擴展的欄位。 （僅做為範例會提供圖形內資料表的母體擴展。）  
   
-|State|[縣/市]|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|或|Medford|200,000|  
-|或|Portland|400,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|聖地牙哥|600,000|  
 |WA|Tacoma|500,000|  
-|或|Corvallis|300,000|  
+|OR|Corvallis|300,000|  
   
  現在，發出此圖形命令：  
   
@@ -114,31 +115,31 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Child1 參考|CA|  
 |1,200,000|Child2 參考|WA|  
-|1,100,000|Child3 參考|或|  
+|1,100,000|Child3 參考|OR|  
   
 ## <a name="child1"></a>Child1  
   
-|State|[縣/市]|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|聖地牙哥|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|[縣/市]|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|[縣/市]|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
-|或|Medford|200,000|  
-|或|Portland|400,000|  
-|或|Corvallis|300,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|OR|Corvallis|300,000|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [存取資料列中的階層式資料錄集](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [資料成形概觀](../../../ado/guide/data/data-shaping-overview.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   

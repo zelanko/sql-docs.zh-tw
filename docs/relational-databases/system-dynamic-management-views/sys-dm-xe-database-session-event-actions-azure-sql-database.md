@@ -8,19 +8,20 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 42ac4136c77b3ba00784276b12898f3d4e08d7f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: d4b3fcfe0e335b53dc483cde24520ea136c9af37
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,10 +34,10 @@ ms.lasthandoff: 11/17/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary （8)**|事件工作階段的記憶體位址。 不可為 Null。|  
-|action_name|**nvarchar （60)**|動作的名稱。 不可為 Null。|  
+|event_session_address|**varbinary(8)**|事件工作階段的記憶體位址。 不可為 Null。|  
+|action_name|**nvarchar(60)**|動作的名稱。 不可為 Null。|  
 |action_package_guid|**uniqueidentifier**|包含此動作之封裝的 GUID。 不可為 Null。|  
-|event_name|**nvarchar （60)**|此動作繫結之事件的名稱。 不可為 Null。|  
+|event_name|**nvarchar(60)**|此動作繫結之事件的名稱。 不可為 Null。|  
 |event_package_guid|**uniqueidentifier**|包含此事件之封裝的 GUID。 不可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |sys.dm_xe_database_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_database_session_events.event_package_guid|多對一|  
 |sys.dm_xe_database_session_event_actions.event_name<br /><br /> sys.dm_xe_database_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|多對一|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
   

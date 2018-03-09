@@ -8,23 +8,24 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cbd0a16ec79df06780e4156a23c7b8767a6db5e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b14e919cc180e8934b0cf9435d8d286c6468ccc2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>並存安裝 Integration Services 版本
   您可以並存安裝   
@@ -38,8 +39,8 @@ ms.lasthandoff: 11/20/2017
 |SQL Server 的目標版本|SSIS 封裝的開發環境|  
 |----------------------------------|-----------------------------------------------|  
 |2016|Visual Studio 2015 的 SQL Server Data Tools|  
-|2014|Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
-|2012|Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
+|2014|Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 中的多個<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
+|2012|Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 中的多個<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
 |2008|SQL Server 2008 的 Business Intelligence Development Studio|  
   
  當您將現有封裝加入現有專案時，封裝會轉換成專案所設目標的格式。  

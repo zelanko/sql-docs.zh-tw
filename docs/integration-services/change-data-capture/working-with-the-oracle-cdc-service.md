@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服務
   本章節描述 Oracle CDC 服務的一些重要概念。 本章節包含的概念如下：  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
  **另請參閱：**  
   
- [如何為 CDC 準備 SQL Server](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
+ [如何準備 SQL Server 以使用 CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
 ### <a name="the-msxdbcdc-database-tables"></a>MSXDBCDC 資料庫資料表  
  本節描述 MSXDBCDC 資料庫中的以下資料表。  
@@ -76,9 +77,9 @@ ms.lasthandoff: 11/20/2017
   
  以下描述 **dbo.xdbcdc_trace** 資料表中包含的項目。  
   
-|項目|說明|  
+|項目|描述|  
 |----------|-----------------|  
-|timestamp|寫入追蹤記錄的精確 UTC 時間戳記。|  
+|TIMESTAMP|寫入追蹤記錄的精確 UTC 時間戳記。|  
 |型別|包含下列其中一個值。<br /><br /> error<br /><br /> INFO<br /><br /> 追蹤|  
 |node|寫入記錄的節點名稱。|  
 |status|狀態資料表使用的狀態碼。|  
@@ -95,9 +96,9 @@ ms.lasthandoff: 11/20/2017
   
  下表描述 **dbo.xdbcdc_databases** 資料表中包含的項目。  
   
-|項目|說明|  
+|項目|描述|  
 |----------|-----------------|  
-|name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 Oracle 資料庫的名稱。|  
+|NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 Oracle 資料庫的名稱。|  
 |config_version|對應 CDC 資料庫 **xdbcdc_config** 資料表中上次變更的時間戳記 (UTC)，或是此資料表中目前資料列的時間戳記 (UTC)。<br /><br /> UPDATE 觸發程序會針對這個項目強制使用 GETUTCDATE() 的值。 **config_version** 可讓 CDC 服務識別需要檢查是否有組態變更或啟用/停用的 CDC 執行個體。|  
 |cdc_service_name|這個項目會判斷哪一個 Oracle CDC 服務處理選取的 Oracle 資料庫。|  
 |enabled|指出 Oracle CDC 執行個體為使用中 (1) 還是停用 (0) 狀態。 當 Oracle CDC 服務啟動時，只會啟動標示為啟用 (1) 的執行個體。<br /><br /> **注意**：發生無法重試的錯誤時，Oracle CDC 執行個體可能會停用。 在此情況下，必須在解決錯誤之後手動重新啟動執行個體。|  
@@ -107,14 +108,14 @@ ms.lasthandoff: 11/20/2017
   
  以下描述 **dbo.xdbcdc_databases** 資料表中包含的擷取狀態項目。  
   
-|項目|說明|  
+|項目|描述|  
 |----------|-----------------|  
 |cdc_service_name|Oracle CDC 服務的名稱 (Windows 服務名稱)。|  
 |cdc_service_sql_login|Oracle CDC 服務為了連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 隨即建立名為 cdc_service 的新 SQL 使用者並與這個登入名稱產生關聯，然後針對此服務處理的每一個 CDC 資料庫，將此使用者當做 db_ddladmin、db_datareader 和 db_datawriter 固定資料庫角色的成員加入。|  
 |ref_count|這個項目會計算安裝相同 Oracle CDC 服務的電腦數目。 每次加入相同名稱的 Oracle CDC 服務時，這個數目就會遞增，每當移除這類服務時，這個數目就會遞減。 當計數器到達零時，這個資料列會遭到刪除。|  
 |active_service_node|目前處理 CDC 服務的 Windows 節點名稱。 當此服務正確停止時，這個資料行會設定為 null，表示不再有使用中的服務。|  
 |active_service_heartbeat|這個項目會追蹤目前的 CDC 服務來判斷它是否依然使用中。<br /><br /> 對於固定間隔的使用中 CDC 服務而言，將會使用目前資料庫 UTC 時間戳記來更新這個項目。 預設間隔為 30 秒，但是可以設定間隔。<br /><br /> 當暫止的 CDC 服務偵測到經過設定的間隔時間後並未更新活動訊號時，暫止的服務會嘗試接管使用中的 CDC 服務角色。|  
-|選項|這個項目會指定次要選項，例如追蹤或微調。 它會以 **name[=value][; ]**格式寫入。 選項字串會使用與 ODBC 連接字串相同的語意。 如果選項為布林值 (值為是/否)，此值只能包含名稱。<br /><br /> 追蹤具有以下的可能值。<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **關閉**<br /><br /> **\<class name>[,class name>]**<br /><br /> <br /><br /> 預設值是 **false**秒。<br /><br /> **service_heartbeat_interval** 是此服務更新 active_service_heartbeat 資料行的時間間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服務檢查組態變更的輪詢間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **sql_command_timeout** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的命令逾時。 預設值是 **1**秒。 最大值為 **3600**。|  
+|選項|這個項目會指定次要選項，例如追蹤或微調。 它會以 **name[=value][; ]**格式寫入。 選項字串會使用與 ODBC 連接字串相同的語意。 如果選項為布林值 (值為是/否)，此值只能包含名稱。<br /><br /> 追蹤具有以下的可能值。<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **關閉**<br /><br /> **\<class name>[,class name>]**<br /><br /> <br /><br /> 預設值為 **false**。<br /><br /> **service_heartbeat_interval** 是此服務更新 active_service_heartbeat 資料行的時間間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服務檢查組態變更的輪詢間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **sql_command_timeout** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的命令逾時。 預設值是 **1**秒。 最大值為 **3600**。|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 資料庫預存程序  

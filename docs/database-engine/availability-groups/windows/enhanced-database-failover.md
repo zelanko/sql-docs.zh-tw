@@ -18,13 +18,13 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0ed6831a89d77f60e77e012ba36febdddc88a5a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>將增強資料庫容錯移轉新增至可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ SQL Server 2016 引進名為「增強資料庫容錯移轉」的新選擇性行�
 
 可用性群組設定於執行個體 A 與執行個體 B 之間，包含兩個資料庫：DB1 和 DB2。 可用性模式設定為具有自動容錯移轉模式的同步認可，並啟用增強資料庫容錯移轉。 遺失包含 DB2 資料和交易記錄檔之磁碟的存取權。 偵測到問題時，可用性群組會自動容錯移轉至執行個體 B。
 
-## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>設定和檢視增強資料庫容錯移轉選項
+## <a name="configure-and-view-the-enhanced-database-failover-option"></a>設定和檢視增強資料庫容錯移轉選項
 
 增強資料庫容錯移轉可以使用 SQL Server Management Studio 或 Transact-SQL 進行設定。 PowerShell Cmdlet 目前沒有這項功能。 預設會停用增強資料庫容錯移轉。
 
@@ -55,11 +55,11 @@ SQL Server 2016 引進名為「增強資料庫容錯移轉」的新選擇性行�
 
 建立手動可用性群組
 
-使用[使用新增可用性群組對話方塊 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 主題中找到的指示，以建立可用性群組。 若要啟用增強資料庫容錯移轉，請選取它在「資料庫層級健全狀況偵測」旁邊的核取方塊。
+使用[使用新增可用性群組對話方塊 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 一文中找到的指示，以建立可用性群組。 若要啟用增強資料庫容錯移轉，請選取它在「資料庫層級健全狀況偵測」旁邊的核取方塊。
 
 使用可用性群組精靈
 
-使用[使用可用性群組精靈 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md) 主題中找到的指示。 在 [指定可用性群組名稱] 對話方塊上，可以找到啟用增強資料庫容錯移轉的選項。 若要啟用它，請核取「資料庫層級健全狀況偵測」旁邊的方塊。
+使用[使用可用性群組精靈 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md) 一文中找到的指示。 在 [指定可用性群組名稱] 對話方塊上，可以找到啟用增強資料庫容錯移轉的選項。 若要啟用它，請核取「資料庫層級健全狀況偵測」旁邊的方塊。
 
 ### <a name="transact-sql"></a>Transact-SQL
 
@@ -79,9 +79,9 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>動態管理檢視
-若要查看可用性群組是否已啟用增強資料庫容錯移轉，請查詢動態管理檢視 `sys.availablity_groups`。 如果停用，資料行 `db_failover` 會是零，如果啟用，則是 1。 
+若要查看可用性群組是否已啟用增強資料庫容錯移轉，請查詢動態管理檢視 `sys.availability_groups`。 如果停用，資料行 `db_failover` 會是零，如果啟用，則是 1。 
 
-## <a name="next-steps"></a>後續的步驟 
+## <a name="next-steps"></a>後續步驟 
 
 - [設定資料庫健全狀況偵測](sql-server-always-on-database-health-detection-failover-option.md)
 

@@ -3,27 +3,27 @@ title: "備份和還原在 Linux 上的 SQL Server 資料庫 |Microsoft 文件"
 description: "瞭解如何備份和還原在 Linux 上的 SQL Server 資料庫。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: bd807454b9b1b946dc396ec53a920fd198c5b5c0
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 96450590b55a6cb9cf6fcf517380bc25a13c1431
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>在 Linux 上的備份和還原 SQL Server 資料庫
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 您可以從 Linux 上的 SQL Server 2017 採取資料庫的備份，與為其他平台的相同工具。 在 Linux 伺服器上，您可以使用**sqlcmd**連接到 SQL Server 並進行備份。 在 Windows 中，您可以連接到 SQL Server on Linux，並進行備份與使用者介面。 備份的功能是相同的跨平台。 例如，備份資料庫，在本機、 遠端磁碟機，或為[Microsoft Azure Blob 儲存體服務](../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 
@@ -59,7 +59,7 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 如果您的資料庫處於完整復原模式，您也可以進行更細微的還原選項的交易記錄備份。 在下列範例中， **sqlcmd**會連接到本機 SQL Server 執行個體，並接受交易記錄備份。
 
 ```bash
-sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT, NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
 ```
 
 ## <a name="restore-a-database"></a>還原資料庫
@@ -67,11 +67,11 @@ sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/da
 在下列範例中**sqlcmd**會連接到本機 SQL Server 執行個體，並根據 demodb 資料庫還原。 請注意，`NORECOVERY`選項用來允許其他的還原作業的記錄檔的備份。 如果您不打算還原額外的記錄檔，移除`NORECOVERY`選項。
 
 ```bash
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE, NORECOVERY, STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/mssql/data/demodb.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
 ```
 
 > [!TIP]
-> 如果您不小心使用 NORECOVERY，但不是需要額外的記錄檔備份，執行命令`RESTORE DATABASE demodb`不使用其他參數。 這將會完成還原，並讓資料庫保持運作。
+> 如果您不小心使用 NORECOVERY，但不是需要額外的記錄檔備份，執行命令`RESTORE DATABASE demodb`不使用其他參數。 這會完成還原，並讓資料庫保持運作。
 
 ### <a name="restore-the-transaction-log"></a>還原交易記錄檔
 

@@ -8,23 +8,25 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1594a6ae3c82c85545565b8e89ab95690b400553
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1f0164eb5310d65a2048a65848ee641b2d489db
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-fulltext-event-class"></a>稽核全文檢索事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線至全文檢索篩選精靈處理序並與之通訊時，會發生 **Audit Fulltext** 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+當 **連接至全文檢索篩選背景程式處理序並與之通訊時，會發生** Audit Fulltext [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  
   
 ## <a name="audit-fulltext-event-class-data-columns"></a>稽核全文檢索事件類別資料行  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
 |**TargetLoginName**|**int**|對於目標為登入的動作 (例如，加入新登入)，這是目標登入的名稱。|42|是|  
 |**TargetLoginSid**|**int**|對於目標為登入的動作 (例如，加入新登入)，這是目標登入的安全性識別碼 (SID)。|43|是|  
-|**TextData**|**ntext**|全文檢索事件的文字資訊。 通常，此欄位提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序和全文檢索篩選背景程式處理序之間連接的資訊。|1|是|  
+|**TextData**|**ntext**|全文檢索事件的文字資訊。 通常，此欄位提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序和全文檢索篩選背景程式處理序之間連接的資訊。|@shouldalert|是|  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   

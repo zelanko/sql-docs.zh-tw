@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4889d5aabf66b97c4dfaae3c59117f678da4f6a1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的部署和版本支援 (SSDT) | Microsoft Docs
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支援以下案例：  
@@ -60,20 +58,20 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_SupportedVersions"></a> 支援的版本  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構伺服器上。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)](報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]架構伺服器上。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
   
  下表描述在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中撰寫及發行報表所支援的版本。  
   
 > [!NOTE]  
 >  此結構描述從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之後並未變更。  
   
-|專案或檔案類型|版本|撰寫報表|發行報表|注意|  
+|專案或檔案類型|Version|撰寫報表|發行報表|注意|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL 結構描述|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL 結構描述|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 結構描述|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 結構描述|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 結構描述|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器|在本機將 2003 RDL 和 2005 RDL 升級到 2008 RDL 結構描述。|  
+|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL 結構描述|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL 結構描述|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 結構描述|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 結構描述|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 結構描述|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器|在本機將 2003 RDL 和 2005 RDL 升級到 2008 RDL 結構描述。|  
   
  如需在舊版報表定義結構描述中開啟報表的詳細資訊，請參閱 [升級報表](../../reporting-services/install-windows/upgrade-reports.md)。 如需有關特定報表定義結構描述的詳細資訊，請參閱＜ [報表定義語言規格](http://go.microsoft.com/fwlink/?linkid=116865)＞。  
   

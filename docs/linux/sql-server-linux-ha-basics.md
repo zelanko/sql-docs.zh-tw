@@ -3,36 +3,36 @@ title: "SQL Server 可用性的基本概念 Linux 部署 |Microsoft 文件"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b137d8badf44bf1c7d181b490bcf6d06e2bd087f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 部署的 SQL Server 可用性基本概念
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 從開始[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]適用於 Linux 和 Windows。 例如 windows[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]資料庫和執行個體必須要在 Linux 高可用性。 本文章涵蓋計劃和部署高可用性的技術層面 linux[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]資料庫和執行個體，以及從 windows 安裝的差異。 因為[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 專業人員以及 Linux 可能新增的可能新[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]專業人員，文件有時候介紹可能是有些熟悉而且給其他人不熟悉的概念。
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 部署的可用性選項
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 部署的可用性選項
 除了備份與還原，相同的三個可用性功能可在 Linux 上與 Windows 為基礎的部署：
 -   Alwayson 可用性群組 (Ag)
 -   Alwayson 容錯移轉叢集執行個體 (Fci)
 -   [記錄傳送](sql-server-linux-use-log-shipping.md)
 
-在 Windows 上，Fci 一律會要求基礎 Windows Server 容錯移轉叢集 (WSFC)。 根據部署案例中，AG 通常需要基礎 WSFC 中，例外狀況是新 variant 中無[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]。 WSFC 在 Linux 中不存在。 叢集實作在 Linux 中的會討論在[Pacemaker Always On 可用性群組和容錯移轉叢集執行個體在 Linux 上](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux)。
+在 Windows 上，Fci 一律會要求基礎 Windows Server 容錯移轉叢集 (WSFC)。 根據部署案例中，AG 通常需要基礎 WSFC 中，例外狀況是新 variant 中無[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]。 WSFC 在 Linux 中不存在。 叢集實作在 Linux 中的一節所述[Pacemaker Always On 可用性群組和容錯移轉叢集執行個體在 Linux 上](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux)。
 
 ## <a name="a-quick-linux-primer"></a>快速 Linux 入門
 某些 Linux 安裝可安裝於介面，大部分並不是，這表示，幾乎所有的作業在作業系統層級已完成，透過命令列。 此命令列，在 Linux 世界中的一般術語是*撞殼層*。
@@ -43,23 +43,23 @@ ms.lasthandoff: 12/21/2017
 2. 執行動作的多個通用和安全性做出明智的方式是使用`sudo`之前執行的任何項目。 在此範例的許多發行項使用`sudo`。
 
 每一個都有各種參數和選項，可以線上研究一些常用命令：
--   `cd`– 將目錄變更
--   `chmod`-變更檔案或目錄的權限
--   `chown`-變更檔案或目錄的擁有權
--   `ls`– 顯示目錄的內容
--   `mkdir`– 磁碟機上建立資料夾 （目錄）
--   `mv`– 將檔案從一個位置移至另一個
--   `ps`– 顯示所有的工作處理序
--   `rm`– 刪除在本機伺服器上的檔案
--   `rmdir`– 刪除資料夾 （目錄）
--   `systemctl`– 啟動、 停止或啟動服務
+-   `cd` – 將目錄變更
+-   `chmod` -變更檔案或目錄的權限
+-   `chown` -變更檔案或目錄的擁有權
+-   `ls` – 顯示目錄的內容
+-   `mkdir` – 磁碟機上建立資料夾 （目錄）
+-   `mv` – 將檔案從一個位置移至另一個
+-   `ps` – 顯示所有的工作處理序
+-   `rm` – 刪除在本機伺服器上的檔案
+-   `rmdir` – 刪除資料夾 （目錄）
+-   `systemctl` – 啟動、 停止或啟動服務
 -   文字編輯器命令。 在 Linux 上有各種文字編輯器選項，例如 vi 和 emacs。
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>一般工作的可用性組態[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]on Linux
 本章節涵蓋通用於所有以 Linux 為基礎的工作[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署。
 
 ### <a name="ensure-that-files-can-be-copied"></a>確認可以複製檔案
-一件事任何人使用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]應該能夠執行 Linux 上會將檔案從一部伺服器複製到另一個。 這項工作是非常重要 AG 組態。
+將檔案從一部伺服器複製到另一個是一項工作都能使用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 上應該能夠執行。 這項工作是非常重要 AG 組態。
 
 在 Linux 和 Windows 為基礎的安裝上，可存在於等的權限問題。 不過，那些熟悉如何在 Windows 上複製伺服器可能不熟悉如何在 Linux 上執行。 常見的方法是使用命令列公用程式`scp`，它代表安全複製。 在幕後`scp`使用 OpenSSH。 SSH 代表安全殼層。 Linux 散發套件中，根據本身的 OpenSSH 可能未安裝。 如果不是，OpenSSH 必須先安裝。 如需設定 OpenSSH 的詳細資訊，請參閱下列連結以取得每個發佈的資訊：
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
@@ -88,20 +88,20 @@ Samba，也就是伺服器訊息區 (SMB) 的 Linux 變體，也可用來建立�
 ### <a name="configure-the-firewall"></a>設定防火牆
 類似於 Windows，Linux 散發套件已內建的防火牆。 如果貴公司使用外部防火牆的伺服器，停用在 Linux 防火牆可能是可接受。 不過，無論啟用防火牆的連接埠必須開啟。 下表說明常見的連接埠進行高可用性[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]在 Linux 上的部署。
 
-| 通訊埠編號 | 類型     | 描述                                                                                                                 |
+| 通訊埠編號 | 型別     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS`rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba （如果使用） – 端點對應程式                                                                                          |
 | 137         | UDP      | Samba （如果使用） – NetBIOS 名稱服務                                                                                      |
 | 138         | UDP      | Samba （如果使用） – NetBIOS 資料包                                                                                          |
 | 139         | TCP      | Samba （如果使用） – NetBIOS 工作階段                                                                                           |
 | 445         | TCP      | Samba （如果使用） – SMB over TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]– 預設連接埠。如有需要，可以變更與`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 預設連接埠。如有需要，可以變更與 `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP、UDP | NFS （如果使用）                                                                                                               |
-| 2224        | TCP      | Pacemaker – 使用`pcsd`                                                                                                |
+| 2224        | TCP      | Pacemaker – 使用 `pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker – 需要有 Pacemaker 遠端節點                                                                    |
 | 3260        | TCP      | iSCSI 啟動器 （如果使用） – 可以更改中`/etc/iscsi/iscsid.config`(RHEL)，但應該符合的 iSCSI 目標的連接埠 |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-AG 端點; 使用預設通訊埠建立端點時，可以變更                                |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -AG 端點; 使用預設通訊埠建立端點時，可以變更                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
 | 5404        | UDP      | Pacemaker – 如果使用多點傳送的 UDP，Corosync 所需                                                                     |
 | 5405        | UDP      | Pacemaker – Corosync 所需                                                                                            |
@@ -135,7 +135,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 其他選擇性套件[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]on Linux，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]全文檢索搜尋 (*mssql-伺服器-fts*) 和[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Integration Services (*mssql 伺服器是*)，不是高可用性、 FCI 或 AG 的必要項。
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Alwayson 可用性群組和容錯移轉叢集執行個體，在 Linux 上 pacemaker
-如先前所述，目前支援 microsoft Ag 和 Fci 的唯一叢集機制是與 Corosync Pacemaker。 此章節將涵蓋基本的資訊來了解方案，以及如何規劃和部署為[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]組態。
+為先前所述，目前支援 microsoft Ag 和 Fci 的唯一叢集機制是與 Corosync Pacemaker。 此章節將涵蓋基本的資訊來了解方案，以及如何規劃和部署為[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]組態。
 
 ### <a name="ha-add-onextension-basics"></a>HA 附加 on/延伸基本概念
 所有目前支援的發行版本現有附隨 「 高可用性附加-on/延伸模組，根據叢集堆疊 Pacemaker。 此堆疊會結合兩個主要元件： Pacemaker 和 Corosync。 堆疊的所有元件都如下：
@@ -203,15 +203,15 @@ WSFCs 監視參與節點的狀態，並處理這類問題發生時。 更新版�
 
 #### <a name="cluster-log-location"></a>叢集記錄檔位置
 Pacemaker 叢集記錄檔的位置而有所不同分佈。
--   RHEL 和 SLES-`/var/log/cluster/corosync.log`
--   Ubuntu –`/var/log/corosync/corosync.log`
+-   RHEL 和 SLES- `/var/log/cluster/corosync.log`
+-   Ubuntu – `/var/log/corosync/corosync.log`
 
 若要變更預設的記錄位置，請修改`corosync.conf`。
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>計劃 Pacemaker 叢集[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>計劃 Pacemaker 叢集 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 本章節討論規劃 Pacemaker 叢集的重點。
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>以 Linux 為基礎的虛擬化 Pacemaker 叢集以提供[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>以 Linux 為基礎的虛擬化 Pacemaker 叢集以提供 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 使用虛擬機器來部署以 Linux 為基礎[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]相同的規則與 Windows 架構的與其所涵蓋的 Ag 和 Fci 的部署。 沒有一組基本的規則可支援性的虛擬化[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]由 Microsoft 提供的部署[Microsoft 支援知識庫 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)。 不同的 hypervisor，例如 Microsoft 的 HYPER-V 和 VMware 的 ESXi 可能會在該的變異，因為其本身的平台差異。
 
 當談到 Ag 和 Fci 在虛擬化時，請指定 Pacemaker 叢集中的節點，設定反親和性。 當設定為高可用性在 AG 或 FCI 組態中，裝載的 Vm[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]永遠不應該在同一台 hypervisor 主機上執行。 例如，如果兩個節點 FCI 部署時，會需要*至少*三個 hypervisor 主機，所以的某處主控節點的 vm 主機失敗，請移至其中一個特別是當使用的功能類似 Live移轉或 vMotion。
@@ -247,7 +247,7 @@ WSFC 中，例如 Pacemaker 想使用多餘的網路功能，這表示不同的�
 -   分散式的 AG，也就是一種特殊的可用性群組可讓兩個不同的 Ag 設定為自己的可用性群組。 如需有關分散式 Ag 的詳細資訊，請參閱文件[分散式可用性群組](../database-engine/availability-groups/windows/distributed-availability-groups.md)。
 
 #### <a name="other-linux-distributions"></a>其他 Linux 散發套件
-在 Linux 上 Pacemaker 叢集的所有節點都必須位於相同的通訊群組。 比方說，這表示 RHEL 節點不能有 SLES 節點 Pacemaker 叢集的一部分。 上面所述的主要原因： 發佈可能會有不同的版本和功能，讓項目可能無法正常運作。 混合分佈具有相同的劇本做為混合 WSFCs 和 Linux： 使用 [無] 或分散式 Ag。
+在 Linux 上 Pacemaker 叢集的所有節點都必須位於相同的通訊群組。 比方說，這表示 RHEL 節點不能有 SLES 節點 Pacemaker 叢集的一部分。 先前所述的主要原因： 發佈可能會有不同的版本和功能，讓項目可能無法正常運作。 混合分佈具有相同的劇本做為混合 WSFCs 和 Linux： 使用 [無] 或分散式 Ag。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 [Pacemaker 叢集部署的 SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)

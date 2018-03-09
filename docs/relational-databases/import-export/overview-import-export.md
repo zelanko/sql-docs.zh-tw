@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>匯入和匯出 SQL Server 和 Azure SQL Database 的資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用多種方法將資料匯入 SQL Server 和 Azure SQL Database 中，及從中匯出資料。 這些方法包括 Transact-SQL 陳述式、命令列工具和精靈。
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 您可以匯入及匯出一般檔案或各種其他檔案格式、關聯式資料庫和雲端服務的資料。 若要深入了解特定工具的這些選項，請參閱下列主題。
 -   針對 SQL Server 匯入和匯出精靈，請參閱[使用 SQL Server 匯入和匯出精靈連線至資料來源](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。
 -   針對 SQL Server Integration Services，請參閱 [Integration Services (SSIS) 連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)。
--   針對 Azure Data factory，請參閱 [Azure Data Factory 連接器](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-amazon-redshift-connector)。
+-   針對 Azure Data factory，請參閱 [Azure Data Factory 連接器](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector)。
 
 ### <a name="commonly-used-data-formats"></a>常用的資料格式
 
@@ -65,5 +65,5 @@ ms.lasthandoff: 11/17/2017
 -   針對 XML，請參閱[匯入及匯出 XML 文件](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)。
 -   針對 Azure Blob 儲存體，請參閱[從 Azure Blob 儲存體匯入及匯出](examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 如果您不確定從何開始匯入或匯出工作，請考慮使用 SQL Server 匯入和匯出精靈。 如需快速簡介，請參閱[開始使用匯入和匯出精靈的簡單範例](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。

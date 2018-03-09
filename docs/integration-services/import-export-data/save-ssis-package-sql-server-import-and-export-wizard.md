@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.savedtspackage.f1
+f1_keywords:
+- sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b938ef910a1c1e8c302529364ab6cfddfec54fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
   如果您在 [儲存並執行套件] 頁面上指定要將設定儲存為 SQL Server Integration Services (SSIS) 套件，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [儲存 SSIS 套件]。 在此頁面上，您可以指定儲存精靈所建立套件的其他選項。  
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/20/2017
  **名稱**  
  提供封裝的唯一名稱。  
   
- **描述**  
+ **說明**  
  提供封裝的描述。 最佳作法是描述封裝用途，使封裝可以自我記錄並易於維護。  
   
  **目標**  
@@ -60,13 +62,13 @@ ms.lasthandoff: 11/20/2017
  **伺服器名稱**  
  輸入或選取目的地伺服器名稱。  
    
- **使用 Windows 驗證**  
+ **[使用 Windows 驗證]**  
 使用 Windows 整合式驗證連接到伺服器。 這是慣用的驗證方法。  
   
  **使用 SQL Server 驗證**  
 使用 SQL Server 驗證連接到伺服器。  
   
- **使用者名稱**  
+ **User name**  
 如果您已指定 SQL Server 驗證，請輸入使用者名稱。  
   
  **密碼**  

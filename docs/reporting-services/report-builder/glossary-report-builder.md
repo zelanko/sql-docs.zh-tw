@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37bfede873cdcfebd34c8fba985614adc41305e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="glossary-report-builder"></a>詞彙 (報表產生器)
   
@@ -358,7 +356,7 @@ ms.lasthandoff: 12/05/2017
 |系統角色指派 (system role assignment)|套用至整個網站的角色指派。|  
 |系統角色定義|傳達整個網站權限的角色定義。|  
 |系統預存程序 (system stored procedures)|一組 SQL Server 提供的預存程序，可供擷取系統目錄資訊或執行管理工作之類的動作使用。|  
-|table|1.由資料列和資料行組成的二維物件，會儲存關聯式資料庫中所建立實體的相關資料。 2. 在報表配置中以分欄格式顯示資料的資料區域。|  
+|資料表|1.由資料列和資料行組成的二維物件，會儲存關聯式資料庫中所建立實體的相關資料。 2. 在報表配置中以分欄格式顯示資料的資料區域。|  
 |資料表資料區域 (table data region)|在報表配置中以分欄格式顯示資料的報表項目。|  
 |Tablix|Reporting Services RDL 資料區，其中包含類似資料表或矩陣的資料列和資料行，可能會共用這兩者的特性。|  
 |工作 (task)|構成工作的權限的集合 (管理報表、管理資料夾等等)|  

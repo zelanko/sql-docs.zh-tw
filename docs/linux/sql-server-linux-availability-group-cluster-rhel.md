@@ -3,34 +3,34 @@ title: "設定 SQL Server 可用性群組的 RHEL 叢集 |Microsoft 文件"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 11eea4891b1214e48f70ca56462322305fa97c06
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文件說明如何建立三個節點的可用性群組叢集 Red Hat Enterprise Linux 上的 SQL Server。 高可用性，Linux 上的可用性群組需要三個節點-請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。 叢集的圖層以基礎上 Red Hat Enterprise Linux (RHEL) [HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上[Pacemaker](http://clusterlabs.org/)。 
 
 > [!NOTE] 
 > Red Hat 的完整文件存取需要有效的訂用帳戶。 
 
-如需叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 > [!NOTE] 
 > SQL Server 並未會緊密整合到 Pacemaker on Linux 和 Windows Server 容錯移轉叢集。 無法感知叢集的 SQL Server 執行個體。 Pacemaker 提供叢集資源的協調流程。 此外，虛擬網路名稱是 Windows Server 容錯移轉叢集的特定-Pacemaker 中沒有任何對等項目。 可用性群組動態管理檢視 (Dmv 查詢叢集資訊) Pacemaker 叢集傳回空的資料列。 若要建立透明容錯移轉後的重新連線的接聽程式，手動與 IP 用來建立虛擬 IP 資源的 DNS 中註冊的接聽程式名稱。 
@@ -129,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>開始失敗-是-嚴重叢集屬性設定為 false
 
-`start-failure-is-fatal`指出是否在節點上啟動資源失敗可防止進一步該節點上的啟動嘗試。 當設定為`false`，叢集會決定是否要嘗試再次根據資源的目前失敗計數和移轉臨界值的相同節點上啟動。 發生容錯移轉之後，Pacemaker 重試啟動可用性群組上先前的主要資源，可使用的 SQL 執行個體後。 Pacemaker 會降級至次要複本，並自動重新加入可用性群組。 
+`start-failure-is-fatal` 指出是否在節點上啟動資源失敗可防止進一步該節點上的啟動嘗試。 當設定為`false`，叢集會決定是否要嘗試再次根據資源的目前失敗計數和移轉臨界值的相同節點上啟動。 發生容錯移轉之後，Pacemaker 重試啟動可用性群組上先前的主要資源，可使用的 SQL 執行個體後。 Pacemaker 會降級至次要複本，並自動重新加入可用性群組。 
 
 若要更新的屬性值`false`執行：
 
@@ -151,7 +151,7 @@ sudo pcs property set start-failure-is-fatal=false
 若要建立可用性群組資源，請使用`pcs resource create`命令，並設定資源屬性。 El comando siguiente crea`ocf:mssql:ag`主/從可用性群組名稱的型別資源`ag1`。
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
@@ -160,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>建立虛擬 IP 資源
 
-若要建立虛擬 IP 位址資源，請在一個節點上執行下列命令。 使用 從網路可用的靜態 IP 位址。 取代 IP 位址之間`**<10.128.16.240>**`具有有效的 IP 位址。
+若要建立虛擬 IP 位址資源，請在一個節點上執行下列命令。 使用 從網路可用的靜態 IP 位址。 取代 IP 位址之間`<10.128.16.240>`具有有效的 IP 位址。
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 沒有 Pacemaker 中相等的虛擬伺服器名稱。 若要使用的連接字串指向字串伺服器名稱，而不是 IP 位址，請在 DNS 中登錄的虛擬 IP 資源的位址和所需的虛擬伺服器名稱。 DR 組態註冊所需的虛擬伺服器名稱和 IP 位址與主要和 DR 網站上的 DNS 伺服器。

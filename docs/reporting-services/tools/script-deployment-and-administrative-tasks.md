@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,15 +25,15 @@ helpviewer_keywords:
 - reports [Reporting Services], migrating
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 caps.latest.revision: "62"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d56f2da5289d845e1f0d6f8736f48b3e92bbcc27
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa78cfcb78834459a8401fb7b7f8b326362382e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>編寫部署和管理工作的指令碼
 
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/05/2017
   
 -   報表伺服器 Script Host 工具 (rs.exe) 可以執行您可能會撰寫的自訂 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 程式碼，以便重新建立現有內容，或是在報表伺服器之間移動現有內容。 當您使用這個方式時，會使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫指令碼，並將其另存為 .rss 檔案，然後在目標報表伺服器上使用 rs.exe 來執行此指令碼。 您所撰寫的指令碼可以呼叫報表伺服器 Web 服務的 SOAP 介面。 部署指令碼是使用這種方法所撰寫，因為它可讓您重新建立報表伺服器資料夾命名空間與內容，以及重新建立以角色為基礎的安全性。  
   
--   SQL Server 2012 版引入適用於 SharePoint 整合模式的 PowerShell Cmdlet。 您可以使用 PowerShell 設定和管理 SharePoint 整合。  如需詳細資訊，請參閱 [Reporting Services SharePoint 模式適用的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+-   SQL Server 2012 版引入適用於 SharePoint 整合模式的 PowerShell Cmdlet。 您可以使用 PowerShell 設定和管理 SharePoint 整合。  如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>使用指令碼來移轉報表伺服器內容和資料夾  
  您可以撰寫指令碼來複製另一個報表伺服器執行個體上的報表伺服器環境。 部署指令碼通常是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫，然後使用報表伺服器 Script Host 公用程式處理。  
@@ -129,7 +127,7 @@ Public Sub Main()
 End Sub  
 ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [GenerateDatabaseCreationScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
 [GenerateDatabaseRightsScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   

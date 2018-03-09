@@ -1,32 +1,33 @@
 ---
 title: "解決記憶體不足問題 | Microsoft 文件"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 838f604df21a87912db8d48f815a73c6af27c8f2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 190a55e0feb08aa4e7e0601e6a7fec92b249ea05
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 所使用的記憶體比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更多，而且使用方式也不同。 您所安裝並配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的記憶體數量可能會變得不足以支應成長的需求。 若是如此，您可能會用完記憶體。 本主題將說明如何從 OOM 情況中復原。 如需可協助您避免多種 OOM 情況的指引，請參閱 [監視與疑難排解記憶體使用量](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) 。  
+  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 所使用的記憶體比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更多，而且使用方式也不同。 您所安裝並配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的記憶體數量可能會變得不足以支應成長的需求。 若是如此，您可能會用完記憶體。 本主題將說明如何從 OOM 情況中復原。 如需可協助您避免多種 OOM 情況的指引，請參閱 [監視與疑難排解記憶體使用量](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) 。  
   
 ## <a name="covered-in-this-topic"></a>本主題所涵蓋的內容  
   
@@ -38,9 +39,9 @@ ms.lasthandoff: 11/27/2017
 |[在 VM 環境中使用記憶體內部 OLTP 的最佳做法](#bkmk_VMs)|在虛擬環境中使用記憶體內部 OLTP 的注意事項。|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> 解決由於 OOM 所造成的資料庫還原失敗  
- 當您嘗試還原資料庫時，可能會收到錯誤訊息：「資料庫 '*\<資料庫名稱>*' 的還原作業因為資源集區 '*\<資源集區名稱>*' 中的記憶體不足而失敗」。這表示伺服器沒有足夠的可用記憶體來還原資料庫。
+ 當您嘗試還原資料庫時，可能會收到錯誤訊息：「資料庫 '*\<資料庫名稱>*' 的還原作業因為資源集區 '*\<資源集區名稱>*' 中的記憶體不足而失敗」。這表示伺服器沒有足夠的可用記憶體來還原資料庫。 
    
-您還原資料庫的目標伺服器針對資料庫備份的記憶體最佳化資料表必須有足夠的可用記憶體，否則資料庫將不會恢復連線。  
+您還原資料庫的目標伺服器針對資料庫備份的記憶體最佳化資料表必須有足夠的可用記憶體，否則資料庫將不會恢復連線，並會標記為可疑。  
   
 如果伺服器確實有足夠的實體記憶體，但您仍發現此錯誤，可能是其他處理序使用太多記憶體，或組態問題導致沒有足夠的記憶體可供還原使用。 針對這類問題，請採取下列措施將更多記憶體提供給還原作業： 
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/27/2017
     > 如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 設成與 MAX_MEMORY_PERCENT 相同的值。   
     > 如需詳細資訊，請參閱[在 VM 環境中使用記憶體內部 OLTP 的最佳做法](#bkmk_VMs)主題。  
   
-    ```tsql  
+    ```sql  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/27/2017
 >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 與 MAX_MEMORY_PERCENT 設為相同值。   
 > 如需詳細資訊，請參閱[在 VM 環境中使用記憶體內部 OLTP 的最佳做法](#bkmk_VMs)主題。  
   
-```tsql  
+```sql  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -154,11 +155,11 @@ GO
 ### <a name="memory-pre-allocation"></a>記憶體預先配置
 對虛擬化環境中的記憶體而言，更好的效能與增強的支援是基本考量。 您必須能夠依據虛擬機器的需求 (尖峰和非尖峰負載)，快速配置記憶體給虛擬機器，同時也要確保不會浪費記憶體。 有關如何在主機上執行的虛擬機器之間配置和管理記憶體，Hyper-V 動態記憶體功能可以加強這方面的靈活度。
 
-將具有記憶體最佳化資料表的資料庫進行虛擬化時，需要修改虛擬化及管理 SQL Server 的一些最佳做法。 如果沒有記憶體最佳化資料表，則其中兩個最佳做法如下：
+將具有記憶體最佳化資料表的資料庫進行虛擬化時，需要修改虛擬化及管理 SQL Server 的一些最佳做法。 如果沒有記憶體最佳化資料表，則其中兩個最佳作法如下：
 -  如果您使用最小伺服器記憶體，最好只要指派所需的記憶體數量，這樣才能保留足夠的記憶體給其他處理序 (進而避免分頁)。
 -  不要設定太高的記憶體預先配置值。 否則，其他程序可能會在需要時，無法得到足夠的記憶體，而導致記憶體分頁。
 
-如果您為具有記憶體最佳化資料表的資料庫遵循上述做法，即使您有足夠的記憶體來還原資料庫，在嘗試還原和復原資料庫時，還是會導致資料庫陷入「復原暫止」狀態。 原因如下，在啟動時，記憶體內部 OLTP 將資料帶入記憶體的積極程度，遠勝於動態記憶體配置將記憶體配置給資料庫。
+如果您為具有記憶體最佳化資料表的資料庫遵循上述作法，即使您有足夠的記憶體來還原資料庫，在嘗試還原和復原資料庫時，還是會導致資料庫陷入「復原暫止」狀態。 原因如下，在啟動時，記憶體內部 OLTP 將資料帶入記憶體的積極程度，遠勝於動態記憶體配置將記憶體配置給資料庫。
 
 ### <a name="resolution"></a>解決方案
 若要緩和這個問題，請預先配置足夠的記憶體給資料庫，以復原或重新啟動資料庫，而不是提供最小值，依賴動態記憶體在需要時提供額外的記憶體。

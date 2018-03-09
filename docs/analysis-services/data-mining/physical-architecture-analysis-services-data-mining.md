@@ -5,31 +5,30 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - server architecture [Analysis Services]
 - architecture [Analysis Services]
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc6dcc6e4383e22a3b1695cc03cd40bd6acf8fb2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a8a4319e77588c13a06a6c648bcfafa11fb7c92b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>實體架構 (Analysis Services – 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會使用伺服器和用戶端元件提供商業智慧應用程式的資料採礦功能：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用伺服器和用戶端元件，為商業智慧應用程式提供資料採礦功能：  
   
 -   伺服器元件是以 Microsoft Windows 服務的形式實作。 同一部電腦上可以有多個執行個體，每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體都實作為個別的 Windows 服務執行個體。  
   
@@ -54,11 +53,11 @@ ms.lasthandoff: 12/08/2017
 ## <a name="server-configuration"></a>伺服器組態  
  一個伺服器執行個體可以支援多個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，而且每個資料庫都有自己的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務執行個體，可回應用戶端要求並處理物件。  
   
- 如果您想要處理表格式模型和資料採礦及/或多維度模型，則必須安裝個別的執行個體。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援並存安裝表格式模式下所執行的執行個體 (該執行個體會使用 xVelocity 記憶體內部分析引擎 (VertiPaq) 儲存引擎) 以及使用其中一個傳統 OLAP、MOLAP 或 ROLAP 組態所執行的執行個體。 如需詳細資訊，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
+ 如果您想要處理表格式模型和資料採礦及/或多維度模型，則必須安裝個別的執行個體。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援並存安裝表格式模式下所執行的執行個體 (該執行個體會使用 xVelocity 記憶體中分析引擎 (VertiPaq) 儲存引擎) 以及使用其中一個傳統 OLAP、MOLAP 或 ROLAP 組態所執行的執行個體。 如需詳細資訊，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
  用戶端與 Analysis Services 伺服器之間的所有通訊都會使用 XMLA，這是一種與平台和語言無關的通訊協定。 從用戶端收到要求時，Analysis Services 就會判斷此要求是否與 OLAP 或資料採礦有關，然後適當地路由傳送此要求。 如需詳細資訊，請參閱 [OLAP 引擎伺服器元件](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)。  
   
-## <a name="see-also"></a>請參閱  
- [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+## <a name="see-also"></a>另請參閱  
+ [邏輯架構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

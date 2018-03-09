@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff9e0b26ec409940e08fd1e3161add395d00b524
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0b47f04704002aa14fb957dc05a593695d2f689b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-destination"></a>SQL Server 目的地
   SQL Server 目的地會連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，並大量載入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表和檢視中。 如果封裝會存取遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，您就無法在這種封裝中使用 SQL Server 目的地。 反之，這種封裝應該使用 OLE DB 目的地。 如需詳細資訊，請參閱 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [SQL Server 目的地自訂屬性](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/20/2017
  從清單中選取現有的連接，或按一下 [新增] 來建立新的連接。  
   
  **新增**  
- 使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
+ 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
   
  **使用資料表或檢視**  
  從清單中選取現有的資料表或檢視，或按一下 [新增] 來建立新的連接。  
@@ -173,10 +174,10 @@ ms.lasthandoff: 11/20/2017
  指定工作是否應該保留 Null 值。 此屬性的預設值為 **False**。  
   
  **資料表鎖定**  
- 指定載入資料時是否鎖定資料表。 此屬性的預設值為 **True**。  
+ 指定載入資料時是否鎖定資料表。 這個屬性的預設值為 **True**。  
   
  **檢查條件約束**  
- 指定工作是否應該檢查條件約束。 此屬性的預設值為 **True**。  
+ 指定工作是否應該檢查條件約束。 這個屬性的預設值為 **True**。  
   
  **引發觸發程序**  
  指定大量插入是否應該引發資料表上的觸發程序。 此屬性的預設值為 **False**。  

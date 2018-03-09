@@ -8,30 +8,30 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, objects
 - objects [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, objects
 ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e05ba70d4d1593e444cd8735196ddb04e4ef7ae7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ea027aba8d0d49c752bd31569f84d0f0cec022bd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="objects-assl"></a>物件 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]這個參考章節包含每個項目，可做為 Analysis Services 指令碼語言 (ASSL) 結構描述中物件的語法和使用方式資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+這個參考章節包含在「Analysis Services 指令碼語言」(ASSL) 結構描述中當做物件之每個元素的語法和使用方式資訊。  
   
  雖然 ASSL 結構描述僅包含 XML 元素，從開發人員的觀點來看，這一節所述的元素對應至物件，例如**資料庫**， **Cube**，和**維度**的執行個體所包含的物件階層中的物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 |元素|Description|  
 |-------------|-----------------|  
 |[Account 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/account-element-assl.md)|包含內部帳戶類型的詳細[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)項目。|  
-|[Action 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|包含中可用動作的相關資訊[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)項目或[觀點來看](../../../analysis-services/scripting/objects/perspective-element-assl.md)項目。|  
+|[Action 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|包含有關 [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) 元素或 [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) 元素中可用動作的資訊。|  
 |[Aggregation 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)|定義單一彙總[分割](../../../analysis-services/scripting/objects/partition-element-assl.md)項目。|  
 |[AggregationDesign 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)|定義可在資料庫中多個分割區之間共用之彙總定義的集合。|  
 |[AggregationInstance 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md)|定義資料分割的彙總執行個體。|  
@@ -114,7 +114,7 @@ ms.lasthandoff: 12/08/2017
 |[UnknownMemberTranslation 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/unknownmembertranslation-element-assl.md)|包含標題的翻譯[UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md)元素[維度](../../../analysis-services/scripting/objects/dimension-element-assl.md)項目。|  
 |[ValueColumn 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/valuecolumn-element-assl.md)|識別提供父元素之值的資料行。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   

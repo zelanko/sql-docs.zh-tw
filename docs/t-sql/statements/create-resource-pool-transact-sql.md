@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - RESOURCE POOL
 - CREATE_RESOURCE_POOL_TSQL
 - RESOURCE_POOL_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CREATE RESOURCE POOL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0d6f56e80b0a28dffab2311df3ecce3b2ac76cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 6da47e346606170b29798b0301c10c5adeeed055
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,13 +73,13 @@ CREATE RESOURCE POOL pool_name
  *pool_name*  
  這是資源集區的使用者定義名稱。 *pool_name*是英數字元可以是最多 128 個字元，必須是唯一的執行個體內[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，且必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
   
- MIN_CPU_PERCENT =*值*  
+ MIN_CPU_PERCENT =*value*  
  當 CPU 出現競爭時，為在資源集區中的所有要求，指定保證平均 CPU 頻寬。 *值*是預設值為 0 的整數。 允許的範圍*值*是從 0 到 100。  
   
- MAX_CPU_PERCENT =*值*  
+ MAX_CPU_PERCENT =*value*  
  當出現 CPU 競爭時，指定所有要求在資源集區中將會接收的最大平均 CPU 頻寬。 *值*是預設值為 100 的整數。 允許的範圍*值*是從 1 到 100 之間。  
   
- CAP_CPU_PERCENT =*值*  
+ CAP_CPU_PERCENT =*value*  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定資源集區中所有要求都將接收的 CPU 頻寬硬體上限。 將最大 CPU 頻寬層級限制為指定的值。 *值*是預設值為 100 的整數。 允許的範圍*值*是從 1 到 100 之間。  
@@ -97,18 +100,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*值*  
+ MIN_MEMORY_PERCENT =*value*  
  指定為此資源集區所保留的最小記憶體數量 (不與其他資源集區共享)。 *值*是預設值為 0 的整數的容許的範圍*值*是從 0 到 100。  
   
- MAX_MEMORY_PERCENT =*值*  
+ MAX_MEMORY_PERCENT =*value*  
  指定在此資源集區中，可供要求所用的伺服器記憶體總量。 *值*是預設值為 100 的整數。 允許的範圍*值*是從 1 到 100 之間。  
   
- MIN_IOPS_PER_VOLUME =*值*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定要為資源集區保留之每個磁碟區的每秒 I/O 作業數 (IOPS) 最小值。 允許的範圍*值*是從 0 到 2 ^31-1 (2147483647)。 指定 0 表示集區沒有最小臨界值。 預設值是 0。  
   
- MAX_IOPS_PER_VOLUME =*值*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定要允許資源集區使用之每個磁碟區的每秒 I/O 作業數 (IOPS) 最大值。 允許的範圍*值*是從 0 到 2 ^31-1 (2147483647)。 指定 0 可為集區設定無限的臨界值。 預設值是 0。  
@@ -167,7 +170,7 @@ WITH (
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   

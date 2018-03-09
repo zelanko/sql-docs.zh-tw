@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
 - RAISERROR_TSQL
 - RAISEERROR_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysmessages system table
 - errors [SQL Server], RAISERROR statement
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,11 +80,11 @@ RAISERROR ( { msg_str | @local_variable }
   
  *msg_str*是具有選擇性內嵌的轉換規格的字元字串。 每個轉換規格會定義如何格式化並放入欄位位置中的轉換規格的引數清單中的值*msg_str*。 轉換規格具有這個格式：  
   
- %[[*旗標*] [*寬度*] [。 *有效位數*] [{h | l}]]*類型*  
+ % [[*flag*] [*width*] [. *有效位數*] [{h | l}]]*類型*  
   
  參數可以用於*msg_str*是：  
   
- *旗標*  
+ *flag*  
   
  這是決定替代值之間距與對齊的程式碼。  
   
@@ -94,7 +96,7 @@ RAISERROR ( { msg_str | @local_variable }
 |# (數字)|x 或 X 之十六進位類型的 0x 前置詞|使用 o、x 或 X 格式時，數字符號 (#) 旗標會分別在非零值前面加上 0、0x 或 0X。 當在 d、i 或 u 前面加上數字符號 (#) 旗標時，該旗標會被忽略。|  
 |' ' (空白)|空間填補|如果輸出值帶正負號且為正值時，會在輸出值前加上空格。 如果包含了正號 (+) 旗標時，這個空格會被忽略。|  
   
- *寬度*  
+ *width*  
   
  這是定義引數值所在欄位最小寬度的整數。 如果引數值的長度就是等於或長於*寬度*，而且沒有填補印出值。 如果值小於*寬度*，將值填補至指定的長度*寬度*。  
   
@@ -126,10 +128,10 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  若要將值轉換成[!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint**資料類型，請指定**%i64d**。  
   
- **@***local_variable*  
- 這是包含字串，以相同的方式格式化任何有效字元資料類型的變數*msg_str*。 **@***local_variable*必須**char**或**varchar**，或能夠隱含地轉換成這些資料類型。  
+ **@** *local_variable*  
+ 這是包含字串，以相同的方式格式化任何有效字元資料類型的變數*msg_str*。 **@ * * * local_variable*必須**char**或**varchar**，或能夠隱含地轉換成這些資料類型。  
   
- *嚴重性*  
+ *severity*  
  這是與這則訊息相關聯的使用者自訂嚴重性層級。 當使用*msg_id*來引發使用 sp_addmessage 所建立的使用者定義訊息，RAISERROR 上指定的嚴重性會覆寫 sp_addmessage 中指定的嚴重性。  
   
  任何使用者皆可指定從 0 到 18 的嚴重性層級。 只有 sysadmin 固定伺服器角色或使用者具有 ALTER TRACE 權限的成員可以指定從 19 到 25 的嚴重性層級。 因為從 19 到 25 的嚴重性層級需要 WITH LOG 選項。 小於 0 的嚴重性層級會被解譯為 0。 大於 25 的嚴重性層級會被解譯為 25。  
@@ -150,18 +152,18 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *狀態*  
+ *state*  
  這是介於 0 到 255 之間的整數。 負數值預設為 1。 不應使用大於 255 的值。 
   
  如果相同的使用者自訂錯誤在多個位置引發，針對每個位置使用唯一的狀態碼可以協助您找出引發錯誤的程式碼區段。  
   
- *引數*  
+ *argument*  
  是中定義的變數替代中所使用的參數*msg_str*或對應至訊息*msg_id*。 可以有 0 或更多的替代參數，但是替代參數的總數不能超過 20。 每一個替代參數可以是區域變數或任何一種資料類型： **tinyint**， **smallint**， **int**， **char**， **varchar**， **nchar**， **nvarchar**，**二進位**，或**varbinary**。 不支援其他資料類型。  
   
  *選項*  
  這是錯誤的自訂選項，可以是下表中的值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |LOG|錯誤記錄檔和執行個體的應用程式記錄檔中記錄錯誤[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 記錄在錯誤記錄檔中的錯誤目前最大限制為 440 位元組。 只有 sysadmin 固定的伺服器角色或具有 ALTER TRACE 權限的使用者的成員可以指定 WITH LOG。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|立即傳送訊息給用戶端。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
@@ -285,11 +287,11 @@ RAISERROR (@StringVariable, -- Message text.
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [sp_addmessage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_dropmessage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [xp_logevent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   

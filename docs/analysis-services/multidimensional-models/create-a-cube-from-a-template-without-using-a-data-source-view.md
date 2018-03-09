@@ -5,34 +5,32 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ebf7113a80cecd58a98108a82caa26d21d5d158
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>從範本建立 Cube，而不使用資料來源檢視
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]選取**不使用資料來源建立 cube** 「 Cube 精靈 」，而不使用資料來源檢視建立 cube 的第一頁上。 稍後，您可以使用 [結構描述產生精靈]，根據 Cube 及其他可能的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件結構，來產生資料來源檢視的關聯式結構描述。 如需產生結構描述的詳細資訊，請參閱[結構描述產生精靈 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [Cube 精靈] 的第一頁上，選取 [Build the cube without using a data source (不使用資料來源而建立 Cube)] 建立 Cube，而不使用資料來源檢視。 稍後，您可以使用 [結構描述產生精靈]，根據 Cube 及其他可能的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件結構，來產生資料來源檢視的關聯式結構描述。 如需產生結構描述的詳細資訊，請參閱[結構描述產生精靈 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
   
 ## <a name="selecting-the-build-method"></a>選取建立方法  
  在 [Cube 精靈] 的 [Select Build Method (選取建立方法)] 頁面上，按一下 [Build the cube without using a data source (不使用資料來源而建立 Cube)]。 若要使用現有的 Cube 範本建立 Cube，請選取 [Use a cube template (使用 Cube 範本)] 核取方塊。 。 如果您不選取使用範本，則必須手動設定選項。  
   
- Cube 範本包含預先定義的量值、量值群組、維度、階層及屬性。 如果選取範本，精靈會使用範本中的物件定義做為基礎，來設定下列頁面中的選項。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 標準 Cube 的數個範本隨附安裝。 伺服器管理員也可以加入專為您的組織資料所設定的 Cube 或維度範本。  
+ Cube 範本包含預先定義的量值、量值群組、維度、階層及屬性。 如果選取範本，精靈會使用範本中的物件定義做為基礎，來設定下列頁面中的選項。 標準 Cube 的數個範本隨附安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 伺服器管理員也可以加入專為您的組織資料所設定的 Cube 或維度範本。  
   
 ## <a name="selecting-dimensions"></a>選取維度  
  使用精靈的 [Select Dimensions (選取維度)] 頁面，將現有的維度加入 Cube。 只有當專案或資料庫中已含有不使用資料來源的共用維度時，才會顯示此頁面。 此頁面不會列出使用資料來源的維度。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |資料行|說明|  
 |------------|-----------------|  
 |**型別**|顯示範本維度的維度類型。 按一下此資料格，即可變更維度的維度類型。 此資料行會設定維度物件的 **Type** 屬性。|  
-|**Name**|顯示維度名稱。 按一下此資料格，即可輸入其他名稱。 此值會設定維度物件的 **Name** 屬性。|  
+|**名稱**|顯示維度名稱。 按一下此資料格，即可輸入其他名稱。 此值會設定維度物件的 **Name** 屬性。|  
 |**SCD**|指定這是緩時變維度 (SCD)。 選取此核取方塊，即可將 SCD Start Date、End Date Original ID 及 Status 屬性加入維度。 如果您使用範本建立 Cube，且精靈在範本維度中偵測到這四種屬性類型，預設會選取 [SCD]。|  
 |**屬性**|顯示要為維度建立的屬性。 維度名稱前面是清單中的每個屬性名稱。 這個清單是唯讀的。 完成精靈之後，您可以使用維度設計師來編輯屬性。|  
   

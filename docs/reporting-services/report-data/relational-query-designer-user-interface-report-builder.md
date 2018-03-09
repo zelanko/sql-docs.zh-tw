@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10012"
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20cfc19fedbf8bc1369804c2795f180228b6a88b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>關聯式查詢設計工具使用者介面 (報表產生器)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的報表產生器和報表設計師同時提供圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，用來指定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 中針對報表資料集擷取的資料。 使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。 使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
@@ -102,7 +100,7 @@ ms.lasthandoff: 12/05/2017
   
  下表列出彙總並提供彙總的簡要說明。  
   
-|Aggregate|說明|  
+|Aggregate|描述|  
 |---------------|-----------------|  
 |Avg|傳回群組中值的平均值。 實作 SQL AVG 彙總。|  
 |Count|傳回群組中的項目數。 實作 SQL COUNT 彙總。|  
@@ -111,7 +109,7 @@ ms.lasthandoff: 12/05/2017
 |Max|傳回群組中的最大值。 實作 SQL MAX 彙總。|  
 |StDev|傳回群組中所有值的統計標準差。 實作 SQL STDEV 彙總。|  
 |StDevP|傳回群組指定之運算式中所有值的母體統計標準差。 實作 SQL STDEVP 彙總。|  
-|Sum|傳回群組中所有值的總和。 實作 SQL SUM 彙總。|  
+|SUM|傳回群組中所有值的總和。 實作 SQL SUM 彙總。|  
 |Var|傳回群組中所有值的統計變異數。 實作 SQL VAR 彙總。|  
 |VarP|傳回群組中所有值的母體統計變異數。 實作 SQL VARP 彙總。|  
 |Avg Distinct|傳回唯一平均值。 實作 AVG 彙總和 DISTINCT 關鍵字的組合。|  
@@ -191,7 +189,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="graphical-query-designer-toolbar"></a>圖形化查詢設計工具工具列  
  關聯式查詢設計工具的工具列會提供下列按鈕來協助您指定或檢視查詢的結果。  
   
-|按鈕|說明|  
+|按鈕|描述|  
 |------------|-----------------|  
 |**當成文字編輯**|切換至以文字為基礎的查詢設計工具，以便檢視自動產生的查詢，或是修改查詢。|  
 |**匯入**|從檔案或報表匯入現有的查詢。 支援 .sql 和 .rdl 檔案類型。|  

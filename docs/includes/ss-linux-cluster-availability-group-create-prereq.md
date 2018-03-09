@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
 建立可用性群組之前，您需要：
 
@@ -138,15 +138,15 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>在所有複本上建立資料庫鏡像端點
 
-資料庫鏡像端點使用傳輸控制通訊協定 (TCP) 來傳送和接收參與資料庫鏡像工作階段或裝載可用性複本之伺服器執行個體之間的訊息。 資料庫鏡像端點會在唯一的 TCP 通訊埠編號上接聽。 TCP 接聽程式需要一個接聽程式 IP 位址。 接聽程式 IP 位址必須是 IPv4 位址。 您也可以使用`0.0.0.0`。 
+資料庫鏡像端點使用傳輸控制通訊協定 (TCP) 來傳送和接收參與資料庫鏡像工作階段或裝載可用性複本之伺服器執行個體之間的訊息。 資料庫鏡像端點會在唯一的 TCP 通訊埠編號上接聽。 
 
-下列的 TRANSACT-SQL 指令碼會建立名為接聽端點`Hadr_endpoint`可用性群組。 它會啟動端點，並可讓您建立的使用者連接權限。 執行指令碼之前，請取代 `**< ... >**` 之間的值。
+下列的 TRANSACT-SQL 指令碼會建立名為接聽端點`Hadr_endpoint`可用性群組。 它會啟動端點，並可讓您建立的使用者連接權限。 執行指令碼之前，請取代 `**< ... >**` 之間的值。 您可以選擇性地包含 IP 位址`LISTENER_IP = (0.0.0.0)`。 接聽程式 IP 位址必須是 IPv4 位址。 您也可以使用`0.0.0.0`。 
 
 更新您的環境，所有 SQL Server 執行個體上的下列 TRANSACT-SQL 指令碼： 
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = ALL,
         AUTHENTICATION = CERTIFICATE dbm_certificate,
@@ -161,7 +161,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = WITNESS,
         AUTHENTICATION = CERTIFICATE dbm_certificate,

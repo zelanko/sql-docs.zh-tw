@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_operator
 - sp_help_operator_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_operator
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 392586d2f3ea34b6914cb7bf34757d0481e890a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc89c5f6689b64aea7be0410850f373d75d876e6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +49,10 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@operator_name=** ] **'***operator_name***'**  
+ [ **@operator_name=** ] **'***operator_name***'**  
  操作員名稱。 *operator_name*是**sysname**。 如果*operator_name*是未指定，會傳回有關所有操作員的資訊。  
   
- [  **@operator_id=** ] *operator_id*  
+ [ **@operator_id=** ] *operator_id*  
  所要求為其相關資訊之操作員的識別碼。 *operator_id*是**int**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -60,15 +63,15 @@ sp_help_operator
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|操作員識別碼。|  
 |**name**|**sysname**|操作員名稱。|  
-|**已啟用**|**tinyint**|操作員可以接收任何通知：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
-|**email_address**|**nvarchar （100)**|操作員電子郵件地址。|  
+|**enabled**|**tinyint**|操作員可以接收任何通知：<br /><br /> **1** = 是<br /><br /> **0** = No|  
+|**email_address**|**nvarchar(100)**|操作員電子郵件地址。|  
 |**last_email_date**|**int**|操作員前次收到電子郵件通知的日期。|  
 |**last_email_time**|**int**|操作員前次收到電子郵件通知的時間。|  
-|**pager_address**|**nvarchar （100)**|操作員呼叫器號碼。|  
+|**pager_address**|**nvarchar(100)**|操作員呼叫器號碼。|  
 |**last_pager_date**|**int**|操作員前次收到呼叫器通知的日期。|  
 |**last_pager_time**|**int**|操作員前次收到呼叫器通知的時間。|  
 |**weekday_pager_start_time**|**int**|操作員在工作日能夠收到呼叫器通知的期間之起始時間。|  
@@ -78,7 +81,7 @@ sp_help_operator
 |**sunday_pager_start_time**|**int**|操作員在星期日能夠收到呼叫器通知的期間之起始時間。|  
 |**sunday_pager_end_time**|**int**|操作員在星期日能夠收到呼叫器通知的期間之最終時間。|  
 |**pager_days**|**tinyint**|位元遮罩 (**1** = 星期日、 **64** = 星期六) 天的當週，指出操作員能夠收到呼叫器通知的時間。|  
-|**netsend_address**|**nvarchar （100)**|網路快顯通知的操作員位址。|  
+|**netsend_address**|**nvarchar(100)**|網路快顯通知的操作員位址。|  
 |**last_netsend_date**|**int**|操作員前次收到網路快顯通知的日期。|  
 |**last_netsend_time**|**int**|操作員前次收到網路快顯通知的時間。|  
 |**category_name**|**sysname**|這位操作員所屬的操作員類別目錄名稱。|  
@@ -110,9 +113,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_operator &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_update_operator &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

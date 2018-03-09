@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rtp.rptdesigner.components.f1
@@ -18,13 +16,13 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1060d0f256f9520860b01d4c324bd8e21100e923
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8b47556b43940c363d8eac0a53d63db601bcd8ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>報表設計師中的報表組件 (SSRS)
 
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/05/2017
   
  您也可以選擇將已經發行過的報表當做新報表來發行。 請在 [發行報表組件] 對話方塊中，按一下 [發行為新報表組件]。 這個新的報表組件會有新的唯一識別碼，而且和舊的報表組件沒有關聯性。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [管理報表組件](../../reporting-services/report-design/managing-report-parts.md)  
 

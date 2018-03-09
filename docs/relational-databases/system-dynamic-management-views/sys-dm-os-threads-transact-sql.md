@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_threads
 - dm_os_threads
 - sys.dm_os_threads_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_threads dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9108fa8c4af25be975394a3388cd26da99b9b595
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41727f804fb31ed6773c671a40b63cb02ca6793b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,33 +43,33 @@ ms.lasthandoff: 11/17/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|thread_address|**varbinary （8)**|執行緒的記憶體位址 (主索引鍵)。|  
+|thread_address|**varbinary(8)**|執行緒的記憶體位址 (主索引鍵)。|  
 |started_by_sqlservr|**bit**|指出執行緒起始端。<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已啟動執行緒。<br /><br /> 0 = 另一個元件已啟動執行緒，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內的擴充預存程序。|  
 |os_thread_id|**int**|作業系統指派的執行緒識別碼。|  
 |status|**int**|內部狀態旗標。|  
-|instruction_address|**varbinary （8)**|目前執行的指示位址。|  
+|instruction_address|**varbinary(8)**|目前執行的指示位址。|  
 |creation_time|**datetime**|建立這個執行緒的時間。|  
 |kernel_time|**bigint**|這個執行緒使用的核心時間量。|  
 |usermode_time|**bigint**|這個執行緒使用的使用者時間量。|  
-|stack_base_address|**varbinary （8)**|這個執行緒之最高堆疊位址的記憶體位址。|  
-|stack_end_address|**varbinary （8)**|這個執行緒之最低堆疊位址的記憶體位址。|  
+|stack_base_address|**varbinary(8)**|這個執行緒之最高堆疊位址的記憶體位址。|  
+|stack_end_address|**varbinary(8)**|這個執行緒之最低堆疊位址的記憶體位址。|  
 |stack_bytes_committed|**int**|堆疊中已認可的位元組數。|  
 |stack_bytes_used|**int**|執行緒目前使用的位元組數。|  
 |affinity|**bigint**|這個執行緒正在執行的 CPU 遮罩。 這取決於所設定的值**ALTER SERVER CONFIGURATION SET PROCESS AFFINITY**陳述式。 若是軟相似性，可能與排程器不同。|  
 |優先權|**int**|這個執行緒的優先權值。|  
 |地區設定|**int**|執行緒的快取地區設定 LCID。|  
-|Token|**varbinary （8)**|執行緒的快取模擬 Token 控制代碼。|  
+|Token|**varbinary(8)**|執行緒的快取模擬 Token 控制代碼。|  
 |is_impersonating|**int**|指出這個執行緒是否使用 Win32 模擬。<br /><br /> 1 = 執行緒使用不同於處理序預設值的安全性認證。 這指出執行緒模擬的實體不是建立處理序的實體。|  
 |is_waiting_on_loader_lock|**int**|執行緒是否在等待載入程式鎖定的作業系統狀態。|  
-|fiber_data|**varbinary （8)**|在執行緒上執行的目前 Win32 Fiber。 這只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為輕量型共用的情況。|  
-|thread_handle|**varbinary （8)**|僅供內部使用。|  
-|event_handle|**varbinary （8)**|僅供內部使用。|  
-|scheduler_address|**varbinary （8)**|與這個執行緒相關聯之排程器的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_schedulers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
-|worker_address|**varbinary （8)**|繫結這個執行緒之工作者的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_workers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|fiber_context_address|**varbinary （8)**|內部 Fiber 內容位址。 這只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為輕量型共用的情況。|  
-|self_address|**varbinary （8)**|內部一致性指標。|  
+|fiber_data|**varbinary(8)**|在執行緒上執行的目前 Win32 Fiber。 這只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為輕量型共用的情況。|  
+|thread_handle|**varbinary(8)**|僅供內部使用。|  
+|event_handle|**varbinary(8)**|僅供內部使用。|  
+|scheduler_address|**varbinary(8)**|與這個執行緒相關聯之排程器的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_schedulers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|worker_address|**varbinary(8)**|繫結這個執行緒之工作者的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_workers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|fiber_context_address|**varbinary(8)**|內部 Fiber 內容位址。 這只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為輕量型共用的情況。|  
+|self_address|**varbinary(8)**|內部一致性指標。|  
 |processor_group|**smallint**|**適用於**： [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 處理器群組識別碼。|  
-|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
 ## <a name="permissions"></a>Permissions  
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
@@ -86,8 +89,8 @@ SELECT *
   WHERE started_by_sqlservr = 0;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
-  [sys.dm_os_workers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+  [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
  [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

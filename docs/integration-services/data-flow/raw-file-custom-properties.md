@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e347cdfd00f6e9e06ab8de49a4db3a382ae4eba7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b007bc2aa2f8e8a2b7f9b7d3dfbfbbeece4730cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raw-file-custom-properties"></a>原始檔案自訂屬性
   **來源自訂屬性**  
@@ -30,10 +31,10 @@ ms.lasthandoff: 11/20/2017
   
  下表描述的是原始檔案來源的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|說明|  
+|屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|整數 (列舉)|用來存取原始資料的模式。 可能的值為 [檔案名稱] (0) 和 [來自變數的檔案名稱] (1)。 預設值是 [檔案名稱] (0)。|  
-|FileName|字串|來源檔案的路徑和檔案名稱。|  
+|FileName|String|來源檔案的路徑和檔案名稱。|  
   
  原始檔案來源的輸出和輸出資料行沒有任何自訂屬性。  
   
@@ -45,10 +46,10 @@ ms.lasthandoff: 11/20/2017
   
  下表描述的是原始檔案目的地的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|說明|  
+|屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|整數 (列舉)|一個值，指定 FileName 屬性包含檔案名稱，或包含檔案名稱之變數的名稱。 選項為 [檔案名稱] (0) 和 [來自變數的檔案名稱] (1)。|  
-|FileName|字串|原始檔案目的地寫入的檔案名稱。|  
+|FileName|String|原始檔案目的地寫入的檔案名稱。|  
 |WriteOption|整數 (列舉)|一個值，指定原始檔案目的地是否會刪除具有相同名稱的現有檔案。 選項為 [永遠建立] (0)、[建立一次] (1)、[截斷與附加] (3) 和 [附加] (2)。 此屬性的預設值為 [永遠建立] (0)。|  
   
 > [!NOTE]  
@@ -59,6 +60,6 @@ ms.lasthandoff: 11/20/2017
  如需相關資訊，請參閱 [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

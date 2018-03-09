@@ -16,13 +16,13 @@ ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c860279d932e5c9b61ed351ed518734b970105a1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ff5f39674cdaba2f7b1846a9a59dda69da3934b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>排序查詢中的多個資料行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以藉由使用[準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中的 [排序次序]，指定排序資料時要使用之資料行的次序。  
