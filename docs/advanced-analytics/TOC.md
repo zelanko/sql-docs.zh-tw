@@ -84,7 +84,10 @@
 ## [Python 教學課程](tutorials/sql-server-python-tutorials.md)
 
 ### [Python：使用 T-SQL 執行 Python](tutorials/run-python-using-t-sql.md)
-### [Python：使用 revoscalepy 建立模型](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [在預存程序中包裝 Python](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [從 SQL Server 中的 Python 模型來定型與計分](tutorials/train-score-using-python-in-tsql.md)
+#### [在 SQL Server 計算內容中使用 revoscalepy 來建立模型](tutorials/use-python-revoscalepy-to-create-model.md)
+
 ### [Python：適用於 SQL 開發人員的資料庫內分析](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 #### [下載範例資料](tutorials/sqldev-py1-download-the-sample-data.md)
@@ -94,7 +97,7 @@
 #### [定型及儲存模型](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [操作模型](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python：部署及取用模型](../advanced-analytics/python/publish-consume-python-code.md)
+### [Python：使用獨立伺服器來部署與取用模型](../advanced-analytics/python/publish-consume-python-code.md)
 
 # [Machine Learning Server - 獨立式](r/r-server-standalone.md)
 ## [快速入門](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -163,7 +166,7 @@
 ### [Machine Learning 服務的資源管理](r/resource-governance-for-r-services.md)
 ### [建立機器學習的資源集區](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning 服務的擴充事件](r/extended-events-for-sql-server-r-services.md)
-
+### [監視 PREDICT 陳述式的擴充事件](xe-event-predict-tsql.md)
 ### [Machine Learning 服務的 DMV](r/dmvs-for-sql-server-r-services.md)
 ### [使用 R 程式碼剖析函式](r/using-r-code-profiling-functions.md)
 ### [使用 Management Studio 中的自訂報表監視 Machine Learning 服務](r/monitor-r-services-using-custom-reports-in-management-studio.md)
