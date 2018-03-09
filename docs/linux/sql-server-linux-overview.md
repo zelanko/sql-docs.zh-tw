@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server on Linux 的概觀 |Microsoft 文件"
 description: "本文描述 SQL Server 如何在 Linux 上執行，並提供如何了解詳細資訊。"
 author: rothja
