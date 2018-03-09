@@ -1,7 +1,7 @@
 ---
 title: "安裝沒有網際網路存取的機器學習元件 |Microsoft 文件"
 ms.custom: 
-ms.date: 01/08/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 1c4a63077cf9801a6c83502f2fdea6f88c063227
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d7d218dcb5efeddf248230abff85b46da23d389a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>安裝沒有網際網路存取的機器學習服務元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,16 +47,18 @@ ms.lasthandoff: 02/11/2018
 
 ### <a name="step-1-obtain-additional-installers"></a>步驟 1： 取得額外的安裝程式
 
+一般情況下，不同的安裝程式是開放原始碼和提供專屬的元件。 SQL Server 安裝精靈可確保它們會安裝在正確的順序。 不過，某些版本中，可能會更新一組元件。 請參閱[資料表的安裝程式](#bkmk_2017Installers)每個版本，如需詳細資訊。
+
 **R**
 
-SQL Server 2016 和 SQL Server 2017 可支援的 R 語言。 兩個不同的安裝程式所需，開放原始碼和專屬的元件。 SQL Server 安裝精靈可確保它們會安裝在正確的順序。
+在 SQL Server 2016 和更新版本支援的 R 語言。 
 
 + 安裝程式與**SRO**名稱中提供的開放原始碼的元件。
 + 安裝程式與**SRS**名稱中包含由 Microsoft，包括用於資料庫整合提供的元件。
 
 **Python**
 
-Python 語言只支援 SQL Server 2017。 同樣地也有兩個不同的安裝程式，您必須下載。
+Python 語言需要 2017年或更新版本的 SQL Server。 
 
 + 安裝程式與**SPO**名稱中適用於 Microsoft Python 開啟，並提供開放原始碼元件。
 + 安裝程式與**SPS**名稱中是與 Microsoft Python 伺服器，並包含 Microsoft，包括用於資料庫整合所提供的元件。
@@ -79,19 +81,18 @@ SQL Server 2016 中的 R 服務的離線安裝程序的逐步解說，我們建�
 3. 對話方塊隨即開啟，提示您輸入**安裝路徑**的所需的封裝。
 4. 按一下**瀏覽**找出包含您之前複製的安裝程式檔案的資料夾。
 5. 如果找到正確的檔案，您可以按一下 [下一步] 來指出元件可用。
-10. 完成 SQL Server 安裝精靈。
-11. 執行必要的後續安裝步驟，以確定服務已啟用。
+6. 完成 SQL Server 安裝精靈。
+7. 執行必要的後續安裝步驟，以確定服務已啟用。
 
 ## <a name="installerlocs"></a>若要下載機器學習服務元件的位置
 
-> [!NOTE]
-> 請務必取得符合您要安裝的 SQL Server 版本的檔案。
-> 
-> 從 SQL Server 2017 CTP 2.0 提供的 Python 的支援。 舊版本中，包括 SQL Server 2016 中，不支援 Python。
+請務必取得符合您要安裝的 SQL Server 版本的檔案。
 
 + [取得 SQL Server 2016 中的 R 元件](#bkmk_2016Installers)
 
 + [若要取得 SQL Server 2017 R 或 Python 元件](#bkmk_2017Installers)
+
+從 SQL Server 2017 CTP 2.0 提供的 Python 的支援。 舊版本中，包括 SQL Server 2016 中，不支援 Python。
 
 ### <a name="bkmk_2017Installers"></a>下載適用於 SQL Server 2017
 
@@ -141,6 +142,11 @@ Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?
 Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 開啟 Microsoft Python     |不是變更，使用上一個|
 Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
+**SQL Server 2017 CU4** |
+Microsoft R Open     |不是變更，使用上一個|
+Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
+開啟 Microsoft Python     |不是變更，使用上一個|
+Microsoft Python Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
 
 ### <a name="bkmk_2016Installers"></a>下載適用於 SQL Server 2016
 
@@ -235,7 +241,7 @@ Microsoft R Server    |不是變更，使用上一個 |
 
 + 如果伺服器無法存取網際網路，您必須在更新程序開始「之前」下載 SQL Server 安裝程式，然後下載對應的 R 元件安裝程式版本。  根據預設，使用 SQL Server 不包含的 R 元件。
 
-+ 如果您是*加入*這些元件*現有*安裝中，使用 SQL Server 安裝程式的更新的版本，然後對應更新版本的其他元件。 當您指定 R 功能是要安裝時，安裝程式會尋找符合的機器學習服務元件的安裝程式的版本。
++ 如果您要將這些元件加入現有安裝，請使用更新的版本的 SQL Server 安裝程式，以及對應的其他元件的更新的版本。 當您指定 R 功能是要安裝時，安裝程式會尋找符合的機器學習服務元件的安裝程式的版本。
 
 ## <a name="command-line-arguments-for-specifying-component-locations"></a>命令列引數指定元件的位置
 
@@ -243,27 +249,26 @@ Microsoft R Server    |不是變更，使用上一個 |
 
 **安裝程式的位置**
 
-- `/UPDATESOURCE`若要指定包含 SQL Server 更新的安裝程式的本機檔案的位置
-- `/MRCACHEDIRECTORY`若要指定包含 R 元件封包檔的資料夾
-- `/MPYCACHEDIRECTORY`若要指定包含 Python 元件封包檔的資料夾
+- `/UPDATESOURCE` 若要指定包含 SQL Server 更新的安裝程式的本機檔案的位置
+- `/MRCACHEDIRECTORY` 若要指定包含 R 元件封包檔的資料夾
+- `/MPYCACHEDIRECTORY` 若要指定包含 Python 元件封包檔的資料夾
 
 **SQL Server 2016 中的 R 元件**
 
-- `/ADVANCEDANALYTICS`若要取得引擎支援的外部指令碼
-- `/IACCEPTROPENLICENSETERMS="True"`若要接受授權合約的個別 R
+- `/ADVANCEDANALYTICS` 若要取得引擎支援的外部指令碼
+- `/IACCEPTROPENLICENSETERMS="True"` 若要接受授權合約的個別 R
 
 **在 SQL Server 2017 的 R 元件**
 
-- `/ADVANCEDANALYTICS`若要取得引擎支援的外部指令碼
-- `/SQL_INST_MR`若要使用 R
-- `/IACCEPTROPENLICENSETERMS="True"`若要接受授權合約的個別 R
+- `/ADVANCEDANALYTICS` 若要取得引擎支援的外部指令碼
+- `/SQL_INST_MR` 若要使用 R
+- `/IACCEPTROPENLICENSETERMS="True"` 若要接受授權合約的個別 R
 
 **在 SQL Server 2017 Python 元件**
 
-- `/ADVANCEDANALYTICS`若要取得引擎支援的外部指令碼
-- `/SQL_INST_MPY`若要使用 Python
-- `/IACCEPTPYTHONLICENSETERMS="True"`若要接受授權合約的個別 Python
-
+- `/ADVANCEDANALYTICS` 若要取得引擎支援的外部指令碼
+- `/SQL_INST_MPY` 若要使用 Python
+- `/IACCEPTPYTHONLICENSETERMS="True"` 若要接受授權合約的個別 Python
 
 > [!NOTE]
 > 您無法在 SQL Server 安裝程式中使用參數，針對 [啟動列] 變更服務帳戶。 我們建議您安裝使用預設的服務帳戶，並修改使用 SQL Server 組態管理員的服務帳戶。 之後，請務必重新啟動控制板服務。

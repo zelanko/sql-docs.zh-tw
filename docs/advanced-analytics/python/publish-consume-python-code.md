@@ -1,7 +1,7 @@
 ---
-title: "發佈和取用的 Python 程式碼 |Microsoft 文件"
+title: "發佈和取用的 Python 程式碼的 SQL Server 機器學習伺服器 （獨立） |Microsoft 文件"
 ms.custom: 
-ms.date: 11/09/2017
+ms.date: 03/07/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,39 +12,34 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: cgronlund
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 8720440872fb0b41a76d4ac644fd3b60d52a095e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9a7e56d5f2726b627381d24e3cfd8e50ade325f6
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>發佈和取用 Python web 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-您可以部署至 web 服務的可運作的 Python 方案 Server Microsoft 機器學習中使用實施功能。 本主題說明已成功發行，然後再執行您的方案的步驟。
+您可以將部署工作使用實施功能的 web 服務的 Python 方案[SQL Server 機器學習伺服器 （獨立）](../r/r-server-standalone.md)執行個體。 這篇文章描述要成功發行，然後再執行您方案的步驟。
 
-這份文件的目標對象為想要了解如何為 web 服務裝載於 Microsoft Machine Learning 伺服器發行的 Python 程式碼或模型的資料科學家。 本文也說明如何應用程式可以使用程式碼或模型。 本文假設您已精通 Python。
+目標對象為想要了解如何將 Python 程式碼或模型發行至 Server 的機器學習，以及如何使用程式碼或自訂應用程式中的模型的資料科學家。 
 
-> [!IMPORTANT]
->
-> 這個範例針對隨附機器學習伺服器 （獨立），並且會使用機器學習伺服器版本中功能的 Python 版本開發**9.1.0**。
- > 
- > 若要查看相同的範例中，重新發行使用較新版的程式庫，在機器學習伺服器中，按一下 下面的連結。 請參閱[部署及管理 web 服務以 Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)。
-
-**適用於： Microsoft R Server （獨立）**
+本文假設您已精通 Python。 您也應該擁有獨立伺服器，它會安裝獨立於其他 SQL Server 功能。 您的伺服器必須是[設定實施](../operationalization-with-mrsdeploy.md)若要啟用 web 服務裝載。 
 
 ## <a name="overview-of-workflow"></a>工作流程的概觀
 
 從發行工作流程使用 Python web 服務可以摘要如下：
 
-1. 滿足[必要條件](#prereq)從核心 API Swagger 文件中產生 Python 用戶端程式庫。
-2. 將驗證和標頭邏輯加入至您的 Python 指令碼。
-3. 建立 Python 工作階段、 準備環境，以及建立要保留環境的快照集。
-4. 發佈 web 服務，並將內嵌此快照集。
-5. 使用您的工作階段中，嘗試 web 服務。
-6. 管理這些服務。
+1. 請確認您有使用 Python Server 機器學習的獨立伺服器安裝。
+2. 滿足[必要條件](#prereq)從核心 API Swagger 文件中產生 Python 用戶端程式庫。
+3. 將驗證和標頭邏輯加入至您的 Python 指令碼。
+4. 建立 Python 工作階段、 準備環境，以及建立要保留環境的快照集。
+5. 發佈 web 服務，並將內嵌此快照集。
+6. 使用您的工作階段中，嘗試 web 服務。
+7. 管理這些服務。
 
 ![Swagger 工作流程](./media/data-scientist-python-workflow.png)
 
@@ -52,9 +47,9 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="sample-code"></a>範例程式碼
 
-此範例程式碼假設您已符合[必要條件](#prereq)從該 Swagger 產生 Python 用戶端程式庫檔案，且您曾經使用 Autorest。
+此範例程式碼假設您擁有[產生必要的 Python 用戶端程式庫](#prereq)Swagger，從您已經使用 Autorest。 已實施針對設定 SQL Server 機器學習伺服器 （獨立） 執行個體上執行此程式碼。
 
-程式碼區塊之後，您可以找到逐步解說的完整程序的更詳細說明。
+若要瀏覽這個程式碼的深度，跳到[逐步解說](#walkthrough)如需詳細說明的完整程序。
 
 > [!IMPORTANT]
 > 這個範例會使用本機`admin`帳戶進行驗證。 不過，您應使用的認證和[驗證方法](#python-auth)系統管理員設定。
@@ -289,14 +284,16 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+<a name="walkthrough"></a>
+
 ## <a name="walkthrough"></a>逐步解說
 
 本節說明程式碼更詳細的運作方式。
 
 
-### <a name="prereq"></a>步驟 1。 建立必要的用戶端程式庫
+### <a name="prereq"></a> 步驟 1。 建立必要的用戶端程式庫
 
-發行您 Python 程式碼和模型透過 Microsoft Machine Learning 伺服器前，您必須產生用戶端程式庫，使用此版本中提供的 Swagger 文件。
+您可以開始發佈您的 Python 程式碼和模型，透過機器學習伺服器之前，您必須產生使用 Swagger 文件提供此版本的用戶端程式庫。
 
 1. Swagger 程式碼產生器安裝在本機電腦上，讓自己熟悉如何使用它。 您將使用它來產生以 Python 應用程式開發介面的用戶端程式庫。 常用的工具包括[Azure AutoRest](https://github.com/Azure/autorest) （需要 Node.js） 和[Swagger Codegen](https://github.com/swagger-api/swagger-codegen)。 
 

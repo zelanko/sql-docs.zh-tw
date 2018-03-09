@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 上安裝其他的 R 封裝 |Microsoft 文件"
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a328b07027f61f50df7e3ca2b6ac12b92508688b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: acb1727c85cae1d8176703c93cc77c971980d394
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server 上安裝其他的 R 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/28/2018
 
     若要從網際網路安裝封裝中使用傳統的 R 命令。 這是最簡單的方法，但是需要系統管理權限。
 
-    **適用於：**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]。     也所需的執行個體[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]封裝管理透過 Ddl 其中尚未啟用。
+    **適用於：**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]。 也所需的執行個體[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]封裝管理透過 Ddl 其中尚未啟用。
 
 + [伺服器上安裝新的 R 封裝**沒有**網際網路存取](#bkmk_offlineInstall)
 
@@ -40,9 +40,9 @@ ms.lasthandoff: 02/28/2018
 
 + [使用建立外部程式庫陳述式安裝封裝](#bkmk_createlibrary) 
 
-    SQL Server 2017，才能讓 DBA 不直接執行 R 或 Python 程式碼中建立套件庫中，會提供建立外部程式庫陳述式。 不過，此方法需要事先準備所有必要的封裝。  
+    [建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)陳述式所提供的 SQL Server 2017，使建立但不執行 R 封裝程式庫，或直接 Python 程式碼。 不過，此方法需要您事先準備所有必要的封裝，且需要額外的資料庫權限。
 
-    **適用於：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 其他限制也適用  
+    **適用於：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 其他限制也適用
 
 ## <a name="bkmk_rInstall"></a> 安裝新的 R 封裝，使用網際網路
 
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="bkmk_createlibrary"></a> 若要安裝封裝中使用 DDL 陳述式 
 
-在 SQL Server 2017，您可以使用[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)陳述式來加入執行個體或特定資料庫的封裝的集合。 此 DDL 陳述式和支援的資料庫角色被專為了安裝和管理封裝的 BA 而不需要使用 R 或 Python 工具。
+在 SQL Server 2017，您可以使用[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)陳述式來加入執行個體或特定資料庫的封裝的集合。 此 DDL 陳述式和支援的資料庫角色被為了促進安裝和管理封裝的資料庫擁有者而不需要使用 R 或 Python 工具。
 
 此程序需要一些準備工作，相較於安裝封裝使用傳統的 R 或 Python 方法。
 
@@ -140,6 +140,8 @@ ms.lasthandoff: 02/28/2018
     如果您在伺服器上沒有存取檔案系統，您也可以傳遞完整的封裝為變數，使用一種二進位格式。 如需詳細資訊，請參閱[建立外部程式庫](../../t-sql/statements/create-external-library-transact-sql.md)。
 
 + 如果沒有套件所需，陳述式將會失敗。 您必須分析您想要安裝並確定封裝會上載到伺服器和資料庫的封裝的相依性。 我們建議您使用**miniCRAN**或**igraph**分析封裝相依性。
+
++ 您必須在資料庫上的必要權限。 如需詳細資訊，請參閱[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
 
 ### <a name="prepare-the-packages-in-archive-format"></a>準備封裝封存格式
 

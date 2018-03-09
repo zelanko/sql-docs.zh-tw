@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b2435ce3fe98104aaf3bbb857e89779adb221e4
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ac82ec09c8051fae6614f19aad5ad2fb518bf710
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,8 @@ ms.lasthandoff: 02/03/2018
 |**media_family_id**|**uniqueidentifier**|用來識別媒體家族的唯一識別碼。 可以是 NULL。|  
 |**media_count**|**int**|媒體家族中的媒體數目。 可以是 NULL。|  
 |**logical_device_name**|**nvarchar(128)**|在此備份裝置的名稱**sys.backup_devices.name**。 如果這是暫時的備份裝置 (而不是永久的備份裝置中已有**sys.backup_devices**)，值**logical_device_name**是 NULL。|  
-|**physical_device_name**|**nvarchar(260)**|備份裝置的實體名稱。 可以是 NULL。|  
-|**device_type**|**tinyint**|備份裝置的類型：<br /><br /> 2 = 磁碟<br /><br /> 5 = 磁帶<br /><br /> 7 = 虛擬裝置<br /><br /> 105 = 永久備份裝置。<br /><br /> 可以是 NULL。<br /><br /> 所有永久裝置名稱和裝置號碼位於**sys.backup_devices**。|  
+|**physical_device_name**|**nvarchar(260)**|備份裝置的實體名稱。 可以是 NULL。 這個欄位是備份和還原程序之間共用。 它可能包含原始備份的目的地路徑或原始還原來源路徑。 取決於是否備份或還原第一次在伺服器上發生的資料庫。 請注意連續從相同的備份檔案還原會在還原期間更新不論其位置的路徑。 因為這個緣故， **physical_device_name**欄位不能以查看所使用的還原路徑。|  
+|**device_type**|**tinyint**|備份裝置的類型：<br /><br /> 2 = 磁碟<br /><br /> 5 = 磁帶<br /><br /> 7 = 虛擬裝置<br /><br /> 9 = azure 儲存體<br /><br /> 105 = 永久備份裝置。<br /><br /> 可以是 NULL。<br /><br /> 所有永久裝置名稱和裝置號碼位於**sys.backup_devices**。|  
 |**physical_block_size**|**int**|用來寫入媒體家族的實體區塊大小。 可以是 NULL。|  
 |**mirror**|**tinyint**|鏡像數目 (0-3)。|  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 02/03/2018
  若要減少此資料表和其他備份和記錄資料表中的資料列數目，請執行[sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)預存程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [備份及還原資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [備份與還原資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [系統資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [系統資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   
