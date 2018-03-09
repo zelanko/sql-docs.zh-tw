@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,9 +19,10 @@ f1_keywords:
 - sql13.dta.tuningoptions.f1
 - sql13.dta.progress.f1
 - sql13.dta.options.f1
-helpviewer_keywords: Database Engine Tuning Advisor [SQL Server], starting
+helpviewer_keywords:
+- Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -8,17 +8,19 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.schemas.general.f1
+f1_keywords:
+- sql13.swb.schemas.general.f1
 helpviewer_keywords:
 - creating schemas with Management Studio
 - CREATE SCHEMA [Management Studio]
 - database schemas
 - schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

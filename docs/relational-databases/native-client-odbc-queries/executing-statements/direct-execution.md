@@ -17,7 +17,7 @@ helpviewer_keywords:
 - SQLExecDirect function
 - statements [ODBC], direct execution
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg
