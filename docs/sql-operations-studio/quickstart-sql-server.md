@@ -2,7 +2,7 @@
 title: "快速入門： 連接及查詢 SQL Server 使用 SQL 作業 Studio （預覽） |Microsoft 文件"
 description: "本快速入門示範如何使用 SQL 作業 Studio （預覽） 來連接到 SQL Server 和執行查詢"
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,16 +14,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7588368dcd64316551a9eaa72aeb8ce1d2ea67a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門： 連接及查詢 SQL Server 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門： 連接及查詢 SQL Server 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 SQL Server，並再使用 TRANSACT-SQL (T-SQL) 陳述式來建立*TutorialDB*用於[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>필수 구성 요소
 
 若要完成本快速入門，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 SQL Server 存取權。
 
@@ -92,7 +92,10 @@ ms.lasthandoff: 12/21/2017
 
 
 
-1. [查詢] 視窗中貼入下列程式碼片段：
+1. 下列程式碼片段貼到查詢視窗，然後按一下**執行**:
+
+   > [!NOTE]
+   > 您可以附加，或覆寫先前的查詢編輯器中。 請注意，按一下**執行**執行所選取的查詢。 如果未選取，按一下**執行**執行所有的查詢編輯器中。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +118,8 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="insert-rows"></a>插入資料列
 
-1. [查詢] 視窗中貼入下列程式碼片段：
+- 下列程式碼片段貼到查詢視窗，然後按一下**執行**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -128,23 +132,22 @@ ms.lasthandoff: 12/21/2017
    GO
    ```
 
-1. 若要執行查詢時，按一下**執行**。
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>檢視查詢所傳回的資料
-1. [查詢] 視窗中貼入下列程式碼片段：
+1. 下列程式碼片段貼到查詢視窗，然後按一下**執行**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. 若要執行查詢時，按一下**執行**。
+1. 查詢的結果會顯示：
 
    ![選取 [結果]](media/quickstart-sql-server/select-results.png)
 
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 現在您已成功連接到 SQL Server 和執行查詢，試試[教學課程中的程式碼編輯器](tutorial-sql-editor.md)。
 
 
