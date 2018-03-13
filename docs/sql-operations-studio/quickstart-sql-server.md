@@ -1,6 +1,6 @@
 ---
-title: "快速入門： 連接及查詢 SQL Server 使用 SQL 作業 Studio （預覽） |Microsoft 文件"
-description: "本快速入門示範如何使用 SQL 作業 Studio （預覽） 來連接到 SQL Server 和執行查詢"
+title: "快速入門： 連接及查詢 SQL Server 使用 SQL Operations Studio （預覽） |Microsoft 文件"
+description: "本快速入門示範如何使用 SQL Operations Studio （預覽） 來連接到 SQL Server 和執行查詢"
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -23,7 +23,7 @@ ms.lasthandoff: 03/09/2018
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門： 連接及查詢 SQL Server 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 SQL Server，並再使用 TRANSACT-SQL (T-SQL) 陳述式來建立*TutorialDB*用於[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a> 必要條件
 
 若要完成本快速入門，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 SQL Server 存取權。
 
