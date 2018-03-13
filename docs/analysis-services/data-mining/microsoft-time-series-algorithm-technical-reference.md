@@ -35,14 +35,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 時間序列演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法包括兩種不同的演算法來分析時間序列：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法包括兩種不同的演算法來分析時間序列：  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中所導入的 ARTXP 演算法是為了預測數列中的下一個可能值而最佳化。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/15/2018
  本主題將提供有關如何實作每一個演算法以及如何自訂演算法 (藉由設定參數來微調分析和預測結果) 的詳細資訊。  
   
 ## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Microsoft 時間序列演算法的實作  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 研究根據 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法實作，開發 SQL Server 2005 所用的原創性 ARTXP 演算法。 因此，ARTXP 演算法可以描述為自動迴歸的樹狀模型，用以表示週期性的時間序列資料。 此演算法會將變動數目的過去項目與所預測的每一個目前項目產生關聯。 ARTXP 名稱是從自動迴歸樹狀方法 (ART 演算法) 會套用到多個未知舊狀態的事實衍生而來。 如需 ARTXP 演算法的詳細說明，請參閱 [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966)(時間序列分析的自動迴歸樹狀模型)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]Research 開發 SQL Server 2005，基礎實作中所使用的原始 ARTXP 演算法[!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法。 因此，ARTXP 演算法可以描述為自動迴歸的樹狀模型，用以表示週期性的時間序列資料。 此演算法會將變動數目的過去項目與所預測的每一個目前項目產生關聯。 ARTXP 名稱是從自動迴歸樹狀方法 (ART 演算法) 會套用到多個未知舊狀態的事實衍生而來。 如需 ARTXP 演算法的詳細說明，請參閱 [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966)(時間序列分析的自動迴歸樹狀模型)。  
   
  SQL Server 2008 中的 Microsoft 時間序列演算法加入了 ARIMA 演算法，提高長期預測的精確度。 它是計算 Box 和 Jenkins 所描述之自動迴歸整合式移動平均程序的實作。 ARIMA 方法可用於判斷循序取得之觀察的相依性，也可以納入隨機衝擊做為模型的一部分。 ARIMA 方法也支援乘法季節分析。 建議想要深入了解 ARIMA 演算法的讀者閱讀 Box 和 Jenkins 的開創性著作；本節旨在提供有關 Microsoft 時間序列演算法如何實作 ARIMA 方法的特定詳細資料。  
   

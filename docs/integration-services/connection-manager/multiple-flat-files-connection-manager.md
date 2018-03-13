@@ -31,10 +31,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 53e7c263916e9a07504fea6b9756f034e8e570fd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
   「多個一般檔案」連接管理員可讓封裝存取多個一般檔案中的資料。 例如，當資料流程工作位於迴圈容器 (如 For 迴圈容器) 內時，「一般檔案」來源可以使用「多個一般檔案」連接管理員。 在此容器的每一個迴圈上，「一般檔案」來源會從「多個一般檔案」連接管理員提供的下一個檔案名稱中載入資料。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/15/2018
  如果在加入及設定使用「多個一般檔案」連接管理員的一般檔案來源之後，在該連接管理員中更新資料行長度，您就不需要手動調整一般檔案來源中輸出資料行的大小。 在您開啟 **[一般檔案來源]** 對話方塊時，一般檔案來源會提供一個用來同步化資料行中繼資料的選項。  
   
 ## <a name="configuration-of-the-multiple-flat-files-connection-manager"></a>設定多個一般檔案連接管理員  
- 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
+ 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/15/2018
  若要深入了解多個一般檔案連線管理員，請參閱＜ [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
 ### <a name="options"></a>選項。  
- **連線管理員名稱**  
+ **連接管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
   
  **說明**  
@@ -104,19 +104,19 @@ ms.lasthandoff: 02/15/2018
  **格式**  
  指出是要使用分隔符號、固定寬度或不齊右的格式。 所有檔案必須有相同的資料格式。  
   
-|ReplTest1|描述|  
+|Value|說明|  
 |-----------|-----------------|  
 |使用分隔符號|資料行是以分隔符號隔開，分隔符號是在 **[資料行]** 頁面上指定的。|  
 |固定寬度|資料行具有固定寬度，由 **[資料行]** 頁面上的拖曳標記線所指定。|  
 |不齊右|不齊右檔案就是除了最後一個資料行是由資料列分隔符號所分隔之外，其他所有資料行都有在 **[資料行]** 頁面上所指定之固定寬度的檔案。|  
   
- **文字定位項**  
+ **文字限定詞**  
  指定要使用的文字限定詞。 例如，您可以指定文字必須加上引號。  
   
  **標頭資料列分隔符號**  
  從標頭資料列的分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|Value|說明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|標頭資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|標頭資料列是以歸位字元分隔。|  
@@ -139,7 +139,7 @@ ms.lasthandoff: 02/15/2018
  若要深入了解多個一般檔案連接管理員，請參閱＜ [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
 ### <a name="static-options"></a>靜態選項  
- **連線管理員名稱**  
+ **連接管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
   
  **說明**  
@@ -151,7 +151,7 @@ ms.lasthandoff: 02/15/2018
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|Value|說明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -165,7 +165,7 @@ ms.lasthandoff: 02/15/2018
  **資料行分隔符號**  
  從可用的資料行分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|Value|說明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料行是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料行是以歸位字元分隔。|  
@@ -206,7 +206,7 @@ ms.lasthandoff: 02/15/2018
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|Value|說明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -228,41 +228,41 @@ ms.lasthandoff: 02/15/2018
  若要深入了解多個一般檔案連接管理員，請參閱＜ [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
 ### <a name="options"></a>選項。  
- **連線管理員名稱**  
+ **連接管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接管理員。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [連線管理員] 區域內。  
   
- **說明**  
+ **描述**  
  描述連接管理員。 最佳作法是以其用途描述連接管理員，使封裝可以自我記錄並易於維護。  
   
  **設定每一個資料行的屬性**  
  請在左窗格中選取一個資料行以便在右窗格中檢視它的屬性。 請參閱下表以了解資料類型屬性的描述。 部分列出的屬性，只能在某些一般檔案格式中設定。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 此屬性是唯讀的。 不齊右檔案就是除了最後一個資料行是由資料列分隔符號所終止之外，其他所有資料行都有固定寬度的檔案。|  
 |**OutputColumnWidth**|指定將儲存為位元組計數的值；針對 Unicode 檔案，這將會顯示為字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。<br /><br /> 注意：在物件模型中，這個屬性的名稱為 MaximumWidth。|  
-|**DataType**|從可用的資料類型清單中選取。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  
+|**DataType**|從可用的資料類型清單中選取。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。|  
 |**TextQualified**|使用文字限定詞字元指出文字資料是否為限定的：<br /><br /> **True**：一般檔案中的文字資料是限定的。<br /><br /> **False**：一般檔案中的文字資料是非限定的。|  
 |**名稱**|提供資料行名稱。 預設為已編號的資料行清單；然而，您可以選擇任何唯一的、描述性的名稱。|  
-|**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  
+|**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。|  
 |**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}** ：資料行是以歸位字元和換行字元的組合分隔<br /><br /> **{CR}** ：資料行是以歸位字元分隔<br /><br /> **{LF}** ：資料行是以換行字元分隔<br /><br /> **分號 {;}** ：資料行是以分號分隔<br /><br /> **冒號 {:}** ：資料行是以冒號分隔<br /><br /> **逗號 {,}** ：資料行是以逗號分隔<br /><br /> **定位字元 {t}**：資料行是以定位字元分隔<br /><br /> **分隔號 {&#124;}**：資料行是以分隔號分隔|  
-|**DataPrecision**|指定數值資料的有效位數。 有效位數是指位數的數目。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  
+|**DataPrecision**|指定數值資料的有效位數。 有效位數是指位數的數目。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。|  
 |**InputColumnWidth**|指定將儲存為位元組計數的值；針對 Unicode 檔案，這將會顯示為字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|  
   
  **新增**  
  按一下 [新增] 來加入新的資料行。 [新增] 按鈕預設會在清單結尾加入新資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  
   
-|ReplTest1|描述|  
+|Value|說明|  
 |-----------|-----------------|  
 |**加入資料行**|在清單結尾加入新資料行。|  
 |**插在前面**|在選取的資料行之前插入新資料行。|  
 |**插在後面**|在選取的資料行之後插入新資料行。|  
   
- **刪除**  
+ **Delete**  
  選取資料行，然後按一下 [刪除] 將其移除。  
   
  **建議類型**  
- 使用 [建議資料行類型] 對話方塊，可評估第一個選定檔案中的範例資料，並取得對每個資料行之資料類型和長度的建議。 如需詳細資訊，請參閱 [建議資料行類型對話方塊 UI 參考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用 [建議資料行類型] 對話方塊，可評估第一個選定檔案中的範例資料，並取得對每個資料行之資料類型和長度的建議。 如需詳細資訊，請參閱[建議資料行類型對話方塊 UI 參考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
   
 ## <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多個一般檔案連接管理員編輯器 (預覽頁面)
   使用 [多個一般檔案連線管理員編輯器] 對話方塊的 [預覽] 頁面，即可根據您定義的資料行分隔，來檢視第一個所選取來源檔的內容。  
@@ -270,10 +270,10 @@ ms.lasthandoff: 02/15/2018
  若要深入了解多個一般檔案連接管理員，請參閱＜ [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
 ### <a name="options"></a>選項。  
- **連線管理員名稱**  
+ **連接管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [連線管理員] 區域內。  
   
- **說明**  
+ **描述**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
  **略過的資料列數**  
@@ -285,6 +285,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另請參閱  
  [[一般檔案來源]](../../integration-services/data-flow/flat-file-source.md)   
  [一般檔案目的地](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS &#41;連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
