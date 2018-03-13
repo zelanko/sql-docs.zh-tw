@@ -59,7 +59,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|追蹤的識別碼。|  
-|屬性|**int**|追蹤的屬性：<br /><br /> 1= 追蹤選項。 如需詳細資訊，請參閱@options中[sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 檔案名稱<br /><br /> 3 = 大小上限<br /><br /> 4 = 停止時間<br /><br /> 5 = 目前追蹤狀態。 0 = 已停止。 1 = 執行中。|  
+|屬性|**int**|追蹤的屬性：<br /><br /> 1= 追蹤選項。 如需詳細資訊，請參閱@options 中 [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 檔案名稱<br /><br /> 3 = 大小上限<br /><br /> 4 = 停止時間<br /><br /> 5 = 目前追蹤狀態。 0 = 已停止。 1 = 執行中。|  
 |value|**sql_variant**|指定追蹤屬性的相關資訊。|  
   
 ## <a name="remarks"></a>備註  

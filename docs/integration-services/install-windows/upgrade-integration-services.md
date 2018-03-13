@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
 ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
   如果您的電腦上目前安裝有 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更新版本，您可以升級到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -47,8 +47,8 @@ ms.lasthandoff: 02/15/2018
 >   
 >  -   DTS 執行階段  
 > -   DTS API  
-> -   可將 DTS 封裝移轉到下一版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
-> -   DTS 封裝維護的支援 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+> -   可將 DTS 封裝移轉到下一版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的封裝移轉精靈  
+> -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中對於 DTS 封裝維護的支援  
 > -   執行 DTS 2000 封裝工作  
 > -   DTS 封包的 Upgrade Advisor 掃描。  
 >   
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/15/2018
   
 -   執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式，並選取**從 SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 升級的選項。  
   
--   在命令提示字元上執行 **setup.exe**，並指定 **/ACTION=upgrade** 選項。 如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的＜[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安裝指令碼＞一節。  
+-   在命令提示字元上執行 **setup.exe**，並指定 **/ACTION=upgrade** 選項。 如需詳細資訊，請參閱 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的＜的安裝指令碼＞一節。  
   
  您無法使用升級作業來執行下列動作：  
   

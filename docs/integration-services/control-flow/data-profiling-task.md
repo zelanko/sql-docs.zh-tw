@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="data-profiling-task"></a>資料分析工作
   資料分析工作會計算各種設定檔，協助您熟悉資料來源並在資料中識別必須修復的問題。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/15/2018
   
  下列五個設定檔會分析個別的資料行。  
   
-|分析個別資料行的設定檔|描述|  
+|分析個別資料行的設定檔|Description|  
 |----------------------------------------------|-----------------|  
 |資料行長度散發設定檔|報告選取之資料行中所有不同的字串值長度，以及該資料表中每個長度所代表之資料列的百分比。<br /><br /> 這個設定檔可協助您識別資料中的問題，例如無效的值。 例如，您分析了應該是兩個字元之美國州名代碼的資料行，並發現長度大於兩個字元的值。|  
 |資料行 Null 比例設定檔|報告選取之資料行中 Null 值的百分比。<br /><br /> 這個設定檔可協助您識別資料中的問題，例如某個資料行中 Null 值的比例過高。 舉例來說，您分析了「郵遞區號」資料行並發現遺漏郵遞區號的百分比過高。|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/15/2018
   
  下列三個設定檔會分析多個資料行或資料行和資料表之間的關聯性。  
   
-|分析多個資料行的設定檔|描述|  
+|分析多個資料行的設定檔|Description|  
 |--------------------------------------------|-----------------|  
 |候選索引鍵設定檔|報告資料行或資料行集合是否為選取之資料表的索引鍵或近似索引鍵。<br /><br /> 這個設定檔也可協助您識別資料中的問題，例如潛在索引鍵資料行中重複的值。|  
 |功能相依性設定檔|報告某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。<br /><br /> 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了包含「美國郵遞區號」之資料行與「美國州名」之資料行之間的相依性。 相同的郵遞區號應該永遠具有相同的州名，但是此設定檔卻發現了這個相依性的違規。|  
@@ -118,12 +118,12 @@ ms.lasthandoff: 02/15/2018
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>資料分析工作上所提供的自訂記錄訊息  
  下表列出資料分析工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|描述|  
+|記錄項目|Description|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|提供有關此工作之狀態的描述性資訊。 訊息包括下列資訊：<br /><br /> 開始處理要求<br /><br /> 查詢開始<br /><br /> 查詢結束<br /><br /> 完成計算要求|  
   
 ## <a name="output-and-its-schema"></a>輸出及其結構描述  
- 資料分析工作會將選取的設定檔輸出到根據 DataProfile.xsd 結構描述結構化的 XML。 您可以指定此 XML 輸出要以檔案或封裝變數儲存。 您可以在 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)，線上檢視此結構描述。 您可以從網頁儲存結構描述的本機複本。 然後，您可以在 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他結構描述編輯器、XML 編輯器，或「記事本」之類的文字編輯器中檢視結構描述的本機複本。  
+ 資料分析工作會將選取的設定檔輸出到根據 DataProfile.xsd 結構描述結構化的 XML。 您可以指定此 XML 輸出要以檔案或封裝變數儲存。 您可以檢視此結構描述線上[ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。 您可以從網頁儲存結構描述的本機複本。 然後，您可以在 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他結構描述編輯器、XML 編輯器，或「記事本」之類的文字編輯器中檢視結構描述的本機複本。  
   
  此資料品質資訊的結構描述對於下列事項可能很實用：  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/15/2018
   
 -   建立搭配資料品質資訊使用的自訂工具。  
   
- 在結構描述中，系統會將目標命名空間視為 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
+ 目標命名空間與結構描述識別[ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>封裝的條件式工作流程中的輸出  
  資料分析元件不包含內建功能，無法根據資料分析工作的輸出，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的工作流程中實作條件式邏輯。 不過，您可以利用最少量的程式設計，在指令碼工作中輕鬆加入這個邏輯。 此程式碼會根據 XML 輸出執行 XPath 查詢，然後以封裝變數儲存結果。 將指令碼工作連接到後續工作的優先順序條件約束可以使用運算式來判斷工作流程。 例如，指令碼工作會偵測到 Null 值在資料行中的百分比超出特定的臨界值。 此條件為 true 時，您可能想要先中斷封裝並解決問題，然後再繼續。  
@@ -145,7 +145,7 @@ ms.lasthandoff: 02/15/2018
  [設定檔要求頁面](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  在 [設定檔要求] 頁面上，您可以指定資料來源，然後選取並設定您要計算的資料設定檔。 如需有關您可以設定之各種設定檔的詳細資訊，請參閱下列主題：  
   
--   [候選索引鍵設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候選索引鍵設定檔要求選項 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [資料行長度散發設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
