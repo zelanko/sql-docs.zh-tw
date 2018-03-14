@@ -1,6 +1,6 @@
 ---
-title: "備份和還原資料庫，使用 SQL 作業 Studio （預覽） |Microsoft 文件"
-description: "了解如何備份和還原資料庫，使用 SQL 作業 Studio （預覽）"
+title: "備份和還原資料庫，使用 SQL Operations Studio （預覽） |Microsoft 文件"
+description: "了解如何備份和還原資料庫，使用 SQL Operations Studio （預覽）"
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 > * 還原資料庫
 > * 檢視的還原工作的狀態
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 本教學課程需要 SQL Server *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列快速入門的其中一個：
 
