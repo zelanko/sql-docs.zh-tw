@@ -1,6 +1,6 @@
 ---
-title: "教學課程： 使用 SQL 作業 Studio （預覽） 的 TRANSACT-SQL 編輯器來建立資料庫物件 |Microsoft 文件"
-description: "本教學課程示範簡化使用 T-SQL SQL 作業 Studio （預覽） 中的主要功能。"
+title: "教學課程： 使用 SQL Operations Studio （預覽） 的 TRANSACT-SQL 編輯器來建立資料庫物件 |Microsoft 文件"
+description: "本教學課程示範簡化使用 T-SQL SQL Operations Studio （預覽） 中的主要功能。"
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 > * 檢視資料庫物件的詳細資料使用*查看定義*和*移至定義*
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列快速入門的其中一個：
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
    ![操作功能表： 管理](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
 1. 找出*客戶*資料表輸入*自訂*搜尋 widget 中。
-1. 以滑鼠右鍵按一下**dbo。客戶**選取**編輯資料**。
+1. 以滑鼠右鍵按一下**dbo.Customers**選取**編輯資料**。
 
    ![快速搜尋 widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/21/2017
 
    ![程式碼片段清單](./media/tutorial-sql-editor/snippet-list.png)
 
-3. 型別*getCustomer* 」 和 「 全部*StoredProcedureName*項目變更為*getCustomer*。 
+3. 將型別 *getCustomer* 和 全部 *StoredProcedureName* 項目變更為 *getCustomer*。 
 
    ![程式碼片段](./media/tutorial-sql-editor/snippet.png)
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 12/21/2017
    INSERT INTO dbo.Customers
    ```
 
-5. 以滑鼠右鍵按一下**dbo。客戶**選取**查看定義**。
+5. 以滑鼠右鍵按一下**dbo.Customers**選取**查看定義**。
 
    ![查看定義](./media/tutorial-sql-editor/peek-definition.png)
 
@@ -174,7 +174,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="use-save-query-results-as-json-to-test-our-stored-procedure"></a>使用將查詢結果儲存為 JSON，將測試我們預存程序
 
-1. **選取前 1000 個資料列**從*dbo。客戶*資料表。
+1. **選取前 1000 個資料列**從*dbo.Customers*資料表。
 
 2. 選取第一個資料列在結果 檢視，然後按一下**儲存為 JSON**。  
 3. 按一下**儲存**，並以 JSON 格式開啟反白顯示的資料列。
