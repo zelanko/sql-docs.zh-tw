@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: best practices
+helpviewer_keywords:
+- best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: "15"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8717ade947739a3cd6796a7f4268e2c8328db024
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>以時間為基礎之資料列篩選的最佳做法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 應用程式使用者通常需要來自資料表中以時間為基礎的資料子集。 例如，業務員可能需要上週的訂單資料，或事件計劃者可能需要未來一週的事件資料。 許多狀況下，應用程式會使用包含 **GETDATE()** 函數的查詢來達成這個目的。 請考量下列資料列篩選陳述式：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  應用程式使用者通常需要來自資料表中以時間為基礎的資料子集。 例如，業務員可能需要上週的訂單資料，或事件計劃者可能需要未來一週的事件資料。 許多狀況下，應用程式會使用包含 **GETDATE()** 函數的查詢來達成這個目的。 請考量下列資料列篩選陳述式：  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  

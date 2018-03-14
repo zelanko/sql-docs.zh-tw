@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newsubwizard.subproperties.subscriber.f1
-helpviewer_keywords: Subscription Properties dialog box
+f1_keywords:
+- sql13.rep.newsubwizard.subproperties.subscriber.f1
+helpviewer_keywords:
+- Subscription Properties dialog box
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
-caps.latest.revision: "25"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0983dafd2e95edbec342c7a885c1182f6dc053a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: eb2d94f889cd593e07331f19fd09ef29d94479b8
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscription-properties---subscriber"></a>訂閱屬性 - 訂閱者
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 訂閱者端的 [訂閱屬性] 對話方塊可讓您檢視和設定提取訂閱的屬性。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  訂閱者端的 **[訂閱屬性]** 對話方塊可讓您檢視和設定提取訂閱的屬性。  
   
  **[訂閱屬性]** 對話方塊中的每個屬性包含一個描述。 按一下某個屬性，即可查看其在對話方塊底部顯示的描述。 此主題提供數個屬性的其他資訊。 屬性會依下列類別目錄分組：  
   

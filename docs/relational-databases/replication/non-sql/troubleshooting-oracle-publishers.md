@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
-caps.latest.revision: "62"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 115bdbf97a35d4035c00a8e547a2c38125ce6970
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44c98b6b2a184c3e438a2e993adcc26a871069f3
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 發行者疑難排解
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題列出設定和使用 Oracle 發行者時可能發生的一些問題。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題列出設定和使用「Oracle 發行者」時可能發生的一些問題。  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>發生有關 Oracle 用戶端與網路軟體的錯誤  
  在「散發者」執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的帳戶必須對 Oracle 用戶端網路軟體的安裝目錄 (以及所有子目錄) 具有讀取與執行權限。 如果沒有被授與權限或者 Oracle 用戶端元件沒有正確安裝，您將收到下列錯誤訊息：  

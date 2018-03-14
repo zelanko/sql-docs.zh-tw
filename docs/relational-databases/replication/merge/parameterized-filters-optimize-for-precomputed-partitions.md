@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - merge replication precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
-caps.latest.revision: "45"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5e5341614b3da26ec21f84017b0e776000a3bb5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2a966f02fce5b76e8157de1422a6a38ffedd4176
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>參數化篩選 - 針對預先計算的資料分割最佳化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 預先計算的資料分割是可用於篩選合併式發行集的效能最佳化。 預先計算的資料分割也是在篩選發行集上使用邏輯記錄的需求。 如需邏輯記錄的詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  預先計算的資料分割是可用於篩選合併式發行集的效能最佳化。 預先計算的資料分割也是在篩選發行集上使用邏輯記錄的需求。 如需邏輯記錄的詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
  當「訂閱者」與「發行者」同步時，「發行者」必須評估「訂閱者」的篩選以決定哪些資料列屬於該「訂閱者」的資料分割或資料集。 在發行者端針對每一個接收到已篩選資料集來判斷變更的資料分割成員資格之處理，稱為 *資料分割評估*。 若沒有預先計算的資料分割，則自從上次為特定的「訂閱者」執行「合併代理程式」之後，必須對「發行者」端的篩選資料行所作之變更執行資料分割評估，而且每個與「發行者」同步的「訂閱者」都必須重複這個過程。  
   
