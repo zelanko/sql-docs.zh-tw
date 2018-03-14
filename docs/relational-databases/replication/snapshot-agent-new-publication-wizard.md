@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.configuresnapshotagent.f1
+f1_keywords:
+- sql13.rep.newpubwizard.configuresnapshotagent.f1
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
-caps.latest.revision: "29"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cb4fbaa68fa5e80a79ab77d28efaedc772ef826
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ea9636b5a25a75d363a64772cf3bea65a39f9325
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>快照集代理程式 (新增發行集精靈)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 快照集代理程式會建立檔案，檔案中包含用來初始化新訂閱的發行集結構描述和資料。 依預設，在新增發行集精靈中建立發行集之後，會立即執行快照集代理程式。 此後，代理程式就根據您指定的排程來執行。 代理程式每次執行時是否建立新的快照集檔案，視選擇的複寫類型和選項而定。 如需詳細資訊，請參閱[建立和套用快照集](../../relational-databases/replication/create-and-apply-the-snapshot.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  快照集代理程式會建立檔案，檔案中包含用來初始化新訂閱的發行集結構描述和資料。 依預設，在新增發行集精靈中建立發行集之後，會立即執行快照集代理程式。 此後，代理程式就根據您指定的排程來執行。 代理程式每次執行時是否建立新的快照集檔案，視選擇的複寫類型和選項而定。 如需詳細資訊，請參閱[建立和套用快照集](../../relational-databases/replication/create-and-apply-the-snapshot.md)。  
   
  對於使用參數化篩選的合併式發行集，在完成發行集快照集之後，您必須為資料的每一個資料分割建立快照集。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
   

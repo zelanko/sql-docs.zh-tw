@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], scripts
 - scripts [SQL Server replication]
 ms.assetid: 9a6872c2-9bed-477f-9d2f-332d640edcf2
-caps.latest.revision: "35"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7780ddbbe3486c67535d27cc4c9bb9132274e04d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 01d55924d79b7291b23aab38ae06e0a2112c0978
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="execute-scripts-before-and-after-the-snapshot-is-applied"></a>在套用快照集之前及之後執行指令碼
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 您可以指定在套用快照集之前或之後在「訂閱者」端執行指令碼。 指令碼在很多情況下都會用到，例如在各「訂閱者」端建立登入和結構描述 (物件擁有者) 時。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  您可以指定在套用快照集之前或之後在「訂閱者」端執行指令碼。 指令碼在很多情況下都會用到，例如在各「訂閱者」端建立登入和結構描述 (物件擁有者) 時。  
   
  為各指令碼指定檔案位置後，每次進行快照集處理時，「快照集代理程式」便會將指令碼檔案複製到目前的快照集資料夾中。 套用快照集時，「散發代理程式」或「合併代理程式」會在執行任何複寫物件指令碼之前，先執行前快照集指令碼。 並在套用所有其他複寫物件指令碼及資料之後，執行後快照集指令碼。 快照集應用程式完成且指令碼檔案成功執行之後，會從「訂閱者」的工作目錄中移除指令碼檔案。  
   

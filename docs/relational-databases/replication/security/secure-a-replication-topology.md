@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: replication [SQL Server], security
+helpviewer_keywords:
+- replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f5883fe3b649b2ad21deb3e9fde14c153df5416
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 06503486567ccc86fda076a12d4e147c9fa68fdc
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="secure-a-replication-topology"></a>保護複寫拓撲的安全性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在設定複寫及建立發行集與訂閱時，會提供複寫所需的安全性帳戶、登入和密碼。 稍後可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、複寫預存程序和 Replication Management Objects (RMO) 變更這些安全性設定。 下列主題描述如何修改複寫安全性設定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在設定複寫及建立發行集與訂閱時，會提供複寫所需的安全性帳戶、登入和密碼。 稍後可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、複寫預存程序和 Replication Management Objects (RMO) 變更這些安全性設定。 下列主題描述如何修改複寫安全性設定。  
   
 ## <a name="in-this-section"></a>本節內容  
   

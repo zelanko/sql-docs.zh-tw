@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Replication Monitor, starting
+helpviewer_keywords:
+- Replication Monitor, starting
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
-caps.latest.revision: "36"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5e9b5a38bbd6ef2468a21683b3279602edf8336
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9e1a339c818c4199656d3114d214b2908501a017
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="start-the-replication-monitor"></a>啟動複寫監視器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫監視器可以從任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 啟動，也可以從命令提示字元啟動。 啟動「複寫監視器」後，將一個或多個「發行者」新增至監視器。 如需詳細資訊，請參閱 [從複寫監視器加入及移除發行者](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  「複寫監視器」可以從任何 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]啟動，也可以從命令提示字元啟動。 啟動「複寫監視器」後，將一個或多個「發行者」新增至監視器。 如需詳細資訊，請參閱 [從複寫監視器加入及移除發行者](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)。  
   
 ### <a name="to-start-replication-monitor-from-sql-server-management-studio"></a>從 SQL Server Management Studio 啟動複寫監視器  
   

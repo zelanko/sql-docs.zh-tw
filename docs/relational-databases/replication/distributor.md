@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.replicationutilities.selectdistributor.f1
+f1_keywords:
+- sql13.rep.replicationutilities.selectdistributor.f1
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eda1d3fc60baeea0f657561febb9f188ea78b16a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 16dca6f26fb892691d1ed48721850567745dac3d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="distributor"></a>散發者
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [散發者] 頁面會出現在 [設定散發精靈] 和 [新增發行集精靈] 中。 散發者是包含散發資料庫的伺服器，而且會儲存所有類型之複寫的中繼資料和記錄資料。 散發者也會儲存異動複寫的交易。 散發者可以是與發行者相同的伺服器 (本機散發者)，也可以是與發行者不同的伺服器 (遠端散發者)。 散發者的角色會視您實作的複寫類型而定。 一般而言，它的角色用於異動複寫的機會，遠大於合併式複寫和快照式複寫。 合併式複寫和快照式複寫通常使用本機散發者，但在非常忙碌的電腦上進行異動複寫時，可以使用遠端散發者提高效益。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **[散發者]** 頁面會出現在設定散發精靈和新增發行集精靈中。 散發者是包含散發資料庫的伺服器，而且會儲存所有類型之複寫的中繼資料和記錄資料。 散發者也會儲存異動複寫的交易。 散發者可以是與發行者相同的伺服器 (本機散發者)，也可以是與發行者不同的伺服器 (遠端散發者)。 散發者的角色會視您實作的複寫類型而定。 一般而言，它的角色用於異動複寫的機會，遠大於合併式複寫和快照式複寫。 合併式複寫和快照式複寫通常使用本機散發者，但在非常忙碌的電腦上進行異動複寫時，可以使用遠端散發者提高效益。  
   
  散發者會使用所在伺服器的下列額外資源：  
   

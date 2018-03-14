@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - merge replication [SQL Server replication], article options
 - articles [SQL Server replication], merge replication options
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
-caps.latest.revision: "37"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ddef0bdc5d08fadc7d232417ffc7579671e8c2c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5dd0dd0171c1f6fba7c8b0b07481e78cd50a6967
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="article-options-for-merge-replication"></a>合併式複寫的發行項選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 合併資料表發行項有許多選項，可讓您自訂複寫行為以適應應用程式的需要。 使用合併式複寫，您可以執行下列項目：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  合併資料表發行項有許多選項，可讓您自訂複寫行為以適應應用程式的需要。 使用合併式複寫，您可以執行下列項目：  
   
 -   使用資料列篩選、聯結篩選和資料行篩選。 篩選資料表發行項可讓您建立即將發行的資料分割。 如需詳細資訊，請參閱[篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)。  
   

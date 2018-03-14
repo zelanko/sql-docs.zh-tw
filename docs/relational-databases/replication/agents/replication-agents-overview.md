@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - Snapshot Agent, about Snapshot Agent
 - Snapshot Agent
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
-caps.latest.revision: "42"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e5939006ffc38b5d3ced2028feb544ead35b447f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e6e7da750a4e1cd7c4fcf2345d7f50b7edbb5f64
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-agents-overview"></a>複寫代理程式概觀
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫使用了許多名為代理程式的獨立程式，以執行與追蹤變更和散發資料有關的工作。 依預設，複寫代理程式作為在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 中排定的作業來執行，且必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 方可執行這些作業。 複寫代理程式也可以從命令列執行，或透過使用 Replication Management Objects (RMO) 的應用程式執行。 複寫代理程式可以透過「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]進行管理。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  複寫使用了許多名為代理程式的獨立程式，以執行與追蹤變更和散發資料有關的工作。 依預設，複寫代理程式作為在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 中排定的作業來執行，且必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 方可執行這些作業。 複寫代理程式也可以從命令列執行，或透過使用 Replication Management Objects (RMO) 的應用程式執行。 複寫代理程式可以透過「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]進行管理。  
   
 ## <a name="sql-server-agent"></a>SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 主控和排程複寫中使用的代理程式，並為執行複寫代理程式提供了簡易的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 還控制和監視除複寫以外的其他作業。 如需詳細資訊，請參閱 [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)。  

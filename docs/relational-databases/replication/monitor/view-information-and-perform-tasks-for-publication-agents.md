@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - viewing replication agent information
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: 2a420da2-66f4-4650-9bdd-1992221ed3fd
-caps.latest.revision: "39"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f23a88fa322ef64be50c02c5c1b73eb685163fb4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c55ab9ebc0b393375a552acc26f01018b7c1e23e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="view-information-and-perform-tasks-for-publication-agents"></a>檢視發行集代理程式的資訊並執行工作
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫監視器提供 [代理程式] 索引標籤，其中包含與選取的發行集相關聯之代理程式的資訊。 散發代理程式和合併代理程式與訂閱建立關聯；如需詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  複寫監視器提供 **[代理程式]** 索引標籤，其中包含與選取的發行集相關聯之代理程式的資訊。 散發代理程式和合併代理程式與訂閱建立關聯；如需詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
  這個索引標籤會顯示下列代理程式的相關資訊：  
   

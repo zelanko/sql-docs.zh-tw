@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - agents [SQL Server replication]
 - replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
-caps.latest.revision: "10"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 306304e967336f428bece315b0e36651afe1d668
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: bd2acc90438f28be8c3649d0c1243aa8a8ac77fb
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-agents"></a>複寫代理程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫會使用許多名為「代理程式」的獨立程式執行與追蹤變更和散發資料相關的工作。 文件集的這個章節包含下列複寫代理程式的參數參考。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  複寫會使用許多名為「代理程式」的獨立程式執行與追蹤變更和散發資料相關的工作。 文件集的這個章節包含下列複寫代理程式的參數參考。  
   
 ## <a name="in-this-section"></a>本節內容  
  [複寫代理程式概觀](../../../relational-databases/replication/agents/replication-agents-overview.md)  

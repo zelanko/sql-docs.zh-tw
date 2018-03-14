@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - logical record-level conflict tracking [SQL Server replication]
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
-caps.latest.revision: "46"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c52b8aa34c3f384e9ab1f638e6f6e9dac3bdf04
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1f1b76253c96284dff88180a6de5779b3223a488
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>進階合併式複寫 - 衝突偵測與解決方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 發行者與訂閱者連線並進行同步處理時，合併代理程式會偵測是否有任何衝突。 如果偵測到衝突，「合併代理程式」會使用衝突解析程式 (在發行項加入發行集時指定)，決定要接受及傳播至其他站台的資料。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  發行者與訂閱者連接並進行同步處理時，合併代理程式會偵測是否有任何衝突。 如果偵測到衝突，「合併代理程式」會使用衝突解析程式 (在發行項加入發行集時指定)，決定要接受及傳播至其他站台的資料。  
   
 > [!NOTE]  
 >  雖然「訂閱者」會與「發行者」同步，但是衝突通常是在不同「訂閱者」端進行更新之間發生，而不是在「訂閱者」端和「發行者」端進行更新時發生。  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Web publishing [SQL Server replication], VPNs
 - Internet [SQL Server replication], VPNs
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
-caps.latest.revision: "33"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a851ec36920e6300a25ebf815e8f1c6998263d5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 760dd1341cc9a6aab18644b3777b007519322c7b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>使用 VPN 透過網際網路發行資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 虛擬私人網路 (Virtual Private Networking，VPN) 技術可以讓使用者在家裏、分公司辦公室、遠端用戶端以及其他公司透過網際網路連線到公司網路進行工作，同時保有安全的通訊。 使用者可以使用「Windows 驗證」(Windows Authentication)，就好像他們是在區域網路 (Area Network，LAN) 一樣。 所有類型的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫都可以透過 VPN 複寫資料，但如果您使用合併式複寫，請考慮使用 Web 同步處理，因為 Web 同步處理會省去使用 VPN 的需求。 如需詳細資訊，請參閱 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  虛擬私人網路 (Virtual Private Networking，VPN) 技術可以讓使用者在家裏、分公司辦公室、遠端用戶端以及其他公司透過網際網路連接到公司網路進行工作，同時保有安全的通訊。 使用者可以使用「Windows 驗證」(Windows Authentication)，就好像他們是在區域網路 (Area Network，LAN) 一樣。 所有類型的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫都可以透過 VPN 複寫資料，但如果您使用合併式複寫，請考慮使用 Web 同步處理，因為 Web 同步處理會省去使用 VPN 的需求。 如需詳細資訊，請參閱 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
   
  VPN 包含用戶端軟體，因此電腦可以透過網際網路 (在某些特殊情況下，甚至是內部網路) 連接到專用電腦或伺服器中的軟體。 也可以選擇對連線兩端加密及使用者驗證方法。 透過網際網路的 VPN 連接在邏輯上的操作類似站台之間的「廣域網路」(WAN) 連結。  
   

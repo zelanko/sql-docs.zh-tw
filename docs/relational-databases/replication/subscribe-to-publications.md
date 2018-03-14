@@ -8,10 +8,12 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.conc.subtopubs.f1
+f1_keywords:
+- sql13.rep.conc.subtopubs.f1
 helpviewer_keywords:
 - subscriptions [SQL Server replication], about subscriptions
 - pull subscriptions [SQL Server replication]
@@ -25,19 +27,20 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], subscribing
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
-caps.latest.revision: "44"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8f88fca63abe24ce7093d628062c4ae90b40733
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0a9d6e2e739875979a20f4bee1b2aded61ce766c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscribe-to-publications"></a>訂閱發行集
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 訂閱是指要求一份發行集中的資料和資料庫物件。 訂閱會定義將收到的發行集，以及收到的位置和時間。 規劃訂閱時，請考慮要執行代理程式處理的位置。 您選擇的訂閱類型會控制代理程式執行的位置。 若為發送訂閱，則「合併代理程式」或「散發代理程式」會在「散發者」執行；若為提取訂閱，則代理程式會在「訂閱者」執行。 建立訂閱之後，就不能變更訂閱的類型。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  訂閱是指要求一份發行集中的資料和資料庫物件。 訂閱會定義將收到的發行集，以及收到的位置和時間。 規劃訂閱時，請考慮要執行代理程式處理的位置。 您選擇的訂閱類型會控制代理程式執行的位置。 若為發送訂閱，則「合併代理程式」或「散發代理程式」會在「散發者」執行；若為提取訂閱，則代理程式會在「訂閱者」執行。 建立訂閱之後，就不能變更訂閱的類型。  
   
 |訂閱|特性|使用時機|  
 |------------------|---------------------|--------------|  

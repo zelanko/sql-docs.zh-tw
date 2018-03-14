@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.reinit.all.f1
-helpviewer_keywords: Reinitialize Subscription(s) dialog box
+f1_keywords:
+- sql13.rep.reinit.all.f1
+helpviewer_keywords:
+- Reinitialize Subscription(s) dialog box
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
-caps.latest.revision: "11"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0556ec4bd0cfdb40bb5db48b871731b6ebc37dd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5e5ca311380d3b6f1ce479ea816f71cd20fea752
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>重新初始化訂閱 - 所有訂閱
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [重新初始化訂閱] 對話方塊可以讓您標示發行集的所有訂閱，以進行重新初始化。 重新初始化會牽涉到將快照集套用到每個訂閱者；對於交易式發行集的訂閱，這是由散發代理程式執行；而對於合併式發行集的訂閱，則是由合併代理程式執行。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **[重新初始化訂閱]** 對話方塊可以讓您標示發行集的所有訂閱，以進行重新初始化。 重新初始化會牽涉到將快照集套用到每個訂閱者；對於交易式發行集的訂閱，這是由散發代理程式執行；而對於合併式發行集的訂閱，則是由合併代理程式執行。  
   
 ## <a name="options"></a>選項。  
  **使用目前的快照集**  

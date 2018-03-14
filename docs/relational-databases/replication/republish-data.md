@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - publishing [SQL Server replication], Subscribers
 - Subscribers [SQL Server replication], republishing data
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
-caps.latest.revision: "34"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f560429493fe0182159ad66e89535ff017739678
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 28cb49602feeafe9c2182d54859f4b50f7c0a599
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="republish-data"></a>重新發行資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在重新發行模式中，「發行者」傳送資料到「訂閱者」，「訂閱者」再將資料重新發行給任何數量的「訂閱者」。 當「發行者」必須透過緩慢或昂貴的通訊連結傳送資料到「訂閱者」時，這就很有用。 如果在該連結的遠端有許多「訂閱者」，可使用發行「訂閱者」來將大量散發負載移位到連結的那一端。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在重新發行模式中，「發行者」傳送資料到「訂閱者」，「訂閱者」再將資料重新發行給任何數量的「訂閱者」。 當「發行者」必須透過緩慢或昂貴的通訊連結傳送資料到「訂閱者」時，這就很有用。 如果在該連結的遠端有許多「訂閱者」，可使用發行「訂閱者」來將大量散發負載移位到連結的那一端。  
   
  重新發行資料包括以下步驟：  
   

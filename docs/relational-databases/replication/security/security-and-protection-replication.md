@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], security
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
-caps.latest.revision: "44"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baa793a3d82a7420af7ceb1ddfdb30d23b91c3b8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 67ac0cf3ce202f55bbbaa556f842fd9d43d25a0c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="security-and-protection-replication"></a>安全性與保護 (複寫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 協助保護在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中部署的複寫案例不受到惡意攻擊，並提升資料的安全性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  協助保護在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中所部署的複寫案例不受到惡意的攻擊，並提升資料的安全性。  
   
  ![小型檔案資料夾圖示](../../../analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **安全性概觀**  
  [威脅和弱點安全防護 &#40;複寫&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  

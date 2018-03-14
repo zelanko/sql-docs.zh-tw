@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.monitor.logreaderagent.f1
-helpviewer_keywords: Log Reader Agent dialog box
+f1_keywords:
+- sql13.rep.monitor.logreaderagent.f1
+helpviewer_keywords:
+- Log Reader Agent dialog box
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
-caps.latest.revision: "18"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c32b53de8a12fb091701e848e419fbdbc405b05b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fe14e01a61b9b501d45ed58f13ad8e6f4ff5df65
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="log-reader-agent"></a>記錄讀取器代理程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [記錄讀取器代理程式] 對話方塊會顯示記錄讀取器代理程式的詳細資訊，包括狀態、記錄、資訊訊息及任何錯誤訊息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **[記錄讀取器代理程式]** 對話方塊會顯示記錄讀取器代理程式的詳細資訊，包括狀態、記錄、參考訊息，以及任何錯誤訊息。  
   
 ## <a name="options"></a>選項。  
  從 **[檢視]** 功能表選取要檢視的記錄讀取器代理程式工作階段，然後在標示為 **[記錄讀取器代理程式的工作階段]**的方格中，選取一個特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[所選取工作階段中的動作]**之方格中。 如果選取的工作階段結束時發生錯誤， **[所選取之工作階段的錯誤詳細資料或訊息]** 的文字區域也會顯示。  

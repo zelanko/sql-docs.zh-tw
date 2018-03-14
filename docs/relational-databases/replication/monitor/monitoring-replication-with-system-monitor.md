@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - System Monitor [SQL Server], replication
 - performance counters [SQL Server replication]
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
-caps.latest.revision: "30"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce2cd6d57f3d8f5c2e08930a96f118341172fafc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5dd2bf72431d7a75c34e08f6bba6699811529905
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>使用系統監視器監視複寫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 系統監視器可讓您使用圖形、圖表和報表來量測電腦的效率、識別可能的問題並進行疑難排解 (例如不平衡的資源用量、硬體不足或不良的程式設計)，以及規劃其他硬體需求。 如需詳細資訊，請參閱[監視資源使用狀況 &#40;系統監視器&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 系統監視器」可讓您使用圖形、圖表和報告來量測電腦的效率、識別和排除可能的問題 (例如不平衡的資源用量、硬體不足或不良的程式設計)，以及規劃其他硬體需求。 如需詳細資訊，請參閱[監視資源使用狀況 &#40;系統監視器&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)。  
   
  「系統監視器」使用效能物件和計數器，這些工具可以提供各種處理之效能的資訊。 您可以透過與複寫代理程式相關的計數器來衡量複寫效能：  
   

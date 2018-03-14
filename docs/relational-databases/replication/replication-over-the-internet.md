@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Internet [SQL Server replication]
 - Internet [SQL Server replication], publishing
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
-caps.latest.revision: "31"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 72e3ba0e441fc62d1f2e43adbc43ba73b4e6ddd8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 72b6992800dda97df7ea08599cc4203c5031fb6e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-over-the-internet"></a>透過網際網路的複寫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 透過網際網路複寫資料，可讓遠端、離線使用者在需要時使用網際網路連線存取資料。 使用下列方式，透過網際網路複寫資料：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  透過網際網路複寫資料，可讓遠端、離線使用者在需要時使用網際網路連線存取資料。 使用下列方式，透過網際網路複寫資料：  
   
 -   虛擬私人網路 (VPN)。 如需詳細資訊，請參閱[使用 VPN 透過網際網路發行資料](../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md)。  
   

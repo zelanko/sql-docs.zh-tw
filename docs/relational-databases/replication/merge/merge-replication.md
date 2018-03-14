@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - merge replication [SQL Server replication], about merge replication
 - merge replication [SQL Server replication]
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
-caps.latest.revision: "34"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aaf3c78b6782e882f52f3d23ec3c70638cd2f790
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c1224abf7fa97c1b4590e92bbabe17e9ffc435e2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="merge-replication"></a>合併式複寫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 合併式複寫與異動複寫類似，通常以發行集資料庫物件和資料的快照集啟動。 在「發行者」和「訂閱者」端所作的後續資料變更和結構描述修改可使用觸發程序進行追蹤。 該「訂閱者」在連接到網路時會與「發行者」同步，並且在「發行者」與「訂閱者」之間交換自上次同步處理後進行過變更的所有資料列。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  合併式複寫與異動複寫類似，通常以發行集資料庫物件和資料的快照集啟動。 在「發行者」和「訂閱者」端所作的後續資料變更和結構描述修改可使用觸發程序進行追蹤。 該「訂閱者」在連接到網路時會與「發行者」同步，並且在「發行者」與「訂閱者」之間交換自上次同步處理後進行過變更的所有資料列。  
   
  合併式複寫通常會在伺服器至用戶端環境中使用。 合併式複寫適合於下列任何情況：  
   
