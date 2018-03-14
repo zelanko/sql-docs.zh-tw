@@ -24,7 +24,7 @@ ms.lasthandoff: 03/09/2018
 
 本快速入門示範如何使用 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 連接到 Azure SQL database，並再使用 TRANSACT-SQL (T-SQL) 陳述式來建立*TutorialDB*用於[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 若要完成本快速入門，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 Azure SQL 伺服器。
 
