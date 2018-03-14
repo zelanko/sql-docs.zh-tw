@@ -1,5 +1,5 @@
 ---
-title: "教學課程： 啟用 5 名最慢的查詢範例 widget-SQL 作業 Studio （預覽） |Microsoft 文件"
+title: "教學課程： 啟用 5 名最慢的查詢範例 widget-SQL Operations Studio （預覽） |Microsoft 文件"
 description: "本教學課程會示範如何啟用資料庫儀表板上的五個最慢的查詢範例 widget。"
 ms.custom: tools|sos
 ms.date: 11/16/2017
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]包含數個深入了解 widget--現成。 本教學課程示範如何加入*查詢的資料-存放區-db-深入解析* widget 中，但步驟都基本上是相同的新增任何小工具。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a> 必要條件
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列快速入門的其中一個：
 
