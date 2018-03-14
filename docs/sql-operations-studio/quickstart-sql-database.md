@@ -1,6 +1,6 @@
----
-title: "快速入門： 連接及查詢 Azure SQL database 使用 SQL 作業 Studio （預覽） |Microsoft 文件"
-description: "本快速入門示範如何使用連接到 SQL 資料庫並執行查詢的 SQL 作業 Studio （預覽）"
+﻿---
+title: "快速入門： 連接及查詢 Azure SQL database 使用 SQL Operations Studio （預覽） |Microsoft 文件"
+description: "本快速入門示範如何使用連接到 SQL 資料庫並執行查詢的 SQL Operations Studio （預覽）"
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
