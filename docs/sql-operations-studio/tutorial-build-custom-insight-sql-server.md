@@ -1,6 +1,6 @@
 ---
-title: "教學課程： 建立自訂的見解 widget 中 SQL 作業 Studio （預覽） |Microsoft 文件"
-description: "本教學課程會示範如何建置自訂的見解 widget，並將它們加入 SQL 作業 Studio （預覽） 中的資料庫和伺服器儀表板。"
+title: "教學課程： 建立自訂的 insight widget 中 SQL Operations Studio （預覽） |Microsoft 文件"
+description: "本教學課程會示範如何建置自訂的 insight widget，並將它們加入 SQL Operations Studio （預覽） 中的資料庫和伺服器儀表板。"
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -20,18 +20,18 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>教學課程： 建立自訂的見解 widget
+# <a name="tutorial-build-a-custom-insight-widget"></a>教學課程： 建立自訂的 insight widget
 
-本教學課程會示範如何使用您自己的深入剖析查詢來建置自訂的見解 widget。
+本教學課程會示範如何使用您自己的深入剖析查詢來建置自訂的 insight widget。
 
 在本教學課程期間您了解如何：
 > [!div class="checklist"]
 > * 執行您自己的查詢和檢視圖表中
-> * 建置自訂的見解 widget 圖
+> * 建置自訂的 insight widget 圖
 > * 將圖表加入到伺服器或資料庫儀表板
-> * 加入自訂的見解 widget 的詳細資料
+> * 加入自訂的 insight widget 的詳細資料
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列快速入門的其中一個：
 
@@ -169,9 +169,9 @@ ms.lasthandoff: 12/21/2017
 在此教學課程中，您學會如何：
 > [!div class="checklist"]
 > * 執行您自己的查詢和檢視圖表中
-> * 建置自訂的見解 widget 圖
+> * 建置自訂的 insight widget 圖表
 > * 將圖表加入到伺服器或資料庫儀表板
-> * 加入自訂的見解 widget 的詳細資料
+> * 加入自訂的 insight widget 的詳細資料
 
 若要瞭解如何備份和還原資料庫，請完成下一個教學課程：
 
