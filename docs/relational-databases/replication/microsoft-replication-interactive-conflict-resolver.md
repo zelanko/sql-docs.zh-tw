@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.replconflictviewer.interactiveresolver.f1
+f1_keywords:
+- sql13.rep.replconflictviewer.interactiveresolver.f1
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
-caps.latest.revision: "23"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4adb16fde11736a167fb77ab7671777afb617016
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4db8c0fe2f91ea0663472d764258c91b8c9aa502
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft Replication Interactive Conflict Resolver
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Interactive Conflict Resolver 可用於使用 Windows Synchronization Manager 同步處理的合併訂閱。 它可以讓您針對資料衝突，進行檢視、比較、編輯以及選取結果。 複寫還包含衝突檢視器，它可以讓您在認可衝突結果之後，還能夠進行檢視及修改。 Interactive Conflict Resolver 可以讓您在同步處理期間選取結果。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Interactive Conflict Resolver 可用於使用 Windows Synchronization Manager 同步處理的合併訂閱。 它可以讓您針對資料衝突，進行檢視、比較、編輯以及選取結果。 複寫還包含衝突檢視器，它可以讓您在認可衝突結果之後，還能夠進行檢視及修改。 Interactive Conflict Resolver 可以讓您在同步處理期間選取結果。  
   
 > [!NOTE]  
 >  「互動解析程式」中不會顯示涉及邏輯記錄的衝突。 若要檢視這些衝突的相關資訊，請使用複寫預存程序。 如需詳細資訊，請參閱[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)。  

@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Oracle publishing [SQL Server replication], objects created
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
-caps.latest.revision: "33"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18040967f55457a2c5d1f43dd9e84a56720daf74
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 56222d5ef294a5515563a441819b5bd63b09e2ef
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>在 Oracle 發行者端建立的物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫會在 Oracle 發行者端安裝資料庫物件，以啟用變更追蹤和轉送 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會在 Oracle 發行者端安裝任何二進位檔案)。 下表列出當「Oracle 發行者」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端上識別為「發行者」時，在該「Oracle 發行者」端上建立的物件。 提供的物件描述僅供參考之用。 不應對這些物件進行修改。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫會在 Oracle 發行者端安裝資料庫物件，以啟用變更追蹤和轉送 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會在 Oracle 發行者端安裝任何二進位檔案)。 下表列出當「Oracle 發行者」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端上識別為「發行者」時，在該「Oracle 發行者」端上建立的物件。 提供的物件描述僅供參考之用。 不應對這些物件進行修改。  
   
 |Object Name|物件類型|描述|  
 |-----------------|-----------------|-----------------|  
