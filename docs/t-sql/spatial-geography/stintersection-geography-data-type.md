@@ -1,5 +1,5 @@
 ---
-title: "STIntersection (geography 資料類型) |Microsoft 文件"
+title: "STIntersection (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geography-data-type"></a>STIntersection (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  傳回物件表示的點，其中**geography**執行個體相交，另一個**geography**執行個體。  
+  傳回物件，表示 **geography** 執行個體與另一個 **geography** 執行個體相交的點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,19 +45,19 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是另一個**geography**與 stintersection （） 在其叫用執行個體比較的執行個體。  
+ 這是要與叫用 STIntersection() 所在之執行個體相比較的另一個 **geography** 執行個體。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  傳回兩個 geography 執行個體的交集。  
   
- Stintersection （） 永遠傳回 null，如果空間參考識別碼 (Srid) **geography**例項不相符。  
+ 如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，STIntersection() 一律會傳回 Null。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援大於半球的空間執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能包含**FullGlobe**伺服器上的執行個體中的可能結果集傳回。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援大於半球的空間執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在伺服器上傳回的可能結果集中，可能包含 **FullGlobe** 執行個體。  
   
  只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。  
   

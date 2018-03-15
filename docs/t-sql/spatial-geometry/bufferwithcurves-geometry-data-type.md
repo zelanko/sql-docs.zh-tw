@@ -1,5 +1,5 @@
 ---
-title: "BufferWithCurves (geometry 資料類型) |Microsoft 文件"
+title: "BufferWithCurves (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  傳回**幾何**表示集合的所有執行個體從呼叫點距離**幾何**執行個體小於或等於*距離*參數。  
+  傳回 **geometry** 執行個體，此執行個體代表與呼叫端 **geometry** 執行個體相距的距離小於或等於 *distance* 參數之所有點的集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,23 +42,23 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *distance*  
- 是**float**點形成緩衝區的最大距離，表示可以從**幾何**執行個體。  
+ 這是一個 **float**，指出形成緩衝的點與 **geometry** 執行個體相距的最大可能距離。  
   
 ## <a name="return-types"></a>傳回類型  
-SQL Server 傳回類型：**幾何**  
+SQL Server 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="exceptions"></a>例外狀況  
- 下列準則會擲回**ArgumentException**。  
+ 下列準則會擲回 **ArgumentException**。  
   
 -   沒有參數傳遞至此方法，例如 `@g.BufferWithCurves()`  
   
 -   非數值參數傳遞至此方法，例如 `@g.BufferWithCurves('a')`  
   
--   **NULL**傳遞至此方法，例如`@g.BufferWithCurves(NULL)`  
+-   將 **NULL** 傳遞至此方法，例如 `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  下圖顯示由這個方法傳回的 geometry 執行個體範例。  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -67,17 +67,17 @@ SQL Server 傳回類型：**幾何**
   
 |distance 值|維度類型|傳回的空間類型|  
 |--------------------|---------------------|---------------------------|  
-|distance < 0|零或一維|空白**GeometryCollection**執行個體|  
-|distance < 0|二維或以上|A **CurvePolygon**或**GeometryCollection**具有負數緩衝的執行個體。 **注意：**負數緩衝可能會建立空**GeometryCollection**|  
-|distance = 0|所有維度|叫用的複製**幾何**執行個體|  
-|distance > 0|所有維度|**CurvePolygon**或**GeometryCollection**執行個體|  
+|distance < 0|零或一維|空的 **GeometryCollection** 執行個體|  
+|distance < 0|二維或以上|具有負數緩衝的 **CurvePolygon** 或 **GeometryCollection** 執行個體。 **注意：**負數緩衝可能會建立空的 **GeometryCollection**|  
+|distance = 0|所有維度|叫用端 **geometry** 執行個體的複本|  
+|distance > 0|所有維度|**CurvePolygon** 或 **GeometryCollection** 執行個體|  
   
 > [!NOTE]  
->  因為*距離*是**float**，非常小的值可等同於零的計算中。 當發生這種情況再呼叫一份**幾何**會傳回執行個體。 請參閱[float 和 real &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  因為 *distance* 是 **float**，所以非常小的值在計算中可等同於零。 發生這種情況時，會傳回呼叫端 **geometry** 執行個體的複本。 請參閱 [float 和 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)。  
   
  負數緩衝會移除幾何界限之給定距離內的所有點。 下圖中，負數緩衝顯示為圓形淺色陰影區域。 點線是原始多邊形的界限，實線是結果多邊形的界限。  
   
- 如果**字串**參數傳遞至此方法，然後將轉換成**float**或將會擲回`ArgumentException`。  
+ 如果將 **string** 參數傳遞給此方法，它就會轉換成 **float** 或擲回 `ArgumentException`。  
   
 ## <a name="examples"></a>範例  
   
@@ -98,17 +98,17 @@ SQL Server 傳回類型：**幾何**
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. 以參數值 < 0 呼叫 BufferWithCurves()，傳回空的 GeometryCollection  
- 下列範例會顯示發生什麼事時*距離*參數等於-2:  
+ 下列範例示範當 *distance* 參數等於 -2 時會發生何種狀況：  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- 這**選取**陳述式會傳回`GEOMETRYCOLLECTION EMPTY`  
+ 這個 **SELECT** 陳述式會傳回 `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 以參數值 = 0 呼叫 BufferWithCurves()  
- 下列範例會傳回一份呼叫**幾何**執行個體：  
+ 下列範例會傳回呼叫端 **geometry** 執行個體的複本：  
   
 ```
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
@@ -116,7 +116,7 @@ SQL Server 傳回類型：**幾何**
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. 以極小的非零參數值呼叫 BufferWithCurves()  
- 下列範例也會傳回一份呼叫**幾何**執行個體：  
+ 下列範例也會傳回呼叫端 **geometry** 執行個體的複本：  
   
 ```
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
@@ -160,7 +160,7 @@ SQL Server 傳回類型：**幾何**
  SELECT @g.BufferWithCurves(1.6).ToString();
  ```  
   
- 前兩個**選取**陳述式會傳回`GeometryCollection`執行個體，因為參數*距離*小於或等於 1/2 的距離兩個點 (1 1) 和 (1 4)。 第三個**選取**陳述式會傳回`CurvePolygon`執行個體，因為緩衝的執行個體的兩個點 (1 1) 和 (1 4) 重疊。  
+ 前兩個 **SELECT** 陳述式會傳回 `GeometryCollection` 執行個體，因為參數 *distance* 小於或等於 (1 1) 和 (1 4) 兩點之間距離的 1/2。 第三個 **SELECT** 陳述式會傳回 `CurvePolygon` 執行個體，因為 (1 1) 和 (1 4) 兩點的緩衝執行個體重疊。  
   
 ## <a name="see-also"></a>另請參閱  
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  

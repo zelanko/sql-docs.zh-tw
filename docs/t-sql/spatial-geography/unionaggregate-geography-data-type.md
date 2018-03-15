@@ -1,5 +1,5 @@
 ---
-title: "UnionAggregate (geography 資料類型) |Microsoft 文件"
+title: "UnionAggregate (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -45,21 +45,21 @@ UnionAggregate ( geography_operand )
   
 ## <a name="arguments"></a>引數  
  *geography_operand*  
- 是**geography**類型資料表資料行包含一組**geography**物件在其上執行聯集作業。  
+ 這是 **geography** 類型資料表資料行，可保留要在其上執行聯集作業的一組 **geography** 物件。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
-## <a name="remarks"></a>備註  
- 方法會傳回**null**如果輸入具有不同 Srid。 請參閱[空間參考識別碼 &#40;Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+## <a name="remarks"></a>Remarks  
+ 如果輸入具有不同的 SRID，方法會傳回 **null**。 請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
- 方法會忽略**null**輸入。  
+ 此方法會忽略 **null** 輸入。  
   
 > [!NOTE]  
->  方法會傳回**null**如果所有輸入的值為**null**。  
+>  如果所有輸入的值都為 **null**，此方法就會傳回 **null**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會執行`UnionAggregate`上一組**geography**縣 （市） 內的位置點。  
+ 下列範例會在城市內的一組 **geography** 位置點上執行 `UnionAggregate`。  
   
  ```
  USE AdventureWorks2012  

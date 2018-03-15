@@ -1,5 +1,5 @@
 ---
-title: "子查詢 （Azure SQL 資料倉儲、 Parallel Data Warehouse） |Microsoft 文件"
+title: "子查詢 (Azure SQL 資料倉儲、平行處理資料倉儲) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -24,33 +24,33 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查詢 （Azure SQL 資料倉儲、 Parallel Data Warehouse）
+# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查詢 (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  本主題提供使用中的子查詢的範例[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
+  本主題提供在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中使用子查詢的範例。  
   
- SELECT 陳述式，請參閱[SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-transact-sql.md)  
+ 如需了解 SELECT 陳述式，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
 ## <a name="contents"></a>目錄  
   
 -   [基本概念](#Basics)  
   
--   [範例： SQL 資料倉儲和 Parallel Data Warehouse](#Examples)  
+-   [範例：SQL 資料倉儲和平行處理資料倉儲](#Examples)  
   
-##  <a name="Basics"></a>基本概念  
+##  <a name="Basics"></a> 基本概念  
  子查詢  
- 子查詢是指在 SELECT、INSERT、UPDATE 或 DELETE 陳述式中，或在另一個子查詢之中為巢狀的。 這也稱為內部查詢或內部的 select。  
+ 子查詢是指在 SELECT、INSERT、UPDATE 或 DELETE 陳述式中，或在另一個子查詢之中為巢狀的。 這也稱為內部查詢或內部選取。  
   
  外部查詢  
- 包含子查詢陳述式。 這也稱為外部 select。  
+ 包含子查詢的陳述式。 這也稱為外部選取。  
   
- 相互關聯子查詢  
- 外部查詢中的資料表是指子查詢。  
+ 相互關聯的子查詢  
+ 參考外部查詢中資料表的子查詢。  
   
-##  <a name="Examples"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 本章節提供支援的子查詢的範例[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
+##  <a name="Examples"></a> 範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 本節提供 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中所支援子查詢的範例。  
   
-### <a name="a-top-and-order-by-in-a-subquery"></a>A. TOP 和 ORDER BY 的子查詢中  
+### <a name="a-top-and-order-by-in-a-subquery"></a>A. 子查詢中的 TOP 和 ORDER BY  
   
 ```  
 SELECT * FROM tblA  
@@ -59,7 +59,7 @@ WHERE col1 IN
   
 ```  
   
-### <a name="b-having-clause-with-a-correlated-subquery"></a>B. HAVING 子句中的使用相互關聯子查詢  
+### <a name="b-having-clause-with-a-correlated-subquery"></a>B. 含有相互關聯子查詢的 HAVING 子句  
   
 ```  
 SELECT dm.EmployeeKey, dm.FirstName, dm.LastName   
@@ -73,7 +73,7 @@ ORDER BY EmployeeKey;
   
 ```  
   
-### <a name="c-correlated-subqueries-with-analytics"></a>C. 分析相互關聯子查詢  
+### <a name="c-correlated-subqueries-with-analytics"></a>C. 含有分析的相互關聯子查詢  
   
 ```  
 SELECT * FROM ReplA AS A   
@@ -81,7 +81,7 @@ WHERE A.ID IN
     (SELECT sum(B.ID2) OVER() FROM ReplB AS B WHERE A.ID2 = B.ID);  
 ```  
   
-### <a name="d-correlated-union-statements-in-a-subquery"></a>D. 相互關聯子查詢中的 union 陳述式  
+### <a name="d-correlated-union-statements-in-a-subquery"></a>D. 子查詢中相互關聯的聯集陳述式  
   
 ```  
 SELECT * FROM RA   
@@ -90,14 +90,14 @@ WHERE EXISTS
      UNION ALL SELECT 1 FROM RC);  
 ```  
   
-### <a name="e-join-predicates-in-a-subquery"></a>E. 子查詢中聯結述詞  
+### <a name="e-join-predicates-in-a-subquery"></a>E. 子查詢中的聯結述詞  
   
 ```  
 SELECT * FROM RA INNER JOIN RB   
     ON RA.a1 = (SELECT COUNT(*) FROM RC);  
 ```  
   
-### <a name="f-correlated-join-predicates-in-a-subquery"></a>F. 子查詢中的相互關聯的聯結述詞  
+### <a name="f-correlated-join-predicates-in-a-subquery"></a>F. 子查詢中相互關聯的聯結述詞  
   
 ```  
 SELECT * FROM RA   
@@ -105,7 +105,7 @@ SELECT * FROM RA
     (SELECT 1 FROM RB INNER JOIN RC ON RA.a1=RB.b1+RC.c1);  
 ```  
   
-### <a name="g-correlated-subselects-as-data-sources"></a>G. 相互關聯子選擇做為資料來源  
+### <a name="g-correlated-subselects-as-data-sources"></a>G. 作為資料來源的相互關聯子選擇  
   
 ```  
 SELECT * FROM RA   
@@ -113,14 +113,14 @@ SELECT * FROM RA
         FROM (SELECT b1 FROM RB WHERE RB.b1 = RA.a1) X);  
 ```  
   
-### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>H. 相互關聯子查詢中搭配彙總的資料值  
+### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>H. 與彙總搭配使用的資料值中相互關聯子查詢  
   
 ```  
 SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;  
 ```  
   
-### <a name="i-using-in-with-a-correlated-subquery"></a>I. 使用以相互關聯子查詢  
- 下列範例在相關或重複的子查詢中使用 `IN`。 這是一項相依於外部查詢來取得其值的查詢。 重複執行內部查詢時，每個資料列一次，可能會選取外部查詢。 此查詢會擷取的一個執行個體`EmployeeKey`加上的每位員工的姓氏和名字`OrderQuantity`中`FactResellerSales`資料表是`5`和員工識別碼相符的`DimEmployee`和`FactResellerSales`資料表。  
+### <a name="i-using-in-with-a-correlated-subquery"></a>I. 搭配相互關聯子查詢使用 IN  
+ 下列範例在相關或重複的子查詢中使用 `IN`。 這是一項相依於外部查詢來取得其值的查詢。 內部查詢會重複執行，針對外部查詢可能選取的每個資料列各執行一次。 這個查詢會擷取一個 `EmployeeKey` 執行個體，再加上 `FactResellerSales` 資料表中 `OrderQuantity` 為 `5` 且員工識別碼在 `DimEmployee` 和 `FactResellerSales` 資料表中相符之每位員工的名字和姓氏。  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   
@@ -132,8 +132,8 @@ WHERE 5 IN
 ORDER BY EmployeeKey;  
 ```  
   
-### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. 使用 EXISTS 與使用子查詢  
- 下列範例顯示查詢的語意相當於說明使用之間的差異`EXISTS`關鍵字和`IN`關鍵字。 兩者都是會擷取產品子類別目錄的每個產品名稱的一個執行個體的子查詢`Road Bikes`。 `ProductSubcategoryKey`符合`DimProduct`和`DimProductSubcategory`資料表。  
+### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. 搭配子查詢使用 EXISTS 和 IN 之比較  
+ 下列範例示範語意相等的查詢，以說明使用 `EXISTS` 關鍵字和 `IN` 關鍵字之間的差異。 兩者都是子查詢的範例，會針對產品子類別為 `Road Bikes` 的每個產品名稱各擷取一個執行個體。 `ProductSubcategoryKey` 會在 `DimProduct` 與 `DimProductSubcategory`資料表之間進行比對。  
   
 ```  
 SELECT DISTINCT EnglishProductName  
@@ -158,7 +158,7 @@ WHERE dp.ProductSubcategoryKey IN
 ORDER BY EnglishProductName;  
 ```  
   
-### <a name="k-using-multiple-correlated-subqueries"></a>K. 使用多個相互關聯子查詢  
+### <a name="k-using-multiple-correlated-subqueries"></a>K. 使用多個相互關聯的子查詢  
  這個範例利用相關的子查詢來尋找銷售了特定產品的員工名稱。  
   
 ```  

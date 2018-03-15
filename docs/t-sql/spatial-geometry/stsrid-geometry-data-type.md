@@ -1,5 +1,5 @@
 ---
-title: "STSrid (geometry 資料類型) |Microsoft 文件"
+title: "STSrid (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geometry-data-type"></a>STSrid (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid**是整數，表示執行個體的空間參考識別碼。  
+  **STSrid** 是一個整數，其代表此例項的空間參考識別碼 (Spatial Reference Identifier，SRID)。  
   
 這個屬性可以修改。
   
@@ -46,12 +46,12 @@ STSrid
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型別：**int**  
   
- CLR 型別： **SqlInt32**  
+ CLR 型別：**SqlInt32**  
   
 ## <a name="examples"></a>範例  
- 第一個範例會建立**幾何**執行個體具有 SRID 值 13，並使用`STSrid`來確認此 SRID。  
+ 第一個範例會建立一個具有 SRID 值 13 的 **geometry** 執行個體，並使用 `STSrid` 來確認此 SRID。  
   
 ```  
 DECLARE @g geometry;  

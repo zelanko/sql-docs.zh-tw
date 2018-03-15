@@ -1,5 +1,5 @@
 ---
-title: "STIsEmpty (geometry 資料類型) |Microsoft 文件"
+title: "STIsEmpty (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回 1，如果**幾何**是空的執行個體。 傳回 0，如果**幾何**不是空的執行個體。
+如果 **geometry** 執行個體是空的，便傳回 1。 如果 **geometry** 執行個體不是空的，則傳回 0。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**位元**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型： **SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
 ## <a name="examples"></a>範例  
  下列範例會建立空的 `geometry` 例項，並使用 `STIsEmpty()` 來測試看看此例項是不是空的。  

@@ -1,5 +1,5 @@
 ---
-title: "別名 （Azure SQL 資料倉儲、 Parallel Data Warehouse） |Microsoft 文件"
+title: "別名功能 (Azure SQL 資料倉儲、平行處理資料倉儲) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>別名 （Azure SQL 資料倉儲、 Parallel Data Warehouse）
+# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>別名功能 (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  別名可讓採取短暫且容易記住的字串來取代資料表或資料行名稱中的暫存替代[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]查詢。 資料表別名通常是聯結查詢中使用，因為聯結語法的參考資料行時，需要完整限定的物件名稱。  
+  別名功能可允許暫時以簡短且易記的字串取代 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 查詢中的資料表或資料行名稱。 JOIN 查詢中經常使用資料表別名，因為在參考資料行時，JOIN 語法需要完整的物件名稱。  
   
- 別名必須是符合物件命名規則的單字。 如需詳細資訊，請參閱 < 物件命名規則 > 中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。 別名不得包含空格，而且無法以單引號或雙引號括住。  
+ 別名必須是符合物件命名規則的單字。 如需詳細資訊，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Object Naming Rules＞(物件命名規則)。 物件不可包含空格，且不可以單引號或雙引號括住。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,17 +42,17 @@ object_source [ AS ] alias
  來源資料表或資料行的名稱。  
   
  AS  
- 的選擇性別名的前置詞。 當使用範圍變數的別名，被禁止的 AS 關鍵字。  
+ 選擇性的別名前置詞。 使用範圍變數別名功能時，禁止使用 AS 關鍵字。  
   
  *alias*  
- 所需的臨時參考的資料表或資料行名稱。 可以使用任何有效的物件名稱。 如需詳細資訊，請參閱 < 物件命名規則 > 中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
+ 所需的資料表或資料行暫時參考名稱。 可以使用任何有效的物件名稱。 如需詳細資訊，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Object Naming Rules＞(物件命名規則)。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例顯示使用多個聯結的查詢。 在此範例中示範資料表和資料行的別名。  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列範例示範含有多個聯結的查詢。 此範例同時示範資料表和資料行別名功能。  
   
--   資料行別名： 兩個資料行和運算式的 select 清單中的資料行是在此範例中的別名。 `SalesTerritoryRegion AS SalesTR`示範簡單的資料行別名。 `Sum(SalesAmountQuota) AS TotalSales`示範  
+-   資料行別名功能：在此範例中，資料行及涉及選取清單中資料行的運算式都採用別名。 `SalesTerritoryRegion AS SalesTR` 示範一個簡單的資料行別名。 `Sum(SalesAmountQuota) AS TotalSales` 示範  
   
--   資料表別名：`dbo.DimSalesTerritory AS st`顯示的建立`st`別名，以供`dbo.DimSalesTerritory`資料表。  
+-   資料表別名功能：`dbo.DimSalesTerritory AS st` 示範如何為 `dbo.DimSalesTerritory` 資料表建立 `st` 別名。  
   
 ```  
 -- Uses AdventureWorks  
@@ -67,7 +67,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
 ```  
   
- AS 關鍵字可以排除，如下所示，但通常是為了可讀性。  
+ 如下所示，您可以不包含 AS 關鍵字，但通常會包含此關鍵字以便於閱讀。  
   
 ```  
 -- Uses AdventureWorks  

@@ -1,5 +1,5 @@
 ---
-title: "STNumInteriorRing (geometry 資料類型) |Microsoft 文件"
+title: "STNumInteriorRing (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回的內部環形數**Polygongeometry**執行個體。
+傳回 **Polygongeometry** 執行個體的內環數。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型： **SqlInt32**  
+ CLR 傳回類型：**SqlInt32**  
   
-## <a name="remarks"></a>備註  
- 如果此方法會傳回 null**幾何**執行個體不是多邊形。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體不是多邊形，此方法會傳回 Null。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `Polygon` 例項，並使用 `STNumInteriorRing()` 來尋找此例項具有多少內環。  

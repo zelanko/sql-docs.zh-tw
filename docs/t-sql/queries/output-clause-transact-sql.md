@@ -1,5 +1,5 @@
 ---
-title: "OUTPUT 子句 (TRANSACT-SQL) |Microsoft 文件"
+title: "OUTPUT 子句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  具有 OUTPUT 子句的 UPDATE、INSERT 或 DELETE 陳述式會將資料列傳回用戶端，即使當陳述式遇到錯誤且回復時，也是如此。 如果當您執行此陳述式時發生任何錯誤，就不應該使用此結果。  
   
- **使用中：**  
+ **用於：**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -84,18 +84,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  @*table_variable*  
- 指定**資料表**傳回的資料列會插入到，而不要傳回給呼叫端的變數。 @*table_variable*必須在 INSERT、 UPDATE、 DELETE 或 MERGE 陳述式之前宣告。  
+ 指定 **table** 變數以將傳回的資料列插入其中，而不傳回給呼叫端。 @*table_variable* 必須在 INSERT、UPDATE、DELETE 或 MERGE 陳述式之前宣告。  
   
- 如果*column_list*未指定，**資料表**變數必須有相同數目的資料行與 OUTPUT 結果集。 識別和計算資料行例外，它們必須被略過。 如果*column_list*會指定，任何省略的資料行必須允許 null 值或有預設值指派給它們。  
+ 如果未指定 *column_list*，**table** 變數的資料行數就必須與 OUTPUT 結果集的資料行數相同。 識別和計算資料行例外，它們必須被略過。 如果指定 *column_list*，任何省略的資料行都必須允許 Null 值或已具有指派的預設值。  
   
- 如需有關**資料表**變數，請參閱[資料表 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/table-transact-sql.md).  
+ 如需有關使用 **table** 變數的詳細資訊，請參閱 [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)。  
   
  *output_table*  
- 指定資料表，讓傳回的資料列插入其中，而不要傳回給呼叫端。 *output_table*可能是暫存資料表。  
+ 指定資料表，讓傳回的資料列插入其中，而不要傳回給呼叫端。 *output_table* 可以是暫存資料表。  
   
- 如果*column_list*未指定，資料表必須有相同數目的資料行與 OUTPUT 結果集。 識別和計算資料行例外。 它們必須被略過。 如果*column_list*會指定，任何省略的資料行必須允許 null 值或有預設值指派給它們。  
+ 如果未指定 *column_list*，資料表的資料行數就必須與 OUTPUT 結果集的資料行數相同。 識別和計算資料行例外。 它們必須被略過。 如果指定 *column_list*，任何省略的資料行都必須允許 Null 值或已具有指派的預設值。  
   
- *output_table*無法：  
+ *output_table* 無法：  
   
 -   啟用它所定義的觸發程序。  
   
@@ -104,10 +104,10 @@ ms.lasthandoff: 01/25/2018
 -   有 CHECK 條件約束或啟用的規則。  
   
 *column_list*  
- 這是一份 INTO 子句目標資料表的資料行名稱選用清單。 它相當於資料行清單中允許[插入](../../t-sql/statements/insert-transact-sql.md)陳述式。  
+ 這是一份 INTO 子句目標資料表的資料行名稱選用清單。 它類似於 [INSERT](../../t-sql/statements/insert-transact-sql.md) 陳述式中所允許使用的資料行清單。  
   
  *scalar_expression*  
- 這是會評估得出單一值的符號和運算子的任何組合。 中不允許彙總函式*scalar_expression*。  
+ 這是會評估得出單一值的符號和運算子的任何組合。 *scalar_expression* 中不允許使用彙總函數。  
   
  任何指向修改的資料表中之資料行的參考，都必須用 INSERTED 或 DELETED 前置詞來限定。  
   
@@ -140,20 +140,20 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 這是一個明確的資料行參考。 正在修改之資料表的任何參考必須由地加以限定 INSERTED 或 DELETED 前置詞，視需要，例如： INSERTED **。 * * * column_name*。  
+ 這是一個明確的資料行參考。 若要參考所要修改的資料表，必須依據適用情況，以 INSERTED 或 DELETED 前置詞正確地限定該參考，例如：INSERTED**.***column_name*。  
   
  $action  
- 僅適用於 MERGE 陳述式。 指定類型的資料行**nvarchar （10)**傳回每個資料列的三個值的其中一個 MERGE 陳述式中 OUTPUT 子句中: 'INSERT'、 'UPDATE' DELETE'，依據該資料列時所執行的動作。  
+ 僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定 **nvarchar(10)**類型的資料行，此陳述式會針對每個資料列傳回下列三個值其中之一：'INSERT'、'UPDATE' 或 'DELETE' (依據在該資料列上執行的動作而定)。  
   
-## <a name="remarks"></a>備註  
- 輸出\<dml_select_list > 子句和輸出\<dml_select_list > INTO {**@ * * * table_variable* | *output_table* } 子句可以定義在單一 INSERT、 UPDATE、 DELETE 或 MERGE 陳述式。  
+## <a name="remarks"></a>Remarks  
+ 您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } 子句。  
   
 > [!NOTE]  
 >  除非另有指定，否則，指向 OUTPUT 子句的參考會同時參考 OUTPUT 子句和 OUTPUT INTO 子句。  
   
  在 INSERT 或 UPDATE 作業之後擷取識別或計算資料行值時，OUTPUT 子句可能很有用。  
   
- 計算資料行中的包含時\<dml_select_list >，在輸出資料表或資料表變數中的對應資料行不是計算資料行。 新資料行中的值是執行陳述式時所計算的值。  
+ 當 \<dml_select_list> 包括計算資料行時，輸出資料表或資料表變數中對應的資料行並不是計算資料行。 新資料行中的值是執行陳述式時所計算的值。  
   
  資料表套用變更的順序以及資料列插入輸出資料表或資料表變數的順序，並無法保證能夠對應。  
   
@@ -185,7 +185,7 @@ DELETE Sales.ShoppingCartItem
   
     -   包含使用者定義函數的計算資料行，而該函數會在其定義中執行使用者或系統資料存取。  
   
-     當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]偵測到這類資料行中的 OUTPUT 子句，就會引發錯誤 4186。   
+     當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 OUTPUT 子句中偵測到這類資料行時，就會引發錯誤 4186。   
   
 ## <a name="inserting-data-returned-from-an-output-clause-into-a-table"></a>將從 OUTPUT 子句傳回的資料插入至資料表  
  當您要擷取巢狀 INSERT、UPDATE、DELETE 或 MERGE 陳述式中 OUTPUT 子句的結果，並且將這些結果插入目標資料表時，請記住下列資訊：  
@@ -206,22 +206,22 @@ DELETE Sales.ShoppingCartItem
   
     -   此目標不得為遠端資料表或資料分割檢視。  
   
-    -   來源本身不得包含\<dml_table_source > 子句。  
+    -   來源本身不可包含 \<dml_table_source> 子句。  
   
--   INSERT 陳述式含有不支援 OUTPUT INTO 子句\<dml_table_source > 子句。  
+-   含有 \<dml_table_source> 子句的 INSERT 陳述式不支援 OUTPUT INTO 子句。  
   
--   @@ROWCOUNT傳回外部 INSERT 陳述式只插入的資料列。  
+-   @@ROWCOUNT 只會傳回外部 INSERT 陳述式所插入的資料列。  
   
--   @@IDENTITY，SCOPE_IDENTITY 和 IDENT_CURRENT 只由巢狀 DML 陳述式所產生的識別值而不產生外部 INSERT 陳述式所傳回。  
+-   @@IDENTITYSCOPE_IDENTITY 及 IDENT_CURRENT 只會傳回巢狀 DML 陳述式所產生的識別值，而不會傳回外部 INSERT 陳述式所產生的識別值。  
   
 -   查詢通知會將此陳述式視為單一實體，而且所建立的任何訊息類型都將成為巢狀 DML 的類型，即使重大變更來自外部 INSERT 陳述式本身也一樣。  
   
--   在\<dml_table_source > 子句、 SELECT 和 WHERE 子句不得包含子查詢、 彙總函式、 排名函數、 全文檢索述詞、 執行資料存取的使用者定義函數或 TEXTPTR 函數。  
+-   在 \<dml_table_source> 子句中，SELECT 和 WHERE 子句不可包含子查詢、彙總函數、次序函數、全文檢索述詞、執行資料存取的使用者定義函數或 TEXTPTR 函數。  
 
 ## <a name="parallelism"></a>平行處理原則
- OUTPUT 子句的結果傳回給用戶端一律會使用以序列計畫。
+ 會將結果傳回給用戶端的 OUTPUT 子句一律是使用序列計劃。
 
-中的內容資料庫設定為相容性層級 130 或更高版本，如果 INSERT...選取作業使用 WITH (TABLOCK) 提示的 SELECT 陳述式，而且也會使用輸出...將插入暫存或使用者資料表，則目標資料表的 INSERT INTO...選取將適合平行處理原則根據成本的樹狀子目錄。  OUTPUT INTO 子句中參考的目標資料表不會進行平行處理原則。 
+在相容性層級設定為 130 或更高的資料庫環境中，如果 INSERT...SELECT 作業針對 SELECT 陳述式使用 WITH (TABLOCK) 提示，同時也使用 OUTPUT…INTO 來插入至暫存資料表或使用者資料表，則視子樹成本而定，INSERT…SELECT 的目標資料表將會適用平行處理原則。  OUTPUT INTO 子句中參考的目標資料表將不適用平行處理原則。 
  
 ## <a name="triggers"></a>觸發程序  
  從 OUTPUT 傳回的資料行會反映在 INSERT、UPDATE 或 DELETE 陳述式完成之後執行觸發程序之前的資料。  
@@ -233,7 +233,7 @@ DELETE Sales.ShoppingCartItem
  如果設定了 sp_configure 選項 disallow results from triggers，當從觸發程序內叫用不含 INTO 子句的 OUTPUT 子句時，它會使陳述式失敗。  
   
 ## <a name="data-types"></a>資料型別  
- OUTPUT 子句支援大型物件資料類型： **nvarchar （max)**， **varchar （max)**， **varbinary （max)**，**文字**， **ntext**，**映像**，和**xml**。 當您使用。若要修改的 UPDATE 陳述式中的 WRITE 子句**nvarchar （max)**， **varchar （max)**，或**varbinary （max)**資料行中，完整的先後影像的值是傳回在受到參考。 TEXTPTR （） 函式上，不能出現運算式的一部分**文字**， **ntext**，或**映像**OUTPUT 子句中的資料行。  
+ OUTPUT 子句支援大型物件資料類型：**nvarchar(max)**、**varchar(max)**、**varbinary(max)**、**text**、**ntext**、**image** 及 **xml**。 當您在 UPDATE 陳述式中使用 .WRITE 子句來修改 **nvarchar(max)**、**varchar(max)** 或 **varbinary(max)** 資料行時，如果參考了值完整的先後影像，便會傳回這些影像。 在 OUTPUT 子句之 **text**、**ntext** 或 **image** 資料行的運算式中，不能出現 TEXTPTR( ) 函數。  
   
 ## <a name="queues"></a>佇列  
  您可以在利用資料表做為佇列的應用程式中使用 OUTPUT，也可以利用它來存放中繼結果集。 也就是說，應用程式會不斷新增或移除資料表的資料列。 下列範例會利用 DELETE 陳述式中的 OUTPUT 子句，將刪除的資料列傳回發出呼叫的應用程式。  
@@ -314,14 +314,14 @@ DROP TABLE dbo.table1;
 >  如果您的狀況允許多個應用程式執行單一資料表的破壞性讀取，請在 UPDATE 和 DELETE 陳述式中使用 READPAST 資料表提示。 這可以防止當另一個應用程式已在讀取資料表中第一個符合的記錄時，所可能出現的鎖定問題。  
   
 ## <a name="permissions"></a>Permissions  
- 需要透過擷取任何資料行的 SELECT 權限\<dml_select_list > 或在使用\<scalar_expression >。  
+ 在透過 \<dml_select_list> 來擷取或在 \<scalar_expression> 中使用的所有資料行上，必須要有 SELECT 權限。  
   
- 需要指定的任何資料表的 INSERT 權限\<output_table >。  
+ 在 \<output_table> 中指定的所有資料表上，必須要有 INSERT 權限。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. 使用 OUTPUT INTO 搭配簡單的 INSERT 陳述式  
- 下列範例會將資料列插入`ScrapReason`資料表，並使用`OUTPUT`子句的陳述式結果傳回`@MyTableVar``table`變數。 由於 `ScrapReasonID` 資料行定義了 IDENTITY 屬性，因此，`INSERT` 陳述式並未指定這個資料行的值。 不過請注意，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 針對這個資料行所產生的值，會在 `OUTPUT` 資料行之 `inserted.ScrapReasonID` 子句中傳回。  
+ 下列範例會將資料列插入至 `ScrapReason` 資料表中，然後使用 `OUTPUT` 子句將陳述式的結果傳回給 `@MyTableVar``table` 變數。 由於 `ScrapReasonID` 資料行定義了 IDENTITY 屬性，因此，`INSERT` 陳述式並未指定這個資料行的值。 不過請注意，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 針對這個資料行所產生的值，會在 `OUTPUT` 資料行之 `inserted.ScrapReasonID` 子句中傳回。  
   
 ```  
 USE AdventureWorks2012;  
@@ -360,7 +360,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. 使用 OUTPUT INTO 搭配 UPDATE 陳述式  
- 下列範例會將 `VacationHours` 資料表前 10 個資料列的 `Employee` 資料行更新 25%。 `OUTPUT`子句會傳回`VacationHours`套用之前存在的值`UPDATE`資料行中的陳述式`deleted.VacationHours`，而資料行中更新的值`inserted.VacationHours`至`@MyTableVar``table`變數。  
+ 下列範例會將 `VacationHours` 資料表前 10 個資料列的 `Employee` 資料行更新 25%。 `OUTPUT` 子句會將在於 `deleted.VacationHours` 資料行中套用 `UPDATE` 之前便已存在的 `VacationHours` 值，以及 `inserted.VacationHours` 資料行中已更新的值，傳回給 `@MyTableVar``table` 變數。  
   
  之後的兩個 `SELECT` 陳述式會傳回 `@MyTableVar` 中的值，以及 `Employee` 資料表中更新作業的結果。  
   
@@ -395,7 +395,7 @@ GO
 ```  
   
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. 使用 OUTPUT INTO 來傳回運算式  
- 下列範例是以範例 C 為基礎所建立，它在 `OUTPUT` 子句中定義一個運算式，當做更新的 `VacationHours` 值和套用更新之前的 `VacationHours` 值之間的差異。 這個運算式的值會傳回到`@MyTableVar``table`變數資料行中`VacationHoursDifference`。  
+ 下列範例是以範例 C 為基礎所建立，它在 `OUTPUT` 子句中定義一個運算式，當做更新的 `VacationHours` 值和套用更新之前的 `VacationHours` 值之間的差異。 此運算式的值會傳回給 `VacationHoursDifference` 資料行中的 `@MyTableVar``table` 變數。  
   
 ```  
 USE AdventureWorks2012;  
@@ -429,7 +429,7 @@ GO
 ```  
   
 ### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. 在 UPDATE 陳述式中，使用 OUTPUT INTO 搭配 from_table_name  
- 下列範例會更新`ScrapReasonID`中的資料行`WorkOrder`與指定的所有工作訂單的資料表`ProductID`和`ScrapReasonID`。 `OUTPUT INTO` 子句會從更新的資料表 (`WorkOrder`) 傳回值，也會從 `Product` 傳回值。 `Product` 子句利用 `FROM` 資料表來指定要更新的資料列。 由於 `WorkOrder` 資料表定義了 `AFTER UPDATE` 觸發程序，因此，需要 `INTO` 關鍵字。  
+ 下列範例會針對具有指定 `ProductID` 和 `ScrapReasonID` 的所有工單，更新 `WorkOrder` 資料表中的 `ScrapReasonID` 資料行。 `OUTPUT INTO` 子句會從更新的資料表 (`WorkOrder`) 傳回值，也會從 `Product` 傳回值。 `Product` 子句利用 `FROM` 資料表來指定要更新的資料列。 由於 `WorkOrder` 資料表定義了 `AFTER UPDATE` 觸發程序，因此，需要 `INTO` 關鍵字。  
   
 ```  
 USE AdventureWorks2012;  
@@ -494,7 +494,7 @@ GO
 ```  
   
 ### <a name="g-using-output-into-with-a-large-object-data-type"></a>G. 使用 OUTPUT INTO 搭配大型物件資料類型  
- 下列範例會利用 `DocumentSummary` 子句，來更新 `nvarchar(max)` (`Production.Document` 資料表中的 `.WRITE` 資料行) 中的部分值。 `components` 一字藉由指定用來取代的文字、現有資料中要被取代之文字的起始位置 (位移)，以及要取代的字元數 (長度) 來取代為 `features` 一字。 此範例會使用`OUTPUT`子句，傳回之前和之後的映像`DocumentSummary`欄`@MyTableVar``table`變數。 請注意，它會傳回 `DocumentSummary` 資料行之完整的先後影像。  
+ 下列範例會利用 `DocumentSummary` 子句，來更新 `nvarchar(max)` (`Production.Document` 資料表中的 `.WRITE` 資料行) 中的部分值。 `components` 一字藉由指定用來取代的文字、現有資料中要被取代之文字的起始位置 (位移)，以及要取代的字元數 (長度) 來取代為 `features` 一字。 此範例會使用 `OUTPUT` 子句，將 `DocumentSummary` 資料行的先後影像傳回給 `@MyTableVar``table` 變數。 請注意，它會傳回 `DocumentSummary` 資料行之完整的先後影像。  
   
 ```  
 USE AdventureWorks2012;  
@@ -604,7 +604,7 @@ GO
 ```  
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>J. 在單一陳述式中使用 OUTPUT 和 OUTPUT INTO  
- 下列範例根據 `ProductProductPhoto` 陳述式的 `FROM` 子句所定義的搜尋準則，來刪除 `DELETE` 資料表中的資料列。 `OUTPUT INTO`子句會傳回所刪除的資料表 (`deleted.ProductID`， `deleted.ProductPhotoID`) 和資料行從`Product`資料表`@MyTableVar``table`變數。 `Product` 子句利用 `FROM` 資料表來指定要刪除的資料列。 `OUTPUT` 子句會將 `deleted.ProductID`、`deleted.ProductPhotoID` 資料行及從 `ProductProductPhoto` 資料表中刪除資料列的日期和時間，傳回給發出呼叫的應用程式。  
+ 下列範例根據 `ProductProductPhoto` 陳述式的 `FROM` 子句所定義的搜尋準則，來刪除 `DELETE` 資料表中的資料列。 `OUTPUT INTO` 子句會將所要刪除之資料表中的資料行 (`deleted.ProductID`、`deleted.ProductPhotoID`) 及 `Product` 資料表中的資料行傳回給 `@MyTableVar``table` 變數。 `Product` 子句利用 `FROM` 資料表來指定要刪除的資料列。 `OUTPUT` 子句會將 `deleted.ProductID`、`deleted.ProductPhotoID` 資料行及從 `ProductProductPhoto` 資料表中刪除資料列的日期和時間，傳回給發出呼叫的應用程式。  
   
 ```  
 USE AdventureWorks2012;  
@@ -674,7 +674,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [資料表 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

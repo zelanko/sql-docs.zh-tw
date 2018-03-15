@@ -1,5 +1,5 @@
 ---
-title: "STArea (geometry 資料類型) |Microsoft 文件"
+title: "STArea (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geometry-data-type"></a>STArea (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  傳回總介面區**幾何**執行個體。  
+  傳回 **geometry** 執行個體的總介面區。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
- CLR 傳回類型： **SqlDouble**  
+ CLR 傳回類型：**SqlDouble**  
   
-## <a name="remarks"></a>備註  
- `STArea()`傳回 0，如果**幾何**執行個體包含 0 和 1 維度的圖形或者它是空白。 `STArea()`傳回**NULL**如果**幾何**執行個體尚未初始化。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體只包含 0 維度和 1 維度的圖形，或它是空的，`STArea()` 會傳回 0。 如果 **geometry** 執行個體尚未初始化，`STArea()` 會傳回 **NULL**。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-computing-the-area-of-a-polygon-instance"></a>A. 計算 Polygon 執行個體的區域  
- 下列範例會建立`Polygon``geometry`執行個體，並計算此多邊形的區域。  
+ 下列範例會建立 `Polygon``geometry` 執行個體，並計算此多邊形的區域。  
   
 ```  
 DECLARE @g geometry;  

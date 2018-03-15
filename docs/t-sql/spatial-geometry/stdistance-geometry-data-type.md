@@ -1,5 +1,5 @@
 ---
-title: "STDistance (geometry 資料類型) |Microsoft 文件"
+title: "STDistance (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回中點之間的最短距離**幾何**執行個體和另一個點**幾何**執行個體。  
+  傳回 **geometry** 執行個體中的點與另一個 **geometry** 執行個體中的點之間的最短距離。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是另一個**幾何**執行個體，用來測量所在之執行個體之間的距離`STDistance()`叫用。 如果*other_geometry*是空的集合，`STDistance()`會傳回 null。  
+ 這是另一個**geometry** 執行個體，用來測量它與叫用 `STDistance()` 所在之執行個體之間的距離。 如果 *other_geometry* 是空的集合，`STDistance()` 會傳回 Null。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
- CLR 傳回類型： **SqlDouble**  
+ CLR 傳回類型：**SqlDouble**  
   
-## <a name="remarks"></a>備註  
- `STDistance()`一律傳回 null 如果的空間參考識別碼 (Srid)**幾何**例項不相符。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，`STDistance()` 一定會傳回 Null。  
   
 ## <a name="examples"></a>範例  
   

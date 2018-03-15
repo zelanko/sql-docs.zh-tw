@@ -1,5 +1,5 @@
 ---
-title: "點 (geography 資料類型) |Microsoft 文件"
+title: "Point (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geography-data-type"></a>Point (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-建構**geography**執行個體，代表**點**來自其緯度和經度值與空間參考識別碼 (SRID) 的執行個體。
+建構 **geography** 執行個體，這個執行個體會根據其緯度和經度值與空間參考識別碼 (SRID) 來表示 **Point** 執行個體。
   
 ## <a name="syntax"></a>語法  
   
@@ -46,18 +46,18 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>引數  
  *Lat*  
- 是**float**運算式表示的 x 座標**點**產生。  
+ 這是 **float** 運算式，代表所要產生之 **Point** 的 X 座標。  
   
- *長整數*  
- 是**float**運算式表示的 y 座標**點**產生。 如需有關有效緯度和經度值的詳細資訊，請參閱[點](../../relational-databases/spatial/point.md)。  
+ *Long*  
+ 這是 **float** 運算式，代表所要產生之 **Point** 的 Y 座標。 如需有關有效緯度和經度值的詳細資訊，請參閱 [Point](../../relational-databases/spatial/point.md)。  
   
  *SRID*  
- 是**int**運算式，表示的 SRID **geography**您想要傳回的執行個體。  
+ 這是 **int** 運算式，表示要傳回之 **geography** 執行個體的 SRID。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
 > [!NOTE]  
 >  引數的點 (geography 資料類型) 的方法有相較於 WKT 為反轉的座標。  

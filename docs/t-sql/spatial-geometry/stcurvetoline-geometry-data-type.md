@@ -1,5 +1,5 @@
 ---
-title: "STCurveToLine (geometry 資料類型) |Microsoft 文件"
+title: "STCurveToLine (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-傳回的多邊形近似值**幾何**包含圓弧線段的執行個體。
+傳回包含圓弧線段之 **geometry** 執行個體的多邊形近似值。
   
 ## <a name="syntax"></a>語法  
   
@@ -41,27 +41,27 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- 會傳回空白**GeometryCollection**空的執行個體**幾何**執行個體變數，並傳回**NULL**針對未初始化**幾何**變數。  
+## <a name="remarks"></a>Remarks  
+ 針對空的 **geometry** 執行個體變數，會傳回空的**GeometryCollection** 執行個體，而針對未初始化的 **geometry** 變數，則會傳回 **NULL**。  
   
- 方法會傳回的多邊形近似值取決於**幾何**您用來呼叫方法的執行個體：  
+ 此方法所傳回的多邊形近似值取決於您用來呼叫方法的 **geometry** 執行個體：  
   
--   傳回**LineString**例項而言**CircularString**或**CompoundCurve**執行個體。  
+-   傳回 **CircularString** 或 **CompoundCurve** 執行個體的 **LineString** 執行個體。  
   
--   傳回**多邊形**例項而言**CurvePolygon**執行個體。  
+-   傳回 **CurvePolygon** 執行個體的 **Polygon** 執行個體。  
   
--   傳回一份**幾何**執行個體，如果該執行個體不是**CircularString**， **CompoundCurve**，或**CurvePolygon**執行個體. 例如，`STCurveToLine`方法會傳回**點**例項而言**幾何**這個執行個體是**點**執行個體。  
+-   如果 **geometry** 執行個體不是 **CircularString**、**CompoundCurve**, 或 **CurvePolygon** 執行個體，便傳回其複本。 例如，`STCurveToLine` 方法會針對本身是 **Point** 執行個體的 **geometry** 執行個體，傳回 **Point** 執行個體。  
   
- 與 SQL/MM 規格不同`STCurveToLine`方法未使用 z 座標值來計算多邊形近似值。 這個方法會忽略任何呼叫中存在的 z 座標值**幾何**執行個體。  
+ 與 SQL/MM 規格不同，`STCurveToLine` 方法並不使用 z 座標值來計算多邊形近似值。 此方法會忽略呼叫端 **geometry** 執行個體中已有的任何 z 座標值。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. 使用未初始化的幾何變數和空白執行個體  
- 在下列範例中，第一個**選取**陳述式使用未初始化**幾何**執行個體來呼叫`STCurveToLine`方法，而且第二個**選取**陳述式會使用空**幾何**執行個體。 因此，此方法會傳回**NULL**第一個陳述式和**GeometryCollection**第二個陳述式的集合。  
+ 在下列範例中，第一個 **SELECT** 陳述式使用未初始化的 **geometry** 執行個體來呼叫 `STCurveToLine` 方法，第二個 **SELECT** 陳述式使用空的 **geometry** 執行個體。 因此，此方法會對第一個陳述式傳回 **NULL**，對第二個陳述式則傳回 **GeometryCollection** 集合。  
   
 ```
  DECLARE @g geometry; 
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="b-using-a-linestring-instance"></a>B. 使用 LineString 執行個體  
- **選取**陳述式在下列範例會使用**LineString**呼叫 STCurveToLine 方法的執行個體。 因此，此方法會傳回**LineString**執行個體。  
+ 在下列範例中，**SELECT** 陳述式使用 **LineString** 執行個體來呼叫 STCurveToLine 方法。 因此，此方法會傳回 **LineString** 執行個體。  
   
 ```
  DECLARE @g geometry; 
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>C. 使用 CircularString 執行個體  
- 第一個**選取**陳述式在下列範例會使用**CircularString**呼叫 STCurveToLine 方法的執行個體。 因此，此方法會傳回**LineString**執行個體。 這**選取**陳述式也會比較兩個執行個體，也就是大約相同的長度。  最後，第二個**選取**陳述式會傳回每個執行個體的點數目。  它會傳回 5 點只針對**CircularString**執行個體，但 65 點**LineString**執行個體。  
+ 在下列範例中，第一個 **SELECT** 陳述式使用 **CircularString** 執行個體來呼叫 STCurveToLine 方法。 因此，此方法會傳回 **LineString** 執行個體。 這個 **SELECT** 陳述式也會比較兩個執行個體的長度，它們的長度大致相同。  最後，第二個 **SELECT** 陳述式會傳回每個執行個體的點數。  針對 **CircularString** 執行個體，只會傳回 5 點，但針對 **LineString** 執行個體則會傳回 65 點。  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>D. 使用 CurvePolygon 執行個體  
- **選取**陳述式在下列範例會使用**CurvePolygon**呼叫 STCurveToLine 方法的執行個體。 因此，此方法會傳回**多邊形**執行個體。  
+ 在下列範例中，**SELECT** 陳述式使用 **CurvePolygon** 執行個體來呼叫 STCurveToLine 方法。 因此，此方法會傳回 **Polygon**執行個體。  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 

@@ -1,5 +1,5 @@
 ---
-title: "ConvexHullAggregate (geography 資料類型) |Microsoft 文件"
+title: "ConvexHullAggregate (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回一組指定的凸殼**geography**物件。
+傳回指定 **geography** 物件集的凸殼 (Convex Hull)。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,24 +45,24 @@ ConvexHullAggregate ( geography_operand )
   
 ## <a name="arguments"></a>引數  
  *geography_operand*  
- 是**geography**類型資料表資料行，代表一組**geography**物件。  
+ 表示 **geography** 物件集的 **geography** 型別資料表資料行。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
 ## <a name="exception"></a>例外狀況  
- 輸入的值無效時，會擲回 `FormatException`。 請參閱[STIsValid &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+ 輸入的值無效時，會擲回 `FormatException`。 請參閱 [STIsValid &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
-## <a name="remarks"></a>備註  
- 方法會傳回**null**當輸入是空的或輸入具有不同的 Srid。 請參閱[空間參考識別碼 &#40;Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Remarks  
+ 當輸入是空的或輸入具有不同 SRID 時，此方法會傳回 **null**。 請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- 方法會忽略**null**輸入。  
+ 此方法會忽略 **null** 輸入。  
   
 > [!NOTE]  
->  方法會傳回**null**如果所有輸入的值為**null**。  
+>  如果所有輸入的值都為 **null**，此方法就會傳回 **null**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回一組的凸殼**geography**物件。  
+ 下列範例會傳回 **geography** 物件集的凸殼。  
   
  ```
  USE AdventureWorks2012  

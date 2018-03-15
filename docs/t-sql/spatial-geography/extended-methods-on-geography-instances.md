@@ -1,5 +1,5 @@
 ---
-title: "擴充的 Geography 執行個體上的方法 |Microsoft 文件"
+title: "地理例項上擴充的方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -37,21 +37,21 @@ ms.lasthandoff: 01/25/2018
   
 -   [OGC 規格，簡單特徵存取第二部 - SQL 選項](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [OGC 規格，地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629)  
+-   [OGC 規格，地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [AsBinaryZM &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/asbinaryzm-geography-data-type.md)  
+-   [AsBinaryZM &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/asbinaryzm-geography-data-type.md)  
   
 -   [AsGml](../../t-sql/spatial-geography/asgml-geography-data-type.md)  
   
 -   [AsTextZM](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
--   [BufferWithCurves &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/bufferwithcurves-geography-data-type.md)  
+-   [BufferWithCurves &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/bufferwithcurves-geography-data-type.md)  
   
 -   [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)  
   
--   [CurveToLineWithTolerance &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)  
+-   [CurveToLineWithTolerance &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)  
   
 -   [EnvelopeAngle](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
   
@@ -59,25 +59,25 @@ ms.lasthandoff: 01/25/2018
   
 -   [篩選](../../t-sql/spatial-geography/filter-geography-data-type.md)  
   
--   [HasM &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
+-   [HasM &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
   
--   [HasZ &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/hasz-geography-data-type.md)  
+-   [HasZ &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/hasz-geography-data-type.md)  
   
 -   [InstanceOf](../../t-sql/spatial-geography/instanceof-geography-data-type.md)  
   
 -   [IsNull](../../t-sql/spatial-geography/isnull-geography-data-type.md)  
   
--   [IsValidDetailed &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/isvaliddetailed-geography-data-type.md)  
+-   [IsValidDetailed &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/isvaliddetailed-geography-data-type.md)  
   
 -   [Lat](../../t-sql/spatial-geography/lat-geography-data-type.md)  
   
--   [長整數](../../t-sql/spatial-geography/long-geography-data-type.md)  
+-   [Long](../../t-sql/spatial-geography/long-geography-data-type.md)  
   
 -   [M](../../t-sql/spatial-geography/m-geography-data-type.md)  
   
 -   [MakeValid](../../t-sql/spatial-geography/makevalid-geography-data-type.md)  
   
--   [MinDbCompatibilityLevel &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/mindbcompatibilitylevel-geography-data-type.md)  
+-   [MinDbCompatibilityLevel &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/mindbcompatibilitylevel-geography-data-type.md)  
   
 -   [NumRing](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
@@ -87,14 +87,14 @@ ms.lasthandoff: 01/25/2018
   
 -   [RingN](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
--   [ShortestLineTo &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+-   [ShortestLineTo &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
 -   [ToString](../../t-sql/spatial-geography/tostring-geography-data-type.md)  
   
 -   [Z](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Geography 執行個體上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [地理執行個體上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [OGC 靜態地理方法](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
  [擴充的靜態地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "Geometry 執行個體上的 OGC 方法 |Microsoft 文件"
+title: "幾何執行個體上的 OGC 方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -59,9 +59,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STCrosses](../../t-sql/spatial-geometry/stcrosses-geometry-data-type.md)  
   
--   [STCurveN &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
+-   [STCurveN &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
   
--   [STCurveToLine &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+-   [STCurveToLine &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geometry/stdifference-geometry-data-type.md)  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 01/25/2018
 -   [STY](../../t-sql/spatial-geometry/sty-geometry-data-type.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [幾何執行個體上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [OGC 靜態幾何方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [擴充的靜態幾何方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

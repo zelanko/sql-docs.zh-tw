@@ -1,5 +1,5 @@
 ---
-title: "STSrid (geography 資料類型) |Microsoft 文件"
+title: "STSrid (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geography-data-type"></a>STSrid (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid**是整數，表示執行個體的空間參考識別碼 (SRID)。  
+  **STSrid** 是一個整數，其代表此執行個體的空間參考識別碼 (SRID)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型別：**int**  
   
- CLR 型別： **SqlInt32**  
+ CLR 型別：**SqlInt32**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個屬性可以修改。  
   
 ## <a name="examples"></a>範例  
@@ -68,7 +68,7 @@ SELECT @g.STSrid;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Geography 執行個體上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [空間參考識別碼 &#40;Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ [地理執行個體上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
   

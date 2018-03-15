@@ -1,5 +1,5 @@
 ---
-title: "AsTextZM (geography 資料類型) |Microsoft 文件"
+title: "AsTextZM (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="astextzm-geography-data-type"></a>AsTextZM (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回開放式地理空間協會 (OGC) 已知文字 (well-known text，WKT) 表示**geography**執行個體夾帶任何**Z** （高度） 和**M** （量值）執行個體所夾帶的值。  
+  傳回開放地理空間協會 (Open Geospatial Consortium，OGC) 對於 **geography** 執行個體的已知的文字 (Well-Known Text，WKT) 表示法，經由此執行個體夾帶的任何 **Z** (高度) 和 **M** (測量) 值來擴充。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,14 +46,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **nvarchar （max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回類型： **SqlChars**  
+ CLR 傳回類型：**SqlChars**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立`Point`包含執行個體**Z** （高度） 和**M** （測量） 值。 `STAsText()`會選取 WKT 值 (-122.34900 47.65100);`AsTextZM()`選取相同的 WKT 值，也會傳回的值**Z**和**M**，產生 (-122.34900 47.65100 10.3 12)。  
+ 下列範例會建立一個包含 **Z** (高度) 和 **M** (測量) 值的 `Point` 執行個體。 `STAsText()` 會選取 WKT 值 (-122.34900 47.65100)；`AsTextZM()` 會選取相同的 WKT 值，也會傳回 **Z** 和 **M** 的值，產生 (-122.34900 47.65100 10.3 12)。  
   
 ```  
 DECLARE @g geography;  
@@ -63,8 +63,8 @@ SELECT @g.AsTextZM();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Geography 執行個體上的擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
- [Z &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+ [地理執行個體上擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+ [Z &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromText (geography 資料類型) |Microsoft 文件"
+title: "STGeomCollFromText (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回**geography**從開放式地理空間協會 (OGC) 已知文字 (well-known text，WKT) 表示法，夾帶任何 Z （高度） 和 M （測量） 值的執行個體帶有的執行個體。
+從開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的文字 (Well-Known Text，WKT) 表示法傳回 **geography** 執行個體，經由此執行個體夾帶的任何 Z (高度) 和 M (測量) 值來擴充。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,20 +45,20 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>引數  
  *geometrycollection_tagged_text*  
- 是的 WKT 表示法**geography**您想要傳回的執行個體。 *geometrycollection_tagged_text*是**nvarchar （max)**運算式。  
+ 這是您想要傳回之 **geography** 執行個體的 WKT 表示法。 *geometrycollection_tagged_text* 是 **nvarchar(max)** 運算式。  
   
  *SRID*  
- 是**int**運算式，表示的空間參考識別碼 (SRID) 的**geography**您想要傳回的執行個體。  
+ 這是 **int** 運算式，表示要傳回之 **geography** 執行個體的空間參考識別碼 (SRID)。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>備註  
- OGC 類型**geography** STGeomCollFromText() 所傳回的執行個體設定為對應的 WKT 輸入。  
+## <a name="remarks"></a>Remarks  
+ STGeomCollFromText() 所傳回之 **geography** 執行個體的 OGC 類型會設定為對應的 WKT 輸入。  
   
- 這個方法會擲回**ArgumentException**如果輸入無效。  
+ 如果輸入無效，這個方法會擲回 **ArgumentException**。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `STGeomCollFromText()` 建立 `geography` 例項。  

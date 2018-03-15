@@ -1,5 +1,5 @@
 ---
-title: "STGeometryN (geometry 資料類型) |Microsoft 文件"
+title: "STGeometryN (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回在指定的幾何**幾何集合**。
+傳回**幾何集合**中的指定幾何。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 是**int** 1 之間的數字的運算式**幾何**中執行個體**geometrycollection**。  
+ 這是介於 1 和 **geometrycollection** 內的 **geometry** 執行個體數目之間的 **int** 運算式。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- 這個方法會傳回**null**如果參數大於的結果`STNumGeometries()`將會擲回**ArgumentOutOfRangeException**如果*運算式*參數是小於 1。  
+## <a name="remarks"></a>Remarks  
+ 如果參數大於 `STNumGeometries()` 的結果，這個方法會傳回 **null**；如果 *expression* 參數小於 1，將會擲回 **ArgumentOutOfRangeException**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立`MultiPoint``geometry collection`並用`STGeometryN()`尋找第二個`geometry`集合執行個體。  
+ 下列範例會建立 `MultiPoint``geometry collection` 並使用 `STGeometryN()` 來尋找集合的第二個 `geometry` 執行個體。  
   
 ```  
 DECLARE @g geometry;  

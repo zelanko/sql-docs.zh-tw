@@ -1,5 +1,5 @@
 ---
-title: "述詞 |Microsoft 文件"
+title: "述詞 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="predicates"></a>述詞
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  這是評估為 TRUE、FALSE 或 UNKNOWN 的運算式。 述詞的搜尋條件中使用[其中](../../t-sql/queries/where-transact-sql.md)子句和[HAVING](../../t-sql/queries/select-having-transact-sql.md)子句、 的聯結條件[FROM](../../t-sql/queries/from-transact-sql.md)子句和布林值所在的其他建構必要項。  
+  這是評估為 TRUE、FALSE 或 UNKNOWN 的運算式。 述詞會用在 [WHERE](../../t-sql/queries/where-transact-sql.md) 子句和 [HAVING](../../t-sql/queries/select-having-transact-sql.md) 子句的搜尋條件中、[FROM](../../t-sql/queries/from-transact-sql.md) 子句的聯結條件中，以及其他需要布林值的建構中。  
   
 ## <a name="in-this-section"></a>本節內容  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列述詞。  
@@ -47,13 +47,13 @@ ms.lasthandoff: 01/25/2018
 |-|  
 |[CONTAINS](../../t-sql/queries/contains-transact-sql.md)|  
 |[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)|  
-|[是 &#91;不 &#93;NULL](../../t-sql/queries/is-null-transact-sql.md)|  
+|[IS &#91;NOT&#93; NULL](../../t-sql/queries/is-null-transact-sql.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [BETWEEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/between-transact-sql.md)   
- [存在 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/exists-transact-sql.md)   
+ [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [搜尋條件 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)  
+ [搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)  
   
   

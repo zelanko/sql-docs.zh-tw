@@ -1,5 +1,5 @@
 ---
-title: "運算子優先順序 (TRANSACT-SQL) |Microsoft 文件"
+title: "運算子優先順序 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,12 +38,12 @@ ms.lasthandoff: 01/25/2018
   
  下表顯示運算子的優先順序層級。 先評估層級較高的運算子，再評估層級較低的運算子。  
   
-|Level|運算子|  
+|層級|操作員|  
 |-----------|---------------|  
-|1|~ (位元 NOT)|  
-|2|* （乘號） / （除法），%（模數）|  
-|3|+ （正）、-（否定），+ （加號）、 （+ 串連），-（減號）、 （& s) (位元 AND)、 ^ (位元互斥 OR)，&#124;(位元 OR)|  
-|4|=，>， \<，> =、 < =、 <>，！ =、 ！ >，！ < （比較運算子）|  
+|@shouldalert|~ (位元 NOT)|  
+|2|* (乘)、/ (除)、% (模數)|  
+|3|+ (正)、- (負)、+ (加)、(+ 串連)、- (減)、& (位元 AND)、^ (位元互斥 OR)、&#124; (位元 OR)|  
+|4|=、>、\<、>=、<=、<>、!=、!>、!< (比較運算子)|  
 |5|NOT|  
 |6|與|  
 |7|ALL、ANY、BETWEEN、IN、LIKE、OR、SOME|  
@@ -89,8 +89,8 @@ SELECT @MyNumber;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [邏輯運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [邏輯運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

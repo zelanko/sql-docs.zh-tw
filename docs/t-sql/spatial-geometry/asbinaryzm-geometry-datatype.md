@@ -1,5 +1,5 @@
 ---
-title: "AsBinaryZM (geometry 資料類型) |Microsoft 文件"
+title: "AsBinaryZM (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-傳回開放式地理空間協會 (OGC) 已知二進位 (well-known binary，WKB) 表示**幾何**執行個體夾帶任何**Z** （高度） 和**M** （量值）執行個體所夾帶的值。
+傳回開放地理空間協會 (Open Geospatial Consortium，OGC) 對於 **geometry** 執行個體的已知的二進位 (Well-Known Binary，WKB) 表示法，經由此執行個體夾帶的任何 **Z** (高度) 和 **M** (測量) 值來擴充。
   
 ## <a name="syntax"></a>語法  
   
@@ -41,11 +41,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **varbinary （max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**varbinary(max)**  
   
- CLR 傳回類型： **SqlBytes**  
+ CLR 傳回類型：**SqlBytes**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>範例  
   
@@ -60,9 +60,9 @@ SELECT @g1.AsBinaryZM();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [M &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Z &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+ [幾何執行個體上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [M &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [Z &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "時區 (TRANSACT-SQL) |Microsoft 文件"
+title: AT TIME ZONE (Transact-SQL) | Microsoft Docs
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -29,12 +29,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="at-time-zone-transact-sql"></a>時區 (TRANSACT-SQL)
+# <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  將轉換*inputdate*對應*datetimeoffset*目標時區中的值。 如果*inputdate*提供不含時差的資訊函式適用於假設的時區位移*inputdate*目標時區中提供值。 如果*inputdate*依現狀*datetimeoffset*值，比**AT TIME ZONE**子句將其轉換成使用時區轉換規則的目標時區。  
+  將 *inputdate* 轉換成目標時區中對應的 *datetimeoffset* 值。 如果提供 *inputdate* 但未提供位移資訊，此函數就會在假設目標時區中已提供 *inputdate* 值的情況下，套用時區位移。 如果提供 *inputdate* 來作為 *datetimeoffset* 值，則 **AT TIME ZONE** 子句會使用時區轉換規則來將它轉換成目標時區。  
   
- **時區**實作依賴要轉換的 Windows 機制**datetime**跨時區的值。  
+ **AT TIME ZONE** 實作需倚賴 Windows 機制來跨時區轉換 **datetime** 值。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,21 +46,21 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="arguments"></a>引數  
  *inputdate*  
- 運算式是可解析成**smalldatetime**， **datetime**， **datetime2**，或**datetimeoffset**值。  
+ 這是可解析成下列值的運算式：**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset**。  
   
  *timezone*  
- 目的地時區的名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]依賴 Windows 登錄中儲存的時區。 在電腦上安裝所有的時區會儲存在下列的登錄 hive: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time 區域**。 一份已安裝的時區也會公開透過[sys.time_zone_info &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md)檢視。  
+ 目的地時區的名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需倚賴儲存在「Windows 登錄」中的時區。 安裝在電腦上的所有時區都儲存在下列登錄區中：**KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**。 已安裝的時區清單也會透過 [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 檢視表公開。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回的資料型別**datetimeoffset**  
+ 傳回 **datetimeoffset** 的資料類型  
   
 ## <a name="return-value"></a>傳回值  
- **Datetimeoffset**目標時區中的值。  
+ 目標時區中的 **datetimeoffset** 值。  
   
-## <a name="remarks"></a>備註  
- **時區**適用於轉換中的輸入的值的特定規則**smalldatetime**， **datetime**和**datetime2**屬於資料型別受影響的間隔 DST 變更：  
+## <a name="remarks"></a>Remarks  
+ **AT TIME ZONE** 會針對 **smalldatetime**、**datetime** 及 **datetime2** 資料類型中，落在受 DST 變更影響之間隔內的輸入值，套用特定的轉換規則：  
   
--   當以本地時間的持續時間取決於時鐘調整的持續時間的差距就繼續設定時鐘 （通常是 1 小時，但它可以是 30 個或 45 分鐘，視時區而定）。 在此情況下，屬於此間隔時間點會轉換具有位移*之後*DST 變更。  
+-   將時鐘往前調整時，本地時間會有落差，其持續時間取決於時鐘調整的持續時間 (通常為 1 小時，但也可能是 30 或 45 分鐘，視時區而定)。 在此情況下，會使用在 DST 變更「之後」的位移來轉換屬於此落差的時間點。  
   
     ```  
     /*  
@@ -91,7 +91,7 @@ inputdate AT TIME ZONE timezone
   
     ```  
   
-- 當重設時鐘時，2 小時的本機時間會重疊到一小時。  在此情況下，屬於重疊的間隔時間點會有的位移*之前*時鐘變更：  
+- 將時鐘調整回來時，2 個小時的本地時間就會重疊成 1 個小時。  在此情況下，會使用在時鐘變更「之前」的位移來顯示屬於重疊間隔的時間點：  
   
     ```  
     /*  
@@ -123,12 +123,12 @@ inputdate AT TIME ZONE timezone
   
     ```  
 
-因為某些資訊 （例如時區規則） 之外的維護[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]和可能會偶爾變動**AT TIME ZONE**函式類別，不具決定性。 
+由於部分資訊 (例如時區規則) 的維護是在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 外部進行且可能偶爾會有變更，因此 **AT TIME ZONE** 函數被歸類為不具決定性的函數。 
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. 加入不含位移資訊的日期時間的目標時區位移  
- 使用**AT TIME ZONE**以時區規則時，您已了解的位移，將原始**datetime**提供相同的時區中的值：  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. 將目標時區位移新增至不含位移資訊的日期時間  
+ 當您知道在相同時區中已提供原始 **datetime** 值時，請使用 **AT TIME ZONE** 來根據時區規則新增位移：  
   
 ```  
 USE AdventureWorks2016;  
@@ -139,8 +139,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>B. 轉換不同的時區之間的值  
- 下列範例會將轉換不同的時區之間的值：  
+### <a name="b-convert-values-between-different-time-zones"></a>B. 在不同的時區之間轉換值  
+ 下列範例會在不同的時區之間轉換值：  
   
 ```  
 USE AdventureWorks2016;  
@@ -153,8 +153,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. 查詢使用本地時區的時態表  
- 下列範例會選取時態表中的資料。  
+### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. 使用本地時區的查詢時態表  
+ 下列範例會從時態表選取資料。  
   
 ```  
 USE AdventureWorks2016;  
@@ -174,6 +174,6 @@ FOR SYSTEM_TIME AS OF @ASOF;
   
 ## <a name="see-also"></a>另請參閱  
  [日期和時間類型](../../t-sql/data-types/date-and-time-types.md)   
- [日期和時間資料類型和函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   

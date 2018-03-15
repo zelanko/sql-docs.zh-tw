@@ -1,5 +1,5 @@
 ---
-title: "STOverlaps (geography 資料類型) |Microsoft 文件"
+title: "STOverlaps (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回 1，如果**geography**執行個體接觸到另一個**geography**執行個體，或是 0，如果不存在。  
+  如果 **geography** 執行個體在空間上與另一個 **geography** 執行個體重疊，則傳回 1，否則傳回 0。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,18 +42,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是另一個**geography**比較所在之執行個體的執行個體`STOverlaps()`叫用。  
+ 這是要與叫用 `STOverlaps()` 所在之執行個體相比較的另一個 **geography** 執行個體。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**位元**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型： **SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>備註  
- 如果這個方法永遠傳回 null 的空間參考識別碼 (Srid) **geography**例項不相符。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 null。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`STOverlaps()`來測試兩個**geography**例項是否重疊。  
+ 下列範例使用 `STOverlaps()` 來測試兩個 **geography** 執行個體是否重疊。  
   
 ```  
 DECLARE @g geography;  

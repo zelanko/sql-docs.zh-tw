@@ -1,5 +1,5 @@
 ---
-title: "OVER 子句 (TRANSACT-SQL) |Microsoft 文件"
+title: "OVER 子句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
@@ -38,14 +38,14 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---over-clause-transact-sql"></a>選取的 OVER 子句 (TRANSACT-SQL)
+# <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   在套用相關的視窗函數之前，決定資料列集的資料分割和排序。 也就是說，OVER 子句會定義查詢結果集內的視窗或使用者指定的資料列集。 然後視窗函數會針對視窗中的每個資料列來計算值。 您可以搭配函數使用 OVER 子句，以便計算彙總值，例如移動平均值、累計彙總、累加值或是每組前 N 個結果。  
   
--   [排名函數](../../t-sql/functions/ranking-functions-transact-sql.md)  
+-   [次序函數](../../t-sql/functions/ranking-functions-transact-sql.md)  
   
--   [彙總函式](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+-   [彙總函數](../../t-sql/functions/aggregate-functions-transact-sql.md)  
   
 -   [分析函數](../../t-sql/functions/analytic-functions-transact-sql.md)  
   
@@ -118,16 +118,16 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  將查詢結果集分成幾個資料分割。 視窗函數會分別套用至每個資料分割，並且針對每個資料分割重新開始計算。  
   
  *value_expression*  
- 指定分割資料列集所根據的資料行。 *value_expression*只能參考 FROM 子句所提供的資料行。 *value_expression*不能參考運算式或選取清單中的別名。 *value_expression*可以是資料行運算式、 純量子查詢、 純量函數或使用者定義的變數。  
+ 指定分割資料列集所根據的資料行。 *value_expression* 只能參考 FROM 子句所提供的資料行。 *value_expression* 無法參考選取清單中的運算式或別名。 *value_expression* 可以是資料行運算式、純量子查詢、純量函數或使用者定義的變數。  
   
- \<ORDER BY 子句 >  
+ \<ORDER BY clause>  
  定義結果集的每個資料分割內資料列的邏輯順序。 也就是說，它會指定執行視窗函數計算的邏輯順序。  
   
  *order_by_expression*  
- 指定排序的資料行或運算式。 *order_by_expression*只能參考 FROM 子句所提供的資料行。 不能指定整數來代表資料行名稱或別名。  
+ 指定排序的資料行或運算式。 *order_by_expression* 只能參考 FROM 子句所提供的資料行。 不能指定整數來代表資料行名稱或別名。  
   
- COLLATE *sys.databases*  
- 指定應該根據中指定的定序執行 ORDER BY 作業*sys.databases*。 *sys.databases*可以是 Windows 定序名稱或 SQL 定序名稱。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 會只適用於類型的資料行**char**， **varchar**， **nchar**，和**nvarchar**。  
+ COLLATE *collation_name*  
+ 指定應該根據 *collation_name* 中指定的定序來執行 ORDER BY 作業。 *collation_name* 可以是 Windows 定序名稱或 SQL 定序名稱。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 只適用於下列類型的資料行：**char**、**varchar**、**nchar** 及 **nvarchar**。  
   
  **ASC** | DESC  
  指定指定之資料行的值應該以遞增或遞減順序排序。 ASC 是預設排序次序。 Null 值會當做最低的可能值來處理。  
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  指定資料分割內的起始點和結束點，以進一步限制資料分割中的資料列。 這可以藉由指定與目前資料列有關的資料列範圍 (透過邏輯關聯或實體關聯) 來完成。 可以使用 ROWS 子句來達成實體關聯。  
   
- ROWS 子句會限制資料分割內的資料列，方法是指定目前資料列之前或之後的固定資料列數。 另外，RANGE 子句會以邏輯方式限制資料分割內的資料列，方法是指定與目前資料列的值相關的值範圍。 前後的資料列是根據 ORDER BY 子句的順序定義。 視窗框架"RANGE … CURRENT ROW …" 包含 ORDER BY 運算式中與目前資料列擁有相同的值的所有資料列。 例如，ROWS BETWEEN 2 PRECEDING AND CURRENT ROW 表示此函數操作所在的資料列視窗大小為三個資料列，從之前的 2 個資料列直到目前的資料列。  
+ ROWS 子句會限制資料分割內的資料列，方法是指定目前資料列之前或之後的固定資料列數。 另外，RANGE 子句會以邏輯方式限制資料分割內的資料列，方法是指定與目前資料列的值相關的值範圍。 前後的資料列是根據 ORDER BY 子句的順序定義。 視窗框架 “RANGE … CURRENT ROW …” 包括在 ORDER BY 運算式中具有與目前資料列相同值的所有資料列。 例如，ROWS BETWEEN 2 PRECEDING AND CURRENT ROW 表示此函數操作所在的資料列視窗大小為三個資料列，從之前的 2 個資料列直到目前的資料列。  
   
 > [!NOTE]  
 >  ROWS 或 RANGE 要求必須指定 ORDER BY 子句。 如果 ORDER BY 包含多個順序運算式，則 CURRENT ROW FOR RANGE 會在判斷目前資料列時，考量 ORDER BY 清單中的所有資料列。  
@@ -147,26 +147,26 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  指定視窗從資料分割的第一個資料列開始。 只能將 UNBOUNDED PRECEDING 指定為視窗起點。  
   
- \<不帶正負號正負號的值 > PRECEDING  
- 指定與\<正負號的值不帶正負號 > 表示資料列或值放在之前的目前資料列數目。 RANGE 不允許這項指定。  
+ \<指定不帶正負號的值> PRECEDING  
+ 與 \<指定不帶正負號的值> 一起指定，可指出要置於目前資料列前面的資料列或值的數目。 RANGE 不允許這項指定。  
   
  CURRENT ROW  
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
  指定在與 ROWS 一起使用時，視窗在目前的資料列開始或結束，或者在與 RANGE 一起使用時則為目前值。 CURRENT ROW 可以指定為開始點和結束點。  
   
- 之間\<繫結的視窗框架 > AND\<繫結的視窗框架 >  
+ BETWEEN \<繫結的視窗框架 > AND \<繫結的視窗框架 >  
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
- 與 ROWS 或 RANGE 一起使用，以指定視窗的下 (開始) 邊界點和上 (結束) 邊界點。 \<繫結的視窗框架 > 會定義邊界開始點和\<繫結的視窗框架 > 會定義邊界結束點。 上限不能小於下限。  
+ 與 ROWS 或 RANGE 一起使用，以指定視窗的下 (開始) 邊界點和上 (結束) 邊界點。 \<繫結的視窗框架> 會定義界限開始點，而 \<繫結的視窗框架> 則定義界限結束點。 上限不能小於下限。  
   
  UNBOUNDED FOLLOWING  
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
  指定視窗在資料分割的最後一個資料列結束。 只能將 UNBOUNDED FOLLOWING 指定為視窗結束點。 例如，RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING 會定義一個視窗，此視窗從資料分割的目前資料列開始，並結束於資料分割的最後一個資料列。  
   
- \<不帶正負號值規格 > 下列  
- 指定與\<正負號的值不帶正負號 > 表示資料列或值進行目前的資料列數目。 當\<正負號的值不帶正負號 > 下列指定為視窗起點、 結束點必須是\<正負號的值不帶正負號 > 下列。 例如，ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING 會定義一個視窗，此視窗從目前資料列後面的第二個資料列開始，並結束於目前資料列後面的第十個資料列。 RANGE 不允許這項指定。  
+ \<指定不帶正負號的值> FOLLOWING  
+ 與 \<指定不帶正負號的值> 一起指定，可指出要置於目前資料列後面的資料列或值的數目。 將 \<指定不帶正負號的值> FOLLOWING 指定為視窗開始點時，結束點必須是 \<指定不帶正負號的值> FOLLOWING。 例如，ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING 會定義一個視窗，此視窗從目前資料列後面的第二個資料列開始，並結束於目前資料列後面的第十個資料列。 RANGE 不允許這項指定。  
   
  不帶正負號的整數常值  
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -180,7 +180,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>重要！
 
-如果指定了 ROWS/RANGE，\<之前的視窗框架 > 用於\<視窗框架範圍 > （簡短語法），然後此規格適用於視窗框架邊界開始點和目前資料列用於邊界結束點。 例如，“ROWS 5 PRECEDING” 等於 “ROWS BETWEEN 5 PRECEDING AND CURRENT ROW”。  
+如果指定了 ROWS/RANGE，而且 \<前面的視窗框架> 用於 \<視窗框架範圍> (簡短語法)，則這個指定會用於視窗框架界限開始點，而 CURRENT ROW 則用於界限結束點。 例如，“ROWS 5 PRECEDING” 等於 “ROWS BETWEEN 5 PRECEDING AND CURRENT ROW”。  
   
 > [!NOTE]
 > 如果未指定 ORDER BY，則將整個資料分割用於視窗框架。 這只適用於不需要 ORDER BY 子句的函數。 如果未指定 ROWS/RANGE，但指定了 ORDER BY，則將 RANGE UNBOUNDED PRECEDING AND CURRENT ROW 當做視窗框架的預設值。 這只適用於可以接受選擇性 ROWS/RANGE 指定的函數。 例如，排名函數不能接受 ROWS/RANGE，因此，即使存在 ORDER BY 而不存在 ROWS/RANGE，這個視窗框架依然不適用。  
@@ -188,9 +188,9 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 ## <a name="limitations-and-restrictions"></a>限制事項  
  OVER 子句不能搭配 CHECKSUM 彙總函式使用。  
   
- 範圍不能與\<不帶正負號正負號的值 > PRECEDING 或\<正負號的值不帶正負號 > 下列。  
+ RANGE 不能搭配 \<指定不帶正負號的值> PRECEDING 或 \<指定不帶正負號的值> FOLLOWING 使用。  
   
- 根據排名、 彙總，或分析函數搭配 OVER 子句， \<ORDER BY 子句 > 及/或\<ROWS 及 RANGE 子句 > 不支援。  
+ 視與 OVER 子句搭配使用的次序、彙總或分析函數而定，可能不支援 \<ORDER BY 子句> 及/或 \<ROWS 和 RANGE 子句>。  
   
 ## <a name="examples"></a>範例  
   
@@ -398,7 +398,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 下列範例使用 ROWS 子句來定義的視窗，哪些資料列會計算為目前的資料列和*N*遵循 （1 個資料列在此範例中） 的資料列的數目。  
+ 下列範例會使用 ROWS 子句來定義一個視窗，其上的資料列會計算為目前資料列與隨後的 *N* 個資料列 (在此範例中為 1 個資料列)。  
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
@@ -462,7 +462,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. 搭配 ROW_NUMBER 函數來使用 OVER 子句  
- 下列範例會傳回 ROW_NUMBER 根據其指派的銷售配額的銷售代表。  
+ 下列範例會根據指派給業務代表的銷售配額，傳回業務代表的 ROW_NUMBER。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -489,7 +489,7 @@ GROUP BY LastName, FirstName;
  ```
  
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. 搭配彙總函式來使用 OVER 子句  
- 下列範例顯示搭配彙總函式來使用 OVER 子句。 在此範例中，使用 OVER 子句會比使用子查詢更有效率的。  
+ 下列範例示範如何搭配彙總函數使用 OVER 子句。 在這個範例中，使用 OVER 子句比使用子查詢更有效率。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -521,7 +521,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43664      235      1     2     1    2      1    1  
  ```
  
- 下列範例顯示使用中的導出值的彙總函式來使用 OVER 子句。 請注意，彙總的計算方式是`SalesOrderNumber`和銷售訂單總數的百分比計算的每一行`SalesOrderNumber`。  
+ 下列範例示範如何在計算值中搭配彙總函數使用 OVER 子句。 請注意，會依 `SalesOrderNumber` 計算彙總，並且會為每個 `SalesOrderNumber` 的每一行計算出銷售訂單總計百分比。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -538,7 +538,7 @@ WHERE SalesOrderNumber IN(N'SO43659',N'SO43664') AND
 ORDER BY SalesOrderNumber,ProductKey;  
 ```  
   
- 此結果集第一個開頭為：  
+ 此結果集的第一個開始為：  
   
  ```
  OrderNumber  Product  Qty  Total  PctByProduct  
@@ -550,8 +550,8 @@ ORDER BY SalesOrderNumber,ProductKey;
  ```
  
 ## <a name="see-also"></a>另請參閱  
- [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [分析函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [視窗函數和移轉時，相關 sqlmag.com，由 Itzik Ben-Gan 上的絕佳的部落格文章](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
+ [彙總函數 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [分析函數 &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
+ [Itzik Ben-Gan 在 sqlmag.com 上所發表有關視窗函數和 OVER 的精彩部落格文章](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1) \(英文\)  
   
   

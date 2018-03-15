@@ -1,5 +1,5 @@
 ---
-title: "流程控制 |Microsoft 文件"
+title: "流程控制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="see-also"></a>另請參閱  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [斜線星狀 &#40;區塊註解 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
- [-（註解） (TRANSACT-SQL)](../../t-sql/language-elements/comment-transact-sql.md)   
+ [斜線星形 &#40;區塊註解&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
+ [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [RAISERROR &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

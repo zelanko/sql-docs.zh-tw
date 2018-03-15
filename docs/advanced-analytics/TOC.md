@@ -1,53 +1,48 @@
-# [快速入門](getting-started-with-machine-learning-services.md)
-
 # 概觀
-## [什麼是 Microsoft Machine Learning 服務](r/r-services.md)
-## [機器學習服務的新功能](what-s-new-in-sql-server-machine-learning-services.md)
-## [新增及更新的發行項](new-updated-advanced-analytics.md)
-## [架構和概觀](architecture-overview-machine-learning.md)
-## [SQL Server 版本間的機器學習服務功能差異](r/differences-in-r-features-between-editions-of-sql-server.md)
+## [什麼是 SQL Server 機器學習服務？](what-is-sql-server-machine-learning.md)
+## [新功能](what-s-new-in-sql-server-machine-learning-services.md)
+## [架構概觀](architecture-overview-machine-learning.md)
+## [不同版本的功能](r/differences-in-r-features-between-editions-of-sql-server.md)
 
-## [在 Azure SQL Database 中使用 R](r/using-r-in-azure-sql-database.md)
-
-# [Machine Learning 服務 - R](r/sql-server-r-services.md)
+# [Machine Learning Services - R](r/sql-server-r-services.md)
 
 ## [快速入門](r/getting-started-with-sql-server-r-services.md)
-### [設定 SQL Server Machine Learning 服務 (資料庫內)](r/set-up-sql-server-r-services-in-database.md)
-### [自動安裝 Machine Learning 服務](r/unattended-installs-of-sql-server-r-services.md)
+### [設定 SQL Server 機器學習服務 (資料庫內)](r/set-up-sql-server-r-services-in-database.md)
+### [自動安裝機器學習服務](r/unattended-installs-of-sql-server-r-services.md)
 
 ## [架構](r/architecture-overview-sql-server-r.md)
 ### [R 互通性](r/r-interoperability-in-sql-server.md)
 ### [支援 R 整合的元件](r/new-components-in-sql-server-to-support-r.md)
-### [R 安全性](r/security-overview-sql-server-r.md)
+### [R 的安全性](r/security-overview-sql-server-r.md)
 
 ## [監視](r/monitoring-r-services.md)
 
 ## [適用於 SQL Server 的 R 教學課程](tutorials/sql-server-r-tutorials.md)
 
 ### [R：在 Transact-SQL 中使用 R 程式碼](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-#### [處理輸入和輸出](tutorials/rtsql-working-with-inputs-and-outputs.md)
+#### [處理輸入及輸出](tutorials/rtsql-working-with-inputs-and-outputs.md)
 #### [R 與 SQL 資料類型及資料物件](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
-#### [使用 R 函式搭配 SQL Server 資料](tutorials/rtsql-using-r-functions-with-sql-server-data.md)
+#### [R 函式搭配 SQL Server 資料](tutorials/rtsql-using-r-functions-with-sql-server-data.md)
 #### [建立預測模型](tutorials/rtsql-create-a-predictive-model-r.md)
-#### [從模型預測並繪製](tutorials/rtsql-predict-and-plot-from-model.md)
+#### [從模型預測及繪製](tutorials/rtsql-predict-and-plot-from-model.md)
 
-### [R：資料科學端對端逐步解說](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+### [R：資料科學詳細逐步解說](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 #### [資料科學逐步解說的必要條件](tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)
 #### [準備資料](tutorials/walkthrough-prepare-the-data.md)
 #### [使用 SQL 瀏覽資料](tutorials/walkthrough-view-and-explore-the-data.md)
 #### [使用 R 摘要資料](tutorials/walkthrough-view-and-summarize-data-using-r.md)
-#### [使用 R 建立圖表和繪圖](tutorials/walkthrough-create-graphs-and-plots-using-r.md)
-#### [使用 SQL 和 R 建立資料特徵](tutorials/walkthrough-create-data-features.md)
-#### [建立和儲存模型](tutorials/walkthrough-build-and-save-the-model.md)
-#### [部署和使用模型](tutorials/walkthrough-deploy-and-use-the-model.md)
+#### [使用 R 建立圖表及繪圖](tutorials/walkthrough-create-graphs-and-plots-using-r.md)
+#### [使用 SQL 及 R 建立資料特徵](tutorials/walkthrough-create-data-features.md)
+#### [建立及儲存模型](tutorials/walkthrough-build-and-save-the-model.md)
+#### [部署及使用模型](tutorials/walkthrough-deploy-and-use-the-model.md)
 
-### [R：使用 RevoScaleR 深入探討資料科學](tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-#### [處理 SQL Server 資料](tutorials/deepdive-work-with-sql-server-data-using-r.md)
+### [R：使用 RevoScaleR 深入鑽研資料科學](tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+#### [使用 SQL Server 資料](tutorials/deepdive-work-with-sql-server-data-using-r.md)
 #### [使用 RxSqlServerData 建立 SQL Server 資料物件](tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
 #### [查詢及修改 SQL Server 資料](tutorials/deepdive-query-and-modify-the-sql-server-data.md)
 #### [定義及使用計算內容](tutorials/deepdive-define-and-use-compute-contexts.md)
 #### [建立及執行 R 指令碼](tutorials/deepdive-create-and-run-r-scripts.md)
-#### [使用 R 將 SQL Server 資料視覺化](tutorials/deepdive-visualize-sql-server-data-using-r.md)
+#### [使用 R 製作 SQL Server 資料的圖表](tutorials/deepdive-visualize-sql-server-data-using-r.md)
 #### [建立模型](tutorials/deepdive-create-models.md)
 #### [為新資料評分](tutorials/deepdive-score-new-data.md)
 #### [使用 R 轉換資料](tutorials/deepdive-transform-data-using-r.md)
@@ -63,11 +58,11 @@
 #### [步驟 2︰使用 PowerShell 將資料匯入 SQL Server](r/sqldev-import-data-to-sql-server-using-powershell.md)
 #### [步驟 3：瀏覽及視覺化資料](tutorials/sqldev-explore-and-visualize-the-data.md)
 #### [步驟 4︰使用 T-SQL 建立資料特徵](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [步驟 5︰使用 T-SQL 定型及儲存模型](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [步驟 6︰操作模型](tutorials/sqldev-operationalize-the-model.md)
+#### [步驟 5︰使用 T-SQL 訓練及儲存模型](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [步驟 6︰執行模型](tutorials/sqldev-operationalize-the-model.md)
 
 
-# [Machine Learning 服務 - Python](python/sql-server-python-services.md)
+# [機器學習服務 - Python](python/sql-server-python-services.md)
 
 ## [快速入門](python/setup-python-machine-learning-services.md)
 
@@ -84,9 +79,9 @@
 ## [Python 教學課程](tutorials/sql-server-python-tutorials.md)
 
 ### [Python：使用 T-SQL 執行 Python](tutorials/run-python-using-t-sql.md)
-#### [在預存程序中包裝 Python](tutorials/wrap-python-in-tsql-stored-procedure.md)
-#### [從 SQL Server 中的 Python 模型來定型與計分](tutorials/train-score-using-python-in-tsql.md)
-#### [在 SQL Server 計算內容中使用 revoscalepy 來建立模型](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [將 Python 包裝到預存程序中](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [從 SQL Server 中的 Python 模型訓練及計分](tutorials/train-score-using-python-in-tsql.md)
+#### [在 SQL Server 計算內容中使用 revoscalepy 建立模型](tutorials/use-python-revoscalepy-to-create-model.md)
 
 ### [Python：適用於 SQL 開發人員的資料庫內分析](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
@@ -94,10 +89,8 @@
 #### [將資料匯入 SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
 #### [探索及視覺化資料](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
 #### [使用 T-SQL 建立資料特徵](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
-#### [定型及儲存模型](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
-#### [操作模型](tutorials/sqldev-py6-operationalize-the-model.md)
-
-### [Python：使用獨立伺服器來部署與取用模型](../advanced-analytics/python/publish-consume-python-code.md)
+#### [訓練及儲存](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
+#### [執行模型](tutorials/sqldev-py6-operationalize-the-model.md)
 
 # [Machine Learning Server - 獨立式](r/r-server-standalone.md)
 ## [快速入門](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -127,7 +120,7 @@
 
 ### [避免 R 使用者套件程式庫的錯誤](r/packages-installed-in-user-libraries.md)
 
-## 資料探索和模型化
+## 資料探索及模型化
 
 ### [R 程式庫和資料類型](r/r-libraries-and-data-types.md)
 ### [Python 程式庫和資料類型](python/python-libraries-and-data-types.md)
@@ -142,7 +135,7 @@
 ### [在 R 中使用 OLAP Cube 的資料](r/using-data-from-olap-cubes-in-r.md)
 ### [使用 sqlrutils 建立預存程序](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## [效能]
+## 效能
 
 ### [R 效能微調 - 概觀](r/sql-server-r-services-performance-tuning.md)
 ### [R 效能微調 - SQL Server 組態](r/sql-server-configuration-r-services.md)
@@ -175,6 +168,8 @@
 
 ## [已知問題](known-issues-for-sql-server-machine-learning-services.md)
 ## [版本資訊](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [新增及更新的發行項](new-updated-advanced-analytics.md)
+## [在 Azure SQL Database 中使用 R](r/using-r-in-azure-sql-database.md)
 
 ## [安裝和疑難排解提示](machine-learning-troubleshooting-faq.md)
 ### [疑難排解的資料收集](data-collection-ml-troubleshooting-process.md)

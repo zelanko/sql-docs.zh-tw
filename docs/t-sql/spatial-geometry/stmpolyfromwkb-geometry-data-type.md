@@ -1,5 +1,5 @@
 ---
-title: "STMPolyFromWKB (geometry 資料類型) |Microsoft 文件"
+title: "STMPolyFromWKB (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回**geometryMultiPolygon**從開放式地理空間協會 (OGC) 已知二進位 (well-known binary，WKB) 表示法的執行個體。
+從開放地理空間協會 (OGC) 已知二進位 (WKB) 表示傳回 **geometryMultiPolygon** 執行個體。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,19 +45,19 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>引數  
  *WKB_multipolygon*  
- 是的 WKB 表示法**geometryMultiPolygon**您想要傳回的執行個體。 *WKB_multipolygon*是**varbinary （max)**運算式。  
+ 這是要傳回之 **geometryMultiPolygon** 執行個體的 WKB 表示。 *WKB_multipolygon* 是 **varbinary(max)** 運算式。  
   
  *SRID*  
- 是**int**運算式，表示的空間參考識別碼 (SRID) 的**geometryMultiPolygon**您想要傳回的執行個體。  
+ 這是 **int** 運算式，代表要傳回之 **geometryMultiPolygon** 執行個體的空間參考識別碼 (SRID)。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- OGC 類型： **MultiPolygon**  
+ OGC 類型：**MultiPolygon**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `STMPolyFromWKB()` 建立 `geometry` 例項：  

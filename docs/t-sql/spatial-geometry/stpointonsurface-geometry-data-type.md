@@ -1,5 +1,5 @@
 ---
-title: "STPointOnSurface (geometry 資料類型) |Microsoft 文件"
+title: "STPointOnSurface (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回位於內部的任意點**幾何**執行個體。
+傳回位於 **geometry** 執行個體內部的任意點。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,13 +44,13 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- 開放式地理空間協會 (OGC) 類型：**點**  
+ 開放地理空間協會 (OGC) 類型：**Point**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果此例項是空的，這個方法會傳回 Null。  
   
 ## <a name="examples"></a>範例  

@@ -1,5 +1,5 @@
 ---
-title: "UnionAggregate (geometry 資料類型) |Microsoft 文件"
+title: "UnionAggregate (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -42,24 +42,24 @@ UnionAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>引數  
  *geometry_operand*  
- 是**幾何**類型資料表資料行包含一組**幾何**物件在其上執行聯集作業。  
+ 這是 **geometry** 類型資料表資料行，可保留要在其上執行聯集作業的一組 **geometry** 物件。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
 ## <a name="exceptions"></a>例外狀況  
- 輸入的值無效時，會擲回 `FormatException`。 請參閱[STIsValid &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ 輸入的值無效時，會擲回 `FormatException`。 請參閱 [STIsValid &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>備註  
- 方法會傳回**null**當輸入是空的或輸入具有不同的 Srid。 請參閱[空間參考識別碼 &#40;Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Remarks  
+ 當輸入是空的或輸入具有不同 SRID 時，此方法會傳回 **null**。 請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- 方法會忽略**null**輸入。  
+ 此方法會忽略 **null** 輸入。  
   
 > [!NOTE]  
->  方法會傳回**null**如果所有輸入的值為**null**。  
+>  如果所有輸入的值都為 **null**，此方法就會傳回 **null**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回一組的聯集**幾何**資料表變數中的物件。  
+ 下列範例會傳回資料表變數中 **geometry** 物件集的聯集。  
  ```
  -- Setup table variable for UnionAggregate example 
  DECLARE @Geom TABLE 

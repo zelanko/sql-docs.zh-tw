@@ -1,5 +1,5 @@
 ---
-title: "交易 (TRANSACT-SQL) |Microsoft 文件"
+title: "交易 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 
   交易是單一工作單元。 如果交易成功，便會確定交易期間所修改的所有資料，且會成為資料庫中永久的內容。 如果交易發現錯誤，必須取消或回復，便會清除所有的資料修改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在下列交易模式中運作：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 採用下列交易模式來操作：  
   
  自動認可交易  
  每個個別陳述式都是一項交易。  
@@ -51,13 +51,13 @@ ms.lasthandoff: 01/25/2018
  在上一項交易完成時，隱含地啟動新的交易，但每項交易都用 COMMIT 或 ROLLBACK 陳述式來明確地完成。  
   
  批次範圍的交易  
- 僅適用於 Multiple Active Result Sets (MARS)，在 MARS 工作階段下啟動的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 外顯或隱含交易會變成批次範圍的交易。 當批次完成時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會自動回復未認可或回復之批次範圍的交易。  
+ 僅適用於 Multiple Active Result Sets (MARS)，在 MARS 工作階段下啟動的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 外顯或隱含交易會變成批次範圍的交易。 當批次完成時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動回復未認可或回復之批次範圍的交易。  
 
 > [!NOTE] 
-> 資料倉儲產品相關的特殊考量，請參閱[交易 （SQL 資料倉儲）](transactions-sql-data-warehouse.md)。   
+> 如需有關資料倉儲的特別考量，請參閱[交易 (SQL Data Warehouse)](transactions-sql-data-warehouse.md)。   
 
 ## <a name="in-this-section"></a>本節內容  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供下列交易陳述式：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列交易陳述式：  
   
 |||  
 |-|-|  
