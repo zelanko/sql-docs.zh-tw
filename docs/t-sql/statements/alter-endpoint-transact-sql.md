@@ -1,5 +1,5 @@
 ---
-title: "ALTER ENDPOINT (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 -   變更端點的屬性。  
   
 > [!NOTE]  
->  這個主題描述 ALTER ENDPOINT 特定的語法和引數。 如需 CREATE ENDPOINT 和 ALTER ENDPOINT 通用之引數的描述，請參閱[CREATE ENDPOINT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  這個主題描述 ALTER ENDPOINT 特定的語法和引數。 如需 CREATE ENDPOINT 和 ALTER ENDPOINT 通用的引數之描述，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)。  
   
  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始會將原生 XML Web Services (SOAP/HTTP 端點) 移除。  
   
@@ -106,23 +106,23 @@ FOR DATABASE_MIRRORING (
 ## <a name="arguments"></a>引數  
   
 > [!NOTE]  
->  以下是 ALTER ENDPOINT 特定的引數。 如需其餘引數的描述，請參閱[CREATE ENDPOINT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  以下是 ALTER ENDPOINT 特定的引數。 如需其餘引數的描述，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)。  
   
  **AS** { **TCP** }  
- 您無法變更使用的傳輸通訊協定**ALTER ENDPOINT**。  
+ 您不能使用 **ALTER ENDPOINT** 來變更傳輸通訊協定。  
   
- **授權***登入*  
- **授權**選項不適用於**ALTER ENDPOINT**。 只有在建立端點時，才可指派擁有權。  
+ **AUTHORIZATION** *login*  
+ **ALTER ENDPOINT** 中無法使用 **AUTHORIZATION** 選項。 只有在建立端點時，才可指派擁有權。  
   
- **如**{ **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
- 您無法變更使用的裝載類型**ALTER ENDPOINT**。  
+ **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
+ 您不能使用 **ALTER ENDPOINT** 來變更承載類型。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當您使用 ALTER ENDPOINT 時，只要指定您要更新的參數即可。 現有端點的所有屬性，都將保持不變，除非您明確變更它們。  
   
  ENDPOINT DDL 陳述式不能在使用者交易內執行。  
   
- 如需選擇加密演算法用於端點的資訊，請參閱[Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)。  
+ 如需選擇加密演算法來和端點搭配使用的資訊，請參閱[選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)。  
   
 > [!NOTE]  
 >  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
@@ -130,14 +130,14 @@ FOR DATABASE_MIRRORING (
 >  RC4 是相對的弱式演算法，而 AES 則是相對的強式演算法。 但是 AES 的速度顯著較 RC4 的速度慢。 如果您認為安全性比速度更重要，建議您使用 AES。  
   
 ## <a name="permissions"></a>Permissions  
- 使用者必須是成員**sysadmin**固定伺服器角色、 端點的擁有者或被授與 ALTER ANY ENDPOINT 權限。  
+ 使用者必須是系統管理員 (**sysadmin**) 固定伺服器角色的成員、端點擁有者，或者已被授與 ALTER ANY ENDPOINT 權限。  
   
- 若要變更現有端點的擁有權，必須使用 ALTER AUTHORIZATION 陳述式。 如需詳細資訊，請參閱[ALTER AUTHORIZATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ 若要變更現有端點的擁有權，必須使用 ALTER AUTHORIZATION 陳述式。 如需詳細資訊，請參閱 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
- 如需詳細資訊，請參閱 [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
+ 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [卸除端點 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

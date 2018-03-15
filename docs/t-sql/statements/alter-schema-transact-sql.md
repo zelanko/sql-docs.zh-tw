@@ -1,5 +1,5 @@
 ---
-title: "ALTER SCHEMA (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -73,22 +73,22 @@ ALTER SCHEMA schema_name
  這是變更擁有者的實體類別。 物件是預設值。  
   
  *securable_name*  
- 是安全性實體移入結構描述的結構描述範圍的一部分或兩部分名稱。  
+ 這是要移至結構描述的結構描述範圍內含安全性實體之一部分或兩部分名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  使用者和結構描述完全分隔。  
   
  ALTER SCHEMA 只能用來移動相同資料庫中結構描述之間的安全性實體。 若要變更或卸除結構描述內的安全性實體，請使用該安全性實體特定的 ALTER 或 DROP 陳述式。  
   
- 如果一段式名稱會用於*securable_name*，名稱解析規則目前實際上會用來尋找該安全性實體。  
+ 如果 *securable_name* 使用一部分名稱，則會使用目前使用的名稱解析規則來尋找該安全性實體。  
   
  當安全性實體移至新結構描述時，將卸除與這個安全性實體相關聯的所有權限。 如果已明確設定安全性實體的擁有者，該擁有者將保持不變。 如果安全性實體的擁有者已設為 SCHEMA OWNER，該擁有者將維持為 SCHEMA OWNER；不過，在移動之後，SCHEMA OWNER 將解析為新結構描述的擁有者。 新擁有者的 principal_id 會是 NULL。  
   
- 移動預存程序、 函數、 檢視或觸發程序不會變更結構描述名稱，如果存在，則對應之物件的定義資料行在[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視，或使用取得[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)內建函式。 因此，我們建議將這些物件類型，都不使用 ALTER SCHEMA。 相反地，卸除並重新建立其新的結構描述中的物件。  
+ 移動預存程序、函數、檢視或觸發程序，不會變更 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 目錄檢視或使用 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 內建函數取得之定義資料行中對應物件的結構描述名稱 (若有的話)。 因此，我們建議您不要利用 ALTER SCHEMA 來移動這些物件類型。 相反地，請卸除物件，再利用它的新結構描述來重新建立物件。  
   
- 移動物件，例如資料表或同義字不會自動更新參考該物件。 您必須修改任何手動參考傳送的物件的物件。 例如，如果移動資料表和觸發程序中參考該資料表，您必須修改觸發程序以反映新的結構描述名稱。 使用[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)清單相依性物件上才能移動它。  
+ 移動資料表或同義字之類的物件，不會自動更新指向這個物件的參考。 您必須手動修改任何參考已傳輸之物件的物件。 例如，如果您移動了資料表，而且觸發程序參考該資料表，您就必須修改觸發程序來反映新的結構描述名稱。 在移動物件之前，請利用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 來列出其相依性。  
 
- 若要變更資料表的結構描述使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [物件總管] 中，以滑鼠右鍵按一下資料表，然後按一下**設計**。 按**F4**以開啟 [屬性] 視窗。 在**結構描述**方塊中，選取新的結構描述。  
+ 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來變更資料表的結構描述，請在 [物件總管] 中，以滑鼠右鍵按一下資料表，然後按一下 [設計]。 按下 **F4** 開啟 [屬性] 視窗。 在 [結構描述] 方塊中，選取新的結構描述。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -96,7 +96,7 @@ ALTER SCHEMA schema_name
 ## <a name="permissions"></a>Permissions  
  若要從另一個結構描述傳送安全性實體，目前使用者必須對安全性實體 (而非結構描述) 具有 CONTROL 權限，並對目標結構描述具有 ALTER 權限。  
   
- 如果安全性實體上有 EXECUTE AS OWNER 規格，而且擁有者設為 SCHEMA OWNER，使用者也必須具有 IMPERSONATE 權限的目標結構描述擁有者。  
+ 如果安全性實體上有 EXECUTE AS OWNER 規格，且擁有者設為 SCHEMA OWNER，則該使用者也必須對目標結構描述的擁有者具有 IMPERSONATION 權限。  
   
  移動要傳送的安全性實體時，將會卸除與該安全性實體相關聯的所有權限。  
   
@@ -141,10 +141,10 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. 傳送資料表的擁有權  
- 下列範例會建立資料表`Region`中`dbo`結構描述中，建立`Sales`結構描述，然後再移動`Region`資料表中`dbo`結構描述以`Sales`結構描述。  
+ 下列範例會在 `dbo` 結構描述中建立資料表 `Region`、建立 `Sales` 結構描述，然後將 `Region` 資料表從 `dbo` 結構描述移動至 `Sales` 結構描述。  
   
 ```  
 CREATE TABLE dbo.Region   
@@ -162,7 +162,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [卸除結構描述 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

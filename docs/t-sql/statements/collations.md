@@ -1,5 +1,5 @@
 ---
-title: "定序 |Microsoft 文件"
+title: "定序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ COLLATE { <collation_name> | database_default }
   
 ## <a name="arguments"></a>引數  
  *collation_name*  
- 套用至運算式、資料行定義或資料庫定義之定序的名稱。 *sys.databases*可以只指定*Windows_collation_name*或*SQL_collation_name*。 *sys.databases*必須是常值。 *sys.databases*無法由變數或運算式。  
+ 套用至運算式、資料行定義或資料庫定義之定序的名稱。 *collation_name* 僅可以是指定的 *Windows_collation_name* 或 *SQL_collation_name*。 *collation_name* 必須是常值。 *collation_name* 不可以變數或運算式表示。  
   
- *Windows_collation_name*的定序名稱[Windows 定序名稱](../../t-sql/statements/windows-collation-name-transact-sql.md)。  
+ *Windows_collation_name* 是 [Windows 定序名稱](../../t-sql/statements/windows-collation-name-transact-sql.md)的定序名稱。  
   
- *SQL_collation_name*的定序名稱[SQL Server 定序名稱](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。  
+ *SQL_collation_name* 是 [SQL Server 定序名稱](../../t-sql/statements/sql-server-collation-name-transact-sql.md)的定序名稱。  
   
  在資料庫定義層級套用定序時，僅限 Unicode 的 Windows 定序就無法搭配 COLLATE 子句使用。  
   
  **database_default**  
  使 COLLATE 子句繼承目前資料庫的定序。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  您可以在許多層級指定 COLLATE 子句。 這些選項包括：  
   
 1.  建立或變更資料庫。  
@@ -68,13 +68,13 @@ COLLATE { <collation_name> | database_default }
      您可以利用 CREATE DATABASE 或 ALTER DATABASE 陳述式的 COLLATE 子句來指定資料庫的預設定序。 您也可以在利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立資料庫時指定定序。 如果您沒有指定定序，就會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序指派給資料庫。  
   
     > [!NOTE]  
-    >  Windows 僅限 Unicode 定序只能搭配 COLLATE 子句來套用定序來**nchar**， **nvarchar**，和**ntext**資料行層級上的資料類型和運算式層級資料;它們不能搭配 COLLATE 子句以變更資料庫或伺服器執行個體的定序。  
+    >  僅限 Windows Unicode 定序只能搭配 COLLATE 子句使用，以便將定序套用至資料行層級和運算式層級資料的 **nchar**、**nvarchar** 和 **ntext** 資料類型。它們無法搭配 COLLATE 子句使用，來變更資料庫或伺服器執行個體的定序。  
   
 2.  建立或變更資料表資料行。  
   
      您可以利用 CREATE TABLE 或 ALTER TABLE 陳述式的 COLLATE 子句來指定每個字元字串資料行的定序。 您也可以在利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立資料表時指定定序。 如果您沒有指定定序，就會將資料庫的預設定序指派給資料行。  
   
-     您也可以使用`database_default`COLLATE 子句中指定暫存資料表中的資料行使用目前的使用者資料庫預設定，而不是連接的選項**tempdb**。  
+     您也可以利用 COLLATE 子句中的 `database_default` 選項，指定暫存資料表中的資料行使用連接目前的使用者資料庫 (而非 **tempdb**) 之定序預設值。  
   
 3.  轉換運算式的定序。  
   
@@ -84,13 +84,13 @@ COLLATE { <collation_name> | database_default }
   
  當連接內容只有一個相關聯資料庫時，可以建立變數、GOTO 標籤、暫時預存程序和暫存資料表，之後當內容切換到另一個資料庫時，可以參考它們。 變數、GOTO 標籤、暫存預存程序和暫存資料表的識別碼都位於伺服器執行個體的預設定序中。  
   
- COLLATE 子句使用，可套用至只有**char**， **varchar**，**文字**， **nchar**， **nvarchar**與**ntext**資料型別。  
+ COLLATE 子句僅適用於 **char**、**varchar**、**text**、**nchar**、**nvarchar** 和 **ntext** 資料類型。  
   
- COLLATE 會使用*collate_name*以參考 SQL Server 定序或 Windows 定序套用至運算式、 資料行定義或資料庫定義的名稱。 *sys.databases*可以只指定*Windows_collation_name*或*SQL_collation_name*而且此參數必須包含常值。 *sys.databases*無法由變數或運算式。  
+ COLLATE 會使用 *collate_name* 參考要套用至運算式、資料行定義或資料庫定義之 SQL Server 定序或 Windows 定序的名稱。 *collation_name* 只可以是指定的 *Windows_collation_name* 或 *SQL_collation_name*，同時此參數必須包含常值。 *collation_name* 不可以變數或運算式表示。  
   
- 定序通常是用定序名稱來識別，但在安裝程式中除外。 在安裝程式，您可以改為指定 Windows 定序時，根定序指示項 （定序地區設定），然後指定 區分或不區分大小寫或腔調字的排序選項。  
+ 定序通常是用定序名稱來識別，但在安裝程式中除外。 在安裝程式中，您會改為指定 Windows 定序的根定序指示項 (定序地區設定)，然後再指定區分或不區分大小寫或腔調字的排序選項。  
   
- 您可以執行系統函數[fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)擷取 Windows 定序和 SQL Server 定序的所有有效定序名稱的清單：  
+ 您可以執行系統函數 [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 來擷取 Windows 定序和 SQL Server 定序的所有有效定序名稱清單：  
   
 ```sql  
 SELECT name, description  
@@ -103,13 +103,13 @@ FROM fn_helpcollations();
   
 -   當您建立或變更資料表時，指定資料行的定序。  
   
--   當還原或附加資料庫、 資料庫的預設定序和任何定序**char**， **varchar**，和**文字**資料行或在資料庫中的參數必須支援的作業系統。  
+-   當還原或附加資料庫時，作業系統必須支援資料庫的預設定序及資料庫中任何 **char**、**varchar** 和 **text** 資料行或參數的定序。  
   
 > [!NOTE]
-> 字碼頁翻譯支援**char**和**varchar**資料類型，但不適用於**文字**資料型別。 不會報告字碼頁轉換期間所遺失的資料。  
+> 支援 **char** 和 **varchar** 資料類型的字碼頁轉換，但不支援 **text** 資料類型的字碼頁轉換。 不會報告字碼頁轉換期間所遺失的資料。  
   
 > [!NOTE]
-> 如果指定的定序或所參考物件使用的定序使用 Windows，不支援的字碼頁[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會顯示錯誤。  
+> 如果指定的定序或所參考物件所用的定序使用 Windows 不支援的字碼頁，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會顯示錯誤。  
   
 ## <a name="examples"></a>範例  
   
@@ -158,16 +158,16 @@ Chiapas
 ```  
   
 ### <a name="b-additional-examples"></a>B. 其他範例  
- 如需使用的其他範例**COLLATE**，請參閱[CREATE DATABASE &#40;SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples)範例**G.建立資料庫並指定定序名稱和選項**，和[ALTER TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column)範例**V.變更資料行定序**。  
+ 如需使用 **COLLATE** 的其他範例，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) 範例 **G. 建立資料庫並指定定序名稱和選項**與 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 範例 **V. 變更資料行定序**。  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
- [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
  [定序優先順序 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [常數 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [常數 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
- [資料表 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)     
+ [資料表 &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

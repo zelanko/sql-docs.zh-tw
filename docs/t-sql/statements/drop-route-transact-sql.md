@@ -1,5 +1,5 @@
 ---
-title: "DROP ROUTE (TRANSACT-SQL) |Microsoft 文件"
+title: DROP ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,8 +54,8 @@ DROP ROUTE route_name
  *route_name*  
  要卸除的路由名稱。 您不可指定伺服器、資料庫和結構描述名稱。  
   
-## <a name="remarks"></a>備註  
- 儲存路由的路由表是可讀取透過目錄檢視的中繼資料資料表**sys.routes**。 您只能利用 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 陳述式來更新路由表。  
+## <a name="remarks"></a>Remarks  
+ 儲存路由的路由表是能夠利用目錄檢視 **sys.routes** 來讀取的中繼資料表。 您只能利用 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 陳述式來更新路由表。  
   
  不論是否有任何交談在使用路由，您都可以卸除此路由。 不過，如果沒有指向遠端服務的其他路由，這些交談的訊息會保留在傳輸佇列中，直到建立了遠端服務的路由或交談逾時為止。  
   
@@ -70,9 +70,9 @@ DROP ROUTE ExpenseRoute ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER ROUTE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-route-transact-sql.md)   
+ [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.routes &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)  
+ [sys.routes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)  
   
   

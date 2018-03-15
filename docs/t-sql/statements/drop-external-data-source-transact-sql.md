@@ -1,5 +1,5 @@
 ---
-title: "卸除的外部資料來源 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-data-source-transact-sql"></a>卸除的外部資料來源 (TRANSACT-SQL)
+# <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   移除 PolyBase 外部資料來源。  
@@ -43,23 +43,23 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
   
 ## <a name="arguments"></a>引數  
  *external_data_source_name*  
- 若要卸除的外部資料來源的名稱。  
+ 要卸除之外部資料來源的名稱。  
   
 ## <a name="metadata"></a>中繼資料  
- 若要檢視一份外部資料來源會使用 sys.external_data_sources 系統檢視表。  
+ 若要檢視外部資料來源的清單，請使用 sys.external_data_sources 系統檢視。  
   
 ```  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
 ## <a name="permissions"></a>Permissions  
- 需要改變任何外部資料來源。  
+ 需要 ALTER ANY EXTERNAL DATA SOURCE。  
   
 ## <a name="locking"></a>鎖定  
- 外部資料來源物件上採用共用的鎖定。  
+ 在外部資料來源物件上採取共用鎖定。  
   
 ## <a name="general-remarks"></a>一般備註  
- 卸除的外部資料來源並不會移除外部的資料。  
+ 卸除外部資料來源並不會移除外部資料。  
   
 ## <a name="examples"></a>範例  
   

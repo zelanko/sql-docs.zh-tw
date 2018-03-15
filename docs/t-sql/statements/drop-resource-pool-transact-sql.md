@@ -1,5 +1,5 @@
 ---
-title: "卸除資源集區 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   卸除使用者定義的資源管理員資源集區。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,12 +50,12 @@ DROP RESOURCE POOL pool_name
  *pool_name*  
  現有使用者定義之資源集區的名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果資源集區包含工作負載群組，您就無法卸除該資源集區。  
   
  您無法卸除資源管理員的預設或內部集區。  
   
- 當您要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
+ 當您要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 權限。  
@@ -71,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
+ [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   

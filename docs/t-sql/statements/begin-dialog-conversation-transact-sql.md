@@ -1,5 +1,5 @@
 ---
-title: "BEGIN DIALOG CONVERSATION (TRANSACT-SQL) |Microsoft 文件"
+title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -69,19 +69,19 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>引數  
- **@***dialog_handle*  
- 這是一個變數，用來儲存 BEGIN DIALOG CONVERSATION 陳述式傳回的新對話之系統產生對話控制代碼。 變數必須屬於型別**uniqueidentifier**。  
+ **@** *dialog_handle*  
+ 這是一個變數，用來儲存 BEGIN DIALOG CONVERSATION 陳述式傳回的新對話之系統產生對話控制代碼。 變數必須是 **uniqueidentifier** 類型。  
   
  FROM SERVICE *initiator_service_name*  
  指定起始對話的服務。 指定的名稱必須是目前資料庫中服務的名稱。 指定給起始端服務的佇列會接收目標服務傳回的訊息及 Service Broker 為了這項交談所建立的訊息。  
   
  TO SERVICE **'***target_service_name***'**  
- 指定起始對話時所指向的目標服務。 *Target_service_name*的型別**nvarchar （256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]使用位元組的比較，以比對*target_service_name*字串。 換言之，這項比較會區分大小寫，且不會考慮目前的定序。  
+ 指定起始對話時所指向的目標服務。 *target_service_name* 是 **nvarchar(256)** 類型。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 使用逐位元組的比較方式來比對 *target_service_name* 字串。 換言之，這項比較會區分大小寫，且不會考慮目前的定序。  
   
  *service_broker_guid*  
- 指定主控目標服務的資料庫。 當多個資料庫主控目標服務的執行個體時，您可以藉由提供通訊的特定資料庫*service_broker_guid*。  
+ 指定主控目標服務的資料庫。 若有一個以上的資料庫主控目標服務的執行個體，您可以提供 *service_broker_guid* 來與特定資料庫通訊。  
   
- *Service_broker_guid*的型別**nvarchar （128)**。 若要尋找*service_broker_guid*是資料庫，請在資料庫中執行下列查詢：  
+ *service_broker_guid* 是 **nvarchar(128)** 類型。 若要尋找資料庫的 *service_broker_guid*，請在資料庫中執行下列查詢：  
   
 ```  
 SELECT service_broker_guid  
@@ -92,28 +92,28 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- **'**目前資料庫**'**  
- 指定交談使用*service_broker_guid*目前資料庫。  
+ **'**CURRENT DATABASE**'**  
+ 指定交談使用目前資料庫的 *service_broker_guid*。  
   
  ON CONTRACT *contract_name*  
- 指定這項交談遵照的合約。 合約必須在目前的資料庫中。 如果目標服務不接受指定合約的新交談，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當省略這個子句時，交談遵照的合約名為**預設**。  
+ 指定這項交談遵照的合約。 合約必須在目前的資料庫中。 如果目標服務不接受指定合約的新交談，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當省略這個子句時，交談會遵照名稱為 **DEFAULT** 的合約。  
   
  RELATED_CONVERSATION **=***related_conversation_handle*  
- 指定新對話要加入其中的現有交談群組。 [新增] 對話方塊時出現這個子句時，屬於相同的交談群組，為所指定的對話*related_conversation_handle*。 *Related_conversation_handle*型別的隱含轉換成類型必須是**uniqueidentifier**。 如果陳述式會失敗*related_conversation_handle*不參考現有的對話。  
+ 指定新對話要加入其中的現有交談群組。 當出現這個子句時，新對話與 *related_conversation_handle* 指定的對話屬於同一個交談群組。 *related_conversation_handle* 的類型必須可以隱含地轉換成 **uniqueidentifier** 類型。 如果 *related_conversation_handle* 並未參考現有的對話，陳述式將會失敗。  
   
  RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
- 指定新對話要加入其中的現有交談群組。 當出現這個子句時，新的對話將會加入至所指定的交談群組*related_conversation_group_id*。 *Related_conversation_group_id*型別的隱含轉換成類型必須是**uniqueidentifier**。 如果*related_conversation_group_id*並未參考現有的交談群組，service broker 建立新的交談群組具有指定*related_conversation_group_id*和新對話與該交談群組。  
+ 指定新對話要加入其中的現有交談群組。 當出現這個子句時，新對話將會加入 *related_conversation_group_id* 指定的交談群組。 *related_conversation_group_id* 的類型必須可以隱含地轉換成 **uniqueidentifier** 類型。 如果 *related_conversation_group_id* 並未參考現有的交談群組，Service Broker 會利用指定的 *related_conversation_group_id* 來建立新交談群組，並使新對話與該交談群組產生關聯。  
   
  LIFETIME **=***dialog_lifetime*  
- 指定對話維持開啟狀態的最大時間量。 為了使對話順利完成，兩個端點必須在存留期間過期之前明確地結束對話。 *Dialog_lifetime*值必須表示以秒為單位。 存留期是型別**int**。沒有指定 LIFETIME 子句時，對話存留時間時的最大值**int**資料型別。  
+ 指定對話維持開啟狀態的最大時間量。 為了使對話順利完成，兩個端點必須在存留期間過期之前明確地結束對話。 *dialog_lifetime* 值必須以秒為單位來表示。 存留期間的類型是 **int**。當沒有指定 LIFETIME 子句時，對話存留期間是 **int** 資料類型的最大值。  
   
  ENCRYPTION  
- 指定的執行個體之外傳送時，是否必須加密傳送和接收此對話訊息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 必須加密的對話是*安全的對話*。 當 ENCRYPTION = ON 且未設定支援加密所需要的憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 如果加密 = OFF 時，如果遠端服務繫結設定為使用加密*target_service_name*; 否則訊息會傳送未加密。 如果沒有這個子句，預設值便是 ON。  
+ 指定當這個對話所傳送和接收的訊息在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之外傳送時，是否必須加密。 必須加密的對話是「安全的對話」。 當 ENCRYPTION = ON 且未設定支援加密所需要的憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當 ENCRYPTION = OFF 時，如果設定 *target_service_name* 的遠端服務繫結，便會使用加密；否則，會以不加密的方式來傳送訊息。 如果沒有這個子句，預設值便是 ON。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相同執行個體中各項服務之間交換的訊息，絕對不會加密。 不過，如果交談服務在不同資料庫中，使用加密的交談仍需要資料庫主要金鑰以及用於加密的憑證。 如此一來，當進行交談時，如果其中一個資料庫移到不同的執行個體，仍可以繼續交談。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  所有訊息都是交談的一部份。 因此，起始服務必須先開始一項與目標服務的交談，才能將訊息傳給目標服務。 BEGIN DIALOG CONVERSATION 陳述式指定的資訊與郵件的地址相似；[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會利用這項資訊將訊息傳給正確的服務。 TO SERVICE 子句指定的服務是訊息要送往的地址。 FROM SERVICE 子句指定的服務是回覆訊息的傳回地址。  
   
  交談目標不需要呼叫 BEGIN DIALOG CONVERSATION。 當起始端所發出之交談中的第一則訊息抵達時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在目標資料庫中建立一項交談。  
@@ -124,7 +124,7 @@ WHERE database_id = DB_ID() ;
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 不允許將交談任意分組。 交談群組中的所有交談，都必須以 FROM 子句所指定的服務為交談的起始端或目標。  
   
- BEGIN DIALOG CONVERSATION 命令會鎖定交談群組，其中包含*dialog_handle*傳回。 當命令包含 RELATED_CONVERSATION_GROUP 子句的交談群組*dialog_handle*交談群組中指定*related_conversation_group_id*參數。 當命令包含 RELATED_CONVERSATION 子句的交談群組*dialog_handle*交談群組相關聯*related_conversation_handle*指定。  
+ BEGIN DIALOG CONVERSATION 命令會鎖定包含所傳回之 *dialog_handle* 的交談群組。 當命令包含 RELATED_CONVERSATION_GROUP 子句時，*dialog_handle* 的交談群組就是 *related_conversation_group_id* 參數所指定的交談群組。 當命令包含 RELATED_CONVERSATION 子句時，*dialog_handle* 的交談群組就是與所指定之 *related_conversation_handle* 相關聯的交談群組。  
   
  在使用者自訂函數中，BEGIN DIALOG CONVERSATION 無效。  
   
@@ -218,9 +218,9 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BEGIN CONVERSATION TIMER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [END CONVERSATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [移動交談 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

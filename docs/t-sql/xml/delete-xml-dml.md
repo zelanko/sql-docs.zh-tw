@@ -1,5 +1,5 @@
 ---
-title: "刪除 (XML DML) |Microsoft 文件"
+title: delete (XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -44,13 +44,13 @@ delete Expression
 ```  
   
 ## <a name="arguments"></a>引數  
- *[運算式]*  
- 是一種 XQuery 運算式，可識別要刪除的節點。 會刪除運算式所選取的所有節點，以及選取節點內所包含的所有節點或值。 中所述[insert (XML DML)](../../t-sql/xml/insert-xml-dml.md)，這必須是文件中的現有節點的參考。 它不能是建構節點。 運算式不可以是根 (/) 節點。 如果運算式傳回空白時序，就不會發生刪除，也不會傳回錯誤。  
+ *運算式*  
+ 是一種 XQuery 運算式，可識別要刪除的節點。 會刪除運算式所選取的所有節點，以及選取節點內所包含的所有節點或值。 如 [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md) 中所述，必須是文件中現有節點的參考。 它不能是建構節點。 運算式不可以是根 (/) 節點。 如果運算式傳回空白時序，就不會發生刪除，也不會傳回錯誤。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. 從不具類型的 xml 變數所儲存的文件刪除節點  
- 下列範例說明如何從文件刪除各個節點。 首先，XML 執行個體指派給變數的**xml**型別。 接著，後續的 delete XML DML 陳述式會從文件刪除各個節點。  
+ 下列範例說明如何從文件刪除各個節點。 首先，將 XML 執行個體指派給 **xml** 類型的變數。 接著，後續的 delete XML DML 陳述式會從文件刪除各個節點。  
   
 ```  
 DECLARE @myDoc xml  
@@ -92,7 +92,7 @@ SELECT @myDoc
 ```  
   
 ### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. 從不具類型的 xml 資料行所儲存的文件刪除節點  
- 在下列範例中，**刪除**XML DML 陳述式中移除第二個子元素的 <`Features`> 從資料行所儲存的文件。  
+ 在下列範例中，**delete** XML DML 陳述式會從資料行所儲存的文件，移除 <`Features`> 的第二個子元素。  
   
 ```  
 CREATE TABLE T (i int, x xml)  
@@ -119,14 +119,14 @@ FROM T
   
  請注意下列項目是從上一個查詢而來：  
   
--   [Modify （) 方法 (xml 資料類型)](../../t-sql/xml/modify-method-xml-data-type.md)用來指定**刪除**XML DML 關鍵字。  
+-   [modify() 方法 (xml 資料類型)](../../t-sql/xml/modify-method-xml-data-type.md) 是用以指定 **delete** XML DML 關鍵字。  
   
--   [Query （) 方法 (xml 資料類型)](../../t-sql/xml/query-method-xml-data-type.md)用以查詢文件。  
+-   [query() 方法 (xml 資料類型)](../../t-sql/xml/query-method-xml-data-type.md) 是用以查詢文件。  
   
 ### <a name="c-deleting-nodes-from-a-typed-xml-column"></a>C. 從具類型的 xml 資料行刪除節點  
- 從製造指示 XML 文件儲存在這個範例會刪除的節點型別**xml**資料行。  
+ 此範例會從具類型的 **xml** 資料行中所儲存的製造指示 XML 文件刪除節點。  
   
- 在範例中，您先建立資料表 (T) 包含具類型**xml** AdventureWorks 資料庫中的資料行。 接著便從 ProductModel 資料表的 Instructions 資料行將製造指示 XML 執行個體複製為 T 資料表，並從該文件刪除一或多個節點。  
+ 在此範例中，您先在 AdventureWorks 資料庫中建立一個包含具類型的 **xml** 資料行的資料表 (T)。 接著便從 ProductModel 資料表的 Instructions 資料行將製造指示 XML 執行個體複製為 T 資料表，並從該文件刪除一或多個節點。  
   
 ```  
 use AdventureWorks  
@@ -196,6 +196,6 @@ go
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)   
- [XML 資料修改語言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML 資料修改語言 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

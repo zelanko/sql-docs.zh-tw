@@ -1,5 +1,5 @@
 ---
-title: "卸除佇列 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,22 +58,22 @@ DROP QUEUE <object>
   
 ## <a name="arguments"></a>引數  
  *database_name*  
- 要卸除之佇列所在的資料庫名稱。 若未*database_name*提供，則預設為目前的資料庫。  
+ 要卸除之佇列所在的資料庫名稱。 若未提供 *database_name*，預設為目前的資料庫。  
   
  *schema_name (object)*  
- 擁有要卸除之佇列的結構描述名稱。 若未*schema_name*提供，則預設為目前使用者的預設結構描述。  
+ 擁有要卸除之佇列的結構描述名稱。 若未提供 *schema_name*，預設為目前使用者的預設結構描述。  
   
  *queue_name*  
  要卸除的佇列名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果有任何服務參考佇列，您便不能卸除這個佇列。  
   
 ## <a name="permissions"></a>Permissions  
- 卸除佇列的權限預設給佇列，也就是成員的擁有者**db_ddladmin**或**db_owner**固定資料庫角色和成員的**sysadmin**固定伺服器角色。  
+ 卸除佇列的權限預設為佇列的擁有者、**db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
- 下列範例會卸除**ExpenseQueue**從目前資料庫的佇列。  
+ 下列範例會從目前的資料庫中卸除 **ExpenseQueue** 佇列。  
   
 ```  
 DROP QUEUE ExpenseQueue ;  
@@ -82,7 +82,7 @@ DROP QUEUE ExpenseQueue ;
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

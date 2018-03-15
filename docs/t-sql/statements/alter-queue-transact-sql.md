@@ -1,5 +1,5 @@
 ---
-title: "ALTER QUEUE (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2016
 ms.prod: sql-non-specified
@@ -92,11 +92,11 @@ WITH
 ```  
   
 ## <a name="arguments"></a>引數  
- *database_name* （物件）  
- 這是要變更之佇列所在的資料庫名稱。 若未*database_name*提供預設值為目前的資料庫。  
+ *database_name* (object)  
+ 這是要變更之佇列所在的資料庫名稱。 若未提供 *database_name*，預設為目前的資料庫。  
   
  *schema_name* (object)  
- 這是新佇列所屬的結構描述名稱。 若未*schema_name*提供預設值為目前使用者的預設結構描述。  
+ 這是新佇列所屬的結構描述名稱。 若未提供 *schema_name*，預設為目前使用者的預設結構描述。  
   
  *queue_name*  
  這是要變更的佇列名稱。  
@@ -116,39 +116,39 @@ WITH
  STATUS (Activation)  
  指定佇列是否啟用預存程序。 當 STATUS = ON 時，如果目前執行的程序數目低於 MAX_QUEUE_READERS，且訊息到達佇列的速度比預存程序接收訊息快，佇列便會啟動 PROCEDURE_NAME 所指定的預存程序。 當 STATUS = OFF 時，佇列不會啟用預存程序。  
   
- 重建 [WITH \<queue_rebuild_options >]  
+ REBUILD [ WITH \<queue_rebuild_options> ]  
  **適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 重建佇列內部資料表的所有索引。 當您遇到片段由於高負載的問題，請使用這項功能。 MAXDOP 是只有支援的佇列 rebuild 選項。 重建一律是一種離線作業。  
+ 重建佇列內部資料表的所有索引。 當您遇到因為高負載而產生的片段問題時，請使用此功能。 MAXDOP 是唯一支援的佇列重建選項。 REBUILD 一律是離線作業。  
   
- 重新組織 [使用 (加上 LOB_COMPACTION = {ON |關閉}）]  
+ REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
  **適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 重新組織所有佇列的內部資料表上的索引。   
-不同於重新組織，使用者資料表上，在佇列上的 REORGANIZE 一律做為執行一種離線作業因為頁面層級鎖定已明確停用佇列。  
+ 重新組織佇列內部資料表上的所有索引。   
+不同於使用者資料表上的 REORGANIZE，佇列上的 REORGANIZE 一律會以離線作業執行，因為佇列上會明確停用頁面層級鎖定。  
   
 > [!TIP]  
->  以取得有關索引片段的一般指示介於 5%到 30%片段時，重新組織索引。 30%以上片段時，重建索引。 不過，這些數字會僅針對做為起點為您的環境的一般指引。 若要判斷索引片段的數量，請使用[sys.dm_db_index_physical_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) -請參閱 < 範例 G 範例文件中的。  
+>  如需有關索引片段的一般指引，當片段介於 5% 和 30% 之間時重新組織索引。 當片段高於 30% 重建索引。 不過，這些數字僅是作為您環境起點的一般指引。 若要判斷索引片段的數量，請使用 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) - 如需範例，請參閱該文章中的範例 G。  
   
- MOVE TO { *file_group* |"default"}  
+ MOVE TO { *file_group* | "default" }  
  **適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 會將佇列內部資料表 （索引） 移至使用者指定的檔案群組。  新的檔案群組必須不是唯讀狀態。  
+ 將佇列內部資料表 (包含其索引) 移動至使用者指定的檔案群組。  新的檔案群組不得為唯讀。  
   
  PROCEDURE_NAME = \<procedure>  
  指定在佇列包含要處理的訊息時，將啟動的預存程序名稱。 這個值必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。  
   
- *database_name* （程序）  
+ *database_name* (procedure)  
  這是包含預存程序的資料庫名稱。  
   
- *schema_name* （程序）  
+ *schema_name* (procedure)  
  這是擁有預存程序的結構描述名稱。  
   
  *stored_procedure_name*  
  這是預存程序的名稱。  
   
  MAX_QUEUE_READERS =*max_reader*  
- 指定佇列同時啟動的啟用預存程序的最大執行個體數目。 值*max_readers*必須是介於 0 到 32767 之間的數字。  
+ 指定佇列同時啟動的啟用預存程序的最大執行個體數目。 *max_readers* 的值必須是在 0 和 32767 之間的數字。  
   
  EXECUTE AS  
  指定啟用預存程序執行所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫使用者帳戶。 當佇列啟用預存程序時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠檢查這個使用者的權限。 如果是 Windows 網域使用者，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須連接這個網域，且在程序啟用或啟用失敗時，必須能夠驗證指定使用者的權限。 如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者，伺服器一律可以檢查權限。  
@@ -157,7 +157,7 @@ WITH
  指定以目前使用者的身分來執行預存程序。 (執行此 ALTER QUEUE 陳述式的資料庫主體)。  
   
  '*user_name*'  
- 這是指定用來執行預存程序的使用者名稱。 *user_name*必須是有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者指定為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別項。 目前的使用者必須具有 IMPERSONATE 權限*user_name*指定。  
+ 這是指定用來執行預存程序的使用者名稱。 *user_name* 必須是指定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者。 目前的使用者必須擁有指定的 *user_name* 之 IMPERSONATE 權限。  
   
  OWNER  
  指定以佇列擁有者的身分來執行預存程序。  
@@ -170,14 +170,14 @@ WITH
   
  有害訊息處理設定為 OFF 的佇列將不會在五個連續的交易復原後停用。 這可讓應用程式定義自訂有害訊息處理系統。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當含有指定之啟用預存程序的佇列包含訊息時，將啟用狀態 OFF 改成 ON 會立即啟動這個啟用預存程序。 將啟用狀態 ON 改成 OFF 會使 Broker 停止啟用預存程序的執行個體，但並不會停止目前在執行中的預存程序之執行個體。  
   
  變更佇列來加入啟用預存程序，並不會變更佇列的啟用狀態。 變更佇列的啟用預存程序，並不會影響目前在執行中的啟用預存程序的執行個體。  
   
  在啟用過程中，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會檢查佇列的最大佇列讀取器數目。 因此，變更佇列來增加最大佇列讀取器數目，可讓 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 立即啟用更多啟用預存程序的執行個體。 變更佇列來減少最大佇列讀取器數目，並不會影響目前在執行中啟用預存程序的執行個體。 不過，在啟用預存程序的執行個體數目低於設定的最大數目之前，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 並不會啟動新的預存程序執行個體。  
   
- 當佇列無法使用時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會保存使用資料庫傳輸佇列中的佇列之服務的訊息。 [Sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)目錄檢視會提供傳輸佇列的檢視。  
+ 當佇列無法使用時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會保存使用資料庫傳輸佇列中的佇列之服務的訊息。 [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) 目錄檢視會提供傳輸佇列的檢視。  
   
  如果 RECEIVE 陳述式或 GET CONVERSATION GROUP 陳述式指定無法使用的佇列，陳述式會因 [!INCLUDE[tsql](../../includes/tsql-md.md)] 錯誤而失敗。  
   
@@ -244,17 +244,17 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
-### <a name="h-reorganizing-queue-indexes"></a>H. 重新組織索引佇列  
+### <a name="h-reorganizing-queue-indexes"></a>H. 重新組織佇列索引  
   
 **適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 下列範例會重新組織索引佇列  
+ 下列範例會重新組織佇列索引  
   
 ```  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I： 將佇列的內部資料表移到另一個檔案群組  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I：將佇列內部資料表移動至另一個檔案群組  
   
 **適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -264,7 +264,7 @@ ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [卸除佇列 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   

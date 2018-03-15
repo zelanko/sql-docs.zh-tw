@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE (Parallel Data Warehouse) |Microsoft 文件"
+title: "ALTER DATABASE (平行處理資料倉儲) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Data Warehouse)
+# <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  修改複寫的資料表、 分散式的資料表和交易記錄檔中的最大資料庫大小選項[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 使用此陳述式來管理資料庫的磁碟空間配置，因為它放大或縮小的大小。  
+  修改適用於[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中的複寫資料表、分散式資料表和交易記錄的資料庫大小上限選項。 在資料庫的大小成長或壓縮時，使用此陳述式來管理它的磁碟空間配置。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,42 +53,42 @@ ALTER DATABASE database_name
   
 ## <a name="arguments"></a>引數  
  *database_name*  
- 要修改的資料庫名稱。 若要顯示應用裝置上的資料庫清單，請使用[sys.databases &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+ 要修改之資料庫的名稱。 若要顯示設備上之資料庫的清單，請使用 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
   
- 自動成長 = {ON |OFF}  
- 更新的自動成長選項。 自動成長是 ON，當[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]自動視適應儲存需求成長會增加複寫的資料表、 分散式的資料表，以及交易記錄檔已配置的空間。 自動成長是 OFF，當[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]傳回錯誤，如果複寫的資料表，散發資料表，或交易記錄超過大小上限設定。  
+ AUTOGROW = { ON | OFF }  
+ 更新 AUTOGROW 選項。 當 AUTOGROW 為 ON 時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會視需要針對複寫資料表、分散式資料表及交易記錄自動提高配置的空間，以適應儲存空間需求的增長。 當 AUTOGROW 為 OFF 時，如果複寫資料表、分散式資料表或交易記錄超過大小上限設定，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]就會傳回錯誤。  
   
  REPLICATED_SIZE = *size* [GB]  
- 指定新的上限 （gb） 每個要改變的資料庫中儲存所有的複寫資料表的計算節點。 如果您計劃應用裝置儲存空間，您必須 REPLICATED_SIZE 乘以應用裝置中的運算節點數目。  
+ 指定每個計算節點的新 GB 上限，以用來儲存要改變之資料庫中的所有複寫資料表。 如果您正在規劃設備儲存空間，就必須將 REPLICATED_SIZE 乘以設備中計算節點的數目。  
   
  DISTRIBUTED_SIZE = *size* [GB]  
- 指定新的上限 （gb） 每個資料庫的更動在資料庫中儲存的所有分散式資料表。 大小會分佈在所有的應用裝置中的計算節點。  
+ 指定每個資料庫的新 GB 上限，以用來儲存要改變之資料庫中的所有分散式資料表。 此大小會分佈於設備中的所有計算節點上。  
   
  LOG_SIZE = *size* [GB]  
- 指定新的上限 （gb） 每個資料庫的更動在資料庫中儲存的所有交易記錄檔。 大小會分佈在所有的應用裝置中的計算節點。  
+ 指定每個資料庫的新 GB 上限，以用來儲存要改變之資料庫中的所有交易記錄。 此大小會分佈於設備中的所有計算節點上。  
   
- 加密 {ON |OFF}  
- 設定資料庫要加密 (ON) 或是不要加密 (OFF)。 加密只能設定為[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]時[sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e)已設定為**1**。 必須先建立資料庫加密金鑰，您可以設定透明資料加密。 如需有關資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ ENCRYPTION { ON | OFF }  
+ 設定資料庫要加密 (ON) 或是不要加密 (OFF)。 只有在將 [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) \(英文\) 設為 **1** 時，才能針對[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]設定加密。 您必須先建立資料庫加密金鑰，才能設定透明資料加密。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
 ## <a name="permissions"></a>Permissions  
- 需要資料庫的 ALTER 權限。  
+ 需要資料庫上的 ALTER 權限。  
   
 ## <a name="general-remarks"></a>一般備註  
- REPLICATED_SIZE、 DISTRIBUTED_SIZE 和 LOG_SIZE 的值可以是大於、 等於或小於資料庫的目前值。  
+ REPLICATED_SIZE、DISTRIBUTED_SIZE 和 LOG_SIZE 的值可以大於、等於或小於資料庫的目前值。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- 成長和壓縮作業是近似值。 產生的實際大小而異的大小參數。  
+ 成長和壓縮作業很近似。 產生的實際大小會因大小參數而異。  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]不會執行 ALTER DATABASE 陳述式，成為不可部分完成的作業。 如果陳述式會中止執行期間，已發生的變更將會保留。  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]不會以不可部分完成之作業的形式來執行 ALTER DATABASE 陳述式。 如果陳述式在執行期間中止，系統將會保留已發生的變更。  
   
 ## <a name="locking-behavior"></a>鎖定行為  
- 資料庫物件上採用共用的鎖定。 您無法改變正在使用另一位使用者進行讀取或寫入資料庫。 這包括已發行的工作階段[使用](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15)在資料庫上的陳述式。  
+ 在 DATABASE 物件上採取共用鎖定。 您無法改變有另一個使用者正在讀取或寫入的資料庫。 這包括已在資料庫上發出 [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) \(英文\) 陳述式的工作階段。  
   
-## <a name="performance"></a>效能  
- 壓縮資料庫可能需要大量的時間與系統資源，在資料庫中的實際資料大小而定，在磁碟上片段的數量。 例如，壓縮資料庫可能需要許多小時以上。  
+## <a name="performance"></a>[效能]  
+ 根據資料庫內實際資料的大小及磁碟上的片段程度而定，壓縮資料庫可能需要大量的時間與系統資源。 例如，壓縮資料庫可能需要數小時以上的時間。  
   
 ## <a name="determining-encryption-progress"></a>判斷加密進度  
- 您可以使用下列查詢來判斷資料庫透明資料加密，以百分比表示進度：  
+ 使用下列查詢來判斷資料庫透明資料加密的進度 (以百分比表示)：  
   
 ```  
 WITH  
@@ -132,36 +132,36 @@ INNER JOIN dek_percent_complete
 WHERE type = 'CONTROL';  
 ```  
   
- 如需示範中實作 TDE 的所有步驟的完整範例，請參閱[透明資料加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ 如需示範實作 TDE 之所有步驟的完整範例，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-altering-the-autogrow-setting"></a>A. 修改自動成長設定  
- 資料庫自動成長設定為 ON `CustomerSales`。  
+### <a name="a-altering-the-autogrow-setting"></a>A. 改變 AUTOGROW 設定  
+ 針對 `CustomerSales` 資料庫，將 AUTOGROW 設為 ON。  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. 改變複寫的資料表的最大儲存體  
- 下列範例設定設為 1 GB 的資料庫複寫的資料表儲存體限制`CustomerSales`。 這是每個計算節點的儲存體限制。  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. 改變複寫資料表的儲存空間上限  
+ 下列範例會針對 `CustomerSales` 資料庫，將複寫資料表儲存空間限制設為 1 GB。 這是每個計算節點的儲存空間限制。  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 改變分散式資料表最大儲存體  
- 下列範例設定分散式的資料表儲存體限制為 1000 GB (1 tb) 資料庫`CustomerSales`。 這是合併的儲存體限制設備所有計算節點，不要儲存體限制每個計算節點。  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 改變分散式資料表的儲存空間上限  
+ 下列範例會針對 `CustomerSales` 資料庫，將分散式資料表儲存空間限制設為 1000 GB (1 TB)。 這是設備上所有計算節點的組合儲存空間限制，而非每個計算節點的儲存空間限制。  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. 改變的交易記錄檔的最大儲存體  
- 下列範例會更新資料庫`CustomerSales`最多可以擁有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]10 GB 的 」 應用裝置中的交易記錄大小。  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. 改變交易記錄的儲存空間上限  
+ 下列範例會更新 `CustomerSales` 資料庫，使其可在設備上擁有最多 10 GB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小。  
   
 ```  
 ALTER DATABASE CustomerSales  
@@ -169,7 +169,7 @@ ALTER DATABASE CustomerSales
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立資料庫 &#40;平行資料倉儲 &#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
+ [CREATE DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   

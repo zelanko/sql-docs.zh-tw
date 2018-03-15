@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE 資料庫鏡像 (TRANSACT-SQL) |Microsoft 文件"
+title: "ALTER DATABASE 資料庫鏡像 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-non-specified
@@ -31,19 +31,19 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (TRANSACT-SQL) 資料庫鏡像 
+# <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 資料庫鏡像 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
   
- 控制資料庫的資料庫鏡像。 資料庫鏡像選項所指定的值會套用至資料庫的這兩個複本，而且會當做一個整體套用在資料庫鏡像工作階段上。 只有一個\<database_mirroring_option > 允許每個 ALTER DATABASE 陳述式。  
+ 控制資料庫的資料庫鏡像。 資料庫鏡像選項所指定的值會套用至資料庫的這兩個複本，而且會當做一個整體套用在資料庫鏡像工作階段上。 每個 ALTER DATABASE 陳述式都只能有一個 \<database_mirroring_option>。  
   
 > [!NOTE]  
 >  我們建議您將資料庫鏡像作業設定在離峰時間執行，因為組態會影響效能。  
   
- ALTER DATABASE 選項，請參閱[ALTER DATABASE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md). ALTER DATABASE SET 選項，請參閱[ALTER DATABASE SET 選項 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ 針對 ALTER DATABASE 選項，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。 針對 ALTER DATABASE SET 選項，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +84,7 @@ SET { <partner_option> | <witness_option> }
  PARTNER \<partner_option>  
  控制定義資料庫鏡像工作階段的容錯移轉夥伴及其行為的資料庫屬性。 部分 SET PARTNER 選項可以在任何一個夥伴上設定，但其他選項只適用於主體伺服器或鏡像伺服器。 如需詳細資訊，請參閱下面的個別 PARTNER 選項。 SET PARTNER 子句會影響資料庫的這兩個複本，不論哪個夥伴指定它，都是如此。  
   
- 若要執行 SET PARTNER 陳述式，兩個夥伴的端點狀態 (STATE) 必須都設為 STARTED。 另外，也請注意，每個夥伴伺服器執行個體之資料庫鏡像端點的 ROLE 都必須設成 PARTNER 或 ALL。 如需如何指定端點資訊，請參閱[建立鏡像端點的 Windows 驗證的資料庫 &#40;TRANSACT-SQL &#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). 若要了解伺服器執行個體之資料庫鏡像端點的角色和狀態，請在這個執行個體上，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
+ 若要執行 SET PARTNER 陳述式，兩個夥伴的端點狀態 (STATE) 必須都設為 STARTED。 另外，也請注意，每個夥伴伺服器執行個體之資料庫鏡像端點的 ROLE 都必須設成 PARTNER 或 ALL。 如需如何指定端點的資訊，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。 若要了解伺服器執行個體之資料庫鏡像端點的角色和狀態，請在這個執行個體上，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
 ```  
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
@@ -93,26 +93,26 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **\<partner_option> ::=**  
   
 > [!NOTE]  
->  只有一個\<都 > 每個 SET PARTNER 子句。  
+>  每個 SET PARTNER 子句都只能有一個 \<partner_option>。  
   
  **'** *partner_server* **'**  
  指定要在新資料庫鏡像工作階段中，做為容錯移轉夥伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之伺服器網路位址。 每個工作階段都需要兩個夥伴：一個啟動做為主體伺服器，一個啟動做為鏡像伺服器。 我們建議您將這些夥伴放在不同電腦中。  
   
- 在每個夥伴上，每個工作階段都指定一次這個選項。 起始資料庫鏡像工作階段需要兩個 ALTER DATABASE*資料庫*SET PARTNER **='***partner_server***'**陳述式。 它們的順序很重要。 首先，連接到鏡像伺服器，並指定做為主體伺服器執行個體*partner_server* (SET PARTNER **='***主體伺服器***'**)。 第二，連接到主體伺服器，並指定鏡像伺服器執行個體，做為*partner_server* (SET PARTNER **='***鏡像伺服器***'**); 這會啟動資料庫鏡像工作階段，這兩個夥伴之間。 如需詳細資訊，請參閱本主題稍後的 [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
+ 在每個夥伴上，每個工作階段都指定一次這個選項。 起始資料庫鏡像工作階段需要兩個 ALTER DATABASE *database* SET PARTNER **='***partner_server***'** 陳述式。 它們的順序很重要。 首先是連線到鏡像伺服器，將主體伺服器執行個體指定為 *partner_server* (SET PARTNER **='***principal_server***'**)。 其次是連線到主體伺服器，將鏡像伺服器執行個體指定為 *partner_server* (SET PARTNER **='***mirror_server***'**)；這會在這兩個夥伴之間，啟動一個資料庫鏡像工作階段。 如需詳細資訊，請參閱本主題稍後的 [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
   
- 值*partner_server*是伺服器網路位址。 這個值的語法如下：  
+ *partner_server* 的值是一個伺服器網路位址。 這個值的語法如下：  
   
  TCP**://***\<system-address>***:***\<port>*  
   
  其中  
   
--   *\<系統位址 >*是一個字串，例如系統名稱、 完整的網域名稱或 IP 位址，可明確識別目的地電腦系統。  
+-   *\<system-address>* 是明確識別目的地電腦系統的字串，例如系統名稱、完整網域名稱或 IP 位址。  
   
--   *\<連接埠 >*與夥伴伺服器執行個體的鏡像端點相關聯的通訊埠編號。  
+-   *\<port>* 是與夥伴伺服器執行個體鏡像端點相關聯的連接埠號碼。  
   
- 如需詳細資訊，請參閱[指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+ 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
- 下列範例說明 SET PARTNER **='***partner_server***'**子句：  
+ 下列範例說明 SET PARTNER **='***partner_server***'** 子句：  
   
 ```  
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'  
@@ -124,7 +124,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  FAILOVER  
  以手動方式將主體伺服器容錯移轉到鏡像伺服器。 您只能在主體伺服器上指定 FAILOVER。 只有在 SAFETY 設定是 FULL (預設值) 時，這個選項才有效。  
   
- FAILOVER 選項需要**主要**當做資料庫內容。  
+ FAILOVER 選項需要 **master** 作為資料庫內容。  
   
  FORCE_SERVICE_ALLOW_DATA_LOSS   
  在主體伺服器失敗之後 (未發生自動容錯移轉且資料庫處於尚未同步或同步的狀態)，將資料庫服務強制移轉到鏡像資料庫。  
@@ -142,7 +142,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  強制服務會暫停工作階段，暫時將所有資料保留在原始主體資料庫中。 原始的主體資料庫一旦可以提供服務且與新的主體伺服器開始通訊後，資料庫管理員就可以繼續提供服務。 恢復工作階段時，便會失去任何尚未傳送的記錄和對應的更新。  
   
  OFF  
- 移除資料庫鏡像工作階段並從資料庫移除鏡像。 您可以在任何一個夥伴上指定 OFF。 如需資訊，請參閱有關移除鏡像的影響，請參閱[移除資料庫鏡像 &#40;SQL Server &#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
+ 移除資料庫鏡像工作階段並從資料庫移除鏡像。 您可以在任何一個夥伴上指定 OFF。 如需移除鏡像之影響的資訊，請參閱[移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
   
  RESUME  
  繼續暫停的資料庫鏡像工作階段。 您只能在主體伺服器上指定 RESUME。  
@@ -150,7 +150,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  SAFETY { FULL | OFF }  
  設定交易安全層級。 您只能在主體伺服器上指定 SAFETY。  
   
- 預設值是 FULL。 使用完整安全性時，資料庫鏡像工作階段以同步方式執行 (在*的高安全性模式*)。 如果安全性設定為 OFF，資料庫鏡像工作階段以非同步方式執行 (在*高效能模式*)。  
+ 預設值是 FULL。 使用完整安全性時，資料庫鏡像工作階段會同步執行 (在「高安全性模式」 中)。 如果 SAFETY 設定為 OFF，則資料庫鏡像工作階段會非同步執行 (在「高效能模式」中)。  
   
  高安全性模式行為會依見證而有部分的不同，如下所述：  
   
@@ -170,7 +170,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  您可以在任何一個夥伴上指定 SUSPEND。  
   
- 逾時*整數*  
+ TIMEOUT *integer*  
  指定逾時週期 (以秒為單位)。 逾時期間是伺服器執行個體等待接收鏡像工作階段中之另一執行個體發出的 PING 訊息的最長時間，之後，便將其他執行個體視為已經中斷連接。  
   
  您只能在主體伺服器上指定 TIMEOUT 選項。 如果您沒有指定這個選項，依預設，這個期間是 10 秒。 如果您指定 5 或以上，逾時期間便設為指定的秒數。 如果您指定的逾時值是 0 - 4 秒，逾時期間會自動設為 5 秒。  
@@ -181,11 +181,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  如需詳細資訊，請參閱 [資料庫鏡像期間可能發生的失敗](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)。  
   
  WITNESS \<witness_option>  
- 控制定義資料庫鏡像見證的資料庫屬性。 SET WITNESS 子句會影響資料庫的這兩個複本，但您只能在主體伺服器上指定 SET WITNESS。 服務資料庫，不論其安全性設定; 如果工作階段設定見證，則需要仲裁如需詳細資訊，請參閱[仲裁： 見證如何影響資料庫可用性 &#40; 資料庫鏡像 &#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 控制定義資料庫鏡像見證的資料庫屬性。 SET WITNESS 子句會影響資料庫的這兩個複本，但您只能在主體伺服器上指定 SET WITNESS。 如果設定了工作階段的見證，則不論 SAFETY 設定為何，都需要仲裁才能為資料庫提供服務；如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
- 我們建議您將見證和容錯移轉夥伴放在不同的電腦中。 有關見證的詳細資訊，請參閱[資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)。  
+ 我們建議您將見證和容錯移轉夥伴放在不同的電腦中。 如需如何加入或移除見證的資訊，請參閱[資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)。  
   
- 若要執行 SET WITNESS 陳述式，主體和見證伺服器執行個體的端點 STATE 都必須設為 STARTED。 另外，也請注意，見證伺服器執行個體之資料庫鏡像端點的 ROLE 必須設成 WITNESS 或 ALL。 指定端點的相關資訊，請參閱[資料庫鏡像端點 &#40;SQL Server &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
+ 若要執行 SET WITNESS 陳述式，主體和見證伺服器執行個體的端點 STATE 都必須設為 STARTED。 另外，也請注意，見證伺服器執行個體之資料庫鏡像端點的 ROLE 必須設成 WITNESS 或 ALL。 如需指定端點的相關資訊，請參閱[資料庫鏡像端點&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。  
   
  若要了解伺服器執行個體之資料庫鏡像端點的角色和狀態，請在這個執行個體上，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
@@ -196,25 +196,25 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  在見證上，無法設定資料庫屬性。  
   
- **\<witness_option >:: =**  
+ **\<witness_option> ::=**  
   
 > [!NOTE]  
->  只有一個\<witness_option > 每個 SET WITNESS 子句。  
+>  每個 SET WITNESS 子句只能有一個 \<witness_option>。  
   
  **'** *witness_server* **'**  
  指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體扮演資料庫鏡像工作階段見證伺服器的角色。 您只能在主體伺服器上指定 SET WITNESS。  
   
- 在 SET WITNESS **='***witness_server***'**陳述式中的語法*witness_server*的語法相同*partner_server*。  
+ 在 SET WITNESS **='***witness_server***'** 陳述式中，*witness_server* 的語法與 *partner_server* 的語法相同。  
   
  OFF  
  從資料庫鏡像工作階段中移除見證。 將見證設成 OFF 會停用自動容錯移轉。 如果資料庫設為 FULL SAFETY，且見證設為 OFF，鏡像伺服器失敗，會使主體伺服器將資料庫設為無法使用。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. 利用見證建立資料庫鏡像工作階段  
- 利用見證來設定資料庫鏡像需要設定安全性和準備鏡像資料庫，另外，還需要利用 ALTER DATABASE 來設定夥伴。 如需完整的安裝程序的範例，請參閱[設定資料庫鏡像 &#40;SQL Server &#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ 利用見證來設定資料庫鏡像需要設定安全性和準備鏡像資料庫，另外，還需要利用 ALTER DATABASE 來設定夥伴。 如需完整的安裝程序的範例，請參閱[設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
   
 ### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. 資料庫鏡像工作階段的手動容錯移轉  
  您可以從任何一個資料庫鏡像夥伴來起始手動容錯移轉。 在容錯移轉之前，您應該先確認您認為是目前主體伺服器的伺服器，實際上就是主體伺服器。 例如，如果是 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫，請在您認為是目前主體伺服器的伺服器執行個體上，執行下列查詢：  

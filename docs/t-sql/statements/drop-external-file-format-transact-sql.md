@@ -1,5 +1,5 @@
 ---
-title: "卸除的外部檔案格式 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-file-format-transact-sql"></a>卸除的外部檔案格式 (TRANSACT-SQL)
+# <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   移除 PolyBase 外部檔案格式。  
@@ -43,23 +43,23 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
   
 ## <a name="arguments"></a>引數  
  *external_file_format_name*  
- 若要卸除的外部檔案格式名稱。  
+ 要卸除的外部檔案格式名稱。  
   
 ## <a name="metadata"></a>中繼資料  
- 若要檢視外部檔案格式使用一份[sys.external_file_formats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)系統檢視表。  
+ 若要檢視外部檔案格式清單，請使用 [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) 系統檢視。  
   
 ```  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
 ## <a name="permissions"></a>Permissions  
- 需要改變任何外部檔案格式。  
+ 需要 ALTER ANY EXTERNAL FILE FORMAT。  
   
 ## <a name="general-remarks"></a>一般備註  
- 卸除的外部檔案格式並不會移除外部的資料。  
+ 卸除外部檔案格式並不會移除外部資料。  
   
 ## <a name="locking"></a>鎖定  
- 外部檔案格式物件上採用共用的鎖定。  
+ 在外部檔案格式物件上採取共用鎖定。  
   
 ## <a name="examples"></a>範例  
   

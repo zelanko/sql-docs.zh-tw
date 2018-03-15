@@ -1,5 +1,5 @@
 ---
-title: "XML 資料修改語言 (XML DML) |Microsoft 文件"
+title: "XML 資料修改語言 (XML DML) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-data-modification-language-xml-dml"></a>XML 資料修改語言 (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XML 資料修改語言 (XML DML) 是 XQuery 語言的延伸。 如 W3C 所定義的，XQuery 語言缺少「資料操作」(DML) 的部份。 本主題中，以及 XQuery 語言中導入的 XML DML 提供功能完整的查詢和資料修改語言，您可以使用針對**xml**資料型別。  
+  XML 資料修改語言 (XML DML) 是 XQuery 語言的延伸。 如 W3C 所定義的，XQuery 語言缺少「資料操作」(DML) 的部份。 本主題中所介紹的 XML DML (同時也是 XQuery 語言)，可提供功能完整的查詢及資料修改語言，讓您可以針對 **xml** 資料類型來使用。  
   
  XML DML 會將下列區分大小寫的關鍵字加入到 XQuery 中：  
   
@@ -46,34 +46,34 @@ ms.lasthandoff: 01/25/2018
   
 -   **delete**  
   
--   **取代值**  
+-   **replace value of**  
   
- 中所述[XML 資料類型和資料行 &#40;SQL Server &#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)，您可以建立變數和資料行**xml**輸入，並將 XML 文件或片段指派給它們。 若要修改或更新這些 XML 執行個體，請執行下列動作：  
+ 如 [XML 資料類型和資料行 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md) 中所描述的，您可以建立 **xml** 類型的變數及資料行，並將 XML 文件或片段指派給它們。 若要修改或更新這些 XML 執行個體，請執行下列動作：  
   
--   使用[modify （) 方法的 xml 資料類型)](../../t-sql/xml/modify-method-xml-data-type.md)的**xml**資料型別。  
+-   使用 **xml** 資料類型的 [modify() 方法 (xml 資料類型)](../../t-sql/xml/modify-method-xml-data-type.md)。  
   
--   指定適當的 XML DML 陳述式內**modify （)**方法。  
+-   在 **modify()** 方法內指定適當的 XML DML 陳述式。  
   
  請注意，有一些屬性不能被插入、刪除或修改它們的值。 例如：  
   
--   具類型或不具型別的**xml，**屬性**xmlns**， **xmlns:\***，和**xml: base**。  
+-   若為具類型或不具類型的 **xml**，屬性為 **xmlns**、**xmlns:\*** 和 **xml:base**。  
   
--   針對具類型**xml**的屬性，包括**xsi: nil**，和**xsi: type**。  
+-   若只為具類型的 **xml**，則屬性為 **xsi:nil** 及 **xsi:type**。  
   
  其他限制包括下列項目：  
   
--   具類型或不具型別的**xml**，插入屬性**xml: base**將會失敗。  
+-   若為具類型或不具類型的 **xml**，則插入屬性 **xml:base** 會失敗。  
   
--   針對具類型**xml**、 刪除和修改**xsi: nil**屬性將會失敗。 不具類型**xml**，您可以刪除屬性或修改其值。  
+-   若為具類型的 **xml**，則刪除及修改 **xsi:nil** 屬性會失敗。 若為不具類型的 **xml**，您可以刪除屬性或修改其屬性值。  
   
--   針對具類型**xml**、 修改值**xs: type**屬性將會失敗。 不具類型**xml**，您可以修改屬性值。  
+-   若為具類型的 **xml**，則修改 **xs:type** 屬性的值會失敗。 若為不具類型的 **xml**，您可以修改屬性值。  
   
  在修改具類型的 XML 執行個體時，最後的格式必須是該類型的有效執行個體。 否則，就會傳回驗證錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [insert &#40;XML DML &#41;](../../t-sql/xml/insert-xml-dml.md)   
- [刪除 &#40;XML DML &#41;](../../t-sql/xml/delete-xml-dml.md)   
- [取代值 &#40;XML DML &#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
+ [insert &#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md)   
+ [delete &#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md)   
+ [replace value of &#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)  

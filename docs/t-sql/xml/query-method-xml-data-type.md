@@ -1,5 +1,5 @@
 ---
-title: "query （) 方法 (xml 資料類型) |Microsoft 文件"
+title: "query() 方法 (xml 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="query-method-xml-data-type"></a>query() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定執行個體的 XQuery **xml**資料型別。 結果會是**xml**型別。 該方法會傳回不具類型的 XML 執行個體。  
+  針對 **xml** 資料類型的執行個體指定 XQuery。 結果為 **xml** 類型。 該方法會傳回不具類型的 XML 執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,10 +46,10 @@ query ('XQuery')
  是字串類型的 XQuery 運算式，可查詢 XML 執行個體中如元素、屬性等 XML 節點。  
   
 ## <a name="examples"></a>範例  
- 本節提供使用 query （） 方法的範例**xml**資料型別。  
+ 此節提供一些使用 **xml** 資料類型的 query() 方法之範例。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. 針對 xml 類型變數使用 query() 方法  
- 下列範例宣告一個變數 **@myDoc** 的**xml**輸入，並將 XML 執行個體指派給它。 **Query （)**方法可用來指定 XQuery，以針對文件。  
+ 下列範例可宣告 **xml** 類型的 **@myDoc** 變數並指派 XML 執行個體給它。 **query()** 方法可用以指定針對文件的 XQuery。  
   
  查詢會擷取 <`ProductDescription`> 元素的 <`Features`> 子元素：  
   
@@ -76,7 +76,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. 使用針對 XML 類型資料行的 query() 方法  
- 在下列範例中， **query （)**方法用來針對指定 XQuery **CatalogDescription**資料行**xml**輸入**AdventureWorks**資料庫：  
+ 在下列查詢中，**query()** 方法是用以指定 XQuery，以針對 **AdventureWorks** 資料庫中 **xml** 類型的 **CatalogDescription** 資料行進行查詢：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -92,11 +92,11 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
   
  請注意下列項目是從上一個查詢而來：  
   
--   CatalogDescription 資料行是具類型**xml**資料行。 這表示該資料行具有關聯的結構描述集合。 在[XQuery 初構](../../xquery/modules-and-prologs-xquery-prolog.md)、**命名空間**關鍵字用來定義查詢主體中稍後使用的首碼。  
+-   CatalogDescription 資料行是具類型的 **xml** 資料行。 這表示該資料行具有關聯的結構描述集合。 在 [XQuery 初構](../../xquery/modules-and-prologs-xquery-prolog.md)中，**namespace** 關鍵字是用以定義在查詢主體中稍後可用的前置詞。  
   
--   **Query （)**方法會建構 XML，<`Product`> 項目具有**ProductModelID**屬性，在其中**ProductModelID**屬性值從資料庫擷取。 如需 XML 建構的詳細資訊，請參閱[XML 建構 &#40;XQuery &#41;](../../xquery/xml-construction-xquery.md).  
+-   **query()** 方法會建構 XML、具有 **ProductModelID** 屬性的 <`Product`> 元素，其中 **ProductModelID** 屬性值是從資料庫擷取而來。 如需 XML 建構的詳細資訊，請參閱 [XML 建構 &#40;XQuery&#41;](../../xquery/xml-construction-xquery.md)。  
   
--   [Exist （） 方法 （XML 資料類型）](../../t-sql/xml/exist-method-xml-data-type.md)在 WHERE 子句用來尋找包含資料列 <`Warranty`> 在 XML 中的項目。 同樣地，**命名空間**關鍵字用來定義兩個命名空間前置詞。  
+-   在 WHERE 子句中的 [exist() 方法 (XML 資料類型)](../../t-sql/xml/exist-method-xml-data-type.md) 可用以只尋找 XML 中包含 <`Warranty`> 元素的資料列。 **namespace** 關鍵字也是用以定義兩個命名空間的前置詞。  
   
  以下是部份結果：  
   
@@ -125,6 +125,6 @@ where CatalogDescription.exist('
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)   
- [XML 資料修改語言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML 資料修改語言 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

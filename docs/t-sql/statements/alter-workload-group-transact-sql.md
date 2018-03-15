@@ -1,5 +1,5 @@
 ---
-title: "ALTER WORKLOAD GROUP (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   變更現有的資源管理員工作負載群組組態，並選擇性地將其指派給資源管理員資源集區。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -84,13 +84,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > 指定的數量僅參考查詢執行授與記憶體。  
   
- *值*必須是 0 或正整數。 允許的範圍*值*是從 0 到 100。 預設設定*值*為 25。  
+ *value* 必須是 0 或正整數。 *value* 允許的範圍從 0 至 100。 *value* 的預設值為 25。  
   
  請注意下列事項：  
   
--   設定*值*設為 0 可防止具有使用者定義的工作負載群組中的 SORT 和 HASH JOIN 作業的查詢執行。  
+-   將 *value* 設定為 0 會避免在使用者定義的工作負載群組中，執行具有 SORT 和 HASH JOIN 作業的查詢。  
   
--   我們不建議您設定*值*大於 70 因為伺服器可能無法安排足夠的可用記憶體，如果在其他並行查詢正在執行。 最後，這可能會導致查詢逾時錯誤 8645。  
+-   我們不建議您將 *value* 設定為大於 70，因為如果其他並行查詢正在執行，伺服器可能無法將足夠的記憶體擱置在一旁。 最後，這可能會導致查詢逾時錯誤 8645。  
   
 > [!NOTE]  
 >  如果查詢記憶體需求超過這個參數所指定的限制，伺服器會執行以下作業：  
@@ -102,27 +102,27 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >  請注意，如果伺服器沒有足夠的實體記憶體，這兩種情況都會受限於逾時錯誤 8645。  
   
  REQUEST_MAX_CPU_TIME_SEC =*value*  
- 指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *值*必須是 0 或正整數。 預設設定*值*為 0，表示無限制。  
+ 指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *value* 必須是 0 或正整數。 *value* 的預設值為 0，這代表沒有限制。  
   
 > [!NOTE]  
-> 根據預設，資源管理員不會防止要求繼續如果超過最大時間。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[CPU Threshold Exceeded Event Class<](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。 
+> 根據預設，Resource Governor 不會在超過最大時間時，阻止要求繼續執行。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[超過 CPU 閾值事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。 
 
 > [!IMPORTANT]
-> 從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3，並使用[追蹤旗標 2422年](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，超過最大時間時，資源管理員將中止要求。
+> 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始 (並使用[追蹤旗標 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md))，Resource Governor 將在超過時間上限時中止要求。
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*值*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  指定查詢能夠等待記憶體授權 (工作緩衝區記憶體) 變成可用的最大時間 (以秒為單位)。  
   
 > [!NOTE]  
 >  到達記憶體授權的逾時值時，查詢不一定會失敗。 只有當有太多並行的查詢正在執行時，查詢才會失敗。 否則，查詢可能只會得到最小的記憶體授權，導致查詢效能降低。  
   
- *值*必須是正整數。 預設設定*值*，0，會使用內部計算根據查詢成本來決定最大時間。  
+ *value* 必須為正整數。 *value* 的預設值 0 會根據查詢成本使用內部計算來判斷最大時間。  
   
  MAX_DOP =*value*  
- 為平行要求指定平行處理原則的最大程度 (DOP)。 *值*必須是 0 或正整數，1 到 255。 當*值*是 0，則伺服器會選擇平行處理原則的最大程度。 這是預設值且為建議的設定。  
+ 為平行要求指定平行處理原則的最大程度 (DOP)。 *value* 必須是 0 或正整數 (1 到 255)。 當 *value* 為 0 時，伺服器會選擇平行處理原則的最大程度。 這是預設值且為建議的設定。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 針對 MAX_DOP 所設定的實際值可能會小於指定的值。 最終的值由公式 min (255， *Cpu 的數目)*。  
+>  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 針對 MAX_DOP 所設定的實際值可能會小於指定的值。 最終的值是由公式 min(255, *CPU 的數目)* 所決定。  
   
 > [!CAUTION]  
 >  變更 MAX_DOP 可能會對伺服器的效能造成不良影響。 如果您必須變更 MAX_DOP，我們建議您將它設定為小於或等於存在單一 NUMA 節點中之最大硬體排程器數目的值。 我們建議您不要將 MAX_DOP 設定為大於 8 的值。  
@@ -140,33 +140,33 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  DOP 經過設定後，在授與記憶體不足的壓力下，僅能將其降低。 在授與記憶體佇列中等候時，看不到工作負載群組的重新組態。  
   
  GROUP_MAX_REQUESTS =*value*  
- 指定在工作負載群組中可允許執行的最大同時要求數。 *值*必須是 0 或正整數。 預設設定*值*，0，允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。  
+ 指定在工作負載群組中可允許執行的最大同時要求數。 *value* 必須是 0 或正整數。 *value* 的預設值 0 允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。  
   
- 使用 { *pool_name* |「**預設**"}  
- 將工作負載群組與所識別的使用者定義的資源集區相關聯*pool_name*，實際上將工作負載群組放入資源集區。 如果*pool_name*未提供或未使用 USING 引數，如果工作負載群組會放入預先定義的資源管理員預設集區。  
+ USING { *pool_name* | "**default**" }  
+ 將工作負載群組與 *pool_name* 所識別的使用者定義資源集區產生關聯，實際上會將工作負載群組放入資源集區中。 如果未提供 *pool_name* 或未使用 USING 引數，工作負載群組會放入預先定義的資源管理員預設集區。  
   
  搭配 ALTER WORKLOAD GROUP 使用時，"default" 選項必須加上引號 ("") 或方括號 ([]) 才能避免與系統保留字 DEFAULT 產生衝突。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
 > [!NOTE]  
 >  "default" 選項會區分大小寫。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在預設群組中允許使用 ALTER WORKLOAD GROUP。  
   
- 工作負載群組組態的變更在執行 ALTER RESOURCE GOVERNOR RECONFIGURE 前不會生效。 當變更會影響設定的計劃，新設定才會生效先前快取計劃中執行 DBCC FREEPROCCACHE 之後 (*pool_name*)，其中*pool_name*是資源的名稱管理員工作負載群組是與相關聯的資源集區。  
+ 工作負載群組組態的變更在執行 ALTER RESOURCE GOVERNOR RECONFIGURE 前不會生效。 當變更計劃影響設定時，只有在執行 DBCC FREEPROCCACHE (*pool_name*) 之後新的設定才會在先前已快取的計劃中生效，其中 *pool_name* 是工作負載群組相關聯之 Resource Governor 資源集區的名稱。  
   
--   如果您要變更 max_dop 會固定為 1，執行 DBCC FREEPROCCACHE 不需要因為平行計畫能以序列模式執行。 不過，它可能無法編譯為以序列計畫的計畫的效率。  
+-   如果您將 MAX_DOP 變更為 1，則不需要執行 DBCC FREEPROCCACHE 因為平行計劃可以在序列模式中執行。 不過，它可能不會和編譯為序列計劃的計劃一樣有效率。  
   
--   如果您從 1 變更 max_dop 會固定為 0 或大於 1，執行 DBCC FREEPROCCACHE 不需要。 不過，序列計畫無法以平行方式執行，所以清除個別的快取將會允許新計劃可能會進行編譯使用平行處理原則。  
+-   如果您將 MAX_DOP 從 1 變更為 0 或大於 1 的值，則不需要執行 DBCC FREEPROCCACHE。 不過，序列計畫無法以平行方式執行，因此清除個別的快取將會允許新計劃有可能使用平行處理原則進行編譯。  
   
 > [!CAUTION]  
->  清除快取的計畫，從一個以上的工作負載群組相關聯的資源集區將會影響所有工作負載群組與使用者定義的資源集區識別*pool_name*。  
+>  從與超過一個工作負載群組相關聯的資源集區清除已快取的計劃，會影響包含以 *pool_name* 所識別使用者定義資源集區的所有工作負載群組。  
   
- 當您要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
+ 當您要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
  REQUEST_MEMORY_GRANT_PERCENT：在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，允許建立索引即可使用比一開始授與之記憶體更多的工作空間記憶體來改善效能。 資源管理員的更新版本中支援此特殊處理，不過，初始授與和任何額外的記憶體授與都會受到資源集區和工作負載群組設定的限制。  
   
- **資料分割資料表上建立索引**  
+ **在資料分割資料表上建立索引**  
   
  非對齊式分割區資料表上之索引建立所耗用的記憶體，與相關的分割區數目成正比。  如果所需的總記憶體超出資源管理員工作負載群組設定所設的每個查詢限制 (REQUEST_MAX_MEMORY_GRANT_PERCENT)，這個索引建立動作就可能無法執行。 由於 "default" 工作負載群組允許查詢超過每個查詢限制，而且具有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 相容性啟動所需的記憶體下限，因此使用者或許能夠在 "default" 工作負載群組中執行相同的索引建立動作，但前提是 "default" 資源集區有設定足夠的總記憶體來執行這類查詢。  
   
@@ -195,7 +195,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
+ [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

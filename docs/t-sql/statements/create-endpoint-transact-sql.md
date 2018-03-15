@@ -1,5 +1,5 @@
 ---
-title: "建立端點 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  建立端點及定義其屬性，包括用戶端應用程式可用的方法。 相關的權限資訊，請參閱[GRANT 端點權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+  建立端點及定義其屬性，包括用戶端應用程式可用的方法。 如需相關的權限資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
  在邏輯上，CREATE ENDPOINT 的語法可分為兩個部分：  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/25/2018
   
      在這個部分，您定義端點上支援的裝載。 裝載可以是下列數個支援類型之一：[!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker 及資料庫鏡像。 在這個部分，您還會併入特定語言資訊。  
   
-> **注意：**原生 XML Web Service （SOAP/HTTP 端點） 已移除[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+> **注意：**已移除 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的原生 XML Web Service (SOAP/HTTP 端點)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,14 +118,14 @@ FOR DATABASE_MIRRORING (
  *endPointName*  
  這是您要建立之端點的指派名稱。 更新或刪除端點時可使用該名稱。  
   
- 授權*登入*  
+ AUTHORIZATION *login*  
  指定被指派新建立之端點物件擁有權的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Windows 登入。 如果未指定 AUTHORIZATION，依預設，呼叫者會成為新建立之物件的擁有者。  
   
- 若要指定 AUTHORIZATION 指派擁有權，呼叫端必須具有 IMPERSONATE 權限指定*登入*。  
+ 若要指定 AUTHORIZATION 來指派擁有權，呼叫者必須具備指定 *login* 的 IMPERSONATE 權限。  
   
- 若要重新指派擁有權，請參閱[ALTER ENDPOINT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ 若要重新指派擁有權，請參閱 [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)。  
   
- 狀態 **=**  {STARTED |**已停止**|已停用}  
+ STATE **=** { STARTED | **STOPPED** | DISABLED }  
  這是建立端點時的端點狀態。 如果在建立端點時沒有指定狀態，STOPPED 是預設值。  
   
  STARTED  
@@ -137,7 +137,7 @@ FOR DATABASE_MIRRORING (
  **STOPPED**  
  端點已停止。 在這種狀態下，伺服器不接聽端點埠或不回應任何嘗試使用該端點的要求。  
   
- 若要變更狀態，請使用[ALTER ENDPOINT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ 若要變更狀態，請使用 [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)。  
   
  AS { TCP }  
  指定要使用的傳輸通訊協定。  
@@ -166,7 +166,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  有關 SERVICE_BROKER 特定的選項，請參閱本節稍後的「SERVICE_BROKER 選項」。 有關 DATABASE_MIRRORING 特定的選項，請參閱本節稍後的「DATABASE_MIRRORING 選項」。  
   
- 驗證 **=**  \<authentication_options > 指定此端點連接的 TCP/IP 驗證需求。 預設值是 WINDOWS。  
+ AUTHENTICATION **=** \<authentication_options> 指定此端點連接的 TCP/IP 驗證需求。 預設值是 WINDOWS。  
   
  支援的驗證方法包括 NTLM 及 (或) Kerberos。  
   
@@ -175,21 +175,21 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [{NTLM |KERBEROS |**交涉**}]  
+ **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  指定端點要利用 Windows 驗證通訊協定連接來驗證端點。 這是預設值。  
   
  如果您指定授權方法 (NTLM 或 KERBEROS)，一律以該方法做為驗證通訊協定。 預設值 NEGOTIATE 會導致端點利用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。  
   
  CERTIFICATE *certificate_name*  
- 指定端點來驗證使用所指定的憑證連線*certificate_name*建立身分識別授權。 遠端點必須有一個特定憑證，該憑證含有符合指定憑證之私密金鑰的公開金鑰。  
+ 指定端點必須利用 *certificate_name* 所指定的憑證驗證連接，來建立授權的身分識別。 遠端點必須有一個特定憑證，該憑證含有符合指定憑證之私密金鑰的公開金鑰。  
   
  WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  指定端點必須嘗試利用 Windows 驗證連接，而且，如果該嘗試失敗，則嘗試使用指定的憑證。  
   
- 憑證*certificate_name* WINDOWS [{NTLM |KERBEROS |**交涉**}]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  指定端點必須嘗試利用指定的憑證連接，而且，如果該嘗試失敗，則嘗試使用 Windows 驗證。  
   
- 加密 = {已停用 |支援 |**REQUIRED** } [演算法 { **AES** |RC4 |AES RC4 |RC4 AES}]  
+ ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
  指定是否要在處理序中使用加密。 預設值是 REQUIRED。  
   
  DISABLED  
@@ -204,10 +204,10 @@ FOR DATABASE_MIRRORING (
  您也可以選擇性地利用 ALGORITHM 引數來指定端點使用的加密格式，如下所示：  
   
  **AES**  
- 指定端點必須使用 AES 演算法。 這是預設值在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更新版本。  
+ 指定端點必須使用 AES 演算法。 這在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本中為預設值。  
   
  RC4  
- 指定端點必須使用 RC4 演算法。 這是透過預設[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。  
+ 指定端點必須使用 RC4 演算法。 這是透過 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的預設值。  
   
 > [!NOTE]  
 >  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
   
  以下是 SERVICE_BROKER 選項特定的引數。  
   
- MESSAGE_FORWARDING  **=**  {啟用 |**已停用**}  
+ MESSAGE_FORWARDING **=** { ENABLED | **DISABLED** }  
  判斷是否要轉送這個端點接收的訊息 (適用於位在其他位置的服務)。  
   
  ENABLED  
@@ -243,7 +243,7 @@ FOR DATABASE_MIRRORING (
   
  以下是 DATABASE_MIRRORING 選項特定的引數。  
   
- 角色 **=**  {見證 |合作夥伴 |所有}  
+ ROLE **=** { WITNESS | PARTNER | ALL }  
  指定端點支援的資料庫鏡像一或多個角色。  
   
  WITNESS  
@@ -258,24 +258,24 @@ FOR DATABASE_MIRRORING (
  ALL  
  使端點在鏡像處理序中能夠同時以見證和夥伴角色來執行。  
   
- 如需有關這些角色的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server &#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ 如需這些角色的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 > [!NOTE]  
 >  DATABASE_MIRRORING 沒有預設的通訊埠。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  ENDPOINT DDL 陳述式不能在使用者交易內執行。 即使使用中的快照隔離等級正在使用變更的端點，ENDPOINT DDL 陳述式也不會失敗。  
   
  可利用下列方式，針對 ENDPOINT 來執行要求：  
   
--   成員**sysadmin**固定的伺服器角色  
+-   **系統管理員 (sysadmin)** 固定伺服器角色的成員  
   
 -   端點的擁有者  
   
 -   已被授與端點之 CONNECT 權限的使用者或群組  
   
 ## <a name="permissions"></a>Permissions  
- 需要 CREATE ENDPOINT 權限或 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
+ 需要 CREATE ENDPOINT 權限或 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -296,7 +296,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [卸除端點 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

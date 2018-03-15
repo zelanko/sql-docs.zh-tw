@@ -1,5 +1,5 @@
 ---
-title: "卸除彙總 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  從目前資料庫移除使用者自訂的彙總函式。 使用者定義彙總函式會建立使用[CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md)。  
+  從目前資料庫移除使用者自訂的彙總函式。 使用者定義彙總函式是利用 [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md) 來建立的。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
  *IF EXISTS*  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
- 只有當它已經存在有條件地卸除彙總。  
+ 只有在彙總已存在時，才能有條件地將其卸除。  
   
  *schema_name*  
  這是使用者定義彙總函式所屬的結構描述名稱。  
@@ -61,7 +61,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
  *aggregate_name*  
  這是您要卸除的使用者定義彙總函式的名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  若有任何檢視、函數或預存程序是利用參考您要卸除之使用者定義彙總函式的結構描述繫結所建立，就不會執行 DROP AGGREGATE。  
   
 ## <a name="permissions"></a>Permissions  

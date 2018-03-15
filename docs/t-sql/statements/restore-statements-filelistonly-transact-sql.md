@@ -1,5 +1,5 @@
 ---
-title: "RESTORE FILELISTONLY (TRANSACT-SQL) |Microsoft 文件"
+title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -35,13 +35,13 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 陳述式-FILELISTONLY (TRANSACT-SQL)
+# <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 陳述式 - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回含有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料庫清單的結果集及備份組所包含的記錄檔。  
   
 > [!NOTE]  
->  如需引數的描述，請參閱[RESTORE 引數 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  如需引數的描述，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,16 +83,16 @@ FROM <backup_device>
 ```  
   
 ## <a name="arguments"></a>引數  
- 如需 RESTORE FILELISTONLY 引數的描述，請參閱[RESTORE 引數 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ 如需 RESTORE FILELISTONLY 引數的描述，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
 ## <a name="result-sets"></a>結果集  
  用戶端可以利用 RESTORE FILELISTONLY 來取得備份組所包含的檔案清單。 這項資訊會當做結果集傳回，其中針對每個檔案各包含一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|檔案的邏輯名稱。|  
 |PhysicalName|**nvarchar(260)**|檔案的實體或作業系統名稱。|  
-|型別|**char(1)**|這是檔案的類型，它有下列幾種：<br /><br /> **L** = Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料檔案<br /><br /> **F** = 全文檢索目錄<br /><br /> **S** = FileStream、 FileTable 或[!INCLUDE[hek_2](../../includes/hek-2-md.md)]容器|  
+|類型|**char(1)**|這是檔案的類型，它有下列幾種：<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔<br /><br /> **F** = 全文檢索目錄<br /><br /> **S** = FileStream、FileTable 或 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 容器|  
 |FileGroupName|**nvarchar(128)**|檔案所在的檔案群組名稱。|  
 |大小|**numeric(20,0)**|目前的大小 (以位元組為單位)。|  
 |MaxSize|**numeric(20,0)**|允許的大小上限 (以位元組為單位)。|  
@@ -106,15 +106,15 @@ FROM <backup_device>
 |SourceBlockSize|**int**|檔案所在實體裝置 (不是備份裝置) 的區塊大小 (以位元組為單位)。|  
 |FileGroupID|**int**|檔案群組的識別碼。|  
 |LogGroupGUID|**uniqueidentifier NULL**|NULL。|  
-|DifferentialBaseLSN|**numeric(25,0)** NULL|差異備份，變更的記錄序號大於或等於**DifferentialBaseLSN**隨附的差異。<br /><br /> 如果是其他備份類型，這個值就是 NULL。|  
+|DifferentialBaseLSN|**numeric(25,0)** NULL|如果是差異備份，記錄序號大於或等於 **DifferentialBaseLSN** 的變更會併入差異備份中。<br /><br /> 如果是其他備份類型，這個值就是 NULL。|  
 |DifferentialBaseGUID|**uniqueidentifier**|如果是差異備份，就是差異基底的唯一識別碼。<br /><br /> 如果是其他備份類型，這個值就是 NULL。|  
-|IsReadOnly|**bit**|**1** = 檔案是唯讀的。|  
-|IsPresent|**bit**|**1** = 檔案存在於在備份中。|  
-|TDEThumbprint|**varbinary(32)**|顯示資料庫加密金鑰的指模。 加密程式指模是用來加密金鑰的憑證 SHA-1 雜湊。 資料庫加密的相關資訊，請參閱[透明資料加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
-|SnapshotURL|**nvarchar(360)**|FILE_SNAPSHOT 備份中包含的資料庫檔案 Azure 快照集 URL。 如果沒有 FILE_SNAPSHOT 備份，則傳回 NULL。|  
+|IsReadOnly|**bit**|**1** = 檔案唯讀。|  
+|IsPresent|**bit**|**1** = 檔案在備份中。|  
+|TDEThumbprint|**varbinary(32)**|顯示資料庫加密金鑰的指模。 加密程式指模是用來加密金鑰的憑證 SHA-1 雜湊。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。|  
+|SnapshotURL|**nvarchar(360)**|FILE_SNAPSHOT 備份中包含之資料庫檔案的 Azure 快照集 URL。 如果沒有 FILE_SNAPSHOT 備份，則傳回 NULL。|  
   
 ## <a name="security"></a>Security  
- 備份作業可以選擇性地指定媒體集的密碼及 (或) 備份組的密碼。 當在媒體集或備份組上定義密碼時，您必須在 RESTORE 陳述式中，指定一個或多個正確的密碼。 這些密碼防止未經授權的還原作業，而且未經授權的附加至媒體使用的備份組[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具。 不過，密碼無法防止使用者利用 BACKUP 陳述式的 FORMAT 選項來覆寫媒體。  
+ 備份作業可以選擇性地指定媒體集的密碼及 (或) 備份組的密碼。 當在媒體集或備份組上定義密碼時，您必須在 RESTORE 陳述式中，指定一個或多個正確的密碼。 這些密碼可以防止他人利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具，在未經授權的情況下，對媒體執行還原作業及附加備份組。 不過，密碼無法防止使用者利用 BACKUP 陳述式的 FORMAT 選項來覆寫媒體。  
   
 > [!IMPORTANT]  
 >  這個密碼所提供的保護很弱。 這是為了防止已獲授權或未獲授權的使用者使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具進行不正確的還原。 它無法防止透過其他方式或以取代密碼的方式來讀取備份資料。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 保護備份的最佳作法是將備份磁帶存放在安全位置，或備份至適當的存取控制清單 (ACL) 所保護的磁碟檔案中。 ACL 應該設在備份建立所在的根目錄下。  

@@ -1,5 +1,5 @@
 ---
-title: "ALTER XML SCHEMA COLLECTION (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -63,13 +63,13 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  *sql_identifier*  
  這是 XML 結構描述集合的 SQL 識別碼。  
   
- **'** *結構描述元件* **'**  
+ **'** *Schema Component* **'**  
  這是要插入的結構描述元件。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  請利用 ALTER XML SCHEMA COLLECTION 來加入新的 XML 結構描述，其命名空間尚未存在於 XML 結構描述集合中，或將新的元件加入至集合的現有命名空間中。  
   
- 下列範例會將新\<項目 > 到現有的命名空間`http://MySchema/test_xml_schema`集合中`MyColl`。  
+ 下列範例會將新的 \<element> 加入至集合 `MyColl` 的現有命名空間 `http://MySchema/test_xml_schema` 中。  
   
 ```  
 -- First create an XML schema collection.  
@@ -91,9 +91,9 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  請注意，如果您要在集合中加入的部份元件參考了同一集合中已存在的元件，您必須使用 `<import namespace="referenced_component_namespace" />`。 然而，在 `<xsd:import>` 中使用目前結構描述命名空間是無效的，因此會自動匯入視為目前結構描述命名空間之同一目標命名空間的元件。  
   
- 若要移除集合，請使用[DROP XML SCHEMA COLLECTION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ 若要移除集合，請使用 [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)。  
   
- 如果結構描述集合已經包含 lax 驗證萬用字元或類型的元素**xs: anytype**，將新的全域項目、 類型或屬性宣告加入至結構描述集合將會重新驗證所有儲存由結構描述集合所限制的資料。  
+ 如果此結構描述集合已經包含 Lax 驗證萬用字元或是 **xs:anyType** 類型的元素，則將新的全域元素、類型或屬性宣告加入到此結構描述集合時，將會重新驗證受到此結構描述集合限制的所有已儲存資料。  
   
 ## <a name="permissions"></a>Permissions  
  若要變更 XML SCHEMA COLLECTION，需要集合的 ALTER 權限。  
@@ -181,13 +181,13 @@ SET @MySchemaCollection  = N' copy the schema collection here';
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
 ```  
   
- 範例中的變數屬於 `nvarchar(max)` 類型。 變數也可以是**xml**資料類型，在此情況下，它會隱含地轉換成字串。  
+ 範例中的變數屬於 `nvarchar(max)` 類型。 變數也可以屬於 **xml** 資料類型，在這個情況下，變數會被隱含地轉換成字串。  
   
  如需詳細資訊，請參閱 [檢視儲存的 XML 結構描述集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)。  
   
- 您可以儲存在結構描述集合**xml**類型資料行。 在這個情況下，若要建立 XML 結構描述集合，請執行下列步驟：  
+ 您可以在 **xml** 類型資料行中儲存結構描述集合。 在這個情況下，若要建立 XML 結構描述集合，請執行下列步驟：  
   
-1.  使用 SELECT 陳述式來擷取資料行的結構描述集合，並將它指派給變數的**xml**型別，或**varchar**型別。  
+1.  使用 SELECT 陳述式從資料行擷取結構描述集合，並將它指派給 **xml** 類型或 **varchar** 類型的變數。  
   
 2.  在 CREATE XML SCHEMA COLLECTION 陳述式中指定變數名稱。  
   
@@ -249,7 +249,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 匯入不指定目標命名空間的結構描述  
- 如果結構描述不包含**targetNamespace**屬性匯入的集合，其元件會與空字串目標命名空間相關聯，如下列範例所示。 請注意，不對匯入集合之一或多個結構描述進行關聯，會造成多個結構描述元件 (可能無關) 與預設空字串命名空間相關聯。  
+ 如果將不包含 **targetNamespace** 屬性的結構描述匯入集合中，其元件會與空字串目標命名空間關聯，如下列範例所示。 請注意，不對匯入集合之一或多個結構描述進行關聯，會造成多個結構描述元件 (可能無關) 與預設空字串命名空間相關聯。  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -269,8 +269,8 @@ WHERE  sys.xml_schema_namespaces.name='';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 XML 結構描述集合 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [卸除 XML 結構描述集合 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [伺服器上 XML 結構描述集合的需求與限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

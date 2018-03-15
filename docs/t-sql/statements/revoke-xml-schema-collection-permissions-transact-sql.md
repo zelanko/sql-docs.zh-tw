@@ -1,5 +1,5 @@
 ---
-title: "撤銷 XML 結構描述集合權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "REVOKE XML 結構描述集合權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,8 +63,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  指定可以撤銷的 XML 結構描述集合權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 在 XML 結構描述集合:: [ *schema_name * * *。**] *XML_schema_collection_name*  
- 指定要撤銷其權限的 XML 結構描述集合。 需要範圍限定詞 (::)。 如果*schema_name*未指定，會使用預設的結構描述。 如果*schema_name*指定，則是必要的結構描述範圍限定詞 （.）。  
+ ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
+ 指定要撤銷其權限的 XML 結構描述集合。 需要範圍限定詞 (::)。 如果未指定 *schema_name*，則會使用預設結構描述。 如果指定 *schema_name*，則需要結構描述範圍限定詞 (.)。  
   
  GRANT OPTION  
  指出會撤銷對其他主體授與指定權限的權限。 不會撤銷權限本身。  
@@ -78,10 +78,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
- {至 |FROM} \< *database_principal*>  
+ { TO | FROM } \<*database_principal*>  
  指定要撤銷其權限的主體。  
   
- AS \<database_principal > 指定要從中執行此查詢的主體衍生權限來撤銷權限的主體。  
+ AS \<database_principal> 指定主體，執行這項查詢的主體就是從這個主體衍生權限來撤銷權限。  
   
  *Database_user*  
  指定資料庫使用者。  
@@ -107,8 +107,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>備註  
- XML 結構描述集合的資訊會顯示在[sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)目錄檢視。  
+## <a name="remarks"></a>Remarks  
+ 您可以在 [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) 目錄檢視中，看到有關 XML 結構描述集合的資訊。  
   
  從被授與指定了 GRANT OPTION 之權限的主體撤銷權限時，如果未指定 CASCADE，陳述式便會失敗。  
   
@@ -136,10 +136,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  ```  
   
 ## <a name="see-also"></a>另請參閱  
- [授與 XML 結構描述集合權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [拒絕 XML 結構描述集合權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
+ [GRANT XML 結構描述集合權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
+ [DENY XML 結構描述集合權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
  [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [建立 XML 結構描述集合 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
