@@ -1,5 +1,5 @@
 ---
-title: ":: （範圍解析) (TRANSACT-SQL) |Microsoft 文件"
+title: ":: (範圍解析) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-scope-resolution-transact-sql"></a>:: （範圍解析) (TRANSACT-SQL)
+# <a name="-scope-resolution-transact-sql"></a>:: (範圍解析) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  範圍解析運算子**::**存取複合資料類型的靜態成員。 複合資料類型是指包含多個簡單資料類型和方法，例如內建的 CLR 型別和自訂 SQLCLR User-Defined 型別 (Udt)。  
+  範圍解析運算子 **::** 可讓您存取複合資料類型的靜態成員。 複合資料類型包含多個簡單資料類型和方法，例如內建的 CLR 類型和自訂的 SQLCLR 使用者定義類型 (UDT)。  
   
 ## <a name="examples"></a>範例  
  下列範例示範如何使用範圍解析運算子來存取 `GetRoot()` 類型的 `hierarchyid` 成員。  
@@ -47,6 +47,6 @@ PRINT @hid.ToString();
  `/`  
   
 ## <a name="see-also"></a>另請參閱  
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

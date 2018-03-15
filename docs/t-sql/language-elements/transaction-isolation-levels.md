@@ -1,5 +1,5 @@
 ---
-title: "交易隔離等級 |Microsoft 文件"
+title: "交易隔離等級 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
   
 -   發出中繼資料的內建函數  
   
--   **sp_help**群組中的預存程序  
+-   預存程序的 **sp_help** 群組  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 目錄程序  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 目錄程序  
   
 -   動態管理檢視與函數  
   
- 如需有關隔離等級的詳細資訊，請參閱[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
  下表提供在各種隔離等級下存取中繼資料的摘要。  
   
-|隔離等級|Supported|接受|  
+|隔離等級|支援|接受|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|否|不保證|  
 |READ COMMITTED|是|是|  

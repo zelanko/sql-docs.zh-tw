@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
   
 -   簡單的 CASE 運算式會比較運算式和一組簡單運算式來得出結果。  
   
--   搜尋 CASE 運算會評估一組布林運算式來得出結果。  
+-   搜尋 CASE 運算會評估一組布林值運算式來得出結果。  
   
  兩種格式都支援選用的 ELSE 引數。  
   
@@ -79,22 +79,22 @@ END
   
 ## <a name="arguments"></a>引數  
  *input_expression*  
- 這是使用簡單的 CASE 格式時，所評估的運算式。 *input_expression*是任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是使用簡單的 CASE 格式時，所評估的運算式。 *input_expression* 是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  WHEN *when_expression*  
- 簡單運算式*input_expression*使用簡單的 CASE 格式時進行比較。 *when_expression*是任何有效運算式。 資料類型的*input_expression* ，而且每個*when_expression*必須相同，或必須是隱含的轉換。  
+ 這是使用簡單的 CASE 格式時，要與 *input_expression* 進行比較的簡單運算式。 *when_expression* 是任何有效的運算式。 *input_expression* 和每個 *when_expression* 的資料類型都必須相同，或必須能夠進行隱含轉換。  
   
  THEN *result_expression*  
- 所傳回的運算式時*input_expression*等於*when_expression*評估為 TRUE，或*Boolean_expression*評估為 TRUE。 *結果運算式*是任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是當 *input_expression* 等於 *when_expression* 評估為 TRUE，或 *Boolean_expression* 評估為 TRUE 時所傳回的運算式。 *result expression* 是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  ELSE *else_result_expression*  
- 這是沒有比較運算的評估結果是 TRUE 時，所傳回的運算式。 如果省略這個引數，且沒有比較運算得出 TRUE，CASE 就會傳回 NULL。 *else_result_expression*是任何有效運算式。 資料類型的*else_result_expression*和任何*result_expression*必須相同，或必須是隱含的轉換。  
+ 這是沒有比較運算的評估結果是 TRUE 時，所傳回的運算式。 如果省略這個引數，且沒有比較運算得出 TRUE，CASE 就會傳回 NULL。 *else_result_expression* 是任何有效的運算式。 *else_result_expression* 和任何 *result_expression* 的資料類型都必須相同，或必須能夠進行隱含轉換。  
   
- 當*Boolean_expression*  
- 這是使用搜尋的 CASE 格式時，所評估的布林運算式。 *Boolean_expression*是任何有效的布林運算式。  
+ WHEN *Boolean_expression*  
+ 這是使用搜尋的 CASE 格式時，所評估的布林值運算式。 *Boolean_expression* 是任何有效的布林值運算式。  
   
 ## <a name="return-types"></a>傳回類型  
- 從集合中的型別傳回最高優先順序的型別*result_expressions*和選擇性*else_result_expression*。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+ 從 *result_expressions* 和選擇性 *else_result_expression* 的類型集傳回優先順序最高的類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
 ### <a name="return-values"></a>傳回值  
  **簡單的 CASE 運算式：**  
@@ -103,24 +103,24 @@ END
   
 -   僅允許相等檢查。  
   
--   在指定的順序，會評估 input_expression = when_expression 每個 WHEN 子句。  
+-   依指定的順序來評估每個 WHEN 子句的 input_expression = when_expression。  
   
--   傳回*result_expression*的第一個*input_expression* = *when_expression*評估為 TRUE。  
+-   傳回第一個評估為 TRUE 之 *input_expression* = *when_expression* 的 *result_expression*。  
   
--   如果沒有*input_expression* = *when_expression*評估為 TRUE，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]傳回*else_result_expression*如果 ELSE 子句指定，或如果沒有指定任何 ELSE 子句，NULL 值。  
+-   如果沒有任何 *input_expression* = *when_expression* 評估為 TRUE，若指定了 ELSE 子句，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會傳回 *else_result_expression*，若未指定 ELSE 子句，則會傳回 NULL 值。  
   
  **搜尋的 CASE 運算式：**  
   
--   依照指定順序評估*Boolean_expression*每個 WHEN 子句。  
+-   依指定的順序來評估每個 WHEN 子句的 *Boolean_expression*。  
   
--   傳回*result_expression*的第一個*Boolean_expression*評估為 TRUE。  
+-   傳回第一個評估為 TRUE 之 *Boolean_expression* 的 *result_expression*。  
   
--   如果沒有*Boolean_expression*評估為 TRUE，[!INCLUDE[ssDE](../../includes/ssde-md.md)]傳回*else_result_expression*如果指定了 ELSE 子句，或如果沒有指定任何 ELSE 子句，NULL 值。  
+-   如果沒有任何 *Boolean_expression* 評估為 TRUE，若指定了 ELSE 子句，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會傳回 *else_result_expression*，若未指定 ELSE 子句，則會傳回 NULL 值。  
   
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 CASE 運算式中只允許 10 層的巢狀層級。  
   
- CASE 運算式無法用於控制 Transact-SQL 陳述式、陳述式區塊、使用者定義函數以及預存程序的執行流程。 如需流程控制方法的清單，請參閱[流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md).  
+ CASE 運算式無法用於控制 Transact-SQL 陳述式、陳述式區塊、使用者定義函數以及預存程序的執行流程。 如需流程控制方法的清單，請參閱[流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
   
  CASE 陳述式會依序評估其條件，並在滿足其條件的第一個條件時停止。 在某些情況下，運算式會在 CASE 陳述式收到運算式的結果做為其輸入之前進行評估。 評估這些運算式是否可能時發生錯誤。 針對 CASE 陳述式，出現在 WHEN 引數中的彙總運算式會先進行評估，然後再提供給 CASE 陳述式。 例如，下列查詢會在產生 MAX 彙總的值時，產生除以零的錯誤。 這個情況會在評估 CASE 運算式之前發生。  
   
@@ -225,7 +225,7 @@ WHERE SalariedFlag = 0;
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. 在 SET 陳述式中使用 CASE  
- 下列範例會在資料表值函式 `dbo.GetContactInfo` 的 SET 陳述式中使用 CASE 運算式。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，與人員相關的所有資料都會儲存在 `Person.Person` 資料表中。 例如，該人員可能是員工、 廠商代表或客戶。 此函數會傳回第一個和最後一個名稱指定`BusinessEntityID`和該人員的連絡類型。SET 陳述式中的 CASE 運算式會決定要顯示的資料行的值`ContactType`根據是否存在`BusinessEntityID`中的資料行`Employee`， `Vendor`，或`Customer`資料表。  
+ 下列範例會在資料表值函式 `dbo.GetContactInfo` 的 SET 陳述式中使用 CASE 運算式。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，與人員相關的所有資料都會儲存在 `Person.Person` 資料表中。 例如，該人員可能是員工、廠商代表或客戶。 此函數會傳回給定之 `BusinessEntityID` 的姓名，以及該人員的連絡類型。SET 陳述式中的 CASE 運算式會根據 `Employee`、`Vendor` 或 `Customer` 資料表中的 `BusinessEntityID` 資料行是否存在，來決定要針對 `ContactType` 資料行顯示的值。  
   
 ```  
   
@@ -299,7 +299,7 @@ FROM dbo.GetContactInformation(5);
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. 在 HAVING 子句中使用 CASE  
- 下列範例會在 HAVING 子句中使用 CASE 運算式來限制 SELECT 陳述式所傳回的資料列。 陳述式會傳回每個職稱的時薪上限`HumanResources.Employee`資料表。 HAVING 子句會將職稱限制為薪水上限大於 40 美金之男士所持有的職稱，以及薪水上限大於 42 美金之女士所持有的職稱。  
+ 下列範例會在 HAVING 子句中使用 CASE 運算式來限制 SELECT 陳述式所傳回的資料列。 此陳述式會傳回 `HumanResources.Employee` 資料表中每個職稱的最高時薪。 HAVING 子句會將職稱限制為薪水上限大於 40 美金之男士所持有的職稱，以及薪水上限大於 42 美金之女士所持有的職稱。  
   
 ```  
 USE AdventureWorks2012;  
@@ -318,10 +318,10 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. 使用 CASE 運算式的 SELECT 陳述式  
- 在 SELECT 陳述式，CASE 運算式可讓您根據比較值的結果集內要取代的值。 下列範例會使用 CASE 運算式來變更產品線類別，使其更容易了解的顯示方式。 值，並不存在、 文字 」 不會針對銷售 ' 隨即出現。  
+### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. 使用 SELECT 陳述式搭配 CASE 運算式  
+ 在 SELECT 陳述式內，CASE 運算式允許以比較值為基礎來取代結果集中的值。 下列範例使用 CASE 運算式來變更產品線類別目錄的顯示方式，使它們更容易被了解。 若值並不存在，即會顯示「Not for sale」的字樣。  
   
 ```  
 -- Uses AdventureWorks  
@@ -357,10 +357,10 @@ WHERE SalariedFlag = 0;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [聯合 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [IIF &#40;TRANSACT-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
  [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "TIMEFROMPARTS (TRANSACT-SQL) |Microsoft 文件"
+title: TIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  傳回**時間**針對指定的時間並使用指定的有效位數的值。  
+  傳回包含指定精確度之指定時間的 **time** 值。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,28 +45,28 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ```  
   
 ## <a name="arguments"></a>引數  
- *小時*  
+ *hour*  
  指定小時的整數運算式。  
   
- *分鐘*  
+ *minute*  
  指定分鐘的整數運算式。  
   
  *seconds*  
  指定秒的整數運算式。  
   
- *分數*  
+ *fractions*  
  指定分數的整數運算式。  
   
  *有效位數*  
- 指定的有效位數的整數常值**時間**會傳回值。  
+ 指定要傳回之 **time** 值的精確度的整數常值。  
   
 ## <a name="return-types"></a>傳回類型  
- **時間 (** *精確度* **)**  
+ **time(** *precision* **)**  
   
-## <a name="remarks"></a>備註  
- TIMEROMPARTS 會傳回完整初始化的時間值。 如果引數無效，將會引發錯誤。 如有任何參數為 null，會傳回 null。 不過，如果*精確度*引數為 null，則會引發錯誤。  
+## <a name="remarks"></a>Remarks  
+ TIMEROMPARTS 會傳回完整初始化的時間值。 如果引數無效，將會引發錯誤。 如有任何參數為 null，會傳回 null。 然而，若 *precision* 引數為 Null，則會引發錯誤。  
   
- *分數*引數取決於*精確度*引數。 例如，如果*精確度*為 7，則每個分數即表示 100 奈秒; 如果*精確度*為 3，則每個分數即表示 1 毫秒。 如果值*精確度*是零，則值*分數*也必須為零，否則會引發錯誤。  
+ *fractions* 引數相依於 *precision* 引數。 例如，假設 *precision* 為 7，每個分數即表示 100 奈秒；如果 *precision* 為 3，每個分數即表示 1 毫秒。 如果 *precision* 的值為零，*fractions* 也必須為零，否則將引發錯誤。  
   
  這個函數可以遠端處理到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本的伺服器。 它無法遠端處理到版本低於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的伺服器。  
   
@@ -89,13 +89,13 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. 含秒的小數部分的範例  
- 下列範例示範如何使用*分數*和*精確度*參數：  
+ 以下範例示範 *fractions* 和 *precision* 參數的用法：  
   
-1.  當*分數*的值為 5 和*精確度*然後的值具有值為 1，*分數*代表 5/10 秒。  
+1.  若 *fractions* 的值為 5、*precision* 的值為 1，則 *fractions* 的值表示 5/10 秒。  
   
-2.  當*分數*的值為 50 和*精確度*然後的值具有值為 2，*分數*表示 50/100 的第二個。  
+2.  若 *fractions* 的值為 50、*precision* 的值為 2，則 *fractions* 的值表示 50/100 秒。  
   
-3.  當*分數*的值為 500 和*精確度*然後的值具有值為 3，*分數*表示 500/1000 秒。  
+3.  若 *fractions* 的值為 500、*precision* 的值為 3，則 *fractions* 的值表示 500/1000 秒。  
   
 ```sql  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  

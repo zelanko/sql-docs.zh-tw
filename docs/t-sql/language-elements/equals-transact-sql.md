@@ -1,5 +1,5 @@
 ---
-title: "= （等於） (TRANSACT-SQL) |Microsoft 文件"
+title: "= (等於) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -49,21 +49,21 @@ expression = expression
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果運算式的資料類型不同，一個運算式的資料類型必須能夠隱含地轉換成另一運算式的資料類型。 轉換規則為基礎的[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+ 這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果運算式的資料類型不同，一個運算式的資料類型必須能夠隱含地轉換成另一運算式的資料類型。 轉換會以[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的規則為基礎。  
   
 ## <a name="result-types"></a>結果類型  
  布林  
   
-## <a name="remarks"></a>備註  
- 當您比較兩個 NULL 運算式時，結果會取決於`ANSI_NULLS`設定：  
+## <a name="remarks"></a>Remarks  
+ 當您比較兩個 NULL 運算式時，結果會隨著 `ANSI_NULLS` 設定而不同：  
   
--   如果`ANSI_NULLS`設為 ON，則結果為 NULL，依照 ANSI 慣例，NULL （或不明） 值不等於另一個 NULL 或未知的值。  
+-   如果將 `ANSI_NULLS` 設為 ON，結果會是 NULL，依照 ANSI 慣例，NULL (或未知) 值不等於另一個 NULL 或未知值。  
   
--   如果`ANSI_NULLS`是設定為 OFF，則 NULL 的比較為 NULL 的結果為 TRUE。  
+-   如果將 `ANSI_NULLS` 設為 OFF，NULL 與 NULL 的比較結果便是 TRUE。  
 
 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。
   
- 任何類型的非 NULL 值之 NULL 值 （未知） 的比較永遠結果為 FALSE。  
+ 任何種類的 NULL 值 (未知) 與非 NULL 值比較，一律會產生 FALSE。  
   
   
 ## <a name="examples"></a>範例  
@@ -94,7 +94,7 @@ DepartmentID Name
 ```  
   
 ### <a name="b-comparing-null-and-non-null-values"></a>B. 比較 NULL 和非 NULL 值  
- 下列範例會利用等於 (`=`) 和不等於 (`<>`) 比較運算子，與資料表中的 `NULL` 和非 Null 值比較。 這個範例也顯示`IS NULL`不會受到`SET ANSI_NULLS`設定。  
+ 下列範例會利用等於 (`=`) 和不等於 (`<>`) 比較運算子，與資料表中的 `NULL` 和非 Null 值比較。 這個範例也示範 `IS NULL` 不會受到 `SET ANSI_NULLS` 設定的影響。  
   
 ```  
 -- Create table t1 and insert 3 rows.  
@@ -228,7 +228,7 @@ NULL
   
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

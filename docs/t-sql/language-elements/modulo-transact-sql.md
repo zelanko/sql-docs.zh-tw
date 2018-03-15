@@ -1,5 +1,5 @@
 ---
-title: "%（模數） (TRANSACT-SQL) |Microsoft 文件"
+title: "% (模數) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-modulus-transact-sql"></a>%（模數） (TRANSACT-SQL)
+# <a name="-modulus-transact-sql"></a>% (模數) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回某個數值除以另一個數值的餘數。  
@@ -53,21 +53,21 @@ dividend % divisor
   
 ## <a name="arguments"></a>引數  
  *dividend*  
- 要執行除法的數值運算式。 *被除數*必須是有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)任何一個整數和貨幣資料類型類別目錄中的資料類型或**數值**資料型別。  
+ 要執行除法的數值運算式。 *dividend* 必須是整數與貨幣資料類型類別目錄中任何一個資料類型，或是 **numeric** 資料類型的有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *divisor*  
- 要除以被除數的數值運算式。 *除數*必須是其中任何一個整數和貨幣資料類型類別目錄中的資料類型的任何有效運算式或**數值**資料型別。  
+ 要除以被除數的數值運算式。 *divisor* 必須是整數與貨幣資料類型類別目錄中任何一個資料類型，或是 **numeric** 資料類型的任何有效運算式。  
   
 ## <a name="result-types"></a>結果類型  
  由兩個引數的資料類型決定。  
   
-## <a name="remarks"></a>備註  
- 您可以使用模數算術運算子，與資料行名稱的任何組合的 SELECT 陳述式選取清單中，數值常數或任何有效運算式的整數和貨幣資料類型類別目錄或**數值**資料型別。  
+## <a name="remarks"></a>Remarks  
+ 您可以在 SELECT 陳述式的選取清單中使用模數算術運算子，搭配資料行名稱、數值常數，或是任何整數和貨幣資料類型類別目錄或 **numeric** 資料類型之有效運算式的任何組合。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-simple-example"></a>A. 簡單範例  
- 下列範例會將 38 這個數字除以 5。 這會導致結果的整數部分為 7，並示範如何模數傳回 3 的餘數。  
+ 下列範例會將 38 這個數字除以 5。 結果中會產生 7 的整數部分，並示範模數如何傳回餘數 3。  
   
 ```  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
@@ -86,10 +86,10 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C： 簡單的範例  
- 下列範例示範結果`%`運算子時除以 3 2。  
+### <a name="c-simple-example"></a>C：簡單範例  
+ 下列範例示範 3 除以 2 時，`%` 運算子所傳回的結果。  
   
 ```  
 -- Uses AdventureWorks  
@@ -107,10 +107,10 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
 ## <a name="see-also"></a>另請參閱  
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [%= &#40;模數指派 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
- [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [%= &#40;模數指派&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [複合運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

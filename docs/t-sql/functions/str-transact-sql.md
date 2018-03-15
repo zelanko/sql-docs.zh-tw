@@ -1,5 +1,5 @@
 ---
-title: "STR (TRANSACT-SQL) |Microsoft 文件"
+title: STR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,22 +49,22 @@ STR ( float_expression [ , length [ , decimal ] ] )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 近似數值運算式 (**float**) 資料類型，含小數點。  
+ 這是含小數點的近似數值 (**float**) 資料類型的運算式。  
   
- *長度*  
+ *length*  
  這是總長度。 其中包括小數點、正負號、數字和空格。 預設值是 10。  
   
  *decimal*  
- 這是小數點右方的位數。 *十進位*必須小於或等於 16。 如果*十進位*超過 16，則結果會截斷為小數點右邊的十六位數。  
+ 這是小數點右方的位數。 *decimal*必須小於或等於 16。 如果 *decimal* 大於 16，則結果就會截斷為小數點右方的十六位數。  
   
 ## <a name="return-types"></a>傳回類型  
  **varchar**  
   
-## <a name="remarks"></a>備註  
- 如果提供，如值*長度*和*十進位*str 參數應該是正數。 根據預設，如果 decimal 參數是 0，這個數字會捨入到整數。 指定的長度應該大於或等於小數點前面的數字部分，再加上數字的正負號 (如果有的話)。 一個簡短*float_expression*是靠右對齊，在指定的長度和一個長整數*float_expression*截斷為指定的小數位數。 例如，STR (12**，**10) 產生的結果是 12。 這會在結果集中靠右對齊。 不過，STR (1223年**，**2) 會截斷結果集 * *。 字串函數可以是巢狀函數。  
+## <a name="remarks"></a>Remarks  
+ 如果提供的話，STR 的 *length* 和 *decimal* 參數值應該是正數。 根據預設，如果 decimal 參數是 0，這個數字會捨入到整數。 指定的長度應該大於或等於小數點前面的數字部分，再加上數字的正負號 (如果有的話)。 在指定長度中，短的 *float_expression* 會靠右對齊，長的 *float_expression* 會在指定的小數位數截斷。 例如，STR(12**,**10) 所產生的結果是 12。 這會在結果集中靠右對齊。 不過，STR(1223**,**2) 會將結果集截斷為 **。 字串函數可以是巢狀函數。  
   
 > [!NOTE]  
->  若要轉換的 Unicode 資料，內使用 STR 轉換或[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)轉換函式。  
+>  若要轉換成 Unicode 資料，請在 CONVERT 或 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 轉換函數內使用 STR。  
   
 ## <a name="examples"></a>範例  
  下列範例會將五個位數和小數點組成的運算式轉換成六個位數的字元字串。 數字的小數點後部份會捨入到一個小數位數。  
@@ -117,8 +117,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [格式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/format-transact-sql.md)  
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

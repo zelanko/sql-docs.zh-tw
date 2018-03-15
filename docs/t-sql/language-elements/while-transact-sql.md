@@ -1,5 +1,5 @@
 ---
-title: "時 (TRANSACT-SQL) |Microsoft 文件"
+title: WHILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -62,7 +62,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>引數  
  *Boolean_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)傳回**TRUE**或**FALSE**。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
+ 這是傳回 **TRUE** 或 **FALSE** 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
   
  {*sql_statement* | *statement_block*}  
  這是利用陳述式區塊來定義的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式分組。 若要定義陳述式區塊，請使用流程控制關鍵字 BEGIN 和 END。  
@@ -73,7 +73,7 @@ WHILE Boolean_expression
  CONTINUE  
  重新啟動 WHILE 迴圈，忽略 CONTINUE 關鍵字之後的任何陳述式。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果一個或多個 WHILE 迴圈具有巢狀結構，內層的 BREAK 會跳到下一個最外層的迴圈。 內層迴圈尾端之後的所有陳述式會先執行，然後重新啟動下一個最外層迴圈。  
   
 ## <a name="examples"></a>範例  
@@ -116,10 +116,10 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C： 簡單 While 迴圈  
- 在下列範例中，如果產品的平均標價小於 `$300`，`WHILE` 迴圈會將標價加倍，再選取最大價格。 如果最大價格小於或等於 `$500`，`WHILE` 迴圈會重新啟動，價格會再加倍。 這個迴圈會繼續使價格加倍，直到最大價格大於`$500`，然後結束`WHILE`迴圈。  
+### <a name="c-simple-while-loop"></a>C：簡單的 While 迴圈  
+ 在下列範例中，如果產品的平均標價小於 `$300`，`WHILE` 迴圈會將標價加倍，再選取最大價格。 如果最大價格小於或等於 `$500`，`WHILE` 迴圈會重新啟動，價格會再加倍。 這個迴圈會繼續使價格加倍，直到最高價格大於 `$500` 為止，然後結束 `WHILE` 迴圈。  
   
 ```  
 -- Uses AdventureWorks  
@@ -137,7 +137,7 @@ END
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [資料指標 &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

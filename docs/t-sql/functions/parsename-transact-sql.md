@@ -1,5 +1,5 @@
 ---
-title: "PARSENAME (TRANSACT-SQL) |Microsoft 文件"
+title: PARSENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ PARSENAME ( 'object_name' , object_piece )
   
 ## <a name="arguments"></a>引數  
  '*object_name*'  
- 這是要擷取指定物件部分的物件名稱。 *object_name*是**sysname**。 這個參數是一個選擇性限定的物件名稱。 如果限定了物件名稱的所有部分，這個名稱會有四個部分：伺服器名稱、資料庫名稱、擁有者名稱和物件名稱。  
+ 這是要擷取指定物件部分的物件名稱。 *object_name* 是 **sysname**. 這個參數是一個選擇性限定的物件名稱。 如果限定了物件名稱的所有部分，這個名稱會有四個部分：伺服器名稱、資料庫名稱、擁有者名稱和物件名稱。  
   
  *object_piece*  
- 這是要傳回的物件部分。 *object_piece*的型別**int**，而且可以有下列值：  
+ 這是要傳回的物件部分。 *object_piece* 的類型是 **int**它可以有下列這些值：  
   
  1 = 物件名稱  
   
@@ -69,14 +69,14 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>傳回類型  
  **nchar**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果符合下列條件之一，PARSENAME 會傳回 NULL：  
   
--   任一*object_name*或*object_piece*是 NULL。  
+-   *object_name* 或 *object_piece* 是 NULL。  
   
 -   發生語法錯誤。  
   
- 要求的物件部份的長度為 0 並不是有效[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別項。 長度為零的物件名稱會將完整名稱轉譯為無效。  
+ 要求的物件部份，長度為 0，不是有效的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。 長度為零的物件名稱會將完整名稱轉譯為無效。  
   
 ## <a name="examples"></a>範例  
  下列範例會利用 `PARSENAME` 來傳回 `Person` 資料庫中之 `AdventureWorks2012` 資料表的相關資訊。  
@@ -119,10 +119,10 @@ Server Name
 ```
   
 ## <a name="see-also"></a>另請參閱  
- [QUOTENAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

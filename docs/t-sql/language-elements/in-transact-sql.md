@@ -1,5 +1,5 @@
 ---
-title: "在 (TRANSACT-SQL) |Microsoft 文件"
+title: IN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/29/2016
 ms.prod: sql-non-specified
@@ -53,29 +53,29 @@ test_expression [ NOT ] IN
   
 ## <a name="arguments"></a>引數  
  *test_expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *subquery*  
- 這是有單一資料行結果集的子查詢。 這個資料行必須有相同的資料類型為*test_expression*。  
+ 這是有單一資料行結果集的子查詢。 這個資料行必須具備與 *test_expression* 相同的資料類型。  
   
- *運算式*[ **，**...*n* ]  
- 這是要進行相符測試的運算式清單。 所有運算式都必須都具有相同型別的*test_expression*。  
+ *expression*[ **,**... *n* ]  
+ 這是要進行相符測試的運算式清單。 所有運算式的類型都必須與 *test_expression* 相同。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
- 如果值*test_expression*等於傳回的任何值*子查詢*或等於任何*運算式*從逗號分隔清單中，結果為 TRUE;否則，結果值為 FALSE。  
+ 如果 *test_expression* 的值等於 *subquery* 所傳回的任何值，或等於以逗號分隔清單中的任何 *expression*，結果值就是 TRUE；否則，結果值就是 FALSE。  
   
- 使用 NOT IN 變換正負號*子查詢*值或*運算式*。  
+ 使用 NOT IN 會否定 *subquery* 值或 *expression*。  
   
 > [!CAUTION]  
->  任何 null 值傳回*子查詢*或*運算式*，相較於*test_expression*使用 IN 或不在傳回 UNKNOWN。 將 Null 值與 IN 或 NOT IN 一起使用可能會產生非預期的結果。  
+>  相較於使用 IN 或 NOT IN 的 *test_expression*，*subquery* 或 *expression* 所傳回的任何 Null 值都會傳回 UNKNOWN。 將 Null 值與 IN 或 NOT IN 一起使用可能會產生非預期的結果。  
   
 ## <a name="remarks"></a>備註  
- 明確地括在 IN 子句中包括極大量的值 （數千個以逗號分隔值），可以耗用資源，並傳回錯誤 8623 或 8632。 若要解決這個問題，將項目儲存在資料表中，清單中，並使用 IN 子句內的 SELECT 子查詢。  
+ 在 IN 子句中明確包括極大量的值 (數千個以逗號分隔的值) 會耗用資源，並傳回錯誤 8623 或 8632。 若要解決此問題，請將項目儲存在資料表的 IN 清單中，並在 IN 子句內使用 SELECT 子查詢。  
   
- 錯誤 8623:  
+ 錯誤 8623：  
   
  `The query processor ran out of internal resources and could not produce a query plan. This is a rare event and only expected for extremely complex queries or queries that reference a very large number of tables or partitions. Please simplify the query. If you believe you have received this message in error, contact Customer Support Services for more information.`  
   
@@ -114,7 +114,7 @@ WHERE e.JobTitle IN ('Design Engineer', 'Tool Designer', 'Marketing Assistant');
 GO  
 ```  
   
- 以下是任何一項查詢的結果集。  
+ 以下是任何一個查詢的結果集。  
   
 ```  
 FirstName   LastName      Title  
@@ -177,10 +177,10 @@ WHERE p.BusinessEntityID NOT IN
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-in-and-not-in"></a>D. 不能在和中使用  
- 下列範例會尋找所有項目`FactInternetSales`資料表符合`SalesReasonKey`值`DimSalesReason`資料表。  
+### <a name="d-using-in-and-not-in"></a>D. 使用 IN 和 NOT IN  
+ 下列範例會在 `FactInternetSales` 資料表中尋找符合 `DimSalesReason` 資料表中 `SalesReasonKey` 值的所有項目。  
   
 ```  
 -- Uses AdventureWorks  
@@ -190,7 +190,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 下列範例會尋找所有項目`FactInternetSalesReason`不相符的資料表`SalesReasonKey`值`DimSalesReason`資料表。  
+ 下列範例會在 `FactInternetSalesReason` 資料表中尋找不符合 `DimSalesReason` 資料表中 `SalesReasonKey` 值的所有項目。  
   
 ```  
 -- Uses AdventureWorks  
@@ -200,8 +200,8 @@ WHERE SalesReasonKey
 NOT IN (SELECT SalesReasonKey FROM DimSalesReason);  
 ```  
   
-### <a name="e-using-in-with-an-expression-list"></a>E. 使用以運算式清單  
- 下列範例會尋找所有識別碼中銷售人員`DimEmployee`資料表之員工的第一個名稱也就是 `Mike`或`Michael`。  
+### <a name="e-using-in-with-an-expression-list"></a>E. 搭配運算式清單使用 IN  
+ 下列範例會在 `DimEmployee` 資料表中針對名字為 `Mike` 或 `Michael` 的員工，尋找銷售人員的所有識別碼。  
   
 ```  
 -- Uses AdventureWorks  
@@ -213,13 +213,13 @@ WHERE FirstName IN ('Mike', 'Michael');
   
 ## <a name="see-also"></a>另請參閱  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [所有 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [部分 &#124;任何 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
+ [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
   
   
 

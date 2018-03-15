@@ -1,5 +1,5 @@
 ---
-title: "PATINDEX (TRANSACT-SQL) |Microsoft 文件"
+title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>引數  
  *pattern*  
- 這是字元運算式，其中包含要尋找的順序。 可以使用萬用字元;不過，%字元必須放在之前，並且遵照*模式*（除非要搜尋第一個或最後一個字元）。 *模式*是字元字串資料類型類別目錄的運算式。 *模式*限制為 8000 個字元。  
+ 這是字元運算式，其中包含要尋找的順序。 此處可以使用萬用字元，但是 *pattern* 前後都必須加上 % 字元 (除非要搜尋第一個或最後一個字元)。 *pattern* 是字元字串資料類型類別目錄的運算式。 *pattern* 限制為 8000 個字元。  
   
  *expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，通常搜尋指定模式的資料行。 *運算式*是字元字串資料類型類別目錄。  
+ 這是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，通常是搜尋指定之模式的資料行。 *expression* 屬於字元字串資料類型類別目錄。  
   
 ## <a name="return-types"></a>傳回類型  
- **bigint**如果*運算式*屬於**varchar （max)**或**nvarchar （max)**資料類型，否則為**int**。  
+ 若 *expression* 的資料類型為 **varchar(max)** 或 **nvarchar(max)**，則為 **bigint**，否則為 **int**。  
   
-## <a name="remarks"></a>備註  
- 如果有任一個*模式*或*運算式*是 NULL，PATINDEX 會傳回 NULL。  
+## <a name="remarks"></a>Remarks  
+ 如果 *pattern* 或 *expression* 為 NULL，則 PATINDEX 會傳回 NULL。  
   
  PATINDEX 會以輸入的定序為基礎來執行比較。 若要執行指定定序的比較，您可以利用 COLLATE，將明確定序套用至輸入。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
- 當使用 SC 定序時，傳回值將會計算任何 utf-16 surrogate 字組*運算式*參數做為單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 使用 SC 定序時，傳回值會將 *expression* 參數中的任何 UTF-16 代理字組計算為單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
- 0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，不包含在 PATINDEX 中。  
+ 0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，而且不得包含在 PATINDEX 中。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-simple-patindex-example"></a>A. PATINDEX 的簡單範例  
- 下列範例會檢查簡短字串 (`interesting data`) 的字元位置起始`ter`。  
+### <a name="a-simple-patindex-example"></a>A. 簡單的 PATINDEX 範例  
+ 下例範例會檢查 `ter`字元開頭位置的短字元字串 (`interesting data`)。  
   
 ```  
 SELECT PATINDEX('%ter%', 'interesting data');  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. 使用變數來指定模式  
- 下列範例會使用變數值傳遞至*模式*參數。 這個範例會使用[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫。  
+ 下列範例會使用變數，將值傳遞給 *pattern* 參數。 這個範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫。  
   
 ```  
 DECLARE @MyValue varchar(10) = 'safety';   
@@ -152,11 +152,11 @@ WHERE DocumentNode = 0x7B40;
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [&#40;萬用字元-字元 &#40; s &#41;若要比對 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#40;萬用字元-字元 &#40; s &#41;不到相符項目 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
- [_ &#40;萬用字元-符合一個字元 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
- [百分比字元 &#40;萬用字元-字元 &#40; s &#41;若要比對 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [&#40;萬用字元 - 相符的字元&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [&#40;萬用字元 - 不相符的字元&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
+ [_ &#40;萬用字元 - 符合單一字元&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
+ [百分比字元&#40;萬用字元 - 相符的字元&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
 

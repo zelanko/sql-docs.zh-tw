@@ -1,5 +1,5 @@
 ---
-title: "|(位元 OR)(TRANSACT-SQL) |Microsoft 文件"
+title: "| (位元 OR) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -51,21 +51,21 @@ expression | expression
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)整數資料類型類別目錄，或**元**，**二進位**，或**varbinary**資料型別。 *運算式*會被視為位元運算的二進位數字。  
+ 這是整數資料類型類別目錄或是 **bit**、**binary** 或 **varbinary** 資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *expression* 會被視為適用於位元運算的二進位數字。  
   
 > [!NOTE]  
->  只有一個*運算式*可以是**二進位**或**varbinary**位元運算中的資料類型。  
+>  在位元運算中，只能有一個 *expression* 是 **binary** 或 **varbinary** 資料類型。  
   
 ## <a name="result-types"></a>結果類型  
- 傳回**int**如果輸入的值為**int**、 **smallint**如果輸入的值為**smallint**，或**tinyint**如果輸入的值為**tinyint**。  
+ 如果輸入值是 **int**，便傳回 **int**，如果輸入值是 **smallint**，便傳回 **smallint**，或者如果輸入值是 **tinyint**，便傳回 **tinyint**。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  位元 | 運算子會在兩個運算式之間執行位元邏輯 OR 運算，兩個運算式各有一個對應的位元。 如果輸入運算式的兩個位元或其中一個位元 (針對目前所解析的位元) 的值是 1，結果中的位元都會設為 1；如果輸入運算式中的兩個位元都不是 1，結果中的位元便設為 0。  
   
- 如果左邊和右邊的運算式具有相同的整數資料類型 (例如，左*運算式*是**smallint**和右邊*運算式*是**int**)，較小的資料類型的引數會轉換成較大的資料類型。 在此範例中，**smallint * * * 運算式*轉換成**int**。  
+ 如果左右運算式的整數資料類型不同 (例如，左邊的 *expression* 是 **smallint**，而右邊的 *expression* 是 **int**)，就會將較小資料類型的引數轉換為較大的資料類型。 在此範例中，會將 **smallint***expression* 轉換為 **int**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立具有資料表**int**資料類型，以顯示原始值，並將資料表放入一個資料列。  
+ 下列範例會建立一個含 **int** 資料類型的資料表來顯示原始值，並將資料表放入單一資料列中。  
   
 ```sql  
 CREATE TABLE bitwise  
@@ -78,7 +78,7 @@ INSERT bitwise VALUES (170, 75);
 GO  
 ```  
   
- 下列查詢上執行位元 OR 運算**a_int_value**和**b_int_value**資料行。  
+ 下列查詢會在 **a_int_value** 和 **b_int_value** 資料行上執行位元 OR 運算。  
   
 ```  
 SELECT a_int_value | b_int_value  
@@ -95,7 +95,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- 170 的二進位表示法 (**a_int_value**或`A`底下) 是`0000 0000 1010 1010`。 75 的二進位表示法 (**b_int_value**或`B`底下) 是`0000 0000 0100 1011`。 對這兩個值執行位元 OR 運算，會產生二進位結果 `0000 0000 1110 1011`，也就是十進位的 235。  
+ 170 (**a_int_value** 或下面的 `A`) 的二進位表示法是 `0000 0000 1010 1010`。 75 (**b_int_value** 或下面的 `B`) 的二進位表示法是 `0000 0000 0100 1011`。 對這兩個值執行位元 OR 運算，會產生二進位結果 `0000 0000 1110 1011`，也就是十進位的 235。  
   
 ```  
 (A | B)  
@@ -106,10 +106,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [位元運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [&#124; = &#40;位元 OR 指派 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
- [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [位元運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [&#124;= &#40;位元 OR 指派&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+ [複合運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

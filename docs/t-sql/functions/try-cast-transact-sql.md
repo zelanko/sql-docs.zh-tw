@@ -1,5 +1,5 @@
 ---
-title: "TRY_CAST (TRANSACT-SQL) |Microsoft 文件"
+title: TRY_CAST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,20 +50,20 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  要進行轉換的值。 任何有效的運算式。  
   
  *data_type*  
- 資料類型轉換成*運算式*。  
+ *運算式*轉換成的資料類型。  
   
  *length*  
  指定目標資料類型之長度的選擇性整數。  
   
- 可接受值的範圍由值*data_type*。  
+ 可接受值的範圍由 *data_type* 值決定。  
   
 ## <a name="return-types"></a>傳回類型  
  如果轉換成功，則會傳回轉換為指定之資料類型的值，否則會傳回 Null。  
   
-## <a name="remarks"></a>備註  
- **TRY_CAST**會傳遞給它的值，並嘗試將它轉換成指定*data_type*。 如果轉換成功， **TRY_CAST**傳回所指定的值*data_type*; 如果發生錯誤，就會傳回 null。 不過如果您要求明確不允許，然後轉換**TRY_CAST**失敗並發生錯誤。  
+## <a name="remarks"></a>Remarks  
+ **TRY_CAST** 會採用傳遞給它的值，然後會嘗試將該值轉換為指定的 *data_type*。 如果轉換成功，**TRY_CAST** 會傳回當做指定之 *data_type* 的值；如果發生錯誤則會傳回 Null。 但是，若您要求明確不允許的轉換，則 **TRY_CAST** 會失敗並出現錯誤。  
   
- **TRY_CAST**不能是新的保留關鍵字，且可在所有相容性層級。 **TRY_CAST**具有相同的語意**TRY_CONVERT**時連接到遠端伺服器。  
+ **TRY_CAST** 不是新的保留關鍵字，而且可在所有相容性層級使用。 當連接到遠端伺服器時，**TRY_CAST** 的語意與 **TRY_CONVERT** 相同。  
   
 ## <a name="examples"></a>範例  
   
@@ -140,8 +140,8 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [TRY_CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

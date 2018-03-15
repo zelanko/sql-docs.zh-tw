@@ -1,5 +1,5 @@
 ---
-title: "LTRIM (TRANSACT-SQL) |Microsoft 文件"
+title: LTRIM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ LTRIM ( character_expression )
   
 ## <a name="arguments"></a>引數  
  *character_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)的字元或二進位資料。 *character_expression*可以是常數、 變數或資料行。 *character_expression*以外的資料類型必須是**文字**， **ntext**，和**映像**，也就是隱含地轉換成**varchar**. 否則，請使用[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)來明確轉換*character_expression*。  
+ 這是字元或二進位資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。 *character_expression* 必須是可隱含地轉換為 **varchar**的資料類型，但是 **text****ntext** 和 **image** 除外。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *character_expression*。  
   
 ## <a name="return-type"></a>傳回類型  
- **varchar**或**nvarchar**  
+ **varchar** 或 **nvarchar**  
   
 ## <a name="examples"></a>範例  
 
 ### <a name="a-simple-example"></a>A. 簡單範例   
 
- 下列範例會使用 LTRIM 前置空格移除的字元運算式。  
+ 下列範例會利用 LTRIM 來移除字元運算式中的開頭空白。  
   
 ```sql  
 SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.databases;  
@@ -73,7 +73,7 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   Five spaces are at the beginning of this string.
   ```  
 
-### <a name="b-example-using-a-variable"></a>B： 使用變數的範例   
+### <a name="b-example-using-a-variable"></a>B：使用變數的範例   
   
  下列範例會利用 `LTRIM` 來移除字元變數中的開頭空白。  
   
@@ -96,13 +96,13 @@ Original string Without spaces
   
 ## <a name="see-also"></a>另請參閱  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
- [權限 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

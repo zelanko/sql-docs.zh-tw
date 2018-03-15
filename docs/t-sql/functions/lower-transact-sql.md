@@ -1,5 +1,5 @@
 ---
-title: "較低 (TRANSACT-SQL) |Microsoft 文件"
+title: LOWER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ LOWER ( character_expression )
   
 ## <a name="arguments"></a>引數  
  *character_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)的字元或二進位資料。 *character_expression*可以是常數、 變數或資料行。 *character_expression*隱含地轉換成資料類型必須是**varchar**。 否則，請使用[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)來明確轉換*character_expression*。  
+ 這是字元或二進位資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。 *character_expression* 必須是可以隱含轉換成 **varchar** 的資料類型。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *character_expression*。  
   
 ## <a name="return-types"></a>傳回類型  
- **varchar**或**nvarchar**  
+ **varchar** 或 **nvarchar**  
   
 ## <a name="examples"></a>範例  
  下列範例會利用 `LOWER` 函數、`UPPER` 函數，且將 `UPPER` 函數巢狀放置於 `LOWER` 函數內，以選取價格在 $11 和 $20 之間的產品名稱。  
@@ -81,8 +81,8 @@ taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
   
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
- [上限 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/upper-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [UPPER &#40;Transact-SQL&#41;](../../t-sql/functions/upper-transact-sql.md)  
   
   
 

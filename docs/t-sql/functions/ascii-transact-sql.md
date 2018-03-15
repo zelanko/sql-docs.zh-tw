@@ -1,5 +1,5 @@
 ---
-title: "ASCII (TRANSACT-SQL) |Microsoft 文件"
+title: ASCII (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>引數  
 *character_expression*  
-是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)型別的**char**或**varchar**。
+是 **char** 或 **varchar** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回類型
  **int**  
   
-## <a name="remarks"></a>備註
-ASCII 是美國資訊交換的標準代碼的縮寫。 它是一種字元編碼的電腦所使用的標準。 如需 ASCII 字元的清單，請參閱**可列印字元**區段[ASCII](https://www.wikipedia.org/wiki/ASCII)。
+## <a name="remarks"></a>Remarks
+ASCII 是美國資訊交換標準碼的縮寫。 它是電腦所使用的一種字元編碼標準。 如需 ASCII 字元清單，請參閱 [ASCII](https://www.wikipedia.org/wiki/ASCII)的**可列印字元**一節。
 
 ## <a name="examples"></a>範例  
-下列範例假設 ASCII 字元集，並傳回`ASCII`6 個字元的值。
+下列範例假設 ASCII 字元集，且會傳回 6 個字元的 `ASCII` 值。
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -75,10 +75,10 @@ A           B           a           b           1           2
 ```  
   
 ## <a name="see-also"></a>另請參閱
- [CHAR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)  
+ [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "資料指標 (TRANSACT-SQL) |Microsoft 文件"
+title: "資料指標 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="cursors-transact-sql"></a>資料指標 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]陳述式會產生完整的結果集，但是有的時間結果適合一次處理一個資料列。 您可以在結果集上開啟一個資料指標，一次處理一個資料列結果集。 您可以將資料指標指派給變數或參數**游標**資料型別。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式雖然會產生完整的結果集，但有時最好是以一次一個資料列的方式來處理結果。 您可以在結果集上開啟一個資料指標，一次處理一個資料列結果集。 您可以將資料指標指派給 **cursor** 資料類型的變數或參數。  
   
  下列陳述式皆支援資料指標作業：  
   

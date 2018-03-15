@@ -1,5 +1,5 @@
 ---
-title: "建立診斷工作階段 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -26,15 +26,15 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-diagnostics-session-transact-sql"></a>建立診斷工作階段 (TRANSACT-SQL)
+# <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  診斷工作階段可讓您儲存對系統或查詢效能的詳細的使用者定義的診斷資訊。  
+  診斷工作階段可讓您儲存關於系統或查詢效能的使用者定義詳細診斷資訊。  
   
- 偵錯效能，為特定的查詢，或是用來監視特定的應用裝置元件行為應用裝置作業期間，通常會使用的診斷工作階段。  
+ 診斷工作階段通常是用來進行特定查詢的效能偵錯，或在應用裝置作業期間監視特定應用裝置元件的行為。  
   
 > [!NOTE]  
->  您應該熟悉 XML 若要使用的診斷工作階段。  
+>  您應該熟悉 XML 以使用診斷工作階段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,52 +64,52 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
   
 ## <a name="arguments"></a>引數  
  *diagnostics_name*  
- 診斷工作階段的名稱。 診斷工作階段名稱可以包含字元 a-z、 A-Z、 和 0-9 只。 此外，診斷工作階段名稱必須以字元開頭。 *diagnostics_name*限制為 127 個字元。  
+ 診斷工作階段的名稱。 診斷工作階段名稱只能包含字元 a-z、A-Z 和 0-9。 此外，診斷工作階段名稱必須以字元作為開頭。 *diagnostics_name* 限制為 127 個字元。  
   
  *max_item_count_num*  
- 要保存在檢視中的事件數目。 比方說，如果指定 100，則比對的篩選準則的最近 100 個事件將會保存至診斷工作階段。 如果找不到少於 100 比對事件，診斷工作階段就會包含不超過 100 個事件。 *max_item_count_num*必須至少為 100 且小於或等於 100,000。  
+ 要保存於檢視中的事件數目。 例如，如果指定 100，系統將在診斷工作階段中保存最近 100 個符合篩選準則的事件。 如果找到的相符事件少於 100 個，診斷工作階段將會包含少於 100 個事件。 *max_item_count_num* 必須至少為 100 且小於或等於 100,000。  
   
  *event_name*  
- 定義要收集診斷工作階段中的實際事件。  *event_name*是其中一個事件中所列[sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587)其中`sys.pdw_diag_events.is_enabled='True'`。  
+ 定義要在診斷工作階段中收集的實際事件。  *event_name* 是列於 [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) \(英文\) 中且為 `sys.pdw_diag_events.is_enabled='True'` 的其中一個事件。  
   
  *filter_property_name*  
- 要限制結果屬性的名稱。 例如，如果您想要限制根據工作階段識別碼*filter_property_name*應該*SessionId*。 請參閱*property_name*下方的可能值清單*filter_property_name*。  
+ 要限制結果之屬性的名稱。 例如，如果您想要根據工作階段識別碼進行限制，*filter_property_name* 便應該是 *SessionId*。 如需 *filter_property_name* 的可能值清單，請參閱下方的＜*property_name*＞。  
   
  *value*  
- 要評估的值*filter_property_name*。 實值型別必須符合屬性類型。 例如，如果屬性類型就是 decimal，類型*值*必須是十進位。  
+ 要針對 *filter_property_name* 進行評估的值。 值類型必須與屬性類型相符。 例如，如果屬性類型是 decimal，*value* 的類型就必須是 decimal。  
   
  *comp_type*  
- 比較類型。 可能的值是： 等於、 EqualsOrGreaterThan、 EqualsOrLessThan、 GreaterThan、 LessThan、 NotEquals、 Contains、 RegEx  
+ 比較類型。 可能的值為：Equals、EqualsOrGreaterThan、EqualsOrLessThan、GreaterThan、LessThan、NotEquals、Contains、RegEx  
   
  *property_name*  
- 與事件相關的屬性。  屬性名稱可以是一部分擷取標記，或做為篩選準則的一部分。  
+ 與事件相關的屬性。  屬性名稱可以是擷取標記的一部分，或用來作為篩選準則的一部分。  
   
-|屬性名稱|Description|  
+|屬性名稱|描述|  
 |-------------------|-----------------|  
-|UserName|使用者 （登入） 名稱。|  
+|UserName|使用者 (登入) 名稱。|  
 |SessionId|工作階段識別碼。|  
 |QueryId|查詢識別碼。|  
 |CommandType|命令類型。|  
-|CommandText|內處理的命令文字。|  
+|CommandText|所處理之命令內的文字。|  
 |OperationType|事件的作業類型。|  
-|有效期間|事件持續時間。|  
+|Duration|事件的持續時間。|  
 |SPID|服務處理序識別碼。|  
   
-## <a name="remarks"></a>備註  
- 每個使用者允許最多 10 個並行的診斷工作階段。 請參閱[sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9)一份目前的工作階段的卸除任何不需要使用工作階段的`DROP DIAGNOSTICS SESSION`。  
+## <a name="remarks"></a>Remarks  
+ 允許每位使用者最多 10 個並行診斷工作階段。 如需目前工作階段的清單，請參閱 [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9) \(英文\)，並使用 `DROP DIAGNOSTICS SESSION` 卸除任何不需要的工作階段。  
   
- 診斷工作階段將會繼續收集直到卸除的中繼資料。  
+ 診斷工作階段將繼續收集中繼資料，直到被卸除為止。  
   
 ## <a name="permissions"></a>Permissions  
- 需要**ALTER SERVER STATE**權限。  
+ 需要 **ALTER SERVER STATE** 權限。  
   
 ## <a name="locking"></a>鎖定  
- 在診斷工作階段的資料表上採用共用的鎖定。  
+ 採用診斷工作階段資料表上的共用鎖定。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-diagnostics-session"></a>A. 建立診斷工作階段  
- 這個範例會建立記錄的資料庫引擎的效能度量的診斷工作階段。 此範例會建立接聽引擎查詢執行/結束事件和封鎖的 DMS 事件在診斷工作階段。 傳回的內容是命令文字、 電腦名稱、 要求識別碼 (查詢 id) 和建立事件工作階段。  
+ 此範例會建立診斷工作階段，來記錄資料庫引擎效能的計量。 範例會建立能接聽引擎查詢的執行/結束事件及封鎖 DMS 事件的診斷工作階段。 傳回的內容是命令文字、電腦名稱、要求識別碼 (查詢識別碼)，以及建立事件的工作階段。  
   
 ```  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
@@ -133,30 +133,30 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
 </Session>';  
 ```  
   
- 建立診斷工作階段之後執行查詢。  
+ 在建立診斷工作階段之後，會執行查詢。  
   
 ```  
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
- 選取從 sysdiag 結構描述，然後檢視診斷工作階段結果。  
+ 接著，會從 sysdiag 結構描述中選取診斷工作階段結果，以進行檢視。  
   
 ```  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
- 請注意 sysdiag 結構描述包含名為您的診斷工作階段名稱的檢視。  
+ 注意到 sysdiag 結構描述會包含以您診斷工作階段名稱命名的檢視。  
   
- 若要檢視連線的活動，`Session.SPID`屬性並新增`WHERE [Session.SPID] = @@spid;`至查詢。  
+ 若只要查看您連線的活動，請加入 `Session.SPID` 屬性並將 `WHERE [Session.SPID] = @@spid;` 加入至查詢。  
   
- 當您在診斷工作階段完成時，使用卸除該**卸除診斷**命令。  
+ 當您完成診斷工作階段之後，請使用 **DROP DIAGNOSTICS** 命令來卸除它。  
   
 ```  
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
 ### <a name="b-alternative-diagnostic-session"></a>B. 替代的診斷工作階段  
- 含有屬性些許不同的第二個範例。  
+ 含有些許不同屬性的第二個範例。  
   
 ```  
 -- Determine the session_id of your current session  
@@ -187,7 +187,7 @@ CREATE DIAGNOSTICS SESSION PdwOptimizationDiagnostics AS N'
 </Session>';  
 ```  
   
- 執行查詢時，例如：  
+ 執行查詢，例如：  
   
 ```  
 USE ssawPDW;  
@@ -203,7 +203,7 @@ FROM master.sysdiag.PdwOptimizationDiagnostics
 ORDER BY DateTimePublished;  
 ```  
   
- 當您在診斷工作階段完成時，使用卸除該**卸除診斷**命令。  
+ 當您完成診斷工作階段之後，請使用 **DROP DIAGNOSTICS** 命令來卸除它。  
   
 ```  
 DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;  

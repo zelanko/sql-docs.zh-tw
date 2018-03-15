@@ -51,27 +51,27 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>引數  
  *test_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)來測試所定義的範圍中*begin_expression*和*end_expression*。 *test_expression*必須是相同的資料類型為 雙向*begin_expression*和*end_expression*。  
+ 這是要在 *begin_expression* 和 *end_expression* 定義的範圍中測試的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *test_expression* 的資料類型必須與 *begin_expression* 和 *end_expression* 相同。  
   
  NOT  
  指定執行否定運算的述詞結果。  
   
  *begin_expression*  
- 任何有效的運算式。 *begin_expression*必須是相同的資料類型為 雙向*test_expression*和*end_expression*。  
+ 任何有效的運算式。 *begin_expression* 的資料類型必須與 *test_expression* 和 *end_expression* 相同。  
   
  *end_expression*  
- 任何有效的運算式。 *end_expression*必須是相同的資料類型為 雙向*test_expression*和*begin_expression*。  
+ 任何有效的運算式。 *end_expression* 的資料類型必須與 *test_expression* 和 *begin_expression* 相同。  
   
  與  
- 做為一個預留位置，表示*test_expression*應該在所指定的範圍內*begin_expression*和*end_expression*。  
+ 用來作為預留位置，表示 *test_expression* 應該位於 *begin_expression* 和 *end_expression* 所指定的範圍內。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
- BETWEEN 會傳回**TRUE**如果的值*test_expression*大於或等於值*begin_expression*且小於或等於值*end_expression*。  
+ 如果 *test_expression* 的值大於或等於 *begin_expression* 的值且小於或等於 *end_expression* 的值，BETWEEN 就會傳回 **TRUE**。  
   
- NOT BETWEEN 會傳回**TRUE**如果的值*test_expression*的值少於*begin_expression*或更高的值*end_expression*.  
+ 如果 *test_expression* 的值小於 *begin_expression* 的值或大於 *end_expression* 的值，NOT BETWEEN 就會傳回 **TRUE**。  
   
 ## <a name="remarks"></a>備註  
  若要指定獨佔範圍，請使用大於 (>) 和小於運算子 (<)。 如果 BETWEEN 或 NOT BETWEEN 述詞的任何輸入是 NULL，結果就是 UNKNOWN。  
@@ -79,7 +79,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-between"></a>A. 使用 BETWEEN  
- 下列範例會傳回資料庫中的資料庫角色的相關資訊。 第一個查詢會傳回所有角色。 第二個範例會使用`BETWEEN`子句來限制為指定的角色`database_id`值。  
+ 下列範例會傳回資料庫中資料庫角色的相關資訊。 第一個查詢會傳回所有角色。 第二個範例會使用 `BETWEEN` 子句，將角色限制為指定的 `database_id` 值。  
   
 ```sql  
 SELECT principal_id, name 
@@ -165,7 +165,7 @@ GO
 ```  
   
 ### <a name="d-using-between-with-datetime-values"></a>D. 使用含有 datetime 值的 BETWEEN  
- 下列範例會擷取資料列**datetime**之間的值為`'20011212'`和`'20020105'`(含） 之間。  
+ 下列範例會擷取 **datetime** 值介於 `'20011212'` 和 `'20020105'` (含) 之間的資料列。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -184,15 +184,15 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- 此查詢會擷取預期的資料列，因為查詢中的日期值和**datetime**中所儲存值`RateChangeDate`指定沒有日期的時間部分的資料行。 未指定時間部分時，它會預設為上午 12:00。 請注意，若資料列包含 2002-01-05 上午 12:00 之後的時間部分， 此查詢將不會傳回該資料列，因為它是在範圍之外。  
+ 查詢會擷取預期的資料列，因為已指定查詢中的日期值以及儲存在 `RateChangeDate` 資料行中的 **datetime** 值不含日期的時間部分。 未指定時間部分時，它會預設為上午 12:00。 請注意，若資料列包含 2002-01-05 上午 12:00 之後的時間部分， 此查詢將不會傳回該資料列，因為它是在範圍之外。  
   
   
 ## <a name="see-also"></a>另請參閱  
- [&#62;&#40;大於 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
- [&#60;&#40;小於 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [&#62; &#40;大於&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
+ [&#60; &#40;小於&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

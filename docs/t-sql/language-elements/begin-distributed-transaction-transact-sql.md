@@ -1,5 +1,5 @@
 ---
-title: "開始分散式交易 (TRANSACT-SQL) |Microsoft 文件"
+title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/29/2016
 ms.prod: sql-non-specified
@@ -59,12 +59,12 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>引數  
  *transaction_name*  
- 這是在 MS DTC 公用程式內，用來追蹤分散式交易的使用者定義交易名稱。 *transaction_name*必須符合識別碼的規則，而且必須是\<= 32 個字元。  
+ 這是在 MS DTC 公用程式內，用來追蹤分散式交易的使用者定義交易名稱。 *transaction_name* 必須符合識別碼的規則，且必須 \<= 32 個字元。  
   
  @*tran_name_variable*  
- 這是一個使用者定義變數的名稱，變數中包含在 MS DTC 公用程式內，用來追蹤分散式交易的交易名稱。 變數必須宣告與**char**， **varchar**， **nchar**，或**nvarchar**資料型別。  
+ 這是一個使用者定義變數的名稱，變數中包含在 MS DTC 公用程式內，用來追蹤分散式交易的交易名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  執行 BEGIN DISTRIBUTED TRANSACTION 陳述式的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體是交易發起者，它會控制交易的完成。 當發出工作階段的後續 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式時，負責控制的執行個體會要求 MS DTC 跨越所涉及的所有執行個體來管理分散式交易的完成。  
   
  交易層級快照集隔離不支援分散式交易。  
@@ -75,11 +75,11 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易所涉及的工作階段不會取得它們可傳給另一個工作階段的交易物件，以便將它明確加入分散式交易。 遠端伺服器編列到交易的唯一方法，是當做分散式查詢或遠端預存程序呼叫的目標。  
   
- 當本機交易中執行分散式的查詢時，交易會自動提升為分散式交易如果目標 OLE DB 資料來源支援 ITransactionLocal。 如果目標 OLE DB 資料來源不支援 ITransactionLocal，分散式查詢中允許只有唯讀作業。  
+ 在本機交易中執行分散式查詢時，如果目標 OLE DB 資料來源支援 ITransactionLocal，交易就會自動升級為分散式交易。 如果目標 OLE DB 資料來源不支援 ITransactionLocal，分散式查詢中就只允許唯讀作業。  
   
  已編列到分散式交易的工作階段會執行參考遠端伺服器的遠端預存程序呼叫。  
   
- **Sp_configure proc trans<**選項會控制是否本機交易中的遠端預存程序的呼叫會自動使本機交易升級為 MS DTC 所管理的分散式交易。 連接層級 SET 選項 REMOTE_PROC_TRANSACTIONS 可用來覆寫所建立的執行個體預設**sp_configure proc trans<**。當這個選項設為 ON 時，遠端預存程序呼叫會使本機交易升級為分散式交易。 建立 MS DTC 交易的連接會成為交易的發起者。 COMMIT TRANSACTION 會起始一項 MS DTC 協調認可。 如果**sp_configure proc trans<**選項是 ON，本機交易呼叫遠端預存程序會自動施以保護做為分散式交易的一部分而不用重寫應用程式，以明確的問題BEGIN DISTRIBUTED TRANSACTION 來取代 BEGIN TRANSACTION。  
+ **sp_configure remote proc trans** 選項會控制在本機交易內對遠端預存程序的呼叫，是否會使本機交易自動升級為 MS DTC 所管理的分散式交易。 連線層級的 SET 選項 REMOTE_PROC_TRANSACTIONS 可用來覆寫 **sp_configure remote proc trans** 所建立的執行個體預設值。當這個選項設為 ON 時，遠端預存程序呼叫會使本機交易升級為分散式交易。 建立 MS DTC 交易的連接會成為交易的發起者。 COMMIT TRANSACTION 會起始一項 MS DTC 協調認可。 如果 **sp_configure remote proc trans** 選項是 ON，本機交易中的遠端預存程序呼叫就會成為分散式交易的一部分並自動受到保護，而您不需重新撰寫應用程式，明確發出 BEGIN DISTRIBUTED TRANSACTION 來取代 BEGIN TRANSACTION。  
   
  如需有關分散式交易環境和處理序的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器文件集。  
   
@@ -107,11 +107,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BEGIN TRANSACTION (TRANSACT-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
+ [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [認可工作 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   
