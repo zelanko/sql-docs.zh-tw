@@ -1,5 +1,5 @@
 ---
-title: "資料庫主控台命令 |Microsoft 文件"
+title: "資料庫主控台命令 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified

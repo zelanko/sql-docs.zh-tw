@@ -1,5 +1,5 @@
 ---
-title: "uniqueidentifier (TRANSACT-SQL) |Microsoft 文件"
+title: uniqueidentifier (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/1/2017
 ms.prod: sql-non-specified
@@ -38,23 +38,23 @@ ms.lasthandoff: 01/02/2018
 
 這是 16 位元組的 GUID。
   
-## <a name="remarks"></a>備註  
-資料行或本機變數**uniqueidentifier**資料型別可以下列方式初始化為一個值：
--   使用[NEWID](../../t-sql/functions/newid-transact-sql.md)或[NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md)函式。    
--   從字串常數形式轉換*xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*- *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx*，每位*x*是範圍 0-9 或 a-f 的十六進位數字。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 是有效**uniqueidentifier**值。  
+## <a name="remarks"></a>Remarks  
+**uniqueidentifier** 資料類型的資料行或本機變數可以利用下列方法，初始化為一個值：
+-   使用 [NEWID](../../t-sql/functions/newid-transact-sql.md) 或 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 函式。    
+-   從 *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx* 格式的字串常數轉換，其中每一個 *x* 是範圍 0-9 或 a-f 的十六進位數字。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 是有效的 **uniqueidentifier** 值。  
   
-比較運算子可以搭配**uniqueidentifier**值。 不過排序並不是比較兩值的位元模式加以實作的。 可以針對執行的運算只有**uniqueidentifier**值是一種比較 (=、 <>， \<，>， \<=、 > =) 以及檢查 NULL （IS NULL 和 IS NOT NULL）。 其他算術運算子一律不能使用。 所有資料行條件約束和身分識別，以外的屬性，可以用於**uniqueidentifier**資料型別。
+比較運算子可以搭配使用 **uniqueidentifier** 值。 不過排序並不是比較兩值的位元模式加以實作的。 唯一可以對 **uniqueidentifier** 值執行的作業，是比較 (=, <>, \<, >, \<=, >=) 以及檢查 NULL (IS NULL 和 IS NOT NULL)。 其他算術運算子一律不能使用。 除了 IDENTITY 之外，所有的資料行條件約束和屬性，都可以用於 **uniqueidentifier** 資料類型。
   
-合併式複寫和異動複寫具有更新訂閱使用**uniqueidentifier**保證個資料表的多個複本可唯一識別資料列的資料行。
+具有更新訂閱的合併式複寫和異動複寫，都使用 **uniqueidentifier** 資料行，以確保資料列可以在多份資料表唯一識別。
   
 ## <a name="converting-uniqueidentifier-data"></a>轉換 Uniqueidentifier 資料  
-**Uniqueidentifier**類型轉換為字元運算式，從的用途而言都視為字元類型，因此容易將轉換為字元類型之截斷規則。 亦即，將字元運算式轉換成不同大小的字元資料類型時，對新資料類型而言太大的值會被截斷。 請參閱＜範例＞一節。
+**uniqueidentifier** 類型會基於轉換字元運算式的用途，而被視為字元類型，因此會受到轉換成字元類型之截斷規則的影響。 亦即，將字元運算式轉換成不同大小的字元資料類型時，對新資料類型而言太大的值會被截斷。 請參閱＜範例＞一節。
   
 ## <a name="limitations-and-restrictions"></a>限制事項
 
-這些工具和功能不支援`uniqueidentifier`資料類型：
+這些工具和功能不支援 `uniqueidentifier` 資料類型：
 - PolyBase
-- [dwloader 載入工具](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader)平行資料倉儲
+- 適用於平行處理資料倉儲的 [dwloader 載入工具](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader)
 
 ## <a name="examples"></a>範例  
 下列範例會將 `uniqueidentifier` 值轉換成 `char` 資料類型。
@@ -64,7 +64,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-下列範例會示範當值對於要轉換的目標資料類型而言太大時，資料的截斷方式。 因為**uniqueidentifier**類型限制為 36 個字元，超過該長度的字元會被截斷。
+下列範例會示範當值對於要轉換的目標資料類型而言太大時，資料的截斷方式。 因為 **uniqueidentifier** 類型限制為 36 個字元，所以超過該長度的字元會被截斷。
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
@@ -87,8 +87,8 @@ String                                       TruncatedValue
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[NEWID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)  
+[NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   

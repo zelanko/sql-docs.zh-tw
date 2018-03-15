@@ -1,5 +1,5 @@
 ---
-title: "DBCC FREEPROCCACHE (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/13/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 從計畫快取移除所有元素；指定計畫控制代碼或 SQL 控制代碼，從計畫快取移除特定的計畫；或是移除與指定的資源集區相關聯的所有快取項目。
 
 >[!NOTE]
->DBCC FREEPROCCACHE 不會清除原生編譯預存程序的執行統計資料。 程序快取沒有包含原生編譯預存程序的相關資訊。 從程序執行收集而來的執行統計資料會出現在執行統計資料 Dmv: [sys.dm_exec_procedure_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)和[sys.dm_exec_query_plan &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+>DBCC FREEPROCCACHE 不會清除原生編譯預存程序的執行統計資料。 程序快取沒有包含原生編譯預存程序的相關資訊。 收集自程序執行的任何執行統計資料，都將顯示於執行統計資料 DMV：[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 與 [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)。  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,7 +55,7 @@ SQL Server 的語法：
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
-Azure SQL 資料倉儲和 Parallel Data Warehouse 的語法：
+Azure SQL 資料倉儲和平行處理資料倉儲的語法：
   
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
@@ -65,39 +65,39 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>引數  
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*plan_handle*唯一識別批次已經執行且其計畫位於計畫快取的查詢計劃。 *plan_handle*是**varbinary(64)** ，且可以從下列動態管理物件取得：  
+*plan_handle* 會唯一識別批次的查詢計劃，該批次已經執行，且其計劃位於計畫快取中。 *plan_handle* 為 **varbinary(64)**，並可從下列動態管理物件中取得：  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle*来清除之批次的 SQL 控制代碼。 *sql_handle*是**varbinary(64)** ，且可以從下列動態管理物件取得：  
+*sql_handle* 是要清除之批次的 SQL 控制代碼。 *sql_handle* 為 **varbinary(64)**，並可從下列動態管理物件中取得：  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-*pool_name*是資源管理員資源集區的名稱。 *pool_name*是**sysname**而且可以藉由查詢取得[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)動態管理檢視。  
- 若要將資源管理員工作負載群組與資源集區產生關聯，查詢[sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)動態管理檢視。 工作階段的工作負載群組的相關資訊，如查詢[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)動態管理檢視。  
+*pool_name* 是 Resource Governor 資源集區的名稱。 *pool_name* 是 **sysname**，並可以藉由查詢 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 動態管理檢視來取得。  
+ 若要將 Resource Governor 工作負載群組與資源集區產生關聯，請查詢 [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 動態管理檢視。 如需工作階段之工作負載群組的相關資訊，請查詢 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 動態管理檢視。  
 
   
  WITH NO_INFOMSGS  
  隱藏所有參考訊息。  
   
  COMPUTE  
- 清除查詢計劃快取中的每個計算節點。 這是預設值。  
+ 清除每個計算節點中的查詢計劃快取。 這是預設值。  
   
  ALL  
- 從每個計算節點和 [控制] 節點，請清除查詢計劃快取。  
+ 清除每個計算節點和控制節點中的查詢計劃快取。  
 
 > [!NOTE]
-> 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`清除程序 （計劃） 快取範圍中的資料庫。
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 可清除範圍中之資料庫的程序 (計畫) 快取。
 
-## <a name="remarks"></a>備註  
-請利用 DBCC FREEPROCCACHE 小心清除計畫快取。 清除程序 （計劃） 快取會使所有的計劃被收回或傳入的查詢執行會編譯新的計畫，而不要重複使用任何先前的快取的計畫。 
+## <a name="remarks"></a>Remarks  
+請利用 DBCC FREEPROCCACHE 小心清除計畫快取。 清除程序 (計畫) 快取會使所有計畫被收回，且傳入的查詢執行會編譯新的計畫，而非重複使用任何先前的快取計畫。 
 
-這可能會造成的新編譯增加而增加數字的查詢效能突然暫時下降。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列參考訊息：「由於 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清。」 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+當新的編譯數目增加時，可能會造成查詢效能突然暫時降低。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列參考訊息：「由於 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清。」 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 下列重新設定作業也會清除程序快取：
 -   存取檢查快取 Bucket 計數  
@@ -118,33 +118,33 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 -   user options  
   
 ## <a name="result-sets"></a>結果集  
-當未指定 WITH NO_INFOMSGS 子句時，DBCC FREEPROCCACHE 會傳回:"DBCC 執行已完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。
+未指定 WITH NO_INFOMSGS 子句時，DBCC FREEPROCCACHE 會傳回：「DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。
   
 ## <a name="permissions"></a>Permissions  
-適用於： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+適用於：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - 需要伺服器的 ALTER SERVER STATE 權限。  
 
 適用於：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
-- 需要 DB_OWNER 固定的伺服器角色的成員資格。  
+- 需要 DB_OWNER 固定資料庫角色中的成員資格。  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>一般備註[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-可以同時執行多個 DBCC FREEPROCCACHE 命令。
-在[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]清除計畫快取可能會導致查詢效能降低暫存傳入的查詢編譯新的計畫，而不要重複使用任何先前的快取計畫。 
+## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 與 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的一般備註  
+可同時執行多個 DBCC FREEPROCCACHE 命令。
+在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，當傳入的查詢編譯新計畫，而不是重複使用任何先前快取的計畫時，清除計畫快取可能會導致查詢效能暫時降低。 
 
-DBCC FREEPROCCACHE （運算） 只會導致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]計算節點上執行時重新編譯查詢。 不會造成[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]平行查詢計畫所產生的控制節點上，重新編譯。
+DBCC FREEPROCCACHE (計算) 只會在於計算節點上執行時，使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新編譯查詢。 它不會使 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 重新編譯在控制節點上產生的平行處理查詢計劃。
 DBCC FREEPROCCACHE 可以在執行期間取消。
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>限制的事項[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制事項  
 DBCC FREEPROCCACHE 不可以在交易內執行。
-不支援 DBCC FREEPROCCAHCE 解釋陳述式中。
+不支援在 EXPLAIN 陳述式中執行 DBCC FREEPROCCAHCE。
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>中繼資料[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-新的資料列加入 sys.pdw_exec_requests 系統檢視表，當執行 DBCC FREEPROCCACHE。
+## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的中繼資料  
+執行 DBCC FREEPROCCACHE 時，新的資料列會加入至 sys.pdw_exec_requests 系統檢視。
 
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>範例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. 從計畫快取清除查詢計劃  
-下列範例會從計畫快取中指定查詢計劃控制代碼，藉以清除查詢計劃。 為確保範例查詢位於計畫快取中，會先執行查詢。 `sys.dm_exec_cached_plans`和`sys.dm_exec_sql_text`動態管理檢視會查詢來傳回查詢的計畫控制代碼。 
+下列範例會從計畫快取中指定查詢計劃控制代碼，藉以清除查詢計劃。 為確保範例查詢位於計畫快取中，會先執行查詢。 系統會查詢 `sys.dm_exec_cached_plans` 和 `sys.dm_exec_sql_text` 動態管理檢視以傳回查詢的計劃控制代碼。 
 
 然後會將結果集中的計畫控制代碼值插入到 `DBCC FREEPROCACHE` 陳述式中，就可以從計畫快取中僅移除該計畫。
   
@@ -177,14 +177,14 @@ GO
 ```  
   
 ### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. 從計畫快取清除所有計畫  
-下列範例會從計畫快取中清除所有元素。 WITH`NO_INFOMSGS`指定子句可防止資訊訊息顯示。
+下列範例會從計畫快取中清除所有元素。 系統會指定 WITH `NO_INFOMSGS` 子句以防止資訊訊息顯示出來。
   
 ```sql  
 DBCC FREEPROCCACHE WITH NO_INFOMSGS;  
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>C. 清除與資源集區相關聯的所有快取項目  
-下列範例會清除與指定之資源集區有關聯的所有快取項目。 `sys.dm_resource_governor_resource_pools`檢視第一次查詢來取得的值*pool_name*。
+下列範例會清除與指定之資源集區有關聯的所有快取項目。 系統會先查詢 `sys.dm_resource_governor_resource_pools` 檢視，以取得 *pool_name* 的值。
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  
@@ -193,27 +193,27 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. DBCC FREEPROCCACHE 基本語法範例  
-下列範例會移除所有現有的查詢計畫快取來自計算節點。 雖然內容設定為 UserDbSales，所有資料庫的計算節點查詢計劃快取將會移除。 WITH NO_INFOMSGS 子句可防止結果中出現資訊訊息。  
+下列範例會移除計算節點中所有現有的查詢計劃快取。 雖然內容是設定為 UserDbSales，但系統會將所有資料庫的計算節點查詢計劃快取移除。 WITH NO_INFOMSGS 子句可防止結果中出現資訊訊息。  
   
 ```sql
 USE UserDbSales;  
 DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;
 ```  
   
- 下列範例具有相同的結果與前一個範例中，不同之處在於告知性訊息會顯示在結果中。  
+ 下列範例和前一個範例的結果相同，不同的是資訊訊息會出現在結果中。  
   
 ```sql
 USE UserDbSales;  
 DBCC FREEPROCCACHE (COMPUTE);  
 ```  
   
-當要求參考用訊息，且執行成功時，查詢結果會有每個計算節點的一行。
+當要求資訊訊息且執行成功時，查詢結果針對每個計算節點都會顯示一行。
   
-### <a name="e-granting-permission-to-run-dbcc-freeproccache"></a>E. 授與權限來執行 DBCC FREEPROCCACHE  
-下列範例會提供登入執行 DBCC FREEPROCCACHE David 權限。  
+### <a name="e-granting-permission-to-run-dbcc-freeproccache"></a>E. 授與執行 DBCC FREEPROCCACHE 的權限  
+下列範例提供登入帳戶 David 執行 DBCC FREEPROCCACHE 的權限。  
   
 ```sql
 GRANT ALTER SERVER STATE TO David; 

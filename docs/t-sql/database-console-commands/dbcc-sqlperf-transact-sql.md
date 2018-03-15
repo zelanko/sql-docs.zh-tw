@@ -1,5 +1,5 @@
 ---
-title: "DBCC SQLPERF (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC SQLPERF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/07/2018
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-為所有資料庫提供交易記錄空間使用量的統計資料。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它也可用來重設等候和閂鎖的統計資料。
+為所有資料庫提供交易記錄空間使用量的統計資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，它可以用來重設等候及閂鎖統計資料。
   
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([某些區域處於預覽](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([某些區域為預覽版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +59,13 @@ DBCC SQLPERF
   
 ## <a name="arguments"></a>引數  
 LOGSPACE  
-傳回目前交易記錄大小以及用於每一個資料庫的記錄空間百分比。 您可以使用此資訊來監視交易記錄檔中使用的空間量。
+傳回目前交易記錄大小以及用於每一個資料庫的記錄空間百分比。 使用這些資訊可以監視交易記錄中所用的空間量。
 
 > [!IMPORTANT]
-> 如需有關交易記錄檔開頭的空間使用方式資訊[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，是指[註解](#Remarks)本主題中的區段。
+> 如需從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起有關交易記錄空間使用量資訊的詳細資訊，請參閱本主題中的[備註](#Remarks)一節。
   
 **"sys.dm_os_latch_stats"**, CLEAR  
-重設閂鎖統計資料。 如需詳細資訊，請參閱[sys.dm_os_latch_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). 此選項在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中無法使用。  
+重設閂鎖統計資料。 如需詳細資訊，請參閱 [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)。 此選項在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中無法使用。  
   
 **"sys.dm_os_wait_stats"**, CLEAR  
 重設等候統計資料。 如需詳細資訊，請參閱 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 此選項在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中無法使用。  
@@ -78,20 +78,20 @@ WITH NO_INFOMSGS
   
 |資料行名稱|定義|  
 |---|---|
-|**資料庫名稱**|顯示記錄統計資料的資料庫名稱。|  
-|**記錄檔大小 (MB)**|目前配置給記錄的大小。 這個值一定會比原先配置給記錄空間的量小，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會保留少量內部標頭資訊所用的磁碟空間。|  
-|**使用的記錄檔空間 （%）**|目前中用來儲存交易記錄資訊的記錄檔的百分比。|  
+|**Database Name**|顯示記錄統計資料的資料庫名稱。|  
+|**記錄大小 (MB)**|目前配置給記錄的大小。 這個值一定會比原先配置給記錄空間的量小，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會保留少量內部標頭資訊所用的磁碟空間。|  
+|**所用的記錄空間 (%)**|記錄檔目前使用於儲存交易記錄資訊的百分比。|  
 |**狀態**|記錄檔的狀態。 一律是 0。|  
   
 ## <a name="Remarks"></a> 備註  
-從開始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，使用[sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV，而不是`DBCC SQLPERF(LOGSPACE)`，傳回每個資料庫的交易記錄檔的空間使用方式資訊。    
+從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，請使用 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV 取代 `DBCC SQLPERF(LOGSPACE)` 來傳回每個資料庫交易記錄的空間使用量資訊。    
  
-交易記錄會記錄資料庫中所做的每一筆交易。 如需詳細資訊，請參閱[交易記錄 &#40;SQL Server &#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)和[SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。
+交易記錄會記錄資料庫中所做的每一筆交易。 如需詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 與 [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。
   
 ## <a name="permissions"></a>Permissions  
-在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行`DBCC SQLPERF(LOGSPACE)`需要`VIEW SERVER STATE`伺服器的權限。 若要重設等候和閂鎖的統計資料需要`ALTER SERVER STATE`伺服器的權限。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行 `DBCC SQLPERF(LOGSPACE)` 需要伺服器的 `VIEW SERVER STATE` 權限。 若要重設等候和閂鎖統計資料，需要伺服器的 `ALTER SERVER STATE` 權限。
   
-在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]標準和基本層需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]系統管理員帳戶。 不支援重設等候和閂鎖統計資料。
+在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 層需要資料庫的 `VIEW DATABASE STATE` 權限。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準和基本層需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 系統管理員帳戶。 不支援重設等候和閂鎖統計資料。
   
 ## <a name="examples"></a>範例  
   

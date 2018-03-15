@@ -1,5 +1,5 @@
 ---
-title: "DBCC USEROPTIONS (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC USEROPTIONS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -77,11 +77,11 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 當 READ_COMMITTED_SNAPSHOT 資料庫選項設為 ON 且交易隔離等級設為 'read committed' 時，DBCC USEROPTIONS 會報告 'read committed snapshot' 隔離等級。 實際的隔離等級為讀取認可。
   
 ## <a name="permissions"></a>Permissions  
-需要 **public** 角色中的成員資格。
+需要 **public** 角色的成員資格。
   
 ## <a name="examples"></a>範例  
 下列範例會針對目前連接傳回使用中的 SET 選項。

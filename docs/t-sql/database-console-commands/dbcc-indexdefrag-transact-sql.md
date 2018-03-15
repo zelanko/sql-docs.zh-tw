@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
 重組指定資料表或檢視的索引。
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]使用[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[新版](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ DBCC INDEXDEFRAG
   
 ## <a name="arguments"></a>引數  
  *database_name* | *database_id* | 0  
- 包含要重組之索引的資料庫。 如果指定 0，就會使用目前的資料庫。 資料庫名稱必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
+ 包含要重組之索引的資料庫。 如果指定 0，就會使用目前的資料庫。 資料庫名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
  *table_name* | *table_id* | *view_name* | *view_id*  
  包含要重組之索引的資料表或檢視。 資料表和檢視表名稱必須符合識別碼的規則。  
@@ -77,7 +77,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 DBCC INDEXDEFRAG 會重新組織索引的分葉層級，使頁面的實體順序符合分葉節點由左至右的邏輯順序，以改進索引掃描的效能。
   
 > [!NOTE]  
@@ -116,11 +116,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Permissions  
-呼叫端必須擁有資料表，或是屬於**sysadmin**固定伺服器角色、 **db_owner**固定資料庫角色或**db_ddladmin**固定的資料庫角色。
+呼叫端必須擁有資料表，或是系統管理員 **sysadmin** 固定伺服器角色、**db_owner** 固定資料庫角色，或 **db_ddladmin** 固定資料庫角色的成員。
   
 ## <a name="examples"></a>範例  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. 使用 DBCC INDEXDEFRAG 重組索引  
-下列範例會為所有資料分割的`PK_Product_ProductID`索引`Production.Product`資料表中`AdventureWorks`資料庫。
+下列範例會重組 `AdventureWorks` 資料庫之 `Production.Product`資料表中 `PK_Product_ProductID` 索引的所有分割區。
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

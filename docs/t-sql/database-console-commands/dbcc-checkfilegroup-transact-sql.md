@@ -1,5 +1,5 @@
 ---
-title: "DBCC CHECKFILEGROUP (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]檢查配置和結構完整性的所有資料表和索引檢視表中指定的檔案群組的目前資料庫。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]檢查目前資料庫之指定檔案群組中所有資料表和索引檢視的配置和結構完整性。
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
@@ -66,8 +66,8 @@ DBCC CHECKFILEGROUP
   
 ## <a name="arguments"></a>引數  
  *filegroup_name*  
- 這是在目前資料庫中要檢查資料表配置和結構完整性的檔案群組名稱。 若未指定，或指定 0，預設值就是主要檔案群組。 檔案群組名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
- *filegroup_name*不能是 FILESTREAM 檔案群組。  
+ 這是在目前資料庫中要檢查資料表配置和結構完整性的檔案群組名稱。 若未指定，或指定 0，預設值就是主要檔案群組。 檔案群組名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
+ *filegroup_name* 不能是 FILESTREAM 檔案群組。  
   
  *filegroup_id*  
  這是在目前資料庫中要檢查資料表配置和結構完整性的檔案群組識別碼 (ID)。  
@@ -98,31 +98,31 @@ DBCC CHECKFILEGROUP
 >  指定 PHYSICAL_ONLY 會造成 DBCC CHECKFILEGROUP 略過 FILESTREAM 資料的所有檢查。  
   
  MAXDOP  
- **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 透過[新版](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
- 覆寫**的最大平行處理原則程度**組態選項的**sp_configure**陳述式。 MAXDOP 可以超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用資源管理員所設定的值，Database Engine 會使用資源管理員 MAXDOP 值，ALTER WORKLOAD GROUP (TRANSACT-SQL) 中所述。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 覆寫陳述式之 **sp_configure** 的 **max degree of parallelism** 設定選項。 MAXDOP 可能會超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用 Resource Governor 所設定的值，資料庫引擎就會使用 ALTER WORKLOAD GROUP (Transact-SQL) 中所描述的 Resource Governor MAXDOP 值。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 > [!CAUTION]  
 >  如果 MAXDOP 設定為零，則伺服器會選擇平行處理原則的最大程度。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKFILEGROUP 和 DBCC CHECKDB 是類似的 DBCC 命令。 主要差異在於 DBCC CHECKFILEGROUP 只限於單一指定檔案群組和必要的資料表。
 DBCC CHECKFILEGROUP 會執行下列命令：
--   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)的檔案群組。  
--   [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)每份資料表和索引檢視表的檔案群組中。  
+-   檔案群組的 [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)。  
+-   檔案群組中每份資料表和索引檢視表的 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
   
 不需要在 DBCC CHECKFILEGROUP 之外，個別執行 DBCC CHECKALLOC 或 DBCC CHECKTABLE。
   
 ## <a name="internal-database-snapshot"></a>內部資料庫快照集  
-DBCC CHECKFILEGROUP 會利用內部資料庫快照集來提供執行這些檢查所需具備的交易一致性。 如需詳細資訊，請參閱[檢視資料庫快照集 &#40; 的疏鬆檔案大小TRANSACT-SQL &#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)和中的 「 DBCC 內部資料庫快照集使用方式 」 一節[DBCC &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKFILEGROUP 會利用內部資料庫快照集來提供執行這些檢查所需具備的交易一致性。 如需詳細資訊，請參閱[檢視資料庫快照集的疏鬆檔案大小 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 和 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md) 中的＜DBCC 內部資料庫快照集使用方式＞一節。
 如果無法建立快照集，或指定了 TABLOCK 選項，DBCC CHECKFILEGROUP 會取得鎖定來取得必要的一致性。 在這個情況下，則需要獨佔資料庫鎖定，才能執行配置檢查，而且需要共用資料表鎖定，才能執行資料表檢查。 TABLOCK 會使 DBCC CHECKFILEGROUP 在負荷很重的情況下，仍能在資料庫上執行得比較快，但當 DBCC CHECKFILEGROUP 正在執行時，它會減少資料庫上所能使用的並行。
   
 > [!NOTE]  
 >  針對 tempdb 執行 DBCC CHECKFILEGROUP 並不會執行任何配置檢查，而且必須取得共用資料表鎖定，才能執行資料表檢查。 這是因為基於效能的考量，tempdb 並無法使用資料庫快照集。 這表示無法取得必要的交易一致性。  
   
 ## <a name="checking-objects-in-parallel"></a>平行檢查物件  
-依預設，DBCC CHECKFILEGROUP 會執行物件的平行檢查。 查詢處理器會自動判斷平行處理原則的程度。 最大平行處理原則程度的設定方式與平行查詢相同。 若要限制 DBCC 檢查可用的處理器數目上限，請使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
-您可以利用追蹤旗標 2528 來停用平行檢查。 如需詳細資訊，請參閱[追蹤旗標&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+依預設，DBCC CHECKFILEGROUP 會執行物件的平行檢查。 查詢處理器會自動判斷平行處理原則的程度。 最大平行處理原則程度的設定方式與平行查詢相同。 若要限制 DBCC 檢查所能使用的最大處理器數目，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+您可以利用追蹤旗標 2528 來停用平行檢查。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
   
 ## <a name="nonclustered-indexes-on-separate-filegroups"></a>個別檔案群組中的非叢集索引  
 如果指定檔案群組中的非叢集索引與另一個檔案群組中的資料表相關聯，就不會檢查索引，因為基底資料表無法用來進行驗證。
@@ -137,18 +137,18 @@ DBCC CHECKFILEGROUP 會利用內部資料庫快照集來提供執行這些檢查
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 錯誤訊息  
 DBCC CHECKFILEGROUP 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息中會指出命令已經終止，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
   
-|State|Description|  
+|State|描述|  
 |-----------|-----------------|  
 |0|已引發錯誤號碼 8930。 這表示中繼資料損毀使 DBCC 命令終止。|  
-|1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|  
+|@shouldalert|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|  
 |2|修復緊急模式資料庫期間發生失敗。|  
 |3|這表示中繼資料損毀使 DBCC 命令終止。|  
 |4|偵測到判斷提示或存取違規。|  
 |5|發生使 DBCC 命令終止的未知錯誤。|  
   
 ## <a name="error-reporting"></a>錯誤報告  
-小型傾印檔案 (SQLDUMP*nnnn*.txt) 中建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每當 DBCC CHECKFILEGROUP 偵測到損毀錯誤時的記錄檔目錄。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已啟用「功能使用方式」資料收集及「錯誤報告」功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
-傾印檔案包含 DBCC CHECKFILEGROUP 命令的結果以及其他診斷輸出。 這個檔案具有限制的任意存取控制清單 (DACL)。 存取限於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶和成員的**sysadmin**角色。 根據預設， **sysadmin**角色包含 Windows BUILTIN\Administrators 群組和本機系統管理員群組的所有成員。 如果資料收集程序失敗，DBCC 命令不會失敗。
+每當 DBCC CHECKFILEGROUP 偵測到損毀錯誤時，都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目錄中建立小型傾印檔案 (SQLDUMP*nnnn*.txt)。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已啟用「功能使用方式」資料收集及「錯誤報告」功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
+傾印檔案包含 DBCC CHECKFILEGROUP 命令的結果以及其他診斷輸出。 這個檔案具有限制的任意存取控制清單 (DACL)。 存取權會限制為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶及系統管理員 **sysadmin** 角色的成員。 依預設，系統管理員 **sysadmin** 角色包含 Windows BUILTIN\Administrators 群組及本機系統管理員群組的所有成員。 如果資料收集程序失敗，DBCC 命令不會失敗。
   
 ## <a name="resolving-errors"></a>解決錯誤  
 如果 DBCC CHECKFILEGROUP 報告任何錯誤，建議您從資料庫備份中還原資料庫。 請注意，DBCC CHECKFILEGROUP 不能指定修復選項。
@@ -212,7 +212,7 @@ GO
 ```  
   
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. 檢查 AdventureWorks PRIMARY 檔案群組，不含非叢集索引  
-下列範例會檢查`AdventureWorks2012`資料庫主要檔案群組 （不包括非叢集索引） 藉由指定主要檔案群組中，識別碼和`NOINDEX`。
+下列範例會藉由指定主要檔案群組的識別碼，再指定 `NOINDEX`，以檢查 `AdventureWorks2012` 資料庫主要檔案群組 (排除非叢集索引)。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -233,7 +233,7 @@ WITH ESTIMATEONLY;
   
 ## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[FILEGROUP_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)  
+[FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)  
 [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)  
 [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)  
 [sys.sysfilegroups &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)  

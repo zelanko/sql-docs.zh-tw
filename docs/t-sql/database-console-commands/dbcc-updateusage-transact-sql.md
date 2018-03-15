@@ -66,7 +66,7 @@ DBCC UPDATEUSAGE
   
 ## <a name="arguments"></a>引數  
 *database_name* | *database_id* | 0  
-這是要報告和更正空間使用方式統計資料之資料庫的名稱或識別碼。 如果指定 0，就會使用目前的資料庫。 資料庫名稱必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
+這是要報告和更正空間使用方式統計資料之資料庫的名稱或識別碼。 如果指定 0，就會使用目前的資料庫。 資料庫名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
 這是要報告和更正空間使用方式統計資料之資料表或索引檢視表的名稱或識別碼。 資料表和檢視表名稱必須符合識別碼的規則。  
@@ -83,13 +83,13 @@ NO_INFOMSGS
 COUNT_ROWS  
 指定利用資料表或檢視表中目前的資料列計數來更新 row count 資料行。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 DBCC UPDATEUSAGE 會更正資料表或索引中的每一個資料分割的資料列、使用頁面、保留頁面、分葉頁和資料頁的計數。 如果系統資料表中沒有不準確的情況，DBCC UPDATEUSAGE 不會傳回任何資料。 如果找到且更正了不準確的情況，就不會使用 WITH NO_INFOMSGS，DBCC UPDATEUSAGE 會傳回系統資料表所更新的資料列和資料行。
   
 DBCC CHECKDB 已經增強，可在頁面或資料列計數變成負數時偵測出。 偵測到時，DBCC CHECKDB 輸出會包含警告及執行 DBCC UPDATEUSAGE 來處理這個問題的建議。
   
 ## <a name="best-practices"></a>最佳作法  
-我們建議下列：
+我們的建議如下：
 -   請勿例行性地執行 DBCC UPDATEUSAGE。 DBCC UPDATEUSAGE 可能需要一些時間才能在大型資料表或資料庫上執行，因此，除非您懷疑 sp_spaceused 所傳回的值不正確，否則不應僅使用它。
 -   只有在資料庫進行頻繁的資料定義語言 (DDL) 修改 (如 CREATE、ALTER 或 DROP 陳述式) 時，才考慮例行地執行 DBCC UPDATEUSAGE (例如，每週)。  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. 更新 Employee 資料表的頁面及 (或) 資料列計數  
-下列範例會報告已更新的頁面或資料列計數資訊`Employee`資料表中[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。
+下列範例會報告 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中 `Employee` 資料表的已更新頁面或資料列計數資訊。
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

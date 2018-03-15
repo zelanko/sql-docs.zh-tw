@@ -25,12 +25,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (TRANSACT-SQL)
+# <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-顯示大小和每個資料分割的資料表中的資料列數目[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫。
+顯示 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 資料庫的資料表中每個分割區的資料列大小和數目。
   
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
   
@@ -41,27 +41,27 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ```  
   
 ## <a name="arguments"></a>引數  
- [ *database_name* 。 [ *schema_name* ]。 | *schema_name* 。 ] *table_name*  
- 一個、 兩個或三部分名稱，要顯示的資料表。  兩個或三部分資料表名稱，名稱必須括在雙引號 ("")。 使用引號括住的一段式資料表名稱是選擇性的。  
+ [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ 要顯示的資料表的一段式、兩段式或三段式名稱。  兩段式或三段式的資料表名稱必須以雙引號 ("") 括住。 您可以選擇是否使用引號括住一段式資料表名稱。  
   
 ## <a name="permissions"></a>Permissions
-需要**VIEW SERVER STATE**權限。
+需要 **VIEW SERVER STATE** 權限。
   
 ## <a name="result-sets"></a>結果集  
 這是 DBCC PDW_SHOWPARTITIONSTATS 命令的結果。
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|partition_number|int|資料分割編號。|  
-|used_page_count|bigint|針對資料使用的頁面數目。|  
-|reserved_page_count|bigint|分割區配置的頁面數目。|  
-|row_count|bigint|資料分割中的資料列數目。|  
-|pdw_node_id|int|計算節點的資料。|  
-|distribution_id|int|散發資料的識別碼。|  
+|partition_number|ssNoversion|資料分割編號。|  
+|used_page_count|BIGINT|資料的使用頁數。|  
+|reserved_page_count|BIGINT|配置給分割區的頁數。|  
+|row_count|BIGINT|分割區中的資料列數。|  
+|pdw_node_id|ssNoversion|資料的計算節點。|  
+|distribution_id|ssNoversion|資料的分佈識別碼。|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. DBCC PDW_SHOWPARTITIONSTATS 基本語法範例  
-下列範例會顯示已使用空間和資料列數目 FactInternetSales 資料表中的資料分割所[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]資料庫。
+下列範例依分割區顯示 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料庫中 FactInternetSales 資料表的已使用空間和資料列數目。
   
 ```sql
 DBCC PDW_SHOWPARTITIONSTATS ("ssawPDW.dbo.FactInternetSales");  

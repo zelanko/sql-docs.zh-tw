@@ -1,5 +1,5 @@
 ---
-title: "DBCC SHRINKLOG （Azure SQL 資料倉儲） |Microsoft 文件"
+title: "DBCC SHRINKLOG (Azure SQL 資料倉儲) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -25,12 +25,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG （Azure SQL 資料倉儲）
+# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-減少交易記錄檔的大小*跨設備*目前[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫。 資料是以壓縮交易記錄檔磁碟重組。 經過一段時間，在資料庫交易記錄可能會變得分散和效率不佳。 使用 DBCC SHRINKLOG 來減少片段化並減少記錄檔大小。
+跨設備減少目前的 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫的交易記錄大小。 資料重組是為了壓縮交易記錄。 資料庫交易記錄可能會隨著時間變得分散和沒有效率。 使用 DBCC SHRINKLOG 可減少資料分散程度，並縮減記錄大小。
   
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
   
@@ -42,25 +42,25 @@ DBCC SHRINKLOG
 ```  
   
 ## <a name="arguments"></a>引數  
-大小 = { *target_size* [MB |**GB** |TB]} |**預設**。  
-*target_size* DBCC SHRINKLOG 完成之後，所有計算節點，都則所需的交易記錄檔大小。 它是大於 0 的整數。  
-記錄檔大小是以 (mb)、 (gb) 或 tb 為單位。 它是交易記錄檔的所有計算節點上的合併的大小。  
-根據預設，DBCC SHRINKLOG 降低交易記錄檔儲存在資料庫的中繼資料中的記錄檔大小。 中繼資料中的記錄檔大小由在 LOG_SIZE 參數[CREATE DATABASE &#40;Azure SQL 資料倉儲 &#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)或[ALTER DATABASE &#40;Azure SQL 資料倉儲 &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md). DBCC SHRINKLOG 可交易記錄大小減少為預設值時`SIZE=DEFAULT`指定，或當`SIZE`省略子句。
+SIZE = { *target_size* [ MB | **GB** | TB ]  } | **DEFAULT**。  
+*target_size* 是 DBCC SHRINKLOG 完成後期望的交易記錄大小 (跨所有計算節點)。 其為大於 0 的整數。  
+記錄大小的測量單位是 MB、GB 或 TB。 它是所有計算節點上的交易記錄合併的大小。  
+根據預設，DBCC SHRINKLOG 會將交易記錄縮減為儲存在資料庫中繼資料中的記錄大小。 中繼資料的記錄大小是由 [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) or [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) 中的 LOG_SIZE 參數所決定。 指定 `SIZE=DEFAULT` 或省略 `SIZE` 子句時，DBCC SHRINKLOG 會將交易記錄大小縮減至預設大小。
   
 WITH NO_INFOMSGS  
-DBCC SHRINKLOG 結果中，不會顯示參考用訊息。  
+DBCC SHRINKLOG 結果中不會顯示資訊訊息。  
   
 ## <a name="permissions"></a>Permissions  
 需要 ALTER SERVER STATE 權限。
   
 ## <a name="general-remarks"></a>一般備註  
-DBCC SHRINKLOG 不會變更儲存在資料庫的中繼資料中的記錄檔大小。 中繼資料會繼續包含 CREATE DATABASE 或 ALTER DATABASE 陳述式中指定了 LOG_SIZE 參數。
+DBCC SHRINKLOG 不會變更儲存在資料庫中繼資料的記錄大小。 中繼資料會繼續包含在 CREATE DATABASE 或 ALTER DATABASE 陳述式中指定的 LOG_SIZE 參數。
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. 壓縮交易記錄所建立的資料庫指定的原始大小。  
-假設位址資料庫建立時，位址資料庫的交易記錄檔已設定為 100 MB。 也就是位址的 CREATE DATABASE 陳述式有 LOG_SIZE = 100 MB。 現在，假設記錄成長過為 150MB，而且您想要壓縮回到 100 MB。
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. 將交易記錄縮減至 CREATE DATABASE 指定的原始大小。  
+假設位址資料庫建立時設定的交易記錄大小是 100 MB。 也就是說，位址資料庫的 CREATE DATABASE 陳述式中含有 LOG_SIZE = 100 MB。 現在，假設記錄已成長至 150 MB，而您想將記錄壓縮回 100 MB。
   
-每個下列陳述式會嘗試將位址資料庫的交易記錄檔壓縮為 100 mb 的預設大小。 如果壓縮到 100 MB 的記錄將會導致資料遺失，DBCC SHRINKLOG 將會壓縮記錄檔到大小最小，大於 100 MB，而不會遺失資料。
+下方的各個陳述式會嘗試將位址資料庫的交易記錄壓縮至預設大小 100 MB。 如果將記錄壓縮至 100 MB 會導致資料遺失，DBCC SHRINKLOG 會盡可能將記錄壓縮到沒有資料遺失的最小大小 (大於 100 MB)。
   
 ```sql
 USE Addresses;  

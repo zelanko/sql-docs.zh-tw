@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 36a844cb2dcda45701c29066b825e64a864d5757
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>將 SQL Server Integration Services 工作負載隨即轉移至雲端
 您現在可以將 SQL Server Integration Services (SSIS) 套件和工作負載移至 Azure 雲端。
@@ -91,6 +91,8 @@ Data Factory 也支援其他類型的 Integration Runtime。 若要深入了解 
 -   命令列工具
 -   PowerShell
 -   C# 和 SSIS 管理物件模型
+
+若要開始使用，請參閱[在 Azure 上部署、執行及監視 SSIS 套件](ssis-azure-deploy-run-monitor-tutorial.md)。
 
 ### <a name="monitor-packages"></a>監視套件
 若要監視 SSMS 中的執行中套件，您可以在 SSMS 中使用下列其中一個報告工具。

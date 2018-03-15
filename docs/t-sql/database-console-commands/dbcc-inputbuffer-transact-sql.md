@@ -1,5 +1,5 @@
 ---
-title: "DBCC INPUTBUFFER (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-顯示執行個體的用戶端所傳送的最後一個陳述式[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+顯示從用戶端傳送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體的上一個陳述式。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -58,7 +58,7 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 *request_id*  
 這是要在目前工作階段內搜尋的確實要求 (批次)。  
 
-下列查詢會傳回*request_id*:  
+下列查詢會傳回 *request_id*：  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
@@ -73,11 +73,11 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>結果集  
 DBCC INPUTBUFFER 會傳回含有下列資料行的資料列集。
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|事件類型。 這可能是**RPC 事件**或**語言事件**。 輸出會是**無事件**時偵測到任何的最後一個事件。|  
-|**參數**|**smallint**|0 = 文字<br /><br /> 1-  *n*  = 參數|  
-|**EventInfo**|**nvarchar(4000)**|如**EventType**是 RPC， **EventInfo**只包含程序名稱。 如**EventType**的語言，就會顯示事件的前 4000 個字元。|  
+|**EventType**|**nvarchar(30)**|事件類型。 這可能會是「RPC 事件」或「語言事件」。 如果未偵測到上一個事件，輸出將為「無事件」。|  
+|**參數**|**smallint**|0 = 文字<br /><br /> 1- *n* = 參數|  
+|**EventInfo**|**nvarchar(4000)**|如果 **EventType** 是 RPC，**EventInfo**只會包含程序名稱。 如果 **EventType** 是「語言」，便只會顯示事件的前 4000 個字元。|  
   
 例如，當緩衝區內的最後一個事件是 DBCC INPUTBUFFER(11)，DBCC INPUTBUFFER 會傳回下列結果集。
   
@@ -92,19 +92,19 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
 
 > [!NOTE]
-> 從開始[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 中，使用[sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)傳回陳述式的執行個體送出有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+> 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始，請使用 [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) 來傳回提交至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之執行個體的相關陳述式資訊。
 
 ## <a name="permissions"></a>Permissions  
-在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要下列其中之一：
--   使用者必須是成員**sysadmin**固定的伺服器角色。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，需要下列其中之一：
+-   使用者必須是系統管理員 **sysadmin** 固定伺服器角色的成員。  
 -   使用者必須擁有 VIEW SERVER STATE 權限。  
--   *session_id*必須是執行命令的工作階段識別碼相同。 若要判斷工作階段識別碼，請執行下列查詢：  
+-   *session_id* 必須與執行命令的工作階段識別碼相同。 若要判斷工作階段識別碼，請執行下列查詢：  
   
 ```sql
 SELECT @@spid;  
 ```
   
-在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 層需要資料庫的 VIEW DATABASE STATE 權限。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]標準和基本層需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]系統管理員帳戶。
+在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 層需要資料庫中的 VIEW DATABASE STATE 權限。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準和基本層需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 系統管理員帳戶。
   
 ## <a name="examples"></a>範例  
 下列範例會在先前的連接執行長交易時，在第二個連接上執行 `DBCC INPUTBUFFER`。

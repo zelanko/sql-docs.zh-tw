@@ -1,5 +1,5 @@
 ---
-title: "DBCC FLUSHAUTHCACHE (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -31,10 +31,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (TRANSACT-SQL)
+# <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-包含登入與目前使用者資料庫中的防火牆規則的相關資訊的資料庫驗證快取會清空[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 本聲明不適用於的邏輯 master 資料庫，因為 master 資料庫中包含登入和防火牆規則的相關資訊的實體儲存體。 執行陳述式的使用者和其他目前連接的使用者保持連接。 (如目前不支援 DBCC FLUSHAUTHCACHE [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。)
+針對[!INCLUDE[ssSDS](../../includes/sssds-md.md)]中目前的使用者資料庫，清空包含登入和防火牆規則相關資訊的資料庫驗證快取。 此陳述式不適用於邏輯 master 資料庫，因為 master 資料庫包含登入和防火牆規則相關資訊的實體儲存體。 執行陳述式的使用者和目前連線的其他使用者會保持連線。 ([!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]目前不支援 DBCC FLUSHAUTHCACHE。)
  
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,15 +47,15 @@ DBCC FLUSHAUTHCACHE [ ; ]
 ## <a name="arguments"></a>引數  
 無。
   
-## <a name="remarks"></a>備註  
-驗證快取建立登入與伺服器防火牆規則，會儲存在 master 中，並將它們放置在使用者資料庫中的記憶體中的複本。  因為自主的資料庫使用者的資訊已儲存在使用者資料庫中，自主的資料庫使用者不是驗證快取的一部分。
-持續作用中的連線至[!INCLUDE[ssSDS](../../includes/sssds-md.md)]需要重新授權 (由執行[!INCLUDE[ssDE](../../includes/ssde-md.md)]) 至少每隔 10 小時。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]嘗試重新授權使用最初提交的密碼和使用者不需要輸入。 基於效能考量，當密碼重設[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，此連接將不會重新驗證，即使因為連接共用會重設連接。 這是在內部部署的行為不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果密碼已變更，因為一開始授權連接，連接必須終止，並使用新的密碼時，建立新的連接。 KILL DATABASE CONNECTION 權限的使用者可以明確地結束連接[!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用[KILL &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md)命令。
+## <a name="remarks"></a>Remarks  
+驗證快取會複製儲存在 master 資料庫中的登入與伺服器防火牆規則，然後放在使用者資料庫的記憶體中。  因為自主資料庫使用者的資訊已儲存在使用者資料庫中，故自主資料庫使用者不是驗證快取的一部分。
+持續作用中的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 連線至少每 10 小時就需要授權 (由[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行)。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]會嘗試使用最初提交的密碼重新授權，而且不需要使用者輸入。 基於效能考量，當密碼在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中重設時，不會重新驗證連線，即使連線因為連線共用而重設。 這和內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為不同。 如果自從連線初始授權後密碼已經變更，則必須中斷該連線，然後使用新密碼建立新連線。 具有 KILL DATABASE CONNECTION 權限的使用者可以使用 [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md) 命令明確地中斷對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的連線。
   
 ## <a name="permissions"></a>Permissions  
-需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]系統管理員帳戶。
+需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 系統管理員帳戶。
   
 ## <a name="example"></a>範例  
-下列陳述式會清除驗證快取目前的資料庫。
+下列陳述式會清除目前資料庫的驗證快取。
   
 ```sql
 DBCC FLUSHAUTHCACHE;  
