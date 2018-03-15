@@ -1,5 +1,5 @@
 ---
-title: "STCurveN (geometry 資料類型) |Microsoft 文件"
+title: "STCurveN (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geometry-data-type"></a>STCurveN (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-傳回從指定的曲線**幾何**這個執行個體是**LineString**， **CircularString**， **CompoundCurve**，或**MultiLineString**。
+從 **geometry** 執行個體傳回指定的 **LineString**、**CircularString**、**CompoundCurve**, 或 **MultiLineString** 曲線。
   
 ## <a name="syntax"></a>語法  
   
@@ -42,26 +42,26 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *curve_index*  
- 是**int**介於 1 到中的曲線數目之間的運算式**幾何**執行個體。  
+ 這是 1 與 **geometry** 執行個體中曲線數目之間的 **int** 運算式。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="exceptions"></a>例外狀況  
- 如果*curve_index* < 1 則`ArgumentOutOfRangeException`就會擲回。  
+ 如果 *curve_index* < 1，就會擲回 `ArgumentOutOfRangeException`。  
   
-## <a name="remarks"></a>備註  
- **NULL**時，會傳回下列任一項，就會發生：  
+## <a name="remarks"></a>Remarks  
+ 當發生下列任何狀況時，會傳回 **NULL**：  
   
--   **幾何**執行個體已宣告，但未具現化  
+-   已宣告 **geometry** 執行個體，但未具現化  
   
--   **幾何**是空的執行個體  
+-   **geometry** 執行個體是空的  
   
--   *curve_index*超過中的曲線數目**幾何**執行個體  
+-   *curve_index* 超出 **geometry** 執行個體中的曲線數目  
   
--   **幾何**執行個體是**點**， **MultiPoint**，**多邊形**， **CurvePolygon**，或**MultiPolygon**  
+-   **geometry** 執行個體是 **Point**、**MultiPoint**、**Polygon**、**CurvePolygon** 或 **MultiPolygon**  
   
 ## <a name="examples"></a>範例  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
  請注意，前三個範例的結果都相同。 無論使用何種 WKT (Well-known Text) 格式來輸入相同的曲線順序，使用 `STCurveN()` 執行個體時，`CompoundCurve` 所傳回的結果都相同。  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. 呼叫 STCurveN() 之前，先驗證參數  
- 下列範例示範如何確定`@n`是否有效，才能呼叫`STCurveN()`方法：  
+ 下列範例示範如何在呼叫 `STCurveN()`方法之前先確認 `@n` 有效：  
   
 ```
  DECLARE @g geometry;  
@@ -118,7 +118,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ## <a name="see-also"></a>另請參閱  
- [STNumCurves &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
+ [STNumCurves &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STEndpoint (geometry 資料類型) |Microsoft 文件"
+title: "STEndpoint (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回的結束點**幾何**執行個體。
+傳回 **geometry** 執行個體的終點。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- 開放式地理空間協會 (OGC) 類型：**點**  
+ 開放地理空間協會 (OGC) 類型：**Point**  
   
-## <a name="remarks"></a>備註  
- `STEndPoint()`相當於[STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints())。  
+## <a name="remarks"></a>Remarks  
+ `STEndPoint()` 等於 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints())。  
   
- 這個方法會傳回 null，如果呼叫空**幾何**執行個體。  
+ 這個方法如果在空的 **geometry** 執行個體上呼叫，就會傳回 Null。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立具有 `LineString` 的 `STGeomFromText()` 例項，並使用 `STEndpoint()` 來擷取 `LineString` 的終點。  

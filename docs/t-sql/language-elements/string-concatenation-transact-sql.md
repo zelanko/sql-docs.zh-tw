@@ -1,5 +1,5 @@
 ---
-title: "+ （字串串連）(TRANSACT-SQL) |Microsoft 文件"
+title: "+ (字串串連) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="-string-concatenation-transact-sql"></a>+ (字串串連) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  這是字串運算式中的運算子，用來將兩個或更多字元或二進位字串、資料行，或字串和資料行名稱的組合，串連成單一運算式 (字串運算子)。  例如`SELECT 'book'+'case';`傳回`bookcase`。
+  這是字串運算式中的運算子，用來將兩個或更多字元或二進位字串、資料行，或字串和資料行名稱的組合，串連成單一運算式 (字串運算子)。  例如 `SELECT 'book'+'case';` 會傳回 `bookcase`。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,9 +49,9 @@ expression + expression
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)之任何資料類型的字元和二進位資料類型類別目錄，除了**映像**， **ntext**，或**文字**資料型別。 兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。  
+ 這是字元和二進位資料類型類別目錄之任何資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **image**、**ntext** 或 **text** 資料類型除外。 兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。  
   
- 當串連二進位字串和二進位字串之間的任何字元時，必須使用指向字元資料的明確轉換。 下列範例示範當`CONVERT`，或`CAST`，必須搭配二進位串連及何時`CONVERT`，或`CAST`，不需要使用。  
+ 當串連二進位字串和二進位字串之間的任何字元時，必須使用指向字元資料的明確轉換。 下列範例會顯示 `CONVERT` 或 `CAST` 何時必須搭配二進位串連來使用，何時不需要使用 `CONVERT` 或 `CAST`。  
   
 ```  
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
@@ -73,8 +73,8 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>結果類型  
  傳回優先順序最高之引數的資料類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>備註  
- + (字串串連) 運算子的行為，在使用空白、長度為零的字串時，與使用 NULL 或未知的值時，各不相同。 長度為零的字元字串可以指定為兩個單引號，引號內不含任何字元。 長度為零的二進位字串可以指定為不含以十六進位常數指定之任何二進位值的 0x。 串連長度為零的字串，一律會串連兩個指定的字串。 當您使用含 Null 值的字串時，串連結果會隨著工作階段設定而不同。 正如同在 Null 值上執行的算術運算，當未知的值加上 Null 值時，結果通常是未知的值，以 Null 值來執行的字串串連作業也應該產生 Null 結果。 不過，您可以變更此行為變更的設定`CONCAT_NULL_YIELDS_NULL`目前工作階段。 如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ + (字串串連) 運算子的行為，在使用空白、長度為零的字串時，與使用 NULL 或未知的值時，各不相同。 長度為零的字元字串可以指定為兩個單引號，引號內不含任何字元。 長度為零的二進位字串可以指定為不含以十六進位常數指定之任何二進位值的 0x。 串連長度為零的字串，一律會串連兩個指定的字串。 當您使用含 Null 值的字串時，串連結果會隨著工作階段設定而不同。 正如同在 Null 值上執行的算術運算，當未知的值加上 Null 值時，結果通常是未知的值，以 Null 值來執行的字串串連作業也應該產生 Null 結果。 不過，您可以變更目前工作階段的 `CONCAT_NULL_YIELDS_NULL` 設定來變更這個行為。 如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。  
   
  如果字串的串連結果超出 8,000 位元組的限制，就會截斷結果。 不過，如果至少有一個串連的字串是大數值類型時，就不會截斷。  
   
@@ -92,7 +92,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```  
   
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. 組合數值和日期資料類型  
- 下列範例會使用`CONVERT`函數來串連**數值**和**日期**資料型別。  
+ 下列範例利用 `CONVERT` 函數來串連 **numeric** 和 **date** 資料類型。  
   
 ```  
 -- Uses AdventureWorks  
@@ -138,8 +138,8 @@ GO
  (3 row(s) affected)
  ```  
  
-### <a name="d-using-large-strings-in-concatenation"></a>D. 在串連中使用大型的字串
-下列範例串連多個字串來形成一個長字串，並嘗試計算最終的字串的長度。 結果集的最後一個長度是 16000，因為運算式評估開始，從保留的是， @x + @z + @y = > (@x + @z) + @y。 在此情況下的結果 (@x + @z) 會被截斷為 8000 個位元組，然後@y加入至結果集，使最終的字串長度 16000。 因為@y是字串的大型值型別，就不會截斷。
+### <a name="d-using-large-strings-in-concatenation"></a>D. 在串連中使用大型字串
+下列範例會串連多個字串來形成一個長字串，然後嘗試計算最終字串的長度。 結果集的最終長度是 16000，因為運算式評估是從左邊開始的，亦即 @x + @z + @y => (@x + @z) + @y。 在此情況下，(@x + @z) 的結果會被截斷為 8000 個位元組，接著 @y 再加入至結果集，使最終字串長度為 16000。 因為 @y 是大型實值型別字串，因此不會發生截斷。
 
 ```
 DECLARE @x varchar(8000) = replicate('x', 8000)
@@ -159,10 +159,10 @@ GO
   
  (1 row(s) affected)
  ```  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-multiple-string-concatenation"></a>E. 使用多重字串串連  
- 下列範例會串連來形成一個長字串，以顯示姓氏和名字首字母總裁範例資料庫內的多個字串。 在姓氏之後，加上逗號，在第一個首字母之後，加上句點。  
+ 下列範例串連多個字串來形成一個長字串，以顯示簡單資料庫中副總裁的姓氏和第一個首字母。 在姓氏之後，加上逗號，在第一個首字母之後，加上句點。  
   
 ```  
 -- Uses AdventureWorks  
@@ -184,14 +184,14 @@ Welcker, B.        Vice President of Sales
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [+ = &#40;字串串連作業 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
+ [+= &#40;字串串連指派&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [資料類型轉換 &#40; Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
   

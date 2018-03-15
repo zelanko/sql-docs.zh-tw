@@ -1,5 +1,5 @@
 ---
-title: "Geography 執行個體上的 OGC 方法 |Microsoft 文件"
+title: "地理例項上的 OGC 方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ogc-methods-on-geography-instances"></a>地理位置例項上的 OGC 方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援開放式地理空間協會 (OGC) 方法上**geography**執行個體。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 **geography** 執行個體上的開放地理空間協會 (OGC) 方法。  
   
  如需有關 OGC 規格的詳細資訊，請參閱下列資源：  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STBuffer](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)  
   
--   [STCurveN &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/stcurven-geography-data-type.md)  
+-   [STCurveN &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/stcurven-geography-data-type.md)  
   
--   [STCurveToLine &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md)  
+-   [STCurveToLine &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 01/25/2018
 -   [STUnion](../../t-sql/spatial-geography/stunion-geography-data-type.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Geography 執行個體上的擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [地理執行個體上擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [OGC 靜態地理方法](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
  [擴充的靜態地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   

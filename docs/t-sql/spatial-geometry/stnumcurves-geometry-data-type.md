@@ -1,5 +1,5 @@
 ---
-title: "STNumCurves (geometry 資料類型) |Microsoft 文件"
+title: "STNumCurves (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-這個方法會傳回中的曲線數目**幾何**一維空間資料類型執行個體時，執行個體。 一維空間資料類型包括**LineString**， **CircularString**，和**CompoundCurve**。 `STNumCurves`（） 只適用於簡單類型。不適用於**幾何**集合喜歡**MultiLineString**。
+當 **geometry** 執行個體是一維空間資料類型時，這個方法會傳回此執行個體中的曲線數目。 一維空間資料類型包括 **LineString**、**CircularString** 及 **CompoundCurve**。 `STNumCurves`() 只能在簡單類型上運作；它不能與 **geometry**集合 (例如 **MultiLineString**) 搭配運作。
   
 ## <a name="syntax"></a>語法  
   
@@ -41,12 +41,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- 空的一維**幾何**執行個體會傳回 0。 **NULL**時，會傳回**幾何**執行個體不是一維執行個體，或未初始化的執行個體。  
+## <a name="remarks"></a>Remarks  
+ 空的一維 **geometry** 執行個體會傳回 0。 當 **geometry** 執行個體不是一維執行個體，或者是未初始化的執行個體時，就會傳回 **NULL**。  
   
 ## <a name="examples"></a>範例  
   

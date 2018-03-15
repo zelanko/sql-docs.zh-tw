@@ -1,5 +1,5 @@
 ---
-title: "STAsText (geography 資料類型) |Microsoft 文件"
+title: "STAsText (geography y 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stastext-geography-data-type"></a>STAsText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回開放式地理空間協會 (OGC) 已知文字 (well-known text，WKT) 表示**geography**執行個體。 此文字將不會包含此執行個體所夾帶的任何 Z (高度) 或 M (測量) 值。  
+  傳回 **geography** 執行個體的開放地理空間協會 (OGC) 已知的文字 (WKT) 表示法。 此文字將不會包含此執行個體所夾帶的任何 Z (高度) 或 M (測量) 值。  
   
- 這**geography**資料類型方法可支援**FullGlobe**執行個體或大於半球的空間執行個體。  
+ 這個 **geography** 資料類型方法可支援 **FullGlobe** 執行個體或大於半球的空間執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,17 +46,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **nvarchar （max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回類型： **SqlChars**  
+ CLR 傳回類型：**SqlChars**  
   
-## <a name="remarks"></a>備註  
- OGC 類型**geography**執行個體由叫用[stgeometrytype （)](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)。  
+## <a name="remarks"></a>Remarks  
+ 可以叫用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 來判斷 **geography** 執行個體的 OGC 型別。  
   
- 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，傳回伺服器上的可能結果集已擴充到**FullGlobe**執行個體。  
+ 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，伺服器上傳回的可能結果集已擴充到 **FullGlobe** 執行個體。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`STAsText()`建立`LineString``geography`的執行個體 （-122.360，47.656） 到 （-122.343，47.656） 的文字。 然後，它會在文字中傳回結果。  
+ 下列範例使用 `STAsText()`，從文字建立 (-122.360, 47.656) 到 (-122.343, 47.656) 的 `LineString``geography` 執行個體。 然後，它會在文字中傳回結果。  
   
 ```  
 DECLARE @g geography;  

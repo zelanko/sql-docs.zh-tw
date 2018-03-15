@@ -1,5 +1,5 @@
 ---
-title: "說明 (TRANSACT-SQL) |Microsoft 文件"
+title: EXPLAIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="explain-transact-sql"></a>說明 (TRANSACT-SQL)
+# <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  傳回的查詢計畫[!INCLUDE[ssDW](../../includes/ssdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]陳述式，而不需執行陳述式。 使用**解釋**哪些作業將需要移動資料的預覽，以及檢視查詢作業的估計的成本。  
+  傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式的查詢計劃，而不執行陳述式。 使用 **EXPLAIN** 預覽哪些作業需要移動資料，以及檢視查詢作業的估計成本。  
   
- 多個查詢計劃的詳細資訊，請參閱 「 了解查詢計劃 」，在[!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)]。  
+ 如需查詢計劃的詳細資訊，請參閱 [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)] 中的＜了解查詢計劃＞。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,15 +41,15 @@ EXPLAIN SQL_statement
   
 ## <a name="arguments"></a>引數  
  *SQL_statement*  
- [!INCLUDE[DWsql](../../includes/dwsql-md.md)]所在的陳述式**解釋**會執行。 *Q*可以是任何一種命令：**選取**，**插入**，**更新**，**刪除**， **CREATE TABLE AS SELECT**，**建立遠端資料表**。  
+ **EXPLAIN** 將執行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式。 *SQL_statement* 可以是以下任何一個命令：**SELECT**、**INSERT**、**UPDATE**、**DELETE**、**CREATE TABLE AS SELECT**、**CREATE REMOTE TABLE**。  
   
 ## <a name="permissions"></a>Permissions  
- 需要**SHOWPLAN**權限與使用權限來執行*q*。 請參閱[權限： GRANT、 DENY、 REVOKE &#40;Azure SQL 資料倉儲、 Parallel Data Warehouse &#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+ 需要 **SHOWPLAN** 權限，以及執行 *SQL_statement* 的權限。 請參閱[權限：GRANT、DENY、REVOKE &#40;Azure SQL 資料倉儲、平行處理資料倉儲&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回的值從**解釋**命令是 XML 文件的結構如下所示。 此 XML 文件會列出所有作業中指定查詢的查詢計劃，每個括住`<dsql_operation>`標記。 傳回值是型別**nvarchar （max)**。  
+ 從 **EXPLAIN** 命令的傳回值是具備以下結構的 XML 文件。 此 XML 文件會列出指定查詢之查詢計劃中的所有作業，每個作業都以 `<dsql_operation>` 標記括住。 傳回值為 **nvarchar(max)** 類型。  
   
- 傳回的查詢計劃描述循序的 SQL 陳述式。執行查詢時它可能包含平行化的作業，因此部分顯示的循序陳述式可能會同時執行。  
+ 傳回的查詢計劃描述循序的 SQL 陳述式。當查詢執行時，可能包含平行化的作業，因此部分顯示的循序陳述式可能會同時執行。  
   
 ```  
 \<?xml version="1.0" encoding="utf-8"?>  
@@ -67,33 +67,33 @@ EXPLAIN SQL_statement
   
  XML 標記包含這項資訊：  
   
-|XML 標記|摘要、 屬性和內容|  
+|XML 標記|摘要、屬性和內容|  
 |-------------|--------------------------------------|  
-|\<dsql_query>|最上層的層級/文件項目。|
-|\<sql>|回應*q*。|  
-|\<params>|在此階段不使用這個標記。|  
-|\<dsql_operations>|摘要說明包含查詢的步驟，並包含查詢的成本資訊。 也包含所有`<dsql_operation>`區塊。 此標記包含整個查詢的計數資訊：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost*是查詢執行，以毫秒的預估的時間總計。<br /><br /> *total_number_operations*是作業的查詢總數。 將平行處理，並在多個節點上執行的作業都會計算為單一作業。|  
-|\<dsql_operation>|描述內的查詢計畫的單一作業。 \<Dsql_operation > 標記包含做為屬性的作業類型：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*是中找到之值的其中一個[查詢資料 (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)。<br /><br /> 中的內容`\<dsql_operation>`區塊是取決於作業類型。<br /><br /> 請參閱下表。|  
+|\<dsql_query>|最上層/文件元素。|
+|\<sql>|回應 *SQL_statement*。|  
+|\<params>|目前不使用此標記。|  
+|\<dsql_operations>|摘要說明和包含查詢步驟，並包含查詢的成本資訊。 也包含所有 `<dsql_operation>` 區塊。 此標記包含整個查詢的計數資訊：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* 是查詢執行的預估時間總計，以毫秒為單位。<br /><br /> *total_number_operations* 是查詢的作業總數。 將平行處理並在多個節點上執行的作業都會計算為單一作業。|  
+|\<dsql_operation>|描述查詢計劃內的單一作業。 \<dsql_operation> 標記包含做為屬性的作業類型：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* 是在[查詢資料 (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c) 中找到的其中一個值。<br /><br /> `\<dsql_operation>` 區塊中的內容取決於作業類型。<br /><br /> 請參閱下表。|  
   
 |作業類型|內容|範例|  
 |--------------------|-------------|-------------|  
-|BROADCAST_MOVE、 DISTRIBUTE_REPLICATED_TABLE_MOVE、 MASTER_TABLE_MOVE、 PARTITION_MOVE、 SHUFFLE_MOVE 和 TRIM_MOVE|`<operation_cost>`具有項目，這些屬性。 值反映的唯一本機作業：<br /><br /> -   *成本*本機運算子成本，並顯示作業執行，以毫秒的預估的時間。<br />-   *accumulative_cost*包括加總的平行作業中，以毫秒計劃中是所見的所有作業的總和。<br />-   *average_rowsize*是擷取和傳遞作業期間的資料列的估計平均資料列大小 （以位元組為單位）。<br />-   *output_rows*輸出 （節點） 基數而且顯示的輸出資料列數目。<br /><br /> `<location>`： 的節點或作業發生的分佈。 選項為: 「 控制項 」、 「 ComputeNode"、"AllComputeNodes"、"AllDistributions"、"SubsetDistributions 」、 「 分佈 」 和"SubsetNodes"。<br /><br /> `<source_statement>`： 隨機的來源資料移動。<br /><br /> `<destination_table>`: 內部暫存資料表資料會移入。<br /><br /> `<shuffle_columns>`只對 SHUFFLE_MOVE 作業: （適用)。 一或多個將用於視為散發資料行的暫存資料表的資料行。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`： 請參閱`<operation_cost>`上方。<br /><br /> `<DestinationCatalog>`： 目的地節點或節點。<br /><br /> `<DestinationSchema>`: 在 DestinationCatalog 目的結構描述。<br /><br /> `<DestinationTableName>`:"TableName"的目的地資料表的名稱。<br /><br /> `<DestinationDatasource>`： 目的地資料來源名稱或連接資訊。<br /><br /> `<Username>`和`<Password>`： 這些欄位表示使用者名稱和目的地的密碼可能會需要。<br /><br /> `<BatchSize>`： 複製作業批次大小。<br /><br /> `<SelectStatement>`: 用來執行複製的 select 陳述式。<br /><br /> `<distribution>`： 執行複製散發。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
-|MetaDataCreate_Operation|`<source_table>`： 作業來源資料表。<br /><br /> `<destionation_table>`： 作業的目的地資料表。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`： 請參閱`<location>`上方。<br /><br /> `<sql_operation>`： 識別將會在節點執行的 SQL 命令。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
-|RemoteOnOperation|`<DestinationCatalog>`： 目的地目錄。<br /><br /> `<DestinationSchema>`: 在 DestinationCatalog 目的結構描述。<br /><br /> `<DestinationTableName>`:"TableName"的目的地資料表的名稱。<br /><br /> `<DestinationDatasource>`： 目的地資料來源名稱。<br /><br /> `<Username>`和`<Password>`： 這些欄位表示使用者名稱和目的地的密碼可能會需要。<br /><br /> `<CreateStatement>`： 目的地資料庫資料表建立陳述式。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
-|RETURN|`<resultset>`： 結果集識別項。|`<resultset>RS_19</resultset>`|  
-|RND_ID|`<identifier>`： 建立的物件識別項。|`<identifier>TEMP_ID_260</identifier>`|  
+|BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE 和 TRIM_MOVE|`<operation_cost>` 元素，具有這些屬性。 值只反映本機作業：<br /><br /> -   *cost* 是本機運算子成本，並顯示作業執行的預估時間，以毫秒為單位。<br />-   *accumulative_cost* 是計劃中包括平行作業加總值的所有所見作業總和，以毫秒為單位。<br />-   *average_rowsize* 是作業期間，擷取和傳遞之資料列的資料列預估平均大小 (以位元組為單位)。<br />-   *output_rows* 是輸出 (節點) 基數，並顯示輸出資料列的數目。<br /><br /> `<location>`：作業發生所在的節點或散發。 選項為：“Control”、“ComputeNode”、“AllComputeNodes”、“AllDistributions”、“SubsetDistributions”、“Distribution” 和 “SubsetNodes”。<br /><br /> `<source_statement>`：隨機移動的來源資料。<br /><br /> `<destination_table>`：資料將移入的內部暫存資料表。<br /><br /> `<shuffle_columns>`：(只適用於 SHUFFLE_MOVE 作業)。 一或多個將用於暫存資料表之散發資料行的資料行。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
+|CopyOperation|`<operation_cost>`：請參閱上面的 `<operation_cost>`。<br /><br /> `<DestinationCatalog>`：目的地節點。<br /><br /> `<DestinationSchema>`：DestinationCatalog 中的目的地結構描述。<br /><br /> `<DestinationTableName>`：目的地資料表或 “TableName” 的名稱。<br /><br /> `<DestinationDatasource>`：目的地資料來源的名稱或連線資訊。<br /><br /> `<Username>` 和 `<Password>`：這些欄位表示可能需要目的地的使用者名稱和密碼。<br /><br /> `<BatchSize>`：複製作業的批次大小。<br /><br /> `<SelectStatement>`：用來執行複製的 select 陳述式。<br /><br /> `<distribution>`：執行複製所在的散發。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
+|MetaDataCreate_Operation|`<source_table>`：作業的來源資料表。<br /><br /> `<destionation_table>`：作業的目的地資料表。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
+|ON|`<location>`：請參閱上面的 `<location>`。<br /><br /> `<sql_operation>`：識別將在節點上執行的 SQL 命令。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|RemoteOnOperation|`<DestinationCatalog>`：目的地目錄。<br /><br /> `<DestinationSchema>`：DestinationCatalog 中的目的地結構描述。<br /><br /> `<DestinationTableName>`：目的地資料表或 “TableName” 的名稱。<br /><br /> `<DestinationDatasource>`：目的地資料來源的名稱。<br /><br /> `<Username>` 和 `<Password>`：這些欄位表示可能需要目的地的使用者名稱和密碼。<br /><br /> `<CreateStatement>`：目的地資料庫的資料表建立陳述式。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
+|RETURN|`<resultset>`：結果集的識別碼。|`<resultset>RS_19</resultset>`|  
+|RND_ID|`<identifier>`：建立之物件的識別碼。|`<identifier>TEMP_ID_260</identifier>`|  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- **說明**可以套用至*可最佳化*的結果為基礎的查詢，也就是查詢，可以改善或修改**說明**命令。 支援**解釋**以上所列的命令。 嘗試使用**解釋**與不支援的查詢類型將會傳回錯誤或回應查詢。  
+ **EXPLAIN** 只能套用至*可最佳化*的查詢，也就是可根據 **EXPLAIN** 命令的結果改善或修改的查詢。 支援的 **EXPLAIN** 命令列在上面。 嘗試使用 **EXPLAIN** 搭配不支援的查詢類型，將會傳回錯誤或回應查詢。  
   
- **說明**不支援使用者交易中。  
+ 使用者交易中不支援 **EXPLAIN**。  
   
 ## <a name="examples"></a>範例  
- 下列範例所示**解釋**上執行的命令**選取**陳述式和 XML 結果。  
+ 下列範例顯示在 **SELECT** 陳述式執行 **EXPLAIN** 命令，以及 XML 結果。  
   
- **正在提交解釋陳述式**  
+ **提交 EXPLAIN 陳述式**  
   
  此範例中提交的命令為：  
   
@@ -118,21 +118,21 @@ EXPLAIN
 GO  
 ```  
   
- 在執行陳述式使用之後**解釋**選項，[訊息] 索引標籤顯示標題為單行**說明**，和開始使用 XML 文字`\<?xml version="1.0" encoding="utf-8"?>`按一下以開啟中的整個文字 XMLXML 視窗。 若要進一步了解下列註解，您應該開啟在 SSDT 中的行號的顯示。  
+ 使用 **EXPLAIN** 選項執行陳述式後，[訊息] 索引標籤會顯示一行標題 **explain**，並且以 XML 文字 `\<?xml version="1.0" encoding="utf-8"?>` 為開頭。按一下 XML 可在 XML 視窗中開啟整段文字。 若要進一步了解下列註解，您應該在 SSDT 中開啟行號的顯示。  
   
-#### <a name="to-turn-on-line-numbers"></a>若要開啟行號  
+#### <a name="to-turn-on-line-numbers"></a>開啟行號  
   
-1.  使用中輸出出現**說明**SSDT 中，索引標籤上**工具**功能表上，選取**選項**。  
+1.  當 SSDT 的 [explain] 索引標籤出現輸出時，在 [工具] 功能表上，選取 [選項]。  
   
-2.  展開**文字編輯器**區段中，展開**XML**，然後按一下 **一般**。  
+2.  展開 [文字編輯器] 區段，展開 [XML]，然後按一下 [一般]。  
   
-3.  在**顯示**區域中，核取**行號**。  
+3.  在 [顯示] 區域中，核取 [行號]。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
- **解釋輸出範例**  
+ **範例 EXPLAIN 輸出**  
   
- 在 XML 結果的**解釋**了命令開啟的資料列號碼：  
+ **EXPLAIN** 命令開啟行號的 XML 結果為：  
   
 ```  
 1  \<?xml version="1.0" encoding="utf-8"?>  
@@ -282,31 +282,31 @@ GO
   
 ```  
   
- **解釋輸出的意義**  
+ **EXPLAIN 輸出的意義**  
   
- 上面的輸出包含 144 編號的行。 此查詢的輸出可能稍有不同。 下列清單說明重要區段。  
+ 上面的輸出包含 144 行。 您的查詢輸出可能稍有不同。 下列清單說明重要區段。  
   
--   行 3 到 16 提供正在分析之查詢的描述。  
+-   第 3 到 16 行提供正在分析之查詢的描述。  
   
--   行 17，指定的作業總數都是 9。 您可以找到的每個作業，開始尋找的單字**dsql_operation**。  
+-   第 17 行指定作業的總數是 9。 您可以尋找單字 **dsql_operation** 找到每個作業的開始。  
   
--   行 18 啟動作業 1。 18 和 19 的線條表示， **RND_ID**作業將會建立將用於物件描述的隨機識別碼數字。 上面的輸出中所述的物件是**TEMP_ID_16893**。 您的號碼將會不同。  
+-   第 18 行啟動第 1 個作業。 第 18 行和第 19 行表示 **RND_ID** 作業會建立一個用於物件描述的隨機識別碼號碼。 上面輸出中所描述的物件是 **TEMP_ID_16893**。 您的號碼將會不同。  
   
--   第 20 行啟動作業 2。 行 21-25： 所有計算節點，請建立名為暫存資料表**TEMP_ID_16893**。  
+-   第 20 行啟動第 2 個作業。 第 21 到 25 行：在所有計算節點上，建立名為 **TEMP_ID_16893** 的暫存資料表。  
   
--   行 26 啟動作業 3。 行 27 透過 37： 移動資料至**TEMP_ID_16893**使用廣播的移動。 提供傳送至每個計算節點的查詢。 一行 37 指定目的地資料表是**TEMP_ID_16893**。  
+-   第 26 行啟動第 3 個作業。 第 27 到 37 行：使用廣播移動將資料移動至 **TEMP_ID_16893**。 提供傳送至每個計算節點的查詢。 第 37 行指定目的地資料表為 **TEMP_ID_16893**。  
   
--   第 38 行啟動作業 4。 行到 40 39： 建立資料表的隨機識別碼。 **TEMP_ID_16894**上述範例中的識別碼。 您的號碼將會不同。  
+-   第 38 行啟動第 4 個作業。 第 39 到 40 行：建立資料表的隨機識別碼。 **TEMP_ID_16894** 是上述範例中的識別碼號碼。 您的號碼將會不同。  
   
--   行 41 啟動作業 5。 行透過 46 42： 所有節點上，建立名為的暫存資料表**TEMP_ID_16894**。  
+-   第 41 行啟動第 5 個作業。 第 42 到 46 行：在所有節點上，建立名為 **TEMP_ID_16894** 的暫存資料表。  
   
--   行 47 啟動作業 6。 行 48 到 91： 移動資料，從各種不同的資料表 (包括**TEMP_ID_16893**) 到資料表**TEMP_ID_16894**，使用隨機移動作業。 提供傳送至每個計算節點的查詢。 一行 90 指定做為目的地資料表**TEMP_ID_16894**。 行 91年指定的資料行。  
+-   第 47 行啟動第 6 個作業。 第 48 到 91 行：使用隨機移動作業，從各個資料表 (包括**TEMP_ID_16893**) 移動資料到資料表 **TEMP_ID_16894**。 提供傳送至每個計算節點的查詢。 第 90 行指定目的地資料表為 **TEMP_ID_16894**。 第 91 行指定資料行。  
   
--   行 92年啟動作業 7。 透過 97 行 93年： 所有計算節點、 卸除暫存資料表**TEMP_ID_16893**。  
+-   第 92 行啟動第 7 個作業。 第 93 到 97 行：在所有計算節點上，卸除名為 **TEMP_ID_16893** 的暫存資料表。  
   
--   行 98年啟動作業 8。 透過 135 行 99年： 結果傳回至用戶端。 會使用以取得結果所提供的查詢。  
+-   第 98 行啟動第 8 個作業。 第 99 到 135 行：將結果傳回至用戶端。 使用提供的查詢取得結果。  
   
--   行 136 啟動作業 9。 行 137 至 140： 所有節點上，卸除暫存資料表**TEMP_ID_16894**。  
+-   第 136 行啟動第 9 個作業。 第 137 到 140 行：在所有節點上，卸除名為 **TEMP_ID_16894** 的暫存資料表。  
   
   
 

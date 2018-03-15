@@ -1,5 +1,5 @@
 ---
-title: "STDimension (geography 資料類型) |Microsoft 文件"
+title: "STDimension (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geography-data-type"></a>STDimension (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回的最大維度**geography**執行個體。  
+  傳回 **geography** 執行個體的最大維度。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型： **SqlInt32**  
+ CLR 傳回類型：**SqlInt32**  
   
-## <a name="remarks"></a>備註  
- STDimension() 傳回-1，如果**geography**是空的執行個體。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geography** 執行個體是空的，STDimension() 會傳回 -1。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`STDimension()`建立資料表變數來保存`geography`例項，並插入`Point`、 `LineString`，和`Polygon`。  
+ 下列範例會使用 `STDimension()` 建立資料表變數來保存 `geography` 執行個體，並插入 `Point`、`LineString` 和 `Polygon`。  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geography);  
@@ -65,12 +65,12 @@ SELECT [name], [geom].STDimension() as [dim]
 FROM @temp;  
 ```  
   
- 然後，範例會傳回每個維度`geography`執行個體。  
+ 然後此範例會傳回每一個 `geography` 執行個體的維度。  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |點|0|  
-|LineString|1|  
+|LineString|@shouldalert|  
 |多邊形|2|  
   
 ## <a name="see-also"></a>另請參閱  

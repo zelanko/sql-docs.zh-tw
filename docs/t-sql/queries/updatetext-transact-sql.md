@@ -1,5 +1,5 @@
 ---
-title: "UPDATETEXT (TRANSACT-SQL) |Microsoft 文件"
+title: UPDATETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  更新現有**文字**， **ntext**，或**映像**欄位。 若要變更的一部分使用 UPDATETEXT**文字**， **ntext**，或**映像**位置中的資料行。 利用 WRITETEXT 來更新和取代整個**文字**， **ntext**，或**映像**欄位。  
+  更新現有的 **text**、**ntext** 或 **image** 欄位。 請使用 UPDATETEXT 來適當地只變更 **text**、**ntext** 或 **image** 資料行中的一部分。 使用 WRITETEXT 來更新和取代整個 **text**、**ntext** 或 **image** 欄位。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用大數值資料類型和**。**WRITE 子句[更新](../../t-sql/queries/update-transact-sql.md)陳述式改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用大數值資料類型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式的 **.**WRITE 子句。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,47 +63,47 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!IMPORTANT]  
 >  我們建議您不要將 BULK 選項用於以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為基礎的應用程式中。 未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本可能會變更或移除這個選項。  
   
- *table_name* **。** *dest_column_name*  
- 這是資料表的名稱和**文字**， **ntext**，或**映像**要更新資料行。 資料表名稱和資料行名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 資料庫名稱和擁有者名稱的指定是選擇性的。  
+ *table_name* **.** *dest_column_name*  
+ 這是要更新之資料表及 **text**、**ntext** 或 **image** 資料行的名稱。 資料表名稱和資料行名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 資料庫名稱和擁有者名稱的指定是選擇性的。  
   
  *dest_text_ptr*  
- 文字指標值 （TEXTPTR 函數所傳回） 指向**文字**， **ntext**，或**映像**来更新的資料。 *dest_text_ptr*必須**二進位 (**16**)**。  
+ 這是指向要更新之 **text**、**ntext** 或 **image** 資料的文字指標值 (TEXTPTR 函數所傳回)。 *dest_text_ptr* 必須是 **binary(**16**)**。  
   
  *insert_offset*  
- 這是以零為基底的更新起始位置。 如**文字**或**映像**資料行， *insert_offset*是插入新資料之前略過從現有的資料行開頭的位元組數。 如**ntext**資料行， *insert_offset*是字元數目 (每個**ntext**字元使用 2 個位元組)。 現有**文字**， **ntext**，或**映像**這個以零為起始的起始位置開始的資料會移往右移以騰出空間給新的資料。 0 值會將新資料插入現有資料的起點。 NULL 值會將新資料附加至現有的資料值。  
+ 這是以零為基底的更新起始位置。 就 **text** 或 **image** 資料行而言，*insert_offset* 是在插入新資料之前，要從現有資料行開頭略過的位元組數。 就 **ntext** 資料行而言，*insert_offset* 則是字元數目 (每個 **ntext** 字元會使用 2 個位元組)。 從這個以零為基底之起始位置開始的現有 **text**、**ntext** 或 **image** 資料，會向右移來騰出空間供新資料使用。 0 值會將新資料插入現有資料的起點。 NULL 值會將新資料附加至現有的資料值。  
   
  *delete_length*  
- 這是要刪除從現有的資料長度**文字**， **ntext**，或**映像**資料行中，開始*insert_offset*位置。 *Delete_length*以位元組為單位的指定值**文字**和**映像**資料行和字元**ntext**資料行。 每個**ntext**字元使用 2 個位元組。 0 值不會刪除任何資料。 NULL 值會刪除所有的資料，從*insert_offset*位置到末端的現有**文字**或**映像**資料行。  
+ 這是要從現有 **text**、**ntext** 或 **image** 資料行中刪除的資料長度，從 *insert_offset*位置開始。 指定 *delete_length* 值時，針對 **text** 和 **image** 資料行，會以位元組為單位來指定，針對 **ntext** 資料行，則以字元為單位來指定。 每個 **ntext** 字元都使用 2 個位元組。 0 值不會刪除任何資料。 值為 NULL 時，會刪除從 *insert_offset* 位置到現有 **text** 或 **image** 資料行結尾的所有資料。  
   
  WITH LOG  
  記錄取決於資料庫的實際復原模式。  
   
  *inserted_data*  
- 要插入至現有的資料**文字**， **ntext**，或**映像**資料行在*insert_offset*位置。 這是單一**char**， **nchar**， **varchar**， **nvarchar**，**二進位**， **varbinary**，**文字**， **ntext**，或**映像**值。 *inserted_data*可以是常值或變數。  
+ 這是要在現有 **text**、**ntext** 或 **image** 資料行的 *insert_offset* 位置插入的資料。 這是單一的 **char**、**nchar**、**varchar**、**nvarchar**、**binary**、**varbinary**、**text**、**ntext** 或 **image** 值。 *inserted_data* 可以是常值或變數。  
   
  *table_name.src_column_name*  
- 這是資料表的名稱和**文字**， **ntext**，或**映像**做為插入的資料來源的資料行。 資料表名稱和資料行名稱必須符合識別碼的規則。  
+ 這是用來作為所插入資料之來源的資料表及 **text**、**ntext** 或 **image** 資料行的名稱。 資料表名稱和資料行名稱必須符合識別碼的規則。  
   
  *src_text_ptr*  
- 文字指標值 （TEXTPTR 函數所傳回） 指向**文字**， **ntext**，或**映像**做為插入的資料來源的資料行。  
+ 這是指向用來作為所插入資料之來源的 **text**、**ntext** 或 **image** 資料行的文字指標值 (TEXTPTR 函數所傳回)。  
   
 > [!NOTE]  
->  *scr_text_ptr*值不能與相同*dest_text_ptr*值。  
+>  *scr_text_ptr* 值不得與 *dest_text_ptr* 值相同。  
   
-## <a name="remarks"></a>備註  
- 新插入的資料可以是單一*inserted_data*常數、 資料表名稱、 資料行名稱或文字指標。  
+## <a name="remarks"></a>Remarks  
+ 新插入的資料可以是單一 *inserted_data* 常數、資料表名稱、資料行名稱或文字指標。  
   
 |更新動作|UPDATETEXT 參數|  
 |-------------------|---------------------------|  
-|若要取代現有的資料|指定非 null *insert_offset*值、 非零*delete_length*值，以及要插入新的資料。|  
-|若要刪除現有的資料|指定非 null *insert_offset*值和非零*delete_length*。 請勿指定要插入的新資料。|  
-|若要插入新的資料|指定*insert_offset*值*delete_length*為 0，且要插入新的資料。|  
+|若要取代現有的資料|請指定非 Null 的 *insert_offset* 值、非零的 *delete_length* 值，以及要插入的新資料。|  
+|若要刪除現有的資料|請指定非 Null *insert_offset* 值和非零的 *delete_length*。 請勿指定要插入的新資料。|  
+|若要插入新的資料|請指定 *insert_offset* 值、值為 0 的 *delete_length* ，以及要插入的新資料。|  
   
- 我們建議，為了達到最佳效能**文字**， **ntext**和**映像**插入或更新的區塊大小會以 8,040 位元組倍數的資料。  
+ 為了獲得最佳效能，建議您以 8,040 個位元組之倍數的片段大小來插入或更新 **text**、**ntext** 及 **image** 資料。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，同資料列文字指標**文字**， **ntext**，或**映像**資料可能存在而無效。 Text in row 選項的相關資訊，請參閱[sp_tableoption &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). 如需讓文字指標無效的資訊，請參閱[sp_invalidate_textptr &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，可能有指向 **text**、**ntext** 或 **image** 資料的同資料列文字指標存在，但可能無效。 如需有關 text in row 選項的資訊，請參閱[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 如需有關讓文字指標變成無效的資訊，請參閱 [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)。  
   
- 初始化**文字**資料行設為 NULL，請使用 WRITETEXT;UPDATETEXT 初始化**文字**資料行設為空字串。  
+ 若要將 **text** 資料行初始化為 NULL，請使用 WRITETEXT；UPDATETEXT 會將 **text** 資料行初始化為空字串。  
   
 ## <a name="permissions"></a>Permissions  
  需要指定之資料表的 UPDATE 權限。  
@@ -131,8 +131,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [READTEXT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [TEXTPTR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
+ [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
+ [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   
   

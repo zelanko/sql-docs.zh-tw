@@ -1,5 +1,5 @@
 ---
-title: "地理位置 (TRANSACT-SQL) |Microsoft 文件"
+title: geography (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geography"></a>空間類型的地理位置
+# <a name="spatial-types---geography"></a>空間類型 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Geography 空間資料類型， **geography**，實作為.NET common language runtime (CLR) 資料類型中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此類型代表圓形地球座標系統中的資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型會儲存橢圓體 (圓形地球) 資料，例如 GPS 經緯度座標。  
+  地理空間資料型別 **geography** 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中實作為 .NET Common Language Runtime (CLR) 資料型別。 此類型代表圓形地球座標系統中的資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型會儲存橢圓體 (圓形地球) 資料，例如 GPS 經緯度座標。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援一組方法，以**geography**空間資料類型。 這包括方法**geography**定義的開放式地理空間協會 (OGC) 標準，以及一組[!INCLUDE[msCoName](../../includes/msconame-md.md)]該標準的擴充功能。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 **geography** 空間資料型別的一組方法。 其中包括開放地理空間協會 (OGC) 標準所定義的 **geography** 方法以及該標準的一組 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 擴充。  
  
- 容許的誤差**geography**方法可以是大可達 1.0 e-7 * 的範圍。 範圍是指點之間的最大近似距離**geography**物件。
+ **geography** 方法容許的誤差範圍可以高達 1.0e-7 *。 範圍指的是 **geography** 物件的點之間最大近似距離。
   
 
 ## <a name="registering-the-geography-type"></a>註冊 geography 類型  
@@ -83,7 +83,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geography-in-a-computed-column"></a>C. 在計算資料行中使用地理  
- 下列範例會建立資料表的保存計算資料行使用**geography**型別。  
+ 下列範例會以使用 **geography** 型別的保存計算資料行來建立資料表。  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

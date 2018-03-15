@@ -1,5 +1,5 @@
 ---
-title: "擷取 (TRANSACT-SQL) |Microsoft 文件"
+title: FETCH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,17 +72,17 @@ FETCH
  LAST  
  傳回資料指標中的最後一個資料列，使它成為目前資料列。  
   
- 絕對 {  *n* | @*nvar*}  
- 如果 *n* 或 @*nvar*是正數，傳回的資料列 *n* 個資料列從資料指標前端，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar*是負數，傳回的資料列 *n* 個資料列資料指標結尾之前，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar*是 0，會傳回任何資料列。 *n*必須是整數常數和 @*nvar*必須**smallint**， **tinyint**，或**int**。  
+ ABSOLUTE { *n*| @*nvar*}  
+ 如果 *n* 或 @*nvar* 是正數，便會從資料指標前端傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是負數，便會在資料指標結尾之前傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是 0，則不會傳回任何資料列。 *n* 必須是整數常數，而 @*nvar* 必須是 **smallint**、**tinyint** 或 **int**。  
   
- 相對 {  *n* | @*nvar*}  
- 如果 *n* 或 @*nvar*是正數，傳回的資料列 *n* 個資料列目前資料列之後，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar*是負數，傳回的資料列 *n* 個資料列目前資料列之前，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar*是 0，則會傳回目前的資料列。 如果指定 FETCH RELATIVE 是 *n* 或 @*nvar*設為負數或 0，針對資料指標執行的第一項提取上，會傳回任何資料列。 *n*必須是整數常數和 @*nvar*必須**smallint**， **tinyint**，或**int**。  
+ RELATIVE { *n*| @*nvar*}  
+ 如果 *n* 或 @*nvar* 是正數，便會在目前資料列之後傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是負數，便會在目前資料列之前傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是 0，便會傳回目前資料列。 在針對資料指標執行的第一項提取上，如果在指定 FETCH RELATIVE 時將 *n* 或 @*nvar* 設為負數或 0，就不會傳回任何資料列。 *n* 必須是整數常數，而 @*nvar* 必須是 **smallint**、**tinyint** 或 **int**。  
   
  GLOBAL  
- 指定*cursor_name*參考全域資料指標。  
+ 指定 *cursor_name* 是全域資料指標。  
   
  *cursor_name*  
- 這是應該從中提取的開啟資料指標名稱。 如果全域和本機資料指標同時存在與*cursor_name*做為其名稱， *cursor_name*全域資料指標，否則指定全域和本機資料指標，如果未指定 GLOBAL。  
+ 這是應該從中提取的開啟資料指標名稱。 如果全域和區域資料指標同時存在，且名稱是 *cursor_name*，如果指定了 GLOBAL，*cursor_name* 便是全域資料指標；如果未指定 GLOBAL，便是區域資料指標。  
   
  @*cursor_variable_name*  
  這是資料指標變數的名稱，這個資料指標參考應該從中提取的開啟資料指標。  
@@ -90,7 +90,7 @@ FETCH
  INTO @*variable_name*[ ,...*n*]  
  可讓提取的資料行資料放在本機變數中。 清單中的各個變數會由左至右，依次與資料指標結果集中對應的資料行相關。 每個變數的資料類型都必須符合對應結果集資料行的資料類型，或必須是支援的對應結果集資料行的資料類型之隱含轉換。 變數的數目必須符合資料指標選取清單中的資料行數目。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果 ISO 樣式 DECLARE CURSOR 陳述式並未指定 SCROLL 選項，NEXT 就是唯一支援的 FETCH 選項。 如果在 ISO 樣式 DECLARE CURSOR 中指定了 SCROLL，便支援所有 FETCH 選項。  
   
  當使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE 資料指標延伸模組時，適用下列規則：  
@@ -101,7 +101,7 @@ FETCH
   
 -   DYNAMIC SCROLL 資料指標支援 ABSOLUTE 以外的所有 FETCH 選項。  
   
- @@FETCH_STATUS函式會報告最後一個 FETCH 陳述式的狀態。 相同的資訊記錄在 sp_describe_cursor 傳回之資料指標的 fetch_status 資料行中。 試圖在 FETCH 陳述式傳回的資料上執行任何作業之前，您應該先利用這個狀態資訊來判斷這項資料是否有效。 如需詳細資訊，請參閱[@@FETCH_STATUS &#40;TRANSACT-SQL &#41;](../../t-sql/functions/fetch-status-transact-sql.md).  
+ @@FETCH_STATUS 函數會報告最後一個 FETCH 陳述式的狀態。 相同的資訊記錄在 sp_describe_cursor 傳回之資料指標的 fetch_status 資料行中。 試圖在 FETCH 陳述式傳回的資料上執行任何作業之前，您應該先利用這個狀態資訊來判斷這項資料是否有效。 如需詳細資訊，請參閱 [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  FETCH 權限預設會授與任何有效的使用者。  
@@ -218,6 +218,6 @@ GO
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [開啟 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

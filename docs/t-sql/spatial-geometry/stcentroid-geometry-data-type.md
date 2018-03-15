@@ -1,5 +1,5 @@
 ---
-title: "STCentroid (geometry 資料類型) |Microsoft 文件"
+title: "STCentroid (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-傳回的幾何中心**幾何**組成一或多個多邊形的執行個體。
+傳回由一個或多個多邊形組成之 **geometry** 執行個體的幾何中心點。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,19 +44,19 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- 開放式地理空間協會 (OGC) 類型：**點**  
+ 開放地理空間協會 (OGC) 類型：**Point**  
   
-## <a name="remarks"></a>備註  
- `STCentroid()`傳回 null 如果**幾何**執行個體不是**Polygon、 CurvePolygon**，或**MultiPolygon**型別。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體不是 **Polygon, CurvePolygon** 或 **MultiPolygon** 型別，`STCentroid()` 會傳回 null。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. 計算 Polygon 執行個體的距心  
- 下列範例會使用`STCentroid()`來計算的距心`polygon``geometry`執行個體：  
+ 下列範例使用 `STCentroid()` 來計算 `polygon``geometry` 執行個體的距心：  
   
 ```  
 DECLARE @g geometry;  

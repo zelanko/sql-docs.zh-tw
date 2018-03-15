@@ -1,5 +1,5 @@
 ---
-title: "資料表值建構函式 (TRANSACT-SQL) |Microsoft 文件"
+title: "資料表值建構函式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="table-value-constructor-transact-sql"></a>資料表值建構函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指定要建構到資料表中的一組資料列值運算式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值建構函式允許在單一 DML 陳述式中指定多個資料列。 資料表值建構函式中使用的 INSERT 陳述式的 VALUES 子句中只能指定\<來源資料表 > 子句的 MERGE 陳述式和 FROM 子句中的衍生資料表定義中。  
+  指定要建構到資料表中的一組資料列值運算式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值建構函式允許在單一 DML 陳述式中指定多個資料列。 您可以在 INSERT 陳述式的 VALUES 子句、MERGE 陳述式的 USING \<來源資料表> 子句以及 FROM 子句的衍生資料表定義中，指定資料表值建構函式。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,13 +64,13 @@ VALUES ( <row value expression list> ) [ ,...n ]
  這是一個常數、變數或運算式。 此運算式不能包含 EXECUTE 陳述式。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- 資料表值建構函式可在其中一種： 直接在 INSERT 的 VALUES 清單中... 值的陳述式，或允許的衍生資料表隨處衍生資料表。 如果資料列數目超過最大值，則會傳回錯誤 10738。 若要插入多個資料列超過允許的限制，請使用下列方法之一：  
+ 資料表值建構函式的使用方式有兩種：直接在 INSERT … VALUES 陳述式的 VALUES 清單中使用，或在任何允許使用衍生資料表的位置中當作衍生資料表來使用。 如果資料列數目超過最大值，就會傳回錯誤 10738。 若要插入超出所允許限制的資料列數，請使用下列其中一種方法：  
   
 -   建立多個 INSERT 陳述式  
   
 -   使用衍生資料表  
   
--   大量匯入的資料使用**bcp**公用程式或 BULK INSERT 陳述式  
+-   使用 **bcp** 公用程式或 BULK INSERT 陳述式來大量匯入資料  
   
  只允許使用單一純量值當做資料列值運算式。 不允許使用牽涉多個資料行的子查詢當做資料列值運算式。 例如，下列程式碼會產生語法錯誤，因為第三個資料列值運算式清單包含具有多個資料行的子查詢。  
   
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>資料型別  
- 在多重資料列 INSERT 陳述式中指定的值會遵循 UNION ALL 語法的資料類型轉換屬性。 這會導致較高的型別不相符的類型隱含轉換[優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)。 如果轉換不是支援的隱含轉換，就會傳回錯誤。 例如，下列陳述式插入的整數值和字元值類型的資料行**char**。  
+ 在多重資料列 INSERT 陳述式中指定的值會遵循 UNION ALL 語法的資料類型轉換屬性。 這會導致將不相符的類型隱含地轉換成較高[優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的類型。 如果轉換不是支援的隱含轉換，就會傳回錯誤。 例如，下列陳述式會將整數值和字元值插入至類型為 **char** 的資料行中。  
   
 ```  
 CREATE TABLE dbo.t (a int, b char);  
@@ -149,7 +149,7 @@ SELECT * FROM Sales.MySalesReason;
 ```  
   
 ### <a name="c-specifying-multiple-values-as-a-derived-table-in-a-from-clause"></a>C. 將多個值指定為 FROM 子句中的衍生資料表  
- 下列範例會使用資料表值建構函式的 SELECT 陳述式的 FROM 子句中指定多個值。  
+ 下列範例會使用資料表值建構函式，在 SELECT 陳述式的 FROM 子句中指定多個值。  
   
 ```  
 SELECT a, b FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);  

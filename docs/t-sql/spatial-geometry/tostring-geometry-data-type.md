@@ -1,5 +1,5 @@
 ---
-title: "ToString (geometry 資料類型) |Microsoft 文件"
+title: "ToString (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -43,17 +43,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **nvarchar （max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回類型： **SqlString**  
+ CLR 傳回類型：**SqlString**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個方法在 Null 例項上呼叫時，將會傳回 "Null" 字串。  
   
  在非 Null 例項上，此方法相當於使用 `AsTextZM().`  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立`LineString`執行個體，並使用`ToString()`擷取執行個體的文字描述。  
+ 下列範例會建立 `LineString` 執行個體，並使用 `ToString()` 來提取此例項的文字描述。  
   
 ```  
 DECLARE @g geometry;  
@@ -62,7 +62,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [STAsText &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
+ [STAsText &#40;geometry 資料型別&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

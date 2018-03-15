@@ -1,5 +1,5 @@
 ---
-title: "STGeomFromWKB (geography 資料類型) |Microsoft 文件"
+title: "STGeomFromWKB (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回**geography**從開放式地理空間協會 (OGC) 已知二進位 (well-known binary，WKB) 表示法的執行個體。
+從開放地理空間協會 (OGC) 已知的二進位 (WKB) 表示法傳回 **geography** 執行個體。
   
-這**geography**資料類型方法可支援**FullGlobe**執行個體或大於半球的空間執行個體。
+這個 **geography** 資料類型方法可支援 **FullGlobe** 執行個體或大於半球的空間執行個體。
   
 ## <a name="syntax"></a>語法  
   
@@ -47,22 +47,22 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
 ## <a name="arguments"></a>引數  
  *WKB_geography*  
- 是的 WKB 表示法**geography**来傳回執行個體。 *WKB_geography*是**varbinary （max)**運算式。  
+ 傳回 WKB 表示法的 **geography** 執行個體。 *WKB_geography* 是 **varbinary(max)** 運算式。  
   
  *SRID*  
- 是**int**運算式，表示的空間參考識別碼 (SRID) 的**geography**来傳回執行個體。  
+ 這是 **int** 運算式，表示要傳回之 **geography** 執行個體的空間參考識別碼 (SRID)。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>備註  
- OGC 類型**geography**所傳回的執行個體`STGeomFromText()`設定為對應的 WKB 輸入。  
+## <a name="remarks"></a>Remarks  
+ `STGeomFromText()` 傳回之 **geography** 執行個體的 OGC 型別會設定為對應的 WKB 輸入。  
   
- 這個方法會擲回**FormatException**如果輸入格式不正確。  
+ 如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   
- 這個方法會擲回**ArgumentException**如果輸入包含對蹠邊緣。  
+ 如果輸入包含對蹠邊緣，這個方法會擲回 **ArgumentException**。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `STGeomFromWKB()` 建立 `geography` 例項。  

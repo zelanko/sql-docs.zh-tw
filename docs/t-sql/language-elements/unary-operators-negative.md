@@ -1,5 +1,5 @@
 ---
-title: "- （負）(TRANSACT-SQL) |Microsoft 文件"
+title: "- (負) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---negative"></a>一元運算子-負數
+# <a name="unary-operators---negative"></a>一元運算子 - 負
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回數值運算式 (一元運算子) 的負值。 一元運算子只能在屬於數值資料類型類別目錄之任何資料類型的單一運算式上執行運算。   
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *numeric_expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)其中任何一個資料類型的數值資料類型類別目錄以外的日期和時間類別目錄。  
+ 這是在日期和時間類別目錄以外，屬於數值資料類型類別目錄之任何資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>結果類型  
- 傳回的資料型別*numeric_expression*，不同之處在於不帶正負號**tinyint**運算式升級到帶正負號**smallint**結果。  
+ 除了不帶正負號的 **tinyint** 運算式升級為帶正負號 **smallint** 結果，傳回 *numeric_expression* 的資料類型。  
   
 ## <a name="examples"></a>範例  
   
@@ -109,10 +109,10 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. 傳回的負數正數的常數  
- 下列範例會傳回的負數正數的常數。  
+### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. 傳回正常數的負值  
+ 下列範例會傳回正常數的負值。  
   
 ```  
 USE ssawPDW;  
@@ -126,8 +126,8 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17  
 ```  
   
-### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. 傳回負常數的正數  
- 下列範例會傳回負常數的正數。  
+### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. 傳回負常數的正值  
+ 下列範例會傳回負常數的正值。  
   
 ```  
 USE ssawPDW;  
@@ -141,8 +141,8 @@ SELECT TOP (1) – ( - 17) FROM DimEmployee;
 17  
 ```  
   
-### <a name="e-returning-the-negative-of-a-column"></a>E. 傳回的負數，資料行  
- 下列範例會傳回的負數`BaseRate`值中的每一位員工`dimEmployee`資料表。  
+### <a name="e-returning-the-negative-of-a-column"></a>E. 傳回資料行的負值  
+ 下列範例會傳回 `dimEmployee` 資料表中每一位員工 `BaseRate` 值的負值。  
   
 ```  
 USE ssawPDW;  
@@ -152,8 +152,8 @@ SELECT - BaseRate FROM DimEmployee;
   
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
 

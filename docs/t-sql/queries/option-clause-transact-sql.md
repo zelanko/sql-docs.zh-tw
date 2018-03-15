@@ -1,5 +1,5 @@
 ---
-title: "OPTION 子句 (TRANSACT-SQL) |Microsoft 文件"
+title: "OPTION 子句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. 使用 GROUP BY 子句中的 OPTION 子句  
+### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. 搭配 GROUP BY 子句使用 OPTION 子句  
  下列範例會顯示如何搭配 `OPTION` 子句來使用 `GROUP BY` 子句。  
   
 ```  
@@ -89,10 +89,10 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. SELECT 陳述式的 OPTION 子句中的標籤  
- 下列範例顯示簡單[!INCLUDE[ssDW](../../includes/ssdw-md.md)]SELECT 陳述式的 OPTION 子句中的標籤。  
+### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. OPTION 子句中含有標籤的 SELECT 陳述式  
+ 下列範例示範一個 OPTION 子句中含有標籤的簡單 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 陳述式。  
   
 ```  
 -- Uses AdventureWorks  
@@ -101,8 +101,8 @@ SELECT * FROM FactResellerSales
   OPTION ( LABEL = 'q17' );  
 ```  
   
-### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. 查詢提示的 OPTION 子句中包含 SELECT 陳述式  
- 下列範例示範使用 HASH JOIN 查詢提示的 OPTION 子句中的 SELECT 陳述式。  
+### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. OPTION 子句中含有查詢提示的 SELECT 陳述式  
+ 下列範例示範一個在 OPTION 子句中使用 HASH JOIN 查詢提示的 SELECT 陳述式。  
   
 ```  
 -- Uses AdventureWorks  
@@ -113,8 +113,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. 包含標籤與多個查詢提示的 OPTION 子句中的 SELECT 陳述式  
- 下列範例是[!INCLUDE[ssDW](../../includes/ssdw-md.md)]包含標籤和多個查詢提示的 SELECT 陳述式。 在計算節點上執行查詢時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會根據策略套用雜湊聯結或合併聯結，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]決定是最適合。  
+### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. OPTION 子句中含有一個標籤和多個查詢提示的 SELECT 陳述式  
+ 下列範例是一個包含一個標籤和多個查詢提示的 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 陳述式。 在計算節點上執行此查詢時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所決定的最佳策略，套用雜湊聯結或合併聯結。  
   
 ```  
 -- Uses AdventureWorks  
@@ -125,8 +125,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);  
 ```  
   
-### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. 查詢檢視時，使用查詢提示  
- 下列範例會建立名為 CustomerView 檢視之後再使用 HASH JOIN 查詢提示在參考檢視和資料表的查詢。  
+### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. 在查詢檢視表時使用查詢提示  
+ 下列範例會建立一個名為 CustomerView 的檢視表，然後在參考檢視表和資料表的查詢中使用 HASH JOIN 查詢提示。  
   
 ```  
 -- Uses AdventureWorks  
@@ -144,8 +144,8 @@ DROP VIEW CustomerView;
   
 ```  
   
-### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. 子選擇和查詢提示的查詢  
- 下列範例會顯示包含子選擇和查詢提示的查詢。 查詢提示會全域套用。 要附加至子選擇陳述式不允許查詢提示。  
+### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. 含有子選擇和查詢提示的查詢  
+ 下列範例示範一個同時包含子選擇和查詢提示的查詢。 查詢提示會在全域套用。 不允許將查詢提示附加至子選擇陳述式。  
   
 ```  
 -- Uses AdventureWorks  
@@ -160,8 +160,8 @@ ON ( a.CustomerKey = b.CustomerKey )) AS t
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. 強制聯結順序，以符合查詢中的順序  
- 下列範例會使用 FORCE ORDER 提示，強制查詢計畫，以使用查詢所指定的聯結順序。 如此可改善某些查詢; 上的效能並非所有的查詢。  
+### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. 強制聯結順序與查詢中的順序相符  
+ 下列範例會使用 FORCE ORDER 提示，以強制查詢計劃使用查詢所指定的聯結順序。 這可改善某些查詢的效能；但並非所有查詢。  
   
 ```  
 -- Uses AdventureWorks  
@@ -181,8 +181,8 @@ OPTION ( FORCE ORDER )
 ;  
 ```  
   
-### <a name="h-using-externalpushdown"></a>H. 使用的 EXTERNALPUSHDOWN  
- 下列範例會強制 WHERE 子句的下推到 MapReduce 工作外部 Hadoop 資料表上。  
+### <a name="h-using-externalpushdown"></a>H. 使用 EXTERNALPUSHDOWN  
+ 下列範例會強制將 WHERE 子句下推至外部 Hadoop 資料表上的 MapReduce 作業。  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -190,7 +190,7 @@ WHERE ID < 1000000
 OPTION (FORCE EXTERNALPUSHDOWN);  
 ```  
   
- 下列範例可防止 MapReduce 工作，在外部的 Hadoop 資料表上的 WHERE 子句下推。 PDW 適 WHERE 子句會傳回所有資料列。  
+ 下列範例會防止將 WHERE 子句下推至外部 Hadoop 資料表上的 MapReduce 作業。 所有資料列都會傳回給套用 WHERE 子句的 PDW。  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -199,7 +199,7 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   

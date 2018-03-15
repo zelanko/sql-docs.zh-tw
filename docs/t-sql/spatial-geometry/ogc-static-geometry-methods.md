@@ -1,5 +1,5 @@
 ---
-title: "OGC 靜態幾何方法 |Microsoft 文件"
+title: "OGC 靜態幾何方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -74,8 +74,8 @@ ms.lasthandoff: 01/25/2018
 -   [STGeomCollFromWKB &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
- [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [幾何執行個體上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+ [幾何執行個體上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [擴充的靜態幾何方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

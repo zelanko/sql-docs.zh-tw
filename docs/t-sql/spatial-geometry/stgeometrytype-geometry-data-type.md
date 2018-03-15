@@ -1,5 +1,5 @@
 ---
-title: "STGeometryType (geometry 資料類型) |Microsoft 文件"
+title: "STGeometryType (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回所表示的開放式地理空間協會 (OGC) 類型名稱**幾何**執行個體。
+傳回 **geometry** 執行個體表示的開放地理空間協會 (OGC) 類型名稱。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **nvarchar （4000)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(4000)**  
   
- CLR 傳回類型： **SqlString**  
+ CLR 傳回類型：**SqlString**  
   
-## <a name="remarks"></a>備註  
- 可傳回的 OGC 類型名稱`STGeometryType()`是**點**， **LineString**， **CircularString**， **CompoundCurve**，**Polygon、 CurvePolygon**， **GeometryCollection**， **MultiPoint**， **MultiLineString**，和**MultiPolygon**。  
+## <a name="remarks"></a>Remarks  
+ `STGeometryType()` 可傳回的 OGC 類型名稱為 **Point**、**LineString**、**CircularString**、**CompoundCurve**、**Polygon、CurvePolygon**、**GeometryCollection**、**MultiPoint**、**MultiLineString**和**MultiPolygon**。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `Polygon` 執行個體，並使用 `STGeometryType()` 確認它是多邊形。  

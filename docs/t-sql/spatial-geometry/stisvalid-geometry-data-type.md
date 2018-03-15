@@ -1,5 +1,5 @@
 ---
-title: "STIsValid (geometry 資料類型) |Microsoft 文件"
+title: "STIsValid (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回 true，否則**幾何**執行個體而言是否格式正確，根據它的開放式地理空間協會 (OGC) 類型。 傳回 false 如果**幾何**執行個體不是語式正確。
+如果 **geometry** 執行個體的格式正確 (根據它的開放地理空間協會 (OGC) 類型)，就會傳回 True。 如果 **geometry** 執行個體的格式不正確，就會傳回 False。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**位元**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型： **SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>備註  
- OGC 類型**幾何**執行個體由叫用[stgeometrytype （)](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)。  
+## <a name="remarks"></a>Remarks  
+ 可以叫用 [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) 來判斷 **geometry** 執行個體的 OGC 類型。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]只會產生有效**幾何**例項，但是允許儲存和擷取無效的執行個體。 可以使用 `MakeValid()` 方法來擷取表示任何無效例項之相同點組的有效例項。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只會產生有效的 **geometry** 執行個體，但是允許儲存和擷取無效的執行個體。 可以使用 `MakeValid()` 方法來擷取表示任何無效例項之相同點組的有效例項。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `geometry` 例項，並使用 `STIsValid()` 來測試此例項是否有效。  
@@ -63,7 +63,7 @@ SELECT @g.STIsValid();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [STGeometryType &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
+ [STGeometryType &#40;Geometry 資料類型&#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
  [MakeValid &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/makevalid-geometry-data-type.md)   
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

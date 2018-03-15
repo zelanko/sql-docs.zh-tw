@@ -1,5 +1,5 @@
 ---
-title: "STNumPoints (geometry 資料類型) |Microsoft 文件"
+title: "STNumPoints (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  在每一個圖形內傳回的點數總和**幾何**執行個體。  
+  傳回 **geometry** 執行個體中每一個圖形內的點數總和。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型： **SqlInt32**  
+ CLR 傳回類型：**SqlInt32**  
   
-## <a name="remarks"></a>備註  
- 這個方法會計算的描述中的點**幾何**執行個體。 重複的點都會被算入。 如果這個執行個體**集合**型別，這個方法會傳回的點數總和中每個項目。  
+## <a name="remarks"></a>Remarks  
+ 此方法會算入 **geometry** 執行個體描述中的點。 重複的點都會被算入。 如果此執行個體為 **collection** 型別，這個方法會傳回它的每一個元素內點的總和。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `LineString` 例項，並使用 `STNumPoints()` 來判斷例項描述內所用的點數。  

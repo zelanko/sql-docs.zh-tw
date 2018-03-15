@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromWKB (geometry 資料類型) |Microsoft 文件"
+title: "STGeomCollFromWKB (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回**geometrycollection**從開放式地理空間協會 (OGC) 已知二進位 (well-known binary，WKB) 表示法的執行個體。
+從「開放地理空間協會」(OGC) 的「已知二進位」(WKB) 表示法傳回 **geometrycollection** 執行個體。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,23 +45,23 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>引數  
  *WKB_geometrycollection*  
- 是的 WKB 表示法**geometrycollection**您想要傳回的執行個體。 *WKB_geometrycollection*是**varbinary （max)**運算式。  
+ 這是要傳回之 **geometrycollection** 執行個體的 WKB 表示法。 *WKB_geometrycollection* 是 **varbinary(max)** 運算式。  
   
  *SRID*  
- 是**int**運算式，表示的空間參考識別碼 (SRID) 的**幾何**您想要傳回的執行個體。  
+ 這是 **int** 運算式，代表要傳回之 **geometry** 執行個體的空間參考識別碼 (SRID)。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- OGC 類型**幾何**所傳回的執行個體`STGeomCollFromWKB()`設**GeomCollection**， **MultiPolygon**， **MultiLineString**，或**MulitPoint**，取決於對應的 WKB 輸入。  
+## <a name="remarks"></a>Remarks  
+ `STGeomCollFromWKB()` 所傳回之 **geometry** 執行個體的 OGC 類型會根據對應的 WKB 輸入，設定為 **GeomCollection**、**MultiPolygon**、**MultiLineString** 或 **MulitPoint**。  
   
  如果輸入的格式不正確，這個方法將會擲回 FormatException 例外狀況。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`STGeomCollFromWKB()`建立**幾何**執行個體。  
+ 下列範例會使用 `STGeomCollFromWKB()` 來建立 **geometry** 執行個體。  
   
 ```  
 DECLARE @g geometry;  

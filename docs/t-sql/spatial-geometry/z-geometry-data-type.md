@@ -1,5 +1,5 @@
 ---
-title: "Z (geometry 資料類型) |Microsoft 文件"
+title: "Z (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**float**  
   
- CLR 型別： **SqlDouble**  
+ CLR 類型：**SqlDouble**  
   
-## <a name="remarks"></a>備註  
- 這個屬性的值會是 null 的 geometry 執行個體不是點，以及如果與任何**點**未設定它的執行個體。  
+## <a name="remarks"></a>Remarks  
+ 除了對於未設定此屬性的任何 **Point** 執行個體而言，此屬性的值會是 Null 之外，如果 geometry 執行個體不是點，此屬性也會是 Null。  
   
  此屬性是唯讀的。  
   
@@ -65,8 +65,8 @@ SELECT @g.Z;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [M &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [AsTextZM &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
+ [M &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [AsTextZM &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

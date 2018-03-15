@@ -1,5 +1,5 @@
 ---
-title: "STAsBinary (geometry 資料類型) |Microsoft 文件"
+title: "STAsBinary (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **varbinary （max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**varbinary(max)**  
   
- CLR 傳回類型： **SqlBytes**  
+ CLR 傳回類型：**SqlBytes**  
   
 ## <a name="examples"></a>範例  
  下列範例會從文字建立 (0,0) 到 (2,3) 的 `LineString` 幾何例項。 `STAsBinary()` 會在 WKB 中傳回結果。  

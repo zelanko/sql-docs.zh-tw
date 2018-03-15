@@ -1,5 +1,5 @@
 ---
-title: "NumRings (geography 資料類型) |Microsoft 文件"
+title: "NumRings (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="numrings-geography-data-type"></a>NumRings (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回中的環形總數**多邊形**執行個體。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography**類型，外部和內部環形不會區別，因為任何環形可以採取來當做外部環形。  
+  傳回 **Polygon** 執行個體中的環形總數。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 型別中，不會區分外部和內部環形，因為任何環形都可以當做外部環形。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-type"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型： **SqlInt32**  
+ CLR 傳回類型：**SqlInt32**  
   
-## <a name="remarks"></a>備註  
- 這個方法會傳回 NULL，如果這不是**多邊形**執行個體，並會傳回 0，如果是空的執行個體。 這個方法是精確的。  
+## <a name="remarks"></a>Remarks  
+ 如果這不是 **Polygon** 執行個體，這個方法將會傳回 NULL；如果此執行個體是空的，則會傳回 0。 這個方法是精確的。  
   
 ## <a name="examples"></a>範例  
  這個範例會建立具有兩個環形的 `Polygon` 例項，並確認它確實有兩個環形。  

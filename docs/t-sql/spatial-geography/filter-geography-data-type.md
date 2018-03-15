@@ -1,5 +1,5 @@
 ---
-title: "篩選器 (geography 資料類型) |Microsoft 文件"
+title: "Filter (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="filter-geography-data-type"></a>Filter (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  這個方法提供快速且僅限索引的交集方法，來判斷**geography**執行個體相交，另一個**geography**執行個體，假設有索引可用。  
+  這個方法提供快速且僅限索引的交集方法，可判斷 **geography** 執行個體是否與另一個 **geography** 執行個體相交 (假設有提供索引)。  
   
- 傳回 1，如果**geography**可能執行個體相交另**geography**執行個體。 這個方法可能會產生誤判傳回值，且確切的結果可能會依計畫而定。 如果沒有的交集會傳回精確的 0 值 （真否定傳回） **geography**找到執行個體。  
+ 如果 **geography** 執行個體有可能與另一個 **geography** 執行個體相交，則會傳回 1。 這個方法可能會產生誤判傳回值，且確切的結果可能會依計畫而定。 如果找不到任何 **geography** 執行個體相交，則傳回正確的 0 值 (真否定傳回值)。  
   
- 在其中索引無法使用，或未使用的情況下，則方法會傳回相同的值**stintersects （)**時使用相同的參數來呼叫。  
+ 在沒有提供索引或未使用索引的情況下，以相同的參數呼叫時，此方法所傳回的值會與 **STIntersects()** 相同。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,14 +50,14 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是另一個**geography**比較 Filter() 叫用所在的執行個體的執行個體。  
+ 這是要與叫用 Filter() 所在之執行個體相比較的另一個 **geography** 執行個體。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**位元**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型： **SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個方法不具決定性或並非精確的。  
   
 ## <a name="examples"></a>範例  
@@ -80,7 +80,7 @@ WHERE g.Filter(geography::Parse(
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Geography 執行個體上的擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [STIntersects &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
+ [地理執行個體上擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [STIntersects &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
   
   

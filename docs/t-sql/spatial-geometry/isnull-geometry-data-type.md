@@ -1,5 +1,5 @@
 ---
-title: "IsNull (geometry 資料類型) |Microsoft 文件"
+title: "IsNull (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="isnull-geometry-data-type"></a>IsNull (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-型別**幾何**執行個體為 null。 如果此例項不是 Null，就會傳回 0。
+**geometry** 執行個體的類型為 Null。 如果此例項不是 Null，就會傳回 0。
   
 ## <a name="syntax"></a>語法  
   
@@ -42,12 +42,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型：**位元**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**bit**  
   
- CLR 型別： **SqlBoolean**  
+ CLR 類型：**SqlBoolean**  
   
-## <a name="remarks"></a>備註  
- `IsNull`可以用來測試是否**幾何**執行個體為 null。 這會產生令人混淆的結果，當此例項不是 Null 時傳回 0，但是如果此例項為 Null 則傳回 Null。  
+## <a name="remarks"></a>Remarks  
+ `IsNull` 可用來測試 **geometry** 執行個體是否為 Null。 這會產生令人混淆的結果，當此例項不是 Null 時傳回 0，但是如果此例項為 Null 則傳回 Null。  
   
  這個方法主要是由 SQL Server 基礎結構所使用；不建議您使用 `IsNull` 來測試例項是否為 Null。  
   

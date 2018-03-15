@@ -1,5 +1,5 @@
 ---
-title: "Null (geography 資料類型) |Microsoft 文件"
+title: "Null (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geography-data-type"></a>Null (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-提供的 null 執行個體的唯讀屬性**geography**型別。
+唯讀屬性，這個屬性會提供 **geography** 型別的 Null 執行個體。
   
 ## <a name="syntax"></a>語法  
   
@@ -46,11 +46,11 @@ Null
 ## <a name="arguments"></a>引數  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型別：**geography**  
   
- CLR 型別： **SqlGeography**  
+ CLR 型別：**SqlGeography**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>範例  
  下列範例會擷取 Null `geography`執行個體。  

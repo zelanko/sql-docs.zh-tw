@@ -1,5 +1,5 @@
 ---
-title: "選取 (TRANSACT-SQL) |Microsoft 文件"
+title: SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  從資料庫擷取資料列，並可讓您選取一個或多個資料列或從一個或多個資料表中的資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 SELECT 陳述式的完整語法很複雜，但主要子句可摘要如下：  
+  從資料庫中擷取資料列，並可讓您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一個或多個資料表選取一個或多個資料列或資料行。 SELECT 陳述式的完整語法很複雜，但主要子句可摘要如下：  
   
 [ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
  [ ORDER BY *order_expression* [ ASC | DESC ] ]  
   
- UNION、 EXCEPT 和 INTERSECT 運算子可用來結合或比較其結果成為一個結果集的查詢之間。  
+ 您可以在查詢之間使用 UNION、EXCEPT 和 INTERSECT 運算子來比較它們的結果，或將它們的結果結合成單一結果集。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,13 +106,13 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  由於 SELECT 陳述式十分複雜，因此將會依子句顯示詳細的語法元素及引數：  
   
 |||  
 |-|-|  
 |[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
-|[SELECT 子句](../../t-sql/queries/select-clause-transact-sql.md)|[等位](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
+|[SELECT 子句](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
 |[INTO 子句](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT 和 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
 |[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
 |[WHERE](../../t-sql/queries/where-transact-sql.md)|[FOR 子句](../../t-sql/queries/select-for-clause-transact-sql.md)|  
@@ -122,12 +122,12 @@ SELECT <select_criteria>
   
  只有在這些 SELECT 陳述式的選取清單包含指派使用者自訂函數之本機變數值的運算式時，才能在使用者自訂函數中，允許 SELECT 陳述式。  
   
- 利用 OPENDATASOURCE 函數來建構成伺服器名稱部分的四部分名稱，每當 SELECT 陳述式中出現資料表名稱時，都可用來做為資料表來源。 無法為指定四部分名稱[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 利用 OPENDATASOURCE 函數來建構成伺服器名稱部分的四部分名稱，每當 SELECT 陳述式中出現資料表名稱時，都可用來做為資料表來源。 針對 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，不可指定四部分名稱。  
   
  部分語法限制只適用於牽涉到遠端資料表的 SELECT 陳述式。  
   
 ## <a name="logical-processing-order-of-the-select-statement"></a>SELECT 陳述式的邏輯處理順序  
- 下列步驟顯示 SELECT 陳述式的邏輯處理順序或繫結順序。 此順序會決定在某個步驟中定義的物件提供給後續步驟之子句使用的時間。 例如，如果查詢處理器可繫結至 (存取) FROM 子句中定義的資料表或檢視表，這些物件及其資料行就會提供給所有後續步驟使用。 反之，因為 SELECT 子句是步驟 8，所以前面的子句無法參考該子句中定義的任何資料行別名或衍生資料行。 不過，ORDER BY 子句等後續子句都可以參考它們。 陳述式的實際執行由查詢處理器和順序可能與此清單不同。  
+ 下列步驟顯示 SELECT 陳述式的邏輯處理順序或繫結順序。 此順序會決定在某個步驟中定義的物件提供給後續步驟之子句使用的時間。 例如，如果查詢處理器可繫結至 (存取) FROM 子句中定義的資料表或檢視表，這些物件及其資料行就會提供給所有後續步驟使用。 反之，因為 SELECT 子句是步驟 8，所以前面的子句無法參考該子句中定義的任何資料行別名或衍生資料行。 不過，ORDER BY 子句等後續子句都可以參考它們。 陳述式的實際執行方式由查詢處理器決定，其順序可能與此清單不同。  
   
 1.  FROM  
 2.  ON  
@@ -139,21 +139,21 @@ SELECT <select_criteria>
 8.  SELECT  
 9. DISTINCT  
 10. ORDER BY  
-11. 頂端  
+11. TOP  
 
 > [!WARNING]
-> 以上順序，通常會情況。 不過，有一些不常見的情況下的順序可能不同之處。
+> 通常會按照上述順序。 不過，在一些不常見的情況下，順序可能會有不同。
 >
-> 例如，假設您有叢集的索引的檢視，並檢視排除某些資料表資料列和檢視的選取資料行清單使用變更的資料類型的轉換*varchar*至*整數*。 在此情況下，可能會轉換執行之前執行的 WHERE 子句。 常見確實。 通常是可以修改您的檢視，以避免不同的序列，如果它在您的案例中很重要。 
+> 例如，假設您在檢視表上有叢集索引，而該檢視表排除某些資料表資料列，且檢視表的 SELECT 資料行清單使用 CONVERT 將資料類型從 *varchar* 變更為 *integer*。 在此情況下，CONVERT 的執行順序可能會在 WHERE 子句之前。 這確實是不常見的情況。 如果在您的案例中順序相當重要，通常可以修改您的檢視表來避免順序不同。 
 
 ## <a name="permissions"></a>Permissions  
- 選取資料需要資料表或檢視的 **SELECT** 權限；此權限可從較高的範圍繼承而來，例如結構描述的 **SELECT** 權限或資料表的 **CONTROL** 權限。 需要的成員資格或**db_datareader**或**db_owner**固定資料庫角色或**sysadmin**固定的伺服器角色。 建立新的資料表使用**SELECTINTO**也需要**CREATETABLE**權限，而**ALTERSCHEMA**擁有新資料表的結構描述權限。  
+ 選取資料需要資料表或檢視的 **SELECT** 權限；此權限可從較高的範圍繼承而來，例如結構描述的 **SELECT** 權限或資料表的 **CONTROL** 權限。 或是需要 **db_datareader** 或 **db_owner** 固定資料庫角色中的成員資格，或 **sysadmin** 固定伺服器角色中的成員資格。 使用 **SELECTINTO** 來建立新資料表也需要 **CREATETABLE** 權限，以及擁有新資料表之結構描述上的 **ALTERSCHEMA** 權限。  
   
 ## <a name="examples"></a>範例:   
 下列範例使用 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料庫。
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. 使用 SELECT 擷取資料列和資料行  
- 此區段會顯示三個程式碼範例。 第一個程式碼範例會傳回所有資料列 （沒有 WHERE 子句指定） 和所有資料行 (使用`*`) 從`DimEmployee`資料表。  
+ 本節將示範三個程式碼範例。 第一個程式碼範例會從 `DimEmployee` 資料表中，傳回所有資料列 (未指定 WHERE 子句) 和所有資料行 (使用 `*`)。  
   
 ```sql  
 SELECT *  
@@ -161,7 +161,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- 下一個範例使用資料表別名，以達成相同結果。  
+ 這個接下來的範例會使用資料表別名來達到相同的結果。  
   
 ```sql  
 SELECT e.*  
@@ -169,7 +169,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- 這個範例會傳回所有資料列 （沒有 WHERE 子句指定） 和資料行的子集 (`FirstName`， `LastName`， `StartDate`) 從`DimEmployee`資料表中`AdventureWorksPDW2012`資料庫。 第三個資料行標題已重新命名為`FirstDay`。  
+ 此範例會從 `AdventureWorksPDW2012` 資料庫的 `DimEmployee` 資料表中，傳回所有資料列 (未指定 WHERE 子句)，以及資料行子集 (`FirstName`、`LastName`、`StartDate`)。 第三個資料行標題會重新命名為 `FirstDay`。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -177,7 +177,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- 這個範例會傳回的資料列`DimEmployee`具有`EndDate`不是 NULL 和`MaritalStatus`的是 ' （已婚）。  
+ 此範例只會傳回 `EndDate` 不是 NULL 且 `MaritalStatus` 是 ‘M’ (已婚) 之 `DimEmployee` 的資料列。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -188,7 +188,7 @@ ORDER BY LastName;
 ```  
   
 ### <a name="b-using-select-with-column-headings-and-calculations"></a>B. 使用 SELECT 與資料行標題及計算  
- 下列範例會傳回所有資料列從`DimEmployee`資料表，並根據每位員工計算 gross 支付其`BaseRate`和 40 小時的工作日。  
+ 下列範例會從 `DimEmployee` 資料表中傳回所有資料列，並根據每位員工的 `BaseRate` 和 40 小時工作週來計算其總薪資。  
   
 ```sql  
 SELECT FirstName, LastName, BaseRate, BaseRate * 40 AS GrossPay  
@@ -197,7 +197,7 @@ ORDER BY LastName;
 ```  
   
 ### <a name="c-using-distinct-with-select"></a>C. 使用 DISTINCT 與 SELECT  
- 下列範例會使用`DISTINCT`產生之所有中的唯一項目的清單`DimEmployee`資料表。  
+ 下列範例會使用 `DISTINCT`來產生 `DimEmployee` 資料表中所有唯一職稱的清單。  
   
 ```sql  
 SELECT DISTINCT Title  
@@ -206,7 +206,7 @@ ORDER BY Title;
 ```  
   
 ### <a name="d-using-group-by"></a>D. 使用 GROUP BY  
- 下列範例會尋找每一天所有銷售的總金額。  
+ 下列範例會尋找每天的所有銷售總額。  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -215,10 +215,10 @@ GROUP BY OrderDateKey
 ORDER BY OrderDateKey;  
 ```  
   
- 因為`GROUP BY`子句中，只有一個資料列，其中包含所有銷售的總和會傳回每一天。  
+ 由於 `GROUP BY` 子句的緣故，因此只會針對每天，傳回一個包含所有銷售總和的資料列。  
   
 ### <a name="e-using-group-by-with-multiple-groups"></a>E. 使用 GROUP BY 與多個群組  
- 下列範例會尋找平均價格和網際網路銷售總和的每一天，依訂單日期和升級索引鍵分組。  
+ 下列範例會尋找每天網際網路銷售的平均價格和總和，並依照訂單日期和促銷索引鍵分組。  
   
 ```sql  
 
@@ -229,7 +229,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ### <a name="f-using-group-by-and-where"></a>F. 使用 GROUP BY 與 WHERE  
- 下列範例會將結果分組之後擷取的訂單日期晚於 2002 年 8 月 1 日的資料列。  
+ 下列範例會在只擷取訂單日期晚於 2002 年 8 月 1 日的資料列之後，將結果分組。  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -249,7 +249,7 @@ GROUP BY (OrderDateKey * 10);
 ```  
   
 ### <a name="h-using-group-by-with-order-by"></a>H. 使用 GROUP BY 與 ORDER BY  
- 下列範例會尋找每個日期和訂單的銷售總和的每日。  
+ 下列範例會尋找每天的銷售總和，然後依照日期排序。  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -259,7 +259,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ### <a name="i-using-the-having-clause"></a>I. 使用 HAVING 子句  
- 此查詢會使用`HAVING`子句來限制結果。  
+ 此查詢會使用 `HAVING` 子句來限制結果。  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -270,7 +270,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [精選的範例 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
- [提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
+ [SELECT 範例 &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
+ [提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   
 

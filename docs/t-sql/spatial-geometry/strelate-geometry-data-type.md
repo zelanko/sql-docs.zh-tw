@@ -1,5 +1,5 @@
 ---
-title: "STRelate (geometry 資料類型) |Microsoft 文件"
+title: "STRelate (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="strelate-geometry-data-type"></a>STRelate (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  傳回 1，如果**幾何**執行個體與另一個**幾何**執行個體，其中的關聯性是由 Dimensionally Extended 9 Intersection Model (DE 9IM) 模式矩陣值所定義; 否則為會傳回 0。  
+  如果 **geometry** 執行個體與另一個 **geometry** 執行個體有關 (關聯性是由 Dimensionally Extended 9 Intersection Model (DE-9IM) 模式矩陣值所定義)，便傳回 1；否則會傳回 0。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是另一個**幾何**比較所在之執行個體的執行個體`STRelate()`叫用。  
+ 這是要與進行 `STRelate()` 叫用的執行個體做比較的另一個 **geometry** 執行個體。  
   
  *intersection_pattern_matrix*  
- 這是類型的字串**nchar(9)**編碼可接受的值兩者之間 DE 9IM 模式矩陣裝置**幾何**執行個體。  
+ 這是兩個 **geometry** 執行個體之間 DE-9IM 模式矩陣裝置的 **nchar(9)** 類型編碼可接受值字串。  
   
-## <a name="remarks"></a>備註  
- 如果這個方法永遠傳回 null 的空間參考識別碼 (Srid)**幾何**例項不相符。 這個方法會擲回**ArgumentException**如果矩陣不是語式正確。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。 如果矩陣的格式不正確，這個方法將會擲回 **ArgumentException**。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**位元**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型： **SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`STRelate()`來測試兩個**幾何**脫離空間使用明確的 DE 9IM 模式的執行個體。  
+ 下列範例會使用 `STRelate()`，利用明確的 DE-9IM 模式測試兩個 **geometry** 執行個體是否在空間上不相鄰。  
   
 ```  
 DECLARE @g geometry;  

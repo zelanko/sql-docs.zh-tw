@@ -1,5 +1,5 @@
 ---
-title: "某些 |任何 (TRANSACT-SQL) |Microsoft 文件"
+title: SOME | ANY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
   
 ## <a name="arguments"></a>引數  
  *scalar_expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  這是任何有效的比較運算子。  
@@ -64,16 +64,16 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  指定應該進行比較。  
   
  *subquery*  
- 這是有單一資料行結果集的子查詢。 傳回的資料行的資料類型必須是相同的資料類型*scalar_expression*。  
+ 這是有單一資料行結果集的子查詢。 傳回的資料行資料類型必須與 *scalar_expression* 的資料類型相同。  
   
 ## <a name="result-types"></a>結果類型  
  **布林**  
   
 ## <a name="result-value"></a>結果值  
- SOME 或 ANY 傳回**TRUE**時指定的比較為 TRUE 的任何一對 (*scalar_expression***，***x*) 其中*x*是中的值單一資料行集。反之則傳回**FALSE**。  
+ 若任意組 (*scalar_expression***,***x*) 的指定比較都是 TRUE (其中 *x* 是單一資料行集中的值)，則 SOME 或 ANY 會傳回 **TRUE**；否則，會傳回 **FALSE**。  
   
-## <a name="remarks"></a>備註  
- SOME 需要*scalar_expression*正面比較至少一個子查詢所傳回的值。 需要的陳述式*scalar_expression*正面比較到子查詢會傳回每個值，請參閱[所有 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md). 例如，如果子查詢傳回 2 和 3 個值*scalar_expression* = SOME （子查詢） 會評估為 TRUE 的*scalar_express*為 2。 如果子查詢傳回 2 和 3 個值*scalar_expression* = ALL （子查詢） 會評估為 FALSE，因為部分子查詢 （即值 3） 的值不符合準則的運算式。  
+## <a name="remarks"></a>Remarks  
+ SOME 需要正面比較 *scalar_expression* 與至少一個子查詢傳回值。 對於需要以正數來比較 *scalar_expression* 和由子查詢傳回之每個值的陳述式，請參閱 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)。 例如，如果子查詢傳回 2 和 3 的值，*scalar_expression* = SOME (子查詢) 會針對值為 2 的 *scalar_express* 評估為 TRUE。 如果子查詢傳回 2 和 3 的值，*scalar_expression* = ALL (子查詢) 就會評估為 FALSE，因為子查詢 (值為 3) 的某些值不符合運算式的準則。  
   
 ## <a name="examples"></a>範例  
   
@@ -109,7 +109,7 @@ PRINT 'FALSE' ;
 ```  
   
 ### <a name="b-running-a-practical-example"></a>B. 執行實際範例  
- 下列範例會建立預存程序會決定是否將指定的所有元件`SalesOrderID`中`AdventureWorks2012`資料庫可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有元件建立一份 `SalesOrderID` 值數目的清單，然後測試是否有任何一個子查詢傳回值大於所指定的天數。 如果傳回的每個 `DaysToManufacture` 值都小於提供的數目，則條件為 TRUE，並且會列印出第一個訊息。  
+ 下列範例會建立預存程序，以判斷 `AdventureWorks2012` 資料庫中所指定 `SalesOrderID` 的所有組件，是否都可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有元件建立一份 `SalesOrderID` 值數目的清單，然後測試是否有任何一個子查詢傳回值大於所指定的天數。 如果傳回的每個 `DaysToManufacture` 值都小於提供的數目，則條件為 TRUE，並且會列印出第一個訊息。  
   
 ```  
 -- Uses AdventureWorks  
@@ -131,7 +131,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
 ```  
   
- 若要測試的程序，來執行程序使用`SalesOrderID``49080`，其具有一個需要的元件`2`天和兩個需要 0 天的元件。 第一個陳述式符合此準則， 第二個查詢則不符合。  
+ 若要測試這個程序，請使用 `SalesOrderID``49080` 來執行程序，其具有一個需要 `2` 天時間來製造的組件，以及兩個需要 0 天來製造的組件。 第一個陳述式符合此準則， 第二個查詢則不符合。  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -150,10 +150,10 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>另請參閱  
- [所有 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

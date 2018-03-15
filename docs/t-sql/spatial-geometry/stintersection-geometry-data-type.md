@@ -1,5 +1,5 @@
 ---
-title: "STIntersection (geometry 資料類型) |Microsoft 文件"
+title: "STIntersection (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geometry-data-type"></a>STIntersection (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回物件表示的點，其中**幾何**執行個體相交，另一個**幾何**執行個體。
+傳回物件，表示 **geometry** 執行個體與另一個 **geometry** 執行個體相交的點。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是另一個**幾何**相比較的執行個體上的執行個體`STIntersection()`叫用，以判斷兩者相交的地方。  
+ 這是要與 `STIntersection()` 叫用所在之執行個體相比較的另一個 **geometry** 執行個體，以判斷兩者相交的地方。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- `STIntersection()`一律傳回 null 如果的空間參考識別碼 (Srid)**幾何**例項不相符。 只有當輸入執行個體包含圓弧線段，結果才能包含圓弧線段。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，`STIntersection()` 一定會傳回 Null。 只有當輸入執行個體包含圓弧線段，結果才能包含圓弧線段。  
   
 ## <a name="examples"></a>範例  
   

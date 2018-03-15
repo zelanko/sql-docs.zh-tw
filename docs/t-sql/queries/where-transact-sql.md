@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>引數  
-\<*s* > 定義要傳回的資料列，必須滿足的條件。 搜尋條件中所能包括的述詞數目沒有限制。 如需有關搜尋條件和述詞的詳細資訊，請參閱[搜尋條件 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > 會定義所傳回資料列要符合的條件。 搜尋條件中所能包括的述詞數目沒有限制。 如需有關搜尋條件和述詞的詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例示範如何在 `WHERE` 子句中使用某些常見的搜尋條件。  
@@ -64,7 +64,7 @@ FROM DimEmployee
 WHERE LastName = 'Smith' ;  
 ```  
   
-### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. 尋找包含做為字串一部分之值的資料列  
+### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. 尋找所含值為字串之一部分的資料列  
   
 ```  
 -- Uses AdventureWorks  
@@ -126,8 +126,8 @@ WHERE EmployeeKey Between 100 AND 200;
   
 ## <a name="see-also"></a>另請參閱  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [述詞 &#40;TRANSACT-SQL &#41;](~/t-sql/queries/predicates.md)   
- [搜尋條件 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)   
+ [述詞 &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
+ [搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  

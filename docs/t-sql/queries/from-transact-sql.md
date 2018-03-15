@@ -1,5 +1,5 @@
 ---
-title: "從 (TRANSACT-SQL) |Microsoft 文件"
+title: FROM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -167,40 +167,40 @@ FROM { <table_source> [ ,...n ] }
  指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用的資料表、檢視表、資料表變數或衍生資料表來源 (含有別名或不含別名)。 陳述式中最多只能使用 256 個資料表來源 (雖然這項限制會隨著可用記憶體和查詢中之其他運算式的複雜度而改變)。 個別查詢可能無法支援多達 256 個資料表來源。  
   
 > [!NOTE]  
->  如果查詢中參考大量資料表，則可能會降低查詢效能。 編譯和最佳化時間也會受其他因素影響。 這些包括出現的索引和索引檢視表上每個\<t > 的大小和\<select_list > SELECT 陳述式中。  
+>  如果查詢中參考大量資料表，則可能會降低查詢效能。 編譯和最佳化時間也會受其他因素影響。 這些因素包括每個 \<table_source> 上是否有索引和索引檢視表，以及 SELECT 陳述式中 \<select_list> 的大小。  
   
  FROM 關鍵字後面的資料表來源順序不會影響傳回的結果集。 當 FROM 子句中出現重複的名稱時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   
  *table_or_view_name*  
  這是資料表或檢視表的名稱。  
   
- 如果資料表或檢視表存在於相同的執行個體上的另一個資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，表單中使用完整限定的名稱*資料庫*。*結構描述*。*object_name*。  
+ 如果資料表或檢視表位於同一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的另一個資料庫中，請使用 *database*.*schema*.*object_name* 格式的完整名稱。  
   
- 如果資料表或檢視表存在於執行個體的外部[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l，表單中使用四部分名稱*linked_server*。*目錄*。*結構描述*。*物件*。 如需詳細資訊，請參閱 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的資料。 建構使用四部分名稱[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)做為伺服器名稱的一部分也可用來指定遠端資料表來源。 指定 OPENDATASOURCE 時， *database_name*和*schema_name*可能不適用於所有資料來源而且受限於存取遠端物件的 OLE DB 提供者的功能。  
+ 如果資料表或檢視表位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之外，請使用 *linked_server*.*catalog*.*schema*.*object* 格式的四部分名稱。 如需詳細資訊，請參閱 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的資料。 如果四部分的名稱是利用 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函數來建構為名稱的伺服器部分，則該名稱也可用來指定遠端資料表來源。 已指定 OPENDATASOURCE 時，*database_name* 和 *schema_name* 就無法套用至所有資料來源，並且會受到存取遠端物件之 OLE DB 提供者的功能限制。  
   
  [AS] *table_alias*  
- 是的別名*t*為了方便起見，或為區分資料表或檢視中的自我聯結或子查詢可使用。 別名通常是一個縮短的資料表名稱，可用來參考聯結中之資料表的特定資料行。 如果相同的資料行名稱存在於聯結中的多個資料表中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會要求資料行名稱必須被資料表名稱、檢視表名稱或別名所限定。 如果已定義別名，就不能使用資料表名稱。  
+ 這是 *table_source* 的別名，您可以為了方便而使用它，或是用來區別自我聯結或子查詢中的資料表或檢視表。 別名通常是一個縮短的資料表名稱，可用來參考聯結中之資料表的特定資料行。 如果相同的資料行名稱存在於聯結中的多個資料表中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會要求資料行名稱必須被資料表名稱、檢視表名稱或別名所限定。 如果已定義別名，就不能使用資料表名稱。  
   
- 使用衍生的資料表、 資料列集或資料表值函式或運算子子句 （如 PIVOT 或 UNPIVOT） 時，所需*table_alias*子句結尾是所有資料行，包括群組作業資料行相關聯的資料表名稱傳回。  
+ 使用衍生資料表、資料列集、資料表值函數或運算子子句 (例如 PIVOT 或 UNPIVOT) 時，子句尾端所需的 *table_alias* 是所傳回之所有資料行 (包括群組資料行) 的相關資料表名稱。  
   
- 使用 (\<table_hint >)  
+ WITH (\<table_hint> )  
  指定查詢最佳化工具必須搭配這份資料表，並針對這個陳述式來使用最佳化或鎖定策略。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  *rowset_function*  
 
-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- 指定資料列集函數之一 (如 OPENROWSET)，利用該函數來傳回可使用的物件，而不是傳回資料表參考。 資料列集函數的清單的相關資訊，請參閱[資料列集函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
+ 指定資料列集函數之一 (如 OPENROWSET)，利用該函數來傳回可使用的物件，而不是傳回資料表參考。 如需有關資料列集函數清單的詳細資訊，請參閱[資料列集函數 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)。  
   
  使用 OPENROWSET 和 OPENQUERY 函數來指定遠端物件時，主要取決於存取此物件之 OLE DB 提供者的功能。  
   
  *bulk_column_alias*  
 
-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- 這是一個用以取代結果集中之資料行名稱的選擇性別名。 資料行別名只能用在搭配 BULK 選項使用 OPENROWSET 函數的 SELECT 陳述式中。 當您使用*bulk_column_alias*，指定檔案中的資料行的相同順序的每個資料表資料行的別名。  
+ 這是一個用以取代結果集中之資料行名稱的選擇性別名。 資料行別名只能用在搭配 BULK 選項使用 OPENROWSET 函數的 SELECT 陳述式中。 當您使用 *bulk_column_alias* 時，請依照與檔案中資料行相同的順序，指定每個資料表資料行的別名。  
   
 > [!NOTE]  
 >  這個別名會覆寫 XML 格式檔之 COLUMN 元素中的 NAME 屬性。  
@@ -210,25 +210,25 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- 透過 XML 文件提供資料列集的檢視。 如需詳細資訊，請參閱[OPENXML &#40;TRANSACT-SQL &#41;](../../t-sql/functions/openxml-transact-sql.md).  
+ 透過 XML 文件提供資料列集的檢視。 如需詳細資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。  
   
  *derived_table*  
- 這是從資料庫中擷取資料列的子查詢。 *derived_table*用做為外部查詢的輸入。  
+ 這是從資料庫中擷取資料列的子查詢。 *derived_table*可用來作為外部查詢的輸入。  
   
- *衍生* *_table*可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]資料表值建構函式功能，來指定多個資料列。 例如， `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`。 如需詳細資訊，請參閱[資料表值建構函式 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived* *_table* 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值建構函式功能來指定多個資料列。 例如， `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`。 如需詳細資訊，請參閱[資料表值建構函式 &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)。  
   
  *column_alias*  
  這是一個用以取代衍生資料表結果集中之資料行名稱的選擇性別名。 選取清單中的每個資料行都包含一個資料行別名，且會利用括號包住資料行別名的完整清單。  
   
- *table_or_view_name* FOR SYSTEM_TIME \<system_time >  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- 指定特定版本的資料會傳回從指定的時態表和其連結的系統建立版本歷程記錄資料表  
+ 指定從所指定的時態表及其連結的系統版本設定記錄資料表，傳回特定版本的資料  
   
 \<tablesample_clause>  
  指定必須從資料表傳回資料範例。 該範例可能只是近似資料。 這個子句可用於 SELECT、UPDATE 或 DELETE 陳述式中的任何主要或聯結資料表。 TABLESAMPLE 不能利用檢視表來指定。  
@@ -240,19 +240,19 @@ FROM { <table_source> [ ,...n ] }
  這是 ISO 標準所指定之依實作方式而定的取樣方法。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這是唯一的可用取樣方法，而且預設會採用這種方法。 SYSTEM 採用頁面型取樣方法，這種方法會從資料表中為範例選擇一組隨機頁面，然後將這些頁面上的所有資料列當做範例子集傳回。  
   
  *sample_number*  
- 這是用以代表資料列之百分比或數目的精確或近似常數數值運算式。 當利用 PERCENT，指定*sample_number*隱含地轉換成**float**值; 否則它會轉換為**bigint**。 PERCENT 是預設值。  
+ 這是用以代表資料列之百分比或數目的精確或近似常數數值運算式。 以 PERCENT 指定時，*sample_number* 會以隱含方式轉換成 **float** 值；否則會轉換成 **bigint**。 PERCENT 是預設值。  
   
  PERCENT  
- 指定*sample_number*應該從資料表中擷取資料表資料列的百分比。 當指定 PERCENT 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回所指定之百分比的近似值。 當指定 PERCENT 時*sample_number*運算式必須評估為值從 0 到 100。  
+ 指定應該從資料表中擷取百分之 *sample_number* 的資料表資料列。 當指定 PERCENT 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回所指定之百分比的近似值。 已指定 PERCENT 時，*sample_number* 運算式必須評估為 0 到 100 的值。  
   
  ROWS  
- 指定近似之*sample_number*將擷取的資料列。 當指定 ROWS 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回所指定之資料列數的近似值。 當指定 ROWS 時， *sample_number*運算式必須評估為整數值小於或等於零。  
+ 指定將擷取大約 *sample_number* 個資料列。 當指定 ROWS 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回所指定之資料列數的近似值。 已指定 ROWS 時，*sample_number* 運算式必須評估為大於零的整數值。  
   
  REPEATABLE  
- 指出所選範例可以重新傳回。 當指定的相同*repeat_seed*值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，只要資料表中的所有資料列尚未進行任何變更將會傳回相同的資料列子集。 當指定使用不同*repeat_seed*值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有可能會傳回資料表中的資料列的不同取樣。 對資料表執行的下列動作均視為變更：插入、更新、刪除、索引重建或重新組織，以及資料庫還原或附加。  
+ 指出所選範例可以重新傳回。 以相同的 *repeat_seed* 值指定時，只要沒有對資料表中的任何資料列進行任何變更，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回相同的資料列子集。 以不同的 *repeat_seed* 值指定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將可能傳回資料表中一些不同的資料列樣本。 對資料表執行的下列動作均視為變更：插入、更新、刪除、索引重建或重新組織，以及資料庫還原或附加。  
   
  *repeat_seed*  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了產生隨機數字所使用的常數整數運算式。 *repeat_seed*是**bigint**。 如果*repeat_seed*未指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會隨機指派一個值。 針對特定*repeat_seed*值，取樣結果一律會相同如果資料表已不套用任何變更。 *Repeat_seed*運算式必須評估為大於零的整數。  
+ 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了產生隨機數字所使用的常數整數運算式。 *repeat_seed* 是 **bigint**。 如果未指定 *repeat_seed*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會隨機指派一個值。 針對特定的 *repeat_seed*值，只要尚未對資料表套用任何變更，取樣結果一律會相同。 *repeat_seed* 運算式必須評估為大於零的整數。  
   
  \<joined_table>  
  這是兩個或兩個以上的資料表所產生的結果集。 如果是多個聯結，請利用括號來變更聯結的自然順序。  
@@ -273,18 +273,18 @@ FROM { <table_source> [ ,...n ] }
  指定右資料表中不符合聯結條件的所有資料列必須併入結果集中，而且，除了內部聯結所傳回的所有資料列以外，還必須將對應於其他資料表的輸出資料行設為 NULL。  
   
 \<join_hint>  
- 如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查詢最佳化工具使用一個聯結提示或執行演算法，每個查詢的 FROM 子句中指定的聯結。 如需詳細資訊，請參閱[聯結提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql-join.md).  
+ 就 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 而言，這會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具針對查詢 FROM 子句中指定的每個聯結使用一個聯結提示 (或執行演算法)。 如需詳細資訊，請參閱[聯結提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md)。  
   
- 如[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，這些聯結提示套用至兩個與通訊群組不相容的資料行上的 INNER 聯結。 它們可以改善查詢效能，藉由限制的查詢處理期間發生的資料移動量。 允許的聯結提示的[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]如下：  
+ 就 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 而言，這些連結提示適用於兩個散發不相容資料行上的 INNER 連結。 它們可藉由限制在查詢處理期間可進行的資料移動數量來改善效能。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]所允許的聯結提示如下：  
   
- 減少  
- 會減少資料表聯結的右邊移動才能讓兩個散發相容資料表相容的資料列數目。 REDUCE 提示也稱為半聯結提示。  
+ REDUCE  
+ 減少要針對聯結右方資料表移動的資料列數量，以便讓兩個散發不相容資料表變成相容。 REDUCE 提示也稱為半聯結提示。  
   
  REPLICATE  
- 會使的聯結資料行中要複寫到所有節點之聯結左側資料表中的值。 在右側資料表已加入至複寫版本的這些資料行。  
+ 使來自聯結左方資料表的聯結資料行值複寫至所有節點。 右方資料表會聯結至這些資料行的複寫版本。  
   
- 轉散發  
- 強制兩個資料來源，以聯結子句中指定的資料行散發。 分散式資料表[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會隨機移動。 針對複寫的資料表，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會修剪移動。 若要了解這些移動型別，請參閱 < DMS 查詢計劃作業 > 主題中的區段 > 的 < 了解查詢計畫中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。 查詢計劃使用廣播的移動解決發佈不相容的聯結時，這個提示可改善效能。  
+ REDISTRIBUTE  
+ 強制將兩個資料來源散發在 JOIN 子句中所指定的資料行上。 針對分散式資料表，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會執行隨機移動。 針對複寫資料表，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會執行修剪移動。 若要了解這些移動類型，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜DMS Query Plan Operations＞(DMS 查詢計劃作業) 一節。 當查詢計劃使用廣播移動來解決散發不相容聯結的問題時，此提示可以改善效能。  
   
  JOIN  
  指出所指定的聯結作業必須發生在所指定的資料表來源或檢視表之間。  
@@ -304,17 +304,17 @@ ON (p.ProductID = v.ProductID);
   
  ON 子句中可以有僅涉及其中一個聯結資料表的述詞。 這類述詞也可以在查詢的 WHERE 子句中。 雖然這類述詞的放置不會影響 INNER 聯結，不過，如果涉及 OUTER 聯結，就可能會造成不同的結果。 這是因為 ON 子句中的述詞會套用至聯結之前的資料表，但在語意上，WHERE 子句則套用至聯結的結果。  
   
- 如需有關搜尋條件和述詞的詳細資訊，請參閱[搜尋條件 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+ 如需有關搜尋條件和述詞的詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)。  
   
  CROSS JOIN  
  指定兩個資料表的交叉乘積。 所傳回的資料列與舊式非 SQL-92 樣式聯結中不指定任何 WHERE 子句時所傳回的資料列相同。  
   
- *left_table_source* {跨 |外部} 套用*right_table_source*  
- 指定*right_table_source*是 APPLY 運算子會針對每個資料列的評估*left_table_source*。 此功能會很有用時*right_table_source*包含接受資料行值的資料表值函式*left_table_source*做為其中一個引數。  
+ *left_table_source* { CROSS | OUTER } APPLY *right_table_source*  
+ 指定針對 *left_table_source* 的每個資料列評估 APPLY 運算子的 *right_table_source*。 當 *right_table_source* 所包含的資料表值函數會從 *left_table_source* 取得資料行值來作為它的其中一個引數時，此功能會相當有用。  
   
- 必須利用 APPLY 指定 CROSS 或 OUTER。 當指定 CROSS 時，會產生任何資料列時*right_table_source*就會根據指定的資料列的評估*left_table_source*並傳回空的結果集。  
+ 必須利用 APPLY 指定 CROSS 或 OUTER。 已指定 CROSS 時，如果針對 *left_table_source* 中的某個指定資料列評估 *right_table_source* 並傳回空的結果集，就不會產生任何資料列。  
   
- 當指定 OUTER 時，每個資料列產生一個資料列*left_table_source*即使*right_table_source*評估針對該資料列，並傳回空的結果集。  
+ 已指定 OUTER 時，則會為 *left_table_source* 的每個資料列產生一個資料列，即使針對該資料列評估 *right_table_source* 並傳回空的結果集時也一樣。  
   
  如需詳細資訊，請參閱＜備註＞一節。  
   
@@ -325,9 +325,9 @@ ON (p.ProductID = v.ProductID);
  這是資料表來源，如前一個引數所定義的一樣。 如需詳細資訊，請參閱＜備註＞一節。  
   
  *table_source* PIVOT \<pivot_clause>  
- 指定*t*樞紐根據*pivot_column*。 *t*是資料表或資料表運算式。 輸出是包含的所有資料行的資料表*t*除了*pivot_column*和*value_column*。 資料行*t*，除了*pivot_column*和*value_column*，稱為樞紐運算子的群組資料行。 如需 PIVOT 和 UNPIVOT 的詳細資訊，請參閱[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
+ 指定根據 *pivot_column*.對 *table_source* 進行樞紐作業。 *table_source* 是一個資料表或資料表運算式。 輸出是一個包含 *table_source* 之所有資料行 (*pivot_column* 和 *value_column* 除外) 的資料表。 *table_source* 的資料行 (*pivot_column* 和 *value_column* 除外) 稱為樞紐運算子的群組資料行。 如需有關 PIVOT 和 UNPIVOT 的詳細資訊，請參閱[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
- PIVOT 會對與群組作業資料行相關的輸入資料表執行群組作業，並為每個群組傳回一個資料列。 此外，輸出會包含每個值中指定的一個資料行*column_list* ，會出現在*pivot_column*的*input_table*。  
+ PIVOT 會對與群組作業資料行相關的輸入資料表執行群組作業，並為每個群組傳回一個資料列。 此外，輸出還會針對 *column_list* (出現在 *input_table* 的 *pivot_column*中) 所指定的每個值各包含一個資料行。  
   
  如需詳細資訊，請參閱稍後的＜備註＞一節。  
   
@@ -337,55 +337,55 @@ ON (p.ProductID = v.ProductID);
  不允許使用 COUNT(*) 系統彙總函式。  
   
  *value_column*  
- 這是 PIVOT 運算子的值資料行。 當搭配 UNPIVOT 使用時， *value_column*不能在輸入中的現有資料行名稱*t*。  
+ 這是 PIVOT 運算子的值資料行。 與 UNPIVOT 搭配使用時，*value_column* 不可以是輸入 *table_source*中現有資料行的名稱。  
   
  FOR *pivot_column*  
- 這是 PIVOT 運算子的樞紐資料行。 *pivot_column*必須是隱含或明確地轉換為型別**nvarchar()**。 此資料行不能**映像**或**rowversion**。  
+ 這是 PIVOT 運算子的樞紐資料行。 *pivot_column* 的類型必須可以隱含或明確地轉換成 **nvarchar()**。 這個資料行不可以是 **image** 或 **rowversion**。  
   
- 當使用 UNPIVOT 時， *pivot_column*是指從輸出資料行名稱*t*。 不能有現有的資料行中*t*具有該名稱。  
+ 使用 UNPIVOT 時，*pivot_column* 係指從 *table_source* 縮小範圍的輸出資料行名稱。 *table_source* 中不可以有具有該名稱的現有資料欄。  
   
  IN (*column_list* )  
- 在 PIVOT 子句中，清單中的值*pivot_column*中會成為輸出資料表的資料行名稱。 清單不能指定在輸入中的任何資料行名稱已經存在於*t* ，要進行樞紐作業。  
+ 在 PIVOT 子句中，列出 *pivot_column* 中將成為輸出資料表之資料行名稱的值。 此清單不能指定任何已經存在於要進行樞紐作業之輸入 *table_source* 中的資料行名稱。  
   
- 在 UNPIVOT 子句中，清單中的資料行*t*會縮短為單一*pivot_column*。  
+ 在 UNPIVOT 子句中，列出 *table_source* 中要縮減為單一 *pivot_column* 的資料行。  
   
  *table_alias*  
- 這是輸出資料表的別名名稱。 *pivot_table_alias*必須指定。  
+ 這是輸出資料表的別名名稱。 必須指定 *pivot_table_alias*。  
   
  UNPIVOT \< unpivot_clause >  
- 指定輸入的資料表會從多個資料行中縮小*column_list*插入單一資料行稱為*pivot_column*。 如需 PIVOT 和 UNPIVOT 的詳細資訊，請參閱[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
+ 指定將輸入資料表從 *column_list* 中的多個資料行縮減成一個名為 *pivot_column* 的單一資料行。 如需有關 PIVOT 和 UNPIVOT 的詳細資訊，請參閱[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
  AS OF \<date_time>  
 
-**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- 傳回含有每個資料列單一記錄的資料表，內含的值在過去的指定時間點為實際 (目前)。 就內部而言，時態表和其歷程記錄資料表之間執行等位，並將結果篩選為傳回的值所指定的時間點上有效的資料列中*\<日期 _ 時間 >*參數。 資料列的值會被視為有效如果*system_start_time_column_name*值小於或等於*\<日期 _ 時間 >*參數值和*system_end_time_column_name*值大於*\<日期 _ 時間 >*參數值。   
+ 傳回含有每個資料列單一記錄的資料表，內含的值在過去的指定時間點為實際 (目前)。 就內部而言，會在時態表及其記錄資料表之間執行聯集運算，然後篩選結果，以根據 *\<date_time>* 參數所指定的時間點，傳回當時有效之資料列中的值。 如果 *system_start_time_column_name* 值小於或等於 *\<date_time>* 參數值，且 *system_end_time_column_name* 值大於 *\<date_time>*參數值，資料列的值即視為有效。   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
   
- 傳回資料表，其中指定的時間範圍內，不論其是否正在使用中之前的作用中的所有記錄版本值*\<開始日期時間 >* FROM 的參數值引數，或不在作用中後*\<結束日期時間 >* TO 引數的參數值。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 會併入變得較低的恰好在 FROM 端點所定義在使用中的資料列而變成右上恰好在 TO 端點所定義在使用中狀態的資料列不包含。  
+ 傳回一個資料表，其中含有在指定時間範圍內處於作用中之所有記錄版本的值，不論它們是在 FROM 引數的 *\<start_date_time>* 參數值之前即開始處於作用中，還是在 TO 引數的 *\<end_date_time>* 參數值之後停止處於作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 這包含正好在 FROM 端點所定義範圍下限變成作用中的資料列，但不包含正好在 TO 端點所定義範圍上限變成作用中的資料列。  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 如同上方**FROM\<開始日期時間 > TO\<結束日期時間 >**描述，但它包含資料列變為作用中所定義的上限\<結束日期時間 >端點。  
+ 與上面的 **FROM \<start_date_time> TO \<end_date_time>** 描述相同，唯一差別在於它包含在 \<end_date_time> 端點所定義的範圍上限變成作用中的資料列。  
   
- 在 CONTAINED IN (\<開始日期時間 >，\<結束日期時間 >)  
+ CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  傳回資料表，其中內含所有記錄版本的值，該值在 CONTAINED IN 引數兩個日期時間值所定義的指定時間範圍內為開啟及關閉。 包含恰好在範圍下限變為作用中的資料列，或是恰好在範圍上限就不在作用中的資料列。  
   
  ALL  
- 從目前的資料表和記錄資料表的所有資料列會傳回資料表，其中的值。  
+ 傳回含有目前資料表及記錄資料表之所有資料列值的資料表。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  FROM 子句支援聯結資料表和衍生資料表的 SQL-92-SQL 語法。 SQL-92 語法提供 INNER、LEFT OUTER、RIGHT OUTER、FULL OUTER 及 CROSS 聯結運算子。  
   
  在檢視表內的衍生資料表和子查詢中，都支援 FROM 子句內的 UNION 和 JOIN。  
@@ -395,39 +395,39 @@ ON (p.ProductID = v.ProductID);
  因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會考量提供資料行散發統計資料之連結伺服器的散發和基數統計資料，所以並不需要利用 REMOTE 聯結提示，從遠端強制評估聯結。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢處理器會考量遠端統計資料，然後判斷遠端聯結策略是否適當。 對於不提供資料行散發統計資料的提供者而言，REMOTE 聯結提示是很有用處的。  
   
 ## <a name="using-apply"></a>使用 APPLY  
- APPLY 運算子的左運算元和右運算元都是資料表運算式。 這些運算元之間的主要差異在於*right_table_source*可以使用會採用資料行從資料表值函式*left_table_source*做為其中一個函式的引數。 *Left_table_source*可以包含資料表值函式，但它不能包含的資料行的引數*right_table_source*。  
+ APPLY 運算子的左運算元和右運算元都是資料表運算式。 這些運算元的主要差異在於 *right_table_source* 可以使用資料表值函數，從 *left_table_source* 取得資料行來作為該函數的其中一個引數。 *left_table_source* 可以包含資料表值函數，但不能包含由 *right_table_source*.的資料行所構成的引數。  
   
  APPLY 運算子利用下列方式來產生 FROM 子句的資料表來源：  
   
-1.  評估*right_table_source*針對每個資料列的*left_table_source*來產生資料列集。  
+1.  針對 *left_table_source* 的每個資料列評估 *right_table_source* 以產生資料列集。  
   
-     中的值*right_table_source*相依於*left_table_source*。 *right_table_source*可以表示近似以下的方式： `TVF(left_table_source.row)`，其中`TVF`是資料表值函式。  
+     *right_table_source* 中的值取決於 *left_table_source*。 *right_table_source* 大致上可以下列方式表示：`TVF(left_table_source.row)`，其中 `TVF` 是資料表值函數。  
   
-2.  每個資料列評估之產生的結果集的結合*right_table_source*與*left_table_source*執行 UNION ALL 運算的方式。  
+2.  執行 UNION ALL 作業，將針對 *right_table_source* 之評估中每個資料列產生的結果集與 *left_table_source* 結合在一起。  
   
-     APPLY 運算子的結果所產生的資料行的清單是從資料行集中*left_table_source*結合資料行清單*right_table_source*。  
+     APPLY 運算子結果所產生的資料行清單就是與 *right_table_source*資料行清單結合的 *left_table_source* 資料行集。  
   
 ## <a name="using-pivot-and-unpivot"></a>使用 PIVOT 和 UNPIVOT  
- *Pivot_column*和*value_column*是 PIVOT 運算子所使用的群組資料行。 PIVOT 會遵照下列處理序來取得輸出結果集：  
+ *pivot_column* 和 *value_column* 是 PIVOT 運算子所使用的群組資料行。 PIVOT 會遵照下列處理序來取得輸出結果集：  
   
-1.  GROUP BY 對其*input_table*對群組資料行，並且產生一個輸出資料列的每個群組。  
+1.  在其 *input_table* 上針對群組資料行執行 GROUP BY，然後為每個群組各產生一個輸出資料列。  
   
-     群組中的資料行資料列的輸出取得該群組中的對應資料行值*input_table*。  
+     輸出資料列中的群組資料行會為 *input_table* 中的該群組取得對應的資料行值。  
   
-2.  執行下列作業，在每個輸出資料列的資料行清單中產生資料行的值：  
+2.  藉由執行下列作業，在每個輸出資料列的資料行清單中產生資料行的值：  
   
-    1.  此外分組在 GROUP BY 對前一個步驟中產生的資料列*pivot_column*。  
+    1.  對於在前一步驟的 GROUP BY 中產生的資料列，再另外針對 *pivot_column* 進行群組作業。  
   
-         每個輸出資料行中*column_list*，選取符合條件的子群組：  
+         針對 *column_list* 中的每個輸出資料行，選取滿足下列條件的子群組：  
   
          `pivot_column = CONVERT(<data type of pivot_column>, 'output_column')`  
   
-    2.  *aggregate_function*評估*value_column*這個子群組，且其結果會做為對應的值傳回*output_column*。 如果子群組是空的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產生 null 值的*output_column*。 如果彙總函式是 COUNT，且子群組是空的，就會傳回零 (0)。  
+    2.  *aggregate_function* 的評估對象為此子群組上的 *value_column*，且其結果是作為相對應 *output_column*.的值來傳回。 如果子群組是空的，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會為該 *output_column* 產生 Null 值。 如果彙總函式是 COUNT，且子群組是空的，就會傳回零 (0)。  
 
 > [!NOTE]
-> 中的資料行識別碼`UNPIVOT`子句依照目錄定序。 如[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，定序一律為`SQL_Latin1_General_CP1_CI_AS`。 如[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]部分自主的資料庫，定序一律為`Latin1_General_100_CI_AS_KS_WS_SC`。 如果資料行就會結合其他資料行，然後 collate 子句 (`COLLATE DATABASE_DEFAULT`) 才能避免衝突。   
+> `UNPIVOT` 子句中的資料行識別碼會依照目錄定序。 就 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 而言，定序一律為 `SQL_Latin1_General_CP1_CI_AS`。 就 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 部分自主資料庫而言，定序一律為 `Latin1_General_100_CI_AS_KS_WS_SC`。 如果資料行與其他資料行結合，就必須使用定序子句 (`COLLATE DATABASE_DEFAULT`) 來避免衝突。   
   
- 如需 PIVOT 和 UNPIVOT 包括範例的詳細資訊，請參閱[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
+ 如需有關 PIVOT 和 UNPIVOT 的詳細資訊 (包括範例)，請參閱[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要 DELETE、SELECT 或 UPDATE 陳述式的權限。  
@@ -471,7 +471,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ```  
   
 ### <a name="c-using-the-sql-92-cross-join-syntax"></a>C. 使用 SQL-92 CROSS JOIN 語法  
- 下列範例傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Employee` 和 `Department` 這兩個資料表的交叉乘積。 所有可能組合的清單`BusinessEntityID`資料列與所有`Department`會傳回名稱的資料列。  
+ 下列範例傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Employee` 和 `Department` 這兩個資料表的交叉乘積。 傳回一份清單，其中包含 `BusinessEntityID` 資料列與所有 `Department` 名稱資料列的所有可能組合。  
   
 ```wql    
 SELECT e.BusinessEntityID, d.Name AS Department  
@@ -569,11 +569,11 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ### <a name="k-using-apply"></a>K. 使用 APPLY  
  下列範例假設資料庫中存在含有下列結構描述的下列資料表：  
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+-   `Departments`：`DeptID`、`DivisionID`、`DeptName`、`DeptMgrID`  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
+-   `EmpMgr`：`MgrID`、`EmpID`  
   
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
+-   `Employees`：`EmpID`、`EmpLastName`、`EmpFirstName`、`EmpSalary`  
   
  另外還有一個資料表值函式 `GetReports(MgrID)`，它會傳回所有員工的清單 ( `EmpID`、`EmpLastName`、`EmpSalary` - 這些項目會直接或間接向指定的 `MgrID` 報告)。  
   
@@ -603,11 +603,11 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>M. 使用 FOR SYSTEM_TIME  
+### <a name="m-using-for-systemtime"></a>M. Using FOR SYSTEM_TIME  
   
-**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 下列範例會傳回資料表的資料列已從 2014 年 1 月 1 日開始的實際 （目前） 使用 FOR SYSTEM_TIME AS OF date_time_literal_or_variable 引數。  
+ 下列範例會使用 FOR SYSTEM_TIME AS OF date_time_literal_or_variable 引數來傳回截至 2014 年 1 月 1 日為止實際 (目前) 的資料表資料列。  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -619,7 +619,7 @@ FOR SYSTEM_TIME AS OF '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- 下列範例會使用 date_time_literal_or_variable 引數以 FOR SYSTEM_TIME FROM date_time_literal_or_variable 傳回皆為作用中期間定義為 2013 年 1 月 1 日開始，並以 2014 年 1 月 1 日結束的所有資料列不包括上限。  
+ 下列範例會使用 FOR SYSTEM_TIME FROM date_time_literal_or_variable TO date_time_literal_or_variable 引數來傳回在所定義期間 (從 2013 年 1 月 1 日起，到 2014 年 1 月 1 日止，不含範圍上限) 處於作用中的所有資料列。  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -631,7 +631,7 @@ FOR SYSTEM_TIME FROM '2013-01-01' TO '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- 下列範例會使用 FOR SYSTEM_TIME 之間 date_time_literal_or_variable 和 date_time_literal_or_variable 引數，以傳回所有資料列，皆為作用中定義為 2013 年 1 月 1 日開始，並以 2014 年 1 月 1 日結束的期間內含的上限。  
+ 下列範例會使用 FOR SYSTEM_TIME BETWEEN date_time_literal_or_variable AND date_time_literal_or_variable 引數來傳回在所定義期間 (從 2013 年 1 月 1 日起，到 2014 年 1 月 1 日止，包含範圍上限) 處於作用中的所有資料列。  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -643,7 +643,7 @@ FOR SYSTEM_TIME BETWEEN '2013-01-01' AND '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- 下列範例會使用 FOR SYSTEM_TIME CONTAINED IN （date_time_literal_or_variable、 date_time_literal_or_variable） 引數傳回為開啟及關閉定義為 2013 年 1 月 1 日開始，並以結束期間的所有資料列2014 年 1 月 1日日。  
+ 下列範例會使用 FOR SYSTEM_TIME CONTAINED IN ( date_time_literal_or_variable, date_time_literal_or_variable ) 引數來傳回在所定義期間 (從 2013 年 1 月 1 日起，到 2014 年 1 月 1 日止) 開啟和關閉的所有資料列。  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -655,7 +655,7 @@ FOR SYSTEM_TIME CONTAINED IN ( '2013-01-01', '2014-01-01' )
 WHERE ManagerID = 5;
 ```  
   
- 下列範例會使用變數，而不是常值來提供日期界限值的查詢。  
+ 下列範例會使用變數 (而不是常值) 來提供查詢的日期界限值。  
   
 ```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
@@ -670,10 +670,10 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="n-using-the-inner-join-syntax"></a>N. 使用 INNER JOIN 語法  
- 下列範例會傳回`SalesOrderNumber`， `ProductKey`，和`EnglishProductName`中的資料行`FactInternetSales`和`DimProduct`資料表 where 聯結索引鍵， `ProductKey`，比對兩個資料表中。 `SalesOrderNumber`和`EnglishProductName`個資料行中存在其中一個資料表，所以不需要使用這些資料行中，指定資料表別名，所顯示，則這些別名會包含為提高可讀性。 Word **AS**之前別名名稱不需要但建議為了可讀性，以及符合 ANSI 標準。  
+ 下列範例會從 `FactInternetSales` 和 `DimProduct` 資料表中，傳回聯結索引鍵 `ProductKey` 在兩個資料表中都相符的 `SalesOrderNumber`、`ProductKey`及 `EnglishProductName` 資料行。 `SalesOrderNumber` 和 `EnglishProductName` 資料行個別僅存在於其中一個資料表，因此不需要依照所示的方式指定這些資料行的相關資料表別名；包含這些別名只是為了方便閱讀。 別名名稱前的 **AS** 一字並非必要，但為了方便閱讀及符合 ANSI 標準，建議使用此字。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -684,7 +684,7 @@ INNER JOIN DimProduct AS dp
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- 因為`INNER`關鍵字不內部聯結的必要的這個相同的查詢可以寫成：  
+ 由於內部聯結並不需要 `INNER` 關鍵字，因此可以將這個相同的查詢撰寫成：  
   
 ```sql
 -- Uses AdventureWorks  
@@ -695,7 +695,7 @@ JOIN DimProduct AS dp
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- A`WHERE`子句也可用於與此查詢限制傳回的結果。 此範例中將結果限制為`SalesOrderNumber`高於 'SO5000' 的值：  
+ `WHERE` 子句也可以與這個查詢搭配使用來限制結果。 以下範例會將結果限制為高於 ‘SO5000’ 的 `SalesOrderNumber` 值：  
   
 ```sql
 -- Uses AdventureWorks  
@@ -709,7 +709,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. 使用 LEFT OUTER JOIN 和 RIGHT OUTER JOIN 語法  
- 下列範例聯結`FactInternetSales`和`DimProduct`資料表上`ProductKey`資料行。 左方外部聯結語法保留不相符的資料列，從左邊 (`FactInternetSales`) 資料表。 因為`FactInternetSales`資料表不包含任何`ProductKey`值不符合`DimProduct`資料表，此查詢會傳回第一個內部聯結上述範例中為相同的資料列。  
+ 下列範例會在 `ProductKey` 資料行上將 `FactInternetSales` 與 `DimProduct` 資料表聯結。 左方外部聯結語法會保留來自左方 (`FactInternetSales`) 資料表的不相符資料列。 由於 `FactInternetSales` 資料表並未包含任何與 `DimProduct` 資料表不符的 `ProductKey` 值，因此這個查詢會傳回與上面第一個內部聯結範例相同的資料列。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -720,9 +720,9 @@ LEFT OUTER JOIN DimProduct AS dp
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- 此查詢也可以寫入不含`OUTER`關鍵字。  
+ 您也可以不搭配 `OUTER` 關鍵字來撰寫此查詢。  
   
- 在右方外部聯結中，從右側資料表不符的資料列都會保留下來。 下列範例會傳回左方外部聯結上述範例中為相同的資料列。  
+ 在右方外部聯結中，會保留來自右方資料表的不相符資料列。 下列範例會傳回與上面左方外部聯結範例相同的資料列。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -733,7 +733,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- 下列查詢會使用`DimSalesTerritory`與左側資料表中左外部聯結的資料表。 它會擷取`SalesOrderNumber`值從`FactInternetSales`資料表。 如果沒有針對特定訂單`SalesTerritoryKey`，查詢會傳回 NULL`SalesOrderNumber`該資料列。 此查詢依據排序`SalesOrderNumber`資料行，以便將任何此資料行中的 Null 將會出現在結果的頂端。  
+ 下列查詢會使用 `DimSalesTerritory` 資料表作為左方外部聯結中的左方資料表。 它會從 `FactInternetSales`資料表擷取 `SalesOrderNumber` 值。 如果特定 `SalesTerritoryKey` 沒有任何訂單，查詢就會針對該資料列的 `SalesOrderNumber` 傳回 NULL。 此查詢會依據 `SalesOrderNumber` 資料行排序，因此這個資料行中的所有 NULL 都會出現在結果頂端。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -745,7 +745,7 @@ LEFT OUTER JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
- 此查詢可以改寫右方外部聯結來擷取相同的結果：  
+ 您可以使用右方外部聯結來撰寫此查詢以擷取相同的結果：  
   
 ```sql
 -- Uses AdventureWorks  
@@ -758,7 +758,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### <a name="p-using-the-full-outer-join-syntax"></a>P. 使用 FULL OUTER JOIN 語法  
- 下列範例會示範完整外部聯結中，這兩個聯結的資料表傳回所有資料列，但從另一個資料表不相符的值會傳回 NULL。  
+ 下列範例示範完整外部聯結，其中會從所連結的兩個資料表傳回所有資料列，但針對與另一方資料表不符的值會傳回 NULL。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -770,7 +770,7 @@ FULL OUTER JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
- 此查詢也可以寫入不含`OUTER`關鍵字。  
+ 您也可以不搭配 `OUTER` 關鍵字來撰寫此查詢。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -783,7 +783,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### <a name="q-using-the-cross-join-syntax"></a>Q. 使用 CROSS JOIN 語法  
- 下列範例會傳回的交叉乘積`FactInternetSales`和`DimSalesTerritory`資料表。 所有可能組合的清單`SalesOrderNumber`和`SalesTerritoryKey`會傳回。 請注意如果沒有`ON`交叉聯結查詢中的子句。  
+ 下列範例會傳回 `FactInternetSales` 與 `DimSalesTerritory` 資料表的交叉乘積。 其中會傳回 `SalesOrderNumber` 與 `SalesTerritoryKey`的所有可能組合清單。 請注意，交叉聯結查詢中沒有 `ON` 子句。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -795,7 +795,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### <a name="r-using-a-derived-table"></a>R. 使用衍生資料表  
- 下列範例會使用衍生的資料表 (`SELECT`之後的陳述式`FROM`子句) 來傳回`CustomerKey`和`LastName`中所有客戶的資料行`DimCustomer`資料表具有`BirthDate`值晚於年 1 月 1 日從 1970年和姓氏 'smith ' 距離。  
+ 下列範例會使用衍生資料表 (`FROM` 子句後面的 `SELECT` 陳述式) 來傳回 `DimCustomer` 資料表中 `BirthDate` 值在 1970 年 1 月 1 日之後且姓氏為 ‘Smith’ 之所有客戶的 `CustomerKey` 和 `LastName` 資料行。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -808,8 +808,8 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="s-reduce-join-hint-example"></a>S. 減少聯結提示範例  
- 下列範例會使用`REDUCE`改變查詢中的衍生資料表的處理聯結提示。 當使用`REDUCE`聯結提示，在此查詢中，`fis.ProductKey`投影、 複寫和進行不同，，然後加入至`DimProduct`期間的隨機`DimProduct`上`ProductKey`。 衍生的資料表的結果分佈在`fis.ProductKey`。  
+### <a name="s-reduce-join-hint-example"></a>S. REDUCE 聯結提示範例  
+ 下列範例會使用 `REDUCE` 聯結提示來更改查詢內衍生資料表的處理方式。 在此查詢中使用 `REDUCE` 聯結提示時，會針對 `fis.ProductKey` 進行預計、複寫及區別，然後在於 `ProductKey` 上隨機移動 `DimProduct` 的期間聯結至 `DimProduct`。 產生的衍生資料表會在 `fis.ProductKey` 上散發。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -824,8 +824,8 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="t-replicate-join-hint-example"></a>T. 複寫的聯結提示範例  
- 下一個範例顯示相同的查詢，上述範例中，不同處在於`REPLICATE`而不是使用聯結提示`REDUCE`聯結提示。 使用`REPLICATE`提示會造成中的值`ProductKey`（聯結） 的資料行從`FactInternetSales`資料表複寫到所有節點。 `DimProduct`資料表已加入至複寫版本的這些值。  
+### <a name="t-replicate-join-hint-example"></a>T. REPLICATE 聯結提示範例  
+ 這個接下來的範例示範與上一個範例相同的查詢，唯一差別在於使用的是 `REPLICATE` 聯結提示，而不是 `REDUCE` 聯結提示。 使用 `REPLICATE` 提示會導致將來自 `FactInternetSales` 資料表之 `ProductKey` (聯結端) 資料行中的值複寫至所有節點。 `DimProduct` 資料表會聯結至這些資料值的複寫版本。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -840,10 +840,10 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. 若要保證發佈不相容的聯結的隨機移動使用 REDISTRIBUTE 提示  
- 下列查詢會使用轉散發查詢提示上發佈不相容的聯結。 這可確保查詢最佳化工具會在查詢計畫中使用隨機移動。 這也會保證查詢計畫將不會使用廣播移動將分散式的資料表移到複寫資料表。  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. 使用 REDISTRIBUTE 提示來確保針對散發不相容聯結使用隨機移動  
+ 下列查詢會在散發不相容聯結上使用 REDISTRIBUTE 查詢提示。 這可確保查詢最佳化工具會在查詢計劃中使用「隨機」移動。 此外，也可確保查詢計劃不會使用會將分散式資料表移至複寫資料表的「廣播」移動。  
   
- 在下列範例中，REDISTRIBUTE 提示會強制 FactInternetSales 資料表上的隨機移動，因為 ProductKey 是 DimProduct 的散發資料行，而且不是 FactInternetSales 的散發資料行。  
+ 在下列範例中，REDISTRIBUTE 提示會強制在 FactInternetSales 資料表上進行「隨機」移動，因為 ProductKey 是 DimProduct 的散發資料行，而不是 FactInternetSales 的散發資料行。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -860,8 +860,8 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [OPENQUERY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/openquery-transact-sql.md)   
+ [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

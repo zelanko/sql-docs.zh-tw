@@ -1,5 +1,5 @@
 ---
-title: "使用 PIVOT 和 UNPIVOT |Microsoft 文件"
+title: "使用 PIVOT 和 UNPIVOT | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -37,15 +37,15 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="from---using-pivot-and-unpivot"></a>從-使用 PIVOT 和 UNPIVOT
+# <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  您可以使用`PIVOT`和`UNPIVOT`關聯式運算子，以變更到另一個資料表的資料表值運算式。 `PIVOT`旋轉資料表值的運算式從一個資料行的唯一值轉成在輸出中，多個資料行運算式中，執行必要的任何最後輸出的其餘資料行值上的彙總。 `UNPIVOT`旋轉成資料行值的資料表值運算式的資料行來執行相反的樞紐作業。  
+  您可以使用 `PIVOT` 和 `UNPIVOT` 關係運算子，將資料表值運算式變更為另一個資料表。 `PIVOT` 會藉由將來自運算式中某個資料行的唯一值轉換成輸出中的多個資料行，來旋轉資料表值運算式，然後對最終輸出所需的任何其餘資料行值，視需要執行彙總。 `UNPIVOT` 執行的作業與 PIVOT 相反，它會將資料表值運算式的資料行旋轉成資料行值。  
   
- 語法`PIVOT`提供更簡單且更容易閱讀，另外指定一連串複雜的語法比`SELECT...CASE`陳述式。 如需完整的語法說明`PIVOT`，請參閱[(TRANSACT-SQL) 從](../../t-sql/queries/from-transact-sql.md)。  
+ `PIVOT` 提供的語法比您另外指定一連串複雜的 `SELECT...CASE` 陳述式，還要簡單易讀。 如需 `PIVOT` 語法的完整描述，請參閱 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
- 下列語法摘要說明如何使用`PIVOT`運算子。  
+ 下列語法摘要說明如何使用 `PIVOT` 運算子。  
   
 ```  
 SELECT <non-pivoted column>,  
@@ -67,8 +67,8 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>備註  
-中的資料行識別碼`UNPIVOT`子句依照目錄定序。 如[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，定序一律為`SQL_Latin1_General_CP1_CI_AS`。 如[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]部分自主的資料庫，定序一律為`Latin1_General_100_CI_AS_KS_WS_SC`。 如果資料行就會結合其他資料行，然後 collate 子句 (`COLLATE DATABASE_DEFAULT`) 才能避免衝突。  
+## <a name="remarks"></a>Remarks  
+`UNPIVOT` 子句中的資料行識別碼會依照目錄定序。 就 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 而言，定序一律為 `SQL_Latin1_General_CP1_CI_AS`。 就 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 部分自主資料庫而言，定序一律為 `Latin1_General_100_CI_AS_KS_WS_SC`。 如果資料行與其他資料行結合，就必須使用定序子句 (`COLLATE DATABASE_DEFAULT`) 來避免衝突。  
 
   
 ## <a name="basic-pivot-example"></a>基本 PIVOT 範例  
@@ -162,9 +162,9 @@ FROM PurchaseOrderHeader;
  這表示由 `EmployeeID` 資料行所傳回的唯一值本身會變成最終結果集中的欄位。 因此，樞紐子句指定的每個 `EmployeeID` 編號都會有一個資料行：在此情況下，是以下員工 `164`、`198`、`223`、`231` 和 `233`。 `PurchaseOrderID` 資料行會當作數值資料行，這是在最終輸出中傳回的資料行 (稱為群組資料行) 所根據以進行分組的資料行。 在此情況下，`COUNT` 函數會對群組資料行進行彙總。 請注意，此時會顯示警告訊息，指出計算每個員工的 `PurchaseOrderID` 時，並未考慮 `COUNT` 資料行中出現的任何 NULL 值。  
   
 > [!IMPORTANT]  
->  與使用彙總函式時`PIVOT`，計算一個彙總時，不會考慮值資料行中的任何 null 值是否存在。  
+>  搭配 `PIVOT` 使用彙總函數時，在計算彙總期間不會考慮值資料行中出現的任何 Null 值。  
   
- `UNPIVOT`執行幾乎的反向作業`PIVOT`，資料行旋轉成資料列。 假設上述範例中所產生的資料表在資料庫中是儲存為 `pvt`，而現在您想要將資料行識別碼 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋轉成對應到特定供應商的資料列值。 這表示您必須識別兩個額外的資料行。 包含所要旋轉的資料行值 (`Emp1`、`Emp2`、...) 的資料行將命名為 `Employee`，而保留目前位在所要旋轉資料行之下的值的資料行則命名為 `Orders`。 這些資料行對應至*pivot_column*和*value_column*，分別在[!INCLUDE[tsql](../../includes/tsql-md.md)]定義。 查詢內容如下。  
+ `UNPIVOT` 執行的作業則幾乎與 `PIVOT` 相反，它會將資料行旋轉成資料列。 假設上述範例中所產生的資料表在資料庫中是儲存為 `pvt`，而現在您想要將資料行識別碼 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋轉成對應到特定供應商的資料列值。 這表示您必須識別兩個額外的資料行。 包含所要旋轉的資料行值 (`Emp1`、`Emp2`、...) 的資料行將命名為 `Employee`，而保留目前位在所要旋轉資料行之下的值的資料行則命名為 `Orders`。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義中，這些資料行會分別與 *pivot_column* 和 *value_column* 對應。 查詢內容如下。  
   
 ```  
 -- Create the table and insert values as portrayed in the previous example.  
@@ -207,9 +207,9 @@ VendorID    Employee    Orders
 ...
 ```
   
- 請注意，`UNPIVOT`不是完全相反`PIVOT`。 `PIVOT`執行彙總，因此，合併多個資料列可能在輸出中的單一資料列。 `UNPIVOT`不會再出現原始的資料表值運算式結果因為合併的資料列。 此外，null 值的輸入`UNPIVOT`消失在輸出中，而可能有原始的 null 值之前，輸入中`PIVOT`作業。  
+ 請注意，`UNPIVOT` 並非與 `PIVOT` 完全相反。 `PIVOT` 會執行彙總，因此會將多個可能的資料列合併成輸出中的單一資料列。 由於資料列已經合併，因此 `UNPIVOT` 並不會重新產生原始資料表值運算式結果。 此外，在 `UNPIVOT` 輸入中的 Null 值在輸出中會消失不見，但是在執行 `PIVOT` 作業之前，輸入中原先可能有原始 Null 值。  
   
- `Sales.vSalesPersonSalesByFiscalYears`檢視中[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]範例資料庫會使用`PIVOT`傳回每個會計年度的每位銷售員的銷售總額。 若要編寫指令碼中的檢視[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在**物件總管 中**，找出下的檢視**檢視**資料夾[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。 檢視名稱，以滑鼠右鍵按一下，然後選取**做為指令碼檢視**。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中的 `Sales.vSalesPersonSalesByFiscalYears` 檢視表會使用 `PIVOT` 來傳回每位銷售人員在每個會計年度的總銷售額。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中編寫該檢視表的指令碼，請在 [物件總管] 中，於 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的 [檢視表] 資料夾底下找出該檢視表。 在檢視表名稱上按一下滑鼠右鍵，然後選取 [編寫檢視表的指令碼為]。  
   
 ## <a name="see-also"></a>另請參閱  
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   

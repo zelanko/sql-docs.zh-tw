@@ -1,5 +1,5 @@
 ---
-title: "STStartPoint (geography 資料類型) |Microsoft 文件"
+title: "STStartPoint (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回的起始點**geography**執行個體。  
+  傳回 **geography** 執行個體的起點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
- 開放式地理空間協會 (OGC) 類型：**點**  
+ 開放地理空間協會 (OGC) 類型：**Point**  
   
-## <a name="remarks"></a>備註  
- STStartPoint() 就相當於[STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`。  
+## <a name="remarks"></a>Remarks  
+ STStartPoint() 相當於 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `LineString` 例項，並使用 `STStartPoint()` 來擷取此例項的起點。  

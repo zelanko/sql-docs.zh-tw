@@ -1,5 +1,5 @@
 ---
-title: "STNumPoints (geography 資料類型) |Microsoft 文件"
+title: "STNumPoints (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回每一個圖形內的點總數**geography**執行個體。  
+  傳回 **geography** 執行個體中每一個圖形內的總點數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型： **SqlInt32**  
+ CLR 傳回類型：**SqlInt32**  
   
-## <a name="remarks"></a>備註  
- 這個方法會計算的描述中的點**geography**執行個體。 重複的點都會被算入；但是，區段之間的連接點只計算一次。 如果此執行個體為集合，這個方法會傳回集合內的總點數。  
+## <a name="remarks"></a>Remarks  
+ 此方法會算入 **geography** 執行個體描述中的點。 重複的點都會被算入；但是，區段之間的連接點只計算一次。 如果此執行個體為集合，這個方法會傳回集合內的總點數。  
   
 ## <a name="examples"></a>範例  
   

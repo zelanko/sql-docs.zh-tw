@@ -1,5 +1,5 @@
 ---
-title: "選取 （SQL 圖形） |Microsoft 文件"
+title: SELECT (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  選取的資料   
+  選取資料來源   
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ SELECT
 
 ## <a name="arguments"></a>引數  
 
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 
 ## <a name="permissions"></a>Permissions  
 

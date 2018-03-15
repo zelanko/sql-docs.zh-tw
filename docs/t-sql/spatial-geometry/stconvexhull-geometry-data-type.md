@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (geometry 資料類型) |Microsoft 文件"
+title: "STConvexHull (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回代表項之凸面的物件**幾何**執行個體。
+傳回代表 **geometry** 執行個體凸殼的物件。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- `STConvexHull()`傳回包含最小凸面多邊形給定**幾何**執行個體。 **點**或共線**LineString**執行個體將會產生與輸入相同類型的執行個體。  
+## <a name="remarks"></a>Remarks  
+ `STConvexHull()` 會傳回包含所指定 **geometry** 執行個體的最小凸面多邊形。 **Points** 或共線 **LineString** 執行個體將會產生與輸入相同類型的執行個體。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `STConvexHull()` 來尋找非凸面 `Polygon``geometry` 執行個體的凸面。  

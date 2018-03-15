@@ -1,5 +1,5 @@
 ---
-title: "STUnion (geometry 資料類型) |Microsoft 文件"
+title: "STUnion (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stunion-geometry-data-type"></a>STUnion (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-傳回物件，表示的聯集**幾何**與另一個執行個體**幾何**執行個體。
+傳回物件，此物件代表 **geometry** 執行個體與另一個 **geometry** 執行個體的聯集。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是另一個**幾何**形成聯集的執行個體所在的執行個體`STUnion()`叫用。  
+ 這是要與進行 `STUnion()` 叫用的執行個體形成聯集的另一個 **geometry** 執行個體。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- 如果這個方法永遠傳回 null 的空間參考識別碼 (Srid)**幾何**例項不相符。 只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。 只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。  
   
 ## <a name="examples"></a>範例  
   

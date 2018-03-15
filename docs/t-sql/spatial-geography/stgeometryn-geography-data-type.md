@@ -1,5 +1,5 @@
 ---
-title: "STGeometryN (geography 資料類型) |Microsoft 文件"
+title: "STGeometryN (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回指定**geography**中的項目**GeometryCollection**或其中一個及其子型別。 子類型上使用 STGeometryN() 時**GeometryCollection**，例如**MultiPoint**或**MultiLineString**，這個方法會傳回**地理位置**如果使用 N = 1 呼叫執行個體。  
+  傳回 **GeometryCollection** 中指定的 **geography** 元素或是它的其中一個子類型。 當在 **GeometryCollection** 的子類型 (例如 **MultiPoint** 或 **MultiLineString**) 上使用 STGeometryN() 時，如果使用 N = 1 呼叫，這個方法會傳回 **geography** 執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 是**int** 1 之間的數字的運算式**geography**中執行個體**GeometryCollection**。  
+ 這是介於 1 和 **GeometryCollection** 內的 **geography** 執行個體數目之間的 **int** 運算式。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>備註  
- 這個方法會傳回 null，如果參數大於的結果[stnumgeometries （)](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md)將會擲回**ArgumentOutOfRangeException**如果*運算式*參數是小於 1。  
+## <a name="remarks"></a>Remarks  
+ 如果參數大於 [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) 的結果，這個方法會傳回 null；如果 *expression* 參數小於 1，將會擲回 **ArgumentOutOfRangeException**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立`MultiPoint``geography`執行個體，並使用`STGeometryN()`尋找第二個`geography`的執行個體**GeometryCollection**。  
+ 下列範例會建立 `MultiPoint``geography` 執行個體，並使用 `STGeometryN()` 來尋找 **GeometryCollection** 的第二個 `geography` 執行個體。  
   
 ```  
 DECLARE @g geography;  

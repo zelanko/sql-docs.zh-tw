@@ -1,5 +1,5 @@
 ---
-title: "ToString (geography 資料類型) |Microsoft 文件"
+title: "ToString (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,9 +33,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="tostring-geography-data-type"></a>ToString (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回開放式地理空間協會 (OGC) 已知文字 (well-known text，WKT) 表示**geography**執行個體所執行的執行個體夾帶任何 Z （高度） 和 M （測量） 值。  
+  傳回開放地理空間協會 (Open Geospatial Consortium，OGC) 對於 **geography** 執行個體的已知的文字 (Well-Known Text，WKT) 表示法，經由此執行個體夾帶的任何 Z (高度) 和 M (測量) 值來擴充。  
   
- 這個 geography 資料類型方法可支援**FullGlobe**執行個體或大於半球的空間執行個體。  
+ 這個 geography 資料類型方法可支援 **FullGlobe** 執行個體或大於半球的空間執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **nvarchar （max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回類型： **SqlString**  
+ CLR 傳回類型：**SqlString**  
   
-## <a name="remarks"></a>備註  
- 這個方法在 Null 執行個體上呼叫時，將會傳回 "Null" 字串。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，伺服器上的可能結果集已擴充到**FullGlobe**執行個體。 這個方法會傳回與 `AsTextZM()` 相同的值。  
+## <a name="remarks"></a>Remarks  
+ 這個方法在 Null 執行個體上呼叫時，將會傳回 "Null" 字串。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，伺服器上的可能結果集已擴充到 **FullGlobe** 執行個體。 這個方法會傳回與 `AsTextZM()` 相同的值。  
   
  這個方法並不精確。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立`LineString`執行個體，並使用`ToString()`傳回執行個體的文字描述。  
+ 下列範例會建立 `LineString` 執行個體，並使用 `ToString()` 傳回此執行個體的文字描述。  
   
 ```  
 DECLARE @g geography;  
@@ -64,7 +64,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Geography 執行個體上的擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [地理執行個體上擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [AsTextZM &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
   

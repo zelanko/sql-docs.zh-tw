@@ -1,5 +1,5 @@
 ---
-title: "ROLLBACK TRANSACTION (TRANSACT-SQL) |Microsoft 文件"
+title: ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -57,31 +57,31 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>引數  
  *transaction_name*  
- 指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name*必須符合識別碼規則，但使用的交易名稱的前 32 個字元。 當建立巢狀交易， *transaction_name*必須是從最外層的 BEGIN TRANSACTION 陳述式的名稱。 *transaction_name*一定是區分大小寫，即使執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不區分大小寫。  
+ 指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name* 必須符合識別碼的規則，但只可使用交易名稱的前 32 個字元。 當建立巢狀交易時，*transaction_name* 必須是最外層 BEGIN TRANSACTION 陳述式的名稱。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體不區分大小寫，*transaction_name* 還是一律都會區分大小寫。  
   
  **@** *tran_name_variable*  
- 這是包含有效交易名稱之使用者定義變數的名稱。 變數必須宣告與**char**， **varchar**， **nchar**，或**nvarchar**資料型別。  
+ 這是包含有效交易名稱之使用者定義變數的名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。  
   
  *savepoint_name*  
- 是*savepoint_name*從 SAVE TRANSACTION 陳述式。 *savepoint_name*必須符合識別碼的規則。 使用*savepoint_name*條件式回復時應該會影響屬於交易。  
+ SAVE TRANSACTION 陳述式的 *savepoint_name*。 *savepoint_name* 必須符合識別碼的規則。 當條件式復原只應影響交易的一部分時，請使用 *savepoint_name*。  
   
  **@** *savepoint_variable*  
- 這是包含有效儲存點名稱之使用者自訂變數的名稱。 變數必須宣告與**char**， **varchar**， **nchar**，或**nvarchar**資料型別。  
+ 這是包含有效儲存點名稱之使用者自訂變數的名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。  
   
 ## <a name="error-handling"></a>錯誤處理  
  ROLLBACK TRANSACTION 陳述式不會產生任何訊息給使用者。 如果在預存程序或觸發程序中需要警告，請使用 RAISERROR 或 PRINT 陳述式。 RAISERROR 是指示錯誤的慣用陳述式。  
   
 ## <a name="general-remarks"></a>一般備註  
- ROLLBACK TRANSACTION，而不*savepoint_name*或*transaction_name*復原回交易的開頭。 當建立巢狀交易時，這個相同的陳述式會回復所有內部交易，直到最外層的 BEGIN TRANSACTION 陳述式。 在這兩種情況下，ROLLBACK TRANSACTION 會遞減 @@TRANCOUNT系統函式設為 0。 ROLLBACK TRANSACTION *savepoint_name*不會使@TRANCOUNT。  
+ 不含 *savepoint_name* 或 *transaction_name* 的 ROLLBACK TRANSACTION 會復原到交易的開頭。 當建立巢狀交易時，這個相同的陳述式會回復所有內部交易，直到最外層的 BEGIN TRANSACTION 陳述式。 不論任何一種情況，ROLLBACK TRANSACTION 都會將 @@TRANCOUNT 系統函數減量到 0。 ROLLBACK TRANSACTION *savepoint_name* 不會使 @@TRANCOUNT 減量。  
   
- ROLLBACK TRANSACTION 無法參考*savepoint_name*分散式交易中明確啟動 BEGIN DISTRIBUTED TRANSACTION，或從本機交易擴大。  
+ ROLLBACK TRANSACTION 無法參考 BEGIN DISTRIBUTED TRANSACTION 所明確啟動或從區域交易擴大的分散式交易中的 *savepoint_name*。  
   
- 在執行 COMMIT TRANSACTION 陳述式之後，無法回復交易，但是當 COMMIT TRANSACTION 與所要回復之交易內含的巢狀交易相關聯時，則為例外。 在本例中，巢狀的交易會會回復，即使您已為其發出 COMMIT TRANSACTION。  
+ 在執行 COMMIT TRANSACTION 陳述式之後，無法回復交易，但是當 COMMIT TRANSACTION 與所要回復之交易內含的巢狀交易相關聯時，則為例外。 在此情況下，即使您已發出 COMMIT TRANSACTION，也會復原巢狀交易。  
   
  交易內可以有重複的儲存點名稱，但使用重複儲存點名稱的 ROLLBACK TRANSACTION 只會回復到最近一個使用這個儲存點名稱的 SAVE TRANSACTION。  
   
 ## <a name="interoperability"></a>互通性  
- 預存程序，不含 ROLLBACK TRANSACTION 陳述式*savepoint_name*或*transaction_name*所有陳述式回復到最外層的 BEGIN TRANSACTION。 @ 會導致預存程序中的 ROLLBACK TRANSACTION 陳述式@TRANCOUNT比的預存程序完成時，有不同的值以 @@TRANCOUNT值呼叫預存程序時所產生資訊訊息。 這個訊息不會影響後續的處理。  
+ 在預存程序中，不含 *savepoint_name* 或 *transaction_name* 的 ROLLBACK TRANSACTION 陳述式，會將所有陳述式復原到最外層的 BEGIN TRANSACTION。 預存程序中會使 @@TRANCOUNT 在預存程序完成時所擁有的值不同於呼叫這個預存程序時之 @@TRANCOUNT 值的 ROLLBACK TRANSACTION 陳述式，會產生一則參考訊息。 這個訊息不會影響後續的處理。  
   
  如果在觸發程序內發出 ROLLBACK TRANSACTION：  
   
@@ -91,7 +91,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   不會執行在引發觸發程序的陳述式之後的批次中之陳述式。  
   
-@@TRANCOUNT輸入觸發程序，即使在自動認可模式下時，以一遞增。 (系統會將觸發程序當做一項隱含的巢狀交易來處理。)  
+當進入觸發程序時，@@TRANCOUNT 會遞增 1，即使在自動認可模式中也一樣。 (系統會將觸發程序當做一項隱含的巢狀交易來處理。)  
   
 預存程序中的 ROLLBACK TRANSACTION 陳述式並不會影響在批次中呼叫程序的後續陳述式；仍會執行批次中的後續陳述式。 觸發程序中的 ROLLBACK TRANSACTION 陳述式會終止包含引發觸發程序之陳述式的批次；不會繼續執行批次中的後續陳述式。  
   
@@ -104,13 +104,13 @@ ROLLBACK { TRAN | TRANSACTION }
 3.  終止批次且會產生內部回復的錯誤，會將包含錯誤陳述式之批次中所宣告的所有資料指標取消配置。 所有資料指標都會取消配置，不論它們的類型或 CURSOR_CLOSE_ON_COMMIT 設定為何，都是如此。 其中包括錯誤批次呼叫的預存程序中所宣告之資料指標。 在錯誤批次之前的批次中宣告的資料指標會遵守規則 1 和 2。 死結錯誤就是這類型錯誤的範例。 觸發程序中所發出之 ROLLBACK 陳述式也會自動產生這類錯誤。  
   
 ## <a name="locking-behavior"></a>鎖定行為  
- ROLLBACK TRANSACTION 陳述式指定*savepoint_name*釋放於儲存點，但是擴大和轉換除外之後所取得的鎖定。 這些鎖定不會被釋放，也不會轉換回之前的鎖定模式。  
+ 指定 *savepoint_name* 的 ROLLBACK TRANSACTION 陳述式會釋放於儲存點之後所取得的任何鎖定，但是擴大和轉換除外。 這些鎖定不會被釋放，也不會轉換回之前的鎖定模式。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例顯示回復具名交易的作用。 之後建立的資料表，下列陳述式啟動具名的交易、 插入兩個資料列，並會復原交易在變數中名為@TransactionName。 具名交易外的另一個陳述式會插入兩個資料列。 查詢會傳回前一個陳述式的結果。   
+ 下列範例顯示回復具名交易的作用。 建立資料表之後，下列陳述式會啟動具名交易、插入兩個資料列，然後復原變數 @TransactionName 中的具名交易。 具名交易外的另一個陳述式會插入兩個資料列。 查詢會傳回前一個陳述式的結果。   
   
 ```sql    
 USE tempdb;  
@@ -141,10 +141,10 @@ value
   
 ## <a name="see-also"></a>另請參閱  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
- [BEGIN TRANSACTION (TRANSACT-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
+ [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [認可工作 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
- [ROLLBACK WORK &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

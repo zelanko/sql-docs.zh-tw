@@ -1,5 +1,5 @@
 ---
-title: "Null (geometry 資料類型) |Microsoft 文件"
+title: "Null (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geometry-data-type"></a>Null (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-提供的 null 執行個體的唯讀屬性**幾何**型別。
+這是提供 **geometry** 類型之 Null 執行個體的唯讀屬性。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,11 +45,11 @@ Null
 ## <a name="arguments"></a>引數  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**geometry**  
   
- CLR 型別： **SqlGeometry**  
+ CLR 類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>範例  
  下列範例會擷取 Null `geometry`執行個體。  

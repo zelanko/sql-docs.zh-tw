@@ -1,5 +1,5 @@
 ---
-title: "STDistance (geography 資料類型) |Microsoft 文件"
+title: "STDistance (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geography-data-type"></a>STDistance (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  傳回中點之間的最短距離**geography**執行個體和另一個點**geography**執行個體。  
+  傳回a **geography** 執行個體中的點與另一個 **geography** 執行個體中的點之間的最短距離。  
   
 > [!NOTE]  
->  `STDistance()`傳回最短**LineString**兩個地理位置類型。 這是地理距離的近似值。 差`STDistance()`從與實際地理距離的通用地球模型上已超過。 25%。 這可避免地理類型中長度與距離細微差異的混淆。  
+>  `STDistance()` 會傳回兩個 geography 型別之間的最短 **LineString**。 這是地理距離的近似值。 通用地球模型上 `STDistance()` 與實際地理距離的偏差不大於 .25%。 這可避免地理類型中長度與距離細微差異的混淆。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,21 +48,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是另一個**geography**執行個體，用來測量 stdistance （） 叫用所在之執行個體之間的距離。 如果*other_geography*設為空白，stdistance （） 傳回 null。  
+ 這是另一個 **geography** 執行個體，用來測量它與 STDistance() 叫用所在之執行個體之間的距離。 如果 *other_geography* 為空白集合，STDistance() 會傳回 null。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
- CLR 傳回類型： **SqlDouble**  
+ CLR 傳回類型：**SqlDouble**  
   
-## <a name="remarks"></a>備註  
- Stdistance （） 永遠傳回 null，如果空間參考識別碼 (Srid) **geography**例項不相符。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，STDistance() 一定會傳回 null。  
   
 > [!NOTE]  
->  上的方法**geography**計算區域或距離的資料類型會傳回根據此方法中使用的執行個體的 SRID 不同的結果。   如需有關 Srid 的詳細資訊，請參閱[空間參考識別碼 &#40;Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  **geography** 資料型別上計算區域或距離的方法將會根據此方法中使用之執行個體的 SRID，而傳回不同的結果。   如需有關 SRID 的詳細資訊，請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例會尋找兩個距離**geography**執行個體。  
+ 下列範例會求得兩個 **geography** 執行個體之間的距離。  
   
 ```  
 DECLARE @g geography;  

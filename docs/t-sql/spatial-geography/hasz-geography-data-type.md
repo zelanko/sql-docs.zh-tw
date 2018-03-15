@@ -1,5 +1,5 @@
 ---
-title: "HasZ (geography 資料類型) |Microsoft 文件"
+title: "HasZ (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**位元**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型：**布林**  
+ CLR 傳回類型：**Boolean**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>範例  
   
@@ -59,7 +59,7 @@ SELECT @p.HasZ
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Geography 執行個體上的擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Z &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+ [地理執行個體上擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Z &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

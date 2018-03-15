@@ -1,5 +1,5 @@
 ---
-title: "剖析 (geometry 資料類型) |Microsoft 文件"
+title: "Parse (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="parse-geometry-data-type"></a>Parse (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回**幾何**從開放式地理空間協會 (OGC) 已知文字 (well-known text，WKT) 表示法的執行個體。 `Parse()`相當於[Stgeomfromtext](../../t-sql/spatial-geometry/parse-geometry-data-type.md)，發生例外狀況，它會採用空間參考識別碼 (SRID) 0 當做參數。 輸入可能會夾帶選擇性 Z (高度) 和 M (測量) 值。
+從開放地理空間協會 (OGC) 已知文字 (WKT) 表示傳回 **Geometry** 執行個體。 `Parse()` 相當於 [STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md)，但是例外之處是它會採用空間參考識別碼 (SRID) 0 當做參數。 輸入可能會夾帶選擇性 Z (高度) 和 M (測量) 值。
   
 ## <a name="syntax"></a>語法  
   
@@ -42,19 +42,19 @@ Parse ( 'geometry_tagged_text' )
   
 ## <a name="arguments"></a>引數  
  *geometry_tagged_text*  
- 是的 WKT 表示法**幾何**您想要傳回的執行個體。 *geometry_tagged_text*是**nvarchar**運算式。  
+ 這是要傳回之 **geometry** 執行個體的 WKT 表示法。 *geometry_tagged_text* 是 **nvarchar** 陳述式。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- OGC 類型**幾何**所傳回的執行個體`Parse()`設定為對應的 WKT 輸入。  
+## <a name="remarks"></a>Remarks  
+ `Parse()` 所傳回之 **geometry** 執行個體的 OGC 類型會設定為對應的 WKT 輸入。  
   
- 'Null' 將被解譯為 null 值的字串**幾何**執行個體。  
+ 'Null' 字串將會解譯為 Null **geometry** 執行個體。  
   
- 這個方法會擲回**FormatException**如果輸入格式不正確。  
+ 如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `Parse()` 建立 `geometry` 例項。  

@@ -1,5 +1,5 @@
 ---
-title: "保留的關鍵字 (TRANSACT-SQL) |Microsoft 文件"
+title: "保留關鍵字 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/25/2018
 |CLUSTERED|IN|SECURITYAUDIT|  
 |COALESCE|INDEX|SELECT|  
 |COLLATE|INNER|SEMANTICKEYPHRASETABLE|  
-|COLUMN|INSERT|SEMANTICSIMILARITYDETAILSTABLE|  
+|COLUMN|Insert|SEMANTICSIMILARITYDETAILSTABLE|  
 |COMMIT|INTERSECT|SEMANTICSIMILARITYTABLE|  
 |COMPUTE|INTO|SESSION_USER|  
 |CONSTRAINT|IS|SET|  
@@ -84,14 +84,14 @@ ms.lasthandoff: 01/25/2018
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|DELETE|ON|UNION|  
+|Delete|ON|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|USER|  
-|DROP|OR|VALUES|  
+|DOUBLE|OPTION|使用者|  
+|DROP|或|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/25/2018
  另外，ISO 標準也定義了一份保留關鍵字的清單。 請避免在物件名稱和識別碼上使用 ISO 保留關鍵字。 下表所顯示的 ODBC 保留關鍵字清單與 ISO 保留關鍵字清單相同。  
   
 > [!NOTE]  
->  ISO 標準保留關鍵字清單有時限制性大於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，有時比較小。 例如，ISO 保留的關鍵字清單包含**INT**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不需要將它視為保留關鍵字。  
+>  ISO 標準保留關鍵字清單有時限制性大於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，有時比較小。 例如，ISO 保留關鍵字清單包含 **INT**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不需要將它視為保留關鍵字。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留關鍵字可用來作為資料庫或資料庫物件 (如資料表、資料行、檢視等) 的識別碼或名稱。 請使用附加引號的識別字或分隔的識別碼。 利用保留關鍵字作為變數和預存程序參數的名稱，並不會受到限制。  
   
@@ -118,82 +118,82 @@ ms.lasthandoff: 01/25/2018
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**動作**|**EXECUTE**|**填補**|  
-|**ADA**|**EXISTS**|**部分**|  
-|**ADD**|**EXTERNAL**|**依照 PASCAL 命名法**|  
-|**ALL**|**EXTRACT**|**位置**|  
-|**ALLOCATE**|**FALSE**|**有效位數**|  
-|**ALTER**|**FETCH**|**準備**|  
-|**和**|**FIRST**|**PRESERVE**|  
+|**ACTION**|**EXECUTE**|**PAD**|  
+|**ADA**|**EXISTS**|**PARTIAL**|  
+|**ADD**|**EXTERNAL**|**PASCAL**|  
+|**ALL**|**EXTRACT**|**POSITION**|  
+|**ALLOCATE**|**FALSE**|**PRECISION**|  
+|**ALTER**|**FETCH**|**PREPARE**|  
+|**AND**|**FIRST**|**PRESERVE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
-|**ARE**|**針對**|**之前**|  
-|**AS**|**外部索引**|**權限**|  
+|**ARE**|**FOR**|**PRIOR**|  
+|**AS**|**FOREIGN**|**PRIVILEGES**|  
 |**ASC**|**FORTRAN**|**PROCEDURE**|  
-|**判斷提示**|**找到**|**PUBLIC**|  
+|**ASSERTION**|**FOUND**|**PUBLIC**|  
 |**AT**|**FROM**|**READ**|  
-|**AUTHORIZATION**|**FULL**|**實數**|  
+|**AUTHORIZATION**|**FULL**|**REAL**|  
 |**AVG**|**GET**|**REFERENCES**|  
-|**BEGIN**|**GLOBAL**|**相對**|  
+|**BEGIN**|**GLOBAL**|**RELATIVE**|  
 |**BETWEEN**|**GO**|**RESTRICT**|  
 |**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**BOTH**|**GROUP**|**ROLLBACK**|  
 |**BY**|**HAVING**|**ROWS**|  
-|**CASCADE**|**小時**|**SCHEMA**|  
+|**CASCADE**|**HOUR**|**SCHEMA**|  
 |**CASCADED**|**IDENTITY**|**SCROLL**|  
 |**CASE**|**IMMEDIATE**|**SECOND**|  
-|**CAST**|**IN**|**區段**|  
+|**CAST**|**IN**|**SECTION**|  
 |**CATALOG**|**INCLUDE**|**SELECT**|  
 |**CHAR**|**INDEX**|**SESSION**|  
-|**CHAR_LENGTH**|**指標**|**SESSION_USER**|  
-|**字元**|**一開始**|**SET**|  
+|**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
+|**CHARACTER**|**INITIALLY**|**SET**|  
 |**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
-|**CHECK**|**輸入**|**SMALLINT**|  
-|**CLOSE**|**不區分大小寫**|**SOME**|  
+|**CHECK**|**INPUT**|**SMALLINT**|  
+|**CLOSE**|**INSENSITIVE**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
-|**自動分頁**|**INT**|**SQL**|  
-|**定序**|**INTEGER**|**SQLCA**|  
+|**COLLATE**|**INT**|**SQL**|  
+|**COLLATION**|**INTEGER**|**SQLCA**|  
 |**COLUMN**|**INTERSECT**|**SQLCODE**|  
 |**COMMIT**|**INTERVAL**|**SQLERROR**|  
-|**CONNECT**|**到**|**SQLSTATE**|  
-|**連線**|**是**|**SQLWARNING**|  
-|**條件約束**|**隔離**|**SUBSTRING**|  
-|**條件約束**|**JOIN**|**SUM**|  
+|**CONNECT**|**INTO**|**SQLSTATE**|  
+|**CONNECTION**|**IS**|**SQLWARNING**|  
+|**CONSTRAINT**|**ISOLATION**|**SUBSTRING**|  
+|**CONSTRAINTS**|**JOIN**|**SUM**|  
 |**CONTINUE**|**KEY**|**SYSTEM_USER**|  
 |**CONVERT**|**LANGUAGE**|**TABLE**|  
 |**CORRESPONDING**|**LAST**|**TEMPORARY**|  
-|**COUNT**|**開頭**|**然後**|  
-|**CREATE**|**LEFT**|**時間**|  
+|**COUNT**|**LEADING**|**THEN**|  
+|**CREATE**|**LEFT**|**TIME**|  
 |**CROSS**|**LEVEL**|**TIMESTAMP**|  
-|**目前的**|**LIKE**|**TIMEZONE_HOUR**|  
-|**CURRENT_DATE**|**本機**|**TIMEZONE_MINUTE**|  
+|**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
+|**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
 |**CURRENT_TIME**|**LOWER**|**收件人**|  
-|**CURRENT_TIMESTAMP**|**MATCH**|**後端**|  
-|**CURRENT_USER**|**MAX**|**交易**|  
+|**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
+|**CURRENT_USER**|**MAX**|**TRANSACTION**|  
 |**CURSOR**|**MIN**|**TRANSLATE**|  
-|**DATE**|**MINUTE**|**轉譯**|  
-|**DAY**|**模組**|**TRIM**|  
+|**DATE**|**MINUTE**|**TRANSLATION**|  
+|**DAY**|**MODULE**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
-|**DEC**|**NAMES**|**等位**|  
-|**DECIMAL**|**國家 （地區)**|**唯一**|  
-|**DECLARE**|**自然**|**UNKNOWN**|  
+|**DEC**|**NAMES**|**UNION**|  
+|**DECIMAL**|**NATIONAL**|**UNIQUE**|  
+|**DECLARE**|**NATURAL**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
 |**DEFERRABLE**|**NEXT**|**UPPER**|  
 |**DEFERRED**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
-|**DESC**|**不**|**使用**|  
+|**DESC**|**NOT**|**USING**|  
 |**DESCRIBE**|**NULL**|**VALUE**|  
-|**描述元**|**NULLIF**|**VALUES**|  
-|**DIAGNOSTICS**|**數值**|**VARCHAR**|  
-|**DISCONNECT**|**OCTET_LENGTH**|**不同的**|  
+|**DESCRIPTOR**|**NULLIF**|**VALUES**|  
+|**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**VARYING**|  
 |**DISTINCT**|**OF**|**VIEW**|  
 |**DOMAIN**|**ON**|**WHEN**|  
 |**DOUBLE**|**ONLY**|**WHENEVER**|  
 |**DROP**|**OPEN**|**WHERE**|  
-|**ELSE**|**選項**|**WITH**|  
+|**ELSE**|**OPTION**|**WITH**|  
 |**END**|**OR**|**WORK**|  
 |**END-EXEC**|**ORDER**|**WRITE**|  
-|**ESCAPE**|**外部**|**YEAR**|  
+|**ESCAPE**|**OUTER**|**YEAR**|  
 |**EXCEPT**|**OUTPUT**|**ZONE**|  
 |**EXCEPTION**|||  
   
@@ -246,7 +246,7 @@ ms.lasthandoff: 01/25/2018
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|TIMESTAMP|  
+|CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|否|TIMEZONE_MINUTE|  
 |CURRENT_PATH|無|TRAILING|  
@@ -260,7 +260,7 @@ ms.lasthandoff: 01/25/2018
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|VALUE|  
+|DEFERRED|OUTPUT|Value|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|參數|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -280,7 +280,7 @@ ms.lasthandoff: 01/25/2018
 |EVERY|PRIVILEGES|XMLCONCAT|  
 |EXCEPTION|RANGE|XMLDOCUMENT|  
 |FALSE|READS|XMLELEMENT|  
-|FILTER|REAL|XMLEXISTS|  
+|FILTER|real|XMLEXISTS|  
 |FIRST|RECURSIVE|XMLFOREST|  
 |FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
@@ -295,7 +295,7 @@ ms.lasthandoff: 01/25/2018
 |HOLD|REGR_SYY|ZONE|  
   
 ## <a name="see-also"></a>另請參閱  
- [SET QUOTED_IDENTIFIER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

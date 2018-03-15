@@ -1,5 +1,5 @@
 ---
-title: "STDifference (geography 資料類型) |Microsoft 文件"
+title: "STDifference (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geography-data-type"></a>STDifference (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回物件，表示的點集合從一**geography**體外之某個執行個體**geography**執行個體。  
+  傳回物件，表示在另一個 **geography** 執行個體外之某個 **geography** 執行個體的點集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,25 +45,25 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是另一個**geography**執行個體表示的正在叫用 stdifference （） 執行個體移除哪些點。  
+ 這是另一個 **geography** 執行個體，指示要從 STDifference() 叫用所在的執行個體中移除哪些點。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
 ## <a name="exceptions"></a>例外狀況  
- 這個方法會擲回**ArgumentException**如果執行個體包含對蹠邊緣。  
+ 如果執行個體包含對蹠邊緣，這個方法會擲回 **ArgumentException**。  
   
-## <a name="remarks"></a>備註  
- 如果這個方法永遠傳回 null 的空間參考識別碼 (Srid) **geography**例項不相符。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一定會傳回 null。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，傳回伺服器上的可能結果集已擴充到**FullGlobe**執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援大於半球的空間執行個體。 只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。 這個方法並不精確。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，伺服器上傳回的可能結果集已擴充到 **FullGlobe** 執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援大於半球的空間執行個體。 只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。 這個方法並不精確。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-computing-the-difference-between-two-geography-instances"></a>A. 計算兩個地理位置執行個體之間的差異  
- 下列範例會使用`STDifference()`來計算兩個之間的差異**geography**執行個體。  
+ 下列範例使用 `STDifference()` 來計算兩個 **geography** 執行個體之間的差異。  
   
 ```  
 DECLARE @g geography;  

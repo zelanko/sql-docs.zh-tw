@@ -1,5 +1,5 @@
 ---
-title: "Long (geography 資料類型) |Microsoft 文件"
+title: "Long (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="long-geography-data-type"></a>Long (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  經度屬性**geography**執行個體。  
+  **geography** 執行個體的經度屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-value"></a>傳回值  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**float**  
   
- CLR 型別： **SqlDouble**  
+ CLR 類型：**SqlDouble**  
   
-## <a name="remarks"></a>備註  
- 在了 OpenGIS 模型中，長時間定義只有**geography**執行個體所組成的單一點。 如果這個屬性會傳回 NULL **geography**執行個體包含多個單一點。 這個屬性是精確且唯讀的。  
+## <a name="remarks"></a>Remarks  
+ 在 OpenGIS 模型中，Long 只會在由單一點組成的 **geography** 執行個體上定義。 如果 **geography** 執行個體包含多個單一點，此屬性將會傳回 NULL。 這個屬性是精確且唯讀的。  
   
 ## <a name="examples"></a>範例  
- 這個範例會建立**點**執行個體，並擷取點的經度。  
+ 此範例會建立 **Point** 執行個體，並擷取此點的經度。  
   
 ```  
 DECLARE @g geography;  
