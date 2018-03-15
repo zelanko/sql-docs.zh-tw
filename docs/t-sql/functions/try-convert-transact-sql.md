@@ -1,5 +1,5 @@
 ---
-title: "TRY_CONVERT (TRANSACT-SQL) |Microsoft 文件"
+title: TRY_CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,26 +46,26 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- *data_type [（長度）]*  
- 資料類型轉換成*運算式*。  
+ *data_type [ ( length ) ]*  
+ *運算式*轉換成的資料類型。  
   
  *expression*  
  要進行轉換的值。  
   
- *樣式*  
- 選擇性整數運算式，指定如何**TRY_CONVERT**函式會將轉譯*運算式*。  
+ *style*  
+ 這是指定 **TRY_CONVERT** 函數如何轉譯 *expression* 的選用性整數運算式。  
   
- *樣式*接受相同的值*樣式*參數**轉換**函式。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
+ *style* 接受與 **CONVERT** 函數的 *style* 參數相同的值。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
- 可接受值的範圍由值*data_type*。 如果*樣式*為 null，則**TRY_CONVERT**會傳回 null。  
+ 可接受值的範圍由 *data_type* 值決定。 如果 *style* 是 Null，那麼 **TRY_CONVERT** 會傳回 Null。  
   
 ## <a name="return-types"></a>傳回類型  
  如果轉換成功，則會傳回轉換為指定之資料類型的值，否則會傳回 Null。  
   
-## <a name="remarks"></a>備註  
- **TRY_CONVERT**會傳遞給它的值，並嘗試將它轉換成指定*data_type*。 如果轉換成功， **TRY_CONVERT**傳回所指定的值*data_type*; 如果發生錯誤，就會傳回 null。 不過如果您要求明確不允許，然後轉換**TRY_CONVERT**失敗並發生錯誤。  
+## <a name="remarks"></a>Remarks  
+ **TRY_CONVERT** 會採用傳遞給它的值，然後會嘗試將該值轉換為指定的 *data_type*。 如果轉換成功，**TRY_CONVERT** 會傳回當做指定之 *data_type* 的值；如果發生錯誤則會傳回 Null。 但是，若您要求明確不允許的轉換，則 **TRY_CONVERT** 會失敗並出現錯誤。  
   
- **TRY_CONVERT**是保留的關鍵字，相容性層級 110 及更高。  
+ **TRY_CONVERT** 是在相容性層級 110 及更高層級中保留的關鍵字。  
   
  函數能以遠端方式在具有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本的伺服器上運作。 它在版本低於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的伺服器上無法以遠端方式運作。  
   
@@ -144,7 +144,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

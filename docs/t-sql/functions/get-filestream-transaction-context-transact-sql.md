@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回代表工作階段之目前交易內容的 Token。 應用程式會使用此 Token 將 FILESTREAM 檔案系統資料流作業繫結至此交易。 如需 FILESTREAM 主題的清單，請參閱[二進位大型物件 &#40;Blob &#41;資料 &#40;SQL Server &#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  傳回代表工作階段之目前交易內容的 Token。 應用程式會使用此 Token 將 FILESTREAM 檔案系統資料流作業繫結至此交易。 如需 FILESTREAM 主題的清單，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>傳回值  
  如果此交易尚未啟動或是已被取消或認可，則會傳回 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  交易必須是明確的。 請使用 BEGIN TRANSACTION，後面緊接著 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION。  
   
  當您呼叫 GET_FILESTREAM_TRANSACTION_CONTEXT 時，呼叫端在交易期間會被授與此交易的檔案系統存取權。 若要允許另一個使用者透過檔案系統存取此交易，請使用 EXECUTE AS，以另一個使用者身分執行 GET_FILESTREAM_TRANSACTION_CONTEXT。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`GET_FILESTREAM_TRANSACTION_CONTEXT`中[!INCLUDE[tsql](../../includes/tsql-md.md)]交易，以取得交易內容。  
+ 下列範例會在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 交易中使用 `GET_FILESTREAM_TRANSACTION_CONTEXT` 取得交易內容。  
   
 ```csharp  
 using System;  
@@ -283,7 +283,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [路徑名稱 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

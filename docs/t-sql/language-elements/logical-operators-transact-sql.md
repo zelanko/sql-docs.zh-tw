@@ -1,5 +1,5 @@
 ---
-title: "邏輯運算子 (TRANSACT-SQL) |Microsoft 文件"
+title: "邏輯運算子 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="logical-operators-transact-sql"></a>邏輯運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  邏輯運算子會測試是否符合某些狀況。 如同比較運算子，邏輯運算子會傳回**布林**資料類型值是 TRUE、 FALSE 或 UNKNOWN。  
+  邏輯運算子會測試是否符合某些狀況。 如同比較運算子，邏輯運算子會傳回含 TRUE、FALSE 或 UNKNOWN 值的 **Boolean** 資料類型。  
   
 |運算子|意義|  
 |--------------|-------------|  
@@ -48,10 +48,10 @@ ms.lasthandoff: 01/25/2018
 |[IN](../../t-sql/language-elements/in-transact-sql.md)|如果運算元等於運算式清單中的某個運算式，便是 TRUE。|  
 |[LIKE](../../t-sql/language-elements/like-transact-sql.md)|如果運算元符合某個模式，便是 TRUE。|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|反轉任何其他布林運算子的值。|  
-|[OR](../../t-sql/language-elements/or-transact-sql.md)|如果任一個布林運算式是 TRUE，便是 TRUE。|  
+|[或](../../t-sql/language-elements/or-transact-sql.md)|如果任一個布林運算式是 TRUE，便是 TRUE。|  
 |[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|如果一組比較部分為 TRUE，便是 TRUE。|  
   
 ## <a name="see-also"></a>另請參閱  
- [運算子優先順序 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+ [運算子優先順序 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STATS_DATE (TRANSACT-SQL) |Microsoft 文件"
+title: STATS_DATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/18/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/02/2018
 
   針對資料表或索引檢視表的統計資料傳回最近更新的日期。  
   
- 如需有關更新統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
+ 如需有關更新統計資料的詳細資訊，請參閱 [統計資料](../../relational-databases/statistics/statistics.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,14 +58,14 @@ STATS_DATE ( object_id , stats_id )
  統計資料物件的識別碼。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回**datetime**成功。 傳回**NULL**若未建立的統計資料的 blob。  
+ 成功時傳回 **datetime**。 若未建立統計資料 Blob，則傳回**NULL**。  
   
-## <a name="remarks"></a>備註  
- 系統函數可用在選取清單中，在 WHERE 子句中，而且可以使用運算式的地方。  
+## <a name="remarks"></a>Remarks  
+ 系統函數可以用於選取清單、WHERE 子句以及任何可以使用運算式的位置。  
  
- 統計資料更新將日期儲存在[統計資料的 blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)搭配[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)、 中繼資料中找不到。 讀取任何資料時產生統計資料，不建立的統計資料的 blob，並在日期不是可用。 這是篩選的統計資料述詞未傳回任何資料列，或新的空白資料表的情況。
+ 統計資料更新將日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 如果沒有讀取資料以產生統計資料，則不會建立統計 Blob，而且日期也不可使用。 這是篩選過的統計資料述詞未傳回任何資料列，或新的空白資料表的情況。
  
- 如果統計資料對應到索引， *stats_id*值[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)目錄檢視等同於*index_id*值[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視。
+ 如果統計資料對應到索引，[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目錄檢視中的 *stats_id* 值會與 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視中的 *index_id* 值相同。
   
 ## <a name="permissions"></a>Permissions  
  需要 db_owner 固定資料庫角色中的成員資格或權限，才能檢視資料表或索引檢視表的中繼資料。  
@@ -85,7 +85,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- 如果統計資料對應到索引， *stats_id*值[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)目錄檢視等同於*index_id*值[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視，而且下列查詢會傳回與之前查詢相同的結果。 如果統計資料未對應到索引，統計資料會在 sys.stats 結果中而不是 sys.indexes 結果中。  
+ 如果統計資料對應到索引，[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目錄檢視中的 *stats_id* 值會與 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視中的 *index_id* 值相同，而且下列查詢會傳回與之前查詢相同的結果。 如果統計資料未對應到索引，統計資料會在 sys.stats 結果中而不是 sys.indexes 結果中。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -97,10 +97,10 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>B. 了解具名的統計資料上次更新  
- 下列範例會建立 DimCustomer 資料表的 [姓氏] 資料行的統計資料。 然後，它會執行查詢，以顯示統計資料的日期。 然後它更新統計資料，並執行查詢，一次以顯示更新的日期。  
+### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>B. 了解具名統計資料上次更新時間  
+ 下列範例會建立 DimCustomer 資料表的 LastName 資料行的統計資料。 然後，它會執行查詢，以顯示統計資料的日期。 接著它會更新統計資料，並再次執行查詢，以顯示更新的日期。  
   
 ```sql
 --First, create a statistics object  
@@ -134,8 +134,8 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer')
 GO    
 ```  
   
-### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>C. 檢視的資料表上的所有統計資料上次更新日期  
- 這個範例會傳回 DimCustomer 資料表上的每個統計資料物件上次更新的日期。  
+### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>C. 檢視資料表上所有統計資料的上次更新日期  
+ 這個範例會傳回 DimCustomer 資料表上每個統計資料物件上次更新的日期。  
   
 ```sql  
 --Return the dates all statistics on the table were last updated.  
@@ -146,7 +146,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- 如果統計資料對應到索引， *stats_id*值[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)目錄檢視等同於*index_id*值[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視，而且下列查詢會傳回與之前查詢相同的結果。 如果統計資料未對應到索引，統計資料會在 sys.stats 結果中而不是 sys.indexes 結果中。  
+ 如果統計資料對應到索引，[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目錄檢視中的 *stats_id* 值會與 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視中的 *index_id* 值相同，而且下列查詢會傳回與之前查詢相同的結果。 如果統計資料未對應到索引，統計資料會在 sys.stats 結果中而不是 sys.indexes 結果中。  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -158,11 +158,11 @@ WHERE object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [sp_autostats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [統計資料](../../relational-databases/statistics/statistics.md)    
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [Statistics](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
   

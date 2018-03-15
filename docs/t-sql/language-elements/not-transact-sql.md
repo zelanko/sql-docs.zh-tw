@@ -1,5 +1,5 @@
 ---
-title: "不 (TRANSACT-SQL) |Microsoft 文件"
+title: NOT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *boolean_expression*  
- 是任何有效的布林值[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是任何有效的布林[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>結果類型  
  **布林**  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="result-value"></a>結果值  
  NOT 會反轉任何布林運算式的值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  使用 NOT 會執行運算式的否定運算。  
   
  下表會利用 NOT 運算子來顯示 TRUE 和 FALSE 值的比較結果。  
@@ -93,8 +93,8 @@ GO
  (6 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會限制結果`SalesOrderNumber`值開頭為`SO6`和`ProductKeys`大於或等於 400。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列範例會將結果限制為 `SalesOrderNumber` 值的開頭為 `SO6` 且 `ProductKeys` 大於或等於 400。  
   
 ```  
 -- Uses AdventureWorks  
@@ -105,9 +105,9 @@ WHERE SalesOrderNumber LIKE 'SO6%' AND NOT ProductKey < 400;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

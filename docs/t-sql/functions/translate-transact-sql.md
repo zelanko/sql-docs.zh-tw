@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="translate-transact-sql"></a>翻譯 (TRANSACT-SQL)
+# <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-傳回提供做為第一個引數之後的第二個引數中指定某些字元轉譯為目的地的一組字元的字串。
+將第二個引數中指定的部分字元轉譯為一組目的地字元之後，傳回提供作為第一個引數的字串。
 
 ## <a name="syntax"></a>語法   
 ```
@@ -42,29 +42,29 @@ TRANSLATE ( inputString, characters, translations)
 ## <a name="arguments"></a>引數   
 
 inputString   
-是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)nvarchar、 varchar、 nchar （char） 的任何字元類型。
+這是任何字元類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (nvarchar、varchar、nchar、char)。
 
 字元   
-是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)包含字元應該用來取代任何字元類型。
+這是任何字元類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，其中包含應該遭到取代的字元。
 
 翻譯   
-是字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)符合第二個引數類型和長度。
+這是類型和長度符合第二個引數的字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
 
 ## <a name="return-types"></a>傳回類型   
-傳回字元運算式做為相同型別的`inputString`其中字元的第二個引數會取代從第三個引數比對的字元。
+將相同類型的字元運算式當作 `inputString` 傳回，其中第二個引數中的字元會取代為第三個引數中相符的字元。
 
-## <a name="remarks"></a>備註   
+## <a name="remarks"></a>Remarks   
 
-`TRANSLATE`如果字元和翻譯有不同的長度，則函數會傳回錯誤。 `TRANSLATE`如果做為字元或取代引數提供 null 值，函式應傳回未變更的輸入。 行為`TRANSLATE`函式應該與相同[取代](../../t-sql/functions/replace-transact-sql.md)函式。   
+如果字元和轉譯的長度不同，則 `TRANSLATE` 函數會傳回錯誤。 如果 Null 值是當作字元或取代引數提供，則 `TRANSLATE` 函數應該會傳回未變更的輸入。 `TRANSLATE` 函數的行為應該與 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函數相同。   
 
-行為`TRANSLATE`函數即相當於使用多個`REPLACE`函式。
+`TRANSLATE` 函數的行為相當於使用多個 `REPLACE` 函數。
 
-`TRANSLATE`一定是搭配 SC 定序感知。
+`TRANSLATE` 永遠是 SC 定序感知。
 
 ## <a name="examples"></a>範例   
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. 取代規則的大括號的正方形和大括號    
-下列查詢會加上括弧取代輸入字串中的方形和大括號：
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. 將方括號和大括號取代為一般括號    
+下列查詢會將輸入字串中的方括號和大括號取代為括號：
 ```
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
@@ -74,11 +74,11 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
 
 >  [!NOTE]
->  `TRANSLATE`函式，在此範例中是相當於但遠比下列陳述式使用 simplier `REPLACE`:`SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
+>  此範例中的 `TRANSLATE` 函數相當於使用 `REPLACE` 的陳述式但更為簡單：`SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
 
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>B. 將 GeoJSON 點轉換成 well-known text，WKT    
-GeoJSON 是一種格式的編碼方式各種不同的地理資料結構。 與`TRANSLATE`函式，開發人員可以輕鬆轉換 GeoJSON 點 well-known text，WKT 格式，反之亦然。 下列查詢會將輸入中的方形和大括號取代規則的大括號：   
+###  <a name="b-convert-geojson-points-into-wkt"></a>B. 將 GeoJSON 點轉換成 WKT    
+GeoJSON 是一種格式，可針對各種不同的地理資料結構編碼。 開發人員可以利用 `TRANSLATE` 函數，輕鬆地將 GeoJSON 點轉換為 WKT 格式，反之亦然。 下列查詢會將輸入中的方括號和大括號取代為一般括號：   
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -93,14 +93,14 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 
 ## <a name="see-also"></a>另請參閱
- [CONCAT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
  [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [字串函數 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
+ [字串函數 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 

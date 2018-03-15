@@ -1,5 +1,5 @@
 ---
-title: "ROW_NUMBER (TRANSACT-SQL) |Microsoft 文件"
+title: ROW_NUMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/11/2017
 ms.prod: sql-non-specified
@@ -37,12 +37,12 @@ ms.lasthandoff: 01/02/2018
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  設定數字的結果輸出。 更具體來說，傳回的資料分割內的資料列，結果集，每個資料分割中的第一個資料列的 1 開始的序號。 
+  為結果集的輸出編號。 具體來說，傳回結果集分割區內某資料列的序號，序號從 1 開始，每個分割區第一個資料列的序號是 1。 
   
-`ROW_NUMBER`和`RANK`類似。 `ROW_NUMBER`數字的所有資料列依序 （例如 1、 2、 3、 4、 5）。 `RANK`繫結 （例如 1、 2、 2、 4、 5） 提供相同的數值。   
+`ROW_NUMBER` 和 `RANK` 類似。 `ROW_NUMBER` 會依序為所有資料列編號 (例如 1、2、3、4、5)。 `RANK` 為繫結提供相同的數值 (例如 1、2、2、4、5)。   
   
 > [!NOTE]
-> `ROW_NUMBER`計算查詢執行時暫存值。 若要保存在資料表中的數字，請參閱[IDENTITY 屬性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和[順序](../../t-sql/statements/create-sequence-transact-sql.md)。 
+> `ROW_NUMBER` 是查詢在執行時所計算的暫存值。 若要保存在資料表中的數字，請參閱 [IDENTITY 屬性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -56,30 +56,30 @@ ROW_NUMBER ( )
   
 ## <a name="arguments"></a>引數  
  PARTITION BY *value_expression*  
- 所產生的結果集分成[FROM](../../t-sql/queries/from-transact-sql.md)子句套用 ROW_NUMBER 函數的分割區。 *value_expression*指定結果集之資料分割的資料行。 如果`PARTITION BY`未指定，則函數會將查詢結果集為單一群組的所有資料列。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ 將 [FROM](../../t-sql/queries/from-transact-sql.md) 子句所產生的結果集分成套用 ROW_NUMBER 函數的分割區。 *value_expression* 會指定用於分割結果集的資料行。 如未指定 `PARTITION BY`，此函數會將查詢結果集的所有資料列視為單一群組。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
  *order_by_clause*  
- `ORDER BY`子句決定了資料列會指派其唯一`ROW_NUMBER`內指定的資料分割。 此為必要。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ `ORDER BY` 子句決定了在指定分割區內，將唯一 `ROW_NUMBER` 指派給資料列的順序。 此為必要。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
  **bigint**  
   
 ## <a name="general-remarks"></a>一般備註  
- 傳回的資料列不保證查詢使用`ROW_NUMBER()`的排序是每次執行完全相同除非下列條件成立。  
+ 除非下列條件成立，否則不保證使用 `ROW_NUMBER()` 之查詢所傳回的資料列一定會在每次執行時依照相同的方式排列。  
   
 1.  分割區資料行的值是唯一的。  
   
-2.  值的`ORDER BY`是唯一的資料行。  
+2.  `ORDER BY` 資料行的值是唯一的。  
   
-3.  資料分割資料行的值組合和`ORDER BY`是唯一的資料行。  
+3.  分割區資料行和 `ORDER BY` 資料行的值組合是唯一的。  
   
- `ROW_NUMBER()`不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+ `ROW_NUMBER()` 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-simple-examples"></a>A. 簡單範例 
 
-下列查詢會按字母順序傳回的四個系統資料表。
+下列查詢會依字母順序傳回 4 個系統資料表。
 
 ```sql
 SELECT 
@@ -98,7 +98,7 @@ ORDER BY name ASC;
 |msdb |SIMPLE |
 |tempdb |SIMPLE |
 
-若要加入資料列號碼資料行在每個資料列前面，新增的資料行`ROW_NUMBER`函式，在此情況下名為`Row#`。 您必須移動`ORDER BY`達子句`OVER`子句。
+若要在每個資料列前面新增資料列號碼資料行，請新增有 `ROW_NUMBER` 函數的資料行，在此情況下名為 `Row#`。 您必須將 `ORDER BY` 子句移到 `OVER` 子句。
 
 ```sql
 SELECT 
@@ -110,14 +110,14 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|資料列號碼 |NAME    |recovery_model_desc |  
+|Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |@shouldalert |master |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-加入`PARTITION BY`子句`recovery_model_desc`資料行，將會重新啟動時的編號`recovery_model_desc`值變更。 
+在 `recovery_model_desc`資料行新增 `PARTITION BY` 子句，將會在 `recovery_model_desc` 值變更時重新啟動編號。 
  
 ```sql
 SELECT 
@@ -129,7 +129,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|資料列號碼 |NAME    |recovery_model_desc |  
+|Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |@shouldalert |model |FULL |
 |@shouldalert |master |SIMPLE |
@@ -224,10 +224,10 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. 傳回銷售人員的資料列編號  
- 下列範例會傳回`ROW_NUMBER`根據其指派的銷售配額的銷售代表。  
+ 下列範例會根據銷售代表被指派的銷售配額，傳回銷售代表的 `ROW_NUMBER`。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -256,7 +256,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ```
 
 ### <a name="f-using-rownumber-with-partition"></a>F. 並用 PARTITION 與 ROW_NUMBER()  
- 下列範例顯示如何搭配 `ROW_NUMBER` 引數使用 `PARTITION BY` 函數。 這會導致`ROW_NUMBER`函式中每個資料分割編號的資料列。  
+ 下列範例顯示如何搭配 `ROW_NUMBER` 引數使用 `PARTITION BY` 函數。 這會導致 `ROW_NUMBER` 函數為每個分割區中的資料列編號。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -287,10 +287,10 @@ RowNumber  LastName            Territory  SalesQuota
 2          Ito                 4           7,804,000.00  
 ```
   
-## <a name="see-also"></a>請參閱  
- [順位 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40;TRANSACT-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [NTILE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)  
   
   
 

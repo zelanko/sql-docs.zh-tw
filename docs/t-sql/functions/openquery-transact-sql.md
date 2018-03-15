@@ -1,5 +1,5 @@
 ---
-title: "OPENQUERY (TRANSACT-SQL) |Microsoft 文件"
+title: OPENQUERY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ OPENQUERY ( linked_server ,'query' )
  *linked_server*  
  這是代表連結伺服器名稱的識別碼。  
   
- **'** *查詢* **'**  
+ **'** *query* **'**  
  這是在連結伺服器中執行的查詢字串。 該字串的最大長度是 8 KB。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  OPENQUERY 不接受變數作為其引數。  
   
  在連結的伺服器上，OPENQUERY 無法用來執行擴充預存程序。 不過，可以利用四部分名稱在連結的伺服器上執行擴充預存程序。 例如：  
@@ -96,23 +96,23 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. 執行 SELECT 傳遞查詢  
- 下列範例會使用傳遞`SELECT`查詢，以選取範例 c 中插入的資料列  
+ 下列範例會使用 `SELECT` 傳遞查詢來選取範例 C 中插入的資料列。  
   
 ```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [資料列集函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [資料列函數 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_serveroption &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

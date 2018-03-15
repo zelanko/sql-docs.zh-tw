@@ -1,5 +1,5 @@
 ---
-title: "NULLIF (TRANSACT-SQL) |Microsoft 文件"
+title: NULLIF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  如果兩個指定的運算式相等，便傳回 Null 值。 例如，`SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;`第一個資料行 （4 和 4） 傳回 NULL，因為兩個輸入的值相同。 第二個資料行傳回的第一個值 (5)，因為兩個輸入的值不同。 
+  如果兩個指定的運算式相等，便傳回 Null 值。 例如，`SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` 會針對第一個資料行 (4 和 4) 傳回 NULL，因為這兩個輸入值一樣。 第二個資料行會傳回第一個值 (5)，因為這兩個輸入值不同。 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ NULLIF ( expression , expression )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 是任何有效的純量[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是任何有效的純量[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回與第一個相同型別*運算式*。  
+ 傳回與第一個 *expression* 相同的類型。  
   
- NULLIF 會傳回第一個*運算式*兩個運算式是否不相等。 如果運算式相等，NULLIF 會傳回 null 值的第一個型別*運算式*。  
+ 如果這兩個運算式不相等，NULLIF 會傳回第一個 *expression*。 如果運算式相等，NULLIF 會傳回第一個 *expression* 類型的 Null 值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  NULLIF 相當於兩個運算式相等且產生的運算式為 NULL 的搜尋 CASE 運算式。  
   
- 我們建議您不要在 NULLIF 函數中使用時間相依函數，例如 RAND()。 這可能會造成函式評估兩次，並從兩個引動過程傳回不同的結果。  
+ 我們建議您不要在 NULLIF 函數中使用時間相依函數，例如 RAND()。 這可能會導致系統評估此函數兩次，並從這兩個引動過程傳回不同的結果。  
   
 ## <a name="examples"></a>範例  
   
@@ -117,8 +117,8 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C： 傳回不包含資料的預算數量  
- 下列範例會建立`budgets`資料表載入資料，並使用`NULLIF`傳回 null 值，如果沒有`current_year`也`previous_year`包含資料。  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C：傳回未包含資料的預算金額  
+ 下列範例會建立 `budgets` 資料表、載入資料，然後使用 `NULLIF` 傳回 Null (如果 `current_year` 和 `previous_year` 都未包含資料)。  
   
 ```sql  
 CREATE TABLE budgets (  
@@ -152,8 +152,8 @@ FROM budgets;
   
 ## <a name="see-also"></a>另請參閱  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [decimal 和 numeric &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [decimal 和 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

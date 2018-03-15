@@ -1,5 +1,5 @@
 ---
-title: "或者 (TRANSACT-SQL) |Microsoft 文件"
+title: OR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ boolean_expression OR boolean_expression
   
 ## <a name="arguments"></a>引數  
  *boolean_expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)會傳回 TRUE、 FALSE 或 UNKNOWN。  
+ 這是任何會傳回 TRUE、FALSE 或 UNKNOWN 的有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>結果類型  
  **布林**  
@@ -56,7 +56,7 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>結果值  
  當任何一個條件是 TRUE 時，OR 會傳回 TRUE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  下表會顯示 OR 運算子的結果。  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -66,7 +66,7 @@ boolean_expression OR boolean_expression
 |**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`vEmployeeDepartmentHistory`檢視，以便擷取名稱`Quality Assurance`晚上排班或夜班的人員。 如果省略括號，查詢會傳回中班的 `Quality Assurance` 員工與大夜班的所有員工。  
+ 下列範例會使用 `vEmployeeDepartmentHistory` 檢視，來擷取上夜班或大夜班的 `Quality Assurance` 人員名稱。 如果省略括號，查詢會傳回中班的 `Quality Assurance` 員工與大夜班的所有員工。  
   
 ```  
 -- Uses AdventureWorks  
@@ -86,8 +86,8 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會擷取的可能獲得的員工姓名`BaseRate`少於 20 或具有`HireDate`2001 年 1 月 1 日或更新版本。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列範例會擷取所賺得的 `BaseRate` 少於 20 或 `HireDate` 為 2001 年 1 月 1 日或更晚日期的員工名稱。  
   
 ```  
 -- Uses AdventureWorks  
@@ -98,9 +98,9 @@ WHERE BaseRate < 10 OR HireDate >= '2001-01-01';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

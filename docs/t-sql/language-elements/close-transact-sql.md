@@ -49,10 +49,10 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>引數  
  GLOBAL  
- 指定*cursor_name*參考全域資料指標。  
+ 指定 *cursor_name* 是全域資料指標。  
   
  *cursor_name*  
- 這是開啟的資料指標名稱。 如果全域和本機資料指標同時存在，且*cursor_name*做為其名稱， *cursor_name* GLOBAL 時指定，否則是指全域資料指標*cursor_name*參考本機資料指標。  
+ 這是開啟的資料指標名稱。 如果全域和本機資料指標同時存在且名稱是 *cursor_name*，若指定了 GLOBAL，*cursor_name* 就是全域資料指標；否則，*cursor_name* 是本機資料指標。  
   
  *cursor_variable_name*  
  這是與開啟的資料指標相關聯的資料指標變數名稱。  
@@ -78,7 +78,7 @@ GO
  [資料指標](../../relational-databases/cursors.md)   
  [資料指標 &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [擷取 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [開啟 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

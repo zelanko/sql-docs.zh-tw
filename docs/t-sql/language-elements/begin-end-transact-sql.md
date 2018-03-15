@@ -56,7 +56,7 @@ END
  { *sql_statement* | *statement_block* }  
  這是藉由使用陳述式區塊所定義的任何有效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式分組。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  BEGIN...END 區塊可以有巢狀結構。  
   
  雖然 BEGIN...END 區塊中所有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式都是有效的陳述式，但某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式不應在同一批次或陳述式區塊中分成一組。  
@@ -84,8 +84,8 @@ Rolled back the transaction.
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 在下列範例中，`BEGIN`和`END`定義一系列的[!INCLUDE[DWsql](../../includes/dwsql-md.md)]一起執行的陳述式。 如果`BEGIN...END`區塊不會包含，下列範例會循環。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 在下列範例中，`BEGIN` 和 `END` 會定義一系列同時執行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式。 如果未包含 `BEGIN...END` 區塊，則下列範例將處於持續不斷的迴圈狀態。  
   
 ```  
 -- Uses AdventureWorks  
@@ -102,7 +102,7 @@ END;
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
   

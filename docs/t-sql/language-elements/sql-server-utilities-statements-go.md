@@ -1,5 +1,5 @@
 ---
-title: "GO (TRANSACT-SQL) |Microsoft 文件"
+title: GO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -35,12 +35,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---go"></a>SQL Server 公用程式陳述式-移至
+# <a name="sql-server-utilities-statements---go"></a>SQL Server 公用程式陳述式 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的命令不[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，但是會辨識**sqlcmd**和**osql**公用程式和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]程式碼編輯器。 這些命令可用來簡化批次和指令碼的可讀性與執行。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，但 **sqlcmd** 和 **osql** 公用程式以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 程式碼編輯器都能辨識的命令。 這些命令可用來簡化批次和指令碼的可讀性與執行。  
   
-  移至發出訊號的批次結束[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公用程式。  
+  GO 會向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式發出 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次結束的信號。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,8 +55,8 @@ GO [count]
  *計數*  
  這是正整數。 在 GO 之前的批次將會執行指定的次數。  
   
-## <a name="remarks"></a>備註  
- GO 不[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式; 它命令所能辨識**sqlcmd**和**osql**公用程式和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]程式碼編輯器。  
+## <a name="remarks"></a>Remarks  
+ GO 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式；它是 **sqlcmd** 和 **osql** 公用程式以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 程式碼編輯器都能辨識的命令。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會將 GO 解譯成應該將目前的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的信號。 目前的陳述式批次由在上一個 GO 之後輸入的所有陳述式組成；如果是第一個 GO，便是從特定工作階段或指令碼開始之後輸入的所有陳述式組成。  
   
@@ -98,7 +98,7 @@ GO;
 ```  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立兩個批次。 第一個批次中只包含`USE``AdventureWorks2012`陳述式來設定資料庫內容。 其餘陳述式使用本機變數。 因此，所有本機變數宣告都必須分組在單一批次中。 方式是將 `GO` 命令放在參考變數的最後一個陳述式之後。  
+ 下列範例會建立兩個批次。 第一個批次只包含用來設定資料庫內容的 `USE``AdventureWorks2012` 陳述式。 其餘陳述式使用本機變數。 因此，所有本機變數宣告都必須分組在單一批次中。 方式是將 `GO` 命令放在參考變數的最後一個陳述式之後。  
   
 ```  
 USE AdventureWorks2012;  

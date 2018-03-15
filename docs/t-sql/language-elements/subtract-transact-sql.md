@@ -1,5 +1,5 @@
 ---
-title: '- (Subtraction) (Transact-SQL) | Microsoft Docs'
+title: "- (減法) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--subtraction-transact-sql"></a>-（減） (TRANSACT-SQL)
+# <a name="--subtraction-transact-sql"></a>- (減法) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   執行兩個數字的減法運算 (算術減法運算子)。 也可以從日期中減去一個數字 (表示天數)。  
@@ -50,7 +50,7 @@ expression - expression
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)任一數字的資料類型的資料類型類別目錄，除了**元**資料型別。 不能與**日期**，**時間**， **datetime2**，或**datetimeoffset**資料型別。  
+ 這是數值資料類型類別目錄中任何一個資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **bit** 資料類型除外。 不能與 **date**、**time**、**datetime2** 或 **datetimeoffset** 資料類型搭配使用。  
   
 ## <a name="result-types"></a>結果類型  
  傳回優先順序較高之引數的資料類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
@@ -60,7 +60,7 @@ expression - expression
 ### <a name="a-using-subtraction-in-a-select-statement"></a>A. 在 SELECT 陳述式中使用減法  
  下列範例計算稅率最高的州省與稅率最低的州省之間的稅率差。  
   
- **適用於**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```  
 -- Uses AdventureWorks  
@@ -96,10 +96,10 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
  (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C： 在 SELECT 陳述式中使用減法  
- 下列範例會計算最高的基底費率的員工和與最低的稅率，員工的差異基底費率中從`dimEmployee`資料表。  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C：在 SELECT 陳述式中使用減法  
+ 下列範例會從 `dimEmployee` 資料表，計算基本稅率最高的員工與稅率最低的員工之間的基本稅率差。  
   
 ```  
 -- Uses AdventureWorks  
@@ -109,12 +109,12 @@ FROM DimEmployee;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [-= &#40;減法指派 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
- [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
- [算術運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
- [- &#40;Negative&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/unary-operators-negative.md)   
+ [-= &#40;減法指派&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
+ [複合運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [算術運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
+ [- &#40;負數&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/unary-operators-negative.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
   

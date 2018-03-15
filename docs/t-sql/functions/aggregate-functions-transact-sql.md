@@ -1,5 +1,5 @@
 ---
-title: "彙總函式 (TRANSACT-SQL) |Microsoft 文件"
+title: "彙總函式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/16/2018
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/18/2018
 
 彙總函式會根據一組值來執行計算，再傳回單一值。 除了 COUNT，彙總函式會忽略 Null 值。 彙總函式經常用來搭配 SELECT 陳述式的 GROUP BY 子句使用。
   
-所有彙總函式都具有決定性。 這表示每當彙總函式是使用一組特定輸入值來進行呼叫時，它們都會傳回相同的值。 如需函數決定論的詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可能會遵照 GROUPING 和 GROUPING_ID 除外的所有彙總函式。
+所有彙總函式都具有決定性。 這表示每當彙總函式是使用一組特定輸入值來進行呼叫時，它們都會傳回相同的值。 如需函數確定性的詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可能會遵照所有的彙總函式，但是 GROUPING 和 GROUPING_ID 除外。
   
 只有下列情況才能利用彙總函式來作為運算式：
 -   SELECT 陳述式的選取清單 (子查詢或外部查詢)。  
@@ -56,6 +56,6 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="see-also"></a>另請參閱
 [內建函數 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  
-[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

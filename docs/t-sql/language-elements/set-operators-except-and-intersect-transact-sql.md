@@ -1,5 +1,5 @@
 ---
-title: "EXCEPT 和 INTERSECT (TRANSACT-SQL) |Microsoft 文件"
+title: "EXCEPT 和 INTERSECT (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -36,14 +36,14 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-operators---except-and-intersect-transact-sql"></a>除了設定 Operators-和 INTERSECT (TRANSACT-SQL)
+# <a name="set-operators---except-and-intersect-transact-sql"></a>設定運算子 - EXCEPT 和 INTERSECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   比較兩個查詢的結果來傳回相異的資料列。  
   
  EXCEPT 會從左側的輸入查詢傳回相異的資料列，而不會從右側之輸入查詢的輸出傳回。  
   
- INTERSECT 會傳回左側和右側輸入的查詢運算子輸出的相異資料列。  
+ INTERSECT 會傳回左右兩側輸入查詢運算子所輸出的相異資料列。  
   
  使用 EXCEPT 或 INTERSECT 的兩個查詢，其結果集的基本組合規則如下：  
   
@@ -63,20 +63,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  \<*query_specification*> | ( \<*query_expression*> )  
- 這是一個查詢規格或查詢運算式，它會傳回要與另一個查詢規格或查詢運算式資料比較的資料。 EXCEPT 或 INTERSECT 作業中的資料行定義不必相同，但必須能夠透過隱含的轉換來比較。 當資料類型，用來執行比較，並傳回結果取決於基礎類型的規則[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+ 這是一個查詢規格或查詢運算式，它會傳回要與另一個查詢規格或查詢運算式資料比較的資料。 EXCEPT 或 INTERSECT 作業中的資料行定義不必相同，但必須能夠透過隱含的轉換來比較。 當資料類型不同時，用來執行比較並傳回結果的類型會根據[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的規則來決定。  
   
  當類型相同，但有效位數、小數位數或長度不同時，結果取決於相同的運算式組合規則。 如需詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
- 查詢規格或運算式不能傳回**xml**，**文字**， **ntext**，**映像**，或非二進位 CLR 使用者定義類型資料行因為這些資料類型無法比較。  
+ 查詢規格或運算式無法傳回 **xml**、**text**、**ntext**、**image** 或非二進位 CLR 使用者定義類型資料行，因為這些資料類型無法比較。  
   
  EXCEPT  
- 從查詢傳回任何相異值，也不會傳回右側查詢 EXCEPT 運算子的左邊。  
+ 從 EXCEPT 運算子左側查詢中傳回右側查詢也未傳回的任何相異值。  
   
  INTERSECT  
  傳回 INTERSECT 運算子左右兩側之查詢所傳回的任何相異值。  
   
-## <a name="remarks"></a>備註  
- 所需的比較時，資料類型可比較的資料行之查詢所傳回左側和右側的 EXCEPT 或 INTERSECT 運算子具有不同定序的字元資料類型，根據的規則執行[定序優先順序](../../t-sql/statements/collation-precedence-transact-sql.md)。 如果無法執行這項轉換，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會傳回錯誤。  
+## <a name="remarks"></a>Remarks  
+ 當 EXCEPT 或 INTERSECT 運算子左右兩側查詢所傳回之可比較資料行的資料類型為具有不同定序的字元資料類型時，會根據[定序優先順序](../../t-sql/statements/collation-precedence-transact-sql.md)的規則執行必要的比較。 如果無法執行這項轉換，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會傳回錯誤。  
   
  當您比較資料行值來判斷相異資料列時，會將兩個 NULL 值視為相等。  
   
@@ -102,10 +102,10 @@ ms.lasthandoff: 01/25/2018
   
  當搭配 EXCEPT 或 INTERSECT 作業來使用僅限向前快轉的資料指標和靜態資料指標時，結果集會完整支援這些資料指標。 如果搭配 EXCEPT 或 INTERSECT 作業來使用索引鍵集驅動的資料指標或動態資料指標時，作業結果集的資料指標會轉換成靜態資料指標。  
   
- 使用中的圖形化顯示計畫功能來顯示 EXCEPT 作業時[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，作業會顯示為[左方反半聯結](../../relational-databases/showplan-logical-and-physical-operators-reference.md)，INTERSECT 作業會顯示為和[左方的半聯結](../../relational-databases/showplan-logical-and-physical-operators-reference.md)。  
+ 利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的圖形化執行程序表功能來顯示 EXCEPT 作業時，此作業會顯示為[左方反半聯結](../../relational-databases/showplan-logical-and-physical-operators-reference.md)，而 INTERSECT 作業會顯示為[左方半聯結](../../relational-databases/showplan-logical-and-physical-operators-reference.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例顯示使用`INTERSECT`和`EXCEPT`運算子。 第一個查詢會傳回 `Production.Product` 資料表的所有值，以便與 `INTERSECT` 和 `EXCEPT` 的結果進行比較。  
+ 下列範例示範如何使用 `INTERSECT` 和 `EXCEPT` 運算子。 第一個查詢會傳回 `Production.Product` 資料表的所有值，以便與 `INTERSECT` 和 `EXCEPT` 的結果進行比較。  
   
 ```  
 -- Uses AdventureWorks  
@@ -154,7 +154,7 @@ FROM Production.Product ;
 --Result: 0 Rows (work orders without products)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例示範如何使用 `INTERSECT` 及 `EXCEPT` 運算子。 第一個查詢會傳回 `FactInternetSales` 資料表的所有值，以便與 `INTERSECT` 和 `EXCEPT` 的結果進行比較。  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: "傳回 (TRANSACT-SQL) |Microsoft 文件"
+title: RETURN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -57,15 +57,15 @@ RETURN [ integer_expression ]
  這是傳回的整數值。 預存程序可以向發出呼叫的程序或應用程式傳回一個整數值。  
   
 ## <a name="return-types"></a>傳回類型  
- 選擇性地傳回**int**。  
+ 選擇性地傳回 **int**。  
   
 > [!NOTE]  
 >  除非另有說明，否則所有系統預存程序都會傳回 0 值。 這表示成功，而非零值則表示失敗。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當搭配預存程序來使用時，RETURN 無法傳回 Null 值。 如果程序嘗試傳回 Null 值 (例如，當 @status 是 NULL 時，使用 RETURN @status)，便會產生一則警告訊息，而且會傳回 0 值。  
   
- 傳回的狀態值可以包含在後續[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式批次或程序執行目前的程序，但它必須以下列格式輸入： `EXECUTE @return_status = <procedure_name>`。  
+ 您可以將傳回狀態值包括在執行目前程序之批次或程序的後續 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中，不過，必須依照下列格式輸入：`EXECUTE @return_status = <procedure_name>`。  
   
 ## <a name="examples"></a>範例  
   

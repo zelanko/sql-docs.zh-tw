@@ -1,5 +1,5 @@
 ---
-title: (Division) (Transact-SQL) | Microsoft Docs
+title: "(除法) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-division-transact-sql"></a>/ (Division) (Transact-SQL)
+# <a name="-division-transact-sql"></a>/ (除法) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   將一個數字除以另一個數字 (算術除法運算子)。  
@@ -48,17 +48,17 @@ dividend / divisor
   
 ## <a name="arguments"></a>引數  
  *dividend*  
- 要執行除法的數值運算式。 *被除數*可以是任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)任一數字的資料類型的資料類型類別目錄，除了**datetime**和**smalldatetime**資料型別。  
+ 要執行除法的數值運算式。 *dividend* 可以是數值資料類型類別目錄中任何一個資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **datetime** 和 **smalldatetime** 資料類型除外。  
   
  *divisor*  
- 要除以被除數的數值運算式。 *除數*可以是任何一種資料類型的數值資料類型類別目錄的任何有效運算式，除了**datetime**和**smalldatetime**資料型別。  
+ 要除以被除數的數值運算式。 *divisor* 可以是數值資料類型類別目錄中任何一個資料類型的任何有效運算式，但是 **datetime** 和 **smalldatetime** 資料類型除外。  
   
 ## <a name="result-types"></a>結果類型  
  傳回優先順序較高之引數的資料類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
- 如果整數*被除數*除以整數*除數*，則結果會截斷任何的結果小數部分的整數。  
+ 如果是整數 *dividend* 除以整數 *divisor*，結果就是整數，結果的任何小數部分都會遭到截斷。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  / 運算子實際傳回的值是第一個運算式除以第二個運算式的商數。  
   
 ## <a name="examples"></a>範例  
@@ -88,8 +88,8 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會使用除法算術運算子來計算簡單病假時數來的每個員工的休假時數的比率。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列範例會使用除法算術運算子，來計算每位員工之休假時數與病假時數的簡單比率。  
   
 ```  
 -- Uses AdventureWorks  
@@ -102,11 +102,11 @@ FROM DimEmployee;
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [/ = &#40; 除法指派 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [/= &#40;除法指派&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [複合運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

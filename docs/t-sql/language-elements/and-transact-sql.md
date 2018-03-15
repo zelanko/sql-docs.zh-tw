@@ -1,5 +1,5 @@
 ---
-title: "和 (TRANSACT-SQL) |Microsoft 文件"
+title: AND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  結合兩個布林運算式，並傳回**TRUE**這兩個運算式時**TRUE**。 陳述式中使用一個以上的邏輯運算子時**AND**運算子會先評估。 您可以使用括號來變更驗算的順序。  
+  結合兩個布林運算式，並在這兩個運算式都是 **TRUE** 時，傳回 **TRUE**。 在陳述式中使用一個以上的邏輯運算子時，會先評估 **AND** 運算子。 您可以使用括號來變更驗算的順序。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>引數  
  *boolean_expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)傳回布林值： **TRUE**， **FALSE**，或**未知**。  
+ 這是會傳回下列任一布林值的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)：**TRUE**、**FALSE** 或 **UNKNOWN**。  
   
 ## <a name="result-types"></a>結果類型  
  **布林**  
@@ -58,7 +58,7 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>結果值  
  當兩個運算式都是 TRUE 時，便傳回 TRUE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  下圖顯示利用 AND 運算子比較 TRUE 和 FALSE 值的結果。  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -102,7 +102,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

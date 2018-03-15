@@ -1,5 +1,5 @@
 ---
-title: "RTRIM (TRANSACT-SQL) |Microsoft 文件"
+title: RTRIM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回截斷所有尾端空白之後的字元字串。  
+  傳回截斷所有尾端空格的字元字串。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,12 +49,12 @@ RTRIM ( character_expression )
   
 ## <a name="arguments"></a>引數  
  *character_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)字元資料。 *character_expression*可以是常數、 變數或資料行的字元或二進位資料。  
+ 這是字元資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是字元或二進位資料的常數、變數或資料行。  
   
- *character_expression*隱含地轉換成資料類型必須是**varchar**。 否則，請使用[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)來明確轉換*character_expression*。  
+ *character_expression* 必須是可以隱含轉換成 **varchar** 的資料類型。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *character_expression*。  
   
 ## <a name="return-types"></a>傳回類型  
- **varchar**或**nvarchar**  
+ **varchar** 或 **nvarchar**  
   
 ## <a name="examples"></a>範例  
   
@@ -69,8 +69,8 @@ SELECT RTRIM('Removes trailing spaces.   ');
   
   `Removes trailing spaces.`  
   
-### <a name="b-simple-example"></a>B： 簡單的範例  
- 下列範例示範如何使用`RTRIM`移除尾端的空格。 目前有是串連的第一個字串，以顯示其空格已消失，另一個字串。  
+### <a name="b-simple-example"></a>B：簡單範例  
+ 下列範例會示範如何利用 `RTRIM` 來移除尾端空格。 這次，有另一個字串串連第一個字串，以顯示空格已消失。  
   
 ```  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
@@ -110,13 +110,13 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [權限 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

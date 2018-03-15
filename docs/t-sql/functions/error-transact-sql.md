@@ -1,5 +1,5 @@
 ---
-title: "@@ERROR (TRANSACT-SQL) |Microsoft 文件"
+title: '@@ERROR (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; 錯誤 (TRANSACT-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回最後執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的錯誤號碼。  
@@ -49,18 +49,18 @@ ms.lasthandoff: 01/18/2018
 ## <a name="return-types"></a>傳回類型  
  integer  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果先前的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式沒有發現任何錯誤，便傳回 0。  
   
- 如果先前的陳述式發現錯誤，便傳回錯誤號碼。 如果錯誤是其中一種在 sys.messages 目錄檢視中，錯誤然後@ERROR包含該錯誤在 sys.messages.message_id 資料行的值。 您可以檢視相關聯的文字 @@ERROR在 sys.messages 中的錯誤號碼。  
+ 如果先前的陳述式發現錯誤，便傳回錯誤號碼。 如果錯誤是 sys.messages 目錄檢視中的錯誤之一，@@ERROR 會包含這項錯誤在 sys.messages.message_id 資料行中的值。 您可以在 sys.messages 中檢視 @@ERROR 錯誤號碼的相關聯文字。  
   
- 因為 @@ERROR已清除且在執行每個陳述式重設、 立即檢查它在陳述式，或將它儲存到本機變數，稍後能夠檢查。  
+ 由於執行每個陳述式時，都會清除再重設 @@ERROR，因此，請在陳述式之後，立即檢查它，或將它儲存在稍後能夠檢查的本機變數中。  
   
- 使用 TRY...CATCH 建構來處理錯誤。 再試一次...CATCH 建構也支援其他的系統函數 （ERROR_LINE、 ERROR_MESSAGE、 ERROR_PROCEDURE、 ERROR_SEVERITY 和 ERROR_STATE） 傳回錯誤更多資訊比 @@ERROR 。 TRY...CATCH 也支援 ERROR_NUMBER 函數，ERROR_NUMBER 函數並不限於在緊接於產生錯誤的陳述式之後的陳述式中傳回錯誤號碼。 如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)。  
+ 使用 TRY...CATCH 建構來處理錯誤。 TRY...CATCH 建構也支援其他會傳回 @@ERROR 以外之錯誤資訊的系統函數 (ERROR_LINE、ERROR_MESSAGE、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE)。 TRY...CATCH 也支援 ERROR_NUMBER 函數，ERROR_NUMBER 函數並不限於在緊接於產生錯誤的陳述式之後的陳述式中傳回錯誤號碼。 如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. 使用 @@ERROR 來偵測特定錯誤  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. 利用 @@ERROR 來偵測特定錯誤  
  下列範例利用 `@@ERROR` 來檢查 `UPDATE` 陳述式的 CHECK 條件約束違規 (錯誤號碼 547)。  
   
 ```  
@@ -74,8 +74,8 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 使用 @@ERROR 有條件地結束程序  
- 下列範例會使用`IF...ELSE`陳述式，以測試`@@ERROR`之後`DELETE`預存程序中的陳述式。 `@@ERROR` 變數的值決定了傳給呼叫端程式來指出程序成功或失敗的傳回碼。  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 利用 @@ERROR 有條件地結束程序  
+ 下列範例會在預存程序中的 `DELETE` 陳述式之後，使用 `IF...ELSE` 陳述式來測試 `@@ERROR`。 `@@ERROR` 變數的值決定了傳給呼叫端程式來指出程序成功或失敗的傳回碼。  
   
 ```  
 USE AdventureWorks2012;  
@@ -109,7 +109,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. 使用 @@ERROR 與 @@ROWCOUNT   
+### <a name="c-using-error-with-rowcount"></a>C. 搭配 @@ROWCOUNT使用 @@ERROR  
  下列範例搭配 `@@ERROR` 使用 `@@ROWCOUNT` 來驗證 `UPDATE` 陳述式的作業。 `@@ERROR` 的值用來針對任何錯誤指示來進行檢查，而 `@@ROWCOUNT` 則用來確保更新已成功套用至資料表中的資料列。  
   
 ```  
@@ -179,9 +179,9 @@ GO
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "FILE_NAME (TRANSACT-SQL) |Microsoft 文件"
+title: FILE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ FILE_NAME ( file_id )
   
 ## <a name="arguments"></a>引數  
  *file_id*  
- 這是要傳回檔案名稱的檔案識別碼。 *file_id*是**int**。  
+ 這是要傳回檔案名稱的檔案識別碼。 *file_id* 是 **int**。  
   
 ## <a name="return-types"></a>傳回類型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>備註  
- *file_ID*對應於 sys.master_files 或 sys.database_files 目錄檢視中的 file_id 資料行。  
+## <a name="remarks"></a>Remarks  
+ *file_ID* 對應於 sys.master_files 或 sys.database_files 目錄檢視中的 file_id 資料行。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回的檔案名稱`file_ID 1`和`file_ID`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `file_ID 1` 和 `file_ID` 的檔案名稱。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
@@ -79,9 +79,9 @@ AdventureWorks2012_Data   AdventureWorks2012_Log
 (1 row(s) affected)
 ``` 
   
-## <a name="see-also"></a>請參閱  
- [FILE_IDEX &#40;TRANSACT-SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
- [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [中繼資料函數 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

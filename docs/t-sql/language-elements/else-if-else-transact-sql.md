@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的執行上強加條件。 [!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式 (*q*) 下列*Boolean_expression*，就會執行*Boolean_expression*評估為 TRUE。 選擇性的 ELSE 關鍵字是個替代[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式時執行*Boolean_expression*得出 FALSE 或 NULL。  
+  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的執行上強加條件。 如果 *Boolean_expression* 評估為 TRUE，就會執行 *Boolean_expression* 後面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (*sql_statement*)。 選擇性的 ELSE 關鍵字是在 *Boolean_expression* 評估為 FALSE 或 NULL 時，所執行的替代 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ IF Boolean_expression
   
 ## <a name="arguments"></a>引數  
  *Boolean_expression*  
- 這是傳回 TRUE 或 FALSE 的運算式。 如果*Boolean_expression*包含 SELECT 陳述式，SELECT 陳述式必須括在括號。  
+ 這是傳回 TRUE 或 FALSE 的運算式。 如果 *Boolean_expression* 包含 SELECT 陳述式，這個 SELECT 陳述式就必須括在括號中。  
   
  { *sql_statement* | *statement_block* }  
  這是利用陳述式區塊來定義的任何有效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式分組。 若要定義陳述式區塊 (批次)，請使用流程控制語言關鍵字 BEGIN 和 END。 雖然 BEGIN...END 區塊中所有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式都是有效的，但某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式不應在同一批次 (陳述式區塊) 中群組在一起。  
@@ -123,7 +123,7 @@ GO
 ```  
   
 ### <a name="d-using-nested-ifelse-statements"></a>D. 使用巢狀 IF...ELSE 陳述式  
- 下列範例會示範如何 IF... ELSE 陳述式可以是巢狀內的另一個。 將 `@Number` 變數設定為 `5`、`50` 和 `500` 來測試每一個陳述式。  
+ 下列範例示範如何將 IF … ELSE 陳述式巢串於另一個內。 將 `@Number` 變數設定為 `5`、`50` 和 `500` 來測試每一個陳述式。  
   
 ```  
 DECLARE @Number int;  
@@ -140,10 +140,10 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E： 將查詢當做布林運算式的一部分使用  
- 下列範例會使用`IF…ELSE`判斷這兩個回應，讓使用者，根據中項目的權數`DimProduct`資料表。  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E：將查詢當做布林運算式的一部分使用  
+ 下列範例會使用 `IF…ELSE`，根據 `DimProduct` 資料表中項目的權數，來判斷要向使用者顯示兩個回應中的哪一個。  
   
 ```  
 -- Uses AdventureWorks  
@@ -159,7 +159,7 @@ ELSE
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   

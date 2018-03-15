@@ -1,5 +1,5 @@
 ---
-title: "UNICODE (TRANSACT-SQL) |Microsoft 文件"
+title: UNICODE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,12 +48,12 @@ UNICODE ( 'ncharacter_expression' )
   
 ## <a name="arguments"></a>引數  
  **'** *ncharacter_expression* **'**  
- 是**nchar**或**nvarchar**運算式。  
+ 這是 **nchar** 或 **nvarchar** 運算式。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本中和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函數會傳回 0 到 0xFFFF 範圍內的 UCS-2 字碼指標。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中，使用 SC 定序時，UNICODE 會傳回在 0 到 0x10FFFF 範圍內的 UTF-16 字碼指標。  
   
 ## <a name="examples"></a>範例  
@@ -147,9 +147,9 @@ Character # Unicode Character UNICODE Value
   
 ## <a name="see-also"></a>另請參閱  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [CHAR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

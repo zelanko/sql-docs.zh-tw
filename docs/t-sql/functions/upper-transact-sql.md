@@ -1,5 +1,5 @@
 ---
-title: "UPPER (TRANSACT-SQL) |Microsoft 文件"
+title: UPPER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ UPPER ( character_expression )
   
 ## <a name="arguments"></a>引數  
  *character_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)字元資料。 *character_expression*可以是常數、 變數或資料行的字元或二進位資料。  
+ 這是字元資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是字元或二進位資料的常數、變數或資料行。  
   
- *character_expression*隱含地轉換成資料類型必須是**varchar**。 否則，請使用[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)來明確轉換*character_expression*。  
+ *character_expression* 必須是可以隱含轉換成 **varchar** 的資料類型。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *character_expression*。  
   
 ## <a name="return-types"></a>傳回類型  
- **varchar**或**nvarchar**  
+ **varchar** 或 **nvarchar**  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`UPPER`和`RTRIM`函式來傳回中的人員姓氏`dbo.DimEmployee`資料表，以便讓它處於大寫、 修剪過，且與名字串連。  
+ 下列範例會利用 `UPPER` 和 `RTRIM` 函數來傳回 `dbo.DimEmployee` 資料表中的人員姓氏，因此，這些姓氏是大寫、修剪過，且與名字串連起來。  
   
 ```  
 -- Uses AdventureWorks  
@@ -81,8 +81,8 @@ ABOLROUS, Hazem
   
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
- [較低 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/lower-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [LOWER &#40;Transact-SQL&#41;](../../t-sql/functions/lower-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "百分比字元 （萬用字元-相符的字元） (TRANSACT-SQL) |Microsoft 文件"
+title: "百分比字元 (萬用字元 - 相符的字元) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -59,10 +59,10 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [運算式 &#40;。TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
- [&#91;&#93;（萬用字元-相符的字元）](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; ^ &#93;（萬用字元-不相符的字元）](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [&#91; &#93; (萬用字元 - 相符的字元)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+  [&#91;^&#93; (萬用字元 - 不相符的字元)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
  [_ (萬用字元 - 符合一個字元)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   
