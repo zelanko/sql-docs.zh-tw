@@ -1,5 +1,5 @@
 ---
-title: "DBCC SHOW_STATISTICS (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/18/2017
 ms.prod: sql-non-specified
@@ -83,16 +83,16 @@ DBCC SHOW_STATISTICS ( table_name , target )
  要顯示統計資料資訊之資料表或索引檢視表的名稱。  
   
  *table_name*  
- 包含要顯示的統計資料的資料表名稱。 資料表不能為外部資料表。  
+ 包含要顯示之統計資料的資料表名稱。 資料表不得為外部資料表。  
   
  *目標*  
- 要顯示統計資料資訊之索引、統計資料或資料行的名稱。 *目標*括在括號，單一引號、 double 引號括住或沒有引號。 如果*目標*是現有索引的名稱，或傳回資料表或索引檢視表，此目標的統計資料資訊的統計資料。 如果*目標*是現有的資料行的名稱，且此資料行上的自動建立統計資料存在，則會傳回該自動建立統計資料的相關資訊。 如果資料行目標之自動建立的統計資料不存在，就會傳回錯誤訊息 2767。  
- 在[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，*目標*不可以是資料行名稱。  
+ 要顯示統計資料資訊之索引、統計資料或資料行的名稱。 「目標」以括號、單引號、雙引號括住，或是沒有引號。 如果「目標」是資料表或索引檢視表上現有索引或統計資料的名稱，便會傳回這個目標的相關統計資料資訊。 如果「目標」是現有資料行的名稱，而且這個資料行含有自動建立的統計資料，便會傳回自動建立之統計資料的相關資訊。 如果資料行目標之自動建立的統計資料不存在，就會傳回錯誤訊息 2767。  
+ 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，「目標」不可以是資料行名稱。  
   
  NO_INFOMSGS  
  抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
   
- STAT_HEADER |DENSITY_VECTOR |長條圖 |STATS_STREAM [**，* * * n* ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
  如果指定其中一或多個選項，就會限制陳述式針對指定之選項所傳回的結果集。 如果沒有指定任何選項，便會傳回所有的統計資料資訊。  
   
  STATS_STREAM 是 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -100,31 +100,31 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>結果集  
 下表描述指定 STAT_HEADER 時，結果集所傳回的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
-|名稱|統計資料物件的名稱。|  
-|已更新|上次更新統計資料的日期和時間。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md)函式會擷取這項資訊的替代方式。 如需詳細資訊，請參閱[備註](#Remarks)此頁面中的區段。|  
+|[屬性]|統計資料物件的名稱。|  
+|已更新|上次更新統計資料的日期和時間。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 函數是擷取這項資訊的替代方式。 如需詳細資訊，請參閱此頁的[備註](#Remarks)一節。|  
 |資料列|上一次更新統計資料時位於資料表或索引檢視表中的資料列總數。 如果篩選了統計資料或是統計資料對應至篩選過的索引，此資料列數可能會少於資料表中的資料列數。 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。|  
 |取樣的資料列|針對統計資料計算進行取樣的資料列總數。 如果取樣的資料列數 < 資料列數，顯示的長條圖和密度結果將會是根據取樣資料列數的預估值。|  
 |步驟|長條圖中的步驟數。 每一個步驟都會跨越某個範圍的資料行值，後面緊接著上限資料行值。 長條圖步驟會在統計資料中的第一個索引鍵資料行上定義。 步驟數的最大值為 200。|  
 |密度|針對統計資料物件第一個索引鍵資料行中的所有值，計算為 1 / 相異值，不包括長條圖界限值。 查詢最佳化工具不會使用這個 Density 值，而且會針對與 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前版本之間的回溯相容性顯示。|  
 |平均索引鍵長度|針對統計資料物件中的所有索引鍵資料行計算之每個值的平均位元組數。|  
-|String Index|Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，並為類型時建立的統計資料物件第一個索引鍵資料行**char**， **varchar**， **nchar**， **nvarchar**， **varchar （max)**， **nvarchar （max)**，**文字**，或**ntext。**。|  
-|篩選運算式|包含在統計資料物件中之資料表資料列子集的述詞。 NULL = 非篩選的統計資料。 如需有關篩選述詞的詳細資訊，請參閱[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。 如需篩選的統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。|  
+|String Index|Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在具有 **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)**、**nvarchar(max)**、**text** 或 **ntext** 類型時於統計資料物件的第一個索引鍵資料行上建立。|  
+|篩選運算式|包含在統計資料物件中之資料表資料列子集的述詞。 NULL = 非篩選的統計資料。 如需篩選述詞的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。 如需已篩選統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。|  
 |Unfiltered Rows|套用篩選運算式之前，資料表中的資料列總數。 如果 Filter Expression 為 NULL，Unfiltered Rows 就會等於 Rows。|  
-|保存範例百分比|保存未明確指定取樣百分比的統計資料更新所使用的取樣百分比。 如果值為零，這個統計資料的設定沒有持續性的範例百分比。<br /><br /> **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
+|保存取樣百分比|使用於未明確指定取樣百分比之統計資料更新的保存取樣百分比。 如果值為零，表示這個統計資料未設定保存取樣百分比。<br /><br /> **適用於：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
   
 下表描述指定 DENSITY_VECTOR 時，結果集所傳回的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |所有密度|密度是 1 / 相異值。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)。|  
 |平均長度|平均長度 (以位元組為單位)，用來儲存資料行前置詞的資料行值清單。 例如，如果清單 (3, 5, 6) 中的每一個值都需要 4 位元組，長度就是 12 位元組。|  
-|資料行|在前置詞中顯示 All density 和 Average length 的資料行名稱。|  
+|[資料行]|在前置詞中顯示 All density 和 Average length 的資料行名稱。|  
   
 下表描述指定 HISTOGRAM 選項時，結果集所傳回的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |---|---|
 |RANGE_HI_KEY|長條圖步驟的上限資料行值。 此資料行值也稱為索引鍵值。|  
 |RANGE_ROWS|資料行值在長條圖步驟內的預估資料列數，不包括上限。|  
@@ -134,7 +134,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 ## <a name="Remarks"></a> 備註 
 
-統計資料更新將日期儲存在[統計資料的 blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)搭配[長條圖](#histogram)和[密度向量](#density)、 中繼資料中找不到。 讀取任何資料時產生統計資料，就不會建立統計資料的 blob，日期無法使用，而*更新*資料行是 NULL。 這是篩選的統計資料述詞未傳回任何資料列，或新的空白資料表的情況。
+統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](#histogram)和[密度向量](#density)，不是儲存在中繼資料中。 如果沒有讀取資料以產生統計資料，則不會建立統計 Blob、沒有日期，且「已更新」資料行為 NULL。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
   
 ## <a name="histogram"></a> 長條圖  
 長條圖會測量資料集中每一個相異值的發生頻率。 查詢最佳化工具會計算有關統計資料物件之第一個索引鍵資料行中資料行值的長條圖，以統計方式取樣資料列或執行資料表或檢視表中所有資料列的完整掃描來選取資料行值。 如果長條圖是從一組取樣的資料列所建立，資料列數和相異值數的儲存總計會是預估值，而且不需要為整數。
@@ -164,30 +164,30 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="restrictions"></a>限制  
  DBCC SHOW_STATISTICS 不會提供空間或 xVelocity 記憶體最佳化的資料行存放區索引之統計資料。  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-才能檢視統計資料物件，使用者必須擁有資料表，或者使用者必須是成員`sysadmin`固定伺服器角色、`db_owner`固定資料庫角色或`db_ddladmin`固定的資料庫角色。
+## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的權限  
+使用者必須擁有資料表，或者使用者必須是系統管理員 (`sysadmin`) 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員，才能檢視統計資料物件。
   
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 會修改權限限制，並允許具有 SELECT 權限，才能使用這個命令的使用者。 請注意，必須先符合下列需求，足夠的 SELECT 權限才能執行此命令：
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 修改了權限限制，允許具有 SELECT 權限的使用者使用此命令。 請注意，必須先符合下列需求，足夠的 SELECT 權限才能執行此命令：
 -   使用者必須有統計資料物件的所有資料行的權限  
 -   使用者必須有篩選條件 (如果有) 的所有資料行的權限  
 -   資料表不能有資料列層級安全性原則。  
   
 若要停用此行為，請使用追蹤旗標 9485。
   
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>權限[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC SHOW_STATISTICS 需要 SELECT 權限表格或下列其中之一的成員資格：
+## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的權限  
+DBCC SHOW_STATISTICS 需要資料表上的 SELECT 權限或下列其中一項的成員資格：
 -   sysadmin 固定伺服器角色  
--   db_owner 固定的資料庫角色  
--   db_ddladmin 固定的資料庫角色  
+-   db_owner 固定資料庫角色  
+-   db_ddladmin 固定資料庫角色  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>限制的事項[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC SHOW_STATISTICS 會顯示在控制項節點層級的 Shell 資料庫中儲存的統計資料。 不會顯示所自動建立的統計資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]計算節點上。
+## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制事項  
+DBCC SHOW_STATISTICS 會顯示在控制節點層級的 Shell 資料庫中儲存的統計資料。 不會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在計算節點上自動建立的統計資料。
   
-外部資料表不支援 DBCC SHOW_STATISTICS。
+不支援在外部資料表上使用 DBCC SHOW_STATISTICS。
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>範例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>範例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. 傳回所有的統計資料資訊  
-下列範例會顯示所有的統計資料資訊，包括`AK_Address_rowguid`索引`Person.Address`資料表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫。
+下列範例會顯示 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Person.Address` 資料表之 `AK_Address_rowguid` 索引的所有統計資料資訊。
   
 ```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
@@ -195,14 +195,14 @@ GO
 ```  
   
 ### <a name="b-specifying-the-histogram-option"></a>B. 指定 HISTOGRAM 選項  
-這會限制針對 Customer_LastName 顯示長條圖資料的統計資料資訊。
+這會限制 Customer_LastName 顯示的統計資料資訊是 HISTOGRAM 資料。
   
 ```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. 顯示一個統計資料物件的內容  
  下列範例會顯示 DimCustomer 資料表上 Customer_LastName 統計資料的內容。  
   
@@ -216,7 +216,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName);
 GO  
 ```  
   
-結果會顯示標頭、 密度向量和長條圖的一部分。
+結果會顯示標頭、密度向量和部分長條圖。
   
 ![DBCC SHOW_STATISTICS 結果](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS 結果")
   

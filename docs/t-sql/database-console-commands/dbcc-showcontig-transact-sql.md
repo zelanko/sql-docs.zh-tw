@@ -1,5 +1,5 @@
 ---
-title: "DBCC SHOWCONTIG (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 顯示指定資料表或檢視之資料與索引的片段資訊。
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]使用[sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。  
   
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[新版](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -71,10 +71,10 @@ DBCC SHOWCONTIG
   
 ## <a name="arguments"></a>引數  
  *table_name* | *table_id* | *view_name* | *view_id*  
- 檢查片段資訊的資料表或檢視。 若未指定，就會檢查目前資料庫中的所有資料表和索引檢視表。 取得資料表或檢視識別碼，請使用[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)函式。  
+ 檢查片段資訊的資料表或檢視。 若未指定，就會檢查目前資料庫中的所有資料表和索引檢視表。 若要取得資料表或檢視識別碼，請使用 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 函式。  
   
  *index_name* | *index_id*  
- 檢查片段資訊的索引。 若未指定，陳述式會處理指定之資料表或檢視表的基本索引。 若要取得索引識別碼，請使用[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視。  
+ 檢查片段資訊的索引。 若未指定，陳述式會處理指定之資料表或檢視表的基本索引。 若要取得索引識別碼，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視。  
   
  取代所有提及的  
  指定 DBCC 陳述式所傳回之資訊類型的選項。  
@@ -97,28 +97,28 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>結果集  
 下表描述結果集中的資訊。
   
-|統計資料|Description|  
+|統計資料|描述|  
 |---|---|
 |**掃描頁數**|資料表或索引中的頁數。|  
-|**掃描的範圍**|資料表或索引中的範圍數目。|  
+|**掃描範圍**|資料表或索引中的範圍數目。|  
 |**範圍切換**|當 DBCC 陳述式往返資料表或索引頁面時，在各範圍之間的移動次數。|  
-|**平均每個範圍的頁面**|在頁面鏈結中，每個範圍的頁數。|  
-|**掃描密度 [Best Count: Actual Count]**|這是一個百分比。 它是比例**最佳次數**至**實際計數**。 如果每個項目都是連續的，這個值就是 100；如果這個值小於 100，就會有某些片段存在。<br /><br /> **最佳次數**一切都連續連結時，理想的範圍變更數目。 **實際次數**是實際的範圍變更數目。|  
-|**邏輯掃描片段**|掃描索引分葉頁時所傳回失序頁面的百分比。 這個數字與堆積無關。 次序不對頁面是的頁面，其中下一個實體頁面配置給索引不是指向下一個頁面的頁面*e*目前的分葉頁中的指標。|  
-|**範圍掃描片段**|掃描索引分葉頁時之失序範圍的百分比。 這個數字與堆積無關。 失序範圍是索引目前頁面所在之範圍，實際上不是索引上一頁所在範圍之下一範圍的範圍。<br /><br /> 注意： 這個數字時，沒有任何意義索引跨越多個檔案。|  
-|**平均每頁可用位元組數**|掃描頁面的平均可用位元組數。 數目愈大，頁面的飽和度愈低。 如果索引沒有許多隨機的插入，數目低會比較好。 這個數目也受到資料列大小的影響；資料列愈大，這個數目也愈大。|  
-|**平均頁面密度 （全滿）**|平均頁面密度，這是一個百分比。 這個值將資料列大小考慮在內。 因此，這個值是更精確的頁面飽和度指示。 百分比愈大，愈好。|  
+|**每個範圍平均頁數**|在頁面鏈結中，每個範圍的頁數。|  
+|**掃描密度 [Best Count:Actual Count]**|這是一個百分比。 它是**最佳次數**與**實際次數**的比例。 如果每個項目都是連續的，這個值就是 100；如果這個值小於 100，就會有某些片段存在。<br /><br /> **最佳次數**是每個項目都連續連結時，理想的範圍變更數目。 **實際次數**是實際的範圍變更數目。|  
+|**邏輯掃描片段**|掃描索引分葉頁時所傳回失序頁面的百分比。 這個數字與堆積無關。 失序頁面是指配置給索引之下一個實體頁面的頁面，而不是目前分葉頁中下一頁指標所指向的頁面。|  
+|**範圍掃描片段**|掃描索引分葉頁時之失序範圍的百分比。 這個數字與堆積無關。 失序範圍是索引目前頁面所在之範圍，實際上不是索引上一頁所在範圍之下一範圍的範圍。<br /><br /> 注意：當索引跨越許多檔案時，這個數目將沒有意義。|  
+|**平均可用位元組**|掃描頁面的平均可用位元組數。 數目愈大，頁面的飽和度愈低。 如果索引沒有許多隨機的插入，數目低會比較好。 這個數目也受到資料列大小的影響；資料列愈大，這個數目也愈大。|  
+|**平均頁面密度 (全滿)**|平均頁面密度，這是一個百分比。 這個值將資料列大小考慮在內。 因此，這個值是更精確的頁面飽和度指示。 百分比愈大，愈好。|  
   
-當*table_id*和 FAST 指定，DBCC SHOWCONTIG 會傳回含下列資料行的結果集。
+指定 *table_id* 和 FAST 時，DBCC SHOWCONTIG 會傳回只含下列資料行的結果集。
 -   **掃描頁數**  
 -   **範圍切換**  
--   **掃描密度 [Best Count: Actual Count]**  
+-   **掃描密度 [Best Count:Actual Count]**  
 -   **範圍掃描片段**  
 -   **邏輯掃描片段**  
   
 當指定 TABLERESULTS 時，DBCC SHOWCONTIG 會傳回下列資料行以及上一表格所描述的 9 個資料行。
   
-|統計資料|Description|  
+|統計資料|描述|  
 |---|---|
 |**Object Name**|所處理之資料表或檢視的名稱。|  
 |**ObjectId**|物件名稱的識別碼。|  
@@ -131,15 +131,15 @@ DBCC SHOWCONTIG
 |**MaximumRecordSize**|索引或整個堆積的層級之最大記錄大小。|  
 |**AverageRecordSize**|索引或整個堆積的層級之平均記錄大小。|  
 |**ForwardedRecords**|索引或整個堆積的層級之轉送記錄數目。|  
-|**範圍**|索引或整個堆積的層級之範圍數目。|  
+|**Extents**|索引或整個堆積的層級之範圍數目。|  
 |**ExtentSwitches**|當 DBCC 陳述式往返資料表或索引頁面時，在各範圍之間的移動次數。|  
 |**AverageFreeBytes**|掃描頁面的平均可用位元組數。 數目愈大，頁面的飽和度愈低。 如果索引沒有許多隨機的插入，數目低會比較好。 這個數目也受到資料列大小的影響；資料列愈大，這個數目也愈大。|  
 |**AveragePageDensity**|平均頁面密度，這是一個百分比。 這個值將資料列大小考慮在內。 因此，這個值是更精確的頁面飽和度指示。 百分比愈大，愈好。|  
-|**ScanDensity**|這是一個百分比。 它是比例**BestCount**至**ActualCount**。 如果每個項目都是連續的，這個值就是 100；如果這個值小於 100，就會有某些片段存在。|  
+|**ScanDensity**|這是一個百分比。 它是 **BestCount** 與 **ActualCount** 的比例。 如果每個項目都是連續的，這個值就是 100；如果這個值小於 100，就會有某些片段存在。|  
 |**BestCount**|這是每個項目都連續連結時，理想的範圍變更數目。|  
 |**ActualCount**|這是實際的範圍變更數目。|  
-|**LogicalFragmentation**|掃描索引分葉頁時所傳回失序頁面的百分比。 這個數字與堆積無關。 次序不對頁面是的頁面，其中下一個實體頁面配置給索引不是指向下一個頁面的頁面*e*目前的分葉頁中的指標。|  
-|**ExtentFragmentation**|掃描索引分葉頁時之失序範圍的百分比。 這個數字與堆積無關。 失序範圍是索引目前頁面所在之範圍，實際上不是索引上一頁所在範圍之下一範圍的範圍。<br /><br /> 注意： 這個數字時，沒有任何意義索引跨越多個檔案。|  
+|**LogicalFragmentation**|掃描索引分葉頁時所傳回失序頁面的百分比。 這個數字與堆積無關。 失序頁面是指配置給索引之下一個實體頁面的頁面，而不是目前分葉頁中下一頁指標所指向的頁面。|  
+|**ExtentFragmentation**|掃描索引分葉頁時之失序範圍的百分比。 這個數字與堆積無關。 失序範圍是索引目前頁面所在之範圍，實際上不是索引上一頁所在範圍之下一範圍的範圍。<br /><br /> 注意：當索引跨越許多檔案時，這個數目將沒有意義。|  
   
 當指定 WITH TABLERESULTS 和 FAST 時，結果集與指定 WITH TABLERESULTS 時相同，不過，下列資料行含有 Null 值：
 
@@ -150,18 +150,18 @@ DBCC SHOWCONTIG
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>備註  
-DBCC SHOWCONTIG 陳述式會周遊頁面鏈結分葉層級指定的索引*index_id*指定。 如果只有*table_id*指定如果*index_id*是 0，則會掃描指定資料表的資料頁。 這個作業僅需要意圖共用 (IS) 資料表鎖定。 這個方式可以執行所有更新和插入，但需要獨佔 (X) 資料表鎖定者除外。 這可讓您在執行速度和充分並行傳回的統計資料數目之間進行取捨。 不過，如果這個命令只用來量測片段化，我們建議您使用 WITH FAST 選項以獲得最佳效能。 快速掃描不會讀取索引的分葉或資料層級頁面。 WITH FAST 選項不會套用到堆積。
+## <a name="remarks"></a>Remarks  
+當指定 *index_id* 時，DBCC SHOWCONTIG 陳述式會往返於指定索引之分葉層級的頁面鏈結。 如果只指定 *table_id*，或是 *index_id* 為 0，便會掃描指定資料表的資料頁面。 這個作業僅需要意圖共用 (IS) 資料表鎖定。 這個方式可以執行所有更新和插入，但需要獨佔 (X) 資料表鎖定者除外。 這可讓您在執行速度和充分並行傳回的統計資料數目之間進行取捨。 不過，如果這個命令只用來量測片段化，我們建議您使用 WITH FAST 選項以獲得最佳效能。 快速掃描不會讀取索引的分葉或資料層級頁面。 WITH FAST 選項不會套用到堆積。
   
 ## <a name="restrictions"></a>限制  
-DBCC SHOWCONTIG 不會顯示與資料**ntext**，**文字**，和**映像**資料型別。 這是因為儲存文字和影像資料的文字索引已不存在。
+DBCC SHOWCONTIG 不會顯示 **ntext**、**text** 和 **image** 資料類型的資料。 這是因為儲存文字和影像資料的文字索引已不存在。
   
 另外，DBCC SHOWCONTIG 不支援某些新功能。 例如：
 -   如果指定的資料表或索引進行資料分割，DBCC SHOWCONTIG 只會顯示指定資料表或索引的第一個資料分割。  
--   DBCC SHOWCONTIG 不會顯示資料列溢位儲存資訊及其他新的同資料列資料類型，例如**nvarchar （max)**， **varchar （max)**， **varbinary （max)**，和**xml**。  
+-   DBCC SHOWCONTIG 不會顯示資料列溢位儲存資訊及其他新的非資料列資料類型，如 **nvarchar(max)**、**varchar(max)**、**varbinary(max)** 和 **xml**。  
 -   DBCC SHOWCONTIG 不支援空間索引。  
   
-所有新功能可以完全支援[sys.dm_db_index_physical_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動態管理檢視。
+[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動態管理檢視可完全支援所有新功能。
   
 ## <a name="table-fragmentation"></a>資料表片段  
 DBCC SHOWCONTIG 會判斷資料表是否嚴重片段化。 資料表的片段化是在資料表的資料修改 (INSERT、UPDATE 和 DELETE 陳述式) 過程中發生的。 由於這些修改通常不會平均散發在資料表的各個資料列上，因此，各頁面的飽和度可能會隨著時間而不同。 對於掃描部分或完整資料表的查詢而言，這類資料表片段化可能會造成額外的頁面讀取。 這會防礙資料的平行掃描。
@@ -174,26 +174,26 @@ DBCC SHOWCONTIG 會判斷資料表是否嚴重片段化。 資料表的片段化
 -   重建索引。  
      請利用 ALTER INDEX 和 REBUILD 重建索引。 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-**每個每頁可用位元組數**和**avg.頁面密度 （全滿）**結果集中的統計資料指出索引頁面的飽和度。 **每個每頁可用位元組數**數應該很小， **avg.頁面密度 （全滿）**數應該很大，將不會有許多隨機插入的索引。 指定 FILLFACTOR 選項來卸除和重建索引，可以改進統計資料。 另外，設定 REORGANIZE 的 ALTER INDEX 也會壓縮索引，將它的 FILLFACTOR 考量在內，可以改進統計資料。
+結果集中的**每頁平均可用位元組**和**平均頁面密度 (全滿)** 統計資料能指出索引頁面的飽和度。 **每頁平均可用位元組**的數目應該很小，而**平均頁面密度 (全滿)** 的數目數應該很大，這樣索引才不會有許多隨機的插入。 指定 FILLFACTOR 選項來卸除和重建索引，可以改進統計資料。 另外，設定 REORGANIZE 的 ALTER INDEX 也會壓縮索引，將它的 FILLFACTOR 考量在內，可以改進統計資料。
   
 > [!NOTE]  
 >  有許多隨機插入且非常飽和的頁面之索引，頁面分割數會增加。 這會造成更多的片段。  
   
 您可以利用下列方式來判斷索引的片段化層級：
--   藉由比較的值**範圍切換**和**範圍掃描**。  
-     值**範圍切換**應該盡可能接近的**範圍掃描**。 此比率的計算方式為**掃描密度**值。 這個值應該盡可能高，您可以縮減索引的片段化來改進它。  
+-   比較**範圍切換**和**掃描範圍**的值。  
+     **範圍切換**值應該盡可能接近**掃描範圍**值。 這個比例會計算成**掃描密度**值。 這個值應該盡可能高，您可以縮減索引的片段化來改進它。  
   
     > [!NOTE]  
     >  如果索引跨越許多檔案時，這個方法便無法運作。  
   
 -   了解**邏輯掃描片段化**和**範圍掃描片段化**值。  
-     **邏輯掃描片段化**和幅度，**範圍掃描片段化**的值為資料表的片段層級的最佳指標。 這兩個值都應該盡可能接近零，不過，百分比 0 至 10 的值可能比較合適。  
+     **邏輯掃描片段化**和 (某種程度上的) **範圍掃描片段化**值，是資料表片段化程度的最佳指標。 這兩個值都應該盡可能接近零，不過，百分比 0 至 10 的值可能比較合適。  
   
     > [!NOTE]  
-    >  **範圍掃描片段化**值將會相當高，如果索引跨越多個檔案。 若要縮減這些值，您必須減少索引片段化。  
+    >  如果索引跨越多個檔案，**範圍掃描片段化**值會比較高。 若要縮減這些值，您必須減少索引片段化。  
   
 ## <a name="permissions"></a>Permissions  
-使用者必須擁有資料表，或必須屬於**sysadmin**固定伺服器角色、 **db_owner**固定資料庫角色或**db_ddladmin**固定的資料庫角色。
+使用者必須擁有資料表，或是**系統管理員 (sysadmin)** 固定伺服器角色、**db_owner** 固定資料庫角色，或 **db_ddladmin** 固定資料庫角色的成員。
   
 ## <a name="examples"></a>範例  
 ### <a name="a-displaying-fragmentation-information-for-a-table"></a>A. 顯示資料表的片段資訊  
@@ -207,7 +207,7 @@ GO
 ```  
   
 ### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. 利用 OBJECT_ID 取得資料表識別碼，利用 sys.indexes 取得索引識別碼  
-下列範例會使用`OBJECT_ID`和`sys.indexes`目錄檢視，以取得資料表識別碼和索引識別碼`AK_Product_Name`索引`Production.Product`資料表中[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。
+下列範例會利用 `OBJECT_ID` 和 `sys.indexes` 目錄檢視來取得 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中 `Production.Product` 資料表之 `AK_Product_Name` 索引的資料表識別碼和索引識別碼。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -223,7 +223,7 @@ GO
 ```  
   
 ### <a name="c-displaying-an-abbreviated-result-set-for-a-table"></a>C. 顯示資料表的縮寫結果集  
-下列範例會傳回的縮寫的結果集的`Product`資料表中[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。
+下列範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中 `Product` 資料表的縮寫結果集。
   
 ```sql  
 USE AdventureWorks2012;  

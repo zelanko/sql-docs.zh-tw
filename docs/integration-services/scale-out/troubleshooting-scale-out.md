@@ -18,11 +18,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc22e1bac1e2a409061f73131cdfd203c8948fa3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a86f7e738b6e80ef81beda22a0c1f74349093ae7
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="troubleshoot-scale-out"></a>針對 Scale Out 進行疑難排解
 
@@ -42,7 +42,7 @@ SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與
 ### <a name="solution"></a>方案
 1.  檢查是否已啟用 Scale Out。
 
-    在 SSMS 的物件總管中，以滑鼠右鍵按一下 [SSISDB]，然後核取 [已啟用相應放大功能]。
+    在 SSMS 中，於 [物件總管] 中的 [SSISDB] 上按一下滑鼠右鍵，然後選取 [已啟用 Scale Out 功能]。
 
     ![已啟用 Scale Out](media\isenabled.PNG)
 
@@ -114,7 +114,7 @@ SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
-如果帳戶沒有存取權，請執行下列命令授與存取權，然後重新啟動 Scale Out Worker 服務。
+如果帳戶沒有存取權，請執行下列命令來授與存取權，然後重新啟動「Scale Out 背景工作」服務。
 
 ```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}
@@ -131,7 +131,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ### <a name="solution"></a>方案
 1.  將 Scale Out Worker 憑證安裝至 Scale Out Master 節點上本機電腦的根憑證存放區 (如果尚未安裝憑證)，然後重新啟動 Scale Out Worker 服務。
 
-2.  清除 Scale Out Master 節點上本機電腦之根憑證存放區中的無用憑證。
+2.  清除「Scale Out 主機」 節點上本機電腦之根憑證存放區中的無用憑證。
 
 3.  透過在 Scale Out Master 節點上新增下列登錄項目，將安全通道設定為不再於 TLS/SSL 交握過程中傳送可信任的根憑證授權單位清單。
 

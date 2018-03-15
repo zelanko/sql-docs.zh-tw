@@ -1,5 +1,5 @@
 ---
-title: "DBCC OUTPUTBUFFER (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-傳回目前的輸出緩衝區，以十六進位和 ASCII 格式指定*session_id*。
+以十六進位和 ASCII 格式傳回指定的 *session_id*目前的輸出緩衝區。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +54,7 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
   
  *request_id*  
  這是要在目前工作階段內搜尋的確實要求 (批次)。  
- 下列查詢會傳回*request_id*:  
+ 下列查詢會傳回 *request_id*：  
   
 ```sql
 SELECT request_id   
@@ -68,8 +68,8 @@ WHERE session_id = @@spid;
  NO_INFOMSGS  
  抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
   
-## <a name="remarks"></a>備註  
-DBCC OUTPUTBUFFER 會顯示傳送至指定的用戶端的結果 (*session_id*)。 如果是不包含輸出資料流的處理序，便會傳回錯誤訊息。
+## <a name="remarks"></a>Remarks  
+DBCC OUTPUTBUFFER 會顯示傳給指定用戶端 (*session_id*) 的結果。 如果是不包含輸出資料流的處理序，便會傳回錯誤訊息。
   
 若要顯示執行之後傳回 DBCC OUTPUTBUFFER 所顯示之結果的陳述式，請執行 DBCC INPUTBUFFER。
   

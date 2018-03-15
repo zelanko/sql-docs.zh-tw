@@ -1,5 +1,5 @@
 ---
-title: "DBCC TRACEON (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC TRACEON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -60,14 +60,14 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 WITH NO_INFOMSGS  
 隱藏所有參考訊息。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 在實際伺服器上，為了防止無法預期的行為發生，我們建議您使用下列一種方法，僅在伺服器範圍啟用追蹤旗標：
--   使用**-T** Sqlservr.exe 命令列啟動選項。 這是建議採用的最佳做法，因為它可以確定所有的陳述式在執行時，都啟用追蹤旗標。 其中包括啟動指令碼中的命令。 如需詳細資訊，請參閱 [sqlservr Application](../../tools/sqlservr-application.md)。  
--   使用 DBCC TRACEON  **(* * * trace #* [* *，**...*.n*]**，-1)**只有當使用者或應用程式未同時執行陳述式在系統上時。  
+-   使用 Sqlservr.exe 的 **-T** 命令列啟動選項。 這是建議採用的最佳做法，因為它可以確定所有的陳述式在執行時，都啟用追蹤旗標。 其中包括啟動指令碼中的命令。 如需詳細資訊，請參閱 [sqlservr Application](../../tools/sqlservr-application.md)。  
+-   只有當使用者或應用程式未在系統上並行執行陳述式時，才應使用 DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)**。  
 
 追蹤旗標用來控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的運作方式來自訂特定性質。 追蹤旗標在啟用之後，會在伺服器中保持啟用狀態，直到您執行 DBCC TRACEOFF 陳述式停用它為止。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有兩種類型的追蹤旗標：工作階段和全域。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。 若要判定追蹤旗標的狀態，請使用 DBCC TRACESTATUS。 若要停用追蹤旗標，請使用 DBCC TRACEOFF。
   
-在開啟追蹤旗標會影響查詢計畫之後, 執行`DBCC FREEPROCCACHE;`使快取的計畫就會重新編譯使用新的影響計畫的行為。
+在開啟影響查詢計劃的追蹤旗標之後，執行 `DBCC FREEPROCCACHE;` 以使用影響計畫的新行為重新編譯快取的計劃。
   
 ## <a name="result-sets"></a>結果集  
  DBCC TRACEON 會傳回下列結果集 (訊息)：  
@@ -104,8 +104,8 @@ GO
 ## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
-[DBCC TRACESTATUS &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
+[DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-[啟用會影響計畫的 SQL Server 查詢最佳化工具行為可以由不同的追蹤旗標，在特定的查詢層級控制](https://support.microsoft.com/kb/2801413)
+[啟用影響計劃的 SQL Server 查詢最佳化工具行為，此行為在特定查詢層級可以不同的追蹤旗標控制](https://support.microsoft.com/kb/2801413) \(機器翻譯\)
   
   
