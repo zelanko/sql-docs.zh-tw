@@ -1,5 +1,5 @@
 ---
-title: "改變外部資料來源 (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-external-data-source-transact-sql"></a>改變外部資料來源 (TRANSACT-SQL)
+# <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  修改用來建立外部資料表的外部資料來源。 外部資料來源可以是 Hadoop 或 Azure blob 儲存體 (WASB)。
+  修改用來建立外部資料表的外部資料來源。 外部資料來源可以是 Hadoop 或 Azure Blob 儲存體 (WASB)。
   
 ## <a name="syntax"></a>語法  
   
@@ -63,30 +63,30 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>引數  
  data_source_name 指定資料來源的使用者定義名稱。 名稱必須是唯一的。
   
- 位置 = 'server_name_or_IP' 指定的名稱或 IP 位址的伺服器。
+ LOCATION = ‘server_name_or_IP’ 指定伺服器名稱或 IP 位址。
   
- RESOURCE_MANAGER_LOCATION = '\<IP 位址。連接埠 >' 指定的 Hadoop 資源管理員位置。 指定時，查詢最佳化工具可能會選擇前置處理資料的 PolyBase 查詢，利用 Hadoop 的運算功能。 這是成本型決策。 呼叫述詞下推，這可以大幅降低 Hadoop 與 SQL 之間傳送的資料磁碟區，因而改善查詢效能。
+ RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’ 指定 Hadoop 資源管理員位置。 指定時，查詢最佳化工具可能會使用 Hadoop 的計算功能，選擇對適用於 PolyBase 查詢的資料進行前置處理。 這是成本型決策。 稱為述詞下推，這可大幅降低在 Hadoop 與 SQL 之間傳送的資料量，因而改善查詢效能。
   
- 認證 = Credential_Name 指定具名的認證。 請參閱[CREATE DATABASE SCOPED CREDENTIAL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+ CREDENTIAL = Credential_Name 指定具名認證。 請參閱 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
-類型 = BLOB_STORAGE   
+TYPE = BLOB_STORAGE   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
-針對大量作業，`LOCATION`必須是有效的 Azure Blob 儲存體 URL。 請不要將 **/** 、 檔案名稱，或共用存取簽章參數的結尾`LOCATION`URL。
-使用的認證必須使用可建立`SHARED ACCESS SIGNATURE`作為身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
+僅適用於大量作業，`LOCATION` 必須是有效的 Azure Blob 儲存體 URL。 不要將 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
+使用的認證必須利用 `SHARED ACCESS SIGNATURE` 來建立，以作為身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
 
   
   
-## <a name="remarks"></a>備註
- 可以修改只有單一來源一次。 並行要求修改相同的來源會導致等待一個陳述式。 不過，不同的來源可以修改在相同的時間。 這個陳述式可以與其他陳述式同時執行。
+## <a name="remarks"></a>Remarks
+ 每次只能修改單一來源。 修改相同來源的同時要求會導致一個陳述式進入等待。 不過，可同時修改不同的來源。 這個陳述式可以與其他陳述式同時執行。
   
 ## <a name="permissions"></a>Permissions  
- 需要 ALTER ANY EXTERNAL DATA SOURCE 權限。
+ 要求 ALTER ANY EXTERNAL DATA SOURCE 權限。
  > [!IMPORTANT]  
- >  ALTER ANY EXTERNAL DATA SOURCE 權限授與任何主體建立和修改任何外部資料來源物件的能力，因此，它也會授與存取在資料庫上的所有資料庫範圍認證的能力。 此權限必須被視為具有高度權限，因此必須只授與信任的主體在系統中。
+ >  ALTER ANY EXTERNAL DATA SOURCE 權限可讓任何主體都能夠建立及修改任何外部資料來源物件，因此也會讓主體能夠存取資料庫上的所有資料庫範圍認證。 必須將此權限視為具高度權限，因此必須僅授與系統中受信任的主體。
 
   
 ## <a name="examples"></a>範例  
- 下列範例會變更的位置和資源管理員位置的現有資料來源。
+ 下列範例會改變現有資料來源的位置和資源管理員位置。
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
@@ -96,7 +96,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
   
 ```  
 
- 下列範例會變更要連接到現有的資料來源的認證。
+ 下列範例會改變要連線到現有資料來源的認證。
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET

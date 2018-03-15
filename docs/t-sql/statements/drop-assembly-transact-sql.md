@@ -1,5 +1,5 @@
 ---
-title: "卸除組件 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  從目前資料庫移除組件及其所有相關聯的檔案。 組件會建立使用[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)使用和修改[ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)。  
+  從目前資料庫移除組件及其所有相關聯的檔案。 組件是使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 來建立，並且使用 [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md) 來修改。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,18 +55,18 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  *IF EXISTS*  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
- 只有當它已經存在有條件地卸除組件。  
+ 只有在組件已存在時，才有條件地將它卸除。  
   
  *assembly_name*  
  這是您要卸除的組件名稱。  
   
  WITH NO DEPENDENTS   
- 如果指定，會卸除只*assembly_name*和無相依組件所參考的組件。 如果未指定，會卸除卸除組件*assembly_name*和所有相依組件。  
+ 如果指定的話，只會卸除 *assembly_name*，而不會卸除該組件參考的任何相依組件。 若未指定，DROP ASSEMBLY 就會卸除 *assembly_name* 和所有的相依組件。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  卸除一個組件，會從資料庫移除組件及其所有相關聯的檔案 (例如，原始程式碼和偵錯檔案)。  
   
- 如果未指定 WITH NO DEPENDENTS，DROP ASSEMBLY 會卸除*assembly_name*和所有相依組件。 如果卸除任何相依組件失敗，DROP ASSEMBLY 便會傳回錯誤。  
+ 如果未指定 WITH NO DEPENDENTS，DROP ASSEMBLY 就會卸除 *assembly_name* 和所有的相依組件。 如果卸除任何相依組件失敗，DROP ASSEMBLY 便會傳回錯誤。  
   
  如果組件是由資料庫中的另一個組件所參考，或者如果它是由目前資料庫中的 Common Language Runtime (CLR) 函數、程序、觸發程序、使用者自訂類型或彙總所使用，DROP ASSEMBLY 就會傳回錯誤。  
   
@@ -83,8 +83,8 @@ DROP ASSEMBLY Helloworld ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立組件 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
- [ALTER ASSEMBLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [取得組件的相關資訊](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   

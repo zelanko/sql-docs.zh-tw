@@ -1,5 +1,5 @@
 ---
-title: "GRANT 全文檢索權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "GRANT 全文檢索權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -60,11 +60,11 @@ GRANT permission [ ,...n ] ON
  *permission*  
  這是權限的名稱。 安全性實體權限的有效對應描述於本主題後面的「備註」一節中。  
   
- 全文檢索目錄上 **:: * * * 全文 text_catalog_name*  
- 指定正在授與權限的全文檢索目錄。 範圍限定詞**::**需要。  
+ ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ 指定正在授與權限的全文檢索目錄。 範圍限定詞 **::** 是必要的。  
   
- 全文檢索停用字詞表上 **:: * * * 全文 text_stoplist_name*  
- 指定正在授與權限的全文檢索停用字詞表。 範圍限定詞**::**需要。  
+ ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ 指定正在授與權限的全文檢索停用字詞表。 範圍限定詞 **::** 是必要的。  
   
  *database_principal*  
  指定要對其授與權限的主體。 它有下列幾種：  
@@ -93,7 +93,7 @@ AS *granting_principal*
 -   對應至非對稱金鑰的資料庫使用者  
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="fulltext-catalog-permissions"></a>FULLTEXT CATALOG 權限  
  全文檢索目錄是在權限階層中，身為其父系之資料庫所包含的一個資料庫層級安全性實體。 下表所列的是可以授與之最特定且最有限的全文檢索目錄權限，並列出利用隱含方式來併入這些權限的較通用權限。  
@@ -158,11 +158,11 @@ GRANT VIEW DEFINITION
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立應用程式角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [建立全文檢索目錄 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [建立全文檢索停用字詞表 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

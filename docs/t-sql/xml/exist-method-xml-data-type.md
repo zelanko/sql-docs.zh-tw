@@ -1,5 +1,5 @@
 ---
-title: "exist （) 方法 (xml 資料類型) |Microsoft 文件"
+title: "exist() 方法 (xml 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,13 +32,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="exist-method-xml-data-type"></a>exist() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回**元**，代表其中一個的下列條件：  
+  傳回代表下列其中一個條件的**位元**：  
   
 -   1 代表 True，即查詢中的 XQuery 運算式傳回非空的結果。 也就是，它至少會傳回一個 XML 節點。  
   
 -   0 代表 False，即查詢傳回空的結果。  
   
--   如果**xml**執行查詢所針對的資料類型執行個體包含 null 值。  
+-   如果查詢所執行的 **xml** 資料類型執行個體包含 NULL，則會傳回 NULL。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,10 +51,10 @@ exist (XQuery)
  XQuery  
  是一個 XQuery 運算式，為字串常值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
->  **Exist （)**方法會傳回 1，傳回非空白結果的 XQuery 運算式。 如果您指定**true （)**或**false （)**函式內**exist （)**方法， **exist （)**方法會傳回 1，因為函式**true （)**和**false （)**會分別傳回布林值 True 和 False。 也就是說，它們會傳回非空白的結果。 因此， **exist （)**會傳回 1 (True)，在下列範例所示：  
+>  **exist()** 方法會針對傳回非空白結果的 XQuery 運算式傳回 1。 若您在 **exist()** 方法內指定 **true()** 或 **false()** 函數，則 **exist()** 方法會傳回 1，因為函數 **true()** 及 **false()** 分別會傳回布林值 True 及 False。 也就是說，它們會傳回非空白的結果。 因此，**exist()** 會傳回 1 (True)，如下列範例所示：  
   
 ```  
 declare @x xml;  
@@ -63,10 +63,10 @@ select @x.exist('true()');
 ```  
   
 ## <a name="examples"></a>範例  
- 下列範例顯示如何指定**exist （)**方法。  
+ 下列範例會示範如何指定 **exist()** 方法。  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>範例：針對 xml 類型變數指定 exist() 方法  
- 在下列範例中，@x是**xml**類型變數 (不具類型 xml) 和@f是整數類型變數，可儲存所傳回的值**exist （)**方法。 **Exist （)**方法會傳回 True (1) 如果儲存 XML 執行個體中的日期值是`2002-01-01`。  
+ 在下列範例中，@x 是 **xml** 類型變數 (不具類型的 xml)，而 @f 則是整數類型變數，用以儲存 **exist()** 方法所傳回的值。 如果儲存在 XML 執行個體中的日期值是 `2002-01-01`，**exist()** 方法會傳回 True (1)。  
   
 ```  
 declare @x xml;  
@@ -76,13 +76,13 @@ set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]
 select @f;  
 ```  
   
- 在比較中的日期**exist （)**方法，請注意下列事項：  
+ 在比較 **exist()** 方法中的日期時，請注意下列要點：  
   
--   程式碼`cast as xs:date?`用來將值轉換為**xs: date**類型以利進行比較。  
+-   程式碼 `cast as xs:date?` 是用以將值轉換成 **xs:date** 類型以利進行比較。  
   
--   值 **@Somedate** 屬性是不具型別。 在比較此值，它隱含轉換成類型在右側的比較， **xs: date**型別。  
+-   **@Somedate** 屬性的值是不具類型的。 在比較此值時，會隱含地將它轉換成比較右邊的類型，即 **xs:date** 類型。  
   
--   而不是**轉型為 xs:date()**，您可以使用**xs:date()**建構函式。 如需詳細資訊，請參閱[建構函式 &#40;XQuery &#41;](../../xquery/constructor-functions-xquery.md).  
+-   不是使用 **cast as xs:date()**，而是改用 **xs:date()** 建構函式。 如需詳細資訊，請參閱[建構函式 &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md)。  
   
  下列範例與上例相似，除了它有 <`Somedate`> 元素以外。  
   
@@ -96,14 +96,14 @@ SELECT @f;
   
  請注意下列項目是從上一個查詢而來：  
   
--   **Text （)**方法會傳回包含不具類型的值的文字節點`2002-01-01`。 (XQuery 類型**xdt: untypedatomic**。)您必須明確轉換此類型的值從**x**至**xsd: date**，因為在此情況下不支援隱含轉換。  
+-   **text()** 方法會傳回一個文字節點，其中包含不具類型的值 `2002-01-01`。 (XQuery 類型是 **xdt:untypedAtomic**。)您必須明確地將此具類型的值從 **x** 轉換成 **xsd:date**，因為在此例中不支援隱含轉換。  
   
 ### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>範例：針對具有類型的 xml 變數指定 exist() 方法  
- 下列範例說明使用**exist （)**方法針對**xml**類型變數。 它是 XML 類型變數，因為它指定結構描述命名空間的集合名稱 `ManuInstructionsSchemaCollection`。  
+ 下列範例說明針對 **xml** 類型變數使用 **exist()** 方法。 它是 XML 類型變數，因為它指定結構描述命名空間的集合名稱 `ManuInstructionsSchemaCollection`。  
   
- 在範例中，製造指示文件第一次指派給這個變數，然後**exist （)**方法用來尋找文件是否包含 <`Location`> 項目其**LocationID**屬性值為 50。  
+ 在本範例中，會先指派製造指示文件給此變數，然後使用 **exist()** 方法尋找文件中是否包含 **LocationID** 屬性值為 50 的 <`Location`> 元素。  
   
- **Exist （)**針對指定的方法@x變數傳回 1 (True)，如果製造指示文件包含 <`Location`> 項目具有`LocationID=50`。 否則，該方法會傳回 0 (False)。  
+ 如果製造指示文件包含具有 `LocationID=50` 的 <`Location`> 元素，針對 @x 變數所指定的 **exist()** 方法將會傳回 1 (True)。 否則，該方法會傳回 0 (False)。  
   
 ```  
 DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
@@ -137,15 +137,15 @@ WHERE CatalogDescription.exist('
   
  請注意下列項目是從上一個查詢而來：  
   
--   WHERE 子句選取的資料列從**ProductDescription**滿足條件，針對指定的資料表**CatalogDescription xml**類型資料行。  
+-   WHERE 子句只會選取那些符合針對 **CatalogDescription xml** 類型資料行所指定的條件之 **ProductDescription** 資料表的資料列。  
   
--   **Exist （)**方法中的 WHERE 子句會傳回 1 (True)，如果 XML 不包含任何 <`Specifications`> 項目。 請注意使用[not （） 函數 (XQuery)](../../xquery/functions-on-boolean-values-not-function.md)。  
+-   如果 XML 不包含任何 <`Specifications`> 元素，在 WHERE 子句中的 **exist()** 方法將會傳回 1 (True)。 請注意 [not() function (XQuery)](../../xquery/functions-on-boolean-values-not-function.md) 的用法。  
   
--   [: Column （） 函數 (XQuery)](../../xquery/xquery-extension-functions-sql-column.md)函數用來從非 XML 資料行匯入值。  
+-   [sql:column() function (XQuery)](../../xquery/xquery-extension-functions-sql-column.md) 函數是用來帶入非 XML 資料行中的值。  
   
 -   此查詢會傳回空的資料列集。  
   
- 查詢指定了**query （)**和**exist （)** xml 資料類型的方法，而且這兩種方法都宣告相同的命名空間，在查詢初構中。 在此例中，您可能會想要使用 WITH XMLNAMESPACES 來宣告前置詞並在查詢中使用它。  
+ 查詢會指定 xml 資料類型的 **query()** 與 **exist()** 方法，這兩種方法都會在查詢初構中宣告相同的命名空間。 在此例中，您可能會想要使用 WITH XMLNAMESPACES 來宣告前置詞並在查詢中使用它。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -165,6 +165,6 @@ WHERE CatalogDescription.exist('
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)   
- [XML 資料修改語言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML 資料修改語言 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "改變資源管理員 (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,9 +37,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  這個陳述式用來執行中的下列資源管理員動作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  這個陳述式會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用來執行下列 Resource Governor 動作：  
   
--   套用組態變更時，指定 建立 |ALTER |DROP WORKLOAD GROUP 或 CREATE |ALTER |卸除資源集區或 CREATE |ALTER |發出 DROP EXTERNAL RESOURCE POOL 陳述式。  
+-   當發出 CREATE|ALTER|DROP WORKLOAD GROUP 或 CREATE|ALTER|DROP RESOURCE POOL 或 CREATE|ALTER|DROP EXTERNAL RESOURCE POOL 陳述式時，套用指定的設定變更。  
   
 -   啟用或停用資源管理員。  
   
@@ -89,28 +89,28 @@ ALTER RESOURCE GOVERNOR
   
 -   啟用資源管理員之前存在的要求會受到停用資源管理員時所做的任何組態變更影響。  
   
- 當執行資源管理員時，RECONFIGURE 會套用任何設定變更要求時建立 |ALTER |DROP WORKLOAD GROUP 或 CREATE |ALTER |卸除資源集區或 CREATE |ALTER |DROP EXTERNAL RESOURCE POOL 陳述式會執行。  
+ 當 Resource Governor 在執行時，RECONFIGURE 會在執行 CREATE|ALTER|DROP WORKLOAD GROUP 或 CREATE|ALTER|DROP RESOURCE POOL 或 CREATE|ALTER|DROP EXTERNAL RESOURCE POOL 陳述式時套用所要求的任何設定變更。  
   
 > [!IMPORTANT]  
 >  若要讓任何組態變更生效，必須先發出 ALTER RESOURCE GOVERNOR RECONFIGURE。  
   
- CLASSIFIER_FUNCTION = { *schema_name***。***function_name* |NULL}  
- 註冊所指定的分類函數*schema_name.function_name*。 這個函數會將每個新的工作階段分類，然後將工作階段要求和查詢指派到工作負載群組。 使用 NULL 時，會將新的工作階段自動指派到預設的工作負載群組。  
+ CLASSIFIER_FUNCTION = { *schema_name***.***function_name* | NULL }  
+ 註冊 *schema_name.function_name* 所指定的分類函數。 這個函數會將每個新的工作階段分類，然後將工作階段要求和查詢指派到工作負載群組。 使用 NULL 時，會將新的工作階段自動指派到預設的工作負載群組。  
   
  RESET STATISTICS  
- 針對所有工作負載群組與資源集區重設統計資料。 如需詳細資訊，請參閱[sys.dm_resource_governor_workload_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)和[sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+ 針對所有工作負載群組與資源集區重設統計資料。 如需詳細資訊，請參閱 [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 和 [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
   
- MAX_OUTSTANDING_IO_PER_VOLUME =*值*  
+ MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
  **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 設定每一個磁碟區已排入佇列的最大 I/O 作業量。 這些 I/O 作業可以是任何規模的讀取或寫入。  MAX_OUTSTANDING_IO_PER_VOLUME 的最大值為 100。 其值並非百分比。 這項設定是設計來針對磁碟區的 IO 特性調整 IO 資源管理。 我們建議您試驗不同的值，並考慮使用 IOMeter，等校正工具[DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223)，或 SQLIO （已過時） 來識別您的儲存體子系統的最大值。 此設定提供系統層級安全性檢查，即使其他集區的 MAX_IOPS_PER_VOLUME 設為無限制，仍可讓 SQL Server 達到資源集區的 IOPS 下限。 如需有關 MAX_IOPS_PER_VOLUME 的詳細資訊，請參閱[CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)。  
+ 設定每一個磁碟區已排入佇列的最大 I/O 作業量。 這些 I/O 作業可以是任何規模的讀取或寫入。  MAX_OUTSTANDING_IO_PER_VOLUME 的最大值為 100。 其值並非百分比。 這項設定是設計來針對磁碟區的 IO 特性調整 IO 資源管理。 建議您試驗不同的值，並考慮使用 IOMeter、[DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) 或 SQLIO (已淘汰) 等校正工具識別儲存體子系統的最大值。 此設定提供系統層級安全性檢查，即使其他集區的 MAX_IOPS_PER_VOLUME 設為無限制，仍可讓 SQL Server 達到資源集區的 IOPS 下限。 如需有關 MAX_IOPS_PER_VOLUME 的詳細資訊，請參閱 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  ALTER RESOURCE GOVERNOR DISABLE、ALTER RESOURCE GOVERNOR RECONFIGURE 和 ALTER RESOURCE GOVERNOR RESET STATISTICS 無法用於使用者交易內。  
   
- RECONFIGURE 參數是資源管理員語法的一部分，而且不應該與混淆[重新設定](../../t-sql/language-elements/reconfigure-transact-sql.md)，這是不同的 DDL 陳述式。  
+ RECONFIGURE 參數是 Resource Governor 語法的一部分，不應該與屬於個別 DDL 陳述式的 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) 混淆。  
   
- 建議您在執行 DDL 陳述時前，先熟悉資源管理員的狀態。 如需詳細資訊，請參閱[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
+ 建議您在執行 DDL 陳述時前，先熟悉資源管理員的狀態。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 權限。  
@@ -199,11 +199,11 @@ WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
  [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
- [ALTER 外部資源集區 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
+ [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   

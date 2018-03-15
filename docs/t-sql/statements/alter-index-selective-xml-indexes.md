@@ -1,5 +1,5 @@
 ---
-title: "ALTER INDEX （選擇性 XML 索引） |Microsoft 文件"
+title: "ALTER INDEX (選擇性 XML 索引) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/02/2018
   
 -   索引選項 (WITH 子句)。  
   
- 您無法修改次要選擇性 XML 索引。 如需詳細資訊，請參閱[Create、 Alter 和卸除次要選擇性 XML 索引](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)。  
+ 您無法修改次要選擇性 XML 索引。 如需詳細資訊，請參閱[建立、修改和卸除次要選擇性 XML 索引](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -120,7 +120,7 @@ identifier
  *index_name*  
  這是要修改之現有索引的名稱。  
   
- *\<table_object >*  
+ *\<table_object>*  
  這是包含要索引之 XML 資料行的資料表。 請使用下列其中一個格式：  
   
 -   `database_name.schema_name.table_name`  
@@ -131,20 +131,20 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list > **)**]  
- 這是要索引之路徑使用的命名空間清單。 WITH XMLNAMESPACES 子句的語法的相關資訊，請參閱[WITH XMLNAMESPACES &#40;TRANSACT-SQL &#41;](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ 這是要索引之路徑使用的命名空間清單。 如需有關 WITH XMLNAMESPACES 子句語法的詳細資訊，請參閱 [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)。  
   
- 如**(** \<promoted_node_path_action_list > **)**  
+ FOR **(** \<promoted_node_path_action_list> **)**  
  這是要加入或移除的索引路徑清單。  
   
--   **新增路徑。** 當您 ADD 路徑時，會使用透過 CREATE SELECTIVE XML INDEX 陳述式建立路徑的相同語法。 如需您可以在 CREATE 或 ALTER 陳述式中指定路徑的詳細資訊，請參閱[指定路徑和最佳化提示，選擇性 XML 索引](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
+-   **新增路徑。** 當您 ADD 路徑時，會使用透過 CREATE SELECTIVE XML INDEX 陳述式建立路徑的相同語法。 如需有關可以在 CREATE 或 ALTER 陳述式中指定之路徑的詳細資訊，請參閱[指定選擇性 XML 索引的路徑和最佳化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
   
 -   **移除路徑。** 當您 REMOVE 路徑時，會提供建立路徑時指定的名稱。  
   
- [使用**(** \<index_options > **)**]  
- 您只能指定\<index_options > 當您使用 ALTER INDEX 未包含 FOR 子句。 當您使用 ALTER INDEX 加入或移除索引中的路徑時，索引選項不是有效的引數。 索引選項的相關資訊，請參閱[CREATE XML INDEX &#40;選擇性 XML 索引 &#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ [WITH **(** \<index_options> **)**]  
+ 使用未包含 FOR 子句的 ALTER INDEX 時，只能指定 \<index_options>。 當您使用 ALTER INDEX 加入或移除索引中的路徑時，索引選項不是有效的引數。 如需索引選項的詳細資訊，請參閱 [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  當您執行 ALTER INDEX 陳述式時，一律會重建選擇性 XML 索引。 請務必考慮這個程序對於伺服器資源的影響。  
@@ -175,9 +175,9 @@ ON Tbl
 PAD_INDEX = ON;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [選擇性 XML 索引 &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [建立、 改變和卸除選擇性 XML 索引](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
+ [建立、修改和卸除選擇性 XML 索引](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
  [指定選擇性 XML 索引的路徑和最佳化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   

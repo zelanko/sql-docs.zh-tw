@@ -1,5 +1,5 @@
 ---
-title: "建立伺服器稽核 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/22/2018
 ms.prod: sql-non-specified
@@ -87,33 +87,33 @@ CREATE SERVER AUDIT audit_name
  稽核記錄檔的路徑。 檔案名稱是根據稽核名稱和稽核 GUID 所產生。  
   
  MAXSIZE = { *max_size }*  
- 指定稽核檔案所能成長的大小上限。 *Max_size*值必須是整數，後面接著 MB、 GB、 TB 或 UNLIMITED。 您可以針對指定的最小大小*max_size*為 2 MB，上限為 2,147,483,647 TB。 指定了 UNLIMITED 時，檔案會成長到磁碟已滿為止  (0 也表示 UNLIMITED)。指定低於 2 MB 的值，就會引發 MSG_MAXSIZE_TOO_SMALL 錯誤。 預設值為 UNLIMITED。  
+ 指定稽核檔案所能成長的大小上限。 *max_size* 值必須是整數，而且後面緊接著 MB、GB、TB 或 UNLIMITED。 您可以為 *max_size* 指定的大小下限為 2 MB，而上限則為 2,147,483,647 TB。 指定了 UNLIMITED 時，檔案會成長到磁碟已滿為止  (0 也表示 UNLIMITED)。指定低於 2 MB 的值會引發 MSG_MAXSIZE_TOO_SMALL 錯誤。 預設值為 UNLIMITED。  
   
- MAX_ROLLOVER_FILES =*{整數*|無限制}  
- 除了目前的檔案以外，指定要保留在檔案系統中的檔案數目上限。 *MAX_ROLLOVER_FILES*值必須是整數或 UNLIMITED。 預設值為 UNLIMITED。 每當稽核重新啟動時，系統會評估此參數 (可能會發生時的執行個體[!INCLUDE[ssDE](../../includes/ssde-md.md)]重新啟動或者稽核開啟時關閉然後再次) 或者由於達到 MAXSIZE 而需要新的檔案的時。 當*MAX_ROLLOVER_FILES*評估時，如果檔案數目超過*MAX_ROLLOVER_FILES*設定時，會刪除最舊的檔案。 如此一來，當設定*MAX_ROLLOVER_FILES*為的 0，每次都會建立新的檔案*MAX_ROLLOVER_FILES*設定評估。 只能有一個檔案，則會自動刪除時*MAX_ROLLOVER_FILES*評估設定，因此值*MAX_ROLLOVER_FILES*是減少，檔案的數目不會縮小除非舊的檔案手動刪除。 可以指定的檔案數量上限為 2,147,483,647。  
+ MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ 除了目前的檔案以外，指定要保留在檔案系統中的檔案數目上限。 *MAX_ROLLOVER_FILES* 值必須是整數或 UNLIMITED。 預設值為 UNLIMITED。 每當稽核重新啟動 (當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體重新啟動或者稽核先關閉然後再次開啟時，就可能會發生此情況) 或者由於達到 MAXSIZE 而需要新的檔案時，系統就會評估此參數。 評估 *MAX_ROLLOVER_FILES* 時，如果檔案的數目超過 *MAX_ROLLOVER_FILES* 設定，系統就會刪除最舊的檔案。 因此，如果 *MAX_ROLLOVER_FILES* 的設定為 0，每次評估 *MAX_ROLLOVER_FILES* 設定時，系統都會建立新的檔案。 評估 *MAX_ROLLOVER_FILES* 設定時，系統只會自動刪除一個檔案，所以當您降低 *MAX_ROLLOVER_FILES* 的值時，除非手動刪除舊的檔案，否則檔案的數目將不會縮減。 可以指定的檔案數量上限為 2,147,483,647。  
   
  MAX_FILES =*integer*  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定可建立的最大稽核檔案數目。 達到此限制時，不會換用第一個檔案。 達到 MAX_FILES 限制時，任何可讓要產生其他稽核事件的動作會失敗並發生錯誤。  
+ 指定可建立的最大稽核檔案數目。 達到此限制時，不會換用第一個檔案。 達到 MAX_FILES 限制時，導致系統產生其他稽核事件的任何動作都會失敗並發生錯誤。  
   
  RESERVE_DISK_SPACE = { ON | OFF }  
  這個選項會在磁碟上將檔案預先配置為 MAXSIZE 值。 只有當 MAXSIZE 不等於 UNLIMITED 時，才會套用它。 預設值是 OFF。  
   
  QUEUE_DELAY =*integer*  
- 判斷在強制處理稽核動作之前經過的時間長度 (以毫秒為單位)。 值為 0 表示同步傳遞。 可設定的最小查詢延遲值為 1000 (1 秒)，這是預設值。 最大值為 2,147,483,647 (2,147,483.647 秒鐘或是 24 天 20 小時 31 分鐘又 23.647 秒鐘)。 指定無效的數字，就會引發 MSG_INVALID_QUEUE_DELAY 錯誤。  
+ 判斷在強制處理稽核動作之前經過的時間長度 (以毫秒為單位)。 值為 0 表示同步傳遞。 可設定的最小查詢延遲值為 1000 (1 秒)，這是預設值。 最大值為 2,147,483,647 (2,147,483.647 秒鐘或是 24 天 20 小時 31 分鐘又 23.647 秒鐘)。 指定無效的數字會引發 MSG_INVALID_QUEUE_DELAY 錯誤。  
   
  ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION }  
  指出如果目標無法寫入稽核記錄，則寫入目標的執行個體應該失敗、繼續還是停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 預設值為 CONTINUE。  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業繼續進行。 系統不會保留稽核記錄。 稽核會繼續嘗試記錄事件並繼續進行，如果失敗狀況已解決。 選取 continue 選項會允許可能違反安全性原則中的未稽核的活動。 當繼續進行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 作業比維持完整稽核更重要時，請使用此選項。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業繼續進行。 系統不會保留稽核記錄。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 選取 [繼續] 選項會允許可能違反安全性原則的未稽核活動。 當繼續進行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 作業比維持完整稽核更重要時，請使用此選項。  
   
 SHUTDOWN  
-會強制執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]關閉如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將資料寫入稽核目標，因為任何原因失敗。 登入執行`CREATE SERVER AUDIT`陳述式必須有`SHUTDOWN`內的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 關機問題持續發生即使`SHUTDOWN`稍後從執行的登入撤銷權限。 如果使用者沒有此權限，然後陳述式會失敗並稽核已建立。 當稽核失敗可能危害系統的安全性或完整性時，請使用此選項。 如需詳細資訊，請參閱[關機](../../t-sql/language-elements/shutdown-transact-sql.md)。  
+如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 因為任何原因無法將資料寫入稽核目標，則會強制關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 執行 `CREATE SERVER AUDIT` 陳述式的登入在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內必須擁有 `SHUTDOWN` 權限。 即使稍後已從執行中的登入撤銷 `SHUTDOWN` 權限，關閉的行為仍會持續。 如果使用者沒有此權限，則陳述式將會失敗，且將不會建立稽核。 當稽核失敗可能危害系統的安全性或完整性時，請使用此選項。 如需詳細資訊，請參閱 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)。  
   
  FAIL_OPERATION  
- 如果資料庫動作導致稽核的事件，這些動作就會失敗。 不會導致稽核的事件的動作可繼續進行，但可能會發生任何稽核的事件。 稽核會繼續嘗試記錄事件並繼續進行，如果失敗狀況已解決。 當維持完整稽核比 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的完整存取權更重要時，請使用此選項。  
+ 如果資料庫動作導致稽核的事件，這些動作就會失敗。 雖然不會導致稽核事件的動作可繼續進行，不過也無法發生稽核的事件。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 當維持完整稽核比 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的完整存取權更重要時，請使用此選項。  
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
  AUDIT_GUID =*uniqueidentifier*  
@@ -127,10 +127,10 @@ SHUTDOWN
  event_field_name  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 這是識別述詞來源之事件欄位的名稱。 中描述了稽核欄位[sys.fn_get_audit_file &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). 所有的欄位可以篩選除了`file_name`， `audit_file_offset`，和`event_time`。  
+ 這是識別述詞來源之事件欄位的名稱。 稽核欄位會在 [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) 中說明。 除了 `file_name`、`audit_file_offset` 和 `event_time` 以外的所有欄位都可進行稽核。  
 
 > [!NOTE]  
->  雖然`action_id`和`class_type`欄位屬於類型**varchar**中 sys.fn_get_audit_file，它們只能使用數字何時可進行篩選的述詞來源。 若要取得要搭配使用的值清單`class_type`，執行下列查詢：  
+>  雖然 `action_id` 和 `class_type` 欄位在 sys.fn_get_audit_file 中是 **varchar** 類型，但是當它們為可進行篩選的述詞來源時，僅可以搭配數字使用。 若要取得搭配 `class_type` 使用之值的清單，請執行下列查詢：  
 > ```sql
 > SELECT spt.[name], spt.[number]
 > FROM   [master].[dbo].[spt_values] spt
@@ -142,14 +142,14 @@ SHUTDOWN
  number  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 任何數值類型包括**十進位**。 限制為缺少可用的實體記憶體，或是數字太大而不能表示為 64 位元整數。  
+ 這是包含 **decimal** 的任何數值類型。 限制為缺少可用的實體記憶體，或是數字太大而不能表示為 64 位元整數。  
   
  ' string '  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  ANSI 或 Unicode 字串 (依述詞比較的需求而定)。 不會針對述詞比較函數執行隱含字串類型轉換。 傳遞錯誤的類型會產生錯誤。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當建立伺服器稽核之後，它就會處於停用狀態。  
   
  CREATE SERVER AUDIT 陳述式位於交易的範圍內。 如果回復交易，也會回復此陳述式。  
@@ -179,7 +179,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ###  <a name="ExampleWhere"></a> C. 建立包含 WHERE 子句的伺服器稽核  
- 下列範例會建立資料庫、結構描述和兩個範例資料表。 名為資料表`DataSchema.SensitiveData`包含機密資料，而且必須在稽核記錄資料表的存取權。 名為 `DataSchema.GeneralData` 的資料表則不包含機密資料。 資料庫稽核規格會稽核 `DataSchema` 結構描述中所有物件的存取權。 伺服器稽核是使用 WHERE 子句所建立，這個子句會將伺服器稽核限制為只有 `SensitiveData` 資料表。 伺服器稽核會假設稽核資料夾存在`C:\SQLAudit`。  
+ 下列範例會建立資料庫、結構描述和兩個範例資料表。 名為 `DataSchema.SensitiveData` 的資料表將包含機密資料，而且此資料表的存取權必須記錄在稽核中。 名為 `DataSchema.GeneralData` 的資料表則不包含機密資料。 資料庫稽核規格會稽核 `DataSchema` 結構描述中所有物件的存取權。 伺服器稽核是使用 WHERE 子句所建立，這個子句會將伺服器稽核限制為只有 `SensitiveData` 資料表。 伺服器稽核會假設稽核資料夾存在 `C:\SQLAudit` 中。  
   
 ```sql  
 CREATE DATABASE TestDB;  
@@ -219,15 +219,15 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER SERVER AUDIT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [建立伺服器稽核規格 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [建立資料庫稽核規格 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [卸除資料庫稽核規格 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
  [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
  [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   

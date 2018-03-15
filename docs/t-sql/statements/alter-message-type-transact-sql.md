@@ -1,5 +1,5 @@
 ---
-title: "變更訊息類型 (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -70,15 +70,15 @@ ALTER MESSAGE TYPE message_type_name
  訊息主體必須包含格式正確的 XML。  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- 訊息主體必須包含符合指定的結構描述集合中之結構描述的 XML。 *Schema_collection_name*必須是現有 XML 結構描述集合的名稱。  
+ 訊息主體必須包含符合指定的結構描述集合中之結構描述的 XML。 *schema_collection_name* 必須是現有 XML 結構描述集合的名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  變更訊息類型的驗證不會影響已傳遞給佇列的訊息。  
   
  若要變更訊息類型的 AUTHORIZATION，請使用 ALTER AUTHORIZATION 陳述式。  
   
 ## <a name="permissions"></a>Permissions  
- 變更訊息類型權限預設為訊息類型、 成員的擁有者**db_ddladmin**或**db_owner**固定資料庫角色和成員的**sysadmin**固定的伺服器角色。  
+ 變更訊息類型的權限預設為訊息類型的擁有者、**db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
  當 ALTER MESSAGE TYPE 陳述式指定了結構描述集合時，執行這個陳述式的使用者必須有所指定之結構描述集合的 REFERENCES 權限。  
   
@@ -92,9 +92,9 @@ ALTER MESSAGE TYPE
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER AUTHORIZATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [建立訊息類型 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [卸除訊息類型 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

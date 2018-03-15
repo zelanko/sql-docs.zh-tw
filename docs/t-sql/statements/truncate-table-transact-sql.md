@@ -1,5 +1,5 @@
 ---
-title: "TRUNCATE TABLE (TRANSACT-SQL) |Microsoft 文件"
+title: TRUNCATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  移除所有資料列的資料表或指定的分割區資料表，而不記錄個別資料列刪除。 TRUNCATE TABLE 類似於不含 WHERE 子句的 DELETE 陳述式；不過，TRUNCATE TABLE 比較快，使用的系統資源和交易記錄資源也比較少。  
+  從資料表中移除所有資料列或資料庫的指定資料分割，而不需記錄個別資料列刪除。 TRUNCATE TABLE 類似於不含 WHERE 子句的 DELETE 陳述式；不過，TRUNCATE TABLE 比較快，使用的系統資源和交易記錄資源也比較少。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,26 +76,26 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  這是資料表所屬的結構描述名稱。  
   
  *table_name*  
- 這是要截斷之資料表，或要從中移除所有資料列之資料表的名稱。 *table_name*必須是常值。 *table_name*不可**object_id （)**函式或變數。  
+ 這是要截斷之資料表，或要從中移除所有資料列之資料表的名稱。 *table_name* 必須是常值。 *table_name* 不得為 **OBJECT_ID()** 函數或變數。  
   
- 與 (資料分割 ({ \<*編號運算式*> |\<*範圍*>} [，.....n]))  
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[新版](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- 指定要截斷的資料分割，或要移除所有資料列的部分。 如果資料表未分割，**與資料分割**引數會產生錯誤。 如果**與資料分割**未提供子句，整個資料表將會被截斷。  
+ 指定要截斷的資料分割，或要移除所有資料列的部分。 如果未分割此資料表，**WITH PARTITIONS** 引數將會產生錯誤。 如果未提供 **WITH PARTITIONS** 子句，將會截斷整個資料表。  
   
- *\<編號運算式 >*可以下列方式指定： 
+ 您可以使用下列方式來指定 *\<partition_number_expression>*： 
   
--   提供資料分割的數目，例如：`WITH (PARTITIONS (2))`  
+-   提供資料分割的編號，例如：`WITH (PARTITIONS (2))`  
   
--   提供分割區編號為數個個別分割區以逗號分隔，例如：`WITH (PARTITIONS (1, 5))`  
+-   為數個個別資料分割提供以逗號分隔的資料分割編號，例如：`WITH (PARTITIONS (1, 5))`  
   
--   同時提供範圍和個別分割區，例如：`WITH (PARTITIONS (2, 4, 6 TO 8))`  
+-   同時提供範圍和個別資料分割，例如：`WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<範圍 >*可以指定為分隔的資料分割編號**TO**，例如：`WITH (PARTITIONS (6 TO 8))`  
+-   *\<range>* 可以指定為以 **TO** 一字分隔的資料分割編號，例如：`WITH (PARTITIONS (6 TO 8))`  
   
- 要截斷的資料分割的資料表，資料表和索引必須對齊 （資料分割在相同的資料分割函數上）。  
+ 若要截斷資料分割資料表，必須將資料表與索引對齊 (已在同一個資料分割函數上加以分割)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  相較於 DELETE 陳述式，TRUNCATE TABLE 的優點如下：  
   
 -   使用的交易記錄空間較少。  
@@ -112,7 +112,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  TRUNCATE TABLE 會移除資料表中的所有資料列，但會保留資料表結構及其資料行、條件約束、索引等。 若要移除資料表的資料之外，還要移除資料表定義，請使用 DROP TABLE 陳述式。  
   
- 如果資料表包含識別欄位，該資料行的計數器會重設為資料行定義的種子值。 如果未定義任何初始值，就會使用預設值 1。 若要保留識別計數器，請改用 DELETE。  
+ 如果資料表包含識別資料行，該資料行的計數器就會重設為針對該資料行定義的初始值。 如果未定義任何初始值，就會使用預設值 1。 若要保留識別計數器，請改用 DELETE。  
   
 ## <a name="restrictions"></a>限制  
  下列狀況的資料表不能使用 TRUNCATE TABLE：  
@@ -127,17 +127,17 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  TRUNCATE TABLE 無法啟動觸發程序，因為作業不會記錄個別的資料列刪除動作。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。 
  
- 在[!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+ 在 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[sspdw](../../includes/sspdw-md.md)]中：
 
-- TRUNCATE TABLE 解釋陳述式內不允許。
+- EXPLAIN 陳述式內不允許 TRUNCATE TABLE。
 
-- TRUNCATE TABLE 無法執行交易內。
+- TRUNCATE TABLE 無法在交易內執行。
   
 ## <a name="truncating-large-tables"></a>截斷大型資料表  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]能夠卸除或截斷擁有超過 128 個範圍，而不會卸除所需的所有範圍中保持同步鎖定的資料表。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠卸除或截斷含有超出 128 個範圍的資料表，而不需在卸除所需的所有範圍內保留同時鎖定。  
   
 ## <a name="permissions"></a>Permissions  
- 所需的最低權限為 ALTER 上*table_name*。 TRUNCATE TABLE 權限預設會授與資料表擁有者、系統管理員 (sysadmin) 固定伺服器角色成員，以及 db_owner 和 db_ddladmin 固定資料庫角色的成員，這些權限不能轉讓。 不過，您可以將 TRUNCATE TABLE 陳述式納入模組 (如預存程序) 中，再利用 EXECUTE AS 子句，將適當的權限授與模組。  
+ *table_name* 上所需的最小權限是 ALTER。 TRUNCATE TABLE 權限預設會授與資料表擁有者、系統管理員 (sysadmin) 固定伺服器角色成員，以及 db_owner 和 db_ddladmin 固定資料庫角色的成員，這些權限不能轉讓。 不過，您可以將 TRUNCATE TABLE 陳述式納入模組 (如預存程序) 中，再利用 EXECUTE AS 子句，將適當的權限授與模組。  
   
 ## <a name="examples"></a>範例  
   
@@ -159,7 +159,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. 截斷資料表資料分割  
   
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[新版](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  下列範例會截斷分割資料表的指定資料分割。 `WITH (PARTITIONS (2, 4, 6 TO 8))` 語法會導致資料分割編號 2、 4、 6、 7 和 8 被截斷。  
   
@@ -169,9 +169,9 @@ WITH (PARTITIONS (2, 4, 6 TO 8));
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

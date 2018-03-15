@@ -1,5 +1,5 @@
 ---
-title: "重新命名 (TRANSACT-SQL) |Microsoft 文件"
+title: RENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/20/2017
 ms.prod: 
@@ -24,13 +24,13 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="rename-transact-sql"></a>重新命名 (TRANSACT-SQL)
+# <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  重新命名的使用者建立的資料表中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 使用者建立的資料表或資料庫中的重新命名[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
+  重新命名 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中使用者建立的資料表。 重新命名 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中使用者建立的資料表或資料庫。  
   
 > [!NOTE]  
->  若要重新命名資料庫，以在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，使用預存程序[sp_renamedb &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). 若要重新命名 Azure SQL Database 中的資料庫，請使用 [ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md) 陳述式。 
+>  若要重新命名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫，請使用預存程序 [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)。 若要重新命名 Azure SQL Database 中的資料庫，請使用 [ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md) 陳述式。 
   
 ## <a name="syntax"></a>語法  
   
@@ -56,17 +56,17 @@ RENAME DATABASE [::] database_name TO new_database_name
 ```  
   
 ## <a name="arguments"></a>引數  
- 重新命名物件 [::]   
-          [[*database_name* 。 [ *schema_name* ]。 ] |[ *schema_name* 。 ] ]*table_name* TO *new_table_name*  
- **適用於：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ RENAME OBJECT [::]   
+          [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
+ **適用於：**  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- 變更使用者定義資料表的名稱。 指定要重新命名與一段、 兩個或三部分名稱的資料表。    指定新的資料表*new_table_name*做為其中一個部分名稱。  
+ 變更使用者定義之資料表的名稱。 指定要重新命名為一部分、 兩部分或三部分名稱的資料表。    將新的資料表 *new_table_name* 指定為一部分名稱。  
   
- 重新命名資料庫 [::]   
+ RENAME DATABASE [::]   
           [ *database_name* TO *new_database_name*  
  **適用於：**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- 變更使用者定義的資料庫名稱*database_name*至*new_database_name*。  您無法將資料庫重新命名為任何一項都[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]保留的資料庫名稱：  
+ 將使用者定義的資料庫名稱從 *database_name* 變更為 *new_database_name*。  您無法將資料庫重新命名為以下任何這些[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]保留的資料庫名稱：  
   
 -   master  
   
@@ -87,33 +87,33 @@ RENAME DATABASE [::] database_name TO new_database_name
 -   DWQueue  
   
 ## <a name="permissions"></a>Permissions  
- 若要執行此命令中，您需要此權限：  
+ 若要執行此命令，您需要此權限：  
   
--   **ALTER**資料表的權限  
+-   資料表的 **ALTER** 權限  
    
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
   
-### <a name="cannot-rename-an-external-table-indexes-or-views"></a>無法重新命名的外部資料表、 索引或檢視
-您無法重新命名的外部資料表、 索引或檢視。 而不要重新命名，您可以卸除的外部資料表、 索引或檢視，並再重新建立具有新名稱。
+### <a name="cannot-rename-an-external-table-indexes-or-views"></a>無法重新命名外部資料表、 索引或檢視表
+您無法重新命名外部資料表、 索引或檢視表。 在無法重新命名的情況下，您可以卸除外部資料表、 索引或檢視表，然後使用不同的名稱來重建它。
 
 ### <a name="cannot-rename-a-table-in-use"></a>無法重新命名使用中的資料表  
- 您無法重新命名資料表或資料庫，使用中時。 重新命名資料表，需要資料表的獨佔鎖定。 如果資料表是使用中，您可能需要終止工作階段所使用的資料表。 若要結束工作階段中，您可以使用 KILL 命令。 請小心使用 KILL，因為當工作階段已終止任何未認可的工作將會回復。 SQL 資料倉儲中的工作階段都會加上 'SID'。 您必須叫用 KILL 命令時包含這和工作階段數目。 此範例檢視作用中或閒置工作階段的清單，然後會終止工作階段 'SID1234'。  
+ 資料表或資料庫正在使用中時，您無法重新命名。 需要資料表的獨佔鎖定，才能重新命名。 如果資料表正在使用中，您可能需要找出是哪些工作階段正在使用該資料表，然後予以終止。 若要終止工作階段，您可以使用 KILL 命令。 請小心使用 KILL，因為當工作階段終止後，任何未認可的工作都將回復。 SQL 資料倉儲中的工作階段名稱前面都會加上 'SID'。 叫用 KILL 命令時，您應該包含此識別碼與工作階段編號。 此範例會檢視作用中或閒置的工作階段清單，然後會終止工作階段 'SID1234'。  
   
-### <a name="views-are-not-updated"></a>不會更新檢視  
- 在重新命名資料庫，使用先前的資料庫名稱的所有檢視都會都變成無效。 這適用於內部和外部資料庫的檢視。 例如，如果重新命名 Sales 資料庫檢視包含`SELECT * FROM Sales.dbo.table1`將變成無效。 若要解決此問題，您可以避免在檢視中，使用三部分名稱，或更新的檢視，來參考新的資料庫名稱。  
+### <a name="views-are-not-updated"></a>不會更新檢視表  
+ 重新命名資料庫時，所有使用舊資料庫名稱的檢視都會都變成無效。 這適用於資料庫內部和外部的檢視表。 例如，如果重新命名 Sales 資料庫，則包含 `SELECT * FROM Sales.dbo.table1` 的檢視表將變成無效。 若要解決此問題，您可以避免在檢視表中使用三部分名稱，或者更新檢視表來參考新的資料庫名稱。  
   
- 在重新命名資料表，檢視無法更新為參考新的資料表名稱。 每個檢視的內部或外部參考先前資料表名稱的資料庫將變成無效。 若要解決此問題，您可以更新每個檢視，來參考新的資料表名稱。  
+ 重新命名資料表時，無法更新檢視表來參考新的資料表名稱。 無論是資料庫內部或外部檢視表，只要參考舊資料表名稱，都將變成無效。 若要解決此問題，您可以更新每一檢視表來參考新的資料表名稱。  
   
 ## <a name="locking"></a>鎖定  
- 重新命名資料表會在資料庫物件上的共用的鎖定、 結構描述物件的共用的鎖定和資料表的獨佔鎖定。  
+ 重新命名資料表時，會取得 DATABASE 物件上的共用鎖定、SCHEMA 物件上的共用鎖定、以及資料表上的獨佔鎖定。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-rename-a-database"></a>A. 重新命名資料庫  
- **適用於：** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]只  
+ **適用於：**僅 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- 此範例中重新命名使用者定義資料庫 AdWorks AdWorks2。  
+ 此範例會將使用者定義的資料庫從 AdWorks 重新命名為 AdWorks2。  
   
 ```  
 -- Rename the user defined database AdWorks  
@@ -121,12 +121,12 @@ RENAME DATABASE AdWorks to AdWorks2;
   
 ```  
   
- 在重新命名資料表，所有物件和資料表相關聯的屬性都更新為參考新的資料表名稱。 例如，資料表定義、 索引、 條件約束，並更新權限。 不會更新檢視。  
+ 重新命名資料表時，會更新與該資料表相關聯的所有物件與屬性以參考新的資料表名稱。 例如，會更新資料表定義、 索引、 條件約束與權限。 不會更新檢視表。  
   
 ### <a name="b-rename-a-table"></a>B. 重新命名資料表  
- **適用於：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ **適用於：**  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- 此範例中重新命名 Customer1 Customer 資料表。  
+ 此範例會將 Customer 資料表重新命名為 Customer 1。  
   
 ```  
 -- Rename the customer table  
@@ -135,22 +135,22 @@ RENAME OBJECT Customer TO Customer1;
 RENAME OBJECT mydb.dbo.Customer TO Customer1;  
 ```  
   
- 在重新命名資料表，所有物件和資料表相關聯的屬性都更新為參考新的資料表名稱。 例如，資料表定義、 索引、 條件約束，並更新權限。 不會更新檢視。  
+ 重新命名資料表時，會更新與該資料表相關聯的所有物件與屬性以參考新的資料表名稱。 例如，會更新資料表定義、 索引、 條件約束與權限。 不會更新檢視表。  
    
   
 ### <a name="c-move-a-table-to-a-different-schema"></a>C. 將資料表移到不同的結構描述  
- **適用於：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ **適用於：**  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- 如果您的意圖是將物件移至不同的結構描述，使用[ALTER SCHEMA &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md). 比方說，這將資料表項目從產品結構描述 dbo 結構描述。  
+ 如果您想要將物件移至不同的結構描述，請使用 [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)。 例如，這樣會將資料表項目從 product 結構描述移至 dbo 結構描述。  
   
 ```  
 ALTER SCHEMA dbo TRANSFER OBJECT::product.item;  
 ```  
   
-### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. 終止工作階段，才能重新命名資料表  
- **適用於：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. 重新命名資料表前，先終止工作階段  
+ **適用於：**  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- 請務必記得，您無法重新命名資料表使用中時。 重新命名的資料表需要資料表的獨佔鎖定。 如果資料表是使用中，您可能需要立即終止工作階段使用的資料表。 若要結束工作階段中，您可以使用 KILL 命令。 請小心使用 KILL，因為當工作階段已終止任何未認可的工作將會回復。 SQL 資料倉儲中的工作階段都會加上 'SID'。 您必須叫用 KILL 命令時包含這和工作階段數目。 此範例檢視作用中或閒置工作階段的清單，然後會終止工作階段 'SID1234'。  
+ 請務必記得，如果資料表正在使用中，便無法重新命名。 重新命名資料表時，需要取得資料表的獨佔鎖定。 如果資料表正在使用中，您可能需要找出是哪些工作階段正在使用該資料表，然後予以終止。 若要終止工作階段，您可以使用 KILL 命令。 請小心使用 KILL，因為當工作階段終止後，任何未認可的工作都將回復。 SQL 資料倉儲中的工作階段名稱前面都會加上 'SID'。 叫用 KILL 命令時，您應該包含此識別碼與工作階段編號。 此範例會檢視作用中或閒置的工作階段清單，然後會終止工作階段 'SID1234'。  
   
 ```  
 -- View a list of the current sessions  

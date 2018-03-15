@@ -1,5 +1,5 @@
 ---
-title: "DROP XML SCHEMA COLLECTION (TRANSACT-SQL) |Microsoft 文件"
+title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
  *sql_identifier*  
  這是您要卸除的 XML 結構描述集合名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  卸除 XML 結構描述集合是一項交易式作業。 也就是說，當您卸除交易內的 XML 結構描述集合，然後再回復該交易時，不會卸除 XML 結構描述集合。  
   
  您不能卸除在使用中的 XML 結構描述集合。 也就是說，下列幾種集合不能卸除：  
   
--   與任何相關聯**xml**類型參數或資料行。  
+-   與任何 **xml** 類型參數或資料行相關聯的集合。  
   
 -   在任何資料表條件約束中指定的集合。  
   
@@ -92,8 +92,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 XML 結構描述集合 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [ALTER XML SCHEMA COLLECTION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [伺服器上 XML 結構描述集合的需求與限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

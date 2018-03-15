@@ -1,5 +1,5 @@
 ---
-title: "DROP ENDPOINT (TRANSACT-SQL) |Microsoft 文件"
+title: DROP ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,11 +53,11 @@ DROP ENDPOINT endPointName
  *endPointName*  
  這是要移除的端點名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  ENDPOINT DDL 陳述式不能在使用者交易內執行。  
   
 ## <a name="permissions"></a>Permissions  
- 使用者必須是成員**sysadmin**固定伺服器角色、 端點的擁有者或被授與端點上的 [控制] 權限。  
+ 使用者必須是**系統管理員 (sysadmin)** 固定伺服器角色的成員、端點擁有者，或者已被授與端點的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
  下列範例會移除先前建立稱為 `sql_endpoint` 的端點。  

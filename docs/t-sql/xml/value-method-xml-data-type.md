@@ -1,5 +1,5 @@
 ---
-title: "value （) 方法 (xml 資料類型) |Microsoft 文件"
+title: "value() 方法 (xml 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 
   對 XML 執行 XQuery 並傳回 SQL 類型的值。 此方法會傳回純量值。  
   
- 您通常使用這個方法以擷取儲存在 XML 執行個體的值**xml**類型資料行、 參數或變數。 如此一來，您就可以指定 SELECT 查詢來結合或比較 XML 資料與非 XML 資料行的資料。  
+ 通常您會使用此方法，從儲存在 **xml** 類型資料行、參數或變數中的 XML 執行個體擷取值。 如此一來，您就可以指定 SELECT 查詢來結合或比較 XML 資料與非 XML 資料行的資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,15 +45,15 @@ value (XQuery, SQLType)
   
 ## <a name="arguments"></a>引數  
  *XQuery*  
- 是*XQuery*運算式，字串常值，來擷取 XML 執行個體內的資料。 XQuery 最多只能傳回一個值。 否則，就會傳回錯誤。  
+ 這是 *XQuery* 運算式，在 XML 執行個體內擷取資料的一個字串常值。 XQuery 最多只能傳回一個值。 否則，就會傳回錯誤。  
   
  *SQLType*  
- 是慣用的 SQL 類型，要傳回的字串常值。 這個方法的傳回型別符合*SQLType*參數。 *SQLType*不可**xml**資料類型、 common language runtime (CLR) 使用者定義類型，**映像**，**文字**， **ntext**，或**sql_variant**資料型別。 *SQLType*可以是 SQL、 使用者定義資料類型。  
+ 是慣用的 SQL 類型，要傳回的字串常值。 此方法的傳回類型符合 *SQLType* 參數。 *SQLType* 不可為 **xml** 資料類型、通用語言執行平台 (CLR) 使用者定義型別、**image**、**text**、**ntext** 或 **sql_variant** 資料類型。 *SQLType* 可以是 SQL、使用者定義資料類型。  
   
- **Value （)**方法會使用[!INCLUDE[tsql](../../includes/tsql-md.md)]隱含轉換運算子，並嘗試將結果的 XQuery 運算式，序列化的字串表示法中，從對應所指定的SQL類型的XSD型別轉換[!INCLUDE[tsql](../../includes/tsql-md.md)]轉換。 轉換的類型轉換規則的相關資訊，請參閱[CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ **value()** 方法會隱含使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT 運算子，並試著將 XQuery 運算式的結果 (序列化字串表示法)，從 XSD 類型轉換成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 轉換所指定的對應 SQL 類型。 如需 CONVERT 之類型轉換規則的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
 > [!NOTE]  
->  基於效能考量，而不是使用**value （)**方法來比較與關聯式值，而使用述詞中的**exist （)**與**: column （)**。 如下列範例 D 所示。  
+>  基於效能的考量，不要在述詞中使用 **value()** 方法來與關聯式值做比較，而是使用 **exist()** 搭配 **sql:column()** 進行比較。 如下列範例 D 所示。  
   
 ## <a name="examples"></a>範例  
   
@@ -78,10 +78,10 @@ SELECT @ProdID
   
  傳回的結果為值 1。  
   
- 雖然 XML 執行個體中只有一個 `ProductID` 屬性，靜態類型規則仍要求您明確指定路徑運算式傳回單一值。 因此，會在路徑運算式結尾另外指定 `[1]`。 如需靜態類型的詳細資訊，請參閱[XQuery 與靜態類型](../../xquery/xquery-and-static-typing.md)。  
+ 雖然 XML 執行個體中只有一個 `ProductID` 屬性，靜態類型規則仍要求您明確指定路徑運算式傳回單一值。 因此，會在路徑運算式結尾另外指定 `[1]`。 如需靜態類型的詳細資訊，請參閱 [XQuery 與靜態類型](../../xquery/xquery-and-static-typing.md)。  
   
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. 使用 value() 方法來擷取 xml 類型資料行中的值  
- 下列查詢針對指定**xml**類型資料行 (`CatalogDescription`) 中`AdventureWorks`資料庫。 此查詢會從儲存在資料行中的每一個 XML 執行個體擷取 `ProductModelID` 屬性值。  
+ 下列查詢是針對 `AdventureWorks` 資料庫中的 **xml** 類型資料行 (`CatalogDescription`) 所指定。 此查詢會從儲存在資料行中的每一個 XML 執行個體擷取 `ProductModelID` 屬性值。  
   
 ```  
 SELECT CatalogDescription.value('             
@@ -108,7 +108,7 @@ ORDER BY Result desc
 ```  
   
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. 使用 value() 和 exist() 方法來擷取 xml 類型資料行中的值  
- 下列範例顯示如何使用`value()`方法和[exist （） 方法](../../t-sql/xml/exist-method-xml-data-type.md)的**xml**資料型別。 `value()` 方法是用於擷取 XML 中的 `ProductModelID` 屬性值。 `exist()` 子句中的 `WHERE` 方法則是用於篩選資料表中的資料列。  
+ 下列範例顯示如何使用 **xml** 資料類型的 `value()` 方法和 [exist()](../../t-sql/xml/exist-method-xml-data-type.md) 方法。 `value()` 方法是用於擷取 XML 中的 `ProductModelID` 屬性值。 `exist()` 子句中的 `WHERE` 方法則是用於篩選資料表中的資料列。  
   
  此查詢會從將保固資訊 (<`Warranty`> 元素) 做為功能之一的 XML 執行個體中，擷取產品型號識別碼。 `WHERE` 子句中的條件會使用 `exist()` 方法，只擷取滿足此條件的資料列。  
   
@@ -126,7 +126,7 @@ WHERE CatalogDescription.exist('
   
  請注意下列項目是從上一個查詢而來：  
   
--   `CatalogDescription` 資料行是具類型的 XML 資料行。 這表示它有相關聯的結構描述集合。 在[XQuery 初構](../../xquery/modules-and-prologs-xquery-prolog.md)，命名空間宣告用來定義稍後在查詢主體中使用的前置詞。  
+-   `CatalogDescription` 資料行是具類型的 XML 資料行。 這表示它有相關聯的結構描述集合。 在 [XQuery 初構](../../xquery/modules-and-prologs-xquery-prolog.md)中，命名空間宣告是用來定義稍後要在查詢主體中使用的前置詞。  
   
 -   如果 `exist()` 方法傳回 `1` (True)，表示 XML 執行個體包括 <`Warranty`> 子元素做為功能之一。  
   
@@ -169,6 +169,6 @@ GO
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)   
- [XML 資料修改語言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML 資料修改語言 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

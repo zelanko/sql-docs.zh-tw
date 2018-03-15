@@ -1,5 +1,5 @@
 ---
-title: "ALTER LOGIN (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -133,20 +133,20 @@ ALTER LOGIN login_name
  指定正在變更的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 網域登入必須加上方括號，使用 [domain\user] 格式。  
   
  ENABLE | DISABLE  
- 啟用或停用這個登入。 停用登入並不會影響已經連接之登入的行為。 (使用`KILL`陳述式來終止現有的連線。)已停用的登入會保留其權限，而且依然可以模擬。  
+ 啟用或停用這個登入。 停用登入並不會影響已經連線之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，而且依然可以模擬。  
   
- 密碼**='***密碼***'**  
+ PASSWORD **='***password***'**  
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。  
   
- 作用中的連線至 SQL 資料庫需要重新授權 （Database Engine 所執行） 的持續至少每隔 10 小時。 Database Engine 會嘗試重新授權使用最初提交的密碼並不需要使用者輸入。 基於效能考量，密碼重設 SQL Database 中時此連接將不會重新驗證，即使因為連接共用會重設連接。 這是在內部部署 SQL Server 的行為不同。 如果密碼已變更，因為一開始授權連接，連接必須終止，並使用新的密碼時，建立新的連接。 KILL DATABASE CONNECTION 權限的使用者可以使用 KILL 命令，明確終止 SQL 資料庫的連接。 如需詳細資訊，請參閱[KILL &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md).  
+ 持續作用中的 SQL Database 連線至少每 10 小時就需要授權 (由「資料庫引擎」執行)。 「資料庫引擎」會嘗試使用最初提交的密碼重新授權，而且不需要使用者輸入。 基於效能考量，當密碼在 SQL Database 中重設時時，不會重新驗證連線，即使連線因為連線共用而重設。 這和內部部署 SQL Server 的行為不同。 如果自從連線初始授權後密碼已經變更，則必須中斷該連線，然後使用新密碼建立新連線。 具有 KILL DATABASE CONNECTION 權限的使用者可以使用 KILL 命令明確地中斷對 SQL Database 的連線。 如需詳細資訊，請參閱 [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)。  
   
- 密碼 **=**  *hashed_password*  
+ PASSWORD **=***hashed_password*  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  僅適用於 HASHED 關鍵字。 指定要建立之登入的密碼雜湊值。  
   
 > [!IMPORTANT]  
->  當登入 (或自主資料庫使用者) 連接並通過驗證時，此連接就會快取有關登入的識別資訊。 若為 Windows 驗證登入，這就包括 Windows 群組中成員資格的相關資訊。 只要維持連接，登入的識別就會維持驗證狀態。 若要強制變更識別 (例如重設密碼或變更 Windows 群組成員資格)，登入必須先登出驗證授權單位 (Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，然後重新登入。 **系統管理員 (sysadmin)** 固定伺服器角色的成員或任何擁有 **ALTER ANY CONNECTION** 權限的登入都可以使用 **KILL** 命令來結束連接並強制登入重新連接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以在開啟 [物件總管] 視窗和 [查詢編輯器] 視窗的多個連接時，重複使用連接資訊。 關閉所有連接以強制重新連接。  
+>  當登入 (或自主資料庫使用者) 連線並通過驗證時，此連線就會快取有關登入的識別資訊。 若為 Windows 驗證登入，這就包括 Windows 群組中成員資格的相關資訊。 只要維持連線，登入的識別就會維持已驗證狀態。 若要強制變更識別 (例如重設密碼或變更 Windows 群組成員資格)，登入必須先登出驗證授權單位 (Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，然後重新登入。 **系統管理員 (sysadmin)** 固定伺服器角色的成員或任何擁有 **ALTER ANY CONNECTION** 權限的登入都可以使用 **KILL** 命令來結束連線並強制登入重新連線。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以在開啟 [物件總管] 視窗和 [查詢編輯器] 視窗的多個連線時，重複使用連線資訊。 關閉所有連線以強制重新連線。  
   
  HASHED  
    
@@ -162,39 +162,39 @@ ALTER LOGIN login_name
   
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果包含這個選項，則在第一次使用變更後的登入時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提示您輸入更新後的密碼。  
   
- DEFAULT_DATABASE  **=** *資料庫*  
+ DEFAULT_DATABASE **=***database*  
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定要指派給登入的預設資料庫。  
   
- DEFAULT_LANGUAGE  **=** *語言*  
+ DEFAULT_LANGUAGE **=***language*  
  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定要指派給登入的預設語言。 所有 SQL 資料庫登入的預設語言是英文，且無法變更。 預設語言`sa`上的登入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]on Linux 而言是英文，但是可以變更。  
+ 指定要指派給登入的預設語言。 所有 SQL Database 登入的預設語言都是英文且無法變更。 在 Linux 上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上 `sa` 登入的預設語言是英文，但是無法變更它。  
   
- 名稱 = *login_name*  
- 正在重新命名之登入的新名稱。 如果這是 Windows 登入，則對應到新名稱的 Windows 主體 SID 必須與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之登入相關聯的 SID 相同。 新名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入不能包含反斜線字元 (\\)。  
+ NAME = *login_name*  
+ 正在重新命名之登入的新名稱。 如果這是 Windows 登入，則對應到新名稱的 Windows 主體 SID 必須與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之登入相關聯的 SID 相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的新名稱，不能包含反斜線字元 (\\)。  
   
- CHECK_EXPIRATION = {ON |**OFF** }  
+ CHECK_EXPIRATION = { ON | **OFF** }  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定是否應該對這個登入強制執行密碼逾期原則。 預設值是 OFF。  
   
- CHECK_POLICY  **=**  { **ON** |OFF}  
+ CHECK_POLICY **=** { **ON** | OFF }  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定應該在這項登入上強制使用執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦的 Windows 密碼原則。 預設值是 ON。  
+ 只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定應該在這個登入上強制使用執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦的 Windows 密碼原則。 預設值是 ON。  
   
- 認證 = *credential_name*  
+ CREDENTIAL = *credential_name*  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的認證名稱。 認證必須已存在於伺服器中。 如需詳細資訊，請參閱[認證 &#40; Database engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。 認證無法對應到 sa 登入。  
+ 對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的認證名稱。 認證必須已存在於伺服器中。 如需詳細資訊，請參閱[認證 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。 認證無法對應至 sa 登入。  
   
  NO CREDENTIAL  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 移除從登入到伺服器認證的任何現有對應。 如需詳細資訊，請參閱[認證 &#40; Database engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
+ 移除從登入到伺服器認證的任何現有對應。 如需詳細資訊，請參閱[認證 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
  UNLOCK  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -204,14 +204,14 @@ ALTER LOGIN login_name
  ADD CREDENTIAL  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 將可延伸金鑰管理 (EKM) 提供者認證加入到登入中。 如需詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 將可延伸金鑰管理 (EKM) 提供者認證加入到登入中。 如需詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
  DROP CREDENTIAL  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-從登入移除 Extensible Key Management (EKM) 提供者認證。 如需詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+將可延伸金鑰管理 (EKM) 提供者認證從登入移除。 如需詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當 CHECK_POLICY 設定為 ON 時，無法使用 HASHED 引數。  
   
  當 CHECK_POLICY 變更為 ON 時，會發生下列行為：  
@@ -224,7 +224,7 @@ ALTER LOGIN login_name
   
 -   會清除密碼記錄。  
   
--   值*lockout_time*會重設。  
+-   會重設 *lockout_time* 的值。  
   
 如果指定 MUST_CHANGE，則 CHECK_EXPIRATION 和 CHECK_POLICY 必須設為 ON。 否則，陳述式便會失敗。  
   
@@ -234,18 +234,18 @@ ALTER LOGIN login_name
   
  「訊息 15151，層級 16，狀態 1，行 1」  
   
- 「 無法改變登入 '*Domain\Group*'，因為它不存在，或您沒有權限。 」  
+ 「無法改變登入 '*Domain\Group*'，因為它不存在或您沒有權限。」  
   
  這是原廠設定。  
   
-在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 驗證連線所需的登入資料和伺服器層級防火牆規則中每個資料庫會暫時快取。 此快取會定期重新整理。 若要強制驗證快取重新整理，並請確定資料庫有登入資料表的最新版本，執行[DBCC FLUSHAUTHCACHE &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要 ALTER ANY LOGIN 權限。  
   
  如果使用 CREDENTIAL 選項，還需要 ALTER ANY CREDENTIAL 權限。  
   
- 正在變更的登入是否為成員的**sysadmin**固定的伺服器角色或 CONTROL SERVER 權限，授與者也需要 CONTROL SERVER 權限時進行下列變更：  
+ 如果變更的登入是 **sysadmin** 固定伺服器角色的成員，或 CONTROL SERVER 權限的被授與者，則在進行下列變更時，也需要 CONTROL SERVER 權限：  
   
 -   重設密碼，但不提供舊密碼。  
   
@@ -332,10 +332,10 @@ GO
   
  
   
-## <a name="see-also"></a>請參閱  
- [認證 &#40; Database engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a>另請參閱  
+ [認證 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [卸除登入 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

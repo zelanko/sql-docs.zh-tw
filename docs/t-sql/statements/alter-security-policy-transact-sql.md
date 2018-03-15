@@ -1,5 +1,5 @@
 ---
-title: "變更安全性原則 (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/02/2018
 ---
-# <a name="alter-security-policy-transact-sql"></a>變更安全性原則 (TRANSACT-SQL)
+# <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   改變安全性原則。  
@@ -67,10 +67,10 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  安全性原則的名稱。 安全性原則名稱必須符合識別碼的規則，並且在資料庫內及對於它的結構描述都必須是唯一的。  
   
  schema_name  
- 這是安全性原則所屬的結構描述名稱。 *schema_name*因為結構描述繫結，所以需要。  
+ 這是安全性原則所屬的結構描述名稱。 因為結構描述繫結，*schema_name* 是必要的。  
   
- [篩選器 |區塊]  
- 正繫結至目標資料表的函式的安全性述詞的類型。 篩選器述詞以無訊息方式篩選可讀取作業的資料列。 封鎖的述詞明確封鎖違反述詞函式的寫入作業。  
+ [ FILTER | BLOCK ]  
+ 繫結至目標資料表之函數的安全性述詞類型。 FILTER 述詞以無訊息方式篩選可讀取作業的資料列。 BLOCK 述詞明確封鎖違反述詞函數的寫入作業。  
   
  tvf_schema_name.security_predicate_function_name  
  這是內嵌資料表值函數，可做為述詞使用，並會在查詢目標資料表時強制執行。 針對每個特定資料表的每項特定 DML 作業，最多只能定義一個安全性述詞。 內嵌資料表值函數必須使用 SCHEMABINDING 選項建立。  
@@ -79,12 +79,12 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  做為安全性述詞函數之參數的資料行名稱或運算式。 目標資料表上的任何資料行都可以做為述詞函數的引數。 可以使用包含常值的運算式、內建函數及使用算術運算子的運算式。  
   
  *table_schema_name.table_name*  
- 這是套用安全性述詞的目標資料表。 多個已停用的安全性原則可以單一資料表的特定 DML 作業，但只有一個可以啟用在任何指定時間。  
+ 這是套用安全性述詞的目標資料表。 特定 DML 作業的單一資料表可以有多個已停用的安全性原則，但無論何時都只能啟用一個安全性原則。  
   
- *\<block_dml_operation >*  
- Block 述詞會套用特定 DML 作業。 在指定的資料列的值將評估的述詞，DML 作業之後執行 （INSERT 或 UPDATE）。 之前指定的資料列的值將評估的述詞，DML 作業之前執行 （UPDATE 或 DELETE）。 如果未不指定任何作業，則述詞會套用至所有作業。  
+ *\<block_dml_operation>*  
+ 將套用 BLOCK 述詞的特定 DML 作業。 AFTER 指定述詞將在 DML 作業執行之後 (INSERT 或 UPDATE)，根據資料列的值加以評估。 BEFORE 指定述詞將在 DML 作業執行之前 (UPDATE 或 DELETE)，根據資料列的值加以評估。 如果沒有指定作業，述詞將套用至所有作業。  
   
- 您無法改變的 block 述詞會套用的操作，因為作業用來唯一識別此述詞。 相反地，您必須卸除此述詞，並加入一個新的新作業。  
+ 您無法「改變」將套用 BLOCK 述詞的作業，因為作業是用來唯一識別該述詞。 相反地，您必須卸除該述詞，並針對新的作業加入一個新的述詞。  
   
  WITH ( STATE = { ON | OFF } )  
  啟用或停用強制對目標資料表執行其安全性述詞的安全性原則。 如果未指定，則會停用正在建立的安全性原則。  
@@ -95,12 +95,12 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  table_schema_name.table_name  
  這是套用安全性述詞的目標資料表。 單一資料表可以有多個已停用的安全性原則，但無論何時都只能啟用一個安全性原則。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  ALTER SECURITY POLICY 陳述式位於交易的範圍內。 如果回復交易，也會回復此陳述式。  
   
- 當使用記憶體最佳化資料表的述詞函式，安全性原則必須包含**SCHEMABINDING**並用**WITH NATIVE_COMPILATION**編譯提示。 無法以 ALTER 陳述式變更 SCHEMABINDING 引數，因為它套用到所有述詞。 若要變更結構描述繫結中，您必須卸除並重新建立安全性原則。  
+ 當使用述詞函數與記憶體最佳化資料表時，安全性原則必須包含 **SCHEMABINDING** 並使用 **WITH NATIVE_COMPILATION** 編譯提示。 SCHEMABINDING 引數無法以 ALTER 陳述式變更，因為它套用至所有的述詞。 若要變更結構描述繫結，您必須卸除並重新建立安全性原則。  
   
- Block 述詞會評估後會在執行對應的 DML 作業。 因此，讀取未認可的查詢可以查看將會回復的暫時性值。  
+ BLOCK 述詞會在執行對應的 DML 作業後加以評估。 因此，READ UNCOMMITTED 查詢可以查看將會回復的暫時性值。  
   
 ## <a name="permissions"></a>Permissions  
  需要 ALTER ANY SECURITY POLICY 權限。  
@@ -112,7 +112,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
 -   目標資料表中做為引數使用之每個資料行的 REFERENCES 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例示範如何使用**ALTER SECURITY POLICY**語法。 如需完整的安全性原則案例的範例，請參閱[資料列層級安全性](../../relational-databases/security/row-level-security.md)。  
+ 下列範例示範如何使用 **ALTER SECURITY POLICY** 語法。 如需完整安全性原則案例的範例，請參閱[資料列層級安全性](../../relational-databases/security/row-level-security.md)。  
   
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. 將額外的述詞加入原則  
  下列語法會改變安全性原則，在 `mytable` 資料表上加入篩選器述詞。  
@@ -152,8 +152,8 @@ ALTER SECURITY POLICY pol1
         ON myschema.mytable;  
 ```  
   
-### <a name="e-changing-a-block-predicate"></a>E. 變更的區塊述詞  
- 變更資料表上的作業的區塊述詞函式。  
+### <a name="e-changing-a-block-predicate"></a>E. 變更 BLOCK 述詞  
+ 變更資料表上作業的 BLOCK 述詞函數。  
   
 ```  
 ALTER SECURITY POLICY rls.SecPol  
@@ -161,11 +161,11 @@ ALTER SECURITY POLICY rls.SecPol
     ON dbo.Sales AFTER INSERT;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料列層級安全性](../../relational-databases/security/row-level-security.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [sys.security_predicates &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   

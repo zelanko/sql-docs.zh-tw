@@ -1,5 +1,5 @@
 ---
-title: "卸除訊息類型 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="permissions"></a>Permissions  
  卸除訊息類型的權限預設為訊息類型的擁有者、db_ddladmin 或 db_owner 固定資料庫角色的成員，以及系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果有任何合約參考訊息類型，您便無法刪除這個訊息類型。  
   
 ## <a name="examples"></a>範例  
@@ -68,8 +68,8 @@ DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [變更訊息類型 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [建立訊息類型 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

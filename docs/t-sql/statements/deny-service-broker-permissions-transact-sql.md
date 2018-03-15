@@ -1,5 +1,5 @@
 ---
-title: "DENY Service Broker 權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "DENY Service Broker 權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -64,20 +64,20 @@ DENY permission  [ ,...n ] ON
  *permission*  
  指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 安全性實體可以拒絕的權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 合約 **:: * * * contract_name*  
- 指定正在拒絕權限的合約。 範圍限定詞**::**需要。  
+ CONTRACT **::***contract_name*  
+ 指定正在拒絕權限的合約。 必須具備範圍限定詞 **::**。  
   
  MESSAGE TYPE **::***message_type_name*  
- 指定正在拒絕權限的訊息類型。 範圍限定詞**::**需要。  
+ 指定正在拒絕權限的訊息類型。 必須具備範圍限定詞 **::**。  
   
- 遠端服務繫結 **:: * * * remote_binding_name*  
- 指定正在拒絕權限的遠端服務繫結。 範圍限定詞**::**需要。  
+ REMOTE SERVICE BINDING **::***remote_binding_name*  
+ 指定正在拒絕權限的遠端服務繫結。 必須具備範圍限定詞 **::**。  
   
  ROUTE **::***route_name*  
- 指定正在拒絕權限的路由。 範圍限定詞**::**需要。  
+ 指定正在拒絕權限的路由。 必須具備範圍限定詞 **::**。  
   
  SERVICE **::***message_type_name*  
- 指定正在拒絕權限的服務。 範圍限定詞**::**需要。  
+ 指定正在拒絕權限的服務。 必須具備範圍限定詞 **::**。  
   
  *database_principal*  
  指定要拒絕其權限的主體。 它有下列幾種：  
@@ -106,10 +106,10 @@ CASCADE
 -   對應至非對稱金鑰的資料庫使用者  
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Service Broker 合約  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 之最特定且最有限權限可拒絕[!INCLUDE[ssSB](../../includes/sssb-md.md)]合約詳列於下表，列出利用隱含方式包含它們的較通用權限。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下面所列的是可以拒絕之最特定且最有限的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
 |Service Broker 合約權限|Service Broker 合約權限所隱含|資料庫權限所隱含|  
 |----------------------------------------|---------------------------------------------------|------------------------------------|  
@@ -141,7 +141,7 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="service-broker-routes"></a>Service Broker 路由  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 之最特定且最有限權限可拒絕[!INCLUDE[ssSB](../../includes/sssb-md.md)]路由詳列於下表，列出利用隱含方式包含它們的較通用權限。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下面所列的是可以拒絕之最特定且最有限的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
 |Service Broker 路由權限|Service Broker 路由權限所隱含|資料庫權限所隱含|  
 |-------------------------------------|------------------------------------------------|------------------------------------|  
@@ -151,7 +151,7 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ### <a name="service-broker-services"></a>Service Broker 服務  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 之最特定且最有限權限可拒絕[!INCLUDE[ssSB](../../includes/sssb-md.md)]服務詳列於下表，列出利用隱含方式包含它們的較通用權限。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下面所列的是可以拒絕之最特定且最有限的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
 |Service Broker 服務權限|Service Broker 服務權限所隱含|資料庫權限所隱含|  
 |---------------------------------------|--------------------------------------------------|------------------------------------|  
@@ -166,8 +166,8 @@ CASCADE
   
 ## <a name="see-also"></a>另請參閱  
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [REVOKE Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
+ [REVOKE Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [權限 &#40; Database engine&#41;](../../relational-databases/security/permissions-database-engine.md)  
+ [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)  
   
   

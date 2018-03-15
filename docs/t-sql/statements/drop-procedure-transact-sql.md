@@ -1,5 +1,5 @@
 ---
-title: "DROP PROCEDURE (TRANSACT-SQL) |Microsoft 文件"
+title: DROP PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -60,27 +60,27 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ```  
   
 ## <a name="arguments"></a>引數  
- *如果存在*  
+ *IF EXISTS*  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
- 只有當它已經存在有條件地卸除程序。  
+ 只有當程序已經存在時，才會有條件地將它卸除。  
   
  *schema_name*  
  程序所屬之結構描述的名稱。 不能指定伺服器名稱或資料庫名稱。  
   
- *程序*  
+ *procedure*  
  要移除的預存程序或預存程序群組的名稱。 無法卸除編碼程序群組內的個別程序；會卸除整個程序群組。  
   
 ## <a name="best-practices"></a>最佳作法  
  在移除任何預存程序之前，請先檢查相依物件並對應地修改這些物件。 卸除預存程序可能在這些物件未更新的情況下，造成相依物件和指令碼失敗。 如需詳細資訊，請參閱[檢視預存程序的相依性](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
 ## <a name="metadata"></a>中繼資料  
- 若要顯示現有程序的清單，請查詢**sys.objects**目錄檢視。 若要顯示程序定義，請查詢**sys.sql_modules**目錄檢視。  
+ 若要顯示現有程序的清單，查詢 **sys.objects** 目錄檢視。 若要顯示程序定義，請查詢 **sys.sql_modules** 目錄檢視。  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
- 需要**控制項**程序中，權限或**ALTER**權限的程序所屬的結構描述或成員資格**db_ddladmin**固定的伺服器角色.  
+ 需要程序的 **CONTROL** 權限，或程序所屬結構描述的 **ALTER** 權限，或 **db_ddladmin** 固定伺服器角色的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會移除目前資料庫中的 `dbo.uspMyProc` 預存程序。  
@@ -96,7 +96,7 @@ GO
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
- 下列範例會移除`dbo.uspMyProc`預存程序，如果它存在，但如果程序不存在，不會造成錯誤。 此語法中是新[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。  
+ 下列範例會移除 `dbo.uspMyProc` 預存程序，前提是如果它存在但不會因為程序不存在而造成錯誤。 這是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新語法。  
   
 ```  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
@@ -104,10 +104,10 @@ GO
 ```  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [sys.objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [刪除預存程序](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
   

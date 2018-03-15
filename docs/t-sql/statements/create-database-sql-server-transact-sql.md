@@ -148,101 +148,101 @@ CREATE DATABASE database_snapshot_name
   
 ## <a name="arguments"></a>引數  
  *database_name*  
- 這是新資料庫的名稱。 資料庫名稱必須是唯一的執行個體內[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，且必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
+ 這是新資料庫的名稱。 資料庫名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
- *database_name*最多可有 128 個字元，除非記錄檔未指定邏輯名稱。 如果未指定邏輯記錄檔名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產生*邏輯檔案名稱*和*os_file_name*藉由附加的後置詞的記錄檔*database_name*. 這會限制*database_name*到 123 個字元，使產生的邏輯檔案名稱不能超過 128 個字元。  
+ 除非沒有指定記錄檔的邏輯名稱，否則 *database_name* 最多可有 128 個字元。 如果未指定邏輯記錄檔名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會就藉由在 *database_name* 附加後置詞，來產生記錄檔的 *logical_file_name* 和 *os_file_name*。 這會將 *database_name* 限制為 123 個字元，使所產生的邏輯檔案名稱不超過 128 個字元。  
   
- 如果未指定資料檔案名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用*database_name*兩者*邏輯檔案名稱*並做為*os_file_name*。 預設路徑是從登錄取得。 可以變更預設路徑使用**伺服器屬性 （資料庫設定頁面）**中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 變更預設路徑需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果未指定資料檔案名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用 *database_name* 同時作為 *logical_file_name* 和 *os_file_name*。 預設路徑是從登錄取得。 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [伺服器屬性] ([資料庫設定] 頁面)來變更預設路徑。 變更預設路徑需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  CONTAINMENT = { NONE | PARTIAL }  
 
-**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定資料庫的內含項目狀態。 NONE = 非自主資料庫 PARTIAL = 部分自主資料庫  
   
  ON  
- 指定必須明確定義用來儲存資料庫之資料區段 (資料檔案) 的磁碟檔案。 後面接著以逗號分隔的清單時，就需要 ON \<filespec > 定義主要檔案群組中的資料檔案的項目。 主要檔案群組中的檔案清單後面可以接著以逗號分隔的選擇性清單\<檔案群組 > 定義使用者檔案群組和其檔案的項目。  
+ 指定必須明確定義用來儲存資料庫之資料區段 (資料檔案) 的磁碟檔案。 當後面接著一份定義主要檔案群組之資料檔案的 \<filespec> 項目清單 (以逗號分隔) 時，必須使用 ON。 主要檔案群組中的檔案清單後面可以接著一份選擇性的 \<filegroup> 項目清單 (以逗號分隔)，其中定義使用者檔案群組及其檔案。  
   
  PRIMARY  
- 指定相關聯\<filespec > 清單必須定義主要檔案。 第一個檔案中指定\<filespec > 主要檔案群組中的項目會成為主要檔案。 資料庫只能有一個主要檔案。 如需相關資訊，請參閱 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。  
+ 指定相關聯的 \<filespec> 清單必須定義主要檔案。 主要檔案群組之 \<filespec> 項目中所指定的第一個檔案會成為主要檔案。 資料庫只能有一個主要檔案。 如需相關資訊，請參閱 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。  
   
  如果未指定 PRIMARY，CREATE DATABASE 陳述式中列出的第一個檔案會成為主要檔案。  
   
  LOG ON  
- 指定必須明確定義用來儲存資料庫記錄 (記錄檔) 的磁碟檔案。 LOG ON 後面的逗號分隔清單\<filespec > 項目定義的記錄檔。 如果未指定 LOG ON，系統會自動建立一個記錄檔，該檔案的大小是資料庫之所有資料檔案的大小總和的 25% 或 512 KB 其中較大者。 這個檔案會放置在預設的記錄檔位置中。 此位置的相關資訊，請參閱[檢視或變更預設位置的資料及記錄檔 &#40;SQL Server Management Studio &#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
+ 指定必須明確定義用來儲存資料庫記錄 (記錄檔) 的磁碟檔案。 LOG ON 後面會接著定義記錄檔的 \<filespec> 項目清單 (以逗號分隔)。 如果未指定 LOG ON，系統會自動建立一個記錄檔，該檔案的大小是資料庫之所有資料檔案的大小總和的 25% 或 512 KB 其中較大者。 這個檔案會放置在預設的記錄檔位置中。 如需有關此位置的資訊，請參閱[檢視或變更資料及記錄檔的預設位置 &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)。  
   
  資料庫快照集中無法指定 LOG ON。  
   
- COLLATE *sys.databases*  
+ COLLATE *collation_name*  
  指定資料庫的預設定序。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 若未指定，會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序指派給資料庫。 資料庫快照集中無法指定定序名稱。  
   
- 定序名稱無法利用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 子句來指定。 如需如何變更附加資料庫的定序資訊，請參閱此[Microsoft 寍鯚](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)。  
+ 定序名稱無法利用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 子句來指定。 如需有關如何變更所附加資料庫之定序的資訊，請瀏覽此 [Microsoft 網站](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)。  
   
- 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱[COLLATE &#40;TRANSACT-SQL &#41;](~/t-sql/statements/collations.md).  
+ 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)。  
   
 > [!NOTE]  
->  自主資料庫的定序方式不同於非自主資料庫。 請參閱[Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)如需詳細資訊。  
+>  自主資料庫的定序方式不同於非自主資料庫。 如需詳細資訊，請參閱[自主資料庫定序](../../relational-databases/databases/contained-database-collations.md)。  
   
- 與\<選項 >  
+ WITH \<選項>  
  -   **\<filestream_options>** 
   
-     NON_TRANSACTED_ACCESS = { **OFF** |READ_ONLY |完整}  
+     NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }  
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
   
      指定資料庫層級的非交易式 FILESTREAM 存取層級。  
   
-    |Value|Description|  
+    |ReplTest1|描述|  
     |-----------|-----------------|  
     |OFF|已停用非交易式存取|  
     |READONLY|非交易式處理序可以讀取此資料庫中的 FILESTREAM 資料。|  
     |FULL|已啟用 FILESTREAM FileTables 的完整非交易式存取。|  
   
-     DIRECTORY_NAME = \<directory_name >**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+     DIRECTORY_NAME = \<directory_name> **適用於**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      Windows 相容的目錄名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有 Database_Directory 名稱之間，此名稱必須是唯一的。 不論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序設定為何，唯一性比較不區分大小寫。 在此資料庫中建立 FileTable 之前，應該先設定這個選項。  
   
  只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許下列選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。  
   
--   **DEFAULT_FULLTEXT_LANGUAGE = \<lcid > |\<語言名稱 > |\<語言別名 >**  
+-   **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<語言名稱> | \<語言別名>**  
   
-**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [Configure the default full-text language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) for a full description of this option.  
   
--   **DEFAULT_LANGUAGE = \<lcid > |\<語言名稱 > |\<語言別名 >**  
+-   **DEFAULT_LANGUAGE = \<lcid> | \<語言名稱> | \<語言別名>**  
   
-**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) for a full description of this option.  
   
 -   **NESTED_TRIGGERS = { OFF | ON}**  
   
-**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [Configure the nested triggers Server Configuration Option](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) for a full description of this option.  
   
 -   **TRANSFORM_NOISE_WORDS = { OFF | ON}**  
   
-**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)for a full description of this option.  
   
--   **TWO_DIGIT_YEAR_CUTOFF = {2049年 |\<介於 1753年到 9999 之間的任何年份 >}**  
+-   **TWO_DIGIT_YEAR_CUTOFF = { 2049 | \<1753 和 9999 之間的任何年份> }**  
   
-     表示一年的四位數。 2049 是預設值。 請參閱[設定 two digit year cutoff 伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)這個選項的完整說明。  
+     表示一年的四位數。 2049 是預設值。 如需此選項的完整說明，請參閱[設定兩位數年份的截止伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。  
   
--   **DB_CHAINING {關閉 |ON}**  
+-   **DB_CHAINING { OFF | ON }**  
   
      當指定 ON 時，資料庫可以是跨資料庫擁有權鏈結的來源或目標。  
   
      當指定 OFF 時，資料庫不能參與跨資料庫擁有權鏈結。 預設值為 OFF。  
   
     > [!IMPORTANT]  
-    >  當 cross db ownership chaining 伺服器選項為 0 (OFF) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體可以辨識這項設定。 當 cross db ownership chaining 為 1 (ON) 時，不論這個選項的值為何，所有使用者資料庫都可以參與跨資料庫擁有權鏈結。 使用此選項設定[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
+    >  當 cross db ownership chaining 伺服器選項為 0 (OFF) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體可以辨識這項設定。 當 cross db ownership chaining 為 1 (ON) 時，不論這個選項的值為何，所有使用者資料庫都可以參與跨資料庫擁有權鏈結。 您可以使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來設定這個選項。  
   
      若要設定這個選項，則需要有系統管理員 (sysadmin) 固定伺服器角色的成員資格。 您不能在下列系統資料庫上設定 DB_CHAINING 選項：master、model、tempdb。  
   
--   **TRUSTWORTHY {關閉 |ON}**  
+-   **TRUSTWORTHY { OFF | ON }**  
   
      當指定 ON 時，使用模擬內容的資料庫模組 (例如，檢視表、使用者定義函數或預存程序) 可以存取資料庫外部的資源。  
   
@@ -254,7 +254,7 @@ CREATE DATABASE database_snapshot_name
   
      若要設定這個選項，則需要有系統管理員 (sysadmin) 固定伺服器角色的成員資格。  
   
- FOR ATTACH [WITH \< attach_database_option >] 所建立的資料庫指定[附加](../../relational-databases/databases/database-detach-and-attach-sql-server.md)一組現有的作業系統檔案。 必須要有\<filespec > 項目，指定主要檔案。 只有其他\<filespec > 所需的項目是擁有不同的路徑，從第一個資料庫時的任何檔案建立或最後一次附加。 A \<filespec > 項目必須指定這些檔案。  
+ FOR ATTACH [ WITH \< attach_database_option > ] 指定藉由[附加](../../relational-databases/databases/database-detach-and-attach-sql-server.md)一組現有的作業系統檔案來建立資料庫。 必須有一個指定主要檔案的 \<filespec> 項目。 任何檔案如果其路徑與第一次建立資料庫或最後一次附加資料庫時的路徑不同，則其 \<filespec> 項目是唯一所需的其他 <filespec> 項目。 您必須針對這些檔案指定 \<filespec> 項目。  
   
  FOR ATTACH 需要下列項目：  
   
@@ -269,18 +269,18 @@ CREATE DATABASE database_snapshot_name
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，所附加之資料庫中的任何全文檢索檔案，都會隨著資料庫而一起附加。 若要指定全文檢索目錄的新路徑，請指定一個不含全文檢索作業系統檔案名稱的新位置。 如需詳細資訊，請參閱＜範例＞一節。  
   
- 附加資料庫，其中包含 [目錄名稱] 的 FILESTREAM 選項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體將會提示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證 Database_Directory 名稱是否唯一。 如果不是，附加作業會失敗，錯誤，「 FILESTREAM Database_Directory 名稱\<名稱 > 不是這個 SQL Server 執行個體中唯一的 」。 若要避免這個錯誤，選擇性參數， *directory_name*，則應傳入給此作業。  
+ 若將包含 FILESTREAM "Directory name" 選項的資料庫附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，將會提示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證 Database_Directory 名稱是否為唯一。 如果不是唯一，附加作業就會失敗，並顯示「FILESTREAM Database_Directory name \<名稱> 在此 SQL Server 執行個體中不是唯一的」錯誤。 若要避免這個錯誤，應該將選擇性參數 *directory_name* 傳遞給此作業。  
   
  資料庫快照集中無法指定 FOR ATTACH。  
   
  FOR ATTACH 可以指定 RESTRICTED_USER 選項。 RESTRICTED_USER 只允許 db_owner 固定資料庫角色以及資料庫建立者 (dbcreator) 和系統管理員 (sysadmin) 固定伺服器角色的成員連接到資料庫，但並不限制他們的數目。 不合格的使用者嘗試連接遭到拒絕。  
   
- 如果資料庫使用[!INCLUDE[ssSB](../../includes/sssb-md.md)]，使用 WITH \<service_broker_option > FOR ATTACH 子句中： 
+ 如果資料庫使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]，請在 FOR ATTACH 子句中使用 WITH \<service_broker_option>： 
   
- \<service_broker_option > 控制項[!INCLUDE[ssSB](../../includes/sssb-md.md)]訊息傳遞和[!INCLUDE[ssSB](../../includes/sssb-md.md)]資料庫識別項。 只有在使用 FOR ATTACH 子句的情況下才能指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 選項。  
+ \<service_broker_option> 控制資料庫的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 訊息傳遞和 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼。 只有在使用 FOR ATTACH 子句的情況下才能指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 選項。  
   
  ENABLE_BROKER  
- 指定啟用指定之資料庫的 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。 也就是說，訊息傳遞已啟動，且 is_broker_enabled 必須設為 true，在 sys.databases 目錄檢視中。 資料庫會保留現有的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼。  
+ 指定啟用指定之資料庫的 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。 也就是說，會啟動訊息傳遞，且 is_broker_enabled 在 sys.databases 目錄檢視中會設定為 true。 資料庫會保留現有的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼。  
   
  NEW_BROKER   
  在 sys.databases 和還原的資料庫中，建立新的 service_broker_guid 值，並以清除結束所有交談端點。 它會啟用 Broker，但不會傳送任何訊息到遠端交談端點。 您必須使用新的識別碼來重新建立參考舊 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼的任何路由。  
@@ -292,23 +292,23 @@ CREATE DATABASE database_snapshot_name
   
 -   如果您要將資料庫附加至與原始資料庫相同的伺服器執行個體和版本，則不需要其他步驟。  
   
--   如果您將資料庫附加至相同的伺服器執行個體，但升級後的版本，您必須執行[sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md)附加作業完成之後，升級複寫。  
+-   如果您將資料庫附加至相同但版本已升級的伺服器執行個體，則必須在附加作業完成後，執行 [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) 來升級複寫。  
   
--   如果您將資料庫附加至不同的伺服器執行個體，不限於任何版本，您必須執行[sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)附加作業完成之後移除複寫。  
+-   如果您將資料庫附加至不同的伺服器執行個體，則不論版本為何，都必須在附加作業完成後，執行 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 來移除複寫。  
   
 > [!NOTE]  
-> 附加作業可使用**vardecimal**儲存格式，但是[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]必須至少升級為[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]SP2。 您不能將使用 Vardecimal 儲存格式的資料庫附加到舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關**vardecimal**儲存格式，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
+> 附加作業可搭配 **Vardecimal** 儲存格式運作，但 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 必須至少升級至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2。 您不能將使用 Vardecimal 儲存格式的資料庫附加到舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關 **Vardecimal** 儲存格式的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
- 當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。 如需如何升級使用的資料庫附加，請參閱[升級資料庫使用卸離和附加 &#40;TRANSACT-SQL &#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).  
+ 當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。 如需有關如何使用附加來升級資料庫的詳細資訊，請參閱[使用卸離與附加來升級資料庫 &#40;Transact-SQL&#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)。  
   
 > [!IMPORTANT]  
-> 建議您不要附加來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 您使用從未知或未受信任來源的資料庫之前，先執行[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)在非生產伺服器上，在資料庫上同時檢查程式碼，例如預存程序或其他使用者定義的程式碼，在資料庫中。  
+> 建議您不要附加來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，同時也檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
   
 > [!NOTE]  
-> **TRUSTWORTHY**和**DB_CHAINING**附加資料庫時，選項會有任何影響。  
+> 附加資料庫時，**TRUSTWORTHY** 和 **DB_CHAINING** 選項沒有任何作用。  
   
  FOR ATTACH_REBUILD_LOG  
- 指定資料庫是藉由附加一組現有的作業系統檔案所建立。 這個選項只適用於讀取/寫入資料庫。 必須要有 *\<filespec >*指定主要檔案的項目。 如果遺漏一個或多個交易記錄檔，記錄檔就會重建。 ATTACH_REBUILD_LOG 會自動建立新的 1 MB 記錄檔。 這個檔案會放置在預設的記錄檔位置中。 此位置的相關資訊，請參閱[檢視或變更預設位置的資料及記錄檔 &#40;SQL Server Management Studio &#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
+ 指定資料庫是藉由附加一組現有的作業系統檔案所建立。 這個選項只適用於讀取/寫入資料庫。 必須要有一個指定主要檔案的 *\<filespec>* 項目。 如果遺漏一個或多個交易記錄檔，記錄檔就會重建。 ATTACH_REBUILD_LOG 會自動建立新的 1 MB 記錄檔。 這個檔案會放置在預設的記錄檔位置中。 如需有關此位置的資訊，請參閱[檢視或變更資料及記錄檔的預設位置 &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)。  
   
 > [!NOTE]  
 >  如果記錄檔是可用的，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會使用這些檔案，而不會重建記錄檔。  
@@ -326,7 +326,7 @@ CREATE DATABASE database_snapshot_name
   
  資料庫快照集中無法指定 FOR ATTACH_REBUILD_LOG。  
   
- 如需有關附加及卸離資料庫的詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server &#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ 如需有關附加及卸離資料庫的詳細資訊，請參閱[資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
   
  \<filespec>  
  控制檔案屬性。  
@@ -335,9 +335,9 @@ CREATE DATABASE database_snapshot_name
  指定檔案的邏輯名稱。 除非指定其中一個 FOR ATTACH 子句，否則指定 FILENAME 時，NAME 是必要的。 FILESTREAM 檔案群組不能命名為 PRIMARY。  
   
  *logical_file_name*  
- 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。 *邏輯檔案名稱*必須在資料庫中是唯一且必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 名稱可以是字元或 Unicode 常數，或是一般識別碼或分隔識別碼。  
+ 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。 *Logical_file_name* 在資料庫中必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 名稱可以是字元或 Unicode 常數，或是一般識別碼或分隔識別碼。  
   
- 檔名 { **'***os_file_name***'** | **'***filestream_path***'** }  
+ FILENAME { **'***os_file_name***'** | **'***filestream_path***'** }  
  指定作業系統 (實體) 檔案名稱。  
   
  **'** *os_file_name* **'**  
@@ -345,7 +345,7 @@ CREATE DATABASE database_snapshot_name
   
  當指定檔案的 UNC 路徑時，可以設定 SIZE、MAXSIZE 和 FILEGROWTH 參數。  
   
- 如果檔案在原始的分割區， *os_file_name*必須指定只有現有的未經處理資料分割的磁碟機代號。 每個原始分割區上只能建立一個資料檔案。  
+ 如果檔案在原始磁碟分割中，*os_file_name* 只能指定現有原始磁碟分割的磁碟機代號。 每個原始分割區上只能建立一個資料檔案。  
   
  除非檔案是唯讀次要檔案，或者，資料庫是唯讀的，否則資料檔案不應該放在壓縮的檔案系統中。 記錄檔永遠不應放在壓縮的檔案系統中。  
   
@@ -359,20 +359,20 @@ CREATE DATABASE database_snapshot_name
  SIZE *size*  
  指定檔案的大小。  
   
- 大小不能指定何時*os_file_name*指定為 UNC 路徑。 SIZE 不會套用到 FILESTREAM 檔案群組。  
+ 將 *os_file_name* 指定為 UNC 路徑時，不能指定 SIZE。 SIZE 不會套用到 FILESTREAM 檔案群組。  
   
  *size*  
  這是檔案的初始大小。  
   
- 當*大小*未提供主要檔案，[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用的模型資料庫中主要檔案大小。 模型的預設大小是 8 MB (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 或 1 MB （適用於先前的版本）。 當指定了次要資料檔或記錄檔時，但*大小*檔案，未指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]將檔 8 MB (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 或 1 MB （適用於先前的版本）。 所指定的主要檔案大小至少必須跟 model 資料庫的主要檔案大小一樣大。  
+ 未提供主要檔案的 *size* 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)]會使用模型資料庫中主要檔案的大小。 模型的預設大小是 8 MB (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 或 1 MB (適用於舊版)。 已指定次要資料檔或記錄檔，但未指定檔案的 *size* 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)]會將檔案大小設定為 8 MB (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 或 1 MB (適用於舊版)。 所指定的主要檔案大小至少必須跟 model 資料庫的主要檔案大小一樣大。  
   
- 您可以使用千位元組 (KB)、百萬位元組 (MB)、十億位元組 (GB) 或兆位元組 (TB) 後置詞。 預設值是 MB。 請指定一個整數，不包括小數點。 *大小*是整數值。 如果是大於 2147483647 的值，請使用較大的單位。  
+ 您可以使用千位元組 (KB)、百萬位元組 (MB)、十億位元組 (GB) 或兆位元組 (TB) 後置詞。 預設值是 MB。 請指定一個整數，不包括小數點。 *Size* 是一個整數值。 如果是大於 2147483647 的值，請使用較大的單位。  
   
  MAXSIZE *max_size*  
- 指定檔案所能成長的大小上限。 MAXSIZE 不能指定何時*os_file_name*指定為 UNC 路徑。  
+ 指定檔案所能成長的大小上限。 將 *os_file_name* 指定為 UNC 路徑時，不能指定 MAXSIZE。  
   
  *max_size*  
- 這是檔案大小上限。 可以使用 KB、MB、GB 及 TB 後置詞。 預設值是 MB。 請指定一個整數，不包括小數點。 如果*max_size*未指定，檔案可成長直到磁碟已滿。 *Max_size*是整數值。 如果是大於 2147483647 的值，請使用較大的單位。  
+ 這是檔案大小上限。 可以使用 KB、MB、GB 及 TB 後置詞。 預設值是 MB。 請指定一個整數，不包括小數點。 如果未指定 *max_size*，檔案就會成長到磁碟已滿為止。 *Max_size* 是一個整數值。 如果是大於 2147483647 的值，請使用較大的單位。  
   
  UNLIMITED  
  指定檔案可成長直到磁碟已滿。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定為無限成長的記錄檔，大小上限是 2 TB，資料檔案的大小上限是 16 TB。  
@@ -381,21 +381,21 @@ CREATE DATABASE database_snapshot_name
 > 為 FILESTREAM 容器指定這個選項時沒有最大大小。 它會繼續成長，直到磁碟已滿。  
   
  FILEGROWTH *growth_increment*  
- 指定檔案的自動成長遞增。 檔案的 FILEGROWTH 設定不能超過 MAXSIZE 設定。 FILEGROWTH 不得時指定*os_file_name*指定為 UNC 路徑。 FILEGROWTH 不會套用到 FILESTREAM 檔案群組。  
+ 指定檔案的自動成長遞增。 檔案的 FILEGROWTH 設定不能超過 MAXSIZE 設定。 將 *os_file_name* 指定為 UNC 路徑時，不能指定 FILEGROWTH。 FILEGROWTH 不會套用到 FILESTREAM 檔案群組。  
   
  *growth_increment*  
  這是每次需要新空間時，檔案所增加的空間量。  
   
- 您可以利用 MB、KB、GB、TB 或百分比 (%) 來指定這個值。 如果指定的數字不含 MB、KB 或 % 後置詞，預設值是 MB。 當指定 % 時，成長遞增大小便是遞增發生時，檔案大小的指定百分比。 指定的大小會四捨五入到最接近的 64 KB，最小值是 64 KB。  
+ 您可以利用 MB、KB、GB、TB 或百分比 (%) 來指定這個值。 如果指定的數字不含 MB、KB 或 % 後置詞，預設值是 MB。 當指定 % 時，成長遞增大小便是遞增發生時，檔案大小的指定百分比。 指定的大小會捨入到最接近 64 KB，最小值為 64 KB。  
   
  0 值指出自動成長是關閉的，且不允許其他空間。  
   
- 如果未指定 FILEGROWTH，預設值為：  
+ 如果未指定 FILEGROWTH，則預設值為：  
   
-|版本|預設值|  
+|Version|預設值|  
 |-------------|--------------------|  
-|開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|資料 64 MB。 記錄檔 64 MB。|  
-|開頭[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|資料 1 MB。 記錄檔 10%。|  
+|從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始|資料 64 MB。 記錄檔 64 MB。|  
+|從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始|資料 1 MB。 記錄檔 10%。|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|資料 10%。 記錄檔 10%。|  
   
  \<filegroup>  
@@ -405,44 +405,44 @@ CREATE DATABASE database_snapshot_name
  這是檔案群組的邏輯名稱。  
   
  *filegroup_name*  
- *filegroup_name*必須是唯一的資料庫中，而且不能是系統提供的名稱 PRIMARY 和 PRIMARY_LOG。 名稱可以是字元或 Unicode 常數，或是一般識別碼或分隔識別碼。 名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
+ *filegroup_name* 在資料庫中必須是唯一的，且不能是系統提供的名稱 PRIMARY 和 PRIMARY_LOG。 名稱可以是字元或 Unicode 常數，或是一般識別碼或分隔識別碼。 名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
  CONTAINS FILESTREAM  
  指定檔案群組會將 FILESTREAM 二進位大型物件 (BLOB) 儲存在檔案系統中。  
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- 指定檔案群組將記憶體最佳化的資料儲存在檔案系統中。 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每個資料庫只允許一個 MEMORY_OPTIMIZED_DATA 檔案群組。 如需建立來儲存記憶體最佳化資料檔案群組的程式碼範例，請參閱[建立記憶體最佳化資料表和原生編譯預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
+ 指定檔案群組將記憶體最佳化的資料儲存在檔案系統中。 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每個資料庫只允許一個 MEMORY_OPTIMIZED_DATA 檔案群組。 如需可建立檔案群組來儲存記憶體最佳化資料的程式碼範例，請參閱[建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
  DEFAULT  
  指定具名的檔案群組必須是資料庫中的預設檔案群組。  
   
  *database_snapshot_name*  
- 這是新資料庫快照集的名稱。 資料庫快照集名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內必須是唯一的，且必須符合識別碼的規則。 *database_snapshot_name*最多可有 128 個字元。  
+ 這是新資料庫快照集的名稱。 資料庫快照集名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內必須是唯一的，且必須符合識別碼的規則。 *database_snapshot_name* 最多可有 128 個字元。  
   
- ON **(**名稱 **=***邏輯檔案名稱***，** FILENAME **='***os_file_name***')** [**,**...*n* ]  
+ ON **(** NAME **=***logical_file_name***,** FILENAME **='***os_file_name***')** [ **,**... *n* ]  
  若要建立資料庫快照集，請在來源資料庫中指定檔案清單。 必須個別指定所有資料檔案，快照集才能運作。 不過，記錄檔不能用在資料庫快照集。 資料庫快照集不支援 FILESTREAM 檔案群組。 如果 FILESTREAM 資料檔案包含在 CREATE DATABASE ON 子句中，此陳述式將會失敗，並引發錯誤。  
   
- 如需名稱和檔案名稱以及其值的描述，請參閱的對等項目描述\<filespec > 值。  
+ 如需 NAME 和 FILENAME 及其值的描述，請參閱對等之 \<filespec> 值的描述。  
   
 > [!NOTE]  
-> 當您建立資料庫快照集，另\<filespec > 不允許選項和關鍵字 PRIMARY。  
+> 建立資料庫快照集時，不允許使用其他 \<filespec> 選項和 PRIMARY 關鍵字。  
   
  AS SNAPSHOT OF *source_database_name*  
- 指定正在建立的資料庫是資料庫快照集所指定的來源資料庫的*source_database_name*。 該快照集和來源資料庫必須位於相同的執行個體上。  
+ 指定要建立的資料庫是 *source_database_name* 所指定來源資料庫的資料庫快照集。 該快照集和來源資料庫必須位於相同的執行個體上。  
   
  如需詳細資訊，請參閱＜備註＞一節中的「資料庫快照集」。  
   
-## <a name="remarks"></a>備註  
- [Master 資料庫](../../relational-databases/databases/master-database.md)應該備份每當建立、 修改或卸除使用者資料庫。  
+## <a name="remarks"></a>Remarks  
+ 每當建立、修改或卸除使用者資料庫時，都應該備份 [master 資料庫](../../relational-databases/databases/master-database.md)。  
   
  CREATE DATABASE 陳述式必須在自動認可模式 (預設交易管理模式) 下執行，而且不能用於明確或隱含的交易。  
   
  您可使用 CREATE DATABASE 陳述式建立資料庫與儲存資料庫的檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用下列步驟實作 CREATE DATABASE 陳述式：  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用一份[model 資料庫](../../relational-databases/databases/model-database.md)初始化資料庫和它的中繼資料。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用[模型資料庫](../../relational-databases/databases/model-database.md)的複本將資料庫及其中繼資料初始化。  
   
 2.  將 Service Broker GUID 指派給資料庫。  
   
@@ -450,43 +450,43 @@ CREATE DATABASE database_snapshot_name
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一個執行個體上，最多可以指定 32,767 個資料庫。  
   
- 每個資料庫都有一個可以在資料庫中執行特殊活動的擁有者。 該擁有者就是建立資料庫的使用者。 資料庫擁有者可以透過變更[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)。  
+ 每個資料庫都有一個可以在資料庫中執行特殊活動的擁有者。 該擁有者就是建立資料庫的使用者。 您可以使用 [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) 來變更資料庫擁有者。  
 
-某些資料庫功能依賴功能或功能存在於資料庫的完整功能的檔案系統。 取決於檔案系統功能集功能的一些範例包括：
+有些資料庫功能需倚賴檔案系統中提供的功能，才能發揮資料庫的完整功能。 一些倚賴檔案系統功能集的功能範例包括：
 - DBCC CHECKDB
 - FileStream
-- 使用 VSS 和檔案的快照集的線上備份
-- 建立資料庫快照集
+- 使用 VSS 和檔案快照集來進行的線上備份
+- 資料庫快照集建立
 - 記憶體最佳化資料檔案群組
    
 ## <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組  
- 每個資料庫都至少兩個檔案，*主要檔案*和*交易記錄檔*，以及至少一個檔案群組。 每個資料庫最多可以指定 32,767 個檔案和 32,767 個檔案群組。  
+ 每個資料庫都至少會有兩個檔案 (一個「主要檔案」和一個「交易記錄檔」)，以及至少一個檔案群組。 每個資料庫最多可以指定 32,767 個檔案和 32,767 個檔案群組。  
   
  當您建立資料庫時，請根據資料庫的預期最大資料量，盡可能擴大資料檔案。  
   
  建議您利用存放區域網路 (SAN)、iSCSI 型網路或本機連接的磁碟來儲存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檔案，因為這個組態可使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能和可靠性最佳化。  
   
 ## <a name="database-snapshots"></a>資料庫快照集  
- 您可以使用 CREATE DATABASE 陳述式建立的唯讀、 靜態檢視，*資料庫快照集*的*來源資料庫*。 資料庫快照集在交易上與來源資料庫是一致的，因為它是在快照集建立時即存在。 來源資料庫可以有多個快照集。  
+ 您可以使用 CREATE DATABASE 陳述式來建立「來源資料庫」的唯讀靜態檢視表，即「資料庫快照集」。 資料庫快照集在交易上與來源資料庫是一致的，因為它是在快照集建立時即存在。 來源資料庫可以有多個快照集。  
   
 > [!NOTE]  
 > 當您建立資料庫快照集時，CREATE DATABASE 陳述式無法參考記錄檔、離線檔案、還原檔案及已解除功能的檔案。  
   
- 如果建立資料庫快照集失敗，快照集會受到質疑且必須刪除。 如需詳細資訊，請參閱[DROP DATABASE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-database-transact-sql.md).  
+ 如果建立資料庫快照集失敗，快照集會受到質疑且必須刪除。 如需詳細資訊，請參閱 [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)。  
   
  每個快照集都會繼續保存，直到利用 DROP DATABASE 加以刪除為止。  
   
  如需詳細資訊，請參閱[資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
 ## <a name="database-options"></a>資料庫選項  
- 每當您建立資料庫時，系統就會自動設定數個資料庫選項。 如需這些選項的清單，請參閱[ALTER DATABASE SET 選項 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ 每當您建立資料庫時，系統就會自動設定數個資料庫選項。 如需這些選項的清單，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
 ## <a name="the-model-database-and-creating-new-databases"></a>model 資料庫和建立新資料庫  
- 中的所有使用者定義物件[model 資料庫](../../relational-databases/databases/model-database.md)都會複製到所有新建立的資料庫。 您可以將所有要併入新建立之資料庫中的任何物件 (如資料表、檢視表、預存程序、資料類型等) 加入至 model 資料庫。  
+ [模型資料庫](../../relational-databases/databases/model-database.md)中的所有使用者定義物件都會複製到所有新建立的資料庫中。 您可以將所有要併入新建立之資料庫中的任何物件 (如資料表、檢視表、預存程序、資料類型等) 加入至 model 資料庫。  
   
- 建立資料庫時*database_name*陳述式指定不含其他大小參數 model 資料庫中主要資料檔進行相同的主要檔案的大小。  
+ 指定 CREATE DATABASE *database_name* 而未搭配額外的大小參數時，會將主要資料檔案的大小設定為與模型資料庫中的主要檔案大小相同。  
   
- 除非指定 FOR ATTACH，否則每個新資料庫都會從 model 資料庫繼承資料庫選項設定。 例如，auto shrink 資料庫選項設定為**true**在於模型和您所建立的任何新資料庫。 如果您在 model 資料庫中變更選項，您建立的任何新資料庫也會使用這些新的選項設定。 變更 model 資料庫中的作業不會影響現有的資料庫。 如果在 CREATE DATABASE 陳述式上指定 FOR ATTACH，新資料庫就會繼承原始資料庫的資料庫選項設定。  
+ 除非指定 FOR ATTACH，否則每個新資料庫都會從 model 資料庫繼承資料庫選項設定。 例如，在模型資料庫及您建立的任何新資料庫中，auto shrink 資料庫選項會設定為 **true**。 如果您在 model 資料庫中變更選項，您建立的任何新資料庫也會使用這些新的選項設定。 變更 model 資料庫中的作業不會影響現有的資料庫。 如果在 CREATE DATABASE 陳述式上指定 FOR ATTACH，新資料庫就會繼承原始資料庫的資料庫選項設定。  
   
 ## <a name="viewing-database-information"></a>檢視資料庫資訊  
  您可以利用目錄檢視、系統函數和系統預存程序，以傳回資料庫、檔案和檔案群組的相關資訊。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
@@ -522,7 +522,7 @@ GO
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-database-without-specifying-files"></a>A. 建立資料庫但不指定檔案  
- 下列範例會建立資料庫 `mytest` 並建立相對應的主要記錄檔和交易記錄檔。 因為陳述式沒有\<filespec > 項目，主要資料庫檔案是 model 資料庫主要檔案的大小。 交易記錄設為下列兩個值中之較大者：512KB 或主要資料檔案大小的 25%。 因為沒有指定 MAXSIZE，所以檔案會成長，直到填滿所有可用的磁碟空間為止。 此範例也會示範如何在建立 `mytest` 資料庫之前，卸除名為 `mytest` 的資料庫 (若存在)。  
+ 下列範例會建立資料庫 `mytest` 並建立相對應的主要記錄檔和交易記錄檔。 因為該陳述式沒有\<filespec> 項目，所以主要資料庫檔案的大小就是模型資料庫主要檔案的大小。 交易記錄設為下列兩個值中之較大者：512KB 或主要資料檔案大小的 25%。 因為沒有指定 MAXSIZE，所以檔案會成長，直到填滿所有可用的磁碟空間為止。 此範例也會示範如何在建立 `mytest` 資料庫之前，卸除名為 `mytest` 的資料庫 (若存在)。  
   
 ```sql  
 USE master;  
@@ -602,7 +602,7 @@ GO
 ### <a name="d-creating-a-database-that-has-filegroups"></a>D. 建立含有檔案群組的資料庫  
  下列範例會建立含有下列檔案群組的資料庫 `Sales`：  
   
--   主要檔案群組與檔案`Spri1_dat`和`Spri2_dat`。 這些檔案的 FILEGROWTH 遞增指定為 `15%`。  
+-   含有檔案 `Spri1_dat` 和 `Spri2_dat` 的主要檔案群組。 這些檔案的 FILEGROWTH 遞增指定為 `15%`。  
   
 -   名為 `SalesGroup1` 的檔案群組，該檔案群組含有檔案 `SGrp1Fi1` 和 `SGrp1Fi2`。  
   
@@ -671,7 +671,7 @@ GO
 ```  
   
 ### <a name="f-creating-a-database-snapshot"></a>F. 建立資料庫快照集  
- 下列範例會建立資料庫快照集`sales_snapshot0600`。 因為資料庫快照集是唯讀的，所以不能指定記錄檔。 依照語法規定，會指定來源資料庫中的每個檔案，但不會指定檔案群組。  
+ 下列範例會建立資料庫快照集 `sales_snapshot0600`。 因為資料庫快照集是唯讀的，所以不能指定記錄檔。 依照語法規定，會指定來源資料庫中的每個檔案，但不會指定檔案群組。  
   
  這個範例中的來源資料庫就是在範例 D 中建立的資料庫 `Sales`。  
   
@@ -840,7 +840,7 @@ GO
  [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_changedbowner &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   

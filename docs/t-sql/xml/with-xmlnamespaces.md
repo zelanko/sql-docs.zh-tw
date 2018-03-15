@@ -1,5 +1,5 @@
 ---
-title: "WITH XMLNAMESPACES (TRANSACT-SQL) |Microsoft 文件"
+title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -70,12 +70,12 @@ DEFAULT <xml_namespace_uri>
   
 ## <a name="arguments"></a>引數  
  *xml_namespace_uri*  
- 識別所宣告之 XML 命名空間的統一資源識別碼 (URI)。 *_ u*是 SQL 字串。  
+ 識別所宣告之 XML 命名空間的統一資源識別碼 (URI)。 *xml_namespace_uri* 是 SQL 字串。  
   
  *xml_namespace_prefix*  
- 指定要對應並且與指定的命名空間 URI 值相關聯的前置詞*_ u*。 *xml_namespace_prefix*必須[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別項。  
+ 指定要對應並且與 *xml_namespace_uri* 中指定的命名空間 URI 值相關聯的前置詞。 *xml_namespace_prefix* 必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在另外還包含一般資料表運算式的陳述式中使用 WITH XMLNAMESPACES 子句時，陳述式中的 WITH XMLNAMESPACES 子句必須位在一般資料表運算式之前。  
   
  當您使用 WITH XMLNAMESPACES 子句時，下列一般語法規則適用：  
@@ -96,7 +96,7 @@ DEFAULT <xml_namespace_uri>
   
 -   URI 字串值是根據目前資料庫定序字碼頁來編碼，在內部是轉換成 Unicode。  
   
--   XML 命名空間 URI 是泛空白字元摺疊遵循 XSD 空白摺疊規則用於**xs: anyuri**。 另外，請注意，在 XML 命名空間 URI 值上不執行 entitization 或 deentitization。  
+-   XML 命名空間 URI 是遵照用於 **xs:anyURI** 的 XSD 空白摺疊規則而摺疊的空白。 另外，請注意，在 XML 命名空間 URI 值上不執行 entitization 或 deentitization。  
   
 -   將檢查 XML 命名空間 URI 是否有無效的 XML 1.0 字元，如果有找到 (例如，U+0007)，就會引發錯誤。  
   
@@ -105,7 +105,7 @@ DEFAULT <xml_namespace_uri>
 -   在 WITH 子句的內容中已保留 XMLNAMESPACES 關鍵字。  
   
 ## <a name="examples"></a>範例  
- 如需範例，請參閱[查詢使用 WITH XMLNAMESPACES 新增命名空間](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
+ 如需範例，請參閱[使用 WITH XMLNAMESPACES 將命名空間加入至查詢](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

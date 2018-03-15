@@ -1,5 +1,5 @@
 ---
-title: "卸除事件通知 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>引數  
  *notification_name*  
- 這是要移除之事件通知的名稱。 您可以指定多個事件通知。 若要查看目前建立的事件通知清單，請使用[sys.event_notifications &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ 這是要移除之事件通知的名稱。 您可以指定多個事件通知。 若要查看目前已建立的事件通知清單，請使用 [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)。  
   
  SERVER  
  指出將事件通知範圍套用在目前伺服器上。 如果建立事件通知時指定了 SERVER，就必須指定 SERVER。  
@@ -61,10 +61,10 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  指出將事件通知範圍套用在目前資料庫上。 如果建立事件通知時指定了 DATABASE，就必須指定 DATABASE。  
   
- 佇列*queue_name*  
- 表示事件通知範圍套用到所指定的佇列*queue_name*。 如果建立事件通知時指定了 QUEUE，就必須指定 QUEUE。 *queue_name*是佇列的名稱，而且也必須指定。  
+ QUEUE *queue_name*  
+ 指出將事件通知範圍套用在 *queue_name* 所指定的佇列上。 如果建立事件通知時指定了 QUEUE，就必須指定 QUEUE。 *queue_name* 是佇列的名稱，也必須指定。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果在交易內引發事件通知，且在相同交易內卸除它，就會傳送事件通知執行個體，之後，再卸除事件通知。  
   
 ## <a name="permissions"></a>Permissions  
@@ -90,10 +90,10 @@ DROP EVENT NOTIFICATION NotifyALTER_T1
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [建立事件通知 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.event_notifications &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [sys.events &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   
