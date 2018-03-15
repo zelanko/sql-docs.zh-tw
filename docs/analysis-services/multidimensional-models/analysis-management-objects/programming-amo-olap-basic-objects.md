@@ -265,7 +265,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG">MeasureGroup 物件</a>  
+##  <a name="MG"></a>MeasureGroup 物件  
  若要管理或是處理量值群組，請設計 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件的程式。  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>建立、卸除和尋找 MeasureGroup  

@@ -63,7 +63,7 @@ ms.lasthandoff: 02/15/2018
 > [!IMPORTANT]  
 >  COM 組件可能會造成安全性風險。 由於這項風險和其他考量，COM 組件在 [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]中已經被取代。 在未來的版本中，可能不再支援 COM 組件。  
   
-##  <a name="Backup">Backup 與 Restore 方法</a>  
+##  <a name="Backup"></a>Backup 與 Restore 方法  
  備份與還原是可用以建立 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫複本以及使用該複本復原資料庫的方法。 Backup 方法屬於 <xref:Microsoft.AnalysisServices.Database> 物件，而 Restore 方法則屬於 <xref:Microsoft.AnalysisServices.Server> 物件。  
   
  只允許伺服器和資料庫管理員執行資料庫的備份。 只有伺服器管理員可以將資料庫還原到與備份來源不同的伺服器。 資料庫管理員可以覆寫現有的資料庫以還原資料庫，只要他們擁有要覆寫的資料庫。 在還原之後，如果資料庫是用其原始安全性定義還原，資料庫管理員可能會喪失對已還原資料庫的存取權。  

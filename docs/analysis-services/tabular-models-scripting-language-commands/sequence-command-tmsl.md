@@ -1,7 +1,7 @@
 ---
 title: "序列命令 (TMSL) |Microsoft 文件"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 03/12/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,39 +12,40 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 898d6ec2-9b40-441b-be2b-5728d1d2882e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d628482a5d7c2efb9c7611af1d024ad6b644512a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d1c5a1108ca775694122b6e9c5518913b47d85aa
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sequence-command-tmsl"></a>Sequence 命令 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]使用**順序**批次模式中執行一組連續的作業，Analysis Services 執行個體上的命令。  整個命令，以及其元件部分的所有必須完成才會成功的交易順序。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  使用**順序**批次模式中執行一組連續的作業，Analysis Services 執行個體上的命令。  整個命令，以及其元件部分的所有必須完成才會成功的交易順序。  
   
  可以執行下列命令以循序方式，除了針對**重新整理**會同時處理多個物件的平行執行的命令。  
   
--   [建立命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)  
+-   [建立命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)  
   
--   [為 CreateOrReplace 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)  
+-   [為 CreateOrReplace 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)  
   
--   [Alter 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)  
+-   [Alter 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)  
   
--   [刪除命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)  
+-   [Delete 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)  
   
--   [重新整理命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)  
+-   [重新整理命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)  
   
--   [備份命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/backup-command-tmsl.md)  
+-   [備份命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/backup-command-tmsl.md)  
   
--   [還原命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)  
+-   [Restore 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)  
   
--   [附加命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)  
+-   [附加命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)  
   
--   [卸離命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)  
+-   [卸離命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)  
   
 ## <a name="request"></a>要求  
  **maxParallelism**是選擇性的屬性會決定是否**重新整理**循序或平行執行的作業。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  指派給整數**maxParallelism**決定在處理期間所使用的執行緒數目上限。 有效值為任何正整數。 將值設定為 1 等於無法同時 （使用一個執行緒）。  
   
- 只有**重新整理**以平行方式執行。 如果您修改**maxParallelism**若要使用固定的數目的執行緒，請務必檢閱的內容上[重新整理命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md) ，了解潛在的影響。 很可能破壞平行處理原則，即使您已供多個執行緒使用的方式來設定屬性。 下列的重新整理類型序列可讓您最佳的平行處理原則程度：  
+ 只有**重新整理**以平行方式執行。 如果您修改**maxParallelism**若要使用固定的數目的執行緒，請務必檢閱的內容上[重新整理命令&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md) ，了解潛在的影響。 很可能破壞平行處理原則，即使您已供多個執行緒使用的方式來設定屬性。 下列的重新整理類型序列可讓您最佳的平行處理原則程度：  
   
 -   首先，指定使用 ClearValues 的所有物件的 重新整理  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 01/08/2018
         {   
           "refresh": {   
             "type": "calculate",   
-            "object": {   
+            "objects": {   
              "database": "salesdatabase"   
             }   
           }   
@@ -103,7 +104,7 @@ ms.lasthandoff: 01/08/2018
  當命令執行成功，則傳回空的結果。 否則，傳回 XMLA 例外狀況。  
   
 ## <a name="usage-endpoints"></a>使用方式 （端點）  
- 這個命令項目用在陳述式的[Execute Method &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)呼叫透過 XMLA 端點，以下列方式公開：  
+ 這個命令項目用在陳述式的[Execute Method &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md)呼叫透過 XMLA 端點，以下列方式公開：  
   
 -   以 XMLA 視窗中 SQL Server Management Studio (SSMS)  
   
@@ -113,9 +114,9 @@ ms.lasthandoff: 01/08/2018
   
  您無法從 SSMS 產生現成的指令碼，此命令。 相反地，您可以開始使用範例，或撰寫您自己。  
   
- [ \[MS-SSAS T\]: SQL Server Analysis Services 表格式 （SQL Server 技術通訊協定）](http://go.microsoft.com/fwlink/p/?LinkId=784855)文件包含區段 3.1.5.2.2 描述結構的 JSON 表格式中繼資料命令和物件. 目前，該文件涵蓋命令和功能尚未實作用於 TMSL 指令碼。 請參閱主題 ([表格式模型指令碼語言 &#40;TMSL &#41;參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) 以釐清支援的項目。  
+ [ \[MS-SSAS T\]: SQL Server Analysis Services 表格式 （SQL Server 技術通訊協定）](http://go.microsoft.com/fwlink/p/?LinkId=784855)文件包含區段 3.1.5.2.2 描述結構的 JSON 表格式中繼資料命令和物件. 目前，該文件涵蓋命令和功能尚未實作用於 TMSL 指令碼。 請參閱主題 ([表格式模型指令碼語言&#40;TMSL&#41;參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) 以釐清支援的項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

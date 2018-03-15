@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 5ae4298fabb7147846b5ee87f391c1a0707cde3a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>開始使用 SQL Server 中的機器學習
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,9 +106,6 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
    SQL 開發人員的端對端解決方案提供您要從 SQL Server Management Studio 中執行 Python 程式碼。
 
-+ [發佈和取用的 Python 程式碼](../advanced-analytics/python/publish-consume-python-code.md)
-
-  本逐步解說提供的模型部署到使用 Server 機器學習 web 服務所需的所有程式碼。
 
 ### <a name="product-samples-with-code"></a>使用程式碼產品範例
 

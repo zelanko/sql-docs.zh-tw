@@ -1,7 +1,7 @@
 ---
 title: "資料移轉小幫手 (SQL Server) 的概觀 |Microsoft 文件"
 ms.custom: 
-ms.date: 02/07/2018
+ms.date: 03/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c387e5bb2a0b5cef10217b32807f88a8aee6c627
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>資料移轉小幫手的概觀
 
@@ -45,27 +45,20 @@ ms.lasthandoff: 02/09/2018
 - 探索可能會影響升級至內部部署 SQL Server 的問題。 這些所謂的相容性問題，並分成下列類別：
 
   - 重大變更
-
   - 行為變更
-
   - 已被取代的功能
 
 - 探索目標 SQL Server 平台的資料庫可以受益於在升級後的新功能。 這些功能的建議形式被描述，並分成下列類別：
 
   - 效能
-
   - Security
-
   - 儲存空間
 
 - 將內部部署 SQL Server 執行個體移轉至的現代的 SQL Server 執行個體，裝載在內部部署或在 Azure 虛擬機器 (VM) 可從您的內部部署網路存取。 可以使用 VPN 或其他技術來存取 Azure VM。 移轉工作流程可協助您移轉下列元件：
 
   - 資料庫的結構描述
-
   - 資料和使用者
-
   - 伺服器角色
-
   - SQL Server 和 Windows 登入
 
 - 成功移轉之後，應用程式可以連接到目標 SQL server 資料庫順暢。
@@ -89,6 +82,9 @@ DMA 取代所有舊版的 SQL Server Upgrade Advisor，並適用於大多數的 
 - SQL Server 2016
 - 在 Windows 和 Linux 上的 SQL Server 2017
 - Azure SQL Database
+
+> [!NOTE] 
+> DMA 目前不支援 Azure SQL Database 管理執行個體做為目標。
 
 ## <a name="installation"></a>安裝
 

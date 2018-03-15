@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b090579bd0a32b901d1c1cedcc26b290d7a68771
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 4b439725c8c9e522ed500f717686b8a9cf7d972a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>部署和使用使用 mrsdeploy 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +56,6 @@ R 伺服器的這個部署功能可提供下列優勢：
   
   您可以使用計分與支援的 R 模型物件的即時增進計分作業的速度。
 
-+ 發佈為 web 服務的 Python 程式碼
-
-  如需範例，請參閱[發行和取用的 Python 程式碼](./python/publish-consume-python-code.md)。
-
 + 非同步批次耗用量
 
   透過批次執行現在使用以非同步方式呼叫大型的輸入資料的 web 服務。
@@ -88,7 +84,7 @@ SQL Server 2017 CTP 2.0 和更新版本包含這項功能之前僅能使用 R �
 
 3. 安裝程式完成之後**Microsoft Machine Learning 伺服器**，請手動新增下列登錄機碼的**mrsdeploy**，以指定 R_SERVER 檔案的基底資料夾。 
 
-    + 建立新的登錄機碼`H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
+    + 建立新的登錄機碼 `H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
     + 索引鍵的值設定`"C:\Program Files\Microsoft SQL Server\140\R_SERVER"`。
 
 4. 完成，請開啟[管理員公用程式](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility)。
