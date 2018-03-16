@@ -1,5 +1,5 @@
 ---
-title: "STLineFromText (geography 資料類型) |Microsoft 文件"
+title: "STLineFromText (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回**geography**從開放式地理空間協會 (OGC) 已知文字 (well-known text，WKT) 表示法，夾帶任何 Z （高度） 和 M （測量） 值的執行個體帶有的執行個體。
+從開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的文字 (Well-Known Text，WKT) 表示法傳回 **geography** 執行個體，經由此執行個體夾帶的任何 Z (高度) 和 M (測量) 值來擴充。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,20 +45,20 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>引數  
  *linestring_tagged_text*  
- 是的 WKT 表示法**geographyLineString**您想要傳回的執行個體。 *linestring_tagged_text*是**nvarchar （max)**運算式。  
+ 這是要傳回之 **geographyLineString** 執行個體的 WKT 表示法。 *linestring_tagged_text* 是一個 **nvarchar(max)** 運算式。  
   
  *SRID*  
- 是**int**運算式，表示的空間參考識別碼 (SRID) 的**geographyLineString**您想要傳回的執行個體。  
+ 這是 **int** 運算式，表示要傳回之 **geographyLineString** 執行個體的空間參考識別碼 (SRID)。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
- OGC 類型： **LineString**  
+ OGC 類型：**LineString**  
   
-## <a name="remarks"></a>備註  
- 這個方法會擲回**FormatException**如果輸入格式不正確。  
+## <a name="remarks"></a>Remarks  
+ 如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `STLineFromText()` 建立 `geography` 例項。  

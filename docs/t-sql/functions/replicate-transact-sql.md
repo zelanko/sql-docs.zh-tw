@@ -48,16 +48,16 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="arguments"></a>引數  
  *string_expression*  
- 這是字元字串或二進位資料類型的運算式。 *string_expression*可以是字元或二進位資料。  
+ 這是字元字串或二進位資料類型的運算式。 *string_expression* 可以是字元或二進位資料。  
   
 > [!NOTE]  
->  如果*string_expression*的類型不是**varchar （max)**或**nvarchar （max)**，複寫會截斷為 8,000 個位元組的傳回值。 若要傳回值大於 8,000 個位元組， *string_expression*必須明確轉換成適當的大數值資料類型。  
+>  如果 *string_expression* 的類型不是 **varchar(max)** 或 **nvarchar(max)**則 REPLICATE 會將傳回值截斷為 8,000 位元組。 若要傳回大於 8,000 位元組的值，*string_expression* 必須明確轉換成適當的大數值資料類型。  
   
  *integer_expression*  
- 這是任何整數類型的運算式包括**bigint**。 如果*clause><*是負數，會傳回 NULL。  
+ 這是任何整數類型的運算式，包括 **bigint**。 如果 *integer_expression* 是負數，則會傳回 Null。  
   
 ## <a name="return-types"></a>傳回類型  
- 會傳回相同的型別*string_expression*。  
+ 傳回與 *string_expression*相同的類型。  
   
 ## <a name="examples"></a>範例  
   
@@ -123,10 +123,10 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C： 使用 REPLICATE  
- 下列範例會複寫`0`字元四次的前面`ItemCode`值。  
+### <a name="c-using-replicate"></a>C：使用 REPLICATE  
+ 下列範例會在 `ItemCode` 值前面重複 `0` 字元四次。  
   
 ```  
 -- Uses AdventureWorks  
@@ -154,7 +154,7 @@ BB Ball Bearing          BE-2349        0000BE-2349
 ## <a name="see-also"></a>另請參閱  
  [SPACE &#40;Transact-SQL&#41;](../../t-sql/functions/space-transact-sql.md)  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

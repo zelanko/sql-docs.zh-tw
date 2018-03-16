@@ -1,5 +1,5 @@
 ---
-title: "STEnvelope (geometry 資料類型) |Microsoft 文件"
+title: "STEnvelope (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,9 +44,9 @@ STEnvelope ( )
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `STGeomFromText()`，建立從 (0,0) 到 (2,3) 的 `LineString` 例項，並使用 `STEnvelope()` 傳回 `LineString` 的週框方塊。  

@@ -1,5 +1,5 @@
 ---
-title: "INDEXKEY_PROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: INDEXKEY_PROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
   傳回索引鍵的相關資訊。 如果是 XML 索引，則傳回 NULL。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[sys.index_columns &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]反之，請使用 [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,20 +54,20 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
   
 ## <a name="arguments"></a>引數  
  *object_ID*  
- 這是資料表或索引檢視的物件識別碼。 *object_ID*是**int**。  
+ 這是資料表或索引檢視的物件識別碼。 *object_ID* 是 **int**。  
   
  *index_ID*  
- 這是索引識別碼。 *index_ID*是**int**。  
+ 這是索引識別碼。 *index_ID* 是 **int**。  
   
  *key_ID*  
- 這是索引鍵資料行位置。 *key_ID*是**int**。  
+ 這是索引鍵資料行位置。 *key_ID* 是 **int**。  
   
- *屬性*  
- 這是將傳回之資訊所屬的屬性名稱。 *屬性*是字元字串，而且可以是下列值之一。  
+ *property*  
+ 這是將傳回之資訊所屬的屬性名稱。 *property* 是一個字元字串，它可以是下列值之一。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
-|**ColumnId**|在資料行識別碼*key_ID*的索引位置。|  
+|**ColumnId**|在索引的 *key_ID*位置之資料行識別碼。|  
 |**IsDescending**|儲存索引資料行的順序。<br /><br /> 1 = 遞減 0 = 遞增|  
   
 ## <a name="return-types"></a>傳回類型  
@@ -101,10 +101,10 @@ Column ID   Asc or Desc order
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [INDEX_COL &#40;TRANSACT-SQL &#41;](../../t-sql/functions/index-col-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [INDEX_COL &#40;Transact-SQL&#41;](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [sys.objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

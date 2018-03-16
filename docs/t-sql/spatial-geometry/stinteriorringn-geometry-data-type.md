@@ -1,5 +1,5 @@
 ---
-title: "STInteriorRingN (geometry 資料類型) |Microsoft 文件"
+title: "STInteriorRingN (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回指定內部環形**Polygongeometry**執行個體。
+傳回 **Polygongeometry** 執行個體的指定內環。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 是**int**介於 1 到中內環數的運算式**幾何**執行個體。  
+ 這是介於 1 和 **geometry** 執行個體中內環數之間的 **int** 運算式。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- 開放式地理空間協會 (OGC) 類型： **LineString**  
+ 開放地理空間協會 (OGC) 類型：**LineString**  
   
-## <a name="remarks"></a>備註  
- 這個方法會傳回**null**如果**幾何**執行個體不是多邊形。 這個方法也會擲回**ArgumentOutOfRangeException**如果運算式大於環形數。 可以使用傳回的環數`STNumInteriorRing``()`。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體不是多邊形，這個方法會傳回 **null**。 如果此運算式大於環形數，此方法也會擲回 **ArgumentOutOfRangeException**。 可以使用 `STNumInteriorRing``()` 傳回環形數。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立`Polygon`執行個體，並使用`STInteriorRingN()`傳回形式之多邊形的內部環形**LineString**。  
+ 下例範例會建立 `Polygon` 執行個體，並使用 `STInteriorRingN()` 傳回 **LineString** 形式之多邊形的內環。  
   
 ```  
 DECLARE @g geometry;  

@@ -1,5 +1,5 @@
 ---
-title: "存在 (TRANSACT-SQL) |Microsoft 文件"
+title: EXISTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ EXISTS ( subquery )
   
 ## <a name="arguments"></a>引數  
  *subquery*  
- 這是受限制的 SELECT 陳述式。 不允許 INTO 關鍵字。 如需詳細資訊，請參閱中的子查詢的相關資訊[SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
+ 這是受限制的 SELECT 陳述式。 不允許 INTO 關鍵字。 如需詳細資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md) 中子查詢的相關資訊。  
   
 ## <a name="result-types"></a>結果類型  
  **布林**  
@@ -119,7 +119,7 @@ Willis                                             Johnson
  ```  
   
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. 利用 EXISTS 和 = ANY 來比較查詢  
- 下列範例會顯示兩項查詢，它們用來尋找與供應商同名的商店。 第一個查詢使用`EXISTS`和第二個使用`=``ANY`。  
+ 下列範例會顯示兩項查詢，它們用來尋找與供應商同名的商店。 第一項查詢使用 `EXISTS`，第二項查詢使用 `=``ANY`。  
   
 ```  
 -- Uses AdventureWorks  
@@ -302,10 +302,10 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-using-exists"></a>F. 使用 EXISTS  
- 下列範例會識別是否有任何資料列`ProspectiveBuyer`資料表可能是相符項目中的資料列`DimCustomer`資料表。 查詢會傳回資料列時，才同時`LastName`和`BirthDate`兩個資料表的相符項目中的值。  
+ 下列範例會識別 `ProspectiveBuyer` 資料表中的任何資料列是否與 `DimCustomer` 資料表中的資料列相符。 只有當兩個資料表中的 `LastName` 和 `BirthDate` 都相符時，此查詢才會傳回資料列。  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. 使用 NOT EXISTS  
- NOT EXISTS 的作用與 EXISTS 相反。 如果子查詢未傳回任何資料列，便滿足 NOT EXISTS 中的 WHERE 子句。 下列範例會尋找資料列中的`DimCustomer`資料表`LastName`和`BirthDate`不符合任何項目中的`ProspectiveBuyers`資料表。  
+ NOT EXISTS 的作用與 EXISTS 相反。 如果子查詢未傳回任何資料列，便滿足 NOT EXISTS 中的 WHERE 子句。 下列範例會在 `DimCustomer` 資料表中尋找 `LastName` 和 `BirthDate` 均與 `ProspectiveBuyers` 資料表中的任何項目不符的資料列。  
   
 ```  
 -- Uses AdventureWorks  
@@ -333,7 +333,7 @@ WHERE NOT EXISTS
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "建立 BROKER 優先權 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  定義優先權等級以及用來判斷哪一個 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談要指派給此優先權等級的準則集。 優先權等級指派給任何交談端點會使用相同的合約和服務的交談優先權中指定的組合。 優先權的範圍值是從 1 (低) 到 10 (高)。 預設為 5。  
+  定義優先權等級以及用來判斷哪一個 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談要指派給此優先權等級的準則集。 此優先權等級會指派給使用相同合約與服務組合 (在此交談優先權內指定) 的任何交談端點。 優先權的範圍值是從 1 (低) 到 10 (高)。 預設值為 5。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,16 +64,16 @@ FOR CONVERSATION
   
 ## <a name="arguments"></a>引數  
  *ConversationPriorityName*  
- 指定此交談優先權的名稱。 名稱必須是唯一在目前資料庫中，而且必須符合的規則[!INCLUDE[ssDE](../../includes/ssde-md.md)][識別碼](../../relational-databases/databases/database-identifiers.md)。  
+ 指定此交談優先權的名稱。 此名稱在目前的資料庫中必須是唯一的，而且必須符合 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
  SET  
  指定用來判斷交談優先權是否套用到交談的準則。 如果有指定，SET 至少必須包含一個準則：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。 如果未指定 SET，所有的三個準則都會設定預設值。  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
- 指定合約名稱，以用來做為判斷交談優先權是否要套用到交談的準則。 *ContractName*是[!INCLUDE[ssDE](../../includes/ssde-md.md)]識別碼，而且必須在目前資料庫中指定的合約名稱。  
+ 指定合約名稱，以用來做為判斷交談優先權是否要套用到交談的準則。 *ContractName* 是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 識別碼，而且必須指定目前資料庫中的合約名稱。  
   
  *ContractName*  
- 指定交談優先權可以套用到交談，其中起始交談的 BEGIN DIALOG 陳述式指定 ON CONTRACT *ContractName*。  
+ 指定只能將交談優先權套用到啟動交談之 BEGIN DIALOG 陳述式指定了 ON CONTRACT *ContractName* 的交談上。  
   
  ANY  
  指定交談優先權可以套用到任何交談，不論它使用哪一個合約。  
@@ -83,14 +83,14 @@ FOR CONVERSATION
  LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  指定用來判斷交談優先權是否套用到交談端點之準則的服務名稱。  
   
- *LocalServiceName*是[!INCLUDE[ssDE](../../includes/ssde-md.md)]識別項。 它必須指定目前資料庫中的服務名稱。  
+ *LocalServiceName* 是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 識別碼。 它必須指定目前資料庫中的服務名稱。  
   
  *LocalServiceName*  
  指定交談優先權可以套用到以下項目：  
   
--   起始端服務名稱符合任何起始端交談端點*LocalServiceName*。  
+-   起始端服務名稱符合 *LocalServiceName* 的任何起始端交談端點。  
   
--   目標服務名稱符合任何目標交談端點*LocalServiceName*。  
+-   目標服務名稱符合 *LocalServiceName* 的任何目標交談端點。  
   
  ANY  
  -   指定交談優先權可以套用到任何交談端點，不論此端點使用的本機服務名稱為何。  
@@ -100,24 +100,24 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  指定用來判斷交談優先權是否套用到交談端點之準則的服務名稱。  
   
- *RemoteServiceName*是類型的常值**nvarchar （256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]使用位元組的比較，以比對*RemoteServiceName*字串。 這項比較會區分大小寫，且不會考慮目前的定序。 目標服務可以在目前的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體或遠端 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中。  
+ *RemoteServiceName* 是類型 **nvarchar(256)** 的常值。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會利用逐位元組的比較方式來比對 *RemoteServiceName* 字串。 這項比較會區分大小寫，且不會考慮目前的定序。 目標服務可以在目前的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體或遠端 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中。  
   
  '*RemoteServiceName*'  
  指定交談優先權可以套用到以下項目：  
   
--   任何起始端交談端點相關聯的目標服務名稱符合*RemoteServiceName*。  
+-   關聯目標服務名稱符合 *RemoteServiceName* 的任何起始端交談端點。  
   
--   任何目標交談端點相關聯的起始端服務名稱符合*RemoteServiceName*。  
+-   關聯起始端服務名稱符合 *RemoteServiceName* 的任何目標交談端點。  
   
  ANY  
  指定交談優先權可套用到任何交談端點，不論與此端點有關的遠端服務名稱為何。  
   
  預設值為 ANY。  
   
- PRIORITY_LEVEL = { *PriorityValue* | **預設**}  
- 指定優先權，以指派使用交談優先權中指定之合約和服務的任何交談端點。 *PriorityValue*必須是從 1 （最低優先權） 到 10 （最高優先權） 常值的整數。 預設為 5。  
+ PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
+ 指定優先權，以指派使用交談優先權中指定之合約和服務的任何交談端點。 *PriorityValue* 必須是從 1 (最低優先權) 到 10 (最高優先權) 的整數常值。 預設值為 5。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會指派優先權等級給交談端點。 優先權等級會控制與此端點有關之作業的優先權。 每個交談都具有兩個交談端點：  
   
 -   起始端交談端點會讓交談的某一端與起始端服務和起始端佇列產生關聯。 起始端交談端點是在執行 BEGIN DIALOG 陳述式時建立的。 與起始端交談端點相關聯的作業包括下列項目：  
@@ -138,7 +138,7 @@ FOR CONVERSATION
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在建立交談端點時，指派交談優先權等級。 交談端點會保留優先權等級，直到交談結束為止。 新的優先權或現有優先權的變更不會套用至現有的交談。  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]交談端點的優先權層級交談優先權指派給最佳其合約和服務準則與端點屬性相符。 下表將顯示相符優先順序：  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會根據合約和服務準則與端點屬性最相符的交談優先權，將優先權等級指派給交談端點。 下表將顯示相符優先順序：  
   
 |作業合約|作業本機服務|作業遠端服務|  
 |------------------------|-----------------------------|------------------------------|  
@@ -163,7 +163,7 @@ FOR CONVERSATION
   
 -   相同 Database Engine 執行個體的服務之間。  
   
--   所有[!INCLUDE[ssSB](../../includes/sssb-md.md)]資料庫中的作業都會被指派預設優先權 5，如果資料庫中尚未建立任何交談優先權。  
+-   如果資料庫中尚未建立任何交談優先權，則資料庫中的所有 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 作業都會被指派預設優先權 5。  
   
 ## <a name="permissions"></a>Permissions  
  建立交談優先權的權限預設為 db_ddladmin 或 db_owner 固定資料庫角色的成員，以及 sysadmin 固定伺服器角色的成員。 需要資料庫的 ALTER 權限。  
@@ -291,14 +291,14 @@ CREATE BROKER PRIORITY BronzePriority
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER BROKER PRIORITY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [建立合約 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP BROKER PRIORITY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [GET CONVERSATION GROUP &#40;TRANSACT-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [接收 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
  [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   

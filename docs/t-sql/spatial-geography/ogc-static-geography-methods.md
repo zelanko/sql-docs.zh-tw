@@ -1,5 +1,5 @@
 ---
-title: "OGC 靜態地理方法 |Microsoft 文件"
+title: "OGC 靜態地理方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,8 +72,8 @@ ms.lasthandoff: 01/25/2018
 -   [STMPolyFromWKB](../../t-sql/spatial-geography/stmpolyfromwkb-geography-data-type.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Geography 執行個體上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Geography 執行個體上的擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [地理執行個體上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [地理執行個體上擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [擴充的靜態地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

@@ -43,7 +43,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [翻譯物件](#Transl)  
   
-##  <a name="Action">動作物件</a>  
+##  <a name="Action"></a>動作物件  
  動作類別是用以在瀏覽 Cube 的某些區域時，建立主動式回應。 動作物件可以使用 AMO 來定義，但是是從瀏覽資料的用戶端應用程式來使用這些物件。 動作可以屬於不同類型，而且必須據其類型來建立。 動作可以是：  
   
 -   鑽研動作，該動作會傳回一組資料列，這些資料列表示動作發生所在之 Cube 中選定資料格的基礎資料。  
@@ -350,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp">檢視方塊物件</a>  
+##  <a name="Persp"></a>檢視方塊物件  
  <xref:Microsoft.AnalysisServices.Perspective> 物件可以使用 AMO 來定義，但是是從瀏覽資料的用戶端應用程式來使用這些物件。  
   
  建立 <xref:Microsoft.AnalysisServices.Perspective> 物件需要下列步驟：  
@@ -413,7 +413,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC">ProactiveCaching 物件</a>  
+##  <a name="PC"></a>ProactiveCaching 物件  
  <xref:Microsoft.AnalysisServices.ProactiveCaching> 物件可由 AMO 定義。  
   
  建立 <xref:Microsoft.AnalysisServices.ProactiveCaching> 物件需要下列步驟：  
@@ -470,7 +470,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl">翻譯物件</a>  
+##  <a name="Transl"></a>翻譯物件  
  翻譯物件可以使用 AMO 來定義，但是是從瀏覽資料的用戶端應用程式來使用這些物件。 翻譯物件是非常容易撰寫程式的物件。 物件標題的翻譯是由「地區設定識別碼」與「已翻譯標題」配對所提供。 任何標題都可以啟用多個翻譯。 翻譯可以提供給大部分的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件使用，例如維度、屬性、階層、Cube、量值群組、量值等等。  
   
  下列程式碼範例為屬性 Product Name 的名稱提供西班牙文的翻譯。  

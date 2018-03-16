@@ -1,5 +1,5 @@
 ---
-title: "建立資料庫 (Parallel Data Warehouse) |Microsoft 文件"
+title: "CREATE DATABASE (平行處理資料倉儲) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-database-parallel-data-warehouse"></a>建立資料庫 (Parallel Data Warehouse)
+# <a name="create-database-parallel-data-warehouse"></a>CREATE DATABASE (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  建立新的資料庫上[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]應用裝置。 若要建立的應用裝置資料庫相關聯的所有檔案，並設定最大的大小和資料庫資料表和交易記錄檔自動成長選項，請使用此陳述式。  
+  在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 設備上建立新資料庫。 使用此陳述式建立和設備資料庫關聯的所有檔案，以及設定資料庫表格和交易記錄的大小上限與自動成長選項。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,42 +45,42 @@ WITH (
   
 ## <a name="arguments"></a>引數  
  *database_name*  
- 新資料庫的名稱。 如需允許的資料庫名稱的詳細資訊，請參閱 「 物件命名規則 」 和 「 保留的資料庫名稱 」 中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
+ 新資料庫的名稱。 如需所允許資料庫名稱的詳細資訊，請參閱 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的「物件命名規則」和「保留的資料庫名稱」。  
   
- 自動成長 = ON |**OFF**  
- 指定是否*replicated_size*， *distributed_size*，和*log_size*參數，此資料庫會自動擴大超過其指定所需大小。 預設值是**OFF**。  
+ AUTOGROW = ON | **OFF**  
+ 指定此資料庫的 *replicated_size*、*distributed_size*和 *log_size* 參數是否將會視需要自動成長至超出其指定大小。 預設值是 **OFF**。  
   
- 如果自動成長是 ON， *replicated_size*， *distributed_size*，和*log_size*會成長為所需要的 （不在指定的初始大小的區塊） 的每個資料插入，已配置更新或需要更多的儲存空間，比其他動作。  
+ 如果 AUTOGROW 設為 ON，在每次插入資料、更新資料或進行其他動作而導致所需儲存空間大於已配置大小時，*replicated_size*、*distributed_size*和 *log_size* 就會視需要成長 (不在初始指定大小的區塊中)。  
   
- 如果自動成長是 OFF，大小不會自動成長。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]嘗試的動作需要時，會傳回錯誤*replicated_size*， *distributed_size*，或*log_size*成長超過指定的值。  
+ 如果 AUTOGROW 設為 OFF，大小就不會自動成長。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 在嘗試進行需要 *replicated_size*、*distributed_size* 或 *log_size* 成長至超出其指定值的動作時，將會傳回錯誤。  
   
- 自動成長為各種規模的 ON 或 OFF，所有大小的。 例如，不可能設為自動成長 ON *log_size*，但未設定為*replicated_size*。  
+ 只能針對所有大小將 AUTOGROW 設為 ON 或 OFF。 例如，如果為 *log_size* 將 AUTOGROW 設為 ON，就不得不為 *replicated_size* 將 AUTOGROW 設為 ON。  
   
  *replicated_size* [ GB ]  
- 正數。 設定複寫的資料表和對應的資料配置的總空間的大小 （以整數或十進位 gb 為單位）*每個計算節點上*。 最小值和最大值為*replicated_size*需求，請參閱中的 「 最小和最大值 」 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
+ 一個正數。 設定配置給「每個計算節點上」複寫資料表和相對應資料的總空間大小 (以整數或小數 GB 為單位)。 對於最低和最高 *replicated_size* 需求，請參閱 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的「最小值與最大值」。  
   
- 如果自動成長是 ON，將允許複寫的資料表成長超過這個限制。  
+ 如果 AUTOGROW 設為 ON，將允許複寫資料表成長至超出此限制。  
   
- 如果自動成長是 OFF，將會的插入到現有的複寫資料的資料表，或更新現有使用者嘗試建立新的複寫的資料表時，如果複寫資料表的方式，將會增加的大小超過傳回錯誤*replicated_size*.  
+ 當 AUTOGROW 設為 OFF 時，如果使用者嘗試建立新的複寫資料表、在現有的複寫資料表中插入資料，或更新現有的複寫資料表而導致大小增加至超出 *replicated_size*，便會傳回錯誤。  
   
  *distributed_size* [ GB ]  
- 正數。 大小，以整數或十進位 （gb），配置給分散式的資料表 （和對應的資料） 的總空間*跨設備*。 最小值和最大值為*distributed_size*需求，請參閱中的 「 最小和最大值 」 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
+ 一個正數。 配置給「跨設備」分散式資料表 (和相對應資料) 的總空間大小 (以整數或小數 GB 為單位)。 對於最低和最高 *distributed_size* 需求，請參閱 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的「最小值與最大值」。  
   
- 如果自動成長是 ON，將允許分散式的資料表成長超過這個限制。  
+ 如果 AUTOGROW 設為 ON，將允許分散式資料表成長至超出此限制。  
   
- 如果使用者嘗試建立新的分散式的資料表，將資料插入現有的分散式資料表，或更新現有的分散式的資料表將會增加的大小超過的方式，如果自動成長是 OFF 時，會傳回錯誤*distributed_size*.  
+ 當 AUTOGROW 設為 OFF 時，如果使用者嘗試建立新的分散式資料表、在現有的分散式資料表中插入資料，或更新現有的分散式資料表而導致大小增加至超出 *distributed_size*，便會傳回錯誤。  
   
  *log_size* [ GB ]  
- 正數。 交易記錄檔的大小 （以整數或十進位 gb 為單位）*跨設備*。  
+ 一個正數。 *跨設備*交易記錄的大小 (以整數或十進位 GB 為單位)。  
   
- 最小值和最大值為*log_size*需求，請參閱中的 「 最小和最大值 」 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
+ 對於最低和最高 *log_size* 需求，請參閱 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的「最小值與最大值」。  
   
- 如果自動成長為 ON 時，記錄檔可以成長超過這個限制。 使用[DBCC SHRINKLOG （Azure SQL 資料倉儲）](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)陳述式的記錄檔的大小減少回其原始大小。  
+ 如果 AUTOGROW 設為 ON，會允許記錄檔成長至超過此限制。 使用 [DBCC SHRINKLOG (Azure SQL 資料倉儲)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) 陳述式，將記錄檔大小縮小至其原始大小。  
   
- 如果自動成長是 OFF，將會傳回錯誤，會增加記錄大小超出個別計算節點上的任何動作的使用者*log_size*。  
+ 當 AUTOGROW 設為 OFF 時，如果出現會導致個別計算節點的記錄檔大小增加至超出 *log_size* 的任何動作，將會向使用者傳回錯誤。  
   
 ## <a name="permissions"></a>Permissions  
- 需要**CREATE ANY DATABASE**中 master 資料庫或成員資格的權限**sysadmin**固定的伺服器角色。  
+ 需要 master 資料庫中的**建立任何資料庫**權限，或**系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
  下列範例會將建立資料庫的權限提供給資料庫使用者 Fay。  
   
@@ -92,31 +92,31 @@ GO
 ```  
   
 ## <a name="general-remarks"></a>一般備註  
- 建立資料庫時資料庫相容性層級 120 的相容性層級[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 這可確保資料庫將無法使用的所有[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]PDW 使用的功能。  
+ 建立資料庫時會使用資料庫相容性層級 120 建立，這是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的相容性層級。 這可確保資料庫將能使用 PDW 所使用的所有 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 功能。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- CREATE DATABASE 陳述式不允許在明確的交易。 如需詳細資訊，請參閱[陳述式](../../t-sql/statements/statements.md)。  
+ 在明確的交易中，並不允許使用 CREATE DATABASE 陳述式。 如需詳細資訊，請參閱[陳述式](../../t-sql/statements/statements.md)。  
   
- 最小和最大資料庫上的條件約束上的資訊，請參閱 「 最小和最大值 」，在[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
+ 如需資料庫最小和最大條件約束的資訊，請參閱 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的「最小值和最大值」。  
   
- 建立資料庫時，必須有足夠的空間*每個計算節點上*配置以下幾種大小的總和：  
+ 建立資料庫時，「每個計算節點上」都必須有足夠的可用空間，以配置下列大小的總和：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫與資料表的大小*replicated_table_size*。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表大小為 *replicated_table_size*。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫與資料表的大小 (*distributed_table_size* / 計算節點的數字)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表大小為 (*distributed_table_size* / 計算節點數目)。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔的大小 (*log_size* / 計算節點的數字)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會記錄 (*log_size* / 計算節點數目) 的大小。  
   
 ## <a name="locking"></a>鎖定  
- 資料庫物件上採用共用的鎖定。  
+ 在 DATABASE 物件上採取共用鎖定。  
   
 ## <a name="metadata"></a>中繼資料  
- 這項作業成功，項目會顯示此資料庫之後[sys.databases &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)和[sys.objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中繼資料檢視。  
+ 在這項作業成功之後，[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 和 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中繼資料檢視中將會顯示此資料庫的項目。  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-basic-database-creation-examples"></a>A. 基本資料庫建立範例  
- 下列範例會建立資料庫`mytest`100 GB 的儲存體配置每個複寫的資料表、 500 GB，每個應用裝置分散式的資料表，和 100 GB，每個交易記錄檔的應用裝置的運算節點。 在此範例中，自動成長預設為關閉。  
+ 以下範例會建立資料庫 `mytest`，其儲存區配置為每一計算節點具備 100 GB 以用於複寫資料表、每一設備 500 GB 以用於分散式資料表，以及每一設備 100 GB 以用於交易記錄。 在這個範例中，AUTOGROW 預設為關閉。  
   
 ```  
 CREATE DATABASE mytest  
@@ -126,7 +126,7 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB );  
 ```  
   
- 下列範例會建立資料庫`mytest`與上述相同的參數，除了自動成長已開啟。 這可讓資料庫成長超出指定的大小參數。  
+ 以下範例會建立與上述參數相同的資料庫 `mytest`，但 AUTOGROW 已開啟。 這可以讓資料庫成長至超出指定的大小參數。  
   
 ```  
 CREATE DATABASE mytest  
@@ -137,8 +137,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB);  
 ```  
   
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. 建立部分 gb 大小的資料庫  
- 下列範例會建立資料庫`mytest`，關閉自動成長，每個複寫資料表的計算節點的 1.5 GB、 5.25 GB，每個應用裝置分散式的資料表和每個交易記錄檔的應用裝置的 10 GB 的儲存體配置。  
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. 建立具備部分 GB 大小的資料庫  
+ 以下範例會建立 AUTOGROW 設為關閉的資料庫 `mytest`，其儲存區配置為每一計算節點具備 1.5 GB 以用於複寫資料表、每一設備 5.25 GB 以用於分散式資料表，以及每一設備 10 GB 以用於交易記錄，。  
   
 ```  
 CREATE DATABASE mytest  
@@ -149,7 +149,7 @@ CREATE DATABASE mytest
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE &#40;平行資料倉儲 &#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)   
+ [ALTER DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STArea (geography 資料類型) |Microsoft 文件"
+title: "STArea (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geography-data-type"></a>STArea (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回總介面區**geography**執行個體。 中的空間參考識別碼所使用的測量單位平方傳回結果為 STArea() **geography**執行個體; 例如，如果執行個體的 SRID 為 4326，STArea() 傳回結果中平方公尺來測量。  
+  傳回 **geography** 執行個體的總介面區。 STArea() 的結果會使用 **geography** 執行個體之空間參考識別碼所使用的測量單位平方傳回；例如，如果此執行個體的 SRID 為 4326，STArea() 會使用平方公尺傳回結果。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
- CLR 傳回類型： **SqlDouble**  
+ CLR 傳回類型：**SqlDouble**  
   
-## <a name="remarks"></a>備註  
- STArea() 傳回 0，如果**geography**執行個體包含 0 和 1 維度的圖形或者它是空白。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geography** 執行個體僅包含 0 維度和 1 維度的圖形或者它是空的，STArea() 會傳回 0。  
   
 > [!NOTE]  
->  上的方法**geography**資料型別的產生度量傳回值將會有不同的結果，根據此方法中使用的執行個體的 SRID。 如需有關 Srid 的詳細資訊，請參閱[空間參考識別碼 &#40;Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  產生度量傳回值之 **geography** 資料類型上的方法將會根據此方法中使用之執行個體的 SRID 而有不同的結果。 如需有關 SRID 的詳細資訊，請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`STArea()`建立`Polygon``geography`執行個體，並計算此多邊形的區域。  
+ 下列範例會使用 `STArea()` 建立 `Polygon``geography` 執行個體，並計算此多邊形的區域。  
   
 ```  
 DECLARE @g geography;  

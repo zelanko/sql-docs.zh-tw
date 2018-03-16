@@ -1,5 +1,5 @@
 ---
-title: "所有 (TRANSACT-SQL) |Microsoft 文件"
+title: ALL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -51,31 +51,31 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
   
 ## <a name="arguments"></a>引數  
  *scalar_expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  這是一個比較運算子。  
   
  *subquery*  
- 這是傳回單一資料行結果集的子查詢。 傳回的資料行的資料類型必須是相同的資料類型的資料類型為*scalar_expression*。  
+ 這是傳回單一資料行結果集的子查詢。 所傳回資料行的資料類型必須與 *scalar_expression* 的資料類型相同。  
   
  這是一個受限制的 SELECT 陳述式，其中不允許使用 ORDER BY 子句和 INTO 關鍵字。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
- 當指定的比較為 TRUE，則傳回 TRUE 的所有配對 (*scalar_expression***，***x)*，當*x*是單一資料行集中的值; 否則傳回 FALSE。  
+ 若各組 (*scalar_expression***,***x)* 的指定比較都是 TRUE，當 *x* 是單一資料行集中的值時，會傳回 TRUE；否則，會傳回 FALSE。  
   
 ## <a name="remarks"></a>備註  
- ALL 需要*scalar_expression*正面比較到子查詢會傳回每個值。 例如，如果子查詢傳回 2 和 3 個值*scalar_expression* < = ALL （子查詢） 會評估為 TRUE 的*scalar_expression*為 2。 如果子查詢傳回 2 和 3 個值*scalar_expression* = ALL （子查詢） 會評估為 FALSE，因為部分子查詢 （即值 3） 的值不符合準則的運算式。  
+ ALL 需要正面比較 *scalar_expression* 與子查詢所傳回的每個值。 例如，如果子查詢傳回 2 和 3 的值，*scalar_expression* <= ALL (子查詢) 會針對值為 2 的 *scalar_expression* 評估為 TRUE。 如果子查詢傳回 2 和 3 的值，*scalar_expression* = ALL (子查詢) 就會評估為 FALSE，因為子查詢 (值為 3) 的某些值不符合運算式的準則。  
   
- 需要的陳述式*scalar_expression*正面比較只有一個子查詢所傳回的值，請參閱[部分 &#124;任何 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
+ 如需要求正面比較 *scalar_expression* 和僅由子查詢傳回之單一值的陳述式，請參閱 [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)。  
   
- 此主題中所使用的子查詢都是指 ALL。 都可用來與[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)和[選取](../../t-sql/queries/select-transact-sql.md)。  
+ 此主題中所使用的子查詢都是指 ALL。 ALL 也可以搭配 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 和 [SELECT](../../t-sql/queries/select-transact-sql.md) 使用。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立預存程序會決定是否將指定的所有元件`SalesOrderID`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有組件建立一份 `SalesOrderID` 值數目的清單，然後確認所有 `DaysToManufacture` 都在指定的天數範圍內。  
+ 下列範例會建立預存程序，以判斷 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中所指定 `SalesOrderID` 的所有元件，是否都可在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有組件建立一份 `SalesOrderID` 值數目的清單，然後確認所有 `DaysToManufacture` 都在指定的天數範圍內。  
   
 ```  
 -- Uses AdventureWorks  
@@ -117,10 +117,10 @@ EXECUTE DaysToBuild 49080, 1 ;
   
 ## <a name="see-also"></a>另請參閱  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

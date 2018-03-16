@@ -1,5 +1,5 @@
 ---
-title: "MinDbCompatibilityLevel (geography 資料類型) |Microsoft 文件"
+title: "MinDbCompatibilityLevel (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  傳回可辨識的最低資料庫相容性**geography**資料型別。  
+  傳回可辨識 **geography** 資料類型的最低資料庫相容性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型： **int**  
+ CLR 傳回類型：**int**  
   
-## <a name="remarks"></a>備註  
- 在變更資料庫的相容性層級之前，請先使用 `MinDbCompatibilityLevel()` 測試空間物件的相容性。 無效的**geography**類型會傳回 110。  
+## <a name="remarks"></a>Remarks  
+ 在變更資料庫的相容性層級之前，請先使用 `MinDbCompatibilityLevel()` 測試空間物件的相容性。 無效的 **geography** 類型會傳回 110。  
   
 ## <a name="examples"></a>範例  
   

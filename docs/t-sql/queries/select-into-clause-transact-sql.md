@@ -1,5 +1,5 @@
 ---
-title: "INTO 子句 (TRANSACT-SQL) |Microsoft 文件"
+title: "INTO 子句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2017
 ms.prod: sql-non-specified
@@ -42,10 +42,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---into-clause-transact-sql"></a>SELECT 的 INTO 子句 (TRANSACT-SQL)
+# <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT INTO 會在預設的檔案群組中建立新的資料表，然後將查詢的結果資料列插入其中。 若要檢視完整的 SELECT 語法，請參閱[SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
+  SELECT INTO 會在預設的檔案群組中建立新的資料表，然後將查詢的結果資料列插入其中。 若要檢視完整的 SELECT 語法，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,16 +62,16 @@ ms.lasthandoff: 01/25/2018
  
   *filegroup*
  
- 指定將建立新的資料表檔案群組的名稱。 指定的檔案群組應該存在於其他資料庫 SQL Server 引擎會擲回錯誤。 從開始才支援這個選項[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。
+ 指定將作為新資料表建立位置的檔案群組名稱。 指定的檔案群組應該存在於資料庫上，否則 SQL Server 引擎會擲回錯誤。 從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始才有支援此選項。
  
- 格式*new_table*取決於評估選取清單中的運算式。 中的資料行*new_table* select 清單所指定的順序建立。 在每個資料行*new_table*選取清單中對應的運算式具有相同名稱、 資料類型、 null 屬性和值。 此時，系統會傳送資料行的 IDENTITY 屬性，但是＜備註＞一節中「使用識別欄位」內定義的狀況除外。  
+ *new_table* 的格式會藉由評估選取清單中的運算式來決定。 *new_table* 中的資料行會依照選取清單所指定的順序來建立。 *new_table* 中每個資料行的名稱、資料類型、可 NULL 性及值，都與選取清單中對應的運算式相同。 此時，系統會傳送資料行的 IDENTITY 屬性，但是＜備註＞一節中「使用識別欄位」內定義的狀況除外。  
   
- 若要在相同的執行個體上的另一個資料庫中建立資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，指定*new_table*完整限定名稱，格式為*database.schema.table_name*。  
+ 若要在相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的另一個資料庫中建立資料表，請使用 *database.schema.table_name* 格式以完整名稱指定 *new_table*。  
   
- 無法建立*new_table*上的遠端伺服器; 不過，您可以填入*new_table*從遠端資料來源。 若要建立*new_table*從遠端來源資料表中，指定在表單中使用四部分名稱的來源資料表*linked_server*。*目錄*。*結構描述*。*物件*SELECT 陳述式的 FROM 子句中。 或者，您可以使用[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)函式或[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) FROM 子句來指定遠端資料來源中的函式。  
+ 您無法在遠端伺服器上建立 *new_table*，不過，您可以從遠端資料來源填入 *new_table*。 若要從遠端來源資料表建立 *new_table*，請在 SELECT 陳述式的 FROM 子句中，使用 *linked_server*.*catalog*.*schema*.*object* 格式的四部分名稱來指定來源資料表。 或者，您也可以在 FROM 子句中使用 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 函數或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函數來指定遠端資料來源。  
   
 ## <a name="data-types"></a>資料型別  
- FILESTREAM 屬性不會傳送至新的資料表。 已複製 FILESTREAM Blob 時，並將其儲存在新的資料表做為**varbinary （max)** Blob。 若沒有 FILESTREAM 屬性**varbinary （max)**資料類型有 2 GB 的限制。 如果 FILESTREAM BLOB 超過這個值，系統就會引發錯誤 7119 並且停止此陳述式。  
+ FILESTREAM 屬性不會傳送至新的資料表。 FILESTREAM BLOB 會以 **varbinary(max)** BLOB 的形式被複製並儲存在新資料表中。 在沒有 FILESTREAM 屬性的情況下，**varbinary(max)** 資料類型會有 2 GB 的限制。 如果 FILESTREAM BLOB 超過這個值，系統就會引發錯誤 7119 並且停止此陳述式。  
   
  當您將現有的識別欄位選入新的資料表時，除非下列其中一個狀況成立，否則新資料行會繼承 IDENTITY 屬性：  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 01/25/2018
  當選取清單包括計算資料行時，新資料表變數中對應的資料行並不是計算資料行。 新資料行中的值是執行 SELECT...INTO 時所計算的值。  
   
 ## <a name="logging-behavior"></a>記錄行為  
- SELECT...INTO 的記錄數量主要取決於資料庫目前使用的復原模式。 在簡單復原模式或大量記錄復原模式下，大量作業會進行最低限度記錄。 使用最低限度記錄，使用 選取... 陳述式可以比建立資料表，然後填入資料表的 INSERT 陳述式更有效率。 如需詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ SELECT...INTO 的記錄數量主要取決於資料庫目前使用的復原模式。 在簡單復原模式或大量記錄復原模式下，大量作業會進行最低限度記錄。 搭配最低限度記錄時，使用 SELECT… INTO 陳述式會比建立資料表後再使用 INSERT 陳述式來填入資料表，還要有效率。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要目的地資料庫中的 CREATE TABLE 權限。  
@@ -173,7 +173,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. 指定遠端資料來源的資料行，藉以建立資料表  
  下列範例將示範三種根據遠端資料來源在本機伺服器上建立新資料表的方法。 此範例一開始會建立遠端資料來源的連結。 然後，連結的伺服器名稱 `MyLinkServer,` 會指定於第一個 SELECT...INTO 陳述式的 FROM 子句和第二個 SELECT...INTO 陳述式的 OPENQUERY 函數中。 最後，第三個 SELECT...INTO 陳述式會使用 OPENDATASOURCE 函數，以便直接指定遠端資料來源，而非使用連結的伺服器名稱。  
   
- **適用於：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用於：**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 ```sql
 USE master;  
@@ -213,8 +213,8 @@ FROM OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. 從外部資料表建立使用 PolyBase 匯入  
- 將資料從 Hadoop 或 Azure 儲存體匯入至 SQL Server 以便持續儲存。 使用`SELECT INTO`匯入 SQL Server 中的永續性儲存體的外部資料表所參考的資料。 在第二個步驟中，快速建立關聯式資料表，然後在資料表上建立資料行存放區索引。  
+### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. 從使用 PolyBase 建立的外部資料表匯入  
+ 將資料從 Hadoop 或 Azure 儲存體匯入至 SQL Server 以便持續儲存。 請使用 `SELECT INTO` 來匯入外部資料表所參考的資料，以便持續儲存在 SQL Server 中。 在第二個步驟中，快速建立關聯式資料表，然後在資料表上建立資料行存放區索引。  
   
  **適用於：** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -231,8 +231,8 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 ORDER BY YearlyIncome  
   
 ```  
-### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 建立新的資料表做為另一個資料表的複本並將其載入指定的檔案群組
-下列範例會示範做為另一個資料表的複本建立新的資料表，並將它載入到指定的檔案群組不同於使用者的預設檔案群組。
+### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 將新資料表建立成另一個資料表的複本並載入至指定的檔案群組中
+下列範例示範如何將新資料表建立成另一個資料表的複本，然後載入至與使用者預設檔案群組不同的指定檔案群組中。
 
  **適用於：**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
@@ -251,8 +251,8 @@ SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
   
 ## <a name="see-also"></a>另請參閱  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [精選的範例 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [SELECT 範例 &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [IDENTITY &#40;函式 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)  
+ [IDENTITY &#40;函數&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   

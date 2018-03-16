@@ -1,5 +1,5 @@
 ---
-title: "撤銷全文檢索權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "REVOKE 全文檢索權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -63,11 +63,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  這是權限的名稱。 安全性實體權限的有效對應描述於本主題後面的「備註」一節中。  
   
- 全文檢索目錄上 **:: * * * 全文 text_catalog_name*  
- 指定正在撤銷權限的全文檢索目錄。 範圍限定詞**::**需要。  
+ ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ 指定正在撤銷權限的全文檢索目錄。 範圍限定詞 **::** 是必要的。  
   
- 全文檢索停用字詞表上 **:: * * * 全文 text_stoplist_name*  
- 指定正在撤銷權限的全文檢索停用字詞表。 範圍限定詞**::**需要。  
+ ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ 指定正在撤銷權限的全文檢索停用字詞表。 範圍限定詞 **::** 是必要的。  
   
  *database_principal*  
  指定要撤銷其權限的主體。 它有下列幾種：  
@@ -113,7 +113,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="fulltext-catalog-permissions"></a>FULLTEXT CATALOG 權限  
  全文檢索目錄是在權限階層中，身為其父系之資料庫所包含的一個資料庫層級安全性實體。 下表所列的是可以撤銷之最特定且最有限的全文檢索目錄權限，並列出利用隱含方式來併入這些權限的較通用權限。  
@@ -141,14 +141,14 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  需要全文檢索目錄的 CONTROL 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立應用程式角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [建立全文檢索目錄 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [建立全文檢索停用字詞表 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [授與全文檢索權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
+ [GRANT Full-Text Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

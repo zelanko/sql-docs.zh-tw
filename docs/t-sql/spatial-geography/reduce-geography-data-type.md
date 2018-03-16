@@ -1,5 +1,5 @@
 ---
-title: "減少 (geography 資料類型) |Microsoft 文件"
+title: "Reduce (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reduce-geography-data-type-"></a>Reduce (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回的近似值給定**geography**所給定的容錯與執行個體上執行 Douglas-peucker 演算法產生的執行個體。  
+  傳回在給定 **geography** 執行個體上執行 Douglas-Peucker 演算法 (具有給定的容錯) 所產生之該執行個體的近似值。  
   
- 這**geography**資料類型方法可支援**FullGlobe**執行個體或大於半球的空間執行個體。  
+ 這個 **geography** 資料類型方法可支援 **FullGlobe** 執行個體或大於半球的空間執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,23 +50,23 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |詞彙|定義|  
-|*tolerance*|類型的值**float**。 *容錯*是輸入到 Douglas-peucker 演算法的容錯。 *容錯*必須是正數。|  
+|*tolerance*|這是 **float** 類型的值。 *tolerance* 是輸入到 Douglas-Peucker 演算法的容錯。 *tolerance* 必須是正數。|  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>備註  
- 集合類型，此演算法會操作獨立每**geography**包含執行個體中。 此演算法不會修改**點**執行個體。  
+## <a name="remarks"></a>Remarks  
+ 如果是集合類型，這個演算法會在此執行個體包含的每一個 **geography** 上獨立運作。 此演算法不會修改 **Point** 執行個體。  
   
- 這個方法會嘗試保留的端點**LineString**例項，但是若要這樣做以維持有效的結果可能會失敗。  
+ 這個方法會嘗試保留 **LineString** 執行個體的端點，但為了保留有效的結果，這項嘗試可能會失敗。  
   
- 如果`Reduce()`會呼叫這個方法會產生含有負值， **ArgumentException**。 在 `Reduce()` 中使用的容錯必須是正數。  
+ 如果使用負值呼叫 `Reduce()`，這個方法會產生 **ArgumentException**。 在 `Reduce()` 中使用的容錯必須是正數。  
   
- Douglas-peucker 演算法的運作在每個曲線或環形**geography**藉由移除起點和終點以外的所有點的執行個體。 移除每個點接著會新增回來，直到沒有點，從最外圍點，多個*容錯*結果。 若有必要，之後會將結果設為有效，因為此方法保證結果有效。  
+ Douglas-Peucker 演算法可作用於 **geography** 執行個體中的每個曲線或環形，且會移除起點和終點以外的所有點。 接著會從最外圍的點開始加回每個移除的點，直到沒有點超出結果的 *tolerance*。 若有必要，之後會將結果設為有效，因為此方法保證結果有效。  
   
- 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，這個方法已擴充到**FullGlobe**執行個體。  
+ 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，這個方法已擴充到 **FullGlobe** 執行個體。  
   
  這個方法並不精確。  
   

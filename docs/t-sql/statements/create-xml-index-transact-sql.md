@@ -1,5 +1,5 @@
 ---
-title: "建立 XML 索引 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE XML INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
   在指定的資料表上建立 XML 索引。 可以在資料表中有資料之前建立索引。 指定限定的資料庫名稱，就可以在另一個資料庫的資料表上建立 XML 索引。  
   
 > [!NOTE]  
->  若要建立關聯式索引，請參閱[CREATE INDEX &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-index-transact-sql.md). 如需如何建立空間索引的資訊，請參閱[CREATE SPATIAL INDEX &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
+>  若要建立關聯式索引，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。 如需有關如何建立空間索引的詳細資訊，請參閱 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -86,33 +86,33 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ## <a name="arguments"></a>引數  
  [PRIMARY] XML  
- 指定建立 XML 索引**xml**資料行。 當指定 PRIMARY 時，會利用使用者資料表和 XML 節點識別碼所構成的叢集索引鍵來建立叢集索引。 每一份資料表最多可以有 249 個 XML 索引。 建立 XML 索引時，請注意下列事項：  
+ 在指定的 **xml** 資料行上建立 XML 索引。 當指定 PRIMARY 時，會利用使用者資料表和 XML 節點識別碼所構成的叢集索引鍵來建立叢集索引。 每一份資料表最多可以有 249 個 XML 索引。 建立 XML 索引時，請注意下列事項：  
   
 -   叢集索引必須存在於使用者資料表的主索引鍵上。  
   
 -   使用者資料表的叢集索引鍵限定為 15 個資料行。  
   
--   每個**xml**資料表中的資料行可以有一個主要 XML 索引和多個次要 XML 索引。  
+-   資料表中的每一個 **xml** 資料行都可以有一個主要 XML 索引和多個次要 XML 索引。  
   
--   主要 XML 索引上的**xml**資料行必須存在才能在資料行上建立次要 XML 索引。  
+-   主要 XML 索引必須先存在於 **xml** 資料行上，才能在該資料行上建立次要 XML 索引。  
   
--   XML 索引只能建立在單一上**xml**資料行。 您無法建立 XML 索引，非**xml**資料行，也不能上建立關聯式索引**xml**資料行。  
+-   XML 索引只能在單一 **xml** 資料行上建立。 您無法在非 **xml** 資料行上建立 XML 索引，也無法在 **xml** 資料行上建立關聯式索引。  
   
--   您無法在建立主要或次要 XML 索引**xml**在檢視中，使用資料表值變數上的資料行**xml**資料行，或**xml**類型變數。  
+-   在檢視表的 **xml** 資料行上、在含有 **xml** 資料行之資料表值的變數上，或在 **xml** 類型變數上，您都無法建立 XML 索引 (不論是主要還是次要)。  
   
--   您無法建立主要 XML 索引上計算**xml**資料行。  
+-   您無法在計算的 **xml** 資料行上建立主要 XML 索引。  
   
--   SET 選項設定必須與索引檢視表和計算資料行索引所需的設定相同。 選項為 ARITHABORT 具體來說，必須設定為 ON 建立 XML 索引時，插入、 刪除或更新中的值時**xml**資料行。  
+-   SET 選項設定必須與索引檢視表和計算資料行索引所需的設定相同。 具體而言，在建立 XML 索引時，以及在插入、刪除或更新 **xml** 資料行中的值時，必須將 ARITHABORT 選項設為 ON。  
   
  如需詳細資訊，請參閱 [XML 索引 &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)。  
   
  *index_name*  
- 這是索引的名稱。 索引名稱在資料表中必須是唯一的，但是在資料庫中不需要是唯一的。 索引名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
+ 這是索引的名稱。 索引名稱在資料表中必須是唯一的，但是在資料庫中不需要是唯一的。 索引名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
- 主要 XML 索引名稱開頭不能下列字元：  **#** ，  **##** ，  **@** ，或 **@@** .  
+ 主要 XML 索引名稱的開頭不能是下列字元：**#**、**##**、**@** 或 **@@**。  
   
  *xml_column_name*  
- 是**xml**索引所依據的資料行。 只有一個**xml**可以在單一的 XML 索引定義中指定資料行; 不過，可以建立多個次要 XML 索引上**xml**資料行。  
+ 這是當做索引根據的 **xml** 資料行。 在單一 XML 索引定義中，只能指定一個 **xml** 資料行；但是在 **xml** 資料行上則可以建立多個次要 XML 索引。  
   
  USING XML INDEX *xml_index_name*  
  指定主要 XML 索引，以便用來建立次要 XML 索引。  
@@ -120,7 +120,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  指定次要 XML 索引的類型。  
   
- VALUE  
+ Value  
  在索引鍵資料行屬於主要 XML 索引 (屬於主要 XML 索引的節點值和路徑) 的資料行上建立次要 XML 索引。  
   
  PATH  
@@ -150,20 +150,20 @@ CREATE [ PRIMARY ] XML INDEX index_name
  指定索引填補。 預設值為 OFF。  
   
  ON  
- 所指定的可用空間百分比*填滿因數*會套用到索引的中繼層級頁面。  
+ *fillfactor* 指定的可用空間百分比會套用到索引的中繼層級頁面。  
   
- 關閉或*填滿因數*未指定  
+ OFF 或未指定 *fillfactor*  
  中繼層級頁面會幾乎填滿整個容量，但會考量中繼頁面上的索引鍵集，而保留至少可供索引所能擁有之大小上限的一個資料列使用的足夠空間。  
   
- 只有在指定 FILLFACTOR 時，才能使用 PAD_INDEX 選項，因為 PAD_INDEX 會使用 FILLFACTOR 所指定的百分比。 如果 FILLFACTOR 所指定的百分比不夠，無法允許一個資料列，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在內部覆寫該百分比以允許最小值。 中繼索引頁上的資料列數目絕不會是小於兩個，不論如何低的值為何*填滿因數*。  
+ 只有在指定 FILLFACTOR 時，才能使用 PAD_INDEX 選項，因為 PAD_INDEX 會使用 FILLFACTOR 所指定的百分比。 如果 FILLFACTOR 所指定的百分比不夠，無法允許一個資料列，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在內部覆寫該百分比以允許最小值。 不論 *fillfactor* 的值設得多低，中繼索引頁面上的資料列數絕對不能少於兩個。  
   
- 填滿因數 **= * * * 填滿因數*  
- 指定用以指出建立或重建索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 填滿各索引頁面分葉層級之程度的百分比。 *填滿因數*必須是介於 1 到 100 之間的整數值。 預設值是 0。 如果*填滿因數*是 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]會利用已填滿容量的分葉頁面建立索引。  
+ FILLFACTOR **=***fillfactor*  
+ 指定用以指出建立或重建索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 填滿各索引頁面分葉層級之程度的百分比。 *fillfactor* 必須是 1 到 100 之間的整數值。 預設值是 0。 如果 *fillfactor* 是 100 或 0， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用已填滿容量的分葉頁面來建立索引。  
   
 > [!NOTE]  
 >  填滿因數值 0 和 100 在各方面都是一樣的。  
   
- 只有在建立或重建索引時才會套用 FILLFACTOR 設定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會動態保留頁面中空白空間的指定百分比。 若要檢視填滿因數設定，請使用[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視。  
+ 只有在建立或重建索引時才會套用 FILLFACTOR 設定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會動態保留頁面中空白空間的指定百分比。 若要檢視填滿因數設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視表。  
   
 > [!IMPORTANT]  
 >  利用小於 100 的 FILLFACTOR 來建立叢集索引，會影響資料所佔用的儲存空間數量，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在建立叢集索引時會轉散發資料。  
@@ -171,20 +171,20 @@ CREATE [ PRIMARY ] XML INDEX index_name
  如需詳細資訊，請參閱 [指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
- 指定是否要將暫時排序結果儲存在**tempdb**。 預設值為 OFF。  
+ 指定是否要將暫時排序結果儲存在 **tempdb** 中。 預設值為 OFF。  
   
  ON  
- 用來建立索引的中繼排序結果會儲存在**tempdb**。 這可能會減少建立索引，如果所需的時間**tempdb**是一組不同的使用者資料庫以外的磁碟上。 不過，這會增加建立索引時所使用的磁碟空間量。  
+ 用來建置索引的中繼排序結果會儲存在 **tempdb** 中。 如果 **tempdb** 位於使用者資料庫以外的另一組磁碟上，這可能會減少建立索引所需的時間。 不過，這會增加建立索引時所使用的磁碟空間量。  
   
  OFF  
  中繼排序結果會儲存在與用來儲存索引相同的資料庫中。  
   
- 除了建立索引，請在使用者資料庫所需的空間**tempdb**還需要大約相同數量的額外空間來容納中繼排序結果。 如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
+ 除了建立索引時，使用者資料庫中所需的空間以外，**tempdb** 還需要大約相同數量的其他空間來容納中繼排序結果。 如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
   
  IGNORE_DUP_KEY **=OFF**  
  對於 XML 索引沒有任何作用，因為索引類型絕對不是唯一的。 請勿將這個選項設定為 ON，否則會引發錯誤。  
   
- DROP_EXISTING  **=**  {ON |**OFF** }  
+ DROP_EXISTING **=** { ON | **OFF** }  
  指定要卸除及重建預先存在的具名 XML 索引。 預設值為 OFF。  
   
  ON  
@@ -195,15 +195,15 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  您無法利用 DROP_EXISTING 來變更索引類型。 另外，主要 XML 索引無法重新定義為次要 XML 索引，反之亦然。  
   
- 線上**= OFF**  
+ ONLINE **=OFF**  
  指定在索引作業期間，基礎資料表和相關聯的索引無法供查詢和資料修改使用。 在這一版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，XML 索引不支援線上索引建立。 如果此選項針對 XML 索引設定為 ON，就會引發錯誤。 請省略 ONLINE 選項，或是將 ONLINE 設定為 OFF。  
   
  建立、重建或卸除 XML 索引的離線索引作業會取得資料表的結構描述修改 (Sch-M) 鎖定。 這可防止所有使用者在作業持續期間存取基礎資料表。  
   
 > [!NOTE]  
->  線上索引作業不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- ALLOW_ROW_LOCKS  **=**  { **ON** |OFF}  
+ ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  指定是否允許資料列鎖定。 預設值是 ON。  
   
  ON  
@@ -212,7 +212,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  不使用資料列鎖定。  
   
- ALLOW_PAGE_LOCKS  **=**  { **ON** |OFF}  
+ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  指定是否允許頁面鎖定。 預設值是 ON。  
   
  ON  
@@ -222,14 +222,14 @@ CREATE [ PRIMARY ] XML INDEX index_name
  不使用頁面鎖定。  
   
  MAXDOP **=***max_degree_of_parallelism*  
- 覆寫[設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)索引作業期間的組態選項。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
+ 針對索引作業期間，覆寫[設定平行處理原則的最大程度伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)組態選項。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
   
 > [!IMPORTANT]  
 >  雖然所有 XML 索引在語法上都支援 MAXDOP 選項，但是對於主要 XML 索引而言，CREATE XML INDEX 只會使用單一處理器。  
   
- *max_degree_of_parallelism*可以是：  
+ *max_degree_of_parallelism* 可以是：  
   
- 1  
+ @shouldalert  
  隱藏平行計畫的產生。  
   
  \>1  
@@ -241,17 +241,17 @@ CREATE [ PRIMARY ] XML INDEX index_name
  如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]  
->  並非每個版本都可使用平行索引作業[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-## <a name="remarks"></a>備註  
- 計算資料行，衍生自**xml**資料類型可以建立索引做為索引鍵或內含非索引鍵資料行，只要計算資料行資料類型時，才允許做為索引鍵資料行或非索引鍵資料行。 您無法建立主要 XML 索引上計算**xml**資料行。  
+## <a name="remarks"></a>Remarks  
+ 只要計算資料行資料類型可當做索引鍵資料行或非索引鍵資料行，衍生自 **xml** 資料類型的計算資料行都可以當做索引鍵資料行或內含非索引鍵資料行來建立索引。 您無法在計算的 **xml** 資料行上建立主要 XML 索引。  
   
- 若要檢視有關 XML 索引的詳細資訊，請使用[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)目錄檢視。  
+ 若要檢視關於 XML 索引的資訊，請使用 [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) 目錄檢視。  
   
- 如需有關 XML 索引的詳細資訊，請參閱[XML 索引 &#40;SQL Server &#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ 如需 XML 索引的詳細資訊，請參閱 [XML 索引 &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)。  
   
 ## <a name="additional-remarks-on-index-creation"></a>有關索引建立的其他備註  
- 如需有關建立索引的詳細資訊，請參閱 < 備註 > 一節[CREATE INDEX &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-index-transact-sql.md).  
+ 如需有關索引建立的詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) 中的＜備註＞一節。  
   
 ## <a name="examples"></a>範例  
   
@@ -293,7 +293,7 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [建立空間索引 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

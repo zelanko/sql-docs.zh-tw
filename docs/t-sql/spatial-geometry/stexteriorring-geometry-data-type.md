@@ -1,5 +1,5 @@
 ---
-title: "STExteriorRing (geometry 資料類型) |Microsoft 文件"
+title: "STExteriorRing (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回的外環**幾何**多邊形執行個體。
+傳回多邊形 **geometry** 執行個體的外環。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- 開放式地理空間協會 (OGC) 類型： **LineString**  
+ 開放地理空間協會 (OGC) 類型：**LineString**  
   
-## <a name="remarks"></a>備註  
- 這個方法會傳回**null**如果**幾何**執行個體不是多邊形。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體不是多邊形，這個方法會傳回 **null**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立`Polygon`執行個體，並使用`STExteriorRing()`傳回形式之多邊形的外環**LineString**。  
+ 下例範例會建立 `Polygon` 執行個體，並使用 `STExteriorRing()` 傳回 **LineString** 形式之多邊形的外環。  
   
 ```  
 DECLARE @g geometry;  

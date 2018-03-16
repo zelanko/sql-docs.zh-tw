@@ -1,5 +1,5 @@
 ---
-title: "DBCC dllname (FREE) (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC dllname (FREE) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]卸載指定擴充預存程序 DLL 從記憶體中。
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 可從記憶體卸載指定的擴充預存程序 DLL。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,11 +57,11 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  WITH NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>備註
-在執行擴充預存程序時，DLL 仍由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體載入，直到伺服器關閉為止。 這個陳述式可讓 DLL 從記憶體卸載，而不必關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要顯示目前所載入的 DLL 檔[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，執行**sp_helpextendedproc**
+## <a name="remarks"></a>Remarks
+在執行擴充預存程序時，DLL 仍由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體載入，直到伺服器關閉為止。 這個陳述式可讓 DLL 從記憶體卸載，而不必關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要顯示目前由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 載入的 DLL 檔，請執行 **sp_helpextendedproc**
   
 ## <a name="result-sets"></a>結果集  
-指定有效的 DLL 時，DBCC *dllname* (FREE) 會傳回：
+當您指定有效的 DLL 之後，DBCC *dllname* (FREE) 會傳回：
   
 ```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
@@ -71,7 +71,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。
   
 ## <a name="examples"></a>範例  
-下列範例假設`xp_sample`實作為 xp_sample.dll，而且已經執行。 DBCC \< *dllname*> 與相關的 xp_sample.dll 檔 (FREE) 卸載`xp_sample`擴充程序。
+下列範例假設 `xp_sample` 是實作為 Xp_sample.dll，而且已經執行。 DBCC \<*dllname*> (FREE) 會卸載與 `xp_sample` 擴充程序相關的 xp_sample.dll 檔。
   
 ```sql  
 DBCC xp_sample (FREE);  

@@ -1,5 +1,5 @@
 ---
-title: "聯結提示 (TRANSACT-SQL) |Microsoft 文件"
+title: "聯結提示 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -36,13 +36,13 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---join"></a>聯結提示 (TRANSACT-SQL)-
+# <a name="hints-transact-sql---join"></a>提示 (Transact-SQL) - Join
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  聯結提示會指定查詢最佳化工具強制執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中兩個資料表之間的聯結策略。 如需聯結和聯結語法的一般資訊，請參閱[FROM &#40;TRANSACT-SQL &#41;](../../t-sql/queries/from-transact-sql.md).  
+  聯結提示會指定查詢最佳化工具強制執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中兩個資料表之間的聯結策略。 如需有關聯結和聯結語法的一般資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。  
   
 > [!IMPORTANT]  
->  因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查詢最佳化工具通常會選取查詢的最佳執行計畫，我們建議的提示有，包括\<join_hint >，來只當做最後手段資深的開發人員和資料庫管理員。
+>  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最佳的查詢執行計劃，因此建議資深開發人員和資料庫管理員只有在別無他法時，才使用提示 (包括 \<join_hint>)。
   
  **適用於：**  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
   
  REMOTE 只能用於 INNER JOIN 作業。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  聯結提示是在查詢的 FROM 子句中指定。 聯結提示會強制執行兩份資料表之間的聯結策略。 如果指定了兩份資料表的聯結提示，查詢最佳化工具會根據 ON 關鍵字的位置，自動強制執行查詢中所有聯結的資料表之聯結順序。 當使用不含 ON 子句的 CROSS JOIN 時，您可以用括號來指示聯結順序。  
   
 ## <a name="examples"></a>範例  
@@ -115,6 +115,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)  
+ [提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

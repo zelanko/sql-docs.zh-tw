@@ -1,5 +1,5 @@
 ---
-title: "TRANSACT-SQL 語法慣例 (TRANSACT-SQL) |Microsoft 文件"
+title: "Transact-SQL 語法慣例 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
 |&#124; (分隔號)|加上括號或大括號來分隔語法項目。 您只可以選擇其中一個項目。|  
 |`[ ]` (方括弧)|選擇性的語法項目。 不要鍵入方括號。|  
 |{ } (大括號)|必要的語法項目。 不要鍵入大括號。|  
-|[**,**...*n*]|指出先前項目可以重複 *n* 的次數。 以逗號分開各次出現項目。|  
-|[...*n*]|指出先前項目可以重複 *n* 的次數。 以空白分開各次出現項目。|  
+|[**,**...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
+|[...*n*]|指出先前項目可以重複 *n* 次。 以空白分開各次出現項目。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元。雖然這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的大部分陳述式都不需要使用分號，但是未來的版本可能會需要使用分號。|  
-|\<標籤 >:: =|語法區塊的名稱。 這個慣例可用來分組與標示冗長語法的區段，或分組與標示可用於陳述式中之多個位置的語法單位。 在您可以使用語法區塊的每個位置 > 形箭號括住的標籤表示：\<標籤 >。<br /><br /> 一組是集合運算式，例如\<群組集合 >; 清單位於集合的集合，例如\<複合元素清單 >。|  
+|\<label> ::=|語法區塊的名稱。 這個慣例可用來分組與標示冗長語法的區段，或分組與標示可用於陳述式中之多個位置的語法單位。 每個能夠使用語法區塊的位置，都使用括在＞形箭號內的標籤來指示：\<label>。<br /><br /> set 是運算式的集合，例如 \<grouping set>。而 list 則是 set 的集合，例如 \<composite element list>。|  
   
 ## <a name="multipart-names"></a>多部分名稱  
  除非另有指定，否則，所有指向資料庫物件名稱的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考都可以是四部分的名稱，格式如下：  
@@ -75,10 +75,10 @@ ms.lasthandoff: 01/25/2018
  指定連結伺服器名稱或遠端伺服器名稱。  
   
  *database_name*  
- 指定當物件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機執行個體中之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。 連結的伺服器物件時*database_name*指定 OLE DB 目錄。  
+ 指定當物件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機執行個體中之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。 當物件是在連結伺服器中時，*database_name* 會指定一個 OLE DB 目錄。  
   
  *schema_name*  
- 指定如果物件是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，包含物件的結構描述名稱。 連結的伺服器物件時*schema_name*指定 OLE DB 結構描述名稱。  
+ 指定如果物件是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，包含物件的結構描述名稱。 當物件是在連結伺服器中，*schema_name* 會指定一個 OLE DB 結構描述名稱。  
   
  *object_name*  
  指向物件名稱。  
@@ -90,16 +90,16 @@ ms.lasthandoff: 01/25/2018
   
  若要省略中繼節點，請利用句點來表示這些位置。 下表顯示物件名稱的有效格式。  
   
-|物件參考格式|Description|  
+|物件參考格式|描述|  
 |-----------------------------|-----------------|  
-|*server* **.** *資料庫* **。** *schema* **.** *物件*|四部分名稱。|  
-|*server* **.** *資料庫* **...** *物件*|省略結構描述名稱。|  
-|*server* **..** *schema* **.** *物件*|省略資料庫名稱。|  
+|*server* **.** *database* **.** *schema* **.** *object*|四部分名稱。|  
+|*server* **.** *database* **..** *object*|省略結構描述名稱。|  
+|*server* **..** *schema* **.** *object*|省略資料庫名稱。|  
 |*server* **...** *object*|省略資料庫和結構描述名稱。|  
-|*資料庫* **。** *schema* **.** *物件*|省略伺服器名稱。|  
-|*資料庫* **...** *物件*|省略伺服器和結構描述名稱。|  
-|*schema* **.** *物件*|省略伺服器和資料庫名稱。|  
-|*物件*|省略伺服器、資料庫和結構描述名稱。|  
+|*database* **.** *schema* **.** *object*|省略伺服器名稱。|  
+|*database* **..** *object*|省略伺服器和結構描述名稱。|  
+|*schema* **.** *object*|省略伺服器和資料庫名稱。|  
+|*object*|省略伺服器、資料庫和結構描述名稱。|  
   
 ## <a name="code-example-conventions"></a>程式碼範例慣例  
  除非另有指示，否則 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考中所提供的範例都是利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 及其下列選項的預設值來測試的：  
@@ -118,12 +118,12 @@ ms.lasthandoff: 01/25/2018
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考中的大部分程式碼範例都已在執行排序順序會區分大小寫的伺服器中測試過。 測試伺服器通常都是執行 ANSI/ISO 1252 字碼頁。  
   
- 許多程式碼範例以字母的 Unicode 字元字串常數的前置詞**N**。不含**N**前置詞，字串會轉換成資料庫的預設字碼頁。 這個預設字碼頁可能無法辨識特定字元。  
+ 許多程式碼範例使用字母 **N** 作為 Unicode 字元字串常數的前置詞。若沒有 **N** 前置詞，字串會被轉換為資料庫的預設字碼頁。 這個預設字碼頁可能無法辨識特定字元。  
   
 ## <a name="applies-to-references"></a>「適用於」參考  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]參考包含發行項與相關[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，和[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]。 最上方的每一個發行項是指出哪些產品支援的文件主體的區段。 如果省略產品，然後此發行項所描述的功能不適用於該產品。 例如，可用性群組於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE AVAILABILITY GROUP**文件會指出它適用於**SQL Server (SQL Server 2012 到目前的版本)**因為不適用於[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考包含有關 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 的文章。 在每個文章頂端附近，都有一個小節指出適用於該文章主旨的產品。 如果產品未被列出，表示該文章描述的功能不適用於該產品。 例如，可用性群組於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE AVAILABILITY GROUP** 文章因為不適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，所以會指出其適用於 **SQL Server (SQL Server 2012 到目前的版本)**。  
   
- 在某些情況下，發行項的一般主體可以用於產品，但所有的引數不支援。 例如自主資料庫使用者於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE USER**陳述式可用於任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產品，但是**WITH PASSWORD**語法無法用於較舊版本。 在此情況下，額外**適用於**區段插入適當的引數的描述發行項的主體中。  
+ 在某些情況下，某產品可用於一般文章主旨，但所有的引數卻都無法使用。 例如自主資料庫使用者於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE USER** 陳述式可以在任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品中使用，但 **WITH PASSWORD** 語法就無法在舊版中使用。 在此情況下，就會在文章本文中於適當的引數描述中插入額外的＜適用於＞小節。  
   
 ## <a name="see-also"></a>另請參閱  
  [Transact-SQL 參考 &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)  

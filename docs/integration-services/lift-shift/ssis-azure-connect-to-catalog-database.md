@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98aed78b69a108ae5b0c8f914540b385403a60f9
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 218890a01c98c51c570255dce0ad2c34bc5c26db
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>連線至 Azure 上的 SSISDB 目錄資料庫
 
@@ -55,14 +55,20 @@ ms.lasthandoff: 03/02/2018
    | **登入** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時指定的密碼。 |
 
+    ![使用 SSMS 連線到伺服器](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
+
 3. **連線至 SSISDB 資料庫**。 選取 [選項] 以展開 [連線至伺服器] 對話方塊。 在展開的 [連線至伺服器] 對話方塊中，選取 [連線屬性] 索引標籤。在 [連線至資料庫] 欄位中，選取或輸入 `SSISDB`。
 
     > [!IMPORTANT]
     > 如果您在連線時沒有選取 `SSISDB`，則可能不會在 [物件總管] 中看到 SSIS 目錄。
 
-4. 選取 [連線]。
+    ![選取連線的 SSISDB 資料庫](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-2.png)
+
+4. 然後選取 [連線]。
 
 5. 在 [物件總管] 中，展開 [Integration Services 目錄]，然後展開 [SSISDB] 以檢視 SSIS 目錄資料庫中的物件。
+
+    ![在 SSMS 中的物件總管中尋找 SSISDB 資料庫](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 
 ## <a name="next-steps"></a>後續步驟
 - 部署套件。 如需詳細資訊，請參閱[使用 SQL Server Management Studio (SSMS) 部署 SSIS 專案](../ssis-quickstart-deploy-ssms.md)。

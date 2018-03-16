@@ -1,5 +1,5 @@
 ---
-title: "STSymDifference (geography 資料類型) |Microsoft 文件"
+title: "STSymDifference (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回物件，表示所有點都會在某個**geography**執行個體或另一個**geography**執行個體，但不是在這兩個執行個體內的點。  
+  傳回物件，表示在某個 **geography** 執行個體或另一個 **geography** 執行個體內的所有點 (但不是同時在這兩個執行個體內的點)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是另一個**geography**除了所在 STSymDistance() 所叫用的執行個體的執行個體。  
+ 這是除了 STSymDistance() 叫用所在的執行個體之外的另一個 **geography** 執行個體。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>備註  
- 如果這個方法永遠傳回 null 的空間參考識別碼 (Srid) **geography**例項不相符。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一定會傳回 null。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援大於半球的空間執行個體。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，伺服器上的可能結果集已擴充到**FullGlobe**執行個體。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援大於半球的空間執行個體。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，伺服器上的可能結果集已擴充到 **FullGlobe** 執行個體。  
   
  只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。  
   

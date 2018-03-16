@@ -1,5 +1,5 @@
 ---
-title: "運算子 (TRANSACT-SQL) |Microsoft 文件"
+title: "運算子 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -43,6 +43,6 @@ ms.lasthandoff: 01/25/2018
 |[複合運算子](../../t-sql/language-elements/compound-operators-transact-sql.md)|[一元運算子](http://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
 ## <a name="see-also"></a>另請參閱  
- [運算子優先順序 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+ [運算子優先順序 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

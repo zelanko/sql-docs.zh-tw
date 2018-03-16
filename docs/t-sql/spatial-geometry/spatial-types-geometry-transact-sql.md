@@ -1,5 +1,5 @@
 ---
-title: "幾何 (TRANSACT-SQL) |Microsoft 文件"
+title: geometry (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geometry-transact-sql"></a>空間型別-幾何 (TRANSACT-SQL)
+# <a name="spatial-types---geometry-transact-sql"></a>空間類型 - geometry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  平面空間資料類型，**幾何**，實作為 common language runtime (CLR) 資料類型中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此類型代表以 Euclidean (平面) 座標系統表示的資料。  
+  平面空間資料類型 **geometry** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是實作為通用語言執行平台 (CLR) 資料類型。 此類型代表以 Euclidean (平面) 座標系統表示的資料。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援一組方法，以**幾何**空間資料類型。 這些方法包括方法上**幾何**定義的開放式地理空間協會 (OGC) 標準，以及一組[!INCLUDE[msCoName](../../includes/msconame-md.md)]該標準的擴充功能。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援一組 **geometry** 空間資料類型方法。 這些方法包括「開放地理空間協會」(OGC) 標準及該標準的一組 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 延伸模組所定義的 **geometry** 相關方法。  
  
- 錯誤容錯的幾何方法可以是大可達 1.0 e-7 * 的範圍。 範圍是指點之間的最大近似距離**幾何**物件。
+ geometry 方法的誤差容許範圍可以大到 1.0e-7 *。 範圍指的是 **geometry** 物件的點之間大致的最大距離。
   
 ## <a name="registering-the-geometry-type"></a>註冊 geometry 類型  
  **geometry** 類型已預先定義，而且可在每一個資料庫中使用。 您可以建立 **geometry** 類型的資料表資料行，並使用與其他 CLR 類型相同的方式來操作 **geometry** 資料。 可用於保存和非保存計算資料行。  
@@ -82,7 +82,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geometry-in-a-computed-column"></a>C. 在計算資料行中使用幾何  
- 下列範例會建立資料表的保存計算資料行使用**幾何**型別。  
+ 下列範例會使用 **geometry** 類型來建立含有保存之計算資料行的資料表。  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

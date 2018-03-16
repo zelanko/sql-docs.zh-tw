@@ -1,5 +1,5 @@
 ---
-title: "FILE_IDEX (TRANSACT-SQL) |Microsoft 文件"
+title: FILE_IDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ FILE_IDEX ( file_name )
   
 ## <a name="arguments"></a>引數  
  *file_name*  
- 這是類型的運算式**sysname** ，代表要傳回檔案識別碼。 檔案名稱  
+ 這是 **sysname** 類型的運算式，代表傳回檔案識別碼的檔案名稱。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
- **NULL**錯誤  
+ 發生錯誤時傳回 **NULL**  
   
-## <a name="remarks"></a>備註  
- *file_name*對應到顯示中的邏輯檔案名稱**名稱**中的資料行[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)或[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)目錄檢視。  
+## <a name="remarks"></a>Remarks  
+ *file_name* 對應於 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) or [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目錄檢視中之 **name** 資料行中所顯示的邏輯檔案名稱。  
   
  FILE_IDEX 可以用在選取清單、WHERE 子句或運算式所允許的任何位置。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
@@ -85,7 +85,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. 當檔案名稱未知時，擷取檔案識別碼  
-下列範例會傳回的檔案識別碼`AdventureWorks`選取邏輯檔案名稱，從記錄檔`sys.database_files`目錄的檢視，其中的檔案類型等於`1`（記錄）。  
+下列範例會從檔案類型等於 `1` (記錄) 的 `sys.database_files` 目錄檢視中，選取邏輯檔案名稱來傳回 `AdventureWorks` 記錄檔的檔案識別碼。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -103,15 +103,15 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. 擷取全文檢索目錄檔的檔案識別碼  
-下列範例會傳回全文檢索檔案的檔案識別碼選取邏輯檔案名稱，從`sys.database_files`目錄的檢視，其中的檔案類型等於`4`（全文檢索）。 如果全文檢索目錄不存在，此範例將會傳回 NULL。  
+下列範例會從檔案類型等於 `4` (全文檢索) 的 `sys.database_files` 目錄檢視中，選取邏輯檔案名稱來傳回全文檢索檔的檔案識別碼。 如果全文檢索目錄不存在，此範例將會傳回 NULL。  
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
 AS 'File_ID';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [中繼資料函數 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

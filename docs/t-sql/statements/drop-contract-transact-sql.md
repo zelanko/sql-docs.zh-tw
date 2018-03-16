@@ -1,5 +1,5 @@
 ---
-title: "卸除合約 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ DROP CONTRACT contract_name
  *contract_name*  
  要卸除的合約名稱。 您不可指定伺服器、資料庫和結構描述名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果有任何服務或交談優先權參考合約，您便不能卸除這份合約。  
   
  當您卸除合約時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會結束使用這份合約的任何現有交談，且會出現一則錯誤。  
@@ -71,10 +71,10 @@ DROP CONTRACT
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER BROKER PRIORITY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [ALTER 服務 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-service-transact-sql.md)   
- [建立合約 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [DROP BROKER PRIORITY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

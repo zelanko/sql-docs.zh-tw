@@ -1,5 +1,5 @@
 ---
-title: "STMLineFromWKB (geometry 資料類型) |Microsoft 文件"
+title: "STMLineFromWKB (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回**geometryMultiLineString**從開放式地理空間協會 (OGC) 已知二進位 (well-known binary，WKB) 表示法的執行個體。
+從開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的二進位 (well-known binary，WKB) 表示法傳回 **geometryMultiLineString** 執行個體。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,20 +45,20 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>引數  
  *WKB_multilinestring*  
- 是的 WKB 表示法**geometryMultiLineString**来傳回執行個體。 *WKB_multilinestring*是**varbinary （max)**運算式。  
+ 這是您想要傳回之 **geometryMultiLineString** 執行個體的 WKB 表示法。 *WKB_multilinestring* 是 **varbinary(max)** 運算式。  
   
  *SRID*  
- 是**int**運算式，表示的空間參考識別碼 (SRID) 的**geometryMultiLineString**来傳回執行個體。  
+ 這是 **int** 運算式，表示要傳回之 **geometryMultiLineString** 執行個體的空間參考識別碼 (Spatial Reference Identifier，SRID)。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- OGC 類型： **MultiLineString**  
+ OGC 類型：**MultiLineString**  
   
-## <a name="remarks"></a>備註  
- 這個方法會擲回**FormatException**如果輸入格式不正確。  
+## <a name="remarks"></a>Remarks  
+ 如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `STMLineFromWKB()` 建立 `geometry` 例項。  

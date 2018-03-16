@@ -1,5 +1,5 @@
 ---
-title: "建立佇列 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -80,11 +80,11 @@ CREATE QUEUE <object>
 ```  
   
 ## <a name="arguments"></a>引數  
- *database_name* （物件）  
- 這是在其中建立新佇列之資料庫的名稱。 *database_name*必須指定現有資料庫的名稱。 當*database_name*未提供，目前資料庫中建立佇列。  
+ *database_name* (object)  
+ 這是在其中建立新佇列之資料庫的名稱。 *database_name* 必須指定現有資料庫的名稱。 未提供 *database_name* 時，會在目前的資料庫中建立佇列。  
   
  *schema_name* (object)  
- 這是新佇列所屬的結構描述名稱。 結構描述預設為執行陳述式之使用者的預設結構描述。 如果 CREATE QUEUE 陳述式的 sysadmin 固定的伺服器角色的成員或成員的 db_dbowner 或 db_ddladmin 固定資料庫角色中所指定的資料庫*database_name*， *schema_name*可以指定目前連接的登入相關聯的一個以外的結構描述。 否則， *schema_name*必須是執行陳述式之使用者的預設結構描述。  
+ 這是新佇列所屬的結構描述名稱。 結構描述預設為執行陳述式之使用者的預設結構描述。 如果 CREATE QUEUE 陳述式是由系統管理員 (sysadmin) 固定伺服器角色的成員，或由 *database_name* 指定之資料庫中的 db_dbowner 或 db_ddladmin 固定資料庫角色的成員來執行，*schema_name* 就可以指定另一個結構描述，而不是指定與目前連線之登入有關的結構描述。 否則，*schema_name* 就必須是執行陳述式之使用者的預設結構描述。  
   
  *queue_name*  
  這是要建立的佇列名稱。 這個名稱必須符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼的方針。  
@@ -117,7 +117,7 @@ CREATE QUEUE <object>
  這是預存程序的名稱。  
   
  MAX_QUEUE_READERS =*max_readers*  
- 指定佇列同時啟動的啟用預存程序的最大執行個體數目。 值*max_readers*必須是介於**0**和**32767**。  
+ 指定佇列同時啟動的啟用預存程序的最大執行個體數目。 *max_readers* 的值必須是在 **0** 和 **32767** 之間的數字。  
   
  EXECUTE AS  
  指定啟用預存程序執行所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫使用者帳戶。 當佇列啟動預存程序時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠檢查這個使用者的權限。 如果是網域使用者，當此程序啟動時，伺服器必須連接這個網域，否則啟用會失敗。 如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者，伺服器一律可以檢查權限。  
@@ -126,7 +126,7 @@ CREATE QUEUE <object>
  指定以目前使用者的身分來執行預存程序。 (執行此 CREATE QUEUE 陳述式的資料庫主體)。  
   
  '*user_name*'  
- 指定用來執行預存程序的使用者名稱。 *User_name*參數必須是有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者指定為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別項。 目前的使用者必須具有 IMPERSONATE 權限*user_name*指定。  
+ 指定用來執行預存程序的使用者名稱。 *user_name* 參數必須是指定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者。 目前的使用者必須擁有指定之 *user_name* 的 IMPERSONATE 權限。  
   
  OWNER  
  指定以佇列擁有者的身分來執行預存程序。  
@@ -137,12 +137,12 @@ CREATE QUEUE <object>
  有害訊息處理設定為 OFF 的佇列將不會在五個連續的交易復原後停用。 這可讓應用程式定義自訂有害訊息處理系統。  
   
  ON *filegroup |* [**DEFAULT**]  
- 指定這個佇列建立所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案群組。 您可以使用*檔案群組*參數來識別檔案群組，或使用預設識別項使用 service broker 資料庫的預設檔案群組。 在這個子句的內容中，DEFAULT 不是關鍵字，必須用識別碼來分隔。 當沒有指定任何檔案群組時，佇列會使用資料庫的預設檔案群組。  
+ 指定這個佇列建立所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案群組。 您可以利用 *filegroup* 參數來識別檔案群組，或利用 DEFAULT 識別碼來使用 Service Broker 資料庫的預設檔案群組。 在這個子句的內容中，DEFAULT 不是關鍵字，必須用識別碼來分隔。 當沒有指定任何檔案群組時，佇列會使用資料庫的預設檔案群組。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  佇列可以是 SELECT 陳述式的目標。 不過，您只能利用在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談上運作的陳述式來修改佇列的內容，例如 SEND、RECEIVE 和 END CONVERSATION。 佇列不能是 INSERT、UPDATE、DELETE 或 TRUNCATE 陳述式的目標。  
   
- 佇列不能是暫存物件。 因此，佇列名稱開頭 **#** 無效。  
+ 佇列不能是暫存物件。 因此，開頭是**#** 的佇列名稱無效。  
   
  建立非使用中狀態的佇列，可讓您在允許佇列接受訊息之前，備妥服務的基礎結構。  
   
@@ -156,9 +156,9 @@ CREATE QUEUE <object>
   
  下表列出佇列中的資料行。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|status|**tinyint**|訊息狀態。 RECEIVE 陳述式傳回之狀態的所有訊息**1**。 如果訊息保留開啟，則 status 會設定為 0。 如果訊息保留關閉，訊息會從佇列刪除。 佇列中的訊息可包含下列其中一個值：<br /><br /> **0**= 保留接收的訊息<br /><br /> **1**= 準備好接收<br /><br /> **2**= 未完成<br /><br /> **3**= 已保留傳送訊息|  
+|status|**tinyint**|訊息狀態。 RECEIVE 陳述式會傳回 status 為**1** 的所有訊息。 如果訊息保留開啟，則 status 會設定為 0。 如果訊息保留關閉，訊息會從佇列刪除。 佇列中的訊息可包含下列其中一個值：<br /><br /> **0**=已保留接收的訊息<br /><br /> **1**=準備好接收<br /><br /> **2**=未完成<br /><br /> **3**=已保留傳送的訊息|  
 |priority|**tinyint**|指派給這個訊息的優先權等級。|  
 |queuing_order|**bigint**|佇列中的訊息順序號碼。|  
 |conversation_group_id|**uniqueidentifier**|這則訊息所屬的交談群組識別碼。|  
@@ -232,10 +232,10 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER QUEUE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [卸除佇列 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
- [接收 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

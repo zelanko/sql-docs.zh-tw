@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (geography 資料類型) |Microsoft 文件"
+title: "STConvexHull (geography 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回代表項之凸面的物件**geography**執行個體。  
+  傳回物件，表示 **geography** 執行個體的凸殼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,21 +41,21 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>備註  
- 傳回`FullGlobe`物件**geography**封套角度大於 90 度執行個體。  
+## <a name="remarks"></a>Remarks  
+ 針對封套角度大於 90 度的 **geography** 執行個體傳回 `FullGlobe` 物件。  
   
- 會傳回空白**geography**空的集合**geography**執行個體。  
+ 針對空白 **geography** 執行個體傳回空白 **geography** 集合。  
   
- 傳回**null**針對未初始化**geography**執行個體。  
+ 針對未初始化的 **geography** 執行個體傳回 **null**。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 在未初始化的 geography 執行個體上使用 STConvexHull()  
- 下列範例會使用`STConvexHull()`上未初始化**geography**執行個體。  
+ 下列範例會在未初始化的 **geography** 執行個體上使用 `STConvexHull()`。  
   
 ```
  DECLARE @g geography;  
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. 尋找封套角度大於 90 度之 geography 執行個體上的凸面  
- 下列範例會使用`STConvexHull()`上**geography**封套角度大於 90 度的執行個體。  
+ 下列範例會在封套角度大於 90 度的 **geography** 執行個體上使用 `STConvexHull()`。  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

@@ -1,5 +1,5 @@
 ---
-title: "STLineFromWKB (geography 資料類型) |Microsoft 文件"
+title: "STLineFromWKB (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回**geography<**從開放式地理空間協會 (OGC) 已知二進位 (well-known binary，WKB) 表示法的執行個體。
+從開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的二進位 (well-known binary，WKB) 表示法傳回 **LineString geography** 執行個體。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,23 +45,23 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
 ## <a name="arguments"></a>引數  
  *WKB_linestring*  
- 是的 WKB 表示法**geography<**您想要傳回的執行個體。 *WKB_linestring*是**varbinary （max)**運算式。  
+ 這是要傳回之 **LineString geography** 執行個體的 WKB 表示法。 *WKB_linestring* 是 **varbinary(max)** 運算式。  
   
  *SRID*  
- 是**int**運算式，表示的空間參考識別碼 (SRID) 的**geography<**您想要傳回的執行個體。  
+ 這是 **int** 運算式，表示要傳回之 **LineString geography** 執行個體的空間參考識別碼 (SRID)。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型： **SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
- OGC 類型： **LineString**  
+ OGC 類型：**LineString**  
   
-## <a name="remarks"></a>備註  
- 這個方法會擲回**FormatException**如果輸入格式不正確。  
+## <a name="remarks"></a>Remarks  
+ 如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`STLineFromWKB()`建立`geography`執行個體。  
+ 下列範例會使用 `STLineFromWKB()` 建立 `geography` 執行個體。  
   
 ```  
 DECLARE @g geography;  

@@ -1,5 +1,5 @@
 ---
-title: "Z (geography 資料類型) |Microsoft 文件"
+title: "Z (geography 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**float**  
   
- CLR 型別： **SqlDouble**  
+ CLR 類型：**SqlDouble**  
   
-## <a name="remarks"></a>備註  
- 這個屬性的值為 null 如果**geography**執行個體不是點，以及與任何**點**未設定它的執行個體。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geography** 執行個體不是 point 以及對於未設定它的任何 **Point** 執行個體而言，這個屬性的值將會是 Null。  
   
  此屬性是唯讀的。  
   
@@ -65,8 +65,8 @@ SELECT @g.Z;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Geography 執行個體上的擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+ [地理執行個體上擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [AsTextZM &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
   

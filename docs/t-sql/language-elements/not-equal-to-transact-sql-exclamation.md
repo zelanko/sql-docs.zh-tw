@@ -1,5 +1,5 @@
 ---
-title: "！ = （不等於） (TRANSACT-SQL) |Microsoft 文件"
+title: "!= (不等於) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,13 +35,13 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="not-equal-to-transact-sql---exclamation"></a>不等於 (Transact SQL)-驚嘆號
+# <a name="not-equal-to-transact-sql---exclamation"></a>不等於 (Transact SQL) - 驚嘆號
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  測試一個運算式是否等於另一個運算式 (比較運算子)。 如果其中任一個運算元或是兩者皆為 NULL，則傳回 NULL。 函式與相同[（不等於） <>](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)比較運算子。  
+  測試一個運算式是否等於另一個運算式 (比較運算子)。 如果其中任一個運算元或是兩者皆為 NULL，則傳回 NULL。 運作方式與 [<> (不等於)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) 比較運算子相同。  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "取代值 (XML DML) |Microsoft 文件"
+title: replace value of (XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ with Expression2
   
 ## <a name="arguments"></a>引數  
  *Expression1*  
- 識別要更新的值節點。 它必須只識別一個節點。 也就是說， *Expression1*必須是靜態單一。 如果輸入 XML，節點類型必須是簡單類型。 如果選取多個節點，就會引發錯誤。 如果*Expression1*傳回空白時序，沒有值替代項目，就會發生而且不會傳回錯誤。 *Expression1*必須傳回單一元素且具有簡單類型的內容 （清單或不可部份完成類型）、 文字節點或屬性節點。 *Expression1*不可為等位型別、 複雜類型、 處理指示、 文件節點或註解節點。 如果它是，將傳回錯誤。  
+ 識別要更新的值節點。 它必須只識別一個節點。 也就是，*Expression1* 必須是靜態單一的。 如果輸入 XML，節點類型必須是簡單類型。 如果選取多個節點，就會引發錯誤。 如果 *Expression1* 傳回空的序列，將不會發生值取代，而且也不會傳回錯誤。 *Expression1* 必須傳回單一元素且具有簡單類型的內容 (清單或不可部分完成類型)、文字節點或屬性節點。 *Expression1* 不能是聯集類型、複雜類型、處理指示、文件節點或註解節點。 如果它是，將傳回錯誤。  
   
  *Expression2*  
- 識別節點的新值。 這可能是該運算式會傳回簡單類型的節點，因為**data （)**會隱含地使用。 如果值為值的清單，**更新**陳述式可以取代舊值的清單。 在修改具類型的 XML 執行個體， *Expression2*必須是相同的型別或子型別*運算式*1。 否則，就會傳回錯誤。 在修改不具類型的 XML 執行個體*Expression2*必須為不可部份完成的運算式。 否則，就會傳回錯誤。  
+ 識別節點的新值。 這可以是傳回簡單類型節點的運算式，因為將會隱含地使用 **data()**。 如果該值是值清單，**update** 陳述式會以該清單取代舊值。 在修改具類型的 XML 執行個體時，*Expression2* 必須是 *Expression*1 的相同類型或子類型。 否則，就會傳回錯誤。 在修改不具類型的 XML 執行個體時，*Expression2* 必須為不可部分完成的運算式。 否則，就會傳回錯誤。  
   
 ## <a name="examples"></a>範例  
- 下列範例**取代值**XML DML 陳述式將說明如何更新 XML 文件中的節點。  
+ 下列 **replace value of** XML DML 陳述式的範例說明如何更新 XML 文件中的節點。  
   
 ### <a name="a-replacing-values-in-an-xml-instance"></a>A. 取代 XML 執行個體的值  
- 在下列範例中，文件執行個體第一次指派給變數的**xml**型別。 然後，**取代值**XML DML 陳述式會更新文件中的值。  
+ 在下列範例中，首先會將文件執行個體指派至 **xml** 類型的變數。 接著，**replace value of** XML DML 陳述式會更新文件中的值。  
   
 ```  
 DECLARE @myDoc xml;  
@@ -87,7 +87,7 @@ SELECT @myDoc;
  請注意更新的目標必須在路徑運算式中明確指定最多一個節點，只要在運算式的結尾加入 "[1]" 即可。  
   
 ### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. 使用 if 運算式決定取代值  
- 您可以指定**如果**運算式的 Expression2 中**取代值 XML DML**陳述式，如下列範例所示。 Expression1 識別第一個工作中心內要更新的 LaborHours 屬性。 Expression2 使用**如果**運算式決定 LaborHours 屬性的新值。  
+ 您可以在 **replace value of XML DML** 陳述式的 Expression2 中指定 **if** 運算式，如下列範例所示。 Expression1 識別第一個工作中心內要更新的 LaborHours 屬性。 Expression2 使用 **if** 運算式決定 LaborHours 屬性的新值。  
   
 ```  
 DECLARE @myDoc xml  
@@ -197,12 +197,12 @@ select Instructions
 from T  
 ```  
   
- 請注意使用**轉換**取代 LotSize 值時。 當該值必須是特定類型時就需要使用它。 在此範例中，如果值為 500，就不一定需要明確轉換。  
+ 請注意取代 LotSize 值時 **cast** 的用法。 當該值必須是特定類型時就需要使用它。 在此範例中，如果值為 500，就不一定需要明確轉換。  
   
 ## <a name="see-also"></a>另請參閱  
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)   
- [XML 資料修改語言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML 資料修改語言 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

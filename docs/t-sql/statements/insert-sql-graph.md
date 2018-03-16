@@ -1,6 +1,6 @@
 ---
-title: "插入 （SQL 圖形） |Microsoft 文件"
-description: "插入 SQL 圖形節點或邊緣資料表的語法。"
+title: INSERT (SQL Graph) | Microsoft Docs
+description: "SQL Graph 節點或邊緣資料表的 INSERT 語法。"
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -30,18 +30,18 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="insert-sql-graph"></a>插入 （SQL 圖形）
+# <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  將一個或多個資料列`node`或`edge`資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 
+  將一或多個資料列新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `node` 或 `edge` 資料表。 
 
 > [!NOTE]   
->  對於標準的 TRANSACT-SQL 陳述式，請參閱[插入資料表 (TRANSACT-SQL)](../../t-sql/statements/insert-transact-sql.md)。
+>  如需標準 Transact-SQL 陳述式，請參閱 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="insert-into-node-table-syntax"></a>插入節點 Table 語法 
-插入節點的資料表的語法是與一般資料表相同。 
+## <a name="insert-into-node-table-syntax"></a>插入節點資料表語法 
+插入節點資料表的語法與一般資料表相同。 
 
 ```  
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -107,43 +107,43 @@ INSERT
   
  
 ## <a name="arguments"></a>引數  
- 本文件說明屬於 SQL 圖形的引數。 如需完整清單和 INSERT 陳述式中支援的引數的描述，請參閱[插入資料表 (TRANSACT-SQL)](../../t-sql/statements/insert-transact-sql.md)
+ 本文件僅描述與 SQL Graph 有關的參數。 如需 INSERT 陳述式支援之引數的完整清單和描述，請參閱 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 
  INTO  
- 這是一個可以之間使用的選擇性關鍵字`INSERT`和目標資料表。  
+ 這是一個選擇性關鍵字，您可以在 `INSERT` 和目標資料表之間使用它。  
   
  *search_condition_with_match*   
- `MATCH`子句可以用於子查詢，同時插入節點或邊緣資料表。 如`MATCH`陳述式語法，請參閱[圖形相符項目 (TRANSACT-SQL)](../../t-sql/queries/match-sql-graph.md)
+ `MATCH` 子句在插入節點或邊緣資料表時，可以用於子查詢。 針對 `MATCH` 陳述式語法，請參閱 [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
 
  *graph_search_pattern*   
- 搜尋模式提供給`MATCH`子句做為圖形述詞的一部分。
+ 提供給 `MATCH` 子句的搜尋模式，作為圖表述詞的一部分。
 
  *edge_table_column_list*   
- 使用者必須提供值`$from_id`和`$to_id`時插入邊緣。 如果未提供值或 Null 插入這些資料行，則會傳回錯誤。 
+ 插入至邊緣時，使用者必須提供 `$from_id` 和 `$to_id` 的值。 如果未提供值或 NULL 插入這些資料行，則會傳回錯誤。 
   
 
-## <a name="remarks"></a>備註  
-將插入的節點是與插入任何關聯式資料表相同。 $Node_id 欄位的值會自動產生。
+## <a name="remarks"></a>Remarks  
+插入至節點是與插入至任何關聯式資料表相同。 $node_id 資料行的值會自動產生。
 
-同時插入邊緣資料表，使用者必須提供值`$from_id`和`$to_id`資料行。   
+插入至邊緣資料表時，使用者必須提供 `$from_id` 和 `$to_id` 的值。   
 
-大量插入節點資料表是維持相同的關聯式資料表。
+節點資料表的大量插入仍然與關聯式資料表相同。
 
-邊緣資料表中插入大量前, 必須匯入節點資料表。 值`$from_id`和`$to_id`可以擷取自`$node_id`節點資料表的資料行插入為邊緣。 
+在大量插入邊緣資料表之前，必須先匯入節點資料表。 然後可以從節點資料表的 `$node_id` 資料行擷取 `$from_id` 和 `$to_id` 的值，然後插入為邊緣。 
 
   
 ### <a name="permissions"></a>Permissions  
  需要目標資料表的 INSERT 權限。  
   
- INSERT 成員的權限預設**sysadmin**固定伺服器角色、 **db_owner**和**db_datawriter**固定資料庫角色，以及資料表擁有者。 成員**sysadmin**， **db_owner**，而**db_securityadmin**角色，以及資料表擁有者可以將權限移轉給其他使用者。  
+ INSERT 權限會預設授與**系統管理員 (sysadmin)** 固定伺服器角色、**db_owner** 和 **db_datawriter** 固定資料庫角色的成員，以及資料表擁有者。 **系統管理員 (sysadmin)**、**db_owner** 和 **db_securityadmin** 角色的成員，以及資料表擁有者，可以將權限轉讓給其他使用者。  
   
- 若要執行 INSERT 搭配 OPENROWSET 函數 BULK 選項，您必須隸屬**sysadmin**固定的伺服器角色或**bulkadmin**固定的伺服器角色。  
+ 若要搭配 OPENROWSET 函數 BULK 選項來執行 INSERT，您必須是**系統管理員 (sysadmin)** 固定伺服器角色或 **bulkadmin** 固定伺服器角色的成員。  
   
 
 ## <a name="examples"></a>範例  
   
-#### <a name="a--insert-into-node-table"></a>A.  插入節點資料表  
- 下列範例會建立 Person 節點資料表，並將 2 個資料列插入至該資料表。
+#### <a name="a--insert-into-node-table"></a>A.  插入至節點資料表  
+ 下列範例會建立 Person 節點資料表並且插入 2 個資料列。
 
  ```
  -- Create person node table
@@ -154,8 +154,8 @@ INSERT
  INSERT INTO dbo.Person VALUES (2,'John');
  ```
   
-#### <a name="b--insert-into-edge-table"></a>B.  邊緣資料表中插入  
- 下列範例會建立 friend 邊緣資料表，並插入資料表中的邊緣。
+#### <a name="b--insert-into-edge-table"></a>B.  插入至邊緣資料表  
+ 下列範例會建立一個朋友邊緣資料表並將插入一個邊緣。
 
  ```
  -- Create friend edge table
@@ -168,7 +168,7 @@ INSERT
 
   
 ## <a name="see-also"></a>另請參閱  
- [插入資料表 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
- [處理與 SQL Server 2017 圖形](../../relational-databases/graphs/sql-graph-overview.md)  
+ [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [圖形處理與 SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

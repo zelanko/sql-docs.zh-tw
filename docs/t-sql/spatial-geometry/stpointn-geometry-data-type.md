@@ -1,5 +1,5 @@
 ---
-title: "STPointN (geometry 資料類型) |Microsoft 文件"
+title: "STPointN (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geometry-data-type"></a>STPointN (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回在指定的點**幾何**執行個體。
+傳回 **geometry** 執行個體中的指定點。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 是**int**介於 1 到中點數目的運算式**幾何**執行個體。  
+ 這是 1 與 **geometry** 執行個體中點數之間的 **int** 運算式。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- 開放式地理空間協會 (OGC) 類型：**點**  
+ 開放地理空間協會 (OGC) 類型：**Point**  
   
-## <a name="remarks"></a>備註  
- 如果**幾何**執行個體是使用者所建立，`STPointN()`傳回所指定的點*運算式*由所在它們根據原來輸入的順序排序這些點。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體是使用者所建立的，`STPointN()` 會傳回 *expression* 所指定的點，其方式是依據原先輸入點的順序來排序這些點。  
   
- 如果**幾何**建構執行個體時，系統`STPointN()`傳回所指定的點*運算式*由相同的順序排序這些點，其方式是輸出： 首先是根據幾何，然後是由環形內的幾何 （如果適用），然後再由環形內的點。 這個順序具決定性。  
+ 如果 **geometry** 執行個體是系統所建構的，`STPointN()` 會傳回 *expression* 所指定的點，其方式是依據將輸出這些點的順序來排序所有點：先依據幾何，再依據幾何內的環形 (如果適用)，然後再依據環形內的點。 這個順序具決定性。  
   
- 如果使用小於 1 的值呼叫此方法時，它會擲回**ArgumentOutOfRangeException**。  
+ 如果使用小於 1 的值來呼叫此方法，它會擲回 **ArgumentOutOfRangeException**。  
   
  如果使用大於例項中點數的值來呼叫此方法，它會傳回 Null。  
   

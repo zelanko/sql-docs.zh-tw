@@ -1,5 +1,5 @@
 ---
-title: "GeomFromGml (geometry 資料類型) |Microsoft 文件"
+title: "GeomFromGml (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,11 +34,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-建構**幾何**執行個體中指定的表示法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]地理標記語言 (GML) 的子集。
+在提供了地理標記語言 (GML) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的表示法時，建構 **geometry** 執行個體。
   
 如需有關地理標記語言 (GML) 的詳細資訊，請參閱以下開放式地理空間協會規格：
   
-[OGC 規格，地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629)
+[OGC 規格，地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)
   
 ## <a name="syntax"></a>語法  
   
@@ -52,15 +52,15 @@ GeomFromGml ( GML_input, SRID )
  這是 XML 輸入，GML 將會從此輸入傳回值。  
   
  *SRID*  
- 是**int**運算式，表示的空間參考識別碼 (SRID) 的**幾何**您想要傳回的執行個體。  
+ 這是 **int** 運算式，代表要傳回之 **geometry** 執行個體的空間參考識別碼 (SRID)。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- 這個方法會擲回**FormatException**如果輸入格式不正確。  
+## <a name="remarks"></a>Remarks  
+ 如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `GeomFromGml()` 建立 `geometry` 例項。  

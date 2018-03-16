@@ -1,5 +1,5 @@
 ---
-title: "擴充的靜態幾何方法 |Microsoft 文件"
+title: "擴充的靜態幾何方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  [OGC 規格，簡單特徵存取第二部 - SQL 選項](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [OGC 規格，地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [OGC 規格，地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -49,12 +49,12 @@ ms.lasthandoff: 01/25/2018
   
 -   [剖析](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
--   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
+-   [點](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [靜態彙總幾何方法](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
- [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+ [幾何執行個體上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [幾何執行個體上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [OGC 靜態幾何方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

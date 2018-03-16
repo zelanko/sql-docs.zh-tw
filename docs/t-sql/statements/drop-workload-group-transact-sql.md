@@ -1,5 +1,5 @@
 ---
-title: "卸除工作負載群組 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   卸除現有使用者定義的資源管理員工作負載群組。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,10 +50,10 @@ DROP WORKLOAD GROUP group_name
  *group_name*  
  現有使用者定義之工作負載群組的名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在資源管理員的內部或預設群組上，不允許使用 DROP WORKLOAD GROUP 陳述式。  
   
- 當您要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
+ 當您要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
  如果工作負載群組包含使用中工作階段，當呼叫 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式以套用變更時，卸除工作負載群組或將工作負載群組移到不同的資源集區將會失敗。 若要避免這個問題，您可以採取下列其中一個動作：  
   
@@ -79,7 +79,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
+ [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

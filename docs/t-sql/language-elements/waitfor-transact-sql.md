@@ -1,5 +1,5 @@
 ---
-title: "WAITFOR (TRANSACT-SQL) |Microsoft 文件"
+title: WAITFOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -65,36 +65,36 @@ WAITFOR
  這是在繼續執行批次、預存程序或交易之前，必須經過的指定時段，最多 24 小時。  
   
  '*time_to_pass*'  
- 這是要等待的時間週期。 *time_to_pass*可以在其中一個可接受的格式指定**datetime**資料，也可以指定為本機變數。 無法指定日期。因此的日期部分**datetime**不允許值。  
+ 這是要等待的時間週期。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_pass*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。  
   
  TIME  
  此時執行批次、預存程序或交易時的指定時間。  
   
  '*time_to_execute*'  
- 這是 WAITFOR 陳述式完成的時間。 *time_to_execute*可以在其中一個可接受的格式指定**datetime**資料，也可以指定為本機變數。 無法指定日期。因此的日期部分**datetime**不允許值。  
+ 這是 WAITFOR 陳述式完成的時間。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_execute*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。  
   
  *receive_statement*  
  這是有效的 RECEIVE 陳述式。  
   
 > [!IMPORTANT]  
->  使用 WAITFOR *receive_statement*只適用於[!INCLUDE[ssSB](../../includes/sssb-md.md)]訊息。 如需詳細資訊，請參閱[接收 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/receive-transact-sql.md).  
+>  含 *receive_statement* 的 WAITFOR 只適用於 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 訊息。 如需詳細資訊，請參閱 [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)。  
   
  *get_conversation_group_statement*  
  這是有效的 GET CONVERSATION GROUP 陳述式。  
   
 > [!IMPORTANT]  
->  使用 WAITFOR *get_conversation_group_statement*只適用於[!INCLUDE[ssSB](../../includes/sssb-md.md)]訊息。 如需詳細資訊，請參閱[GET CONVERSATION GROUP &#40;TRANSACT-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  含 *get_conversation_group_statement* 的 WAITFOR 只適用於 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 訊息。 如需詳細資訊，請參閱 [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
- 逾時*逾時*  
+ TIMEOUT *timeout*  
  指定等待訊息到達佇列的時段 (以毫秒為單位)。  
   
 > [!IMPORTANT]  
->  指定 TIMEOUT 的 WAITFOR 只適用於 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 訊息。 如需詳細資訊，請參閱[接收 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)和[GET CONVERSATION GROUP &#40;TRANSACT-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  指定 TIMEOUT 的 WAITFOR 只適用於 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 訊息。 如需詳細資訊，請參閱 [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md) 和 [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當執行 WAITFOR 陳述式時，交易在執行中，在相同交易之下，不能執行其他要求。  
   
- 實際的時間延遲可能會在指定的時間不同*time_to_pass*， *time_to_execute*，或*逾時*和伺服器的活動層級而定。 排定與 WAITFOR 陳述式相關聯的執行緒後，時間計數器便會啟動。 如果伺服器處於忙碌狀態，執行緒可能不會立即排程；因此時間延遲可能比指定的時間還長。  
+ 實際的時間延遲可能與 *time_to_pass*、*time_to_execute* 或 *timeout* 中指定的時間不同，而且會隨著伺服器的活動層級而異。 排定與 WAITFOR 陳述式相關聯的執行緒後，時間計數器便會啟動。 如果伺服器處於忙碌狀態，執行緒可能不會立即排程；因此時間延遲可能比指定的時間還長。  
   
  WAITFOR 不會變更查詢的語意。 如果查詢無法傳回任何資料列，WAITFOR 會永久等待，如果指定了 TIMEOUT，就會等到 TIMEOUT 到期。  
   
@@ -102,7 +102,7 @@ WAITFOR
   
  在 WAITFOR 陳述式上，不能定義檢視。  
   
- 當查詢超出 query wait 選項時，不需要執行，就能夠完成 WAITFOR 陳述式引數。 如需有關組態選項的詳細資訊，請參閱[設定 query wait 伺服器組態選項](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。 若要查看作用中及等候處理程序，請使用[sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)。  
+ 當查詢超出 query wait 選項時，不需要執行，就能夠完成 WAITFOR 陳述式引數。 如需組態選項的詳細資訊，請參閱[設定 query wait 伺服器組態選項](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。 若要查看使用中和等待中的處理序，請使用 [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)。  
   
  每個 WAITFOR 陳述式都有一個相關聯的執行緒。 如果在相同伺服器上指定了許多 WAITFOR 陳述式，可以將許多執行緒繫結起來，以等待執行這些陳述式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會監視 WAITFOR 陳述式的相關聯執行緒數目，如果伺服器感到執行緒資源用盡，它會隨機選取某些要結束的執行緒。  
   
@@ -176,8 +176,8 @@ GO
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
 ## <a name="see-also"></a>另請參閱  
- [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [日期時間 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)   
+ [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

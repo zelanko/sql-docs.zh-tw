@@ -1,5 +1,5 @@
 ---
-title: "LEFT (TRANSACT-SQL) |Microsoft 文件"
+title: LEFT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -49,20 +49,20 @@ LEFT ( character_expression , integer_expression )
   
 ## <a name="arguments"></a>引數  
  *character_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)的字元或二進位資料。 *character_expression*可以是常數、 變數或資料行。 *character_expression*可以是任何資料類型，除了**文字**或**ntext**，，可以隱含地轉換成**varchar**或**nvarchar**。 否則，請使用[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)函式可明確轉換*character_expression*。  
+ 這是字元或二進位資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。 *character_expression* 可以是除了 **text** 或 **ntext** 之外的任何資料類型，可隱含地轉換為 **varchar** 或 **nvarchar**。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 函數來明確轉換 *character_expression*。  
   
  *integer_expression*  
- 這是一個正整數，指定的字元數*character_expression*會傳回。 如果*clause><*是負數，則會傳回錯誤。 如果*clause><*是型別**bigint**和包含大數值， *character_expression*必須是大型的資料類型例如**varchar（max)**.  
+ 這是一個指定將傳回的 *character_expression* 字元數的正整數。 如果 *integer_expression* 是負數，則會傳回錯誤。 如果 *integer_expression* 是 **bigint** 類型且包含大數值，則 *character_expression* 必須屬於大型資料類型，例如 **varchar(max)**。  
   
- *Clause><*參數會計算成一個字元的 utf-16 surrogate 字元。  
+ *integer_expression* 參數會將 UTF-16 代理字元視為一個字元。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回**varchar**時*character_expression*是非 Unicode 字元資料類型。  
+ 當 *character_expression* 是非 Unicode 字元資料類型時，則傳回 **varchar**。  
   
- 傳回**nvarchar**時*character_expression*是 Unicode 字元資料類型。  
+ 當 *character_expression* 是 Unicode 字元資料類型時，則傳回 **nvarchar**。  
   
-## <a name="remarks"></a>備註  
- 當使用 SC 定序， *clause><*參數也 utf-16 surrogate 字組視為一個字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+## <a name="remarks"></a>Remarks  
+ 當使用 SC 定序時，*integer_expression* 參數會將 UTF-16 代理字組視為一個字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -93,7 +93,7 @@ ab
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-left-with-a-column"></a>C. 使用 LEFT 搭配資料行  
  下列範例會傳回每個產品名稱的最左側五個字元。  
@@ -124,14 +124,14 @@ ab
   
 ## <a name="see-also"></a>另請參閱  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [權限 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

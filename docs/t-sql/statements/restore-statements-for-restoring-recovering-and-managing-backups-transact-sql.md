@@ -1,5 +1,5 @@
 ---
-title: "RESTORE 陳述式，還原、 復原、 管理備份 (T-SQL) |Microsoft 文件"
+title: "用來還原、復原、管理備份的 RESTORE 陳述式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -45,14 +45,14 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
-|引數|Description|  
+|引數|描述|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|描述利用 BACKUP 命令從備份中還原和復原資料庫時，所用的 RESTORE DATABASE 和 RESTORE LOG Transact-SQL 陳述式。 在所有復原模式之下，資料庫都會使用 RESTORE DATABASE。 只有完整復原模式和大量記錄復原模式會使用 RESTORE LOG。 您也可以利用 RESTORE DATABASE，將資料庫回復為資料庫快照集。|  
 |[RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|說明 RESTORE 陳述式及一組相關的輔助陳述式 (RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY) 之「語法」各章節所描述的引數。 大部份引數都只得到這六個引數其中一部份的支援。 在每個引數的描述中，都會指出引數所得到的支援。|  
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|描述 RESTORE FILELISTONLY Transact-SQL 陳述式，這個陳述式用來傳回含有資料庫清單的結果集，以及備份組所包含的記錄檔。|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|描述 RESTORE HEADERONLY Transact-SQL 陳述式，這個陳述式用來傳回含有特定備份裝置上的所有備份組之所有備份標頭資訊的結果集。|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|描述 RESTORE LABELONLY Transact-SQL 陳述式，這個陳述式用來傳回含有給定備份裝置所識別的備份媒體之相關資訊的結果集。|  
-|[RESTORE REWINDONLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|描述 RESTORE REWINDONLY Transact-SQL 陳述式，這個陳述式用來倒轉和關閉設定 NOREWIND 選項來執行的 BACKUP 或 RESTORE 陳述式，保留了其開啟狀態的磁帶裝置。|  
+|[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|描述 RESTORE REWINDONLY Transact-SQL 陳述式，這個陳述式用來倒轉和關閉設定 NOREWIND 選項來執行的 BACKUP 或 RESTORE 陳述式，保留了其開啟狀態的磁帶裝置。|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|描述 RESTORE VERIFYONLY Transact-SQL 陳述式，這個陳述式可用來驗證備份，但不進行還原，同時也會檢查備份組是否已完成，整個備份是否可讀取；它不會嘗試驗證資料的結構。|  
   
 ## <a name="see-also"></a>另請參閱  

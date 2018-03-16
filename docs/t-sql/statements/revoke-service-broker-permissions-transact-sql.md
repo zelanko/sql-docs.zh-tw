@@ -1,5 +1,5 @@
 ---
-title: "REVOKE Service Broker 權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "REVOKE Service Broker 權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -69,23 +69,23 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  指定可以在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 上撤銷的安全性實體權限。 如需這些權限的清單，請參閱本主題稍後的「備註」一節。  
   
- 合約 **:: * * * contract_name*  
- 指定正在撤銷權限的合約。 範圍限定詞**::**需要。  
+ CONTRACT **::***contract_name*  
+ 指定正在撤銷權限的合約。 範圍限定詞 **::** 是必要的。  
   
  MESSAGE TYPE **::***message_type_name*  
- 指定正在撤銷權限的訊息類型。 範圍限定詞**::**需要。  
+ 指定正在撤銷權限的訊息類型。 範圍限定詞 **::** 是必要的。  
   
- 遠端服務繫結 **:: * * * remote_binding_name*  
- 指定正在撤銷權限的遠端服務繫結。 範圍限定詞**::**需要。  
+ REMOTE SERVICE BINDING **::***remote_binding_name*  
+ 指定正在撤銷權限的遠端服務繫結。 範圍限定詞 **::** 是必要的。  
   
  ROUTE **::***route_name*  
- 指定要撤銷其權限的路由。 範圍限定詞**::**需要。  
+ 指定要撤銷其權限的路由。 範圍限定詞 **::** 是必要的。  
   
  SERVICE **::***message_type_name*  
- 指定要撤銷其權限的服務。 範圍限定詞**::**需要。  
+ 指定要撤銷其權限的服務。 範圍限定詞 **::** 是必要的。  
   
  *database_principal*  
- 指定要撤銷其權限的主體。 *database_principal*可以是下列其中之一：  
+ 指定要撤銷其權限的主體。 *database_principal* 可以是下列其中一項：  
   
 -   資料庫使用者  
   
@@ -110,7 +110,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
  AS *revoking_principal*  
- 指定主體，執行這項查詢的主體會從這個主體衍生其權限來撤銷權限。 *revoking_principal*可以是下列其中之一：  
+ 指定主體，執行這項查詢的主體會從這個主體衍生其權限來撤銷權限。 *revoking_principal* 可以是下列其中一項：  
   
 -   資料庫使用者  
   
@@ -128,10 +128,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Service Broker 合約  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 之最特定且最有限權限可以撤銷[!INCLUDE[ssSB](../../includes/sssb-md.md)]合約詳列於下表，列出利用隱含方式包含它們的較通用權限。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下表所列的是可以在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約上撤銷之最特定且最有限的權限，並列出利用隱含方式來包含這些權限的較通用權限。  
   
 |Service Broker 合約權限|Service Broker 合約權限所隱含|資料庫權限所隱含|  
 |----------------------------------------|---------------------------------------------------|------------------------------------|  
@@ -163,7 +163,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="service-broker-routes"></a>Service Broker 路由  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 之最特定且最有限權限可以撤銷[!INCLUDE[ssSB](../../includes/sssb-md.md)]路由詳列於下表，列出利用隱含方式包含它們的較通用權限。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下表所列的是可以在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由上撤銷之最特定且最有限的權限，並列出利用隱含方式來包含這些權限的較通用權限。  
   
 |Service Broker 路由權限|Service Broker 路由權限所隱含|資料庫權限所隱含|  
 |-------------------------------------|------------------------------------------------|------------------------------------|  
@@ -173,7 +173,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ### <a name="service-broker-services"></a>Service Broker 服務  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 之最特定且最有限權限可以撤銷[!INCLUDE[ssSB](../../includes/sssb-md.md)]服務詳列於下表，列出利用隱含方式包含它們的較通用權限。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下表所列的是可以在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務上撤銷之最特定且最有限的權限，並列出利用隱含方式來包含這些權限的較通用權限。  
   
 |Service Broker 服務權限|Service Broker 服務權限所隱含|資料庫權限所隱含|  
 |---------------------------------------|--------------------------------------------------|------------------------------------|  
@@ -187,8 +187,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  需要 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約、訊息類型、遠端服務繫結、路由或服務的 CONTROL 權限  
   
 ## <a name="see-also"></a>另請參閱  
- [授與 Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
- [DENY Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
+ [GRANT Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
+ [DENY Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

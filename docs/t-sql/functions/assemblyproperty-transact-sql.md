@@ -1,5 +1,5 @@
 ---
-title: "ASSEMBLYPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 這是組件的名稱。
   
 *property_name*  
-這是要擷取相關資訊的屬性名稱。 *property_name*可以是下列值之一。
+這是要擷取相關資訊的屬性名稱。 *property_name* 可以是下列其中一個值。
   
-|Value|Description|  
+|ReplTest1|描述|  
 |---|---|
 |**CultureInfo**|組件的地區設定。|  
 |**PublicKey**|組件的公開金鑰或公開金鑰 Token。|  
@@ -69,7 +69,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 **sql_variant**
   
 ## <a name="examples"></a>範例  
-下列範例會假設已在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中註冊 `HelloWorld` 組件。 如需詳細資訊，請參閱[Hello World 範例](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
+下列範例會假設已在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中註冊 `HelloWorld` 組件。 如需詳細資訊，請參閱 [Hello World 範例](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
   
 ```sql
 USE AdventureWorks2012;  

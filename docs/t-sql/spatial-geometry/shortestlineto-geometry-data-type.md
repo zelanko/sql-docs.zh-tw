@@ -1,5 +1,5 @@
 ---
-title: "ShortestLineTo (geometry 資料類型) |Microsoft 文件"
+title: "ShortestLineTo (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-傳回**LineString**的執行個體與兩個點代表兩者之間的最短距離**幾何**執行個體。 長度**LineString**傳回執行個體是兩者之間的距離**幾何**執行個體。
+傳回具有兩點的 **LineString** 執行個體，代表兩個 **geometry** 執行個體之間的最短距離。 所傳回 **LineString** 執行個體的長度是兩個 **geometry** 執行個體之間的距離。
   
 ## <a name="syntax"></a>語法  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *geometry_other*  
- 第二個**幾何**執行個體呼叫**幾何**執行個體嘗試判斷短距離。  
+ 呼叫 **geometry** 執行個體的第二個 **geometry** 執行個體正在嘗試判斷與其相距的最短距離。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- 方法會傳回**LineString**與端點上框線的兩個非交集的執行個體**幾何**所比較的執行個體。 長度**LineString**傳回的等於兩個之間的最短距離**幾何**執行個體。 空白**LineString**執行個體時，會傳回兩個**幾何**執行個體彼此交集。  
+## <a name="remarks"></a>Remarks  
+ 方法會傳回 **LineString** 執行個體，其端點在兩個非交集 **geometry** 比較執行個體的框線上。 所傳回 **LineString** 的長度等於兩個 **geometry** 執行個體之間的最短距離。 當兩個 **geometry** 執行個體彼此交集時，會傳回空白 **LineString** 執行個體。  
   
 ## <a name="examples"></a>範例  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ShortestLineTo &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+ [ShortestLineTo &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
 

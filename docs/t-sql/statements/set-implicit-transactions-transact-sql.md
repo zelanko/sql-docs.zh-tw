@@ -1,5 +1,5 @@
 ---
-title: "SET IMPLICIT_TRANSACTIONS (TRANSACT-SQL) |Microsoft 文件"
+title: SET IMPLICIT_TRANSACTIONS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  BEGIN TRANSACTION 模式設定為*隱含*，連線。  
+  將連線的 BEGIN TRANSACTION 模式設定為 *implicit*。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,8 +50,8 @@ ms.lasthandoff: 01/02/2018
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>備註  
- 時，系統是處於*隱含*交易模式。 這表示，如果 @@TRANCOUNT = 0，任何下列的 TRANSACT-SQL 陳述式開始新交易。 相當於看不見的 BEGIN TRANSACTION，以第一次執行：  
+## <a name="remarks"></a>Remarks  
+ 當設定為 ON 時，系統是處於「隱含」交易模式。 這表示如果 @@TRANCOUNT = 0，任何下列 Transact-SQL 陳述式都會開始新的交易。 它相當於一個看不見的 BEGIN TRANSACTION 先被執行：  
   
 ||||  
 |-|-|-|  
@@ -61,21 +61,21 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |Delete|OPEN|UPDATE|  
 |DROP|執行個體時提供 SQL Server 登入。|執行個體時提供 SQL Server 登入。|  
   
- 當設為 OFF，每個先前的 T-SQL 陳述式會受限於看不見的 BEGIN TRANSACTION 和 COMMIT TRANSACTION 陳述式看不見。 時，我們稱交易模式是*自動認可*。 如果您的 T-SQL 程式碼會明顯地發出 BEGIN TRANSACTION，我們稱交易模式是*明確*。  
+ 當設定為 OFF，每個前面的 T-SQL 陳述式會受限於看不見的 BEGIN TRANSACTION 和看不見的 COMMIT TRANSACTION 陳述式。 當設定為 OFF 時，我們稱交易模式為「自動認可」。 如果您的 T-SQL 程式碼可見地發出 BEGIN TRANSACTION，我們稱交易模式為「明確」。  
   
- 有數個 clarifying 的點，以了解：  
+ 下列是幾個要了解的重點釐清：  
   
--   隱含交易模式時，會發出看不見的 BEGIN TRANSACTION if @@trancount > 已經 0。 不過，任何明確 BEGIN TRANSACTION 陳述式仍會遞增 @@TRANCOUNT。  
+-   當交易模式為隱含時，如果已經 @@trancount > 0，就不會發出看不見的 BEGIN TRANSACTION。 不過，任何明確的 BEGIN TRANSACTION 陳述式仍會增加 @@TRANCOUNT。  
   
--   您的 INSERT 陳述式和您的工作單位中的其他任何項目完成時，您必須發出 COMMIT TRANSACTION 陳述式直到 @@TRANCOUNT減量到 0 回。 或者，您可以發出一個 ROLLBACK TRANSACTION。  
+-   在工作單位中，當您的 INSERT 陳述式和任何項目完成時，您必須發出 COMMIT TRANSACTION 陳述式，直到 @@TRANCOUNT 減少為 0。 或者您可以發出一個 ROLLBACK TRANSACTION。  
   
 -   不會從資料表中選取的 SELECT 陳述式將無法開始隱含交易。 例如，`SELECT GETDATE();` 或 `SELECT 1, 'ABC';` 不需要交易。  
   
--   隱含交易意外可能由於 ANSI 預設值是 ON。 如需詳細資訊，請參閱[SET ANSI_DEFAULTS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md).  
+-   由於 ANSI 預設值的緣故，隱含交易可能會非預期地設定為 ON。 如需詳細資訊，請參閱 [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)。  
   
-     IMPLICIT_TRANSACTIONS ON 並不常用。 在大部分情況下，IMPLICIT_TRANSACTIONS 為 ON，這是因為已選擇的 SET ANSI_DEFAULTS ON。  
+     IMPLICIT_TRANSACTIONS ON 並不常用。 在大部分 IMPLICIT_TRANSACTIONS 為 ON 的案例中，原因是已經做了 SET ANSI_DEFAULTS ON 的選擇。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，自動將 implicit_transactions 設為 OFF 時連接。 SQLClient managed 提供者，使用的連線，並接收透過 HTTP 端點的 SOAP 要求，SET IMPLICIT_TRANSACTIONS 預設值為 OFF。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式在連線時，都會自動將 IMPLICIT_TRANSACTIONS 設為 OFF。 對於與 SQLClient 受控提供者的連線，以及透過 HTTP 端點來接收的 SOAP 要求，SET IMPLICIT_TRANSACTIONS 預設值為 OFF。  
   
  若要檢視 IMPLICIT_TRANSACTIONS 的目前設定，請執行下列查詢。  
   
@@ -86,7 +86,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ```  
   
 ## <a name="examples"></a>範例  
- 下列的 TRANSACT-SQL 指令碼會執行幾個不同的測試案例。 也提供文字輸出，其中顯示詳細的行為並從每個測試案例結果。  
+ 下列 Transact-SQL 指令碼執行幾個不同的測試案例。 也提供文字輸出，其中顯示每個測試案例的詳細行為與結果。  
   
 ```sql  
 -- Transact-SQL.  
@@ -169,7 +169,7 @@ DROP TABLE dbo.t1;
 go  
 ```  
   
- 接下來是前述的 TRANSACT-SQL 指令碼的文字輸出。  
+ 接下來是前述 Transact-SQL 指令碼的文字輸出。  
   
 ```sql  
 -- Text output from Transact-SQL:  
@@ -202,22 +202,22 @@ go
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [擷取 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [開啟 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
- [TRUNCATE TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   

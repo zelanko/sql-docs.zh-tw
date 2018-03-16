@@ -1,5 +1,5 @@
 ---
-title: "&lt;&gt;（不等於）(TRANSACT-SQL) |Microsoft 文件"
+title: "&lt;&gt; (不等於) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="not-equal-to-transact-sql---traditional"></a>不等於 (Transact SQL)-傳統
+# <a name="not-equal-to-transact-sql---traditional"></a>不等於 (Transact SQL) - 傳統
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  比較兩個運算式 (比較運算子)。 當您在比較非 Null 運算式時，如果左運算元不等於右運算元，則結果為 TRUE，否則結果就是 FALSE。 如果任一個或兩個運算元都是 NULL，請參閱主題[SET ANSI_NULLS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  比較兩個運算式 (比較運算子)。 當您在比較非 Null 運算式時，如果左運算元不等於右運算元，則結果為 TRUE，否則結果就是 FALSE。 如果其中任一個運算元或兩者都是 NULL，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md) 主題。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,14 +52,14 @@ expression <> expression
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 這兩個運算式的類型，都必須是可以隱含轉換的資料類型。 轉換的規則是根據[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+ 這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 這兩個運算式的類型，都必須是可以隱含轉換的資料類型。 轉換會隨著[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的規則而不同。  
   
 ## <a name="result-types"></a>結果類型  
  **布林**  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using--in-a-simple-query"></a>A. 在簡單的查詢中使用 <>  
+### <a name="a-using--in-a-simple-query"></a>A. 在簡單查詢中使用 <>  
  下列範例會傳回 `Production.ProductCategory` 資料表中，在 `ProductCategoryID` 內沒有等於數值 3 或 2 之值的所有資料列。  
   
 ```  
@@ -85,7 +85,7 @@ ProductCategoryID Name
   
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [比較運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [比較運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   

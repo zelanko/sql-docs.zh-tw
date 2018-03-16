@@ -1,7 +1,7 @@
 ---
-title: "sys.dm_db_log_info (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/16/2017
+ms.date: 03/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -27,13 +27,13 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 661647715d2fcff3a4821250dfaa65e0fea07d6e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 56064f19713bf3e5da29109520045762474d4539
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (TRANSACT-SQL)
+# <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 傳回[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)交易記錄的資訊。 請注意，所有交易記錄檔會都併入資料表輸出。 在輸出中的每個資料列代表 VLF 中的交易記錄檔，並提供該記錄檔中的 VLF 的相關資訊。
@@ -53,7 +53,7 @@ sys.dm_db_log_info ( database_id )
 
 ## <a name="table-returned"></a>傳回的資料表  
 
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|資料庫識別碼。|
 |file_id|**smallint**|交易記錄檔的檔案識別碼。|  
@@ -85,23 +85,37 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-status-of-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 判斷 tempdb 的最後一個狀態`VLF`之前記錄檔壓縮交易記錄檔中
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 判斷 tempdb 的最後位置`VLF`之前記錄檔壓縮交易記錄檔中
 
-下列查詢可用來判斷交易記錄，以判斷是否可以壓縮交易記錄檔上執行 shrinkfile 之前的最後一個 VLF 狀態。
+下列查詢可用來判斷交易記錄，以判斷是否可以壓縮交易記錄檔上執行 shrinkfile 之前的最後一個使用中的 VLF 的位置。
 
 ```sql
 USE AdventureWorks2016
 GO
 
-SELECT TOP 1 DB_NAME(database_id) AS "Database Name", file_id, vlf_size_mb, vlf_sequence_number, vlf_active, vlf_status
-FROM sys.dm_db_log_info(DEFAULT)
-ORDER BY vlf_sequence_number DESC
+;WITH cte_vlf AS (
+SELECT ROW_NUMBER() OVER(ORDER BY vlf_begin_offset) AS vlfid, DB_NAME(database_id) AS [Database Name], vlf_sequence_number, vlf_active, vlf_begin_offset, vlf_size_mb
+    FROM sys.dm_db_log_info(DEFAULT)),
+cte_vlf_cnt AS (SELECT [Database Name], COUNT(vlf_sequence_number) AS vlf_count,
+    (SELECT COUNT(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 0) AS vlf_count_inactive,
+    (SELECT COUNT(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS vlf_count_active,
+    (SELECT MIN(vlfid) FROM cte_vlf WHERE vlf_active = 1) AS ordinal_min_vlf_active,
+    (SELECT MIN(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS min_vlf_active,
+    (SELECT MAX(vlfid) FROM cte_vlf WHERE vlf_active = 1) AS ordinal_max_vlf_active,
+    (SELECT MAX(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS max_vlf_active
+    FROM cte_vlf
+    GROUP BY [Database Name])
+SELECT [Database Name], vlf_count, min_vlf_active, ordinal_min_vlf_active, max_vlf_active, ordinal_max_vlf_active,
+((ordinal_min_vlf_active-1)*100.00/vlf_count) AS free_log_pct_before_active_log,
+((ordinal_max_vlf_active-(ordinal_min_vlf_active-1))*100.00/vlf_count) AS active_log_pct,
+((vlf_count-ordinal_max_vlf_active)*100.00/vlf_count) AS free_log_pct_after_active_log
+FROM cte_vlf_cnt
+GO
 ```
 
-
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[資料庫相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

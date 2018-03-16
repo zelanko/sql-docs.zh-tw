@@ -1,14 +1,15 @@
 ---
 title: "複寫訂閱者及 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e868d03cfe57b78affa81b00f5f91376ae9a89e8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6020be0ea9568611a0e427917bc02c2a3a53cc3a
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>複寫訂閱者及 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +34,7 @@ ms.lasthandoff: 01/18/2018
   當包含複寫訂閱者資料庫的 AlwaysOn 可用性群組容錯移轉時，複寫訂閱可能會失敗。 如果是交易式訂閱者，當訂閱使用訂閱者的可用性群組接聽程式名稱時，散發代理程式會繼續自動複寫。 如果是合併訂閱者，複寫管理員必須透過重新建立訂閱，手動重新設定訂閱者。  
   
 ## <a name="what-is-supported"></a>支援項目  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫支援發行者的自動容錯移轉、交易式訂閱者的自動容錯移轉，以及合併訂閱者的手動容錯移轉。 不支援可用性資料庫的散發者容錯移轉。 AlwaysOn 無法結合 Websync 和 ssNoVersion Compact 案例。  
-  
- **合併提取訂閱的容錯移轉**  
-  
- 提取訂閱在可用性群組容錯移轉時失敗，因為提取代理程式找不到儲存在裝載主要複本之伺服器執行個體的 **msdb** 資料庫中的作業，這個伺服器執行個體已失敗，因此無法使用。  
-  
- **合併發送訂閱的容錯移轉**  
-  
- 發送訂閱在可用性群組容錯移轉時失敗，因為發送代理程式無法再連接至原始訂閱者上的原始訂閱資料庫。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫支援發行者的自動容錯移轉，和交易式訂閱者的自動容錯移轉。 不支援可用性資料庫的散發者容錯移轉。 合併訂閱者可以是可用性群組的一部分，不過容錯移轉之後需要手動動作來設定新的訂閱者。 可用性群組無法結合 Websync 和 ssNoVersion Compact 案例。  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>如何在 AlwaysOn 環境中建立交易式訂閱  
  對於異動複寫，請使用下列步驟來設定和容錯移轉訂閱者可用性群組：  

@@ -1,5 +1,5 @@
 ---
-title: "MakeValid (geometry 資料類型) |Microsoft 文件"
+title: "MakeValid (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geometry-data-type"></a>MakeValid (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-將轉換無效**幾何**執行個體移至**幾何**具有有效開放式地理空間協會 (OGC) 類型的執行個體。
+將無效的 **geometry** 執行個體轉換成具有有效開放地理空間協會 (OGC) 類型的 **geometry** 執行個體。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- 這個方法的型別可能會變更**幾何**執行個體，以及導致的點**幾何**稍微偏移的執行個體。  
+## <a name="remarks"></a>Remarks  
+ 這個方法可能會造成 **geometry** 執行個體的類型變更，以及 **geometry** 執行個體的點稍微偏移。  
   
 ## <a name="examples"></a>範例  
  第一個範例會建立與自己重疊的無效 `LineString` 例項，並使用 `STIsValid()` 來確認它是無效的例項。 `STIsValid()` 會針對無效的例項傳回 0 的值。  

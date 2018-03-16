@@ -1,5 +1,5 @@
 ---
-title: "建立對稱金鑰 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -77,13 +77,13 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>引數  
  *Key_name*  
- 依據資料庫中已知之對稱金鑰指定唯一的名稱。 暫時金鑰名稱的開頭應該是一個數字符號 (#)。 例如， **#temporaryKey900007**。 您無法建立名稱開頭有多個數字符號 (#) 的對稱金鑰。 您無法使用 EKM 提供者建立暫時對稱金鑰。  
+ 依據資料庫中已知之對稱金鑰指定唯一的名稱。 暫時金鑰名稱的開頭應該是一個數字符號 (#)。 例如，**#temporaryKey900007**。 您無法建立名稱開頭有多個數字符號 (#) 的對稱金鑰。 您無法使用 EKM 提供者建立暫時對稱金鑰。  
   
- 授權*owner_name*  
+ AUTHORIZATION *owner_name*  
  指定將擁有這個金鑰的資料庫使用者或應用程式角色的名稱。  
   
- 從提供者*provider_name*  
- 指定可延伸金鑰管理 (EKM) 提供者和名稱。 此金鑰不會從 EKM 裝置匯出。 您必須先使用 CREATE PROVIDER 陳述式定義提供者。 如需有關如何建立外部索引鍵的提供者的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ FROM PROVIDER *provider_name*  
+ 指定可延伸金鑰管理 (EKM) 提供者和名稱。 此金鑰不會從 EKM 裝置匯出。 您必須先使用 CREATE PROVIDER 陳述式定義提供者。 如需有關建立外部索引鍵提供者的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
@@ -100,47 +100,47 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
+ CREATION_DISPOSITION **=** CREATE_NEW  
  在可延伸金鑰管理裝置上建立新的金鑰。  如果金鑰已存在於裝置上，陳述式會失敗，並傳回錯誤。  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION **=** OPEN_EXISTING  
  將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對稱金鑰對應到現有的「可延伸金鑰管理」金鑰。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，就會預設為 CREATE_NEW。  
   
  *certificate_name*  
  指定要用於加密對稱金鑰的憑證之名稱。 這個憑證必須已存在於資料庫中。  
   
- **'** *密碼* **'**  
- 指定衍生 TRIPLE_DES 金鑰的密碼，其可以用於保護對稱金鑰的安全。 *密碼*必須符合正在執行的執行個體之電腦的 Windows 密碼原則需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 一律使用增強式密碼。  
+ **'** *password* **'**  
+ 指定衍生 TRIPLE_DES 金鑰的密碼，其可以用於保護對稱金鑰的安全。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 一律使用強式密碼。  
   
  *symmetric_key_name*  
- 指定對稱金鑰，用來加密所建立的索引鍵。 指定的金鑰必須已存在於資料庫中，且該金鑰必須是開啟的。  
+ 指定要用於將建立的金鑰加密之對稱金鑰。 指定的金鑰必須已存在於資料庫中，且該金鑰必須是開啟的。  
   
  *asym_key_name*  
- 指定非對稱金鑰，用來加密所建立的索引鍵。 這個非對稱金鑰必須已存在於資料庫中。  
+ 指定要用於將建立的金鑰加密之非對稱金鑰。 這個非對稱金鑰必須已存在於資料庫中。  
   
- \<演算法 >  
-指定的加密演算法。   
+ \<algorithm>  
+指定加密演算法。   
 > [!WARNING]  
-> 開頭為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，取代 AES_128、AES_192 和 AES_256 以外的所有演算法。 若要使用較舊的演算法 （不建議），您必須設定資料庫相容性層級 120 或更低。  
+> 開頭為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，取代 AES_128、AES_192 和 AES_256 以外的所有演算法。 若要使用較舊的演算法 (不建議)，您必須將資料庫相容性層級設定為 120 或更低。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當建立對稱金鑰時，至少必須利用下列一項來加密對稱金鑰：憑證、密碼、對稱金鑰、非對稱金鑰或 PROVIDER。 針對每一種類型，金鑰都可以有多個加密。 換句話說，可以同時利用多個憑證、密碼、對稱金鑰及非對稱金鑰來加密單一對稱金鑰。  
   
 > [!CAUTION]  
->  而不是憑證 （或另一個索引鍵） 的密碼加密的對稱金鑰，則 TRIPLE DES 加密演算法用來加密的密碼。 因此，利用強式加密演算法 (如 AES) 建立的金鑰，其本身的安全是由較弱的演算法來維護的。  
+>  當對稱金鑰是使用密碼進行加密而不是使用憑證 (或其他金鑰) 時，系統會使用 TRIPLE DES 加密演算法將該密碼加密。 因此，利用強式加密演算法 (如 AES) 建立的金鑰，其本身的安全是由較弱的演算法來維護的。  
   
  將金鑰散發至多個使用者之前，可先利用選擇性的密碼來加密對稱金鑰。  
   
  暫時金鑰由建立它們的使用者擁有。 暫時金鑰只能用於目前的工作階段。  
   
- IDENTITY_VALUE 會產生 GUID，這個 GUID 可用於標記利用新對稱金鑰加密的資料。 這項標記作業可用於使金鑰符合加密的資料。 特定片語產生 GUID 始終是相同的。 在利用片語產生 GUID 之後，只要至少有一個工作階段正主動使用該片語，就無法重複使用該片語。 IDENTITY_VALUE 是選擇性的子句。不過，當您要儲存利用暫時金鑰加密的資料時，我們建議您使用這個子句。  
+ IDENTITY_VALUE 會產生 GUID，這個 GUID 可用於標記利用新對稱金鑰加密的資料。 這項標記作業可用於使金鑰符合加密的資料。 特定片語產生的 GUID 一律相同。 在利用片語產生 GUID 之後，只要至少有一個工作階段正主動使用該片語，就無法重複使用該片語。 IDENTITY_VALUE 是選擇性的子句。不過，當您要儲存利用暫時金鑰加密的資料時，我們建議您使用這個子句。  
   
  沒有預設的加密演算法。  
   
 > [!IMPORTANT]  
 >  不建議您使用 RC4 和 RC4_128 資料流加密保護機密資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會對使用這類金鑰進一步執行加密編碼。  
   
- 對稱金鑰的相關資訊會顯示在[sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)目錄檢視。  
+ 您可以在 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目錄檢視中，看到對稱金鑰的相關資訊。  
   
  您無法利用從加密提供者所建立的對稱金鑰，加密對稱金鑰。  
   
@@ -152,7 +152,7 @@ CREATE SYMMETRIC KEY key_name
   
  **RC4 演算法的取代：**  
   
- 重複的使用相同的 RC4 或 RC4_128 KEY_GUID，在不同的資料區塊上的結果是相同的 RC4 金鑰，因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不自動提供 salt。 重複使用相同的 RC4 金鑰是已知的錯誤，此錯誤會造成加密變弱。 因此，我們取代了 RC4 和 RC4_128 關鍵字。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ 在不同的資料區塊上重複使用相同的 RC4 或 RC4_128 KEY_GUID，結果會是相同的 RC4 金鑰，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會自動提供 Salt。 重複使用相同的 RC4 金鑰是已知的錯誤，此錯誤會造成加密變弱。 因此，我們取代了 RC4 和 RC4_128 關鍵字。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
@@ -199,12 +199,12 @@ CREATION_DISPOSITION=OPEN_EXISTING;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.symmetric_keys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   

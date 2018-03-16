@@ -1,5 +1,5 @@
 ---
-title: "KILL QUERY NOTIFICATION SUBSCRIPTION (TRANSACT-SQL) |Microsoft 文件"
+title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,17 +54,17 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  移除執行個體中所有的訂閱。  
   
  *subscription_id*  
- 移除訂用帳戶 id 與訂用帳戶*subscription_id*。  
+ 移除訂閱識別碼為 *subscription_id* 的訂閱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  KILL QUERY NOTIFICATION SUBSCRIPTION 陳述式會移除查詢通知訂閱，但不產生通知訊息。  
   
- *subscription_id*動態管理檢視中所示，為訂用帳戶 id [sys.dm_qn_subscriptions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ *subscription_id* 是如動態管理檢視 [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) 中所顯示的訂閱識別碼。  
   
  如果指定的訂閱識別碼不存在，陳述式便會產生錯誤。  
   
 ## <a name="permissions"></a>Permissions  
- 若要執行此陳述式的權限僅限於成員**sysadmin**固定的伺服器角色。  
+ 只有 **sysadmin** 固定伺服器角色的成員，才有執行這個陳述式的權限。  
   
 ## <a name="examples"></a>範例  
   

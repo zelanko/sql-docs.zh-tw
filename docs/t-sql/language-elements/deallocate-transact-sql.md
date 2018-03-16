@@ -1,5 +1,5 @@
 ---
-title: "取消配置 (TRANSACT-SQL) |Microsoft 文件"
+title: DEALLOCATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  移除資料指標參考。 當取消配置最後一個資料指標參考時，會釋放組成資料指標的資料結構[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  移除資料指標參考。 取消配置最後一個資料指標參考時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會釋出組成資料指標的資料結構。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>引數  
  *cursor_name*  
- 這是已宣告的資料指標名稱。 如果全域和本機資料指標同時存在與*cursor_name*做為其名稱， *cursor_name*參考全域資料指標，否則指定全域和本機資料指標，如果未指定 GLOBAL。  
+ 這是已宣告的資料指標名稱。 如果全域和本機資料指標同時存在且名稱是 *cursor_name*，若指定了 GLOBAL，*cursor_name* 就是全域資料指標，如果未指定 GLOBAL，則為本機資料指標。  
   
  @*cursor_variable_name*  
- 名稱**游標**變數。 @*cursor_variable_name*必須是型別**游標**。  
+ 這是**資料指標**變數的名稱。 @*cursor_variable_name* 的類型必須是 **cursor**。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  處理資料指標的陳述式會利用資料指標名稱或資料指標變數來參考資料指標。 DEALLOCATE 會移除資料指標和資料指標名稱或資料指標變數之間的關聯。 如果名稱或變數是最後一個參考資料指標的項目，就會取消配置資料指標，釋出資料指標所用的任何資源。 在 DEALLOCATE 時，會釋出用來保護提取隔離的捲動鎖定。 用來保護更新 (其中包括透過資料指標所進行的定位更新) 的交易鎖定，會保留到交易結束時。  
   
  DECLARE CURSOR 陳述式會配置資料指標，將資料指標關聯於資料指標名稱。  
@@ -85,7 +85,7 @@ SELECT * FROM Person.Person;
     SELECT * FROM Person.Person;  
     ```  
   
- DEALLOCATE @*cursor_variable_name*陳述式只會移除參考的具名變數至游標處。 要等到批次、預存程序或觸發程序結束而離開範圍之後，此變數才會取消配置。 在 DEALLOCATE @ 之後*cursor_variable_name*陳述式，此變數可與相關聯使用 SET 陳述式的另一個資料指標。  
+ DEALLOCATE @*cursor_variable_name* 陳述式只會移除具名變數對資料指標的參考。 要等到批次、預存程序或觸發程序結束而離開範圍之後，此變數才會取消配置。 在 DEALLOCATE @*cursor_variable_name* 陳述式之後，可使用 SET 陳述式來將變數關聯至另一個資料指標。  
   
 ```  
 USE AdventureWorks2012;  
@@ -151,7 +151,7 @@ GO
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [資料指標](../../relational-databases/cursors.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [擷取 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [開啟 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

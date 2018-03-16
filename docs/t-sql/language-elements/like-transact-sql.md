@@ -1,5 +1,5 @@
 ---
-title: "例如 (TRANSACT-SQL) |Microsoft 文件"
+title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -67,12 +67,12 @@ match_expression [ NOT ] LIKE pattern
   
 ## <a name="arguments"></a>引數  
  *match_expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)字元資料類型。  
+ 這是字元資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *pattern*  
- 要搜尋的字元的特定字串*match_expression*，而且可以包含下列有效的萬用字元。 *模式*最多可有 8,000 個位元組。  
+ 這是要在 *match_expression* 中搜尋的特定字元字串，可包含下列有效的萬用字元。 *pattern* 最多可有 8,000 個位元組。  
   
-|萬用字元|Description|範例|  
+|萬用字元|描述|範例|  
 |------------------------|-----------------|-------------|  
 |%|任何含有零或多個字元的字串。|WHERE title LIKE '%computer%' 可找出書名中含有 'computer' 這個字的所有書名。|  
 |_ (底線)|任何單一字元。|WHERE au_fname LIKE '_ean' 可找出所有以 ean 結尾的四個字母的名字 (如 Dean、Sean 等)。|  
@@ -80,18 +80,18 @@ match_expression [ NOT ] LIKE pattern
 |[^]|不在指定範圍 ([^a-f]) 或集合 ([^abcdef]) 中的任何單一字元。|WHERE au_lname LIKE 'de[^l]%' 所有開頭是 de 且下一個字元不是 l 的作者姓氏。|  
   
  *escape_character*  
- 這是放在萬用字元前面的字元，用來指示應該將萬用字元解譯成正規字元，而不是萬用字元。 *escape_character*是，沒有預設值，並得出一個字元的字元運算式。  
+ 這是放在萬用字元前面的字元，用來指示應該將萬用字元解譯成正規字元，而不是萬用字元。 *escape_character* 是沒有預設值的字元運算式，且只能得出一個字元。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
- LIKE 會傳回 TRUE 如果*match_expression*符合指定*模式*。  
+ 如果 *match_expression* 符合指定的 *pattern*，LIKE 就會傳回 TRUE。  
   
 ## <a name="remarks"></a>備註  
  當您利用 LIKE 來執行字串比較時，模式字串中的所有字元都很重要。 其中包括開頭或尾端空格。 如果查詢中的某個比較會傳回具有字串 LIKE 'abc' (abc 後面跟著一個空格) 的所有資料列，則該資料行的值是 abc (abc 後面沒有空格) 的資料列就不會被傳回。 不過，在要比對模式的運算式中，會忽略尾端空白。 如果查詢中的某個比較會傳回具有字串 LIKE 'abc' (abc 後面沒有空格) 的所有資料列，則開頭為 abc，不管是否有尾端空格的資料列都會被傳回。  
   
- 使用包含的模式字串比較**char**和**varchar**資料可能無法通過 LIKE 比較，因為資料的儲存方式。 您應該了解每個資料類型的儲存體以及 LIKE 比較可能失敗的情況。 下列範例會傳遞區域變數**char**變數設為預存程序，再利用模式比對來尋找所有員工的姓氏開頭指定的一組字元。  
+ 使用模式包含 **char** 和 **varchar** 資料的字串比較，可能會因為資料的儲存方式而無法通過 LIKE 比較。 您應該了解每個資料類型的儲存體以及 LIKE 比較可能失敗的情況。 下列範例會將 **char** 區域變數傳遞給預存程序，然後使用模式比對來尋找姓氏開頭為一組指定字元的所有員工。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -107,9 +107,9 @@ EXEC FindEmployee @EmpLName = 'Barb';
 GO  
 ```  
   
- 在`FindEmployee`程序中，不會傳回資料列因為**char**變數 (`@EmpLName`) 包含尾端空白，每當名稱包含少放 20 個字元。 因為`LastName`資料行是**varchar**，有沒有尾端空白。 因為有尾端空白，這個程序才會失敗。  
+ 在 `FindEmployee` 程序中，不會傳回任何資料列，因為每當名稱包含的字元少於 20 個時，**char** 變數 (`@EmpLName`) 就會包含尾端空白。 由於 `LastName` 資料行是 **varchar**，因此，沒有尾端空白。 因為有尾端空白，這個程序才會失敗。  
   
- 不過，下列範例會成功，因為尾端空白不會加入至**varchar**變數。  
+ 不過，下列範例會成功，因為 **varchar** 變數沒有加入尾端空白。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -135,7 +135,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## <a name="pattern-matching-by-using-like"></a>利用 LIKE 來進行模式比對  
- LIKE 支援 ASCII 模式比對和 Unicode 模式比對。 當所有引數 (*match_expression*，*模式*，和*escape_character*，如果有的話) 都是 ASCII 字元資料類型，會執行 ASCII 模式比對。 如果有任何引數不是 Unicode 資料類型，所有引數都會轉換成 Unicode，且會執行 Unicode 模式比對。 當您使用 Unicode 資料 (**nchar**或**nvarchar**資料型別) 搭配 LIKE，尾端空白很重要; 不過，對於非 Unicode 資料，尾端空白就不重要。 Unicode LIKE 與 ISO 標準相容。 ASCII LIKE 與舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相容。  
+ LIKE 支援 ASCII 模式比對和 Unicode 模式比對。 當所有引數 (*match_expression*、*pattern* 與 *escape_character*，如果有的話) 都是 ASCII 字元資料類型時，就會執行 ASCII 模式比對。 如果有任何引數不是 Unicode 資料類型，所有引數都會轉換成 Unicode，且會執行 Unicode 模式比對。 當您搭配 LIKE 使用 Unicode 資料 (**nchar** 或 **nvarchar** 資料類型) 時，尾端空白很重要；不過，針對非 Unicode 資料，尾端空白就不重要。 Unicode LIKE 與 ISO 標準相容。 ASCII LIKE 與舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相容。  
   
  下列範例會顯示 ASCII 和 Unicode LIKE 模式比對所傳回之資料列的差異。  
   
@@ -202,7 +202,7 @@ GO
   
  如果 LIKE 模式中逸出字元之後沒有任何字元，模式便無效，LIKE 會傳回 FALSE。 如果逸出字元之後的字元不是萬用字元，就會捨棄萬用字元，且會將模式中在逸出之後的字元當作正規字元來處理。 其中包括用一組方括號 ([ ]) 括住的百分比符號 (%)、底線 (_) 和左方括號 ([) 萬用字元。 另外，在一組方括號字元 ([ ]) 內，您可以使用逸出字元，且可以逸出脫字符號 (^)、連字號 (-) 和右方括號 (])。  
   
- 0x0000 (**char(0)**) 是 Windows 定序中的未定義的字元，而且不能包含在類似。  
+ 0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，而且不得包含在 LIKE 中。  
   
 ## <a name="examples"></a>範例  
   
@@ -297,7 +297,7 @@ GO
 ```  
   
 ### <a name="d-using-the---wildcard-characters"></a>D. 使用 [ ] 萬用字元  
- 下列範例會尋找員工上`Person`資料表的第一個名稱`Cheryl`或`Sheryl`。  
+ 下列範例會在 `Person` 資料表中尋找名字為 `Cheryl` 或 `Sheryl` 的員工。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -308,7 +308,7 @@ WHERE FirstName LIKE '[CS]heryl';
 GO  
 ```  
   
- 下列範例會在 `Person` 資料表上尋找姓氏為 `Zheng` 或 `Zhang` 的員工。  
+ 下列範例會在 `Person` 資料表中尋找姓氏為 `Zheng` 或 `Zhang` 的員工。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -320,10 +320,10 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. 使用 LIKE 搭配 % 萬用字元  
- 下列範例會尋找所有員工的`DimEmployee`資料表開頭的電話號碼與`612`。  
+ 下列範例會在 `DimEmployee` 資料表中尋找電話號碼是以 `612` 開頭的所有員工。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. 使用 NOT LIKE 搭配 % 萬用字元  
- 下列範例會尋找所有電話號碼中的`DimEmployee`資料表，不會啟動`612`。  。  
+ 下列範例會在 `DimEmployee` 資料表中尋找不是以 `612` 開頭的所有電話號碼。  執行個體時提供 SQL Server 登入。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -347,7 +347,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. 使用 LIKE 搭配 _ 萬用字元  
- 下列範例會尋找有區域碼開頭的所有電話號碼`6`中和結束`2`中`DimEmployee`資料表。 請注意，%萬用字元也包含在搜尋模式的結尾因為區碼是電話號碼的第一個部分，而且其他字元後存在的資料行值中。  
+ 下列範例會在 `DimEmployee` 資料表中尋找區碼是以 `6` 開頭且以 `2` 結尾的所有電話號碼。 請注意，搜尋模式結尾中也包含了 % 萬用字元，因為區碼是電話號碼的第一個部分，而其他字元存在於該資料行值之後。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -359,7 +359,7 @@ ORDER by LastName;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

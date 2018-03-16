@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6ed067a54cc867ed091dd27f5a4af91954045f1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支援自訂元件中的多目標
  您現在可以在 SQL Server Data Tools (SSDT) 中使用 SSIS 設計工具，來建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的套件。 若要取得 SSDT for Visual Studio 2015，請參閱[下載最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 
@@ -104,7 +104,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **錯誤訊息。** 無法將 'System.__ComObject' 類型的 COM 物件轉換成 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' 介面類型。 這項作業失敗，因為 IID 為 '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' 的介面之 COM 元件上的 QueryInterface 呼叫，因為發生下列錯誤而失敗：不支援這類介面 (來自 HRESULT 的例外狀況：0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
 
-**解決方案。** 如果您的自訂延伸模組參考 SSIS interop 組件，例如 Microsoft.SqlServer.DTSPipelineWrap 或 Microsoft.SqlServer.DTSRuntimeWrap，請將**內嵌 Interop 類型**屬性的值設成 **False"。
+**解決方案。** 如果您的自訂延伸模組參考 SSIS interop 組件，例如 Microsoft.SqlServer.DTSPipelineWrap 或 Microsoft.SqlServer.DTSRuntimeWrap，請將 [內嵌 Interop 類型] 屬性的值設成 **False**。
 
 ![內嵌 Interop 類型](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

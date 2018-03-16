@@ -1,5 +1,5 @@
 ---
-title: "NCHAR (TRANSACT-SQL) |Microsoft 文件"
+title: NCHAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>引數  
  *integer_expression*  
- 如果資料庫的定序不包含增補字元 (SC) 旗標，這會是從 0 到 65535 (0 到 0xFFFF) 的正整數。 如果指定了這個範圍以外的值，便會傳回 NULL。 如需補充字元的詳細資訊，請參閱[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 如果資料庫的定序不包含增補字元 (SC) 旗標，這會是從 0 到 65535 (0 到 0xFFFF) 的正整數。 如果指定了這個範圍以外的值，便會傳回 NULL。 如需增補字元的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
  如果資料庫的定序支援增補字元 (SC) 旗標，這會是從 0 到 1114111 (0 到 0x10FFFF) 的正整數。 如果指定了這個範圍以外的值，便會傳回 NULL。  
   
 ## <a name="return-types"></a>傳回類型  
- **nchar(1)**預設資料庫定序不支援補充字元時。  
+ 當預設資料庫定序不支援增補字元時，便為 **nchar(1)**。  
   
- **nvarchar(2)**當預設資料庫定序支援增補字元。  
+ 當預設資料庫定序支援增補字元時，便為 **nvarchar(2)**。  
   
- 如果參數*clause><*在於 0-0xFFFF 範圍，就會傳回只有一個字元。 對於較高值，NCHAR 會傳回對應的 Surrogate 字組。 請勿使用 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` 建構 Surrogate 字組。 而應使用支援增補字元的資料庫定序，然後為 Surrogate 字組指定 Unicode 字碼指標。 下列範例示範建構 Surrogate 字組的舊有樣式方法，以及指定 Unicode 字碼指標的慣用方法。  
+ 如果參數 *integer_expression* 在 0 - 0xFFFF 範圍內，則只會傳回一個字元。 對於較高值，NCHAR 會傳回對應的 Surrogate 字組。 請勿使用 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` 建構 Surrogate 字組。 而應使用支援增補字元的資料庫定序，然後為 Surrogate 字組指定 Unicode 字碼指標。 下列範例示範建構 Surrogate 字組的舊有樣式方法，以及指定 Unicode 字碼指標的慣用方法。  
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
@@ -220,10 +220,10 @@ Character # Unicode Character UNICODE Value
   
 ## <a name="see-also"></a>另請參閱  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [CHAR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
+ [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

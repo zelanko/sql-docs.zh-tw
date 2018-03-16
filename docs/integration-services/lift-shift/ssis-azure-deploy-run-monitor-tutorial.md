@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>部署、執行和監視 Azure 上的 SSIS 套件
 本教學課程示範如何將 SQL Server Integration Services 專案部署至 Azure SQL Database 上的 SSISDB 目錄資料庫、在 Azure SSIS Integration Runtime 中執行套件，以及監視執行中的套件。
@@ -29,9 +29,16 @@ ms.lasthandoff: 03/02/2018
 
 也請確定您已設定 SSISDB 資料庫和佈建 Azure SSIS Integration Runtime。 如需如何在 Azure 上佈建 SSIS 的相關資訊，請參閱[將 SSIS 套件部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。
 
+> [!NOTE]
+> 部署至 Azure 只支援專案部署模型。
+
 ## <a name="connect-to-the-ssisdb-database"></a>連線至 SSISDB 資料庫
 
-使用 SQL Server Management Studio，以連線至 Azure SQL Database 伺服器上的 SSIS 目錄。 如需詳細資訊，請參閱[連線至 Azure 上的 SSISDB 目錄資料庫](ssis-azure-connect-to-catalog-database.md)。
+使用 SQL Server Management Studio，以連線至 Azure SQL Database 伺服器上的 SSIS 目錄。 如需詳細資訊和螢幕擷取畫面，請參閱[連線至 Azure 上的 SSISDB 目錄資料庫](ssis-azure-connect-to-catalog-database.md)。
+
+以下是兩個最重要的注意事項。 這些步驟以下列程序描述。
+-   以 **mysqldbserver.database.windows.net** 格式輸入 Azure SQL Database 伺服器的完整名稱。
+-   選取 `SSISDB` 作為連線的資料庫。
 
 > [!IMPORTANT]
 > Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過公司防火牆連線至 Azure SQL Database 伺服器，則必須在公司防火牆中開啟此連接埠，讓您成功連線。
@@ -56,12 +63,18 @@ ms.lasthandoff: 03/02/2018
 
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>使用部署精靈部署專案
 
+若要進一步了解有關部署套件和部署精靈，請參閱[部署 Integration Services (SSIS) 專案和套件](../packages/deploy-integration-services-ssis-projects-and-packages.md)和 [Integration Services 部署精靈](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)。
+
 ### <a name="start-the-integration-services-deployment-wizard"></a>啟動 [Integration Services 部署精靈]
 1. 在 SSMS 的 [物件總管] 中，展開 [Integration Services 目錄] 節點和 [SSISDB] 節點之後，請展開專案資料夾。
 
 2.  選取 [專案] 節點。
 
 3.  以滑鼠右鍵按一下 [專案] 節點，然後選取 [部署專案]。 即會開啟 [Integration Services 部署精靈]。 您可以從 SSIS 目錄資料庫或檔案系統部署專案。
+
+    ![從 SSMS 部署專案](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
+
+    ![SSIS 部署精靈對話方塊隨即開啟](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project2.png)
 
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>使用部署精靈部署專案
 1. 在部署精靈的 [簡介] 頁面上，檢閱簡介。 選取 [下一步] 開啟 [選取來源] 頁面。

@@ -1,5 +1,5 @@
 ---
-title: "建立函式 （SQL 資料倉儲） |Microsoft 文件"
+title: "CREATE FUNCTION (SQL 資料倉儲) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -26,10 +26,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-function-sql-data-warehouse"></a>建立函式 （SQL 資料倉儲）
+# <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中建立使用者定義函數。 使用者定義函式是[!INCLUDE[tsql](../../includes/tsql-md.md)]常式，它會接受參數、 執行動作，例如複雜計算，並傳回該動作所得值的結果。 傳回值必須是純量 （單一） 值。 您可以使用這個陳述式來建立可用下列方式使用的可重複使用常式：  
+  在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中建立使用者定義函數。 使用者定義函式是一種 [!INCLUDE[tsql](../../includes/tsql-md.md)] 常式，它會接受參數、執行動作 (例如複雜計算) 並且將該動作的結果傳回成值。 傳回值必須是純量 (單一) 值。 您可以使用這個陳述式來建立可用下列方式使用的可重複使用常式：  
   
 -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中，例如 SELECT  
   
@@ -75,7 +75,7 @@ RETURNS return_data_type
  這是使用者定義函數所屬的結構描述名稱。  
   
  *function_name*  
- 這是使用者定義函數的名稱。 函式名稱必須符合識別碼的規則，而且必須是唯一的資料庫內及對於它的結構描述。  
+ 這是使用者定義函數的名稱。 函式名稱必須符合識別碼的規則。另外，函式名稱在資料庫內必須是唯一的，且對於它的結構描述也必須是唯一的。  
   
 > [!NOTE]  
 >  即使沒有指定參數，函數名稱後面仍需要括號。  
@@ -88,23 +88,23 @@ RETURNS return_data_type
  使用 @ 記號當做第一個字元來指定參數名稱。 參數名稱必須符合識別碼的規則。 對函數而言，參數必須是本機參數；相同的參數名稱可以用在其他函數中。 參數只能取代常數，不能用來取代資料表名稱、資料行名稱或其他資料庫物件的名稱。  
   
 > [!NOTE]  
->  在預存程序或使用者定義函數中傳遞參數，或在批次陳述式中宣告和設定變數時，不接受 ANSI_WARNINGS。 例如，如果變數定義為**char （3)**，然後設定為超過 3 個字元，資料會截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會成功。  
+>  在預存程序或使用者定義函數中傳遞參數，或在批次陳述式中宣告和設定變數時，不接受 ANSI_WARNINGS。 例如，如果將變數定義為 **char(3)**，然後設定為大於三個字元的值，資料就會被截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會執行成功。  
   
  *parameter_data_type*  
- 是參數資料類型。 如[!INCLUDE[tsql](../../includes/tsql-md.md)]函式、 支援的所有純量資料類型[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]允許。 時間戳記 (rowversion) 資料類型不支援的型別。  
+ 參數資料類型。 針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中支援的所有純量資料類型皆允許。 時間戳記 (rowversion) 資料類型是不支援的類型。  
   
  [ =*default* ]  
- 這是參數的預設值。 如果*預設*值定義、 可執行函式，但未指定該參數的值。  
+ 這是參數的預設值。 如果已定義 *default* 值，則不需為該參數指定值，即可執行函式。  
   
  如果函數的參數有預設值，則必須在呼叫函數來擷取該預設值時指定關鍵字 DEFAULT。 這個行為與使用預存程序中具有預設值的參數不一樣，因為在預存程序中，省略參數也意味著使用預設值。  
   
  *return_data_type*  
- 這是純量使用者定義函數的傳回值。 如[!INCLUDE[tsql](../../includes/tsql-md.md)]函式、 支援的所有純量資料類型[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]允許。 時間戳記 (rowversion) 資料類型不支援的型別。 不允許資料指標和資料表的非純量類型。  
+ 這是純量使用者定義函數的傳回值。 針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中支援的所有純量資料類型皆允許。 時間戳記 (rowversion) 資料類型是不支援的類型。 不允許資料指標和資料表的非純量類型。  
   
  *function_body*  
- 系列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。  Function_body 不得包含 SELECT 陳述式，而且無法參考資料庫的資料。  Function_body 無法參考資料表或檢視表。 函式主體可以呼叫其他具決定性的函數，但是無法呼叫非決定性函數。 
+ 一連串的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  function_body 無法包含 SELECT 陳述式，且無法參考資料庫資料。  function_body 無法參考資料表或檢視。 函式主體可以呼叫其他具決定性的函式，但是無法呼叫非決定性函式。 
   
- 在純量函數， *function_body*是一系列的[!INCLUDE[tsql](../../includes/tsql-md.md)]一起評估純量值的陳述式。  
+ 在純量函式中，*function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會一起評估為純量值。  
   
  *scalar_expression*  
  指定純量函數傳回的純量值。  
@@ -124,18 +124,18 @@ RETURNS return_data_type
   
  只有當下列條件成立時，函數才可繫結結構描述：  
   
--   函數所參考的任何使用者定義函式會也結構描述繫結。  
+-   函式參考的任何使用者定義函式也繫結結構描述。  
   
--   函式和函數所參考的其他 Udf 會參考使用單一部份或兩部分名稱。  
+-   函式和函式所參考的其他 UDF 會使單一部分或兩部分名稱進行參考。  
   
--   只有內建函數相同的資料庫中的其他 Udf 可以參考 Udf 的主體內。  
+-   僅有內建函式以及相同資料庫中的其他 UDF 可以在 UDF 的主體內參考。  
   
 -   執行 CREATE FUNCTION 陳述式的使用者在函數參考的資料庫物件上有 REFERENCES 權限。  
   
- 若要移除 SCHEMABINDING 使用 ALTER  
+ 若要移除 SCHEMABINDING，請使用 ALTER  
   
- NULL 輸入上傳回 NULL |**NULL 輸入上呼叫**  
- 指定**OnNULLCall**純量值函式的屬性。 若未指定，預設情況下意味著 CALLED ON NULL INPUT。 這表示，即使傳遞 NULL 做為引數，函數主體仍會執行。  
+ RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+ 指定純量值函式的 **OnNULLCall** 屬性。 若未指定，預設情況下意味著 CALLED ON NULL INPUT。 這表示，即使傳遞 NULL 做為引數，函數主體仍會執行。  
   
 ## <a name="best-practices"></a>最佳作法  
  如果未以 SCHEMABINDING 子句建立使用者定義函數，叫用該函數時，對基礎物件所進行的變更可能會影響函數的定義並產生非預期的結果。 建議您實作下列其中一個方法，以確保函數不會因為其基礎物件的變更而變成過期：  
@@ -149,7 +149,7 @@ RETURNS return_data_type
   
 -   流程控制陳述式 (但不包括 TRY...CATCH 陳述式)。  
   
--   DECLARE 陳述式-定義本機資料變數。  
+-   DECLARE 陳述式 - 定義區域資料變數。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  使用者定義函數不能用來執行修改資料庫狀態的動作。  
@@ -157,9 +157,9 @@ RETURNS return_data_type
  使用者定義函數可以具有巢狀結構；也就是說，某個使用者定義函數可以呼叫另一個使用者定義函數。 被呼叫的函數開始執行時，巢狀層級會遞增；被呼叫的函數完成執行時，巢狀層級會遞減。 使用者定義函數所建立的巢狀結構最多可以有 32 個層級。 超過巢狀層級上限會導致整個呼叫函數鏈結失敗。   
   
 ## <a name="metadata"></a>中繼資料  
- 此區段會列出系統目錄檢視，您可以用來傳回使用者定義函數的相關中繼資料。  
+ 此小節列出您可以用來傳回使用者定義函式之中繼資料的系統目錄檢視表。  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) ： 顯示的定義[!INCLUDE[tsql](../../includes/tsql-md.md)]使用者定義函數。 例如：  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)：顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函式的定義。 例如：  
   
 ```  
 SELECT definition, type   
@@ -171,17 +171,17 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) ： 顯示使用者定義函數中定義的參數的相關資訊。  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)：顯示使用者定義函式中定義之參數的相關資訊。  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) ： 顯示函數所參考的基礎物件。  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)：顯示函式所參考的基礎物件。  
   
 ## <a name="permissions"></a>Permissions  
  需要資料庫中的 CREATE FUNCTION 權限，以及此函數建立所在之結構描述上的 ALTER 權限。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. 使用變更資料類型的純量值使用者定義函式  
- 這個簡單的函式會採用**int**資料類型做為輸入，並傳回**decimal(10,2)**做為輸出的資料類型。  
+### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. 使用純量值使用者定義函式來變更資料類型  
+ 這個簡單的函式會採用 **int** 資料類型作為輸入，並傳回 **decimal(10,2)** 資料類型作為輸出。  
   
 ```  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
@@ -199,7 +199,7 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [卸除函數 (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
 

@@ -54,9 +54,9 @@ GOTO label
   
 ## <a name="arguments"></a>引數  
  *label*  
- 這是 GOTO 的目標標籤，處理程序在這個點之後開始。 標籤必須遵循的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 標籤可用來作為是使用 GOTO 的註解化方法。  
+ 這是 GOTO 的目標標籤，處理程序在這個點之後開始。 標籤必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 標籤可用來作為是使用 GOTO 的註解化方法。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  GOTO 可以在條件式流程控制陳述式、陳述式區塊或程序內，但它不能移至批次之外的標籤。 GOTO 分支可以移至定義在 GOTO 之前或之後的標籤。  
   
 ## <a name="permissions"></a>Permissions  
@@ -85,12 +85,12 @@ Branch_Three:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [中斷 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/break-transact-sql.md)   
- [繼續 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/continue-transact-sql.md)   
+ [BREAK &#40;Transact-SQL&#41;](../../t-sql/language-elements/break-transact-sql.md)   
+ [CONTINUE &#40;Transact-SQL&#41;](../../t-sql/language-elements/continue-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
- [WAITFOR &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
+ [WAITFOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
   
   

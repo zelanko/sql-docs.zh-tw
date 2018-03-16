@@ -1,5 +1,5 @@
 ---
-title: "MinDbCompatibilityLevel (geometry 資料類型) |Microsoft 文件"
+title: "MinDbCompatibilityLevel (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-傳回可辨識的最低資料庫相容性層級**幾何**資料類型執行個體。
+傳回可辨識 **geometry** 資料型別執行個體的最低資料庫相容性層級。
   
 ## <a name="syntax"></a>語法  
   
@@ -41,11 +41,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型： **int**  
+ CLR 傳回類型：**int**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在變更資料庫的相容性層級之前，請先使用 `MinDbCompatibilityLevel()` 測試空間物件的相容性。  
   
 ## <a name="examples"></a>範例  

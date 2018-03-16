@@ -1,5 +1,5 @@
 ---
-title: "-（註解） (TRANSACT-SQL) |Microsoft 文件"
+title: "-- (註解) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  *text_of_comment*  
  這是包含註解文字的字元字串。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  單行註解或巢狀註解使用兩個連字號 (--)。 新行字元會終止利用 -- 插入的註解。 註解沒有長度上限。 下表列出您可以用來註解或取消註解文字的鍵盤快速鍵。  
   
 |動作|Standard|  
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/25/2018
 |讓所選的文字變成註解|CTRL+K、CTRL+C|  
 |將所選的文字取消註解|CTRL+K、CTRL+U|  
   
- 如需鍵盤快速鍵的詳細資訊，請參閱[SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
+ 如需有關鍵盤快速鍵的詳細資訊，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
   
- 對於多行註解，請參閱[斜線星狀 &#40;區塊註解 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ 如需了解多行註解，請參閱[斜線星形 &#40;區塊註解&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 -- 註解化字元。  
@@ -81,6 +81,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [流程控制語言 (TRANSACT-SQL)](~/t-sql/language-elements/control-of-flow.md)  
+ [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   

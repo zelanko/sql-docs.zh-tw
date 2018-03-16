@@ -1,5 +1,5 @@
 ---
-title: "WRITETEXT (TRANSACT-SQL) |Microsoft 文件"
+title: WRITETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  允許進行最低限度記錄的互動式更新現有**文字**， **ntext**，或**映像**資料行。 WRITETEXT 會覆寫它所影響之資料行中的任何現有資料。 上不能使用 WRITETEXT**文字**， **ntext**，和**映像**檢視中的資料行。  
+  允許以記錄最少資訊的互動方式，更新現有的 **text**、**ntext** 或 **image** 資料行。 WRITETEXT 會覆寫它所影響之資料行中的任何現有資料。 WRITETEXT 不能用在檢視表中的 **text**、**ntext** 及 **image** 資料行上。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用大數值資料類型和**。**WRITE 子句[更新](../../t-sql/queries/update-transact-sql.md)陳述式改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用大數值資料類型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式的 **.**WRITE 子句。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,34 +64,34 @@ WRITETEXT [BULK]
 >  我們建議您不要將 BULK 選項用於以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為基礎的應用程式中。 未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本可能會變更或移除這個選項。  
   
  *table* **.column**  
- 這是資料表的名稱和**文字**， **ntext**，或**映像**来更新資料行。 資料表和資料行名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 資料庫名稱和擁有者名稱的指定是選擇性的。  
+ 這是要更新之資料表及 **text**、**ntext** 或 **image** 資料行的名稱。 資料表和資料行名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 資料庫名稱和擁有者名稱的指定是選擇性的。  
   
  *text_ptr*  
- 已儲存的指標值**文字**， **ntext**，或**映像**資料。 *text_ptr*必須**binary （16)**。若要建立文字指標，執行[插入](../../t-sql/statements/insert-transact-sql.md)或[更新](../../t-sql/queries/update-transact-sql.md)陳述式不是 null 的資料搭配**文字**， **ntext**，或**映像**資料行。  
+ 這是儲存 **text**、**ntext** 或 **image** 資料之指標的值。 *text_ptr* 必須是 **binary(16)**。若要建立文字指標，請搭配 **text**、**ntext** 或 **image** 資料行並非 Null 的資料來執行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式。  
   
  WITH LOG  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會忽略這個項目。 記錄取決於資料庫的實際復原模式。  
   
  *data*  
- 是實際**文字**， **ntext**或**映像**来儲存資料。 *資料*可以是常值或參數。 可利用 WRITETEXT 以互動方式插入文字的最大長度大約是 120 KB 的**文字**， **ntext**，和**映像**資料。  
+ 這是要儲存的實際 **text**、**ntext** 或 **image** 資料。 *data* 可以是常值或參數。 就 **text**、**ntext** 及 **image** 資料而言，可使用 WRITETEXT 以互動方式插入的文字長度上限大約是 120 KB。  
   
-## <a name="remarks"></a>備註  
- 利用 WRITETEXT 來取代**文字**， **ntext**，和**映像**資料，利用 UPDATETEXT 來修改**文字**， **ntext**，和**映像**資料。 UPDATETEXT 則更具彈性，因為它會變更的一部分**文字**， **ntext**，或**映像**而非整個資料行的資料行。  
+## <a name="remarks"></a>Remarks  
+ 請使用 WRITETEXT 來取代 **text**、**ntext** 及 **image** 資料，使用 UPDATETEXT 來修改 **text**、**ntext** 及 **image** 資料。 UPDATETEXT 較有彈性，因為它只會變更 **text**、**ntext** 或 **image** 資料行的一部份，而不是變更整個資料行。  
   
- 我們建議，為了達到最佳效能**文字**， **ntext**，和**映像**資料插入或更新以 8040 位元組倍數的大小。  
+ 為了獲得最佳效能，建議您以 8040 個位元組之倍數的片段大小來插入或更新 **text**、**ntext** 及 **image** 資料。  
   
- 如果資料庫復原模式是簡單或大量記錄**文字**， **ntext**，和**映像**新資料時，使用 WRITETEXT 作業是最低限度記錄的作業插入或附加。  
+ 如果資料庫復原模式為簡單或大量記錄模式，當插入或附加新資料時，使用 WRITETEXT 的 **text**、**ntext** 及 **image** 作業會是記錄最少資訊的作業。  
   
 > [!NOTE]  
 >  當更新現有的值時，不會使用最低限度記錄。  
   
  若要使 WRITETEXT 正確運作，資料行必須已包含有效的文字指標。  
   
- 如果資料表沒有資料列文字[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]節省空間，不會初始化**文字**資料行中加入明確或隱含的 null 值時**文字**沒有文字指標與 INSERT 資料行可以是取得這些 null。 初始化**文字**資料行設為 NULL，使用 UPDATE 陳述式。 如果資料表有資料列文字，您就不需要初始化 Null 的文字資料行，一律能夠取得文字指標。  
+ 如果資料表沒有同資料列文字，當使用 INSERT 在 **text** 資料行中新增明確或隱含的 Null 值，而無法取得這些 Null 的文字指標時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會藉由不將 **text** 資料行初始化來節省空間。 若要將 **text** 資料行初始化成 NULL，請使用 UPDATE 陳述式。 如果資料表有資料列文字，您就不需要初始化 Null 的文字資料行，一律能夠取得文字指標。  
   
- ODBC SQLPutData 函式會比較快，而且會使用動態記憶體比 WRITETEXT 少。 此函式可以插入 2 gb 的**文字**， **ntext**，或**映像**資料。  
+ 與 WRITETEXT 相比，ODBC SQLPutData 函數的處理速度較快，且使用的動態記憶體較少。 此函數最多可插入 2 GB 的 **text**、**ntext** 或 **image** 資料。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請在資料列文字指標**文字**， **ntext**，或**映像**資料可能存在而無效。 Text in row 選項的相關資訊，請參閱[sp_tableoption &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). 如需讓文字指標無效的資訊，請參閱[sp_invalidate_textptr &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，可能有指向 **text**、**ntext** 或 **image** 資料的同資料列文字指標存在，但可能無效。 如需有關 text in row 選項的資訊，請參閱[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 如需有關讓文字指標變成無效的資訊，請參閱 [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要指定之資料表的 UPDATE 權限。 當傳送 UPDATE 權限時，可以傳送權限。  
@@ -124,6 +124,6 @@ GO
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [UPDATETEXT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/updatetext-transact-sql.md)  
+ [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)  
   
   

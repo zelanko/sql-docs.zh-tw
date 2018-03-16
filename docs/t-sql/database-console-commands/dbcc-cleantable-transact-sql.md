@@ -1,5 +1,5 @@
 ---
-title: "DBCC CLEANTABLE (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC CLEANTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]回收空間，以從資料表或索引檢視表中已卸除的可變長度資料行。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 從資料表或索引檢視中卸除的可變長度資料行回收空間。
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
@@ -59,7 +59,7 @@ DBCC CLEANTABLE
   
 ## <a name="arguments"></a>引數  
  *database_name* | *database_id* | 0  
- 這是要清除之資料表所屬的資料庫。 如果指定 0，就會使用目前的資料庫。 資料庫名稱必須遵循的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
+ 這是要清除之資料表所屬的資料庫。 如果指定 0，就會使用目前的資料庫。 資料庫名稱必須遵循[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
  *table_name* | *table_id* | *view_name*| *view_id*  
  這是要清除的資料表或索引檢視。  
@@ -70,8 +70,8 @@ DBCC CLEANTABLE
  WITH NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>備註  
-DBCC CLEANTABLE 會在可變長度資料行卸除之後回收空間。 可變長度資料行可以是下列一種資料類型： **varchar**， **nvarchar**， **varchar （max)**， **nvarchar （max)**， **varbinary**， **varbinary （max)**，**文字**， **ntext**，**映像**， **sql_variant**，和**xml**。 在卸除固定長度資料行之後，這個命令並不會回收空間。
+## <a name="remarks"></a>Remarks  
+DBCC CLEANTABLE 會在可變長度資料行卸除之後回收空間。 可變長度資料行可以是下列資料類型之一：**varchar**、**nvarchar**、**varchar(max)**、**nvarchar(max)**、**varbinary**、**varbinary(max)**、**text**、**ntext**、**image**、**sql_variant** 和 **xml**。 在卸除固定長度資料行之後，這個命令並不會回收空間。
 如果卸除的資料行之前是儲存在同資料列，則 DBCC CLEANTABLE 會從資料表的 IN_ROW_DATA 配置單位回收空間。 如果資料行儲存在非資料列中，則會根據卸除資料行的資料類型，從 ROW_OVERFLOW_DATA 或 LOB_DATA 配置單位回收空間。 如果從 ROW_OVERFLOW_DATA 或 LOB_DATA 頁面回收空間會導致空頁面，則 DBCC CLEANTABLE 會將頁面移除。
 DBCC CLEANTABLE 可以執行為一或多項交易。 如果未指定批次大小，這個命令會在單一交易中處理整份資料表，在作業期間，會獨佔鎖定這份資料表。 對於某些大型資料表而言，單一交易的長度及所需要的記錄空間可能會太大。 如果指定了批次大小，便會在一系列交易中執行這個命令，每項交易都包含指定數目的資料列。 DBCC CLEANTABLE 無法作為另一項交易內的交易來執行。
 這項作業會完整記錄下來。
@@ -88,7 +88,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Permissions  
- 呼叫端必須擁有資料表或索引檢視表，或是屬於**sysadmin**固定伺服器角色、 **db_owner**固定資料庫角色或**db_ddladmin**固定的資料庫角色。  
+ 呼叫端必須擁有資料表或索引檢視，或是系統管理員 **sysadmin** 固定伺服器角色、**db_owner** 固定資料庫角色，或 **db_ddladmin** 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>A. 使用 DBCC CLEANTABLE 來回收空間  

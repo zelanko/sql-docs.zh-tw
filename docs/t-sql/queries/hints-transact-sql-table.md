@@ -1,5 +1,5 @@
 ---
-title: "資料表提示 (TRANSACT-SQL) |Microsoft 文件"
+title: "資料表提示 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---table"></a>提示 (TRANSACT-SQL)-資料表
+# <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   資料表提示會在資料操作語言 (DML) 陳述式持續時間覆寫查詢最佳化工具的預設行為，其方式是指定鎖定方法、一個或多個索引、查詢處理作業 (例如資料表掃描或索引搜尋) 或是其他選項。 資料表提示會在 DML 陳述式的 FROM 子句中指定，並只會影響該子句中參考的資料表或檢視表。  
@@ -156,7 +156,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  指定當查詢最佳化工具處理查詢時，不展開任何索引檢視表來存取基礎資料表。 查詢最佳化工具在處理檢視表時，會將它視為具有叢集索引的資料表。 NOEXPAND 只適用於索引檢視表。 如需詳細資訊，請參閱＜備註＞。  
   
  INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
- Index （） 語法指定的名稱或處理陳述式時，查詢最佳化工具所使用的一個或多個索引的識別碼。 替代的 INDEX = 語法會指定單一索引值。 每份資料表只能指定一個索引提示。  
+ INDEX() 語法會指定要由查詢最佳化工具在其處理陳述式時使用之一或多個索引的名稱或識別碼。 替代的 INDEX = 語法會指定單一索引值。 每份資料表只能指定一個索引提示。  
   
  如果有叢集索引存在，INDEX(0) 會強制執行叢集索引掃描，INDEX(1) 會強制執行叢集索引掃描或搜尋。 如果沒有叢集索引，INDEX(0) 會強制執行資料表掃描，INDEX(1) 會解譯為一則錯誤。  
   
@@ -168,36 +168,36 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  資料表提示中的最大索引數目是 250 個非叢集索引。  
   
  KEEPIDENTITY  
- 搭配使用 BULK 選項時，是只適用於 INSERT 陳述式[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。  
+ 只有在搭配 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 使用 BULK 選項時，才適用於 INSERT 陳述式。  
   
  指定識別欄位要使用匯入之資料檔案中的一個或多個識別值。 如果未指定 KEEPIDENTITY，就會驗證這個資料行的識別值，但不會匯入它，而且查詢最佳化工具會根據建立資料表期間所指定的種子值和遞增值來自動指派唯一值。  
   
 > [!IMPORTANT]  
->  如果資料檔案中沒有資料表或檢視表中之識別欄位的值，而且識別欄位不是資料表的最後一個資料行，您就必須略過此識別欄位。 如需詳細資訊，請參閱[使用格式檔案略過資料欄位 &#40;SQL Server &#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). 如果順利跳過識別欄位，查詢最佳化工具會自動在匯入的資料表資料列中，指派識別欄位的唯一值。  
+>  如果資料檔案中沒有資料表或檢視表中之識別欄位的值，而且識別欄位不是資料表的最後一個資料行，您就必須略過此識別欄位。 如需詳細資訊，請參閱[使用格式檔案略過資料欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)。 如果順利跳過識別欄位，查詢最佳化工具會自動在匯入的資料表資料列中，指派識別欄位的唯一值。  
   
- 如需在 INSERT ...選取 * FROM OPENROWSET 陳述式，請參閱[保留識別值時大量匯入資料 &#40;SQL Server &#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+ 如需在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式中使用此提示的範例，請參閱[大量匯入資料時保留識別值 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)。  
   
- 如需檢查資料表的識別值的資訊，請參閱[DBCC CHECKIDENT &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ 如需有關檢查資料表識別值的詳細資訊，請參閱 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。  
   
  KEEPDEFAULTS  
- 搭配使用 BULK 選項時，是只適用於 INSERT 陳述式[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。  
+ 只有在搭配 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 使用 BULK 選項時，才適用於 INSERT 陳述式。  
   
  指定在資料記錄缺少資料行的值時，如果資料表資料行有預設值，便插入這個預設值，而不是 NULL。  
   
- 如需在 INSERT ...選取 * FROM OPENROWSET 陳述式，請參閱[保留 Null 或使用預設值大量匯入期間 &#40;SQL Server &#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+ 如需在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式中使用此提示的範例，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
  FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
  指定查詢最佳化工具只使用索引搜尋作業做為資料表或檢視表資料的存取路徑。 從 SQL Server 2008 R2 SP1 開始，您也可以指定索引參數。 如此一來，查詢最佳化工具只會考慮至少使用指定索引資料行之指定索引的索引搜尋作業。  
   
  *index_value*  
- 索引名稱或索引識別碼值。 您無法指定索引識別碼 0 (堆積)。 若要傳回的索引名稱或識別碼，請查詢**sys.indexes**目錄檢視。  
+ 索引名稱或索引識別碼值。 您無法指定索引識別碼 0 (堆積)。 如果要傳回索引名稱或識別碼，請查詢 **sys.indexes** 目錄檢視。  
   
  *index_column_name*  
  要加入搜尋作業的索引資料行名稱。 指定 FORCESEEK 搭配索引參數，類似於使用 FORCESEEK 與 INDEX 提示。 但您可以同時指定要搜尋的索引，以及搜尋作業所要考慮的索引資料行，以更有效地控制查詢最佳化工具所使用的存取路徑。 最佳化工具可能會視需要考慮其他資料行。 例如，如果指定了非叢集索引，最佳化工具可能會選擇使用叢集索引鍵資料行及指定的資料行。  
   
  您可以使用下列方式指定 FORCESEEK 提示。  
   
-|語法|範例|Description|  
+|語法|範例|描述|  
 |------------|-------------|-----------------|  
 |沒有索引或 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK)`|查詢最佳化工具只會考慮透過任何相關索引的索引搜尋作業存取資料表或檢視表。|  
 |結合 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|查詢最佳化工具只會考慮利用指定索引的索引搜尋作業存取資料表或檢視表。|  
@@ -205,7 +205,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  使用 FORCESEEK 提示 (搭配或不搭配索引參數) 時，請考慮下列指導方針。  
   
--   您可以將提示指定為資料表提示或查詢提示。 如需有關查詢提示的詳細資訊，請參閱[查詢提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+-   您可以將提示指定為資料表提示或查詢提示。 如需有關查詢提示的詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 -   如果要將 FORCESEEK 套用至索引檢視，也必須指定 NOEXPAND 提示。  
   
@@ -229,7 +229,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   您不可指定索引鍵所未定義的資料行。 例如，在非叢集索引中，您只可指定經過定義的索引鍵資料行。 您無法指定自動包含在索引中的叢集索引鍵資料行，但最佳化工具則可加以使用。  
   
--   您不可指定 xVelocity 記憶體最佳化的資料行存放區索引做為索引參數。 會傳回錯誤 366。  
+-   您不可指定 xVelocity 記憶體最佳化的資料行存放區索引做為索引參數。 系統會傳回錯誤 366。  
   
 -   修改索引定義 (例如加入或移除資料行) 可能需要修改參考該索引的查詢。  
   
@@ -265,16 +265,16 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  這相當於 SERIALIZABLE。 如需詳細資訊，請參閱這個主題稍後的 SERIALIZABLE。 HOLDLOCK 只適用於指定了 HOLDLOCK 的資料表或檢視表，且只在其使用所在之陳述式所定義的交易期間內有效。 HOLDLOCK 不可在包含 FOR BROWSE 選項的 SELECT 陳述式中使用。  
   
  IGNORE_CONSTRAINTS  
- 搭配使用 BULK 選項時，是只適用於 INSERT 陳述式[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。  
+ 只有在搭配 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 使用 BULK 選項時，才適用於 INSERT 陳述式。  
   
- 指定大量匯入作業忽略資料表的任何條件約束。 根據預設，INSERT 會檢查[Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)和[Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。 當大量匯入作業指定 IGNORE_CONSTRAINTS 時，INSERT 必須在目標資料表上忽略這些條件約束。 請注意，您不能停用 UNIQUE、PRIMARY KEY 或 NOT NULL 條件約束。  
+ 指定大量匯入作業忽略資料表的任何條件約束。 根據預設，INSERT 會檢查[唯一條件約束與檢查條件約束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)及[主要與外部索引鍵條件約束](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。 當大量匯入作業指定 IGNORE_CONSTRAINTS 時，INSERT 必須在目標資料表上忽略這些條件約束。 請注意，您不能停用 UNIQUE、PRIMARY KEY 或 NOT NULL 條件約束。  
   
  如果輸入資料包含違反條件約束的資料列，您可能會想停用 CHECK 和 FOREIGN KEY 條件約束。 當停用 CHECK 和 FOREIGN KEY 條件約束時，您可以先匯入資料，再利用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來清理資料。  
   
- 不過，會忽略 CHECK 和 FOREIGN KEY 條件約束，當每個資料表上忽略的條件約束標示為**is_not_trusted**中[sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)或[sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)作業之後，目錄檢視。 您應該在某個點上，檢查整份資料表的條件約束。 如果在大量匯入作業之前，資料表不是空的，重新驗證條件約束的成本，可能會超出在累加資料上套用 CHECK 和 FOREIGN KEY 條件約束的成本。  
+ 不過，在忽略 CHECK 和 FOREIGN KEY 條件約束的情況下，系統於作業完成之後，會將資料表上被忽略的每個條件約束於 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) 或 [sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md) 目錄檢視中標示為 **is_not_trusted**。 您應該在某個點上，檢查整份資料表的條件約束。 如果在大量匯入作業之前，資料表不是空的，重新驗證條件約束的成本，可能會超出在累加資料上套用 CHECK 和 FOREIGN KEY 條件約束的成本。  
   
  IGNORE_TRIGGERS  
- 搭配使用 BULK 選項時，是只適用於 INSERT 陳述式[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。  
+ 只有在搭配 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 使用 BULK 選項時，才適用於 INSERT 陳述式。  
   
  指定大量匯入作業忽略資料表所定義的任何觸發程序。 依預設，INSERT 會套用觸發程序。  
   
@@ -293,16 +293,16 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  在通常會採用資料列或索引鍵的個別鎖定，或通常會採用單一資料表鎖定的情況下，頁面會鎖定。 依預設，會使用作業所適用的鎖定模式。 如果是在以 SNAPSHOT 隔離等級操作的交易中指定時，不會採用頁面鎖定，除非 PAGLOCK 是與其他需要鎖定的資料表提示相結合，例如 UPDLOCK 和 HOLDLOCK。  
   
  READCOMMITTED  
- 指定讀取作業使用鎖定或資料列版本設定，以遵守 READ COMMITTED 隔離等級的規則。 如果資料庫選項 READ_COMMITTED_SNAPSHOT 是 OFF，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在讀取資料時取得共用鎖定，並在讀取作業完成時釋放這些鎖定。 如果資料庫選項 READ_COMMITTED_SNAPSHOT 是 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便不需要鎖定，而會使用資料列版本設定。 如需有關隔離等級的詳細資訊，請參閱[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 指定讀取作業使用鎖定或資料列版本設定，以遵守 READ COMMITTED 隔離等級的規則。 如果資料庫選項 READ_COMMITTED_SNAPSHOT 是 OFF，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在讀取資料時取得共用鎖定，並在讀取作業完成時釋放這些鎖定。 如果資料庫選項 READ_COMMITTED_SNAPSHOT 是 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便不需要鎖定，而會使用資料列版本設定。 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 > [!NOTE]  
 >  如果是 UPDATE 或 DELETE 陳述式：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  READCOMMITTEDLOCK  
- 指定讀取作業使用鎖定，以遵守 READ COMMITTED 隔離等級的規則。 不論資料庫選項 READ_COMMITTED_SNAPSHOT 的設定為何，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 一律在讀取資料時取得共用鎖定，並在讀取作業完成時釋放這些鎖定。 如需有關隔離等級的詳細資訊，請參閱[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 您不可為 INSERT 陳述式的目標資料表指定此提示，否則會傳回錯誤 4140。  
+ 指定讀取作業使用鎖定，以遵守 READ COMMITTED 隔離等級的規則。 不論資料庫選項 READ_COMMITTED_SNAPSHOT 的設定為何，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 一律在讀取資料時取得共用鎖定，並在讀取作業完成時釋放這些鎖定。 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。 您不可為 INSERT 陳述式的目標資料表指定此提示，否則會傳回錯誤 4140。  
   
  READPAST  
- 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不讀取其他交易已鎖定的資料列。 當指定 READPAST 時，會略過資料列層級鎖定，但不是會略過頁面層級鎖定。 亦即，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會略過資料列，而不會封鎖目前的交易，直到釋放鎖定為止。 例如，假設資料表 `T1` 包含了值為 1、2、3、4、5 的單一整數資料行。 如果交易 A 將 3 的值變更為 8，但是尚未認可，則 SELECT * FROM T1 (READPAST) 會產生 1、2、4、5 的值。 READPAST 主要是用來減少鎖定競爭的情況時實作會使用一個工作佇列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。 使用 READPAST 的佇列讀取器會略過其他交易已鎖定的佇列項目，直接到下一個可用的佇列項目，不需要等待其他交易釋放鎖定。  
+ 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不讀取其他交易已鎖定的資料列。 當指定 READPAST 時，系統會略過資料列層級鎖定，但不會略過頁面層級的鎖定。 亦即，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會略過資料列，而不會封鎖目前的交易，直到釋放鎖定為止。 例如，假設資料表 `T1` 包含了值為 1、2、3、4、5 的單一整數資料行。 如果交易 A 將 3 的值變更為 8，但是尚未認可，則 SELECT * FROM T1 (READPAST) 會產生 1、2、4、5 的值。 READPAST 主要是在實作使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的工作佇列時用來減少鎖定競爭。 使用 READPAST 的佇列讀取器會略過其他交易已鎖定的佇列項目，直接到下一個可用的佇列項目，不需要等待其他交易釋放鎖定。  
   
  UPDATE 或 DELETE 陳述式所參考的任何資料表，以及 FROM 子句所參考的任何資料表，都可以指定 READPAST。 當在 UPDATE 陳述式中指定 READPAST 時，只有在讀取資料來識別要更新的記錄時，才會套用 READPAST，不論是在陳述式的哪個位置指定，都是如此。 INSERT 陳述式 INTO 子句中的資料表不能指定 READPAST。 當讀取外部索引鍵或索引檢視表時，或當修改次要索引時，使用 READPAST 的更新或刪除作業可能會進行封鎖。  
   
@@ -332,24 +332,24 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   SNAPSHOT 隔離等級。  
   
- 如需有關隔離等級的詳細資訊，請參閱[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 > [!NOTE]  
 >  如果您在指定 READUNCOMMITTED 的情況下，收到錯誤訊息 601，請依照死結錯誤 (1205) 的相同方式來解決它，再重試您的陳述式。  
   
  REPEATABLEREAD  
- 指定利用與執行 REPEATABLE READ 隔離等級之交易相同的鎖定語意來執行掃描。 如需有關隔離等級的詳細資訊，請參閱[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 指定利用與執行 REPEATABLE READ 隔離等級之交易相同的鎖定語意來執行掃描。 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
  ROWLOCK  
  指定通常在採用頁面或資料表鎖定時，採用資料列鎖定。 如果是在以 SNAPSHOT 隔離等級操作的交易中指定時，不會採用資料列鎖定，除非 ROWLOCK 是與其他需要鎖定的資料表提示相結合，例如 UPDLOCK 和 HOLDLOCK。  
   
  SERIALIZABLE  
- 這相當於 HOLDLOCK。 使共用鎖定更具限制性的方法是將共用鎖定持續保留到交易完成為止，而不是在不再需要所要求的資料表或資料頁面時，便立即釋放共用鎖定 (不論交易是否完成)。 利用與在 SERIALIZABLE 隔離等級執行之交易相同的語意來執行掃描。 如需有關隔離等級的詳細資訊，請參閱[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 這相當於 HOLDLOCK。 使共用鎖定更具限制性的方法是將共用鎖定持續保留到交易完成為止，而不是在不再需要所要求的資料表或資料頁面時，便立即釋放共用鎖定 (不論交易是否完成)。 利用與在 SERIALIZABLE 隔離等級執行之交易相同的語意來執行掃描。 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
  SNAPSHOT  
 **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
- 記憶體最佳化的資料表是在 SNAPSHOT 隔離下存取。 SNAPSHOT 只能用於記憶體最佳化的資料表 (不可用於磁碟基礎的資料表)。 如需詳細資訊，請參閱[記憶體最佳化資料表簡介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
+ 記憶體最佳化的資料表是在 SNAPSHOT 隔離下存取。 SNAPSHOT 只能用於記憶體最佳化的資料表 (不可用於磁碟基礎的資料表)。 如需詳細資訊，請參閱[記憶體最佳化的資料表簡介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
   
 ```  
 SELECT * FROM dbo.Customers AS c   
@@ -361,7 +361,7 @@ LEFT JOIN dbo.[Order History] AS oh
  SPATIAL_WINDOW_MAX_CELLS = *integer*  
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定要用於鑲嵌幾何或地理物件的資料格數上限。 *數字*是介於 1 和 8192 之間的值。  
+ 指定要用於鑲嵌幾何或地理物件的資料格數上限。 *number* 是介於 1 和 8192 之間的值。  
   
  此選項允許藉由調整主要和次要篩選執行時間之間的取捨，微調查詢執行時間。 較大的數字會降低次要篩選執行時間，但增加主要篩選執行時間，較小的數字會減少主要篩選執行時間，但增加次要篩選器執行時間。 對於較密集的空間資料，較高的數字應該會藉由使用主要篩選提供更好的近似值，並減少次要篩選執行時間，產生更快速的執行時間。 對於較疏鬆的資料，較低的數目會減少主要篩選執行時間。  
   
@@ -370,9 +370,9 @@ LEFT JOIN dbo.[Order History] AS oh
  TABLOCK  
  指定在資料表層級套用取得的鎖定。 取得的鎖定類型取決於執行的陳述式。 例如，SELECT 陳述式可能會取得共用鎖定。 指定 TABLOCK 可以將共用鎖定套用至整份資料表，而不會在資料列或頁面層級進行套用。 如果同時指定了 HOLDLOCK，就會將資料表鎖定保留到交易結束為止。  
   
- 使用 INSERT INTO 插入堆積中匯入資料時\<target_table > 選取\<資料行 > FROM \<c > 陳述式中，您可以啟用最佳化的記錄和鎖定藉由指定陳述式目標資料表的 TABLOCK 提示。 此外，資料庫的復原模式必須設定為簡單或大量記錄。 如需詳細資訊，請參閱 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。  
+ 當您使用 INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> 陳述式將資料匯入堆積時，可以指定目標資料表的 TABLOCK 提示來啟用陳述式的最佳化記錄和鎖定。 此外，資料庫的復原模式必須設定為簡單或大量記錄。 如需詳細資訊，請參閱 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。  
   
- 當搭配[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) bulk 資料列集提供者將資料匯入資料表時，TABLOCK 可讓多個用戶端能夠同時將資料載入目標資料表，以最佳化記錄和鎖定。 如需詳細資訊，請參閱[Prerequisites for Minimal Logging 大量匯入](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+ 當搭配 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 大量資料列集提供者使用，以將資料匯入資料表時，TABLOCK 會使多個用戶端能夠以最佳化的記錄和鎖定，同時將資料載入目標資料表中。 如需詳細資訊，請參閱[大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
  TABLOCKX  
  指定獨佔鎖定是在資料表上取得。  
@@ -385,7 +385,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  指定採用獨佔鎖定，且保留到交易完成為止。 如果指定了 ROWLOCK、PAGLOCK 或 TABLOCK，就會將獨佔鎖定套用在適當的資料粒度層級上。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果查詢計劃並未存取資料表，就會忽略資料表提示。 這可能是最佳化工具選擇完全不存取資料表所造成的，也可能是因為改成存取索引檢視表。 在後面一種情況中，您可以利用 OPTION (EXPAND VIEWS) 查詢提示來防止存取索引檢視表。  
   
  所有鎖定提示都會傳播到查詢計劃所存取的所有資料表和檢視表，包括檢視表中所參考的資料表和檢視表。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會執行對應的鎖定一致性檢查。  
@@ -423,26 +423,26 @@ GO
  如果 SET 選項沒有已篩選之索引的必要值，查詢最佳化工具將不會考量索引提示。 如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="using-noexpand"></a>使用 NOEXPAND  
- NOEXPAND 只適用於*索引檢視表*。 索引檢視表是建立了唯一叢集索引的檢視表。 如果查詢包含同時在索引檢視表和基底資料表中的資料行參考，而且查詢最佳化工具判斷使用索引檢視表能夠提供最好的查詢執行方法，則查詢最佳化工具會使用檢視表的索引。 這項功能稱為*編製索引檢視表比對*。 之前[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1 時，自動使用索引檢視表查詢最佳化工具只支援特定版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ NOEXPAND 只適用於*索引檢視表*。 索引檢視表是建立了唯一叢集索引的檢視表。 如果查詢包含同時在索引檢視表和基底資料表中的資料行參考，而且查詢最佳化工具判斷使用索引檢視表能夠提供最好的查詢執行方法，則查詢最佳化工具會使用檢視表的索引。 此功能稱為*索引檢視表比對*。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 之前，只有特定版本的 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 才支援由查詢最佳化工具自動使用索引檢視表。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  不過，若要使最佳化工具考慮比對索引檢視表，或使用 NOEXPAND 提示所參考的索引檢視表，下列 SET 選項必須設為 ON。  
  
 > [!NOTE]  
->  Azure SQL Database 會支援自動使用索引檢視表，但未指定 NOEXPAND 提示。
+>  Azure SQL Database 支援在不指定 NOEXPAND 提示的情況下自動使用索引檢視表。
   
 ||||  
 |-|-|-|  
 |ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
 |ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
   
- <sup>1</sup> ANSI_WARNINGS 設為 ON 時隱含地 ARITHABORT 設為 ON。 因此，您不需要手動調整這個設定。  
+ <sup>1</sup> 當 ANSI_WARNINGS 設為 ON 時，ARITHABORT 也會隱含地設為 ON。 因此，您不需要手動調整這個設定。  
   
  另外，NUMERIC_ROUNDABORT 選項必須設成 OFF。  
   
  若要強制最佳化工具使用索引檢視表的索引，請指定 NOEXPAND 選項。 僅當查詢中指定了檢視的名稱時，才可使用此提示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會提供提示強制在未在 FROM 子句直接指定檢視名稱的查詢中使用特定的索引檢視，但即使查詢中未直接參考索引檢視，查詢最佳化工具仍會使用索引檢視。  
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>將資料表提示當做查詢提示使用  
- *資料表提示*也可以指定為查詢提示使用 OPTION (TABLE HINT) 子句。 我們建議使用資料表提示當做查詢提示的內容中僅[計劃指南](../../relational-databases/performance/plan-guides.md)。 如果是特定的查詢，只將這些提示指定為資料表提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
+ 也可以使用 OPTION (TABLE HINT) 子句將*資料表提示*指定為查詢提示。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。 如果是特定的查詢，只將這些提示指定為資料表提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="permissions"></a>Permissions  
  KEEPIDENTITY、IGNORE_CONSTRAINTS 和 IGNORE_TRIGGERS 提示需要資料表的 ALTER 權限。  
@@ -503,7 +503,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
   
 ## <a name="see-also"></a>另請參閱  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

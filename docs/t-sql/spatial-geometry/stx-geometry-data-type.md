@@ -1,5 +1,5 @@
 ---
-title: "STX (geometry 資料類型) |Microsoft 文件"
+title: "STX (geometry 資料型別) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stx-geometry-data-type"></a>STX (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-X 座標屬性**點**執行個體。
+**Point** 執行個體的 X 座標屬性。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ X 座標屬性**點**執行個體。
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**float**  
   
- CLR 型別： **SqlDouble**  
+ CLR 類型：**SqlDouble**  
   
-## <a name="remarks"></a>備註  
- 這個屬性的值將會是 null 如果**幾何**執行個體不是點。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 執行個體不是點，這個屬性的值將會是 Null。  
   
  此屬性是唯讀的。  
   
@@ -64,7 +64,7 @@ SELECT @g.STX;
   
 ## <a name="see-also"></a>另請參閱  
  [STY &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
- [STSrid &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
+ [STSrid &#40;geometry 資料型別&#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

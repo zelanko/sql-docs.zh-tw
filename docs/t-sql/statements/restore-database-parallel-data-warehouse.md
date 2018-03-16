@@ -1,5 +1,5 @@
 ---
-title: "還原資料庫 (Parallel Data Warehouse) |Microsoft 文件"
+title: "RESTORE DATABASE (平行處理資料倉儲) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,17 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-database-parallel-data-warehouse"></a>還原資料庫 (Parallel Data Warehouse)
+# <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  還原[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]使用者資料庫從資料庫備份至[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]應用裝置。 從先前所建立的備份還原資料庫[!INCLUDE[ssPDW](../../includes/sspdw-md.md)][備份資料庫 &#40;平行資料倉儲 &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)命令。 使用備份和還原作業來建立災害復原方案，或將資料庫從一個裝置移到另一個。  
+  將[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]使用者資料庫從資料庫備份還原到[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 資料庫會從 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md) 命令先前所建立備份還原。 您可以使用備份和還原作業來建置災害復原計劃，或將資料庫從一個應用裝置移至另一個應用裝置。  
   
 > [!NOTE]  
->  還原 master 包含還原應用裝置登入資訊。 若要還原 master，請使用[還原 master 資料庫 &#40;TRANSACT-SQL &#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)頁面**Configuration Manager**工具。 具有存取權的控制節點的系統管理員才能執行此作業。  
+>  還原 master 時，會包括還原應用裝置登入資訊。 若要還 master，請使用**組態管理員**工具中的[還原 master 資料庫 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)頁面。 能夠存取控制節點的系統管理員將可執行這項作業。  
   
- 如需有關[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫備份，請參閱 「 備份和還原 」 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
+ 如需有關[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫備份的詳細資訊，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Backup and Restore＞(備份和還原)。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,15 +62,15 @@ RESTORE HEADERONLY
   
 ## <a name="arguments"></a>引數  
  RESTORE DATABASE *database_name*  
- 指定使用者資料庫還原到資料庫，呼叫*database_name*。 已還原的資料庫可以有不同的名稱與來源資料庫備份。 *database_name*不能已存在於目的地應用裝置上的資料庫。 如需詳細資訊允許資料庫名稱，請參閱 < 物件命名規則 > 中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
+ 指定將使用者資料庫還原至名為 *database_name* 的資料庫。 所還原資料庫的名稱可以與所備份來源資料庫的名稱不同。 *database_name* 不可以是目的地應用裝置上已經存在的資料庫。 如需有關所允許資料庫名稱的更多詳細資料，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Object Naming Rules＞(物件命名規則)。  
   
- 還原使用者資料庫會還原完整資料庫備份，然後再應用裝置選擇性地還原差異備份。 使用者資料庫還原包括還原資料庫使用者與資料庫角色。  
+ 還原使用者資料庫時，會將完整資料庫備份及視需要將差異備份還原至應用裝置。 還原使用者資料庫時，會包括還原資料庫使用者和資料庫角色。  
   
  FROM DISK = '\\\\*UNC_path*\\*backup_directory*'  
- 網路路徑及從中目錄[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]將還原的備份檔案。 例如，FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]還原備份檔案時的來源網路路徑和目錄。 例如 FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。  
   
  *backup_directory*  
- 指定包含完整或差異備份的目錄名稱。 例如，您可以執行完整或差異備份的 RESTORE HEADERONLY 運算。  
+ 指定包含完整或差異備份的目錄名稱。 例如，您可以在完整或差異備份上執行 RESTORE HEADERONLY 作業。  
   
  *full_backup_directory*  
  指定包含完整備份的目錄名稱。  
@@ -78,81 +78,81 @@ RESTORE HEADERONLY
  *differential_backup_directory*  
  指定包含差異備份的目錄名稱。  
   
--   路徑] 和 [備份目錄必須存在，而且必須指定為完整的通用命名慣例 (UNC) 路徑。  
+-   備份目錄的路徑必須已經存在，且必須以完整通用命名慣例 (UNC) 路徑的形式指定。  
   
--   備份目錄的路徑不能是本機路徑，它不能是任何位置[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]應用裝置節點。  
+-   備份目錄的路徑不可以是本機路徑，也不可以是任何[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]應用裝置節點上的位置。  
   
--   備份目錄名稱與 UNC 路徑的最大長度為 200 個字元。  
+-   UNC 路徑和備份目錄名稱的長度上限是 200 個字元。  
   
--   必須指定伺服器或主機，IP 位址。  
+-   伺服器或主機必須以 IP 位址的形式指定。  
   
  RESTORE HEADERONLY  
- 指定要傳回只有一個使用者資料庫備份的標頭資訊。 欄位標頭包含備份的備份名稱的文字描述。 備份名稱不需要儲存備份檔案的目錄名稱相同。  
+ 指定只傳回一個使用者資料庫備份的標頭資訊。 標頭包含備份的文字描述和備份名稱等。 備份名稱不一定要與儲存備份檔案的目錄同名。  
   
- RESTORE HEADERONLY 的結果會模仿[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]RESTORE HEADERONLY 的結果。 結果將會有超過 50 個資料行，並非所有供[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 如需中的資料行的描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]RESTORE HEADERONLY 的結果，請參閱[RESTORE HEADERONLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
+ RESTORE HEADERONLY 結果會比照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 結果的模式。 此結果有超過 50 個資料行，這些資料行不會完全供[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]使用。 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 結果中資料行的描述，請參閱 [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
- 需要**CREATE ANY DATABASE**權限。  
+ 需要 **CREATE ANY DATABASE** 權限。  
   
- 需要 Windows 帳戶具有存取和讀取從備份目錄的權限。 您也必須儲存的 Windows 帳戶名稱和密碼[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
+ 需要具備備份目錄之存取和讀取權限的 Windows 帳戶。 您也必須將 Windows 帳戶名稱和密碼儲存在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。  
   
-1.  若要確認憑證已經存在，請使用[sys.dm_pdw_network_credentials &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+1.  若要確認認證是否已經存在，請使用 [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)。  
   
-2.  若要新增或更新的認證，請使用[sp_pdw_add_network_credentials &#40;SQL 資料倉儲 &#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
+2.  若要新增或更新認證，請使用 [sp_pdw_add_network_credentials &#40;SQL 資料倉儲&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。  
   
-3.  若要移除認證從[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用[sp_pdw_remove_network_credentials &#40;SQL 資料倉儲 &#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
+3.  若要從[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]移除認證，請使用 [sp_pdw_remove_network_credentials &#40;SQL 資料倉儲&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)。  
   
 ## <a name="error-handling"></a>錯誤處理  
- RESTORE DATABASE 命令會產生錯誤，在下列情況下：  
+ 在下列情況下，RESTORE DATABASE 命令會造成錯誤：  
   
--   已還原資料庫的名稱存在於目標裝置上。 若要避免這個問題，選擇唯一的資料庫名稱，或卸除現有資料庫，然後再執行還原。  
+-   目標應用裝置上已經有要還原之資料庫的名稱。 若要避免此問題，請選擇一個唯一的資料庫名稱，或在執行還原之前，先卸除現有的資料庫。  
   
--   沒有備份目錄中的檔案備份組無效。  
+-   備份目錄中有一組無效的備份檔案。  
   
--   登入權限還不夠來還原資料庫。  
+-   登入權限不足以還原資料庫。  
   
--   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]沒有正確的權限的備份檔案的所在位置的網路位置。  
+-   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]沒有備份檔案所在網路位置的正確權限。  
   
--   備份目錄的網路位置不存在，或無法使用。  
+-   備份目錄的網路位置不存在或無法使用。  
   
--   沒有足夠的磁碟空間的計算節點上控制節點。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]不會確認足夠的磁碟空間存在應用裝置上啟動還原之前。 因此，就能夠在執行 RESTORE DATABASE 陳述式時產生出的磁碟空間時發生錯誤。 磁碟空間不足時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]回復還原。  
+-   計算節點或控制節點上的磁碟空間不足。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]在起始還原之前，未先確認應用裝置上是否有足夠的磁碟空間。 因此，在執行 RESTORE DATABASE 陳述式時，可能產生磁碟空間不足錯誤。 發生磁碟空間不足問題時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會復原還原作業。  
   
--   還原資料庫的目標裝置具有比從備份資料庫的來源應用裝置的計算節點較少。  
+-   作為資料庫還原目的地之目標應用裝置的計算節點數目，比備份資料庫時之來源應用裝置的計算節點數目少。  
   
--   資料庫還原會嘗試從，在交易內。  
+-   從交易內嘗試執行資料庫還原。  
   
 ## <a name="general-remarks"></a>一般備註  
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]追蹤資料庫還原的成功。 還原差異資料庫備份之前先[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]確認已順利完成完整資料庫還原。  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會追蹤資料庫還原是否成功。 在還原差異資料庫備份之前，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會確認完整資料庫還原已成功完成。  
   
- 還原之後，使用者資料庫會具有資料庫相容性層級 120。 這是不論其原始的相容性層級的所有資料庫，則為 true。  
+ 還原之後，使用者資料庫的資料庫相容性層級相會是 120。 這適用於所有資料庫，不論其原始相容性層級為何。  
   
- **還原至具有較大數目的運算節點應用裝置**  
-執行[DBCC SHRINKLOG （Azure SQL 資料倉儲）](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)之後從較大到小工具還原資料庫，因為重新發佈將會增加交易記錄檔。  
+ **還原至具有大量計算節點的應用裝置**  
+將資料庫從較小型應用裝置還原至較大型應用裝置之後，請執行 [DBCC SHRINKLOG (Azure SQL 資料倉儲)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)，因為轉散發會增加交易記錄。  
 
-將備份還原到具有較大數目的運算節點的應用裝置會逐漸增加配置的資料庫大小成比例的運算節點數目。  
+將備份還原至具有較多計算節點的應用裝置時，會讓已配置的資料庫大小依計算節點數目比例成長。  
   
-例如，還原 60 GB 資料庫時從 2 節點應用裝置 (30 GB，每個節點) 至 6 節點應用裝置， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 6 節點應用裝置上建立 180 GB 資料庫 （6 節點具有 30 GB 每個節點）。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]一開始將資料庫還原到比對來源的設定，2 個節點，然後轉散發到所有的 6 節點資料。  
+例如，將 60 GB 資料庫從具有 2 個節點的應用裝置 (每個節點 30 GB) 還原至具有 6 個節點的應用裝置時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會在具有 6 個節點的應用裝置上建立一個 180 GB 的資料庫 (6 個節點，每個節點 30 GB)。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]一開始會將資料庫還原至 2 個節點以符合來源組態，然後會將資料轉散發至全部 6 個節點。  
   
- 轉散發之後每個計算節點會包含實際的資料比較少，較小的來源應用裝置上每個計算節點的更多可用空間。 若要將更多資料加入至資料庫中使用額外的空間。 如果還原的資料庫大小大於您需要您可以使用[ALTER DATABASE &#40;平行資料倉儲 &#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)壓縮資料庫檔案大小。  
+ 在轉散發之後，與較小型的來源應用裝置相比，每個計算節點將會包含較少的實際資料和較多的可用空間。 請使用額外的空間將更多資料新增至資料庫。 如果所還原的資料庫大於您所需的大小，您可以使用 [ALTER DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)來縮減資料庫檔案大小。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- 關於這些限制和限制，來源應用裝置會是建立資料庫備份，與目標應用裝置是資料庫將還原應用裝置的應用裝置。  
+ 就這些限制而言，來源應用裝置是您從中建立資料庫備份的應用裝置，而目標應用裝置則是將作為資料庫還原目的地的應用裝置。  
   
- 還原資料庫，不會自動重建統計資料。  
+ 還原資料庫並不會自動重建統計資料。  
   
- 只有一個 RESTORE DATABASE 或 BACKUP DATABASE 陳述式可以在任何給定時間的應用裝置上執行。 應用裝置同時提交多個備份和還原陳述式，如果將它們放入佇列，其中一個處理一次。  
+ 在任何指定時間，在應用裝置上都只能執行一個 RESTORE DATABASE 或 BACKUP DATABASE 陳述式。 如果同時提交多個備份和還原陳述式，應用裝置就會將它們排入佇列，然後一次處理一個陳述式。  
   
- 您只能還原資料庫備份來[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]目標的應用裝置，具有相同數目或更多的運算節點比來源應用裝置。 目標裝置不能有比來源應用裝置的計算節點較少。  
+ 您只能將資料庫備份還原至所擁有計算節點數目等於或大於來源應用裝置的[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]目標應用裝置。 目標應用裝置所擁有的計算節點數目不可以比來源應用裝置少。  
   
- 您無法還原已建立具有 SQL Server 2012 PDW 應用裝置具有 SQL Server 2008 R2 的硬體硬體應用裝置的備份。 如此即使原本購買 SQL Server 2008 R2 PDW 硬體應用裝置，並且現在正在執行 SQL Server 2012 PDW 軟體。  
+ 您無法將在具有 SQL Server 2012 PDW 硬體之應用裝置上建立的備份，還原至具有 SQL Server 2008 R2 硬體的應用裝置。 即使原先購買應用裝置時是配備 SQL Server 2008 R2 PDW 硬體，而現在執行的是 SQL Server 2012 PDW 軟體，也適用此限制。  
   
 ## <a name="locking"></a>鎖定  
- 資料庫物件上採用獨佔鎖定。  
+ 在 DATABASE 物件上採用獨佔鎖定。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-simple-restore-examples"></a>A. 簡單的 RESTORE 範例  
- 下列範例會還原完整備份，以便`SalesInvoices2013`資料庫。 備份檔案儲存在\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full 目錄。 SalesInvoices2013 資料庫不能已存在於目標應用裝置或此命令將會失敗，發生錯誤。  
+ 下列範例會將完整資料庫備份還原至 `SalesInvoices2013` 資料庫。 備份檔案會儲存在 \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full 目錄中。 SalesInvoices2013 資料庫不可以是目標應用裝置上已經存在的資料庫，否則此命令會因發生錯誤而失敗。  
   
 ```  
 RESTORE DATABASE SalesInvoices2013  
@@ -160,9 +160,9 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 ```  
   
 ### <a name="b-restore-a-full-and-differential-backup"></a>B. 還原完整和差異備份  
- 下列範例會還原完整的然後差異備份到 SalesInvoices2013 資料庫  
+ 下列範例會先將完整備份還原至 SalesInvoices2013 資料庫，然後再將差異備份還原至該資料庫  
   
- 從儲存在完整備份還原完整資料庫備份 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' 目錄。 如果順利完成還原，差異備份還原到 SalesInvoices2013 資料庫。  差異備份會儲存在 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff' 目錄。  
+ 還原資料庫完整備份時，會從儲存在 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' 目錄中的完整備份還原。 如果還原順利完成，系統就會將差異備份還原至 SalesInvoices2013 資料庫。  差異備份會儲存在 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff' 目錄中。  
   
 ```  
 RESTORE DATABASE SalesInvoices2013  
@@ -173,7 +173,7 @@ RESTORE DATABASE SalesInvoices2013
 ```  
   
 ### <a name="c-restoring-the-backup-header"></a>C. 還原備份標頭  
- 這個範例會還原資料庫備份的標頭資訊 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'。 命令會產生一個資料列的 Invoices2013Full 備份的資訊。  
+ 此範例會還原資料庫備份 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' 的標頭資訊。 此命令會為 Invoices2013Full 備份產生一列資訊。  
   
 ```  
 RESTORE HEADERONLY  
@@ -181,9 +181,9 @@ RESTORE HEADERONLY
 [;]  
 ```  
   
- 若要檢查的備份時，內容，或請確定目標還原應用裝置，與來源備份裝置相容，再嘗試還原備份，您可以使用的標頭資訊。  
+ 您可以使用此標頭資訊來檢查備份的內容，或在嘗試還原備份之前，先確認目標還原應用裝置與來源備份應用裝置相容。  
   
 ## <a name="see-also"></a>另請參閱  
- [備份資料庫 &#40;平行資料倉儲 &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+ [BACKUP DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   

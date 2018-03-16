@@ -68,7 +68,7 @@ END CATCH
  *statement_block*  
  在批次或 BEGIN…END 區塊中的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式群組。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  TRY…CATCH 建構會擷取嚴重性高於 10 而未關閉資料庫連接的所有執行錯誤。  
   
  TRY 區塊後面必須緊接著相關聯的 CATCH 區塊。 在 END TRY 與 BEGIN CATCH 陳述式之間包含任何其他陳述式，將會產生語法錯誤。  
@@ -96,17 +96,17 @@ END CATCH
 ## <a name="retrieving-error-information"></a>擷取錯誤資訊  
  在 CATCH 區塊的範圍內，下列系統函數可用來取得造成執行 CATCH 區塊之錯誤的相關資訊：  
   
--   [Error_number （)](../../t-sql/functions/error-number-transact-sql.md)傳回的錯誤數目。  
+-   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) 會傳回錯誤碼。  
   
--   [Error_severity （)](../../t-sql/functions/error-severity-transact-sql.md)傳回嚴重性。  
+-   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) 會傳回嚴重性。  
   
--   [Error_state （)](../../t-sql/functions/error-state-transact-sql.md)傳回的錯誤狀態碼。  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) 會傳回錯誤狀態碼。  
   
--   [Error_procedure （)](../../t-sql/functions/error-procedure-transact-sql.md)會傳回預存程序或觸發程序的名稱發生錯誤。  
+-   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) 會傳回發生錯誤的預存程序或觸發程序的名稱。  
   
--   [Error_line （)](../../t-sql/functions/error-line-transact-sql.md)傳回造成錯誤的常式內的行號。  
+-   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) 會傳回常式內造成錯誤的行號。  
   
--   [Error_message （)](../../t-sql/functions/error-message-transact-sql.md)傳回錯誤訊息的完整文字。 文字包括提供給任何可替代參數的值，例如，長度、物件名稱或次數。  
+-   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) 會傳回錯誤訊息的完整文字。 文字包括提供給任何可替代參數的值，例如，長度、物件名稱或次數。  
   
  如果是在 CATCH 區塊範圍之外呼叫這些函數，它們會傳回 NULL。 這些函數可以從 CATCH 區塊範圍內的任何位置擷取錯誤資訊。 例如，下列指令碼顯示包含錯誤處理函數的預存程序。 在 `CATCH`建構的 `TRY…CATCH`區塊中，會呼叫預存程序，並傳回錯誤的相關資訊。  
   
@@ -138,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- 錯誤\_\*函式也適用於`CATCH`封鎖內[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+ ERROR\_\* 函數也可在[原生編譯之預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)的 `CATCH` 區塊中運作。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>不受 TRY…CATCH 建構影響的錯誤  
  TRY…CATCH 建構不會擷取下列狀況：  
@@ -206,7 +206,7 @@ END CATCH;
 ## <a name="uncommittable-transactions-and-xactstate"></a>無法認可的交易和 XACT_STATE  
  如果在 TRY 區塊內產生的錯誤使目前交易的狀態失效，交易便會分類為無法認可的交易。 通常會在 TRY 區塊之外結束交易的錯誤，當它發生在 TRY 區塊內時，會使交易進入無法認可的狀態。 無法認可的交易只能執行讀取作業或 ROLLBACK TRANSACTION。 這個交易無法執行會產生寫入作業或 COMMIT TRANSACTION 的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如果交易分類為無法認可的交易，XACT_STATE 函數會傳回 -1 值。 當批次完成時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會回復任何使用中無法認可的交易。 如果在交易進入無法認可的狀態時沒有傳送任何錯誤訊息，則當批次完成時，就會將錯誤訊息傳送給用戶端應用程式。 這表示偵測到無法認可的交易，並且需要回復它。  
   
- 如需有關無法認可的交易和 XACT_STATE 函數的詳細資訊，請參閱[XACT_STATE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md).  
+ 如需有關無法認可的交易和 XACT_STATE 函數的詳細資訊，請參閱 [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -326,7 +326,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-trycatch"></a>D. 使用 TRY…CATCH  
  下列範例顯示將會產生除以零的錯誤之 `SELECT` 陳述式。 這個錯誤會使執行動作跳到相關聯的 `CATCH` 區塊。  
@@ -348,14 +348,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [THROW &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [Database Engine 錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)   
+ [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+ [資料庫引擎錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   

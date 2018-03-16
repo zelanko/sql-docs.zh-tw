@@ -1,5 +1,5 @@
 ---
-title: "+ （一元加號）(TRANSACT-SQL) |Microsoft 文件"
+title: "+ (一元加法) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---positive"></a>一元運算子-正數
+# <a name="unary-operators---positive"></a>一元加法 - 正數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 傳回數值運算式 (一元運算子) 的值。 一元運算子只能在屬於數值資料類型類別目錄之任何資料類型的單一運算式上執行運算。   
@@ -61,13 +61,13 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *numeric_expression*  
- 任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)之任何資料類型的數值資料類型類別目錄中，除了**datetime**和**smalldatetime**資料型別。  
+ 這是數值資料類型類別目錄中任何一個資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **datetime** 和 **smalldatetime** 資料類型除外。  
   
 ## <a name="result-types"></a>結果類型  
  傳回 *numeric_expression*的資料類型。  
   
-## <a name="remarks"></a>備註  
- 雖然一元加號可以出現在任何數值運算式之前，但從運算式傳回的值，它並不會做任何處理。 明確地說，如果運算式是負的，它便不會傳回正值。 若要傳回正值運算式是負的請使用[ABS](../../t-sql/functions/abs-transact-sql.md)函式。  
+## <a name="remarks"></a>Remarks  
+ 雖然一元加號可以出現在任何數值運算式之前，但從運算式傳回的值，它並不會做任何處理。 明確地說，如果運算式是負的，它便不會傳回正值。 如果負運算式要傳回正值，請使用 [ABS](../../t-sql/functions/abs-transact-sql.md) 函數。  
   
 ## <a name="examples"></a>範例  
   
@@ -113,8 +113,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [ABS &#40;TRANSACT-SQL &#41;](../../t-sql/functions/abs-transact-sql.md)  
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ABS &#40;Transact-SQL&#41;](../../t-sql/functions/abs-transact-sql.md)  
   
   

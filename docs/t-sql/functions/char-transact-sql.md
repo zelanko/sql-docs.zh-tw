@@ -1,5 +1,5 @@
 ---
-title: "CHAR (TRANSACT-SQL) |Microsoft 文件"
+title: CHAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-將轉換**int**為字元的 ASCII 碼。
+將 **int** ASCII 碼轉換成字元。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,15 +55,15 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>引數  
 *integer_expression*  
-這是介於 0 到 255 之間的整數。 `NULL`如果整數運算式不是會傳回此範圍中。
+這是介於 0 到 255 之間的整數。 如果整數運算式不在這個範圍內，則傳回 `NULL`。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回類型
 **char(1)**
   
-## <a name="remarks"></a>備註  
-`CHAR`可用來控制字元插入字元字串。 下表顯示一些常用的控制字元。
+## <a name="remarks"></a>Remarks  
+`CHAR` 可用來將控制字元插入字元字串。 下表顯示一些常用的控制字元。
   
-|控制字元|Value|  
+|控制字元|ReplTest1|  
 |---|---|
 |索引標籤|**char(9)**|  
 |換行字元|**char(10)**|  
@@ -132,10 +132,10 @@ ken0@adventure-works.com
 (1 row(s) affected)
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. 利用 ASCII 和 CHAR 來列印字串中的 ASCII 值  
-下列範例假設 ASCII 字元設定，並傳回 6 的 ASCII 字元數字的字元值。
+下列範例假設 ASCII 字元集，且會傳回 6 個 ASCII 字元數的字元值。
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +152,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>D. 利用 CHAR 來插入控制字元  
-下列範例會使用`CHAR(13)`文字中傳回結果時，在個別行上傳回資料庫的相關資訊。
+下列範例在會傳回文字結果時，使用 `CHAR(13)`，在個別行中傳回有關資料庫的資訊。
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   
@@ -175,10 +175,10 @@ AdventureWorksPDW2012    is currently  ONLINE
   
 ## <a name="see-also"></a>另請參閱
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [NCHAR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)  
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [+ &#40;字串串連 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [+ &#40;字串串連&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "DBCC TRACEOFF (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC TRACEOFF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]
 WITH NO_INFOMSGS  
 抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 追蹤旗標是用來自訂特定性質以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體運作方式。
   
 ## <a name="result-sets"></a>結果集  
@@ -96,7 +96,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
-[DBCC TRACESTATUS &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
+[DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   

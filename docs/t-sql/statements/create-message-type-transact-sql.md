@@ -64,10 +64,10 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="arguments"></a>引數  
  *message_type_name*  
- 這是要建立的訊息類型名稱。 新訊息類型會建立在目前的資料庫中，擁有者是 AUTHORIZATION 子句中所指定的主體。 您不可指定伺服器、資料庫和結構描述名稱。 *Message_type_name*可達 128 個字元。  
+ 這是要建立的訊息類型名稱。 新訊息類型會建立在目前的資料庫中，擁有者是 AUTHORIZATION 子句中所指定的主體。 您不可指定伺服器、資料庫和結構描述名稱。 *message_type_name* 最多可有 128 個字元。  
   
- 授權*owner_name*  
- 將訊息類型的擁有者設為指定的資料庫使用者或角色。 當目前的使用者是**dbo**或**sa**， *owner_name*可以是任何有效的使用者或角色的名稱。 否則， *owner_name*必須是目前使用者的名稱、 目前的使用者具有 IMPERSONATE 權限，使用者名稱或目前使用者所屬的角色的名稱。 當略過這個子句時，訊息類型會屬於目前的使用者。  
+ AUTHORIZATION *owner_name*  
+ 將訊息類型的擁有者設為指定的資料庫使用者或角色。 當目前的使用者是 **dbo** 或 **sa** 時，*owner_name* 可以是任何有效使用者或角色的名稱。 否則，*owner_name* 必須是目前使用者的名稱、目前使用者有其 IMPERSONATE 權限的使用者名稱，或目前使用者所屬的角色名稱。 當略過這個子句時，訊息類型會屬於目前的使用者。  
   
  VALIDATION  
  指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 如何驗證這種類型之訊息的訊息主體。 當沒有指定這個子句時，驗證的預設值便是 NONE。  
@@ -82,19 +82,19 @@ CREATE MESSAGE TYPE message_type_name
  指定訊息主體必須包含格式正確的 XML。  
   
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
- 指定訊息本文必須包含符合指定的結構描述集合中的結構描述的 XML *schema_collection_name*必須是現有 XML 結構描述集合的名稱。  
+ 指定訊息主體必須包含符合指定的結構描述集合中之結構描述的 XML。*schema_collection_name* 必須是現有 XML 結構描述集合的名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會驗證內送訊息。 當訊息包含不符合指定驗證類型的訊息主體時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會捨棄無效的訊息，且會將錯誤訊息傳回給送出訊息的服務。  
   
  交談的兩端必須定義相同的訊息類型名稱。 為了有助於進行疑難排解，交談的兩端通常會針對此訊息類型指定相同的驗證，不過，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 並不要求交談的兩端使用相同的驗證。  
   
- 訊息類型不能是暫存物件。 訊息類型名稱開頭為 **#**  ，但它們是永久物件。  
+ 訊息類型不能是暫存物件。 您可以使用開頭是 **#** 的訊息類型名稱，但它們是永久物件。  
   
 ## <a name="permissions"></a>Permissions  
- 建立訊息類型的成員的預設值的權限**db_ddladmin**或**db_owner**固定資料庫角色和**sysadmin**固定的伺服器角色。  
+ 建立訊息類型的權限預設為 **db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及系統管理員 (**sysadmin**) 固定伺服器角色的成員。  
   
- 訊息類型的 REFERENCES 權限預設為訊息類型、 成員的擁有者**db_owner**固定資料庫角色的成員**sysadmin**固定的伺服器角色。  
+ 訊息類型的 REFERENCES 權限，預設為訊息類型的擁有者、**db_owner** 固定資料庫角色的成員，以及系統管理員 (**sysadmin**) 固定伺服器角色的成員。  
   
  當 CREATE MESSAGE TYPE 陳述式指定了結構描述集合時，執行這個陳述式的使用者必須有所指定之結構描述集合的 REFERENCES 權限。  
   
@@ -167,8 +167,8 @@ CREATE MESSAGE TYPE
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [變更訊息類型 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [卸除訊息類型 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+ [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

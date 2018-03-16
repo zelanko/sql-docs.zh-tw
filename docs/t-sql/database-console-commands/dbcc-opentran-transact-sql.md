@@ -1,5 +1,5 @@
 ---
-title: "DBCC OPENTRAN (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC OPENTRAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -63,7 +63,7 @@ DBCC OPENTRAN
   
 ## <a name="arguments"></a>引數  
  *database_name* | *database_id*| 0  
- 這是要顯示最舊交易資訊之資料庫的名稱或識別碼。 若未指定，或指定 0，就會使用目前的資料庫。 資料庫名稱必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
+ 這是要顯示最舊交易資訊之資料庫的名稱或識別碼。 若未指定，或指定 0，就會使用目前的資料庫。 資料庫名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
  TABLERESULTS  
  指定可載入資料表的表格式格式結果。 請利用這個選項來建立結果資料表，這些結果可插入資料表以進行比較。 當未指定這個選項時，會將結果格式化，以便閱讀。  
@@ -71,7 +71,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 請利用 DBCC OPENTRAN 來判斷開啟的交易是否在交易記錄內。 當您使用 BACKUP LOG 陳述式時，只能截斷記錄非使用中的部分。開啟的交易可以防止記錄徹底截斷。 若要識別開啟的交易，請利用 sp_who 來取得系統處理序識別碼。
   
 ## <a name="result-sets"></a>結果集  
@@ -139,9 +139,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
-[認可交易 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
+[COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[ROLLBACK TRANSACTION &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
+[ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
   
   

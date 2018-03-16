@@ -1,5 +1,5 @@
 ---
-title: "DBCC FREESYSTEMCACHE (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>引數  
  ( 'ALL' [,*pool_name* ] )  
  ALL 會指定所有支援的快取。  
- *pool_name*指定資源管理員集區快取。 只有與此集區有關的項目才會被釋放。  
+ *pool_name* 會指定 Resource Governor 集區快取。 只有與此集區有關的項目才會被釋放。  
   
  MARK_IN_USE_FOR_REMOVAL   
  等目前所用的項目不用之後，分別從其對應的快取中，以非同步的方式釋出這些項目。 在 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL 執行之後，於快取中建立的新項目皆不受影響。  
@@ -65,11 +65,11 @@ DBCC FREESYSTEMCACHE
  NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 執行 DBCC FREESYSTEMCACHE 會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 對於計畫快取中每一個清除的快取存放區而言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔將會包含下列參考用訊息：「由於 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清。」 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 ## <a name="result-sets"></a>結果集  
-DBCC FREESYSTEMCACHE 會傳回:"DBCC 執行已完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。
+DBCC FREESYSTEMCACHE 會傳回：「DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。
   
 ## <a name="permissions"></a>Permissions  
 需要伺服器的 ALTER SERVER STATE 權限。

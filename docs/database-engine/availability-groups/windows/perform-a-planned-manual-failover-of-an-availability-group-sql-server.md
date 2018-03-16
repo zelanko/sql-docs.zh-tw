@@ -8,29 +8,32 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.availabilitygroup.manualfailover.f1
+f1_keywords:
+- sql13.swb.availabilitygroup.manualfailover.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4df88a913bd97cfdc632fe8e1fb365c5d8e81c2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f1523eff2118c8a451b13167510e204d039f84fa
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組之規劃的手動容錯移轉 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題說明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在不遺失資料的情況下對 AlwaysOn 可用性群組執行手動容錯移轉 (*規劃的手動容錯移轉*)。 可用性群組會在可用性複本層級容錯移轉。 規劃的手動容錯移轉和任何一個 AlwaysOn 可用性群組容錯移轉一樣，會將次要複本轉為主要角色。 同時，容錯移轉也會將先前的主要複本轉成次要角色。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在不遺失資料的情況下針對 AlwaysOn 可用性群組執行手動容錯移轉 (*「已規劃的手動容錯移轉」*(Planned Manual Failover))。 可用性群組會在可用性複本層級容錯移轉。 規劃的手動容錯移轉和任何一個 AlwaysOn 可用性群組容錯移轉一樣，會將次要複本轉為主要角色。 同時，容錯移轉也會將先前的主要複本轉成次要角色。  
   
-只有在主要複本和目標次要複本正在以同步認可模式執行且目前已同步時，才會支援規劃的手動容錯移轉。 規劃的手動容錯移轉會保留聯結至目標次要複本上可用性群組的次要資料庫中所有資料。 之前的主要複本轉成次要角色之後，其資料庫會變成次要資料庫。 接著，這些資料庫會開始與新的主要資料庫同步。 在將它們全部轉換成 SYNCHRONIZED 狀態之後，新的次要複本就會變成有資格當做未來已規劃之手動容錯移轉的目標。  
+只有在主要複本和目標次要複本正在以同步認可模式執行且目前已同步時，才會支援規劃的手動容錯移轉。 規劃的手動容錯移轉會保留聯結至目標次要複本上可用性群組的次要資料庫中的所有資料。 之前的主要複本轉成次要角色之後，其資料庫會變成次要資料庫。 接著，這些資料庫會開始與新的主要資料庫同步。 在將它們全部轉換成 SYNCHRONIZED 狀態之後，新的次要複本就會變成有資格當做未來已規劃之手動容錯移轉的目標。  
   
 > [!NOTE]  
 >  如果次要和主要複本都設定成自動容錯移轉模式，在次要複本同步完畢之後，其也可作為自動容錯移轉的目標。 如需詳細資訊，請參閱[可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  

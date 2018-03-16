@@ -1,5 +1,5 @@
 ---
-title: "QUOTENAME (TRANSACT-SQL) |Microsoft 文件"
+title: QUOTENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
   
 ## <a name="arguments"></a>引數  
  '*character_string*'  
- 這是 Unicode 字元資料的字串。 *character_string*是**sysname** ，長度限制為 128 個字元。 大於 128 個字元的輸入會傳回 NULL。  
+ 這是 Unicode 字元資料的字串。 *character_string* 是 **sysname**，且限制為 128 個字元。 大於 128 個字元的輸入會傳回 NULL。  
   
  '*quote_character*'  
- 這是用來當做分隔符號的單字元字串。 可以是單引號 ( **'** )、 左或右方括號 ( **[]** )，或雙引號 ( **"** )。 如果*quote_character*未指定，會使用方括號。  
+ 這是用來當做分隔符號的單字元字串。 它可以是單引號 ( **'**)、左或右方括號 ( **[]** ) 或雙引號 ( **"** )。 如果未指定 *quote_character*，就會使用方括號。  
   
 ## <a name="return-types"></a>傳回類型  
  **nvarchar(258)**  
@@ -75,7 +75,7 @@ SELECT QUOTENAME('abc[]def');
   
  請注意，`abc[]def` 字串中的兩個右方括號用來表示逸出字元。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會使用字元字串 `abc def`，且利用 `[` 和 `]` 字元來建立有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分隔識別碼。  
   
 ```  
@@ -91,8 +91,8 @@ SELECT QUOTENAME('abc def');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [PARSENAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/parsename-transact-sql.md)  
- [CONCAT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [PARSENAME &#40;Transact-SQL&#41;](../../t-sql/functions/parsename-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
@@ -101,7 +101,7 @@ SELECT QUOTENAME('abc def');
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

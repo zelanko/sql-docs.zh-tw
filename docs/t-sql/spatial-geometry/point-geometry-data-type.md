@@ -1,5 +1,5 @@
 ---
-title: "點 (geometry 資料類型) |Microsoft 文件"
+title: "Point (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geometry-data-type"></a>Point (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-建構**幾何**執行個體，代表**點**來自其 X 和 Y 值與 SRID 的執行個體。
+從 **Point** 執行個體的 X 和 Y 值及 SRID 來建構代表它的 **geometry** 執行個體。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,20 +45,20 @@ Point ( X, Y, SRID )
   
 ## <a name="arguments"></a>引數  
  *X*  
- 是**float**運算式表示的 X 座標**點**產生。  
+ 這是 **float** 運算式，代表所要產生之 **Point** 的 X 座標。  
   
  *Y*  
- 是**float**運算式表示的 Y 座標**點**產生。  
+ 這是 **float** 運算式，代表所要產生之 **Point** 的 Y 座標。  
   
  *SRID*  
- 是**int**運算式，表示的空間參考識別碼 (SRID) 的**幾何**您想要傳回的執行個體。  
+ 這是 **int** 運算式，代表要傳回之 **geometry** 執行個體的空間參考識別碼 (SRID)。  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `Point()` 建立 `geometry` 例項。  

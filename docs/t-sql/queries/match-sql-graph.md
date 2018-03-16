@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="match-transact-sql"></a>比對 (TRANSACT-SQL)
+# <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  指定的搜尋條件圖形。 比對只可以搭配 SELECT 陳述式 WHERE 子句的一部分圖形節點和邊緣資料表。 
+  指定圖表的搜尋條件。 MATCH 只能在 SELECT 陳述式的 WHERE 子句中與圖表節點和邊緣資料表搭配使用。 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,24 +63,24 @@ MATCH (<graph_search_pattern>)
 
 ## <a name="arguments"></a>引數  
 *graph_search_pattern*  
-指定要搜尋或路徑周遊圖表中的模式。 此模式會使用 ASCII 封面語法來周遊圖形中的路徑。 模式會從一個節點之間透過邊緣，提供箭頭的方向。 Parantheses 內提供邊緣名稱或別名。 節點名稱或別名會出現在兩端的箭頭。 在模式中的任一方向可以進入箭號。
+指定要在圖表中搜尋的模式或周遊的路徑。 此模式會使用 ASCII 作品語法來周遊圖表中的路徑。 此模式會朝著所提供的箭頭方向，透過邊緣從一個節點移至另一個節點。 邊緣名稱或別名會以括弧括住。 節點名稱或別名會顯示在箭頭的兩端。 箭頭在模式中可以朝任一方向。
 
 *node_alias*  
-名稱或別名的 FROM 子句中提供的節點資料表。
+在 FROM 子句中提供的節點資料表名稱或別名。
 
 *edge_alias*  
-名稱或別名的邊緣資料表的 FROM 子句中提供。
+在 FROM 子句中提供的邊緣資料表名稱或別名。
 
 
-## <a name="remarks"></a>備註  
-可以重複相符項目內的節點名稱。  換句話說，節點可以是周遊任意數目的相同查詢中的次數。  
-邊緣名稱不能重複相符項目內。  
-邊緣可以指向任一方向，但是它必須有明確的方向。  
-或和比對模式中不支援 NOT 運算子。 使用其他運算式與 WHERE 子句中，可以結合相符項目。 不過，結合使用其他運算式 OR 或不支援。 
+## <a name="remarks"></a>Remarks  
+MATCH 內的節點名稱可以重複。  換句話說，在同一個查詢中，可以對某個節點周遊任意的次數。  
+邊緣節點名稱在 MATCH 內不可重複。  
+邊緣可以指向任一方向，但方向必須明確。  
+在 MATCH 模式中不支援 OR 和 NOT 運算子。 在 WHERE 子句中使用 AND 可將 MATCH 與其他運算式結合。 不過，不支援使用 OR 或 NOT 將它與其他運算式結合。 
 
 ## <a name="examples"></a>範例  
 ### <a name="a--find-a-friend"></a>A.  尋找朋友 
- 下列範例會建立人員節點資料表和朋友邊緣資料表、 將某些資料，然後使用 尋找 Alice，圖形中的人員的 friend 相符項目。
+ 下列範例會建立 Person 節點資料表和 friend 邊緣資料表、插入一些資料，然後使用 MATCH 來尋找 Alice (圖表中的一個人) 的朋友。
 
  ```
  -- Create person node table
@@ -111,7 +111,7 @@ AND Person1.name = 'Alice';
  ```
 
  ### <a name="b--find-friend-of-a-friend"></a>B.  尋找朋友的朋友
- 下列範例會嘗試尋找 Alice 的 friend 的 friend。 
+ 下列範例會嘗試尋找 Alice 朋友的朋友。 
 
  ```
 SELECT Person3.name AS FriendName 
@@ -121,8 +121,8 @@ AND Person1.name = 'Alice';
 
  ```
 
-### <a name="c--more-match-patterns"></a>C.  多個`MATCH`模式
- 以下是一些可以內符合指定模式中的多個方法。
+### <a name="c--more-match-patterns"></a>C.  其他 `MATCH` 模式
+ 以下是可在 MATCH 內指定模式的一些其他方法。
 
  ```
  -- Find a friend
@@ -153,6 +153,6 @@ AND Person1.name = 'Alice';
  
 
 ## <a name="see-also"></a>另請參閱  
- [建立資料表 &#40;SQL 圖形 &#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
- [處理與 SQL Server 2017 圖形](../../relational-databases/graphs/sql-graph-overview.md)  
+ [SQL Server 2017 的圖表處理](../../relational-databases/graphs/sql-graph-overview.md)  

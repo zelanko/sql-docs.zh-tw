@@ -1,5 +1,5 @@
 ---
-title: "DBCC CHECKCONSTRAINTS (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ DBCC CHECKCONSTRAINTS
   
 ## <a name="arguments"></a>引數  
  *table_name* | *table_id* | *constraint_name* | *constraint_id*  
- 這是要檢查的資料表或條件約束。 當*table_name*或*table_id*已指定，會檢查該資料表所有已啟用條件約束。 當*constraint_name*或*constraint_id*已指定，會檢查該條件約束。 如果未指定資料表識別碼，也未指定條件約束識別碼，就會檢查目前資料庫的所有資料表中所有已啟用的條件約束。  
+ 這是要檢查的資料表或條件約束。 指定 *table_name* 或 *table_id* 時，就會檢查該資料表所有已啟用的條件約束。 指定 *constraint_name* 或 *constraint_id* 時，只會檢查該條件約束。 如果未指定資料表識別碼，也未指定條件約束識別碼，就會檢查目前資料庫的所有資料表中所有已啟用的條件約束。  
  條件約束名稱會唯一識別它所屬的資料表。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
  取代所有提及的  
@@ -76,7 +76,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKCONSTRAINTS 會針對資料表的所有 FOREIGN KEY 條件約束和 CHECK 條件約束，建構和執行查詢。
   
 例如，外部索引鍵查詢的格式如下：
@@ -93,26 +93,26 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 ```  
   
 查詢資料儲存在暫存資料表中。 在檢查了所有要求的資料表或條件約束之後，會傳回結果集。
-DBCC CHECKCONSTRAINTS 會檢查 FOREIGN KEY 和 CHECK 條件約束的完整性，但不會檢查資料表磁碟內存資料結構的完整性。 可以透過執行這些資料結構檢查[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)和[DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。
+DBCC CHECKCONSTRAINTS 會檢查 FOREIGN KEY 和 CHECK 條件約束的完整性，但不會檢查資料表磁碟內存資料結構的完整性。 您可以利用 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 和 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) 來執行這些資料結構檢查。
   
-**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-如果*table_name*或*table_id*指定和啟用系統版本設定、 DBCC CHECKCONSTRAINTS 也會執行指定的資料表上的暫時資料一致性檢查。 當*NO_INFOMSGS*未指定，此命令會傳回在輸出中每個一致性違規單獨的一行。 將輸出的格式 ([pkcol1]，[pkcol2]...) = (\<pkcol1_value >， \<pkcol2_value >...)和\<時態表的記錄有什麼 >。
+如果指定 *table_name* 或 *table_id*，並已針對系統版本設定啟用，DBCC CHECKCONSTRAINTS 也會在指定的資料表上執行時態性資料一致性檢查。 未指定 *NO_INFOMSGS* 時，此命令會在輸出的獨立一行中傳回每個一致性違規。 輸出的格式將為 ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<時態表記錄的問題>。
   
-|檢查|如果檢查失敗的輸出中的其他資訊|  
+|檢查|檢查失敗時輸出中的其他資訊|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn （目前）|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
-|PeriodEndColumn ≥ PeriodStartColumn （目前，記錄）|[sys_start] = '{0}' 及 [sys_end] = '{1}'|  
-|PeriodStartColumn < current_utc_time （目前）|[sys_start] = '{0}' 和 SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time （記錄）|[sys_end] = '{0}' 和 SYSUTCTIME|  
-|重疊|(sys_start1 sys_end1)，(sys_start2 sys_end2) 兩個重疊的記錄。<br /><br /> 如果有多個重疊的記錄的 2，輸出將會有多個資料列各顯示一組的重疊項目。|  
+|PeriodEndColumn ≥ PeriodStartColumn (目前)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (目前, 歷程記錄)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
+|PeriodStartColumn < current_utc_time (目前)|[sys_start] = '{0}' AND SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (歷程記錄)|[sys_end] = '{0}' AND SYSUTCTIME|  
+|重疊|兩筆重疊記錄為 (sys_start1, sys_end1) , (sys_start2, sys_end2)。<br /><br /> 如果有 2 筆以上的重疊記錄，輸出將有多個資料列，每個資料列顯示一組重疊。|  
   
-沒有任何方法來指定 constraint_name 或 constraint_id 才能執行只時態一致性檢查。
+目的是只執行時態性一致性檢查時，沒有方法可以指定 constraint_name 或 constraint_id。
   
 ## <a name="result-sets"></a>結果集  
 DBCC CHECKCONSTRAINTS 會傳回含有下列資料行的資料列集。
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |資料表名稱|**varchar**|資料表的名稱。|  
 |Constraint Name|**varchar**|違反的條件約束名稱。|  

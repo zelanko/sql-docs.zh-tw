@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 安裝 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/31/2016
+ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -14,17 +14,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
-ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4aefc608d16245a2cb28245a87beb6b165489fab
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="polybase-installation"></a>安裝 PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 02/12/2018
   
 -   Microsoft .NET Framework 4.5。  
   
--   Oracle Java SE RunTime Environment (JRE) 7.51 版或更新版本 (64 位元) ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 或 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 皆適用)。 前往 [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Java SE 下載)。 如果 JRE 不存在，安裝程式將會失敗。  
+-   Oracle Java SE RunTime Environment (JRE) 7.51 或 8 版 (64 位元) ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 或 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 皆適用)。 前往 [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Java SE 下載)。 如果 JRE 不存在，安裝程式將會失敗。 JRE 9 或更新版本不適用，除非您具有 SQL Server 2017 累積更新 4 或更新版本。 您可以安裝 JRE 8、安裝 PolyBase，然後升級至 JRE 9。 
   
 -   最小記憶體︰4 GB  
   

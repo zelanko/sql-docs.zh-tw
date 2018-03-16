@@ -1,5 +1,5 @@
 ---
-title: "SELECT 範例 (TRANSACT-SQL) |Microsoft 文件"
+title: "SELECT 範例 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-examples-transact-sql"></a>SELECT 範例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  本主題提供使用的範例[選取](../../t-sql/queries/select-transact-sql.md)陳述式。  
+  本主題提供使用 [SELECT](../../t-sql/queries/select-transact-sql.md) 陳述式的範例。  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. 使用 SELECT 擷取資料列和資料行  
  下列範例會顯示三個程式碼範例。 第一個程式碼範例會從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的 `*` 資料表中，傳回所有資料列 (未指定 WHERE 子句) 和所有資料行 (使用 `Product`)。  
@@ -209,14 +209,14 @@ GO
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [聯集 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
- [除了及 INTERSECT &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [EXCEPT 和 INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [路徑名稱 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
- [到子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
+ [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [INTO 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
   
   

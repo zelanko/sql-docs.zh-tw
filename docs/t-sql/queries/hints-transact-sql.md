@@ -1,5 +1,5 @@
 ---
-title: "提示 (TRANSACT-SQL) |Microsoft 文件"
+title: "提示 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   提示是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢處理器在 SELECT、INSERT、UPDATE 或 DELETE 陳述式指定要強制執行的選項或策略。 提示會覆寫任何查詢最佳化工具可能會針對查詢而選取的執行計畫。  
   
 > [!CAUTION]  
->  因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查詢最佳化工具通常會選取查詢的最佳執行計畫，所以建議\<join_hint >， \<query_hint >，並\<table_hint > 只能做為最後的手段使用由有經驗開發人員和資料庫管理員。
+>  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最佳的查詢執行計劃，因此建議資深開發人員和資料庫管理員只有在別無他法時，才使用 \<join_hint>、\<query_hint> 及 \<table_hint>。
   
  此章節將描述下列提示：  
   

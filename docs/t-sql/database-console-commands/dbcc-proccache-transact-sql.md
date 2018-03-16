@@ -1,5 +1,5 @@
 ---
-title: "DBCC PROCCACHE (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC PROCCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  抑制所有嚴重性層級在 0 至 10 的參考訊息。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 程序快取用來快取已編譯和可執行的計畫，以加速批次的執行。 程序快取中的項目，屬於批次層級。 程序快取含有下列項目：
 -   已編譯的計畫  
 -   執行計畫  
@@ -65,14 +65,14 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ## <a name="result-sets"></a>結果集  
 下表將描述結果集的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |**num proc buffs**|程序快取中所有項目所用的總頁數。|  
-|**num proc buffs 使用**|所有目前使用中的項目所用的總頁數。|  
+|**num proc buffs used**|所有目前使用中的項目所用的總頁數。|  
 |**num proc buffs active**|只是為了與舊版相容。 所有目前使用中的項目所用的總頁數。|  
-|**程序快取大小**|程序快取中的總項目數。|  
-|**使用的程序快取**|目前使用中的總項目數。|  
-|**使用中的程序快取**|只是為了與舊版相容。 目前使用中的總項目數。|  
+|**proc cache size**|程序快取中的總項目數。|  
+|**proc cache used**|目前使用中的總項目數。|  
+|**proc cache active**|只是為了與舊版相容。 目前使用中的總項目數。|  
   
 ## <a name="permissions"></a>Permissions  
 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。

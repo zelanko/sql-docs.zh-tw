@@ -59,7 +59,7 @@ IF Boolean_expression
   
  若要定義陳述式區塊，請使用流程控制關鍵字 BEGIN 和 END。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  您可以在批次、預存程序和隨選查詢中使用 IF...ELSE 建構。 當在預存程序中使用這個建構時，經常會測試某個參數是否存在。  
   
  您可以在 IF 或 ELSE 之後，進行巢狀的 IF 測試。 巢狀層級數目的限制，會隨著可用的記憶體而不同。  
@@ -73,10 +73,10 @@ ELSE
        SELECT 'Weekday';
 ```  
   
- 如需其他範例，請參閱[ELSE &#40; 如果...其他 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md).  
+ 如需詳細資訊，請參閱 [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md)。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會使用`IF…ELSE`判斷這兩個回應，讓使用者，根據中項目的權數`DimProduct`資料表。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列範例使用 `IF…ELSE`，以根據 `DimProduct` 資料表中項目的權數，來判斷要向使用者顯示兩個回應中的哪一個。  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -101,9 +101,9 @@ ELSE
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [雖然 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)   
+ [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; 如果...其他 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
+ [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
 

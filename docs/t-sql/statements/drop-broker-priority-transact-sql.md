@@ -1,5 +1,5 @@
 ---
-title: "DROP BROKER PRIORITY (TRANSACT-SQL) |Microsoft 文件"
+title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  指定要移除的交談優先權名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當您卸除交談優先權時，任何現有的交談都會繼續運作，而使用的優先權等級是從交談優先權指派。  
   
 ## <a name="permissions"></a>Permissions  
@@ -65,8 +65,8 @@ DROP BROKER PRIORITY InitiatorAToTargetPriority;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER BROKER PRIORITY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [建立 BROKER 優先權 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

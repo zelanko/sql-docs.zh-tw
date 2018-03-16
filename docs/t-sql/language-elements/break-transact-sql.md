@@ -54,8 +54,8 @@ END
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [雖然 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)   
+ [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   
   

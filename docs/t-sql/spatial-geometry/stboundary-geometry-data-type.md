@@ -1,5 +1,5 @@
 ---
-title: "STBoundary (geometry 資料類型) |Microsoft 文件"
+title: "STBoundary (geometry 資料類型) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stboundary-geometry-data-type"></a>STBoundary (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回的界限**幾何**執行個體。  
+  傳回 **geometry** 執行個體的界限。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型： **SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>備註  
- `STBoundary()`會傳回空白**GeometryCollection**時的端點**LineString**， **CircularString**，或**CompoundCurve**執行個體都相同。  
+## <a name="remarks"></a>Remarks  
+ 當 **LineString**、**CircularString** 或 **CompoundCurve** 執行個體的端點相同時，`STBoundary()` 會傳回空的 **GeometryCollection**。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. 在具有不同端點的 LineString 執行個體上使用 STBoundary()  
- 下列範例會建立`LineString``geometry`執行個體。 `STBoundary()`傳回的界限`LineString`。  
+ 下列範例會建立 `LineString``geometry` 執行個體。 `STBoundary()` 會傳回 `LineString` 的界限。  
   
 ```  
 DECLARE @g geometry;  

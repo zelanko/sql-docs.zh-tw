@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f7d6b89f2605cfdbc2f16cc2983171640362eb5b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>建立及編輯 Oracle CDC 服務
   您會從 CDC 服務組態主控台來建立和編輯新的 Oracle CDC Windows 服務。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/15/2018
   
  在 [新增 Oracle CDC Windows 服務] 對話方塊或 [CDC 服務屬性] 對話方塊中輸入以下資訊。  
   
-** 服務名稱**  
+**服務名稱**  
  輸入新的 Oracle CDC Windows 服務名稱。 盡可能不要使用完整名稱。 不能在服務名稱中使用 / 和 \ 字元。  
   
 > [!NOTE]  
