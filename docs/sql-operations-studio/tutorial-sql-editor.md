@@ -1,6 +1,6 @@
----
-title: "教學課程： 使用 SQL 作業 Studio （預覽） 的 TRANSACT-SQL 編輯器來建立資料庫物件 |Microsoft 文件"
-description: "本教學課程示範簡化使用 T-SQL SQL 作業 Studio （預覽） 中的主要功能。"
+﻿---
+title: "教學課程： 使用 SQL Operations Studio （預覽） 的 TRANSACT-SQL 編輯器來建立資料庫物件 |Microsoft 文件"
+description: "本教學課程示範簡化使用 T-SQL SQL Operations Studio （預覽） 中的主要功能。"
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/15/2018
 > * 檢視資料庫物件的詳細資料使用*查看定義*和*移至定義*
 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列快速入門的其中一個：
 
@@ -135,7 +135,7 @@ SQL 作業 Studio 提供的檢視使用查看定義功能的物件定義的能�
    INSERT INTO dbo.Customers
    ```
 
-5. 在*插入*行您剛加入，以滑鼠右鍵按一下**dbo。客戶**選取**查看定義**。
+5. 以滑鼠右鍵按一下**dbo.Customers**選取**查看定義**。
 
    ![查看定義](./media/tutorial-sql-editor/peek-definition.png)
 
