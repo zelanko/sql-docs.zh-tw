@@ -196,7 +196,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource">DataSource 物件</a>  
+##  <a name="DataSource"></a>DataSource 物件  
  <xref:Microsoft.AnalysisServices.DataSource> 物件是 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 與資料所在的資料庫之間的連結。 代表 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 基礎模型的結構描述是由 <xref:Microsoft.AnalysisServices.DataSourceView> 物件所定義。 可以將 <xref:Microsoft.AnalysisServices.DataSource> 物件視為連至資料所在的資料庫之連接字串。  
   
  下列範例程式碼會示範如何建立 <xref:Microsoft.AnalysisServices.DataSource> 物件。 此範例會確認伺服器是否仍然存在、<xref:Microsoft.AnalysisServices.Server> 物件是否已連接，以及資料庫是否已存在。 如果 <xref:Microsoft.AnalysisServices.DataSource> 物件存在，則會先予以卸除然後重新建立。 會建立有相同名稱與內部識別碼的 <xref:Microsoft.AnalysisServices.DataSource> 物件。 在此範例中，不會在連接字串上執行檢查以進行確認。  
