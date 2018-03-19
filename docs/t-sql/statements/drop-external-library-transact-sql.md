@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -21,22 +21,22 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 8c45da28bf795fca50454fde21eb7d2c3c798296
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 96b323d9b7eaea93439cf6376bf368a8c62154de
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-刪除現有的套件程式庫。
+刪除現有的套件程式庫。 支援的外部執行階段 (例如 R 或 Python) 會使用套件程式庫。
 
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法
 
-```
-DROP EXTERNAL LIBRARY library_name  
-[ AUTHORIZATION owner_name ];  
+```sql
+DROP EXTERNAL LIBRARY library_name
+[ AUTHORIZATION owner_name ];
 ```
 
 ### <a name="arguments"></a>引數
@@ -45,13 +45,17 @@ DROP EXTERNAL LIBRARY library_name
 
 指定現有套件程式庫的名稱。
 
-程式庫的範圍限制為使用者。 也就是在特定使用者或擁有者的內容中，程式庫名稱是唯一的。
+程式庫的範圍限制為使用者。 程式庫名稱在特定使用者或擁有者的內容中必須是唯一的。
 
 **owner_name**
 
 指定擁有外部程式庫的使用者或角色名稱。
 
 資料庫擁有者可以刪除其他使用者建立的程式庫。
+
+## <a name="permissions"></a>Permissions
+
+若要刪除程式庫，需要 ALTER ANY EXTERNAL LIBRARY 權限。 根據預設，任何資料庫擁有者或物件的擁有者，也可刪除外部程式庫。
 
 ### <a name="return-values"></a>傳回值
 
@@ -63,20 +67,23 @@ DROP EXTERNAL LIBRARY library_name
 
 ## <a name="examples"></a>範例
 
-將名稱為 `customPackage` 的自訂 R 套件加入資料庫：
+將自訂 R 套件 `customPackage` 加入資料庫：
 
 ```sql
 CREATE EXTERNAL LIBRARY customPackage 
-FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
+FROM (CONTENT = 'C:\temp\customPackage_v1.1.zip')
+WITH (LANGUAGE = 'R');
+GO
 ```
 
 刪除 `customPackage` 程式庫。
 
 ```sql
-DROP EXTERNAL LIBRARY customPackage <user_name>;
+DROP EXTERNAL LIBRARY customPackage;
 ```
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
 [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
