@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -23,11 +23,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: e28716314837225586cf4bd1f80a37c5c6b824ab
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: a8c77b86fac722d43b1634ea7dc5052655bf560d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -67,7 +67,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-程式庫會新增至使用者的資料庫範圍。 也就是說，在特定使用者或擁有者的內容中，會將程式庫名稱視為唯一，而每個使用者的程式庫名稱都必須是唯一的。 例如，兩個使用者 **RUser1** 和 **RUser2** 都可以各自且分別上傳 R 程式庫 `ggplot2`。
+程式庫會新增至使用者的資料庫範圍。 程式庫名稱在特定使用者或擁有者的內容中必須是唯一的。 例如，兩個使用者 **RUser1** 和 **RUser2** 都可以各自且分別上傳 R 程式庫 `ggplot2`。 不過，如果 **RUser1** 想要上傳 `ggplot2` 的新版本，則第二個執行個體必須有不同名稱，否則會取代現有的程式庫。 
 
 不可任意指派程式庫名稱；程式庫名稱應該與從 R 載入 程式庫時所需的名稱相同。
 
@@ -107,11 +107,9 @@ WITH ( LANGUAGE = 'R' )
 
 上傳至執行個體的程式庫可以是公用或私用程式庫。 如果程式庫是由 `dbo` 的成員所建立，該程式庫就是公用程式庫，而可以與所有使用者共用。 否則，程式庫就只是該使用者的私用程式庫。
 
-在 SQL Server 2017 版本中，您無法使用 Blob 作為資料來源。
-
 ## <a name="permissions"></a>Permissions
 
-需要 `CREATE ANY EXTERNAL LIBRARY` 權限。
+需要 `CREATE EXTERNAL LIBRARY` 權限。 根據預設，任何具有 **dbo** 或為 **db_owner** 角色成員的使用者，都有建立外部程式庫的權限。 對於其他所有使用者，您必須使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 陳述式指定 CREATE EXTERNAL LIBRARY 做為權限，以明確授予權限給他們。
 
 若要修改程式庫，需要個別的權限 `ALTER ANY EXTERNAL LIBRARY`。
 
@@ -124,7 +122,7 @@ WITH ( LANGUAGE = 'R' )
 ```sql
 CREATE EXTERNAL LIBRARY customPackage
 FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip') WITH (LANGUAGE = 'R');
-```  
+```
 
 將程式庫成功上傳至執行個體之後，使用者需執行 `sp_execute_external_script` 程序來安裝該程式庫。
 
@@ -145,9 +143,9 @@ EXEC sp_execute_external_script
 
 若要成功安裝 `packageA`，您必須在將 `packageA` 新增至 SQL Server 時，為 `packageB` 和 `packageC` 建立程式庫。 請務必一併檢查所需的套件版本。
 
-實際上，常用套件的套件相依性通常比這個簡單範例複雜許多。 例如，ggplot2 可能需要超過 30 個套件，而這些套件可能需要伺服器上所未提供額外套件。 任何套件遺失或套件版本錯誤都可能造成安裝失敗。
+實際上，常用套件的套件相依性通常比這個簡單範例複雜許多。 例如，**ggplot2** 可能需要超過 30 個套件，而這些套件可能需要伺服器上所未提供的額外套件。 任何套件遺失或套件版本錯誤都可能造成安裝失敗。
 
-由於只從查看套件資訊清單很難判斷所有相依性，因此建議您使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 或 [iGraph](http://igraph.org/redirect.html) 之類的套件，以識別成功完成安裝可能需要的所有套件。
+由於只從查看套件資訊清單很難判斷所有相依性，因此建議您使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 之類的套件，以識別成功完成安裝可能需要的所有套件。
 
 + 上傳目標套件及其相依性。 所有檔案都必須位於伺服器能夠存取的一個資料夾中。
 
@@ -180,38 +178,26 @@ EXEC sp_execute_external_script
     @script=N'
     # load the desired package packageA
     library(packageA)
-    # call function from package
-    OutputDataSet <- packageA.function()
+    print(packageVersion("packageA"))
     '
-    with result sets (([result] int));    
     ```
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. 從位元組資料流建立程式庫
 
-如果您無法將套件檔案儲存在伺服器上的位置，您也可以在變數中傳遞套件內容。 下列範例會藉由以十六進位常值來傳遞位元以建立程式庫。
+如果您無法將套件檔案儲存在伺服器上的位置，則可以在變數中傳遞套件內容。 下列範例會藉由以十六進位常值來傳遞位元以建立程式庫。
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-這裡已將十六進位值截斷來提高可讀性。
+> [!NOTE]
+> 此程式碼範例僅示範語法；`CONTENT =` 中的二進位值已被截斷以提高可讀性，且並不會建立可運作的程式庫。 二進位變數的實際內容會更長。
 
 ### <a name="d-change-an-existing-package-library"></a>D. 變更現有的套件程式庫
 
 `ALTER EXTERNAL LIBRARY` DDL 陳述式可用來新增程式庫內容，或修改現有的程式庫內容。 若要修改現有的程式庫，需要 `ALTER ANY EXTERNAL LIBRARY` 權限。
 
 如需詳細資訊，請參閱 [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)。
-
-### <a name="e-delete-a-package-library"></a>E. 刪除套件程式庫
-
-若要從資料庫中刪除套件程式庫，請執行下列陳述式：
-
-```sql
-DROP EXTERNAL LIBRARY customPackage <user_name>;
-```
-
-> [!NOTE]
-> 不同於 [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] 中的其他 `DROP` 陳述式，此陳述式支援可指定使用者授權的選擇性參數。 此選項可讓具備擁有權角色的使用者刪除一般使用者所上傳的程式庫。
 
 ## <a name="see-also"></a>另請參閱
 

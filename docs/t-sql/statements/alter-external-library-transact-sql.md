@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,11 +21,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: e2fb628e2f832b7d1b73a2e3fefae1fb1d6b8e2b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-指定現有套件程式庫的名稱。 程式庫的範圍限制為使用者。 也就是在特定使用者或擁有者的內容中，程式庫名稱是唯一的。
+指定現有套件程式庫的名稱。 程式庫的範圍限制為使用者。 程式庫名稱在特定使用者或擁有者的內容中必須是唯一的。
 
 程式庫名稱不能任意指派。 也就是說，您必須使用呼叫執行階段載入套件時所預期的名稱。
 
@@ -76,13 +76,6 @@ WITH ( LANGUAGE = 'R' )
 檔案可以本機路徑或網路路徑形式來指定。 如果指定了資料來源選項，檔案名稱就可以是相對於 `EXTERNAL DATA SOURCE` 中所參考之容器的相對路徑。
 
 (選擇性) 可以指定檔案的 OS 平台。 針對特定語言或執行階段，每個 OS 平台只允許一個檔案成品或內容。
-
-**DATA_SOURCE = external_data_source_name**
-
-指定包含程式庫檔位置之外部資料來源的名稱。 這個位置應該參考 Azure Blob 儲存體路徑。 若要建立外部資料來源，請使用 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)。
-
-> [!IMPORTANT] 
-> 在 SQL Server 2017 版本中，目前不支援 Blob 作為資料來源。
 
 **library_bits**
 
@@ -104,11 +97,11 @@ WITH ( LANGUAGE = 'R' )
 
 ## <a name="permissions"></a>Permissions
 
-需要 `ALTER ANY EXTERNAL LIBRARY` 權限。 建立外部程式庫的使用者可以改變該外部程式庫。
+根據預設，**dbo** 使用者或 **db_owner** 角色的任何成員都有執行 ALTER EXTERNAL LIBRARY 的權限。 此外，建立外部程式庫的使用者可以改變該外部程式庫。
 
 ## <a name="examples"></a>範例
 
-下列範例會修改名為 `customPackage` 的外部程式庫。
+下列範例會變更名為 `customPackage` 的外部程式庫。
 
 ### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. 使用檔案取代程式庫的內容
 
@@ -135,10 +128,12 @@ EXEC sp_execute_external_script
 下列範例會以十六進位常值傳遞新位元，藉以改變現有程式庫。
 
 ```SQL
-ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+ALTER EXTERNAL LIBRARY customLibrary 
+SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-在此程式碼範例中，會截斷變數內容以提高可讀性。
+> [!NOTE]
+> 此程式碼範例僅示範語法；`CONTENT =` 中的二進位值已被截斷以提高可讀性，且並不會建立可運作的程式庫。 二進位變數的實際內容會更長。
 
 ## <a name="see-also"></a>另請參閱
 
