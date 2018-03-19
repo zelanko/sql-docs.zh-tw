@@ -1,6 +1,6 @@
 ---
-title: "SQL 作業 Studio （預覽） 中的連接時，使用 Active Directory 驗證 (Kerberos) |Microsoft 文件"
-description: "了解如何啟用 Kerberos，若要使用 Active Directory 驗證的 SQL 作業 Studio （預覽）"
+title: "SQL Operations Studio （預覽） 中的連接時，使用 Active Directory 驗證 (Kerberos) |Microsoft 文件"
+description: "了解如何啟用 Kerberos，若要使用 Active Directory 驗證的 SQL Operations Studio （預覽）"
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/21/2017
 
 若要在 macOS 或 Lunix 上使用整合式驗證 （Windows 驗證），您必須設定**Kerberos 票證**將目前的使用者連結至 Windows 網域帳戶。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - Windows 網域的電腦才能查詢 Kerberos 網域控制站的存取。
 - SQL Server 應該設定為允許 Kerberos 驗證。 在 Unix 上執行的用戶端驅動程式，支援整合式的驗證是只使用 Kerberos。 可以找到上設定 Sql Server 使用 Kerberos 進行驗證的詳細資訊[這裡](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server)。 應該針對每個您嘗試連接到 Sql Server 執行個體註冊 Spn。 SQL Server Spn 格式的相關詳細資料列[這裡](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
