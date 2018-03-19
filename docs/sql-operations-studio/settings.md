@@ -1,6 +1,6 @@
 ---
-title: "SQL 作業 Studio （預覽） 使用者和工作區設定 |Microsoft 文件"
-description: "如何修改 SQL 作業 Studio （預覽） 使用者和工作區設定。"
+title: "SQL Operations Studio （預覽） 使用者和工作區設定 |Microsoft 文件"
+description: "如何修改 SQL Operations Studio （預覽） 使用者和工作區設定。"
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
