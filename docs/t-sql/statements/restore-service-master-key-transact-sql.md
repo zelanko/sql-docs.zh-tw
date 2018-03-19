@@ -1,5 +1,5 @@
 ---
-title: "還原服務主要金鑰 (TRANSACT-SQL) |Microsoft 文件"
+title: RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>引數  
- 檔案**='***path_to_file***'**  
- 指定預存服務主要金鑰的完整路徑，包括檔案名稱。 *path_to_file*可以是本機路徑或通往網路位置的 UNC 路徑。  
+ FILE **='***path_to_file***'**  
+ 指定預存服務主要金鑰的完整路徑，包括檔案名稱。 *path_to_file* 可以是本機路徑或通往網路位置的 UNC 路徑。  
   
- 密碼**='***密碼***'**  
+ PASSWORD **='***password***'**  
  指定解密要從檔案匯入之服務主要金鑰時所需的密碼。  
   
  FORCE  
  即使有遺失資料的風險，仍強制更換服務主要金鑰。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當還原服務主要金鑰時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會解密所有已利用目前的服務主要金鑰來加密的金鑰和秘密，然後利用從備份檔案載入的服務主要金鑰來加密它們。  
   
  如果任何一項解密失敗，還原便會失敗。 您可以利用 FORCE 選項來省略錯誤，但這個選項會使所有無法解密的資料遺失。  
@@ -85,10 +85,10 @@ RESTORE SERVICE MASTER KEY
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [服務主要金鑰](../../relational-databases/security/encryption/service-master-key.md)   
- [ALTER SERVICE MASTER KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
- [BACKUP SERVICE MASTER KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

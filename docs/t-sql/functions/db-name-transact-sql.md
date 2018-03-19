@@ -1,5 +1,5 @@
 ---
-title: "DB_NAME (TRANSACT-SQL) |Microsoft 文件"
+title: DB_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>引數  
 *database_id*  
-這是所要傳回的資料庫識別碼 (ID)。 *database_id*是**int**，沒有預設值。 如果未指定任何識別碼，則傳回目前資料庫的名稱。
+這是所要傳回的資料庫識別碼 (ID)。 *database_id* 為沒有預設值的 **int**。 如果未指定任何識別碼，則傳回目前資料庫的名稱。
   
 ## <a name="return-types"></a>傳回型別
-**nvarchar （128)**
+**nvarchar(128)**
   
 ## <a name="permissions"></a>Permissions  
-如果呼叫端的**DB_NAME**不是資料庫的擁有者和資料庫不是**主要**或**tempdb**，若要查看對應的資料列所需的最小權限ALTER ANY DATABASE 或 VIEW ANY DATABASE 伺服器層級權限或在 CREATE DATABASE 權限**主要**資料庫。 呼叫端所連接的資料庫，永遠可以在 **sys.databases**中進行檢視。
+如果 **DB_NAME** 的呼叫者不是資料庫的擁有者，而且該資料庫不是 **master** 或 **tempdb**，那麼要查看對應資料列所需具備的最低權限，就是 ALTER ANY DATABASE 或 VIEW ANY DATABASE 伺服器層級權限，或是 **master** 資料庫中的 CREATE DATABASE 權限。 呼叫端所連接的資料庫，永遠可以在 **sys.databases**中進行檢視。
   
 > [!IMPORTANT]  
->  根據預設，公用角色都有 VIEW ANY DATABASE 權限，讓所有的登入，以查看資料庫資訊。 若要封鎖來自能夠偵測資料庫的登入，撤銷 VIEW ANY DATABASE 權限從公用，或拒絕個別登入的 VIEW ANY DATABASE 權限。  
+>  根據預設，公用角色具備 VIEW ANY DATABASE 權限，允許所有登入查看資料庫資訊。 若要封鎖登入，使其不具備偵測資料庫的能力，請撤銷公用的 VIEW ANY DATABASE 權限，或拒絕個別登入的 VIEW ANY DATABASE 權限。  
   
 ## <a name="examples"></a>範例  
   
@@ -81,16 +81,16 @@ SELECT DB_NAME(3)AS [Database Name];
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-return-the-current-database-name"></a>C. 傳回目前的資料庫名稱  
+### <a name="c-return-the-current-database-name"></a>C. 傳回目前資料庫的名稱  
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
 ```  
   
-### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. 傳回資料庫的名稱使用的資料庫識別碼  
-下列範例會傳回 database_id 每個資料庫與資料庫名稱。
+### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. 使用資料庫識別碼傳回資料庫的名稱  
+下列範例會傳回每個資料庫的資料庫名稱及 database_id。
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  
@@ -98,8 +98,8 @@ FROM sys.databases;
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[DB_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
+[中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "建立外部資源集區 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/13/2017
 ms.prod: sql-non-specified
@@ -35,18 +35,18 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="create-external-resource-pool-transact-sql"></a>建立外部資源集區 (TRANSACT-SQL)
+# <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-建立外部集區，用來定義外部處理序的資源。 資源集區代表的 Database Engine 執行個體的實體資源 （記憶體和 Cpu） 的子集。 資源管理員可讓資料庫管理員在資源集區間散發伺服器資源，最多可達 64 個集區。
+建立外部集區，以用來定義外部處理序的資源。 資源集區代表資料庫引擎執行個體的實體資源 (記憶體和 CPU) 子集。 資源管理員可讓資料庫管理員在資源集區間散發伺服器資源，最多可達 64 個集區。
 
-+ 如[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]中[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，外部集區控管`rterm.exe`， `BxlServer.exe`，及其所衍生的其他處理序。
++ 若是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部集區可管理 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
 
-+ 如[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]中[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]，外部集區會管理 SQL Server 2016 中，針對列出的 R 處理序以及`python.exe`， `BxlServer.exe`，及其所衍生的其他處理序。
++ 若是 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 中的 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部集區可管理針對 SQL Server 2016 所列出的 R 處理序，以及 `python.exe`、`BxlServer.exe` 及其所衍生的其他處理序。
 
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -73,30 +73,30 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 ## <a name="arguments"></a>引數
 
 *pool_name*  
-是使用者定義的外部資源集區名稱。 *pool_name*是英數字元可以是最多 128 個字元，必須是唯一的執行個體內[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，且必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
+這是外部資源集區的使用者定義名稱。 *pool_name* 是英數字元，最多可有 128 個字元，而且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內必須是唯一的，並須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
 
-MAX_CPU_PERCENT =*值*  
-指定發生 CPU 競爭時，可接收外部資源集區中的所有要求的最大平均 CPU 頻寬。 *值*是預設值為 100 的整數。 允許的範圍*值*是從 1 到 100 之間。
+MAX_CPU_PERCENT =*value*  
+指定當出現 CPU 競爭時，所有要求在外部資源集區中可接收的平均 CPU 頻寬上限。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。
 
-同質 {CPU = AUTO |( \<CPU_range_spec >) |NUMANODE = (\<NUMA_node_range_spec >)} 將外部資源集區附加至特定的 Cpu。 預設值是 AUTO。
+AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} 將外部資源集區附加至特定的 CPU。 預設值是 AUTO。
 
-CPU 親和性 = **(** \<CPU_range_spec > **)**對應的外部資源集區[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]給定 CPU_IDs 所識別的 Cpu。
+AFFINITY CPU = **(** \<CPU_range_spec> **)** 可將外部資源集區對應至特定 CPU_ID 所識別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU。
 
-當您使用 AFFINITY NUMANODE = **(** \<NUMA_node_range_spec > **)**，外部資源集區會相似於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]對應給定 NUMA 至實體 Cpu節點或節點範圍。 
+當您使用 AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** 時，外部資源集區會與對應至特定 NUMA 節點或節點範圍的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實體 CPU 相似化。 
 
-MAX_MEMORY_PERCENT =*值*  
-指定可以在這個外部資源集區的要求所使用的總伺服器記憶體。 *值*是預設值為 100 的整數。 允許的範圍*值*是從 1 到 100 之間。
+MAX_MEMORY_PERCENT =*value*  
+指定在此外部資源集區中，可供要求所用的伺服器記憶體總量。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。
 
-MAX_PROCESSES =*值*  
-指定允許的外部資源集區的處理序數目上限。 指定 0 設定無限的臨界值之後繫結只能由電腦資源集區。 預設值是 0。
+MAX_PROCESSES =*value*  
+指定外部資源集區允許的處理序數目上限。 若要為集區設定無限的臨界值，請指定 0，但之後只能由電腦資源來限制。 預設值是 0。
 
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 
-[!INCLUDE[ssDE](../../includes/ssde-md.md)]實作資源集區，當您執行[ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md)陳述式。
+當您執行 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) 陳述式時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 將實作資源集區。
 
- 一般資源集區的詳細資訊，請參閱[Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)， [sys.resource_governor_external_resource_pools &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)，和[sys.dm_resource_governor_external_resource_pool_affinity &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).
+ 如需資源集區的一般資訊，請參閱[資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)、[sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 及 [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)。
 
-單指管理機器學習所使用的外部資源集區的資訊，請參閱[資源管理針對 SQL Server 中的機器學習](../../advanced-analytics/r/resource-governance-for-r-services.md)。 
+如需如何管理用於機器學習之外部資源集區的特定資訊，請參閱 [SQL Server 中的機器學習資源管理](../../advanced-analytics/r/resource-governance-for-r-services.md)。 
 
 ## <a name="permissions"></a>Permissions
 
@@ -104,7 +104,7 @@ MAX_PROCESSES =*值*
 
 ## <a name="examples"></a>範例
 
-下列陳述式定義外部集區，75%到 30%的電腦上的可用記憶體的最大記憶體限制 CPU 使用量。
+下列陳述式可定義外部集區，將 CPU 使用量限制為 75%，且記憶體上限為電腦中可用記憶體的 30%。
 
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
@@ -120,13 +120,13 @@ GO
   
 ## <a name="see-also"></a>另請參閱
 
- [啟用外部指令碼伺服器組態選項](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
+ [啟用外部指令碼伺服器設定選項](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)   
- [ALTER 外部資源集區 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)   
- [sys.dm_resource_governor_external_resource_pool_affinity &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)   
+ [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md) 

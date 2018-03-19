@@ -1,5 +1,5 @@
 ---
-title: "TEXTVALID (TRANSACT-SQL) |Microsoft 文件"
+title: TEXTVALID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="text-and-image-functions---textvalid-transact-sql"></a>文字和影像函數-TEXTVALID (TRANSACT-SQL)
+# <a name="text-and-image-functions---textvalid-transact-sql"></a>Text 和 Image 函式 - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A**文字**， **ntext**，或**映像**函式，以檢查特定文字指標是否有效。  
+  檢查特定文字指標是否為有效的 **text**、**ntext** 或 **image** 函式。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]無法使用替代功能。  
@@ -57,7 +57,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
  *table*  
  這是將使用的資料表名稱。  
   
- *資料行*  
+ *column*  
  這是將使用的資料行名稱。  
   
  *text_ptr*  
@@ -66,22 +66,22 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
- 如果指標有效，便傳回 1，如果指標無效，便傳回 0。 請注意的識別項**文字**資料行必須包含資料表名稱。 如果有效的文字指標不存在，您便無法使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
+## <a name="remarks"></a>Remarks  
+ 如果指標有效，便傳回 1，如果指標無效，便傳回 0。 請注意，**text** 資料行的識別碼必須包含資料表名稱。 如果有效的文字指標不存在，您便無法使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
   
- 下列函數和陳述式也很有用當您使用**文字**， **ntext**，和**映像**資料。  
+ 另外，當您使用 **text**、**ntext** 和 **image** 資料時，下列函式和陳述式也很有用。  
   
-|函數或陳述式|Description|  
+|函數或陳述式|描述|  
 |---------------------------|-----------------|  
-|PATINDEX**(**'*%模式 %**'***，** *運算式***)**|傳回指定的字元字串中的字元位置**文字**和**ntext**資料行。|  
-|DATALENGTH**(***運算式***)**|傳回的資料長度**文字**， **ntext**，和**映像**資料行。|  
-|SET TEXTSIZE|傳回的限制，以位元組為單位，**文字**， **ntext**，或**映像**SELECT 陳述式傳回的資料。|  
+|PATINDEX**(**'*%pattern%**'***,** *expression***)**|傳回指定字元字串在 **text** 和 **ntext** 資料行中的字元位置。|  
+|DATALENGTH**(***expression***)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
+|SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
   
 ## <a name="examples"></a>範例  
  下列範例報告 `logo` 資料表之 `pub_info` 資料行中的每個值，是否存在有效的文字指標。  
   
 > [!NOTE]  
->  若要執行此範例中，您必須安裝**pubs**資料庫。  
+>  若要執行這個範例，您必須安裝 **pubs** 資料庫。  
   
 ```  
 USE pubs;  
@@ -110,11 +110,11 @@ pub_id Valid (if 1) Text data
 (8 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [DATALENGTH &#40;TRANSACT-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40;TRANSACT-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [SET TEXTSIZE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [文字和影像函數 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
- [TEXTPTR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [Text 和 Image 函式 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
   
   

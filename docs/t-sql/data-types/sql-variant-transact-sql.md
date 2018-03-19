@@ -1,5 +1,5 @@
 ---
-title: "sql_variant (TRANSACT-SQL) |Microsoft 文件"
+title: sql_variant (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 9/12/2017
 ms.prod: sql-non-specified
@@ -47,27 +47,27 @@ ms.lasthandoff: 11/21/2017
 sql_variant  
 ```  
   
-## <a name="remarks"></a>備註  
-**sql_variant**可用於資料行、 參數、 變數和使用者定義函數的傳回值。 **sql_variant**使這些資料庫物件，以支援其他資料類型的值。
+## <a name="remarks"></a>Remarks  
+**sql_variant** 可用在資料行、參數、變數及使用者定義函式的傳回值中。 **sql_variant** 可讓這些資料庫物件支援其他資料類型的值。
   
-類型的資料行**sql_variant**可能包含不同資料類型的資料列。 例如，資料行定義為**sql_variant**可以儲存**int**，**二進位**，和**char**值。
+**sql_variant** 類型的資料行可包含不同資料類型的資料列。 例如，定義為 **sql_variant** 的資料行可儲存 **int**、**binary**，及 **char** 值。
   
-**sql_variant**可以有最大長度是 8016 位元組。 其中包括基底類型資訊和基底類型值。 實際基底類型值的最大長度是 8,000 位元組。
+**sql_variant** 的最大長度是 8016 位元組。 其中包括基底類型資訊和基底類型值。 實際基底類型值的最大長度是 8,000 位元組。
   
-A **sql_variant**資料類型必須先轉換成其基底資料型別值之後，才能參與加法和減法之類的作業。
+**sql_variant** 資料類型必須先轉換成其基底資料型別值，之後才能參與加法和減法之類的作業。
   
-**sql_variant**可以指派預設值。 這項資料類型也可以用 NULL 作為基礎值，但 NULL 值並沒有相關的基底類型。 此外， **sql_variant**不能有另一個**sql_variant**作為其基底類型。
+您可以指派預設值給 **sql_variant**。 這項資料類型也可以用 NULL 作為基礎值，但 NULL 值並沒有相關的基底類型。 此外，**sql_variant** 的基底類型不可為另一個 **sql_variant**。
   
-唯一、 主要或外部索引鍵可能包含類型的資料行**sql_variant**，但組成特定的資料列的索引鍵的資料值的總長度不可以是多個索引的最大長度。 這是 900 位元組。
+唯一、主要或外部索引鍵可以包括 **sql_variant** 類型的資料行，但組成特定資料列的索引鍵之資料值總長度，不應超出索引的最大長度。 這是 900 位元組。
   
-資料表可以有任意數目的**sql_variant**資料行。
+一份資料表可以有任意數目的 **sql_variant** 資料行。
   
-**sql_variant**不能在 CONTAINSTABLE 和 FREETEXTTABLE。
+在 CONTAINSTABLE 和 FREETEXTTABLE 中，無法使用 **sql_variant**。
   
-ODBC 不完全支援**sql_variant**。 因此，查詢的**sql_variant**當您使用 Microsoft OLE DB Provider for ODBC (MSDASQL) 時，將會傳回二進位資料的資料行。 例如， **sql_variant**行會以 0x505332303931 傳回包含 'PS2091' 的字元字串資料的資料行。
+ODBC 不完全支援 **sql_variant**。 因此，當您使用 Microsoft OLE DB Provider for ODBC (MSDASQL) 時，會將 **sql_variant** 資料行的查詢當作二進位資料傳回。 例如，包含 'PS2091' 字元字串資料的 **sql_variant** 資料行會以 0x505332303931 傳回。
   
 ## <a name="comparing-sqlvariant-values"></a>比較 sql_variant 值  
-**Sql_variant**資料類型屬於轉換的資料類型階層清單頂端。 如**sql_variant**比較，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型階層順序會分組為資料類型家族。
+**sql_variant** 資料類型屬於轉換的資料類型階層清單頂端。 為比較 **sql_variant**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型階層順序會分組成資料類型家族。
   
 |資料類型階層|資料類型家族|  
 |---|---|
@@ -96,31 +96,31 @@ ODBC 不完全支援**sql_variant**。 因此，查詢的**sql_variant**當您�
 |**binary**|二進位|  
 |**uniqueidentifier**|Uniqueidentifier |  
   
-下列規則適用於**sql_variant**比較：
--   當**sql_variant**比較不同基底資料型別的值位在不同資料類型家族的基底資料類型，其資料類型家族在階層圖中較高的值會被視為兩個值的較大者。  
--   當**sql_variant**比較不同基底資料類型的值和基底資料類型是在相同的資料類型家族中，基底資料型別階層架構圖表中較低的值會隱含地轉換成其他資料類型和然後進行比較。  
--   當**sql_variant**值**char**， **varchar**， **nchar**，或**nvarchar**資料型別相較之下，其定序會先比較根據下列準則： LCID、 LCID 版本、 比較旗標和排序識別碼。 每一個準則都會以整數值的形式來比較，而且會根據所列的順序來比較。 如果所有的準則都相同，將會根據此定序來比較實際的字串值。  
+下列規則適用於 **sql_variant** 比較：
+-   當比較不同基底資料型別的 **sql_variant** 值，且基底資料型別是在不同的資料類型家族中時，資料類型家族在階層圖表中較高位置的值，會被視為兩個值中的較大者。  
+-   當比較不同基底資料型別的 **sql_variant** 值，且基底資料型別是在相同的資料類型家族中，會先將基底資料型別在階層圖表中較低位置的值隱含轉換成其他資料類型，之後再進行比較。  
+-   當比較 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型的 **sql_variant** 值時，將會先根據以下準則來比較其定序：LCID、LCID 版本、比較旗標和排序識別碼。 每一個準則都會以整數值的形式來比較，而且會根據所列的順序來比較。 如果所有的準則都相同，將會根據此定序來比較實際的字串值。  
   
 ## <a name="converting-sqlvariant-data"></a>轉換 sql_variant 資料  
-當處理**sql_variant**資料型別，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援的物件與其他資料類型的隱含轉換**sql_variant**型別。 不過，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支援的隱含地轉換**sql_variant**資料具有另一個資料類型的物件。
+處理 **sql_variant** 資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援將有其他資料類型的物件隱含轉換成 **sql_variant** 類型。 但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援從 **sql_variant** 資料隱含轉換成其他資料類型的物件。
   
 ## <a name="restrictions"></a>限制  
-下表列出的類型無法使用儲存的值**sql_variant**:
+下表列出無法使用 **sql_variant** 來儲存的值類型：
   
 |||  
 |-|-|  
 |**varchar(max)**|**varbinary(max)**|  
 |**nvarchar(max)**|**xml**|  
 |**text**|**ntext**|  
-|**image**|**rowversion** (**時間戳記**)|  
+|**image**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**地理位置**|  
 |**hierarchyid**|**幾何**|  
 |使用者定義型別|**datetimeoffset**|  
 
 ## <a name="examples"></a>範例  
 
-### <a name="a-using-a-sqlvariant-in-a-table"></a>A. 使用資料表中的 sql_variant  
- 下列範例中，建立具有 sql_variant 資料類型的資料表。 然後此範例會擷取`SQL_VARIANT_PROPERTY`資訊`colA`值`46279.1`其中`colB`  = `1689`、 假設`tableA`具有`colA`型別的`sql_variant`和`colB`.  
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. 在資料表中使用 sql_variant  
+ 下列範例會使用 sql_variant 資料類型建立資料表。 接著範例會擷取有關 `colA` 值 `46279.1` 的 `SQL_VARIANT_PROPERTY` 資訊，如果 `tableA` 有 `colB` 和 `sql_variant` 類型的 `colA`，則 `colB` =`1689`。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -132,7 +132,7 @@ FROM      tableA
 WHERE      colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]請注意，每個這三個值是**sql_variant**。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 請注意，這三個值的每一個都是 **sql_variant**。  
   
 ```  
 Base Type    Precision    Scale  
@@ -142,8 +142,8 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. 使用 sql_variant 做為變數   
- 下列範例中，使用 sql_variant 資料類型，建立變數，然後擷取`SQL_VARIANT_PROPERTY`名為變數的相關資訊@v1。  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. 使用 sql_variant 作為變數   
+ 下列範例會使用 sql_variant 資料類型建立變數，然後擷取關於名為 @v1 之變數的 `SQL_VARIANT_PROPERTY` 資訊。  
   
 ```sql    
 DECLARE @v1 sql_variant;  
@@ -156,6 +156,6 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 
 ## <a name="see-also"></a>另請參閱
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[SQL_VARIANT_PROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
+[SQL_VARIANT_PROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
   
   

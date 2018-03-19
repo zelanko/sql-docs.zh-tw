@@ -1,5 +1,5 @@
 ---
-title: "建立登入 |Microsoft 文件"
+title: "建立登入 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-1---creating-a-login"></a>課程 2-1-建立登入
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]若要存取[!INCLUDE[ssDE](../includes/ssde-md.md)]，使用者需要登入。 登入可以用 Windows 帳戶或 Windows 群組的成員來代表使用者的身分識別，或者登入也可以是只存在於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入。 請盡可能使用「Windows 驗證」。  
+# <a name="lesson-2-1---creating-a-login"></a>課程 2-1 - 建立登入
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 若要存取 [!INCLUDE[ssDE](../includes/ssde-md.md)]，使用者需要登入。 登入可以用 Windows 帳戶或 Windows 群組的成員來代表使用者的身分識別，或者登入也可以是只存在於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入。 請盡可能使用「Windows 驗證」。  
   
 依預設，電腦的管理員具有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的完整存取權。 在這一課中，我們希望有權限較低的使用者，因此您將會在電腦上建立新的本機「Windows 驗證」帳戶。 若要執行此作業，您必須是電腦的管理員。 接著，您將會為新使用者授與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的存取權。  
   

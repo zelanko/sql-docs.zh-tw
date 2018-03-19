@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 伺服器主體權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "REVOKE 伺服器主體權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -61,16 +61,16 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以撤銷的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 登入**::** *SQL_Server_login*  
- 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 是必要。  
+ LOGIN **::** *SQL_Server_login*  
+ 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 為必要項目。  
   
- 伺服器角色**::** *server_role*  
- 指定要撤銷其權限的伺服器角色。 範圍限定詞 (**::**) 是必要。  
+ SERVER ROLE **::** *server_role*  
+ 指定要撤銷其權限的伺服器角色。 範圍限定詞 (**::**) 為必要項目。  
   
- {從 |為} \<server_principal > 指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在撤銷權限的登入或伺服器角色。  
+ { FROM | TO } \<server_principal> 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或伺服器角色。  
   
  *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。  
@@ -102,7 +102,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  AS *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，執行這項查詢的主體會從這項登入衍生其權限來撤銷權限。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和伺服器角色是伺服器層級安全性實體。 下表所列的是可以撤銷之最特定和最有限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或伺服器角色權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
 |SQL Server 登入或伺服器角色權限|SQL Server 登入或伺服器角色權限所隱含|伺服器權限所隱含|  
@@ -120,7 +120,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ## <a name="examples"></a>範例  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. 撤銷登入的 IMPERSONATE 權限  
- 下列範例會撤銷`IMPERSONATE`權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入`WanidaBenshoof`從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立的 Windows 使用者的登入`AdvWorks\YoonM`。  
+ 下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入撤銷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `WanidaBenshoof` 的 `IMPERSONATE` 權限，而該項登入是透過 Windows 使用者 `AdvWorks\YoonM` 所建立。  
   
 ```  
 USE master;  
@@ -147,7 +147,7 @@ REVOKE VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [GRANT 伺服器主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   

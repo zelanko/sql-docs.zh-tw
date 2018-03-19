@@ -1,5 +1,5 @@
 ---
-title: "ASYMKEYPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -46,18 +46,18 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
   
 ## <a name="arguments"></a>引數  
 *Key_ID*  
-這是資料庫中非對稱金鑰的 Key_ID。 若要在只知道金鑰名稱時尋找 Key_ID，請使用 ASYMKEY_ID。 *Key_ID*是資料型別**int**。
+這是資料庫中非對稱金鑰的 Key_ID。 若要在只知道金鑰名稱時尋找 Key_ID，請使用 ASYMKEY_ID。 *Key_ID* 的資料類型為 **int**。
   
 **'**algorithm_desc**'**  
 指定輸出會傳回非對稱金鑰的演算法描述。 僅適用於根據 EKM 模組所建立的非對稱金鑰。
   
 **'**string_sid**'**  
-指定輸出會傳回中的非對稱金鑰的 SID **nvarchar()**格式。
+指定輸出會以 **nvarchar()** 格式傳回非對稱金鑰的 SID。
   
 **'**sid**'**  
 指定輸出會以二進位格式傳回非對稱金鑰的 SID。
   
-## <a name="return-types"></a>傳回型別  
+## <a name="return-types"></a>傳回型  
 **sql_variant**
   
 ## <a name="permissions"></a>Permissions  
@@ -76,14 +76,14 @@ GO
   
 ## <a name="see-also"></a>另請參閱
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-[ALTER ASYMMETRIC KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
-[DROP ASYMMETRIC KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+[ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+[DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[sys.asymmetric_keys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEY_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
-[SYMKEYPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/symkeyproperty-transact-sql.md)
+[ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
+[SYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/symkeyproperty-transact-sql.md)
   
   

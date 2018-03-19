@@ -1,5 +1,5 @@
 ---
-title: "SET ANSI_WARNINGS (TRANSACT-SQL) |Microsoft 文件"
+title: SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -57,28 +57,28 @@ SET ANSI_WARNINGS { ON | OFF }
 SET ANSI_WARNINGS ON
 ```
 
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  SET ANSI_WARNINGS 會影響下列狀況：  
   
 -   當設為 ON 時，如果彙總函式 (如 SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP 或 COUNT) 中出現 Null 值，就會產生警告訊息。 當設為 OFF 時，不會產生警告訊息。  
   
--   當設為 ON 時，除以零和算術溢位錯誤會造成陳述式的回復，且會產生錯誤訊息。 當設為 OFF 時，除以零和算術溢位錯誤會造成傳回 Null 值。 如果嘗試 INSERT 或 UPDATE，就會發生除以零或算術溢位錯誤會造成傳回 null 值**字元**、 Unicode 或**二進位**所在的資料行長度新的值超過資料行的大小上限。 如果 SET ANSI_WARNINGS 為 ON，INSERT 或 UPDATE 就會依 ISO 標準的指定加以取消。 字元資料行尾端的空格會被忽略，二進位資料行尾端的 Null 也會被忽略。 當它是 OFF 時，便會將資料截斷成為資料行大小，陳述式會繼續作業。  
+-   當設為 ON 時，除以零和算術溢位錯誤會造成陳述式的回復，且會產生錯誤訊息。 當設為 OFF 時，除以零和算術溢位錯誤會造成傳回 Null 值。 如果在 **character**、Unicode 或 **binary** 資料行中嘗試 INSERT 或 UPDATE，且新值長度超過資料行的大小上限時，除以零或算術溢位錯誤會造成傳回 Null 值。 如果 SET ANSI_WARNINGS 為 ON，INSERT 或 UPDATE 就會依 ISO 標準的指定加以取消。 字元資料行尾端的空格會被忽略，二進位資料行尾端的 Null 也會被忽略。 當它是 OFF 時，便會將資料截斷成為資料行大小，陳述式會繼續作業。  
   
     > [!NOTE]  
-    >  當發生截斷時任何轉換作業中往或來自**二進位**或**varbinary**發出任何警告或錯誤的資料時，不論 SET 選項。  
+    >  在來源或目標是 **binary** 或 **varbinary** 資料的任何轉換作業中，當發生截斷時，不論 SET 選項為何，都不會發出任何警告或錯誤。  
   
     > [!NOTE]  
-    >  當在預存程序或使用者自訂函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，會忽略 ANSI_WARNINGS。 例如，如果變數定義為**char （3)**，然後設定為超過 3 個字元，資料會截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會成功。  
+    >  當在預存程序或使用者自訂函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，會忽略 ANSI_WARNINGS。 例如，如果將變數定義為 **char(3)**，然後設定為大於三個字元的值，資料就會被截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會執行成功。  
   
  您可以利用 sp_configure 的 user options 選項來設定所有伺服器連接的 ANSI_WARNINGS 預設值。 如需詳細資訊，請參閱本主題稍後的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)的使用者閱讀。  
   
- 當您建立或操作計算資料行索引或索引檢視時，SET ANSI_WARNINGS 也必須是 ON。 如果 SET ANSI_WARNINGS 是 OFF，含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式會失敗。 計算資料行上使用索引檢視表和索引的必要 SET 選項設定的相關資訊，請參閱"考量當您使用 SET 陳述式 」，在[SET 陳述式 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+ 當您建立或操作計算資料行索引或索引檢視時，SET ANSI_WARNINGS 也必須是 ON。 如果 SET ANSI_WARNINGS 是 OFF，含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式會失敗。 如需使用索引檢視表和計算資料行索引時所需之 SET 選項設定的詳細資訊，請參閱 [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) 中的＜使用 SET 陳述式時的考量＞一節。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括 ANSI_WARNINGS 資料庫選項。 這相當於 SET ANSI_WARNINGS。 當 SET ANSI_WARNINGS 是 ON 時，會在除以零、資料庫資料行的字串太大及其他類似的錯誤中，產生錯誤或警告。 當 SET ANSI_WARNINGS 是 OFF 時，不會產生這些錯誤和警告。 model 資料庫中的 SET ANSI_WARNINGS 預設值是 OFF。 若未指定，就會套用 ANSI_WARNINGS 的設定。 如果 SET ANSI_WARNINGS 是 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用中的 is_ansi_warnings_on 資料行的值[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括 ANSI_WARNINGS 資料庫選項。 這相當於 SET ANSI_WARNINGS。 當 SET ANSI_WARNINGS 是 ON 時，會在除以零、資料庫資料行的字串太大及其他類似的錯誤中，產生錯誤或警告。 當 SET ANSI_WARNINGS 是 OFF 時，不會產生這些錯誤和警告。 model 資料庫中的 SET ANSI_WARNINGS 預設值是 OFF。 若未指定，就會套用 ANSI_WARNINGS 的設定。 如果 SET ANSI_WARNINGS 是 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 is_ansi_warnings_on 資料行值。  
   
  ANSI_WARNINGS 應該設為 ON，以便執行分散式查詢。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都會自動將 ANSI_WARNINGS 設為 ON，連接時。 在連接之前，您可以在應用程式的 ODBC 資料來源或 ODBC 連接屬性中設定這個項目。 起始於 DB-Library 應用程式的連接之 SET ANSI_WARNINGS 預設值是 OFF。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者在連接時，都會自動將 ANSI_WARNINGS 設為 ON。 在連接之前，您可以在應用程式的 ODBC 資料來源或 ODBC 連接屬性中設定這個項目。 起始於 DB-Library 應用程式的連接之 SET ANSI_WARNINGS 預設值是 OFF。  
   
  當 SET ANSI_DEFAULTS 是 ON 時，會啟用 SET ANSI_WARNINGS。  
   
@@ -179,11 +179,11 @@ GO
 DROP TABLE T1  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [SESSIONPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

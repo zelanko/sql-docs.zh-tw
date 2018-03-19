@@ -1,5 +1,5 @@
 ---
-title: "SET ARITHABORT (TRANSACT-SQL) |Microsoft 文件"
+title: SET ARITHABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -61,8 +61,8 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>備註  
- 您應該在登入工作階段中一律將 ARITHABORT 設為 ON。 將 arithabort 設為 OFF 可能會對造成負面影響查詢最佳化，導致效能問題。  
+## <a name="remarks"></a>Remarks  
+ 您應該在登入工作階段中一律將 ARITHABORT 設為 ON。 將 ARITHABORT 設為 OFF 可能會對查詢最佳化造成負面影響，進而導致效能問題。  
   
 > [!WARNING]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的預設 ARITHABORT 設定是 ON。 將 ARITHABORT 設定為 OFF 的用戶端應用程式可能會接收不同的查詢計劃，導致難以疑難排解效能不良的查詢。 也就是說，相同查詢的執行速度在 Management Studio 中可能很快，但是在應用程式中可能很慢。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來疑難排解查詢時，一定要比對用戶端 ARITHABORT 設定。  
@@ -82,13 +82,13 @@ SET ARITHABORT ON
   
  如果 SET ARITHABORT 或 SET ARITHIGNORE 是 OFF，而 SET ANSI_WARNINGS 是 ON，當發現除以零或溢位的錯誤時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤訊息。  
   
- 如果 SET ARITHABORT 設為 OFF，且在 IF 陳述式的布林值條件的評估期間發生中止錯誤，則會執行 FALSE 分支。
+ 如果 SET ARITHABORT 設為 OFF，且在 IF 陳述式的布林值條件的評估中發生中止錯誤，就會執行 FALSE 分支。
   
  當您建立或變更計算資料行索引或索引檢視時，SET ARITHABORT 也必須是 ON。 如果 SET ARITHABORT 是 OFF，含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式會失敗。
   
  SET ARITHABORT 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
- 若要檢視這項設定的目前設定，請執行下列查詢：
+ 若要檢視此設定的目前設定，請執行下列查詢：
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -196,9 +196,9 @@ DROP TABLE t2;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHIGNORE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
- [SESSIONPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

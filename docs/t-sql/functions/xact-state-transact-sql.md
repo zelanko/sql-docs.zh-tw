@@ -1,5 +1,5 @@
 ---
-title: "XACT_STATE (TRANSACT-SQL) |Microsoft 文件"
+title: XACT_STATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -52,16 +52,16 @@ XACT_STATE()
 ## <a name="return-type"></a>傳回類型  
  **smallint**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  XACT_STATE 會傳回下列值。  
   
 |傳回值|意義|  
 |------------------|-------------|  
-|1|目前的要求具有使用中的使用者交易。 要求可以執行任何動作，其中包括寫入資料和認可交易。|  
+|@shouldalert|目前的要求具有使用中的使用者交易。 要求可以執行任何動作，其中包括寫入資料和認可交易。|  
 |0|目前的要求沒有任何使用中的使用者交易。|  
 |-1|目前的要求有一項使用中的使用者交易，但發生錯誤，使交易被分類為無法認可的交易。 要求無法認可交易或回復到儲存點；它只能要求完整回復交易。 要求無法執行任何寫入作業，直到它回復交易為止。 要求只能執行讀取作業，直到它回復交易為止。 在交易回復之後，要求便可以執行讀取和寫入作業，且可以起始一項新交易。<br /><br /> 當批次完成執行時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動回復任何使用中無法認可的交易。 如果在交易進入無法認可的狀態時沒有傳送任何錯誤訊息，則當批次完成時，就會將錯誤訊息傳送給用戶端應用程式。 此訊息表示偵測到無法認可的交易，並已回復。|  
   
- 這兩個 XACT_STATE 和 @@TRANCOUNT 函式可用來偵測目前的要求是否有作用中使用者交易。 @@TRANCOUNT 無法用來判斷交易是否已分類為無法認可的交易。 XACT_STATE 無法用來判斷是否有巢狀交易。  
+ XACT_STATE 和 @@TRANCOUNT 函式都可用來偵測目前的要求是否有使用中的使用者交易。 @@TRANCOUNT 無法用來判斷交易是否已分類為無法認可的交易。 XACT_STATE 無法用來判斷是否有巢狀交易。  
   
 ## <a name="examples"></a>範例  
  下列範例會在 `XACT_STATE` 建構之 `CATCH` 區塊中使用 `TRY…CATCH`，來決定要認可或回復交易。 由於 `SET XACT_ABORT` 是 `ON`，因此，條件約束違規錯誤會使交易進入無法認可的狀態。  
@@ -112,7 +112,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

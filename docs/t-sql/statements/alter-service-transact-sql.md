@@ -1,5 +1,5 @@
 ---
-title: "ALTER SERVICE (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -55,25 +55,25 @@ ALTER SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *服務名稱*  
+ *service_name*  
  這是要變更的服務名稱。 您不可指定伺服器、資料庫和結構描述名稱。  
   
- ON 佇列 [ *schema_name***。** ] *queue_name*  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
  指定這項服務的新佇列。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會從目前的佇列中，將這項服務的所有訊息移到新佇列中。  
   
- 新增合約*contract_name*  
+ ADD CONTRACT *contract_name*  
  指定要加入這項服務所顯示的合約集之合約。  
   
  DROP CONTRACT *contract_name*  
  指定要從這項服務所公開的合約集中刪除的合約。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在針對與使用這份合約的這項服務的任何現有交談，傳送錯誤訊息。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當 ALTER SERVICE 陳述式刪除服務中的合約時，服務就不再是使用這份合約的交談目標。 因此，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 不會接受在這份合約上，指向這項服務的新交談。 使用這份合約的現有交談不會受到影響。  
   
  若要改變服務的 AUTHORIZATION，請使用 ALTER AUTHORIZATION 陳述式。  
   
 ## <a name="permissions"></a>Permissions  
- 改變服務的權限預設為服務，而成員的擁有者**db_ddladmin**或**db_owner**固定資料庫角色和成員的**sysadmin**固定的伺服器角色。  
+ 改變服務的權限預設為服務的擁有者、**db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
   
@@ -102,9 +102,9 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [卸除服務 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

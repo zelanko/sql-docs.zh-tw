@@ -1,5 +1,5 @@
 ---
-title: "JSON_QUERY (TRANSACT-SQL) |Microsoft 文件"
+title: JSON_QUERY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -31,12 +31,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/17/2017
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (TRANSACT-SQL)
+# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  從 JSON 字串擷取物件或陣列。  
   
- 若要從而不是物件或陣列的 JSON 字串擷取純量值，請參閱[JSON_VALUE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/json-value-transact-sql.md). 如需之間的差異資訊**JSON_VALUE**和**JSON_QUERY**，請參閱[比較 JSON_VALUE 與 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)。  
+ 若要從 JSON 字串而非物件或陣列擷取純量值，請參閱 [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)。 如需 **JSON_VALUE** 及 **JSON_QUERY** 之間差異的資訊，請參閱[比較 JSON_VALUE 與 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,35 +48,35 @@ JSON_QUERY ( expression [ , path ] )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 運算式。 通常變數或資料行包含 JSON 文字的名稱。  
+ 運算式。 通常為變數的名稱或包含 JSON 文字的資料行。  
   
- 如果**JSON_QUERY**尋找不是有效的 JSON*運算式*它找到的值所識別之前*路徑*，函數會傳回錯誤。 如果**JSON_QUERY**找不到所識別的值*路徑*，它會掃描整個文字傳回錯誤，如果它發現 JSON 中的任何位置無效*運算式*。  
+ 若 **JSON_QUERY** 在找到 *path* 識別的值之前找到在 *expression* 中無效的 JSON，函式便會傳回錯誤。 若 **JSON_QUERY** 找不到 *path* 識別的值，它會掃描整個文字，並在 *expression* 中任何一處找到無效的 JSON 時傳回錯誤。  
   
- *路徑*  
- 指定物件或擷取陣列的 JSON 路徑。
+ *path*  
+ 指定要擷取之物件或陣列的 JSON 路徑。
 
-在[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]，您可以提供變數的值為*路徑*。
+在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，您可以將變數作為 *path* 的值提供。
 
-JSON 路徑可以指定用於剖析 lax 或 strict 模式。 如果您未指定剖析模式，lax 模式是預設值。 如需詳細資訊，請參閱[JSON 路徑運算式 &#40;SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+JSON 路徑可為剖析指定 lax 或 strict 模式。 若您未指定剖析模式，預設會使用 lax 模式。 如需詳細資訊，請參閱 [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)。  
 
-預設值為*路徑*是 '$'。 如此一來，如果您沒有提供的值*路徑*， **JSON_QUERY**傳回輸入*運算式*。
+*path* 的預設值為 '$'。 如此一來，若您未提供 *path* 的值，**JSON_QUERY** 會傳回輸入的 *expression*。
 
-如果格式*路徑*不是有效的**JSON_QUERY**會傳回錯誤。  
+若 *path* 的格式無效，**JSON_QUERY** 便會傳回錯誤。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回 JSON 片段類型 nvarchar （max）。 傳回值的定序時輸入運算式的定序相同。  
+ 傳回型別為 nvarchar(max) 的 JSON 片段。 傳回值的定序與輸入運算式的定序相同。  
   
- 如果值不是物件或陣列：  
+ 若值並非物件或陣列：  
   
--   在 lax 模式中， **JSON_QUERY**會傳回 null。  
+-   在 lax 模式中，**JSON_QUERY**會傳回 Null。  
   
--   在 strict 模式中， **JSON_QUERY**會傳回錯誤。  
+-   在 strict 模式中，**JSON_QUERY**會傳回錯誤。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 
-### <a name="lax-mode-and-strict-mode"></a>Lax 模式和 strict 模式
+### <a name="lax-mode-and-strict-mode"></a>lax 模式和 strict 模式
 
- 請考慮下列 JSON 文字：  
+ 請參考下列 JSON 文字：  
   
 ```json  
 {
@@ -93,28 +93,28 @@ JSON 路徑可以指定用於剖析 lax 或 strict 模式。 如果您未指定�
 } 
 ```  
   
- 下表將比較的行為**JSON_QUERY** lax 模式和 strict 模式。 如需詳細的選擇性路徑模式規格 （lax 或 strict） 的詳細資訊，請參閱[JSON 路徑運算式 &#40;SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ 下列表格會比較 lax 模式與 strict 模式中 **JSON_QUERY** 的行為。 如需選擇性路徑模式規格 (lax 或 strict) 的詳細資訊，請參閱 [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
-|路徑|Lax 模式中的傳回值|在 strict 模式中的傳回值|其他資訊|  
+|路徑|lax 模式中的傳回值|strict 模式中的傳回值|其他資訊|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|傳回完整的 JSON 文字。|傳回完整的 JSON 文字。|N/a|  
-|$。 info.type|NULL|錯誤|無法為物件或陣列。<br /><br /> 使用**JSON_VALUE**改為。|  
-|$。 info.address.town|NULL|錯誤|無法為物件或陣列。<br /><br /> 使用**JSON_VALUE**改為。|  
-|$.info。 」位址 」|N'{"城鎮":"Bristol"，"郡":"Avon 」、 「 國家/地區 」:"的 England"}'|N'{"城鎮":"Bristol"，"郡":"Avon 」、 「 國家/地區 」:"的 England"}'|N/a|  
-|$。 info.tags|N '["運動"，"上限 polo"]'|N '["運動"，"上限 polo"]'|N/a|  
-|$。 info.type[0]|NULL|錯誤|非陣列。|  
-|$。 info.none|NULL|錯誤|屬性不存在。|  
+|$.info.type|NULL|錯誤|並非物件或陣列。<br /><br /> 請改為使用 **JSON_VALUE**。|  
+|$.info.address.town|NULL|錯誤|並非物件或陣列。<br /><br /> 請改為使用 **JSON_VALUE**。|  
+|$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N/a|  
+|$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|N/a|  
+|$.info.type[0]|NULL|錯誤|非為陣列。|  
+|$.info.none|NULL|錯誤|屬性不存在。|  
 
-### <a name="using-jsonquery-with-for-json"></a>使用 FOR JSON 與 JSON_QUERY
+### <a name="using-jsonquery-with-for-json"></a>搭配 FOR JSON 使用 JSON_QUERY
 
-**JSON_QUERY**傳回有效的 JSON 片段。 如此一來， **FOR JSON**不逸出特殊字元**JSON_QUERY**傳回值。
+**JSON_QUERY** 會傳回有效的 JSON 片段。 因此，**FOR JSON** 不會在 **JSON_QUERY** 的傳回值中逸出特殊字元。
 
-如果您正在使用 FOR JSON，傳回結果，而且您要包括已經是 JSON 格式 （在資料行或運算式的結果） 的資料，換行的 JSON 資料**JSON_QUERY**沒有*路徑*參數。
+若您使用 FOR JSON 傳回結果，並且在其中包含已經是 JSON 格式的資料 (在資料行中或運算式的結果)，請使用不具有 *path* 參數的 **JSON_QUERY** 來包裝 JSON 資料。
 
 ## <a name="examples"></a>範例  
   
 ### <a name="example-1"></a>範例 1  
- 下列範例示範如何傳回 JSON 片段從`CustomFields`查詢結果中的資料行。  
+ 下列範例示範如何在查詢結果中傳回來自 `CustomFields` 資料行的 JSON 片段。  
   
 ```sql  
 SELECT PersonID,FullName,
@@ -123,7 +123,7 @@ FROM Application.People
 ```  
   
 ### <a name="example-2"></a>範例 2  
-下列範例會示範如何在 FOR JSON 子句的輸出中包含 JSON 片段。  
+下列範例示範如何在 FOR JSON 子句的輸出中包含 JSON 片段。  
   
 ```sql  
 SELECT StockItemID, StockItemName,
@@ -133,6 +133,6 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [JSON 路徑運算式 &#40;SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON 資料 &#40;SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON 資料 &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: "拒絕資料庫範圍認證 (TRANSACT-SQL) |Microsoft 文件"
+title: "DENY 資料庫範圍認證 (TRANSACT-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="deny-database-scoped-credential-transact-sql"></a>拒絕資料庫範圍認證 (TRANSACT-SQL)
+# <a name="deny-database-scoped-credential-transact-sql"></a>DENY 資料庫範圍認證 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  拒絕權限的資料庫範圍認證。  
+  拒絕資料庫範圍認證的權限。  
 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -52,11 +52,11 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
- 指定權限可以拒絕資料庫範圍認證。 如下所列。  
+ *permission*  
+ 指定可在資料庫範圍認證拒絕的權限。 如下所列。  
   
- 在資料庫範圍認證**::***credential_name*  
- 指定正在拒絕權限所在的資料庫範圍的認證。 需要範圍限定詞 "::"。  
+ ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ 指定拒絕權限的資料庫範圍認證。 需要範圍限定詞 "::"。  
   
  *database_principal*  
  指定要拒絕其權限的主體。 它有下列幾種：  
@@ -99,10 +99,10 @@ DENY permission  [ ,...n ]
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>備註  
- 資料庫範圍認證是包含資料庫層級安全性實體權限階層中其父系的資料庫。 可以拒絕資料庫範圍認證的最特定且最有限權限所列的是下面列出利用隱含方式包含它們的較通用權限。  
+## <a name="remarks"></a>Remarks  
+ 資料庫範圍認證是包含在資料庫內的資料庫層級安全性實體，在權限階層中，該資料庫為其父系。 下方列出用資料庫範圍認證可拒絕的最特定也最有限權限，另外還有以隱含方式加以涵蓋的較通用權限。  
   
-|資料庫範圍認證的權限|資料庫範圍認證的權限所隱含|資料庫權限所隱含|  
+|資料庫範圍認證權限|資料庫範圍認證權限所隱含|資料庫權限所隱含|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -111,12 +111,12 @@ DENY permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="permissions"></a>Permissions  
- 需要 CONTROL 權限的資料庫範圍認證。 如果使用 AS 子句，指定的主體必須擁有資料庫範圍認證。  
+ 需要資料庫範圍認證的 CONTROL 權限。 如果使用 AS 子句，指定的主體必須擁有資料庫範圍認證。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [授與資料庫範圍認證 (TRANSACT-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [REVOKE 資料庫範圍認證 (TRANSACT-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
+ [GRANT 資料庫範圍認證 (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [REVOKE 資料庫範圍認證 (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  

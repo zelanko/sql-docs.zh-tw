@@ -1,5 +1,5 @@
 ---
-title: "還原 (TRANSACT-SQL) |Microsoft 文件"
+title: REVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -53,9 +53,9 @@ REVERT
   
 ## <a name="arguments"></a>引數  
  WITH COOKIE = @*varbinary_variable*  
- 指定在對應中所建立的 cookie [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)獨立陳述式。 *@varbinary_variable*是**varbinary(100)**。  
+ 指定在對應 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 獨立陳述式中建立的 Cookie。 *@varbinary_variable* 是 **varbinary(100)**。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  您可以在模組 (例如，預存程序或使用者定義函數，或是獨立陳述式) 中指定 REVERT。 如果 REVERT 是在模組內部指定，則只能用於模組中定義的 EXECUTE AS 陳述式。 例如，下列預存程序會發出後面接有 `EXECUTE AS` 的 `REVERT` 陳述式。  
   
 ```  
@@ -79,14 +79,14 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- `REVERT`內定義的陳述式`usp_myproc`切換執行內容集模組，但不會影響模組外設定的執行內容。 換句話說，工作階段的執行內容仍然設為 `login1`。  
+ 在 `usp_myproc` 內定義的 `REVERT` 陳述式會切換模組中的執行內容集，但不會影響模組外的執行內容集。 換句話說，工作階段的執行內容仍然設為 `login1`。  
   
  當 REVERT 被指定為獨立陳述式時，則會套用至批次或工作階段內定義的 EXECUTE AS 陳述式。 如果對應的 EXECUTE AS 陳述式含有 WITH NO REVERT 子句，REVERT 就沒有任何影響。 此時，在工作階段卸除之前，執行內容仍然有效。  
   
 ## <a name="using-revert-with-cookie"></a>使用 REVERT WITH COOKIE  
- EXECUTE AS 陳述式是用來設定工作階段的執行內容可以包含選擇性子句 WITH NO REVERT COOKIE = @*varbinary_variabl*e。 執行這個陳述式時，[!INCLUDE[ssDE](../../includes/ssde-md.md)]會傳遞 cookie @*varbinary_variabl*e。 執行內容所設定的陳述式只可以還原到先前的內容如果呼叫的 REVERT WITH COOKIE = @*varbinary_variable*陳述式包含正確 *@varbinary_variable* 值。  
+ 用來設定工作階段執行內容的 EXECUTE AS 陳述式，可包含選擇性子句 WITH NO REVERT COOKIE = @*varbinary_variabl*e。 當這個陳述式執行時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳遞給 @*varbinary_variabl*e。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含正確的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
   
- 這項機制在使用連接共用的環境中相當有用。 連接共用是一組資料庫連接的維護，這些連接是供多位使用者的應用程式重複使用。 因為此值傳遞至 *@varbinary_variable* 只有知道呼叫端的 EXECUTE AS 陳述式 （在此情況下，應用程式），呼叫端可以保證使用者無法變更他們所建立的執行內容會叫用應用程式。 在還原執行內容之後，應用程式就可以將內容切換回另一個主體。  
+ 這項機制在使用連接共用的環境中相當有用。 連接共用是一組資料庫連接的維護，這些連接是供多位使用者的應用程式重複使用。 由於只有 EXECUTE AS 陳述式的呼叫者知道傳送到 *@varbinary_variable* 的值 (本例是指應用程式)，因此呼叫者可以保證叫用應用程式的使用者不能變更他們所建立的執行內容。 在還原執行內容之後，應用程式就可以將內容切換回另一個主體。  
   
 ## <a name="permissions"></a>Permissions  
  不需要任何權限。  
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. 使用 WITH COOKIE 子句  
- 下列範例將工作階段的執行內容設定為指定的使用者，並指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
+ 下列範例會將工作階段的執行內容設為指定使用者，並且指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
   
 ```  
 DECLARE @cookie varbinary(100);  
@@ -159,12 +159,12 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [執行 AS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [SUSER_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)   
- [USER_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)  
   

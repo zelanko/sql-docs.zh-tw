@@ -1,5 +1,5 @@
 ---
-title: "SET NOCOUNT (TRANSACT-SQL) |Microsoft 文件"
+title: SET NOCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當 SET NOCOUNT 是 ON 時，不會傳回計數。 當 SET NOCOUNT 是 OFF 時，會傳回計數。  
   
- @@ROWCOUNT函式會更新，即使 SET NOCOUNT 是 ON。  
+ 即使 SET NOCOUNT 是 ON，也會更新 @@ROWCOUNT 函式。  
   
  SET NOCOUNT ON 會防止針對預存程序中的每個陳述式，將 DONE_IN_PROC 訊息傳給用戶端。 針對包含數個陳述式 (不會傳回許多實際資料的陳述式) 的預存程序或是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 迴圈的程序，將 SET NOCOUNT 設為 ON 可以大幅提升效能，因為網路傳輸量會大幅降低。  
   
@@ -97,7 +97,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

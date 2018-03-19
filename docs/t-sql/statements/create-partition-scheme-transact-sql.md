@@ -1,5 +1,5 @@
 ---
-title: "建立分割區配置 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -45,10 +45,10 @@ ms.lasthandoff: 12/07/2017
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在目前資料庫建立一項配置，將資料分割資料表或索引的資料分割，對應至檔案群組。 資料分割資料表或索引的資料分割數目和網域，由資料分割函數來決定。 資料分割函式必須先建立在[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)陳述式後再建立資料分割配置。  
+  在目前資料庫建立一項配置，將資料分割資料表或索引的資料分割，對應至檔案群組。 資料分割資料表或索引的資料分割數目和網域，由資料分割函數來決定。 在建立分割區配置之前，必須先在 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) 陳述式中建立分割區函數。  
 
 >[!NOTE]
->在 Azure SQL Database 支援只有主要檔案群組。  
+>在 Azure SQL Database 中，只支援主要檔案群組。  
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,24 +63,24 @@ AS PARTITION partition_function_name
   
 ## <a name="arguments"></a>引數  
  *partition_scheme_name*  
- 這是資料分割結構描述的名稱。 資料分割配置名稱必須在資料庫內是唯一的且必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
+ 這是資料分割結構描述的名稱。 分割區配置名稱在資料庫內必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
  *partition_function_name*  
- 這是使用資料分割結構描述的資料分割函數名稱。 資料分割函數所建立的資料分割會對應至資料分割結構描述所指定的檔案群組。 *partition_function_name*必須已存在於資料庫。 單一資料分割無法同時包含 FILESTREAM 和非 FILESTREAM 檔案群組。  
+ 這是使用資料分割結構描述的資料分割函數名稱。 資料分割函數所建立的資料分割會對應至資料分割結構描述所指定的檔案群組。 *partition_function_name* 必須已存在於資料庫中。 單一資料分割無法同時包含 FILESTREAM 和非 FILESTREAM 檔案群組。  
   
  ALL  
- 指定所有資料分割對應至檔案群組中提供*file_group_name*，或主要檔案群組若**[**主要**]**指定。 如果指定 ALL 時，只有一個*file_group_name*可以指定。  
+ 指定所有分割區都對應至 *file_group_name* 所提供的檔案群組，如果指定了 **[**PRIMARY**]**，便是對應至主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。  
   
- *file_group_name* | **[**主要**]** [ **，***...n*]  
- 指定存放所指定的分割區的檔案群組的名稱*partition_function_name*。 *file_group_name*必須已存在於資料庫。  
+ *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
+ 指定用來存放 *partition_function_name* 所指定之分割區的檔案群組名稱。 *file_group_name* 必須已存在於資料庫中。  
   
- 如果**[**主要**]**指定時，資料分割儲存在主要檔案群組上。 如果指定 ALL 時，只有一個*file_group_name*可以指定。 資料分割會指派給檔案群組與檔案群組列於中順序的資料分割 1，啟動 [**，***...n*]。 相同*file_group_name*可以指定一個以上的時間，以 [**，***...n*]。 如果 *n* 不足以保存在指定的資料分割數目*partition_function_name*，CREATE PARTITION SCHEME 失敗並發生錯誤。  
+ 如果指定了 **[**PRIMARY**]**，就會將分割區儲存在主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。 分割區是從分割區 1 開始，依照 [**,***...n*] 中列出檔案群組的順序來指派給各個檔案群組。 在 [**,***...n*] 中，可以重複指定相同的 *file_group_name*。 如果 *n* 不足以存放 *partition_function_name* 所指定的分割區數目，CREATE PARTITION SCHEME 便會失敗，且會出現一則錯誤。  
   
- 如果*partition_function_name*產生小於資料分割數目比檔案群組，第一個未指派的檔案群組標示為 NEXT USED，並將資訊訊息顯示命名 NEXT USED 檔案群組。 如果指定 ALL 時，唯一*file_group_name*這個維護其 NEXT USED 屬性*partition_function_name*。 如果在 ALTER PARTITION FUNCTION 陳述式中建立資料分割，NEXT USED 檔案群組便會收到其他資料分割。 若要建立其他未指派的檔案群組來存放新的資料分割，請使用 ALTER PARTITION SCHEME。  
+ 如果 *partition_function_name* 產生的分割區數目比檔案群組少，第一個未指派的檔案群組會標示為 NEXT USED，且會出現一則命名 NEXT USED 檔案群組的參考訊息。 如果指定 ALL，唯一的 *file_group_name* 會維護它的 NEXT USED 屬性，以用於這個 *partition_function_name*。 如果在 ALTER PARTITION FUNCTION 陳述式中建立資料分割，NEXT USED 檔案群組便會收到其他資料分割。 若要建立其他未指派的檔案群組來存放新的資料分割，請使用 ALTER PARTITION SCHEME。  
   
- 當您指定主要檔案群組中的*file_group_name* [1**，***...n*]，主要必須是分隔的、 與**[**主要**]**，因為它是關鍵字。  
+ 當您指定 *file_group_name* [ 1**,***...n*] 中的主要檔案群組時，必須依照 **[**PRIMARY**]** 中的相同方式來分隔 PRIMARY，因為它是一個關鍵字。  
   
- [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]只支援使用 PRIMARY。 請參閱範例 E 下方。 
+ [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]只支援使用 PRIMARY。 請參閱以下的範例 E。 
   
 ## <a name="permissions"></a>Permissions  
  下列權限可用來執行 CREATE PARTITION SCHEME：  
@@ -105,13 +105,13 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- 使用資料分割函數的資料表資料分割`myRangePF1`上分割資料行**col1** ，指派給下表所示。  
+ 在資料分割資料行 **col1** 上使用分割區函數 `myRangePF1` 之資料表的分割區，會依照下表所示進行指派。  
   
 ||||||  
 |-|-|-|-|-|  
 |**檔案群組**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
-|**資料分割**|1|2|3|4|  
-|**值**|**col1** <= `1`|**col1**  >  `1` AND **col1** <= `100`|**col1**  >  `100` AND **col1** <= `1000`|**col1** > `1000`|  
+|**資料分割**|@shouldalert|2|3|4|  
+|**值**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. 建立將多個資料分割對應至相同檔案群組的資料分割結構描述  
  如果所有資料分割都對應至相同的檔案群組，請使用 ALL 關鍵字。 但如果不是全部，而只是多個資料分割對應至相同的檔案群組，就必須依照下列範例所示來重複檔案群組名稱。  
@@ -125,13 +125,13 @@ AS PARTITION myRangePF2
 TO ( test1fg, test1fg, test1fg, test2fg );  
 ```  
   
- 使用資料分割函數的資料表資料分割`myRangePF2`上分割資料行**col1** ，指派給下表所示。  
+ 在資料分割資料行 **col1** 上使用分割區函數 `myRangePF2` 之資料表的分割區，會依照下表所示進行指派。  
   
 ||||||  
 |-|-|-|-|-|  
 |**檔案群組**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
-|**資料分割**|1|2|3|4|  
-|**值**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1**  >  `100` AND **col1** <= `1000`|**col1** > `1000`|  
+|**資料分割**|@shouldalert|2|3|4|  
+|**值**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. 建立將所有資料分割對應至相同檔案群組的資料分割結構描述  
  下列範例會建立上述各範例的相同資料分割函數，且會建立一項資料分割結構描述，將所有資料分割對應至相同的檔案群組。  
@@ -159,14 +159,14 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  執行這個陳述式會傳回下列訊息。  
   
-已成功建立資料分割配置 'myRangePS4'。 'test5fg' 會標示為分割區配置 'myRangePS4' 中下一個使用的檔案群組。  
+已順利建立分割區配置 'myRangePS4'。 'test5fg' 已標示為分割區配置 'myRangePS4' 中下一個使用的檔案群組。  
   
   
  如果將資料分割函數 `myRangePF4` 改成加入資料分割，`test5fg` 檔案群組會收到新建立的資料分割。  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>E. 建立資料分割結構描述只在主要-只有主要被支援[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>E. 只在 PRIMARY 上建立分割區配置 - [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 只支援 PRIMARY
 
- 下列範例會建立一個資料分割函數，將資料表或索引分割成四個資料分割。 資料分割配置然後就會建立指定主要檔案群組中建立的所有資料分割。  
+ 下列範例會建立一個資料分割函數，將資料表或索引分割成四個資料分割。 然後，就會建立分割區配置，以指定在 PRIMARY 檔案群組中建立所有分割區。  
   
 ```  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
@@ -177,16 +177,16 @@ AS PARTITION myRangePF1
 ALL TO ( [PRIMARY] );  
 ```
    
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [建立資料分割的資料表及索引](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)   
- [sys.partition_schemes &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [sys.data_spaces &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.destination_data_spaces &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [sys.partitions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [建立分割區資料表及索引](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)   
+ [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

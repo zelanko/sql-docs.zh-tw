@@ -1,5 +1,5 @@
 ---
-title: "卸除對稱金鑰 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,12 +56,12 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  這是您要卸除的對稱金鑰名稱。  
   
  REMOVE PROVIDER KEY  
- 從 EKM 裝置中移除 Extensible Key Management (EKM) 金鑰。 如需可延伸金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 從 EKM 裝置中移除 Extensible Key Management (EKM) 金鑰。 如需可延伸金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果在目前的工作階段中開啟金鑰，陳述式會失敗。  
   
- 如果非對稱金鑰對應到 EKM 裝置上的 Extensible Key Management (EKM) 金鑰和**REMOVE PROVIDER KEY**未指定選項、 金鑰皆會予以捨棄資料庫但不該裝置，並會發出警告。  
+ 如果將非對稱金鑰對應到 EKM 裝置上的可延伸金鑰管理 (EKM) 金鑰，而且未指定 **REMOVE PROVIDER KEY** 選項，金鑰就會從資料庫中卸除，但不會從裝置卸除，而且會發出警告。  
   
 ## <a name="permissions"></a>Permissions  
  需要對稱金鑰的 CONTROL 權限。  
@@ -75,12 +75,12 @@ DROP SYMMETRIC KEY GailSammamishKey6;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [CLOSE SYMMETRIC KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

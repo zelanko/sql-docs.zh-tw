@@ -1,5 +1,5 @@
 ---
-title: "啟用觸發程序 (TRANSACT-SQL) |Microsoft 文件"
+title: ENABLE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
 ## <a name="arguments"></a>引數  
  *schema_name*  
- 這是觸發程序所屬的結構描述名稱。 *schema_name*不能指定 DDL 或登入觸發程序。  
+ 這是觸發程序所屬的結構描述名稱。 您不能為 DDL 或登入觸發程序指定 *schema_name*。  
   
  *trigger_name*  
  這是您要啟用的觸發程序名稱。  
@@ -61,21 +61,21 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  指出啟用在 ON 子句範圍內定義的所有觸發程序。  
   
  *object_name*  
- 這是資料表或檢視所在的 DML 觸發程序的名稱*trigger_name*已建立，以便執行。  
+ 為建立 DML 觸發程序 *trigger_name* 以便在其中執行的資料表或檢視名稱。  
   
  DATABASE  
- DDL 觸發程序，它會指出*trigger_name*建立或修改以資料庫範圍來執行。  
+ 如果是 DDL 觸發程序，它會指出已經建立或修改 *trigger_name*，以在資料庫範圍內執行。  
   
  ALL SERVER  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- DDL 觸發程序，它會指出*trigger_name*建立或修改，以伺服器範圍下執行。 ALL SERVER 也適用於登入觸發程序。  
+ 如果是 DDL 觸發程序，它會指出已經建立或修改 *trigger_name*，以在伺服器範圍內執行。 ALL SERVER 也適用於登入觸發程序。  
   
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
-## <a name="remarks"></a>備註  
- 啟用觸發程序並不會重新建立它。 停用的觸發程序仍然是目前資料庫中的一個物件，但不會引發。 啟用觸發程序後，原先設定之任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式執行時，便造成觸發程序的引發。 觸發程序會停用使用[停用觸發程序](../../t-sql/statements/disable-trigger-transact-sql.md)。 可以是資料表上定義的 DML 觸發程序也會停用或啟用使用[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ 啟用觸發程序並不會重新建立它。 停用的觸發程序仍然是目前資料庫中的一個物件，但不會引發。 啟用觸發程序後，原先設定之任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式執行時，便造成觸發程序的引發。 您可以使用 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 停用觸發程序。 您也可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)，來停用或啟用資料表上定義的 DML 觸發程序。  
   
 ## <a name="permissions"></a>Permissions  
  若要啟用 DML 觸發程序，使用者至少要有建立這個觸發程序之資料表或檢視的 ALTER 權限。  
@@ -85,7 +85,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. 啟用資料表的 DML 觸發程序  
- 下列範例會停用觸發程序`uAddress`所建立的資料表`Address`在 AdventureWorks 資料庫中，然後再啟用它。  
+ 下列範例會停用 AdventureWorks 資料庫中由 `uAddress` 資料表所建立的觸發程序 `Address`，然後啟用它。  
   
 ```  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
@@ -95,7 +95,7 @@ GO
 ```  
   
 ### <a name="b-enabling-a-ddl-trigger"></a>B. 啟用 DDL 觸發程序  
- 下列範例會建立 DDL 觸發程序`safety`具有資料庫範圍內，然後停用再啟用它。  
+ 下列範例會以資料庫範圍建立 DDL 觸發程序 `safety`，然後停用它並再次啟用。  
   
 ```  
 CREATE TRIGGER safety   
@@ -121,7 +121,7 @@ ENABLE Trigger ALL ON ALL SERVER;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

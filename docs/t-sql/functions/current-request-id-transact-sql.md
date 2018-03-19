@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_REQUEST_ID (TRANSACT-SQL) |Microsoft 文件"
+title: CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ ms.lasthandoff: 11/21/2017
 CURRENT_REQUEST_ID()  
 ```  
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 **smallint**
   
-## <a name="remarks"></a>備註  
-目前工作階段和目前要求的確切資訊，請使用@SPID和 current_request_id （），分別。
+## <a name="remarks"></a>Remarks  
+若要尋找有關目前工作階段和目前要求的確切資訊，請分別使用 @@SPID 和 CURRENT_REQUEST_ID()。
   
 ## <a name="see-also"></a>另請參閱
 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)

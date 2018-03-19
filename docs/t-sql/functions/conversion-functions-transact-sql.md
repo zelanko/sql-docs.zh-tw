@@ -1,5 +1,5 @@
 ---
-title: "轉換函式 (TRANSACT-SQL) |Microsoft 文件"
+title: "轉換函式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,10 +33,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="in-this-section"></a>本節內容  
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[剖析 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/parse-transact-sql.md)  
-[TRY_CAST &#40;TRANSACT-SQL &#41;](../../t-sql/functions/try-cast-transact-sql.md)  
-[TRY_CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)  
-[TRY_PARSE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/try-parse-transact-sql.md)
+[PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)  
+[TRY_CAST &#40;Transact-SQL&#41;](../../t-sql/functions/try-cast-transact-sql.md)  
+[TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)  
+[TRY_PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/try-parse-transact-sql.md)
   
 ## <a name="see-also"></a>另請參閱
 [函數](../../t-sql/functions/functions.md)  

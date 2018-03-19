@@ -1,5 +1,5 @@
 ---
-title: "@@REMSERVER (TRANSACT-SQL) |Microsoft 文件"
+title: '@@REMSERVER (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (TRANSACT-SQL)
+# <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>備註  
- @@REMSERVER啟用檢查從中執行的程序的資料庫伺服器名稱的預存程序。  
+## <a name="remarks"></a>Remarks  
+ @@REMSERVER 使預存程序能夠檢查執行這個程序的資料庫伺服器名稱。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立傳回遠端伺服器名稱的 `usp_CheckServer` 程序。  
@@ -78,7 +78,7 @@ EXEC SEATTLE1...usp_CheckServer;
 LONDON2  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [組態函式 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [遠端伺服器](../../database-engine/configure-windows/remote-servers.md)  
   

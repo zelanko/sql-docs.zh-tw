@@ -1,5 +1,5 @@
 ---
-title: "壓縮 (TRANSACT-SQL) |Microsoft 文件"
+title: COMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="compress-transact-sql"></a>壓縮 (TRANSACT-SQL)
+# <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-壓縮使用 GZIP 演算法的輸入的運算式。 壓縮的結果是位元組陣列的型別**varbinary （max)**。
+使用 GZIP 演算法壓縮輸入運算式。 壓縮的結果為 **varbinary(max)** 類型的位元組陣列。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,20 +44,20 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>引數  
 *expression*  
-是**nvarchar (***n***)**， **nvarchar （max)**， **varchar (** *n*  **)**， **varchar （max)**， **varbinary (**  *n*  **)**， **varbinary （max)**， **char (***n***)**， **nchar (**  *n*  **)**，或**二進位 (***n***)**運算式。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。
+為 **nvarchar(***n***)**、**nvarchar(max)**、**varchar(***n***)**、**varchar(max)**、**varbinary(***n***)**、**varbinary(max)**、**char(***n***)**、**nchar(***n***)**，或 **binary(***n***)** 運算式。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回型別
-傳回的資料型別**varbinary （max)**表示輸入的壓縮的內容。
+傳回表示輸入壓縮內容的 **varbinary(max)** 資料類型。
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 壓縮的資料無法編製索引。
   
-COMPRESS 函數壓縮提供為輸入運算式的資料，與必須叫用每個區段之壓縮的資料。 在儲存期間資料列或頁面層級自動壓縮，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。
+COMPRESS 函式會壓縮作為輸入運算式提供的資料，且針對每個要壓縮的資料區段都必須叫用一次。 如需儲存時資料列或頁面層級的自動壓縮，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-compress-data-during-the-table-insert"></a>A. 資料表插入期間壓縮資料  
-下列範例顯示如何壓縮資料插入至資料表：
+### <a name="a-compress-data-during-the-table-insert"></a>A. 在資料表插入期間壓縮資料  
+下列範例示範如何壓縮插入至資料表的資料：
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -68,8 +68,8 @@ INSERT INTO player (name, surname, info )
 VALUES (N'Michael', N'Raheem', compress(@info));  
 ```  
   
-### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. 封存壓縮的版的已刪除的資料列  
-下列陳述式會刪除舊的播放程式記錄，從`player`資料表，並儲存在記錄`inactivePlayer`壓縮格式，以節省空間的資料表。
+### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. 封存已刪除資料列的壓縮版本  
+下列陳述式會從 `player` 資料表刪除播放程式舊記錄，並將記錄以壓縮格式儲存在 `inactivePlayer` 資料表，藉以節省空間。
   
 ```sql
 DELETE player  
@@ -79,7 +79,7 @@ INTO dbo.inactivePlayers ;
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[解壓縮 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/decompress-transact-sql.md)
+[字串函式 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+[DECOMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/decompress-transact-sql.md)
   
   

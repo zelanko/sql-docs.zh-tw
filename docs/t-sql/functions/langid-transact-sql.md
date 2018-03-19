@@ -1,5 +1,5 @@
 ---
-title: "@@LANGID (TRANSACT-SQL) |Microsoft 文件"
+title: '@@LANGID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (TRANSACT-SQL)
+# <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回目前所用語言的本機語言識別碼 (識別碼)。  
@@ -51,8 +51,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>傳回類型  
  **smallint**  
   
-## <a name="remarks"></a>備註  
- 若要檢視有關語言設定，包括語言識別碼，資訊執行**sp_helplanguage**指定參數。  
+## <a name="remarks"></a>Remarks  
+ 若要檢視有關語言設定的資訊 (包括語言識別碼)，請執行沒有指定參數的 **sp_helplanguage**。  
   
 ## <a name="examples"></a>範例  
  下列範例會將目前工作階段的語言設定為 `Italian`，並且使用 `@@LANGID` 傳回義大利文的識別碼。  
@@ -71,9 +71,9 @@ Language ID
 6            
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [組態函式 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [設定語言 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   

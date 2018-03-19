@@ -1,5 +1,5 @@
 ---
-title: "LOGINPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: LOGINPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -64,16 +64,16 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *login_name*  
  這是要傳回登入屬性狀態之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。  
   
- *屬性名稱*  
- 這是包含為登入傳回之屬性資訊的運算式。 *propertyname*可以是下列值之一。  
+ *propertyname*  
+ 這是包含為登入傳回之屬性資訊的運算式。 *propertyname* 可以是下列值之一。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**BadPasswordCount**|傳回連續使用錯誤密碼嘗試登入的次數。|  
 |**BadPasswordTime**|傳回上一次使用錯誤密碼嘗試登入的時間。|  
 |**DaysUntilExpiration**|傳回密碼到期之前的剩餘天數。|  
-|**預設資料庫**|傳回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料中所儲存的登入的預設資料庫或**主要**如果未不指定任何資料庫。 會傳回 NULL 的非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]佈建使用者 （例如，Windows 驗證的使用者）。|  
-|**DefaultLanguage**|傳回登入預設語言 (儲存於中繼資料內)。 會傳回 NULL 的非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]佈建的使用者，例如，Windows 驗證的使用者。|  
+|**DefaultDatabase**|傳回儲存在中繼資料中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入預設資料庫 (在未指定任何資料庫的情況下，則為 **master**)。 針對非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佈建的使用者傳回 NULL (例如 Windows 驗證的使用者)。|  
+|**DefaultLanguage**|傳回登入預設語言 (儲存於中繼資料內)。 針對非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佈建的使用者傳回 NULL，例如 Windows 驗證的使用者。|  
 |**HistoryLength**|利用密碼原則強制執行機制，傳回追蹤登入的密碼數目。 如果密碼原則未強制執行，則為 0。 繼續密碼原則強制執行從 1 重新啟動。|  
 |**IsExpired**|指出登入是否已過期。|  
 |**IsLocked**|指出登入是否已鎖定。|  
@@ -86,21 +86,21 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="returns"></a>傳回值  
  資料類型相依於要求的值。  
   
- **IsLocked**， **IsExpired**，和**IsMustChange**類型**int**。  
+ **IsLocked**、**IsExpired** 及 **IsMustChange** 的類型為 **int**。  
   
 -   1 代表登入處於指定的狀態。  
   
 -   0 代表登入並未處於指定的狀態。  
   
- **BadPasswordCount**和**HistoryLength**類型**int**。  
+ **BadPasswordCount** 及 **HistoryLength** 的類型為 **int**。  
   
- **BadPasswordTime**， **LockoutTime**， **PasswordLastSetTime**類型**datetime**。  
+ **BadPasswordTime**、**LockoutTime**、**PasswordLastSetTime** 的類型為 **datetime**。  
   
- **PasswordHash**的型別**varbinary**。  
+ **PasswordHash** 的類型為 **varbinary**。  
   
  NULL 代表登入不是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
- **DaysUntilExpiration**的型別**int**。  
+ **DaysUntilExpiration** 的類型為 **int**。  
   
 -   如果登入已過期或是將會在查詢的日期到期，則為 0。  
   
@@ -108,18 +108,18 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   如果登入的 CHECK_POLICY 或 CHECK_EXPIRATION 為 OFF，或是作業系統不支援此密碼原則，則為 NULL。  
   
- **PasswordHashAlgorithm**屬於 int 類型。  
+ **PasswordHashAlgorithm** 的類型為 int。  
   
 -   如果是 SQL7.0 雜湊，則為 0  
   
--   1，表示 sha-1 雜湊  
+-   如果是 SHA-1 雜湊，則為 1  
   
 -   如果是 SHA-2 雜湊，則為 2  
   
 -   如果登入不是有效的 SQL Server 登入，則為 NULL  
   
-## <a name="remarks"></a>備註  
- 這個內建函數會傳回有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入之密碼原則設定的資訊。 屬性的名稱不區分大小寫，因此這類名稱屬性**BadPasswordCount**和**badpasswordcount**相等。 值**PasswordHash、 PasswordHashAlgorithm**，和**PasswordLastSetTime**屬性值的所有支援的設定可用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但其他屬性則只有時，才能使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上執行[!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]而且啟用了 CHECK_POLICY 和 CHECK_EXPIRATION 時。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
+## <a name="remarks"></a>Remarks  
+ 這個內建函數會傳回有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入之密碼原則設定的資訊。 屬性的名稱不區分大小寫，所以 **BadPasswordCount** 和 **badpasswordcount** 之類的屬性名稱是相等的。 **PasswordHash、PasswordHashAlgorithm** 和 **PasswordLastSetTime** 屬性值可用於所有受支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定，但其他屬性則只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 上執行而且同時啟用 CHECK_POLICY 和 CHECK_EXPIRATION 時才可使用。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
 ## <a name="permissions"></a>Permissions  
  需要登入的 VIEW 權限。 在要求密碼雜湊時，也需要 CONTROL SERVER 權限。  
@@ -127,7 +127,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="examples"></a>範例  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. 檢查登入是否必須變更其密碼  
- 下列範例會檢查是否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入`John3`的下次執行個體的連接時必須變更其密碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 下列範例會檢查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `John3` 是否必須在下次連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時變更其密碼。  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -142,7 +142,7 @@ SELECT LOGINPROPERTY('John3', 'IsLocked');
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

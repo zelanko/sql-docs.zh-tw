@@ -1,5 +1,5 @@
 ---
-title: "SET DEADLOCK_PRIORITY (TRANSACT-SQL) |Microsoft 文件"
+title: SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -63,21 +63,21 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  HIGH  
  指定如果陷入死結鏈結的其他工作階段，其死結優先權設成 HIGH 或大於 5 的整數，目前工作階段便會成為死結犧牲者，如果另一個工作階段的死結優先權也設成 HIGH 或 5，目前工作階段可以成為死結的犧牲者。  
   
- \<優先權的數字 >  
+ \<numeric-priority>  
  這是一個整數值範圍 (-10 至 10)，用來提供 21 個層級的死結優先權。 指定如果陷入死結鏈結的其他工作階段在執行較高的死結優先權值，目前工作階段便會成為死結犧牲者，如果其他工作階段所執行的死結優先權值低於目前工作階段的值，目前工作階段便不會成為死結犧牲者。 另外，它也指定如果另一個工作階段執行的死結優先權值與目前工作階段相同，目前工作階段可以成為死結的犧牲者。 LOW 對應於 -5，NORMAL 對應於 0，HIGH 對應於 5。  
   
- **@***deadlock_var*  
+ **@** *deadlock_var*  
  這是指定死結優先權的字元變數。 這個變數必須設成 'LOW'、'NORMAL' 或 'HIGH' 值。 這個變數必須足以保存整個字串。  
   
- **@***deadlock_intvar*  
+ **@** *deadlock_intvar*  
  這是指定死結優先權的整數變數。 這個變數必須設成 (-10 至 10) 範圍內的整數值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當兩個工作階段都在等待存取對方所鎖定的資源時，便會出現死結。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體偵測到兩個工作階段發生死結時，它會選擇一個工作階段作為死結犧牲者來解決死結。 此時會回復犧牲者目前的交易，且會向用戶端傳回死結錯誤訊息 1205。 這個工作階段所持有的鎖定會全部釋出，讓其他工作階段繼續作業。  
   
  選擇哪個工作階段作為死結犧牲者，會隨著每個工作階段的死結優先權而不同：  
   
--   如果兩個工作階段的死結優先權相同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會選擇回復成本較低的工作階段作為死結的犧牲者。 例如，如果兩個工作階段的死結優先權都設成 HIGH，此時執行個體會選擇評估回復成本較低的工作階段來作為犧牲者。 成本取決於比較寫入每筆交易在該點的記錄位元組數目。 （您可以看到這個值為"Log Used"死結圖形中）。
+-   如果兩個工作階段的死結優先權相同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會選擇回復成本較低的工作階段作為死結的犧牲者。 例如，如果兩個工作階段的死結優先權都設成 HIGH，此時執行個體會選擇評估回復成本較低的工作階段來作為犧牲者。 成本是透過比較寫入每筆交易該時間點的記錄位元組數目來決定。 (您可以在死結圖形中看到這個值作為 [使用的記錄])。
   
 -   如果工作階段的死結優先權不同，就選擇死結優先權最低的工作階段來作為死結犧牲者。  
   
@@ -104,9 +104,9 @@ SET DEADLOCK_PRIORITY NORMAL;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET LOCK_TIMEOUT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

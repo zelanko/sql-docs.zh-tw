@@ -1,5 +1,5 @@
 ---
-title: "APPLOCK_MODE (TRANSACT-SQL) |Microsoft 文件"
+title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ## <a name="arguments"></a>引數  
 '*database_principal*'  
-這是已獲授與資料庫中的物件權限之使用者、角色或應用程式角色。 函式的呼叫端必須是成員*database_principal*、 dbo 或 db_owner 固定資料庫角色，才能成功呼叫函數。
+這是已獲授與資料庫中的物件權限之使用者、角色或應用程式角色。 函式的呼叫者必須是 *database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能夠成功呼叫函式。
   
 '*resource_name*'  
-這是用戶端應用程式所指定的鎖定資源名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*是**nvarchar （255)**沒有預設值。 *resource_name*是以二進位來比較，且區分大小寫，不論目前資料庫的定序設定為何。
+這是用戶端應用程式所指定的鎖定資源名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name* 是沒有預設值的 **nvarchar(255)**。 *resource_name* 是以二進位來比較，不論目前資料庫的定序設定為何，都會區分大小寫。
   
 '*lock_owner*'  
-已鎖定，這是擁有者*lock_owner*要求鎖定時的值。 *lock_owner*是**nvarchar （32)**，而且此值可以是**交易**（預設值） 或**工作階段**。
+為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)**，而且此值可以是**交易** (預設值) 或**工作階段**。
   
 ## <a name="return-types"></a>傳回型別
-**nvarchar （32)**
+**nvarchar(32)**
   
 ## <a name="return-value"></a>傳回值
 傳回特定應用程式資源的鎖定擁有者所保留的鎖定模式。 鎖定模式可以是下列任何值之一：
@@ -67,12 +67,12 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |-|-|-|  
 |**NoLock**|**Update**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**共用**|**排除**||  
+|**Shared**|**排除**||  
   
 *這個鎖定模式是其他鎖定模式的組合，無法利用 sp_getapplock 來明確取得。
   
 ## <a name="function-properties"></a>函式屬性
-**不具決定性**
+**Nondeterministic**
   
 **Nonindexable**
   
@@ -137,8 +137,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[APPLOCK_TEST &#40;TRANSACT-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)  
-[sp_getapplock &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

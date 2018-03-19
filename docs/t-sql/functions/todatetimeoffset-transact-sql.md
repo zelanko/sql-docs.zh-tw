@@ -1,5 +1,5 @@
 ---
-title: "TODATETIMEOFFSET (TRANSACT-SQL) |Microsoft 文件"
+title: TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回**datetimeoffset**值，從轉譯**datetime2**運算式。  
+  傳回從 **datetime2** 運算式翻譯的 **datetimeoffset** 值。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +52,10 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)解析為[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)值。  
+ 為解析為 [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 值的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 > [!NOTE]  
->  運算式不能屬於類型**文字**， **ntext**，或**映像**因為這些類型無法隱含地轉換成**varchar**或**nvarchar**。  
+>  運算式的類型不可為 **text**、**ntext** 或 **image**，因為這些類型不可隱含轉換成 **varchar** 或 **nvarchar**。  
   
  *time_zone*  
  這是代表時區時差的運算式，以分鐘為單位 (若為整數)，例如 -120，或以小時和分鐘為單位 (若為字串)，例如 ‘+13.00’。 範圍是 +14 到 -14 (以小時為單位)。 此運算式會針對指定的 time_zone 以當地時間解譯。  
@@ -64,7 +64,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  如果運算式為字元字串，它的格式必須為 {+|-}TZH:THM。  
   
 ## <a name="return-type"></a>傳回類型  
- **datetimeoffset**。 小數有效位數是相同*datetime*引數。  
+ **datetimeoffset**. 毫秒精確度與 *datetime* 引數相同。  
   
 ## <a name="examples"></a>範例  
   
@@ -97,10 +97,10 @@ SELECT TODATETIMEOFFSET (@dateTime, '+13:00');
 -- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [日期和時間資料類型和函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [TIME ZONE &AMP;#40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "第 3 課： 刪除資料庫物件 |Microsoft 文件"
+title: "課程 3：刪除資料庫物件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-deleting-database-objects"></a>第 3 課：刪除資料庫物件
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]這個簡短的課程會移除您在第 1 課和第 2 課中建立的物件，然後卸除資料庫。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 在這個簡短的課程中，會移除您在課程 1 和課程 2 中所建立的物件，然後卸除資料庫。  
   
 這個課程只包含一個主題：  
   

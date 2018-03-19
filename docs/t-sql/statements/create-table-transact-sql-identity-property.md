@@ -1,5 +1,5 @@
 ---
-title: "IDENTITY （屬性） (TRANSACT-SQL) |Microsoft 文件"
+title: "IDENTITY (屬性) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="create-table-transact-sql-identity-property"></a>建立資料表 (TRANSACT-SQL) IDENTITY （屬性）
+# <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (屬性)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   建立資料表中的識別欄位。 這個屬性會搭配 CREATE TABLE 和 ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式使用。  
   
 > [!NOTE]  
->  識別屬性是不同於 SQL-DMO**識別**公開的資料行的資料列識別屬性的屬性。  
+>  IDENTITY 屬性不同於 SQL-DMO **Identity** 屬性，後者會公開資料行的資料列識別屬性。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,15 +52,15 @@ IDENTITY [ (seed , increment) ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *種子*  
+ *seed*  
  這是載入資料表的第一個資料列所用的值。  
   
- *遞增*  
+ *increment*  
  這是加入先前載入的資料列之識別值的累加值。  
   
  您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  識別欄位可用於產生索引鍵值。 資料行上的識別屬性可確保以下事項：  
   
 -   根據目前種子 & 增量產生每個新值。  
@@ -69,13 +69,13 @@ IDENTITY [ (seed , increment) ]
   
  資料行上的識別屬性不保證以下事項：  
   
--   **值的唯一性**– 必須藉由強制執行唯一性**主索引鍵**或**UNIQUE**條件約束或**UNIQUE**索引。  
+-   **值的唯一性** – 必須使用 **PRIMARY KEY** 或 **UNIQUE** 條件約束或 **UNIQUE** 索引來強制執行唯一性。  
   
--   **在交易內的連續值**– 插入多個資料列的交易不保證連續的值取得的資料列，因為其他並行插入可能會發生在資料表上。 如果值必須是連續，則交易應該在資料表上使用的獨佔鎖定，或使用**SERIALIZABLE**隔離等級。  
+-   **交易內的連續值** – 插入多個資料列的交易並不保證能夠取得資料列的連續值，因為其他並行插入可能會在資料表中發生。 如果值必須是連續的，則交易應該使用資料表的獨佔鎖定，或使用 **SERIALIZABLE** 隔離等級。  
   
--   **之後重新啟動伺服器或其他失敗的連續值**–[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能會快取的識別值，基於效能考量，某些指派的值可能會遺失資料庫失敗或伺服器重新啟動期間。 這可能會導致插入識別值之後的間隙。 若不接受間隙，則應用程式應會使用其擁有的機制，產生索引鍵值。 使用順序產生器，搭配**NOCACHE**選項可以限制為從未認可的交易將間隙。  
+-   **重新啟動伺服器或其他失敗之後的連續值** – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會基於效能考量而快取識別值，因此在資料庫失敗或伺服器重新啟動期間，某些指派的值可能會遺失。 這可能會導致插入識別值之後的間隙。 若不接受間隙，則應用程式應會使用其擁有的機制，產生索引鍵值。 搭配使用順序產生器和 **NOCACHE** 選項時，可將間隙限制為從未認可的交易。  
   
--   **重複使用值**– 適用於特定種子/增量值不會重複使用引擎的身分識別的給定的識別屬性。 如果特定 INSERT 陳述式失敗或此 INSERT 陳述式已回復，則取用的識別值將會遺失而且不會再次產生。 這樣在產生後續識別值時會產生間隙。  
+-   **重複使用值** – 如果是具有特定種子/增量的指定識別屬性，引擎不會重複使用識別值。 如果特定 INSERT 陳述式失敗或此 INSERT 陳述式已回復，則取用的識別值將會遺失而且不會再次產生。 這樣在產生後續識別值時會產生間隙。  
   
  這些限制是為了提升效能之設計的一部分，而且也可在許多常見的情況中被接受。 如果您因為這些限制而無法使用識別值，請建立個別的資料表來保存目前的值，並使用您的應用程式管理資料表的存取和數字指派。  
   
@@ -83,7 +83,7 @@ IDENTITY [ (seed , increment) ]
   
  每份資料表都只能建立一個識別欄位。  
   
- 記憶體最佳化資料表中的種子和增量必須設 1，1。 設定種子或增量為 1 會產生下列錯誤以外的值： 使用種子和增量的值超過 1 不支援記憶體最佳化資料表。  
+ 在經記憶體最佳化的資料表中，種子和增量必須設為 1,1。 若將種子或增量設為 1 以外的值，會產生下列錯誤：經記憶體最佳化的資料表不支援使用 1 以外的種子和增量值。  
   
 ## <a name="examples"></a>範例  
   
@@ -173,16 +173,16 @@ SELECT @minidentval = MIN($IDENTITY) FROM img
 SET IDENTITY_INSERT img OFF;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [IDENT_INCR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
- [IDENTITY &#40;函式 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)   
- [IDENT_SEED &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENTITY &#40;函式&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SET IDENTITY_INSERT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
- [複寫識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)  
+ [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
+ [複寫識別資料行](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

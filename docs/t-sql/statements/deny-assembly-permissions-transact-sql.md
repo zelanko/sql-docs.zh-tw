@@ -1,5 +1,5 @@
 ---
-title: "拒絕組件的權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "DENY 組件權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定組件可以拒絕的權限。 如下所列。  
   
- 組件上**::***assembly_name*  
+ ON ASSEMBLY **::***assembly_name*  
  指定正在拒絕權限的組件。 需要範圍限定詞 "::"。  
   
  *database_principal*  
@@ -97,7 +97,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  組件是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下面所列的是可以拒絕之最特定且最有限的組件權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
 |組件權限|資料庫權限所隱含|資料庫權限所隱含|  
@@ -111,14 +111,14 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 ## <a name="permissions"></a>Permissions  
  需要組件的 CONTROL 權限。 如果使用 AS 選項，指定的主體必須擁有組件。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [建立應用程式角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [建立組件 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ABS (TRANSACT-SQL) |Microsoft 文件"
+title: ABS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-為數學函數，可傳回指定數值運算式的絕對 (正) 值。 (`ABS`變更負正數值的值。 `ABS`不有任何影響零或正值。)
+為數學函數，可傳回指定數值運算式的絕對 (正) 值。 (`ABS` 會將負值變更為正值。 `ABS` 對零或正值沒有任何效果。)
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -87,7 +87,7 @@ GO
 ## <a name="see-also"></a>另請參閱
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [內建函數 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
   
   

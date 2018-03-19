@@ -1,5 +1,5 @@
 ---
-title: "SYMKEYPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: SYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
   
 ## <a name="arguments"></a>引數  
  *Key_ID*  
- 這是資料庫中的對稱金鑰的 Key_ID。 若要在只知道金鑰名稱時尋找 Key_ID，請使用 SYMKEY_ID。 *Key_ID*是資料型別**int**。  
+ 這是資料庫中的對稱金鑰的 Key_ID。 若要在只知道金鑰名稱時尋找 Key_ID，請使用 SYMKEY_ID。 *Key_ID* 的資料類型為 **int**。  
   
  **'**algorithm_desc**'**  
  指定輸出會傳回對稱金鑰的演算法描述。 僅適用於根據 EKM 模組所建立的對稱金鑰。  
@@ -66,14 +66,14 @@ SELECT SYMKEYPROPERTY(256, 'algorithm_desc') AS Algorithm ;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [ASYMKEY_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.symmetric_keys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [KEY_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/key-id-transact-sql.md)   
- [ASYMKEYPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+ [KEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/key-id-transact-sql.md)   
+ [ASYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
   
   

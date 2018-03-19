@@ -1,5 +1,5 @@
 ---
-title: "NTILE (TRANSACT-SQL) |Microsoft 文件"
+title: NTILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,19 +49,19 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>引數  
  *integer_expression*  
- 用於指定每個分割區必須劃分之群組數的正整數常數運算式。 *clause><*可以屬於型別**int**，或**bigint**。  
+ 用於指定每個分割區必須劃分之群組數的正整數常數運算式。 *integer_expression* 可為 **int** 類型或 **bigint**。  
   
- \<partition_by_clause >  
- 所產生的結果集分成[FROM](../../t-sql/queries/from-transact-sql.md)子句套用函數的分割區。 如需 PARTITION BY 語法，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ 將 [FROM](../../t-sql/queries/from-transact-sql.md) 子句產生的結果集分割成函式所要套用的分割區。 如需 PARTITION BY 語法，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
- \<order_by_clause >  
- 指定 NTILE 值指派給分割區中之資料列的順序。 整數無法表示資料行時\<order_by_clause > 排名函數中使用。  
+ \<order_by_clause>  
+ 指定 NTILE 值指派給分割區中之資料列的順序。 在次序函式中使用 \<order_by_clause> 時，整數無法表示資料行。  
   
 ## <a name="return-types"></a>傳回類型  
  **bigint**  
   
-## <a name="remarks"></a>備註  
- 資料分割中的資料列數目是否未整除*clause><*，這會導致兩個大小不同的一個成員群組。 在 OVER 子句所指定的順序中，較大群組會在較小群組的前面。 例如，如果資料列總數是 53，群組數目是 5，前三個群組會有 11 個資料列，後兩個群組會有 10 個資料列。 如果群組數目可以整除資料列的總數，資料列就會平均分散在各個群組中。 例如，如果資料列總數是 50，有 5 個群組，每個貯體都會包含 10 個資料列。  
+## <a name="remarks"></a>Remarks  
+ 如果 *integer_expression* 無法整除分割區中的資料列數，兩個大小的群組會相差一個成員。 在 OVER 子句所指定的順序中，較大群組會在較小群組的前面。 例如，如果資料列總數是 53，群組數目是 5，前三個群組會有 11 個資料列，後兩個群組會有 10 個資料列。 如果群組數目可以整除資料列的總數，資料列就會平均分散在各個群組中。 例如，如果資料列總數是 50，有 5 個群組，每個貯體都會包含 10 個資料列。  
   
  NTILE 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
@@ -112,7 +112,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ```  
   
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. 使用 PARTITION BY 分割結果集  
- 下列範例會在範例 A 的程式碼中加入 `PARTITION BY` 引數。資料列會先由 `PostalCode` 進行資料分割，接著再依據每個 `PostalCode` 分成四個群組。 此範例也會宣告一個變數`@NTILE_Var`和使用該變數來指定的值*clause><*參數。  
+ 下列範例會在範例 A 的程式碼中加入 `PARTITION BY` 引數。資料列會先由 `PostalCode` 進行資料分割，接著再依據每個 `PostalCode` 分成四個群組。 此範例也會宣告 `@NTILE_Var` 變數，並且使用該變數來指定 *integer_expression* 參數的值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,10 +156,10 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-dividing-rows-into-groups"></a>C. 將資料列分割成數個群組  
- 下列範例會將分成四個群組，根據其指派的銷售配額，2003 年的銷售人員的一組使用 NTILE 函式。 因為無法整除的群組數目的資料列總數，第一個群組具有五個資料列，其餘群組會有四個資料列。  
+ 下列範例會根據 2003 年他們受指派的銷售配額，使用 NTILE 函式將一組銷售人員分割成四個群組。 由於群組數目無法整除資料列的總數，所以第一個群組會有五個資料列，其餘群組會有四個資料列。  
   
 ```  
 -- Uses AdventureWorks  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 ```  
   
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. 使用 PARTITION BY 分割結果集  
- 下列範例會將 PARTITION BY 引數加入範例 a 中的程式碼資料列會先依分割`SalesTerritoryCountry`而再分成兩個群組內每個`SalesTerritoryCountry`。 請注意，OVER 子句中的 ORDER BY 排序 NTILE ORDER BY 的 SELECT 陳述式排序結果集。  
+ 下列範例會將 PARTITION BY 引數新增至範例 A 的程式碼中。資料列會先由 `SalesTerritoryCountry` 進行分割，接著依據每個 `SalesTerritoryCountry` 分成兩個群組。 請注意，OVER 子句中的 ORDER BY 會排序 NTILE，而 SELECT 陳述式的 ORDER BY 會排序結果集。  
   
 ```  
 -- Uses AdventureWorks  
@@ -241,11 +241,11 @@ Ito               2        2,644,000.00     United States
 Ansman-Wolfe      2        1,183,000.00     United States
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [順位 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40;TRANSACT-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [排名函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [次序函式 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

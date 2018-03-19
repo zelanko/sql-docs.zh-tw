@@ -1,5 +1,5 @@
 ---
-title: "COL_LENGTH (TRANSACT-SQL) |Microsoft 文件"
+title: COL_LENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ COL_LENGTH ( 'table' , 'column' )
 ```  
   
 ## <a name="arguments"></a>引數  
-**'** *資料表* **'**  
-這是要判斷資料行長度資訊的資料表名稱。 *資料表*之類型的運算式**nvarchar**。
+**'** *table* **'**  
+這是要判斷資料行長度資訊的資料表名稱。 *table* 是類型為 **nvarchar** 的運算式。
   
-**'** *資料行* **'**  
-這是要判斷長度的資料行名稱。 *資料行*之類型的運算式**nvarchar**。
+**'** *column* **'**  
+這是要判斷長度的資料行名稱。 *column* 是類型為 **nvarchar** 的運算式。
   
 ## <a name="return-type"></a>傳回類型
 **smallint**
@@ -62,8 +62,8 @@ COL_LENGTH ( 'table' , 'column' )
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，COL_LENGTH) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
   
-## <a name="remarks"></a>備註  
-類型的資料行**varchar**宣告**max**規範 (**varchar （max)**)，COL_LENGTH 會傳回 – 1 的值。
+## <a name="remarks"></a>Remarks  
+對於使用 **max** 規範 (**varchar(max)**) 來宣告的 **varchar** 類型資料行，COL_LENGTH 會傳回 -1。
   
 ## <a name="examples"></a>範例  
 下列範例會顯示 `varchar(40)` 類型之資料行和 `nvarchar(40)` 類型之資料行的傳回值。
@@ -88,8 +88,8 @@ VarChar     NVarChar
   
 ## <a name="see-also"></a>另請參閱
 [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

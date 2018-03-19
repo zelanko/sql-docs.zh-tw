@@ -1,5 +1,5 @@
 ---
-title: "VERIFYSIGNEDBYASYMKEY (TRANSACT-SQL) |Microsoft 文件"
+title: VERIFYSIGNEDBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -57,16 +57,16 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  *clear_text*  
  這是正在驗證的純文字資料。  
   
- *簽章*  
- 這是附加在已簽署資料中的簽章。 *簽章*是**varbinary**。  
+ *signature*  
+ 這是附加在已簽署資料中的簽章。 *signature* 為 **varbinary**。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
  簽章符合時傳回 1，否則傳回 0。  
   
-## <a name="remarks"></a>備註  
- **VerifySignedByAsymKey**使用指定的非對稱金鑰的公開金鑰解密資料的簽章，並比較解密的值與新計算的 MD5 雜湊的資料。 如果值相符，簽章將確認為有效。  
+## <a name="remarks"></a>Remarks  
+ **VerifySignedByAsymKey** 會使用指定之非對稱金鑰的公開金鑰解密資料的簽章，並比較解密值與新計算的資料 MD5 雜湊。 如果值相符，簽章將確認為有效。  
   
 ## <a name="permissions"></a>Permissions  
  需要非對稱金鑰的 VIEW DEFINITION 權限。  
@@ -98,9 +98,9 @@ AND Description = N'data encrypted by asymmetric key ''WillisKey74''';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [ASYMKEY_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [SIGNBYASYMKEY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

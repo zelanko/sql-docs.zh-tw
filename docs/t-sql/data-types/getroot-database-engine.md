@@ -1,5 +1,5 @@
 ---
-title: "GetRoot (Database Engine) |Microsoft 文件"
+title: "GetRoot (資料庫引擎) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getroot-database-engine"></a>GetRoot (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回階層樹狀結構的根部。 Getroot （） 是一種靜態方法。
+傳回階層樹狀結構的根部。 GetRoot() 是一種靜態方法。
   
 ## <a name="syntax"></a>語法  
   
@@ -49,11 +49,11 @@ static SqlHierarchyId GetRoot ( )
 ```  
   
 ## <a name="return-types"></a>傳回類型  
-**SQL Server 傳回類型： hierarchyid**
+**SQL Server 傳回型別：hierarchyid**
   
-**CLR 傳回類型： SqlHierarchyId**
+**CLR 傳回型別：SqlHierarchyId**
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 使用判斷階層樹狀結構中的根節點。
   
 ## <a name="examples"></a>範例  
@@ -68,7 +68,7 @@ WHERE OrgNode = hierarchyid::GetRoot()
 ```  
   
 ### <a name="b-clr-example"></a>B. CLR 範例  
-下列程式碼片段會呼叫 getroot （） 方法：
+下列程式碼片段會呼叫 GetRoot() 方法：
   
 ```sql
 SqlHierarchyId.GetRoot()  

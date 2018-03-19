@@ -1,5 +1,5 @@
 ---
-title: "授與存取權的資料庫 |Microsoft 文件"
+title: "授與資料庫的存取權 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-2---granting-access-to-a-database"></a>課程 2-2-授與資料庫的存取權
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Mary 現在已具有存取權的這個執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，但是沒有存取資料庫的權限。 必須等到您將她授權為資料庫使用者之後，她才能存取預設的 **TestData** 資料庫。  
+# <a name="lesson-2-2---granting-access-to-a-database"></a>課程 2-2 - 授與資料庫的存取權
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Mary 現在已具有此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的存取權，但是沒有存取資料庫的權限。 必須等到您將她授權為資料庫使用者之後，她才能存取預設的 **TestData** 資料庫。  
   
 若要授與 Mary 存取權，請切換到 **TestData** 資料庫，然後使用 CREATE USER 陳述式將其登入對應至名為 Mary 的使用者。  
   

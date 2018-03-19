@@ -1,5 +1,5 @@
 ---
-title: "COLLATIONPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: COLLATIONPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---collationproperty-transact-sql"></a>定序函式-COLLATIONPROPERTY (TRANSACT-SQL)
+# <a name="collation-functions---collationproperty-transact-sql"></a>定序函式 - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 傳回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中所指定定序的屬性。
@@ -46,18 +46,18 @@ COLLATIONPROPERTY( collation_name , property )
 ```  
   
 ## <a name="arguments"></a>引數  
-*sys.databases*  
-這是定序的名稱。 *sys.databases*是**nvarchar （128)**，沒有預設值。
+*collation_name*  
+這是定序的名稱。 *collation_name* 為沒有預設值的 **nvarchar(128)**。
   
-*屬性*  
-這是定序的屬性。 *屬性*是**varchar （128)**，而且可以是下列值之一：
+*property*  
+這是定序的屬性。 *property* 為 **varchar(128)**，可以是下列值中的任何一個：
   
-|屬性名稱|Description|  
+|屬性名稱|描述|  
 |---|---|
-|**CodePage**|定序的非 Unicode 字碼頁。 請參閱[附錄 G DBCS/Unicode 對應資料表](https://msdn.microsoft.com/en-us/library/cc194886.aspx)和[附錄 H 字碼頁](https://msdn.microsoft.com/en-us/library/cc195051.aspx)轉譯這些值，並查看其字元對應。|  
-|**LCID**|定序的 Windows LCID。 請參閱[LCID 結構](https://msdn.microsoft.com/en-us/library/cc233968.aspx)轉譯這些值 (您必須將轉換成**varbinary**第一個)。|  
-|**ComparisonStyle**|Windows 的定序比較樣式。 傳回 0 代表所有二進位定序，同時 (\_BIN) 和 (\_BIN2)，以及當所有屬性都是機密。 位元遮罩值：<br /><br /> 忽略大小寫： 1<br /><br /> 忽略腔調字： 2<br /><br /> 忽略假名： 65536<br /><br /> 忽略寬度： 131072<br /><br /> 注意： 雖然它會影響比較行為，變化選取器區分 (\_VSS) 選項不會出現在這個值。|  
-|**版本**|定序的版本，衍生自定序識別碼的版本欄位。 傳回介於 0 到 3 之間的整數值。<br /><br /> 「 140"名稱中使用的定序會傳回 3。<br /><br /> 含有"100"，在名稱中的定序都會傳回 2。<br /><br /> 含有"90"的名稱中的定序都會傳回 1。<br /><br /> 所有其他定序都會傳回 0。|  
+|**CodePage**|定序的非 Unicode 字碼頁。 請參閱 [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx) (附錄 G DBCS/Unicode 對應資料表) 及 [Appendix H Code Pages](https://msdn.microsoft.com/en-us/library/cc195051.aspx) (附錄 H 字碼頁)，以翻譯這些值並查看他們的字元對應。|  
+|**LCID**|定序的 Windows LCID。 請參閱 [LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx) (LCID 結構)，以翻譯這些值 (您必須先轉換成 **varbinary**)。|  
+|**ComparisonStyle**|Windows 的定序比較樣式。 針對所有二進位定序傳回 0，包括 (\_BIN) 和 (\_BIN2)，以及當所有屬性都區分時。 位元遮罩值：<br /><br /> 忽略大小寫：1<br /><br /> 忽略腔調字：2<br /><br /> 忽略假名：65536<br /><br /> 忽略寬度：131072<br /><br /> 注意：即使它會影響比較行為，variation-selector-sensitive (\_VSS) 選項仍不會在此值中表示。|  
+|**版本(Version)**|定序的版本，衍生自定序識別碼的版本欄位。 傳回 0 到 3 之間的整數值。<br /><br /> 名稱含有 "140" 的定序) 都會傳回 3。<br /><br /> 名稱含有 "100" 的定序) 都會傳回 2。<br /><br /> 名稱含有 "90" 的定序) 都會傳回 1。<br /><br /> 所有其他定序都會傳回 0。|  
   
 ## <a name="return-types"></a>傳回型別
 **sql_variant**
@@ -74,7 +74,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage');
 1252   
 ```  
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')  

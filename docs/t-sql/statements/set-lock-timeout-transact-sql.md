@@ -1,5 +1,5 @@
 ---
-title: "SET LOCK_TIMEOUT (TRANSACT-SQL) |Microsoft 文件"
+title: SET LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/11/2017
 ms.prod: sql-non-specified
@@ -53,11 +53,11 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="arguments"></a>引數  
  *timeout_period*  
- 是之前，所經歷的毫秒數[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回鎖定錯誤。 -1 值 (預設值) 表示沒有逾時期限 (也就是永久等待)。  
+ 為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回鎖定錯誤之前，所經歷的毫秒數。 -1 值 (預設值) 表示沒有逾時期限 (也就是永久等待)。  
   
  當等待鎖定超出逾時值時，會傳回錯誤。 0 值表示完全不等待，且在發現鎖定之後，儘快傳回一則訊息。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在開始連線時，這個設定的值為 -1。 變更之後，新設定會在接下來的連線時間內維持有效。  
   
  SET LOCK_TIMEOUT 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
@@ -71,7 +71,7 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>答： 設定為 1800年毫秒的鎖定逾時  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A. 將鎖定逾時設定為 1800 毫秒  
  下列範例將鎖定逾時期限設為 `1800` 毫秒。  
   
 ```sql  
@@ -79,22 +79,22 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. 設定永久等待鎖定釋出鎖定逾時。  
- 下列範例會設定在鎖定逾時，永遠等候，並永遠不過期。 這是預設行為，已設定每個連線的開頭。  
+### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. 將鎖定逾時設定為永久等待，直到釋放鎖定。  
+ 下列範例會將鎖定逾時設定為永久等待，且永不過期。 這是在每個連線一開始就已設定的預設行為。  
   
 ```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
- 下列範例將鎖定逾時期限設為 `1800` 毫秒。 在此版本中，[!INCLUDE[ssDW](../../includes/ssdw-md.md)]將會剖析陳述式成功，但會忽略此值為 1800年並繼續使用預設行為。  
+ 下列範例將鎖定逾時期限設為 `1800` 毫秒。 在此版本中，[!INCLUDE[ssDW](../../includes/ssdw-md.md)] 會成功剖析陳述式，但忽略 1800 的值並繼續使用預設行為。  
   
 ```sql  
 SET LOCK_TIMEOUT 1800;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "ERROR_STATE (TRANSACT-SQL) |Microsoft 文件"
+title: ERROR_STATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -57,8 +57,8 @@ ERROR_STATE ( )
   
  如果是在 CATCH 區塊範圍之外呼叫，便傳回 NULL。  
   
-## <a name="remarks"></a>備註  
- 在程式碼的多個點，可以產生某些錯誤訊息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，在許多不同情況下，都有可能產生 "1105" 錯誤。 每個產生錯誤的特定狀況，都會指派唯一的狀態碼。  
+## <a name="remarks"></a>Remarks  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 程式碼中的多個點都可能會引發某些錯誤訊息。 例如，在許多不同情況下，都有可能產生 "1105" 錯誤。 每個產生錯誤的特定狀況，都會指派唯一的狀態碼。  
   
  當檢視已知問題的資料庫時，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫，您可以利用狀態碼來判斷所記錄的問題，與您遇到的錯誤是否相同。 例如，如果知識庫文件討論狀態為 2 的 1105 錯誤訊息，而您收到的 1105 錯誤訊息的狀態卻是 3，錯誤原因可能不是文章所報告的原因。  
   
@@ -66,7 +66,7 @@ ERROR_STATE ( )
   
  可以在 CATCH 區塊範圍內的任何位置呼叫 ERROR_STATE。  
   
- ERROR_STATE 不論執行多少次，也不論是在 CATCH 區塊範圍內的任何位置執行，都會傳回錯誤狀態。 這是相較於函式，例如 @@ERROR，這只會傳回錯誤號碼在陳述式之後，立即會造成錯誤，或在 CATCH 區塊的第一個陳述式中。  
+ ERROR_STATE 不論執行多少次，也不論是在 CATCH 區塊範圍內的任何位置執行，都會傳回錯誤狀態。 這有別於 @@ERROR 之類的函式，因為其只會在緊接於發生錯誤的陳述式之後的陳述式中，或在 CATCH 區塊的第一個陳述式中傳回錯誤號碼。  
   
  在巢狀 CATCH 區塊中，ERROR_STATE 會傳回參考它的 CATCH 區塊範圍特定的錯誤狀態。 例如，外部 TRY...CATCH 建構的 CATCH 區塊可能會有巢狀的 TRY...CATCH 建構。 在巢狀 CATCH 區塊內，ERROR_STATE 會從呼叫巢狀 CATCH 區塊的錯誤傳回狀態。 如果 ERROR_STATE 是在外部 CATCH 區塊內執行，它會從呼叫 CATCH 區塊的錯誤傳回狀態。  
   
@@ -106,7 +106,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_STATE  
  下列範例顯示將會產生除以零之錯誤的 `SELECT` 陳述式。 錯誤的相關訊息會隨同錯誤狀態一起傳回。  
@@ -127,7 +127,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   

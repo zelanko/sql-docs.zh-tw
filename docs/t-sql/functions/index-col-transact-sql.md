@@ -1,5 +1,5 @@
 ---
-title: "INDEX_COL (TRANSACT-SQL) |Microsoft 文件"
+title: INDEX_COL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,13 +58,13 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  這是索引所屬的結構描述名稱。  
   
  *table_or_view_name*  
- 這是資料表或索引檢視的名稱。 *table_or_view_name*必須以單引號分隔，並且可以由資料庫名稱和結構描述名稱完整限定。  
+ 這是資料表或索引檢視的名稱。 *table_or_view_name* 必須以單引號分隔，而且可以用資料庫名稱和結構描述名稱完整限定。  
   
  *index_id*  
- 這是索引的識別碼。 *index_ID*是**int**。  
+ 這是索引的識別碼。 *index_ID* 為 **int**。  
   
  *key_id*  
- 這是索引鍵資料行位置。 *key_ID*是**int**。  
+ 這是索引鍵資料行位置。 *key_ID* 為 **int**。  
   
 ## <a name="return-types"></a>傳回類型  
  **nvarchar (128** **)**  
@@ -99,9 +99,9 @@ Index Column 1      Index Column 2
 SalesOrderID        SalesOrderDetailID  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

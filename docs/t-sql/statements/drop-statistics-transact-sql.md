@@ -1,5 +1,5 @@
 ---
-title: "卸除統計資料 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/22/2016
 ms.prod: sql-non-specified
@@ -60,18 +60,18 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *資料表* | *檢視*  
- 這是應該卸除統計資料之目標資料表或索引檢視的名稱。 資料表和檢視表名稱必須遵守的規則[資料庫識別項](../../relational-databases/databases/database-identifiers.md)。 資料表或檢視擁有者名稱的指定是選擇性的。  
+ *table* | *view*  
+ 這是應該卸除統計資料之目標資料表或索引檢視的名稱。 資料表和檢視名稱必須符合[資料庫識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 資料表或檢視擁有者名稱的指定是選擇性的。  
   
  *statistics_name*  
  這是要卸除的統計資料群組名稱。 統計資料名稱必須符合識別碼的規則。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當您卸除統計資料時，請小心。 執行這個動作，可能會影響查詢最佳化工具所選擇的執行計畫。  
   
  索引的統計資料無法利用 DROP STATISTICS 來卸除。 只要索引存在，就會保留統計資料。  
   
- 如需有關顯示統計資料的詳細資訊，請參閱[DBCC SHOW_STATISTICS &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+ 如需顯示統計資料的詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要資料表或檢視表的 ALTER 權限。  
@@ -96,10 +96,10 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-dropping-statistics-from-a-table"></a>B. 從資料表卸除統計資料  
- 下列範例卸除`CustomerStats1`從資料表的統計資料`Customer`。  
+ 下列範例會從資料表 `Customer` 卸除 `CustomerStats1` 統計資料。  
   
 ```  
 DROP STATISTICS Customer.CustomerStats1;  
@@ -107,15 +107,15 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [sys.stats_columns &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sp_autostats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  

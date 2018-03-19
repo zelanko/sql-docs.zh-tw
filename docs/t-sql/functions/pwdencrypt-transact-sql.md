@@ -1,5 +1,5 @@
 ---
-title: "PWDENCRYPT (TRANSACT-SQL) |Microsoft 文件"
+title: PWDENCRYPT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 
   傳回輸入值的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密碼雜湊，此輸入值使用目前版本的密碼雜湊演算法。  
   
- PWDENCRYPT 是比較舊的函數，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中可能不支援。 使用[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)改為。 HASHBYTES 提供更多雜湊演算法。  
+ PWDENCRYPT 是比較舊的函數，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中可能不支援。 請改為使用 [HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)。 HASHBYTES 提供更多雜湊演算法。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +48,8 @@ PWDENCRYPT ( 'password' )
 ```  
   
 ## <a name="arguments"></a>引數  
- *密碼*  
- 這是要加密的密碼。 *密碼*是**sysname**。  
+ *password*  
+ 這是要加密的密碼。 *password* 為 **sysname**。  
   
 ## <a name="return-types"></a>傳回類型  
  **varbinary(128)**  
@@ -57,8 +57,8 @@ PWDENCRYPT ( 'password' )
 ## <a name="permissions"></a>Permissions  
  PWDENCRYPT 可以公開使用。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [PWDCOMPARE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
+ [PWDCOMPARE &#40;Transact-SQL&#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
   
   

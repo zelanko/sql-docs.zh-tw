@@ -1,5 +1,5 @@
 ---
-title: "SUM (TRANSACT-SQL) |Microsoft 文件"
+title: SUM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -68,13 +68,13 @@ SUM ( [ ALL | DISTINCT ] expression )
  指定 SUM 傳回唯一值的總和。  
   
  *expression*  
- 常數、資料行或函數，或任何算術、位元和字串運算子的組合。 *運算式*是精確數值或相近數值資料類型類別目錄運算式除外**元**資料型別。 不允許彙總函式和子查詢。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 常數、資料行或函數，或任何算術、位元和字串運算子的組合。 *expression* 為精確數值或近似數值資料類型類別的運算式，但是 **bit** 資料類型除外。 不允許彙總函式和子查詢。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 透過**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*將分割成資料分割要套用函式的 FROM 子句所產生的結果集。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause*決定執行作業的邏輯順序。 *order_by_clause*需要。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* 會將 FROM 子句產生的結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回的所有總和*運算式*以最精確的值*運算式*資料型別。  
+ 以最精確的 *expression* 資料類型傳回所有 *expression* 值的總和。  
   
 |運算式結果|傳回類型|  
 |-----------------------|-----------------|  
@@ -82,11 +82,11 @@ SUM ( [ ALL | DISTINCT ] expression )
 |**smallint**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**十進位**類別目錄 （p，s）|**decimal (38，s)**|  
-|**money**和**smallmoney**類別|**money**|  
-|**float**和**真實**類別|**float**|  
+|**decimal** 類別 (p, s)|**decimal(38, s)**|  
+|**money** 和 **smallmoney** 類別|**money**|  
+|**float** 和 **real** 類別|**float**|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  SUM 未搭配 OVER 和 ORDER BY 子句使用時，是具決定性函數。 使用 OVER 和 ORDER BY 子句指定時，則不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="examples"></a>範例  
@@ -189,10 +189,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-a-simple-sum-example"></a>C. 簡單的加總範例  
- 下列範例會傳回每項產品銷售在 2003年年的總數。  
+### <a name="c-a-simple-sum-example"></a>C. 簡單的 SUM 範例  
+ 下列範例會傳回 2003 年每個產品銷售的總數。  
   
 ```  
 -- Uses AdventureWorks  
@@ -217,7 +217,7 @@ ProductKey  TotalPerProduct
 225          7956.1500
  ```
   
-### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. 計算具有一個以上的資料行群組總計  
+### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. 計算多個資料行的群組總計  
  下列範例會針對 `ListPrice` 資料表中所列出的每個顏色，來計算 `StandardCost` 和 `Product` 的總和。  
   
 ```  
@@ -242,9 +242,9 @@ Multi          880.7468      526.4095
 NA            3162.3564     1360.6185
  ```  
   
-## <a name="see-also"></a>請參閱＜  
- [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

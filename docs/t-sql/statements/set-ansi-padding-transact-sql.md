@@ -1,5 +1,5 @@
 ---
-title: "SET ANSI_PADDING (TRANSACT-SQL) |Microsoft 文件"
+title: SET ANSI_PADDING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -58,29 +58,29 @@ SET ANSI_PADDING { ON | OFF }
 SET ANSI_PADDING ON
 ```
 
-## <a name="remarks"></a>備註  
- 定義之資料行**char**， **varchar**，**二進位**，和**varbinary**資料型別有定義的大小。  
+## <a name="remarks"></a>Remarks  
+ 以 **char**、**varchar**、**binary** 和 **varbinary** 資料類型定義的資料行具有定義的大小。  
   
  這項設定只會影響新資料行的定義。 建立好資料行之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據建立資料行之時的設定來儲存值。 這項設定後來的變更並不會影響現有的資料行。  
   
 > [!NOTE]  
 >  我們建議您一律將 ANSI_PADDING 設為 ON。  
   
- 下表顯示 SET ANSI_PADDING 設定作用的資料行中插入值時**char**， **varchar**，**二進位**，和**varbinary**資料型別。  
+ 下表顯示當值插入含 **char**、**varchar**、**binary** 和 **varbinary** 等資料類型的資料行時，SET ANSI_PADDING 設定所造成的影響。  
   
-|設定|char (*n*) 不為 NULL 或 binary (*n*) NOT NULL|char (*n*) NULL 或 binary (*n*) NULL|varchar (*n*) 或 varbinary (*n*)|  
+|設定|char(*n*) NOT NULL 或 binary(*n*) NOT NULL|char(*n*) NULL 或 binary(*n*) NULL|varchar(*n*) 或 varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|原始值填補 (使用尾端空格**char**資料行和使用尾端的零**二進位**資料行) 的資料行長度。|遵循相同規則**char (***n***)**或**二進位 (**  *n* **)** SET ANSI_PADDING 是 ON 時，不是 NULL。|中插入的字元值尾端空格**varchar**資料行不會修剪。 之插入的二進位值尾端零**varbinary**資料行不會修剪。 值不會填補到資料行的長度。|  
-|OFF|原始值填補 (使用尾端空格**char**資料行和使用尾端的零**二進位**資料行) 的資料行長度。|遵循相同規則**varchar**或**varbinary**當 SET ANSI_PADDING 是 OFF。|中插入的字元值尾端空格**varchar**資料行，則會修剪。 之插入的二進位值尾端零**varbinary**資料行，則會修剪。|  
+|ON|將原始值填補到資料行的長度 (**char** 資料行使用尾端空格，**binary** 資料行使用尾端零)。|當 SET ANSI_PADDING 是 ON 時，請遵照 **char(***n***)** 或 **binary(***n***)** NOT NULL 的相同規則。|不修剪插入 **varchar** 資料行之字元值的尾端空格。 不修剪插入 **varbinary** 資料行之二進位值的尾端零。 值不會填補到資料行的長度。|  
+|OFF|將原始值填補到資料行的長度 (**char** 資料行使用尾端空格，**binary** 資料行使用尾端零)。|當 SET ANSI_PADDING 是 OFF 時，請遵照 **varchar** 或 **varbinary** 的相同規則。|修剪插入 **varchar** 資料行之字元值的尾端空格。 修剪插入 **varbinary** 資料行之二進位值的尾端零。|  
   
 > [!NOTE]  
->  當填補時， **char**資料行會填補空格，和**二進位**資料行會填補零。 當修剪時， **char**資料行具有修剪尾端空格，和**二進位**資料行具有修剪尾端零。  
+>  當填補時，**char** 資料行會填補空格，**binary** 資料行會填補零。 當修剪時，**char** 資料行會修剪尾端空格，**binary** 資料行會修剪尾端零。  
   
- 當您建立或變更計算資料行索引或索引檢視表時，SET ANSI_PADDING 也必須是 ON。 計算資料行上使用索引檢視表和索引的必要 SET 選項設定的相關資訊，請參閱"考量當您使用 SET 陳述式 」，在[SET 陳述式 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+ 當您建立或變更計算資料行索引或索引檢視表時，SET ANSI_PADDING 也必須是 ON。 如需使用索引檢視表和計算資料行索引時所需之 SET 選項設定的詳細資訊，請參閱 [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) 中的＜使用 SET 陳述式時的考量＞一節。  
   
- SET ANSI_PADDING 的預設值是 ON。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都會自動將 ANSI_PADDING 設為 ON，連接時。 在連接之前，您可以在應用程式的 ODBC 資料來源、ODBC 連接屬性或 OLE DB 連接屬性集中設定這個項目。 起始於 DB-Library 應用程式的連接之 SET ANSI_PADDING 預設值為 OFF。  
+ SET ANSI_PADDING 的預設值是 ON。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者在連接時，都會自動將 ANSI_PADDING 設為 ON。 在連接之前，您可以在應用程式的 ODBC 資料來源、ODBC 連接屬性或 OLE DB 連接屬性集中設定這個項目。 起始於 DB-Library 應用程式的連接之 SET ANSI_PADDING 預設值為 OFF。  
   
- SET ANSI_PADDING 設定不會影響**nchar**， **nvarchar**， **ntext**，**文字**，**映像**， **varbinary （max)**， **varchar （max)**，和**nvarchar （max)**資料型別。 它們一律會顯示 SET ANSI_PADDING ON 行為。 這表示不會修剪尾端空格和零。  
+ SET ANSI_PADDING 設定不會影響 **nchar**、**nvarchar**、**ntext**、**text**、**image**、**varbinary(max)**、**varchar(max)** 和 **nvarchar(max)** 資料型別。 它們一律會顯示 SET ANSI_PADDING ON 行為。 這表示不會修剪尾端空格和零。  
   
  當 SET ANSI_DEFAULTS 是 ON 時，會啟用 SET ANSI_PADDING。  
   
@@ -142,11 +142,11 @@ DROP TABLE t1;
 DROP TABLE t2;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   

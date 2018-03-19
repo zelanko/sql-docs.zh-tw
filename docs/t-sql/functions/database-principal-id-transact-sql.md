@@ -1,5 +1,5 @@
 ---
-title: "DATABASE_PRINCIPAL_ID (TRANSACT-SQL) |Microsoft 文件"
+title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-包傳回目前資料庫中的主體識別碼。 如需有關主體的詳細資訊，請參閱[主體 &#40; Database engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。
+包傳回目前資料庫中的主體識別碼。 如需主體的詳細資訊，請參閱[主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,14 +49,14 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>引數  
 *principal_name*  
-這是類型的運算式**sysname**代表主體之。  
-當*principal_name*已省略，則會傳回目前使用者的識別碼。 它必須用括號括住。
+為代表主體，類型為 **sysname** 的運算式。  
+若省略 *principal_name*，則會傳回目前使用者的識別碼。 它必須用括號括住。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 **int**  
 當資料庫主體不存在時為 NULL。
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 DATABASE_PRINCIPAL_ID 可以用在選取清單、WHERE 子句或運算式所允許的任何位置。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="examples"></a>範例  

@@ -1,5 +1,5 @@
 ---
-title: "接收 (TRANSACT-SQL) |Microsoft 文件"
+title: RECEIVE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/21/2017
  WAITFOR  
  指定如果目前沒有訊息，RECEIVE 陳述式便等待訊息到達佇列。  
   
- TOP (  *n*  )  
+ TOP( *n* )  
  指定要傳回的最大訊息數目。 如果未指定這個子句，便會傳回符合陳述式準則的所有訊息。  
   
  \*  
@@ -93,55 +93,55 @@ ms.lasthandoff: 11/21/2017
  指定包含要擷取之訊息的佇列。  
   
  *database_name*  
- 包含接收訊息之來源佇列的資料庫名稱。 若未*資料庫名稱*提供，則預設為目前的資料庫。  
+ 包含接收訊息之來源佇列的資料庫名稱。 若未提供 *database_name*，則預設為目前的資料庫。  
   
  *schema_name*  
- 擁有接收訊息之來源佇列的結構描述名稱。 若未*結構描述名稱*提供，則預設為目前使用者的預設結構描述。  
+ 擁有接收訊息之來源佇列的結構描述名稱。 若未提供 *schema_name*，則預設為目前使用者的預設結構描述。  
   
  *queue_name*  
  接收訊息之來源佇列的名稱。  
   
- 到*table_variable*  
+ INTO *table_variable*  
  指定 RECEIVE 要將訊息放入其中的資料表變數。 此資料表變數的資料行數目必須與訊息中的資料行數目相同。 此資料表變數中每一個資料行的資料類型都必須隱含地轉換成訊息中對應資料行的資料類型。 如果未指定 INTO，訊息會當做結果集來傳回。  
   
  WHERE  
  指定所接收之訊息的交談或交談群組。 如果忽略這個值，便從下一個可用的交談群組傳回訊息。  
   
  conversation_handle = *conversation_handle*  
- 指定所接收之訊息的交談。 *交談控制代碼*提供必須是**uniqueidentifier**，或可以轉換為型別**uniqueidentifier**。  
+ 指定所接收之訊息的交談。 您提供的「交談控制代碼」必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
   
  conversation_group_id = *conversation_group_id*  
- 指定接收的訊息之交談群組。 *交談群組識別碼是*提供必須是**uniqueidentifier**，或可轉換為類型**uniqueidentifier**。  
+ 指定接收的訊息之交談群組。 您提供的「交談群組識別碼」必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
   
- 逾時*逾時*  
- 指定陳述式等候訊息的時間 (以毫秒為單位)。 這個子句只適用於 WAITFOR 子句。 如果未指定這個子句，或逾時為-**1**，等候時間是無限制。 如果等候時間逾時，RECEIVE 會傳回空的結果集。  
+ TIMEOUT *timeout*  
+ 指定陳述式等候訊息的時間 (以毫秒為單位)。 這個子句只適用於 WAITFOR 子句。 如果未指定這個子句，或逾時為 -**1**，等候時間便沒有限制。 如果等候時間逾時，RECEIVE 會傳回空的結果集。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  如果 RECEIVE 陳述式不是批次或預存程序中的第一個陳述式，就必須利用分號 (;) 來終止前一個陳述式。  
   
- RECEIVE 陳述式會從佇列中讀取訊息並傳回結果集。 結果集是由零或多個資料列組成，每個資料列都包含一則訊息。 如果未使用 INTO 子句，和*column_specifier*不會指派值給本機變數，陳述式結果集傳回給呼叫端程式。  
+ RECEIVE 陳述式會從佇列中讀取訊息並傳回結果集。 結果集是由零或多個資料列組成，每個資料列都包含一則訊息。 如果未使用 INTO 子句，且 *column_specifier* 未指派本機變數值，陳述式會將結果集傳回給發出呼叫的程式。  
   
- RECEIVE 陳述式傳回的訊息可以具有不同的訊息類型。 應用程式可以使用**message_type_name** ，該程式碼的每個訊息路由傳送的資料行處理相關聯的訊息類型。 訊息類型的類別有兩種：  
+ RECEIVE 陳述式傳回的訊息可以具有不同的訊息類型。 應用程式可以使用 **message_type_name** 資料行，將每一則訊息路由傳送給處理相關訊息類型的程式碼。 訊息類型的類別有兩種：  
   
 -   之前使用 CREATE MESSAGE TYPE 陳述式所建立之應用程式定義的訊息類型。 交談中允許之應用程式定義的訊息類型集合是由針對交談指定的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約所定義。  
   
 -   傳回狀態或錯誤資訊的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 系統訊息。  
   
- 除非佇列指定保留訊息，否則，RECEIVE 陳述式會從佇列中移除接收的訊息。 當佇列的保留設定是 ON，RECEIVE 陳述式會更新**狀態**欄**0** ，並將訊息留在佇列中。 當包含 RECEIVE 陳述式的交易回復時，也會回復交易內的所有佇列變更，且會將訊息傳回給佇列。  
+ 除非佇列指定保留訊息，否則，RECEIVE 陳述式會從佇列中移除接收的訊息。 當佇列的 RETENTION 設定是 ON 時，RECEIVE 陳述式會將 **status** 資料行更新為 **0**，並將訊息保留在佇列中。 當包含 RECEIVE 陳述式的交易回復時，也會回復交易內的所有佇列變更，且會將訊息傳回給佇列。  
   
- RECEIVE 陳述式傳回的所有訊息都屬於相同的交談群組。 RECEIVE 陳述式會鎖定傳回訊息的交談群組，直到包含陳述式的交易完成為止。 RECEIVE 陳述式傳回的訊息**狀態**的**1。** RECEIVE 陳述式傳回的結果集會隱含地排序：  
+ RECEIVE 陳述式傳回的所有訊息都屬於相同的交談群組。 RECEIVE 陳述式會鎖定傳回訊息的交談群組，直到包含陳述式的交易完成為止。 RECEIVE 陳述式會傳回 **status** 為 **1** 的訊息。 RECEIVE 陳述式傳回的結果集會隱含地排序：  
   
 -   如果多個交談中的訊息符合 WHERE 子句條件，則 RECEIVE 陳述式會傳回一個交談中的所有訊息，然後再傳回其他任何交談的訊息。 交談會依照遞減優先權的順序來處理。  
   
--   對於給定的交談，RECEIVE 陳述式會傳回訊息以遞增**message_sequence_number**順序。  
+-   對於指定的交談，RECEIVE 陳述式會以遞增 **message_sequence_number** 的順序傳回訊息。  
   
- RECEIVE 陳述式的 WHERE 子句只能包含一個使用的搜尋條件**conversation_handle**或**conversation_group_id**。 搜尋條件不能包含佇列中的一或多個其他資料行。 **Conversation_handle**或**conversation_group_id**不能是運算式。 傳回的訊息集合取決於 WHERE 子句中所指定的條件：  
+ RECEIVE 陳述式的 WHERE 子句只能包含一個使用 **conversation_handle** 或 **conversation_group_id** 的搜尋條件。 搜尋條件不能包含佇列中的一或多個其他資料行。 **conversation_handle** 或 **conversation_group_id** 不能是運算式。 傳回的訊息集合取決於 WHERE 子句中所指定的條件：  
   
--   如果**conversation_handle**指定時，RECEIVE 會傳回指定佇列中可用的交談中的所有訊息。  
+-   如果指定 **conversation_handle**，則 RECEIVE 會傳回佇列中可用之指定交談的所有訊息。  
   
--   如果**conversation_group_id**指定時，RECEIVE 會傳回從指定的交談群組的成員的任何交談的佇列中可用的所有訊息。  
+-   如果指定 **conversation_group_id**，則 RECEIVE 傳回佇列中屬於指定交談群組之任何交談的所有可用訊息。  
   
 -   如果沒有 WHERE 子句，RECEIVE 會判斷哪一個交談群組：  
   
@@ -166,22 +166,22 @@ ms.lasthandoff: 11/21/2017
 ## <a name="queue-columns"></a>佇列資料行  
  下表列出佇列中的資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|訊息狀態。 對於 RECEIVE 命令所傳回的訊息，狀態永遠是**0**。 佇列中的訊息可能會包含下列其中一個值：<br /><br /> **0**= 準備好**1**= 接收的訊息**2**= 未完成**3**= 已保留傳送訊息|  
-|**優先順序**|**tinyint**|套用到訊息的交談優先權等級。|  
+|**status**|**tinyint**|訊息狀態。 針對 RECEIVE 命令傳回的訊息，狀態一律是 **0**。 佇列中的訊息可能會包含下列其中一個值：<br /><br /> **0**=備妥**1**=接收的訊息**2**=尚未完成**3**=保留的傳送訊息|  
+|**priority**|**tinyint**|套用到訊息的交談優先權等級。|  
 |**queuing_order**|**bigint**|佇列中的訊息順序號碼。|  
 |**conversation_group_id**|**uniqueidentifier**|這則訊息所屬的交談群組識別碼。|  
 |**conversation_handle**|**uniqueidentifier**|這則訊息所屬的交談之控制代碼。|  
 |**message_sequence_number**|**bigint**|訊息在交談中的序號。|  
-|**服務名稱**|**nvarchar(512)**|交談的目標服務名稱。|  
-|**service_contract_id**|**int**|交談目標服務的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件識別碼。|  
+|**service_name**|**nvarchar(512)**|交談的目標服務名稱。|  
+|**service_id**|**int**|交談目標服務的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件識別碼。|  
 |**service_contract_name**|**nvarchar(256)**|交談遵照的合約名稱。|  
 |**service_contract_id**|**int**|交談遵照的合約之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件識別碼。|  
 |**message_type_name**|**nvarchar(256)**|描述訊息格式的訊息類型名稱。 訊息可以是應用程式訊息類型或 Broker 系統訊息。|  
 |**message_type_id**|**int**|描述訊息的訊息類型之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件識別碼。|  
-|**驗證**|**nchar(2)**|用於訊息的驗證。<br /><br /> **E**= 空**N**= 無**X**= XML|  
-|**message_body**|**varbinary （max)**|訊息內容。|  
+|**validation**|**nchar(2)**|用於訊息的驗證。<br /><br /> **E**=空白**N**=無**X**=XML|  
+|**message_body**|**varbinary(MAX)**|訊息內容。|  
   
 ## <a name="permissions"></a>Permissions  
  若要接收訊息，目前的使用者必須有佇列的 RECEIVE 權限。  
@@ -338,15 +338,15 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [BEGIN DIALOG CONVERSATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [BEGIN CONVERSATION TIMER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [END CONVERSATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [建立合約 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [建立訊息類型 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [傳送 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
- [卸除佇列 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "授與可用性群組的權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "授與可用性群組權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="grant-availability-group-permissions-transact-sql"></a>授與可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  授與 Alwayson 可用性群組的權限。  
+  授與 Always On 可用性群組的權限。  
   
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -55,13 +55,13 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以授與的可用性群組權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 可用性群組上**::***availability_group_name*  
- 指定要授與其權限的可用性群組。 範圍限定詞 (**::**) 是必要。  
+ ON AVAILABILITY GROUP **::***availability_group_name*  
+ 指定要授與其權限的可用性群組。 範圍限定詞 (**::**) 是必要項。  
   
- 若要\<server_principal >  
+ TO \<server_principal>  
  指定要授與其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  AS *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，執行這項查詢的主體會從這項登入衍生其權限來授與權限。  
   
-## <a name="remarks"></a>備註  
- 只有在目前的資料庫時，才可授與伺服器範圍的權限**主要**。  
+## <a name="remarks"></a>Remarks  
+ 只有在目前資料庫是 **master** 的情況下，才能夠授與伺服器範圍的權限。  
   
- 可用性群組的相關資訊會顯示在[sys.availability_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)目錄檢視。 伺服器權限的資訊會顯示在[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目錄檢視，以及有關伺服器主體的資訊會顯示在[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目錄檢視。  
+ 可用性群組的相關資訊顯示於 [sys.availability_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到有關伺服器權限的資訊，且可以在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
   
  可用性群組是伺服器層級的安全性實體。 下表所列的是可以授與之最特定且最有限的可用性群組權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
@@ -97,7 +97,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
- 如需的所有圖表[!INCLUDE[ssDE](../../includes/ssde-md.md)]權限，請參閱[Database Engine 的權限海報](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 如需所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限的圖表，請參閱 [Database Engine Permission Poster](http://go.microsoft.com/fwlink/?LinkId=229142) (資料庫引擎權限海報)。  
   
 ## <a name="permissions"></a>Permissions  
  需要可用性群組的 CONTROL 權限或伺服器的 ALTER ANY AVAILABILTIY GROUP 權限。  
@@ -124,7 +124,7 @@ GO
 ```  
   
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>C. 授與可用性群組的 CONTROL 權限  
- 下列範例會將可用性群組 `CONTROL` 的 `MyAg` 權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `PKomosinski`。 CONTROL 可完全控制可用性群組的登入，即使不是可用性群組的擁有者亦然。 若要變更擁有權，請參閱[ALTER AUTHORIZATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ 下列範例會將可用性群組 `CONTROL` 的 `MyAg` 權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `PKomosinski`。 CONTROL 可完全控制可用性群組的登入，即使不是可用性群組的擁有者亦然。 若要變更擁有權，請參閱 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
 ```  
 USE master;  
@@ -132,12 +132,12 @@ GRANT CONTROL ON AVAILABILITY GROUP::MyAg TO PKomosinski;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [撤銷可用性群組的權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)   
- [拒絕可用性群組的權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [REVOKE 可用性群組權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)   
+ [DENY 可用性群組權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [sys.availability_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
- [AlwaysOn 可用性群組目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md) [權限 &#40; Database engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性群組目錄檢視&#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md) [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

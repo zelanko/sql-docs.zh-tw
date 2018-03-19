@@ -1,5 +1,5 @@
 ---
-title: "SET DATEFIRST (TRANSACT-SQL) |Microsoft 文件"
+title: SET DATEFIRST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   將一週的第一天設為 1-7 其中一個數字。  
   
- 如需所有[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和時間資料型別和函式，請參閱[日期和時間資料型別和函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函數的概觀，請參閱 [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) (日期和時間資料類型與函數 &#40;Transact-SQL&#41;)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,10 +62,10 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>引數  
- *數字* | **@***number_var*  
+ *number* | **@***number_var*  
  這是一個整數，代表一週的第一天。 它可以是下列值之一。  
   
-|值|每週的第一天是|  
+|ReplTest1|每週的第一天是|  
 |-----------|------------------------------|  
 |**1**|星期一|  
 |**2**|星期二|  
@@ -73,10 +73,10 @@ SET DATEFIRST 7 ;
 |**4**|星期四|  
 |**5**|星期五|  
 |**6**|星期六|  
-|**7** （預設值，美國English)|星期日|  
+|**7** (預設，U.S.English)|星期日|  
   
-## <a name="remarks"></a>備註  
- 若要查看 SET DATEFIRST 的目前設定，請使用[@@DATEFIRST ](../../t-sql/functions/datefirst-transact-sql.md)函式。  
+## <a name="remarks"></a>Remarks  
+ 若要查看 SET DATEFIRST 的目前設定，請使用 [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md) 函數。  
   
  SET DATEFIRST 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
@@ -108,7 +108,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

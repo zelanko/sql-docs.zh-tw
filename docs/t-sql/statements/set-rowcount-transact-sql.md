@@ -1,5 +1,5 @@
 ---
-title: "SET ROWCOUNT (TRANSACT-SQL) |Microsoft 文件"
+title: SET ROWCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>引數  
- *數字*| @*number_var*  
+ *number* | @*number_var*  
  這是停止特定查詢之前所要處理的資料列數，這是一個整數。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  使用 SET ROWCOUNT 不會影響將來 SQL Server 版本中的 DELETE、INSERT 和 UPDATE 陳述式。 請避免在新的開發工作中使用 SET ROWCOUNT 搭配 DELETE、INSERT 和 UPDATE 陳述式，並計畫修改目前正在使用它的應用程式。 如需類似的行為，請使用 TOP 語法。 如需詳細資訊，請參閱[TOP &#40;TRANSACT-SQL &#41;](../../t-sql/queries/top-transact-sql.md).  
+>  使用 SET ROWCOUNT 不會影響將來 SQL Server 版本中的 DELETE、INSERT 和 UPDATE 陳述式。 請避免在新的開發工作中使用 SET ROWCOUNT 搭配 DELETE、INSERT 和 UPDATE 陳述式，並計畫修改目前正在使用它的應用程式。 如需類似的行為，請使用 TOP 語法。 如需詳細資訊，請參閱 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)。  
   
  若要將這個選項設為關閉，以便傳回所有資料列，請指定 SET ROWCOUNT 0。  
   
@@ -107,8 +107,8 @@ GO
 (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- SET ROWCOUNT 會在指定的資料列數之後停止處理。 在下列範例中，請注意，超過 20 個資料列符合條件的準則`AccountType = 'Assets'`。 不過在套用 SET ROWCOUNT 之後，您會看出並未傳回所有資料列。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ SET ROWCOUNT 會在指定的資料列數之後停止處理。 在下列範例中，請注意，有超過 20 個資料列符合 `AccountType = 'Assets'` 的準則。 不過在套用 SET ROWCOUNT 之後，您會看出並未傳回所有資料列。  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,7 +118,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
- 若要傳回所有資料列，將資料列計數為 0。  
+ 若要傳回所有資料列，請將 ROWCOUNT 設為 0。  
   
 ```  
 -- Uses AdventureWorks  
@@ -128,7 +128,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

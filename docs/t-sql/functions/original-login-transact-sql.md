@@ -1,5 +1,5 @@
 ---
-title: "ORIGINAL_LOGIN (TRANSACT-SQL) |Microsoft 文件"
+title: ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,10 +52,10 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>傳回類型  
  **sysname**  
   
-## <a name="remarks"></a>備註  
- 這個函數在稽核原始連接內容的識別時很有用。 而這類函數[SESSION_USER](../../t-sql/functions/session-user-transact-sql.md)和[CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md)傳回目前的執行內容，ORIGINAL_LOGIN 會傳回第一次連接到的執行個體的登入身分識別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]於該工作階段。  
+## <a name="remarks"></a>Remarks  
+ 這個函數在稽核原始連接內容的識別時很有用。 [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) 和 [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) 這類函式會傳回目前的執行內容，ORIGINAL_LOGIN 則會傳回在該工作階段中，最先連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的登入識別。  
   
- 會傳回 NULL 上[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上傳回 NULL。  
   
 ## <a name="examples"></a>範例  
  下列範例會將目前工作階段的執行內容從陳述式的呼叫端切換到 `login1`。 `SUSER_SNAME` 和 `ORIGINAL_LOGIN` 函數用來傳回目前工作階段使用者 (內容切換後的使用者)，以及原始登入帳戶。  
@@ -85,8 +85,8 @@ DROP USER user1;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [執行 AS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [還原 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
   
   

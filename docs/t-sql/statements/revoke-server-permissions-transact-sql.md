@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 伺服器權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "REVOKE 伺服器權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,12 +62,12 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以授與的伺服器權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- {至 |FROM} \<grantee_principal > 指定為要撤銷權限的主體。  
+ { TO | FROM } \<grantee_principal> 指定要撤銷其權限的主體。  
   
- AS \<grantor_principal > 指定要從中執行此查詢的主體衍生權限來撤銷權限的主體。  
+ AS \<grantor_principal> 指定主體，以讓執行這項查詢的主體可從該主體衍生撤銷權限的權力。  
   
  GRANT OPTION FOR  
  指出會撤銷對其他主體授與指定權限的權限。 不會撤銷權限本身。  
@@ -99,14 +99,14 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  指定使用者定義伺服器角色。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  只有在目前資料庫是 master 的情況下，才能夠撤銷伺服器範圍的權限。  
   
  REVOKE 會同時移除 GRANT 和 DENY 權限。  
   
  您可以利用 REVOKE GRANT OPTION FOR 撤銷重新授與指定權限的權限。 如果主體有授與該權限的權限，則會撤銷授與該權限的權限，且不會撤銷該權限本身。 但是，如果主體有不含 GRANT 選項的指定權限，則會撤銷權限本身。  
   
- 在可以檢視有關伺服器權限的資訊[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目錄檢視，以及有關伺服器主體的資訊可以在檢視[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目錄檢視。 伺服器角色的成員資格的相關資訊可以在中檢視[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)目錄檢視。  
+ 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中檢視伺服器權限的資訊，而在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中檢視伺服器主體的資訊。 您可以在 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目錄檢視中檢視伺服器角色成員資格的資訊。  
   
  伺服器是最高層級的權限階層。 下表所列的是可以撤銷之最特定且最有限的伺服器權限。  
   
@@ -172,14 +172,14 @@ GO
   
  該登入仍有 CONNECT SQL 權限，但它無法再對其他主體授與該權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [DENY 伺服器權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [REVOKE 伺服器權限 (TRANSACT-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [DENY 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE 伺服器權限 (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

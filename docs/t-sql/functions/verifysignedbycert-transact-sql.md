@@ -1,5 +1,5 @@
 ---
-title: "VERIFYSIGNEDBYCERT (TRANSACT-SQL) |Microsoft 文件"
+title: VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,21 +53,21 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
 ## <a name="arguments"></a>引數  
  *Cert_ID*  
- 這是資料庫中憑證的識別碼。 *Cert_ID*是**int**。  
+ 這是資料庫中憑證的識別碼。 *Cert_ID* 為 **int**。  
   
  *signed_data*  
- 這類型的變數**nvarchar**， **char**， **varchar**，或**nchar**包含已經使用憑證簽署的資料。  
+ 為 **nvarchar**、**char**、**varchar** 或 **nchar** 類型的變數，其中包含已經使用憑證加以簽署的資料。  
   
- *簽章*  
- 這是附加在已簽署資料中的簽章。 *簽章*是**varbinary**。  
+ *signature*  
+ 這是附加在已簽署資料中的簽章。 *signature* 為 **varbinary**。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
  如果已簽署的資料不變，則傳回 1，否則傳回 0。  
   
-## <a name="remarks"></a>備註  
- **VerifySignedBycert**使用指定的憑證的公開金鑰解密資料的簽章，並比較解密的值與新計算的 MD5 雜湊的資料。 如果值相符，簽章將確認為有效。  
+## <a name="remarks"></a>Remarks  
+ **VerifySignedBycert** 會使用指定憑證的公開金鑰解密資料的簽章，並比較解密值與新計算的資料 MD5 雜湊。 如果值相符，簽章將確認為有效。  
   
 ## <a name="permissions"></a>Permissions  
  需要憑證的 VIEW DEFINITION 權限。  
@@ -96,12 +96,12 @@ AND Description = N'data signed by certificate ''Shipping04''';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [CERT_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
- [SIGNBYCERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/signbycert-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
+ [SIGNBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/signbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [卸除憑證 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

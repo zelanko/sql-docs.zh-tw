@@ -1,5 +1,5 @@
 ---
-title: "GETANSINULL (TRANSACT-SQL) |Microsoft 文件"
+title: GETANSINULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ GETANSINULL ( [ 'database' ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- '*資料庫*'  
- 這是傳回的 Null 屬性資訊所針對的資料庫名稱。 *資料庫*是**char**或**nchar**。 如果**char**，*資料庫*隱含地轉換成**nchar**。  
+ '*database*'  
+ 這是傳回的 Null 屬性資訊所針對的資料庫名稱。 *database* 可為 **char** 或 **nchar**。 若為 **char**，則 *database* 會隱含轉換成 **nchar**。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當指定之資料庫的 Null 屬性接受 Null 值，且未明確定義資料行或資料類型 Null 屬性時，GETANSINULL 會傳回 1。 這是 ANSI NULL 預設值。  
   
  若要啟用 ANSI NULL 預設行為，則必須符合下列條件之一：  
@@ -85,7 +85,7 @@ GO
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>請參閱＜  
- [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [系統函式 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

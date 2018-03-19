@@ -1,5 +1,5 @@
 ---
-title: "DROP FULLTEXT INDEX (TRANSACT-SQL) |Microsoft 文件"
+title: DROP FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,11 +53,11 @@ DROP FULLTEXT INDEX ON table_name
  *table_name*  
  這是要移除的全文檢索索引所在的資料表或索引檢視的名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在使用 DROP FULLTEXT INDEX 命令之前，您不需要從全文檢索索引中卸除所有資料行。  
   
 ## <a name="permissions"></a>Permissions  
- 使用者必須具有 ALTER 權限的資料表或索引檢視表，或必須屬於**sysadmin**固定伺服器角色或**db_owner**或**db_ddladmin**固定資料庫角色。  
+ 使用者必須具有資料表或索引檢視的 ALTER 權限，或必須是 **sysadmin** 固定伺服器角色的成員，或是 **db_owner** 或 **db_ddladmin** 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會卸除存在於 `JobCandidate` 資料表中的全文檢索索引。  
@@ -69,8 +69,8 @@ DROP FULLTEXT INDEX ON HumanResources.JobCandidate;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.fulltext_indexes &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)  

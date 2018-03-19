@@ -1,5 +1,5 @@
 ---
-title: "群組 (TRANSACT-SQL) |Microsoft 文件"
+title: GROUPING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指出是否彙總 GROUP BY 清單中指定的資料行運算式。 GROUPING 傳回 1 時，表示會在結果集中彙總，傳回 0 則不會。 只有在 選取用於群組\<選取 > 清單，並指定 GROUP BY 時，ORDER BY 子句。  
+  指出是否彙總 GROUP BY 清單中指定的資料行運算式。 GROUPING 傳回 1 時，表示會在結果集中彙總，傳回 0 則不會。 當指定 GROUP BY 時，GROUPING 只能在 SELECT \<select> 清單、HAVING 和 ORDER BY 子句中使用。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ GROUPING ( <column_expression> )
 ```  
   
 ## <a name="arguments"></a>引數  
- \<column_expression >  
- 資料行或運算式中包含資料行[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)子句。  
+ \<column_expression>  
+ 為包含 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句中資料行的資料行或運算式。  
   
 ## <a name="return-types"></a>傳回類型  
  **tinyint**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  GROUPING 是用來區別 ROLLUP、CUBE 或 GROUPING SETS 傳回的 null 值與標準 null 值。 因 ROLLUP、CUBE 或 GROUPING SETS 運算之結果而傳回的 NULL 是 NULL 的特殊使用。 這用來作為結果集中的資料行預留位置，代表全部。  
   
 ## <a name="examples"></a>範例  
@@ -70,7 +70,7 @@ GROUP BY SalesQuota WITH ROLLUP;
 GO  
 ```  
   
- 結果集在 `SalesQuota` 之下顯示兩個 Null 值。 第一個 `NULL` 代表資料表中這個資料行的 Null 值群組。 第二個 `NULL` 位在 ROLLUP 作業所加入的摘要資料列中。 摘要的資料列會顯示`TotalSalesYTD`所有金額`SalesQuota`分組，並指出`1`中`Grouping`資料行。  
+ 結果集在 `SalesQuota` 之下顯示兩個 Null 值。 第一個 `NULL` 代表資料表中這個資料行的 Null 值群組。 第二個 `NULL` 位在 ROLLUP 作業所加入的摘要資料列中。 摘要資料列會顯示所有 `SalesQuota` 群組的 `TotalSalesYTD` 數量，由 `Grouping` 資料行中的 `1` 來表示。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -85,8 +85,8 @@ NULL           44294026.1344         1
 (4 row(s) affected)
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [GROUPING_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/grouping-id-transact-sql.md)   
- [GROUP BY &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [GROUPING_ID &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "LOG10 (TRANSACT-SQL) |Microsoft 文件"
+title: LOG10 (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回指定的基底 10 對數**float**運算式。  
+  傳回指定 **float** 運算式之以 10 為基底的對數。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ LOG10 ( float_expression )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)型別的**float**或可以隱含地轉換成的型別**float**。  
+ 為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
  **float**  
   
-## <a name="remarks"></a>備註  
- LOG10 和 POWER 函數是彼此反向關聯。 例如，10 ^ LOG10 (*n*) =  *n* 。  
+## <a name="remarks"></a>Remarks  
+ LOG10 和 POWER 函數是彼此反向關聯。 例如，10 ^ LOG10(*n*) = *n*。  
   
 ## <a name="examples"></a>範例  
   
@@ -93,10 +93,10 @@ SELECT POWER (10, LOG10(5));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C： 計算值的基底 10 對數。  
- 下列範例會計算`LOG10`指定的值。  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C：針對某個值，計算以 10 為基底的對數。  
+ 下列範例會計算指定值的 `LOG10`。  
   
 ```  
 SELECT LOG10(145.175642);  
@@ -109,10 +109,10 @@ SELECT LOG10(145.175642);
 2.16
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [電源 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/power-transact-sql.md)   
- [記錄檔 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/log-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [POWER &#40;Transact-SQL&#41;](../../t-sql/functions/power-transact-sql.md)   
+ [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)  
   
   
 

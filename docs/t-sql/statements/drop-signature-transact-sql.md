@@ -1,5 +1,5 @@
 ---
-title: "卸除簽章 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,16 +56,16 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *適於*  
+ *module_name*  
  這是預存程序、函數、組件或觸發程序的名稱。  
   
- 憑證*cert_name*  
+ CERTIFICATE *cert_name*  
  這是預存程序、函數、組件、或觸發程序簽署所用的憑證名稱。  
   
- 非對稱金鑰*Asym_key_name*  
+ ASYMMETRIC KEY *Asym_key_name*  
  這是預存程序、函數、組件或觸發程序簽署所用的非對稱金鑰名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  您可以在 sys.crypt_properties 目錄檢視中，看到有關簽章的資訊。  
   
 ## <a name="permissions"></a>Permissions  
@@ -81,8 +81,8 @@ DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.crypt_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [加入簽章 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/add-signature-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [ADD SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/add-signature-transact-sql.md)  
   
   

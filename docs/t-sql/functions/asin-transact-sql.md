@@ -1,5 +1,5 @@
 ---
-title: "ASIN (TRANSACT-SQL) |Microsoft 文件"
+title: ASIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回角度，以弧度為單位，其正弦就是指定**float**運算式。 這也稱為反正弦函數 (Arcsine)。
+傳回其正弦函式 (Sine) 是指定 **float** 運算式的角度 (以弧度為單位)。 這也稱為反正弦函數 (Arcsine)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>引數  
 *float_expression*  
-是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)型別的**float**或可以隱含地轉換成浮點數，其值介於-1 到 1 的型別。 超出這個範圍的值會傳回 NULL 並且回報網域錯誤。
+為 **float** 類型或能夠隱含轉換成 float 之類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，值的範圍從 -1 到 1。 超出這個範圍的值會傳回 NULL 並且回報網域錯誤。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 **float**
   
 ## <a name="examples"></a>範例  
-下列範例會**float**運算式並傳回指定角度的 ASIN。
+下列範例會使用 **float** 運算式，且會傳回指定角度的 ASIN。
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -95,24 +95,24 @@ The ASIN of the angle is: 0.147811
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 下列範例會傳回 1.00 的反正弦值。
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-下列範例會傳回錯誤，因為它要求的值超出允許範圍的反正弦值。
+下列範例會傳回錯誤，因為它要求的反正弦值超出允許範圍。
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[CEILING &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-[SET ARITHIGNORE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
-[SET ARITHABORT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
+[CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
+[數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
+[SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
   
   
 

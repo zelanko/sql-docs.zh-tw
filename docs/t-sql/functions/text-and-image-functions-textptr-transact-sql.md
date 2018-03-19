@@ -1,5 +1,5 @@
 ---
-title: "TEXTPTR (TRANSACT-SQL) |Microsoft 文件"
+title: TEXTPTR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="text-and-image-functions---textptr-transact-sql"></a>文字和影像函數-TEXTPTR (TRANSACT-SQL)
+# <a name="text-and-image-functions---textptr-transact-sql"></a>Text 和 Image 函式 - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回文字指標值，對應為**文字**， **ntext**，或**映像**中的資料行**varbinary**格式。 擷取的文字指標值可用在 READTEXT、WRITETEXT 和 UPDATETEXT 陳述式中。  
+  以 **varbinary** 格式傳回對應至 **text**、**ntext** 或 **image** 資料行的文字指標值。 擷取的文字指標值可用在 READTEXT、WRITETEXT 和 UPDATETEXT 陳述式中。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]無法使用替代功能。  
@@ -52,35 +52,35 @@ TEXTPTR ( column )
 ```  
   
 ## <a name="arguments"></a>引數  
- *資料行*  
- 是**文字**， **ntext**，或**映像**將使用的資料行。  
+ *column*  
+ 為將要使用的 **text**、**ntext**，或 **image** 資料行。  
   
 ## <a name="return-types"></a>傳回類型  
  **varbinary**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果是含同資料列文字的資料表，TEXTPTR 會傳回要處理之文字的控制代碼。 即使文字值是 NULL，您也可以取得有效的文字指標。  
   
- 在檢視的資料行上無法使用 TEXTPTR 函數。 您只能將它用於資料表資料行。 若要檢視的資料行上使用 TEXTPTR 函數，您必須設定相容性層級為 80 使用[ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 如果資料表沒有同資料列文字，而且如果**文字**， **ntext**，或**映像**UPDATETEXT 陳述式尚未初始化資料行，TEXTPTR 會傳回 null 指標。  
+ 在檢視的資料行上無法使用 TEXTPTR 函數。 您只能將它用於資料表資料行。 若要在檢視資料行上使用 TEXTPTR 函式，您必須利用 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)，將相容性層級設為 80。 如果資料表沒有同資料列文字，且尚未使用 UPDATETEXT 陳述式來初始化 **text**、**ntext** 或 **image** 資料行，TEXTPTR 會傳回 Null 指標。  
   
  請利用 TEXTVALID 來測試文字指標是否存在。 如果有效的文字指標不存在，您便無法使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
   
- 這些函式和陳述式也很有用當您使用**文字**， **ntext**，和**映像**資料。  
+ 另外，當您使用 **text**、**ntext** 和 **image** 資料時，這些函式和陳述式也很有用。  
   
-|函數或陳述式|Description|  
+|函數或陳述式|描述|  
 |---------------------------|-----------------|  
-|PATINDEX**('***%模式 %***'，** *運算式***)**|傳回指定的字元字串中的字元位置**文字**或**ntext**資料行。|  
-|DATALENGTH**(***運算式***)**|傳回的資料長度**文字**， **ntext**，和**映像**資料行。|  
-|SET TEXTSIZE|傳回的限制，以位元組為單位，**文字**， **ntext**，或**映像**SELECT 陳述式傳回的資料。|  
-|子字串**(***text_column*，*啟動*，*長度***)**|傳回**varchar**指定所指定的字串*啟動*位移和*長度*。 長度應該小於 8 KB。|  
+|PATINDEX**('***%pattern%***' ,** *expression***)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
+|DATALENGTH**(***expression***)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
+|SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
+|SUBSTRING**(***text_column*, *start*, *length***)**|傳回指定的 *start* 位移和 *length* 所指定的 **varchar** 字串。 長度應該小於 8 KB。|  
   
 ## <a name="examples"></a>範例  
   
 > [!NOTE]  
->  若要執行下列的範例，您必須安裝**pubs**資料庫。  
+>  若要執行下列範例，您必須安裝 **pubs** 資料庫。  
   
 ### <a name="a-using-textptr"></a>A. 使用 TEXTPTR  
- 下列範例會使用`TEXTPTR`函式來尋找**映像**資料行`logo`聯`New Moon Books`中`pub_info`資料表`pubs`資料庫。 這個文字指標放在本機變數 `@ptrval.` 中。  
+ 下列範例會使用 `TEXTPTR` 函式來尋找 `pubs` 資料庫的 `pub_info` 資料表中與 `New Moon Books` 建立關聯的 **image** 資料行 `logo`。 這個文字指標放在本機變數 `@ptrval.` 中。  
   
 ```  
 USE pubs;  
@@ -170,7 +170,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. 傳回特定文字資料  
- 下列範例會找出`text`資料行 (`pr_info`) 相關聯`pub_id``0736`中`pub_info`資料表`pubs`資料庫。 它先宣告本機變數 `@val`。 之後，將文字指標 (大型二進位字串) 放在 `@val` 中，將它當作一個參數來提供給 `READTEXT` 陳述式。 這會傳回從第 5 位元組 (位移 4) 開始的 10 個位元組。  
+ 下列範例會尋找 `pubs` 資料庫 `pub_info` 資料表中與 `pub_id``0736` 建立關聯的 `text` 資料行 (`pr_info`)。 它先宣告本機變數 `@val`。 之後，將文字指標 (大型二進位字串) 放在 `@val` 中，將它當作一個參數來提供給 `READTEXT` 陳述式。 這會傳回從第 5 位元組 (位移 4) 開始的 10 個位元組。  
   
 ```  
 USE pubs;  
@@ -192,12 +192,12 @@ pr_info
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [DATALENGTH &#40;TRANSACT-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40;TRANSACT-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [READTEXT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [SET TEXTSIZE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [文字和影像函數 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+## <a name="see-also"></a>另請參閱  
+ [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
+ [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [Text 和 Image 函式 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   

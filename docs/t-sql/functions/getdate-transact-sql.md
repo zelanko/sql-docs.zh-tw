@@ -1,5 +1,5 @@
 ---
-title: "GETDATE (TRANSACT-SQL) |Microsoft 文件"
+title: GETDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,12 +46,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回目前資料庫系統時間戳記，當做**datetime**不含資料庫時區位移的值。 這個值衍生自正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統。  
+  將目前資料庫的系統時間戳記以 **datetime** 值傳回 (不含資料庫時區位移)。 這個值衍生自正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統。  
   
 > [!NOTE]  
 >  SYSDATETIME 和 SYSUTCDATETIME 比 GETDATE 和 GETUTCDATE 具有更多小數秒數有效位數。 SYSDATETIMEOFFSET 包含系統時區位移。 SYSDATETIME、SYSUTCDATETIME 和 SYSDATETIMEOFFSET 可指派給任何日期和時間類型的變數。  
   
- 如需所有[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和時間資料型別和函式，請參閱[日期和時間資料型別和函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,12 +64,12 @@ GETDATE ( )
 ## <a name="return-type"></a>傳回類型  
  **datetime**  
   
-## <a name="remarks"></a>備註  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式可以參考 GETDATE 任何位置，它們可以參考**datetime**運算式。  
+## <a name="remarks"></a>Remarks  
+ 只要是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以參考 **datetime** 運算式的任何位置，它們就可以參考 GETDATE。  
   
  GETDATE 是不具決定性的函數。 在資料行中參考這個函數的檢視表和運算式無法編製索引。  
   
- 將 SWITCHOFFSET 搭配 GETDATE() 函數使用可能會導致查詢執行速度緩慢，因為查詢最佳化工具無法取得 GETDATE 值精確的基數估計值。 建議您預先計算 GETDATE 值，然後再由查詢中指定該值，如下列範例所示。 此外，使用 OPTION (RECOMPILE) 查詢提示來強制查詢最佳化工具編譯查詢計劃在下次執行相同的查詢。 這可讓最佳化工具針對 GETDATE() 取得精確的基數估計值，從而產生更有效率的查詢計劃。  
+ 將 SWITCHOFFSET 搭配 GETDATE() 函數使用可能會導致查詢執行速度緩慢，因為查詢最佳化工具無法取得 GETDATE 值精確的基數估計值。 建議您預先計算 GETDATE 值，然後再由查詢中指定該值，如下列範例所示。 此外，請使用 OPTION (RECOMPILE) 查詢提示，以強制查詢最佳化工具在下次執行相同的查詢時重新編譯查詢計劃。 這可讓最佳化工具針對 GETDATE() 取得精確的基數估計值，從而產生更有效率的查詢計劃。  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -149,8 +149,8 @@ GETDATE()          13:18:45.3470000
 GETUTCDATE()       20:18:45.3470000  
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會使用三個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統函數傳回目前的日期和時間來傳回日期、 時間或兩者。 由於這些值會依序傳回，因此其小數秒數可能會不同。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列範例會使用三個可傳回目前日期和時間的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統函式來傳回日期、時間或這兩者。 由於這些值會依序傳回，因此其小數秒數可能會不同。  
   
 ### <a name="d-getting-the-current-system-date-and-time"></a>D. 取得目前的系統日期和時間  
   
@@ -178,7 +178,7 @@ SELECT CONVERT (time, SYSDATETIME())
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

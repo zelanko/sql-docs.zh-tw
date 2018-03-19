@@ -1,5 +1,5 @@
 ---
-title: "卸除資料行主要金鑰 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2016
 ms.prod: sql-non-specified
@@ -49,28 +49,28 @@ DROP COLUMN MASTER KEY key_name;
   
 ## <a name="arguments"></a>引數  
  *key_name*  
- 資料行主要金鑰的名稱。  
+ 資料行主要金鑰名稱。  
   
-## <a name="remarks"></a>備註  
- 是否有任何資料行加密資料行主要金鑰所加密金鑰值，可以只會卸除資料行主要金鑰。 若要卸除資料行加密金鑰值，請使用[卸除資料行加密金鑰](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)陳述式。  
+## <a name="remarks"></a>Remarks  
+ 只有在沒有任何資料行加密金鑰值使用資料行主要金鑰來加密時，才能卸除資料行主要金鑰。 若要卸除資料行加密金鑰值，請使用 [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 陳述式。  
   
 ## <a name="permissions"></a>Permissions  
- 需要**ALTER ANY COLUMN MASTER KEY**資料庫的權限。  
+ 需要資料庫的 **ALTER ANY COLUMN MASTER KEY** 權限。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-column-master-key"></a>A. 卸除資料行主要金鑰  
- 下列範例會卸除資料行主要金鑰，稱為`MyCMK`。  
+ 下列範例會卸除名為 `MyCMK` 的資料行主要金鑰。  
   
 ```  
 DROP COLUMN MASTER KEY MyCMK;  
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [卸除資料行加密金鑰 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [永遠加密 &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)  
   

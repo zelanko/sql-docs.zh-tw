@@ -1,5 +1,5 @@
 ---
-title: "FILEGROUP_NAME (TRANSACT-SQL) |Microsoft 文件"
+title: FILEGROUP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ FILEGROUP_NAME ( filegroup_id )
   
 ## <a name="arguments"></a>引數  
  *filegroup_id*  
- 這是需要傳回檔案群組名稱的檔案群組識別碼。 *filegroup_id*是**smallint**。  
+ 這是需要傳回檔案群組名稱的檔案群組識別碼。 *filegroup_id* 為 **smallint**。  
   
 ## <a name="return-types"></a>傳回類型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>備註  
- *filegroup_id*對應至**data_space_id**中的資料行**sys.filegroups**目錄檢視。  
+## <a name="remarks"></a>Remarks  
+ *filegroup_id* 對應到 **sys.filegroups** 目錄檢視中的 **data_space_id** 資料行。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的檔案群組識別碼 `1` 的檔案群組名稱。  
@@ -81,9 +81,9 @@ PRIMARY
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [sys.filegroups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

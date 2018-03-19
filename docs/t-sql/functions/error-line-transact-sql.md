@@ -1,5 +1,5 @@
 ---
-title: "ERROR_LINE (TRANSACT-SQL) |Microsoft 文件"
+title: ERROR_LINE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -62,10 +62,10 @@ ERROR_LINE ( )
   
  如果是在 CATCH 區塊範圍之外呼叫，便傳回 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  可以在 CATCH 區塊範圍內的任何位置呼叫這個函數。  
   
- ERROR_LINE 會傳回呼叫它，或呼叫 CATCH 區塊範圍內的次數不論錯誤發生的行號。 這種函式，例如@ERROR，緊接著一個錯誤的陳述式中或在 CATCH 區塊的第一個陳述式中傳回的錯誤號碼。  
+ ERROR_LINE 會傳回發生錯誤的行號，不論呼叫它的次數為何，或是在 CATCH 區塊範圍內的什麼位置呼叫它，都是如此。 這有別於 @@ERROR 之類的函式，它們會在緊接於發生錯誤的陳述式之後的陳述式中，或在 CATCH 區塊的第一個陳述式中，傳回錯誤號碼。  
   
  在巢狀 CATCH 區塊中，ERROR_LINE 會傳回參考它的 CATCH 區塊範圍特定的錯誤行號。 例如，TRY…CATCH 建構的 CATCH 區塊可能包含巢狀的 TRY…CATCH 建構。 在巢狀 CATCH 區塊內，ERROR_LINE 會傳回呼叫巢狀 CATCH 區塊之錯誤的行號。 如果 ERROR_LINE 是在外部 CATCH 區塊內執行，它會傳回叫用這個 CATCH 區塊之錯誤的行號。  
   
@@ -131,14 +131,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

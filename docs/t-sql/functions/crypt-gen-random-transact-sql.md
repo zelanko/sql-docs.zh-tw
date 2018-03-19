@@ -1,5 +1,5 @@
 ---
-title: "CRYPT_GEN_RANDOM (TRANSACT-SQL) |Microsoft 文件"
+title: CRYPT_GEN_RANDOM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -46,13 +46,13 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>引數  
 *length*  
-正在建立之數字的長度。 最大值為 8000。 *長度*是型別**int**。
+正在建立之數字的長度。 最大值為 8000。 *length* 的類型為 **int**。
   
-*種子*  
-要當做隨機種子使用的選擇性資料。  必須有至少*長度*位元組的資料。 *種子*是**varbinary （8000)**。
+*seed*  
+要當做隨機種子使用的選擇性資料。  至少必須有 *length* 個位元組的資料。 *seed* 為 **varbinary(8000)**。
   
 ## <a name="returned-types"></a>傳回的類型  
-**varbinary （8000)**
+**varbinary(8000)**
   
 ## <a name="permissions"></a>Permissions  
 這個函數是公用的，而且不需要任何特殊權限。
@@ -73,6 +73,6 @@ SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[RAND &#40;TRANSACT-SQL &#41;](../../t-sql/functions/rand-transact-sql.md)
+[RAND &#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ToString (Database Engine) |Microsoft 文件"
+title: "ToString (資料庫引擎) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="tostring-database-engine"></a>ToString (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回字串的邏輯表示法*這*。 當從轉換隱含地呼叫 ToString **hierarchyid**為字串類型，就會發生。 做為相反[剖析 &#40; Database Engine &#41;](../../t-sql/data-types/parse-database-engine.md)。
+傳回具有 *this* 邏輯表示法的字串。 當從 **hierarchyid** 轉換成字串類型時，即會隱含地呼叫 ToString。 其行為是 [Parse &#40;Database Engine&#41;](../../t-sql/data-types/parse-database-engine.md) 的相反。
   
 ## <a name="syntax"></a>語法  
   
@@ -51,13 +51,13 @@ CAST(node AS nvarchar(4000))
 string ToString  ( )   
 ```  
   
-## <a name="return-types"></a>傳回型別
-**SQL Server 傳回 type:nvarchar(4000)**
+## <a name="return-types"></a>傳回型
+**SQL Server 傳回型別：nvarchar(4000)**
   
-**CLR 傳回型別： 字串**
+**CLR 傳回型別：String**
   
-## <a name="remarks"></a>備註  
-傳回階層中的邏輯位置。 例如，`/2/1/`表示第四個資料列 ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 中的下列檔案系統階層式結構：
+## <a name="remarks"></a>Remarks  
+傳回階層中的邏輯位置。 例如，`/2/1/` 表示下列檔案系統階層式結構中的第四個資料列 ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])：
   
 ```sql
 /        C:\  
@@ -71,7 +71,7 @@ string ToString  ( )
 ## <a name="examples"></a>範例  
   
 ### <a name="a-transact-sql-example-in-a-table"></a>A. 資料表中的 Transact-SQL 範例  
-下列範例會傳回同時`OrgNode`兩者的資料行**hierarchyid**資料型別，且更容易讀取的字串格式：
+下列範例會以可讀性較佳的字串格式傳回 `OrgNode` 資料行和 **hierarchyid** 資料類型：
   
 ```sql
 SELECT OrgNode,  
@@ -95,7 +95,7 @@ OrgNode   Node
 ```  
   
 ### <a name="b-converting-transact-sql-values-without-a-table"></a>B. 轉換 Transact-SQL 值而不使用資料表  
-下列程式碼範例使用`ToString`轉換**hierarchyid**值到一個字串，並`Parse`將字串值轉換成**hierarchyid**。
+下列程式碼範例會使用 `ToString` 將 **hierarchyid** 值轉換成字串，並使用 `Parse` 將字串值轉換成 **hierarchyid**。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -116,7 +116,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="c-clr-example"></a>C. CLR 範例  
-下列程式碼片段會呼叫 tostring （） 方法：
+下列程式碼片段會呼叫 ToString() 方法：
   
 ```sql
 this.ToString()  

@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_USER (TRANSACT-SQL) |Microsoft 文件"
+title: CURRENT_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/21/2017
 CURRENT_USER  
 ```  
 
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 **sysname**
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 CURRENT_USER 會傳回目前安全性內容的名稱。 如果 CURRENT_USER 是在呼叫 EXECUTE AS 參數內容之後執行，CURRENT_USER 就會傳回模擬內容的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則會傳回 Windows 主體的名稱，而不是群組名稱。
   
-若要傳回目前使用者的登入，請參閱[SUSER_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)和[SYSTEM_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md).
+若要傳回目前使用者的登入，請參閱 [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 與 [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
   
@@ -140,12 +140,12 @@ Wanida
 ```
   
 ## <a name="see-also"></a>另請參閱
-[USER_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
-[SYSTEM_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+[USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
+[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[系統函式 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

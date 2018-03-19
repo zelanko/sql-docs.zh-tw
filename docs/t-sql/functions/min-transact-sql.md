@@ -1,5 +1,5 @@
 ---
-title: "MIN (TRANSACT-SQL) |Microsoft 文件"
+title: MIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回運算式中的最小值。 後面可能[OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+  傳回運算式中的最小值。 後面可接續 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,17 +67,17 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
  指定要考量每個唯一值。 DISTINCT 對 MIN 沒意義，只是為了與 ISO 相容。  
   
  *expression*  
- 這是一個常數、資料行名稱或函數，或算術、位元和字串運算子的任何組合。 MIN 可以搭配**數值**， **char**， **varchar**， **uniqueidentifier**，或**datetime**資料行，但不是能搭配**元**資料行。 不允許彙總函式和子查詢。  
+ 這是一個常數、資料行名稱或函數，或算術、位元和字串運算子的任何組合。 MIN 可以搭配 **numeric**、**char**、**varchar**、**uniqueidentifier** 或 **datetime** 資料行使用，但無法搭配 **bit** 資料行使用。 不允許彙總函式和子查詢。  
   
  如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 透過**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*將分割成資料分割要套用函式的 FROM 子句所產生的結果集。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause*決定執行作業的邏輯順序。 *order_by_clause*需要。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* 會將 FROM 子句產生的結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回值，與相同*運算式*。  
+ 傳回與 *expression* 相同的值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  MIN 會忽略任何 Null 值。  
   
  當使用字元資料行時，MIN 會尋找排序順序中的最低值。  
@@ -148,10 +148,10 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-min"></a>C. 使用最小值  
- 下列範例會使用 MIN 彙總函式，以傳回成本最低 （最小值） 產品的價格在一組指定的銷售訂單。  
+### <a name="c-using-min"></a>C. 使用 MIN  
+ 下列範例會使用 MIN 彙總函式，以傳回指定銷售訂單集中最便宜 (最低價) 之產品的價格。  
   
 ```  
 -- Uses AdventureWorks  
@@ -168,8 +168,8 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
  5.1865
  ```  
   
-### <a name="d-using-min-with-over"></a>D. 使用最小值與移轉  
- 下列範例會使用 MIN OVER() 分析函數，傳回最便宜產品的價格每個銷售訂單中。 結果集依分割`SalesOrderID`資料行。  
+### <a name="d-using-min-with-over"></a>D. 搭配 OVER 使用 MIN  
+ 下列範例會使用 MIN OVER() 分析函式，以傳回每一筆銷售訂單中最便宜產品的價格。 結果集會根據 `SalesOrderID` 資料行進行分割。  
   
 ```  
 -- Uses AdventureWorks  
@@ -191,10 +191,10 @@ LeastExpensiveProduct SalesOrderID
 28.8404               SO43664
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [最大 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/max-transact-sql.md)   
- [OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [MAX &#40;Transact-SQL&#41;](../../t-sql/functions/max-transact-sql.md)   
+ [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

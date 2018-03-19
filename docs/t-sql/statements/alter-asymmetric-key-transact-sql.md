@@ -1,5 +1,5 @@
 ---
-title: "ALTER ASYMMETRIC KEY (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -71,25 +71,25 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  變更私密金鑰的保護。  
   
  ENCRYPTION BY PASSWORD **='***stongPassword***'**  
- 指定用來保護私密金鑰的新密碼。 *密碼*必須符合正在執行的執行個體之電腦的 Windows 密碼原則需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果省略這個選項，則由資料庫主要金鑰加密此私密金鑰。  
+ 指定用來保護私密金鑰的新密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 如果省略這個選項，則由資料庫主要金鑰加密此私密金鑰。  
   
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  指定目前用來保護私密金鑰的舊密碼。 如果是利用資料庫主要金鑰加密私密金鑰，則不需要這個選項。  
   
-## <a name="remarks"></a>備註  
- 如果沒有資料庫主要金鑰，則需要 ENCRYPTION BY PASSWORD 選項，而且如果沒有提供密碼，作業會失敗。 如需如何建立資料庫主要金鑰的相關資訊，請參閱[CREATE MASTER KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 如果沒有資料庫主要金鑰，則需要 ENCRYPTION BY PASSWORD 選項，而且如果沒有提供密碼，作業會失敗。 如需如何建立資料庫主要金鑰的資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)。  
   
  您可以利用 ALTER ASYMMETRIC KEY 指定 PRIVATE KEY 選項 (如下表所示) 來變更私密金鑰的保護。  
   
 |變更保護|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|從舊密碼到新密碼|必要項|Required|  
-|從密碼到主要金鑰|省略|Required|  
-|從主要金鑰到密碼|Required|省略|  
+|從舊密碼到新密碼|必要項|必要項|  
+|從密碼到主要金鑰|省略|必要項|  
+|從主要金鑰到密碼|必要項|省略|  
   
- 必須先開啟資料庫主要金鑰，才可以利用它來保護私密金鑰。 如需詳細資訊，請參閱[OPEN MASTER KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md).  
+ 必須先開啟資料庫主要金鑰，才可以利用它來保護私密金鑰。 如需詳細資訊，請參閱 [ MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)。  
   
- 若要變更非對稱金鑰的擁有權，請使用[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)。  
+ 若要變更非對稱金鑰的擁有權，請使用 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  若要移除私密金鑰，則需要非對稱金鑰的 CONTROL 權限。  
@@ -125,13 +125,13 @@ ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
  [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [開啟主要金鑰 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

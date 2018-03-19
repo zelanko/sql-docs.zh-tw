@@ -1,5 +1,5 @@
 ---
-title: "AVG (TRANSACT-SQL) |Microsoft 文件"
+title: AVG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -57,13 +57,13 @@ DISTINCT
 指定只在值的每個唯一執行個體上執行 AVG，不論值出現多少次，都是如此。
   
 *expression*  
-是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)精確數值或相近數值資料類型類別目錄，除了**元**資料型別。 不允許彙總函式和子查詢。
+為精確數值或近似數值資料類型類別的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料類型除外。 不允許彙總函式和子查詢。
   
-透過**(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause*將分割成資料分割要套用函式的 FROM 子句所產生的結果集。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause*決定執行作業的邏輯順序。 *order_by_clause*需要。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+*partition_by_clause* 會將 FROM 子句產生的結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回型別
-傳回型別取決於評估結果的類型*運算式*。
+傳回型別取決於 *expression* 評估結果的類型。
   
 |運算式結果|傳回類型|  
 |---|---|
@@ -71,12 +71,12 @@ DISTINCT
 |**smallint**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**十進位**類別目錄 （p，s）|**decimal (38，s)**除以**decimal （10，0）**|  
-|**money**和**smallmoney**類別|**money**|  
-|**float**和**真實**類別|**float**|  
+|**decimal** 類別 (p, s)|**decimal(38, s)** 除以 **decimal(10, 0)**|  
+|**money** 和 **smallmoney** 類別|**money**|  
+|**float** 和 **real** 類別|**float**|  
   
-## <a name="remarks"></a>備註  
-資料類型，是否*運算式*是別名資料型別，傳回型別也是別名資料型別。 不過，如果基底資料類型別名資料類型升級，例如從**tinyint**至**int**，傳回的值就是升級的資料類型，而且不是別名資料類型。
+## <a name="remarks"></a>Remarks  
+如果 *expression* 的資料類型是一個別名資料類型，傳回型別也會是別名資料類型。 不過，如果別名資料類型的基底資料型別升級；例如，從 **tinyint** 升級到 **int**，傳回值就是升級的資料類型，而不是別名資料類型。
   
 AVG () 會計算一組值的平均值，其方式是將這些值的總和除以非 null 值的計數。 如果總和超過傳回值之資料類型的最大值，便會傳回錯誤。
   
@@ -240,7 +240,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

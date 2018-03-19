@@ -1,5 +1,5 @@
 ---
-title: "ALTER SYMMETRIC KEY (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,26 +72,26 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  DROP ENCRYPTION BY  
  利用指定的方法卸除加密。 您無法從對稱金鑰移除所有加密。  
   
- 憑證*Certificate_name*  
+ CERTIFICATE *Certificate_name*  
  指定用來加密對稱金鑰的憑證。 這個憑證必須已存在於資料庫中。  
   
- 密碼**='***密碼***'**  
- 指定用於加密對稱金鑰的密碼。 *密碼*必須符合正在執行的執行個體之電腦的 Windows 密碼原則需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ PASSWORD **='***password***'**  
+ 指定用於加密對稱金鑰的密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。  
   
- 對稱金鑰*Symmetric_Key_Name*  
+ SYMMETRIC KEY *Symmetric_Key_Name*  
  指定用來加密所要變更之對稱金鑰的對稱金鑰。 這個對稱金鑰必須已存在於資料庫中，且必須是開啟的。  
   
- 非對稱金鑰*Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  指定用來加密所要變更之對稱金鑰的非對稱金鑰。 這個非對稱金鑰必須已存在於資料庫中。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 > [!CAUTION]  
 >  如果是利用密碼 (而不是利用資料庫主要金鑰的公開金鑰) 來加密對稱金鑰，則會使用 TRIPLE_DES 加密演算法。 因此，利用強式加密演算法 (如 AES) 建立的金鑰，其本身的安全是由較弱的演算法來維護的。  
   
  若要變更對稱金鑰的加密，請使用 ADD ENCRYPTION 和 DROP ENCRYPTION 片語。 金鑰不可能完全不加密。 因此，最佳作法是先加入新的加密格式，再移除舊的加密格式。  
   
- 若要變更對稱金鑰的擁有者，請使用[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)。  
+ 如果要變更對稱金鑰的擁有者，請使用 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
 > [!NOTE]  
 >  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
@@ -117,10 +117,10 @@ ALTER SYMMETRIC KEY JanainaKey043
 CLOSE SYMMETRIC KEY JanainaKey043;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

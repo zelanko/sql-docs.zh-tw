@@ -1,5 +1,5 @@
 ---
-title: "ALTER VIEW (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -64,22 +64,22 @@ AS select_statement
  *view_name*  
  這是要變更的檢視。  
   
- *資料行*  
+ *column*  
  這是要放在指定檢視中之一或多個資料行的名稱 (以逗號分隔)。  
   
 > [!IMPORTANT]  
 >  只有在執行 ALTER VIEW 之前和之後資料行名稱相同時，才會維護資料行權限。  
   
 > [!NOTE]  
->  在檢視的資料行中，資料行名稱的權限適用於整個 CREATE VIEW 或 ALTER VIEW 陳述式，不論基礎資料來源為何都是如此。 例如，如果授與權限是**SalesOrderID** CREATE VIEW 陳述式中的資料行，ALTER VIEW 陳述式可以重新命名**SalesOrderID**資料行，例如，將**OrderRef**，且仍有與檢視使用相關聯的權限**SalesOrderID**。  
+>  在檢視的資料行中，資料行名稱的權限適用於整個 CREATE VIEW 或 ALTER VIEW 陳述式，不論基礎資料來源為何都是如此。 例如，如果是在 CREATE VIEW 陳述式中授與 **SalesOrderID** 資料行的權限，ALTER VIEW 陳述式可以重新命名 **SalesOrderID** 資料行 (例如，將它改成 **OrderRef**)，同時保有使用 **SalesOrderID** 之檢視的相關權限。  
   
  ENCRYPTION  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 中的項目會加密[sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md)中包含 ALTER VIEW 陳述式文字。 WITH ENCRYPTION 可防止在 SQL Server 複寫中發行檢視。  
+ 加密 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 中包含 ALTER VIEW 陳述式文字的項目。 WITH ENCRYPTION 可防止在 SQL Server 複寫中發行檢視。  
   
  SCHEMABINDING  
- 將檢視繫結於一或多份基礎資料表的結構描述。 當指定 SCHEMABINDING 時，無法依照會影響檢視定義的方式來修改基底資料表。 您必須先修改或卸除檢視定義來移除對於要修改之資料表的相依性。 當您使用 SCHEMABINDING 時， *select_statement*必須包含兩部分名稱 (*結構描述***。***物件*) 的資料表、 檢視或所參考的使用者定義函數。 所有參考的物件都必須在相同的資料庫中。  
+ 將檢視繫結於一或多份基礎資料表的結構描述。 當指定 SCHEMABINDING 時，無法依照會影響檢視定義的方式來修改基底資料表。 您必須先修改或卸除檢視定義來移除對於要修改之資料表的相依性。 當您使用 SCHEMABINDING 時，*select_statement* 必須包括所參考的資料表、檢視或使用者自訂函式的兩部分名稱 (*schema***.***object*)。 所有參考的物件都必須在相同的資料庫中。  
   
  您無法卸除參與 SCHEMABINDING 子句所建立之檢視的檢視或資料表，除非這份檢視已經卸除或有了改變，不再擁有結構描述繫結。 否則，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會引發錯誤。 另外，如果 ALTER TABLE 陳述式會影響到檢視定義，在參與擁有結構描述繫結的檢視之資料表上執行這些陳述式也會失敗。  
   
@@ -88,7 +88,7 @@ AS select_statement
   
  如果是 VIEW_METADATA 所建立的檢視，當描述結果集中檢視的資料行時，瀏覽模式中繼資料會傳回檢視名稱，而不是基底資料表名稱。  
   
- 當檢視利用 WITH VIEW_METADATA，其所有資料行，建立除非**時間戳記**資料行，您可以更新，如果檢視有 INSERT 或 UPDATE INSTEAD OF 觸發程序。 如需詳細資訊，請參閱中的 < 備註 > 一節[CREATE VIEW &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-view-transact-sql.md).  
+ 當檢視是使用 WITH VIEW_METADATA 來建立時，如果該檢視具有 INSERT 或 UPDATE INSTEAD OF 觸發程序，則除了 **timestamp** 資料行之外，所有資料行都可以更新。 如需詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) 中的＜備註＞一節。  
   
  AS  
  這些是檢視要採取的動作。  
@@ -97,10 +97,10 @@ AS select_statement
  這是定義檢視的 SELECT 陳述式。  
   
  WITH CHECK OPTION  
- 強制所有資料修改陳述式針對進行中的條件集檢視執行的*select_statement*。  
+ 強制針對檢視執行的所有資料修改陳述式必須遵循*select_statement* 內所設定的準則。  
   
-## <a name="remarks"></a>備註  
- 如需有關 ALTER VIEW 的詳細資訊，請參閱 < 備註 > 中的[CREATE VIEW &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-view-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 如需 ALTER VIEW 的詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)中的＜備註＞一節。  
   
 > [!NOTE]  
 >  如果先前的檢視定義是利用 WITH ENCRYPTION 或 CHECK OPTION 來建立的，只有在 ALTER VIEW 包括這些選項時，才會啟用這些選項。  
@@ -140,10 +140,10 @@ GO
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
- [卸除檢視 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [建立預存程序](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

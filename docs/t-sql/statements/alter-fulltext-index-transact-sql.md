@@ -1,5 +1,5 @@
 ---
-title: "ALTER FULLTEXT INDEX (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/27/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  變更全文檢索索引中的屬性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中變更全文檢索索引的屬性。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -77,64 +77,64 @@ ALTER FULLTEXT INDEX ON table_name
  這是包括在全文檢索索引中之一個或多個資料行所在的資料表或索引檢視表名稱。 資料庫和資料表擁有者名稱的指定是選擇性的。  
   
  ENABLE | DISABLE  
- 會告知[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是否要蒐集全文檢索索引資料*table_name*。 ENABLE 會啟動全文檢索索引；DISABLE 會關閉全文檢索索引。 停用索引時，資料表不支援全文檢索查詢。  
+ 告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否要蒐集 *table_name* 的全文檢索索引資料。 ENABLE 會啟動全文檢索索引；DISABLE 會關閉全文檢索索引。 停用索引時，資料表不支援全文檢索查詢。  
   
  停用全文檢索索引可讓您關閉變更追蹤，但保留全文檢索索引，而且您可以隨時使用 ENABLE 來重新啟動。 停用全文檢索索引時，全文檢索索引中繼資料會保留在系統資料表中。 如果停用全文檢索索引時，CHANGE_TRACKING 處於已啟用狀態 (自動或手動更新)，索引狀態會凍結，而且任何進行中的搜耙都會停止，此時不會追蹤資料表資料的新變更，也不會將它們傳播到索引中。  
   
  SET CHANGE_TRACKING {MANUAL | AUTO | OFF}  
- 指定是否將傳播 （更新、 刪除或插入） 所做的變更至全文檢索索引所涵蓋的資料表資料行由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文檢索索引。 透過 WRITETEXT 和 UPDATETEXT 的資料變更並不會反映在全文檢索索引中，變更追蹤並不會收取這些變更。  
+ 指定全文檢索索引涵蓋的資料表資料行變更 (更新、刪除或插入)，是否會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散佈到全文檢索索引。 透過 WRITETEXT 和 UPDATETEXT 的資料變更並不會反映在全文檢索索引中，變更追蹤並不會收取這些變更。  
   
 > [!NOTE]  
 >  如需有關變更追蹤與 WITH NO POPULATION 之間互動的詳細資訊，請參閱本主題後面的＜備註＞一節。  
   
  MANUAL  
- 指定追蹤的變更會手動傳播 (藉由呼叫 ALTER FULLTEXT INDEX... START UPDATE POPULATION[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式 (*手動母體擴展*)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+ 指定追蹤的變更會手動傳播 (藉由呼叫 ALTER FULLTEXT INDEX... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (手動母體擴展)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
  AUTO  
- 指定基底資料表中的資料變更，會自動傳播追蹤的變更 (*自動母體擴展*)。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  
+ 指定在修改基底資料表中的資料時，同時自動散佈追蹤變更 (「自動母體擴展」)。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  
   
  OFF  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保留索引資料的變更清單。  
   
- 加入 |卸除*column_name*  
- 指定要在全文檢索索引中新增或刪除的資料行。 資料行或資料行必須屬於型別**char**， **varchar**， **nchar**， **nvarchar**，**文字**， **ntext**，**映像**， **xml**， **varbinary**，或**varbinary （max)**。  
+ ADD | DROP *column_name*  
+ 指定要在全文檢索索引中新增或刪除的資料行。 資料行必須屬於以下類型：**char**、**varchar****nchar****nvarchar****text**、**ntext**、**image**、**xml**、**varbinary**，或 **varbinary(max)**。  
   
  請只在先前已啟用了全文檢索索引的資料行上，使用 DROP 子句。  
   
- 若要設定這些屬性搭配 ADD 子句使用 TYPE COLUMN 和 LANGUAGE *column_name*。 當新增資料行時，您必須重新擴展資料表的全文檢索索引，針對這個資料行的全文檢索查詢才能運作。  
+ 使用 TYPE COLUMN 和 LANGUAGE 來搭配 ADD 子句，在 *column_name* 上設定這些屬性。 當新增資料行時，您必須重新擴展資料表的全文檢索索引，針對這個資料行的全文檢索查詢才能運作。  
   
 > [!NOTE]  
 >  全文檢索索引是要在加入資料行之後擴展還是從全文檢索索引卸除，將取決於是否啟用變更追蹤及是否指定 WITH NO POPULATION 而定。 如需詳細資訊，請參閱此主題稍後的「備註」。  
   
- 類型資料行*type_column_name*  
- 指定的資料表資料行名稱*type_column_name*，也就是用來保存的文件類型**varbinary**， **varbinary （max)**，或**映像**文件。 這個資料行 (稱為類型資料行) 包含使用者提供的副檔名 (.doc、.pdf、.xls 等等)。 類型資料行必須屬於下列類型： **char**, **nchar**, **varchar**或 **nvarchar**。  
+ TYPE COLUMN *type_column_name*  
+ 指定用來保存 **varbinary**、**varbinary(max)** 或 **image** 文件之文件類型的資料表資料行名稱 *type_column_name*。 這個資料行 (稱為類型資料行) 包含使用者提供的副檔名 (.doc、.pdf、.xls 等等)。 類型資料行必須屬於下列類型： **char**, **nchar**, **varchar**或 **nvarchar**。  
   
- 指定 TYPE COLUMN *type_column_name*才*column_name*指定**varbinary**， **varbinary （max)**或**映像**資料行，資料會儲存為二進位資料，否則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會傳回錯誤。  
+ 只有當 *column_name* 指定將資料儲存為二進位資料的 **varbinary**、**varbinary(max)** 或 **image** 資料行，才應指定 TYPE COLUMN *type_column_name*否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   
 > [!NOTE]  
->  建立索引時，全文檢索引擎會使用縮寫中每個資料表資料列的型別資料行來識別要使用文件中的全文檢索搜尋篩選*column_name*。 篩選會將文件載入為二進位資料流、移除格式資訊，並且將文件中的文字傳送到斷詞工具元件。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
+>  建立索引時，全文檢索引擎會使用各資料表資料列之類型資料行中的縮寫，以便識別要為 *column_name* 中的文件使用哪一種全文檢索搜尋篩選。 篩選會將文件載入為二進位資料流、移除格式資訊，並且將文件中的文字傳送到斷詞工具元件。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
   
- 語言*language_term*  
- 是儲存在資料的語言**column_name**。  
+ LANGUAGE *language_term*  
+ 為 **column_name** 所儲存之資料的語言。  
   
- *language_term*是選擇性的可以指定為字串、 整數或十六進位值對應的語言地區設定識別碼 (LCID)。 如果*language_term*指定時，它代表的語言會套用至搜尋條件的所有項目。 如果未不指定任何值，預設的全文檢索語言[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用執行個體。  
+ *language_term* 為選擇性，可以指定成對應於語言地區設定識別碼 (LCID) 的字串、整數或十六進位值。 如果指定 *language_term*，系統就會將它所代表的語言套用至搜尋條件的所有項。 如果未指定任何值，就會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設全文檢索語言。  
   
- 使用**sp_configure**預存程序存取預設全文檢索語言的相關資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
+ 請使用 **sp_configure** 預存程序來存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設全文檢索語言的相關資訊。  
   
- 當指定為字串， *language_term*對應至**別名**中的資料行值**syslanguages**系統資料表。 字串必須括在單引號括住，如 '*language_term*'。 當指定為整數， *language_term*是識別之語言的實際 LCID。 當指定為十六進位值， *language_term* 0x 後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
+ 當指定為字串時，*language_term* 會對應至 **syslanguages** 系統資料表中的 **alias** 資料行值。 字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
   
  如果這個值是雙位元組字集 (DBCS) 格式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將它轉換成 Unicode。  
   
- 必須啟用為指定的語言資源，例如斷詞工具和字幹分析器， *language_term*。 如果這些資源不支援指定的語言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
+ 您必須針對指定為 *language_term* 的語言來啟用資源，如文字分隔和詞幹分析器。 如果這些資源不支援指定的語言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   
- 如果是包含多種語言之文字資料的非 BLOB 和非 XML 資料行，或資料行所儲存的文字語言不明，請使用中性 (0x0) 語言資源。 如果是儲存在 XML 或 BLOB 類型資料行中的文件，在建立索引時，將使用文件內的語言編碼。 例如，在 XML 資料行中，XML 文件的 xml:lang 屬性會識別語言。 在查詢時，先前中指定的值*language_term*除非用於全文檢索查詢的預設語言會變成*language_term*指定做為全文檢索查詢的一部分。  
+ 如果是包含多種語言之文字資料的非 BLOB 和非 XML 資料行，或資料行所儲存的文字語言不明，請使用中性 (0x0) 語言資源。 如果是儲存在 XML 或 BLOB 類型資料行中的文件，在建立索引時，將使用文件內的語言編碼。 例如，在 XML 資料行中，XML 文件的 xml:lang 屬性會識別語言。 在查詢時，除非在全文檢索查詢中指定 *language_term*，否則，*language_term* 先前所指定的值會成為全文檢索查詢所用的預設語言。  
   
  STATISTICAL_SEMANTICS  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  建立其他關鍵片語以及屬於統計語意索引一部分的文件相似度索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)。  
   
- [ **，***...n*]  
+ [ **,***...n*]  
  指出 ADD、ALTER 或 DROP 子句可以指定多個資料行。 當指定多個資料行時，請用逗號來分開這些資料行。  
   
  WITH NO POPULATION  
@@ -142,7 +142,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  當指定 NO POPULATION 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會擴展索引。 只有在使用者提供了 ALTER FULLTEXT INDEX...START POPULATION 命令之後，才會擴展索引。 未指定 NO POPULATION 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會擴展索引。  
   
- 如果既啟用 CHANGE_TRACKING，又指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。 如果既啟用 CHANGE_TRACKING，而且未指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]索引上執行完整母體擴展。  
+ 如果既啟用 CHANGE_TRACKING，又指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。 如果啟用 CHANGE_TRACKING，但沒有指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行索引的完整母體擴展。  
   
 > [!NOTE]  
 >  如需有關變更追蹤與 WITH NO POPULATION 之間互動的詳細資訊，請參閱本主題後面的＜備註＞一節。  
@@ -153,13 +153,13 @@ ALTER FULLTEXT INDEX ON table_name
  啟用或停用指定之資料行的統計語意索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)。  
   
  START {FULL|INCREMENTAL|UPDATE} POPULATION  
- 會告知[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始全文檢索索引的母體擴展*table_name*。 如果全文檢索索引母體擴展正在進行中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回警告，且不會啟動新的擴展。  
+ 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來開始擴展 *table_name* 的全文檢索索引。 如果全文檢索索引擴展已在進行中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回警告，且不會開始新的擴展。  
   
  FULL  
  指定全文檢索索引要擷取資料表的每個資料列，即使資料列已建立了索引也一樣。  
   
  INCREMENTAL  
- 指定全文檢索索引只擷取前次擴展之後又修改過的資料列。 資料表必須有 **timestamp**類型的資料行，INCREMENTAL 才適用。 如果全文檢索目錄中的資料表不包含類型的資料行**時間戳記**，資料表就會進行完整母體擴展。  
+ 指定全文檢索索引只擷取前次擴展之後又修改過的資料列。 資料表必須有 **timestamp**類型的資料行，INCREMENTAL 才適用。 如果全文檢索目錄中的資料表並未包含 **timestamp** 類型的資料行，資料表就會進行完整母體擴展。  
   
  UPDATE  
  指定處理上次更新變更追蹤索引之後的所有插入、更新或刪除。 資料表上必須啟用變更追蹤擴展，但不應開啟背景更新索引或自動變更追蹤。  
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  PAUSE POPULATION 和 RESUME POPULATION 只適用於完全擴展。 它們與其他擴展類型無關，因為其他擴展會從搜耙停止處繼續搜耙。  
   
- 設定停用字詞表 {關閉 |系統 |*s* }  
+ SET STOPLIST { OFF| SYSTEM | *stoplist_name* }  
  變更與此索引相關聯的全文檢索停用字詞表 (如果有的話)。  
   
  OFF  
@@ -180,12 +180,12 @@ ALTER FULLTEXT INDEX ON table_name
  SYSTEM  
  指定預設全文檢索系統 STOPLIST 應該用於這個全文檢索索引。  
   
- *s*  
+ *stoplist_name*  
  指定要與全文檢索索引產生關聯的停用字詞表名稱。  
   
  如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
- 設定搜尋屬性清單 {關閉 |*property_list_name* } [WITH NO POPULATION]  
+ SET SEARCH PROPERTY LIST { OFF | *property_list_name* } [ WITH NO POPULATION ]  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  變更與此索引相關聯的搜尋屬性清單 (如果有的話)。  
@@ -206,11 +206,11 @@ ALTER FULLTEXT INDEX ON table_name
 > [!NOTE]  
 >  您可以將特定的搜尋屬性清單與相同資料庫中的多個全文檢索索引相關聯。  
   
- **目前的資料庫上尋找搜屬性清單**  
+ **在目前資料庫上搜尋屬性清單**  
   
 -   [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
- 如需有關搜尋屬性清單的詳細資訊，請參閱[使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ 如需搜尋屬性清單的詳細資訊，請參閱[使用搜尋屬性清單搜尋文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
 ## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>變更追蹤與 NO POPULATION 參數之間的互動  
  全文檢索索引是否會擴展，將取決於是否啟用變更追蹤及是否在 ALTER FULLTEXT INDEX 陳述式中指定 WITH NO POPULATION 而定。 下表摘要列出其互動的結果。  
@@ -222,12 +222,12 @@ ALTER FULLTEXT INDEX ON table_name
 |已啟用|已指定|引發錯誤，而且索引不會改變。|  
 |已啟用|未指定|在索引上執行完整母體擴展。|  
   
- 如需有關擴展全文檢索索引的詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
+ 如需填入全文檢索索引的詳細資訊，請參閱[填入全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
   
 ## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a>變更搜尋屬性清單導致重建索引  
  第一次全文檢索索引與搜尋屬性清單相關聯時，索引必須重新擴展，以檢索屬性特定的搜尋詞彙。 現有的索引資料不會被截斷。  
   
- 但是，如果您將全文檢索索引與不同的屬性清單產生關聯，則會重建索引。 重建會立即截斷全文檢索索引，移除所有現有的資料，而且必須重新擴展索引。 雖然母體擴展進行時，只能在已建立由母體擴展的資料表資料列上的 「 基底資料表搜尋的全文檢索查詢。 重新擴展的索引資料會包含新加入搜尋屬性清單已註冊之屬性的中繼資料。  
+ 但是，如果您將全文檢索索引與不同的屬性清單產生關聯，則會重建索引。 重建會立即截斷全文檢索索引，移除所有現有的資料，而且必須重新擴展索引。 當母體擴展進行時，基底資料表上的全文檢索查詢只會在已由母體擴展編製索引的資料表資料列上進行搜尋。 重新擴展的索引資料會包含新加入搜尋屬性清單已註冊之屬性的中繼資料。  
   
  導致重建的狀況包括：  
   
@@ -236,11 +236,11 @@ ALTER FULLTEXT INDEX ON table_name
 -   關閉搜尋屬性清單，而且稍後將索引與任何搜尋屬性清單產生關聯 (請參閱本節稍後的＜狀況 B＞)。  
   
 > [!NOTE]  
->  如需有關全文檢索搜尋如何使用搜尋屬性清單的詳細資訊，請參閱[使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。 如需完整母體擴展的資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
+>  如需全文檢索搜尋使用搜尋屬性清單之運作方式的詳細資訊，請參閱[使用搜尋屬性清單搜尋文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。 如需完整母體擴展的資訊，請參閱[填入全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
   
 ### <a name="scenario-a-switching-directly-to-a-different-search-property-list"></a>狀況 A：直接切換至不同的搜尋屬性清單  
   
-1.  建立全文檢索索引`table_1`與搜尋屬性清單`spl_1`:  
+1.  在 `table_1` 上，建立具有搜尋屬性清單 `spl_1` 的全文檢索索引：  
   
     ```  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
@@ -264,7 +264,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 ### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>狀況 B：關閉搜尋屬性清單，而且稍後將索引與任何搜尋屬性清單產生關聯  
   
-1.  建立全文檢索索引`table_1`與搜尋屬性清單`spl_1`，後面接著自動的完整母體擴展 （預設行為）：  
+1.  在 `table_1` 上，建立具有搜尋屬性清單 `spl_1` 的全文檢索索引，接著執行自動的完整母體擴展 (預設行為)：  
   
     ```  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
@@ -280,7 +280,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 3.  再次將全文檢索索引與相同搜尋屬性清單或另一個搜尋屬性清單產生關聯。  
   
-     例如下列陳述式重新產生關聯的全文檢索索引與原始的搜尋屬性清單， `spl_1`:  
+     例如，下列陳述式會將全文檢索索引與原始搜尋屬性清單 `spl_1` 重新建立關聯：  
   
     ```  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
@@ -289,10 +289,10 @@ ALTER FULLTEXT INDEX ON table_name
      此陳述式會啟動完整母體擴展 (預設行為)。  
   
     > [!NOTE]  
-    >  也會需要重建針對不同的搜尋屬性清單，例如`spl_2`。  
+    >  針對不同的搜尋屬性清單 (例如 `spl_2`)，也需要進行重建。  
   
 ## <a name="permissions"></a>Permissions  
- 使用者必須具有 ALTER 權限的資料表或索引檢視表，或必須屬於**sysadmin**固定伺服器角色或**db_ddladmin**或**db_owner**固定資料庫角色.  
+ 使用者必須具有資料表或索引檢視表的 ALTER 權限，或必須是 **sysadmin** 固定伺服器角色的成員，或是 **db_ddladmin** 或 **db_owner** 固定資料庫角色的成員。  
   
  如果指定了 SET STOPLIST，使用者在停用字詞表上必須具有 REFERENCES 權限。 如果指定了 SET SEARCH PROPERTY LIST，使用者必須有搜尋屬性清單的 REFERENCES 權限。 如果指定之停用字詞表或搜尋屬性清單的擁有者有 ALTER FULLTEXT CATALOG 權限，該擁有者可以授與 REFERENCES 權限。  
   
@@ -316,10 +316,10 @@ GO
   
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 下列範例將`DocumentPropertyList`屬性清單與全文檢索索引上`Production.Document`資料表。 這個 ALTER FULLTEXT INDEX 陳述式會啟動完整母體擴展，這是 SET SEARCH PROPERTY LIST 子句的預設行為。  
+ 下列範例會將 `DocumentPropertyList` 屬性清單與 `Production.Document` 資料表的全文檢索索引產生關聯。 這個 ALTER FULLTEXT INDEX 陳述式會啟動完整母體擴展，這是 SET SEARCH PROPERTY LIST 子句的預設行為。  
   
 > [!NOTE]  
->  如需建立範例`DocumentPropertyList`屬性清單，請參閱[CREATE SEARCH PROPERTY LIST &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  
+>  如需建立 `DocumentPropertyList` 屬性清單的範例，請參閱 [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -344,7 +344,7 @@ GO
 ```  
   
 ### <a name="d-starting-a-full-population"></a>D. 啟動完整母體擴展  
- 下列範例會啟動完整母體擴展的全文檢索索引上`JobCandidate`資料表。  
+ 下列範例會針對 `JobCandidate` 資料表啟動全文檢索索引的完整母體擴展。  
   
 ```  
 USE AdventureWorks2012;  
@@ -354,8 +354,8 @@ ALTER FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.fulltext_indexes &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   

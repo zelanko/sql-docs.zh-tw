@@ -1,5 +1,5 @@
 ---
-title: "CERT_ID (TRANSACT-SQL) |Microsoft 文件"
+title: CERT_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -51,11 +51,11 @@ Cert_ID ( 'cert_name' )
 **'** *cert_name* **'**  
 這是資料庫中憑證的名稱。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
  **int**  
   
-## <a name="remarks"></a>備註  
-憑證名稱會顯示在[sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)目錄檢視。
+## <a name="remarks"></a>Remarks  
+您可以在 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目錄檢視中看到憑證名稱。
   
 ## <a name="permissions"></a>Permissions  
 需要憑證的部份權限，且呼叫端尚未拒絕憑證的 VIEW DEFINITION 權限。

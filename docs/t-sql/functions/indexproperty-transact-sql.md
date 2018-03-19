@@ -1,5 +1,5 @@
 ---
-title: "INDEXPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -48,21 +48,21 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
   
 ## <a name="arguments"></a>引數  
  *object_ID*  
- 這是包含要提供的索引屬性資訊所屬之資料表或索引檢視之物件識別碼的運算式。 *object_ID*是**int**。  
+ 這是包含要提供的索引屬性資訊所屬之資料表或索引檢視之物件識別碼的運算式。 *object_ID* 為 **int**。  
   
  *index_or_statistics_name*  
- 這是包含傳回屬性資訊所屬之索引或統計資料名稱的運算式。 *index_or_statistics_name*是**nvarchar （128)**。  
+ 這是包含傳回屬性資訊所屬之索引或統計資料名稱的運算式。 *index_or_statistics_name* 為 **nvarchar(128)**。  
   
- *屬性*  
- 這是包含要傳回之資料庫屬性名稱的運算式。 *屬性*是**varchar （128)**，而且可以是下列值之一。  
+ *property*  
+ 這是包含要傳回之資料庫屬性名稱的運算式。 *property* 為 **varchar(128)**，並且可為下列其中一個值。  
   
 > [!NOTE]  
->  除非有說明，否則為 NULL 時，會傳回*屬性*不是有效的屬性名稱， *object_ID*不是有效的物件識別碼、 *object_ID*是不支援的物件類型指定的屬性，或者呼叫端沒有檢視物件的中繼資料的權限。  
+>  除非另有說明，否則當 *property* 不是有效屬性的名稱、*object_ID* 不是有效的物件識別碼、*object_ID* 不是指定屬性所支援的物件類型，或呼叫者沒有檢視物件中繼資料的權限時，便會傳回 NULL。  
   
-|屬性|Description|值|  
+|屬性|描述|ReplTest1|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|索引的深度。|索引層級的數目。<br /><br /> NULL = XML 索引或輸入無效。|  
-|**Indexdepth**|當建立索引或上次重建索引時，所用的填滿因數值。|填滿因數|  
+|**IndexFillFactor**|當建立索引或上次重建索引時，所用的填滿因數值。|填滿因數|  
 |**IndexID**|指定的資料表或索引檢視之索引的索引識別碼。|Index ID|  
 |**IsAutoStatistics**|ALTER DATABASE 的 AUTO_CREATE_STATISTICS 選項所產生的統計資料。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsClustered**|索引已建立叢集。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
@@ -72,7 +72,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsPadIndex**|索引指定每個內部節點保留開啟狀態的空間。|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsPageLockDisallowed**|ALTER INDEX 的 ALLOW_PAGE_LOCKS 選項所設定的頁面鎖定值。|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允許頁面鎖定。<br /><br /> 0 = 允許頁面鎖定。<br /><br /> NULL = 輸入無效。|  
 |**IsRowLockDisallowed**|ALTER INDEX 的 ALLOW_ROW_LOCKS 選項所設定的資料列鎖定值。|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允許資料列鎖定。<br /><br /> 0 = 允許資料列鎖定。<br /><br /> NULL = 輸入無效。|  
-|**IsStatistics**|*index_or_statistics_name*是由 CREATE STATISTICS 陳述式或 ALTER DATABASE 的 AUTO_CREATE_STATISTICS 選項所建立的統計資料。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**IsStatistics**|*index_or_statistics_name* 為 CREATE STATISTICS 陳述式或 ALTER DATABASE 之 AUTO_CREATE_STATISTICS 選項建立的統計資料。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsUnique**|索引是唯一的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsColumnstore**|索引是 xVelocity 記憶體最佳化的資料行存放區索引。|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -85,7 +85,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，INDEXPROPERTY) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回的值**IsClustered**， **IndexDepth**，和**Indexdepth**屬性`PK_Employee_BusinessEntityID`索引`Employee`資料表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Employee` 資料表 `PK_Employee_BusinessEntityID` 索引的 **IsClustered**、**IndexDepth** 和 **IndexFillFactor** 屬性的值。  
   
 ```  
 SELECT   
@@ -108,8 +108,8 @@ Is Clustered Index Depth Fill Factor
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會檢查其中一個索引的屬性上`FactResellerSales`資料表。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列範例會檢查 `FactResellerSales` 資料表上其中一個索引的屬性。  
   
 ```  
 -- Uses AdventureWorks  
@@ -124,13 +124,13 @@ INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [統計資料](../../relational-databases/statistics/statistics.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [sys.stats_columns &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
 

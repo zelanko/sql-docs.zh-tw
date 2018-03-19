@@ -1,5 +1,5 @@
 ---
-title: "PERCENTILE_CONT (TRANSACT-SQL) |Microsoft 文件"
+title: PERCENTILE_CONT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 
   依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料行值連續分佈計算百分位數。 其結果會以內插值取代，可能不會等於資料行中的任何特定值。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,11 +51,11 @@ PERCENTILE_CONT ( numeric_literal )
  *numeric_literal*  
  要運算的百分位數。 值範圍必須介於 0.0 到 1.0 之間。  
   
- 群組內**(** ORDER BY *order_by_expression* [ **ASC** |DESC]**)**  
- 指定要用以排序及計算百分位數的數值清單。 只有一個*order_by_expression*允許。 運算式必須評估為精確數值類型 (**int**， **bigint**， **smallint**， **tinyint**，**數值**，**元**，**十進位**， **smallmoney**， **money**) 或近似數值類型 (**float**，**真實**)。 不允許其他資料類型。 預設排序順序為遞增。  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ 指定要用以排序及計算百分位數的數值清單。 只允許一個 *order_by_expression*。 運算式必須評估為精確數值類型 (**int**、**bigint**、**smallint**、**tinyint**、**numeric**、**bit**、**decimal**、**smallmoney**、**money**) 或近似數值類型 (**float**、**real**)。 不允許其他資料類型。 預設排序順序為遞增。  
   
- 透過**(** \<partition_by_clause > **)**  
- 將 FROM 子句所產生的結果集，分割成套用百分位數函數的分割區。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md). \<ORDER BY 子句 > 及\<資料列或範圍子句 > 不可在 PERCENTILE_CONT 函數中指定 OVER 的語法。  
+ OVER **(** \<partition_by_clause> **)**  
+ 將 FROM 子句所產生的結果集，分割成套用百分位數函數的分割區。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 不可在 PERCENTILE_CONT 函式中指定 OVER 語法的 \<ORDER BY 子句> 及 \<資料列或範圍子句>。  
   
 ## <a name="return-types"></a>傳回類型  
  **float(53)**  
@@ -100,7 +100,7 @@ Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-basic-syntax-example"></a>B. 基本語法範例  
  下列範例會使用 PERCENTILE_CONT 及 PERCENTILE_DISC 尋找各部門員工的薪資中間值。 請注意，這些函數可能不會傳回相同的值。 這是因為資料集中無論有無 PERCENTILE_CONT，PERCENTILE_CONT 皆會插入適當值，而 PERCENTILE_DISC 則一律會傳回資料集中的實際值。  
@@ -128,8 +128,8 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving 9.250000      9.0000
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [PERCENTILE_DISC &#40;TRANSACT-SQL &#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
   
 

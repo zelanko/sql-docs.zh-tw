@@ -1,5 +1,5 @@
 ---
-title: "建立資料表 （教學課程） |Microsoft 文件"
+title: "建立資料表 (教學課程) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2016
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-2---creating-a-table"></a>課程 1-2-建立資料表
+# <a name="lesson-1-2---creating-a-table"></a>課程 1-2 - 建立資料表
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 若要建立資料表，您必須提供資料表的名稱，以及資料表中各資料行的名稱和資料類型， 最好也能指出各資料行中是否允許有 Null 值。 若要建立資料表，您必須擁有 `CREATE TABLE` 權限，以及將包含資料表之結構描述的 `ALTER SCHEMA` 權限。 `db_ddladmin` 固定資料庫角色擁有這些權限。  

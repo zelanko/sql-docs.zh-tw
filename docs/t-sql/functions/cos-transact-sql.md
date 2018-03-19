@@ -1,5 +1,5 @@
 ---
-title: "COS (TRANSACT-SQL) |Microsoft 文件"
+title: COS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,9 +47,9 @@ COS ( float_expression )
   
 ## <a name="arguments"></a>引數  
 *float_expression*  
-是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)型別的**float**。
+為任何 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 **float**
   
 ## <a name="examples"></a>範例  
@@ -72,7 +72,7 @@ The COS of the angle is: -0.599465
 
 ## <a name="examples"></a>範例
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
 下列範例會傳回特定角度的 COS。
@@ -90,7 +90,7 @@ cosCalc1  cosCalc2
 ```
   
 ## <a name="see-also"></a>另請參閱
-[數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

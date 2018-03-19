@@ -1,5 +1,5 @@
 ---
-title: "COL_NAME (TRANSACT-SQL) |Microsoft 文件"
+title: COL_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,12 +49,12 @@ COL_NAME ( table_id , column_id )
   
 ## <a name="arguments"></a>引數  
 *table_id*  
-這是包含資料行之資料表的識別碼。 *table_id*的型別**int**。
+這是包含資料行之資料表的識別碼。 *table_id* 的類型為 **int**。
   
 *column_id*  
-這是資料行的識別碼。 *column_id*參數的類型是**int**。
+這是資料行的識別碼。 *column_id* 參數的類型為 **int**。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 **sysname**
   
 ## <a name="exceptions"></a>例外狀況  
@@ -62,13 +62,13 @@ COL_NAME ( table_id , column_id )
   
 使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，COL_NAME) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
   
-## <a name="remarks"></a>備註  
-*Table_id*和*column_id*參數會共同產生的資料行名稱的字串。
+## <a name="remarks"></a>Remarks  
+*table_id* 和 *column_id* 參數會共同產生一個資料行名稱字串。
   
-如需有關取得資料表和資料行識別碼的詳細資訊，請參閱[OBJECT_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md).
+如需取得資料表和資料行識別碼的詳細資訊，請參閱 [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
-下列範例會傳回在範例中的第一個資料行名稱`Employee`資料表。
+下列範例會傳回範例 `Employee` 資料表中第一個資料行的名稱。
   
 ```sql
 -- Uses AdventureWorks  
@@ -87,9 +87,9 @@ BusinessEntityID
   
 ## <a name="see-also"></a>另請參閱
 [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
-[COL_LENGTH &#40;TRANSACT-SQL &#41;](../../t-sql/functions/col-length-transact-sql.md)
+[COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md)
   
   
 

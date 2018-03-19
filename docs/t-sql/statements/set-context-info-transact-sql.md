@@ -1,5 +1,5 @@
 ---
-title: "SET CONTEXT_INFO (TRANSACT-SQL) |Microsoft 文件"
+title: SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
 ## <a name="arguments"></a>引數  
  *binary_str*  
- 是**二進位**常數或常數，它是隱含地轉換成**二進位**、 要與目前工作階段或連接產生關聯。  
+ 這是要與目前工作階段或連線建立關聯的 **binary** 常數，或能夠隱含地轉換成 **binary** 的常數。  
   
- **@***binary_var*  
- 是**varbinary**或**二進位**持有要關聯於目前的工作階段或連接的內容值的變數。  
+ **@** *binary_var*  
+ 這是用來存放要與目前工作階段或連線的內容值建立關聯的 **varbinary** 或 **binary** 變數。  
   
-## <a name="remarks"></a>備註  
- 擷取目前工作階段的內容資訊，最好的方法是使用 CONTEXT_INFO 函數。 工作階段內容資訊也儲存在**context_info**下列系統檢視表中的資料行：  
+## <a name="remarks"></a>Remarks  
+ 擷取目前工作階段的內容資訊，最好的方法是使用 CONTEXT_INFO 函數。 工作階段內容資訊也儲存在下列系統檢視的 **context_info** 資料行中：  
   
 -   **sys.dm_exec_requests**  
   
@@ -65,7 +65,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
  在使用者自訂函數中，不能指定 SET CONTEXT_INFO。 您不能提供 Null 值給 SET CONTEXT_INFO，因為存放值的檢視不接受 Null 值。  
   
- SET CONTEXT_INFO 不接受常數或變數名稱以外的運算式。 若要函式呼叫的結果集的內容資訊，您必須先包含中的函式呼叫的結果**二進位**或**varbinary**變數。  
+ SET CONTEXT_INFO 不接受常數或變數名稱以外的運算式。 若要將內容資訊設為函式呼叫的結果，您必須先將函式呼叫的結果併入 **binary** 或 **varbinary** 變數中。  
   
  當您在預存程序或觸發程序中發出 SET CONTEXT_INFO 時，和其他 SET 陳述式不同的是，在預存程序或觸發程序完成之後，為內容資訊所設定的新值將保存下來。  
   
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-setting-context-information-by-using-a-function"></a>B. 利用函數來設定內容資訊  
- 下列範例會示範使用函式的輸出來設定內容值，其中的值從函式必須先放置在**二進位**變數。  
+ 下列範例會示範使用函式的輸出來設定內容值，其中來自函式的值必須先放置在 **binary** 變數中。  
   
 ```  
 DECLARE @BinVar varbinary(128);  
@@ -95,10 +95,10 @@ SELECT CONTEXT_INFO() AS MyContextInfo;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.dm_exec_requests &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_sessions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [CONTEXT_INFO &#40;TRANSACT-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)  
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
   
   

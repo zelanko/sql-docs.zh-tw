@@ -1,5 +1,5 @@
 ---
-title: "TRY_PARSE (TRANSACT-SQL) |Microsoft 文件"
+title: TRY_PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -47,52 +47,52 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="arguments"></a>引數  
  *string_value*  
- **nvarchar （4000)**值，代表要剖析為指定的資料類型的格式化的值。  
+ **nvarchar(4000)** 值，代表要剖析為指定資料類型的格式化值。  
   
- *string_value*必須是有效表示法要求的資料類型，否則 TRY_PARSE 會傳回 null。  
+ *string_value* 必須是所要求之資料類型的有效表示法，否則 TRY_PARSE 會傳回 null。  
   
  *data_type*  
  以文字表示結果所要求的資料類型。  
   
- *文化特性*  
- 識別在其中的文化特性的選擇性字串*string_value*格式化。  
+ *culture*  
+ 指出 *string_value* 據以格式化之文化特性 (Culture) 的選擇性字串。  
   
- 如果*文化特性*未提供引數，會使用目前的工作階段的語言。 此語言是以 SET LANGUAGE 陳述式隱含或明確加以設定。 *文化特性*任何.NET Framework; 所支援的文化特性並不限於使用明確支援的語言[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果*文化特性*引數無效，PARSE 會引發錯誤。  
+ 如未提供 *culture* 引數，將會使用目前工作階段的語言。 此語言是以 SET LANGUAGE 陳述式隱含或明確加以設定。 *culture* 接受 .NET Framework 所支援的任何文化特性 (Culture)，不限於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 明確支援的語言。 如果 *culture* 引數無效，PARSE 會引發錯誤。  
   
 ## <a name="return-types"></a>傳回類型  
  將傳回運算式結果，並轉譯為所要求的資料類型；若轉換失敗，則傳回 Null。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  TRY_PARSE 僅適用於從字串轉換到日期/時間及數字類型。 一般類型轉換仍可繼續使用 CAST 或 CONVERT。 請注意，剖析字串值將對效能造成一定程度的負擔。  
   
  TRY_PARSE 仰賴既存的 .NET Framework Common Language Runtime (CLR)。  
   
  因為必須要有 CLR 才可執行此函數，所以無法從遠端進行。 從遠端處理需要 CLR 的函數，會導致遠端伺服器發生錯誤。  
   
- **Data_type 參數的詳細資訊**  
+ **data_type 參數的詳細資訊**  
   
- 值*data_type*參數會限制為下表，與樣式中所顯示的類型。 此處所提供的樣式資訊可以協助您決定所要允許的模式類型。 如需有關樣式的詳細資訊，請參閱.NET Framework 文件**System.Globalization.NumberStyles**和**DateTimeStyles**列舉型別。  
+ *date_type* 的參數值僅適用於下表所示的類型與樣式。 此處所提供的樣式資訊可以協助您決定所要允許的模式類型。 如需關於樣式的詳細資訊，請參閱 **System.Globalization.NumberStyles** 和 **DateTimeStyles** 列舉的 .NET Framework 文件。  
   
 |類別目錄|類型|.NET 類型|使用的樣式|  
 |--------------|----------|---------------|-----------------|  
 |數值|bigint|Int64|NumberStyles.Number|  
-|數值|int|Int32|NumberStyles.Number|  
-|數值|smallint|Int16|NumberStyles.Number|  
-|數值|tinyint|Byte|NumberStyles.Number|  
-|數值|decimal|Decimal|NumberStyles.Number|  
-|數值|numeric|Decimal|NumberStyles.Number|  
-|數值|float|Double|NumberStyles.Float|  
-|數值|real|Single|NumberStyles.Float|  
-|數值|smallmoney|Decimal|NumberStyles.Currency|  
+|數值|ssNoversion|Int32|NumberStyles.Number|  
+|數值|SMALLINT|Int16|NumberStyles.Number|  
+|數值|TINYINT|Byte|NumberStyles.Number|  
+|數值|Decimal|Decimal|NumberStyles.Number|  
+|數值|NUMERIC|Decimal|NumberStyles.Number|  
+|數值|FLOAT|Double|NumberStyles.Float|  
+|數值|REAL|Single|NumberStyles.Float|  
+|數值|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |數值|money|Decimal|NumberStyles.Currency|  
-|日期及時間|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
-|日期及時間|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
-|日期及時間|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
-|日期及時間|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
-|日期及時間|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
-|日期及時間|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
+|日期及時間|日期|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
- **文化特性參數的詳細資訊**  
+ **文化特性 (Culture) 參數的詳細資訊**  
   
  下表顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言所對應的 .NET Framework 文化特性。  
   
@@ -189,10 +189,10 @@ False
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [剖析 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/parse-transact-sql.md)   
- [轉換函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
- [TRY_CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)   
+ [轉換函式 &#40;Transact-SQL&#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
+ [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

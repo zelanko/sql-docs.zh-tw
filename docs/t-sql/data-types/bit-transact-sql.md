@@ -1,5 +1,5 @@
 ---
-title: "位元 (TRANSACT-SQL) |Microsoft 文件"
+title: bit (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.lasthandoff: 11/21/2017
 
   一種整數資料類型，其值有 1、0 或 NULL 幾種。  
   
-## <a name="remarks"></a>備註  
-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的儲存體最佳化**元**資料行。 如果有 8 個或更少**元**資料行在資料表中，資料行會儲存為 1 個位元組。 如果有 9 到 16 個**元**資料行的資料行儲存成 2 位元組和等等。
+## <a name="remarks"></a>Remarks  
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可將 **bit** 資料行的儲存體最佳化。 如果資料表中的 **bit** 資料行小於或等於 8 個，這些資料行會儲存為 1 個位元組。 如果有 9 到 16 個 **bit** 資料行，則儲存為 2 個位元組，依此類推。
   
-字串值 TRUE 和 FALSE 可以轉換成**元**值： TRUE 會轉換成 1，FALSE 則轉換為 0。
+字串值 TRUE 和 FALSE 可以轉換成 **bit** 值：TRUE 會轉換成 1，FALSE 則轉換成 0。
   
 轉換成位元會將任何非零的值升級成 1。
   
@@ -47,10 +47,10 @@ ms.lasthandoff: 11/21/2017
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[資料類型轉換 &#40; Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[資料類型轉換 &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[sys.types &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

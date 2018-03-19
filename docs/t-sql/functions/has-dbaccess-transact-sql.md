@@ -1,5 +1,5 @@
 ---
-title: "HAS_DBACCESS (TRANSACT-SQL) |Microsoft 文件"
+title: HAS_DBACCESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -53,12 +53,12 @@ HAS_DBACCESS ( 'database_name' )
   
 ## <a name="arguments"></a>引數  
  '*database_name*'  
- 這是使用者需要存取資訊的資料庫名稱。 *database_name*是**sysname**。  
+ 這是使用者需要存取資訊的資料庫名稱。 *database_name* 為 **sysname**。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果使用者有資料庫的存取權，HAS_DBACCESS 會傳回 1；如果沒有存取權，則會傳回 0；如果資料庫名稱無效，則會傳回 NULL。  
   
  如果資料庫處於離線或可疑狀態，HAS_DBACCESS 會傳回 0。  
@@ -76,7 +76,7 @@ SELECT HAS_DBACCESS('AdventureWorks2012');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會測試目前使用者是否具有 `AdventureWorksPDW2012` 資料庫的存取權。  
   
 ```  
@@ -84,8 +84,8 @@ SELECT HAS_DBACCESS('AdventureWorksPDW2012');
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [IS_MEMBER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/is-member-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
  [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)  
   
   

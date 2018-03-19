@@ -1,5 +1,5 @@
 ---
-title: "CERTPRIVATEKEY (TRANSACT-SQL) |Microsoft 文件"
+title: CERTPRIVATEKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ CERTPRIVATEKEY
   
 ## <a name="arguments"></a>引數  
 *certificate_ID*  
-是**certificate_id**的憑證。 這是 sys.certificates 或藉由使用[CERT_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)函式。 *cert_id*是型別**int**
+憑證的 **certificate_id**。 這可從 sys.certificates 或是使用 [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) 函式取得。 *cert_id* 的類型為 **int**
   
 *encryption_password*  
 用來加密傳回之二進位值的密碼。
@@ -62,14 +62,14 @@ CERTPRIVATEKEY
 *decryption_password*  
 用來解密傳回之二進位值的密碼。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 **varbinary**
   
-## <a name="remarks"></a>備註  
-**CERTENCODED**和**CERTPRIVATEKEY**一起用來以二進位格式傳回憑證的不同部分。
+## <a name="remarks"></a>Remarks  
+**CERTENCODED** 及 **CERTPRIVATEKEY** 會一起用來傳回憑證的不同部分 (二進位格式)。
   
 ## <a name="permissions"></a>Permissions  
-**CERTPRIVATEKEY**是可以公開。
+**CERTPRIVATEKEY** 可以公開使用。
   
 ## <a name="examples"></a>範例  
   
@@ -86,12 +86,12 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-如需更複雜的範例，會使用**CERTPRIVATEKEY**和**CERTENCODED**將憑證複製到另一個資料庫，請參閱本主題中的範例 B [CERTENCODED &#40;TRANSACT-SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md).
+如需使用 **CERTPRIVATEKEY** 和 **CERTENCODED** 將憑證複製到其他資料庫的更複雜範例，請參閱 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 主題中的範例 B。
   
 ## <a name="see-also"></a>另請參閱
 [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-[建立的憑證 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-certificate-transact-sql.md) 
-[安全性函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/security-functions-transact-sql.md) 
- [sys.certificates &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)
+[安全性函式 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)
+[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

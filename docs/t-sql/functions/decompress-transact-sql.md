@@ -1,5 +1,5 @@
 ---
-title: "解壓縮 (TRANSACT-SQL) |Microsoft 文件"
+title: DECOMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/30/2015
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="decompress-transact-sql"></a>解壓縮 (TRANSACT-SQL)
+# <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  解壓縮使用 GZIP 演算法的輸入的運算式。 壓縮的結果是位元組陣列 （varbinary （max） 類型）。  
+  使用 GZIP 演算法解壓縮輸入運算式。 壓縮的結果為位元組陣列 (VARBINARY(MAX) 類型)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,17 +44,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 是**varbinary (***n***)**， **varbinary （max)**，或**二進位 (** *n***)**. 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 為 **varbinary(***n***)**、**varbinary(max)**，或 **binary(***n***)**。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回的資料型別**varbinary （max)**型別。 輸入引數被解壓縮 ZIP 演算法。 如有需要使用者應該明確轉換成目標類型的結果。  
+ 傳回 **varbinary(max)** 類型的資料類型。 輸入引數會使用 ZIP 演算法進行解壓縮。 使用者應明確將結果轉換成目標類型 (若需要的話)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-decompress-data-at-query-time"></a>A. 在查詢階段解壓縮資料  
- 下列範例會示範如何顯示資料表的壓縮資料：  
+### <a name="a-decompress-data-at-query-time"></a>A. 在查詢期間解壓縮資料  
+ 下列範例示範如何顯示來自資料表的壓縮資料：  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -62,8 +62,8 @@ SELECT _id, name, surname, datemodified,
 FROM player;  
 ```  
   
-### <a name="b-display-compressed-data-using-computed-column"></a>B. 顯示使用計算資料行的壓縮的資料  
- 下列範例會示範如何建立可儲存解壓縮的資料的資料表：  
+### <a name="b-display-compressed-data-using-computed-column"></a>B. 使用計算資料行顯示壓縮資料  
+ 下列範例示範如何建立資料表，以儲存解壓縮資料：  
   
 ```  
 CREATE TABLE (  
@@ -75,8 +75,8 @@ CREATE TABLE (
 );  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [COMPRESS &#40;TRANSACT-SQL &#41;](../../t-sql/functions/compress-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [字串函式 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "字串函數 (TRANSACT-SQL) |Microsoft 文件"
+title: "字串函式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
@@ -52,11 +52,11 @@ ms.lasthandoff: 11/21/2017
 
 
   
- 所有的內建字串函數除了`FORMAT`都具有決定性。 這表示任何時間使用一組特定輸入值來呼叫它們，都會傳回相同的值。 如需函數決定論的詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+ 所有內建字串函式都具有確定性 (除 `FORMAT` 外)。 這表示任何時間使用一組特定輸入值來呼叫它們，都會傳回相同的值。 如需函式確定性的詳細資訊，請參閱[確定性與非確定性函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
- 將不是字串值的引數傳遞給字串函數時，輸入類型會隱含地轉換成文字資料類型。 如需詳細資訊，請參閱[資料類型轉換 &#40; Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
+ 將不是字串值的引數傳遞給字串函數時，輸入類型會隱含地轉換成文字資料類型。 如需詳細資訊，請參閱[資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "COLUMNS_UPDATED (TRANSACT-SQL) |Microsoft 文件"
+title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回**varbinary**指出資料表或檢視的插入或更新中的資料行的位元模式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 觸發程序主體內的任何位置都可以利用 COLUMNS_UPDATED，來測試觸發程序是否應該執行特定動作。
+傳回一個 **varbinary** 位元模式，來指出插入或更新之資料表或檢視中的資料行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 觸發程序主體內的任何位置都可以利用 COLUMNS_UPDATED，來測試觸發程序是否應該執行特定動作。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,12 +50,12 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>傳回型別
 **varbinary**
   
-## <a name="remarks"></a>備註  
-COLUMNS_UPDATED 會測試多個資料行所執行的 UPDATE 或 INSERT 動作。 若要測試的 UPDATE 或 INSERT 作業在一個資料行上，使用[update （)](../../t-sql/functions/update-trigger-functions-transact-sql.md)。
+## <a name="remarks"></a>Remarks  
+COLUMNS_UPDATED 會測試多個資料行所執行的 UPDATE 或 INSERT 動作。 若要在一個資料行上測試 UPDATE 或 INSERT 作業，請使用 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md)。
   
 COLUMNS_UPDATED 會傳回由左至右排序的一或多個位元組，每個位元組中最不重要的位元在最右邊。 最左邊位元組的最右邊位元代表資料表的第一個資料行；左邊的下一個位元代表第二個資料行，依此類推。 如果建立觸發程序的資料表包含超出八個資料行，COLUMNS_UPDATED 會傳回多個位元組，最不重要的位元組在最左邊。 COLUMNS_UPDATED 會針對 INSERT 動作中的所有資料行傳回 TRUE，因為插入了明確的值或隱含的 (NULL) 值。
   
-若要進行特定資料行的更新或插入測試，請遵照含有位元運算子和所測試的資料行之整數位元遮罩的語法。 例如，資料表**t1**包含資料行**C1**， **C2**， **C3**， **C4**，和**C5**. 若要確認該資料行**C2**， **C3**，和**C4**都更新 (與資料表**t1**有 UPDATE 觸發程序)，遵循與語法**& 14**。 若要測試是否唯一資料行**C2**是更新，指定**& 2**。
+若要進行特定資料行的更新或插入測試，請遵照含有位元運算子和所測試的資料行之整數位元遮罩的語法。 例如，**t1** 資料表包含 **C1**、**C2**、**C3**、**C4** 和 **C5** 資料行。 若要確認資料行 **C2**、**C3**，以及 **C4** 已全部更新 (**t1** 資料表具有 UPDATE 觸發程序)，請遵循含有 **& 14** 的語法。 若要測試是否僅有 **C2** 獲得更新，請指定 **& 2**。
   
 COLUMNS_UPDATED 可用在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 觸發程序內的任何位置。
   
@@ -188,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. 利用 COLUMNS_UPDATED 來測試八個以上資料行  
-若要測試會影響資料表中前八個資料行以外之資料行的更新，請利用 `SUBSTRING` 函數來測試 `COLUMNS_UPDATED` 所傳回的正確位元。 下列範例會測試影響資料行的更新`3`， `5`，和`9`中`AdventureWorks2012.Person.Person`資料表。
+若要測試會影響資料表中前八個資料行以外之資料行的更新，請利用 `SUBSTRING` 函數來測試 `COLUMNS_UPDATED` 所傳回的正確位元。 下列範例會測試影響 `AdventureWorks2012.Person.Person` 資料表中之第 `3` 個、第 `5` 個與第 `9` 個資料行的更新。
   
 ```sql
 USE AdventureWorks2012;  
@@ -211,8 +211,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[位元運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+[位元運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-[更新 &#40; &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
+[UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   

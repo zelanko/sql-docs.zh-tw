@@ -1,5 +1,5 @@
 ---
-title: "DROP ROLE (TRANSACT-SQL) |Microsoft 文件"
+title: DROP ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -58,18 +58,18 @@ DROP ROLE role_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *如果存在*  
+ *IF EXISTS*  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
- 只有當它已經存在有條件地卸除角色。  
+ 只有在角色已存在時，才能有條件地將其卸除。  
   
  *role_name*  
  指定要從資料庫卸除的角色。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  擁有安全性實體的角色，不可以從資料庫卸除。 若要卸除一個擁有安全性實體的資料庫角色，必須先傳送那些安全性實體的擁有權，或者從資料庫卸除它們。 含有成員的角色，不可以從資料庫卸除。 若要卸除一個含有成員的角色，必須先移除該角色的成員。  
   
- 若要移除資料庫角色的成員，請使用[ALTER ROLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md).  
+ 若要從資料庫角色中移除成員，請使用 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)。  
   
  您不可以利用 DROP ROLE 來卸除固定資料庫角色。  
   
@@ -78,13 +78,13 @@ DROP ROLE role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
- 若要移除伺服器角色，請使用[DROP SERVER ROLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-server-role-transact-sql.md).  
+ 若要移除伺服器角色，請使用 [DROP SERVER ROLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-server-role-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
- 需要**ALTER ANY ROLE**資料庫的權限或**控制項**權限中的成員資格的角色， **db_securityadmin**。  
+ 需要資料庫的 **ALTER ANY ROLE** 權限、角色的 **CONTROL** 權限，或 **db_securityadmin** 的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會卸除資料庫角色`purchasing`從`AdventureWorks2012`資料庫。  
+ 下列範例會從 `AdventureWorks2012` 資料庫卸除資料庫角色 `purchasing`。  
   
 ```  
 DROP ROLE purchasing;  
@@ -92,9 +92,9 @@ GO
 ```  
   
   
-## <a name="see-also"></a>請參閱＜  
- [建立角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
- [更改角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

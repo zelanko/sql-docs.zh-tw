@@ -1,5 +1,5 @@
 ---
-title: "ORIGINAL_DB_NAME (TRANSACT-SQL) |Microsoft 文件"
+title: ORIGINAL_DB_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回使用者在資料庫連接字串中指定的資料庫名稱。 這是使用指定的資料庫**sqlcmd-d**選項 (使用*資料庫*) 或 ODBC 資料來源運算式 (初始目錄 =*databasename*)。  
+  傳回使用者在資料庫連接字串中指定的資料庫名稱。 這是使用 **sqlcmd-d** 選項 (USE *database*) 或 ODBC 資料來源運算式 (initial catalog =*databasename*) 所指定的資料庫。  
   
  此資料庫與預設的使用者資料庫不同。  
   
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果未指定初始資料庫，函數會傳回空字串。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
  [osql 公用程式](../../tools/osql-utility.md)   
- [SQL Server Native Client &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

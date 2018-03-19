@@ -1,5 +1,5 @@
 ---
-title: "刪除資料庫物件 |Microsoft 文件"
+title: "刪除資料庫物件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-3-1---deleting-database-objects"></a>課程 3-1-刪除資料庫物件
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]若要移除本教學課程的所有追蹤，您就無法刪除資料庫。 但是，在這個主題中，您將會逐步執行各個步驟，以反轉您在這個教學課程中所做的每一個動作。  
+# <a name="lesson-3-1---deleting-database-objects"></a>課程 3-1 - 刪除資料庫物件
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 若要移除這個教學課程中的所有執行內容，只要刪除資料庫即可。 但是，在這個主題中，您將會逐步執行各個步驟，以反轉您在這個教學課程中所做的每一個動作。  
   
 ### <a name="removing-permissions-and-objects"></a>移除權限和物件  
   

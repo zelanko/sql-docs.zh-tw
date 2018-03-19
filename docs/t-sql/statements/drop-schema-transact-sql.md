@@ -1,5 +1,5 @@
 ---
-title: "卸除結構描述 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -57,20 +57,20 @@ DROP SCHEMA schema_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *如果存在*  
+ *IF EXISTS*  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
- 只有當它已經存在有條件地卸除結構描述。  
+ 只有在結構描述已存在時，才能有條件地將其卸除。  
   
  *schema_name*  
  這是資料庫中結構描述的識別名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  要卸除的結構描述不能包含任何物件。 如果該結構描述包含物件，DROP 陳述式會失敗。  
   
- 結構描述的相關資訊會顯示在[sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)目錄檢視。  
+ 您可以在 [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) 目錄檢視中，看到有關結構描述的資訊。  
   
- **注意：**[!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **注意** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
 ## <a name="permissions"></a>Permissions  
  需要結構描述的 CONTROL 權限或資料庫的 ALTER ANY SCHEMA 權限。  
@@ -95,8 +95,8 @@ GO
 ```  
   
   
-## <a name="see-also"></a>請參閱＜  
- [建立結構描述 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [ALTER SCHEMA &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
- [卸除結構描述 (TRANSACT-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

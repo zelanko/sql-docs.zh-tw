@@ -1,5 +1,5 @@
 ---
-title: "DATEFROMPARTS (TRANSACT-SQL) |Microsoft 文件"
+title: DATEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-傳回**日期**指定的年、 月和日的值。
+傳回指定之年、月、日的 **date** 值。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATEFROMPARTS ( year, month, day )
 ```  
   
 ## <a name="arguments"></a>引數  
-*年份*  
+*year*  
 指定年份的整數運算式。
   
-*月份*  
+*month*  
 指定月份的整數運算式，從 1 到 12。
   
-*一天*  
+*day*  
 指定日期的整數運算式。
   
 ## <a name="return-types"></a>傳回型別
 **date**
   
-## <a name="remarks"></a>備註  
-**DATEFROMPARTS**傳回**日期**具有設定為指定的年、 月和日的日期部分和時間部分會設為預設值。 如果引數無效，將會引發錯誤。 如果要求的引數為 null，即會傳回 null。
+## <a name="remarks"></a>Remarks  
+**DATEFROMPARTS** 會傳回 **date** 值，其中日期部分會設為指定的年、月、日，而時間部分則會設為預設值。 如果引數無效，將會引發錯誤。 如果要求的引數為 null，即會傳回 null。
   
 函數可以在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 伺服器和更新版伺服器上以遠端方式進行。 它在版本低於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的伺服器上無法以遠端方式運作。
   
 ## <a name="examples"></a>範例  
-下列範例會示範**DATEFROMPARTS**函式。
+以下範例示範 **DATEFROMPARTS** 函式。
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  

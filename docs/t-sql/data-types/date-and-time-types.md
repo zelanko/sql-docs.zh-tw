@@ -1,5 +1,5 @@
 ---
-title: "日期和時間類型 |Microsoft 文件"
+title: "日期和時間類型 | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -33,14 +33,14 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="in-this-section"></a>本節內容
 [日期 &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
-[日期時間 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)  
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[smalldatetime &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
-[時間 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/time-transact-sql.md)
+[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
+[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)
   
 ## <a name="see-also"></a>另請參閱
-[日期和時間資料類型和函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-[TIME ZONE &AMP;#40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

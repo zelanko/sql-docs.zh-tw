@@ -1,5 +1,5 @@
 ---
-title: "GRANT 伺服器權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "GRANT 伺服器權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,12 +62,12 @@ GRANT permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以授與的伺服器權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 若要\<grantee_principal > 指定的正在授與權限的主體。  
+ TO \<grantee_principal> 指定要對其授與權限的主體。  
   
- AS \<grantor_principal > 指定要從中執行此查詢的主體衍生權限來授與權限的主體。  
+ AS \<grantor_principal> 指定主體，以讓執行這項查詢的主體可從該主體衍生授與權限的權力。  
   
  WITH GRANT OPTION  
  指出主體也有權授與指定權限給其他主體。  
@@ -90,10 +90,10 @@ GRANT permission [ ,...n ]
  *server_role*  
  指定使用者定義伺服器角色。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  只有在目前資料庫是 master 的情況下，才能夠授與伺服器範圍的權限。  
   
- 在可以檢視有關伺服器權限的資訊[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目錄檢視，以及有關伺服器主體的資訊可以在檢視[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目錄檢視。 伺服器角色的成員資格的相關資訊可在中的檢視[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)目錄檢視。  
+ 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中檢視伺服器權限的資訊，而在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中檢視伺服器主體的資訊。 您可以在 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目錄檢視中檢視伺服器角色成員資格的資訊。  
   
  伺服器是最高層級的權限階層。 下表所列的是可以授與之最特定且最有限的伺服器權限。  
   
@@ -134,17 +134,17 @@ GRANT permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中已加入下列三個伺服器權限。  
   
- **連接的任何資料庫**權限  
- 授與**CONNECT ANY DATABASE**必須連接到目前存在之所有資料庫與未來可能會建立任何新資料庫的登入。 不要在任何資料庫中授與超出連接的任何權限。 結合**SELECT ALL USER SECURABLES**或**VIEW SERVER STATE**可讓稽核程序的執行個體上檢視所有資料或所有資料庫狀態[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ **CONNECT ANY DATABASE** 權限  
+ 針對必須連線到目前存在之所有資料庫與未來可能建立之新資料庫的登入，授與 **CONNECT ANY DATABASE**。 不要在任何資料庫中授與超出連接的任何權限。 結合 **SELECT ALL USER SECURABLES** 或 **VIEW SERVER STATE**，以讓稽核程序檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料或所有資料庫狀態。  
   
- **模擬任何登入**權限  
- 授與此權限時，可讓中間層程序在連接到資料庫時模擬連接的用戶端帳戶。 拒絕此權限時，高權限登入可能遭到封鎖，而無法模擬其他登入。 例如，使用登入**CONTROL SERVER**權限可以遭到封鎖而無法模擬其他登入。  
+ **IMPERSONATE ANY LOGIN** 權限  
+ 授與此權限時，可讓中間層程序在連接到資料庫時模擬連接的用戶端帳戶。 拒絕此權限時，高權限登入可能遭到封鎖，而無法模擬其他登入。 例如，具有 **CONTROL SERVER** 權限的登入可能遭到封鎖，而無法模擬其他登入。  
   
- **選取 ALL USER SECURABLES**權限  
- 授與此權限時，像是稽核者這類登入就可以檢視使用者可連接之所有資料庫中的資料。 當拒絕時，防止存取物件不在**sys**結構描述。  
+ **SELECT ALL USER SECURABLES** 權限  
+ 授與此權限時，像是稽核者這類登入就可以檢視使用者可連接之所有資料庫中的資料。 拒絕此權限時，可防止存取不在 **sys** 結構描述中的物件。  
   
 ## <a name="permissions"></a>Permissions  
  同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。 系統管理員 (sysadmin) 固定伺服器角色的成員也能夠授與任何權限。  
@@ -181,16 +181,16 @@ GRANT ALTER ANY DATABASE TO ITDevelopers AS ITDevAdmin ;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [DENY 伺服器權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [REVOKE 伺服器權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [DENY 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

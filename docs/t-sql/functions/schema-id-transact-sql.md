@@ -1,5 +1,5 @@
 ---
-title: "SCHEMA_ID (TRANSACT-SQL) |Microsoft 文件"
+title: SCHEMA_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,14 +52,14 @@ SCHEMA_ID ( [ schema_name ] )
   
 |詞彙|定義|  
 |----------|----------------|  
-|*schema_name*|這是結構描述的名稱。 *schema_name*是**sysname**。 如果*schema_name*未指定，SCHEMA_ID 會傳回呼叫端的預設結構描述的識別碼。|  
+|*schema_name*|這是結構描述的名稱。 *schema_name* 為 **sysname**。 若未指定 *schema_name*，則 SCHEMA_ID 會傳回呼叫者預設結構描述的識別碼。|  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
- 如果，則會傳回 NULL *schema_name*不是有效的結構描述。  
+ 若 *schema_name* 不是有效的結構描述，則會傳回 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  SCHEMA_ID 會傳回系統結構描述和使用者自訂結構描述的識別碼。 SCHEMA_ID 可在選取清單、WHERE 子句及任何允許使用運算式的位置中呼叫。  
   
 ## <a name="examples"></a>範例  
@@ -76,10 +76,10 @@ SELECT SCHEMA_ID();
 SELECT SCHEMA_ID('dbo');  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [SCHEMA_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/schema-name-transact-sql.md)   
- [sys.schemas &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
+## <a name="see-also"></a>另請參閱  
+ [中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [SCHEMA_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/schema-name-transact-sql.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
   
   
 

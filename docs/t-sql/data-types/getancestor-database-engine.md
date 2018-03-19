@@ -1,5 +1,5 @@
 ---
-title: "GetAncestor (Database Engine) |Microsoft 文件"
+title: "GetAncestor (資料庫引擎) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getancestor-database-engine"></a>GetAncestor (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回**hierarchyid**代表 *n*個上階的*這*。
+傳回 **hierarchyid**，代表 *this* 的第 *n* 個上階。
   
 ## <a name="syntax"></a>語法  
   
@@ -50,17 +50,17 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>引數  
 *n*  
-**Int**，代表要在階層層級數目。
+**int**，代表要在階層中向上移動的層級數目。
   
-## <a name="return-types"></a>傳回型別
-**SQL Server 傳回類型： hierarchyid**
+## <a name="return-types"></a>傳回型
+**SQL Server 傳回型別：hierarchyid**
   
-**CLR 傳回類型： SqlHierarchyId**
+**CLR 傳回型別：SqlHierarchyId**
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 用來測試輸出中的每個節點是否都具有目前的節點當做位於指定之層級的上階。
   
-如果大於[getlevel （)](../../t-sql/data-types/getlevel-database-engine.md)是傳遞，則傳回 NULL。
+如果傳遞大於 [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) 的數字，就會傳回 NULL。
   
 如果傳遞了負數，則會引發例外狀況。
   
@@ -93,7 +93,7 @@ WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;
 ```  
   
 ### <a name="c-returning-the-current-row"></a>C. 傳回目前的資料列  
-若要傳回目前節點使用`GetAncestor(0)`，執行下列程式碼。
+若要使用 `GetAncestor(0)` 來傳回目前的節點，請執行下列程式碼。
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -124,7 +124,7 @@ this.GetAncestor(1)
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[IsDescendantOf &#40; Database engine&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
+[IsDescendantOf &#40;資料庫引擎&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Hierarchyid 資料類型方法參考](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [階層式資料 &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: "加入簽章 (TRANSACT-SQL) |Microsoft 文件"
+title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -61,22 +61,22 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  *module_class*  
  這是要加入簽章之模組的類別。 結構描述範圍模組的預設值是 OBJECT。  
   
- *適於*  
+ *module_name*  
  這是要簽署或反簽署的預存程序、函數、組件或觸發程序的名稱。  
   
- 憑證*cert_name*  
+ CERTIFICATE *cert_name*  
  這是用來預存程序、函數、組件或觸發程序要簽署或反簽署的憑證名稱。  
   
- 密碼 ='*密碼*'  
+ WITH PASSWORD ='*password*'  
  這是要將憑證私密金鑰或非對稱金鑰解密所需的密碼。 唯有當私密金鑰不受資料庫主要金鑰保護時，才需要這個子句。  
   
- 簽章 =*signed_blob*  
- 指定模組已簽署的二進位大型物件 (BLOB)。 如果您想要傳送模組但不傳送私密金鑰，則這個子句很有用。 當您使用這個子句時，只需要模組、簽章和公開金鑰，即可將簽署的二進位大型物件加入資料庫中。 *signed_blob*是以十六進位格式的 blob 本身。  
+ SIGNATURE =*signed_blob*  
+ 指定模組已簽署的二進位大型物件 (BLOB)。 如果您想要傳送模組但不傳送私密金鑰，則這個子句很有用。 當您使用這個子句時，只需要模組、簽章和公開金鑰，即可將簽署的二進位大型物件加入資料庫中。 *signed_blob* 是十六進位格式的 Blob 本身。  
   
- 非對稱金鑰*Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  這是預存程序、函數、組件或觸發程序用來簽署或副署的非對稱金鑰名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  簽署或副署的模組及用來簽署的憑證或非對稱金鑰必須已存在。 模組中的每個字元都會包含在簽章計算中。 這包括開頭的歸位字元和換行字元。  
   
  可用任何數目的憑證和非對稱金鑰來簽署和副署模組。  
@@ -96,9 +96,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 >  當重新建立簽章的程序時，在原始批次的所有陳述式必須符合當重新建立批次。 如果批次中有任何部分不同 (即使是在空格或註解)，產生的簽章會有所不同。  
   
 ## <a name="countersignatures"></a>副署  
- 當執行簽署的模組，簽章暫時加入至 SQL token，但簽章會遺失，如果此模組執行另一個模組，或此模組結束執行。 副署簽章是一種特殊形式的簽章。 副署簽章本身並不會授與任何權限，但是它可允許在呼叫副署物件的期間，保留相同憑證或非對稱金鑰所做的簽章。  
+ 當執行簽署的模組時，簽章會暫時新增至 SQL Token，但是如果此模組執行另一個模組或是此模組結束執行，簽章將會遺失。 副署是一種特殊形式的簽章。 副署簽章本身並不會授與任何權限，但是它可允許在呼叫副署物件的期間，保留相同憑證或非對稱金鑰所做的簽章。  
   
- 例如，假設使用者 Alice 呼叫 ProcSelectT1ForAlice 程序，此程序呼叫 procSelectT1 程序，後者是從資料表 T1 選取而來。 Alice 擁有 ProcSelectT1ForAlice 和 procSelectT1 的 EXECUTE 權限，但是沒有 T1 的 SELECT 權限，所以這整個鏈結中並未牽涉到任何擁有權鏈結。 Alice 無法存取資料表 T1，不論是直接存取還是透過 ProcSelectT1ForAlice 和 procSelectT1 的使用。 因為我們希望 Alice 永遠都使用 ProcSelectT1ForAlice 進行存取時，我們不想要授與她執行 procSelectT1 的權限。 我們該怎麼完成呢？  
+ 例如，假設使用者 Alice 呼叫 ProcSelectT1ForAlice 程序，此程序呼叫 procSelectT1 程序，後者是從資料表 T1 選取而來。 Alice 擁有 ProcSelectT1ForAlice 和 procSelectT1 的 EXECUTE 權限，但是沒有 T1 的 SELECT 權限，所以這整個鏈結中並未牽涉到任何擁有權鏈結。 Alice 無法存取資料表 T1，不論是直接存取還是透過 ProcSelectT1ForAlice 和 procSelectT1 的使用。 因為我們希望 Alice 一律使用 ProcSelectT1ForAlice 進行存取，所以我們不想要授與其執行 procSelectT1 的權限。 我們該怎麼完成呢？  
   
 -   如果我們簽署 procSelectT1，好讓 procSelectT1 可以存取 T1，則 Alice 就可以直接叫用 procSelectT1，而且他不必呼叫 ProcSelectT1ForAlice。  
   
@@ -106,7 +106,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   只簽署 ProcSelectT1ForAlice 是不可行的，因為在呼叫 procSelectT1 時將會遺失簽章。  
   
-不過，根據用來簽署 ProcSelectT1ForAlice、 的相同憑證副署 procSelectT1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將整個呼叫鏈結中保留簽章，而且允許存取 t1。 如果 Alice 嘗試直接呼叫 procSelectT1，他就無法存取 T1，因為副署不會授與任何權限。 例如，底下的 C 顯示這個範例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+但是，透過用來簽署 ProcSelectT1ForAlice 的相同憑證副署 procSelectT1 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在整個呼叫鏈結中保留簽章，而且允許存取 T1。 如果 Alice 嘗試直接呼叫 procSelectT1，他就無法存取 T1，因為副署不會授與任何權限。 例如，底下的 C 顯示這個範例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 ## <a name="permissions"></a>Permissions  
  需要物件的 ALTER 權限，以及憑證或非對稱金鑰的 CONTROL 權限。 如果相關聯的私密金鑰受到密碼保護，則使用者也必須有密碼。  
@@ -255,8 +255,8 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.crypt_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [卸除簽章 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
   
   

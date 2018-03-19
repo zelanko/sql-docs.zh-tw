@@ -1,5 +1,5 @@
 ---
-title: "@@CURSOR_ROWS (TRANSACT-SQL) |Microsoft 文件"
+title: '@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (TRANSACT-SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回在連接所開啟的最後一個資料指標中，目前符合的資料列數。 若要提升效能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以非同步地擴展大型索引鍵集和靜態資料指標。 @@CURSOR_ROWS可以呼叫以判斷符合資料指標的資料列數目會擷取 @ 次@CURSOR_ROWS呼叫。
+傳回在連接所開啟的最後一個資料指標中，目前符合的資料列數。 若要提升效能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以非同步地擴展大型索引鍵集和靜態資料指標。 您可以呼叫 @@CURSOR_ROWS 來決定在呼叫 @@CURSOR_ROWS 時擷取資料指標適用的資料列數目。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,15 +52,15 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="return-value"></a>傳回值  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |---|---|
-|-*m*|非同步地擴展資料指標。 傳回的值 (-*m*) 是目前在索引鍵集資料列數目。|  
+|-*m*|非同步地擴展資料指標。 傳回的值 (-*m*) 是目前在索引鍵集中的資料列數。|  
 |-1|資料指標是動態的。 由於動態資料指標會反映所有變更，因此，資料指標之符合的資料列數會不斷改變。 永遠不可能明確指出已擷取了所有符合的資料列。|  
 |0|未開啟任何資料列、最後開啟的資料指標沒有適合的資料列，或最後開啟的資料指標已關閉或取消配置。|  
-|*n*|已充分擴展資料指標。 傳回的值 (*n*) 是資料指標中的資料列總數。|  
+|*n*|已充分擴展資料指標。 傳回的值 (*n*) 是資料指標中的總資料列數。|  
   
-## <a name="remarks"></a>備註  
-傳回的數字@CURSOR_ROWS是負數，如果最後一個資料指標為非同步開啟。 索引鍵集驅動或靜態資料指標會以非同步方式開啟如果 sp_configure cursor threshold 的值大於 0，且資料指標結果集中的資料列數目大於資料指標臨界值。
+## <a name="remarks"></a>Remarks  
+如果非同步開啟最後一個資料指標，@@CURSOR_ROWS 傳回的數字便是負數。 如果 sp_configure cursor threshold 的值大於 0，且資料指標結果集中的資料列數大於資料指標臨界值，便會非同步開啟索引鍵集驅動程式或靜態資料指標。
   
 ## <a name="examples"></a>範例  
 下列範例會宣告一個資料指標，並利用 `SELECT` 來顯示 `@@CURSOR_ROWS` 的值。 在資料指標開啟之前，這個設定值是 `0`，`-1` 值表示非同步地擴展資料指標索引鍵集。
@@ -98,7 +98,7 @@ Sanchez
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[資料指標函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
-[開啟 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)
+[資料指標函式 &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)
   
   

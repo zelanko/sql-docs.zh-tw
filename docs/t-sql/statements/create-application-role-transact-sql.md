@@ -1,5 +1,5 @@
 ---
-title: "建立應用程式角色 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,18 +56,18 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  指定應用程式角色的名稱。 這個名稱必須尚未用來參考資料庫中的任何主體。  
   
- 密碼**='***密碼***'**  
- 指定資料庫使用者要用來啟動應用程式角色的密碼。 您一定要使用增強式密碼。 *密碼*必須符合正在執行的執行個體之電腦的 Windows 密碼原則需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ PASSWORD **='***password***'**  
+ 指定資料庫使用者要用來啟動應用程式角色的密碼。 您一定要使用增強式密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。  
   
- DEFAULT_SCHEMA  **=**  *schema_name*  
- 指定伺服器在解析這個角色的物件名稱時，將搜尋的第一個結構描述。 如果未定義 DEFAULT_SCHEMA，應用程式角色會將 DBO 用做它的預設結構描述。 *schema_name*可以是不存在於資料庫的結構描述。  
+ DEFAULT_SCHEMA **=***schema_name*  
+ 指定伺服器在解析這個角色的物件名稱時，將搜尋的第一個結構描述。 如果未定義 DEFAULT_SCHEMA，應用程式角色會將 DBO 用做它的預設結構描述。 *schema_name* 可以是資料庫中不存在的結構描述。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  設定應用程式角色時會檢查密碼複雜性。 叫用應用程式角色的應用程式必須儲存其密碼。 應用程式角色密碼應該一律以加密方式儲存。  
   
- 應用程式角色會顯示在[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)目錄檢視。  
+ 您可以在 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 目錄檢視中，看到應用程式角色。  
   
  如需如何使用應用程式角色的資訊，請參閱[應用程式角色](../../relational-databases/security/authentication-access/application-roles.md)。  
   
@@ -87,11 +87,11 @@ CREATE APPLICATION ROLE weekly_receipts
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [應用程式角色](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_setapprole &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [ALTER APPLICATION ROLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [密碼原則](../../relational-databases/security/password-policy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

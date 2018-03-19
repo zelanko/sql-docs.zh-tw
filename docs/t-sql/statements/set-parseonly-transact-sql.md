@@ -1,5 +1,5 @@
 ---
-title: "SET PARSEONLY (TRANSACT-SQL) |Microsoft 文件"
+title: SET PARSEONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/27/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/01/2017
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當 SET PARSEONLY 是 ON 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只會剖析陳述式。 當 SET PARSEONLY 是 OFF 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會編譯和執行陳述式。  
   
  SET PARSEONLY 的設定是在剖析階段進行設定，而不是在執行階段進行設定。  
@@ -62,8 +62,8 @@ SET PARSEONLY { ON | OFF }
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [設定位移 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
+ [SET OFFSETS &#40;Transact-SQL&#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "CEILING (TRANSACT-SQL) |Microsoft 文件"
+title: CEILING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,9 +48,9 @@ CEILING ( numeric_expression )
   
 ## <a name="arguments"></a>引數  
 *numeric_expression*  
-是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)精確數值或相近數值資料類型類別目錄，除了**元**資料型別。
+為精確數值或近似數值資料類型類別目錄的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **bit** 資料類型除外。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 傳回與 *numeric_expression*相同的類型。
   
 ## <a name="examples"></a>範例  
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[系統函式 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   

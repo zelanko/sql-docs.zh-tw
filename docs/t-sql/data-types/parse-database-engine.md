@@ -1,5 +1,5 @@
 ---
-title: "剖析 (Database Engine) |Microsoft 文件"
+title: "Parse (資料庫引擎) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="parse-database-engine"></a>剖析 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-剖析的標準字串表示轉換**hierarchyid**至**hierarchyid**值。 從字串類型轉換時隱含地呼叫 parse **hierarchyid** ，就會發生。 做為相反[ToString](../../t-sql/data-types/tostring-database-engine.md)。 Parse() 是靜態方法。
+Parse 會將 **hierarchyid** 的標準字串表示法轉換成 **hierarchyid** 值。 將字串類型轉換成 **hierarchyid** 時，就會隱含呼叫 Parse。 其作用與 [ToString](../../t-sql/data-types/tostring-database-engine.md) 相反。 Parse() 是一種靜態方法。
   
 ## <a name="syntax"></a>語法  
   
@@ -52,23 +52,23 @@ static SqlHierarchyId Parse ( SqlString input )
 ```  
   
 ## <a name="arguments"></a>引數  
-*輸入*  
+*input*  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]：正在轉換的字元資料類型值。
   
 CLR：正在評估的字串值。
   
 ## <a name="return-types"></a>傳回類型  
-**SQL Server 傳回類型： hierarchyid**
+**SQL Server 傳回型別：hierarchyid**
   
-**CLR 傳回類型： SqlHierarchyId**
+**CLR 傳回型別：SqlHierarchyId**
   
-## <a name="remarks"></a>備註  
-如果剖析接收到的值不是有效的字串表示， **hierarchyid**，例外狀況。 例如，如果**char**資料類型包含尾端空白，會引發例外狀況。
+## <a name="remarks"></a>Remarks  
+若 Parse 收到一個值，而這個值不是 **hierarchyid** 的有效字串表示法，則會引發例外狀況。 例如，若 **char** 資料類型包含尾端空白，則會引發例外狀況。
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. 轉換 Transact-SQL 值而不使用資料表  
-下列程式碼範例使用`ToString`轉換**hierarchyid**值到一個字串，並`Parse`將字串值轉換成**hierarchyid**。
+下列程式碼範例會使用 `ToString` 將 **hierarchyid** 值轉換成字串，並使用 `Parse` 將字串值轉換成 **hierarchyid**。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  

@@ -1,5 +1,5 @@
 ---
-title: "建立非對稱金鑰 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -77,55 +77,55 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
 ```  
   
 ## <a name="arguments"></a>引數  
- 從*Asym_Key_Source*  
+ FROM *Asym_Key_Source*  
  指定載入非對稱金鑰組時所在的來源。  
   
- 授權*database_principal_name*  
+ AUTHORIZATION *database_principal_name*  
  指定非對稱金鑰的擁有者。 該擁有者不能是角色或群組。 如果省略了這個選項，該擁有者便是目前的使用者。  
   
- 檔案 ='*path_to_strong name_file*'  
+ FILE ='*path_to_strong-name_file*'  
  指定載入金鑰組時所在的強式名稱檔案之路徑。  
   
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- 可執行檔 ='*path_to_executable_file*'  
+ EXECUTABLE FILE ='*path_to_executable_file*'  
  指定載入公開金鑰時所在的組件檔案。 根據 Windows API 的 MAX_PATH，限制為 260 個字元。  
   
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- 組件*Assembly_Name*  
+ ASSEMBLY *Assembly_Name*  
  指定載入公開金鑰時所在的組件之名稱。  
   
-ENCRYPTION BY  *\<key_name_in_provider >*指定金鑰加密的方式。 可以是憑證、密碼或非對稱金鑰。  
+ENCRYPTION BY *\<key_name_in_provider>* 指定金鑰加密的方式。 可以是憑證、密碼或非對稱金鑰。  
   
  KEY_NAME ='*key_name_in_provider*'  
- 從外部提供者指定金鑰名稱。 如需有關外部金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 從外部提供者指定金鑰名稱。 如需外部金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
  CREATION_DISPOSITION = CREATE_NEW  
  在可延伸金鑰管理裝置上建立新的金鑰。 PROV_KEY_NAME 必須用於指定裝置上的金鑰名稱。 如果金鑰已存在於裝置上，陳述式會失敗，並傳回錯誤。  
   
  CREATION_DISPOSITION = OPEN_EXISTING  
- 對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到現有的 Extensible Key Management 金鑰的非對稱金鑰。 PROV_KEY_NAME 必須用於指定裝置上的金鑰名稱。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，預設值就是 CREATE_NEW。  
+ 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非對稱金鑰對應至現有的「可延伸金鑰管理」金鑰。 PROV_KEY_NAME 必須用於指定裝置上的金鑰名稱。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，預設值就是 CREATE_NEW。  
   
- 演算法 =\<演算法 >  
- 可以提供五個演算法。RSA_4096、 RSA_3072、 RSA_2048、 RSA_1024 和 RSA_512。  
+ ALGORITHM = \<algorithm>  
+ 可提供五種演算法；RSA_4096、RSA_3072、RSA_2048、RSA_1024 和 RSA_512。  
   
- RSA_1024 和 RSA_512 已被取代。 若要使用 RSA_1024 或 RSA_512 （不建議） 120 或更低，您必須設定資料庫相容性層級。  
+ RSA_1024 和 RSA_512 即將淘汰。 若要使用 RSA_1024 或 RSA_512 (不建議)，您必須將資料庫相容性層級設定為 120 或更低。  
   
- 密碼 = '*密碼*'  
- 指定用來加密私密金鑰的密碼。 如果這個子句不存在，此私密金鑰將會使用資料庫主要金鑰來加密。 *密碼*最多 128 個字元。 *密碼*必須符合正在執行的執行個體之電腦的 Windows 密碼原則需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ PASSWORD = '*password*'  
+ 指定用來加密私密金鑰的密碼。 如果這個子句不存在，此私密金鑰將會使用資料庫主要金鑰來加密。 *password* 的上限為 128 個字元。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。  
   
-## <a name="remarks"></a>備註  
- *非對稱金鑰*是資料庫層級安全性實體。 在它的預設格式中，這個實體同時包含公開金鑰和私密金鑰。 如果執行時不使用 FROM 子句，CREATE ASYMMETRIC KEY 會產生新金鑰組。 如果執行時使用 FROM 子句，CREATE ASYMMETRIC KEY 會從檔案匯入金鑰組，或從組件匯入公開金鑰。  
+## <a name="remarks"></a>Remarks  
+ 「非對稱金鑰」是資料庫層級的安全性實體。 在它的預設格式中，這個實體同時包含公開金鑰和私密金鑰。 如果執行時不使用 FROM 子句，CREATE ASYMMETRIC KEY 會產生新金鑰組。 如果執行時使用 FROM 子句，CREATE ASYMMETRIC KEY 會從檔案匯入金鑰組，或從組件匯入公開金鑰。  
   
  依預設，私密金鑰由資料庫主要金鑰保護。 如果尚未建立資料庫主要金鑰，則需要利用密碼保護私密金鑰。 如果有資料庫主要金鑰，則密碼是選用的。  
   
  私密金鑰的長度可以是 512、1024 或 2048 位元。  
   
 ## <a name="permissions"></a>Permissions  
- 需要資料庫的 CREATE ASYMMETRIC KEY 權限。 如果指定了 AUTHORIZATION 子句，則需要資料庫主體的 IMPERSONATE 權限或應用程式角色的 ALTER 權限。 只有 Windows 登入、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入，以及應用程式角色可以擁有非對稱金鑰。 群組和角色無法擁有非對稱金鑰。  
+ 需要資料庫的 CREATE ASYMMETRIC KEY 權限。 如果指定了 AUTHORIZATION 子句，則需要資料庫主體的 IMPERSONATE 權限或應用程式角色的 ALTER 權限。 只有 Windows 登入、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入及應用程式角色可以擁有非對稱金鑰。 群組和角色無法擁有非對稱金鑰。  
   
 ## <a name="examples"></a>範例  
   
@@ -162,7 +162,7 @@ CREATE ASYMMETRIC KEY EKM_askey1
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "SET FORCEPLAN (TRANSACT-SQL) |Microsoft 文件"
+title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  基本上，SET FORCEPLAN 會覆寫查詢最佳化工具用來處理 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的邏輯。 不論這項設定為何，SELECT 陳述式傳回的資料都相同。 唯一不同是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理資料表來滿足查詢的方式。  
   
  查詢也可以利用查詢最佳化工具提示來影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理 SELECT 陳述式的方式。  
@@ -107,10 +107,10 @@ SET FORCEPLAN OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

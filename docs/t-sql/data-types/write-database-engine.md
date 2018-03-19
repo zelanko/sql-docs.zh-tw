@@ -1,5 +1,5 @@
 ---
-title: "寫入 (Database Engine) |Microsoft 文件"
+title: "Write (資料庫引擎) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="write-database-engine"></a>Write (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-寫入寫出的二進位表示法**SqlHierarchyId**要傳入的**BinaryWriter**。 無法使用呼叫寫入[!INCLUDE[tsql](../../includes/tsql-md.md)]。 請改用 CAST 或 CONVERT。
+Write 會寫出 **SqlHierarchyId** 的二進位表示法到傳入的 **BinaryWriter**。 Write 無法使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 呼叫。 請改用 CAST 或 CONVERT。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,13 +44,13 @@ void Write( BinaryWriter w )
   
 ## <a name="arguments"></a>引數  
 *w*  
-A **BinaryWriter**的目標物件的二進位表示這個**hierarchyid**節點會寫出。
+此 **hierarchyid** 節點的二進位表示法寫出的 **BinaryWriter** 物件。
   
 ## <a name="return-types"></a>傳回類型  
-**CLR 傳回類型： void**
+**CLR 傳回型別：void**
   
-## <a name="remarks"></a>備註  
-寫入在內部使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會在必要時，例如載入資料時**hierarchyid**資料行。 寫入為也在內部呼叫之間進行轉換時**hierarchyid**和**varbinary**。
+## <a name="remarks"></a>Remarks  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在需要的時候於內部使用 Write，例如從 **hierarchyid** 資料行載入資料時。 在 **hierarchyid** 和 **varbinary** 之間進行轉換時，也會在內部呼叫 Write。
   
 ## <a name="examples"></a>範例  
   
@@ -63,8 +63,8 @@ byte[] encoding = stream.ToArray();
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[讀取 &#40; Database Engine &#41;](../../t-sql/data-types/read-database-engine.md)  
-[ToString &#40; Database engine&#41;](../../t-sql/data-types/tostring-database-engine.md)  
+[Read &#40;資料庫引擎&#41;](../../t-sql/data-types/read-database-engine.md)  
+[ToString &#40;資料庫引擎&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Hierarchyid 資料類型方法參考](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

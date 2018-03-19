@@ -1,5 +1,5 @@
 ---
-title: "TRIGGER_NESTLEVEL (TRANSACT-SQL) |Microsoft 文件"
+title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="arguments"></a>引數  
  *object_id*  
- 這是觸發程序的物件識別碼。 如果*object_id*指定，陳述式會傳回針對指定的觸發程序已執行的次數。 如果*object_id*未指定，陳述式會傳回所有觸發程序已執行的次數。  
+ 這是觸發程序的物件識別碼。 若指定 *object_id*，則會傳回針對陳述式執行指定觸發程序的次數。 如果未指定 *object_id*，則會傳回針對陳述式而執行之所有觸發程序的次數。  
   
  **'** *trigger_type* **'**  
- 指定是否將 TRIGGER_NESTLEVEL 套用在 AFTER 觸發程序或 INSTEAD OF 觸發程序。 指定**AFTER** AFTER 觸發程序。 指定**IOT** INSTEAD OF 觸發程序。 如果*trigger_type*指定，則*trigger_event_category*也必須指定。  
+ 指定是否將 TRIGGER_NESTLEVEL 套用在 AFTER 觸發程序或 INSTEAD OF 觸發程序。 指定 **AFTER** 表示 AFTER 觸發程序。 指定 **IOT** 表示 INSTEAD OF 觸發程序。 若指定 *trigger_type*，則也必須同時指定 *trigger_event_category*。  
   
  **'** *trigger_event_category* **'**  
- 指定是否將 TRIGGER_NESTLEVEL 套用在 DML 或 DDL 觸發程序。 指定**DML** DML 觸發程序。 指定**DDL** DDL 觸發程序。 如果*trigger_event_category*指定，則*trigger_type*也必須指定。 請注意，只有**AFTER**可以使用指定**DDL**，因為 DDL 觸發程序只能是 AFTER 觸發程序。  
+ 指定是否將 TRIGGER_NESTLEVEL 套用在 DML 或 DDL 觸發程序。 為 DML 觸發程序指定 **DML**。 為 DDL 觸發程序指定 **DDL**。 若指定 *trigger_event_category*，則也必須同時指定 *trigger_type*。 請注意，只有 **AFTER** 可以指定 **DDL**，因為 DDL 觸發程序只能是 AFTER 觸發程序。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當未指定任何參數時，TRIGGER_NESTLEVEL 會在呼叫堆疊上傳回觸發程序的總數。 其中包括它本身。 當觸發程序執行命令，造成引發另一個觸發程序或建立引發後續觸發程序時，可能會省略參數。  
   
- 若要在特定觸發程序類型和事件類別目錄的呼叫堆疊上傳回觸發程序的總數，指定*object_id* = 0。  
+ 若要在特定觸發程序類型和事件類別的呼叫堆疊上，傳回觸發程序的總數，請指定 *object_id* = 0。  
   
  如果 TRIGGER_NESTLEVEL 在觸發程序之外執行，且有任何參數不是 NULL，它便會傳回 0。  
   
@@ -91,7 +91,7 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "C H (TRANSACT-SQL) |Microsoft 文件"
+title: SCHEMA_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ SCHEMA_NAME ( [ schema_id ] )
   
 |詞彙|定義|  
 |----------|----------------|  
-|*schema_id*|結構描述的識別碼。 *schema_id*是**int**。如果*schema_id*是未定義時，SCHEMA_NAME 會傳回呼叫端的預設結構描述名稱。|  
+|*schema_id*|結構描述的識別碼。 *schema_id* 為 **int**。若未定義 *schema_id*，SCHEMA_NAME 會傳回呼叫者預設結構描述的名稱。|  
   
 ## <a name="return-types"></a>傳回類型  
  **sysname**  
   
- 傳回 NULL *schema_id*不是有效的識別碼。  
+ 當 *schema_id* 不是有效識別碼時，會傳回 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  SCHEMA_NAME 會傳回系統結構描述和使用者自訂結構描述的名稱。 SCHEMA_NAME 可在選取清單、WHERE 子句及任何允許使用運算式的位置中呼叫。  
   
 ## <a name="examples"></a>範例  
@@ -73,13 +73,13 @@ SELECT SCHEMA_NAME();
 SELECT SCHEMA_NAME(1);  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [SCHEMA_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/schema-id-transact-sql.md)   
- [sys.schemas &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+## <a name="see-also"></a>另請參閱  
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [SCHEMA_ID &#40;Transact-SQL&#41;](../../t-sql/functions/schema-id-transact-sql.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "卸除登入 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -52,12 +52,12 @@ DROP LOGIN login_name
  *login_name*  
  指定要卸除之登入的名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  已登入的登入無法卸除。 擁有安全性實體、伺服器層級物件或 SQL Server Agent 作業的登入也無法卸除。  
   
- 您可以卸除資料庫使用者對應的登入；然而，這會建立被遺棄的使用者。 如需詳細資訊，請參閱 [孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。  
+ 您可以卸除資料庫使用者對應的登入；然而，這會建立被遺棄的使用者。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。  
   
- 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 驗證連線所需的登入資料和伺服器層級防火牆規則中每個資料庫會暫時快取。 此快取會定期重新整理。 若要強制驗證快取重新整理，並請確定資料庫有登入資料表的最新版本，執行[DBCC FLUSHAUTHCACHE &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，登入驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 ALTER ANY LOGIN 權限。  
@@ -73,7 +73,7 @@ GO
 ```  
  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

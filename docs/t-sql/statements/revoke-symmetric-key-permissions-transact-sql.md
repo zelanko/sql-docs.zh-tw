@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 對稱金鑰權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "REVOKE 對稱金鑰權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -59,10 +59,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以撤銷對稱金鑰的權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 在對稱金鑰:: *asymmetric_key_name*  
+ ON SYMMETRIC KEY :: *asymmetric_key_name*  
  指定要撤銷其權限的對稱金鑰。 需要範圍限定詞 (::)。  
   
  GRANT OPTION  
@@ -77,10 +77,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
- {至 |FROM} \< *database_principal*>  
+ { TO | FROM } \<*database_principal*>  
  指定要撤銷其權限的主體。  
   
- AS \<database_principal > 指定要從中執行此查詢的主體衍生權限來撤銷權限的主體。  
+ AS \<database_principal> 指定主體，執行這項查詢的主體就是從這個主體衍生權限來撤銷權限。  
   
  *Database_user*  
  指定資料庫使用者。  
@@ -106,8 +106,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>備註  
- 對稱金鑰的相關資訊會顯示在[sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)目錄檢視。  
+## <a name="remarks"></a>Remarks  
+ 您可以在 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目錄檢視中，看到有關對稱金鑰的資訊。  
   
  從被授與指定了 GRANT OPTION 之權限的主體撤銷該權限時，如果未指定 CASCADE，陳述式便會失敗。  
   
@@ -133,10 +133,10 @@ REVOKE ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS CASCADE;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.symmetric_keys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [授與對稱金鑰權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
- [拒絕對稱金鑰權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [GRANT 對稱金鑰權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
+ [DENY 對稱金鑰權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

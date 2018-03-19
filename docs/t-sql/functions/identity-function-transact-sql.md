@@ -1,5 +1,5 @@
 ---
-title: "IDENTITY （函數） (TRANSACT-SQL) |Microsoft 文件"
+title: IDENTITY (Function) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identity-function-transact-sql"></a>IDENTITY (函數) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  只適用於 SELECT into 陳述式*資料表*子句，以識別欄位插入新的資料表。 雖然相似，但 IDENTITY 函數不是搭配 CREATE TABLE 和 ALTER TABLE 使用的 IDENTITY 屬性。  
+  為僅供設定 INTO *table* 子句的 SELECT 陳述式，用來將識別欄位插入新資料表。 雖然相似，但 IDENTITY 函數不是搭配 CREATE TABLE 和 ALTER TABLE 使用的 IDENTITY 屬性。  
   
 > [!NOTE]  
 >  若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱 [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
@@ -54,21 +54,21 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
   
 ## <a name="arguments"></a>引數  
  *data_type*  
- 這是識別欄位的資料類型。 識別資料行的有效資料型別都是任何資料類型的整數資料類型類別目錄中，除了**元**資料型別，或**十進位**資料型別。  
+ 這是識別欄位的資料類型。 識別欄位的有效資料類型是整數資料類型類別目錄的任何資料類型，但 **bit** 資料類型或 **decimal** 資料類型除外。  
   
- *種子*  
- 這是要指派給資料表中第一個資料列的整數值。 每個後續的資料列會指派下一個識別值，也就是等於最後一個識別值加上*遞增*值。 如果沒有*種子*也*遞增*指定，則兩者都預設為 1。  
+ *seed*  
+ 這是要指派給資料表中第一個資料列的整數值。 每個後續的資料列都會被指派下一個識別值，也就是最後一個 IDENTITY 值加上 *increment* 值。 如果既未指定 *seed*，也未指定 *increment*，則兩者都會預設為 1。  
   
- *遞增*  
- 要加入的整數值*種子*資料表中的後續資料列的值。  
+ *increment*  
+ 為要新增至資料表中後續資料列之 *seed* 值的整數值。  
   
  *column_name*  
  這是要插入新資料表之資料行的名稱。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回與相同*data_type*。  
+ 傳回與 *data_type* 相同的值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  由於這個函數會在資料表中建立一個資料行，因此，您必須依照下列方式之一，在選取清單中指定一個資料行名稱：  
   
 ```  
@@ -108,12 +108,12 @@ GO
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [選取@local_variable&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
+ [SELECT @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

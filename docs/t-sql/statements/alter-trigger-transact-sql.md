@@ -1,5 +1,5 @@
 ---
-title: "ALTER TRIGGER (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/08/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  修改 CREATE TRIGGER 陳述式先前所建立之 DML、DDL 或登入觸發程序的定義。 觸發程序是使用 CREATE TRIGGER 建立的。 也可以直接從建立[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或方法中建立的組件從[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]通用語言執行平台 (CLR) 和上傳到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關 ALTER TRIGGER 陳述式中使用的參數的詳細資訊，請參閱[CREATE TRIGGER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+  修改 CREATE TRIGGER 陳述式先前所建立之 DML、DDL 或登入觸發程序的定義。 觸發程序是使用 CREATE TRIGGER 建立的。 您可以直接從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式建立觸發程序，也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行平台 (CLR) 所建立的組件方法來建立觸發程序，再將其上傳到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需用於 ALTER TRIGGER 陳述式的參數詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -144,21 +144,21 @@ AS { sql_statement
   
 ## <a name="arguments"></a>引數  
  *schema_name*  
- 這是 DML 觸發程序所屬的結構描述名稱。 DML 觸發程序只會針對其據以建立的資料表或檢視表的結構描述。 *結構描述**v* DML 觸發程序及其對應資料表或檢視屬於預設結構描述時，才是選擇性。 *schema_name*不能指定 DDL 或登入觸發程序。  
+ 這是 DML 觸發程序所屬的結構描述名稱。 DML 觸發程序只會針對其據以建立的資料表或檢視表的結構描述。 只有當 DML 觸發程序及其對應資料表或檢視都屬於預設結構描述時，*schema**_name* 才是選擇性的。 您不能為 DDL 或登入觸發程序指定 *schema_name*。  
   
  *trigger_name*  
  這是要修改的現有觸發程序。  
   
- *資料表* | *檢視*  
+ *table* | *view*  
  這是執行 DML 觸發程序的資料表或檢視。 您可以選擇性地指定資料表或檢視的完整名稱。  
   
  DATABASE  
- 將 DDL 觸發程序的範圍套用在目前資料庫上。 如果指定，每當引發觸發程序*event_type*或*event_group*在目前資料庫中發生。  
+ 將 DDL 觸發程序的範圍套用在目前資料庫上。 若有指定，每當目前資料庫中出現 *event_type* 或 *event_group* 時，都會引發這個觸發程序。  
   
  ALL SERVER  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 將 DDL 或登入觸發程序的範圍套用在目前伺服器上。 如果指定，每當引發觸發程序*event_type*或*event_group*目前伺服器中任何位置發生。  
+ 將 DDL 或登入觸發程序的範圍套用在目前伺服器上。 若有指定，每當目前伺服器中的任何位置出現 *event_type* 或 *event_group* 時，都會引發這個觸發程序。  
   
  WITH ENCRYPTION  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -174,14 +174,14 @@ AS { sql_statement
  如需詳細資訊，請參閱 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
  NATIVE_COMPILATION  
- 表示觸發程序原生編譯。  
+ 表示觸發程序是原生編譯的。  
   
- 這個選項是必要的記憶體最佳化資料表上的觸發程序。  
+ 如果觸發程序是在經記憶體最佳化的資料表上，則這個選項為必要。  
   
  SCHEMABINDING  
- 可確保觸發程序所參考的資料表無法卸除或改變。  
+ 確保無法卸除或改變觸發程序所參考的資料表。  
   
- 這個選項需要在記憶體最佳化資料表上的觸發程序，並不支援傳統的資料表上的觸發程序。  
+ 針對經記憶體最佳化資料表上的觸發程序，這個選項為必要，且其不支援傳統資料表上的觸發程序。  
   
  AFTER  
  指定只在順利執行觸發的 SQL 陳述式時，才引發觸發程序。 所有參考串聯動作和條件約束檢查也都必須成功之後，才會引發這個觸發程序。  
@@ -203,28 +203,28 @@ AS { sql_statement
  對於 INSTEAD OF 觸發程序而言，含有指定了重疊顯示動作 ON DELETE 的參考關聯性之資料表不能使用 DELETE 選項。 同樣地，含有指定了串聯動作 ON UPDATE 的參考關聯性之資料表也不能使用 UPDATE 選項。 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
  *event_type*  
- 這是在執行之後會引發 DDL 觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件名稱。 有效的事件，DDL 觸發程序會列在[DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
+ 這是在執行之後會引發 DDL 觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件名稱。 有效的 DDL 觸發程序事件會列在 [DDL 事件](../../relational-databases/triggers/ddl-events.md)中。  
   
  *event_group*  
- 這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件之預設定義群組的名稱。 執行任何之後，DDL 觸發程序都會引發[!INCLUDE[tsql](../../includes/tsql-md.md)]語言事件屬於*event_group*。 有效的事件群組的 DDL 觸發程序所述[DDL 事件群組](../../relational-databases/triggers/ddl-event-groups.md)。 ALTER TRIGGER 執行完成之後*event_group*也可以當做巨集來將事件類型加入它涵蓋 sys.trigger_events 目錄檢視。  
+ 這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件之預設定義群組的名稱。 在執行屬於 *event_group* 的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件之後，便會引發 DDL 觸發程序。 有效的 DDL 觸發程序事件群組會列在 [DDL 事件群組](../../relational-databases/triggers/ddl-event-groups.md)中。 在完成執行 ALTER TRIGGER 之後，您也可以將其所涵蓋的事件類型新增至 sys.trigger_events 目錄檢視，以將 *event_group* 作為巨集。  
   
  NOT FOR REPLICATION  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指出當複寫代理程式修改觸發程序所涉及的資料表時，不應執行觸發程序。  
   
- *q*  
+ *sql_statement*  
  這是觸發程序條件和動作。  
   
- 記憶體最佳化的資料表上的觸發程序的唯一*q*允許的最上層是 ATOMIC 區塊。 T-SQL ATOMIC 區塊內，允許受限於 T-SQL 原生程序內，允許使用。  
+ 針對經記憶體最佳化資料表上的觸發程序，唯一允許的最上層 *sql_statement* 是 ATOMIC 區塊。 ATOMIC 區塊內允許使用哪些 T-SQL 則受限於原生程序內允許使用的 T-SQL 而定。  
   
- EXTERNAL NAME \<called >  
+ EXTERNAL NAME \<method_specifier>  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定繫結觸發程序之組件的方法。 此方法不可使用任何引數，且必須傳回空值。 *class_name*必須是有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別項且必須是組件中的類別與組件可見性。 這個類別不能是巢狀類別。  
+ 指定繫結觸發程序之組件的方法。 此方法不可使用任何引數，且必須傳回空值。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須以類別的形式存在於可以顯示的組件中。 這個類別不能是巢狀類別。  
   
-## <a name="remarks"></a>備註  
- 如需有關 ALTER TRIGGER 的詳細資訊，請參閱 < 備註 > 中的[CREATE TRIGGER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 如需 ALTER TRIGGER 的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)中的＜備註＞一節。  
   
 > [!NOTE]  
 >  自主資料庫無法使用 EXTERNAL_NAME 和 ON_ALL_SERVER 選項。  
@@ -241,7 +241,7 @@ AS { sql_statement
  當因為父資料表 DELETE 的 CASCADE 結果而造成子系或參考資料表的 DELETE 動作時，會在這份子資料表上定義 DELETE 的 INSTEAD OF 觸發程序，而且觸發程序會被忽略，且會執行 DELETE 動作。  
   
 ## <a name="ddl-triggers"></a>DDL 觸發程序  
- DDL 觸發程序不像 DML 觸發程序，並不以結構描述為範圍。 因此，OBJECT_ID、 OBJECT_NAME、 OBJECTPROPERTY 和 OBJECTPROPERTY(EX) 無法使用時查詢中繼資料，關於 DDL 觸發程序。 請改用目錄檢視。 如需詳細資訊，請參閱[取得資訊有關 DDL 觸發程序](../../relational-databases/triggers/get-information-about-ddl-triggers.md)。  
+ DDL 觸發程序不像 DML 觸發程序，並不以結構描述為範圍。 因此，在查詢 DDL 觸發程序的相關中繼資料時，無法使用 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX。 請改用目錄檢視。 如需詳細資訊，請參閱[取得 DDL 觸發程序的詳細資訊](../../relational-databases/triggers/get-information-about-ddl-triggers.md)。  
   
 ## <a name="logon-triggers"></a>登入觸發程序  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援登入事件的觸發程序。  
@@ -252,7 +252,7 @@ AS { sql_statement
  若要變更以伺服器範圍 (ON ALL SERVER) 定義的 DDL 觸發程序或登入觸發程序，則需要伺服器的 CONTROL SERVER 權限。 若要變更以資料庫範圍 (ON DATABASE) 定義的 DDL 觸發程序，則需要目前資料庫的 ALTER ANY DATABASE DDL TRIGGER 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立 DML 觸發程序中的 AdventureWorks 2012 資料庫，使用者定義訊息列印到用戶端的使用者嘗試新增或變更資料時`SalesPersonQuotaHistory`資料表。 之後，會利用 `ALTER TRIGGER` 來修改觸發程序，只在 `INSERT` 活動上套用觸發程序。 這個觸發程序很有用，因為它會提醒使用者在這份資料表中更新或插入資料列，以便同時通知 `Compensation` 部門。  
+ 下列範例會在 AdventureWorks 2012 資料庫中建立 DML 觸發程序，當使用者試圖於 `SalesPersonQuotaHistory` 資料表中新增或變更資料時，即可將使用者定義訊息列印至用戶端。 之後，會利用 `ALTER TRIGGER` 來修改觸發程序，只在 `INSERT` 活動上套用觸發程序。 這個觸發程序很有用，因為它會提醒使用者在這份資料表中更新或插入資料列，以便同時通知 `Compensation` 部門。  
   
 ```  
 CREATE TRIGGER Sales.bonus_reminder  
@@ -270,17 +270,17 @@ AS RAISERROR ('Notify Compensation', 16, 10);
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [建立預存程序](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [sp_addmessage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [交易](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [取得關於 DML 觸發程序的詳細資訊](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
- [取得 DDL 觸發程序的相關資訊](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
+ [取得 DDL 觸發程序的資訊](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [sys.trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trigger-events-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   

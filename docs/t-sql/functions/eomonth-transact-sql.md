@@ -1,5 +1,5 @@
 ---
-title: "EOMONTH (TRANSACT-SQL) |Microsoft 文件"
+title: EOMONTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -48,15 +48,15 @@ EOMONTH ( start_date [, month_to_add ] )
  *start_date*  
  日期運算式為當月最後一天該傳回者指定日期。  
   
- *具有 month_to_add*  
- 指定要加入的月數的選擇性整數運算式*start_date*。  
+ *month_to_add*  
+ 指定要新增至 *start_date* 之月數的選擇性整數運算式。  
   
- 如果指定的這個引數，然後**EOMONTH**加入指定的月數*start_date*，然後傳回結果的日期的月份的最後一天。 如果這個加法溢位有效日期範圍，則會引起錯誤。  
+ 如果已指定這個引數，則 **EOMONTH** 會將指定月數新增到 *start_date*，然後傳回當月最後一天作為結果日期。 如果這個加法溢位有效日期範圍，則會引起錯誤。  
   
 ## <a name="return-type"></a>傳回類型  
  **date**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個函數可以遠端處理到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本的伺服器。 它無法遠端處理到版本低於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的伺服器。  
   
 ## <a name="examples"></a>範例  

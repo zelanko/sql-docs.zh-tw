@@ -1,5 +1,5 @@
 ---
-title: "DENY 伺服器主體權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "DENY 伺服器主體權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -63,19 +63,19 @@ DENY permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以拒絕的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 登入**::** *SQL_Server_login*  
- 指定要拒絕其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 是必要。  
+ LOGIN **::** *SQL_Server_login*  
+ 指定要拒絕其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 是必要項。  
   
- 伺服器角色**::** *server_role*  
- 指定要拒絕其權限的伺服器角色。 範圍限定詞 (**::**) 是必要。  
+ SERVER ROLE **::** *server_role*  
+ 指定要拒絕其權限的伺服器角色。 範圍限定詞 (**::**) 是必要項。  
   
- 若要\<server_principal >  
+ TO \<server_principal>  
  指定要授與其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或伺服器角色。  
   
- 若要*SQL_Server_login*  
+ TO *SQL_Server_login*  
  指定要拒絕其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
  *SQL_Server_login*  
@@ -97,14 +97,14 @@ DENY permission [ ,...n ] }
  指出目前受到拒絕的權限，也為這個主體曾授與此權限的其他主體所拒絕。  
   
  AS *SQL_Server_login*  
- 指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從中執行此查詢的主體衍生權限來拒絕權限的登入。  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，執行這項查詢的主體會從這項登入衍生其權限來拒絕權限。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  只有在目前資料庫是 master 的情況下，才能夠拒絕伺服器範圍的權限。  
   
- 會提供有關伺服器權限資訊[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目錄檢視。 伺服器主體的相關資訊可用於[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目錄檢視。  
+ 有關伺服器權限的資訊可在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中取得。 有關伺服器主體的資訊可在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中取得。  
   
- 如果您已授與具有 GRANT OPTION 之權限的主體拒絕權限時未指定 CASCADE，DENY 陳述式將會失敗。  
+ 當您拒絕主體的權限 (而其已透過 GRANT OPTION 獲授與該權限) 時，若未指定 CASCADE，DENY 陳述式會失敗。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和伺服器角色是伺服器層級安全性實體。 下表所列的是可以拒絕之最特定和最有限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或伺服器角色權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
@@ -123,7 +123,7 @@ DENY permission [ ,...n ] }
 ## <a name="examples"></a>範例  
   
 ### <a name="a-denying-impersonate-permission-on-a-login"></a>A. 拒絕登入的 IMPERSONATE 權限  
- 下列範例拒絕`IMPERSONATE`權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入`WanidaBenshoof`至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立的 Windows 使用者的登入`AdvWorks\YoonM`。  
+ 下列範例會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入拒絕 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `WanidaBenshoof` 的 `IMPERSONATE` 權限，而這項登入是從 Windows 使用者 `AdvWorks\YoonM` 所建立。  
   
 ```  
 USE master;  
@@ -150,7 +150,7 @@ DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [GRANT 伺服器主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   

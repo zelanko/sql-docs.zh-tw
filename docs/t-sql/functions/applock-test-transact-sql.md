@@ -1,5 +1,5 @@
 ---
-title: "APPLOCK_TEST (TRANSACT-SQL) |Microsoft 文件"
+title: APPLOCK_TEST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -50,34 +50,34 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
   
 ## <a name="arguments"></a>引數  
 **'** *database_principal* **'**  
-這是已獲授與資料庫中的物件權限之使用者、角色或應用程式角色。 函式的呼叫端必須是成員*database_principal*， **dbo**，或**db_owner**固定的資料庫角色，才能成功呼叫函數。
+這是已獲授與資料庫中的物件權限之使用者、角色或應用程式角色。 函式的呼叫者必須是 *database_principal*、**dbo** 或 **db_owner** 固定資料庫角色的成員，才能夠成功呼叫函式。
   
 **'** *resource_name* **'**  
-這是用戶端應用程式所指定的鎖定資源名稱。 應用程式必須確定資源是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*是**nvarchar （255)**沒有預設值。 *resource_name*以二進位來比較和區分大小寫，不論目前資料庫的定序設定為何。
+這是用戶端應用程式所指定的鎖定資源名稱。 應用程式必須確定資源是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name* 是沒有預設值的 **nvarchar(255)**。 *resource_name* 是以二進位來比較，不論目前資料庫的定序設定為何，都會區分大小寫。
   
 **'** *lock_mode* **'**  
-這是要取得的特定資源鎖定模式。 *lock_mode*是**nvarchar （32)** ，沒有預設值。 值可以是下列任一項：**共用**，**更新**， **IntentShared**， **IntentExclusive**，**獨佔**.
+這是要取得的特定資源鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 這個值可以是下列中的任何一項：**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive**。
   
 **'** *lock_owner* **'**  
-已鎖定，這是擁有者*lock_owner*要求鎖定時的值。 *lock_owner*是**nvarchar （32)**。 這個值可以是**交易**（預設值） 或**工作階段**。 如果預設或**交易**明確指定，必須在交易中從執行 APPLOCK_TEST。
+為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction**  (預設值) 或 **Session** 。 如果明確指定預設值或 **Transaction**，就必須從交易內執行 APPLOCK_TEST。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 **smallint**
   
 ## <a name="return-value"></a>傳回值
 當無法將鎖定授與指定的擁有者時，傳回 0；如果可以授與鎖定，便傳回 1。
   
 ## <a name="function-properties"></a>函式屬性
-**不具決定性**
+**Nondeterministic**
   
 **Nonindexable**
   
 **Nonparallelizable**
   
 ## <a name="examples"></a>範例  
-在下列範例中，兩位使用者 (**使用者 A**和**使用者 B**) 擁有個別工作階段，執行下列一系列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。
+在下列範例中，具有個別工作階段的兩位使用者 (**使用者 A** 和**使用者 B**) 會執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式順序。
   
-**使用者 A**執行：
+**使用者 A** 執行：
   
 ```sql
 USE AdventureWorks2012;  
@@ -93,7 +93,7 @@ SELECT APPLOCK_MODE('public', 'Form1', 'Transaction');
 GO  
 ```  
   
-**使用者 B**接著執行：
+**使用者 B** 接著執行：
   
 ```sql
 Use AdventureWorks2012;  
@@ -110,14 +110,14 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**使用者 A**接著執行：
+**使用者 A** 接著執行：
   
 ```sql
 EXEC sp_releaseapplock @Resource='Form1', @DbPrincipal='public';  
 GO  
 ```  
   
-**使用者 B**接著執行：
+**使用者 B** 接著執行：
   
 ```sql
 SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');  
@@ -125,7 +125,7 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**使用者 A**和**使用者 B**接著同時執行：
+**使用者 A** 和**使用者 B** 接著同時執行：
   
 ```sql
 COMMIT TRAN;  
@@ -133,8 +133,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[APPLOCK_MODE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
-[sp_getapplock &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

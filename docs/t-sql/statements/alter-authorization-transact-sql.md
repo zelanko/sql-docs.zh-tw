@@ -1,5 +1,5 @@
 ---
-title: "ALTER AUTHORIZATION (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -127,43 +127,43 @@ ALTER AUTHORIZATION ON
 ```    
     
 ## <a name="arguments"></a>引數    
-\<class_type > 是要變更擁有者的實體安全性實體類別。 OBJECT 是預設值。    
+\<class_type> 為變更擁有者之實體的安全性實體類別。 OBJECT 是預設值。    
     
 |||    
 |-|-|    
-|OBJECT|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，Azure SQL 資料倉儲， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|ASSEMBLY|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ASYMMETRIC KEY|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|AVAILABILITY GROUP |**適用對象**： 透過 SQL Server 2012 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
-|CERTIFICATE|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|CONTRACT|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|DATABASE|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 如需詳細資訊，請參閱[ALTER 授權的資料庫](#AlterDB)下一節。|    
-|ENDPOINT|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|FULLTEXT CATALOG|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|FULLTEXT STOPLIST|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|MESSAGE TYPE|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|REMOTE SERVICE BINDING|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|ROLE|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ROUTE|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|SCHEMA|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，Azure SQL 資料倉儲， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|SEARCH PROPERTY LIST|**適用對象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|SERVER ROLE|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|SERVICE|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|SYMMETRIC KEY|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|TYPE|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|XML SCHEMA COLLECTION|**適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|OBJECT|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 資料倉儲、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
+|ASSEMBLY|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ASYMMETRIC KEY|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|AVAILABILITY GROUP |**適用對象**：SQL Server 2012 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
+|CERTIFICATE|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|CONTRACT|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
+|DATABASE|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 如需詳細資訊，請參閱下方的[資料庫的 ALTER AUTHORIZATION](#AlterDB) 一節。|    
+|ENDPOINT|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
+|FULLTEXT CATALOG|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|FULLTEXT STOPLIST|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|MESSAGE TYPE|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
+|REMOTE SERVICE BINDING|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
+|ROLE|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ROUTE|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
+|SCHEMA|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 資料倉儲、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
+|SEARCH PROPERTY LIST|**適用對象**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|SERVER ROLE|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
+|SERVICE|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
+|SYMMETRIC KEY|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|TYPE|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|XML SCHEMA COLLECTION|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
     
  *entity_name*    
  這是實體的名稱。    
     
- *principal_name* |結構描述擁有者    
- 擁有實體的安全性主體名稱。 資料庫物件必須由資料庫主體、資料庫使用者或角色所擁有。 伺服器物件 (例如資料庫) 必須由伺服器主體 (登入) 所擁有。 指定**結構描述擁有者**為*principal_name*来表示應該擁有物件的結構描述的主體所擁有的物件。    
+ *principal_name* | SCHEMA OWNER    
+ 擁有實體的安全性主體名稱。 資料庫物件必須由資料庫主體、資料庫使用者或角色所擁有。 伺服器物件 (例如資料庫) 必須由伺服器主體 (登入) 所擁有。 指定 **SCHEMA OWNER** 作為 *principal_name*，表示物件必須由擁有物件結構描述的主體所擁有。    
     
-## <a name="remarks"></a>備註    
+## <a name="remarks"></a>Remarks    
  ALTER AUTHORIZATION 可用來變更具有擁有者之任何實體的擁有權。 資料庫包含的實體擁有權可傳送給任何資料庫層級主體。 伺服器層級實體的擁有權只能傳送給伺服器層級主體。    
     
 > [!IMPORTANT]    
->  從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，使用者可以擁有其他資料庫使用者所擁有之結構描述內含的 OBJECT 或 TYPE。 這是和舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不同的一項行為變更。 如需詳細資訊，請參閱[OBJECTPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/objectproperty-transact-sql.md)和[TYPEPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md).    
+>  從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，使用者可以擁有其他資料庫使用者所擁有之結構描述內含的 OBJECT 或 TYPE。 這是和舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不同的一項行為變更。 如需詳細資訊，請參閱 [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md) 及 [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)。    
     
  下列「物件」類型之結構描述所包含實體的擁有權可以傳送：資料表、檢視、函數、程序、佇列和同義字。    
     
@@ -181,7 +181,7 @@ ALTER AUTHORIZATION ON
  同時應注意下列項目：    
     
 > [!IMPORTANT]    
->  若要尋找的物件擁有者的唯一可靠方式就是查詢**sys.objects**目錄檢視。 尋找類型之擁有者的唯一可靠方式就是使用 TYPEPROPERTY 函數。    
+>  尋找物件之擁有者的唯一可靠方式就是查詢 **sys.objects** 目錄檢視。 尋找類型之擁有者的唯一可靠方式就是使用 TYPEPROPERTY 函數。    
     
 ## <a name="special-cases-and-conditions"></a>特殊案例和條件    
  下表列出特殊案例、例外狀況和條件，這些都適用於改變授權。    
@@ -197,46 +197,46 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|主體必須是登入。|    
   
 ## <a name="AlterDB"></a>資料庫的 ALTER AUTHORIZATION  
-**適用對象**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
-### <a name="for-sql-server"></a>針對 SQL Server:  
-**新的擁有者的需求：**   
-新主體資料庫擁有者必須是下列其中一項：  
+**適用對象**：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+### <a name="for-sql-server"></a>針對 SQL Server：  
+**新擁有者的需求：**   
+新的擁有者主體必須是下列其中一項：  
 -   SQL Server 驗證登入。  
--   Windows 驗證登入的 Windows 使用者 （不是群組）。  
--   透過 Windows 驗證的登入，代表 Windows 群組驗證的 Windows 使用者。  
+-   表示 Windows 使用者的 Windows 驗證登入 (而非群組)。  
+-   透過表示 Windows 群組之 Windows 驗證登入驗證的 Windows 使用者。  
   
-**執行 ALTER AUTHORIZATION 陳述式的人員的需求：**  
-如果您不屬於**sysadmin**固定伺服器角色，您必須擁有至少 TAKE OWNERSHIP 權限的資料庫，且必須具有 IMPERSONATE 權限登入的新擁有者。   
+**執行 ALTER AUTHORIZATION 陳述式的人員需求：**  
+若您不是 **sysadmin** 固定伺服器角色的成員，您必須至少擁有資料庫的 TAKE OWNERSHIP 權限，並且必須擁有新擁有者登入的 IMPERSONATE 權限。   
 
-### <a name="for-azure-sql-database"></a>Azure SQL 資料庫：  
-**新的擁有者的需求：**   
-新主體資料庫擁有者必須是下列其中一項：  
+### <a name="for-azure-sql-database"></a>針對 Azure SQL Database：  
+**新擁有者的需求：**   
+新的擁有者主體必須是下列其中一項：  
 -   SQL Server 驗證登入。  
--   同盟的使用者 （不是群組） 出現在 Azure AD。  
--   受管理的使用者 （不是群組） 或出現在 Azure AD 應用程式。    
+-   Azure AD 中存在的同盟使用者 (而非群組)。  
+-   Azure AD 中存在的受控使用者 (而非群組) 或應用程式。    
 
 > [!NOTE]  
-> 如果新擁有者是 Azure Active Directory 使用者，它無法存在於的資料庫新擁有者將會變成新的 DBO 中的使用者身分。 這類的 Azure AD 使用者必須先移除，從資料庫才能執行 ALTER AUTHORIZATION 陳述式將資料庫擁有權變更為新的使用者。 如需設定 Azure Active Directory 使用者與 SQL 資料庫的詳細資訊，請參閱[連接到 SQL Database 或 SQL 資料倉儲使用 Azure Active Directory 驗證](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。   
+> 若新的擁有者為 Azure Active Directory 使用者，它將無法在新的擁有者會成為新 DBO 的資料庫中作為使用者存在。 必須先從資料庫移除這類 Azure AD 使用者，才能執行 ALTER AUTHORIZATION 陳述式，將資料庫的擁有權變更為新的使用者。 如需使用 SQL Database 設定 Azure Active Directory 使用者的詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。   
   
-**執行 ALTER AUTHORIZATION 陳述式的人員的需求：**  
-您必須連接到目標資料庫，以變更該資料庫的擁有者。  
+**執行 ALTER AUTHORIZATION 陳述式的人員需求：**  
+您必須連線到目標資料庫，才能變更該資料庫的擁有者。  
 
-下列類型的帳戶可以變更資料庫擁有者。 
-* 服務層級主體登入。 （SQL Azure 系統管理員佈建的邏輯伺服器建立時）。  
+下列帳戶類型可變更資料庫的擁有者。 
+* 服務層級主體登入。 (建立邏輯伺服器時佈建的 SQL Azure 系統管理員。)  
 * Azure SQL Server 的 Azure Active Directory 系統管理員。   
-* 資料庫的目前擁有者。   
+* 資料庫目前的擁有者。   
  
   
-下表摘要說明的需求：  
+下表摘要這些需求：  
   
-執行程式  |Target  |結果    
+執行程式  |目標  |結果    
 ---------|---------|---------  
 SQL Server 驗證登入     |SQL Server 驗證登入         |成功  
 SQL Server 驗證登入     |Azure AD 使用者         |失敗           
 Azure AD 使用者     |SQL Server 驗證登入         |成功           
 Azure AD 使用者     |Azure AD 使用者         |成功           
   
-若要確認資料庫的擁有者 Azure AD 會執行下列 TRANSACT-SQL 命令在使用者資料庫中 (在此範例中`testdb`)。  
+若要驗證資料庫的 Azure AD 擁有者，請在使用者資料庫中執行下列 Transact-SQL 命令 (在此範例中為 `testdb`)。  
     
 ```    
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID   
@@ -244,8 +244,8 @@ FROM sys.databases
 WHERE name = 'testdb';  
 ```    
     
-輸出將會對應至指派給 Azure AD ObjectID 的識別碼 （例如 6D8B81F6-7C79-444C-8858-4AF896C03C67)`richel@cqclinic.onmicrosoft.com`  
-資料庫擁有者的 SQL Server 驗證登入使用者時，請在 master 資料庫，以確認資料庫擁有者執行下列陳述式：  
+輸出將為識別碼 (例如 6D8B81F6-7C79-444C-8858-4AF896C03C67)，該識別碼會對應到指派給 `richel@cqclinic.onmicrosoft.com` 的 Azure AD ObjectID  
+當 SQL Server 驗證登入使用者為資料庫擁有者時，請在 master 資料庫中執行下列陳述式來驗證資料庫擁有者：  
     
 ```    
 SELECT d.name, d.owner_sid, sl.name   
@@ -257,31 +257,31 @@ ON d.owner_sid = sl.sid;
   
 ### <a name="best-practice"></a>最佳做法  
   
-而不是使用 Azure AD 使用者做為個別擁有者的資料庫，使用 Azure AD 群組的成員身分**db_owner**固定的資料庫角色。 下列步驟，示範如何設定已停用的登入的資料庫擁有者，並讓 Azure Active Directory 群組 (`mydbogroup`) 的成員**db_owner**角色。 
-1.  SQL server 登入為 Azure AD 系統管理員，以及變更已停用的 SQL Server 驗證登入資料庫的擁有者。 例如，從使用者資料庫中執行：  
+請使用 Azure AD 群組作為 **db_owner** 固定資料庫角色的成員，而非使用 Azure AD 使用者作為資料庫的個別擁有者。 下列步驟示範如何將已停用的登入設定為資料庫擁有者，並讓 Azure Active Directory 群組 (`mydbogroup`) 成為 **db_owner** 角色的成員。 
+1.  以 Azure AD 系統管理員的身分登入 SQL Server，然後將資料庫的擁有者變更為已停用的 SQL Server 驗證登入。 例如，從使用者資料庫中執行：  
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  建立 Azure AD 群組應該擁有資料庫，並將它做為使用者加入至使用者資料庫。 例如：  
+2.  建立應擁有資料庫的 Azure AD 群組，然後將其作為使用者新增至使用者資料庫。 例如：  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  在使用者資料庫中新增至代表 Azure AD 群組中，使用者**db_owner**固定的資料庫角色。 例如：  
+3.  在使用者資料庫中，將表示 Azure AD 群組的使用者新增至 **db_owner** 固定資料庫角色。 例如：  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
-現在`mydbogroup`成員可以集中管理資料庫做為成員的**db_owner**角色。  
-- 當從 Azure AD 群組中移除此群組的成員時，它們會自動遺失此資料庫的 dbo 權限。  
-- 同樣地加入新成員時`mydbogroup`Azure AD 群組，他們會自動取得此資料庫的 dbo 存取權。  
+現在 `mydbogroup` 成員可作為 **db_owner** 角色的成員集中管理資料庫。  
+- 當此群組的成員從 Azure AD 群組移除時，它們會自動喪失此資料庫的 dbo 權限。  
+- 同樣的，若將新的成員新增至 `mydbogroup` Azure AD 群組，它們也會自動取得此資料庫的 dbo 存取。  
   
-若要檢查特定的使用者是否具有有效的 dbo 權限，讓使用者執行下列陳述式：  
+若要檢查特定使用者是否具備有效的 dbo 權限，請讓使用者執行下列陳述式：  
     
 ```    
 SELECT IS_MEMBER ('db_owner');  
 ```    
   
-傳回值 1 表示使用者角色的成員。  
+傳回值若為 1 則表示使用者為角色的成員。  
    
     
 ## <a name="permissions"></a>Permissions    
@@ -304,7 +304,7 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- 如果物件的結構描述不包含的陳述式，過程[!INCLUDE[ssDE](../../includes/ssde-md.md)]會尋找使用者預設結構描述中的物件。 例如：    
+ 若物件結構描述並未作為陳述式的一部分包含在其中，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在使用者預設結構描述中尋找物件。 例如：    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
@@ -338,7 +338,7 @@ GO
 ```    
     
 ### <a name="e-changing-the-owner-of-a-table"></a>E. 變更資料表的擁有者    
- 下列範例的每個變更的擁有者`Sprockets`資料表中`Parts`資料庫到資料庫使用者`MichikoOsada`。    
+ 下列每個範例都會將 `Parts` 資料庫中 `Sprockets` 資料表的擁有者變更為 `MichikoOsada` 資料庫使用者。    
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON dbo.Sprockets TO MichikoOsada;    
@@ -346,27 +346,27 @@ ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;
 ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="f-changing-the-owner-of-a-database"></a>F. 變更資料庫擁有者    
- **適用對象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]， [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。    
+### <a name="f-changing-the-owner-of-a-database"></a>F. 變更資料庫的擁有者    
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。    
     
- 下列範例會變更擁有者`Parts`登入的資料庫`MichikoOsada`。    
+ 下列範例會將 `Parts` 資料庫的擁有者變更為 `MichikoOsada` 登入。    
     
 ```    
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;    
 ```    
   
-### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>G. 將 SQL 資料庫的擁有者變更為 Azure AD 使用者  
-在下列範例中，SQL Server 的 Azure Active Directory 系統管理員具有名為 active directory 的組織中`cqclinic.onmicrosoft.com`，可以變更目前的資料庫擁有權`targetDB`並讓 AAD 使用者`richel@cqclinic.onmicorsoft.com`新資料庫擁有者使用下列命令：  
+### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>G. 將 SQL Database 的擁有者變更為 Azure AD 使用者  
+在下列範例中，具有名為 `cqclinic.onmicrosoft.com` 之 Active Directory 組織中的 SQL Server Azure Active Directory 系統管理員，可變更 `targetDB` 資料庫目前的擁有權，並使用下列命令讓 `richel@cqclinic.onmicorsoft.com` AAD 使用者成為新的資料庫擁有者：  
     
 ```    
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];   
 ```    
     
- 請注意，Azure AD 使用者必須使用方括號括住使用者名稱。  
+ 請注意，針對 Azure AD 使用者，使用者名稱必須以括弧括住。  
   
     
-## <a name="see-also"></a>請參閱＜    
+## <a name="see-also"></a>另請參閱    
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)     
- [TYPEPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)     
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)     
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
  

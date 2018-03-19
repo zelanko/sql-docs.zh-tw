@@ -1,5 +1,5 @@
 ---
-title: "第 2 課： 在資料庫物件上設定權限 |Microsoft 文件"
+title: "第 2 課：設定資料庫物件的權限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>第 2 課：設定資料庫物件的權限
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]授與使用者資料庫的存取權，包括三個步驟。 首先，請建立登入。 登入可讓使用者連接到 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]。 接著，請將登入設定為指定之資料庫的使用者。 最後，請授與該使用者存取資料庫物件的權限。 這一課會示範這三個步驟，並且說明如何將檢視和預存程序建立為物件。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 授與使用者存取資料庫的權限包括三個步驟。 首先，請建立登入。 登入可讓使用者連接到 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]。 接著，請將登入設定為指定之資料庫的使用者。 最後，請授與該使用者存取資料庫物件的權限。 這一課會示範這三個步驟，並且說明如何將檢視和預存程序建立為物件。  
   
 這個課程包含下列主題：  
   

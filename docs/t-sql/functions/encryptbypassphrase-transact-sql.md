@@ -1,5 +1,5 @@
 ---
-title: "ENCRYPTBYPASSPHRASE (TRANSACT-SQL) |Microsoft 文件"
+title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,34 +51,34 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>引數  
- *複雜密碼*  
+ *passphrase*  
  用於產生對稱金鑰的複雜密碼。  
   
  @passphrase  
- 類型的變數**nvarchar**， **char**， **varchar**，**二進位**， **varbinary**，或**nchar**包含要從中產生對稱金鑰的複雜密碼。  
+ 類型為 **nvarchar**、**char**、**varchar**、**binary**、**varbinary**，或 **nchar** 的變數，其中包含要用於產生對稱金鑰的複雜密碼。  
   
- *純文字*  
+ *cleartext*  
  要加密的純文字。  
   
  @cleartext  
- 類型的變數**nvarchar**， **char**， **varchar**，**二進位**， **varbinary**，或**nchar**包含純文字。 大小上限是 8,000 位元組。  
+ 類型為 **nvarchar**、**char**、**varchar**、**binary**、**varbinary**，或 **nchar**，包含純文字的變數。 大小上限是 8,000 位元組。  
   
  *add_authenticator*  
- 指出驗證器是否要與純文字一起加密。 若要加入驗證器，則為 1。 **int**。  
+ 指出驗證器是否要與純文字一起加密。 若要加入驗證器，則為 1。 **int**.  
   
  @add_authenticator  
  指出雜湊是否要與純文字一起加密。  
   
- *驗證器*  
+ *authenticator*  
  要衍生驗證器的資料。 **sysname**。  
   
  @authenticator  
  含有要衍生驗證器之資料的變數。  
   
 ## <a name="return-types"></a>傳回類型  
- **varbinary** ，大小上限為 8,000 個位元組。  
+ **varbinary**，大小上限為 8,000 位元組。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  複雜密碼是指包含空格的密碼。 使用複雜密碼的好處是，記住有意義的片語或句子比記住相較之下冗長的字元字串容易得多。  
   
  這個函數不會檢查密碼複雜性。  
@@ -107,8 +107,8 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [DECRYPTBYPASSPHRASE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

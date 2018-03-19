@@ -1,5 +1,5 @@
 ---
-title: "DENSE_RANK (TRANSACT-SQL) |Microsoft 文件"
+title: DENSE_RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ```  
   
 ## <a name="arguments"></a>引數  
- \<partition_by_clause >  
- 所產生的結果集分成[FROM](../../t-sql/queries/from-transact-sql.md)子句套用 DENSE_RANK 函數的分割區。 如需 PARTITION BY 語法，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ 將 [FROM](../../t-sql/queries/from-transact-sql.md) 子句所產生的結果集分割成套用 DENSE_RANK 函式的分割區。 如需 PARTITION BY 的語法，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
- \<order_by_clause >  
+ \<order_by_clause>  
  決定將 DENSE_RANK 函數套用於分割區中之資料列的順序。  
   
 ## <a name="return-types"></a>傳回類型  
  **bigint**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果在相同分割區中，針對某個次序聯結了兩個或更多資料列，每個聯結的資料列都會收到相同的次序。 例如，如果兩位超級業務員有相同的 SalesYTD 值，他們的次序便都是第一。 SalesYTD 次高的業務員之次序便是第二。 這便是在這個資料列之前的相異資料列數加一。 因此，DENSE_RANK 函數所傳回的數目不會有間距，次序一律是連續的。  
   
  整個查詢的排序順序決定了資料列在結果中的出現順序。 這暗示著次序編號第一的資料列，並不一定是分割區中的第一個資料列。  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
 274              48.101                8  
 ```  
   
-## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. 在相同查詢中使用的四個排名函數  
+## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. 在相同查詢中使用的四個次序函式  
  下列範例顯示在相同查詢中使用的四個排名函數。 如需特定函數的範例，請參閱每種排名函數。  
   
 ```  
@@ -156,11 +156,11 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
-|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
-|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
-|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
-|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
+|Michael|Blythe|@shouldalert|@shouldalert|@shouldalert|@shouldalert|4557045.0459|98027|  
+|Linda|Mitchell|2|@shouldalert|@shouldalert|@shouldalert|5200475.2313|98027|  
+|Jillian|Carson|3|@shouldalert|@shouldalert|@shouldalert|3857163.6332|98027|  
+|Garrett|Vargas|4|@shouldalert|@shouldalert|@shouldalert|1764938.9859|98027|  
+|Tsvi|Reiter|5|@shouldalert|@shouldalert|2|2811012.7151|98027|  
 |Shu|Ito|6|6|2|2|3018725.4858|98055|  
 |José|Saraiva|7|6|2|2|3189356.2465|98055|  
 |David|Campbell|8|6|2|3|3587378.4257|98055|  
@@ -171,10 +171,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D： 排序資料分割內的資料列  
- 下列範例會根據銷售代表在每個銷售地區根據他們的銷售總額。 資料列集由 `SalesTerritoryGroup` 來進行資料分割，依照 `SalesAmountQuota` 來排序。  
+### <a name="d-ranking-rows-within-a-partition"></a>D：在分割區內排列資料列次序  
+ 下列範例會根據其總銷售額，排列每個銷售領域內的銷售代表。 資料列集由 `SalesTerritoryGroup` 來進行資料分割，依照 `SalesAmountQuota` 來排序。  
   
 ```  
 -- Uses AdventureWorks  
@@ -209,11 +209,11 @@ Mensa-Annan        2753000.0000  North America        10
 Tsoflias           1687000.0000  Pacific              1 
 ```  
 
-## <a name="see-also"></a>請參閱＜  
- [順位 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [ROW_NUMBER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [排名函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [次序函式 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [函數](../../t-sql/functions/functions.md)  
   
   

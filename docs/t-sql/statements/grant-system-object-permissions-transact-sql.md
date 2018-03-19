@@ -1,5 +1,5 @@
 ---
-title: "GRANT 系統物件權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "GRANT 系統物件權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -45,16 +45,16 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
 ```  
   
 ## <a name="arguments"></a>引數  
- [sys]。  
+ [ sys.] .  
  只有在參考目錄檢視和動態管理檢視時，才需要 sys 限定詞。  
   
  *system_object*  
  指定要授與其權限的物件。  
   
- *主體*  
+ *principal*  
  指定要對其授與權限的主體。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個陳述式可用來授與下列項目的權限：某些預存程序、擴充預存程序、資料表值函式、純量函數、檢視、目錄檢視、相容性檢視、INFORMATION_SCHEMA 檢視、動態管理檢視及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的系統資料表。 在伺服器的資源資料庫 (mssqlsystemresource) 中，這些系統物件會個別以唯一記錄形式存在。 資源資料庫是唯讀的。 該物件的連結會公開為每個資料庫之 sys 結構描述中的記錄。 可以授與、拒絕及撤銷執行或選取系統物件的權限。  
   
  授與執行或選取某物件的權限，不一定會轉讓所有使用該物件所需的權限。 大部分的物件所執行的作業都需要其他權限。 例如，被授與 sp_addlinkedserver 之 EXECUTE 權限的使用者無法建立連結伺服器，除非該使用者也是系統管理員 (sysadmin) 固定伺服器角色的成員。  
@@ -65,7 +65,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級期間會保留系統物件的權限。  
   
- 您可以在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目錄檢視中看到系統物件。 系統物件的權限會顯示在[sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)目錄檢視中的 master 資料庫。  
+ 您可以在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目錄檢視中看到系統物件。 您可以在 master 資料庫的 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 目錄檢視中，看到系統物件的權限。  
   
  下列查詢會傳回系統物件權限的相關資訊：  
   
@@ -83,7 +83,7 @@ GO
 ## <a name="examples"></a>範例  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. 授與檢視的 SELECT 權限  
- 下列範例會授與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入`Sylvester1`選取列出的檢視權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。 接著，這個範例再授與其他權限，它是檢視非使用者擁有之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入上的中繼資料時所需的權限。  
+ 下列範例授與選取檢視 (這份檢視會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `Sylvester1` 權限。 接著，這個範例再授與其他權限，它是檢視非使用者擁有之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入上的中繼資料時所需的權限。  
   
 ```  
 USE AdventureWorks2012;  
@@ -100,10 +100,10 @@ GRANT EXECUTE ON xp_readmail TO Sylvester1;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.system_objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
- [sys.database_permissions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [撤銷系統物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   
- [拒絕系統物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [REVOKE System Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   
+ [DENY System Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "IsDescendantOf (Database Engine) |Microsoft 文件"
+title: "IsDescendantOf (資料庫引擎) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回 true，否則*這*是父代的子代。
+若 *this* 為父代的子系，便會傳回 true。
   
 ## <a name="syntax"></a>語法  
   
@@ -49,15 +49,15 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 ```  
   
 ## <a name="arguments"></a>引數  
-*父代*  
-**Hierarchyid** IsDescendantOf 測試應該執行的節點。
+*parent*  
+應執行 IsDescendantOf 測試的 **hierarchyid** 節點。
   
 ## <a name="return-types"></a>傳回類型  
-**SQL Server 傳回的型別： 位元**
+**SQL Server 傳回型別：bit**
   
-**CLR 傳回類型： SqlBoolean**
+**CLR 傳回型別：SqlBoolean**
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 針對位於父系之子樹中的所有節點傳回 true，而針對所有其他節點傳回 false。
   
 父系會被視為自己的下階。
