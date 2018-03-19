@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bc3d838c81ea8d973cff90e2e57e4bfd8b443f69
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1776f70f2136f7b46fe3aa9205f76108a2807170
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="date-transact-sql"></a>日期 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/21/2017
 |--------------------|-----------------|  
 |yyyy-mm-ddTZD|特別支援 XML / SOAP 使用方式。<br /><br /> TZD 是時區指示項 (Z 或 + hh: mm 或 -hh:mm)：<br /><br /> -   hh:mm 表示時區時差。 hh 表示時區時差中的兩位數時數，範圍介於 0 至 14 之間。<br />-   MM 是代表時區時差中額外分鐘數的兩位數，範圍介於 0 至 59 之間。<br />-   + (加號) 或 – (減號) 是時區時差的必要符號。 這會指出若要取得當地時間，則必須在國際標準時間 (UTC) 中加上或扣除時區位移。 時區位移的有效範圍介於 -14:00 至 +14:00 之間。|  
   
-## <a name="ansi-and-iso-8601-compliance"></a>ANSI 和 ISO 8601 標準  
+## <a name="ansi-and-iso-8601-compliance"></a>ANSI 和 ISO 8601 合規性  
 **date** 符合西曆的 ANSI SQL 標準定義：「附註 85 - Datetime 資料類型會允許採用西曆格式的日期以 0001–01–01 CE 到 9999–12–31 CE 的日期範圍儲存」。
   
 下層用戶端所使用的預設字串常值格式，會遵循 SQL 標準格式定義 YYYY-MM-DD。 此格式與 ISO 8601 所定義的 DATE 相同。
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/21/2017
 >  Informatica 的範圍限於 1582-10-15 (1582 年 10 月 15 日 CE) 至 9999-12-31 (9999 年 12 月 31 日 CE)。  
   
 ## <a name="backward-compatibility-for-down-level-clients"></a>下層用戶端的回溯相容性
-有些下層用戶端不支援 **time**、**date**、**datetime2** 和 **datetimeoffset** 資料類型。 下表顯示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的上層執行個體與下層用戶端之間的類型對應。
+有些下層用戶端不支援 **time**、**date**、**datetime2** 及 **datetimeoffset** 資料類型。 下表顯示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的上層執行個體與下層用戶端之間的類型對應。
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|傳遞至下層用戶端的預設字串常值格式|下層 ODBC|下層 OLEDB|下層 JDBC|下層 SQLCLIENT|  
 | --- | --- | --- | --- | --- | --- |
@@ -106,73 +106,7 @@ ms.lasthandoff: 11/21/2017
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|字串或 SqString|  
   
 ## <a name="converting-date-and-time-data"></a>轉換日期和時間資料
-當您轉換成日期與時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 如需搭配日期和時間資料使用 CAST 及 CONVERT 函數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。
-  
-當轉換成 **time(n)** 時，轉換會失敗，並引發錯誤訊息 206：「運算元類型衝突：date 與 time 不相容」。
-  
-如轉換成 **datetime**，會複製日期，而時間元件會設定為 00:00:00.000。 下列程式碼顯示將 `date` 值轉換成 `datetime` 值的結果。  
-  
-```sql
-DECLARE @date date= '12-10-25';  
-DECLARE @datetime datetime= @date;  
-  
-SELECT @date AS '@date', @datetime AS '@datetime';  
-  
---Result  
---@date      @datetime  
------------- -----------------------  
---2025-12-10 2025-12-10 00:00:00.000  
---  
---(1 row(s) affected)  
-```  
-  
-在轉換成 **smalldatetime** 的情況下，當 **date** 值在 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 範圍內時，將會複製日期元件，而時間元件會設定為 00:00:00。 當 **date** 值在 **smalldatetime** 值的範圍以外時，將會引發錯誤訊息 242：「將 **date** 資料類型轉換成 **smalldatetime** 資料類型時，產生超出範圍的值」，而 **smalldatetime** 值會設定為 NULL。 下列程式碼顯示將 `date` 值轉換成 `smalldatetime` 值的結果。
-  
-```sql
-DECLARE @date date= '1912-10-25';  
-DECLARE @smalldatetime smalldatetime = @date;  
-  
-SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';  
-  
---Result  
---@date      @smalldatetime  
------------- -----------------------  
---1912-10-25 1912-10-25 00:00:00  
---  
---(1 row(s) affected)  
-```  
-  
-當轉換成 **datetimeoffset(n)** 時，會複製日期，而時間會設定為 00:00.0000000 +00:00。 下列程式碼顯示將 `date` 值轉換成 `datetimeoffset(3)` 值的結果。
-  
-```sql
-DECLARE @date date = '1912-10-25';  
-DECLARE @datetimeoffset datetimeoffset(3) = @date;  
-  
-SELECT @date AS '@date', @datetimeoffset AS '@datetimeoffset';  
-  
---Result  
---@date      @datetimeoffset  
------------- ------------------------------  
---1912-10-25 1912-10-25 00:00:00.000 +00:00  
---  
---(1 row(s) affected)  
-```  
-  
-如轉換成 **datetime2(n)**，會複製日期元件，而時間元件會設定為 00:00:00.00，不論值是否為 (n) 皆然。 下列程式碼顯示將 `date` 值轉換成 `datetime2(3)` 值的結果。
-  
-```sql
-DECLARE @date date = '1912-10-25';  
-DECLARE @datetime2 datetime2(3) = @date;  
-  
-SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';  
-  
---Result  
---@date      @datetime2(3)  
------------- -----------------------  
---1912-10-25 1912-10-25 00:00:00.00  
---  
---(1 row(s) affected)  
-```  
+當您轉換成日期與時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 如需搭配日期和時間資料使用 CAST 及 CONVERT 函數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>將日期轉換成其他日期與時間類型
 下表說明當 **date** 資料類型轉換成其他日期和時間資料類型時，可能發生的狀況。
