@@ -1,5 +1,5 @@
 ---
-title: "ODBC 純量函數 (TRANSACT-SQL) |Microsoft 文件"
+title: "ODBC 純量函式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 純量函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  您可以使用[ODBC 純量函數](http://go.microsoft.com/fwlink/?LinkID=88579)中[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。 這些陳述式會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行解譯。 它們可用於預存程序和使用者自訂函數中。 這些項目包括字串、數值、時間、日期、間隔和系統函數。  
+  您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用 [ODBC 純量函式](http://go.microsoft.com/fwlink/?LinkID=88579)。 這些陳述式會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行解譯。 它們可用於預存程序和使用者自訂函數中。 這些項目包括字串、數值、時間、日期、間隔和系統函數。  
   
 ## <a name="usage"></a>使用方式  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="string-functions"></a>字串函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|傳回字串運算式的長度 (以位元為單位)。<br /><br /> 無法只針對字串資料類型運作。 因此，無法將 string_exp 隱含轉換成字串，但是將傳回指定之任何資料類型的 (內部) 大小。|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|傳回字元字串，表示將 string_exp2 串連至 string_exp1 的結果。 產生的字串為 DBMS 相依。 例如，如果由 string_exp1 所代表的資料行包含 NULL 值，DB2 就會傳回 NULL，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回非 NULL 字串。|  
@@ -86,13 +86,13 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="numeric-function"></a>數值函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
-|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|傳回 numeric_exp (截斷至小數點右邊的 integer_exp 個位置)。 如果 integer_exp 為負數，則 numeric_exp 就會截斷為 &#124; integer_exp &#124;小數點的左邊位置。|  
+|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|傳回 numeric_exp (截斷至小數點右邊的 integer_exp 個位置)。 若 integer_exp 為負數，則 numeric_exp 會截斷至小數點左邊的 &#124;integer_exp&#124; 個位置。|  
   
 ### <a name="time-date-and-interval-functions"></a>時間、日期和間隔函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|傳回目前的日期。|  
 |CURDATE( ) (ODBC 3.0)|傳回目前的日期。|  
@@ -183,7 +183,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. 在預存程序中使用 ODBC 函數  
  下列範例會在預存程序中使用 ODBC 函數：  
@@ -254,7 +254,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

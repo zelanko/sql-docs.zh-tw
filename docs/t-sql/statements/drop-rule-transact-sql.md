@@ -1,5 +1,5 @@
 ---
-title: "卸除規則 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP RULE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   從目前資料庫移除一或多個使用者自訂的規則。  
   
 > [!IMPORTANT]  
->  未來版本將移除 DROP RULE [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用 DROP RULE，並規劃修改目前使用 DROP RULE 的應用程式。 請改用檢查條件約束，您可以使用的 CHECK 關鍵字建立[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)或[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
+>  DROP DEFAULT 會在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的下一個版本中移除。 請勿在新的開發工作中使用 DROP RULE，並規劃修改目前使用 DROP RULE 的應用程式。 請改用 CHECK 條件約束，您可以利用 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 CHECK 關鍵字加以建立。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,23 +52,23 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *如果存在*  
+ *IF EXISTS*  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
- 只有當它已經存在有條件地卸除規則。  
+ 只有在規則已存在時，才能有條件地將其卸除。  
   
  *schema_name*  
  這是規則所屬的結構描述名稱。  
   
- *規則*  
- 這是要移除的規則。 規則名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 您可以選擇性地指定規則結構描述名稱。  
+ *rule*  
+ 這是要移除的規則。 規則名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 您可以選擇性地指定規則結構描述名稱。  
   
-## <a name="remarks"></a>備註  
- 若要卸除規則，且規則目前繫結了資料行或別名資料類型，請先將它解除繫結。 若要解除繫結規則，請使用**sp_unbindrule**。 如果您試圖卸除規則時，規則仍是繫結的，便會出現一則錯誤訊息，且會取消 DROP RULE 陳述式。  
+## <a name="remarks"></a>Remarks  
+ 若要卸除規則，且規則目前繫結了資料行或別名資料類型，請先將它解除繫結。 若要解除繫結規則，請使用 **sp_unbindrule**。 如果您試圖卸除規則時，規則仍是繫結的，便會出現一則錯誤訊息，且會取消 DROP RULE 陳述式。  
   
  在卸除規則之後，會輸入規則先前管理的資料行中所輸入的新資料，但不會有規則的條件約束。 現有資料完全不會受到影響。  
   
- DROP RULE 陳述式不適用於 CHECK 條件約束。 如需有關卸除檢查條件約束的詳細資訊，請參閱[ALTER TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md).  
+ DROP RULE 陳述式不適用於 CHECK 條件約束。 如需有關卸除 CHECK 條件約束的詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  若要執行 DROP RULE，使用者至少必須有規則所屬結構描述的 ALTER 權限。  
@@ -82,11 +82,11 @@ DROP RULE VendorID_rule
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [sp_bindrule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_unbindrule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 

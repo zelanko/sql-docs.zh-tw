@@ -1,5 +1,5 @@
 ---
-title: "ROUND (TRANSACT-SQL) |Microsoft 文件"
+title: ROUND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/14/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="arguments"></a>引數  
  *numeric_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)精確數值或相近數值資料類型類別目錄，除了**元**資料型別。  
+ 這是精確數值或近似數值資料類型類別的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料類型除外。  
   
  *length*  
- 有效位數的*numeric_expression*會捨入。 *長度*必須是類型的運算式**tinyint**， **smallint**，或**int**。當*長度*是正數， *numeric_expression*所指定的十進位數字會捨入*長度*。 當*長度*為負數， *numeric_expression*所指定小數點左側捨入*長度*。  
+ 這是 *numeric_expression* 捨入到的有效位數。 *length* 必須是 **tinyint**、**smallint** 或 **int** 類型的運算式。當 *length* 是正數時，*numeric_expression* 會捨入到 *length* 所指定的十進位數。 當 *length* 是負數時，*numeric_expression* 會依照 *length* 所指定的方式，在小數點左側捨入。  
   
  *函數*  
- 這是要執行的作業類型。 *函式*必須**tinyint**， **smallint**，或**int**。當*函式*省略或者值為 0 （預設）、 *numeric_expression*會捨入。 指定 0 以外的值時， *numeric_expression*會被截斷。  
+ 這是要執行的作業類型。 *function* 必須是 **tinyint**、**smallint** 或 **int**。當 *function* 遭到省略或者值為 0 (預設值) 時，會捨入 *numeric_expression*。 當指定 0 以外的值時，會截斷 *numeric_expression*。  
   
 ## <a name="return-types"></a>傳回類型  
  傳回下列資料類型。  
@@ -65,23 +65,23 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**smallint**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**十進位**和**數值**類別目錄 （p，s）|**decimal （p，s）**|  
-|**money**和**smallmoney**類別|**money**|  
-|**float**和**真實**類別|**float**|  
+|**decimal** 和 **numeric** 類別 (p, s)|**decimal(p, s)**|  
+|**money** 和 **smallmoney** 類別|**money**|  
+|**float** 和 **real** 類別|**float**|  
   
-## <a name="remarks"></a>備註  
- ROUND 會一律傳回值。 如果*長度*是負數且大於小數點前面的位數，ROUND 會傳回 0。  
+## <a name="remarks"></a>Remarks  
+ ROUND 會一律傳回值。 如果 *length* 是負的，且大於小數點前面的位數，ROUND 會傳回 0。  
   
 |範例|結果|  
 |-------------|------------|  
-|ROUND （748.58、-4）|0|  
+|ROUND(748.58, -4)|0|  
   
- ROUND 會傳回捨入*numeric_expression*，不論資料類型時*長度*為負數。  
+ 當 *length* 是負數時，不論資料類型為何，ROUND 都會傳回捨入的 *numeric_expression*。  
   
 |範例|結果|  
 |--------------|------------|  
-|ROUND （748.58，-1）|750.00|  
-|ROUND （748.58，-2）|700.00|  
+|ROUND(748.58, -1)|750.00|  
+|ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|導致算術溢位，因為 748.58 預設為 decimal(5,2)，而它不可能傳回 1000.00。|  
 |若要無條件進位至 4 位數，請變更輸入的資料類型。 例如：<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
@@ -140,9 +140,9 @@ GO
 (1 row(s) affected)  
 ```
   
-## <a name="see-also"></a>請參閱  
- [CEILING &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [FLOOR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [FLOOR &#40;Transact-SQL&#41;](../../t-sql/functions/floor-transact-sql.md)   
+ [數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

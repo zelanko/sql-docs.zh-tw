@@ -1,5 +1,5 @@
 ---
-title: "建立安全性原則 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="create-security-policy-transact-sql"></a>建立安全性原則 (TRANSACT-SQL)
+# <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   建立資料列層級安全性的安全性原則。  
@@ -67,38 +67,38 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  安全性原則的名稱。 安全性原則名稱必須符合識別碼的規則，並且在資料庫內及對於它的結構描述都必須是唯一的。  
   
  *schema_name*  
- 這是安全性原則所屬的結構描述名稱。 *schema_name*因為結構描述繫結，所以需要。  
+ 這是安全性原則所屬的結構描述名稱。 因為結構描述繫結，*schema_name* 是必要的。  
   
- [篩選器 |區塊]  
- 正繫結至目標資料表的函式的安全性述詞的類型。 篩選器述詞以無訊息方式篩選可讀取作業的資料列。 封鎖的述詞明確封鎖違反述詞函式的寫入作業。  
+ [ FILTER | BLOCK ]  
+ 繫結至目標資料表之函式的安全性述詞類型。 FILTER 述詞會以無訊息方式篩選讀取作業可用的資料列。 BLOCK 述詞會明確封鎖違反述詞函式的寫入作業。  
   
  *tvf_schema_name.security_predicate_function_name*  
  這是內嵌資料表值函數，可做為述詞使用，並會在查詢目標資料表時強制執行。 針對每個特定資料表的每項特定 DML 作業，最多只能定義一個安全性述詞。 內嵌資料表值函數必須使用 SCHEMABINDING 選項建立。  
   
- { *column_name* | *引數*}  
+ { *column_name* | *arguments* }  
  做為安全性述詞函數之參數的資料行名稱或運算式。 目標資料表上的任何資料行都可以做為述詞函數的引數。 可以使用包含常值的運算式、內建函數及使用算術運算子的運算式。  
   
  *table_schema_name.table_name*  
- 這是套用安全性述詞的目標資料表。 多個已停用的安全性原則可以單一資料表的特定 DML 作業，但只有一個可以啟用在任何指定時間。  
+ 這是套用安全性述詞的目標資料表。 您可以將多個已停用的安全性原則目標設為特定 DML 作業的單一資料表，但無論何時都只能啟用一個安全性原則。  
   
- *\<block_dml_operation >* block 述詞會套用特定 DML 作業。 在指定的資料列的值將評估的述詞，DML 作業之後執行 （INSERT 或 UPDATE）。 之前指定的資料列的值將評估的述詞，DML 作業之前執行 （UPDATE 或 DELETE）。 如果未不指定任何作業，則述詞會套用至所有作業。  
+ *\<block_dml_operation>* 要套用封鎖述詞的特定 DML 作業。 AFTER 可指定在 DML 作業 (INSERT 或 UPDATE) 執行之後，根據資料列的值來評估述詞。 BEFORE 可指定在 DML 作業 (UPDATE 或 DELETE) 執行之前，根據資料列的值來評估述詞。 如果沒有指定作業，則會將述詞套用至所有作業。  
   
- [狀態 = {ON |**OFF** }]  
+ [ STATE = { ON | **OFF** } ]  
  啟用或停用強制對目標資料表執行其安全性述詞的安全性原則。 如果未指定，則會啟用正在建立的安全性原則。  
   
- [SCHEMABINDING = {ON |關閉}]  
- 指出是否必須使用 SCHEMABINDING 選項建立的原則中的所有述詞函式。 根據預設，所有函式必須以 schemabinding 來建立。  
+ [ SCHEMABINDING = { ON | OFF } ]  
+ 指出是否必須使用 SCHEMABINDING 選項來建立原則中的所有述詞函式。 根據預設，所有函式都必須以 SCHEMABINDING 來建立。  
   
  NOT FOR REPLICATION  
  表示當複寫代理程式修改目標物件時，不應執行安全性原則。 如需詳細資訊，請參閱[在同步處理期間控制觸發程序和條件約束的行為 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)。  
   
- [*table_schema_name*。]*table_name*  
+ [*table_schema_name*.] *table_name*  
  這是套用安全性述詞的目標資料表。 單一資料表可以有多個已停用的安全性原則，但無論何時都只能啟用一個安全性原則。  
   
-## <a name="remarks"></a>備註  
- 當使用記憶體最佳化資料表的述詞函式，您必須包含**SCHEMABINDING**並用**WITH NATIVE_COMPILATION**編譯提示。  
+## <a name="remarks"></a>Remarks  
+ 搭配使用述詞函式與記憶體最佳化資料表時，您必須包含 **SCHEMABINDING** 並使用 **WITH NATIVE_COMPILATION** 編譯提示。  
   
- Block 述詞會評估後會在執行對應的 DML 作業。 因此，讀取未認可的查詢可以查看將會回復的暫時性值。  
+ 系統會在執行對應的 DML 作業後評估封鎖述詞。 因此，READ UNCOMMITTED 查詢可以查看之後會回復的暫時性值。  
   
 ## <a name="permissions"></a>Permissions  
  需要結構描述的 ALTER ANY SECURITY POLICY 權限和 ALTER 權限。  
@@ -112,7 +112,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 -   目標資料表中做為引數使用之每個資料行的 REFERENCES 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例示範如何使用 **CREATE SECURITY POLICY** 語法。 如需完整的安全性原則案例的範例，請參閱[資料列層級安全性](../../relational-databases/security/row-level-security.md)。  
+ 下列範例示範如何使用 **CREATE SECURITY POLICY** 語法。 如需完整安全性原則案例的範例，請參閱[資料列層級安全性](../../relational-databases/security/row-level-security.md)。  
   
 ### <a name="a-creating-a-security-policy"></a>A. 建立安全性原則  
  下列語法使用篩選器述詞建立客戶資料表的安全性原則，並保持停用安全性原則。  
@@ -137,8 +137,8 @@ ADD FILTER PREDICATE [rls].[fn_securitypredicate2]([WingId])
 WITH (STATE = ON);  
 ```  
   
-### <a name="c-creating-a-policy-with-multiple-types-of-security-predicates"></a>C. 建立包含多個安全性述詞類型的原則  
- 加入 [Sales] 資料表的篩選器述詞及 block 述詞。  
+### <a name="c-creating-a-policy-with-multiple-types-of-security-predicates"></a>C. 建立包含多種安全性述詞類型的原則  
+ 將篩選述詞和封鎖述詞新增至 Sales 資料表。  
   
 ```  
 CREATE SECURITY POLICY rls.SecPol  
@@ -146,12 +146,12 @@ CREATE SECURITY POLICY rls.SecPol
     ADD BLOCK PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales AFTER INSERT;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料列層級安全性](../../relational-databases/security/row-level-security.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [sys.security_predicates &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   
 

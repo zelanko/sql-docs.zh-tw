@@ -1,5 +1,5 @@
 ---
-title: "NEWSEQUENTIALID (TRANSACT-SQL) |Microsoft 文件"
+title: NEWSEQUENTIALID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2015
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  如果您有隱私權顧慮，請勿使用這個函數。 因為使用者不難猜出下一個產生的 GUID 值，進而存取與該 GUID 相關聯的資料。  
   
- NEWSEQUENTIALID 是 windows 的包裝函數[UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027)函式，但有一些[位元組要跳過套用](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)。
+ NEWSEQUENTIALID 是 Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) 函式上的一個包裝函式，其[套用了一些隨機位元組](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)。
   
 > [!WARNING]  
->  UuidCreateSequential 函式有硬體相依性。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，（例如自主資料庫） 的資料庫移動到其他電腦時，可以開發的循序值的叢集。 使用 Alwayson 時，並在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，如果資料庫容錯移轉至另一部電腦，可以開發的循序值的叢集。  
+>  UuidCreateSequential 函式有硬體相依性。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，當資料庫 (例如自主資料庫) 移動到另一部電腦時，順序值的叢集便可進行開發。 使用 Always On 和在 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 上時，若資料庫容錯移轉至不同的電腦，順序值的叢集便可進行開發。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,8 +57,8 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>傳回類型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>備註  
- Newsequentialid （） 僅能搭配 DEFAULT 條件約束類型的資料表資料行**uniqueidentifier**。 例如：  
+## <a name="remarks"></a>Remarks  
+ NEWSEQUENTIALID() 只能搭配使用 **uniqueidentifier** 類型之資料表資料行的 DEFAULT 條件約束。 例如：  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   
@@ -78,8 +78,8 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
   
  使用 NEWSEQUENTIALID 所產生的 GUID 在該電腦上都是唯一的。 唯有在來源電腦具有網路卡時，使用 NEWSEQUENTIALID 所產生的 GUID 在多部電腦上才是唯一的。  
   
-## <a name="see-also"></a>請參閱＜  
- [NEWID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)   
- [比較運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
+ [比較運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   

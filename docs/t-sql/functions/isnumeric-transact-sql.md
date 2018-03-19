@@ -1,5 +1,5 @@
 ---
-title: "ISNUMERIC (TRANSACT-SQL) |Microsoft 文件"
+title: ISNUMERIC (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ ISNUMERIC ( expression )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)進行評估。  
+ 為要評估的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當輸入運算式評估為有效數值資料類型時，ISNUMERIC 就會傳回 1，否則便傳回 0。 有效數值資料類型包括下列各種類型：  
   
 |||  
@@ -68,7 +68,7 @@ ISNUMERIC ( expression )
 |**decimal**|**real**|  
   
 > [!NOTE]  
->  ISNUMERIC 會針對某些不是數字的字元傳回 1，例如加號 (+)、減號 (-) 和有效貨幣符號 (如錢幣符號 ($))。 如需貨幣符號的完整清單，請參閱[money 和 smallmoney &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+>  ISNUMERIC 會針對某些不是數字的字元傳回 1，例如加號 (+)、減號 (-) 和有效貨幣符號 (如錢幣符號 ($))。 如需貨幣符號的完整清單，請參閱 [money 和 smallmoney &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `ISNUMERIC`，傳回所有非數值的郵遞區號。  
@@ -82,7 +82,7 @@ WHERE ISNUMERIC(PostalCode)<> 1;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會使用 `ISNUMERIC`，傳回所有非數值的郵遞區號。  
   
 ```  
@@ -93,8 +93,8 @@ FROM sys.databases;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   

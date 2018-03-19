@@ -1,5 +1,5 @@
 ---
-title: "PI (TRANSACT-SQL) |Microsoft 文件"
+title: PI (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -65,8 +65,8 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

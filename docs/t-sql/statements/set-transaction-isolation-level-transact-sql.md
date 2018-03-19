@@ -1,5 +1,5 @@
 ---
-title: "設定交易隔離等級 (TRANSACT-SQL) |Microsoft 文件"
+title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -84,7 +84,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  READ COMMITTED 的行為會隨著 READ_COMMITTED_SNAPSHOT 資料庫選項的設定而不同：  
   
--   如果 READ_COMMITTED_SNAPSHOT 設為 OFF (預設值)，當目前交易正在執行讀取作業時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用共用鎖定來防止其他交易修改資料列。 共用鎖定也會封鎖陳述式，使它們在其他交易完成之前，無法讀取其他交易所修改的資料列。 共用鎖定類型會決定釋放的時機。 資料列鎖定會在處理下一個資料列之前釋放。 當讀取下一個頁面時，而且陳述式完成時，會釋放資料表鎖定時，會釋放頁面鎖定。  
+-   如果 READ_COMMITTED_SNAPSHOT 設為 OFF (預設值)，當目前交易正在執行讀取作業時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用共用鎖定來防止其他交易修改資料列。 共用鎖定也會封鎖陳述式，使它們在其他交易完成之前，無法讀取其他交易所修改的資料列。 共用鎖定類型會決定釋放的時機。 資料列鎖定會在處理下一個資料列之前釋放。 頁面鎖定會在讀取下一個頁面時釋放，而資料表鎖定會在陳述式完成時釋放。  
   
     > [!NOTE]  
     >  如果 READ_COMMITTED_SNAPSHOT 設為 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用資料列版本設定，依照資料在陳述式開始時就存在的狀態，向每個陳述式提供具有交易一致性的資料快照集。 鎖定的使用目的不是為了防止其他交易更新資料。  
@@ -128,7 +128,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  範圍鎖定會放在符合交易所執行的每個陳述式之搜尋條件的索引鍵值範圍中。 這會封鎖其他交易，以免它們更新或插入符合目前交易執行之任何陳述式的所有資料列。 這表示第二次執行交易中的任何陳述式時，它們會讀取同一組資料列。 範圍鎖定會一直保留到交易完成。 這是隔離等級最嚴格的限制，因為它鎖定了索引鍵的整個範圍，且會將鎖定保留到交易完成。 由於並行發生的可能性較低，因此，請只在必要時，才使用這個選項。 這個選項的效果，與在交易中將所有 SELECT 陳述式之所有資料表設為 HOLDLOCK 相同。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  每次只能設定一個隔離等級選項，除非您明確變更，否則，這項設定對該連接持續有效。 除非陳述式 FROM 子句中的資料表提示為資料表指定了不同的鎖定或版本控制行為，否則，在交易內執行的所有讀取作業，都會遵照指定隔離等級的規則來運作。  
   
  交易隔離等級會定義讀取作業上取得的鎖定類型。 雖然利用讀取來參考頁面或資料表中的大量資料列時，資料列鎖定可以提升為頁面或資料表鎖定，但為了 READ COMMITTED 或 REPEATABLE READ 而取得的共用鎖定通常仍是資料列鎖定。 如果資料列被讀取之後，交易才修改資料列，交易會取得獨佔鎖定來保護這個資料列，且會保留獨佔鎖定直到交易完成為止。 例如，如果 REPEATABLE READ 交易有資料列的共用鎖定，之後交易又修改這個資料列，共用的資料列鎖定便會轉換成獨佔資料列鎖定。  
@@ -137,7 +137,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  當您變更交易的隔離等級時，會根據新等級的規則來保護變更後讀取的資源。 變更前讀取的資源則會繼續根據前一等級的規則來受到保護。 例如，如果交易從 READ COMMITTED 改成 SERIALIZABLE，變更後取得的共用鎖定現在將會保留至交易結束為止。  
   
- 如果您在預存程序或觸發程序中發出 SET TRANSACTION ISOLATION LEVEL，則當物件傳回控制權時，隔離等級會重設成叫用物件時的作用等級。 例如，如果您在批次和批次中設定 REPEATABLE READ，則呼叫的預存程序設定為 SERIALIZABLE 隔離等級，隔離等級設定時還原為 REPEATABLE READ 預存程序會將控制權還給批次。  
+ 如果您在預存程序或觸發程序中發出 SET TRANSACTION ISOLATION LEVEL，則當物件傳回控制權時，隔離等級會重設成叫用物件時的作用等級。 例如，若您在批次中設定 REPEATABLE READ，而批次接著呼叫將隔離等級設為 SERIALIZABLE 的預存程序，則當預存程序將控制權傳回給批次時，隔離等級設定會還原為 REPEATABLE READ。  
   
 > [!NOTE]  
 >  使用者定義函數和 Common Language Runtime (CLR) 使用者定義類型不能執行 SET TRANSACTION ISOLATION LEVEL。 不過，您也可以使用資料表提示來覆寫隔離等級。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
@@ -154,7 +154,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   使用資料列版本設定的 READ COMMITTED  
   
- 相反地，在這些隔離等級之下執行的查詢也會封鎖堆積上的最佳化大量載入作業。 如需有關大量載入作業的詳細資訊，請參閱[大量匯入和匯出資料 &#40;SQL Server &#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ 相反地，在這些隔離等級之下執行的查詢也會封鎖堆積上的最佳化大量載入作業。 如需大量匯入作業的詳細資訊，請參閱[資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
  具 FILESTREAM 功能的資料庫支援下列交易隔離等級。  
   
@@ -187,9 +187,9 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC USEROPTIONS &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+ [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  

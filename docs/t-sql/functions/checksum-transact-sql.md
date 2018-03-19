@@ -1,5 +1,5 @@
 ---
-title: "總和檢查碼 (TRANSACT-SQL) |Microsoft 文件"
+title: CHECKSUM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 ## <a name="arguments"></a>引數  
 \*  
-指定針對資料表的所有資料行來計算。 如果有任何資料行是不可比較的資料類型，CHECKSUM 會傳回錯誤。 不可比較的資料類型為**文字**， **ntext**，**映像**，XML 和**游標**，以及**sql_variant**與任何一個先前的類型作為其基底類型。
+指定針對資料表的所有資料行來計算。 如果有任何資料行是不可比較的資料類型，CHECKSUM 會傳回錯誤。 不可比較的資料類型有 **text**、**ntext**、**image**、XML 和 **cursor**，以及基底類型為上述任一類型的 **sql_variant**。
   
 *expression*  
-是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)不可比較的資料類型以外之任何類型。
+為不可比較的資料類型之外，任何資料類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回型別
  **int**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 CHECKSUM 會針對它的引數清單，來計算稱為總和檢查碼的雜湊值。 雜湊值用來建立雜湊索引。 如果 CHECKSUM 的引數是資料行，且在計算的 CHECKSUM 值上建立索引，結果就是雜湊索引。 這可用來進行資料行的相等搜尋。
   
-CHECKSUM 會滿足雜湊函數的屬性：如果兩份清單的對應元素有相同的類型，且利用等於 (=) 運算子來比較時相等，套用在任何兩份運算式清單上的 CHECKSUM 會傳回相同的值。 對這項定義而言，指定類型的 Null 值會被視為比較結果相等。 如果變更了運算式清單中的其中一個值，清單的總和檢查碼通常也會改變。 不過，總和檢查碼也有可能不會變更。 因此，我們不建議使用 CHECKSUM 來偵測是否已變更值，除非應用程式可以容忍偶爾遺失變更。 請考慮使用[HashBytes](../../t-sql/functions/hashbytes-transact-sql.md)改為。 當指定 MD5 雜湊演算法時，HashBytes 為兩個不同的輸入傳回相同結果的可能性比 CHECKSUM 要低很多。
+CHECKSUM 會滿足雜湊函數的屬性：如果兩份清單的對應元素有相同的類型，且利用等於 (=) 運算子來比較時相等，套用在任何兩份運算式清單上的 CHECKSUM 會傳回相同的值。 對這項定義而言，指定類型的 Null 值會被視為比較結果相等。 如果變更了運算式清單中的其中一個值，清單的總和檢查碼通常也會改變。 不過，總和檢查碼也有可能不會變更。 因此，我們不建議使用 CHECKSUM 來偵測是否已變更值，除非應用程式可以容忍偶爾遺失變更。 請考慮改用 [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md)。 當指定 MD5 雜湊演算法時，HashBytes 為兩個不同的輸入傳回相同結果的可能性比 CHECKSUM 要低很多。
   
 運算式的順序會影響 CHECKSUM 的結果值。 搭配 CHECKSUM(*) 一起使用的資料行順序，是資料表或檢視定義所指定之資料行的順序。 計算資料行也包括在內。
   
@@ -96,8 +96,8 @@ GO
 建立計算資料行的索引，會使總和檢查碼資料行具體化，`ProductName` 值的任何變更都會傳播到總和檢查碼資料行。 另外，您也可以在建立索引的資料行上，直接建立索引。 不過，如果索引鍵值很長，可能不會執行正規索引及總和檢查碼索引。
   
 ## <a name="see-also"></a>另請參閱
-[CHECKSUM_AGG &#40;TRANSACT-SQL &#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[HASHBYTES &#40;TRANSACT-SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
-[BINARY_CHECKSUM &#40;TRANSACT-SQL &#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
   
   

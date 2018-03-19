@@ -1,5 +1,5 @@
 ---
-title: "中繼資料函數 (TRANSACT-SQL) |Microsoft 文件"
+title: "中繼資料函式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  所有中繼資料函數都不具決定性。 這表示這些函數並非每次呼叫時，都會傳回相同的結果，即便使用同一組輸入值也是如此。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

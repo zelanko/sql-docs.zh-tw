@@ -1,5 +1,5 @@
 ---
-title: "@@LOCK_TIMEOUT (TRANSACT-SQL) |Microsoft 文件"
+title: '@@LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/19/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>傳回類型  
  **integer**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  SET LOCK_TIMEOUT 允許應用程式設定陳述式在封鎖的資源上，最大的等待時間。 當陳述式等待時間超出 LOCK_TIMEOUT 設定時，會自動取消封鎖的陳述式，且會傳回一則錯誤訊息給應用程式。  
   
- @@LOCK_TIMEOUT傳回-1 值，如果 SET LOCK_TIMEOUT 尚未執行目前的工作階段中。  
+ 若尚未在目前工作階段中執行 SET LOCK_TIMEOUT，@@LOCK_TIMEOUT 會傳回 -1 值。  
   
 ## <a name="examples"></a>範例  
  這個範例顯示當未設定 LOCK_TIMEOUT 值時的結果集。  
@@ -71,7 +71,7 @@ Lock Timeout
 -1  
 ```  
   
- 這個範例會將 LOCK_TIMEOUT 設為 1800年毫秒，，然後呼叫@LOCK_TIMEOUT 。  
+ 這個範例會將 LOCK_TIMEOUT 設為 1800 毫秒，然後呼叫 @@LOCK_TIMEOUT。  
   
 ```  
 SET LOCK_TIMEOUT 1800;  
@@ -87,8 +87,8 @@ Lock Timeout
 1800          
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [組態函式 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [SET LOCK_TIMEOUT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

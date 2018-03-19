@@ -1,5 +1,5 @@
 ---
-title: "KEY_ID (TRANSACT-SQL) |Microsoft 文件"
+title: KEY_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ Key_ID ( 'Key_Name' )
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  暫時金鑰的名稱，必須以數字符號 (#) 開頭。  
   
 ## <a name="permissions"></a>Permissions  
@@ -77,10 +77,10 @@ SELECT KEY_ID('ABerglundKey1');
 SELECT KEY_ID('#ABerglundKey2');  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [KEY_GUID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/key-guid-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [KEY_GUID &#40;Transact-SQL&#41;](../../t-sql/functions/key-guid-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [sys.symmetric_keys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

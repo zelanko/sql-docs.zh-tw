@@ -1,5 +1,5 @@
 ---
-title: "建立程序 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  建立[!INCLUDE[tsql](../../includes/tsql-md.md)]或通用語言執行平台 (CLR) 預存程序中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，Azure SQL 資料倉儲和平行資料倉儲。 預存程序類似於其他程式設計語言中的程序，這些程序可以：  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 資料倉儲和平行處理資料倉儲中，建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或通用語言執行平台 (CLR) 預存程序。 預存程序類似於其他程式設計語言中的程序，這些程序可以：  
   
 -   接受輸入參數，並以輸出參數的形式將多個數值傳回呼叫程序或批次處理。  
   
@@ -70,12 +70,12 @@ ms.lasthandoff: 11/21/2017
   
 -   將狀態值傳回呼叫程序或批次處理，以指示成功或失敗 (及失敗原因)。  
   
- 若要建立永久程序在目前資料庫或暫存程序中的使用此陳述式**tempdb**資料庫。  
+ 使用此陳述式在目前的資料庫中建立永久程序，或在 **tempdb** 資料庫中建立暫存程序。  
   
 > [!NOTE]  
->  在本主題討論.NET Framework CLR 整合 SQL Server。 CLR 整合不適用於 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+>  本主題將討論如何將 .NET Framework CLR 整合至 SQL Server。 CLR 整合不適用於 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
 
-跳至[簡單範例](#Simple)略過語法的詳細資料，並取得簡單的範例，基本的預存程序。
+若要略過語法詳細資料，並了解基本預存程序的簡單範例，可跳到[簡單範例](#Simple)。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -149,116 +149,116 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 ```  
   
 ## <a name="arguments"></a>引數
-或 ALTER  
- **適用於**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1)。  
+OR ALTER  
+ **適用於**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始)。  
   
- 如果已經存在，請改變程序。
+ 如果程序已經存在，即會將它改變。
  
  *schema_name*  
  程序所屬之結構描述的名稱。 程序是以結構描述繫結的。 如果在建立程序時未指定結構描述名稱，就會自動指派建立程序之使用者的預設結構描述。  
   
- *程序名稱*  
- 程序的名稱。 程序名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)而且必須是唯一的結構描述內。  
+ *procedure_name*  
+ 程序的名稱。 程序名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，在結構描述內也必須是唯一的。  
   
- 避免使用**sp_**前置詞命名的程序。 這個前置詞是供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定系統程序時使用。 如果有相同名稱的系統程序，使用前置詞可能造成應用程式的程式碼中斷。  
+ 為程序命名時，請避免使用 **sp_** 前置詞。 這個前置詞是供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定系統程序時使用。 如果有相同名稱的系統程序，使用前置詞可能造成應用程式的程式碼中斷。  
   
- 本機或全域暫存程序可以使用一個數字符號 （#） 來建立之前*procedure_name* (*#procedure_name*) 本機暫存程序和全域暫存的兩個數字的符號程序 (*# # procedure_name*)。 只有建立本機暫存程序的連線可以看到它，而且關閉連線時就會卸除該程序。 全域暫存程序適用於所有連線，而且在最後一個工作階段結束時，會使用程序卸除。 無法為 CLR 程序指定暫存名稱。  
+ 若要建立本機或全域暫存程序，您可以在 *procedure_name* 前面使用一個數字記號 (#) 來建立本機暫存程序 (*#procedure_name*)；使用兩個數字記號來建立全域暫存程序 (*##procedure_name*)。 只有建立本機暫存程序的連線可以看到它，而且關閉連線時就會卸除該程序。 全域暫存程序適用於所有連線，而且在最後一個工作階段結束時，會使用程序卸除。 無法為 CLR 程序指定暫存名稱。  
   
  程序或全域暫存程序的完整名稱 (包括 ##) 不能超過 128 個字元。 本機暫存程序的完整名稱 (包括 #) 不能超過 116 個字元。  
   
- **;** *數目*  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **;** *number*  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  用來將同名程序分組的選擇性整數。 您可以利用一個 DROP PROCEDURE 陳述式一併卸除這些分組的程序。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 編號程序不能使用**xml**或 CLR 使用者定義類型，並不能用於在計劃指南。  
+ 編號程序無法使用 **xml** 或 CLR 使用者定義的類型，亦無法用於計劃指南。  
   
- **@***參數*  
- 在程序中宣告的參數。 使用指定的參數名稱 @ 記號 (**@**) 作為第一個字元。 參數名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 對程序而言，參數必須是本機參數；相同的參數名稱可以用在其他程序中。  
+ **@** *parameter*  
+ 在程序中宣告的參數。 將 at 記號 (**@**) 作為第一個字元來指定參數名稱。 參數名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 對程序而言，參數必須是本機參數；相同的參數名稱可以用在其他程序中。  
   
- 您可以宣告一個或多個參數，最大值為 2,100。 除非定義了參數的預設值或將值設為等於其他參數，否則，在呼叫程序時，使用者必須提供每個已宣告參數的值。 如果程序包含[資料表值參數](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)，並在呼叫中遺漏參數，傳入空白資料表。 參數只可取代常數運算式，而無法取代資料表名稱、資料行名稱或其他資料庫物件的名稱。 如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)。  
+ 您可以宣告一個或多個參數，最大值為 2,100。 除非定義了參數的預設值或將值設為等於其他參數，否則，在呼叫程序時，使用者必須提供每個已宣告參數的值。 如果程序包含[資料表值參數](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)，但呼叫中缺少此參數，則會傳入空白資料表。 參數只可取代常數運算式，而無法取代資料表名稱、資料行名稱或其他資料庫物件的名稱。 如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)。  
   
  如果指定了 FOR REPLICATION，就不能宣告參數。  
   
- [ *type_schema_name***。** ] *data_type*  
+ [ *type_schema_name***.** ] *data_type*  
  參數資料類型及該資料類型所屬的結構描述。  
   
-**方針[!INCLUDE[tsql](../../includes/tsql-md.md)]程序**:  
+**[!INCLUDE[tsql](../../includes/tsql-md.md)] 程序的指導方針**：  
   
--   所有[!INCLUDE[tsql](../../includes/tsql-md.md)]資料類型可以做為參數。  
+-   所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料類型都可以作為參數使用。  
   
--   您可以使用使用者定義資料表類型建立資料表值參數。 資料表值參數只能是 INPUT 參數，而且必須與 READONLY 關鍵字一起使用。 如需詳細資訊，請參閱[使用資料表值參數 &#40; Database engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
+-   您可以使用使用者定義資料表類型建立資料表值參數。 資料表值參數只能是 INPUT 參數，而且必須與 READONLY 關鍵字一起使用。 如需詳細資訊，請參閱[使用資料表值參數 &#40;資料庫引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
--   **資料指標**資料型別只能是 OUTPUT 參數，而且必須伴隨著 VARYING 關鍵字。  
+-   **cursor** 資料類型只能是 OUTPUT 參數，而且必須與 VARYING 關鍵字一起使用。  
   
-**CLR 程序的指導方針**:  
+**CLR 程序的指導方針**：  
   
--   在 Managed 程式碼中具有對等類型的所有原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型都可以當做參數使用。 如需有關 CLR 型別之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統資料類型，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統資料類型以及其語法，請參閱[資料類型 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+-   在 Managed 程式碼中具有對等類型的所有原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型都可以當做參數使用。 如需 CLR 類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型之間的對應詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型及其語法的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   資料表值或**游標**資料型別不能做為參數。  
+-   資料表值或 **cursor** 資料類型都無法作為參數使用。  
   
 -   如果參數的資料類型是 CLR 使用者定義型別，您必須具有在該類型上的 EXECUTE 權限。  
   
 VARYING  
- 指定支援做為輸出參數的結果集。 這個參數由程序動態建構，可能會有不同的內容。 僅適用於**游標**參數。 這個選項不適用於 CLR 程序。  
+ 指定支援做為輸出參數的結果集。 這個參數由程序動態建構，可能會有不同的內容。 只適用於 **cursor** 參數。 這個選項不適用於 CLR 程序。  
   
-*預設值*  
- 參數的預設值。 如果參數定義預設值，則可以執行程序，而指定該參數的值。 預設值必須是常數，或者，可以是 NULL。 常數值可以採用萬用字元格式，讓您可以在將參數傳入程序時使用 LIKE 關鍵字。   
+*default*  
+ 參數的預設值。 如果定義了參數的預設值，不必指定該參數的值就可以執行程序。 預設值必須是常數，或者，可以是 NULL。 常數值可以採用萬用字元格式，讓您可以在將參數傳入程序時使用 LIKE 關鍵字。   
   
- 預設值會記錄在**sys.parameters.default**只為 CLR 程序的資料行。 該資料行的 NULL[!INCLUDE[tsql](../../includes/tsql-md.md)]程序參數。  
+ **sys.parameters.default** 資料行中只會記錄 CLR 程序的預設值。 如果是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序參數，該資料行為 NULL。  
   
 OUT | OUTPUT  
- 指出這個參數是輸出參數。 您可以利用 OUTPUT 參數將值傳回程序的呼叫者。 **文字**， **ntext**，和**映像**參數不能做為輸出參數，除非此程序是 CLR 程序。 除非此程序是一個 CLR 程序，否則輸出參數可以當做資料指標預留位置使用。 資料表值資料類型無法指定為程序的 OUTPUT 參數。  
+ 指出這個參數是輸出參數。 您可以利用 OUTPUT 參數將值傳回程序的呼叫者。 除非程序是 CLR 程序，否則 **text**、**ntext** 和 **image** 參數無法作為 OUTPUT 參數使用。 除非此程序是一個 CLR 程序，否則輸出參數可以當做資料指標預留位置使用。 資料表值資料類型無法指定為程序的 OUTPUT 參數。  
   
 READONLY  
  指示無法在程序的主體內更新或修改參數。 如果參數類型是資料表值類型，就必須指定 READONLY。  
   
 RECOMPILE  
- 表示[!INCLUDE[ssDE](../../includes/ssde-md.md)]不快取這個程序，強制編譯每次執行時的查詢計劃。 如需有關強制重新編譯的原因的詳細資訊，請參閱[重新編譯預存程序](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)。 指定 FOR REPLICATION 時，或是 CLR 程序時，無法使用此選項。  
+ 指出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會快取這個程序的查詢計劃，以強制在每次執行該程序時進行編譯。 如需為何會強制重新編譯的詳細資訊，請參閱[重新編譯預存程序](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)。 指定 FOR REPLICATION 時，或是 CLR 程序時，無法使用此選項。  
   
- 若要指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]捨棄查詢計畫的程序內的個別查詢，請使用 RECOMPILE 查詢提示的查詢定義中。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
+ 若要指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 捨棄程序內個別查詢的查詢計劃，請使用查詢定義中的 RECOMPILE 查詢提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ENCRYPTION  
- **適用於**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將 CREATE PROCEDURE 陳述式的原始文字轉換成模糊化的格式。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，無法直接從任何目錄檢視中看見混亂格式的輸出。 對系統資料表或資料庫檔案沒有存取權的使用者無法擷取模糊化的文字。 不過，文字是以特殊權限可以存取系統資料表上的使用者可使用[DAC 通訊埠](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)或直接存取資料庫檔案。 另外，可將偵錯工具附加至伺服器處理序的使用者，還可以在執行階段從記憶體擷取解密程序。 如需有關存取系統中繼資料的詳細資訊，請參閱[中繼資料可見性組態](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 CREATE PROCEDURE 陳述式的原始文字轉換為模糊化格式。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，無法直接從任何目錄檢視中看見混亂格式的輸出。 對系統資料表或資料庫檔案沒有存取權的使用者無法擷取模糊化的文字。 不過，如果是特殊權限使用者 (可以透過 [DAC 通訊埠](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)存取系統資料表，或直接存取資料庫檔案)，則可使用該文字。 另外，可將偵錯工具附加至伺服器處理序的使用者，還可以在執行階段從記憶體擷取解密程序。 如需如何存取系統中繼資料的詳細資訊，請參閱[中繼資料可見性組態](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
  這個選項不適用於 CLR 程序。  
   
- 使用這個選項建立的程序不能發行為一部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]複寫。  
+ 使用這個選項建立的程序，不能發行為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫的一部分。  
   
-EXECUTE AS*子句*  
+EXECUTE AS *子句*  
  指定執行程序時所在的安全性內容。  
   
- 原生編譯預存程序，啟動[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，沒有限制在 EXECUTE AS 子句。 在[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SELF、 OWNER 和*'user_name'*子句支援原生編譯的預存程序。  
+ 針對原生編譯的預存程序，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的 EXECUTE AS 子句均無限制。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，SELF、OWNER 和 *'user_name'* 子句均支援原生編譯的預存程序。  
   
  如需詳細資訊，請參閱 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
 FOR REPLICATION  
- **適用於**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定針對複寫建立的程序。 因此無法針對訂閱者執行該程序。 利用 FOR REPLICATION 選項建立的程序會當做程序篩選來使用，而且只有在複寫期間才會執行它。 如果指定了 FOR REPLICATION，就不能宣告參數。 無法為 CLR 程序指定 FOR REPLICATION。 使用 FOR REPLICATION 建立的程序，會忽略 RECOMPILE 選項。  
   
- A`FOR REPLICATION`程序中的物件類型**RF**中**sys.objects**和**sys.procedures**。  
+ `FOR REPLICATION` 程序在 **sys.objects** 和 **sys.procedures** 中具有 **RF** 物件類型。  
   
- {[BEGIN] *q* [;][ ... *n*  ] [結束]}  
+ { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  包含程序主體的一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 您可以使用選用的 BEGIN 和 END 關鍵字來括住陳述式。 如需詳細資訊，請參閱以下的＜最佳作法＞、＜一般備註＞以及＜限制事項＞這幾節。  
   
-EXTERNAL NAME *assembly_name***。***class_name***。***method_name*  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 指定 CLR 程序所要參考之 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件的方法。 *class_name*必須是有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別項且必須是組件中的類別。 如果該類別具有命名空間限定的名稱是使用句號 (**。**) 來分隔命名空間的各個部分，必須分隔類別名稱使用方括號 (**[]**) 或引號 (**""**). 指定的方法必須是類別的靜態方法。  
+ 指定 CLR 程序所要參考之 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件的方法。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是組件中的類別。 如果該類別具有命名空間限定的名稱，且該名稱使用句號 (**.**) 來分隔命名空間的各個部分，您就必須使用方括弧 (**[]**) 或引號 (**""**) 來分隔類別名稱。 指定的方法必須是類別的靜態方法。  
   
- 依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能執行 CLR 程式碼。 您可以建立、 修改和卸除參考 common language runtime 模組; 的資料庫物件不過，您無法執行這些參考在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]直到您啟用[clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)。 若要啟用此選項，請使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
+ 依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能執行 CLR 程式碼。 您可以建立、修改和卸除參考通用語言執行平台模組的資料庫物件；不過，必須等到您啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之後，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行這些參考。 若要啟用這個選項，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
 > [!NOTE]  
 >  自主資料庫不支援 CLR 程序。  
   
 ATOMIC WITH  
- **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  表示不可部分完成的預存程序執行。 變更會全部認可或透過擲回例外狀況全部回復。 原生編譯預存程序需要 ATOMIC WITH 區塊。  
   
@@ -277,127 +277,127 @@ ATOMIC 區塊內的 SET 選項無法變更。 在原生編譯預存程序的範�
   
 BEGIN、ROLLBACK 和 COMMIT 作業無法使用於不可部分完成區塊內。  
   
- 在程序的外部範圍，每個原生編譯預存程序有一個 ATOMIC 區塊。 區塊不可以是巢狀的。 如需不可部分完成的區塊的詳細資訊，請參閱[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+ 在程序的外部範圍，每個原生編譯預存程序有一個 ATOMIC 區塊。 區塊不可以是巢狀的。 如需 ATOMIC 區塊的詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
-**NULL** |不是 NULL  
+**NULL** | NOT NULL  
  判斷參數中是否允許 Null 值。 預設值是 NULL。  
   
 NATIVE_COMPILATION  
- **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 表示程序是原生編譯的。 NATIVE_COMPILATION、SCHEMABINDING 和 EXECUTE AS 可以依照任何順序來指定。 如需詳細資訊，請參閱[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+ 表示程序是原生編譯的。 NATIVE_COMPILATION、SCHEMABINDING 和 EXECUTE AS 可以依照任何順序來指定。 如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
 SCHEMABINDING  
- **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 確定程序所參考的資料表無法卸除或改變。 原生編譯預存程序需要 SCHEMABINDING。 (如需詳細資訊，請參閱[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。)SCHEMABINDING 限制和使用者定義函數的相關限制相同。 如需詳細資訊，請參閱 SCHEMABINDING 一節[CREATE FUNCTION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-function-transact-sql.md).  
+ 確定程序所參考的資料表無法卸除或改變。 原生編譯預存程序需要 SCHEMABINDING。 (如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。)SCHEMABINDING 限制和使用者定義函數的相關限制相同。 如需詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 中的＜SCHEMABINDING＞一節。  
   
 LANGUAGE = [N] 'language'  
- **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 相當於[設定語言 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)工作階段選項。 需要 LANGUAGE = [N] 'language'。  
+ 相當於 [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) 工作階段選項。 需要 LANGUAGE = [N] 'language'。  
   
 TRANSACTION ISOLATION LEVEL  
- **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  原生編譯預存程序所需的。 指定預存程序的交易隔離等級。 選項如下：  
   
- 如需有關這些選項的詳細資訊，請參閱[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 如需這些選項的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 REPEATABLE READ  
- 指定陳述式不能讀取其他交易已修改而尚未認可的資料。 如果另一個交易修改目前交易已讀取的資料，目前交易將會失敗。  
+ 指定陳述式不能讀取其他交易已修改而尚未認可的資料。 如果其他交易對目前交易已讀取的資料進行修改，則目前交易會失敗。  
   
 SERIALIZABLE  
  指定下列項目：  
 -   陳述式無法讀取其他交易已修改但尚未認可的資料。  
--   如果另一個交易修改目前交易已讀取的資料，目前交易將會失敗。  
--   如果另一個交易所插入新資料列與索引鍵值落在目前交易中任何陳述式所讀取的索引鍵範圍內，目前交易將會失敗。  
+-   如果其他交易對目前交易已讀取的資料進行修改，則目前交易會失敗。  
+-   如果其他交易插入了新資料列，且其索引鍵值落在目前交易之任何陳述式已讀取的索引鍵範圍中，則目前交易會失敗。  
   
 SNAPSHOT  
- 指定在交易中任何陳述式所讀取的資料是在交易開始時存在的資料的交易一致性版本。  
+ 指定交易中任何陳述式所讀取的資料都是交易一致性版本，這些資料從交易開始時就已存在。  
   
-DATEFIRST =*數目*  
- **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+DATEFIRST = *number*  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  將每週的第一天指定為 1 到 7 的數字。 DATEFIRST 是選擇性的。 如果未指定，則會從指定的語言來推斷設定。  
   
- 如需詳細資訊，請參閱[SET DATEFIRST &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-datefirst-transact-sql.md).  
+ 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)。  
   
-DATEFORMAT =*格式*  
- **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+DATEFORMAT = *format*  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定解譯 date、smalldatetime、datetime、datetime2 和 datetimeoffset 字元字串之月份、日期與年份日期部分的順序。 DATEFORMAT 是選擇性的。 如果未指定，則會從指定的語言來推斷設定。  
   
- 如需詳細資訊，請參閱[SET DATEFORMAT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-dateformat-transact-sql.md).  
+ 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)。  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久、預設值或延遲的持久。  
   
  如需詳細資訊，請參閱[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。  
 
-## <a name="Simple"></a>簡單範例
+## <a name="Simple"></a> 簡單範例
 
 為了協助您開始使用，以下是兩個簡單的範例：  
-`SELECT DB_NAME() AS ThisDB;`傳回目前資料庫的名稱。  
-您可以將該陳述式包裝在預存程序，例如：  
+`SELECT DB_NAME() AS ThisDB;` 會傳回目前資料庫的名稱。  
+您可以將該陳述式包裝在預存程序中，例如：  
 ```sql  
 CREATE PROC What_DB_is_this     
 AS   
 SELECT DB_NAME() AS ThisDB; 
 ```   
-呼叫預存程序使用陳述式：`EXEC What_DB_is_this;`   
+使用下列陳述式呼叫預存程序：`EXEC What_DB_is_this;`   
 
-稍微複雜，是要提供讓程序的更有彈性的輸入的參數。 例如：  
+稍微複雜一點的方法，是提供讓程序更有彈性的輸入參數。 例如：  
 ```sql   
 CREATE PROC What_DB_is_that @ID int   
 AS    
 SELECT DB_NAME(@ID) AS ThatDB;   
 ```   
-當您呼叫程序時，請提供資料庫識別碼。 例如，`EXEC What_DB_is_that 2;`傳回`tempdb`。   
+在您呼叫程序時，提供資料庫識別碼。 例如 `EXEC What_DB_is_that 2;` 會傳回 `tempdb`。   
 
-請參閱[範例](#Examples)更多的範例如本主題的結尾。     
+如需更多範例，請參閱本主題結尾的[範例](#Examples)。     
     
 ## <a name="best-practices"></a>最佳作法  
  雖然這不是最詳盡的最佳作法清單，但這些建議可能會改善程序效能。  
   
--   使用 SET NOCOUNT ON 陳述式做為程序主體中的第一個陳述式。 亦即，將該陳述式放在 AS 關鍵字正後方。 這樣會關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在執行任何 SELECT、INSERT、UPDATE、MERGE 和 DELETE 陳述式之後，傳回用戶端的訊息。 排除這不必要的網路負擔會改善資料庫和應用程式的整體效能。 如需資訊，請參閱[SET NOCOUNT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   使用 SET NOCOUNT ON 陳述式做為程序主體中的第一個陳述式。 亦即，將該陳述式放在 AS 關鍵字正後方。 這樣會關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在執行任何 SELECT、INSERT、UPDATE、MERGE 和 DELETE 陳述式之後，傳回用戶端的訊息。 排除這不必要的網路負擔會改善資料庫和應用程式的整體效能。 如需詳細資訊，請參閱 [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)。  
   
--   建立或參考程序中的資料庫物件時，請使用結構描述名稱。 花較少的處理時間[!INCLUDE[ssDE](../../includes/ssde-md.md)]解析物件名稱，如果它不必搜尋多個結構描述。 它也會防止權限和存取問題，而不指定結構描述建立物件時要指派使用者的預設結構描述所造成。  
+-   建立或參考程序中的資料庫物件時，請使用結構描述名稱。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不必搜尋多個結構描述，解析物件名稱所需的處理時間會較少。 它也能防止在不指定結構描述的情況下建立物件時，因指派使用者預設結構描述所引起的權限和存取問題。  
   
 -   避免在 WHERE 和 JOIN 子句中指定的資料行周圍使用包裝函數。 這麼做會使資料行變成非決定性，而且會使查詢處理器無法使用索引。  
   
 -   避免在 SELECT 陳述式中使用傳回許多資料列的純量函數。 純量函數必須套用到每個資料列，因此，所產生的行為類似以資料列為主的處理，而且會降低效能。  
   
--   避免使用`SELECT *`。 請改為指定所需的資料行名稱。 這樣可以防止停止程序執行的部分 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤。 例如，`SELECT *`從 12 資料行資料表傳回資料，然後將該資料插入 12 資料行的暫存資料表的陳述式會成功直到數目，或任一個資料表中的資料行的順序會變更。  
+-   請避免使用 `SELECT *`。 請改為指定所需的資料行名稱。 這樣可以防止停止程序執行的部分 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤。 例如，假設 `SELECT *` 陳述式會從 12 欄式資料表傳回資料並將該資料插入 12 欄式暫存資料表，那麼，直到資料表中資料行的數目或順序變更時，該陳述式才會成功。  
   
 -   請避免處理或傳回太多資料。 盡早將程序程式碼中的結果範圍縮小，讓該程序所執行的所有後續作業都可以使用最小的資料集完成。 只將基本資料傳送到用戶端應用程式。 此作法比透過網路傳送額外資料並強制用戶端應用程式處理過大的結果集更有效率。  
   
--   使用開始/認可交易使用外顯交易，並讓交易越短越好。 交易越久表示記錄鎖定越久，而且發生死結的可能性也就越大。  
+-   透過 BEGIN/COMMIT TRANSACTION 使用明確的交易，並讓交易越短越好。 交易越久表示記錄鎖定越久，而且發生死結的可能性也就越大。  
   
 -   請針對程序內部的錯誤處理使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY…CATCH 功能。 TRY…CATCH 可以封裝 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的整個區塊。 這樣不但會使效能負擔較小，而且還會使用更少的程式讓錯誤報告更精確。  
   
--   在程序主體中 CREATE TABLE 或 ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所參考的所有資料表資料行上使用 DEFAULT 關鍵字。 這可防止將 NULL 傳遞至不允許 null 值的資料行。  
+-   在程序主體中 CREATE TABLE 或 ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所參考的所有資料表資料行上使用 DEFAULT 關鍵字。 這會防止將 NULL 傳遞到不允許 null 值的資料行。  
   
 -   在暫存資料表中的每個資料行使用 NULL 或 NOT NULL。 當 CREATE TABLE 或 ALTER TABLE 陳述式中沒有指定 NULL 或 NOT NULL 屬性時，ANSI_DFLT_ON 和 ANSI_DFLT_OFF 選項可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將這些屬性指派給資料行的方式。 如果某個連接執行程序時所用的選項設定，不同於建立程序的連接所用設定，針對第二個連接建立的資料表資料行，可以有不同的 Null 屬性，且可以展現不同的行為。 如果針對每個資料行明確陳述 NULL 或 NOT NULL，就會利用執行程序之所有連接的相同 Null 屬性來建立暫存資料表。  
   
--   使用轉換 null 的修改陳述式，然後使用查詢中的 null 值加入排除資料列的邏輯。 請注意，在[!INCLUDE[tsql](../../includes/tsql-md.md)]、 NULL 不是空的或"nothing"值。 它是未知值的預留位置，而且可能造成非預期的行為，特別是在查詢結果集或使用 AGGREGATE 函數時。  
+-   使用轉換 null 的修改陳述式，然後使用查詢中的 null 值加入排除資料列的邏輯。 請注意，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，NULL 不是空值或 "nothing" 值。 它是未知值的預留位置，而且可能造成非預期的行為，特別是在查詢結果集或使用 AGGREGATE 函數時。  
   
 -   除非不同的值有特定需要，否則請使用 UNION ALL 運算子代替 UNION 或 OR 運算子。 UNION ALL 運算子需要的處理負擔較少，因為不會從結果集中篩選出重複項目。  
   
 ## <a name="general-remarks"></a>一般備註  
  程序沒有預先定義的大小上限。  
   
- 此程序中指定的變數可以是使用者定義或系統變數，例如 @@SPID。  
+ 程序中指定的變數可以是使用者自訂變數或系統變數，如 @@SPID。  
   
  第一次執行程序時，會編譯它來決定擷取資料的最佳存取計畫。 如果已經產生的計畫仍保留在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的計畫快取中，則程序的後續執行作業可以重複使用該計畫。  
   
- 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時，會自動執行一個或多個程序。 中的系統管理員必須建立程序**主要**資料庫，並在下執行**sysadmin**固定的伺服器角色做為背景處理序。 這些程序不可以有任何輸入或輸出參數。 如需詳細資訊，請參閱[執行預存程序](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)。  
+ 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時，會自動執行一個或多個程序。 這些程序必須由 **master** 資料庫中的系統管理員建立，且必須在 **sysadmin** 固定伺服器角色下以背景處理序執行。 這些程序不可以有任何輸入或輸出參數。 如需詳細資訊，請參閱[執行預存程序](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)。  
   
  當某個程序參考 CLR 常式、類型或彙總，藉以呼叫其他程序或執行 Managed 程式碼時，這些程序即稱為巢狀程序。 程序和 Managed 程式碼參考的巢狀結構最多可有 32 個層級。 當被呼叫的程序或 Managed 程式碼參考開始執行時，巢狀層級會加一；當被呼叫的程序或 Managed 程式碼參考執行完畢時，巢狀層級會減一。 從 Managed 程式碼內部叫用的方法不受巢狀層級的限制。 但當 CLR 預存程序透過 SQL Server Managed 提供者執行資料存取作業時，會在 Managed 程式碼轉換成 SQL 的過程中，加入一個額外的巢狀層級。  
   
- 企圖超越最大巢狀層級將會導致整個呼叫鏈結失敗。 您可以使用 @@NESTLEVEL函數來傳回目前的預存程序執行的巢狀層級。  
+ 企圖超越最大巢狀層級將會導致整個呼叫鏈結失敗。 您可以使用 @@NESTLEVEL 函數傳回目前預存程序執行的巢狀層級。  
   
 ## <a name="interoperability"></a>互通性  
  當建立或修改 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 程序時，[!INCLUDE[tsql](../../includes/tsql-md.md)] 會將 SET QUOTED_IDENTIFIER 和 SET ANSI_NULLS 的設定一併儲存。 這些原始設定是在執行程序時使用的。 因此，當程序正在執行時，SET QUOTED_IDENTIFIER 和 SET ANSI_NULLS 的任何用戶端工作階段設定，都會被忽略。  
@@ -407,7 +407,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
  除了 SET SHOWPLAN_TEXT 和 SET SHOWPLAN_ALL 以外，其他所有 SET 陳述式都可以在程序中指定。 這些陳述式必須是批次中唯一的陳述式。 所選 SET 選項在程序執行期間仍然有效，然後會還原為先前的設定。  
   
 > [!NOTE]  
->  當在程序或使用者定義函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，未接受 SET ANSI_WARNINGS。 例如，如果變數定義為**char**(3)，然後設定為超過 3 個字元，資料會截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會成功。  
+>  當在程序或使用者定義函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，未接受 SET ANSI_WARNINGS。 例如，如果將變數定義為 **char(3)**，然後設定為大於三個字元的值，資料就會被截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會執行成功。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  CREATE PROCEDURE 陳述式無法在單一批次中，與其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結合起來。  
@@ -418,11 +418,11 @@ SELECT DB_NAME(@ID) AS ThatDB;
 |-|-|-|  
 |CREATE AGGREGATE|CREATE SCHEMA|SET SHOWPLAN_TEXT|  
 |CREATE DEFAULT|CREATE 或 ALTER TRIGGER|SET SHOWPLAN_XML|  
-|CREATE 或 ALTER FUNCTION|CREATE 或 ALTER VIEW|使用*database_name*|  
+|CREATE 或 ALTER FUNCTION|CREATE 或 ALTER VIEW|USE *database_name*|  
 |CREATE 或 ALTER PROCEDURE|SET PARSEONLY||  
 |CREATE RULE|SET SHOWPLAN_ALL||  
   
- 程序可以參考尚未存在的資料表。 在建立時，只會執行語法檢查。 在第一次執行程序之前，不會編譯該程序。 只有在編譯期間才會解析程序中參考的所有物件。 因此，成功; 建立語法正確的程序的參考不存在的資料表不過，此程序無法在執行階段中是如果參考的資料表不存在。  
+ 程序可以參考尚未存在的資料表。 在建立時，只會執行語法檢查。 在第一次執行程序之前，不會編譯該程序。 只有在編譯期間才會解析程序中參考的所有物件。 因此，即使程序參考了不存在的資料表，仍可在語意正確的情況下順利建立；不過，如果參考的資料表不存在，該程序就會在執行階段時失敗。  
   
  執行程序時，您無法將函數名稱指定為參數預設值或傳遞至參數的值。 但您可以變數形式傳遞函數，如下列範例所示。  
   
@@ -441,14 +441,14 @@ GO
   
 -   接收與程序的參數數目相同的參數數目。  
   
--   使用與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序之相對應參數的資料類型相容的參數類型。 如需有關比對資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型為[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]資料類型，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
+-   使用與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序之相對應參數的資料類型相容的參數類型。 如需如何比對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型與 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料類型的詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
 ## <a name="metadata"></a>中繼資料  
  下表列出可用於傳回預存程序之詳細資訊的目錄檢視和動態管理檢視。  
   
-|檢視|Description|  
+|檢視|描述|  
 |----------|-----------------|  
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|傳回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序的定義。 利用 ENCRYPTION 選項建立的程序文字無法使用檢視**sys.sql_modules**目錄檢視。|  
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|傳回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序的定義。 您無法使用 **sys.sql_modules** 目錄檢視來檢視以 ENCRYPTION 選項建立的程序文字。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|傳回 CLR 程序的詳細資訊。|  
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|傳回程序所定義之參數的詳細資訊。|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|傳回程序所參考的物件。|  
@@ -461,20 +461,20 @@ GO
 ||快取頁面|  
 ||快取物件計數*|  
   
- * 這些計數器可供各種類別目錄的快取物件使用，包括隨選 [!INCLUDE[tsql](../../includes/tsql-md.md)]、已備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、程序、觸發程序等等。 如需詳細資訊，請參閱[SQL Server，規劃快取物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)。  
+ * 這些計數器可供各種類別目錄的快取物件使用，包括隨選 [!INCLUDE[tsql](../../includes/tsql-md.md)]、已備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、程序、觸發程序等等。 如需詳細資訊，請參閱 [SQL Server 的 Plan Cache 物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
- 需要**CREATE PROCEDURE**資料庫的權限和**ALTER**權限的結構描述的程序建立，或需要的成員資格**db_ddladmin**固定的資料庫角色。  
+ 需要資料庫的 **CREATE PROCEDURE** 權限，以及要在其中建立程序之結構描述的 **ALTER** 權限，或者需要 **db_ddladmin** 固定資料庫角色的成員資格。  
   
- CLR 預存程序，需要 EXTERNAL NAME 子句中參考的組件的擁有權或**參考**該組件的權限。  
+ 如果是 CLR 預存程序，需要 EXTERNAL NAME 子句中所參考組件的擁有權，或該組件的 **REFERENCES** 權限。  
   
-##  <a name="mot"></a>CREATE PROCEDURE 和記憶體最佳化資料表  
- 記憶體最佳化資料表可以透過傳統和原生編譯預存程序來存取。 原生程序是在大部分情況下更有效率的方式。
-如需詳細資訊，請參閱[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+##  <a name="mot"></a> CREATE PROCEDURE 和經記憶體最佳化的資料表  
+ 從傳統和原生編譯的預存程序存取經記憶體最佳化資料表，都可以達到最高效率。 在大部分情況下，原生程序是更有效率的方式。
+如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
- 下列範例示範如何建立原生編譯的預存程序來存取記憶體最佳化的資料表`dbo.Departments`:  
+ 下列範例示範如何建立原生編譯的預存程序，以存取經記憶體最佳化的資料表 `dbo.Departments`：  
   
 ```sql  
 CREATE PROCEDURE dbo.usp_add_kitchen @dept_id int, @kitchen_count int NOT NULL  
@@ -491,21 +491,21 @@ GO
   
  未使用 NATIVE_COMPILATION 建立的程序，無法更改為原生編譯預存程序。 
   
- 如需原生編譯的預存程序的可程式性的討論，支援的查詢介面區，並運算子查看[原生編譯 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
+ 如需原生編譯預存程序的可程式性、支援的查詢介面區及運算子的說明，請參閱[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
   
 ## <a name="Examples"></a> 範例  
   
 |類別目錄|代表性語法元素|  
 |--------------|------------------------------|  
 |[基本語法](#BasicSyntax)|CREATE PROCEDURE|  
-|[傳遞參數](#Parameters)|@parameter <br> &nbsp;&nbsp;• = 預設值 <br> &nbsp;&nbsp;• 輸出 <br> &nbsp;&nbsp;• 資料表值參數類型 <br> &nbsp;&nbsp;• CURSOR VARYING|  
+|[傳遞參數](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = 預設值 <br> &nbsp;&nbsp; • 輸出 <br> &nbsp;&nbsp; • 資料表值參數類型 <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[使用預存程序修改資料](#Modify)|UPDATE|  
 |[錯誤處理](#Error)|TRY…CATCH|  
 |[模糊化程序定義](#Encrypt)|WITH ENCRYPTION|  
-|[強制重新編譯程序](#Recompile)|WITH RECOMPILE|  
+|[強制程序重新編譯](#Recompile)|WITH RECOMPILE|  
 |[設定安全性內容](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a>基本語法  
+###  <a name="BasicSyntax"></a> 基本語法  
  本節的範例使用所需的最少語法示範 CREATE PROCEDURE 陳述式的基本功能。  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. 建立簡單的 Transact-SQL 程序  
@@ -522,7 +522,7 @@ GO
 SELECT * FROM HumanResources.vEmployeeDepartment;  
 ```  
   
- `uspGetEmployees`可以下列方式執行程序：  
+ 您可以利用下列方式執行 `uspGetEmployees` 程序：  
   
 ```sql  
 EXECUTE HumanResources.uspGetAllEmployees;  
@@ -546,9 +546,9 @@ GO
 ```  
   
 #### <a name="c-creating-a-clr-stored-procedure"></a>C. 建立 CLR 預存程序  
- 下列範例會建立`GetPhotoFromDB`參考程序`GetPhotoFromDB`方法`LargeObjectBinary`類別`HandlingLOBUsingCLR`組件。 在建立程序之前，`HandlingLOBUsingCLR`本機資料庫中註冊組件。  
+ 下列範例會建立 `GetPhotoFromDB` 程序，以參考 `HandlingLOBUsingCLR` 組件中 `LargeObjectBinary` 類別的 `GetPhotoFromDB` 方法。 建立程序之前，會先在本機資料庫中註冊 `HandlingLOBUsingCLR` 組件。  
   
-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (如果使用組件從建立*assembly_bits。*  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (如果使用從 *assembly_bits* 建立的組件)。  
   
 ```sql  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -564,7 +564,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a>傳遞參數  
+###  <a name="Parameters"></a> 傳遞參數  
  本節的範例會示範如何使用輸入和輸出參數，在預存程序之間來回傳遞值。  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>D. 使用輸入參數建立程序  
@@ -587,7 +587,7 @@ GO
   
 ```  
   
- `uspGetEmployees`可以下列方式執行程序：  
+ 您可以利用下列方式執行 `uspGetEmployees` 程序：  
   
 ```  
 EXECUTE HumanResources.uspGetEmployees N'Ackerman', N'Pilar';  
@@ -603,7 +603,7 @@ HumanResources.uspGetEmployees N'Ackerman', N'Pilar';
 ```  
   
 #### <a name="e-using-a-procedure-with-wildcard-parameters"></a>E. 使用程序與萬用字元參數  
- 下列範例所建立的預存程序，會傳遞一些員工的全名或部分姓名值，藉以傳回這些員工的資訊。 此程序模式符合傳遞的參數，或者，如果未提供，會使用預設的值 (以字母開頭的姓氏`D`)。  
+ 下列範例所建立的預存程序，會傳遞一些員工的全名或部分姓名值，藉以傳回這些員工的資訊。 這個程序模式會與所傳遞的參數相符，或者，如果沒有提供參數的話，該模式會使用預設值 (字母 `D` 開頭的姓氏)。  
   
 ```sql  
 IF OBJECT_ID ( 'HumanResources.uspGetEmployees2', 'P' ) IS NOT NULL   
@@ -619,7 +619,7 @@ AS
     WHERE FirstName LIKE @FirstName AND LastName LIKE @LastName;  
 ```  
   
- `uspGetEmployees2`程序可以執行多種組合。 此處僅示範其中幾種可能的組合。  
+ 您可以利用多種組合執行 `uspGetEmployees2` 程序。 此處僅示範其中幾種可能的組合。  
   
 ```sql  
 EXECUTE HumanResources.uspGetEmployees2;  
@@ -664,10 +664,10 @@ SET @ComparePrice = @MaxPrice;
 GO  
 ```  
   
- 執行 `uspGetList` 以傳回成本低於 `$700` 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 `OUTPUT`參數`@Cost`和`@ComparePrices`會搭配流程控制語言以便中傳回訊息**訊息**視窗。  
+ 執行 `uspGetList` 以傳回成本低於 `$700` 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 您可以搭配流程控制語言使用 `OUTPUT` 參數 `@Cost` 和 `@ComparePrices`，以在 [訊息] 視窗中傳回訊息。  
   
 > [!NOTE]  
->  建立程序以及使用變數時，都必須定義 OUTPUT 變數。 參數名稱和變數名稱不必符合;不過，資料型別和參數定位必須相符，除非`@ListPrice`  = *變數*用。  
+>  建立程序以及使用變數時，都必須定義 OUTPUT 變數。 參數名稱與變數名稱不一定要相符；不過，除非使用 `@ListPrice` = *variable*，否則資料類型與參數定位必須相符。  
   
 ```sql  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -772,11 +772,11 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a>使用預存程序修改資料  
+###  <a name="Modify"></a> 使用預存程序修改資料  
  本節範例將示範如何在程序的定義中包含資料操作語言 (DML) 陳述式，藉以在資料表或檢視表中插入或修改資料。  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>I. 在預存程序中使用 UPDATE  
- 下列範例會在預存程序中使用 UPDATE 陳述式。 此程序會採用一個輸入參數 `@NewHours` 和一個輸出參數 `@RowCount`。 `@NewHours`參數值用於 UPDATE 陳述式中更新資料行`VacationHours`資料表中`HumanResources.Employee`。 `@RowCount` 輸出參數是用來將受影響的資料列數目傳回給區域變數。 SET 子句會使用 CASE 運算式，以條件方式判斷針對 `VacationHours` 所設定的值。 按照時數支付薪資給員工時 (`SalariedFlag` = 0)，`VacationHours` 會設定為目前的時數加上 `@NewHours` 中指定的值，否則 `VacationHours` 會設定為 `@NewHours` 中指定的值。  
+ 下列範例會在預存程序中使用 UPDATE 陳述式。 此程序會採用一個輸入參數 `@NewHours` 和一個輸出參數 `@RowCount`。 UPDATE 陳述式內會使用 `@NewHours` 參數值，以更新資料表 `HumanResources.Employee` 中的資料行 `VacationHours`。 `@RowCount` 輸出參數是用來將受影響的資料列數目傳回給區域變數。 SET 子句會使用 CASE 運算式，以條件方式判斷針對 `VacationHours` 所設定的值。 按照時數支付薪資給員工時 (`SalariedFlag` = 0)，`VacationHours` 會設定為目前的時數加上 `@NewHours` 中指定的值，否則 `VacationHours` 會設定為 `@NewHours` 中指定的值。  
   
 ```sql  
 CREATE PROCEDURE HumanResources.Update_VacationHours  
@@ -796,7 +796,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a>錯誤處理  
+###  <a name="Error"></a> 錯誤處理  
  本節範例將示範如何處理在執行預存程序時可能會發生的錯誤。  
   
 #### <a name="j-using-trycatch"></a>J. 使用 TRY…CATCH  
@@ -871,13 +871,13 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a>模糊化程序定義  
+###  <a name="Encrypt"></a> 模糊化程序定義  
  本節範例將示範如何模糊化預存程序的定義。  
   
 #### <a name="k-using-the-with-encryption-option"></a>K. 使用 WITH ENCRYPTION 選項  
  下列範例會建立 `HumanResources.uspEncryptThis` 程序。  
   
-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，SQL Database。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、SQL Database。  
   
 ```sql  
 CREATE PROCEDURE HumanResources.uspEncryptThis  
@@ -890,9 +890,9 @@ AS
 GO  
 ```  
   
- `WITH ENCRYPTION`選項模糊化程序的定義時查詢系統目錄，或使用中繼資料函式，如下列範例所示。  
+ `WITH ENCRYPTION` 選項會在查詢系統目錄或使用中繼資料函數時模糊化程序的定義，如下列範例所示。  
   
- Run `sp_helptext`:  
+ 執行 `sp_helptext`：  
   
 ```sql  
 EXEC sp_helptext 'HumanResources.uspEncryptThis';  
@@ -902,7 +902,7 @@ EXEC sp_helptext 'HumanResources.uspEncryptThis';
   
  `The text for object 'HumanResources.uspEncryptThis' is encrypted.`  
   
- 直接查詢`sys.sql_modules`目錄檢視：  
+ 直接查詢 `sys.sql_modules` 目錄檢視：  
   
 ```sql  
 SELECT definition FROM sys.sql_modules  
@@ -917,11 +917,11 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a>強制重新編譯程序  
+###  <a name="Recompile"></a> 強制程序重新編譯  
  本節範例將會使用 WITH RECOMPILE 子句強制程序在每次執行時重新編譯。  
   
 #### <a name="l-using-the-with-recompile-option"></a>L. 使用 WITH RECOMPILE 選項  
- `WITH RECOMPILE`子句是很有幫助時提供給程序的參數不是正常情況，以及當新的執行計畫不應快取或儲存在記憶體中。  
+ 如果提供給程序的參數不是典型的參數，且不應將新的執行計畫快取或儲存在記憶體中時，`WITH RECOMPILE` 子句十分好用。  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
@@ -940,11 +940,11 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a>設定安全性內容  
+###  <a name="Security"></a> 設定安全性內容  
  本節範例將使用 EXECUTE AS 子句設定用以執行預存程序的安全性內容。  
   
 #### <a name="m-using-the-execute-as-clause"></a>M. 使用 EXECUTE AS 子句  
- 下列範例顯示如何使用[EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md)子句來指定可以執行程序的安全性內容。 在範例中，選擇`CALLER`指定呼叫它的使用者內容中執行此程序。  
+ 下列範例顯示利用 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 子句來指定可執行程序的安全性內容。 在這個範例中，選項 `CALLER` 指定可以在呼叫程序之使用者的內容中執行程序。  
   
 ```sql  
 CREATE PROCEDURE Purchasing.uspVendorAllInfo  
@@ -972,10 +972,10 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>O. 建立預存程序所執行的 SELECT 陳述式  
- 這個範例會顯示建立和執行程序的基本語法。 當執行批次時，建立程序必須是第一個陳述式。 例如，建立下列預存程序中的[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]，首先，設定的資料庫內容，然後再執行 CREATE PROCEDURE 陳述式。  
+### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>O. 建立預存程序以執行 SELECT 陳述式  
+ 這個範例會說明建立和執行程序的基本語法。 當執行批次時，CREATE PROCEDURE 必須是第一個陳述式。 例如，若要在 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 中建立下列預存程序，請先設定資料庫內容，然後再執行 CREATE PROCEDURE 陳述式。  
   
 ```sql  
 -- Uses AdventureWorksDW database  
@@ -994,28 +994,28 @@ END
 EXEC Get10TopResellers;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
- [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [資料指標](../../relational-databases/cursors.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [卸除程序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [執行 AS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [預存程序 &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [sp_procoption &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
- [sp_recompile &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   
+ [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
+ [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
  [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
- [之 deprecated sys.numbered_procedures &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)   
- [sys.numbered_procedure_parameters &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)   
+ [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)   
+ [sys.numbered_procedure_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [建立預存程序](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [使用資料表值參數 &#40; Database Engine &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
+ [使用資料表值參數 &#40;資料庫引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   

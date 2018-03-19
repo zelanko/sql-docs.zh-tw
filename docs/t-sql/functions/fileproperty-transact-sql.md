@@ -1,5 +1,5 @@
 ---
-title: "FILEPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,12 +52,12 @@ FILEPROPERTY ( file_name , property )
   
 ## <a name="arguments"></a>引數  
  *file_name*  
- 這是包含傳回屬性資訊所屬的目前資料庫之相關聯檔案名稱的運算式。 *file_name*是**nchar(128)**。  
+ 這是包含傳回屬性資訊所屬的目前資料庫之相關聯檔案名稱的運算式。 *file_name* 為 **nchar(128)**。  
   
- *屬性*  
- 這是包含要傳回之檔案屬性名稱的運算式。 *屬性*是**varchar （128)**，而且可以是下列值之一。  
+ *property*  
+ 這是包含要傳回之檔案屬性名稱的運算式。 *property* 為 **varchar(128)**，而且可以是下列值之一。  
   
-|值|Description|傳回的值|  
+|ReplTest1|描述|傳回的值|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|檔案群組是唯讀的。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 輸入無效。|  
 |**IsPrimaryFile**|檔案是主要檔案。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 輸入無效。|  
@@ -67,8 +67,8 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
- *file_name*對應至**名稱**中的資料行**sys.master_files**或**sys.database_files**目錄檢視。  
+## <a name="remarks"></a>Remarks  
+ *file_name* 對應於 **sys.master_files** 或 **sys.database_files** 目錄檢視中的 **name** 資料行。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `IsPrimaryFile` 檔案名稱的 `AdventureWorks_Data` 屬性設定。  
@@ -88,9 +88,9 @@ Primary File
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [FILEGROUPPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
- [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [FILEGROUPPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
+ [中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: "@@SPID (TRANSACT-SQL) |Microsoft 文件"
+title: '@@SPID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (TRANSACT-SQL)
+# <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回目前使用者處理序的工作階段識別碼。  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>傳回類型  
  **smallint**  
   
-## <a name="remarks"></a>備註  
- @@SPID可以用來識別目前的使用者處理序的輸出中 **sp_who** 。  
+## <a name="remarks"></a>Remarks  
+ @@SPID 可在 **sp_who** 的輸出中，用來識別目前的使用者處理序。  
   
 ## <a name="examples"></a>範例  
  這個範例會傳回目前使用者處理序的工作階段識別碼、登入名稱和使用者名稱。  
@@ -71,16 +71,16 @@ ID     Login Name                     User Name
 54     SEATTLE\joanna                 dbo                             
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 這個範例會傳回[!INCLUDE[ssDW](../../includes/ssdw-md.md)]工作階段識別碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]控制節點的工作階段識別碼、 登入名稱及目前使用者處理序的使用者名稱。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 此範例會傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工作階段識別碼、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 控制節點工作階段識別碼、登入名稱，及目前使用者處理序的使用者名稱。  
   
 ```  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [組態函數](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [sp_lock &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [組態函式](../../t-sql/functions/configuration-functions-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

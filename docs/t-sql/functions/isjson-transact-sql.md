@@ -1,5 +1,5 @@
 ---
-title: "ISJSON (TRANSACT-SQL) |Microsoft 文件"
+title: ISJSON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/17/2017
 ---
-# <a name="isjson-transact-sql"></a>ISJSON (TRANSACT-SQL)
+# <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   測試字串是否包含有效的 JSON。  
@@ -48,17 +48,17 @@ ISJSON ( expression )
  要測試的字串。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回 1，如果字串包含有效的 JSON。反之則傳回 0。 傳回 null 如果*運算式*為 null。  
+ 若字串包含有效的 JSON，則傳回 1；否則傳回 0。 若 *expression* 為 null，則傳回 null。  
   
  不會傳回錯誤。  
   
-## <a name="remarks"></a>備註  
- **ISJSON**不會檢查相同層級的索引鍵的唯一性。  
+## <a name="remarks"></a>Remarks  
+ **ISJSON** 不會檢查相同層級中索引鍵的唯一性。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="example-1"></a>範例 1  
-下列範例會執行陳述式區塊有條件地如果參數值`@param`包含有效的 JSON。  
+下列範例會在參數值 `@param` 包含有效的 JSON 時條件式的執行陳述式區塊。  
   
 ```sql  
 DECLARE @param <data type>
@@ -80,7 +80,7 @@ FROM tab1
 WHERE ISJSON(json_col) > 0 
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [JSON 資料 &#40;SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [JSON 資料 &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

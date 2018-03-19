@@ -1,5 +1,5 @@
 ---
-title: "授與結構描述權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "GRANT 結構描述權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以授與的結構描述權限。 如需權限清單，請參閱這個主題稍後的＜備註＞一節。  
   
- ON SCHEMA **::**結構描述*b*  
- 指定正在授與權限的結構描述。 範圍限定詞**::**需要。  
+ ON SCHEMA **::** schema*_name*  
+ 指定正在授與權限的結構描述。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
  指定要對其授與權限的主體。 它有下列幾種：  
@@ -81,7 +81,7 @@ AS *granting_principal*
 -   對應至非對稱金鑰的資料庫使用者  
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表的 ALTER 權限和函數的 REFERENCE 權限之使用者，可以透過函數來建立計算資料行並執行它。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。  
@@ -93,9 +93,9 @@ AS *granting_principal*
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|DELETE|CONTROL|DELETE|  
+|Delete|CONTROL|Delete|  
 |執行 CREATE 陳述式之前，請先執行|CONTROL|執行 CREATE 陳述式之前，請先執行|  
-|INSERT|CONTROL|INSERT|  
+|Insert|CONTROL|Insert|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -150,18 +150,18 @@ GRANT INSERT ON SCHEMA :: HumanResources TO guest;
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [拒絕結構描述權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
- [REVOKE 結構描述權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [DENY 結構描述權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
+ [ 結構描述權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [建立應用程式角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

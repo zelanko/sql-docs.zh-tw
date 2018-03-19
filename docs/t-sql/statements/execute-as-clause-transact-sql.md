@@ -1,5 +1,5 @@
 ---
-title: "EXECUTE AS 子句 (TRANSACT-SQL) |Microsoft 文件"
+title: "EXECUTE AS 子句 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -79,20 +79,20 @@ DDL Triggers with Database Scope
 ```  
   
 ## <a name="arguments"></a>引數  
- **呼叫端**  
+ **CALLER**  
  指定模組內的陳述式，是在該模組的呼叫者內容當中執行。 執行該模組的使用者，不僅必須具有模組本身的適當權限，也必須具有該模組所參考之任何資料庫物件的權限。  
   
  CALLER 是所有模組 (佇列除外) 的預設值，而且與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 行為一樣。  
   
  CALLER 不能在 CREATE QUEUE 或 ALTER QUEUE 陳述式中指定。  
   
- **自我**  
- EXECUTE AS SELF 相當於 EXECUTE AS *user_name*，其中指定的使用者是建立或變更模組的人。 建立或修改模組的人的實際使用者識別碼儲存在**sys.sql_modules**中的資料行**sys.sql_modules**或**sys.service_queues**目錄檢視。  
+ **SELF**  
+ EXECUTE AS SELF 相當於 EXECUTE AS *user_name*，其中指定的使用者就是建立或變更模組的人員。 建立或修改模組之人員的實際使用者識別碼，是儲存在 **sys.sql_modules** 或 **sys.service_queues** 目錄檢視的 **execute_as_principal_id** 資料行中。  
   
  SELF 是佇列的預設值。  
   
 > [!NOTE]  
->  若要變更的使用者識別碼**sys.sql_modules**中**sys.service_queues**目錄檢視中，您必須明確指定 EXECUTE ALTER QUEUE 陳述式中的設定。  
+>  若要變更 **sys.service_queues** 目錄檢視中 **execute_as_principal_id** 的使用者識別碼，您必須在 ALTER QUEUE 陳述式中明確指定 EXECUTE AS 設定。  
   
  OWNER  
  指定模組內的陳述式，是在該模組目前擁有者的內容中執行。 如果該模組沒有指定的擁有者，則會採用該模組的結構描述擁有者。 DDL 或登入觸發程序不能指定 OWNER。  
@@ -101,18 +101,18 @@ DDL Triggers with Database Scope
 >  OWNER 必須對應到單一帳戶，而且不可以是角色或群組。  
   
  **'** *user_name* **'**  
- 指定模組內的陳述式中指定的使用者內容中執行*user_name*。 模組內任何物件的權限針對驗證*user_name*。 *user_name*不指定具有伺服器範圍或登入觸發程序的 DDL 觸發程序。 使用*login_name*改為。  
+ 指定模組內的陳述式，在 *user_name* 指定的使用者內容中執行。 會針對 *user_name* 來驗證模組內任何物件的權限。 *user_name* 無法針對具有伺服器範圍的 DDL 觸發程序或登入觸發程序來指定。 請改為使用 *login_name*。  
   
- *user_name*必須存在於目前的資料庫，而且必須是單一帳戶。 *user_name*無法群組、 角色、 憑證、 金鑰或內建帳戶，例如 NT AUTHORITY\LocalService、 NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
+ *user_name* 必須存在於目前資料庫中，而且必須是單一帳戶。 *user_name* 不可以是群組、角色、憑證、金鑰或內建帳戶，例如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   
- 執行內容的使用者識別碼會儲存在中繼資料，而且可以在檢視**sys.sql_modules**中的資料行**sys.sql_modules**或**sys.assembly_modules**目錄檢視。  
+ 執行內容的使用者識別碼儲存在中繼資料中，可以在 **sys.sql_modules** 或 **sys.assembly_modules** 目錄檢視的 **execute_as_principal_id** 資料行中檢視。  
   
  **'** *login_name* **'**  
- 指定模組內的陳述式的內容中執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中指定的登入*login_name*。 模組內任何物件的權限針對驗證*login_name*。 *login_name*可以指定僅針對具有伺服器範圍或登入觸發程序的 DDL 觸發程序。  
+ 指定模組內的陳述式，在 *login_name* 所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入內容中執行。 會針對 *login_name* 來驗證模組內任何物件的權限。 *login_name* 只能針對具有伺服器範圍的 DDL 觸發程序或登入觸發程序來指定。  
   
- *login_name*無法群組、 角色、 憑證、 金鑰或內建帳戶，例如 NT AUTHORITY\LocalService、 NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
+ *login_name* 不可以是群組、角色、憑證、金鑰或內建帳戶，例如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如何評估模組內參考物件的權限，會隨著呼叫物件和所參考物件之間的擁有權鏈結而不同。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，擁有權鏈結是唯一可以避免授與參考物件存取權給呼叫使用者的方法。  
   
  擁有權鏈結具有下列限制：  
@@ -136,11 +136,11 @@ DDL Triggers with Database Scope
 ## <a name="specifying-a-user-or-login-name"></a>指定使用者或登入名稱  
  模組 EXECUTE AS 子句所指定的資料庫使用者或伺服器登入，必須等到修改模組，在其他內容下執行之後，才能夠卸除。  
   
- EXECUTE AS 子句中指定的使用者或登入名稱必須以主體形式存在於**sys.database_principals**或**sys.server_principals**、 分別或其他 「 建立或變更模組作業將會失敗. 另外，建立或變更模組的使用者，必須具有該主體的 IMPERSONATE 權限。  
+ EXECUTE AS 子句所指定的使用者或登入名稱，必須以主體身分分別存在於 **sys.database_principals** 或 **sys.server_principals** 中，否則建立或變更模組作業就會失敗。 另外，建立或變更模組的使用者，必須具有該主體的 IMPERSONATE 權限。  
   
  如果使用者透過 Windows 群組成員資格，對資料庫或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體具有隱含的存取權，則在 EXECUTE AS 子句中指定的使用者，會在下列一項需求成立，並且在建立好模組時，以隱含方式建立：  
   
--   指定的使用者或登入屬於**sysadmin**固定的伺服器角色。  
+-   指定的使用者或登入，是 **sysadmin** 固定伺服器角色的成員。  
   
 -   建立該模組的使用者，有權建立主體。  
   
@@ -151,9 +151,9 @@ DDL Triggers with Database Scope
   
  例如，假設有下列情況：  
   
--   **CompanyDomain\SQLUsers**群組具有存取權**銷售**資料庫。  
+-   **CompanyDomain\SQLUsers** 群組有權存取 **Sales** 資料庫。  
   
--   **CompanyDomain\SqlUser1**隸屬**SQLUsers** ，因此，能夠存取**銷售**資料庫。  
+-   **CompanyDomain\SqlUser1** 是 **SQLUsers** 的成員，因此有權存取 **Sales** 資料庫。  
   
 -   建立或變更該模組的使用者，有權建立主體。  
   
@@ -189,7 +189,7 @@ GO
 ## <a name="using-execute-as-to-define-custom-permission-sets"></a>使用 EXECUTE AS 來定義自訂權限集合  
  當您要定義自訂權限集合時，不妨指定模組的執行內容。 例如，有些動作 (例如 TRUNCATE TABLE) 沒有可以授與的權限。 您可以將 TRUNCATE TABLE 陳述式併入模組中，並且指定該模組以有權變更資料表的使用者身分來擴充權限，將資料表在您授與該模組 EXECUTE 權限的使用者處截斷。  
   
- 若要檢視指定的執行內容的模組定義，請使用[sys.sql_modules &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視。  
+ 若要以指定的執行內容來檢視模組定義，請使用 [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 目錄檢視。  
   
 ## <a name="best-practice"></a>最佳作法  
  指定一個登入或使用者，它具有執行在模組中定義的作業時所需要的最低權限。 例如，除非需要這些權限，否則不要指定資料庫擁有者帳戶。  
@@ -201,7 +201,7 @@ GO
   
  若要在建立或修改模組時指定 EXECUTE AS 子句，您必須具有指定之主體的 IMPERSONATE 權限，同時也必須有權建立該模組。 您永遠都可以模擬自己本身。 如果未指定任何執行內容，或者沒有指定 EXECUTE AS CALLER，就不需要 IMPERSONATE 權限。  
   
- 若要指定*login_name*或*user_name*隱含的存取權的資料庫，透過 Windows 群組成員資格，您必須擁有 CONTROL 權限的資料庫。  
+ 若要指定透過 Windows 群組成員資格以具有資料庫之隱含存取權的 *login_name* 或 *user_name*，您必須具有該資料庫的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
  以下範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立一個預存程序，並將執行內容指派給 `OWNER`。  
@@ -228,11 +228,11 @@ GO
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.service_queues &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
- [還原 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
- [執行 AS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

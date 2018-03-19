@@ -1,5 +1,5 @@
 ---
-title: "TYPEPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: TYPEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,15 +50,15 @@ TYPEPROPERTY (type , property)
  *type*  
  這是資料類型的名稱。  
   
- *屬性*  
- 這是要針對資料類型傳回的資訊類型。 *屬性*可以是下列值之一。  
+ *property*  
+ 這是要針對資料類型傳回的資訊類型。 *property* 可以是下列值之一。  
   
-|屬性|Description|傳回的值|  
+|屬性|描述|傳回的值|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|允許 Null 值的資料類型。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 找不到資料類型。|  
-|**OwnerId**|類型的擁有者。<br /><br /> 注意： 結構描述擁有者不一定是類型擁有者。|非 Null = 類型擁有者的資料庫使用者識別碼。<br /><br /> NULL = 不支援的類型，或類型識別碼無效。|  
-|**有效位數**|資料類型的有效位數。|位數或字元數。<br /><br /> -1 = **xml**或大數值資料類型<br /><br /> NULL = 找不到資料類型。|  
-|**小數位數**|資料類型的小數位數。|資料類型的小數位數數目。<br /><br /> NULL = 的資料類型不是**數值**或找不到。|  
+|**OwnerId**|類型的擁有者。<br /><br /> 注意：結構描述擁有者不一定是類型擁有者。|非 Null = 類型擁有者的資料庫使用者識別碼。<br /><br /> NULL = 不支援的類型，或類型識別碼無效。|  
+|**有效位數**|資料類型的有效位數。|位數或字元數。<br /><br /> -1 = **xml** 或大型數值資料類型<br /><br /> NULL = 找不到資料類型。|  
+|**小數位數**|資料類型的小數位數。|資料類型的小數位數數目。<br /><br /> NULL = 資料類型不是 **numeric**，或找不到。|  
 |**UsesAnsiTrim**|當建立資料類型時，ANSI 填補設定是 ON。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 找不到資料類型，或它不是二進位或字串資料類型。|  
   
 ## <a name="return-types"></a>傳回類型  
@@ -86,14 +86,14 @@ FROM sys.types;
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [TYPE_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPE_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [COLUMNPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.types &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "FLOOR (TRANSACT-SQL) |Microsoft 文件"
+title: FLOOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ FLOOR ( numeric_expression )
   
 ## <a name="arguments"></a>引數  
  *numeric_expression*  
- 除了這是精確數值或相近數值資料類型類別目錄的運算式**元**資料型別。  
+ 為精確數值或近似數值資料類型類別目錄的運算式，但 **bit** 資料類型除外。  
   
 ## <a name="return-types"></a>傳回類型  
  傳回與 *numeric_expression*相同的類型。  
@@ -60,21 +60,21 @@ FLOOR ( numeric_expression )
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 結果是相同的資料類型中的導出值的整數部分*numeric_expression*。  
+ 結果是計算值的整數部分，與 *numeric_expression* 具有相同的資料類型。  
   
 ```  
 ---------      ---------     -----------  
 123            -124          123.0000     
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會顯示正的數字負數值，和值與`FLOOR`函式。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列範例會使用 `FLOOR` 函式來顯示正數、負數和值。  
   
 ```  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 結果是相同的資料類型中的導出值的整數部分*numeric_expression*。  
+ 結果是計算值的整數部分，與 *numeric_expression* 具有相同的資料類型。  
   
  ```
  -----   ---------    -----------  
@@ -82,8 +82,8 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
  123     -124         123
  ```  
   
-## <a name="see-also"></a>請參閱＜  
- [數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

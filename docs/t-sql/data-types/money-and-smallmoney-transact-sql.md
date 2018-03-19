@@ -1,5 +1,5 @@
 ---
-title: "money 和 smallmoney (TRANSACT-SQL) |Microsoft 文件"
+title: "money 和 smallmoney (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -42,27 +42,27 @@ ms.lasthandoff: 11/21/2017
 
 代表金融或貨幣值的資料類型。
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
-|資料類型|範圍|儲存空間|  
+|資料類型|範圍|Storage|  
 |---|---|---|
-|**money**|-922,337,203,685,477.5808 到 922,337,203,685,477.5807 (-922,337,203,685,477.58<br />to Informatica 的 922,337,203,685,477.58。  Informatica 只支援兩個十進位數字不四個）。|8 個位元組|  
+|**money**|-922,337,203,685,477.5808 到 922,337,203,685,477.5807 (-922,337,203,685,477.58<br />到 922,337,203,685,477.58 (Informatica)。  Informatica 只支援兩個十進位數，而非四個。)|8 個位元組|  
 |**smallmoney**|- 214、748.3648 到 214、748.3647|4 個位元組|  
   
-**Money**和**smallmoney**資料類型的精確度可達它們所代表之金融單位。 Informatica，如**money**和**smallmoney**運算都準確到緣它們所代表之金融單位的資料類型。
+**money** 和 **smallmoney** 資料類型的精確度可達它們所代表之金融單位的萬分之一。 針對 Informatica，**money** 和 **smallmoney** 資料類型的精確度可達它們所代表之金融單位的百分之一。
   
 句點可用來分隔局部的貨幣單位 (如分，Cent) 與完整的貨幣單位。 例如，2.15 是指定 2 元又 15 分。
   
 這些資料類型可以使用以下任一種貨幣符號。
   
-![貨幣符號，十六進位值資料表](../../t-sql/data-types/media/money01.gif "貨幣符號，十六進位值資料表")
+![貨幣符號，十六進位值表格](../../t-sql/data-types/media/money01.gif "貨幣符號，十六進位值表格")
   
 貨幣資料不必括在單引號 (') 中。 您必須記住，在指定前面有貨幣符號的貨幣值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會儲存任何與符號相關聯的貨幣資訊，它只會儲存數值。
   
 ## <a name="converting-money-data"></a>轉換 money 資料
-當您轉換成**money**從整數資料類型，會假設單位是貨幣單位。 例如，將整數值 4 轉換成**money** 4 個貨幣單位的對等。
+當您從任何整數資料類型轉換成 **money** 時，會假設單位是貨幣單位。 例如，整數值 4 轉換成 **money** 時相當於 4 個貨幣單位。
   
-下列範例會將轉換**smallmoney**和**money**值**varchar**和**十進位**資料類型，分別。
+下列範例會分別將 **smallmoney** 和 **money** 值轉換成 **varchar** 和 **decimal** 資料類型。
   
 ```sql
 DECLARE @mymoney_sm smallmoney = 3148.29,  
@@ -81,12 +81,12 @@ SM_MONEY VARCHAR               MONEY DECIMAL
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[ALTER TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md) 
- [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 
-[建立資料表 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-table-transact-sql.md) 
-[資料類型 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/data-types-transact-sql.md) 
- [DECLARE @local_variable &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
-[設定@local_variable&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md) 
- [sys.types &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
+[CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
+[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

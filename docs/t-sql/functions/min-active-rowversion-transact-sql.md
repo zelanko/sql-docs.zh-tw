@@ -1,5 +1,5 @@
 ---
-title: "MIN_ACTIVE_ROWVERSION (TRANSACT-SQL) |Microsoft 文件"
+title: MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回目前資料庫中，使用中的最低 **rowversion** 值。 如果 **rowversion** 值用在尚未認可的交易中，則該值為使用中。 如需詳細資訊，請參閱[rowversion &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/rowversion-transact-sql.md).  
+  傳回目前資料庫中，使用中的最低 **rowversion** 值。 如果 **rowversion** 值用在尚未認可的交易中，則該值為使用中。 如需詳細資訊，請參閱 [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)。  
   
 > [!NOTE]  
->  **Rowversion**資料型別就是所謂**時間戳記**。  
+>  **rowversion** 資料類型也稱為 **timestamp**。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ MIN_ACTIVE_ROWVERSION
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回**binary （8)**值。  
+ 傳回 **binary(8)** 值。  
   
-## <a name="remarks"></a>備註  
- MIN_ACTIVE_ROWVERSION 是不具決定性的函式會傳回最低的使用中**rowversion**目前資料庫中的值。 在包含 **rowversion** 類型之資料行的資料表上執行插入或更新時，通常會產生新的 **rowversion**值。 如果在資料庫中沒有任何作用中的值，MIN_ACTIVE_ROWVERSION 會傳回相同的值為 @@DBTS + 1。  
+## <a name="remarks"></a>Remarks  
+ MIN_ACTIVE_ROWVERSION 是一個不具確定性的函式，它會傳回目前資料庫中最低的使用中 **rowversion** 值。 在包含 **rowversion** 類型之資料行的資料表上執行插入或更新時，通常會產生新的 **rowversion**值。 如果在資料庫中沒有使用中的值，MIN_ACTIVE_ROWVERSION 會傳回與 @@DBTS + 1 相同的值。  
   
- MIN_ACTIVE_ROWVERSION 是有用的案例，例如資料同步處理使用**rowversion**群組的變更集在一起的值。 如果應用程式使用@DBTS而非 MIN_ACTIVE_ROWVERSION，很可能遺漏變更同步處理發生時之作用中。  
+ 例如，MIN_ACTIVE_ROWVERSION 在類似以下的案例中會很實用：使用 **rowversion** 值將變更集合分組在一起的資料同步處理。 如果應用程式使用 @@DBTS 而非 MIN_ACTIVE_ROWVERSION，有可能會遺漏在同步處理發生時的使用中變更。  
   
  MIN_ACTIVE_ROWVERSION 函數不會受到交易隔離等級中的變更影響。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回**rowversion**藉由使用`MIN_ACTIVE_ROWVERSION`和`@@DBTS`。 請注意，當資料庫中沒有任何使用中交易時，這些值就會不同。  
+ 下列範例會使用 `MIN_ACTIVE_ROWVERSION` 和 `@@DBTS` 來傳回 **rowversion**。 請注意，當資料庫中沒有任何使用中交易時，這些值就會不同。  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  
@@ -141,7 +141,7 @@ GO
 --0x00000000000007E5  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [@@DBTS &#40;Transact-SQL&#41;](../../t-sql/functions/dbts-transact-sql.md)   
  [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)  
   

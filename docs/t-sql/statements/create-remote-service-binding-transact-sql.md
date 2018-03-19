@@ -1,5 +1,5 @@
 ---
-title: "建立遠端服務繫結 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -71,35 +71,35 @@ CREATE REMOTE SERVICE BINDING binding_name
   
 ## <a name="arguments"></a>引數  
  *binding_name*  
- 這是要建立之遠端服務繫結的名稱。 您不可指定伺服器、資料庫和結構描述名稱。 *Binding_name*必須是有效**sysname**。  
+ 這是要建立之遠端服務繫結的名稱。 您不可指定伺服器、資料庫和結構描述名稱。 *binding_name* 必須是有效的 **sysname**。  
   
- 授權*owner_name*  
- 將繫結的擁有者設為指定的資料庫使用者或角色。 當目前的使用者是**dbo**或**sa**， *owner_name*可以是任何有效的使用者或角色的名稱。 否則， *owner_name*必須是目前使用者的名稱、 目前的使用者具有 IMPERSONATE 權限的使用者名稱或目前使用者所屬的角色的名稱。  
+ AUTHORIZATION *owner_name*  
+ 將繫結的擁有者設為指定的資料庫使用者或角色。 當目前的使用者是 **dbo** 或 **sa** 時，*owner_name* 可以是任何有效使用者或角色的名稱。 否則，*owner_name* 必須是目前使用者的名稱、目前使用者擁有的 IMPERSONATE 權限使用者名稱，或目前使用者所屬的角色名稱。  
   
- 服務 '*service_name*'  
+ TO SERVICE '*service_name*'  
  指定將遠端服務繫結到 WITH USER 子句所識別的使用者。  
   
- 使用者 = *user_name*  
+ USER = *user_name*  
  指定擁有 TO SERVICE 子句所識別的遠端服務之相關憑證的資料庫主體。 這個憑證用來加密和驗證與遠端服務交換的訊息。  
   
  ANONYMOUS  
- 指定與遠端服務通訊時，是否使用匿名驗證。 如果 ANONYMOUS = ON，使用匿名驗證，且遠端資料庫中的作業就會發生成員的身分**公用**固定的資料庫角色。 如果 ANONYMOUS = OFF，遠端資料庫的作業會以這個資料庫的特定使用者身分來執行。 如果未指定這個子句，預設值便是 OFF。  
+ 指定與遠端服務通訊時，是否使用匿名驗證。 如果 ANONYMOUS = ON，便會使用匿名驗證，且遠端資料庫的作業會以 **public** 固定資料庫角色成員的身分來執行。 如果 ANONYMOUS = OFF，遠端資料庫的作業會以這個資料庫的特定使用者身分來執行。 如果未指定這個子句，預設值便是 OFF。  
   
-## <a name="remarks"></a>備註  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 利用遠端服務繫結來尋找新交談要用的憑證。 中的憑證與相關聯的公開金鑰*user_name*用來驗證訊息傳送至遠端服務，並接著用來加密交談的工作階段金鑰。 憑證*user_name*必須對應於主控遠端服務之資料庫中的使用者憑證。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 利用遠端服務繫結來尋找新交談要用的憑證。 在與 *user_name* 建立關聯的憑證中，公開金鑰是用來驗證傳送給遠端服務的訊息，以及對之後要用來加密交談作業的工作階段金鑰進行加密。 *user_name* 的憑證必須對應於主控遠端服務之資料庫中的使用者憑證。  
   
- 只有與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以外目標服務通訊的起始服務，才需要遠端服務繫結。 主控起始服務的資料庫必須含有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以外的任何目標服務的遠端服務繫結。 主控目標服務的資料庫不需要含有與它交談的起始服務之遠端服務繫結。 當起始端服務和目標服務位於相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中時，不需要任何遠端服務繫結。 不過，如果遠端服務繫結存在 where *service_name*指定的 TO SERVICE 符合名稱的本機服務[!INCLUDE[ssSB](../../includes/sssb-md.md)]會使用繫結。  
+ 只有與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以外目標服務通訊的起始服務，才需要遠端服務繫結。 主控起始服務的資料庫必須含有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以外的任何目標服務的遠端服務繫結。 主控目標服務的資料庫不需要含有與它交談的起始服務之遠端服務繫結。 當起始端服務和目標服務位於相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中時，不需要任何遠端服務繫結。 但是，如果有遠端服務繫結存在 (此時為 TO SERVICE 指定的 *service_name* 符合本機服務的名稱)，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 將會使用此繫結。  
   
- 當 ANONYMOUS = ON，起始服務會連接至目標服務的成員身分**公用**固定的資料庫角色。 依預設，這個角色的成員並沒有連接到資料庫的權限。 若要成功地傳送訊息時，必須授與目標資料庫**公用**資料庫的 CONNECT 權限和目標服務的 SEND 權限的角色。  
+ 當 ANONYMOUS = ON 時，起始服務會以 **public** 固定資料庫角色成員的身分來連線到目標服務。 依預設，這個角色的成員並沒有連接到資料庫的權限。 若要順利傳送訊息，目標資料庫必須將資料庫的 CONNECT 權限和目標服務的 SEND 權限授與 **public** 角色。  
   
  當使用者擁有多項憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會從目前有效的憑證中，選取到期日最晚的憑證，並將它標示為 AVAILABLE FOR BEGIN_DIALOG。  
   
 ## <a name="permissions"></a>Permissions  
- 權限建立遠端服務繫結至名為在使用者子句中，成員的使用者的預設**db_owner**固定的資料庫角色、 成員的**db_ddladmin**固定資料庫角色和成員**sysadmin**固定的伺服器角色。  
+ 建立遠端服務繫結的權限預設為 USER 子句中所指定的使用者、**db_owner** 固定資料庫角色的成員、**db_ddladmin** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
  執行 CREATE REMOTE SERVICE BINDING 陳述式的使用者必須有陳述式指定的主體之模擬權限。  
   
- 遠端服務繫結不能是暫存物件。 遠端服務繫結名稱開頭為 **#**  ，但它們是永久物件。  
+ 遠端服務繫結不能是暫存物件。 您可以使用開頭是 **#** 的遠端服務繫結名稱，但它們是永久物件。  
   
 ## <a name="examples"></a>範例  
   
@@ -113,7 +113,7 @@ CREATE REMOTE SERVICE BINDING APBinding
 ```  
   
 ### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. 利用匿名驗證來建立遠端服務繫結  
- 下列範例會建立 `//Adventure-Works.com/services/AccountsPayable` 服務的繫結。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會使用 `APUser` 資料庫主體所擁有的憑證來與遠端服務交換工作階段加密金鑰。 Broker 並不接受遠端服務的驗證。 在主控遠端服務資料庫中，訊息會傳遞做為**客體**使用者。  
+ 下列範例會建立 `//Adventure-Works.com/services/AccountsPayable` 服務的繫結。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會使用 `APUser` 資料庫主體所擁有的憑證來與遠端服務交換工作階段加密金鑰。 Broker 並不接受遠端服務的驗證。 在主控遠端服務的資料庫中，訊息是以 **guest** 使用者的身分來傳遞。  
   
 ```  
 CREATE REMOTE SERVICE BINDING APBinding  
@@ -121,9 +121,9 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser, ANONYMOUS=ON ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [更改遠端服務繫結 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
- [卸除遠端服務繫結 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
+ [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

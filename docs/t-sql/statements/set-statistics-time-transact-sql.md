@@ -1,5 +1,5 @@
 ---
-title: "設定統計資料的時間 (TRANSACT-SQL) |Microsoft 文件"
+title: SET STATISTICS TIME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,14 +52,14 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當 SET STATISTICS TIME 是 ON 時，會顯示陳述式的時間統計資料。 當它是 OFF 時，不會顯示時間統計資料。  
   
  SET STATISTICS TIME 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
- Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]無法提供準確的統計資料在 fiber 模式下，當您啟用會啟動**輕量型共用**組態選項。  
+ 當您啟用 [輕量型共用] 設定選項時，會啟用 Fiber 模式，但在 Fiber 模式下，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法提供準確的統計資料。  
   
- **Cpu**中的資料行**sysprocesses** SET STATISTICS TIME ON 來執行查詢時，才會更新資料表。 當 SET STATISTICS TIME 是 OFF， **0**傳回。  
+ 只有在使用 SET STATISTICS TIME ON 來執行查詢時，才會更新 **sysprocesses** 資料表的 **cpu** 資料行。 當 SET STATISTICS TIME 是 OFF 時，會傳回 **0**。  
   
  ON 和 OFF 設定也會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中目前活動的 [處理序資訊] 檢視中的 CPU 資料行。  
   
@@ -99,8 +99,8 @@ SQL Server parse and compile time:
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET STATISTICS IO &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

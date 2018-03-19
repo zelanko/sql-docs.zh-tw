@@ -1,5 +1,5 @@
 ---
-title: "SIGNBYASYMKEY (TRANSACT-SQL) |Microsoft 文件"
+title: SIGNBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,18 +53,18 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
   
 ## <a name="arguments"></a>引數  
  *Asym_Key_ID*  
- 為目前資料庫中非對稱金鑰的識別碼。 *Asym_Key_ID*是**int**。  
+ 為目前資料庫中非對稱金鑰的識別碼。 *Asym_Key_ID* 為 **int**。  
   
  **@plaintext**  
- 這類型的變數**nvarchar**， **char**， **varchar**，或**nchar**包含將會使用非對稱金鑰簽署的資料。  
+ 為 **nvarchar**、**char**、**varchar** 或 **nchar** 類型的變數，其中包含要以非對稱金鑰簽署的資料。  
   
- *密碼*  
- 為用來保護私密金鑰的密碼。 *密碼*是**nvarchar （128)**。  
+ *password*  
+ 為用來保護私密金鑰的密碼。 *password* 為 **nvarchar(128)**。  
   
 ## <a name="return-types"></a>傳回類型  
- **varbinary** 8,000 個位元組的大小上限。  
+ **varbinary**，大小上限為 8,000 位元組。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  需要非對稱金鑰的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
@@ -86,9 +86,9 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [ASYMKEY_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [VERIFYSIGNEDBYASYMKEY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

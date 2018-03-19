@@ -1,5 +1,5 @@
 ---
-title: "設定位移 (TRANSACT-SQL) |Microsoft 文件"
+title: SET OFFSETS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ SET OFFSETS keyword_list { ON | OFF }
  *keyword_list*  
  這是一份 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構清單 (以逗號分隔)，其中包括 SELECT、FROM、ORDER、TABLE、PROCEDURE、STATEMENT、PARAM 和 EXECUTE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  只有在 DB-Library 應用程式中，才會使用 SET OFFSETS。  
   
  SET OFFSETS 的設定是在剖析階段進行設定，而不是在執行階段進行設定。 在剖析階段進行設定意謂著，如果 SET 陳述式在批次或預存程序中，不論程式碼是否實際執行到這一點，設定都會生效；SET 陳述式會在執行任何陳述式之前生效。 例如，即使 SET 陳述式是在永遠不會執行到的 IF...ELSE 陳述式區塊中，SET 陳述式仍會生效，因為會剖析 IF...ELSE 陳述式區塊。  
@@ -69,8 +69,8 @@ SET OFFSETS keyword_list { ON | OFF }
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET PARSEONLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-parseonly-transact-sql.md)  
+ [SET PARSEONLY &#40;Transact-SQL&#41;](../../t-sql/statements/set-parseonly-transact-sql.md)  
   
   

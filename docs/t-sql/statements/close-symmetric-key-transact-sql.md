@@ -1,5 +1,5 @@
 ---
-title: "CLOSE SYMMETRIC KEY (TRANSACT-SQL) |Microsoft 文件"
+title: CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -53,8 +53,8 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *Key_name*  
  這是要關閉的對稱金鑰名稱。  
   
-## <a name="remarks"></a>備註  
- 開啟的對稱金鑰繫結到工作階段，而非安全性內容。 開啟的金鑰將持續保持可用狀態，直到明確關閉金鑰或結束工作階段為止。 CLOSE ALL SYMMETRIC KEYS 會關閉任何開啟目前的工作階段中使用的資料庫主要金鑰[OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md)陳述式。  開啟金鑰的相關資訊會顯示在[sys.openkeys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md)目錄檢視。  
+## <a name="remarks"></a>Remarks  
+ 開啟的對稱金鑰繫結到工作階段，而非安全性內容。 開啟的金鑰將持續保持可用狀態，直到明確關閉金鑰或結束工作階段為止。 CLOSE ALL SYMMETRIC KEYS 會關閉目前工作階段中使用 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) 陳述式開啟的任何資料庫主要金鑰。  您可以在 [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 目錄檢視中看到開啟金鑰的資訊。  
   
 ## <a name="permissions"></a>Permissions  
  關閉對稱金鑰不需要任何明確權限。  
@@ -77,10 +77,10 @@ CLOSE ALL SYMMETRIC KEYS;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [DROP SYMMETRIC KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
+ [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
   
   

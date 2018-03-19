@@ -1,5 +1,5 @@
 ---
-title: "HASHBYTES (TRANSACT-SQL) |Microsoft 文件"
+title: HASHBYTES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2016
 ms.prod: sql-non-specified
@@ -48,28 +48,28 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>引數  
- **'**\<演算法 >**'**  
- 識別用來雜湊輸入的雜湊演算法。 這是必要的引數，沒有預設值。 必須加上單引號。 開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，SHA2_256 和 SHA2_512 以外的所有演算法已被都取代。 較舊的演算法 （不建議使用） 會繼續運作，但它們將會引發取代事件。  
+ **'**\<algorithm>**'**  
+ 識別用來雜湊輸入的雜湊演算法。 這是必要的引數，沒有預設值。 必須加上單引號。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，取代 SHA2_256 和 SHA2_512 以外的所有演算法。 較舊的演算法 (不建議使用) 會繼續運作，但它們會引發取代事件。  
   
  **@input**  
- 指定含有要雜湊之資料的變數。 **@input**是**varchar**， **nvarchar**，或**varbinary**。  
+ 指定含有要雜湊之資料的變數。 **@input** 為 **varchar**、**nvarchar**，或 **varbinary**。  
   
- **'** *輸入* **'**  
+ **'** *input* **'**  
  指定運算式，這個運算式評估為要雜湊的字元或二進位字串。  
   
  輸出符合演算法標準：用於 MD2、MD4 和 MD5 的 128 位元 (16 個位元組)；用於 SHA 和 SHA1 的 160 位元 (20 個位元組)；用於 SHA2_256 的 256 位元 (32 位元組)，以及用於 SHA2_512 的 512 位元 (64 位元組)。  
   
-**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- 如[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和更早版本，允許輸入的值僅限於 8000 個位元組。  
+ 針對 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更早版本，允許的輸入值限制為 8000 個位元組。  
   
 ## <a name="return-value"></a>傳回值  
- **varbinary** （最多 8000 位元組）  
+ **varbinary** (最大 8000 位元組)  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-return-the-hash-of-a-variable"></a>答： 傳回變數的雜湊  
- 下列範例會傳回`SHA1`的雜湊**nvarchar**資料儲存在變數中`@HashThis`。  
+### <a name="a-return-the-hash-of-a-variable"></a>A：傳回變數的雜湊  
+ 下列範例會傳回儲存於 `@HashThis` 變數中 **nvarchar** 資料的 `SHA1` 雜湊。  
   
 ```  
 DECLARE @HashThis nvarchar(4000);  
@@ -78,7 +78,7 @@ SELECT HASHBYTES('SHA1', @HashThis);
   
 ```  
   
-### <a name="b-return-the-hash-of-a-table-column"></a>B： 傳回的資料表資料行的雜湊  
+### <a name="b-return-the-hash-of-a-table-column"></a>B：傳回資料表資料行的雜湊  
  下列範例會傳回 `c1` 資料表 `Test1` 資料行中之值的 SHA1 雜湊。  
   
 ```  
@@ -101,7 +101,7 @@ SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
   
   

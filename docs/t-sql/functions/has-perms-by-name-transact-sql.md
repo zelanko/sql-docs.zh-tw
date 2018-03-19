@@ -1,5 +1,5 @@
 ---
-title: "HAS_PERMS_BY_NAME (TRANSACT-SQL) |Microsoft 文件"
+title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  評估安全性實體上目前使用者的有效權限。 相關的函數是[fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)。  
+  評估安全性實體上目前使用者的有效權限。 相關的函式為 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,34 +52,34 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>引數  
- *安全性實體*  
- 這是安全性實體的名稱。 如果安全性實體是伺服器本身，這個值應該設為 NULL。 *安全性實體*是類型的純量運算式**sysname**。 沒有預設值。  
+ *securable*  
+ 這是安全性實體的名稱。 如果安全性實體是伺服器本身，這個值應該設為 NULL。 *securable* 為 **sysname** 類型的純量運算式。 沒有預設值。  
   
  *securable_class*  
- 這是用來測試權限之安全性實體的類別名稱。 *securable_class*是類型的純量運算式**nvarchar （60)**。  
+ 這是用來測試權限之安全性實體的類別名稱。 *securable_class* 為 **nvarchar(60)** 類型的純量運算式。  
   
- 在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，securable_class 引數必須設定為下列其中之一：**資料庫**，**物件**，**角色**，**結構描述**，或**使用者**。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 引數必須設為下列其中一項：**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA** 或 **USER**。  
   
- *權限*  
- 類型的非 null 純量運算式**sysname** ，代表要檢查的權限名稱。 沒有預設值。 權限名稱 ANY 是萬用字元。  
+ *permission*  
+ 類型為 **sysname**，不可為 Null 的純量運算式，表示要檢查的權限名稱。 沒有預設值。 權限名稱 ANY 是萬用字元。  
   
- *子安全性實體*  
- 類型的選擇性純量運算式**sysname**表示測試權限之安全性實體子實體名稱。 預設值是 NULL。  
+ *sub-securable*  
+ **sysname** 類型的選擇性純量運算式，表示用來測試權限之安全性實體的子實體名稱。 預設值是 NULL。  
   
 > [!NOTE]  
->  新版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，子安全性實體不能使用表單中的方括號**' [***子名稱***]'**。 使用**'***子名稱***'**改為。  
+>  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全性實體不能使用格式為 **'[***sub name***]'** 的括弧。 請改為使用 **'***sub name***'**。  
   
  *sub-securable_class*  
- 類型的選擇性純量運算式**nvarchar （60)**代表測試權限的安全性實體子實體都的類別。 預設值是 NULL。  
+ **nvarchar(60)** 類型的選擇性純量運算式，表示測試權限的安全性實體之子實體的類別。 預設值是 NULL。  
   
- 在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，sub-securable_class 引數無效，只有當 securable_class 引數設定為**物件**。 如果 securable_class 引數設定為**物件**，sub-securable_class 引數必須設定為**資料行**。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，只有當 securable_class 引數設定為 **OBJECT** 時，sub-securable_class 才有效。 如果 securable_class 引數設定為 **OBJECT**，sub-securable_class 引數必須設定為 **COLUMN**。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
  如果查詢失敗，則傳回 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個內建函數會測試目前主體對於指定的安全性實體是否有特定有效權限。 當使用者對於安全性實體具有有效權限時，HAS_PERMS_BY_NAME 會傳回 1；當使用者對於安全性實體沒有任何有效權限，則傳回 0；當安全性實體類別或權限無效時，則傳回 NULL。 有效權限為下列任何一項：  
   
 -   直接授與主體的權限，且不被拒絕。  
@@ -112,7 +112,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. 我有伺服器層級 VIEW SERVER STATE 權限嗎？  
   
-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -120,7 +120,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. 我可以模擬 (IMPERSONATE) 伺服器主體 Ps 嗎？  
   
-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
@@ -186,7 +186,7 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [安全性實體](../../relational-databases/security/securables.md)   
  [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

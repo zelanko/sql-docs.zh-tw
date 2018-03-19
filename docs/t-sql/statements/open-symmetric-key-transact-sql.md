@@ -1,5 +1,5 @@
 ---
-title: "OPEN SYMMETRIC KEY (TRANSACT-SQL) |Microsoft 文件"
+title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -59,31 +59,31 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  *Key_name*  
  這是您要開啟的對稱金鑰名稱。  
   
- 憑證*certificate_name*  
+ CERTIFICATE *certificate_name*  
  這是憑證名稱，其私密金鑰將用來為對稱金鑰解密。  
   
- 非對稱金鑰*asym_key_name*  
+ ASYMMETRIC KEY *asym_key_name*  
  這是非對稱金鑰的名稱，其私密金鑰將用來為對稱金鑰解密。  
   
- 密碼 ='*密碼*'  
+ WITH PASSWORD ='*password*'  
  這是為憑證或非對稱金鑰的私密金鑰加密所用的密碼。  
   
- 對稱金鑰*decrypting_key_name*  
+ SYMMETRIC KEY *decrypting_key_name*  
  這是為正在開啟之對稱金鑰解密所用的對稱金鑰名稱。  
   
- 密碼 ='*密碼*'  
+ PASSWORD ='*password*'  
  這是保護對稱金鑰所用的密碼。  
   
-## <a name="remarks"></a>備註  
- 開啟的對稱金鑰繫結到工作階段，而非安全性內容。 開啟的金鑰將持續保持可用狀態，直到明確關閉金鑰或結束工作階段為止。 如果開啟了對稱金鑰，然後又切換內容，金鑰將保持開啟，而且可以在模擬內容中使用。 開啟對稱金鑰的相關資訊會顯示在[sys.openkeys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md)目錄檢視。  
+## <a name="remarks"></a>Remarks  
+ 開啟的對稱金鑰繫結到工作階段，而非安全性內容。 開啟的金鑰將持續保持可用狀態，直到明確關閉金鑰或結束工作階段為止。 如果開啟了對稱金鑰，然後又切換內容，金鑰將保持開啟，而且可以在模擬內容中使用。 可以在 [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 目錄檢視中看到有關開啟對稱金鑰的資訊。  
   
  如果對稱金鑰是以另一個金鑰加密，必須先開啟該金鑰。  
   
- 如果已經開啟對稱金鑰，查詢是**NO_OP**。  
+ 如果對稱金鑰已經開啟，則查詢為 **NO_OP**。  
   
  如果為對稱金鑰解密的密碼、憑證或金鑰不正確，查詢就會失敗。  
   
- 無法開啟從加密提供者建立的對稱金鑰。 使用此種對稱金鑰的加密和解密作業成功，而不需**開啟**陳述式因為加密提供者正在開啟與關閉金鑰。  
+ 無法開啟從加密提供者建立的對稱金鑰。 由於加密提供者正在開啟與關閉金鑰，使用此種對稱金鑰在沒有 **OPEN** 陳述式的情況下進行加密和解密作業會成功。  
   
 ## <a name="permissions"></a>Permissions  
  呼叫端必須具有金鑰的某種權限，而且絕不能被拒絕金鑰的 VIEW DEFINITION 權限。 其他需求則隨解密機制而不同：  
@@ -120,10 +120,10 @@ OPEN SYMMETRIC KEY MarketingKey11
 GO   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

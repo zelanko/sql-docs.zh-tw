@@ -1,5 +1,5 @@
 ---
-title: "RAND (TRANSACT-SQL) |Microsoft 文件"
+title: RAND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  傳回虛擬隨機**float**從 0 到 1，不含值。  
+  傳回介於 0 到 1 (不含) 之間的似隨機 **float**。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ RAND ( [ seed ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- *種子*  
- 是一個整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)(**tinyint**， **smallint**，或**int**) 提供的種子值。 如果*種子*未指定，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]會隨機指派一個初始值。 只要指定初始值之後，傳回的結果一律相同。  
+ *seed*  
+ 為提供初始值的整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**、**smallint**，或 **int**)。 如果未指定 *seed*，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 便會隨機指派一個初始值。 只要指定初始值之後，傳回的結果一律相同。  
   
 ## <a name="return-types"></a>傳回類型  
  **float**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  以同樣的初始值反覆呼叫 RAND()，傳回的結果都是一樣的。  
   
  在一個連接中，如果 RAND() 是以指定的初始值呼叫，則後續所有對 RAND() 的呼叫，都會根據初始的 RAND() 呼叫而產生結果。 例如，下面這個查詢一定會傳回同樣順序的號碼。  
@@ -77,7 +77,7 @@ WHILE @counter < 5
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   

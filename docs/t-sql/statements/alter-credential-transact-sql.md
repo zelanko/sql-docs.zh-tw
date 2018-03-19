@@ -1,5 +1,5 @@
 ---
-title: "ALTER CREDENTIAL (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -54,18 +54,18 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  指定正在變更的認證名稱。  
   
- 識別**='***identity_name***'**  
+ IDENTITY **='***identity_name***'**  
  指定連接到伺服器外部時所要使用的帳戶名稱。  
   
- 密碼**='***密碼***'**  
- 指定外寄驗證所需的秘密。 *密碼*是選擇性的。  
+ SECRET **='***secret***'**  
+ 指定外寄驗證所需的秘密。 *secret* 為選擇性。  
   
-## <a name="remarks"></a>備註  
- 當變更認證時，兩者的值*identity_name*和*密碼*會重設。 如果未指定選擇性 SECRET 引數，預存秘密的值便會設為 NULL。  
+## <a name="remarks"></a>Remarks  
+ 當認證變更時，*identity_name* 和 *secret* 的值都會重設。 如果未指定選擇性 SECRET 引數，預存秘密的值便會設為 NULL。  
   
  秘密是利用服務主要金鑰來加密的。 如果重新產生服務主要金鑰，便會利用新的服務主要金鑰來重新加密秘密。  
   
- 認證的相關資訊會顯示在**sys.credentials**目錄檢視。  
+ 您可以在 **sys.credentials** 目錄檢視中，看到認證的相關資訊。  
   
 ## <a name="permissions"></a>Permissions  
  需要 ALTER ANY CREDENTIAL 權限。 如果認證是系統認證，則需要 CONTROL SERVER 權限。  
@@ -89,11 +89,11 @@ ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [認證 &#40; Database engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a>另請參閱  
+ [認證 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [卸除認證 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [ALTER DATABASE SCOPED CREDENTIAL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

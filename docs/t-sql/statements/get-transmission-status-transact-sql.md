@@ -1,5 +1,5 @@
 ---
-title: "GET_TRANSMISSION_STATUS (TRANSACT-SQL) |Microsoft 文件"
+title: GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
   
 ## <a name="arguments"></a>引數  
  *conversation_id*  
- 這是交談的交談控制代碼。 這個參數的型別是**uniqueidentifier**。  
+ 這是交談的交談控制代碼。 此參數類型為 **uniqueidentifier**。  
   
 ## <a name="return-types"></a>傳回類型  
  **nchar**  
   
-## <a name="remarks"></a>備註  
- 傳回一個字串，描述指定交談的上次嘗試傳輸狀態。 如果上次嘗試傳輸成功，如果沒有傳輸尚未嘗試，或傳回空字串*conversation_handle*不存在。  
+## <a name="remarks"></a>Remarks  
+ 傳回一個字串，描述指定交談的上次嘗試傳輸狀態。 如果上次嘗試傳輸成功、未嘗試進行任何傳輸，或 *conversation_handle* 不存在，則傳回空字串。  
   
  這個函數所傳回的資訊，與管理檢視 sys.transmission_queue 的 last_transmission_error 資料行所顯示的資訊一樣。 不過，這個函數可以用來尋找目前傳輸佇列中沒有訊息之交談的傳輸狀態。  
   
@@ -86,8 +86,8 @@ SELECT Status =
   
  在這種情況下，並未設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來允許 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 透過網路通訊。  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.conversation_endpoints &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.transmission_queue &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

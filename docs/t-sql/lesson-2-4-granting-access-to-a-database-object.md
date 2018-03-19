@@ -1,5 +1,5 @@
 ---
-title: "授與存取權的資料庫物件 |Microsoft 文件"
+title: "授與資料庫物件的存取權 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-4---granting-access-to-a-database-object"></a>課程 2-4-授與資料庫物件的存取權
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]身為管理員，您可以執行從 選取**產品**資料表和**vw_Names**檢視及執行**pr_Names**程序，但是不能 Mary。 若要授與 Mary 必要的權限，請使用 GRANT 陳述式。  
+# <a name="lesson-2-4---granting-access-to-a-database-object"></a>課程 2-4 - 授與資料庫物件的存取權
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 作為管理員，您可以從 **Products** 資料表和 **vw_Names** 檢視中執行 SELECT，也可以執行 **pr_Names** 預存程序；但 Mary 則無權這麼做。 若要授與 Mary 必要的權限，請使用 GRANT 陳述式。  
   
 ### <a name="procedure-title"></a>程序標題  
   

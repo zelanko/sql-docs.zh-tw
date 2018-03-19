@@ -1,5 +1,5 @@
 ---
-title: "GetDescendant (Database Engine) |Microsoft 文件"
+title: "GetDescendant (資料庫引擎) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -50,17 +50,17 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
   
 ## <a name="arguments"></a>引數  
 *child1*  
-NULL 或**hierarchyid**目前節點的子系。
+NULL 或目前節點子系的 **hierarchyid**。
   
 *child2*  
-NULL 或**hierarchyid**目前節點的子系。
+NULL 或目前節點子系的 **hierarchyid**。
   
 ## <a name="return-types"></a>傳回類型  
-**SQL Server 傳回類型： hierarchyid**
+**SQL Server 傳回型別：hierarchyid**
   
-**CLR 傳回類型： SqlHierarchyId**
+**CLR 傳回型別：SqlHierarchyId**
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 傳回父系之下階的一個子節點。
 -   如果父系為 NULL，則會傳回 NULL。  
 -   如果父系不是 NULL，而 child1 和 child2 都是 NULL，則會傳回父系的一個子系。  
@@ -71,12 +71,12 @@ NULL 或**hierarchyid**目前節點的子系。
 -   如果 child2 不是 NULL，也不是父系的子系，則會引發例外狀況。  
 -   如果 child1 >= child2，則會引發例外狀況。  
   
-GetDescendant 具決定性。 因此，如果 GetDescendant 呼叫使用相同的輸入，它一定會產生相同的輸出。 但是，所產生之子系的確實識別可能會取決於它與其他節點之間的關聯性而有所不同 (如範例 C 中所示範)。
+GetDescendant 具確定性。 因此，當使用相同的輸入呼叫 GetDescendant 時，它一定會產生相同的輸出。 但是，所產生之子系的確實識別可能會取決於它與其他節點之間的關聯性而有所不同 (如範例 C 中所示範)。
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. 插入資料列當做最不重要的下階節點  
-當雇用新的員工時，向 `/3/1/` 節點上的現有員工報告。 執行下列程式碼來插入新的資料列使用 GetDescendant 方法沒有引數來指定做為新的資料列節點`/3/1/1/`:
+當雇用新的員工時，向 `/3/1/` 節點上的現有員工報告。 執行下列程式碼來插入新的資料列，其方式是使用 GetDescendant 方法而不包含引數，將新的資料列節點指定為 `/3/1/1/`：
   
 ```sql
 DECLARE @Manager hierarchyid;   
@@ -89,7 +89,7 @@ VALUES
 ```  
   
 ### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. 插入資料列當做比較重要的下階節點  
-雇用另一個新的員工，向、 相同經理報告 A.執行範例所示下列程式碼插入新的資料列使用 GetDescendant 方法使用 child1 引數來指定新的資料列的節點會遵循範例 A 中的節點變得`/3/1/2/`:
+雇用另一個新的員工，向範例 A 的相同經理報告。執行下列程式碼來插入新的資料列，其方式是使用 GetDescendant 方法 (使用 child1 引數)，以指定新資料列的節點將會遵循範例 A 中的節點，變成 `/3/1/2/`：
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid;  
@@ -104,7 +104,7 @@ VALUES
 ```  
   
 ### <a name="c-inserting-a-row-between-two-existing-nodes"></a>C. 在兩個現有的節點中插入資料列  
-雇用第三個員工，向範例 a 的相同經理報告這個範例會將新的資料列大於節點`FirstNewEmployee`在範例 A，並小於`SecondNewEmployee`範例 b 執行下列程式碼會使用 GetDescendant 方法中。 同時使用 child1 引數和 child2 引數指定新資料列的節點將會變成 `/3/1/1.1/` 節點：
+雇用第三個員工，向範例 A 的相同經理報告。這個範例會將新的資料列插入大於範例 A 中 `FirstNewEmployee` 且小於範例 B 中 `SecondNewEmployee` 的節點。請使用 GetDescendant 方法來執行下列程式碼。 同時使用 child1 引數和 child2 引數指定新資料列的節點將會變成 `/3/1/1.1/` 節點：
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid, @Child2 hierarchyid;  
@@ -120,7 +120,7 @@ VALUES
   
 ```  
   
-完成範例 A、 B 和 C 之後, 的節點加入至資料表就會以下列對等**hierarchyid**值：
+完成範例 A、B 和 C 以後，新增至資料表的節點將會是具有下列 **hierarchyid** 值的對等項：
   
 `/3/1/1/`
   
@@ -131,7 +131,7 @@ VALUES
 節點 `/3/1/1.1/` 大於節點 `/3/1/1/`，但是兩者位於階層中的同一層。
   
 ### <a name="d-scalar-examples"></a>D. 純量範例  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援任意插入及刪除任何**hierarchyid**節點。 藉由使用 getdescendant （），它就一定能夠產生之間任何兩個節點**hierarchyid**節點。 使用 `GetDescendant` 執行下列程式碼來產生範例節點：
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援任何 **hierarchyid** 節點的任意插入及刪除。 藉由使用 GetDescendant()，可能會在任兩個 **hierarchyid** 節點之間產生節點。 使用 `GetDescendant` 執行下列程式碼來產生範例節點：
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  

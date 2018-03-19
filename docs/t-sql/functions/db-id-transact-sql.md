@@ -1,5 +1,5 @@
 ---
-title: "DB_ID (TRANSACT-SQL) |Microsoft 文件"
+title: DB_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="arguments"></a>引數  
 '*database_name*'  
-這是用來傳回對應資料庫識別碼的資料庫名稱。 *database_name*是**sysname**。 如果*database_name*已省略，則會傳回目前資料庫識別碼。
+這是用來傳回對應資料庫識別碼的資料庫名稱。 *database_name* 為 **sysname**。 如果省略 *database_name*，則會傳回目前的資料庫識別碼。
   
 ## <a name="return-types"></a>傳回型別
 **int**
   
 ## <a name="permissions"></a>Permissions  
-如果呼叫端的**DB_ID**不是資料庫的擁有者和資料庫不是**主要**或**tempdb**，若要查看對應的資料列所需的最小權限ALTER ANY DATABASE 或 VIEW ANY DATABASE 伺服器層級權限或在 CREATE DATABASE 權限**主要**資料庫。 呼叫端所連接的資料庫，永遠可以在 **sys.databases**中進行檢視。
+如果 **DB_ID** 的呼叫者不是資料庫的擁有者，而且該資料庫不是 **master** 或 **tempdb**，則查看對應資料列所需具備的最低權限為 ALTER ANY DATABASE 或 VIEW ANY DATABASE 伺服器層級權限，或是 **master** 資料庫中的 CREATE DATABASE 權限。 呼叫端所連接的資料庫，永遠可以在 **sys.databases**中進行檢視。
   
 > [!IMPORTANT]  
->  根據預設，公用角色都有 VIEW ANY DATABASE 權限，讓所有的登入，以查看資料庫資訊。 若要封鎖來自能夠偵測資料庫的登入，撤銷 VIEW ANY DATABASE 權限從公用，或拒絕個別登入的 VIEW ANY DATABASE 權限。  
+>  根據預設，公用角色具備 VIEW ANY DATABASE 權限，允許所有登入查看資料庫資訊。 若要封鎖登入，使其不具備偵測資料庫的能力，請撤銷公用的 VIEW ANY DATABASE 權限，或拒絕個別登入的 VIEW ANY DATABASE 權限。  
   
 ## <a name="examples"></a>範例  
   
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-id-of-a-specified-database"></a>B. 傳回指定資料庫的資料庫識別碼  
-下列範例會傳回資料庫識別碼[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。
+下列範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的資料庫識別碼。
   
 ```sql
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  
@@ -81,7 +81,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. 使用 DB_ID 來指定系統函數參數的值  
-下列範例會使用`DB_ID`要傳回的資料庫識別碼[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]系統函數中的資料庫`sys.dm_db_index_operational_stats`。 該函數是以資料庫識別碼作為第一個參數。
+下列範例會使用 `DB_ID` 來傳回系統函式 `sys.dm_db_index_operational_stats` 中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的資料庫識別碼。 該函數是以資料庫識別碼作為第一個參數。
   
 ```sql
 DECLARE @db_id int;  
@@ -103,7 +103,7 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-return-the-id-of-the-current-database"></a>D. 傳回目前資料庫的識別碼  
 下列範例會傳回目前資料庫的資料庫識別碼。
@@ -120,8 +120,8 @@ SELECT DB_ID('AdventureWorksPDW2012');
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[DB_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/db-name-transact-sql.md)  
-[中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
+[中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
 [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)
   

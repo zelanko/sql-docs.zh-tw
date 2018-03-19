@@ -1,5 +1,5 @@
 ---
-title: "EXECUTE AS (TRANSACT-SQL) |Microsoft 文件"
+title: EXECUTE AS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   設定工作階段的執行內容。  
   
- 依預設，工作階段會在使用者登入時起始，在使用者登出時結束。 工作階段期間的所有作業是依對該使用者的權限檢查而定。 當**EXECUTE AS**陳述式執行時，工作階段的執行內容會切換到指定的登入或使用者名稱。 針對該帳戶，而不是呼叫者的登入和使用者安全性權杖內容切換之後，檢查權限**EXECUTE AS**陳述式。 基本上，使用者或登入帳戶的模擬是在工作階段或模組執行的期間，否則會明確還原內容切換。  
+ 依預設，工作階段會在使用者登入時起始，在使用者登出時結束。 工作階段期間的所有作業是依對該使用者的權限檢查而定。 執行 **EXECUTE AS** 陳述式時，工作階段的執行內容會切換到指定的登入或使用者名稱。 在內容切換之後，系統會檢查該帳戶的登入和使用者安全性 Token 權限，而不是檢查呼叫 **EXECUTE AS** 陳述式的人員。 基本上，使用者或登入帳戶的模擬是在工作階段或模組執行的期間，否則會明確還原內容切換。  
   
 
   
@@ -66,42 +66,42 @@ ms.lasthandoff: 11/21/2017
  指定您要模擬的執行內容是登入。 模擬範圍是在伺服器層級。  
   
 > [!NOTE]  
->  無法在自主資料庫或 SQL 資料庫中使用此選項。  
+>  自主資料庫或 SQL Database 無法使用這個選項。  
   
  使用者  
  指定您要模擬的內容是目前資料庫中的使用者。 模擬範圍僅限於目前資料庫。 通往資料庫使用者的內容切換不會繼承該使用者的伺服器層級權限。  
   
 > [!IMPORTANT]  
->  如果通往資料庫使用者的內容切換在使用中，任何人想要存取資料庫以外的資源，都會導致陳述式失敗。 這包括使用*資料庫*陳述式、 分散式的查詢和查詢會參考使用三或四部分識別碼的另一個資料庫。  
+>  如果通往資料庫使用者的內容切換在使用中，任何人想要存取資料庫以外的資源，都會導致陳述式失敗。 其中包括 USE *database* 陳述式、分散式查詢，以及參考其他使用三部分或四部分識別碼的資料庫查詢。  
   
- **'** *名稱* **'**  
- 有效的使用者或登入名稱。 *名稱*必須是成員**sysadmin**固定伺服器角色，或以主體形式存在於[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)或[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)，分別。  
+ **'** *name* **'**  
+ 有效的使用者或登入名稱。 *name* 必須是 **sysadmin** 固定伺服器角色的成員，或是以主體形式分別存在於 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 或 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 中。  
   
- *名稱*可以指定為本機變數。  
+ *name* 可以指定為本機變數。  
   
- *名稱*必須是單一帳戶，且不能群組、 角色、 憑證、 金鑰或內建帳戶，例如 NT AUTHORITY\LocalService、 NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
+ *name* 必須是單一帳戶，不可以是群組、角色、憑證、金鑰或內建帳戶，例如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   
- 如需詳細資訊，請參閱[指定使用者或登入名稱](#_user)本主題稍後。  
+ 如需詳細資訊，請參閱本主題稍後的[指定使用者或登入名稱](#_user)。  
   
  NO REVERT  
- 指定內容切換不能還原回先前的內容。 **NO REVERT**選項只能在特定層級。  
+ 指定內容切換不能還原回先前的內容。 **NO REVERT** 選項只能在特定層級使用。  
   
- 如需還原成先前的內容的詳細資訊，請參閱[還原 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revert-transact-sql.md).  
+ 如需如何還原到先前內容的詳細資訊，請參閱 [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)。  
   
- COOKIE 到 **@**  *varbinary_variable*  
- 指定執行內容可以只回到先前的內容還原，是否呼叫的 REVERT WITH COOKIE 陳述式包含正確 **@**  *varbinary_variable*值。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]會將 cookie 傳遞 **@**  *varbinary_variable*。 **COOKIE 到**選項只能在特定層級。  
+ COOKIE INTO **@***varbinary_variable*  
+ 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 **@***varbinary_variable* 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 **@***varbinary_variable*。 **COOKIE INTO** 選項只能在特定層級使用。  
   
- **@***varbinary_variable*是**varbinary （8000)**。  
+ **@** *varbinary_variable* 是 **varbinary(8000)**。  
   
 > [!NOTE]  
->  Cookie**輸出**參數目前記載成**varbinary （8000)**這是正確的長度上限。 但目前的實作會傳回**varbinary(100)**。 應用程式應保留**varbinary （8000)** ，讓應用程式能夠繼續正常運作的 cookie 傳回大小如有增加未來的版本。  
+>  Cookie **OUTPUT** 參數目前記載為 **varbinary(8000)**，這是正確的長度上限。 但目前的實作會傳回 **varbinary(100)**。 應用程式應保留 **varbinary(8000)**，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。  
   
  CALLER  
  用於模組內部時，指定模組內部的陳述式是在模組呼叫者的內容中執行。  
   
  用於模組外部時，陳述式沒有動作。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  執行內容中的變更持續有效，直到發生下列項目之一為止：  
   
 -   執行另一個 EXECUTE AS 陳述式。  
@@ -112,18 +112,18 @@ ms.lasthandoff: 11/21/2017
   
 -   造成執行的命令結束的預存程式或觸發程序。  
   
-您可以藉由跨多個主體多次呼叫 EXECUTE AS 陳述式來建立執行內容堆疊。 REVERT 陳述式被呼叫時，會將內容切換到內容堆疊中上一層級的登入或使用者。 如需示範此行為，請參閱[範例 A](#_exampleA)。  
+您可以藉由跨多個主體多次呼叫 EXECUTE AS 陳述式來建立執行內容堆疊。 REVERT 陳述式被呼叫時，會將內容切換到內容堆疊中上一層級的登入或使用者。 如需這個行為的示範，請參閱[範例 A](#_exampleA)。  
   
-##  <a name="_user"></a>指定使用者或登入名稱  
- 指定在 EXECUTE AS user 或 login 名稱\<context_specification > 必須以主體形式存在於**sys.database_principals**或**sys.server_principals**分別或EXECUTE AS 陳述式會失敗。 此外，還必須授與主體的 IMPERSONATE 權限。 除非呼叫端是資料庫擁有者或隸屬**sysadmin**固定伺服器角色，主體必須存在，即使當使用者存取資料庫或執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]透過 Windows 群組成員資格。 例如，假設有下列情況： 
+##  <a name="_user"></a> 指定使用者或登入名稱  
+ 在 EXECUTE AS \<context_specification> 中指定的使用者或登入名稱，必須以主體形式分別存在於 **sys.database_principals** 或 **sys.server_principals** 中，否則 EXECUTE AS 陳述式就會失敗。 此外，還必須授與主體的 IMPERSONATE 權限。 除非呼叫者是資料庫擁有者，或是 **sysadmin** 固定伺服器角色的成員，否則主體必須存在，即使當使用者透過 Windows 群組成員資格在存取資料庫或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時也一樣。 例如，假設有下列情況： 
   
--   **CompanyDomain\SQLUsers**群組具有存取權**銷售**資料庫。  
+-   **CompanyDomain\SQLUsers** 群組有權存取 **Sales** 資料庫。  
   
--   **CompanyDomain\SqlUser1**隸屬**SQLUsers** ，因此，具有隱含的存取權**銷售**資料庫。  
+-   **CompanyDomain\SqlUser1** 是 **SQLUsers** 的成員，因此對 **Sales** 資料庫具有隱含的存取權。  
   
- 雖然**CompanyDomain\SqlUser1**已透過在成員資格資料庫存取**SQLUsers**群組，請在陳述式`EXECUTE AS USER = 'CompanyDomain\SqlUser1'`會失敗，因為`CompanyDomain\SqlUser1`以主體形式不存在資料庫中。  
+ 雖然 **CompanyDomain\SqlUser1** 有權透過 **SQLUsers** 群組中的成員資格來存取資料庫，但是 `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` 陳述式會失敗，因為 `CompanyDomain\SqlUser1` 並未以主體形式存在於資料庫中。  
   
-如果使用者被遺棄 （相關登入不存在），而且未建立使用者與**WITHOUT LOGIN**， **EXECUTE AS**的使用者將會失敗。  
+如果使用者被遺棄 (相關聯的登入不存在)，而且使用者並非以 **WITHOUT LOGIN** 建立，該使用者的 **EXECUTE AS** 將會失敗。  
   
 ## <a name="best-practice"></a>最佳作法  
  指定一個登入或使用者，它具有執行工作階段中作業所需要的最低權限。 例如，如果只需要資料庫層級權限，就不要指定具有伺服器層級權限的登入名稱；或者，除非需要其權限，否則不要指定資料庫擁有者帳戶。  
@@ -134,15 +134,15 @@ ms.lasthandoff: 11/21/2017
 ## <a name="using-with-no-revert"></a>使用 WITH NO REVERT  
  當 EXECUTE AS 陳述式包括選擇性的 WITH NO REVERT 子句時，不能使用 REVERT 或藉由執行另一個 EXECUTE AS 陳述式來重設工作階段的執行內容。 陳述式設定的內容會持續有效，直到卸除工作階段為止。  
   
- 當 WITH NO REVERT COOKIE = @*varbinary_variabl*指定 e 子句時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]會將 cookie 傳遞到 @*varbinary_variabl*e。 執行內容所設定的陳述式只可以還原到先前的內容如果呼叫的 REVERT WITH COOKIE = @*varbinary_variable*陳述式包含相同 *@varbinary_variable* 值。  
+ 指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將 Cookie 值傳遞到 @*varbinary_variabl*e。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含相同的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
   
- 這個選項在使用連接共用的環境中相當有用。 連接共用是資料庫連接群組的維護，這些連接是供應用程式伺服器上的應用程式重複使用。 因為此值傳遞至 *@varbinary_variable* 只有知道呼叫端的 EXECUTE AS 陳述式，呼叫端可以保證它們建立的執行內容，無法變更其他人。  
+ 這個選項在使用連接共用的環境中相當有用。 連接共用是資料庫連接群組的維護，這些連接是供應用程式伺服器上的應用程式重複使用。 由於只有 EXECUTE AS 陳述式的呼叫者知道傳送到 *@varbinary_variable* 的值，因此呼叫者可以保證其所建立的執行內容不會被別人變更。  
   
 ## <a name="determining-the-original-login"></a>決定原始登入  
- 使用[ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md)函數來傳回連接到的執行個體的登入名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以利用這個函數來傳回有許多明確或隱含內容切換的工作階段中原始登入的識別。  
+ 使用 [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 函式時，可傳回連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的登入名稱。 您可以利用這個函數來傳回有許多明確或隱含內容切換的工作階段中原始登入的識別。  
   
 ## <a name="permissions"></a>Permissions  
- 若要指定**EXECUTE AS**登入，呼叫端必須具有**IMPERSONATE**指定登入權限名稱，並不應遭到拒絕**IMPERSONATE ANY LOGIN**權限. 若要指定**EXECUTE AS**呼叫端必須具有資料庫使用者， **IMPERSONATE**權限指定的使用者名稱。 當**EXECUTE AS CALLER**指定，則**IMPERSONATE**沒有必要權限。  
+ 若要指定某項登入的 **EXECUTE AS**，呼叫者必須具有指定登入名稱的 **IMPERSONATE** 權限，而且不應拒絕其 **IMPERSONATE ANY LOGIN** 權限。 若要指定資料庫使用者的 **EXECUTE AS** 權限，呼叫者必須具有指定使用者名稱的 **IMPERSONATE** 權限。 指定 **EXECUTE AS CALLER** 時，不需要 **IMPERSONATE** 權限。  
   
 ## <a name="examples"></a>範例  
   
@@ -191,7 +191,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. 使用 WITH COOKIE 子句  
- 下列範例將工作階段的執行內容設定為指定的使用者，並指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
+ 下列範例會將工作階段的執行內容設為指定使用者，並且指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
   
 ```  
 DECLARE @cookie varbinary(8000);  
@@ -212,9 +212,9 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [還原 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
- [EXECUTE AS 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
   
   
 

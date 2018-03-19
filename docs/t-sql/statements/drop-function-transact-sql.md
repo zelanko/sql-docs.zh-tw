@@ -1,5 +1,5 @@
 ---
-title: "卸除函式 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -38,9 +38,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  從目前資料庫移除一或多個使用者自訂函數。 使用者定義函式會建立使用[CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)使用和修改[ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md)。  
+  從目前資料庫移除一或多個使用者自訂函數。 使用者定義函數是使用 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 建立的，並使用 [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md) 加以修改。  
   
- 卸除函式支援原生編譯純量使用者定義函數。 如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函式](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
+ DROP 函數支援原生編譯的純量使用者定義函數。 如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,8 +62,8 @@ DROP FUNCTION [ schema_name. ] function_name
    
   
 ## <a name="arguments"></a>引數  
- *如果存在*    
- 只有當它已經存在有條件地卸除函式。 從[!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)]2016年和[!INCLUDE[sssds_md](../../includes/sssds_md.md)]。
+ *IF EXISTS*    
+ 只有在函數已存在時，才能有條件地將其卸除。 從 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 和 [!INCLUDE[sssds_md](../../includes/sssds_md.md)] 開始可用。
   
  *schema_name*  
  這是使用者定義函數所屬的結構描述名稱。  
@@ -71,7 +71,7 @@ DROP FUNCTION [ schema_name. ] function_name
  *function_name*  
  這是要移除的使用者自訂函數名稱。 您可以選擇性地指定結構描述名稱。 不能指定伺服器名稱和資料庫名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果資料庫中有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數或檢視參考這個函數，並且是利用 SCHEMABINDING 加以建立；或者如果有計算資料行、CHECK 條件約束或 DEFAULT 條件約束參考這個函數，DROP FUNCTION 就不會成功。  
   
  如果有計算資料行參考這個函數，而且已經產生索引，DROP FUNCTION 就不會成功。  
@@ -82,18 +82,18 @@ DROP FUNCTION [ schema_name. ] function_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-function"></a>A. 卸除函數  
- 下列範例會卸除`fn_SalesByStore`使用者定義函數從`Sales`結構描述中的[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]範例資料庫。 若要建立此函式，請參閱範例 B 中[CREATE FUNCTION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-function-transact-sql.md).  
+ 下列範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的 `Sales` 結構描述，卸除 `fn_SalesByStore` 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-function-transact-sql.md)。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
- [OBJECT_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.parameters &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

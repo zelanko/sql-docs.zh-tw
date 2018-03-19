@@ -1,5 +1,5 @@
 ---
-title: "卸除同義字 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -50,18 +50,18 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *如果存在*  
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[新版](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ *IF EXISTS*  
+**適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- 只有當它已經存在有條件地卸除同義字。  
+ 只有在同義字已存在時，才能有條件地將其卸除。  
   
- *結構描述*  
+ *schema*  
  指定同義字所在的結構描述。 如果未指定 schema，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用目前使用者的預設結構描述。  
   
  *synonym_name*  
  這是要卸除的同義字名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  同義字參考並未與結構描述繫結；因此，您可以隨時卸除同義字。 不過已卸除的同義字之參考，只有在執行階段才找得到。  
   
  動態 SQL 中的同義字可以建立、卸除和參考。  
@@ -92,8 +92,8 @@ DROP SYNONYM MyProduct;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [建立同義字 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

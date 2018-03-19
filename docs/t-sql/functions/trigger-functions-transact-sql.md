@@ -1,5 +1,5 @@
 ---
-title: "觸發程序函數 (TRANSACT-SQL) |Microsoft 文件"
+title: "觸發程序函式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2017
 ms.prod: sql-non-specified

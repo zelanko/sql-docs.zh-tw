@@ -1,5 +1,5 @@
 ---
-title: "ISNULL (TRANSACT-SQL) |Microsoft 文件"
+title: ISNULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,19 +50,19 @@ ISNULL ( check_expression , replacement_value )
   
 ## <a name="arguments"></a>引數  
  *check_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)NULL 檢查。 *check_expression*可以是任何類型。  
+ 為要檢查 NULL 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *check_expression* 可為任何類型。  
   
  *replacement_value*  
- 如果要傳回的運算式*check_expression*是 NULL。 *replacement_value*必須可以隱含地轉換成的型別之型別的*check_expresssion*。  
+ 為 *check_expression* 是 NULL 時，要傳回的運算式。 *replacement_value* 必須是能夠隱含轉換成 *check_expression* 類型的類型。  
   
 ## <a name="return-types"></a>傳回類型  
- 會傳回相同的型別*check_expression*。 如果常值 NULL 提供做為*check_expression*，傳回的資料型別*replacement_value*。 如果常值 NULL 提供做為*check_expression* ，而且沒有*replacement_value*提供，會傳回**int**。  
+ 傳回與 *check_expression* 相同的類型。 若將常值 NULL 作為 *check_expression* 提供，則會傳回 *replacement_value* 的資料類型。 若將常值 NULL 作為 *check_expression* 提供，並且未提供任何 *replacement_value*，則會傳回 **int**。  
   
-## <a name="remarks"></a>備註  
- 值*check_expression*如果它不會傳回 NULL; 否則*replacement_value*之後會隱含地轉換成的型別傳回*check_expression*，如果類型不相同。 *replacement_value*如果被截斷*replacement_value*超過*check_expression*。  
+## <a name="remarks"></a>Remarks  
+ 如果 *check_expression* 的值不是 NULL，則會傳回該值；否則會在其隱含轉換成 *check_expression* 的類型後傳回 *replacement_value* (若兩者類型不同的話)。 若 *replacement_value* 的長度超過 *check_expression*，則 *replacement_value* 可能會被截斷。  
   
 > [!NOTE]  
->  使用[COALESCE &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)傳回第一個非 null 值。  
+>  使用 [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md) 來傳回第一個不是 NULL 的值。  
   
 ## <a name="examples"></a>範例  
   
@@ -99,7 +99,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|  Description       |  DiscountPct    |   MinQty    |   最大數量       |
+|  描述       |  DiscountPct    |   MinQty    |   最大數量 (Max Quantity)       |
 |  ---------------   |  -------------  |   --------  |   ---------------    |
 |  No Discount       |  0.00           |   0         |   0                  |
 |  Volume Discount   |  0.02           |   11        |   14                 |
@@ -108,14 +108,14 @@ GO
 |  Volume Discount   |  0.15           |   41        |   0                  |
 |  Volume Discount   |  0.20           |   61        |   0                  |
 |  Mountain-100 Cl   |  0.35           |   0         |   0                  |
-|  運動 Helmet Di   |  0.10           |   0         |   0                  |
+|  Sport Helmet Di   |  0.10           |   0         |   0                  |
 |  Road-650 Overst   |  0.30           |   0         |   0                  |
 |  Mountain Tire S   |  0.50           |   0         |   0                  |
-|  運動 Helmet Di   |  0.15           |   0         |   0                  |
-|  LL 道路 Frame S   |  0.35           |   0         |   0                  |
-|  休閒車 3000 Pr   |  0.15           |   0         |   0                  |
+|  Sport Helmet Di   |  0.15           |   0         |   0                  |
+|  LL Road Frame S   |  0.35           |   0         |   0                  |
+|  Touring-3000 Pr   |  0.15           |   0         |   0                  |
 |  Touring-1000 Pr   |  0.20           |   0         |   0                  |
-|  半價格 Peda   |  0.50           |   0         |   0                  |
+|  Half-Price Peda   |  0.50           |   0         |   0                  |
 |  Mountain-500 Si   |  0.40           |   0         |   0                  |
 
  `(16 row(s) affected)`  
@@ -132,10 +132,10 @@ WHERE Weight IS NULL;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-isnull-with-avg"></a>D. 使用 ISNULL 搭配 AVG  
- 下列範例會尋找範例資料表中的所有產品的加權平均值。 它會在 `50` 資料表的 `Weight` 資料行中，用值 `Product` 來取代所有 NULL 項目。  
+ 下列範例會尋找範例資料表中所有產品的加權平均值。 它會在 `50` 資料表的 `Weight` 資料行中，用值 `Product` 來取代所有 NULL 項目。  
   
 ```  
 -- Uses AdventureWorks  
@@ -152,7 +152,7 @@ FROM dbo.DimProduct;
 ```  
   
 ### <a name="e-using-isnull"></a>E. 使用 ISNULL  
- 下列範例會使用 ISNULL 來測試 NULL 值資料行中`MinPaymentAmount`並顯示的值`0.00`這些資料列。  
+ 下列範例會使用 ISNULL 來在 `MinPaymentAmount` 資料行中測試 NULL 值，然後為那些資料列顯示 `0.00` 值。  
   
 ```  
 -- Uses AdventureWorks  
@@ -168,15 +168,15 @@ ORDER BY ResellerName;
   
 |  ResellerName                |  MinimumPayment    |
 |  -------------------------   |  --------------    |
-|  自行車關聯       |     0.0000         |
-|  Bike Store                |     0.0000         |
-|  循環商店                |     0.0000         |
-|  太好了自行車公司     |     0.0000         |
-|  典型的自行車購買         |   200.0000         |
-|  可接受的銷售與服務  |     0.0000         |
+|  A Bicycle Association       |     0.0000         |
+|  A Bike Store                |     0.0000         |
+|  A Cycle Shop                |     0.0000         |
+|  A Great Bicycle Company     |     0.0000         |
+|  A Typical Bike Shop         |   200.0000         |
+|  Acceptable Sales & Service  |     0.0000         |
   
-### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. 使用 IS NULL 來測試為 NULL 的 WHERE 子句中  
- 下列範例會尋找所有產品`NULL`中`Weight`資料行。 請注意 `IS` 和 `NULL` 之間的空格。  
+### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. 使用 IS NULL 來在 WHERE 子句中測試 NULL  
+ 下列範例會尋找 `Weight` 資料行中有 `NULL` 的所有產品。 請注意 `IS` 和 `NULL` 之間的空格。  
   
 ```  
 -- Uses AdventureWorks  
@@ -186,12 +186,12 @@ FROM dbo.DimProduct
 WHERE Weight IS NULL;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [為 NULL &#40;TRANSACT-SQL &#41;](../../t-sql/queries/is-null-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)   
  [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [聯合 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "GROUPING_ID (TRANSACT-SQL) |Microsoft 文件"
+title: GROUPING_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  這是計算群組層級的函數。 GROUPING_ID 只能用於 SELECT\<選取 > 清單，或當指定 GROUP BY 時，ORDER BY 子句。  
+  這是計算群組層級的函數。 當指定 GROUP BY 時，GROUPING_ID 只能在 SELECT \<select> 清單、HAVING 或 ORDER BY 子句中使用。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +47,17 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- \<column_expression >  
- 是*column_expression*中[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)子句。  
+ \<column_expression>  
+ 為 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句中的 *column_expression*。  
   
 ## <a name="return-type"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
- GROUPING_ID \<column_expression > 必須完全符合 GROUP BY 清單中的運算式。 例如，如果您分組所依據 DATEPART (yyyy， \<*資料行名稱*>)，使用 GROUPING_ID (DATEPART (yyyy， \<*資料行名稱*>)); 或如果您分組所依據\<*資料行名稱*>，使用 GROUPING_ID (\<*資料行名稱*>)。  
+## <a name="remarks"></a>Remarks  
+ GROUPING_ID \<column_expression> 必須完全符合 GROUP BY 清單中的運算式。 例如，若您要根據 DATEPART (yyyy, \<*column name*>) 分組，請使用 GROUPING_ID (DATEPART (yyyy, \<資料行名稱>))。若您要根據 \<資料行名稱> 分組，請使用 GROUPING_ID (\<資料行名稱>)。  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>比較 GROUPING_ID () 與 GROUPING ()  
- GROUPING_ID (\<column_expression > [ **，**... *n*  ]) 輸入等於 GROUPING (\<column_expression >) 傳回每個資料行做為字串和零的每個輸出資料列中資料行清單。 GROUPING_ID 會將此字串解譯為以 2 為基底的數字，並傳回對等的整數。 如需範例，請考慮下列陳述式： `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表顯示 GROUPING_ID () 輸入和輸出值。  
+ GROUPING_ID (\<資料行運算式> [ **,**...*n* ]) 針對每一個輸出資料列中資料行清單中的每一個資料行輸入等於 GROUPING (\<column_expression>) 傳回的項目 (當作一和零的字串)。 GROUPING_ID 會將此字串解譯為以 2 為基底的數字，並傳回對等的整數。 例如，假設有以下的陳述式：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表顯示 GROUPING_ID () 輸入和輸出值。  
   
 |彙總資料行|GROUPING_ID (a, b, c) 輸入 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () 輸出|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -70,14 +70,14 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`abc`|`111`|`7`|  
   
 ## <a name="technical-definition-of-groupingid-"></a>GROUPING_ID () 的技術定義  
- 每一個 GROUPING_ID 引數都必須是 GROUP BY 清單中的元素。 GROUPING_ID （） 傳回**整數**可能會引發其最低的 N 位元的點陣圖。 引發**元**指出對應的引數不是給定的輸出資料列群組資料行。 最低順序**元**對應到引數 N 和 N-1<sup>第</sup>最低順序**元**對應到引數 1。  
+ 每一個 GROUPING_ID 引數都必須是 GROUP BY 清單中的元素。 GROUPING_ID () 會傳回**整數**點陣圖，可能會引發其最低的 N 位元。 引發的**位元**表示對應的引數不是指定輸出資料列的群組資料行。 最低順位的**位元**會對應到引數 N；而第 N-1 個<sup></sup>最低順位的**位元**會對應到引數 1。  
   
 ## <a name="groupingid--equivalents"></a>GROUPING_ID () 對等項目  
- 單一群組查詢時，針對群組 (\<column_expression >) 會等於 GROUPING_ID (\<column_expression >)，並傳回 0。  
+ 如果是單一群組查詢，GROUPING (\<column_expression>) 會等於 GROUPING_ID (\<column_expression>) 並傳回 0。  
   
  例如，下列陳述式是相等的：  
   
- 答： 陳述式  
+ 陳述式 A：  
   
 ```  
 SELECT GROUPING_ID(A,B)  
@@ -85,7 +85,7 @@ FROM T
 GROUP BY CUBE(A,B)   
 ```  
   
- 陳述式 b:  
+ 陳述式 B：  
   
 ```  
 SELECT 3 FROM T GROUP BY ()  
@@ -145,17 +145,17 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  以下是未篩選的結果集。  
   
-|名稱|Title|Grouping Level|Employee Count|名稱|  
+|[屬性]|Title|Grouping Level|Employee Count|[屬性]|  
 |----------|-----------|--------------------|--------------------|----------|  
 |Document Control|Control Specialist|0|2|Document Control|  
 |Document Control|Document Control Assistant|0|2|Document Control|  
-|Document Control|Document Control Manager|0|1|Document Control|  
-|Document Control|NULL|1|5|Document Control|  
-|Facilities and Maintenance|Facilities Administrative Assistant|0|1|Facilities and Maintenance|  
-|Facilities and Maintenance|Facilities Manager|0|1|Facilities and Maintenance|  
+|Document Control|Document Control Manager|0|@shouldalert|Document Control|  
+|Document Control|NULL|@shouldalert|5|Document Control|  
+|Facilities and Maintenance|Facilities Administrative Assistant|0|@shouldalert|Facilities and Maintenance|  
+|Facilities and Maintenance|Facilities Manager|0|@shouldalert|Facilities and Maintenance|  
 |Facilities and Maintenance|Janitor|0|4|Facilities and Maintenance|  
-|Facilities and Maintenance|Maintenance Supervisor|0|1|Facilities and Maintenance|  
-|Facilities and Maintenance|NULL|1|7|Facilities and Maintenance|  
+|Facilities and Maintenance|Maintenance Supervisor|0|@shouldalert|Facilities and Maintenance|  
+|Facilities and Maintenance|NULL|@shouldalert|7|Facilities and Maintenance|  
 |NULL|NULL|3|12|NULL|  
   
 #### <a name="complex-example"></a>複雜範例  
@@ -245,7 +245,7 @@ ORDER BY
 ### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. 搭配 ROLLUP 和 CUBE 使用 GROUPING_ID () 來識別群組層級  
  下列範例的程式碼會示範如何使用 `GROUPING()` 來計算 `Bit Vector(base-2)` 資料行。 `GROUPING_ID()` 是用來計算對應的 `Integer Equivalent` 資料行。 `GROUPING_ID()` 函數中的資料行順序與 `GROUPING()` 函數串連之資料行的資料行順序相反。  
   
- 在這些範例中，`GROUPING_ID()` 是用來針對 `Grouping Level` 資料行中的每一個資料列各建立一個值，以識別群組的層級。 群組層級不一定連續開頭為 1 （0、 1、 2、...的整數清單*n*).  
+ 在這些範例中，`GROUPING_ID()` 是用來針對 `Grouping Level` 資料行中的每一個資料列各建立一個值，以識別群組的層級。 群組層級不一定是以 1 (0, 1, 2,...*n*) 開頭之整數的連續清單。  
   
 > [!NOTE]  
 >  GROUPING 和 GROUPING_ID 可用於 HAVING 子句來篩選結果集。  
@@ -313,18 +313,18 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
 |Year|Month|Day|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|1|1|1497452.6066|000|0|Year Month Day|  
-|2007|1|2|21772.3494|000|0|Year Month Day|  
-|2007|2|1|2705653.5913|000|0|Year Month Day|  
+|2007|@shouldalert|@shouldalert|1497452.6066|000|0|Year Month Day|  
+|2007|@shouldalert|2|21772.3494|000|0|Year Month Day|  
+|2007|2|@shouldalert|2705653.5913|000|0|Year Month Day|  
 |2007|2|2|21684.4068|000|0|Year Month Day|  
-|2008|1|1|1908122.0967|000|0|Year Month Day|  
-|2008|1|2|46458.0691|000|0|Year Month Day|  
-|2008|2|1|3108771.9729|000|0|Year Month Day|  
+|2008|@shouldalert|@shouldalert|1908122.0967|000|0|Year Month Day|  
+|2008|@shouldalert|2|46458.0691|000|0|Year Month Day|  
+|2008|2|@shouldalert|3108771.9729|000|0|Year Month Day|  
 |2008|2|2|54598.5488|000|0|Year Month Day|  
-|2007|1|NULL|1519224.956|100|1|Year Month|  
-|2007|2|NULL|2727337.9981|100|1|Year Month|  
-|2008|1|NULL|1954580.1658|100|1|Year Month|  
-|2008|2|NULL|3163370.5217|100|1|Year Month|  
+|2007|@shouldalert|NULL|1519224.956|100|@shouldalert|Year Month|  
+|2007|2|NULL|2727337.9981|100|@shouldalert|Year Month|  
+|2008|@shouldalert|NULL|1954580.1658|100|@shouldalert|Year Month|  
+|2008|2|NULL|3163370.5217|100|@shouldalert|Year Month|  
 |2007|NULL|NULL|4246562.9541|110|3|Year|  
 |2008|NULL|NULL|5117950.6875|110|3|Year|  
 |NULL|NULL|NULL|9364513.6416|111|7|總計|  
@@ -394,36 +394,36 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
   
 |Year|Month|Day|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|1|1|1497452.6066|000|0|Year Month Day|  
-|2007|1|2|21772.3494|000|0|Year Month Day|  
-|2007|2|1|2705653.5913|000|0|Year Month Day|  
+|2007|@shouldalert|@shouldalert|1497452.6066|000|0|Year Month Day|  
+|2007|@shouldalert|2|21772.3494|000|0|Year Month Day|  
+|2007|2|@shouldalert|2705653.5913|000|0|Year Month Day|  
 |2007|2|2|21684.4068|000|0|Year Month Day|  
-|2008|1|1|1908122.0967|000|0|Year Month Day|  
-|2008|1|2|46458.0691|000|0|Year Month Day|  
-|2008|2|1|3108771.9729|000|0|Year Month Day|  
+|2008|@shouldalert|@shouldalert|1908122.0967|000|0|Year Month Day|  
+|2008|@shouldalert|2|46458.0691|000|0|Year Month Day|  
+|2008|2|@shouldalert|3108771.9729|000|0|Year Month Day|  
 |2008|2|2|54598.5488|000|0|Year Month Day|  
-|2007|1|NULL|1519224.956|100|1|Year Month|  
-|2007|2|NULL|2727337.9981|100|1|Year Month|  
-|2008|1|NULL|1954580.1658|100|1|Year Month|  
-|2008|2|NULL|3163370.5217|100|1|Year Month|  
-|2007|NULL|1|4203106.1979|010|2|Year Day|  
+|2007|@shouldalert|NULL|1519224.956|100|@shouldalert|Year Month|  
+|2007|2|NULL|2727337.9981|100|@shouldalert|Year Month|  
+|2008|@shouldalert|NULL|1954580.1658|100|@shouldalert|Year Month|  
+|2008|2|NULL|3163370.5217|100|@shouldalert|Year Month|  
+|2007|NULL|@shouldalert|4203106.1979|010|2|Year Day|  
 |2007|NULL|2|43456.7562|010|2|Year Day|  
-|2008|NULL|1|5016894.0696|010|2|Year Day|  
+|2008|NULL|@shouldalert|5016894.0696|010|2|Year Day|  
 |2008|NULL|2|101056.6179|010|2|Year Day|  
 |2007|NULL|NULL|4246562.9541|110|3|Year|  
 |2008|NULL|NULL|5117950.6875|110|3|Year|  
-|NULL|1|1|3405574.7033|001|4|Month Day|  
-|NULL|1|2|68230.4185|001|4|Month Day|  
-|NULL|2|1|5814425.5642|001|4|Month Day|  
+|NULL|@shouldalert|@shouldalert|3405574.7033|001|4|Month Day|  
+|NULL|@shouldalert|2|68230.4185|001|4|Month Day|  
+|NULL|2|@shouldalert|5814425.5642|001|4|Month Day|  
 |NULL|2|2|76282.9556|001|4|Month Day|  
-|NULL|1|NULL|3473805.1218|101|5|Month|  
+|NULL|@shouldalert|NULL|3473805.1218|101|5|Month|  
 |NULL|2|NULL|5890708.5198|101|5|Month|  
-|NULL|NULL|1|9220000.2675|011|6|Day|  
+|NULL|NULL|@shouldalert|9220000.2675|011|6|Day|  
 |NULL|NULL|2|144513.3741|011|6|Day|  
 |NULL|NULL|NULL|9364513.6416|111|7|總計|  
   
-## <a name="see-also"></a>請參閱＜  
- [群組 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/grouping-transact-sql.md)   
- [GROUP BY &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [&#40;Transact SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   
+ [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

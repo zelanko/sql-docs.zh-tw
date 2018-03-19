@@ -1,5 +1,5 @@
 ---
-title: "SET NUMERIC_ROUNDABORT (TRANSACT-SQL) |Microsoft 文件"
+title: SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當 SET NUMERIC_ROUNDABORT 是 ON 時，若在運算式中失去精確度，就會產生一則錯誤。 當它是 OFF 時，失去精確度並不會產生錯誤訊息，結果會捨入到用來儲存結果的資料行或變數的精確度。  
   
  當嘗試在精確度較低的資料行或變數中儲存固定精確度的值時，會失去精確度。  
@@ -65,9 +65,9 @@ SET NUMERIC_ROUNDABORT { ON | OFF }
 
  SET NUMERIC_ROUNDABORT 的設定是在執行階段進行設定，而不是在剖析階段進行設定。
 
- 當您建立或變更計算資料行索引或索引檢視時，SET NUMERIC_ROUNDABORT 也必須是 OFF。 如果 SET NUMERIC_ROUNDABORT 是 ON，CREATE、 UPDATE、 INSERT 和 DELETE 陳述式的資料表上使用計算資料行或索引檢視表上的索引將會失敗。 計算資料行上使用索引檢視表和索引的必要 SET 選項設定的相關資訊，請參閱"考量當您使用 SET 陳述式 」，在[SET 陳述式 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md).
+ 當您建立或變更計算資料行索引或索引檢視時，SET NUMERIC_ROUNDABORT 也必須是 OFF。 如果 SET NUMERIC_ROUNDABORT 是 ON，含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式會失敗。 如需使用索引檢視表和計算資料行索引時所需之 SET 選項設定的詳細資訊，請參閱 [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) 中的＜使用 SET 陳述式時的考量＞一節。
   
- 若要檢視這項設定的目前設定，請執行下列查詢：
+ 若要檢視此設定的目前設定，請執行下列查詢：
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  
@@ -146,9 +146,9 @@ SELECT @result;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   

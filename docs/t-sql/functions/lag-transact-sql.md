@@ -1,5 +1,5 @@
 ---
-title: "LAG (TRANSACT-SQL) |Microsoft 文件"
+title: LAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  從相同的結果集而不使用自我聯結啟動與前一個資料列存取資料[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 LAG 會提供對於目前資料列之前給定實體位移之資料列的存取。 在 SELECT 陳述式中使用這個分析函數，比較目前資料列中的值與前一個資料列中的值。  
+  不使用從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始的自我聯結，而從相同結果集的前一個資料列存取資料。 LAG 會提供對於目前資料列之前給定實體位移之資料列的存取。 在 SELECT 陳述式中使用這個分析函數，比較目前資料列中的值與前一個資料列中的值。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,19 +48,19 @@ LAG (scalar_expression [,offset] [,default])
   
 ## <a name="arguments"></a>引數  
  *scalar_expression*  
- 根據指定的位移傳回數值。 它是傳回單一 (純量) 值的任一類型運算式。 *scalar_expression*不能是分析函數。  
+ 根據指定的位移傳回數值。 它是傳回單一 (純量) 值的任一類型運算式。 *scalar_expression* 不能是分析函數。  
   
- *位移*  
- 從取得數值的目前資料列傳回資料列的數目。 若未加以指定，預設為 1。 *位移*可以是資料行、 子查詢或另一個運算式評估為正整數或可以隱含地轉換為**bigint**。 *位移*不能是負值或分析函數。  
+ *offset*  
+ 從取得數值的目前資料列傳回資料列的數目。 若未加以指定，預設為 1。 *offset* 可以是資料行、子查詢或其他運算式，能算出正整數或可以明確地轉換為 **bigint**。 *offset* 不能是負值或分析函數。  
   
- *預設值*  
- 當傳回值*scalar_expression*在*位移*是 NULL。 如果未指定預設值，會傳回 NULL。 *預設*可以是資料行、 子查詢或其他運算式，但不是能是分析函數。 *預設*必須是相容的型別與*scalar_expression*。  
+ *default*  
+ 當 *scalar_expression* 在 *offset* 時，傳回的值為 NULL。 如果未指定預設值，會傳回 NULL。 *default* 可以是資料行、子查詢或其他運算式，但不能是分析函數。 *default* 的類型必須與 *scalar_expression* 相容。  
   
- 透過**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*將分割成資料分割要套用函式的 FROM 子句所產生的結果集。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause*套用函數之前，決定資料的順序。 如果*partition_by_clause*指定時，它會判斷資料分割中資料的順序。 *Order_by_clause*需要。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 在套用函數之前，*order_by_clause* 可指定資料順序。 如果指定 *partition_by_clause*，它會決定分割區中的資料次序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
- 指定的資料型別*scalar_expression*。 如果傳回 NULL *scalar_expression*可為 null 或*預設*設為 NULL。  
+ 已指定的 *scalar_expression*的資料類型。 如果 *scalar_expression* 可以為 Null 或 *default* 設為 NULL，則會傳回 NULL。  
   
 ## <a name="general-remarks"></a>一般備註  
  LAG 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
@@ -145,10 +145,10 @@ b           c           i
 1           5           NULL  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D： 比較季之間的值  
- 下列範例會示範 LAG 函式。 查詢會使用 LAG 函數傳回特定員工於前一個日曆季的銷售配額差異。 請注意，由於第一列沒有可用的 lag 值，所以會傳回預設值零 (0)。  
+### <a name="d-compare-values-between-quarters"></a>D：比較各季之間的值  
+ 下列範例示範 LAG 函數。 此查詢使用 LAG 函數傳回特定員工於前幾個日曆季之間的銷售配額差異。 請注意，由於第一列沒有可用的 lag 值，所以會傳回預設值零 (0)。  
   
 ```sql   
 -- Uses AdventureWorks  
@@ -174,8 +174,8 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 2002 4       154000.0000   7000.0000   84000.0000
 ```  
   
-## <a name="see-also"></a>請參閱  
- [負責人 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "@@DBTS (TRANSACT-SQL) |Microsoft 文件"
+title: '@@DBTS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>傳回型別
 **varbinary**
   
-## <a name="remarks"></a>備註  
-@@DBTS傳回目前資料庫的上次使用時間戳記值。 當您插入或更新含有 **timestamp** 資料行的資料列時，就會產生新的時間戳記值。
+## <a name="remarks"></a>Remarks  
+@@DBTS 會傳回前次使用的目前資料庫時間戳記值。 當您插入或更新含有 **timestamp** 資料行的資料列時，就會產生新的時間戳記值。
   
-@@DBTS函式不會受到交易隔離等級中的變更。
+@@DBTS 函式不會受到交易隔離等級中的變更影響。
   
 ## <a name="examples"></a>範例  
-下列範例會傳回目前**時間戳記**從[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫。
+下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫目前的 **timestamp**。
   
 ```sql
 USE AdventureWorks2012;  
@@ -63,9 +63,9 @@ SELECT @@DBTS;
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[組態函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
-[資料指標並行 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+[組態函式 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[資料指標並行 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40;TRANSACT-SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   

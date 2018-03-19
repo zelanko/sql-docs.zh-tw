@@ -1,5 +1,5 @@
 ---
-title: "GetLevel (Database Engine) |Microsoft 文件"
+title: "GetLevel (資料庫引擎) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getlevel-database-engine"></a>GetLevel (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回一個整數，表示節點的深度*這*在樹狀目錄中。
+傳回代表樹狀結構中 *this* 節點深度的整數。
   
 ## <a name="syntax"></a>語法  
   
@@ -49,19 +49,19 @@ SqlInt16 GetLevel ( )
 ```  
   
 ## <a name="return-types"></a>傳回類型  
-**SQL Server 傳回類型： smallint**
+**SQL Server 傳回型別：smallint**
   
-**CLR 傳回類型： SqlInt16**
+**CLR 傳回型別：SqlInt16**
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 用來判斷一或多個節點的層級，或是將節點篩選至指定之層級的成員。 此階層的根節點為層級 0。
   
-GetLevel 是廣度優先搜尋索引非常有用。 如需詳細資訊，請參閱[階層式資料 &#40;SQL Server &#41;](../../relational-databases/hierarchical-data-sql-server.md).
+GetLevel 對於廣度優先的搜尋索引非常有用。 如需詳細資訊，請參閱[階層式資料 &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)。
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. 以資料行形式傳回階層層級  
-下列範例會傳回的文字表示法**hierarchyid**，然後在階層層級和**EmpLevel**資料表中的所有資料列的資料行：
+下列範例會傳回 **hierarchyid** 的文字表示法，並針對所有資料表中的資料列將階層層級以 **EmpLevel** 資料行傳回：
   
 ```sql
 SELECT OrgNode.ToString() AS Text_OrgNode,   
@@ -90,7 +90,7 @@ WHERE OrgNode.GetLevel() = 0;
 ```  
   
 ### <a name="d-clr-example"></a>D. CLR 範例  
-下列程式碼片段會呼叫 getlevel （） 方法：
+下列程式碼片段會呼叫 GetLevel() 方法：
   
 ```sql
 this.GetLevel()  

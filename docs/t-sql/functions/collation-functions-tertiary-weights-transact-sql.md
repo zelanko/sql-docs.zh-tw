@@ -1,5 +1,5 @@
 ---
-title: "TERTIARY_WEIGHTS (TRANSACT-SQL) |Microsoft 文件"
+title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>定序函式-TERTIARY_WEIGHTS (TRANSACT-SQL)
+# <a name="collation-functions---tertiaryweights-transact-sql"></a>定序函式 - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 傳回 SQL 第 3 定序所定義的非 Unicode 字串運算式中，每個字元之加權的二進位字串。
@@ -48,13 +48,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>引數  
 *non_Unicode_character_string_expression*  
-是一個字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)型別的**char**， **varchar**，或**varchar （max)**定義第 3 SQL 定序。 如需這些定序的清單，請參閱「備註」一節。
+為第三 SQL 定序上定義之 **char**、**varchar** 或 **varchar(max)** 類型的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如需這些定序的清單，請參閱「備註」一節。
   
 ## <a name="return-types"></a>傳回型別
-TERTIARY_WEIGHTS 會傳回**varbinary**時*non_Unicode_character_string_expression*是**char**或**varchar**，並傳回**varbinary （max)**時*non_Unicode_character_string_expression*是**varchar （max)**。
+TERTIARY_WEIGHTS 會在 *non_Unicode_character_string_expression* 為 **char** 或 **varchar** 時傳回 **varbinary**，並在 *non_Unicode_character_string_expression* 為 **varchar(max)** 時傳回 **varbinary(max)**。
   
-## <a name="remarks"></a>備註  
-TERTIARY_WEIGHTS 會傳回 NULL 時*non_Unicode_character_string_expression* SQL 第 3 定序未定義。 下表顯示 SQL 第 3 定序。
+## <a name="remarks"></a>Remarks  
+當 *non_Unicode_character_string_expression* 不是用 SQL 第三定序來定義時，TERTIARY_WEIGHTS 會傳回 NULL。 下表顯示 SQL 第 3 定序。
   
 |排序順序識別碼|SQL 定序|  
 |---|---|
@@ -91,7 +91,7 @@ TERTIARY_WEIGHTS 會傳回 NULL 時*non_Unicode_character_string_expression* SQL
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-Tertiary_weights 定義的值的計算資料行定義中使用**char**， **varchar**，或**varchar （max)**資料行。 在這兩個計算資料行上定義索引和**char**， **varchar**，或**varchar （max)**資料行可以改善效能時**char**， **varchar**，或**varchar （max)**查詢的 ORDER BY 子句中指定資料行。
+TERTIARY_WEIGHTS 是用來定義 **char**、**varchar** 或 **varchar(max)** 資料行之值所定義的計算資料行。 當在查詢的 ORDER BY 子句中指定 **char**、**varchar** 或 **varchar(max)** 資料行時，定義計算資料行和 **char**、**varchar** 或 **varchar(max)** 資料行的索引，可以改善效能。
   
 ## <a name="examples"></a>範例  
 下列範例會在資料表中，建立一個將 `TERTIARY_WEIGHTS` 函數套用在 `char` 資料行之值的計算資料行。
@@ -104,6 +104,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[ORDER BY 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+[ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

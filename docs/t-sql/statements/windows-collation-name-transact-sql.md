@@ -1,5 +1,5 @@
 ---
-title: "Windows 定序名稱 (TRANSACT-SQL) |Microsoft 文件"
+title: "Windows 定序名稱 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -66,24 +66,24 @@ CollationDesignator_<ComparisonStyle>
 -   Turkish：使用字碼頁 1254。  
   
  *CaseSensitivity*  
- **CI**指定區分大小寫， **CS**指定區分大小寫。  
+ **CI** 指定不區分大小寫，**CS** 指定區分大小寫。  
   
  *AccentSensitivity*  
- **AI**指定不區分腔調字， **AS**指定區分腔調字。  
+ **AI** 指定不區分腔調字，**AS** 指定區分腔調字。  
   
  *KanatypeSensitive*  
- **省略**指定不區分假名， **KS**指定假名。  
+ **Omitted** 指定不區分假名，**KS** 指定區分假名。  
   
  *WidthSensitivity*  
- **省略**指定半形， **WS**指定區分全半形。  
+ **Omitted** 指定不區分全半形，**WS** 指定區分全半形。  
   
- **分類收納**  
+ **BIN**  
  指定要用的回溯相容性二進位排序次序。  
   
  **BIN2**  
  指定使用字碼指標比較語意的二進位排序順序。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  視定序的版本不同，某些字碼指標可能未定義。 例如比較：  
   
 ```  
@@ -226,16 +226,16 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
   
  <sup>1</sup>僅限 Unicode 的 Windows 定序只能套用至資料行層級或運算式層級的資料。 它們無法當做伺服器或資料庫定序使用。  
   
- <sup>2</sup>中文 （台灣） 定序，例如中文 （澳門） 使用簡體中文的規則，則為與不同的是中文 （台灣），它會使用字碼頁 950。  
+ <sup>2</sup>中文 (澳門) 與中文 (台灣) 定序相同之處在於兩者都使用簡體中文的規則；中文 (澳門) 與中文 (台灣) 不同之處則在於前者使用字碼頁 950。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [常數 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
+ [常數 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [資料表 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
   
   

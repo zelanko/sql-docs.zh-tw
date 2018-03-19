@@ -1,5 +1,5 @@
 ---
-title: "PWDCOMPARE (TRANSACT-SQL) |Microsoft 文件"
+title: PWDCOMPARE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>引數  
  **'** *clear_text_password* **'**  
- 這是未加密的密碼。 *clear_text_password*是**sysname** (**nvarchar （128)**)。  
+ 這是未加密的密碼。 *clear_text_password* is **sysname** (**nvarchar(128)**)。  
   
  *password_hash*  
- 這是密碼的加密雜湊。 *password_hash*是**varbinary(128)**。  
+ 這是密碼的加密雜湊。 *password_hash* 為 **varbinary(128)**。  
   
- *版本*  
- 過時參數可設為 1，否則*password_hash*代表的登入值早於[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]於已經移轉到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更新版本，但從未轉換為[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]系統。 *版本*是**int**。  
+ *version*  
+ 如果 *password_hash* 代表的登入值早於已經移轉到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本，但從未轉換為 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系統的 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，則是可以設定為 1 的已淘汰參數。 *version* 為 **int**。  
   
 > [!CAUTION]  
 >  提供這個參數是為了回溯相容性，因為密碼雜湊 BLOB 現在包含自己的版本說明，所以會忽略它。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
@@ -65,12 +65,12 @@ PWDCOMPARE ( 'clear_text_password'
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
- 如果傳回 1 的雜湊*clear_text_password*符合*password_hash*參數，且如果不為 0。  
+ 若 *clear_text_password* 的雜湊符合 *password_hash* 參數，則傳回 1；否則傳回 0。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  PWDCOMPARE 函數並不會對密碼雜湊強度造成威脅，因為可以使用當做第一個參數提供的密碼嘗試登入來執行相同的測試。  
   
- **PWDCOMPARE**不能與自主的資料庫使用者的密碼。 沒有任何自主資料庫對等項目。  
+ **PWDCOMPARE** 無法與自主資料庫使用者的密碼搭配使用。 沒有任何自主資料庫對等項目。  
   
 ## <a name="permissions"></a>Permissions  
  PWDENCRYPT 可以公開使用。  
@@ -95,8 +95,8 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [PWDENCRYPT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [PWDENCRYPT &#40;Transact-SQL&#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

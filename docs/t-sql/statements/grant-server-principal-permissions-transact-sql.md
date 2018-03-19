@@ -1,5 +1,5 @@
 ---
-title: "GRANT 伺服器主體權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "GRANT 伺服器主體權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,16 +63,16 @@ GRANT permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以授與的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 登入**::** *SQL_Server_login*  
- 指定要授與其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 是必要。  
+ LOGIN **::** *SQL_Server_login*  
+ 指定要授與其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 為必要項目。  
   
- 伺服器角色**::** *server_role*  
- 指定授與其權限之使用者定義伺服器角色。 範圍限定詞 (**::**) 是必要。  
+ SERVER ROLE **::** *server_role*  
+ 指定授與其權限之使用者定義伺服器角色。 範圍限定詞 (**::**) 為必要項目。  
   
- 若要\<server_principal > 指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]授權的登入或伺服器角色。  
+ TO \<server_principal> 指定要對其授與權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或伺服器角色。  
   
  *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。  
@@ -95,10 +95,10 @@ GRANT permission [ ,...n ] }
  AS *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，執行這項查詢的主體會從這項登入衍生其權限來授與權限。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  只有在目前資料庫是 master 的情況下，才能夠授與伺服器範圍的權限。  
   
- 伺服器權限的資訊會顯示在[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目錄檢視。 伺服器主體的相關資訊會顯示在[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目錄檢視。  
+ 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到有關伺服器權限的資訊。 您可以在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和伺服器角色是伺服器層級安全性實體。 下表所列的是可以授與之最特定和最有限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或伺服器角色權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
@@ -117,7 +117,7 @@ GRANT permission [ ,...n ] }
 ## <a name="examples"></a>範例  
   
 ### <a name="a-granting-impersonate-permission-on-a-login"></a>A. 授與登入的 IMPERSONATE 權限  
- 下列範例會授與`IMPERSONATE`權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入`WanidaBenshoof`至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立的 Windows 使用者的登入`AdvWorks\YoonM`。  
+ 下列範例會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `WanidaBenshoof` 的 `IMPERSONATE` 權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，而該項登入是透過 Windows 使用者 `AdvWorks\YoonM` 所建立。  
   
 ```  
 USE master;  
@@ -144,7 +144,7 @@ GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

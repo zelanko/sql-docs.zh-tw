@@ -1,5 +1,5 @@
 ---
-title: "GRANT 端點權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "GRANT 端點權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以授與的端點權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 端點上**::***endpoint_name*  
- 指定要授與其權限的端點。 範圍限定詞 (**::**) 是必要。  
+ ON ENDPOINT **::***endpoint_name*  
+ 指定要授與其權限的端點。 範圍限定詞 (**::**) 是必要的。  
   
- 若要\<server_principal >  
+ TO \<server_principal>  
  指定要授與其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，執行這項查詢的主體會從這項登入衍生其權限來授與權限。  
   
-## <a name="remarks"></a>備註  
- 只有在目前的資料庫時，才可授與伺服器範圍的權限**主要**。  
+## <a name="remarks"></a>Remarks  
+ 只有在目前資料庫是 **master** 的情況下，才能夠授與伺服器範圍的權限。  
   
- 端點的相關資訊會顯示在[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)目錄檢視。 伺服器權限的資訊會顯示在[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目錄檢視，以及有關伺服器主體的資訊會顯示在[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目錄檢視。  
+ 您可以在 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 目錄檢視中，看到有關端點的資訊。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到有關伺服器權限的資訊，並可以在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
   
  端點是伺服器層級的安全性實體。 下表所列的是可以授與之最特定且最有限的端點權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
@@ -121,12 +121,12 @@ GRANT TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [DENY 端點權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
- [REVOKE 端點權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [DENY 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [REVOKE 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [端點目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [sys.endpoints &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

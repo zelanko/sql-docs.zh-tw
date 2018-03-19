@@ -1,5 +1,5 @@
 ---
-title: "卸除全文檢索停用字詞表 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -54,14 +54,14 @@ DROP FULLTEXT STOPLIST stoplist_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *s*  
+ *stoplist_name*  
  這是資料庫中全文檢索停用字詞表的名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果有任何全文檢索索引參考所卸除的全文檢索停用字詞表，DROP FULLTEXT STOPLIST 就會失敗。  
   
 ## <a name="permissions"></a>Permissions  
- 若要卸除停用字詞表，則需要具有卸除或權限停用字詞表中的成員資格**db_owner**或**db_ddladmin**固定資料庫角色。  
+ 若要卸除停用字詞表，則需要具有此停用字詞表的 DROP 權限或是 **db_owner** 或 **db_ddladmin** 固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會卸除名為 `myStoplist` 的全文檢索停用字詞表。  
@@ -70,10 +70,10 @@ DROP FULLTEXT STOPLIST stoplist_name
 DROP FULLTEXT STOPLIST myStoplist;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [ALTER FULLTEXT STOPLIST &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [建立全文檢索停用字詞表 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [sys.fulltext_stoplists &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
   
   

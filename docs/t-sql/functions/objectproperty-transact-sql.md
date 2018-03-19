@@ -1,5 +1,5 @@
 ---
-title: "OBJECTPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: OBJECTPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回目前資料庫中結構描述範圍物件的相關資訊。 如需結構描述範圍物件的清單，請參閱[sys.objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). 不是以結構描述為範圍的物件，如資料定義語言 (DDL) 觸發程序和事件通知，無法使用這項功能。  
+  傳回目前資料庫中結構描述範圍物件的相關資訊。 如需結構描述範圍物件的清單，請參閱 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。 不是以結構描述為範圍的物件，如資料定義語言 (DDL) 觸發程序和事件通知，無法使用這項功能。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,13 @@ OBJECTPROPERTY ( id , property )
   
 ## <a name="arguments"></a>引數  
  *id*  
- 這是代表目前資料庫中之物件識別碼的運算式。 *識別碼*是**int** ，假設是目前資料庫內容中的結構描述範圍物件。  
+ 這是代表目前資料庫中之物件識別碼的運算式。 *id* 是 **int**，假設為目前資料庫內容中的結構描述範圍物件。  
   
- *屬性*  
- 是運算式，表示為所指定的物件傳回的資訊*識別碼*。*屬性*可以是下列值之一。  
+ *property*  
+ 這個運算式代表 *id* 指定的物件要傳回的資訊。*property* 可以是下列值之一。  
   
 > [!NOTE]  
->  除非有說明，否則為 NULL 時，會傳回*屬性*不是有效的屬性名稱，*識別碼*不是有效的物件識別碼、*識別碼*是指定不支援的物件類型*屬性*，或呼叫端沒有檢視物件的中繼資料的權限。  
+>  除非另有說明，否則，當 *property* 不是有效屬性的名稱、*id* 不是有效的物件識別碼、*id* 對於指定的 *property* 是不支援的物件類型，或呼叫者無權檢視物件中繼資料時，便會傳回 NULL。  
   
 |屬性名稱|物件類型|描述和傳回的值|  
 |-------------------|-----------------|-------------------------------------|  
@@ -84,7 +84,7 @@ OBJECTPROPERTY ( id , property )
 |ExecIsTriggerDisabled|觸發程序|停用的觸發程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsTriggerNotForRepl|觸發程序|定義為 NOT FOR REPLICATION 的觸發程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsUpdateTrigger|觸發程序|UPDATE 觸發程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)] 程序|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 此為原生編譯的程序。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料型別： **int**|  
+|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)] 程序|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 此為原生編譯的程序。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |HasAfterTrigger|資料表、檢視表|資料表或檢視表有 AFTER 觸發程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasDeleteTrigger|資料表、檢視表|資料表或檢視表有 DELETE 觸發程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasInsertTrigger|資料表、檢視表|資料表或檢視表有 INSERT 觸發程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -96,7 +96,7 @@ OBJECTPROPERTY ( id , property )
 |IsDefault|任何結構描述範圍物件|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 繫結預設值。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDefaultCnst|任何結構描述範圍物件|DEFAULT 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDeterministic|函數、檢視表|函數或檢視表的決定性屬性。<br /><br /> 1 = 具有決定性<br /><br /> 0 = 不具決定性|  
-|IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)] 函數、[!INCLUDE[tsql](../../includes/tsql-md.md)] 程序、資料表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序、檢視表|指出此模組陳述式的原始文字已轉換為混亂格式。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，無法直接從任何目錄檢視中看見混亂格式的輸出。 對系統資料表或資料庫檔案沒有存取權的使用者，將無法擷取模糊化的文字。 不過，可以透過存取系統資料表的使用者可以使用文字是[DAC 通訊埠](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)或直接存取資料庫檔案。 另外，可將偵錯工具附加至伺服器處理序的使用者，可以在執行階段從記憶體擷取原始程序。<br /><br /> 1 = 已加密<br /><br /> 0 = 未加密<br /><br /> 基底資料型別： **int**|  
+|IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)] 函數、[!INCLUDE[tsql](../../includes/tsql-md.md)] 程序、資料表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序、檢視表|指出此模組陳述式的原始文字已轉換為混亂格式。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，無法直接從任何目錄檢視中看見混亂格式的輸出。 對系統資料表或資料庫檔案沒有存取權的使用者，將無法擷取模糊化的文字。 不過，可以透過 [DAC 通訊埠](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)存取系統資料表，或直接存取資料庫檔案的使用者，則可使用該文字。 另外，可將偵錯工具附加至伺服器處理序的使用者，可以在執行階段從記憶體擷取原始程序。<br /><br /> 1 = 已加密<br /><br /> 0 = 未加密<br /><br /> 基底資料類型：**int**|  
 |IsExecuted|任何結構描述範圍物件|可以執行物件 (檢視、程序、函數或觸發程序)。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsExtendedProc|任何結構描述範圍物件|擴充程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsForeignKey|任何結構描述範圍物件|FOREIGN KEY 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -119,15 +119,15 @@ OBJECTPROPERTY ( id , property )
 |IsUniqueCnst|任何結構描述範圍物件|UNIQUE 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table|使用者自訂資料表。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|檢視|檢視表。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|任何結構描述範圍物件|物件的擁有者。<br /><br /> **注意：**結構描述擁有者不一定是物件擁有者。 例如，子物件 (這些 where *parent_object_id*為非 null) 一律會傳回相同的擁有者識別碼，做為父系。<br /><br /> 非 Null = 物件擁有者的資料庫使用者識別碼。|  
-|TableDeleteTrigger|Table|資料表有 DELETE 觸發程序。<br /><br /> > 1 = 含指定之類型的第一個觸發程序識別碼。|  
+|OwnerId|任何結構描述範圍物件|物件的擁有者。<br /><br /> **注意：**結構描述擁有者不一定是物件擁有者。 例如，子物件 (其 *parent_object_id* 非 Null) 一律會傳回與父系相同的擁有者識別碼。<br /><br /> 非 Null = 物件擁有者的資料庫使用者識別碼。|  
+|TableDeleteTrigger|Table|資料表有 DELETE 觸發程序。<br /><br /> >1 = 屬於指定類型的第一個觸發程序識別碼。|  
 |TableDeleteTriggerCount|Table|資料表有指定數目的 DELETE 觸發程序。<br /><br /> >0 = DELETE 觸發程序的數目。|  
-|TableFullTextMergeStatus|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表是否可擁有目前正在合併全文檢索索引。<br /><br /> 0 = 資料表沒有全文檢索索引，或是全文檢索索引並未合併。<br /><br /> 1 = 全文檢索索引正在合併。|  
+|TableFullTextMergeStatus|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表是否具有目前正在合併的全文檢索索引。<br /><br /> 0 = 資料表沒有全文檢索索引，或是全文檢索索引並未合併。<br /><br /> 1 = 全文檢索索引正在合併。|  
 |TableFullTextBackgroundUpdateIndexOn|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表啟用全文檢索背景更新索引 (自動變更追蹤)。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表的全文檢索索引資料所在的全文檢索目錄識別碼。<br /><br /> 非零 = 全文檢索目錄識別碼，關聯於用來識別全文檢索索引資料表中的資料列之唯一索引。<br /><br /> 0 = 資料表沒有全文檢索索引。|  
 |TableFulltextChangeTrackingOn|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表啟用全文檢索變更追蹤。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 全文檢索索引啟動之後所處理的資料列數。 在建立全文檢索搜尋索引的資料表中，單一資料列的所有資料行都會被視為單一文件的一部分來建立索引。<br /><br /> 0 = 沒有使用中的搜耙，或全文檢索索引已完成。<br /><br /> > 0 = 下列其中之一 （A 或 B）： A) 所處理文件數目插入或更新作業開始之後的完整、 累加或手動變更追蹤母體擴展。 B） 處理插入或更新作業已啟用變更追蹤並背景更新索引母體擴展、 全文檢索索引結構描述已變更、 重建全文檢索目錄或執行個體的資料列的數目[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新啟動，依此類推。<br /><br /> NULL = 資料表沒有全文檢索索引。<br /><br /> 這個屬性不會監視或計算已刪除的資料列。|  
-|TableFulltextFailCount|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 全文檢索搜尋未建立索引的資料列數。<br /><br /> 0 = 母體擴展已完成。<br /><br /> > 0 = 下列其中之一 （A 或 B）： A) 的啟動完整、 累加或手動更新變更追蹤擴展之後尚未建立索引的文件數目。 B） 針對變更追蹤搭配背景更新索引，尚未建立索引的母體擴展，開始或母體的重新啟動之後的資料列數目。 這可能是結構描述變更、重建目錄、伺服器重新啟動等所造成的。<br /><br /> NULL = 資料表沒有全文檢索索引。|  
+|TableFulltextDocsProcessed|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 全文檢索索引啟動之後所處理的資料列數。 在建立全文檢索搜尋索引的資料表中，單一資料列的所有資料行都會被視為單一文件的一部分來建立索引。<br /><br /> 0 = 沒有使用中的搜耙，或全文檢索索引已完成。<br /><br /> > 0 = 下列其中之一 (A 或 B)：A) 在啟動完整、累加或手動變更追蹤母體擴展之後，插入或更新作業所處理的文件數目。 B) 啟用含背景更新索引母體擴展的變更追蹤、變更全文檢索索引結構描述、重建全文檢索目錄，或重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體等作業之後，插入或更新作業所處理的資料列數。<br /><br /> NULL = 資料表沒有全文檢索索引。<br /><br /> 這個屬性不會監視或計算已刪除的資料列。|  
+|TableFulltextFailCount|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 全文檢索搜尋未建立索引的資料列數。<br /><br /> 0 = 母體擴展已完成。<br /><br /> > 0 = 下列其中之一 (A 或 B)：A) 啟動完整、累加或手動更新變更追蹤母體擴展之後，尚未建立索引的文件數目。 B) 對於背景更新索引的變更追蹤，在開始母體擴展或重新開始母體擴展之後，尚未建立索引的資料列數。 這可能是結構描述變更、重建目錄、伺服器重新啟動等所造成的。<br /><br /> NULL = 資料表沒有全文檢索索引。|  
 |TableFulltextItemCount|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 已順利建立全文檢索索引的資料列數。|  
 |TableFulltextKeyColumn|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 參與全文檢索索引定義之單一資料行唯一索引的相關資料行識別碼。<br /><br /> 0 = 資料表沒有全文檢索索引。|  
 |TableFulltextPendingChanges|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 要處理的暫止變更追蹤項目數。<br /><br /> 0 = 未啟用變更追蹤。<br /><br /> NULL = 資料表沒有全文檢索索引。|  
@@ -144,23 +144,23 @@ OBJECTPROPERTY ( id , property )
 |TableHasInsertTrigger|Table|物件有 INSERT 觸發程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasNonclustIndex|Table|資料表有非叢集索引。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasPrimaryKey|Table|資料表有主索引鍵。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasRowGuidCol|Table|資料表具有的 ROWGUIDCOL **uniqueidentifier**資料行。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasTextImage|Table|資料表有**文字**， **ntext**，或**映像**資料行。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasTimestamp|Table|資料表有**時間戳記**資料行。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasRowGuidCol|Table|資料表有 **uniqueidentifier** 資料行的 ROWGUIDCOL。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasTextImage|Table|資料表有 **text**、**ntext** 或 **image** 資料行。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasTimestamp|Table|資料表有 **timestamp** 資料行。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasUniqueCnst|Table|資料表有 UNIQUE 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasUpdateTrigger|Table|物件有 UPDATE 觸發程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasVarDecimalStorageFormat|Table|資料表已啟用**vardecimal**儲存格式。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableInsertTrigger|Table|資料表有 INSERT 觸發程序。<br /><br /> > 1 = 含指定之類型的第一個觸發程序識別碼。|  
+|TableHasVarDecimalStorageFormat|Table|資料表可使用 **vardecimal** 儲存格式。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableInsertTrigger|Table|資料表有 INSERT 觸發程序。<br /><br /> >1 = 屬於指定類型的第一個觸發程序識別碼。|  
 |TableInsertTriggerCount|Table|資料表有指定數目的 INSERT 觸發程序。<br /><br /> >0 = INSERT 觸發程序的數目。|  
 |TableIsFake|Table|資料表不是真正的資料表。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在內部視需要而將它具體化。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsLockedOnBulkLoad|Table|因為鎖定資料表**bcp**或 BULK INSERT 作業。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsMemoryOptimized|Table|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表是記憶體最佳化的<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料型別： **int**<br /><br /> 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。|  
+|TableIsLockedOnBulkLoad|Table|資料表因 **bcp** 或 BULK INSERT 作業而鎖定。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableIsMemoryOptimized|Table|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表是記憶體最佳化的<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**<br /><br /> 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。|  
 |TableIsPinned|Table|資料表固定保留在資料快取中。<br /><br /> 0 = False<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本中不支援這項功能。|  
 |TableTextInRowLimit|Table|text in row 所允許的最大位元組數目。<br /><br /> 如果未設定 text in row 選項，便是 0。|  
 |TableUpdateTrigger|Table|資料表有 UPDATE 觸發程序。<br /><br /> >1 = 含指定類型的第一個觸發程序的識別碼。|  
 |TableUpdateTriggerCount|Table|資料表有指定數目的 UPDATE 觸發程序。<br /><br /> >0 = UPDATE 觸發程序的數目。|  
 |TableHasColumnSet|Table|資料表有資料行集。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 如需詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。|  
-|TableTemporalType|Table|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定資料表類型。<br /><br /> 0 = 非時態表<br /><br /> 1 = 系統建立版本資料表的歷程記錄資料表<br /><br /> 2 = 系統版本設定時態表|  
+|TableTemporalType|Table|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定資料表的類型。<br /><br /> 0 = 非時態表<br /><br /> 1 = 系統版本設定資料表的記錄資料表<br /><br /> 2 = 系統版本設定的時態表|  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
@@ -170,8 +170,8 @@ OBJECTPROPERTY ( id , property )
   
  使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，OBJECTPROPERTY) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>備註  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]假設*object_id*目前資料庫內容中。 參考的查詢*object_id*另一個資料庫中會傳回 NULL 或不正確的結果。 比方說，下列查詢在目前資料庫內容是 master 資料庫。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]會嘗試將指定的屬性值*object_id*該資料庫，而不是在查詢中指定的資料庫中。 查詢會傳回不正確的結果，因為檢視`vEmployee`不是在 master 資料庫中。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假設 *object_id* 在目前資料庫內容中。 參考另一資料庫中之 *object_id* 的查詢會傳回 NULL 或不正確的結果。 例如，在下列查詢中，目前資料庫內容是 master 資料庫。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會嘗試傳回該資料庫中指定之 *object_id* 的屬性值，而不是查詢中所指定的資料庫。 查詢會傳回不正確的結果，因為 `vEmployee` 檢視表不在 master 資料庫中。  
   
 ```  
 USE master;  
@@ -180,11 +180,11 @@ SELECT OBJECTPROPERTY(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'),
 GO  
 ```  
   
- OBJECTPROPERTY (*view_id*，'IsIndexable') 可能耗用大量電腦資源，因為評估 IsIndexable 屬性需要剖析檢視定義、 正規化和部分最佳化。 雖然 IsIndexable 屬性會識別能夠建立索引的資料表或檢視表，但如果不符合特定索引鍵需求，實際建立索引的作業仍可能失敗。 如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
+ OBJECTPROPERTY(*view_id*, 'IsIndexable') 可能耗用大量電腦資源，因為評估 IsIndexable 屬性需要剖析檢視定義、正規化和部分最佳化。 雖然 IsIndexable 屬性會識別能夠建立索引的資料表或檢視表，但如果不符合特定索引鍵需求，實際建立索引的作業仍可能失敗。 如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
- OBJECTPROPERTY (*table_id*，'TableHasActiveFulltextIndex') 至少一個資料表資料行加入索引時，會傳回 1 (true) 值。 只要加入第一個用來建立索引的資料行，全文檢索索引作業就會成為使用中，以便擴展。  
+ 當至少加入資料表的一個資料行來建立索引時，OBJECTPROPERTY(*table_id*, 'TableHasActiveFulltextIndex') 會傳回 1 (true) 這個值。 只要加入第一個用來建立索引的資料行，全文檢索索引作業就會成為使用中，以便擴展。  
   
- 當建立資料表時，一律會在資料表的中繼資料中，將 QUOTED IDENTIFIER 選項儲存成 ON，即使建立資料表時將選項設成 OFF，也是如此。 因此，OBJECTPROPERTY (*table_id*，'IsQuotedIdentOn') 一律會傳回值為 1 (true)。  
+ 當建立資料表時，一律會在資料表的中繼資料中，將 QUOTED IDENTIFIER 選項儲存成 ON，即使建立資料表時將選項設成 OFF，也是如此。 因此，OBJECTPROPERTY(*table_id*, 'IsQuotedIdentOn') 一律會傳回 1 (true) 這個值。  
   
 ## <a name="examples"></a>範例  
   
@@ -205,7 +205,7 @@ GO
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. 確認純量值使用者定義函數具決定性  
- 下列範例會測試是否在使用者定義純量值函數`ufnGetProductDealerPrice`，它會傳回**money**值，是具決定性。  
+ 下列範例會測試使用者定義的純量值函式 `ufnGetProductDealerPrice` (會傳回 **money** 值) 是否具確定性。  
   
 ```  
 USE AdventureWorks2012;  
@@ -221,8 +221,8 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C： 尋找屬於特定結構描述的資料表  
- 下列範例會傳回所有資料表中的 dbo 結構描述。  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C：尋找屬於特定結構描述的資料表  
+ 下列範例會傳回 dbo 結構描述中的所有資料表。  
   
 ```  
 -- Uses AdventureWorks  
@@ -234,9 +234,9 @@ ORDER BY type_desc, name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>確認物件資料表的 d:  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D：驗證物件是資料表  
  下列範例會測試 `dbo.DimReseller` 是否為 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料庫中的資料表。  
   
 ```  
@@ -249,13 +249,13 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [COLUMNPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [OBJECTPROPERTYEX &#40;TRANSACT-SQL &#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [TYPEPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
- [sys.objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [中繼資料函數 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

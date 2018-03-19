@@ -1,5 +1,5 @@
 ---
-title: "KEY_GUID (TRANSACT-SQL) |Microsoft 文件"
+title: KEY_GUID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ Key_GUID( 'Key_Name' )
 ## <a name="return-types"></a>傳回類型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果識別值是在建立金鑰時指定，則其 GUID 為該識別值的 MD5 雜湊。 如果未指定任何識別值，伺服器便會產生 GUID。  
   
  如果金鑰是一個暫時金鑰，則金鑰名稱必須以數字符號 (#) 開頭。  
@@ -69,9 +69,9 @@ Key_GUID( 'Key_Name' )
 SELECT Key_GUID('ABerglundKey1');  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [sys.symmetric_keys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [sys.key_encryptions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
   
   

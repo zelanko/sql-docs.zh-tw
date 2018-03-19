@@ -1,5 +1,5 @@
 ---
-title: "差異 (TRANSACT-SQL) |Microsoft 文件"
+title: DIFFERENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ DIFFERENCE ( character_expression , character_expression )
   
 ## <a name="arguments"></a>引數  
  *character_expression*  
- 必須是英數字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)字元資料。 *character_expression*可以是常數、 變數或資料行。  
+ 這是字元資料的英數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  傳回的整數是相同 SOUNDEX 值中的字元數。 傳回值的範圍是 0 到 4：0 表示相似度弱或沒有相似度，4 表示相似性強或值相同。  
   
  DIFFERENCE 和 SOUNDEX 會區分定序。  
   
 ## <a name="examples"></a>範例  
- 在下列範例的第一部份中，比較兩個非常相似的字串之 `SOUNDEX` 值。 Latin1_General 定序`DIFFERENCE`傳回值的`4`。 在下列範例中，第二部份`SOUNDEX`值用於比較兩個非常不同的字串時，和 Latin1_General 定序`DIFFERENCE`傳回值的`0`。  
+ 在下列範例的第一部份中，比較兩個非常相似的字串之 `SOUNDEX` 值。 針對 Latin1_General 定序，`DIFFERENCE` 會傳回 `4` 的值。 在下列範例的第二部分中，會比較兩個非常不同的字串之 `SOUNDEX` 值。針對 Latin1_General 定序，`DIFFERENCE` 會傳回 `0` 的值。  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
@@ -84,9 +84,9 @@ B432  G650  0
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [SOUNDEX &#40;TRANSACT-SQL &#41;](../../t-sql/functions/soundex-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)   
+ [字串函式 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

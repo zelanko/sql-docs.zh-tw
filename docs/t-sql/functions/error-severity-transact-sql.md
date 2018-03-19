@@ -1,5 +1,5 @@
 ---
-title: "ERROR_SEVERITY (TRANSACT-SQL) |Microsoft 文件"
+title: ERROR_SEVERITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_SEVERITY ( )
   
  如果是在 CATCH 區塊範圍之外呼叫，便傳回 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  可以在 CATCH 區塊範圍內的任何位置呼叫 ERROR_SEVERITY。  
   
- ERROR_SEVERITY 不論它執行多少次，也不論是在 CATCH 區塊範圍內的任何位置執行，都會傳回錯誤嚴重性。 這是相較於函式，例如 @@ERROR，這只會傳回錯誤號碼在陳述式之後，立即會造成錯誤，或在 CATCH 區塊的第一個陳述式中。  
+ ERROR_SEVERITY 不論它執行多少次，也不論是在 CATCH 區塊範圍內的任何位置執行，都會傳回錯誤嚴重性。 這有別於 @@ERROR 之類的函式，因為其只會在緊接於發生錯誤的陳述式之後的陳述式中，或在 CATCH 區塊的第一個陳述式中傳回錯誤號碼。  
   
  在巢狀 CATCH 區塊中，ERROR_SEVERITY 會傳回參考它的 CATCH 區塊範圍特定的錯誤嚴重性。 例如，外部 TRY...CATCH 建構的 CATCH 區塊可能會有巢狀的 TRY...CATCH 建構。 在巢狀 CATCH 區塊內，ERROR_SEVERITY 會從叫用巢狀 CATCH 區塊的錯誤傳回嚴重性。 如果 ERROR_SEVERITY 是在外部 CATCH 區塊中執行，它會從叫用 CATCH 區塊的錯誤傳回嚴重性。  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_SEVERITY  
  下列範例顯示將會產生除以零之錯誤的 `SELECT` 陳述式。 錯誤的相關訊息會隨同嚴重性而一起傳回。  
@@ -123,14 +123,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_STATE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

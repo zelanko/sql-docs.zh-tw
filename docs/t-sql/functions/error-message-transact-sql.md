@@ -1,5 +1,5 @@
 ---
-title: "ERROR_MESSAGE (TRANSACT-SQL) |Microsoft 文件"
+title: ERROR_MESSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_MESSAGE ( )
   
  如果是在 CATCH 區塊範圍之外呼叫，便傳回 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  可以在 CATCH 區塊範圍內的任何位置呼叫 ERROR_MESSAGE。  
   
- 不論執行多少次，也不論是在 CATCH 區塊範圍內的任何位置執行，ERROR_MESSAGE 都會傳回錯誤訊息。 這是相較於函式，例如 @@ERROR、 在陳述式之後，立即會造成錯誤，只傳回錯誤號碼或第一個陳述式的 CATCH 區塊。  
+ 不論執行多少次，也不論是在 CATCH 區塊範圍內的任何位置執行，ERROR_MESSAGE 都會傳回錯誤訊息。 這有別於 @@ERROR 之類的函式，因為其只會在緊接於發生錯誤的陳述式之後的陳述式中，或在 CATCH 區塊的第一個陳述式中傳回錯誤訊息。  
   
  在巢狀 CATCH 區塊中，ERROR_MESSAGE 會傳回參考它的 CATCH 區塊範圍特定的錯誤訊息。 例如，外部 TRY...CATCH 建構的 CATCH 區塊可能會有巢狀的 TRY...CATCH 建構。 在巢狀 CATCH 區塊內，ERROR_MESSAGE 會從叫用巢狀 CATCH 區塊的錯誤傳回訊息。 如果 ERROR_MESSAGE 是在外部 CATCH 區塊中執行，它會從叫用 CATCH 區塊的錯誤傳回訊息。  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>C. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_MESSAGE  
  下列程式碼範例會顯示產生除以零之錯誤的 `SELECT` 陳述式。 錯誤的相關訊息會隨同錯誤訊息而一起傳回。  

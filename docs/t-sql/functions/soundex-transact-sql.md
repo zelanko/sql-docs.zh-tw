@@ -1,5 +1,5 @@
 ---
-title: "SOUNDEX (TRANSACT-SQL) |Microsoft 文件"
+title: SOUNDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ SOUNDEX ( character_expression )
   
 ## <a name="arguments"></a>引數  
  *character_expression*  
- 必須是英數字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)字元資料。 *character_expression*可以是常數、 變數或資料行。  
+ 為字元資料的英數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。  
   
 ## <a name="return-types"></a>傳回類型  
  **varchar**  
   
-## <a name="remarks"></a>備註  
- SOUNDEX 會根據字串發音，將英數字串轉換為四個字元的代碼。 程式碼的第一個字元是第一個字元*character_expression*，轉換為大寫。 代碼的第二到第四個字元是數字，代表運算式中的字母。 字母 A、E、I、O、U、H、W 和 Y 除非是字串的第一個字母，否則會忽略它們。 如果需要產生四個字元的代碼，則在尾端加入零。 如需有關 SOUNDEX 代碼的詳細資訊，請參閱[Soundex 索引系統](https://www.archives.gov/research/census/soundex.html)。  
+## <a name="remarks"></a>Remarks  
+ SOUNDEX 會根據字串發音，將英數字串轉換為四個字元的代碼。 代碼的第一個字元是 *character_expression* 的第一個字元，轉換成大寫。 代碼的第二到第四個字元是數字，代表運算式中的字母。 字母 A、E、I、O、U、H、W 和 Y 除非是字串的第一個字母，否則會忽略它們。 如果需要產生四個字元的代碼，則在尾端加入零。 如需 SOUNDEX 代碼的詳細資訊，請參閱 [Soundex 索引系統](https://www.archives.gov/research/census/soundex.html)。  
   
  不同字串的 SOUNDEX 代碼可以相比較，來查看字串發音相似度。 DIFFERENCE 函數會在兩個字串上執行 SOUNDEX，並傳回整數，表示這些字串的 SOUNDEX 代碼相似度。  
   
@@ -81,7 +81,7 @@ SOUNDEX ( character_expression )
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]適用於 Latin1_General 定序。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 針對 Latin1_General 定序有效。  
   
 ```  
   
@@ -99,7 +99,7 @@ SELECT DIFFERENCE('Smithers', 'Smythers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]適用於 Latin1_General 定序。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 針對 Latin1_General 定序有效。  
   
 ```  
 -----------   
@@ -115,7 +115,7 @@ SELECT DIFFERENCE('Anothers', 'Brothers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]適用於 Latin1_General 定序。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 針對 Latin1_General 定序有效。  
   
 ```  
 -----------   
@@ -124,9 +124,9 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [差異 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/difference-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [DIFFERENCE &#40;Transact-SQL&#41;](../../t-sql/functions/difference-transact-sql.md)   
+ [字串函式 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

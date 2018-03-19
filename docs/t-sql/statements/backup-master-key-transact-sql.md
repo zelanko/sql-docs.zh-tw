@@ -1,5 +1,5 @@
 ---
-title: "BACKUP MASTER KEY (TRANSACT-SQL) |Microsoft 文件"
+title: BACKUP MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>引數  
- 檔案 ='*path_to_file*'  
+ FILE ='*path_to_file*'  
  指定要作為主要金鑰匯出目的地之檔案的完整路徑，包括檔案名稱。 這可能是本機路徑或是通往網路位置的 UNC 路徑。  
   
- 密碼 ='*密碼*'  
+ PASSWORD ='*password*'  
  這是用來加密檔案中之主要金鑰的密碼。 這個密碼必須遵守複雜性檢查。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  主要金鑰必須開啟，因此，將它備份之前必須先將它解密。 如果是利用服務主要金鑰來加密主要金鑰，則不必明確開啟主要金鑰。 不過，如果只利用密碼加密主要金鑰，則必須明確開啟主要金鑰。  
   
  我們建議您在建立主要金鑰後立即將它備份，然後將該備份儲存在安全的離站位置。  
@@ -79,13 +79,13 @@ BACKUP MASTER KEY TO FILE = 'c:\temp\exportedmasterkey'
 GO   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [開啟主要金鑰 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [CLOSE MASTER KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [還原 MASTER KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
  [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [DROP MASTER KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

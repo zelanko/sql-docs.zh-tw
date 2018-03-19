@@ -1,5 +1,5 @@
 ---
-title: "@@NESTLEVEL (TRANSACT-SQL) |Microsoft 文件"
+title: '@@NESTLEVEL (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40; NESTLEVEL (TRANSACT-SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回本機伺服器中執行目前預存程序的巢狀層級 (最初是 0)。  
@@ -49,14 +49,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  每次預存程序呼叫另一個預存程序時，或參考 Common Language Runtime (CLR) 常式、類型或彙總來執行 Managed 程式碼時，巢狀層級都會遞增。 當到達最大值 32 時，交易便告終止。  
   
- 當 @@NESTLEVEL 內執行時[!INCLUDE[tsql](../../includes/tsql-md.md)]字串，則傳回值 1 + 目前的巢狀層級。 當 @@NESTLEVEL 執行動態使用 sp_executesql 傳回的值是 2 + 目前的巢狀層級。  
+ 當在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 字串內執行 @@NESTLEVEL 時，傳回的值為 1 + 目前的巢狀層級。 當使用 sp_executesql 來動態執行 @@NESTLEVEL 時，傳回的值是 2 + 目前的巢狀層級。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. 使用 @@NESTLEVEL 程序中  
+### <a name="a-using-nestlevel-in-a-procedure"></a>A. 在程序中使用 @@NESTLEVEL  
  下列範例會建立兩個程序：一個程序呼叫另一個程序，一個程序顯示各程序的 `@@NESTLEVEL` 設定。  
   
 ```  
@@ -92,7 +92,7 @@ Inner Level
 ```  
   
 ### <a name="b-calling-nestlevel"></a>B. 呼叫 @@NESTLEVEL  
- 下列範例顯示傳回值的差異`SELECT`， `EXEC`，和`sp_executesql`當每個呼叫`@@NESTLEVEL`。  
+ 下列範例會示範當呼叫 `@@NESTLEVEL` 時，`SELECT`、`EXEC` 及 `sp_executesql` 傳回值的差異。  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  
@@ -126,7 +126,7 @@ TwoGreater
 (1 row(s) affected)
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [組態函式 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [建立預存程序](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

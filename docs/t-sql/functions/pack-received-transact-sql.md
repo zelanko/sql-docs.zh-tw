@@ -1,5 +1,5 @@
 ---
-title: "@@PACK_RECEIVED (TRANSACT-SQL) |Microsoft 文件"
+title: '@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40packreceived-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (TRANSACT-SQL)
+# <a name="x40x40packreceived-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在上次啟動之後，從網路讀取的輸入封包數目。  
@@ -49,8 +49,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>傳回類型  
  **integer**  
   
-## <a name="remarks"></a>備註  
- 若要顯示報表，包含多項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]統計資料，包括封包傳送和接收執行**sp_monitor**。  
+## <a name="remarks"></a>Remarks  
+ 若要顯示包含多項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計資料的報表，其中包括傳送和接收的封包數，請執行 **sp_monitor**。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示 `@@PACK_RECEIVED` 的用法。  
@@ -67,9 +67,9 @@ Packets Received
 128  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
  [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [系統統計函數](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [系統統計函式](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

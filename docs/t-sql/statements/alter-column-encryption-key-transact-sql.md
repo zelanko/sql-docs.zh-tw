@@ -1,5 +1,5 @@
 ---
-title: "ALTER COLUMN ENCRYPTION KEY (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  改變資料行加密金鑰在資料庫中，加入或卸除加密的值。 CEK 可以有兩個值可以針對對應的資料行主要金鑰輪替。 當 CEK 加密使用的資料行時，會使用[永遠加密 &#40; Database engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能。 然後再加入 CEK 值，您必須定義用來加密所使用的值資料行主要金鑰[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)陳述式。  
+  改變資料庫中資料行的加密金鑰，新增或卸除加密的值。 CEK 最多可以使用兩個值來進行對應資料行主要金鑰的輪替。 當使用 [Always Encrypted &#40;資料庫引擎&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 功能加密資料行時，便會使用 CEK。 在新增 CEK 值之前，您必須使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 來定義用來加密值的資料行主要金鑰。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,32 +54,32 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 ## <a name="arguments"></a>引數  
  *key_name*  
- 您要變更資料行加密金鑰。  
+ 要變更的資料行加密金鑰。  
   
  *column_master_key_name*  
- 指定用來加密資料行加密金鑰 (CEK) 的資料行主要金鑰 (CMK) 的名稱。  
+ 指定要用來加密資料行加密金鑰 (CEK) 的資料行主要金鑰 (CMK) 名稱。  
   
  *algorithm_name*  
- 用來加密值的加密演算法的名稱。 系統提供者的演算法必須是**RSA_OAEP**。 當卸除資料行加密金鑰值，這個引數無效。  
+ 用來加密值之加密演算法的名稱。 系統提供者的演算法必須是 **RSA_OAEP**。 在卸除資料行加密金鑰值時，此引數無效。  
   
  *varbinary_literal*  
- 與指定的主要加密金鑰加密 CEK BLOB。 執行個體時提供 SQL Server 登入。 當卸除資料行加密金鑰值，這個引數無效。  
+ 使用指定主要加密金鑰加密的 CEK BLOB。 執行個體時提供 SQL Server 登入。 在卸除資料行加密金鑰值時，此引數無效。  
   
 > [!WARNING]  
->  絕對不要將傳遞純文字 CEK 值在這個陳述式。 這樣將會包含這項功能的好處。  
+>  絕對不要在此陳述式中傳遞純文字的 CEK 值。 這麼做會影響此功能的優點。  
   
-## <a name="remarks"></a>備註  
- 一般來說，資料行加密金鑰會建立一個加密值。 當資料行主要金鑰必須要旋轉 （目前資料行主要金鑰必須換成新的資料行主要金鑰），您可以加入新的資料行加密金鑰值以新的資料行主要金鑰加密。 這可讓您確保用戶端應用程式可以存取新的資料行主要金鑰可使用用戶端應用程式時，資料行加密金鑰加密的資料。 啟用 永遠加密驅動程式沒有存取新的主要金鑰，將無法使用舊的資料行主要金鑰的加密資料行的加密金鑰值來存取敏感性資料的用戶端應用程式中。 加密演算法，永遠加密的支援，需要有 256 位元的純文字值。 應該使用金鑰存放區提供者所封裝的保存資料行主要金鑰的金鑰存放區產生的加密的值。  
+## <a name="remarks"></a>Remarks  
+ 一般來說，資料行加密金鑰建立時只會使用一個加密值。 當資料行主要金鑰必須輪替 (目前資料行主要金鑰必須更換成新的資料行主要金鑰) 時，您可以新增資料行加密金鑰值，並以新的資料行主要金鑰加密。 這可讓您確保用戶端應用程式可以存取由資料行加密金鑰加密的資料，同時新的資料行主要金鑰亦可供用戶端應用程式使用。 如果用戶端應用程式中的驅動程式已啟用 Always Encrypted，但沒有新的主要金鑰存取權，其可使用以舊資料行主要金鑰加密的資料行加密金鑰值來存取敏感性資料。 Always Encrypted 支援的加密演算法需要使用 256 位元純文字值。 您應該使用金鑰存放區提供者來產生加密的值；金鑰存放區提供者可封裝保存資料行主要金鑰的金鑰存放區。  
   
- 使用[sys.columns &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)， [sys.column_encryption_keys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)和[sys.column_encryption_key_values &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)來檢視資料行加密金鑰的相關資訊。  
+ 使用 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 來檢視資料行加密金鑰的相關資訊。  
   
 ## <a name="permissions"></a>Permissions  
- 需要**ALTER ANY COLUMN ENCRYPTION KEY**資料庫的權限。  
+ 需要資料庫的 **ALTER ANY COLUMN ENCRYPTION KEY** 權限。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-adding-a-column-encryption-key-value"></a>A. 加入資料行加密金鑰值  
- 下列範例會改變稱為資料行加密金鑰`MyCEK`。  
+### <a name="a-adding-a-column-encryption-key-value"></a>A. 新增資料行加密金鑰值  
+ 下列範例會改變稱為 `MyCEK` 的資料行加密金鑰。  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="b-dropping-a-column-encryption-key-value"></a>B. 卸除資料行加密金鑰值  
- 下列範例會改變稱為資料行加密金鑰`MyCEK`卸除的值。  
+ 下列範例會藉由卸除值來改變稱為 `MyCEK` 的資料行加密金鑰。  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -105,9 +105,9 @@ DROP VALUE
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [卸除資料行加密金鑰 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [永遠加密 &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   

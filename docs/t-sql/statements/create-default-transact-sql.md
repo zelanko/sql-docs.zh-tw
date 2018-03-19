@@ -1,5 +1,5 @@
 ---
-title: "建立預設 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -58,21 +58,21 @@ AS constant_expression [ ; ]
  這是預設值所屬的結構描述名稱。  
   
  *default_name*  
- 這是預設值的名稱。 預設名稱必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 您可以選擇性地指定預設擁有者名稱。  
+ 這是預設值的名稱。 預設名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 您可以選擇性地指定預設擁有者名稱。  
   
  *constant_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，只包含常數值 （不得包含任何資料行或其他資料庫物件的名稱）。 除了包含別名資料類型者之外，任何常數、內建函數或數學運算式都可以使用。 不能使用使用者自訂函數。 以單引號括住字元和日期常數 (**'**); 貨幣、 整數和浮點數常數不需要引號。 二進位資料的前面必須是 0x，貨幣資料的前面必須是錢幣符號 ($)。 預設值必須相容於資料行資料類型。  
+ 這是一個只包含常數值的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (其中不能有任何資料行或其他資料庫物件的名稱)。 除了包含別名資料類型者之外，任何常數、內建函數或數學運算式都可以使用。 不能使用使用者自訂函數。 請用單引號 (**'**) 括住字元和日期常數；貨幣、整數和浮點數常數不需要引號。 二進位資料的前面必須是 0x，貨幣資料的前面必須是錢幣符號 ($)。 預設值必須相容於資料行資料類型。  
   
-## <a name="remarks"></a>備註  
- 預設名稱只能建立在目前資料庫中。 在資料庫內，必須藉由結構描述，使預設名稱成為唯一。 建立預設值時，使用**sp_bindefault**繫結至資料行或別名資料類型。  
+## <a name="remarks"></a>Remarks  
+ 預設名稱只能建立在目前資料庫中。 在資料庫內，必須藉由結構描述，使預設名稱成為唯一。 當建立預設值時，請使用 **sp_bindefault**，將它繫結到資料行或別名資料類型。  
   
- 如果預設值與所繫結的資料行不相容，當嘗試插入預設值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生一則錯誤訊息。 例如，n/A 不能做為預設**數值**資料行。  
+ 如果預設值與所繫結的資料行不相容，當嘗試插入預設值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生一則錯誤訊息。 例如，N/A 不能用來作為 **numeric** 資料行的預設值。  
   
  如果預設值對它所繫結的資料行而言太長，就會截斷這個值。  
   
  CREATE DEFAULT 陳述式無法在單一批次中，與其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結合起來。  
   
- 預設值必須先卸除，再建立新的相同的名稱，和必須繫結預設值，藉由執行**sp_unbindefault**之前卸除它。  
+ 您必須先卸除預設值，才能建立同名的新預設值，在卸除預設值之前，您必須先執行 **sp_unbindefault** 來解除預設值的繫結。  
   
  如果資料行有預設值和相關聯的規則，預設值便不能違反規則。 永遠不會插入與規則衝突的預設值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次嘗試插入預設值時，都會產生一則錯誤訊息。  
   
@@ -89,7 +89,7 @@ AS constant_expression [ ; ]
 |**NULL**|NULL|預設|NULL|NULL|  
 |**NOT NULL**|錯誤|預設|error|error|  
   
- 若要重新命名預設值，請使用**sp_rename**。 預設值的報表，請使用**sp_help**。  
+ 若要重新命名預設值，請使用 **sp_rename**。 如需預設值的報表，請使用 **sp_help**。  
   
 ## <a name="permissions"></a>Permissions  
  若要執行 CREATE DEFAULT，使用者至少必須有目前資料庫中的 CREATE DEFAULT 權限，以及正在建立的預設值之結構描述的 ALTER 權限。  
@@ -116,18 +116,18 @@ GO
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [卸除預設值 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [卸除規則 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [sp_bindefault &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

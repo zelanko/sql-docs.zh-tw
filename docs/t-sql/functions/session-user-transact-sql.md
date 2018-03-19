@@ -1,5 +1,5 @@
 ---
-title: "SESSION_USER (TRANSACT-SQL) |Microsoft 文件"
+title: SESSION_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ SESSION_USER
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  請在 CREATE TABLE 或 ALTER TABLE 陳述式中，搭配 DEFAULT 條件約束使用 SESSION_USER，或者將它作為任何標準函數使用。 如果未指定預設值，可將 SESSION_USER 插入資料表中。 這個函數沒有引數。 SESSION_USER 可用於查詢。  
   
  如果 SESSION_USER 是在內容切換後面呼叫，SESSION_USER 便會傳回模擬內容的使用者名稱。  
@@ -143,24 +143,24 @@ Order #   Customer #  When Delivered       Received By
 (5 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C： 利用 SESSION_USER 傳回目前工作階段的使用者名稱  
+### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C：使用 SESSION_USER 傳回目前工作階段的使用者名稱  
  下列範例會傳回目前工作階段的工作階段使用者。  
   
 ```  
 SELECT SESSION_USER;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SYSTEM_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)   
  [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [使用者 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/user-transact-sql.md)   
- [USER_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
+ [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "IDENT_CURRENT (TRANSACT-SQL) |Microsoft 文件"
+title: IDENT_CURRENT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ IDENT_CURRENT( 'table_name' )
   
 ## <a name="arguments"></a>引數  
  *table_name*  
- 這是傳回之識別值所屬的資料表名稱。 *table_name*是**varchar**，沒有預設值。  
+ 這是傳回之識別值所屬的資料表名稱。 *table_name* 為沒有預設值的 **varchar**。  
   
 ## <a name="return-types"></a>傳回類型  
  **numeric(38,0)**  
@@ -60,12 +60,12 @@ IDENT_CURRENT( 'table_name' )
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，IDENT_CURRENT) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>備註  
- IDENT_CURRENT 是類似於[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]識別函數 SCOPE_IDENTITY 和 @@IDENTITY。 三個函數都會傳回最後產生的識別值。 不過，範圍和工作階段所在*最後*所有這些函式中所定義不同：  
+## <a name="remarks"></a>Remarks  
+ IDENT_CURRENT 與 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 識別函式 SCOPE_IDENTITY 和 @@IDENTITY 相似。 三個函數都會傳回最後產生的識別值。 不過，各函式定義 *last* 的範圍和工作階段各不相同：  
   
 -   IDENT_CURRENT 會傳回在任何工作階段和任何範圍中，產生給特定資料表的最後一個識別值。  
   
--   @@IDENTITY傳回產生的任何資料表中目前的工作階段，所有範圍的最後一個識別值。  
+-   @@IDENTITY 會傳回所有範圍的目前工作階段中，任何資料表所產生的最後一個識別值。  
   
 -   SCOPE_IDENTITY 會傳回在目前工作階段以及目前範圍中，任何資料表產生的最後一個識別值。  
   
@@ -87,7 +87,7 @@ SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;
 GO  
 ```  
   
-### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>B. 識別值的比較由 IDENT_CURRENT、@IDENTITY和 SCOPE_IDENTITY  
+### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>B. 比較由 IDENT_CURRENT、@@IDENTITY 和 SCOPE_IDENTITY 傳回的識別值  
  下列範例會顯示 `IDENT_CURRENT`、`@@IDENTITY` 和 `SCOPE_IDENTITY` 傳回的不同識別值。  
   
 ```  
@@ -144,12 +144,12 @@ SELECT IDENT_CURRENT('t7');
 /* Returns the last value inserted into t7.*/  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
- [IDENT_SEED &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [系統函式 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "系統函數 (TRANSACT-SQL) |Microsoft 文件"
+title: "系統函式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |[ERROR_MESSAGE](../../t-sql/functions/error-message-transact-sql.md)|[SESSION_ID](../../t-sql/functions/session-id-transact-sql.md)|  
 |[ERROR_NUMBER](../../t-sql/functions/error-number-transact-sql.md)|[XACT_STATE](../../t-sql/functions/xact-state-transact-sql.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

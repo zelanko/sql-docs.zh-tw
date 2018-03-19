@@ -1,5 +1,5 @@
 ---
-title: "密碼編譯函數 (TRANSACT-SQL) |Microsoft 文件"
+title: "密碼編譯函式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="cryptographic-functions-transact-sql"></a>密碼編譯函式 (TRANSACT-SQL)
+# <a name="cryptographic-functions-transact-sql"></a>密碼編譯函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 下列函數支援加密、解密、數位簽章，以及數位簽章的驗證。
@@ -80,8 +80,8 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|[CERTENCODED &#40;TRANSACT-SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
+|[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
 ## <a name="see-also"></a>另請參閱
 [函數](../../t-sql/functions/functions.md)  

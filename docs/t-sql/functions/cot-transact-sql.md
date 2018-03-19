@@ -1,5 +1,5 @@
 ---
-title: "COT (TRANSACT-SQL) |Microsoft 文件"
+title: COT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回所指定的角度的三角餘切值，以弧度為單位，在指定的數學函數**float**運算式。
+傳回指定 **float** 運算式中指定角度之三角餘切函式 (以弧度為單位) 的數學函式。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,7 +47,7 @@ COT ( float_expression )
   
 ## <a name="arguments"></a>引數  
 *float_expression*  
-是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)型別的**float**或可以隱含地轉換成的型別**float**。
+為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回型別
 **float**
@@ -71,7 +71,7 @@ The COT of the angle is: -0.040312
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

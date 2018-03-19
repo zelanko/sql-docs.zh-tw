@@ -1,5 +1,5 @@
 ---
-title: "@@TRANCOUNT (TRANSACT-SQL) |Microsoft 文件"
+title: '@@TRANCOUNT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (TRANSACT-SQL)
+# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回已經針對目前連接進行的 BEGIN TRANSACTION 陳述式數目。  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>傳回類型  
  **integer**  
   
-## <a name="remarks"></a>備註  
- BEGIN TRANSACTION 陳述式會遞增@TRANCOUNT1。 ROLLBACK TRANSACTION 會遞減 @@TRANCOUNT為 0 時，除了 ROLLBACK TRANSACTION *savepoint_name*，這並不會影響@TRANCOUNT。 COMMIT TRANSACTION 或 COMMIT WORK 遞減@TRANCOUNT1。  
+## <a name="remarks"></a>Remarks  
+ BEGIN TRANSACTION 陳述式會遞增 @@TRANCOUNT，遞增量為 1。 ROLLBACK TRANSACTION 會將 @@TRANCOUNT 遞減到 0，不過 ROLLBACK TRANSACTION *savepoint_name* 除外，它不會影響 @@TRANCOUNT。 COMMIT TRANSACTION 或 COMMIT WORK 會遞減 @@TRANCOUNT，遞減量為 1。  
   
 ## <a name="examples"></a>範例  
   
@@ -101,10 +101,10 @@ PRINT @@TRANCOUNT
 --0  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [系統函式 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

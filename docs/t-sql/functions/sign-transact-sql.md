@@ -1,5 +1,5 @@
 ---
-title: "符號 (TRANSACT-SQL) |Microsoft 文件"
+title: SIGN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ SIGN ( numeric_expression )
 
 ## <a name="arguments"></a>引數  
  *numeric_expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)精確數值或相近數值資料類型類別目錄，除了**元**資料型別。  
+ 為精確數值或近似數值資料類型類別目錄的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **bit** 資料類型除外。  
   
 ## <a name="return-types"></a>傳回類型  
   
@@ -62,7 +62,7 @@ SIGN ( numeric_expression )
 |**bigint**|**bigint**|  
 |**int/smallint/tinyint**|**int**|  
 |**money/smallmoney**|**money**|  
-|**十進位數字 /**|**十進位數字 /**|  
+|**numeric/decimal**|**numeric/decimal**|  
 |**其他類型**|**float**|  
   
 ## <a name="examples"></a>範例  
@@ -103,7 +103,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會傳回三個數字的 SIGN 值。  
   
 ```  
@@ -117,8 +117,8 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
 -1     0      1
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

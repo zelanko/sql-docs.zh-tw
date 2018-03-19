@@ -1,5 +1,5 @@
 ---
-title: "最大值 (TRANSACT-SQL) |Microsoft 文件"
+title: MAX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -55,17 +55,17 @@ MAX ( [ ALL | DISTINCT ] expression )
  指定要考量每個唯一值。 DISTINCT 對 MAX 沒意義，只是為了與 ISO 相容。  
   
  *expression*  
- 這是一個常數、資料行名稱或函數，或算術、位元和字串運算子的任何組合。 MAX 可以搭配**數值**，**字元**， **uniqueidentifier**，和**datetime**資料行，但不是能搭配**位元**資料行。 不允許彙總函式和子查詢。  
+ 這是一個常數、資料行名稱或函數，或算術、位元和字串運算子的任何組合。 MAX 可以搭配 **numeric**、**character**、**uniqueidentifier**，或 **datetime** 資料行使用，但無法搭配 **bit** 資料行使用。 不允許彙總函式和子查詢。  
   
  如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 透過**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*將分割成資料分割要套用函式的 FROM 子句所產生的結果集。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause*決定執行作業的邏輯順序。 *order_by_clause*需要。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* 會將 FROM 子句產生的結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回值，與相同*運算式*。  
+ 傳回與 *expression* 相同的值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  MAX 會忽略任何 Null 值。  
   
  針對字元資料行，MAX 會以定序順序尋找最高的值。  
@@ -94,7 +94,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 下列範例會使用 MIN、 MAX、 AVG 和 COUNT 函數搭配 OVER 子句中各部門提供彙的總值`HumanResources.Department`資料表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫。  
+ 下列範例會將 MIN、MAX、AVG 和 COUNT 函式搭配 OVER 子句一起使用，提供 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `HumanResources.Department` 資料表中各部門的彙總值。  
   
 ```sql  
 SELECT DISTINCT Name  
@@ -136,16 +136,16 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-### <a name="c-using-max-with-character-data"></a>C. 使用字元資料的最大值   
-下列範例會傳回做為最後一個名稱的字母順序排列的資料庫名稱。 此範例會使用`WHERE database_id < 5`、 將系統資料庫。  
+### <a name="c-using-max-with-character-data"></a>C. 搭配字元資料使用 MAX   
+下列範例會傳回根據字母順序排序名稱後，最後一個資料庫的名稱。 此範例使用 `WHERE database_id < 5`，以僅考慮系統資料庫。  
 ```sql   
 SELECT MAX(name) FROM sys.databases WHERE database_id < 5;
 ```
-最後一個系統資料庫是`tempdb`。  
+最後一個系統資料庫為 `tempdb`。  
   
-## <a name="see-also"></a>請參閱＜  
- [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

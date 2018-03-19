@@ -1,5 +1,5 @@
 ---
-title: "DROP ASYMMETRIC KEY (TRANSACT-SQL) |Microsoft 文件"
+title: DROP ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,12 +56,12 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  這是要從資料庫卸除的非對稱金鑰名稱。  
   
  REMOVE PROVIDER KEY  
- 從 EKM 裝置中移除 Extensible Key Management (EKM) 金鑰。 如需可延伸金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 從 EKM 裝置中移除 Extensible Key Management (EKM) 金鑰。 如需可延伸金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
-## <a name="remarks"></a>備註  
- 無法卸除資料庫中的對稱金鑰加密所用的非對稱金鑰，或是使用者或登入所對應的非對稱金鑰。 在您卸除這類金鑰之前，必須先卸除任何對應至該金鑰的使用者或登入。 您同時也必須卸除或變更任何以非對稱金鑰加密的對稱金鑰。 您可以使用 DROP ENCRYPTION 選項[ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md)移除由非對稱金鑰加密。  
+## <a name="remarks"></a>Remarks  
+ 無法卸除資料庫中的對稱金鑰加密所用的非對稱金鑰，或是使用者或登入所對應的非對稱金鑰。 在您卸除這類金鑰之前，必須先卸除任何對應至該金鑰的使用者或登入。 您同時也必須卸除或變更任何以非對稱金鑰加密的對稱金鑰。 您可以使用 [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) 的 DROP ENCRYPTION 選項，來移除非對稱金鑰進行的加密。  
   
- 非對稱金鑰的中繼資料可以使用來存取[sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)目錄檢視。 金鑰本身不能直接從資料庫內部檢視。  
+ 您可以使用 [sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md) 目錄檢視，來存取非對稱金鑰的中繼資料。 金鑰本身不能直接從資料庫內部檢視。  
   
  如果將非對稱金鑰對應到 EKM 裝置上的 Extensible Key Management (EKM) 金鑰，而且並未指定 REMOVE PROVIDER KEY 選項，則此金鑰將會從資料庫中卸除，但不會卸除此裝置。 將會發出警告。  
   
@@ -76,10 +76,10 @@ USE AdventureWorks2012;
 DROP ASYMMETRIC KEY MirandaXAsymKey6;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [ALTER SYMMETRIC KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)  
+ [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)  
   
   

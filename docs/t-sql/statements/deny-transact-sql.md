@@ -1,5 +1,5 @@
 ---
-title: "拒絕 (TRANSACT-SQL) |Microsoft 文件"
+title: DENY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -43,8 +43,8 @@ ms.lasthandoff: 11/21/2017
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  對主體拒絕權限。 防止主體透過其群組或角色成員資格繼承權限。 拒絕優先於所有的權限，不同之處在於拒絕不適用於物件擁有者或 sysadmin 固定的伺服器角色的成員。
-  **安全性注意事項**屬於 sysadmin 固定伺服器角色和物件擁有者無法拒絕權限。 」
+  對主體拒絕權限。 防止主體透過其群組或角色成員資格繼承權限。 DENY 的優先順序高於所有權限，不同之處在於 DENY 不適用至物件擁有者或 sysadmin 固定伺服器角色的成員。
+  **安全性注意事項**：系統無法拒絕 sysadmin 固定伺服器角色和物件擁有者的權限。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -114,30 +114,30 @@ DENY
  PRIVILEGES  
  為符合 ISO 而包含這個項目。 不會變更 ALL 的行為。  
   
- *權限*  
+ *permission*  
  這是權限的名稱。 權限對安全性實體的有效對應描述於下列子主題中。  
   
- *資料行*  
+ *column*  
  指定正在拒絕權限的資料表中資料行的名稱。 它必須用括號 () 括住。  
   
- *類別*  
- 指定正在拒絕權限之安全性實體的類別。 範圍限定詞**::**需要。  
+ *class*  
+ 指定正在拒絕權限之安全性實體的類別。 範圍限定詞 **::** 是必要的。  
   
- *安全性實體*  
+ *securable*  
  指定正在拒絕權限的安全性實體。  
   
- 若要*主體*  
+ TO *principal*  
  這是主體的名稱。 可以被拒絕安全性實體權限的主體，隨著安全性實體而不同。 如需有效的組合，請參閱下列安全性實體特定主題。  
   
  CASCADE  
  表示已對指定主體和對被主體授與權限的所有其他主體拒絕權限。 當主體具有 GRANT OPTION 的權限時，這是必要的。  
   
- AS*主體*  
-  使用 AS 主體子句來表示 主體記錄為權限的 denier 應該執行陳述式的人員以外的主體。 例如，假設使用者 Mary 是 principal_id 12，和使用者阿為主體 15。 Mary 執行`DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`現在 sys.database_permissions 資料表會指出 deny 陳述式的 grantor_prinicpal_id 已 15 （阿），即使使用者 13 (Mary) 實際執行的陳述式。
+ AS *principal*  
+  您可使用 AS principal 子句，來表示記錄為權限拒絕者的主體應為陳述式執行人員以外的主體。 例如，假設使用者 Mary 是 principal_id 12；使用者 Raul 是 principal 15。 Mary 執行 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`。現在，即使實際執行陳述式的是使用者 13 (Mary)，sys.database_permissions 資料表仍會指出 deny 陳述式的 grantor_prinicpal_id 是 15 (Raul)。
   
-使用此陳述式與不表示模擬另一位使用者的能力。  
+在此陳述式中使用 AS 不代表能模擬其他使用者。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  DENY 陳述式的完整語法相當複雜。 上方的語法圖已簡化，以強調其結構。 拒絕特定安全性實體權限的完整語法描述於下列主題中。  
   
  如果針對被授與指定 GRANT OPTION 之權限的主體拒絕權限時，並沒有指定 CASCADE，DENY 便會失敗。  
@@ -163,46 +163,46 @@ DENY
   
 |||  
 |-|-|  
-|應用程式角色|[DENY 資料庫主體權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|組件|[拒絕組件的權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
-|非對稱金鑰|[拒絕非對稱金鑰權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
-|可用性群組|[拒絕可用性群組的權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  
-|憑證|[DENY 憑證權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
-|合約|[DENY Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|資料庫|[DENY 資料庫權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
-|資料庫範圍認證|[拒絕資料庫範圍認證 (TRANSACT-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
-|端點|[DENY 端點權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
-|全文檢索目錄|[拒絕全文檢索權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
-|全文檢索停用字詞表|[拒絕全文檢索權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
-|函數|[DENY 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|登入|[DENY 伺服器主體權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
-|訊息類型|[DENY Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|物件|[DENY 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|佇列|[DENY 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|遠端服務繫結|[DENY Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|角色|[DENY 資料庫主體權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|路由|[DENY Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|結構描述|[拒絕結構描述權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
-|搜尋屬性清單|[拒絕搜尋屬性清單權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
-|Server|[DENY 伺服器權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
-|服務|[DENY Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|預存程序|[DENY 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|對稱金鑰|[拒絕對稱金鑰權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
-|同義字|[DENY 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|系統物件|[拒絕系統物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
-|Table|[DENY 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|類型|[DENY 類型權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
-|使用者|[DENY 資料庫主體權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|檢視|[DENY 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|XML 結構描述集合|[拒絕 XML 結構描述集合權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
+|應用程式角色|[DENY 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|組件|[DENY 組件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
+|非對稱金鑰|[DENY 非對稱金鑰權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
+|可用性群組|[DENY 可用性群組權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  
+|憑證|[DENY 憑證權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
+|合約|[DENY Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|[資料庫]|[DENY 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
+|資料庫範圍認證|[DENY 資料庫範圍認證 (TRANSACT-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
+|端點|[DENY 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
+|全文檢索目錄|[DENY 全文檢索權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
+|全文檢索停用字詞表|[DENY 全文檢索權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
+|函數|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|登入|[DENY 伺服器主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
+|訊息類型|[DENY Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|Object|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|佇列|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|遠端服務繫結|[DENY Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|角色|[DENY 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|路由|[DENY Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|結構描述|[DENY 結構描述權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
+|搜尋屬性清單|[DENY 搜尋屬性清單權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
+|[伺服器]|[DENY 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
+|服務|[DENY Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|預存程序|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|對稱金鑰|[DENY 對稱金鑰權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
+|同義字|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|系統物件|[DENY 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
+|Table|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|類型|[DENY 類型權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
+|使用者|[DENY 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|檢視|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|XML 結構描述集合|[DENY XML 結構描述集合權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   

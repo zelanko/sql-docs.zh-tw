@@ -1,5 +1,5 @@
 ---
-title: "GETUTCDATE (TRANSACT-SQL) |Microsoft 文件"
+title: GETUTCDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/02/2015
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回目前資料庫系統時間戳記，當做**datetime**值。 不包含資料庫時區位移。 這個值代表目前 UTC 時間 (國際標準時間)。 這個值衍生自正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統。  
+  將目前的資料庫系統時間戳記作為 **datetime** 值傳回。 不包含資料庫時區位移。 這個值代表目前 UTC 時間 (國際標準時間)。 這個值衍生自正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統。  
   
 > [!NOTE]  
 >  SYSDATETIME 和 SYSUTCDATETIME 比 GETDATE 和 GETUTCDATE 具有更多小數秒數有效位數。 SYSDATETIMEOFFSET 包含系統時區位移。 SYSDATETIME、SYSUTCDATETIME 和 SYSDATETIMEOFFSET 可指派給任何日期和時間類型的變數。  
   
- 如需所有[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和時間資料型別和函式，請參閱[日期和時間資料型別和函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,8 +69,8 @@ GETUTCDATE()
 ## <a name="return-types"></a>傳回類型  
  **datetime**  
   
-## <a name="remarks"></a>備註  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式可以參考 GETUTCDATE 任何位置，它們可以參考**datetime**運算式。  
+## <a name="remarks"></a>Remarks  
+ 只要是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以參考 **datetime** 運算式的任何位置，它們就可以參考 GETUTCDATE。  
   
  GETUTCDATE 是不具決定性的函數。 在資料行中參考這個函數的檢視表和運算式無法編製索引。  
   
@@ -135,9 +135,9 @@ GETUTCDATE()             01:25:01.6930000
 */  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [TIME ZONE &AMP;#40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

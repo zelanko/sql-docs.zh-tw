@@ -1,5 +1,5 @@
 ---
-title: "SUSER_NAME (TRANSACT-SQL) |Microsoft 文件"
+title: SUSER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,15 +53,15 @@ SUSER_NAME ( [ server_user_id ] )
   
 ## <a name="arguments"></a>引數  
  *server_user_id*  
- 這是使用者的登入識別碼。 *server_user_id*，這就是選擇性的是**int**。*server_user_id*可以是任何登入識別碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 使用者或群組是否有權限連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果*server_user_id*是未指定，會傳回目前使用者的登入識別名稱。 如果參數包含 NULL 一詞，就會傳回 NULL。  
+ 這是使用者的登入識別碼。 *server_user_id* (選擇性) 為 **int**。*server_user_id* 可以是有連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之權限的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組。 若未指定 *server_user_id*，就會傳回目前使用者的登入識別名稱。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
 ## <a name="return-types"></a>傳回類型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中，安全性識別碼 (SID) 取代了伺服器使用者識別碼 (SUID)。  
   
- SUSER_NAME 傳回僅針對具有項目中的登入的登入名稱**syslogins**系統資料表。  
+ SUSER_NAME 只會傳回在 **syslogins** 系統資料表中有項目之登入的登入名稱。  
   
  SUSER_NAME 可用在選取清單、WHERE 子句及任何允許使用運算式的位置中，且後面一律必須接著括號，即使未指定任何參數也是如此。  
   
@@ -72,8 +72,8 @@ SUSER_NAME ( [ server_user_id ] )
 SELECT SUSER_NAME(1);  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [SUSER_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/suser-id-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

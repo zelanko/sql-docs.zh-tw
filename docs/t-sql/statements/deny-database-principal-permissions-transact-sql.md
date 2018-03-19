@@ -1,5 +1,5 @@
 ---
-title: "DENY 資料庫主體權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "DENY 資料庫主體權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -73,24 +73,24 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可拒絕的資料庫主體權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 使用者::*database_user*  
- 指定拒絕其權限之使用者的類別和名稱。 範圍限定詞 (**::**) 是必要。  
+ USER ::*database_user*  
+ 指定拒絕其權限之使用者的類別和名稱。 範圍限定詞 (**::**) 是必要的。  
   
- 角色::*database_role*  
- 指定拒絕其權限之角色的類別和名稱。 範圍限定詞 (**::**) 是必要。  
+ ROLE ::*database_role*  
+ 指定拒絕其權限之角色的類別和名稱。 範圍限定詞 (**::**) 是必要的。  
   
- 應用程式角色::*application_role*  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ APPLICATION ROLE ::*application_role*  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 指定拒絕其權限之應用程式角色的類別和名稱。 範圍限定詞 (**::**) 是必要。  
+ 指定拒絕其權限之應用程式角色的類別和名稱。 範圍限定詞 (**::**) 是必要的。  
   
  CASCADE  
  指出目前受到拒絕的權限，也為這個主體曾授與此權限的其他主體所拒絕。  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  指定主體，執行這項查詢的主體會從這個主體衍生其權限來撤銷權限。  
   
  *Database_user*  
@@ -100,7 +100,7 @@ DENY permission [ ,...n ]
  指定資料庫角色。  
   
  *Application_role*  
- **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定應用程式角色。  
   
@@ -119,7 +119,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="database-user-permissions"></a>資料庫使用者權限  
  資料庫使用者是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下表所列的是可以拒絕之最特定且最有限的資料庫使用者權限，並列出利用隱含方式來併入這些權限的較通用權限。  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. 對應用程式角色拒絕使用者的 IMPERSONATE 權限  
  下列範例會對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 應用程式角色 `IMPERSONATE`，拒絕使用者 `HamithaL` 的 `AccountsPayable17` 權限。  
   
-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ```  
 USE AdventureWorks2012;  
@@ -187,14 +187,14 @@ DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;
 GO    
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [GRANT 資料庫主體權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
- [REVOKE 資料庫主體權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [GRANT 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
+ [REVOKE 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys.database_permissions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [建立應用程式角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [建立角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

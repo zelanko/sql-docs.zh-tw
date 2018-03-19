@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE ENCRYPTION KEY (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  改變用於以透明方式加密資料庫的加密金鑰和憑證。 如需有關透明資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+  改變用於以透明方式加密資料庫的加密金鑰和憑證。 如需透明資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -79,10 +79,10 @@ ALTER DATABASE ENCRYPTION KEY
  ENCRYPTION BY SERVER CERTIFICATE *Encryptor_Name*  
  指定用於加密資料庫加密金鑰的憑證名稱。  
   
- 加密伺服器非對稱金鑰 Encryptor_Name  
+ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
  指定用於加密資料庫加密金鑰之非對稱金鑰的名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  用於加密資料庫加密金鑰的憑證或非對稱金鑰必須位於 master 系統資料庫中。  
   
  變更資料庫擁有者 (dbo) 時，不需要重新產生資料庫加密金鑰。  
@@ -103,14 +103,14 @@ REGENERATE WITH ALGORITHM = AES_256;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)   
  [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [建立資料庫加密金鑰 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [DROP DATABASE ENCRYPTION KEY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
+ [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
  [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
   
   

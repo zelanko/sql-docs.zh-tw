@@ -1,5 +1,5 @@
 ---
-title: "USER_ID (TRANSACT-SQL) |Microsoft 文件"
+title: USER_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   傳回資料庫使用者的識別碼。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,14 +54,14 @@ USER_ID ( [ 'user' ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- *使用者*  
- 要使用的使用者名稱。 *使用者*是**nchar**。 如果**char**指定值，則它會隱含地轉換成**nchar**。 它必須用括號括住。  
+ *user*  
+ 要使用的使用者名稱。 *user* 為 **nchar**。 若指定 **char** 值，它會隱含轉換成 **nchar**。 它必須用括號括住。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
- 當*使用者*已省略，則會假設目前的使用者。 如果參數包含 NULL 一詞，即會傳回 NULL。當 USER_ID 在 EXECUTE AS 之後呼叫時，USER_ID 會傳回模擬內容的識別碼。  
+## <a name="remarks"></a>Remarks  
+ 當省略 *user* 時，會假設為目前的使用者。 如果參數包含 NULL 一詞，即會傳回 NULL。當 USER_ID 在 EXECUTE AS 之後呼叫時，USER_ID 會傳回模擬內容的識別碼。  
   
  未對應至特定資料庫使用者的 Windows 主體藉由群組成員資格來存取資料庫時，USER_ID 會傳回 0 (public 的識別碼)。 如果這類主體建立物件而不指定結構描述，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立對應至 Windows 主體的隱含使用者和結構描述。 在這種情況下建立的使用者不能用來連接到資料庫。 對應至隱含使用者的 Windows 主體對 USER_ID 的呼叫會傳回隱含使用者的識別碼。  
   
@@ -76,10 +76,10 @@ SELECT USER_ID('Harold');
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [USER_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [DATABASE_PRINCIPAL_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/database-principal-id-transact-sql.md)   
+ [DATABASE_PRINCIPAL_ID &#40;Transact-SQL&#41;](../../t-sql/functions/database-principal-id-transact-sql.md)   
  [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

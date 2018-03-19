@@ -1,5 +1,5 @@
 ---
-title: "smalldatetime (TRANSACT-SQL) |Microsoft 文件"
+title: smalldatetime (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -41,14 +41,14 @@ ms.lasthandoff: 11/21/2017
 定義與當日時間結合的日期。 這個時間是以 24 小時制為基礎，而秒鐘一律為零 (:00) 而且不含小數秒數。
   
 > [!NOTE]  
->  使用**時間**，**日期**， **datetime2**和**datetimeoffset**新工作的資料型別。 這些類型符合 SQL 標準。 它們具有方便移植的特性。 **時間**， **datetime2**和**datetimeoffset**提供更多秒數有效位數。 **datetimeoffset**全域部署的應用程式提供時區支援。  
+>  為新工作使用 **time**、**date**、**datetime2** 和 **datetimeoffset** 資料類型。 這些類型符合 SQL 標準。 它們具有方便移植的特性。 **time**、**datetime2** 和 **datetimeoffset** 提供更多秒數有效位數。 **datetimeoffset** 可為全域部署的應用程式提供時區支援。  
   
 ## <a name="smalldatetime-description"></a>smalldatetime 描述
   
 |||  
 |-|-|  
 |語法|**smalldatetime**|  
-|使用方式|宣告@MySmalldatetime **smalldatetime**<br /><br /> 建立資料表 Table1 (Column1 **smalldatetime** )|  
+|使用方式|DECLARE @MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|不適用|  
 |日期範圍|1900-01-01 到 2079-06-06<br /><br /> 1900 年 1 月 1 日到 2079 年 6 月 6 日|  
 |時間範圍|00:00:00 到 23:59:59<br /><br /> 2007-05-09 23:59:59 會四捨五入為<br /><br /> 2007-05-10 00:00:00|  
@@ -63,15 +63,15 @@ ms.lasthandoff: 11/21/2017
 |日光節約感知|否|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 和 ISO 8601 標準  
-**smalldatetime**不符合 ANSI 或 ISO 8601 相容。
+**smalldatetime**不符合 ANSI 或 ISO 8601 標準。
   
-## <a name="converting-date-and-time-data"></a>將日期和時間資料轉換
-當您轉換成日期與時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 使用 CAST 和 CONVERT 函數與日期和時間資料的相關資訊，請參閱[CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+## <a name="converting-date-and-time-data"></a>轉換日期和時間資料
+當您轉換成日期與時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 如需 CAST 及 CONVERT 函式與日期和時間資料搭配使用的資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。
   
-### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>將 smalldatetime 轉換成其他日期和時間類型
-本章節描述發生的狀況時**smalldatetime**資料類型已轉換成其他日期和時間資料類型。
+### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>將 smalldatetime 轉換成其他日期與時間類型
+本節描述當 **smalldatetime** 資料類型轉換成其他日期和時間資料類型時，可能發生的狀況。
   
-在轉換成**日期**，年、 月和日都會複製。 下列程式碼顯示將 `smalldatetime` 值轉換成 `date` 值的結果。
+當轉換成 **date** 時，年、月和日都會複製。 下列程式碼顯示將 `smalldatetime` 值轉換成 `date` 值的結果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -87,7 +87,7 @@ SELECT @smalldatetime AS '@smalldatetime', @date AS 'date';
 --(1 row(s) affected)  
 ```  
   
-當轉換為**time （n)**，會複製時、 分、 秒數。 小數秒數會設定為 0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `time(4)` 值的結果。
+當轉換成 **time(n)** 時，時、分和秒都會複製。 小數秒數會設定為 0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `time(4)` 值的結果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -103,7 +103,7 @@ SELECT @smalldatetime AS '@smalldatetime', @time AS 'time';
 --(1 row(s) affected)  
 ```  
   
-當轉換為**datetime**、 **smalldatetime**值複製到**datetime**值。 小數秒數會設定為 0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetime` 值的結果。
+當轉換成 **datetime** 時，**smalldatetime** 值會複製到 **datetime** 值。 小數秒數會設定為 0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetime` 值的結果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -119,7 +119,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-在轉換成**datetimeoffset （n)**、 **smalldatetime**值複製到**datetimeoffset （n)**值。 小數秒數會設定為 0，而時區時差會設定為 +00:0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetimeoffset(4)` 值的結果。
+當轉換成 **datetimeoffset(n)** 時，**smalldatetime** 值會複製到 **datetimeoffset(n)** 值。 小數秒數會設定為 0，而時區時差會設定為 +00:0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetimeoffset(4)` 值的結果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -135,7 +135,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-要轉換**datetime2**、 **smalldatetime**值複製到**datetime2**值。 小數秒數會設定為 0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetime2(4)` 值的結果。
+當轉換成 **datetime2(n)** 時，**smalldatetime** 值會複製到 **datetime2(n)** 值。 小數秒數會設定為 0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetime2(4)` 值的結果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -187,11 +187,11 @@ SELECT
   
 |資料類型|輸出|  
 |---|---|
-|**time**|12:35:29. 1234567|  
+|**time**|12:35:29。 1234567|  
 |**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
-|**datetime2**|2007-05-08 12:35:29. 1234567|  
+|**datetime2**|2007-05-08 12:35:29。 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ## <a name="see-also"></a>另請參閱

@@ -1,5 +1,5 @@
 ---
-title: "CUME_DIST (TRANSACT-SQL) |Microsoft 文件"
+title: CUME_DIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-計算 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之值群組內某值的累加分配。 亦即，CUME_DIST 會計算值群組中某值的相對位置。 資料列*r*，此時是假設遞增排序的 CUME_DIST *r*是值的資料列數目，小於或等於值*r*，除以資料列數目評估資料分割或查詢結果集內。 CUME_DIST 與 PERCENT_RANK 函數類似。
+計算 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之值群組內某值的累加分配。 亦即，CUME_DIST 會計算值群組中某值的相對位置。 以資料列 *r* 為例，假設此資料列採取遞增排序，*r* 的 CUME_DIST 即是具有值小於或等於 *r* 值之資料列的數量，除以分割區或查詢結果集中計算所得之資料列數的結果。 CUME_DIST 與 PERCENT_RANK 函數類似。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>引數  
-透過**(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause*將分割成資料分割要套用函式的 FROM 子句所產生的結果集。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause*決定執行作業的邏輯順序。 *order_by_clause*需要。 \<資料列或範圍子句 > 無法在 CUME_DIST 函數中指定 OVER 的語法。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+*partition_by_clause* 會將 FROM 子句產生的結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 CUME_DIST 函式不可指定 OVER 語法的 \<資料列或範圍子句>。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回型別
 **float(53)**
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 CUME_DIST 傳回的值範圍大於 0 並小於或等於 1。 繫結值的計算所得一律會是相同的累計分佈值。 預設會包含 NULL 值，並將其視為最低值。
   
 CUME_DIST 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
@@ -100,6 +100,6 @@ Information Services   Bueno                  27.4038               0.4         
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[PERCENT_RANK &#40;TRANSACT-SQL &#41;](../../t-sql/functions/percent-rank-transact-sql.md)
+[PERCENT_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)
   
   

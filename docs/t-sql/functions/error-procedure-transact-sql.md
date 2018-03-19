@@ -1,5 +1,5 @@
 ---
-title: "ERROR_PROCEDURE (TRANSACT-SQL) |Microsoft 文件"
+title: ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
 ## <a name="return-value"></a>傳回值  
  在 CATCH 區塊中呼叫時，會傳回發生錯誤的預存程序名稱。  
@@ -60,10 +60,10 @@ ERROR_PROCEDURE ( )
   
  如果是在 CATCH 區塊範圍之外呼叫，便傳回 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  您可以在 CATCH 區塊範圍內的任何位置呼叫 ERROR_PROCEDURE。  
   
- ERROR_PROCEDURE 會傳回發生錯誤的預存程序或觸發程序的名稱，不論呼叫它的次數為何，或是在 CATCH 區塊範圍內的什麼位置呼叫它，都是如此。 這種函式，例如@ERROR，緊接著一個造成錯誤的陳述式中或在 CATCH 區塊的第一個陳述式中傳回的錯誤號碼。  
+ ERROR_PROCEDURE 會傳回發生錯誤的預存程序或觸發程序的名稱，不論呼叫它的次數為何，或是在 CATCH 區塊範圍內的什麼位置呼叫它，都是如此。 這有別於 @@ERROR 之類的函式，它們會在緊接於發生錯誤的陳述式之後的陳述式中，或在 CATCH 區塊的第一個陳述式中，傳回錯誤號碼。  
   
  在巢狀 CATCH 區塊中，ERROR_PROCEDURE 會傳回參考它的 CATCH 區塊範圍專用的預存程序或觸發程序的名稱。 例如，TRY…CATCH 建構的 CATCH 區塊可能會有巢狀的 TRY…CATCH。 在巢狀 CATCH 區塊內，ERROR_PROCEDURE 會傳回發生叫用巢狀 CATCH 區塊之錯誤的預存程序或觸發程序名稱。 如果 ERROR_PROCEDURE 是在外部 CATCH 區塊中執行，它會傳回發生叫用該 CATCH 區塊的錯誤之預存程序或觸發程序的名稱。  
   
@@ -128,7 +128,7 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorprocedure-in-a-catch-block"></a>C. 在 CATCH 區塊中使用 ERROR_PROCEDURE  
  下列程式碼範例會顯示產生除以零的錯誤之預存程序。 `ERROR_PROCEDURE` 會傳回錯誤發生所在之預存程序的名稱。  
@@ -188,14 +188,14 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

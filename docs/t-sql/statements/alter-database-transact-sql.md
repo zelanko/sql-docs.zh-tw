@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  修改資料庫或與資料庫相關聯的檔案和檔案群組。 在資料庫中新增或移除檔案和檔案群組、變更資料庫或其檔案和檔案群組的屬性、變更資料庫定序，以及設定資料庫選項。 無法修改資料庫快照集。 若要修改與複寫相關聯的資料庫選項，請使用[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。  
+  修改資料庫或與資料庫相關聯的檔案和檔案群組。 在資料庫中新增或移除檔案和檔案群組、變更資料庫或其檔案和檔案群組的屬性、變更資料庫定序，以及設定資料庫選項。 無法修改資料庫快照集。 若要修改與複寫相關聯的資料庫選項，請使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。  
    
  由於長度的關係，ALTER DATABASE 語法會分成下列主題：  
   
@@ -60,16 +60,16 @@ ms.lasthandoff: 11/21/2017
  提供與資料庫鏡像相關之 ALTER DATABASE SET 選項的語法。  
   
  [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)  
- 提供的語法[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]Always On 可用性群組的次要複本上設定次要資料庫的 ALTER DATABASE 選項。  
+ 為 ALTER DATABASE 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 選項，提供在 AlwaysOn 可用性群組的次要複本上設定次要資料庫的語法。  
   
  [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
  提供與資料庫相容性層級相關之 ALTER DATABASE SET 選項的語法。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
-Azure SQL Database，請參閱[ALTER DATABASE &#40;Azure SQL Database &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-Azure SQL 資料倉儲，請參閱[ALTER DATABASE &#40;Azure SQL 資料倉儲 &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
-平行處理資料倉儲，請參閱[ALTER DATABASE &#40;平行資料倉儲 &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).
+針對 Azure SQL Database，請參閱 [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
+針對 Azure SQL 資料倉儲，請參閱 [ALTER DATABASE &#40;Azure SQL 資料倉儲&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)。  
+針對平行處理資料倉儲，請參閱 [ALTER DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)。
   
 ## <a name="syntax"></a>語法  
   
@@ -125,28 +125,28 @@ ALTER DATABASE { database_name  | CURRENT }
   
  指定應該改變正在使用中的目前資料庫。  
   
- MODIFY NAME  **=**  *new_database_name*  
- 重新命名資料庫名稱指定為*new_database_name*。  
+ MODIFY NAME **=***new_database_name*  
+ 使用指定為 *new_database_name* 的名稱來重新命名資料庫。  
   
- COLLATE *sys.databases*  
- 指定資料庫的定序。 *sys.databases*可以是 Windows 定序名稱或 SQL 定序名稱。 若未指定，就會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的定序指派給資料庫。  
+ COLLATE *collation_name*  
+ 指定資料庫的定序。 *collation_name* 可以是 Windows 定序名稱或 SQL 定序名稱。 若未指定，就會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的定序指派給資料庫。  
   
- 使用預設定序除外的方式建立資料庫時，資料庫中的資料一律會接受指定的定序。 如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立自主的資料庫時，內部維護的目錄資訊是使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設定序， **Latin1_General_100_CI_AS_WS_KS_SC**。  
+ 使用預設定序除外的方式建立資料庫時，資料庫中的資料一律會接受指定的定序。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立自主資料庫時，會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設定序 (**Latin1_General_100_CI_AS_WS_KS_SC**) 來維護內部的目錄資訊。  
   
- 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱[COLLATE &#40;TRANSACT-SQL &#41;](~/t-sql/statements/collations.md).  
+ 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)。  
   
- **\<delayed_durability_option >:: =**  
+ **\<delayed_durability_option> ::=**  
  **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 如需詳細資訊，請參閱[ALTER DATABASE SET 選項 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)和[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。  
+ 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 及 [控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。  
   
- **\<file_and_filegroup_options >:: =**  
- 如需詳細資訊，請參閱[ALTER DATABASE 檔案及檔案群組選項 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
+ **\<file_and_filegroup_options>::=**  
+ 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
-## <a name="remarks"></a>備註  
- 若要移除的資料庫，請使用[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ 若要移除資料庫，請使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。  
   
- 若要減少資料庫大小，請使用[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
+ 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
  ALTER DATABASE 陳述式必須執行自動認可模式 (預設的交易管理模式)，且不能在明確或隱含的交易中。  
   
@@ -187,7 +187,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
 -   沒有結構描述繫結的物件相依於資料庫的定序。  
   
-     如果下列物件，這取決於資料庫定序，存在資料庫中，ALTER DATABASE*database_name*COLLATE 陳述式會失敗。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會針對每一個封鎖 ALTER 動作的物件傳回錯誤訊息：  
+     如果相依於資料庫定序的下列物件存在於資料庫中，ALTER DATABASE*database_name*COLLATE 陳述式將會失敗。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會針對每一個封鎖 ALTER 動作的物件傳回錯誤訊息：  
   
     -   利用 SCHEMABINDING 來建立的使用者定義函數和檢視表。  
   
@@ -254,20 +254,20 @@ COLLATE French_CI_AI ;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
-- [ALTER DATABASE &#40;Azure SQL Database &#41;](alter-database-azure-sql-database.md)  
+## <a name="see-also"></a>另請參閱  
+- [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-azure-sql-database.md)  
 - [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
 - [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
 - [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
-- [sp_spaceused &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
 - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
 - [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
-- [sys.database_mirroring_witnesses &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
-- [sys.data_spaces &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
-- [sys.filegroups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [系統資料庫](../../relational-databases/databases/system-databases.md)  
   

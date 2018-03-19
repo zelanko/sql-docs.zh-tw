@@ -1,5 +1,5 @@
 ---
-title: "SMALLDATETIMEFROMPARTS (TRANSACT-SQL) |Microsoft 文件"
+title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  傳回**smalldatetime**指定的日期和時間值。  
+  傳回指定日期和時間的 **smlldatetime** 值。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,28 +45,28 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ```  
   
 ## <a name="arguments"></a>引數  
- *年份*  
+ *year*  
  指定年份的整數運算式。  
   
- *月份*  
+ *month*  
  指定月份的整數運算式。  
   
- *一天*  
+ *day*  
  指定日期的整數運算式。  
   
- *小時*  
+ *hour*  
  指定小時的整數運算式。  
   
- *分鐘*  
+ *minute*  
  指定分鐘的整數運算式。  
   
 ## <a name="return-types"></a>傳回類型  
  **smalldatetime**  
   
-## <a name="remarks"></a>備註  
- 此函式作用類似的建構函式與完全初始化**smalldatetime**值。 如果引數無效，將會引發錯誤。 如果要求的引數為 null，即會傳回 null。  
+## <a name="remarks"></a>Remarks  
+ 此函式的功能與完全初始化之 **smalldatetime** 值的建構函式類似。 如果引數無效，將會引發錯誤。 如果要求的引數為 null，即會傳回 null。  
   
- 函數可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器和更新版伺服器上以遠端方式進行。 不是從遠端處理到伺服器，在版本低於[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ 函數可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器和更新版伺服器上以遠端方式進行。 它在版本低於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的伺服器上無法以遠端方式運作。  
   
 ## <a name="examples"></a>範例  
   

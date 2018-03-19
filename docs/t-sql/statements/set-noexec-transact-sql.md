@@ -1,5 +1,5 @@
 ---
-title: "SET NOEXEC (TRANSACT-SQL) |Microsoft 文件"
+title: SET NOEXEC (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當 SET NOEXEC 是 ON 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的每個批次，但不會執行它們。 當 SET NOEXEC 是 OFF 時，就會在編譯之後執行所有批次。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行陳述式有兩個階段：編譯和執行。 在執行時，這項設定可用來使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼中的語法和物件名稱。 它也可用來偵錯通常是在較大的陳述式批次中的陳述式。  
@@ -115,9 +115,9 @@ SET NOEXEC OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

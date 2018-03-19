@@ -1,5 +1,5 @@
 ---
-title: "CERTENCODED (TRANSACT-SQL) |Microsoft 文件"
+title: CERTENCODED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-以二進位格式傳回憑證的公開部分。 這個函數會使用憑證識別碼，並傳回編碼憑證。 二進位結果可以傳遞至**建立憑證...與二進位**來建立新的憑證。
+以二進位格式傳回憑證的公開部分。 這個函數會使用憑證識別碼，並傳回編碼憑證。 二進位結果可以傳遞給 **CREATE CERTIFICATE … WITH BINARY** 來建立新的憑證。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,21 +44,21 @@ CERTENCODED ( cert_id )
   
 ## <a name="arguments"></a>引數  
 *cert_id*  
-是**certificate_id**的憑證。 這是 sys.certificates 或藉由使用[CERT_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)函式。 *cert_id*是型別**int**
+憑證的 **certificate_id**。 這可從 sys.certificates 或是使用 [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) 函式取得。 *cert_id* 的類型為 **int**
   
 ## <a name="return-types"></a>傳回型別
 **varbinary**
   
-## <a name="remarks"></a>備註  
-**CERTENCODED**和**CERTPRIVATEKEY**一起用來以二進位格式傳回憑證的不同部分。
+## <a name="remarks"></a>Remarks  
+**CERTENCODED** 及 **CERTPRIVATEKEY** 會一起用來傳回憑證的不同部分 (二進位格式)。
   
 ## <a name="permissions"></a>Permissions  
-**CERTENCODED**是可以公開。
+**CERTENCODED** 可以公開使用。
   
 ## <a name="examples"></a>範例  
   
 ### <a name="simple-example"></a>簡單範例  
-下列範例會建立名為的憑證`Shipping04`，然後使用**CERTENCODED**函數來傳回憑證的二進位編碼。
+下列範例會建立名為 `Shipping04` 的憑證，然後使用 **CERTENCODED** 函式傳回憑證的二進位編碼。
   
 ```sql
 CREATE DATABASE TEST1;  
@@ -162,7 +162,7 @@ GO
 ## <a name="see-also"></a>另請參閱
 [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[CERTPRIVATEKEY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
 [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

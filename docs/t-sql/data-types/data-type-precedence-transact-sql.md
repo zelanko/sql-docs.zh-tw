@@ -1,5 +1,5 @@
 ---
-title: "資料類型優先順序 (TRANSACT-SQL) |Microsoft 文件"
+title: "資料類型優先順序 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-type-precedence-transact-sql"></a>資料類型優先順序 (TRANSACT-SQL)
+# <a name="data-type-precedence-transact-sql"></a>資料類型優先順序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 當一個運算子結合兩個不同資料類型的運算式時，資料類型優先順序的規則，會指定將低優先順序的資料類型，轉換為高優先順序的資料類型。 如果轉換不是支援的隱含轉換，就會傳回錯誤。 如果這兩個運算元運算式的資料類型相同，則作業結果就含有該資料類型。
@@ -63,12 +63,12 @@ ms.lasthandoff: 11/21/2017
 1. **image**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **nvarchar** (包括**nvarchar （max)** )  
+1. **nvarchar** (包含 **nvarchar(max)**)  
 1. **nchar**  
-1. **varchar** (包括**varchar （max)** )  
+1. **varchar** (包含 **varchar(max)**)  
 1. **char**  
-1. **varbinary** (包括**varbinary （max)** )  
-1. **二進位**（最低）  
+1. **varbinary** (包含 **varbinary(max)**)  
+1. **binary** (最低)  
   
 ## <a name="see-also"></a>另請參閱
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

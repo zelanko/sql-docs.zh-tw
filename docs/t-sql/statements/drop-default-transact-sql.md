@@ -1,5 +1,5 @@
 ---
-title: "卸除預設值 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   從目前資料庫移除一或多個使用者自訂的預設值。  
   
 > [!IMPORTANT]  
->  將移除 DROP DEFAULT 的下一版[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用 DROP DEFAULT，並規劃修改目前使用 DROP DEFAULT 的應用程式。 請改用 default 定義，您可以使用 DEFAULT 關鍵字建立[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)。  
+>  DROP DEFAULT 會在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的下一個版本中移除。 請勿在新的開發工作中使用 DROP DEFAULT，並規劃修改目前使用 DROP DEFAULT 的應用程式。 請改用預設定義，您可以利用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 的 DEFAULT 關鍵字來建立預設定義。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,19 +49,19 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *如果存在*  
+ *IF EXISTS*  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
- 只有當它已經存在有條件地卸除預設值。  
+ 只有在預設值已存在時，才能有條件地將其卸除。  
   
  *schema_name*  
  這是預設值所屬的結構描述名稱。  
   
  *default_name*  
- 這是現有預設值的名稱。 若要查看存在的預設值的清單，請執行**sp_help**。 預設值必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 您可以選擇性地指定預設結構描述名稱。  
+ 這是現有預設值的名稱。 若要查看存在的預設清單，請執行 **sp_help**。 預設必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 您可以選擇性地指定預設結構描述名稱。  
   
-## <a name="remarks"></a>備註  
- 先卸除預設值解除繫結預設值執行**sp_unbindefault**如果預設值目前繫結到資料行或別名資料類型。  
+## <a name="remarks"></a>Remarks  
+ 在卸除預設之前，如果預設目前繫結到資料行或別名資料類型，請執行 **sp_unbindefault** 來解除預設的繫結。  
   
  在從允許 Null 值的資料行中卸除預設值之後，當加入資料列且未明確提供值時，會在這個位置插入 NULL。 從 NOT NULL 資料行中卸除預設值之後，當加入資料列且未明確提供值時，會傳回錯誤訊息。 稍後，會做為一般 INSERT 陳述式行為的一部份而加入這些資料列。  
   
@@ -83,7 +83,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- 開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]您可以使用下列語法。  
+ 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以使用下列語法。  
   
 ```  
 DROP DEFAULT IF EXISTS datedflt;  
@@ -103,10 +103,10 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_unbindefault &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

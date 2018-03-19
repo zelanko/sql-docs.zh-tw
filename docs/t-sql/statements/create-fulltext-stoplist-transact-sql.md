@@ -1,5 +1,5 @@
 ---
-title: "建立全文檢索停用字詞表 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 
   在目前資料庫中建立新的全文檢索停用字詞表。  
   
- 停用字詞在資料庫中使用管理的物件稱為*停用字詞表*。 停用字詞表是停用字詞的清單，當它與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
+ 資料庫是使用 *stoplist* 物件來管理停用字詞。 停用字詞表是停用字詞的清單，當它與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
 > [!IMPORTANT]  
 >  只有在相容性層級 100 底下才支援 CREATE FULLTEXT STOPLIST、ALTER FULLTEXT STOPLIST 和 DROP FULLTEXT STOPLIST。 在相容性層級 80 和 90 底下，則不支援這些陳述式。 不過，在所有相容性層級底下，系統停用字詞表都會自動與新的全文檢索索引產生關聯。  
@@ -62,24 +62,24 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *s*  
- 這是停用字詞表的名稱。 *s*最多可有 128 個字元。 *s*必須在目前資料庫中，所有停用字詞表之間是唯一的且符合識別碼的規則。  
+ *stoplist_name*  
+ 這是停用字詞表的名稱。 *stoplist_name* 最多可有 128 個字元。 *stoplist_name* 在目前資料庫的所有停用字詞表中必須是唯一的，而且必須符合識別碼的規則。  
   
- *s*將在建立全文檢索索引時使用。  
+ 在建立全文檢索索引時，將會使用 *stoplist_name*。  
   
  *database_name*  
- 停用字詞表其中所指定的資料庫名稱*source_stoplist_name*所在。 如果未指定， *database_name*預設為目前的資料庫。  
+ 這是 *source_stoplist_name* 所指定之停用字詞表所在的資料庫名稱。 如果未指定，*database_name* 會預設為目前的資料庫。  
   
  *source_stoplist_name*  
- 指定新的停用字詞表是藉由複製現有的停用字詞表所建立。 如果*source_stoplist_name*不存在，或資料庫使用者沒有正確的權限，CREATE FULLTEXT STOPLIST 失敗並發生錯誤。 如果來源停用字詞表中停用字詞內指定的任何語言未在目前資料庫中註冊，則 CREATE FULLTEXT STOPLIST 會成功，但是會傳回警告，而且不會加入對應的停用字詞。  
+ 指定新的停用字詞表是藉由複製現有的停用字詞表所建立。 如果 *source_stoplist_name* 不存在，或是資料庫使用者沒有正確的權限，CREATE FULLTEXT STOPLIST 會因為錯誤而發生失敗。 如果來源停用字詞表中停用字詞內指定的任何語言未在目前資料庫中註冊，則 CREATE FULLTEXT STOPLIST 會成功，但是會傳回警告，而且不會加入對應的停用字詞。  
   
  SYSTEM STOPLIST  
- 指定新的停用字詞表建立存在停用字詞表，預設會在[Resource 資料庫](../../relational-databases/databases/resource-database.md)。  
+ 指定要從預設存在於 [Resource 資料庫](../../relational-databases/databases/resource-database.md)中的停用字詞表來建立新的停用字詞表。  
   
- 授權*owner_name*  
- 指定擁有停用字詞表的資料庫主體名稱。 *owner_name*必須是其中目前的使用者是成員，或目前使用者必須具有 IMPERSONATE 權限的主體名稱*owner_name*。 若未指定，擁有權便歸目前使用者。  
+ AUTHORIZATION *owner_name*  
+ 指定擁有停用字詞表的資料庫主體名稱。 *owner_name* 必須是目前使用者所屬的主體名稱，或者目前使用者必須具有 *owner_name* 的 IMPERSONATE 權限。 若未指定，擁有權便歸目前使用者。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  停用字詞表的建立者就是它的擁有者。  
   
 ## <a name="permissions"></a>Permissions  
@@ -114,12 +114,12 @@ CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [ALTER FULLTEXT STOPLIST &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [卸除全文檢索停用字詞表 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
- [設定及管理全文檢索搜尋停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [sys.fulltext_stoplists &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [sys.fulltext_stopwords &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
+ [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

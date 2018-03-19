@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYKEYAUTOASYMKEY (TRANSACT-SQL) |Microsoft 文件"
+title: DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
@@ -50,33 +50,33 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   
 ## <a name="arguments"></a>引數  
  *akey_ID*  
- 這是用來保護對稱金鑰之非對稱金鑰的識別碼。 *akey_ID*是**int**。  
+ 這是用來保護對稱金鑰之非對稱金鑰的識別碼。 *akey_ID* 為 **int**。  
   
  *akey_password*  
- 這是保護非對稱金鑰之私密金鑰的密碼。 如果私密金鑰受資料庫主要金鑰保護，則可以是 NULL。 *akey_password*是**nvarchar**。  
+ 這是保護非對稱金鑰之私密金鑰的密碼。 如果私密金鑰受資料庫主要金鑰保護，則可以是 NULL。 *akey_password* 為 **nvarchar**。  
   
- '*加密文字*'  
- 這是以金鑰加密的資料。 *加密文字*是**varbinary**。  
+ '*ciphertext*'  
+ 這是以金鑰加密的資料。 *ciphertext* 為 **varbinary**。  
   
  @ciphertext  
- 這類型的變數**varbinary**其中包含已利用金鑰加密的資料。  
+ 為 **varbinary** 類型的變數，其中包含已利用金鑰加密的資料。  
   
  *add_authenticator*  
- 指出驗證器是否要與純文字一起加密。 必須是加密資料時傳遞至 EncryptByKey 的相同值。 如果使用驗證器，則為 1。 *add_authenticator*是**int**。  
+ 指出驗證器是否要與純文字一起加密。 必須是加密資料時傳遞至 EncryptByKey 的相同值。 如果使用驗證器，則為 1。 *add_authenticator* 為 **int**。  
   
  @add_authenticator  
  指出驗證器是否要與純文字一起加密。 必須是加密資料時傳遞至 EncryptByKey 的相同值。  
   
- *驗證器*  
- 這是要產生驗證器的資料。 必須符合已提供給 EncryptByKey 的值。 *驗證器*是**sysname**。  
+ *authenticator*  
+ 這是要產生驗證器的資料。 必須符合已提供給 EncryptByKey 的值。 *authenticator* 為 **sysname**。  
   
  @authenticator  
  這是含有要產生驗證器之資料的變數。 必須符合已提供給 EncryptByKey 的值。  
   
 ## <a name="return-types"></a>傳回類型  
- **varbinary** 8,000 個位元組的大小上限。  
+ **varbinary**，大小上限為 8,000 位元組。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  DecryptByKeyAutoAsymKey 結合 OPEN SYMMETRIC KEY 和 DecryptByKey 的功能。 可以在單一作業中解密對稱金鑰並且使用該金鑰來解密加密文字。  
   
 ## <a name="permissions"></a>Permissions  
@@ -133,10 +133,10 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber2
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [ENCRYPTBYKEY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

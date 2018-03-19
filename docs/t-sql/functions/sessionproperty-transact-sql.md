@@ -1,5 +1,5 @@
 ---
-title: "SESSIONPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: SESSIONPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,9 +49,9 @@ SESSIONPROPERTY (option)
   
 ## <a name="arguments"></a>引數  
  *選項*  
- 這是此工作階段的目前選項設定。 *選項*可以是下列值之一。  
+ 這是此工作階段的目前選項設定。 *option* 可以是下列值之一。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |ANSI_NULLS|指定是否套用對於 Null 值的等於 (=) 和不等於 (<>) 的 ISO 標準行為。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |ANSI_PADDING|控制資料行如何儲存比資料行的定義大小還短的值，以及如何儲存字元和二進位資料含有尾端空格的值。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
@@ -60,12 +60,12 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|控制是否將串連結果當作 Null 或空字串值來處理。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|指定在運算式中捨入造成失去有效位數時，所產生的錯誤訊息和警告。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|指定是否遵照如何利用引號來分隔識別碼和常值字串的 ISO 規則。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
-|\<任何其他字串 >|NULL = 輸入無效。|  
+|\<任何其他字串>|NULL = 輸入無效。|  
   
 ## <a name="return-types"></a>傳回類型  
  **sql_variant**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  SET 選項是由組合伺服器層級、資料庫層級和使用者指定選項來表示。  
   
 ## <a name="examples"></a>範例  
@@ -75,7 +75,7 @@ SESSIONPROPERTY (option)
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   

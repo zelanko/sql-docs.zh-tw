@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 非對稱金鑰權限 (TRANSACT-SQL) |Microsoft 文件"
+title: "REVOKE 非對稱金鑰權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -55,11 +55,11 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 > [!IMPORTANT]  
 >  如果主體有不含 GRANT 選項的指定權限，則會撤銷權限本身。  
   
- *權限*  
+ *permission*  
  指定組件可以撤銷的權限。 如下所列。  
   
- 非對稱金鑰上**::***asymmetric_key_name*  
- 指定正在撤銷權限的非對稱金鑰。 範圍限定詞**::**需要。  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ 指定正在撤銷權限的非對稱金鑰。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
  指定要撤銷其權限的主體。 它有下列幾種：  
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  非對稱金鑰是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下面所列的是可以撤銷之最特定且最有限的非對稱金鑰權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
 |非對稱金鑰權限|非對稱金鑰權限所隱含|資料庫權限所隱含|  
@@ -119,13 +119,13 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 ## <a name="permissions"></a>Permissions  
  需要非對稱金鑰的 CONTROL 權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [建立應用程式角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

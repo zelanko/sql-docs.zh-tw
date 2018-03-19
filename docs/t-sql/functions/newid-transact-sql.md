@@ -1,5 +1,5 @@
 ---
-title: "NEWID (TRANSACT-SQL) |Microsoft 文件"
+title: NEWID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  建立類型的唯一值**uniqueidentifier**。  
+  建立類型為 **uniqueidentifier** 的唯一值。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ NEWID ( )
 ## <a name="return-types"></a>傳回類型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  `NEWID()` 符合 RFC4122。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. 搭配變數使用 NEWID 函數  
- 下列範例會使用`NEWID()`將值指派給變數，宣告為**uniqueidentifier**資料型別。 值**uniqueidentifier**資料型別變數在列印之前會測試值。  
+ 下列範例會使用 `NEWID()`，將值指派給宣告為 **uniqueidentifier** 資料類型的變數。 **uniqueidentifier** 資料類型變數的值會列印在所測試值的前面。  
   
 ```  
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -75,9 +75,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. 在 CREATE TABLE 陳述式中使用 NEWID  
   
-**適用於**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 下列範例會建立`cust`資料表具有**uniqueidentifier**資料型別，且利用 NEWID 資料表中填入預設值。 在指派 `NEWID()` 的預設值時，每個新的資料列和現有的資料列，都有唯一的 `CustomerID` 資料行值。  
+ 下列範例會建立 **uniqueidentifier** 資料類型的 `cust` 資料表，且使用 NEWID 在資料表中填入預設值。 在指派 `NEWID()` 的預設值時，每個新的資料列和現有的資料列，都有唯一的 `CustomerID` 資料行值。  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. 使用 uniqueidentifier 和變數指派  
- 下列範例會宣告區域變數呼叫`@myid`為的變數**uniqueidentifier**資料型別。 之後，再利用 `SET` 陳述式來指派變數值。  
+ 下列範例將稱為 `@myid` 的區域變數宣告成 **uniqueidentifier** 資料類型的變數。 之後，再利用 `SET` 陳述式來指派變數值。  
   
 ```  
 DECLARE @myid uniqueidentifier ;  
@@ -124,14 +124,14 @@ SELECT @myid;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [NEWSEQUENTIALID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [uniqueidentifier &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
+ [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

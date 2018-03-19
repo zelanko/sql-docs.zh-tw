@@ -1,5 +1,5 @@
 ---
-title: "SET DATEFORMAT (TRANSACT-SQL) |Microsoft 文件"
+title: SET DATEFORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  設定解譯之月份、 日期與年份日期部分順序**日期**， **smalldatetime**， **datetime**， **datetime2**和**datetimeoffset**字元字串。  
+  設定月份、日期與年份日期部分的順序，以解譯 **date**、**smalldatetime**、**datetime**、**datetime2** 和 **datetimeoffset** 字元字串。  
   
- 如需所有[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和時間資料型別和函式，請參閱[日期和時間資料型別和函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,19 +56,19 @@ SET DATEFORMAT { format | @format_var }
 ```  
   
 ## <a name="arguments"></a>引數  
- *格式* | **@***format_var*  
- 這是日期部分的順序。 有效的參數為**mdy**， **dmy**， **ymd**， **ydm**， **myd**，和**dym**. 這個引數可以是 Unicode 或轉換成 Unicode 的雙位元組字集 (DBCS)。 U.S.English 預設值是**mdy**。 所有的預設 DATEFORMAT 支援的語言，請參閱[sp_helplanguage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
+ *format* | **@***format_var*  
+ 這是日期部分的順序。 有效的參數為 **mdy**、**dmy**、**ymd**、**ydm**、**myd** 和 **dym**。 這個引數可以是 Unicode 或轉換成 Unicode 的雙位元組字集 (DBCS)。 U.S.美國英文的預設值是 **mdy**。 如需所有支援語言的預設 DATEFORMAT，請參閱 [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)。  
   
-## <a name="remarks"></a>備註  
- DATEFORMAT **ydm**不支援**日期**， **datetime2**和**datetimeoffset**資料型別。  
+## <a name="remarks"></a>Remarks  
+ DATEFORMAT **ydm** 不支援 **date**、**datetime2** 和 **datetimeoffset** 資料類型。  
   
- 在解譯字元字串的 DATEFORMAT 設定的效果可能會與不同**datetime**和**smalldatetime**值與**日期**， **datetime2**和**datetimeoffset**視字串格式的值。 這個設定會影響字元字串轉換成日期值以便儲存在資料庫中的解譯方式。 但是，它並不會影響儲存在資料庫中之日期資料類型值的顯示或儲存格式。  
+ 相較於 **datetime** 和 **smalldatetime** 值，DATEFORMAT 設定在解譯字元字串的作用方面可能會不同於 **date**、**datetime2** 和 **datetimeoffset** 值，端視字串格式而定。 這個設定會影響字元字串轉換成日期值以便儲存在資料庫中的解譯方式。 但是，它並不會影響儲存在資料庫中之日期資料類型值的顯示或儲存格式。  
   
  某些字元字串格式 (例如 ISO 8601) 的解譯就與 DATEFORMAT 設定無關。  
   
  SET DATEFORMAT 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
- SET DATEFORMAT 會覆寫隱含日期格式設定[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)。  
+ SET DATEFORMAT 會覆寫 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 的隱含日期格式設定。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  
@@ -94,7 +94,7 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

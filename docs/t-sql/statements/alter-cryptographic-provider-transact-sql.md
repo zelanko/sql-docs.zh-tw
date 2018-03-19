@@ -1,5 +1,5 @@
 ---
-title: "改變密碼編譯提供者 (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  啟用或停用提供者。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果提供者變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用來實作 Extensible Key Management 的 .dll 檔案，您必須使用 ALTER CRYPTOGRAPHIC PROVIDER 陳述式。  
   
  當使用 ALTER CRYPTOGRAPHIC PROVIDER 陳述式來更新 .dll 檔案路徑時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行以下動作：  
@@ -83,30 +83,30 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  需要密碼編譯提供者的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會變更密碼編譯提供者，稱為`SecurityProvider`中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，.dll 檔案的較新版本。 這個新的版本為`c:\SecurityProvider\SecurityProvider_v2.dll`以及是否已安裝在伺服器上。 您必須將提供者的憑證安裝在伺服器上。  
+ 下列範例會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，將稱為 `SecurityProvider` 的密碼編譯提供者更改為更新版的 .dll 檔案。 這個新的版本命名為 `c:\SecurityProvider\SecurityProvider_v2.dll`，而且會安裝在伺服器上。 您必須將提供者的憑證安裝在伺服器上。  
   
-1. 停用來執行升級提供者。 這將會終止所有開啟的密碼編譯工作階段。  
+1. 停用提供者以執行升級。 這將會終止所有開啟的密碼編譯工作階段。  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
-2. 升級提供者.dll 檔案。 GUID 必須與舊版本中，相同但版本可能會不同。  
+2. 升級提供者 .dll 檔案。 GUID 必須與先前版本相同，但版本可以不同。  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
 ```  
 
-3. 啟用升級提供者。   
+3. 啟用升級後的提供者。   
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   

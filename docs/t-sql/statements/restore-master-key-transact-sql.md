@@ -1,5 +1,5 @@
 ---
-title: "還原主要金鑰 (TRANSACT-SQL) |Microsoft 文件"
+title: RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,19 +57,19 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>引數  
- 檔案 ='*path_to_file*'  
- 指定預存資料庫主要金鑰的完整路徑，包括檔案名稱。 *path_to_file*可以是本機路徑或通往網路位置的 UNC 路徑。  
+ FILE ='*path_to_file*'  
+ 指定預存資料庫主要金鑰的完整路徑，包括檔案名稱。 *path_to_file* 可以是本機路徑或通往網路位置的 UNC 路徑。  
   
- DECRYPTION BY PASSWORD ='*密碼*'  
+ DECRYPTION BY PASSWORD ='*password*'  
  指定解密要從檔案匯入之資料庫主要金鑰時所需的密碼。  
   
- ENCRYPTION BY PASSWORD ='*密碼*'  
+ ENCRYPTION BY PASSWORD ='*password*'  
  指定資料庫主要金鑰已載入資料庫中之後用來加密該金鑰的密碼。  
   
  FORCE  
  即使目前資料庫主要金鑰未開啟，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法解密某些以此金鑰加密的私密金鑰時，指定 RESTORE 處理序仍應繼續執行。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當主要金鑰還原時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會解密所有利用目前作用中主要金鑰加密的金鑰，然後利用還原的主要金鑰加密這些金鑰。 這項需要大量資源的作業應該安排在低需求時進行。 如果目前資料庫主要金鑰未開啟或無法開啟，或者，如果利用該金鑰加密的任何金鑰無法解密，還原作業便會失敗。  
   
  請只在主要金鑰無法擷取或解密失敗時才使用 FORCE 選項。 只由無法擷取的金鑰加密的資訊會遺失。  
@@ -93,7 +93,7 @@ RESTORE MASTER KEY
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
  [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  

@@ -1,5 +1,5 @@
 ---
-title: "OBJECT_DEFINITION (TRANSACT-SQL) |Microsoft 文件"
+title: OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="arguments"></a>引數  
  *object_id*  
- 這是所要使用的物件識別碼。 *object_id*是**int**，假設為代表目前的資料庫內容中的物件。  
+ 這是所要使用的物件識別碼。 *object_id* 為 **int**，並會用來代表目前資料庫內容中的物件。  
   
 ## <a name="return-types"></a>傳回類型  
  **nvarchar(max)**  
@@ -60,8 +60,8 @@ OBJECT_DEFINITION ( object_id )
   
  使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，OBJECT_DEFINITION) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>備註  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]假設*object_id*目前資料庫內容中。 物件定義的定序一律符合發出呼叫之資料庫內容的定序。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假設 *object_id* 在目前資料庫內容中。 物件定義的定序一律符合發出呼叫之資料庫內容的定序。  
   
  OBJECT_DEFINITION 適用於下列物件類型：  
   
@@ -110,10 +110,10 @@ SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [OBJECT_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [OBJECT_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.server_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-sql-modules-transact-sql.md)  

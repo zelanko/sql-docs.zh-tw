@@ -1,5 +1,5 @@
 ---
-title: "CERTPROPERTY (TRANSACT-SQL) |Microsoft 文件"
+title: CERTPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>引數  
 *Cert_ID*  
-這是憑證的識別碼。 *Cert_ID*為 int。
+這是憑證的識別碼。 *Cert_ID* 為 int。
   
 *Expiry_Date*  
 這是憑證的到期日。
@@ -75,16 +75,16 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 *String_SID*  
 這是字元字串格式的憑證 SID。 這也是對應至憑證之任何登入或使用者的 SID。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 屬性規格必須括在單引號中。
   
-傳回類型會隨著函數呼叫中指定的屬性而不同。 所有傳回值會包裝在的傳回型別**sql_variant**。
--   *Expiry_Date*和*Start_Date*傳回**datetime**。  
--   *Cert_Serial_Number*， *Issuer_Name*，*主旨*，和*String_SID*傳回**nvarchar**。  
--   *SID*傳回**varbinary**。  
+傳回類型會隨著函數呼叫中指定的屬性而不同。 所有傳回值都會以 **sql_variant** 的傳回型別包裝。
+-   *Expiry_Date* 及 *Start_Date* 會傳回 **datetime**。  
+-   *Cert_Serial_Number*、*Issuer_Name*、*Subject*，及 *String_SID* 會傳回 **nvarchar**。  
+-   *SID* 會傳回 **varbinary**。  
   
-## <a name="remarks"></a>備註  
-憑證的相關資訊會顯示在[sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)目錄檢視。
+## <a name="remarks"></a>Remarks  
+您可以在 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目錄檢視中，看到有關憑證的資訊。
   
 ## <a name="permissions"></a>Permissions  
 需要憑證的部份權限，且呼叫端尚未拒絕憑證的 VIEW DEFINITION 權限。
@@ -110,10 +110,10 @@ GO
   
 ## <a name="see-also"></a>另請參閱
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[ALTER CERTIFICATE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
-[CERT_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md) 
+[ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
+[CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)
 [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)
-[sys.certificates &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 
-[安全性目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
   
   

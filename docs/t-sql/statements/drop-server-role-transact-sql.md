@@ -1,5 +1,5 @@
 ---
-title: "卸除伺服器角色 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,14 +51,14 @@ DROP SERVER ROLE role_name
  *role_name*  
  指定要從伺服器卸除的使用者定義伺服器角色。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  擁有安全性實體的使用者定義伺服器角色，不可以從伺服器卸除。 若要卸除一個擁有安全性實體的使用者定義伺服器角色，必須先轉移那些安全性實體的擁有權，或者刪除安全性實體。  
   
- 含有成員的使用者定義伺服器角色，不可以卸除。 若要卸除具有成員的使用者定義伺服器角色，您必須先移除該角色的成員使用[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。  
+ 含有成員的使用者定義伺服器角色，不可以卸除。 若要卸除具有成員的使用者定義伺服器角色，您必須先使用 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 移除角色的成員。  
   
  固定伺服器角色無法移除。  
   
- 您可以檢視角色成員資格的相關資訊，藉由查詢[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)目錄檢視。  
+ 您可以查詢 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目錄檢視，檢視角色成員資格的相關資訊。  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器角色的 CONTROL 權限或 ALTER ANY SERVER ROLE 權限。  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. 若要檢視角色成員資格  
- 若要檢視角色成員資格，請使用**伺服器角色 (成員**) 頁面[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或執行下列查詢：  
+ 若要檢視角色成員資格，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的**伺服器角色 (成員)** 頁面，或執行下列查詢：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -98,11 +98,11 @@ JOIN sys.server_principals AS SP2
 ORDER BY SP1.name ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [更改角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [建立角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [DROP ROLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

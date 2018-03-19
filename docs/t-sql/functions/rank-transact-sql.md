@@ -1,5 +1,5 @@
 ---
-title: "陣序 (TRANSACT-SQL) |Microsoft 文件"
+title: RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/25/2016
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 
   傳回結果集分割區內，每個資料列的次序。 資料列的次序等於一加上前述資料列之前的次序數目。  
 
-  ROW_NUMBER 和陣序規範很類似。 ROW_NUMBER 數字所有資料列依序 （例如 1、 2、 3、 4、 5）。 陣序規範會提供相同的數值 （例如 1、 2、 2、 4、 5） 的繫結。   
+  ROW_NUMBER 和 RANK 很類似。 ROW_NUMBER 會依序為所有資料列編號 (例如 1、2、3、4、5)。 RANK 則為繫結提供相同的數值 (例如 1、2、2、4、5)。   
   
 > [!NOTE]
-> 陣序規範為執行查詢時計算暫存值。 若要保存在資料表中的數字，請參閱[IDENTITY 屬性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和[順序](../../t-sql/statements/create-sequence-transact-sql.md)。 
+> RANK 是查詢在執行時所計算的暫存值。 若要將數字保存在資料表中，請參閱 [IDENTITY 屬性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。 
    
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,14 +53,14 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>引數  
- 透過**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*將分割成資料分割要套用函式的 FROM 子句所產生的結果集。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause*套用函數之前，決定資料的順序。 *Order_by_clause*需要。 \<資料列或範圍子句 > 的 OVER 子句不能指定為 RANK 函數。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* 會將 FROM 子句產生的結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 在套用函式之前，*order_by_clause* 可指定資料順序。 *order_by_clause* 為必要項目。 您無法為 RANK 函式指定 OVER 子句的 \<資料列或範圍子句>。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
  **bigint**  
   
-## <a name="remarks"></a>備註  
- 如果兩個或多個資料列有相同的次序，每個繫結的資料列就會收到相同的次序。 例如，如果兩位超級業務員有相同的 SalesYTD 值，他們的次序便都是第一。 SalesYTD 次高的業務員之次序便是第三，因為有兩個資料列次序比它高。 因此，RANK 函數不一定會傳回連續整數。  
+## <a name="remarks"></a>Remarks  
+ 若針對某個次序繫結兩個或更多資料列，每個繫結的資料列都會收到相同的次序。 例如，如果兩位超級業務員有相同的 SalesYTD 值，他們的次序便都是第一。 SalesYTD 次高的業務員之次序便是第三，因為有兩個資料列次序比它高。 因此，RANK 函數不一定會傳回連續整數。  
   
  整個查詢所用的排序順序，決定了資料列在結果集中的出現順序。  
   
@@ -135,10 +135,10 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C： 排序資料分割內的資料列  
- 下列範例會根據銷售代表在每個銷售地區根據他們的銷售總額。 資料列集由 `SalesTerritoryGroup` 來進行資料分割，依照 `SalesAmountQuota` 來排序。  
+### <a name="c-ranking-rows-within-a-partition"></a>C：在分割區內排列資料列  
+ 下列範例會根據其總銷售額，排列每個銷售領域內的銷售代表。 資料列集由 `SalesTerritoryGroup` 來進行資料分割，依照 `SalesAmountQuota` 來排序。  
   
 ```  
 -- Uses AdventureWorks  
@@ -173,11 +173,11 @@ Ito               7804000.0000   Southwest            2
 Pak               10514000.0000  United Kingdom       1
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [DENSE_RANK &#40;TRANSACT-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [排名函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [次序函式 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

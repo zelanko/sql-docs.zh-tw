@@ -1,5 +1,5 @@
 ---
-title: "FIRST_VALUE (TRANSACT-SQL) |Microsoft 文件"
+title: FIRST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="arguments"></a>引數  
  *scalar_expression*  
- 要傳回的值。 *scalar_expression*可以是資料行、 子查詢或其他任意的運算式會產生單一值。 不允許其他分析函數。  
+ 要傳回的值。 *scalar_expression* 可以是資料行、子查詢，或其他結果為單一值的任意運算式。 不允許其他分析函數。  
   
- 透過**(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause*將分割成資料分割要套用函式的 FROM 子句所產生的結果集。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause*決定執行作業的邏輯順序。 *order_by_clause*需要。 *rows_range_clause*藉由指定開始和結束點，以進一步限制資料分割內的資料列。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ *partition_by_clause* 會將 FROM 子句產生的結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 *rows_range_clause* 會指定起始點及結束點，以進一步限制分割區中的資料列數。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
- 是相同的型別*scalar_expression*。  
+ 為與 *scalar_expression* 相同的類型。  
   
 ## <a name="general-remarks"></a>一般備註  
  FIRST_VALUE 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
@@ -127,7 +127,7 @@ Accounts Receivable Specialist      Spoon                     61            Poe
 Accounts Receivable Specialist      Walton                    62            Poe  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "SESSION_CONTEXT (TRANSACT-SQL) |Microsoft 文件"
+title: SESSION_CONTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/22/2016
 ms.prod: sql-non-specified
@@ -31,10 +31,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (TRANSACT-SQL)
+# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  傳回目前工作階段內容中的指定之索引鍵的值。 值會設定使用[sp_set_session_context &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)程序。  
+  傳回目前工作階段內容中指定索引鍵的值。 會使用 [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) 程序來設定值。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,34 +45,34 @@ SESSION_CONTEXT(N'key')
 ```  
   
 ## <a name="arguments"></a>引數  
- ' key'  
- 索引鍵 (sysname 類型) 所擷取的值。  
+ 'key'  
+ 要擷取之值的索引鍵 (類型為 sysname)。  
   
 ## <a name="return-type"></a>傳回類型  
  **sql_variant**  
   
 ## <a name="return-value"></a>傳回值  
- 如果已不設定任何值，該金鑰的使用中的工作階段內容或為 NULL 的指定索引鍵關聯的值。  
+ 為與工作階段內容中指定索引鍵建立關聯的值，或為 NULL (當該索引鍵沒有設定值時)。  
   
 ## <a name="permissions"></a>Permissions  
- 任何使用者可以讀取他們的工作階段的工作階段內容。  
+ 任何使用者都可以讀取其工作階段的工作階段內容。  
   
-## <a name="remarks"></a>備註  
- 相似的 CONTEXT_INFO SESSION_CONTEXT 的 MARS 行為。 如果 MARS 批次將索引鍵-值組，則新值將不會傳回其他 MARS 批次中相同的連接上除非它們啟動設定的新值之批次完成後。 如果多個 MARS 批次的連接上作用中，值不能設為"read_only。 」 這可避免競爭條件和不具決定性有關哪些值為"wins"。  
+## <a name="remarks"></a>Remarks  
+ SESSION_CONTEXT 的 MARS 行為與 CONTEXT_INFO 相似。 若 MARS 批次設定索引鍵值組，則新的值將不會在相同連線中的另外一個 MARS 批次中傳回，除非它們是在設定新值的批次完成之後才啟動。 若在連線上有多個 MARS 作用中，值將無法設為「唯讀」(read_only)。 這可防止競爭條件以及針對哪個值「會獲勝」的不確定性。  
   
 ## <a name="examples"></a>範例  
- 下列簡單範例會設定索引鍵的工作階段內容值`user_id`至 4，然後使用**SESSION_CONTEXT**函式可擷取的值。  
+ 下面這個簡單的範例會先將索引鍵 `user_id` 的工作階段值設為 4，再使用 **SESSION_CONTEXT** 函式來擷取該值。  
   
 ```  
 EXEC sp_set_session_context 'user_id', 4;  
 SELECT SESSION_CONTEXT(N'user_id');  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)   
- [CURRENT_TRANSACTION_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+ [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [資料列層級安全性](../../relational-databases/security/row-level-security.md)   
- [CONTEXT_INFO &#40;TRANSACT-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)   
- [SET CONTEXT_INFO &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
+ [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)   
+ [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

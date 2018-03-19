@@ -1,5 +1,5 @@
 ---
-title: "SET CURSOR_CLOSE_ON_COMMIT (TRANSACT-SQL) |Microsoft 文件"
+title: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當 SET CURSOR_CLOSE_ON_COMMIT 為 ON 時，這項設定會遵照 ISO 標準，在認可或回復時關閉任何開啟的資料指標。 當 SET CURSOR_CLOSE_ON_COMMIT 為 OFF 時，在認可交易時，不會關閉資料指標。  
   
 > [!NOTE]  
@@ -59,9 +59,9 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
   
  如果 SET CURSOR_CLOSE_ON_COMMIT 是 OFF，ROLLBACK 陳述式只會關閉開啟而尚未完全擴展的非同步資料指標。 如果回復修改的話，在修改之後開啟的 STATIC 或非感應式資料指標將不再反映資料的狀態。  
   
- SET CURSOR_CLOSE_ON_COMMIT 會控制 CURSOR_CLOSE_ON_COMMIT 資料庫選項的相同行為。 如果 CURSOR_CLOSE_ON_COMMIT 設為 ON 或 OFF，便會在連接上使用這項設定。 如果未指定 SET CURSOR_CLOSE_ON_COMMIT 中的值**sys.databases**中的資料行**sys.databases**目錄檢視會套用。  
+ SET CURSOR_CLOSE_ON_COMMIT 會控制 CURSOR_CLOSE_ON_COMMIT 資料庫選項的相同行為。 如果 CURSOR_CLOSE_ON_COMMIT 設為 ON 或 OFF，便會在連接上使用這項設定。 如果尚未指定 SET CURSOR_CLOSE_ON_COMMIT，便會套用 **sys.databases** 目錄檢視中 **is_cursor_close_on_commit_on** 資料行的值。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式同時設定 CURSOR_CLOSE_ON_COMMIT 為 OFF 連線時。 DB-Library 不會自動設定 CURSOR_CLOSE_ON_COMMIT 值。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式在連線時會將 CURSOR_CLOSE_ON_COMMIT 設為 OFF。 DB-Library 不會自動設定 CURSOR_CLOSE_ON_COMMIT 值。  
   
  當 SET ANSI_DEFAULTS 是 ON 時，會啟用 SET CURSOR_CLOSE_ON_COMMIT。  
   
@@ -131,13 +131,13 @@ DROP TABLE t1;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [關閉 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   

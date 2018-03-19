@@ -1,5 +1,5 @@
 ---
-title: "REVOKE (TRANSACT-SQL) |Microsoft 文件"
+title: REVOKE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -98,7 +98,7 @@ REVOKE
 >  如果主體有不含 GRANT 選項的指定權限，則會撤銷權限本身。  
   
  ALL  
-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  這個選項不會撤銷所有可能的權限。 撤銷 ALL 等同於撤銷下列權限。  
   
@@ -120,20 +120,20 @@ REVOKE
  PRIVILEGES  
  為符合 ISO 而包含這個項目。 不會變更 ALL 的行為。  
   
- *權限*  
- 這是權限的名稱。 安全性實體權限的有效對應描述中所列的主題[安全性實體特定語法](#securable)本主題稍後。  
+ *permission*  
+ 這是權限的名稱。 本主題稍後[安全性實體特定語法](#securable)所列的幾個主題，會描述權限與安全性實體的有效對應。  
   
- *資料行*  
+ *column*  
  指定正在撤銷權限的資料表中資料行的名稱。 它必須用括號括住。  
   
- *類別*  
- 指定正在撤銷權限之安全性實體的類別。 範圍限定詞**::**需要。  
+ *class*  
+ 指定正在撤銷權限之安全性實體的類別。 範圍限定詞 **::** 為必要項目。  
   
- *安全性實體*  
+ *securable*  
  指定正在撤銷權限的安全性實體。  
   
- 若要 |從*主體*  
- 這是主體的名稱。 可以撤銷安全性實體權限的主體，隨著安全性實體而不同。 如需有效組合的詳細資訊，請參閱主題中所列[安全性實體特定語法](#securable)本主題稍後。  
+ TO | FROM *principal*  
+ 這是主體的名稱。 可以撤銷安全性實體權限的主體，隨著安全性實體而不同。 如需有效組合的詳細資訊，請參閱本主題稍後[安全性實體特定語法](#securable)中所列的主題。  
   
  CASCADE  
  指出目前正在撤銷的權限，也會從它被這個主體所授與的其他主體一起撤銷。 當您使用 CASCADE 引數時，必須也包括 GRANT OPTION FOR 引數。  
@@ -141,13 +141,13 @@ REVOKE
 > [!CAUTION]  
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
- AS*主體*  
- 使用 AS 主體子句，表示您要撤銷您以外的主體所授與的權限。 例如，假設使用者 Mary 是 principal_id 12，和使用者阿為主體 15。 Mary 和阿授與使用者具名 Steven 相同的權限。 Sys.database_permissions 資料表指出權限的兩次，但它們將每個具有不同 grantor_prinicpal_id 值。 Mary 無法撤銷權限使用`AS RAUL`子句移除阿的授與權限。
+ AS *principal*  
+ 您可使用 AS principal 子句，來表示要撤銷由您以外的主體所授與的權限。 例如，假設使用者 Mary 是 principal_id 12；使用者 Raul 是 principal 15。 Mary 和 Raul 都授與 Steven 這個使用者相同的權限。 sys.database_permissions 資料表會指出權限兩次，但每個權限都各有不同的 grantor_prinicpal_id 值。 Mary 可以使用 `AS RAUL` 子句撤銷權限，以移除 Raul 的授權。
  
-使用此陳述式與不表示模擬另一位使用者的能力。  
+在此陳述式中使用 AS 不代表能模擬其他使用者。  
   
-## <a name="remarks"></a>備註  
- REVOKE 陳述式的完整語法相當複雜。 上方的語法圖已簡化，以強調其結構。 撤銷特定安全性實體權限的完整語法描述中所列的主題[安全性實體特定語法](#securable)本主題稍後。  
+## <a name="remarks"></a>Remarks  
+ REVOKE 陳述式的完整語法相當複雜。 上方的語法圖已簡化，以強調其結構。 本主題稍後[安全性實體特定語法](#securable)所列的幾個主題，會描述撤銷特定安全性實體權限的完整語法。  
   
  REVOKE 陳述式可用來移除授與的權限，而 DENY 陳述式可用來避免主體透過 GRANT 取得特定權限。  
   
@@ -165,53 +165,53 @@ REVOKE
   
  CONTROL SERVER 權限的被授與者 (例如系統管理員 (sysadmin) 固定伺服器角色的成員)，可以撤銷伺服器中任何安全性實體的任何權限。 資料庫之 CONTROL 權限的被授與者 (例如 db_owner 固定資料庫角色的成員)，可以撤銷資料庫中任何安全性實體的任何權限。 結構描述之 CONTROL 權限的被授與者，可以撤銷結構描述中任何物件的任何權限。  
   
-##  <a name="securable"></a>安全性實體特定語法  
+##  <a name="securable"></a> 安全性實體特定語法  
  下表列出安全性實體和描述安全性實體特定語法的主題。  
   
 |安全性實體|主題|  
 |---------------|-----------|  
-|應用程式角色|[REVOKE 資料庫主體權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|組件|[撤銷組件的權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
-|非對稱金鑰|[撤銷非對稱金鑰權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
-|可用性群組|[撤銷可用性群組的權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
-|憑證|[REVOKE 憑證權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
-|合約|[REVOKE Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|資料庫|[REVOKE 資料庫權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
-|端點|[REVOKE 端點權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
-|資料庫範圍認證|[REVOKE 資料庫範圍認證 (TRANSACT-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
-|全文檢索目錄|[REVOKE 全文檢索權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|全文檢索停用字詞表|[REVOKE 全文檢索權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|函數|[REVOKE 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|登入|[REVOKE 伺服器主體權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
-|訊息類型|[REVOKE Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|物件|[REVOKE 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|佇列|[REVOKE 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|遠端服務繫結|[REVOKE Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|角色|[REVOKE 資料庫主體權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|路由|[REVOKE Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|結構描述|[REVOKE 結構描述權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
-|搜尋屬性清單|[撤銷搜尋屬性清單權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
-|Server|[REVOKE 伺服器權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
-|服務|[REVOKE Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|預存程序|[REVOKE 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|對稱金鑰|[REVOKE 對稱金鑰權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
-|同義字|[REVOKE 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|系統物件|[撤銷系統物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
-|Table|[REVOKE 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|類型|[REVOKE 類型權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
-|使用者|[REVOKE 資料庫主體權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|檢視|[REVOKE 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|XML 結構描述集合|[撤銷 XML 結構描述集合權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
+|應用程式角色|[REVOKE 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|組件|[REVOKE 組件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
+|非對稱金鑰|[REVOKE 非對稱金鑰權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
+|可用性群組|[REVOKE 可用性群組權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
+|憑證|[REVOKE 憑證權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
+|合約|[REVOKE Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|[資料庫]|[REVOKE 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
+|端點|[REVOKE 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
+|資料庫範圍認證|[REVOKE 資料庫範圍認證 (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
+|全文檢索目錄|[REVOKE 全文檢索權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
+|全文檢索停用字詞表|[REVOKE 全文檢索權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
+|函數|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|登入|[REVOKE 伺服器主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
+|訊息類型|[REVOKE Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Object|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|佇列|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|遠端服務繫結|[REVOKE Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|角色|[REVOKE 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|路由|[REVOKE Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|結構描述|[REVOKE 結構描述權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
+|搜尋屬性清單|[REVOKE 搜尋屬性清單權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
+|[伺服器]|[REVOKE 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
+|服務|[REVOKE Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|預存程序|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|對稱金鑰|[REVOKE 對稱金鑰權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
+|同義字|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|系統物件|[REVOKE 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
+|Table|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|類型|[REVOKE 類型權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
+|使用者|[REVOKE 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|檢視|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|XML 結構描述集合|[REVOKE XML 結構描述集合權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   

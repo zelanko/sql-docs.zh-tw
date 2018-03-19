@@ -1,5 +1,5 @@
 ---
-title: "@@DATEFIRST (TRANSACT-SQL) |Microsoft 文件"
+title: '@@DATEFIRST (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -45,12 +45,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; DATEFIRST (TRANSACT-SQL)
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回目前的值，工作階段， [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)。
+傳回[ SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) 之工作階段的目前值。
   
-如需所有[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和時間資料型別和函式，請參閱[日期和時間資料型別和函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-type"></a>傳回類型  
 **tinyint**
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 SET DATEFIRST 會指定每週第一天。 U.S.English 預設值是 7，也就是星期日。
   
 這個語言設定會影響字元字串轉換成日期值以便儲存在資料庫中的解譯方式，以及儲存在資料庫中之日期值的顯示。 這項設定不會影響日期資料的儲存格式。 在下列範例中，語言會先設定為 `Italian`。 陳述式 `SELECT @@DATEFIRST;` 會傳回 `1`。 然後，語言便設定為 `us_english`。 陳述式 `SELECT @@DATEFIRST;` 會傳回 `7`。
@@ -96,14 +96,14 @@ First Day         Today
 ```  
   
 ## <a name="example"></a>範例
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT @@DATEFIRST;  
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[組態函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
+[組態函式 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   
 

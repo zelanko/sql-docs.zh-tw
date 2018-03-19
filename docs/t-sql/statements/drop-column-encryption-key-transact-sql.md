@@ -1,5 +1,5 @@
 ---
-title: "卸除資料行加密金鑰 (TRANSACT-SQL) |Microsoft 文件"
+title: DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
   
 ## <a name="arguments"></a>引數  
  *key_name*  
- 這是用資料行加密金鑰會卸除資料庫的名稱。  
+ 這是要從資料庫卸除的資料行加密金鑰名稱。  
   
-## <a name="remarks"></a>備註  
- 如果它用來加密資料庫中的任何資料行無法卸除資料行加密金鑰。 使用資料行加密金鑰的所有資料行必須先卸除。  
+## <a name="remarks"></a>Remarks  
+ 如果資料行加密金鑰用來加密資料庫中的任何資料行，即無法卸除。 所有使用資料行加密金鑰的資料行都必須先卸除。  
   
 ## <a name="permissions"></a>Permissions  
- 需要**ALTER ANY COLUMN ENCRYPTION KEY**資料庫的權限。  
+ 需要資料庫的 **ALTER ANY COLUMN ENCRYPTION KEY** 權限。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-column-encryption-key"></a>A. 卸除資料行加密金鑰  
- 下列範例會卸除資料行加密金鑰，稱為`MyCEK`。  
+ 下列範例會卸除名為 `MyCEK` 的資料行加密金鑰。  
   
 ```  
 DROP COLUMN ENCRYPTION KEY MyCEK;  
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [永遠加密 &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [ALTER 資料行加密金鑰 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+ [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)  
   
   

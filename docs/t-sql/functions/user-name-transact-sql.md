@@ -1,5 +1,5 @@
 ---
-title: "USER_NAME (TRANSACT-SQL) |Microsoft 文件"
+title: USER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,13 +52,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>引數  
  *id*  
- 關聯至資料庫使用者的識別碼。 *識別碼*是**int**。它必須用括號括住。  
+ 關聯至資料庫使用者的識別碼。 *id* 為 **int**。它必須用括號括住。  
   
 ## <a name="return-types"></a>傳回類型  
  **nvarchar(256)**  
   
-## <a name="remarks"></a>備註  
- 當*識別碼*已省略，則會假設目前內容中目前的使用者。 如果參數包含 NULL 一詞，就會傳回 NULL。 當呼叫 USER_NAME 時沒有指定*識別碼*之後 EXECUTE AS 陳述式，USER_NAME 會傳回模擬使用者的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則 USER_NAME 會傳回 Windows 主體名稱而非群組。  
+## <a name="remarks"></a>Remarks  
+ 當省略 *id* 時，會假設為目前內容中的目前使用者。 如果參數包含 NULL 一詞，就會傳回 NULL。 在 EXECUTE AS 陳述式後不指定 *id* 來呼叫 USER_NAME 時，USER_NAME 會傳回模擬使用者的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則 USER_NAME 會傳回 Windows 主體名稱而非群組。  
   
 ## <a name="examples"></a>範例  
   
@@ -129,7 +129,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-username-without-an-id"></a>E. 使用 USER_NAME 而不指定識別碼  
  下列範例不指定識別碼來尋找目前使用者的名稱。  
@@ -138,7 +138,7 @@ DBO
 SELECT USER_NAME();  
 ```  
   
- 以下是結果集目前登入的使用者。  
+ 以下為目前登入使用者的結果集。  
   
 ```  
 ------------------------------   
@@ -160,14 +160,14 @@ name
 User7                              
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SYSTEM_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
 

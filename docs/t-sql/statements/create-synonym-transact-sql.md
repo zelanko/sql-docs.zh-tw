@@ -1,5 +1,5 @@
 ---
-title: "建立同義字 (TRANSACT-SQL) |Microsoft 文件"
+title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -70,28 +70,28 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="arguments"></a>引數  
  *schema_name_1*  
- 指定建立同義字的結構描述。 如果*結構描述*未指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用目前使用者的預設結構描述。  
+ 指定建立同義字的結構描述。 如果未指定 *schema*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用目前使用者的預設結構描述。  
   
  *synonym_name*  
  這是新同義字的名稱。  
   
- *伺服器名稱*  
+ *server_name*  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  這是基底物件所在的伺服器名稱。  
   
  *database_name*  
- 這是基底物件所在的資料庫名稱。 如果*database_name*未指定，會使用目前的資料庫名稱。  
+ 這是基底物件所在的資料庫名稱。 如果未指定 *database_name*，就會使用目前資料庫的名稱。  
   
  *schema_name_2*  
- 這是基底物件的結構描述名稱。 如果*schema_name*未指定使用目前使用者的預設結構描述。  
+ 這是基底物件的結構描述名稱。 如果未指定 *schema_name*，就會使用目前使用者的預設結構描述。  
   
  *object_name*  
  這是同義字參考的基底物件名稱。  
   
  當 database_name 是目前的資料庫或 database_name 是 tempdb，而且 object_name 開頭為 # 時，Windows Azure SQL Database 支援三部分名稱格式 database_name.[schema_name].object_name。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在建立同義字時，基底物件不需要存在。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在執行階段檢查基底物件是否存在。  
   
  您可以建立下列物件類型的同義字：  
@@ -103,7 +103,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 |複寫篩選程序|擴充預存程序|  
 |SQL 純量函數|SQL 資料表值函式|  
 |SQL 嵌入資料表值函式|SQL 預存程序|  
-|檢視|資料表<sup>1</sup> （使用者定義）|  
+|檢視|資料表<sup>1</sup> (使用者定義)|  
   
  <sup>1 包括本機和全域暫存資料表</sup>  
   
@@ -199,8 +199,8 @@ SET @Amt = 15;
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [卸除同義字 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

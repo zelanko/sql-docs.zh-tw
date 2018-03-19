@@ -1,5 +1,5 @@
 ---
-title: "ATN2 (TRANSACT-SQL) |Microsoft 文件"
+title: ATN2 (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,9 +47,9 @@ ATN2 ( float_expression , float_expression )
 ```  
   
 ## <a name="arguments"></a>引數  
-*float_expression*是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)的**float**資料型別。
+*float_expression* 為 **float** 資料類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回型
 **float**
   
 ## <a name="examples"></a>範例  
@@ -70,8 +70,8 @@ The ATN2 of the angle is: 0.265345
   
 ## <a name="see-also"></a>另請參閱
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[float 和 real &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[float real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

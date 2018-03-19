@@ -1,5 +1,5 @@
 ---
-title: "常數 (TRANSACT-SQL) |Microsoft 文件"
+title: "常數 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -72,15 +72,15 @@ ms.lasthandoff: 11/21/2017
 字元字串常數支援增強型定序。
   
 > [!NOTE]  
->  字元常數大於 8000 個位元組的型別為**varchar （max)**資料。  
+>  大於 8000 位元組的字元常數類型為 **varchar(max)** 資料。  
   
 ## <a name="unicode-strings"></a>Unicode 字串
-Unicode 字串的格式類似於字元字串，但前面附加了 N 識別碼 (N 代表 SQL-92 標準中的國家 (地區) 語言)。 N 前置詞必須是大寫。 例如，'Michél' 是一個字元常數，N'MICHÉL ' 則是 Unicode 常數時。 Unicode 常數會解譯成 Unicode 資料，並不會用字碼頁來評估。 Unicode 常數有定序。 這個定序主要用來控制比較和區分大小寫。 除非利用 COLLATE 子句來指定定序，否則，Unicode 常數會被指派目前資料庫的預設定序。 Unicode 資料是利用每個字元 2 位元組來儲存的，而不是字元資料的每個字元 1 個位元組。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
+Unicode 字串的格式類似於字元字串，但前面附加了 N 識別碼 (N 代表 SQL-92 標準中的國家 (地區) 語言)。 N 前置詞必須是大寫。 例如，'Michél' 是一個字元常數，而 N'Michél' 則為 Unicode 常數。 Unicode 常數會解譯成 Unicode 資料，並不會用字碼頁來評估。 Unicode 常數有定序。 這個定序主要用來控制比較和區分大小寫。 除非利用 COLLATE 子句來指定定序，否則，Unicode 常數會被指派目前資料庫的預設定序。 Unicode 資料是利用每個字元 2 位元組來儲存的，而不是字元資料的每個字元 1 個位元組。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
   
 Unicode 字串常數支援增強型定序。
   
 > [!NOTE]  
->  大於 8000 個位元組的型別為 Unicode 常數**nvarchar （max)**資料。  
+>  大於 8000 位元組的 Unicode 常數類型為 **nvarchar(max)** 資料。  
   
 ## <a name="binary-constants"></a>二進位常數
 二進位常數的前置詞是 `0x`，它是一個十六進位數字字串。 它們不需加上引號。
@@ -95,15 +95,15 @@ Unicode 字串常數支援增強型定序。
 ```  
   
 > [!NOTE]  
->  大於 8000 個位元組的型別為二進位常數**varbinary （max)**資料。  
+>  大於 8000 位元組的二進位常數類型為 **varbinary(max)** 資料。  
   
-## <a name="bit-constants"></a>位元常數
-**位元**常數由數字 0 或 1，並不會以引號括住。 如果使用大於 1 的數字，它會轉換成 1。
+## <a name="bit-constants"></a>bit 常數
+**bit** 常數會用數字 0 或 1 來表示，不需以引號括住。 如果使用大於 1 的數字，它會轉換成 1。
   
 ## <a name="datetime-constants"></a>datetime 常數
-**datetime**常數利用特定的格式，括在單引號中的字元日期值來表示。
+**datetime** 常數是利用特定格式的字元日期值來表示，並以單引號括住。
   
-以下是範例的**datetime**常數：
+以下是 **datetime** 常數的範例：
   
 ```sql
 'December 5, 1985'  
@@ -112,7 +112,7 @@ Unicode 字串常數支援增強型定序。
 '12/5/98'  
 ```  
   
-日期時間常數的範例如下：
+datetime 常數的範例如下：
   
 ```sql
 '14:30:24'  
@@ -120,19 +120,19 @@ Unicode 字串常數支援增強型定序。
 ```  
   
 ## <a name="integer-constants"></a>整數常數
-**整數**常數由未以引號括住，而且不包含小數點的數字的字串。 **整數**常數必須是整數; 不能包含小數點。
+**integer** 常數是以沒有使用引號括住的數字字串來表示，且不含小數點。 **integer** 常數必須是整數；不能包含小數點。
   
-以下是範例的**整數**常數：
+以下是 **integer** 常數的範例：
   
 ```sql
 1894  
 2  
 ```  
   
-## <a name="decimal-constants"></a>十進位常數
-**十進位**常數用沒有加上引號且包含小數點的數字的字串來表示。
+## <a name="decimal-constants"></a>decimal 常數
+**decimal** 常數以沒有用引號括住的數字字串來表示，其中包含小數點。
   
-以下是範例的**十進位**常數：
+以下是 **decimal** 常數的範例：
   
 ```sql
 1894.1204  
@@ -140,9 +140,9 @@ Unicode 字串常數支援增強型定序。
 ```  
   
 ## <a name="float-and-real-constants"></a>float 和 real 常數
-**float**和**真實**常數利用科學記號標記法來表示。
+**float** 和 **real** 常數是使用科學記號表示法來表示。
   
-以下是範例的**float**或**真實**值：
+以下是 **float** 或 **real** 值的範例：
   
 ```sql
 101.5E5  
@@ -150,14 +150,14 @@ Unicode 字串常數支援增強型定序。
 ```  
   
 ## <a name="money-constants"></a>money 常數
-**money**常數會以貨幣符號做為前置詞與可選擇小數點的數字的字串表示。 **money**常數不加引號。
+**money** 常數是用數字字串來表示，可選擇含有小數點，前面也可選擇附加貨幣符號。 **money** 常數未以引號括住。
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會強制執行任何一種分組規則，如在代表貨幣的字串中，每三位數插入一個逗號 (,)。
   
 > [!NOTE]  
->  在指定的 「 逗號都會被忽略任何地方**money**常值。  
+>  在指定 **money** 常值的任何位置中，逗號都會被忽略。  
   
-以下是範例的**money**常數：
+以下是 **money** 常數的範例：
   
 ```sql
 $12  
@@ -165,7 +165,7 @@ $542023.14
 ```  
   
 ## <a name="uniqueidentifier-constants"></a>uniqueidentifier 常數
-**uniqueidentifier**常數是代表 GUID 的字串。 您可以依照字元或二進位字串格式來指定它們。
+**uniqueidentifier** 常數是代表 GUID 的字串。 您可以依照字元或二進位字串格式來指定它們。
   
 下列範例指定相同的 GUID：
   
@@ -175,29 +175,29 @@ $542023.14
 ```  
   
 ## <a name="specifying-negative-and-positive-numbers"></a>指定負數和正數  
-若要指示數字為正數或負數，套用 **+** 或 **-** 數值常數的一元運算子。 這會建立一個代表帶正負號的數值之數值運算式。 數值常數時，用正數 **+** 或 **-** 一元運算子不會套用。
+若要指示數字是正數或負數，請將 **+** 或 **-** 一元運算子套用於數值常數。 這會建立一個代表帶正負號的數值之數值運算式。 當未套用 **+** 或 **-** 一元運算子時，數值常數會使用正數。
   
-簽署**整數**運算式：  
+帶正負號的 **integer** 運算式：  
   
 ```sql
 +145345234
 -2147483648
 ```
-簽署**十進位**運算式：  
+帶正負號的 **decimal** 運算式：  
   
 ```sql
 +145345234.2234
 -2147483648.10
 ```
   
-簽署**float**運算式：  
+帶正負號的 **float** 運算式：  
   
 ```sql
 +123E-3
 -12E5
 ```
   
-簽署**money**運算式：  
+帶正負號的 **money** 運算式：  
   
 ```sql
 -$45.56
@@ -205,11 +205,11 @@ $542023.14
 ```
   
 ## <a name="enhanced-collations"></a>增強型定序  
-SQL Server 支援字元及支援增強型定序的 Unicode 字串常數。 如需詳細資訊，請參閱[COLLATE &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)子句。
+SQL Server 支援字元及支援增強型定序的 Unicode 字串常數。 如需詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 子句。
   
 ## <a name="see-also"></a>另請參閱
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)
+[運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
   
   

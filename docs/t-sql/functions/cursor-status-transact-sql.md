@@ -1,5 +1,5 @@
 ---
-title: "CURSOR_STATUS (TRANSACT-SQL) |Microsoft 文件"
+title: CURSOR_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -65,14 +65,14 @@ CURSOR_STATUS
 指定一個常數來指示資料指標的來源是本機變數。
   
 '*cursor_variable*'  
-這是資料指標變數的名稱。 資料指標變數必須定義使用**游標**資料型別。
+這是資料指標變數的名稱。 您必須使用 **cursor** 資料類型來定義資料指標變數。
   
 ## <a name="return-types"></a>傳回型別
 **smallint**
   
 |傳回值|資料指標名稱|資料指標變數|  
 |---|---|---|
-|1|資料指標的結果集至少有一個資料列。<br /><br /> 非機密資料指標和索引鍵集資料指標，其結果集至少有一個資料列。<br /><br /> 動態資料指標的結果集可以有零、一或多個資料列。|配置給這個變數的資料指標是開啟的。<br /><br /> 非機密資料指標和索引鍵集資料指標，其結果集至少有一個資料列。<br /><br /> 動態資料指標的結果集可以有零、一或多個資料列。|  
+|@shouldalert|資料指標的結果集至少有一個資料列。<br /><br /> 非機密資料指標和索引鍵集資料指標，其結果集至少有一個資料列。<br /><br /> 動態資料指標的結果集可以有零、一或多個資料列。|配置給這個變數的資料指標是開啟的。<br /><br /> 非機密資料指標和索引鍵集資料指標，其結果集至少有一個資料列。<br /><br /> 動態資料指標的結果集可以有零、一或多個資料列。|  
 |0|資料指標的結果集是空的。*|配置給這個變數的資料指標是開啟的，但結果集確定空白。*|  
 |-1|資料指標已關閉。|配置給這個變數的資料指標已關閉。|  
 |-2|不適用。|可為以下項目：<br /><br /> 先前呼叫的程序未指派任何資料指標給這個 OUTPUT 變數。<br /><br /> 先前呼叫的程序指派一個資料指標給這個 OUTPUT 變數，但程序完成時，這個資料指標在關閉狀態中。 因此，這個資料指標已取消配置，並未傳回給發出呼叫的程序。<br /><br /> 沒有指派給宣告的資料指標變數之資料指標。|  
@@ -134,7 +134,7 @@ After Close
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[資料指標函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[資料指標函式 &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

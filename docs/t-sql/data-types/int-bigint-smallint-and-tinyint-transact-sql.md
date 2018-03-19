@@ -1,5 +1,5 @@
 ---
-title: "int、 bigint、 smallint 和 tinyint (TRANSACT-SQL) |Microsoft 文件"
+title: "int、bigint、smallint 和 tinyint (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 9/8/2017
 ms.prod: sql-non-specified
@@ -44,33 +44,33 @@ ms.lasthandoff: 11/21/2017
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-使用整數資料的 Exact-number 資料類型。 若要在資料庫中儲存空間，請使用可以可靠地包含所有可能值的最小資料類型。 例如，tinyint 就足以說明個人的年齡因為沒有人居住是 255 歲以上。 但 tinyint 由於一棟建築物可能超過 255 年，會無法完全建置的天數。
+使用整數資料的 Exact-number 資料類型。 若要節省資料庫中的空間，請使用能夠包含所有可能值的最小資料類型。 例如，若要儲存一個人的年齡，tinyint 便已足夠，因為沒有人的年齡會超過 255 歲。 但 tinyint 在用於建築物的屋齡上便可能不足，因為建築物的屋齡可超過 255 年。
   
-|資料類型|範圍|儲存空間|  
+|資料類型|範圍|Storage|  
 |---|---|---|
 |**bigint**|-2^63 (-9,223,372,036,854,775,808) 到 2^63-1 (9,223,372,036,854,775,807)|8 個位元組|  
 |**int**|-2^31 (-2,147,483,648) 到 2^31-1 (2,147,483,647)|4 個位元組|  
 |**smallint**|-2^15 (-32,768) 到 2^15-1 (32,767)|2 位元組|  
 |**tinyint**|0 至 255|1 位元組|  
   
-## <a name="remarks"></a>備註  
-**Int**資料類型是中的主要整數資料類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **Bigint**資料型別僅供使用時的整數值可能超過支援的範圍**int**資料型別。
+## <a name="remarks"></a>Remarks  
+**int** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的主要整數資料類型。 **bigint** 資料類型通常是在整數值可能超過 **int** 資料類型所支援的範圍時使用。
   
-**bigint**符合之間**smallmoney**和**int**資料類型優先順序圖表中。
+**bigint** 位於資料類型優先順序圖表中 **smallmoney** 和 **int** 之間。
   
-函式會傳回**bigint**只有當參數運算式是**bigint**資料型別。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不會自動升級其他整數資料類型 (**tinyint**， **smallint**，和**int**) 至**bigint**。
+僅當參數運算式的資料類型是 **bigint** 時，函式才會傳回 **bigint**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會自動將其他整數類型 (**tinyint**、**smallint**，及 **int**) 提升為 **bigint**。
   
 > [!CAUTION]  
->  當您使用 +、-、 \*，/，或 %算術運算子來執行的隱含或明確轉換**int**， **smallint**， **tinyint**，或**bigint**常數值**float**，**真實**，**十進位**或**數值**資料類型、 規則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時它會計算的資料類型和運算式結果的有效位數而有所不同查詢是否為自動參數化，或不適用。  
+>  當您使用 +、-、\*、/ 或 % 算術運算子，以隱含或明確方式，將 **int**、**smallint**、**tinyint** 或 **bigint** 常數值轉換為 **float**、**real**、**decimal** 或 **numeric** 資料類型時， 在計算運算式結果的資料類型和有效位數時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所套用的規則，會根據查詢是否自動參數化而有所不同。  
 >   
->  因此，查詢中類似的運算式，有時候也會產生不同的結果。 當查詢不是自動參數化時，常數值會先轉換為**數值**，其有效位數夠大正好足以容納常數的值，再轉換為指定的資料類型。 例如，常數值 1 會轉換成**numeric （1，0）**，250 的常數值會轉換為**數值 （3，0）**。  
+>  因此，查詢中類似的運算式，有時候也會產生不同的結果。 如果查詢不是自動參數化，則常數值會先轉換為 **numeric** (其有效位數只是剛好可以容納常數值) 之後，再轉換為指定的資料類型。 例如，常數值 1 會轉換成 **numeric (1, 0)**，常數值 250 則會轉換成 **numeric (3, 0)**。  
 >   
->  自動參數化查詢時，常數值一律會轉換成**數值 （10，0）**再轉換為最終資料類型。 如果有用到 / 運算子，則不僅類似查詢的結果類型有效位數不同，結果值也可能不一樣。 例如，包含運算式的自動參數化查詢的結果值`SELECT CAST (1.0 / 7 AS float)`，與不是自動參數化，同一個查詢的結果值不同，因為在自動參數化查詢的結果會截斷才能容納到**數值 （10，0）**資料型別。  
+>  當查詢經過自動參數化時，常數值一律會先轉換為 **numeric (10, 0)**，再轉換為最終資料類型。 如果有用到 / 運算子，則不僅類似查詢的結果類型有效位數不同，結果值也可能不一樣。 例如，包含運算式 `SELECT CAST (1.0 / 7 AS float)` 的自動參數化查詢結果值，與非自動化參數之相同查詢的結果值不同，因為自動化參數的查詢結果，會配合 **numeric (10, 0)** 資料類型而被截斷。  
   
 ## <a name="converting-integer-data"></a>轉換整數資料
 當整數隱含地轉換成字元資料類型時，如果該整數太大而無法放入字元欄位中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會輸入 ASCII 字元 42，也就是星號 (*)。
   
-大於 2,147,483,647 會轉換成整數常數**十進位**資料類型，而不**bigint**資料型別。 下列範例示範當超過臨界值時，從變更結果的資料型別**int**至**十進位**。
+大於 2,147,483,647 的整數常數會轉換成 **decimal** 資料類型，而不是 **bigint** 資料類型。 下列範例顯示當超出臨界值時，結果的資料類型會從 **int** 變更為 **decimal**。
   
 ```sql
 SELECT 2147483647 / 2 AS Result1, 2147483649 / 2 AS Result2 ;  
@@ -84,7 +84,7 @@ Result1      Result2
 ```  
   
 ## <a name="examples"></a>範例  
-下列範例會建立資料表，使用**bigint**， **int**， **smallint**，和**tinyint**資料型別。 值插入每個資料行，並在 SELECT 陳述式中傳回值。
+下列範例會使用 **bigint**、**int**、**smallint**，和 **tinyint** 資料類型建立資料表。 值插入每個資料行，並在 SELECT 陳述式中傳回值。
   
 ```sql
 CREATE TABLE dbo.MyTable  
@@ -119,6 +119,6 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[sys.types &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

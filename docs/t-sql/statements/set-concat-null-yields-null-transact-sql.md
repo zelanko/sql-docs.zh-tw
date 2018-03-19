@@ -1,5 +1,5 @@
 ---
-title: "SET CONCAT_NULL_YIELDS_NULL (TRANSACT-SQL) |Microsoft 文件"
+title: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -60,17 +60,17 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當 SET CONCAT_NULL_YIELDS_NULL 是 ON 時，串連 NULL 值和字串會產生 NULL 結果。 例如，`SELECT 'abc' + NULL` 會產生 `NULL`。 當 SET CONCAT_NULL_YIELDS_NULL 是 OFF 時，串連 Null 值和字串會產生字串本身 (將 Null 值當作空字串來處理)。 例如，`SELECT 'abc' + NULL` 會產生 `abc`。  
   
- 如果未指定 SET CONCAT_NULL_YIELDS_NULL，設定**CONCAT_NULL_YIELDS_NULL**資料庫選項會套用。  
+ 如果未指定 SET CONCAT_NULL_YIELDS_NULL，則會套用 **CONCAT_NULL_YIELDS_NULL** 資料庫選項的設定。  
   
 > [!NOTE]  
 >  SET CONCAT_NULL_YIELDS_NULL 與 ALTER DATABASE 的 CONCAT_NULL_YIELDS_NULL 設定相同。  
   
  SET CONCAT_NULL_YIELDS_NULL 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
- 當您建立或變更計算資料行索引或索引檢視時，SET CONCAT_NULL_YIELDS_NULL 必須是 ON。 如果 SET CONCAT_NULL_YIELDS_NULL 是 OFF，任何含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式將會失敗。 計算資料行上使用索引檢視表和索引的必要 SET 選項設定的相關資訊，請參閱"考量當您使用 SET 陳述式 」，在[SET 陳述式 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+ 當您建立或變更計算資料行索引或索引檢視時，SET CONCAT_NULL_YIELDS_NULL 必須是 ON。 如果 SET CONCAT_NULL_YIELDS_NULL 是 OFF，任何含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式將會失敗。 如需使用索引檢視表和計算資料行索引時必要 SET 選項設定的詳細資訊，請參閱 [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) 中的＜使用 SET 陳述式時的考量＞一節。  
   
  當 CONCAT_NULL_YIELDS_NULL 設為 OFF 時，無法出現跨越伺服器界限的字串串連。  
   
@@ -102,8 +102,8 @@ SELECT 'abc' + NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

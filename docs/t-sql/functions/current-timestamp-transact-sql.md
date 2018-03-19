@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_TIMESTAMP (TRANSACT-SQL) |Microsoft 文件"
+title: CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,14 +47,14 @@ ms.lasthandoff: 11/21/2017
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回目前資料庫系統時間戳記，當做**datetime**不含資料庫時區位移的值。 這個值衍生自正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統。
+傳回目前資料庫的系統時間戳記，當作 **datetime** 值 (不含資料庫時區位移)。 這個值衍生自正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統。
   
 > [!NOTE]  
 >  SYSDATETIME 和 SYSUTCDATE 比 GETDATE 和 GETUTCDATE 具有更多小數秒數有效位數。 SYSDATETIMEOFFSET 包含系統時區位移。 SYSDATETIME、SYSUTCDATE 和 SYSDATETIMEOFFSET 可指派給任何日期和時間類型的變數。  
   
-此函式是相等的 ANSI SQL [GETDATE](../../t-sql/functions/getdate-transact-sql.md)。
+這個函式是相當於 [GETDATE](../../t-sql/functions/getdate-transact-sql.md) 的 ANSI SQL。
   
-如需所有[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和時間資料型別和函式，請參閱[日期和時間資料類型與函數](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,8 +70,8 @@ CURRENT_TIMESTAMP
 ## <a name="return-type"></a>傳回類型  
 **datetime**
   
-## <a name="remarks"></a>備註  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式可以參考 CURRENT_TIMESTAMP 任何位置，它們可以參考**datetime**運算式。
+## <a name="remarks"></a>Remarks  
+只要是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以參考 **datetime** 運算式的任何位置，它們就可以參考 CURRENT_TIMESTAMP。
   
 CURRENT_TIMESTAMP 是不具決定性的函數。 參考這個資料行的檢視和運算式，是無法編製索引的。
   
@@ -136,7 +136,7 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT CURRENT_TIMESTAMP;  

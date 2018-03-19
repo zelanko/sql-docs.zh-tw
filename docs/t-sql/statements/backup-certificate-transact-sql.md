@@ -1,5 +1,5 @@
 ---
-title: "備份憑證 (TRANSACT-SQL) |Microsoft 文件"
+title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -87,12 +87,12 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *decryption_password*  
  這是備份私密金鑰之前用來解密該金鑰的密碼。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果是在資料庫中利用密碼加密私密金鑰，則必須指定解密密碼。  
   
  將私密金鑰備份至檔案時，需要加密。 用以保護備份憑證的密碼與用以加密憑證之私密金鑰的密碼並不相同。  
   
- 若要還原備份的憑證，使用[CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)陳述式。  
+ 若要還原備份憑證，請使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 陳述式。  
   
 ## <a name="permissions"></a>Permissions  
  需要憑證的 CONTROL 權限，且必須知道用來加密私密金鑰的密碼。 如果只備份憑證的公開部份，則需要憑證的某項權限，且未對呼叫端拒絕憑證的 VIEW 權限。  
@@ -128,10 +128,10 @@ BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [卸除憑證 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
   
   
 

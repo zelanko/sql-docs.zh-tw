@@ -1,5 +1,5 @@
 ---
-title: "HOST_NAME (TRANSACT-SQL) |Microsoft 文件"
+title: HOST_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/21/2017
 ms.prod: sql-non-specified
@@ -47,9 +47,9 @@ HOST_NAME ()
 ```  
   
 ## <a name="return-types"></a>傳回類型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當系統函數的參數是選擇性時，就會假設使用目前資料庫、主機電腦、伺服器使用者或資料庫使用者。 內建函數後面一律必須接著括號。  
   
  系統函數可以用於選取清單、WHERE 子句以及任何可以使用運算式的位置。  
@@ -71,8 +71,8 @@ CREATE TABLE Orders
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [系統函式 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

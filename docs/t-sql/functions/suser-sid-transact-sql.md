@@ -1,5 +1,5 @@
 ---
-title: "SUSER_SID (TRANSACT-SQL) |Microsoft 文件"
+title: SUSER_SID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -53,25 +53,25 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- **'** *登入* **'**  
-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **'** *login* **'**  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- 這是使用者的登入名稱。 *登入*是**sysname**。 *登入*，這是選擇性的可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 使用者或群組。 如果*登入*是未指定，會傳回目前安全性內容的相關資訊。 如果參數包含 NULL 一詞，就會傳回 NULL。  
+ 這是使用者的登入名稱。 *login* 為 **sysname**。 選擇性的 *login* 可為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組。 若沒有指定 *login*，則會傳回目前安全性內容的相關資訊。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
- *參數 2*  
-**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ *Param2*  
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- 指定是否要驗證登入名稱。 *Param2*的型別**int**和是選擇性的。 當*Param2*是 0，則不會驗證登入名稱。 當*Param2*不指定為 0 時，要完全相同的登入名稱為儲存在已驗證的 Windows 登入名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 指定是否要驗證登入名稱。 *Param2* 的類型為 **int** 且為選擇性。 當 *Param2* 為 0 時，不會驗證登入名稱。 當 *Param2* 未指定為 0 時，會驗證 Window 登入名稱與儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的登入名稱完全相同。  
   
 ## <a name="return-types"></a>傳回類型  
  **varbinary(85)**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  SUSER_SID 可在 ALTER TABLE 或 CREATE TABLE 中，用來當做 DEFAULT 條件約束使用。 SUSER_SID 可用在選取清單、WHERE 子句及任何允許使用運算式的位置中。 SUSER_SID 後面一律必須接著括號，即使未指定任何參數，也是如此。  
   
  當呼叫 SUSER_SID 時，如果未設定引數，它會傳回目前安全性內容的 SID。 當利用 EXECUTE AS，在已切換內容的批次內，未設定引數的情況下呼叫 SUSER_SID 時，它會傳回模擬內容的 SID。 當從模擬內容呼叫時，SUSER_SID(ORIGINAL_LOGIN()) 會傳回原始內容的 SID。  
   
- 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序與 Windows 定序不同時，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 以不同的格式儲存登入，SUSER_SID 可能會失敗。 例如，如果 Windows 電腦 TestComputer 具有登入使用者，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將該登入儲存為 TESTCOMPUTER\User，則查閱 TestComputer\User 登入時可能無法正確地解析登入名稱。 若要跳過此驗證的登入名稱，請使用*Param2*。 不同的定序通常是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤 15401 的原因：  
+ 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序與 Windows 定序不同時，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 以不同的格式儲存登入，SUSER_SID 可能會失敗。 例如，如果 Windows 電腦 TestComputer 具有登入使用者，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將該登入儲存為 TESTCOMPUTER\User，則查閱 TestComputer\User 登入時可能無法正確地解析登入名稱。 若要略過登入名稱的驗證作業，請使用 *Param2*。 不同的定序通常是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤 15401 的原因：  
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
@@ -85,9 +85,9 @@ SELECT SUSER_SID('sa');
 ```  
   
 ### <a name="b-using-susersid-with-a-specific-login"></a>B. 搭配特定登入使用 SUSER_SID  
- 下列範例會傳回安全性識別碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`sa`登入。  
+ 下列範例會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 登入的安全性識別碼。  
   
-**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -97,7 +97,7 @@ GO
 ### <a name="c-using-susersid-with-a-windows-user-name"></a>C. 搭配使用 SUSER_SID 與 Windows 使用者名稱  
  下列範例會傳回 Windows 使用者 `London\Workstation1` 的安全性識別碼。  
   
-**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -123,18 +123,18 @@ GO
 ```  
   
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. 比較 Windows 登入名稱與 SQL Server 中所儲存的登入名稱  
- 下列範例示範如何使用*Param2*從 Windows 取得 SID，並使用該 SID 做為輸入`SUSER_SNAME`函式。 此範例以 Windows 中的儲存格式 (`TestComputer\User`) 提供登入，並以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的儲存格式 (`TESTCOMPUTER\User`) 傳回登入。  
+ 下列範例示範如何使用 *Param2* 從 Windows 取得 SID，並使用該 SID 作為 `SUSER_SNAME` 函式的輸入。 此範例以 Windows 中的儲存格式 (`TestComputer\User`) 提供登入，並以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的儲存格式 (`TESTCOMPUTER\User`) 傳回登入。  
   
-**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [ORIGINAL_LOGIN &#40;TRANSACT-SQL &#41;](../../t-sql/functions/original-login-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [binary 和 varbinary &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
- [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [binary 和 varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
+ [系統函式 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

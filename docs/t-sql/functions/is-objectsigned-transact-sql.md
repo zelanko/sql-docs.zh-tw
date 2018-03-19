@@ -1,5 +1,5 @@
 ---
-title: "IS_OBJECTSIGNED (TRANSACT-SQL) |Microsoft 文件"
+title: IS_OBJECTSIGNED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/10/2016
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ IS_OBJECTSIGNED (
 ```  
   
 ## <a name="arguments"></a>引數  
- **' OBJECT'**  
+ **'OBJECT'**  
  安全性實體類別的類型。  
   
  *@object_id*  
- 正在測試之物件的 object_id。 *@object_id*型別**int**。  
+ 正在測試之物件的 object_id。 *@object_id* 的類型為 **int**。  
   
  *@class*  
  物件的類別：  
@@ -61,22 +61,22 @@ IS_OBJECTSIGNED (
   
 -   'asymmetric key'  
   
- *@class*是**sysname**。  
+ *@class* 為 **sysname**。  
   
  *@thumbprint*  
- 物件的 SHA 指模。 *@thumbprint*型別**varbinary(32)**。  
+ 物件的 SHA 指模。 *@thumbprint* 的類型為 **varbinary(32)**。  
   
 ## <a name="returned-types"></a>傳回的類型  
  **int**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  IS_OBJECTSIGNED 會傳回下列值。  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |------------------|-----------------|  
-|NULL|物件未簽署，或物件不是有效。|  
+|NULL|物件未簽署，或物件無效。|  
 |0|物件已簽署，但簽章無效。|  
-|1|已簽署物件。|  
+|@shouldalert|已簽署物件。|  
   
 ## <a name="permissions"></a>Permissions  
  需要憑證或非對稱金鑰的 VIEW DEFINITION。  
@@ -84,7 +84,7 @@ IS_OBJECTSIGNED (
 ## <a name="examples"></a>範例  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. 顯示資料庫的擴充屬性  
- 下列範例會測試中的 spt_fallback_db 資料表**主要**資料庫由結構描述簽署憑證簽署。  
+ 下列範例會測試 **master** 資料庫中的 spt_fallback_db 資料表是否已由結構描述簽署憑證所簽署。  
   
 ```  
 USE master;  
@@ -107,7 +107,7 @@ IS_OBJECTSIGNED(
 ) AS [Is the object signed?] ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.fn_check_object_signatures &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.fn_check_object_signatures &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   

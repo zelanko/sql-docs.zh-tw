@@ -1,5 +1,5 @@
 ---
-title: "數學函數 (TRANSACT-SQL) |Microsoft 文件"
+title: "數學函式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 |[COT](../../t-sql/functions/cot-transact-sql.md)|[RADIANS](../../t-sql/functions/radians-transact-sql.md)||  
   
 > [!NOTE]  
->  ABS、CEILING、DEGREES、FLOOR、POWER、RADIANS 和 SIGN 等算術函數，會傳回資料類型與輸入值相同的值。 三角和其他功能，包括 EXP、 記錄、 LOG10、 SQUARE 和 SQRT、 轉型到其輸入的值**float**並傳回**float**值。  
+>  ABS、CEILING、DEGREES、FLOOR、POWER、RADIANS 和 SIGN 等算術函數，會傳回資料類型與輸入值相同的值。 三角和其他函式 (包括 EXP、LOG、LOG10、SQUARE 和 SQRT) 會將它們的輸入值轉換成 **float** 及傳回 **float** 值。  
   
- 除了 RAND，所有數學函數都是具決定性的函數。 這表示每次利用一組特定輸入值來呼叫它們時，都會傳回相同的結果。 只有在指定了初始參數時，RAND 才具決定性。 如需函數決定論的詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+ 除了 RAND，所有數學函數都是具決定性的函數。 這表示每次利用一組特定輸入值來呼叫它們時，都會傳回相同的結果。 只有在指定了初始參數時，RAND 才具決定性。 如需函式確定性的詳細資訊，請參閱[確定性與非確定性函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
-## <a name="see-also"></a>請參閱＜  
-  [算術運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+  [算術運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
   [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

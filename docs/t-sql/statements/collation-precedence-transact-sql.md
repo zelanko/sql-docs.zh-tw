@@ -1,5 +1,5 @@
 ---
-title: "定序優先順序 (TRANSACT-SQL) |Microsoft 文件"
+title: "定序優先順序 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 -   輸入是字元字串而不傳回字元字串的區分定序運算子 (如 LIKE 和 IN) 所用的定序。  
   
- 定序優先順序規則只適用於字元字串資料類型： **char**， **varchar**，**文字**， **nchar**， **nvarchar**，和**ntext**。 其他資料類型的物件不參與定序評估。  
+ 定序優先順序規則只適用於字元字串資料類型：**char**、**varchar**、**text**、**nchar**、**nvarchar** 和 **ntext**。 其他資料類型的物件不參與定序評估。  
   
 ## <a name="collation-labels"></a>定序標籤  
  下表列出和描述識別所有物件之定序的四個類別目錄。 每個類別目錄的名稱都稱為定序標籤。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
      `WHERE ColumnA = ( 'abc' COLLATE French_CI_AS) COLLATE French_CS_AS`  
   
--   字碼頁轉換為**文字**不允許資料類型。 您無法轉換**文字**到另一個具有不同的字碼頁從一個定序運算式。 當右文字運算元的定序，其字碼頁與左文字運算元不同時，指派運算子便不能指派值。  
+-   不允許進行 **text** 資料類型的字碼頁轉換。 若有不同的字碼頁，您便不能將 **text** 運算式的定序轉換成另外一個。 當右文字運算元的定序，其字碼頁與左文字運算元不同時，指派運算子便不能指派值。  
   
  定序優先順序是在資料類型轉換之後所決定的。 得到結果定序的運算元，可能不是提供最終結果的資料類型之運算元。 例如，請考量下列批次：  
   
@@ -228,7 +228,7 @@ a
  字串串連運算子區分定序，兩個字串運算元和結果都會指派定序優先順序最高之運算元的定序標籤。 UNION ALL 和 CASE 運算子不區分定序，所有字串運算元和最終結果都會指派含最高優先順序之運算元的定序標籤。 UNION ALL 運算元和結果的定序優先順序，是按資料行逐一評估的。  
   
 ### <a name="functions-and-collation"></a>函數和定序  
- CAST、 CONVERT 和 COLLATE 函數會區分定序**char**， **varchar**，和**文字**資料型別。 如果 CAST 和 CONVERT 函數的輸入和輸出是字元字串，輸出字串會採用輸入字串的定序標籤。 如果輸入不是字元字串，輸出字串就是強制預設，且會指派連接之目前資料庫的定序，或參考 CAST 或 CONVERT 的使用者自訂函數、預存程序或觸發程序所在的資料庫定序。  
+ CAST、CONVERT，和 COLLATE 函式會針對 **char**、**varchar** 及 **text** 資料類型區分定序。 如果 CAST 和 CONVERT 函數的輸入和輸出是字元字串，輸出字串會採用輸入字串的定序標籤。 如果輸入不是字元字串，輸出字串就是強制預設，且會指派連接之目前資料庫的定序，或參考 CAST 或 CONVERT 的使用者自訂函數、預存程序或觸發程序所在的資料庫定序。  
   
  如果是傳回字串而沒有輸入字串的內建函數，結果字串便是強制預設，且會指派目前資料庫的定序，或參考了這個函數的使用者自訂函數、預存程序或觸發程序所在的資料庫定序。  
   
@@ -244,10 +244,10 @@ a
 |LOWER|SUBSTRING|  
 |PATINDEX|UPPER|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
- [資料類型轉換 &#40; Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

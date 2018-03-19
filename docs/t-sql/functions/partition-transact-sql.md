@@ -1,5 +1,5 @@
 ---
-title: "$PARTITION (TRANSACT-SQL) |Microsoft 文件"
+title: $PARTITION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ ms.lasthandoff: 11/21/2017
  這是要套用一組資料分割資料行值的任何現有資料分割函數的名稱。  
   
  *expression*  
- 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)資料型別必須符合或可隱含轉換成其對應的分割資料行的資料類型。 *運算式*也可以是目前參與分割區資料行名稱*partition_function_name*。  
+ 為資料類型必須完全符合或可隱含轉換成對應分割資料行之資料類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *expression* 也可以是目前參與 *partition_function_name* 之分割資料行的名稱。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>備註  
- $PARTITION 傳回**int**介於 1 到資料分割函數的資料分割數目之間的值。  
+## <a name="remarks"></a>Remarks  
+ $PARTITION 會傳回一個 1 和資料分割函式的分割區數目之間的 **int** 值。  
   
  $PARTITION 會傳回任何有效值的資料分割編號，不論使用資料分割函數的資料分割資料表或索引中目前的值為何，都是如此。  
   
@@ -82,7 +82,7 @@ GO
 ### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>B. 取得在資料分割資料表或索引的每個非空白資料分割中之資料列數目  
  下列範例會傳回包含資料之 `TransactionHistory` 資料表的每個資料分割中之資料列數目。 `TransactionHistory` 資料表使用資料分割函數 `TransactionRangePF1`，它在 `TransactionDate` 資料行上進行資料分割。  
   
- 若要執行這個範例，您必須先針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫執行 PartitionAW.sql 指令碼。 如需詳細資訊，請參閱[PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
+ 若要執行這個範例，您必須先針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫執行 PartitionAW.sql 指令碼。 如需詳細資訊，請參閱 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,14 +98,14 @@ GO
  下列範例會傳回 `5` 資料表之第 `TransactionHistory` 個資料分割的所有資料列。  
   
 > [!NOTE]  
->  若要執行這個範例，您必須先針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫執行 PartitionAW.sql 指令碼。 如需詳細資訊，請參閱[PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
+>  若要執行這個範例，您必須先針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫執行 PartitionAW.sql 指令碼。 如需詳細資訊，請參閱 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
   
 ```  
 SELECT * FROM Production.TransactionHistory  
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   
   

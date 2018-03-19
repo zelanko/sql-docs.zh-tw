@@ -1,5 +1,5 @@
 ---
-title: "ALTER SERVER ROLE (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-non-specified
@@ -64,37 +64,37 @@ ALTER SERVER ROLE  server_role_name  DROP MEMBER login;
 *server_role_name*  
 這是要變更的伺服器角色名稱。  
   
-加入成員*server_principal*  
-將指定的伺服器主體加入至伺服器角色。 *server_principal*可以是登入或使用者定義伺服器角色。 *server_principal*不能是固定的伺服器角色、 資料庫角色或 sa。  
+ADD MEMBER *server_principal*  
+將指定的伺服器主體加入至伺服器角色。 *server_principal* 可以是登入或使用者定義的伺服器角色。 *server_principal* 不能是固定伺服器角色、資料庫角色或系統管理員。  
   
 DROP MEMBER *server_principal*  
-從伺服器角色移除指定的伺服器主體。 *server_principal*可以是登入或使用者定義伺服器角色。 *server_principal*不能是固定的伺服器角色、 資料庫角色或 sa。  
+從伺服器角色移除指定的伺服器主體。 *server_principal* 可以是登入或使用者定義的伺服器角色。 *server_principal* 不能是固定伺服器角色、資料庫角色或系統管理員。  
   
-具有名稱 **=**  *new_server_role_name*  
+WITH NAME **=***new_server_role_name*  
 指定使用者定義伺服器角色的新名稱。 此名稱不能已存在於伺服器中。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 變更使用者定義伺服器角色的名稱不會變更角色的識別碼、擁有者或權限。  
   
-變更角色成員資格， `ALTER SERVER ROLE` sp_addsrvrolemember 和 sp_dropsrvrolemember 取代。 這些預存程序都已被取代。  
+為變更角色成員資格，`ALTER SERVER ROLE` 會取代 sp_addsrvrolemember 和 sp_dropsrvrolemember。 這些預存程序都已被取代。  
   
 您可以查詢 `sys.server_role_members` 和 `sys.server_principals` 目錄檢視來檢視伺服器角色。  
   
-若要變更使用者定義伺服器角色的擁有者，請使用[ALTER AUTHORIZATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+若要變更使用者定義伺服器角色的擁有者，請使用 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
-需要`ALTER ANY SERVER ROLE`在伺服器上的權限變更使用者定義伺服器角色的名稱。  
+需要伺服器的 `ALTER ANY SERVER ROLE` 權限，才能變更使用者定義伺服器角色的名稱。  
   
-**固定的伺服器角色**  
+**固定伺服器角色**  
   
 若要將成員加入至固定伺服器角色，您必須是該固定伺服器角色的成員，或是 `sysadmin` 固定伺服器角色的成員。  
   
 > [!NOTE]  
->  `CONTROL SERVER`和`ALTER ANY SERVER ROLE`權限並不足夠執行`ALTER SERVER ROLE`固定的伺服器角色，和`ALTER`固定的伺服器角色不能授與權限。  
+>  `CONTROL SERVER` 和 `ALTER ANY SERVER ROLE` 權限並不足以執行固定伺服器角色的 `ALTER SERVER ROLE`，`ALTER` 權限亦無法授與固定伺服器角色。  
   
-**使用者定義伺服器角色**  
+**使用者定義的伺服器角色**  
   
-若要新增至使用者定義伺服器角色的成員，您必須隸屬`sysadmin`固定伺服器角色，或有`CONTROL SERVER`或`ALTER ANY SERVER ROLE`權限。 或者您必須擁有`ALTER`該角色的權限。  
+若要將成員新增至使用者定義的伺服器角色，您必須是 `sysadmin` 固定伺服器角色的成員，或擁有 `CONTROL SERVER` 或 `ALTER ANY SERVER ROLE` 權限。 或者，您必須有該角色的 `ALTER` 權限。  
   
 > [!NOTE]  
 >  不同於固定伺服器角色，使用者定義伺服器角色的成員本來就沒有將成員加入至該相同角色的權限。  
@@ -111,14 +111,14 @@ GO
 ```  
   
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. 將網域帳戶加入至伺服器角色  
-下列範例會將名為的網域帳戶`adventure-works\roberto0`至名為使用者定義伺服器角色`Production`。  
+下列範例會將網域帳戶 `adventure-works\roberto0` 新增至使用者定義的伺服器角色 `Production` 。  
   
 ```  
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. 將 SQL Server 登入加入至伺服器角色  
-下列範例會將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名為`Ted`至`diskadmin`固定的伺服器角色。  
+下列範例會將 `Ted` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入新增至 `diskadmin` 固定伺服器角色中。  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -126,14 +126,14 @@ GO
 ```  
   
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. 從伺服器角色移除網域帳戶  
-下列範例會移除名為的網域帳戶`adventure-works\roberto0`從名為使用者定義伺服器角色`Production`。  
+下列範例會從使用者定義的伺服器角色 `Production` 移除網域帳戶 `adventure-works\roberto0`。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. 從伺服器角色移除 SQL Server 登入  
-下列範例會移除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入`Ted`從`diskadmin`固定的伺服器角色。  
+下列範例會從 `diskadmin` 固定伺服器角色移除 `Ted` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. 若要檢視角色成員資格  
-若要檢視角色成員資格，請使用**伺服器角色 （成員）**頁面[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或執行下列查詢：  
+若要檢視角色成員資格，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [伺服器角色 (成員)] 頁面，或執行下列查詢：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -165,28 +165,28 @@ ORDER BY  SP.name,  SP2.name
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="h-basic-syntax"></a>H. 基本語法  
-下列範例會將登入`Anna`至`LargeRC`伺服器角色。  
+下列範例會將 `Anna` 的 Windows 登入新增至 `LargeRC` 固定伺服器角色中。  
   
 ```  
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
-### <a name="i-remove-a-login-from-a-resource-class"></a>I. 資源類別中移除登入。  
-下列範例會 Anna 的成員資格`LargeRC`伺服器角色。  
+### <a name="i-remove-a-login-from-a-resource-class"></a>I. 從資源類別移除登入。  
+下列範例會卸除 Anna 在 `LargeRC` 伺服器角色中的成員資格。  
   
 ```  
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
-[建立伺服器角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
-[DROP SERVER ROLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
-[建立角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
-[更改角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
-[DROP ROLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
-[安全性預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
+[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
+[CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+[DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+[安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
 [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
 [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
-[sys.server_role_members &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
+[sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
 [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

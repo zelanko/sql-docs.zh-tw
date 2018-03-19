@@ -1,5 +1,5 @@
 ---
-title: "DATETIMEOFFSETFROMPARTS (TRANSACT-SQL) |Microsoft 文件"
+title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-傳回**datetimeoffset**具有指定的時差和精確度及指定的日期和時間值。
+傳回包含指定時差和精確度之指定日期和時間的 **datetimeoffset** 值。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ```  
   
 ## <a name="arguments"></a>引數  
-*年份*  
+*year*  
 指定年份的整數運算式。
   
-*月份*  
+*month*  
 指定月份的整數運算式。
   
-*一天*  
+*day*  
 指定日期的整數運算式。
   
-*小時*  
+*hour*  
 指定小時的整數運算式。
   
-*分鐘*  
+*minute*  
 指定分鐘的整數運算式。
   
 *seconds*  
 指定秒的整數運算式。
   
-*分數*  
+*fractions*  
 指定分數的整數運算式。
   
 *hour_offset*  
@@ -73,15 +73,15 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 指定時區時差的分鐘部分之整數運算式。
   
 *有效位數*  
-指定的有效位數的整數常值**datetimeoffset**會傳回值。
+此整數常值指定 **datetimeoffset** 傳回值的精確度。
   
 ## <a name="return-types"></a>傳回型別
-**datetimeoffset (** *精確度* **)**
+**datetimeoffset(** *precision* **)**
   
-## <a name="remarks"></a>備註  
-**DATETIMEOFFSETFROMPARTS**傳回完整初始化**datetimeoffset**資料型別。 位移引數可用以代表的時區時差。 如果省略位移引數，將會假設時區時差為 00:00，意即沒有時差。 如果指定了時差引數，則兩個引數都必須存在，且兩者皆必須為正數或負數。 如果*minute_offset*指定不含*hour_offset*，則會引發錯誤。 如果其他引數無效，也將引發錯誤。 如果需要的引數為 Null，則傳回 Null。 不過，如果*精確度*引數為 null，則會引發錯誤。
+## <a name="remarks"></a>Remarks  
+**DATETIMEOFFSETFROMPARTS** 會傳回完整初始化的 **datetimeoffset** 資料類型。 位移引數可用以代表的時區時差。 如果省略位移引數，將會假設時區時差為 00:00，意即沒有時差。 如果指定了時差引數，則兩個引數都必須存在，且兩者皆必須為正數或負數。 若未搭配 *hour_offset* 指定 *minute_offset*，則便會引發錯誤。 如果其他引數無效，也將引發錯誤。 如果需要的引數為 Null，則傳回 Null。 然而，若 *precision* 引數為 Null，則會引發錯誤。
   
-*分數*引數取決於*精確度*引數。 例如，如果*精確度*為 7，則每個分數即表示 100 奈秒; 如果*精確度*為 3，則每個分數即表示 1 毫秒。 如果值*精確度*是零，則值*分數*也必須為零，否則會引發錯誤。
+*fractions* 引數相依於 *precision* 引數。 例如，假設 *precision* 為 7，每個分數即表示 100 奈秒；如果 *precision* 為 3，每個分數即表示 1 毫秒。 如果 *precision* 的值為零，*fractions* 也必須為零，否則將引發錯誤。
   
 函數可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器和更新版伺服器上以遠端方式進行。 它在版本低於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的伺服器上無法以遠端方式運作。
   
@@ -104,10 +104,10 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. 含秒的小數部分的範例  
-下列範例示範如何使用*分數*和*精確度*參數：
-1.   當*分數*的值為 5 和*精確度*然後的值具有值為 1，*分數*代表 5/10 秒。  
-1.   當*分數*的值為 50 和*精確度*然後的值具有值為 2，*分數*表示 50/100 的第二個。  
-1.   當*分數*的值為 500 和*精確度*然後的值具有值為 3，*分數*表示 500/1000 秒。  
+以下範例示範 *fractions* 和 *precision* 參數的用法：
+1.   若 *fractions* 的值為 5、*precision* 的值為 1，則 *fractions* 的值表示 5/10 秒。  
+1.   若 *fractions* 的值為 50、*precision* 的值為 2，則 *fractions* 的值表示 50/100 秒。  
+1.   若 *fractions* 的值為 500、*precision* 的值為 3，則 *fractions* 的值表示 500/1000 秒。  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  
@@ -137,7 +137,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[TIME ZONE &AMP;#40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   
 

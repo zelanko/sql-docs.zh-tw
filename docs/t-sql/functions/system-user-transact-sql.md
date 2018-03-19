@@ -1,5 +1,5 @@
 ---
-title: "SYSTEM_USER (TRANSACT-SQL) |Microsoft 文件"
+title: SYSTEM_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,12 +55,12 @@ SYSTEM_USER
 ## <a name="return-types"></a>傳回類型  
  **nchar**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  您可以在 CREATE TABLE 和 ALTER TABLE 陳述式中，搭配 DEFAULT 條件約束使用 SYSTEM_USER 函數。 您也可以把它當作任何標準函數使用。  
   
  如果使用者名稱和登入名稱不同，SYSTEM_USER 便會傳回登入名稱。  
   
- 如果目前的使用者登入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Windows 驗證，system_user 便會傳回 Windows 登入識別名稱格式：*網域*\\*user_login_name*. 不過，如果目前使用者是利用 SQL Server 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SYSTEM_USER 便會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入識別名稱，例如，以 `WillisJo` 登入的使用者，就傳回 `WillisJo`。  
+ 如果目前使用者是使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SYSTEM_USER 便會傳回格式為 <網域>\\<使用者登入名稱> 的 Windows 登入識別名稱。 不過，如果目前使用者是利用 SQL Server 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SYSTEM_USER 便會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入識別名稱，例如，以 `WillisJo` 登入的使用者，就傳回 `WillisJo`。  
   
  SYSTEM_USER 會傳回目前執行內容的名稱。 如果 EXECUTE AS 陳述式已用來切換內容，SYSTEM_USER 便會傳回模擬內容的名稱。  
   
@@ -133,23 +133,23 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C： 利用 SYSTEM_USER 傳回目前的系統使用者名稱  
- 下列範例會傳回目前的值`SYSTEM_USER`。  
+### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C：使用 SYSTEM_USER 傳回目前系統使用者名稱  
+ 下列範例會傳回 `SYSTEM_USER` 目前的值。  
   
 ```  
 SELECT SYSTEM_USER;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [使用者 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/user-transact-sql.md)  
+ [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)  
   
   
 

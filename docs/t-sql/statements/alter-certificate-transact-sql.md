@@ -1,5 +1,5 @@
 ---
-title: "ALTER CERTIFICATE (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -75,23 +75,23 @@ ALTER CERTIFICATE certificate_name
  *certificate_name*  
  這是在資料庫中辨識憑證的唯一名稱。  
   
- 檔案**='***path_to_private_key***'**  
+ FILE **='***path_to_private_key***'**  
  指定通往私密金鑰的完整路徑 (包括檔案名稱)。 這個參數可以是本機路徑或是通往網路位置的 UNC 路徑。 這個檔案會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶的安全性內容中被存取。 當您使用這個選項時，必須確定服務帳戶有權存取指定的檔案。  
   
  DECRYPTION BY PASSWORD **='***key_password***'**  
  指定私密金鑰解密所需的密碼。  
   
- ENCRYPTION BY PASSWORD **='***密碼***'**  
- 指定用來加密資料庫內憑證之私密金鑰的密碼。 *密碼*必須符合正在執行的執行個體之電腦的 Windows 密碼原則需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
+ ENCRYPTION BY PASSWORD **='***password***'**  
+ 指定用來加密資料庫內憑證之私密金鑰的密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
  REMOVE PRIVATE KEY  
  指定私密金鑰不應該在資料庫中繼續維護。  
   
- ACTIVE FOR BEGIN_DIALOG  **=**  {ON |OFF}  
+ ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  讓 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話交談的起始端能夠使用該憑證。  
   
-## <a name="remarks"></a>備註  
- 私密金鑰必須對應到所指定的公開金鑰*certificate_name*。  
+## <a name="remarks"></a>Remarks  
+ 私密金鑰必須對應至 *certificate_name* 所指定的公開金鑰。  
   
  如果您利用 Null 密碼來保護檔案中的密碼，就可以省略 DECRYPTION BY PASSWORD 子句。  
   
@@ -146,9 +146,9 @@ ALTER CERTIFICATE Shipping15
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [卸除憑證 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

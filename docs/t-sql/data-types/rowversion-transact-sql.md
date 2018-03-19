@@ -1,5 +1,5 @@
 ---
-title: "rowversion (TRANSACT-SQL) |Microsoft 文件"
+title: rowversion (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -43,40 +43,40 @@ ms.lasthandoff: 11/21/2017
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-此資料類型會公開在資料庫中自動產生的唯一二進位數字。 **rowversion**通常用來做為版本戳記資料表資料列的機制。 儲存體大小是 8 位元組。 **Rowversion**資料類型是只會遞增的數字，而且不會保留日期或時間。 若要記錄的日期或時間，請使用**datetime2**資料型別。
+此資料類型會公開在資料庫中自動產生的唯一二進位數字。 **rowversion** 通常用來作為版本戳記資料表資料列的機制。 儲存體大小是 8 位元組。 **rowversion** 資料類型只是會遞增的數字，因此不會保留日期或時間。 若要記錄日期或時間，請使用 **datetime2** 資料類型。
   
-## <a name="remarks"></a>備註  
-每個資料庫已經就會遞增每個插入的計數器或執行包含在資料表的更新作業**rowversion**資料庫內的資料行。 這個計數器是資料庫資料列版本。 這會追蹤資料庫內的相對時間，而不是可關聯於時鐘的實際時間。 資料表只能有一個**rowversion**資料行。 每次所包含的資料列**rowversion** 、 修改或插入資料行中插入累加的資料庫版本值**rowversion**資料行。 這個屬性會使**rowversion**不佳的候選項目的索引鍵，尤其是主索引鍵資料行。 資料列的任何更新都會變更資料列版本值，因而會變更索引鍵值。 如果資料行在主索引鍵中，舊的索引鍵值便不再有效，參考舊值的外部索引鍵也不再有效。 如果動態資料指標參考資料表，所有更新都會變更資料列在資料指標中的位置。 如果資料行在索引鍵中，資料列的所有更新也會產生索引的更新。  **Rowversion**值會隨著任何 update 陳述式，即使沒有資料列的值已變更。 (例如，如果資料行值為 5，update 陳述式的值設定為 5，此動作視為更新即使沒有任何變更，而**rowversion**就會遞增。)
+## <a name="remarks"></a>Remarks  
+每個資料庫都有一個計數器，會針對在資料庫內包含 **rowversion** 資料行的資料表所執行的每個插入或更新作業而遞增。 這個計數器是資料庫資料列版本。 這會追蹤資料庫內的相對時間，而不是可關聯於時鐘的實際時間。 資料表只能有一個 **rowversion** 資料行。 每次修改或插入含 **rowversion** 資料行的資料列時，都會在 **rowversion** 資料行中插入遞增的資料庫資料列版本值。 這個屬性會使 **rowversion** 資料行不適合作為索引鍵 (尤其是主索引鍵) 的候選項。 資料列的任何更新都會變更資料列版本值，因而會變更索引鍵值。 如果資料行在主索引鍵中，舊的索引鍵值便不再有效，參考舊值的外部索引鍵也不再有效。 如果動態資料指標參考資料表，所有更新都會變更資料列在資料指標中的位置。 如果資料行在索引鍵中，資料列的所有更新也會產生索引的更新。  **rowversion** 值會隨著任何 update 陳述式而遞增，即使沒有變更任何資料列值。 (例如，若資料行值為 5，而 update 陳述式將該值設為 5，即使沒有任何變更，此動作仍然會被視為更新；因此 **rowversion** 便會遞增。)
   
-**時間戳記**是同義字**rowversion**資料類型，類型同義字受限於資料的行為。 在 DDL 陳述式，使用**rowversion**而不是**時間戳記**只要做得到。 如需詳細資訊，請參閱[資料類型同義字 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
+**timestamp** 是 **rowversion** 資料類型的同義字，遵照資料類型同義字的行為。 在 DDL 陳述式中，請盡可能的使用 **rowversion** 而非 **timestamp**。 如需詳細資訊，請參閱[資料類型同義字 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md)。
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] **時間戳記**資料型別是從不同**時間戳記**ISO 標準中所定義的資料類型。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] **timestamp** 資料類型不同於 ISO 標準中所定義的 **timestamp** 資料類型。
   
 > [!NOTE]  
->  **時間戳記**語法已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  **timestamp** 語法已淘汰。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-在 CREATE TABLE 或 ALTER TABLE 陳述式中，您不必指定的資料行名稱**時間戳記**資料類型，例如：
+在 CREATE TABLE 或 ALTER TABLE 陳述式中，您不需要指定 **timestamp** 資料類型的資料行名稱，例如：
   
 ```sql
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, timestamp);  
 ```  
   
-如果您未指定資料行名稱，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]產生**時間戳記**資料行名稱; 不過， **rowversion**同義字不會遵循這種行為。 當您使用**rowversion**，您必須指定資料行名稱，例如：
+如果您沒有指定資料行名稱，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會產生 **timestamp** 資料行名稱；不過，**rowversion** 同義字不會遵循這個行為。 當您使用 **rowversion** 時，您必須指定一個資料行名稱，例如：
   
 ```sql
 CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;  
 ```  
   
 > [!NOTE]  
->  重複的**rowversion**值可以在其中使用 SELECT INTO 陳述式產生**rowversion**資料行是在選取清單中。 我們不建議使用**rowversion**以這種方式。  
+>  您可以使用 SELECT INTO 陳述式來產生重複的 **rowversion** 值，**rowversion** 資料行在 SELECT 清單中。 我們不建議您以這個方式來使用 **rowversion**。  
   
-不可為 null **rowversion**資料行，語意等於**binary （8)**資料行。 可為 null **rowversion**資料行，語意等於**varbinary （8)**資料行。
+不可為 Null 的**rowversion** 資料行，語意等於 **binary(8)** 資料行。 可為 Null 的 **rowversion** 資料行，語意等於 **varbinary(8)** 資料行。
   
-您可以使用**rowversion**自從上次讀取資料行的資料列來輕鬆地判斷資料列是否已在 update 陳述式執行對它。 如果針對資料列執行 update 陳述式時，會更新 rowversion 值。 如果沒有更新陳述式會執行對資料列，版本值等同於先前讀取。 若要傳回資料庫目前的版本值，請使用[@@DBTS](../../t-sql/functions/dbts-transact-sql.md)。
+您可以使用資料列的 **rowversion** 資料行來輕鬆的判斷該資料列自上一次讀取以來是否已執行過 update 陳述式。 若已針對該資料列執行 update 陳述式，則 rowversion 值便會更新。 若沒有針對該資料列執行 update 陳述式，則 rowversion 值便會與先前讀取時相同。 若要傳回資料庫目前的 rowversion 值，請使用 [@@DBTS](../../t-sql/functions/dbts-transact-sql.md)。
   
-您可以加入**rowversion**至資料表，以協助維護資料庫的完整性，當多位使用者同時更新一次的資料列的資料行。 您可能也想在不必重新查詢資料表的情況下，知道更新了多少資料列以及更新了哪些資料列。
+您可以將 **rowversion** 資料行新增至資料表，以確保能在多個使用者同時更新資料列時維護資料庫的完整性。 您可能也想在不必重新查詢資料表的情況下，知道更新了多少資料列以及更新了哪些資料列。
   
-例如，假設您要建立名為 `MyTest` 的資料表。 執行下列填入資料表中的某些資料[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。
+例如，假設您要建立名為 `MyTest` 的資料表。 您可透過執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，在資料表中填入一些資料。
   
 ```sql
 CREATE TABLE MyTest (myKey int PRIMARY KEY  
@@ -106,11 +106,11 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myValue`是**rowversion**表示最後一次您讀取資料列的資料列的資料行值。 此值必須由實際取代**rowversion**值。 實際範例**rowversion**值是 0x00000000000007D3。
+`myValue` 代表您上次讀取資料列時，該資料列的 **rowversion** 資料行值。 此值必須由實際的 **rowversion** 值取代。 實際 **rowversion** 值的範例是 0x00000000000007D3。
   
 您也可以將範例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式放入交易中。 您可藉由在交易的範圍中查詢 `@t` 變數來擷取資料表已更新的 `myKey` 資料行，而不必重新查詢 `MyTes` 資料表。
   
-下列是相同的範例使用**時間戳記**語法：
+下列為使用 **timestamp** 語法的相同範例：
   
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
@@ -143,7 +143,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)  
 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40;TRANSACT-SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
   

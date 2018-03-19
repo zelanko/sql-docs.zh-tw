@@ -1,5 +1,5 @@
 ---
-title: "空間 (TRANSACT-SQL) |Microsoft 文件"
+title: SPACE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ SPACE ( integer_expression )
   
 ## <a name="arguments"></a>引數  
  *integer_expression*  
- 這是代表空格數的正整數。 如果*clause><*是負數，會傳回 null 字串。  
+ 這是代表空格數的正整數。 如果 *integer_expression* 是負數，則會傳回 Null 字串。  
   
- 如需詳細資訊，請參閱[運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
 ## <a name="return-types"></a>傳回類型  
  **varchar**  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  若要在 Unicode 資料中加入空格，或者傳回超過 8000 個字元空格，請使用 REPLICATE 而非 SPACE。  
   
 ## <a name="examples"></a>範例  
@@ -70,7 +70,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會修剪姓氏，並且將逗號、兩個空格以及 `DimCustomer` 之 `AdventureWorksPDW2012` 資料表所列人員的名字串連起來。  
   
 ```  
@@ -82,9 +82,9 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/replicate-transact-sql.md)   
- [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [REPLICATE &#40;Transact-SQL&#41;](../../t-sql/functions/replicate-transact-sql.md)   
+ [字串函式 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
