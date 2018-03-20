@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b1b8fba166243143cd9ab8c03303fcfd7448e7a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8121c4b5054bcf8f3144fee3c05e6979f2252293
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/21/2017
 [date](../../t-sql/data-types/date-transact-sql.md) 和 [time](../../t-sql/data-types/time-transact-sql.md) 主題的＜ANSI 和 ISO 8601 合規性＞一節適用於 **datetimeoffset** 。
   
 ## <a name="backward-compatibility-for-down-level-clients"></a>下層用戶端的回溯相容性
-有些下層用戶端不支援 **time**、**date**、**datetime2** 和 **datetimeoffset** 資料類型。 下表顯示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的上層執行個體與下層用戶端之間的類型對應。
+有些下層用戶端不支援 **time**、**date**、**datetime2** 及 **datetimeoffset** 資料類型。 下表顯示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的上層執行個體與下層用戶端之間的類型對應。
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|傳遞至下層用戶端的預設字串常值格式|下層 ODBC|下層 OLEDB|下層 JDBC|下層 SQLCLIENT|  
 |---|---|---|---|---|---|
@@ -115,6 +115,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="converting-date-and-time-data"></a>轉換日期和時間資料
 當您轉換成日期與時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 如需 CAST 及 CONVERT 函式與日期和時間資料搭配使用的資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+  
+### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>將 datetimeoffset 資料類型轉換成其他日期與時間類型
+本節說明當 **datetimeoffset** 資料類型轉換成其他日期和時間資料類型時，可能發生的狀況。
   
 當轉換成 **date** 時，年、月和日都會複製。 下列程式碼顯示將 `datetimeoffset(4)` 值轉換成 `date` 值的結果。  
   
@@ -199,9 +202,6 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 --(1 row(s) affected)  
 ```  
   
-### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>將 datetimeoffset 資料類型轉換成其他日期與時間類型
-下表描述當 **datetimeoffset** 資料類型轉換成其他日期和時間資料類型時，可能發生的狀況。
-  
 ### <a name="converting-string-literals-to-datetimeoffset"></a>將字串常值轉換為 datetimeoffset
 如果整個字串皆是有效的格式，即可從字串常值轉換為日期與時間類型。 否則，就會引發執行階段錯誤。 從日期與時間類型轉換為字串常值的明確轉換不會指定樣式的隱含轉換，一律會採用目前工作階段的預設格式。 下表是字串常值轉換為 **datetimeoffset** 資料類型的規則。
   
@@ -219,7 +219,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 |DATE + TIME + TIMEZONE|一般|  
   
 ## <a name="examples"></a>範例  
-下列範例會比較將字串轉換成各種 **date** 與 **time** 資料類型的結果。
+下列範例會比較將字串轉換成各種 **date** 和 **time** 資料類型的結果。
   
 ```sql
 SELECT   
@@ -240,11 +240,11 @@ SELECT
   
 |資料類型|輸出|  
 |---|---|
-|**Time**|12:35:29。 1234567|  
+|**Time**|12:35:29. 1234567|  
 |**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**Datetime**|2007-05-08 12:35:29.123|  
-|**datetime2**|2007-05-08 12:35:29。 1234567|  
+|**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**Datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ## <a name="see-also"></a>另請參閱

@@ -1,7 +1,7 @@
 ---
 title: "GRANT 資料庫權限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9ba4b5f1200a3280418304bda6c0fbc5e2d3fafd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 30ff1650f0db79758aaff5dac37d0964807aafd2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 資料庫權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,8 @@ permission | ALL [ PRIVILEGES ]
   | Database_user_with_no_login    
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
+
  *permission*  
  指定可以授與的資料庫權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
@@ -89,32 +90,32 @@ permission | ALL [ PRIVILEGES ]
  指定應用程式角色。  
   
  *Database_user_mapped_to_Windows_User*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定對應至 Windows 使用者的資料庫使用者。  
   
  *Database_user_mapped_to_Windows_Group*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定對應至 Windows 群組的資料庫使用者。  
   
  *Database_user_mapped_to_certificate*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定對應至憑證的資料庫使用者。  
   
  *Database_user_mapped_to_asymmetric_key*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定對應至非對稱金鑰的資料庫使用者。  
   
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
   
 > [!IMPORTANT]  
->  在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表的 ALTER 權限和函數的 REFERENCE 權限之使用者，可以透過函數來建立計算資料行並執行它。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。  
+>  在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表的 ALTER 權限和函數的 REFERENCE 權限之使用者，可以透過函數來建立計算資料行並執行它。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。
   
  資料庫是由伺服器所包含的安全性實體，而該伺服器是其權限階層中的父系。 下表所列的是可以授與之最特定和最有限的資料庫權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
@@ -157,6 +158,7 @@ permission | ALL [ PRIVILEGES ]
 |CONNECT REPLICATION|CONTROL|CONTROL SERVER|  
 |CONTROL|CONTROL|CONTROL SERVER|  
 |CREATE AGGREGATE|ALTER|CONTROL SERVER|  
+|CREATE ANY EXTERNAL LIBRARY <br /> **適用於**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。|CONTROL|CONTROL SERVER |    
 |CREATE ASSEMBLY|ALTER ANY ASSEMBLY|CONTROL SERVER|  
 |CREATE ASYMMETRIC KEY|ALTER ANY ASYMMETRIC KEY|CONTROL SERVER|  
 |CREATE CERTIFICATE|ALTER ANY CERTIFICATE|CONTROL SERVER|  
