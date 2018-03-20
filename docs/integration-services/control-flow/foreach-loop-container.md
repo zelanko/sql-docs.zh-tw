@@ -39,10 +39,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
   「Foreach 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **Foreach** 迴圈的結構類似。 在封裝中，迴圈是使用 Foreach 列舉值啟用。  「Foreach 迴圈」容器會為指定列舉值的每個成員重複控制流程。  
