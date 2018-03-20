@@ -21,19 +21,19 @@ helpviewer_keywords:
 - IpAddressName property
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3c652f66b0b1051519967ab88e92b9aae58c2b5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 672522521402490cd9c23f691b32fa5bbe74664a
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>IPAddressName 屬性 (ServerNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得 IP 位址的名稱。  
+  取得 IP 位址的名稱。  
   
 ## <a name="syntax"></a>語法  
   

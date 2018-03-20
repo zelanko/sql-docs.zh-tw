@@ -17,19 +17,19 @@ helpviewer_keywords:
 - managed code [WMI]
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3050570e26c562851e0a7b193307771f05ac4a97
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 21b6bac77cb3a2c2ecfa03c99939fd7c90f036fd
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>範例：搭配 .NET Framework 使用 WMI 事件提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-下列範例會以 C# 建立應用程式，這個應用程式會使用 WMI 事件提供者，針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設安裝執行個體上發生的所有資料定義語言 (DDL) 事件傳回事件資料。  
+  下列範例會以 C# 建立應用程式，這個應用程式會使用 WMI 事件提供者，針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設安裝執行個體上發生的所有資料定義語言 (DDL) 事件傳回事件資料。  
   
 ## <a name="example"></a>範例  
  此範例會使用下列命令檔進行編譯：  

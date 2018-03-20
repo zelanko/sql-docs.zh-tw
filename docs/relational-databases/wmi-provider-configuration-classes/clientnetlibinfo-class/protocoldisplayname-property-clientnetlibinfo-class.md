@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolDisplayName property
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 478e5a3f34dba202aae2ef30a5e8b3e35fc65cee
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: ce9fce64cec1f88b39fa128bf2db2939831fd898
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>ProtocolDisplayName 屬性 (ClientNetLibInfo 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得或設定用來顯示通訊協定的名稱。  
+  取得或設定用來顯示通訊協定的名稱。  
   
 ## <a name="syntax"></a>語法  
   

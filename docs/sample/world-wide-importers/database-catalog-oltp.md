@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d458bc15530aa87bfa922787558fff3f07645f7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 資料庫目錄
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters 資料庫包含所有的交易資訊和銷售和購買商品每日的資料，以及車輛和冷聊天室的感應器資料。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WideWorldImporters 資料庫包含所有的交易資訊和銷售和購買商品每日的資料，以及車輛和冷聊天室的感應器資料。
 
 ## <a name="schemas"></a>結構描述
 
@@ -50,7 +52,7 @@ WideWorldImporters 使用不同的用途，例如，儲存資料、 定義使用
 |-----------------------------|---------------------|
 |網站|從公司網站資料庫的所有存取都是透過此結構描述。|
 |報表|從 Reporting Services 報表資料庫的所有存取都是透過此結構描述。|
-|Power Bi|所有資料庫的存取權透過企業閘道，Power BI 儀表板都是透過此結構描述。|
+|PowerBI|所有資料庫的存取權透過企業閘道，Power BI 儀表板都是透過此結構描述。|
 
 請注意，報表和 power Bi 的範例資料庫的初始版本中不會使用結構描述。 不過，建置於這個資料庫的所有 Reporting Services 和 Power BI 範例鼓勵使用這些結構描述。
 
@@ -170,7 +172,7 @@ WideWorldImporters 會使用少量的結構描述，讓您很容易了解資料�
 |程序|目的|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|可讓個人 (從`Application.People`) 存取網站。|
-|變更密碼|變更使用者的密碼 （適用於不使用外部驗證機制的使用者）。|
+|ChangePassword|變更使用者的密碼 （適用於不使用外部驗證機制的使用者）。|
 |InsertCustomerOrders|允許插入 （包括訂單行） 的一或多個客戶訂單。|
 |InvoiceCustomerOrders|根據要開發票的訂單的清單，並處理發票。|
 |RecordColdRoomTemperatures|根據感應器資料清單，做為資料表值參數 (TVP)，並套用至資料`Warehouse.ColdRoomTemperatures`時態表。|

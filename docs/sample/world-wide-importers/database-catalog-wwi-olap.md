@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 10/31/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ed65e42-527a-45e7-9a91-7179e892652e
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: d6b43b590e7a5e6117f6752e1eb1dec701ca645e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3957abef7fb70698c04fd22d390d96ac4cd17b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 資料庫目錄
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]結構描述、 資料表和預存程序 WideWorldImportersDW 資料庫中的說明。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+結構描述、 資料表和預存程序 WideWorldImportersDW 資料庫中的說明。 
 
 WideWorldImportersDW 資料庫用於資料倉儲和分析的處理。 交易資料的相關銷售額與購買項目會產生在 WideWorldImporters 資料庫中，並載入到 WideWorldImportersDW 資料庫使用**每日的 ETL 程序**。
 
@@ -97,7 +99,7 @@ WideWorldImportersDW 有下列的事實資料表。 描述 WideWorldImporters �
 ETL 程序中使用的程序可在這些分類中：
 - ETL 封裝-所有 Get * 程序的協助程式程序。
 - ETL 封裝用於移轉的程序在其中暫存資料 DW 資料表的所有移轉 * 程序。
-- `PopulateDateDimensionForYear`-採用一年，並確保該年的所有日期會以都擴展`Dimension.Date`資料表。
+- `PopulateDateDimensionForYear` -採用一年，並確保該年的所有日期會以都擴展`Dimension.Date`資料表。
 
 ### <a name="sequences-schema"></a>順序結構描述
 

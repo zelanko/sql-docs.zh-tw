@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: bbda77b86b4c804ae0cf261f54f51fc487090e1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a9ccfb4f49e490cb681561aeaa5a0e9a8e86ad0
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流程
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]ETL 封裝 WWI_Integration 用來將資料從 WideWorldImporters 資料庫移轉到 WideWorldImportersDW 資料庫，當資料變更。 封裝會定期執行 （通常每日）。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ETL 封裝 WWI_Integration 用來將資料從 WideWorldImporters 資料庫移轉到 WideWorldImportersDW 資料庫，當資料變更。 封裝會定期執行 （通常每日）。
 
 ## <a name="overview"></a>概觀
 
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 
 在此之後，一系列的資料流程工作會載入每個維度，則每一個事實。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
 - SQL Server 2016 （或更新版本） 與 WideWorldImporters 和 WideWorldImportersDW 資料庫。 這些可以在相同或不同 SQL Server 執行個體上。
 - SQL Server Management Studio (SSMS)
@@ -55,15 +57,15 @@ ms.lasthandoff: 12/05/2017
 
 最新版的範例：
 
-[wide world-匯入工具版本](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 SSIS 封裝檔案下載**每日 ETL.ispac**。
 
 重新建立範例資料庫的原始程式碼可從下列位置。
 
-[匯入 world wide 工具](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
 
-## <a name="install"></a>Install
+## <a name="install"></a>安裝
 
 1. 部署 SSIS 封裝。
    - 從 Windows 檔案總管中開啟 「 每日 ETL.ispac"封裝。 這會啟動 Integration Services 部署精靈。

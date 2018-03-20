@@ -20,19 +20,19 @@ helpviewer_keywords:
 - Clustered property
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b3c22584a63c4adeeb69da164f8dd617322ec73
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f253e5a8c626659fe95f69e28f1c19af96f852e6
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得可指定服務是否為叢集執行個體之一部分的布林屬性值。  
+  取得可指定服務是否為叢集執行個體之一部分的布林屬性值。  
   
 ## <a name="syntax"></a>語法  
   

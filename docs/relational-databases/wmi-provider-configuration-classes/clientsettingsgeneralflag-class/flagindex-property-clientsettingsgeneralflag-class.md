@@ -21,19 +21,19 @@ helpviewer_keywords:
 - FlagIndex property
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2661e60828e206789af41deb108bfec1bf8c258b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a872ae4b98898119eb351abd0c6168e126dee755
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>FlagIndex 屬性 (ClientSettingsGeneralFlag 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得旗標的索引值。  
+  取得旗標的索引值。  
   
 ## <a name="syntax"></a>語法  
   

@@ -21,19 +21,19 @@ helpviewer_keywords:
 - GetNextOrderValue method
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d41f216ee73db3bccc456a6ed0da4c0838b494eb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 92f93aa53145c87b0841519b8910f8d67c05080a
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>GetNextOrderValue 方法 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-在通訊協定清單中選取下一個位置的通訊協定。  
+  在通訊協定清單中選取下一個位置的通訊協定。  
   
 ## <a name="syntax"></a>語法  
   
