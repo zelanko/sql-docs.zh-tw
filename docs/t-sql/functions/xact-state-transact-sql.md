@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d8b98cf6f7ddd80e3952b82ae13cea75a81abd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f8b63625f4e0af0e1f6c55b2d85ae8bb10d53b02
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
 |------------------|-------------|  
 |@shouldalert|目前的要求具有使用中的使用者交易。 要求可以執行任何動作，其中包括寫入資料和認可交易。|  
 |0|目前的要求沒有任何使用中的使用者交易。|  
-|-1|目前的要求有一項使用中的使用者交易，但發生錯誤，使交易被分類為無法認可的交易。 要求無法認可交易或回復到儲存點；它只能要求完整回復交易。 要求無法執行任何寫入作業，直到它回復交易為止。 要求只能執行讀取作業，直到它回復交易為止。 在交易回復之後，要求便可以執行讀取和寫入作業，且可以起始一項新交易。<br /><br /> 當批次完成執行時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動回復任何使用中無法認可的交易。 如果在交易進入無法認可的狀態時沒有傳送任何錯誤訊息，則當批次完成時，就會將錯誤訊息傳送給用戶端應用程式。 此訊息表示偵測到無法認可的交易，並已回復。|  
+|-1|目前的要求有一項使用中的使用者交易，但發生錯誤，使交易被分類為無法認可的交易。 要求無法認可交易或回復到儲存點；它只能要求完整回復交易。 要求無法執行任何寫入作業，直到它回復交易為止。 要求只能執行讀取作業，直到它回復交易為止。 在交易回復之後，要求便可以執行讀取和寫入作業，且可以起始一項新交易。<br /><br /> 當最外層的批次完成執行時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動回復任何使用中無法認可的交易。 如果在交易進入無法認可的狀態時沒有傳送任何錯誤訊息，則當批次完成時，就會將錯誤訊息傳送給用戶端應用程式。 此訊息表示偵測到無法認可的交易，並已回復。|  
   
  XACT_STATE 和 @@TRANCOUNT 函式都可用來偵測目前的要求是否有使用中的使用者交易。 @@TRANCOUNT 無法用來判斷交易是否已分類為無法認可的交易。 XACT_STATE 無法用來判斷是否有巢狀交易。  
   

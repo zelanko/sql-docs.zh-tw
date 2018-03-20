@@ -39,11 +39,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -398,7 +398,9 @@ OUTPUT 子句
   
  搭配 INSERT 使用 TOP 時，不會以任何順序排列參考的資料列，也不可以直接在這個陳述式中指定 ORDER BY 子句。 如果您要使用 TOP 以具有意義的時序來插入資料列，則 TOP 必須與 Subselect 陳述式中指定的 ORDER BY 子句一起使用。 請參閱本主題稍後的＜範例＞一節。
  
-若是搭配使用 SELECT 與 ORDER BY 來填入資料列的 INSERT 查詢，其可保證識別值的計算方式，但不能保證資料列的插入順序。    
+若是搭配使用 SELECT 與 ORDER BY 來填入資料列的 INSERT 查詢，其可保證識別值的計算方式，但不能保證資料列的插入順序。
+
+在平行資料倉儲中，除非也指定了 TOP 或，否則 ORDER BY 子句在 VIEWS、CREATE TABLE AS SELECT、INSERT SELECT、內嵌函式、衍生資料表、子查詢及通用資料表運算式中均無效。
   
 ## <a name="logging-behavior"></a>記錄行為  
  除了搭配使用 BULK 關鍵字與 OPENROWSET 函式或是使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 以外，系統一定都會完整記錄 INSERT 陳述式。 這些作業可以進行最低限度記錄。 如需詳細資訊，請參閱本主題前面的＜大量載入資料的最佳做法＞一節。  
@@ -877,7 +879,7 @@ FROM OPENROWSET (
 #### <a name="s-using-the-tablock-hint-to-specify-a-locking-method"></a>S. 使用 TABLOCK 提示指定鎖定方法  
  下列範例指定在 Production.Location 資料表上採用獨佔 (X) 鎖定，並且將鎖定保留到 INSERT 陳述式結束為止。  
   
-**適用對象**：[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
+**適用於**：[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
   
 ```  
 INSERT INTO Production.Location WITH (XLOCK)  
