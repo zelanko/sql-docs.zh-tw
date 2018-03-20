@@ -21,23 +21,23 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/13/2018
 ---
-# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio 程式碼來建立和執行 SQL Server 的 TRANSACT-SQL 指令碼
+# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio Code 來建立和執行 SQL Server 的 TRANSACT-SQL 指令碼
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文示範如何使用**mssql** Visual Studio 程式碼 （VS 程式碼），開發 SQL Server 資料庫的擴充功能。
+本文示範如何使用**mssql** Visual Studio Code （VS Code），開發 SQL Server 資料庫的擴充功能。
 
-Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Windows 圖形化的程式碼編輯器。 [**Mssql** VS Code 擴充功能] 可讓您連接到 SQL Server，使用 TRANSACT-SQL (T-SQL)，查詢和檢視結果。
+Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 圖形化的程式碼編輯器。 [**Mssql** VS Code 擴充功能] 可讓您連接到 SQL Server，使用 TRANSACT-SQL (T-SQL)，查詢和檢視結果。
 
 ## <a name="install-vs-code"></a>安裝 Vscode
 1. 如果尚未安裝 VS Code[下載並安裝 VS Code]您的電腦上。
 
-2. 啟動 VS 程式碼。
+2. 啟動 VS Code。
 
 ## <a name="install-the-mssql-extension"></a>安裝 mssql 擴充功能
 下列步驟說明如何安裝 mssql 擴充功能。 
 
-1. 按**CTRL + SHIFT + P** (或**F1**) 若要開啟命令選擇區 VS 程式碼中。 
+1. 按**CTRL + SHIFT + P** (或**F1**) 若要開啟命令選擇區 VS Code 中。 
 
 2. 選取**安裝延伸**和型別**mssql**。
    > [!TIP] 
@@ -68,7 +68,7 @@ Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Wind
 
 **Mssql**擴充功能可讓 mssql 命令與 T-SQL 的 IntelliSense 在編輯器中的語言模式設定為時**SQL**。
 
-1. 按**CTRL + N**。 Visual Studio 程式碼預設會開啟新的 「 純文字 」 檔案。 
+1. 按**CTRL + N**。 Visual Studio Code 預設會開啟新的 「 純文字 」 檔案。 
 
 2. 按**CTRL + K、 M**和語言模式變更為**SQL**。 
 
@@ -78,7 +78,7 @@ Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Wind
 
 ## <a name="connect-to-sql-server"></a>連接至 SQL Server
 
-下列步驟示範如何連接到 SQL Server 以 VS 程式碼。
+下列步驟示範如何連接到 SQL Server 以 VS Code。
 
 1. 在 VS Code 中，按 **CTRL+SHIFT+P** (或 **F1**) 開啟 [命令選擇區]。
 
@@ -110,7 +110,7 @@ Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Wind
 6. 按 **ESC** 鍵關閉資訊訊息，通知您已建立並連線設定檔。
 
    > [!TIP]
-   > 如果連接失敗，第一次嘗試診斷問題中的錯誤訊息從**輸出**VS 程式碼中的面板 (選取**輸出**上**檢視**功能表)。 然後檢閱[連線疑難排解建議]。
+   > 如果連接失敗，第一次嘗試診斷問題中的錯誤訊息從**輸出**VS Code 中的面板 (選取**輸出**上**檢視**功能表)。 然後檢閱[連線疑難排解建議]。
 
 7. 在狀態列中確認您的連線。
 
@@ -164,7 +164,7 @@ Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Wind
 5. 按 **索引標籤**，然後輸入**dbo**結構描述名稱。
 
    > [!NOTE]
-   > 之後加入程式碼片段，您必須輸入的資料表和結構描述名稱，而不需要變更焦點從 VS 程式碼編輯器。
+   > 之後加入程式碼片段，您必須輸入的資料表和結構描述名稱，而不需要變更焦點從 VS Code 編輯器。
 
 6. 變更的資料行名稱**Column1**至**名稱**和**Column2**至**位置**。
 
@@ -246,7 +246,7 @@ Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Wind
 
 6. 指定 JSON 檔案的檔案名稱。 此教學課程中，輸入**employees.json**。
 
-7. 請確認 JSON 檔案會儲存，並開啟 VS 程式碼中。
+7. 請確認 JSON 檔案會儲存，並開啟 VS Code 中。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png" alt="Save as Json" style="width: 500px;" />
 
@@ -258,7 +258,7 @@ Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Wind
 
 如需有關使用或促成 mssql 擴充功能的詳細資訊，請參閱[mssql 延伸模組專案 wiki]。
 
-如需有關使用 VS 程式碼的詳細資訊，請參閱[Visual Studio 程式碼文件](https://code.visualstudio.com/docs)。
+如需有關使用 VS Code 的詳細資訊，請參閱[Visual Studio Code 文件](https://code.visualstudio.com/docs)。
 
 [**mssql** VS Code 擴充功能]:https://aka.ms/mssql-marketplace
 [下載並安裝 VS Code]:https://code.visualstudio.com/Download
