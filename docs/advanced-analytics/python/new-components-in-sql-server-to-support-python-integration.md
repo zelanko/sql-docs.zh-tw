@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6f948473c51d6212d432ddb179d7a61fcfdef117
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>若要支援 Python 整合 SQL Server 中的元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/11/2018
 
 可能需要額外的步驟，以支援遠端指令碼執行。
 
-如需詳細資訊，請參閱[設定機器學習服務](setup-python-machine-learning-services.md)
+如需詳細資訊，請參閱[安裝 SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。
 
 ### <a name="launchpad"></a>Launchpad
 
@@ -105,7 +105,7 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
   + 寫入資料至資料表： 例如，當儲存結果儲存至資料表
   + 建立資料庫物件： 例如，如果將外部指令碼儲存為新的預存程序的一部分。
 
-  當[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]是當成計算內容從遠端用戶端，執行 Python 指令碼和 Python 可執行檔必須從外部來源擷取資料，ODBC 會使用回寫。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]對應至目前的執行個體上的使用者身分識別發出遠端命令的使用者身分識別，並執行 ODBC 命令使用該使用者的認證。 執行此 ODBC 呼叫所需的連接字串可從用戶端程式碼取得。
+  當[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]是當成計算內容從遠端用戶端，執行 Python 指令碼和 Python 可執行檔必須從外部來源擷取資料，ODBC 會使用回寫。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 對應至目前的執行個體上的使用者身分識別發出遠端命令的使用者身分識別，並執行 ODBC 命令使用該使用者的認證。 執行此 ODBC 呼叫所需的連接字串可從用戶端程式碼取得。
 
 ## <a name="interaction-of-components"></a>元件的互動
 
@@ -125,7 +125,7 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
 4. BxlServer 協調 Python 執行階段管理交換資料，與工作結果的儲存體。
 5. SQL 附屬管理相關工作的通訊並處理具有[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。
 6. BxlServer 使用 SQL Satellite 來與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 進行狀態和結果的通訊。
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 取得結果，並關閉相關的工作和程序。
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 會取得結果，並關閉相關工作和處理序。
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>從遠端用戶端執行 Python 指令碼
 
@@ -146,7 +146,7 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
 6. PythonLauncher 會呼叫執行個體已安裝 Python[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]電腦。
 7. 結果會傳回 BxlServer。
 8. SQL Satellite 管理與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的通訊，並清理相關的工作物件。
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 結果傳回給用戶端。
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 將結果傳遞回用戶端。
 
 ## <a name="next-steps"></a>後續的步驟
 

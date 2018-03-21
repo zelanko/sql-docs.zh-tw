@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: af8b651364f58c3c4261666d5d6531e99e620efe
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC 驅動程式搭配使用永遠加密
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -136,7 +136,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> 適用於只有 Windows 作業系統與具有相依性所提供的驅動程式套件中的 sqljdbc_auth.dll SQLServerColumnEncryptionCertificateStoreProvider 實作 JDBC 驅動程式。 若要使用此提供者，將 sqljdbc_auth.dll 檔案複製到安裝 JDBC 驅動程式的電腦上的 Windows 系統路徑的目錄。 或者，您也可以設定 java.libary.path 系統屬性來指定 sqljdbc_auth.dll 的目錄。 如果您執行的是 32 位元的 Java Virtual Machine (JVM)，即使作業系統為 x64 版，也請使用 x86 資料夾中的 sqljdbc_auth.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 sqljdbc_auth.dll 檔案。 例如，如果您使用 32 位元的 JVM，JDBC 驅動程式安裝在預設目錄，您可以指定 DLL 的位置啟動的 Java 應用程式時，請使用下列虛擬機器 (VM) 引數： `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 驅動程式支援所有平台上使用這份文件中的其他金鑰存放區提供者時，JDBC 驅動程式的 SQLServerColumnEncryptionCertificateStoreProvider 實作位於只有 Windows 作業系統。 它具有相依性所提供的驅動程式套件中的 sqljdbc_auth.dll 時。 若要使用此提供者，將 sqljdbc_auth.dll 檔案複製到安裝 JDBC 驅動程式的電腦上的 Windows 系統路徑的目錄。 或者，您也可以設定 java.libary.path 系統屬性來指定 sqljdbc_auth.dll 的目錄。 如果您執行的是 32 位元的 Java Virtual Machine (JVM)，即使作業系統為 x64 版，也請使用 x86 資料夾中的 sqljdbc_auth.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 sqljdbc_auth.dll 檔案。 例如，如果您使用 32 位元的 JVM，JDBC 驅動程式安裝在預設目錄，您可以指定 DLL 的位置啟動的 Java 應用程式時，請使用下列虛擬機器 (VM) 引數： `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>使用 Java 金鑰存放區提供者
 JDBC 驅動程式隨附內建金鑰存放區提供者實作 Java 金鑰存放區。 如果**keyStoreAuthentication**連接字串屬性出現在連接字串和其設定為"JavaKeyStorePassword"，驅動程式會自動具現化，並註冊 Java 金鑰存放區提供者。 Java 金鑰存放區提供者的名稱是 MSSQL_JAVA_KEYSTORE。 此名稱也可以使用 SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API 來查詢。 

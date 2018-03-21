@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 488661c917690c2ec5af6db40a135c8eb3927db1
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>使用 TRANSACT-SQL (R SQL 快速入門) 中的 R 程式碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +84,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="troubleshooting"></a>疑難排解
 
-+ 如果此查詢的任何錯誤，安裝可能不完整。 使用 SQL Server 安裝精靈新增該功能之後，您必須採取一些額外的步驟才能使用外部程式碼程式庫。  請參閱[設定 SQL Server R 服務](../r/set-up-sql-server-r-services-in-database.md)。
++ 如果此查詢的任何錯誤，安裝可能不完整。 使用 SQL Server 安裝精靈新增該功能之後，您必須採取一些額外的步驟才能使用外部程式碼程式庫。  請參閱[安裝 SQL Server 2017 機器學習服務](../install/sql-machine-learning-services-windows-install.md)或[安裝 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
 
 + 請確定 Launchpad 服務正在執行。 根據您的環境，您可能需要啟用 R 背景工作帳戶以連線到 SQL Server、安裝額外的網路程式庫、啟用遠端程式碼執行，或在一切已設定完畢後重新啟動執行個體。 請參閱 [R 服務安裝和升級常見問題集](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 

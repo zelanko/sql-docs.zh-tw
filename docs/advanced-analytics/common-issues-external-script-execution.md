@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: af9896e9e0baa2899b9e9c95795907ca46463504
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server 中的外部指令碼執行的一般問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -161,7 +161,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     * *安全性記錄檔指出帳戶 NT 服務無法登入*
 
-如需如何將必要的權限授與此使用者群組資訊，請參閱[設定 SQL Server R Services](r/set-up-sql-server-r-services-in-database.md)。
+如需如何將必要的權限授與此使用者群組資訊，請參閱[安裝 SQL Server 2016 R Services](install/sql-r-services-windows-install.md)。
 
 > [!NOTE]
 > 如果您使用 SQL 登入從遠端工作站執行 R 指令碼，則不適用這項限制。
@@ -233,7 +233,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 雖然您使用 R 主控台時，清除工作區是常見的它可以包含非預期的結果，在 SQL 計算內容。
 
-`revoScriptConnection`為包含從 SQL Server 呼叫 R 工作階段的相關資訊的 R 工作區中的物件。 不過，如果您的 R 程式碼會包含命令以清除工作區 (例如`rm(list=ls())`)，以及清除工作階段和 R 工作空間中的其他物件的所有資訊。
+`revoScriptConnection` 為包含從 SQL Server 呼叫 R 工作階段的相關資訊的 R 工作區中的物件。 不過，如果您的 R 程式碼會包含命令以清除工作區 (例如`rm(list=ls())`)，以及清除工作階段和 R 工作空間中的其他物件的所有資訊。
 
 因應措施，避免任意清除變數和其他物件，您在 SQL Server 中執行 R 時。 您可以使用，以刪除特定變數**移除**函式：
 

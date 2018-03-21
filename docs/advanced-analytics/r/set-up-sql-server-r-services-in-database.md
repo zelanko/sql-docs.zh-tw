@@ -22,10 +22,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
 ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>設定 SQL Server 機器學習服務 （資料庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/11/2018
 
 **適用於：** SQL Server 2016、 SQL Server 2017
 
-## <a name="bkmk_prereqs"></a>預先安裝檢查清單
+## <a name="bkmk_prereqs"> </a> 預先安裝檢查清單
 
 + 機器學習中資料庫需要 SQL Server 2016 或更新版本。 
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/11/2018
 
 + 在安裝完成之後，機器學習架構需要其他組態。 確切步驟取決於組織和安全性原則、 伺服器組態和使用者。 我們建議您檢閱所有步驟，並判斷您的環境中可能需要的其他組態。
 
-## <a name="bkmk2016top"></a>安裝 SQL Server 2016 R Services （資料庫）
+## <a name="bkmk2016top"></a> 安裝 SQL Server 2016 R Services （資料庫）
 
 > [!div class="checklist"]
 > * 安裝 database engine 和機器學習功能
@@ -119,7 +119,7 @@ ms.lasthandoff: 02/11/2018
 7. 安裝完成時，重新啟動電腦。
 
 
-## <a name="bkmk2017top"></a>安裝 SQL Server 2017 機器學習服務 （資料庫）
+## <a name="bkmk2017top"></a> 安裝 SQL Server 2017 機器學習服務 （資料庫）
 
 > [!div class="checklist"]
 > * 安裝 database engine 和機器學習功能
@@ -240,7 +240,7 @@ ms.lasthandoff: 02/11/2018
     + [選擇性的後續安裝步驟： 設定服務與權限](#bkmk_FollowUp) 
     + [疑難排解 SQL Server 中的機器學習服務](upgrade-and-installation-faq-sql-server-r-services.md)
 
-## <a name="bkmk_FollowUp"></a>選擇性的後續安裝步驟
+## <a name="bkmk_FollowUp"></a> 選擇性的後續安裝步驟
 
 機器學習您使用案例，根據您可能需要進行其他變更伺服器、 防火牆、 服務或資料庫權限所用的帳戶。 您必須進行的變更會因大小寫。
 

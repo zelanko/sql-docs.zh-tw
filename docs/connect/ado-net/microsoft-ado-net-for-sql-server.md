@@ -4,24 +4,24 @@ ms.custom:
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
 ms.component: ado-net
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54a5cdcd7341972d2f2e5b2e4e3e5fe3e3fe2531
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d43cb61fc711624a4989d37565e1a6575ccfcb17
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -38,7 +38,7 @@ ADO.NET 是 .NET 語言的核心資料存取技術。 使用 System.Data.SqlClie
 ## <a name="documentation"></a>文件集  
 * [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
 * [SQL Server 和 ADO.NET](https://msdn.microsoft.com/library/kb9s9ks0.aspx)  
-* [System.Data.SqlClient 命名空間](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
+* [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## <a name="community"></a>社群  
 * [ADO.NET Managed 提供者論壇](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  

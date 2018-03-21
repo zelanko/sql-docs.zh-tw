@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>安裝 SQL Server 機器學習在 Azure 虛擬機器上的功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="create-a-new-sql-server-2017-virtual-machine"></a>建立新的 SQL Server 2017 虛擬機器
 
-若要在 SQL Server 2017 中使用 R 或 Python，務必要取得 Windows 型虛擬機器。 [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)]在 Linux 上支援快速[原生計分](../sql-native-scoring.md)使用 T-SQL 預測函式，但其他機器學習功能未提供尚未在這個版本中。
+若要在 SQL Server 2017 中使用 R 或 Python，務必要取得 Windows 型虛擬機器。 [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] 在 Linux 上支援快速[原生計分](../sql-native-scoring.md)使用 T-SQL 預測函式，但其他機器學習功能未提供尚未在這個版本中。
 
 SQL Server VM 的供應項目的清單，請參閱這篇文章：[概觀的 SQL Server 在 Azure 虛擬機器 (Windows)](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)。
 
@@ -74,11 +74,10 @@ SQL Server VM 的供應項目的清單，請參閱這篇文章：[概觀的 SQL 
 如果您建立 Azure 機器學習服務不包含 SQL Server 虛擬機器，您可以加入功能，依照下列步驟：
 
 1. 重新執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式，並在精靈的 [伺服器組態] 頁面上新增該功能。
-2. 啟用外部指令碼執行，並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱[設定 SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
+2. 啟用外部指令碼執行，並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱[安裝 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
 3. (選擇性) 如果遠端指令碼執行需要，請設定 R 背景工作帳戶的資料庫存取權。
-   如需詳細資訊，請參閱[安裝 SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
-3. (選擇性) 如果您想要允許從遠端資料科學用戶端執行 R 指令碼，請修改 Azure 虛擬機器上的防火牆規則。 如需詳細資訊，請參閱[解除封鎖防火牆](#firewall)。
-4. 安裝或啟用必要的網路程式庫。 如需詳細資訊，請參閱[新增網路通訊協定](#network)。
+4. (選擇性) 如果您想要允許從遠端資料科學用戶端執行 R 指令碼，請修改 Azure 虛擬機器上的防火牆規則。 如需詳細資訊，請參閱[解除封鎖防火牆](#firewall)。
+5. 安裝或啟用必要的網路程式庫。 如需詳細資訊，請參閱[新增網路通訊協定](#network)。
 
 ## <a name="additional-steps"></a>額外的步驟
 
@@ -101,13 +100,13 @@ SQL Server VM 的供應項目的清單，請參閱這篇文章：[概觀的 SQL 
 ### <a name="enable-odbc-callbacks-for-remote-clients"></a>針對遠端用戶端啟用 ODBC 回呼
 
 如果您預期呼叫伺服器的用戶端必須發出 ODBC 查詢做為其機器學習解決方案的一部分，您必須確定 [啟動列] 可讓伺服器代表遠端用戶端的 ODBC 呼叫。 若要這樣做，您必須允許 Launchpad 所使用的 SQL 背景工作帳戶登入執行個體。
-如需詳細資訊，請參閱 [安裝 SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
+如需詳細資訊，請參閱[安裝 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
 
 ### <a name="network"></a>新增網路通訊協定
 
 + 啟用具名管道
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 使用具名管道通訊協定，連線在用戶端和伺服器電腦之間，以及某些內部連線。 如果未啟用具名管道，您必須同時在 Azure 虛擬機器以及連線 到伺服器的任何資料科學用戶端上，安裝具名管道並將它啟用。
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 會針對用戶端和伺服器電腦之間的連線，以及部分內部連線使用「具名管道」通訊協定。 如果未啟用具名管道，您必須同時在 Azure 虛擬機器以及連線 到伺服器的任何資料科學用戶端上，安裝具名管道並將它啟用。
   
 + 啟用 TCP/IP
 

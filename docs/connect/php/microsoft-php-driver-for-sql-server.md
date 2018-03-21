@@ -4,24 +4,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79cd8f0b943c9382d4287369ec9cd21f28976172
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1b9464f25551d391004275fcb6dda33fc9b89e2f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="microsoft-php-driver-for-sql-server"></a>Microsoft PHP Driver for SQL Server
 
@@ -32,11 +32,11 @@ SQL Server Driver for PHP 可讓 SQL server 的 PHP 應用程式整合。 驅動
 ## <a name="getting-started"></a>快速入門  
 * [步驟 1︰設定 PHP 開發的開發環境](step-1-configure-development-environment-for-php-development.md)  
 * [步驟 2： 建立 PHP 開發的資料庫](step-2-create-a-sql-database-for-php-development.md)  
-* [步驟 3︰使用 PHP 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [步驟 4︰使用 PHP 彈性地連接到 SQL](step-4-connect-resiliently-to-sql-with-php.md)  
+* [步驟 3︰使用 PHP 連線到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [步驟 4︰使用 PHP 彈性地連線到 SQL](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>文件集  
-* [快速入門](getting-started-with-the-php-sql-driver.md)
+* [使用者入門](getting-started-with-the-php-sql-driver.md)
 * [概觀](overview-of-the-php-sql-driver.md)
 * [程式設計指南](programming-guide-for-php-sql-driver.md) 
 * [安全性考量](security-considerations-for-php-sql-driver.md)

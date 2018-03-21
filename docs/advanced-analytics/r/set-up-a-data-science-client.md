@@ -15,11 +15,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>設定用於 SQL Server 的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,13 +38,13 @@ ms.lasthandoff: 02/11/2018
 
 + Microsoft R Server (for SQL Server 2016)
 
-    - 若要從 SQL Server 安裝程式安裝，請參閱[建立獨立 R 伺服器](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - 若要從 SQL Server 安裝程式安裝，請參閱[安裝 SQL Server 2016 R 伺服器 （獨立）](../install/sql-r-standalone-windows-install.md)
 
     - 若要使用個別的 windows 安裝程式，請參閱[安裝機器學習 Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + 機器學習伺服器 （適用於 SQL Server 2017)
 
-    - 若要從 SQL Server 安裝程式安裝，請參閱[建立獨立 R 伺服器](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - 若要從 SQL Server 安裝程式安裝，請參閱[安裝 SQL Server 2017 機器學習伺服器 （獨立）](../install/sql-machine-learning-standalone-windows-install.md)
 
     - 若要使用個別的 windows 安裝程式，請參閱[適用於 Windows 安裝 R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 

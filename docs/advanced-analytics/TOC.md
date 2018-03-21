@@ -4,18 +4,20 @@
 ## [架構概觀](architecture-overview-machine-learning.md)
 ## [不同版本的功能](r/differences-in-r-features-between-editions-of-sql-server.md)
 
+# Install 
+## [Machine Learning Services (資料庫內)](install/sql-machine-learning-services-windows-install.md)
+## [Machine Learning Server (獨立)](install/sql-machine-learning-standalone-windows-install.md)
+## SQL Server 2016
+### [R Services (資料庫內)](install/sql-r-services-windows-install.md)
+### [R Server (獨立式)](install/sql-r-standalone-windows-install.md)
+## [命令提示字元安裝程式](install/sql-ml-component-commandline-install.md)
+## [離線安裝程式 (不連線到網際網路)](install/sql-ml-component-install-without-internet-access.md)
+
 # [Machine Learning Services - R](r/sql-server-r-services.md)
-
-## [快速入門](r/getting-started-with-sql-server-r-services.md)
-### [設定 SQL Server 機器學習服務 (資料庫內)](r/set-up-sql-server-r-services-in-database.md)
-### [自動安裝機器學習服務](r/unattended-installs-of-sql-server-r-services.md)
-
 ## [架構](r/architecture-overview-sql-server-r.md)
 ### [R 互通性](r/r-interoperability-in-sql-server.md)
 ### [支援 R 整合的元件](r/new-components-in-sql-server-to-support-r.md)
-### [R 的安全性](r/security-overview-sql-server-r.md)
-
-## [監視](r/monitoring-r-services.md)
+### [R 安全性](r/security-overview-sql-server-r.md)
 
 ## [適用於 SQL Server 的 R 教學課程](tutorials/sql-server-r-tutorials.md)
 
@@ -64,13 +66,10 @@
 
 # [機器學習服務 - Python](python/sql-server-python-services.md)
 
-## [快速入門](python/setup-python-machine-learning-services.md)
-
 ## [架構](python/architecture-overview-sql-server-python.md)
 ### [Python 互通性](python/python-interoperability.md)
 ### [支援 Python 的元件](python/new-components-in-sql-server-to-support-python-integration.md)
 ### [Python 安全性](python/security-overview-sql-server-python-services.md)
-## [監視](python/managing-and-monitoring-python-solutions.md)
 <!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
 <!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
@@ -93,10 +92,6 @@
 #### [執行模型](tutorials/sqldev-py6-operationalize-the-model.md)
 
 # [Machine Learning Server - 獨立式](r/r-server-standalone.md)
-## [快速入門](r/getting-started-with-microsoft-r-server-standalone.md)
-## [設定 Machine Learning Server 獨立式](r/create-a-standalone-r-server.md)
-### [從命令列安裝 Microsoft Machine Learning Server](r/install-microsoft-r-server-from-the-command-line.md)
-### [佈建資料科學虛擬機器](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
 # [操作說明](r/sql-server-machine-learning-tasks.md)
 
@@ -155,7 +150,7 @@
 
 ### [使用 Web 服務部署及取用模型](operationalization-with-mrsdeploy.md)
 
-### [管理及監視機器學習服務方案](r/managing-and-monitoring-r-solutions.md)
+### [管理與監控解決方案](r/managing-and-monitoring-r-solutions.md
 ### [Machine Learning 服務的資源管理](r/resource-governance-for-r-services.md)
 ### [建立機器學習的資源集區](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning 服務的擴充事件](r/extended-events-for-sql-server-r-services.md)
@@ -172,18 +167,14 @@
 ## [在 Azure SQL Database 中使用 R](r/using-r-in-azure-sql-database.md)
 
 ## [安裝和疑難排解提示](machine-learning-troubleshooting-faq.md)
+### [佈建資料科學虛擬機器](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [疑難排解的資料收集](data-collection-ml-troubleshooting-process.md)
-### [升級及安裝常見問題集](r/upgrade-and-installation-faq-sql-server-r-services.md)
-
+### [升級與安裝的常見問題集](r/upgrade-and-installation-faq-sql-server-r-services.md)
 ### [外部指令碼執行的常見問題](common-issues-external-script-execution.md)
-### [在沒有網際網路存取的情況下安裝機器學習服務元件](r/installing-ml-components-without-internet-access.md)
-### [在 Azure 虛擬機器上安裝 SQL Server Machine Learning 服務](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [將 R 新增至現有的 Azure 虛擬機器](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [使用 sqlBindR.exe 升級執行個體](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-### [從命令列安裝 R Server](r/install-microsoft-r-server-from-the-command-line.md)
-### [佈建企業資料科學虛擬機器](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-### [設定資料科學工具](r/setup-or-configure-r-tools.md)
-### [設定資料科學用戶端](r/set-up-a-data-science-client.md)
+## [繫結到 Microsoft ML 伺服器](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## [設定資料科學工具](r/setup-or-configure-r-tools.md)
+## [設定資料科學用戶端](r/set-up-a-data-science-client.md)
+## [設定虛擬機器](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 
 ## 部落格
 
@@ -203,10 +194,7 @@
 ## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
 ## [RevoScalePy](python/what-is-revoscalepy.md)
 
-# [教學課程和範例](tutorials/machine-learning-services-tutorials.md)
-
-## [適用於 SQL Server 的 Python 教學課程](tutorials/sql-server-python-tutorials.md)
-## [適用於 SQL Server 的 R 教學課程](tutorials/sql-server-r-tutorials.md)
+# [範本與範例](tutorials/machine-learning-services-tutorials.md)
 
 ## [資料科學方案範本](tutorials/data-science-scenarios-and-solution-templates.md)
 ## [SQL Server 範例](https://github.com/Microsoft/sql-server-samples)

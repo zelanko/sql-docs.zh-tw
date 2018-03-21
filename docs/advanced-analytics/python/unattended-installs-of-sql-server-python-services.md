@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>自動的安裝的 Python 機器學習服務 （資料庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/11/2018
 
     > [!NOTE]
     > 
-    > 有新的安裝旗標的 Python:`SQL_INST_MPY`和`IACCEPTPYTHONLICENSETERMS`
+    > 有新的安裝旗標的 Python:`SQL_INST_MPY`和 `IACCEPTPYTHONLICENSETERMS`
 
 2. 依照指示，請重新啟動伺服器。
 3. 執行後續安裝設定步驟中所述[本節](#bkmk_PostInstall)。 另一個 SQL Server 服務重新啟動將會需要。

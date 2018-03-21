@@ -4,7 +4,7 @@ description: "本文章包含版本資訊，並支援在 Linux 上執行的 SQL 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: dea9cde5674dd684998894691c56e21e728bfe28
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
@@ -49,6 +49,7 @@ ms.lasthandoff: 02/24/2018
 
 | 版本 | 版本 | 發行日期 |
 |-----|-----|-----|
+| [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
 | [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
 | [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
@@ -66,9 +67,23 @@ ms.lasthandoff: 02/24/2018
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [啟用 SQL Server 代理程式](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU5"></a> CU5 (年 3 月 2018)
+
+這是 SQL Server 2017 的累計更新 5 (CU5) 版本。 此版本的 SQL Server 引擎版本是 14.0.3023.8。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643)。
+
+### <a name="package-details"></a>封裝詳細資料
+
+手動或離線的封裝安裝，您可以下載 RPM 和 Debian 封裝與下表中的資訊：
+
+| 封裝 | 封裝版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3023.8-4 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3023.8-4.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3023.8-4.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3023.8-4.x86_64.rpm)</br>[SSIS 封裝](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.3023.8-4 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-4.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-4.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-4.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 封裝 | 14.0.3023.8-4 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3023.8-4_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3023.8-4_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3023.8-4_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU4"></a> CU4 (年 2 月 2018)
 
-這是 SQL Server 2017 的累計更新 4 (CU4) 版本。 此版本的 SQL Server 引擎版本是 14.0.3022.28。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/en-us/help/4056498](https://support.microsoft.com/en-us/help/4056498)。
+這是 SQL Server 2017 的累計更新 4 (CU4) 版本。 此版本的 SQL Server 引擎版本是 14.0.3022.28。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/en-us/help/4056498 ](https://support.microsoft.com/en-us/help/4056498)。
 
 ### <a name="package-details"></a>封裝詳細資料
 
@@ -85,7 +100,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a id="CU3"></a> CU3 (年 1 月 2018)
 
-這是 SQL Server 2017 的累積更新 3 (CU3) 版本。 此版本的 SQL Server 引擎版本是 14.0.3015.40。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987)。
+這是 SQL Server 2017 的累積更新 3 (CU3) 版本。 此版本的 SQL Server 引擎版本是 14.0.3015.40。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/en-us/help/4052987 ](https://support.microsoft.com/en-us/help/4052987)。
 
 ### <a name="package-details"></a>封裝詳細資料
 
@@ -99,7 +114,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a id="CU2"></a> CU2 (11 月版 2017)
 
-這是 SQL Server 2017 的累計更新 2 (CU2) 版本。 此版本的 SQL Server 引擎版本是 14.0.3008.27。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)。
+這是 SQL Server 2017 的累計更新 2 (CU2) 版本。 此版本的 SQL Server 引擎版本是 14.0.3008.27。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/help/4052574 ](https://support.microsoft.com/help/4052574)。
 
 ### <a name="package-details"></a>封裝詳細資料
 
@@ -113,7 +128,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a id="CU1"></a> CU1 (第 2017 年 10 月)
 
-這是 SQL Server 2017 的累計更新 1 (CU1) 版本。 此版本的 SQL Server 引擎版本是 14.0.3006.16。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634)。
+這是 SQL Server 2017 的累計更新 1 (CU1) 版本。 此版本的 SQL Server 引擎版本是 14.0.3006.16。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/help/KB4053439 ](https://support.microsoft.com/help/4038634)。
 
 ### <a name="package-details"></a>封裝詳細資料
 
