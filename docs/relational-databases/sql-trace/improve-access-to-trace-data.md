@@ -18,18 +18,19 @@ helpviewer_keywords:
 - space [SQL Server], SQL Server Profiler
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da917dce9297e934bbaa0fd2236d1c2d17c08795
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cb5a2c53aad0f396ade67d974ed6cfb2c5919913
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="improve-access-to-trace-data"></a>改善追蹤資料的存取
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會使用 **temp** 目錄中的空間，來改善追蹤資料的存取。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 需要至少 10 MB 的可用空間。 如果您使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]時，可用空間在 10 MB 以下，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 功能都會停止運作。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會使用 **temp** 目錄中的空間，來改進追蹤資料的存取。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 需要至少 10 MB 的可用空間。 如果您使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]時，可用空間在 10 MB 以下，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 功能都會停止運作。  
   
  當 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用 **temp** 目錄中的空間，這個空間用法可能會使 **temp** 目錄快速成長。 為了避免發生檔案成長問題，您可以變更 TEMP 環境變數值，將 **temp** 目錄放在非系統磁碟機中。  
   

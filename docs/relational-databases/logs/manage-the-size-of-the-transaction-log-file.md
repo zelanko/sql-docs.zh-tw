@@ -18,15 +18,15 @@ helpviewer_keywords:
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: b604f834bbc1e3f08c30f3feae06d637036610d6
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,9 +103,9 @@ ms.lasthandoff: 02/23/2018
   
       |Version|預設值|  
       |-------------|--------------------|  
-      |從下列版本起 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|資料 64 MB。 記錄檔 64 MB。|  
-      |從下列版本起 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|資料 1 MB。 記錄檔 10%。|  
-      |下列版本以前 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|資料 10%。 記錄檔 10%。|  
+      |從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始|資料 64 MB。 記錄檔 64 MB。|  
+      |從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始|資料 1 MB。 記錄檔 10%。|  
+      |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|資料 10%。 記錄檔 10%。|  
 
 -   小型的成長增量可能會產生太多小型 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，且可能會降低效能。 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到所需大小的必要成長增量，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
 

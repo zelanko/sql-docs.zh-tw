@@ -31,17 +31,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0e46404d775da09f4aaeb7b9640dd2a35d3cfa2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 200adf6302cb0c86f487a7480579a173403ed14c
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   建立伺服器層級認證。 認證是包含驗證資訊的記錄，而該資訊是連線到 SQL Server 外部資源時的必要資訊。 大部分認證都包含 Windows 使用者和密碼。 例如，將資料庫備份儲存至某位置，可能需要 SQL Server 提供特殊的認證才能存取該位置。 如需詳細資訊，請參閱[認證 (資料引擎)](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  若要在資料庫層級建立認證，請使用 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。 當您需要在伺服器上的多個資料庫使用相同認證時，請使用伺服器層級認證。 使用資料庫範圍認證讓資料庫更方便移植。 當資料庫移動至新的伺服器時，資料庫範圍認證會隨著一起移動。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用資料庫範圍認證。  
   
@@ -78,7 +80,7 @@ WITH IDENTITY = 'identity_name'
   
  建立認證之後，您可以利用 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 或 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)，將其對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入只能對應至一個認證，但單一認證則可對應至多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如需詳細資訊，請參閱[認證 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。 伺服器層級認證只能對應至登入，不能對應至資料庫使用者。 
   
- 您可以在 [sys.credentials](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md) 目錄檢視中，看到有關認證的資訊。  
+ 您可以在 [sys.credentials](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md) 目錄檢視中，看到認證的相關資訊。  
   
  如果提供者沒有任何登入對應認證，系統就會使用對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶的認證。  
   

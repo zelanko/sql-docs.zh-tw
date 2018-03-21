@@ -20,18 +20,19 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a53a67bdd997f3daa8168f445ce8eada527b5608
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: b77fb18c3513c7c0a764cad2110931d38c6903f9
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="filter-a-trace"></a>篩選追蹤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 篩選可限制追蹤中收集的事件。 如果沒有設定篩選條件，選定事件類別的所有事件都會傳回到追蹤輸出。 例如，限制追蹤裡的 Windows 使用者名稱為特定使用者，可將輸出資料縮小為只有這些使用者。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  篩選可限制追蹤中收集的事件。 如果沒有設定篩選條件，選定事件類別的所有事件都會傳回到追蹤輸出。 例如，限制追蹤裡的 Windows 使用者名稱為特定使用者，可將輸出資料縮小為只有這些使用者。  
   
  替追蹤設定篩選並非強制的。 不過，篩選可以讓追蹤期間造成的負擔降到最低。 篩選會傳回特別關注的資料，而讓效能分析和稽核都變得比較容易。  
   

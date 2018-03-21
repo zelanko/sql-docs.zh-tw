@@ -1,4 +1,5 @@
 # [教學課程：SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+## [使用 SSMS 對 SQL Server 進行連線與查詢](connect-query-sql-server.md)
 
 # 課程
 ## [課程 1 - SQL Server Management Studio 基本導覽](lesson-1-basic-navigation-in-sql-server-management-studio.md)  

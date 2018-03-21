@@ -18,11 +18,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cd80620f668e87eba8a77f1ac6a9e5faa2378da
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0e3fdf8e84b12315ef3ce500b933c4b4d6580f13
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) 相應放大背景工作
 
@@ -43,8 +43,8 @@ StoreName|背景工作憑證所在的存放區名稱。|My
 AgentHeartbeatInterval|相應放大背景工作的活動訊號間隔。|00:01:00         
 TaskHeartbeatInterval|相應放大背景工作報告工作狀態的間隔。|00:00:10         
 HeartbeatErrorTollerance|在最後一個成功的工作活動訊號時段後，如果收到活動訊號的錯誤回應，便會終止工作。|00:10:00      
-TaskRequestMaxCPU|相應放大背景工作要求工作的 CPU 上限。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|70.0         
-TaskRequestMinMemory|相應放大背景工作要求工作的記憶體 MB 下限。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|100.0         
+TaskRequestMaxCPU|相應放大背景工作要求工作的 CPU 上限。|70.0         
+TaskRequestMinMemory|相應放大背景工作要求工作的記憶體 MB 下限。|100.0         
 MaxTaskCount|相應放大背景工作可以保留的最大工作數目。|10         
 LeaseInternval|相應放大背景工作保留的工作租用間隔。|00:01:00         
 TasksRootFolder|工作記錄檔的資料夾。 如果值空白，則會使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 資料夾路徑。 [帳戶] 是執行相應放大背景工作服務的帳戶。 預設的帳戶是 SSISScaleOutWorker140。|Empty         

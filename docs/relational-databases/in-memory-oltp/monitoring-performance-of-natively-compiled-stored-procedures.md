@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de69f1adb23ab36c7f35819762dba1578f7015fd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a5f180e94f835adaa91812e0341dab85d382c2c2
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>監視原生編譯預存程序的效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主題討論如何監視原生編譯預存程序的效能  
+  本主題討論如何監視原生編譯預存程序的效能  
   
 ## <a name="using-extended-events"></a>使用擴充的事件  
  使用 **sp_statement_completed** 擴充事件來追蹤查詢的執行。 以此事件建立擴充事件工作階段，選擇性地針對特定原生編譯預存程序篩選 object_id。執行每項查詢之後都將引發此擴充事件。 擴充事件所報告的 CPU 時間和持續時間代表了查詢的 CPU 使用率和執行時間。 原生編譯預存程序若佔用大量的 CPU 時間，可能就會導致效能問題。  

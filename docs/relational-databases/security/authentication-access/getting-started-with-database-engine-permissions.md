@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,7 +166,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ## <a name="list-of-permissions"></a>權限清單  
  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 具有 230 個權限。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 具有 219 個權限。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 具有 214 個權限。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 具有 195 個權限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]和 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 具有較少的權限，這是因為其僅會公開部分的資料庫引擎，但每個資料庫引擎皆具有不適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的部分權限。 下圖顯示這些權限及其彼此間的關聯性。 一些較高等級的權限 (例如 `CONTROL SERVER`) 會多次列出。 本主題中的海報字級太小，無法閱讀。 按一下影像，以下載 PDF 格式的 **Database Engine 權限海報**。  
   
-[![Database Engine 權限](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Database Engine 權限](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
  
  如需顯示 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 主體與伺服器和資料庫物件間關係的說明圖，請參閱[權限階層 &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)。  
   

@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 25ab48e5b7b0ea6a8696c9ab03a9a7b08172ba53
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="control-transaction-durability"></a>控制交易持久性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設值) 或延遲的持久 (也稱為延遲認可)。    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設值) 或延遲的持久 (也稱為延遲認可)。    
     
  完全持久交易認可是同步認可，而且只有在交易的記錄檔記錄寫入磁碟之後，才會將認可回報為成功並將控制權傳回給用戶端。 延遲的持久交易認可是非同步認可，而且在交易的記錄檔記錄寫入磁碟之前，就會將認可回報為成功。 將交易記錄項目寫入磁碟是讓交易能夠持久的必要條件。 延遲的持久交易會在交易記錄項目排清至磁碟時變成持久。    
     
