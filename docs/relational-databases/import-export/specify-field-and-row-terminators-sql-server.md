@@ -1,16 +1,16 @@
 ---
-title: "指定欄位與資料列結束字元 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 指定欄位與資料列結束字元 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/20/2018
 ---
@@ -46,13 +46,13 @@ ms.lasthandoff: 03/20/2018
 |新行字元 (Newline Character)|\n<br /><br /> 這是預設資料列結束字元。|  
 |歸位字元/換行字元|\r|  
 |反斜線*|\\\|  
-|Null 結束字元 (看不見的結束字元)**|\0|  
+|Null 結束字元 (看不見的結束字元)\*\*|\0|  
 |任何可列印的字元 (除了 Null 值、定位點、新行字元和 Return 鍵外，控制字元均無法列印)|(*、A、t、l 等等)|  
-|最多包含 10 個可列印字元的字串，包括先前所列的一些或所有結束字元|(**\t\*\*、end、!!!!!!!!!!、\t—\n 等等)|  
+|最多包含 10 個可列印字元的字串，包括先前所列的一些或所有結束字元|(\*\*\t\*\*、end、!!!!!!!!!!、\t—\n 等等)|  
   
  *只有 t、n、r、0 和 '\0' 字元可以與反斜線逸出字元搭配使用，以產生控制字元。  
   
- **雖然列印時看不到 null 控制字元 (\0)，這個字元仍是資料檔中的個別字元。 這表示使用 null 控制字元做為欄位或資料列結束字元，和完全沒有欄位或資料列結束字元不同。  
+ \*\*雖然列印時看不到 null 控制字元 (\0)，這個字元仍是資料檔中的個別字元。 這表示使用 null 控制字元做為欄位或資料列結束字元，和完全沒有欄位或資料列結束字元不同。  
   
 > [!IMPORTANT]  
 >  如果在資料內發現結束字元，它會當作結束字元而非當作資料來解譯，而該字元之後的資料則會解譯為屬於下一個欄位或記錄。 因此，請小心選擇結束字元，確定這些結束字元絕不會出現在您的資料中。 例如，如果資料中包含低 Surrogate，此低 surrogate 欄位結束字元就不是欄位結束字元的好選項。  
