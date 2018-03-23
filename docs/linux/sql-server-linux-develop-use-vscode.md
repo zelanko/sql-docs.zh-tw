@@ -39,20 +39,20 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 1. 按**CTRL + SHIFT + P** (或**F1**) 若要開啟命令選擇區 VS Code 中。 
 
-2. 選取**安裝延伸**和型別**mssql**。
+2. 選取**安裝擴充功能**和輸入**mssql**。
    > [!TIP] 
    > 如 macOS **CMD**索引鍵等同**CTRL** Linux 及 Windows 上的索引鍵。
 
-2. 按一下 安裝**mssql**。 
+2. 按一下 安裝 **mssql**。 
    
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 600px;"/>
 
-3. **Mssql**延伸需要花費一分鐘來安裝。 等候提示，告訴您已成功安裝。
+3. **Mssql** 擴充功能需要花費一分鐘來安裝。 等候提示，告訴您已成功安裝。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > MacOS，您必須安裝 OpenSSL。 這是適用於.Net 的必要條件 mssql 延伸模組所使用的核心。 請遵循**安裝必要條件**中的步驟[.Net 核心指示]。 或者，您可以執行下列命令，在您 macOS 終端機。
+   > MacOS，您必須安裝 OpenSSL。 這是適用於.Net 的必要條件 mssql 擴充功能所使用的核心。 請遵循**安裝必要條件**中的步驟[.Net 核心指示]。 或者，您可以執行下列命令，在您 macOS 終端機。
    >
    >   ```bash
    >   brew update
@@ -82,7 +82,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 1. 在 VS Code 中，按 **CTRL+SHIFT+P** (或 **F1**) 開啟 [命令選擇區]。
 
-2. 型別**sql**以顯示 mssql 命令。
+2. 輸入 **sql** 以顯示 mssql 命令。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-commands.png" alt="mssql commands" style="width: 500px;" />
    
@@ -101,7 +101,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
    | **[選用]資料庫名稱** | 您想要使用的資料庫。 基於本教學課程的目的，未指定資料庫和按**ENTER**才能繼續。 |
    | **使用者名稱** | 輸入資料庫伺服器上具有存取權的使用者名稱。 此教學課程中，使用預設**SA** SQL Server 安裝期間建立的帳戶。 |
    | **密碼 (SQL 登入)** | 請輸入指定之使用者的密碼。 | 
-   | **儲存密碼嗎？** | 型別**是**儲存密碼。 否則，請鍵入**否**提示輸入密碼每次使用時連線設定檔。 |
+   | **儲存密碼嗎？** | 輸入**是**儲存密碼。 否則，請鍵入**否**提示輸入密碼每次使用時連線設定檔。 |
    | **[選用]輸入此設定檔的名稱** | 連線設定檔名稱。 例如，您可以命名為設定檔**本機主機設定檔**。 
 
    > [!Tip] 
@@ -151,7 +151,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 2. 按**F1**顯示命令選擇區。
 
-3. 型別**sql**調色盤中的命令來顯示 SQL 命令或型別**sqluse**如**MS sql: use-cdata 資料庫**命令。
+3. 輸入 **sql** 調色盤中的命令來顯示 SQL 命令或輸入 **sqluse**如**MS sql: use-cdata 資料庫**命令。
 
 4. 按一下**MS sql: use-cdata 資料庫**，然後選取**TutorialDB**資料庫。 這將內容變更至前一節中建立新資料庫。
 
