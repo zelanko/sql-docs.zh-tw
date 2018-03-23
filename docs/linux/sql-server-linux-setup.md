@@ -1,25 +1,25 @@
 ---
-title: "在 Linux 上的 SQL Server 2017 的安裝指南 |Microsoft 文件"
-description: "安裝、 更新及解除安裝 SQL Server on Linux。 本文涵蓋線上、 離線，並無人看管的案例。"
+title: 在 Linux 上的 SQL Server 2017 的安裝指南 |Microsoft 文件
+description: 安裝、 更新及解除安裝 SQL Server on Linux。 本文涵蓋線上、 離線，並無人看管的案例。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
 
@@ -47,12 +47,10 @@ SQL Server 2017 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server 
 | **Ubuntu** | 16.04 | [取得 Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker 引擎** | 1.8+ | [取得 Docker](http://www.docker.com/products/overview)
 
+Microsoft 也支援部署及管理 SQL Server 容器使用 OpenShift 和 Kubernetes。
+
 > [!NOTE]
-> 它有時可能是安裝和其他密切相關 Linux 平台上，執行 SQL Server，但只測試，在上表中所列的平台上支援 SQL Server。
-
-Microsoft 僅支援部署及管理 SQL Server 容器使用 OpenShift 和 Kubernetes。
-
-SQL Server 2017 最新的支援原則，請參閱[Microsoft SQL Server 的技術支援人員原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
+> 測試 SQL Server 和 Linux 上支援先前列出的發佈。 如果您選擇不支援的作業系統上安裝 SQL Server，請檢閱**支援原則**區段[Microsoft SQL Server 的技術支援人員原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)來了解支援含意。
 
 ## <a id="system"></a> 系統需求
 
@@ -170,7 +168,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 ## <a id="offline"></a> 離線安裝
 
-如果您的 Linux 電腦不必存取線上儲存機制中使用[快速入門](#platforms)，您可以直接下載封裝檔案。 這些封裝位於 Microsoft 儲存機制 [https://packages.microsoft.com](https://packages.microsoft.com) 中。
+如果您的 Linux 電腦不必存取線上儲存機制中使用[快速入門](#platforms)，您可以直接下載封裝檔案。 這些封裝位於 Microsoft 儲存機制[ https://packages.microsoft.com ](https://packages.microsoft.com)。
 
 > [!TIP]
 > 如果您已成功安裝快速入門中的步驟，您不需要下載或以手動方式安裝 SQL Server 封裝。 本節只是為了在離線案例中。
