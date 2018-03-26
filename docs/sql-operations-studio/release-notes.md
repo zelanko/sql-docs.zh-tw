@@ -44,7 +44,7 @@ ms.lasthandoff: 02/19/2018
    - 修正[發出 225](https://github.com/Microsoft/sqlopsstudio/issues/225)： 關鍵字色彩不相符。
    - 修正[發出 60](https://github.com/Microsoft/sqlopsstudio/issues/60)： 無效的 sql 語法色彩反白顯示時使用 from 子句中的暫存資料表。
 - 導入連線擴充性 API。
-- VS 程式碼編輯器 1.19 整合。
+- VS Code 編輯器 1.19 整合。
 - 更新拾取幾項查詢計劃檢視器改良 JustinPealing/html-查詢計劃元件。
 
 
