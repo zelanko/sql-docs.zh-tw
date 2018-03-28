@@ -39,7 +39,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 1. 按**CTRL + SHIFT + P** (或**F1**) 若要開啟命令選擇區 VS Code 中。 
 
-2. 選取**安裝擴充功能**和輸入**mssql**。
+2. 選取 [安裝擴充功能] 並輸入 **mssql**。
    > [!TIP] 
    > 如 macOS **CMD**索引鍵等同**CTRL** Linux 及 Windows 上的索引鍵。
 
@@ -47,12 +47,12 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
    
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 600px;"/>
 
-3. **Mssql** 擴充功能需要花費一分鐘來安裝。 等候提示，告訴您已成功安裝。
+3. 安裝 **Mssql** 延伸模組最多需要一分鐘。請等候提示，告訴您已成功安裝。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > MacOS，您必須安裝 OpenSSL。 這是適用於.Net 的必要條件 mssql 擴充功能所使用的核心。 請遵循**安裝必要條件**中的步驟[.Net 核心指示]。 或者，您可以執行下列命令，在您 macOS 終端機。
+   > 若使用的是 MacOS，則必須先安裝 OpenSSL。 這是讓 mssql 延伸模組使用 .Net Core 的必要條件。請遵循 [.Net Core 指示] 的 **安裝必要條件** 中的步驟。或者，您也可以在您的 macOS 終端機中執行下列命令。
    >
    >   ```bash
    >   brew update
@@ -98,7 +98,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
    | 設定 | Description |
    |-----|-----|
    | **伺服器名稱** | SQL Server 執行個體名稱。 本教學課程中，使用**localhost**連接到本機電腦上的 SQL Server 執行個體。 如果連接到遠端的 SQL Server，請輸入目標 SQL Server 電腦或 IP 位址的名稱。 |
-   | **[選用]資料庫名稱** | 您想要使用的資料庫。 基於本教學課程的目的，未指定資料庫和按**ENTER**才能繼續。 |
+   | **儲存密碼嗎？** | 若要儲存密碼，請輸入**是**。 否則請輸入**否**，此後每次使用連線設定檔時，系統都會提示您輸入密碼。 |
    | **使用者名稱** | 輸入資料庫伺服器上具有存取權的使用者名稱。 此教學課程中，使用預設**SA** SQL Server 安裝期間建立的帳戶。 |
    | **密碼 (SQL 登入)** | 請輸入指定之使用者的密碼。 | 
    | **儲存密碼嗎？** | 輸入**是**儲存密碼。 否則，請鍵入**否**提示輸入密碼每次使用時連線設定檔。 |
