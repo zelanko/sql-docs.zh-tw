@@ -1,28 +1,30 @@
 ---
-title: "Data Quality Services 簡介 | Microsoft Docs"
-ms.custom: 
+title: Data Quality Services 簡介 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/05/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Domains
+helpviewer_keywords:
+- Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: "51"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 33d3b1ce22b6cf81b6d38b2644b4bd021e29e3fc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: b2b0004068581d06c516c711565d811cc1736b55
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的資料品質方案可讓資料管理人或 IT 專業人員維護其資料的品質，並確保資料適合其商業用途。 DQS 是知識驅動方案，可同時提供電腦輔助和互動式方法來管理資料來源的完整性和品質。 DQS 可讓您探索、建立以及管理資料的相關知識。 然後您可以使用該知識執行資料清理、比對和分析。 您也可以在 DQS 資料品質專案中使用參考資料提供者的雲端式服務。  

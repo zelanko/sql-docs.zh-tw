@@ -1,6 +1,6 @@
 ---
-title: "SQL 作業 Studio （預覽） 中的伺服器群組 |Microsoft 文件"
-description: "深入了解 SQL 作業 Studio （預覽） 中的伺服器群組。"
+title: SQL Operations Studio （預覽） 中的伺服器群組 |Microsoft 文件
+description: 深入了解 SQL Operations Studio （預覽） 中的伺服器群組。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

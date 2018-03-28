@@ -1,27 +1,28 @@
 ---
 title: Data Quality Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/12/2013
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: "67"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a437f93e76b78a9d335ab846c83a9765eb1b4d5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 648620fc2da4fd3e033feec89531fea3ec7dceae
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) 是一個知識驅動的資料品質專案。 DQS 可讓您建立知識庫，然後使用該知識庫執行各種重要的資料品質工作，包括更正、充實、標準化及刪除重複資料。 DQS 可讓您使用參考資料提供者所提供的雲端式 Reference Data Services，執行資料清理。 DQS 也提供您整合到其資料品質工作的分析功能，讓您分析資料的完整性。  
