@@ -1,6 +1,6 @@
 ---
-title: "SQL 作業 Studio （預覽） 中的連接時，使用 Active Directory 驗證 (Kerberos) |Microsoft 文件"
-description: "了解如何啟用 Kerberos，若要使用 Active Directory 驗證的 SQL 作業 Studio （預覽）"
+title: SQL Operations Studio （預覽） 中的連接時，使用 Active Directory 驗證 (Kerberos) |Microsoft 文件
+description: 了解如何啟用 Kerberos，若要使用 Active Directory 驗證的 SQL Operations Studio （預覽）
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: meet-bhagdev
 ms.author: meetb
