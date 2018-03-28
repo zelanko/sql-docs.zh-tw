@@ -1,6 +1,6 @@
 ---
-title: "快速入門： 連接及查詢 SQL Server 使用 SQL 作業 Studio （預覽） |Microsoft 文件"
-description: "本快速入門示範如何使用 SQL 作業 Studio （預覽） 來連接到 SQL Server 和執行查詢"
+title: 快速入門： 連接及查詢 SQL Server 使用 SQL Operations Studio （預覽） |Microsoft 文件
+description: 本快速入門示範如何使用 SQL Operations Studio （預覽） 來連接到 SQL Server 和執行查詢
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -38,8 +38,8 @@ ms.lasthandoff: 03/09/2018
 ## <a name="connect-to-a-sql-server"></a>連接到 SQL Server
 
    
-1. 啟動 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 。
-1. 第一次執行 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  **連接** 對話方塊隨即開啟。 如果**連接**未開啟的對話方塊中，按一下**新連線**中的圖示**伺服器**頁面：
+1. 啟動 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
+1. 第一次執行 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* **連接** 對話方塊隨即開啟。 如果**連接**未開啟的對話方塊中，按一下**新連線**中的圖示**伺服器**頁面：
    
    ![新的連線圖示](media/quickstart-sql-server/new-connection-icon.png)
 

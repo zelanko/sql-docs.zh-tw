@@ -1,16 +1,16 @@
 ---
 title: ALTER ROLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 05/01/2017
+ms.custom: ''
+ms.date: 03/13/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ROLE_TSQL
@@ -24,24 +24,24 @@ helpviewer_keywords:
 - database roles [SQL Server], modifying
 - names [SQL Server], database roles
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 897e8017965e71f345a93550e9af0c138d80b3b7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 3df52490a6da3ce4e2c6d7d0db497198d20bf1aa
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   在資料庫角色中加入或移除成員，或變更使用者定義資料庫角色的名稱。  
   
 > [!NOTE]  
->  若要改變 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中的角色，請使用 [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。  
+>  若要改變 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中的角色新增或成員卸除，請使用 [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +61,7 @@ ALTER ROLE  role_name
   
  
 ```  
--- Syntax for SQL Server 2008 only  
+-- Syntax for SQL Server 2008, Azure SQL Data Warehouse and Parallel Data Warehouse
   
 -- Change the name of a user-defined database role  
 ALTER ROLE role_name   

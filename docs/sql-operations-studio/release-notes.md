@@ -1,6 +1,6 @@
 ---
-title: "Microsoft SQL 作業 Studio （預覽） 版本資訊 |Microsoft 文件"
-description: "Microsoft SQL 作業 Studio （預覽） 版本資訊"
+title: Microsoft SQL Operations Studio （預覽） 版本資訊 |Microsoft 文件
+description: Microsoft SQL Operations Studio （預覽） 版本資訊
 ms.custom: tools|sos
 ms.date: 02/15/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
@@ -20,11 +20,11 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/19/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>SQL 作業 Studio （預覽） 版本資訊
+# <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio （預覽） 版本資訊
 
-**[下載年 2 月公開預覽](download.md)**
+**[下載 2 月公開預覽](download.md)**
 
-## <a name="february-2018-february-public-preview"></a>2 月版 2018 （年 2 月公開預覽）
+## <a name="february-2018-february-public-preview"></a>2018 年 2 月版 （ 2 月公開預覽）
 
 發行日期： 2018 年 2 月 15，  
 版本： 0.26.7
@@ -44,16 +44,16 @@ ms.lasthandoff: 02/19/2018
    - 修正[發出 225](https://github.com/Microsoft/sqlopsstudio/issues/225)： 關鍵字色彩不相符。
    - 修正[發出 60](https://github.com/Microsoft/sqlopsstudio/issues/60)： 無效的 sql 語法色彩反白顯示時使用 from 子句中的暫存資料表。
 - 導入連線擴充性 API。
-- VS 程式碼編輯器 1.19 整合。
+- VS Code 編輯器 1.19 整合。
 - 更新拾取幾項查詢計劃檢視器改良 JustinPealing/html-查詢計劃元件。
 
 
-## <a name="january-2018-january-public-preview"></a>年 1 月 2018 （年 1 月公開預覽）
+## <a name="january-2018-january-public-preview"></a>2018 年 1 月 （ 1 月公開預覽）
 
-發行日期： 2018 年 1 月 17，  
+發行日期： 2018 年 1 月 17 日，  
 版本： 0.25.4
 
-*年 1 月公用預覽*含有一些功能建議和高優先順序的 bug 修正。 此版本包含下列增強功能：
+*1 月公用預覽*含有一些功能建議和高優先順序的 bug 修正。 此版本包含下列增強功能：
 
 - 在 [連接] 對話方塊中可使用儲存的伺服器連接。
 - 啟用熱結束。 根據預設，若要啟用，請參閱熱結束已關閉[熱結束設定](settings.md#hot-exit)。
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/19/2018
 如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)。
 
 
-## <a name="december-2017-december-public-preview"></a>年 12 月 2017 （年 12 月公開預覽）
+## <a name="december-2017-december-public-preview"></a>2017 年 12 月（12 月公開預覽）
 
 發行日期： 2017 年 12 月 19，  
 版本： 0.24.1
@@ -86,7 +86,7 @@ ms.lasthandoff: 02/19/2018
 
 ## <a name="november-2017"></a>2017 年 11 月
 
-發行日期： 2017 年 11 月 15，  
+發行日期： 2017 年 11 月 15 日，  
 版本： 0.23.6
 
 - 初始版本的[!INCLUDE[name-sos](../includes/name-sos-short.md)]。

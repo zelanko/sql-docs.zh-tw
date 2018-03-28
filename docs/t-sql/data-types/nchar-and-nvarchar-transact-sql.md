@@ -1,16 +1,16 @@
 ---
-title: "nchar 和 nvarchar (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: nchar 和 nvarchar (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: de099c00e160e212ff309abf74d5411687a82532
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="arguments"></a>引數  
 **nchar** [ ( n ) ]  
-固定長度的 Unicode 字串資料。 *n* 定義字串長度，而且必須是 1 到 4,000 之間的值。 儲存體大小是 *n* 個位元組的兩倍。 當定序字碼頁使用雙位元組字元時，儲存體大小仍是 *n* 位元組。 根據字串，*n* 位元組的儲存體大小可能小於針對 *n* 所指定的值。 **nchar** 的 ISO 同義字為 **national char** 及 **national character**。
+固定長度的 Unicode 字串資料。 *n* 可定義字串長度，而且必須是 1 到 4,000 之間的值。 儲存體大小是 *n* 個位元組的兩倍。 當定序字碼頁使用雙位元組字元時，儲存體大小仍是 *n* 個位元組。 根據字串，*n* 個位元組的儲存體大小可能小於針對 *n* 所指定的值。 **nchar** 的 ISO 同義字為 **national char** 及 **national character**。
   
 **nvarchar** [ ( n | **max** ) ]  
-長度可變的 Unicode 字串資料。 *n* 定義字串長度，可以是 1 到 4,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個字元 (2 GB)。 儲存體大小 (以位元組為單位) 是輸入資料之實際長度的兩倍 + 2 位元組。 **nvarchar** 的 ISO 同義字為 **national char varying** 及 **national character varying**。
+長度可變的 Unicode 字串資料。 *n* 定義字串長度，可以是 1 到 4,000 之間的值。 **max** 表示儲存體大小上限是 2^30-1 個字元。  以位元組為單位的最大儲存體大小是 2 GB。 儲存體實際大小是輸入字元數的兩倍 + 2 個位元組 (以位元組為單位)。 **nvarchar** 的 ISO 同義字為 **national char varying** 及 **national character varying**。
   
 ## <a name="remarks"></a>Remarks  
 當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 當 *n* 不是由 CAST 函式指定時，預設長度為 30。
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
 >  當使用字母 N 來前置字串常數時，若要轉換的常數未超過 Unicode 字串資料類型的最大長度 (4,000)，則隱含轉換的結果便會是 Unicode 字串。 否則，隱含轉換會導致 Unicode 大值 (max)。
   
 > [!WARNING]  
->  每個非 Null 的 **varchar(max)** 或 **nvarchar(max)** 資料行都需要額外 24 位元組的固定配置，而不利於排序作業期間 8,060 位元組的資料列限制。 因此可能會對資料表中可建立的非 Null **varchar(max)** 或 **nvarchar(max)** 資料行數目建立隱含限制。 建立資料表時 (高於最大資料列大小超過允許上限 8060 位元組所引發的一般警告) 或插入資料時，不會提供任何特殊錯誤。 如此大型的資料列可能會在某些一般作業 (如叢集索引鍵更新) 期間造成錯誤 (如錯誤 512)，或讓使用者直到執行作業前都無法預期多種完整資料行集。  
+>  每個非 null 的 **varchar(max)** 或 **nvarchar(max)** 資料行都需要額外 24 個位元組的固定配置，而不利於排序作業期間 8,060 個位元組的資料列限制。 這些額外的位元組可能會對資料表中的非 null **varchar(max)** 或 **nvarchar(max)** 資料行數目產生隱含限制。 建立資料表時 (高於最大資料列大小超過允許上限 8060 位元組所引發的一般警告) 或插入資料時，不會提供任何特殊錯誤。 如此大型的資料列可能會在某些一般作業期間發生使用者非預期的錯誤 (例如錯誤 512)。  這些作業的其中兩個範例是叢集索引鍵更新或多種完整資料行集。
   
 ## <a name="converting-character-data"></a>轉換字元資料  
 如需轉換字元資料的資訊，請參閱 [char 和 varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md)。
