@@ -1,31 +1,31 @@
 ---
-title: "安裝 SQL Server 2016 R Services （資料庫） |Microsoft 文件"
-ms.custom: 
+title: 安裝 SQL Server 2016 R Services （資料庫） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "安裝 SQL Server R 服務"
-- "安裝 SQL Server 機器學習服務"
-- "設定 R 服務"
-- "安裝 SQL 機器學習服務"
-ms.assetid: 
-caps.latest.revision: 
+- 安裝 SQL Server R 服務
+- 安裝 SQL Server 機器學習服務
+- 設定 R 服務
+- 安裝 SQL 機器學習服務
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0012b48101085b7ccb18695fbda1f25c10a6b90b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 7a00eb7f3151ad95818feee1d981170164f44345
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>安裝 SQL Server 2016 R 服務 (資料庫內) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/21/2018
 
 ## <a name="bkmk_prereqs"> </a> 預先安裝檢查清單
 
-+ 需要 SQL Server 2016。 如果您有 SQL Server 2016，請安裝[SQL Server 2017 機器學習服務 （資料庫）](sql-machine-learning-services-windows-install.md)改為。
++ 如果您想要安裝 R 服務需要 SQL Server 2016 安裝程式。 如果相反地，您會擁有 SQL Server 2017 安裝媒體，您應該安裝[SQL Server 2017 機器學習服務 （資料庫）](sql-machine-learning-services-windows-install.md)取得該版本的 SQL Server 的 R 整合。
 
 + 需要資料庫引擎執行個體。 您無法安裝只 R，雖然您可以將它以累加方式加入現有的執行個體。
 

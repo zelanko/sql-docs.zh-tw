@@ -1,35 +1,36 @@
 ---
-title: "PowerShell：使用您自己的 Azure Key Vault 金鑰來啟用 TDE | Microsoft Docs"
-description: "了解如何設定 Azure SQL Database 和資料倉儲，以開始使用透明資料加密 (TDE) 並用於 PowerShell 的靜態加密。"
-keywords: 
-documentationcenter: 
+title: PowerShell 與 CLI：使用您自己的 Azure Key Vault 金鑰啟用 SQL TDE | Microsoft Docs
+description: 了解如何設定 Azure SQL Database 和資料倉儲，以開始使用透明資料加密 (TDE) 並用於 PowerShell 或 CLI 的靜態加密。
+keywords: ''
+documentationcenter: ''
 author: aliceku
 manager: craigg
-editor: 
-ms.prod: 
-ms.reviewer: 
+editor: ''
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.component: security
 ms.workload: On Demand
-ms.tgt_pltfrm: 
-ms.devlang: na
+ms.tgt_pltfrm: ''
+ms.devlang: azurecli, powershell
 ms.topic: article
-ms.date: 08/07/2017
+ms.date: 03/15/2018
 ms.author: aliceku
-ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 9d1fee3a22bfa930f70a8c6e2585f60acaf5f419
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell：使用您自己的 Azure Key Vault 金鑰來啟用透明資料加密 (預覽)
+# <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell 與 CLI：使用您自己的 Azure Key Vault 金鑰來啟用透明資料加密 (預覽)
+
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 本使用說明指南逐步解說如何在 SQL Database 或資料倉儲上，使用 Azure Key Vault 的金鑰進行透明資料加密 (TDE) (預覽)。 若要深入了解支援攜帶您自己的金鑰 (BYOK) 的 TDE (預覽)，請瀏覽 [TDE 讓您在 Azure SQL 中攜帶您自己的金鑰](transparent-data-encryption-byok-azure-sql.md)。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites-for-powershell"></a>PowerShell 的必要條件
 
 - 您必須擁有 Azure 訂用帳戶，而且是該訂用帳戶的系統管理員。
 - [建議但非必要] 備妥硬體安全性模組 (HSM) 或本機金鑰存放區，以建立 TDE 保護裝置金鑰內容的本機複本。
@@ -42,9 +43,9 @@ ms.lasthandoff: 01/04/2018
    - 未停用
    - 能夠執行「取得」、「包裝金鑰」和「解除包裝金鑰」作業
 
-## <a name="step-1-assign-an-aad-identity-to-your-server"></a>步驟 1： 將 AAD 身分識別指派給您的伺服器 
+## <a name="step-1-assign-an-azure-ad-identity-to-your-server"></a>步驟 1： 將 Azure AD 身分識別指派給您的伺服器 
 
-如果您具備現有的伺服器，請使用下列程序，將 AAD 身分識別新增至您的伺服器：
+若您有現有的伺服器，請使用下列項目將 Auzre AD 身分識別新增至您的伺服器：
 
    ```powershell
    $server = Set-AzureRmSqlServer `
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/04/2018
    -AssignIdentity
    ```
 
-如果您要建立伺服器，請使用 [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) Cmdlet 與 -Identity 標記，在伺服器建立期間新增 AAD 身分識別：
+如果您要建立伺服器，請使用 [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) Cmdlet 與 -Identity 標籤，在伺服器建立期間新增 Azure AD 身分識別：
 
    ```powershell
    $server = New-AzureRmSqlServer `
@@ -124,7 +125,7 @@ ms.lasthandoff: 01/04/2018
 
 目前，資料庫或資料倉儲都已啟用 TDE，並具有 Key Vault 加密金鑰。
 
-## <a name="step-5-check-the-encryption-state-and-encryption-activity-of-the-database-or-data-warehouse"></a>步驟 5： 檢查加密狀態及資料庫或資料倉儲的加密活動
+## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>步驟 5： 檢查加密狀態與加密活動
 
 使用 [Get-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) 取得加密狀態，並使用 [Get-AzureRMSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) 檢查資料庫或資料倉儲的加密進度。
 
@@ -192,4 +193,67 @@ ms.lasthandoff: 01/04/2018
 - 了解如何輪替伺服器的 TDE 保護裝置，以符合安全性需求：[使用 PowerShell 輪替透明資料加密保護裝置](transparent-data-encryption-byok-azure-sql-key-rotation.md)。
 - 萬一發生安全性風險時，了解如何移除可能被盜用的 TDE 保護裝置：[移除可能被盜用的金鑰](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)。 
 
+## <a name="prerequisites-for-cli"></a>CLI 的必要條件
 
+- 您必須擁有 Azure 訂用帳戶，而且是該訂用帳戶的系統管理員。
+- [建議但非必要] 備妥硬體安全性模組 (HSM) 或本機金鑰存放區，以建立 TDE 保護裝置金鑰內容的本機複本。
+- 命令列介面 2.0 版或更新版本。 若要安裝最新版本並連線至您的 Azure 訂用帳戶，請參閱[安裝及設定 Azure 跨平台命令列介面 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)。 
+- 建立 Azure Key Vault 和金鑰以用於 TDE。
+   - [使用 CLI 2.0 管理 Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [使用硬體安全性模組 (HSM) 與 Key Vault 的指示](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+- 若要用於 TDE，金鑰必須具有下列屬性：
+   - 無到期日
+   - 未停用
+   - 能夠執行「取得」、「包裝金鑰」和「解除包裝金鑰」作業
+   
+## <a name="step-1-create-a-server-and-assign-an-azure-ad-identity-to-your-server"></a>步驟 1： 建立伺服器並將 Azure AD 身分識別指派給您的伺服器
+      ```cli
+      # create server (with identity) and database
+      az sql server create -n "ServerName" -g "ResourceGroupName" -l "westus" -u "cloudsa" -p "YourFavoritePassWord99@34" -I 
+      az sql db create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+      ```
+
+ 
+## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>步驟 2： 授與伺服器 Key Vault 權限
+      ```cli
+      # create key vault, key and grant permission
+      az keyvault create -n "VaultName" -g "ResourceGroupName" 
+      az keyvault key create -n myKey -p software --vault-name "VaultName" 
+      az keyvault set-policy -n "VaultName" --object-id "ServerIdentityObjectId" -g "ResourceGroupName" --key-permissions wrapKey unwrapKey get list 
+      ```
+
+ 
+## <a name="step-3-add-the-key-vault-key-to-the-server-and-set-the-tde-protector"></a>步驟 3： 將 Key Vault 金鑰新增至伺服器，並設定 TDE 保護裝置
+  
+     ```cli
+     # add server key and update encryption protector
+      az sql server key create -g "ResourceGroupName" -s "ServerName" -t "AzureKeyVault" -u "FullVersionedKeyUri 
+      az sql server tde-key update -g "ResourceGroupName" -s "ServerName" -t AzureKeyVault -u "FullVersionedKeyUri" 
+      ```
+  
+  > [!Note]
+> Key Vault 名稱和金鑰名稱的組合長度不能超過 94 個字元。
+> 
+
+>[!Tip]
+>Key Vault 的 KeyId 範例：https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
+>
+  
+## <a name="step-4-turn-on-tde"></a>步驟 4： 開啟 TDE 
+      ```cli
+      # enable encryption
+      az sql db tde create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" --status Enabled 
+      ```
+
+目前，資料庫或資料倉儲都已啟用 TDE，並具有 Key Vault 加密金鑰。
+
+## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>步驟 5： 檢查加密狀態與加密活動
+
+     ```cli
+      # get encryption scan progress
+      az sql db tde show-activity -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+
+      # get whether encryption is on or off
+      az sql db tde show-configuration -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+
+      ```

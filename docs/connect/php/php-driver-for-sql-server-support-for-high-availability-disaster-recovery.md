@@ -1,29 +1,30 @@
 ---
-title: "PHP Driver for SQL Server 高可用性、 災害復原 |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
+title: 支援高可用性、 嚴重損壞修復的 Microsoft Drivers for PHP for SQL Server |Microsoft 文件
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4777aa2ffac5b3932815dee65eb237337d95784
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>PHP Driver for SQL Server 對於高可用性、災害復原的支援
+# <a name="support-for-high-availability-disaster-recovery"></a>高可用性與災害復原的支援
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本主題討論[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的高可用性、 災害復原 （3.0 版中新增） 的支援[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 中加入 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 支援。 如需有關 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 線上叢書》。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接  
 **MultiSubnetFailover**連接屬性表示部署應用程式的可用性群組或容錯移轉叢集執行個體以及[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]會嘗試連接到主要資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]執行個體來嘗試連接到所有 IP 位址。 當**MultiSubnetFailover = true**指定連接，用戶端重試 TCP 連接的速度比作業系統的預設 TCP 重新傳輸間隔快。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
   
-請務必指定**MultiSubnetFailover = True**連接到 SQL Server 2012 可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體時。 **MultiSubnetFailover** 對於 SQL Server 2012 中的所有可用性群組和容錯移轉叢集執行個體可促進更快的容錯移轉，並大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 子網路容錯移轉期間[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]會積極重試 TCP 連接。  
+請務必指定**MultiSubnetFailover = True**連接到 SQL Server 2012 可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體時。 **MultiSubnetFailover**啟用更快速的容錯移轉的所有可用性群組和 SQL Server 2012 中的容錯移轉叢集執行個體，並大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 子網路容錯移轉期間[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]會積極重試 TCP 連接。  
   
 如需有關中連接字串關鍵字[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，請參閱[連接選項](../../connect/php/connection-options.md)。  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/18/2017
 **ApplicationIntent** 關鍵字用於啟用唯讀路由。  
   
 ## <a name="read-only-routing"></a>唯讀路由  
-唯讀路由是可確保資料庫的唯讀複本之可用性的功能。 若要啟用唯讀路由：  
+唯讀路由功能可確保資料庫之唯讀複本的可用性。 若要啟用唯讀路由：  
   
 1.  您必須連接到 AlwaysOn 可用性群組的可用性群組接聽程式。  
   
@@ -93,8 +94,8 @@ ms.lasthandoff: 11/18/2017
   
 使用唯讀路由的多個連接可能不會連接至相同的唯讀複本。 資料庫同步處理的變更或伺服器路由組態的變更，可能會導致用戶端連接至不同的唯讀複本。 若要確保所有唯讀要求連接至相同的唯讀複本，請勿將可用性群組接聽程式傳遞給 **Server** 連接字串關鍵字。 請改為指定唯讀執行個體的名稱。  
   
-唯讀路由可能比連接到主要複本的時間更長，因為唯讀路由先連接到主要複本，再尋找最佳的可讀取次要複本。 因此，您應該增加登入逾時。  
+唯讀路由所花的時間可能會比連接到主要複本所花的時間更長，因為唯讀路由會先連接到主要複本，然後尋找最佳可用的可讀次要複本。 在此情況下，您應該增加登入逾時。  
   
-## <a name="see-also"></a>請參閱＜  
-[連接到伺服器](../../connect/php/connecting-to-the-server.md)  
+## <a name="see-also"></a>另請參閱  
+[連線到伺服器](../../connect/php/connecting-to-the-server.md)  
   

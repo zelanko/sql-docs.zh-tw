@@ -1,19 +1,19 @@
 ---
-title: "下載 SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/21/2018
+title: 下載 SQL Server Management Studio (SSMS) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "安裝 ssms, 下載 ssms, 最新的 ssms"
+- 安裝 ssms, 下載 ssms, 最新的 ssms
 - Transact-SQL
 - ssms.exe
 - sql man studio
@@ -26,16 +26,16 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de6d0b4d679dab1f008ef53afef4a173311ea20e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 7b64f3d78ceafd5e1eac62e1e3dd1155827e8c61
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,9 +47,15 @@ SSMS 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever �
 
 SSMS 17.x 是最新一代的 *SQL Server Management Studio*，並提供 SQL Server 2017 的支援。
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.5](https://go.microsoft.com/fwlink/?linkid=867670)**
+**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.5 升級套件 (從 17.x 升級至 17.5)](https://go.microsoft.com/fwlink/?linkid=867672)**
+**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.6 升級套件 (從 17.x 升級至 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+**版本資訊**
+
+版本編號：17.6<br>
+組建編號：14.0.17230.0<br>
+發行日期：2018 年 3 月 20 日
 
 SSMS 17.x 安裝不會升級或取代 SSMS 16.x 版或更早版本。 SSMS 17.x 會與舊版本並存安裝，讓兩個版本同時可供使用。
 如果電腦包含 SSMS 並存安裝，請確認已針對您的特定需求啟動正確的版本。 最新版本會標上 Microsoft SQL Server Management Studio 17，並且具有新的圖示： 
@@ -65,46 +71,49 @@ SSMS 17.x 安裝不會升級或取代 SSMS 16.x 版或更早版本。 SSMS 17.x 
 
 此版 SSMS 提供下列語言版本：
 
-SQL Server Management Studio 17.5：<br>
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
+SQL Server Management Studio 17.6：<br>
+[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
-SQL Server Management Studio 17.5 升級套件 (從 17.x 升級至 17.5)：<br>
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40a)
+SQL Server Management Studio 17.6 升級套件 (從 17.x 升級至 17.6)：<br>
+[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模組現在透過 PowerShell 資源庫個別安裝。 如需詳細資訊，請參閱[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)。
 ## <a name="sql-server-management-studio"></a>Transact-SQL
 
-**版本資訊**
-
-版本號碼：17.5
-
-此版本的組建編號：14.0.17224.0
-
-發行日期：2018 年 2 月 15 日
 
 ## <a name="new-in-this-release"></a>此版本中的新功能
 
-SSMS 17.5 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSMS 幾乎支援 SQL Server 2008 到 SQL Server 2017 的所有功能領域。 17.x 版也支援 SQL Analysis Service PaaS。
+SSMS 17.6 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSMS 幾乎支援 SQL Server 2008 到 SQL Server 2017 的所有功能領域。 17.x 版也支援 SQL Analysis Service PaaS。
 
-17.5 版包括：
+17.6 版包括：
 
-資料探索與分類：
+**一般 SSMS**
 
-- 已新增 SQL 資料探索與分類功能，以探索、分類、標示和報告您資料庫中的敏感性資料。 
-- 自動探索和分類最敏感的資料 (商務、財務、醫療、PII 等等) 可以扮演組織資訊保護成長的關鍵角色。
-- 深入了解 [SQL 資料探索與分類](../relational-databases/security/sql-data-discovery-and-classification.md)。
+SQL Database 受控執行個體：
 
-查詢編輯器：
+- 針對 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)新增支援。 Azure SQL Database 受控執行個體 (預覽) 是 Azure SQL Database 的新功能，幾乎達到 100% 的 SQL Server 內部部署相容性、解決常見安全性問題的原生[虛擬網路 (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 實作、以及有利於內部部署 SQL Server 客戶的[商務模型](https://azure.microsoft.com/pricing/details/sql-database/)。
+- 支援常見的管理案例，例如：
+   - 建立和改變資料庫。
+   - 備份及還原資料庫。
+   - 匯入、匯出、擷取及發佈資料層應用程式。
+   - 檢視與改變伺服器屬性。
+   - 完整的物件總管支援。
+   - 撰寫資料庫物件。
+   - 支援 SQL 代理程式工作。
+   - 連結的伺服器支援。
+- 請前往[這裡](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/)深入了解受控執行個體。
 
-- 已將 SkipRows 選項的支援新增至 Azure SQL DW 的分隔文字外部檔案格式。 這項功能可讓使用者在將分隔文字檔載入至 SQL DW 時略過指定數目的資料列。 也會新增 FIRST_ROW 關鍵字的對應 IntelliSense/SMO 支援。 
 
-執行程序表：
+物件總管：
+- 新增設定，以便從物件總管拖曳並置放於查詢視窗時，不強制以名稱周圍的括弧來括住。 (使用者建議 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) 和 [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051)。)
 
-- 啟用顯示 SQL 資料倉儲的預估計畫按鈕
-- 已新增執行程序表屬性 *EstimateRowsWithoutRowGoal*，並將新的執行程序表屬性新增至 *QueryTimeStats*：*UdfCpuTime* 和 *UdfElapsedTime*。 如需詳細資訊，請參閱 [SQL Server 2017 CU3 中已新增之查詢執行計畫的最佳化工具資料列目標資訊](http://support.microsoft.com/help/4051361)。
+資料分類：
+- 一般改善和 Bug 修正。
 
+**Integration Services (IS)**
 
+- 新增支援以部署套件至 [SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)。
 
 ## <a name="supported-sql-offerings"></a>支援的 SQL 供應項目
 
@@ -141,11 +150,9 @@ SSMS 17.5 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSM
 
 ## <a name="release-notes"></a>版本資訊
 
-以下是這個 17.5 版本的問題和限制：
+以下是這個 17.6 版本的問題和限制：
 
-資料分類：
-- 移除分類後手動新增相同資料行的新分類，會導致要指派給主檢視中資料行的舊資訊類型和敏感性標籤。<br>
-*因應措施*：將分類新增回主檢視之後並在儲存之前，指派新的資訊類型和敏感性標籤。  
+目前沒有任何已知的問題。
 
 
 ## <a name="previous-releases"></a>舊版

@@ -1,26 +1,26 @@
 ---
-title: "SQL Server 機器學習服務跨版本的功能可用性 |Microsoft 文件"
-ms.custom: 
+title: SQL Server 機器學習服務跨版本的功能可用性 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 50c9f2c8f1039ce0bba25ed9c6b7c5564c1d10d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>跨版本的 SQL Server 機器學習服務的功能可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,9 @@ ms.lasthandoff: 03/21/2018
  機器學習功能都可在 SQL Server 2016 和 SQL Server 2017。 本文列出提供此功能的版本、 說明在特定的版本中，將套用的限制，並列出功能僅適用於特定版本。
 
 
-## <a name="sql-server-2017-machine-learning-features"></a>SQL Server 2017 機器學習功能
+## <a name="sql-server-2017-features"></a>SQL Server 2017 功能
 
-Enterprise 和 Developer edition 有相同的功能涵蓋範圍，讓您可以建置方案，以便企業安裝，而不會產生相同的成本。 版本的功能 equivlanet，雖然使用 Developer Edition 不支援實際執行環境。
+Enterprise 和 Developer edition 有相同的功能涵蓋範圍，讓您可以建置方案，以便企業安裝，而不會產生相同的成本。 版本的功能相同，雖然使用 Developer Edition 不支援實際執行環境。
 
 基本和進階整合之間的差異是小數位數。 進階的 integration 可用來在您的電腦可以容納任何大小的資料集的平行處理所有可用的核心。 2 核心，以及適合在記憶體中的資料集是基本的整合。 
 

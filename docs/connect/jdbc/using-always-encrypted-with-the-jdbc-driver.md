@@ -1,28 +1,28 @@
 ---
-title: "JDBC 驅動程式搭配使用一律加密 |Microsoft 文件"
-ms.custom: 
+title: JDBC 驅動程式搭配使用一律加密 |Microsoft 文件
+ms.custom: ''
 ms.date: 3/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC 驅動程式搭配使用永遠加密
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -408,7 +408,7 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 如需有關這個屬性的詳細資訊，請參閱[如何設定 java.sql.Time 值傳送給伺服器](configuring-how-java-sql-time-values-are-sent-to-the-server.md)。
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>設定字串值如何傳送至伺服器
-**SendStringParametersAsUnicode**連接屬性用來設定如何將字串值傳送至 SQL Server。 如果設為 true，字串參數傳送到伺服器以 Unicode 格式。 如果設為 false，字串參數會以非 Unicode 格式，例如 ASCII 或 MBCS，而非 Unicode 傳送。 這個屬性的預設值為 true。 當啟用 永遠加密，加密 char/varchar/varchar(max) 資料行、 值**sendStringParametersAsUnicode**必須設為 true （或保留為預設值）。 如果這個屬性設定為 false 時，驅動程式會擲回例外狀況時，將加密的 char/varchar/varchar(max) 資料行的資料插入。 如需有關這個屬性的詳細資訊，請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。
+**SendStringParametersAsUnicode**連接屬性用來設定如何將字串值傳送至 SQL Server。 如果設為 true，字串參數傳送到伺服器以 Unicode 格式。 如果設為 false，字串參數會以非 Unicode 格式，例如 ASCII 或 MBCS，而非 Unicode 傳送。 這個屬性的預設值為 true。 當啟用 永遠加密，加密 char/varchar/varchar(max) 資料行、 值**sendStringParametersAsUnicode**必須設定為 false。 如果此屬性設為 true，此驅動程式將會擲回例外狀況時解密來自加密的 char/varchar/varchar(max) 資料行具有 Unicode 字元資料。 如需有關這個屬性的詳細資訊，請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>擷取和修改加密資料行中的資料
 一旦您啟用 永遠加密的應用程式查詢，您可以使用標準的 JDBC Api 來擷取或修改加密的資料庫資料行中的資料。 如果您的應用程式具有必要的資料庫權限，而且可以存取資料行主要金鑰，驅動程式會加密目標加密資料行，以及解密擷取自加密資料行之資料的任何查詢參數。

@@ -1,32 +1,32 @@
 ---
-title: "SQL Server 機器學習和 R 服務 （資料庫） |Microsoft 文件"
+title: SQL Server 機器學習和 R 服務 （資料庫） |Microsoft 文件
 ms.date: 03/16/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0d5bb56717eefa50a219db051eb611a82974a0bc
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server 機器學習和 R 服務 （資料庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 機器學習的資料庫中安裝 SQL Server 資料庫引擎執行個體，提供 SQL Server 執行個體中的內建資料的 R，並將 Python 外部指令碼支援的內容中的運作方式。 因為與整合在機器學習[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以讓分析資料並不需要成本和移動資料相關聯的安全性風險。
 
-因為 database engine 是多重執行個體，您可以安裝多個執行個體或甚至較舊的資料庫中分析和較新版本的並存。 選擇包含[SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-standalone-windows-install.md)與 R 和 Python 或[SQL Server 2016 R 服務 (Datatbase)](../install/sql-r-standalone-windows-install.md)與剛。 
+因為 database engine 是多重執行個體，您可以安裝多個執行個體或甚至較舊的資料庫中分析和較新版本的並存。 選擇包含[SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-standalone-windows-install.md)與 R 和 Python 或[SQL Server 2016 R 服務 （資料庫）](../install/sql-r-standalone-windows-install.md)與剛。 
 
 機器學習元件也可以安裝為無從驗證執行個體的[獨立伺服器](r-server-standalone.md)。 一般而言，我們建議您將 （獨立） 並 （資料庫） 安裝為互斥獨佔避免資源爭用，但如果您有足夠的資源有沒有 prohibitions 針對它們兩個安裝在同一部實體電腦上。
 

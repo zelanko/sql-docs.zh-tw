@@ -1,26 +1,26 @@
 ---
-title: "設定和管理 |Microsoft 文件"
-ms.custom: 
+title: 設定和管理 |Microsoft 文件
+ms.custom: ''
 ms.date: 05/31/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 63448281d0e1d135a52bc1c9d0c8afa097a87596
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f130f4a300351bb8384362affddc595aadf92148
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuration-and-management"></a>設定和管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="r-package-management"></a>R 封裝管理
 
-這些主題說明如何在 SQL Server 執行個體上安裝新的 R 封裝、 管理 R 封裝程式庫，以及資料庫還原後還原封裝程式庫。
+這些文章說明如何在 SQL Server 執行個體上安裝新的 R 封裝、 管理 R 封裝程式庫，以及資料庫還原後還原封裝程式庫。
 
 + [安裝和管理 R 封裝](installing-and-managing-r-packages.md)
 + [安裝新的 R 封裝](install-additional-r-packages-on-sql-server.md)
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="service-configuration"></a>服務組態
 
-這些主題說明如何變更的基礎服務架構以及如何管理與擴充性服務相關聯的安全性主體。
+這些文章說明如何變更的基礎服務架構以及如何管理與擴充性服務相關聯的安全性主體。
 
 + [安全性考量](security-considerations-for-the-r-runtime-in-sql-server.md)
 + [修改 SQL Server R 服務的使用者帳戶集區](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="resource-governance"></a>資源管理
 
-這些主題說明如何實作 R 或 Python 作業在 Enterprise Edition 中使用資源管理員功能可用的資源管理。
+這些文章說明如何實作 R 或 Python 作業在 Enterprise Edition 中使用資源管理員功能可用的資源管理。
 
 + [的資源管理](../../advanced-analytics/r/resource-governance-for-r-services.md)
 + [How to Create a Resource Pool](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="initial-setup"></a>初始安裝
 
-這些主題中可以找到與初始安裝和設定相關的其他說明：
+與初始安裝和設定相關的其他說明，請參閱下列文章：
 
 + [升級及安裝常見問題集](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 + [安全性考量](../r/security-considerations-for-the-r-runtime-in-sql-server.md)

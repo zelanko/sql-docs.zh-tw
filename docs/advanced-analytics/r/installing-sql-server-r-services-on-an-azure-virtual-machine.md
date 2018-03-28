@@ -1,52 +1,38 @@
 ---
-title: "在 Azure 虛擬機器上安裝 SQL Server 的機器學習功能 |Microsoft 文件"
-ms.custom: 
-ms.date: 10/31/2017
-ms.reviewer: 
+title: 在 Azure 虛擬機器上安裝 SQL Server 的機器學習功能 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/21/2018
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.assetid: ''
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: d2f0f38086c7725e14261afa9a40f29b212b748f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>安裝 SQL Server 機器學習在 Azure 虛擬機器上的功能
+# <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>安裝 SQL Server 機器學習在 Azure 虛擬機器上的功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-如果您部署 Azure 虛擬機器包含[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您現在可以選取機器學習為 VM 建立時，要加入至執行個體功能。
+我們建議您使用[資料 Science 虛擬機器](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm)，但如果您想 VM 時，只有 SQL Server 2017 機器學習服務或 SQL Server 2016 R 服務，這篇文章會引導您逐步完成。
 
-+ [建立新的 VM 包含 SQL Server 2016 和 R 服務](#new)
-+ [機器學習功能加入現有 SQL Server 2016 的虛擬機器](#existing)
+## <a name="create-a-virtual-machine-on-azure"></a>在 Azure 上建立虛擬機器
 
-> [!NOTE]
-> 虛擬機器現在可供 SQL Server 2017 ！ 請參閱[這項公告](https://azure.microsoft.com/blog/announcing-new-azure-vm-images-sql-server-2017-on-linux-and-windows/)如需詳細資訊。
-> 
-> R 也可做為 Azure SQL Database 中的預覽功能。 如需詳細資訊，請參閱[使用 Azure SQL Database 中的 R](../r/using-r-in-azure-sql-database.md)。
-
-## <a name="create-a-new-sql-server-2017-virtual-machine"></a>建立新的 SQL Server 2017 虛擬機器
-
-若要在 SQL Server 2017 中使用 R 或 Python，務必要取得 Windows 型虛擬機器。 [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] 在 Linux 上支援快速[原生計分](../sql-native-scoring.md)使用 T-SQL 預測函式，但其他機器學習功能未提供尚未在這個版本中。
-
-SQL Server VM 的供應項目的清單，請參閱這篇文章：[概觀的 SQL Server 在 Azure 虛擬機器 (Windows)](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)。
-
-### <a name="new"></a>建立具有機器學習新的 SQL Server Enterprise VM
-
-1. 在 Azure 入口網站中，按一下虛擬機器，然後按一下 [新增]。
-2. 選取 SQL Server 2017 Enterprise Edition。
+1. 在 Azure 入口網站左側的清單中，按一下**虛擬機器**，然後按一下 **新增**。
+2. 搜尋 SQL Server 2017 Enterprise Edition 或 SQL Server 2016 Enterprise Edition。
 3. 設定伺服器名稱和帳戶權限，並選取一個定價方案。
-4. 在**SQL Server 設定**(步驟 4 中 VM 安裝精靈中)，找出**機器學習服務 (Advanced Analytics)**按一下**啟用**。
+4. 在**SQL Server 設定**(步驟 4 中 VM 安裝精靈中)，找出**機器學習服務 (Advanced Analytics)** (或**R Services**適用於 SQL Server 2016)，按一下  **啟用**。
 5. 檢閱顯示的摘要進行驗證，並按一下 [確定]。
 6. 當虛擬機器準備就緒時，連線至虛擬機器並開啟預先安裝的 SQL Server Management Studio。 機器學習服務已準備好執行。
 7. 若要驗證這一點，您可以開啟新的查詢視窗，並執行簡單的陳述式，如下所示，它使用 R 來產生從 1 到 10 的數字序列。
@@ -113,7 +99,3 @@ SQL Server VM 的供應項目的清單，請參閱這篇文章：[概觀的 SQL 
   TCP/IP 是回送連接的必要項。 如果您收到下列錯誤，請在支援的執行個體的虛擬機器上啟用 TCP/IP:
 
   「 DBNETLIB;SQL Server 不存在或拒絕存取 」
-
-## <a name="related-resources"></a>相關資源
-
-[在 Azure SQL Database 中使用 R](../r/using-r-in-azure-sql-database.md)

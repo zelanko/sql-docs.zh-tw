@@ -1,24 +1,24 @@
 ---
-title: "安裝 SQL Server 2017 機器學習服務 （資料庫） Windows 上 |Microsoft 文件"
-ms.custom: 
+title: 安裝 SQL Server 2017 機器學習服務 （資料庫） Windows 上 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1904517351a23bfa736549a249d77be2932b3c07
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a620e7ede1976fbbc50c0c81a595f002410403c8
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>安裝 SQL Server 2017 機器學習在 Windows 上的服務 （資料庫） 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ SQL Server 的機器學習服務元件將加入資料庫中的預測分析、 �
 
 ## <a name="bkmk_prereqs"> </a> 預先安裝檢查清單
 
-+ 需要 SQL Server 2017。 如果您有 SQL Server 2016，請安裝[SQL Server 2016 R 服務 （資料庫）](sql-r-services-windows-install.md)改為。
++ 如果您想要安裝 R、 Python 或兩者的語言支援機器學習服務需要 SQL Server 2017 安裝程式。 如果相反地，您會擁有 SQL Server 2016 安裝媒體，您可以安裝[SQL Server 2016 R 服務 （資料庫）](sql-r-services-windows-install.md)取得 R 語言支援。
 
 + 需要資料庫引擎執行個體。 您無法安裝只 R 或 Python 功能，雖然您可以將它們以累加方式加入現有的執行個體。
 

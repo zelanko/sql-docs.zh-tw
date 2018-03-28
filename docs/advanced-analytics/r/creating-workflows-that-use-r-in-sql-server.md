@@ -1,27 +1,27 @@
 ---
-title: "使用 R 建立 BI 工作流程 |Microsoft 文件"
+title: 使用 R 建立 BI 工作流程 |Microsoft 文件
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: bd006f20f65b386a4351534e639b3b60db7e76de
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>使用 R 建立 BI 工作流程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,9 +30,9 @@ ms.lasthandoff: 02/11/2018
 
 相反地，傳統上 R 解決方案有通常依賴從各種不同的來源，通常要執行進一步的資料探索和模型的 CSV 格式匯入資料。 這種作法不僅沒有效率，而且也不安全。
 
-本主題描述與避免常見陷阱以及可能在資料庫外部的開發機器學習解決方案的安全性風險的 SQL Server R 整合案例。
+本文章會說明 R 與避免常見陷阱以及可能在資料庫外部的開發機器學習解決方案的安全性風險的 SQL Server 的整合案例。
 
-它也會說明範例商業智慧應用程式，尤其是 Integration Services 和 Reportng 服務可以與 R 程式碼互動，以及所耗用的資料或 r 所產生的圖形
+它也會說明範例商業智慧應用程式，尤其是 Integration Services 和 Reporting Services，可以使用 R 程式碼互動，以及所耗用的資料或 r 所產生的圖形
 
 適用於： SQL Server 2016 R Services、 SQL Server 2017 機器學習服務
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/11/2018
 
 + 速度。 資料庫已針對集合型操作進行最佳化。 例如記憶體中資料表的資料庫中的最新創新進行摘要和彙總作業如閃電，而且資料科學完美補數。
 
-+ 簡化部署和整合。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為許多其他資料管理工作和應用程式的作業的中心點。 使用位於報表倉儲的資料庫中的資料，您可以確保機器學習解決方案所使用的資料是一致且保持最新狀態。 
++ 簡化部署和整合。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為許多其他資料管理工作和應用程式的作業的中心點。 使用位於報表倉儲的資料庫中的資料，您可以確保機器學習解決方案所使用的資料是一致且保持最新狀態。 
 
 + 跨雲端和內部部署的效率。 您可以倚賴企業資料管線 (包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 Azure Data Factory)，而不以 R 處理資料。 透過 Power BI 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 很容易就能報告結果或分析。
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/11/2018
 
 由於 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 可讓您透過 Transact-SQL 和預存程序在 R 中執行複雜的作業，因此您連最小程度的重新開發工作都不需要，就能將 R 特定的工作與現有的 ETL 程序整合。 而是在 R 中執行需要大量記憶體的工作鏈結，比資料準備可以最佳化使用最有效率的工具，包括[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和[!INCLUDE[tsql](../../includes/tsql-md.md)]。 
 
-以下是一些 ideass 的使用方式，您可以自動化資料處理 dmodeling 管線[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
+以下是一些概念的方式，您可以自動化您的資料處理和模型管線使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
 + 使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]工作，以建立 SQL database 中的必要資料功能
 + 使用條件式分支切換 R 工作的計算內容
@@ -75,13 +75,13 @@ ms.lasthandoff: 02/11/2018
 
 + 使用「指令碼工作」和「執行 SQL 工作」在模型上執行評分
 
-##  <a name="bkmk_ssrs"></a>使用 Reporting Services 的視覺效果
+##  <a name="bkmk_ssrs"></a> 使用 Reporting Services 的視覺效果
 
 雖然 R 可以建立圖表和有趣的視覺效果，但它與外部資料來源的整合度並不高，這表示您必須個別產生每個圖表或圖形。 此外，可能也很難進行共用。
 
 使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，您便可以透過各種企業報告工具 (包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Power BI) 都能輕鬆取用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，在 R 中執行複雜的作業。
 
-+ 以視覺化方式檢視所傳回的 R 指令碼使用的圖形物件 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ 將使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]從 R 指令碼傳回的圖形物件視覺化
 + 使用 Power BI 中的資料表
 
 ### <a name="examples"></a>範例
