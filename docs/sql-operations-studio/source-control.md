@@ -1,6 +1,6 @@
 ---
-title: "原始檔控制中 SQL 作業 Studio （預覽） |Microsoft 文件"
-description: "了解如何設定 SQL 作業 Studio （預覽） 中的原始檔控制。"
+title: 原始檔控制中 SQL Operations Studio （預覽） |Microsoft 文件
+description: 了解如何設定 SQL Operations Studio （預覽） 中的原始檔控制。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

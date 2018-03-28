@@ -1,6 +1,6 @@
 ---
-title: "下載並安裝 Microsoft SQL 作業 Studio （預覽） |Microsoft 文件"
-description: "下載和安裝 Microsoft SQL 作業 Studio （預覽） for Windows、 macOS 或 Linux"
+title: 下載並安裝 Microsoft SQL Operations Studio （預覽） |Microsoft 文件
+description: 下載和安裝 Microsoft SQL Operations Studio （預覽） for Windows、 macOS 或 Linux
 ms.custom: tools|sos
 ms.date: 03/05/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/08/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>下載並安裝 SQL 作業 Studio （預覽）
+# <a name="download-and-install-sql-operations-studio-preview"></a>下載並安裝 SQL Operations Studio （預覽）
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/08/2018
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>取得 SQL 作業 Studio （預覽） for Windows
+## <a name="get-sql-operations-studio-preview-for-windows"></a>取得 SQL Operations Studio （預覽） for Windows
 
 這一版的[!INCLUDE[name-sos](../includes/name-sos-short.md)]包括標準的 Windows 安裝程式經驗，以及.zip: 
 
@@ -51,14 +51,14 @@ ms.lasthandoff: 03/08/2018
 3. 執行 `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>取得 macOS SQL 作業 Studio （預覽）
+## <a name="get-sql-operations-studio-preview-for-macos"></a>取得 macOS SQL Operations Studio （預覽）
 
 1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]如 macOS](https://go.microsoft.com/fwlink/?linkid=867999)。
 2. 若要展開的 zip 內容，請按兩下它。
 3. 讓[!INCLUDE[name-sos](../includes/name-sos-short.md)]用於*啟動控制板*，拖曳*sqlops.app*至*應用程式*資料夾。
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>取得 SQL 作業 Studio （預覽） for Linux
+## <a name="get-sql-operations-studio-preview-for-linux"></a>取得 SQL Operations Studio （預覽） for Linux
 
 1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux](https://go.microsoft.com/fwlink/?linkid=868000)。
 1. 擷取檔案和啟動[!INCLUDE[name-sos](../includes/name-sos-short.md)]，開啟新的終端機視窗，然後輸入下列命令：
@@ -94,7 +94,7 @@ ms.lasthandoff: 03/08/2018
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>解除安裝 SQL 作業 Studio （預覽）
+## <a name="uninstall-sql-operations-studio-preview"></a>解除安裝 SQL Operations Studio （預覽）
 
 如果您已安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]使用 Windows installer，然後解除安裝移除所有 Windows 應用程式的方式相同。
 

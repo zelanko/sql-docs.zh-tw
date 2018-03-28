@@ -1,6 +1,6 @@
 ---
-title: "啟用或停用使用量資料收集，並損毀報表的 SQL 作業 Studio （預覽） |Microsoft 文件"
-description: "本文說明如何控制如果使用量及損毀報告資料收集並傳送給 Microsoft。"
+title: 啟用或停用使用量資料收集，並損毀報表的 SQL Operations Studio （預覽） |Microsoft 文件
+description: 本文說明如何控制如果使用量及損毀報告資料收集並傳送給 Microsoft。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

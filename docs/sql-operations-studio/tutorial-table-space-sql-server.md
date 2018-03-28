@@ -1,6 +1,6 @@
 ---
-title: "教學課程： 啟用資料表空間使用方式範例深入了解 widget 中 SQL 作業 Studio （預覽） |Microsoft 文件"
-description: "本教學課程會示範如何啟用的資料表空間使用方式範例深入了解 widget SQL 作業 Studio （預覽） 資料庫儀表板上。"
+title: 教學課程： 啟用資料表空間使用方式範例深入了解 widget 中 SQL Operations Studio （預覽） |Microsoft 文件
+description: 本教學課程會示範如何啟用的資料表空間使用方式範例深入了解 widget SQL Operations Studio （預覽） 資料庫儀表板上。
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/20/2018
 > * 檢視資料表空間使用量的詳細資料
 > * 篩選資料，以及檢視標籤詳細資料，深入了解圖表上
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列快速入門的其中一個：
 
