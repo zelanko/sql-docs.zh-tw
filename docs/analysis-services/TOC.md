@@ -3,7 +3,7 @@
 # 概觀
 ## [SQL Server Analysis Services 2016 的新功能](what-s-new-in-analysis-services.md)  
 ## [SQL Server Analysis Services 2017 的新功能](what-s-new-in-sql-server-analysis-services-2017.md) 
-## [新增及更新的發行項](new-updated-analysis-services.md)
+## [新文章及更新的文章](new-updated-analysis-services.md)
 ## [工具和應用程式](tools-and-applications-used-in-analysis-services.md)   
 ## [用戶端程式庫 (資料提供者)](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [比較表格式和多維度解決方案](comparing-tabular-and-multidimensional-solutions-ssas.md)  
@@ -102,8 +102,8 @@
 ## [資料採礦](data-mining-tutorials-analysis-services.md)  
 
 # 操作方式
-## [表格式模型化](../analysis-services/tabular-models/tabular-models-ssas.md)
-## [多維度模型化](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+## [表格式模型](../analysis-services/tabular-models/tabular-models-ssas.md)
+## [多維度模型](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
 ## [資料採礦](../analysis-services/data-mining/data-mining-ssas.md)
 ## [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
 ## [管理伺服器](../analysis-services/instances/analysis-services-instance-management.md)
