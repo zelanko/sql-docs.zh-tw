@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio （預覽） 版本資訊 |Microsoft 文件
 description: Microsoft SQL Operations Studio （預覽） 版本資訊
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,15 +14,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio （預覽） 版本資訊
 
-**[下載 2 月公開預覽](download.md)**
+**[下載年 3 月公開預覽](download.md)**
+
+## <a name="march-2018-march-public-preview"></a>年 3 月 2018 （年 3 月公開預覽）
+
+發行日期： 2018 年 3 月 28，  
+version: 0.27.3
+
+*年 3 月公用預覽*繼續處理最上層的 GitHub 問題而重點在於提升擴充性故事。 特別啟用擴充功能管理員，改善儀表板管理，並提供 SQL 代理程式和 insights 擴充功能。 此版本包含下列增強功能：
+
+- 增強的支援索引標籤式的深入資訊和組態窗格的儀表板擴充性模型。
+   - 擴充管理員可讓簡單擷取的延伸模組。
+   - 儀表板延伸從 sp_whoisactive [whoisactive.com](http://www.whoisactive.com)。
+   - 如需詳細資訊，請參閱[擴充功能的 SQL 作業 Studio](extensions.md)。
+- 請加入更多[連線和物件總管 中的擴充性 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API)管理。
+- 若要修正重要影響的客戶繼續[GitHub 問題](https://github.com/Microsoft/sqlopsstudio/issues)。
+
+如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)。
+
 
 ## <a name="february-2018-february-public-preview"></a>2018 年 2 月版 （ 2 月公開預覽）
 
@@ -63,8 +80,6 @@ ms.lasthandoff: 02/19/2018
 - 修正 bug 的指令碼的拖放中斷。
 - 修正不正確的 [開始] 功能表釘選的圖示。
 - 修正遺失商標圖示的 Azure 帳戶。
-
-如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)。
 
 
 ## <a name="december-2017-december-public-preview"></a>2017 年 12 月（12 月公開預覽）

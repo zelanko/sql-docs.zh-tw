@@ -19,19 +19,21 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 2ee56bc26c22f91af7bf156ea967c19b61eab881
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: bc20cc573c6b0890e5b16f4876636534f9fbb916
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>教學課程：在 SQL Server Management Studio 中撰寫物件指令碼
 本教學課程將教導您如何為 SQL Server Management Studio 中的各種物件產生 Transact-SQL (T-SQL) 指令碼。  在本教學課程中，您將找到如何撰寫以下物件指令碼的範例： 
- - 在 GUI 中執行動作時查詢
- - 使用兩種不同方式 (「撰寫指令碼為」和「產生指令碼」) 的資料庫
- - 資料表
- - 預存程序
- - 擴充事件
+
+> [!div class="checklist"]
+> * 在 GUI 中執行動作時查詢
+> * 使用兩種不同方式 (「撰寫指令碼為」和「產生指令碼」) 的資料庫
+> * 資料表
+> * 預存程序
+> * 擴充事件
 
 本教學課程的摘要是**物件總管**中的任何物件都可以透過按一下滑鼠右鍵並選取 [撰寫物件指令碼為] 選項來撰寫指令碼。 
 
@@ -40,15 +42,14 @@ ms.lasthandoff: 03/21/2018
 若要完成本教學課程，您需要 SQL Server Management Studio、SQL Server 存取權，以及 AdventureWorks 資料庫。 
 
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 
-    - 此處可以找到在 SSMS 中還原資料庫的說明：[還原資料庫](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+- 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
+- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 此處可以找到在 SSMS 中還原資料庫的說明：[還原資料庫](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
 
 
 ## <a name="script-queries-from-gui"></a>從 GUI 撰寫查詢指令碼
 每當您使用 SSMS 中的 GUI 執行工作時，您也可以產生與該工作建立關聯的 T-SQL 程式碼。 下列範例顯示在執行資料庫備份和壓縮交易紀錄時如何進行此操作。  這些相同的步驟可以套用於任何透過 GUI 完成的動作。 
 
-### <a name="scriptt-sql-when-backing-up-a-database"></a>備份資料庫時撰寫 T-SQL 指令碼
+### <a name="script-t-sql-when-backing-up-a-database"></a>在備份資料庫時撰寫 T-SQL 指令碼
 1. 連接到 SQL Server。
 2. 展開 **[資料庫]** 節點。
 3. 以滑鼠右鍵按一下資料庫 > [工作] > [備份]：
@@ -124,7 +125,7 @@ ms.lasthandoff: 03/21/2018
 2. 展開您的 [資料庫] 節點。
 3. 展開您的 [AdventureWorks] 資料庫節點。 
 4. 展開您的 [資料表] 節點。
-5. 以滑鼠右鍵按一下您想要撰寫指令碼的資料表 > [撰寫資料表指令碼為]
+5. 以滑鼠右鍵按一下您想要撰寫指令碼的資料表 > [產生資料表的指令碼為]：
     - 從這裡可以看到各種選項，例如建立資料表或將資料插入至資料表中： 
     
     ![編寫資料表的指令碼](media/scripting-ssms/scripttable.png)
@@ -136,7 +137,7 @@ ms.lasthandoff: 03/21/2018
 2. 展開您的 [資料庫] 節點。
 3. 展開您的 [可程式性] 節點。 
 4. 展開您的 [預存程序] 節點。
-5. 以滑鼠右鍵按一下您想要的預存程序 > [撰寫預存程序的指令碼為]
+5. 以滑鼠右鍵按一下您想要的預存程序 > [產生預存程序的指令碼為]：
     
     ![撰寫預存程序的指令碼](media/scripting-ssms/scriptstoredprocedure.PNG)
 

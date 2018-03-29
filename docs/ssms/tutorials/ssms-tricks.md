@@ -16,30 +16,30 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 0613d9352e7be20de52fb771fb8e28823556304b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 9f633a8d624fd31913dc2aeb6fde34ff30b7645d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
 本文將提供 SQL Server Management Studio 使用上的一些其他祕訣。 本文將告訴您如何： 
 
-   - 註解與取消註解 TRANSACT-SQL (T-SQL) 文字
-   - 縮排文字
-   - 在物件總管中檢篩選物件
-   - 存取您的 SQL Server 錯誤記錄檔
-   - 尋找您的 SQL Server 執行個體名稱
+> [!div class="checklist"]
+> * 註解與取消註解 TRANSACT-SQL (T-SQL) 文字
+> * 縮排文字
+> * 在物件總管中檢篩選物件
+> * 存取您的 SQL Server 錯誤記錄檔
+> * 尋找您的 SQL Server 執行個體名稱
 
 ## <a name="prerequisites"></a>Prerequisites
 若要完成本教學課程，您需要 SQL Server Management Studio、SQL Server 存取權，以及 AdventureWorks 資料庫。 
 
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 
-    - 此處可以找到在 SSMS 中還原資料庫的說明：[還原資料庫](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+- 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
+- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 此處可以找到在 SSMS 中還原資料庫的說明：[還原資料庫](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
 
-## <a name="commenting--uncommenting-your-t-sql"></a>註解與取消註解您的 T-SQL
+## <a name="comment--uncomment-your-t-sql-code"></a>註解/取消註解您的 T-SQL 程式碼
 透過使用工具列中的註解按鈕，可以對部分文字進行註解與取消註解。 標記為註解的文字將不會執行。 
 
 1. 開啟 SQL Server Management Studio。 
@@ -48,37 +48,40 @@ ms.lasthandoff: 03/21/2018
 4. 將下列 T-SQL 程式碼貼入文字視窗中： 
 
   ```sql
-  USE master
-GO
+    USE master
+    GO
 
--- Drop the database if it already exists
-IF  EXISTS (
-    SELECT name 
-        FROM sys.databases 
-        WHERE name = N'TutorialDB'
-)
-DROP DATABASE TutorialDB
-GO
+    -- Drop the database if it already exists
+    IF  EXISTS (
+        SELECT name 
+            FROM sys.databases 
+            WHERE name = N'TutorialDB'
+            )
 
-CREATE DATABASE TutorialDB
-GO
+    DROP DATABASE TutorialDB
+    GO
 
-ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-GO
+    CREATE DATABASE TutorialDB
+    GO
+
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
  ``` 
-2. 反白顯示文字中的 **Alter Database** 部分，按一下工具列中的 [註解]： 
+
+
+5. 反白顯示文字中的 **Alter Database** 部分，按一下工具列中的 [註解]： 
 
     ![註解](media/ssms-tricks/comment.png)
-3. 按一下 [執行] 來執行文字中未註解的部分。 
-4. 反白顯示 **Alter Database** 命令以外的所有項目，然後按一下工具列中的 [註解]：
+6. 按一下 [執行] 來執行文字中未註解的部分。 
+7. 反白顯示 **Alter Database** 命令以外的所有項目，然後按一下工具列中的 [註解]：
 
     ![註解所有項目](media/ssms-tricks/commenteverything.png)
 
-5. 反白顯示 **Alter Database** 部分，並按一下 [取消註解] 以將其取消註解：
+8. 反白顯示 **Alter Database** 部分，並按一下 [取消註解] 以將其取消註解：
 
     ![取消註解](media/ssms-tricks/uncomment.png)
     
-6. 按一下 [執行] 來執行文字中未註解的部分 
+9. 按一下 [執行] 來執行文字中未註解的部分。 
 
 ## <a name="indent-your-text"></a>縮排文字
 縮排按鈕可讓您增加和減少文字的縮排。 
@@ -87,33 +90,35 @@ GO
 2. 將下列 T-SQL 程式碼貼入文字視窗中： 
 
   ```sql
-  USE master
-GO
+    USE master
+    GO
 
--- Drop the database if it already exists
-IF  EXISTS (
-    SELECT name 
-        FROM sys.databases 
-        WHERE name = N'TutorialDB'
-)
-DROP DATABASE TutorialDB
-GO
+    -- Drop the database if it already exists
+    IF  EXISTS (
+        SELECT name 
+            FROM sys.databases 
+            WHERE name = N'TutorialDB'
+            )
 
-CREATE DATABASE TutorialDB
-GO
+    DROP DATABASE TutorialDB
+    GO
 
-ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-GO
+    CREATE DATABASE TutorialDB
+    GO
+
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
  ``` 
-2. 反白顯示文字中的 **Alter Database** 部分，然後按 [增加縮排] 將文字向前移動
+ 
+3. 反白文字中的 **Alter Database** 部分，然後按工具列中的 [增加縮排] 將這段文字向前移動：
 
     ![增加縮排](media/ssms-tricks/increaseindent.png)
 
-3. 再一次反白顯示文字中的 **Alter Database** 部分，這次按一下 [減少縮排] 將文字向後移動。 
+4. 再一次反白顯示文字中的 **Alter Database** 部分，這次按一下 [減少縮排] 將文字向後移動。 
     ![減少縮排](media/ssms-tricks/decreaseindent.png)
 
 
-## <a name="filtering-objects-in-object-explorer"></a>在物件總管中篩選物件
+## <a name="filter-objects-in-object-explorer"></a>在物件總管中檢篩選物件
 當資料庫有許多物件時，尋找特定的物件可能很困難。 若要更容易進行，您可以篩選物件。 本節說明如何篩選資料表，但同樣的步驟也可套用於**物件總管**中的任何其他節點
 
 1. 連接到 SQL Server。
@@ -135,10 +140,10 @@ GO
     
 
 
-## <a name="accessing-your-sql-server-error-log"></a>存取您的 SQL Server 錯誤記錄檔
+## <a name="access-your-sql-server-error-log"></a>存取您的 SQL Server 錯誤記錄檔
 錯誤記錄檔是含有在 SQL Server 中發生事項之詳細資訊的檔案。 可以在 SSMS 中瀏覽和查詢。 也可以作為 .log 檔案在磁碟上找到。
 
-### <a name="finding-your-error-log-if-you-cannot-connect-to-sql"></a>如果無法連線到 SQL，請尋找錯誤記錄檔
+### <a name="find-your-error-log-if-you-cannot-connect-to-sql"></a>如果無法連線到 SQL，請尋找錯誤記錄檔
 1. 開啟您的 SQL Server 設定管理員。 
 2. 展開 [服務] 節點。
 3. 以滑鼠右鍵按一下您的 SQL Server 執行個體 > [屬性]：
@@ -152,9 +157,9 @@ GO
     - 您會注意到這個位置中有數個 errorlog.*。 以 *.log 結尾之檔案是目前的記錄檔。 以數字結尾之檔案是先前的記錄檔，因為每次 SQL Server 重新啟動時都會建立一個新紀錄檔。 
 6. 在記事本中開啟這個檔案。 
 
-### <a name="finding-your-error-log-if-youre-connected-to-sql"></a>如果您已連線到 SQL，請尋找錯誤記錄檔
-1. 連線到 SQL Server
-2. 開啟 [新增查詢] 視窗 
+### <a name="find-your-error-log-if-youre-connected-to-sql"></a>如果您已連線到 SQL，請尋找錯誤記錄檔
+1. 連線到 SQL Server。
+2. 開啟 [新增查詢] 視窗。
 3. 將下列 T-SQL 程式碼貼入查詢視窗中，然後按一下 [執行]：
 
 
@@ -174,8 +179,8 @@ GO
     ![在 SSMS 中檢視錯誤記錄檔](media/ssms-tricks/viewerrorloginssms.png)
 
 ### <a name="query-error-log-within-ssms"></a>在 SSMS 中查詢錯誤記錄檔
-1. 連線到 SQL Server
-2. 開啟 [新增查詢] 視窗
+1. 連接到 SQL Server。
+2. 開啟 [新增查詢] 視窗。
 3. 將下列 T-SQL 程式碼貼入查詢視窗中：
 
  ```sql
@@ -190,22 +195,22 @@ GO
 在連線到 SQL Server 之前和之後，可用多種方式來判斷執行個體名稱。  
 
 ### <a name="when-you-dont-know-it"></a>不知道執行個體名稱時
-1. 請遵循下列步驟找出[磁碟上的 SQL Server 錯誤記錄檔。](#finding-your-error-log-if-you-cannot-connect-to-sql) 
+1. 請遵循下列步驟找出[磁碟上的 SQL Server 錯誤記錄檔](#finding-your-error-log-if-you-cannot-connect-to-sql)。 
 2. 在記事本中開啟 errorlog.log。 
-3. 巡覽至您找到 "Server name is" 文字為止
+3. 巡覽至您找到 "Server name is" 文字為止：
   - 任何在單引號中列出的，就是執行個體名稱和您將要連線的：![錯誤記錄檔中的伺服器名稱](media/ssms-tricks/servernameinlog.png)
 
-### <a name="once-youre-connected"></a>一旦您已連線
+### <a name="once-youre-connected-to-sql"></a>...一旦您連線至 SQL 
 有三個地方可以尋找您已連線到哪一個執行個體。 
 
-1. 伺服器的名稱將會列在**物件總管**中
+1. 伺服器名稱將會列在**物件總管**中：
 
     ![物件總管中的執行個體名稱](media/ssms-tricks/nameinobjectexplorer.png)
 2. 伺服器名稱將會列在查詢視窗中：
 
     ![查詢視窗中的名稱](media/ssms-tricks/nameinquerywindow.png)
 3. 執行個體時提供 SQL Server 登入。 伺服器名稱也將列在**屬性視窗**中。
-    - 若要存取，請開啟 [檢視] 功能表 > [屬性視窗]
+    - 若要加以存取，請開啟 [檢視] 功能表 > [屬性視窗]：
 
     ![在屬性中的名稱](media/ssms-tricks/nameinproperties.png)
 

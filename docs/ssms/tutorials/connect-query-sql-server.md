@@ -10,21 +10,23 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 7b389c5b58dc0afde077f70e2fd8bec7c6cac4d0
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>教學程課：使用 SQL Server Management Studio 連線和查詢 SQL Server
+# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>教學課程：使用 SQL Server Management Studio 連線及查詢 SQL Server
 本教學課程將教導您如何使用 SQL Server Management Studio (SSMS) 連線到 SQL Server 執行個體，並執行一些基本的 Transact-SQL (T-SQL) 命令。 本文會示範如何執行下列操作：
-    - [連線到 SQL Server](#connect-to-a-sql-server)
-    - [建立新的資料庫 (**TutorialDB**)](#create-a-database)
-    - [在新資料庫中建立資料表 (**客戶**)](#create-a-table)
-    - [將資料列插入新**客戶**資料表](#insert-rows)
-    - [查詢**客戶**資料表和檢視結果](#view-query-results)
-    - [使用查詢視窗資料表來驗證您的連線屬性](#verify-your-query-window-connection-properties)
-    - [變更您查詢視窗所連線的伺服器](#change-server-connection-within-query-window)
+
+> [!div class="checklist"]
+> * [連線到 SQL Server](#connect-to-a-sql-server)
+> * [建立新的資料庫 (**TutorialDB**)](#create-a-database)
+> * [在新資料庫中建立資料表 (**客戶**)](#create-a-table)
+> * [將資料列插入新**客戶**資料表](#insert-rows)
+> * [查詢**客戶**資料表和檢視結果](#view-query-results)
+> * [使用查詢視窗資料表來驗證您的連線屬性](#verify-your-query-window-connection-properties)
+> * [變更您查詢視窗所連線的伺服器](#change-server-connection-within-query-window)
 
 
 ## <a name="prerequisites"></a>Prerequisites

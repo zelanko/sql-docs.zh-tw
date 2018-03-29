@@ -1,15 +1,15 @@
 ---
-title: "指定方案部署的組態設定 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
+title: 指定方案部署的組態設定 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, configuration settings
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - Analysis Services deployments, configuration settings
 - deploying [Analysis Services], configuration settings
 ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e778ee4c1962ac51eb145174dd424b9c3868512d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c5cb1d30f65e38b69fbde629fb940b94c5864f8d
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deployment-script-files---solution-deployment-config-settings"></a>部署指令碼檔案的解決方案部署組態設定
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈讀取資料分割和角色部署選項，您用於部署指令碼從\<*專案名稱*> placeholder>>.configsettings 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]建立此檔案，當您建置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用目前專案的組態設定來建立\<*專案名稱*> placeholder>>.configsettings 檔案。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈讀取資料分割和角色部署選項，您用於部署指令碼從\<*專案名稱*> placeholder>>.configsettings 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]建立此檔案，當您建置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用目前專案的組態設定來建立\<*專案名稱*> placeholder>>.configsettings 檔案。  
   
 ## <a name="reviewing-the-configuration-settings-for-deployment"></a>檢閱部署的組態設定  
  下列是儲存在組態設定\<*專案名稱*> placeholder>>.configsettings 檔案：  

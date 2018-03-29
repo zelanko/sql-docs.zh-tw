@@ -1,8 +1,8 @@
 ---
-title: Reporting Services (SSRS) | Microsoft Docs
-description: 深入了解行動和分頁 Reporting Services 報表及內部部署 Power BI 報表的工具與服務。
+title: 什麼是 SQL Server Reporting Services (SSRS) | Microsoft Docs
+description: 深入了解適用於內部部署行動和分頁 Reporting Services 報表的工具與服務。
 ms.custom: ''
-ms.date: 07/01/2017
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: ''
@@ -24,17 +24,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 8f7c8f1fb8e72ba3861df9b4ac015468dc143459
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什麼是 SQL Server Reporting Services (SSRS)？
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]要找 Power BI 報表伺服器嗎？ 請參閱[開始使用 Power BI 報表伺服器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
 
 在內部部署建立、部署和管理行動與分頁 Reporting Services 報表等工作，都可使用 SQL Server Reporting Services (SSRS) 提供齊全的現成工具與服務來完成。
 
@@ -51,9 +51,6 @@ SQL Server 2016 版的 Reporting Services 提供更新產品套件：
 * 您可以在任何新式瀏覽器中檢視的**新式入口網站** 。 在新的入口網站，您可以組織並顯示行動與分頁的 Reporting Services 報表和 KPI。 您也可以在入口網站上儲存 Excel 活頁簿。
 
 請繼續閱讀以深入了解各項內容。
-
-> [!NOTE]
-> 尋找 Power BI 報表伺服器嗎？ 請參閱[開始使用 Power BI 報表伺服器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
 
 ### <a name="whats-new-in-reporting-services"></a>Reporting Services 的新功能
 

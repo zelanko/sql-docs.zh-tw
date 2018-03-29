@@ -10,21 +10,22 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: c9ede90c1232469797f85af353c7e3fced6851b5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>教學課程：SQL Server Management Studio 元件和設定
 本教學課程介紹 SQL Server Management Studio (SSMS) 中不同視窗元件以及工作區中的一些基本設定選項。 在本文中，您將學習關於： 
-- 組成 SSMS 環境的不同元件
-- 變更環境配置並將其重設為預設值
-- 將查詢編輯器最大化
-- 變更基本設定，例如
-    - 變更字型
-    - 設定啟動選項
-    - 將設定重設回預設值
+
+> [!div class="checklist"]
+> * 組成 SSMS 環境的不同元件
+> * 變更環境配置並將其重設為預設值
+> * 將查詢編輯器最大化
+> * 變更字型 
+> * 設定啟動選項 
+> * 將設定重設回預設值 
 
 ## <a name="prerequisites"></a>Prerequisites
 若要完成本教學課程，您需要 SQL Server Management Studio。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 03/21/2018
 
     
 
-## <a name="changing-the-environmental-layout"></a>變更環境配置 
+## <a name="change-the-environmental-layout"></a>變更環境配置 
 本節討論如何管理環境配置，如移動各種視窗。 
 
 -  透過按住標題並拖曳視窗，可以移動每個視窗元件。 
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/21/2018
  
     ![還原視窗配置](media/ssms-configuration/resetwindowlayout.png)
     
-## <a name="maximizing-query-editor"></a>將查詢編輯器最大化
+## <a name="maximize-query-editor"></a>將查詢編輯器最大化
 查詢編輯器可以最大化為全螢幕模式。
 
 1. 按一下查詢編輯器視窗中的任何位置。
@@ -100,7 +101,7 @@ ms.lasthandoff: 03/21/2018
 
 
 
-## <a name="changing-basic-settings"></a>變更基本設定
+## <a name="change-basic-settings"></a>變更基本設定
 本節討論如何修改 SSMS 中的一些基本設定。 這些選項可在 [工具] 功能表選項中找到：
 
   ![工具功能表](media/ssms-configuration/tools.png)
@@ -110,18 +111,32 @@ ms.lasthandoff: 03/21/2018
 
     ![自訂工具列](media/ssms-configuration/toolbar.png)
 
+### <a name="change-the-font"></a>變更字型
 - 字型可從功能表進行變更：[工具] > [選項] > [字型和色彩]：
 
      ![字型和色彩](media/ssms-configuration/fontsandcolors.png)
 
+### <a name="change-the-startup-options"></a>變更啟動選項
 - 啟動選項會決定您首次啟動 SSMS 時的工作區外觀。 這些可以從功能表設定：[工具] > [選項] > [啟動]：
  
     ![啟動選項](media/ssms-configuration/startup.png)
 
+### <a name="reset-settings-to-default"></a>將設定重設為預設
 - 所有這些設定可以從功能表匯出和匯入：[工具] > [匯入和匯出設定] 
 
     ![匯入和匯出設定](media/ssms-configuration/settings.png)
     - 這也是您可以將所有設定重設為預設的地方。 
+
+
+## <a name="next-steps"></a>後續步驟
+下一篇文章會告訴您使用 SSMS 時的幾個額外秘訣和訣竅，例如尋找您的 SQL Server 錯誤記錄檔和 SQL 執行個體名稱。 
+
+請前往下一篇文章來進一步了解
+> [!div class="nextstepaction"]
+> [按鈕](ssms-tricks.md)
+ 
+ 
+
 
 
 

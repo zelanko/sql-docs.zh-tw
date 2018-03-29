@@ -30,13 +30,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9a1cbac9e3eef44384313792d92f38ac90cce5e1
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="tutorial-sql-server-management-studio"></a>教學課程：SQL Server Management Studio
+# <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 教學課程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供設定、監視和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的圖形介面。 也讓您部署、監視以及升級應用程式所使用的資料層元件，例如資料庫。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 也提供用於編輯和偵錯指令碼的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 語言編輯器。  
