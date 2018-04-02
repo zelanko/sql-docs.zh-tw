@@ -159,7 +159,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 3. 在編輯器中，輸入**sql**來顯示程式碼片段，然後選取**sqlCreateTable**按**輸入**。
 
-4. 在指令碼片段中，輸入**Employees** 作為資料表名稱。
+4. 在程式碼片段中，輸入**Employees** 作為資料表名稱。
 
 5. 按 **Tab鍵**，然後輸入 **dbo** 作為結構描述名稱。
 
