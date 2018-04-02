@@ -157,7 +157,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-use-database.png" alt="use database" style="width: 500px;" />
 
-3. 在編輯器中，輸入**sql**來顯示程式碼片段，然後選取**sqlCreateTable**按**輸入**。
+3. 在編輯器中，輸入**sql** 以顯示程式碼片段，然後選取 **sqlCreateTable** 按 **Enter**。
 
 4. 在程式碼片段中，輸入**Employees** 作為資料表名稱。
 
