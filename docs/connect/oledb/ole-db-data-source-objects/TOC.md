@@ -1,0 +1,7 @@
+# [資料來源物件 (OLE DB)](data-source-objects-ole-db.md)
+# [資料來源資訊屬性](data-source-information-properties.md)
+# [資料來源屬性 (OLE DB)](data-source-properties-ole-db.md)
+# [初始化和授權屬性](initialization-and-authorization-properties.md)
+# [保存的資料來源物件](persisted-data-source-objects.md)
+# [工作階段屬性 - OLE DB Driver for SQL Server](session-properties-oledb-driver-for-sql-server.md)
+# [工作階段](sessions.md)

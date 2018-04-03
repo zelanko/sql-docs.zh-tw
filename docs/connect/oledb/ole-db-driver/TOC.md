@@ -1,0 +1,6 @@
+# [建立 OLE DB Driver for SQL Server 應用程式](creating-a-oledb-driver-for-sql-server-application.md)
+# [關於 OLE DB 屬性](about-ole-db-properties.md)
+# [建立資料來源的連接](establishing-a-connection-to-a-data-source.md)
+# [執行命令](executing-a-command.md)
+# [處理結果](processing-results.md)
+# [在 OLE DB Driver for SQL Server 中使用具有 OLE DB 的 OUTPUT 子句](using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)
