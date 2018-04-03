@@ -1,6 +1,6 @@
 ---
-title: "SQL Server 2017 docker 設定選項 |Microsoft 文件"
-description: "瀏覽不同的方式使用，並與其互動在 Docker 中的 SQL Server 2017 容器映像。 這包括複製檔案及疑難排解的保存資料。"
+title: SQL Server 2017 docker 設定選項 |Microsoft 文件
+description: 瀏覽不同的方式使用，並與其互動在 Docker 中的 SQL Server 2017 容器映像。 這包括複製檔案及疑難排解的保存資料。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 02/26/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
@@ -100,7 +100,7 @@ sqlcmd -S 10.3.2.4 -U SA -P '<YourPassword>'
 sqlcmd -S 10.3.2.4 -U SA -P "<YourPassword>"
 ```
 
-如果您對應不是預設的主機連接埠**1433年**，將該連接埠新增至連接字串。 例如，如果您指定`-p 1400:1433`中您`docker run`命令，然後明確地連接指定通訊埠 1400年。
+如果您對應不是預設的主機連接埠**1433**，將該連接埠新增至連接字串。 例如，如果您指定`-p 1400:1433`中您`docker run`命令，然後明確地連接指定通訊埠 1400。
 
 ```bash
 sqlcmd -S 10.3.2.4,1400 -U SA -P '<YourPassword>'
@@ -137,7 +137,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 Docker 可用來在同一部主機機器上執行多個 SQL Server 容器。 這是需要多個相同的主機上的 SQL Server 執行個體的方法。 每個容器必須公開本身上不同的通訊埠。
 
-下列範例會建立兩個 SQL Server 容器，並將之對應至連接埠**1401年**和**1402年**主機電腦上。
+下列範例會建立兩個 SQL Server 容器，並將之對應至連接埠**1401**和**1402**主機電腦上。
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux:2017-latest
@@ -351,7 +351,7 @@ sudo systemctl start docker
 
 如果執行 SQL Server 容器失敗，請嘗試下列測試：
 
-- 如果您收到錯誤，例如**' 無法建立端點 CONTAINER_NAME 上網路橋接器。啟動 proxy 時發生錯誤： 接聽 tcp 0.0.0.0:1433 繫結： 已經在使用中的位址。 '**，則您嘗試對應到已在使用連接埠的容器連接埠 1433年。 如果您在主機電腦，在本機執行 SQL Server，也可能會發生。 它也可會發生，如果您啟動兩個 SQL Server 容器，並嘗試將其同時對應到相同的主機連接埠。 如果發生這種情況，使用`-p`參數對應到不同的主機連接埠的容器連接埠 1433年。 例如： 
+- 如果您收到錯誤，例如**' 無法建立端點 CONTAINER_NAME 上網路橋接器。啟動 proxy 時發生錯誤： 接聽 tcp 0.0.0.0:1433 繫結： 已經在使用中的位址。 '**，則您嘗試對應到已在使用連接埠的容器連接埠 1433。 如果您在主機電腦，在本機執行 SQL Server，也可能會發生。 它也可會發生，如果您啟動兩個 SQL Server 容器，並嘗試將其同時對應到相同的主機連接埠。 如果發生這種情況，使用`-p`參數對應到不同的主機連接埠的容器連接埠 1433。 例如： 
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.
@@ -387,7 +387,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 - 請確定您的 SQL Server 容器藉由查看執行**狀態**資料行`docker ps -a`輸出。 如果沒有，請使用`docker start <Container ID>`來啟動它。
 
-- 如果您對應至非預設的主機連接埠 (不 1433)，請確定您在連接字串中指定的連接埠。 您可以看到您的連接埠對應中**連接埠**資料行`docker ps -a`輸出。 例如，下列命令會連接到 sqlcmd 接聽通訊埠 1401年容器：
+- 如果您對應至非預設的主機連接埠 (不是 1433)，請確定您在連接字串中指定的連接埠。 您可以看到您的連接埠對應中**連接埠**資料行`docker ps -a`輸出。 例如，下列命令會連接到 sqlcmd 接聽通訊埠 1401容器：
 
     ```bash
     sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
