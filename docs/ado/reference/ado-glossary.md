@@ -1,28 +1,28 @@
 ---
-title: "ADO 詞彙 |Microsoft 文件"
-ms.custom: 
+title: ADO 詞彙 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
  資料表中的欄位和變數之間的對應。 ADO Visual c + + 擴充功能中**資料錄集**欄位會對應至 C/c + + 變數。  
   
  位元遮罩  
- 數字的值適用於搭配其他數值的位元值比較通常加上旗標參數或傳回值中的選項。 通常這項比較會完成的位元邏輯運算子，例如**和**和**或者**在 Visual Basic 中 **&** 和**&#124;**在 c + +。  
+ 數字的值適用於搭配其他數值的位元值比較通常加上旗標參數或傳回值中的選項。 通常這項比較會完成的位元邏輯運算子，例如**和**和**或者**在 Visual Basic 中**&**和**&#124;** c + + 中。  
   
  例如，ADO **FieldAttributeEnum**值可用來當作位元遮罩來決定欄位的屬性。 假設您想要判斷是否可更新的欄位。 您可以測試這個，與 Visual Basic 中的下列運算式：`Field.Attributes AND adFldUpdatable`  
   
@@ -165,7 +165,7 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="e"></a>E  
  列舉型別  
- 具名常數的清單。 列舉的值不需要是唯一的。 但是每個值的名稱必須是列舉型別定義所在的範圍內唯一的。 在 ADO 中，列舉型別用於數字參數和傳回值、 加入至 ADO 程式碼的意義，以及可為開發人員之數字的值 （這可能會變更版本）。 例如，若要開啟靜態**資料錄集**，使用**adOpenStatic**列舉值：`Recordset.Open ,,adOpenStatic`  
+ 具名常數的清單。 列舉的值不需要是唯一的。 但是每個值的名稱必須是列舉型別定義所在的範圍內唯一的。 在 ADO 中，列舉型別用於數字參數和傳回值、 加入至 ADO 程式碼的意義，以及可為開發人員之數字的值 （這可能會變更版本）。 例如，若要開啟靜態**資料錄集**，使用**adOpenStatic**列舉值： `Recordset.Open ,,adOpenStatic`  
   
  也稱為*列舉的常數*。 另請參閱*常數*。  
   

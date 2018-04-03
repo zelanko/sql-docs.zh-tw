@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e363464201a3d80c296ccd111e6708d5b3176501
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: f6bff4cdd5ea1a6b2fef3283ba9c0413e3d26842
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="conversions-ole-db"></a>轉換 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/30/2018
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  如果標準轉換失敗，舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 會實作 OLE 轉換。 如此一來，針對 SQL Server OLE DB 驅動程式所執行的某些轉換與 OLE DB 規格不同。  
+>  如果標準轉換失敗，舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 會實作 OLE 轉換。 SQL Server OLE DB 驅動程式會遵循相同的行為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端。 如此一來，針對 SQL Server OLE DB 驅動程式所執行的某些轉換與 OLE DB 規格不同。  
   
  字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱中的 「 資料格式： 字串和常值 」 一節[OLE DB 日期和時間增強功能的資料類型支援](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
   
