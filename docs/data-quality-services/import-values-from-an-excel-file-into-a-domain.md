@@ -1,31 +1,32 @@
 ---
-title: "將 Excel 檔案中的值匯入定義域 | Microsoft Docs"
-ms.custom: 
+title: 將 Excel 檔案中的值匯入定義域 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d4e8bb9372d6e9e19e674160f9039422cd87ebc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c6331f1f695bb2e1c9974d27d8af76e03da55315
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>將 Excel 檔案中的值匯入定義域中
   本主題描述如何將 Excel 檔案中的值匯入 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的定義域中。 使用 Excel 檔案將定義域值匯入 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式可簡化知識產生程序，進而節省時間與精力。 此程序可讓在 Excel 檔案或文字檔案中擁有有效資料值清單的人，將這些值匯入定義域中。 透過 Excel 檔案，您可以將定義域值匯入定義域或將定義域匯入知識庫中 (如需將定義域匯入知識庫的詳細資訊，請參閱[在知識探索中匯入 Excel 檔案中的定義域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。)匯出至 Excel 檔案不受支援。  
@@ -109,7 +110,7 @@ ms.lasthandoff: 01/19/2018
   
 -   每個資料列都代表一個定義域值。  
   
--   第一個資料列表示定義域名稱，或者為第一個資料值或記錄 (根據 **[使用第一個資料列做為標頭]** 核取方塊的設定而定)。 如果您在使用 .xslx 或 .xls 檔案時選取 **Use First Row as header** ，任何 Null 資料行名稱都將自動轉換成 F*n*，而且任何重複的資料行都會附加一個數字。  
+-   第一個資料列表示定義域名稱，或者為第一個資料值或記錄 (根據 **[使用第一個資料列做為標頭]** 核取方塊的設定而定)。 如果您在使用 .xslx 或 .xls 檔案時選取 **[使用第一個資料列做為標頭]** ，任何 Null 資料行名稱都將自動轉換成 F*n*，而且任何重複的資料行都會附加一個數字。  
   
 -   如果您在匯入作業完成之前加以取消，系統將回復此作業，而且不會匯入任何資料。  
   

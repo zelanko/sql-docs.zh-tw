@@ -1,16 +1,16 @@
 ---
-title: "sp_execute_external_script (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_execute_external_script (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283db0150613d9d956cf5b0ec6b6fd295bc4444b
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/23/2018
 
 ```
 sp_execute_external_script   
-    @language = N'language,   
+    @language = N'language',   
     @script = N'script'  
     [ , @input_data_1 = N'input_data_1' ]   
     [ , @input_data_1_name = N'input_data_1_name' ]   
@@ -55,7 +55,7 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>引數
- @language= N'*語言*'  
+ @language = N'*語言*'  
  表示指令碼語言。 *語言*是**sysname**。  
 
  有效值為`Python`或`R`。 
@@ -103,7 +103,7 @@ sp_execute_external_script
 
 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]與一起安裝的伺服器元件所組成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，和一組工作站工具和資料科學家連接至的高效能環境的連線程式庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您必須安裝在機器學習期間，元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以啟用外部指令碼執行安裝程式。 如需詳細資訊，請參閱[設定 SQL Server 機器學習服務](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。  
   
-您可以控制藉由設定外部資源集區的 外部指令碼所使用的資源。 如需詳細資訊，請參閱 [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)。 工作負載的相關資訊可從資源管理員目錄檢視、 DMV 和計數器取得。 如需詳細資訊，請參閱[資源管理員目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)，[資源管理員相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)，和[SQL Server，外部指令碼物件](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)。  
+您可以控制藉由設定外部資源集區的 外部指令碼所使用的資源。 如需詳細資訊，請參閱 [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)。 工作負載的相關資訊可從資源管理員目錄檢視、 DMV 和計數器取得。 如需詳細資訊，請參閱[資源管理員目錄檢視&#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)，[資源管理員相關動態管理檢視&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)，和[SQL Server，外部指令碼物件](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)。  
 
 監視指令碼執行使用[sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)和[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 
 
@@ -208,19 +208,19 @@ END;
 GO
 ```
 
-若要產生類似的模型使用 Python，您需要變更語言識別項從`@language=N'R'`至`@language = N'Python'`，並進行必要的修改`@script`引數。 否則，所有參數函都式一樣。
+若要使用 Python 產生類似的模型，您需要將語言識別項從 `@language=N'R'` 變更為 `@language = N'Python'`，並對 `@script` 引數進行必要的修改。 否則，所有參數都會跟 R 的運作方式相同。
 
 ### <a name="c-create-a-python-model-and-generate-scores-from-it"></a>C. 建立 Python 模型，並從其中產生分數
 
-這個範例示範如何使用預存程序來\_執行\_外部\_指令碼來產生簡單的 Python 模型的分數。 
+這個範例示範如何使用 sp\_execute\_external\_ 指令碼來產生簡單 Python 模型的分數。 
 
 ```sql
 CREATE PROCEDURE [dbo].[py_generate_customer_scores]
 AS
 BEGIN
 
-## Input query to generate the customer data
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+-- Input query to generate the customer data
+DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders'
 
 EXEC sp_execute_external_script @language = N'Python', @script = N'
 import pandas as pd
@@ -244,9 +244,9 @@ END;
 GO
 ```
 
-Python 程式碼中使用的資料行標題不會輸出到 SQL Server;因此，使用與結果陳述式，指定要使用的 sql 資料類型與資料行名稱。
+由於系統不會將 Python 程式碼中使用的資料行標題輸出至 SQL Server，因此請使用 WITH RESULTS 陳述式指定要讓 SQL 使用的資料行名稱與資料類型。
 
-計分，您也可以使用原生[預測](../../t-sql/queries/predict-transact-sql.md)函式，也就是通常會更快，因為它可避免呼叫 Python 或 R 執行階段。
+若要計分，您也可以使用原生 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函式，其會避免呼叫 Python 或 R 執行階段，因此一般來說速度更快。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -255,10 +255,10 @@ Python 程式碼中使用的資料行標題不會輸出到 SQL Server;因此，�
  [R 程式庫和 R 資料類型](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
  [SQL Server 機器學習服務的已知的問題](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
- [建立外部程式庫 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
- [sp_prepare &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
+ [建立外部程式庫&#40;Transact SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
+ [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [啟用外部指令碼伺服器組態選項](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
+ [啟用外部指令碼伺服器設定選項](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [SQL Server 的 External Scripts 物件](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  

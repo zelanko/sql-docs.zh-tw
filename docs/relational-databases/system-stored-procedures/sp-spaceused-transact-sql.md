@@ -1,16 +1,16 @@
 ---
-title: "sp_spaceused (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_spaceused (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_spaceused_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 670fc2eaf7d6e5c4e499ff57c3a5564bec903ac1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: de4b451166e7b17b92ae996eddeef87b4dd8722b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +50,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>引數  
 
-如[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]，`sp_spacedused`必須指定具名的參數 (例如`sp_spacedused (@objname= N'Table1');`而不是依賴參數的序數位置。 
+如[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]，`sp_spaceused`必須指定具名的參數 (例如`sp_spaceused (@objname= N'Table1');`而不是依賴參數的序數位置。 
 
  [ **@objname=**] **'***objname***'** 
    
@@ -58,7 +58,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 如果*objname*未指定，整個資料庫會傳回結果。  
 *objname*是**nvarchar(776)**，預設值是 NULL。  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]僅支援資料庫和資料表的物件。
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]僅支援資料庫和資料表的物件。
   
  [ **@updateusage=**] **'***updateusage***'**  
  指出應該執行 DBCC UPDATEUSAGE 來更新空間使用方式資訊。 當*objname*是未指定，整個資料庫上執行的陳述式; 否則會執行陳述式*objname*。 值可以是**true**或**false**。 *updateusage*是**varchar(5)**，預設值是**false**。  
@@ -81,13 +81,13 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |Value|설명|  
 |-----------|-----------------|  
-|0|當 *@objname* 為 null 或未指定，會傳回兩個結果集。 兩個結果集是預設行為。|  
-|1|當 *@objname*  = null 或未指定，會傳回單一結果集。|  
+|0|當*@objname*為 null 或未指定，會傳回兩個結果集。 兩個結果集是預設行為。|  
+|1|當*@objname* = null 或未指定，會傳回單一結果集。|  
   
  *oneresultset*是**元**，預設值是**0**。  
 
 [ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
-**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]， [!INCLUDE[sssds-md](../../includes/sssds-md.md)]。  
+**適用於：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]， [!INCLUDE[sssds-md](../../includes/sssds-md.md)]。  
   
  當@oneresultset= 1，參數@include_total_xtp_storage決定單一結果集是否包含 MEMORY_OPTIMIZED_DATA 儲存體的資料行。 預設值是 0，也就是預設 （如果省略此參數） 的 XTP 資料行未被納入結果集。  
 
@@ -211,7 +211,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. 顯示遠端資料表的空間使用狀況資訊相關聯的已啟用 Stretch 的資料表  
- 下列範例會摘要說明使用已啟用 Stretch 的資料表與關聯的遠端資料表所使用的空間 **@mode** 引數來指定這些遠端目標。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
+ 下列範例會摘要說明使用已啟用 Stretch 的資料表與關聯的遠端資料表所使用的空間**@mode**引數來指定這些遠端目標。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
 ```sql  
 USE StretchedAdventureWorks2016  
@@ -256,7 +256,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC UPDATEUSAGE &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   

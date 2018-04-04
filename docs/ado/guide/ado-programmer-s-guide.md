@@ -1,5 +1,5 @@
 ---
-title: "ADO 程式設計 &#39; s 指南 |Microsoft 文件"
+title: "ADO 程式設計師&#39;人員指南 |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,12 +20,12 @@ ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6414a5691c89a2a399f207a3cf2059c17a00991c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO 程式設計 &#39; s 指南使用 ADO 物件
+# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO 程式設計師&#39;s 指南使用 ADO 物件
 這份文件提供如何使用 ADO 物件來處理各種資料來源的概觀。 首先，簡介摘要說明新功能和安裝、 使用及轉散發 ADO 元件的需求。 下一節中討論各種類型的 ADO 物件的使用。 最後，附錄討論各種 Microsoft 提供的資料和服務提供者，錯誤訊息和秘訣有關如何使用 ADO 以數種程式設計語言，除了範例和詞彙。
 
  此章節包含下列主題。

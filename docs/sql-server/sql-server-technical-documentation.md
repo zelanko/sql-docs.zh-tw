@@ -1,15 +1,15 @@
 ---
-title: "SQL Server 文件集 | Microsoft Docs"
+title: SQL Server 文件集 | Microsoft Docs
 ms.date: 02/28/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.portal.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 84c0a18929883f0a58e75ed5ce20900d0bdf09e7
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 8868bbce17a31e72d55cbdca3e7badb00e66666e
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,13 @@ SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫�
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 是用於主要資料管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 方案。 建立在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 上的方案可協助確保報表和分析乃依據正確的資訊。 使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]可建立主要資料的中央儲存機制，並且在資料隨時間改變時，維持可稽核且安全的記錄。|
 
 ## <a name="migrate-and-move-data"></a>移轉並移動資料
+
 - [使用 SQL Server 匯入和匯出精靈來匯入和匯出資料](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 - [將 SQL Server Database 移轉至 Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 ## <a name="earlier-sql-server-versions"></a>較早的 SQL Server 版本
+
 - [SQL Server 更新中心 - 所有已支援版本的連結和資訊](https://msdn.microsoft.com/library/ff803383.aspx)
 - [SQL Server 2014 文件](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [SQL Server 2012 文件](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
@@ -81,9 +83,12 @@ SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫�
 - [SQL Server 2008 文件](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
 - [SQL Server 2005 封存文件](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
 
-## <a name="samples"></a>範例  
+## <a name="samples"></a>範例
+
 - [Wide World Importers 範例資料庫](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
 - [SQL Server 2016 的 AdventureWorks 範例資料庫與指令碼](https://www.microsoft.com/download/details.aspx?id=49502) 
-- [GitHub 上的 SQL Server 範例](https://github.com/Microsoft/sql-server-samples) 
-   
+- [GitHub 上的 SQL Server 範例](https://github.com/Microsoft/sql-server-samples)
+
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

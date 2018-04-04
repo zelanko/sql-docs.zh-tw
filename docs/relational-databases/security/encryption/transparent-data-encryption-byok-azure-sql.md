@@ -1,29 +1,29 @@
 ---
-title: "TDE - 自行管理金鑰 (BYOK) - Azure SQL | Microsoft Docs"
-description: "自行管理金鑰 (BYOK) 支援適用於 SQL Database 和資料倉儲的 Azure Key Vault 透明資料加密 (TDE)。 TDE 與 BYOK 的概觀、優點、運作方式、考量和建議。"
-keywords: 
+title: TDE - 自行管理金鑰 (BYOK) - Azure SQL | Microsoft Docs
+description: 自行管理金鑰 (BYOK) 支援適用於 SQL Database 和資料倉儲的 Azure Key Vault 透明資料加密 (TDE)。 TDE 與 BYOK 的概觀、優點、運作方式、考量和建議。
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: aliceku
 manager: craigg
-ms.prod: 
-ms.reviewer: 
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
 ms.workload: On Demand
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 01/31/2018
+ms.date: 03/16/2018
 ms.author: aliceku
-ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰 (PREVIEW) 支援
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -69,10 +69,10 @@ ms.lasthandoff: 02/11/2018
 - 使用已啟用[虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的金鑰保存庫，萬一意外刪除金鑰或是金鑰保存庫時可防止資料遺失：  
   - 虛刪除的資源會保留一段時間，除非復原或清除，否則保留 90 天。
   - **復原**和**清除**動作本身的權限已在金鑰保存庫的存取原則中建立關聯。 
-- 使用邏輯伺服器的 Azure Active Directory (AAD) 身分識別，對其授與金鑰保存庫的存取。  使用入口網站 UI 時，AAD 身分識別會自動建立，而金鑰保存庫的存取權限會授與伺服器。  使用 PowerShell 設定有 BYOK 的 TDE，必須建立 AAD 身分識別，且應驗證完成。 如需使用 PowerShell 時的詳細逐步指示，請參閱[使用 BYOK 設定 TDE](transparent-data-encryption-byok-azure-sql-configure.md)。
+- 使用邏輯伺服器的 Azure Active Directory (Azure AD) 身分識別，對其授與金鑰保存庫的存取權。  使用入口網站 UI 時，Azure AD 身分識別會自動建立，而金鑰保存庫的存取權限會授與伺服器。  必須建立 AAD 身分識別，且應驗證完成，才能使用 PowerShell 來設定具 BYOK 的 TDE。 如需使用 PowerShell 時的詳細逐步指示，請參閱[使用 BYOK 設定 TDE](transparent-data-encryption-byok-azure-sql-configure.md)。
 
   >[!NOTE]
-  >如果 AAD 身分識別**意外刪除，或使用了金鑰保存庫的存取原則撤銷伺服器的權限**，伺服器即失去對金鑰保存庫的存取權。
+  >如果 Azure AD 身分識別**意外刪除，或使用了金鑰保存庫的存取原則撤銷伺服器的權限**，伺服器即失去對金鑰保存庫的存取權。
   >
   
 - 啟用所有加密金鑰的稽核和報告：Key Vault 提供的記錄檔很容易插入其他安全性資訊和事件管理 (SIEM) 工具中。 Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) 即為整合服務的一個範例。
@@ -115,6 +115,12 @@ ms.lasthandoff: 02/11/2018
 
 為了確保在容錯移轉期間能持續存取 Azure Key Vault 中的 TDE 保護裝置，必須在資料庫複寫或容錯移轉至次要伺服器之前完成這項設定。 主要和次要伺服器兩者皆必須將 TDE 保護裝置的複本儲存於所有其他 Azure Key Vault 之中，在此範例中即表示相同的金鑰會儲存在這兩個金鑰保存庫中。
 
+地理災害復原中的備援需要具次要金鑰保存庫的次要資料庫，且最多支援四個次要。  不支援變更 (為次要建立次要)。  在初始設定時間期間，服務會確認主要與次要金鑰保存庫的權限皆已正確設定。  定期維護這些權限並測試其運作狀況相當重要。
+
+>[!NOTE]
+>將伺服器身分識別指派至主要及次要伺服器時，必須先將身分識別指派至次要伺服器。
+>
+
 若要從某個金鑰保存庫將現有的金鑰新增至另一個金鑰保存庫，請使用 [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) cmdlet。
 
  ```powershell
@@ -149,4 +155,7 @@ ms.lasthandoff: 02/11/2018
    ```
 若要深入了解 SQL 資料庫的備份復原，請參閱[復原 Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)。 若要深入了解 SQL 資料倉儲的備份復原，請參閱[復原 Azure SQL 資料倉儲](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview)。
 
-備份記錄檔的其他考量：即使已輪用 TDE 保護裝置且資料庫現在是使用新的 TDE 保護裝置，備份記錄檔仍會維持以原始 TDE 加密程式加密的狀態。  進行還原時，您需要使用這兩個金鑰才能還原資料庫。  如果記錄檔是使用儲存在 Azure Key Vault 中的 TDE 保護裝置，即使資料庫已在同時變更為使用受管服務的 TDE，在還原時仍需要使用這個金鑰。   
+
+備份記錄檔的其他考量：即使已輪用 TDE 保護裝置且資料庫現在是使用新的 TDE 保護裝置，備份記錄檔仍會維持以原始 TDE 加密程式加密的狀態。  進行還原時，您需要使用這兩個金鑰才能還原資料庫。  如果記錄檔是使用儲存在 Azure Key Vault 中的 TDE 保護裝置，即使資料庫已在同時變更為使用受管服務的 TDE，在還原時仍需要使用這個金鑰。
+
+

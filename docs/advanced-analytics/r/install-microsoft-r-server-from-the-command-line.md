@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>從命令列安裝 Machine Learning 伺服器 （獨立） 或 Microsoft R Server （獨立）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/11/2018
 如果您沒有網際網路存取的電腦上安裝 Machine Learning 伺服器或 Microsoft R Server （獨立），您必須事先下載必要的 R （或 Python） 元件，並將它們複製到本機資料夾。 如需下載位置，請參閱[安裝沒有網際網路存取的機器學習元件](installing-ml-components-without-internet-access.md)。
 
 
-## <a name="bkmk_mls2017"></a>安裝 Microsoft 機器學習服務伺服器 （獨立）
+## <a name="bkmk_mls2017"></a> 安裝 Microsoft 機器學習服務伺服器 （獨立）
 
 **適用於： SQL Server 2017**
 

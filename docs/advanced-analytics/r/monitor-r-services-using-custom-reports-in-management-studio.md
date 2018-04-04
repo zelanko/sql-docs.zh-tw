@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 565041e140178055b4839985c10ba4633b5f0334
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0a065ffeeaf5a88ac26cc1e628eaec5d39ba462a
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>監視使用 Management Studio 中自訂報告的機器學習服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,6 +118,6 @@ Management Studio 中報表的一般簡介，請參閱[在 Management Studio 中
 
 ## <a name="see-also"></a>另請參閱
 
-[監視 R Services](../../advanced-analytics/r-services/monitoring-r-services.md)
+[監視 windows 服務](managing-and-monitoring-r-solutions.md)
 
-[R Services 的擴充事件](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
+[R Services 的擴充事件](extended-events-for-sql-server-r-services.md)

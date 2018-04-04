@@ -1,36 +1,36 @@
 ---
-title: "判斷有效的 Database Engine 權限 | Microsoft Docs"
-ms.custom: 
+title: 判斷有效的 Database Engine 權限 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>判斷有效的 Database Engine 權限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-本主題描述如何判斷誰具有 SQL Server Database Engine 中各種物件的權限。 SQL Server 會實作 Database Engine 的兩個權限系統。 舊的固定角色系統具有預先設定的權限。 從 SQL Server 2005 開始，提供更具彈性且更精確的系統 (從 2005 開始，本主題中的資訊適用於 SQL Server。 有些版本的 SQL Server 無法使用某些類型的權限)。
+本文描述如何判斷哪些使用者具有 SQL Server 資料庫引擎中各種物件的權限。 SQL Server 會實作 Database Engine 的兩個權限系統。 舊的固定角色系統具有預先設定的權限。 從 SQL Server 2005 開始，提供更具彈性且更精確的系統 (本文的資訊適用於 SQL Server 2005 以上的版本。 有些版本的 SQL Server 無法使用某些類型的權限)。
 
 >  [!IMPORTANT] 
 >  * 有效的權限是兩個權限系統的彙總。 
@@ -45,19 +45,19 @@ ms.lasthandoff: 01/02/2018
 * 資料庫層級權限可以來自每個資料庫中固定資料庫角色或使用者定義資料庫角色的成員資格。 每個人都屬於 `public` 固定資料庫角色，並接收該處指派的任何權限。   
 * 資料庫層級權限可以來自每個資料庫中的權限授與或登入或是使用者定義資料庫角色。   
 * 權限可以接收自 `guest` 登入或 `guest` 資料庫使用者 (如果啟用的話)。 預設會停用 `guest` 登入和使用者。   
-* Windows 使用者可以是可具有登入的 Windows 群組成員。 Windows 使用者使用 Windows 群組安全性識別碼連線並顯示 Windows Token 時，SQL Server 會了解 Windows 群組成員資格。 因為 SQL Server 不會管理或接收 Windows 群組成員資格的自動更新，所以 SQL Server 無法可靠地報告接收自 Windows 群組成員資格的 Windows 使用者權限。   
+* Windows 使用者可以是具有登入資格的 Windows 群組成員。 Windows 使用者使用 Windows 群組安全性識別碼連線並顯示 Windows Token 時，SQL Server 會了解 Windows 群組成員資格。 因為 SQL Server 不會管理或接收 Windows 群組成員資格的自動更新，所以 SQL Server 無法可靠地報告接收自 Windows 群組成員資格的 Windows 使用者權限。   
 * 切換至應用程式角色，並提供密碼，即可取得權限。   
 * 執行包含 `EXECUTE AS` 子句的預存程序，即可取得權限。   
 * 具有 `IMPERSONATE` 權限的登入或使用者可以取得權限。   
 * 本機電腦系統管理員群組的成員一律可以將其權限提升至 `sysadmin` (不適用於 SQL Database)。  
 * `securityadmin` 固定伺服器角色的成員可以提升其許多權限，而在某些情況下可以將權限提升至 `sysadmin` (不適用於 SQL Database)。   
-* SQL Server 系統管理員可以查看所有登入和使用者的相關資訊。 權限較少的使用者通常只會看到自己的識別資訊。
+* SQL Server 系統管理員可以查看所有登入和使用者的相關資訊。 權限較少的使用者通常只能看到自己的識別資訊。
 
 ## <a name="older-fixed-role-permission-system"></a>舊的固定角色權限系統
 
-固定伺服器角色和固定資料庫角色具有預先設定且無法變更的權限。 若要判斷誰是固定伺服器角色成員，請執行下列查詢。    
+固定伺服器角色和固定資料庫角色具有預先設定且無法變更的權限。 若要判斷哪些使用者是固定伺服器角色成員，請執行下列查詢：    
 >  [!NOTE] 
->  不適用於無法使用伺服器層級權限的 SQL Database 或 SQL Data Warehouse。 SQL Server 2012 已新增 `sys.server_principals` 的 `is_fixed_role` 資料行。 舊版 SQL Server 則不需要。  
+>  不適用於沒有伺服器層級權限的 SQL Database 或 SQL 資料倉儲。 SQL Server 2012 已新增 `sys.server_principals` 的 `is_fixed_role` 資料行。 舊版 SQL Server 則不需要。  
 ```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
@@ -89,11 +89,11 @@ SELECT DP1.name AS DatabaseRoleName,
 
 ## <a name="newer-granular-permission-system"></a>新的細微權限系統
 
-此系統極具彈性，這表示如果設定它的人員想要極為精確，則它可能會十分複雜。 這不一定不好；我希望我的財務機構精確。 若要簡化事項，它有助於建立角色，並將權限指派給角色，然後將一群人新增至角色。 如果資料庫開發小組透過結構描述來區隔活動，接著將角色權限授與整個結構描述，而不是個別資料表或程序，則會比較容易。 但真實世界十分複雜，而且我們必須假設商務需求會產生非預期的安全性需求。   
+這個系統具有彈性，但如果設定人員講求精確的話，系統可能會比較複雜。 若要簡化事項，它有助於建立角色，並將權限指派給角色，然後將一群人新增至角色。 如果資料庫開發小組透過結構描述來區隔活動，接著將角色權限授與整個結構描述，而不是個別資料表或程序，則會比較容易。 真實世界的案例十分複雜，且商務需求可能會衍生非預期的安全性需求。   
 
-下圖顯示這些權限及其彼此間的關聯性。 一些較高等級的權限 (例如 `CONTROL SERVER`) 會多次列出。 本主題中的海報字級太小，無法閱讀。 按一下影像，以下載 PDF 格式的 **Database Engine 權限海報**。  
+下圖顯示這些權限及其彼此間的關聯性。 一些較高等級的權限 (例如 `CONTROL SERVER`) 會多次列出。 本文的海報字級太小，無法閱讀。 按一下影像，以下載 PDF 格式的 **Database Engine 權限海報**。  
   
- [![Database Engine 權限](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![Database Engine 權限](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 ### <a name="security-classes"></a>安全性類別
 
@@ -105,7 +105,7 @@ SELECT DP1.name AS DatabaseRoleName,
 
 Windows 使用者使用根據 Windows 群組的登入進行連線時，某些活動可能需要 SQL Server 建立登入或使用者來代表個別 Windows 使用者。 例如，Windows 群組 (Engineers) 包含使用者 (Mary、Todd、Pat)，而 Engineers 群組具有資料庫使用者帳戶。 如果 Mary 具有權限，並建立資料表，就可能將使用者 (Mary) 建立為資料表的擁有者。 或者，如果 Todd 被拒絕具有 Engineers 群組其他人所具有的權限，則必須建立使用者 Todd 以追蹤拒絕權限。
 
-請記住，Windows 使用者可能是多個 Windows 群組 (例如 Engineers 和 Managers) 的成員。 授與或拒絕 Engineers 登入的權限、授與或拒絕 Managers 登入的權限、個別授與或拒絕使用者的權限，以及授與或拒絕使用者所屬角色的權限，全部都會予以彙總並評估是否為有效的權限。 `HAS_PERMS_BY_NAME` 函式可以顯示使用者還是登入具有特定權限。 不過，沒有明顯的方法可以判斷授與或拒絕權限的來源。 您必須研究權限清單，也可以使用試誤法進行實驗。
+請記住，Windows 使用者可能是多個 Windows 群組 (例如 Engineers 和 Managers) 的成員。 授與或拒絕 Engineers 登入的權限、授與或拒絕 Managers 登入的權限、個別授與或拒絕使用者的權限，以及授與或拒絕使用者所屬角色的權限，全部都會予以彙總並評估是否為有效的權限。 `HAS_PERMS_BY_NAME` 函式可以顯示使用者還是登入具有特定權限。 不過，沒有明顯的方法可以判斷授與或拒絕權限的來源。 請研究權限清單，也可以使用試誤法進行實驗。
 
 ## <a name="useful-queries"></a>有用的查詢
 

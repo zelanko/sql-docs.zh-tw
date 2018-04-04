@@ -1,0 +1,43 @@
+---
+title: SQL Server 的 OLE DB 驅動程式的元件 |Microsoft 文件
+description: 適用於 SQL Server 的 OLE DB 驅動程式的元件
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: ''
+ms.component: oledb|applications
+ms.reviewer: ''
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- data access [OLE DB Driver for SQL Server], components
+- components [OLE DB Driver for SQL Server]
+- MSOLEDBSQL, about OLE DB Driver for SQL Server
+author: pmasl
+ms.author: Pedro.Lopes
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 18b0f0e13fefefe5e3be09d7538150cfccbfcb21
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/30/2018
+---
+# <a name="components-of-ole-db-driver-for-sql-server"></a>適用於 SQL Server 的 OLE DB 驅動程式的元件
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  OLE DB 驅動程式的 SQL Server 包含下列元件：  
+
+|元件|Description|  
+|---------------|-----------------|  
+|msoledbsql.dll|動態連結程式庫 (DLL) 檔案，其中包含所有 SQL Server 功能，OLE DB 驅動程式。|  
+|msoledbsqlr.rll|SQL Server 文件庫，OLE DB 驅動程式隨附的資源檔。|   
+|msoledbsql.h|若要使用 SQL Server 的 OLE DB 驅動程式，需要 SQL Server 包含的所有新定義的標頭檔，OLE DB 驅動程式。 此標頭檔會取代 sqloledb.h 標頭檔。<br /><br /> 注意： 您可以參考 msoledbsql.h 和 sqloledb.h 相同程式中的，只要先定義 sqloledb.h。|  
+|msoledbsql.lib|需要直接呼叫的程式庫檔案**bcp**屬於 SQL Server OLE DB 驅動程式的公用程式函式。<br /><br /> 注意： 如果您在程式碼參考 msoledbsql.lib 檔案，您必須確定 msoledbsql.dll 檔案是在您的系統路徑，和之使用者的系統路徑中使用應用程式。|  
+
+## <a name="see-also"></a>另請參閱  
+ [使用 OLE DB 驅動程式的 SQL Server 的建立應用程式](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

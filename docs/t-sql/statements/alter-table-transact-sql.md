@@ -1,16 +1,16 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -61,22 +61,24 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 62bb3df1044b6acc580daefc75ace88bca441e53
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   您可以利用改變、加入或卸除資料行與條件約束、重新指派和重建分割區，或是停用或啟用條件約束與觸發程序等方式來修改資料表定義。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -399,9 +401,9 @@ UPDATE MyTable SET NullCol = N'some_value' WHERE NullCol IS NULL;
 ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;  
 ```  
   
- 當您建立或改變一份含有 CREATE TABLE 或 ALTER TABLE 陳述式的資料表時，資料庫和工作階段設定會影響且可能會覆寫資料行定義中使用之資料類型的可 Null 性。 我們建議您一定要針對非計算資料行，明確將資料行定義為 NULL 或 NOT NULL。  
+ 當您建立或改變一份含有 CREATE TABLE 或 ALTER TABLE 陳述式的資料表時，資料庫和工作階段設定會影響且可能會覆寫資料行定義中使用之資料類型的 Null 屬性。 我們建議您一定要針對非計算資料行，明確將資料行定義為 NULL 或 NOT NULL。  
   
- 如果您加入一個具有使用者定義資料類型的資料行，我們建議您最好使用與此使用者定義資料類型相同的可 Null 性來定義此資料行，並為此資料行指定預設值。 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
+ 如果您加入一個具有使用者定義資料類型的資料行，我們建議您最好使用與此使用者定義資料類型相同的 Null 屬性來定義此資料行，並為此資料行指定預設值。 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
   
 > [!NOTE]  
 > 如果使用 ALTER COLUMN 指定 NULL 或 NOT NULL，則必須同時指定 *new_data_type* [(*有效位數* [, *小數位數* ])]。 如果資料類型、有效位數及小數位數沒有變更，請指定目前的資料行值。  
@@ -414,7 +416,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
  ROWGUIDCOL 不強制使用儲存在資料行中之值的唯一性，且不針對插入資料表中的新資料列自動產生值。 若要產生每個資料行的唯一值，請在 INSERT 陳述式上使用 NEWID 函數，或將 NEWID 函數指定為資料行的預設值。  
   
  [ {ADD | DROP} PERSISTED ]  
- 指定將 PERSISTED 屬性加入至指定的資料行，或從指定的資料行卸除該屬性。 該資料行必須是一個利用具決定性運算式定義的計算資料行。 就指定為 PERSISTED 的資料行而言，當計算資料行相依的任何其他資料行更新時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 實際上會將計算值儲存在資料表並將值更新。 將計算資料行標示為 PERSISTED，就可以在定義於具決定性 (但不是精確) 運算式上的計算資料行上建立索引。 如需詳細資訊，請參閱[計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
+ 指定將 PERSISTED 屬性加入至指定的資料行，或從指定的資料行卸除該屬性。 該資料行必須是一個利用具決定性運算式定義的計算資料行。 就指定為 PERSISTED 的資料行而言，當計算資料行相依的任何其他資料行更新時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 實際上會將計算值儲存在資料表並將值更新。 將計算資料行標示為 PERSISTED，就可以在定義於具決定性 (但不是精確) 運算式上的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
   
  當做分割區資料表之分割區資料行的任何計算資料行，都必須明確標示為 PERSISTED。  
   
@@ -441,7 +443,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
 WITH ( ONLINE = ON | OFF) \<適用於改變資料行>  
  **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 資料表仍可使用時，允許執行多個改變資料行動作。 預設是 OFF。 可線上針對資料類型、資料行長度或有效位數、可 Null 性、疏鬆度和定序來改變資料行。  
+ 資料表仍可使用時，允許執行多個改變資料行動作。 預設是 OFF。 可線上針對資料類型、資料行長度或有效位數、Null 屬性、疏鬆度和定序來改變資料行。  
   
  線上改變資料行可讓使用者建立和自動統計資料於 ALTER COLUMN 作業期間參考變更資料行。 這可讓查詢如往常般執行。 在作業結束時會卸除參考資料行的自動統計，使用者建立的統計資料亦同時失效。 作業完成之後，使用者必須手動更新使用者產生的統計資料。 如果資料行是任何統計資料或索引的篩選運算式的一部分，則您無法執行改變資料行的作業。  
   
@@ -533,7 +535,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = *max_degree_of_parallelism*  
  **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 只針對作業持續時間覆寫 **max degree of parallelism** 設定選項。 如需詳細資訊，請參閱[設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 只針對作業持續時間覆寫 **max degree of parallelism** 設定選項。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
  請利用 MAXDOP 選項來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
   
@@ -548,7 +550,7 @@ WITH CHECK | WITH NOCHECK
  0 (預設值)  
  根據目前的系統工作負載，使用實際數目或比實際數目更少的處理器。  
   
- 如需詳細資訊，請參閱[設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
+ 如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -567,7 +569,7 @@ WITH CHECK | WITH NOCHECK
  如需詳細資訊，請參閱[線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  MOVE TO { *partition_scheme_name***(***column_name* [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
  **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -653,7 +655,7 @@ WITH CHECK | WITH NOCHECK
  SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 停用資料表的系統版本設定或啟用資料表的系統版本設定。 為啟用資料表的系統版本設定，系統會確認資料類型、可 Null 性條件約束、 主索引鍵條件約束是否符合系統版本設定的各需求。 如果未使用 HISTORY_TABLE 引數，系統會產生一個與目前資料表之結構描述相符的新記錄資料表，並在兩個資料表之間建立連結，然後讓系統將目前資料表中的每一筆資料記錄到記錄資料表。 此記錄資料表的名稱將會是 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 如果使用 HISTORY_TABLE 引數來建立連結，並使用現有的記錄資料表，則會在目前的資料表和指定的資料表之間建立連結。 建立現有記錄資料表的連結時，您可以選擇執行資料一致性檢查。 這個資料一致性檢查可確保現有的記錄不會重疊。 預設執行資料一致性檢查。 如需相關資訊，請參閱[時態表](../../relational-databases/tables/temporal-tables.md)。  
+ 停用資料表的系統版本設定或啟用資料表的系統版本設定。 為啟用資料表的系統版本設定，系統會確認資料類型、可 Null 性條件約束、 主索引鍵條件約束是否符合系統版本設定的各需求。 如果未使用 HISTORY_TABLE 引數，系統會產生一個與目前資料表之結構描述相符的新記錄資料表，並在兩個資料表之間建立連結，然後讓系統將目前資料表中的每一筆資料記錄到記錄資料表。 此記錄資料表的名稱將會是 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 如果使用 HISTORY_TABLE 引數來建立連結，並使用現有的記錄資料表，則會在目前的資料表和指定的資料表之間建立連結。 建立現有記錄資料表的連結時，您可以選擇執行資料一致性檢查。 這個資料一致性檢查可確保現有的記錄不會重疊。 預設執行資料一致性檢查。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
   
 HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS | MONTH | MONTHS | YEAR | YEARS} } **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 
@@ -735,7 +737,7 @@ TABLE
  *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
  **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 這是資料行集的名稱。 資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行結合到結構化輸出中。 如果資料表已包含疏鬆資料行，資料行集無法加入該資料表中。 如需資料行集的詳細資訊，請參閱[使用資料行集](../../relational-databases/tables/use-column-sets.md)。  
+ 這是資料行集的名稱。 資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行結合到結構化輸出中。 如果資料表已包含疏鬆資料行，資料行集無法加入該資料表中。 如需資料行集的詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -763,22 +765,22 @@ TABLE
   
  當您透過指定 `ON` 來啟用資料表的 Stretch 時，您也必須指定 `MIGRATION_STATE = OUTBOUND` 來立即開始移轉資料或指定 `MIGRATION_STATE = PAUSED` 來延後移轉資料。 預設值是 `MIGRATION_STATE = OUTBOUND`。 如需如何為資料表啟用 Stretch 的詳細資訊，請參閱[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
   
- **先決條件**。 為資料表啟用 Stretch 之前，您必須在伺服器和資料庫上啟用 Stretch。 如需詳細資訊，請參閱[為資料庫啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。  
+ **必要條件**。 為資料表啟用 Stretch 之前，您必須在伺服器和資料庫上啟用 Stretch。 如需詳細資訊，請參閱 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。  
   
  **權限**。 為資料庫或資料表啟用 Stretch 時，需要 db_owner 權限。 為資料表啟用 Stretch 時，也需要資料表的 ALTER 權限。  
   
  **為資料表停用 Stretch Database**  
   
- 當您為資料表停用 Stretch 時，有兩個選項可用於已移轉至 Azure 的遠端資料。 如需詳細資訊，請參閱[停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。  
+ 當您為資料表停用 Stretch 時，有兩個選項可用於已移轉至 Azure 的遠端資料。 如需詳細資訊，請參閱 [停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。  
   
--   若要為資料表停用 Stretch，並將資料表的遠端資料從 Azure複製回 SQL Server，請執行下列命令。 無法取消此命令。  
+-   若要針對資料表停用 Stretch，並將資料表的遠端資料從 Azure複製回 SQL Server，請執行下列命令。 無法取消此命令。  
   
     ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
   
-     此作業會產生資料傳輸成本，且無法取消。 如需詳細資訊，請參閱[資料傳輸定價詳細資料](https://azure.microsoft.com/en-us/pricing/details/data-transfers/)。  
+     此作業會產生資料傳輸成本，且無法取消。 如需詳細資訊，請參閱 [資料傳輸定價詳細資料](https://azure.microsoft.com/en-us/pricing/details/data-transfers/)。  
   
      將所有遠端資料從 Azure 複製回 SQL Server 後，即會針對資料表停用 Stretch。  
   
@@ -791,7 +793,7 @@ ALTER TABLE \<table_name>
   
  針對資料表停用 Stretch Database 後，即會停止執行資料移轉作業，且查詢結果不再包含來自遠端資料表的結果。  
   
- 停用 Stretch 時，並不會移除遠端資料表。 若要刪除遠端資料表，必須使用 Azure 管理入口網站將它卸除。  
+ 停用 Stretch 時，並不會移除遠端資料表。 若您想要刪除遠端資料表，則必須使用 Azure 管理入口網站將其卸除。  
   
 [ FILTER_PREDICATE = { null | *predicate* } ]  
  **適用於**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -810,7 +812,7 @@ ALTER TABLE \<table_name>
   
 -   指定 `OUTBOUND` 以將資料從 SQL Server 移轉至 Azure。  
   
--   指定 `INBOUND` 以將資料表的遠端資料，從 Azure 複製回 SQL Server，然後為資料表停用 Stretch。 如需詳細資訊，請參閱[停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。  
+-   指定 `INBOUND` 以將資料表的遠端資料，從 Azure 複製回 SQL Server，然後停用資料表的 Stretch。 如需詳細資訊，請參閱 [停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。  
   
      此作業會產生資料傳輸成本，且無法取消。  
   
@@ -845,7 +847,7 @@ IF EXISTS
   
  只有在已經存在的情況下，才有條件地卸除資料行或條件約束。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  若要加入新的資料列，請使用 [INSERT](../../t-sql/statements/insert-transact-sql.md)。 若要移除資料列，請使用 [DELETE](../../t-sql/statements/delete-transact-sql.md) 或 [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md)。 若要變更現有資料列中的值，請使用 [UPDATE](../../t-sql/queries/update-transact-sql.md)。  
   
  如果參考資料表的程序快取中有任何執行計畫，ALTER TABLE 會加以標示，以便在下一次執行時重新編譯。  
@@ -864,9 +866,9 @@ IF EXISTS
  類型為 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**, **text**、**ntext**、**image**、**hierarchyid**、**geometry**、**geography** 或 CLR UDTS 的資料行，不可以在線上作業中加入。 您無法線上加入資料行，如果這樣做，就會導致最大可能的資料列大小超過 8,060 位元組限制。 在此情況中，資料行會以離線作業的方式加入。  
   
 ## <a name="parallel-plan-execution"></a>平行計畫執行  
- 在 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 和更新版本中，用來執行單一 ALTER TABLE ADD (以索引為基礎) CONSTRAINT 或 DROP (叢集索引) CONSTRAINT 陳述式的處理器數目，取決於 **max degree of parallelism** 設定選項和目前的工作負載。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵測到系統在忙碌中，則在開始執行陳述式之前，會先自動降低作業平行原則的程度。 您可以指定 MAXDOP 選項，手動設定用來執行陳述式的處理器數目。 如需詳細資訊，請參閱[設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 在 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 和更新版本中，用來執行單一 ALTER TABLE ADD (以索引為基礎) CONSTRAINT 或 DROP (叢集索引) CONSTRAINT 陳述式的處理器數目，取決於 **max degree of parallelism** 設定選項和目前的工作負載。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵測到系統在忙碌中，則在開始執行陳述式之前，會先自動降低作業平行原則的程度。 您可以指定 MAXDOP 選項，手動設定用來執行陳述式的處理器數目。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
-## <a name="partitioned-tables"></a>資料分割資料表  
+## <a name="partitioned-tables"></a>分割區資料表  
  除了執行涉及分割區資料表的 SWITCH 作業以外，ALTER TABLE 還可用來變更分割區資料表之資料行、條件約束及觸發程序的狀態，就像它是用於非分割區資料表一樣。 不過，這個陳述式不可用來變更資料表本身的分割區方式。 若要重新分割某個資料分割資料表，請使用 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 和 [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)。 此外，您也不能變更分割區資料表的資料行資料類型。  
   
 ## <a name="restrictions-on-tables-with-schema-bound-views"></a>含有結構描述繫結檢視表之資料表的限制  

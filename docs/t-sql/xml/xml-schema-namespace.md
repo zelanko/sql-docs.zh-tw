@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19f4701bc26e115c7f6b78d01feef876665763df
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0df9cf1a8106242e740637e2e59b5f905f99bbe2
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xmlschemanamespace"></a>xml_schema_namespace
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  您不能利用這個函數從 **sys.sys** XML 結構描述集合中建構 XML 結構描述文件。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從 `ProductDescriptionSchemaCollection` 資料庫的實際關聯式結構描述中擷取 XML 結構描述集合 `AdventureWorks2012`。  
+ 下列範例會從 `ProductDescriptionSchemaCollection` 資料庫的實際關聯式結構描述中擷取 XML 結構描述集合 `AdventureWorks`。  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
 SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection');  
 GO  

@@ -1,30 +1,30 @@
 ---
-title: "ADO 工作資料表 |Microsoft 文件"
-ms.custom: 
+title: ADO 工作資料表 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0a245945c5dbe9262d251af67a138739b1888da
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f196a8254ac201194c345afaf5ae7c1a04d4e53c
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-programming-task-table"></a>ADO 程式設計工作表
 下表列出中所包含的程式設計工作*ADO 程式設計人員指南*並提供每個工作的參考。 這些參考可以是文字內容或程式碼範例，您可以在其中找到 ADO 功能之工作的相關資訊。

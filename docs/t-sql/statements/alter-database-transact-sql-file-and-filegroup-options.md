@@ -1,16 +1,16 @@
 ---
-title: "ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
@@ -44,21 +44,23 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 826b8a5abb14ee677f89f1c77956215ec72f90c6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ef66eef5192d18cb2a443f0ed45f2b29a018c883
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  修改與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫相關聯的檔案和檔案群組。 在資料庫中新增或移除檔案和檔案群組，以及變更資料庫或其檔案和檔案群組的屬性。 如需其他 ALTER DATABASE 選項，請參閱 [ALTER DATABASE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+  修改與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫相關聯的檔案和檔案群組。 在資料庫中新增或移除檔案和檔案群組，以及變更資料庫或其檔案和檔案群組的屬性。 如需其他 ALTER DATABASE 選項，請參閱 [ALTER DATABASE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)。
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -133,10 +135,10 @@ ALTER DATABASE database_name
  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中移除邏輯檔案描述和刪除實體檔案。 除非檔案是空的，否則無法移除檔案。  
   
  *logical_file_name*  
- 這是在參考檔案時，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用的邏輯名稱。  
+ 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。  
   
 > [!WARNING]  
-> 移除具有與它關聯之 FILE_SNAPSHOT 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免備份參考資料庫檔案會不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+> 移除具有與它關聯之 FILE_SNAPSHOT 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免備份參考資料庫檔案會不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
  MODIFY FILE  
  指定應該修改的檔案。 每次只能變更一個 \<filespec> 屬性。 您必須在 \<filespec> 中指定 NAME，以識別要修改的檔案。 如果指定了 SIZE，新的大小必須大於目前檔案大小。  
@@ -291,7 +293,7 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
  將檔案群組的屬性設成唯讀或讀取/寫入。  
   
  DEFAULT  
- 將預設的資料庫檔案群組變更為 *filegroup_name*。 資料庫中只能有一個檔案群組是預設檔案群組。 如需相關資訊，請參閱[資料庫檔案和檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)。  
+ 將預設的資料庫檔案群組變更為 *filegroup_name*。 資料庫中只能有一個檔案群組是預設檔案群組。 如需相關資訊，請參閱 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。  
   
  NAME = *new_filegroup_name*  
  將檔案群組名稱變更為 *new_filegroup_name*。  
@@ -505,7 +507,7 @@ GO
  下列範例會將 A 範例中所建立的 `Test1dat2` 檔移至新目錄中。  
   
 > [!NOTE]  
-> 您必須實際上將檔案移到新目錄之後，才能執行這個範例。 之後，請停止再啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，或使 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫離線 (OFFLINE) 再連線 (ONLINE) 來實作變更。  
+> 您必須實際上將檔案移到新目錄之後，才能執行這個範例。 之後，請停止再啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，或使 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫離線 (OFFLINE) 再連接 (ONLINE) 來實作變更。  
   
 ```sql  
 USE master;  

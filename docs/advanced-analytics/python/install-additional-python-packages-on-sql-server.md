@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 8509556cd886f90dbac2211bc0282e8656bdc03e
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安裝新的 Python 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-+ 您必須安裝機器學習服務 （資料庫） 與 Python 語言選項。 如需指示，請參閱[Python 機器學習服務設定](setup-python-machine-learning-services.md)。
++ 您必須安裝機器學習服務 （資料庫） 與 Python 語言選項。 如需指示，請參閱[安裝 SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。
 
 + 每個伺服器執行個體中，您必須安裝個別封裝的副本。 封裝無法執行個體之間共用。
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/28/2018
 
 + 如果您沒有網際網路存取的伺服器上安裝 Python 封裝，您必須 WHL 檔案下載到另一部電腦，並將它複製到伺服器。
 
-    例如，在個別電腦上，您可以下載 WHL 檔案從這個站台[https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然後將檔案複製`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 電腦上的本機資料夾。
+    例如，在個別電腦上，您可以下載 WHL 檔案從這個站台[ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然後將檔案複製`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 電腦上的本機資料夾。
 
 + SQL Server 2017 使用 Python 3.5。 
 

@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入門： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接並查詢 Azure SQL database
 
-本快速入門示範如何使用 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 連接到 Azure SQL database，並再使用 TRANSACT-SQL (T-SQL) 陳述式來建立*TutorialDB*用於[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。
+本快速入門示範如何使用 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 連接到 Azure SQL database，並再使用 TRANSACT-SQL (T-SQL) 陳述式來建立 *TutorialDB* 用於 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教學課程。
 
 ## <a name="prerequisites"></a>必要條件
 

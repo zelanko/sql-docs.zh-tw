@@ -16,11 +16,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: 
-ms.openlocfilehash: 5e718755aeae67ba55165770dc323cad8d6a54a9
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: ccba60d0a3e0fe45f82215a045e53a265d6c0a92
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>什麼是 SQL Server 機器學習服務？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,12 +31,12 @@ SQL Server 機器學習服務是內嵌、 預測分析和資料科學引擎，�
 
 有兩個 SQL Server 中使用機器學習功能的選項： 
 
-+ **SQL Server 機器學習服務 （資料庫）** database engine 執行個體，計算引擎完全整合與 database engine 中運作。 大部分安裝都將此選項。
-+ **SQL Server 機器學習伺服器 （獨立）**為非 SQL 安裝。 雖然您可以使用 SQL Server 安裝程式來安裝伺服器，它就完全分開 SQL Server。
++ [**SQL Server 機器學習服務 （資料庫）** ](r/sql-server-r-services.md) database engine 執行個體，計算引擎完全整合與 database engine 中運作。 大部分安裝都將此選項。
++ [**SQL Server 機器學習伺服器 （獨立）** ](r/r-server-standalone.md)為非 SQL 安裝。 雖然您可以使用 SQL Server 安裝程式來安裝伺服器，它就完全分開 SQL Server。 在功能上，它相當於非 SQL [Microsoft 機器學習 Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
 
 ## <a name="r-and-python-packages"></a>R 和 Python 封裝
 
-每個語言的支援是透過用來建立及定型模型的計分的資料，並使用基礎的系統資源的平行處理的各種類型的專屬 Microsoft 套件。
+每個語言的支援是透過用來建立及定型模型的計分資料，以及使用基礎的系統資源的平行處理的各種類型的專屬 Microsoft 套件。
 
 因為專屬的封裝會建立開放原始碼 R，並將 Python 發佈，指令碼或您在 SQL Server 中執行的程式碼可以同時也呼叫基底函式，並使用與 SQL Server 中提供的語言版本相容的第三方封裝 (Python 3.5 和最新版本的 R，目前 3.3.3）。
 
@@ -84,12 +84,24 @@ SQL Server 2017 機器學習服務是新一代的 SQL Server 2016 R 服務，加
 
 SQL Server 文件的最新版本與版本無關。 SQL Server 機器學習服務 Python 才可用在 2017年和更新版本，在所有版本中支援 R 時。 除非另有說明否則您可以假設 R 文件適用於 2016年和 2017年版本。
 
+
+## <a name="related-machine-learning-products"></a>相關的機器學習的產品
+
+ +  [佈建 Azure 虛擬機器](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+  
+  Azure marketplace 包括包括機器學習 Server 或 R Server 的多個虛擬機器映像。 在 Microsoft Azure 中建立虛擬機器是最快速的方式來開發和部署的預測模型。 映像隨附於調整及共用已設定，使其更容易內嵌應用程式內的分析，以及與後端系統整合的功能。
+
++ [資料科學虛擬機器](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
+
+  資料科學虛擬機器的最新版本包括機器學習伺服器、 SQL Server，加上最受歡迎的機器學習工具陣列所有預先安裝，並測試。 建立 Jupyter 筆記本，來開發方案 Julia，並使用如 MXNet、 CNTK，以及 TensorFlow GPU 啟用深入學習程式庫。
+
 <a name="next-steps"></a>
+
 ## <a name="next-steps"></a>後續的步驟
 
 **步驟 1:**安裝及設定軟體。 
 
-+ [安裝 SQL Server 2017 機器學習服務 （資料庫）](python/setup-python-machine-learning-services.md#bkmk_installPythonInDatabase)
++ [安裝 SQL Server 2017 機器學習服務 （資料庫）](install/sql-machine-learning-services-windows-install.md)
 
 **步驟 2:**開始使用這些教學課程的其中一個程式碼使用：
 

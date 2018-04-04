@@ -1,5 +1,5 @@
 ---
-title: "R Server (獨立式) | Microsoft Docs"
+title: "SQL Server 機器學習伺服器 （獨立） 與 R Server （獨立） |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/22/2017
@@ -13,97 +13,76 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: eb30dbfdfd03f5a6515d0559d7f60cdde7b9223c
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="r-server-standalone"></a>R Server (Standalone)
+# <a name="sql-server-machine-learning-server-standalone-and-r-server-standalone"></a>SQL Server 機器學習伺服器 （獨立） 與 R Server （獨立）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2016 中，Microsoft 發行**R 伺服器 （獨立）**，它支援企業級分析的平台的一部分。  Microsoft R Server 提供延展性和安全性的 R 語言，並會解決開放原始碼 r 的記憶體限制SQL Server R 服務，例如 Microsoft R Server （獨立） 會提供平行和區塊處理的資料，讓 R 使用者使用遠大於可放入記憶體的資料。
+在獨立伺服器是安裝的機器學習元件，以做為 R，並將 Python，獨立 SQL Server database engine 執行個體執行的功能。 您可以安裝在獨立伺服器本身，與 SQL Server 上沒有相依性。 因為在獨立伺服器都是獨立的 SQL Server、 設定和管理工作和工具是比較類似於非 SQL 版本的機器學習伺服器，您可以在閱讀[本文](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)。
 
-在 SQL Server 2017，已新增支援的 Python 語言，喜歡的休閒活動學習、 機器社群中廣泛的支援，且包含常用的程式庫，針對文字分析和深入學習。  若要反映此更廣泛的語言設定，我們已也它重新命名為**Microsoft Machine Learning 伺服器 （獨立）**。
+獨立的機器學習服務伺服器的目標是提供豐富的開發環境，與 R，並將 Python 針對小型到大型資料集，使用專用的封裝和計算引擎的工作負載的分散式和平行處理與伺服器一起安裝。 獨立伺服器上的 R 和 Python 封裝是安裝 SQL Server （資料庫），允許程式碼可攜性中所提供相同和[計算內容切換](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)。
 
-## <a name="benefits-of-microsoft-r-server"></a>Microsoft R Server 的優點
+主要原因開發人員選擇獨立機器學習伺服器是超越開放原始碼 R 和 Python 的記憶體和處理條件約束。 獨立伺服器可以載入和處理多個核心上大量的資料和彙總成單一的彙總輸出的結果。 函式和演算法針對標尺和公用程式所設計： 提供的預測分析、 建立統計模型、 資料視覺化，以及先進機器學習演算法商業伺服器產品中的工程和支援Microsoft。
 
-您可以使用 Microsoft R Server 的多個平台上的分散式運算。 當您安裝 SQL Server 安裝程式之外時，您取得 Windows 伺服器和所有必要的工具發行和部署模型。 如需其他平台的詳細資訊，請參閱 MSDN library 中的這些資源：
+一般而言，我們建議您將 （獨立） 並 （資料庫） 安裝為互斥獨佔避免資源爭用，但如果您有足夠的資源沒有針對它們兩個安裝在同一部實體電腦上沒有禁止。
 
-+ [Microsoft R Server 簡介 (英文)](https://msdn.microsoft.com/microsoft-r/rserver)
-+ [R Server for Windows (英文)](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
+您的電腦上只能有一部獨立伺服器： 任一[SQL Server 2017 機器學習伺服器 （獨立）](../install/sql-machine-learning-standalone-windows-install.md)或[SQL Server 2016 R 伺服器 （獨立）](../install/sql-r-standalone-windows-install.md)。 您必須手動安裝不同版本之前解除安裝版本。
 
-您也可以安裝 Microsoft R Server 要做為開發用戶端，用來取得 RevoScaleR 程式庫和建立 R 解決方案，可部署到 SQL Server 所需的工具。
+## <a name="components-of-a-standalone-server"></a>獨立伺服器的元件
 
-## <a name="whats-new-in-microsoft-machine-learning-server"></a>在 Microsoft Machine Learning 伺服器最新消息
+SQL Server 2016 只是 R。 SQL Server 2017 支援 R 和 Python。 下表描述每個版本的功能。
 
-如果您安裝的機器學習服務 （獨立） 使用 SQL Server 2017 安裝程式，您現在可以新增 Python 語言。 當然，R 語言仍然是支援的選項，而且您甚至可以視需要安裝這兩種語言。
- 
-在 SQL Server 2017 CTP 2.0 中，伺服器安裝也會包含 mrsdeploy 封裝和其他公用程式用於運用模型。 如需詳細資訊，請參閱[與 mrsdeploy 實施](../../advanced-analytics/operationalization-with-mrsdeploy.md)。
+| 元件 | Description |
+|-----------|-------------|
+| R 封裝 | [RevoScaleR](revoscaler-overview.md)搭配資料操作、 轉換、 visualzation，和分析的函式的可延展為主要媒體櫃。  <br/>[MicrosoftML (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)新增機器學習演算法，來建立自訂文字分析、 影像分析和情緒分析模型。 <br/>[mrsdeploy](operationalization-with-mrsdeploy.md)提供 web 服務部署 （在 SQL Server 2017 只)。 <br/>[olapR](how-to-create-mdx-queries-using-olapr.md)適用於在 r 中指定的 MDX 查詢|
+| Microsoft R Open (MRO) | [MRO](https://mran.microsoft.com/open)是 Microsoft 的開放原始碼分佈是。封裝和解譯器都會加入。 一律使用 MRO 配套在安裝程式中的版本。 |
+| R 工具 | R 主控台視窗和命令提示字元會在 R 散發的標準工具。 在 SQL Server\140\R_SERVER\bin\x64 \Program files\Microsoft 中找到它們。 |
+| R 範例和指令碼 |  開放原始碼 R 與 RevoScaleR 封裝包含內建的資料集，因此您可以建立並使用預先安裝的資料執行指令碼。 在 \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets 和 \library\RevoScaleR 尋找它們。 |
+| Python 封裝 | [revoscalepy](../python/what-is-revoscalepy.md)搭配資料操作、 轉換、 visualzation，和分析的函式的可延展 python 為主要媒體櫃。 <br/>[microsoftml (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)新增機器學習演算法，來建立自訂文字分析、 影像分析和情緒分析模型。  |
+| Python 工具 | 內建的 Python 命令列工具可用於臨機操作測試和工作項目。 在 SQL Server\140\PYTHON_SERVER\python.exe \Program files\Microsoft 尋找工具。 |
+| Anaconda | Anaconda 是開放原始碼分佈的 Python 和基本封裝。 |
+| Python 範例和指令碼 | 如同 R、 Python 包含內建的資料集和指令碼。 在 SQL \Program files\Microsoft 尋找 revoscalepy 資料 Server\140\PYTHON_SERVER\lib\site packages\revoscalepy\data\sample 資料。 |
+| 在 R 和 Python 中預先定型的模型 | 預先定型的模型支援並可在獨立伺服器上，但您無法透過 SQL Server 安裝程式安裝它們。 Microsoft Machine Learning 伺服器的安裝程式提供模型中，您可以安裝免費。 如需詳細資訊，請參閱[安裝預先定型的 SQL Server 上的機器學習模型](install-pretrained-models-sql-server.md)。 |
 
-SQL Server 機器學習的企業使用者可以使用可下載的 Microsoft R Server 安裝程式升級他們的 R 元件，稱為繫結程序中。 如需詳細資訊，請參閱[使用 SqlBindR 升級到 SQL Server 執行個體](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## <a name="get-started-step-by-step"></a>開始逐步
 
-## <a name="get-microsoft-r-server-or-machine-learning-server-standalone"></a>取得 Microsoft R 伺服器或機器學習伺服器 （獨立）
+啟動安裝程式，將二進位檔附加至您最愛的開發工具，並撰寫第一個指令碼。
 
- 有多個 Microsoft R Server 安裝選項：
+### <a name="step-1-install-the-software"></a>步驟 1： 安裝軟體
 
-+ 使用 SQL Server 安裝精靈
+安裝這些版本其中一個：
 
-  [建立獨立式 R Server](../r/create-a-standalone-r-server.md)
++ [SQL Server 2017 機器學習伺服器 （獨立）](../install/sql-machine-learning-standalone-windows-install.md)
++ [SQL Server 2016 R 伺服器 （獨立）-只有 R](../install/sql-r-standalone-windows-install.md)
 
-  執行 SQL Server 2016 安裝程式以安裝**Microsoft R Server （獨立）**。 預設會新增 R 語言。
-  或者，執行 SQL Server 2017 安裝程式以安裝**機器學習伺服器 （獨立）**選取 R 或 Python，或兩者。
+### <a name="step-2-configure-a-development-tool"></a>步驟 2： 設定開發工具
 
-  > [!IMPORTANT]
-  > 若要安裝的伺服器選項為**共用功能**安裝程式的區段。 不要安裝任何其他元件。
-  >
-  > 最好不要在已安裝 SQL Server R Services 或 SQL Server 機器學習服務的電腦上安裝伺服器。
+設定您的開發工具，若要使用的機器學習伺服器二進位檔。 如需 Python 的詳細資訊，請參閱[連結 Python 二進位檔](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools)。 如需有關如何在 R Studio 中連接的指示，請參閱[使用不同版本的 R](https://support.rstudio.com/hc/en-us/articles/200486138-Using-Different-Versions-of-R)點指派到 C:\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64 工具。 您也可以嘗試[R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation)。 
 
-+ 使用 SQL Server 安裝程式命令列選項
+### <a name="step-3-write-your-first-script"></a>步驟 3： 撰寫第一個指令碼
 
-  [從命令列安裝 Microsoft R Server](../r/install-microsoft-r-server-from-the-command-line.md)
-
-  SQL Server 安裝程式支援透過一組豐富的命令列引數的自動的安裝。
-
-+ 使用獨立安裝程式
-
-  [執行 Windows 的 Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)。
-
-  您現在可以使用新的 Windows 安裝程式來設定 Microsoft R Server 或 Microsoft Machine Learning 伺服器的新執行個體。  Microsoft R Server （和 Microsoft 機器學習 Server） 需要 SQL Server Enterprise 合約。 不過，在執行獨立安裝程式之後，現有安裝的支援原則會更新為使用新的現代化的生命週期原則。 此支援 選項可確保會比使用 SQL Server 版本更新服務時，其方式是經常套用機器學習服務元件的更新。
-
+撰寫從 RevoScaleR、 revoscalepy 和機器學習演算法的函式的使用中的 R 或 Python 指令碼。
   
-+ 升級 SQL Server 執行個體
+  + [R 與 RevoScaleR 25 函式中的，瀏覽](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)： 開頭為基本的 R 命令，然後 RevoScaleR 可散布分析函式可提供高效能的進度和縮放 R 解決方案。 包含許多最熱門 R 模型建立套件 (例如 	K-Means 叢集、決策樹及決策樹系) 的可平行處理版本，以及資料操作工具。
 
-  [若要升級的 R 服務執行個體使用 SqlBindR](./use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
-  
-  您可以使用獨立安裝程式來升級 SQL Server 2016 使用 r 的最新版本的 R Services 的執行個體當您執行安裝程式時，現代化的生命週期支援原則會套用至伺服器，和 R 元件會更頻繁的更新。
-  
-  > [!請注意} 目前此更新方法是僅適用於現有的 SQL Server 2016 安裝。 不過，升級將會支援 SQL Server 2017 在未來。
+  + [快速入門： 的 microsoftml Python 封裝的二進位分類範例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)： 建立二元分類模型使用從 microsoftml 和已知乳癌 cancer 資料集的函式。
 
-## <a name="related-machine-learning-products"></a>相關的機器學習的產品
+選擇工作的最佳語言。 R 最適用於統計計算很難使用 SQL 實作。 透過資料的集合式作業，利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]達到最佳效能。 使用記憶體中資料庫引擎非常快速的計算資料行。
 
-+ 使用 R Server 的 azure 虛擬機器
+### <a name="step-4-operationalize-your-solution"></a>步驟 4： 推動您的方案
 
-  [佈建的 R 伺服器虛擬機器](../../advanced-analytics/r-services/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-  
-  Azure marketplace 包含多個虛擬機器映像，包括 R 伺服器。 在 Microsoft Azure 中建立新的 R Server 虛擬機器是最快速的方式設定伺服器，以用於開發和部署預測模型。 映像隨附於調整及共用已設定，使其更容易內嵌 R 分析應用程式內，以及整合 R 與後端系統的功能。
-
-+ Data Science 虛擬機器
-
-  [Data Science 虛擬機器 Windows 2016 Preview](http://aka.ms/dsvm/win2016)
-
-  資料科學虛擬機器的最新版本包括 R 伺服器、 SQL Server，加上最受歡迎的機器學習工具陣列所有預先安裝，並測試。 建立 Jupyter 筆記本，來開發方案 Julia，並使用如 MXNet、 CNTK，以及 TensorFlow GPU 啟用深入學習程式庫。
-
-## <a name="resources"></a>資源
-
-範例、 教學課程中，與 Microsoft R Server 的詳細資訊，請參閱[Microsoft R 產品](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started)。
+獨立伺服器可使用[實施](https://docs.microsoft.com//machine-learning-server/what-is-operationalization)功能的非 SQL-品牌[Microsoft Machine Learning 伺服器](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)。 您可以設定的獨立伺服器實施，它將提供這些優點： 部署和執行診斷的 web 服務測試 web 服務的容量時，裝載您的程式碼。
 
 ## <a name="see-also"></a>另請參閱
 
- [SQL Server R 服務](../../advanced-analytics/r/sql-server-r-services.md)
+ [SQL Server 機器學習服務 （資料庫）](sql-server-r-services.md)
 

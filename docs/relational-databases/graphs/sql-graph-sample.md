@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d570be772eefec569c59e01a3501a18c1f33d536
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>建立圖形資料庫並執行某些模式比對使用 T-SQL 查詢
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -175,4 +175,4 @@ go
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |建立圖形節點或邊緣資料表  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |插入節點或邊緣資料表  |
-|[比對 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/match-sql-graph.md)  |使用 MATCH 將對符合模式，或瀏覽圖形  |
+|[比對&#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |使用 MATCH 將對符合模式，或瀏覽圖形  |

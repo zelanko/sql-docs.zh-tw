@@ -1,16 +1,16 @@
 ---
-title: "ALTER DATABASE 相容性層級 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ALTER DATABASE 相容性層級 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
@@ -26,22 +26,24 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 750578d028077079b051a08cc2a0ed4276983cda
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d22ee796f75c4c4736c983801a63293b8a44e7cb
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 設定要相容於指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的資料庫行為。 如需其他 ALTER DATABASE 選項，請參閱 [ALTER DATABASE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -155,7 +157,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 | 對於層級 120，統計資料會由*單一*執行緒程序進行取樣。 | 對於層級 130，統計資料則會由*多*執行緒程序進行取樣。 |  
 | 其限制為 253 個傳入外部索引鍵。 | 指定資料表最多可由 10,000 個傳入外部索引鍵或類似參考進行參考。 相關限制，請參閱 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |  
 |允許使用已被取代的 MD2、MD4、MD5、SHA 和 SHA1 雜湊演算法。|只允許使用 SHA2_256 和 SHA2_512 雜湊演算法。|
-||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 包括在某些資料類型轉換和某些 (大多不常見) 作業中的改進。 如需詳細資料，請參閱[處理某些資料類型和不常見作業的 SQL Server 2016 改進 (機器翻譯)](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)。|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 包括在某些資料類型轉換和某些不常見作業中的改善。 如需詳細資料，請參閱[處理某些資料類型和不常見作業的 SQL Server 2016 改進 (機器翻譯)](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)。|
   
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 較早版本中，追蹤旗標 4199 之下的修正程式現在已經預設啟用。 具備相容性模式 130。 追蹤旗標 4199 將仍然適用於在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之後發行的新查詢最佳化工具修正程式。 若要在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中使用較舊的查詢最佳化工具，您必須選取相容性層級 110。 如需有關追蹤旗標 4199 的詳細資訊，請參閱[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。  
   
@@ -164,7 +166,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
   
 |相容性層級設定為 110 或更低|相容性層級設定為 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|使用舊版的查詢最佳化工具。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括了可建立及最佳化查詢計劃之元件的大幅改良。 這個新的查詢最佳化工具功能取決於資料庫相容性層級 120 的使用。 新的資料庫應用程式應該使用資料庫相容性層級 120 加以開發，以便充分利用這些改良功能。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉的應用程式應該謹慎測試，以確認良好的效能得以持續或改善。 如果效能降低，您可以將資料庫相容性層級設定為 110 或更低的數字，以便使用舊的查詢最佳化工具方法。<br /><br /> 資料庫相容性層級 120 會使用新的基數估計工具，其經過調整適合於新型資料倉儲和 OLTP 工作負載。 因效能發生問題而要將資料庫相容性層級設定為 110 之前，請先參閱 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Database Engine 的新功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) 主題的＜查詢計劃＞一節提供的建議。|  
+|使用舊版的查詢最佳化工具。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括可建立及最佳化查詢計劃之元件的大幅改善。 這個新的查詢最佳化工具功能取決於資料庫相容性層級 120 的使用。 新的資料庫應用程式應該使用資料庫相容性層級 120 加以開發，以便充分利用這些改良功能。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉的應用程式應該謹慎測試，以確認良好的效能得以持續或改善。 如果效能降低，您可以將資料庫相容性層級設定為 110 或更低的數字，以便使用舊的查詢最佳化工具方法。<br /><br /> 資料庫相容性層級 120 會使用新的基數估計工具，其經過調整適合於新型資料倉儲和 OLTP 工作負載。 因效能發生問題而要將資料庫相容性層級設定為 110 之前，請先參閱 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Database Engine 的新功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) 主題的＜查詢計劃＞一節提供的建議。|  
 |在低於 120 的相容性層級中，將**日期**值轉換成字串值時，會忽略語言設定。 請注意，此行為只針對**日期**類型。 請參閱下方＜範例＞一節中的範例 B。|將**日期**值轉換成字串值時，不會忽略語言設定。|  
 |`EXCEPT` 子句右邊的遞迴參考會建立無限迴圈。 下方＜範例＞一節中的範例 C 會示範此行為。|`EXCEPT` 子句中的遞迴參考會產生符合 ANSI SQL 標準的錯誤。|  
 |遞迴通用資料表運算式 (CTE) 允許複寫資料行名稱。|遞迴 CTE 不允許重複的資料行名稱。|  

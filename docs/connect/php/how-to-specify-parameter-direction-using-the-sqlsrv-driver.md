@@ -1,33 +1,35 @@
 ---
-title: "如何： 使用 SQLSRV 驅動程式指定參數方向 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用 SQLSRV 驅動程式指定參數方向 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 692d1cd432a7d156a4bb9d8cc2c3bfcf57c02d6d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b4004fa498c01e73c99204bb0d36ac4bded66a9b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式指定參數方向
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主題說明在呼叫預存程序時，如何使用 SQLSRV 驅動程式來指定參數方向。 請注意當您建構參數時，會指定參數方向陣列 （步驟 3） 傳遞至[sqlsrv_query](../../connect/php/sqlsrv-query.md)或[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。  
+本主題說明在呼叫預存程序時，如何使用 SQLSRV 驅動程式來指定參數方向。 參數方向指定當您建構傳遞至參數陣列 （步驟 3） [sqlsrv_query](../../connect/php/sqlsrv-query.md)或[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。  
   
 ### <a name="to-specify-parameter-direction"></a>指定參數方向  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/18/2017
     ```  
   
     > [!NOTE]  
-    > 使用標準語法呼叫預存程序，是建議的做法。 如需關於標準語法的詳細資訊，請參閱 [呼叫預存程序](http://go.microsoft.com/fwlink/?linkid=119517)。  
+    > 使用標準語法呼叫預存程序，是建議的做法。 如需關於標準語法的詳細資訊，請參閱[呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
 2.  初始化或更新對應至 Transact-SQL 查詢中預留位置的 PHP 變數。 例如，下列程式碼會為 UpdateVacationHours 預存程序初始化兩個參數：  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/18/2017
   
     為了大致了解指定參數方向的語法，我們假設 *$var1*、 *$var2*和 *$var3* 分別對應至輸入、輸出和雙向參數。 您可以透過下列其中一種方式來指定參數方向：  
   
-    -   隱含地指定輸入參數、明確指定輸出參數，以及明確指定雙向參數：  
+    -   隱含地指定輸入的參數、 明確指定輸出參數，以及明確指定雙向參數：  
   
         ```  
         array(   
@@ -71,7 +73,7 @@ ms.lasthandoff: 11/18/2017
                );  
         ```  
   
-    -   明確指定輸入參數、明確指定輸出參數，以及明確指定雙向參數：  
+    -   明確指定輸入的參數、 明確指定輸出參數，以及明確指定雙向參數：  
   
         ```  
         array(   
@@ -88,6 +90,7 @@ ms.lasthandoff: 11/18/2017
     ```  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

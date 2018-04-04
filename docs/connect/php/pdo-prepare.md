@@ -1,27 +1,28 @@
 ---
-title: "Pdo:: prepare |Microsoft 文件"
-ms.custom: 
+title: PDO::prepare | Microsoft Docs
+ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-caps.latest.revision: "28"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34fa1a4f5bfa9e37f698e15e835285e836a8d959
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6fbac9059daa4af74aaeea4c6007d5ae1bf84a00
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +51,7 @@ $*statement*：一個包含 SQL 陳述式的字串。
   
 |索引鍵|Description|  
 |-------|---------------|  
-|PDO::ATTR_CURSOR|指定資料指標行為。 預設值為 PDO::CURSOR_FWDONLY。 PDO::CURSOR_SCROLL 是靜態資料指標。<br /><br />例如， `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`。<br /><br />如果您使用 PDO::CURSOR_SCROLL，則可以使用 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE，其說明如下。<br /><br />請參閱[資料指標類型 &#40;PDO_SQLSRV 驅動程式 &#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)如需有關結果集和 PDO_SQLSRV 驅動程式中的資料指標。|  
+|PDO::ATTR_CURSOR|指定資料指標行為。 預設值為 PDO::CURSOR_FWDONLY。 PDO::CURSOR_SCROLL 是靜態資料指標。<br /><br />例如， `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`。<br /><br />如果您使用 PDO::CURSOR_SCROLL，則可以使用 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE，其說明如下。<br /><br />請參閱[資料指標類型&#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)如需有關結果集和 PDO_SQLSRV 驅動程式中的資料指標。|  
 |PDO::ATTR_EMULATE_PREPARES|Pdo:: ATTR_EMULATE_PREPARES 時，已備妥的陳述式中的預留位置取代為繫結參數。 完整的 SQL 陳述式沒有替代然後會傳送到在執行資料庫。 <br /><br />Pdo:: ATTR_EMULATE_PREPARES 可以用來略過 SQL Server 中的某些限制。 例如，SQL Server 不支援具名或位置參數一些 TRANSACT-SQL 子句中。 此外，SQL Server 已繫結 2100年參數的限制。<br /><br />您可以將 pdo:: ATTR_EMULATE_PREPARES 屬性設為 true。 例如：<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />根據預設，此屬性設為 false。<br /><br />**注意** ：當您使用 `PDO::ATTR_EMULATE_PREPARES => true`時，參數化查詢的安全性將沒有效用。 您的應用程式應確定繫結至參數的資料不包含惡意的 TRANSACT-SQL 程式碼。<br /><br />**限制：**： 參數未繫結使用資料庫的參數化的查詢功能，因為不支援 input_output 和輸出參數。|  
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (預設值)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|若為 True，將會指定直接查詢執行。 False 表示備妥的陳述式執行。 如需 pdo:: SQLSRV_ATTR_DIRECT_QUERY 的詳細資訊，請參閱[的直接陳述式執行和已備妥 PDO_SQLSRV 驅動程式中的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|  
@@ -64,9 +65,9 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
   
 下表顯示可能的 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE 值。  
   
-|值|Description|  
+|Value|Description|  
 |---------|---------------|  
-|PDO::SQLSRV_CURSOR_BUFFERED|建立用戶端 (緩衝) 靜態資料指標。 如需用戶端資料指標的詳細資訊，請參閱[資料指標類型 &#40;PDO_SQLSRV 驅動程式 &#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_CURSOR_BUFFERED|建立用戶端 (緩衝) 靜態資料指標。 如需用戶端資料指標的詳細資訊，請參閱[資料指標類型&#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_CURSOR_DYNAMIC|建立伺服器端 (無緩衝) 動態資料指標，它可讓您以任何順序存取資料列，且會反映資料庫中的變更。|  
 |PDO::SQLSRV_CURSOR_KEYSET_DRIVEN|建立伺服器端索引鍵集資料指標。 如果資料列已從資料表中刪除，則索引鍵集資料指標不會更新資料列計數 (已刪除的資料列傳回時不會有值)。|  
 |PDO::SQLSRV_CURSOR_STATIC|建立伺服器端靜態資料指標，它可讓您以任何順序存取資料列，但將不會反映資料庫中的變更。<br /><br />PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL 意味著 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_STATIC。|  
@@ -101,7 +102,7 @@ $stmt = null
 ```  
   
 ## <a name="example"></a>範例  
-此範例說明如何使用具有用戶端資料指標的 PDO::prepare 方法。 顯示伺服器端資料指標的範例，請參閱[資料指標類型 &#40;PDO_SQLSRV 驅動程式 &#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).  
+此範例說明如何使用具有用戶端資料指標的 PDO::prepare 方法。 顯示伺服器端資料指標的範例，請參閱[資料指標類型&#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。  
   
 ```  
 <?php  
@@ -140,7 +141,8 @@ print_r($row);
 ?>  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
-[PDO 類別](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+## <a name="see-also"></a>另請參閱  
+[PDO 類別](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

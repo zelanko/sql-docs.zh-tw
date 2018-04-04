@@ -19,19 +19,19 @@ helpviewer_keywords:
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90490b4884521f509d6e008f2bbde49605afd7b4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3de6a7a73d78f908ddab579cb200da91dda521e1
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>伺服器事件的 WMI 提供者概念
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-伺服器事件的 WMI 提供者可讓您使用 Windows Management Instrumentation (WMI)，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中監視事件。  
+  伺服器事件的 WMI 提供者可讓您使用 Windows Management Instrumentation (WMI)，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中監視事件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [了解伺服器事件的 WMI 提供者](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  

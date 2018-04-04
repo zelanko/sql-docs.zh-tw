@@ -3,7 +3,7 @@
 # 概觀
 ## [版本資訊](sql-server-linux-release-notes.md)
 ## [新功能](sql-server-linux-whats-new.md)
-## [新增及更新的發行項](new-updated-linux.md)
+## [新文章及更新的文章](new-updated-linux.md)
 ## [版本和支援的功能](sql-server-linux-editions-and-components-2017.md)
 ## [常見問題集](sql-server-linux-faq.md)
 
@@ -55,7 +55,6 @@
 ### [使用 PowerShell 來管理](sql-server-linux-manage-powershell.md)
 ### [使用記錄傳送](sql-server-linux-use-log-shipping.md)
 ### [使用 DB Mail 和電子郵件警示](sql-server-linux-db-mail-sql-agent.md)
-### [設定可用性的多個子集](sql-server-linux-configure-multiple-subnet.md)
 
 ## [移轉](sql-server-linux-migrate-overview.md)
 ### [從 Windows 匯出和匯入 BACPAC](sql-server-linux-migrate-ssms.md)
@@ -85,6 +84,7 @@
 ##### [在 Ubuntu 上設定](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [容錯移轉](sql-server-linux-availability-group-failover-ha.md)
 ##### [操作](sql-server-linux-availability-group-operate-ha.md)
+##### [設定可用性的多個子集](sql-server-linux-configure-multiple-subnet.md)
 #### [僅供讀取級別的建立作業]()
 ##### [設定 AG](sql-server-linux-availability-group-configure-rs.md)
 #### [設定跨平台 (Windows 與 Linux)](sql-server-linux-availability-group-cross-platform.md)
@@ -94,7 +94,7 @@
 ### [Active Directory 驗證](sql-server-linux-active-directory-auth-overview.md)
 ### [為連線加密](sql-server-linux-encrypted-connections.md)
 
-## [效能]
+## 效能
 ### [最佳做法](sql-server-linux-performance-best-practices.md)
 ### [開始使用效能功能](sql-server-linux-performance-get-started.md)
 
@@ -107,9 +107,9 @@
 # 資源
 ## [疑難排解](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server 文件](../sql-server/sql-server-technical-documentation.md)
-## 夥伴
+## 合作夥伴
 ### [監視](../sql-server/partner-monitor-sql-server.md)
-### [高可用性和災害復原](../sql-server/partner-hadr-sql-server.md)
+### [高可用性及災害復原](../sql-server/partner-hadr-sql-server.md)
 ### [管理](../sql-server/partner-management-sql-server.md)
 ### [開發](../sql-server/partner-dev-sql-server.md)
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)

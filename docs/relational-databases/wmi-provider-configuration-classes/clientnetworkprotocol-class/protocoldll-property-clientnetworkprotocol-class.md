@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e6b8b522bbd039ee5f23d01853e565d4b3e4aed
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d5118b726d722246bb4ee92c6c20182a49348f96
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得所指定的網路通訊協定所需的.dll 檔案名稱[Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)。  
+  取得所指定的網路通訊協定所需的.dll 檔案名稱[Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)。  
   
 ## <a name="syntax"></a>語法  
   

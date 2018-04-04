@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Operations Studio （預覽） 常見問題集 |Microsoft 文件"
 description: "常見問題集 (FAQ) 的 SQL Operations Studio （預覽）。"
 ms.custom: tools|sos
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

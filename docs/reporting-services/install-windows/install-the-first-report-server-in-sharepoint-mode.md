@@ -1,25 +1,25 @@
 ---
-title: "以 SharePoint 模式安裝第一部報表伺服器 | Microsoft Docs"
-ms.custom: 
+title: 以 SharePoint 模式安裝第一部報表伺服器 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b266fbdf4801a4b2433590cc3ee2403250702666
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 796eed171b40234af4ab00877a5e73121b49368e
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>以 SharePoint 模式安裝第一部報表伺服器
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/09/2018
   
  **建立 Reporting Services 服務應用程式**  
   
--   安裝並註冊 Reporting Services 服務之後，請建立一或多個 Reporting Services 服務應用程式。 「SharePoint 伺服器陣列服務帳戶」需要暫時成為本機 Administrators 群組的成員，才能建立 Reporting Services 服務應用程式。 如需 SharePoint 2013 帳戶權限的詳細資訊，請參閱 [SharePoint 2013 中的帳戶權限及安全性設定](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx) 或者對於 SharePoint 2016，請參閱 [SharePoint 2016 中的帳戶權限及安全性設定](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)。  
+-   安裝並註冊 Reporting Services 服務之後，請建立一或多個 Reporting Services 服務應用程式。 「SharePoint 伺服器陣列服務帳戶」需要暫時成為本機 Administrators 群組的成員，才能建立 Reporting Services 服務應用程式。 如需 SharePoint 2013 帳戶權限的詳細資訊，請參閱 [SharePoint 2013 中的帳戶權限及安全性設定](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx)，若為 SharePoint 2016，則請參閱 [SharePoint 2016 中的帳戶權限及安全性設定](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)。  
   
      安全性最佳作法是避免讓 SharePoint 伺服陣列管理員帳戶同時成為本機作業系統管理員帳戶。 如果您在安裝程序中，將伺服陣列管理員帳戶加入至本機 Administrators 群組，建議您在安裝完成之後，從本機 Administrators 群組中移除該帳戶。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/09/2018
  > 對於 SharePoint 2016，將安裝 Reporting Services 的 SharePoint 伺服器需要具有 [自訂] 伺服器角色。 Reporting Services 部署將在非 [自訂] 角色的 SharePoint 伺服器上成功，但在下一個 SharePoint 維護期間，MinRole 將停止 Reporting Services 服務，因為它偵測到 SharePoint-整合模式中的 Reporting Services 未指出支援任何其他 SharePoint 伺服器角色。 Reporting Services 服務應用程式僅支援 [自訂] 角色。
  
  > [!NOTE]
- > 如果您也打算在 SharePoint 2016 上安裝 Power Pivot 服務，請先安裝該服務，再安裝 Reporting Services。 無法在 [自訂] 角色的 SharePoint 伺服器上安裝 Power Pivot 服務。 這將避免必須多次切換角色。
+ > 如果您也打算在 SharePoint 2016 上安裝 Power Pivot 服務，請先安裝該服務，再安裝 Reporting Services。 只能在 SharePoint 伺服器上的**自訂角色**中安裝 Power Pivot 服務。
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>將自訂伺服器角色套用至 SharePoint 2016 伺服器
  

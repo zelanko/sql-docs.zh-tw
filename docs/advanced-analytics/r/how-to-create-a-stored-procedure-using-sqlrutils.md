@@ -1,39 +1,39 @@
 ---
-title: "如何使用 sqlrutils 來建立預存程序 | Microsoft Docs"
-ms.custom: 
+title: 如何使用 sqlrutils 來建立預存程序 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fe1e05ee854fb6a094a66d88981d74287aa96beb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>建立預存程序使用的 sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主題描述如何轉換 R 程式碼，以透過 T-SQL 預存程序形式加以執行的步驟。 為了獲得最佳的結果，您的程式碼可能需要稍加修改，以確保所有輸入皆可參數化。
+這篇文章描述轉換為 T-SQL 預存程序中執行 R 程式碼的步驟。 為了獲得最佳的結果，您的程式碼可能需要稍加修改，以確保所有輸入皆可參數化。
 
 ## <a name="bkmk_rewrite"></a>步驟 1： 請重寫 R 指令碼
 
 為獲得最佳結果，您應該重新撰寫您的 R 程式碼封裝作為單一函式。
 
-函數所使用的所有變數應該定義在函數中，或應定義為輸入參數。 請參閱本主題的 [範例程式碼](#samples) 。
+函數所使用的所有變數應該定義在函數中，或應定義為輸入參數。 請參閱[範例程式碼](#samples)本文中。
 
 此外，因為將會變成 R 函數的輸入的參數的輸入的參數的 SQL 預存程序，您必須確定您的輸入和輸出符合下列類型的需求：
 
@@ -69,8 +69,8 @@ R 程式碼已被清除，而且可以當做單一函式呼叫之後，您將使
 
 如果您的函式不接受輸入，針對每個輸入中，呼叫下列函數：
 
-- `setInputData`如果輸入是資料框架
-- `setInputParameter`對於所有其他輸入類型
+- `setInputData` 如果輸入是資料框架
+- `setInputParameter` 對於所有其他輸入類型
 
 當您進行每個呼叫的函式時，R 建立物件時，您稍後將會傳遞做為引數`StoredProcedure`，以建立完整的預存程序。
 
@@ -82,8 +82,8 @@ R 程式碼已被清除，而且可以當做單一函式呼叫之後，您將使
 
 當轉換清單，或從清單中，取得特定的項目選擇這些函式：
 
-- `setOutputData`如果要從清單中取得的變數資料框架
-- `setOutputParameter`所有其他成員的清單
+- `setOutputData` 如果要從清單中取得的變數資料框架
+- `setOutputParameter` 所有其他成員的清單
 
 當您進行每個呼叫的函式時，R 建立物件時，您稍後將會傳遞做為引數`StoredProcedure`，以建立完整的預存程序。
 

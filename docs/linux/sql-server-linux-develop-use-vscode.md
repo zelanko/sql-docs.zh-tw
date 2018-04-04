@@ -1,6 +1,6 @@
----
-title: "SQL Server 使用的 Visual Studio Code mssql 擴充功能 |Microsoft 文件"
-description: "本教學課程會示範如何使用 VS Code 的 mssql 擴充功能。 這個延伸可讓您編輯和執行 TRANSACT-SQL 指令碼與程式碼中。"
+﻿---
+title: SQL Server 使用的 Visual Studio Code mssql 擴充功能 |Microsoft 文件
+description: 本教學課程會示範如何使用 VS Code 的 mssql 擴充功能。 這個延伸可讓您編輯和執行 TRANSACT-SQL 指令碼與程式碼中。
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio Code 來建立和執行 SQL Server 的 TRANSACT-SQL 指令碼
 
@@ -97,7 +97,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
    | 設定 | Description |
    |-----|-----|
-   | **伺服器名稱** | SQL Server 執行個體名稱。 本教學課程中，使用**localhost**連接到本機電腦上的 SQL Server 執行個體。 如果連接到遠端的 SQL Server，請輸入目標 SQL Server 電腦或 IP 位址的名稱。 |
+   | **伺服器名稱** | SQL Server 執行個體名稱。 本教學課程中，使用**localhost**連接到本機電腦上的 SQL Server 執行個體。 如果連接到遠端的 SQL Server，請輸入目標 SQL Server 電腦或 IP 位址的名稱。 如果您需要指定您的 SQL Server 執行個體的連接埠，請使用逗號來分隔的名稱。 例如連接埠 1401年上執行的本機伺服器您會輸入**localhost，1401年**。 |
    | **儲存密碼嗎？** | 若要儲存密碼，請輸入**是**。 否則請輸入**否**，此後每次使用連線設定檔時，系統都會提示您輸入密碼。 |
    | **使用者名稱** | 輸入資料庫伺服器上具有存取權的使用者名稱。 此教學課程中，使用預設**SA** SQL Server 安裝期間建立的帳戶。 |
    | **密碼 (SQL 登入)** | 請輸入指定之使用者的密碼。 | 
@@ -262,7 +262,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 [**mssql** VS Code 擴充功能]:https://aka.ms/mssql-marketplace
 [下載並安裝 VS Code]:https://code.visualstudio.com/Download
-[.Net 核心指示]:https://www.microsoft.com/net/core
+[.Net Core 指示]:https://www.microsoft.com/net/core
 [管理連線設定檔]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [連線疑難排解建議]:./sql-server-linux-troubleshooting-guide.md#connection
 [自訂快速鍵]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts

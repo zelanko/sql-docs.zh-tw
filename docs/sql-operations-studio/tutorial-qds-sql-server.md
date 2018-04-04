@@ -1,24 +1,24 @@
----
+﻿---
 title: "教學課程： 啟用 5 名最慢的查詢範例 widget-SQL Operations Studio （預覽） |Microsoft 文件"
-description: "本教學課程會示範如何啟用資料庫儀表板上的五個最慢的查詢範例 widget。"
+description: 本教學課程會示範如何啟用資料庫儀表板上的五個最慢的查詢範例 widget。
 ms.custom: tools|sos
-ms.date: 11/16/2017
+ms.date: 03/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc30051dff2bef07ac3e7d06aa98d92d4e05e79e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 78c6ad929a3eea55669e9ebdcef149e605d594ef
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程： 將*5 名最慢的查詢*範例資料庫儀表板的小工具
 
@@ -30,31 +30,34 @@ ms.lasthandoff: 12/21/2017
 > * 檢視資料庫的最慢的查詢的詳細資料
 > * 檢視查詢執行緩慢的查詢計劃
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]包含數個深入了解 widget--現成。 本教學課程示範如何加入*查詢的資料-存放區-db-深入解析* widget 中，但步驟都基本上是相同的新增任何小工具。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 包含數個深入了解 widget--現成。 本教學課程示範如何加入*查詢的資料-存放區-db-深入解析* widget 中，但步驟都基本上是相同的新增任何小工具。
 
 ## <a name="prerequisites"></a> 必要條件
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列快速入門的其中一個：
 
-- [連接及查詢 SQL Server 使用[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [連接及查詢使用 Azure SQL Database[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [連接及查詢 SQL Server 使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [連接及查詢使用 Azure SQL Database [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 
 ## <a name="turn-on-query-store-for-your-database"></a>針對您的資料庫開啟查詢存放區
 
-在此範例中的 widget 需要*查詢存放區*来啟用，執行下列 TRANSACT-SQL (T-SQL) 陳述式是否符合您的資料庫：
+在此範例中的 widget 需要*查詢存放區*啟用。
+
+1. 以滑鼠右鍵按一下**TutorialDB**資料庫 (在**伺服器**[資訊看板]) 並選取**新查詢**。
+2. 在查詢編輯器中，貼上下列 TRANSACT-SQL (T-SQL) 陳述式，然後按一下**執行**:
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
    ```
 
-## <a name="add-an-insight-widget-to-your-database-dashboard"></a>將深入了解 widget 加入儀表板資料庫
+## <a name="add-the-slow-queries-widget-to-your-database-dashboard"></a>慢速查詢 widget 加入儀表板資料庫
 
-若要深入了解 widget 加入儀表板，請編輯*dashboard.database.widgets*中設定您*使用者設定*檔案。
+若要加入*緩慢的查詢 widget*儀表板，編輯*dashboard.database.widgets*中設定您*使用者設定*檔案。
 
 1. 開啟*使用者設定*按**Ctrl + Shift + P**開啟*命令選擇區*。
-2. 型別*設定*[搜尋] 方塊中，從可用的設定檔選取**喜好設定： 開啟使用者設定**。
+2. 型別*設定*搜尋方塊中選取**喜好設定： 開啟使用者設定**。
 
    ![開啟使用者設定命令](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -62,19 +65,11 @@ ms.lasthandoff: 12/21/2017
 
    ![搜尋設定](./media/tutorial-qds-sql-server/search-settings.png)
 
-3. 若要自訂**dashboard.database.widgets**設定，將鉛筆圖示左邊的滑鼠停留**dashboard.database.widgets**文字、 按一下**編輯** > **複製到設定**。
+3. 若要自訂**dashboard.database.widgets**設定您需要編輯**dashboard.database.widgets**中的項目**使用者設定**> 一節 (中的資料行右側）。 如果沒有任何**dashboard.database.widgets**中**使用者設定**區段中，將滑鼠停留在**dashboard.database.widgets**中 預設設定資料行，然後按一下文字會顯示在左邊的文字，然後按一下鉛筆圖示**複製到設定**。 如果快顯視窗中顯示**設定中取代**，但不要按 ！ 移至**使用者設定**右邊資料行並找出**dashboard.database.widgets**區段和前進至下一個步驟。
 
-4. 複製的設定之後**dashboard.database.widgets**，將游標置於行尾，左括號，按下之後**Enter**，並將類似下列的大括號 （右大括號會自動顯示）：
-
-   ```json
-   "dashboard.database.widgets": [
-   {}
-   ```
-5. 您在大括號內的資料指標，然後按**Ctrl + 空格鍵**選取**名稱**。 
-6. 完成設定小工具，讓它看起來如下：
+4. 在**dashboard.database.widgets**區段中，加入下列：
 
    ```json
-    "dashboard.database.widgets": [
         {
             "name": "slow queries widget",
             "gridItemConfig": {
@@ -84,13 +79,48 @@ ms.lasthandoff: 12/21/2017
             "widget": {
                 "query-data-store-db-insight": null
             }
-        }
-    ...
+        },
     ```
 
-5. 按**Ctrl + S**儲存已修改**使用者設定**。
+1. 如果這是加入新的 widget 中，第一次**dashboard.database.widgets**區段應該看起來像這樣：
 
-6. 開啟*資料庫儀表板*瀏覽至**TutorialDB**中*伺服器*[資訊看板] 中，按一下滑鼠右鍵，並選取**管理**。
+   ```json
+   "dashboard.database.widgets": [
+       {
+           "name": "slow queries widget",
+           "gridItemConfig": {
+               "sizex": 2,
+               "sizey": 1
+           },
+           "widget": {
+               "query-data-store-db-insight": null
+           }
+       },
+       {
+           "name": "Tasks",
+           "gridItemConfig": {
+               "sizex": 1,
+               "sizey": 1
+           },
+           "widget": {
+               "tasks-widget": {}
+           }
+       },
+       {
+           "gridItemConfig": {
+               "sizex": 1,
+               "sizey": 2
+           },
+           "widget": {
+               "explorer-widget": {}
+           }
+       }
+   ]
+   ```
+
+1. 按**Ctrl + S**儲存已修改**使用者設定**。
+
+6. 開啟*資料庫儀表板*瀏覽至**TutorialDB**中**伺服器**[資訊看板] 中，按一下滑鼠右鍵，並選取**管理**。
 
    ![開啟儀表板](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
@@ -106,7 +136,7 @@ ms.lasthandoff: 12/21/2017
 
    ![深入了解詳細資料 對話方塊](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. 以滑鼠右鍵按一下**query_sql_txt**中**項目詳細資料**按一下**複製儲存格**。
+3. 以滑鼠右鍵按一下右邊的儲存格**query_sql_txt**中**項目詳細資料**按一下**複製儲存格**。
 
 4. 關閉**Insights**窗格。
 
@@ -136,14 +166,14 @@ ms.lasthandoff: 12/21/2017
 
 4. 將複製的計劃貼到編輯器。
 
-5. 按**Ctrl + S**儲存檔案，並變更的檔案副檔名*.sqlplan*。 此教學課程中，將檔案命名*slowquery.sqlplan*。
+5. 按**Ctrl + S**儲存檔案，並變更的檔案副檔名*.sqlplan*。 *.sqlplan*未出現的檔案副檔名下拉式清單中，因此只要輸入中。 此教學課程中，將檔案命名*slowquery.sqlplan*。
 
 6. 在中開啟的查詢計劃[!INCLUDE[name-sos](../includes/name-sos-short.md)]的查詢計劃檢視器：
 
    ![Insights QDS 計劃](./media/tutorial-qds-sql-server/sqlplan.png)
 
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 在此教學課程中，您學會如何：
 > [!div class="checklist"]
 > * 在資料庫上啟用查詢存放區

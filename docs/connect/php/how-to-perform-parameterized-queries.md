@@ -1,30 +1,31 @@
 ---
-title: "如何： 執行參數化的查詢 |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
+title: 如何： 執行參數化的查詢 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 23660f3d7ddbaf45ac39674c4eba23092e3ae2d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：執行參數化查詢
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/18/2017
   
 2.  初始化或更新對應至 Transact-SQL 查詢中預留位置的 PHP 變數。  
   
-3.  使用步驟 2 中的 PHP 變數來建立或更新依序對應至 Transact-SQL 字串中參數預留位置的參數值陣列。  
+3.  使用步驟 2 中的 PHP 變數來建立或更新至 TRANSACT-SQL 字串中參數預留位置的對應參數值陣列。 陣列中的參數值必須是中的預留位置，代表它們的順序相同。
   
 4.  執行查詢：  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/18/2017
   
 此範例會接著查詢資料庫，確認已正確更新數量。 產品識別碼是 SELECT 查詢中的參數。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -121,7 +122,7 @@ sqlsrv_close( $conn);
 ## <a name="example"></a>範例  
 下列範例示範當您使用 **sqlsrv_prepare** 函數時如何隱含繫結變數。 此範例會將數個銷售訂單插入 *Sales.SalesOrderDetail* 資料表中。 *$Params*陣列都會繫結至陳述式 (*$stmt*) 時**sqlsrv_prepare**呼叫。 在每次執行可在資料表中插入新銷售訂單的查詢之前，都會以對應至銷售訂單詳細資料的新值來更新 *$params* 陣列。 後續的查詢執行會使用新的參數值。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -194,8 +195,11 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[轉換資料類型](../../connect/php/converting-data-types.md)  
-[PHP SQL 驅動程式的安全性考量](../../connect/php/security-considerations-for-php-sql-driver.md)
-[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
+[轉換資料類型](../../connect/php/converting-data-types.md)
+
+[安全性考量的 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

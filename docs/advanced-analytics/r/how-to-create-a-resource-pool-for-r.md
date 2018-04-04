@@ -1,31 +1,31 @@
 ---
-title: "建立機器學習的資源集區 |Microsoft 文件"
-ms.custom: 
+title: 建立機器學習的資源集區 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/13/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 449b9b46b3f371ef7eca89a488201cdad05c232d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>建立機器學習的資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主題描述如何建立專為管理 SQL Server 中的機器學習工作負載的資源集區。 它會假設您有已安裝並啟用機器學習功能，而且想要重新設定以支援多個更細緻的管理，例如 R 或 Python 的外部處理序所使用的資源執行個體。
+本文說明如何建立專為管理 SQL Server 中的機器學習工作負載的資源集區。 它會假設您有已安裝並啟用機器學習功能，而且想要重新設定以支援多個更細緻的管理，例如 R 或 Python 的外部處理序所使用的資源執行個體。
 
 程序包含多個步驟：
 
@@ -175,7 +175,7 @@ ms.lasthandoff: 02/11/2018
     |2|預設|中|25|0|0|0|0|2|2|
     |256|ds_wg|中|25|0|0|0|0|2|256|
   
-2.  使用新的目錄檢視， [sys.resource_governor_external_resource_pools &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)，來檢視所有的外部資源集區。
+2.  使用新的目錄檢視， [sys.resource_governor_external_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)，來檢視所有的外部資源集區。
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -203,7 +203,7 @@ ms.lasthandoff: 02/11/2018
 如需有關管理伺服器資源的詳細資訊，請參閱：
 
 +  [資源管理員](../../relational-databases/resource-governor/resource-governor.md) 
-+ [資源管理員相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [資源管理員相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 如需機器學習資源管理的概觀，請參閱：
 

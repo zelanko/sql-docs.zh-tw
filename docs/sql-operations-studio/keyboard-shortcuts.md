@@ -1,4 +1,4 @@
----
+﻿---
 title: "建立及自訂鍵盤快速鍵，在 SQL Operations Studio （預覽） |Microsoft 文件"
 description: "了解如何建立及自訂 SQL Operations Studio （預覽） 中的鍵盤快速鍵。"
 ms.custom: tools|sos
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

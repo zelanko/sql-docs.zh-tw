@@ -1,42 +1,43 @@
 ---
-title: "如何： 將資料傳送資料流的形式 |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
+title: 如何： 將資料傳送資料流的形式 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - streaming data
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
-caps.latest.revision: "30"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe89454453e105ca264f5e04aacb8581dfb81cac
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b1821f922e9c45340365abf680f5f46a61d6eb1e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-send-data-as-a-stream"></a>如何：以資料流的形式傳送資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會利用 PHP 資料流將大型物件傳送至伺服器。 本主題中的範例會示範如何以資料流的形式傳送資料。 第一個範例會使用 SQLSRV 驅動程式示範預設行為，也就是在查詢執行時傳送所有的資料流資料。 第二個範例會使用 SQLSRV 驅動程式示範如何將最多 8K 的資料流資料同時傳送至伺服器。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會利用 PHP 資料流將大型物件傳送至伺服器。 本主題中的範例會示範如何以資料流的形式傳送資料。 第一個範例會使用 SQLSRV 驅動程式示範預設行為，也就是在查詢執行時傳送所有的資料流資料。 第二個範例會使用 SQLSRV 驅動程式示範如何將傳送最多八個位元組 (8 kB) 的資料流資料至伺服器，一次。  
   
 第三個範例說明如何使用 PDO_SQLSRV 驅動程式將資料流資料傳送至伺服器。  
   
-## <a name="example"></a>範例  
+## <a name="example-sending-stream-data-at-execution"></a>範例： 在執行傳送資料流資料
 下列範例會在 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中插入資料列。 客戶意見 (*$comments*) 會透過 PHP 資料流的形式開啟[fopen](http://php.net/manual/en/function.fopen.php)函式，並接著串流處理至伺服器在執行查詢時。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 所有輸出都會寫入至主控台。  
+此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -89,10 +90,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>範例  
-下一個範例與上述範例相同，但關閉了在執行時傳送所有資料流資料的預設行為。 此範例會使用 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) 將資料流資料傳送至伺服器。 最多 8 kb (8k) 的資料會傳送每次呼叫**sqlsrv_send_stream_data**。 指令碼會計算 **sqlsrv_send_stream_data** 所發出的呼叫數，並將此計數顯示到主控台。  
+## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>範例： 傳送資料流資料使用 sqlsrv_send_stream_data
+下一個範例是上述範例中，相同，但在執行傳送所有資料流資料的預設行為已關閉。 此範例會使用 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) 將資料流資料傳送至伺服器。 最多 8 kb (8) 的資料會傳送每次呼叫**sqlsrv_send_stream_data**。 指令碼會計算 **sqlsrv_send_stream_data** 所發出的呼叫數，並將此計數顯示到主控台。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 所有輸出都會寫入至主控台。  
+此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -156,7 +157,7 @@ sqlsrv_close( $conn);
   
 本主題中的範例傳送至伺服器的是字元資料，但實際上任何格式的資料都可用資料流的形式傳送。 例如，您也可以使用本主題中示範的技術，以資料流傳送二進位格式的映像。  
   
-## <a name="example"></a>範例  
+## <a name="example-sending-an-image-as-a-stream"></a>範例： 資料流的形式傳送映像 
   
 ```  
 <?php  
@@ -176,7 +177,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[更新資料 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[使用 SQLSRV 驅動程式以資料流形式擷取資料](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+[更新資料 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[使用 SQLSRV 驅動程式以資料流形式擷取資料](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

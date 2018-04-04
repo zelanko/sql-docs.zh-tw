@@ -1,27 +1,27 @@
 ---
-title: "將 JSON 文件匯入 SQL Server | Microsoft Docs"
-ms.custom: 
+title: 將 JSON 文件匯入 SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e88356f3f8de8ba463b945c5806ea3cbed14bf2c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e16ca364f3e9ed5c65b89a1abdd554991558862e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>將 JSON 文件匯入 SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -144,10 +144,10 @@ SELECT value
 OPENROWSET 會讀取檔案中的單一文字值，並將它傳回為 BulkColumn，然後將它傳遞至 OPENJSON 函式。 OPENJSON 會逐一查看 BulkColumn 陣列中的 JSON 物件陣列，並在每個資料列中傳回一本書，且格式化為 JSON：
 
 ```json
-{"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
-{"id":"978-1423103349″, "cat":["book","paperback"], "name":"The Sea of Monsters", … 
-{"id":"978-1857995879″, "cat":["book","paperback"], "name":"Sophie’s World : The Greek … 
-{"id":"978-1933988177″, "cat":["book","paperback"], "name":"Lucene in Action, Second … 
+{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", … }
+{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", … }
+{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie’s World : The Greek", … } 
+{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", … }
 ```
 
 ### <a name="example-3"></a>範例 3
@@ -183,7 +183,7 @@ SELECT book.*
 
 如需 SQL Server 和 Azure SQL Database 中內建 JSON 支援的觀看式簡介，請參閱下列影片：
 
--   [SQL Server 2016 與 JSON 支援](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+-   [SQL Server 2016 和 JSON 支援](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
 
 -   [使用 SQL Server 2016 和 Azure SQL Database 中的 JSON](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
 

@@ -15,10 +15,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>設定 Python 機器學習服務 （資料庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/11/2018
 
 若要執行自動的安裝，使用 SQL Server 安裝程式和 Python 的特定引數的命令列選項。 如需詳細資訊，請參閱[Python 機器學習服務與 SQL server 安裝的自動安裝](unattended-installs-of-sql-server-python-services.md)。
 
-##  <a name="bkmk_installPythonInDatabase"></a>步驟 1： 安裝的機器學習 SQL Server 上的服務 （資料庫）
+##  <a name="bkmk_installPythonInDatabase"></a> 步驟 1： 安裝的機器學習 SQL Server 上的服務 （資料庫）
 
 1. 執行 SQL Server 2017 的安裝精靈。
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/11/2018
   
          若要使用 SQL Server 中使用 Python，您必須安裝 database engine 執行的個體。 您可以使用預設或具名執行個體。
   
-    -   **機器學習服務 （資料庫）**
+    -   **Machine Learning Services (資料庫內)**
   
          此選項會安裝支援 Python 指令碼執行的資料庫服務。
 
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/11/2018
 
 6. 安裝完成時，重新啟動電腦。
 
-##  <a name="bkmk_enableFeature"></a>步驟 2： 啟用執行 Python 指令碼
+##  <a name="bkmk_enableFeature"></a> 步驟 2： 啟用執行 Python 指令碼
 
 1. 開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 
@@ -168,7 +168,7 @@ ms.lasthandoff: 02/11/2018
 > [!NOTE]
 > Python 指令碼中使用的標題或資料行不會傳回，所設計。 若要加入您的輸出資料行名稱，您必須指定傳回的資料集的結構描述。 只要使用與結果參數的預存程序，命名資料行和指定的 SQL 資料類型。
 > 
-> 比方說，您可以將下列行加入產生任意資料行名稱：`WITH RESULT SETS ((Col1 AS int))`
+> 比方說，您可以將下列行加入產生任意資料行名稱： `WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>步驟 4： 其他組態
 
@@ -180,7 +180,7 @@ ms.lasthandoff: 02/11/2018
 > 
 > 並非所有列出的變更是必要的並且不可能會需要。 需求取決於您的安全性結構描述，您安裝 SQL Server，然而您預期使用者連線到資料庫並執行外部指令碼的方式。
 
-###  <a name="bkmk_configureAccounts"></a>啟用 [啟動列] 帳戶群組的隱含的驗證
+###  <a name="bkmk_configureAccounts"></a> 啟用 [啟動列] 帳戶群組的隱含的驗證
 
 在安裝期間建立了一些新的 Windows 使用者帳戶，以在 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務的安全性權杖下執行工作。 當使用者從外部用戶端傳送的 Python 或 R 指令碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動可用工作者帳戶。 然後將它對應至在呼叫的使用者的身分識別，並執行指令碼代表使用者。
 

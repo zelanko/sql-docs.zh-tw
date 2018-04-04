@@ -1,16 +1,16 @@
 ---
 title: CREATE DATABASE (Azure SQL Database) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/13/2018
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVICE_OBJECTIVE
@@ -29,22 +29,24 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c61660015eb2f613148ad58b72386e42eb797db9
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: de82cfb595559b738ca8db7d72acd620101d3995
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   建立新資料庫。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 ## <a name="syntax"></a>語法  
   
 ``` 
@@ -134,6 +136,7 @@ CREATE DATABASE database_name
 |從 1024 GB 至最大 4096 GB (以每 256 GB 的大小遞增)* |不適用|不適用|不適用|不適用|√|√|  
   
  \* P11 和 P15 允許 MAXSIZE 最大至 4 TB，並以 1024 GB 作為預設大小。  P11 和 P15 最多可使用 4 TB 的隨附儲存體，且不另收費。 在進階層中，大於 1 TB 的 MAXSIZE 目前已提供下列區域使用：美國東部2、美國西部、美國維吉尼亞州政府、西歐、德國中部、東南亞、日本東部、澳洲東部、加拿大中部和加拿大東部。 如需了解目前的限制，請參閱[單一資料庫](https://docs.microsoft.com/azure/sql-database-single-database-resources)。  
+<!---Loc Comment: Link [Single databases] is not working---> 
   
  以下規則會套用到 MAXSIZE 和 EDITION 引數：  
   
@@ -159,7 +162,7 @@ CREATE DATABASE database_name
  *source_database_name*  
  要複製的資料庫名稱。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 使用 `CREATE DATABASE` 陳述式時，不支援下列引數和選項：  
+ 使用 `CREATE DATABASE` 陳述式時，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援下列引數和選項：  
   
 -   與檔案實際位置相關的參數，例如 \<filespec> 和 \<filegroup>  
   

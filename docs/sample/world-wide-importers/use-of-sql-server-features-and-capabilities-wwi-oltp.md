@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 9a76e8c2bb70be5accc28d65de7f86db86dacd29
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34535db5b43311e13d21fd663f5302327b24978e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>使用 SQL Server 功能和功能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters 使用 SQL Server 特性與 OLTP 資料庫中的功能。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WideWorldImporters 使用 SQL Server 特性與 OLTP 資料庫中的功能。
 
 WideWorldImporters 被為了展現許多重要功能的 SQL Server，包括最新 SQL Server 2016 中引進的功能。 以下是一份 SQL Server 功能和功能，以及在 WideWorldImporters 的使用方式的描述。
 
@@ -42,7 +44,7 @@ WideWorldImporters 被為了展現許多重要功能的 SQL Server，包括最�
 |動態資料遮罩|資料庫結構描述中的資料遮罩已套用至供應商，保留在資料表的銀行詳細資料`Purchasing.Suppliers`。 非系統管理人員不會存取此資訊。|
 |永遠加密|永遠加密示範隨附於可下載 samples.zip，也就是組件的[版本的範例](http://go.microsoft.com/fwlink/?LinkID=800630)... 示範建立加密金鑰，以加密敏感性資料，以及將資料插入資料表的小型範例應用程式的資料表。|
 |Stretch database|`Warehouse.ColdRoomTemperatures`資料表已實作為時態表，而且記憶體最佳化的範例資料庫的完整版本。 封存資料表是以磁碟為基礎，並可以延伸到 Azure。|
-|全文檢索索引|全文檢索索引會改善搜尋人員、 客戶及 StockItems。 只有當您安裝 SQL Server 執行個體上的全文檢索索引，會套用至查詢索引。 非保存計算資料行用來建立的全文檢索索引 StockItems 資料表中的資料。<br/><br/>`CONCAT`用於如串連欄位建立的全文檢索索引的 SearchData。<br/>若要啟用的範例中的全文檢索索引使用的資料庫中執行下列陳述式：<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>程序會建立預設全文檢索目錄如果其中一個不存在，則取代這些檢視的全文檢索版本的搜尋檢視）。<br/><br/>請注意，使用 SQL Server 中的全文檢索索引需要全文檢索安裝時選取選項。 Azure SQL Database 不需要和特定組態資訊才能啟用全文檢索索引。|
+|全文檢索索引|全文檢索索引會改善搜尋人員、 客戶及 StockItems。 只有當您安裝 SQL Server 執行個體上的全文檢索索引，會套用至查詢索引。 非保存計算資料行用來建立的全文檢索索引 StockItems 資料表中的資料。<br/><br/>`CONCAT` 用於如串連欄位建立的全文檢索索引的 SearchData。<br/>若要啟用的範例中的全文檢索索引使用的資料庫中執行下列陳述式：<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>程序會建立預設全文檢索目錄如果其中一個不存在，則取代這些檢視的全文檢索版本的搜尋檢視）。<br/><br/>請注意，使用 SQL Server 中的全文檢索索引需要全文檢索安裝時選取選項。 Azure SQL Database 不需要和特定組態資訊才能啟用全文檢索索引。|
 |保存計算資料行編製索引|編製索引 SupplierTransactions 和 CustomerTransactions 中使用的保存計算資料行。|
 |檢查條件約束|相對複雜的檢查條件約束處於`Sales.SpecialDeals`。 這可確保一且只有其中一個 DiscountAmount，DiscountPercentage，並且以設定單價。|
 |Unique 條件約束|對 Warehouse.StockItemStockGroups' 多對多建構 （和唯一條件約束） 所設定的。|

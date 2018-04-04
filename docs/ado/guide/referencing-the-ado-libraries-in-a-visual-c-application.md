@@ -1,15 +1,15 @@
 ---
-title: "參照 ADO 程式庫中的 Visual c + + 應用程式 |Microsoft 文件"
-ms.custom: 
+title: 參照 ADO 程式庫中的 Visual c + + 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
-ms.tgt_pltfrm: 
+ms.technology: drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - referencing libraries in a Visual C++ application[ADO]
 - ADO, libraries
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a554ff290c1ea3fa8ef5382e45fafbae5b1110d8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d5cbc06a7ddf9452a96d2a3edff30b941a8d5f2b
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>參照 ADO 程式庫中的 Visual c + + 應用程式
 若要使用 ADO 的最新版本的 Visual c + + 應用程式中，使用下列`#import`指示詞：  

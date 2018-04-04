@@ -1,34 +1,34 @@
 ---
-title: "DBCC SHRINKLOG (Azure SQL 資料倉儲) | Microsoft Docs"
-ms.custom: 
-ms.date: 07/17/2017
+title: DBCC SHRINKLOG (平行資料倉儲) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 
+caps.latest.revision: ''
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d06917a784e507ab5568e28b4d34273f5fe71063
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fc02884ed88c056eb2a7fedb57f7de701377ee37
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL 資料倉儲)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (平行資料倉儲)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-跨設備減少目前的 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫的交易記錄大小。 資料重組是為了壓縮交易記錄。 資料庫交易記錄可能會隨著時間變得分散和沒有效率。 使用 DBCC SHRINKLOG 可減少資料分散程度，並縮減記錄大小。
+「跨設備」降低目前 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 資料庫的交易記錄大小。 資料重組是為了壓縮交易記錄。 資料庫交易記錄可能會隨著時間變得分散和沒有效率。 使用 DBCC SHRINKLOG 可減少資料分散程度，並縮減記錄大小。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,7 +56,7 @@ DBCC SHRINKLOG 結果中不會顯示資訊訊息。
 ## <a name="general-remarks"></a>一般備註  
 DBCC SHRINKLOG 不會變更儲存在資料庫中繼資料的記錄大小。 中繼資料會繼續包含在 CREATE DATABASE 或 ALTER DATABASE 陳述式中指定的 LOG_SIZE 參數。
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples"></a>範例 
 ### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. 將交易記錄縮減至 CREATE DATABASE 指定的原始大小。  
 假設位址資料庫建立時設定的交易記錄大小是 100 MB。 也就是說，位址資料庫的 CREATE DATABASE 陳述式中含有 LOG_SIZE = 100 MB。 現在，假設記錄已成長至 150 MB，而您想將記錄壓縮回 100 MB。
   

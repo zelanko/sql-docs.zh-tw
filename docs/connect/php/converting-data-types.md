@@ -1,33 +1,33 @@
 ---
-title: "轉換資料類型 |Microsoft 文件"
-ms.custom: 
-ms.date: 01/16/2018
+title: 轉換資料類型 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 177f4cc6c28a231fe37df65a46976c4c8836e912
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5caf6c4e807b734bae6705a1777f6889f571be9d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="converting-data-types"></a>轉換資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可讓您指定當您將資料傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或從中擷取資料時的資料類型。 指定資料類型是選擇性的。 如果未指定資料類型，將會使用預設類型。 本節中的主題將說明如何指定資料類型，並提供預設資料類型的詳細資料。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可讓您指定當您將資料傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或從中擷取資料時的資料類型。 指定資料類型是選擇性的。 如果未指定資料類型，則會使用預設類型。 本節中的主題將說明如何指定資料類型，並提供預設資料類型的詳細資料。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -41,8 +41,11 @@ ms.lasthandoff: 03/15/2018
 |[如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|示範如何使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的支援在 Linux 或 macOS ASCII 資料。<br /><br />在非 Windows 環境中的 ASCII 字元的支援已加入的 5.2 版[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。|
   
 ## <a name="see-also"></a>另請參閱  
-[PHP SQL 驅動程式程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
-[SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
-[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
 [範例應用程式 &#40;SQLSRV 驅動程式&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   

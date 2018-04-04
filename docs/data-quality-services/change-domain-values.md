@@ -1,28 +1,30 @@
 ---
-title: "變更定義域值 | Microsoft Docs"
-ms.custom: 
+title: 變更定義域值 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.dqs.dm.values.f1
+f1_keywords:
+- sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43d5425678270fb224b0a55e70c5f7928545ffaa
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: da3b93c059c363d1690a614c7c61e1947559580e
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="change-domain-values"></a>變更定義域值
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中變更及增加知識庫內的中繼資料。 在您藉由知識探索產生知識、將知識匯入知識庫或定義域，或是讓知識庫根據另一個知識庫之後，您可以互動方式變更資料值。 知識庫產生不但會利用電腦輔助程序，也會提供您使用自己知識的方式，依照以下方式驗證資料值並加以變更：  

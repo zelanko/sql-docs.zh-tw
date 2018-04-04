@@ -1,16 +1,16 @@
 ---
-title: "升級 Integration Services | Microsoft Docs"
-ms.custom: 
+title: 升級 Integration Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
 ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
-ms.translationtype: MT
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
   如果您的電腦上目前安裝有 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更新版本，您可以升級到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/13/2018
   
     -   將記錄資料從 msdb.sysdtslog90 系統資料表移到 msdb.sysssislog 系統資料表。  
   
--   將資料移到新的 msdb.sysssis\* 資料表之後，移除 msdb.sysdts*90 系統資料表以及用於存取這些資料表的預存程序。 不過，升級會將 sysdtslog90 資料表取代成也名為 sysdtslog90 的檢視表。 這個新的 sysdtslog90 檢視表會公開新的 msdb.sysssislog 系統資料表。 這樣可確保以記錄資料表為基礎的報表會繼續執行而不中斷。  
+-   將資料移到新的 msdb.sysssis\* 資料表之後，移除 msdb.sysdts\*90 系統資料表以及用於存取這些資料表的預存程序。 不過，升級會將 sysdtslog90 資料表取代成也名為 sysdtslog90 的檢視表。 這個新的 sysdtslog90 檢視表會公開新的 msdb.sysssislog 系統資料表。 這樣可確保以記錄資料表為基礎的報表會繼續執行而不中斷。  
   
 -   為了控制封裝的存取權，建立三個新的固定資料庫層級角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator。 雖然不會移除 db_dtsadmin、db_dtsltduser 和 db_dtsoperator 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色，但是它們會成為對應新角色的成員。  
   

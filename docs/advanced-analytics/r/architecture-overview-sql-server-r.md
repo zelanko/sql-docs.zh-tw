@@ -1,33 +1,33 @@
 ---
-title: "架構概觀 (SQL Server R 服務) | Microsoft Docs"
-ms.custom: 
+title: 架構概觀 (SQL Server R 服務) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7ef5e5efd0e1efb1817e4b9d1577d3b0a8a82051
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server 中 R 的架構概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本章節提供 SQL Server 2016 R Services 和 SQL Server 2017 機器學習服務架構的概觀。
 
-擴充性架構的架構是相同或非常類似的 SQL Server 2016 和 SQL Server 2017 版本，也類似 R 和 Python。 不過，為了簡化的討論，本主題將討論只 R 元件，包括支援外部指令碼執行、 安全性、 R 程式庫和互通性開放原始碼 r 與 SQL Server database engine 中所加入的新元件
+擴充性架構的架構是相同或非常類似的 SQL Server 2016 和 SQL Server 2017 版本，也類似 R 和 Python。 不過，為了簡化的討論，本文將討論只 R 元件，包括支援外部指令碼執行、 安全性、 R 程式庫和互通性開放原始碼 r 與 SQL Server database engine 中所加入的新元件
 
 每個區段的連結中提供其他詳細資料。
 
