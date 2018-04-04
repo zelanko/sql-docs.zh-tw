@@ -1,28 +1,26 @@
 ---
-title: "如何建立 MDX 查詢使用 olapR |Microsoft 文件"
-ms.custom: 
+title: 如何建立 MDX 查詢使用 olapR |Microsoft 文件
+ms.custom: ''
 ms.date: 11/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9d917316a9d25b0634605e0f55eae3eda93f8669
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>如何建立使用 olapR MDX 查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 02/11/2018
 + 建立新的 OLAP 物件
 + 資料分割，包括量值或總和的回寫
 
-## <a name="buildMDX"></a>從 R 建立 MDX 查詢
+## <a name="buildMDX"></a> 從 R 建立 MDX 查詢
 
 1. 定義可指定 OLAP 資料來源 (SSAS 執行個體) 和 MSOLAP 提供者的連接字串。
 
@@ -51,8 +49,8 @@ ms.lasthandoff: 02/11/2018
 4. 使用下列 helper 函式，以提供要包含在 MDX 查詢中之維度和量值的更多詳細資訊︰
 
      + `cube()` 指定 SSAS 資料庫的名稱。 如果連接到具名執行個體，請提供電腦名稱和執行個體名稱。 
-     + `columns()`提供的使用中的量值名稱**ON 資料行**引數。
-     + `rows()`提供的使用中的量值名稱**ON 列**引數。
+     + `columns()` 提供的使用中的量值名稱**ON 資料行**引數。
+     + `rows()` 提供的使用中的量值名稱**ON 列**引數。
      + `slicers()` 指定要用作交叉分析篩選器的欄位或成員。 交叉分析篩選器就像套用至所有 MDX 查詢資料的篩選。
      
      + `axis()` 指定要在查詢中使用之其他座標軸的名稱。 
@@ -66,7 +64,7 @@ ms.lasthandoff: 02/11/2018
   + `executeMD` 傳回多維度陣列
   + `execute2D` 傳回二維 (表格式) 資料框架
 
-## <a name="executeMDX"></a>從 R 執行有效的 MDX 查詢
+## <a name="executeMDX"></a> 從 R 執行有效的 MDX 查詢
 
 1. 定義可指定 OLAP 資料來源 (SSAS 執行個體) 和 MSOLAP 提供者的連接字串。
 
@@ -191,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>傳回所指定維度和階層的所有成員
 
-定義來源並建立控制代碼之後，請指定要傳回的 Cube、維度和階層。 在傳回的結果中，前面會加上的項目 **->** 代表上一個成員的子系。
+定義來源並建立控制代碼之後，請指定要傳回的 Cube、維度和階層。 在傳回的結果中，前面會加上的項目**->**代表上一個成員的子系。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
