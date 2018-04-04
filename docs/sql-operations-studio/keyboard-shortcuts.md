@@ -24,14 +24,14 @@ ms.lasthandoff: 12/21/2017
 
 這篇文章提供快速檢視、 編輯和建立鍵盤快速鍵中的步驟[!INCLUDE[name-sos](../includes/name-sos-short.md)]。
 
-因為[!INCLUDE[name-sos](../includes/name-sos-short.md)]Visual Studio Code，詳細資訊的進階自訂內容，使用不同的鍵盤配置等會繼承其按鍵繫結功能，將會在[Visual Studio Code的按鍵繫結](https://code.visualstudio.com/docs/getstarted/keybindings)發行項。 某些按鍵功能可能無法使用 (例如，主地圖延伸模組中不支援[!INCLUDE[name-sos](../includes/name-sos-short.md)])。
+因為 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的按鍵繫結功能繼承自 Visual Studio Code，有關使用不同鍵盤配置等進階自訂內容的詳細資訊，請見 [Visual Studio Code 的按鍵繫結](https://code.visualstudio.com/docs/getstarted/keybindings) 文章。某些按鍵功能可能無法使用 (例如，[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中不支援按鍵對應延伸模組)。
 
 
 ## <a name="open-the-keyboard-shortcuts-editor"></a>開啟 鍵盤快速鍵編輯器
 
 若要檢視所有目前定義的鍵盤快速鍵：
 
-從 **檔案** 功能表開啟 **鍵盤快速鍵** 編輯器：**檔案** > **喜好設定** >  **鍵盤快速鍵** ( Mac: **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **喜好設定** > **鍵盤快速鍵**)。
+從 **檔案** 功能表開啟 **鍵盤快速鍵** 編輯器：**檔案** > **喜好設定** > **鍵盤快速鍵** (Mac：**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **喜好設定** > **鍵盤快速鍵**)。
 
 除了顯示目前的按鍵組合**鍵盤快速鍵**編輯器列出可用命令沒有定義的鍵盤快速鍵。 **鍵盤快速鍵**編輯器可讓您輕鬆地變更、 移除、 重設，並定義新的按鍵組合。  
 
@@ -42,9 +42,9 @@ ms.lasthandoff: 12/21/2017
 
 1. 找出您想要使用 [搜尋] 方塊，或捲動清單來變更的鍵盤快速鍵。
    > [!TIP]
-   > 您可以依按鍵、 命令、 來源...等條件進行搜尋，得到所有相關的鍵盤快速鍵搜尋結果。
+   > 您可以依按鍵、 命令、 來源...等條件進行搜尋，以得到所有相關的鍵盤快速鍵搜尋結果。
 
-1. 以滑鼠右鍵按一下所需的項目，然後選取 **變更按鍵**
+1. 以滑鼠右鍵按一下所需的項目，然後選取**變更按鍵**
 
    ![編輯鍵盤快速鍵](media/keyboard-shortcuts/change-keybinding.png)
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 
 若要建立新的鍵盤快速鍵：
 
-1. 以滑鼠右鍵選取沒有按鍵綁定的命令，並選取 **新增 Keybinding**。
+1. 以滑鼠右鍵選取沒有按鍵綁定的命令，並選取**新增按鍵繫結**。
 
    ![建立鍵盤快速鍵](media/keyboard-shortcuts/add-keybinding.png)
 
