@@ -1,28 +1,30 @@
 ---
-title: "建立連結的定義域 | Microsoft Docs"
-ms.custom: 
+title: 建立連結的定義域 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.dqs.kb.linkeddomain.f1
+f1_keywords:
+- sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: f1df4d63e629778e5665dd87ea69ffec0dbcbbaa
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立連結的定義域。 連結的定義域是從另一個定義域 (之前已經存在的定義域) 建立而來，而且會從它連結的定義域繼承所有值、規則和屬性，除了名稱和描述以外。 您可以將一組連結的定義域當做一個定義域來管理。 藉由連結一個定義域與另一個定義域，您所建立的定義域就會從另一個定義域繼承其內容。  

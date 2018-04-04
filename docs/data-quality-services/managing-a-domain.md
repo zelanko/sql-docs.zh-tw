@@ -1,27 +1,28 @@
 ---
-title: "管理定義域 | Microsoft Docs"
-ms.custom: 
+title: 管理定義域 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ca23eae8c1593e9bc5d8a9a58402b6a46d7603d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 7e988d58dc4f160ae85273762173d129c2cc9c2c
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="managing-a-domain"></a>管理定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用定義域。 定義域包含要分析之資料來源中特定欄位內之資料的語意表示法。 定義域是您為資料來源建立之知識庫的一部分，而且您藉由分析取樣資料來源或匯入資料所建立的知識會加入至知識庫中所定義的定義域。 之後會使用這些定義域中的知識，於資料品質專案中執行清理和比對。 定義域位於 Data Quality Services 中所有活動的核心。  

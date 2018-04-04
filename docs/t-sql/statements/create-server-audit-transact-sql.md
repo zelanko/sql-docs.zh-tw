@@ -29,17 +29,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6e637bec3ddcfd7b24bb4f4adb87011bbbe2471
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: cf515de224d5e44d8b2015b33a45485f9d7cd63f
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 來建立伺服器稽核物件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -107,7 +109,7 @@ CREATE SERVER AUDIT audit_name
  指出如果目標無法寫入稽核記錄，則寫入目標的執行個體應該失敗、繼續還是停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 預設值為 CONTINUE。  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業繼續進行。 系統不會保留稽核記錄。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 選取 [繼續] 選項會允許可能違反安全性原則的未稽核活動。 當繼續進行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 作業比維持完整稽核更重要時，請使用此選項。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業繼續進行。 系統不會保留稽核記錄。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 選取繼續選項會允許可能違反安全性原則的未稽核活動。 當繼續進行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 作業比維持完整稽核更重要時，請使用此選項。  
   
 SHUTDOWN  
 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 因為任何原因無法將資料寫入稽核目標，則會強制關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 執行 `CREATE SERVER AUDIT` 陳述式的登入在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內必須擁有 `SHUTDOWN` 權限。 即使稍後已從執行中的登入撤銷 `SHUTDOWN` 權限，關閉的行為仍會持續。 如果使用者沒有此權限，則陳述式將會失敗，且將不會建立稽核。 當稽核失敗可能危害系統的安全性或完整性時，請使用此選項。 如需詳細資訊，請參閱 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)。  

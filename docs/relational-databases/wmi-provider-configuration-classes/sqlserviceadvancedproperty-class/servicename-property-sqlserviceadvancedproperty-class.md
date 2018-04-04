@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ServiceName property
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3af55be1227be99c7c36026e0013569c5f40813a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 78ee870cc5143ba4c1ab8cb2988b553006247bfd
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 屬性 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得與進階屬性相關之受管理服務的名稱。  
+  取得與進階屬性相關之受管理服務的名稱。  
   
 ## <a name="syntax"></a>語法  
   

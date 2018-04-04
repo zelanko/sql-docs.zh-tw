@@ -1,27 +1,28 @@
 ---
-title: "Data Quality Services 功能及工作 | Microsoft Docs"
-ms.custom: 
+title: Data Quality Services 功能及工作 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a25ca166e540ebc6708f369d2434776242ae6788
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: cec57e97ff2a78fe977c3385b748eb4efdffef54
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能及工作
   尋找任何人 (資料監管、Data Quality Services 管理員或 SQL Server 管理員) 準備及執行資料品質專案所需的資訊。  

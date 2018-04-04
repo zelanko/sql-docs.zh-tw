@@ -1,16 +1,16 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_LOGIN_TSQL
@@ -29,22 +29,24 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 87b7859980292cd8c6bf50f72c59b3cd3125800e
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   建立 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 登入。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -106,7 +108,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
  指定建立的登入名稱。 有四種類型的登入：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本主題稍後的範例 D。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入屬於 **sysname** 類型、必須符合[識別碼](http://msdn.microsoft.com/library/ms175874.aspx)的規則，而且不得包含 '**\\**'。 Windows 登入可以包含 '**\\**'。 根據 Active Directory 使用者的登入，僅限小於 21 個字元的名稱。  
   
  PASSWORD **='***password***'**  
- 只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定要建立的登入密碼。 您應該使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用 salted 密碼的 SHA-512 加以計算。  
+ 只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定要建立的登入密碼。 您應該使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。  
   
  密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。  密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。  
   
@@ -244,15 +246,17 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO  
 ```  
   
-### <a name="b-creating-a-login-with-a-password"></a>B. 建立具有密碼的登入  
+### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>B. 建立具有密碼的登入，且密碼必須變更
  下列範例會針對特定的使用者建立登入，並指派密碼。 `MUST_CHANGE` 選項需要使用者在第一次連接到伺服器時變更這個密碼。  
   
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 ```  
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' MUST_CHANGE;  
+CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' 
+    MUST_CHANGE,  CHECK_EXPIRATION = ON;
 GO  
 ```  
+[!NOTE] 當 CHECK_EXPIRATION 為 OFF 時，不可使用 MUST_CHANGE 選項。
   
 ### <a name="c-creating-a-login-mapped-to-a-credential"></a>C. 建立對應到認證的登入  
  下列範例會針對特定使用者建立登入 (透過使用者)。 此登入會對應到認證。  

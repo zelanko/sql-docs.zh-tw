@@ -1,27 +1,28 @@
 ---
-title: "使用參考資料 (外部) 知識清理資料 | Microsoft Docs"
-ms.custom: 
+title: 使用參考資料 (外部) 知識清理資料 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47e80eabb6c81b79a13ebfe6fa6e35288f1c160a
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 684a191f93f8b83fe730dbfbd30f9874a1c0cfef
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用參考資料 (外部) 知識清理資料
   本主題描述如何使用參考資料提供者的知識來清理資料。 對於使用參考資料提供者的知識來清理資料而言，雖然執行清理活動的所有步驟仍與[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中所說明的步驟相同，不過本主題將針對在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用 Reference Data Service 進行資料清理提供特定資訊。  

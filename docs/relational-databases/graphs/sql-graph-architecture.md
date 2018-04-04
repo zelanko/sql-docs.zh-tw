@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 架構  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ ms.lasthandoff: 02/12/2018
 |工作   |相關主題  |注意
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|節點和邊緣會儲存為資料表在內部，因此節點與邊緣資料表才支援大部分的 SQL Server 或 Azure SQL Database 的資料表上支援的作業  |
-|MATCH  | [比對 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/match-sql-graph.md)|相符項目內建引進以支援模式比對和周遊圖表。  |
+|MATCH  | [比對&#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)|相符項目內建引進以支援模式比對和周遊圖表。  |
 
 
 

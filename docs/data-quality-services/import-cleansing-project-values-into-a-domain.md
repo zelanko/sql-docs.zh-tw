@@ -1,28 +1,30 @@
 ---
-title: "將清理專案值匯入定義域 | Microsoft Docs"
-ms.custom: 
+title: 將清理專案值匯入定義域 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.dqs.kb.importprojectvalues.f1
+f1_keywords:
+- sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3197335d84fcfd79f3188580d908d2d435577ac
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c50acf0eb9546a56063ed0e6732f651432d80bbd
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>將清理專案值匯入定義域中
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以將清理程序期間，於資料品質清理專案或 Integration Services 封裝 (包含 DQS 清理元件) 中所收集的資料品質知識，匯入定義域中。 如此可確保可靠的知識不會遺失，而且會持續改良知識庫。  

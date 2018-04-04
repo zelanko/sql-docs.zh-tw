@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5ae4298fabb7147846b5ee87f391c1a0707cde3a
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: a54400e73c7789dcea15cbd4929c2a7878297df5
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>開始使用 SQL Server 中的機器學習
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
   從 SQL Server 2017 開始，您現在可以使用 Python 程式碼中 SQL Server。 若要反映更廣泛的支援方案中多個語言 （敬請期待 ！），並在名稱已變更為[!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]。 現在您可以使用 SQL 工具來執行 R 或 Python 程式碼來自動化機器學習工作。 或者，使用 SQL Server 電腦，做為_計算內容_從遠端的開發環境中啟動的工作。
 
     + [SQL Server 中的 python 架構概觀](../advanced-analytics/python/architecture-overview-sql-server-python.md)
-    + [設定 SQL Server R 服務或機器學習服務](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
+    + [安裝 SQL Server 2017 機器學習服務](install/sql-machine-learning-services-windows-install.md)
 
 + SQL Server 2016
 
@@ -47,7 +47,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
   這項整合提供您的資料安全性，並可讓您管理及平衡 r 所使用的資源
 
     + [取得已啟動與 SQL Server R Services](r/getting-started-with-sql-server-r-services.md)
-    + [設定 SQL Server R 服務或機器學習服務](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
+    + [安裝 SQL Server 2016 R Services](install/sql-r-services-windows-install.md)
 
 ## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>Microsoft 的機器學習伺服器 (Microsoft R Server)
 
@@ -66,7 +66,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 > [!IMPORTANT]
 > 如果您想要執行 Python 使用 R 伺服器，請確定安裝最新版本中， [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]，這是只能透過[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]安裝程式：
 > 
->    + [設定 Microsoft R Server 或 Server 機器學習](../advanced-analytics/r/create-a-standalone-r-server.md)
+>    + [安裝 SQL Server 2017 機器學習伺服器 （獨立）](install/sql-machine-learning-standalone-windows-install.md)或[安裝 SQL Server 2016 R Server （獨立）](install/sql-r-standalone-windows-install.md)。
 
 ## <a name="related-products"></a>相關的產品
 

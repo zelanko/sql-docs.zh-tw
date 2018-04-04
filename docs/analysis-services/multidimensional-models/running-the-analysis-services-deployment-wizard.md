@@ -1,31 +1,34 @@
 ---
-title: "執行 Analysis Services 部署精靈 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
+title: 執行 Analysis Services 部署精靈 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Analysis Services Deployment Wizard, running
+helpviewer_keywords:
+- Analysis Services Deployment Wizard, running
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d6a1102ed83493e25e3e73a0b77d035c2e299d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 61a2c558fca710d9fa6df37b998cddca6125c3c6
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>執行 Analysis Services 部署精靈
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈 」 來部署[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案，您可以下列方式執行此精靈：  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈可以執行下列的方式：  
   
 -   **以互動方式**執行時，以互動方式[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈會產生部署指令碼，依據輸入檔中，依使用者輸入以互動方式修改。 精靈只會將使用者修改套用至部署指令碼。 精靈不會修改輸入檔。 如需關於輸入檔的詳細資訊，請參閱 [了解用來建立部署指令碼的輸入檔](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)。  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-interactively"></a>以互動方式執行 Analysis Services 部署精靈  
   
--   按一下 **[開始]**功能表，依序指向 **[所有程式]**、 **[Microsoft SQL Server]**和 **[Analysis Services]**，然後按一下 **[部署精靈]**。  
+-   按一下**啟動** > **Microsoft SQL Server** > **部署精靈**。  
   
      – 或 –  
   
@@ -73,12 +76,12 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>在命令提示字元下執行 Analysis Services 部署精靈  
   
-1.  開啟命令提示字元，並巡覽至 C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio  
+1.  開啟命令提示字元並瀏覽至 C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio  
   
 2.  輸入 **Microsoft.AnalysisServices.Deployment.exe** ，後面接著您要用於執行精靈之模式的對應參數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解 Analysis Services 部署指令碼](../../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md)   
- [使用部署精靈來部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [使用部署精靈部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

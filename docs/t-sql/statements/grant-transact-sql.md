@@ -1,16 +1,16 @@
 ---
 title: GRANT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
@@ -27,23 +27,23 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 618e2068c1b1e9b99a68d0216c17c66e9b2cf3d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b470e1247c98d35aff96e19216d0cec36650749
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   將安全性實體的權限授與某個主體。  一般概念是 GRANT \<某個權限> ON \<某個物件> TO \<某個使用者、登入或群組>。 如需權限的一般說明，請參閱[權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -83,7 +83,7 @@ GRANT
   
 ## <a name="arguments"></a>引數  
  ALL  
- 這個選項已被取代，只保留回溯相容性。 它不會授與所有可能的權限。 授與 ALL 等同於授與下列權限。  
+ 這個選項已被取代，只保留回溯相容性。 它不會授與所有可能的權限。 授與 ALL 等同於授與下列權限： 
   
 -   如果安全性實體是資料庫，ALL 表示 BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。  
   
@@ -101,7 +101,7 @@ PRIVILEGES
  為符合 ISO 而包含這個項目。 不會變更 ALL 的行為。  
   
 *permission*  
- 這是權限的名稱。 權限對安全性實體的有效對應描述於下列子主題中。  
+ 這是權限的名稱。 下列子主題描述權限與安全性實體的有效對應。  
   
 *column*  
  指定正在授與權限的資料表中資料行的名稱。 它必須用括號 () 括住。  
@@ -126,7 +126,7 @@ AS *principal*
 在此陳述式中使用 AS 不代表能模擬其他使用者。 
   
 ## <a name="remarks"></a>Remarks  
- GRANT 陳述式的完整語法相當複雜。 上方的語法圖已簡化，以強調其結構。 授與特定安全性實體權限的完整語法描述於下列主題中。  
+ GRANT 陳述式的完整語法相當複雜。 上方的語法圖已簡化，以強調其結構。 下列文章描述授與特定安全性實體權限的完整語法。  
   
  REVOKE 陳述式可用來移除授與的權限，而 DENY 陳述式可用來避免主體透過 GRANT 取得特定權限。  
   
@@ -154,17 +154,17 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ```  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 權限的圖表  
- 如需 PDF 格式之海報大小的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限圖表，請參閱 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 如需所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限的 PDF 格式海報大小圖表，請參閱 [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster)。  
   
 ## <a name="permissions"></a>Permissions  
- 同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。 如果是使用 AS 選項，就必須套用額外的需求。 如需詳細資料，請參閱安全性實體特定主題。  
+ 同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。 如果是使用 AS 選項，就必須套用額外的需求。 如需詳細資料，請參閱安全性實體的特定文章。  
   
  物件擁有者可以授與他們所擁有之物件的權限。 具有安全性實體之 CONTROL 權限的主體可以授與該安全性實體的權限。  
   
  CONTROL SERVER 權限的被授與者 (例如系統管理員 (sysadmin) 固定伺服器角色的成員)，可以授與伺服器中任何安全性實體的任何權限。 資料庫之 CONTROL 權限的被授與者 (例如 db_owner 固定資料庫角色的成員)，可以授予資料庫中任何安全性實體的任何權限。 結構描述之 CONTROL 權限的被授與者，可以授與結構描述中任何物件的任何權限。  
   
 ## <a name="examples"></a>範例  
- 下表列出安全性實體和描述安全性實體特定語法的主題。  
+ 下表列出安全性實體和描述安全性實體特定語法的文章。  
   
 |||  
 |-|-|  

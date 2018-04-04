@@ -20,19 +20,19 @@ helpviewer_keywords:
 - ServerSettings class
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d09fc229270f91dc0e0769916fa002d0cf6eda4b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1148e9a42509d3d5976c510caea9e585f9e04484
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="serversettings-class"></a>ServerSettings 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-[ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)代表執行個體上的伺服器設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  [ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)代表執行個體上的伺服器設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  [ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)可讓您執行下列工作：  
   

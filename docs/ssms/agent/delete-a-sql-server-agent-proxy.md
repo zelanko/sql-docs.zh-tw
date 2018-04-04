@@ -1,35 +1,39 @@
 ---
-title: "刪除 SQL Server Agent Proxy | Microsoft Docs"
-ms.custom: 
+title: 刪除 SQL Server Agent Proxy | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deleting SQL Server Agent proxies
 - proxies [SQL Server Agent], deleting
 - removing SQL Server Agent proxies
 ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79937166e8bbd119f2bb5d5e98b7a49dd969047b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 5a69f09d21f6235ac3cd357ad613f60f88ee4965
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="delete-a-sql-server-agent-proxy"></a>刪除 SQL Server Agent Proxy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
 此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中刪除 [!INCLUDE[tsql](../../includes/tsql_md.md)]Agent Proxy 帳戶。  
   
 **本主題內容**  

@@ -9,23 +9,25 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: " database-engine "
+ms.technology:
+- " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 49674a1edbec00a650af036297adacec3bdc150d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 20db5f20256fb4b545482b29b0c5cc41c6ba231e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 資料產生
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters 和 WideWorldImportersDW 資料庫的發行的版本包含啟動年 1 月 1 日 2013，最多天這些資料庫所產生的資料。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WideWorldImporters 和 WideWorldImportersDW 資料庫的發行的版本包含啟動年 1 月 1 日 2013，最多天這些資料庫所產生的資料。
 
 如果範例資料庫可用來在日後用於示範或圖例的用途，可能很有幫助包含資料庫中的較新的範例資料。
 
@@ -79,7 +81,7 @@ WideWorldImportersDW 能夠以任意增加資料大小，為了測試，例如�
 
 #### <a name="parameters"></a>參數：
 
-  `@EstimatedRowsFor2012`**bigint** （具有預設值是 12000000）
+  `@EstimatedRowsFor2012` **bigint** （具有預設值是 12000000）
 
 #### <a name="result"></a>結果：
 

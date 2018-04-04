@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 資料庫的備份與還原 | Microsoft Docs"
-ms.custom: 
-ms.date: 07/29/2016
+title: SQL Server 資料庫的備份與還原 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - disaster recovery [SQL Server], see restoring [SQL Server]
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-caps.latest.revision: 
+caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 959fea6c816396c70883a47c1d9f00cbd11be9dc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4dddfcc3841704e7863a55253e8152b44d73a8d9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 資料庫的備份與還原
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   此主題描述備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的優點、基本備份和還原詞彙，並介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原策略，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的安全性考量。 
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > **尋找逐步指示嗎？** 本主題 **未提供如何執行備份的任何特定步驟！** 如果您想要正確實際備份，請將此頁面捲動至 [連結] 區段，並依備份工作組織，以及是否想要使用 SSMS 或 T-SQL。  
   
  SQL Server 備份與還原元件提供基本的防護措施，可保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中所儲存的重要資料。 若要將重大資料遺失的風險降到最低，則需要定期備份資料庫，以保留對資料的修改。 計畫完善的備份和還原策略，可協助保護資料庫免於因各種失敗造成損毀而遺失資料。 藉由還原備份組再復原資料庫，以測試您的策略，讓您準備好有效因應損毀情況。  

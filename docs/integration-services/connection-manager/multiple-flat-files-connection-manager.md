@@ -1,16 +1,16 @@
 ---
-title: "多個一般檔案連線管理員 | Microsoft Docs"
-ms.custom: 
+title: 多個一般檔案連線管理員 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.multifile.advanced.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 53e7c263916e9a07504fea6b9756f034e8e570fd
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
-ms.translationtype: MT
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
   「多個一般檔案」連接管理員可讓封裝存取多個一般檔案中的資料。 例如，當資料流程工作位於迴圈容器 (如 For 迴圈容器) 內時，「一般檔案」來源可以使用「多個一般檔案」連接管理員。 在此容器的每一個迴圈上，「一般檔案」來源會從「多個一般檔案」連接管理員提供的下一個檔案名稱中載入資料。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/13/2018
   
  \<*path*>|\<*path*>  
   
- 您也可以使用萬用字元來指定多個檔案。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\*.txt。  
+ 您也可以使用萬用字元來指定多個檔案。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\\*.txt。  
   
  如果「多個一般檔案」連接管理員參考多個檔案，則所有檔案必須具有相同的格式。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 03/13/2018
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
  **檔案名稱**  
- 輸入路徑和檔案名稱，以便於多個一般檔案連接中使用。 您可以使用萬用字元來指定多個檔案，例如 "C:\\*.txt"，或者使用分隔號 (|) 來分隔多個檔案名稱。 所有檔案必須有相同的資料格式。  
+ 輸入路徑和檔案名稱，以便於多個一般檔案連接中使用。 您可以使用萬用字元來指定多個檔案，例如 "C:\\\*.txt"，或者使用分隔號 (|) 來分隔多個檔案名稱。 所有檔案必須有相同的資料格式。  
   
  **瀏覽**  
  瀏覽檔案名稱，以便於多個一般檔案連接中使用。 您可以選取多個檔案。 所有檔案必須有相同的資料格式。  

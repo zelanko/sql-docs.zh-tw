@@ -1,29 +1,29 @@
 ---
-title: "設定報表伺服器上的 Windows 驗證 | Microsoft Docs"
-ms.custom: 
+title: 設定報表伺服器上的 Windows 驗證 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b948fea25ec62f338556b604812ff4d9574462ed
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e5ea30da8f6267bd864509ad48940b0a80f3d8c8
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>設定報表伺服器上的 Windows 驗證
   依預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會接受可指定交涉驗證或 NTLM 驗證的要求。 如果您的部署包括了使用這些安全性提供者的用戶端應用程式和瀏覽器，您可以使用預設值，而不需要進行額外的組態設定。 如果您想要針對 Windows 整合式安全性使用不同的安全性提供者 (例如，如果您想要直接使用 Kerberos)，或是您修改了預設值而且想要還原原始設定，您可以使用本主題的資訊來指定報表伺服器上的驗證設定。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/09/2018
   
  也必須符合下列其他需求：  
   
--   RSeportServer.config 檔案必須將 **AuthenticationType** 設定為 **RSWindowsNegotiate**、 **RSWindowsKerberos**或 **RSWindowsNTLM**。 依預設，如果報表伺服器服務帳戶是 NetworkService 或 LocalSystem，RSReportServer.config 檔案就會包含 **RSWindowsNegotiate** 設定。否則，就會使用 **RSWindowsNTLM** 設定。 如果您的應用程式只使用 Kerberos 驗證，您可以加入 **RSWindowsKerberos** 。  
+-   RSReportServer.config 檔案必須將 **AuthenticationType** 設定為 **RSWindowsNegotiate**、 **RSWindowsKerberos**或 **RSWindowsNTLM**。 依預設，如果報表伺服器服務帳戶是 NetworkService 或 LocalSystem，RSReportServer.config 檔案就會包含 **RSWindowsNegotiate** 設定。否則，就會使用 **RSWindowsNTLM** 設定。 如果您的應用程式只使用 Kerberos 驗證，您可以加入 **RSWindowsKerberos** 。  
   
     > [!IMPORTANT]  
     >  如果您設定報表伺服器服務使用網域使用者帳戶執行，而且您並未針對此帳戶註冊服務主體名稱 (SPN)，則使用 **RSWindowsNegotiate** 將會產生 Kerberos 驗證錯誤。 如需詳細資訊，請參閱本主題的 [在連接報表伺服器時解決 Kerberos 驗證錯誤](#proxyfirewallRSWindowsNegotiate) 。  

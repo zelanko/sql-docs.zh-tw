@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/15/2018
 
    ![快速搜尋 widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 編輯**電子郵件**第一個資料列型別中的資料行 *orlando0@adventure-works.com* ，然後按**Enter**以儲存變更。
+1. 編輯**電子郵件**第一個資料列型別中的資料行*orlando0@adventure-works.com*，然後按**Enter**以儲存變更。
 
    ![編輯資料](./media/tutorial-sql-editor/edit-data.png)
 
@@ -185,7 +185,7 @@ SQL 作業 Studio 提供的檢視使用查看定義功能的物件定義的能�
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用將查詢結果儲存為 JSON，將測試 setCustomer 預存程序
 
-*SetCustomer*前一節中所建立的預存程序需要 JSON 資料傳遞至 *@json_val* 參數。 本節示範如何取得正確格式的位元的 JSON 來將傳入參數，所以您可以測試預存程序。
+*SetCustomer*前一節中所建立的預存程序需要 JSON 資料傳遞至*@json_val*參數。 本節示範如何取得正確格式的位元的 JSON 來將傳入參數，所以您可以測試預存程序。
 
 1. 在**伺服器**[資訊看板] 上按一下滑鼠右鍵*dbo。客戶*資料表，並按一下**選取前 1000 個資料列**。
 

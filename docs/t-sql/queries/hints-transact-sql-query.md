@@ -1,16 +1,16 @@
 ---
-title: "查詢提示 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-ms.date: 08/09/2017
+title: 查詢提示 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Query_Hint_TSQL
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   查詢提示會指定所指出的提示應該用於整個查詢。 查詢提示會影響陳述式中的所有運算子。 如果主要查詢涉及 UNION，只有最後一個包含 UNION 作業的查詢可以有 OPTION 子句。 查詢提示是在 [OPTION 子句](../../t-sql/queries/option-clause-transact-sql.md)中指定。 如果一個或多個查詢提示造成查詢最佳化工具不會產生有效的計畫，就會產生 8622 錯誤。  
   
 > [!CAUTION]  
->  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最好的查詢執行計畫，因此，我們建議資深的開發人員和資料庫管理員將它當做最後的解決辦法。  
+> 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最好的查詢執行計畫，因此，我們建議資深的開發人員和資料庫管理員將它當做最後的解決辦法。  
   
  **適用於：**  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/25/2018
  指定在查詢最佳化期間，保留查詢語法所指出的聯結順序。 使用 FORCE ORDER 不會影響查詢最佳化工具所可能有的角色反轉行為。  
   
 > [!NOTE]  
->  在 MERGE 陳述式中，除非指定了 WHEN SOURCE NOT MATCHED 子句，否則就會根據聯結順序，先存取來源資料表，然後再存取目標資料表。 指定 FORCE ORDER 可以保留此預設行為。  
+> 在 MERGE 陳述式中，除非指定了 WHEN SOURCE NOT MATCHED 子句，否則就會根據聯結順序，先存取來源資料表，然後再存取目標資料表。 指定 FORCE ORDER 可以保留此預設行為。  
   
  { FORCE | DISABLE } EXTERNALPUSHDOWN  
  強制或停用在 Hadoop 中下推合格運算式的計算。 僅適用於使用 PolyBase 的查詢。 將不會下推到 Azure 儲存體。  
@@ -202,24 +202,24 @@ ms.lasthandoff: 01/25/2018
   
  針對指定這個選項的查詢覆寫 **sp_configure** 和 Resource Governor 的 **max degree of parallelism** 組態選項。 MAXDOP 查詢提示可能會超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用 Resource Governor 所設定的值，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會使用 [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所描述的 Resource Governor MAXDOP 值。 當您使用 MAXDOP 查詢提示時，適用所有搭配 **max degree of parallelism** 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
-> [!WARNING]  
-> 如果 MAXDOP 設定為零，則伺服器會選擇平行處理原則的最大程度。  
+> [!WARNING]     
+> 如果 MAXDOP 設為零，則伺服器會選擇平行處理原則的最大程度。  
   
- MAXRECURSION *number*  
+ MAXRECURSION *number*     
  指定此查詢所能擁有的最大遞迴數。 *number* 是 0 與 32767 之間的非負整數。 當指定 0 時，不會套用任何限制。 如果未指定這個選項，伺服器的預設限制是 100。  
   
  在查詢執行期間，當到達 MAXRECURSION 限制的指定或預設數目時，查詢會結束，且會傳回錯誤。  
   
  陳述式的所有效果都會因這個錯誤而回復。 如果陳述式是 SELECT 陳述式，可能會傳回部分結果，或根本不傳回任何結果。 任何傳回的部分結果都不會包括超出指定的最大遞迴層級之遞迴層級的所有資料列。  
   
- 如需詳細資訊，請參閱 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
+ 如需詳細資訊，請參閱 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)。     
   
- NO_PERFORMANCE_SPOOL  
+ NO_PERFORMANCE_SPOOL    
  **適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 防止多工緩衝處理運算子加入查詢計劃 (需有多工緩衝處理才能保證有效的更新語意的計劃除外)。 在某些情況下，多工緩衝處理運算子可能會降低效能。 例如，多工緩衝處理使用 tempdb，如果有許多並行查詢利用多工緩衝處理作業執行，可能會發生 tempdb 競爭。  
+ 防止多工緩衝處理運算子加入查詢計劃 (需有多工緩衝處理才能保證有效的更新語意的計劃除外)。 在某些情況下，多工緩衝處理運算子可能會降低效能。 例如，多工緩衝處理會使用 tempdb，因此如果有許多並行查詢與多工緩衝處理作業一起執行，可能會發生 tempdb 競爭。  
   
- OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )  
+ OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )     
  指示查詢最佳化工具在查詢進行編譯和最佳化時，使用特定的本機變數值。 只有在查詢最佳化期間，才使用這個值，在查詢執行期間，不使用這個值。  
   
  *@variable_name*  
@@ -238,13 +238,14 @@ ms.lasthandoff: 01/25/2018
   
  如果 OPTIMIZE FOR @variable_name = *literal_constant*，而且在相同的查詢提示中使用 OPTIMIZE FOR UNKNOWN，查詢最佳化工具會將指定的 *literal_constant* 用於特定值，並將 UNKNOWN 用於其餘的變數值。 只有在查詢最佳化期間才使用這些值，查詢執行期間則不使用這些值。  
   
- PARAMETERIZATION { SIMPLE | FORCED }  
+ PARAMETERIZATION { SIMPLE | FORCED }     
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具在查詢完成時套用在查詢的參數化規則。  
   
 > [!IMPORTANT]  
-> PARAMETERIZATION 查詢提示只能指定在計畫指南內。 您不能在查詢中直接指定它。  
+> 您只能在計劃指南內指定 PARAMETERIZATION 查詢提示，以覆寫 PARAMETERIZATION 資料庫 SET 選項目前的設定。 您不能在查詢中直接指定它。    
+> 如需詳細資訊，請參閱[使用計劃指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。
   
- SIMPLE 指示查詢最佳化工具嘗試簡單參數化。 FORCED 指示最佳化工具嘗試強制參數化。 PARAMETERIZATION 查詢提示用來覆寫計畫指南內 PARAMETERIZATION 資料庫 SET 選項目前的設定。 如需詳細資訊，請參閱[使用計劃指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
+ SIMPLE 指示查詢最佳化工具嘗試簡單參數化。 FORCED 指示查詢最佳化工具嘗試使用強制參數化。 如需詳細資訊，請參閱[查詢處理架構指南中的強制參數化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)和[查詢處理架構指南中的簡單參數化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。  
   
  RECOMPILE  
  指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 捨棄在執行查詢之後所產生的計畫，強制查詢最佳化工具在下次執行相同的查詢時，重新編譯查詢計畫。 在未指定 RECOMPILE 的情況下，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會快取查詢計劃並重複使用。 當編譯查詢計畫時，RECOMPILE 查詢提示會使用查詢中任何本機變數目前的值，如果查詢在預存程序內，就會將目前的值傳給任何參數。  
@@ -256,12 +257,12 @@ ms.lasthandoff: 01/25/2018
   
  如果不可能執行這類計畫，查詢最佳化工具會傳回錯誤，而不是將錯誤偵測延遲到查詢執行時。 資料列可能包含可變長度的資料行；[!INCLUDE[ssDE](../../includes/ssde-md.md)] 允許資料列定義成超出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力的最大潛在大小。 一般而言，雖然有最大潛在大小，但應用程式仍會儲存實際大小在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力限制之內的資料列。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 發現太長的資料列，便會傳回執行錯誤。  
  
-<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
+ **適用對象**：適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以上) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
  
- 提供一或多個額外的提示給**單引號內**之提示名稱所指定的查詢處理器。 
+ 提供一或多個額外的提示給**單引號內**之提示名稱所指定的查詢處理器。   
 
- 支援下列提示名稱：
+ 支援下列提示名稱：    
  
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  指示查詢處理器在產生查詢計劃時，不使用排序作業 (批次排序) 以取得最佳化巢狀迴圈聯結。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 相同。
@@ -285,14 +286,15 @@ ms.lasthandoff: 01/25/2018
 > [!TIP]
 > 提示名稱不區分大小寫。
   
-  使用動態管理檢視 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) 可以查詢所有支援的 USE HINT 名稱清單。
+  您可以使用動態管理檢視 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，來查詢所有支援的 USE HINT 名稱清單。    
+  
 > [!IMPORTANT] 
-> 一些 USE HINT 提示可能會與在全域或工作階段層級啟用的追蹤旗標發生衝突，或與資料庫範圍設定的設定發生衝突。 在此情況下，查詢層級提示 (USE HINT) 一律優先。 如果 USE HINT 與另一個查詢提示或在查詢層級 (例如由 QUERYTRACEON) 啟用的追蹤旗標發生衝突，SQL Server 在嘗試執行查詢時會產生錯誤。 
+> 一些 USE HINT 提示可能會與在全域或工作階段層級啟用的追蹤旗標發生衝突，或與資料庫範圍設定的設定發生衝突。 在此情況下，查詢層級提示 (USE HINT) 一律優先。 如果 USE HINT 與其他查詢提示或在查詢層級啟用的追蹤旗標 (例如由 QUERYTRACEON 啟用) 發生衝突，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在嘗試執行查詢時會產生錯誤。 
 
- USE PLAN N**'***xml_plan***'**  
+ USE PLAN N**'***xml_plan***'**     
  強制查詢最佳化工具針對 **'***xml_plan***'** 所指定的查詢使用現有的查詢計劃。 USE PLAN 無法搭配 INSERT、UPDATE、MERGE 或 DELETE 陳述式一起使用。  
   
-TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** 會將指定的資料表提示套用至符合 *exposed_object_name* 的資料表或檢視。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  
+TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** 會將指定的資料表提示套用至與 *exposed_object_name* 對應的資料表或檢視。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  
   
  *exposed_object_name* 可以是下列其中一個參考：  
   
@@ -302,7 +304,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
   
  當指定 *exposed_object_name* 但沒有同時指定資料表提示時，在查詢中指定成物件之資料表提示一部分的任何索引都會被忽略，而且查詢最佳化工具會決定索引使用方式。 當您無法修改原始的查詢時，就可以使用這項技巧來排除 INDEX 資料表提示的影響。 請參閱＜範例 J＞。  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } 是套用至符合 *exposed_object_name* 的資料表或檢視做為查詢提示的資料表提示。 如需這些提示的說明，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } 這是要套用至以查詢提示形式與 *exposed_object_name* 對應之資料表或檢視表的資料表提示。 如需這些提示的說明，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  除非查詢已有指定資料表提示的 WITH 子句，否則不可使用 INDEX、FORCESCAN 和 FORCESEEK 以外的資料表提示做為查詢提示。 如需詳細資訊，請參閱＜備註＞。  
   
@@ -315,20 +317,15 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
  您只能在最上層查詢中指定查詢提示，不能在子查詢中指定查詢提示。 當資料表提示指定為查詢提示時，您可以在最上層查詢或子查詢中指定此提示。不過，在 TABLE HINT 子句中針對 *exposed_object_name* 所指定的值必須與查詢或子查詢中的公開名稱完全相符。  
   
 ## <a name="specifying-table-hints-as-query-hints"></a>將資料表提示指定為查詢提示  
- 我們建議您只在[計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將 INDEX、FORCESCAN 或 FORCESEEK 資料表提示當做查詢提示使用。 當您無法修改原始的查詢 (例如，因為它是協力廠商應用程式) 時，計畫指南就很有用。 在計畫指南中指定的查詢提示會先加入至查詢，然後再進行編譯和最佳化。 若為特定查詢，請在測試計畫指南陳述式時才使用 TABLE HINT 子句。 如果是所有其他特定的查詢，我們建議您將這些提示指定成資料表提示。  
+ 建議您只有在[計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將 INDEX、FORCESCAN 或 FORCESEEK 資料表提示作為查詢提示使用。 當您無法修改原始的查詢 (例如，因為它是協力廠商應用程式) 時，計畫指南就很有用。 在計畫指南中指定的查詢提示會先加入至查詢，然後再進行編譯和最佳化。 若為特定查詢，請在測試計畫指南陳述式時才使用 TABLE HINT 子句。 如果是所有其他特定的查詢，我們建議您將這些提示指定成資料表提示。  
   
  將 INDEX、FORCESCAN 和 FORCESEEK 資料表提示指定為查詢提示適用於下列物件：  
   
 -   資料表  
-  
 -   檢視  
-  
 -   索引檢視  
-  
 -   通用資料表運算式 (此提示必須指定於結果集擴展此通用資料表運算式的 SELECT 陳述式內)  
-  
 -   動態管理檢視  
-  
 -   具名子查詢  
   
  對於不具任何現有資料表提示的查詢，也可將 INDEX、FORCESCAN 和 FORCESEEK 資料表提示指定為查詢提示，或以其取代查詢中現有的 INDEX、FORCESCAN 或 FORCESEEK 提示。 除非查詢已有指定資料表提示的 WITH 子句，否則不可使用 INDEX、FORCESCAN 和 FORCESEEK 以外的資料表提示做為查詢提示。 在此情況下，也必須在 OPTION 子句中使用 TABLE HINT 將相符的提示指定為查詢提示，以保留此查詢的語意。 例如，如果查詢包含資料表提示 NOLOCK，則計劃指南的 **@hints** 參數中的 OPTION 子句也必須包含 NOLOCK 提示。 請參閱範例 K。如果在 OPTION 子句中使用 TABLE HINT 指定 INDEX、FORCESCAN 或 FORCESEEK 以外的資料表提示，但是沒有相符的查詢提示 (反之亦然)，則會引發錯誤 8702 (指出 OPTION 子句可能會造成查詢語意變更) 並導致查詢失敗。  
@@ -338,7 +335,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 ### <a name="a-using-merge-join"></a>A. 使用 MERGE JOIN  
  下列範例指定查詢中的 JOIN 作業由 MERGE JOIN 聯結執行。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```  
+```sql  
 SELECT *   
 FROM Sales.Customer AS c  
 INNER JOIN Sales.CustomerAddress AS ca ON c.CustomerID = ca.CustomerID  
@@ -350,7 +347,7 @@ GO
 ### <a name="b-using-optimize-for"></a>B. 使用 OPTIMIZE FOR  
  下列範例指示查詢最佳化工具在最佳化查詢時，將 `'Seattle'` 值用於區域變數 `@city_name` 及使用統計資料判斷區域變數 `@postal_code` 的值。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```  
+```sql  
 DECLARE @city_name nvarchar(30);  
 DECLARE @postal_code nvarchar(15);  
 SET @city_name = 'Ascheim';  
@@ -389,7 +386,7 @@ GO
 ### <a name="d-using-merge-union"></a>D. 使用 MERGE UNION  
  下列範例使用 MERGE UNION 查詢提示。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```  
+```sql  
 SELECT *  
 FROM HumanResources.Employee AS e1  
 UNION  
@@ -402,7 +399,7 @@ GO
 ### <a name="e-using-hash-group-and-fast"></a>E. 使用 HASH GROUP 與 FAST  
  下列範例使用 HASH GROUP 和 FAST 查詢提示。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -417,7 +414,7 @@ GO
   
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -430,7 +427,7 @@ GO
 ### <a name="g-using-index"></a>G. 使用 INDEX  
  下列範例使用 INDEX 提示。 第一個範例會指定單一索引。 第二個範例會針對單一資料表參考指定多個索引。 在這兩個範例中，由於 INDEX 提示會套用在使用別名的資料表上，因此 TABLE HINT 子句也必須與公開物件名稱指定相同的別名。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide1',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -458,7 +455,7 @@ GO
 ### <a name="h-using-forceseek"></a>H. 使用 FORCESEEK  
  下列範例使用 FORCESEEK 資料表提示。 由於 INDEX 提示會套用在使用兩部分名稱的資料表上，因此 TABLE HINT 子句也必須與公開物件名稱指定相同的兩部分名稱。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide3',   
     @stmt = N'SELECT c.LastName, c.FirstName, HumanResources.Employee.Title  
@@ -476,7 +473,7 @@ GO
 ### <a name="i-using-multiple-table-hints"></a>I. 使用多個資料表提示  
  下列範例會將 INDEX 提示套用到某個資料表，並將 FORCESEEK 提示套用到另一個資料表。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide4',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -494,7 +491,7 @@ GO
 ### <a name="j-using-table-hint-to-override-an-existing-table-hint"></a>J. 使用 TABLE HINT 覆寫現有的資料表提示  
  下列範例會示範如何使用 TABLE HINT 提示，而不指定提示來覆寫查詢之 FROM 子句中所指定的 INDEX 資料表提示行為。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide5',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -511,7 +508,7 @@ GO
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. 指定影響語意的資料表提示  
  下列範例在查詢中包含兩個資料表提示：影響語意的 NOLOCK 以及不會影響語意的 INDEX。 為了保留查詢的語意，會在計畫指南的 OPTIONS 子句中指定 NOLOCK 提示。 除了 NOLOCK 提示以外，當編譯及最佳化陳述式時，也會指定 INDEX 和 FORCESEEK 提示，並用它們來取代查詢中不會影響語意的 INDEX 提示。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide6',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -528,7 +525,7 @@ GO
   
  下列範例示範另一個方法來保留查詢的語意，並讓最佳化工具選擇使用不是資料表提示中所指定的索引。 其作法是在 OPTIONS 子句中指定 NOLOCK 提示 (因為它會影響語意)，並在指定 TABLE HINT 關鍵字時，只包含資料表參考而沒有 INDEX 提示。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide7',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -547,7 +544,7 @@ GO
   
 **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。  
   
-```  
+```sql  
 SELECT * FROM Person.Address  
 WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 

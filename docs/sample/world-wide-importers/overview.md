@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 658c1b3ffd44cd2194c75d6ad45888e24e0772c1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4d22aada117e3230e36aa52e911f31eea53439e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wide-world-importers-overview"></a>寬 World Importers 概觀
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]這是虛構的公司 Wide World Importers 和 SQL Server 和 Azure SQL Database 的 WideWorldImporters 範例資料庫中所述的工作流程的概觀。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+這是虛構的公司 Wide World Importers 和 SQL Server 和 Azure SQL Database 的 WideWorldImporters 範例資料庫中所述的工作流程的概觀。  
 
 Wide World Importers （生平） 是批發新式貨物匯入工具和 San Francisco 灣區從作業系統的散發者。
 
@@ -71,4 +73,4 @@ SQL Server Analysis Services 用來建立分析資料模型，從維度資料模
 
 此處所述的範例資料庫和範例程式碼的授權： [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-範例資料庫包含已載入從 data.gov 和自然 EarthData 的公用資料。 在這裡可以使用規定： [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+範例資料庫包含已載入從 data.gov 和自然 EarthData 的公用資料。 以下是使用規定： [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)

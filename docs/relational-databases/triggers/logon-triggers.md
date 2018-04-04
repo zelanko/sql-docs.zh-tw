@@ -1,7 +1,7 @@
 ---
 title: "登入觸發程序 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -23,15 +23,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 123a1456150d99f47b6f524d76f0afa0d79ba86b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a22d0170dfe776207ca5fe9ecb79cbce3684e797
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="logon-triggers"></a>登入觸發程序
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-登入觸發程序會引發預存程序來回應 LOGON 事件。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體建立使用者工作階段時，就會引發這個事件。 登入觸發程序會在登入驗證階段結束之後，但在使用者工作階段實際建立之前引發。 因此，從觸發程序內產生且一般會顯示給使用者的所有訊息，例如錯誤訊息和來自 PRINT 陳述式的訊息，都會轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。 如果驗證失敗，登入觸發程序就不會引發。  
+[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  登入觸發程序會引發預存程序來回應 LOGON 事件。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體建立使用者工作階段時，就會引發這個事件。 登入觸發程序會在登入驗證階段結束之後，但在使用者工作階段實際建立之前引發。 因此，從觸發程序內產生且一般會顯示給使用者的所有訊息，例如錯誤訊息和來自 PRINT 陳述式的訊息，都會轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。 如果驗證失敗，登入觸發程序就不會引發。  
   
  您可以使用登入觸發程序稽核和控制伺服器工作階段，例如追蹤登入活動、限制登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或限制特定登入的工作階段數。 例如，在下列程式碼中，如果登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login_test *已經建立三個使用者工作階段，登入觸發程序就會拒絕該登入對* 所起始的登入嘗試。  
   

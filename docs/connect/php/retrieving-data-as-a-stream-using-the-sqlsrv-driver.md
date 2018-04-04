@@ -1,27 +1,28 @@
 ---
-title: "使用 SQLSRV 驅動程式以資料流的形式擷取資料 |Microsoft 文件"
-ms.custom: 
+title: 使用 SQLSRV 驅動程式以資料流的形式擷取資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53ff9f5cc78e1ccaec74425a47ac39bfca996aae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fa2d15dde596b9fb8ccd4d170281ef6fa4b2646f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>使用 SQLSRV 驅動程式以資料流形式擷取資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,13 +49,14 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |---------|---------------|  
 |[使用 SQLSRV 驅動程式支援資料流的資料類型](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|列出可以資料流的形式擷取的 SQL Server 資料類型。|  
 |[如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|示範如何以資料流的形式擷取字元資料。|  
 |[如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|示範如何以資料流的形式擷取二進位資料。|  
   
 ## <a name="see-also"></a>另請參閱  
-[擷取資料](../../connect/php/retrieving-data.md)  
+[擷取資料](../../connect/php/retrieving-data.md)
+
 [常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
   

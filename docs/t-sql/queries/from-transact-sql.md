@@ -1,16 +1,16 @@
 ---
 title: FROM (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JOIN
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a78b022ae6b344531130c55fb08bfc3684f8e23
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,11 +137,15 @@ FROM { <table_source> [ ,...n ] }
   
 <table_source> ::=   
 {  
-    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [<tablesample_clause>]  
     | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
     | <joined_table>  
 }  
   
+<tablesample_clause> ::=
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+ 
 <joined_table> ::=   
 {  
     <table_source> <join_type> <table_source> ON search_condition   
@@ -230,8 +234,10 @@ FROM { <table_source> [ ,...n ] }
   
  指定從所指定的時態表及其連結的系統版本設定記錄資料表，傳回特定版本的資料  
   
-\<tablesample_clause>  
- 指定必須從資料表傳回資料範例。 該範例可能只是近似資料。 這個子句可用於 SELECT、UPDATE 或 DELETE 陳述式中的任何主要或聯結資料表。 TABLESAMPLE 不能利用檢視表來指定。  
+### <a name="tablesample-clause"></a>TABLESAMPLE 子句
+**適用對象**：SQL Server、SQL Database 
+ 
+ 指定必須從資料表傳回資料範例。 該範例可能只是近似資料。 這個子句可用於 SELECT 或 UPDATE 陳述式中的任何主要或聯結資料表。 TABLESAMPLE 不能利用檢視表來指定。  
   
 > [!NOTE]  
 >  當您針對升級到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫使用 TABLESAMPLE 時，而且資料庫的相容性層級設定為 110 或更高層級，則遞迴通用資料表運算式 (CTE) 查詢中不允許 PIVOT。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
@@ -254,13 +260,22 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了產生隨機數字所使用的常數整數運算式。 *repeat_seed* 是 **bigint**。 如果未指定 *repeat_seed*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會隨機指派一個值。 針對特定的 *repeat_seed*值，只要尚未對資料表套用任何變更，取樣結果一律會相同。 *repeat_seed* 運算式必須評估為大於零的整數。  
   
- \<joined_table>  
- 這是兩個或兩個以上的資料表所產生的結果集。 如果是多個聯結，請利用括號來變更聯結的自然順序。  
+### <a name="tablesample-clause"></a>TABLESAMPLE 子句
+**適用對象**：SQL 資料倉儲
+
+ 指定必須從資料表傳回資料範例。 該範例可能只是近似資料。 這個子句可用於 SELECT 或 UPDATE 陳述式中的任何主要或聯結資料表。 TABLESAMPLE 不能利用檢視表來指定。 
+
+ PERCENT  
+ 指定應該從資料表中擷取百分之 *sample_number* 的資料表資料列。 當指定 PERCENT 時，SQL 資料倉儲會傳回所指定之百分比的近似值。 當指定 PERCENT 時，*sample_number* 運算式必須評估為 0 到 100 的值。  
+
+
+### <a name="joined-table"></a>聯結的資料表 
+聯結的資料表是指由兩個以上的資料表所產生的結果集。 如果是多個聯結，請利用括號來變更聯結的自然順序。  
   
-\<join_type>  
- 指定聯結動作的類型。  
+### <a name="join-type"></a>聯結類型
+指定聯結動作的類型。  
   
- **INNER**  
+ INNER  
  指定必須傳回所有相符的資料列配對。 捨棄兩份資料表中不相符的資料列。 如果未指定聯點類型，這就是預設值。  
   
  FULL [ OUTER ]  
@@ -272,8 +287,8 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  指定右資料表中不符合聯結條件的所有資料列必須併入結果集中，而且，除了內部聯結所傳回的所有資料列以外，還必須將對應於其他資料表的輸出資料行設為 NULL。  
   
-\<join_hint>  
- 就 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 而言，這會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具針對查詢 FROM 子句中指定的每個聯結使用一個聯結提示 (或執行演算法)。 如需詳細資訊，請參閱[聯結提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md)。  
+### <a name="join-hint"></a>聯結提示  
+就 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 而言，這會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具針對查詢 FROM 子句中指定的每個聯結使用一個聯結提示 (或執行演算法)。 如需詳細資訊，請參閱[聯結提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md)。  
   
  就 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 而言，這些連結提示適用於兩個散發不相容資料行上的 INNER 連結。 它們可藉由限制在查詢處理期間可進行的資料移動數量來改善效能。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]所允許的聯結提示如下：  
   
@@ -324,6 +339,8 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  這是資料表來源，如前一個引數所定義的一樣。 如需詳細資訊，請參閱＜備註＞一節。  
   
+### <a name="pivot-clause"></a>PIVOT 子句
+
  *table_source* PIVOT \<pivot_clause>  
  指定根據 *pivot_column*.對 *table_source* 進行樞紐作業。 *table_source* 是一個資料表或資料表運算式。 輸出是一個包含 *table_source* 之所有資料行 (*pivot_column* 和 *value_column* 除外) 的資料表。 *table_source* 的資料行 (*pivot_column* 和 *value_column* 除外) 稱為樞紐運算子的群組資料行。 如需有關 PIVOT 和 UNPIVOT 的詳細資訊，請參閱[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
@@ -414,7 +431,7 @@ ON (p.ProductID = v.ProductID);
   
      輸出資料列中的群組資料行會為 *input_table* 中的該群組取得對應的資料行值。  
   
-2.  藉由執行下列作業，在每個輸出資料列的資料行清單中產生資料行的值：  
+2.  執行下列作業，在每個輸出資料列的資料行清單中產生資料行的值：  
   
     1.  對於在前一步驟的 GROUP BY 中產生的資料列，再另外針對 *pivot_column* 進行群組作業。  
   
@@ -854,6 +871,14 @@ FROM DimProduct AS dp
 INNER REDISTRIBUTE JOIN FactInternetSales AS fis  
     ON dp.ProductKey = fis.ProductKey;  
 ```  
+
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>V. 利用 TABLESAMPLE，從資料表的資料列樣本中讀取資料  
+ 下列範例會利用 `TABLESAMPLE` 子句中的 `FROM` 來傳回 `10` 資料表中大約百分之 `Customer` 的所有資料列。  
+  
+```sql    
+SELECT *  
+FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
+```
   
 ## <a name="see-also"></a>另請參閱  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   

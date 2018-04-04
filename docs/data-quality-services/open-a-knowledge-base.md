@@ -1,28 +1,30 @@
 ---
-title: "開啟知識庫 | Microsoft Docs"
-ms.custom: 
+title: 開啟知識庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/04/2013
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.dqs.kb.openkb.f1
+f1_keywords:
+- sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f01519c6ddbeb4a137f6f9ec5bf6cc2d0f84d6f4
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 4cf7aa8e7fe21b83ee28a2bf2212823897fef9eb
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="open-a-knowledge-base"></a>開啟知識庫
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中開啟現有的知識庫，並預備此知識庫進行定義域管理、知識探索或是加入比對原則。  

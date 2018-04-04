@@ -16,18 +16,19 @@ helpviewer_keywords:
 - views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 caps.latest.revision: 
-author: sstein
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ba650c638d855556ec2afe992f26ff3f6ad2460
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: de1be71afd708fab6f380daf4b60a0aeb87b2665
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="views"></a>檢視
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
-檢視表是一種虛擬資料表，是由查詢定義其內容。 與資料表類似，檢視表是由一組具名資料行和資料列所組成。 除了索引檢視以外，檢視在資料庫中並沒有儲存的資料值集。 資料的資料列與資料行是從定義檢視的查詢所參考的資料表而來，而且在參考檢視時不會動態產生。  
+  檢視表是一種虛擬資料表，是由查詢定義其內容。 與資料表類似，檢視表是由一組具名資料行和資料列所組成。 除了索引檢視以外，檢視在資料庫中並沒有儲存的資料值集。 資料的資料列與資料行是從定義檢視的查詢所參考的資料表而來，而且在參考檢視時不會動態產生。  
   
  檢視是做為檢視中所參考的基礎資料表上的篩選。 定義檢視的查詢可以從一或多個資料表而來，或從目前或其他資料庫中的其他檢視而來。 分散式查詢也可用以定義使用多個異質性來源之資料的檢視。 例如，如果您想結合不同伺服器的相似結構資料，每一個伺服器儲存著組織中不同區域的資料，這將非常有用。  
   

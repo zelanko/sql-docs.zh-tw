@@ -1,28 +1,28 @@
 ---
-title: "疑難排解 SQL Server 的機器學習-資料收集"
-ms.custom: 
+title: 疑難排解 SQL Server 的機器學習-資料收集
+ms.custom: ''
 ms.date: 06/16/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 95b70a2992b5c43ebaefb8faa729ec16ac3c84f7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>疑難排解機器學習的資料收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +51,7 @@ SQL Server 2016 中引進了 SQL Server R Services。 先前的版本不支援�
 
 根據您所使用的 SQL Server 版本中，有些機器學習功能可能無法使用，或只有有限的。
 
-請參閱下列主題中的 Enterprise、 Developer、 Standard 和 Express 版本中的機器學習功能清單。
+請參閱以下文章中的清單的 Enterprise、 Developer、 Standard 和 Express 版本中的機器學習功能。
 
 * [版本和支援的 SQL Server 功能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [R 功能的 SQL Server 版本之間的差異](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
@@ -146,7 +146,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 如果機器學習服務未在執行中，您可以查看 pythonlauncher.config 檔來判斷已安裝的 Python 版本。 我們建議您製作並開啟檔案的複本，因此您不小心不要變更任何屬性。
 
-1. 僅適用於 SQL 伺服器 2017年:`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. 僅適用於 SQL 伺服器 2017年: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. 取得值**PYTHONHOME**。
 3. 取得目前工作目錄的值。
 
@@ -262,7 +262,7 @@ SQL Server 會產生不同的外部指令碼語言執行階段記錄檔。 這�
 
 例如，下列訊息是 SQL Server 擴充性架構與相關的常見系統錯誤： 
 
-* *SQL Server Launchpad (MSSQLSERVER) 服務無法啟動，因為發生下列錯誤：<text>*
+* *SQL Server Launchpad (MSSQLSERVER) 服務無法啟動，因為發生下列錯誤：  <text>*
 
 * *服務未啟動或控制要求能夠及時回應。* 
 

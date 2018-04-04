@@ -1,16 +1,16 @@
 ---
-title: "設定及管理搜尋的斷詞工具與字幹分析器 | Microsoft Docs"
-ms.custom: 
+title: 設定及管理搜尋的斷詞工具與字幹分析器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - languages [full-text search]
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -73,7 +73,7 @@ GO
 如需其他選項和詳細資訊，請參閱 [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)。
  
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>如需新增或移除斷詞工具  
-如果您加入、移除或更改了斷詞工具，就必須重新整理支援全文檢索索引和查詢的 Microsoft Windows 地區設定識別碼 (LCID) 清單。 如需詳細資訊，請參閱 [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
+如果您加入、移除或更改了斷詞工具，就必須重新整理支援全文檢索索引和查詢的 Microsoft Windows 地區設定識別碼 (LCID) 清單。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
 ##  <a name="default"></a> 設定預設全文檢索語言選項  
  若為當地語系化的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式就會將 **default full-text language** 選項設定為伺服器的語言 (如果有相符項目存在的話)。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為非當地語系化的版本時，則 **或** 選項會是英文。  

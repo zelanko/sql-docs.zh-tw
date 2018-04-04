@@ -1,7 +1,7 @@
 ---
-title: "升級 SQL Server 執行個體中的機器學習元件 |Microsoft 文件"
+title: "將 SQL Server 上的機器學習元件繫結至 Microsoft 機器學習 Server |Microsoft 文件"
 ms.custom: 
-ms.date: 10/31/2017
+ms.date: 03/15/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,19 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016 CTP3)
-ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c67d0accb7ac7be46105e5148028fac3f67aa0f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>升級 SQL Server 執行個體中的機器學習元件
+# <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>將 SQL Server 上的機器學習元件繫結至 Microsoft 機器學習 Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明的程序_繫結_，可用來升級機器學習 SQL Server 中所使用的元件。 更新頻率，根據機器學習伺服器版本的繫結程序鎖定伺服器，而不是使用 SQL Server 版本和更新排程。
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/11/2018
 > 
 > 找不到 SqlBindR.exe？ 您可能已不下載上面所列的元件。 此公用程式是只能用於機器學習服務伺服器的 Windows 安裝程式。
 
-1. 以系統管理員身分開啟命令提示字元，並瀏覽至包含 sqlbindr.exe 的資料夾。 預設位置是`C:\Program Files\Microsoft\MLServer\Setup`
+1. 以系統管理員身分開啟命令提示字元，並瀏覽至包含 sqlbindr.exe 的資料夾。 預設位置是 `C:\Program Files\Microsoft\MLServer\Setup`
 
 2. 輸入下列命令以檢視可用的執行個體清單︰ `SqlBindR.exe /list`
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/11/2018
 
 3. 執行**SqlBindR.exe**命令搭配*/繫結*引數，並指定要升級之執行個體名稱使用上一個步驟中傳回的執行個體名稱。
 
-   例如，若要升級的預設執行個體，請輸入：`SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
+   例如，若要升級的預設執行個體，請輸入：  `SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
 
 4. 在升級完成後，請重新啟動任何已修改的執行個體相關聯的啟動控制板服務。
 
@@ -135,7 +135,7 @@ ms.lasthandoff: 02/11/2018
 
     如需指示，請參閱[解除安裝機器學習 Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-uninstall)。 
 
-### <a name="bkmk_wizunbind"></a>解除繫結使用精靈
+### <a name="bkmk_wizunbind"></a> 解除繫結使用精靈
 
 1. 找出機器學習服務伺服器的安裝程式。 如果您已經移除安裝程式，您可能需要下載一次，或將它複製從另一部電腦。
 2. 請務必在具有您想要解除繫結的執行個體的電腦上執行安裝程式。
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/11/2018
 4. 接受授權合約。 您必須在安裝時，指出您接受授權條款偶數。
 5. 按一下 **[完成]**。 處理程序需要一些時間。
 
-### <a name="bkmk_cmdunbind"></a>使用命令列解除繫結
+### <a name="bkmk_cmdunbind"></a> 使用命令列解除繫結
 
 1. 開啟命令提示字元並瀏覽至包含 **sqlbindr.exe** 的資料夾，如上一節所述。
 
@@ -178,7 +178,7 @@ ms.lasthandoff: 02/11/2018
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>繫結或解除繫結會保留多個暫存資料夾
 
 有時繫結和解除繫結作業無法清除暫存資料夾。
-如果您發現具有類似名稱的資料夾，您可以移除它，安裝完成之後：`R_SERVICES_<guid>`
+如果您發現具有類似名稱的資料夾，您可以移除它，安裝完成之後： `R_SERVICES_<guid>`
 
 > [!NOTE]
 > 請務必等候安裝完成。 可能需要很長的時間，若要移除與版本相關聯的 R 程式庫，然後再加入新的 R 程式庫。 當作業完成時，會移除暫存資料夾。

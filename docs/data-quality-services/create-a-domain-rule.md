@@ -1,30 +1,31 @@
 ---
-title: "建立定義域規則 | Microsoft Docs"
-ms.custom: 
+title: 建立定義域規則 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: "28"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 44c7b7392737306ffa78958d46e53f7904c688da
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-domain-rule"></a>建立定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立定義域規則。 定義域規則是用來驗證、更正並標準化定義域值的條件。 定義域規則必須在定義域中成立，才能讓定義域值被視為正確且符合商務需求。 定義域規則所包含的驗證規則可用來驗證定義域值，但是無法用來更正資料品質專案中的資料。 此外，規則也包含針對有效資料套用以及用於資料更正的標準化規則。  

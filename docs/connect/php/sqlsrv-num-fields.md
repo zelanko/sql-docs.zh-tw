@@ -1,37 +1,39 @@
 ---
-title: "sqlsrv_num_fields |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_num_fields | Microsoft Docs
+ms.custom: ''
+ms.date: 03/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_num_fields
+apiname:
+- sqlsrv_num_fields
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_num_fields
 - API Reference, sqlsrv_num_fields
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978f04e3796cc104844ca86e3ac74b1c24cc10e1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 80028fcf1b4a1c3d947bef49c2a4edc617f9d2d1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-擷取作用中結果集內的欄位數目。 請注意，在執行前或執行後，皆可在任何已備妥的陳述式上呼叫 **sqlsrv_num_fields** 。  
+擷取作用中結果集內的欄位數目。 此函式可以呼叫任何已備妥的陳述式之前, 或之後執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,9 +49,9 @@ sqlsrv_num_fields( resource $stmt)
 代表作用中結果集內之欄位數目的整數值。 如果發生錯誤，將會傳回布林值 **false** 。  
   
 ## <a name="example"></a>範例  
-下列範例會執行查詢，從 Adventureworks 資料庫的 *HumanResources.Department* 資料表中擷取前三個資料列的所有欄位。 **Sqlsrv_num_fields**函式會判斷結果集中的欄位數目。 這可讓資料可藉由逐一查看每個傳回資料列中的欄位來顯示。  
+下列範例會執行查詢，擷取所有欄位中的前三個資料列*HumanResources.Department* AdventureWorks 資料庫的資料表。 **Sqlsrv_num_fields**函式會判斷結果集中的欄位數目。 這可讓資料可藉由逐一查看每個傳回資料列中的欄位來顯示。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -96,6 +98,8 @@ sqlsrv_close( $conn );
   
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
+
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

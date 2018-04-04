@@ -1,16 +1,16 @@
 ---
-title: "空間資料類型概觀 | Microsoft Docs"
-ms.custom: 
+title: 空間資料類型概觀 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
@@ -18,25 +18,22 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1eae19761ec8afa2ddf6491314d3f6ce5930f37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 27b4acf9192c74ec3c9535d9ed35a477c5a5f5d0
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   
 空間資料有兩種類型： **geometry** 資料類型支援平面或 Euclidean (扁平表面) 資料。 **geometry** 資料類型同時符合開放式地理空間協會 (Open Geospatial Consortium, OGC) 的 SQL 簡單特徵規格 1.1.0 版，而且符合 SQL MM (ISO 標準)。
 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援 **geography** 資料類型，它會儲存橢圓體 (圓形表面) 資料，例如 GPS 經緯度座標。
-
-> [!IMPORTANT]  
->  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中空間功能 (包括空間資料類型的增強功能) 的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 代號 "Denali" 中的新空間功能)。  
 
 ##  <a name="objects"></a> 空間資料物件  
 **geometry** 和 **geography** 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從父資料類型衍生某些屬性，這些資料類型會將其區分為 **Points**、 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** ，或是 **geometry** 中的多個 **geography** 或 **GeometryCollection**執行個體。 **Geography** 類型具有一種額外的執行個體類型： **FullGlobe**。  

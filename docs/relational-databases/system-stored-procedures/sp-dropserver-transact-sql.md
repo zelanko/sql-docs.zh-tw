@@ -25,18 +25,20 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 22ff989b5af20886fe3ff8b0e80948bda2545881
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 13549166cc993a984117655c82e197afbcbfb530
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體上的已知遠端和連結伺服器清單中移除伺服器。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
   
@@ -47,11 +49,11 @@ sp_dropserver [ @server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@server =** ] **'***伺服器***'**  
+ [ **@server =** ] **'***server***'**  
  這是要移除的伺服器。 *server* 是 **sysname**，沒有預設值。 *伺服器*必須存在。  
   
  [  **@droplogins =** ] **'droplogins'** |NULL  
- 指出相關遠端和連結伺服器登入*伺服器*也必須移除如果**droplogins**指定。 **@droplogins**是**char （10)**，預設值是 NULL。  
+ 指出相關遠端和連結伺服器登入*伺服器*也必須移除如果**droplogins**指定。 **@droplogins** 是**char （10)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -71,12 +73,12 @@ sp_dropserver [ @server = ] 'server'
 sp_dropserver 'ACCOUNTS', 'droplogins';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [安全性預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropremotelogin &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpremotelogin &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

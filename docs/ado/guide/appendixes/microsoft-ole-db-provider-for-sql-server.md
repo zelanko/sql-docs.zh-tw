@@ -1,35 +1,37 @@
 ---
-title: "Microsoft OLE DB Provider for SQL Server |Microsoft 文件"
+title: Microsoft OLE DB Provider for SQL Server |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 69e32ae7ddb254e18d0789f22bb6471da17a0c5e
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 概觀
 Microsoft OLE DB Provider for SQL Server，SQLOLEDB，可讓 ADO 存取 Microsoft SQL Server。
+
+**注意：**不建議使用這個驅動程式，開發新項目。 新的 OLE DB 提供者會呼叫[Microsoft OLE DB 驅動程式的 SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 這會更新為最新的伺服器功能從現在開始。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
  若要連接到此提供者，設定*提供者*引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：

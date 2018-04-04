@@ -3,7 +3,7 @@
 # 概觀
 ## [SQL Server 2016 Integration Services 的新功能](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [SQL Server 2017 中的 Integration Services 新增功能](what-s-new-in-integration-services-in-sql-server-2017.md)
-## [新增及更新的發行項](new-updated-integration-services.md)
+## [新文章及更新的文章](new-updated-integration-services.md)
 ## [SQL Server 各版本支援的 Integration Services 功能](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services 回溯相容性](integration-services-backward-compatibility.md)
 
@@ -104,7 +104,9 @@
 
 # [匯入和匯出資料](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [變更資料擷取](../integration-services/change-data-capture/change-data-capture-ssis.md)
+# [將 Excel 作為來源或目標載入資料](load-data-to-from-excel-with-ssis.md)
+
+# [異動資料擷取](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Microsoft Connector for SAP BW](microsoft-connector-for-sap-bw.md)
 ## [安裝 Microsoft Connector for SAP BW](installing-the-microsoft-connector-for-sap-bw.md)
@@ -177,6 +179,6 @@
 # 資源
 ## [在 SSIS 論壇中取得協助](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ## [在 Stack Overflow 取得協助](http://stackoverflow.com/questions/tagged/ssis)  
-## [關注 SSIS 團隊部落格](https://blogs.msdn.microsoft.com/ssis/)
+## [關注 SSIS 小組部落格](https://blogs.msdn.microsoft.com/ssis/)
 ## [回報問題及建議功能](https://feedback.azure.com/forums/908035-sql-server)
 ## [在您的電腦上取得文件](../sql-server/sql-server-help-installation.md)

@@ -1,4 +1,4 @@
----
+﻿---
 title: "備份和還原資料庫，使用 SQL Operations Studio （預覽） |Microsoft 文件"
 description: "了解如何備份和還原資料庫，使用 SQL Operations Studio （預覽）"
 ms.custom: tools|sos
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

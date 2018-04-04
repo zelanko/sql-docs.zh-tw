@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e3ad4cad-d9eb-4824-802c-90f747b32507
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e63562bec038ae0f0fe41166a32f581b016cd02
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 8b572cc5d5455cefb514ee921b76e1d72f80e680
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="in-memory-oltp-code-samples"></a>記憶體中 OLTP 程式碼範例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本節包含示範記憶體中 OLTP 的程式碼範例：  
+  本節包含示範記憶體中 OLTP 的程式碼範例：  
   
 -   [示範：記憶體中 OLTP 的效能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)  
   

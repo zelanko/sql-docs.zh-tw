@@ -1,42 +1,196 @@
 ---
-title: "SQL Server 上安裝預先定型的機器學習模型 |Microsoft 文件"
-ms.date: 11/16/2017
-ms.reviewer: 
+title: SQL Server 上安裝預先定型的機器學習模型 |Microsoft 文件
+ms.date: 03/14/2018
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 5d9f60684cc749c35674233fbdaaa222953396d9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: a1228597a1781ca13952a249f554bdea0a990a4d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="install-pretrained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習模型 SQL Server 上
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習模型 SQL Server 上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何將預先定型的模型加入至 SQL Server 執行個體在具有 R 服務或機器學習服務安裝。
+本文說明如何將預先定型的模型加入至 SQL Server 執行個體在具有 R Services 或 SQL Server 機器學習服務安裝。 
 
-Microsoft R Server 或 Server 機器學習中用於個別的 Windows 安裝程式時，使用選項來安裝預先定型的模型。 您可以使用此安裝程式取得只預先定型的模型，或您可以用它來[升級機器學習元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)中 SQL Server 2016 或 SQL Server 2017 的執行個體。
+預先定型的模型是為了協助的客戶需要以執行工作，例如情緒分析或映像功能，其潛在，但沒有取得大型資料集或複雜的模型定型的資源。 機器學習 Server 小組建立並定型這些模型，以協助您開始在文字和影像有效率地處理。 如需詳細資訊，請參閱[資源](#bkmk_resources)本文一節。
 
-執行安裝程式下載預先定型的模型之後，有一些額外的步驟來設定模型以供 SQL server。 本文說明處理程序。
+如需如何使用 SQL Server 資料的預先定型的模型的範例，請參閱此部落格由 SQL Server 機器學習小組：[使用 SQL Server 機器學習服務中的 Python 情緒分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
-如需如何使用 SQL Server 資料的預先定型的模型的範例，請參閱 SQL Server 機器學習小組的這篇部落格： 
+## <a name="pre-trained-model-availability"></a>預先定型的模型可用性
 
-+ [使用 SQL Server 機器學習服務中的 Python 情緒分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
+預先定型的模型是使用 Microsoft Machine Learning 伺服器 （或 Microsoft R Server，如果您要將模型加入 SQL Server 2016 安裝） 的安裝媒體來安裝。 您可以使用免費的開發人員版本可安裝此模型。 沒有不需額外成本模型安裝相關聯。 
 
-## <a name="benefits-of-using-pretrained-models"></a>使用 預先定型的模型的優點
+預先定型的模型使用的下列產品和語言。 安裝程式偵測到語言整合、 MicrosoftML 或 microsoftml 程式庫，，，然後將插入個別的媒體櫃的 預先定型的模型。 模型安裝完成時，您可以存取模型透過程式庫函式。
 
-為了協助的客戶需要以執行工作，例如情緒分析或映像功能，其潛在，但沒有取得大型資料集或複雜的模型定型的資源，這些預先定型的模型所建立。 使用預先定型的模型，可讓您開始文字和影像有效率地處理。
++ SQL Server 2016 R 服務 （資料庫）-R，與[MicrosoftML 程式庫](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2016 R 伺服器 （獨立）-R，與[MicrosoftML 程式庫](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 機器學習服務 （資料庫）-R [MicrosoftML 程式庫] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)，具有 Python [microsoftml 程式庫](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 機器學習伺服器 （獨立）-R [MicrosoftML 程式庫] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)，具有 Python [microsoftml 程式庫](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
+
+安裝程序稍有不同的 SQL Server 版本而定。 請參閱下列章節，以針對每個版本的指示。
+
+> [!NOTE]
+> 您不可以讀取或修改預先定型的模型。 它們會壓縮使用原生格式，來改善效能。
+
+## <a name="obtain-files-for-an-offline-installation"></a>取得檔案的離線安裝
+
+若要在沒有網際網路存取的伺服器上安裝預先定型的模型，您必須事先下載適當的安裝程式，並將安裝程式複製到伺服器上的本機資料夾。 
+
+所有的 R 伺服器和機器學習伺服器安裝程式會看到這個頁面下載連結：[離線安裝](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
+
+## <a name="install-pre-trained-models-on-sql-server-2016-r-services"></a>在 SQL Server 2016 R Services 上安裝預先定型的模型
+
+SQL Server 2016，您可以安裝並使用預先定型的 R 模型，只有在第一次升級機器學習中處理程序呼叫的元件，**繫結**。 
+
+您可以為 SQL Server 2016 R Services 安裝，以及選取執行個體、 執行個體的電腦上執行不同的 Windows installer Microsoft R Server 或 Server 機器學習**繫結**。 繫結執行個體表示的執行個體相關聯的支援原則變更為允許更頻繁更新。 
+
+1. 啟動個別的 windows 安裝程式針對[R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server)或[Server 機器學習](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
+
+2. 選取要升級的執行個體，然後選取 取得預先定型的模型的選項。
+
+    如需詳細資訊，請參閱[升級 SQL Server 所使用的機器學習元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+
+    如果您先前已執行要更新的 R 元件，而且只想要將預先定型的模型繫結，保留所有先前的選取項目**現狀**，並選取預先定型的模型選項。 
+    
+    無法取消選取任何先前選取的選項。如果您這樣做時，安裝程式會移除元件。
+
+3. 我們建議您接受模型位置的預設設定。
+
+4. 接受所有其他提示，包括授權合約。
+
+完成繫結之後，表示的 R 版本和執行個體相關聯的程式庫使用 R 伺服器或 Server 機器學習中所提供的較新版本取代。 
+
+SQL Server 2016，您必須執行一些額外的步驟，以向 SQL Server 2016 執行個體文件庫中的模型。 重複上述步驟，每個執行個體安裝的預先定型的模型。
+
+1. 開啟 Windows 命令提示字元**以系統管理員身分**。
+
+2. 瀏覽至安裝程式啟動載入器資料夾，針對 SQL Server，其中也包含 Microsoft R 安裝程式。 在 SQL Server 2016 的預設執行個體，將為資料夾：
+    
+    `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\SQL2017\x64\`
+
+3. 執行`RSetup.exe`和表示要安裝的元件、 版本，以及包含模型的來源檔案，使用此語法的資料夾：
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64"`。 
+
+    版本參數支援下列值：
+
+    + 發行候選版本 0: **9.1.0.0**
+    + 候選版 1: **9.2.0.22**
+    + RTM: **9.2.0.100**
+    + 累計更新 1: **9.2.0.24**
+    + 累計更新 4: **9.3.0**
+
+    > [!NOTE]
+    > 列出對應的 SQL Server 版本，讓您了解的更新發佈的時間。 如果您不確定的 SQL Server 安裝的版本，請開啟 R_SERVICES 資料夾的執行個體，並且開啟 RGui (`~\R_SERVICES\bin\x64`)。 開始畫面會列出適用於 Microsoft R Open 版本和機器學習 Server 版本。 
+
+    例如，若要使用預先定型的 R 模型的預設執行個體**R_SERVICES**，您可以執行這個命令：
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
+
+    具名執行個體，命令看起來會像下面這樣：
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL13.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
+
+4. 如果安裝成功，下列模型應加入至您`R_SERVICES`資料夾：
+
+    + AlexNet\_Updated.model
+    + ImageNet1K\_mean.xml
+    + pretrained.model
+    + ResNet\_101\_Updated.model
+    + ResNet\_18\_Updated.model
+    + ResNet\_50\_Updated.model
+
+## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>安裝 SQL Server 機器學習服務 （資料庫） 上的 預先定型的模型
+
+如果您已安裝 SQL Server 2017，您可以取得預先定型的模型有兩種：
+
++ 使用繫結，來升級的 Python 和 R 元件，並同時安裝預先定型的模型
++ 安裝預先定型的模型
+
+下面的指示說明的程序來升級機器學習服務元件，並在相同的時間取得預先定型的模型。
+
+1. 執行 windows 安裝程式的機器學習服務伺服器。 您可以從這個頁面上的連結下載安裝程式：[安裝機器學習 Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
+
+2. 如果您要安裝之模型到沒有網際網路存取的伺服器，請務必也從本頁面下載的安裝程式的預先定型的模型：[離線安裝的機器學習伺服器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)。
+
+3. 執行安裝程式。
+
+4. 若要同時升級 R 或 Python 元件，選取您想要更新的語言 （R，或 Python，或兩者）。
+
+    如果您之前安裝 Server 機器學習並更新 R 或 Python 元件使用的繫結選項，保留所有先前的選取項目**現狀**，然後選取 預先定型的模型選項。 無法取消選取任何先前選取的選項。如果您這樣做時，安裝程式會移除元件。
+
+5. 接受所有其他提示，包括授權合約。
+
+需要使用 with SQL Server 2017，不需要額外組態。
+
+> [!NOTE]
+> 
+> 對於 Python 模型，您可能會發生錯誤時從 Python 程式碼呼叫的模型檔案。 這是路徑的因為限制在目前的 Python 實作，其中的模型檔案長度限制。 已修正此問題，並將可在服務即將發行版本中。
+
+## <a name="install-pre-trained-models-with-sql-server-standalone-r-server"></a>使用 SQL Server 獨立 R 伺服器安裝預先定型的模型
+
+如果您已安裝舊版的 R 伺服器 （獨立） 使用 SQL Server 2016 安裝程式，您可以新增藉由升級使用較新的 windows installer 的 R 伺服器使用預先定型的模型的能力。 
+
+預先定型的模型先開始，變成可以做為選項與[Microsoft R Server 9.1](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/introducing-microsoft-r-server-9-1-release/)，但是已新增每個版本升級。 我們建議您取得最新版本，但此處所列的舊版[R Server 版本](https://docs.microsoft.com/machine-learning-server/install/r-server-install)
+
+下列指示說明如何升級的 R 元件，並同時將加入預先定型的模型。
+
+1. 啟動個別的 windows 安裝程式針對[R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server)或[Server 機器學習](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
+
+2. 選取您想要更新，然後選取的語言**Pre-trained 模型**選項。
+
+    > [!TIP]
+    > 如果您先前已執行安裝程式更新 R 伺服器 （獨立），而且只想要將預先定型的模型，保留所有先前的選取項目**現狀**，然後選取剛才預先**-定型模型**選項. **不這麼做**取消選取任何先前選取的選項; 如果您這樣做時，安裝程式會移除元件。
+
+    我們建議您接受模型位置的預設設定。
+
+3. 按一下 **[繼續]**。 
+
+4. 接受所有其他提示，包括授權合約。
+
+安裝完成之後，您必須執行一些額外的步驟來註冊預先定型的模型。
+
+1. 開啟 Windows 命令提示字元**以系統管理員身分**。
+
+2. R 伺服器 （獨立），其中也包含 Microsoft R 安裝程式，瀏覽至安裝程式啟動載入器資料夾。 
+
+3. 執行`RSetup.exe`和表示要安裝的元件、 版本，以及包含模型的來源檔案，使用此語法的資料夾：
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "~\R_SERVER\library\MicrosoftML\mxLibs\x64"`
+
+    版本參數支援下列值：
+
+    + 發行候選版本 0: **9.1.0.0**
+    + 候選版 1: **9.2.0.22**
+    + RTM: **9.2.0.100**
+    + 累計更新 1: **9.2.0.24**
+    + 累計更新 4: **9.3.0**
+
+    比方說，若要啟用預先定型的模型的最新版本的 R 中使用預設安裝的 R 伺服器 （獨立），您會執行此陳述式：
+
+    `RSetup.exe /install /component MLM /version 9.3.0 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
+
+## <a name="install-pre-trained-models-with-sql-server-2017-standalone-server"></a>使用 SQL Server 2017 獨立伺服器安裝預先定型的模型
+
+如果您安裝使用 SQL Server 2017 安裝程式的機器學習伺服器時，您會加入執行 windows 安裝程式的預先定型的模型。 您可以選取選項以升級的 R 或 Python 的元件，並同時加入 預先定型的模型。 
+
+安裝已完成不之後，需要任何額外的設定。
+
+## <a name="bkmk_resources"></a> 參考資料和資源
 
 目前可用的模型是情緒分析和影像分類的深度類神經網路 (DNN) 模型。 所有預先定型的模型已定型使用 Microsoft 的[計算網路 Toolkit](https://cntk.ai/Features/Index.html)，或**CNTK**。
 
@@ -47,130 +201,22 @@ Microsoft R Server 或 Server 機器學習中用於個別的 Windows 安裝程�
 + ResNet-101
 + AlexNet
 
-如需有關這些模型的詳細資訊，請參閱[預先定型的機器學習模型情緒分析及映像偵測](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
-
-如需深入了解網路及使用 CNTK 其實作的詳細資訊，請參閱下列文章：
+如需有關演算法用於這些深入學習模型，和實作的方式和定型使用 CNTK，請參閱下列文章：
 
 + [Microsoft 研究人員演算法設定 ImageNet 挑戰里程碑](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
 + [Microsoft 計算網路工具組提供最有效率的分散式的深層學習計算效能](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-## <a name="how-to-install-the-models-on-sql-server"></a>如何安裝 SQL Server 上的模型
-
-1. 執行個別的 windows 安裝程式的機器學習服務伺服器。 如需下載位置，請參閱：
-
-    + [安裝機器學習適用於 Windows 的伺服器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
-    + [安裝 R Server 9.1 適用於 Windows](https://docs.microsoft.com/r-server/install/r-server-install-windows)
-
-2. 選取要安裝的功能取決於您是在取得只模型，或執行其他使用安裝程式的更新。
- 
-    + 如果這是新安裝的機器學習伺服器，且不想進行其他變更 R 或 Python 元件，選取**只**預先定型的模型選項。 接受所有其他提示，包括授權合約。
-
-    + 若要同時升級 R 或 Python 元件，選取您想要更新的語言 （R，或 Python，或兩者） 和選取 預先定型的模型。 選取要套用這些變更的一或多個執行個體。
-
-    + 如果您之前安裝 Server 機器學習並更新 R 或 Python 元件使用的繫結選項，保留所有先前的選取項目**現狀**，然後選取 預先定型的模型選項。 無法取消選取任何先前選取的選項。如果您這樣做時，安裝程式會移除元件。
-
-3. 安裝完成時，開啟 Windows 命令提示字元**以系統管理員身分**，並瀏覽至安裝程式啟動載入器資料夾，針對 SQL Server，其中也包含 Microsoft R 安裝程式。 在 SQL Server 2017 的預設執行個體，將為資料夾：
-    
-    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
-
-4. 執行 RSetup.exe，表示要安裝的元件、 版本，以及包含模型的來源檔案，使用這些範例所示的命令列引數的資料夾：
-
-    + 若要使用模型與**R_SERVICES**:
-
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
-
-    例如，若要允許使用預先定型的模型的最新版本的 SQL Server 2017 的預設執行個體中的 R，您會執行此陳述式：
-
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
-
-    具名執行個體，命令看起來會像下面這樣：
-
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
-
-    + 若要使用預先定型的模型與 R 伺服器 （獨立） 或機器學習伺服器 （獨立）：
-
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "~\R_SERVER\library\MicrosoftML\mxLibs\x64"`
-
-    比方說，若要啟用用於預先定型的模型的最新版本的 R、 R Server 與 SQL Server 2016 中，預設安裝中，您會執行此陳述式：
-
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir ‘C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
-    
-    + 若要使用預先定型的模型與**PYTHON_SERVICES**:
-
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
-
-    比方說，若要允許使用 Python，SQL Server 2017 的預設執行個體中的最新版的預先定型的模型，您會執行此陳述式：
-
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
-
-    具名執行個體，命令看起來會像下面這樣：
-
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
-
-    + 若要使用 Python 預先定型模型使用機器學習 Server （獨立）：
-
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<sql_folder>\PYTHON_SERVER\site-packages\microsoftml\mxLibs"`
-
-    例如，假設使用 SQL Server 2017 安裝程式的預設安裝的機器學習伺服器 （獨立），執行此陳述式：
-
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER\Lib\site-packages\microsoftml\mxLibs"`
-
-5. 版本參數支援下列值：
-
-    + 發行候選版本 0: **9.1.0.0**
-    + 候選版 1: **9.2.0.22**
-    + RTM: **9.2.0.100**
-    + 累計更新 1: **9.2.0.24**
-
-6. 如果安裝成功，下列模型應加入至您的 R\_服務或 PYTHON\_SERVICES 資料夾：
-
-    - AlexNet\_Updated.model
-    - ImageNet1K\_mean.xml
-    - pretrained.model
-    - ResNet\_101\_Updated.model
-    - ResNet\_18\_Updated.model
-    - ResNet\_50\_Updated.model
-
-
-> [!NOTE]
-> 
-> 如果模型檔案的路徑太長，您可能會發生錯誤時從 Python 程式碼呼叫的模型檔案。 這是因為在目前的 Python 實作限制。 在服務即將發行版本中，將會修正此問題。
-
-## <a name="examples"></a>範例
-
-您已安裝的模型之後，您可以使用模型，從您的程式碼呼叫的方式。
-
-### <a name="image-featurization-example"></a>映像功能，其潛在範例
-
-映像預先定型的模型支援功能，其潛在您提供的映像。 這個特定模型已定型使用[CNTK](https://docs.microsoft.com/cognitive-toolkit/)。 
-
-若要使用模型，您呼叫**featurizeImage**轉換。
-
-+ [featurizeImage： 機器學習映像功能，其潛在轉換](https://docs.microsoft.com/r-server/r-reference/microsoftml/featurizeimage)
-
-在此範例中，請參閱程式碼的第二個區塊。 載入影像時，調整大小，以及預先定型的 convolutional DNN 模型的特徵化。 DNN featurizer 輸出接著用於定型影像分類的線性模型。
-
-影像必須調整大小以符合需求的定型的模型： 用於定型的影像時發生 224 x 224 像素。 如果您使用 AlexNet 模型，影像會調整大小以便 227 x 227 像素。
-
-```R
- model <- rxFastLinear(
-     Label ~ Features,
-     data = train,
-     mlTransforms = list(
-         loadImage(vars = list(Features = "Path")),
-         resizeImage(vars = "Features", width = 224, height = 224), 
-         extractPixels(vars = "Features"),
-         featurizeImage(var = "Features")
-         ),
-     mlTransformVars = "Path")
-```
-
-> [!NOTE]
-> 不可能讀取或修改預先定型的模型，因為它們會壓縮使用原生格式，來改善效能。
-
-### <a name="text-analysis-example"></a>文字分析範例
+## <a name="how-to-use-pre-trained-models-for-text-analysis"></a>如何預先定型的模型用於文字分析
 
 請參閱下列範例示範如何使用預先定型的文字如何模型文字分類：
 
 [使用文字 Featurizer 情緒分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
+
+## <a name="how-to-use-pre-trained-models-for-image-detection"></a>如何使用映像偵測預先定型的模型
+
+映像預先定型的模型支援功能，其潛在您提供的映像。 若要使用模型，您呼叫**featurizeImage**轉換。 載入影像時，調整大小，以及定型模型的特徵化。 DNN featurizer 輸出接著用於定型影像分類的線性模型。
+
+若要使用此模型中，所有映像必須調整大小以符合需求的定型的模型。 例如，如果您使用 AlexNet 模型時，影像應該能調整 227 x 227 像素。
+
+如需詳細資訊，請參閱[情緒分析及映像偵測預先定型的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)

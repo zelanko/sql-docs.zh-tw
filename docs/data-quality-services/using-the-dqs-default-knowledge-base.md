@@ -1,27 +1,28 @@
 ---
-title: "使用 DQS 預設知識庫 | Microsoft Docs"
-ms.custom: 
+title: 使用 DQS 預設知識庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d240a27603b780e919d29c24b922ce2c99e49aae
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 639b24549f52c4c27d0fb89a0ae02da30a0de078
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>使用 DQS 預設知識庫
   本主題說明隨著 **(DQS) 一併安裝的預設知識庫**DQS [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 資料。 這是包含下列定義域之預先建立的預設知識庫：  

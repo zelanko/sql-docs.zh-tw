@@ -1,15 +1,16 @@
 ---
-title: "執行知識探索 | Microsoft Docs"
-ms.custom: 
+title: 執行知識探索 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/04/2013
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.kbterms.f1
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: "38"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c9cb4fb01f38cf1a65069dbd41ccc4d5d0aa91b
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 0958845553a92f18e64c5fd39a3a62229bf9ed7b
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="perform-knowledge-discovery"></a>執行知識探索
   此主題描述如何透過知識探索來建立知識庫。 在探索程序中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 會透過電腦輔助的程序來分析範例資料來源中的資料，並將它所獲得的知識加入至知識庫。 您可以在知識探索活動或定義域管理活動的 **[管理定義域值]** 步驟中修改及增強這項知識。  

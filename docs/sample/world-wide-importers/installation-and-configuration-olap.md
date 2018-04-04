@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d07ffb9a-ac4f-4295-9aeb-ecfb97600134
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6df15e0b16a8b3988da616106c6a29fe88f8debc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a4d1f7c55112efe127e2435d84fc1efadd954495
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 安裝和設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW 資料庫的安裝和組態指示。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+WideWorldImportersDW 資料庫的安裝和組態指示。
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) （或更新版本） 或[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 若要使用此範例的完整版本，請使用 SQL Server Evaluation/Developer/Enterprise Edition。
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。 對於獲得最佳結果，請使用 2016 年 6 月版本或更新版本。
@@ -34,15 +36,15 @@ ms.lasthandoff: 12/05/2017
 
 最新版的範例：
 
-[wide world-匯入工具版本](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 將範例 WideWorldImportersDW 資料庫備份/bacpac 下載對應至 SQL Server 或 Azure SQL Database 的版本。
 
 重新建立範例資料庫的原始程式碼可從下列位置。 請注意，資料母體擴展基礎 ETL OLTP 資料庫 (WideWorldImporters):
 
-[wide world 匯入工具-來源](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>安裝
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -77,4 +79,4 @@ ms.lasthandoff: 12/05/2017
 1. 在 SQL Server Management Studio，連接到 WideWorldImportersDW 資料庫並開啟新的查詢視窗。
 2. 執行下列 T-SQL 命令來啟用資料庫中的 PolyBase:
 
-   執行 [應用程式]。[Configuration_ApplyPolyBase]
+   EXECUTE [Application].[Configuration_ApplyPolyBase]

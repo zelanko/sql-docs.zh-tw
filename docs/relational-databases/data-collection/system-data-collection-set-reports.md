@@ -1,16 +1,16 @@
 ---
-title: "系統資料收集組報表 | Microsoft Docs"
-ms.custom: 
+title: 系統資料收集組報表 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data collector [SQL Server], server activity
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/12/2018
  圖表下方的資料表會列出資料收集時間和對應的使用量資料。  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>資料庫的磁碟使用量: <database_name> 子報表  
- 當您在 [磁碟使用量收集組] 報表的摘要資料表中按一下資料庫名稱時，會顯示 [資料庫的磁碟使用量: <資料庫名稱>]****** 子報表。 這份報表會提供資料庫資料和交易記錄檔之空間使用量的數值與圖形細目。 資料檔的空間使用量會分類成配置給索引頁面、未配置空間、資料頁面和未使用空間的百分比。 這些類別目錄的定義方式如下：  
+ 當您在 [磁碟使用量收集組] 報表的摘要資料表中按一下資料庫名稱時，會顯示 [資料庫的磁碟使用量: <資料庫名稱>]  子報表。 這份報表會提供資料庫資料和交易記錄檔之空間使用量的數值與圖形細目。 資料檔的空間使用量會分類成配置給索引頁面、未配置空間、資料頁面和未使用空間的百分比。 這些類別目錄的定義方式如下：  
   
 |類別目錄|定義|  
 |--------------|----------------|  

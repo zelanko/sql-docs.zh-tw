@@ -1,31 +1,31 @@
 ---
-title: "工作空間資料庫 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/21/2018
+title: SQL Server Data Tools 中的工作空間資料庫 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ad6297a1485d710b6ef34cca88a5610efd6e7c9e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="workspace-database"></a>工作區資料庫 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立新的表格式模型專案時，會建立表格式模型工作區資料庫 (模型撰寫期間所使用)。
+  當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立新的表格式模型專案時，會建立表格式模型工作區資料庫 (模型撰寫期間所使用)。
   
 ## <a name="specifying-a-workspace-instance"></a>指定工作區執行個體  
   當您在 SSDT 中建立新的表格式模型專案時，可以指定撰寫專案時所要使用的 Analysis Services 執行個體。 自 2016 年 9 月發行的 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]版本 (14.0.60918.0) 中引進了兩種模式，可讓您在建立新的表格式模型專案時，指定工作區執行個體。 

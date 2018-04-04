@@ -1,31 +1,32 @@
 ---
-title: "繫結參數陣列 |Microsoft 文件"
-ms.custom: 
+title: 繫結參數陣列 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad5bb4e2281802c231b4dc7abcfd356c8ca4b72c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09b3a3c732b34a5a1a7a1d98e2ebe9740069f72e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>繫結參數陣列
 使用參數陣列的應用程式會將陣列中的 SQL 陳述式的參數繫結。 有兩種繫結樣式：  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  資料行取向繫結預設值。 應用程式也可以變更從資料列取向的繫結至資料行取向的繫結藉由設定 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性。 下圖顯示如何以資料行的方式繫結。  
   
- ![示範如何資料行 &#45; 明智的繫結運作](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![示範如何資料行&#45;明智繫結運作](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
  例如，下列程式碼將 10 個元素陣列繫結至參數的 PartID、 描述和價格的資料行，並執行陳述式來插入 10 個資料列。 它會使用資料行取向的繫結。  
   
@@ -59,9 +60,9 @@ SQLINTEGER     PartIDIndArray[ARRAY_SIZE], DescLenOrIndArray[ARRAY_SIZE],
 SQLUSMALLINT   i, ParamStatusArray[ARRAY_SIZE];  
 SQLULEN ParamsProcessed;  
   
-memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray);  
-memset(PartIDIndArray, 0, sizeof(PartIDIndArray);  
-memset(PriceIndArray, 0, sizeof(PriceIndArray);  
+memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray));  
+memset(PartIDIndArray, 0, sizeof(PartIDIndArray));  
+memset(PriceIndArray, 0, sizeof(PriceIndArray));  
   
 // Set the SQL_ATTR_PARAM_BIND_TYPE statement attribute to use  
 // column-wise binding.  
@@ -134,7 +135,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset
   
  其中資料列會從編號 1 參數集的大小。 位移，如果定義，是由 SQL_ATTR_PARAM_BIND_OFFSET_PTR 陳述式屬性指向的值。 下圖顯示如何以資料列的方式繫結。 參數可以放在任何順序中的結構，但是為了清楚起見的循序順序顯示。  
   
- ![顯示資料列如何 &#45; 明智的繫結運作](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![顯示資料列如何&#45;明智繫結運作](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
  下列程式碼會建立結構，與要儲存在 PartID、 描述和價格的資料行之值的項目。 然後配置 10 個元素陣列這些結構，並將它繫結至 PartID、 描述和價格資料行，使用資料列取向的繫結的參數。 接著，它會執行陳述式，以插入 10 個資料列。  
   

@@ -20,11 +20,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dab1a9648865f13d1741917bd389eae287afd7f2
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>在資料庫 Python 分析的 SQL 開發人員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/11/2018
 
 ### <a name="prerequisites"></a>필수 구성 요소
 
-+ 機器學習服務與啟用的 Python 安裝 SQL Server 2017 的執行個體。 如需詳細資訊，請參閱[設定 SQL Server 機器學習服務使用 Python](../python/setup-python-machine-learning-services.md)。
++ 機器學習服務與啟用的 Python 安裝 SQL Server 2017 的執行個體。 如需詳細資訊，請參閱[安裝 SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。
 + 您用於本逐步解說的登入必須具有權限，可以建立資料庫和其他物件、上傳資料、選取資料，以及執行預存程序。
 
 ### <a name="experience-level"></a>遇到層級

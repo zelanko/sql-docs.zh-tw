@@ -1,4 +1,4 @@
----
+﻿---
 title: "建立程式碼片段中 SQL Operations Studio （預覽） |Microsoft 文件"
 description: "了解如何建立和使用 SQL Operations Studio （預覽） 中的 SQL 程式碼片段"
 ms.custom: tools|sos
@@ -8,7 +8,7 @@ ms.prod: sql-non-specified
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

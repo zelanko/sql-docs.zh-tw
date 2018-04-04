@@ -19,18 +19,19 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04c90ac8025d4939c6c9606d63c5d35c5d68aabe
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: a60c387a8e863b864cbbbd5665686f7ffc3643d3
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="optimize-sql-trace"></a>最佳化 SQL 追蹤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 因為執行 SQL 追蹤會使用系統資源來收集資料，所以會產生效能成本，但是有許多方式可以使成本降至最少。 若要使追蹤導致的效能成本降至最少，請試試下列方法：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  因為執行 SQL 追蹤會使用系統資源來收集資料，所以會產生效能成本，但是有許多方式可以使成本降至最少。 若要使追蹤導致的效能成本降至最少，請試試下列方法：  
   
 -   考慮使用命令提示字元來執行追蹤。 使用圖形化使用者介面會妨礙效能。 如需詳細資訊，請參閱 [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。  
   

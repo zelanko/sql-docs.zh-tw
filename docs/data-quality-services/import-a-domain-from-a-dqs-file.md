@@ -1,27 +1,28 @@
 ---
-title: "從 .dqs 檔案匯入定義域 | Microsoft Docs"
-ms.custom: 
+title: 從 .dqs 檔案匯入定義域 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd289acfe5518dc484bfc1b368ff8326cebcea0b
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 54a1d2f72e65b054336f27cf629a40fec7abaa15
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中將 .dqs 檔案中的定義域匯入現有的知識庫中。 .dqs 資料檔的建立方式是從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式匯出定義域或知識庫。 .dqs 資料檔已加密，所以無法檢視。  

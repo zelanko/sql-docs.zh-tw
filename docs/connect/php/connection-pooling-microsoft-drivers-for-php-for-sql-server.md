@@ -1,28 +1,30 @@
 ---
-title: "連接共用 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文件"
-ms.custom: 
+title: 連接共用 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文件
+ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connection pooling support
+helpviewer_keywords:
+- connection pooling support
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5edf501c5a3a46fd30d21c4c5fdad81711c539d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 287cba2cbca687ef5006ae0410b2cd6a0f2598b7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>連接共用 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +39,13 @@ ms.lasthandoff: 11/18/2017
   
 -   關閉連接會將連接傳回集區。  
   
-如需連接共用的詳細資訊，請參閱 [驅動程式管理員連接共用](http://go.microsoft.com/fwlink/?linkid=119622)。  
+如需連接共用的詳細資訊，請參閱[驅動程式管理員連接共用](../../odbc/reference/develop-app/driver-manager-connection-pooling.md)。  
   
 ## <a name="enablingdisabling-connection-pooling"></a>啟用/停用連接共用
-### <a name="windows"></a>Windows
+### <a name="windows"></a>視窗
 您可以強制驅動程式所設定的值建立新的連接 （而不是相同的連接，連接集區中尋找） *ConnectionPooling*中的連接字串屬性**false** （或 0）。  
   
-如果*ConnectionPooling*省略從連接字串屬性，或者如果它設定為**true** （或 1） 驅動程式才會建立新的連接中沒有相同的連接連接集區。  
+如果*ConnectionPooling*省略從連接字串屬性，或者如果它設定為**true** （或 1） 驅動程式只會建立新的連接中沒有相同的連接連接集區。  
   
 如需其他連接屬性的相關資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
 ### <a name="linux-and-mac-os-x"></a>Linux 和 Mac OS X
@@ -65,7 +67,8 @@ CPTimeout=<int value>
 Pooling=No
 ```
   
-## <a name="see-also"></a>請參閱＜  
-[如何：使用 Windows 驗證進行連接](../../connect/php/how-to-connect-using-windows-authentication.md)  
-[如何：使用 SQL Server 驗證進行連接](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+## <a name="see-also"></a>另請參閱  
+[如何：使用 Windows 驗證進行連線](../../connect/php/how-to-connect-using-windows-authentication.md)
+
+[如何：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

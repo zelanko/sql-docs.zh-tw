@@ -13,11 +13,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2649596abecfd92d40a860e743c867e0ff80ed26
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="introducing-revoscalepy"></a>介紹 revoscalepy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -108,7 +108,7 @@ SQL Server，並將 Python 某些情況下使用不同的資料類型。 如需 
 
 Python MicrosoftML 也包括各種不同的轉換和 helper 函式，例如：
 
-+ `rx_predict`產生從定型模型的預測，而且可以用於即時計分
++ `rx_predict` 產生從定型模型的預測，而且可以用於即時計分
 + 映像功能，其潛在函式
 + 進行文字處理和人氣擷取函式
 
@@ -157,7 +157,7 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 若要在 SQL Server 中執行 Python 程式碼，您必須已安裝 SQL Server 2017 和功能**機器學習服務**，並啟用 Python 語言。 舊版的 SQL Server 不支援 Python 整合。
 
 > [!NOTE]
-> Python 的開放原始碼散發套件不支援 SQL Server 計算內容。 不過，如果您要發佈和取用從 Windows 的 Python 應用程式，您可以安裝 Microsoft Machine Learning 伺服器而不需要安裝 SQL Server。 如需詳細資訊，請參閱[建立獨立 R 伺服器](../r/create-a-standalone-r-server.md)
+> Python 的開放原始碼散發套件不支援 SQL Server 計算內容。 不過，如果您要發佈和取用從 Windows 的 Python 應用程式，您可以安裝 Microsoft Machine Learning 伺服器而不需要安裝 SQL Server。 如需詳細資訊，請參閱[安裝 SQL Server 2017 機器學習伺服器 （獨立）](../install/sql-machine-learning-standalone-windows-install.md)。
 
 ## <a name="get-more-help"></a>取得更多說明
 

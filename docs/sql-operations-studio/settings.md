@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Operations Studio （預覽） 使用者和工作區設定 |Microsoft 文件"
 description: "如何修改 SQL Operations Studio （預覽） 使用者和工作區設定。"
 ms.custom: tools|sos
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu
