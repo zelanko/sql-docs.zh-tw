@@ -1,19 +1,19 @@
-# [概觀](tabular-models-ssas.md)  
-
-# [建立表格式模型](tabular-model-solutions-ssas-tabular.md)  
+# [表格式模型](tabular-models-ssas.md)  
+## [相容性層級](compatibility-level-for-tabular-models-in-analysis-services.md)  
 ## [表格式 1400 模型中支援的資料來源](data-sources-supported-ssas-tabular-1400.md)  
 ## [表格式 1200 模型中支援的資料來源](data-sources-supported-ssas-tabular.md)  
 ## [支援的資料類型](data-types-supported-ssas-tabular.md)  
+
+# 建立表格式模型
 ## [表格式模型設計師](tabular-model-designer-ssas.md)  
-## [工作空間資料庫](workspace-database-ssas-tabular.md)  
-## [相容性層級](compatibility-level-for-tabular-models-in-analysis-services.md)  
+## [工作區資料庫](workspace-database-ssas-tabular.md)  
 
 ## [表格式模型專案](tabular-model-projects-ssas-tabular.md)  
 ### [建立新的表格式模型專案](create-a-new-tabular-model-project-analysis-services.md)  
 ### [從 Analysis Services 匯入](import-from-analysis-services-ssas-tabular.md)  
 ### [從 Power Pivot 匯入](import-from-power-pivot-ssas-tabular.md)  
 
-## [屬性](properties-ssas-tabular.md)  
+## 屬性
 ### [Power View - 報表屬性](power-view-reporting-properties-ssas-tabular.md)  
 ### [Power View - 設定預設欄位集](power-view-configure-default-field-set-for-reports.md)  
 ### [Power View - 設定資料表行為屬性](power-view-configure-table-behavior-properties-for-reports.md)  
