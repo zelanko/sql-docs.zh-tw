@@ -1,20 +1,22 @@
 ---
-title: "使用 WinForms ReportViewer 控制項 | Microsoft Docs"
-ms.custom: 
+title: 使用 WinForms ReportViewer 控制項 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: application-integration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: ReportViewer controls
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile

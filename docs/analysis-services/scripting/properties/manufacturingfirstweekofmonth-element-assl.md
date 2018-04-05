@@ -1,24 +1,29 @@
 ---
-title: "ManufacturingFirstWeekOfMonth 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
+title: ManufacturingFirstWeekOfMonth 元素 (ASSL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: ManufacturingFirstWeekOfMonth Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- ManufacturingFirstWeekOfMonth Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: ManufacturingFirstWeekOfMonth
-helpviewer_keywords: ManufacturingFirstWeekOfMonth element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- ManufacturingFirstWeekOfMonth
+helpviewer_keywords:
+- ManufacturingFirstWeekOfMonth element
 ms.assetid: adb76a2f-c6c3-459e-a441-e80adad76ff1
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile

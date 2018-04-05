@@ -1,23 +1,24 @@
 ---
-title: "雙斜線 （註解） (DMX) |Microsoft 文件"
-ms.custom: 
+title: 雙斜線 （註解） (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - double forward slashes
 - commenting characters
 - // (comment)
 ms.assetid: c2ab9ca1-9fc9-4162-97f9-a9433d189220
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre

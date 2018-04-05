@@ -1,24 +1,29 @@
 ---
-title: "DefaultMeasure 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
+title: DefaultMeasure 元素 (ASSL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DefaultMeasure Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- DefaultMeasure Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: DefaultMeasure
-helpviewer_keywords: DefaultMeasure element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- DefaultMeasure
+helpviewer_keywords:
+- DefaultMeasure element
 ms.assetid: ceac8b3d-ebae-463f-9e8c-506281d42792
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile

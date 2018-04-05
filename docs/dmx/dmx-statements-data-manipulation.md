@@ -1,23 +1,24 @@
 ---
-title: "資料採礦延伸模組 (DMX) 資料操作陳述式 |Microsoft 文件"
-ms.custom: 
+title: 資料採礦延伸模組 (DMX) 資料操作陳述式 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - statements [DMX], data manipulation statements
 - DML [DMX]
 - data manipulation statements [DMX]
 ms.assetid: 68fe9efd-487f-4aa5-952c-bd7d80a3dac0
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre

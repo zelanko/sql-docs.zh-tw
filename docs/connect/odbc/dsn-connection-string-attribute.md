@@ -1,29 +1,29 @@
 ---
-title: "資料來源名稱和連接字串關鍵字和屬性使用 in the ODBC Driver for SQL Server |Microsoft 文件"
-ms.custom: 
-ms.date: 01/24/2018
+title: 資料來源名稱和連接字串關鍵字和屬性使用 in the ODBC Driver for SQL Server |Microsoft 文件
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
 - DSN
 - Connection String Keywords
 - Connection Attributes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: v-jizho2
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09af03a1f7f9389bbbc86bc5f9f1a5a358aaf885
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 641d0cf4134dc488436f981df1d4bee2c089acd2
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>資料來源名稱和連接字串關鍵字和屬性
 
@@ -166,6 +166,7 @@ ms.lasthandoff: 02/11/2018
 |SqlPassword|SQL_AU_PASSWORD|SQL Server 驗證使用者名稱和密碼。|
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 整合式驗證。|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory 密碼驗證。|
+|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 互動的驗證。|
 | |SQL_AU_RESET|未設定。 覆寫任何 DSN 或連接字串設定。|
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION

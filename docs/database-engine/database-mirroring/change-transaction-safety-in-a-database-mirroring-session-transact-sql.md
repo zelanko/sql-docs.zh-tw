@@ -1,19 +1,21 @@
 ---
-title: "變更資料庫鏡像工作階段中的交易安全性 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 變更資料庫鏡像工作階段中的交易安全性 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: transaction safety [SQL Server database mirroring]
+helpviewer_keywords:
+- transaction safety [SQL Server database mirroring]
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

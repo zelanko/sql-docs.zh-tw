@@ -1,24 +1,29 @@
 ---
-title: "CubeBinding 資料類型 (out out-of-line) (ASSL) |Microsoft 文件"
-ms.custom: 
+title: CubeBinding 資料類型 (out out-of-line) (ASSL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CubeBinding Data Type (out-of-line)
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CubeBinding Data Type (out-of-line)
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: CubeBinding
-helpviewer_keywords: CubeBinding data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- CubeBinding
+helpviewer_keywords:
+- CubeBinding data type
 ms.assetid: 5e1ee8ef-855c-4f3d-ae21-a33360d00d66
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
