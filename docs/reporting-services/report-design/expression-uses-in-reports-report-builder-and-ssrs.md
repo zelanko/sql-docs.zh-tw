@@ -1,19 +1,20 @@
 ---
-title: "報表中的運算式用法 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 報表中的運算式用法 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: expressions [Reporting Services], about expressions
+helpviewer_keywords:
+- expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-caps.latest.revision: "59"
+caps.latest.revision: 59
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile

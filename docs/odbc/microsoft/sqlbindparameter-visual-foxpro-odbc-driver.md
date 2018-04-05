@@ -1,19 +1,21 @@
 ---
-title: "SQLBindParameter （Visual FoxPro ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: SQLBindParameter （Visual FoxPro ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLBindParameter function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords:
+- SQLBindParameter function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8a69fda2-8903-451a-b030-851bf05aa074
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,19 +1,20 @@
 ---
-title: "瀏覽模型，使用 Microsoft 一般內容樹狀檢視器 |Microsoft 文件"
-ms.custom: 
+title: 瀏覽模型，使用 Microsoft 一般內容樹狀檢視器 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: mining model content, viewing
+helpviewer_keywords:
+- mining model content, viewing
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile

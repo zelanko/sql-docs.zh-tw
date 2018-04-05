@@ -1,19 +1,21 @@
 ---
-title: "SQLSetEnvAttr 和資料指標程式庫 |Microsoft 文件"
-ms.custom: 
+title: SQLSetEnvAttr 和資料指標程式庫 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLSetEnvAttr function [ODBC], Cursor Library
+helpviewer_keywords:
+- SQLSetEnvAttr function [ODBC], Cursor Library
 ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

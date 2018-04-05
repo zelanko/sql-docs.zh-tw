@@ -1,20 +1,22 @@
 ---
-title: "設定資料來源屬性 (SSAS 多維度) |Microsoft 文件"
-ms.custom: 
+title: 設定資料來源屬性 (SSAS 多維度) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
-helpviewer_keywords: Data Source Properties dialog box
+f1_keywords:
+- sql13.asvs.sqlserverstudio.datasourceproperties.f1
+helpviewer_keywords:
+- Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile

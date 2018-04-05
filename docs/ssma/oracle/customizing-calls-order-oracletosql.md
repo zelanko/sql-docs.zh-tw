@@ -1,19 +1,21 @@
 ---
-title: "自訂呼叫順序 (OracleToSQL) |Microsoft 文件"
+title: 自訂呼叫順序 (OracleToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Customizing order
+helpviewer_keywords:
+- Customizing order
 ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro

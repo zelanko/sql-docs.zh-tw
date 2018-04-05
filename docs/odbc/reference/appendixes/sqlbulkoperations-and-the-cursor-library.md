@@ -1,19 +1,21 @@
 ---
-title: "SQLBulkOperations 和資料指標程式庫 |Microsoft 文件"
-ms.custom: 
+title: SQLBulkOperations 和資料指標程式庫 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLBulkOperations function [ODBC], Cursor Library
+helpviewer_keywords:
+- SQLBulkOperations function [ODBC], Cursor Library
 ms.assetid: f6c55be1-f020-4ae2-a423-ef8a0d877e20
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
