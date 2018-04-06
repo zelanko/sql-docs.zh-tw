@@ -1,16 +1,16 @@
 ---
 title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_tran_locks
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c54a97a7b84dcb4d9873ee2537e31714b6f62172
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,22 +53,23 @@ ms.lasthandoff: 02/20/2018
 |**resource_lock_partition**|**整數**|資料分割鎖定資源的鎖定資料分割識別碼。 非資料分割鎖定資源的值是 0。|  
 |**request_mode**|**nvarchar(60)**|要求的模式。 如果是已授與的要求，則為已授與的模式；如果是等待授與的要求，則為正在要求的模式。|  
 |**request_type**|**nvarchar(60)**|要求類型。 值為 LOCK。|  
-|**request_status**|**nvarchar(60)**|這項要求的目前狀態。 可能的值是 GRANTED、CONVERT、WAIT、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT 或 ABORT_BLOCKERS。 如需有關低優先順序等候和中止封鎖器的詳細資訊，請參閱*low_priority_lock_wait*區段[ALTER INDEX &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-index-transact-sql.md).|  
+|**request_status**|**nvarchar(60)**|這項要求的目前狀態。 可能的值是 GRANTED、CONVERT、WAIT、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT 或 ABORT_BLOCKERS。 如需有關低優先順序等候和中止封鎖器的詳細資訊，請參閱*low_priority_lock_wait*區段[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。|  
 |**request_reference_count**|**smallint**|傳回同一個要求器要求這項資源的大約次數。|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|目前擁有這項要求的工作階段識別碼。 主控工作階段識別碼會隨著分散式和繫結式交易而改變。 -2 值表示要求屬於被遺棄的分散式交易。 -3 值表示該要求是屬於延遲的復原交易，例如，由於回復作業無法順利完成，因而在復原時延遲的交易。|  
 |**request_exec_context_id**|**int**|目前擁有這項要求之處理序的工作階段內容識別碼。|  
 |**request_request_id**|**int**|目前擁有這項要求之處理序的要求識別碼 (批次識別碼)。 只要交易的使用中 Multiple Active Result Set (MARS) 連接一改變，這個值就會隨之改變。|  
 |**request_owner_type**|**nvarchar(60)**|擁有要求的實體類型。 鎖定管理員要求可以由各種實體所擁有。 可能的值為：<br /><br /> TRANSACTION = 要求是由交易所擁有。<br /><br /> CURSOR = 要求是由資料指標所擁有。<br /><br /> SESSION = 要求是由使用者工作階段所擁有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求是由交易工作空間的共用部分所擁有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求是由交易工作空間的獨佔部分所擁有。<br /><br /> NOTIFICATION_OBJECT = 要求是由內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所擁有。 這個元件已要求鎖定管理員在另一個元件等候取得鎖定時通知它。 FileTable 功能是使用此值的元件。<br /><br /> **注意：**工作空間會在內部使用，為編列的工作階段保留鎖定。|  
-|**request_owner_id**|**bigint**|這項要求的特定擁有者識別碼。<br /><br /> 當交易是要求的擁有者時，這個值包含交易識別碼。<br /><br /> 當 FileTable 是要求的擁有者**request_owner_id**具有下列值之一。<br /><br /> <br /><br /> -4： 已取得資料庫鎖定的 FileTable。<br /><br /> -3： 已取得資料表鎖定的 FileTable。<br /><br /> 其他值： 的值代表檔案控制代碼。 這個值也會顯示為**fcb_id**動態管理檢視中[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
+|**request_owner_id**|**bigint**|這項要求的特定擁有者識別碼。<br /><br /> 當交易是要求的擁有者時，這個值包含交易識別碼。<br /><br /> 當 FileTable 是要求的擁有者**request_owner_id**具有下列值之一。<br /><br /> <br /><br /> -4： 已取得資料庫鎖定的 FileTable。<br /><br /> -3： 已取得資料表鎖定的 FileTable。<br /><br /> 其他值： 的值代表檔案控制代碼。 這個值也會顯示為**fcb_id**動態管理檢視中[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。|  
 |**request_owner_guid**|**uniqueidentifier**|此要求之特定擁有者的 GUID。 只有值對應於該交易之 MS DTC GUID 的分散式交易才會使用這個值。|  
-|**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 這個值代表要求者的鎖定空間識別碼。 鎖定空間識別碼可以判斷兩個要求器是否彼此相容，如果其模式會彼此衝突，是否可被授與鎖定。|  
+|**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 這個值代表要求器的鎖定空間識別碼。 鎖定空間識別碼可以判斷兩個要求器是否彼此相容，如果其模式會彼此衝突，是否可被授與鎖定。|  
 |**lock_owner_address**|**varbinary(8)**|追蹤這項要求所用的內部資料結構記憶體位址。 此資料行可以加入與**sys.dm_os_waiting_tasks**中的資料行**sys.dm_os_waiting_tasks**。|  
 |**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> 此發行版本上的節點識別碼。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
  
 ## <a name="remarks"></a>備註  
  如果是已授與的要求狀態，表示已將資源鎖定授與要求器。 而等待中的要求，表示尚未授與該要求。 傳回下列等候要求類型**request_status**資料行：  
@@ -85,7 +86,7 @@ ms.lasthandoff: 02/20/2018
   
 -   SET TRANSACTION ISOLATION LEVEL，用來指定工作階段的鎖定層級。 如需詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
--   鎖定資料表提示，用來在 FROM 子句中指定資料表之個別參考的鎖定層級。 如需語法和限制，請參閱[資料表提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+-   鎖定資料表提示，用來在 FROM 子句中指定資料表之個別參考的鎖定層級。 如需語法和限制，請參閱[資料表提示&#40;TRANSACT-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  在一個工作階段識別碼下執行資源，可以有一個以上的授與鎖定。 執行下一個工作階段的不同實體可以各自擁有相同的資源上的鎖定，而資訊顯示在**request_owner_type**和**request_owner_id**的資料行所傳回**sys.dm_tran_locks**。 如果多個執行個體的相同**request_owner_type**存在， **request_owner_id**資料行用來區別每個執行個體。 若是分散式交易， **request_owner_type**和**request_owner_guid**資料行會顯示不同的實體資訊。  
   
@@ -278,7 +279,7 @@ ms.lasthandoff: 02/20/2018
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- 下列 Xevent 與資料分割相關**交換器**和線上索引重建。 如需語法的詳細資訊，請參閱[ALTER TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md)和[ALTER INDEX &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+ 下列 Xevent 與資料分割相關**交換器**和線上索引重建。 如需語法的詳細資訊，請參閱[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)和[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
 -   lock_request_priority_state  
   

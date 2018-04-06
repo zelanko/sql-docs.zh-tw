@@ -1,33 +1,34 @@
 ---
-title: "資料來源精靈螢幕 2 (ODBC Driver for SQL Server) |Microsoft 文件"
-ms.custom: 
-ms.date: 09/27/2017
+title: 資料來源精靈螢幕 2 (ODBC Driver for SQL Server) |Microsoft 文件
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>資料來源精靈螢幕 2
 
 指定的驗證方法，並設定 Microsoft SQL Server 進階用戶端項目以及登入和密碼的 ODBC driver for SQL Server 將用來連接到 SQL Server 時設定資料來源。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 ### <a name="with-integrated-windows-authentication"></a>使用整合式的 Windows 驗證
 
@@ -47,9 +48,13 @@ ms.lasthandoff: 11/18/2017
 
 指定驅動程式會向使用 Azure Active Directory 登入識別碼和密碼的 SQL Server。
 
+### <a name="with-active-directory-interactive-authentication"></a>使用 Active Directory 互動式驗證
+
+指定驅動程式會向使用 Azure Active Directory 互動模式，藉由提供登入識別碼。 SQL Server 這將會觸發 Windows Azure 驗證提示對話方塊。
+
 ### <a name="login-id"></a>登入識別碼
 
-指定登入識別碼的驅動程式會使用連接到 SQL Server 時如果**與使用 SQL Server 驗證登入識別碼和使用者所輸入的密碼**或**使用登入識別碼與 Active Directory 密碼驗證和使用者所輸入的密碼**已選取。 這僅適用於用來決定伺服器預設值的連接，而不適用於建立此連接之後，使用資料來源所建立的後續連接。
+指定登入識別碼的驅動程式會使用連接到 SQL Server 時如果**與使用 SQL Server 驗證登入識別碼和使用者所輸入的密碼**或**使用登入識別碼與 Active Directory 密碼驗證和使用者所輸入的密碼**或**使用登入識別碼與 Active Directory 互動式驗證使用者輸入**已選取。 這僅適用於用來決定伺服器預設值的連接，而不適用於建立此連接之後，使用資料來源所建立的後續連接。
 
 ### <a name="password"></a>密碼
 

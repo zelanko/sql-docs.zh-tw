@@ -1,27 +1,28 @@
 ---
-title: "搭配使用一律加密 with the ODBC Driver for SQL Server |Microsoft 文件"
-ms.custom: 
+title: 搭配使用一律加密 with the ODBC Driver for SQL Server |Microsoft 文件
+ms.custom: ''
 ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: "3"
+caps.latest.revision: 3
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用一律加密 with the ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -333,10 +334,16 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ### <a name="column-encryption-key-caching"></a>快取的資料行加密金鑰
 
-若要減少資料行主要金鑰存放區來解密資料行加密金鑰的呼叫次數，驅動程式會快取在記憶體中的純文字 Cek。 從接收之後 ECEK 資料庫中繼資料，驅動程式會先嘗試尋找純文字 CEK 值對應的加密金鑰快取中。 驅動程式會呼叫金鑰存放區包含 CMK，只有當快取中找不到對應的純文字 CEK。
+若要減少資料行主要金鑰存放區來解密資料行加密金鑰的呼叫次數，驅動程式會快取在記憶體中的純文字 Cek。 通用的驅動程式，而不與任何一個連線相關聯 CEK 快取。 從接收之後 ECEK 資料庫中繼資料，驅動程式會先嘗試尋找純文字 CEK 值對應的加密金鑰快取中。 驅動程式會呼叫金鑰存放區包含 CMK，只有當快取中找不到對應的純文字 CEK。
 
 > [!NOTE]
 > ODBC Driver for SQL Server 中，在兩個小時逾時後收回快取中的項目。 這表示給定 ECEK，為驅動程式會連絡一次金鑰存放區的應用程式或每隔兩小時的存留期間，少者為準。
+
+從 SQL server ODBC 驅動程式 17.1，CEK 快取逾時可以使用來調整`SQL_COPT_SS_CEKCACHETTL`連接屬性，指定 CEK 會保留在快取的秒數。 由於全域快取的本質，此屬性可加以調整的有效驅動程式的任何連接控制代碼。 當也會收回快取 TTL 就會減少，這會超過新的 TTL 現有 Cek。 如果是 0，會快取沒有 Cek。
+
+### <a name="trusted-key-paths"></a>受信任機碼路徑
+
+從 SQL server ODBC 驅動程式 17.1`SQL_COPT_SS_TRUSTEDCMKPATHS`連接屬性允許應用程式需要 永遠加密作業，只能使用指定的 Cmk，由金鑰路徑清單。 根據預設，這個屬性是 NULL，表示驅動程式會接受任何金鑰的路徑。 若要使用這項功能，設定`SQL_COPT_SS_TRUSTEDCMKPATHS`指向列出允許的金鑰路徑的 null 分隔、 以 null 結束寬字元字串。 加密或解密作業使用連接控制代碼，它會設定---在其驅動程式會檢查 CMK 路徑所指定的伺服器中繼資料是否區分在這期間，這個屬性所指向的記憶體必須維持有效清單。 如果 CMK 路徑不在清單中，作業將會失敗。 應用程式可以變更這個屬性指向的記憶體，但不會再次將屬性變更它的受信任的 Cmk 清單的內容。
 
 ## <a name="working-with-column-master-key-stores"></a>使用資料行主要金鑰存放區
 
@@ -430,7 +437,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`CE203`|文件庫中找不到"CEKeyStoreProvider"匯出符號。|
 |`CE203`|已載入文件庫中的一個或多個提供者。|
 
-`SQLSetConnectAttr`傳回一般錯誤或成功的值和其他資訊可透過標準的 ODBC 診斷機制發生的任何錯誤。
+`SQLSetConnectAttr` 傳回一般錯誤或成功的值和其他資訊可透過標準的 ODBC 診斷機制發生的任何錯誤。
 
 > [!NOTE]
 > 應用程式設計者必須確保透過任何連接傳送要求的任何查詢之前，會載入任何自訂提供者。 這樣會產生錯誤：
@@ -567,8 +574,8 @@ SQL server ODBC 驅動程式 17 加密之前使用 SQLGetData 組件中無法擷
 
 |名稱|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|接受的值為`Enabled` / `Disabled`。<br>`Enabled`-啟用連接的一律加密功能。<br>`Disabled`-停用連線的永遠加密功能。 <br><br>預設值為 `Disabled`。|  
-|`KeyStoreAuthentication` | 有效值： `KeyVaultPassword`，`KeyVaultClientSecret` |
+|`ColumnEncryption`|接受的值為`Enabled` / `Disabled`。<br>`Enabled` -啟用連接的一律加密功能。<br>`Disabled` -停用連線的永遠加密功能。 <br><br>預設值為 `Disabled`。|  
+|`KeyStoreAuthentication` | 有效值： `KeyVaultPassword`， `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 當`KeyStoreAuthentication`  =  `KeyVaultPassword`，將此值設定為有效的 Azure Active Directory 使用者主體名稱。 <br>當`KeyStoreAuthetication`  =  `KeyVaultClientSecret`將此值設定為有效 Azure Active Directory 應用程式用戶端識別碼 |
 |`KeyStoreSecret` | 當`KeyStoreAuthentication`  =  `KeyVaultPassword`將此值設定為對應的使用者名稱的密碼。 <br>當`KeyStoreAuthentication`  =  `KeyVaultClientSecret`將此值設定為有效 Azure Active Directory 應用程式用戶端識別碼相關聯的應用程式密碼|
 
@@ -576,15 +583,17 @@ SQL server ODBC 驅動程式 17 加密之前使用 SQLGetData 組件中無法擷
 
 |名稱|型別|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|連線前|`SQL_COLUMN_ENCRYPTION_DISABLE`(0)--停用永遠加密 <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1)--啟用永遠加密|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|連線前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0)--停用永遠加密 <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1)--啟用永遠加密|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|連線後|[設定]嘗試載入 CEKeystoreProvider<br>[取得]傳回 CEKeystoreProvider 名稱|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|連線後|[設定]將資料寫入至 CEKeystoreProvider<br>[取得]從 CEKeystoreProvider 讀取資料|
+|`SQL_COPT_SS_CEKCACHETTL`|連線後|[設定]CEK 快取 TTL 設定<br>[取得]取得目前 CEK 快取 TTL|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|連線後|[設定]設定受信任的 CMK 路徑指標<br>[取得]取得目前的信任的 CMK 路徑指標|
 
 ### <a name="statement-attributes"></a>陳述式屬性
 
 |名稱|Description|  
 |----------|-----------------|  
-|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED`(0)--永遠加密已停用陳述式 <br>`SQL_CE_RESULTSETONLY`(1)--只解密。 結果集和傳回值都會解密，並不會加密參數 <br>`SQL_CE_ENABLED`(3)--一律加密是啟用及使用參數和結果|
+|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0)--永遠加密已停用陳述式 <br>`SQL_CE_RESULTSETONLY` (1)--只解密。 結果集和傳回值都會解密，並不會加密參數 <br>`SQL_CE_ENABLED` (3)--一律加密是啟用及使用參數和結果|
 
 ### <a name="descriptor-fields"></a>描述項欄位
 

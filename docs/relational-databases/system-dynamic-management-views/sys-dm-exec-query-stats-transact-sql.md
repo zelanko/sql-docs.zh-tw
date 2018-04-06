@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_stats_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-caps.latest.revision: 
+caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8874b5ba3eca2f3e9d72874af7440934fc2ec20f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a5ad810ae111ce25311510a545f61915891f4e27
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/03/2018
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary(64)**  |這是指查詢所屬批次或預存程序的 Token。<br /><br /> **sql_handle**搭配**statement_start_offset**和**statement_end_offset**，可用來擷取查詢的 SQL 文字，藉由呼叫**sys.dm_exec_sql_text**動態管理函數。|  
+|**sql_handle**|**varbinary(64)**  |這是指查詢所屬批次或預存程序的 Token。<br /><br /> **sql_handle**搭配**statement_start_offset**和**statement_end_offset**，可用來擷取查詢的 SQL 文字，藉由呼叫**sys.dm_exec_sql_文字**動態管理函數。|  
 |**statement_start_offset**|**int**|表示資料列於其批次或保存物件的文字中所描述之查詢的起始位置 (由 0 開始並以位元組為單位)。|  
 |**statement_end_offset**|**int**|表示資料列於其批次或保存物件的文字中所描述之查詢的結束位置 (由 0 開始並以位元組為單位)。 之前的版本[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，值為-1 表示批次的結尾。 已不再包含尾端的註解。|  
 |**plan_generation_num**|**bigint**|可用於重新編譯之後區分計畫執行個體的序號。|  
@@ -128,9 +128,10 @@ ms.lasthandoff: 02/03/2018
 > <sup>1</sup>原生編譯的預存程序啟用統計資料收集時，會收集的工作者時間以毫秒為單位。 如果查詢的執行少於一毫秒，值將會是 0。  
   
 ## <a name="permissions"></a>Permissions  
+
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。
-  
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+   
 ## <a name="remarks"></a>備註  
  完成查詢時，會更新檢視中的統計資料。  
   
@@ -177,7 +178,7 @@ ORDER BY qs.execution_count DESC;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+[執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     

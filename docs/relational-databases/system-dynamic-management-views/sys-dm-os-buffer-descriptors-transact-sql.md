@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_buffer_descriptors (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_os_buffer_descriptors (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_buffer_descriptors_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-caps.latest.revision: 
+caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c03bbdbe271500ecf417fe3b5c125304001a05e
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: d64627b7d232503494a3aff308eb24273df98313
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,9 +59,10 @@ ms.lasthandoff: 03/15/2018
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
 ## <a name="permissions"></a>Permissions  
+
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
-  
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+   
 ## <a name="remarks"></a>備註  
  sys.dm_os_buffer_descriptors 會傳回正由 Resource 資料庫的頁面。 sys.dm_os_buffer_descriptors 不會傳回可用或奪取分頁，或頁面讀取時發生錯誤的相關資訊。  
   

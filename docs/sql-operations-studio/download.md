@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b52d06c5981a994ccb5ef3ace486ee0f6a946c38
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 31b4ee5f9bef46f6b3e654d1cf16a7abbd2cbac8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>下載並安裝 SQL Operations Studio （預覽）
 
@@ -79,6 +79,15 @@ ms.lasthandoff: 04/04/2018
    sqlops
    ```
 
+   **.tar.gz 安裝：**
+   ```bash 
+   cd ~ 
+   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc source ~/.bashrc 
+   sqlops 
+   ``` 
+
    > [!NOTE]
    > 在 Debian、 Redhat 和 Ubuntu，您可能遺失相依性。 若要安裝這些相依性，根據您的 Linux 版本中使用下列命令：
    
@@ -134,7 +143,7 @@ ms.lasthandoff: 04/04/2018
 - Ubuntu 16.04
 
 ## <a name="check-for-updates"></a>檢查更新
-若要檢查最新的更新，請按一下 的視窗，然後按一下左下角的齒輪圖示**檢查更新**
+若要檢查最新的更新，請按一下 [的視窗，然後按一下左下角的齒輪圖示**檢查更新**
 
 ## <a name="next-steps"></a>後續步驟
 
