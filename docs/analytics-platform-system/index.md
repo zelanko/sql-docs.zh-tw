@@ -1,24 +1,24 @@
 ---
-title: "產品文件 (Analytics Platform System)"
-description: "Microsoft Analytics Platform System (APS) 是專為資料倉儲和巨量資料分析而設計的資料平台，可提供深層資料整合、高速查詢處理、高擴充性儲存體和端對端商業智慧方案的簡易維護。"
+title: 產品文件 (Analytics Platform System)
+description: Microsoft Analytics Platform System (APS) 是專為資料倉儲和巨量資料分析而設計的資料平台，可提供深層資料整合、高速查詢處理、高擴充性儲存體和端對端商業智慧方案的簡易維護。
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.suite: sql
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 713516fc-3101-4a03-a331-d817c29c7703
-caps.latest.revision: "49"
-ms.openlocfilehash: bdfb4f595504ee97abf47ac384d3a149dac53fb0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 49
+ms.openlocfilehash: 15fa4f0cf02565510ea888183feec52bf640aa36
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS) 是專為資料倉儲和巨量資料分析而設計的資料平台，可提供深層資料整合、高速查詢處理、高擴充性儲存體和端對端商業智慧方案的簡易維護。  
@@ -53,7 +53,7 @@ Analytics Platform System 不僅快速、可擴充，並設計有高備援與高
   
 -   您可以使用商業智慧工具，來建立完整的端對端解決方案。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 如需 PDW 優勢的詳細資訊，請參閱 MSDN 上的 [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](http://msdn.microsoft.com/library/dn520808.aspx) (下一代資料倉儲和巨量資料解決方案的突破性平台) 白皮書。  
   
