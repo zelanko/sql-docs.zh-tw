@@ -1,26 +1,26 @@
 ---
-title: "下載並套用 Microsoft 更新 (Analytics Platform System)"
+title: 下載並套用 Microsoft 更新 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: "51"
-ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 51
+ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="download-and-apply-microsoft-updates"></a>下載並套用 Microsoft 更新
 本主題討論如何從 Microsoft Update 類別目錄至 Windows Server Update Services (WSUS) 下載更新，並將這些更新套用至 Analytics Platform System 應用裝置伺服器。 Microsoft Update 將適用於 Windows 和 SQL Server 安裝所有適用的更新。 VMM 虛擬機器應用裝置上安裝 WSUS。  
@@ -32,22 +32,22 @@ ms.lasthandoff: 12/21/2017
 >   
 > 設備正在使用時不套用 Microsoft 更新。 套用更新，可能會導致重新啟動的應用裝置節點。 未使用的應用裝置時，應該在維護期間套用更新。  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>필수 구성 요소  
 執行這些步驟之前，您需要：  
   
--   設定您的應用裝置上的 WSUS 中的指示[設定 Windows Server Update Services &#40;WSUS &#41;&#40;Analytics Platform System &#41;](configure-windows-server-update-services-wsus.md).  
+-   設定您的應用裝置上的 WSUS 中的指示[設定 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)。  
   
 -   網狀架構網域系統管理員帳戶登入資訊的知識。  
   
 -   沒有登入具有權限可以存取分析平台的系統管理主控台檢視應用裝置的狀態資訊。  
   
--   在大部分情況下，WSUS 需要存取應用裝置以外的伺服器。 若要支援分析平台系統 DNS 可以設定為支援的外部名稱轉寄站，要使用外部 DNS 伺服器來解析名稱 Analytics Platform System 主機和虛擬機器 (Vm) 可讓外部的這個使用案例應用裝置。 如需詳細資訊，請參閱[使用 DNS 轉寄站來解析非應用裝置的 DNS 名稱 &#40;Analytics Platform System &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   在大部分情況下，WSUS 需要存取應用裝置以外的伺服器。 若要支援分析平台系統 DNS 可以設定為支援的外部名稱轉寄站，要使用外部 DNS 伺服器來解析名稱 Analytics Platform System 主機和虛擬機器 (Vm) 可讓外部的這個使用案例應用裝置。 如需詳細資訊，請參閱[使用 DNS 轉寄站來解析非應用裝置的 DNS 名稱&#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
   
 ## <a name="bkmk_ImportUpdates"></a>若要下載並套用 Microsoft 更新  
   
 #### <a name="verify-the-appliance-state-indicators"></a>請確認應用裝置狀態指標  
   
-1.  開啟管理主控台並巡覽至應用裝置狀態 頁面上。 如需詳細資訊，請參閱[使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+1.  開啟管理主控台並巡覽至應用裝置狀態 頁面上。 如需詳細資訊，請參閱[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
 2.  請確認所有節點上應用裝置狀態的狀態指示器。  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/21/2017
   
     ![選取所有套用，然後按一下 核准的更新。] (./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  選取您在中建立的應用裝置伺服器群組[設定 Windows Server Update Services &#40;WSUS &#41;&#40;Analytics Platform System &#41;](configure-windows-server-update-services-wsus.md).  
+4.  選取您在中建立的應用裝置伺服器群組[設定 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)。  
   
 5.  按一下**已核准安裝**，然後按一下 **確定**。  
   
@@ -111,9 +111,9 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="apply-microsoft-updates"></a>套用 Microsoft 更新  
   
-1.  開始之前，請開啟[使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)，按一下 **應用裝置狀態**索引標籤，然後確認**叢集**和**網路**資料行顯示綠色 （或 NA） 所有節點。 如果任何警示都存在於這些資料行，設備可能無法正確安裝更新。 位址中的所有現有警示**叢集**和**網路**之前的資料行。  
+1.  開始之前，請開啟[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)，按一下 **應用裝置狀態**索引標籤，然後確認**叢集**和**網路**資料行顯示綠色 （或 NA） 所有節點。 如果任何警示都存在於這些資料行，設備可能無法正確安裝更新。 位址中的所有現有警示**叢集**和**網路**之前的資料行。  
   
-2.  登入*< 網域名稱 >***-HST01**節點做為網狀架構網域系統管理員。  
+2.  登入*< 網域名稱 > * * *-HST01** 節點做為網狀架構網域系統管理員。  
   
 3.  若要套用所有 wsus 核准的更新，執行更新程式。 請參閱[執行更新程式](#RunUpdateWizard)下方的指示。  
   
@@ -125,11 +125,11 @@ ms.lasthandoff: 12/21/2017
   
 3.  展開**所有電腦**。  
   
-4.  選取您在中建立的應用裝置伺服器群組[設定 Windows Server Update Services &#40;WSUS &#41;&#40;Analytics Platform System &#41;](configure-windows-server-update-services-wsus.md).  
+4.  選取您在中建立的應用裝置伺服器群組[設定 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)。  
   
 5.  在**狀態**下拉式選單中，選取**任何**按一下**重新整理**。  
   
-6.  展開**更新服務**，  *<appliance name>* VMM，**更新**，**所有更新**，其中 *<appliance name>*是您的應用裝置名稱。  
+6.  展開**更新服務**， *<appliance name>*VMM，**更新**，**所有更新**，其中 *<appliance name>*是您的應用裝置名稱。  
   
 7.  在**所有更新**視窗中，將**核准**至**Any 除了拒絕**。  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="ensure-there-are-no-critical-alerts-in-the-sql-server-pdw-admin-console"></a>請在 SQL Server PDW 管理主控台中沒有任何重大警示  
   
-1.  開啟 [系統管理] 主控台中，按一下 [應用裝置狀態] 索引標籤。請參閱[使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md).  
+1.  開啟 [系統管理] 主控台中，按一下 [應用裝置狀態] 索引標籤。請參閱[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。  
   
 2.  確認**叢集**和**網路**資料行顯示綠色 （或 NA） 所有節點。 如果任何警示都存在於這些資料行，設備可能無法正確安裝更新。 如果沒有任何重大警示，請連絡支援服務。  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  請確定您已登入 HST01 節點做為網狀架構網域系統管理員。  
   
-2.  開啟命令提示字元視窗並輸入下列命令。 取代 *<parameter>* 與指定的資訊。  
+2.  開啟命令提示字元視窗並輸入下列命令。 取代*<parameter>*與指定的資訊。  
   
 **若要執行 Microsoft Update:**  
   
@@ -167,9 +167,9 @@ C:\pdwinst\media\setup.exe /action="MicrosoftUpdate" /DomainAdminPassword="<pass
 C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAdminPassword="<password>"  
 ```  
   
-## <a name="see-also"></a>請參閱  
-[解除安裝 Microsoft 更新 &#40;Analytics Platform System &#41;](uninstall-microsoft-updates.md)  
-[適用於分析的平台系統 Hotfix &#40;Analytics Platform System &#41;](apply-analytics-platform-system-hotfixes.md)  
-[分析平台系統 Hotfix &#40; 解除安裝Analytics Platform System &#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[軟體服務 &#40;Analytics Platform System &#41;](software-servicing.md)  
+## <a name="see-also"></a>另請參閱  
+[解除安裝 Microsoft 更新&#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[套用 Analytics Platform System Hotfix &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
+[解除安裝 Analytics Platform System Hotfix &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+[軟體服務&#40;Analytics Platform System&#41;](software-servicing.md)  
   

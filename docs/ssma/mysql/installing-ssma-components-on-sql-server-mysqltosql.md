@@ -21,13 +21,13 @@ ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5fd268b84300a15eb67b767858e7ac53ed2fdf3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>安裝 SQL Server (MySQLToSql) 上的 SSMA 元件
 除了安裝 SSMA，您也必須安裝元件正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 這些元件包括 SSMA 延伸模組組件，可支援資料移轉和 MySQL 提供者，以啟用伺服器對伺服器的連線。  
@@ -37,10 +37,10 @@ SSMA 延伸模組組件會加入資料庫， **sysdb**，以指定的執行個�
   
 此外，當您將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，SSMA 建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理程式作業，伺服器端資料移轉引擎是用來進行資料移轉。  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>필수 구성 요소  
 SSMA for MySQL 伺服器元件在安裝之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請確定電腦是否符合下列需求：  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 或更新版本。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  
   
 -   MySQL 用戶端提供者，以及您想要移轉的 MySQL 資料庫的連接。 您可以從 MySQL 產品媒體或 MySQL 網站上安裝提供者。  
   
@@ -57,9 +57,9 @@ SSMA for MySQL 伺服器元件在安裝之前[!INCLUDE[ssNoVersion](../../includ
   
 **若要安裝的延伸模組組件**  
   
-1.  複製 SSMA for MySQL 擴充功能套件。*n*.Install.exe 其中 *n* 為電腦執行的組建編號[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+1.  複製 SSMA for MySQL 擴充功能套件。*n*。Install.exe 其中*n*為電腦執行的組建編號[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-2.  按兩下 SSMA for MySQL 擴充功能套件。*n*.Install.exe。  
+2.  按兩下 SSMA for MySQL 擴充功能套件。*n*。Install.exe。  
   
 3.  在 歡迎使用 對話方塊中，按一下 **下一步**。  
   
@@ -81,13 +81,13 @@ SSMA for MySQL 伺服器元件在安裝之前[!INCLUDE[ssNoVersion](../../includ
   
     Windows 驗證會使用您的 Windows 認證來嘗試登入的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如果您選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]驗證，您必須輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登入名稱和密碼。  
   
-10. 在下一步 對話方塊中，選取**安裝公用程式資料庫**  *n* ，其中 *n* 是版本號碼，然後按一下**下一步**。  
+10. 在下一步 對話方塊中，選取**安裝公用程式資料庫** *n*，其中*n*是版本號碼，然後按一下**下一步**。  
   
     **Sysdb**建立資料庫的資料表和資料移轉 （使用伺服器端資料移轉引擎） 所需的預存程序會建立該資料庫中。  
   
 11. 若要安裝到其他執行個體的公用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，選取**是**，然後按一下 **下一步**。 或者，若要結束精靈，請按一下**否**。  
   
-## <a name="see-also"></a>請參閱  
-[安裝 SSMA for MySQL 用戶端 &#40;MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>另請參閱  
+[安裝 MySQL 用戶端的 SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[移轉的 MySQL 資料庫到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

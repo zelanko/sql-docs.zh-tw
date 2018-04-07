@@ -1,30 +1,31 @@
 ---
-title: "專案設定 （移轉） (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 專案設定 （移轉） (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b032cb4f1453a3b9a2986e5d554d21c62e606001
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23e575ca7b7094ee835ff8432cfbdb906c875ce9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-sybasetosql"></a>專案設定 （移轉） (SybaseToSQL)
 [移轉] 頁面的**專案設定**對話方塊包含自訂如何 SSMA 會移轉資料從 Sybase Adaptive Server Enterprise (ASE) 來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 |詞彙|定義|  
 |--------|--------------|  
-|**取代不受支援的日期**|指定是否 SSMA 應該更正日期早於最舊的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日期 (01 1753 年 1 月)。<br /><br />若要保留目前的日期值，請選取**不執行任何動作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不會接受之前 01 年 1 月 1753年的日期的日期時間資料行中。 如果您使用較舊的日期，您必須將日期時間值轉換為字元的值。<br /><br />若要將之前 01 年 1 月 1753年的日期轉換成 NULL，選取**取代 NULL**。<br /><br />若要取代支援日期之前 01 年 1 月 1753年的日期，請選取**取代為最接近的支援日期**。<br /><br />**預設模式**： 不執行任何動作<br /><br />**開放式模式**： 不執行任何動作<br /><br />**完整模式**： 取代為最接近的支援的日期|  
+|**取代不受支援的日期**|指定是否 SSMA 應該更正日期早於最舊的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日期 (01 1753 年 1 月)。<br /><br />若要保留目前的日期值，請選取**不執行任何動作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 不會接受之前 01 年 1 月 1753年的日期的日期時間資料行中。 如果您使用較舊的日期，您必須將日期時間值轉換為字元的值。<br /><br />若要將之前 01 年 1 月 1753年的日期轉換成 NULL，選取**取代 NULL**。<br /><br />若要取代支援日期之前 01 年 1 月 1753年的日期，請選取**取代為最接近的支援日期**。<br /><br />**預設模式**： 不執行任何動作<br /><br />**開放式模式**： 不執行任何動作<br /><br />**完整模式**： 取代為最接近的支援的日期|  
   
 ## <a name="migration-engine"></a>移轉引擎  
   

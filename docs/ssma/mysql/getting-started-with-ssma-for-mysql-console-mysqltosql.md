@@ -1,15 +1,16 @@
 ---
-title: "開始使用 SSMA for MySQL 主控台 (MySQLToSQL) |Microsoft 文件"
+title: 開始使用 SSMA for MySQL 主控台 (MySQLToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - MySQL Console, launching console
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 595d3a566f472708ced96cbc5faaf2c359474d39
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 611070e6ad1a042beffdf0e9d225c496dd6b6e65
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>開始使用 SSMA for MySQL 主控台 (MySQLToSQL)
 本章節描述的程序啟動並開始使用 MySQL 的主控台應用程式。 亦會使用的慣例典型的 SSMA 主控台輸出視窗中。  
@@ -44,13 +45,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="procedure-for-using-the-ssma-console"></a>針對使用 SSMA 主控台的程序  
 Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作使用下列步驟：  
   
-1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔案 &#40;MySQLToSQL &#41;](../../ssma/mysql/creating-script-files-mysqltosql.md) .  
+1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔&#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-script-files-mysqltosql.md) 。  
   
-2.  [建立變數值的檔案 &#40;MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+2.  [建立變數值的檔案&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   
-3.  [建立伺服器連接檔案 &#40;MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+3.  [建立伺服器連接檔案&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
-4.  [執行 SSMA 主控台 &#40;MySQLToSQL &#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)根據您的專案需求  
+4.  [執行 SSMA 主控台&#40;MySQLToSQL&#41; ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)根據您的專案需求  
   
 其他功能：  
   
@@ -65,7 +66,7 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
   
 下表中的主控台輸出的色彩解譯：  
   
-|Color|描述|  
+|Color|Description|  
 |---------|---------------|  
 |紅色|執行期間發生嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  
@@ -74,6 +75,6 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
 |綠色|提示使用者輸入|  
 |11：青色|開始、 完成和作業的結果。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [安裝的 SSMA for MySQL](http://msdn.microsoft.com/en-us/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
   

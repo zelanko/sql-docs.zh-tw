@@ -1,26 +1,26 @@
 ---
-title: "建立 AP 網域系統管理員 (AP)"
+title: 建立 AP 網域系統管理員 (AP)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: 
-ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 7
+ms.openlocfilehash: 6842992931ba35f450d49d6db9beb803dce6b73a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>建立 AP 網域系統管理員
 某些作業需要 Analytics Platform System 網域系統管理員權限。 本節將說明如何建立其他的應用裝置的網域系統管理員。  
@@ -54,5 +54,5 @@ ms.lasthandoff: 02/15/2018
     這會將新使用者**Domain Admins**群組和**PdwControlNodeAccess**群組。 按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
-[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md)  
+[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

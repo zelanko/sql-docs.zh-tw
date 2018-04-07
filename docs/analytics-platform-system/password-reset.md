@@ -1,26 +1,26 @@
 ---
-title: "密碼重設 (Analytics Platform System)"
+title: 密碼重設 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
-caps.latest.revision: "26"
-ms.openlocfilehash: 5b342aca4498816e59e0fafcb882c5c039fed501
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 0574cf85dc4baaf6d92159aa423a0b1771042c59
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="password-reset"></a>密碼重設
 **密碼重設**頁面可讓您變更 Analytics Platform System 所用的系統管理員帳戶的密碼。  
@@ -30,10 +30,10 @@ ms.lasthandoff: 12/21/2017
   
 傳遞應用裝置時，您會獲得 Analytics Platform System 密碼。 當您要負責您的應用裝置，一律變更成新值的密碼。 有三個更新的密碼。 密碼不必與彼此相同。  
   
-**F <*xxxx*> \Administrator**  
+**F<*xxxx*>\Administrator**  
 **管理員**的應用裝置的網域。  
   
-**。 \Administrator**  
+**.\Administrator**  
 本機**管理員**裝載虛擬機器的電腦上的帳戶。  
   
 > [!IMPORTANT]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="to-reset-a-password"></a>重設密碼  
   
-1.  連接到控制節點並啟動**Configuration Manager** (**dwconfig.exe**)。 如需詳細資訊，請參閱[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+1.  連接到控制節點並啟動**Configuration Manager** (**dwconfig.exe**)。 如需詳細資訊，請參閱[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
 2.  在左窗格中**Configuration Manager**，按一下 **密碼重設**。  
   
@@ -58,9 +58,9 @@ ms.lasthandoff: 12/21/2017
   
     您對這些帳戶的變更不會影響任何目前作用中的工作階段，但將在下一次登入嘗試每個使用者套用。  
   
-    ![SQL Server DWConfig 密碼](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![SQL Server DWConfig Password](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
-## <a name="see-also"></a>請參閱  
-[設定系統管理員密碼來登入 AD 目錄服務中的節點還原模式 &#40; DSRM &#41;&#40;Analytics Platform System &#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
-[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>另請參閱  
+[在目錄服務還原模式中設定系統管理員密碼來登入 AD 節點&#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
+[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

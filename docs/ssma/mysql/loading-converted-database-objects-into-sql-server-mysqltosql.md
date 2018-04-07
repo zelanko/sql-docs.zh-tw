@@ -1,30 +1,31 @@
 ---
-title: "載入已轉換成 SQL Server (MySQLToSQL) 資料庫物件 |Microsoft 文件"
+title: 載入已轉換成 SQL Server (MySQLToSQL) 資料庫物件 |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a635fd98723c8a878d07db06787f8e91cf7a5e86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5baee887f8c3392c25a3bd683f6eb5850d33d78
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>載入已轉換成 SQL Server (MySQLToSQL) 資料庫物件
 MySQL 資料庫來轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您可以載入到產生的資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以讓 SSMA 建立物件，或您可以編寫物件指令碼，並自行執行指令碼。 此外，SSMA 可讓您更新目標中繼資料的實際內容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫。  
@@ -111,8 +112,8 @@ MySQL 資料庫來轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_
 轉換的資料庫物件載入 SQL Server 之後，您可以 grant 和 deny 權限這些物件。 最好執行這項操作，然後再移轉到 SQL Server 的資料。 如需如何協助保護物件的 SQL Server 中的資訊，請參閱 「 安全性考量的資料庫和資料庫應用程式"SQL Server 線上叢書 》 中。  
   
 ## <a name="next-step"></a>下一個步驟  
-移轉程序的下一個步驟是[將 MySQL 資料移轉至 SQL Server-Azure SQL DB &#40;MySQLToSQL &#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+移轉程序的下一個步驟是[將 MySQL 資料移轉至 SQL Server-Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>另請參閱  
+[移轉的 MySQL 資料庫到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -10,7 +10,7 @@ ms.component: OLE DB Driver
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1a3d642eb3cef1f9f01accd8b50f571f5e4903ac
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: fe6342e3a61ecc59594917431c026681e51f8e63
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server 程式設計的 OLE DB 驅動程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,27 +48,27 @@ ms.lasthandoff: 03/30/2018
  OLE DB 驅動程式的 SQL Server 使用 Windows DAC 中的元件，但並非明確相依於特定的 Windows DAC 版本。 您可以使用適用於 SQL Server 的 OLE DB 驅動程式會隨 SQL Server 的 OLE DB 驅動程式支援的任何作業系統的 Windows DAC 版本。  
   
 ## <a name="in-this-section"></a>本節內容  
- [SQL Server 的 OLE DB 驅動程式](../oledb/oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)  
  列出重要新 OLE DB 驅動程式的 SQL Server 功能。  
   
- [當使用 SQL Server 的 OLE DB 驅動程式](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
+ [使用 OLE DB Driver for SQL Server 的時機](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  討論如何 OLE DB 驅動程式的 SQL 伺服器配合 Microsoft 資料存取技術，它會比較 Windows DAC 和 ADO.NET，並提供指標以決定資料存取技術的使用。  
   
- [SQL Server 功能的 OLE DB 驅動程式](../oledb/features/oledb-driver-for-sql-server-features.md )  
+ [OLE DB Driver for SQL Server 功能](../oledb/features/oledb-driver-for-sql-server-features.md )  
  描述 SQL Server 的 OLE DB 驅動程式支援的功能。  
   
- [使用 OLE DB 驅動程式的 SQL Server 的建立應用程式](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [利用 OLE DB Driver for SQL Server 建置](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
  提供 SQL Server 開發，包含與 Windows DAC 的元件，它會使用，以及如何 ADO 可以搭配 OLE DB 驅動程式的概觀。  
   
  本章節也討論 OLE DB 驅動程式，SQL Server 安裝與部署，包括如何轉散發 SQL Server 文件庫，OLE DB 驅動程式。  
   
- [適用於 SQL Server 的 OLE DB 驅動程式的系統需求](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server 的系統需求](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
  討論使用 SQL Server 的 OLE DB 驅動程式所需的系統資源。  
   
  [SQL Server 的 OLE DB 驅動程式&#40;OLE DB&#41;](../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
  提供使用 SQL Server 的 OLE DB 驅動程式的相關資訊。  
   
- [如需 SQL Server 資訊尋找更多的 OLE DB 驅動程式](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
+ [尋找詳細的 OLE DB Driver for SQL Server 資訊](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
  SQL Server，包括外部資源的連結，取得進一步協助提供 OLE DB 驅動程式的其他資源。  
   
   

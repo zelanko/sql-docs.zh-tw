@@ -1,37 +1,38 @@
 ---
-title: "評估報表 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 評估報表 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fecd08784b49cec6b8d69df6b080319420dcad84
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f7d282ec97f55631c35e7e7f544d9f924d96b49a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessment-report-sybasetosql"></a>評估報表 (SybaseToSQL)
 評估報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，並且也可幫助您評估複雜度及成本的移轉專案。  
   
 若要存取評估的報表，在來源中繼資料總管，轉換選取的物件上按一下滑鼠右鍵**資料庫**，然後選取**建立報表**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **轉換統計資料**  
 顯示依陳述式類型的轉換統計資料。 這個窗格會顯示時，才是群組物件，例如結構描述，或沒有程式碼的物件已選取左窗格中。  
   

@@ -1,30 +1,31 @@
 ---
-title: "專案設定 （移轉） (DB2ToSQL) |Microsoft 文件"
+title: 專案設定 （移轉） (DB2ToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf47fee6992ec74ca331972e711be931d4dfb34e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d143857c00815a8d219b5add7b3281cf982723d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-db2tosql"></a>專案設定 （移轉） (DB2ToSQL)
 [移轉] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何從 DB2 來移轉資料的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 |**保留 Null**|指定是否要 SSMA 保存來源資料中的 null 值時，它將資料加入 SQL Server，不論在 SQL Server 中指定的預設值。<br /><br />**預設模式**: True<br /><br />**開放式模式**: True<br /><br />**完整模式**: True|  
 |**標記字串修剪作業發生錯誤**|如果目標資料行大小小於來源字串長度，會修剪值，並標示為錯誤。<br /><br />**預設模式**： 是<br /><br />**開放式模式**： 是<br /><br />**完整模式**： 是|  
 |**錯誤時**|發生錯誤時，請停止資料移轉。 它有三個選項：<br /><br />**停止移轉：**停止資料移轉作業<br /><br />**繼續進行下一個資料表：**會停止目前的資料表資料移轉並繼續進行下一個<br /><br />**繼續進行下一個批次：**會停止目前的批次的資料移轉並繼續進行下一個<br /><br />**預設模式**： 繼續進行下一個批次<br /><br />**開放式模式**： 繼續進行下一個批次<br /><br />**完整模式**： 繼續進行下一個批次|  
-|**取代不受支援的日期**|指定是否 SSMA 應該更正日期早於最舊的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日期 (01 1753 年 1 月)。<br /><br />若要保留目前的日期值，請選取**不執行任何動作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不會接受之前 01 年 1 月 1753年的日期的日期時間資料行中。 如果您使用較舊的日期，您必須將日期時間值轉換為字元的值。<br /><br />若要將之前 01 年 1 月 1753年的日期轉換成 NULL，選取**取代 NULL**。<br /><br />若要取代支援日期之前 01 年 1 月 1753年的日期，請選取**取代為最接近的支援日期**。<br /><br />**預設模式**： 不執行任何動作<br /><br />**開放式模式**： 不執行任何動作<br /><br />**完整模式**： 取代為最接近的支援的日期|  
+|**取代不受支援的日期**|指定是否 SSMA 應該更正日期早於最舊的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日期 (01 1753 年 1 月)。<br /><br />若要保留目前的日期值，請選取**不執行任何動作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 不會接受之前 01 年 1 月 1753年的日期的日期時間資料行中。 如果您使用較舊的日期，您必須將日期時間值轉換為字元的值。<br /><br />若要將之前 01 年 1 月 1753年的日期轉換成 NULL，選取**取代 NULL**。<br /><br />若要取代支援日期之前 01 年 1 月 1753年的日期，請選取**取代為最接近的支援日期**。<br /><br />**預設模式**： 不執行任何動作<br /><br />**開放式模式**： 不執行任何動作<br /><br />**完整模式**： 取代為最接近的支援的日期|  
 |**資料表鎖定**|指定當它將資料加入資料表資料移轉期間，SSMA 是否鎖定資料表。 大量複製作業期間，會取得大量更新鎖定。 如果值為 False 時，鎖定資料列層級設定。<br /><br />**預設模式**: True<br /><br />**開放式模式**: True<br /><br />**完整模式**: True|  
   
 ## <a name="parallel-data-migration"></a>平行處理資料移轉  

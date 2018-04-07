@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 96f21a14b48e0cc5df2042149679f9bd848d38e6
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 4e89b51abc13d346ef0ed6d0ef77a5cb218157da
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="stored-procedures---calling"></a>預存程序的呼叫
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ ms.lasthandoff: 03/30/2018
 {rpc SalesByCategory}  
 ```  
   
- 示範 RPC 逸出序列的範例應用程式，請參閱[執行預存程序 &#40;使用 RPC 語法 &#41;和處理傳回碼和輸出參數 &#40; OLE DB &#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ 示範 RPC 逸出序列的範例應用程式，請參閱[執行預存程序 & #40;使用 RPC 語法 & #41;和處理傳回碼和輸出參數 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 陳述式  
  ODBC CALL 逸出序列和 RPC 逸出序列是慣用的方法，可以呼叫預存程序而非[EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)陳述式。 SQL Server OLE DB 驅動程式會使用的 RPC 機制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]來最佳化命令處理。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  

@@ -21,13 +21,13 @@ ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc01dc51a4c3b50e77a719d9b3bab08def84f879
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ab617555d71bb2067b1c2d2c8e073e74af6e908
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>連接到 Sybase ASE (SybaseToSQL)
 若要將 Sybase Adaptive Server Enterprise (ASE) 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您必須連接到自動調整的伺服器，其中包含您想要移轉的資料庫。 當您連線時，SSMA 會取得自動調整的伺服器上的所有資料庫的相關中繼資料和 Sybase 中繼資料總管 窗格中顯示資料庫中繼資料。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
@@ -107,7 +107,7 @@ ASE 的連接會保持作用中，直到您關閉專案。 當您重新開啟專
   
         `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   
-    如需詳細資訊，請參閱[連接到 Sybase &#40;SybaseToSQL &#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
+    如需詳細資訊，請參閱[連接到 Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)。  
   
 ## <a name="reconnecting-to-sybase-ase"></a>重新連接到 Sybase ASE  
 資料庫伺服器的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連接，如果您想要調整的伺服器的作用中連接。 您可以離線直到您想要更新中繼資料，資料庫物件載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 移轉資料。  
@@ -129,6 +129,6 @@ ASE 資料庫的相關中繼資料不會自動重新整理。 Sybase 中繼資�
   
 -   移轉程序的下一個步驟是[連接到 SQL Server 執行個體](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [連接到 SQL Azure 的執行個體](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
   
-## <a name="see-also"></a>請參閱  
-[Sybase ASE 將資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

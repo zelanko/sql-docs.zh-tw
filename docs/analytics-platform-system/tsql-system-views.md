@@ -1,29 +1,29 @@
 ---
-title: "T-SQL 系統檢視表-Analytics Platform System Parallel Data Warehouse |Microsoft 文件"
+title: T-SQL 系統檢視表-Analytics Platform System Parallel Data Warehouse |Microsoft 文件
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "TRANSACT-SQL (T-SQL) 系統檢視表的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。"
+description: TRANSACT-SQL (T-SQL) 系統檢視表的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: 21ec594b-d270-4202-a8cd-bb150e5ae12c
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 19435f547992488e709be062225dc2ce5ed9d8c0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f6964967bc0ba44b6dd72463c6cbd90c36ad3115
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="system-views"></a>系統檢視表
 TRANSACT-SQL (T-SQL) 系統檢視表的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
@@ -233,7 +233,7 @@ TRANSACT-SQL (T-SQL) 系統檢視表的分析平台 System (APS) SQL Server 平�
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
 * [VIEWS](http://msdn.microsoft.com/library/ms181381.aspx)
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 如需詳細參考資訊，請參閱[T-SQL 語言項目](tsql-language-elements.md)和[T-SQL 陳述式](tsql-statements.md)。
 
 <!--Image references-->

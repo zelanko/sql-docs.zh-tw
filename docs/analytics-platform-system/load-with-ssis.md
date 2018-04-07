@@ -1,25 +1,25 @@
 ---
-title: "With Integration Services 載入資料"
+title: With Integration Services 載入資料
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。"
+description: 提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 69
+ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-integration-services"></a>With Integration Services 載入資料
 提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。  
@@ -59,12 +59,12 @@ Integration Services 的完整文件，請參閱[SQL Server Integration Services
 若要執行封裝的 SQL Server Data Tools 中，以滑鼠右鍵按一下您的封裝，然後選擇 **執行封裝**。  
   
 ### <a name="run-from-powershell"></a>從 PowerShell 執行  
-若要從 Windows PowerShell 中執行封裝使用**dtexec**公用程式：`dtexec /FILE <packagePath>`  
+若要從 Windows PowerShell 中執行封裝使用**dtexec**公用程式： `dtexec /FILE <packagePath>`  
   
-例如，使用 IPv4 位址的 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例如， `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>執行從 Windows 命令提示字元 
-若要從 Windows 命令提示字元中，執行封裝使用**dtexec**公用程式：`dtexec /FILE <packagePath>`  
+若要從 Windows 命令提示字元中，執行封裝使用**dtexec**公用程式： `dtexec /FILE <packagePath>`  
   
 例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -89,7 +89,7 @@ Integration Services 的完整文件，請參閱[SQL Server Integration Services
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |NVARCHAR|DT_WSTR、DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1、DT_I2、DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -156,7 +156,7 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
   
 ## <a name="Examples"></a>範例  
   
-### <a name="Walkthrough"></a>答： 從一般檔案的簡單負載  
+### <a name="Walkthrough"></a>A. 從一般檔案的簡單負載  
 下列逐步解說會示範簡單資料載入一般檔案資料載入至 SQL Server PDW 應用裝置中使用 Integration Services。  這個範例假設在用戶端電腦上已安裝 Integration Services，並已安裝 SQL Server PDW 目的地，如上面所述。  
   
 在此範例中，我們將會載入至`Orders`具有下列 DDL 的資料表。 `Orders`資料表屬於`LoadExampleDB`資料庫。  
@@ -251,7 +251,7 @@ Integration Services 的電腦上執行封裝。
   
 2.  封裝執行時間，以及上，則會顯示進度，以及任何錯誤**進度**窗格。 使用在 SQL 用戶端以確認負載，或監視 SQL Server PDW 管理主控台透過負載。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [建立使用 SSIS PDW 目的地配接器的指令碼工作](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
 [設計和實作封裝 (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  

@@ -1,15 +1,16 @@
 ---
-title: "開始使用 SSMA for Sybase 主控台 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 開始使用 SSMA for Sybase 主控台 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 689cd4339d926cd4f8e20c799a0c074adb29b81f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d63e1c4e3ecf3cd5f2537ec54db24be59a4d8ad5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>開始使用 SSMA for Sybase 主控台 (SybaseToSQL)
 本章節描述的程序啟動並開始使用 SSMA for Sybase 主控台應用程式。 此處也列出所使用的慣例典型的 SSMA 主控台輸出視窗中。  
@@ -45,13 +46,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="using-the-ssma-console"></a>使用 SSMA 主控台  
 Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作使用下列步驟：  
   
-1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
+1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)。  
   
-2.  [建立變數值的檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+2.  [建立變數值的檔案&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   
-3.  [建立伺服器連接檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+3.  [建立伺服器連接檔案&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
-4.  [執行 SSMA 主控台 &#40;SybaseToSQL &#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)根據您的專案需求。 
+4.  [執行 SSMA 主控台&#40;SybaseToSQL&#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)根據您的專案需求。 
   
 其他功能：  
   
@@ -66,7 +67,7 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
   
 色彩解譯主控台輸出會出現在下表中：  
   
-|Color|描述|  
+|Color|Description|  
 |---------|---------------|  
 |紅色|執行期間發生嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  
@@ -76,4 +77,4 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
 |11：青色|開始、 完成時間和作業的結果。|  
   
 ## <a name="see-also"></a>另請參閱  
-[針對 SAP ASE &#40; 安裝 SSMASybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+[SSMA 安裝 SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

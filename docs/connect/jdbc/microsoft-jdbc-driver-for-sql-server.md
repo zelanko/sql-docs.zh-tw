@@ -1,31 +1,31 @@
 ---
 title: Microsoft JDBC Driver for SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0f9ec204daf3c0e0130be3fc1e4a44bf2982cb68
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a7ccbec6a54b6709f04d39659517aeae5415127d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>用於 SQL Server 的 Microsoft JDBC 驅動程式
 
-![下載 DownArrow Circled](../../ssdt/media/download.png)[若要下載 JDBC 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 一直持續不斷地致力於互通性，Microsoft 會提供搭配 SQL Server 和 Azure SQL Database 的 Java Database Connectivity (JDBC) 驅動程式。 此驅動程式完全免費，可以從任何 Java 應用程式、應用程式伺服器，或啟用 Java 的小程式連接到 Java 資料庫。 此驅動程式是 Type 4 的 JDBC 驅動程式，透過標準的 JDBC 應用程式介面 (API) 即可連接到資料庫。
 

@@ -1,30 +1,31 @@
 ---
-title: "資料移轉設定 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 資料移轉設定 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 587addb8e9772516b679efd84eb6d7ee05439448
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 07eb75232f809bb5d94004cab1b612467bda589f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="data-migration-settings-sybasetosql"></a>資料移轉設定 (SybaseToSQL)
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 12/21/2017
   
 -   **取消：**按一下**取消**進行變更之前，還原目前的設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [Sybase 資料移轉至 SQL Server/SQL Azure](http://msdn.microsoft.com/en-us/54a39f5e-9250-4387-a3ae-eae47c799811)  
   

@@ -10,18 +10,18 @@ ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 250b0dce301190454a911f5409425f486286047b
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 374660fdba66e5c445ae441d988a3701de548427
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>SQL Server 的 OLE DB 驅動程式的支援原則
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,4 +47,4 @@ ms.lasthandoff: 03/30/2018
 應用程式可以使用 Windows 作業系統隨附的 OLE DB 提供者 (SQLOLEDB)。 不過，，處於維護模式，而且不會再更新。 您應該改用 OLE DB 驅動程式的 SQL Server (MSOLEDBSQL)。
 
 ## <a name="see-also"></a>另請參閱  
- [使用 OLE DB 驅動程式的 SQL Server 的建立應用程式](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [利用 OLE DB Driver for SQL Server 建置](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

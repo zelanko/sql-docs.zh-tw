@@ -1,25 +1,25 @@
 ---
-title: "監視負載 Parallel Data Warehouse"
+title: 監視負載 Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "您可以監視使用中和最近[dwloader](dwloader.md)載入使用 Analytics Platform System (APS) 管理主控台或 Parallel Data Warehouse (PDW) 系統檢視表。"
+description: 您可以監視使用中和最近[dwloader](dwloader.md)載入使用 Analytics Platform System (APS) 管理主控台或 Parallel Data Warehouse (PDW) 系統檢視表。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: "6"
-ms.openlocfilehash: 988c34b248b0058941f53575a79e4f3b6acb4de0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: e520fa01eef0c25e1cf094ee412a9530afaf70b7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-loads"></a>監視載入
 您可以監視使用中和最近[dwloader](dwloader.md)藉由使用 Analytics Platform System (APS) 管理主控台或 Parallel Data Warehouse (PDW) 載入[系統檢視表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)。 
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
 不論用來監視負載的方法，登入必須擁有存取基礎資料來源的權限。 
 
 <!-- MISSING LINKS

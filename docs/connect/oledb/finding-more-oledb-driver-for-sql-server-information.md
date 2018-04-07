@@ -10,7 +10,7 @@ ms.component: oledb
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ead0a24c87c099845b8a34906330c7983559359
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: d4d39e7ce5bfe9fe058c497275b4ad7023dcfda5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>如需 SQL Server 資訊尋找更多的 OLE DB 驅動程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +44,6 @@ ms.lasthandoff: 03/30/2018
   
 
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 程式設計的 OLE DB 驅動程式](../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server 程式設計](../oledb/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -1,23 +1,23 @@
 ---
-title: "Analytics Platform System-向外延展資料倉儲中最新消息"
+title: Analytics Platform System-向外延展資料倉儲中最新消息
 author: happynicolle
 ms.author: nicw;barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "請參閱什麼是 Microsoft® Analytics Platform System 的新功能，向外延展內部部署裝載 MPP SQL Server 平行資料倉儲應用裝置。"
+description: 請參閱什麼是 Microsoft® Analytics Platform System 的新功能，向外延展內部部署裝載 MPP SQL Server 平行資料倉儲應用裝置。
 ms.date: 11/28/2016
 ms.topic: article
-ms.openlocfilehash: eeeb41045527e72856edfb8bdb40becc462bde07
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>分析平台系統 2016，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是新的 Microsoft® 分析平台 System (APS) 2016年，向外延展的最新的應用裝置更新內部部署裝載 MPP SQL Server 平行資料倉儲應用裝置。 
@@ -32,7 +32,7 @@ APS 2016 支援這些 T-SQL 的相容性增強功能。  這些額外的語言�
 
 - [資料行層級 SQL 定序][]現已支援除了 Windows 定序。
 - [在叢集資料行存放區索引上的非叢集索引][]改善搜尋叢集資料行存放區索引中的特定值的查詢效能。 
-- [選取此項目...到][] 
+- [SELECT...INTO][] 
 - [sp_spaceused()][]顯示使用的磁碟空間，或在資料表或資料庫中保留。
 - [寬型資料表][]支援等同於 SQL Server 2016。 32k，資料列大小的前一個限制不存在。 
 
@@ -58,8 +58,8 @@ APS 2016 支援這些 T-SQL 的相容性增強功能。  這些額外的語言�
 
 ### <a name="additional-functions"></a>其他函式
 
-- [NEWID （)][]
-- [RAND （)][]
+- [NEWID()][]
+- [RAND()][]
 
 ## <a name="polybasehadoop-enhancements"></a>PolyBase/Hadoop 增強功能
 
@@ -99,7 +99,7 @@ APS 2016 支援這些 T-SQL 的相容性增強功能。  這些額外的語言�
 [nvarchar （max)]:https://msdn.microsoft.com/library/ms186939.aspx
 [varbinary （max)]:https://msdn.microsoft.com/library/ms188362.aspx
 [SYSNAME]:https://msdn.microsoft.com/library/ms188021.aspx
-[選取此項目...到]:https://msdn.microsoft.com/library/ms188029.aspx
+[SELECT...INTO]:https://msdn.microsoft.com/library/ms188029.aspx
 [sp_spaceused()]:https://msdn.microsoft.com/library/ms188776.aspx
 [寬型資料表]:https://msdn.microsoft.com/library/ms143432.aspx
 [BULK INSERT]:https://msdn.microsoft.com/library/ms188365.aspx
@@ -114,8 +114,8 @@ APS 2016 支援這些 T-SQL 的相容性增強功能。  這些額外的語言�
 [CHECKSUM()]:https://msdn.microsoft.com/library/ms189788.aspx
 [BINARY_CHECKSUM()]:https://msdn.microsoft.com/library/ms173784.aspx
 [HAS_PERMS_BY_NAME()]:https://msdn.microsoft.com/library/ms189802.aspx
-[NEWID （)]:https://msdn.microsoft.com/library/ms190348.aspx
-[RAND （)]:https://msdn.microsoft.com/library/ms177610.aspx
+[NEWID()]:https://msdn.microsoft.com/library/ms190348.aspx
+[RAND()]:https://msdn.microsoft.com/library/ms177610.aspx
 
 
   

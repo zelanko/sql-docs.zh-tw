@@ -1,31 +1,31 @@
 ---
-title: "監視使用中的查詢 (SQL Server PDW)"
+title: 監視使用中的查詢 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
-caps.latest.revision: "7"
-ms.openlocfilehash: 44f128124c8027bf4c37e34309d6c711006ac113
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 7
+ms.openlocfilehash: 8a792e8dc4f29a257568f37350ba1b2c792c88fe
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitoring-active-queries"></a>監視使用中的查詢
 本主題示範如何使用管理主控台和 SQL Server PDW 系統檢視表來監視使用中的查詢。 請參閱[使用管理主控台來監視設備](monitor-the-appliance-by-using-the-admin-console.md)和[系統檢視表](tsql-system-views.md)如需這些工具。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
 不論用來監視使用中查詢的方法，登入必須擁有 「 使用所有的系統管理員主控台 」 中所述的權限[授與權限可使用管理主控台](grant-permissions.md#grant-permissions-to-use-the-admin-console)。  
   
 ## <a name="PermsAdminConsole"></a>監視使用中的查詢  

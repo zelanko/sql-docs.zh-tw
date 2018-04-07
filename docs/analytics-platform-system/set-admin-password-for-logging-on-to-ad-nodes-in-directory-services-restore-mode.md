@@ -1,33 +1,33 @@
 ---
-title: "在 目錄服務還原模式 (AP) 中設定 AD 節點的管理員登入密碼"
+title: 在 目錄服務還原模式 (AP) 中設定 AD 節點的管理員登入密碼
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 97a9c715-2763-417d-b45c-bb0180759e47
-caps.latest.revision: "20"
-ms.openlocfilehash: 2e0379093db9364f45793adc20635bfa4ad53748
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 3e09305152a2892ae4acaf7096921d2a73345b63
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm"></a>在 目錄服務還原模式 (DSRM) 中設定登入 AD 節點的系統管理員密碼
-目錄服務還原模式 (DSRM) 為修復或復原 Active Directory 網域服務 (AD DS) 的開機模式。 它用來登入應用裝置 AD 節點失敗 AD DS 之後，或需要還原的 AD DS。 Dsrm 密碼已經初始化應用裝置設定硬體供應商站台期間，並且應該變更應用裝置系統管理員。 Analytics Platform System 有兩個 AD DS （網域控制站）。 ***appliance_domain*-AD01**和 ***appliance_domain*-ad02 移**。 每個應用裝置 AD 節點，變更 使用下列步驟將 DSRM 密碼。  
+目錄服務還原模式 (DSRM) 為修復或復原 Active Directory 網域服務 (AD DS) 的開機模式。 它用來登入應用裝置 AD 節點失敗 AD DS 之後，或需要還原的 AD DS。 Dsrm 密碼已經初始化應用裝置設定硬體供應商站台期間，並且應該變更應用裝置系統管理員。 Analytics Platform System 有兩個 AD DS （網域控制站）。***appliance_domain *-AD01**和 ***appliance_domain *-ad02 移**。 每個應用裝置 AD 節點，變更 使用下列步驟將 DSRM 密碼。  
   
 ## <a name="HowToDSRM"></a>若要重設管理員密碼  
   
-1.  開啟命令提示字元視窗上的 AD 應用裝置節點  ***appliance_domain*– AD*xx** * 虛擬機器。  
+1.  開啟命令提示字元視窗上的 AD 應用裝置節點***appliance_domain*– AD*xx***虛擬機器。  
   
 2.  在命令提示字元中，輸入`ntdsutil`。  
   
@@ -45,6 +45,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 > 如果 Active Directory 網域服務或虛擬機器、 損毀的特定 AD 虛擬機器執行**ReplaceVM**受影響的 ad 虛擬機器是建議的更正動作。 如需協助的連絡 CSS。  
   
-## <a name="see-also"></a>請參閱  
-[密碼重設 &#40;Analytics Platform System &#41;](password-reset.md)  
+## <a name="see-also"></a>另請參閱  
+[密碼重設&#40;Analytics Platform System&#41;](password-reset.md)  
   

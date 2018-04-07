@@ -1,26 +1,26 @@
 ---
-title: "使用管理主控台 (Analytics Platform System) 監視的應用裝置"
+title: 使用管理主控台 (Analytics Platform System) 監視的應用裝置
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: "26"
-ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>使用管理主控台來監視應用裝置
 系統管理員主控台是 SQL Server PDW web 應用程式，可呈現的應用裝置狀態、 運行狀況和效能資訊。 使用者連線到系統管理員主控台，透過 Internet Explorer。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 載入  
 顯示載入方案、 目前狀態的 PDW 載入和相關的錯誤，如果有的話。  
   
-備份/還原  
+Backups/Restores  
 顯示記錄檔的 PDW 備份和還原作業。  
   
 健全狀況  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/21/2017
 資源  
 顯示 PDW 資源鎖定及其目前狀態的清單。  
   
-Storage  
+儲存空間  
 摘要說明的 PDW 儲存體使用量。  
   
 效能監視  
@@ -85,7 +85,7 @@ HDFS
   
 顯示的硬體和軟體的警示。  
   
-Storage  
+儲存空間  
 摘要說明 HDInsight 儲存使用量。  
   
 效能監視  
@@ -112,12 +112,12 @@ Storage
 |-|-|  
 |**資訊類型**|**如何在管理主控台中存取**|  
 |應用裝置的整體狀態|按一下**應用裝置狀態**中最上方的功能表或**首頁**。|  
-|警示|按一下**警示**。 如需詳細資訊，請參閱[了解系統管理員主控台警示 &#40;Analytics Platform System &#41;](understanding-admin-console-alerts.md).|  
+|警示|按一下**警示**。 如需詳細資訊，請參閱[了解系統管理員主控台警示&#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)。|  
 |應用裝置元件以及它們的狀態|按一下**應用裝置狀態**中最上方的功能表或**首頁**。|  
 |（包括查詢、 載入、 備份和還原） 的監視要求|按一下**工作階段**若要查看目前作用中或新的工作階段。<br /><br />按一下**查詢**若要查看目前作用中或新的查詢。 顯示查詢的資訊包括載入、 備份和還原。<br /><br />按一下**鎖定**若要查看作用中的鎖定。|  
 |監視負載、 備份和還原的其他資訊。|按一下**載入**或**備份/還原**。|  
 |效能資訊|按一下**效能監視器**。|  
   
-## <a name="see-also"></a>請參閱  
-[應用裝置監視 &#40;Analytics Platform System &#41;](appliance-monitoring.md)  
+## <a name="see-also"></a>另請參閱  
+[應用裝置監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

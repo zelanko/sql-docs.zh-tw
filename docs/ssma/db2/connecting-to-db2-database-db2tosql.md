@@ -1,30 +1,31 @@
 ---
-title: "連接到 DB2 資料庫 (DB2ToSQL) |Microsoft 文件"
+title: 連接到 DB2 資料庫 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f718f75a750d376bdae9ff7bfab10f298107822d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 588fe34578ac6018ccefbc08f6ab70a017283353
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>連接到 DB2 資料庫 (DB2ToSQL)
 若要將 DB2 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您必須連接到您想要移轉的 DB2 資料庫。 當您連線時，SSMA 會取得所有 DB2 結構描述的相關中繼資料中，然後顯示在 DB2 中繼資料總管 窗格中。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
@@ -84,7 +85,7 @@ DB2 資料庫的相關中繼資料不會自動更新。 相反地，如果您想
   
     `Data Source=MyDB2DB;Integrated Security=yes;`  
   
-    如需詳細資訊，請參閱[連接至 Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。  
+    如需詳細資訊，請參閱[連接至 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。  
   
 ## <a name="reconnecting-to-db2"></a>重新連接至 DB2 伺服器  
 資料庫伺服器的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連接，如果您想要的使用中連接到資料庫。 您可以離線直到您想要更新中繼資料，資料庫物件載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，並將資料移轉。  
@@ -118,6 +119,6 @@ DB2 資料庫的相關中繼資料不會自動重新整理。 DB2 中繼資料�
   
 -   移轉程序的下一個步驟是[連接到 SQL Server](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)。  
   
-## <a name="see-also"></a>請參閱  
-[DB2 資料庫移轉至 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>另請參閱  
+[SQL server 資料庫移轉 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

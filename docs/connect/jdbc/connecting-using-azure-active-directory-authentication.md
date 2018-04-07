@@ -13,18 +13,21 @@ ms.technology:
 - drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a0cbb8a2b6eff8e3a612039616f9b497a2ea2737
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+ms.openlocfilehash: ed4b2623b7a80358622b8153d316428b742ef31e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
+
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
 本文章提供有關如何開發使用 SQL Server 的 Microsoft JDBC Driver 6.0 （或更高） 的 Azure Active Directory 驗證功能的 Java 應用程式的資訊。
 
 您可以使用 Azure Active Directory (AAD) 驗證，連接到 Azure SQL Database v12 的機制使用 Azure Active Directory 中的身分識別。 使用 Azure Active Directory 驗證來集中管理身分識別的資料庫使用者，以及 SQL Server 驗證的替代方案。 JDBC 驅動程式可讓您連接到 Azure SQL DB JDBC 連接字串中指定您的 Azure Active Directory 認證。 如需如何設定 Azure Active Directory 驗證的詳細資訊，請造訪[連接到 SQL 資料庫使用 Azure Active Directory 驗證](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 

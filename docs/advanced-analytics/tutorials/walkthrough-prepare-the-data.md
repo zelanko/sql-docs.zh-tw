@@ -18,11 +18,11 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: a9edd0ba1b6a52dd7ce6ed36b8528283b42d8914
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>準備要使用 PowerShell （逐步解說） 的資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,7 +68,7 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
   
     ![PowerShell 指令碼完成之後](media/rsql-e2e-psscriptresults.PNG "PowerShell 指令碼完成之後")
   
-5.  在 PowerShell 主控台中，您可以執行 `ls` 命令，來檢視已下載至 *DestDir*的檔案清單。  如需檔案的說明，請參閱[包含的內容](#What-the-Download-Includes)。
+5.  在 PowerShell 主控台中，您可以執行 `ls` 命令，來檢視已下載至 *DestDir*的檔案清單。  如需檔案的說明，請參閱[包含的內容](#whats-included-in-the-sample)。
 
 ## <a name="2-install-required-r-packages"></a>2.安裝必要的 R 封裝
 

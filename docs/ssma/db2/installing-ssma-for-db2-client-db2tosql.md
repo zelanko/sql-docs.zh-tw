@@ -1,30 +1,31 @@
 ---
-title: "SSMA 安裝 DB2 用戶端 (DB2ToSQL) |Microsoft 文件"
+title: SSMA 安裝 DB2 用戶端 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cddb418e373c5ac61d2788f7e8a41d51c5976b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eca6ea25d2f8518c1414dd2d6e41464d87828d16
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>安裝的 SSMA for DB2 用戶端 (DB2ToSQL)
 SSMA 用戶端包含的程式檔案，執行下列工作：  
@@ -41,20 +42,20 @@ SSMA 用戶端包含的程式檔案，執行下列工作：
   
 本主題提供的安裝必要條件和安裝 SSMA 的指示。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
 SSMA 設計用於 z/OS 9.0 以及 10.0 的版本上的 DB2 或 LUW 9.8 和 10.1 或更新版本上的 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014年。  
   
 SSMA 安裝之前，請確定電腦符合下列需求：  
   
 -   Windows 7 或更新版本中，或 Windows Server 2008 或更新版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 或更新版本。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版或更新版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版位於[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]產品媒體。 您也可以取得從[.NET Framework 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=48882)。  
   
 -   Microsoft OLEDB Provider for DB2 版本 5 或更新的版本，以及您想要移轉的 DB2 資料庫的連接能力。  
   
--   存取和裝載目標執行個體的電腦上有足夠的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或其中您將會資料庫物件和資料移轉的 Azure SQL DB。 如需詳細資訊，請參閱[連接到 SQL Server &#40; DB2eToSQL &#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)。  
+-   存取和裝載目標執行個體的電腦上有足夠的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或其中您將會資料庫物件和資料移轉的 Azure SQL DB。 如需詳細資訊，請參閱[連接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)。  
   
 -   4 GB RAM，建議使用。  
   
@@ -67,7 +68,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 **SSMA 用戶端安裝**  
   
-1.  按兩下 SSMA for DB2  *n* 。Install.exe 其中 *n* 是組建編號。  
+1.  按兩下 SSMA for DB2 *n*。Install.exe 其中*n*是組建編號。  
   
 2.  在 歡迎使用 頁面上，按一下 **下一步**。  
   
@@ -84,7 +85,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 預設安裝位置是 C:\Program Files\Microsoft SQL Server 移轉小幫手 for DB2。  
   
-## <a name="see-also"></a>請參閱  
-[SSMA 元件安裝 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
-[DB2 資料庫移轉至 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>另請參閱  
+[安裝 SQL Server 上的 SSMA 元件&#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
+[SQL server 資料庫移轉 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

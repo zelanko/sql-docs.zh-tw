@@ -1,15 +1,16 @@
 ---
-title: "安裝 SQL Server 移轉小幫手存取 (AccessToSQL) |Microsoft 文件"
+title: 安裝 SQL Server 移轉小幫手存取 (AccessToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,26 +29,26 @@ helpviewer_keywords:
 - uninstalling SSMA
 - upgrading SSMA
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ed2247057865624d0e365a5cac24e390295975a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0b60003c1d9c7c266d57f6c0fc583b977561be72
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安裝 SQL Server 移轉小幫手存取 (AccessToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 的存取使用 Windows Installer 為基礎的精靈來安裝。 本主題會提供通往 SSMA，最新版本的安裝必要條件的相關資訊和安裝、 授權、 解除安裝與升級 SSMA 的指示。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) 的存取使用精靈來安裝 Windows Installer 為基礎。 本主題會提供通往 SSMA，最新版本的安裝必要條件的相關資訊和安裝、 授權、 解除安裝與升級 SSMA 的指示。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
 SSMA 安裝之前，請確定您的系統符合下列需求：  
   
 -   Windows 7 或更新版本，或 Windows Server 2008 或更新版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 或更新版本。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 4.0 版或更新版本。 .NET Framework 4.0 版位於[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]產品光碟片，而藉由使用中的資訊[Microsoft.NET 指南](https://docs.microsoft.com/en-us/dotnet/framework/)。
   
@@ -69,7 +70,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 **若要安裝 SSMA**  
   
-1.  按兩下 SSMA for Access  *n* .msi，其中 *n* 是組建編號。  
+1.  按兩下 SSMA for Access *n*.msi，其中*n*是組建編號。  
   
 2.  在 歡迎使用 頁面上，按一下 **下一步**。  
   

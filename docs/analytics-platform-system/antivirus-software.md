@@ -1,26 +1,26 @@
 ---
-title: "防毒軟體 (Analytics Platform System)"
+title: 防毒軟體 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: "29"
-ms.openlocfilehash: 1733ec6be50d839284fa147eb1cf5c1660b77190
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 29
+ms.openlocfilehash: 27e3bc7eae50c0418c0dcb4df99565b3f0edeadf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="antivirus-software"></a>防毒軟體
 如果您的資料中心需要防毒軟體，請使用下列指導方針來分析平台系統上安裝的防毒軟體。 我們建議不要安裝防毒軟體，除非確實需要資料中心。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 **排除這些目錄：**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V-虛擬機器設定目錄  
+-   C:\ProgramData\Microsoft\Windows\Hyper-V - Virtual machine configuration directory  
   
 -   C:\Users\Public\Documents\Hyper-V\Virtual 硬碟的虛擬硬碟的預設目錄  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 -   G:\  
   
-***appliance_domain*-AD01**和 ***appliance_domain*-ad02 移**  
+***appliance_domain *-AD01**和 ***appliance_domain *-ad02 移**  
   
 -   無限制  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
 -   G:\  
   
-***appliance_domain*VMM**  
+***appliance_domain*-VMM**  
   
 -   無限制  
   
@@ -80,6 +80,6 @@ ms.lasthandoff: 12/21/2017
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>請參閱  
-[應用裝置管理工作 &#40;Analytics Platform System &#41;](appliance-management-tasks.md)  
+## <a name="see-also"></a>另請參閱  
+[應用裝置管理工作&#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

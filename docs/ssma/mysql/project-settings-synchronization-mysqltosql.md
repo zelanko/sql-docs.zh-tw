@@ -1,35 +1,36 @@
 ---
-title: "專案設定 （同步處理） (MySQLToSQL) |Microsoft 文件"
+title: 專案設定 （同步處理） (MySQLToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc7bd0c7dce1c8ad2b70cdaa6b66ed7872c5062d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3a53e15a5bdadae9b0ca67980419fd9ae299e258
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>專案設定 （同步處理） (MySQLToSQL)
 同步處理**專案設定**可讓您設定 MySQL 資料庫物件如何同步處理與 SQL Server 資料庫物件。  
   
-從 MySQL 資料庫重新整理物件以及同步處理與 SQL Server 資料庫的物件指定預設設定的預設動作。 如需詳細資訊，請參閱[從資料庫 &#40; 重新整理MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
+從 MySQL 資料庫重新整理物件以及同步處理與 SQL Server 資料庫的物件指定預設設定的預設動作。 如需詳細資訊，請參閱[從資料庫重新整理&#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
   
 您可以存取兩個不同的同步處理頁面包含相同的設定：  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   若要指定目前的專案中，設定**工具**功能表上，按一下**專案設定**，然後按一下 **同步處理**在左窗格底部。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ##### <a name="misc"></a>其他  
   

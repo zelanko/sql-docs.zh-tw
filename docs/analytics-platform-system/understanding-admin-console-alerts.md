@@ -1,33 +1,33 @@
 ---
-title: "了解管理主控台警示 (Analytics Platform System)"
+title: 了解管理主控台警示 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: "10"
-ms.openlocfilehash: 84d7632df2e16c6939b91d299850ab26d5d93d4f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="understanding-admin-console-alerts"></a>了解管理主控台警示
 應用裝置中會出現警示**管理主控台**和**System Center Operations Manager** (SCOM)。 使用此警示的清單，找出哪些警示需要進一步調查。  
   
-如需連接到**管理主控台**使用 Internet Explorer，請參閱[監視設備使用管理主控台 &#40;Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md). 如需有關資訊**SCOM**，請參閱[監視使用 System Center Operations Manager &#40; 應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+如需連接到**管理主控台**使用 Internet Explorer，請參閱[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。 如需有關資訊**SCOM**，請參閱[監視使用 System Center Operations Manager 應用裝置&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
-如需有關使用 Transact-sql 來取得警示的資訊資訊\-SQL，請參閱[監視所使用的系統檢視 &#40; 應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-system-views.md).  
+如需有關使用 Transact-sql 來取得警示的資訊資訊\-SQL，請參閱[監視所使用的系統檢視表設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)。  
   
 ## <a name="types-of-alerts"></a>產生的警示類型  
 警示的名稱，表示正常的狀態通常不需要進行調查。 警示名稱包含單字 NON_CRITICAL 有時需要動作。 對於所有其他類型的警示需要調查。  
@@ -132,7 +132,7 @@ ms.lasthandoff: 12/21/2017
 |SAS 主機匯流排介面卡有失敗狀況。|是|失敗|警告|HBA 的整體狀況處於 failed 狀態，包括由它所控制的實體磁碟機的所有報告 SAS 主機匯流排介面卡。 這將需要為被取代的元件 (廠商狀態： 失敗)。 廠商狀態報告中元件的 「 hba_device_rollup_status"屬性。|檢閱節點的 Windows 事件記錄檔的詳細資訊或連絡裝置製造商。|  
 |SAS 主機匯流排介面卡處於正常狀態。|否|作業|資訊|SAS 主機匯流排介面卡正常運作 (廠商狀態: [確定])。 廠商狀態報告中元件的 「 hba_device_rollup_status"屬性。||  
 |SAS 主機匯流排介面卡具有未知狀態。|是|降級|警告|無法判斷 SAS 主機匯流排介面卡狀態 (廠商狀態： 其他)。 廠商狀態報告中元件的 「 hba_device_status"屬性。|檢閱節點的 Windows 事件記錄檔的詳細資訊或連絡裝置製造商。|  
-|SQL Server 具有重大狀態。|是|為非作業狀態|錯誤|這項服務處於重大狀態，並已停止運作 (狀態： 已停止)，或者是停止的過渡狀態 (狀態： StopPending)。  狀態報告中元件的 「 sql_server_service_status"屬性。|檢閱節點的 Windows 事件記錄檔以取得詳細資料。|  
+|SQL Server 具有重大狀態。|是|NonOperational|錯誤|這項服務處於重大狀態，並已停止運作 (狀態： 已停止)，或者是停止的過渡狀態 (狀態： StopPending)。  狀態報告中元件的 「 sql_server_service_status"屬性。|檢閱節點的 Windows 事件記錄檔以取得詳細資料。|  
 |SQL Server 已正常的狀態。|否|作業|資訊|此服務正常運作 (狀態： 執行)。 狀態報告中元件的 「 sql_server_service_status"屬性。||  
 |存放裝置機箱風扇已降級狀態。|是|降級|警告|存放裝置機箱風扇報告已降級 (廠商狀態： 10,15)。 廠商狀態報告中元件的 「 storage_fan_status"屬性。|檢閱節點的 Windows 事件記錄檔的詳細資訊或連絡裝置製造商。|  
 |存放裝置機箱風扇已失敗狀態。|是|失敗|警告|存放裝置機箱風扇報告它處於失敗狀態。 這將需要為被取代的元件 (廠商狀態： 20,25)。 廠商狀態報告中元件的 「 storage_fan_status"屬性。|檢閱節點的 Windows 事件記錄檔的詳細資訊或連絡裝置製造商。|  
@@ -157,8 +157,8 @@ ms.lasthandoff: 12/21/2017
 |虛擬磁碟具有非重大狀態。|是|降級|警告|儲存空間虛擬磁碟狀態會指出嚴重的警告，但系統是否仍可運作 (狀態： 1-警告)。 將狀態報告中元件的 「 virtual_disk_status"屬性。  操作狀態，並顯示 「 virtual_disk_oper_status"屬性中可能會提供有關問題的詳細資訊。  如果虛擬磁碟已移至另一個節點，然後再檢閱狀態的叢集共用磁碟區元件，且將磁碟移回預期的擁有者，指示數之後，在名稱中的 N 例如。 N01D01 所屬 HSA01 上。|檢閱記錄檔 '應用程式和服務 logs\Microsoft\Windows\StorageSpaces Driver\Operational' 中的節點的事件以取得詳細資料。  讓另一個警示可能發生磁碟本身的單一磁碟遺失可能會影響鏡像的健全狀況。|  
 |虛擬磁碟處於正常狀態。|否|作業|資訊|儲存空間虛擬磁碟狀態是正常 (狀態： 0-狀況良好)。 將狀態報告中元件的 「 virtual_disk_status"屬性。||  
 |虛擬磁碟具有未知狀態。|是|作業|警告|無法判斷儲存空間虛擬磁碟的狀態 (狀態： 5-不明)。 將狀態報告中元件的 「 virtual_disk_status"屬性。  操作狀態，並顯示 「 virtual_disk_oper_status"屬性中可能會提供有關問題的詳細資訊。  如果虛擬磁碟已移至另一個節點，然後再檢閱狀態的叢集共用磁碟區元件，且將磁碟移回預期的擁有者，指示數之後，在名稱中的 N 例如。 N01D01 所屬 HSA01 上。|檢閱記錄檔 '應用程式和服務 logs\Microsoft\Windows\StorageSpaces Driver\Operational' 中的節點的事件以取得詳細資料。|  
-|磁碟區可用空間的狀態為 「 重大 」。|是|降級|錯誤|磁碟區可用空間嚴重不足 ！ 目前使用磁碟區的磁碟空間已超出總容量的 90%。 清除不必要的檔案/資料，以確定正常應用裝置的作業。|系統管理員主控台報表配置的空間，並不一定要使用的空間。 您可以使用 DBCC PDW_SHOWSPACEUSED 調查與配置的空間使用。 您也可以使用 DBCC SHRINKLOG < ！-遺漏連結[DBCC SHRINKLOG &#40;SQL Server PDW &#41;](../t-sql/statements/alter-database-parallel-data-warehouse.md)壓縮資料庫。|  
-|非重要磁碟區可用空間的狀態。|選擇性|作業|警告|目前使用磁碟區的磁碟空間是 70%和完整的 90%之間。 檢閱使用此磁碟區上的磁碟空間，並清除不必要的檔案/資料，以確定正常應用裝置的作業。|系統管理員主控台報表配置的空間，並不一定要使用的空間。 您可以使用[DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-parallel-data-warehouse.md)調查與使用已配置空間。 您也可以使用 DBCC SHRINKLOG < ！-遺漏連結[DBCC SHRINKLOG &#40;SQL Server PDW &#41;](../t-sql/statements/alter-database-parallel-data-warehouse.md)壓縮資料庫。|  
+|磁碟區可用空間的狀態為 「 重大 」。|是|降級|錯誤|磁碟區可用空間嚴重不足 ！ 目前使用磁碟區的磁碟空間已超出總容量的 90%。 清除不必要的檔案/資料，以確定正常應用裝置的作業。|系統管理員主控台報表配置的空間，並不一定要使用的空間。 您可以使用 DBCC PDW_SHOWSPACEUSED 調查與配置的空間使用。 您也可以使用 DBCC SHRINKLOG < ！-遺漏連結[DBCC SHRINKLOG &#40;SQL Server PDW&#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md)壓縮資料庫。|  
+|非重要磁碟區可用空間的狀態。|選擇性|作業|警告|目前使用磁碟區的磁碟空間是 70%和完整的 90%之間。 檢閱使用此磁碟區上的磁碟空間，並清除不必要的檔案/資料，以確定正常應用裝置的作業。|系統管理員主控台報表配置的空間，並不一定要使用的空間。 您可以使用[DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-parallel-data-warehouse.md)調查與使用已配置空間。 您也可以使用 DBCC SHRINKLOG < ！-遺漏連結[DBCC SHRINKLOG &#40;SQL Server PDW&#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md)壓縮資料庫。|  
 |磁碟區可用空間的狀態為 NORMAL。|否|作業|資訊|此磁碟區上沒有足夠的可用磁碟空間。 目前使用磁碟區的磁碟空間低於 70%。|表示元件先前回報了不同的狀態，但由於已恢復正常。|  
   
 <!-- MISSING LINKS ## See Also  
