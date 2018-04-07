@@ -1,7 +1,7 @@
 ---
 title: 支援高可用性、 嚴重損壞修復的 Microsoft Drivers for PHP for SQL Server |Microsoft 文件
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: ''
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 6cb7f145f14861720d11401a3d60db0ce0efcfd9
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>高可用性與災害復原的支援
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,29 +73,11 @@ ms.lasthandoff: 03/28/2018
 如果您升級[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]目前使用資料庫鏡像的多重子網路案例的應用程式，您應該移除**Failover_Partner**連接屬性並將它取代為**MultiSubnetFailover**設**是**和可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用**Failover_Partner**和**MultiSubnetFailover = true**，驅動程式會產生錯誤。 不過，如果連接字串使用**Failover_Partner**和**MultiSubnetFailover = false** (或**ApplicationIntent = ReadWrite**)，應用程式將會使用資料庫鏡像。  
   
 如果在 AG 的主要資料庫上使用資料庫鏡像，而且驅動程式會傳回錯誤**MultiSubnetFailover = true**用於連接至可用性群組而不是主要資料庫的連接字串接聽程式。  
-  
-## <a name="specifying-application-intent"></a>指定應用程式意圖  
-當 **ApplicationIntent=ReadOnly** 時，用戶端在連接到啟用 AlwaysOn 的資料庫時會要求讀取工作負載。 伺服器會在連接時和在 USE 資料庫陳述式期間，只針對啟用 AlwaysOn 的資料庫強制執行此意圖。  
-  
-**ApplicationIntent** 關鍵字不適用於舊版唯讀資料庫。  
-  
-資料庫可以允許或不允許 AlwaysOn 目標資料庫上的讀取工作負載 (作法是使用 **PRIMARY_ROLE** 和 **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)] 陳述式的 **ALLOW_CONNECTIONS** 子句。)  
-  
-**ApplicationIntent** 關鍵字用於啟用唯讀路由。  
-  
-## <a name="read-only-routing"></a>唯讀路由  
-唯讀路由功能可確保資料庫之唯讀複本的可用性。 若要啟用唯讀路由：  
-  
-1.  您必須連接到 AlwaysOn 可用性群組的可用性群組接聽程式。  
-  
-2.  **ApplicationIntent** 連接字串關鍵字必須設為 **ReadOnly**。  
-  
-3.  可用性群組必須由資料庫管理員設定為啟用唯讀路由。  
-  
-使用唯讀路由的多個連接可能不會連接至相同的唯讀複本。 資料庫同步處理的變更或伺服器路由組態的變更，可能會導致用戶端連接至不同的唯讀複本。 若要確保所有唯讀要求連接至相同的唯讀複本，請勿將可用性群組接聽程式傳遞給 **Server** 連接字串關鍵字。 請改為指定唯讀執行個體的名稱。  
-  
-唯讀路由所花的時間可能會比連接到主要複本所花的時間更長，因為唯讀路由會先連接到主要複本，然後尋找最佳可用的可讀次要複本。 在此情況下，您應該增加登入逾時。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="see-also"></a>另請參閱  
 [連線到伺服器](../../connect/php/connecting-to-the-server.md)  
   

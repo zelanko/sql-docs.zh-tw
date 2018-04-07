@@ -1,17 +1,15 @@
 ---
-title: "版本和支援的功能的 SQL Server 2017 ~ Linux |Microsoft 文件"
+title: 版本和支援的功能的 SQL Server 2017 ~ Linux |Microsoft 文件
 ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-linux
-- server-general
-ms.tgt_pltfrm: 
+ms.technology: sql-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -30,16 +28,16 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: da867b1125d4ee444a0e04e34d729484bee43514
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>版本和支援的功能的 SQL Server 2017 on Linux
 
@@ -67,7 +65,7 @@ ms.lasthandoff: 02/13/2018
 |Enterprise|Premium 供應項目[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]Enterprise edition 與急速效能，讓關鍵任務工作負載的高服務等級，提供完整的高階資料中心功能。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition 針對部門和小型組織，執行其應用程式的基本的資料管理，提供及支援在內部部署和雲端的一般開發工具，能夠以最少的 IT 資源的有效的資料庫管理。|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition 對於 Web 主控者和 Web VAP 而言是一個整體擁有成本很低的選擇，可針對小型到大型規模的 Web 屬性提供可擴充、負擔輕鬆而且管理方便的功能。|  
-|開發人員|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition 可讓開發人員在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 上建立任何類型的應用程式。 其中包含 Enterprise Edition 的所有功能，但是只授權做為開發和測試系統使用，而不做為實際伺服器使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是供應用程式建立和測試人員使用的理想選擇。|  
+|開發人員|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition 可讓開發人員在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上建立任何類型的應用程式。 其中包含 Enterprise Edition 的所有功能，但是只授權做為開發和測試系統使用，而不做為實際伺服器使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是供應用程式建立和測試人員使用的理想選擇。|  
 |Express 版本|Express Edition 是入門級免費伺服器，非常適合用來學習及建置桌上型電腦和小型伺服器資料驅動應用程式。 這個版本是獨立軟體廠商、開發人員及建置用戶端應用程式之愛好者的最佳選擇。 如果您需要更進階的資料庫功能， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 可以順利地升級為其他更高階的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>搭配用戶端/伺服器應用程式使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
@@ -93,9 +91,9 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |-------------|----------------|--------------|---------|------------------------|
 |單一執行個體所使用的計算容量上限 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|作業系統最大值|限制為 4 個插槽或 24 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者| 
 |單一執行個體所使用的計算容量上限 - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|作業系統最大值|限制為 4 個插槽或 24 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|
-|每個執行個體的緩衝集區的最大記憶體 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|作業系統最大值|128 GB|64 GB|1410 MB|
-|每個執行個體的資料行存放區區段快取的最大記憶體 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|無限制的記憶體| 32 GB| 16 GB| 352 MB|  
-|每個資料庫中的最大記憶體最佳化的資料大小 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|無限制的記憶體| 32 GB| 16 GB| 352 MB|
+|每個 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]執行個體的緩衝集區記憶體上限|作業系統最大值|128 GB|64 GB|1410 MB|
+|每個 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]執行個體的資料行存放區區段快取記憶體上限|無限制的記憶體| 32 GB| 16 GB| 352 MB|  
+|每個 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]資料庫的記憶體最佳化資料大小上限|無限制的記憶體| 32 GB| 16 GB| 352 MB|
 |關聯式資料庫大小上限|524 PB|524 PB|524 PB|10 GB|  
   
 <sup>1</sup> Enterprise edition 含伺服器 + 用戶端存取授權 (CAL) 授權 （不適用於新的協議） 受限於最多 20 個核心每個 SQL Server 執行個體。 核心伺服器授權模式之下沒有任何限制。 如需詳細資訊，請參閱[SQL Server 版本的計算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  

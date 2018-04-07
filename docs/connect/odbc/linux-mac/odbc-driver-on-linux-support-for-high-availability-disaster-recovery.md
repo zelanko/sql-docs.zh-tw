@@ -1,27 +1,28 @@
 ---
-title: "ODBC Driver on Linux 及 macOS-高可用性和災害復原 |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
+title: ODBC Driver on Linux 及 macOS-高可用性和災害復原 |Microsoft 文件
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>在 Linux 和 macOS 高可用性和災害復原的支援上的 ODBC 驅動程式
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,29 +75,11 @@ Linux 和 macOS 上的 ODBC 驅動程式循序逐一查看所有與 DNS 主機�
 2.  如果應用程式使用 **ApplicationIntent=ReadWrite** ，而且已針對唯讀存取設定次要複本位置。  
   
 如果設定主要複本拒絕唯讀工作負載，而且連接字串包含 **ApplicationIntent=ReadOnly**，則連接會失敗。  
-  
-## <a name="specifying-application-intent"></a>指定應用程式意圖  
-當 **ApplicationIntent=ReadOnly**時，用戶端在連接到啟用 AlwaysOn 的資料庫時會要求讀取工作負載。 在連接時和在 USE 資料庫陳述式期間，只針對啟用 AlwaysOn 的資料庫，則伺服器會強制執行的意圖。
 
-**ApplicationIntent** 關鍵字不適用於舊版唯讀資料庫。  
 
-資料庫可以允許或不允許 AlwaysOn 目標資料庫上的讀取工作負載 (使用**ALLOW_CONNECTIONS**子句**PRIMARY_ROLE**和**SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql_md.md)]陳述式。)  
-  
-**ApplicationIntent** 關鍵字用於啟用唯讀路由。  
-  
-## <a name="read-only-routing"></a>唯讀路由  
-唯讀路由功能可確保資料庫之唯讀複本的可用性。 若要啟用唯讀路由：  
-  
-1.  連接到 AlwaysOn 可用性群組的可用性群組接聽程式。  
-  
-2.  **ApplicationIntent** 連接字串關鍵字必須設為 **ReadOnly**。  
-  
-3.  資料庫管理員必須設定可用性群組，以啟用唯讀路由。  
-  
-使用唯讀路由的多個連接可以連接到不同的唯讀複本。 資料庫同步處理的變更或伺服器路由組態的變更，可能會導致用戶端連接至不同的唯讀複本。 若要確保所有唯讀要求連接至相同的唯讀複本，請勿將可用性群組接聽程式傳遞至 **Server** 連接關鍵字。 請改為指定唯讀執行個體的名稱。  
-  
-使用唯讀路由時，連接的所需時間預期會比連接到主要複本長。 因此，請增加您的登入逾時。 唯讀路由會先連接到主要複本，然後尋找最佳可用的可讀次要複本。  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc-syntax"></a>ODBC 語法
 
 兩個 ODBC 連接字串關鍵字支援[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
@@ -122,7 +105,7 @@ ODBC 應用程式使用[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]可以�
 |[SQLConnect 函式](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect**同時支援**ApplicationIntent**和**MultiSubnetFailover**透過資料來源名稱 (DSN) 或連接屬性。|  
 |[SQLDriverConnect 函式](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect**支援**ApplicationIntent**和**MultiSubnetFailover**透過 DSN、 連接字串關鍵字或連接屬性。|
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 
 [連接字串關鍵字和資料來源名稱 (DSN)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 

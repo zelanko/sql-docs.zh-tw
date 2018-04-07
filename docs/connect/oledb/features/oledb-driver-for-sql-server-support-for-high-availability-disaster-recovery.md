@@ -2,7 +2,7 @@
 title: 高可用性、 災害復原的 SQL Server 支援的 OLE DB 驅動程式 |Microsoft 文件
 description: OLE DB 驅動程式的 SQL Server 支援高可用性、 災害復原
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -17,9 +17,9 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: HT
+ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/06/2018
 ---
@@ -72,29 +72,11 @@ ms.lasthandoff: 04/06/2018
 如果您升級 SQL Server 應用程式 OLE DB 驅動程式目前使用資料庫鏡像的多重子網路案例，您應該移除**Failover_Partner**連接屬性並將它取代為**MultiSubnetFailover**設**是**和可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用 **Failover_Partner** 和 **MultiSubnetFailover=Yes**，驅動程式會發生錯誤。 不過，如果連接字串使用 **Failover_Partner** 和 **MultiSubnetFailover=No** (或 **ApplicationIntent=ReadWrite**)，應用程式就會使用資料庫鏡像。  
   
 如果可用性群組中的主要資料庫使用資料庫鏡像，而且如果在連接到主要資料庫 (而不是可用性群組接聽程式) 的連接字串中使用 **MultiSubnetFailover=Yes**，驅動程式會傳回錯誤。  
-  
-## <a name="specifying-application-intent"></a>指定應用程式意圖  
-當**ApplicationIntent = ReadOnly**，用戶端會連線到啟用 Always On 的資料庫時要求讀取工作負載。 伺服器會強制施行此意圖，在連接時間和期間`USE`資料庫陳述式，但只有對 Alwayson 啟用資料庫。  
-  
-**ApplicationIntent** 關鍵字不適用於舊版唯讀資料庫。  
-  
-資料庫可以允許或不允許目標 Alwayson 資料庫上的讀取工作負載。 (作法是使用 **PRIMARY_ROLE** 和 **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的 **ALLOW_CONNECTIONS** 子句。)  
-  
-**ApplicationIntent** 關鍵字用於啟用唯讀路由。  
-  
-## <a name="read-only-routing"></a>唯讀路由  
-唯讀路由功能可確保資料庫之唯讀複本的可用性。 若要啟用唯讀路由：  
-  
-1.  您必須連接到 AlwaysOn 可用性群組的可用性群組接聽程式。  
-  
-2.  **ApplicationIntent** 連接字串關鍵字必須設為 **ReadOnly**。  
-  
-3.  若要啟用唯讀路由的資料庫管理員必須設定 Alwayson 可用性群組。  
-  
-使用唯讀路由的多個連接可能不會連接至相同的唯讀複本。 資料庫同步處理的變更或伺服器路由組態的變更，可能會導致用戶端連接至不同的唯讀複本。 若要確保所有唯讀要求連接至相同的唯讀複本，不傳遞 Alwayson 可用性群組接聽程式**伺服器**連接字串關鍵字。 請改為指定唯讀執行個體的名稱。  
-  
-唯讀路由所花的時間可能會比連接到主要複本所花的時間更長，因為唯讀路由會先連接到主要複本，然後尋找最佳可用的可讀次要複本。 因此，您應該增加登入逾時。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="ole-db"></a>OLE DB  
 SQL Server OLE DB 驅動程式同時支援**ApplicationIntent**和**MultiSubnetFailover**關鍵字。   
   
