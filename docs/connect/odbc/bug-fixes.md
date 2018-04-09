@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: dc71f74ca8e81f370037b82e42fd78957e096775
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="list-of-bugs-fixed"></a>已修正的 bug 的清單
 
@@ -38,10 +38,10 @@ ms.lasthandoff: 04/05/2018
 - 32 位元 Windows 上固定極少數的 bug，當轉換浮點數到整數
 - 修正的問題，其中會插入 double with Always Encrypted 十進位欄位上沒有傳回資料截斷錯誤
 - 固定 MacOS 安裝程式警告
+- 修正不正確的狀態時傳送給 SQL Server 工作階段復原嘗試期間連接恢復功能和連線集區都已啟用，導致工作階段卸除的伺服器
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>中的 bug 修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驅動程式 17 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- 修正不正確的狀態時傳送給 SQL Server 工作階段復原嘗試期間連接恢復功能和連線集區都已啟用，導致工作階段卸除的伺服器
 - 修正的 bug 其中使用 Kerberos 驗證時，大量插入可能會失敗，發生 「 拒絕存取 」 錯誤
 - UnixODBC bug 2.3.1 下方的版本中移除的因應措施 （驅動程式會加倍傳遞至 unixODBC 特定緩衝區的大小）
 - 固定連接恢復功能 （重新連線） 溢出時使用 ColumnEncryption = 啟用

@@ -93,16 +93,16 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 5. 遵循提示來指定新連線設定檔的連線屬性。 指定每個值之後，請按 **ENTER** 繼續。 
 
-   下表描述的連線設定檔屬性。
+   下表介紹連線設定檔屬性。
 
-   | 設定 | Description |
+   | 設定 | 描述 |
    |-----|-----|
    | **伺服器名稱** | SQL Server 執行個體名稱。 本教學課程中，使用**localhost**連接到本機電腦上的 SQL Server 執行個體。 如果連接到遠端的 SQL Server，請輸入目標 SQL Server 電腦或 IP 位址的名稱。 如果您需要指定您的 SQL Server 執行個體的連接埠，請使用逗號來分隔的名稱。 例如連接埠 1401年上執行的本機伺服器您會輸入**localhost，1401年**。 |
    | **[選用]資料庫名稱** | 您想要使用的資料庫。 基於本教學課程的目的，未指定資料庫和按**ENTER**才能繼續。 |
    | **使用者名稱** | 輸入資料庫伺服器上具有存取權的使用者名稱。 此教學課程中，使用預設**SA** SQL Server 安裝期間建立的帳戶。 |
    | **密碼 (SQL 登入)** | 請輸入指定之使用者的密碼。 | 
    | **儲存密碼嗎？** | 若要儲存密碼，請輸入**是**。 否則請輸入**否**，此後每次使用連線設定檔時，系統都會提示您輸入密碼。 |
-   | **[選用]輸入此設定檔的名稱** | 連線設定檔名稱。 例如，您可以命名為設定檔**本機主機設定檔**。 
+   | **[選用] 輸入此設定檔的名稱** | 連線設定檔名稱。 例如，您可將設定檔命名為**本機主機設定檔**。 
 
    > [!Tip] 
    > 您可以建立和編輯使用者設定檔 (settings.json) 中的連線設定檔。 開啟選取的設定檔**喜好設定**然後**使用者設定**VS Code 功能表。 如需詳細資訊，請參閱[管理連線設定檔]。
@@ -151,17 +151,17 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 2. 按**F1**顯示命令選擇區。
 
-3. 輸入 **sql** 調色盤中的命令來顯示 SQL 命令或輸入 **sqluse**如**MS sql: use-cdata 資料庫**命令。
+3. 在命令選擇區輸入 **sql** 以顯示 SQL 命令，或輸入 **sqluse** 以顯示 **MS SQL:Use Database** 命令。
 
 4. 按一下**MS sql: use-cdata 資料庫**，然後選取**TutorialDB**資料庫。 這將內容變更至前一節中建立新資料庫。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-use-database.png" alt="use database" style="width: 500px;" />
 
-3. 在編輯器中，輸入**sql**來顯示程式碼片段，然後選取**sqlCreateTable**按**輸入**。
+3. 在編輯器中，輸入**sql** 以顯示程式碼片段，然後選取 **sqlCreateTable** 並按 **Enter**。
 
-4. 在片段中，輸入**員工**資料表名稱。
+4. 在程式碼片段中，輸入 **Employees** 作為資料表名稱。
 
-5. 按 **索引標籤**，然後輸入**dbo**結構描述名稱。
+5. 按 **Tab 鍵**，然後輸入 **dbo** 作為結構描述名稱。
 
    > [!NOTE]
    > 之後加入程式碼片段，您必須輸入的資料表和結構描述名稱，而不需要變更焦點從 VS Code 編輯器。
@@ -188,7 +188,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 ## <a name="insert-and-query"></a>插入和查詢
 
-1. 加入下列陳述式到四個資料列插入**員工**資料表。 然後選取所有資料列。
+1. 加入下列陳述式以新增四個資料列至 **Employees** 資料表。 然後選取所有資料列。
 
    ```sql
    -- Insert rows into table 'Employees'
@@ -236,23 +236,23 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
    > [!NOTE]
    > 當您的 T-SQL 指令碼有兩個或多個結果方格時，就會顯示最大化圖示。
 
-3. 以滑鼠右鍵在方格上開啟 [方格] 內容功能表。 
+3. 滑鼠右鍵點選方格開啟 [方格] 內容功能表。 
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png" alt="Context menu" style="width: 500px;" />
 
 4. 選取**選取所有**。
 
-5. 開啟 [方格] 內容功能表，然後選取**儲存為 JSON** .json 檔案來儲存結果。
+5. 開啟 [方格] 內容功能表，然後選取 **儲存為 JSON** 將結果儲存為 .json 檔案。
 
 6. 指定 JSON 檔案的檔案名稱。 此教學課程中，輸入**employees.json**。
 
-7. 請確認 JSON 檔案會儲存，並開啟 VS Code 中。
+7. 請確認 JSON 檔案已經儲存，並在 VS Code 中開啟。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png" alt="Save as Json" style="width: 500px;" />
 
 ## <a name="next-steps"></a>後續的步驟
 
-在真實世界案例中，您可以建立的指令碼，您需要儲存並執行更新 （系統管理或做為較大的開發專案的一部分）。 在此情況下，您可以將儲存的指令碼**.sql**延伸模組。
+在真實世界案例中，您所建立的指令碼，可能會先儲存之後再執行 (無論用於系統管理或做為更大型的開發專案的一部分)。 在此情況下，您可以使用 **.sql** 為副檔名的方式儲存指令碼。
 
 如果您還不熟悉 T-SQL，請參閱[教學課程： 撰寫 TRANSACT-SQL 陳述式]和[TRANSACT-SQL 參考 (Database Engine)]。
 

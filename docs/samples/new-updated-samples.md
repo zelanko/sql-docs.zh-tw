@@ -1,6 +1,6 @@
 ---
-title: 已更新-SQL 作業 Studio 文件 |Microsoft 文件
-description: 顯示更新的內容，如需 SQL 作業 Studio 中最近變更過的文件的程式碼片段。
+title: 已更新-適用於 SQL Server 文件範例 |Microsoft 文件
+description: 顯示更新的內容，如需 Microsoft SQL Server 的範例中最近變更過的文件的程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,15 +8,15 @@ ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: ssops
+ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: 339cf28ac985e1614b4aaece3fb099d0144a309a
+ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新的與最近的更新： SQL 作業 Studio 文件
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>新增和更新最近： SQL Server 的範例
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/08/2018
 
 
 - 更新日期範圍：&nbsp;**2017 年 12 月 3 日**&nbsp;-至-&nbsp;**2018 年 2 月 3 日**
-- *主旨區域：* &nbsp; **SQL 作業 Studio**。
+- *主旨區域：* &nbsp; **適用於 SQL Server 範例**。
 
 
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/08/2018
 下列連結會跳至最近新增的新文章。
 
 
-1. [SQL 作業 Studio （預覽） 版本資訊](release-notes.md)
+***目前無新文章列出。***
 
 
 
@@ -67,53 +67,13 @@ ms.lasthandoff: 04/08/2018
 
 此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [下載並安裝 SQL 作業 Studio （預覽）](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1.&nbsp; [下載並安裝 SQL 作業 Studio （預覽）](download.md)
-
-更新日期：2018 年 1 月 18 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 24.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 092e48dd5607eecc0e322b5051b4adf0c5aeeb30 6b4f80ad54c599e4354303a736f62e9715f99a32  (PR=4662  ,  Filename=download.md  ,  Dirpath=docs\sql-operations-studio\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
-
-
-
-|平台|下載|發行日期|
-|:---|:---|:---|
-|視窗|[安裝程式](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|2018 年 1 月 17 日 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|2018 年 1 月 17 日 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|2018 年 1 月 17 日|
-
-如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
-
-**取得 SQL 作業 Studio （預覽） for Windows**
-
-
-這個版本的 SQL 作業 Studio （預覽） 包含標準的 Windows 安裝程式經驗和.zip:
-
-**安裝程式**
-
-1. 下載並執行[SQL 作業 Studio （預覽） Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=866480)。
-1. 啟動 SQL 作業 Studio （預覽） 應用程式。
-
-
-**.zip 檔案**
-
-1. 下載[適用於 Windows 的 SQL 作業 Studio （預覽）.zip](https://go.microsoft.com/fwlink/?linkid=866479)。
-
+***已更新此區域中的沒有發行項，此時間。***
 
 
 

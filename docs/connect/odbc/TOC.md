@@ -7,3 +7,6 @@
 # [下載 ODBC Driver for SQL Server](download-odbc-driver-for-sql-server.md)
 
 # [DSN 連接字串的關鍵字及屬性](dsn-connection-string-attribute.md)
+# [搭配 ODBC 驅動程式使用 Azure Active Directory](using-azure-active-directory.md)
+
+# [Bug 修正](bug-fixes.md)

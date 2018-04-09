@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL Database) |Microsoft 文件
 ms.custom: ''
-ms.date: 03/16/2016
+ms.date: 04/06/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: f09cea24068fe63dd1609e26c7835662369d8f0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ ms.lasthandoff: 04/05/2018
 |xtp_storage_percent|**decimal (5,2)**|儲存體使用量記憶體內部 OLTP 的服務層限制的百分比表示 （結尾的報告的時間間隔）。 這包括用來儲存下列記憶體中 OLTP 物件的記憶體： 記憶體最佳化資料表、 索引和資料表變數。 它也包含用於處理的 ALTER TABLE 作業的記憶體。<br /><br /> 如果未使用記憶體內部 OLTP 資料庫中，則傳回 0。|  
 |max_worker_percent|**decimal (5,2)**|最大並行工作者 （要求），以資料庫的服務層限制的百分比表示。|  
 |max_session_percent|**decimal (5,2)**|最大並行工作階段的資料庫服務層限制的百分比。|  
-|dtu_limit|**int**|目前最大資料庫 DTU 此資料庫設定此間隔。|  
+|dtu_limit|**int**|目前最大資料庫 DTU 此資料庫設定此間隔。 |
+|||
   
 > [!TIP]  
 >  詳細說明這些限制，以及服務層的內容，請參閱主題[服務層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)和[服務層的功能以及限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)。  
@@ -58,13 +59,13 @@ ms.lasthandoff: 04/05/2018
  此檢視需要 VIEW DATABASE STATE 權限。  
   
 ## <a name="remarks"></a>備註  
- 所傳回的資料**sys.dm_db_resource_stats**的最大允許您正在為 Basic、 Standard 和 Premium 資料庫的服務層/效能層級的 DTU 限制百分比表示。
+ 所傳回的資料**sys.dm_db_resource_stats**的最大允許您正在執行的服務層/效能層級的限制百分比表示。
  
  如果資料庫在過去的 60 分鐘內已容錯移轉到另一部伺服器，檢視將只會傳回該資料庫在容錯移轉之後做為主要資料庫時的資料。  
   
  這項資料較不精細的檢視，使用**sys.resource_stats**目錄檢視中的**主要**資料庫。 此檢視會每隔 5 秒擷取一次資料，並會保留 14 天內的歷程記錄資料。  如需詳細資訊，請參閱[sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)。  
   
- 彈性集區的成員資料庫時，資源統計資料呈現為百分比值，會在彈性集區設定中所設定的資料庫最大 DTU 限制百分比表示。  
+ 彈性集區的成員資料庫時，資源統計資料呈現為百分比的值會表示為資料庫在彈性集區設定中所設定的最大限制的百分比。  
   
 ## <a name="example"></a>範例  
   

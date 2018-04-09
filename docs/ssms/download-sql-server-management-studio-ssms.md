@@ -26,16 +26,16 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b64f3d78ceafd5e1eac62e1e3dd1155827e8c61
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 014067623255c257ee611b8be8a0b8f49f5e57bc
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -141,7 +141,7 @@ SQL Database 受控執行個體：
 ### <a name="minimize-installation-reboots"></a>最小化安裝重新開機
 
 * 請採取下列動作，以降低 SSMS 安裝程式需要在安裝結束時重新開機的機會：
-  * 請確定您執行的是最新版的 Visual C++ 2013 可轉散發套件。 需要 12.00.40649.5 版本 (或更新版本)。 只需要 x64 版本。
+  * 請確定您執行的是最新版的 Visual C++ 2013 可轉散發套件。 需要 12.0.40649.5 版 (或更新版本)。 只需要 x64 版本。
   * 請確認電腦上的 .NET Framework 版本是 4.6.1 (或更新版本)。
   * 關閉電腦上開啟的所有其他 Visual Studio 執行個體。
   * 請確定電腦上安裝了所有最新的作業系統更新。
