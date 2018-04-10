@@ -37,14 +37,14 @@ ms.lasthandoff: 03/15/2018
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server ](quickstart-sql-server.md)
-- [使 用[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database ](quickstart-sql-database.md)
+- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database ](quickstart-sql-database.md)
 
 
 ## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>快速找出資料庫物件和執行一般工作
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 提供的搜尋小工具，以快速找出資料庫物件。 結果清單中提供的內容功能表的一般工作與選取的物件，例如*編輯資料*資料表。
 
-1. 開啟 [伺服器資訊看板] (**Ctrl + G**)，依序展開**資料庫**，然後選取**TutorialDB**。 
+1. 開啟 [伺服器資訊看板] (**Ctrl + G**)，展開**資料庫**，然後選取**TutorialDB**。 
 
 1. 滑鼠右鍵點選 **TutorialDB**，從內容功能表選取**管理**，開啟 *TutorialDB 儀表板*：
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/15/2018
 
    ![快速搜尋 widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 編輯**電子郵件**的第一筆資料，輸入 *orlando0@adventure-works.com*，然後按 **Enter** 鍵儲存變更。
+1. 編輯**電子郵件**欄位的第一筆資料，輸入 *orlando0@adventure-works.com*，然後按 **Enter** 鍵儲存變更。
 
    ![編輯資料](./media/tutorial-sql-editor/edit-data.png)
 
