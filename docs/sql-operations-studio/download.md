@@ -24,7 +24,7 @@ ms.lasthandoff: 03/28/2018
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
-下載並安裝最新版本中，*年 3 月公用預覽*:
+下載並安裝最新版本，*3 月公開預覽*:
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
