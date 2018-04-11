@@ -183,20 +183,20 @@ SQL 作業 Studio 提供的檢視使用查看定義功能的物件定義的能�
 
 8. 若要建立*setCustomer*預存程序，請按**F5**。
 
-## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用將查詢結果儲存為 JSON，將測試 setCustomer 預存程序
+## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a> 將查詢結果儲存為 JSON，對 setCustomer 預存程序進行測試
 
 *SetCustomer*前一節中所建立的預存程序需要 JSON 資料傳遞至*@json_val*參數。 本節示範如何取得正確格式的位元的 JSON 來將傳入參數，所以您可以測試預存程序。
 
-1. 在**伺服器**[資訊看板] 上按一下滑鼠右鍵*dbo。客戶*資料表，並按一下**選取前 1000 個資料列**。
+1. 在**伺服器**[資訊看板] 上滑鼠右鍵點選 *dbo.Customers* 資料表，並點選**選取前 1000 個資料列**。
 
 2. 在 [結果] 檢視中選取第一個資料列，請確定已選取整個資料列 （按一下最左邊資料行中的數字 1），然後選取**儲存為 JSON**。  
-3. 變更資料夾位置，您應記得讓您可以刪除更新版本 （針對範例桌面） 檔案，然後按一下**儲存**。 JSON 格式化的檔案隨即開啟。
+3. 將資料夾變更為您能記住的位置，以便稍後可以刪除該檔案（如：桌面），然後按一下**儲存**。 JSON 格式的檔案隨即開啟。
 
    ![將儲存為 JSON](./media/tutorial-sql-editor/save-as-json.png)
 
 4. 在編輯器中選取 JSON 資料，並將它複製。
-5. 按下開啟新的編輯器**Ctrl + N**。
-6. 先前的步驟顯示如何輕鬆地取得正確格式的資料，才能完成呼叫*setCustomer*程序。 您可以查看下列程式碼會使用新的客戶詳細資料與相同的 JSON 格式讓我們可以測試*setCustomer*程序。 陳述式包含語法來宣告參數和執行新的 get 和設定程序。 您可以貼上複製的資料，從上一節和編輯它，讓它相當於下列範例中，或只是將下列陳述式貼到查詢編輯器。
+5. 按下 **Ctrl + N** 開啟新的編輯器。
+6. 先前的步驟顯示如何輕鬆地取得正確格式的資料，以便完成呼叫 *setCustomer* 程序。 如您所見，下列程式碼使用相同的 JSON 格式並具有新的客戶詳細資料，讓我們能測試 setCustomer 預存程序。 陳述式包含參數宣告和執行新的 Get 與 Set 程序語法。 您可以貼上從上一章節複製的資料並加以編輯，使之與下列範例相同，或直接將下列陳述式貼到查詢編輯器中。
 
    ```sql
    -- example to execute the stored procedure we just created
@@ -216,7 +216,7 @@ SQL 作業 Studio 提供的檢視使用查看定義功能的物件定義的能�
    EXECUTE dbo.getCustomer @ID = 5
    ```
 
-7. 按下執行指令碼**F5**。 指令碼插入新客戶，並以 JSON 格式傳回新的客戶資訊。 按一下要開啟的格式化的檢視的結果。
+7. 按下**F5**鍵執行指令碼。指令碼將新增客戶資訊，並以 JSON 格式傳回新的客戶資訊。按一下結果以開啟格式化檢視。
 
    ![測試結果](./media/tutorial-sql-editor/test-result.png)
 
@@ -225,11 +225,11 @@ SQL 作業 Studio 提供的檢視使用查看定義功能的物件定義的能�
 > [!div class="checklist"]
 > * 快速搜尋結構描述物件
 > * 編輯資料表資料 
-> * 撰寫使用程式碼片段的 T-SQL 指令碼
-> * 深入了解使用查看定義的資料庫物件詳細資料，並移至定義
+> * 使用程式碼片段撰寫 T-SQL 指令碼
+> * 透過查看定義與移至定義，深入了解資料庫物件詳細資訊
 
 
-若要了解如何啟用**5 名最慢的查詢** widget 中，完成下一個教學課程：
+若要了解如何啟用**5 名最慢的查詢** 小工具，請完成下一個教學課程：
 
 > [!div class="nextstepaction"]
-> [啟用緩慢的查詢範例深入了解 widget](tutorial-qds-sql-server.md)
+> [啟用緩慢查詢範例 Insight 小工具](tutorial-qds-sql-server.md)
