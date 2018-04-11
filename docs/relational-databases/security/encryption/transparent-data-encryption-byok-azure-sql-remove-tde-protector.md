@@ -1,29 +1,28 @@
 ---
-title: "PowerShell - 移除 TDE 保護裝置 - Azure SQL | Microsoft Docs"
-description: "針對使用攜帶您自己的金鑰 (BYOK) 支援之 TDE 的 Azure SQL Database 或資料倉儲，回應可能遭盜用的 TDE 保護裝置的＜如何＞指南。"
-keywords: 
+title: PowerShell - 移除 TDE 保護裝置 - Azure SQL | Microsoft Docs
+description: 針對使用攜帶您自己的金鑰 (BYOK) 支援之 TDE 的 Azure SQL Database 或資料倉儲，回應可能遭盜用的 TDE 保護裝置的＜如何＞指南。
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: becczhang
 manager: craigg
-ms.prod: 
-ms.reviewer: 
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
 ms.workload: Inactive
-ms.tgt_pltfrm: 
-ms.devlang: na
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: 30b08c760eff3bdeb6d264d1c9d79c375f0a09ec
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 9982a1afafee84e6c435c59f7e0ec431fb87f832
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>使用 PowerShell 移除透明資料加密 (TDE) 保護裝置
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

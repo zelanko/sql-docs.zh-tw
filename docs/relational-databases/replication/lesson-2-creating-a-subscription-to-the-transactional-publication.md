@@ -1,32 +1,32 @@
 ---
-title: "第 2 課：建立交易式發行集的訂閱 | Microsoft Docs"
-ms.custom: 
+title: 第 2 課：建立交易式發行集的訂閱 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 54dd4030aa4212f23b1ccaf3f5b3a19ca8fc0f48
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>第 2 課：建立交易式發行集的訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

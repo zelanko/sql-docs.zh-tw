@@ -1,6 +1,6 @@
 ---
-title: "已更新 - SSDT for SQL Server 文件 | Microsoft Docs"
-description: "顯示最近變更過的文件更新內容，SQL Server Data Tools (SSDT) for Microsoft SQL Server 的程式碼片段。"
+title: 已更新 - SSDT for SQL Server 文件 | Microsoft Docs
+description: 顯示最近變更過的文件更新內容，SQL Server Data Tools (SSDT) for Microsoft SQL Server 的程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: ssdt
 ms.date: 02/03/2018
-ms.openlocfilehash: c591ddddd60af31fe2d338fdee25ea2c17ab0ea5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ad139f5ff9389c1a04a7f077d61facc7643db323
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>新文章和最近更新的文章：SQL Server Data Tools (SSDT)
 
@@ -188,7 +188,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 多維度運算式 (MDX)** 文件](../mdx/new-updated-mdx.md)
 - [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
-- [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../sample/new-updated-sample.md)
+- [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../samples/new-updated-samples.md)
 - [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)

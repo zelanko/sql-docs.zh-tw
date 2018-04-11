@@ -1,32 +1,29 @@
 ---
-title: "擴充事件工具 | Microsoft Docs"
-ms.custom: 
+title: 擴充事件工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
+ms.technology: xevents
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cff6cc262957d8bffbdc0955a3d276b92b1094f6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 5c7fb3b7b92cd58299b06ab5beb53e78dc64c67d
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="extended-events-tools"></a>擴充事件工具
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 02/12/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者。 這是一項功能強大的工具，可讓您用來建立、更改和管理「擴充事件」工作階段。 如需詳細資訊，請參閱 [針對擴充事件使用 PowerShell 提供者](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體時提供 SQL Server 登入。 這可讓您建立及執行「擴充事件」主題中所提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 這可讓您建立及執行「擴充事件」主題中所提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)。  
   
  除了您所建立的工作階段以外，伺服器上也會有預設系統健康工作階段存在。 此工作階段會收集系統資料，讓您能夠用來協助排除效能問題。 如需詳細資訊，請參閱 [使用 system_health 工作階段](../../relational-databases/extended-events/use-the-system-health-session.md)。  
   

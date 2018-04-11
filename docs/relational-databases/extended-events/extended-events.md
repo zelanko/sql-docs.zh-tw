@@ -1,32 +1,29 @@
 ---
-title: "擴充事件 | Microsoft Docs"
-ms.custom: 
+title: 擴充事件 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/23/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
+ms.technology: xevents
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 12c46e8d5a1496d21f2f4b0ab40956020a8ac612
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7d0c0b825a65c72ba8d106b2e0d145760f266aa9
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="extended-events"></a>擴充事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,31 +1,32 @@
 ---
-title: "Azure 中資料庫檔案的檔案快照集備份 | Microsoft Docs"
-ms.custom: 
+title: Azure 中資料庫檔案的檔案快照集備份 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8970c703cc7b2af93cb29466f0b06c3d83cc1f56
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d010a0b7ea33cdda98c62c07d6d52c61d01051cb
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中資料庫檔案的檔案快照集備份
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份使用 Azure 快照集為使用 Azure Blob 儲存體服務儲存的資料庫檔案，提供近乎即時的備份及更快速的還原。 這個功能可讓您簡化備份和還原原則。 如需即時的示範，請參閱 [File-Snapshot Backups Demo (檔案快照集備份示範)](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。 如需使用 Azure Blog 儲存體服務排序資料庫檔案的詳細資訊，請參閱 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份使用 Azure 快照集為使用 Azure Blob 儲存體服務儲存的資料庫檔案，提供近乎即時的備份及更快速的還原。 這個功能可讓您簡化備份和還原原則。 如需即時的示範，請參閱 [File-Snapshot Backups Demo (檔案快照集備份示範)](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。 如需使用 Azure Blog 儲存體服務排序資料庫檔案的詳細資訊，請參閱 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。  
   
  ![快照集備份架構圖表](../../relational-databases/backup-restore/media/snapshotbackups.PNG "快照集備份架構圖表")  
   
@@ -180,9 +181,6 @@ GO
 sys.sp_delete_backup_file_snapshot N'adventureworks2016', N'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016Data.mdf?snapshot=2015-05-29T21:31:31.6502195Z';  
 GO  
 ```  
-  
-## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
- 您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

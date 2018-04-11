@@ -1,6 +1,6 @@
 ---
-title: "已更新 - SQL Server 文件 | Microsoft Docs"
-description: "針對 SQL Server，顯示文件最新變更之已更新內容的程式碼片段。"
+title: 已更新 - SQL Server 文件 | Microsoft Docs
+description: 針對 SQL Server，顯示文件最新變更之已更新內容的程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: sql-server
 ms.date: 02/03/2018
-ms.openlocfilehash: d819ecfc22e3a8e27fdfe7263b1d545298ca5055
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bcbf9a579fce8d27eaa53471190dbe850774c146
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>新文章和最近更新的文章：SQL Server 文件
 
@@ -164,7 +164,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 多維度運算式 (MDX)** 文件](../mdx/new-updated-mdx.md)
 - [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
-- [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../sample/new-updated-sample.md)
+- [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../samples/new-updated-samples.md)
 - [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)

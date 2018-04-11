@@ -1,16 +1,14 @@
 ---
-title: "資料列層級安全性 | Microsoft 文件"
-ms.custom: 
+title: 資料列層級安全性 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: security
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: security
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - access control predicates
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - row level security described
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d039c1e5bb76fb9b994e9d5fc2a89df64e320c3b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b150fa58725e157834c202224c679ee5119cdb8a
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ ms.lasthandoff: 11/21/2017
  在更正式的用語，RLS 將介紹述詞型的存取控制。 其特色為彈性、 集中式、 述詞性的評估，依據適當情況，考量中繼資料或其他系統管理員決定的準則。 述詞作為準則，以根據使用者屬性判斷使用者是否具有適當的資料存取權。 標籤為基礎的存取控制可以使用述詞為基礎的存取控制來實作。  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  建立、 改變或卸除安全性原則需要 **ALTER ANY SECURITY POLICY** 權限。 建立或卸除安全性原則需要 **ALTER** 結構描述權限。  
   
  此外，每個加入的述詞還需要下列權限：  

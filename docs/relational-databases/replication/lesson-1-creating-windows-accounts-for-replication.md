@@ -1,16 +1,16 @@
 ---
-title: "第 1 課：建立用於複寫的 Windows 帳戶 | Microsoft Docs"
-ms.custom: 
+title: 第 1 課：建立用於複寫的 Windows 帳戶 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 606bcbead7c379fa3fe54bd975e683adfca857cc
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 課：建立用於複寫的 Windows 帳戶
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
