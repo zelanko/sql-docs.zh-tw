@@ -1,32 +1,32 @@
 ---
-title: "重新命名資料行 (Database Engine) | Microsoft Docs"
-ms.custom: 
+title: 重新命名資料行 (Database Engine) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - columns [SQL Server], names
 - renaming columns
 - column names [SQL Server]
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 0bb8f1e02fa372e33174b2268584885808e25790
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="rename-columns-database-engine"></a>重新命名資料行 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ ms.lasthandoff: 02/23/2018
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來重新命名資料行：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要物件的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -81,13 +81,13 @@ ms.lasthandoff: 02/23/2018
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要重新命名資料行**  
   
-#### <a name="to-rename-a-column"></a>重新命名資料行  
+#### <a name="to-rename-a-column"></a>若要重新命名資料行  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  下列範例會將 `TerritoryID` 資料表中的 `Sales.SalesTerritory` 資料行重新命名為 `TerrID`。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  下列範例會將 `TerritoryID` 資料表中的 `Sales.SalesTerritory` 資料行重新命名為 `TerrID`。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     USE AdventureWorks2012;  

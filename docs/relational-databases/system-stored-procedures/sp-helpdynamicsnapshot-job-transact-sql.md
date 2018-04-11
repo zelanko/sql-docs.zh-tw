@@ -1,16 +1,16 @@
 ---
-title: "sp_helpdynamicsnapshot_job (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpdynamicsnapshot_job (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -26,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8f9accc8ae7ffb64d82fa10c3b60a2f8fec44b8a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,22 +54,22 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =** ] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，預設值是 **%** ，傳回所有符合指定的已篩選的資料快照集作業的資訊*dynamic_snapshot_jobid*和*dynamic_snapshot_jobname*針對所有發行集。  
+ [ **@publication =** ] **'***publication***'**  
+ 這是發行集的名稱。 *發行集*是**sysname**，預設值是**%**，傳回所有符合指定的已篩選的資料快照集作業的資訊*dynamic_snapshot_jobid*和*dynamic_snapshot_jobname*針對所有發行集。  
   
- [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- 這是篩選資料快照集作業的名稱。 *dynamic_snapshot_jobname*是**sysname**，預設值是 **%** '，它會傳回使用指定的發行集的所有動態作業*dynamic_snapshot_jobid*。 如果在建立作業時，沒有明確指定作業名稱，則作業名稱格式如下：  
+ [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
+ 這是篩選資料快照集作業的名稱。 *dynamic_snapshot_jobname*是**sysname**，預設值是**%**'，它會傳回使用指定的發行集的所有動態作業*dynamic_snapshot_jobid*。 如果在建立作業時，沒有明確指定作業名稱，則作業名稱格式如下：  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
  這是已篩選資料快照集作業的識別碼。 *dynamic_snapshot_jobid*是**uniqueidentifier**，預設值是 NULL，它會傳回所有符合指定的快照集作業*dynamic_snapshot_jobname*。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|識別已篩選資料快照集作業。|  
 |**job_name**|**sysname**|已篩選資料快照集作業的名稱。|  
@@ -99,7 +99,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定伺服器角色、 **db_owner**固定資料庫角色，且發行集存取清單的發行集可以執行**sp_helpdynamicsnapshot_job**.  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

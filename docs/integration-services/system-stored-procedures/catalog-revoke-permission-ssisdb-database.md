@@ -1,31 +1,31 @@
 ---
-title: "catalog.revoke_permission (SSISDB 資料庫) | Microsoft Docs"
-ms.custom: 
+title: catalog.revoke_permission (SSISDB 資料庫) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ catalog.revoke_permission [ @object_type = ] object_type
 ## <a name="result-sets"></a>結果集  
  無  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  無  
   
 ## <a name="permissions"></a>Permissions  
@@ -82,7 +82,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   **系統管理員**伺服器角色的成員資格  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果指定 permission_type，則預存程序會移除已明確指派給物件主體的權限。 即使沒有這種類型的執行個體，程序還是會傳回成功的程式碼值 (`0`)。 如果省略 permission_type，則預存程序會移除物件主體的所有權限。  
   
 > [!NOTE]  

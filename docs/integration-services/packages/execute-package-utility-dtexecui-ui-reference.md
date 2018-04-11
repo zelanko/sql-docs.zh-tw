@@ -1,16 +1,16 @@
 ---
-title: "執行套件公用程式 (dtexecui) | Microsoft Docs"
-ms.custom: 
+title: 執行套件公用程式 (dtexecui) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.dtexecui.setvalues.f1
@@ -26,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: de1484e04318c45057213226016379326e670304
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="execute-package-utility-dtexecui"></a>執行套件公用程式 (dtexecui)
   您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的封裝： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。 此使用者介面可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟或藉由在命令提示字元輸入 **dtexecui** 加以開啟，作為使用 **DTExec** 命令提示字元工具執行封裝的替代方案。  
@@ -73,14 +73,14 @@ ms.lasthandoff: 01/25/2018
   
 |||  
 |-|-|  
-|ReplTest1|描述|  
-|**[SQL Server]**|當封裝位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，請選取此選項。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的使用者名稱和密碼。 每個使用者名稱和密碼都會將 **/USER** *username* 和 **/PASSWORD** *password* options to the comm和 prompt.|  
+|Value|說明|  
+|**SQL Server**|當封裝位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，請選取此選項。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的使用者名稱和密碼。 每個使用者名稱和密碼都會將 **/USER** *username* 和 **/PASSWORD** *password* options to the comm和 prompt.|  
 |**檔案系統**|當封裝位於檔案系統時，請選取此選項。|  
 |**SSIS 封裝存放區**|當封裝位於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區時，請選取此選項。|  
   
  每一個選取項目都具有下列選項集合。  
   
- **執行**  
+ **Execute**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/25/2018
  **使用 Windows 驗證**  
  選取此選項即可使用 Windows 驗證，並以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者帳戶登入。  
   
- **[使用 SQL Server 驗證]**  
+ **使用 SQL Server 驗證**  
  選取此選項即可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 當使用者透過不信任連接並指定登入名稱和密碼進行連接時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行驗證，檢查是否已設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入帳戶，以及指定的密碼是否符合先前記錄的密碼。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找不到登入帳戶，驗證將會失敗，且使用者會收到錯誤訊息。  
   
 > [!IMPORTANT]  
@@ -118,7 +118,7 @@ ms.lasthandoff: 01/25/2018
  **登入伺服器**  
  指定封裝是否應該使用 Microsoft Windows 驗證來連接封裝來源。 建議使用 Windows 驗證，以獲得較佳的安全性。 使用 Windows 驗證，您就不需要指定使用者名稱和密碼。  
   
- **[使用 Windows 驗證]**  
+ **使用 Windows 驗證**  
  選取此選項即可使用 Windows 驗證，並以 Microsoft Windows 使用者帳戶登入。  
   
  **[使用 SQL Server 驗證]**  
@@ -140,13 +140,13 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  如果有多個組態會修改同一項屬性，就會採用最後載入的組態。  
   
- **[加入]**  
+ **加入**  
  按一下即可使用 [開啟] 對話方塊來加入組態。 依預設，對話方塊只會列出具有 .dtsconfig 副檔名的檔案。  
   
  **移除**  
  選取清單中的組態檔，然後按一下 [移除]。  
   
- **執行**  
+ **Execute**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -162,13 +162,13 @@ ms.lasthandoff: 01/25/2018
  **方向鍵**  
  選取清單中的命令檔，並使用右邊的方向鍵來變更載入順序。 命令檔依序載入，從清單的最上方開始。  
   
- **[加入]**  
+ **加入**  
  按一下即可使用 [開啟] 對話方塊加入命令檔。  
   
  **移除**  
  選取文字方塊中的命令檔，然後使用 [移除] 按鈕將它移除。  
   
- **執行**  
+ **Execute**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -187,7 +187,7 @@ ms.lasthandoff: 01/25/2018
  **連接字串**  
  編輯連接管理員的連接字串。 只有選取 **[連接管理員]** 核取方塊時，才可以編輯此欄位。  
   
- **執行**  
+ **Execute**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -282,7 +282,7 @@ ms.lasthandoff: 01/25/2018
  **開始時間和結束時間**  
  選擇要報告封裝開始和結束的時間。  
   
- **執行**  
+ **Execute**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -291,7 +291,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="logging-page"></a>記錄頁面  
  使用 **[執行封裝公用程式]** 對話方塊的 **[記錄]** 頁面，即可讓封裝在執行階段使用記錄提供者。 提供連接到記錄的封裝記錄提供者類型和連接字串。 每個記錄提供者項目各會新增一個 **/LOGGER***classid* 選項到命令提示字元。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **記錄提供者**  
  從清單中選取記錄提供者。  
   
@@ -301,7 +301,7 @@ ms.lasthandoff: 01/25/2018
  **移除**  
  選取記錄提供者，然後按一下即可將它移除。  
   
- **執行**  
+ **Execute**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -310,17 +310,17 @@ ms.lasthandoff: 01/25/2018
 ## <a name="set-values-page"></a>設定值頁面  
  使用 **[執行封裝公用程式]** 對話方塊的 **[設定值]** 頁面，即可藉由輸入屬性的路徑和屬性值，來設定封裝、可執行檔、連接、變數和記錄提供者的屬性值。 每個路徑項目各會新增一個 **/SET***propertypath;value* 選項到命令提示字元。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **屬性路徑**  
  輸入屬性的路徑。 路徑的語法會使用反斜線 (\\) 來指出下列項目是容器，使用句點 (.) 來指出下列項目是屬性，以及使用方括號來指出集合成員。 可以使用成員的索引或其名稱來識別成員。 例如，封裝變數的屬性路徑為 \Package.Variables[MyVariable].Value。  
   
- **ReplTest1**  
+ **Value**  
  鍵入屬性的值。  
   
  **移除**  
  選取屬性路徑，然後按一下即可將它移除。  
   
- **執行**  
+ **Execute**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -351,7 +351,7 @@ ms.lasthandoff: 01/25/2018
  版本識別碼  
  指定版本識別碼。  
   
- **執行**  
+ **Execute**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -367,10 +367,10 @@ ms.lasthandoff: 01/25/2018
  **手動編輯命令列**  
  按一下即可編輯 [命令列] 文字方塊中的命令列。  
   
- **命令列**  
+ **Command line**  
  顯示目前的命令列。 如果您選取要以手動編輯命令列的選項，就可以編輯。  
   
- **執行**  
+ **Execute**  
  按一下以執行封裝。  
   
  **關閉**  

@@ -1,30 +1,30 @@
 ---
-title: "指定資料表中的計算資料行 | Microsoft Docs"
-ms.custom: 
+title: 指定資料表中的計算資料行 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.lasthandoff: 02/23/2018
   
      [限制事項](#Limitations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來指定計算資料行：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/23/2018
   
 1.  在物件總管中，以滑鼠右鍵按一下包含您要變更之資料行的資料表，然後展開 [資料行] 資料夾。  
   
-2.  以滑鼠右鍵按一下要指定其計算資料行公式的資料行，然後按一下 [刪除]。 按一下 [確定] 。  
+2.  以滑鼠右鍵按一下要指定其計算資料行公式的資料行，然後按一下 [刪除]。 按一下 **[確定]**。  
   
 3.  加入新的資料行，並依照上述程序加入新的計算料行，藉此指定計算資料行公式。  
   

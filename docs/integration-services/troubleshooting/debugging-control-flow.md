@@ -1,16 +1,16 @@
 ---
-title: "偵錯控制流程 | Microsoft Docs"
-ms.custom: 
+title: 偵錯控制流程 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.setbreakpoints.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9aba628aa426093485d820ea4383dd04076481cd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含您可用於疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中之控制流程的功能及工具。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供您可以在所有工作及容器上啟用的十個中斷條件。 在 [設定中斷點] 對話方塊中，您可以在滿足下列條件時啟用中斷點：  
   
-|中斷條件|描述|  
+|中斷條件|Description|  
 |---------------------|-----------------|  
 |當容器收到 **OnPreExecute** 事件時。|即將執行工作時呼叫。 工作或容器會在即將執行之前引發此事件。|  
 |當容器收到 **OnPostExecute** 事件時。|在工作的執行邏輯完成之後立即呼叫。 工作或容器會在執行之後立即引發此事件。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   
  下表描述叫用計數類型。  
   
-|叫用計數類型|描述|  
+|叫用計數類型|Description|  
 |--------------------|-----------------|  
 |永遠|叫用中斷點時，一律暫停執行。|  
 |叫用計數等於|當中斷點發生的次數等於叫用計數時，暫停執行。|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 01/25/2018
 -   [針對工作或容器設定中斷點以偵錯封裝](#debug)  
   
 ## <a name="progress-reporting"></a>進度報表  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具包含兩種類型的進度報告：[控制流程] 索引標籤之設計介面上的色彩編碼，以及 [進度] 索引標籤上的進度訊息。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]設計師 」 包含兩種類型的進度報表： 設計介面上的色彩編碼**控制流程**索引標籤，然後上的進度訊息**進度** 索引標籤。  
   
  當您執行封裝時，「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會使用指示執行狀態的色彩來顯示每個工作或容器，以描述執行進度。 您可以根據元素的色彩判斷它是在等候執行、執行中、已順利完成，還是未成功結束。 在您停止封裝執行之後，色彩編碼會消失。  
   
@@ -111,11 +111,11 @@ ms.lasthandoff: 01/25/2018
 ## <a name="debug-windows"></a>偵錯視窗  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含許多視窗，您可將其用於處理中斷點及偵錯包含中斷點的封裝。 若要了解每個視窗的詳細資訊，請開啟該視窗並按 F1，以顯示視窗的 [說明]。  
   
- 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開啟這些視窗，請按一下 [偵錯] 功能表，指向 [視窗]，然後按一下 [中斷點]、[輸出] 或 [立即]。  
+ 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開啟這些視窗，請按一下 「偵錯」 功能表，指向 「視窗」，然後按一下 「中斷點」、「輸出」 或 「立即」。  
   
  下表描述這些視窗。  
   
-|視窗|描述|  
+|視窗|Description|  
 |------------|-----------------|  
 |中斷點|列出封裝中的中斷點，並提供啟用及刪除中斷點的選項。|  
 |輸出|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中顯示各功能的狀態訊息。|  
@@ -157,7 +157,7 @@ ms.lasthandoff: 01/25/2018
  **叫用計數類型**  
  指定中斷點生效的時間。  
   
-|ReplTest1|描述|  
+|Value|說明|  
 |-----------|-----------------|  
 |**永遠**|叫用中斷點時，一律暫停執行。|  
 |**叫用計數等於**|當中斷點發生的次數等於叫用計數時，暫停執行。|  

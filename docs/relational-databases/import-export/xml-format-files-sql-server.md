@@ -1,32 +1,32 @@
 ---
-title: "XML 格式檔案 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: XML 格式檔案 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d6b89e518ace2edd0e527f1908087922dabce2de
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/23/2018
   
      \<記錄>  
   
-     \<FIELD .../> [ ...*n* ]  
+     \<欄位 .../> [ ...*n* ]  
   
      \</記錄>  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 02/23/2018
   
      \<資料列>  
   
-     \<COLUMN .../> [ ...*n* ]  
+     \<資料行 .../> [ ...*n* ]  
   
      \</資料列>  
   
@@ -258,7 +258,7 @@ ms.lasthandoff: 02/23/2018
   
  欄位會使用下列屬性對應到目標資料表的資料行：  
   
-|COLUMN 屬性|描述|選擇性 /<br /><br /> 必要項|  
+|COLUMN 屬性|Description|選擇性 /<br /><br /> 必要項|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="***fieldID***"**|指定對應到資料行的欄位識別碼。<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> maps to \<FIELD ID**="***fieldID***"**/>|必要項|  
 |NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|必要項|  
@@ -554,7 +554,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [使用格式檔案略過資料欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [使用格式檔案將資料表資料行對應至資料檔欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -566,7 +566,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [使用格式檔案略過資料欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [使用格式檔案將資料表資料行對應至資料檔欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
  無。  

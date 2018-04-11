@@ -1,16 +1,16 @@
 ---
-title: "備份裝置 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 備份裝置 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: 
+caps.latest.revision: 93
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.openlocfilehash: fda4874de4ba9df6c8bab86ca8201dff76b28f33
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="backup-devices-sql-server"></a>備份裝置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
    
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
  備份磁碟  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/23/2018
   
  例如：  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';  
 GO  
@@ -91,7 +91,7 @@ GO
   
  例如，  
   
-```  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
@@ -102,7 +102,7 @@ RESTORE DATABASE AdventureWorks2012
   
  若要避免模稜兩可的情形 (特別是在指令碼中)，建議您在每個 DISK 子句中明確指定備份目錄的路徑。 不過，當您使用「查詢編輯器」時，這就不是那麼重要。 在這種情況下，如果您確定備份檔案是在預設的備份目錄中，即可省略 DISK 子句中的路徑。 例如，下列 `BACKUP` 陳述式會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫備份到預設備份目錄。  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = ’AdventureWorks2012.bak’;  
 GO  
@@ -127,7 +127,7 @@ GO
   
  例如：  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = '\\BackupSystem\BackupDisk1\AW_backups\AdventureWorksData.Bak';  
 GO  
@@ -157,7 +157,7 @@ GO
   
  例如：  
   
-```  
+```sql  
 BACKUP LOG AdventureWorks2012   
    TO TAPE = '\\.\tape0';  
 GO  
@@ -200,7 +200,7 @@ GO
   
  定義邏輯備份裝置之後，您就可以在 BACKUP 或 RESTORE 命令中指定邏輯備份裝置來替代裝置的實體名稱。 例如，下列陳述式會將 `AdventureWorks2012` 資料庫備份到 `AdventureWorksBackups` 邏輯備份裝置。  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO AdventureWorksBackups;  
 GO  

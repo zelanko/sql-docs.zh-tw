@@ -1,16 +1,16 @@
 ---
-title: "sp_create_plan_guide (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_create_plan_guide (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_plan_guide
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-caps.latest.revision: 
+caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,27 +58,27 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @name =] N'*plan_guide_name*'  
+ [ @name = ] N'*plan_guide_name*'  
  計畫指南的名稱。 計畫指南名稱僅限於目前的資料庫。 *plan_guide_name*必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)而且開頭不能是數字符號 （#）。 最大長度*plan_guide_name*為 124 個字元。  
   
- [ @stmt =] N'*statement_text*'  
+ [ @stmt = ] N'*statement_text*'  
  這是建立計畫指南所針對的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查詢最佳化工具會辨識符合的查詢*statement_text*， *plan_guide_name*才會生效。 若要成功，將計畫指南建立*statement_text*必須出現在所指定的內容@type， @module_or_batch，和@params參數。  
   
  *sp_create_plan_guide*必須允許查詢最佳化工具，以符合對應提供批次內的陳述式或模組所識別的方式提供@module_or_batch和@params。 如需詳細資訊，請參閱＜備註＞一節。 大小*statement_text*只受到可用記憶體的伺服器。  
   
- [@type =] N'{物件 |SQL |範本}'  
+ [@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
  是在其中的實體類型*statement_text*隨即出現。 這會指定用於比對內容*statement_text*至*plan_guide_name*。  
   
  OBJECT  
  指出*statement_text*的內容中會出現[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序、 純量函數、 多重陳述式資料表值函式或[!INCLUDE[tsql](../../includes/tsql-md.md)]目前資料庫中的 DML 觸發程序。  
   
  SQL  
- 指出*statement_text*獨立陳述式或批次提交到的內容中會出現[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]透過任何機制。 [!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式提交 common language runtime (CLR) 物件或擴充預存程序，或利用 EXEC N'*sql_string*'，會當做批次在伺服器上處理，因此，應該識別成@type  **=**  'SQL'。 如果未指定 SQL，則查詢提示 PARAMETERIZATION {FORCED |中不能指定簡單}@hints參數。  
+ 指出*statement_text*獨立陳述式或批次提交到的內容中會出現[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]透過任何機制。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式提交 common language runtime (CLR) 物件或擴充預存程序，或利用 EXEC N'*sql_string*'，會當做批次在伺服器上處理，因此，應該識別成@type **=** 'SQL'。 如果未指定 SQL，則查詢提示 PARAMETERIZATION {FORCED |中不能指定簡單}@hints參數。  
   
  TEMPLATE  
  表示計畫指南套用到任何查詢都參數化中表示的格式*statement_text*。 如果有指定 TEMPLATE，PARAMETERIZATION {FORCED |可以在中指定簡單} 查詢提示@hints參數。 如需有關 TEMPLATE 計畫指南的詳細資訊，請參閱[所使用的計畫指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
   
- [@module_or_batch =] {N'[ *schema_name*。 ] *object_name*' |N'*batch_text*' |NULL}  
+ [@module_or_batch =] {N'[ *schema_name*。 ] *object_name*' | N'*batch_text*' | NULL }  
  中指定的物件名稱*statement_text*隨即出現，或在其中的批次文字*statement_text*隨即出現。 批次文字不能包含*資料庫*陳述式。  
   
  要比對從應用程式，提交的批次的計畫指南*batch_tex*t 必須提供相同的格式，字元逐字元，若要提交[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不會執行內部轉換來簡化這個比對作業。 如需詳細資訊，請參閱＜備註＞一節。  
@@ -86,13 +86,13 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [*schema_name*。]*object_name*指定名稱的[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序、 純量函數、 多重陳述式資料表值函式或[!INCLUDE[tsql](../../includes/tsql-md.md)]DML 觸發程序包含*statement_text*. 如果*schema_name*未指定， *schema_name*會使用目前使用者的結構描述。 如果指定了 NULL 和@type= 'SQL'，值@module_or_batch設定的值為@stmt。如果@type= '範本**'**，@module_or_batch必須是 NULL。  
   
  [ @params =] {N' *@parameter_name data_type* [，*...n* ]' |NULL}  
- 指定之所有參數的內嵌在定義*statement_text*。 @params適用於僅當下列其中一項成立：  
+ 指定之所有參數的內嵌在定義*statement_text*。 @params 適用於僅當下列其中一項成立：  
   
--   @type= 'SQL' 或 'TEMPLATE'。 如果 'TEMPLATE'，@params不可以是 NULL。  
+-   @type = 'SQL' 或 'TEMPLATE'。 如果 'TEMPLATE'，@params不可以是 NULL。  
   
 -   *sp_create_plan_guide*提交使用 sp_executesql 和值@params指定參數，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]內部進行提交之後將它參數化的陳述式。 來自資料庫 API (包括 ODBC、OLE DB 及 ADO.NET) 參數化查詢的提交對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而言，視同對 sp_executesql 或對 API 伺服器資料指標常式的呼叫；因此，也可以由 SQL 或 TEMPLATE 計畫指南進行比對。  
   
- *@parameter_namedata_type*必須提供相同的格式送出至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]利用 sp_executesql 或參數化之後內部提交。 如需詳細資訊，請參閱＜備註＞一節。 如果批次不包含參數，就必須指定 NULL。 大小@params只受到可用的伺服器記憶體。  
+ *@parameter_name data_type*必須提供相同的格式送出至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]利用 sp_executesql 或參數化之後內部提交。 如需詳細資訊，請參閱＜備註＞一節。 如果批次不包含參數，就必須指定 NULL。 大小@params只受到可用的伺服器記憶體。  
   
  [@hints =] {N'OPTION (*query_hint* [，*...n* ])' |N'*XML_showplan*' |NULL}  
  N'OPTION (*query_hint* [，*...n* ])  
@@ -104,7 +104,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  建議將 XML 執行程序表指派給變數；否則，您必須在單引號前加上另一個單引號，以免除執行程序表中的所有單引號。 請參閱範例 E。  
   
  NULL  
- 表示在查詢之 OPTION 子句中指定的任何現有提示沒有套用到查詢中。 如需詳細資訊，請參閱[OPTION 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/option-clause-transact-sql.md).  
+ 表示在查詢之 OPTION 子句中指定的任何現有提示沒有套用到查詢中。 如需詳細資訊，請參閱[OPTION 子句&#40;TRANSACT-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)。  
   
 ## <a name="remarks"></a>備註  
  sp_create_plan_guide 的引數必須依照顯示順序提供。 當您提供 **sp_create_plan_guide**的參數值時，必須明確指定所有的參數名稱，或是完全不指定。 例如，若指定了 **@name =**，您也必須指定 **@stmt =**、**@type =** 等等。 同樣地，如果省略 **@name =**，而只提供參數值，您也必須省略其餘參數名稱，只提供它們的值。 引數名稱僅供描述用途，以協助您了解語法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會驗證指定的參數名稱是否與使用該名稱之位置中的參數名稱相符。  
@@ -127,7 +127,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 -   字串內部的空白字元 (定位字元、空格字元、歸位字元或換行字元)。  
   
--   註解 ( **--** 或 **/ \* \* /** )。  
+-   註解 (**--**或**/ \* \* /**)。  
   
 -   行尾的分號。  
   
@@ -332,17 +332,17 @@ EXEC sp_create_plan_guide
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [計畫指南](../../relational-databases/performance/plan-guides.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.dm_exec_sql_text (） &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_cached_plans & #40;TRANSACT-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
- [sp_get_query_template &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
+ [sp_get_query_template &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   

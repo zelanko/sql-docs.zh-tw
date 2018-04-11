@@ -16,20 +16,20 @@ helpviewer_keywords:
 - shared memory [SQL Server]
 - client protocols [SQL Server]
 ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 663d96f61c9491b8d53b0f6c994939a6b8085fe4
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>用戶端通訊協定 - 共用記憶體屬性 (通訊協定索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-在「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中，使用 **[共用記憶體屬性]** 對話方塊的 **[通訊協定]** 索引標籤來檢視或修改共用記憶體。 如需有關連接字串的詳細資訊，請參閱＜ [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)＞。  
+  在「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中，使用 **[共用記憶體屬性]** 對話方塊的 **[通訊協定]** 索引標籤來檢視或修改共用記憶體。 如需有關連接字串的詳細資訊，請參閱＜ [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)＞。  
   
 ## <a name="options"></a>選項。  
  **已啟用**  

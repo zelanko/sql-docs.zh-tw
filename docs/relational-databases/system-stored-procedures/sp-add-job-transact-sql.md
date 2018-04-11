@@ -1,16 +1,16 @@
 ---
 title: sp_add_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sp_add_job [ @job_name = ] 'job_name'
  用來指定作業類別目錄的不限特定語言機制。 *category_id*是**int**，預設值是 NULL。  
   
  [ **@owner_login_name =** ] **'***login***'**  
- 擁有作業的登入名稱。 *登入*是**sysname**，預設值是 NULL，它解譯為目前的登入名稱。 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值 **@owner_login_name** 。 如果使用者不是成員的**sysadmin**角色設定，或變更的值 **@owner_login_name** ，此預存程序的執行會失敗，且會傳回錯誤。  
+ 擁有作業的登入名稱。 *登入*是**sysname**，預設值是 NULL，它解譯為目前的登入名稱。 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值**@owner_login_name**。 如果使用者不是成員的**sysadmin**角色設定，或變更的值**@owner_login_name**，此預存程序的執行會失敗，且會傳回錯誤。  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
  這個值表示針對這項作業，何時將項目放在 Microsoft Windows 應用程式記錄中。 *eventlog_level*是**int**，而且可以是下列值之一。  
@@ -126,7 +126,7 @@ sp_add_job [ @job_name = ] 'job_name'
  無  
   
 ## <a name="remarks"></a>備註  
- **@originating_server**存在於**sp_add_job，**但未列在引數。 **@originating_server**已保留供內部使用。  
+ **@originating_server** 存在於**sp_add_job，**但未列在引數。 **@originating_server** 已保留供內部使用。  
   
  之後**sp_add_job**來加入作業，已經執行**sp_add_jobstep**可以用來加入執行活動之作業的步驟。 **sp_add_jobschedule**可以用來建立排程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 服務用來執行作業。 使用**sp_add_jobserver**設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行作業，執行個體和**sp_delete_jobserver**移除從工作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   
@@ -145,7 +145,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  如需有關與每一個固定相關聯的特定權限資訊中，資料庫角色，請參閱[SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
   
- 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值 **@owner_login_name** 。 如果使用者不是成員的**sysadmin**角色設定，或變更的值 **@owner_login_name** ，此預存程序的執行會失敗，且會傳回錯誤。  
+ 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值**@owner_login_name**。 如果使用者不是成員的**sysadmin**角色設定，或變更的值**@owner_login_name**，此預存程序的執行會失敗，且會傳回錯誤。  
   
 ## <a name="examples"></a>範例  
   

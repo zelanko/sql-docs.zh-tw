@@ -1,31 +1,31 @@
 ---
-title: "使用原生格式匯入或匯出資料 (SQL Server) | Microsoft 文件"
-ms.custom: 
+title: 使用原生格式匯入或匯出資料 (SQL Server) | Microsoft 文件
+ms.custom: ''
 ms.date: 09/30/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6c979bd304e2715c587596d73c9e750b5935078b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,11 +92,11 @@ ms.lasthandoff: 02/15/2018
 
 下列命令選項支援原生格式：  
 
-|命令|選項|描述|  
+|Command|選項|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|指定 bcp 公用程式使用資料的原生資料類型。*|  
 |BULK INSERT|DATAFILETYPE **='native'**|使用資料的原生或 widenative 資料類型。 請注意，如果利用了格式檔案指定資料類型，就不需要 DATAFILETYPE。|  
-|OPENROWSET|不適用|必須使用格式檔案|
+|OPENROWSET|해당 사항 없음|必須使用格式檔案|
 
   
  \*若要將原生 (**-n**) 資料載入與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端相容的格式，請使用 **-V** 參數。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
@@ -179,7 +179,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **使用 bcp 與原生格式匯入非 XML 格式檔案的資料**<a name="bcp_native_import_fmt"></a>
-**-n** 資料行之間傳送的 **-f** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
+**-n** 與 **-f** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
 REM Truncate table (for testing)
