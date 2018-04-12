@@ -685,7 +685,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 修正 DMF 條件 UI 未正確更新其字串常值中有引號的運算式
 - 修正執行自訂報表時可能造成 SSMS 損毀的問題
 - 將 [向外延展中的執行...] 功能表項目 新增到資料夾節點
-- 修正 Azure SQL DB 防火牆白名單 IP 地址功能的問題
+- 修正 Azure SQL DB 防火牆允許清單 IP 地址功能的問題
 - 修正 SSMS 中在編輯 AS 多維磁碟分割來源時，導致物件參考未設定例外狀況的問題
 - 修正 SSMS 中從多維 AS 伺服器刪除客戶組件時，導致物件參考未設定例外狀況的問題
 - 修正重新命名 AS 表格式 1400 資料庫失敗的問題

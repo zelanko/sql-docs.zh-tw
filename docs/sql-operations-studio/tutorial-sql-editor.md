@@ -1,6 +1,6 @@
 ---
-title: 教學課程： 使用 SQL Operations Studio （預覽） 的 TRANSACT-SQL 編輯器來建立資料庫物件 |Microsoft 文件
-description: 本教學課程示範簡化使用 T-SQL SQL Operations Studio （預覽） 中的主要功能。
+title: 教學課程： 使用 SQL Operations Studio (preview) 的 TRANSACT-SQL 編輯器來建立資料庫物件 |Microsoft 文件
+description: 本教學課程示範簡化使用 T-SQL SQL Operations Studio (preview) 中的主要功能。
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -63,12 +63,12 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>若要建立預存程序使用 T-SQL 程式碼片段
 
-SQL 作業 Studio 提供許多內建的 T-SQL 程式碼片段，快速建立陳述式。
+SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，快速建立陳述式。
 
 
 1. 按下開啟新的查詢編輯器**Ctrl + N**。
 
-2. 型別**sql**在編輯器中，向下箭號**sqlCreateStoredProcedure**，然後按 *索引標籤*索引鍵 (或*Enter*) 載入儲存的建立程序程式碼片段。
+2. 型別**sql**在編輯器中，向下箭號**sqlCreateStoredProcedure**，然後按*索引標籤*索引鍵 (或*Enter*) 載入儲存的建立程序程式碼片段。
 
    ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
@@ -117,11 +117,11 @@ SQL 作業 Studio 提供許多內建的 T-SQL 程式碼片段，快速建立陳�
 
 ## <a name="use-peek-definition"></a>使用查看定義 
 
-SQL 作業 Studio 提供的檢視使用查看定義功能的物件定義的能力。 本節會建立第二個預存程序，並查看有哪些資料行資料表，以快速建立預存程序的主體中使用查看定義。
+SQL Operations Studio 提供的檢視使用查看定義功能的物件定義的能力。 本節會建立第二個預存程序，並查看有哪些資料行資料表，以快速建立預存程序的主體中使用查看定義。
 
 1. 按下開啟新的編輯器**Ctrl + N**。 
 
-2. 型別*sql*在編輯器中，向下箭號*sqlCreateStoredProcedure*，然後按 *索引標籤*索引鍵 (或*Enter*) 載入儲存的建立程序程式碼片段。
+2. 型別*sql*在編輯器中，向下箭號*sqlCreateStoredProcedure*，然後按*索引標籤*索引鍵 (或*Enter*) 載入儲存的建立程序程式碼片段。
 3. 在中輸入*setCustomer*如*StoredProcedureName*和*dbo*如*SchemaName*
 
 3. 取代@param具有下列的參數定義的預留位置：
