@@ -1,6 +1,6 @@
 ---
-title: 備份和還原資料庫，使用 SQL Operations Studio （預覽） |Microsoft 文件
-description: 了解如何備份和還原資料庫，使用 SQL Operations Studio （預覽）
+title: 備份和還原資料庫，使用 SQL Operations Studio (preview) |Microsoft 文件
+description: 了解如何備份和還原資料庫，使用 SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified

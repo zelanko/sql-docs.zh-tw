@@ -1,5 +1,5 @@
 ---
-title: 教學課程： 啟用 5 名最慢的查詢範例 widget-SQL Operations Studio （預覽） |Microsoft 文件
+title: 教學課程： 啟用 5 名最慢的查詢範例 widget-SQL Operations Studio (preview) |Microsoft 文件
 description: 本教學課程會示範如何啟用資料庫儀表板上的五個最慢的查詢範例 widget。
 ms.custom: tools|sos
 ms.date: 03/15/2018

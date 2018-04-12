@@ -1,6 +1,6 @@
 ---
-title: 使用 Insight 小工具來監視 SQL Operations Studio（預覽）中的伺服器與資料庫 |Microsoft 文件
-description: 了解 SQL Operations Studio（預覽）中的 Insight 小工具。
+title: 使用 Insight 小工具來監視 SQL Operations Studio (preview)中的伺服器與資料庫 |Microsoft 文件
+description: 了解 SQL Operations Studio (preview)中的 Insight 小工具。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified

@@ -1,6 +1,6 @@
 ---
-title: "快速存取 insights 和 SQL 作業 Studio （預覽） 中的一般工作 |Microsoft 文件"
-description: "深入了解具洞察力的 widget 顯示 SQL 作業 Studio （預覽） 中。"
+title: 快速存取 insights 和 SQL Operations Studio (preview) 中的一般工作 |Microsoft 文件
+description: 深入了解具洞察力的 widget 顯示 SQL Operations Studio (preview) 中。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu

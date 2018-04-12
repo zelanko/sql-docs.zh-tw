@@ -1,6 +1,6 @@
 ---
-title: SQL Operations Studio （預覽） 常見問題集 |Microsoft 文件
-description: 常見問題集 (FAQ) 的 SQL Operations Studio （預覽）。
+title: SQL Operations Studio (preview) 常見問題集 |Microsoft 文件
+description: 常見問題集 (FAQ) 的 SQL Operations Studio (preview)。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified

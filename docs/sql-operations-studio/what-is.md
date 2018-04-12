@@ -1,6 +1,6 @@
 ---
-title: "何謂 SQL 作業 Studio （預覽） | Microsoft Docs"
-description: "SQL 作業 Studio （預覽） 是免費的輕量型工具，來管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲; 在 Windows、 macOS 和 Linux 上執行只要它們正在執行。"
+title: 何謂 SQL Operations Studio (preview) | Microsoft Docs
+description: SQL Operations Studio (preview) 是免費的輕量型工具，來管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲; 在 Windows、 macOS 和 Linux 上執行只要它們正在執行。
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: overview
 author: stevestein
 ms.author: sstein

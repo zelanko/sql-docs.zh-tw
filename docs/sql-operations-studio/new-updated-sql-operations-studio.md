@@ -1,6 +1,6 @@
 ---
-title: 已更新-SQL 作業 Studio 文件 |Microsoft 文件
-description: 顯示更新的內容，如需 SQL 作業 Studio 中最近變更過的文件的程式碼片段。
+title: 已更新-SQL Operations Studio 文件 |Microsoft 文件
+description: 顯示更新的內容，如需 SQL Operations Studio 中最近變更過的文件的程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -16,7 +16,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新的與最近的更新： SQL 作業 Studio 文件
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新的與最近的更新： SQL Operations Studio 文件
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/08/2018
 
 
 - 更新日期範圍：&nbsp;**2017 年 12 月 3 日**&nbsp;-至-&nbsp;**2018 年 2 月 3 日**
-- *主旨區域：* &nbsp; **SQL 作業 Studio**。
+- *主旨區域：* &nbsp; **SQL Operations Studio**。
 
 
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/08/2018
 下列連結會跳至最近新增的新文章。
 
 
-1. [SQL 作業 Studio （預覽） 版本資訊](release-notes.md)
+1. [SQL Operations Studio (preview) 版本資訊](release-notes.md)
 
 
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/08/2018
 
 此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [下載並安裝 SQL 作業 Studio （預覽）](#TitleNum_1)
+1. [下載並安裝 SQL Operations Studio (preview)](#TitleNum_1)
 
 
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/08/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1.&nbsp; [下載並安裝 SQL 作業 Studio （預覽）](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1.&nbsp; [下載並安裝 SQL Operations Studio (preview)](download.md)
 
 更新日期：2018 年 1 月 18 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
@@ -99,20 +99,20 @@ ms.lasthandoff: 04/08/2018
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
-**取得 SQL 作業 Studio （預覽） for Windows**
+**取得 SQL Operations Studio (preview) for Windows**
 
 
-這個版本的 SQL 作業 Studio （預覽） 包含標準的 Windows 安裝程式經驗和.zip:
+這個版本的 SQL Operations Studio (preview) 包含標準的 Windows 安裝程式經驗和.zip:
 
 **安裝程式**
 
-1. 下載並執行[SQL 作業 Studio （預覽） Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=866480)。
-1. 啟動 SQL 作業 Studio （預覽） 應用程式。
+1. 下載並執行[SQL Operations Studio (preview) Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=866480)。
+1. 啟動 SQL Operations Studio (preview) 應用程式。
 
 
 **.zip 檔案**
 
-1. 下載[適用於 Windows 的 SQL 作業 Studio （預覽）.zip](https://go.microsoft.com/fwlink/?linkid=866479)。
+1. 下載[適用於 Windows 的 SQL Operations Studio (preview).zip](https://go.microsoft.com/fwlink/?linkid=866479)。
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: 教學課程： 啟用資料表空間使用方式範例深入了解 widget 中 SQL Operations Studio （預覽） |Microsoft 文件
-description: 本教學課程會示範如何啟用的資料表空間使用方式範例深入了解 widget SQL Operations Studio （預覽） 資料庫儀表板上。
+title: 教學課程： 啟用資料表空間使用方式範例深入了解 widget 中 SQL Operations Studio (preview) |Microsoft 文件
+description: 本教學課程會示範如何啟用的資料表空間使用方式範例深入了解 widget SQL Operations Studio (preview) 資料庫儀表板上。
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified

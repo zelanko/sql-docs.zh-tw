@@ -1,6 +1,6 @@
 ---
-title: 教學課程： 建立自訂的 insight widget 中 SQL Operations Studio （預覽） |Microsoft 文件
-description: 本教學課程會示範如何建置自訂的 insight widget，並將它們加入 SQL Operations Studio （預覽） 中的資料庫和伺服器儀表板。
+title: 教學課程： 建立自訂的 insight widget 中 SQL Operations Studio (preview) |Microsoft 文件
+description: 本教學課程會示範如何建置自訂的 insight widget，並將它們加入 SQL Operations Studio (preview) 中的資料庫和伺服器儀表板。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
