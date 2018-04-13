@@ -63,7 +63,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>使用 T-SQL 程式碼片段建立預存程序
 
-SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，快速建立陳述式。
+SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，可快速建立陳述式。
 
 
 1. 按下 **Ctrl + N** 開啟新的查詢編輯器。
@@ -77,7 +77,7 @@ SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，快速建立
    ![程式碼片段](./media/tutorial-sql-editor/snippet.png)
 
 5. 同上一步操作，將所有 *SchemaName* 變更為 *dbo*。 
-6. 程式碼片段包含許多參數預留位置與內容需要更新。 *EXECUTE* 陳述式也包含文字預留位置，因為不知道預存程序有多少參數。 本教學課程更新結果如下列程式碼所示：
+6. 程式碼片段包含許多參數預留位置與內容需要更新。 *EXECUTE* 陳述式也包含文字預留位置，因為不知道預存程序有多少參數。 本教學課程更新程式碼片段後，結果如下列程式碼所示：
 
     ```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -135,7 +135,7 @@ SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，快速建立
    INSERT INTO dbo.Customers
    ```
 
-5. 滑鼠右鍵點選 **dbo.Customers** 選取 **查看定義**。
+5. 以滑鼠右鍵按一下**dbo.Customers**選取**查看定義**。
 
    ![查看定義](./media/tutorial-sql-editor/peek-definition.png)
 
