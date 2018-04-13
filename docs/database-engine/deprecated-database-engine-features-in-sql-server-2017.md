@@ -1,31 +1,32 @@
 ---
-title: "SQL Server 2017 中已取代的資料庫引擎功能 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2017 中已取代的資料庫引擎功能 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee8ea46df926675535f1ed685c7df464af7d893f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 07f71e7efd6d2c43160cb7d6a0066ad8e57e5c69
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中已取代的資料庫引擎功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |資料庫物件|從觸發程序傳回結果集的能力|無|從觸發程序傳回結果|12|  
 |加密|使用 RC4 或 RC4_128 的加密已被取代，並預計在下一版移除。 解密 RC4 和 RC4_128 的功能未被取代。|請使用其他加密演算法，例如 AES。|已被取代的加密演算法|253|  
 |遠端伺服器|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|使用連結的伺服器取代遠端伺服器。 sp_addserver 只能搭配本機選項使用。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|遠端伺服器|@@remserver|使用連結的伺服器取代遠端伺服器。|無|無|  
+|遠端伺服器|\@\@remserver|使用連結的伺服器取代遠端伺服器。|無|無|  
 |遠端伺服器|SET REMOTE_PROC_TRANSACTIONS|使用連結的伺服器取代遠端伺服器。|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Set 選項|用於**SET ROWCOUNT** 、 **INSERT**, **UPDATE**陳述式的 **DELETE** |TOP 關鍵字|SET ROWCOUNT|109|  
 |資料表提示|沒有括號的 HOLDLOCK 資料表提示。|請使用有括號的 HOLDLOCK。|沒有括號的 HOLDLOCK 資料表提示。|167|  
@@ -158,7 +159,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|當做 DML 陳述式中之資料行名稱的 ROWGUIDCOL。|使用 $rowguid。|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|當做 DML 陳述式中之資料行名稱的 IDENTITYCOL。|使用 $identity。|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 # 和 ## 當做暫存資料表和暫存預存程序名稱。|請至少使用一個其他字元。|做為暫存資料表和預存程序名稱的 '#' 和 '##'。|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 @、@@ 或 @@ 當做 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼。|請勿使用 @ 或 @@ 或是以 @@ 當做識別碼開頭的名稱。|'@' 以及以 '@@' 當做 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼開頭的名稱|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 \@、\@\@ 或 \@\@ 作為 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼。|請勿使用 \@ 或 \@\@，或是以 \@\@ 開頭的名稱，作為識別碼。|'\@' 和以 '\@\@' 開頭的名稱作為 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 DEFAULT 關鍵字當做預設值。|請勿使用 DEFAULT 字當做預設值。|當做預設值的 DEFAULT 關鍵字|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|使用空格當做資料表提示之間的分隔符號。|使用逗號來分隔資料表提示。|沒有逗號的多個資料表提示|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|在 90 相容性模式中，彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (*)。|請使用 COUNT_BIG (*)。|沒有 COUNT_BIG(*) 的索引檢視表 SELECT 清單|2|  

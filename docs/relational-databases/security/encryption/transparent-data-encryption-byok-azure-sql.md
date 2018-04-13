@@ -17,13 +17,13 @@ ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 03/16/2018
+ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰 (PREVIEW) 支援
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -109,33 +109,64 @@ ms.lasthandoff: 03/21/2018
 
 ![單一伺服器 HA，無異地災害復原](./media/transparent-data-encryption-byok-azure-sql/SingleServer_HA_Config.PNG)
 
-在第二個案例中，必須根據現有的 SQL Database 容錯移轉群組或使用中的資料庫異地複寫複本來設定備援的 Azure Key Vault，以維持 Azure Key Vault 中 TDE 保護裝置的高可用性。  每個異地複寫的伺服器都需要個別的金鑰保存庫，理想情況是與其伺服器共置於相同的 Azure 區域中。 當主要資料庫因為某個區域發生中斷而無法存取，並觸發容錯移轉時，次要資料庫即可以使用次要金鑰保存庫來接管。  
+## <a name="how-to-configure-geo-dr-with-azure-key-vault"></a>如何使用 Azure Key Vault 設定 Geo-DR
+
+如需為加密的資料庫維護 TDE 保護裝置的高可用性，必須根據現有或所需的 SQL Database 容錯移轉群組或作用中的異地複寫執行個體，設定備援的 Azure Key Vault。  每個異地複寫的伺服器都需要個別的金鑰保存庫，其必須與伺服器共置於相同的 Azure 區域。 當主要資料庫因為某個區域發生中斷而無法存取，並觸發容錯移轉時，次要資料庫即可以使用次要金鑰保存庫來接管。 
+ 
+若是異地複寫的 Azure SQL 資料庫，將需要下列 Azure Key Vault 設定：
+- 在區域中要有一個具有金鑰保存庫的主要資料庫以及一個具有金鑰保存庫的次要資料庫。 
+- 至少需要一個次要資料庫，最多可支援四個次要資料庫。 
+- 不支援次要資料庫的次要資料庫 (鏈結)。
+
+下節將更詳細地介紹安裝及設定步驟。 
+
+### <a name="azure-key-vault-configuration-steps"></a>Azure Key Vault 設定步驟
+
+- 安裝 [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 
+- 使用 [PowerShell 在兩個不同的區域建立兩個 Azure Key Vault，以在金鑰保存庫上啟用「虛刪除」屬性](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) (目前從 AKV 入口網站還無法使用此選項 – 但 SQL 需要它) 
+- 在第一個金鑰保存庫中建立新的金鑰：  
+  - RSA/RSA-HSA 2048 金鑰 
+  - 無任何到期日 
+  - 已啟用金鑰，且有權限可執行取得、包裝金鑰、解除包裝金鑰等作業 
+- 備份主要金鑰，然後將該金鑰還原至第二個金鑰保存庫。  請參閱 [BackupAzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1) 與 [Restore-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/restore-azurekeyvaultkey?view=azurermps-5.5.0)。 
+
+### <a name="azure-sql-database-configuration-steps"></a>Azure SQL Database 設定步驟
+
+從頭開始新的 SQL 部署或是使用現有 SQL Geo-DR 部署進行作業，下列的設定步驟會有所不同。  我們先大略說明新部署的設定步驟，然後再說明如何將儲存在 Azure Key Vault 中的 TDE 保護裝置，指派給已建立 Geo-DR 連結的現有部署。 
+
+全新部署的步驟：
+- 在相同的兩個區域中，建立兩個邏輯 SQL 伺服器，作為先前建立的金鑰保存庫。 
+- 選取邏輯伺服器 TDE 窗格，且為每個邏輯 SQL 伺服器：  
+   - 選取相同區域中的 AKV 
+   - 選取要用作為 TDE 保護裝置的金鑰 – 每部伺服器都會使用 TED 保護裝置的本機複本。 
+   - 在入口網站中執行此作業，將會建立邏輯 SQL 伺服器的 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)，其可用於指派存取金鑰保存庫的邏輯 SQL Server 權限 - 請勿刪除此身分識別。  改為在 Azure Key Vault 中移除權限，即可撤銷存取權。 對於邏輯 SQL 伺服器來說，其可用於指派存取金鑰保存庫的邏輯 SQL Server 權限 - 請勿刪除此身分識別。  改為在 Azure Key Vault 中移除權限，即可撤銷存取權。 
+- 建立主要資料庫。 
+- 請遵循[作用中地理複寫指引](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)完成該案例，這個步驟將會建立次要資料庫。
 
 ![容錯移轉群組和異地災害復原](./media/transparent-data-encryption-byok-azure-sql/Geo_DR_Config.PNG)
 
-為了確保在容錯移轉期間能持續存取 Azure Key Vault 中的 TDE 保護裝置，必須在資料庫複寫或容錯移轉至次要伺服器之前完成這項設定。 主要和次要伺服器兩者皆必須將 TDE 保護裝置的複本儲存於所有其他 Azure Key Vault 之中，在此範例中即表示相同的金鑰會儲存在這兩個金鑰保存庫中。
-
-地理災害復原中的備援需要具次要金鑰保存庫的次要資料庫，且最多支援四個次要。  不支援變更 (為次要建立次要)。  在初始設定時間期間，服務會確認主要與次要金鑰保存庫的權限皆已正確設定。  定期維護這些權限並測試其運作狀況相當重要。
-
 >[!NOTE]
->將伺服器身分識別指派至主要及次要伺服器時，必須先將身分識別指派至次要伺服器。
+>請務必確認兩個金鑰保存庫中皆出現相同的 TDE 保護裝置，然後再繼續建立資料庫之間的異地連結。
 >
 
-若要從某個金鑰保存庫將現有的金鑰新增至另一個金鑰保存庫，請使用 [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) cmdlet。
+具備 Geo-DR 部署之現有 SQL DB 的步驟：
 
- ```powershell
-   <# Include the version guid in the KeyId #>
-   Add-AzureRmSqlServerKeyVaultKey `
-   -KeyId <KeyVaultKeyId> `
-   -ServerName <LogicalServerName> `
-   -ResourceGroup <SQLDatabaseResourceGroupName>
-   ```
+因為邏輯 SQL 伺服器已存在，且主要和次要資料庫皆已指派，所以必須依下列順序執行設定 Azure Key Vault 的步驟： 
+- 啟動裝載次要資料庫的邏輯 SQL Server： 
+   - 指派位於相同區域內的金鑰保存庫 
+   - 指派 TDE 保護裝置 
+- 現在進入裝載主要資料庫的邏輯 SQL Server： 
+   - 選取為次要資料庫使用的相同 TDE 保護裝置
+   
+![容錯移轉群組和異地災害復原](./media/transparent-data-encryption-byok-azure-sql/geo_DR_ex_config.PNG)
 
 >[!NOTE]
->金鑰保存庫名稱和金鑰名稱的組合字元長度不能超過 94 個字元。
+>將金鑰保存庫指派到伺服器時，請務必要從次要伺服器啟動。  在第二個步驟將金鑰保存庫指派到主要伺服器並更新 TDE 保護裝置中，Geo-DR 連結會持續有效，這是因為此時複寫資料庫所使用的 TDE 保護裝置，可供這兩部伺服器使用。
 >
+
+對 SQL Database Geo-DR 案例，使用 Azure Key Vault 中的客戶管理金鑰啟用 TDE 之前，請務必在相同的區域 (將用於進行 SQL Database 異地複寫) 建立及維護兩個具有相同內容的 Azure Key Vault。  「完全相同的內容」明確地表示這兩個金鑰保存庫必須包含相同 TDE 保護裝置的複本，所此一來，兩部伺服器才可存取所有資料庫所使用的 TDE 保護裝置。  從現在開始，需要將兩個金鑰保存庫維持同步，這表示在輪用金鑰之後，它們必須包含 TDE 保護裝置的相同複本、維護用於記錄檔或備份的金鑰，TDE 保護裝置必須維護相同的金鑰屬性，且金鑰保存庫必須為 SQL 維護相同的存取權限。  
  
-請遵循[作用中異地複寫概觀](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)的步驟，設定這些伺服器的作用中異地複寫，並觸發容錯移轉。 
+請依照[作用中地理複寫概觀](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)中的步驟，來測試及觸發容錯移轉，此作業應定期進行以為受到維護的兩個金鑰保存庫，確認 SQL 的存取權限。 
 
 
 ### <a name="backup-and-restore"></a>備份與還原
