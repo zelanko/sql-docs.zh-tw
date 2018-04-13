@@ -22,7 +22,7 @@ ms.lasthandoff: 03/28/2018
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充功能
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 擴充模組提供一個簡單的方式，以 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝程序為基礎加入更多功能。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 擴充模組提供一個簡單的方式，可以新增更多功能至基礎 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝。
 
 擴充功能由 SQL Operations Studio 團隊 (Microsoft) 以及第 3 方社群（您 ！）提供。 如需有關建立擴充功能的詳細資訊，請參閱[開始使用擴充性](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)。
 
