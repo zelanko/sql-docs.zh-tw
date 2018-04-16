@@ -15,15 +15,14 @@ ms.custom: ''
 ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.devlang: na
 ms.topic: article
 ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰 (PREVIEW) 支援
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.lasthandoff: 04/04/2018
 ### <a name="general-guidelines"></a>一般指導方針
 - 請確定 Azure Key Valut 和 Azure SQL Database 會在同一個租用戶之中。  **不支援**跨租用戶金鑰保存庫與伺服器的互動。
 - 為需要的資源決定使用哪一個訂用帳戶。若稍後要在訂用帳戶之間移動伺服器，必須重新設定使用 BYOK 的 TDE。
-- 透過 BYOK 設定 TDE 時，請務必考量重複 wrap/unwrap 作業對金鑰保存庫產生的負載。 例如，由於與邏輯伺服器建立關聯的所有資料庫都使用相同的 TDE 保護裝置，因此該伺服器的容錯移轉會對保存庫觸發伺服器資料庫中的所有金鑰作業。 根據我們的經驗與記載的[金鑰保存庫服務限制](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)，建議您最多將 500 標準資料庫或 200 個高階資料庫與單一訂用帳戶的一個 Azure Key Vault 建立關聯，以確保在存取保存庫中的 TDE 保護裝置時擁有持續的高可用性。 
+- 透過 BYOK 設定 TDE 時，請務必考量重複 wrap/unwrap 作業對金鑰保存庫產生的負載。 例如，由於與邏輯伺服器建立關聯的所有資料庫都使用相同的 TDE 保護裝置，因此該伺服器的容錯移轉會對保存庫觸發伺服器資料庫中的所有金鑰作業。 根據我們的經驗與文件所列的[金鑰保存庫服務限制](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)，建議您每個訂用帳戶的每個 Azure Key Vault，最多關聯 500 個標準資料庫 (一般目的) 或 200 個進階資料庫 (商務關鍵)，以確保存取保存庫中的 TDE 保護裝置時，可有穩定一致的高可用性。 
 - 建議：在內部部署保留一份 TDE 保護裝置複本。  這需要使用硬體安全模組 (HSM) 裝置在本機建立 TDE 保護裝置，以及使用金鑰委付系統儲存 TDE 保護裝置的本機複本。
 
 
