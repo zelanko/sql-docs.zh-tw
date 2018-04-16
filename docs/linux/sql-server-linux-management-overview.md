@@ -1,6 +1,6 @@
 ---
-title: "管理 SQL Server on Linux |Microsoft 文件"
-description: "本文章提供連結的一般管理工作和工具適用於 SQL Server 在 Linux 上執行。"
+title: 管理 SQL Server on Linux |Microsoft 文件
+description: 本文章提供連結的一般管理工作和工具適用於 SQL Server 在 Linux 上執行。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server 作業 Studio （預覽）
 
-新的 Microsoft SQL 作業 Studio （預覽） 是用來管理 SQL Server 的跨平台工具。 如需詳細資訊，請參閱[Microsoft SQL 作業 Studio （預覽）](../sql-operations-studio/what-is.md)。
+新的 Microsoft SQL Operations Studio (preview) 是用來管理 SQL Server 的跨平台工具。 如需詳細資訊，請參閱[Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)。
 
 ## <a name="sql-server-management-studio-on-windows"></a>在 Windows 上的 SQL Server Management Studio
 
