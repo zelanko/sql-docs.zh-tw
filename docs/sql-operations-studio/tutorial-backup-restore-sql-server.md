@@ -76,7 +76,7 @@ ms.lasthandoff: 12/21/2017
 
 4. 點選**還原**
 
-5. 若要檢視還原作業的狀態，請按 **CTRL + T** 開啟**工作歷程記錄**[資訊看板]。
+5. 若要檢視還原作業的狀態，請按下 **CTRL + T** 開啟**工作歷程記錄**[資訊看板]。
 
    ![還原](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
