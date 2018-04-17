@@ -1,16 +1,16 @@
 ---
-title: "sp_special_columns (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_special_columns (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_special_columns_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_special_columns
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 902c3fc7afb5ede1af0d49ef4429f8177b2101ad
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 911828ded03593503026c573c0f921398cf5da43
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,9 +81,9 @@ sp_special_columns [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|SCOPE|**smallint**|資料列識別碼的實際範圍。 可以是 0、1 或 2。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一律傳回 0。 這個欄位一律會傳回值。<br /><br /> 0 = SQL_SCOPE_CURROW。 只有在定位於資料列時，才能夠確保資料列識別碼有效。 如果有另一項交易更新或刪除這個資料列，後來再利用資料列識別碼來重新選取時，便不會傳回資料列。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 確保在目前交易的持續時間裡，資料列識別碼有效。<br /><br /> 2 = SQL_SCOPE_SESSION。 確保在工作階段的持續時間裡，資料列識別碼有效 (跨越交易界限)。|  
+|SCOPE|**smallint**|資料列識別碼的實際範圍。 可以是 0、1 或 2。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律傳回 0。 這個欄位一律會傳回值。<br /><br /> 0 = SQL_SCOPE_CURROW。 只有在定位於資料列時，才能夠確保資料列識別碼有效。 如果有另一項交易更新或刪除這個資料列，後來再利用資料列識別碼來重新選取時，便不會傳回資料列。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 確保在目前交易的持續時間裡，資料列識別碼有效。<br /><br /> 2 = SQL_SCOPE_SESSION。 確保在工作階段的持續時間裡，資料列識別碼有效 (跨越交易界限)。|  
 |COLUMN_NAME|**sysname**|每個資料行的資料行名稱*資料表*傳回。 這個欄位一律會傳回值。|  
 |DATA_TYPE|**smallint**|ODBC SQL 資料類型。|  
 |TYPE_NAME|**sysname**|資料來源相關的資料型別名稱。例如， **char**， **varchar**， **money**，或**文字**。|  
@@ -107,8 +108,8 @@ EXEC sp_special_columns @table_name = 'Department'
     ,@table_owner = 'HumanResources';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [目錄預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

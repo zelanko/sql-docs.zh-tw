@@ -29,13 +29,13 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a3f85d368fa842f0e43eb8b0168c2d30741bfb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-construction-xquery"></a>XML 建構 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -553,7 +553,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>其他直接 XML 建構函式  
  處理指示和 XML 註解的建構函式使用與對應 XML 建構語法相同的語法。 也支援文字節點的計算建構函式，但主要用於 XML DML 以建構文字節點。  
   
- **請注意**使用明確文字節點建構函式的範例，請參閱中的特定範例[insert &#40;XML DML &#41;](../t-sql/xml/insert-xml-dml.md).  
+ **請注意**使用明確文字節點建構函式的範例，請參閱中的特定範例[插入&#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)。  
   
  在下列查詢中，已建構的 XML 包含一個元素、兩個屬性、註解以及處理指示。 請注意在 <`FirstLocation`> 前面使用了一個逗號，因為正在建構時序。  
   
@@ -590,7 +590,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>使用計算建構函式  
- 執行個體時提供 SQL Server 登入。 在此情況下，您可以指定關鍵字，以識別您要建構的節點類型。 只支援下列關鍵字：  
+ 。 在此情況下，您可以指定關鍵字，以識別您要建構的節點類型。 只支援下列關鍵字：  
   
 -   element  
   
@@ -677,7 +677,7 @@ where ProductModelID=7
   
 -   計算註解建構函式  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XQuery 運算式](../xquery/xquery-expressions.md)  
   
   

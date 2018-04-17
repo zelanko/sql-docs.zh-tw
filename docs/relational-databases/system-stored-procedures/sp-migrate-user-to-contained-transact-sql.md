@@ -1,16 +1,16 @@
 ---
-title: "sp_migrate_user_to_contained (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_migrate_user_to_contained (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_migrate_user_to_contained
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 366d2347118fa55a8541e7f84a268b173ae5b2e3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5630fe30f2841932a87293e3dd371b1a591e4223
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
  [ **@username =** ] **N'***使用者***'**  
  目前自主資料庫中對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已驗證登入的使用者名稱。 值是**sysname**，預設值是**NULL**。  
   
- [ **@rename =** ] **N'***copy_login_name***'** | **N'** *keep_name***'**  
+ [ **@rename =** ] **N'***copy_login_name***'** | **N'***keep_name***'**  
  當登入為基礎的資料庫使用者會有不同的使用者名稱與登入名稱時，使用*keep_name*在移轉期間保留的資料庫使用者名稱。 使用*copy_login_name*來建立新的自主的資料庫使用者的登入，而非使用者的名稱。 依據登入的資料庫使用者與登入名稱有相同的使用者名稱時，這兩個選項會在不變更名稱的情況下建立自主資料庫使用者。  
   
- [ **@disablelogin =** ] **N'***disable_login***'** | **N'** *do_not_disable_login***'**  
+ [ **@disablelogin =** ] **N'***disable_login***'** | **N'***do_not_disable_login***'**  
  *disable_login*停用的登入 master 資料庫中。 若要連接的登入已停用時，連接必須提供自主的資料庫名稱作為**初始目錄**做為連接字串的一部分。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -122,7 +122,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [自主資料庫](../../relational-databases/databases/contained-databases.md)  
   

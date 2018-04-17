@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergepublication (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpmergepublication (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-caps.latest.revision: 
+caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e346c8555438ba3c8a26772c2f130ae0a4bed48
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d5005db95a4153259dd000cda87823368255a722
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,27 +51,27 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication  **=**  ] **'***發行集***'**  
- 發行集的名稱。 *發行集*是**sysname**，預設值是 **%** ，傳回目前資料庫中所有合併式發行集的相關資訊。  
+ [ @publication **=** ] **'***發行集***'**  
+ 發行集的名稱。 *發行集*是**sysname**，預設值是**%**，傳回目前資料庫中所有合併式發行集的相關資訊。  
   
- [ @found  **=**  ] **'***找到***'**輸出  
+ [ @found **=** ] **'***找到***'**輸出  
  這是指示傳回資料列的旗標。 *找到*是**int**和一個 OUTPUT 參數，預設值是 NULL。 **1**表示找到發行集。 **0**指出找不到發行集。  
   
- [ @publication_id  **=** ] **'***publication_id***'**輸出  
+ [ @publication_id **=**] **'***publication_id***'**輸出  
  這是發行集識別碼。 *publication_id*是**uniqueidentifier**和一個 OUTPUT 參數，預設值是 NULL。  
   
- [ @reserved  **=** ] **'***保留***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*保留*是**nvarchar （20)**，預設值是 NULL。  
+ [ @reserved **=**] **'***保留***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *保留*是**nvarchar （20)**，預設值是 NULL。  
   
- [ @publisher  **=**  ] **'***發行者***'**  
+ [ @publisher **=** ] **'***發行者***'**  
  發行者的名稱。 *發行者*是**sysname**，預設值是 NULL。  
   
- [@publisher_db  **=**  ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  發行集資料庫的名稱。 *publisher_db*是**sysname**，預設值是 NULL。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|結果集清單中的發行集循序排列順序。|  
 |name|**sysname**|發行集的名稱。|  
@@ -87,7 +87,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |snapshot_ready|**tinyint**|指示這個發行集的快照集是否已備妥：<br /><br /> **0** = 快照集可供使用。<br /><br /> **1** = 快照集未備妥可用。|  
 |publication_type|**int**|發行集的類型：<br /><br /> **0** = 快照集。<br /><br /> **1** = 交易式。<br /><br /> **2** = 合併式。|  
 |pubid|**uniqueidentifier**|這個發行集的唯一識別碼。|  
-|snapshot_jobid|**binary （16)**|快照集代理程式的作業識別碼。 若要取得的項目中的快照集作業[sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)系統資料表，您必須此十六進位值轉換成**uniqueidentifier**。|  
+|snapshot_jobid|**binary(16)**|快照集代理程式的作業識別碼。 若要取得的項目中的快照集作業[sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)系統資料表，您必須此十六進位值轉換成**uniqueidentifier**。|  
 |enabled_for_internet|**int**|判斷是否啟用發行集的網際網路功能。 如果**1**，發行集的同步處理檔案會放入`C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp`目錄。 使用者必須建立檔案傳輸通訊協定 (FTP) 目錄。 如果**0**，發行集未啟用的網際網路存取。|  
 |dynamic_filter|**int**|指示是否要使用參數化資料列篩選器。 **0**表示不使用參數化資料列篩選器。|  
 |has_subscription|**bit**|指示發行集是否有任何訂閱。 **0**表示目前沒有任何訂閱這個發行集。|  
@@ -104,7 +104,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |keep_partition_changes|**int**|指定這個發行集是否進行最佳化的同步處理。 **keep_partition_changes**具有預設值是**0**。 值為**0**表示同步處理未最佳化，資料分割中的資料變更時，會驗證傳送給所有訂閱者的分割區。<br /><br /> **1**表示同步處理最佳化，只有變更的資料分割中有資料列的訂閱者會受到影響。<br /><br /> 注意： 根據預設，合併式發行集使用預先計算的資料分割，以提供更大的最佳化高於這個選項。 如需詳細資訊，請參閱[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)和[Optimize Parameterized Filter Performance with Precomputed](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
 |allow_subscription_copy|**int**|指定是否已啟用複製訂閱這個發行集之訂閱資料庫的能力。 值為**0**表示不允許複製。|  
 |allow_synctoalternate|**int**|指定是否允許替代的同步處理夥伴與這個發行者同步。 值為**0**表示不允許同步夥伴。|  
-|validate_subscriber_info|**nvarchar （500)**|列出用於擷取訂閱者資訊以及驗證訂閱者參數化資料列篩選器準則的函數。 它可以協助您確認每項合併的資訊分割都一致。|  
+|validate_subscriber_info|**nvarchar(500)**|列出用於擷取訂閱者資訊以及驗證訂閱者參數化資料列篩選器準則的函數。 它可以協助您確認每項合併的資訊分割都一致。|  
 |backward_comp_level|**int**|資料庫相容性層級，它可以是下列項目之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|指定發行集資訊是否發行到 Active Directory。 值為**0**表示，不從 Active Directory 發行集資訊。<br /><br /> 這個參數已被取代，支援它的目的，只是為了與舊版的指令碼相容。 您不能再將發行集資訊加入 Active Directory 中。|  
 |max_concurrent_merge|**int**|並行合併處理序的數目。 如果**0**，在任何給定時間執行的並行合併處理序數目沒有限制。|  
@@ -115,8 +115,8 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |publication_number|**smallint**|指派給這個發行集的號碼。|  
 |allow_subscriber_initiated_snapshot|**bit**|判斷訂閱者是否能夠起始產生已篩選資料快照集的程序。 值為**1**表示訂閱者可以起始快照集處理序。|  
 |allow_web_synchronization|**bit**|判斷是否啟用發行集的 Web 同步處理。 值為**1**表示啟用 Web 同步處理。|  
-|web_synchronization_url|**nvarchar （500)**|Web 同步處理所用的網際網路 URL。|  
-|allow_partition_realignment|**bit**|判斷當修改發行者的資料列造成資料分割的變更時，是否要將刪除動作傳給訂閱者。 值為**1**表示刪除動作會傳給 「 訂閱者 」。  如需詳細資訊，請參閱[sp_addmergepublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).|  
+|web_synchronization_url|**nvarchar(500)**|Web 同步處理所用的網際網路 URL。|  
+|allow_partition_realignment|**bit**|判斷當修改發行者的資料列造成資料分割的變更時，是否要將刪除動作傳給訂閱者。 值為**1**表示刪除動作會傳給 「 訂閱者 」。  如需詳細資訊，請參閱[sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。|  
 |retention_period_unit|**tinyint**|定義保留時所使用的單位。 這個值可以是下列其中一個值：<br /><br /> **0** = 日<br /><br /> **1** = 週<br /><br /> **2** = 月<br /><br /> **3** = 年|  
 |has_downloadonly_articles|**bit**|指出是否有任何屬於發行集的發行項是只限下載的發行項。 值為**1**表示有只限下載的發行項。|  
 |decentralized_conflicts|**int**|指出是否將衝突記錄儲存在造成衝突的訂閱者端。 值為**0**表示衝突記錄，不會儲存在 「 訂閱者 」。 1 的值表示衝突記錄會儲存在訂閱者端。|  
@@ -135,11 +135,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_helpmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-helpmergepublication-_1.sql)]  
   
-## <a name="see-also"></a>請參閱＜  
- [檢視和修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addmergepublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [sp_addmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

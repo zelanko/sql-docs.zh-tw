@@ -1,16 +1,16 @@
 ---
-title: "sp_restoremergeidentityrange (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_restoremergeidentityrange (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_restoremergeidentityrange
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a42807009ffd42b16fe08fde76b7f91e34d62742
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4f0b8d768d99acda314754b6d613c277c590f280
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication**  =] **'***發行集***'**  
+ [ **@publication** = ] **'***publication***'**  
  這是發行集的名稱。 *發行集*是**sysname**，預設值是**所有**。 當指定時，只有該發行集的識別範圍才會還原。  
   
- [  **@article**  =] **'***文章***'**  
+ [ **@article** =] **'***文章***'**  
  這是發行項的名稱。 *發行項*是**sysname**，預設值是**所有**。 當指定時，只有該發行項的識別範圍才會還原。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -59,14 +59,14 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>備註  
  **sp_restoremergeidentityrange**用於合併式複寫。  
   
- **sp_restoremergeidentityrange**從散發者取得最大的識別範圍配置資訊，並更新中的值**max_used**資料行[MSmerge_identity_range_allocations & #40。TRANSACT-SQL &#41;](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md)之發行項使用自動識別範圍管理。  
+ **sp_restoremergeidentityrange**從散發者取得最大的識別範圍配置資訊，並更新中的值**max_used**資料行[MSmerge_identity_range_allocations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md)之發行項使用自動識別範圍管理。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_restoremergeidentityrange**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_addmergearticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_addmergearticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [複寫識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)  
+ [複寫識別資料行](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "MSreplication_subscriptions (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: MSreplication_subscriptions (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MSreplication_subscriptions
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3840528a0a566f250eae99c2764f64766c4e0891
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 76f05678e1f8c892fe20499142b270b0c87cdb77
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ ms.lasthandoff: 11/21/2017
 |**distribution_agent**|**sysname**|散發代理程式的名稱。|  
 |**Time**|**smalldatetime**|前次由散發代理程式更新的時間。|  
 |**描述**|**nvarchar(255)**|訂閱的描述。|  
-|**transaction_timestamp**|**varbinary （16)**|僅供內部使用。|  
+|**transaction_timestamp**|**varbinary(16)**|僅供內部使用。|  
 |**update_mode**|**tinyint**|更新的類型。|  
-|**agent_id**|**binary （16)**|代理程式的識別碼。|  
-|**subscription_guid**|**binary （16)**|發行集訂閱版本的全域識別碼。|  
-|**subid**|**binary （16)**|匿名訂閱的全域識別碼。|  
+|**agent_id**|**binary(16)**|代理程式的識別碼。|  
+|**subscription_guid**|**binary(16)**|發行集訂閱版本的全域識別碼。|  
+|**subid**|**binary(16)**|匿名訂閱的全域識別碼。|  
 |**immediate_sync**|**bit**|指出每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [複寫檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_trace_setfilter (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_trace_setfilter (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 64b40b4b7970db0252a873f6b3611d57672e3da0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  將篩選套用在追蹤上。 **sp_trace_setfilter**可能只能在已停止的現有追蹤上執行 (*狀態*是**0**)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果追蹤不存在或其執行此預存程序會傳回錯誤*狀態*不**0**。  
+  將篩選套用在追蹤上。 **sp_trace_setfilter**可能只能在已停止的現有追蹤上執行 (*狀態*是**0**)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果追蹤不存在或其執行此預存程序會傳回錯誤*狀態*不**0**。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用擴充事件。  
@@ -76,7 +76,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|不相似|  
   
- [ **@value=** ] *value*  
+ [  **@value=** ]*值*  
  指定要篩選的值。 資料型別*值*必須符合要篩選的資料行的資料類型。 例如，如果物件識別碼資料行上設定篩選**int**資料型別，*值*必須**int**。如果*值*是**nvarchar**或**varbinary**，它可以有最大長度為 8000。  
   
  當比較運算子是 LIKE 或 NOT LIKE 時，邏輯運算子可以併入 "%" 或 LIKE 運算所適用的其他篩選。  

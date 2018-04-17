@@ -2,7 +2,7 @@
 title: sp_posttracertoken (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedur+I741es
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79102a0a4c9e0b2122b23f01a7e7808c0d610967
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b020aa95aa4f07732843cf360048e63f1d99f7cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,8 @@ sp_posttracertoken [ @publication = ] 'publication'
  [ **@publication**=] **'***發行集***'**  
  這是在測量延遲的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
- [  **@tracer_token_id=** ] *tracer_token_id***輸出**  
- 這是插入之追蹤 Token 的識別碼。 *tracer_token_id*是**int**預設值是 NULL，它是一個 OUTPUT 參數。 這個值可以用來執行[sp_helptracertokenhistory &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)或[sp_deletetracertokenhistory &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)不需事先執行[sp_helptracertokens &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
+ [  **@tracer_token_id=** ] *tracer_token_id * * * 輸出**  
+ 這是插入之追蹤 Token 的識別碼。 *tracer_token_id*是**int**預設值是 NULL，它是一個 OUTPUT 參數。 這個值可以用來執行[sp_helptracertokenhistory &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)或[sp_deletetracertokenhistory &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)不需事先執行[sp_helptracertokens &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
   
  [  **@publisher=** ] **'***發行者***'**  
  指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*是**sysname**，預設值是 NULL，而且不應該為指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -71,7 +71,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_posttracertoken**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [針對異動複寫測量延遲及驗證連接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

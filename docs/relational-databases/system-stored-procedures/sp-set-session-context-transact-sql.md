@@ -1,16 +1,16 @@
 ---
-title: "sp_set_session_context (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_set_session_context (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -23,16 +23,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_set_session_context
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a55ee31e1f4d9f5f98766550f60a16d3dd56843c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f65b004f7a41687f13a91d51599662b0ddb0ed14
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,9 +67,9 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
 ## <a name="remarks"></a>備註  
  如同其他預存程序，只有常值和變數 （不是運算式或函式呼叫） 可以被當做參數傳遞。  
   
- 工作階段內容的大小總計僅限於 256 kb。 如果設定值，導致超過此限制，陳述式會失敗。 您可以監視整體的記憶體使用量，以[sys.dm_os_memory_objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ 工作階段內容的大小總計僅限於 256 kb。 如果設定值，導致超過此限制，陳述式會失敗。 您可以監視整體的記憶體使用量，以[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
   
- 您可以藉由查詢監視整體的記憶體使用量[sys.dm_os_memory_cache_counters &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) ，如下所示：`SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ 您可以藉由查詢監視整體的記憶體使用量[sys.dm_os_memory_cache_counters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) ，如下所示： `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>範例  
  下列範例會示範如何設定，然後再回頭執行名為值的英文語言的工作階段內容金鑰。  
@@ -84,11 +85,11 @@ SELECT SESSION_CONTEXT(N'language');
 EXEC sp_set_session_context 'user_id', 4, @read_only = 1;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [CURRENT_TRANSACTION_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)   
  [資料列層級安全性](../../relational-databases/security/row-level-security.md)   
- [CONTEXT_INFO &#40;TRANSACT-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)   
- [SET CONTEXT_INFO &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
+ [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)   
+ [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

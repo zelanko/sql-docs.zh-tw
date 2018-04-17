@@ -1,16 +1,16 @@
 ---
-title: "sp_settriggerorder (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_settriggerorder (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_settriggerorder
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 690831cac89e20932cbf3c8759af569e01097238
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 73a6c088b2d33c77877cadf6a80f030f8faeeaef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,8 +50,8 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@triggername=** ] **'**[ *triggerschema***。**]*triggername***'**  
- 這是要設定或變更順序的觸發程序及所屬結構描述 (如果適用) 的名稱。 [*triggerschema***。**]*triggername*是**sysname**。 如果名稱未對應於觸發程序，或名稱對應於 INSTEAD OF 觸發程序，程序會傳回錯誤。 *triggerschema*不能指定 DDL 或登入觸發程序。  
+ [  **@triggername=** ] **'**[ *triggerschema ***。**]*triggername * * * '**  
+ 這是要設定或變更順序的觸發程序及所屬結構描述 (如果適用) 的名稱。 [*triggerschema ***。**]*triggername * 是**sysname**。 如果名稱未對應於觸發程序，或名稱對應於 INSTEAD OF 觸發程序，程序會傳回錯誤。 *triggerschema*不能指定 DDL 或登入觸發程序。  
   
  [ **@order=** ] **'***value***'**  
  這是觸發程序的新順序設定。 *值*是**varchar （10)**和它可以是下列值之一。  
@@ -58,7 +59,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  **第一個**和**最後**觸發程序必須是兩個不同的觸發程序。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**第一個**|最先引發觸發程序。|  
 |**最後一個**|最後引發觸發程序。|  
@@ -70,7 +71,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  觸發程序可以指定為**第一個**或**最後**該觸發程序已定義為該陳述式類型的觸發程序之後，才陳述式類型的觸發程序。 例如，觸發**TR1**可指定**第一個**資料表上的插入**T1**如果**TR1**定義為 INSERT 觸發程序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果傳回錯誤**TR1**，其中已定義為 INSERT 觸發程序，只會設定為**第一個**，或**最後**，UPDATE 陳述式的觸發程序。 如需詳細資訊，請參閱＜備註＞一節。  
   
  **@namespace=** { **'DATABASE'** | **'SERVER'** |NULL}  
- 當*triggername* DDL 觸發程序，  **@namespace** 指定是否*triggername*建立使用資料庫範圍或伺服器範圍。 如果*triggername*登入觸發程序，必須指定伺服器。 如需有關 DDL 觸發程序範圍的詳細資訊，請參閱[DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定，或指定 NULL，則*triggername* DML 觸發程序。  
+ 當*triggername* DDL 觸發程序， **@namespace**指定是否*triggername*建立使用資料庫範圍或伺服器範圍。 如果*triggername*登入觸發程序，必須指定伺服器。 如需有關 DDL 觸發程序範圍的詳細資訊，請參閱[DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定，或指定 NULL，則*triggername* DML 觸發程序。  
   
 ||  
 |-|  
@@ -135,9 +136,9 @@ GO
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_changemergepublication (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_changemergepublication (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f1798cd29ac1ee4afc0d7323866e37711291851
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@property=**] **'***屬性***'**  
@@ -61,7 +61,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  下表描述可變更之發行集的屬性及這些屬性值的限制。  
   
-|屬性|值|Description|  
+|屬性|Value|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|允許匿名訂閱。|  
 ||**false**|不允許匿名訂閱。|  
@@ -114,10 +114,10 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**replicate_ddl**|**1**|在發行者上執行的資料定義語言 (DDL) 陳述式會進行複寫。|  
 ||**0**|不複寫 DDL 陳述式。|  
 |**保留**||這是**int**表示數*retention_period_unit*單位用來儲存給定發行集的變更。 如果未在保留期限內同步處理訂閱，且散發者端的清除作業移除了它已收到的暫止變更，訂閱便會到期，必須重新初始化。 允許的最大保留期限是 9999 年 12 月 31 日和目前日期之間的天數。<br /><br /> 注意： 合併式發行集的保留期限有 24 小時寬限期內，以配合不同時區的 「 訂閱者 」。|  
-|**retention_period_unit**|**一天**|以天為保留週期的指定單位。|  
-||**週**|以星期為保留週期的指定單位。|  
-||**月份**|以月為保留週期的指定單位。|  
-||**年份**|以年為保留週期的指定單位。|  
+|**retention_period_unit**|**day**|以天為保留週期的指定單位。|  
+||**week**|以星期為保留週期的指定單位。|  
+||**month**|以月為保留週期的指定單位。|  
+||**year**|以年為保留週期的指定單位。|  
 |**snapshot_in_defaultfolder**|**true**|快照集檔案儲存在預設快照集資料夾中。|  
 ||**false**|快照集檔案會儲存在所指定的替代位置*alt_snapshot_folder*。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。|  
 |**snapshot_ready**|**true**|可以使用發行集的快照集。|  
@@ -125,7 +125,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**status**|**使用中**|發行集在使用狀態中。|  
 ||**非使用中**|發行集在非使用狀態中。|  
 |**sync_mode**|**原生**或<br /><br /> **原生 bcp**|所有資料表的原生模式大量複製程式輸出會用在初始快照集上。|  
-||**字元**<br /><br /> 或**bcp 字元**|所有資料表的字元模式大量複製程式輸出會用在初始快照集上，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者也需要如此。|  
+||**character**<br /><br /> 或**bcp 字元**|所有資料表的字元模式大量複製程式輸出會用在初始快照集上，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者也需要如此。|  
 |**use_partition_groups**<br /><br /> 注意： 如果在使用 partition_groups 之後, 您可以還原成使用**setupbelongs**，並設定**use_partition_groups = false**中**changemergearticle**，這可能不是在取得快照之後，正確反映。 快照集所產生的觸發程序與資料分割群組相容。<br /><br /> 此案例的因應措施是將狀態設定為非使用中，修改**use_partition_groups**，然後將狀態設定為 作用中。|**true**|發行集使用預先計算的資料分割。|  
 ||**false**|發行集不使用預先計算的資料分割。|  
 |**validate_subscriber_info**||列出用來擷取訂閱者資訊的函數。 然後驗證用來針對訂閱者確認資訊分割一致的動態篩選準則。|  
@@ -200,11 +200,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changemergepublication**。  
   
-## <a name="see-also"></a>請參閱＜  
- [檢視和修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>另請參閱  
+ [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergepublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

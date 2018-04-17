@@ -1,16 +1,16 @@
 ---
-title: "sp_replmonitorhelpsubscription (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_replmonitorhelpsubscription (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24254591967a08df8a46446e485af1be5760c862
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 44fccedae1010ec6b79268552a990c88ba5975a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,29 +53,29 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher**  =] **'***發行者***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  這是要監視其狀態的發行者名稱。 *發行者*是**sysname**，預設值是 NULL。 如果**null**，傳回所有使用散發者之發行者的資訊。  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  這是發行的資料庫名稱。 *publisher_db*是**sysname**，預設值是 NULL。 如果是 NULL，就會傳回發行者端所有已發行資料庫的資訊。  
   
- [  **@publication**  =] **'***發行集***'**  
+ [ **@publication** = ] **'***publication***'**  
  這是要監視的發行集名稱。 *發行集*是**sysname**，預設值是 NULL。  
   
- [  **@publication_type**  =] *publication_type*  
+ [ **@publication_type** =] *publication_type*  
  若是發行集的類型。 *publication_type*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|交易式發行集。|  
 |**1**|快照式發行集。|  
 |**2**|合併式發行集。|  
 |NULL (預設值)|複寫會嘗試判斷發行集的類型。|  
   
- [  **@mode**  =]*模式*  
+ [ **@mode** =]*模式*  
  這是傳回訂閱監視資訊時使用的篩選模式。 *模式*是**int**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (預設)|傳回所有訂閱。|  
 |**1**|僅傳回有錯誤的訂閱。|  
@@ -86,10 +86,10 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|僅傳回目前同步處理中的訂閱。|  
 |**7**|僅傳回目前不在同步處理中的訂閱。|  
   
- [  **@topnum**  =] *topnum*  
+ [ **@topnum** =] *topnum*  
  限制結果集只包含傳回資料頂端指定數目的訂閱。 *topnum*是**int**，沒有預設值。  
   
- [  **@exclude_anonymous**  =] *exclude_anonymous*  
+ [ **@exclude_anonymous** =] *exclude_anonymous*  
  指出是否要從結果集中排除匿名提取訂閱。 *exclude_anonymous*是**元**，預設值是**0**; 值**1**表示排除匿名訂閱，而值為**0**表示會包含。  
   
  [  **@refreshpolicy=** ] *refreshpolicy*  
@@ -123,8 +123,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergerunspeed**|**float**|這是訂閱上一次同步處理的傳遞速率。|  
 |**mergerunduration**|**int**|這是完成上一次訂閱同步處理的時間長度。|  
 |**monitorranking**|**int**|這是對結果集裡的訂閱進行排序所用的次序值，它可以是下列值之一：<br /><br /> 對於交易式發行集：<br /><br /> **60** = 錯誤<br /><br /> **56** = 警告： 效能嚴重不足<br /><br /> **52** = 警告： 即將過期或已過期<br /><br /> **50** = 警告： 訂閱未初始化<br /><br /> **40** = 正在重試失敗的命令<br /><br /> **30** = 未執行 （成功）<br /><br /> **20** = 正在執行 （啟動中、 執行中或閒置）<br /><br /> 對於合併式發行集：<br /><br /> **60** = 錯誤<br /><br /> **56** = 警告： 效能嚴重不足<br /><br /> **54** = 警告： 長時間執行的合併<br /><br /> **52** = 警告： 即將過期<br /><br /> **50** = 警告： 訂閱未初始化<br /><br /> **40** = 正在重試失敗的命令<br /><br /> **30** = 正在執行 （啟動中、 執行中或閒置）<br /><br /> **20** = 未執行 （成功）|  
-|**distributionagentjobid**|**binary （16)**|訂閱交易式發行集之散發代理程式作業的識別碼。|  
-|**mergeagentjobid**|**binary （16)**|訂閱合併式發行集之合併代理程式作業的識別碼。|  
+|**distributionagentjobid**|**binary(16)**|訂閱交易式發行集之散發代理程式作業的識別碼。|  
+|**mergeagentjobid**|**binary(16)**|訂閱合併式發行集之合併代理程式作業的識別碼。|  
 |**distributionagentid**|**int**|訂閱之散發代理程式作業的識別碼。|  
 |**distributionagentprofileid**|**int**|散發代理程式所用代理程式設定檔的識別碼。|  
 |**mergeagentid**|**int**|訂閱之合併代理程式作業的識別碼。|  
@@ -141,7 +141,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  只有成員**db_owner**或**replmonitor**散發資料庫上的固定的資料庫角色可以執行**sp_replmonitorhelpsubscription**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

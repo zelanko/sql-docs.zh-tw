@@ -1,16 +1,16 @@
 ---
-title: sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.sp_xtp_control_query_exec_stats (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 10/13/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_control_query_exec_stats_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_query_exec_stats
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86ab826d23f50868259edc5ae3b2bffa55359ce2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e7c59e25836d213396a60f1b6de59369dfc9648a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/03/2018
   
  啟用統計資料收集時，效能會降低。 如果您只需要對一個或少數幾個原生編譯的預存程序進行疑難排解，可以只針對這幾個原生編譯的預存程序啟用統計資料收集。  
   
- 若要啟用統計資料集合程序層級的所有原生編譯的預存程序，請參閱[sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
+ 若要啟用統計資料集合程序層級的所有原生編譯的預存程序，請參閱[sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,17 +50,17 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>引數  
- @new_collection_value = *value*  
+ @new_collection_value =*值*  
  決定程序層級統計資料收集為開啟 (1) 或關閉 (0)。  
   
- @new_collection_value設定為零[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動。  
+ @new_collection_value 設定為零[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動。  
   
- @database_id= = *database_id*， @xtp_object_id = *procedure_id*  
- 原生編譯預存程序的資料庫識別碼和物件識別碼。 如果啟用統計資料收集執行個體 ([sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md))，會收集原生編譯的預存程序的統計資料。 關閉執行個體上的統計資料收集並不會關閉個別原生編譯預存程序的統計資料收集。  
+ @database_id = = *database_id*， @xtp_object_id = *procedure_id*  
+ 原生編譯預存程序的資料庫識別碼和物件識別碼。 如果啟用統計資料收集執行個體 ([sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md))，會收集原生編譯的預存程序的統計資料。 關閉執行個體上的統計資料收集並不會關閉個別原生編譯預存程序的統計資料收集。  
   
- 使用[sys.databases &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)， [sys.procedures &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)， [DB_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)，或[OBJECT_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)若要取得資料庫和預存程序的 Id。  
+ 使用[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)， [sys.procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)， [DB_ID &#40;TRANSACT-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)，或[OBJECT_ID &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md)若要取得資料庫和預存程序的 Id。  
   
- @old_collection_value = *value*  
+ @old_collection_value =*值*  
  傳回目前狀態。  
   
 ## <a name="return-code"></a>傳回碼  

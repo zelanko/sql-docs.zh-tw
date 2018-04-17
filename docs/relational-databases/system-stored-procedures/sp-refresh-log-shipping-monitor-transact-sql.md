@@ -1,16 +1,16 @@
 ---
-title: "sp_refresh_log_shipping_monitor (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_refresh_log_shipping_monitor (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refresh_log_shipping_monitor
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7731ce78547a36284e95a43d80464c8e84ceccba
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2cda4f72387da9f35824fe4747eb31a0d5ec454d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_refresh_log_shipping_monitor
   
  *agent_type*是**tinyint**不能是 NULL。  
   
- [ **@database=** ] **'***database***'**  
+ [  **@database=** ] **'***資料庫***'**  
  備份或還原代理程式的記錄工作所用的主要或次要資料庫。  
   
  [ **@mode** ] *n*  
@@ -81,7 +81,7 @@ sp_refresh_log_shipping_monitor
  無。  
   
 ## <a name="remarks"></a>備註  
- **sp_refresh_log_shipping_monitor**重新整理**log_shipping_monitor_primary**， **log_shipping_monitor_secondary**， **log_shipping_monitor_history_詳細資料**，和**log_shipping_monitor_error_detail**有尚未傳送任何工作階段資訊的表格。 這可讓您在監視器不同步一段時間之後，將監視伺服器和主要或次要伺服器同步化。 另外，必要的話，它也可讓您清除監視伺服器的監視資訊。  
+ **sp_refresh_log_shipping_monitor**重新整理**log_shipping_monitor_primary**， **log_shipping_monitor_secondary**， **log_shipping_monitor_history_detail**，和**log_shipping_monitor_error_detail**有尚未傳送任何工作階段資訊的表格。 這可讓您在監視器不同步一段時間之後，將監視伺服器和主要或次要伺服器同步化。 另外，必要的話，它也可讓您清除監視伺服器的監視資訊。  
   
  **sp_refresh_log_shipping_monitor**必須從執行**主要**主要或次要伺服器上的資料庫。  
   
@@ -89,7 +89,7 @@ sp_refresh_log_shipping_monitor
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [關於記錄傳送 &#40;SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [關於記錄傳送 & #40;SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

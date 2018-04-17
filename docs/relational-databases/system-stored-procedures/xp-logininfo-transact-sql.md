@@ -1,16 +1,16 @@
 ---
-title: "xp_logininfo (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: xp_logininfo (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logininfo_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_logininfo
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b77eb07126cc739908713d8172695db9098d20d9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eba6f4d759844c9ac7e48f8ffccc9888fbf81b95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  這是獲得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取權之 Windows 使用者或群組的名稱。 *account_name*是**sysname**，預設值是 NULL。 如果*account_name*未指定，所有的 Windows 群組和 Windows 使用者之已被明確授與登入權限會報告。 *account_name*必須是完整名稱。 例如，'ADVWKS4\macraes' 或 'BUILTIN\Administrators'。  
   
  **'all'** | **'members'**  
- 指定是要報告有關帳戶所有權限路徑的資訊，或是要報告有關 Windows 群組成員的資訊。 **@option**是**varchar （10)**，預設值是 NULL。 除非**所有**指定，會顯示的第一個權限路徑。  
+ 指定是要報告有關帳戶所有權限路徑的資訊，或是要報告有關 Windows 群組成員的資訊。 **@option** 是**varchar （10)**，預設值是 NULL。 除非**所有**指定，會顯示的第一個權限路徑。  
   
  [  **@privilege =** ] *variable_name*  
  這是傳回指定 Windows 帳戶權限層級的輸出參數。 *variable_name*是**varchar （10)**，預設值是 'Not wanted'。 權限層級傳回為**使用者**， **admin**，或**null**。  
@@ -68,7 +68,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**帳戶名稱**|**sysname**|完整的 Windows 帳戶名稱。|  
-|**型別**|**char （8)**|Windows 帳戶的類型。 有效值為**使用者**或**群組**。|  
+|**type**|**char （8)**|Windows 帳戶的類型。 有效值為**使用者**或**群組**。|  
 |**權限**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權限。 有效值為**admin**，**使用者**，或**null**。|  
 |**對應的登入名稱**|**sysname**|針對具有使用者權限，使用者帳戶**對應登入名稱**顯示對應的登入名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]便會嘗試使用時所使用的網域名稱的對應的規則，此帳戶登入加在它前面。|  
 |**權限路徑**|**sysname**|允許帳戶存取權的群組成員資格。|  
@@ -94,11 +94,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [一般擴充預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [一般擴充預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

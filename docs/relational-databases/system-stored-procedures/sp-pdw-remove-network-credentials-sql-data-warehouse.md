@@ -1,37 +1,38 @@
 ---
-title: "sp_pdw_remove_network_credentials （SQL 資料倉儲） |Microsoft 文件"
-ms.custom: 
+title: sp_pdw_remove_network_credentials （SQL 資料倉儲） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a82cc5004304310c7c2bc3392ada6bad0acb617f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 8cb851a07f0b10289ca60e28477b8bd5e165110a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppdwremovenetworkcredentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   這會移除儲存在網路認證[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]存取網路檔案共用。 例如，使用此預存程序移除權限[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]執行備份和還原位於您自己的網路中的伺服器上的作業。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,11 +61,11 @@ sp_pdw_remove_network_credentials 'target_server_name'
  這個預存程序會移除的 NetworkService 帳戶中的網路認證[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 網路服務帳戶執行每個執行個體的 SMP[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]控制節點和計算節點上。 例如，備份作業執行時，控制節點和每個計算節點，將存取目標伺服器來使用 NetworkService 帳戶認證。  
   
 ## <a name="metadata"></a>中繼資料  
- 若要列出所有認證，並確認已移除的認證，請使用[sys.dm_pdw_network_credentials &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+ 若要列出所有認證，並確認已移除的認證，請使用[sys.dm_pdw_network_credentials &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)。  
   
- 若要新增認證，請使用[sp_pdw_add_network_credentials &#40;SQL 資料倉儲 &#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
+ 若要新增認證，請使用[sp_pdw_add_network_credentials &#40;SQL 資料倉儲&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. 移除執行資料庫備份的認證  
  下列範例會移除具有 10.192.147.63 的 IP 位址為目標伺服器的存取的使用者名稱和密碼認證。  

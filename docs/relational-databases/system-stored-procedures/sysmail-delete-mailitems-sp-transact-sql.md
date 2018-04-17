@@ -1,16 +1,16 @@
 ---
-title: "sysmail_delete_mailitems_sp (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sysmail_delete_mailitems_sp (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a7843e44e42de868c3748dbf31794d4c69e361e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d518e72a5ad45147bc9cdf3316c7bd2eba07e7fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- Database Mail 訊息及其附件會儲存在**msdb**資料庫。 訊息應定期刪除，以防止**msdb**成長大於預期，並符合您組織的文件保留計畫。 使用**sysmail_delete_mailitems_sp**預存程序，從 Database Mail 資料表中永久刪除電子郵件訊息。 一個選擇性引數可藉由提供日期和時間，讓您只刪除較舊的電子郵件。 比該引數舊的電子郵件會被刪除。 另一個選擇性引數可讓您刪除特定類型，做為指定的電子郵件**sent_status**引數。 您必須提供引數的 **@sent_before** 或 **@sent_status** 。 若要刪除所有訊息，請使用 **@sent_before = getdate （）**。  
+ Database Mail 訊息及其附件會儲存在**msdb**資料庫。 訊息應定期刪除，以防止**msdb**成長大於預期，並符合您組織的文件保留計畫。 使用**sysmail_delete_mailitems_sp**預存程序，從 Database Mail 資料表中永久刪除電子郵件訊息。 一個選擇性引數可藉由提供日期和時間，讓您只刪除較舊的電子郵件。 比該引數舊的電子郵件會被刪除。 另一個選擇性引數可讓您刪除特定類型，做為指定的電子郵件**sent_status**引數。 您必須提供引數的**@sent_before**或**@sent_status**。 若要刪除所有訊息，請使用 **@sent_before = getdate （）**。  
   
  刪除電子郵件也會刪除這些訊息的相關附加檔案。 刪除電子郵件並不會刪除對應的項目中**sysmail_event_log**。 使用[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)從記錄檔刪除項目。  
   
@@ -95,9 +95,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sysmail_allitems &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [sysmail_allitems &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

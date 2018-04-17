@@ -2,7 +2,7 @@
 title: sp_spaceused (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 08/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: ''
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de4b451166e7b17b92ae996eddeef87b4dd8722b
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0f255eaa4837ac7193925265f6427706d55009b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -52,7 +53,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 如[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]，`sp_spaceused`必須指定具名的參數 (例如`sp_spaceused (@objname= N'Table1');`而不是依賴參數的序數位置。 
 
- [ **@objname=**] **'***objname***'** 
+ [  **@objname=**] **'***objname***'** 
    
  這是要求的空間使用方式資訊所屬之資料表、索引檢視或佇列的完整或非完整名稱。 只有在指定完整物件名稱時，才會需要引號。 如果提供完整物件名稱 (包括資料庫名稱)，資料庫名稱就必須是目前資料庫的名稱。  
 如果*objname*未指定，整個資料庫會傳回結果。  
@@ -63,7 +64,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
  [ **@updateusage=**] **'***updateusage***'**  
  指出應該執行 DBCC UPDATEUSAGE 來更新空間使用方式資訊。 當*objname*是未指定，整個資料庫上執行的陳述式; 否則會執行陳述式*objname*。 值可以是**true**或**false**。 *updateusage*是**varchar(5)**，預設值是**false**。  
   
- [ **@mode=**] **'***mode***'**  
+ [  **@mode=**] **'***模式***'**  
  表示結果的範圍。 延展的資料表或資料庫，*模式*參數可讓您包含或排除物件中的遠端部分。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
  *模式*引數可以是下列值：  
@@ -76,7 +77,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *模式*是**varchar(11)**，預設值是**N'ALL'**。  
   
- [ **@oneresultset=**] *oneresultset*  
+ [  **@oneresultset=**] *oneresultset*  
  指出是否傳回單一結果集。 *Oneresultset*引數可以是下列值：  
   
 |Value|설명|  
@@ -105,10 +106,10 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
-|**unused**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|  
+|**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|  
   
  如果*objname*省略的值和*oneresultset*為 1，傳回下列單一結果集來提供目前的資料庫大小資訊。  
   
@@ -117,21 +118,21 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_name**|**nvarchar(128)**|目前資料庫的名稱。|  
 |**database_size**|**varchar(18)**|目前資料庫的大小 (以 MB 為單位)。 **database_size**包含資料和記錄檔。|  
 |**未配置的空間**|**varchar(18)**|資料庫中尚未保留給資料庫物件的空間。|  
-|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
-|**unused**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|  
+|**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|  
   
  如果*objname*指定，則為指定的物件傳回下列結果集。  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|要求的空間使用方式資訊所屬的物件名稱。<br /><br /> 不會傳回物件的結構描述名稱。 如果需要結構描述名稱時，使用[sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)或[sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動態管理檢視來取得對等的大小資訊。|  
-|**rows**|**char(20)**|資料表現有的資料列數。 如果指定的物件是一個 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列，這個資料行會指出佇列中的訊息數目。|  
-|**reserved**|**varchar(18)**|保留空間總量*objname*。|  
+|**資料列**|**char(20)**|資料表現有的資料列數。 如果指定的物件是一個 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列，這個資料行會指出佇列中的訊息數目。|  
+|**保留**|**varchar(18)**|保留空間總量*objname*。|  
 |**data**|**varchar(18)**|中的資料所使用的空間總量*objname*。|  
 |**index_size**|**varchar(18)**|中的索引所使用的空間總量*objname*。|  
-|**unused**|**varchar(18)**|為保留的空間總數*objname*但尚未使用。|  
+|**未使用**|**varchar(18)**|為保留的空間總數*objname*但尚未使用。|  
  
 當未不指定任何參數時，這是預設的模式。 詳列出的磁碟上的資料庫大小資訊就會傳回下列結果集。 
 
@@ -145,10 +146,10 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
-|**unused**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|
+|**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|
 
 會傳回下列結果集**只当**資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組與至少一個容器： 
 
@@ -165,10 +166,10 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_name**|**nvarchar(128)**|目前資料庫的名稱。|  
 |**database_size**|**varchar(18)**|目前資料庫的大小 (以 MB 為單位)。 **database_size**包含資料和記錄檔。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包括檔案群組中的所有檢查點檔案的磁碟大小總計。|
 |**未配置的空間**|**varchar(18)**|資料庫中尚未保留給資料庫物件的空間。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包括檔案群組中與狀態預先建立的檢查點檔案的磁碟大小總計。|  
-|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
-|**unused**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|
+|**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|
 |**xtp_precreated**|**varchar(18)**|檢查點檔案及其狀態預先建立，以 kb 為單位的大小總計。 這整個會計入資料庫中的未配置空間。 如果資料庫沒有 memory_optimized_data 檔案群組與至少一個容器，則傳回 NULL。 *這個資料行是只包含的如果@include_total_xtp_storage= 1*。| 
 |**xtp_used**|**varchar(18)**|檢查點檔案狀態建構、 使用中及合併的目標，以 kb 為單位的大小總計。 這是作用於記憶體最佳化資料表中資料的磁碟空間。 如果資料庫沒有 memory_optimized_data 檔案群組與至少一個容器，則傳回 NULL。 *這個資料行是只包含的如果@include_total_xtp_storage= 1*。| 
 |**xtp_pending_truncation**|**varchar(18)**|檢查點檔案及其狀態 WAITING_FOR_LOG_TRUNCATION，以 kb 為單位的大小總計。 這是使用等待清除之後進行記錄截斷, 的檢查點檔案的磁碟空間。 如果資料庫沒有 memory_optimized_data 檔案群組與至少一個容器，則傳回 NULL。 這個資料行是只包含的如果`@include_total_xtp_storage=1`。|
@@ -258,7 +259,7 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

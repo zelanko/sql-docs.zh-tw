@@ -1,16 +1,16 @@
 ---
-title: "sp_helprotect (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helprotect (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprotect
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c254488d42940c2f88b395082db1cd0079f79f3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3e0942b8d2b66a76db9e50616f63d6d7a3cc959e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
  [  **@grantorname =** ] **'***授與者***'**  
  這是授與權限的主體名稱。 *授與者*是**sysname**，預設值是 NULL，它會傳回資料庫中的任何主體授與權限的所有資訊。  
   
- [  **@permissionarea =** ] **'***類型***'**  
+ [ **@permissionarea =** ] **'***type***'**  
  是字元字串，指出是否要顯示物件權限 (字元字串**o**)，陳述式權限 (字元字串**s**)，或兩者 (**os**)。 *型別*是**varchar （10)**，預設值是**os**。 *型別*可以是任何組合的**o**和**s**、 含逗號或空格之間**o**和**s**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -75,13 +75,13 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**[擁有者]**|**sysname**|物件擁有者的名稱。|  
+|**擁有者**|**sysname**|物件擁有者的名稱。|  
 |**物件**|**sysname**|物件的名稱。|  
 |**被授與者**|**sysname**|對其授與權限之主體的名稱。|  
 |**授與者**|**sysname**|對指定的被授與者授與權限之主體的名稱。|  
-|**ProtectType**|**nvarchar （10)**|保護類型的名稱：<br /><br /> GRANT REVOKE|  
-|**動作**|**nvarchar （60)**|權限的名稱。 權限陳述式是否有效，需根據物件類型而定。|  
-|**資料行**|**sysname**|權限的類型：<br /><br /> 全部 = 權限涵蓋物件的所有目前資料行。<br /><br /> 新增 = 權限涵蓋未來可能在物件上變更 (利用 ALTER 陳述式) 的任何新資料行。<br /><br /> 全部+新增 = 全部和新增的組合。<br /><br /> 如果權限類型不適用於資料行，則傳回句號。|  
+|**ProtectType**|**nvarchar(10)**|保護類型的名稱：<br /><br /> GRANT REVOKE|  
+|**動作**|**nvarchar(60)**|權限的名稱。 權限陳述式是否有效，需根據物件類型而定。|  
+|**[資料行]**|**sysname**|權限的類型：<br /><br /> 全部 = 權限涵蓋物件的所有目前資料行。<br /><br /> 新增 = 權限涵蓋未來可能在物件上變更 (利用 ALTER 陳述式) 的任何新資料行。<br /><br /> 全部+新增 = 全部和新增的組合。<br /><br /> 如果權限類型不適用於資料行，則傳回句號。|  
   
 ## <a name="remarks"></a>備註  
  下列程序中的所有參數都是選擇性的。 如果執行時沒有設定任何參數，則 `sp_helprotect` 會顯示所有已在目前資料庫中授與或拒絕的權限。  
@@ -101,7 +101,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
  輸出報表的排序依據如下：權限類別目錄、擁有者、物件、被授與者、同意授權者、保護類型類別目錄、保護類型、動作，以及資料行循序識別碼。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。  
+ 需要 **public** 角色中的成員資格。  
   
  傳回的資訊受限於中繼資料存取限制。 主體對其沒有權限的實體不會出現。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -142,8 +142,8 @@ EXEC sp_helprotect NULL, NULL, NULL, 's';
 EXEC sp_helprotect @name = 'CREATE TABLE';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [安全性預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

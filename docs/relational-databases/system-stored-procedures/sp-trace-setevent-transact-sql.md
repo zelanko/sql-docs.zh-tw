@@ -1,16 +1,16 @@
 ---
-title: "sp_trace_setevent (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_trace_setevent (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4d36c6512a23d69371767e75d179fbdbf5d695d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: bf4e3f645a8480104fcb6f67790563fbb05d0480
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |78|CursorClose|關閉 ODBC、OLE DB 或 DB-Library 先前已開啟的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式資料指標。|  
 |79|Missing Column Statistics|無法取得最佳化工具可能用到的資料行統計資料。|  
 |80|Missing Join Predicate|正在執行沒有聯結述詞的查詢。 這可能造成長時間執行的查詢。|  
-|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體用量已增加或減少 1 mb 或最大伺服器記憶體的 5%，較大。|  
+|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體用量已增加或減少 1 MB 或最大伺服器記憶體的 5%，兩者中取較大者。|  
 |82-91|User Configurable (0 -9)|使用者所定義的事件資料。|  
 |92|Data File Auto Grow|指出伺服器已自動擴充資料檔。|  
 |93|Log File Auto Grow|指出伺服器已自動擴充記錄檔。|  
@@ -262,7 +262,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |8|**HostName**|引發要求的用戶端電腦名稱。|  
 |9|**ClientProcessID**|用戶端電腦指派給執行用戶端應用程式之處理序的識別碼。|  
 |10|**ApplicationName**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|  
-|11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端登入名稱。|  
+|11|**LoginName**|用戶端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。|  
 |12|**SPID**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|  
 |13|**有效期間**|事件所經歷的時間 (以百萬分之一秒為單位)。 這個資料行不是由 Hash Warning 事件來擴展。|  
 |14|**StartTime**|事件的開始時間 (如果可以取得的話)。|  
@@ -280,7 +280,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|**ServerName**|執行個體的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， *servername*或*servername\instancename*，被追蹤。|  
 |27|**EventClass**|正在記錄之事件類別的類型。|  
 |28|**ObjectType**|物件類型，例如資料表、函數或預存程序。|  
-|29|**NestLevel**|這個預存程序正在執行的巢狀層級。 請參閱[@@NESTLEVEL &#40;TRANSACT-SQL &#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|29|**NestLevel**|這個預存程序正在執行的巢狀層級。 請參閱[@@NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
 |30|**State**|發生錯誤時的伺服器狀態。|  
 |31|**錯誤**|錯誤號碼。|  
 |32|**模式**|取得的鎖定之鎖定模式。 此資料行不會填入**鎖定： 發行**事件。|  
@@ -291,7 +291,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |37|**OwnerName**|參考的物件之擁有者名稱。|  
 |38|**RoleName**|陳述式的目標資料庫或伺服器範圍的角色名稱。|  
 |39|**TargetUserName**|某動作的目標使用者名稱。|  
-|40|**DBUserName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的資料庫使用者名稱。|  
+|40|**DBUserName**|用戶端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫使用者名稱。|  
 |41|**LoginSid**|已登入之使用者的安全性識別碼 (SID)。|  
 |42|**TargetLoginName**|某動作的目標登入名稱。|  
 |43|**TargetLoginSid**|某動作之目標登入的 SID。|  
@@ -317,14 +317,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 **sys.dm_exec_sql_text()** ，以擷取相關聯的 SQL 文字。|  
 |64|**SessionLoginName**|引發工作階段的使用者登入名稱。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **連接到** ，卻以 **Login2**執行陳述式，則 **SessionLoginName** 會顯示 **Login1**，而 **LoginName** 會顯示 **Login2**。 此資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|  
   
- **[ @on=]** *on*  
+ **[ @on=]** *上*  
  指定開啟 ON (1) 或關閉 OFF (0) 事件。 *在*是**元**，沒有預設值。  
   
  如果*上*設**1**，和*column_id*是 NULL，然後將事件設定為 ON 會清除所有資料行。 如果*column_id*不是 null，則該事件的資料行設為 ON。  
   
  如果*上*設**0**，和*column_id*為 NULL，則事件會變成 OFF，並已清除所有資料行。 如果*column_id*不是 null，則資料行已關閉。  
   
- 這份表格說明之間的互動 **@on** 和 **@columnid** 。  
+ 這份表格說明之間的互動**@on**和**@columnid**。  
   
 |@on|@columnid|結果|  
 |---------|---------------|------------|  
@@ -357,7 +357,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 使用者必須執行**sp_trace_setevent**每個資料行加入每個事件。 每個在執行期間，如果 **@on** 設**1**， **sp_trace_setevent**將指定的事件加入至追蹤的事件清單。 如果 **@on** 設**0**， **sp_trace_setevent**從清單中移除指定的事件。  
+ 使用者必須執行**sp_trace_setevent**每個資料行加入每個事件。 每個在執行期間，如果**@on**設**1**， **sp_trace_setevent**將指定的事件加入至追蹤的事件清單。 如果**@on**設**0**， **sp_trace_setevent**從清單中移除指定的事件。  
   
  參數的所有 SQL 追蹤預存程序 (**sp_trace_xx**) 都有強制類型。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
@@ -367,9 +367,9 @@ sp_trace_setevent [ @traceid = ] trace_id
  使用者必須有 ALTER TRACE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  
   

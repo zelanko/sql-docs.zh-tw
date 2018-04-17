@@ -1,16 +1,16 @@
 ---
-title: "sysmergepartitioninfo (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sysmergepartitioninfo (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepartitioninfo system table
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4842b7d25baf3f78896e51786afc768829fe009
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d656ae83e03c3fc17ec71335055db7ddb677649d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.lasthandoff: 11/21/2017
 |**logical_record_level_conflict_resolution**|**bit**|指出應該在邏輯記錄層級或資料列或資料行層級解決衝突。<br /><br /> **0** = 資料列或資料行層級會使用的解析度。<br /><br /> **1** = 萬一發生衝突時，成功者的整個邏輯記錄會覆寫上失敗的一方的整個邏輯記錄。<br /><br /> 值為**1**可以使用邏輯記錄層級偵測與資料列或資料行層級的偵測。|  
 |**partition_options**|**tinyint**|定義發行項資料進行資料分割的方式，當所有資料列只屬於單一資料分割或單一訂閱時，能夠使效能最佳化。 *partition_options*可以是下列值之一。<br /><br /> **0** = 發行項是靜態，或不產生唯一的每個資料分割，也就是 「 重疊 」 的資料分割的資料子集的篩選。<br /><br /> **1** = 資料分割重疊，而且訂閱者端進行的 DML 更新無法變更資料列所屬的資料分割。<br /><br /> **2** = 發行項會產生非重疊資料分割，但多個訂閱者可以接收相同的資料分割的篩選。<br /><br /> **3** = 篩選發行項會產生對每個訂閱而言是唯一的非重疊資料分割。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

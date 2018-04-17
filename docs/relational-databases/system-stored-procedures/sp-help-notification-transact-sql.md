@@ -1,16 +1,16 @@
 ---
-title: "sp_help_notification (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_notification (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c779b314553c1895071ab04b5131d998c029cc94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,9 +89,9 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警示識別碼。|  
 |**alert_name**|**sysname**|警示名稱。|  
-|**use_email**|**int**|利用電子郵件來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = No|  
-|**use_pager**|**int**|利用呼叫器來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = No|  
-|**use_netsend**|**int**|利用網路快顯視窗來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = No|  
+|**use_email**|**int**|利用電子郵件來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**use_pager**|**int**|利用呼叫器來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**use_netsend**|**int**|利用網路快顯視窗來通知操作員：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
 |**has_email**|**int**|這個警示所傳送的電子郵件通知數目。|  
 |**has_pager**|**int**|這個警示所傳送的呼叫器通知數目。|  
 |**has_netsend**|**int**|數目**網路傳送**這個警示所傳送的通知。|  
@@ -102,12 +102,12 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|操作員識別碼。|  
 |**operator_name**|**sysname**|操作員名稱。|  
-|**use_email**|**int**|利用電子郵件來傳送操作員的通知：<br /><br /> **1** = 是<br /><br /> **0** = No|  
-|**use_pager**|**int**|利用呼叫器來傳送操作員的通知：<br /><br /> **1** = 是<br /><br /> **0** = No|  
-|**use_netsend**|**int**|這是用來通知操作員的網路快顯視窗：<br /><br /> **1** = 是<br /><br /> **0** = No|  
-|**has_email**|**int**|操作員有電子郵件地址：<br /><br /> **1** = 是<br /><br /> **0** = No|  
-|**has_pager**|**int**|操作員具有呼叫器號碼：<br /><br /> **1** = 是<br /><br /> **0** = No|  
-|**has_netsend**|**int**|操作員已設定了 net send 通知。<br /><br /> **1** = 是<br /><br /> **0** = No|  
+|**use_email**|**int**|利用電子郵件來傳送操作員的通知：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**use_pager**|**int**|利用呼叫器來傳送操作員的通知：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**use_netsend**|**int**|這是用來通知操作員的網路快顯視窗：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**has_email**|**int**|操作員有電子郵件地址：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**has_pager**|**int**|操作員具有呼叫器號碼：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
+|**has_netsend**|**int**|操作員已設定了 net send 通知。<br /><br /> **1** = 是<br /><br /> **0** = 否|  
   
 ## <a name="remarks"></a>備註  
  這個預存程序必須從執行**msdb**資料庫。  
@@ -148,9 +148,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

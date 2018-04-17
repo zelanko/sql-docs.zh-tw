@@ -1,16 +1,16 @@
 ---
-title: "sp_replmonitorchangepublicationthreshold (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_replmonitorchangepublicationthreshold (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e24fd4746ee5a93489e55b6cf16edc0150c647b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cf3ff13767e7d5f91e73b477e9587b2ea2fb4991
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,29 +54,29 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher**  =] **'***發行者***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  這是發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  這是發行的資料庫名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
- [  **@publication**  =] **'***發行集***'**  
+ [ **@publication** = ] **'***publication***'**  
  這是變更監視臨界值屬性的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
- [  **@publication_type**  =] *publication_type*  
+ [ **@publication_type** =] *publication_type*  
  若是發行集的類型。 *publication_type*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|交易式發行集。|  
 |**1**|快照式發行集。|  
 |**2**|合併式發行集。|  
 |NULL (預設值)|複寫試圖判斷發行集類型。|  
   
- [  **@metric_id**  =] *metric_id*  
+ [ **@metric_id** =] *metric_id*  
  這是變更發行集的監視臨界值標準的識別碼。 *metric_id*是**int**，預設值是 NULL，而且可以是下列值之一。  
   
-|值|標準名稱|  
+|Value|標準名稱|  
 |-----------|-----------------|  
 |**1**|**expiration** - 監視交易式發行集的訂閱是否即將到期。|  
 |**2**|**latency** - 監視交易式發行集的訂閱效能。|  
@@ -88,16 +88,16 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  您必須指定*metric_id*或*thresholdmetricname*。 如果*thresholdmetricname*不指定，則*metric_id*應該是 NULL。  
   
- [  **@thresholdmetricname**  =] **'***thresholdmetricname***'**  
+ [ **@thresholdmetricname** =] **'***thresholdmetricname***'**  
  這是變更發行集的監視臨界值標準的名稱。 *thresholdmetricname*是**sysname**，預設值是 NULL。 您必須指定*thresholdmetricname*或*metric_id*。 如果*metric_id*不指定，則*thresholdmetricname*應該是 NULL。  
   
- [  **@value**  =]*值*  
+ [ **@value** =]*值*  
  這是發行集臨界值標準的新值。 *值*是**int**，預設值是 NULL。 如果**null**，則不會更新公制值。  
   
- [  **@shouldalert**  =] *shouldalert*  
+ [ **@shouldalert** =] *shouldalert*  
  這是指當到達發行集臨界值標準時，是否產生警示。 *shouldalert*是**元**，預設值是 NULL。 值為**1**方法，會產生警示，而值為**0**表示，不會產生警示。  
   
- [  **@mode**  =]*模式*  
+ [ **@mode** =]*模式*  
  指出發行集臨界值標準是否啟用。 *模式*是**tinyint**，預設值是**1**。 值為**1**方法，這個標準的監視已啟用，而值為**2**表示這個標準的監視已停用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -109,7 +109,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  只有成員**db_owner**或**replmonitor**散發資料庫中的固定的資料庫角色可以執行**sp_replmonitorchangepublicationthreshold**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

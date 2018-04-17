@@ -1,16 +1,16 @@
 ---
-title: "sp_syscollector_create_collector_type (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_syscollector_create_collector_type (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collector_type
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4165bdb2ddf2bdfa713fb88a787221a9838bce97
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: df2874e764e134ee1b3a7112954cb445bf0d6a6f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ sp_syscollector_create_collector_type
  [ @collector_type_uid = ] '*collector_type_uid*'  
  這是收集器類型的 GUID。 *collector_type_uid 是否*是**uniqueidentifier** ，而且如果它是的 NULL，它會自動建立並當做 OUTPUT 傳回。  
   
- [ @name = ] '*name*'  
+ [ @name =] '*名稱*'  
  這是收集器類型的名稱。 *名稱*是**sysname**必須加以指定。  
   
- [ @parameter_schema = ] '*parameter_schema*'  
+ [ @parameter_schema =] '*parameter_schema*'  
  這是此收集器類型的 XML 結構描述。 *parameter_schema*是**xml**預設值是 NULL。  
   
- [ @parameter_formatter = ] '*parameter_formatter*'  
+ [ @parameter_formatter =] '*parameter_formatter*'  
  這是用來轉換 XML，以用於收集組屬性頁中的範本。 *parameter_formatter*是**xml**預設值是 NULL。  
   
  [@collection_package_id = ] *collection_package_id*  

@@ -1,16 +1,16 @@
 ---
-title: sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.sp_rda_test_connection (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_test_connection
@@ -20,18 +20,18 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9cd981a64ea452c64e24f6578e33d171fd51559
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 45ba48abca5372cde0e303bce431ef66b6e299df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
+# <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   測試從 SQL Server 連接到遠端 Azure 伺服器和報告可能會導致資料移轉的問題。  
@@ -56,9 +56,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Azure 伺服器的完整的位址。  
   
--   如果您提供的值 **@database_name** ，但是指定的資料庫未啟用 「 延展 」，則您必須提供值給 **@server_address** 。  
+-   如果您提供的值**@database_name**，但是指定的資料庫未啟用 「 延展 」，則您必須提供值給**@server_address**。  
   
--   如果您提供的值 **@database_name** ，且指定的資料庫啟用 Stretch，然後您沒有提供值給 **@server_address** 。 如果您提供的值 **@server_address** 、 預存程序則會予以忽略並使用現有 Azure 伺服器已經相關聯的已啟用 Stretch 的資料庫。  
+-   如果您提供的值**@database_name**，且指定的資料庫啟用 Stretch，然後您沒有提供值給**@server_address**。 如果您提供的值**@server_address**、 預存程序則會予以忽略並使用現有 Azure 伺服器已經相關聯的已啟用 Stretch 的資料庫。  
   
  @azure_username = N'*azure_username*  
  遠端 Azure 伺服器使用者名稱。  
@@ -79,7 +79,7 @@ EXECUTE sys.sp_rda_test_connection
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |link_state|int|下列的值，對應至值的其中一個**link_state_desc**。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|下列的值，對應至前述其中一個值**link_state**。<br /><br /> -   HEALTHY<br />     SQL Server 與遠端 Azure 伺服器是狀況良好。<br />-   ERROR_AZURE_FIREWALL<br />     Azure 防火牆阻止 SQL Server 與遠端 Azure 伺服器之間的連結。<br />-   ERROR_NO_CONNECTION<br />     SQL Server 無法建立遠端 Azure 伺服器的連接。<br />-   ERROR_AUTH_FAILURE<br />     發生驗證錯誤會使得 SQL Server 與遠端 Azure 伺服器之間的連結。<br />-   ERROR<br />     驗證問題、 連線問題或防火牆問題不是錯誤導致 SQL Server 與遠端 Azure 伺服器之間的連結。|  
+|link_state_desc|varchar （32)|下列的值，對應至前述其中一個值**link_state**。<br /><br /> -狀況良好<br />     SQL Server 與遠端 Azure 伺服器是狀況良好。<br />-ERROR_AZURE_FIREWALL<br />     Azure 防火牆阻止 SQL Server 與遠端 Azure 伺服器之間的連結。<br />-ERROR_NO_CONNECTION<br />     SQL Server 無法建立遠端 Azure 伺服器的連接。<br />-   ERROR_AUTH_FAILURE<br />     發生驗證錯誤會使得 SQL Server 與遠端 Azure 伺服器之間的連結。<br />-錯誤<br />     驗證問題、 連線問題或防火牆問題不是錯誤導致 SQL Server 與遠端 Azure 伺服器之間的連結。|  
 |error_number|int|發生的錯誤數目。 如果沒有發生錯誤，此欄位為 NULL。|  
 |error_message|nvarchar(1024)|錯誤訊息。 如果沒有發生錯誤，此欄位為 NULL。|  
   

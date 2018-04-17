@@ -1,8 +1,8 @@
 ---
-title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
+title: sp_fulltext_service (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 07e4a7e1832a91ebc2acd5da19839766b83619ea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@action=**] **'***action***'**  
+ [  **@action=**] **'***動作***'**  
  這是要變更或重設的屬性。 *動作*是**nvarchar（100)，**沒有預設值。 取得一份*c*動作屬性，可以設定的值及其說明，請參閱底下的表格*值*引數。 這個引數會傳回下列屬性：資料類型、目前執行中的值、最小值或最大值，以及已被取代的狀態 (如果適用的話)。  
   
- [ **@value=**] *value*  
+ [  **@value=**]*值*  
  這是指定的屬性值。 *值*是**sql_variant**，預設值是 NULL。 如果@value為 null， **sp_fulltext_service**傳回目前的設定。 這份資料表會列出動作屬性及其描述，以及可設定的值之清單。  
   
 > [!NOTE]  
@@ -100,7 +100,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
- [FULLTEXTSERVICEPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

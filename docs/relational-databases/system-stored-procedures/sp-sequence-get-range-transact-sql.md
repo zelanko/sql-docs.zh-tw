@@ -1,16 +1,16 @@
 ---
-title: "sp_sequence_get_range (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_sequence_get_range (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/08/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sequence_get_range
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58c36ec947eab4fbcc9511c67efae1af858ab6d0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ad7851a091b531c0f13980023e22f4f2d545163b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -57,29 +58,29 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@sequence_name** = ] **N**'*sequence*'  
+ [ **@sequence_name** =] **N**'*順序*'  
  順序物件的名稱。 此結構描述是選擇性的。 *sequence_name*是**nvarchar(776)**。  
   
- [ **@range_size** = ] *range_size*  
- 要從順序擷取的值數目。 **@range_size**是**bigint**。  
+ [ **@range_size** =] *range_size*  
+ 要從順序擷取的值數目。 **@range_size** 是**bigint**。  
   
  [ **@range_first_value** = ] *range_first_value*  
- 輸出參數會傳回用以計算要求範圍的順序物件之第一個值 (最小值或最大值)。 **@range_first_value**是**sql_variant**與要求中所用順序物件的基底類型相同。  
+ 輸出參數會傳回用以計算要求範圍的順序物件之第一個值 (最小值或最大值)。 **@range_first_value** 是**sql_variant**與要求中所用順序物件的基底類型相同。  
   
  [ **@range_last_value** = ] *range_last_value*  
- 選擇性輸出參數會傳回所要求的範圍的最後一個值。 **@range_last_value**是**sql_variant**與要求中所用順序物件的基底類型相同。  
+ 選擇性輸出參數會傳回所要求的範圍的最後一個值。 **@range_last_value** 是**sql_variant**與要求中所用順序物件的基底類型相同。  
   
- [ **@range_cycle_count** = ] range_cycle_count  
- 選擇性輸出參數會傳回順序物件循環次數，以傳回要求的範圍。 **@range_cycle_count**是**int**。  
+ [ **@range_cycle_count** =] range_cycle_count  
+ 選擇性輸出參數會傳回順序物件循環次數，以傳回要求的範圍。 **@range_cycle_count** 是**int**。  
   
  [ **@sequence_increment** = ] *sequence_increment*  
- 選擇性輸出參數會傳回順序物件的增量，用來計算要求的範圍。 **@sequence_increment**是**sql_variant**與要求中所用順序物件的基底類型相同。  
+ 選擇性輸出參數會傳回順序物件的增量，用來計算要求的範圍。 **@sequence_increment** 是**sql_variant**與要求中所用順序物件的基底類型相同。  
   
  [ **@sequence_min_value** = ] *sequence_min_value*  
- 選擇性輸出參數會傳回順序物件的最小值。 **@sequence_min_value**是**sql_variant**與要求中所用順序物件的基底類型相同。  
+ 選擇性輸出參數會傳回順序物件的最小值。 **@sequence_min_value** 是**sql_variant**與要求中所用順序物件的基底類型相同。  
   
  [ **@sequence_max_value** = ] *sequence_max_value*  
- 選擇性輸出參數會傳回順序物件的最大值。 **@sequence_max_value**是**sql_variant**與要求中所用順序物件的基底類型相同。  
+ 選擇性輸出參數會傳回順序物件的最大值。 **@sequence_max_value** 是**sql_variant**與要求中所用順序物件的基底類型相同。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -195,10 +196,10 @@ Console.WriteLine(firstValueInRange.Value);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [卸除順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [下一個值 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

@@ -1,6 +1,6 @@
-﻿---
-title: "下載並安裝 Microsoft SQL Operations Studio （預覽） |Microsoft 文件"
-description: "下載和安裝 Microsoft SQL Operations Studio （預覽） for Windows、 macOS 或 Linux"
+---
+title: 下載並安裝 Microsoft SQL Operations Studio (preview) |Microsoft 文件
+description: 下載和安裝 Microsoft SQL Operations Studio (preview) for Windows、 macOS 或 Linux
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>下載並安裝 SQL Operations Studio (preview)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
-下載並安裝最新版本，*3 月公開預覽*:
+下載並安裝最新版本中，*年 3 月公用預覽*:
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/08/2018
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>取得 SQL Operations Studio (preview) for Linux
 
-1. 下載 [！包含[名稱 sos](../includes/name-sos-short.md)適用於 Linux 使用其中一種安裝程式或.tar.gz 封存：
+1. 下載[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux 使用其中一種安裝程式或.tar.gz 封存：
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
@@ -138,7 +138,7 @@ ms.lasthandoff: 04/08/2018
 
 ### <a name="macos"></a>macOS
 - macOS 10.13 高利也
-- macOS 10.12 Sierra
+- macOS 10.12 利也
 
 ### <a name="linux"></a>Linux
 - Red Hat Enterprise Linux 7.4
