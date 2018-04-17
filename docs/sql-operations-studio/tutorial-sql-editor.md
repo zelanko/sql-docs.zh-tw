@@ -1,6 +1,6 @@
----
-title: 教學課程： 使用 SQL Operations Studio (preview) 的 TRANSACT-SQL 編輯器來建立資料庫物件 |Microsoft 文件
-description: 本教學課程示範簡化使用 T-SQL SQL Operations Studio (preview) 中的主要功能。
+﻿---
+title: "教學課程： 使用 SQL Operations Studio （預覽） 的 TRANSACT-SQL 編輯器來建立資料庫物件 |Microsoft 文件"
+description: "本教學課程示範簡化使用 T-SQL SQL Operations Studio （預覽） 中的主要功能。"
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -36,8 +36,8 @@ ms.lasthandoff: 03/15/2018
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
-- [連接及查詢 SQL Server 使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [連接及查詢使用 Azure SQL Database [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server ](quickstart-sql-server.md)
+- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database ](quickstart-sql-database.md)
 
 
 ## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>快速找出資料庫物件和執行一般工作
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/15/2018
 
    ![操作功能表： 管理](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
-1. 在儀表板，以滑鼠右鍵按一下**dbo。客戶**（在 [搜尋] widget 中) 並選取**編輯資料**。
+1. 在儀表板上，滑鼠右鍵點選 **dbo.Customers**（在 [搜尋] 小工具中) 並選取**編輯資料**。
    
    > [!TIP]
    > 對於包含許多物件的資料庫，您可以透過搜尋小工具快速地找到想要的資料表、檢視表...等。
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>使用 T-SQL 程式碼片段建立預存程序
 
-SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，快速建立陳述式。
+SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，可快速建立陳述式。
 
 
 1. 按下 **Ctrl + N** 開啟新的查詢編輯器。
@@ -135,7 +135,7 @@ SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，快速建立
    INSERT INTO dbo.Customers
    ```
 
-5. 在*插入*行您剛加入，以滑鼠右鍵按一下**dbo。客戶**選取**查看定義**。
+5. 以滑鼠右鍵按一下**dbo.Customers**選取**查看定義**。
 
    ![查看定義](./media/tutorial-sql-editor/peek-definition.png)
 
@@ -151,7 +151,7 @@ SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，快速建立
                Email nvarchar(50)
     )
    ```
-7. 刪除 （或註解化） *EXECUTE*底部的查詢命令。
+7. 刪除 （或註解）查詢底下的 *EXECUTE* 命令。
 8. 整個陳述式應該如下列程式碼所示：
 
    ```sql
@@ -216,7 +216,7 @@ SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，快速建立
    EXECUTE dbo.getCustomer @ID = 5
    ```
 
-7. 按下**F5**鍵執行指令碼。 指令碼將新增客戶資訊，並以 JSON 格式傳回新的客戶資訊。 按一下結果以開啟格式化檢視。
+7. 按下**F5**鍵執行指令碼。指令碼將新增客戶資訊，並以 JSON 格式傳回新的客戶資訊。按一下結果以開啟格式化檢視。
 
    ![測試結果](./media/tutorial-sql-editor/test-result.png)
 

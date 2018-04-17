@@ -1,6 +1,6 @@
----
-title: Microsoft SQL Operations Studio (preview) 版本資訊 |Microsoft 文件
-description: Microsoft SQL Operations Studio (preview) 版本資訊
+﻿---
+title: "Microsoft SQL Operations Studio （預覽） 版本資訊 |Microsoft 文件"
+description: "Microsoft SQL Operations Studio （預覽） 版本資訊"
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -22,9 +22,9 @@ ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (preview) 版本資訊
 
-**[下載年 3 月公開預覽](download.md)**
+**[下載 2 月公開預覽](download.md)**
 
-## <a name="march-2018-march-public-preview"></a>年 3 月 2018 （年 3 月公開預覽）
+## <a name="february-2018-february-public-preview"></a> 2018 年 2 月版 （ 2 月公開預覽）
 
 發行日期： 2018 年 3 月 28，  
 version: 0.27.3
@@ -65,12 +65,12 @@ version: 0.27.3
 - 更新拾取幾項查詢計劃檢視器改良 JustinPealing/html-查詢計劃元件。
 
 
-## <a name="january-2018-january-public-preview"></a>2018 年 1 月 （ 1 月公開預覽）
+## <a name="january-2018-january-public-preview"></a> 2018 年 1 月 （ 1 月公開預覽）
 
-發行日期： 2018 年 1 月 17 日，  
+發行日期： 2018 年 1 月 17 日，   
 版本： 0.25.4
 
-*1 月公用預覽*含有一些功能建議和高優先順序的 bug 修正。 此版本包含下列增強功能：
+* 1 月公用預覽*含有一些功能建議和高優先順序的 bug 修正。 此版本包含下列增強功能：
 
 - 在 [連接] 對話方塊中可使用儲存的伺服器連接。
 - 啟用熱結束。 根據預設，若要啟用，請參閱熱結束已關閉[熱結束設定](settings.md#hot-exit)。
@@ -84,10 +84,10 @@ version: 0.27.3
 
 ## <a name="december-2017-december-public-preview"></a>2017 年 12 月（12 月公開預覽）
 
-發行日期： 2017 年 12 月 19，  
+發行日期： 2017 年 12 月 19 日，  
 版本： 0.24.1
 
-*年 12 月公用預覽*跨所有功能區域，以及下列增強功能包括數個 bug 修正：
+* 12 月公用預覽*跨所有功能區域，以及下列增強功能包括數個 bug 修正：
 
 - 建立防火牆規則 對話方塊現在是可以協助您連接到 Azure SQL Database 和 Azure SQL 資料倉儲。
 - 加入的 Windows 安裝程式，以及 Linux DEB 和 RPM 安裝封裝。
@@ -101,7 +101,7 @@ version: 0.27.3
 
 ## <a name="november-2017"></a>2017 年 11 月
 
-發行日期： 2017 年 11 月 15 日，  
+發行日期： 2017 年 11 月 15 日，  
 版本： 0.23.6
 
 - 初始版本的[!INCLUDE[name-sos](../includes/name-sos-short.md)]。

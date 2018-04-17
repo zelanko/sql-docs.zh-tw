@@ -1,6 +1,6 @@
----
-title: SQL Operations Studio (preview) 中的伺服器群組 |Microsoft 文件
-description: 深入了解 SQL Operations Studio (preview) 中的伺服器群組。
+﻿---
+title: "SQL Operations Studio （預覽） 中的伺服器群組 |Microsoft 文件"
+description: "深入了解 SQL Operations Studio （預覽） 中的伺服器群組。"
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -26,14 +26,14 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="create-and-edit-server-groups"></a>建立和編輯伺服器群組
 
-1. 在 **伺服器** [資訊看板] 上方，點選 *新伺服器群組*。
-2. 輸入群組名稱並選擇群組的色彩。 您可以加入描述（選擇性）。
+1. 在 *伺服器* [資訊看板] 上方，點選 **新伺服器群組** 。
+2. 輸入群組名稱並選擇群組的色彩。您可以加入描述（選擇性） 。
 
    ![新增伺服器群組](./media/server-groups/add-server-group.png)
 
 若要編輯現有的伺服器群組，以滑鼠右鍵點選群組，然後選取**編輯伺服器群組**。
 
-若要編輯可用的伺服器群組的色彩，請在 *使用者設定*(settings.md) 內編輯 [伺服器群組](settings.md) 設定值。
+若要編輯可用的伺服器群組的色彩，請在 [使用者設定](settings.md) 內編輯 *伺服器群組* 設定值。
 
 > [!TIP]
 > 您可以藉由拖放方式，在不同的伺服器群組之間移動伺服器。
