@@ -2,7 +2,7 @@
 title: SQLSetDescField 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函數
 **一致性**  
@@ -65,7 +65,7 @@ SQLRETURN SQLSetDescField(
  *ValuePtr*  
  [輸入]包含描述元資訊或整數值之緩衝區的指標。 資料型別取決於值*FieldIdentifier*。 如果*ValuePtr*是整數值，可能會為 8 個位元組 (SQLLEN)、 4 個位元組 (SQLINTEGER) 或 2 個位元組 (SQLSMALLINT)，根據的值被視為*FieldIdentifier*引數。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]如果*FieldIdentifier*是 ODBC 定義的欄位和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度 **ValuePtr*。 字元字串資料，這個引數應該包含在字串中的位元組數目。  
   
  如果*FieldIdentifier*是 ODBC 定義的欄位和*ValuePtr*是整數， *Columnsize*會被忽略。  
@@ -86,10 +86,10 @@ SQLRETURN SQLSetDescField(
 ## <a name="diagnostics"></a>診斷  
  當**SQLSetDescField**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType*的SQL_HANDLE_DESC 和*處理*的*DescriptorHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLSetDescField** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02 的警告|選項值已變更|驅動程式不支援指定的值 *\*ValuePtr* (如果*ValuePtr*是指標) 中的值或*ValuePtr* (如果*ValuePtr*是整數值)，或 *\*ValuePtr*不實作的工作狀況，造成無效，因此驅動程式取代相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|驅動程式不支援指定的值 *\*ValuePtr* (如果*ValuePtr*是指標) 中的值或*ValuePtr* (如果*ValuePtr*是整數值)，或 *\*ValuePtr*不實作的工作狀況，造成無效，因此驅動程式取代相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07009|無效的描述元索引|*FieldIdentifier*引數就是記錄 欄位中， *RecNumber*引數為 0，而*DescriptorHandle* IPD 控制代碼的參考引數。<br /><br /> *RecNumber*引數為 0，小於和*DescriptorHandle* ARD 或 APD 參考引數。<br /><br /> *RecNumber*引數為大於最大數目的資料行或參數，可支援資料來源，而*DescriptorHandle* APD 或 ARD 參考引數。<br /><br /> (DM) *FieldIdentifier*引數以前是 SQL_DESC_COUNT，和 *\*ValuePtr*引數為小於 0。<br /><br /> *RecNumber*引數以前是等於 0，而*DescriptorHandle*隱含配置的 APD 參考引數。 （這個錯誤就不需要明確配置的應用程式描述元，因為不知道應用程式明確配置描述元是 APD 或 ARD 直到執行時間。）|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |22001|字串資料，右邊遭截斷|*FieldIdentifier*引數以前是 SQL_DESC_NAME，而*Columnsize*引數為大於 SQL_MAX_IDENTIFIER_LEN 的值。|  
@@ -146,7 +146,7 @@ SQLRETURN SQLSetDescField(
   
  標頭欄位的初始設定後續的表格中所述。  
   
-|標頭欄位名稱|類型|R/W|預設|  
+|標頭欄位名稱|型別|R/W|預設值|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: R APD: R IRD: R IPD: R|ARD: SQL_DESC_ALLOC_AUTO 的隱含或 SQL_DESC_ALLOC_USER 為明確<br /><br /> APD: SQL_DESC_ALLOC_AUTO 的隱含或 SQL_DESC_ALLOC_USER 為明確<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ARD: R/W APD: R/W IRD： 未使用的 IPD： 未使用|ARD: [1] APD: [1] 的 IRD： 未使用的 IPD： 未使用|  
@@ -160,7 +160,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: 0 APD: IRD 0: 
   
  記錄的欄位初始化為下表所示。  
   
-|記錄欄位名稱|類型|R/W|預設|  
+|記錄欄位名稱|型別|R/W|預設值|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
@@ -553,6 +553,6 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
 |取得多個描述項欄位|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |設定多個描述項欄位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)

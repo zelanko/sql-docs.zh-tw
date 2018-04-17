@@ -1,16 +1,16 @@
 ---
-title: "srv_paramset (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_paramset (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramset
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramset
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df6b781d289ec3420ff83f2cc344005627e93d0d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c76f1dc82a04ae14150833df75fd23db83b7fecc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ len
  指定要傳回之資料的實際長度。 如果參數的資料類型具有固定長度，而且不允許 null 值 (例如 *srvbit* 或 *srvint1*)，則會忽略 *len*。  
   
 ## <a name="returns"></a>傳回值  
- 如果參數值設定成功則會傳回 SUCCEED，否則會傳回 FAIL。 當目前沒有遠端預存程序、沒有第 *n* 個遠端預存程序參數、此參數不是傳回參數而且 *len* 引數不合法時，便會傳回 FAIL。  
+ 如果參數值設定成功則會傳回 SUCCEED，否則會傳回 FAIL。 會傳回 FAIL，當目前沒有遠端預存程序，沒有任何*n*個遠端預存程序參數、 參數不是傳回參數而且*len*引數不是合法的。  
   
  如果 *len* 是 0，它會傳回 NULL。 將 *len* 設定為 0 是將 NULL 傳回給用戶端的唯一方法。  
   

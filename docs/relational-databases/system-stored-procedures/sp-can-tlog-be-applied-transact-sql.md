@@ -1,16 +1,16 @@
 ---
-title: "sp_can_tlog_be_applied (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_can_tlog_be_applied (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_can_tlog_be_applied_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_can_tlog_be_applied
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a29fc1b86e56707d45439a87ec4a88594a1917d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: bc1afae648ab14db8aca25b9730de2e5cb916f1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
  這是備份檔的名稱。 *backup_file_name*是**nvarchar （128)**。  
   
  [ **@database_name=** ] **'***database_name***'**  
- 這是資料庫的名稱。 *database_name*是**sysname**。  
+ 這是資料庫的名稱。 *database_name* 為 **sysname**。  
   
- [ **@result=** ] *result* **OUTPUT**  
+ [  **@result=** ]*結果***輸出**  
  指出資料庫是否可以套用交易記錄。 *結果*是**元**。  
   
  1 = 可以套用記錄  

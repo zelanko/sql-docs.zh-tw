@@ -1,16 +1,16 @@
 ---
-title: sys.xml_schema_collections (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.xml_schema_collections (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.xml_schema_collections_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_collections catalog view
 ms.assetid: f3f7f3dc-029f-4942-ab3c-75fa9814e40f
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd0f256ec8dfd9a9cc45e5ab289e22dccb1007a9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3f3964cb8af73ad3dbcdc67bec70cd9153f122a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysxmlschemacollections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML 結構描述 &#40;XML 類型系統 &#41;目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)   
+ [XML 結構描述&#40;XML 類型系統&#41;目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

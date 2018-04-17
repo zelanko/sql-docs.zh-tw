@@ -1,31 +1,32 @@
 ---
-title: "使用集合 |Microsoft 文件"
-ms.custom: 
+title: 使用集合 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Objects, collections
 - SMO [SQL Server], collections
 - collections [SMO]
 ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac05072224f6b6cc4e84b2144d827b6059b226d2
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6e173ace756159f1cc2e359de6f68f8f67064ee7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-collections"></a>使用集合
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 01/12/2018
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **For...每個**陳述式或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach**陳述式可用來逐一查看集合的每個成員。  
   
 ## <a name="examples"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>在 Visual Basic 中使用集合來參考物件  
  這個程式碼範例示範如何使用設定資料行屬性<xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>， <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>，和<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>屬性。 這些屬性代表集合，當這些屬性搭配可指定物件名稱的參數使用時，就可用來識別特定物件。 名稱和結構描述所需的<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>集合物件屬性。  

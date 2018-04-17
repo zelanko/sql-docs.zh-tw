@@ -1,15 +1,15 @@
 ---
-title: "使用查詢通知 |Microsoft 文件"
-ms.custom: 
+title: 使用查詢通知 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], query notifications
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, query notifications
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6405ed5efa051a7b8c5bb7865b9f2a469c640592
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: faeff47d5daeeb46601020f4e3e31a4c4086386d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-query-notifications"></a>使用查詢通知
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
  通知只會傳送一次。 如果要持續接到資料變更的通知，必須在處理過每個通知之後重新執行查詢，以建立新的訂閱。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端應用程式通常使用來接收通知[!INCLUDE[tsql](../../../includes/tsql-md.md)][接收](../../../t-sql/statements/receive-transact-sql.md)命令從通知選項中指定的服務相關聯的佇列讀取通知。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端應用程式通常使用來接收通知[!INCLUDE[tsql](../../../includes/tsql-md.md)][接收](../../../t-sql/statements/receive-transact-sql.md)命令從通知選項中指定的服務相關聯的佇列讀取通知。  
   
 > [!NOTE]  
 >  您必須在需要通知的查詢中限定資料表名稱，例如 `dbo.myTable`。 資料表名稱必須使用兩部分的名稱來加以限定。 如果使用三或四部份的名稱，則訂閱無效。  

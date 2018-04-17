@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergepartition (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpmergepartition (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepartition
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2c4e931f2da9794392056595ab71b88e005a26f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 95cf9955591a1c36ce294e8d7448b296a3399230
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,8 +83,8 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色和**db_owner**固定的資料庫角色可以執行**sp_helpmergepartition**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_addmergepartition &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_dropmergepartition &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sp_addmergepartition &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [sp_dropmergepartition &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   
   

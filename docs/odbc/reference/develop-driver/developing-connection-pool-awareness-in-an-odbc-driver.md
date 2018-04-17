@@ -1,27 +1,28 @@
 ---
-title: "開發連接集區中的 ODBC 驅動程式的認知 |Microsoft 文件"
-ms.custom: 
+title: 開發連接集區中的 ODBC 驅動程式的認知 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b96e4ef1e53fec8361bd96dee81206efdf138538
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f7c6412263587f171c0b0281436364b2e54e46bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>開發中的 ODBC 驅動程式的連接集區感知
 本主題討論開發的 ODBC 驅動程式會包含驅動程式應如何提供連線共用服務的相關資訊的詳細資料。  
@@ -151,6 +152,6 @@ ms.lasthandoff: 12/21/2017
   
  ![狀態圖表](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [可感知驅動程式的連接共用](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC 服務提供者介面 (SPI) 參考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

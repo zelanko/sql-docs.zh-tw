@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_continuous_copy_status (Azure SQL Database) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_continuous_copy_status (Azure SQL Database) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34d840580edb8bb15f4af379575bc0f24b44edcc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 2e54262b107b7bf028f4bf3c6dd3fe803ca6b9fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ ms.lasthandoff: 02/03/2018
  像**sys.dm_database_copies**  檢視中， **sys.dm_continuous_copy_status**會反映連續複製關聯性中資料庫的主要或作用中次要資料庫的狀態. 不同於**sys.dm_database_copies**， **sys.dm_continuous_copy_status**包含數個資料行提供有關作業與效能的詳細資料。 這些資料行包含**last_replication**，和**replication_lag_sec**...  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_database_copies &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [作用中地理複寫預存程序 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+ [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [作用中地理複寫預存程序&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

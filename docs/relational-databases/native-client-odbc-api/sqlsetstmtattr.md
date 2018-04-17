@@ -1,30 +1,31 @@
 ---
 title: SQLSetStmtAttr | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-caps.latest.revision: 
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cbc51d2212db08a4b3cce5d07673e96f263445d
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ccde3758ee43b69112e9d91bdaa7c26f2be01dd5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,10 +46,10 @@ ms.lasthandoff: 01/24/2018
   
  如需詳細資訊，請參閱[備妥的陳述式資料表值參數中繼資料](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)。  
   
- 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>疏鬆資料行的 SQLSetStmtAttr 支援  
- SQLSetStmtAttr 可以用於設定 SQL_SOPT_SS_NAME_SCOPE。 如需詳細資訊，請參閱 sql_sopt_ss_name_scope 」 一節中，本主題稍後的。如需有關疏鬆資料行的詳細資訊，請參閱[疏鬆資料行支援 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
+ SQLSetStmtAttr 可以用於設定 SQL_SOPT_SS_NAME_SCOPE。 如需詳細資訊，請參閱 sql_sopt_ss_name_scope 」 一節中，本主題稍後的。如需有關疏鬆資料行的詳細資訊，請參閱[疏鬆資料行支援&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="statement-attributes"></a>陳述式屬性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式也支援下列驅動程式專屬的陳述式屬性。  

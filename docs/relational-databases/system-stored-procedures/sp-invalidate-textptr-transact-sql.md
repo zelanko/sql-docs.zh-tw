@@ -1,16 +1,16 @@
 ---
-title: "p (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: p (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_invalidate_textptr_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_invalidate_textptr
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39154d6b9592ce08589d54dbcb3aff147e3e9956
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 77b48427c017b543d73bf93e03a09fd7c4d50c78
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,16 +55,16 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每個資料庫的每項交易中，最多可以接受 1,024 個使用中的有效同資料列文字指標；不過，如果交易超出一個資料庫，每個資料庫就可以有 1,024 個同資料列文字指標。 **sp_invalidate_textptr**可用來使同資料列文字指標失效，並且因此，可用空間，其他的資料列文字指標。  
   
- 如需有關 text in row 選項的詳細資訊，請參閱[sp_tableoption &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).  
+ 如需有關 text in row 選項的詳細資訊，請參閱[sp_tableoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。  
+ 需要 **public** 角色中的成員資格。  
   
-## <a name="see-also"></a>請參閱  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_tableoption &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [TEXTPTR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
- [TEXTVALID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  
+ [sp_tableoption & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
+ [TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  
   
   

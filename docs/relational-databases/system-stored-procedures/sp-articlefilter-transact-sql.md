@@ -1,16 +1,16 @@
 ---
-title: "sp_articlefilter (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_articlefilter (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlefilter
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de8979cdc3cb382aa290148e560d8eb72db94b1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ca25ec698e928ef247148be55d65c3ea37f59be8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是發行項所在的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@article=**] **'***文章***'**  
@@ -92,9 +92,9 @@ sp_articlefilter [ @publication = ] 'publication'
   
  執行**sp_articlefilter**具有現有的訂閱的發行項需要，重新初始化這些訂閱。  
   
- **sp_articlefilter**建立篩選、 篩選預存程序中的識別碼插入**篩選**資料行[sysarticles &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表，並將限制子句中的文字**filter_clause**資料行。  
+ **sp_articlefilter**建立篩選、 篩選預存程序中的識別碼插入**篩選**資料行[sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表，然後限制子句中的文字插入**filter_clause**資料行。  
   
- 若要建立含水平篩選的發行項，執行[sp_addarticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)沒有*篩選*參數。 執行**sp_articlefilter**，提供所有參數，包括*filter_clause*，然後執行[sp_articleview &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)，提供包括相同的所有參數*filter_clause*。 如果已經有篩選，而且**類型**中**sysarticles**是**1** （記錄式發行項），會刪除先前的篩選，並建立新的篩選。  
+ 若要建立含水平篩選的發行項，執行[sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)沒有*篩選*參數。 執行**sp_articlefilter**，提供所有參數，包括*filter_clause*，然後執行[sp_articleview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)，提供包括相同的所有參數*filter_clause*。 如果已經有篩選，而且**類型**中**sysarticles**是**1** （記錄式發行項），會刪除先前的篩選，並建立新的篩選。  
   
  如果*filter_name*和*filter_clause*未提供，會刪除先前的篩選和篩選識別碼會設定為**0**。  
   
@@ -104,11 +104,11 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_articlefilter**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [定義及修改靜態資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
- [sp_addarticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articleview &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_addarticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articleview &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   

@@ -1,15 +1,15 @@
 ---
-title: "使用檔案群組及儲存資料的檔案 |Microsoft 文件"
-ms.custom: 
+title: 使用檔案群組及儲存資料的檔案 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - filegroups [SMO]
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - files [SMO], about files
 - storage [SMO]
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5622269022dcbf63d717fb2dec2efac7692f0e52
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 986014f99436ecb5deda7a298066cca1c23cff82
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>使用檔案群組和檔案來儲存資料
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/12/2018
  每個自動建立的資料庫都具有名為 "Primary" 的檔案群組以及與資料庫同名的資料檔。 可以在集合中加入其他檔案和群組。  
   
 ## <a name="examples"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>在 Visual Basic 中將 FileGroups 和 DataFiles 加入至資料庫  
  主要檔案群組和資料檔會使用預設的屬性值自動建立。 程式碼範例會指定某些可以使用的某些屬性值； 否則，系統會使用預設屬性值。  

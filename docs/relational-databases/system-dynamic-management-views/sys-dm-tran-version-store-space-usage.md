@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_tran_version_store_space_usage (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_tran_version_store_space_usage (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 04/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_version_store_space_usage_TSQL
@@ -22,18 +22,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_version_store_space_usage dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: 
+caps.latest.revision: 10
 author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 3108394b7848047bac97ece004bf9c168b0e045c
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0f46c84abe0c62c36f76a3bc8d02576d30357e19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
+# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 傳回資料表，以顯示在 tempdb 版本存放區記錄所使用的每個資料庫中的總空間。 **sys.dm_tran_version_store_space_usage**是有效率且不耗費資源，若要執行，它不會不瀏覽個別的版本存放區記錄，並傳回彙總每個資料庫 tempdb 中取用的版本存放區空間。

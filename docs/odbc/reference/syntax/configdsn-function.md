@@ -2,7 +2,7 @@
 title: ConfigDSN 函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b82eb128f125415d3dbdb24ffc616dbeccc5e938
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dec94050079f41415983a63eac0669070145b2fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configdsn-function"></a>ConfigDSN 函式
 **一致性**  
@@ -76,7 +76,7 @@ BOOL ConfigDSN(
 ## <a name="diagnostics"></a>診斷  
  當**ConfigDSN**傳回 FALSE，相關聯 *\*pfErrorCode*值由呼叫張貼至安裝程式錯誤緩衝區**SQLPostInstallerError**和可以藉由呼叫取得**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|無效的視窗控制代碼|*HwndParent*引數無效。|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|無效的關鍵字-值配對|*LpszAttributes*引數包含語法錯誤。|  

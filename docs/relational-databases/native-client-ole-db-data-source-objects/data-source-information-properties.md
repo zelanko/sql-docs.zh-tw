@@ -1,15 +1,15 @@
 ---
-title: "資料來源資訊屬性 |Microsoft 文件"
-ms.custom: 
+title: 資料來源資訊屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-data-source-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, data source properties
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - information properties [OLE DB]
 - OLE DB data source properties [SQL Server Native Client]
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9db499b31ef91d05d6f37d110376075efbb96b52
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 09f0c3c80bf2ab689cab3f399fb3a50535248704
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-information-properties"></a>資料來源資訊屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,6 +49,6 @@ ms.lasthandoff: 01/25/2018
 |SSPROP_STREAM_XMLROOT|類型：VT_BSTR R/W：讀取/寫入<br /><br /> 描述：FOR XML 查詢的結果可能不是格式正確的文件。 指定此屬性時，結果 ' 選取... for XML' 查詢會包裝在提供此屬性以傳回格式正確的 XML 文件的根標記。 如果在瀏覽器中執行查詢，載入結果時，它可能會使瀏覽器顯示剖析器錯誤。 為避免這個錯誤，SQL ISAPI 支援關鍵字 ROOT。 此關鍵字會對應至 SSPROP_STREAM_XMLROOT 屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源物件 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [資料來源物件 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

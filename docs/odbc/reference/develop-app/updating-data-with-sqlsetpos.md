@@ -1,31 +1,32 @@
 ---
-title: "SQLSetPos 以更新資料 |Microsoft 文件"
-ms.custom: 
+title: SQLSetPos 以更新資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating data
 ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a86647a0086c322918d8dc650d4f840b09326d6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d23f0292665d7e1cfbd4ce0c32e5cf254e8e4fb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-data-with-sqlsetpos"></a>SQLSetPos 以更新資料
 應用程式可以更新或刪除任何資料列與資料列集中**SQLSetPos**。 呼叫**SQLSetPos**是一個方便的替代方式建構及執行 SQL 陳述式。 它可讓 ODBC 驅動程式支援定位的更新，即使資料來源不支援定位的 SQL 陳述式。 它是透過函式呼叫達成完整的資料庫存取的開發架構的一部分。  

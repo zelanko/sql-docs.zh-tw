@@ -2,7 +2,7 @@
 title: 安裝程式的 DLL API 參考函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 614548110102e21cdd9f4bd5ba01f85aff6a6c55
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2913a4e5db5aeaa609da2d269dea6a4ad68b0744
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installer-dll-api-reference-function"></a>安裝程式的 DLL API 參考函式
 本章節描述的 DLL API 安裝程式中的函式的語法。 安裝程式 DLL 應用程式開發介面是由 20 函式所組成。 這些函式，其中三個**SQLGetTranslator**， **SQLRemoveDSNFromIni**，和**SQLWriteDSNToIni**，只能由安裝程式的 Dll 會呼叫。 安裝和管理程式會呼叫其他函式。  

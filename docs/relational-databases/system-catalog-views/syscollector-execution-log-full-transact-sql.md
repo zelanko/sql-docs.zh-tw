@@ -1,16 +1,16 @@
 ---
-title: syscollector_execution_log_full (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: syscollector_execution_log_full (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_full
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93ff62b9c91fee116679d0fb9ffe7d6b28f61024
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c1c5eb4ef3a15b8c7183038cd526c7bbbc66c13a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/03/2018
 |last_iteration_time|**datetime**|若為持續執行的封裝，就是上次封裝擷取快照集的時間。 可為 Null。|  
 |finish_time|**datetime**|已完成之封裝和收集組執行完成的時間。 可為 Null。|  
 |duration|**int**|封裝或收集組已經執行的時間 (以秒為單位)。 可為 Null。|  
-|failure_message|**nvarchar(2048)**|如果收集組或封裝失敗，則為該元件的最新錯誤訊息。 可為 Null。 若要取得更詳細的錯誤資訊，請使用[f &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)函式。|  
+|failure_message|**nvarchar(2048)**|如果收集組或封裝失敗，則為該元件的最新錯誤訊息。 可為 Null。 若要取得更詳細的錯誤資訊，請使用[f &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)函式。|  
 |! 運算子之後|**nvarchar(128)**|識別啟動收集組或封裝的人員。 可為 Null。|  
 |package_execution_id|**uniqueidentifier**|提供 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 記錄資料表的連結。 可為 Null。|  
 |collection_set_id|**int**|提供 msdb 中資料收集組態資料表的連結。 可為 Null。|  

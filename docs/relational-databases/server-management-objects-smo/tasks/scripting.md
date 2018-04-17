@@ -1,30 +1,31 @@
 ---
-title: "指令碼 |Microsoft 文件"
-ms.custom: 
+title: 指令碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - dependencies [SMO]
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 897a16553e79996572d377213fd5514d4cca36a4
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 91d1aa102ec9eb3a5cb106a57099df8042334cb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scripting"></a>指令碼
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/12/2018
  在第三個也就是最後階段時，會產生具有指定清單和指令碼選項的指令碼。 結果會以 <xref:System.Collections.Specialized.StringCollection> 系統物件傳回。 接下來在這個階段中會從 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 物件的 Items 集合以及 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A> 之類的屬性擷取相依物件的名稱。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
  這個程式碼範例需要**匯入**System.Collections.Specialized 命名空間陳述式。 請在應用程式中，將這個陳述式與其他的 Imports 陳述式一同插入任何宣告之前。  
   

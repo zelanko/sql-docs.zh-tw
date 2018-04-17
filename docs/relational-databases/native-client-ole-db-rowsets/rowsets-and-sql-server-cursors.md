@@ -1,15 +1,15 @@
 ---
-title: "資料列集和 SQL Server 資料指標 |Microsoft 文件"
-ms.custom: 
+title: 資料列集和 SQL Server 資料指標 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB rowsets, cursors
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - properties [OLE DB]
 - cursors [OLE DB]
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94f02b59dacb2ded2cc5597a3438be025a8ac678
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e19992f1413ec41089c683130db40df1b06446cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/24/2018
   
  T = VARIANT_TRUE  
   
- \-= VARIANT_TRUE 或 VARIANT_FALSE  
+ \- = VARIANT_TRUE 或 VARIANT_FALSE  
   
  若要使用某種類型的資料指標模型，請找出對應至此資料指標模型的資料行，並尋找此資料行中具有 'T' 值的所有資料列集屬性。 將這些資料列集屬性設定為 VARIANT_TRUE，以便使用特定的資料指標模型。 具有 '-' 值的資料列集屬性可以設定為 VARIANT_TRUE 或 VARIANT_FALSE。  
   

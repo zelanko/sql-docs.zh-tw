@@ -2,7 +2,7 @@
 title: sp_update_alert (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 64a669e37edf07ff897c94122e7e49d5899c1b6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,13 +75,13 @@ sp_update_alert
  [ **@new_name =**] **'***new_name***'**  
  警示的新名稱。 名稱必須是唯一的。 *new_name*是**sysname**，預設值是 NULL。  
   
- [ **@enabled =**] *enabled*  
+ [  **@enabled =**]*啟用*  
  指定是否啟用警示 (**1**) 或未啟用 (**0**)。 *啟用*是**tinyint**，預設值是 NULL。 您必須啟用警示，才能引發警示。  
   
  [ **@message_id =**] *message_id*  
  警示定義的新訊息或錯誤號碼。 一般而言， *message_id*對應中的錯誤代碼**sysmessages**資料表。 *message_id*是**int**，預設值是 NULL。 警示的嚴重性層級設定時，才可以使用識別碼的訊息**0**。  
   
- [ **@severity =**] *severity*  
+ [  **@severity =**]*嚴重性*  
  新的嚴重性層級 (從**1**透過**25**) 警示定義。 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳送至 Windows 應用程式記錄檔且含有指定嚴重性的訊息都會啟動警示。 *嚴重性*是**int**，預設值是 NULL。 警示的訊息識別碼設定為時，才可以使用嚴重性層級**0**。  
   
  [ **@delay_between_responses =**] *delay_between_responses*  

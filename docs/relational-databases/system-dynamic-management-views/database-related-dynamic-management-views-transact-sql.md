@@ -1,16 +1,16 @@
 ---
-title: "與資料庫相關動態管理檢視 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 與資料庫相關動態管理檢視 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - database dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], database
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5458d854e5243feb7ce926f0e811a114e855a424
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a5a76078cb6997ecff78025bbd95c9a0d6b5cd27
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>資料庫相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ ms.lasthandoff: 02/03/2018
 DMV 的特有的 SQL 資料庫或 SQL 資料倉儲。   
 | | | 
 |-|-|  
-|[sys.dm_db_wait_stats &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
-|[sys.dm_db_resource_stats &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)|[sys.dm_db_objects_impacted_on_version_change &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)|  
-|[sys.dm_operation_status &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) | |
+|[sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
+|[sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)|[sys.dm_db_objects_impacted_on_version_change &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)|  
+|[sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) | |
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

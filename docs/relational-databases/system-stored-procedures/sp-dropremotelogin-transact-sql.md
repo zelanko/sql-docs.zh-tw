@@ -1,16 +1,16 @@
 ---
-title: "sp_dropremotelogin (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_dropremotelogin (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropremotelogin
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9edb5db6819950e517f26bee0d144ef3cf567bc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a20a89de5b84881deb793406e0d507fdcbc3525f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,8 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
  [  **@remoteserver =** ] **'***remoteserver***'**  
  這是對應至即將移除之遠端登入的遠端伺服器名稱。 *remoteserver*是**sysname**，沒有預設值。 *remoteserver*必須已經存在。  
   
- [  **@loginame =** ] **'***登入***'**  
- 這是本機伺服器上與遠端伺服器相關聯的選擇性登入名稱。 *登入*是**sysname**，預設值是 NULL。 *登入*必須已經存在，如果指定。  
+ [ **@loginame =** ] **'***login***'**  
+ 這是本機伺服器上與遠端伺服器相關聯的選擇性登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 *登入*必須已經存在，如果指定。  
   
  [  **@remotename =** ] **'***remote_name***'**  
  對應至的遠端登入的選擇性名稱*登入*登入時，從遠端伺服器。 *remote_name*是**sysname**，預設值是 NULL。  
@@ -98,15 +98,15 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [安全性預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_addremotelogin &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_addserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_addserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_helpremotelogin &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

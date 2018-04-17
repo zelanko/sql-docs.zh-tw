@@ -1,16 +1,16 @@
 ---
-title: "bcp_bind |Microsoft 文件"
-ms.custom: 
+title: bcp_bind |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_bind
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bba3e1785df98b4f023d5296205503202cbc59c
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 909c5251151a42e519778f5247665d65d101a119
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -129,7 +130,7 @@ bcp_bind(hdbc, szName, 0,
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入 SQLXML 和 SQLUDT 資料類型 token 中的支援***eDataType***參數。  
  
- 下表列出有效的列舉的資料型別和對應的 ODBC C 資料類型。
+ 下表列出有效的列舉資料類型和對應的 ODBC C 資料類型。
   
 |eDataType|C 類型|  
 |-----------------------|------------|  
@@ -141,17 +142,17 @@ bcp_bind(hdbc, szName, 0,
 |SQLBIGVARCHAR|char *|  
 |SQLNCHAR|wchar_t *|  
 |SQLNVARCHAR|wchar_t *|  
-|SQLBINARY|不帶正負號 char *|  
-|SQLBIGBINARY|不帶正負號 char *|  
-|SQLVARBINARY|不帶正負號 char *|  
-|SQLBIGVARBINARY|不帶正負號 char *|  
+|SQLBINARY|unsigned char *|  
+|SQLBIGBINARY|unsigned char *|  
+|SQLVARBINARY|unsigned char *|  
+|SQLBIGVARBINARY|unsigned char *|  
 |SQLBIT|char|  
 |SQLBITN|char|  
 |SQLINT1|char|  
 |SQLINT2|short int|  
 |SQLINT4|int|  
 |SQLINT8|_int64|  
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2 來<br /> 4: SQLINT4<br /> 8: SQLINT8|  
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
 |SQLFLT4|float|  
 |SQLFLT8|float|  
 |SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
@@ -167,11 +168,11 @@ bcp_bind(hdbc, szName, 0,
 |SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
 |SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
 |SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
-|SQLIMAGE|不帶正負號 char *|  
-|SQLUDT|不帶正負號 char *|  
+|SQLIMAGE|unsigned char *|  
+|SQLUDT|unsigned char *|  
 |SQLUNIQUEID|SQLGUID|  
-|SQLVARIANT|*以外的任何資料類型：*<br />-   text<br />-   ntext<br />-映像<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
-|SQLXML|*支援的 C 資料類型：*<br />-   char*<br />-wchar_t *<br />-不帶正負號 char *|  
+|SQLVARIANT|*除了下列以外的任何資料類型：*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLXML|*支援的 C 資料類型：*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
   
  *idxServerCol*  
  這是資料庫資料表中要將資料複製到其中之資料行的序數位置。 資料表中的第一個資料行是資料行 1。 資料行的序數位置由報告[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)。  
@@ -217,9 +218,9 @@ bcp_bind(hdbc, szName, 0,
  呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)時使用**bcp_bind**會導致錯誤。  
   
 ## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>bcp_bind 支援增強的日期和時間功能  
- 如需有關搭配使用的型別資訊*eDataType*參數的日期/時間類型，請參閱[增強型日期和時間類型 &#40; OLE DB 和 ODBC &#41; 的大量複製變更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+ 如需有關搭配使用的型別資訊*eDataType*參數的日期/時間類型，請參閱[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱[日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="example"></a>範例  
   

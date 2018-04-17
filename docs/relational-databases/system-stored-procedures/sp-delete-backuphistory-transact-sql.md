@@ -1,16 +1,16 @@
 ---
-title: "sp_delete_backuphistory (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_delete_backuphistory (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_backuphistory
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_backuphistory
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23843bf7829491c13061b9f2ba6f4063a82d9f9b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9b21b74bee3cc1efc9f206436adc0ae1ad89592b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@oldest_date=** ] **'***oldest_date***'**  
+ [  **@oldest_date=** ] **'***oldest_date***'**  
  這是備份和還原記錄資料表中所保留的最舊日期。 *oldest_date*是**datetime**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -92,7 +92,7 @@ EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
+ [sp_delete_database_backuphistory &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [備份記錄與標頭資訊 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

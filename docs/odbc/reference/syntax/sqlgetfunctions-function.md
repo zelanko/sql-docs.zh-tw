@@ -2,7 +2,7 @@
 title: SQLGetFunctions 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a38bc5d8e071efee286f726d75f6949243cbb77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函數
 **一致性**  
@@ -74,7 +74,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="diagnostics"></a>診斷  
  當**SQLGetFunctions**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType*的利用 SQL_HANDLE_DBC 和*處理*的*ConnectionHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLGetFunctions** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------|-----|-----------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
@@ -229,6 +229,6 @@ SQLDisconnect(hdbc);
 |傳回的驅動程式或資料來源的相關資訊|[SQLGetInfo 函式](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
 |傳回陳述式屬性的設定|[SQLGetStmtAttr 函式](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

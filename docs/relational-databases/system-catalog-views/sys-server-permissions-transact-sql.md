@@ -1,16 +1,16 @@
 ---
-title: "sys.server_permissions (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.server_permissions (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.server_permissions_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_permissions catalog view
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96312970ada17baf213e436e338986423526f470
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7164ece21806f87f9684e1befc78daf9e0f92166
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -40,16 +41,16 @@ ms.lasthandoff: 11/21/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**類別**|**tinyint**|識別權限所在項目的類別。<br /><br /> 100 = 伺服器<br /><br /> 101 = 伺服器-主體<br /><br /> 105 = 端點|  
-|**class_desc**|**nvarchar （60)**|權限所在類別的描述。 為下列其中一個值：<br /><br /> **伺服器**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
-|**則 major_id 就**|**int**|權限所在安全性實體的識別碼，它是根據類別加以解譯。 對大部份的項目來說，這只是套用至類別代表的識別碼。 下面是非標準的解譯：<br /><br /> 100 = 永遠為 0|  
+|**class**|**tinyint**|識別權限所在項目的類別。<br /><br /> 100 = 伺服器<br /><br /> 101 = 伺服器-主體<br /><br /> 105 = 端點|  
+|**class_desc**|**nvarchar(60)**|權限所在類別的描述。 為下列其中一個值：<br /><br /> **伺服器**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**major_id**|**int**|權限所在安全性實體的識別碼，它是根據類別加以解譯。 對大部份的項目來說，這只是套用至類別代表的識別碼。 下面是非標準的解譯：<br /><br /> 100 = 永遠為 0|  
 |**minor_id**|**int**|權限所在項目的次要識別碼，它是根據類別加以解譯。|  
 |**grantee_principal_id**|**int**|獲授與權限的伺服器主體識別碼。|  
 |**grantor_principal_id**|**int**|這些權限之同意授權者的伺服器主體識別碼。|  
-|**型別**|**char(4)**|伺服器權限類型。 如需權限類型的清單，請參閱下表。|  
-|**permission_name**|**nvarchar （128)**|權限名稱。|  
-|**狀態**|**char （1)**|權限狀態：<br /><br /> D = 拒絕<br /><br /> R = 撤銷<br /><br /> G = 授與<br /><br /> W = 以授與選項授與|  
-|**state_desc**|**nvarchar （60)**|權限狀態的描述：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**type**|**char(4)**|伺服器權限類型。 如需權限類型的清單，請參閱下表。|  
+|**permission_name**|**nvarchar(128)**|權限名稱。|  
+|**狀態**|**char(1)**|權限狀態：<br /><br /> D = 拒絕<br /><br /> R = 撤銷<br /><br /> G = 授與<br /><br /> W = 以授與選項授與|  
+|**state_desc**|**nvarchar(60)**|權限狀態的描述：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |權限類型|權限名稱|適用於安全性實體|  
 |---------------------|---------------------|--------------------------|  
@@ -103,7 +104,7 @@ JOIN sys.server_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [安全性實體](../../relational-databases/security/securables.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

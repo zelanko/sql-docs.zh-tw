@@ -1,8 +1,8 @@
 ---
-title: ODBC 程式設計人員 &#39; s 參考 |Microsoft 文件
+title: ODBC 程式設計人員&#39;s 參考 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,15 +18,15 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24f7c0aa7abcf2b35cbef34cabbe86944ddcc7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="odbc-programmer39s-reference"></a>ODBC 程式設計人員 &#39; s 參考
+# <a name="odbc-programmer39s-reference"></a>ODBC 程式設計人員&#39;s 參考
 *ODBC 程式設計人員參考*包含下列各節。  
   
 -   [What's New in ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md)列出 Windows 8 SDK 中所加入的新 ODBC 功能。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
  會使用下列的印刷慣例。  
   
-|[格式]|用於|  
+|格式|用於|  
 |------------|--------------|  
 |選取 * 從|大寫字母表示 SQL 陳述式、 巨集名稱和作業系統命令層級使用的詞彙。|  
 |`RETCODE SQLFetch(hdbc)`|等寬字型用於命令列範例和程式碼。|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 |**SQLEndTran**|粗體類型表示語法必須完全如下所示，包括函式名稱輸入。|  
 |&#124;|分隔號會分隔語法列中的兩個互斥的選項。|  
 |...|省略符號表示引數可以重複多次。|  
-|執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。|三個點的資料行指出接續前一個程式碼的行。|  
+|。 。 。|三個點的資料行指出接續前一個程式碼的行。|  
   
 ## <a name="about-the-code-examples"></a>關於程式碼範例  
  本指南中的程式碼範例是僅供說明用途設計的。 已寫入主要是為了示範 ODBC 原則，因為效率有時已設定擱置在一旁為了清楚起見。 此外，程式碼的整個區段有時已省略為了清楚起見。 這些包括非 ODBC 函數 （名稱 [SQL] 不會啟動這些函式） 和大部分的錯誤處理的定義。  

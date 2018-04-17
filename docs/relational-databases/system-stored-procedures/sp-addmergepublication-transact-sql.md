@@ -2,7 +2,7 @@
 title: sp_addmergepublication (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3f61d6ab3c2154020be3eb1ecf4407f57541918
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,10 +84,10 @@ sp_addmergepublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =** ] **'***發行集***'**  
+ [ **@publication =** ] **'***publication***'**  
  這是要建立之合併式發行集的名稱。 *發行集*是**sysname**，沒有預設值，而且不能是關鍵字所有。 在資料庫內，發行集名稱必須是唯一的。  
   
- [  **@description =** ] **'***描述***'**  
+ [ **@description =** ] **'***description***'**  
  這是發行集的描述。 *描述*是**nvarchar （255)**，預設值是 NULL。  
   
  [  **@retention =** ]*保留*  
@@ -99,10 +99,10 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@sync_mode =** ] **'***sync_mode***'**  
  這是發行集訂閱者的初始同步處理模式。 *sync_mode*是**nvarchar （10)**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**原生**（預設值）|產生所有資料表的原生模式大量複製程式輸出。|  
-|**字元**|產生所有資料表的字元模式大量複製程式輸出。 支援所需[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]和非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「 訂閱者 」。|  
+|**character**|產生所有資料表的字元模式大量複製程式輸出。 支援所需[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]和非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「 訂閱者 」。|  
   
  [  **@allow_push =** ] **'***allow_push***'**  
  指定是否能夠針對指定的發行集建立發送訂閱。 *allow_push*是**nvarchar （5)**，預設值為 TRUE，允許發送訂閱的發行集。  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@use_partition_groups =** ] **'***use_partition_groups***'**  
  指定應該利用預先計算的分割區來最佳化同步處理。 *use_partition_groups*是**nvarchar （5)**，而且可以是下列值之一：  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**true**|發行集使用預先計算的資料分割。|  
 |**false**|發行集不使用預先計算的資料分割。|  
@@ -211,7 +211,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@publication_compatibility_level =** ] *backward_comp_level*  
  指出發行集的回溯相容性。 *backward_comp_level*是**nvarchar(6)**，而且可以是下列值之一：  
   
-|值|Version|  
+|Value|版本|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -231,7 +231,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  指出這個發行集的訂閱者是否能起始快照集處理序來產生資料分割區的篩選快照集。 *allow_subscriber_initiated_snapshot*是**nvarchar （5)**，預設值是 FALSE。 **true**指出訂閱者可以起始快照集處理序。  
   
  [  **@allow_web_synchronization =** ] **'***allow_web_synchronization***'**  
- 指定是否啟用發行集的 Web 同步處理。 *allow_web_synchronization*是**nvarchar （5)**，預設值是 FALSE。 **true**指定這個發行集的訂閱可以透過 HTTPS 同步處理。 如需詳細資訊，請參閱＜ [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)＞。 若要支援[!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者，您必須指定**true**。  
+ 指定是否啟用發行集的 Web 同步處理。 *allow_web_synchronization*是**nvarchar （5)**，預設值是 FALSE。 **true**指定這個發行集的訂閱可以透過 HTTPS 同步處理。 如需詳細資訊，請參閱 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)。 若要支援[!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者，您必須指定**true**。  
   
  [  **@web_synchronization_url=** ] **'***web_synchronization_url***'**  
  指定 Web 同步處理所用的網際網路 URL 預設值。 *web_synchronization_url 我*s **nvarchar （500)**，預設值是 NULL。 如果其中一個時不會明確地設定定義預設網際網路 URL [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)執行。  
@@ -245,12 +245,12 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@retention_period_unit =** ] **'***retention_period_unit***'**  
  指定期間所設定之保留的單位*保留*。 *retention_period_unit*是**nvarchar （10)**，而且可以是下列值之一。  
   
-|值|Version|  
+|Value|版本|  
 |-----------|-------------|  
 |**天**（預設值）|以天為保留週期的指定單位。|  
-|**週**|以星期為保留週期的指定單位。|  
-|**月份**|以月為保留週期的指定單位。|  
-|**年份**|以年為保留週期的指定單位。|  
+|**week**|以星期為保留週期的指定單位。|  
+|**month**|以月為保留週期的指定單位。|  
+|**year**|以年為保留週期的指定單位。|  
   
  [  **@generation_leveling_threshold=** ] *generation_leveling_threshold*  
  指定某個層代中包含的變更數目。 層代是指傳遞給發行者或訂閱者的變更集合。 *generation_leveling_threshold*是**int**，預設值是 1000年。  
@@ -264,7 +264,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@conflict_logging =** ] **'***conflict_logging***'**  
  指定衝突記錄的儲存位置。 *conflict_logging*是**nvarchar （15)**，而且可以是下列值之一：  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**發行者**|衝突記錄會儲存在發行者端。|  
 |**訂閱者**|衝突記錄會儲存在造成衝突的訂閱者端。 不支援 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者。|  
@@ -283,7 +283,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  如[!INCLUDE[ssEW](../../includes/ssew-md.md)]「 訂閱者 」 的值*alternate_snapshot_folder*時，才使用的值*snapshot_in_default_folder*是**false**。  
   
- 啟用 DDL 複寫 (*replicate_ddl***= 1**) 是發行集，為了進行非複寫 DDL 變更發行集， [sp_changemergepublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)設定必須先執行*replicate_ddl*至**0**。 在發出非複寫 DDL 陳述式之後， **sp_changemergepublication**可以再次執行才能重新開啟 DDL 複寫。  
+ 啟用 DDL 複寫 (* replicate_ddl ***= 1**) 是發行集，為了進行非複寫 DDL 變更發行集， [sp_changemergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)設定必須先執行*replicate_ddl*至**0**。 在發出非複寫 DDL 陳述式之後， **sp_changemergepublication**可以再次執行才能重新開啟 DDL 複寫。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  
@@ -291,11 +291,11 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addmergepublication**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

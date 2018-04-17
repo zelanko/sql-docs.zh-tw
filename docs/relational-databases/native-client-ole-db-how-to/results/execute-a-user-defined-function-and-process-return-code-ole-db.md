@@ -1,29 +1,30 @@
 ---
-title: "執行使用者定義函數和處理傳回碼 (OLE DB) |Microsoft 文件"
-ms.custom: 
+title: 執行使用者定義函數和處理傳回碼 (OLE DB) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [OLE DB]
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1d977f01bc389d7bd4b5544a8cfdcadf22cd409
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bf7b9d2a393f5c7fb4a102e07805be5b61f3335e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>執行使用者定義函數和處理傳回碼 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -373,6 +374,6 @@ go
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果的如何主題 &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [處理結果的如何主題 & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

@@ -1,8 +1,8 @@
 ---
-title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_locks (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5e4552d7acab5640a6e6b8210b73eff20bf963d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/05/2018
   
  在一個工作階段下執行的多個資料指標是無法區分的，它們會被視為一個實體。  
   
- 與工作階段識別碼值無關的分散式交易是被遺棄的交易，系統會指派 -2 值做為交易的工作階段識別碼。 如需詳細資訊，請參閱[KILL &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md).  
+ 與工作階段識別碼值無關的分散式交易是被遺棄的交易，系統會指派 -2 值做為交易的工作階段識別碼。 如需詳細資訊，請參閱[KILL & #40;TRANSACT-SQL & #41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
 ## <a name="resource-details"></a>資源詳細資料  
  下表列出的資源中所呈現**resource_associated_entity_id**資料行。  
@@ -389,7 +390,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
+ [sys.dm_tran_database_transactions &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

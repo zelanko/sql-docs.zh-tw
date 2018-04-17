@@ -28,11 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f1b2719813ecc58cc68477b47141a215f4880be
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 7b8087839e5ea151d69a18cdf46d19fa5c917e66
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/08/2018
 |start_time|**datetime**|UTC 時間表示的五分鐘報告間隔的開始。|  
 |end_time|**datetime**|指出五分鐘報告間隔結束的 UTC 時間。|  
 |database_name|**varchar**|使用者資料庫的名稱。|  
-|sku|**varchar**|資料庫服務層。 以下是可能的值：<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />一般用途<br /><br />重要商務資料|  
+|sku|**varchar**|資料庫服務層。 以下是可能的值：<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />一般用途<br /><br />業務關鍵|  
 |storage_in_megabytes|**float**|儲存體大小上限以 mb 為單位的時間週期，包括資料庫資料、 索引、 預存程序和中繼資料。|  
 |avg_cpu_percent|**numeric**|平均運算使用率，以服務層限制的百分比計算。|  
 |avg_data_io_percent|**numeric**|根據服務層限制，計算平均 I/O 使用率的百分比。|  

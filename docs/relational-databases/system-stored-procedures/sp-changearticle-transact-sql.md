@@ -1,16 +1,16 @@
 ---
-title: "(transact-sql) |Microsoft 文件"
-ms.custom: 
+title: (transact-sql) |Microsoft 文件
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: 
+caps.latest.revision: 77
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 9f5c5722d588d864d698772c063efc64425d679d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是發行項所在的發行集名稱。 *發行集*是**sysname**，預設值是 NULL。  
   
  [  **@article=**] **'***文章***'**  
@@ -66,7 +66,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  下表描述發行項的屬性及這些屬性的值。  
   
-|屬性|值|描述|  
+|屬性|值|Description|  
 |--------------|------------|-----------------|  
 |**creation_script**||用來建立目標資料表之發行項結構描述指令碼的路徑和名稱。 預設值是 NULL。|  
 |**del_cmd**||要執行的 DELETE 陳述式；否則，便從記錄檔中建構它。|  
@@ -82,8 +82,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**pre_creation_cmd**||可以在套用同步處理之前，卸除、刪除或截斷目的地資料表的預先建立命令。|  
 ||**無**|不使用命令。|  
 ||**卸除**|卸除目的地資料表。|  
-||**刪除**|刪除目的地資料表。|  
-||**截斷**|截斷目的地資料表。|  
+||**delete**|刪除目的地資料表。|  
+||**truncate**|截斷目的地資料表。|  
 |**pub_identity_range**||控制在訂閱者端指派的指派識別範圍大小。 不支援點對點複寫使用這個項目。|  
 |**schema_option**||指定給定發行項之結構描述產生選項的點陣圖。 *schema_option*是**binary （8)**。 如需詳細資訊，請參閱本主題稍後的＜備註＞一節。|  
 ||**0x00**|停用快照集代理程式的指令碼。|  
@@ -124,7 +124,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x400000000**|複寫資料與索引的壓縮選項。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何建立物件，然後再套用快照集的詳細資訊，請參閱[前後執行指令碼之後套用快照集](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
 ||**0x1000000000**|將 common language runtime (CLR) 使用者定義類型 (Udt) 大於 8000 個位元組至**varbinary （max)**如此 UDT 類型的資料行可以複寫至 「 訂閱者 」 執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||**0x2000000000**|將轉換**hierarchyid**資料型別**varbinary （max)**使類型的資料行**hierarchyid**可以複寫到訂閱者執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 如需有關如何使用**hierarchyid**資料行在複寫資料表中，請參閱[hierarchyid &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x2000000000**|將轉換**hierarchyid**資料型別**varbinary （max)**使類型的資料行**hierarchyid**可以複寫到訂閱者執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 如需有關如何使用**hierarchyid**資料行在複寫資料表中，請參閱[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 ||**0x4000000000**|複寫資料表上任何已篩選的索引。 如需篩選索引的詳細資訊，請參閱[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。|  
 ||**0x8000000000**|將轉換**geography**和**幾何**資料類型為**varbinary （max)**如此這些類型的資料行可以複寫至 「 訂閱者 」 執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|複寫類型的資料行的索引**geography**和**幾何**。|  
@@ -137,11 +137,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**沒有資料行名稱**|資料行名稱不包括在複寫的 INSERT 陳述式中。|  
 ||**dts 水平資料分割**|發行項的水平資料分割並非由可轉換的訂閱來定義。|  
 ||**無**|清除所有狀態選項中的[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表，並將標示為非作用中的文件。|  
-||**參數**|利用參數化的命令，將變更傳播到訂閱者。 這是新發行項的預設值。|  
+||**parameters**|利用參數化的命令，將變更傳播到訂閱者。 這是新發行項的預設值。|  
 ||**字串常值**|利用字串常值，將變更傳播到訂閱者。|  
 |**sync_object**||用於產生同步處理輸出檔之資料表或檢視的名稱。 預設值是 NULL。 不支援 Oracle 發行者使用這個值。|  
 |**資料表空間**||識別 Oracle 資料庫發行的發行項之記錄資料表所用的資料表空間。 如需詳細資訊，請參閱[管理 Oracle 資料表空間](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
-|**臨界值**||用來控制散發代理程式指派新識別範圍之時機的百分比值。 不支援點對點複寫使用這個項目。|  
+|**threshold**||用來控制散發代理程式指派新識別範圍之時機的百分比值。 不支援點對點複寫使用這個項目。|  
 |**type**||不支援 Oracle 發行者使用這個值。|  
 ||**logbased**|記錄式發行項。|  
 ||**logbased manualboth**|記錄式且含有手動篩選準則和手動檢視的發行項。 此選項需要*sync_object*和*篩選*也設定屬性。 不支援 Oracle 發行者使用這個值。|  
@@ -163,7 +163,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  請參閱＜備註＞一節，以了解在變更時需要產生新快照集的屬性。  
   
- [  **@force_reinit_subscription=]***force_reinit_subscription*  
+ [**@force_reinit_subscription=] * * * force_reinit_subscription*  
  認可這個預存程序所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*是**元**預設值是**0**。  
   
  **0**指定發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化現有的訂閱，就會發生錯誤，且不會進行任何變更。  
@@ -172,7 +172,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  請參閱＜備註＞一節，以了解在變更時需要重新初始化所有現有的訂閱之屬性。  
   
- [  **@publisher** =] **'***發行者***'**  
+ [ **@publisher**=] **'***發行者***'**  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -228,7 +228,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 |發行項類型|複寫類型||  
 |------------------|----------------------|------|  
-||異動|快照式|  
+||異動|快照集|  
 |**logbased**|所有選項|所有選項，但**0x02**|  
 |**logbased manualfilter**|所有選項|所有選項，但**0x02**|  
 |**logbased manualview**|所有選項|所有選項，但**0x02**|  
@@ -252,13 +252,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changearticle**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [檢視和修改發行項屬性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addarticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [sp_helparticlecolumns &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

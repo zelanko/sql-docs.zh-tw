@@ -1,16 +1,16 @@
 ---
-title: "sp_control_plan_guide (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_control_plan_guide (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_control_plan_guide
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f093a05ebbfe14a0d9436b0b2a9503aadc5b6440
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  卸除所指定的計畫指南*plan_guide_name*。 在卸除計畫指南之後，未來執行先前符合計畫指南的查詢時，不會受計畫指南的影響。  
   
  DROP ALL  
- 卸除目前資料庫中的所有計畫指南。 **N'***plan_guide_name*無法指定 DROP ALL 時指定。  
+ 卸除目前資料庫中的所有計畫指南。 **N' * * * plan_guide_name*無法指定 DROP ALL 時指定。  
   
  DISABLE  
  停用所指定的計畫指南*plan_guide_name*。 在停用計畫指南之後，未來執行先前符合計畫指南的查詢時，不會受計畫指南的影響。  
   
  DISABLE ALL  
- 停用目前資料庫中的所有計畫指南。 **N'***plan_guide_name*不能指定當指定 DISABLE ALL。  
+ 停用目前資料庫中的所有計畫指南。 **N' * * * plan_guide_name*不能指定當指定 DISABLE ALL。  
   
  ENABLE  
  啟用所指定的計畫指南*plan_guide_name*。 計畫指南在啟用之後，可以符合適合的查詢。 依預設，在建立計畫指南時，會啟用計畫指南。  
@@ -140,8 +140,8 @@ GO
 EXEC sp_control_plan_guide N'DISABLE ALL';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   

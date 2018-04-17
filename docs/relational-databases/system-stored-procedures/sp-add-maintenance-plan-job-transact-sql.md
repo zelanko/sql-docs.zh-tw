@@ -1,16 +1,16 @@
 ---
-title: "sp_add_maintenance_plan_job (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_add_maintenance_plan_job (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_maintenance_plan_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_maintenance_plan_job
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4aef3cee7653141917e8b5e9ab97c156f8a95e36
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3e0c27ea2eac4436443bbb38879208af7d79aefd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **'***plan_id***'**  
  指定維護計畫的識別碼。 *plan_id*是**uniqueidentifier**，而且必須是有效的識別碼。  
   
  [ **@job_id =**] **'***job_id***'**  
@@ -75,6 +75,6 @@ EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N
   
 ## <a name="see-also"></a>另請參閱  
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [資料庫維護計畫預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [資料庫維護計畫預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

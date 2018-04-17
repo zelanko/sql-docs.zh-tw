@@ -1,16 +1,16 @@
 ---
-title: "sys.syscomments (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.syscomments (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscomments_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.syscomments compatibility view
 - syscomments system table
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
-caps.latest.revision: 
+caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9a49d0a12cbf6e8f0c07cf6913786a0b437f1d0a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 375c289c67f951b68255d67d4092a02f343587b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   包含資料庫中每份檢視、規則、預設值、觸發程序、CHECK 條件約束、DEFAULT 條件約束以及預存程序的項目。 **文字**資料行包含原始的 SQL 定義陳述式。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 sys.sql_modules。 如需詳細資訊，請參閱[sys.sql_modules &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]我們建議您改用 sys.sql_modules。 如需詳細資訊，請參閱[sys.sql_modules &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)。  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,13 +50,13 @@ ms.lasthandoff: 02/09/2018
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**ctext**|**varbinary(8000)**|SQL 定義陳述式的原始位元組。|  
 |**texttype**|**smallint**|0 = 使用者提供的註解<br /><br /> 1 = 系統提供的註解<br /><br /> 4 = 加密的註解|  
-|**language**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**encrypted**|**bit**|指出程序定義是否會模糊化。<br /><br /> 0 = 不模糊化<br /><br /> 1 = 模糊化<br /><br /> **\*\*重要\* \*** 模糊化預存程序定義，請使用 CREATE PROCEDURE 搭配 ENCRYPTION 關鍵字。|  
+|**語言**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**加密**|**bit**|指出程序定義是否會模糊化。<br /><br /> 0 = 不模糊化<br /><br /> 1 = 模糊化<br /><br /> **\*\* 重要\* \*** 模糊化預存程序定義，請使用 CREATE PROCEDURE 搭配 ENCRYPTION 關鍵字。|  
 |**compressed**|**bit**|永遠傳回 0。 這表示程序已經壓縮。|  
 |**text**|**nvarchar(4000)**|SQL 定義陳述式的實際文字。<br /><br /> 已解碼運算式的語意相當於原始文字，但是不能保證語法相同。 例如，空白字元會從已解碼的運算式移除。<br /><br /> 這[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-相容檢視會從目前取得資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構，並可傳回多個下列字元**nvarchar （4000)**定義。 **sp_help**傳回**nvarchar （4000)**做為文字資料行資料類型。 當使用**syscomments**請考慮使用**nvarchar （max)**。 新的開發工作，請勿使用**syscomments**。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

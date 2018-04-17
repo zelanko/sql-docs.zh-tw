@@ -1,31 +1,32 @@
 ---
-title: "SQLSetPos 以更新資料列集中的資料列 |Microsoft 文件"
-ms.custom: 
+title: SQLSetPos 以更新資料列集中的資料列 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating rows
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 898bbdbf15cec2e583d9fa55a82ec8b0caa32d18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 868728a48781c03c6f1df7ec3d43108d989d5913
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos 以更新資料列集中的資料列
 更新作業的**SQLSetPos** ，使得資料來源更新一或多個選取的資料列的資料表中，使用資料應用程式緩衝區中，每個繫結資料行 （除非長度/指標緩衝區中的值是 SQL_COLUMN_IGNORE）。 未繫結的資料行不會更新。  

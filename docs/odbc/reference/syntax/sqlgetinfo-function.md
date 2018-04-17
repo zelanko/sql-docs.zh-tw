@@ -2,7 +2,7 @@
 title: SQLGetInfo 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ef6197247bbe50397c543a91156e0c5db294422
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e9d01c26268ee9e26a0fead54ed9975a8c405558
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 函數
 **一致性**  
@@ -66,7 +66,7 @@ SQLRETURN SQLGetInfo(
   
  如果*InfoValuePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回中所指向的緩衝區*InfoValuePtr*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]長度\* *InfoValuePtr*緩衝區。 如果中的值 *\*InfoValuePtr*不是字元字串或*InfoValuePtr*為 null 指標， *Columnsize*會忽略引數。 驅動程式假設大小 *\*InfoValuePtr* SQLUSMALLINT 或 SQLUINTEGER，根據*資訊類型*。 如果 *\*InfoValuePtr*是 Unicode 字串 (呼叫時**SQLGetInfoW**)、 *Columnsize* ，SQLSTATE hy090 以及 （如果引數必須是偶數。會傳回字串或緩衝區長度無效）。  
   
  *StringLengthPtr*  
@@ -82,7 +82,7 @@ SQLRETURN SQLGetInfo(
 ## <a name="diagnostics"></a>診斷  
  當**SQLGetInfo**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以藉由呼叫取得相關聯的 SQLSTATE 值**SQLGetDiagRec**與*HandleType*的利用 SQL_HANDLE_DBC 和*處理*的*ConnectionHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLGetInfo** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|緩衝區\* *InfoValuePtr*仍不夠大，無法傳回要求的資訊。 因此，資訊會被截斷。 中會傳回所要求的資訊未截斷格式長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -1471,7 +1471,7 @@ SQLRETURN SQLGetInfo(
   
  這*資訊類型*僅限於目錄函數。 如需搜尋的模式字串中逸出字元使用的說明，請參閱[模式值引數](../../../odbc/reference/develop-app/pattern-value-arguments.md)。  
   
- < (ODBC 1.0)  
+ &LT; (ODBC 1.0)  
  字元字串的實際資料來源專用伺服器名稱。當資料來源名稱會使用於時很有用**SQLConnect**， **SQLDriverConnect**，和**SQLBrowseConnect**。  
   
  SQL_SPECIAL_CHARACTERS (ODBC 2.0)  
@@ -1842,6 +1842,6 @@ else
  傳回資料來源的資料類型的相關資訊  
  [SQLGetTypeInfo 函式](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

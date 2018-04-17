@@ -1,16 +1,16 @@
 ---
-title: "sys.server_triggers (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.server_triggers (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_triggers
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_triggers catalog view
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efbd010533b9c11d974db2ae20c8455ce4274231
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6ef59089135cded1ed557fd628cbe93d45fc0620
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ ms.lasthandoff: 11/27/2017
 |**name**|**sysname**|觸發程序的名稱。|  
 |**object_id**|**int**|物件的識別碼。|  
 |**parent_class**|**tinyint**|父系的類別。 它一律是：<br /><br /> 100 = 伺服器|  
-|**parent_class_desc**|**nvarchar （60)**|父類別的描述。 它一律是：<br /><br /> SERVER。|  
+|**parent_class_desc**|**nvarchar(60)**|父類別的描述。 它一律是：<br /><br /> SERVER。|  
 |**sys.internal_tables**|**int**|SERVER 上的觸發程序，一律為 0。|  
-|**型別**|**char(2)**|物件類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
-|**type_desc**|**nvarchar （60)**|物件類型類別的描述。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**type**|**char(2)**|物件類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
+|**type_desc**|**nvarchar(60)**|物件類型類別的描述。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|建立觸發程序的日期。|  
 |**modify_date**|**datetime**|上次利用 ALTER 陳述式來修改觸發程序的日期。|  
 |**is_ms_shipped**|**bit**|利用內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件來代表使用者所建立的觸發程序。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

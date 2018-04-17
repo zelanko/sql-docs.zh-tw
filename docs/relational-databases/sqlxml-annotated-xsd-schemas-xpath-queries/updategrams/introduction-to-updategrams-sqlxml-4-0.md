@@ -1,16 +1,16 @@
 ---
-title: "Updategram (SQLXML 4.0) 簡介 |Microsoft 文件"
-ms.custom: 
+title: Updategram (SQLXML 4.0) 簡介 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -25,27 +25,28 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 387646968ef4e44a43ec9ee2c50a06d4ba4b6e6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 簡介 (SQLXML 4.0) 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-您可以修改 （插入、 更新或刪除） 中的資料庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]從現有的 XML 文件使用 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函式。  
+  您可以修改 （插入、 更新或刪除） 中的資料庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]從現有的 XML 文件使用 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函式。  
   
  OPENXML 函數可透過切割現有的 XML 文件，並提供可以傳遞到 INSERT、UPDATE 或 DELETE 陳述式之資料列集來修改資料庫。 利用 OPENXML，可以針對資料庫資料表直接執行作業。 因此，每當資料列集提供者 (例如資料表) 可以當做來源顯示時，OPENXML 最適合。  
   
  Updategram 跟 OPENXML 一樣，可讓您在資料庫中插入、更新或刪除資料，不過，Updategram 會根據註解式 XSD (或 XDR) 結構描述提供的 XML 檢視運作，例如，更新會套用到對應結構描述提供的 XML 檢視。 對應結構描述會依序擁有將 XML 元素和屬性對應到對應的資料庫資料表和資料行的必要資訊。 Updategram 會使用此對應資訊來更新資料庫資料表和資料行。  
   
 > [!NOTE]  
->  本文件集假設您非常熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的範本和對應結構描述支援。 如需詳細資訊，請參閱[簡介註解式 XSD 結構描述 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 如需使用 XDR 的舊版應用程式，請參閱[Annotated XDR Schemas &#40; SQLXML 4.0 &#41; 中的已過時](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  本文件集假設您非常熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的範本和對應結構描述支援。 如需詳細資訊，請參閱[簡介註解式 XSD 結構描述 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 如需使用 XDR 的舊版應用程式，請參閱[Annotated XDR Schemas &#40;SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Updategram 中的必要命名空間  
  關鍵字在 updategram 中，例如**\<同步 >**， **\<之前 >**，和**\<之後 >**，存在於**描述 urn:-microsoft-schemas-microsoft-com:-updategram**命名空間。 您使用的命名空間前置詞是任意的。 在此文件**updg**前置詞代表**updategram**命名空間。  
@@ -110,13 +111,13 @@ ms.lasthandoff: 02/12/2018
   
  如果 updategram 執行複雜的更新 （例如，根據對應結構描述中指定的父子式關聯性的多個資料表中插入記錄），您必須使用明確地提供對應結構描述**對應結構描述**updategram 執行屬性。  
   
- 由於 Updategram 是一個範本，因此，在 Updategram 中針對對應結構描述所指定的路徑是範本檔位置的相對路徑 (相對於儲存 Updategram 的位置)。 如需詳細資訊，請參閱[Updategram &#40; 中指定註解式對應結構描述SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ 由於 Updategram 是一個範本，因此，在 Updategram 中針對對應結構描述所指定的路徑是範本檔位置的相對路徑 (相對於儲存 Updategram 的位置)。 如需詳細資訊，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ## <a name="element-centric-and-attribute-centric-mapping-in-updategrams"></a>Updategram 中的元素中心及屬性中心對應  
  利用預設對應 (在 Updategram 中未指定對應結構描述時)，Updategram 元素會對應到資料表，而子元素 (如果是元素中心對應) 和屬性 (如果是屬性中心對應) 則會對應到資料行。  
   
 ### <a name="element-centric-mapping"></a>元素中心的對應  
- 在元素中心的 Updategram 中，一個元素包含表示元素屬性的多個子元素。 例如，請參閱下列 Updategram。 **\<Person.Contact >**元素包含 **\<FirstName >**和 **\<LastName >**子項目。 這些子元素是屬性的 **\<Person.Contact >**項目。  
+ 在元素中心的 Updategram 中，一個元素包含表示元素屬性的多個子元素。 例如，請參閱下列 Updategram。  **\<Person.Contact >**元素包含 **\<FirstName >**和 **\<LastName >**子項目。 這些子元素是屬性的 **\<Person.Contact >**項目。  
   
  此 updategram 不會指定對應結構描述，因此 updategram 會使用隱含的對應，其中 **\<Person.Contact >**元素會對應至 Person.Contact 資料表，而其子項目對應到 FirstName 和LastName 資料行。  
   
@@ -180,6 +181,6 @@ ms.lasthandoff: 02/12/2018
 -   當做 OLE DB 命令提交它。  
   
 ## <a name="see-also"></a>另請參閱  
- [Updategram 安全性考量 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Updategram 安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "擷取 UDT 資料 |Microsoft 文件"
-ms.custom: 
+title: 擷取 UDT 資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf8ac790f91779407bb60fa1f3cfe8f675a7e8f0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 50fb936da78338a86b47b08423585afccad1a5bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>存取使用者定義型別-擷取 UDT 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-為了在用戶端上建立使用者定義型別 (UDT)，用戶端應用程式必須提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中登錄為 UDT 的組件。 您可以將 UDT 組件置於與應用程式相同的目錄中，或置於全域組件快取 (GAC) 中。 您還可以在專案中設定組件的參考。  
+  為了在用戶端上建立使用者定義型別 (UDT)，用戶端應用程式必須提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中登錄為 UDT 的組件。 您可以將 UDT 組件置於與應用程式相同的目錄中，或置於全域組件快取 (GAC) 中。 您還可以在專案中設定組件的參考。  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>在 ADO.NET 中使用 UDT 的需求  
  載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的組件與用戶端上的組件必須相容，才可以在用戶端上建立 UDT。 定義 Udt 的**原生**序列化格式的組件必須結構相容。 組件，以定義**UserDefined**格式，組件必須可以在用戶端上。  

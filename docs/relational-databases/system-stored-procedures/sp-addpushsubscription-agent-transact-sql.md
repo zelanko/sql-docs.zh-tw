@@ -1,16 +1,16 @@
 ---
-title: "sp_addpushsubscription_agent (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addpushsubscription_agent (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpushsubscription_agent
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ea57cd5bbcb264b38efc4fecf63153f56ba7e92
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2730a5ceb1f976605f4a784b71194f4b9caceea5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,13 +111,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  這是現有散發代理程式作業的名稱。 *job_name*是**sysname**，預設值是 NULL。 只有在訂閱將利用現有的作業來同步處理，而不用新建立的作業 (預設值) 時，才指定這個參數。 如果您不屬於**sysadmin**固定伺服器角色，您必須指定*job_login*和*job_password*當您指定*job_name*.  
   
  [  **@frequency_type =** ] *frequency_type*  
  這是排程散發代理程式所採用的頻率。 *frequency_type*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|視需要|  
@@ -137,7 +137,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  這是散發代理程式的日期。 使用這個參數時*frequency_type*設**32** （每月相對）。 *frequency_relative_interval*是**int**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (預設值)|第一個|  
 |**2**|第二個|  
@@ -151,7 +151,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  這是在定義的期間內，重新排程的頻率。 *frequency_subday*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二個|  
@@ -167,10 +167,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
  這是排程停止散發代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*是**int**，預設值是 235959。  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  這是第一次排程散發代理程式的日期，格式為 YYYYMMDD。 *active_start_date*是**int**，預設值是 0。  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  這是排程停止散發代理程式的日期，格式為 YYYYMMDD。 *active_end_date*是**int**，預設值是 99991231。  
   
  [  **@dts_package_name =** ] **'***dts_package_name***'**  
@@ -221,14 +221,14 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addpushsubscription_agent**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [為非 SQL Server 訂閱者建立訂閱](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_addsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
- [sp_dropsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

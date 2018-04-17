@@ -1,30 +1,30 @@
 ---
-title: "伺服器相關的動態管理檢視和函數 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 伺服器相關的動態管理檢視和函數 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
-caps.latest.revision: 
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8605f176bfde1f646ce421980a3c2014d5b9154e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e40cccc084d6ec02bc626592609f9f9064fff3ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>伺服器相關的動態管理檢視與函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

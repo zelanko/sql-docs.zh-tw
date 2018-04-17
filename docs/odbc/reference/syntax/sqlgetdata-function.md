@@ -2,7 +2,7 @@
 title: SQLGetData 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a23ddb9ee932b67bddd35edfcc9d64228b36f18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函數
 **一致性**  
@@ -74,7 +74,7 @@ SQLRETURN SQLGetData(
   
  *TargetValuePtr*不能是 NULL。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]長度 **TargetValuePtr*以位元組為單位的緩衝區。  
   
  驅動程式會使用*Columnsize*來避免結尾寫入\* *TargetValuePtr*傳回可變長度的資料，例如字元或二進位資料時，緩衝。 請注意，此驅動程式都 null 結束字元，傳回字元資料時\* *TargetValuePtr*。 **TargetValuePtr*因此必須包含空間 null 結束的字元，或驅動程式將會截斷資料。  
@@ -102,7 +102,7 @@ SQLRETURN SQLGetData(
 ## <a name="diagnostics"></a>診斷  
  當**SQLGetData**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以藉由呼叫取得相關聯的 SQLSTATE 值**SQLGetDiagRec**與*HandleType*的利用 SQL_HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLGetData** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|並非所有指定的資料行的資料*Col_or_Param_Num*，無法擷取函式的單一呼叫中。 SQL_NO_TOTAL 或之前的目前呼叫指定的資料行中所剩餘的資料長度**SQLGetData**中傳回\* *StrLen_or_IndPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。<br /><br /> 如需有關使用多個呼叫**SQLGetData**單一資料行，請參閱 「 註解 」。|  
@@ -134,7 +134,7 @@ SQLRETURN SQLGetData(
 |IM018|**SQLCompleteAsync**尚未完成先前的非同步作業，此控制代碼上呼叫。|如果控制代碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING，且如果已啟用通知模式， **SQLCompleteAsync**必須在後續處理作業，並完成此作業的控制代碼上呼叫。|  
   
 ## <a name="comments"></a>註解  
- **SQLGetData**傳回指定之資料行中的資料。 **SQLGetData**已經提取從結果集的一或多個資料列之後，才可以呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**. 如果可變長度的資料太大的單一呼叫中傳回**SQLGetData** （因為應用程式中限制）， **SQLGetData**可以擷取組件中。 很可能在資料列和呼叫某些資料行繫結**SQLGetData**代表其他項目，雖然這受限於一些限制。 如需詳細資訊，請參閱[擷取長資料](../../../odbc/reference/develop-app/getting-long-data.md)。  
+ **SQLGetData**傳回指定之資料行中的資料。 **SQLGetData**已經提取從結果集的一或多個資料列之後，才可以呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**。 如果可變長度的資料太大的單一呼叫中傳回**SQLGetData** （因為應用程式中限制）， **SQLGetData**可以擷取組件中。 很可能在資料列和呼叫某些資料行繫結**SQLGetData**代表其他項目，雖然這受限於一些限制。 如需詳細資訊，請參閱[擷取長資料](../../../odbc/reference/develop-app/getting-long-data.md)。  
   
  如需使用**SQLGetData**與資料流的輸出參數，請參閱[使用 SQLGetData 擷取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
@@ -277,7 +277,7 @@ if (retcode == SQL_SUCCESS) {
 |傳送參數資料在執行階段|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |定位資料指標，重新整理此資料列集中，或更新或刪除資料列集中的資料|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [使用 SQLGetData 擷取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

@@ -1,34 +1,35 @@
 ---
-title: "方針和限制的 XML Updategram (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: 方針和限制的 XML Updategram (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updategrams [SQLXML], about updategrams
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a8396c837707ad9560aebb2e86617df8bfb2b69
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 08cd4c5cd8bf7aef6472cc46fb573816e7ce7b85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML Updategram 的指導方針和限制 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-使用 XML Updategram 時，請記住下列事項：  
+  使用 XML Updategram 時，請記住下列事項：  
   
 -   如果您要將 updategram 用於只有單一組的插入作業**\<之前 >**和**\<之後 >**區塊**\<之前>**區塊，則可以省略。 相反地，如果是刪除作業， **\<之後 >**區塊，則可以省略。  
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 02/12/2018
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Updategram 安全性考量 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Updategram 安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

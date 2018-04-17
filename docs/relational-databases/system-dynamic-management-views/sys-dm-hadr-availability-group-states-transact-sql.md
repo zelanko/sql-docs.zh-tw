@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_hadr_availability_group_states (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_hadr_availability_group_states (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_availability_group_states
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_group_states dynamic management view
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4d6dbddbf0fb211335789eefeff5f2a392f2d59
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0b5f23c9c5d9c21285d44e998dc0457795bf3670
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**primary_recovery_health_desc**|**nvarchar(60)**|描述**primary_replica_health**，下列其中一個的：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|指出次要複本，其中的復原健全狀況：<br /><br /> 0 = 進行中<br /><br /> 1 = 線上<br /><br /> NULL<br /><br /> 在主要複本**secondary_recovery_health**資料行是 NULL。|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|描述**secondary_recovery_health**，下列其中一個的：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|反映的彙總**synchronization_health**可用性群組中的所有可用性複本。 以下是可能的值和其說明。<br /><br /> 0： 非狀況良好。 可用性複本沒有狀況良好**synchronization_health** (2 = HEALTHY)。<br /><br /> 1： 部分狀況良好。 部分 (而不是所有) 可用性複本的同步處理狀況良好。<br /><br /> 2： 狀況良好。 每一個可用性複本的同步處理狀況良好。<br /><br /> 複本同步處理健全狀況的相關資訊，請參閱**synchronization_health**中的資料行[sys.dm_hadr_availability_replica_states &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
+|**synchronization_health**|**tinyint**|反映的彙總**synchronization_health**可用性群組中的所有可用性複本。 以下是可能的值和其說明。<br /><br /> 0： 非狀況良好。 可用性複本沒有狀況良好**synchronization_health** (2 = HEALTHY)。<br /><br /> 1： 部分狀況良好。 部分 (而不是所有) 可用性複本的同步處理狀況良好。<br /><br /> 2： 狀況良好。 每一個可用性複本的同步處理狀況良好。<br /><br /> 複本同步處理健全狀況的相關資訊，請參閱**synchronization_health**中的資料行[sys.dm_hadr_availability_replica_states &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)。|  
 |**synchronization_health_desc**|**nvarchar(60)**|描述**synchronization_health**，下列其中一個的：<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>Security  
@@ -59,8 +59,8 @@ ms.lasthandoff: 02/03/2018
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視可用性群組 &#40;TRANSACT-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [監視可用性群組 & #40;TRANSACT-SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Always On 可用性群組動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+ [Always On 可用性群組動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

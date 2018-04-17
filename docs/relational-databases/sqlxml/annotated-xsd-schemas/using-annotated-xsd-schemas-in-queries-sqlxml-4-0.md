@@ -1,16 +1,16 @@
 ---
-title: "使用註解式 XSD 結構描述中的查詢 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: 使用註解式 XSD 結構描述中的查詢 (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [SQLXML]
@@ -24,22 +24,23 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], queries
 - templates [SQLXML], annotated XSD schemas in queries
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cd63b4426bdc1b4adf9020b5cf4bd3e50622528
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 47d16a95d65a6a155c906f81ba324bac684704af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查詢中使用註解式 XSD 結構描述 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-您可以針對 XSD 結構描述指定範本中的 XPath 查詢，藉以針對註解式結構描述指定查詢來擷取資料庫中的資料。  
+  您可以針對 XSD 結構描述指定範本中的 XPath 查詢，藉以針對註解式結構描述指定查詢來擷取資料庫中的資料。  
   
- **\<Sql:xpath-查詢 >**元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 依據所要執行的 XPath 查詢的註解式結構描述由使用**對應結構描述**屬性 **\<sql:xpath-查詢 >**項目。  
+  **\<Sql:xpath-查詢 >**元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 依據所要執行的 XPath 查詢的註解式結構描述由使用**對應結構描述**屬性 **\<sql:xpath-查詢 >**項目。  
   
  範本是包含一或多個查詢的有效 XML 文件。 FOR XML 和 XPath 查詢會傳回文件片段。 範本對於文件片段就像是容器一樣；因此，範本會提供一種方式來指定單一的上層元素。  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 02/12/2018
 </sql:xpath-query>  
 ```  
   
- 然後，您可以建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs)，將查詢當做範本檔的一部分執行。 如需詳細資訊，請參閱[Annotated XDR Schemas &#40; SQLXML 4.0 &#41; 中的已過時](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+ 然後，您可以建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs)，將查詢當做範本檔的一部分執行。 如需詳細資訊，請參閱[Annotated XDR Schemas &#40;SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="using-inline-mapping-schemas"></a>使用內嵌的對應結構描述  
  註解式結構描述可以直接包含在範本中，接著就可以針對內嵌的結構描述指定範本中的 XPath 查詢。 範本也可以是一個 Updategram。  

@@ -1,16 +1,16 @@
 ---
-title: "srv_parammaxlen (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_parammaxlen (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_parammaxlen
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - srv_parammaxlen
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72ea59fa456192441921afb5aee4d7066cfb3dbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: abc8ff71b104cb42bc4d4b1a09e31abdddcbc23a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ n
  這指出參數的數目。 第一個參數是 1。  
   
 ## <a name="returns"></a>傳回值  
- 這是參數資料的最大長度 (以位元組為單位)。 如果沒有第 *n* 個參數，或者沒有遠端預存程序，則傳回 -1。  
+ 這是參數資料的最大長度 (以位元組為單位)。 如果沒有任何*n*個參數或沒有遠端預存程序，則傳回-1。  
   
  如果參數是下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的一種，則此函式會傳回下列值。  
   

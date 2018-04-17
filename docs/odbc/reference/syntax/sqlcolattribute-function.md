@@ -2,7 +2,7 @@
 title: SQLColAttribute 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 765cdab2b8619501a29990c9b944b3b98797b4ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函數
 **一致性**  
@@ -74,7 +74,7 @@ SQLRETURN SQLColAttribute (
   
  如果*CharacterAttributePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回緩衝區中所指*CharacterAttributePtr*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]如果*FieldIdentifier*是 ODBC 定義的欄位和*CharacterAttributePtr*指向的字元字串或二進位的緩衝區，這個引數應該是長度\* *CharacterAttributePtr*。 如果*FieldIdentifier*是 ODBC 定義的欄位和\* *CharacterAttribute*Ptr 是一個整數，這個欄位會被忽略。 如果 *\*CharacterAttributePtr*是 Unicode 字串 (當呼叫**SQLColAttributeW**)、 *Columnsize*引數必須是偶數。 如果*FieldIdentifier*是驅動程式定義的欄位，應用程式設定指出欄位驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
   
 -   如果*CharacterAttributePtr*是指標的指標， *Columnsize*應該有 SQL_IS_POINTER 的值。  
@@ -101,7 +101,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="diagnostics"></a>診斷  
  當**SQLColAttribute**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可能會取得藉由呼叫**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_STMT 的和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLColAttribute** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|緩衝區\* *CharacterAttributePtr*仍不夠大，無法傳回整個字串值，所以已截斷字串值。 中會傳回未截斷的字串值的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -136,7 +136,7 @@ SQLRETURN SQLColAttribute (
   
  ODBC 3。*x*驅動程式必須傳回每個描述項欄位的值。 如果描述項欄位不會套用到驅動程式或資料來源，且除非另有指明，驅動程式會傳回在 0 \* *StringLengthPtr*或空字串中的 **CharacterAttributePtr*。  
   
-## <a name="backward-compatibility"></a>Backward Compatibility  
+## <a name="backward-compatibility"></a>回溯相容性  
  ODBC 3。*x*函式**SQLColAttribute**取代已被取代的 ODBC 2。*x*函式**SQLColAttributes**。 當對應**SQLColAttributes**至**SQLColAttribute** (當 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式)，或對應**SQLColAttribute**至**SQLColAttributes** (當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式)，驅動程式管理員可以將值傳遞*FieldIdentifier* ，透過將其對應至新的值，或將傳回錯誤，如下所示：  
   
 > [!NOTE]  
@@ -152,7 +152,7 @@ SQLRETURN SQLColAttribute (
   
  下表列出所傳回的描述元類型**SQLColAttribute**。 型別*NumericAttributePtr*值是**SQLLEN \*** 。  
   
-|*FieldIdentifier*|[資訊]<br /><br /> 傳回|描述|  
+|*FieldIdentifier*|資訊<br /><br /> 傳回|Description|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE 的資料行是否自動遞增資料行。<br /><br /> 如果資料行不是自動遞增資料行，或不是數值，SQL_FALSE。<br /><br /> 此欄位僅適用於數值資料類型資料行。 應用程式可以將值插入含有自動遞增資料行的資料列，但是通常無法更新資料行中的值。<br /><br /> 插入至 autoincrement 資料行中進行時，唯一的值被插入資料行在插入時。 未定義時，遞增，但資料來源專用。 應用程式不應該假設任何特定值的 autoincrement 資料行開始在任何特定點或增量。|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|基底的資料行名稱的結果集資料行。 如果基底的資料行名稱不存在 （如同在資料行是運算式的案例），此變數包含空字串。<br /><br /> 此資訊會從 IRD 是唯讀欄位的 SQL_DESC_BASE_COLUMN_NAME 記錄欄位傳回。|  
@@ -311,7 +311,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC 程式範例](../../../odbc/reference/sample-odbc-program.md)

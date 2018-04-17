@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_column_store_segments (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/28/2018
 ms.prod: ''
@@ -20,13 +20,14 @@ author: hirokib
 ms.author: elbutter;barbkess
 manager: jrj
 ms.workload: Inactive
-ms.openlocfilehash: 8e3daa47eea78bb90c736a42e7e541bea62e5ac4
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 6096185bec4378bd5d6b2f478796f8a2e34f5e1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
+# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 包含資料行存放區索引中每個資料行的資料列。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/30/2018
 | **row_count**               | **int**    | 資料列群組中的列數。                             |
 | **has_nulls**               | **int**    | 如果資料行區段具有 Null 值，則為 1。                     |
 | **base_id**                 | **bigint** | 如果正在使用編碼類型 1 的基底值識別碼。  如果沒有使用編碼類型 1，base_id 是設為 1。 |
-| **magnitude**               | **float**  | 如果正在使用編碼類型 1 的範圍。  如果沒有使用編碼類型 1，magnitude 是設為 1。 |
+| **大小**               | **float**  | 如果正在使用編碼類型 1 的範圍。  如果沒有使用編碼類型 1，magnitude 是設為 1。 |
 | **primary__dictionary_id**  | **int**    | 主要字典的識別碼。 為非零的值會指向本機字典中目前的區段 （也就是資料列群組） 此資料行。 -1 表示沒有任何本機的字典，此區段。 |
 | **secondary_dictionary_id** | **int**    | 次要字典的識別碼。 為非零的值會指向本機字典中目前的區段 （也就是資料列群組） 此資料行。 -1 表示沒有任何本機的字典，此區段。 |
 | **min_data_id**             | **bigint** | 資料行區段中的最小資料識別碼。                       |
@@ -91,7 +92,7 @@ ORDER BY    table_nm
  [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [建立資料行存放區索引&#40;Transact SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
 
   
 

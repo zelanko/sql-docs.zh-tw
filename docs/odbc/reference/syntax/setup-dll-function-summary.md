@@ -2,7 +2,7 @@
 title: 安裝程式的 DLL 函式摘要 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5377f92e95c389c9f7423e157739cb440a03387
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e46161e9908b0f2585c0414a574c2f8048b6e526
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setup-dll-function-summary"></a>安裝程式的 DLL 函式摘要
 下表說明安裝程式的 DLL 函式。 如需語法和語意，每個函式的詳細資訊，請參閱[安裝 DLL 應用程式開發介面參考](../../../odbc/reference/syntax/setup-dll-api-reference.md)。  

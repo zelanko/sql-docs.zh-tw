@@ -1,30 +1,31 @@
 ---
-title: "資料類型對 ODBC 日期和時間增強功能支援 |Microsoft 文件"
-ms.custom: 
+title: 資料類型對 ODBC 日期和時間增強功能支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], data type support
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17acf73e2a190b1a9f55c07dc24d7ce391056aee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b92a4e5cbb678e4c40bda526b0796e4a3beaf696
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 日期和時間增強功能的資料類型支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -145,6 +146,6 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
  如果**timezone_hour**是負數， **timezone_minute**必須為負數或零。 如果**timezone_hour**是正數， **timezone_minute**必須是正數或零。 如果**timezone_hour**為零，s**timezone_minute**可以-59 到 + 59 範圍內有任何值。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

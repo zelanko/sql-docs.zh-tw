@@ -1,16 +1,16 @@
 ---
-title: "大量載入安全性考量 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: 大量載入安全性考量 (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - security [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70249f5b10d684f569f6491be0796d542a6f0bbe
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6704bf4d97cd21097906db43305595ecc862a5a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>大量載入安全性考量 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-下面是使用 XML 大量載入的安全性指導方針：  
+  下面是使用 XML 大量載入的安全性指導方針：  
   
 -   當您指定您使用大量載入作業當做交易執行， **TempFilePath**屬性來指定要在其中建立暫存檔的資料夾。  
   
@@ -62,6 +63,6 @@ ms.lasthandoff: 02/12/2018
 -   如果使用者設定了讓 SQLXML 寫入錯誤的錯誤記錄檔，每次執行大量載入時，系統都會使用上一個大量載入處理序的資料來覆寫該檔案。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量載入 XML 資料 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [執行大量載入 XML 資料 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

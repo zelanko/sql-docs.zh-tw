@@ -1,35 +1,37 @@
 ---
-title: "建立、 改變和移除資料表 |Microsoft 文件"
-ms.custom: 
+title: 建立、 改變和移除資料表 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - tables [SMO]
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
-caps.latest.revision: 
+caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18973e4478424fa37d6d769cc1fecbaf692a512b
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9731e726c4874d7a7d703256e247db188d54e23c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-tables"></a>建立、改變和移除資料表
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理物件 (SMO) 的資料表都由<xref:Microsoft.SqlServer.Management.Smo.Table>物件。 在 SMO 物件階層中，<xref:Microsoft.SqlServer.Management.Smo.Table> 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件之下。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中，資料表是由 <xref:Microsoft.SqlServer.Management.Smo.Table> 物件表示。 在 SMO 物件階層中，<xref:Microsoft.SqlServer.Management.Smo.Table> 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件之下。  
   
 ## <a name="example"></a>範例  
- 若要使用所提供的任何程式碼範例，您必須選擇可用於建立應用程式的程式設計環境、範本和計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何程式碼範例，您必須選擇可用於建立應用程式的程式設計環境、範本和計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除資料表  
  此程式碼範例所建立的資料表擁有數個具有不同類型和用途的資料行。 此程式碼也提供如何建立識別欄位、如何建立主索引鍵以及如何改變資料表屬性的範例。  

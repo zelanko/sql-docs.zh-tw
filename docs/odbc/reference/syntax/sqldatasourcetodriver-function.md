@@ -2,7 +2,7 @@
 title: SQLDataSourceToDriver 函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d09d649bc53a08ff7389413882bb338d9713ffc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcdad2099be94a719333d4e0754318f7c00572df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 函式
 **SQLDataSourceToDriver** supportstranslations ODBC 驅動程式。 啟用 ODBC 的應用程式; 不會呼叫此函式應用程式會要求透過轉譯**SQLSetConnectAttr**。 與相關聯的驅動程式*ConnectionHandle*中所指定**SQLSetConnectAttr**呼叫指定的 DLL，以執行資料來源的流向驅動程式的所有資料的翻譯。 ODBC 初始設定檔案中，可以指定的預設轉譯 DLL。  

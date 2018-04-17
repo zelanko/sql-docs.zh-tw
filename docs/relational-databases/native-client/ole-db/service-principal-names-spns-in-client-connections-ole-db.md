@@ -1,33 +1,34 @@
 ---
-title: "用戶端連接 (OLE DB) 中的服務主體名稱 (Spn) |Microsoft 文件"
-ms.custom: 
+title: 用戶端連接 (OLE DB) 中的服務主體名稱 (Spn) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9920958902d2803c9135f1745be7c47f573c36fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bdd9a9414d233be8e50db2881256d774d59f1d50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>用戶端連接中的服務主要名稱 (SPN) (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需有關 Spn 的用戶端應用程式，請參閱[服務主要名稱 &#40;SPN &#41;在用戶端連接中的支援](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[整合式 Kerberos 驗證 &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
+  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需有關 Spn 的用戶端應用程式，請參閱[服務主體名稱&#40;SPN&#41;支援用戶端連接中的](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[整合式 Kerberos 驗證&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
   
 ## <a name="provider-initialization-string-keywords"></a>提供者初始化字串關鍵字  
  下列提供者初始化字串關鍵字可支援 OLE DB 應用程式內的 SPN。 下表中，關鍵字欄中的值會用於 idbinitialize:: Initialize 的提供者字串。 使用 ADO 或 idatainitialize:: Getdatasource 連接時，描述資料行的值可用在初始化字串中。  

@@ -1,16 +1,16 @@
 ---
-title: "sys.column_store_row_groups (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.column_store_row_groups (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.column_store_row_groups_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_row_groups catalog view
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea17802f24a60df24fdc4107f52a5170ca4f0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 74dad9d3d3ee2db8c53d8f95d208afb1c6628b2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|定義此索引所在資料表的識別碼。|  
 |**index_id**|**int**|內含此資料行存放區索引之資料表的索引識別碼。|  
-|**r**|**int**|保存資料列群組 row_group_id 之資料表分割區的識別碼。 您可以使用 partition_number 將此 DMV 聯結至 sys.partitions。|  
+|**partition_number**|**int**|保存資料列群組 row_group_id 之資料表分割區的識別碼。 您可以使用 partition_number 將此 DMV 聯結至 sys.partitions。|  
 |**row_group_id**|**int**|與此資料列群組相關聯的資料列群組號碼。 此號碼在分割區中是唯一的。<br /><br /> -1 = 記憶體中資料表的結尾。|  
 |**delta_store_hobt_id**|**bigint**|差異存放區中開啟的資料列群組的 hobt_id。<br /><br /> 如果資料列群組不是差異存放區，則為 NULL。<br /><br /> 記憶體中資料表的結尾為 NULL。|  
 |**狀態**|**tinyint**|與 state_description 相關聯的識別碼。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = 標記|  
-|**state_description**|**nvarchar （60)**|資料列群組的持續狀態描述：<br /><br /> INVISIBLE - 正在從差異存放區中的資料建立隱藏的壓縮區段。 讀取動作將會使用差異存放區，直到不可見的壓縮區段完成為止。 然後新的區段會變成可見，並移除來源差異存放區。<br /><br /> OPEN – 讀取/寫入資料列群組，可接受新記錄。 開啟的資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。<br /><br /> CLOSED – 已填滿但尚未壓縮 Tuple Mover 程序壓縮的資料列群組。<br /><br /> COMPRESSED – 已填滿且壓縮的資料列群組。|  
+|**state_description**|**nvarchar(60)**|資料列群組的持續狀態描述：<br /><br /> INVISIBLE - 正在從差異存放區中的資料建立隱藏的壓縮區段。 讀取動作將會使用差異存放區，直到不可見的壓縮區段完成為止。 然後新的區段會變成可見，並移除來源差異存放區。<br /><br /> OPEN – 讀取/寫入資料列群組，可接受新記錄。 開啟的資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。<br /><br /> CLOSED – 已填滿但尚未壓縮 Tuple Mover 程序壓縮的資料列群組。<br /><br /> COMPRESSED – 已填滿且壓縮的資料列群組。|  
 |**total_rows**|**bigint**|實際儲存在資料列群組中的總列數。 有些可能已刪除，但是仍然保存。 資料列群組中資料列數目的上限為 1,048,576 (十六進位 FFFFF)。|  
 |**deleted_rows**|**bigint**|資料列群組中標示為已刪除的總列數。 DELTA 資料列群組的此值永遠為 0。|  
 |**size_in_bytes**|**bigint**|DELTA 和 COLUMNSTORE 資料列群組的此資料列群組中所有資料的大小 (以位元組為單位，但不包括中繼資料或共用字典)。|  
@@ -83,15 +83,15 @@ AND i.index_id = CSRowGroups.index_id
 ORDER BY object_name(i.object_id), i.name, row_group_id;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)     
- [sys.column_store_dictionaries &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
+ [sys.column_store_dictionaries &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
   

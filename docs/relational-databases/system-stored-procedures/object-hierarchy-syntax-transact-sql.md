@@ -1,32 +1,32 @@
 ---
-title: "物件階層語法 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 物件階層語法 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23464c196392c8be8eee21ca37e6ee1adb1d2ebb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b217fa48f2bbaad1b8c2423dd701f0f839f8786b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>物件階層語法 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  如需有關 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] OLE 物件語法的詳細資訊，請參閱 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 文件集。  
   
- 如需有關 HRESULT 傳回碼的詳細資訊，請參閱[sp_OACreate &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
+ 如需有關 HRESULT 傳回碼的詳細資訊，請參閱[sp_OACreate &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
  以下是使用 SQL-DMO SQLServer 物件之物件階層語法的範例。  
@@ -95,7 +95,7 @@ EXEC @hr = sp_OAMethod @object,
    @checkoutput OUT  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [OLE Automation 範例指令碼](../../relational-databases/stored-procedures/ole-automation-sample-script.md)   
  [OLE Automation 預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   

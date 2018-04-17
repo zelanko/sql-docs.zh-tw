@@ -1,16 +1,16 @@
 ---
-title: "sp_addtype (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addtype (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addtype
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addtype
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61a5e94d0e57bdaaac63181c9257defdfd87d8eb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 92d6cdbd458a32ce0280e60551e5eff2f1fda810
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   建立別名資料型別。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)改為。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,28 +62,28 @@ sp_addtype [ @typename = ] type,
 |**bigint**|**binary(n)**|**bit**|  
 |**char(n)**|**datetime**|**decimal**|  
 |**float**|**image**|**int**|  
-|**money**|**nchar （n)**|**ntext**|  
-|**numeric**|**nvarchar （n)**|**real**|  
+|**money**|**nchar(n)**|**ntext**|  
+|**numeric**|**nvarchar(n)**|**real**|  
 |**smalldatetime**|**smallint**|**smallmoney**|  
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
- 有內嵌的空格或標點符號的所有參數，其前後需要加上引號。 如需可用的資料類型的詳細資訊，請參閱[資料類型 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+ 有內嵌的空格或標點符號的所有參數，其前後需要加上引號。 如需可用的資料類型的詳細資訊，請參閱[資料型別&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
  *n*  
  這是非負數整數，表示所選資料類型的長度。  
   
  *P*  
- 這是一個非負數整數，它指出可儲存的最大十進位數總數，小數點左右兩側都包括在內。 如需詳細資訊，請參閱[decimal 和 numeric &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ 這是一個非負數整數，它指出可儲存的最大十進位數總數，小數點左右兩側都包括在內。 如需詳細資訊，請參閱 [decimal 和 numeric &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
- *s*  
- 這是一個非負數整數值，它指出小數點右側所能儲存的最大十進位數，且它必須小於或等於有效位數。 如需詳細資訊，請參閱[decimal 和 numeric &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ *S*  
+ 這是一個非負數整數值，它指出小數點右側所能儲存的最大十進位數，且它必須小於或等於有效位數。 如需詳細資訊，請參閱 [decimal 和 numeric &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
  [  **@nulltype =** ] **'***null_type***'**  
- 指出別名資料型別處理 Null 值的方式。 *null_type*是**varchar (**8**)**，預設值是 NULL，而且必須用單引號 （'NULL'、 'NOT NULL' 或 'NONULL'）。 如果*null_type*未明確定義**sp_addtype**，此選項設定為目前的預設 null 屬性。 您可以利用 GETANSINULL 系統函數來決定目前的預設 Null 屬性。 您可以利用 SET 陳述式或 ALTER DATABASE來調整這項作業。 Null 屬性應明確定義。 如果 **@phystype** 是**元**，和 **@nulltype** 未指定，預設值不是 NULL。  
+ 指出別名資料型別處理 Null 值的方式。 *null_type*是**varchar (**8**)**，預設值是 NULL，而且必須用單引號 （'NULL'、 'NOT NULL' 或 'NONULL'）。 如果*null_type*未明確定義**sp_addtype**，此選項設定為目前的預設 null 屬性。 您可以利用 GETANSINULL 系統函數來決定目前的預設 Null 屬性。 您可以利用 SET 陳述式或 ALTER DATABASE來調整這項作業。 Null 屬性應明確定義。 如果**@phystype**是**元**，和**@nulltype**未指定，預設值不是 NULL。  
   
 > [!NOTE]  
->  *Null_type*參數只會定義此資料類型的預設 null 屬性。 如果在使用別名資料型別時 (在資料表建立期間) 明確定義 Null 屬性，它的優先順序高於定義的 Null 屬性。 如需詳細資訊，請參閱[ALTER TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md)和[建立資料表 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-table-transact-sql.md).  
+>  *Null_type*參數只會定義此資料類型的預設 null 屬性。 如果在使用別名資料型別時 (在資料表建立期間) 明確定義 Null 屬性，它的優先順序高於定義的 Null 屬性。 如需詳細資訊，請參閱[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)和[CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -141,17 +141,17 @@ EXEC sp_addtype fax, 'varchar(24)', 'NULL';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [sp_bindefault &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
- [sp_bindrule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [sp_droptype &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
+ [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [sp_droptype &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
- [sp_unbindrule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [sp_unbindefault &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,35 +1,36 @@
 ---
-title: "變更類型 |Microsoft 文件"
-ms.custom: 
+title: 變更類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], types of changes
 - backward compatibility [ODBC], types of changes
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7801d7bf8e7add5425ee6a8a97c4b1b17c556674
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3db03bfda3e464ebc422cbbc009c586e83863b6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="types-of-changes"></a>類型的變更
 在 ODBC 3 中進行三種變更類型。*x* （和 ODBC 的任何版本）。 每一種方式會影響回溯相容性，而且以不同方式處理。 下表詳述這些變更。  
   
-|變更類型|描述|  
+|變更類型|Description|  
 |--------------------|-----------------|  
 |新增功能|這些是 ODBC 3 新功能。*x*，例如-單行繫結或描述元。 只有當應用程式和驅動程式，以及驅動程式管理員 中，第 3 版的這些實*.x*，因此不會將這些具有回溯相容性。|  
 |重複的功能|這些是存在於 ODBC 2 中的功能*.x*而 ODBC 3.<placeholder>x<。*x*但會在每個不同的方式實作。 函式**SQLAllocHandle**和**SQLAllocStmt**是範例。 回溯相容性問題，這些和其他重複的功能大多由驅動程式管理員中的對應。|  

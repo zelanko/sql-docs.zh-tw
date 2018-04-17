@@ -1,15 +1,15 @@
 ---
-title: "建立、 改變和移除資料庫 |Microsoft 文件"
-ms.custom: 
+title: 建立、 改變和移除資料庫 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - databases [SMO]
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - databases [SMO], modifying
 - databases [SMO], deleting
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
-caps.latest.revision: 
+caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf0867f9ed104a2a04cbdc0b9a0c16093cee59a9
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6e4da86f881d0dac51f639d1eefa94774a312e1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-databases"></a>建立、改變和移除資料庫
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/12/2018
  您不必建立 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件，即可修改或移除該物件。 您可以利用集合來參考資料庫。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除資料庫  
  此程式碼範例會建立新資料庫， 並自動為資料庫建立檔案和檔案群組。  

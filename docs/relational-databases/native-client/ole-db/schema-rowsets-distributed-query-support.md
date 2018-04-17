@@ -1,15 +1,15 @@
 ---
-title: "分散式查詢支援在結構描述資料列 |Microsoft 文件"
-ms.custom: 
+title: 分散式查詢支援在結構描述資料列 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DBPROPSET_SQLSERVERSESSION property
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - OLE DB rowsets, schema
 - rowsets [OLE DB], schema
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c115827f6c7efb8236c65648fb959594cbfcdc30
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e767c918ea477a64d3dc548126a7c953315ebfb9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>結構描述資料列的分散式的查詢支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/25/2018
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義結構描述資料列集 LINKEDSERVERS，並傳回註冊成連結伺服器的 OLE DB 資料來源的清單。  
   
 ## <a name="see-also"></a>另請參閱  
- [結構描述資料列集支援 &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
- [LINKEDSERVERS 資料列集 &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [結構描述資料列集支援&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
+ [LINKEDSERVERS 資料列集&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

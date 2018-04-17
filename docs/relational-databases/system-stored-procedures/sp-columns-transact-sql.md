@@ -2,7 +2,7 @@
 title: sp_columns (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 10/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +63,7 @@ sp_columns [ @table_name = ] object
  [ **@table_qualifier****=**] *qualifier*  
  這是物件限定詞的名稱。 *限定詞*是**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的物件命名 (*限定詞***。***擁有者***。***名稱*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表物件之資料庫環境的伺服器名稱。  
   
- [ **@column_name=**] *column*  
+ [  **@column_name=**]*資料行*  
  這是個單一資料行，當只需要一個目錄資訊的資料行時，就會使用這個單一資料行。 *資料行*是**nvarchar(384)**，預設值是 NULL。 如果*資料行*是未指定，會傳回所有資料行。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*資料行*代表資料行名稱，如下所示**syscolumns**資料表。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 SQL-92 標準模式比對 (% 和 _ 萬用字元)。  
   
  [ **@ODBCVer=**] *ODBCVer*  
@@ -86,8 +87,8 @@ sp_columns [ @table_name = ] object
 |**LENGTH**|**int**|傳送資料的大小。<sup>1</sup>|  
 |**SCALE**|**smallint**|小數點右側的位數。|  
 |**RADIX**|**smallint**|數值資料類型的基底。|  
-|**NULLABLE**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
-|**REMARKS**|**varchar(254)**|這個欄位一律會傳回 NULL。|  
+|**可為 NULL**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
+|**註解**|**varchar(254)**|這個欄位一律會傳回 NULL。|  
 |**COLUMN_DEF**|**nvarchar(4000)**|資料行的預設值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 此資料行等同於**DATA_TYPE**資料行，除了**datetime**和 sql-92**間隔**資料型別。 這個資料行一律會傳回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|子類型代碼**datetime**和 sql-92**間隔**資料型別。 其他資料類型的這個資料行都會傳回 NULL。|  
@@ -125,7 +126,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [sp_tables &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

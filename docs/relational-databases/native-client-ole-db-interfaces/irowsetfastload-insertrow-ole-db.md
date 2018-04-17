@@ -1,16 +1,16 @@
 ---
-title: "Irowsetfastload:: Insertrow (OLE DB) |Microsoft 文件"
-ms.custom: 
+title: 'Irowsetfastload:: Insertrow (OLE DB) |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IRowsetFastLoad::InsertRow (OLE DB)
@@ -18,22 +18,23 @@ apitype: COM
 helpviewer_keywords:
 - InsertRow method
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3b7e73fa767ef0d07f8e43553bdaff5c7365ea4
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: edccf7aa65f571dabdca543d43888a0b2e76b340
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  將資料列加入至大量複製資料列集。 如需範例，請參閱[大量資料使用 IRowsetFastLoad 大量複製 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)和[將 BLOB 資料傳送至 SQL SERVER 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
+  將資料列加入至大量複製資料列集。 如需範例，請參閱[大量資料使用 IRowsetFastLoad 大量複製&#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)和[將 BLOB 資料傳送至 SQL SERVER 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -81,6 +82,6 @@ HRESULT InsertRow(
  大量複製的資料列會在伺服器上針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定格式。 資料列格式會受到已針對連接或工作階段所設定之任何選項 (例如 ANSI_PADDING) 的影響。 此選項會透過任何連接的預設設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  
   
 ## <a name="see-also"></a>另請參閱  
- [IRowsetFastLoad &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
+ [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

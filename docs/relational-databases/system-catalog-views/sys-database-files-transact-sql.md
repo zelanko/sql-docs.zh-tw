@@ -1,16 +1,16 @@
 ---
-title: "sys.database_files (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.database_files (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 09/19/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_files
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_files catalog view
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-caps.latest.revision: 
+caps.latest.revision: 61
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dc7218ee0d36f7bd233be92870e32e627401734
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01995248dd1b769c1d598500bdd97d04852206d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +43,14 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|資料庫內的檔案識別碼。|  
 |**file_guid**|**uniqueidentifier**|檔案的 GUID。<br /><br /> NULL = 資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級。|  
-|**型別**|**tinyint**|檔案類型：<br /><br /> 0 = 資料列 (包含全文檢索目錄的檔案，這些目錄均已升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或以此版本建立。)<br /><br /> 1 = 記錄<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索 (早於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的全文檢索目錄；已升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或以此版本建立的全文檢索目錄將報告檔案類型 0)。|  
-|**type_desc**|**nvarchar （60)**|檔案類型的描述：<br /><br /> ROWS (包含全文檢索目錄的檔案，這些目錄均已升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或以此版本建立)。<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (早於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的全文檢索目錄)。|  
+|**type**|**tinyint**|檔案類型：<br /><br /> 0 = 資料列 (包含全文檢索目錄的檔案，這些目錄均已升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或以此版本建立。)<br /><br /> 1 = 記錄<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索 (早於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的全文檢索目錄；已升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或以此版本建立的全文檢索目錄將報告檔案類型 0)。|  
+|**type_desc**|**nvarchar(60)**|檔案類型的描述：<br /><br /> ROWS (包含全文檢索目錄的檔案，這些目錄均已升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或以此版本建立)。<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (早於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的全文檢索目錄)。|  
 |**data_space_id**|**int**|此值可能是 0 或大於 0。 值為 0 代表資料庫記錄檔，而大於 0 的值則代表儲存這個資料檔之檔案群組的識別碼。|  
 |**name**|**sysname**|資料庫中之檔案的邏輯名稱。|  
-|**physical_name**|**nvarchar （260)**|作業系統檔案名稱。 如果資料庫 AlwaysOn 所裝載[讀取的次要複本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)， **physical_name**指出主要複本資料庫的檔案位置。 可讀取的次要資料庫的正確檔案位置，如查詢[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)。|  
+|**physical_name**|**nvarchar(260)**|作業系統檔案名稱。 如果資料庫 AlwaysOn 所裝載[讀取的次要複本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)， **physical_name**指出主要複本資料庫的檔案位置。 可讀取的次要資料庫的正確檔案位置，如查詢[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)。|  
 |**狀態**|**tinyint**|檔案狀態：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
-|**state_desc**|**nvarchar （60)**|檔案狀態的描述：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 如需詳細資訊，請參閱[檔案狀態](../../relational-databases/databases/file-states.md)。|  
-|**大小**|**int**|目前的檔案大小 (以 8 KB 頁數為單位)。<br /><br /> 0 = 不適用<br /><br /> 如果是資料庫快照集，size 會反映快照集可以使用的最大檔案空間。<br /><br /> FILESTREAM 檔案群組容器，大小會反映目前使用容器的大小。|  
+|**state_desc**|**nvarchar(60)**|檔案狀態的描述：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 如需詳細資訊，請參閱[檔案狀態](../../relational-databases/databases/file-states.md)。|  
+|**size**|**int**|目前的檔案大小 (以 8 KB 頁數為單位)。<br /><br /> 0 = 不適用<br /><br /> 如果是資料庫快照集，size 會反映快照集可以使用的最大檔案空間。<br /><br /> FILESTREAM 檔案群組容器，大小會反映目前使用容器的大小。|  
 |**max_size**|**int**|最大檔案大小 (以 8 KB 頁面為單位)：<br /><br /> 0 = 不允許任何成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> FILESTREAM 檔案群組容器，max_size 會反映容器的大小上限。<br /><br /> 請注意，以無限的記錄檔大小升級的資料庫將會報告記錄檔的大小上限-1。|  
 |**成長**|**int**|0 = 檔案是固定大小，不會成長。<br /><br /> >0 = 檔案會自動成長。<br /><br /> 如果 is_percent_growth = 0，成長遞增是以 8 KB 頁面來表示，會捨入到最接近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，便會以整數百分比的方式來表現成長遞增。|  
 |**is_media_read_only**|**bit**|1 = 檔案在唯讀媒體中。<br /><br /> 0 = 檔案在讀寫媒體中。|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
 >  當您卸除或重建大型索引時，或卸除或截斷大型資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會延遲取消配置實際的頁面及其相關聯鎖定，直到認可交易之後。 延遲的卸除作業並不會立即釋出已配置的空間。 因此，在卸除或截斷大型物件之後，sys.database_files 傳回的值不一定能反映實際可用的磁碟空間。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 需要 **public** 角色中的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
 
 ## <a name="examples"></a>範例  
 下列陳述式會傳回名稱、 檔案大小，以及每個資料庫檔案的空白空間的大小。
@@ -87,12 +88,12 @@ FROM sys.database_files;
 ```
 如需詳細資訊時使用[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，請參閱[判斷資料庫的大小在 Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) SQL 客戶諮詢團隊部落格上。
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料庫和檔案目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [檔案狀態](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.master_files &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
- [sys.data_spaces &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [sys.data_spaces & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

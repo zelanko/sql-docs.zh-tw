@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_stats_histogram (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_db_stats_histogram (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sys.dm_db_stats_histogram
@@ -22,18 +22,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ce36dbcac1e0df3f8cbe4020e87fc32af36920a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0e6fc1d921c5941492d99fd9eb733f910ac24b4c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
+# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 傳回在目前指定的資料庫物件 （資料表或索引檢視表） 之統計資料長條圖[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 類似於`DBCC SHOW_STATISTICS WITH HISTOGRAM`。
@@ -151,6 +152,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## <a name="see-also"></a>另請參閱  
-[DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+[DBCC SHOW_STATISTICS (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [物件相關的動態管理檢視和函數 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

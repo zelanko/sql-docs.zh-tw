@@ -2,7 +2,7 @@
 title: SQLBrowseConnect 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -22,19 +22,19 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函數
-**Conformance**  
+**一致性**  
  版本引進了： ODBC 1.0 標準相容性： ODBC  
   
  **摘要**  

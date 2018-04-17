@@ -1,15 +1,15 @@
 ---
-title: "對 CLR 常式的自訂屬性 |Microsoft 文件"
-ms.custom: 
+title: 對 CLR 常式的自訂屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], attributes
 - SqlUserDefinedTypeAttribute attribute
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
-caps.latest.revision: 
+caps.latest.revision: 82
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6df69b1b413ca79e2ee6c9bb1de7c9d3e9ff1213
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f21dd7eff0767eb38da21720585e01fe9bb7b1d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR 常式的 CLR 整合自訂屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-列出的屬性可以套用至 common language runtime (CLR) 常式、 使用者定義類型，以及所註冊的使用者定義彙總[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果沒有套用屬性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會假設預設值。 列出的屬性中定義**Microsoft.SqlServer.Server**命名空間。  
+  列出的屬性可以套用至 common language runtime (CLR) 常式、 使用者定義類型，以及所註冊的使用者定義彙總[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果沒有套用屬性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會假設預設值。 列出的屬性中定義**Microsoft.SqlServer.Server**命名空間。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 屬性  
  **SqlUserDefinedAggregate**屬性會指出，應該將方法註冊為使用者定義彙總。 每個使用者定義彙總都必須使用這個屬性加註。  

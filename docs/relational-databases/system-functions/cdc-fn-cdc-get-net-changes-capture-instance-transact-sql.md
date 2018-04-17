@@ -1,16 +1,16 @@
 ---
-title: "cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_net_changes_<capture_instance>
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eef147e95d841605c01fa8a0597aae1d32cc831
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1fc46b0a9c671c82b03e9a4d4166513dc77315da
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
+# <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回針對指定的記錄順序編號 (LSN) 範圍內變更每個來源資料列的一個淨變更資料列。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
   
  當來源資料列具有多個變更的 LSN 範圍內時，單一資料列，以反映最終資料列的內容會傳回列舉函式，如下所述。 例如，如果交易的來源資料表中插入一個資料列之 LSN 範圍內的後續交易更新該資料列中的一或多個資料行，此函式只會傳回**一個**資料列，其中包含更新的資料行值。  
   
- 當來源資料表啟用變更資料擷取並指定了淨追蹤時，就會建立此列舉函數。 若要啟用淨追蹤，來源資料表必須具有主索引鍵或唯一的索引。 函式名稱衍生自並採用格式 cdc.fn_cdc_get_net_changes_*capture_instance*，其中*capture_instance*是來源資料表時，指定擷取執行個體的值啟用異動資料擷取。 如需詳細資訊，請參閱[sys.sp_cdc_enable_table &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ 當來源資料表啟用變更資料擷取並指定了淨追蹤時，就會建立此列舉函數。 若要啟用淨追蹤，來源資料表必須具有主索引鍵或唯一的索引。 函式名稱衍生自並採用格式 cdc.fn_cdc_get_net_changes_*capture_instance*，其中*capture_instance*是來源資料表時，指定擷取執行個體的值啟用異動資料擷取。 如需詳細資訊，請參閱[sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,12 +62,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *from_lsn*  
  LSN，代表要包含在結果集之 LSN 範圍的低端點。 *from_lsn*是**binary （10)**。  
   
- 只有當資料列中[cdc。 &#91;capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)變更資料表的值大於或等於 __ $start_lsn 中*from_lsn*會包含在結果集中。  
+ 只有當資料列中[cdc。&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)變更資料表的值大於或等於 __ $start_lsn 中*from_lsn*會包含在結果集中。  
   
  *to_lsn*  
  LSN，代表要包含在結果集之 LSN 範圍的高端點。 *to_lsn*是**binary （10)**。  
   
- 只有當資料列中[cdc。 &#91;capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)變更資料表的值 __ $start_lsn 中小於或等於*from_lsn*或等於*to_lsn*是包含在結果集。  
+ 只有當資料列中[cdc。&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)變更資料表的值 __ $start_lsn 中小於或等於*from_lsn*或等於*to_lsn*會包含在結果集中。  
   
  *< row_filter_option >* :: = {所有 | 所有的遮罩 | 合併所有的}  
  管理結果集中傳回之中繼資料資料行以及資料列內容的選項。 可以是下列其中一個選項：  
@@ -101,7 +101,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="examples"></a>範例  
  下列範例使用函式`cdc.fn_cdc_get_net_changes_HR_Department`報告對來源資料表所做的淨變更`HumanResources.Department`期間特定時間間隔。  
   
- 首先，`GETDATE` 函數是用來標示時間間隔的開頭。 在許多 DML 陳述式都套用至來源資料表之後，系統就會再次呼叫 `GETDATE` 函數來識別時間間隔的結尾。 此函式[sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)然後用來對應至 LSN 值所限定變更資料擷取查詢範圍的時間間隔。 最後，系統會查詢 `cdc.fn_cdc_get_net_changes_HR_Department` 函數，以便針對時間間隔取得來源資料表的淨變更。 請注意，先插入後刪除的資料列不會顯示在此函數所傳回的結果集中。 這是因為在查詢視窗中先加入後刪除的資料列不會在該間隔內於來源資料表上產生任何淨變更。 執行此範例之前，您必須先執行中的範例 B [sys.sp_cdc_enable_table &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ 首先，`GETDATE` 函數是用來標示時間間隔的開頭。 在許多 DML 陳述式都套用至來源資料表之後，系統就會再次呼叫 `GETDATE` 函數來識別時間間隔的結尾。 此函式[sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)然後用來對應至 LSN 值所限定變更資料擷取查詢範圍的時間間隔。 最後，系統會查詢 `cdc.fn_cdc_get_net_changes_HR_Department` 函數，以便針對時間間隔取得來源資料表的淨變更。 請注意，先插入後刪除的資料列不會顯示在此函數所傳回的結果集中。 這是因為在查詢視窗中先加入後刪除的資料列不會在該間隔內於來源資料表上產生任何淨變更。 執行此範例之前，您必須先執行中的範例 B [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -133,8 +133,8 @@ SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all'
 ## <a name="see-also"></a>另請參閱  
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

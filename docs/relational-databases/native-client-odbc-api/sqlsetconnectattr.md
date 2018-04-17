@@ -1,30 +1,31 @@
 ---
-title: SQLSetConnectAttr | Microsoft Docs
-ms.custom: 
+title: SQLSetConnectAttr |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 
+caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68049b848f3a347e64133c811fbd68b69671be0
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e26bea1dff6f5ba6bc06f786a88f9265a1677d8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -193,7 +194,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_MARS_ENABLED_NO|預設值。 停用 Multiple Active Result Sets (MARS)。|  
 |SQL_MARS_ENABLED_YES|啟用 MARS。|  
   
- 如需有關 MARS 的詳細資訊，請參閱[使用 Multiple Active Result Set &#40;MARS &#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+ 如需有關 MARS 的詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。  
   
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
  如果您的應用程式要連接到不同子網路上的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性群組 (AG)，則這個連接屬性會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 來提供目前使用中伺服器的更快速偵測與連接。 例如：  
@@ -312,12 +313,12 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>服務主要名稱 (SPN) 的 SQLSetConnectAttr 支援  
  SQLSetConnectAttr 可以用來設定新的連接屬性 SQL_COPT_SS_SERVER_SPN 和 SQL_COPT_SS_FAILOVER_PARTNER_SPN 的值。 這些屬性無法在連接已開啟時設定。如果您嘗試在連接已開啟時設定這些屬性，就會傳回錯誤 HY011 並顯示「此時作業無效」訊息 （SQLSetConnectOption 也可用來設定這些值。）  
   
- 如需有關 Spn 的詳細資訊，請參閱[服務主要名稱 &#40;Spn &#41;用戶端連接 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ 如需有關 Spn 的詳細資訊，請參閱[服務主要名稱 & #40;Spn & #41;用戶端連接 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  這是唯讀的屬性。  
   
- 如需有關 SQL_COPT_SS_CONNECTION_DEAD 的詳細資訊，請參閱[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)和[連接到資料來源 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)。  
+ 如需有關 SQL_COPT_SS_CONNECTION_DEAD 的詳細資訊，請參閱[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)和[連接到資料來源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)。  
   
 ## <a name="example"></a>範例  
  這則範例會記錄效能資料。  
@@ -371,7 +372,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
  [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
- [SET QUOTED_IDENTIFIER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER & #40;TRANSACT-SQL & #41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)   
  [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
   

@@ -1,15 +1,15 @@
 ---
-title: "叫用 CLR 使用者定義彙總函式 |Microsoft 文件"
-ms.custom: 
+title: 叫用 CLR 使用者定義彙總函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - invoking user-defined aggregate functions
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c15694986403c4b4eba39e7b4a70738fbf40cc8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f09c3ba4dd4ccc1cedbd6ad3d2cc880191087e5b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 使用者定義彙總-叫用函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中叫用 Common Language Runtime (CLR) 使用者定義彙總，依套用至系統彙總函式的所有規則而定。  
+  您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中叫用 Common Language Runtime (CLR) 使用者定義彙總，依套用至系統彙總函式的所有規則而定。  
   
  適用下列其他規則：  
   

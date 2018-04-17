@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_tran_commit_table (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_tran_commit_table (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_tran_commit_table
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_commit_table dynamic management view
 ms.assetid: 732d23c5-1f6c-4e96-bc85-8f29b520cf0e
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17e42e8bf81db76b3034c6bf1e2e0111a6fc9671
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7ef5171ec533bd912c14d3623a9c01e93d79edf2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-tracking---sysdmtrancommittable"></a>變更追蹤-sys.dm_tran_commit_table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

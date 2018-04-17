@@ -1,16 +1,16 @@
 ---
-title: "Bcpexec (OLE DB) |Microsoft 文件"
-ms.custom: 
+title: Bcpexec (OLE DB) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IBCPSession::BCPExec (OLE DB)
@@ -18,16 +18,17 @@ apitype: COM
 helpviewer_keywords:
 - BCPExec method
 ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d746c01ed19368ab4502681d946cc3f06a61be35
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 140bf916d1de24a3170028e141d3fc473552f03a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,7 +78,7 @@ HRESULT BCPExec(
  在大量複製作業期間發生了錯誤，而且可能尚未複製某些資料列。 錯誤數目仍然少於允許的最大錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [IBCPSession &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [執行大量複製作業](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

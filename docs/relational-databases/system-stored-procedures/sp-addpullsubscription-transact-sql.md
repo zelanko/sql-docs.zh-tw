@@ -1,16 +1,16 @@
 ---
-title: "sp_addpullsubscription (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addpullsubscription (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b6c772cc91d922ceb8acd5c205c9b19dc67d50d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4e5b6dd001beca704248c23f764086efeb56f2b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=**] **'***發行者***'**  
+ [ **@publisher=**] **'***publisher***'**  
  這是發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是 NULL。 *publisher_db* Oracle 發行者會忽略。  
   
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@independent_agent=**] **'***independent_agent***'**  
@@ -74,7 +74,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  [  **@update_mode=**] **'***update_mode***'**  
  這是更新的類型。 *update_mode*是**nvarchar （30)**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**唯讀**（預設值）|訂閱是唯讀的。 訂閱者的任何變更都不會傳回發行者。 當訂閱者不要更新時，便應該使用這個項目。|  
 |**synctran**|啟用立即更新訂閱的支援。|  
@@ -94,7 +94,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  對於佇列更新訂閱，請利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來連接訂閱者，以及指定不同的連接帳戶給每個訂閱者。 當建立支援佇列更新的提取訂閱時，複寫一律會將連接設定成使用 Windows 驗證 (對於提取訂閱而言，複寫無法在訂閱者端存取使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證所需要的中繼資料)。 在此情況下，您應該執行[sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)變更要使用的連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證之後的訂閱設定。  
   
- 如果[MSreplication_subscriptions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 「 訂閱者 」 端沒有資料表**sp_addpullsubscription**會加以建立。 它也會加入資料列來[MSreplication_subscriptions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)資料表。 對於提取訂閱， [sp_addsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)應該先呼叫在發行者端。  
+ 如果[MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 「 訂閱者 」 端沒有資料表**sp_addpullsubscription**會加以建立。 它也會加入資料列來[MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)資料表。 對於提取訂閱， [sp_addsubscription &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)應該先呼叫在發行者端。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  
@@ -102,14 +102,14 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addpullsubscription**。  
   
-## <a name="see-also"></a>請參閱＜  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>另請參閱  
+ [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription_agent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
- [sp_change_subscription_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helppullsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [sp_change_subscription_properties &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_droppullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

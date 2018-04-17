@@ -1,31 +1,32 @@
 ---
-title: "處理使用 SQL Server 和 Azure SQL Database 的圖形 |Microsoft 文件"
-ms.custom: 
+title: 處理使用 SQL Server 和 Azure SQL Database 的圖形 |Microsoft 文件
+ms.custom: ''
 ms.date: 07/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: graphs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b30234e0527252b01b3d0e88d7679255acc214fd
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: cc6951aa90bf71cb415770f30352120a529bcde1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>處理使用 SQL Server 和 Azure SQL Database 的圖形
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

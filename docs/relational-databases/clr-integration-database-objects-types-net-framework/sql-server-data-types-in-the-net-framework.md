@@ -1,15 +1,15 @@
 ---
-title: ".NET Framework 中的 SQL Server 資料類型 |Microsoft 文件"
-ms.custom: 
+title: .NET Framework 中的 SQL Server 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - System.Data library
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - building database objects [CLR integration], data types
 - mapping data types [CLR integration]
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5b47f3caa1e500664560ff8e6683e6064575699
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d26491962f170206a5a3b441fcecf4d1050f812a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 的 SQL Server 資料類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**SqlTypes**程式庫是基底類別庫的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。 其設計為提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中之資料類型具有相同語意及精確度的資料類型。 本主題說明新的語意，以.NET Framework 程式設計人員，並介紹中所實作的型別**System.Data.SqlTypes**命名空間中隨附**System.Data**程式庫。  
+  **SqlTypes**程式庫是基底類別庫的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。 其設計為提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中之資料類型具有相同語意及精確度的資料類型。 本主題說明新的語意，以.NET Framework 程式設計人員，並介紹中所實作的型別**System.Data.SqlTypes**命名空間中隨附**System.Data**程式庫。  
   
  下表列出本節中的主題。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/09/2018
  [定序和 CLR 整合資料類型](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  描述如何處理包含 CLR 整合的定序。  
   
- [處理大型物件 &#40;LOB &#41;在 CLR 中的參數](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [處理大型物件 & #40;LOB & #41;在 CLR 中的參數](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  描述如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 之間傳遞 LOB 類型。  
   
  [對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

@@ -23,11 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40f4d0d98cd33a57d6ab1e6f9c46ebd2174c9a15
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: edde7e88247c0cb8ad05264e4d589258868909ec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

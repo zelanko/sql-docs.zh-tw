@@ -2,7 +2,7 @@
 title: 組態元件 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 596c0070a522b8e96ef6674dfb8e2498f64029dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ace053f0d37e867cd599499bb4656ecce41ebe7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuration-components"></a>組態元件
 > [!NOTE]  
@@ -42,5 +42,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [驅動程式安裝程式 DLL](../../../odbc/reference/install/driver-setup-dll.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安裝元件](../../../odbc/reference/install/installation-components.md)

@@ -1,15 +1,16 @@
 ---
-title: "依書籤的資料列更新為與 SQLBulkOperations |Microsoft 文件"
-ms.custom: 
+title: 依書籤的資料列更新為與 SQLBulkOperations |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data updates [ODBC], bookmarks
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c3525f78ece4e5831cc4e84e0d8041ceacc6a05
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5a561fe33a54f31bcbe554dbf34525812c234e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新資料列的書籤
 當更新的資料列的書籤， **SQLBulkOperations**可更新之資料表的一個或多個資料列的資料來源。 資料列識別的繫結的書籤資料行中的書籤。 資料列會更新每個繫結資料行 （除非資料行的長度/指標緩衝區中的值是 SQL_COLUMN_IGNORE） 使用應用程式緩衝區中的資料。 未繫結的資料行不會更新。  

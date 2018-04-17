@@ -1,16 +1,16 @@
 ---
-title: "sys.availability_groups (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.availability_groups (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.availability_groups_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_groups catalog view
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a11cf2be1634440517fa0e21a3a1d0b9c749dca
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 308566c623ccc10efaee06258594581a6ba3c37e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysavailabilitygroups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**automated_backup_preference**|**tinyint**|針對此可用性群組中的可用性資料庫執行備份的慣用位置。 以下是可能的值和它們的描述。<br /><br /> <br /><br /> 0： 主要。 備份一定要在主要複本上進行。<br /><br /> 1： 只在次要資料庫。 偏好針對次要複本執行備份。<br /><br /> 2： 慣用次要。 偏好針對次要複本執行備份，但是如果沒有次要複本可用來執行備份作業，可以接受針對主要複本執行備份。 這是預設行為。<br /><br /> 3： 任何複本。 針對主要複本或次要複本執行備份沒有任何偏好。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。|  
 |**automated_backup_preference_desc**|**nvarchar(60)**|描述**automated_backup_preference**，下列其中一個的：<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> 無|  
 |**version**|**smallint**|儲存在 Windows 容錯移轉叢集的可用性群組中繼資料版本。 加入新功能時，此版本號碼會遞增。|  
-|**basic_features**|**bit**|指定這是否為基本可用性群組。 如需詳細資訊，請參閱[基本可用性群組 &#40;Always On 可用性群組 &#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
+|**basic_features**|**bit**|指定這是否為基本可用性群組。 如需詳細資訊，請參閱[基本可用性群組 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。|  
 |**dtc_support**|**bit**|指定此可用性群組是否已啟用 DTC 支援。 **DTC_SUPPORT**選項**CREATE AVAILABILITY GROUP**控制這項設定。|  
 |**db_failover**|**bit**|指定可用性群組是否支援容錯移轉資料庫健全狀況。 **DB_FAILOVER**選項**CREATE AVAILABILITY GROUP**控制這項設定。|  
 |**is_distributed**|**bit**|指定這是否為分散式的可用性群組。 如需詳細資訊，請參閱[分散式可用性群組 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>另請參閱  
  [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [監視可用性群組 &#40;TRANSACT-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [監視可用性群組 & #40;TRANSACT-SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

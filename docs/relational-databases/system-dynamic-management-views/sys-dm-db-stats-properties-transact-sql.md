@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_stats_properties (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_db_stats_properties (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_stats_properties_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3406cfffce07260fc425c2850e548d006f9d796a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 31a4637f2bdfdddc220ccb930dd4873956ddbf3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,13 +58,13 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id|**int**|要傳回統計資料物件屬性之物件 (資料表或索引檢視表) 的識別碼。|  
 |stats_id|**int**|統計資料物件的識別碼。 這在資料表或索引檢視表中是唯一的。 如需詳細資訊，請參閱 [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|  
-|last_updated|**datetime2**|上次更新統計資料物件的日期和時間。 如需詳細資訊，請參閱[備註](#Remarks)此頁面中的區段。|  
+|last_updated|**datetime2**|上次更新統計資料物件的日期和時間。 如需詳細資訊，請參閱此頁的[備註](#Remarks)一節。|  
 |rows|**bigint**|上一次更新統計資料時位於資料表或索引檢視表中的資料列總數。 如果篩選了統計資料或是統計資料對應至篩選過的索引，此資料列數可能會少於資料表中的資料列數。|  
 |rows_sampled|**bigint**|針對統計資料計算進行取樣的資料列總數。|  
 |步驟|**int**|長條圖中的步驟數。 如需詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)並未包含檢視。|  
 |unfiltered_rows|**bigint**|套用篩選運算式 (針對篩選的統計資料) 之前，資料表中的資料列總數。 如果統計資料未經過篩選，unfiltered_row 就會等於 rows 資料行中傳回的值。|  
 |modification_counter|**bigint**|自從上次更新統計資料以來，前端統計資料資料行 (用以建置長條圖的資料行) 的總修改次數。<br /><br /> 記憶體最佳化資料表： 正在啟動[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]然後在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]此資料行包含： 修改資料表的最後一個時間統計資料已更新或資料庫已重新啟動之後的總數。|  
-|persisted_sample_percent|**float**|保存未明確指定取樣百分比的統計資料更新所使用的取樣百分比。 如果值為零，這個統計資料的設定沒有持續性的範例百分比。<br /><br /> **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|persisted_sample_percent|**float**|使用於未明確指定取樣百分比之統計資料更新的保存取樣百分比。 如果值為零，表示這個統計資料未設定保存取樣百分比。<br /><br /> **適用於：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="Remarks"></a> 備註  
  **sys.dm_db_stats_properties**傳回任何下列的情況下的空白資料列集：  
@@ -75,7 +76,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
  此行為可讓您安全地使用**sys.dm_db_stats_properties**當交叉套用至檢視中的資料列例如**sys.objects**和**sys.stats**。  
  
-統計資料更新將日期儲存在[統計資料的 blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)搭配[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)、 中繼資料中找不到。 讀取任何資料時產生統計資料，就不會建立統計資料的 blob，日期無法使用，而*last_updated*資料行是 NULL。 這是篩選的統計資料述詞未傳回任何資料列，或新的空白資料表的情況。
+統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 讀取任何資料時產生統計資料，就不會建立統計資料的 blob，日期無法使用，而*last_updated*資料行是 NULL。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
   
 ## <a name="permissions"></a>Permissions  
  要求使用者對於統計資料資料行擁有選取權限，或是使用者擁有資料表，或使用者是 `sysadmin` 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員。  

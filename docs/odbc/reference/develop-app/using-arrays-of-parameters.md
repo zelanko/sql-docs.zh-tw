@@ -1,30 +1,31 @@
 ---
-title: "使用參數陣列 |Microsoft 文件"
-ms.custom: 
+title: 使用參數陣列 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da3d5662b8eb85f994142aea0e4dff237fd9852b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: acdcf9e1c21773240c03204608f73a4d2174fba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-arrays-of-parameters"></a>使用參數陣列
 若要使用的應用程式會呼叫的參數陣列**SQLSetStmtAttr**與*屬性*則 sql_attr_paramset_size 會以指定的參數集數目的引數。 它會呼叫**SQLSetStmtAttr**與*屬性*SQL_ATTR_PARAMS_PROCESSED_PTR 以指定的位址變數中的驅動程式可以傳回的處理，參數的集合數目的引數包括錯誤設定。 它會呼叫**SQLSetStmtAttr**與*屬性*SQL_ATTR_PARAM_STATUS_PTR 指向用來傳回每個資料列的參數值的狀態資訊的陣列的引數。 驅動程式會將這些位址儲存在它所維護的陳述式的結構。  

@@ -1,16 +1,16 @@
 ---
-title: "sp_adddistributiondb (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_adddistributiondb (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6657074bade1db3cb050d6ca0c33e358d05e5f0c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3a91a41c1d0ca2df23f48bc6144fc185a9e9725f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**]*資料庫 '*  
  這是要建立的散發資料庫名稱。 *資料庫*是**sysname**，沒有預設值。 如果指定的資料庫已經存在，且尚未標示為散發資料庫，便會安裝啟用散發所需要的物件，且會將資料庫標示為散發資料庫。 如果指定的資料庫已啟用為散發資料庫，就會傳回錯誤。  
   
- [  **@data_folder=**] **'***data_folder'*  
+ [  **@data_folder=**] **' * * * data_folder'*  
  這是用於儲存散發資料庫資料檔案的目錄名稱。 *data_folder*是**nvarchar （255)**，預設值是 NULL。 如果是 NULL，就會使用該 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料目錄，例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`。  
   
  [  **@data_file=**] **'***data_file***'**  
@@ -94,7 +94,7 @@ sp_adddistributiondb [ @database= ] 'database'
  這是用於連接散發者的安全性模式。 *security_mode*是**int**，預設值是 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，**1**指定 Windows 整合式驗證。  
   
  [  **@login=**] **'***登入***'**  
- 這是連接到散發者來建立散發資料庫時，所用的登入名稱。 這是必要的如果*security_mode*設**0**。 *登入*是**sysname**，預設值是 NULL。  
+ 這是連接到散發者來建立散發資料庫時，所用的登入名稱。 這是必要的如果*security_mode*設**0**。 *login* 是預設值為 NULL 的 **sysname**。  
   
  [  **@password=**] **'***密碼***'**  
  這是連接到散發者時所用的密碼。 這是必要的如果*security_mode*設**0**。 *密碼*是**sysname**，預設值是 NULL。  
@@ -102,7 +102,7 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@createmode=**] *createmode*  
  *createmode*是**int**，預設值是 1，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (預設值)|CREATE DATABASE 或使用現有資料庫，再套用**instdist.sql**檔案以建立散發資料庫中的複寫物件。|  
@@ -180,10 +180,10 @@ GO
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_adddistributiondb**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributiondb &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [設定散發](../../relational-databases/replication/configure-distribution.md)  

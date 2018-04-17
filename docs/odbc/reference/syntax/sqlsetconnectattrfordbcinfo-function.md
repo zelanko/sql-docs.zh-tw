@@ -2,7 +2,7 @@
 title: SQLSetConnectAttrForDbcInfo 函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ef62393ac00b7d094e6ba47613038fdf7ac2175
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b71c2d308efd74f1ec2574d20d7f14455965715d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 函式
 **一致性**  
@@ -47,13 +47,13 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  *hDbcInfoToken*  
  [輸入]語彙基元的控制代碼。  
   
- *Attribute*  
+ *屬性*  
  [輸入]若要設定的屬性。 有效的屬性清單是特定的驅動程式和一樣[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
  *ValuePtr*  
  [輸入]要與相關聯的值指標*屬性*。 值而定*屬性*， *ValuePtr*將會是 32 位元不帶正負號的整數值，或將會指向以 null 結束的字元字串。 請注意，如果*屬性*引數是驅動程式專屬值中的值*ValuePtr*可能是帶正負號的整數。  
   
- *StringLength*  
+ *stringLength*  
  [輸入]如果*屬性*是 ODBC 定義的屬性和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度 **ValuePtr*。 字元字串資料，這個引數應該包含在字串中的位元組數目。  
   
  如果*屬性*是 ODBC 定義的屬性和*ValuePtr*是整數， *StringLength*會被忽略。  
@@ -83,7 +83,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
  包含 sqlspi.h ODBC 驅動程式開發。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [可感知驅動程式的連接共用](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [在 ODBC 驅動程式中開發連接集區覺察](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

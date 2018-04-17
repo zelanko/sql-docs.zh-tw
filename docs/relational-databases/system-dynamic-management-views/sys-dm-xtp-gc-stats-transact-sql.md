@@ -1,16 +1,16 @@
 ---
-title: sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_xtp_gc_stats (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xtp_gc_stats
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76269043863211bc0c531cea9ea9a75915e5f6d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2440605950721a0b3a0555bebd250344b19d2cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   提供 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體回收處理序目前行為的相關資訊 (整體統計資料)。  
   
- 資料列會在一般交易處理過程中進行記憶體回收，或是由主要記憶體回收執行緒回收，這稱為閒置工作者。 當使用者交易認可時，它會從記憶體回收佇列的一個工作項目 ([sys.dm_xtp_gc_queue_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). 可以進行記憶體回收但是無法由主要使用者交易存取的任何資料列都會由閒置工作者在塵封角落掃描 (掃描不常存取之索引的區域) 時進行記憶體回收。  
+ 資料列會在一般交易處理過程中進行記憶體回收，或是由主要記憶體回收執行緒回收，這稱為閒置工作者。 當使用者交易認可時，它會從記憶體回收佇列的一個工作項目 ([sys.dm_xtp_gc_queue_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md))。 可以進行記憶體回收但是無法由主要使用者交易存取的任何資料列都會由閒置工作者在塵封角落掃描 (掃描不常存取之索引的區域) 時進行記憶體回收。  
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
@@ -78,6 +78,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體最佳化的資料表動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [記憶體最佳化的資料表動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

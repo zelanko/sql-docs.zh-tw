@@ -2,7 +2,7 @@
 title: SQLGetDiagRec 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 34aa67ed374f525f6195403b299500019192c19a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2196a981bd60eb178c4d36e20c6b4925d328e974
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 函數
 **一致性**  
@@ -88,7 +88,7 @@ SQLRETURN SQLGetDiagRec(
   
  如果*MessageText*是 NULL， *TextLengthPtr*仍會傳回的總字元數 （不含字元資料 null 結束字元） 可用來傳回中所指向的緩衝區*MessageText*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]長度 **MessageText*以字元為單位的緩衝區。 沒有診斷訊息文字的最大長度。  
   
  *TextLengthPtr*  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetDiagRec(
 |---------------------------|---------|  
 |取得診斷記錄的欄位或診斷的標頭中的欄位|[SQLGetDiagField 函式](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC 程式範例](../../../odbc/reference/sample-odbc-program.md)

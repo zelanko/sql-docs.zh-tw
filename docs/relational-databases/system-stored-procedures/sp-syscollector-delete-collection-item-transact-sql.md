@@ -1,16 +1,16 @@
 ---
-title: "sp_syscollector_delete_collection_item (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_syscollector_delete_collection_item (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collection_item
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_delete_collecton_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 587d7ca6d3610ac2d8950f73eb085b1f942f2e27
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 69722406747401d87758e3ea49e77c1a9188e6ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  這是收集項目的唯一識別碼。 *collection_item_id*是**int**預設值是 NULL。 *collection_item_id*必須有值，如果*名稱*是 NULL。  
   
- [ @name = ] '*name*'  
+ [ @name =] '*名稱*'  
  這是收集項目的名稱。 *名稱*是**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_item_id*是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -76,7 +76,7 @@ EXEC sp_syscollector_delete_collection_item @name = 'MyCollectionItem1';
   
 ## <a name="see-also"></a>另請參閱  
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [sp_syscollector_create_collection_item &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "p (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: p (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergefilter
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9890268638d5c4559d1239823699a68948aaa19f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 91bfb4694a088bfac75f14286bd0ea9879f763eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@article=**] **'***文章***'**  
@@ -64,7 +64,7 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
   
  **1**表示合併發行項的變更可能使快照集失效。 如果這種情況下，值為**1**提供將出現新的快照集的權限。  
   
- [  **@force_reinit_subscription** =] *force_reinit_subscription*  
+ [ **@force_reinit_subscription**=] *force_reinit_subscription*  
  啟用或停用將快照集標示為無效的能力。 *force_reinit_subscription*是**元**，預設值**0**。  
   
  **0**指定合併發行項篩選的變更不會使訂閱失效。  
@@ -80,11 +80,11 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_dropmergefilter**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

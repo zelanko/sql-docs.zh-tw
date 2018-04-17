@@ -1,15 +1,16 @@
 ---
-title: "SQL 模組 |Microsoft 文件"
-ms.custom: 
+title: SQL 模組 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL modules [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - modules [ODBC]
 - SQL statements [ODBC], modules
 ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aac70e91e91277f7778fed439f68e5620f116d41
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a345d64e7ed9353513ce67c71f5442d317df701f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-modules"></a>SQL 模組
 傳送至 DBMS 的 SQL 陳述式的第二個技巧是透過模組。 簡言之，模組包含群組的程序，它會呼叫從主應用程式的程式設計語言。 每個程序包含單一的 SQL 陳述式，且資料會傳遞與程序參數。  

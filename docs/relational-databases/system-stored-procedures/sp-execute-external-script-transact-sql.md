@@ -2,7 +2,7 @@
 title: sp_execute_external_script (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -22,18 +22,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: ''
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b767e69b44d8303aab12a21e942e21c9a9741da4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
+# <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   執行做為在外部位置的引數提供的指令碼。 必須在支援並註冊的語言中撰寫指令碼。 若要執行**sp_execute_external_script**，您必須先啟用外部指令碼使用陳述式， `sp_configure 'external scripts enabled', 1;`。  
@@ -60,18 +60,18 @@ sp_execute_external_script
 
  有效值為`Python`或`R`。 
   
- @script = N'*script*'  
+ @script = N'*指令碼*'  
  指定為常值或變數的輸入的外部語言指令碼。 *指令碼*是**nvarchar （max)**。  
   
- [ @input_data_1_name = N'*input_data_1_name*' ]  
+ [ @input_data_1_name = N'*input_data_1_name*']  
  指定用來表示查詢所定義的變數名稱@input_data_1。 外部指令碼中變數的資料類型會因語言而定。 發生 R，則輸入的變數是資料框架。 在 [Python]，輸入必須是表格式。 *input_data_1_name*是**sysname**。  
   
  預設值是`InputDataSet`。  
   
- [ @input_data_1 =  N'*input_data_1*' ]  
+ [ @input_data_1 = N'*input_data_1*']  
  指定的表單中的外部指令碼所使用的輸入的資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 資料型別*input_data_1*是**nvarchar （max)**。
   
- [ @output_data_1_name =  N'*output_data_1_name*' ]  
+ [ @output_data_1_name = N'*output_data_1_name*']  
  包含要傳回之資料的外部指令碼中指定的變數名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序呼叫完成時。 外部指令碼中變數的資料類型會因語言而定。 的輸出必須是資料框架。 Python，輸出必須熊資料框架。 *output_data_1_name*是**sysname**。  
   
  預設值為"OutputDataSet"。  

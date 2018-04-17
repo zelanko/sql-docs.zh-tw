@@ -1,30 +1,31 @@
 ---
-title: "SQLBrowseConnect |Microsoft 文件"
-ms.custom: 
+title: SQLBrowseConnect |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLBrowseConnect function
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8af521c2bd56d8d66386be324477b7f094052d73
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6c198f349a962f8ba27a408960c3651fbf73fe34
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/24/2018
 ## <a name="sqlbrowseconnect-support-for-service-principal-names-spns"></a>服務主要名稱 (SPN) 的 SQLBrowseConnect 支援  
  開啟連接時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會將 SQL_COPT_SS_MUTUALLY_AUTHENTICATED 和 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 設定為開啟連接所使用的驗證方法。  
   
- 如需有關 Spn 的詳細資訊，請參閱[服務主要名稱 &#40;Spn &#41;用戶端連接 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ 如需有關 Spn 的詳細資訊，請參閱[服務主要名稱 & #40;Spn & #41;用戶端連接 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="change-history"></a>變更記錄  
   

@@ -1,36 +1,36 @@
 ---
-title: "FILESTREAM 支援 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: FILESTREAM 支援 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - FILESTREAM [SQL Server], ODBC
 - ODBC, FILESTREAM support
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58510810e14471960aea39661d18254954f9aa7d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 02292cffead70858e8a965afe6adb719ac7fb742
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 支援 (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支援增強型 FILESTREAM 功能。 如需有關這項功能的詳細資訊，請參閱[FILESTREAM 支援](../../../relational-databases/native-client/features/filestream-support.md)。 如需示範 ODB 對於 FILESTREAM 之支援的範例，請參閱[傳送和接收資料以累加方式與 FILESTREAM &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支援增強型 FILESTREAM 功能。 如需有關這項功能的詳細資訊，請參閱[FILESTREAM 支援](../../../relational-databases/native-client/features/filestream-support.md)。 如需示範 ODB 對於 FILESTREAM 之支援的範例，請參閱[傳送和接收資料以累加方式與 FILESTREAM &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  
   
  傳送和接收**varbinary （max)**值大於 2 GB，應用程式必須使用繫結參數與 SQLBindParameter *ColumnSize*設**SQL_SS_LENGTH_UNLIMITED**，並將設定的內容*StrLen_or_IndPtr*至**SQL_DATA_AT_EXEC** SQLExecDirect 或 SQLExecute 之前。  
   

@@ -1,15 +1,15 @@
 ---
-title: "提取結果資料 |Microsoft 文件"
-ms.custom: 
+title: 提取結果資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-results
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLFetchScroll function
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1514a1309ea6a88e2d9c449ed9dbf15f99388227
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8f1c828f3e63e3167a0685f450e318055a9b71fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetching-result-data"></a>提取結果資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,6 +71,6 @@ ms.lasthandoff: 01/25/2018
  此最佳化可以套用至應用程式，讓沒有**文字**， **ntext**，或**映像**使用者上下捲動資料指標時，會顯示資料。 使用者選取的資料列之後，應用程式可以呼叫**SQLGetData**擷取**文字**， **ntext**，或**映像**資料。 這樣就不用傳送**文字**， **ntext**，或**映像**任何資料列的資料不會選取 使用者和也不用傳送非常大量的資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [處理結果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

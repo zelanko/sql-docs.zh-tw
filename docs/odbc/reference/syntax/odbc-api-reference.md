@@ -1,28 +1,29 @@
 ---
-title: "ODBC API 參考 |Microsoft 文件"
-ms.custom: 
+title: ODBC API 參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 025ad811b25f822c22c9ff81402de196b191baa6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3a8781c93cdf83bd4af3ffe68e1cc3ad96600622
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-api-reference"></a>ODBC 應用程式開發介面參考
 本節中的主題會描述每個 ODBC 函數，依字母順序。 每個函式定義為 C 程式設計語言的函式。 描述包含下列各項：  

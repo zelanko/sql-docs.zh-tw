@@ -1,15 +1,15 @@
 ---
-title: "註冊 SQL Server 中的使用者定義型別 |Microsoft 文件"
-ms.custom: 
+title: 註冊 SQL Server 中的使用者定義型別 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -35,20 +35,20 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49a0a9d7c9bf8d023b748a34b622ba15e6406233
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 58838ffa846a8b7e6ebaf18e155817c64cf0cb9c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中註冊使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-若要在使用使用者定義型別 (UDT) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須註冊它。 註冊 UDT 包括註冊組件，以及在要使用該型別的資料庫中建立它。 UDT 的使用範圍為單一資料庫，而且除非已經向每個資料庫註冊相同的組件及 UDT，否則無法在多個資料庫中使用。 一旦註冊 UDT 組件並建立此型別之後，您便可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及用戶端程式碼中使用該 UDT。 如需詳細資訊，請參閱 [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
+  若要在使用使用者定義型別 (UDT) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須註冊它。 註冊 UDT 包括註冊組件，以及在要使用該型別的資料庫中建立它。 UDT 的使用範圍為單一資料庫，而且除非已經向每個資料庫註冊相同的組件及 UDT，否則無法在多個資料庫中使用。 一旦註冊 UDT 組件並建立此型別之後，您便可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及用戶端程式碼中使用該 UDT。 如需詳細資訊，請參閱 [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>使用 Visual Studio 部署 UDT  
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 是部署 UDT 最簡單的方式。 但是，若為較複雜的部署案例而且需要最大的彈性，請使用本主題稍後將要討論的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/09/2018
 5.  從**建置**功能表上，選取**部署**。 如此將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中註冊組件並建立型別。  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>使用 Transact-SQL 部署 UDT  
- 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 語法，於要使用 UDT 的資料庫中註冊組件。 它會儲存於資料庫系統資料表內部，而非檔案系統外部。 如果 UDT 與外部組件相關，也必須將它們載入資料庫。 CREATE TYPE 陳述式可在要使用 UDT 的資料庫內建立 UDT。 如需詳細資訊，請參閱[CREATE ASSEMBLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)和[建立類型 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-type-transact-sql.md).  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 語法，於要使用 UDT 的資料庫中註冊組件。 它會儲存於資料庫系統資料表內部，而非檔案系統外部。 如果 UDT 與外部組件相關，也必須將它們載入資料庫。 CREATE TYPE 陳述式可在要使用 UDT 的資料庫內建立 UDT。 如需詳細資訊，請參閱[CREATE ASSEMBLY & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-assembly-transact-sql.md)和[建立類型 & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-type-transact-sql.md).  
   
 ### <a name="using-create-assembly"></a>使用 CREATE ASSEMBLY  
  CREATE ASSEMBLY 語法會在要使用 UDT 的資料庫中註冊組件。 一旦註冊此組件，它就不具有相依性。  
@@ -99,7 +99,7 @@ FROM 0xfeac4 … 21ac78
 > [!NOTE]  
 >  CREATE TYPE 語法也用於建立原生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]別名資料類型，而且用來取代**sp_addtype**做為建立別名資料類型。 CREATE TYPE 語法中的某些選擇性引數會參考建立 UDT，且不適用於建立別名資料類型 (如基底類型)。  
   
- 如需詳細資訊，請參閱[CREATE TYPE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-type-transact-sql.md).  
+ 如需詳細資訊，請參閱[CREATE TYPE & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-type-transact-sql.md).  
   
 #### <a name="example"></a>範例  
  下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式會建立**點**型別。 使用兩部分命名語法指定外部名稱*AssemblyName*。*UDTName*。  
@@ -154,7 +154,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  一旦在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立 UDT，便無法對其進行修改，但可以改變此型別所依據的組件。 在大多數情況下，您必須使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE 陳述式從資料庫中移除 UDT、對基礎組件進行變更，並使用 ALTER ASSEMBLY 陳述式將其重新載入。 然後需要重新建立 UDT 及一切相依物件。  
   
 ### <a name="example"></a>範例  
- 當您變更並重新編譯 UDT 組件中的原始程式碼之後，可以使用 ALTER ASSEMBLY 陳述式。 它會將此 .dll 檔案複製到伺服器，並重新繫結至新的組件。 如需完整語法，請參閱[ALTER ASSEMBLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
+ 當您變更並重新編譯 UDT 組件中的原始程式碼之後，可以使用 ALTER ASSEMBLY 陳述式。 它會將此 .dll 檔案複製到伺服器，並重新繫結至新的組件。 如需完整語法，請參閱[ALTER ASSEMBLY & #40;TRANSACT-SQL & #41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 陳述式會從指定的磁碟位置重新載入 Point.dll 組件。  
   
@@ -184,7 +184,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  數字，識別每個物件，與相關聯的第一個物件指定**assembly_id**給定值為 1。 如果有多個關聯於相同的物件**assembly_id**，則每個後續**file_id**值都會遞增 1。  
   
- **content**  
+ **內容**  
  組件或檔案的十六進位表示法。  
   
  您可以將轉換的內容中使用 CAST 或 CONVERT 函數**內容**可讀取的文字資料行。 下列查詢會將 Point.cs 檔案的內容轉換為可讀取的文字，並在 WHERE 子句中使用此名稱，以將結果集限制為單一資料列。  

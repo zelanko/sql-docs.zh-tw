@@ -2,7 +2,7 @@
 title: SQLSetConnectOption 函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a3ebe388429949f64e58ba8612328caf3a14ee2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 518fa715656e16672c118e0e56588c7c15d16a15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 函式
 **一致性**  
  版本引進了： ODBC 1.0 標準相容性： 已被取代  
   
  **摘要**  
- 在 ODBC 3*.x*，ODBC 2.0 函式**SQLSetConnectOption**已被取代**SQLSetConnectAttr**。 如需詳細資訊，請參閱[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
+ 在 ODBC 3*.x*，ODBC 2.0 函式**SQLSetConnectOption**已被取代**SQLSetConnectAttr**。 如需詳細資訊，請參閱 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
 > [!NOTE]  
 >  如需有關什麼驅動程式管理員會對應到此函式時 ODBC 2*.x*應用程式使用 ODBC 3*.x*驅動程式，請參閱[對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
@@ -49,6 +49,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  不支援屬性 SQL_ASYNC_DBC_FUNCTION_ENABLE ODBC 3.8 中導入**SQLSetConnectOption**。 使用連接控制代碼上的非同步作業的應用程式必須使用**SQLSetConnectAttr**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,16 +1,16 @@
 ---
-title: "XML 結構描述 （XML 類型系統） 目錄檢視 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: XML 結構描述 （XML 類型系統） 目錄檢視 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - catalog views [SQL Server], XML schemas
 - XML schemas [SQL Server], catalog views
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9dec7f39951e9427492643379aaadb6ffdfee1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 264e42ddc7263112d390ed1222b790c3fb44729f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML 結構描述 (XML 類型系統) 目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/21/2017
 |[sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md)|[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)|  
 |[sys.xml_schema_wildcards](../../relational-databases/system-catalog-views/sys-xml-schema-wildcards-transact-sql.md)||  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [系統檢視 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [系統檢視表&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

@@ -2,7 +2,7 @@
 title: sys.dm_os_dispatcher_pools (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 08/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: dmv's
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44b6e630c1afe8360796656eca1d1814a92067e0
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: a7c3d26cca9c5a758c0cc95ebb2b76e7bdb17767
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosdispatcherpools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

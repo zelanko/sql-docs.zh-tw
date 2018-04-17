@@ -1,15 +1,16 @@
 ---
-title: "其他驅動程式架構 |Microsoft 文件"
-ms.custom: 
+title: 其他驅動程式架構 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - drivers [ODBC], heterogeneous join engines
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - heterogeneous join engines[ODBC]
 - drivers [ODBC], middle component
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fca4bea3f40702fb2593442ccbbfb311f813a87a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2e19371142140c7f084b6179b509a1c524c36266
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="other-driver-architectures"></a>其他驅動程式架構
 有些 ODBC 驅動程式不完全符合先前所述的架構。 這可能是因為驅動程式執行責任以外的傳統的 ODBC 驅動程式，或不正常的意義上的驅動程式。  

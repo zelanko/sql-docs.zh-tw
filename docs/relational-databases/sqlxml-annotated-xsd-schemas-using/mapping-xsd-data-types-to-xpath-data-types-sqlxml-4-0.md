@@ -1,16 +1,16 @@
 ---
-title: "將 XSD 資料型別對應到 XPath 資料類型 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: 將 XSD 資料型別對應到 XPath 資料類型 (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [SQLXML]
@@ -22,26 +22,27 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dae91d7e4c23c01d99de52c1ef6e1f1010bd081c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e64d1119f80406c2865ed3ca4b147d5004688cdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-當 XPath 查詢針對 XSD 結構描述執行，而且 XSD 類型會指定在**xsd: type**屬性，XPath 會使用在處理查詢時指定的資料類型。  
+  當 XPath 查詢針對 XSD 結構描述執行，而且 XSD 類型會指定在**xsd: type**屬性，XPath 會使用在處理查詢時指定的資料類型。  
   
  節點的 XPath 資料類型衍生自結構描述中的 XSD 資料類型，如下表所示  (EmployeeID 節點用於提供說明)。  
   
 |XSD 資料類型|XDR 資料類型|對等用法<br /><br /> XPath 資料類型|SQL Server<br /><br /> 所使用的轉換|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
-|**Base64Binary**<br /><br /> **HexBinary**|**無**<br /><br /> **bin.base64bin.hex**|**不適用**|無<br /><br /> EmployeeID|  
+|**Base64Binary**<br /><br /> **hexBinary**|**無**<br /><br /> **bin.base64bin.hex**|**不適用**|無<br /><br /> EmployeeID|  
 |**布林**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  
 |**Decimal、 整數、 浮點數、 位元組、 short、 int、 long、 float、 double、 unsignedByte、 unsignedShort、 unsignedInt、 unsignedLong**|**數字、 int、 float、 i1、 i2、 i4、 i8、 r4、 r8ui1、 ui2、 ui4、 ui8**|**number**|CONVERT(float(53), EmployeeID)|  
 |**識別碼、 idref、 idrefsentity、 entities、 標記法、 nmtoken、 nmtokens DateTime、 字串、 AnyURI**|**id、 idref、 idrefsentity、 實體、 列舉、 標記法、 nmtoken、 nmtokens、 char、 dateTime、 dateTime.tz、 字串、 uri、 uuid**|**字串**|CONVERT(nvarchar(4000), EmployeeID, 126)|  

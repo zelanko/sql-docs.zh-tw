@@ -1,16 +1,16 @@
 ---
-title: "sys.resource_governor_workload_groups (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.resource_governor_workload_groups (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor_workload_groups
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_workload_groups catalog view
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2bc9e45c38c8dbe50d9bd7c5d6a8c79203c4fed
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 199ef10970da1f2bb9b10e716ecc5e9f894aa448
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcegovernorworkloadgroups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 |external_pool_id|**int**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 此工作負載群組所使用的外部資源集區的識別碼。|  
   
 ## <a name="remarks"></a>備註  
- 目錄檢視會顯示儲存的中繼資料。 若要查看記憶體中組態，請使用對應的動態管理檢視， [sys.dm_resource_governor_workload_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
+ 目錄檢視會顯示儲存的中繼資料。 若要查看記憶體中組態，請使用對應的動態管理檢視， [sys.dm_resource_governor_workload_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)。  
   
  如果資源管理員組態已經變更，但是尚未套用 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式，儲存的組態與記憶體中組態可能會不同。  
   
@@ -62,6 +62,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [資源管理員目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
+ [資源管理員目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
   
   

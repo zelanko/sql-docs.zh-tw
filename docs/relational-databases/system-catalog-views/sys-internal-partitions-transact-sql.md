@@ -1,16 +1,16 @@
 ---
-title: sys.internal_partitions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.internal_partitions (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -18,21 +18,22 @@ applies_to:
 dev_langs:
 - TSQL
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3280403d6194bd3f5370985d31e672752ed8c25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 160441134e0f848d9b4c46d6501638e8d46e3244
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  傳回一個資料列追蹤磁碟資料表上的資料行存放區索引的內部資料，每個資料列集。 這些資料列集是資料行存放區索引的內部和追蹤刪除資料列、 資料列群組對應和差異存放區資料列群組。 它們會針對每個資料表資料分割; 每個追蹤資料每一個資料表都至少一個資料分割。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在重建資料行存放區索引每次重新建立資料列集。   
+  傳回一個資料列追蹤磁碟資料表上的資料行存放區索引的內部資料，每個資料列集。 這些資料列集是資料行存放區索引的內部和追蹤刪除資料列、 資料列群組對應和差異存放區資料列群組。 它們會針對每個資料表資料分割; 每個追蹤資料每一個資料表都至少一個資料分割。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在重建資料行存放區索引每次重新建立資料列集。   
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
@@ -68,7 +69,7 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_column_privileges_ex (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_column_privileges_ex (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_column_privileges_ex
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges_ex
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f374a87fe41d08774eca9bd0e90de42d5204cbe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0c31ae66112acc5cf1831573e436995c68c5d7ff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**COLUMN_NAME**|**sysname**|每個資料行的資料行名稱**TABLE_NAME**傳回。 這個欄位一律會傳回值。|  
 |**授與者**|**sysname**|已授與此權限的資料庫使用者名稱**COLUMN_NAME**與列出**被授與者**。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此資料行一律是相同**TABLE_OWNER**。 這個欄位一律會傳回值。<br /><br /> **授與者**資料行可以是資料庫擁有者 (**TABLE_OWNER**) 或其他人對資料庫擁有者授與權限的 GRANT 陳述式中使用 WITH GRANT OPTION 子句。|  
 |**被授與者**|**sysname**|已授與此權限的資料庫使用者名稱**COLUMN_NAME**列出的**授與者**。 這個欄位一律會傳回值。|  
-|**權限**|**varchar (**32**)**|可用的資料行權限之一。 資料行權限可以是下列值之一 (或定義實作時，資料來源所支援的其他值)：<br /><br /> 選取 =**被授與者**可以擷取資料行的資料。<br /><br /> INSERT =**被授與者**插入新資料列時，可以提供資料給這個資料行 (由**被授與者**) 到資料表。<br /><br /> UPDATE =**被授與者**可以修改資料行中的現有資料。<br /><br /> 參考 =**被授與者**可以參考外部資料表中主索引鍵/外部索引鍵關聯性中的資料行。 主索引鍵/外部索引鍵關聯性是利用資料表條件約束來定義的。|  
+|**權限**|**varchar(**32**)**|可用的資料行權限之一。 資料行權限可以是下列值之一 (或定義實作時，資料來源所支援的其他值)：<br /><br /> 選取 =**被授與者**可以擷取資料行的資料。<br /><br /> INSERT =**被授與者**插入新資料列時，可以提供資料給這個資料行 (由**被授與者**) 到資料表。<br /><br /> UPDATE =**被授與者**可以修改資料行中的現有資料。<br /><br /> 參考 =**被授與者**可以參考外部資料表中主索引鍵/外部索引鍵關聯性中的資料行。 主索引鍵/外部索引鍵關聯性是利用資料表條件約束來定義的。|  
 |**IS_GRANTABLE**|**varchar (**3**)**|指出是否**被授與者**允許權限授與其他使用者 （通常稱為"grant with grant"權限）。 它可以是 YES、NO 或 NULL。 未知 (或 NULL) 值是指不適用 "grant with grant" 的資料來源。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -92,8 +92,8 @@ EXEC sp_column_privileges_ex @table_server = 'Seattle1',
    @table_catalog ='AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sp_table_privileges_ex &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_table_privileges_ex &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

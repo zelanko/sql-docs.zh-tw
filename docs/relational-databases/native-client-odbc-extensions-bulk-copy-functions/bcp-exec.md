@@ -1,16 +1,16 @@
 ---
-title: bcp_exec | Microsoft Docs
-ms.custom: 
+title: bcp_exec |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_exec
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9aa011135eba05c6cff1023f3168403c451c9e1a
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 17f835129b5c6632fdf22cc612212905af78d60d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpexec"></a>bcp_exec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +64,7 @@ RETCODE bcp_exec (
   
  **bcp_exec**是唯一大量複製函數很可能是任何長度的時間。 因此，它是唯一支援非同步模式的大量複製函數。 若要設定非同步模式，請使用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)設 SQL_ATTR_ASYNC_ENABLE 請先呼叫**bcp_exec**。 若要測試是否完成，呼叫**bcp_exec**具有相同參數。 如果大量複製尚未完成， **bcp_exec**傳回 SUCCEED_ASYNC。 它也會傳回在*pnRowsProcessed*已傳送至伺服器的資料列數目的狀態計數。 到達批次的結尾之前，不會認可傳送至伺服器的資料列。  
   
- 衄壽重大變更中大量複製中開始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，請參閱[執行大量複製作業 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 衄壽重大變更中大量複製中開始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，請參閱[執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用**bcp_exec**:  

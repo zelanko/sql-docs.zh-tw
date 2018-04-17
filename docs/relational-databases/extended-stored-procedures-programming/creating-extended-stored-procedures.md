@@ -1,15 +1,15 @@
 ---
-title: "建立擴充預存程序 |Microsoft 文件"
-ms.custom: 
+title: 建立擴充預存程序 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - warnings [SQL Server]
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], creating
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f70abd5174790d445e4b3854bcb6efd8576ff83
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f7669ac3c34d1b388ed077dd61e6b493b30ff580
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-extended-stored-procedures"></a>建立擴充預存程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,6 +81,6 @@ __declspec(dllexport) ULONG __GetXpVersion()
  若要為擴充預存程序 DLL 偵錯，將其複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn 目錄。 若要指定偵錯工作階段的可執行檔，請輸入路徑和檔案名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可執行檔 (例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)。 如需有關 sqlservr 引數的資訊，請參閱[sqlservr 應用程式](../../tools/sqlservr-application.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [srv_got_attention &#40;擴充預存程序 API &#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
+ [srv_got_attention&#40;擴充預存程序 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
   
   

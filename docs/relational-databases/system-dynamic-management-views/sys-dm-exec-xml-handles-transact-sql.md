@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_xml_handles (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_exec_xml_handles (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_xml_handles
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_xml_handles dynamic management function
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8d9b94690a487911414fdceeb9cd173116ea9c0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5a136adca5f9c44c763d8acbe82e933ec68954ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,7 +47,7 @@ dm_exec_xml_handles (session_id | 0 )
 ```  
   
 ## <a name="arguments"></a>引數  
- *session_id* | 0,  
+ *session_id* | 0  
  工作階段的識別碼。 如果*session_id*指定，則此函數會傳回指定的工作階段 XML 控制代碼資訊。  
   
  如果指定 0，這個函數會傳回所有工作階段的全部 XML 控制代碼資訊。  
@@ -72,7 +73,7 @@ dm_exec_xml_handles (session_id | 0 )
  存留期**sql_handles**用來擷取執行呼叫的 SQL 文字**sp_xml_preparedocument**存留時間超過時間用來執行查詢的快取的計畫。 如果在快取中沒有查詢文字，就不能使用函數結果中提供的資訊來擷取資料。 如果您執行許多大型批次就有可能發生這種情況。  
   
 ## <a name="permissions"></a>Permissions  
- 需要伺服器上的 VIEW SERVER STATE 權限，以查看呼叫端未擁有的所有工作階段或工作階段識別碼。 呼叫端永遠都可以查看自己目前工作階段識別碼的資料。  
+ 需要伺服器上的 VIEW SERVER STATE 權限，以查看呼叫端未擁有的所有工作階段或工作階段識別碼。 呼叫端永遠都可以查看自己目前工作階段識別碼的資料。      
   
 ## <a name="examples"></a>範例  
  下列範例選取了所有使用中的控制代碼。  
@@ -82,7 +83,12 @@ SELECT * FROM sys.dm_exec_xml_handles(0);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ <br>[動態管理檢視和函數 (TRANSACT-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+ <br>[執行相關動態管理檢視和函數 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+ <br>[sp_xml_preparedocument (TRANSACT-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
+ <br>[sp_xml_removedocument (TRANSACT-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+
+
+ 
   
   

@@ -2,7 +2,7 @@
 title: SQLRemoveDriver 函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c910c862bd24a29ace17a2ec92352917d41699e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 974c960fc9f92065871e26f3ccce8e234e8ccdf2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlremovedriver-function"></a>SQLRemoveDriver 函式
 **一致性**  
@@ -68,7 +68,7 @@ BOOL SQLRemoveDriver(
 ## <a name="diagnostics"></a>診斷  
  當**SQLRemoveDriver**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|在登錄中找不到元件|安裝程式無法移除驅動程式的資訊，因為它不存在於登錄或登錄中找不到。|  

@@ -1,16 +1,16 @@
 ---
-title: "sp_cursorprepare (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_cursorprepare (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_prepare_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b588770141c5d5593ef209e190203354c0ae4891
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1134a3edbbbf1a838207a122e43bbafb5ac0e18b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,23 +59,23 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  使用**ntext**字串做為輸入值時*stmt*參數化和*scrollopt* PARAMETERIZED_STMT 值為 ON。  
   
- *陳述式*  
+ *stmt*  
  定義資料指標結果集。 *Stmt*參數是必要而且會呼叫**ntext**， **nchar**或**nvarchar**輸入值。  
   
 > [!NOTE]  
 >  指定的規則*stmt*值會與 sp_cursoropen，發生例外狀況的相同， *stmt*字串資料類型必須是**ntext**。  
   
- *選項*  
+ *options*  
  傳回資料指標結果集資料行描述的選擇性參數。 *選項*必須符合下列需求**int**輸入值。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  捲動選項。 *scrollopt*是需要下列其中一個選擇性參數**int**輸入值。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -97,7 +97,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  並行控制選項。 *ccopt*是需要下列其中一個選擇性參數**int**輸入值。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (之前稱為 LOCKCC)|  
@@ -116,7 +116,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>備註  
  RPC 狀態參數是下列其中一項：  
   
-|值|描述|  
+|Value|설명|  
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|失敗|  
@@ -125,12 +125,12 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="examples"></a>範例  
  當*stmt*參數化和*scrollopt* PARAMETERIZED_STMT 值為 ON，字串的格式如下所示：  
   
- { *\<本機變數名稱 >**\<資料型別 >* } [，...*n* ]  
+ { *\<本機變數名稱 > * *\<資料型別 >* } [，...*n* ]  
   
-## <a name="see-also"></a>請參閱  
- [sp_cursorexecute &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_cursorexecute &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_add_alert (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_add_alert (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_alert
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66b0fd7fffb92a9646e99f84576651e4dd8b70e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4e6218ad7eaba6f6f6e108739dee392b0f9ec177
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,10 +69,10 @@ sp_add_alert [ @name = ] 'name'
 > [!NOTE]  
 >  只有**sysmessages**寫入 Microsoft Windows 應用程式記錄檔的錯誤導致傳送警示。  
   
- [ **@severity =** ] *severity*  
+ [  **@severity =** ]*嚴重性*  
  嚴重性層級 (從**1**透過**25**) 定義警示。 任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訊息儲存在**sysmessages**資料表傳送到[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 應用程式記錄檔具有指定的嚴重性導致傳送警示。 *嚴重性*是**int**，預設值是 0。 如果*message_id*用來定義警示，*嚴重性*必須**0**。  
   
- [ **@enabled =** ] *enabled*  
+ [  **@enabled =** ]*啟用*  
  指出警示目前的狀態。 *啟用*是**tinyint**，預設值是 1 （已啟用）。 如果**0**，未啟用，而且不會引發警示。  
   
  [ **@delay_between_responses =** ] *delay_between_responses*  
@@ -118,7 +118,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版沒有這項實作。 *raise_snmp_trap*是**tinyint**，預設值是 0。  
   
- [ **@performance_condition =** ] **'***performance_condition***'**  
+ [  **@performance_condition =** ] **'***performance_condition***'**  
  表示格式的值 '*itemcomparatorvalue*'。 *performance_condition*是**nvarchar （512)**預設值是 NULL，這些元素組成。  
   
 |格式元素|Description|  
@@ -190,12 +190,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_delete_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
+ [sp_add_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_altermessage &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_delete_alert &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sp_update_alert &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sys.sysperfinfo &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

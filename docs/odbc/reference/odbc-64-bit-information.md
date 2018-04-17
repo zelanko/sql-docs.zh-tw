@@ -1,27 +1,28 @@
 ---
-title: "ODBC 64 位元資訊 |Microsoft 文件"
-ms.custom: 
+title: ODBC 64 位元資訊 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1c7c878a850134d625c6c956449a400672ad6f7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c61f0177f6f4634c5ab3a68eb7bfbd267f4ee84a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位元資訊
 從 Windows Server 2003 開始，Microsoft 作業系統必須支援 64 位元 ODBC 程式庫。 ODBC 標頭和程式庫最初隨附於 MDAC 2.7 SDK 包含讓程式設計人員輕鬆地撰寫新的 64 位元平台程式碼的變更。 透過確定您的程式碼會使用下面所列的 ODBC 定義類型，您可以編譯相同 64 位元和 32 位元平台為基礎的原始程式碼**_WIN64**或**WIN32**巨集。  
@@ -502,5 +503,5 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 簡介](../../odbc/reference/introduction-to-odbc.md)

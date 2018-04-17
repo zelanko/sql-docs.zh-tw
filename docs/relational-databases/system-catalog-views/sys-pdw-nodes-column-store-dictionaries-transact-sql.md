@@ -1,32 +1,33 @@
 ---
-title: sys.pdw_nodes_column_store_dictionaries (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_column_store_dictionaries (TRANSACT-SQL) |Microsoft 文件
 ms.date: 03/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
-caps.latest.revision: 
+caps.latest.revision: 7
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c55ec1698643652c7329c012261b6f79370131cf
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: bc7104fedccb7f8937e99e47496e3ce25aac2c8c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
+# <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   包含使用資料行存放區索引中每個字典的資料列。 字典是用於編碼部分的資料類型而非全部，因此資料行存放區索引中並非所有資料行都有字典。 字典存在的形式可能是主要字典 (適用所有區段)，且或許另有其他次要字典用於資料行各區段的特定子集。  
@@ -49,8 +50,8 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [建立資料行存放區索引 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [建立資料行存放區索引&#40;Transact SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [sys.pdw_nodes_column_store_segments &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
   
   

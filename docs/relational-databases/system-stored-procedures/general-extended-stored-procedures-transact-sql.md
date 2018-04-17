@@ -1,16 +1,16 @@
 ---
-title: "一般擴充預存程序 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 一般擴充預存程序 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - stored procedures [SQL Server], extended
 - extending SQL Server functionality
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41bcbff2e5a60c5e1be2eb6e82d50133f3ff96c0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f9a2f0615a91215ab8a63a1c06a4a242f80f1162
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="general-extended-stored-procedures-transact-sql"></a>一般擴充預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 |[xp_loginconfig](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)|[xp_sqlmaint](../../relational-databases/system-stored-procedures/xp-sqlmaint-transact-sql.md)|  
 ||[xp_sscanf](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

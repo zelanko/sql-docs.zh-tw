@@ -20,11 +20,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e63022bd135d7c5fc78dd717b6a0bdd27dc5311
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d52870af657f5dce31cb5a0edac2f2ba7350e46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +41,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ```  
   
 #### <a name="parameters"></a>參數  
- [ **@enabled=** ] *enabled*  
+ [  **@enabled=** ]*啟用*  
  判斷是否已啟用透明資料加密。 *啟用*是**int**，而且可以是下列值之一：  
   
 -   0 = 已停用  

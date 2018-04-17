@@ -1,16 +1,16 @@
 ---
-title: "sp_change_subscription_properties (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_change_subscription_properties (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fe61cfc2088b75e2ab1af2c457073ad723dd7f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 42f06141f24970c2a787f9e0ddfca711a6657b8e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=**] **'***發行者***'**  
+ [ **@publisher=**] **'***publisher***'**  
  這是發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  這是發行者資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@property=**] **'***屬性***'**  
@@ -69,16 +69,16 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [  **@publication_type =** ] *publication_type*  
  指定發行集的複寫類型。 *publication_type*是**int**，而且可以是下列值之一。  
   
-|值|發行集類型|  
+|Value|發行集類型|  
 |-----------|----------------------|  
 |**0**|異動|  
-|**1**|快照式|  
+|**1**|快照集|  
 |**2**|合併式|  
 |NULL (預設值)|複寫決定了發行集的類型。 由於預存程序必須查看多份資料表，因此，相較於提供確實的發行集類型，這個選項會比較慢。|  
   
  下表描述發行項的屬性及這些屬性的值。  
   
-|屬性|值|Description|  
+|屬性|Value|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||指定快照集替代資料夾的位置。 如果設為 NULL，便會從發行者所指定的預設位置中，收取快照集檔案。|  
 |**distrib_job_login**||用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。|  
@@ -98,7 +98,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**主機名稱**||連接到發行者時所用的主機名稱。|  
 |**internet_url**||當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
 |**internet_login**||當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的密碼。|  
-|**internet_security_mode**|**1**|Web 同步處理使用 Windows 整合式驗證。 我們建議您搭配 Web 同步處理來使用基本驗證。 如需詳細資訊，請參閱 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)。|  
+|**internet_security_mode**|**1**|Web 同步處理使用 Windows 整合式驗證。 我們建議您搭配 Web 同步處理來使用基本驗證。 如需詳細資訊，請參閱[設定 Web 同步處理](../../relational-databases/replication/configure-web-synchronization.md)。|  
 ||**0**|Web 同步處理使用基本驗證。<br /><br /> 注意： Web 同步處理需要 Web 伺服器的 SSL 連線。|  
 |**internet_timeout**||Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
 |**應**||代表 Web 同步處理之複寫接聽程式位置的 URL。|  
@@ -127,12 +127,12 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_change_subscription_properties**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [檢視及修改提取訂閱屬性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_addmergepullsubscription_agent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_addpullsubscription_agent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_addpullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

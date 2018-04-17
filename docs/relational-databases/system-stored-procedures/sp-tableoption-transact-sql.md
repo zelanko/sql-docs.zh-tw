@@ -1,16 +1,16 @@
 ---
-title: "sp_tableoption (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_tableoption (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 09/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tableoption_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b468d62444bd3c9217cc7f931a2786034baec12
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c6bfbbed0bdb29be74871fcc62a76fce2f3555d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,13 +59,13 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*'  
  這是資料表選項名稱。 *option_name*是**varchar （35)**，沒有預設值是 NULL。 *option_name*可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |table lock on bulk load|當停用 (預設值) 時，它會讓使用者定義資料表上的大量載入程序取得資料列鎖定。 當啟用時，使用者定義資料表的大量載入處理序會取得大量更新鎖定。|  
 |insert row lock|不再支援。<br /><br /> 這個選項對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的鎖定行為沒有影響，併入它的目的，只是為了與現有的指令碼和程序相容。|  
 |text in row|當它是 OFF 或 0 (停用，預設值) 時，它不會變更目前的行為，資料列中沒有 BLOB。<br /><br /> 當指定和@OptionValue是 ON （已啟用） 或 24 至 7000 之間，新的整數值**文字**， **ntext**，或**映像**字串會直接儲存在資料列。 所有現有的 BLOB (二進位大型物件：**文字**， **ntext**，或**映像**資料) 將會更新 BLOB 值時變更為 text in row 格式。 如需詳細資訊，請參閱＜備註＞。|  
-|large value types out of row|1 = **varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**並儲存在資料表中的大型使用者定義型別 (UDT) 資料行資料列外部，並且以 16 位元組指標指向根。<br /><br /> 0 = **varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**和大型 UDT 值直接儲存在資料列時，最大限制8000 個位元組，只要可以容納在記錄中的值。 如果記錄無法容納值，便會將指標儲存在同資料列中，其餘部分會儲存在資料列外 (LOB 儲存空間中)。 預設值為 0。<br /><br /> 大型使用者定義型別 (UDT) 適用於：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 <br /><br /> 使用 TEXTIMAGE_ON 選項[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)指定大型資料類型的儲存體的位置。 |  
-|Vardecimal 儲存格式|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 若為 TRUE、ON 或 1，指定的資料表會啟用為 Vardecimal 儲存格式。 若為 FALSE、OFF 或 0，資料表則不會啟用為 Vardecimal 儲存格式。 只有在使用資料庫啟用為 vardecimal 儲存格式時，就可以啟用 Vardecimal 儲存格式[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。 在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本， **vardecimal**儲存格式已被取代。 請改用資料列壓縮。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 預設值為 0。|  
+|large value types out of row|1 = **varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**並儲存在資料表中的大型使用者定義型別 (UDT) 資料行資料列外部，並且以 16 位元組指標指向根。<br /><br /> 0 = **varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**和大型 UDT 值直接儲存在資料列時，最大限制8000 個位元組，只要可以容納在記錄中的值。 如果記錄無法容納值，便會將指標儲存在同資料列中，其餘部分會儲存在資料列外 (LOB 儲存空間中)。 預設值是 0。<br /><br /> 大型使用者定義型別 (UDT) 適用於：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 <br /><br /> 使用 TEXTIMAGE_ON 選項[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)指定大型資料類型的儲存體的位置。 |  
+|Vardecimal 儲存格式|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 若為 TRUE、ON 或 1，指定的資料表會啟用為 Vardecimal 儲存格式。 若為 FALSE、OFF 或 0，資料表則不會啟用為 Vardecimal 儲存格式。 只有在使用資料庫啟用為 vardecimal 儲存格式時，就可以啟用 Vardecimal 儲存格式[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。 在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本， **vardecimal**儲存格式已被取代。 請改用資料列壓縮。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 預設值是 0。|  
   
  [ @OptionValue =] '*值*'  
  為是否*option_name*已啟用 （TRUE、 ON 或 1） 或停用 (FALSE、 OFF 或 0)。 *值*是**varchar(12)**，沒有預設值。 *值*是不區分大小寫。  
@@ -85,7 +86,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   啟用 text in row。  
   
--   字串的長度小於指定的限制@OptionValue  
+-   字串的長度小於指定的限制 @OptionValue  
   
 -   資料列包含足夠的空間。  
   
@@ -139,10 +140,10 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
    'vardecimal storage format', 'ON';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -1,32 +1,32 @@
 ---
-title: "變更資料擷取函數 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 變更資料擷取函數 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - change data capture [SQL Server], functions
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36d2d3a46745c731b6da3835de4fbaffe384a839
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9e779462e9d116d49d236afb01b517fc848500d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>異動資料擷取函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

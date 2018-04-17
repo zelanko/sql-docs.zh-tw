@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_parameter_encryption (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_describe_parameter_encryption (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_parameter_encryption
@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_describe_parameter_encryption
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b458e871ff32abe97727fc5d1a2c07f6c628e1cf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 59cd9e2425f55c8b3b138d25de298b8fae400474
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,9 +51,9 @@ sp_describe_parameter_encryption
  一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 Transact SQL_batch 可能是 nvarchar （n） 或 nvarchar （max）。  
   
  [ @params =] N'parameters'  
- *@params*提供的宣告字串參數，為 TRANSACT-SQL 批次，類似於 sp_executesql。 參數可能是 nvarchar （n） 或 nvarchar （max）。  
+ *@params* 提供的宣告字串參數，為 TRANSACT-SQL 批次，類似於 sp_executesql。 參數可能是 nvarchar （n） 或 nvarchar （max）。  
   
- 是一個字串，包含的所有參數都已內嵌在定義[!INCLUDE[tsql](../../includes/tsql-md.md)]_batch。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 指定陳述式中每個參數必須定義在 *@params* 。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次陳述式中的不包含參數，  *@params* 並非必要。 這個參數的預設值是 NULL。  
+ 是一個字串，包含的所有參數都已內嵌在定義[!INCLUDE[tsql](../../includes/tsql-md.md)]_batch。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 指定陳述式中每個參數必須定義在*@params*。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次陳述式中的不包含參數， *@params*並非必要。 這個參數的預設值是 NULL。  
   
 ## <a name="return-value"></a>傳回值  
  0 表示成功。 任何其他項目表示失敗。  
@@ -70,10 +71,10 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|在結果集資料列的識別碼。|  
 |**database_id**|**int**|資料庫識別碼。|  
-|**column_encryption_key_id**|**int**|資料行加密金鑰識別碼。注意： 這個 id 表示中的資料列[sys.column_encryption_keys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)目錄檢視。|  
+|**column_encryption_key_id**|**int**|資料行加密金鑰識別碼。注意： 這個 id 表示中的資料列[sys.column_encryption_keys &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)目錄檢視。|  
 |**column_encryption_key_version**|**int**|保留供日後使用。 目前，一定包含 1。|  
-|**column_encryption_key_metadata_version**|**binary （8)**|表示資料行加密金鑰的建立時間的時間戳記。|  
-|**column_encryption_key_encrypted_value**|**varbinary （4000)**|資料行加密金鑰加密的值。|  
+|**column_encryption_key_metadata_version**|**binary(8)**|表示資料行加密金鑰的建立時間的時間戳記。|  
+|**column_encryption_key_encrypted_value**|**varbinary(4000)**|資料行加密金鑰加密的值。|  
 |**column_master_key_store_provider_name**|**sysname**|包含用來產生資料行加密金鑰的加密的值的資料行主要金鑰的金鑰存放區提供者名稱。|  
 |**column_master_key_path**|**nvarchar(4000)**|資料行主要金鑰，用來產生資料行加密金鑰的加密的值的機碼路徑。|  
 |**column_encryption_key_encryption_algorithm_name**|**sysname**|用來產生資料行加密金鑰的加密值的加密演算法名稱。|  
@@ -83,7 +84,7 @@ sp_describe_parameter_encryption
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|在結果集中的資料列的識別碼。|  
-|**parameter_name**|**sysname**|其中一個指定的參數名稱 *@params* 引數。|  
+|**parameter_name**|**sysname**|其中一個指定的參數名稱*@params*引數。|  
 |**column_encryption_algorithm**|**tinyint**|指出資料行，此參數設定的加密演算法的程式碼會對應至。 目前支援的值為： 2 **AEAD_AES_256_CBC_HMAC_SHA_256**。|  
 |**column_encryption_type**|**tinyint**|指出資料行，此參數設定的加密類型的程式碼會對應至。 支援的值為：<br /><br /> 0 – 純文字 （未加密的資料行）<br /><br /> 1 – 隨機加密<br /><br /> 2 – 決定性加密。|  
 |**column_encryption_key_ordinal**|**int**|程式碼中的第一個結果的資料列的設定。 參考的資料列描述資料行設定資料行加密金鑰，參數會對應至。|  
@@ -169,7 +170,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [永遠加密 &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [永遠加密 &#40;用戶端開發&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

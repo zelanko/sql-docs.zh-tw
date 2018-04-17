@@ -1,16 +1,16 @@
 ---
-title: "bcp_sendrow |Microsoft 文件"
-ms.custom: 
+title: bcp_sendrow |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_sendrow
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_sendrow function
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4312fedbd01082501faec1efd89a2cb1cd5161e
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 40bbe32a60091b158d7c40b579f2d3ee8c54df19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpsendrow"></a>bcp_sendrow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,9 +60,9 @@ RETCODE bcp_sendrow (
   
  如果**bcp_bind**指定長型、 變動長度資料類型，例如，呼叫*eDataType* SQLTEXT 和非 NULL 的參數*pData*參數、 **bcp_sendrow**傳送整個資料值，就如同任何其他資料型別。 如果，不過， **bcp_bind**有 NULL *pData*參數， **bcp_sendrow**以傳送至指定的資料的所有資料行之後，立即將控制權傳回給應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 應用程式可以接著呼叫[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)重複將長型、 變動長度資料傳送給[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，一次一個區塊。 如需詳細資訊，請參閱[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)。  
   
- 當**bcp_sendrow**用於大量複製資料列從程式變數到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表，會認可資料列在使用者呼叫時，才[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). 使用者可以選擇呼叫**bcp_batch**之後每個 *n* 資料列或內送資料的期間有暫停情況發生時。 如果**bcp_batch**是永遠不會呼叫，會認可資料列時**bcp_done**呼叫。  
+ 當**bcp_sendrow**用於大量複製資料列從程式變數到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表，會認可資料列在使用者呼叫時，才[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). 使用者可以選擇呼叫**bcp_batch**之後每個*n*資料列或內送資料的期間有暫停情況發生時。 如果**bcp_batch**是永遠不會呼叫，會認可資料列時**bcp_done**呼叫。  
   
- 衄壽重大變更中大量複製中開始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，請參閱[執行大量複製作業 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 衄壽重大變更中大量複製中開始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，請參閱[執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

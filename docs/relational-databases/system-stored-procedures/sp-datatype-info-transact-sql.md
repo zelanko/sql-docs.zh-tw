@@ -1,16 +1,16 @@
 ---
-title: "< sp_datatype_info (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: < sp_datatype_info (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_datatype_info_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32edf386d51ab28ae453db75c4adc8067c747cff
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c93dec5dc4f6ed8ed01244cd3c30c8725e91efce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@data_type=** ] *data_type*  
+ [ **@data_type=** ] *data_type*  
  這是指定之資料類型的代號。 若要取得所有資料類型的清單，請省略這個參數。 *data_type*是**int**，預設值是 0。  
   
- [  **@ODBCVer=** ] *odbc_version*  
+ [ **@ODBCVer=** ] *odbc_version*  
  這是所使用的 ODBC 版本。 *odbc_version*是**tinyint**，預設值是 2。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -63,9 +63,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS 相依資料類型。|  
 |DATA_TYPE|**smallint**|這個類型的所有資料行所對應之 ODBC 類型的代碼。|  
 |PRECISION|**int**|資料來源的資料類型最大有效位數。 有效位數不適用的資料類型會傳回 NULL。 PRECISION 資料行的傳回值為十進位數。|  
-|LITERAL_PREFIX|**varchar (**32**)**|常數前面所用的一或多個字元。 例如，單引號 (**'**) 用於字元類型，0x 用於二進位。|  
-|LITERAL_SUFFIX|**varchar (**32**)**|用來結束常數的一或多個字元。 例如，單引號 (**'**) 用於字元類型，而二進位不用引號。|  
-|CREATE_PARAMS|**varchar (**32**)**|這個資料類型之建立參數的描述。 例如，**十進位**是"precision，scale，" **float**是 NULL，和**varchar**是"max_length"。|  
+|LITERAL_PREFIX|**varchar(**32**)**|常數前面所用的一或多個字元。 例如，單引號 (**'**) 用於字元類型，0x 用於二進位。|  
+|LITERAL_SUFFIX|**varchar(**32**)**|用來結束常數的一或多個字元。 例如，單引號 (**'**) 用於字元類型，而二進位不用引號。|  
+|CREATE_PARAMS|**varchar(**32**)**|這個資料類型之建立參數的描述。 例如，**十進位**是"precision，scale，" **float**是 NULL，和**varchar**是"max_length"。|  
 |NULLABLE|**smallint**|指定 Null 屬性。<br /><br /> 1 = 允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
 |CASE_SENSITIVE|**smallint**|指定是否區分大小寫。<br /><br /> 1 = 這類型的所有資料行都會區分大小寫 (用於定序)。<br /><br /> 0 = 這個類型的所有資料行都不區分大小寫。|  
 |SEARCHABLE|**smallint**|指定資料行類型的搜尋功能：<br /><br /> 1 = 無法搜尋。<br /><br /> 2 = 可使用 LIKE 搜尋。<br /><br /> 3 = 可使用 WHERE 搜尋。<br /><br /> 4 = 可使用 WHERE 或 LIKE 搜尋。|  
@@ -97,8 +97,8 @@ EXEC sp_datatype_info -9;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

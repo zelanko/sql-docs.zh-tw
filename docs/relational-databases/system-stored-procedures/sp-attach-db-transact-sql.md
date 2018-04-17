@@ -1,16 +1,16 @@
 ---
-title: "sp_attach_db (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_attach_db (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_db_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-caps.latest.revision: 
+caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b17a11f31faff52e2519d2c10d34af88108f0399
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 460d9eab90fb65f4d271829d76d72dfa26f0b1b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  這是要附加至伺服器的資料庫名稱。 名稱必須是唯一的。 *dbname*是**sysname**，預設值是 NULL。  
   
  [ **@filename1=** ] **'***filename_n***'**  
- 資料庫檔案的實體名稱，包括路徑。 *filename_n*是**nvarchar （260)**，預設值是 NULL。 您最多可以指定 16 個檔案名稱。 參數名稱開始於 **@filename1**  ，可以遞增到 **@filename16** 。 檔案名稱清單至少必須包括主要檔案。 主要檔案包含指向資料庫中其他檔案的系統資料表。 這份清單也必須包括資料庫卸離之後所移動的任何檔案。  
+ 資料庫檔案的實體名稱，包括路徑。 *filename_n*是**nvarchar （260)**，預設值是 NULL。 您最多可以指定 16 個檔案名稱。 參數名稱開始於**@filename1** ，可以遞增到**@filename16**。 檔案名稱清單至少必須包括主要檔案。 主要檔案包含指向資料庫中其他檔案的系統資料表。 這份清單也必須包括資料庫卸離之後所移動的任何檔案。  
   
 > [!NOTE]  
 >  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
@@ -85,14 +85,14 @@ sp_attach_db [ @dbname= ] 'dbname'
   
 -   如果您要將資料庫附加至與原始資料庫相同的伺服器執行個體和版本，則不需要其他步驟。  
   
--   如果您將資料庫附加至相同的伺服器執行個體，但升級後的版本，您必須執行[sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md)附加作業完成之後，升級複寫。  
+-   如果您將資料庫附加至相同但版本已升級的伺服器執行個體，則必須在附加作業完成後，執行 [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) 來升級複寫。  
   
--   如果您將資料庫附加至不同的伺服器執行個體，不限於任何版本，您必須執行[sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)附加作業完成之後移除複寫。  
+-   如果您將資料庫附加至不同的伺服器執行個體，則不論版本為何，都必須在附加作業完成後，執行 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 來移除複寫。  
   
  當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。  
   
 ## <a name="permissions"></a>Permissions  
- 如需附加資料庫時，如何處理權限資訊，請參閱[CREATE DATABASE &#40;SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ 如需附加資料庫時，如何處理權限資訊，請參閱[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&AMP;&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的檔案附加至目前的伺服器。  

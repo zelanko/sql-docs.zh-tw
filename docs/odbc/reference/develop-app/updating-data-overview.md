@@ -1,15 +1,16 @@
 ---
-title: "更新資料概觀 |Microsoft 文件"
-ms.custom: 
+title: 更新資料概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data [ODBC], about updating data
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - updating data [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 587233467dbc265be12a009b34ce0376acfd0911
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e5accaa3a443f7cc850fd6b4012430043d402203
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-data-overview"></a>更新資料概觀
 執行 SQL 陳述式，或呼叫應用程式可以更新資料**SQLSetPos**或**SQLBulkOperations**。 **更新**，**刪除**，和**插入**陳述式會直接處理資料來源和驅動程式通常都支援。 搜尋 update 和 delete 陳述式包含要變更的資料列的規格。 定位 update 和 delete 陳述式和**SQLSetPos**透過資料指標的資料來源並較廣受支援。  

@@ -2,7 +2,7 @@
 title: SQLGetDiagField 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函數
 **一致性**  
@@ -84,7 +84,7 @@ SQLRETURN SQLGetDiagField(
   
  如果*DiagInfoPtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*DiagInfoPtr*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]如果*Sqlgetdiagfield*是 ODBC 定義的診斷和*DiagInfoPtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *DiagInfoPtr*. 如果*Sqlgetdiagfield*是 ODBC 定義的欄位和\* *DiagInfoPtr*是整數， *Columnsize*會被忽略。 如果中的值 *\*DiagInfoPtr*是 Unicode 字串 (當呼叫**SQLGetDiagFieldW**)、 *Columnsize*引數必須是偶數。  
   
  如果*Sqlgetdiagfield*是驅動程式定義的欄位，應用程式設定指出欄位驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
@@ -262,6 +262,6 @@ n 層定義 *|「 建立網域 」|SQL_DIAG_CREATE_DOMAIN|
 |---------------------------|---------|  
 |取得多個欄位的診斷資料結構|[SQLGetDiagRec 函式](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

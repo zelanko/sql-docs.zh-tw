@@ -1,15 +1,16 @@
 ---
-title: "撰寫 ODBC 3.x 驅動程式 |Microsoft 文件"
-ms.custom: 
+title: 撰寫 ODBC 3.x 驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading drivers [ODBC]
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b73a32d607bb2fc2c1cd2392ab4d1b436e7ed94d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27bdcf1a1254b24c87280fbfc86e4374e277a976
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-odbc-3x-drivers"></a>寫入 ODBC 3.x 驅動程式
 下表會顯示在 ODBC 3 函式支援。*x*驅動程式和 ODBC 應用程式，以及對應函式的呼叫針對 ODBC 3 時，請執行驅動程式管理員。*x*驅動程式。  
   
-|函數|支援<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 驅動程式嗎？|支援<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 應用程式嗎？|對應/支援<br /><br /> ODBC 3。*x*<br /><br /> 驅動程式管理員<br /><br /> ODBC 3。*x*驅動程式嗎？|  
+|函數|Supported<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 驅動程式嗎？|Supported<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 應用程式嗎？|對應/支援<br /><br /> ODBC 3。*x*<br /><br /> 驅動程式管理員<br /><br /> ODBC 3。*x*驅動程式嗎？|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|否|沒有 [1]|是|  
 |**SQLAllocEnv**|否|沒有 [1]|是|  

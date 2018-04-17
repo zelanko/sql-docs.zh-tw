@@ -1,15 +1,15 @@
 ---
-title: "CLR 整合程式設計模型限制 |Microsoft 文件"
-ms.custom: 
+title: CLR 整合程式設計模型限制 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], programming model restrictions
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d282b317a5ea31fe8170a847f5b425bcd1af4fd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a63ef5e4f3d2db6db5b90c91af4714fa035f45bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 整合程式設計模型限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-當您建立 managed 預存程序或其他 managed 的資料庫物件時，有執行的某些程式碼檢查[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，需要考量。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行 managed 程式碼組件上的檢查，它在資料庫中，第一次註冊時使用**CREATE ASSEMBLY**陳述式，也會在執行階段。 也會在執行階段檢查 Managed 程式碼，因為在組件中，可能會有執行階段絕對無法到達的程式碼路徑。  特別是這樣提供了註冊協力廠商組件的彈性，如此一來，當組件中的不安全程式碼設計為在用戶端環境中執行，但是絕對不會在主控的 CLR 內執行時，就不會封鎖該組件。 Managed 程式碼必須符合的需求取決於是否將組件註冊為**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**，**安全**最嚴格，並如下所示。  
+  當您建立 managed 預存程序或其他 managed 的資料庫物件時，有執行的某些程式碼檢查[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，需要考量。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行 managed 程式碼組件上的檢查，它在資料庫中，第一次註冊時使用**CREATE ASSEMBLY**陳述式，也會在執行階段。 也會在執行階段檢查 Managed 程式碼，因為在組件中，可能會有執行階段絕對無法到達的程式碼路徑。  特別是這樣提供了註冊協力廠商組件的彈性，如此一來，當組件中的不安全程式碼設計為在用戶端環境中執行，但是絕對不會在主控的 CLR 內執行時，就不會封鎖該組件。 Managed 程式碼必須符合的需求取決於是否將組件註冊為**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**，**安全**最嚴格，並如下所示。  
   
  除了對 Managed 程式碼組件所加諸的限制以外，也有授與的程式碼安全性權限。 Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取安全性 (CAS) 的安全性模型。 在此模型中，將會根據程式碼的識別來授與權限給組件。 **安全**， **EXTERNAL_ACCESS**，和**UNSAFE**組件具有不同的 CAS 權限。 如需詳細資訊，請參閱[CLR 整合程式碼存取安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)。  
   

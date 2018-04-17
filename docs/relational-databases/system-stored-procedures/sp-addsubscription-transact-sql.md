@@ -1,7 +1,7 @@
 ---
 title: p (TRANSACT-SQL) |Microsoft 文件
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 08b375e45d672ca7f1286a8012ca0c5a6304c481
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,13 +82,13 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication=] '*publication*'  
+ [ @publication=] '*發行集*'  
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
- [ @article=] '*article*'  
+ [ @article=] '*文章*'  
  這是發行集訂閱的發行項。 *發行項*是**sysname**，所有的預設值。 如果是 all，就會將訂閱加入該發行集的所有發行項中。 只有 all 或 NULL 值支援 Oracle 發行者。  
   
- [ @subscriber=] '*subscriber*'  
+ [ @subscriber=] '*訂閱者*'  
  這是訂閱者的名稱。 *訂閱者*是**sysname**，預設值是 NULL。  
   
  [ @destination_db=] '*destination_db*'  
@@ -108,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  一律會傳送系統資料表和資料。  
   
- [ @status=] '*status*'  
+ [ @status=] '*狀態*'  
  這是訂閱狀態。 *狀態*是**sysname**，預設值是 NULL。 如果未明確設定這個參數，複寫會自動將它設定為這些值之一。  
   
 |Value|Description|  
@@ -205,7 +205,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  這是要執行的選擇性命令提示字元。 *optional_command_line*是**nvarchar （4000)**，預設值是 NULL。  
   
- [ @reserved=] '*reserved*'  
+ [ @reserved=] '*保留*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
@@ -267,7 +267,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @fileidhint= ] *fileidhint*  
  識別要還原之備份組的序數值。 *fileidhint*是**int**，預設值是 NULL。  
   
- [ @unload= ] *unload*  
+ [ @unload=]*卸載*  
  指定在從備份初始化完成之後，是否應該卸載磁帶備份裝置。 *卸載*是**元**，預設值是 1。 1 指定應該卸載磁帶。 *卸載*時，才使用*backupdevicetype*的磁帶。  
   
  [ @subscriptionlsn= ] *subscriptionlsn*  
@@ -326,10 +326,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [為非 SQL Server 訂閱者建立訂閱](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_addpushsubscription_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

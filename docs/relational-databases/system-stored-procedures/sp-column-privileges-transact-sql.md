@@ -1,16 +1,16 @@
 ---
-title: "sp_column_privileges (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_column_privileges (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_column_privileges_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f930dc96633f526259dccf89f7fb592a4f9caf10
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8f3791722797f9c735e7801c989bc155fa9aafc0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|傳回的 TABLE_NAME 之各個資料行的資料行名稱。 這個欄位一律會傳回值。|  
 |GRANTOR|**sysname**|已將這份 COLUMN_NAME 的權限授與列出之 GRANTEE 的資料庫使用者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行一律與 TABLE_OWNER 相同。 這個欄位一律會傳回值。<br /><br /> 另外，GRANTOR 資料行也可能是資料庫擁有者 (TABLE_OWNER)，或資料庫擁有者利用 GRANT 陳述式中之 WITH GRANT OPTION 子句來授與權限的使用者。|  
 |GRANTEE|**sysname**|列出的 GRANTOR 已將這份 COLUMN_NAME 的權限授與資料庫使用者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行一律包括 sysusers 資料表中的資料庫使用者。 這個欄位一律會傳回值。|  
-|PRIVILEGE|**varchar (**32**)**|可用的資料行權限之一。 資料行權限可以是下列值之一 (或定義實作時，資料來源所支援的其他值)：<br /><br /> SELECT = GRANTEE 可以擷取資料行的資料。<br /><br /> INSERT = GRANTEE 可以在新資料列插入資料表 (GRANTEE 執行這個動作) 時，提供這個資料行的資料。<br /><br /> UPDATE = GRANTEE 可以修改資料行中現有的資料。<br /><br /> REFERENCES = GRANTEE 可以在主索引鍵/外部索引鍵關聯性中，參考外部資料表中的資料行。 主索引鍵/外部索引鍵關聯性是利用資料表條件約束來定義的。|  
+|PRIVILEGE|**varchar(**32**)**|可用的資料行權限之一。 資料行權限可以是下列值之一 (或定義實作時，資料來源所支援的其他值)：<br /><br /> SELECT = GRANTEE 可以擷取資料行的資料。<br /><br /> INSERT = GRANTEE 可以在新資料列插入資料表 (GRANTEE 執行這個動作) 時，提供這個資料行的資料。<br /><br /> UPDATE = GRANTEE 可以修改資料行中現有的資料。<br /><br /> REFERENCES = GRANTEE 可以在主索引鍵/外部索引鍵關聯性中，參考外部資料表中的資料行。 主索引鍵/外部索引鍵關聯性是利用資料表條件約束來定義的。|  
 |IS_GRANTABLE|**varchar (**3**)**|指出是否允許 GRANTEE 將權限授與其他使用者 (通常稱為 "grant with grant" 權限)。 它可以是 YES、NO 或 NULL。 未知 (或 NULL) 值是指不適用 "grant with grant" 的資料來源。|  
   
 ## <a name="remarks"></a>備註  
@@ -95,7 +96,7 @@ EXEC sp_column_privileges @table_name = 'Employee'
     ,@column_name = 'SalariedFlag';  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

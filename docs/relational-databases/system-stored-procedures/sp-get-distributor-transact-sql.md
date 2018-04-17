@@ -1,16 +1,16 @@
 ---
-title: "sp_get_distributor (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_get_distributor (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a9a52ebbb8e17ff88008b2b04208a0d383179ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4176c160e069dc1cb2061f2b3e6257e195b593b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_get_distributor
 ## <a name="permissions"></a>Permissions  
  任何使用者都可以執行**sp_get_distributor**。 非 NULL 會傳回結果集時，此預存程序執行的成員**db_owner**或**replmonitor**固定資料庫角色的成員的散發資料庫上**db_owner**至少一個已發行的資料庫上固定的資料庫角色。 非 NULL 結果集也會傳回此預存程序程式執行時的發行集存取清單 (PAL) 中的使用者至少一個已發行資料庫，還是也可以執行在散發資料庫的非 SQL Server 發行者的 PAL ﹜**預存程序_get_distributor**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [散發者與發行者資訊指令碼](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

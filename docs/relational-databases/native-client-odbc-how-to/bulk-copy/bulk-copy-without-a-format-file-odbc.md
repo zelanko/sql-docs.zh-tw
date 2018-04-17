@@ -1,15 +1,15 @@
 ---
-title: "大量複製不使用格式檔案 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 大量複製不使用格式檔案 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], file formats
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 697f58426c18dc311416ba23479598a7a3573c10
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 28a873deb8d732dc68e3105d7b5e51f584cd7a98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>不使用格式檔案進行大量複製 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,6 +165,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [大量複製與 SQL Server ODBC 驅動程式如何主題 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [大量複製與 SQL Server ODBC 驅動程式如何主題 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

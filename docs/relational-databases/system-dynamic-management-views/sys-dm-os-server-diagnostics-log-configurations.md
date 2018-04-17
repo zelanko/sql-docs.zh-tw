@@ -1,16 +1,16 @@
 ---
-title: sys.dm_os_server_diagnostics_log_configurations | Microsoft Docs
-ms.custom: 
+title: sys.dm_os_server_diagnostics_log_configurations |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_server_diagnostics_log_configurations
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - dm_os_server_diagnostics_log_configurations
 - sys.dm_os_server_diagnostics_log_configurations
 ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f73f0e2c1fc3223801bdd95d96d5bba8c19351f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: feb0087a0b2e905464b5e353eb5a951d12c5f0db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosserverdiagnosticslogconfigurations"></a>sys.dm_os_server_diagnostics_log_configurations
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/03/2018
 |is_enabled|**bit**|指定是要開啟或關閉記錄。<br /><br /> 1 = 開啟診斷記錄功能<br /><br /> 0 = 關閉診斷記錄功能|  
 |max_size|**int**|每個診斷記錄檔可成長的大小上限 (以 MB 為單位)。 預設值是 100 MB。|  
 |max_files|**int**|在回收以用於新的診斷記錄檔之前，電腦上可儲存的診斷記錄檔數目上限。|  
-|路徑|**nvarchar(260)**|指定診斷記錄檔位置的路徑。 預設位置是\<\MSSQL\Log > 的安裝資料夾內[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]容錯移轉叢集執行個體。|  
+|路徑|**nvarchar(260)**|指定診斷記錄檔位置的路徑。 預設位置是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體之安裝資料夾內的 \<\MSSQL\Log>。|  
   
 ## <a name="permissions"></a>Permissions  
  需要 SQL Server 容錯移轉叢集執行個體的 VIEW SERVER STATE 權限。  

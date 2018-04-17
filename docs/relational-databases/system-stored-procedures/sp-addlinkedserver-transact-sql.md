@@ -1,16 +1,16 @@
 ---
-title: "sp_addlinkedserver (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addlinkedserver (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 09/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlinkedserver_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-caps.latest.revision: 
+caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 35173890392c69d6ef6fe40c71b484ae9db3bee3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@server=** ] **'***伺服器***'**  
+ [ **@server=** ] **'***server***'**  
  這是您要建立的連結伺服器名稱。 *server* 是 **sysname**，沒有預設值。  
   
  [  **@srvproduct=** ] **'***product_name***'**  
@@ -72,7 +72,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  針對建立連結的伺服器時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，可以使用 「 SERVER 關鍵字做為伺服器指定的執行個體 =*servername*\\*instancename*指定的特定執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *servername*所在電腦的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在執行，並*instancename*是特定執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者連接。  
   
 > [!NOTE]  
->  若要存取鏡像資料庫，連接字串必須包含資料庫名稱。 這個名稱是讓資料存取提供者進行容錯移轉嘗試所需的名稱。 中可以指定資料庫 **@provstr** 或 **@catalog** 參數。 此外，連接字串也可以提供容錯移轉夥伴名稱。  
+>  若要存取鏡像資料庫，連接字串必須包含資料庫名稱。 這個名稱是讓資料存取提供者進行容錯移轉嘗試所需的名稱。 中可以指定資料庫**@provstr**或**@catalog**參數。 此外，連接字串也可以提供容錯移轉夥伴名稱。  
   
  [  **@catalog=** ] **'***目錄***'**  
  這是連接 OLE DB 提供者時所用的目錄。 *目錄*是**sysname**，預設值是 NULL。 *目錄*被當做 DBPROP_INIT_CATALOG 屬性，以初始化 OLE DB 提供者。 當您對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體定義連結伺服器時，目錄會參考連結伺服器所對應的預設資料庫。  
@@ -88,9 +88,9 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 |遠端 OLE DB 資料來源|OLE DB 提供者|product_name|provider_name|data_source|location|provider_string|catalog|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> （預設值）||||||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者||**SQLNCLI**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的網路名稱 (適用於預設執行個體)|||資料庫名稱 (選擇性)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者||**SQLNCLI**|*servername*\\*instancename* （適用於特定的執行個體）|||資料庫名稱 (選擇性)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> （預設值）||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者||**SQLNCLI**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的網路名稱 (適用於預設執行個體)|||資料庫名稱 (選擇性)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者||**SQLNCLI**|*servername*\\*instancename* （適用於特定的執行個體）|||資料庫名稱 (選擇性)|  
 |Oracle 第 8 版和更新的版本|Oracle OLE DB 提供者|任意|**（oraoledb.oracle)**|Oracle 資料庫的別名||||  
 |Access/Jet|Microsoft OLE DB Provider for Jet|任意|**Microsoft.Jet.OLEDB.4.0**|Jet 資料庫檔案的完整路徑||||  
 |ODBC 資料來源|Microsoft OLE DB Provider for ODBC|任意|**MSDASQL**|ODBC 資料來源的系統 DSN||||  
@@ -310,14 +310,14 @@ exec ('INSERT INTO t1tutut2 VALUES(1),(2),(3)') at myLinkedServer
 select * from myLinkedServer.myDatabase.dbo.myTable  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [分散式的查詢預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [sp_setnetname &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [分散式查詢預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_setnetname &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [系統資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [系統資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

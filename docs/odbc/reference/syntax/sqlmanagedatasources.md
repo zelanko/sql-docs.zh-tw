@@ -2,7 +2,7 @@
 title: SQLManageDataSources |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b10fd1109c41d1d19418ce83dd14b60488a85fd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9d0fdf13051944c7af3c08418ac5182c9836db21
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **一致性**  
@@ -58,7 +58,7 @@ BOOL SQLManageDataSources(
 ## <a name="diagnostics"></a>診斷  
  當**SQLManageDataSources**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_REQUEST_FAILED|*要求*失敗|若要呼叫**ConfigDSN**失敗。|  

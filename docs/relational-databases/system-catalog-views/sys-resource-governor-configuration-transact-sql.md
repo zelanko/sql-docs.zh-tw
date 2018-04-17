@@ -1,16 +1,16 @@
 ---
-title: sys.resource_governor_configuration (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.resource_governor_configuration (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor_configuration_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_configuration catalog view
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35952ed1dd7d43261ed4672d8cd9161c02454138
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2c4387024aca3d7bd1240a1eae8dcc4e282f184a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcegovernorconfiguration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/03/2018
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**int**|分類函數儲存在中繼資料時的識別碼。 不可為 Null。<br /><br /> **請注意**此函數用於分類新的工作階段，並使用工作負載路由到適當的工作負載群組的規則。 如需詳細資訊，請參閱[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。|  
+|classifier_function_id|**int**|分類函數儲存在中繼資料時的識別碼。 不可為 Null。<br /><br /> **請注意**此函數用於分類新的工作階段，並使用工作負載路由到適當的工作負載群組的規則。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。|  
 |is_enabled|**bit**|指出資源管理員的目前狀態：<br /><br /> 0 = 未啟用資源管理員。<br /><br /> 1 = 已啟用資源管理員。<br /><br /> 不可為 Null。|  
 |max_outstanding_io_per_volume|**int**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 每個磁碟區未完成的 I/O 數目上限。|  
   
@@ -73,9 +73,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資源管理員目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [資源管理員目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
+ [sys.dm_resource_governor_configuration &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  
   
   

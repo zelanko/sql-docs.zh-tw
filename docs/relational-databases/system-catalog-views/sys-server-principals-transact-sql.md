@@ -1,16 +1,16 @@
 ---
-title: "sys.server_principals (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.server_principals (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_principals
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_principals catalog view
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a37a7a41cfb219ec584c03b932cfe450cead48c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3705caa0221d2e0f4a6b93b6d2ffffb9b2fcb9e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -43,8 +44,8 @@ ms.lasthandoff: 11/21/2017
 |**name**|**sysname**|主體的名稱。 在伺服器中，這是唯一的。|  
 |**principal_id**|**int**|主體的識別碼。 在伺服器中，這是唯一的。|  
 |**sid**|**varbinary(85)**|主體的 SID (安全性識別碼)。 如果是 Windows 主體，則與 Windows SID 相符。|  
-|**型別**|**char （1)**|主體類型：<br /><br /> S = SQL 登入<br /><br /> U = Windows 登入<br /><br /> G = Windows 群組<br /><br /> R = 伺服器角色<br /><br /> C = 對應至憑證的登入<br /><br /> K = 對應至非對稱金鑰的登入|  
-|**type_desc**|**nvarchar （60)**|主體類型的描述：<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type**|**char(1)**|主體類型：<br /><br /> S = SQL 登入<br /><br /> U = Windows 登入<br /><br /> G = Windows 群組<br /><br /> R = 伺服器角色<br /><br /> C = 對應至憑證的登入<br /><br /> K = 對應至非對稱金鑰的登入|  
+|**type_desc**|**nvarchar(60)**|主體類型的描述：<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**sys.indexes**|**int**|1 = 登入已停用。|  
 |**create_date**|**datetime**|建立主體的時間。|  
 |**modify_date**|**datetime**|上次修改主體定義的時間。|  
@@ -73,7 +74,7 @@ JOIN sys.server_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

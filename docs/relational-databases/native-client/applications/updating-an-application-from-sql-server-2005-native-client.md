@@ -1,29 +1,30 @@
 ---
-title: "從 SQL Server 2005 Native Client 將應用程式更新 |Microsoft 文件"
-ms.custom: 
+title: 從 SQL Server 2005 Native Client 將應用程式更新 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, updating applications
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a0765a262b2775f81b35969a638ff6f3583357e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a2181b027627e89b14c774185fa15a8cec2c3444
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>從 SQL Server 2005 Native Client 更新應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,12 +34,12 @@ ms.lasthandoff: 01/25/2018
   
  當您從 Microsoft Data Access Components (MDAC) 升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時，可能也會看見一些行為差異。 如需詳細資訊，請參閱[更新至 SQL Server Native Client 應用程式從 MDAC](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 9.0 隨附[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 隨附[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 隨附於 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 隨附於 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 隨附[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 隨附[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 隨附於 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 隨附於 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。  
   
 |自從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以來，SQL Server Native Client 中已經變更的行為|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB 只會填補至定義的小數位數。|轉換的轉換後的資料傳送到伺服器， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (從[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 之資料的最大長度只限尾端零填補**datetime**值。 SQL Server Native Client 9.0 則會填滿至 9 位數。|  
-|如 ICommandWithParameter::SetParameterInfo 驗證 DBTYPE_DBTIMESTAMP。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (從[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 實作的 OLE DB 需求*bScale*中 ICommandWithParameter::SetParameterInfo 針對 DBTYPE_DBTIMESTAMP 設定為小數的秒數有效位數。|  
+|如 ICommandWithParameter::SetParameterInfo 驗證 DBTYPE_DBTIMESTAMP。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (從[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 實作的 OLE DB 需求*bScale*中 ICommandWithParameter::SetParameterInfo 針對 DBTYPE_DBTIMESTAMP 設定為小數的秒數有效位數。|  
 |**Sp_columns**預存程序現在會傳回**"NO"**而不是**"NO"** IS_NULLABLE 資料行。|從開始[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])， **sp_columns**預存程序現在會傳回**"NO"**而不是**"NO"** IS_NULLABLE 資料行.|  
 |SQLSetDescRec、 SQLBindParameter 等和 SQLBindCol 現在執行一致性檢查。|之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 中，設定 sql_desc_data_ptr 並不會造成任何描述項類型的一致性檢查 SQLSetDescRec、 SQLBindParameter 等或 SQLBindCol 中。|  
 |SQLCopyDesc 現在會描述項一致性檢查。|之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0，SQLCopyDesc 一致性檢查時未在特定記錄上設定 SQL_DESC_DATA_PTR 欄位。|  

@@ -2,7 +2,7 @@
 title: SQLTablePrivileges 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6554826bdd2e63a6ce3baad75f747d3e923216a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8a7ab7a3ce90677e0d403aaf430fa3859e9dc2a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 函數
 **一致性**  
@@ -66,7 +66,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength1*  
  [輸入]中的字元長度 **CatalogName*。  
   
- *SchemaName*  
+ *schemaName*  
  [輸入]結構描述名稱的字串搜尋模式。 如果驅動程式支援的結構描述，對於某些資料表，但不適用於其他人使用，例如當驅動程式會擷取資料的不同 Dbms，空字串 ("") 表示沒有結構描述的資料表。  
   
  如果 SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_TRUE， *SchemaName*會被視為識別項和其案例並不重要。 如果是 SQL_FALSE， *SchemaName*模式值引數; 將它視為常值，和其案例很重要。  
@@ -88,7 +88,7 @@ SQLRETURN SQLTablePrivileges(
 ## <a name="diagnostics"></a>診斷  
  當**SQLTablePrivileges**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可能會取得藉由呼叫**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_STMT 的和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLTablePrivileges** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 位於驅動程式管理員傳回的 Sqlstate 的說明. 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
@@ -131,7 +131,7 @@ SQLRETURN SQLTablePrivileges(
   
 |資料行名稱|資料行編號|資料類型|註解|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|目錄名稱。如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些資料表。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|目錄名稱。如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些資料表。|  
 |再依據 TABLE_SCHEM 排列 (ODBC 1.0)|2|Varchar|結構描述名稱。如果不適用於資料來源，則為 NULL。 如果驅動程式支援的結構描述對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 並沒有結構描述這些資料表。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar 不是 NULL|資料表名稱。|  
 |授與者 (ODBC 1.0)|4|Varchar|授與權限; 使用者名稱如果不適用於資料來源，則為 NULL。<br /><br /> 為被授與者的資料行中的值是物件的擁有者的所有資料列，GRANTOR 資料行就是"（_s） 」。|  
@@ -155,6 +155,6 @@ SQLRETURN SQLTablePrivileges(
 |傳回資料表的統計資料和索引|[SQLStatistics 函式](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
 |傳回一份資料表中的資料來源|[SQLTables 函式](../../../odbc/reference/syntax/sqltables-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

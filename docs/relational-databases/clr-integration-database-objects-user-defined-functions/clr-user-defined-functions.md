@@ -1,15 +1,15 @@
 ---
-title: "CLR 使用者定義函數 |Microsoft 文件"
-ms.custom: 
+title: CLR 使用者定義函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - building database objects [CLR integration], user-defined functions
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - database objects [CLR integration], user-defined functions
 - user-defined functions [CLR integration]
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
-caps.latest.revision: 
+caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77d3852c7a146f69a8db30dbc9e30eef9cf38fa3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e083a0d0d8e73300d99daf4be7fa6ff800ee2444
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-user-defined-functions"></a>CLR 使用者定義函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-使用者定義函數是可以使用參數、執行計算或其他動作，並傳回結果的常式。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，您可以使用任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程式設計語言 (例如，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#) 撰寫使用者定義函數。  
+  使用者定義函數是可以使用參數、執行計算或其他動作，並傳回結果的常式。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，您可以使用任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程式設計語言 (例如，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#) 撰寫使用者定義函數。  
   
  函數有兩種類型：傳回單一值的純量值函式，以及傳回一組資料列的資料表值函式。  
   

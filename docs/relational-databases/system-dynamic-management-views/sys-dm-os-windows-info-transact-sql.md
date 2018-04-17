@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_windows_info (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_os_windows_info (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_windows_info
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_windows_info dynamic management view
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bdb100404984cd679c2899a78a655872afbf501c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ac000ce78154d6650c388709257178f4576161cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回一個顯示 Windows 作業系統版本資訊的資料列。  
   
-  僅適用於在 Windows 上執行的 SQL Server。 若要查看類似的資訊適用於非 Windows 主機，例如： Linux 上執行的 SQL Server 使用[sys.dm_os_host_info &#40;TRANSACT-SQL &#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+  僅適用於在 Windows 上執行的 SQL Server。 若要查看類似的資訊適用於非 Windows 主機，例如： Linux 上執行的 SQL Server 使用[sys.dm_os_host_info &#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)。 
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 Sys.dm_os_windows_info 上的 SELECT 權限預設會授與 public 角色。 已被撤銷，需要在伺服器上的 VIEW SERVER STATE 權限。  
 
 ## <a name="limitations-and-restrictions"></a>限制事項
-若要查看資訊在非 Windows 主機，例如： Linux 上執行的 sql 使用[sys.dm_os_host_info &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+若要查看資訊在非 Windows 主機，例如： Linux 上執行的 sql 使用[sys.dm_os_host_info &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)。 
   
 ## <a name="examples"></a>範例  
  下列範例會傳回所有資料行從**sys.dm_os_windows_info**檢視。  

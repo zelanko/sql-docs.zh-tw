@@ -2,7 +2,7 @@
 title: SQLGetEnvAttr 函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d292b667e51211fac9d7b2d3d577f2d459b17fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 11c2b83057291f04e7476abddc63c0ccb9954b85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 函式
 **一致性**  
@@ -56,7 +56,7 @@ SQLRETURN SQLGetEnvAttr(
  *EnvironmentHandle*  
  [輸入]環境控制代碼。  
   
- *Attribute*  
+ *屬性*  
  [輸入]要擷取的屬性。  
   
  *ValuePtr*  
@@ -64,7 +64,7 @@ SQLRETURN SQLGetEnvAttr(
   
  如果*ValuePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*ValuePtr*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]如果*ValuePtr*指向字元字串，這個引數應該是長度\* *ValuePtr*。 如果\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果 *\*ValuePtr*是 Unicode 字串 (當呼叫**SQLGetEnvAttrW**)、 *Columnsize*引數必須是偶數。 如果屬性值不是字元字串， *Columnsize*未使用。  
   
  *StringLengthPtr*  
@@ -76,7 +76,7 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="diagnostics"></a>診斷  
  當**SQLGetEnvAttr**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType* SQL_ 的HANDLE_ENV 和*處理*的*EnvironmentHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLGetEnvAttr** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|中傳回的資料\* *ValuePtr*已截斷為*Columnsize*減去 null 結束字元。 中會傳回未截斷的字串值的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -107,6 +107,6 @@ SQLRETURN SQLGetEnvAttr(
 |設定環境屬性|[SQLSetEnvAttr 函式](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |設定陳述式屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

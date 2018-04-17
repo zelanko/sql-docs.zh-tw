@@ -1,16 +1,16 @@
 ---
-title: "sp_cursorunprepare (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_cursorunprepare (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorunprepare_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorunprepare
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36f6633bdf09844359e7b7b5249869328efc70c0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2017cda7fd14a92baefa8da3ad1664e9d7839d0e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +49,8 @@ sp_cursorunprepare handle
  *控制代碼*  
  是*處理*備妥的陳述式時，sp_cursorprepare 會傳回的值。  
   
-## <a name="see-also"></a>請參閱  
- [sp_cursorprepare &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_cursorprepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

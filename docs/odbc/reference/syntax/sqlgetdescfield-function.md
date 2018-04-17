@@ -2,7 +2,7 @@
 title: SQLGetDescField 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 091703d14644fe24bef88c939ac4b45087113bd7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 21d22e072f1b1468ef12e52e67b5d820740050b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdescfield-function"></a>SQLGetDescField 函數
 **一致性**  
@@ -70,7 +70,7 @@ SQLRETURN SQLGetDescField(
   
  如果*ValuePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*ValuePtr*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]如果*FieldIdentifier*是 ODBC 定義的欄位和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *ValuePtr*. 如果*FieldIdentifier*是 ODBC 定義的欄位和\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果中的值 *\*ValuePtr*是 Unicode 資料類型 (呼叫時**SQLGetDescFieldW**)、 *Columnsize*引數必須是偶數。  
   
  如果*FieldIdentifier*是驅動程式定義的欄位，應用程式設定指出欄位驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
@@ -96,7 +96,7 @@ SQLRETURN SQLGetDescField(
 ## <a name="diagnostics"></a>診斷  
  當**SQLGetDescField**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType*的利用 SQL_HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLGetDescField** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|緩衝區\* *ValuePtr*仍不夠大，無法傳回整個描述項欄位，所以已截斷欄位。 中會傳回未截斷的描述項欄位的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -133,6 +133,6 @@ SQLRETURN SQLGetDescField(
 |設定單一描述項欄位|[SQLSetDescField 函式](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
 |設定多個描述項欄位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

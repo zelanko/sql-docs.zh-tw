@@ -1,16 +1,16 @@
 ---
-title: "sp_syscollector_set_warehouse_database_name (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_syscollector_set_warehouse_database_name (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_database_name
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_set_warehouse_database_name
 - data collector [SQL Server], stored procedures
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e82f8bd3d88cfb2e12ef9fb7c5d6fadb287ca10d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 57462a4e74d53de0c67ebeb58058da9595e9ce83
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorsetwarehousedatabasename-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @database_name = ] '*database_name*'  
+ [ @database_name =] '*database_name*'  
  這是管理資料倉儲的名稱。 *database_name*是**sysname**預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

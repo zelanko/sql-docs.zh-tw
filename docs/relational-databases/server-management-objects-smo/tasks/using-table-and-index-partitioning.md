@@ -1,15 +1,15 @@
 ---
-title: "使用資料表和索引資料分割 |Microsoft 文件"
-ms.custom: 
+title: 使用資料表和索引資料分割 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - partitions [SMO]
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], SMO
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 820ef3737125c82296655db5cfba1a4265223796
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d7ae27cb4ea06920b307eca7d11f441928cbd0d7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-table-and-index-partitioning"></a>使用資料表和索引資料分割
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/12/2018
  每個 <xref:Microsoft.SqlServer.Management.Smo.Table> 和 <xref:Microsoft.SqlServer.Management.Smo.Index> 物件都會在 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 屬性中指定所使用的資料分割配置，並在 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> 中指定資料行。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>在 Visual C# 中為資料表設定資料分割配置  
  程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  

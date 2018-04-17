@@ -2,7 +2,7 @@
 title: SQLSetDescRec 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c817bad04757820b7c8ee83905fbc0fad08b4e26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函數
 **一致性**  
@@ -96,7 +96,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>診斷  
  當**SQLSetDescRec**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType* SQL_ 的HANDLE_DESC 和*處理*的*DescriptorHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLSetDescRec** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07009|無效的描述元索引|*RecNumber*引數設定為 0，而*DescriptorHandle* IPD 控制代碼的參考。<br /><br /> *RecNumber*引數為小於 0。<br /><br /> *RecNumber*引數為大於最大數目的資料行或參數，可支援資料來源，而*DescriptorHandle*引數是 APD、 IPD 或 ARD。<br /><br /> *RecNumber*引數以前是等於 0，而*DescriptorHandle*隱含配置的 APD 參考引數。 （發生這個錯誤不會不具有明確配置的應用程式描述元因為不知道應用程式明確配置描述元是否 APD 或 ARD 直到執行時間。）|  
@@ -166,6 +166,6 @@ SQLRETURN SQLSetDescRec(
 |取得多個描述項欄位|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |設定單一描述項欄位|[SQLSetDescField 函式](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

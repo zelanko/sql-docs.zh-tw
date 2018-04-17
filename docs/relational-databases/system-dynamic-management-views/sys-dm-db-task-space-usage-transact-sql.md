@@ -2,7 +2,7 @@
 title: sys.dm_db_task_space_usage (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d9d354df9b96e631b707c49135d8399e5f2ac61
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1ce55ec08ebc7c2d87954b7d29e21a9cf35157db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbtaskspaceusage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/05/2018
 ## <a name="remarks"></a>備註  
  IAM 頁面不包括在這份檢視所報告的任何頁面計數中。  
   
- 在要求開始時，頁面計數器會初始化為零 (0)。 這些值會在要求完成時在工作階段層級上彙總。 如需詳細資訊，請參閱[sys.dm_db_session_space_usage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md).  
+ 在要求開始時，頁面計數器會初始化為零 (0)。 這些值會在要求完成時在工作階段層級上彙總。 如需詳細資訊，請參閱[sys.dm_db_session_space_usage & #40;TRANSACT-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md).  
   
  工作資料表快取、暫存資料表快取和延遲卸除作業，會影響在指定工作中配置和取消配置的頁數。  
   
@@ -107,8 +108,8 @@ ms.lasthandoff: 04/05/2018
  [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
- [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)   
+ [sys.dm_os_tasks &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [sys.dm_db_session_space_usage &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)   
  [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   

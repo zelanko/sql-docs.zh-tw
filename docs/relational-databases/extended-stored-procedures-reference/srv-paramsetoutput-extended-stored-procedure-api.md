@@ -1,16 +1,16 @@
 ---
-title: "srv_paramsetoutput (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_paramsetoutput (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramsetoutput
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramsetoutput
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2436a716d379cb9a5d9eef61d628b8ffed59720
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 0297be0851d2d57afce891997b387932b16dbb0c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

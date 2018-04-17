@@ -2,7 +2,7 @@
 title: 已將結果集建立嗎？ | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7222a9dcbbf7c979dd46ff554fab5988bcfada4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b2701f568397c2a6714587bf4261f5a4295f226
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="was-a-result-set-created"></a>已將結果集建立嗎？
 在大部分情況下，應用程式設計人員知道他們的應用程式執行的陳述式是否會建立結果集。 如果應用程式會使用硬式編碼 SQL 陳述式寫入由程式設計人員，這會是大小寫。 通常的情況是當應用程式在執行階段建構 SQL 陳述式： 程式設計人員可以輕鬆地包含程式碼，加上旗標是否**選取**陳述式或**插入**正在陳述式建構。 在少數情況下，程式設計人員可能無法知道是否陳述式會建立結果集。 這是當應用程式可讓使用者輸入並執行 SQL 陳述式。 它也是如此應用程式建構在執行階段執行程序的陳述式時。  

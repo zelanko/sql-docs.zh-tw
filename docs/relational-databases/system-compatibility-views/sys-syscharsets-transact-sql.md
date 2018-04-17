@@ -1,16 +1,16 @@
 ---
-title: "sys.syscharsets (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.syscharsets (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscharsets
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - syscharsets system table
 - sys.syscharsets compatibility view
 ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
-caps.latest.revision: 
+caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0f88ab4d96160dc9b466379ec525c7858a579f1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d3516e9d2ea65862ece3e0008cbe2848dbd66f13
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,10 +49,10 @@ ms.lasthandoff: 02/09/2018
 |**name**|**sysname**|字元集或排序順序的唯一名稱。 這個欄位只能包含字母 A-Z 或 a-z、數字 0 - 9 和底線 (_)；它的開頭必須是字母。|  
 |**描述**|**nvarchar(255)**|字元集或排序順序功能的選擇性描述。|  
 |**binarydefinition**|**varbinary(6000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**definition**|**image**|字元集或排序順序的內部定義。 這個欄位的資料結構會隨著類型而不同。|  
+|**定義**|**image**|字元集或排序順序的內部定義。 這個欄位的資料結構會隨著類型而不同。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

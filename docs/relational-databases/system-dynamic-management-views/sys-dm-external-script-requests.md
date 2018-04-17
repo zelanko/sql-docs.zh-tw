@@ -1,15 +1,15 @@
 ---
 title: sys.dm_external_script_requests | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_external_script_requests
@@ -21,16 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-caps.latest.revision: 
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55ac900238a49bcad4c0af31b7482b7381b1aadc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6b73281b970940caced870dbf75c78946f9f559b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**唯一識別項**|傳送外部指令碼要求的處理序識別碼。 這會對應至所接收的處理序識別碼 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**唯一識別項**|傳送外部指令碼要求的處理序識別碼。 這會對應至處理序識別碼所接收 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|代表支援的指令碼語言的關鍵字。 目前只支援 `R` 。|  
 |degree_of_parallelism|**int**|指出已建立之平行處理序數目的數字。 這個值可能與已要求的平行處理序數目不同。|  
 |external_user_name|**nvarchar**|用來執行指令碼的 Windows 背景工作帳戶。|  
@@ -91,7 +91,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_trace_gettable (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.fn_trace_gettable (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_gettable
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - fn_trace_gettable function
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2624c7ea8a3c118f1bb1da2e456bd03cbbdbe968
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 461807f1d79032c85316551adb5229d02aa67b06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ fn_trace_gettable ( 'filename' , number_files )
  指定要讀取的換用檔案的數目。 這個數目包括中指定的初始檔案*filename*。 *number_files*是**int**。  
   
 ## <a name="remarks"></a>備註  
- 如果*number_files*指定為**預設**， **fn_trace_gettable**讀取所有換用檔案，直到到達追蹤結尾為止。 **fn_trace_gettable**適用於指定的追蹤會傳回所有資料行的資料表。 如需詳細資訊，請參閱[sp_trace_setevent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ 如果*number_files*指定為**預設**， **fn_trace_gettable**讀取所有換用檔案，直到到達追蹤結尾為止。 **fn_trace_gettable**適用於指定的追蹤會傳回所有資料行的資料表。 如需詳細資訊，請參閱[sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
  請注意，fn_trace_gettable 函數不會載入換用檔案 (透過此選項會指定當*number_files*引數) 的原始追蹤檔案名稱以底線加上數值的結束位置。 (若為檔案換用時自動附加的底線及數值，則不在此列)。為了因應此情況，您可以重新命名追蹤檔案，移除原始檔案名稱中的底線。 例如，如果原始的檔案命名為**Trace_Oct_5.trc**和名為換用檔案**Trace_Oct_5_1.trc**，您可以將檔案重新命名**TraceOct5.trc**和**TraceOct5_1.trc**。  
   
@@ -91,7 +91,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  

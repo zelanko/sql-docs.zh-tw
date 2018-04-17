@@ -1,15 +1,15 @@
 ---
-title: "使用加密 |Microsoft 文件"
-ms.custom: 
+title: 使用加密 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database master key [SMO]
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - certificates [SMO]
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad74e5242702ace386fb8c14a034a56886f27191
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9badeac31829eeb8b4558eae4b8aeb7f4afe11ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-encryption"></a>使用加密
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/12/2018
  在 SMO 中，憑證由<xref:Microsoft.SqlServer.Management.Smo.Certificate>物件。 <xref:Microsoft.SqlServer.Management.Smo.Certificate>物件的屬性可指定公開金鑰、 主旨的名稱、 段有效性與簽發者的相關資訊。 存取此憑證的權限是藉由使用 **Grant**、 **Revoke** 和 **Deny** 方法來控制。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>在 Visual C# 中加入憑證  
  此程式碼範例會使用加密密碼來建立簡單的憑證。 不同於其他物件，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A>方法有數個多載。 範例中使用的多載會利用加密密碼來建立新的憑證。  

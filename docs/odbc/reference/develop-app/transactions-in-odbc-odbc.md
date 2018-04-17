@@ -2,7 +2,7 @@
 title: ODBC ODBC 中的交易 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d775a3349a082f4c525e8417f5df30ebd38ab245
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9b4680b203ee09b509d21c8dcbdc59b2f351859
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC ODBC 中的交易
 ODBC 中的交易完成在連接層級;也就是說，當應用程式完成交易時，它認可或回復透過該連接上的所有陳述式控制代碼的所有工作。  

@@ -1,16 +1,16 @@
 ---
-title: "指定的位置路徑 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: 指定的位置路徑 (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - absolute location path
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f704e45b165ecb4e29d909bcce09f7af92fb0989
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7261e153c988a0764327e3d247a3da31d7463af3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路徑 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XPath 查詢會以運算式的形式指定。 運算式有各種不同的類型。 位置路徑是一個運算式，可用來選取相對於內容節點的一組節點。 評估位置路徑的結果為節點集。  
+  XPath 查詢會以運算式的形式指定。 運算式有各種不同的類型。 位置路徑是一個運算式，可用來選取相對於內容節點的一組節點。 評估位置路徑的結果為節點集。  
   
 ## <a name="types-of-location-paths"></a>位置路徑的類型  
  位置路徑可以是下列其中一個形式：  
@@ -46,7 +47,7 @@ XPath 查詢會以運算式的形式指定。 運算式有各種不同的類型�
      相對位置路徑會從文件中的內容節點開始。 位置路徑包含一或多個位置步驟的序列，而且每個位置步驟都以斜線 (/) 分隔。 每個步驟都會選取相對於內容節點的一組節點。 步驟的初始序列會選取一組相對於內容節點的節點。 該集合中的每個節點都會當做下列步驟的內容節點使用。 系統會加入由該步驟識別的節點集合。 例如， **child:: order/child:: orderdetail**選取 **\<OrderDetail >**元素子系**\<順序 >**項目內容節點的子系。  
   
     > [!NOTE]  
-    >  在 XPath 的 SQLXML 4.0 實作中，即使 XPath 明顯地不是絕對的，每個 XPath 查詢都會從根內容開始。 例如，系統會將 "Customer" 開頭的 XPath 查詢視為 "/Customer"。 在 XPath 查詢中**Customer [Order]**，客戶根內容開始，但順序從 Customer 內容開始。 如需詳細資訊，請參閱[簡介使用 XPath 查詢 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+    >  在 XPath 的 SQLXML 4.0 實作中，即使 XPath 明顯地不是絕對的，每個 XPath 查詢都會從根內容開始。 例如，系統會將 "Customer" 開頭的 XPath 查詢視為 "/Customer"。 在 XPath 查詢中**Customer [Order]**，客戶根內容開始，但順序從 Customer 內容開始。 如需詳細資訊，請參閱[使用 XPath 查詢簡介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
   
 ## <a name="location-steps"></a>位置步驟  
  位置路徑 (絕對或相對) 是由包含三個部分的位置步驟所組成：  
@@ -68,13 +69,13 @@ XPath 查詢會以運算式的形式指定。 運算式有各種不同的類型�
      位置步驟的語法是軸名稱之後加上雙冒號 (::)、接著是節點測試，最後是零或其他述詞，每個述詞都會以方括弧括起來。 例如，XPath 運算式 （位置路徑） **child:: customer [@CustomerID= 'ALFKI']**選取所有**\<客戶 >**內容節點的項目子系。 述詞中的測試會套用至節點集，只會傳回**\<客戶 >**項目節點具有屬性值 'ALFKI' 其**CustomerID**屬性。  
   
 ## <a name="in-this-section"></a>本節內容  
- [指定軸 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
+ [指定軸&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
  提供指定軸的範例。  
   
- [指定節點測試中的位置路徑 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
+ [位置路徑中指定節點測試&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
  提供指定節點測試的範例。  
   
- [指定選取述詞中的位置路徑 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
+ [指定選取述詞中的位置路徑&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
  提供指定選取述詞的範例。  
   
   

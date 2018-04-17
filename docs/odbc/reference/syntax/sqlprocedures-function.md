@@ -2,7 +2,7 @@
 title: SQLProcedures 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b919ad9ca1e42ea87e1ac4891870dc8091beb722
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5420d0adf427a95dec7cbfe224d4b77621c9a5d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 函數
 **一致性**  
@@ -66,7 +66,7 @@ SQLRETURN SQLProcedures(
  *NameLength1*  
  [輸入]中的字元長度 **CatalogName*。  
   
- *SchemaName*  
+ *schemaName*  
  [輸入]程序的結構描述名稱的字串搜尋模式。 如果驅動程式支援的結構描述，對於某些程序，但不適用於其他人使用，例如當驅動程式會擷取資料的不同 Dbms，空字串 ("") 表示沒有結構描述這些程序。  
   
  如果 SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_TRUE， *SchemaName*會被視為識別項和其案例並不重要。 如果是 SQL_FALSE， *SchemaName*模式值引數; 將它視為常值，和其案例很重要。  
@@ -88,7 +88,7 @@ SQLRETURN SQLProcedures(
 ## <a name="diagnostics"></a>診斷  
  當**SQLProcedures**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType* SQL_ 的HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLProcedures** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
@@ -134,12 +134,12 @@ SQLRETURN SQLProcedures(
   
 |資料行名稱|資料行編號|資料類型|註解|  
 |-----------------|-------------------|---------------|--------------|  
-|PROCEDURE_CAT (ODBC 2.0)|@shouldalert|Varchar|程序類別目錄的識別項。如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些程序，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些程序。|  
+|PROCEDURE_CAT (ODBC 2.0)|1|Varchar|程序類別目錄的識別項。如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些程序，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些程序。|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|程序結構描述識別碼。如果不適用於資料來源，則為 NULL。 如果驅動程式支援的結構描述對於某些程序，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 並沒有結構描述這些程序。|  
 |PROCEDURE_NAME (ODBC 2.0)|3|Varchar 不是 NULL|程序識別項。|  
-|NUM_INPUT_PARAMS (ODBC 2.0)|4|不適用|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
-|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|不適用|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
-|NUM_RESULT_SETS (ODBC 2.0)|6|不適用|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
+|NUM_INPUT_PARAMS (ODBC 2.0)|4|해당 사항 없음|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
+|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|해당 사항 없음|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
+|NUM_RESULT_SETS (ODBC 2.0)|6|해당 사항 없음|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
 |註解 (ODBC 2.0)|7|Varchar|程序的描述。|  
 |PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|定義的程序類型：<br /><br /> SQL_PT_UNKNOWN： 無法判斷此程序是否會傳回值。<br /><br /> SQL_PT_PROCEDURE： 傳回的物件是為程序，也就是說，它並沒有傳回值。<br /><br /> Q： 傳回的物件是函式。也就是說，它有傳回值。|  
   
@@ -160,6 +160,6 @@ SQLRETURN SQLProcedures(
 |傳回參數和結果集的程序的資料行|[SQLProcedureColumns 函式](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|  
 |叫用預存程序的語法|[執行陳述式](../../../odbc/reference/develop-app/executing-statements-odbc.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

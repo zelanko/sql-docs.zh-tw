@@ -1,16 +1,16 @@
 ---
-title: "sp_copysnapshot (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_copysnapshot (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysnapshot
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa61d1c75b74a1ac64f3462d35e52d6023806f7a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0d53691c16902c0793db503bf805544c8a3d19c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  將指定的發行集的快照集資料夾複製到資料夾中列出 **@destination_folder** 。 這個預存程序執行於發行集資料庫的發行者端。 這個預存程序可用來將快照集複製到抽取式媒體 (如 CD-ROM)。  
+  將指定的發行集的快照集資料夾複製到資料夾中列出**@destination_folder**。 這個預存程序執行於發行集資料庫的發行者端。 這個預存程序可用來將快照集複製到抽取式媒體 (如 CD-ROM)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是要複製快照集內容的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@destination_folder=**] **'***destination_folder***'**  
@@ -69,7 +69,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_copysnapshot**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [替代快照集資料夾位置](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

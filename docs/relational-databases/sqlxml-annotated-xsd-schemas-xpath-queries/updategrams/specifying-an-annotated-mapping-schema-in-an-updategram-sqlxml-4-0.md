@@ -1,16 +1,16 @@
 ---
-title: "在 Updategram (SQLXML 4.0) 中指定註解式的對應結構描述 |Microsoft 文件"
-ms.custom: 
+title: 在 Updategram (SQLXML 4.0) 中指定註解式的對應結構描述 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, updategrams
@@ -23,25 +23,26 @@ helpviewer_keywords:
 - mapping schema [SQLXML], updategrams
 - sql:inverse
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7114229a879e05222d67cbb0147ced02628bfe9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7d9b0918551889ee6474e00bdfb46c83eb5598dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 Updategram 中指定註解式對應結構描述 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主題說明 Updategram 中指定的對應結構描述 (XSD 或 XDR) 要如何用來處理更新。 在 updategram 中，您可以提供資料表和資料行中的對應的元素和屬性在 updategram 中使用註解式的對應結構描述名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定對應結構描述時，此 updategram 中指定的元素和屬性名稱必須對應到對應結構描述內的元素和屬性。  
+  本主題說明 Updategram 中指定的對應結構描述 (XSD 或 XDR) 要如何用來處理更新。 在 updategram 中，您可以提供資料表和資料行中的對應的元素和屬性在 updategram 中使用註解式的對應結構描述名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定對應結構描述時，此 updategram 中指定的元素和屬性名稱必須對應到對應結構描述內的元素和屬性。  
   
  若要指定對應結構描述，您使用**對應結構描述**屬性**\<同步 >**項目。 下列範例會示範兩個 updategram：使用簡單對應結構描述的 updategram 以及使用更複雜之結構描述的 updategram。  
   
 > [!NOTE]  
->  本文件集假設您非常熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的範本和對應結構描述支援。 如需詳細資訊，請參閱[簡介註解式 XSD 結構描述 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 如需使用 XDR 的舊版應用程式，請參閱[Annotated XDR Schemas &#40; SQLXML 4.0 &#41; 中的已過時](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  本文件集假設您非常熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的範本和對應結構描述支援。 如需詳細資訊，請參閱[簡介註解式 XSD 結構描述 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 如需使用 XDR 的舊版應用程式，請參閱[Annotated XDR Schemas &#40;SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="dealing-with-data-types"></a>處理資料類型  
  如果結構描述指定**映像**，**二進位**，或**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型 (使用**sql: datatype**) 並不是指定 XML 資料類型，updategram 會假設 XML 資料類型為**二進位 base 64**。 如果您的資料是**bin.base**類型，您必須明確指定型別 (**dt:type=bin.base**或**類型 ="xsd:hexBinary"**)。  
@@ -121,7 +122,7 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用對應結構描述內指定的父子式關聯性插入記錄  
- 結構描述元素可以產生關聯。 **\<Sql: relationship >**項目會指定結構描述項目之間的父子式關聯性。 這項資訊是用來更新具有主索引鍵與外部索引鍵關聯性的對應資料表。  
+ 結構描述元素可以產生關聯。  **\<Sql: relationship >**項目會指定結構描述項目之間的父子式關聯性。 這項資訊是用來更新具有主索引鍵與外部索引鍵關聯性的對應資料表。  
   
  下列的對應結構描述 (SampleSchema.xml) 包含兩個項目， **\<順序 >**和 **\<OD >**:  
   
@@ -238,7 +239,7 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. 使用 XSD 結構描述內指定的父子式關聯性和反向註解來插入記錄  
- 此範例說明如何 updategram 邏輯會使用 XSD 中指定的父子式關聯性來處理更新，以及如何**反向**註解。 如需有關**反向**註解，請參閱[指定 sql: relationship &#40; sql: inverse 屬性SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+ 此範例說明如何 updategram 邏輯會使用 XSD 中指定的父子式關聯性來處理更新，以及如何**反向**註解。 如需有關**反向**註解，請參閱[sql: relationship 指定 sql: inverse 屬性&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
  這個範例假設下列資料表處於**tempdb**資料庫：  
   
@@ -331,6 +332,6 @@ ms.lasthandoff: 02/12/2018
      如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Updategram 安全性考量 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Updategram 安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

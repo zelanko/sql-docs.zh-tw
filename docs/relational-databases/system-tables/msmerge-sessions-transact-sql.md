@@ -1,16 +1,16 @@
 ---
-title: "M (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: M (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a081578000d831f85f00d8de2da725e6d078e5a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: abcf6d210849c03cf9ed6dc71a9bc5fe21e53c95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,8 @@ ms.lasthandoff: 11/21/2017
 |**connection_type**|**int**|上傳期間所用的連接：<br /><br /> **1** = 區域網路 (LAN)。<br /><br /> **2** = 撥號網路連接。<br /><br /> **3** = web 同步處理。|  
 |**timestamp**|**timestamp**|這份資料表的時間戳記資料行。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

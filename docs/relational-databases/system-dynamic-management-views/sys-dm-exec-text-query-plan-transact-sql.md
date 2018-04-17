@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_text_query_plan (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 10/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_text_query_plan
@@ -22,21 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 38650de120ae1c7cb80be3d279de9bfa0da37434
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8521e394e35d7762084f28c44426cd7cb25284cb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次或批次內的特定陳述式，以文字格式傳回顯示計畫。 指定的查詢計畫的計畫控制代碼可以是快取或目前正在執行。 此資料表值函式是類似於[sys.dm_exec_query_plan &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)，但有下列差異：  
+  針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次或批次內的特定陳述式，以文字格式傳回顯示計畫。 指定的查詢計畫的計畫控制代碼可以是快取或目前正在執行。 此資料表值函式是類似於[sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)，但有下列差異：  
   
 -   查詢計畫的輸出會以文字格式傳回。  
   
@@ -94,7 +95,7 @@ sys.dm_exec_text_query_plan
 |**dbid**|**smallint**|當編譯對應於這個計畫的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，作用中內容資料庫的識別碼。 對於隨選和準備的 SQL 陳述式而言，則為編譯陳述式的資料庫識別碼。<br /><br /> 資料行可為 Null。|  
 |**objectid**|**int**|這個查詢計畫的物件識別碼 (如預存程序或使用者自訂函數)。 特定和準備批次，這個資料行是**null**。<br /><br /> 資料行可為 Null。|  
 |**number**|**smallint**|編號預存程序整數。 例如，群組的程序**訂單**應用程式可以命名為**orderproc; 1**， **orderproc; 2**，依此類推。 特定和準備批次，這個資料行是**null**。<br /><br /> 資料行可為 Null。|  
-|**encrypted**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
+|**加密**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
 |**query_plan**|**nvarchar(max)**|包含指定的查詢執行計畫的編譯時期顯示計畫表示法*plan_handle*。 顯示計畫是文字格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。<br /><br /> 資料行可為 Null。|  
   
 ## <a name="remarks"></a>備註  

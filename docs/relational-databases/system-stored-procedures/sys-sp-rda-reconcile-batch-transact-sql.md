@@ -1,16 +1,16 @@
 ---
-title: sys.sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.sp_rda_reconcile_batch (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_reconcile_batch
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_batch stored procedure
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1df76c9b3107b5fbd45eb8a99eab1ec5baf5f4ee
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0d9c24621e8ee9fb8f897a04ebf8e4332b32fd1a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="remarks"></a>備註  
  如果您想要刪除已移轉至 Azure 的資料，執行下列動作。  
   
-1.  暫停資料移轉。 如需詳細資訊，請參閱[暫停和繼續資料移轉 &#40;Stretch Database &#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
+1.  暫停資料移轉。 如需詳細資訊，請參閱[暫停和繼續資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。  
   
 2.  從 SQL Server 暫存資料表刪除資料，藉由使用 STAGE_ONLY 提示執行 DELETE 命令。 如需詳細資訊，請參閱[進行管理更新和刪除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints)。
   
@@ -68,7 +68,7 @@ sp_rda_reconcile_batch @objname = '@objname'
   
 4.  執行**sp_rda_reconcile_batch**。  
   
-5.  繼續資料移轉。 如需詳細資訊，請參閱[暫停和繼續資料移轉 &#40;Stretch Database &#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
+5.  繼續資料移轉。 如需詳細資訊，請參閱[暫停和繼續資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。  
   
 ## <a name="example"></a>範例  
  若要先協調批次識別碼，執行下列陳述式。  

@@ -1,16 +1,16 @@
 ---
-title: "全文檢索搜尋和語意搜尋預存程序 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 全文檢索搜尋和語意搜尋預存程序 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], stored procedures
 - system stored procedures [SQL Server], full-text search
 ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f33f210b67183f03e1631361082ef8bb97c03cc7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d8a2fa454b2e96f12be0231749342ee2948d0c97
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>全文檢索搜尋和語意搜尋預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -113,8 +113,8 @@ ms.lasthandoff: 02/03/2018
  從目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中取消註冊現有的語義語言統計資料庫，並且刪除任何相關聯的中繼資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [全文檢索搜尋和語意搜尋目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)   
- [全文檢索搜尋及語意搜尋動態管理檢視與函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [全文檢索搜尋和語意搜尋目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)   
+ [全文檢索搜尋和語意搜尋動態管理檢視與函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)  
   

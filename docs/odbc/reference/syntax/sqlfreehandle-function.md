@@ -2,7 +2,7 @@
 title: SQLFreeHandle 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f6d2c94a6b2fb78245c83cbf989e6a707caccc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 函數
 **一致性**  
@@ -81,7 +81,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>診斷  
  當**SQLFreeHandle**傳回 SQL_ERROR，相關聯的 SQLSTATE 值可以取自控制代碼的診斷資料結構， **SQLFreeHandle**嘗試釋出，但不是可以。 下表列出通常所傳回的 SQLSTATE 值**SQLFreeHandle** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
@@ -187,7 +187,7 @@ int main() {
 |取消陳述式處理|[SQLCance Functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |設定資料指標名稱|[SQLSetCursorName 函式](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC 程式範例](../../../odbc/reference/sample-odbc-program.md)

@@ -1,16 +1,16 @@
 ---
-title: "sp_addpublication (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addpublication (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e47d331f57abede1d4b0e20ebba44cced109035
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 296a54187b415d79a4cc036f9111091cb6b1b415
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,22 +92,22 @@ sp_addpublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是要建立的發行集名稱。 *發行集*是**sysname**，沒有預設值。 這個名稱在資料庫內必須是唯一的。  
   
  [  **@taskid=**] *taskid*  
- 支援; 僅限回溯相容性使用[sp_addpublication_snapshot &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md).  
+ 支援; 僅限回溯相容性使用[sp_addpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。  
   
  [  **@restricted=**] **'***限制***'**  
  支援; 僅限回溯相容性使用*default_access*。  
   
- [  **@sync_method=**] *' sync_method***'**  
+ [  **@sync_method=**] *' sync_method * * * '**  
  這是同步處理模式。 *sync_method*是**nvarchar(13)**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**原生**|產生所有資料表的原生模式大量複製程式輸出。 *不支援 Oracle 發行者*。|  
-|**字元**|產生所有資料表的字元模式大量複製程式輸出。 *針對 Oracle 發行者，* **字元***只適用於快照式複寫*。|  
+|**native**|產生所有資料表的原生模式大量複製程式輸出。 *不支援 Oracle 發行者*。|  
+|**character**|產生所有資料表的字元模式大量複製程式輸出。 *針對 Oracle 發行者，* **字元***只適用於快照式複寫*。|  
 |**並行**|產生所有資料表的原生模式大量複製程式輸出，但在快照集期間，不鎖定資料表。 只支援交易式發行集使用這個項目。 *不支援 Oracle 發行者*。|  
 |**concurrent_c**|產生所有資料表的字元模式大量複製程式輸出，但在快照集期間，不鎖定資料表。 只支援交易式發行集使用這個項目。|  
 |**資料庫快照集**|從資料庫快照集產生所有資料表的原生模式大量複製程式輸出。 資料庫快照集不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
@@ -117,7 +117,7 @@ sp_addpublication [ @publication = ] 'publication'
  [  **@repl_freq=**] **'***repl_freq***'**  
  這是複寫頻率的類型*repl_freq*是**nvarchar （10)**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**連續**（預設值）|發行者會提供所有記錄式交易的輸出。 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者， *sync_method*設**concurrent_c**。|  
 |**快照集**|發行者只會產生已排程的同步處理事件。 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者， *sync_method*設**字元**。|  
@@ -128,7 +128,7 @@ sp_addpublication [ @publication = ] 'publication'
  [  **@status=**] **'***狀態***'**  
  指定發行集資料是否可用。 *狀態*是**nvarchar （8)**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**使用中**|訂閱者可以立即使用發行集資料。|  
 |**非作用中**（預設值）|在最初建立發行集時，訂閱者無法使用發行集資料 (它們可以訂閱，但不會處理這些訂閱)。|  
@@ -159,7 +159,7 @@ sp_addpublication [ @publication = ] 'publication'
  [  **@autogen_sync_procs=**] **'***autogen_sync_procs***'**  
  指定是否在發行者端產生更新訂閱的同步處理預存程序。 *autogen_sync_procs*是**nvarchar （5)**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**true**|在啟用更新訂閱時自動設定。|  
 |**false**|在不啟用更新訂閱時自動設定，或針對 Oracle 發行者來自動設定。|  
@@ -175,7 +175,7 @@ sp_addpublication [ @publication = ] 'publication'
  啟用或停用在訂閱者端將變更放入佇列中，直到可以在發行者端套用這些變更為止。 *allow_queued_updating*是**nvarchar （5)**預設值是 FALSE。 如果**false**，「 訂閱者 」 端的變更不會排入佇列。 **true**是*不支援 Oracle 發行者*。  
   
  [  **@snapshot_in_defaultfolder=** ] **'***snapshot_in_default_folder***'**  
- 指定是否將快照集檔案儲存在預設資料夾中。 *snapshot_in_default_folder*是**nvarchar （5)**預設值是 TRUE。 如果**true**，可以在預設資料夾中找到快照集檔案。 如果**false**，快照集檔案已儲存在所指定的替代位置*alternate_snapshot_folder*。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。 請注意，這個參數可以是 true，仍有位置 **@alt_snapshot_folder** 參數。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。  
+ 指定是否將快照集檔案儲存在預設資料夾中。 *snapshot_in_default_folder*是**nvarchar （5)**預設值是 TRUE。 如果**true**，可以在預設資料夾中找到快照集檔案。 如果**false**，快照集檔案已儲存在所指定的替代位置*alternate_snapshot_folder*。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。 請注意，這個參數可以是 true，仍有位置**@alt_snapshot_folder**參數。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。  
   
  [  **@alt_snapshot_folder=** ] **'***alternate_snapshot_folder***'**  
  指定快照集替代資料夾的位置。 *alternate_snapshot_folder*是**nvarchar （255)**預設值是 NULL。  
@@ -187,7 +187,7 @@ sp_addpublication [ @publication = ] 'publication'
  指定指向**.sql**檔案位置。 *post_snapshot_script*是**nvarchar （255)**，預設值是 NULL。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
   
  [  **@compress_snapshot=** ] **'***compress_snapshot***'**  
- 指定可寫入快照集 **@alt_snapshot_folder** 位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar （5)**，預設值是 FALSE。 **false**指定，將不壓縮快照集;**true**指定壓縮快照集。 超出 2 GB 的快照集檔案無法壓縮。 壓縮的快照集檔案是在執行散發代理程式的位置進行解壓縮；提取訂閱通常會搭配使用壓縮的快照集，因此，會在訂閱者端將檔案解壓縮。 預設資料夾中的快照集無法壓縮。  
+ 指定可寫入快照集**@alt_snapshot_folder**位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar （5)**，預設值是 FALSE。 **false**指定，將不壓縮快照集;**true**指定壓縮快照集。 超出 2 GB 的快照集檔案無法壓縮。 壓縮的快照集檔案是在執行散發代理程式的位置進行解壓縮；提取訂閱通常會搭配使用壓縮的快照集，因此，會在訂閱者端將檔案解壓縮。 預設資料夾中的快照集無法壓縮。  
   
  [  **@ftp_address =** ] **'***ftp_address***'**  
  這是散發者之 FTP 服務的網路位址。 *ftp_address*是**sysname**，預設值是 NULL。 指定發行集快照集檔案所在的位置，以便訂閱者的散發代理程式或合併代理程式能夠加以收取。 因為這個屬性會儲存每個發行集，每個發行集可以有不同的*ftp_address*。 發行集必須支援利用 FTP 來傳播快照集。  
@@ -215,7 +215,7 @@ sp_addpublication [ @publication = ] 'publication'
  [  **@conflict_policy =** ] **'***conflict_policy***'**  
  指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 *conflict_policy*是**nvarchar （100)**預設值是 NULL，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**pub wins**|發行者在衝突中獲勝。|  
 |**sub reinit**|重新初始化這項訂閱。|  
@@ -233,7 +233,7 @@ sp_addpublication [ @publication = ] 'publication'
  [  **@queue_type =** ] **'***類型***'**  
  指定所用的佇列類型。 *類型*是**nvarchar （10)**，預設值是 NULL，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**sql**|利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。|  
 |NULL (預設值)|預設為**sql**，其中指定要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。|  
@@ -243,7 +243,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  *不支援 Oracle 發行者*。  
   
- [  **@add_to_active_directory =** ] **'***新增**_**to_active_directory***'**  
+ [  **@add_to_active_directory =** ] **' * * * 新增**_**to_active_directory * * * '**  
  這個參數已被取代，支援它的目的，只是為了與舊版的指令碼相容。 您不能再將發行集資訊加入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中。  
   
  [  **@logreader_job_name =** ] **'***logreader_agent_name***'**  
@@ -261,7 +261,7 @@ sp_addpublication [ @publication = ] 'publication'
  [  **@allow_initialize_from_backup =** ] **'***allow_initialize_from_backup***'**  
  指出訂閱者是否能夠從備份中，而不是從初始快照集中，對這個發行集的訂閱進行初始化。 *allow_initialize_from_backup*是**nvarchar （5)**，而且可以是下列值之一：  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**true**|啟用從備份進行的初始化。|  
 |**false**|停用從備份進行的初始化。|  
@@ -275,11 +275,11 @@ sp_addpublication [ @publication = ] 'publication'
  [  **@replicate_ddl =** ] *replicate_ddl*  
  指出是否支援發行集的結構描述複寫。 *replicate_ddl*是**int**，預設值是**1**如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者和**0**的非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 **1**表示複寫在發行者端執行的資料定義語言 (DDL) 陳述式，和**0**表示不複寫 DDL 陳述式。 *不支援 Oracle 發行者的結構描述複寫。* 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
- *@replicate_ddl*  DDL 陳述式將資料行時，會接受一個參數。 *@replicate_ddl*  DDL 陳述式改變或卸除資料行，基於下列原因時，參數會被忽略。  
+ *@replicate_ddl* DDL 陳述式將資料行時，會接受一個參數。 *@replicate_ddl* DDL 陳述式改變或卸除資料行，基於下列原因時，參數會被忽略。  
   
--   卸除資料行後，必須更新 sysarticlecolumns，以避免新的 DML 陳述式包括已卸除資料行而造成散發代理程式失敗。 *@replicate_ddl* 參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
+-   卸除資料行後，必須更新 sysarticlecolumns，以避免新的 DML 陳述式包括已卸除資料行而造成散發代理程式失敗。 *@replicate_ddl*參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
   
--   當更改資料行時，來源資料類型或 Null 屬性可能已變更，造成 DML 陳述式包含的值可能與散發者端的資料表不相容。 這類 DML 陳述式可能會造成散發代理程式失敗。 *@replicate_ddl* 參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
+-   當更改資料行時，來源資料類型或 Null 屬性可能已變更，造成 DML 陳述式包含的值可能與散發者端的資料表不相容。 這類 DML 陳述式可能會造成散發代理程式失敗。 *@replicate_ddl*參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
   
 -   Sysarticlecolumns DDL 陳述式加入新的資料行，不包括新的資料行。 DML 陳述式不會嘗試複寫新資料行的資料。 接受此參數是因為可接受複寫或不複寫 DDL。  
   
@@ -384,13 +384,13 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addpublication**。 Windows 驗證登入必須擁有代表其 Windows 使用者帳戶的資料庫使用者帳戶。 代表 Windows 群組的使用者帳戶權限不足。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_addlogreader_agent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
- [sp_addpublication_snapshot &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_addlogreader_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
+ [sp_addpublication_snapshot &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [sp_replicationdboption &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.default_constraints (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.default_constraints (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.default_constraints
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.default_constraints catalog view
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6fa6021993aa0c9f24bf2e18f4b6702cdfc2079
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c99c3f281c67557ff56589e7e8dec90f2e50cde8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,9 +41,9 @@ ms.lasthandoff: 11/21/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱[sys.objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**parent_column_id**|**int**|中的資料行的識別碼**parent_object_id**所屬這個預設值。|  
-|**定義**|**nvarchar(max)**|定義這個預設值的 SQL 運算式。|  
+|**[定義]**|**nvarchar(max)**|定義這個預設值的 SQL 運算式。|  
 |**is_system_named**|**bit**|1 = 名稱是系統所產生。<br /><br /> 0 = 名稱是使用者所提供。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -62,8 +63,8 @@ WHERE d.parent_object_id = OBJECT_ID(N'HumanResources.Employee', N'U')
 AND c.name = 'VacationHours';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

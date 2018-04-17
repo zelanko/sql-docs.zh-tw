@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_first_result_set (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_describe_first_result_set (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_first_result_set
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 76c5088e011f4111e67631a5e7cbfed1ff57059b
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8860d9b24731b311b3161ccdfca0f163ba3204d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,7 +52,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  [ **@tsql =** ] **'***Transact-SQL_batch***'**  
  一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar （max)**。  
   
- [ **@params =** ] **N'***parameters***'**  
+ [  **@params =** ] **N'***參數***'**  
  @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可以是**nvarchar （n)**或**nvarchar （max)**。  
   
  是一個字串，包含的所有參數都已內嵌在定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 指定陳述式中每個參數必須定義在@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次陳述式中的不包含參數，@params並非必要。 這個參數的預設值是 NULL。  
@@ -148,15 +149,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varchar(a)**至**varchar(a')**其中 ' >。  
   
-    -   **varchar(a)** to **varchar(max)**  
+    -   **varchar(a)**至**varchar （max)**  
   
     -   **nvarchar(a)**至**nvarchar(a')**其中 ' >。  
   
-    -   **nvarchar(a)** to **nvarchar(max)**  
+    -   **nvarchar(a)**至**nvarchar （max)**  
   
     -   **varbinary(a)**至**varbinary(a')**其中 ' >。  
   
-    -   **varbinary(a)** to **varbinary(max)**  
+    -   **varbinary(a)**至**varbinary （max)**  
   
  **sp_describe_first_result_set**不支援間接遞迴。  
   
@@ -408,7 +409,7 @@ N'
  結果： **int NULL**因為 dbo.t1.a 和 s1.t1.a 都有類型**int**和不同的 null 屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

@@ -1,30 +1,31 @@
 ---
-title: "測試可互通的應用程式 |Microsoft 文件"
-ms.custom: 
+title: 測試可互通的應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], testing interoperable applications
 - testing interoperable applications [ODBC]
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1acbc994449e61b879ca2223f3ed4eb394943b44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4cd98e6311d7d08b6faed0cb4759523642e70a5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="testing-interoperable-applications"></a>測試可互通的應用程式
 測試可互通的應用程式是使用最佳耗時業務和最糟的情況不可能因為市場上持續出現新的驅動程式。 不過，有合理的程度的測試可能是。 有限或過低的互通性的應用程式只需要針對保證可支援這些驅動程式進行測試。 不過，它們必須經過完整測試對這些驅動程式。  

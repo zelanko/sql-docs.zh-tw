@@ -1,16 +1,16 @@
 ---
-title: "sp_dropmergearticle (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_dropmergearticle (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 05/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmergearticle
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 902a28f31abdc9dd501c6352acd4b2bee4042fd0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 201699ce0cbbc40d1a255ab628558c174b02a136
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是要缷除發行項的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@article=**] **'***文章***'**  
@@ -168,10 +168,10 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [刪除發行項](../../relational-databases/replication/publish/delete-an-article.md)   
  [在現有發行集中加入和卸除發行項](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [sp_addmergearticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

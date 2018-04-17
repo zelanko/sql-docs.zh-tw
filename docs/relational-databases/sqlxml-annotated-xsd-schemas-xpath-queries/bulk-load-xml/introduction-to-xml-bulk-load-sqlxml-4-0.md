@@ -1,16 +1,16 @@
 ---
-title: "XML 大量載入 (SQLXML 4.0) 簡介 |Microsoft 文件"
-ms.custom: 
+title: XML 大量載入 (SQLXML 4.0) 簡介 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - nontransacted XML Bulk Load operations
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18950714bd976c224ef33627fb12528ad08b0584
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ebdbed96867a664fe64f6b8508c6a38e97d27166
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大量載入簡介 (SQLXML 4.0) 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 大量載入是獨立的 COM 物件，可讓您將半結構化的 XML 資料載入至 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
+  XML 大量載入是獨立的 COM 物件，可讓您將半結構化的 XML 資料載入至 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
   
  您可以使用 INSERT 陳述式和 OPENXML 函數將 XML 資料插入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫，不過當您需要插入大量的 XML 資料時，大量載入公用程式可以提供較佳的效能。  
   
@@ -46,9 +47,9 @@ XML 大量載入是獨立的 COM 物件，可讓您將半結構化的 XML 資料
   
  這裡假設您熟悉下列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能：  
   
--   註解 XSD 和 XDR 結構描述。 如需有關註解式 XSD 結構描述的詳細資訊，請參閱[簡介註解式 XSD 結構描述 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 如需註解式 XDR 結構描述資訊，請參閱[註解式 XDR 結構描述 &#40; SQLXML 4.0 &#41; 中的已過時](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+-   註解 XSD 和 XDR 結構描述。 如需有關註解式 XSD 結構描述的詳細資訊，請參閱[註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 如需註解式 XDR 結構描述資訊，請參閱[註解式 XDR 結構描述&#40;SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量插入機制，例如[!INCLUDE[tsql](../../../includes/tsql-md.md)]BULK INSERT 陳述式和 bcp 公用程式。 如需詳細資訊，請參閱[BULK INSERT &#40;TRANSACT-SQL &#41;](../../../t-sql/statements/bulk-insert-transact-sql.md)和[bcp 公用程式](../../../tools/bcp-utility.md)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量插入機制，例如 [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT 陳述式和 bcp 公用程式。 如需詳細資訊，請參閱[BULK INSERT &#40;TRANSACT-SQL&#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md)和[bcp 公用程式](../../../tools/bcp-utility.md)。  
   
 ## <a name="streaming-of-xml-data"></a>XML 資料的資料流  
  因為來源 XML 文件可能很大，所以不會將整個文件讀入記憶體來進行大量載入處理， 而是由 XML 大量載入以資料流的方式解譯 XML 資料，再加以讀取。 此公用程式讀取資料時會識別資料庫資料表，從 XML 資料來源產生適當的記錄，然後再將記錄傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行插入。  

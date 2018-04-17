@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_cluster_nodes (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_os_cluster_nodes (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_cluster_nodes_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d70e6512f4018c7cf5283e2cf3b93972edae6878
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3da465e5ebe38965f81af83473ff1b1b6c9dbf68
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +73,9 @@ FROM sys.dm_os_cluster_nodes;
 |Node3|1|關閉|0|  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_os_cluster_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
- [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [sys.fn_virtualservernodes &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
+ [sys.dm_os_cluster_properties &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
+ [sys.dm_io_cluster_shared_drives &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys.fn_virtualservernodes &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

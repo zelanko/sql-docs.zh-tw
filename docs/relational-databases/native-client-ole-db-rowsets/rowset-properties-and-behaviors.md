@@ -1,15 +1,15 @@
 ---
-title: "資料列集屬性和行為 |Microsoft 文件"
-ms.custom: 
+title: 資料列集屬性和行為 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ba87afc52aa46599a4453a457536fc62ff91b3a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>資料列集屬性和行為
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_BOOKMARKTYPE|R/W：唯讀<br /><br /> 預設值：DBPROPVAL_BMK_NUMERIC<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會實作數值書籤。 A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者書籤是 32 位元不帶正負號的整數，類型為 DBTYPE_UI4。|  
 |DBPROP_CACHEDEFERRED|這個資料列集屬性未實作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援反向提取和捲動非循序的資料列集中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當 DBPROP_CANFETCHBACKWARDS 或 DBPROP_CANSCROLLBACKWARDS 為 VARIANT_TRUE 時，Native Client OLE DB 提供者會建立資料指標支援的資料列集。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)。|  
-|DBPROP_CANHOLDROWS|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會傳回 DB_E_ROWSNOTRELEASED 如果取用者嘗試取得多個資料列的資料列集時暫止的變更存在於目前在資料列集。 這個行為可以修改。<br /><br /> 將 DBPROP_CANHOLDROWS 和 DBPROP_IRowsetChange 同時設定為 VARIANT_TRUE 意味者加上書籤的資料列集。 如果這兩個屬性都為 VARIANT_TRUE， **IRowsetLocate**介面適用於資料列集，而且 DBPROP_BOOKMARKS 和 DBPROP_LITERALBOOKMARKS 都同時為 VARIANT_TRUE。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者的資料列集包含書籤支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料指標。|  
+|DBPROP_CANHOLDROWS|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會傳回 DB_E_ROWSNOTRELEASED 如果取用者嘗試取得多個資料列的資料列集時暫止的變更存在於目前在資料列集。 這個行為可以修改。<br /><br /> 將 DBPROP_CANHOLDROWS 和 DBPROP_IRowsetChange 同時設定為 VARIANT_TRUE 意味者加上書籤的資料列集。 如果這兩個屬性都為 VARIANT_TRUE， **IRowsetLocate**介面適用於資料列集，而且 DBPROP_BOOKMARKS 和 DBPROP_LITERALBOOKMARKS 都同時為 VARIANT_TRUE。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的資料列集包含書籤支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料指標。|  
 |DBPROP_CHANGEINSERTEDROWS|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：如果資料列集使用的是索引鍵集驅動資料指標，僅能將此屬性設定為 VARIANT_TRUE。|  
 |DBPROP_COLUMNRESTRICT|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者將屬性設定為 VARIANT_TRUE 時無法變更資料列集中的資料行，取用者。 資料列集中的其他資料行可能可以更新，而且資料列本身可能會遭到刪除。<br /><br /> 當屬性為 VARIANT_TRUE 時，取用者會檢查*dwFlags* DBCOLUMNINFO 結構的成員，才能判斷是否可寫入個別的資料行的值。 可修改的資料行， *dwFlags*表現 DBCOLUMNFLAGS_WRITE。|  
 |DBPROP_COMMANDTIMEOUT|R/W：讀取/寫入<br /><br /> 預設值： 0<br /><br /> 描述： 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會逾時上**icommand:: Execute**方法。|  
@@ -75,8 +76,8 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_MAYWRITECOLUMN|這個資料列集屬性未實作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_MEMORYUSAGE|這個資料列集屬性未實作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_NOTIFICATIONGRANULARITY|這個資料列集屬性未實作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。 嘗試讀取或寫入屬性值會產生錯誤。|  
-|DBPROP_NOTIFICATIONPHASES|R/W：唯讀<br /><br /> 預設值： DBPROPVAL_NP_OKTODO &#124;DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124;DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援所有告知階段。|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/W：唯讀<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者告知階段會取消之前嘗試執行資料列集修改指示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不支援取消階段，在嘗試完成之後。|  
+|DBPROP_NOTIFICATIONPHASES|R/W：唯讀<br /><br /> 預設值： DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援所有告知階段。|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/W：唯讀<br /><br /> 預設值： DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者告知階段會取消之前嘗試執行資料列集修改指示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不支援取消階段，在嘗試完成之後。|  
 |DBPROP_ORDEREDBOOKMARKS|這個資料列集屬性未實作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 設定變更可視性屬性會使[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料指標來支援資料列集。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)。|  
 |DBPROP_QUICKRESTART|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 當設定為 VARIANT_TRUE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會嘗試使用伺服器資料指標的資料列集。|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 01/24/2018
   
 |屬性識別碼|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|資料行：ColumnID<br /><br /> R/W：唯讀<br /><br /> 類型： VT_U12 &#124;VT_ARRAY<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述：在目前的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中，代表 COMPUTE 子句結果資料行之序數位置 (以 1 為基底) 的整數值陣列。 這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者等同於等同於 ODBC SQL_CA_SS_COLUMN_ID 屬性。|  
+|SSPROP_COLUMN_ID|資料行：ColumnID<br /><br /> R/W：唯讀<br /><br /> 類型： VT_U12 &#124; VT_ARRAY<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述：在目前的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中，代表 COMPUTE 子句結果資料行之序數位置 (以 1 為基底) 的整數值陣列。 這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者等同於等同於 ODBC SQL_CA_SS_COLUMN_ID 屬性。|  
 |SSPROP_DEFERPREPARE|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： VARIANT_TRUE： 在備妥的執行中，命令準備會延遲，直到**icommand:: Execute**稱為或執行中繼屬性作業。 如果此屬性設定為<br /><br /> VARIANT_FALSE： 陳述式時，會準備**icommandprepare:: Prepare**執行。|  
 |SSPROP_IRowsetFastLoad|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 設定此屬性為 VARIANT_TRUE 以便開啟快速載入資料列集，透過**iopenrowset:: Openrowset**。 您無法設定此屬性**icommandproperties:: Setproperties**。|  
 |SSPROP_ISSAsynchStatus|資料行：否。<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 將此屬性設定為 VARIANT_TRUE 以便使用非同步作業[ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)介面。|  

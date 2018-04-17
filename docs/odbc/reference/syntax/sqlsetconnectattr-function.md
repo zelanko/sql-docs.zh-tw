@@ -2,7 +2,7 @@
 title: SQLSetConnectAttr 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 函數
 **一致性**  
@@ -58,13 +58,13 @@ SQLRETURN SQLSetConnectAttr(
  *ConnectionHandle*  
  [輸入]連接控制代碼。  
   
- *Attribute*  
+ *屬性*  
  [輸入]若要設定，屬性列在 [意見]。  
   
  *ValuePtr*  
  [輸入]要與相關聯的值指標*屬性*。 值而定*屬性*， *ValuePtr*會是不帶正負號的整數值，或將會指向以 null 結束的字元字串。 請注意，整數類資料類型的型別*屬性*引數不固定長度，請參閱 「 註解區段以瞭解詳細資料。  
   
- *StringLength*  
+ *stringLength*  
  [輸入]如果*屬性*是 ODBC 定義的屬性和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度 **ValuePtr*。 字元字串資料，這個引數應該包含在字串中的位元組數目。  
   
  如果*屬性*是 ODBC 定義的屬性和*ValuePtr*是整數， *StringLength*會被忽略。  
@@ -87,10 +87,10 @@ SQLRETURN SQLSetConnectAttr(
   
  驅動程式可能會傳回 SQL_SUCCESS_WITH_INFO，提供設定選項的結果的相關資訊。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02 的警告|選項值已變更|驅動程式不支援指定的值*ValuePtr*置換相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|驅動程式不支援指定的值*ValuePtr*置換相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08002|使用中的連接名稱|*屬性*引數以前是 SQL_ATTR_ODBC_CURSORS，和驅動程式已連接到資料來源。|  
 |08003|未開啟連線。|(DM)*屬性*值指定所需的開啟連接，但*ConnectionHandle*不是處於連線狀態。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
@@ -134,7 +134,7 @@ SQLRETURN SQLSetConnectAttr(
   
  可以設定某些連接屬性，只有之前已建立連接。在建立連接之後，才可以設定其他項目。 下表指出必須在之前或在建立連接之後設定這些連接屬性。 *任一*指出之前或之後的連接，可以設定屬性。  
   
-|attribute|設定之前或之後的連接？|  
+|Attribute|設定之前或之後的連接？|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|之前或之後|  
@@ -174,7 +174,7 @@ SQLRETURN SQLSetConnectAttr(
   
  *StringLength*會忽略引數如果長度定義屬性，在本例中為 ODBC 2 中引入的所有屬性*.x*或更早版本。  
   
-|*Attribute*|*ValuePtr*內容|  
+|*屬性*|*ValuePtr*內容|  
 |-----------------|-------------------------|  
 |SQL_ATTR_ACCESS_MODE (ODBC 1.0)|SQLUINTEGER 值。 驅動程式或資料來源會使用 SQL_MODE_READ_ONLY 為連線不支援 SQL 陳述式而造成更新所需的指標。 此模式可以用來最佳化鎖定策略、 管理交易或適當的驅動程式或資料來源的其他區域。 若要避免這類陳述式不提交至資料來源不需要的驅動程式。 驅動程式和資料來源時要求處理不是唯讀時唯讀連接的 SQL 陳述式的行為是由實作定義。 預設值為 SQL_MODE_READ_WRITE。|  
 |SQL_ATTR_ASYNC_DBC_EVENT (ODBC 3.8)|為事件處理常式的 SQLPOINTER 值。<br /><br /> 非同步函式完成的通知已啟用藉由呼叫**SQLSetConnectAttr** SQL_ATTR_ASYNC_STMT_EVENT 屬性和指定的事件控制代碼。 **注意：**通知方法不支援資料指標程式庫。 如果它嘗試啟用的通知方法時，啟用透過 SQLSetConnectAttr，資料指標程式庫應用程式會收到錯誤訊息。|  
@@ -212,6 +212,6 @@ SQLRETURN SQLSetConnectAttr(
 |配置控制代碼|[SQLAllocHandle 函式](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |傳回連接屬性的設定|[SQLGetConnectAttr 函式](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

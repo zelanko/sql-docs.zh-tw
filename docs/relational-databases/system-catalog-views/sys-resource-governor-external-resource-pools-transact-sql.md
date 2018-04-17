@@ -1,16 +1,16 @@
 ---
-title: "sys.resource_governor_external_resource_pools (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.resource_governor_external_resource_pools (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor_external_resource_pools
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - sys.resource_governor_external_resource_pools
 - resource_governor_external_resource_pools
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4417140fcd35a27bee4364e336f73812b0fa42be
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9e36ae784d99ef51186c3bafccfea38a77dee444
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>sys.resource_governor_external_resource_pools (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 傳回儲存的外部資源集區組態中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 檢視的每個資料列都會決定集區的組態。
   
@@ -55,13 +55,13 @@ ms.lasthandoff: 11/21/2017
 
 [SQL Server 中的機器學習資源管理](../../advanced-analytics/r/resource-governance-for-r-services.md)
 
-[資源管理員目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+[資源管理員目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
 
-[sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
+[sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
 
 [資源管理員](../../relational-databases/resource-governor/resource-governor.md)
 
-[sys.dm_resource_governor_resource_pool_affinity &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys.dm_resource_governor_resource_pool_affinity &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
 [外部指令碼已啟用伺服器組態選項](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 

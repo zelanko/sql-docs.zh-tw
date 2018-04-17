@@ -1,15 +1,15 @@
 ---
-title: "自動轉譯字元資料的 |Microsoft 文件"
-ms.custom: 
+title: 自動轉譯字元資料的 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-results
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC], autotranslating character data
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - ODBC data types, autotranslating character data
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26dc8b3db6dae8f93f7e029a47b28d438d418cbf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 599a3b980373fdfa7db0da556b6da319178f4634
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="autotranslation-of-character-data"></a>字元資料的自動轉譯
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/25/2018
  從字元移到 Unicode 時，永遠必須轉換資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
+ [處理結果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
  [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

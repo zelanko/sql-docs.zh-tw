@@ -1,16 +1,16 @@
 ---
-title: "預設對應 XSD 項目屬性的資料表資料行 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: 預設對應 XSD 項目屬性的資料表資料行 (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XSD schemas [SQLXML], mapping attributes and elements
@@ -29,26 +29,27 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8307e0810ba9cfd55336287cae38526e91845b34
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2fb1d00e1ec69ede259af652c6d463084ba0501c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的預設對應 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-根據預設，XSD 註解式結構描述中的複雜類型元素會對應到指定之資料庫中具有相同名稱的資料表 (檢視表)，而簡單類型的元素或屬性會對應到資料表中具有相同名稱的資料行。  
+  根據預設，XSD 註解式結構描述中的複雜類型元素會對應到指定之資料庫中具有相同名稱的資料表 (檢視表)，而簡單類型的元素或屬性會對應到資料表中具有相同名稱的資料行。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 指定預設對應  
- 在這個範例的 XDR 結構描述中不會指定任何註解。 **\<Person.Contact >**元素屬於複雜類型，因此，對應至 AdventureWorks 資料庫中的 Person.Contact 資料表的預設值。 所有屬性 (ContactID，FirstName，LastName) 的 **\<Person.Contact >**項目都屬於簡單類型，而且對應到 Person.Contact 資料表中同名的資料行的預設值。  
+ 在這個範例的 XDR 結構描述中不會指定任何註解。  **\<Person.Contact >**元素屬於複雜類型，因此，對應至 AdventureWorks 資料庫中的 Person.Contact 資料表的預設值。 所有屬性 (ContactID，FirstName，LastName) 的 **\<Person.Contact >**項目都屬於簡單類型，而且對應到 Person.Contact 資料表中同名的資料行的預設值。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -99,7 +100,7 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. 將 XML 元素對應至資料庫資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Person.Contact >**元素屬於複雜類型，並對應至具有相同名稱在資料庫中的資料表。 項目 **\<FirstName >**和 **\<LastName >**和**EmployeeID**屬性都屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於，這些元素用於對應 FirstName 和 LastName 欄位。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。  **\<Person.Contact >**元素屬於複雜類型，並對應至具有相同名稱在資料庫中的資料表。 項目 **\<FirstName >**和 **\<LastName >**和**EmployeeID**屬性都屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於，這些元素用於對應 FirstName 和 LastName 欄位。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -153,7 +154,7 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 將 XML 元素對應至 XML 資料類型資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Production.ProductModel >**元素屬於複雜類型，並對應至具有相同名稱在資料庫中的資料表。 **ProductModelID**屬性屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於**\<指示 >**元素會對應至使用的資料行**xml**所使用的資料型別**xsd:anyType**型別。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。  **\<Production.ProductModel >**元素屬於複雜類型，並對應至具有相同名稱在資料庫中的資料表。 **ProductModelID**屬性屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於**\<指示 >**元素會對應至使用的資料行**xml**所使用的資料型別**xsd:anyType**型別。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -212,7 +213,7 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [註解式結構描述的安全性考量 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [註解式結構描述的安全性考量&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [SQLXML 4.0 支援 xml 資料類型](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   

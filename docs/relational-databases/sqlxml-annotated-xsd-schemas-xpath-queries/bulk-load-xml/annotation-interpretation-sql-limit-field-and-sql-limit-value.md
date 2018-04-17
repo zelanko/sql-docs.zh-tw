@@ -1,16 +1,16 @@
 ---
-title: "sql: limit-value-欄位和 sql: limit-value-值 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: 'sql: limit-value-欄位和 sql: limit-value-值 (SQLXML 4.0) |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - limiting values [SQLXML]
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cdaba9ced51e09a01947af986ce77a1d66cb6b6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b41c51dd840ee91d863b0707e5ea1e3c7bd3253f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>註解的解譯-sql: limit-value-欄位和 sql: limit-value-值
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 大量載入處理序**sql: limit-value-欄位**和**sql: limit-value-值**根據其定義的註解。 如需詳細資訊，請參閱[篩選值使用 sql: limit-value-欄位和 sql: limit-value-值 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
+  XML 大量載入處理序**sql: limit-value-欄位**和**sql: limit-value-值**根據其定義的註解。 如需詳細資訊，請參閱[篩選值使用 sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
   
  例如，假設資料庫包含下列資料表：  
   

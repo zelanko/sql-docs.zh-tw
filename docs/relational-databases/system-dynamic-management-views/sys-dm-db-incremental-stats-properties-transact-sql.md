@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2014
@@ -24,16 +24,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6187179f6599404dac86f92403cba507eb5e5fcc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89309e660606a4ce9845ce71748fb37061d5628a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |object_id|**int**|要傳回統計資料物件屬性之物件 (資料表) 的識別碼。|  
 |stats_id|**int**|統計資料物件的識別碼。 在資料表中，這是唯一的。 如需詳細資訊，請參閱 [sys並未包含檢視。stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)並未包含檢視。|
 |partition_number|**int**|包含資料表其中一部分的磁碟分割的號碼。|  
-|last_updated|**datetime2**|上次更新統計資料物件的日期和時間。 如需詳細資訊，請參閱[備註](#Remarks)此頁面中的區段。|  
+|last_updated|**datetime2**|上次更新統計資料物件的日期和時間。 如需詳細資訊，請參閱此頁的[備註](#Remarks)一節。|  
 |rows|**bigint**|上一次更新統計資料時位於資料表中的資料列總數。 如果篩選了統計資料或是統計資料對應至篩選過的索引，此資料列數可能會少於資料表中的資料列數。|  
 |rows_sampled|**bigint**|針對統計資料計算進行取樣的資料列總數。|  
 |步驟|**int**|長條圖中的步驟數。 如需詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)並未包含檢視。|  
@@ -79,7 +79,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  此行為可讓您在交叉套用至例如 `sys.dm_db_incremental_stats_properties` 和 `sys.objects` 等檢視中的資料列時，安全地使用 `sys.stats`。 這個方法可以傳回對應每個資料分割的統計資料屬性。 若要查看跨所有資料分割合併的合併統計資料屬性，請改用 sys.dm_db_stats_properties。 
 
-統計資料更新將日期儲存在[統計資料的 blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)搭配[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)、 中繼資料中找不到。 讀取任何資料時產生統計資料，就不會建立統計資料的 blob，日期無法使用，而*last_updated*資料行是 NULL。 這是篩選的統計資料述詞未傳回任何資料列，或新的空白資料表的情況。
+統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 讀取任何資料時產生統計資料，就不會建立統計資料的 blob，日期無法使用，而*last_updated*資料行是 NULL。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
 
 ## <a name="permissions"></a>Permissions  
  要求使用者對於統計資料資料行擁有選取權限，或是使用者擁有資料表，或使用者是 `sysadmin` 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員。  

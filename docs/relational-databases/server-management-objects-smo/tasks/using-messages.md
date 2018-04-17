@@ -1,29 +1,30 @@
 ---
-title: "使用訊息 |Microsoft 文件"
-ms.custom: 
+title: 使用訊息 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ed18e9b9b7f91613a23d0146b79e0da2b056618
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 95fea53553eea08880e2fa427dc34eaf81123fb4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-messages"></a>使用訊息
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/12/2018
  在 SMO 中，使用者定義的訊息是由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 物件以程式設計的方式表示。 現有的使用者定義的訊息可以藉由反覆運算集合而找到。 您可以建立新的使用者定義訊息具現化新**UserDefinedMessage**物件和設定適當的屬性。  
   
 ## <a name="examples"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>在 Visual Basic 中尋找特定的系統訊息  
  此程式碼範例示範如何依識別碼辨識系統訊息並加以顯示。  

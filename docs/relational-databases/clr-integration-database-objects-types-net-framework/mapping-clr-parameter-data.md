@@ -1,15 +1,15 @@
 ---
-title: "對應 CLR 參數資料 |Microsoft 文件"
-ms.custom: 
+title: 對應 CLR 參數資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlBinary data type
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 
+caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e47f4cf6d163921b5fb6a398c61c66e217e797a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型、 common language runtime (CLR) 中的對應項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**System.Data.SqlTypes**命名空間，其原生 CLR 對等項目中[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework。  
+  下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型、 common language runtime (CLR) 中的對應項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**System.Data.SqlTypes**命名空間，其原生 CLR 對等項目中[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework。  
   
 ||||  
 |-|-|-|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/09/2018
 |**ntext**|無|無|  
 |**numeric**|**SqlDecimal**|**Decimal、 可為 Null\<十進位 >**|  
 |**nvarchar**|**SqlChars SqlString**<br /><br /> **SQLChars**是比較適合資料傳輸和存取權，以及**SQLString**是比較適合執行字串作業。|**String，Char]**|  
-|**nvarchar(1), nchar(1)**|**SqlChars SqlString**|**Char、 String，Char []，可為 Null\<char >**|  
+|**nvarchar(1)、 nchar(1)**|**SqlChars SqlString**|**Char、 String，Char []，可為 Null\<char >**|  
 |**real**|**SqlSingle** (範圍**SqlSingle**，不過，大於**真實**)|**單一、 可為 Null\<單一 >**|  
 |**rowversion**|無|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16，可為 Null\<Int16 >**|  
@@ -117,9 +117,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 資料類型 (SQL Server)**|**SQL Server 資料類型**|  
-|**Decimal**|smallmoney|  
+|**小數點**|smallmoney|  
 |**SqlMoney**|smallmoney|  
-|**Decimal**|money|  
+|**小數點**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   

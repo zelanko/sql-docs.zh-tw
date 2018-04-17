@@ -1,29 +1,30 @@
 ---
-title: "OLE DB 資料表值參數類型支援 |Microsoft 文件"
-ms.custom: 
+title: OLE DB 資料表值參數類型支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84b7677ea2dea591b25f64101577b0bf51b26142
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ca6098b630ba9c8b2550f1caf6d4804f6b73d0f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 資料表值參數類型支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,13 +64,13 @@ CoType RowsetTVP
  不支援針對任何其他類型在 DBTYPE_TABLE 之間來回轉換。 IConvertType::CanConvert 會針對任何要求 dbtype_table 與 DBTYPE_TABLE 的轉換不支援轉換傳回 S_FALSE。 這會假設命令物件的 DBCONVERTFLAGS_PARAMETER。  
   
 ## <a name="methods"></a>方法  
- 有關 OLE DB 方法支援資料表值參數的詳細資訊，請參閱[OLE DB Table-Valued 參數類型支援 &#40;方法 &#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
+ 有關 OLE DB 方法支援資料表值參數的詳細資訊，請參閱[OLE DB Table-Valued 參數類型支援&#40;方法&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)。  
   
 ## <a name="properties"></a>屬性  
- 如需 infornation 有關支援資料表值參數的 OLE DB 屬性，請參閱[OLE DB Table-Valued 參數類型支援 &#40;屬性 &#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ 如需 infornation 有關支援資料表值參數的 OLE DB 屬性，請參閱[OLE DB Table-Valued 參數類型支援&#40;屬性&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表值參數 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [使用資料表值參數 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [資料表值參數&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [使用資料表值參數 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

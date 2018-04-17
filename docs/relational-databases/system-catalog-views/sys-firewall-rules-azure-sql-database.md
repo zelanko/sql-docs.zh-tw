@@ -1,16 +1,16 @@
 ---
-title: "sys.firewall_rules （SQL Azure 資料庫） |Microsoft 文件"
-ms.custom: 
+title: sys.firewall_rules （SQL Azure 資料庫） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.firewall_rules
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - firewall_rules
 - sys.firewall_rules
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f06eef87553a1a97851a3252faaf0f8057158c2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 3f3f25541c1c60e4a9dad3dcfdaff037c7a7bcde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  `sys.firewall_rules` 檢視表包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|伺服器層級防火牆設定的識別碼。|  
 |name|**NVARCHAR （128)**|您選擇用來描述和區分伺服器層級防火牆設定的名稱。|  
@@ -51,17 +52,17 @@ ms.lasthandoff: 11/21/2017
 |modify_date|**日期時間**|上次修改伺服器層級防火牆設定時的 UTC 日期和時間。|  
   
 ## <a name="remarks"></a>備註  
- 若要移除資料庫防火牆規則，請使用[sp_delete_firewall_rule &#40;Azure SQL Database &#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). 若要設定單一資料庫的防火牆規則，請參閱[sys.database_firewall_rules &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). 若要傳回現有防火牆規則的相關資訊，請查詢 sys.firewall_rules （SQL Azure 資料庫）。  
+ 若要移除資料庫防火牆規則，請使用[sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)。 若要設定單一資料庫的防火牆規則，請參閱[sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)。 若要傳回現有防火牆規則的相關資訊，請查詢 sys.firewall_rules （SQL Azure 資料庫）。  
   
 ## <a name="permissions"></a>Permissions  
  此檢視的唯讀存取可供所有使用者只要具有權限連接到**主要**資料庫。  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.database_firewall_rules &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
- [sp_set_firewall_rule &#40;Azure SQL Database &#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
+ [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [Configure a Firewall for FILESTREAM 存取](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)   
- [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
+ [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [如何：設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

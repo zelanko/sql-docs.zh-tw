@@ -1,16 +1,16 @@
 ---
-title: "sp_changesubscription (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_changesubscription (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,21 +22,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e2a49e9b60927d1838205a5ae594c01ee4a1ffb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d94c10040ec7dc82640a17e5454269790acca498
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  變更快照集或交易式發送訂閱的屬性，或變更佇列更新異動複寫所涉及的提取訂閱的屬性。 若要變更提取訂閱的所有其他類型的屬性，請使用[sp_change_subscription_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription**在發行集資料庫的發行者上執行。  
+  變更快照集或交易式發送訂閱的屬性，或變更佇列更新異動複寫所涉及的提取訂閱的屬性。 若要變更提取訂閱的所有其他類型的屬性，請使用[sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。 **sp_changesubscription**在發行集資料庫的發行者上執行。  
   
 > [!IMPORTANT]  
 >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -57,16 +57,16 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication** =] **'***發行集***'**  
+ [ **@publication**=] **'***發行集***'**  
  這是要變更的發行集名稱。 *發行集*是**sysname**，沒有預設值  
   
- [  **@article**  =] **'***文章***'**  
+ [ **@article** =] **'***文章***'**  
  這是要變更的發行項名稱。 *發行項*是**sysname**，沒有預設值。  
   
- [  **@subscriber**  =] **'***訂閱者***'**  
+ [ **@subscriber** = ] **'***subscriber***'**  
  這是訂閱者的名稱。 *訂閱者*是**sysname**，沒有預設值。  
   
- [  **@destination_db**  =] **'***destination_db***'**  
+ [ **@destination_db** =] **'***destination_db***'**  
  這是訂閱資料庫的名稱。 *destination_db*是**sysname**，沒有預設值。  
   
  [  **@property=**] **'***屬性***'**  
@@ -75,7 +75,7 @@ sp_changesubscription [ @publication = ] 'publication'
  [  **@value=**] **'***值***'**  
  指定的新值*屬性*。 *值*是**nvarchar （4000)**，而且可以是下列其中一個資料表中的值。  
   
-|屬性|值|Description|  
+|屬性|Value|Description|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。|  
 |**distrib_job_password**||用來執行代理程式之 Windows 帳戶的密碼。|  
@@ -105,15 +105,15 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_changesubscription**用於快照式和異動複寫。  
   
- **sp_changesubscription**只可用來修改發送訂閱的屬性或提取訂閱參與佇列更新異動複寫。 若要變更提取訂閱的所有其他類型的屬性，請使用[sp_change_subscription_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
+ **sp_changesubscription**只可用來修改發送訂閱的屬性或提取訂閱參與佇列更新異動複寫。 若要變更提取訂閱的所有其他類型的屬性，請使用[sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。  
   
  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changesubscription**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_addsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sp_addsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

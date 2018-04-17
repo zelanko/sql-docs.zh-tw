@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_requests (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_requests_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-caps.latest.revision: 
+caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c66516230609677ae4f7598dc81fb8df4758e84e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 51f71a3274031ad3a9a795e94fa0c15968fc2bfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 02/03/2018
 |user_id|**int**|提交要求之使用者的識別碼。 不可為 Null。|  
 |connection_id|**uniqueidentifier**|要求到達所用連接的識別碼。 可為 Null。|  
 |blocking_session_id|**smallint**|封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，目前無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  
-|wait_type|**nvarchar(60)**|若要求目前被封鎖，這個資料行會傳回等候的類型。 可為 Null。<br /><br /> 如需等候的類型資訊，請參閱[sys.dm_os_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|wait_type|**nvarchar(60)**|若要求目前被封鎖，這個資料行會傳回等候的類型。 可為 Null。<br /><br /> 如需等候的類型資訊，請參閱[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
 |wait_time|**int**|若要求目前被封鎖，這個資料行會傳回目前等候的持續時間 (以毫秒為單位)。 不可為 Null。|  
 |last_wait_type|**nvarchar(60)**|如果這個要求先前被封鎖，這個資料行會傳回上次等候的類型。 不可為 Null。|  
 |wait_resource|**nvarchar(256)**|若要求目前被封鎖，這個資料行會傳回要求目前等候的資源。 不可為 Null。|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 02/03/2018
 |is_resumable |**bit** |**適用於**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指出要求是否為可繼續索引作業。 |  
   
 ## <a name="permissions"></a>Permissions  
- 如果使用者具有`VIEW SERVER STATE`伺服器上的權限，使用者會看到所有執行的工作階段的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否則使用者會看到目前工作階段。 `VIEW SERVER STATE`無法授與在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]讓`sys.dm_exec_requests`會受限於目前的連接。 
+ 如果使用者具有`VIEW SERVER STATE`伺服器上的權限，使用者會看到所有執行的工作階段的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否則使用者會看到目前工作階段。 `VIEW SERVER STATE` 無法授與在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]讓`sys.dm_exec_requests`會受限於目前的連接。 
   
 ## <a name="examples"></a>範例  
   
@@ -154,9 +155,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
+ [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys.dm_os_memory_clerks &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_query_memory_grants &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

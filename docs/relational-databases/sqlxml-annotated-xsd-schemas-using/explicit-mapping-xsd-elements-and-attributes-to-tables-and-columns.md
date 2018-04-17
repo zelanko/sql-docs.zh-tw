@@ -1,16 +1,16 @@
 ---
-title: "明確的對應 XSD 元素和屬性對資料表和資料行 |Microsoft 文件"
-ms.custom: 
+title: 明確的對應 XSD 元素和屬性對資料表和資料行 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -31,20 +31,21 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2cc71e8ce8daf3da61754dc8e01d264d42c863a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b411f418f684ad54a7a04bce0a8c90484f475dc9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>明確的對應 XSD 元素和屬性對資料表和資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-使用 XSD 結構描述提供關聯式資料庫的 XML 檢視表時，必須將結構描述的元素但屬性對應到資料庫的資料表和資料行。 資料庫資料表/檢視表中的資料列將會對應到 XML 文件中的元素。 資料庫中的資料行值會對應到屬性或元素。  
+  使用 XSD 結構描述提供關聯式資料庫的 XML 檢視表時，必須將結構描述的元素但屬性對應到資料庫的資料表和資料行。 資料庫資料表/檢視表中的資料列將會對應到 XML 文件中的元素。 資料庫中的資料行值會對應到屬性或元素。  
   
  針對註解式 XSD 結構描述指定 XPath 查詢時，結構描述中元素和屬性的資料會從所對應的資料表和資料行對應。 若要從資料庫取得單一值，在 XSD 結構描述中指定的對應必須同時擁有關聯和欄位規格。 如果元素/屬性的名稱不是相同的名稱做為資料表/檢視表或資料行名稱與其對應， **sql: relation**和**sql: field**註解用來指定項目之間的對應或XML 文件及資料表 （檢視） 或在資料庫中的資料行中的屬性。  
   

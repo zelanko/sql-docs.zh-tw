@@ -1,15 +1,16 @@
 ---
-title: "交易隔離等級 |Microsoft 文件"
-ms.custom: 
+title: 交易隔離等級 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dirty reads [ODBC]
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - repeatable reads [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d19973db310faafd97d9ab6c38848395a344100
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 28e0bd9447d5975a34e963477eceb61f654d824d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transaction-isolation-levels"></a>交易隔離等級
 *交易隔離等級*是交易成功隔離程度的量值。 特別是，交易隔離等級的定義方式下列現象存在：  

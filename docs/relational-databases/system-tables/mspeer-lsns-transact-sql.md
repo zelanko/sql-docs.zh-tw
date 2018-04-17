@@ -1,16 +1,16 @@
 ---
-title: "MSpeer_lsns (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: MSpeer_lsns (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_lsns system table
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31b5b65ff2dd13015e8ec0a53a2c6377d6c8aa58
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c8029d9e4f9e8dda7f5003865bb6a8066654165d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="definition"></a>定義  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|識別點對點 LSN。|  
 |**last_updated**|**datetime**|**Datetime**在進行最後一個資料列更新。|  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 |**originator_version**|**int**|識別發行者的版本號碼。|  
 |**originator_id**|**smallint**|針對衝突偵測的目的，識別拓撲中的每個節點。 如需詳細資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

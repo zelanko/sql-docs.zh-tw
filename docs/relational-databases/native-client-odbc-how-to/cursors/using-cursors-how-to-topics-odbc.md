@@ -1,29 +1,30 @@
 ---
-title: "使用資料指標的使用說明主題 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 使用資料指標的使用說明主題 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b63da22747361c94ac38c7feaf3db09b7fa17c6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d9c7adc7842671fd5394c9df793aadd600a49645
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>使用資料指標使用說明主題 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +34,11 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [使用資料指標 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+-   [使用資料指標 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [使用資料列集繫結 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [使用資料列集繫結 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
--   [提取和更新資料列集 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
+-   [提取和更新資料列集 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC 使用說明主題](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

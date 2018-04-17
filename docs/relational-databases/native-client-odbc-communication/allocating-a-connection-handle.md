@@ -1,15 +1,15 @@
 ---
-title: "配置連接控制代碼 |Microsoft 文件"
-ms.custom: 
+title: 配置連接控制代碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-communication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, passwords
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - modifying passwords
 - SQLAllocHandle function
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2046fc4df80ba780e7ab16948105ef0aebb1e84c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bf2fe53571bacec1da93110f9da4849dfe6cb904
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-a-connection-handle"></a>配置連接控制代碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,6 +49,6 @@ ms.lasthandoff: 01/25/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式具有一些擴充的連接屬性，應用程式可以用來增加其功能。 這其中有些屬性所控制的選項，可在資料來源中指定並用來覆寫資料來源中所設的任何選項。 例如，如果應用程式使用引號識別碼，則可以將驅動程式特定的屬性 SQL_COPT_SS_QUOTED_IDENT 設為 SQL_QI_ON，以確保一定可以設定此選項，不論資料來源中的設定為何。  
   
 ## <a name="see-also"></a>另請參閱  
- [通訊使用 SQL Server &#40; ODBC &#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [與 SQL Server 通訊&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

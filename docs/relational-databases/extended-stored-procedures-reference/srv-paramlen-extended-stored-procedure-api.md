@@ -1,16 +1,16 @@
 ---
-title: "srv_paramlen (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_paramlen (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramlen
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramlen
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c619d69e425f28c6a8416d2ef96bbc67602f311
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: ee85bd0792b31ea3d1dd759ad9effc96b0b2195b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ n
  這指出參數的數目。 第一個參數是 1。  
   
 ## <a name="returns"></a>傳回值  
- 這是參數資料的實際長度 (以位元組為單位)。 如果沒有第 *n* 個參數，或者沒有遠端預存程序，則傳回 -1。 如果第 *n* 個參數為 NULL，它會傳回 0。  
+ 這是參數資料的實際長度 (以位元組為單位)。 如果沒有任何*n*個參數或者沒有遠端預存程序，則傳回-1。 如果*n*個參數為 NULL，它會傳回 0。  
   
  如果參數是下列其中一個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系統資料類型，此函式會傳回下列值。  
   

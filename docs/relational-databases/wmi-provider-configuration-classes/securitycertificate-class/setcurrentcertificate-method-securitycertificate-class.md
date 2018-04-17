@@ -1,16 +1,16 @@
 ---
-title: "SetCurrentCertificate 方法 （SecurityCertificate 類別） |Microsoft 文件"
-ms.custom: 
+title: SetCurrentCertificate 方法 （SecurityCertificate 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetCurrentCertificate Method (SecurityCertificate Class)
@@ -20,16 +20,16 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
-caps.latest.revision: 
+caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f1c5c41f15a76d796fce09b4a6db92e9ef7a3d3
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 496a18cab1fd1e2c6443047f4bb1dedfb2591676
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 方法 (SecurityCertificate 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

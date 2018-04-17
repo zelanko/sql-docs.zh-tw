@@ -1,16 +1,16 @@
 ---
-title: "sp_changesubscriber_schedule (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_changesubscriber_schedule (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_changesubscriber_schedule
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber_schedule
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a89aba9782fcc726ba8c1a810ab20c60a73fb93b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9aa99834cda2085a60df8f148b457da52b33b6bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  [  **@active_end_date=**] *active_end_date*  
  這是排程停止散發工作的日期，格式為 YYYYMMDD。 *active_end_date*是**int**，預設值是**99991231**，這表示年 12 月 31 日到 9999。  
   
- [  **@publisher** =] **'***發行者***'**  
+ [ **@publisher**=] **'***發行者***'**  
  指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -106,8 +106,8 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_changesubscriber_schedule**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_addsubscriber_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_addsubscriber_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "呼叫預存程序 |Microsoft 文件"
-ms.custom: 
+title: 呼叫預存程序 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - escape sequences [SQL Server]
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 31c151ab9942e09149b6e244d4ec6eba0b9f22b5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2b1dfc08ad0ff42c5a7e5409d729b6f62a4f4d36
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="calling-a-stored-procedure"></a>呼叫預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
  如果程序沒有任何參數，該程序可能會失敗。 如果呼叫沒有括號的程序，驅動程式不會傳送任何參數值。 例如：  
   
- {**call** *procedure_name*}  
+ {**呼叫** *procedure_name*}  
   
  在程序呼叫中可以針對輸入和輸入/輸出參數指定常值。 例如，程序 InsertOrder 有五個輸入參數。 以下對 InsertOrder 的呼叫會省略第一個參數、提供第二個參數的常值，然後將參數標記用於第三、第四和第五個參數 (參數會循序編號，從 1 這個值開始)。  
   

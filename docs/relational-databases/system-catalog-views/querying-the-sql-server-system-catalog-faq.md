@@ -1,16 +1,16 @@
 ---
-title: "查詢 SQL Server 系統目錄 FAQ |Microsoft 文件"
-ms.custom: 
+title: 查詢 SQL Server 系統目錄 FAQ |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,23 +21,23 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-caps.latest.revision: 
+caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f63ac73300f4206acf65bf85b05e6802dada33ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 28cf58ccd693f0c958901487a8387dd9d1c1073b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>查詢 SQL Server 系統目錄 FAQ
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本主題包含常見問題集的清單。 這些問題的答案就是根據目錄檢視而來的查詢。  
   
-##  <a name="_TOP"></a>常見問題集  
+##  <a name="_TOP"></a> 常見問題集  
  下列各節將依類別列出常見問題集。  
   
 ### <a name="data-types"></a>資料型別  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="answers"></a>答案  
   
-###  <a name="_FAQ1"></a>如何找到指定的資料庫中沒有叢集的索引的所有資料表？  
+###  <a name="_FAQ1"></a> 如何找到指定的資料庫中沒有叢集的索引的所有資料表？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -148,7 +148,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ2"></a>如何找到指定的結構描述中包含實體的所有擁有者？  
+###  <a name="_FAQ2"></a> 如何找到指定的結構描述中包含實體的所有擁有者？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name>`。  
   
 ```  
@@ -176,7 +176,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ3"></a>如何找到所有沒有主索引鍵的資料表？  
+###  <a name="_FAQ3"></a> 如何找到所有沒有主索引鍵的資料表？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -211,7 +211,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ4"></a>如何找到所有沒有索引的資料表？  
+###  <a name="_FAQ4"></a> 如何找到所有沒有索引的資料表？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -228,7 +228,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ5"></a>如何找到所有具有識別欄位的資料表？  
+###  <a name="_FAQ5"></a> 如何找到所有具有識別欄位的資料表？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -263,7 +263,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ7"></a>如何找到指定資料表的資料行的資料型別？  
+###  <a name="_FAQ7"></a> 如何找到指定資料表的資料行的資料型別？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -288,7 +288,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ8"></a>如何找到指定的函式上的相依性？  
+###  <a name="_FAQ8"></a> 如何找到指定的函式上的相依性？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.function_name>`。  
   
 ```  
@@ -306,7 +306,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ9"></a>如何找到資料庫中的所有預存程序？  
+###  <a name="_FAQ9"></a> 如何找到資料庫中的所有預存程序？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`。  
   
 ```  
@@ -325,7 +325,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ10"></a>如何找到指定的預存程序或函式的參數？  
+###  <a name="_FAQ10"></a> 如何找到指定的預存程序或函式的參數？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.object_name>`。  
   
 ```  
@@ -351,7 +351,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ12"></a>如何找到資料庫中的所有使用者定義函式？  
+###  <a name="_FAQ12"></a> 如何找到資料庫中的所有使用者定義函式？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -370,7 +370,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ13"></a>如何找到資料庫中的所有檢視？  
+###  <a name="_FAQ13"></a> 如何找到資料庫中的所有檢視？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -388,7 +388,7 @@ FROM sys.views;
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ6"></a>如何找到在過去 N 天中修改過的所有實體？  
+###  <a name="_FAQ6"></a> 如何找到在過去 N 天中修改過的所有實體？  
  在您執行下列查詢之前，請使用有效的值取代 `<database_name>` 及 `<n_days>`。  
   
 ```  
@@ -408,7 +408,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ14"></a>如何找到指定資料表的 LOB 資料類型？  
+###  <a name="_FAQ14"></a> 如何找到指定資料表的 LOB 資料類型？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -436,7 +436,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ15"></a>如何檢視模組的定義？  
+###  <a name="_FAQ15"></a> 如何檢視模組的定義？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.object_name>`。  
   
 ```  
@@ -461,7 +461,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ19"></a>如何檢視伺服器層級觸發程序的定義？  
+###  <a name="_FAQ19"></a> 如何檢視伺服器層級觸發程序的定義？  
   
 ```  
 SELECT definition  
@@ -472,7 +472,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ16"></a>如何找到指定資料表的主索引鍵資料行？  
+###  <a name="_FAQ16"></a> 如何找到指定資料表的主索引鍵資料行？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -515,7 +515,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ17"></a>如何找到指定資料表的外部索引鍵的資料行？  
+###  <a name="_FAQ17"></a> 如何找到指定資料表的外部索引鍵的資料行？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -539,7 +539,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ18"></a>如何找到授與或拒絕指定主體的權限？  
+###  <a name="_FAQ18"></a> 如何找到授與或拒絕指定主體的權限？  
  下列範例會建立一個函數，可傳回在其上檢查權限之實體的名稱。 此函數會在後面的查詢中叫用。 您必須在想要檢查權限的每個資料庫中建立此函數。  
   
 ```  
@@ -622,7 +622,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ20"></a>如何判斷資料行的計算資料行運算式用於？  
+###  <a name="_FAQ20"></a> 如何判斷資料行的計算資料行運算式用於？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`、`<schema_name.table_name>` 及 `<column_name`>。  
   
 ```  
@@ -644,7 +644,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ21"></a>如何找到所使用的所有資料行中計算資料行運算式中？  
+###  <a name="_FAQ21"></a> 如何找到所使用的所有資料行中計算資料行運算式中？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`。  
   
 ```  
@@ -666,7 +666,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ22"></a>如何找到相依於指定的 CLR 使用者定義型別或別名類型的資料行？  
+###  <a name="_FAQ22"></a> 如何找到相依於指定的 CLR 使用者定義型別或別名類型的資料行？  
  執行下列查詢之前，取代`<database_name>`具備有效的名稱和`<schema_name.data_type_name>`有效、 結構描述限定 CLR 使用者定義型別，或符合結構描述的別名類型名稱。 下列查詢需要的成員資格**db_owner**角色或權限，以查看所有相依資料行和計算資料行在資料庫中的中繼資料。  
   
 ```  
@@ -704,7 +704,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ23"></a>如何找到相依於指定的 CLR 使用者定義型別或別名類型的計算資料行？  
+###  <a name="_FAQ23"></a> 如何找到相依於指定的 CLR 使用者定義型別或別名類型的計算資料行？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`，並使用符合結構描述的有效 CLR 使用者定義型別、別名類型名稱來取代 `<schema_name.data_type_name>`。  
   
 ```  
@@ -721,7 +721,7 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ24"></a>如何找到相依於指定的 CLR 使用者定義型別或別名類型的參數？  
+###  <a name="_FAQ24"></a> 如何找到相依於指定的 CLR 使用者定義型別或別名類型的參數？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`，並使用符合結構描述的有效 CLR 使用者定義型別、別名類型名稱來取代 `<schema_name.data_type_name>`。 下列查詢需要的成員資格**db_owner**角色或權限，以查看所有相依資料行和計算資料行在資料庫中的中繼資料。  
   
 ```  
@@ -763,7 +763,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ25"></a>如何找到相依於指定 CLR 使用者定義類型的檢查條件約束？  
+###  <a name="_FAQ25"></a> 如何找到相依於指定 CLR 使用者定義類型的檢查條件約束？  
  執行下列查詢之前，取代`<database_name>`具備有效的名稱和`<schema_name.data_type_name>`有效、 符合結構描述的 CLR 使用者定義型別名稱。  
   
 ```  
@@ -783,7 +783,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ26"></a>如何找到檢視、 TRANSACT-SQL 函數和 TRANSACT-SQL 預存程序相依於指定的 CLR 使用者定義型別或別名類型？  
+###  <a name="_FAQ26"></a> 如何找到檢視、 TRANSACT-SQL 函數和 TRANSACT-SQL 預存程序相依於指定的 CLR 使用者定義型別或別名類型？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`，並使用符合結構描述的有效 CLR 使用者定義型別、別名類型名稱來取代 `<schema_name.data_type_name>`。  
   
  在函數或程序中定義的參數隱含結構描述繫結。 因此，可以檢視相依於 CLR 使用者定義型別或別名類型的參數使用[sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)目錄檢視。 程序和觸發程序不是結構描述繫結。 這表示任何定義於程序或觸發程序主體的運算式，與 CLR 使用者定義型別或別名資料型別之間的相依性不會保留。 結構描述繫結檢視和結構描述繫結使用者定義函數之運算式的相依於 CLR 使用者定義型別或別名類型保存在**sys.sql_dependencies**目錄檢視。 類型與 CLR 函數及 CLR 程序之間的相依性不會保留。  
@@ -811,7 +811,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ27"></a>如何找到指定資料表的所有條件約束？  
+###  <a name="_FAQ27"></a> 如何找到指定資料表的所有條件約束？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -835,7 +835,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ28"></a>如何找到指定的資料表所有索引？  
+###  <a name="_FAQ28"></a> 如何找到指定的資料表所有索引？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -864,7 +864,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ30"></a>如何找到所有具有指定之資料行名稱的物件？  
+###  <a name="_FAQ30"></a> 如何找到所有具有指定之資料行名稱的物件？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<column_name>`。  
   
 ```  
@@ -894,7 +894,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ31"></a>如何找到指定的資料庫中的所有使用者定義的資料表？  
+###  <a name="_FAQ31"></a> 如何找到指定的資料庫中的所有使用者定義的資料表？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`。  
   
 ```  
@@ -908,7 +908,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ32"></a>如何找到所有資料表和索引進行分割區？  
+###  <a name="_FAQ32"></a> 如何找到所有資料表和索引進行分割區？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`。  
   
 ```  
@@ -930,7 +930,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ33"></a>如何找到指定的物件上的所有統計資料？  
+###  <a name="_FAQ33"></a> 如何找到指定的物件上的所有統計資料？  
  在您執行以下查詢之前，請使用有效的名稱取代 `<database_name>`，並使用有效的資料表、索引檢視或資料表值函數名稱來取代 `<schema_name.object_name>`。  
   
 ```  
@@ -949,7 +949,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ34"></a>如何在指定的物件上找到的所有統計資料和統計資料資料行？  
+###  <a name="_FAQ34"></a> 如何在指定的物件上找到的所有統計資料和統計資料資料行？  
  在您執行以下查詢之前，請使用有效的名稱取代 `<database_name>`，並使用有效的資料表、索引檢視或資料表值函數名稱來取代 `<schema_name.object_name>`。  
   
 ```  
@@ -970,7 +970,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ35"></a>如何找到檢視的定義？  
+###  <a name="_FAQ35"></a> 如何找到檢視的定義？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.object_name>`。  
   
 ```  
@@ -995,7 +995,7 @@ GO
   
  [TOP](#_TOP)  
   
-## <a name="see-also"></a>請參閱＜  
- [將系統資料表對應至系統檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

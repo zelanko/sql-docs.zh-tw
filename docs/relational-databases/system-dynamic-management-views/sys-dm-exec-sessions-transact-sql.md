@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_sessions (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_sessions_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-caps.latest.revision: 
+caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b7452644412b76854a82d7c6a41c2b15de22db48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/20/2018
 |client_version|**int**|用戶端連接伺服器所用介面的 TDS 通訊協定版本。 內部工作階段的值為 NULL。 可為 Null。|  
 |client_interface_name|**nvarchar(32)**|用戶端與伺服器通訊所使用的程式庫/驅動程式的名稱。 內部工作階段的值為 NULL。 可為 Null。|  
 |security_id|**varbinary(85)**|與登入相關聯之 Microsoft Windows 安全性識別碼。 不可為 Null。|  
-|login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前執行所在工作階段的登入名稱。 如需建立工作階段的原始登入名稱，請參閱 original_login_name。 可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入名稱或 Windows 已驗證的網域使用者名稱。 不可為 Null。|  
+|login_name|**nvarchar(128)**|目前用來執行工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 如需建立工作階段的原始登入名稱，請參閱 original_login_name。 可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入名稱或 Windows 已驗證的網域使用者名稱。 不可為 Null。|  
 |nt_domain|**nvarchar(128)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用戶端的 Windows 網域 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
 |nt_user_name|**nvarchar(128)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用戶端的 Windows 使用者名稱 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
 |status|**nvarchar(30)**|工作階段的狀態。 可能的值如下：<br /><br /> **執行**-目前執行中的一個或多個要求<br /><br /> **睡眠**-目前不執行任何要求<br /><br /> **休眠**– 工作階段因連接共用已重設與目前處於登入前狀態。<br /><br /> **Preconnect** -工作階段處於資源管理員分類。<br /><br /> 不可為 Null。|  
@@ -85,8 +86,8 @@ ms.lasthandoff: 02/20/2018
 |deadlock_priority|**int**|工作階段的 DEADLOCK_PRIORITY 設定。 不可為 Null。|  
 |row_count|**bigint**|到目前為止，工作階段傳回的資料列數。 不可為 Null。|  
 |prev_error|**int**|在工作階段傳回的最後一個錯誤的識別碼。 不可為 Null。|  
-|original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 original_login_name 相關聯的 Windows 安全性識別碼。 不可為 Null。|  
-|original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端用來建立此工作階段的登入名稱。 這可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入名稱、Windows 驗證網域使用者名稱或自主資料庫使用者。 請注意，在初始連接之後，工作階段可能已經歷過多次隱含或明確內容切換。 例如，如果[EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)用。 不可為 Null。|  
+|original_security_id|**varbinary(85)**|與 original_login_name 相關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 安全性識別碼。 不可為 Null。|  
+|original_login_name|**nvarchar(128)**|用戶端建立此工作階段所用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 這可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入名稱、Windows 驗證網域使用者名稱或自主資料庫使用者。 請注意，在初始連接之後，工作階段可能已經歷過多次隱含或明確內容切換。 例如，如果[EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)用。 不可為 Null。|  
 |last_successful_logon|**datetime**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 目前工作階段開始之前，original_login_name 上一次登入成功的時間。|  
 |last_unsuccessful_logon|**datetime**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 目前工作階段開始之前，original_login_name 上一次登入不成功的時間。|  
 |unsuccessful_logons|**bigint**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 在 last_successful_logon 與 login_time 之間，original_login_name 嘗試登入不成功的次數。|  
@@ -190,7 +191,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

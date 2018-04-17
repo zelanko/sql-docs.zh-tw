@@ -1,16 +1,16 @@
 ---
-title: "資源管理員目錄檢視 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 資源管理員目錄檢視 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Resource Governor, catalog views
 - catalog views [SQL Server]
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 199f3d8aedde34b6c09fc83a893633af77441ab2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 617d0bc58e7b526a6f3a7fef7f0d71fc8a67bb88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>資源管理員目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.lasthandoff: 02/03/2018
   
 |||  
 |-|-|  
-|[sys.resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)|[sys.resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)|  
-|[sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)|[sys.resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)|  
+|[sys.resource_governor_configuration &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)|[sys.resource_governor_resource_pools &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)|  
+|[sys.resource_governor_external_resource_pools &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)|[sys.resource_governor_workload_groups &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資源管理員相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)   
+ [資源管理員相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  
   
   

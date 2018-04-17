@@ -1,16 +1,16 @@
 ---
-title: "識別索引鍵資料行使用 sql: key-fields-欄位 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: '識別索引鍵資料行使用 sql: key-fields-欄位 (SQLXML 4.0) |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - nesting XML results
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac42ee657dd46f070eccf5d63ae9a454c3306e95
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9537b116415c9620b31ad98348bcea6aca7fefe2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 來識別索引鍵資料行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-針對 XSD 結構描述指定 XPath 查詢時，在大部分情況下都需要索引鍵資訊，才能在結果中取得正確的巢狀結構。 指定**sql: key-fields-欄位**註解是確保會產生適當階層的方式。  
+  針對 XSD 結構描述指定 XPath 查詢時，在大部分情況下都需要索引鍵資訊，才能在結果中取得正確的巢狀結構。 指定**sql: key-fields-欄位**註解是確保會產生適當階層的方式。  
   
 > [!NOTE]  
 >  若要確保正確的巢狀，建議您指定**sql: key-fields-欄位**對於對應至資料表的項目。 產生的 XML 會區分基礎結果集的排序。 如果**sql: key-fields-欄位**未指定，則產生的 XML 可能格式不正確。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/12/2018
   
  請考慮下列結構描述。 結構描述指定的階層之間**\<順序 >**和**\<客戶 >**所在的項目**\<順序 >**元素是父系和**\<客戶 >**元素是子系。  
   
- **\<Sql: relationship >**標記用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 中提供的資訊 **\<sql: relationship >**不足以唯一識別父資料表 (Sales.SalesOrderHeader) 中的資料列。 因此，如果沒有**sql: key-fields-欄位**註解，產生的階層是不正確。  
+  **\<Sql: relationship >**標記用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 中提供的資訊 **\<sql: relationship >**不足以唯一識別父資料表 (Sales.SalesOrderHeader) 中的資料列。 因此，如果沒有**sql: key-fields-欄位**註解，產生的階層是不正確。  
   
  與**sql: key-fields-欄位**上指定**\<順序 >**、 註解可唯一識別父系 （Sales.SalesOrderHeader 資料表） 中的資料列，而其子項目會出現下方其父代。  
   

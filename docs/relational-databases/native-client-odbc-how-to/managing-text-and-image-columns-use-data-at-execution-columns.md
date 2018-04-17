@@ -1,29 +1,30 @@
 ---
-title: "使用資料執行資料行 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 使用資料執行資料行 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5514f07c56c54a2e9faed6f13c1c24df32a794fc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 711cfcaf8f4d03109a0a097b7957812fb614dea4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>管理 text 和 image 資料行的使用執行資料的資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -193,6 +194,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 text 和 image 資料行的如何主題 &#40; ODBC &#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [管理 text 和 image 資料行的如何主題 & #40; ODBC & #41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

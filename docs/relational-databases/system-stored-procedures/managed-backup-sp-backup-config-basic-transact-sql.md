@@ -2,7 +2,7 @@
 title: managed_backup.sp_backup_config_basic (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 10/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -28,13 +28,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51507869caef7a8738381881f22f6cf9f1005144
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4b1134b0fdf68761a307133bdc9d1f99a906ccf7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
+# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]特定資料庫或執行個體的基本設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

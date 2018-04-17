@@ -2,7 +2,7 @@
 title: SQLEndTran 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea99ca26105d3c31330108979a5b182329aa6ba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 函數
 **一致性**  
@@ -71,7 +71,7 @@ SQLRETURN SQLEndTran(
 ## <a name="diagnostics"></a>診斷  
  當**SQLEndTran**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可能會取得藉由呼叫**SQLGetDiagRec**適當*HandleType*和*處理*。 下表列出通常所傳回的 SQLSTATE 值**SQLEndTran** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08003|未開啟連線。|(DM) *HandleType*已利用 SQL_HANDLE_DBC，而*處理*不是處於連線狀態。|  
@@ -115,7 +115,7 @@ SQLRETURN SQLEndTran(
   
  如果 SQL_CURSOR_ROLLBACK_BEHAVIOR 或 SQL_CURSOR_COMMIT_BEHAVIOR 值等於 SQL_CB_DELETE， **SQLEndTran**關閉和刪除所有開啟的資料指標與連接相關聯的所有陳述式，並捨棄所有擱置的結果。 **SQLEndTran**離開配置 （已取消準備） 的狀態; 中的任何陳述式的應用程式可以重複使用它們的後續 SQL 要求，或可以呼叫**SQLFreeStmt**或**SQLFreeHandle**與*HandleType*取消配置其利用 SQL_HANDLE_STMT。  
   
- 如果 SQL_CURSOR_ROLLBACK_BEHAVIOR 或 SQL_CURSOR_COMMIT_BEHAVIOR 值等於 SQL_CB_CLOSE， **SQLEndTran**關閉所有開啟的資料指標與連接相關聯的所有陳述式。 **SQLEndTran**離開任何陳述式出現在已備妥狀態，應用程式可以呼叫**SQLExecute**情況下先呼叫連接相關聯的陳述式**SQLPrepare**.  
+ 如果 SQL_CURSOR_ROLLBACK_BEHAVIOR 或 SQL_CURSOR_COMMIT_BEHAVIOR 值等於 SQL_CB_CLOSE， **SQLEndTran**關閉所有開啟的資料指標與連接相關聯的所有陳述式。 **SQLEndTran**離開任何陳述式出現在已備妥狀態，應用程式可以呼叫**SQLExecute**情況下先呼叫連接相關聯的陳述式**SQLPrepare**。  
   
  如果 SQL_CURSOR_ROLLBACK_BEHAVIOR 或 SQL_CURSOR_COMMIT_BEHAVIOR 值等於 SQL_CB_PRESERVE， **SQLEndTran**不會影響與連接相關聯的開啟資料指標。 它們指向之前呼叫的資料列在資料指標維持**SQLEndTran**。  
   
@@ -159,7 +159,7 @@ SQLRETURN SQLEndTran(
 |釋放控制代碼|[SQLFreeHandle 函式](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |釋放陳述式控制代碼|[SQLFreeStmt 函式](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [非同步執行 (輪詢方法)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

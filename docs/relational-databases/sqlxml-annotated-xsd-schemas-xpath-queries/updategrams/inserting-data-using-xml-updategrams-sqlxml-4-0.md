@@ -1,16 +1,16 @@
 ---
-title: "插入資料使用 XML Updategram (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: 插入資料使用 XML Updategram (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - xsi:nil attribute
@@ -36,20 +36,21 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d06fef3fcdc237740b9590d5d8e75fc9730a34e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6db1eec431905e01b75fcc10c94f18f1e0d6436d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-當記錄執行個體中出現時，updategram 代表插入作業**\<之後 >**區塊，但不是在對應**\<之前 >**區塊。 在此情況下，updategram 會插入在記錄**\<之後 >**區塊至資料庫。  
+  當記錄執行個體中出現時，updategram 代表插入作業**\<之後 >**區塊，但不是在對應**\<之前 >**區塊。 在此情況下，updategram 會插入在記錄**\<之後 >**區塊至資料庫。  
   
  下列是插入作業的 Updategram 格式：  
   
@@ -75,13 +76,13 @@ ms.lasthandoff: 02/12/2018
 ## <a name="before-block"></a>\<之前 > 區塊  
  **\<之前 >**區塊可以省略插入作業。 如果選擇性**對應結構描述**未指定屬性，  **\<ElementName >**指定在 updategram 並對應至資料庫資料表和子元素或屬性會對應到資料表中的資料行。  
   
-## <a name="after-block"></a>\<after> Block  
+## <a name="after-block"></a>\<之後 > 區塊  
  您可以指定一或多個記錄中的**\<之後 >**區塊。  
   
  如果**\<之後 >**區塊並不提供特定的資料行的值，updategram 會使用預設值 （如果已指定結構描述） 中的註解式結構描述所指定。 如果結構描述未指定資料行的預設值，updategram 未指定任何明確的值，這個資料行，而是指派[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到此資料行預設值 （如果有指定）。 如果沒有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設值，而資料行接受 NULL 值，則 Updategram 會將資料行值設定為 NULL。 如果資料行沒有預設值，也不接受 NULL 值，則命令會失敗，而 Updategram 傳回錯誤。 選擇性**updg: returnid**屬性用來傳回一筆記錄加入具有 IDENTITY 類型資料行的資料表時，由系統產生的識別值。  
   
 ## <a name="updgid-attribute"></a>updg:id 屬性  
- 如果 updategram 只插入記錄，就不需要**updg: id**屬性。 如需有關**updg: id**，請參閱[更新資料使用 XML Updategram &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ 如果 updategram 只插入記錄，就不需要**updg: id**屬性。 如需有關**updg: id**，請參閱[更新資料使用 XML Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)。  
   
 ## <a name="updgat-identity-attribute"></a>updg:at-identity 屬性  
  Updategram 時 updategram 在具有 IDENTITY 類型資料行的資料表中插入記錄，可以使用選擇性來擷取系統指派值**updg： 在識別**屬性。 Updategram 接著可以在後續作業中使用此值。 您可以在執行 updategram 時，傳回產生藉由指定的識別值**updg: returnid**屬性。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 02/12/2018
   
  使用 Updategram 範例之前，請注意下列事項：  
   
--   大部分的範例都會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應結構描述的 updategram 的範例，請參閱[Updategram &#40; 中指定註解式對應結構描述SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   大部分的範例都會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 -   大部分的範例都會使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 範例資料庫。 所有的更新都會套用到此資料庫內的資料表。  
   
@@ -418,7 +419,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- 如需指定對應結構描述的 updategram 的範例，請參閱[Updategram &#40; 中指定註解式對應結構描述SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ 如需指定對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ##### <a name="to-test-the-updategram"></a>若要測試 Updategram  
   
@@ -734,6 +735,6 @@ CustOrder(OrderID, EmployeeID, OrderType)
      如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Updategram 安全性考量 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Updategram 安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

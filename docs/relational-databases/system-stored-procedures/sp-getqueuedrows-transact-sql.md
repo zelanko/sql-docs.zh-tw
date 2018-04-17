@@ -1,16 +1,16 @@
 ---
-title: "sp_getqueuedrows (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_getqueuedrows (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28a6c9eab5c2e6fb52e793e0a25d957335871b7d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1915bec9f0a9f1e05bfe6a2975553bb20e330289
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**動作**|**nvarchar （10)**|進行同步處理時所採取的動作類型。<br /><br /> INS= 插入<br /><br /> DEL = 刪除<br /><br /> UPD = 更新|  
+|**動作**|**nvarchar(10)**|進行同步處理時所採取的動作類型。<br /><br /> INS= 插入<br /><br /> DEL = 刪除<br /><br /> UPD = 更新|  
 |**Tranid**|**nvarchar （70)**|用來執行命令的交易識別碼。|  
 |**資料表資料行...1 n**||指定的資料表中的每個資料行的值*tablename*。|  
 |**msrepl_tran_version**|**uniqueidentifier**|這個資料行用來追蹤複寫資料的變更，以及在發行者端執行衝突偵測。 這個資料行會自動加入資料表中。|  
@@ -78,7 +78,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## <a name="permissions"></a>Permissions  
  **sp_getqueuedrows**需要 SELECT 權限指定的資料表中*tablename*。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [佇列更新衝突偵測和解決方法](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

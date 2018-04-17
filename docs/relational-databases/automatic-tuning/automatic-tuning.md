@@ -3,7 +3,7 @@ title: 自動調整 |Microsoft 文件
 description: 深入了解 SQL Server 和 Azure SQL Database 中的自動調整
 ms.custom: ''
 ms.date: 08/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: automatic-tuning
@@ -21,11 +21,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: e49c26384d432c7a18b8c5997ac84b2ed18cc782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,6 +75,8 @@ ms.lasthandoff: 04/05/2018
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會自動偵測包含計劃，而不是錯誤的計劃應該使用任何潛在計畫選擇迴歸。
 當[!INCLUDE[ssde_md](../../includes/ssde_md.md)]套用上次已知良好的計劃，它會自動監視強制計畫的效能。 如果強制執行的計畫不是與迴歸的計畫更好的新的方案將會非強迫性和[!INCLUDE[ssde_md](../../includes/ssde_md.md)]會編譯新的計畫。 如果[!INCLUDE[ssde_md](../../includes/ssde_md.md)]會強制執行的計畫優於迴歸的其中一個，強制執行的計畫會保留之前 （例如，在下一步的統計資料或結構描述變更） 重新編譯比迴歸的計劃好的驗證。
+
+附註： 任何的計劃自動強制執行動作不重新啟動 SQL Server 執行個體上的 persit。
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>啟用自動計劃選擇更正
 
@@ -135,13 +138,15 @@ FROM sys.dm_db_tuning_recommendations
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | 指令碼 (script) | query\_id | 目前的計劃\_識別碼 | 建議您計劃\_識別碼 | 估計\_取得 | 錯誤\_容易出錯
+| reason | score | 指令碼 (script) | 查詢\_識別碼 | 目前的計劃\_識別碼 | 建議您計劃\_識別碼 | 估計\_取得 | 錯誤\_容易出錯
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 從 3 毫秒變更為 46 ms 的 CPU 時間 | 36 | EXEC sp\_查詢\_儲存\_強制\_計劃 12，17。 | 12 | 28 | 17 | 11.59 | 0
 
 `estimated_gain` 代表的估計的秒數，如果會執行建議的計劃，而不是目前的計劃會儲存。 建議的計劃應該強制而非目前的計畫，如果提升的大於 10 秒。 如果有多個錯誤 （例如，逾時或已中止的執行） 比目前的計劃中建議計劃，資料行`error_prone`會設定為值`YES`。 錯誤容易出錯的計劃是另一個原因而不是目前為什麼應該強制建議的計劃。
 
 雖然[!INCLUDE[ssde_md](../../includes/ssde_md.md)]提供找出計畫選擇迴歸; 連續監視並修正效能問題所需的所有資訊可能都是一件耗時。 自動調整使此程序更為容易。
+
+注意： 這個 DMV 中的資料不保留任何 SQL Server 執行個體重新啟動之後。
 
 ## <a name="automatic-index-management"></a>自動索引管理
 
@@ -178,10 +183,10 @@ FROM sys.dm_db_tuning_recommendations
 
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.database_automatic_tuning_options &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
+ [sys.dm_db_tuning_recommendations &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON 函式](../../relational-databases/json/index.md)

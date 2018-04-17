@@ -1,16 +1,16 @@
 ---
-title: "記錄產生處理序 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: 記錄產生處理序 (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], record generation process
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7e494f0d849834bfe4434f42da1de8fddb9d10d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>記錄產生處理序 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 大量載入會處理 XML 輸入資料，並在 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中為適當的資料表準備記錄。 XML 大量載入的邏輯會判斷在何時產生新記錄，要複製哪種子元素或屬性值到記錄欄位中，以及記錄何時會完成並準備傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以供插入之用。  
+  XML 大量載入會處理 XML 輸入資料，並在 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中為適當的資料表準備記錄。 XML 大量載入的邏輯會判斷在何時產生新記錄，要複製哪種子元素或屬性值到記錄欄位中，以及記錄何時會完成並準備傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以供插入之用。  
   
  XML 大量載入不會將整個 XML 輸入資料載入到記憶體中，也不會在將資料傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前產生完整的記錄集。 這是因為 XML 輸入資料可以是大型文件，而且將整個文件載入到記憶體中的成本可能會很高。 XML 大量載入會改為執行下列動作：  
   
@@ -50,7 +51,7 @@ XML 大量載入會處理 XML 輸入資料，並在 Microsoft [!INCLUDE[ssNoVers
  XML 大量載入會處理一般對應結構描述註解，包括資料行和資料表對應 (藉由使用註解明確指定，或透過預設對應隱含指定)，並聯結關聯性。  
   
 > [!NOTE]  
->  假設您熟悉註解式 XSD 或 XDR 對應結構描述。 如需結構描述的詳細資訊，請參閱[簡介註解式 XSD 結構描述 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)或[註解式 XDR 結構描述 &#40; 中已被取代 SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  假設您熟悉註解式 XSD 或 XDR 對應結構描述。 如需結構描述的詳細資訊，請參閱[註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)或[Annotated XDR Schemas &#40;SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
  了解記錄產生之前，需要先了解下列概念：  
   
@@ -226,7 +227,7 @@ XML 大量載入會處理 XML 輸入資料，並在 Microsoft [!INCLUDE[ssNoVers
 ## <a name="exceptions-to-the-record-generation-rule"></a>記錄產生規則的例外狀況  
  當 XML 大量載入進入範圍內時，不會產生節點記錄 (如果該節點是 IDREF 或 IDREFS 類型的話)。 您必須確定完整的記錄描述會出現在結構描述中的某個地方。 **Dt: type ="nmtokens"**註解會被忽略，就像 IDREFS 類型也被忽略。  
   
- 例如，請考慮下列 XSD 結構描述，描述**\<客戶 >**和**\<順序 >**項目。 **\<客戶 >**元素包含**OrderList** IDREFS 類型的屬性。 **\<Sql: relationship >**標記指定客戶和訂單清單之間的一對多關聯性。  
+ 例如，請考慮下列 XSD 結構描述，描述**\<客戶 >**和**\<順序 >**項目。 **\<客戶 >**元素包含**OrderList** IDREFS 類型的屬性。  **\<Sql: relationship >**標記指定客戶和訂單清單之間的一對多關聯性。  
   
  這是結構描述：  
   

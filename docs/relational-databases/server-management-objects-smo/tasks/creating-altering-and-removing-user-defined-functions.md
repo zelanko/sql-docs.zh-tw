@@ -1,41 +1,43 @@
 ---
-title: "建立、 改變和移除使用者定義函數 |Microsoft 文件"
-ms.custom: 
+title: 建立、 改變和移除使用者定義函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b79a796d469d9e5ccd686a526f18bb16ed972cc0
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 03700168dc8531c438a6814463a20bbf9fb51a15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>建立、改變和移除使用者定義函數
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>物件提供功能，可讓使用者以程式設計方式管理中的使用者定義函數[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 使用者定義函數支援輸入和輸出參數，也支援資料表資料行的直接參考。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>物件提供功能，可讓使用者以程式設計方式管理中的使用者定義函數[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 使用者定義函數支援輸入和輸出參數，也支援資料表資料行的直接參考。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]需要這些之前的資料庫內註冊組件可以使用預存程序、 使用者定義函數、 觸發程序和使用者定義資料類型。 SMO 以 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 物件支援此功能。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要這些之前的資料庫內註冊組件可以使用預存程序、 使用者定義函數、 觸發程序和使用者定義資料類型。 SMO 以 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 物件支援此功能。  
   
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>物件參考.NET 組件<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>， <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A>，和<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A>屬性。  
   
  當<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>物件參考.NET 組件時，您必須註冊組件，藉由建立<xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>物件並將它加入至<xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection>屬於物件<xref:Microsoft.SqlServer.Management.Smo.Database>物件。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>在 Visual Basic 中建立純量使用者定義函數  
  這個程式碼範例示範如何建立和移除的純量使用者定義函式具有輸入<xref:System.DateTime>物件參數和整數傳回類型[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]。 建立使用者定義函數上[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]資料庫。 此範例會建立使用者定義函數 ISOweek，該函數取用日期引數並計算 ISO 週數。 為了讓這個函數能夠正確計算，必須先將資料庫 DATEFIRST 選項設定為 1，才能呼叫該函數。  

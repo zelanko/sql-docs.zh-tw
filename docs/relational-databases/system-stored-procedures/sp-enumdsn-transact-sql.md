@@ -1,16 +1,16 @@
 ---
-title: "sp_enumdsn (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_enumdsn (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumdsn
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8d4dcb23cf06385d4c26a198f17e806bdc0671a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 471fa93ccd1c9e48f0baa1fa270a7a7db7b7d4af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +53,9 @@ sp_enumdsn
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**資料來源名稱**|**sysname**|資料來源的名稱。|  
-|**說明**|**varchar （255)**|資料來源的描述。|  
+|**說明**|**varchar(255)**|資料來源的描述。|  
 |**型別**|**int**|資料來源的類型：<br /><br /> **1** = ODBC 資料來源名稱<br /><br /> **3** = OLE DB 資料來源|  
-|**提供者名稱**|**varchar （255)**|OLE DB 提供者的名稱。 ODBC DSN 的這個值是 NULL。|  
+|**提供者名稱**|**varchar(255)**|OLE DB 提供者的名稱。 ODBC DSN 的這個值是 NULL。|  
   
 ## <a name="remarks"></a>備註  
  每個[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務有一個使用者內容。 使用者內容是一組登錄項目，其中包括使用者 ODBC 資料來源的定義。 使用者內容由執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者名稱提供。  
@@ -65,8 +65,8 @@ sp_enumdsn
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_enumdsn**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_dsninfo &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_dsninfo &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

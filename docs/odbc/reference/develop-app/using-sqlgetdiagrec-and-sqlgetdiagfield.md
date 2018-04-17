@@ -1,16 +1,16 @@
 ---
-title: "使用 SQLGetDiagRec 和 SQLGetDiagField |Microsoft 文件"
-ms.custom: 
+title: 使用 SQLGetDiagRec 和 SQLGetDiagField |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db4a853206e402228eb9d76dca72a421444ed042
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 895eb4b04b974c66f64e4ded31b84890cf19e076
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>使用 SQLGetDiagRec 和 SQLGetDiagField
 應用程式呼叫**SQLGetDiagRec**或**SQLGetDiagField**擷取診斷資訊。 這些函式接受環境、 連接、 陳述式或描述元的控制代碼，並從上一次使用該控制代碼的函式傳回診斷。 新的函式呼叫使用該控制代碼時，會捨棄登入特定的控制代碼的診斷。 如果函式傳回多個診斷記錄，應用程式呼叫這些函式多次。狀態記錄的總數藉由呼叫擷取**SQLGetDiagField** SQL_DIAG_NUMBER 選項使用的標頭記錄 （記錄 0）。  

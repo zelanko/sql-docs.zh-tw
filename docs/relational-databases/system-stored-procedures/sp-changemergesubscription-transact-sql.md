@@ -1,16 +1,16 @@
 ---
-title: "sp_changemergesubscription (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_changemergesubscription (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3fef5efe16fbc6a3684e077ef8dfca38b839753
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: eda4f52de6d6b072f8250a00dcff82623badb43c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是要變更的發行集名稱。 *發行集*是**sysname**，預設值是 NULL。 發行集必須已存在，且必須符合識別碼的規則。  
   
  [  **@subscriber=**] **'***訂閱者***'**  
@@ -64,10 +64,10 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  [  **@value=**] **'***值***'**  
  指定的新值*屬性*。 *值*是**nvarchar （255)**，而且可以是下列其中一個資料表中的值。  
   
-|屬性|值|Description|  
+|屬性|Value|Description|  
 |--------------|-----------|-----------------|  
 |**描述**||這個合併訂閱的描述。|  
-|**優先順序**||這是訂閱優先權。 在偵測到衝突時，預設解析程式會利用優先權挑選贏的一方。|  
+|**priority**||這是訂閱優先權。 在偵測到衝突時，預設解析程式會利用優先權挑選贏的一方。|  
 |**merge_job_login**||用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。|  
 |**merge_job_password**||用來執行代理程式之 Windows 帳戶的密碼。|  
 |**publisher_security_mode**|**1**|當連接到發行者時，使用 Windows 驗證。|  
@@ -95,10 +95,10 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changemergesubscription**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_addmergesubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_addmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

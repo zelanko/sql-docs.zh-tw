@@ -1,15 +1,15 @@
 ---
-title: "使用大型值型別 |Microsoft 文件"
-ms.custom: 
+title: 使用大型值型別 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large value data types
@@ -19,22 +19,23 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54bc0998f8a275de6a0fb03398c461917a67a8e9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 420c4456970a2dcc0605bdc6d2f5ad3409298aec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-large-value-types"></a>使用大數值類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，使用大數值資料類型時需要進行特殊處理。 大數值資料類型是指那些最大資料列大小超過 8 KB 的資料類型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]導入**max**規範**varchar**， **nvarchar**和**varbinary**資料類型，以允許的值儲存大可達 2 ^31-1個位元組。 資料表資料行和[!INCLUDE[tsql](../../../includes/tsql-md.md)]變數可以指定**varchar （max)**， **nvarchar （max)**或**varbinary （max)**資料型別。  
+  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，使用大數值資料類型時需要進行特殊處理。 大數值資料類型是指那些最大資料列大小超過 8 KB 的資料類型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入**max**規範**varchar**， **nvarchar**和**varbinary**資料類型，以允許的值儲存大可達 2 ^31-1個位元組。 資料表資料行和[!INCLUDE[tsql](../../../includes/tsql-md.md)]變數可以指定**varchar （max)**， **nvarchar （max)**或**varbinary （max)**資料型別。  
   
 > [!NOTE]  
 >  大數值資料類型的最大大小可介於 1 和 8 KB 之間，或者也可以指定為無限制。  

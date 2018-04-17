@@ -1,16 +1,16 @@
 ---
-title: "sp_dropmergealternatepublisher (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_dropmergealternatepublisher (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergealternatepublisher
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4eee448c0fa45270d492f3bf664016ffb2c4dd0d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 59ac143fd58507ebc8cc65f6a73de88d9c6e5ba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=**] **'***發行者***'**  
+ [ **@publisher=**] **'***publisher***'**  
  這是目前發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  這是目前發行集資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
  [  **@publication =**] **'***發行集***'**  
@@ -73,7 +73,7 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_dropmergelternatepublisher**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_addmergealternatepublisher &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sp_addmergealternatepublisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
   
   

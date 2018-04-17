@@ -1,15 +1,15 @@
 ---
-title: "資料來源物件 (OLE DB) |Microsoft 文件"
-ms.custom: 
+title: 資料來源物件 (OLE DB) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-data-source-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], data source objects
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - data source objects [OLE DB]
 - CLSID
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f20bf4aee0befa6fb3439da84eef1a04e8ac04a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d941b7295754b1cfde765a262f1709012baacbc4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +85,7 @@ else
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [資料來源屬性 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [資料來源屬性 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [資料來源資訊屬性](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)  
   

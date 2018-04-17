@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_repl_articles (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_repl_articles (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2514ef1aea1e096a1bb543e7a1a815f923afaadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ ms.lasthandoff: 02/03/2018
 |**wszArtdesttable**|**nvarchar(514)**|目的地的已發行物件名稱。|  
 |**wszArtdesttableowner**|**nvarchar(514)**|目的地的已發行物件擁有者。|  
 |**wszArtinscmd**|**nvarchar(510)**|用於插入的命令或預存程序。|  
-|**cmdTypeIns**|**int**|用於插入預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeIns**|**int**|用於插入預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **1** = 呼叫<br /><br /> **2** = SQL<br /><br /> **3** = 無<br /><br /> **7** = 未知|  
 |**wszArtdelcmd**|**nvarchar(510)**|用於刪除的命令或預存程序。|  
-|**cmdTypeDel**|**int**|用於刪除預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeDel**|**int**|用於刪除預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = 呼叫<br /><br /> **2** = SQL<br /><br /> **3** = 無<br /><br /> **7** = 未知|  
 |**wszArtupdcmd**|**nvarchar(510)**|用於更新的命令或預存程序。|  
-|**cmdTypeUpd**|**int**|用於更新預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeUpd**|**int**|用於更新預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = 呼叫<br /><br /> **2** = SQL<br /><br /> **3** = 無<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = 未知|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|用於部分更新的命令或預存程序。|  
 |**cmdTypePartialUpd**|**int**|用於部分更新預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **2** = SQL|  
 |**numcol**|**int**|用於垂直篩選發行項之資料分割中的資料行數目。|  
-|**artcmdtype**|**tinyint**|目前複寫的命令類型，它可以是下列值之一。<br /><br /> **1** = INSERT<br /><br /> **2** = DELETE<br /><br /> **3** = UPDATE<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = none<br /><br /> **6** = 僅供內部使用<br /><br /> **7** = 僅供內部使用<br /><br /> **8** = 部分 UPDATE|  
+|**artcmdtype**|**tinyint**|目前複寫的命令類型，它可以是下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = 刪除<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 無<br /><br /> **6** = 僅供內部使用<br /><br /> **7** = 僅供內部使用<br /><br /> **8** = 部分 UPDATE|  
 |**artgeninscmd**|**nvarchar(510)**|以發行項包含的資料行為基礎之 INSERT 命令範本。|  
 |**artgendelcmd**|**nvarchar(510)**|DELETE 命令範本可包含發行項所包含的主索引鍵或資料行，隨著使用的呼叫語法而不同。|  
 |**artgenupdcmd**|**nvarchar(510)**|UPDATE 命令範本可包含主索引鍵、更新的資料行或完整資料行清單，隨著使用的呼叫語法而不同。|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [複寫相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [複寫相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

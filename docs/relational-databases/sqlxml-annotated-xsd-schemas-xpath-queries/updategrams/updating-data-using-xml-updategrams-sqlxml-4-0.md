@@ -1,16 +1,16 @@
 ---
-title: "更新資料使用 XML Updategram (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: 更新資料使用 XML Updategram (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -29,20 +29,21 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 613fe19b4cb3a63b1998cfa5ef2c6a7368481c6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新資料 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-當您更新現有的資料時，您必須同時指定**\<之前 >**和**\<之後 >**區塊。 在指定的項目**\<之前 >**和**\<之後 >**區塊描述所需的變更。 Updategram 會使用的項目中指定的**\<之前 >**區塊，以識別資料庫中的現有記錄。 中的對應元素**\<之後 >**區塊表示記錄在執行更新作業之後的外觀。 這項資訊，updategram 會建立 SQL 陳述式符合**\<之後 >**區塊。 接著，Updategram 會使用此陳述式來更新資料庫。  
+  當您更新現有的資料時，您必須同時指定**\<之前 >**和**\<之後 >**區塊。 在指定的項目**\<之前 >**和**\<之後 >**區塊描述所需的變更。 Updategram 會使用的項目中指定的**\<之前 >**區塊，以識別資料庫中的現有記錄。 中的對應元素**\<之後 >**區塊表示記錄在執行更新作業之後的外觀。 這項資訊，updategram 會建立 SQL 陳述式符合**\<之後 >**區塊。 接著，Updategram 會使用此陳述式來更新資料庫。  
   
  下列是更新作業的 Updategram 格式：  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 02/12/2018
 ## <a name="examples"></a>範例  
  使用 Updategram 範例之前，請注意下列事項：  
   
--   大部分的範例都會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應結構描述的 updategram 的範例，請參閱[Updategram &#40; 中指定註解式對應結構描述SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   大部分的範例都會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 -   大部分的範例會使用 AdventureWorks 範例資料庫。 所有的更新都會套用到此資料庫內的資料表。 您可以還原 AdventureWorks 資料庫。  
   
@@ -352,7 +353,7 @@ ms.lasthandoff: 02/12/2018
   
      如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 如需使用對應結構描述的 updategram 的範例，請參閱[Updategram &#40; 中指定註解式對應結構描述SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. 搭配 IDREFS 屬性使用對應的結構描述  
  此範例說明 Updategrams 如何使用對應結構描述中的 IDREFS 屬性更新多個資料表中的記錄。 此範例假設資料庫由下列資料表組成：  
@@ -560,9 +561,9 @@ ms.lasthandoff: 02/12/2018
 </Schema>  
 ```  
   
- 如需使用對應結構描述的 updategram 的範例，請參閱[Updategram &#40; 中指定註解式對應結構描述SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Updategram 安全性考量 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Updategram 安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

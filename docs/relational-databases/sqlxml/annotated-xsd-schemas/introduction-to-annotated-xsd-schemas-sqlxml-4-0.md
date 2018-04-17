@@ -1,16 +1,16 @@
 ---
-title: "註解式的 XSD 結構描述 (SQLXML 4.0) 簡介 |Microsoft 文件"
-ms.custom: 
+title: 註解式的 XSD 結構描述 (SQLXML 4.0) 簡介 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75af2a4c0523c6cc592105a016950a2b89e090ff
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f32ce7e230b3ba037eb60385173c9285c50a00bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>註解式 XSD 結構描述簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-您可以使用 XML 結構描述定義 (XSD) 語言來建立關聯式資料的 XML 檢視。 接著，您就可以使用 XML 路徑語言 (XPath) 查詢來查詢這些檢視。 這類似於使用 CREATE VIEW 陳述式來建立檢視，然後針對檢視指定 SQL 查詢。  
+  您可以使用 XML 結構描述定義 (XSD) 語言來建立關聯式資料的 XML 檢視。 接著，您就可以使用 XML 路徑語言 (XPath) 查詢來查詢這些檢視。 這類似於使用 CREATE VIEW 陳述式來建立檢視，然後針對檢視指定 SQL 查詢。  
   
  XML 結構描述會描述 XML 文件的結構，而且也會描述文件中資料的各種條件約束。 針對結構描述指定 XPath 查詢時，傳回之 XML 文件的結構取決於執行 XPath 查詢所針對的結構描述。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/12/2018
 </xsd:schema>  
 ```  
   
- **\<Schema >**元素衍生自 XML 結構描述命名空間規格，在 http://www.w3.org/2001/XMLSchema。  
+  **\<Schema >**元素衍生自 XML 結構描述命名空間規格，在http://www.w3.org/2001/XMLSchema。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 結構描述的註解  
  您可以使用 XSD 結構描述搭配描述資料庫對應的註解、查詢資料庫，並且以 XML 文件的格式傳回結果。 提供註解的目的是要將 XSD 結構描述對應至資料庫資料表和資料行。 您可以針對 XSD 結構描述所建立的 XML 檢視指定 XPath 查詢來查詢資料庫，並以 XML 的格式取得結果。  
@@ -126,18 +127,18 @@ ms.lasthandoff: 02/12/2018
 ## <a name="other-resources"></a>其他資源  
  您可以在下列網站上找到有關 XML 結構描述定義語言 (XSD)、XML 路徑語言 (XPath) 和可延伸樣式表語言轉換 (XSLT) 的資訊：  
   
--   XML 結構描述第零部：W3C 入門建議事項 (http://www.w3.org/TR/xmlschema-0/) (英文)  
+-   XML 結構描述第 0 部分： 入門，W3C 建議事項 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML 結構描述第一部：W3C 結構建議事項 (http://www.w3.org/TR/xmlschema-1/) (英文)  
+-   XML 結構描述第 1 部分： 結構、 W3C 建議事項 (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML 結構描述第二部：W3C 資料類型建議事項 (http://www.w3.org/TR/xmlschema-2/) (英文)  
+-   XML 結構描述第 2:Datatypes，W3C 建議事項 (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML 路徑語言 (XPath) (http://www.w3.org/TR/xpath) (英文)  
+-   XML 路徑語言 (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL 轉換 (XSLT) (http://www.w3.org/TR/xslt) (英文)  
+-   XSL 轉換 (XSLT) (http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>另請參閱  
- [註解式結構描述的安全性考量 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [註解式的 XDR 結構描述 &#40; 中已被取代的 SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [註解式結構描述的安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [註解式 XDR 結構描述&#40;SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "CLR 主控環境 |Microsoft 文件"
-ms.custom: 
+title: CLR 主控環境 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 
+caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5beddb30dcf9948c2e11d0ad3110e21d485b14cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 整合架構 CLR 主控環境
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/09/2018
  系統不允許使用者程式碼執行危害 Database Engine 程序完整性的作業，例如，彈出要求使用者回應或結束程序的訊息方塊。 使用者程式碼應該無法覆寫 Database Engine 記憶體緩衝區或內部資料結構。  
   
 ###### <a name="scalability"></a>延展性  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR，擁有不同的內部模型進行排程和記憶體管理。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在執行緒主動產生定期執行的情況下，或它們要等待鎖定或 I/O 時，支援合作式、非先佔式執行緒模型。 CLR 支援先佔式執行緒模型。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部執行的使用者程式碼可以直接呼叫作業系統執行緒原始物件，則它不會完整整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作排程器，而且可能會降低系統的延展性。 CLR 不會區別虛擬記憶體和實體記憶體，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會直接管理實體記憶體，而且需要在可設定的限制內使用實體記憶體。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 針對排程和記憶體管理，擁有不同的內部模型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在執行緒主動產生定期執行的情況下，或它們要等待鎖定或 I/O 時，支援合作式、非先佔式執行緒模型。 CLR 支援先佔式執行緒模型。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部執行的使用者程式碼可以直接呼叫作業系統執行緒原始物件，則它不會完整整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作排程器，而且可能會降低系統的延展性。 CLR 不會區別虛擬記憶體和實體記憶體，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會直接管理實體記憶體，而且需要在可設定的限制內使用實體記憶體。  
   
  用於執行緒、排序和記憶體管理的不同模型對於調整為支援數千個並行使用者工作階段的關聯式資料庫管理系統 (RDBMS) 會呈現整合性問題。 此架構應該確認針對執行緒、記憶體和同步處理原始物件直接呼叫應用程式開發介面 (API) 的使用者程式碼不會危害系統的延展性。  
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 02/09/2018
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中主控時，此類執行緒中止的處理方式如下：CLR 會在執行緒中止發生所在的應用程式網域中偵測任何共用狀態。 CLR 會透過檢查同步處理物件是否存在來進行。 如果在應用程式網域中有共用狀態，則會卸載應用程式網域本身。 卸載應用程式網域時，會停止目前正在該應用程式網域中執行的資料庫交易。 因為共用狀態的存在可能會擴大此類嚴重例外狀況對於使用者工作階段的影響，而非觸發例外狀況的影響，因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 已經採取步驟來降低共用狀態的可能性。 如需詳細資訊，請參閱 .NET Framework 文件集。  
   
 ###### <a name="security-permission-sets"></a>安全性：權限集合  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓使用者指定程式碼部署到資料庫的可靠性和安全性需求。 當組件上傳到資料庫中時，組件的作者可以為該組件指定以下三個使用權限集合當中的一個：SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓使用者針對資料庫中部署的程式碼指定可靠性和安全性需求。 當組件上傳到資料庫中時，組件的作者可以為該組件指定以下三個使用權限集合當中的一個：SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
   
 |||||  
 |-|-|-|-|  
@@ -142,7 +142,7 @@ ms.lasthandoff: 02/09/2018
   
  EXTERNAL_ACCESS 提供了中級安全性選項，可讓程式碼存取在資料庫外部的資源，但是仍然保有 SAFE 的可靠性保證。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用主機層級的 CAS 原則層來設定主機原則授與的權限集合中儲存為基礎的權限的三組的其中一個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目錄。 在資料庫內執行的 Managed 程式碼一定會取得這些程式碼存取權限集合當中的一個。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用主機層級的 CAS 原則層來設定主機原則，以根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄中所儲存的權限集合來授與三個權限集合當中的一個。 在資料庫內執行的 Managed 程式碼一定會取得這些程式碼存取權限集合當中的一個。  
   
 ### <a name="programming-model-restrictions"></a>程式設計模型限制  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 Managed 程式碼的程式設計模型包含撰寫函數、程序和類型，而這些項目通常不需要使用跨多個引動過程之間所保有的狀態或是共用跨多個使用者工作階段的狀態。 再者，如之前所述，共用狀態的存在可能會造成嚴重的例外狀況，而這些例外狀況會影響應用程式的延展性和可靠性。  

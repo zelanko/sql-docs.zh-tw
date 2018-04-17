@@ -1,16 +1,16 @@
 ---
-title: "sp_help_fulltext_catalogs_cursor (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_fulltext_catalogs_cursor (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_catalogs_cursor
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalogs_cursor
 ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9685fc8cad35b88176a5c593b4fd58d29ac1ae51
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 728ca723c010cc963240ea1e22f04d701be3a8b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfulltextcatalogscursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@cursor_return=**] *@cursor_variable* **OUTPUT**  
+ [  **@cursor_return=**] *@cursor_variable* **輸出**  
  這類型的輸出變數**游標**。 這個資料指標是可捲動的唯讀動態資料指標。  
   
  [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
@@ -64,9 +65,9 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文檢索目錄識別碼。|  
-|**NAME**|**sysname**|全文檢索目錄的名稱。|  
+|**名稱**|**sysname**|全文檢索目錄的名稱。|  
 |**PATH**|**nvarchar(260)**|從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，這個子句不會有任何作用。|  
-|**STATUS**|**int**|目錄的全文檢索索引擴展狀態：<br /><br /> 0 = 閒置<br /><br /> 1 = 完整擴展進行中<br /><br /> 2 = 已暫停<br /><br /> 3 = 調整執行速度<br /><br /> 4 = 復原中<br /><br /> 5 = 已關閉<br /><br /> 6 = 累加擴展進行中<br /><br /> 7 = 正在建立索引<br /><br /> 8 = 磁碟已滿， 已暫停<br /><br /> 9 = 變更追蹤|  
+|**狀態**|**int**|目錄的全文檢索索引擴展狀態：<br /><br /> 0 = 閒置<br /><br /> 1 = 完整擴展進行中<br /><br /> 2 = 已暫停<br /><br /> 3 = 調整執行速度<br /><br /> 4 = 復原中<br /><br /> 5 = 已關閉<br /><br /> 6 = 累加擴展進行中<br /><br /> 7 = 正在建立索引<br /><br /> 8 = 磁碟已滿， 已暫停<br /><br /> 9 = 變更追蹤|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|與目錄相關聯之全文檢索索引資料表的數目。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -91,9 +92,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [FULLTEXTCATALOGPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_catalog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY & #40;TRANSACT-SQL & #41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [sp_fulltext_catalog &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
+ [sp_help_fulltext_catalogs &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

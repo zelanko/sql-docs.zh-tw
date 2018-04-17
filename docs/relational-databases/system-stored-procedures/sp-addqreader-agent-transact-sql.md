@@ -1,16 +1,16 @@
 ---
-title: "sp_addqreader_agent (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addqreader_agent (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqreader_agent
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88b23a475ef7eff5352d5393d41da917ea2f986e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5487e162fed4879854006498a40e1bd308d759a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_login** =] **'***job_login***'**  
+ [ **@job_login**=] **'***job_login***'**  
  這是用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。 *job_login*是**nvarchar （257)**，沒有預設值。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
   
- [  **@job_password** =] **'***job_password***'**  
+ [ **@job_password**=] **'***job_password***'**  
  這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*是**sysname**，沒有預設值。  
   
 > [!IMPORTANT]  
 >  請勿將驗證資訊儲存在指令碼檔案中。 為了要有最佳的安全性，登入名稱和密碼應該在執行階段提供。  
   
- [  **@job_name** =] **'***job_name***'**  
+ [ **@job_name**=] **'***job_name***'**  
  這是現有散發代理程式作業的名稱。 *job_name*是**sysname**，預設值是 NULL。 只有在利用現有的作業來建立代理程式，而不用新建立的作業 (預設值) 時，才指定這個參數。  
   
  [  **@frompublisher=** ] *frompublisher*  
@@ -77,11 +77,11 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_addqreader_agent**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [啟用交易式發行集的更新訂閱](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
  [升級複寫指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_changeqreader_agent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)   
- [sp_helpqreader_agent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)  
+ [sp_changeqreader_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)   
+ [sp_helpqreader_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)  
   
   

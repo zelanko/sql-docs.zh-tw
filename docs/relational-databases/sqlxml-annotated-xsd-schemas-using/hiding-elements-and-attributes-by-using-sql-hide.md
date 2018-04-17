@@ -1,16 +1,16 @@
 ---
-title: "使用 sql: hide 來隱藏項目和屬性 |Microsoft 文件"
-ms.custom: 
+title: '使用 sql: hide 來隱藏項目和屬性 |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - hiding elements
@@ -27,20 +27,21 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], hiding attributes and elements
 - attribute hiding [SQLXML]
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ab705046d11a6290670fc8bb695643b297b5210
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fbef6a043fb1132da098541724a47d01d77d6a08
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 來隱藏元素和屬性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-針對 XSD 結構描述執行 XPath 查詢時，產生的 XML 文件會具有在結構描述中指定的元素和屬性。 您可以指定的某些元素和屬性會隱藏結構描述中使用**sql: hide**註解。 當查詢的選取準則需要結構描述中的特定元素或屬性，但是您不想要在產生的 XML 文件中傳回這些項目時，這樣做就很有用。  
+  針對 XSD 結構描述執行 XPath 查詢時，產生的 XML 文件會具有在結構描述中指定的元素和屬性。 您可以指定的某些元素和屬性會隱藏結構描述中使用**sql: hide**註解。 當查詢的選取準則需要結構描述中的特定元素或屬性，但是您不想要在產生的 XML 文件中傳回這些項目時，這樣做就很有用。  
   
  **Sql: hide**註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/12/2018
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 針對屬性指定 sql:hide  
  在此範例中的 XSD 結構描述包含 **\<Person.Contact >**具有項目**ContactID**， **FirstName**，和**LastName**屬性。  
   
- **\<Person.Contact >**元素屬於複雜類型，因此，會對應到相同的名稱 （預設對應） 的資料表。 所有屬性 **\<Person.Contact >**元素都屬於簡單類型，並將對應至 AdventureWorks 資料庫中 Person.Contacttable 中相同名稱的資料行。 結構描述， **sql: hide**上指定註解**ContactID**屬性。 針對此結構描述指定 XPath 查詢時**ContactID**不會傳回 XML 文件中。  
+  **\<Person.Contact >**元素屬於複雜類型，因此，會對應到相同的名稱 （預設對應） 的資料表。 所有屬性 **\<Person.Contact >**元素都屬於簡單類型，並將對應至 AdventureWorks 資料庫中 Person.Contacttable 中相同名稱的資料行。 結構描述， **sql: hide**上指定註解**ContactID**屬性。 針對此結構描述指定 XPath 查詢時**ContactID**不會傳回 XML 文件中。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

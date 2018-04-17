@@ -1,34 +1,34 @@
 ---
-title: "一般和內容連接的限制 |Microsoft 文件"
-ms.custom: 
+title: 一般和內容連接的限制 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01a520c613a93806736d8e11fd1d451fe67b4eb0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e5fa26af795fb13f7953f635fe5f9d1f2c2ce194
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>內容連接和正常連接的限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主題討論中執行程式碼的相關限制[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過內容和一般連接處理序。  
+  本主題討論中執行程式碼的相關限制[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過內容和一般連接處理序。  
   
 ## <a name="restrictions-on-context-connections"></a>內容連接的限制  
  開發應用程式時，請考慮下列適用於內容連接的限制：  

@@ -1,16 +1,16 @@
 ---
-title: "sysmail_unsentitems (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sysmail_unsentitems (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3a05add3c6c490a0b45e664389e6a49c59959d1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5891918cc9226c4bfdb458f2fe2689244c7a630f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/03/2018
   
  若要查看等候傳送的訊息數和其於郵件佇列中停留的時間，請使用這份檢視。 通常數目**未傳送**訊息將會很低。 在正常作業期間進行基準測試，可判斷作業之訊息佇列中的合理訊息數。  
   
- 若要查看 Database Mail 處理的所有訊息，請使用[sysmail_allitems &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). 若要查看只失敗狀態訊息，請使用[sysmail_faileditems &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). 若要查看已傳送的訊息，請使用[sysmail_sentitems &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
+ 若要查看 Database Mail 處理的所有訊息，請使用[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要查看只失敗狀態訊息，請使用[sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)。 若要查看已傳送的訊息，請使用[sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
@@ -56,19 +56,19 @@ ms.lasthandoff: 02/03/2018
 |**copy_recipients**|**varchar(max)**|訊息副本收件者的電子郵件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|名稱未顯示於訊息標頭之訊息副本收件者的電子郵件地址。|  
 |**subject**|**nvarchar(510)**|訊息的主旨。|  
-|**body**|**varchar(max)**|訊息的主體。|  
+|**主體**|**varchar(max)**|訊息的主體。|  
 |**body_format**|**varchar(20)**|訊息的主體格式。 可能的值為**文字**和**HTML**。|  
-|**importance**|**varchar(6)**|**重要性**訊息參數。|  
-|**sensitivity**|**varchar(12)**|**敏感度**訊息參數。|  
+|**重要性**|**varchar(6)**|**重要性**訊息參數。|  
+|**敏感度**|**varchar(12)**|**敏感度**訊息參數。|  
 |**file_attachments**|**varchar(max)**|附加至電子郵件訊息中的檔案名稱清單，用分號分隔各檔案名稱。|  
 |**attachment_encoding**|**varchar(20)**|郵件附加檔案的類型。|  
-|**query**|**varchar(max)**|郵件程式執行的查詢。|  
+|**查詢**|**varchar(max)**|郵件程式執行的查詢。|  
 |**execute_query_database**|**sysname**|郵件程式執行查詢所在的資料庫內容。|  
 |**attach_query_result_as_file**|**bit**|當值是 0 時，查詢結果會包含在電子郵件訊息的主體中，在主體的內容之後。 當值是 1 時，會以附加檔案的方式傳回結果。|  
 |**query_result_header**|**bit**|當值是 1 時，查詢結果會包含資料行標頭。 當值是 0 時，查詢結果不會包含資料行標頭。|  
 |**query_result_width**|**int**|**Query_result_width**訊息參數。|  
 |**query_result_separator**|**char(1)**|在查詢輸出中用來分隔資料行的字元。|  
-|**exclude_query_output**|**bit**|**Exclude_query_output**訊息參數。 如需詳細資訊，請參閱[sp_send_dbmail &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**exclude_query_output**|**bit**|**Exclude_query_output**訊息參數。 如需詳細資訊，請參閱[sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。|  
 |**append_query_error**|**bit**|**Append_query_error**訊息參數。 0 表示如果查詢中有錯誤，則 Database Mail 不應傳送電子郵件訊息。|  
 |**send_request_date**|**datetime**|訊息置於郵件佇列的日期和時間。|  
 |**send_request_user**|**sysname**|提交訊息的使用者。 這不是 database mail 程序的使用者內容**從**訊息的欄位。|  

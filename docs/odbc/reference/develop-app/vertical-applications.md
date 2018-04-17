@@ -1,31 +1,32 @@
 ---
-title: "垂直應用程式 |Microsoft 文件"
-ms.custom: 
+title: 垂直應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], vertical applications
 - vertical applications [ODBC]
 - interoperability [ODBC], levels
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81f0b9b75a1431b071e20425ba7f0386fe7a1b00
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c53a7541757bb1f9dc6c9c21cf2fd56461ffa1c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vertical-applications"></a>垂直應用程式
 垂直應用程式通常會執行完整定義的工作，針對單一 DBMS。 例如，訂單輸入應用程式會追蹤在公司的訂單。 什麼這些類型的應用程式都有通用是通常會由應用程式開發人員設計用資料庫結構描述，當應用程式可能使用的不同 Dbms 的數字，它使用單一的 DBMS 單一客戶。  

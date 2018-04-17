@@ -1,27 +1,28 @@
 ---
-title: "sys.dm_xe_database_session_event_actions (Azure SQL Database) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_xe_database_session_event_actions (Azure SQL Database) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4b3fcfe0e335b53dc483cde24520ea136c9af37
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: e1f7ed8904d6309f015069a93a47900bc427da4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

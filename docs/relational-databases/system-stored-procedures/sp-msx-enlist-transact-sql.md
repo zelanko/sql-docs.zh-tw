@@ -1,16 +1,16 @@
 ---
-title: sp_msx_enlist (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_msx_enlist (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_enlist_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_enlist
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7984972ac467403114b62e30390e86d007eb401
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cad64d67bef4ab92c08502b263e114a995cbce23
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
  [ **@msx_server_name =**] **'***msx_server***'**  
  多伺服器管理 (主要) 伺服器的名稱。 *msx_server*是**sysname**，沒有預設值。  
   
- [ **@location =**] **'***location***'**  
+ [  **@location =**] **'***位置***'**  
  要加入之目標伺服器的位置。 *位置*是**nvarchar （100)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -78,8 +78,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_msx_defect &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [xp_cmdshell &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
+ [xp_cmdshell &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
   
   

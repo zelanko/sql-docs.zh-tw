@@ -1,16 +1,16 @@
 ---
-title: "sp_changesubscriber (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_changesubscriber (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b52c51d2e516b8d4c4f787c8e5d56d95922b2d4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fd7a0652f2c1f00ec2d577d0c8e74efdc19558d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,10 +72,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  這是訂閱者類型。 *型別*是**tinyint**，預設值是 NULL。 **0**指出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。 **1**指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或其他 ODBC 資料來源伺服器訂閱者。  
   
  [  **@login=**] **'***登入***'**  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。 *登入*是**sysname**，預設值是 NULL。  
+ 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。  
   
  [  **@password=**] **'***密碼***'**  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼。 *密碼*是**sysname**，預設值是 **%** 。 **%**表示 password 屬性沒有變更。  
+ 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼。 *密碼*是**sysname**，預設值是**%**。 **%** 表示 password 屬性沒有變更。  
   
  [  **@commit_batch_size=**] *commit_batch_size*  
  支援這個項目的目的，只是為了與舊版相容。  
@@ -89,7 +89,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_type=**] *frequency_type*  
  這是散發工作的排程頻率。 *frequency_type*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|視需要|  
@@ -106,7 +106,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  這是散發工作的日期。 使用這個參數時*frequency_type*設**32** （每月相對）。 *frequency_relative_interval*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|第一個|  
 |**2**|第二個|  
@@ -120,7 +120,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_subday=**] *frequency_subday*  
  這是在定義的期間內，重新排程的頻率。 *frequency_subday*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二個|  
@@ -148,12 +148,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@security_mode=**] *security_mode*  
  這是實作的安全性模式。 *security_mode*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證|  
 |**1**|Windows 驗證|  
   
- [  **@publisher** =] **'***發行者***'**  
+ [ **@publisher**=] **'***發行者***'**  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -168,11 +168,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_changesubscriber**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_addsubscriber &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_addsubscriber &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

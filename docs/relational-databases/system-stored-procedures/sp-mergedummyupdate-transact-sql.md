@@ -1,16 +1,16 @@
 ---
-title: "sp_mergedummyupdate (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_mergedummyupdate (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergedummyupdate
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46c1fb620db4c4bbe4dde9872897cad07553173a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 36831e8593332441119d051a601d830f6225ab70
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="permissions"></a>Permissions  
  只有成員**db_owner**固定的資料庫角色可以執行**sp_mergedummyupdate**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

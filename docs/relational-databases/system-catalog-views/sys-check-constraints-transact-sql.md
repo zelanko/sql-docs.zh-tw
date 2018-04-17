@@ -1,16 +1,16 @@
 ---
-title: "sys.check_constraints (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.check_constraints (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.check_constraints
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.check_constraints catalog view
 ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99edd7d87c774d1f400c4fe060c1e28543d6311a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d97364049c3cc7ef25c822dc50ad1502d7e51869
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscheckconstraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱[sys.objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**sys.indexes**|**bit**|CHECK 條件約束已停用。|  
 |**is_not_for_replication**|**bit**|CHECK 條件約束是利用 NOT FOR REPLICATION 選項來建立的。|  
 |**is_not_trusted**|**bit**|不是所有資料列的 CHECK 條件約束都經過系統驗證過了。|  
@@ -52,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>請參閱＜  
- [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [目錄檢視 &#40;。TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

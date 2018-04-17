@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_cursor (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_describe_cursor (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38eae1442b8058b6596efd525196f2f76b4b6dce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ce7ca0bb9efe8f00cb65dfe9c8cc1dd1d383544b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,10 +89,10 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |並行 (concurrency)|**tinyint**|1 = 唯讀<br /><br /> 2 = 捲動鎖定<br /><br /> 3 = 開放式|  
 |scrollable|**tinyint**|0 = 順向<br /><br /> 1 = 可捲動|  
 |open_status|**tinyint**|0 = 已關閉<br /><br /> 1 = 開啟|  
-|cursor_rows|**decimal(10,0)**|結果集中符合的資料列數目。 如需詳細資訊，請參閱[@@CURSOR_ROWS &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cursor-rows-transact-sql.md).|  
-|fetch_status|**smallint**|這個資料指標上一次提取的狀態。 如需詳細資訊，請參閱[@@FETCH_STATUS &#40;TRANSACT-SQL &#41;](../../t-sql/functions/fetch-status-transact-sql.md).<br /><br /> 0 = 順利提取。<br /><br /> -1 = 提取失敗，或超出資料指標界限。<br /><br /> -2 = 遺漏要求的資料列。<br /><br /> -9 = 資料指標尚無任何提取動作。|  
+|cursor_rows|**decimal(10,0)**|結果集中符合的資料列數目。 如需詳細資訊，請參閱 [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)。|  
+|fetch_status|**smallint**|這個資料指標上一次提取的狀態。 如需詳細資訊，請參閱 [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)。<br /><br /> 0 = 順利提取。<br /><br /> -1 = 提取失敗，或超出資料指標界限。<br /><br /> -2 = 遺漏要求的資料列。<br /><br /> -9 = 資料指標尚無任何提取動作。|  
 |column_count|**smallint**|資料指標結果集中的資料行數目。|  
-|row_count|**decimal(10,0)**|資料指標上次作業所影響的資料列數。 如需詳細資訊，請參閱[@@ROWCOUNT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/rowcount-transact-sql.md).|  
+|row_count|**decimal(10,0)**|資料指標上次作業所影響的資料列數。 如需詳細資訊，請參閱 [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)。|  
 |last_operation|**tinyint**|上次在資料指標上執行的作業：<br /><br /> 0 = 未在資料指標上執行任何作業。<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = 插入<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|伺服器範圍內的資料指標唯一值。|  
   
@@ -143,12 +143,12 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料指標](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;Transact SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [sp_cursor_list &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [sp_describe_cursor_columns &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
- [sp_describe_cursor_tables &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
+ [sp_cursor_list &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor_columns &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [sp_describe_cursor_tables &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
   

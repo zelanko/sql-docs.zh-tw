@@ -1,15 +1,15 @@
 ---
-title: "CLR 整合的概觀 |Microsoft 文件"
-ms.custom: 
+title: CLR 整合的概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], about CLR integration
@@ -20,27 +20,27 @@ helpviewer_keywords:
 - managed code [SQL Server], vs. extended stored procedures
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: 
+caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fce42787904d67dbe7e023321138fb57bd74b408
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9e0dd551de6b8ac7c9174d6cbccdb8378d195854
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration---overview"></a>CLR 整合的概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-做為 Microsoft .NET Framework 核心的 Common Language Runtime (CLR)，提供了所有 .NET Framework 程式碼的執行環境。 在 CLR 內執行的程式碼稱為 Managed 程式碼。 CLR 提供程式執行所需的各種功能及服務，包括 Just-In-Time (JIT) 編譯、配置及管理記憶體、強制使用型別安全、例外狀況處理、執行緒管理及安全性。  如需詳細資訊，請參閱 .NET Framework SDK。  
+  做為 Microsoft .NET Framework 核心的 Common Language Runtime (CLR)，提供了所有 .NET Framework 程式碼的執行環境。 在 CLR 內執行的程式碼稱為 Managed 程式碼。 CLR 提供程式執行所需的各種功能及服務，包括 Just-In-Time (JIT) 編譯、配置及管理記憶體、強制使用型別安全、例外狀況處理、執行緒管理及安全性。  如需詳細資訊，請參閱 .NET Framework SDK。  
   
  利用 Microsoft SQL Server 中裝載的 CLR (稱為 CLR 整合)，您便能夠以 Managed 程式碼撰寫預存程序、觸發程序、使用者定義函數、使用者定義型別及使用者定義彙總。 因為 Managed 程式碼在執行前會編譯成原生程式碼，所以在部分案例中可大幅提升效能。  
   
  Managed 程式碼會使用程式碼存取安全性 (CAS) 來防止組件執行某些作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 CAS 協助保護 Managed 程式碼，並防止損害作業系統或資料庫伺服器的安全。  
   
 ## <a name="advantages-of-clr-integration"></a>CLR 整合的優點  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 被專為直接資料存取和操作資料庫中。 儘管 [!INCLUDE[tsql](../../includes/tsql-md.md)] 擅長資料存取及管理，但它並不是單純的程式語言。 例如，[!INCLUDE[tsql](../../includes/tsql-md.md)] 不支援陣列、集合、for-each 迴圈、位元移位或類別。 雖然某些建構可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中模擬，但是 Managed 程式碼已經整合了這些建構的支援。 根據情況而定，這些功能可提供重要的理由來以 Managed 程式碼實作某些資料庫功能。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 是專門為了資料庫中的直接資料存取和操作所設計。 儘管 [!INCLUDE[tsql](../../includes/tsql-md.md)] 擅長資料存取及管理，但它並不是單純的程式語言。 例如，[!INCLUDE[tsql](../../includes/tsql-md.md)] 不支援陣列、集合、for-each 迴圈、位元移位或類別。 雖然某些建構可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中模擬，但是 Managed 程式碼已經整合了這些建構的支援。 根據情況而定，這些功能可提供重要的理由來以 Managed 程式碼實作某些資料庫功能。  
   
  Microsoft Visual Basic .NET 和 Microsoft Visual C# 提供物件導向的功能，例如封裝、繼承和多型 (Polymorphism)。 相關程式碼現在可以輕鬆地組織到類別和命名空間內。 當您處理大量的伺服器程式碼時，這可讓您更輕鬆地組織及維護程式碼。  
   

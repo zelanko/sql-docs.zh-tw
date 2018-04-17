@@ -1,16 +1,16 @@
 ---
-title: ".NET 環境中使用 SQLXML 大量載入 |Microsoft 文件"
-ms.custom: 
+title: .NET 環境中使用 SQLXML 大量載入 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - .NET Framework [SQLXML], XML Bulk Load
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c7e12a75ecd120c99a2e658c47acb8b28ffb260
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0129128ffe989989531e874c7c8fabe14213309b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0.NET Framework 支援-使用大量載入
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主題說明如何在 .NET 環境中使用 XML 大量載入功能。 如需 XML 大量載入的詳細資訊，請參閱[執行大量載入的 XML 資料 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
+  本主題說明如何在 .NET 環境中使用 XML 大量載入功能。 如需 XML 大量載入的詳細資訊，請參閱[執行大量載入的 XML 資料 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
   
  若要從 Managed 環境使用 SQLXML 大量載入 COM 物件，您需要將專案參考加入到此物件中。 這會在大量載入 COM 物件周圍產生 Managed 包裝函數介面。  
   
@@ -156,6 +157,6 @@ ms.lasthandoff: 02/12/2018
      這會建立您可以在 .NET Framework 專案中使用的 Managed 包裝函數 DLL (SQLXMLBULKLOADLib.dll)。 在 .NET Framework 中，您可以將專案參考加入到新建立的 DLL。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量載入 XML 資料 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [執行大量載入 XML 資料 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

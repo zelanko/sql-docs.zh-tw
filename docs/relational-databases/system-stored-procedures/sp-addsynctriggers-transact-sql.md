@@ -1,16 +1,16 @@
 ---
-title: "sp_addsynctriggers (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addsynctriggers (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf7770a9388c18922aeb551246c314caba5860fe
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7e99ea52a8bd206da42168f1aed59589561de47e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@sub_table_owner=**] **'***sub_table_owner***'**  
  這是訂閱者資料表的擁有者名稱。 *sub_table_owner*是**sysname**，沒有預設值。  
   
- [  **@publisher=**] **'***發行者***'**  
+ [ **@publisher=**] **'***publisher***'**  
  這是發行者伺服器的名稱。 *發行者*是**sysname**，沒有預設值。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  這是發行者資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。 如果是 NULL，就會使用目前的資料庫。  
   
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@ins_proc=**] **'***ins_proc***'**  
@@ -117,7 +117,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@distributor =** ] **'***散發者***'**  
  這是散發者的名稱。 *散發者*是**sysname**，沒有預設值。  
   
- [  **@pubversion** =] *pubversion*  
+ [ **@pubversion**=] *pubversion*  
  指出發行者的版本。 *pubversion*是**int**，預設值是 1。 **1**表示發行者版本是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 或更早版本。**2**表示發行者是[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 3 (SP3) 或更新版本。 *pubversion*必須明確設定為**2**當發行者版本是[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]SP3 或更新版本。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -129,9 +129,9 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addsynctriggers**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [sp_script_synctran_commands &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

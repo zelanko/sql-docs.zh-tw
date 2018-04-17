@@ -1,15 +1,16 @@
 ---
-title: "轉譯器規格子機碼 |Microsoft 文件"
-ms.custom: 
+title: 轉譯器規格子機碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - translator subkey [ODBC]
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - translator specification subkeys [ODBC]
 - subkeys [ODBC], translator specification subkeys
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86ba311eb458c1128a611b6d1cc2ed1c71329d3f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: de1d072bf36203fd8755726f5a06edbb786d7eb5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="translator-specification-subkeys"></a>轉譯器規格子機碼
 ODBC 轉譯子機碼中所列每個轉譯器都有自己的子機碼。 這個子機碼具有 ODBC 轉譯子機碼下的對應值相同的名稱。 這個子機碼下的值清單之轉譯器轉譯程式安裝 Dll 並使用計數的完整路徑。 值的格式是下表所示。  
   
-|[屬性]|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
 |轉譯程式|REG_SZ|*轉譯程式 DLL 路徑*|  
 |安裝程式|REG_SZ|*安裝程式 DLL 路徑*|  

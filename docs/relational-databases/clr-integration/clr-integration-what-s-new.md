@@ -1,31 +1,31 @@
 ---
-title: "什麼 &#39; s CLR 整合的新功能 |Microsoft 文件"
+title: 什麼&#39;s CLR 整合的新功能 |Microsoft 文件
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4aaa1e92c83d16c951989a12f962fcfe45aec447
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2215d703e3284d0216693d7abb94a4fc11f2225f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="clr-integration---what39s-new"></a>CLR 整合的功能 &#39; 新
+# <a name="clr-integration---what39s-new"></a>CLR 整合-什麼&#39;新
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-以下是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中 CLR 整合的新功能：  
+  以下是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中 CLR 整合的新功能：  
   
 -   在 CLR 的版本 4 中，CLR 資料庫物件不再攔截損壞的狀態例外狀況。 這些例外狀況現在會在 CLR 整合裝載層中攔截。 這些例外狀況可以仍然攔截的 CLR 資料庫元件設定程式碼屬性 ([\<legacyCorruptedStateExceptionsPolicy > 項目](http://go.microsoft.com/fwlink/?LinkId=204954))。 但是不建議您這樣做，因為當發生損壞的狀態例外狀況時，結果就不可靠。  
   

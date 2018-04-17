@@ -1,16 +1,16 @@
 ---
-title: "PropertyIdx 屬性 （ClientNetworkProtocolProperty 類別） |Microsoft 文件"
-ms.custom: 
+title: PropertyIdx 屬性 （ClientNetworkProtocolProperty 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - PropertyIdx Property (ClientNetworkProtocolProperty Class)
@@ -20,16 +20,16 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyIdx property
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
-caps.latest.revision: 
+caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc96f168bdf079d7b6680982a97ccfc85bbeee47
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 52e612599395d2c46ef31bb2e2276bd69227ce8c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>PropertyIdx 屬性 (ClientNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,16 +1,16 @@
 ---
-title: "sp_cursoroption (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_cursoroption (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursoroption_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-caps.latest.revision: 
+caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0fcd7b9c009d0af70e48982f9630f783bce057d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f338bef64234ab8549806eed51b0212a1de95c96
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ sp_cursoroption cursor, code, value
  *程式碼*  
  用來保證資料指標的各種因數一定會傳回值。 *程式碼*需要下列其中一種**int**輸入值：  
   
-|值|名稱|Description|  
+|Value|名稱|Description|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|針對某些指定的 text 或 image 資料行傳回文字指標，而不是實際的資料。<br /><br /> TEXTPTR_ONLY 可讓文字指標來作為*控點*blob 物件的更新版本可以選擇性地擷取或更新使用[!INCLUDE[tsql](../../includes/tsql-md.md)]或 DBLIB 功能 （例如：[!INCLUDE[tsql](../../includes/tsql-md.md)]READTEXT 或 DBLIB DBWRITETEXT）。<br /><br /> 如果指派 "0" 值，選取清單中的所有 text 和 image 資料行將會傳回文字指標，而不是資料。|  
+|0x0001|TEXTPTR_ONLY|針對某些指定的 text 或 image 資料行傳回文字指標，而不是實際的資料。<br /><br /> TEXTPTR_ONLY 可讓文字指標來作為*控點*blob 物件的更新版本可以選擇性地擷取或更新使用[!INCLUDE[tsql](../../includes/tsql-md.md)]或 DBLIB 功能 （例如：[!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 或 DBLIB DBWRITETEXT）。<br /><br /> 如果指派 "0" 值，選取清單中的所有 text 和 image 資料行將會傳回文字指標，而不是資料。|  
 |0x0002|CURSOR_NAME|在指定的名稱指派*值*至游標處。 接著，可讓 ODBC 使用[!INCLUDE[tsql](../../includes/tsql-md.md)]透過 sp_cursoropen 開啟的資料指標定位陳述式 UPDATE/DELETE。<br /><br /> 此字串可以指定為任何字元或 Unicode 資料類型。<br /><br /> 因為[!INCLUDE[tsql](../../includes/tsql-md.md)]定位陳述式 UPDATE/DELETE 運作，根據預設，在第一個資料列，在寬鬆資料指標，sp_cursor SETPOSITION 應該用來定位資料指標，然後再發出定位陳述式 UPDATE/DELETE。|  
 |0x0003|TEXTDATA|在後續的提取上，針對某些 text 或 image 資料行傳回實際資料，而不是文字指標 (也就是說，這樣會復原 TEXTPTR_ONLY 的作用)。<br /><br /> 如果針對特定的資料行啟用 TEXTDATA，將會重新提取或重新整理資料列，而且可以設定回 TEXTPTR_ONLY。 如果是 TEXTPTR_ONLY，值參數是一個指定資料行編號的整數，以及傳回所有 text 或 image 資料行的零值。|  
 |0x0004|SCROLLOPT|捲動選項。 如需詳細資訊，請參閱這個主題稍後的「傳回碼值」。|  
@@ -93,9 +93,9 @@ sp_cursoroption cursor, code, value
 |0x0002|SCROLL_LOCKS|  
 |0x0004 或 0x0008|OPTIMISTIC|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_cursor &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
- [sp_cursoropen &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
+ [sp_cursor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
+ [sp_cursoropen &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   
   

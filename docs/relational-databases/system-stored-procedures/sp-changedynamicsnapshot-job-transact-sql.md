@@ -1,16 +1,16 @@
 ---
-title: "sp_changedynamicsnapshot_job (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_changedynamicsnapshot_job (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c7c2aaa546d1951117c39835ae2a285d3533a78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 160831b54f96bb06652287934da87142c855a348
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,19 +60,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =** ] **'***發行集***'**  
+ [ **@publication =** ] **'***publication***'**  
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
- [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
  這是要變更的快照集作業名稱。 *dynamic_snapshot_jobname*是**sysname**，預設值是 N '%'。 如果*dynamic_snapshot_jobid*指定時，您必須使用的預設值為*dynamic_snapshot_jobname*。  
   
- [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
  這是要變更的快照集作業識別碼。 *dynamic_snapshot_jobid*是**uniqueidentifier**，預設值是 NULL。 如果*dynamic_snapshot_jobname*指定時，您必須使用的預設值為*dynamic_snapshot_jobid*。  
   
  [  **@frequency_type =** ] *frequency_type*  
  這是代理程式的排程頻率。 *frequency_type*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|視需要|  
@@ -87,7 +87,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_interval =** ] *frequency_interval*  
  代理程式的執行天數。 *frequency_interval*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
@@ -104,7 +104,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  這是在定義的期間內，重新排程的頻率。 *frequency_subday*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二個|  
@@ -118,7 +118,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  這是合併代理程式的執行日期。 使用這個參數時*frequency_type*設**32** （每月相對）。 *frequency_relative_interval*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|第一個|  
 |**2**|第二個|  
@@ -130,10 +130,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
  所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*是**int**，預設值是 NULL。  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  這是第一次排程合併代理程式的日期，格式為 YYYYMMDD。 *active_start_date*是**int**，預設值是 NULL。  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  這是排程停止合併代理程式的日期，格式為 YYYYMMDD。 *active_end_date*是**int**，預設值是 NULL。  
   
  [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
@@ -162,8 +162,8 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changedynamicsnapshot_job**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [含參數化篩選之合併式發行集的快照集](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

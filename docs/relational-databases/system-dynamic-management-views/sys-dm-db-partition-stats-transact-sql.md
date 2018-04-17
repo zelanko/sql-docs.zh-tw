@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_db_partition_stats (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_partition_stats
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd061684962fe1d779b3f35f472b35ca52f45e95
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 668a7e12b4159aa5d3cc69fdc3937d817941cdd1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +73,7 @@ ms.lasthandoff: 02/03/2018
  個別資料表或索引的總計數可以藉由加入所有相關資料分割的計數來取得。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 VIEW DATABASE STATE 權限來查詢**sys.dm_db_partition_stats**動態管理檢視。 如需動態管理檢視權限的相關詳細資訊，請參閱[動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ 需要 VIEW DATABASE STATE 權限來查詢**sys.dm_db_partition_stats**動態管理檢視。 如需動態管理檢視權限的相關詳細資訊，請參閱[動態管理檢視和函數&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -112,7 +113,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [資料庫相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
 

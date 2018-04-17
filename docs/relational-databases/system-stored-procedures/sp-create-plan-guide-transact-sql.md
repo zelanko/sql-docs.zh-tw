@@ -2,7 +2,7 @@
 title: sp_create_plan_guide (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,15 +58,15 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @name = ] N'*plan_guide_name*'  
+ [ @name =] N'*plan_guide_name*'  
  計畫指南的名稱。 計畫指南名稱僅限於目前的資料庫。 *plan_guide_name*必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)而且開頭不能是數字符號 （#）。 最大長度*plan_guide_name*為 124 個字元。  
   
- [ @stmt = ] N'*statement_text*'  
+ [ @stmt =] N'*statement_text*'  
  這是建立計畫指南所針對的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查詢最佳化工具會辨識符合的查詢*statement_text*， *plan_guide_name*才會生效。 若要成功，將計畫指南建立*statement_text*必須出現在所指定的內容@type， @module_or_batch，和@params參數。  
   
  *sp_create_plan_guide*必須允許查詢最佳化工具，以符合對應提供批次內的陳述式或模組所識別的方式提供@module_or_batch和@params。 如需詳細資訊，請參閱＜備註＞一節。 大小*statement_text*只受到可用記憶體的伺服器。  
   
- [@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
+ [@type =] N'{物件 |SQL |範本}'  
  是在其中的實體類型*statement_text*隨即出現。 這會指定用於比對內容*statement_text*至*plan_guide_name*。  
   
  OBJECT  
@@ -78,7 +78,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  表示計畫指南套用到任何查詢都參數化中表示的格式*statement_text*。 如果有指定 TEMPLATE，PARAMETERIZATION {FORCED |可以在中指定簡單} 查詢提示@hints參數。 如需有關 TEMPLATE 計畫指南的詳細資訊，請參閱[所使用的計畫指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
   
- [@module_or_batch =] {N'[ *schema_name*。 ] *object_name*' | N'*batch_text*' | NULL }  
+ [@module_or_batch =] {N'[ *schema_name*。 ] *object_name*' |N'*batch_text*' |NULL}  
  中指定的物件名稱*statement_text*隨即出現，或在其中的批次文字*statement_text*隨即出現。 批次文字不能包含*資料庫*陳述式。  
   
  要比對從應用程式，提交的批次的計畫指南*batch_tex*t 必須提供相同的格式，字元逐字元，若要提交[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不會執行內部轉換來簡化這個比對作業。 如需詳細資訊，請參閱＜備註＞一節。  
@@ -343,6 +343,6 @@ GO
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
- [sp_get_query_template &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
+ [sp_get_query_template &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   

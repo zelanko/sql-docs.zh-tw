@@ -1,16 +1,16 @@
 ---
-title: "建立常數元素使用 sql: is-constant< (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: '建立常數元素使用 sql: is-constant< (SQLXML 4.0) |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a4557495db906f4f13a5b5346c11047166002df
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ff5fac71ef48053e57ae3410adfadb3a2b46cbe7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 建立常數元素 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-若要指定常數元素 — 也就是沒有對應到任何資料庫資料表或資料行的 XSD 結構描述的項目 — 您可以使用**sql: is-constant<**註解。 此註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。 **Sql: is-constant<**可以沒有任何屬性的項目上指定註解。 如果該註解是在值為 True (或 1) 的元素上指定，該元素不會對應到資料庫，但是仍會出現在 XML 文件中。  
+  若要指定常數元素 — 也就是沒有對應到任何資料庫資料表或資料行的 XSD 結構描述的項目 — 您可以使用**sql: is-constant<**註解。 此註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。 **Sql: is-constant<**可以沒有任何屬性的項目上指定註解。 如果該註解是在值為 True (或 1) 的元素上指定，該元素不會對應到資料庫，但是仍會出現在 XML 文件中。  
   
  **Sql: is-constant<**附註可用於：  
   

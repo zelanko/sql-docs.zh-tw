@@ -1,16 +1,16 @@
 ---
-title: sys.syscacheobjects (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.syscacheobjects (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscacheobjects_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afc20f732375a4ecd04075c1dbd228139b0005d3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 18e93585cea187fa46a1a86068a17e7692789272
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

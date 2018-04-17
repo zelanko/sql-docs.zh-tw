@@ -1,35 +1,35 @@
 ---
-title: "存取目前的交易 |Microsoft 文件"
-ms.custom: 
+title: 存取目前的交易 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - current transaction access
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abcc68d96e7516b31a231efeb4c5c851b10dee45
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 139a1f2cf77ef6d38ce6dd90275912af32fa0ff2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-the-current-transaction"></a>存取目前交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-如果交易在使用中的點上執行的 common language runtime (CLR) 程式碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是輸入，交易透過公開**System.Transactions.Transaction**類別。 **Transaction.Current**屬性用來存取目前的交易。 在大部分情況下，您不需要明確存取交易。 資料庫連接，ADO.NET 會檢查**Transaction.Current**時自動**c**方法呼叫時，並明確地登記連接在該交易中的 (除非**登錄**關鍵字設定為 false，連接字串中)。  
+  如果交易在使用中的點上執行的 common language runtime (CLR) 程式碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是輸入，交易透過公開**System.Transactions.Transaction**類別。 **Transaction.Current**屬性用來存取目前的交易。 在大部分情況下，您不需要明確存取交易。 資料庫連接，ADO.NET 會檢查**Transaction.Current**時自動**c**方法呼叫時，並明確地登記連接在該交易中的 (除非**登錄**關鍵字設定為 false，連接字串中)。  
   
  您可能想要使用**交易**直接在下列案例中的物件：  
   

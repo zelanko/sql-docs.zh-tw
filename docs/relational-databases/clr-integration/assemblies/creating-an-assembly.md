@@ -1,15 +1,15 @@
 ---
-title: "建立組件 |Microsoft 文件"
-ms.custom: 
+title: 建立組件 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - creating assemblies
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 01e863a5e39ebc32baba97b49e3421e5c8c202bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 38cf3263e8fba94d20b9711321ed9260ed9a8a05
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-an-assembly"></a>建立組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-預存程序或觸發程序之類的 Managed 資料庫物件會經過編譯，然後再稱為組件的單元中進行部署。 Managed 的 DLL 組件必須登錄在[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]之前，可以使用組件所提供的功能。 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中註冊組件，請使用 CREATE ASSEMBLY 陳述式。 本主題討論如何在資料庫中使用 CREATE ASSEMBLY 陳述式註冊組件，以及如何指定組件的安全性設定。  
+  預存程序或觸發程序之類的 Managed 資料庫物件會經過編譯，然後再稱為組件的單元中進行部署。 Managed 的 DLL 組件必須登錄在[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]之前，可以使用組件所提供的功能。 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中註冊組件，請使用 CREATE ASSEMBLY 陳述式。 本主題討論如何在資料庫中使用 CREATE ASSEMBLY 陳述式註冊組件，以及如何指定組件的安全性設定。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY 陳述式  
  CREATE ASSEMBLY 陳述式用於在資料庫中註冊組件。 範例如下：  
@@ -44,7 +44,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  FROM 子句會指定要建立之組件的路徑名稱。 此路徑可以是通用命名慣例 (UNC) 路徑，或是本機電腦的實體檔案路徑。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不允許註冊具有相同名稱、 文化特性和公開金鑰的組件的不同版本。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不允許註冊具有相同名稱、文化特性及公開金鑰之不同版本的組件。  
   
  您可以建立參考其他組件的組件。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中建立組件時，如果在資料庫中尚未建立參考的組件，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也會建立根層級組件所參考的組件。  
   

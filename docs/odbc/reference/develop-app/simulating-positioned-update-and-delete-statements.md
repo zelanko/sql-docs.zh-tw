@@ -1,15 +1,16 @@
 ---
-title: "模擬定位 Update 和 Delete 陳述式 |Microsoft 文件"
-ms.custom: 
+title: 模擬定位 Update 和 Delete 陳述式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 116f99d1a2dd5e904586978de4345111df278dab
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2d89bd5919985a98d7e5ed59ee103be49cc40ab3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>模擬定位的 Update 和 Delete 陳述式
 如果資料來源不支援定位的 update 以及 delete 陳述式，可以模擬這些驅動程式。 比方說，ODBC 資料指標程式庫會模擬定位的 update 和 delete 陳述式。 模擬定位的 update 和 delete 陳述式的一般策略是要搜尋的項目轉換定位陳述式。 這是藉由取代**WHERE CURRENT OF**子句以搜尋**其中**子句可識別目前的資料列。  

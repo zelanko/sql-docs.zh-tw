@@ -2,7 +2,7 @@
 title: SQLBindParameter 函數 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函數
 **一致性**  
@@ -67,7 +67,7 @@ SQLRETURN SQLBindParameter(
  *Sqlbindparameter*  
  [輸入]參數編號排序循序遞增的參數順序，從 1 開始。  
   
- *了*  
+ *InputOutputType*  
  [輸入]參數的型別。 如需詳細資訊，請參閱 「*了*引數 」 中 「 註解 」。  
   
  *ValueType*  
@@ -87,7 +87,7 @@ SQLRETURN SQLBindParameter(
  *ParameterValuePtr*  
  [延遲的輸入]參數的資料緩衝區的指標。 如需詳細資訊，請參閱 「*ParameterValuePtr*引數 」 中 「 註解 」。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入/輸出]長度*ParameterValuePtr*以位元組為單位的緩衝區。 如需詳細資訊，請參閱 「*Columnsize*引數 」 中 「 註解 」。  
   
  請參閱[ODBC 64 位元資訊](../../../odbc/reference/odbc-64-bit-information.md)，如果您的應用程式將在 64 位元作業系統上執行。  
@@ -101,7 +101,7 @@ SQLRETURN SQLBindParameter(
 ## <a name="diagnostics"></a>診斷  
  當**SQLBindParameter**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType*的利用 SQL_HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLBindParameter** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07006|受限制的資料類型屬性違規|所識別的資料型別*ValueType*引數無法轉換成所識別的資料型別*ParameterType*引數。 請注意，此錯誤可能會傳回**SQLExecDirect**， **SQLExecute**，或**SQLPutData**在執行階段，而不是由**SQLBindParameter**.|  
@@ -131,7 +131,7 @@ SQLRETURN SQLBindParameter(
  如果*Sqlbindparameter*呼叫**SQLBindParameter**大於 SQL_DESC_COUNT，值**SQLSetDescField**呼叫以增加 SQL_DESC_ 的值若要計算*Sqlbindparameter*。  
   
 ## <a name="inputoutputtype-argument"></a>了引數  
- *了*引數會指定參數的型別。 這個引數設定 IPD SQL_DESC_PARAMETER_TYPE 欄位。 沒有這類呼叫程序的 SQL 陳述式中的所有參數**插入**陳述式，*輸入**參數*。 程序呼叫中的參數可以輸入、 輸入/輸出或輸出參數。 (應用程式呼叫**SQLProcedureColumns**判斷程序呼叫; 中的參數類型無法判別其型別參數會假設是輸入的參數。)  
+ *了*引數會指定參數的型別。 這個引數設定 IPD SQL_DESC_PARAMETER_TYPE 欄位。 沒有這類呼叫程序的 SQL 陳述式中的所有參數**插入**陳述式，*輸入 * * 參數*。 程序呼叫中的參數可以輸入、 輸入/輸出或輸出參數。 (應用程式呼叫**SQLProcedureColumns**判斷程序呼叫; 中的參數類型無法判別其型別參數會假設是輸入的參數。)  
   
  *了*引數可以是下列值之一：  
   
@@ -158,7 +158,7 @@ SQLRETURN SQLBindParameter(
   
  下表列出的不同組合*了*和 **StrLen_or_IndPtr*:  
   
-|*了*|**StrLen_or_IndPtr*|結果|在每 ParameterValuePtr|  
+|*InputOutputType*|**StrLen_or_IndPtr*|결과|在每 ParameterValuePtr|  
 |-----------------------|----------------------------|-------------|---------------------------------|  
 |SQL_PARAM_INPUT|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|輸入中的組件|*ParameterValuePtr*可以是任何會傳回的指標值**SQLParamData**為使用者定義的語彙基元的值傳遞了*ParameterValuePtr*。|  
 |SQL_PARAM_INPUT|不 SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|輸入繫結緩衝區|*ParameterValuePtr*是輸入緩衝區的位址。|  
@@ -166,7 +166,7 @@ SQLRETURN SQLBindParameter(
 |SQL_PARAM_OUTPUT_STREAM|在輸入會被忽略。|資料流處理的輸出|*ParameterValuePtr*可以是任何指標值，會傳回**SQLParamData**為使用者定義的語彙基元的值傳遞了*ParameterValuePtr*。|  
 |SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|輸入中的組件和輸出繫結的緩衝區|*ParameterValuePtr*也會傳回的輸出緩衝區的位址**SQLParamData**為使用者定義的語彙基元的值傳遞了*ParameterValuePtr*。|  
 |SQL_PARAM_INPUT_OUTPUT|不 SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|輸入繫結緩衝區和輸出繫結的緩衝區|*ParameterValuePtr*是共用的輸入/輸出緩衝區的位址。|  
-L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|輸入中的組件和資料流處理的輸出|*ParameterValuePtr*可以是任何非 null 指標值，會傳回**SQLParamData**為使用者定義的語彙基元的值傳遞了*ParameterValuePtr*兩者輸入和輸出。|  
+L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|輸入中的組件和資料流處理的輸出|*ParameterValuePtr*可以是任何非 null 指標值，會傳回**SQLParamData**為使用者定義的語彙基元的值傳遞了*ParameterValuePtr*這兩個輸入和輸出。|  
   
 > [!NOTE]  
 >  驅動程式必須決定當串流應用程式繫結其輸出或輸入輸出參數時，允許 SQL 類型。 驅動程式管理員不會產生錯誤。 無效的 SQL 型別。  
@@ -591,7 +591,7 @@ int main() {
 |指定多個參數值|[SQLParamOptions 函式](../../../odbc/reference/syntax/sqlparamoptions-function.md)|  
 |傳送參數資料在執行階段|[SQLPutData 函式](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [使用 SQLGetData 擷取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

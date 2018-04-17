@@ -1,30 +1,31 @@
 ---
-title: "ODBC 資料表值參數的用法 |Microsoft 文件"
-ms.custom: 
+title: ODBC 資料表值參數的用法 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), scenarios
 - ODBC, table-valued parameters
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 050d0e33419b2f73fba8e5e7fd011d786fcb9f21
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dc60cd2dba6917fca0d2836112801a7a1477ecf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>使用 ODBC 資料表值參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/24/2018
   
  有時應用程式會搭配動態 SQL 使用資料表值參數，而且必須提供此資料表值參數的類型名稱。 如果是這樣，連接的目前預設結構描述中未定義的資料表值參數使用 SQLSetDescField 必須設定 SQL_CA_SS_TYPE_CATALOG_NAME 和 SQL_CA_SS_TYPE_SCHEMA_NAME。 因為資料表類型定義和資料表值參數必須在相同的資料庫中，所以如果應用程式使用資料表值參數，就不能設定 SQL_CA_SS_TYPE_CATALOG_NAME。 否則，SQLSetDescField 會回報錯誤。  
   
- 在此案例的範例程式碼是在程序`demo_fixed_TVP_binding`中[使用資料表值參數 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 在此案例的範例程式碼是在程序`demo_fixed_TVP_binding`中[使用資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>以資料流方式傳送資料列的資料表值參數 (使用資料執行中，將資料當做 TVP 傳送)  
  在此案例中，應用程式會在要求時提供資料列給驅動程式，然後以資料流方式將資料列傳送給伺服器。 如此就不需要在記憶體中緩衝處理所有資料列。 這是大量插入/更新案例的代表。 資料表值參數會提供參數陣列與大量複製之間某一處的效能點。 也就是說，編寫資料表值參數就跟參數陣列一樣輕鬆，但是資料表值參數在伺服器上提供更大的彈性。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/24/2018
   
  當所有資料表值參數資料行都已經處理過之後，此驅動程式會回到資料表值參數來進一步處理資料表值參數資料的資料列。 因此，如果是資料執行中的資料表值參數，此驅動程式不會遵循一般的繫結參數循序掃描。 將會輪詢繫結的資料表值參數，直到呼叫是 SQLPutData *StrLen_Or_IndPtr*等於 0，此時驅動程式略過資料表值參數資料行，並移至下一個實際預存程序參數。  當 SQLPutData 傳指標值大於或等於 1 時，驅動程式處理資料表值參數資料行和資料列依序直到它有所有的繫結的資料列和資料行的值。 然後此驅動程式會回到資料表值參數。 之間接收資料表值參數的語彙基元從 SQLParamData 和 SQLPutData (hstmt，NULL，n) 呼叫資料表值參數，應用程式必須設定資料表值參數組成資料行資料和指標緩衝區的內容。下一個資料列或資料列傳遞至伺服器。  
   
- 在此案例的範例程式碼位於常式`demo_variable_TVP_binding`中[使用資料表值參數 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 在此案例的範例程式碼位於常式`demo_variable_TVP_binding`中[使用資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>從系統目錄擷取資料表值參數中繼資料  
  當應用程式具有資料表值參數的程序呼叫 SQLProcedureColumns 時，DATA_TYPE 會以 SQL_SS_TABLE 而且 TYPE_NAME 是資料表值參數資料表類型的名稱傳回。 SQLProcedureColumns 傳回的結果集已加入兩個額外的資料行： SS_TYPE_CATALOG_NAME 會傳回定義資料表類型之資料表值參數，而 SS_TYPE_SCHEMA_NAME 會傳回的結構描述名稱的目錄名稱位置定義資料表類型的資料表值參數的位置。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式特有資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/24/2018
   
  應用程式使用 SQLColumns 中保存的資料表，但必須先設定 SQL_SOPT_SS_NAME_SCOPE 來指示它使用資料表類型，而不是實際資料表的相同方式決定資料表類型的資料行。 SQLPrimaryKeys 也可以搭配資料表類型，再利用 SQL_SOPT_SS_NAME_SCOPE。  
   
- 在此案例的範例程式碼位於常式`demo_metadata_from_catalog_APIs`中[使用資料表值參數 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 在此案例的範例程式碼位於常式`demo_metadata_from_catalog_APIs`中[使用資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-for-a-prepared-statement"></a>針對準備好的陳述式擷取資料表值參數中繼資料  
  在此案例中，應用程式會使用 SQLNumParameters 和 SQLDescribeParam 擷取資料表值參數的中繼資料。  
@@ -90,9 +91,9 @@ ms.lasthandoff: 01/24/2018
   
  應用程式使用 SQLColumns 擷取資料行中繼資料資料表值參數在此案例中，也因為 SQLDescribeParam 不會傳回資料表值參數資料行的資料行的中繼資料。  
   
- 此使用案例的範例程式碼位於常式`demo_metadata_from_prepared_statement`中[使用資料表值參數 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 此使用案例的範例程式碼位於常式`demo_metadata_from_prepared_statement`中[使用資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表值參數 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

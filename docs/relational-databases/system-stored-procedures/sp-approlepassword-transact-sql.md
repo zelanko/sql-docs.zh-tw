@@ -1,16 +1,16 @@
 ---
-title: "sp_approlepassword (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_approlepassword (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_approlepassword
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_approlepassword
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6456a0fa5330b2c6ef921dec959f9cc9fb6f07b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 81c7816f206662489e797dfa4ed149ddfb53a3c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   變更目前資料庫中應用程式角色的密碼。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md)改為。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,11 +74,11 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [安全性預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [應用程式角色](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_addapprole &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [sp_setapprole &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [sp_addapprole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: sys.fn_translate_permissions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.fn_translate_permissions (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_translate_permissions
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-caps.latest.revision: 
+caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08ddfe3ce812a5f01e290f8936b68160bcd0cc0c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e4bce7235e6864e71753f471dc8dc3a063db1832
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>引數  
- *level*  
+ *層級*  
  這是套用權限的安全性實體種類。 *層級*是**nvarchar （60)**。  
   
- *perms*  
+ *權限*  
  這是權限資料行中傳回的位元遮罩。 *perms*是**varbinary （16)**。  
   
 ## <a name="returns"></a>傳回值  

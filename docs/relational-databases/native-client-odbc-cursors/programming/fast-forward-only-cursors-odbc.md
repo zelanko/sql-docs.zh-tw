@@ -1,15 +1,15 @@
 ---
-title: "僅向前快轉資料指標 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 僅向前快轉資料指標 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-cursors
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - cursors [ODBC], fast forward-only
 - ODBC cursors, fast forward-only
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2de4f780218dcb665f4a4a1336e5557615bcc1cd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 04cde52abf320d7fa99d4cb748d491e63bc0eb50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>快速順向資料指標 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,13 +41,13 @@ ms.lasthandoff: 01/24/2018
   
  應用程式會使用驅動程式特有的陳述式屬性 SQL_SOPT_SS_CURSOR_OPTIONS 來要求快速順向資料指標。 設定為 SQL_CO_FFO 時，就會啟用快速順向資料指標，但不啟用自動擷取。 設定為 SQL_CO_FFO_AF 時，則會一併啟用自動擷取選項。 如需有關自動擷取選項的詳細資訊，請參閱[使用自動擷取搭配 ODBC 資料指標](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)。  
   
- 包含自動擷取的快速順向資料指標可用來透過與伺服器之間的一次往返，擷取小型結果集。 在這些步驟中，  *n* 是要傳回的資料列數目：  
+ 包含自動擷取的快速順向資料指標可用來透過與伺服器之間的一次往返，擷取小型結果集。 在這些步驟中， *n*是要傳回的資料列數目：  
   
 1.  將 SQL_SOPT_SS_CURSOR_OPTIONS 設定為 SQL_CO_FFO_AF。  
   
-2.  將 SQL_ATTR_ROW_ARRAY_SIZE 設定為 *n*  + 1。  
+2.  將 SQL_ATTR_ROW_ARRAY_SIZE 設定為*n* + 1。  
   
-3.  將結果資料行繫結至陣列的 *n*  + 1 個元素 (為了安全起見如果 *n*  + 1 個資料列實際上提取)。  
+3.  將結果資料行繫結至陣列的*n* + 1 個元素 (為了安全起見如果*n* + 1 個資料列實際上提取)。  
   
 4.  開啟資料指標，其中一種**SQLExecDirect**或**SQLExecute**。  
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 01/24/2018
 -   由於資料列集大小設定為結果集的資料列數目加上 1，所以伺服器會偵測資料指標的結尾並關閉資料指標。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料指標程式設計詳細資料 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [資料指標程式設計詳細&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

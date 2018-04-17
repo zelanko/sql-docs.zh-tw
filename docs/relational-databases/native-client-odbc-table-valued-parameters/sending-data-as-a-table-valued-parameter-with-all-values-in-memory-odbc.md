@@ -1,35 +1,36 @@
 ---
-title: "記憶體 (ODBC) 中的所有值的資料表值參數的形式傳送資料 |Microsoft 文件"
-ms.custom: 
+title: 記憶體 (ODBC) 中的所有值的資料表值參數的形式傳送資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b78fe6215d4d612b787cdd53316c66e30478fc34
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9ba83ff39d4d5012655c31502fd99139b5a23aad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>使用記憶體中的所有值，將資料當做資料表值參數傳送 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  本主題描述所有的值都在記憶體中時，如何將資料當做資料表值參數傳送至預存程序。 如需示範資料表值參數的另一個範例，請參閱[使用資料表值參數 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+  本主題描述所有的值都在記憶體中時，如何將資料當做資料表值參數傳送至預存程序。 如需示範資料表值參數的另一個範例，請參閱[使用資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="prerequisite"></a>必要條件  
  此程序假設已在伺服器上執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  

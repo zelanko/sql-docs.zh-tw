@@ -1,36 +1,37 @@
 ---
-title: "核心 SQLXML 安全性考量 |Microsoft 文件"
-ms.custom: 
+title: 核心 SQLXML 安全性考量 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a447b0efceee45f759743b245a7351dc381ba208
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 61dbae297d74069310898ef170b2677b460aeef6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML 的核心安全性考量
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-下面是使用 SQLXML 進行資料存取的安全性指導方針。  
+  下面是使用 SQLXML 進行資料存取的安全性指導方針。  
   
--   SQLXMLOLEDB 提供者會公開**StreamFlags**屬性可讓您設定旗標，指出應該啟用或停用每個特定執行個體什麼 SQLXML 功能。 您可以使用這個屬性來自訂 SQLXML 的使用，並確定只有您所要的元件啟用。 如需詳細資訊，請參閱[SQLXMLOLEDB 提供者 &#40;SQLXML 4.0 &#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   SQLXMLOLEDB 提供者會公開**StreamFlags**屬性可讓您設定旗標，指出應該啟用或停用每個特定執行個體什麼 SQLXML 功能。 您可以使用這個屬性來自訂 SQLXML 的使用，並確定只有您所要的元件啟用。 如需詳細資訊，請參閱[SQLXMLOLEDB 提供者&#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)。  
   
 -   當 SQLXML 錯誤發生且傳回時，可能會包含有關資料表名稱、資料行名稱或類型資訊之類的資料庫結構描述的資訊。 在處理這些錯誤時應該要小心，以免有關您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝的資訊在非預期或不必要的情況下被使用者輕易地找到。  
   
