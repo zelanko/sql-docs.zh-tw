@@ -1,16 +1,16 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -320,13 +320,13 @@ ON
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max) (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階定價層 Azure SQL Database 的叢集資料行存放區索引)   
+-   nvarchar(max)  (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階層、標準層 (S3 和以上)，以及所有 VCore 優惠層的叢集資料行存放區索引)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar(max) (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階定價層 Azure SQL Database 的叢集資料行存放區索引)
+-   varchar(max)  (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階層、標準層 (S3 和以上)，以及所有 VCore 優惠層的叢集資料行存放區索引)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary (max) (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階定價層 Azure SQL Database 的叢集資料行存放區索引)
+-   varbinary (max)  (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階層的 Azure SQL Database、標準層 (S3 和以上)，以及所有 VCore 優惠層的叢集資料行存放區索引)
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier (適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新的版本)
   
@@ -349,7 +349,7 @@ ON
 -   無法使用 **ALTER INDEX** 陳述式加以變更。 若要變更非叢集索引，您必須先卸除再重新建立資料行存放區索引。 您可以使用 **ALTER INDEX** 來停用並重建資料行存放區索引。  
 -   無法使用 **INCLUDE** 關鍵字來建立。  
 -   不可包含 **ASC** 或 **DESC** 關鍵字來排序索引。 資料行存放區索引是依據壓縮演算法來排序。 遞增或遞減排序會取消許多效能優點。  
--   無法在非叢集資料行存放區索引中包含類型 nvarchar(max)、varchar(max), 和 varbinary(max) 的大型物件 (LOB) 資料行。 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 版本開始，以及設定為進階定價層的 Azure SQL Database ，只有叢集資料行存放區索引支援 LOB 類型。 請注意，先前的版本不支援叢集和非叢集資料行存放區索引中的 LOB 類型。
+-   無法在非叢集資料行存放區索引中包含類型 nvarchar(max)、varchar(max), 和 varbinary(max) 的大型物件 (LOB) 資料行。 僅叢集資料行存放區索引支援 LOB 類型，開始於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 版和設定於進階層的 Azure SQL Database、標準層 (S3 和以上)，以及所有 VCore 優惠層。 請注意，先前的版本不支援叢集和非叢集資料行存放區索引中的 LOB 類型。
 
 
  **資料行存放區索引無法與下列功能結合：**  
@@ -358,7 +358,7 @@ ON
 -   複寫  
 -   檔案資料流
 
-您無法在具有叢集資料行存放區索引的資料表上，使用資料指標或觸發程序。 這項限制不適用於非叢集資料行存放區索引。您可以在具有非叢集資料行存放區索引的資料表上，使用資料指標和觸發程序。
+您無法在具有叢集資料行存放區索引的資料表上使用資料指標或觸發程序。 這項限制不適用於非叢集資料行存放區索引。您可以在具有非叢集資料行存放區索引的資料表上，使用資料指標和觸發程序。
 
 **SQL Server 2014 具體限制**  
 這些限制僅適用於 SQL Server 2014。 在此版本中，我們引進了可更新的叢集資料行存放區索引。 非叢集資料行存放區索引仍然是唯讀的。  

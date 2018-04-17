@@ -1,16 +1,16 @@
 ---
-title: "tempdb 資料庫 | Microsoft Docs"
-description: "本主題提供有關在 SQL Server 和 Azure SQL Database 中設定和使用 tempdb 資料庫的詳細資料"
+title: tempdb 資料庫 | Microsoft Docs
+description: 本主題提供有關在 SQL Server 和 Azure SQL Database 中設定和使用 tempdb 資料庫的詳細資料
 ms.custom: P360
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.reviewer: carlrab
-ms.openlocfilehash: 813f361d52b4f4bbd3a9b9f5693278d08ac9432c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 33bbb4114d0be681030d288851d169704210fcde
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **tempdb** 系統資料庫是全域資源，適用於所有連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或 SQL Database 的使用者。 Tempdb 用以保留：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  **tempdb** 系統資料庫是全域資源，適用於所有連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或 SQL Database 的使用者。 Tempdb 用以保留：  
   
 - 明確建立的暫存「使用者物件」(例如：全域或本機暫存資料表與索引、暫存預存程序、資料表變數、資料表值函式中傳回的資料表，或資料指標)。  
 - 資料庫引擎建立的**內部物件**。 其中包括：
@@ -105,6 +106,9 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="tempdb-database-in-sql-database"></a>SQL Database 中的 tempdb 資料庫
 
+
+### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>以 DTU 為基礎的服務層 tempdb 大小
+
 |SLO|Tempdb 資料檔案大小上限 (MB)|Tempdb資料檔案數|Tempdb 資料檔案大小上限 (MB)|
 |---|---:|---:|---:|
 |[基本]|14,225|@shouldalert|14,225|
@@ -128,6 +132,9 @@ ms.lasthandoff: 01/18/2018
 |基本彈性集區 (所有 DTU 設定)|14,225|12|170,700| 
 ||||
 
+### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>以 vCore 為基礎的服務層 tempdb 大小
+
+請參閱以 vCore 為基礎的資源限制](https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
 
 ## <a name="restrictions"></a>限制  
  下列作業不能在 **tempdb** 資料庫上執行：  

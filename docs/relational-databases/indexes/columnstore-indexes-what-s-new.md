@@ -16,11 +16,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: f1a04505be156fcb10394e6cccb431f3c2206871
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/22/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本以及 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的最新版本，皆可使用資料行存放區功能的摘要。  
 
  > [!NOTE]
- > 若是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，SQL Database 進階層及標準層 (S3 及更新版本) 可使用資料行存放區索引。 若是 SQL Server (2016 SP1 及更新版本)，則所有版本皆可使用資料行存放區索引。 若是 SQL Server (2016 SP1 及更早的版本)，則只有 Enterprise Edition 才可使用資料行存放區索引。
+ > 若是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，SQL Database 進階層、標準層 - S3 及更新版本，和所有 vCore 層可使用資料行存放區索引。 若是 SQL Server (2016 SP1 及更新版本)，則所有版本皆可使用資料行存放區索引。 若是 SQL Server (2016 SP1 及更早的版本)，則只有 Enterprise Edition 才可使用資料行存放區索引。
  
 ## <a name="feature-summary-for-product-releases"></a>產品版本的功能摘要  
  本表會摘要說明資料行存放區索引的重要功能以及提供它們的產品。  
@@ -119,7 +119,8 @@ ms.lasthandoff: 03/22/2018
   
 ### <a name="limitations"></a>限制  
   
--   B-tree 索引在叢集資料行存放區索引上定義時，MERGE 就會停用。  
+
+  
 -   至於記憶體中資料表，資料行存放區索引必須包含所有的資料行，而資料行存放區索引不能有篩選的條件。  
 -   至於記憶體中資料表，針對資料行存放區索引的查詢只能在 InterOP 模式中執行，不是在記憶體中原生模式中執行。 支援平行執行。  
   

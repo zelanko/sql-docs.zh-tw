@@ -1,16 +1,16 @@
 ---
 title: ASYMKEY_ID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AsymKey_ID
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IDs [SQL Server], asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf4f12b058c3a4df46679d1d4d5bf9bd56958deb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4393d3a6a9c14465c307a1986aef31b3a8a69557
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="asymkeyid-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
   
 ## <a name="arguments"></a>引數  
 *Asym_Key_Name*  
-這是資料庫中非對稱金鑰的名稱。
+資料庫中非對稱金鑰的名稱。
   
-## <a name="return-types"></a>傳回型
+## <a name="return-types"></a>傳回類型
  **int**  
   
 ## <a name="permissions"></a>Permissions  
-需要非對稱金鑰的部份權限，且呼叫端尚未拒絕非對稱金鑰的 VIEW 權限。
+需要非對稱金鑰上適當的權限，且呼叫端尚未拒絕非對稱金鑰的 VIEW 權限。 如需非對稱金鑰權限的詳細資訊，請參閱 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41; ](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
-下列範例會傳回非對稱金鑰 `ABerglundKey11` 的識別碼。
+此範例傳回非對稱金鑰 `ABerglundKey11` 的識別碼。
   
 ```sql
 SELECT ASYMKEY_ID('ABerglundKey11');  
