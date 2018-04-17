@@ -1,15 +1,16 @@
 ---
-title: "層級 2 應用程式開發介面函式 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 層級 2 應用程式開發介面函式 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC level 2 API functions [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 452af0d9daf66cee389f10029ea302efca14cf93
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b2058d8ff3c20ad60fb53bff69ffb566b733b16f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>層級 2 應用程式開發介面函式 （如 Oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  

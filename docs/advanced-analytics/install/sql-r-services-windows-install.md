@@ -1,31 +1,17 @@
 ---
 title: 安裝 SQL Server 2016 R Services （資料庫） |Microsoft 文件
-ms.custom: ''
-ms.date: 03/15/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-keywords:
-- 安裝 SQL Server R 服務
-- 安裝 SQL Server 機器學習服務
-- 設定 R 服務
-- 安裝 SQL 機器學習服務
-ms.assetid: ''
-caps.latest.revision: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Active
-ms.openlocfilehash: 7a00eb7f3151ad95818feee1d981170164f44345
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 86263158581b92af42a7ad1ce9b538b2c1cdbfa7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>安裝 SQL Server 2016 R 服務 (資料庫內) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,23 +1,17 @@
 ---
 title: 修改 SQL Server 機器學習的使用者帳戶集區 |Microsoft 文件
-ms.date: 11/03/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 77b84e3117b0a1366f3d0b5f9d74802d938bc86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>修改 SQL Server 機器學習的使用者帳戶集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +29,7 @@ Windows 帳戶群組由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 -   在預設的執行個體中，群組名稱是 **SQLRUserGroup**。 不論您使用 R、 Python 或兩者的名稱都是相同的。
 -   在具名的執行個體中，預設群組名稱的最後會加上執行個體名稱：例如，**SQLRUserGroupMyInstanceName**。
 
-根據預設，使用者帳戶集區包含 20 個使用者帳戶。 在大部分情況下，20 足以多個支援機器學習工作，但您可以變更帳戶的數目。
+根據預設，使用者帳戶集區包含 20 個使用者帳戶。 在大部分情況下，20 足以多個支援機器學習工作，但您可以變更帳戶的數目。 帳戶數目上限為 100。
 -  在預設的執行個體中，個別的帳戶會命名為 **MSSQLSERVER01** 到 **MSSQLSERVER20**。
 -   對於具名的執行個體，個別的帳戶會以執行個體的名稱來命名：例如，**MyInstanceName01** 到 **MyInstanceName20**。
 
@@ -50,7 +44,7 @@ Windows 帳戶群組由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 1. 開啟 [SQL Server 組態管理員]，並選取 [SQL Server 服務]。
 2. 按兩下 SQL Server Launchpad 服務，如果服務正在執行請將它停止。
 3.  在 [服務] 索引標籤上，請確定 [啟動模式] 設為 [自動]。 未執行 [啟動列] 時，無法啟動外部指令碼。
-4.  按一下 [進階] 索引標籤，並視需要編輯 [外部使用者計數] 的值。 這個設定會控制多少不同的 SQL 使用者可以執行外部指令碼工作階段同時。 預設為 20 個帳戶。
+4.  按一下 [進階] 索引標籤，並視需要編輯 [外部使用者計數] 的值。 這個設定會控制多少不同的 SQL 使用者可以執行外部指令碼工作階段同時。 預設為 20 個帳戶。 使用者數目上限為 100。
 5. 如果您的組織要求定期變更密碼，您可以選擇將 [重設外部使用者密碼] 選項設為 [是]。 如此會重新產生 Launchpad 為使用者帳戶維護的加密密碼。 如需詳細資訊，請參閱[強制密碼原則](#bkmk_EnforcePolicy)。
 6.  重新啟動 [啟動列] 服務。
 

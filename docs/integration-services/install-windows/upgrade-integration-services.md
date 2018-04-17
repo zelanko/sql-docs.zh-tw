@@ -18,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: ''
+caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: 56b70314f149d8eb2f8a9a0143ac43aae3d31afc
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
   如果您的電腦上目前安裝有 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更新版本，您可以升級到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -43,12 +43,12 @@ ms.lasthandoff: 03/20/2018
  我們建議您在升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前，最好先執行 Upgrade Advisor。 Upgrade Advisor 會報告當您將現有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝移轉至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的新封裝格式時可能會遇到的問題。  
   
 > [!NOTE]  
->  在目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本中，已停用針對移轉或執行 Data Transformation Services (DTS) 封裝所提供的支援。 下列 DTS 功能已停用：  
+>  在 SQL Server 2012 中，已停用為移轉或執行 Data Transformation Services (DTS) 套件所提供的支援。 下列 DTS 功能已停用：  
 >   
 >  -   DTS 執行階段  
 > -   DTS API  
-> -   可將 DTS 封裝移轉到下一版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的封裝移轉精靈  
-> -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中對於 DTS 封裝維護的支援  
+> -   可將 DTS 封裝移轉到下一版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+> -   DTS 封裝維護的支援 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   執行 DTS 2000 封裝工作  
 > -   DTS 封包的 Upgrade Advisor 掃描。  
 >   
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/20/2018
   
 -   執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式，並選取**從 SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 升級的選項。  
   
--   在命令提示字元上執行 **setup.exe**，並指定 **/ACTION=upgrade** 選項。 如需詳細資訊，請參閱 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的＜的安裝指令碼＞一節。  
+-   在命令提示字元上執行 **setup.exe**，並指定 **/ACTION=upgrade** 選項。 如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的＜[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安裝指令碼＞一節。  
   
  您無法使用升級作業來執行下列動作：  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/20/2018
   
     -   將記錄資料從 msdb.sysdtslog90 系統資料表移到 msdb.sysssislog 系統資料表。  
   
--   將資料移到新的 msdb.sysssis\* 資料表之後，移除 msdb.sysdts\*90 系統資料表以及用於存取這些資料表的預存程序。 不過，升級會將 sysdtslog90 資料表取代成也名為 sysdtslog90 的檢視表。 這個新的 sysdtslog90 檢視表會公開新的 msdb.sysssislog 系統資料表。 這樣可確保以記錄資料表為基礎的報表會繼續執行而不中斷。  
+-   將資料移到新的 msdb.sysssis\* 資料表之後，移除 msdb.sysdts*90 系統資料表以及用於存取這些資料表的預存程序。 不過，升級會將 sysdtslog90 資料表取代成也名為 sysdtslog90 的檢視表。 這個新的 sysdtslog90 檢視表會公開新的 msdb.sysssislog 系統資料表。 這樣可確保以記錄資料表為基礎的報表會繼續執行而不中斷。  
   
 -   為了控制封裝的存取權，建立三個新的固定資料庫層級角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator。 雖然不會移除 db_dtsadmin、db_dtsltduser 和 db_dtsoperator 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色，但是它們會成為對應新角色的成員。  
   

@@ -1,36 +1,28 @@
 ---
 title: 將 SQL Server 上的機器學習元件繫結至 Microsoft 機器學習 Server |Microsoft 文件
-ms.custom: ''
-ms.date: 03/15/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: c82a1788f7c2c5cf4bca43c4fb03ff5c9eba0e28
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 3f0818d67bb866326786598f67bb2caac368dda6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>將 SQL Server 上的機器學習元件繫結至 Microsoft 機器學習 Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明的程序_繫結_，可用來升級機器學習 SQL Server 中所使用的元件。 更新頻率，根據機器學習伺服器版本的繫結程序鎖定伺服器，而不是使用 SQL Server 版本和更新排程。
+本文說明的程序*繫結*為了升級 R，並將 Python 的封裝上的 SQL Server 機器學習服務或 Microsoft 機器學習 server 的 SQL Server R Services （資料庫） 執行個體更快的發行日程。 
 
-> [!IMPORTANT]
-> 您不需要使用此升級程序，如果您想要取得升級為 SQL Server 更新的一部分。 每當您安裝新的 service pack 或版本更新服務時，機器學習元件會一律會自動升級為最新版本。 只使用_繫結_如果您想要更快的速度比 SQL Server 服務版本會提供在元件的升級程序。
+變更服務更新機制繫結程序。 沒有繫結，只有當您安裝 service pack 或累積更新 (CU) 時，會重新整理的 R，並將 Python 的封裝版本。 使用繫結，較新的封裝版本都可以套用至執行個體中，獨立的 CU 發行排程。
 
-如果您必須在您想要停止的機器學習伺服器排程上的 升級任何時間，_解除繫結_中所述的執行個體[本節](#bkmk_Unbind)，解除安裝機器學習服務伺服器。
+繫結會影響的機器學習或 R 元件 database engine 執行個體，不在資料庫引擎執行個體本身。 它只適用於 （資料庫） 執行個體。 （獨立） 安裝不在範圍內。
+
+如果在您想要還原為您的機器學習元件的 SQL Server 服務任何時候，您可以將_解除繫結_中所述的執行個體[本節](#bkmk_Unbind)，解除安裝機器學習的伺服器。
 
 **適用於：** SQL Server 2016 R Services、 SQL Server 2017 機器學習服務
 

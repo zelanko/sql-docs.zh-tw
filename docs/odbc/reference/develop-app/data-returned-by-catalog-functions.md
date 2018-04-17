@@ -1,30 +1,31 @@
 ---
-title: "目錄函數所傳回的資料 |Microsoft 文件"
-ms.custom: 
+title: 目錄函數所傳回的資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b05067010701d1751056cb99089708b5cbeb67f9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0445730e40f1747b4f8e08ebc9ab52ae97308eb7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-returned-by-catalog-functions"></a>目錄函數所傳回的資料
 每個類別目錄函數會傳回資料當作結果集。 此結果集並無不同的任何其他結果集。 通常是由預先定義參數化**選取**是硬式編碼驅動程式中或預存程序中的資料來源的陳述式。 如需如何從結果集擷取資料資訊，請參閱[已設定建立結果？](../../../odbc/reference/develop-app/was-a-result-set-created.md)。  

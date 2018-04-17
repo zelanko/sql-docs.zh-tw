@@ -2,7 +2,7 @@
 title: 日期、 時間和時間戳記常值 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b9102d2c54c308304ea326d5a3a710a7703f275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、 時間和時間戳記常值
 日期、 時間和時間戳記常值的逸出序列是  
@@ -35,9 +35,9 @@ ms.lasthandoff: 12/21/2017
   
 |*常值型別*|意義|格式化的*值*|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*yyyy*-*公釐*-*dd*|  
+|**d**|日期|*yyyy*-*mm*-*dd*|  
 |**t**|時間 *|*hh*:*公釐*:*ss*[1]|  
-|**ts**|時間戳記|*yyyy*-*公釐*-*dd* *hh*:*公釐*:*ss*[.*f...*] [1]|  
+|**ts**|時間戳記|*yyyy*-*公釐*-*dd* *hh*:*公釐*:*ss*[。*f...*] [1]|  
   
  [SQL_DESC_PRECISION 描述項欄位中包含 1] 在時間戳記的間隔時間常值包含秒元件的小數點右邊位數的數目是秒數有效位數而定。 (如需詳細資訊，請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
   

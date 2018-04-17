@@ -1,31 +1,32 @@
 ---
-title: "結構描述檢視 |Microsoft 文件"
-ms.custom: 
+title: 結構描述檢視 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - schema views [ODBC]
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], schema views
 ms.assetid: f1dfb3e8-a7bd-46c3-92b6-c19531e8409d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82d3624154e272e2f046110473ebe5d8360e6f6d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7b8e3ca94b82f74c8ba067faef9485359ff99aee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-views"></a>結構描述檢視
 藉由呼叫 ODBC 目錄函數或藉由使用 INFORMATION_SCHEMA 檢視應用程式可以從 DBMS 擷取中繼資料資訊。 ANSI sql-92 標準所定義的檢視。  

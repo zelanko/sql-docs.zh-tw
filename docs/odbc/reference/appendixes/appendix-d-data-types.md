@@ -1,15 +1,16 @@
 ---
-title: "附錄 d： 資料類型 |Microsoft 文件"
-ms.custom: 
+title: 附錄 d： 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - C data types [ODBC], defined
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68e4d1d80dfa517db63b850d546d1fcb7e2ba60d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 04d25dd57849514636c53092276ef49dc44187bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-d-data-types"></a>附錄 d： 資料類型
 ODBC 定義兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資料類型表示資料儲存在資料來源的資料類型。 C 資料類型表示資料儲存在應用程式緩衝區中的資料類型。  

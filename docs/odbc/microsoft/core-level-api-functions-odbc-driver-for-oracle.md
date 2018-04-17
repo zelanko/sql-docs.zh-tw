@@ -1,15 +1,16 @@
 ---
-title: "核心層級的 API 函式 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 核心層級的 API 函式 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 118ea5f86f89e73eadd5c0bef79770b438d53f9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b04102f149c96792f769a84535783c235832e2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>核心層級的 API 函式 （如 Oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 |**SQLCancel**|取消陳述式控制代碼，hstmt 上的處理。 在某些情況下，Oracle 不允許取消執行的陳述式。 這表示執行陳述式會繼續直到 Oracle 完成此程序，ODBC Driver for Oracle 取消的陳述式的結果。|  
 |**SQLColAttributes**|在結果集中傳回的資料行的描述項資訊。 描述項資訊是以字元字串、 32 位元描述元相依值或整數值傳回。|  
 |**SQLConnect**|連接到資料來源。 若要使用 Oracle 作業系統驗證，請指定"/"為*szUID*參數和""做為*szAuthStr*參數。|  
-|**SQLDescribeCol**|傳回名稱、 類型、 有效位數、 小數位數，以及指定的結果資料行 null 屬性。 **注意：****SQLDescribeCol**報告為 SQL_VARCHAR 導出資料行。|  
+|**SQLDescribeCol**|傳回名稱、 類型、 有效位數、 小數位數，以及指定的結果資料行 null 屬性。 **注意：****SQLDescribeCol**報告為 SQL_VARCHAR 導出資料行。  |  
 |**SQLDisconnect**|關閉連接。 如果連接共用已啟用共用的環境，而且應用程式呼叫**SQLDisconnect**該環境中的連接，連接傳回連接集區且上仍可使用其他元件共用相同的環境。|  
 |**SQLError**|傳回最後一個錯誤的錯誤或狀態資訊。 驅動程式會維護堆疊或在傳回的錯誤清單*hstmt*， *hdbc*，和*henv*引數，根據如何呼叫**SQLError**進行。 錯誤佇列會排清，每個陳述式之後。 通常擷取 Oracle 錯誤訊息，否則為空白。|  
 |**SQLExecDirect**|執行新的、 已取消準備的 SQL 陳述式。 如果陳述式中存在的任何參數，驅動程式會使用目前的參數標記變數值。 如果您的資料表、 檢視或欄位名稱包含空格，括住名稱後方括號標記。 例如，如果您的資料庫包含名為的資料表*My Table*和欄位*My Field*，括住的識別項的每個項目如下所示：<br /><br /> 選取\`表格\`。 \`我 Field1\`，;\`表格\`。\`我 Field2\` FROM\`表格 '|  

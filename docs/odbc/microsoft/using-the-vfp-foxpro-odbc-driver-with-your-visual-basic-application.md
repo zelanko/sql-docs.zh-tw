@@ -1,15 +1,16 @@
 ---
-title: "VFP FoxPro ODBC 驅動程式搭配 Visual Basic 應用程式 |Microsoft 文件"
-ms.custom: 
+title: VFP FoxPro ODBC 驅動程式搭配 Visual Basic 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], visual basic applications
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], visual basic applications
 - Visual FoxPro data [ODBC], visual basic applications
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 266577d54e579956fcc2435283a9835c19f9ef36
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5e48b605978c33617813c2c5c195c32f4fc0a892
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>使用 VFP FoxPro ODBC 驅動程式與 Visual Basic 應用程式
 您的 Microsoft® Visual Basic® 應用程式可以與 Visual FoxPro 資料通訊，藉由建立連接至 Visual FoxPro 資料來源的資料控制項。  

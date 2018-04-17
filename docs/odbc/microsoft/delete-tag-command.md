@@ -2,7 +2,7 @@
 title: 刪除標記命令 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf31107e21cee13d51046e43acc5c557cf20b9ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 909c0b94127547e27c10deef107a62af6400a9d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete-tag-command"></a>刪除標記命令
 從複合的索引 (.cdx) 檔案中移除標記。  
@@ -51,5 +51,5 @@ DELETE TAG ALL [OF CDXFileName]
   
  Visual FoxPro 會尋找第一個結構複合的索引檔中的標記 （如果有開啟）。 如果標記未結構化的複合索引檔中，Visual FoxPro 接著會尋找其他開啟的複合索引檔案中的標記。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [INDEX 命令](../../odbc/microsoft/index-command.md)

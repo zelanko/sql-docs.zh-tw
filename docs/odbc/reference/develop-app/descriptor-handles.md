@@ -1,15 +1,16 @@
 ---
-title: "描述項控制代碼 |Microsoft 文件"
-ms.custom: 
+title: 描述項控制代碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application parameter descriptor [ODBC]
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - ird [ODBC]
 - application row descriptor [ODBC]
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be9387fd0b34123e1a0b903795b1bf1e2106d725
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c597d1b4505550c8fed6a551720246d706c53923
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="descriptor-handles"></a>描述項控制代碼
 A*描述元*偵測到的應用程式或驅動程式會描述 SQL 陳述式的參數或結果集的資料行的中繼資料集合 (也稱為*實作*)。 因此，描述元可以填滿任何四個角色：  

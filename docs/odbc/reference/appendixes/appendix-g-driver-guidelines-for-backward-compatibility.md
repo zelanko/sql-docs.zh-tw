@@ -1,31 +1,32 @@
 ---
-title: "附錄 g： 驅動程式的指導方針回溯相容性 |Microsoft 文件"
-ms.custom: 
+title: 附錄 g： 驅動程式的指導方針回溯相容性 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], backward compatibility
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8065224d5f4da2302f57e96aa71745ee5d8e2d5a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ca8032b7eda2f96b4c8e8275c131dadd96d27538
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>附錄 g： 驅動程式的指導方針回溯相容性
 本附錄提供驅動程式使用 ODBC 3 上的寫入器的資訊。*x*需要支援 ODBC 2 的驅動程式。*x*應用程式。 如需有關回溯相容性的詳細資訊，請參閱[回溯相容性和標準相容性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  

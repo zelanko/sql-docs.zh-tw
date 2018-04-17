@@ -1,30 +1,31 @@
 ---
-title: "參數值的陣列 |Microsoft 文件"
-ms.custom: 
+title: 參數值的陣列 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f81e6b84f53da297f806ff2d63ea0b6e29b708
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c62b78264a5dbd715cc79e1f07515350d8c6cd3e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="arrays-of-parameter-values"></a>參數值的陣列
 通常會很有用的應用程式，以傳遞的參數陣列。 例如，使用參數和參數化的陣列**插入**陳述式中，應用程式可以一次插入的資料列數目。 有數個優點，以使用陣列。 首先，因為在單一封包中傳送多個陳述式的資料 （如果資料來源原生支援的參數陣列） 可以降低網路流量。 第二，某些資料來源可執行速度比執行相同數目的不同的 SQL 陳述式使用陣列的 SQL 陳述式。 最後，當資料儲存在陣列中，通常都是螢幕資料的情況時，應用程式可以繫結所有資料列的單一呼叫之特定資料行中**SQLBindParameter**並執行單一陳述式來加以更新。  

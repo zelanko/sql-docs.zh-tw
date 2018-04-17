@@ -1,15 +1,16 @@
 ---
-title: "資料指標程式庫作業 |Microsoft 文件"
-ms.custom: 
+title: 資料指標程式庫作業 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC cursor library [ODBC], backward compatibility
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursor library
 - cursor library [ODBC], backward compatibility
 ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e391cea65c366028d90ae61966e648e8d592145
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0bac09cb2b45274a5589c152a5b0e714b71f8dc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-library-operations"></a>資料指標程式庫作業
 > [!IMPORTANT]  

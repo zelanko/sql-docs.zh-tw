@@ -1,39 +1,40 @@
 ---
-title: "外部聯結 |Microsoft 文件"
-ms.custom: 
+title: 外部聯結 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f217b7392b4db968e612f58b264e17f921a40aae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a350621a056226653a2f9906dbf3931dfdfccec6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="outer-joins"></a>外部聯結
 ODBC 支援以 sql-92 左、 右方和完整外部聯結語法。 外部聯結的逸出序列是  
   
- **{oj** *外部聯結***}**  
+ **{oj** *外部-聯結 * * *}**  
   
  其中*外部聯結*是  
   
- *資料表參考*{**左 &#124;權限 &#124;FULL} OUTER JOIN** {*資料表參考*&#124;*外部聯結*} **ON** *搜尋條件*  
+ *資料表參考*{**左&#124;右邊&#124;完整} 外部聯結**{*資料表參考* &#124; *外部聯結*} **ON** *搜尋條件*  
   
  *資料表參考*指定資料表名稱，和*搜尋條件*指定之間的聯結條件*資料表參考*。  
   

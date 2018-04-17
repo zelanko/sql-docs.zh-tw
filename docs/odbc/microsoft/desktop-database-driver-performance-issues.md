@@ -1,31 +1,32 @@
 ---
-title: "桌面資料庫驅動程式的效能問題 |Microsoft 文件"
-ms.custom: 
+title: 桌面資料庫驅動程式的效能問題 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], performance
 - desktop database drivers [ODBC], performance
 - Jet-based ODBC drivers [ODBC], performance
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67379ee540aecb691122d91b42776b0c9d990b1d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6d13ef42e9658a24de65947fcb9aa85ffb854181
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="desktop-database-driver-performance-issues"></a>桌面資料庫驅動程式的效能問題
 若要確保相容性與現有的 ANSI 應用程式，SQL_WCHAR、 SQL_WVARCHAR 和 SQL_WLONGVARCHAR 資料類型會公開為 SQL_CHAR、 SQL_VARCHAR 和 SQL_LONGVARCHAR Microsoft 存取 4.0 或更高的資料來源。 資料來源不會傳回寬 CHAR 資料類型，但仍然必須傳送資料至 Jet 寬字元格式。 請務必了解是否 SQL_CHAR 資料型別 ANSI 應用程式中繫結 SQL_C_CHAR 參數或結果資料行轉換將會發生。  

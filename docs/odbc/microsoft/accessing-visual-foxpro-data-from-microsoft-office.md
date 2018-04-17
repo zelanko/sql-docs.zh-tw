@@ -1,15 +1,16 @@
 ---
-title: "存取 Visual FoxPro 資料從 Microsoft Office |Microsoft 文件"
-ms.custom: 
+title: 存取 Visual FoxPro 資料從 Microsoft Office |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], Microsoft Office
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], C or C++ applications
 - Visual FoxPro data [ODBC], accessing
 ms.assetid: 116efee6-2cd1-4d54-a6e4-1ee7b2fe82e2
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f75e2eff164a0cc8437da1949b002318f9192d3f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61268fbac5c301c4c2685ad331a7604307e48927
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>存取 Visual FoxPro 資料從 Microsoft Office
 您可以使用 Microsoft Visual FoxPro ODBC 驅動程式來存取您的 Windows 95 或 Windows 98 的應用程式的 Microsoft Office Visual FoxPro 資料。  

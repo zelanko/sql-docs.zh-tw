@@ -1,24 +1,17 @@
 ---
 title: 什麼是 SQL Server 機器學習服務？ | Microsoft Docs
-ms.date: 03/07/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: ''
-ms.openlocfilehash: 77642fa794493a98c56be70f4615f6401e48b3c5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d4beafc3c5dcb19c1b46b53d727f36733884daad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>什麼是 SQL Server 機器學習服務？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,10 +64,10 @@ SQL Server 2017 機器學習服務是新一代的 SQL Server 2016 R 服務，加
 
 | 產品名稱 | 引擎版本 | 發行日期 |
 |--------------|---------|--------------|
-| SQL Server 2017 機器學習服務 （資料庫） | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2017 機器學習伺服器 （獨立） | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2016 R 服務 （資料庫） | R Server 9.1  | 2017 年 7 月  |
-| SQL Server 2016 R Server (Standalone)  |  R Server 9.1 | 2017 年 7 月 |
+| SQL Server 2017 機器學習服務 （資料庫） | R 伺服器 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
+| SQL Server 2017 機器學習伺服器 （獨立） | R 伺服器 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
+| SQL Server 2016 R 服務 （資料庫） | R 伺服器 9.1  | 2017 年 7 月  |
+| SQL Server 2016 R 伺服器 （獨立）  |  R 伺服器 9.1 | 2017 年 7 月 |
 
 
 

@@ -1,15 +1,16 @@
 ---
-title: "宣告的應用程式 &#39; s 的 ODBC 版本 |Microsoft 文件"
-ms.custom: 
+title: 宣告應用程式&#39;s 的 ODBC 版本 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - declaring ODBC version [ODBC]
@@ -19,18 +20,18 @@ helpviewer_keywords:
 - connecting to data source [ODBC], declaring ODBC version
 - version declaration [ODBC]
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c021fb123e0a8cf861fa91fe78d3882ba16111e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2753c4b75f92c2ca48e3e87b25f8c92124ddd4c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="declaring-the-application39s-odbc-version"></a>宣告的應用程式 &#39; s 的 ODBC 版本
+# <a name="declaring-the-application39s-odbc-version"></a>宣告應用程式&#39;s 的 ODBC 版本
 應用程式配置連接之前，它必須設定 SQL_ATTR_ODBC_VERSION 環境屬性。 這個屬性會指出應用程式遵循 ODBC 2。*x*或 ODBC 3。*x*規格，使用下列項目：  
   
 -   **Sqlstate**。 SQLSTATE 值的 ODBC 2 不同。*x*和 ODBC 3。*x*。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/21/2017
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***引數中 SQLTables**。 在 ODBC 2。*x*中的萬用字元 （"%"和"_"） *CatalogName*引數會被視為常值。 在 ODBC 3。*x*，它們會被視為萬用字元。 因此，應用程式的 ODBC 2。*x*規格不能做為這些萬用字元的字元，並不會不會逸出，做為常值中使用它們時。 依照 ODBC 3 應用程式。*x*規格可以使用這些萬用字元的字元或逸出，並將其當做常值。 如需詳細資訊，請參閱[目錄函數中的引數](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
+-   *CatalogName***引數中 SQLTables**。   在 ODBC 2。*x*中的萬用字元 （"%"和"_"） *CatalogName*引數會被視為常值。 在 ODBC 3。*x*，它們會被視為萬用字元。 因此，應用程式的 ODBC 2。*x*規格不能做為這些萬用字元的字元，並不會不會逸出，做為常值中使用它們時。 依照 ODBC 3 應用程式。*x*規格可以使用這些萬用字元的字元或逸出，並將其當做常值。 如需詳細資訊，請參閱[目錄函數中的引數](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
   
  ODBC 3*.x*驅動程式管理員和 ODBC 3*.x*驅動程式會檢查應用程式寫入 ODBC 規格的版本，並據以回應。 例如，如果應用程式遵循 ODBC 2。*x*規格和呼叫**SQLExecute**之前先呼叫**SQLPrepare**，ODBC 3*.x*驅動程式管理員會傳回 SQLSTATE S1010 （函數順序錯誤）。 如果應用程式遵循 ODBC 3*.x*規格，驅動程式管理員會傳回 SQLSTATE HY010 （函數順序錯誤）。 如需詳細資訊，請參閱[回溯相容性和標準相容性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  
   

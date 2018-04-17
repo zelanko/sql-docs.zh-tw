@@ -1,16 +1,16 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 01/04/2018
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f7bac70742dee98e760f93c3345df0546a058932
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  此陳述式可啟用數個**個別資料庫**層級的資料庫組態設定。 在 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 及從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中都有提供此陳述式。 這些設定包括：  
+  此陳述式可啟用數個**個別資料庫**層級的資料庫組態設定。 在 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 及從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中都有提供此陳述式。 這些設定包括：  
   
 - 清除程序快取。  
 - 針對主要資料庫將 MAXDOP 參數設定為任意值 (1、2、...，以最適用於該特定資料庫的值為準)，並且針對所使用的所有次要資料庫 (例如，用於報告查詢) 設定不同的值 (例如 0)。  
@@ -46,7 +46,8 @@ ms.lasthandoff: 01/25/2018
 - 在資料庫層級啟用或停用參數探測。
 - 在資料庫層級啟用或停用查詢最佳化。
 - 在資料庫層級啟用或停用識別快取。
-- 允許或不允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。    
+- 允許或不允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。  
+- 啟用或停用原生編譯 T-SQL 模組的執行統計資料收集。
   
  ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,6 +70,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
+    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
 }  
 ```  
   
@@ -133,7 +136,7 @@ CLEAR PROCEDURE_CACHE
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 在資料庫層級啟用或停用識別快取。 預設值為 **ON**。 識別快取可用來改善含有識別資料行之資料表上的 INSERT 效能。 若要避免因伺服器意外重新啟動或容錯移轉至次要伺服器，而導致識別資料行值不連貫，請停用 IDENTITY_CACHE 選項。 此選項類似於現有的[追蹤旗標 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)差異在於此選項可以在資料庫層級設定，而不僅止於在伺服器層級設定。   
 
@@ -142,9 +145,27 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
-**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**適用於**：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 
 
 允許或不允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。 預設值為 OFF。 針對資料庫啟用 OPTIMIZE_FOR_AD_HOC_WORKLOADS 資料庫範圍組態之後，在第一次編譯批次時，就會將已編譯的計劃虛設常式儲存在快取中。 與完整的已編譯計劃大小相比，計劃虛設常式的記憶體耗用量較少。  如果再次編譯或執行某個批次，就會移除已編譯的計劃虛設常式，並以完整的已編譯計劃取代。
+
+XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 
+
+在目前的資料庫上啟用或停用原生編譯 T-SQL 模組的模組層級執行統計資料收集。 預設值為 OFF。 執行統計資料會反映在 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)。
+
+如果這個選項是 ON，或已透過 [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 啟用統計資料收集，則會收集原生編譯 T-SQL 模組的模組層級執行統計資料。
+
+XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+
+在目前的資料庫上啟用或停用原生編譯 T-SQL 模組的陳述式層級執行統計資料收集。 預設值為 OFF。 執行統計資料會反映在 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 和[查詢存放區](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。
+
+如果這個選項是 ON，或已透過 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 啟用統計資料收集，則會收集原生編譯 T-SQL 模組的陳述式層級執行統計資料。
+
+如需原生編譯 T-SQL 模組效能監控的詳細資料，請參閱[監視原生編譯預存程序的效能](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
 
 ##  <a name="Permissions"></a> 權限  
  需要資料庫上的 ALTER ANY DATABASE SCOPE CONFIGURATION   

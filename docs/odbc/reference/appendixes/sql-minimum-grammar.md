@@ -1,30 +1,31 @@
 ---
-title: "SQL 最小文法 |Microsoft 文件"
-ms.custom: 
+title: SQL 最小文法 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 130f434bfb0b41829d2c49782454fcf888af1e27
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3186090eb2c912f9d0e683210b00674d65f6e6e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-minimum-grammar"></a>SQL 最小文法
 本節描述 ODBC 驅動程式必須支援的最小 SQL 語法。 這一節所述的語法是以 sql-92 的項目層級語法的子集。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  *select 陳述式*:: =  
   
- 選取 [所有 &#124;相異] *select 清單*  
+ 選取 [所有&#124;DISTINCT] *select 清單*  
   
  從*資料表的參考清單*  
   
@@ -81,9 +82,9 @@ ms.lasthandoff: 12/21/2017
   
  更新*資料表名稱*  
   
- 設定*資料行識別碼*= {*運算式*&#124;NULL}  
+ 設定*資料行識別碼*= {*運算式* &#124; NULL}  
   
- [，*資料行識別碼*= {*運算式*&#124;NULL}]...  
+ [，*資料行識別碼*= {*運算式* &#124; NULL}]...  
   
  [其中*搜尋條件*]  
   

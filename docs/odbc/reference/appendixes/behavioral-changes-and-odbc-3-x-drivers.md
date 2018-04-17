@@ -1,31 +1,32 @@
 ---
-title: "行為變更和 ODBC 3.x 驅動程式 |Microsoft 文件"
-ms.custom: 
+title: 行為變更和 ODBC 3.x 驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sql_attr_odbc_version [ODBC]
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc06520b8dcf2fe5686d041e1c48e50cf5555b79
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2fe50cf12ce72ad3da5f9f2cb1f180d5875ef875
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>行為變更和 ODBC 3.x 驅動程式
 環境屬性 SQL_ATTR_ODBC_VERSION 會指出驅動程式是否需要至展現 ODBC 2。*x*行為或 ODBC 3*.x*行為。 SQL_ATTR_ODBC_VERSION 環境屬性設定的方式取決於應用程式。 ODBC 3*.x*應用程式必須呼叫**SQLSetEnvAttr**來設定這個屬性之後它們呼叫**SQLAllocHandle**配置環境控制代碼，以及它們呼叫之前**SQLAllocHandle**配置連接控制代碼。 如果他們若要這樣做，驅動程式管理員會傳回 SQLSTATE HY010 （函數順序錯誤） 在第二個呼叫**SQLAllocHandle**。  

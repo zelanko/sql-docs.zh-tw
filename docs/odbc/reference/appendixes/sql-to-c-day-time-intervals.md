@@ -1,15 +1,16 @@
 ---
-title: "SQL 到 c： 日期時間間隔 |Microsoft 文件"
-ms.custom: 
+title: SQL 到 c： 日期時間間隔 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], day-time intervals
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], day-time intervals
 - intervals [ODBC], converting
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b7952543ea1a014555b1227336355a2d6c31563
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9df3ee4fdd01d5296e547bb445f3e4e47cee3561
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL 到 c： 日期時間間隔
 日期時間間隔 ODBC SQL 資料類型的識別項是：  
@@ -55,11 +56,11 @@ ms.lasthandoff: 12/21/2017
   
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|所有的日期時間 C 間隔類型|不會被截斷尾端欄位部分<br /><br /> 截斷尾端欄位部分<br /><br /> 開頭有效位數不是目標的不夠大，無法保存資料來源|data<br /><br /> 截斷的資料<br /><br /> 未定義|資料長度<br /><br /> 資料長度<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT [b] SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|間隔有效位數的單一欄位，而不會截斷轉換資料<br /><br /> 間隔有效位數是單一欄位，並截斷小數<br /><br /> 間隔精確度是單一欄位與遭到截斷整個<br /><br /> 間隔精確度不是單一欄位|data<br /><br /> 截斷的資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> 資料長度<br /><br /> 資料長度<br /><br /> C 資料類型的大小|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|data<br /><br /> 未定義|資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
-|SQL_C_CHAR|字元位元組長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 > = *Columnsize*|data<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-_C_WCHAR|字元長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 > = *Columnsize*|data<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|所有的日期時間 C 間隔類型|不會被截斷尾端欄位部分<br /><br /> 截斷尾端欄位部分<br /><br /> 開頭有效位數不是目標的不夠大，無法保存資料來源|資料<br /><br /> 截斷的資料<br /><br /> 未定義|資料長度<br /><br /> 資料長度<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT [b] SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|間隔有效位數的單一欄位，而不會截斷轉換資料<br /><br /> 間隔有效位數是單一欄位，並截斷小數<br /><br /> 間隔精確度是單一欄位與遭到截斷整個<br /><br /> 間隔精確度不是單一欄位|資料<br /><br /> 截斷的資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> 資料長度<br /><br /> 資料長度<br /><br /> C 資料類型的大小|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|資料<br /><br /> 未定義|資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
+|SQL_C_CHAR|字元位元組長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 > = *Columnsize*|資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+_C_WCHAR|字元長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 > = *Columnsize*|資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
   
  [a] 的一天時間間隔 SQL 型別可以轉換成任何一天時間間隔 C 類型。  
   

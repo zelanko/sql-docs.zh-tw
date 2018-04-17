@@ -1,32 +1,32 @@
 ---
-title: "附錄 b: ODBC 狀態轉換表 |Microsoft 文件"
-ms.custom: 
+title: '附錄 b: ODBC 狀態轉換表 |Microsoft 文件'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附錄 b: ODBC 狀態轉換表
 本附錄的表格會顯示如何 ODBC 函數會造成的環境、 連接、 陳述式，以及描述項狀態的轉換。 環境、 連接、 陳述式或描述元的狀態通常會規定使用控制代碼 （環境、 連接、 陳述式或描述元） 的對應類型的函式可以呼叫時。 環境、 連接、 陳述式，以及描述項狀態重疊大約在下圖所示。 例如，完全重疊的連線狀態 C5 和 C6 且陳述式說明 S1 S12 透過資料來源而定，因為交易在不同的時間開始，針對不同的資料來源，並描述項狀態 D1i （隱含地配置描述元） 而定陳述式與描述項相關聯的狀態，而 state D1e （明確配置描述項） 是獨立狀態的任何陳述式。 如需每個狀態的說明，請參閱[環境轉換](../../../odbc/reference/appendixes/environment-transitions.md)，[連接轉換](../../../odbc/reference/appendixes/connection-transitions.md)，[陳述式轉換](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述元轉換](../../../odbc/reference/appendixes/descriptor-transitions.md)稍後在本附錄中。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 03/20/2018
 |i|無效的資料列。 指標置於結果中的資料列集和資料列都已刪除或資料列上的作業中發生錯誤。 如果資料列狀態陣列存在，則資料列的資料列狀態陣列中的值會是 SQL_ROW_DELETED 或 SQL_ROW_ERROR。 （資料列狀態陣列是由指向 SQL_ATTR_ROW_STATUS_PTR 陳述式屬性。）|  
 |nf|找不到。 此函式會傳回 sql_no_data 為止。 這不適用時**SQLExecDirect**， **SQLExecute**，或**SQLParamData**傳回 SQL_NO_DATA 之後執行搜尋的 update 或 delete 陳述式。|  
 |np|已備妥。 尚未準備陳述式。|  
-|nr|沒有結果。 陳述式不會或未建立結果集。|  
+|編號|沒有結果。 陳述式不會或未建立結果集。|  
 |o|其他函式。 另一個函式以非同步方式執行。|  
 |p|備妥。 已備妥的陳述式。|  
 |r|結果。 將陳述式，或未建立 （也許是空的） 的結果集。|  

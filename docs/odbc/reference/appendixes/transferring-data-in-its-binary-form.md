@@ -1,31 +1,32 @@
 ---
-title: "將二進位格式的資料傳輸 |Microsoft 文件"
-ms.custom: 
+title: 將二進位格式的資料傳輸 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], transferring in binary form
 - transferring data in binary form [ODBC]
 - binary data transfers [ODBC]
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7241124d7297dd661c3aef08701af0cc15d77d1e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 489ce7115a312a8f2d171d839393b9ead695ef48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transferring-data-in-its-binary-form"></a>將二進位格式的資料傳輸
 應用程式可以安全地在兩個資料來源使用相同的 DBMS 和硬體平台之間傳輸資料 （在指定的 DBMS 所使用的內部形式）。 給定的資料片段，SQL 資料類型必須是相同的來源和目標資料來源。 C 資料類型是 SQL_C_BINARY。  

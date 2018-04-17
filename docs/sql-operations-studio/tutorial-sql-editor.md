@@ -24,11 +24,11 @@ ms.lasthandoff: 03/15/2018
 
 建立和執行查詢、 預存程序、 指令碼等是資料庫專業人員的核心工作。 本教學課程示範如何在 T-SQL 編輯器來建立資料庫物件中的主要功能。
 
-您可以在本教學課程，了解如何使用[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]：
+您可以在本教學課程，了解如何使用[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]:
 > [!div class="checklist"]
 > * 搜尋資料庫物件
 > * 編輯資料表資料 
-> * 使用程式碼片段快速地撰寫 T-SQL 
+> * 使用程式碼片段快速地撰寫 T-SQL
 > * 使用*查看定義*和*移至定義*檢視資料庫物件的詳細資料
 
 
@@ -46,18 +46,18 @@ ms.lasthandoff: 03/15/2018
 
 1. 開啟 [伺服器資訊看板] (**Ctrl + G**)，展開**資料庫**，然後選取**TutorialDB**。 
 
-1. 滑鼠右鍵點選 **TutorialDB**，從內容功能表選取**管理**，開啟 *TutorialDB 儀表板*：
+1. 滑鼠右鍵點選 *TutorialDB*，從內容功能表選取**管理**，開啟 **TutorialDB 儀表板**：
 
    ![操作功能表： 管理](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
 1. 在儀表板上，滑鼠右鍵點選 **dbo.Customers**（在 [搜尋] 小工具中) 並選取**編輯資料**。
    
    > [!TIP]
-   > 對於包含許多物件的資料庫，您可以透過搜尋小工具快速地找到想要的資料表、檢視表...等。
+   > 對於包含許多物件的資料庫，您可以透過搜尋小工具快速地找到想要的資料表、檢視表...等。
 
    ![快速搜尋 widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 編輯**電子郵件**欄位的第一筆資料，輸入 *orlando0@adventure-works.com*，然後按 **Enter** 鍵儲存變更。
+1. 編輯**電子郵件**的第一筆資料，輸入 *orlando0@adventure-works.com*，然後按 **Enter** 鍵儲存變更。
 
    ![編輯資料](./media/tutorial-sql-editor/edit-data.png)
 
@@ -72,7 +72,7 @@ SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，可快速建
 
    ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
-3. 建立預存程序程式碼片段有兩個欄位可以進行 [快速編輯]， *StoredProcedureName* 和 *SchemaName*。 選取 *StoredProcedureName* ，按一下滑鼠右鍵，然後選取**變更所有相符項目**。 鍵入 *getCustomer* 並將全部 *StoredProcedureName* 項目變更為 *getCustomer*。
+3. 建立預存程序程式碼片段有兩個欄位可以進行 [快速編輯]， *StoredProcedureName* 和 *SchemaName*。  選取 *StoredProcedureName* ，按一下滑鼠右鍵，然後選取**變更所有相符項目**。 鍵入 *getCustomer* 並將全部 *StoredProcedureName* 項目變更為 *getCustomer*。
 
    ![程式碼片段](./media/tutorial-sql-editor/snippet.png)
 
@@ -119,9 +119,9 @@ SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，可快速建
 
 透過查看定義功能，SQL Operations Studio 提供檢視物件定義的能力。 本節會建立第二個預存程序，並使用查看定義查看資料表內有那些欄位，快速地建立預存程序主體。
 
-1. 按下 **Ctrl + N** 開啟新的編輯器。 
+1. 按下 **Ctrl + N** 開啟新的編輯器。  
 
-2. 在編輯器中輸入 **sql**，按向下鍵至 **sqlCreateStoredProcedure**，然後按 *Tab*鍵 (或*Enter*) 載入新增預存程序程式碼片段。
+2. 在編輯器中輸入 *sql*，按向下鍵至 *sqlCreateStoredProcedure*，然後按 *Tab*鍵 (或*Enter*) 載入新增預存程序程式碼片段。
 3. 在編輯器中輸入 *setCustomer* 取代 *StoredProcedureName*、輸入 *dbo* 取代 *SchemaName*
 
 3. 取代預設參數 @param 為下列的參數定義
@@ -183,7 +183,7 @@ SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，可快速建
 
 8. 若要建立 *setCustomer* 預存程序，請按**F5**鍵。
 
-## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a> 將查詢結果儲存為 JSON，對 setCustomer 預存程序進行測試
+## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>將查詢結果儲存為 JSON，對 setCustomer 預存程序進行測試
 
 *SetCustomer*前一節中所建立的預存程序需要 JSON 資料傳遞至*@json_val*參數。 本節示範如何取得正確格式的位元的 JSON 來將傳入參數，所以您可以測試預存程序。
 
@@ -195,8 +195,8 @@ SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，可快速建
    ![將儲存為 JSON](./media/tutorial-sql-editor/save-as-json.png)
 
 4. 在編輯器中選取 JSON 資料，並將它複製。
-5. 按下 **Ctrl + N** 開啟新的編輯器。
-6. 先前的步驟顯示如何輕鬆地取得正確格式的資料，以便完成呼叫 *setCustomer* 程序。 如您所見，下列程式碼使用相同的 JSON 格式並具有新的客戶詳細資料，讓我們能測試 setCustomer 預存程序。 陳述式包含參數宣告和執行新的 Get 與 Set 程序語法。 您可以貼上從上一章節複製的資料並加以編輯，使之與下列範例相同，或直接將下列陳述式貼到查詢編輯器中。
+5. 按下 **Ctrl + N** 開啟新的編輯器。 
+6. 先前的步驟顯示如何輕鬆地取得正確格式的資料，以便完成呼叫 *setCustomer* 程序。 如您所見，下列程式碼使用相同的 JSON 格式並具有新的客戶詳細資料，讓我們能測試 *setCustomer* 預存程序。 陳述式包含參數宣告和執行新的 Get 與 Set 程序語法。 您可以貼上從上一章節複製的資料並加以編輯，使之與下列範例相同，或直接將下列陳述式貼到查詢編輯器中。
 
    ```sql
    -- example to execute the stored procedure we just created

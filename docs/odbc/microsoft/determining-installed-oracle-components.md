@@ -2,7 +2,7 @@
 title: 判斷已安裝的 Oracle 元件 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce199d68eacb812958d2124e0230d635345e5908
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: afcf08af0e7bb1661a4fc0689402ef68d2f86cb1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determining-installed-oracle-components"></a>判斷已安裝的 Oracle 元件
 > [!IMPORTANT]  

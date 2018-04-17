@@ -1,31 +1,32 @@
 ---
-title: "開放式並行存取 |Microsoft 文件"
-ms.custom: 
+title: 開放式並行存取 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 - optimistic concurrency [ODBC]
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff92590df7cbc65f3fb349327827c652fe1dd567
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 756775900c04ff501095f95fda95fa4f184e8833
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="optimistic-concurrency"></a>開放式並行存取
 *開放式並行存取*是它的名稱衍生自在開放式假設，很少會發生交易之間發生衝突，衝突稱為時發生另一個交易中更新或刪除資料列之間的時間會在讀取的資料它是由目前的交易和時間來更新或刪除。 它是相反的*封閉式並行存取，*鎖定，或在其應用程式開發人員認為這類衝突很常見。  

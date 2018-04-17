@@ -1,32 +1,22 @@
 ---
-title: Python 程式庫 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/30/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 在 SQL Server 機器學習中的 Python 程式庫和資料類型 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 70156a6b4d443c54f9b6244e5491da63ce345198
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f8dfa7f343a3a179b05b624a083238e08011c4a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="python-libraries-and-data-types"></a>Python 程式庫和資料類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明隨附於下列產品的 Python 程式庫：
-
-+ SQL Server 機器學習服務 （資料庫）
-+ Microsoft 的機器學習伺服器 （獨立）
+本文說明隨附於 SQL Server 機器學習服務 （資料庫） 和 （獨立） 安裝的 Python 程式庫。
 
 本文也會列出不支援的資料類型和清單的資料類型轉換的 Python 和 SQL Server 之間傳遞資料時可能會隱含地執行。
 

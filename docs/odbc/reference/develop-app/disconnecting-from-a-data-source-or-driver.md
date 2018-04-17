@@ -1,15 +1,16 @@
 ---
-title: "中斷連接資料的資料來源或驅動程式 |Microsoft 文件"
-ms.custom: 
+title: 中斷連接資料的資料來源或驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - disconnecting from driver [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], disconnecting
 - ODBC drivers [ODBC], disconnecting
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8a70c26fdf840b9e4cae6cced3453c2444d1007
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a1e0e89632c1c39df415c8db3a9f29c9c724c2d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>中斷連接資料的資料來源或驅動程式
 當應用程式已經完成使用資料來源時，它會呼叫**SQLDisconnect**。 **SQLDisconnect**釋放連接配置的任何陳述式，並從資料來源中斷驅動程式。 如果交易中處理程序，它會傳回錯誤。  

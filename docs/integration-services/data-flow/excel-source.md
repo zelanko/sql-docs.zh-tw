@@ -1,16 +1,16 @@
 ---
-title: "Excel 來源 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: Excel 來源 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -21,20 +21,24 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-source"></a>Excel 來源
   Excel 來源會從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍擷取資料。  
-  
+
+> [!IMPORTANT]
+> 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。
+
+## <a name="access-mode"></a>存取模式
  Excel 來源會提供四種不同的資料存取模式來擷取資料：  
   
 -   資料表或檢視。  
@@ -44,9 +48,6 @@ ms.lasthandoff: 01/25/2018
 -   SQL 陳述式的結果。 查詢可以是參數化查詢。  
   
 -   儲存在變數中之 SQL 陳述式的結果。  
-  
-> [!IMPORTANT]  
->  在 Excel 中，工作表或範圍相當於資料表或檢視。 「Excel 來源」及「Excel 目的地」編輯器中的可用資料表清單，會顯示現有工作表 (以附加到工作表名稱的 $ 符號識別，例如 Sheet1$) 及具名範圍 (以沒有 $ 符號的方式識別，例如 MyRange)。 如需詳細資訊，請參閱＜使用狀況的考量＞一節。  
   
  Excel 來源會使用 Excel 連接管理員連接到資料來源，而連接管理員會指定要使用的活頁簿檔案。 如需詳細資訊，請參閱 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)。  
   
@@ -205,13 +206,6 @@ ms.lasthandoff: 01/25/2018
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="related-content"></a>相關內容  
-  
--   hrvoje.piasevoli.com 上的部落格文章： [Importing data from 64-bit Excel in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673)(從 SSIS 中的 64 位元 Excel 匯入資料)  
-  
--   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第一部分，共三部分)：連接與元件](http://go.microsoft.com/fwlink/?LinkId=217674)   
-  
--   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第二部分，共三部分)：資料表與資料類型](http://go.microsoft.com/fwlink/?LinkId=217675)。  
-  
--   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第三部分，共三部分)：問題與替代方案](http://go.microsoft.com/fwlink/?LinkId=217676)。  
-  
-  
+[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)
+[Excel 目的地](excel-destination.md)  
+[Excel 連線管理員](../connection-manager/excel-connection-manager.md)

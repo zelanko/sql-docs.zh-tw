@@ -1,26 +1,17 @@
 ---
-title: "命令提示字元安裝 SQL Server 機器學習元件 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/15/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+title: 命令提示字元安裝 SQL Server 機器學習元件 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c51d8299837f0eda02a07afe1ea4d34d3ecd5e31
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>從命令列安裝 SQL Server 機器學習服務元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +47,10 @@ ms.lasthandoff: 03/21/2018
 | 引數 | Description |
 |-----------|-------------|
 | / 功能 = AdvancedAnalytics | 會安裝在資料庫版本： SQL Server 2017 機器學習服務 （資料庫） 或 SQL Server 2016 R Services （資料庫）。  |
-| /FEATURES = SQL_INST_MR | 適用於 SQL Server 2017 只。 與 AdvancedAnalytics 配對。 會安裝 （資料庫） R 功能，包括 Microsoft R Open 與專屬的 R 封裝。 SQL Server 2016 R 服務功能是 R 專用，因此沒有該發行參數。|
-| /FEATURES = SQL_INST_MPY | 適用於 SQL Server 2017 只。 與 AdvancedAnalytics 配對。 安裝 Python （資料庫） 功能，包括 Anaconda 和專屬的 Python 封裝。 |
-| /FEATURES = SQL_SHARED_MR | 安裝獨立版本的 R 功能： SQL Server 2017 機器學習伺服器 （獨立） 或 SQL Server 2016 R 伺服器 （獨立）。 未繫結至資料庫引擎執行個體的 [共用的功能] 會是獨立伺服器。|
-| /FEATURES = SQL_SHARED_MPY | 適用於 SQL Server 2017 只。 安裝單機版的 Python 功能： SQL Server 2017 機器學習伺服器 （獨立）。 未繫結至資料庫引擎執行個體的 [共用的功能] 會是獨立伺服器。|
+| / 功能 = SQL_INST_MR | 適用於 SQL Server 2017 只。 與 AdvancedAnalytics 配對。 會安裝 （資料庫） R 功能，包括 Microsoft R Open 與專屬的 R 封裝。 SQL Server 2016 R 服務功能是 R 專用，因此沒有該發行參數。|
+| / 功能 = SQL_INST_MPY | 適用於 SQL Server 2017 只。 與 AdvancedAnalytics 配對。 安裝 Python （資料庫） 功能，包括 Anaconda 和專屬的 Python 封裝。 |
+| / 功能 = SQL_SHARED_MR | 安裝獨立版本的 R 功能： SQL Server 2017 機器學習伺服器 （獨立） 或 SQL Server 2016 R 伺服器 （獨立）。 未繫結至資料庫引擎執行個體的 [共用的功能] 會是獨立伺服器。|
+| / 功能 = SQL_SHARED_MPY | 適用於 SQL Server 2017 只。 安裝單機版的 Python 功能： SQL Server 2017 機器學習伺服器 （獨立）。 未繫結至資料庫引擎執行個體的 [共用的功能] 會是獨立伺服器。|
 | /IACCEPTROPENLICENSETERMS  | 表示您接受使用開放原始碼 R 元件授權條款。 |
 | / IACCEPTPYTHONLICENSETERMS | 表示您接受授權條款的使用 Python 元件。 |
 | /IACCEPTSQLSERVERLICENSETERMS | 表示您接受使用 SQL Server 的授權條款。|

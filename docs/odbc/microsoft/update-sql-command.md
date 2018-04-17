@@ -2,7 +2,7 @@
 title: 更新-SQL 命令 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fb2e4d3e3010eaba53b36de383c3365d82db289
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8c1189955ee62fd14484816358feffc38e002c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update---sql-command"></a>更新-SQL 命令
 新值來更新資料表中的記錄。  
@@ -50,7 +50,7 @@ SET Column_Name1 = eExpression1
  設定*Column_Name1*= *eExpression1*[， *Column_Name2*= *eExpression2*  
  指定更新的資料行和新的值。 如果您省略 WHERE 子句，資料行中的每個資料列會更新以相同的值。  
   
- 其中*FilterCondition1*[AND &#124;或者*FilterCondition2*...]  
+ 其中*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  
  指定更新新值的記錄。  
   
  *FilterCondition*指定記錄更新為新的值必須符合的準則。 您可以包含任意，使用 AND 篩選條件或 OR 運算子。 您也可以使用 NOT 運算子，若要反轉的邏輯運算式的值，或者您可以使用**空**（) 來檢查是否有空白的欄位。  
@@ -63,6 +63,6 @@ SET Column_Name1 = eExpression1
 ## <a name="driver-remarks"></a>驅動程式註解  
  當您的應用程式會將 ODBC SQL 陳述式更新傳送至資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換成 Visual FoxProUPDATE 命令，而不需轉譯中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [刪除 SQL 命令](../../odbc/microsoft/delete-sql-command.md)   
  [INSERT - SQL 命令](../../odbc/microsoft/insert-sql-command.md)

@@ -1,25 +1,19 @@
 ---
-title: 機器學習服務使用 Python |Microsoft 文件
-ms.date: 03/16/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+title: SQL Server 機器學習服務使用 Python |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 275eedc011367e51e97c6bddae03858cdda932ee
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: b8ef234b0e8c09e3d4be9488b7ac628c225e67f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="machine-learning-services-with-python"></a>使用 Python 的機器學習服務
+# <a name="sql-server-machine-learning-services-with-python"></a>SQL Server 機器學習服務使用 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python 是機器的一種語言，提供了相當大的彈性而且各種不同學習工作的功能。 For Python 開放原始碼程式庫包含數個平台，可自訂的類神經網路，以及常用的程式庫進行自然語言處理。 現在，在 SQL Server 2017 機器學習中支援這個廣泛使用的語言。

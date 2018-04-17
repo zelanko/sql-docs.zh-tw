@@ -1,15 +1,16 @@
 ---
-title: "轉換規則 |Microsoft 文件"
-ms.custom: 
+title: 轉換規則 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - numeric data type [ODBC], literals
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 441f65fabad5894d1277a9c42ecd6c4a6d9e5fff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0e1feb5f75561d95d65cde069f135b9d24c53186
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rules-for-conversions"></a>轉換規則
 本節中的規則適用於包含數值常值轉換。 這些規則的目的，會定義下列詞彙：  
@@ -81,9 +82,9 @@ ms.lasthandoff: 12/21/2017
   
     -   如果 NS 小於 0，然後讓 Y 是結果：  
   
-         '-' &#124; &#124;YP  
+         '-' &AMP;#124; &AMP;#124; YP  
   
-         其中 ' &#124; &#124;' 是字串串連運算子。  
+         其中 '&#124;&#124;' 是字串串連運算子。  
   
          否則，可讓等於 YP Y。  
   

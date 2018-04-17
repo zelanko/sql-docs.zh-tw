@@ -1,31 +1,32 @@
 ---
-title: "API 的一致性層級 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: API 的一致性層級 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - conformance levels [ODBC], API
 - API conformance level [ODBC]
 - ODBC driver for Oracle [ODBC], conformance levels
 ms.assetid: 3d96e8ff-a310-44d7-ae3f-7d2851b3d8ce
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eba80cb21a59017d396414c3d83e80d87cb1ef54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 783f7ae0aecfefb110bbc4686d54a8433acebb89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="api-conformance-level-odbc-driver-for-oracle"></a>API 的一致性層級 （如 Oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  

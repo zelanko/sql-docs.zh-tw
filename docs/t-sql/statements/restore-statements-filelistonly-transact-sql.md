@@ -1,16 +1,16 @@
 ---
 title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/15/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE FILELISTONLY
@@ -24,22 +24,25 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: 
+caps.latest.revision: 83
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 29cc42e61ff88ee1d7b1d61a2a4ed214d72b3e1d
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 陳述式 - FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+
 
   傳回含有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料庫清單的結果集及備份組所包含的記錄檔。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  如需引數的描述，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
@@ -93,7 +96,7 @@ FROM <backup_device>
 |LogicalName|**nvarchar(128)**|檔案的邏輯名稱。|  
 |PhysicalName|**nvarchar(260)**|檔案的實體或作業系統名稱。|  
 |類型|**char(1)**|這是檔案的類型，它有下列幾種：<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔<br /><br /> **F** = 全文檢索目錄<br /><br /> **S** = FileStream、FileTable 或 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 容器|  
-|FileGroupName|**nvarchar(128)**|檔案所在的檔案群組名稱。|  
+|FileGroupName|**nvarchar(128)** NULL|檔案所在的檔案群組名稱。|  
 |大小|**numeric(20,0)**|目前的大小 (以位元組為單位)。|  
 |MaxSize|**numeric(20,0)**|允許的大小上限 (以位元組為單位)。|  
 |FileID|**bigint**|檔案的識別碼，它在資料庫中是唯一的。|  
@@ -105,13 +108,13 @@ FROM <backup_device>
 |BackupSizeInBytes|**bigint**|這個檔案的備份大小 (以位元組為單位)。|  
 |SourceBlockSize|**int**|檔案所在實體裝置 (不是備份裝置) 的區塊大小 (以位元組為單位)。|  
 |FileGroupID|**int**|檔案群組的識別碼。|  
-|LogGroupGUID|**uniqueidentifier NULL**|NULL。|  
+|LogGroupGUID|**uniqueidentifier** NULL|NULL。|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|如果是差異備份，記錄序號大於或等於 **DifferentialBaseLSN** 的變更會併入差異備份中。<br /><br /> 如果是其他備份類型，這個值就是 NULL。|  
-|DifferentialBaseGUID|**uniqueidentifier**|如果是差異備份，就是差異基底的唯一識別碼。<br /><br /> 如果是其他備份類型，這個值就是 NULL。|  
+|DifferentialBaseGUID|**uniqueidentifier** NULL|如果是差異備份，就是差異基底的唯一識別碼。<br /><br /> 如果是其他備份類型，這個值就是 NULL。|  
 |IsReadOnly|**bit**|**1** = 檔案唯讀。|  
 |IsPresent|**bit**|**1** = 檔案在備份中。|  
-|TDEThumbprint|**varbinary(32)**|顯示資料庫加密金鑰的指模。 加密程式指模是用來加密金鑰的憑證 SHA-1 雜湊。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。|  
-|SnapshotURL|**nvarchar(360)**|FILE_SNAPSHOT 備份中包含之資料庫檔案的 Azure 快照集 URL。 如果沒有 FILE_SNAPSHOT 備份，則傳回 NULL。|  
+|TDEThumbprint|**varbinary(32)** NULL|顯示資料庫加密金鑰的指模。 加密程式指模是用來加密金鑰的憑證 SHA-1 雜湊。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。|  
+|SnapshotURL|**nvarchar(360)** NULL|FILE_SNAPSHOT 備份中包含之資料庫檔案的 Azure 快照集 URL。 如果沒有 FILE_SNAPSHOT 備份，則傳回 NULL。|  
   
 ## <a name="security"></a>Security  
  備份作業可以選擇性地指定媒體集的密碼及 (或) 備份組的密碼。 當在媒體集或備份組上定義密碼時，您必須在 RESTORE 陳述式中，指定一個或多個正確的密碼。 這些密碼可以防止他人利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具，在未經授權的情況下，對媒體執行還原作業及附加備份組。 不過，密碼無法防止使用者利用 BACKUP 陳述式的 FORMAT 選項來覆寫媒體。  

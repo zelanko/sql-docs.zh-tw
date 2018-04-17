@@ -1,24 +1,17 @@
 ---
-title: SQL Server 機器學習服務 Dmv |Microsoft 文件
-ms.custom: ''
-ms.date: 07/31/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server 的資料管理檢視 (Dmv) 機器學習服務 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 269b40244faca6bd76e1245f8771ed4bf26ae594
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e2180794ca96fc6387105745e346802725afe1dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務 Dmv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +21,7 @@ ms.lasthandoff: 04/04/2018
 擴充事件的相關資訊，請參閱[擴充事件的機器學習](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)。
 
 > [!TIP]
-> 產品團隊提供的自訂報告，您可以使用機器學習服務工作階段和封裝使用率監視。 如需詳細資訊，請參閱[監視使用 Management Studio 中自訂報告的機器學習](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)。
+> 使用內建報告來監視的機器學習服務工作階段和封裝使用率。 如需詳細資訊，請參閱[監視使用 Management Studio 中自訂報告的機器學習](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)。
 
 ## <a name="system-configuration-and-system-resources"></a>系統組態和系統資源
 

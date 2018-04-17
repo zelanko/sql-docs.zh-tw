@@ -1,15 +1,16 @@
 ---
-title: "Visual FoxPro ODBC 驅動程式 |Microsoft 文件"
-ms.custom: 
+title: Visual FoxPro ODBC 驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC]
 - FoxPro ODBC driver [ODBC], about FoxPro ODBC driver
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 72501a1082b838d95bb5b9e10f226746f6a968db
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dbb745b99293c9322061eb4de63c0f3c985e0b98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 驅動程式
 Microsoft Visual FoxPro 是功能強大物件導向環境，來建構和應用程式開發的資料庫。 Microsoft Visual FoxPro ODBC 驅動程式可讓應用程式來開啟查詢和更新 Visual FoxPro 及較早版本 FoxPro 透過開啟資料庫連接 (ODBC) 介面中的資料。  

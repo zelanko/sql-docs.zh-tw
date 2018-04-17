@@ -2,7 +2,7 @@
 title: 資料來源範例 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29fe9b818d34f620ededd9d07eab5cfbecfbee47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c7d80fc111164b2f32a1394f214dc09c3f61c51c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-example"></a>資料來源範例
 在執行 Microsoft® Windows NT® Server/Windows 2000 Server、 Microsoft Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows® 95/98，機器資料來源資訊會儲存在登錄中。 根據哪些登錄金鑰資訊會儲存在下，資料來源稱為*使用者資料來源*或*系統資料來源*。 使用者資料來源會儲存在 HKEY_CURRENT_USER 機碼下，而且僅適用於目前的使用者。 系統資料來源會儲存在 HKEY_LOCAL_MACHINE 機碼下，而且可由多個使用者在一部電腦上。 它們也可以使用全系統服務，然後取得資料來源的存取，即使沒有任何使用者登入電腦。 如需有關使用者和系統資料來源的詳細資訊，請參閱[SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)。  
