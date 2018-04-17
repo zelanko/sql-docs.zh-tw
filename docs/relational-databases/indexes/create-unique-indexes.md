@@ -1,16 +1,16 @@
 ---
-title: "建立唯一索引 | Microsoft Docs"
-ms.custom: 
+title: 建立唯一索引 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - unique indexes
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: 
+caps.latest.revision: 29
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: d8ec65be74b3fefe8e3da66e1952012f8598b4b3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="create-unique-indexes"></a>建立唯一索引
+# <a name="create-unique-indexes"></a>Create Unique Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料表建立唯一索引。 唯一索引可保證索引鍵不包含重複值，因此資料表中的每一個資料列在某方面來說是唯一的。 建立 UNIQUE 條件約束與建立獨立於條件約束之外的唯一索引，兩者並無明顯差異。 資料驗證的方式相同，而且查詢最佳化工具不會區分由條件約束建立或由手動建立的唯一索引。 不過，在資料行上建立 UNIQUE 條件約束，會使索引目標更明確。 如需有關 UNIQUE 條件約束的詳細資訊，請參閱＜ [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)＞。  
@@ -51,11 +51,11 @@ ms.lasthandoff: 02/23/2018
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法在資料表上建立唯一索引：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -153,7 +153,7 @@ ms.lasthandoff: 02/23/2018
   
 8.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的核取方塊。  
   
-9. 按一下 [確定] 。  
+9. 按一下 **[確定]**。  
   
 10. 在 **[新增索引]** 對話方塊中，按一下 **[確定]**。  
   
@@ -165,7 +165,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     USE AdventureWorks2012;  

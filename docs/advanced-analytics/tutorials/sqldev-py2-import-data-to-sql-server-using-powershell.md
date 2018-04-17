@@ -1,30 +1,28 @@
 ---
-title: "步驟 2： 將資料匯入 SQL Server 使用 PowerShell |Microsoft 文件"
-ms.custom: 
+title: 步驟 2： 將資料匯入 SQL Server 使用 PowerShell |Microsoft 文件
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: daab014c33deb382adcb436a67f24e05be714c50
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>步驟 2： 將資料匯入 SQL Server 使用 PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

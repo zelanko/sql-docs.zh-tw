@@ -1,8 +1,8 @@
 ---
-title: "SQL 資料探索與分類 | Microsoft Docs"
-description: "SQL 資料探索與分類"
+title: SQL 資料探索與分類 | Microsoft Docs
+description: SQL 資料探索與分類
 services: sql-server
-documentationcenter: 
+documentationcenter: ''
 author: giladm
 manager: shaik
 ms.reviewer: carlrab
@@ -11,15 +11,14 @@ ms.service: sql-server
 ms.custom: security
 ms.workload: data-management
 ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 1d9694136e275f402be8467acd5f9e79bf9fbb0d
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: eee9d5b920f422d000fa4e9cb8b78924cb55b466
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

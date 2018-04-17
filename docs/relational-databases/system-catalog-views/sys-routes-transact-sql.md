@@ -1,16 +1,16 @@
 ---
-title: "sys.routes (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
-ms.date: 06/10/2016
+title: sys.routes (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - routes
@@ -22,21 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.routes catalog view
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c06cefdc92f1d38fc0289e80549798d855509793
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 21420e923b4120f547026c6a6a0d96d86deac782
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   這份目錄檢視會針對每個路由，各包含一個資料列。 Service Broker 使用路由來尋找服務的網路位址。   
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +48,7 @@ ms.lasthandoff: 02/03/2018
 |**remote_service_name**|**nvarchar(256)**|遠端服務的名稱。 NULLABLE。|  
 |**broker_instance**|**nvarchar(128)**|主控遠端服務的 Broker 識別碼。 NULLABLE。|  
 |**lifetime**|**datetime**|路由到期的日期和時間。 請注意，此值不使用當地的時區。 此值會顯示 UTC 格式的到期時間。 NULLABLE。|  
-|**address**|**nvarchar(256)**|Service Broker 傳送遠端服務訊息至的網路位址。 NULLABLE。|  
+|**address**|**nvarchar(256)**|Service Broker 傳送遠端服務訊息至的網路位址。 NULLABLE。 SQL 資料庫 Managed 執行個體，必須是本機位址。|  
 |**mirror_address**|**nvarchar(256)**|位址中所指定的伺服器之鏡像夥伴網路位址。 NULLABLE。|  
   
 ## <a name="permissions"></a>Permissions  

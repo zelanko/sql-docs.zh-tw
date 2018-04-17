@@ -1,25 +1,25 @@
 ---
-title: "Parallel Data Warehouse 的透明資料加密"
+title: Parallel Data Warehouse 的透明資料加密
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "透明資料加密 (TDE) 會執行即時 I/O 加密和解密資料和交易記錄檔和特殊 PDW 記錄檔。"
+description: 透明資料加密 (TDE) 會執行即時 I/O 加密和解密資料和交易記錄檔和特殊 PDW 記錄檔。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
-caps.latest.revision: "22"
-ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: d93d76018baeed1577b6831cbde359002c89416e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="transparent-data-encryption"></a>透明資料加密
 您可以採取幾個預防措施來維護資料庫安全，例如設計安全的系統、加密機密的資產，以及在資料庫伺服器周圍建立防火牆。 但是，當發生實體媒體 (如磁碟機或備份磁帶) 遭竊的狀況時，惡意人士可以還原或附加資料庫，並瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
@@ -125,7 +125,7 @@ TDE 憑證必須由資料庫主要金鑰來加密，才能由下列陳述式所�
   
 |命令或函數|目的|  
 |-----------------------|-----------|  
-|[建立資料庫加密金鑰](../t-sql/statements/create-database-encryption-key-transact-sql.md)|建立用於加密資料庫的金鑰|  
+|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|建立用於加密資料庫的金鑰|  
 |[改變資料庫加密金鑰](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|變更用於加密資料庫的金鑰|  
 |[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|移除用於加密資料庫的金鑰。|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)|說明用來啟用 TDE 的 **ALTER DATABASE** 選項。|  
@@ -282,10 +282,10 @@ TDE 的效能影響會因您所擁有的資料、 其儲存方式，和 SQL Serv
 -   [SQL Server 和資料庫加密金鑰](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
 [建立主要金鑰](../t-sql/statements/create-master-key-transact-sql.md)  
-[建立資料庫加密金鑰](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  

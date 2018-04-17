@@ -1,27 +1,25 @@
 ---
-title: "如何使用 RevoScaleR 函數來尋找或安裝 R 封裝的 SQL Server 上 |Microsoft 文件"
-ms.custom: 
+title: 如何使用 RevoScaleR 函數來尋找或安裝 R 封裝的 SQL Server 上 |Microsoft 文件
+ms.custom: ''
 ms.date: 02/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: b600d7d118ad5bcc24c201683246f3e037da3fba
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: 65bfbe18ddc6a39bb1d27bf4babab1d4dd3cf0de
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函數來尋找或 SQL Server 上的安裝 R 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +50,7 @@ RevoScaleR 的新版本也包含這些函式：
 
 + 使用[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)函式來判斷路徑的執行個體上的程式庫的 SQL Server 計算內容。
 
-**適用於：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]。   此外也提供支援[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]進行升級時為 R Server 9.0 或更新版本。   其他限制也適用。
+**適用於：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]。 此外也提供支援[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]進行升級時為 R Server 9.0 或更新版本。 其他限制也適用。
 
 ## <a name="requirements"></a>需求
 

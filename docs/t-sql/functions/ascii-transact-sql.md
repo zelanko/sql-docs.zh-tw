@@ -1,16 +1,16 @@
 ---
 title: ASCII (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASCII_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b933f33b8eb6b3909eaf7cb0afcd8bfe19862dee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 31edb66f5d213a7b2241f5f97d9733cb9e0cb523
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,16 +49,16 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>引數  
 *character_expression*  
-是 **char** 或 **varchar** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
+**char** 或 **varchar** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回類型
  **int**  
   
 ## <a name="remarks"></a>Remarks
-ASCII 是美國資訊交換標準碼的縮寫。 它是電腦所使用的一種字元編碼標準。 如需 ASCII 字元清單，請參閱 [ASCII](https://www.wikipedia.org/wiki/ASCII)的**可列印字元**一節。
+ASCII 代表「美國訊息交換標準代碼」(**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange)。 它是現代電腦的字元編碼標準。 如需 ASCII 字元清單，請參閱 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的＜可列印字元＞(Printable characters) 一節。
 
 ## <a name="examples"></a>範例  
-下列範例假設 ASCII 字元集，且會傳回 6 個字元的 `ASCII` 值。
+這個範例假設使用 ASCII 字元集，並傳回 6 個字元的 `ASCII` 值。
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   

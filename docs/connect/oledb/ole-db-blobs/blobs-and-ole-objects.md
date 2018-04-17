@@ -10,7 +10,7 @@ ms.component: ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,18 +23,18 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2afff6a5d9f19c0db2063ab0e0c486cc7460e971
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6bc3707dca715ec5b6bee83d181c4792aea6c949
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   SQL Server OLE DB 驅動程式會公開**ISequentialStream**介面，以支援取用者存取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**，**文字**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，及 xml 資料類型為二進位大型物件 (Blob)。 **讀取**方法**ISequentialStream**可讓取用者擷取更多可管理的區塊中的資料。  
   
- 如需示範這項功能的範例，請參閱[大型資料集 &#40; OLE DB &#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
+ 如需示範這項功能的範例，請參閱[大型資料集 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   
  SQL Server OLE DB 驅動程式可以使用取用者實作**IStorage**介面，取用者提供的存取子中的介面指標時繫結的資料修改。  
   

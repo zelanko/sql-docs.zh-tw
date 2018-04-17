@@ -1,26 +1,26 @@
 ---
-title: "判斷哪一個叢集節點失敗 (Analytics Platform System)"
+title: 判斷哪一個叢集節點失敗 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: "21"
-ms.openlocfilehash: 14b68f56a89d5fec57ede1a49be4dedc435353b5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 21
+ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="determine-which-cluster-node-failed"></a>判斷哪一個叢集節點失敗
 本主題描述如何判斷 SQL Server PDW 節點失敗之後發生叢集容錯移轉，且已引發叢集容錯移轉警示的名稱。 疑難排解叢集容錯移轉的一部分，您必須決定無法再連絡 Microsoft，以協助解決問題的節點名稱。  
@@ -34,7 +34,7 @@ SQL Server PDW 中的高可用性，控制節點和運算節點會設定為主�
   
 #### <a name="to-find-the-name-of-the-node-that-failed"></a>若要尋找失敗的節點名稱  
   
-1.  開啟系統管理員主控台。 如需系統管理員主控台的詳細資訊，請參閱[使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md). 發生容錯移轉之後，容錯移轉事件是否包含在警示數目上**健全狀況**頁面。 沒有**健全狀況**PDW 區域，HDI 區域中，與設備的網狀架構區域的頁面。 每個健全狀況 頁面具有**警示** 索引標籤。若要深入了解警示，按一下健全狀況 頁面的 警示 索引標籤，然後按一下警示。  
+1.  開啟系統管理員主控台。 如需系統管理員主控台的詳細資訊，請參閱[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。 發生容錯移轉之後，容錯移轉事件是否包含在警示數目上**健全狀況**頁面。 沒有**健全狀況**PDW 區域，HDI 區域中，與設備的網狀架構區域的頁面。 每個健全狀況 頁面具有**警示** 索引標籤。若要深入了解警示，按一下健全狀況 頁面的 警示 索引標籤，然後按一下警示。  
   
 ## <a name="SystemView"></a>系統檢視解決方案  
 下列 SQL 陳述式示範如何使用[sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)系統檢視表來尋找失敗的伺服器名稱。  

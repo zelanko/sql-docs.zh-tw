@@ -1,26 +1,24 @@
 ---
-title: "使用 R 程式碼剖析函式 | Microsoft Docs"
-ms.custom: 
+title: 使用 R 程式碼剖析函式 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/29/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 3aecbcf80a76fdfd84cca277f5f0de0f8dc7bb4e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 13ee1c64cf5caf9618fd8515aa467706eed331fe
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-r-code-profiling-functions"></a>使用 R 程式碼剖析函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +72,7 @@ help("Sys.time")
 
 Microsoft R Open 的文件 (預設會安裝) 包含開發適用於 R 語言之擴充功能的手冊，其中會詳細討論程式碼剖析與偵錯。
 
-該章節也在線上提供：[https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging (英文)](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
+章節也會提供線上： [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
 
 ### <a name="location-of-r-help-files"></a>R 說明檔的位置
 

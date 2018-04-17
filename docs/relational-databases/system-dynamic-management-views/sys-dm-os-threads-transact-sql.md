@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_threads (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_os_threads (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_threads_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41727f804fb31ed6773c671a40b63cb02ca6793b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ebecbd762d9c689d5564772c377001d69a1941b2
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,17 +64,18 @@ ms.lasthandoff: 02/03/2018
 |fiber_data|**varbinary(8)**|在執行緒上執行的目前 Win32 Fiber。 這只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為輕量型共用的情況。|  
 |thread_handle|**varbinary(8)**|僅供內部使用。|  
 |event_handle|**varbinary(8)**|僅供內部使用。|  
-|scheduler_address|**varbinary(8)**|與這個執行緒相關聯之排程器的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_schedulers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
-|worker_address|**varbinary(8)**|繫結這個執行緒之工作者的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_workers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|scheduler_address|**varbinary(8)**|與這個執行緒相關聯之排程器的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。|  
+|worker_address|**varbinary(8)**|繫結這個執行緒之工作者的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
 |fiber_context_address|**varbinary(8)**|內部 Fiber 內容位址。 這只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為輕量型共用的情況。|  
 |self_address|**varbinary(8)**|內部一致性指標。|  
 |processor_group|**smallint**|**適用於**： [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 處理器群組識別碼。|  
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
-  
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+
 ## <a name="examples"></a>範例  
  在啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟動執行緒，然後使工作者與這些執行緒產生關聯。 不過，外部元件 (例如擴充預存程序) 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之下啟動執行緒。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並沒有這些執行緒的控制權。 sys.dm_os_threads 可以提供資訊中取用資源之惡意執行緒的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序。  
   
@@ -91,7 +92,7 @@ SELECT *
   
 ## <a name="see-also"></a>另請參閱  
   [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
- [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

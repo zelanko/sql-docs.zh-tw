@@ -1,37 +1,38 @@
 ---
-title: "連接到 MySQL (MySQLToSQL) |Microsoft 文件"
+title: 連接到 MySQL (MySQLToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 068fe6585eac87830511515a95373a938cbcdca2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb5ed12698026172f7ef2ef080fd8e68d64cf51c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>連接到 MySQL (MySQLToSQL)
 使用**連接到 MySQL**對話方塊連接到您想要移轉的 MySQL 資料庫。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**連接到 MySQL**。 如果您之前已連線，則命令是**重新連接到 MySQL**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **提供者**  
   
 可用的 MySQL 提供者是 MySQL ODBC 5.1 驅動程式 （信任）。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 輸入伺服器的連接埠。 預設的伺服器連接埠是 3306。 這是標準模式選項。  
   
-**User name**  
+**使用者名稱**  
   
 輸入 SSMA 將用來連接到 MySQL 資料庫的使用者名稱。  
   

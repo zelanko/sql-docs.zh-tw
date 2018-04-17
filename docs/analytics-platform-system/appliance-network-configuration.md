@@ -1,26 +1,26 @@
 ---
-title: "應用裝置網路組態 (Analytics Platform System)"
+title: 應用裝置網路組態 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: "27"
-ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 27
+ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="appliance-network-configuration"></a>應用裝置網路組態
 SQL Server PDW 應用裝置會建立並設定 IP 位址在所有伺服器和從 IHV 工廠，在適用裝置修正組。 一傳遞應用裝置，則必須重新 （乙太網路） 的外部 IP 位址設定為符合特定客戶的資料中心的需求。  
@@ -30,7 +30,7 @@ SQL Server PDW 應用裝置會建立並設定 IP 位址在所有伺服器和從 
   
 **網路組態**頁面可讓您檢視 Analytics Platform System 應用裝置上的節點對外開放的網路設定。 此頁面是唯讀的。  
   
-![DWConfig 應用裝置網路](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>若要更新您的應用裝置上的網路設定  
 藉由編輯變更網狀架構網域、 工作負載網域和 HDInsight 網域的 IP 位址**AplianceInfo.xml**檔案，然後執行安裝程式。 這是一種離線作業。 PDW 和 （如果有的話） 的 HDInsight 區域將 IP 位址變更時自動停止。  
@@ -64,6 +64,6 @@ SQL Server PDW 應用裝置會建立並設定 IP 位址在所有伺服器和從 
   
 -   PDU 的**Dell 計量機架 PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
-## <a name="see-also"></a>請參閱  
-[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>另請參閱  
+[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

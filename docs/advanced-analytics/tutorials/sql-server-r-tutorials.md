@@ -1,30 +1,29 @@
 ---
-title: "SQL Server R 教學課程 |Microsoft 文件"
+title: SQL Server R 教學課程 |Microsoft 文件
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a2fd60a40950710972c6e9507b3c9545e86840ff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 34fee91978a27e38fca6092a98596c701cfd32eb
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server R 教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +112,7 @@ SQL Server 開發團隊，以反白顯示您可以在真實世界應用程式中
 
 執行 SQL Server 安裝程式，別忘了下列重要步驟：
 
-+ 執行啟用外部指令碼執行功能`sp_configure 'external scripts enabled', 1`
++ 執行啟用外部指令碼執行功能 `sp_configure 'external scripts enabled', 1`
 + 重新啟動伺服器
 + 請確定呼叫外部執行階段的服務具有必要權限
 + 請確認您的 SQL 登入或 Windows 使用者帳戶具有必要權限連接到伺服器，來讀取資料，並建立此範例所需的任何資料庫物件

@@ -1,27 +1,25 @@
 ---
-title: "進階組態選項的機器學習服務 |Microsoft 文件"
+title: 進階組態選項的機器學習服務 |Microsoft 文件
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>機器學習服務的進階的組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +28,7 @@ ms.lasthandoff: 02/11/2018
 
 **適用於：** SQL Server 2016 R Services、 SQL Server 2017 機器學習服務
 
-##  <a name="bkmk_Provisioning"></a>佈建額外的使用者帳戶的機器學習
+##  <a name="bkmk_Provisioning"></a> 佈建額外的使用者帳戶的機器學習
 
 中的外部指令碼處理序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]低權限本機使用者帳戶內容中執行。 在個別的低權限帳戶中執行這些程序有下列優點：
 
@@ -45,13 +43,13 @@ ms.lasthandoff: 02/11/2018
 
 + 使用者帳戶集區會連結到特定的執行個體。 Machine learning 已啟用每個執行個體需要不同的集區的背景工作帳戶。 執行個體之間的帳戶無法共用。
 
-+ 集區中的使用者帳戶名稱格式為 SQLInstanceName*nn*相關服務的組態中進行微幅變更。 例如，如果您使用預設執行個體為機器學習服務，使用者帳戶集區支援 MSSQLSERVER01、 mssqlserver02 等帳戶名稱。
++ 集區中的使用者帳戶名稱格式為 SQLInstanceName*nn*。 例如，如果您使用預設執行個體為機器學習服務，使用者帳戶集區支援 MSSQLSERVER01、 mssqlserver02 等帳戶名稱。
 
 + 使用者帳戶集區的大小為靜態，預設值是 20。 可同時啟動的外部執行階段工作階段數目受限於此使用者帳戶集區的大小。 若要變更此限制，系統管理員應該使用 SQL Server 組態管理員。
 
 如需如何變更使用者帳戶集區的詳細資訊，請參閱[修改使用者帳戶集區的 SQL Server 機器學習服務](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)。
 
-##  <a name="bkmk_ManagingMemory"></a>管理外部指令碼處理序所使用的記憶體
+##  <a name="bkmk_ManagingMemory"></a> 管理外部指令碼處理序所使用的記憶體
 
 根據預設，機器學習的外部指令碼執行階段會限制為不超過 20%的機器總記憶體。 這取決於您的系統，但一般而言，您可能會發現這項限制不足以嚴重的機器學習工作，例如模型定型或預測多個資料列的資料上。 
 
@@ -75,7 +73,7 @@ ms.lasthandoff: 02/11/2018
 
 如需執行 SQL Server 服務所需權限的詳細資訊，請參閱[設定 Windows 服務帳戶與權限](https://msdn.microsoft.com/library/ms143504.aspx#Windows)。
 
-##  <a name="bkmk_ChangingConfig"></a>變更進階的服務選項
+##  <a name="bkmk_ChangingConfig"></a> 變更進階的服務選項
 
 在早期版本的 SQL Server 2016 R 服務，您無法變更服務的某些屬性，藉由編輯[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]組態檔。 
 
@@ -93,7 +91,7 @@ ms.lasthandoff: 02/11/2018
 
 **若要修改的偵錯設定**
 
-幾個屬性只可以變更使用 [啟動列] 的組態檔，可能會在有限的情況下，例如偵錯很有用。 組態檔建立期間[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定，並依預設會儲存為純文字檔案中的下列位置：`<instance path>\binn\rlauncher.config`
+幾個屬性只可以變更使用 [啟動列] 的組態檔，可能會在有限的情況下，例如偵錯很有用。 組態檔建立期間[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定，並依預設會儲存為純文字檔案中的下列位置： `<instance path>\binn\rlauncher.config`
 
 您必須在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦上身為系統管理員，才能對此檔案進行變更。 如果您編輯了檔案，建議您在儲存變更前先備份副本。
 

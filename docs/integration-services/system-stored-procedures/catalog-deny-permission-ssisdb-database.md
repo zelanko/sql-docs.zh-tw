@@ -1,28 +1,28 @@
 ---
-title: "catalog.deny_permission (SSISDB 資料庫) | Microsoft Docs"
-ms.custom: 
+title: catalog.deny_permission (SSISDB 資料庫) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a04ae959af4c0a23b3a954e590df424aa1536949
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   **系統管理員**伺服器角色的成員資格  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個預存程序可讓您拒絕下表所述的權限類型：  
   
 |permission_type 值|權限名稱|權限描述|適用的物件類型|  

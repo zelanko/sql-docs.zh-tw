@@ -1,20 +1,23 @@
 ---
-title: "啟動 dta 命令提示字元公用程式和微調工作負載 |Microsoft 文件"
-ms.custom: 
+title: 啟動 dta 命令提示字元公用程式和微調工作負載 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-query-tuning
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: Database Engine [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg

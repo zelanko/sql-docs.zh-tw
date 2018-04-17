@@ -1,30 +1,31 @@
 ---
-title: "重新整理從資料庫 (DB2ToSQL) |Microsoft 文件"
+title: 重新整理從資料庫 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c62364a5dae70a00624cceddc87e9673466212fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 421c86c9b8b61c95d5221c7ca28af9762a530778
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="refresh-from-database-db2tosql"></a>從資料庫 (DB2ToSQL) 重新整理
 **從資料庫重新整理** 對話方塊可讓您選取要重新整理從 DB2 資料庫的物件。 在對話方塊中的資料列會以色彩標示在中繼資料的狀態：  
@@ -37,11 +38,11 @@ ms.lasthandoff: 12/21/2017
   
 -   如果是新 DB2 資料庫中的物件，該資料列是粉紅色。  
   
-您可以指定預設物件中的重新整理設定**專案設定** 對話方塊。 如需詳細資訊，請參閱[專案設定 &#40;同步處理 &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
+您可以指定預設物件中的重新整理設定**專案設定** 對話方塊。 如需詳細資訊，請參閱[專案設定&#40;同步&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)。  
   
 若要存取**從資料庫重新整理**對話方塊中，以滑鼠右鍵按一下物件，在 DB2 中繼資料總管 按一下**從資料庫重新整理**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **摺疊 （-）**  
 摺疊以隱藏個別物件的所有物件群組。  
   

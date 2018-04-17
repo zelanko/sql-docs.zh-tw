@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_sys_info_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: 
+caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d5284112257c5d1c2d23f354ec7690fab6abb90b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
 |**deadlock_monitor_serial_number**|**int**|指定目前死結監視順序的識別碼。 不可為 Null。|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|代表**ms_tick**數目時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上次啟動。 與目前的 ms_ticks 資料行比較。 不可為 Null。|  
 |**sqlserver_start_time**|**datetime**|指定上一次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的日期和時間。 不可為 Null。|  
-|**affinity_type**|**int**|**適用於： [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定目前使用中伺服器 CPU 處理序相似性的類型。 不可為 Null。 如需詳細資訊，請參閱[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
+|**affinity_type**|**int**|**適用於： [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定目前使用中伺服器 CPU 處理序相似性的類型。 不可為 Null。 如需詳細資訊，請參閱[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)。<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 描述**affinity_type**資料行。 不可為 Null。<br /><br /> MANUAL = 已經至少為一個 CPU 設定相似性。<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以自由地在 CPU 之間移動執行緒。|  
 |**process_kernel_time_ms**|**bigint**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過 [！包含 [s]**(../Token/ssCurrent_md.md)]。<br /><br /> 核心模式中所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒所使用的總時間，以毫秒為單位。 因為這個值包含伺服器上所有處理器的時間，所以它可能會大於單一處理器時脈。 不可為 Null。|  
 |**process_user_time_ms**|**bigint**|**適用於：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 使用者模式中所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒所使用的總時間，以毫秒為單位。 因為這個值包含伺服器上所有處理器的時間，所以它可能會大於單一處理器時脈。 不可為 Null。|  
@@ -81,19 +81,19 @@ ms.lasthandoff: 02/03/2018
 |**process_physical_affinity**|**nvarchar(3072)** |**適用於： 開頭為[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]** 。<br /><br />尚未將於提供的資訊。 |
 |**sql_memory_model**|**int**|**適用於： [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 且開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1**。<br /><br />指定 SQL Server 用來配置記憶體的記憶體模型。 不可為 Null。<br /><br />1 = 傳統記憶體模型<br />2 = 鎖定記憶體分頁<br /> 3 = 記憶體中的大型分頁|
 |**sql_memory_model_desc**|**nvarchar(120)**|**適用於： [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 且開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1**。<br /><br />指定 SQL Server 用來配置記憶體的記憶體模型。 不可為 Null。<br /><br />**傳統**= SQL Server 是否使用傳統記憶體模型配置記憶體。 當 SQL Server 服務帳戶未具備鎖定分頁記憶體的權限在啟動期間，這是預設 sql 記憶體模型。<br />**LOCK_PAGES** = SQL server 使用記憶體中鎖定分頁配置記憶體。 SQL Server 服務帳戶在 SQL Server 啟動期間記憶體的權限擁有鎖定的分頁時，這是預設 sql 記憶體管理員。<br /> **LARGE_PAGES** = SQL Server 使用大型分頁記憶體中配置記憶體。 SQL Server 會使用大型分頁配置器配置記憶體，只能使用 Enterprise edition 時 SQL Server 服務帳戶會持有記憶體的權限鎖定分頁在伺服器啟動期間與追蹤旗標 834 已開啟。|
-|**pdw_node_id**|**int**|**適用於： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> 此發行版本上的節點識別碼。|  
+|**pdw_node_id**|**int**|**適用於： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> 此發行版本上的節點識別碼。|  
 |**socket_count** |**int** | **適用於： 開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]** 。<br /><br />在系統上指定可用的處理器插槽的數目。 |  
 |**cores_per_socket** |**int** | **適用於： 開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。**。<br /><br />指定系統上的每個通訊端可用的處理器數目。 |  
 |**numa_node_count** |**int** | **適用於： 開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。**。<br /><br />指定系統上的可用的 numa 節點數目。 此資料行包含實體 numa 節點，以及軟體 numa 節點。 |  
   
-## <a name="permissions"></a>Permissions  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要`VIEW SERVER STATE`伺服器的權限。  
-  
- 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]標準和基本層需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]系統管理員帳戶。  
-  
+## <a name="permissions"></a>Permissions
+
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

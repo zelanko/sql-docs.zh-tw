@@ -10,7 +10,7 @@ ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 31dfd17d0e5f12cfddf88030e2b3516ea3ada0e6
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 3003fd77624f7e304f8e3f493148475c1187a86b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>使用 ADO 與 OLE DB 驅動程式，適用於 SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -171,4 +171,4 @@ Set con = Nothing
  在舊版 OLE DB 提供者中，此程式碼會導致系統在第二次執行時建立隱含連接，因為每個單一連接只能開啟一個作用中結果集。 由於隱含連接不會在 OLE DB 連接集區中共用，所以這會產生額外的負擔。 使用 SQL server OLE DB 驅動程式所公開的 MARS 功能，您可以取得 multiple active result 在單一連接上。  
 
 ## <a name="see-also"></a>另請參閱  
- [使用 OLE DB 驅動程式的 SQL Server 的建立應用程式](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [利用 OLE DB Driver for SQL Server 建置](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

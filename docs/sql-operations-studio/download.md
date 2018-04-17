@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c5abc032936bb63b50becd9f37300f294e14eb9
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/08/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>下載並安裝 SQL Operations Studio （預覽）
+# <a name="download-and-install-sql-operations-studio-preview"></a>下載並安裝 SQL Operations Studio (preview)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/28/2018
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>取得 SQL Operations Studio （預覽） for Windows
+## <a name="get-sql-operations-studio-preview-for-windows"></a>取得 SQL Operations Studio (preview) for Windows
 
 這一版的[!INCLUDE[name-sos](../includes/name-sos-short.md)]包括標準的 Windows 安裝程式經驗，以及.zip: 
 
@@ -51,24 +51,46 @@ ms.lasthandoff: 03/28/2018
 3. 執行 `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>取得 macOS SQL Operations Studio （預覽）
+## <a name="get-sql-operations-studio-preview-for-macos"></a>取得 macOS SQL Operations Studio (preview)
 
 1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]如 macOS](https://go.microsoft.com/fwlink/?linkid=870839)。
 2. 若要展開的 zip 內容，請按兩下它。
 3. 讓[!INCLUDE[name-sos](../includes/name-sos-short.md)]用於*啟動控制板*，拖曳*sqlops.app*至*應用程式*資料夾。
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>取得 SQL Operations Studio （預覽） for Linux
+## <a name="get-sql-operations-studio-preview-for-linux"></a>取得 SQL Operations Studio (preview) for Linux
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux](https://go.microsoft.com/fwlink/?linkid=870840)。
+1. 下載 [！包含[名稱 sos](../includes/name-sos-short.md)適用於 Linux 使用其中一種安裝程式或.tar.gz 封存：
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
 1. 擷取檔案和啟動[!INCLUDE[name-sos](../includes/name-sos-short.md)]，開啟新的終端機視窗，然後輸入下列命令：
 
+   **Debian 安裝：**
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
 
    sqlops
    ```
+
+   **rpm 安裝：**
+   ```bash
+   cd ~
+   yum install ./Downloads/sqlops-linux-<version string>.rpm
+
+   sqlops
+   ```
+
+   **.tar.gz 安裝：**
+   ```bash 
+   cd ~ 
+   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc 
+   sqlops 
+   ``` 
 
    > [!NOTE]
    > 在 Debian、 Redhat 和 Ubuntu，您可能遺失相依性。 若要安裝這些相依性，根據您的 Linux 版本中使用下列命令：
@@ -94,7 +116,7 @@ ms.lasthandoff: 03/28/2018
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>解除安裝 SQL Operations Studio （預覽）
+## <a name="uninstall-sql-operations-studio-preview"></a>解除安裝 SQL Operations Studio (preview)
 
 如果您已安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]使用 Windows installer，然後解除安裝移除所有 Windows 應用程式的方式相同。
 

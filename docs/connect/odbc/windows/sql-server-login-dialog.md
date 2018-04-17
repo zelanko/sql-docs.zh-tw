@@ -1,33 +1,34 @@
 ---
-title: "SQL Server 登入對話方塊 (ODBC) |Microsoft 文件"
-ms.custom: 
-ms.date: 09/27/2017
+title: SQL Server 登入對話方塊 (ODBC) |Microsoft 文件
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5671f5213633d7efbb7693425a711db1e980d078
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 367559719da374be358f93821572df4365a278d7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 登入對話方塊 (ODBC)
 
 當您呼叫 ODBC 連接沒有指定足夠的資訊來連接到 SQL Server，則 ODBC 驅動程式會顯示驅動程式**SQL Server 登入** 對話方塊。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 ### <a name="server"></a>Server
 
@@ -44,6 +45,7 @@ ms.lasthandoff: 11/18/2017
 - **Windows 整合式**使用目前登入的使用者帳戶進行驗證
 - **Active Directory 密碼**登入識別碼和密碼
 - **Active Directory Integrated**使用目前登入的使用者帳戶進行驗證
+- **Active Directory 互動式**驗證與登入識別碼
 
 請參閱[資料來源精靈螢幕 2](../../../connect/odbc/windows/dsn-wizard-2.md)如需有關驗證模式。
 
@@ -53,13 +55,13 @@ ms.lasthandoff: 11/18/2017
 
 ### <a name="login-id"></a>登入識別碼
 
-指定要用於連接，如果 SQL Server 或 Azure Active Directory 登入識別碼**驗證模式**設**SQL Server**或**Active Directory 密碼**。 否則，**登入識別碼**方塊已停用。
+指定要用於連接，如果 SQL Server 或 Azure Active Directory 登入識別碼**驗證模式**設**SQL Server**或**Active Directory 密碼**或**Active Directory 互動式**。 否則，**登入識別碼**方塊已停用。
 
 ### <a name="password"></a>密碼
 
 指定的密碼。 如果用於連接的 SQL Server 或 Azure Active Directory 登入識別碼**驗證模式**設**SQL Server**或**Active Directory 密碼**. 否則，**密碼**方塊已停用。
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
 顯示或隱藏**選項**群組。 **選項**按鈕已啟用，如果**伺服器**的值。
 
@@ -107,6 +109,6 @@ ms.lasthandoff: 11/18/2017
 
 時，此選項時才適用**使用高度加密資料**已啟用。 選取時，伺服器的憑證會驗證伺服器的正確的主機名稱，然後再由受信任的憑證授權單位發出。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 
 [Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

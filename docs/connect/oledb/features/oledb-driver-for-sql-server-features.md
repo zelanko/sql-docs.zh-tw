@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bda748c764d49044a76638ebd2e87a6d831ae66f
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6c56a145ecfbb986c7ec0124202ff61e89036657
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>SQL Server 功能的 OLE DB 驅動程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/30/2018
  [服務主體名稱&#40;SPN&#41;中用戶端連線的支援](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)  
  討論如何擴充服務主要名稱 (SPN) 的支援以便跨所有通訊協定進行相互驗證。  
   
- [SQL Server 的 OLE DB 驅動程式中的疏鬆資料行支援](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server 中支援疏鬆資料行](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
  如需 SQL Server 支援疏鬆資料行的討論 OLE DB 驅動程式。  
   
  [日期和時間改善](../../oledb/features/date-and-time-improvements.md)  
@@ -87,21 +87,21 @@ ms.lasthandoff: 03/30/2018
  [中繼資料探索](../../oledb/features/metadata-discovery.md)  
  討論在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 內所做的中繼資料探索改進。  
   
- [SQL Server 的 OLE DB 驅動程式中的 utf-16 支援](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
+ [OLE DB Driver for SQL Server 中支援 UTF-16](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  討論 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中導入的行為變更。 如果繫結資料行結果或輸出參數時，會提供固定長度的緩衝區，而且**wchar**字元結束的字元 surrogate 字組的高 surrogate 字碼指標之前，如果寫入緩衝區的下一步**wchar**字元是低 surrogate 字碼指標、 OLE DB 驅動程式的 SQL Server 不會將高 surrogate 字碼指標加入至緩衝區。  
   
- [高可用性、 災害復原的 SQL Server 支援的 OLE DB 驅動程式](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
+ [OLE DB Driver for SQL Server 支援高可用性、災害復原](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  討論如何設定您的應用程式，以利用加入功能的高可用性、 嚴重損壞修復的[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
  [存取擴充事件記錄檔中的診斷資訊](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  討論 OLE DB 驅動程式的 SQL Server 並可讓您存取信號緩衝區和 XEvents 記錄檔中的診斷資訊的資料追蹤增強功能。  
   
- [SQL Server Support for LocalDB 的 OLE DB 驅動程式](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
+ [OLE DB Driver for SQL Server 支援 LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  討論對 LocalDB 功能的 SQL Server 支援的 OLE DB 驅動程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 程式設計的 OLE DB 驅動程式](../../oledb/oledb-driver-for-sql-server-programming.md)      
  [OLE DB 的使用說明主題](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
- [安裝 SQL Server 的 OLE DB 驅動程式](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
+ [安裝 OLE DB Driver for SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   
   

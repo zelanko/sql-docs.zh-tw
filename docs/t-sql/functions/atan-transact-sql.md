@@ -1,16 +1,16 @@
 ---
 title: ATAN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ATAN_TSQL
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - ATAN function
 - tangent
 ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efb6cbe8dcc58d8989b8f8ce9b4deb6ce587dc83
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2f5701d45426eef09e5c743685c0541679e38005
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-以弧度傳回角度，其正切函式是指定之 **float** 運算式的角度。 這也稱為反正切函數 (Arctangent)。
+函數，傳回以弧度為單位的角度，其正切值為指定的 **float** 運算式。 這也稱為反正切函數 (Arctangent)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ATAN ( float_expression )
   
 ## <a name="arguments"></a>引數  
 *float_expression*  
-為 **float** 類型或能夠隱含地轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
+[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，為 **float** 類型或是會隱含地轉換成 **float** 的類型。
   
-## <a name="return-types"></a>傳回型
+## <a name="return-types"></a>傳回類型
 **float**
   
 ## <a name="examples"></a>範例  
-下列範例會使用 **float** 運算式，且會傳回指定角度的 ATAN。
+此範例接受 **float** 運算式，並傳回指定角度的 ATAN。
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -96,7 +96,7 @@ The ATAN of 197.1099392 is: 1.56572
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-下列範例會使用 **float** 運算式，且會傳回指定角度的反正切值。
+此範例接受 **float** 運算式，並傳回指定角度的反正切值。
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  

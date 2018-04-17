@@ -10,7 +10,7 @@ ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ddeedf937de12337e8882bfa132461dd2c5f7a8
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: e583abd0a5d84d4842a441fcb8093bbfcf6b9b26
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>從 SQL Server 2005 Native Client 更新應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,4 +52,4 @@ ms.lasthandoff: 03/30/2018
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能會在觸發程序執行時傳回不同的結果。|中導入變更[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]可能會導致應用程式有不同的結果造成觸發程序時要執行的陳述式所傳回**NOCOUNT OFF**作用中。 在此狀況下，您的應用程式可能會產生錯誤。 若要解決這個錯誤，將**NOCOUNT ON**觸發程序呼叫中 SQLMoreResults 前進至下一個結果。|  
 
 ## <a name="see-also"></a>另請參閱   
- [SQL Server 程式設計的 OLE DB 驅動程式](../../oledb/oledb-driver-for-sql-server-programming.md)
+ [OLE DB Driver for SQL Server 程式設計](../../oledb/oledb-driver-for-sql-server-programming.md)

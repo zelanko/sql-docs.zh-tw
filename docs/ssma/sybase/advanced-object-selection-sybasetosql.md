@@ -1,30 +1,31 @@
 ---
-title: "進階物件選取項目 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 進階物件選取項目 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b08be1840a3746616e2b57f45f729339e15cef70
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 521e163903cecbf271792078d7d507e36d2eb8f1
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>進階的物件選取項目 (SybaseToSQL)
 **進階物件部分**對話方塊可讓您篩選資料庫物件，使用字串和子字串中的物件名稱，然後選取或取消選取這些物件。 SSMA 會執行轉換並移轉作業選取的物件。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 使用此對話方塊之前，您可以強制 SSMA 載入轉換結構描述，或儲存專案的所有中繼資料。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **請檢查所有的項目**  
 將所有項目旁的核取記號。 在 [中繼資料總管] 會立即選取這些項目。  
   

@@ -1,35 +1,36 @@
 ---
-title: "專案 Settings(Synchronization) (DB2ToSQL) |Microsoft 文件"
+title: 專案 Settings(Synchronization) (DB2ToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a701544d5f7d111d234b4a87def52beb3e1edbd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: da4be629e37646b10011c76f5a78a2cde246865e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>專案 Settings(Synchronization) (DB2ToSQL)
 同步處理頁面**專案設定**對話方塊包含自訂如何 SSMA 載入並重新整理資料庫物件，例如資料表和預存程序，到設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-預設的動作選項指定預設設定，以便重新整理物件從 DB2 資料庫和 SQL Server 資料庫與同步處理物件。 如需詳細資訊，請參閱[從資料庫 &#40; DB2ToSQL &#41; 重新整理](../../ssma/db2/refresh-from-database-db2tosql.md)。  
+預設的動作選項指定預設設定，以便重新整理物件從 DB2 資料庫和 SQL Server 資料庫與同步處理物件。 如需詳細資訊，請參閱[從資料庫重新整理&#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)。  
   
 您可以存取兩個不同的同步處理頁面包含相同的設定：  
   

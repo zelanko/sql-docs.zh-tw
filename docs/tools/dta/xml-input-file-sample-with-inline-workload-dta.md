@@ -1,20 +1,23 @@
 ---
-title: "XML 輸入檔範例，含內嵌工作負載 (DTA) |Microsoft 文件"
-ms.custom: 
+title: XML 輸入檔範例，含內嵌工作負載 (DTA) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: XML
-helpviewer_keywords: sample applications [DTA]
+dev_langs:
+- XML
+helpviewer_keywords:
+- sample applications [DTA]
 ms.assetid: 7c04fe1d-6669-44a1-8b73-36d469e9b002
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,19 +1,21 @@
 ---
-title: "SET 路徑命令 |Microsoft 文件"
-ms.custom: 
+title: SET 路徑命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SET PATH command [ODBC]
+helpviewer_keywords:
+- SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

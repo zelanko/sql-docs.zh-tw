@@ -1,16 +1,16 @@
 ---
-title: "以指令碼變數使用 sqlcmd | Microsoft Docs"
-ms.custom: 
+title: 以指令碼變數使用 sqlcmd | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 
+caps.latest.revision: 47
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 搭配指令碼變數使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 用於指令碼中的變數稱為指令碼變數。 指令碼變數可讓一個指令碼使用於多個狀況中。 例如，如果您想要針對多個伺服器執行一個指令碼，而不針對每個伺服器修改指令碼，您可以使用指令碼變數來代表伺服器名稱。 只要變更提供給指令碼變數的伺服器名稱，相同的指令碼就可以在不同的伺服器上執行。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  用於指令碼中的變數稱為指令碼變數。 指令碼變數可讓一個指令碼使用於多個狀況中。 例如，如果您想要針對多個伺服器執行一個指令碼，而不針對每個伺服器修改指令碼，您可以使用指令碼變數來代表伺服器名稱。 只要變更提供給指令碼變數的伺服器名稱，相同的指令碼就可以在不同的伺服器上執行。  
   
  指令碼變數可以使用 **setvar** 命令來明確定義，或使用 **sqlcmd-v** 選項來隱含定義。  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/24/2018
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台] 中開啟 [系統] ，然後按一下 [進階]  索引標籤。  
+>  若要檢視環境變數，請在 [控制台] 中開啟 [系統]，然後按一下 [進階] 索引標籤。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隱含設定指令碼變數  
  當您透過含有 **sqlcmd** 相關變數的選項啟動 **sqlcmd** 時，會將 **sqlcmd** 變數隱含設定為使用該選項所指定的值。 在下列範例中， `sqlcmd` 透過 `-l` 選項啟動。 這將會隱含地設定 SQLLOGINTIMEOUT 變數。  
@@ -115,7 +116,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 指令碼變數  
  由 **sqlcmd** 定義的變數稱為指令碼變數。 下表列出 **sqlcmd** 指令碼變數。  
   
-|        變數         | 相關的選項 | R/W |         預設         |
+|        變數         | 相關的選項 | R/W |         預設值         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |

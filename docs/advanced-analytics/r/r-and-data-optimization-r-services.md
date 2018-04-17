@@ -1,26 +1,24 @@
 ---
-title: "R Services-資料最佳化的效能 |Microsoft 文件"
-ms.custom: 
+title: R Services-資料最佳化的效能 |Microsoft 文件
+ms.custom: ''
 ms.date: 07/12/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6b320357d8978a97878d31943b48accee8898f9f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-資料最佳化的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +137,7 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree`支援`maxDepth`參數，控制的決策樹的深度。 做為`maxDepth`會增加，效能可能會降低，所以分析優點增加與影響效能的深度。
+    `rxDTree` 支援`maxDepth`參數，控制的決策樹的深度。 做為`maxDepth`會增加，效能可能會降低，所以分析優點增加與影響效能的深度。
 
     您也可以控制時間複雜性和預測精確度，例如調整參數之間的平衡`maxNumBins`， `maxDepth`， `maxComplete`，和`maxSurrogate`。 將深度增加到超過 10 或 15 以上，會讓計算付出很高的代價。
 

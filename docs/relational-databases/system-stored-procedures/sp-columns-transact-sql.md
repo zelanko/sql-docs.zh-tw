@@ -1,16 +1,16 @@
 ---
-title: "sp_columns (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_columns (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_columns_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,21 +51,21 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_name=**]*物件*  
+ [ **@table_name=**] *object*  
  這是用來傳回目錄資訊之物件的名稱。 *物件*可以是資料表、 檢視或其他物件，例如資料表值函式的資料行。 *物件*是**nvarchar(384)**，沒有預設值。 支援萬用字元的模式比對。  
   
- [  **@table_owner* * * =**]*擁有者*  
+ [ **@table_owner****=**] *owner*  
  這是用來傳回目錄資訊之物件的物件擁有者。 *擁有者*是**nvarchar(384)**，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，套用基礎 dbms 的預設物件可見性規則。  
   
  如果目前使用者擁有一個含有指定名稱的物件，就會傳回該物件的資料行。 如果*擁有者*未指定目前使用者並未擁有指定的物件和*物件*， **sp_columns**尋找具有指定物件*物件*資料庫擁有者所擁有。 如果存在，就會傳回該物件的資料行。  
   
- [  **@table_qualifier* * * =**]*限定詞*  
+ [ **@table_qualifier****=**] *qualifier*  
  這是物件限定詞的名稱。 *限定詞*是**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的物件命名 (*限定詞***。***擁有者***。***名稱*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表物件之資料庫環境的伺服器名稱。  
   
- [  **@column_name=**]*資料行*  
+ [ **@column_name=**] *column*  
  這是個單一資料行，當只需要一個目錄資訊的資料行時，就會使用這個單一資料行。 *資料行*是**nvarchar(384)**，預設值是 NULL。 如果*資料行*是未指定，會傳回所有資料行。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*資料行*代表資料行名稱，如下所示**syscolumns**資料表。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 SQL-92 標準模式比對 (% 和 _ 萬用字元)。  
   
- [  **@ODBCVer=**] *ODBCVer*  
+ [ **@ODBCVer=**] *ODBCVer*  
  這是要使用之 ODBC 的版本。 *ODBCVer*是**int**，預設值是 2。 這表示 ODBC 2。 有效值是 2 或 3。 2 和 3 版之間行為差異，請參閱 ODBC **SQLColumns**規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -82,12 +82,12 @@ sp_columns [ @table_name = ] object
 |**COLUMN_NAME**|**sysname**|每個資料行的資料行名稱**TABLE_NAME**傳回。 這個欄位一律會傳回值。|  
 |**DATA_TYPE**|**smallint**|ODBC 資料類型的整數碼。 如果這是無法對應於 ODBC 類型的資料類型，它就是 NULL。 傳回原生資料型別名稱**TYPE_NAME**資料行。|  
 |**TYPE_NAME**|**sysname**|代表資料類型的字串。 基礎 DBMS 提供這個資料類型名稱。|  
-|**有效位數**|**int**|有效位數的數目。 傳回值**精確度**資料行是基底 10。|  
+|**PRECISION**|**int**|有效位數的數目。 傳回值**精確度**資料行是基底 10。|  
 |**LENGTH**|**int**|傳送資料的大小。<sup>1</sup>|  
-|**小數位數**|**smallint**|小數點右側的位數。|  
-|**基數**|**smallint**|數值資料類型的基底。|  
-|**可為 NULL**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
-|**註解**|**varchar(254)**|這個欄位一律會傳回 NULL。|  
+|**SCALE**|**smallint**|小數點右側的位數。|  
+|**RADIX**|**smallint**|數值資料類型的基底。|  
+|**NULLABLE**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
+|**REMARKS**|**varchar(254)**|這個欄位一律會傳回 NULL。|  
 |**COLUMN_DEF**|**nvarchar(4000)**|資料行的預設值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 此資料行等同於**DATA_TYPE**資料行，除了**datetime**和 sql-92**間隔**資料型別。 這個資料行一律會傳回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|子類型代碼**datetime**和 sql-92**間隔**資料型別。 其他資料類型的這個資料行都會傳回 NULL。|  
@@ -114,7 +114,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會傳回指定之資料表的資料行資訊。  
   
 ```  
@@ -124,9 +124,9 @@ EXEC sp_columns @table_name = N'DimEmployee',
    @table_owner = N'dbo';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_tables &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
- [目錄預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

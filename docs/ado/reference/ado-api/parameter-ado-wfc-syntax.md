@@ -1,34 +1,34 @@
 ---
-title: "參數 (ADO-WFC 語法) |Microsoft 文件"
+title: 參數 (ADO-WFC 語法) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 05f3e2f6f6b3985c1c68604e6e9829c1b1f3eef1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="parameter-ado---wfc-syntax"></a>參數 (ADO-WFC 語法)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
   
 ### <a name="constructor"></a>建構函式  
   

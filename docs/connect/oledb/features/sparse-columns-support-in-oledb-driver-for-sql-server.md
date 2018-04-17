@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a501daca74470e7df9e08fc329e956301417b4ca
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>SQL Server 的 OLE DB 驅動程式中的疏鬆資料行支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 03/30/2018
  不過，如果**queryout**使用的匯出，而且您參考疏鬆資料行成員的疏鬆資料行依名稱設定，您不能執行直接匯入結構類似的資料表。 這是因為 BCP 會使用與一致的中繼資料**選取\***匯入作業，且無法符合**column_set**成員資料行與此中繼資料。 若要匯入**column_set**成員資料行必須定義的檢視參考所需的資料表上的個別**column_set**資料行，而且您必須執行匯入作業使用的檢視。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 程式設計的 OLE DB 驅動程式](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server 程式設計](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   

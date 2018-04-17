@@ -1,16 +1,16 @@
 ---
-title: "資料表提示 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 資料表提示 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 
+caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 036b2c26536aaa1257bfbb41075d570149b04e54
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,13 +137,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
   
  不論是否有 WITH 關鍵字，都允許使用下列資料表提示：NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT 和 NOEXPAND。 在沒有 WITH 關鍵字的情況下指定這些資料表提示時，應該單獨指定這些提示。 例如：  
   
-```  
+```sql  
 FROM t (TABLOCK)  
 ```  
   
  如果要使用另一個選項指定提示，您必須利用 WITH 關鍵字來指定提示：  
   
-```  
+```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
@@ -203,7 +203,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |結合 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|查詢最佳化工具只會考慮利用指定索引的索引搜尋作業存取資料表或檢視表。|  
 |透過指定索引和索引資料行參數化|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|如此一來，查詢最佳化工具只會考慮至少使用指定索引資料行之指定索引的索引搜尋作業存取資料表或檢視。|  
   
- 使用 FORCESEEK 提示 (搭配或不搭配索引參數) 時，請考慮下列指導方針。  
+使用 FORCESEEK 提示 (搭配或不搭配索引參數) 時，請考慮下列指導方針。  
   
 -   您可以將提示指定為資料表提示或查詢提示。 如需有關查詢提示的詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
@@ -215,7 +215,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   如果 FORCESEEK 造成找不到任何計畫，將會傳回錯誤 8622。  
   
- 使用索引參數指定 FORCESEEK 時，請注意下列指導方針和限制。  
+使用索引參數指定 FORCESEEK 時，請注意下列指導方針和限制。  
   
 -   您不可為 INSERT、UPDATE 或 DELETE 陳述式的目標資料表指定此提示。  
   
@@ -351,7 +351,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  記憶體最佳化的資料表是在 SNAPSHOT 隔離下存取。 SNAPSHOT 只能用於記憶體最佳化的資料表 (不可用於磁碟基礎的資料表)。 如需詳細資訊，請參閱[記憶體最佳化的資料表簡介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
   
-```  
+```sql 
 SELECT * FROM dbo.Customers AS c   
 WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
@@ -372,7 +372,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  當您使用 INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> 陳述式將資料匯入堆積時，可以指定目標資料表的 TABLOCK 提示來啟用陳述式的最佳化記錄和鎖定。 此外，資料庫的復原模式必須設定為簡單或大量記錄。 如需詳細資訊，請參閱 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。  
   
- 當搭配 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 大量資料列集提供者使用，以將資料匯入資料表時，TABLOCK 會使多個用戶端能夠以最佳化的記錄和鎖定，同時將資料載入目標資料表中。 如需詳細資訊，請參閱[大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+ 當搭配 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 大量資料列集提供者使用，以將資料匯入資料表時，TABLOCK 會使多個用戶端能夠以最佳化的記錄和鎖定，同時將資料載入目標資料表中。 如需詳細資訊，請參閱[在大量匯入中採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
  TABLOCKX  
  指定獨佔鎖定是在資料表上取得。  
@@ -403,7 +403,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ## <a name="filtered-index-hints"></a>已篩選的索引提示  
  已篩選的索引可以當做資料表提示使用，但是當它未涵蓋此查詢所選取的所有資料列時，會造成查詢最佳化工具產生錯誤 8622。 下列是無效之已篩選的索引提示範例。 此範例會建立已篩選的索引 `FIBillOfMaterialsWithComponentID`，然後將它當做 SELECT 陳述式的索引提示使用。 已篩選的索引述詞包括 ComponentID 533、324 和 753 的資料列。 此查詢述詞也包含 ComponentID 533、324 和 753 的資料列，但是會擴充結果集，使其包含 ComponentID 855 和 924 (這兩者不在已篩選的索引中)。 因此，查詢最佳化工具無法使用已篩選的索引提示，而且會產生錯誤 8622。 如需詳細資訊，請參閱 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithComponentID'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -463,7 +463,7 @@ GO
 ### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. 使用 FORCESEEK 提示指定索引搜尋作業  
  以下範例會使用 FORCESEEK 提示但不指定索引，強制查詢最佳化工具對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `Sales.SalesOrderDetail` 資料表執行索引搜尋作業。  
   
-```  
+```sql
 SELECT *  
 FROM Sales.SalesOrderHeader AS h  
 INNER JOIN Sales.SalesOrderDetail AS d WITH (FORCESEEK)  

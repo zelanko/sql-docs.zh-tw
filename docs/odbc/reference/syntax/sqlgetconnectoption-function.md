@@ -1,23 +1,28 @@
 ---
-title: "SQLGetConnectOption 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLGetConnectOption 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLGetConnectOption
-apilocation: sqlsrv32.dll
+apiname:
+- SQLGetConnectOption
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetConnectOption
-helpviewer_keywords: SQLGetConnectOption function [ODBC]
+f1_keywords:
+- SQLGetConnectOption
+helpviewer_keywords:
+- SQLGetConnectOption function [ODBC]
 ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

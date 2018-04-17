@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_plan_attributes_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9a90a964bd8c1fce911e62ac9081b47d349e0a5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 43078471bab42b6249f89e4b17536b8aea6cc5d9
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,9 +67,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |dbid|**int**|這是包含此計畫參考之實體的資料庫識別碼。<br /><br /> 若為特定或準備計畫，這是執行批次的來源資料庫識別碼。|  
 |dbid_execute|**int**|系統物件儲存在**資源**資料庫、 快取的計畫執行時所在的資料庫識別碼。 在所有其他狀況下，就會是 0。|  
 |user_id|**int**|-2 值表示提交的批次不會隨著隱含的名稱解析而不同，不同的使用者可以共用這些批次。 這是慣用的方法。 任何其他值都代表在資料庫中提交查詢之使用者的使用者識別碼。| 
-|language_id|**smallint**|建立快取物件之連接的語言識別碼。 如需詳細資訊，請參閱[sys.syslanguages &#40;TRANSACT-SQL &#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
-|date_format|**smallint**|建立快取物件之連接的日期格式。 如需詳細資訊，請參閱[SET DATEFORMAT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
-|date_first|**tinyint**|先顯示日期的值。 如需詳細資訊，請參閱[SET DATEFIRST &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
+|language_id|**smallint**|建立快取物件之連接的語言識別碼。 如需詳細資訊，請參閱[sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
+|date_format|**smallint**|建立快取物件之連接的日期格式。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)。|  
+|date_first|**tinyint**|先顯示日期的值。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)。|  
 |status|**int**|屬於快取查閱索引鍵一部分的內部狀態位元。|  
 |required_cursor_options|**int**|使用者指定的資料指標選項，例如資料指標類型。|  
 |acceptable_cursor_options|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會隱含轉換的目標資料指標選項，以支援執行陳述式。 例如，使用者可能指定動態資料指標，但查詢最佳化工具可以將這種資料指標類型轉換成靜態資料指標。|  
@@ -87,10 +87,10 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |merge_action_type|**smallint**|當做 MERGE 陳述式結果使用之觸發程序執行計畫的類型。<br /><br /> 0 表示非觸發程序計畫、不會當做 MERGE 陳述式結果執行的觸發程序計畫，或是當做 MERGE 陳述式結果執行的觸發程序計畫 (此陳述式只會指定 DELETE 動作)。<br /><br /> 1 表示會當做 MERGE 陳述式結果執行的 INSERT 觸發程序計畫。<br /><br /> 2 表示會當做 MERGE 陳述式結果執行的 UPDATE 觸發程序計畫。<br /><br /> 3 表示會當做包含對應 INSERT 或 UPDATE 動作之 MERGE 陳述式結果執行的 DELETE 觸發程序計畫。<br /><br /> 如果是依據串聯式動作執行的巢狀觸發程序，這個值會是造成串聯之 MERGE 陳述式的動作。|  
   
 ## <a name="permissions"></a>Permissions  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要在伺服器上的 VIEW SERVER STATE 權限。  
-  
- 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 層需要資料庫的 VIEW DATABASE STATE 權限。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]標準和基本層需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]系統管理員帳戶。  
-  
+
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+
 ## <a name="remarks"></a>備註  
   
 ## <a name="set-options"></a>Set 選項  
@@ -144,7 +144,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |STATIC|2048|  
 |FAST_FORWARD|4096|  
 |IN PLACE|8192|  
-|如*select_statement*|16384|  
+|FOR *select_statement*|16384|  
   
 ## <a name="examples"></a>範例  
   
@@ -176,7 +176,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_cached_plans &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  

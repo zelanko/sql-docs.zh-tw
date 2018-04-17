@@ -1,16 +1,16 @@
 ---
 title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/14/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC INPUTBUFFER
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 
+caps.latest.revision: 51
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f3292b45e9a0e73754bc4f3247c18c431f11271a
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 SELECT @@spid;  
 ```
   
-在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 層需要資料庫中的 VIEW DATABASE STATE 權限。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準和基本層需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 系統管理員帳戶。
+在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階和業務關鍵層上需要資料庫中的 VIEW DATABASE STATE 權限。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準、基本，和一般用途層上需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 系統管理員帳戶。
   
 ## <a name="examples"></a>範例  
 下列範例會在先前的連接執行長交易時，在第二個連接上執行 `DBCC INPUTBUFFER`。

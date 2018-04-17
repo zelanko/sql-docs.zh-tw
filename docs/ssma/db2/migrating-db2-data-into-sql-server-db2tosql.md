@@ -1,30 +1,31 @@
 ---
-title: "將 DB2 資料移轉至 SQL Server (DB2ToSQL) |Microsoft 文件"
+title: 將 DB2 資料移轉至 SQL Server (DB2ToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7249a757ecc1c7c8fb88687953eed93e98890d45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0714e217aff8f6aa728bbc401472b9b538add968
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>將 DB2 資料移轉至 SQL Server (DB2ToSQL)
 已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以將資料移轉至 DB2 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > 如果執行個體上未安裝 DB2 延伸模組組件的 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，如果**伺服器端資料移轉引擎**已選取，然後同時將資料移轉到目標資料庫，發生下列錯誤: ' SSMA 資料移轉元件找不到 SQL Server 上無法進行伺服器端資料移轉。 請檢查是否已正確安裝延伸模組組件 '。 按一下**取消**終止資料移轉。  
   
-5.  在**連接到 DB2**對話方塊中，輸入連接的認證，然後按一下**連接**。 如需有關如何連接到 DB2 的詳細資訊，請參閱[連接到 DB2 資料庫 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+5.  在**連接到 DB2**對話方塊中，輸入連接的認證，然後按一下**連接**。 如需有關如何連接到 DB2 的詳細資訊，請參閱[連接到 DB2 資料庫&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
     連接到目標資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，輸入中的連接認證**連接到 SQL Server**對話方塊中，然後按一下**連接**。 如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱[連接到 SQL Server](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
@@ -107,6 +108,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 > SQL Express edition 做為目標資料庫使用時，允許只有用戶端端資料移轉，且不支援伺服器端資料移轉。  
   
-## <a name="see-also"></a>請參閱  
-[將 DB2 資料移轉到 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+## <a name="see-also"></a>另請參閱  
+[將 DB2 資料移轉至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

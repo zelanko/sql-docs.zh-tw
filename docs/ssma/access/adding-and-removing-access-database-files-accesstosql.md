@@ -1,15 +1,16 @@
 ---
-title: "加入和移除存取資料庫檔案 (AccessToSQL) |Microsoft 文件"
+title: 加入和移除存取資料庫檔案 (AccessToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - scanning for database files
 - searching for database files
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64e1bc5dd6b78df1f24ee03b65cfdf6b796c0e39
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9553d01b1fb8c96281fd108d84645d785bd9f028
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>加入和移除 Access 資料庫檔案 (AccessToSQL)
 若要存取將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您必須加入一個或多個 Access 資料庫的 SSMA 專案。 這些資料庫必須 Access 97 或更新版本。 如果您的資料庫從舊版的存取權，您必須將資料庫轉換為較新版本。 您這麼做，開啟並儲存資料庫 Access 97 或更新版本中，您將它們加入 SSMA 之前。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
     您可以使用**全選**和**全部清除**加以選取或清除所有的資料庫清單頂端的按鈕。 您可以按住 CTRL 鍵以選取多個資料庫，或按住 SHIFT 鍵向選取的資料庫的範圍。  
   
-7.  按 [下一步] 。  
+7.  按一下 **[下一步]**。  
   
 8.  在確認頁面上，按一下 **完成**。  
   
@@ -140,7 +141,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[連接到 SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [建立及管理專案](http://msdn.microsoft.com/en-us/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
   

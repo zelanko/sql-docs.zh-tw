@@ -18,16 +18,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: ''
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27b4acf9192c74ec3c9535d9ed35a477c5a5f5d0
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: af185275ebb9a886b929f0b91b12a46ad6d30c8b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,9 +105,7 @@ OGC 的 SQL 簡單特徵規格討論了外部環形和內部環形，但是這�
 >  如果針對圓弧線段提供了 Z 值，則圓弧線段中所有點的這些值都必須相同，系統才會接受輸入。 例如：系統可接受 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` ，但無法接受 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 。  
 
 ### <a name="linestring-and-circularstring-comparison"></a>LineString 和 CircularString 的比較  
-下圖顯示完全相同的等腰三角形 (三角形 A 會使用直線線段來定義三角形，而三角形 B 則使用圓弧線段來定義三角形)：  
-
-![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) 此範例示範如何使用 **LineString** 執行個體和 **CircularString** 執行個體來儲存上述等腰三角形：  
+此範例會示範如何使用 **LineString** 執行個體和 **CircularString** 執行個體來儲存完全相同的等腰三角形：  
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -135,11 +133,7 @@ LS LengthCS Length
 5.65685…6.28318…
 ```
 
-下圖顯示每種類型的儲存方式 (紅線顯示 **LineString**`@g1`，藍線顯示 **CircularString**`@g2`)：  
-
-![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
-
-如上圖所示， **CircularString** 執行個體會使用較少的點來儲存曲線界限，而精確度卻高於 **LineString** 執行個體。 **CircularString** 執行個體適合用於儲存圓形邊界，像是從特定點起算的二十英哩搜尋半徑。 **LineString** 執行個體適合用於儲存線性邊界，像是方形的城市街區。  
+**CircularString** 執行個體會使用較少的點來儲存曲線界限，而精確度卻高於 **LineString** 執行個體。 **CircularString** 執行個體適合用於儲存圓形邊界，像是從特定點起算的二十英哩搜尋半徑。 **LineString** 執行個體適合用於儲存線性邊界，像是方形的城市街區。  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比較  
 下列程式碼範例會示範如何使用 **LineString** 和 **CompoundCurve** 執行個體來儲存相同的圖形：

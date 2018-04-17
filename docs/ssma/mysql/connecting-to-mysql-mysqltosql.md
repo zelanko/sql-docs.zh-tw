@@ -1,15 +1,16 @@
 ---
-title: "連接至 MySQL (MySQLToSQL) |Microsoft 文件"
+title: 連接至 MySQL (MySQLToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Connecting to MySQL, MySQL permission
 - Connecting to MySQL,reconnecting
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 291f10d4f045747266297287903ba4cf900c09c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5b36b626d611896a5af496a0ae02d25dcf44ac83
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>連接至 MySQL (MySQLToSQL)
 若要移轉至 SQL Server 或 SQL Azure 的 MySQL 資料庫，您必須連接到您想要移轉的 MySQL 資料庫。 當您連線時，SSMA 會取得所有 MySQL 結構描述的相關中繼資料中，然後顯示 MySQL 中繼資料總管 窗格中。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
@@ -90,7 +91,7 @@ MySQL 資料庫的相關中繼資料不會自動更新。 相反地，如果您�
     > -   **確定**按鈕已啟用時未提供必要的資訊。 如果任一檔案路徑無效，將會維持停用 [確定] 按鈕。  
     > -   **取消**按鈕關閉對話方塊和**關閉**SSL 選項，從主要的連線表單。  
   
-7.  如需詳細資訊，請參閱[連接到 MySQL &#40;MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+7.  如需詳細資訊，請參閱[連接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
 ## <a name="reconnecting-to-mysql"></a>重新連接到 MySQL  
 資料庫伺服器的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連接，如果您想要的使用中連接到資料庫。 您要更新中繼資料，請載入 SQL Server 或 SQL Azure 的資料庫物件並移轉資料之前，您可以離線工作。  
@@ -118,11 +119,11 @@ MySQL 資料庫的相關中繼資料不會自動重新整理。 MySQL 中繼資�
   
     -   若要檢視定義的色彩編碼，請按一下**圖例** 按鈕。  
   
-5.  按一下 [確定] 。  
+5.  按一下 **[確定]**。  
   
 ## <a name="next-step"></a>下一個步驟  
-移轉程序的下一個步驟是[連接到 SQL Server &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+移轉程序的下一個步驟是[連接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>另請參閱  
+[移轉的 MySQL 資料庫到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

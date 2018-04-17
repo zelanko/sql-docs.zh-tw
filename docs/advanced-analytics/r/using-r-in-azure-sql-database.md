@@ -1,25 +1,23 @@
 ---
-title: "在 Azure SQL Database 中使用 R |Microsoft 文件"
-ms.custom: 
+title: 在 Azure SQL Database 中使用 R |Microsoft 文件
+ms.custom: ''
 ms.date: 01/08/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 0443f23518e0630dfde862d141d622cc2b978bfb
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: 0ade9fc695e1072593c709bd89635310648ed0ce
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-r-in-azure-sql-database"></a>在 Azure SQL Database 中使用 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

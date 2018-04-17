@@ -1,16 +1,16 @@
 ---
-title: "sp_addmergepublication (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addmergepublication (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,7 +20,7 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -123,7 +123,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  使合併式發行集能夠使用參數化資料列篩選器。 *dynamic_filters*是**nvarchar （5)**，預設值是 FALSE。  
   
 > [!NOTE]  
->  您不應該指定這個參數，而應允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動判斷是否正在使用參數化資料列篩選器。 如果您指定的值**true**如*dynamic_filters*，您必須定義發行項的參數化資料列篩選。 如需詳細資訊，請參閱 [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+>  您不應該指定這個參數，而應允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動判斷是否正在使用參數化資料列篩選器。 如果您指定的值**true**如*dynamic_filters*，您必須定義發行項的參數化資料列篩選。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
  [  **@snapshot_in_defaultfolder =** ] **'***snapshot_in_default_folder***'**  
  指定是否將快照集檔案儲存在預設資料夾中。 *snapshot_in_default_folder*是**nvarchar （5)**，預設值是 TRUE。 如果**true**，可以在預設資料夾中找到快照集檔案。 如果**false**，快照集檔案會儲存在所指定的替代位置*alternate_snapshot_folder*。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在檔案傳輸通訊協定 (FTP) 網站中，供訂閱者以後擷取它們。 請注意，這個參數可以是 true，仍有指定的位置*alt_snapshot_folder*。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。  
@@ -138,7 +138,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  指定指向**.sql**檔案位置。 *post_snapshot_script*是**nvarchar （255)**，預設值是 NULL。 在初始同步處理期間，合併代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (Post-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在合併代理程式所用的安全性內容中執行。 後快照集指令碼並非執行於[!INCLUDE[ssEW](../../includes/ssew-md.md)]「 訂閱者 」。  
   
  [  **@compress_snapshot =** ] **'***compress_snapshot***'**  
- 指定可寫入快照 **@alt_snapshot_folder** 位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar （5)**，預設值是 FALSE。 **false**指定，將不壓縮快照集;**true**指定壓縮快照集。 超出 2GB 的快照集檔案無法壓縮。 壓縮的快照集檔案是在執行合併代理程式的位置進行解壓縮；提取訂閱通常會搭配使用壓縮的快照集，因此，會在訂閱者端將檔案解壓縮。 預設資料夾中的快照集無法壓縮。 若要支援[!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者，您必須指定**false**。  
+ 指定可寫入快照**@alt_snapshot_folder**位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar （5)**，預設值是 FALSE。 **false**指定，將不壓縮快照集;**true**指定壓縮快照集。 超出 2GB 的快照集檔案無法壓縮。 壓縮的快照集檔案是在執行合併代理程式的位置進行解壓縮；提取訂閱通常會搭配使用壓縮的快照集，因此，會在訂閱者端將檔案解壓縮。 預設資料夾中的快照集無法壓縮。 若要支援[!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者，您必須指定**false**。  
   
  [  **@ftp_address =** ] **'***ftp_address***'**  
  這是散發者之 FTP 服務的網路位址。 *ftp_address*是**sysname**，預設值是 NULL。 指定發行集快照集檔案所在的位置，以便訂閱者的合併代理程式能夠加以收取。 因為這個屬性會儲存每個發行集，每個發行集可以有不同的*ftp_address*。 發行集必須支援利用 FTP 來傳播快照集。  
@@ -219,11 +219,11 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@replicate_ddl =** ] *replicate_ddl*  
  指出是否支援發行集的結構描述複寫。 *replicate_ddl*是**int**，預設值是 1。 **1**表示複寫在發行者端執行的資料定義語言 (DDL) 陳述式，和**0**表示不複寫 DDL 陳述式。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
- *@replicate_ddl*  DDL 陳述式將資料行時，會接受一個參數。 *@replicate_ddl*  DDL 陳述式改變或卸除資料行，基於下列原因時，參數會被忽略。  
+ *@replicate_ddl* DDL 陳述式將資料行時，會接受一個參數。 *@replicate_ddl* DDL 陳述式改變或卸除資料行，基於下列原因時，參數會被忽略。  
   
--   卸除資料行後，必須更新 sysarticlecolumns，以避免新的 DML 陳述式包括已卸除資料行而造成散發代理程式失敗。 *@replicate_ddl* 參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
+-   卸除資料行後，必須更新 sysarticlecolumns，以避免新的 DML 陳述式包括已卸除資料行而造成散發代理程式失敗。 *@replicate_ddl*參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
   
--   當更改資料行時，來源資料類型或 Null 屬性可能已變更，造成 DML 陳述式包含的值可能與散發者端的資料表不相容。 這類 DML 陳述式可能會造成散發代理程式失敗。 *@replicate_ddl* 參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
+-   當更改資料行時，來源資料類型或 Null 屬性可能已變更，造成 DML 陳述式包含的值可能與散發者端的資料表不相容。 這類 DML 陳述式可能會造成散發代理程式失敗。 *@replicate_ddl*參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
   
 -   Sysarticlecolumns DDL 陳述式加入新的資料行，不包括新的資料行。 DML 陳述式不會嘗試複寫新資料行的資料。 接受此參數是因為可接受複寫或不複寫 DDL。  
   
@@ -256,7 +256,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  指定某個層代中包含的變更數目。 層代是指傳遞給發行者或訂閱者的變更集合。 *generation_leveling_threshold*是**int**，預設值是 1000年。  
   
  [  **@automatic_reinitialization_policy =** ] *automatic_reinitialization_policy*  
- 指定是否從訂閱者的值，所需的變更發行集，在自動重新初始化之前上傳變更**1**指定 **@force_reinit_subscription** 。 *automatic_reinitialization_policy* bit，預設值為 0。 **1**表示自動重新初始化之前，會從訂閱者上載變更。  
+ 指定是否從訂閱者的值，所需的變更發行集，在自動重新初始化之前上傳變更**1**指定**@force_reinit_subscription**。 *automatic_reinitialization_policy* bit，預設值為 0。 **1**表示自動重新初始化之前，會從訂閱者上載變更。  
   
 > [!IMPORTANT]  
 >  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
@@ -277,7 +277,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_addmergepublication**用於合併式複寫中。  
   
- 清單的發行集物件到 Active Directory 使用 **@add_to_active_directory** 參數，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須已在 Active Directory 中建立物件。  
+ 清單的發行集物件到 Active Directory 使用**@add_to_active_directory**參數，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須已在 Active Directory 中建立物件。  
   
  如果存在多個發行集的發行相同的資料庫物件，使用的發行集*replicate_ddl*值**1** ALTER TABLE、 ALTER VIEW、 ALTER PROCEDURE、 ALTER FUNCTION，將複寫和ALTER TRIGGER DDL 陳述式。 不過，所有發行已卸除之資料行的發行集都會複寫 ALTER TABLE DROP COLUMN DDL 陳述式。  
   

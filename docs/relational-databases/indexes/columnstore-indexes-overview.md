@@ -1,16 +1,16 @@
 ---
-title: "資料行存放區索引 - 概觀 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2016
+title: 資料行存放區索引 - 概觀 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexes creation, columnstore
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 
+caps.latest.revision: 80
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7a01a3b1aab2ffa1850434928f4de3bce39bcd4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: df76c7156e506fa9e01763e8f12ba1873c943f0e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="columnstore-indexes---overview"></a>資料行存放區索引 - 概觀
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,12 +74,16 @@ ms.lasthandoff: 02/12/2018
   
  為了減少資料行區段的分散程度並改善效能，資料行存放區索引可能會暫時將一些資料儲存到叢集索引 (稱為差異存放區)，並儲存已刪除之資料列識別碼的 BTree 清單。 差異存放區作業將由幕後處理。 為了能傳回正確的查詢結果，叢集資料行存放區索引會結合資料行存放區和差異存放區兩方面的查詢結果。  
   
- 差異存放區  
- 「差異存放區」是僅限搭配叢集資料行存放區索引使用的叢集索引，藉由儲存資料列直到資料列數達到臨界值後移入資料行存放區，來改善資料行存放區的壓縮和效能。  
+ 差異資料列群組  
+ 「差異資料列群組」是僅限搭配資料行存放區索引使用的叢集索引，藉由儲存資料列直到資料列數達到臨界值後移入資料行存放區，來改善資料行存放區的壓縮和效能。  
+
+ 差異資料列群組一旦達到資料列數目上限，就會隨即關閉。 Tuple Mover 處理序將檢查是否有資料列群組已關閉。 只要一發現已關閉的資料列群組，處理序便會予以壓縮並儲存至資料行存放區。  
   
- 在大規模的大量載入過程中，大多數資料列會直接進入資料行存放區，而不經過差異存放區。 大量載入結束時，某些資料列可能因為數量太少，而不符合資料列群組 102,400 個資料列的大小下限。 發生這種情況時，最後這些資料列就會進入差異存放區，而不是資料行存放區。 若是少於 102,400 個資料列的小規模大量載入，則所有資料列都將直接進入差異存放區。  
+差異存放區資料行存放區索引可以有多個差異資料列群組。  所有差異資料列群組統稱為「差異存放區」。   
+
+在大規模的大量載入過程中，大多數資料列會直接進入資料行存放區，而不經過差異存放區。 大量載入結束時，某些資料列可能因為數量太少，而不符合資料列群組 102,400 個資料列的大小下限。 發生這種情況時，最後這些資料列就會進入差異存放區，而不是資料行存放區。 若是少於 102,400 個資料列的小規模大量載入，則所有資料列都將直接進入差異存放區。  
   
- 差異存放區一旦達到資料列數目上限，就會隨即關閉。 Tuple Mover 處理序將檢查是否有資料列群組已關閉。 只要一發現已關閉的資料列群組，處理序便會予以壓縮並儲存至資料行存放區。  
+
   
  非叢集資料行存放區索引  
  「非叢集資料行存放區索引」和叢集資料行存放區索引的功能相同。 差別在於非叢集索引是建立在資料列存放區資料表上的次要索引，而叢集資料行存放區索引則是整個資料表的主要儲存體。  

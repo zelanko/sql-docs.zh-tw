@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_wait_stats_TSQL
@@ -22,21 +22,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: 
-author: stevestein
-ms.author: sstein
+caps.latest.revision: 111
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: afc91e5254a85d0863f2461e50d9ec55e0cb5bbd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c37a8f78d18a3315c188959f2f8403ef055c3155
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回執行中之執行緒所遇到之所有等候的相關資訊。 您可以使用這份彙總檢視來診斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能問題，以及特定查詢和批次的效能問題。 [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)提供類似的工作階段的資訊。  
+傳回執行中之執行緒所遇到之所有等候的相關資訊。 您可以使用這份彙總檢視來診斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能問題，以及特定查詢和批次的效能問題。 [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)提供類似的工作階段的資訊。  
   
 > [!NOTE] 
 > 若要呼叫從**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** ，使用名稱**sys.dm_pdw_nodes_os_wait_stats**。  
@@ -50,11 +50,12 @@ ms.lasthandoff: 02/03/2018
 |signal_wait_time_ms|**bigint**|從等候執行緒接獲訊號到開始執行的時間。|  
 |pdw_node_id|**int**|此發行版本上的節點識別碼。 <br/> **適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
-  
-##  <a name="WaitTypes"></a>等候的類型  
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+
+##  <a name="WaitTypes"></a> 等候的類型  
  **資源等候**工作者要求存取無法使用，因為正由其他背景工作的資源，或沒有可用的資源時，就會發生資源等候。 鎖定、閂鎖、網路和磁碟 I/O 等候，都是資源等候的範例。 鎖定和閂鎖等候是同步處理物件的等候。  
   
 **佇列等候**  
@@ -943,7 +944,7 @@ GO
 |WAIT_XTP_CKPT_CLOSE |當等候檢查點作業完成時發生。， <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_CKPT_ENABLED |若要啟用已停用，且正在等候檢查點檢查點時，就會發生。， <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_CKPT_STATE_LOCK |同步處理查看檢查點狀態時，就會發生。， <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|WAIT_XTP_COMPILE_WAIT |TBD <br /> **適用對象**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|WAIT_XTP_COMPILE_WAIT |TBD <br /> **適用對象**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_GUEST |資料庫記憶體配置器需要停止接收記憶體不足通知時發生。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_HOST_WAIT |發生於等候是 database engine 所觸發，並由主機所實作。， <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -1014,7 +1015,7 @@ GO
 |XTPPROC_PARTITIONED_STACK_CREATE |指定程序中配置每個 NUMA 節點的原生編譯預存程序快取結構 （必須以單一執行緒） 時，就會發生。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
 
   
- 下列 Xevent 與資料分割相關**交換器**和線上索引重建。 如需語法的詳細資訊，請參閱[ALTER TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md)和[ALTER INDEX &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+ 下列 Xevent 與資料分割相關**交換器**和線上索引重建。 如需語法的詳細資訊，請參閱[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)和[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
 -   lock_request_priority_state  
   
@@ -1022,13 +1023,13 @@ GO
   
 -   ddl_with_wait_at_low_priority  
   
- 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
+ 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
     
- [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys.dm_db_wait_stats &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   
 

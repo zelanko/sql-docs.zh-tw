@@ -1,24 +1,24 @@
 ---
-title: "[授與權限]"
+title: '[授與權限]'
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="grant-permissions"></a>[授與權限]
 
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 -->
 
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>若要監視的應用裝置的權限授與
-SQL Server PDW 應用裝置可以使用 系統管理員主控台 或 SQL Server PDW 系統檢視表來監視。 登入需要伺服器層級**VIEW SERVER STATE**監視的應用裝置的權限。 登入需要**ALTER ANY CONNECTION**終止使用系統管理員主控台連線的權限或**KILL**命令。 如需使用管理主控台所需的權限資訊，請參閱[使用管理主控台 &#40; 授與權限SQL Server PDW &#41;](#grant-permissions-to-use-the-admin-console).  
+SQL Server PDW 應用裝置可以使用 系統管理員主控台 或 SQL Server PDW 系統檢視表來監視。 登入需要伺服器層級**VIEW SERVER STATE**監視的應用裝置的權限。 登入需要**ALTER ANY CONNECTION**終止使用系統管理員主控台連線的權限或**KILL**命令。 如需使用管理主控台所需的權限資訊，請參閱[授與權限可使用管理主控台&#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console)。  
   
 ### <a name="PermsAdminConsole"></a>使用系統檢視表來監視應用裝置的權限授與  
 下列 SQL 陳述式建立名為登入`monitor_login`並且授與**VIEW SERVER STATE**權限`monitor_login`登入。  

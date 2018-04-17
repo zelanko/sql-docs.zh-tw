@@ -1,16 +1,16 @@
 ---
-title: "sp_MSchange_merge_agent_properties (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_MSchange_merge_agent_properties (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_MSchange_merge_agent_properties_TSQL
@@ -18,7 +18,7 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_merge_agent_properties
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -50,7 +50,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher**  =] **'***發行者***'**  
+ [ **@publisher** =] **'***發行者***'**  
  這是發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
@@ -101,7 +101,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**散發者端的固定的伺服器角色可以執行**sp_MSchange_merge_agent_properties**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [sp_addmergepushsubscription_agent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
  [sp_addmergesubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   

@@ -1,19 +1,21 @@
 ---
-title: "考慮要使用的資料庫功能 |Microsoft 文件"
-ms.custom: 
+title: 考慮要使用的資料庫功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: interoperability [ODBC], database features
+helpviewer_keywords:
+- interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

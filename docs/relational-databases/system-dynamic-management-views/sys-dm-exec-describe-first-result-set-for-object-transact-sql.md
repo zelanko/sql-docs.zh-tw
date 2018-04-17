@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_describe_first_result_set_for_object (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set_for_object_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bcdb3bd85543ae5feeb4b224350a5b72a2d95f7b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   此動態管理函數接受@object_id做為參數，並描述具有該識別碼之模組的第一個結果中繼資料 @object_id指定可以是識別碼[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序或[!INCLUDE[tsql](../../includes/tsql-md.md)]觸發程序。 如果是任何其他物件 (例如檢視表、資料表、函數或 CLR 程序) 的識別碼，結果的錯誤資料行中會指定錯誤。  
   
- **sys.dm_exec_describe_first_result_set_for_object**有相同的結果集定義，並以[sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ，類似於[sp_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set_for_object**有相同的結果集定義，並以[sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ，類似於[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>引數  
  *@object_id*  
- @object_id的[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序或[!INCLUDE[tsql](../../includes/tsql-md.md)]觸發程序。 @object_id型別**int**。  
+ @object_id的[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序或[!INCLUDE[tsql](../../includes/tsql-md.md)]觸發程序。 @object_id 型別**int**。  
   
  *@include_browse_information*  
- @include_browse_information型別**元**。 如果設定為 1，就會分析每個查詢，如同查詢上有 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
+ @include_browse_information 型別**元**。 如果設定為 1，就會分析每個查詢，如同查詢上有 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
   
 ## <a name="table-returned"></a>傳回的資料表  
  這個通用的中繼資料會當做結果集來傳回，而結果中繼資料中的每個資料行都會有一個資料列。 每個資料列都會使用下一節所描述的格式來描述資料行的類型和 Null 屬性。 如果每個控制項路徑都沒有第一個陳述式，就會傳回具有零個資料列的結果集。  
@@ -103,7 +103,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type_desc**|**nvarchar(60)**|包含簡短大寫字串，表示要傳回的錯誤。 對應到 error_type。 請參閱備註下的清單。|  
   
 ## <a name="remarks"></a>備註  
- 此函式使用相同的演算法為**sp_describe_first_result_set**。 如需詳細資訊，請參閱[sp_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ 此函式使用相同的演算法為**sp_describe_first_result_set**。 如需詳細資訊，請參閱[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  下表列出錯誤類型及其說明。  
   

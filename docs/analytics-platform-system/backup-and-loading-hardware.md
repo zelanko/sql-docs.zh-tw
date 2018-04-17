@@ -1,25 +1,25 @@
 ---
-title: "備份及載入 AP PDW 硬體概觀"
+title: 備份及載入 AP PDW 硬體概觀
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "若要部署您端對端的資料倉儲方案 Analytics Platform System (AP) 與 SQL Server Parallel Data Warehouse (PDW)，您需要建立計畫來備份資料倉儲及載入資料。"
+description: 若要部署您端對端的資料倉儲方案 Analytics Platform System (AP) 與 SQL Server Parallel Data Warehouse (PDW)，您需要建立計畫來備份資料倉儲及載入資料。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
-caps.latest.revision: "9"
-ms.openlocfilehash: 91348b3cb936556cbfe4b2c515c6d32e38913618
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 8979b0d7b14f3e6b3de2834fdc800c5281d057ad
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="backup-and-loading-hardware-overview"></a>備份及載入硬體概觀
 若要部署您端對端的資料倉儲方案 Analytics Platform System (AP) 與 SQL Server Parallel Data Warehouse (PDW)，您需要建立計畫來備份資料倉儲及載入資料。 您可以使用該指引來取得和設定備份及載入的伺服器，以滿足您的業務需求。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 若要載入資料，您需要一或多個載入伺服器。 您可以使用您自己現有的 ETL 或其他伺服器，或者，您可以購買新的伺服器。 如需詳細資訊，請參閱[取得和設定來載入伺服器](acquire-and-configure-loading-server.md)。 這些指示包含[載入伺服器容量規劃工作表](loading-server-capacity-planning-worksheet.md)可協助您規劃載入正確的方案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [備份和還原的概觀](backup-and-restore-overview.md)  
 [負載概觀](load-overview.md)  
   

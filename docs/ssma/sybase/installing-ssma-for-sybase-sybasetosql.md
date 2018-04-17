@@ -1,33 +1,34 @@
 ---
-title: "SSMA 安裝 SAP ASE (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: SSMA 安裝 SAP ASE (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 508af2c209711c6063ee58243a29066323b641f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4f926ea51868f7833b3b275602d4e241fc18e327
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>安裝的 SSMA for SAP ASE (SybaseToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 的 SAP Adaptive Server Enterprise (ASE) 包含您用來執行移轉以 SAP ASE 從用戶端應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。 它也包含支援資料移轉和 ASE 系統函式的使用在您移轉之資料庫中的延伸模組組件。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) 的 SAP Adaptive Server Enterprise (ASE) 包含您用來執行移轉以 SAP ASE 從用戶端應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。 它也包含支援資料移轉和 ASE 系統函式的使用在您移轉之資料庫中的延伸模組組件。  
   
 在您打算執行移轉步驟的電腦上安裝用戶端應用程式。 安裝在正在執行的電腦上的延伸模組組件檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]上所裝載的已移轉的資料庫。  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="contents"></a>目錄  
   
-|發行項|描述|  
+|發行項|Description|  
 |---------|---------------|  
-|[針對 SAP ASE 用戶端 &#40; 安裝 SSMASybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|提供資訊和安裝的 SSMA for SAP ASE 用戶端的指示。|  
-|[在 SQL Server &#40; 安裝 SSMA 元件SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|提供相關資訊與執行個體上安裝的延伸模組組件的指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
-|[移除 SSMA SAP ASE 元件 &#40;SybaseToSQL &#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|說明如何解除安裝用戶端程式和延伸模組組件。|  
+|[SAP ASE 用戶端安裝 SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|提供資訊和安裝的 SSMA for SAP ASE 用戶端的指示。|  
+|[安裝 SQL Server 上的 SSMA 元件&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|提供相關資訊與執行個體上安裝的延伸模組組件的指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
+|[移除 SSMA for SAP ASE 元件&#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|說明如何解除安裝用戶端程式和延伸模組組件。|  
   
 ## <a name="see-also"></a>另請參閱  
-[SAP ASE 將資料庫移轉至 SQL Server-Azure SQL Database &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server-Azure SQL Database 的資料庫移轉 SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

@@ -10,7 +10,7 @@ ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -24,11 +24,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 776562d89a12b544d6edbe475358067b39b58988
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 3607b4a5476a85c839e3a6d2e3801a0b378bef15
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>使用 OLE DB 驅動程式中的連接字串關鍵字，適用於 SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,6 +94,7 @@ ms.lasthandoff: 03/30/2018
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|容錯移轉夥伴的 SPN。 預設值為空字串。 空字串會讓 OLE DB 驅動程式的 SQL Server 使用預設值，提供者產生的 SPN。|  
 |**語言**|SSPROPT_INIT_CURRENTLANGUAGE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 語言。|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|當伺服器為 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本時，啟用或停用連接上的 Multiple Active Result Sets (MARS)。 可能的值為 "yes" 和 "no"。 預設值為 "no"。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|請務必指定**MultiSubnetFailover = Yes**連接到可用性群組接聽程式時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性群組或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容錯移轉叢集執行個體。 **MultiSubnetFailover = Yes**設定 OLE DB 驅動程式提供更快速偵測與連接 （目前） 使用中伺服器的 SQL server。 可能的值為 [是] 和 [否]。 預設值是**否**。 例如：<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 如需 OLE DB 驅動程式的 SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[OLE DB 驅動程式的高可用性、 災害復原的 SQL Server 支援](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|"Network" 的同義字。|  
 |**網路**|SSPROP_INIT_NETWORKLIBRARY|用來建立組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之連接的網路程式庫。|  
 |**網路程式庫**|SSPROP_INIT_NETWORKLIBRARY|"Network" 的同義字。|  
@@ -149,6 +150,7 @@ ms.lasthandoff: 03/30/2018
 |**初始檔案名稱**|SSPROP_INIT_FILENAME|可附加資料庫的主要檔案名稱，包括完整路徑名稱。 若要使用**AttachDBFileName**，您也必須使用提供者字串 DATABASE 關鍵字指定資料庫名稱。 如果之前已附加資料庫，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它 (它會使用附加的資料庫當做連接的預設值)。|  
 |**整合式安全性**|DBPROP_AUTH_INTEGRATED|接受 "SSPI" 值進行 Windows 驗證。|  
 |**MARS 連接**|SSPROP_INIT_MARSCONNECTION|啟用或停用連接上的 Multiple Active Result Sets (MARS)。 認得的值為 "true" 和 "false"。 預設值為 "false"。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|請務必指定**MultiSubnetFailover = True**連接到可用性群組接聽程式時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性群組或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容錯移轉叢集執行個體。 **MultiSubnetFailover = True**設定 OLE DB 驅動程式提供更快速偵測與連接 （目前） 使用中伺服器的 SQL server。 可能的值為 **True** 和 **False**。 預設值為 **False**。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 如需 OLE DB 驅動程式的 SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[OLE DB 驅動程式的高可用性、 災害復原的 SQL Server 支援](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**網路位址**|SSPROP_INIT_NETWORKADDRESS|組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的網路位址。<br /><br /> 如需有關有效位址語法的詳細資訊，請參閱的描述**位址**關鍵字，本主題中的。|  
 |**網路程式庫**|SSPROP_INIT_NETWORKLIBRARY|用來建立組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之連接的網路程式庫。|  
 |**封包大小**|SSPROP_INIT_PACKETSIZE|網路封包大小。 預設值為 4096。|  
@@ -200,6 +202,7 @@ ms.lasthandoff: 03/30/2018
 |**初始檔案名稱**|SSPROP_INIT_FILENAME|可附加資料庫的主要檔案名稱，包括完整路徑名稱。 若要使用**AttachDBFileName**，您也必須使用提供者字串 DATABASE 關鍵字指定資料庫名稱。 如果之前已附加資料庫，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它 (它會使用附加的資料庫當做連接的預設值)。|  
 |**整合式安全性**|DBPROP_AUTH_INTEGRATED|接受 "SSPI" 值進行 Windows 驗證。|  
 |**MARS 連接**|SSPROP_INIT_MARSCONNECTION|當伺服器為 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本時，啟用或停用連接上的 Multiple Active Result Sets (MARS)。 認得的值為 "true" 和 "false"。預設值是 "false"。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|請務必指定**MultiSubnetFailover = True**連接到可用性群組接聽程式時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性群組或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容錯移轉叢集執行個體。 **MultiSubnetFailover = True**設定 OLE DB 驅動程式提供更快速偵測與連接 （目前） 使用中伺服器的 SQL server。 可能的值為 **True** 和 **False**。 預設值為 **False**。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 如需 OLE DB 驅動程式的 SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[OLE DB 驅動程式的高可用性、 災害復原的 SQL Server 支援](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**網路位址**|SSPROP_INIT_NETWORKADDRESS|組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的網路位址。<br /><br /> 如需有關有效位址語法的詳細資訊，請參閱的描述**位址**關鍵字，本主題中的。|  
 |**網路程式庫**|SSPROP_INIT_NETWORKLIBRARY|用來建立組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之連接的網路程式庫。|  
 |**封包大小**|SSPROP_INIT_PACKETSIZE|網路封包大小。 預設值為 4096。|  
@@ -215,6 +218,6 @@ ms.lasthandoff: 03/30/2018
  **請注意**在連接字串中，"Old Password"屬性會設定 SSPROP_AUTH_OLD_PASSWORD，這是不是透過提供者字串屬性目前的 （可能已過期） 密碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 OLE DB 驅動程式的 SQL Server 的建立應用程式](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [利用 OLE DB Driver for SQL Server 建置](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

@@ -1,31 +1,33 @@
 ---
-title: "疑難排解 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 疑難排解 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Sybase Console,Troubleshooting
+helpviewer_keywords:
+- Sybase Console,Troubleshooting
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28a845f17f96b4d48de6fdd7825998add2a1b2b5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e55d7db3efd06bea9610161d9a2b5cc2f779820d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="troubleshooting-sybasetosql"></a>疑難排解 (SybaseToSQL)
 不是屢見不鮮主控台指令碼或命令執行的移轉問題入該值。  

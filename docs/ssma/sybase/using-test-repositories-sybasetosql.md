@@ -1,31 +1,33 @@
 ---
-title: "使用測試儲存機制 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 使用測試儲存機制 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Tester Component,Test Repositories
+helpviewer_keywords:
+- Tester Component,Test Repositories
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef959c05f397a898d9c1e72adddd6b895eabf87d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 938f0dd71ea980af429591cf53bc8f6bd39e9b13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-test-repositories-sybasetosql"></a>使用測試儲存機制 (SybaseToSQL)
 SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供稍後使用。 儲存機制資料會儲存在 SQL Server 資料表**TestCaseRepository**和**RunTestCaseResultRepository**結構描述中**ssma_sybase_utilities**的**ssmatesterdb_syb**資料庫。  
@@ -57,7 +59,7 @@ SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供�
   
 -   按一下**編輯**執行測試案例精靈和變更所選的測試 按鈕。  
   
--   按一下**執行** 按鈕以開啟[執行測試案例 &#40;SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)對話方塊，並執行選取的測試。  
+-   按一下**執行** 按鈕以開啟[執行測試案例&#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md)對話方塊，並執行選取的測試。  
   
 ## <a name="test-results-repository"></a>測試結果儲存機制  
 您可以檢視測試結果儲存機制上**測試結果**頁面**儲存機制的測試案例**視窗。 按一下以開啟**測試結果...** 從**Tester**功能表。  
@@ -78,11 +80,11 @@ SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供�
   
 下列按鈕，可在測試結果 頁面上：  
   
--   按一下**檢視** 按鈕以開啟[檢視測試案例報表 &#40;SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)的目前的測試案例結果。  
+-   按一下**檢視** 按鈕以開啟[檢視測試案例報表&#40;SybaseToSQL&#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)的目前的測試案例結果。  
   
 -   按一下**刪除**按鈕，即可刪除選取的測試結果  
   
-## <a name="see-also"></a>請參閱  
-[執行測試案例 &#40;SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[測試移轉的資料庫物件 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[執行測試案例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[測試移轉的資料庫物件 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

@@ -1,16 +1,16 @@
 ---
 title: DBCC SQLPERF (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQLPERF
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-caps.latest.revision: 
+caps.latest.revision: 43
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cd615cd56860138d2e9afa7e2d7090ed27ba8e3a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ec1c32eb32b29fce5ea716c2a4e5255c7a46d445
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ WITH NO_INFOMSGS
 ## <a name="permissions"></a>Permissions  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行 `DBCC SQLPERF(LOGSPACE)` 需要伺服器的 `VIEW SERVER STATE` 權限。 若要重設等候和閂鎖統計資料，需要伺服器的 `ALTER SERVER STATE` 權限。
   
-在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 層需要資料庫的 `VIEW DATABASE STATE` 權限。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準和基本層需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 系統管理員帳戶。 不支援重設等候和閂鎖統計資料。
+在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階和業務關鍵層上需要資料庫中的 `VIEW DATABASE STATE` 權限。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準、基本，和一般用途層上需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 系統管理員帳戶。 不支援重設等候和閂鎖統計資料。
   
 ## <a name="examples"></a>範例  
   

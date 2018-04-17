@@ -1,15 +1,16 @@
 ---
-title: "建立指令碼檔案 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 建立指令碼檔案 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27c1d881b13dccecbe7d8fb66f8ea47376895f04
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9639d7527d910e61cd799ab616f10eb20b5262e4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-sybasetosql"></a>建立指令碼檔案 (SybaseToSQL)
 第一個步驟之前啟動 SSMA 主控台應用程式。 若要建立指令碼檔案，並在必要時建立的變數值的檔案和伺服器連接檔案。  
   
-指令碼檔案可以分成三個區段，viz。。，：  
+指令碼檔案可以分成三個區段，viz..,:  
   
 1.  **config:**可讓使用者設定的主控台應用程式的組態參數。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <…All commands…>  
@@ -100,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
     -   來源-使用-上次使用 ="true"（預設值） 或來源伺服器 ="source_servername"  
   
-    -   目標為使用-上次使用 ="true"（預設值） 或目標伺服器 ="target_servername"  
+    -   target-use-last-used="true" (default) or target-server="target_servername"  
   
     **範例：**  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <migrate-data>  
@@ -146,7 +147,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -179,7 +180,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <!--synchronization-->  
@@ -190,7 +191,7 @@ ms.lasthandoff: 12/21/2017
   
     </synchronize-target>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <!--data migration-->  
@@ -225,7 +226,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -278,7 +279,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <…All commands…>  
@@ -320,7 +321,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <…All commands…>  
@@ -353,7 +354,7 @@ ms.lasthandoff: 12/21/2017
 -   **重新連接嘗試次數上限：**時建立的連接逾時或因網路失敗而中斷，則需要重新連線的伺服器。 最多允許重新連線嘗試**5**重試次數之後，主控台會自動執行重新連線。 自動重新連線功能會減少您在重新執行指令碼的工作。  
   
 ## <a name="server-connection-parameters"></a>伺服器連接參數  
-伺服器連接參數可以在指令碼檔案或伺服器連接檔案中定義。 請參閱[建立伺服器連接檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) > 一節以取得詳細資料  
+伺服器連接參數可以在指令碼檔案或伺服器連接檔案中定義。 請參閱[伺服器連線檔案建立&#40;SybaseToSQL&#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) > 一節以取得詳細資料  
   
 ## <a name="script-commands"></a>指令碼命令  
 指令碼檔案包含一連串的移轉工作流程命令，以 XML 格式。 SSMA 主控台應用程式會處理指令碼檔案中出現的命令順序移轉。  
@@ -401,14 +402,14 @@ Sybase 資料庫中特定資料表的一般資料移轉，例如，如下的階�
   
 在變更參數，其中顯示的資訊之後，您可以執行範本 （檔案）。  
   
-指令碼命令的完整清單位於[執行 SSMA 主控台 &#40;SybaseToSQL &#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+指令碼命令的完整清單位於[執行 SSMA 主控台&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="script-file-validation"></a>指令碼檔案驗證  
 使用者可以輕鬆地驗證自己的指令碼檔案對結構描述定義檔**'S2SSConsoleScriptSchema.xsd'**可用 '結構描述' 資料夾中  
   
 ## <a name="next-step"></a>下一個步驟  
-在操作主控台的下一個步驟是[建立變數值的檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
+在操作主控台的下一個步驟是[建立變數值的檔案&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)。  
   
-## <a name="see-also"></a>請參閱  
-[建立變數值的檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[建立變數值的檔案&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   

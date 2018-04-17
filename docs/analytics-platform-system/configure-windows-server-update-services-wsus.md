@@ -1,31 +1,31 @@
 ---
-title: "設定 Windows Server Update Services (WSUS) (Analytics Platform System)"
+title: 設定 Windows Server Update Services (WSUS) (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 
-ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+caps.latest.revision: 41
+ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>設定 Windows Server Update Services (WSUS)
 這些指示會引導您完成使用 Windows Server Update Services (WSUS) 設定精靈設定 WSUS Analytics Platform System 的步驟。 您需要將 WSUS 設定之前您可以將軟體更新套用至應用裝置。 VMM 虛擬機器應用裝置上已安裝 WSUS。  
   
-如需有關如何設定 WSUS 的詳細資訊，請參閱[WSUS 的逐步安裝手冊 》](http://go.microsoft.com/fwlink/?LinkId=202417) WSUS 網站上。 設定 WSUS 之後，請參閱[下載並套用 Microsoft 更新 &#40;Analytics Platform System &#41;](download-and-apply-microsoft-updates.md)起始更新。  
+如需有關如何設定 WSUS 的詳細資訊，請參閱[WSUS 的逐步安裝手冊 》](http://go.microsoft.com/fwlink/?LinkId=202417) WSUS 網站上。 設定 WSUS 之後，請參閱[下載並套用 Microsoft 更新&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)起始更新。  
   
 > [!WARNING]  
 > 如果您在這個設定程序期間發生任何錯誤，停止並連絡支援服務尋求協助。 不要忽略錯誤或接收錯誤之後繼續處理序中。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/29/2018
   
 -   如果您的應用裝置會使用 proxy 伺服器存取的上游伺服器或 Microsoft Update，知道 proxy 伺服器的 IP 位址。  
   
--   在大部分情況下，WSUS 需要存取應用裝置以外的伺服器。 若要支援分析平台系統 DNS 可以設定為支援的外部名稱轉寄站，要使用外部 DNS 伺服器來解析名稱 Analytics Platform System 主機和虛擬機器 (Vm) 可讓外部的這個使用案例應用裝置。 如需詳細資訊，請參閱[使用 DNS 轉寄站來解析非應用裝置的 DNS 名稱 &#40;Analytics Platform System &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   在大部分情況下，WSUS 需要存取應用裝置以外的伺服器。 若要支援分析平台系統 DNS 可以設定為支援的外部名稱轉寄站，要使用外部 DNS 伺服器來解析名稱 Analytics Platform System 主機和虛擬機器 (Vm) 可讓外部的這個使用案例應用裝置。 如需詳細資訊，請參閱[使用 DNS 轉寄站來解析非應用裝置的 DNS 名稱&#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>若要設定 Windows Server Update Services (WSUS)  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/29/2018
   
         ![伺服器管理員儀表板功能表](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  如果這是第一次您執行 WSUS 精靈，可能會要求您設定來儲存更新的目錄。 `C:\wsus`是適當的位置。不過，您可能會提供不同的路徑。  
+    4.  如果這是第一次您執行 WSUS 精靈，可能會要求您設定來儲存更新的目錄。 `C:\wsus` 是適當的位置。不過，您可能會提供不同的路徑。  
   
         ![WSUS 路徑](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -179,7 +179,7 @@ ms.lasthandoff: 01/29/2018
 為 Analytics Platform System 中設定 WSUS 之後, 的下一個步驟是群組的應用裝置伺服器。 將所有的應用裝置伺服器新增至群組，WSUS 都將能夠將軟體更新套用至應用裝置中的所有伺服器。  
   
 > [!NOTE]  
-> WSUS 系統被設計來以非同步方式執行。 起始活動不一定會產生立即更新。 因此，您可能需要稍待片刻，直到電腦會顯示在 [WSUS] 對話方塊。 執行`setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"`命令說明於主題的結尾[下載並套用 Microsoft 更新 &#40;Analytics Platform System &#41;](download-and-apply-microsoft-updates.md)可協助您重新整理的對話方塊。  
+> WSUS 系統被設計來以非同步方式執行。 起始活動不一定會產生立即更新。 因此，您可能需要稍待片刻，直到電腦會顯示在 [WSUS] 對話方塊。 執行`setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"`命令說明於主題的結尾[下載並套用 Microsoft 更新&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)可協助您重新整理的對話方塊。  
   
 #### <a name="to-group-the-appliance-servers"></a>若要群組的應用裝置的伺服器  
   

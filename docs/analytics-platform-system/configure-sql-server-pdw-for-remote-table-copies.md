@@ -1,26 +1,26 @@
 ---
-title: "設定 SQL Server PDW 遠端資料表複製 (SQL Server PDW)"
+title: 設定 SQL Server PDW 遠端資料表複製 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
-caps.latest.revision: "11"
-ms.openlocfilehash: 08257e4823eed7bf86977ddca1df41eee7f8bda2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 11
+ms.openlocfilehash: 46fdb88ce3a244946b89f14320229905793564ac
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-sql-server-pdw-for-remote-table-copies"></a>設定為遠端資料表複製的 SQL Server PDW
 描述如何設定用於遠端資料表複製功能，將資料表複製到非應用裝置的伺服器上的 SMP SQL Server 資料庫的 SQL Server PDW。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="before-you-begin"></a>開始之前  
 若要設定 SQL Server PDW 使用遠端資料表的複本，您必須：  
   
--   有 Analytics Platform System 系統管理員帳戶，能夠登入直接 ***appliance_domain*-AD01**和 ***appliance_domain*-Ad02 移**節點。  
+-   有 Analytics Platform System 系統管理員帳戶，能夠登入直接 ***appliance_domain *-AD01**和 ***appliance_domain *-ad02 移**節點。  
   
 -   了解的主機名稱或目的地伺服器的 IP 名稱。  
   
@@ -39,13 +39,13 @@ ms.lasthandoff: 12/21/2017
   
 下列步驟概述如何更新 DNS 伺服器。  
   
-1.  登入作用中的 AD 節點 (通常 ***appliance_domain*-AD01**)。  
+1.  登入作用中的 AD 節點 (通常 ***appliance_domain *-AD01**)。  
   
 2.  開啟 [DNS 管理員]。 這位於**系統管理工具**中**啟動**功能表。  
   
 3.  使用 [DNS 管理員] 新增的 IP 名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->

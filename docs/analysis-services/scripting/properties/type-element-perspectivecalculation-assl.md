@@ -1,24 +1,29 @@
 ---
-title: "輸入元素 (PerspectiveCalculation) (ASSL) |Microsoft 文件"
-ms.custom: 
+title: 輸入元素 (PerspectiveCalculation) (ASSL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Type Element (PerspectiveCalculation)
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Type Element (PerspectiveCalculation)
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: TYPE
-helpviewer_keywords: Type element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- TYPE
+helpviewer_keywords:
+- Type element
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile

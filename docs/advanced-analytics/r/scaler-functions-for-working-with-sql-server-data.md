@@ -1,28 +1,26 @@
 ---
-title: "使用 SQL Server 資料 RevoScaleR 函數 |Microsoft 文件"
-ms.custom: 
+title: 使用 SQL Server 資料 RevoScaleR 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 70591237d61d81dd78b09a5ce0c7d251a1b29796
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>使用 SQL Server 資料 RevoScaleR 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ ScaleR 函數和使用方式的完整清單，請參閱[Microsoft R Server](http
 
 如果您有執行個體和資料庫的必要權限，您可以從 R 執行 DDL 陳述式。 下列函數會使用 ODBC 呼叫來執行 DDL 陳述式，或擷取資料庫結構描述。
 
-+ `rxSqlServerTableExists`和[rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) -卸除[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]資料表，或檢查資料庫資料表或物件存在
++ `rxSqlServerTableExists` 和[rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) -卸除[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]資料表，或檢查資料庫資料表或物件存在
 
 + [rxExecuteSQLDDL](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexecutesqlddl) -執行資料定義語言 (DDL) 命令定義，或操作資料庫物件。 此函數無法傳回資料，並只會用於擷取或修改物件結構描述或中繼資料。
 
@@ -55,7 +53,7 @@ ScaleR 函數和使用方式的完整清單，請參閱[Microsoft R Server](http
 
 + [rxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)：產生 SQL Server 計算內容，該計算內容可讓 **ScaleR** 函數在 SQL Server R Services 中執行。 此計算內容目前只支援 Windows 上的 SQL Server 執行個體。
 
-+ `rxGetComputeContext`和[rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) -取得或設定作用中的計算內容。
++ `rxGetComputeContext` 和[rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) -取得或設定作用中的計算內容。
 
 ## <a name="move-data-and-transform-data"></a>移動資料和轉換資料
 

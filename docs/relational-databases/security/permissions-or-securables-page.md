@@ -1,16 +1,16 @@
 ---
-title: "權限或安全性實體頁面 | Microsoft Docs"
-ms.custom: 
+title: 權限或安全性實體頁面 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.common.permissions.f1
@@ -19,7 +19,7 @@ f1_keywords:
 - sql13.swb.availabilitygroupproperties.permission.f1
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/21/2017
  描述每個項目的類型。  
   
 ## <a name="explicit-tab"></a>明確索引標籤  
- **[明確]** 索引標籤會列出上方格中選取之安全性實體的可能權限。 若要設定權限，請選取或清除 [授與] (或 [允許])、[可授與] 和 [拒絕] 核取方塊。 所有選項不適用於所有明確權限。  
+ **[明確]** 索引標籤會列出上方格中選取之安全性實體的可能權限。 若要設定權限，請選取或清除 [授與] \(或 [允許])、[可授與] 和 [拒絕] 核取方塊。 所有選項不適用於所有明確權限。  
   
  **[權限]**  
  權限的名稱。  

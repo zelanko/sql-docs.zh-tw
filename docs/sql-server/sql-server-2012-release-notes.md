@@ -1,19 +1,20 @@
 ---
-title: "SQL Server 2012 版本資訊 | Microsoft Docs"
+title: SQL Server 2012 版本資訊 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
 ms.technology: server-general
-ms.custom: 
+ms.custom: ''
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Release Notes, SQL Server
+helpviewer_keywords:
+- Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard

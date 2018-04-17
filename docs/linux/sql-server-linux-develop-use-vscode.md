@@ -16,10 +16,10 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
 ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio Code 來建立和執行 SQL Server 的 TRANSACT-SQL 指令碼
 
@@ -93,16 +93,16 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 5. 遵循提示來指定新連線設定檔的連線屬性。 指定每個值之後，請按 **ENTER** 繼續。 
 
-   下表介紹連線設定檔屬性。
+   下表介紹連線設定檔屬性。
 
-   | 設定 | 描述 |
+   | 設定 | 描述 |
    |-----|-----|
    | **伺服器名稱** | SQL Server 執行個體名稱。 本教學課程中，使用**localhost**連接到本機電腦上的 SQL Server 執行個體。 如果連接到遠端的 SQL Server，請輸入目標 SQL Server 電腦或 IP 位址的名稱。 如果您需要指定您的 SQL Server 執行個體的連接埠，請使用逗號來分隔的名稱。 例如連接埠 1401年上執行的本機伺服器您會輸入**localhost，1401年**。 |
    | **儲存密碼嗎？** | 若要儲存密碼，請輸入**是**。 否則請輸入**否**，此後每次使用連線設定檔時，系統都會提示您輸入密碼。 |
    | **使用者名稱** | 輸入資料庫伺服器上具有存取權的使用者名稱。 此教學課程中，使用預設**SA** SQL Server 安裝期間建立的帳戶。 |
    | **密碼 (SQL 登入)** | 請輸入指定之使用者的密碼。 | 
    | **儲存密碼嗎？** | 輸入**是**儲存密碼。 否則，請鍵入**否**提示輸入密碼每次使用時連線設定檔。 |
-   | **[選用] 輸入此設定檔的名稱** | 連線設定檔名稱。例如，您可將設定檔命名為**本機主機設定檔**。
+   | **[選用] 輸入此設定檔的名稱** | 連線設定檔名稱。 例如，您可將設定檔命名為**本機主機設定檔**。 
 
    > [!Tip] 
    > 您可以建立和編輯使用者設定檔 (settings.json) 中的連線設定檔。 開啟選取的設定檔**喜好設定**然後**使用者設定**VS Code 功能表。 如需詳細資訊，請參閱[管理連線設定檔]。
@@ -252,7 +252,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 ## <a name="next-steps"></a>後續的步驟
 
-在真實世界案例中，您所建立的指令碼，可能會先儲存之後再執行 (無論用於系統管理或做為更大型的開發專案的一部分)。在此情況下，您可以使用 **.sql** 為副檔名的方式儲存指令碼。
+在真實世界案例中，您所建立的指令碼，可能會先儲存之後再執行 (無論用於系統管理或做為更大型的開發專案的一部分)。 在此情況下，您可以使用 **.sql** 為副檔名的方式儲存指令碼。
 
 如果您還不熟悉 T-SQL，請參閱[教學課程： 撰寫 TRANSACT-SQL 陳述式]和[TRANSACT-SQL 參考 (Database Engine)]。
 

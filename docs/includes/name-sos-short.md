@@ -1,1 +1,1 @@
-<Token>SQL 作業 Studio （預覽）</Token>
+<Token>SQL Operations Studio (preview)</Token>

@@ -1,16 +1,16 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/24/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tsql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
@@ -48,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 
+caps.latest.revision: 222
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: ed76514d94521f8efefdbcc0dda4f51aaeb871fd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -355,7 +355,7 @@ FILLFACTOR = *fillfactor*
  指定是否將排序結果儲存在 **tempdb** 中。 預設值為 OFF。  
   
  ON  
- 用來建立索引的中繼排序結果會儲存在 **tempdb** 中。 如果 **tempdb** 是在使用者資料庫以外的磁碟組中，這可能會縮短建立索引所需要的時間。 不過，這會增加建立索引時所使用的磁碟空間量。  
+ 用來建置索引的中繼排序結果會儲存在 **tempdb** 中。 如果 **tempdb** 是在使用者資料庫以外的磁碟組中，這可能會縮短建立索引所需要的時間。 不過，這會增加建立索引時所使用的磁碟空間量。  
   
  OFF  
  中繼排序結果會儲存在與用來儲存索引相同的資料庫中。  
@@ -394,7 +394,7 @@ FILLFACTOR = *fillfactor*
 > 停用散發統計資料的自動重新計算，可防止查詢最佳化工具取得與資料表有關之查詢的最佳執行計畫。  
   
  STATISTICS_INCREMENTAL = { ON | **OFF** }  
- 若設定為 **ON**，所建立的統計資料會以每個資料分割統計資料為依據。 若為 **OFF**，則會卸除統計資料樹狀結構，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 **OFF**。  
+ 若設定為 **ON**，所建立的統計資料會以每個資料分割統計資料為依據。 若設定為 **OFF**，則會卸除統計資料樹狀結構，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 **OFF**。  
   
  如果不支援每個分割區區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：  
   
@@ -481,7 +481,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 起) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
- 在索引作業期間，覆寫**平行處理原則的最大程度**組態選項。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
+ 在索引作業期間，覆寫 **max degree of parallelism** 設定選項。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
   
 > [!IMPORTANT]
 >  雖然所有 XML 索引在語法上都支援 MAXDOP 選項，但是對於空間索引或主要 XML 索引而言，ALTER INDEX 目前只會使用單一處理器。  
@@ -544,7 +544,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此索引，ON PARTITIONS 引數將會產生錯誤。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 選項會套用到分割區索引的所有分割區。  
   
- 您可以使用下列方式來指定 \<partition_number_expression>：  
+ 可以使用以下方式來指定 \<partition_number_expression>：  
   
 -   提供分割區的編號，例如：ON PARTITIONS (2)。  
   
@@ -887,7 +887,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 將所有開啟和關閉的差異資料列群組壓縮到資料行存放區中  
  **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) 命令會以壓縮的資料列群組方式，將每個開啟和關閉的差異資料列群組壓縮到資料行存放區中。 這會清空差異存放區，並將所有資料列強制壓縮到資料行存放區。 這在執行許多插入作業之後特別有用，因為這些作業會將資料列儲存在一或多個差異存放區中。  
+ REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) 命令會以壓縮的資料列群組方式，將每個開啟和關閉的差異資料列群組壓縮到資料行存放區中。 這會清空差異存放區，並將所有資料列強制壓縮到資料行存放區。 這在執行許多插入作業之後特別有用，因為這些作業會將資料列儲存在一或多個差異資料行群組中。  
   
  REORGANIZE 可合併資料列群組，讓資料列群組中的資料列數目最高達到資料列 \<= 1,024,576 的數目上限。 因此當您壓縮所有開啟和關閉的資料列群組時，不會產生裡面只有幾個資料列的大量已壓縮資料列群組。 您可以將資料列群組盡量填滿，以縮小壓縮的大小並增進查詢效能。  
   

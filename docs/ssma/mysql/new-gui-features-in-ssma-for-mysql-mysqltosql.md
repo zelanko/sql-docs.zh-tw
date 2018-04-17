@@ -1,30 +1,31 @@
 ---
-title: "SSMA for MySQL (MySQLToSQL) 中的新 GUI 功能 |Microsoft 文件"
+title: SSMA for MySQL (MySQLToSQL) 中的新 GUI 功能 |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5278d3427e8dc30f4cbc4986745c22ee9bf0f77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8ad56e3bb27184bd715e611ba61ad6c95e66037d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL (MySQLToSQL) 中的新 GUI 功能
 本章節描述 SSMA 使用者介面的新功能  
@@ -104,7 +105,7 @@ GUI 物件記錄可讓您下列好處導覽物件時：
   
 -   以滑鼠右鍵按一下快顯功能表中選取 快速諮詢  
   
--   按 Ctrl + Shift + 空格鍵  
+-   Press Ctrl+Shift+Space  
   
 ### <a name="find-declaration"></a>尋找宣告  
 您可以移至的物件，在游標位置，以下列方式宣告：  

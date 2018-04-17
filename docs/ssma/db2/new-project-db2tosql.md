@@ -1,35 +1,36 @@
 ---
-title: "新的專案 (DB2ToSQL) |Microsoft 文件"
+title: 新的專案 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 530850701a81d304e6e381292cc91252e2d3d65e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b7a050dda5c3bf8b2ab323f338c780546b2aee58
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="new-project-db2tosql"></a>新的專案 (DB2ToSQL)
 使用**新專案**對話方塊來建立新的 SSMA 專案。 若要存取**新專案**對話方塊中，於**檔案**功能表上，按一下 **新專案**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **名稱**  
 輸入專案的名稱。 SSMA 會將附加檔案的副檔名。  
   

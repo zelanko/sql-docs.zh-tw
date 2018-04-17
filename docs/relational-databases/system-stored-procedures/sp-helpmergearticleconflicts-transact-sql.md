@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergearticleconflicts (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpmergearticleconflicts (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b7a1d10d6d2ba731ceaaaba51b8f786b262a2e28
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,23 +48,23 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
- 這是合併式發行集的名稱。*發行集*是**sysname**，預設值是 **%** ，它會傳回所有發行項有衝突的資料庫中。  
+ [ **@publication=**] **'***publication***'**  
+ 這是合併式發行集的名稱。*發行集*是**sysname**，預設值是**%**，它會傳回所有發行項有衝突的資料庫中。  
   
- [  **@publisher=**] **'***發行者***'**  
+ [ **@publisher=**] **'***publisher***'**  
  是發行者的名稱。*發行者*是**sysname**，預設值是 NULL。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  這是發行者資料庫的名稱。*publisher_db*是**sysname**，預設值是 NULL。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**發行項**|**sysname**|發行項的名稱。|  
+|**article**|**sysname**|發行項的名稱。|  
 |**source_owner**|**sysname**|來源物件的擁有者。|  
-|**_ o b j**|**nvarchar （386)**|來源物件的名稱。|  
-|**conflict_table**|**nvarchar （258)**|儲存插入或更新衝突的資料表名稱。|  
+|**source_object**|**nvarchar(386)**|來源物件的名稱。|  
+|**conflict_table**|**nvarchar(258)**|儲存插入或更新衝突的資料表名稱。|  
 |**guidcolname**|**sysname**|來源物件的 RowGuidCol 名稱。|  
 |**centralized_conflicts**|**int**|是否將衝突記錄儲存在給定的發行者。|  
   
@@ -79,7 +79,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色和**db_owner**固定的資料庫角色可以執行**sp_helpmergearticleconflicts**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,38 +1,40 @@
 ---
-title: "尋找資料庫精靈 （選取位置） (AccessToSQL) |Microsoft 文件"
+title: 尋找資料庫精靈 （選取位置） (AccessToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Find Databases Wizard
+helpviewer_keywords:
+- Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 069e14ae3babfb3961042edaf0d99e24367df85d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2612b2658ae1d89891e410768dc0e31d78eb299c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>尋找資料庫精靈 （選取位置） (AccessToSQL)
 在 尋找資料庫精靈選取位置頁面上，您可以輸入搜尋參數尋找 Access 資料庫。  
   
 若要開啟 尋找資料庫精靈 中，在**檔案**功能表上，按一下 **尋找資料庫**。 如需如何使用此對話方塊的詳細資訊，請參閱[加入和移除的 Access 資料庫檔案](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **瀏覽**  
 按一下以瀏覽電腦或網路。 選取的資料夾或位置來搜尋，然後按一下**確定**。 按一下**新增**將這個位置加入至清單。  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 **位置方塊**  
 列出 SSMA 會掃描的位置。 當您按一下**新增** 按鈕，指定的路徑會新增到這個方塊。  
   
-**[加入]**  
+**加入**  
 新增路徑 文字方塊中的位置清單位置。  
   
 **取代**  
@@ -63,10 +65,10 @@ ms.lasthandoff: 12/21/2017
 **大小**  
 若要尋找符合大小準則的資料庫，在第一個方塊中選取比較字元，輸入的數字的大小，，然後選取位元組、 kb 或 mb 為單位的第三個方塊中。  
   
-**[擁有者]**  
+**擁有者**  
 輸入完整的 Windows 使用者名稱的擁有者。 這可能會格式化為*網域*\\*使用者*。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [加入和移除 Access 資料庫檔案](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

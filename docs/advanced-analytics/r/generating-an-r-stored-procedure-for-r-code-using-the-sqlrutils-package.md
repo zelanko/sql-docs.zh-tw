@@ -1,28 +1,26 @@
 ---
-title: "使用 sqlrutils 套件為 R 程式碼產生 R 預存程序 | Microsoft Docs"
-ms.custom: 
+title: 使用 sqlrutils 套件為 R 程式碼產生 R 預存程序 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/28/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: d8739f16-ac26-4f69-870c-51c77cf286d3
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 2a119867b30b0d3ff8a0abb0b32e8017e5663969
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ac234229a5d44d2016252318093853b4dc9cd957
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>使用 sqlrutils 套件為 R 程式碼產生 R 預存程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

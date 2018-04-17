@@ -1,30 +1,31 @@
 ---
-title: "管理密碼 (AccessToSQL) |Microsoft 文件"
+title: 管理密碼 (AccessToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f939dc06c04f0c2fb00022a688b8a2cc86e8a0b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52b9f120a7025905630ffcf9762f4ce46b6abf52
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-passwords-accesstosql"></a>管理密碼 (AccessToSQL)
 本節是關於保護資料庫的密碼和匯入或將它們匯出到伺服器的程序：  
@@ -42,7 +43,7 @@ SSMA 可讓您保護您的資料庫的密碼。
   
 1.  **純文字：** 'password' 節點的值屬性中輸入資料庫密碼。 在指令碼檔案或伺服器連接檔案的 [伺服器] 區段的伺服器定義節點底下找到它。  
   
-    以純文字密碼不安全。 因此，您將會遇到下列警告訊息中的主控台輸出： *"伺服器&lt;伺服器識別碼&gt;密碼是不安全的純文字形式 SSMA 主控台應用程式提供的選項來保護透過加密的密碼，請參閱 – securepassword 選項的詳細資訊的 SSMA 說明檔中提供。"*  
+    以純文字密碼不安全。 因此，您將會遇到下列警告訊息中的主控台輸出： *"伺服器&lt;伺服器識別碼&gt;密碼會提供不安全的純文字形式 SSMA 主控台應用程式提供的選項來保護密碼加密，請參閱說明檔的詳細資訊的 SSMA – securepassword 選項。 」*  
   
     **加密的密碼：**指定的密碼，在此情況下，是以加密形式儲存 ProtectedStorage.ssma 在本機電腦。  
   
@@ -130,6 +131,6 @@ SSMA 主控台應用程式可讓您將加密的資料庫密碼存在於本機電
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [執行 SSMA 主控台 (Access)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

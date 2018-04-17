@@ -1,33 +1,31 @@
 ---
-title: "以 Power Pivot 模式安裝 Analysis Services |Microsoft 文件"
-ms.custom: 
+title: 以 Power Pivot 模式安裝 Analysis Services |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology:
-- setup-install
-- setup-install
-ms.tgt_pltfrm: 
+ms.technology: setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2f7c09094c0a55337e2bb64b58e2ea14d6f2973f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>以 Power Pivot 模式安裝 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-本主題中的程序會引導您完成 SharePoint 部署 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式之 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器的單一伺服器安裝。 這些步驟包含執行 [SQL Server 安裝精靈]，以及使用 SharePoint 管理中心的設定工作。  
+  本主題中的程序會引導您完成 SharePoint 部署 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式之 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器的單一伺服器安裝。 這些步驟包含執行 [SQL Server 安裝精靈]，以及使用 SharePoint 管理中心的設定工作。  
   
 ##  <a name="bkmk_background"></a> 背景  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 是中間層及後端服務的集合物件，可以在 SharePoint 2016 或 SharePoint 2013 伺服器陣列中提供 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料存取功能。  
@@ -294,6 +292,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另請參閱  
  [將 Power Pivot 移轉至 SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [安裝或解除安裝 PowerPivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [升級活頁簿和排程的資料重新整理 & #40;SharePoint 2013 & #41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

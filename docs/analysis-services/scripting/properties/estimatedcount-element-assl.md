@@ -1,24 +1,29 @@
 ---
-title: "EstimatedCount 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
+title: EstimatedCount 元素 (ASSL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: EstimatedCount Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- EstimatedCount Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: EstimatedCount
-helpviewer_keywords: EstimatedCount element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- EstimatedCount
+helpviewer_keywords:
+- EstimatedCount element
 ms.assetid: ce84b54a-8ab2-42f4-a7dd-e10a3d41cb4d
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile

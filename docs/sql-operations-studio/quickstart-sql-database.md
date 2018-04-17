@@ -59,7 +59,7 @@ ms.lasthandoff: 03/09/2018
 
    ![新的連線圖示](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 如果您的伺服器不需要的防火牆規則允許連線，SQL 作業 Studio**建立新的防火牆規則**表單隨即開啟。 完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果您的伺服器不需要的防火牆規則允許連線，SQL Operations Studio**建立新的防火牆規則**表單隨即開啟。 完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新的防火牆規則](media/quickstart-sql-database/firewall.png)  
 

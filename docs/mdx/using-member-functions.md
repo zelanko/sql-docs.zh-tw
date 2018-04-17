@@ -1,20 +1,22 @@
 ---
-title: "使用成員函式 |Microsoft 文件"
-ms.custom: 
+title: 使用成員函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: member functions [MDX]
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- member functions [MDX]
 ms.assetid: 094c443f-0daa-4af7-801c-d2e1d686d755
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,21 +1,21 @@
 ---
-title: "SQL Server 連接器維護和疑難排解 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 連接器維護和疑難排解 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -173,7 +173,7 @@ ms.lasthandoff: 01/02/2018
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>設定時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**SQL Server 連接器需要存取哪些端點？** 連接器會與兩個需要設為白名單的端點通訊。 針對 HTTPS，這些其他服務之輸出通訊所需的唯一連接埠是 443：
+**SQL Server 連接器需要存取哪些端點？** 連接器會與兩個需要設為允許清單的端點通訊。 針對 HTTPS，這些其他服務之輸出通訊所需的唯一連接埠是 443：
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   

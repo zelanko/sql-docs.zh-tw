@@ -1,31 +1,29 @@
 ---
-title: "建立新的 SQL Server 資料表使用 rxDataStep （SQL 與 R 深入探討） |Microsoft 文件"
-ms.custom: 
+title: 建立新的 SQL Server 資料表使用 rxDataStep （SQL 與 R 深入探討） |Microsoft 文件
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: 98cead96-6de7-4edf-98b9-a1efb09297b9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: b64a62a9bc5e9b7c105bae1f6a8dda4a60e641c4
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 3afc3e58771377190e42d92bc9a125bfa82a4546
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-and-r-deep-dive"></a>建立新的 SQL Server 資料表使用 rxDataStep （SQL 與 R 深入探討）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

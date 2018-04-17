@@ -1,21 +1,24 @@
 ---
-title: "項目 (Tuple) (MDX) |Microsoft 文件"
-ms.custom: 
+title: 項目 (Tuple) (MDX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: ITEM
-dev_langs: kbMDX
-helpviewer_keywords: Item function
+f1_keywords:
+- ITEM
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Item function
 ms.assetid: 9ee7af55-d5b5-47c8-a480-ef23878306af
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre

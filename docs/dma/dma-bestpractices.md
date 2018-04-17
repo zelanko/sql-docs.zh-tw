@@ -1,20 +1,22 @@
 ---
-title: "資料移轉小幫手 (SQL Server) 的最佳作法 |Microsoft 文件"
-ms.custom: 
+title: 資料移轉小幫手 (SQL Server) 的最佳作法 |Microsoft 文件
+ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-dma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-dma
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: 
-helpviewer_keywords: Data Migration Assistant, Best Practices
-ms.assetid: 
-caps.latest.revision: 
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, Best Practices
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg

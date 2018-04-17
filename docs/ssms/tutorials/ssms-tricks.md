@@ -16,11 +16,11 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 9f633a8d624fd31913dc2aeb6fde34ff30b7645d
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 792d6c7fe69a1b8ec77c70d0fbfa6ceaa92d808a
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
 本文將提供 SQL Server Management Studio 使用上的一些其他祕訣。 本文將告訴您如何： 
@@ -143,33 +143,6 @@ ms.lasthandoff: 03/22/2018
 ## <a name="access-your-sql-server-error-log"></a>存取您的 SQL Server 錯誤記錄檔
 錯誤記錄檔是含有在 SQL Server 中發生事項之詳細資訊的檔案。 可以在 SSMS 中瀏覽和查詢。 也可以作為 .log 檔案在磁碟上找到。
 
-### <a name="find-your-error-log-if-you-cannot-connect-to-sql"></a>如果無法連線到 SQL，請尋找錯誤記錄檔
-1. 開啟您的 SQL Server 設定管理員。 
-2. 展開 [服務] 節點。
-3. 以滑鼠右鍵按一下您的 SQL Server 執行個體 > [屬性]：
-
-    ![設定管理員伺服器屬性](media/ssms-tricks/serverproperties.PNG)
-
-4. 選取 [啟動參數] 索引標籤。
-5. 在**現有參數**區域中，"-e" 後面的路徑是錯誤記錄檔位置： 
-    
-    ![錯誤記錄檔](media/ssms-tricks/errorlog.png)
-    - 您會注意到這個位置中有數個 errorlog.*。 以 *.log 結尾之檔案是目前的記錄檔。 以數字結尾之檔案是先前的記錄檔，因為每次 SQL Server 重新啟動時都會建立一個新紀錄檔。 
-6. 在記事本中開啟這個檔案。 
-
-### <a name="find-your-error-log-if-youre-connected-to-sql"></a>如果您已連線到 SQL，請尋找錯誤記錄檔
-1. 連線到 SQL Server。
-2. 開啟 [新增查詢] 視窗。
-3. 將下列 T-SQL 程式碼貼入查詢視窗中，然後按一下 [執行]：
-
-
-  ```sql
-   SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location' 
-  ```
-3. 結果會顯示檔案系統中錯誤記錄檔的位置： 
-
-![透過查詢尋找錯誤記錄檔](media/ssms-tricks/finderrorlogquery.png)
-
 ### <a name="open-error-log-within-ssms"></a>在 SSMS 中開啟錯誤記錄檔
 1. 連接到 SQL Server。
 2. 展開 **[管理]** 節點。 
@@ -191,17 +164,45 @@ ms.lasthandoff: 03/22/2018
    
     ![查詢錯誤記錄檔](media/ssms-tricks/queryerrorlog.png)
 
-## <a name="determine-sql-server-instance-name"></a>判斷來源 SQL Server 執行個體名稱
-在連線到 SQL Server 之前和之後，可用多種方式來判斷執行個體名稱。  
+
+### <a name="find-error-log-location-if-youre-connected-to-sql"></a>若您已連線至 SQL，請尋找錯誤記錄檔的位置
+1. 連線到 SQL Server。
+2. 開啟 [新增查詢] 視窗。
+3. 將下列 T-SQL 程式碼貼入查詢視窗中，然後按一下 [執行]：
+
+ ```sql
+    SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
+  ``` 
+
+4. 結果會顯示檔案系統中錯誤記錄檔的位置： 
+
+    ![透過查詢尋找錯誤記錄檔](media/ssms-tricks/finderrorlogquery.png)
+
+### <a name="find-error-log-location-if-you-cannot-connect-to-sql"></a>若您無法連線至 SQL，請尋找錯誤記錄檔的位置
+1. 開啟您的 SQL Server 設定管理員。 
+2. 展開 [服務] 節點。
+3. 以滑鼠右鍵按一下您的 SQL Server 執行個體 > [屬性]：
+
+    ![設定管理員伺服器屬性](media/ssms-tricks/serverproperties.PNG)
+
+4. 選取 [啟動參數] 索引標籤。
+5. 在**現有參數**區域中，"-e" 後面的路徑是錯誤記錄檔位置： 
+    
+    ![錯誤記錄檔](media/ssms-tricks/errorlog.png)
+    - 您會注意到這個位置中有數個 errorlog.*。 以 *.log 結尾之檔案是目前的記錄檔。 以數字結尾之檔案是先前的記錄檔，因為每次 SQL Server 重新啟動時都會建立一個新紀錄檔。 
+6. 在記事本中開啟這個檔案。 
+
+## <a name="determine-sql-server-name"></a>判斷 SQL Server 名稱...
+在連線至 SQL Server 的前後，有多種判斷 SQL Server 名稱的方式。  
 
 ### <a name="when-you-dont-know-it"></a>不知道執行個體名稱時
 1. 請遵循下列步驟找出[磁碟上的 SQL Server 錯誤記錄檔](#finding-your-error-log-if-you-cannot-connect-to-sql)。 
 2. 在記事本中開啟 errorlog.log。 
 3. 巡覽至您找到 "Server name is" 文字為止：
-  - 任何在單引號中列出的，就是執行個體名稱和您將要連線的：![錯誤記錄檔中的伺服器名稱](media/ssms-tricks/servernameinlog.png)
+  - 任何在單引號中列出的，就是 SQL Server 名稱和您將要連線的：![錯誤記錄檔中的伺服器名稱](media/ssms-tricks/servernameinlog.png) 名稱的格式為「主機名稱\執行個體名稱」。 若您只看到主機名稱，則代表您安裝了預設執行個體，而執行個體的名稱為 'MSSQLSERVER'。 當連線至預設執行個體時，在連線至 SQL Server 時只需要鍵入主機名稱。  
 
 ### <a name="once-youre-connected-to-sql"></a>...一旦您連線至 SQL 
-有三個地方可以尋找您已連線到哪一個執行個體。 
+有三個地方可以尋找您已連線到哪一個 SQL Server。 
 
 1. 伺服器名稱將會列在**物件總管**中：
 
@@ -209,7 +210,7 @@ ms.lasthandoff: 03/22/2018
 2. 伺服器名稱將會列在查詢視窗中：
 
     ![查詢視窗中的名稱](media/ssms-tricks/nameinquerywindow.png)
-3. 執行個體時提供 SQL Server 登入。 伺服器名稱也將列在**屬性視窗**中。
+3. 伺服器名稱也將列在**屬性視窗**中。
     - 若要加以存取，請開啟 [檢視] 功能表 > [屬性視窗]：
 
     ![在屬性中的名稱](media/ssms-tricks/nameinproperties.png)

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_schedulers (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_os_schedulers (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_schedulers
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-caps.latest.revision: 
+caps.latest.revision: 55
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa32726893d196cc4c2830e79703f5583d661793
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9e42126c9abfe729e5f5890297dbf30e3dbf0970
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/03/2018
 |scheduler_address|**varbinary(8)**|排程器的記憶體位址。 不可為 Null。|  
 |parent_node_id|**int**|排程器所屬節點 (也稱為父節點) 的識別碼。 這代表非統一記憶體存取 (NUMA) 節點。 不可為 Null。|  
 |scheduler_id|**int**|排程器的識別碼。 所有用來執行一般查詢的排程器，其識別碼都小於 1048576。 識別碼大於或等於 1048576 的排程器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部使用的排程器，例如專用管理員連接排程器。 不可為 Null。|  
-|cpu_id|**smallint**|指派給排程器的 CPU 識別碼。<br /><br /> 不可為 Null。<br /><br /> **注意：** 255 不表示沒有任何關聯性，如同在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 請參閱[sys.dm_os_threads &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)其他相似性資訊。|  
+|cpu_id|**smallint**|指派給排程器的 CPU 識別碼。<br /><br /> 不可為 Null。<br /><br /> **注意：** 255 不表示沒有任何關聯性，如同在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 請參閱[sys.dm_os_threads &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)其他相似性資訊。|  
 |status|**nvarchar(60)**|指出排程器的狀態。 可以是下列其中一個值：<br /><br /> 隱藏線上<br />隱藏離線<br />可見線上<br />可見離線<br />可見的線上 (DAC)<br />-   HOT_ADDED<br /><br /> 不可為 Null。<br /><br /> HIDDEN 排程器用來處理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 內部的要求。 VISIBLE 排程器用來處理使用者要求。<br /><br /> OFFLINE 排程器對應到相似性遮罩中離線的處理器，因此不會用來處理任何要求。 ONLINE 排程器對應到相似性遮罩中上線的處理器，可以用來處理執行緒。<br /><br /> DAC 指出排程器正在專用管理員連接下執行。<br /><br /> HOT ADDED 表示已加入排程器來回應 Hot Add CPU 事件。|  
 |is_online|**bit**|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定成只使用伺服器上部分可用的處理器，這個組態可能表示部分排程器對應到不在相似性遮罩中的處理器。 如果是這種情況，這個資料行會傳回 0。 這個值表示排程器目前未用於處理查詢或批次。<br /><br /> 不可為 Null。|  
 |is_idle|**bit**|1 = 排程器閒置。 目前沒有任何工作者正在執行。 不可為 Null。|  
@@ -63,16 +63,17 @@ ms.lasthandoff: 02/03/2018
 |yield_count|**int**|用來表示這個排程器上進度的內部值。 排程器監視器使用這個值來判斷排程器上的工作者是否未準時讓給其他的工作者。 這個值不表示工作者或工作已轉換到新工作者。 不可為 Null。|  
 |last_timer_activity|**bigint**|在 CPU 刻度中，排程器上次檢查排程器計時器佇列的時間。 不可為 Null。|  
 |failed_to_create_worker|**bit**|如果新工作者無法建立在這個排程器上，則設成 1。 發生原因通常是記憶體條件約束。 可為 Null。|  
-|active_worker_address|**varbinary(8)**|目前使用中工作者的記憶體位址。 可為 Null。 如需詳細資訊，請參閱[sys.dm_os_workers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|active_worker_address|**varbinary(8)**|目前使用中工作者的記憶體位址。 可為 Null。 如需詳細資訊，請參閱[sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
 |memory_object_address|**varbinary(8)**|排程器記憶體物件的記憶體位址。 不是 NULLABLE。|  
-|task_memory_object_address|**varbinary(8)**|工作記憶體物件的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱[sys.dm_os_memory_objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|task_memory_object_address|**varbinary(8)**|工作記憶體物件的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 公開 SQLOS 所使用的排程器配量。|  
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
-  
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+
 ## <a name="examples"></a>範例  
   
 ### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>A. 監視隱藏及非隱藏的排程器  
@@ -139,7 +140,7 @@ active_workers_count work_queue_count
   
 -   代表 DAC 的排程器 `255` 有 `3` 個與其相關聯的工作者。 這些工作者是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時配置，而且不會變更。 這些工作者只能用來處理 DAC 查詢。 此排程器上的兩項工作代表連接管理員和閒置工作者。  
   
--   `active_workers_count`代表具有相關聯的工作和非先佔式模式下執行的所有工作者。 某些工作 (例如網路接聽程式) 則是在先佔式排程下執行。  
+-   `active_workers_count` 代表具有相關聯的工作和非先佔式模式下執行的所有工作者。 某些工作 (例如網路接聽程式) 則是在先佔式排程下執行。  
   
 -   隱藏排程器不會處理一般使用者要求。 DAC 排程器例外。 這個 DAC 排程器有一個執行緒可以處理要求。  
   
@@ -147,7 +148,7 @@ active_workers_count work_queue_count
  下列查詢顯示負載沈重之非隱藏排程器的狀態，其中包含的要求數目大於可用工作者所能處理的上限。 在這個範例中，有 256 個工作者已被指派了工作。 某些工作正在等候對工作者的指派。 可執行計數偏低表示有多個工作正在等候資源。  
   
 > [!NOTE]  
->  您可以藉由查詢 sys.dm_os_workers 找出工作者的狀態。 如需詳細資訊，請參閱[sys.dm_os_workers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).  
+>  您可以藉由查詢 sys.dm_os_workers 找出工作者的狀態。 如需詳細資訊，請參閱[sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。  
   
  查詢內容如下：  
   
@@ -193,7 +194,7 @@ current_workers_count active_workers_count work_queue_count
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

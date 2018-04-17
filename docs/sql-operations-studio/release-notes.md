@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/28/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio （預覽） 版本資訊
+# <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (preview) 版本資訊
 
 **[下載 2 月公開預覽](download.md)**
 
@@ -34,7 +34,7 @@ version: 0.27.3
 - 增強的支援索引標籤式的深入資訊和組態窗格的儀表板擴充性模型。
    - 擴充管理員可讓簡單擷取的延伸模組。
    - 儀表板延伸從 sp_whoisactive [whoisactive.com](http://www.whoisactive.com)。
-   - 如需詳細資訊，請參閱[擴充功能的 SQL 作業 Studio](extensions.md)。
+   - 如需詳細資訊，請參閱[擴充功能的 SQL Operations Studio](extensions.md)。
 - 請加入更多[連線和物件總管 中的擴充性 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API)管理。
 - 若要修正重要影響的客戶繼續[GitHub 問題](https://github.com/Microsoft/sqlopsstudio/issues)。
 

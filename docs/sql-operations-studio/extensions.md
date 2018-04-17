@@ -1,6 +1,6 @@
----
-title: 擴充功能的 SQL 作業 Studio （預覽） |Microsoft 文件
-description: 擴充功能加入 SQL 作業 Studio （預覽）
+﻿---
+title: 擴充功能的 SQL Operations Studio (preview) |Microsoft 文件
+description: 擴充功能加入 SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.reviewer: alayu; erickang; sstein
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/28/2018
 擴充功能由 SQL Operations Studio 團隊 (Microsoft) 以及第 3 方社群（您 ！）提供。 如需有關建立擴充功能的詳細資訊，請參閱[開始使用擴充性](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)。
 
 
-## <a name="add-sql-operations-studio-extensions"></a>加入 SQL 作業 Studio 擴充功能
+## <a name="add-sql-operations-studio-extensions"></a>加入 SQL Operations Studio 擴充功能
 
 1. 若要開啟擴充管理員及存取可用的擴充功能，選取 [擴充功能] 圖示，或選取**檢視**功能表中的**擴充功能**。
 2. 選取可用的擴充功能以檢視其詳細資料。

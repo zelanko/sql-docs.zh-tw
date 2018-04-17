@@ -1,19 +1,21 @@
 ---
-title: "SQLSetCursorName （桌面資料庫驅動程式） |Microsoft 文件"
-ms.custom: 
+title: SQLSetCursorName （桌面資料庫驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLSetCursorName function [ODBC], Desktop Database Drivers
+helpviewer_keywords:
+- SQLSetCursorName function [ODBC], Desktop Database Drivers
 ms.assetid: 9bd7c87b-d99d-4e23-b2db-868d3b461c94
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

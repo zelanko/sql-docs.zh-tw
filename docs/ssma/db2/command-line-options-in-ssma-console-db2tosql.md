@@ -1,30 +1,31 @@
 ---
-title: "SSMA 主控台 (DB2ToSQL) 中的命令列選項 |Microsoft 文件"
+title: SSMA 主控台 (DB2ToSQL) 中的命令列選項 |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5eff60694cdcfdb4d2d147ae0531fbbc2ecfb32
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ece5c9b4a72f588608103437b03902fd81cc89f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 主控台 (DB2ToSQL) 中的命令列選項
 Microsoft 為您提供執行及控制 SSMA 活動組強固命令列選項。 這可確保各節詳細說明相同。  
@@ -92,7 +93,7 @@ Microsoft 為您提供執行及控制 SSMA 活動組強固命令列選項。 這
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 輸出選項:-x / xmloutput [xmloutputfile]  
 此命令用來輸出至主控台或至 xml 檔案的 xml 格式的命令輸出訊息。  
   
-有兩個選項可用來 xmloutput，viz。。，：  
+有兩個選項可用來 xmloutput，viz..,:  
   
 -   如果 xmloutput 切換之後提供的檔案路徑，則檔案會重新導向輸出。  
   
@@ -162,21 +163,21 @@ Microsoft 為您提供執行及控制 SSMA 活動組強固命令列選項。 這
   
 `C:\>SSMAforDB2Console.EXE -?`  
   
-SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40; DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md)。  
+SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword 說明選項:-securepassword-？ / 說明  
 會顯示 SSMA 主控台選項的語法摘要：  
   
 `C:\>SSMAforDB2Console.EXE -securepassword -?`  
   
-SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40; DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md)  
+SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
   
 ### <a name="next-step"></a>下一個步驟  
 下一個步驟取決於您的專案需求：  
   
-1.  指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼 &#40; DB2ToSQL &#41;](../../ssma/db2/managing-passwords-db2tosql.md)。  
+1.  指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼&#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)。  
   
-2.  產生報告，請參閱[產生報表 &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)。  
+2.  產生報告，請參閱[產生報表&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)。  
   
-3.  如需疑難排解主控台中的問題，請參閱[疑難排解 &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md)。  
+3.  如需疑難排解主控台中的問題，請參閱[疑難排解&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)。  
   

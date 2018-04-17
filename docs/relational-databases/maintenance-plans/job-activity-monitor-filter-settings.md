@@ -1,33 +1,34 @@
 ---
-title: "作業活動監視器 (篩選設定) | Microsoft Docs"
-ms.custom: 
+title: 作業活動監視器 (篩選設定) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b03932c680b2f46485ec633ba31149b3e5d41235
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作業活動監視器 (篩選設定)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來減少可以在作業活動監視器看到的資料列數目。 在一或數個可用的方塊中輸入準則，只顯示符合指定值的資料列。 有些方塊 (例如 [狀態] 或 [封鎖類型]) 提供有限數目的可能值，經由下拉式清單提供。 其他的方塊 (例如 [應用程式]) 則允許您以逗號分隔的清單，輸入任何值以及隨您想要之數量的值。 工具列圖示允許您依類別或字母順序排序可用的方塊。 按一下準則以顯示每個準則的簡短描述。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此頁面來減少可以在作業活動監視器看到的資料列數目。 在一或數個可用的方塊中輸入準則，只顯示符合指定值的資料列。 有些方塊 (例如 [狀態] 或 [封鎖類型]) 提供有限數目的可能值，經由下拉式清單提供。 其他的方塊 (例如 [應用程式]) 則允許您以逗號分隔的清單，輸入任何值以及隨您想要之數量的值。 工具列圖示允許您依類別或字母順序排序可用的方塊。 按一下準則以顯示每個準則的簡短描述。  
   
  若要篩選作業活動監視器，請依照需要提供篩選準則，並按一下 [套用篩選]，然後按一下 [確定]。  
   

@@ -1,16 +1,16 @@
 ---
-title: "定義磁碟檔案的邏輯備份裝置 (SQL Server) | Microsoft 文件"
-ms.custom: 
+title: 定義磁碟檔案的邏輯備份裝置 (SQL Server) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - backup devices [SQL Server], defining
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - database backups [SQL Server], disks
 - backing up databases [SQL Server], disks
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/18/2018
   
 6.  若要定義新裝置，請按一下 **[確定]**。  
   
- 若要備份至這個新裝置，請將它加入 [備份資料庫] ([一般]) 對話方塊中的 [備份至:] 欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
+ 若要備份至這個新裝置，請將它加入 [備份資料庫] \([一般]) 對話方塊中的 [備份至:] 欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

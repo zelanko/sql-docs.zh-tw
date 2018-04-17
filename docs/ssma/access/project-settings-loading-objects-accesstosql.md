@@ -1,35 +1,36 @@
 ---
-title: "專案 （載入物件） 的設定 (AccessToSQL) |Microsoft 文件"
+title: 專案 （載入物件） 的設定 (AccessToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da86fe46153ede299a41a2b4e308f1b5b51f6947
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16d21bbe8cb2d3bc2e2d069c12fe53607774373e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>專案 （載入物件） 的設定 (AccessToSQL)
 載入物件的專案設定可讓您設定如何存取資料庫物件同步處理與 SQL Server 資料庫物件。  
   
-從 Access 資料庫重新整理物件以及同步處理與 SQL Server 資料庫的物件指定預設設定的預設動作。 如需詳細資訊，請參閱[從資料庫 &#40; 重新整理AccessToSQL &#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
+從 Access 資料庫重新整理物件以及同步處理與 SQL Server 資料庫的物件指定預設設定的預設動作。 如需詳細資訊，請參閱[從資料庫重新整理&#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
   
 您可以存取兩個不同的同步處理頁面包含相同的設定：  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   若要指定目前的專案中，設定**工具**功能表上，按一下**專案設定**，然後按一下 **載入物件**在左窗格底部。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ##### <a name="misc"></a>其他  
   

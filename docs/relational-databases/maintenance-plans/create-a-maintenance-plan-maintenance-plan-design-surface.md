@@ -1,34 +1,34 @@
 ---
-title: "建立維護計畫 (維護計畫設計介面) | Microsoft 文件"
-ms.custom: 
+title: 建立維護計畫 (維護計畫設計介面) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>建立維護計畫 (維護計畫設計介面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫設計介面，建立單一伺服器或多伺服器維護計畫。 雖然 **[維護計畫精靈]** 最適用於建立基本的維護計畫，但使用設計介面建立計畫時可讓您利用加強的工作流程。  
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫設計介面，建立單一伺服器或多伺服器維護計畫。 雖然 **[維護計畫精靈]** 最適用於建立基本的維護計畫，但使用設計介面建立計畫時可讓您利用加強的工作流程。  
   
  **本主題內容**  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/23/2018
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   [使用維護計畫設計介面建立維護計畫](#SSMSProcedure)  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  若要建立或管理維護計畫，您必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 只有在使用者是 **sysadmin** 固定伺服器角色的成員時，[物件總管] 才會顯示 **[維護計畫]** 節點。  
   
 ##  <a name="SSMSProcedure"></a> 使用維護計畫設計介面  
@@ -176,7 +176,7 @@ ms.lasthandoff: 02/23/2018
         > [!NOTE]  
         >  優先順序條件約束線條若是綠色代表 [成功]、紅色代表 [失敗]，而藍色代表 [完成]。  
   
-         **運算式**  
+         **[運算式]**  
          如果使用的是 [運算式]、[運算式與條件約束] 或 [運算式或條件約束] 作業，請鍵入運算式。 運算式必須評估為布林。  
   
          **測試**  
@@ -246,7 +246,7 @@ ms.lasthandoff: 02/23/2018
      **匯出**  
      開啟對話方塊，以讓您將 [記錄檔摘要] 格線中所顯示的資訊匯出至文字檔。  
   
-     **[重新整理]**  
+     **重新整理**  
      重新整理所選取之記錄檔的檢視。 當套用任何篩選設定時， **[重新整理]** 按鈕會從目標伺服器重新讀取選取的記錄檔。  
   
      **篩選**  
@@ -261,7 +261,7 @@ ms.lasthandoff: 02/23/2018
      **記錄檔摘要**  
      此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]**。 若篩選已套用到記錄檔，則會看到下列文字：**篩選記錄項目的準則:** \<篩選準則>。  
   
-     **Date**  
+     **日期**  
      顯示事件的日期。  
   
      **Source**  

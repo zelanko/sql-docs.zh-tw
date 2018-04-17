@@ -1,26 +1,24 @@
 ---
-title: "SQL Server 機器學習服務的擴充事件 |Microsoft 文件"
-ms.custom: 
+title: SQL Server 機器學習服務的擴充事件 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/21/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e16c8c468b4e82847e65e808f357e6eefb811f7
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的擴充的事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +51,7 @@ AND p.name = 'SQLSatellite';
 
 如需如何執行這項操作的詳細資訊，請參閱 > 一節，[從外部處理序收集事件](#bkmk_externalevents)。
 
-##  <a name="bkmk_xeventtable"></a>擴充事件列表
+##  <a name="bkmk_xeventtable"></a> 擴充事件列表
 
 |事件|Description|注意|  
 |-----------|-----------------|---------|  
@@ -88,7 +86,7 @@ AND p.name = 'SQLSatellite';
 |satellite_data_chunk_sent|附屬連線完成傳送單一資料區塊時引發。|包含有關資料行數目、資料列數目、封包數目及傳送區塊所經過之時間的資訊。|  
 |satellite_sessionId_mismatch|非預期的訊息工作階段識別碼||  
   
-###  <a name="bkmk_externalevents"></a>從外部處理序收集事件
+###  <a name="bkmk_externalevents"></a> 從外部處理序收集事件
 
 SQL Server 機器學習服務會啟動一些在 SQL Server 處理序外執行的服務。 若要擷取這些外部處理序的相關事件，您必須建立事件追蹤組態檔，並將檔案放在與處理程序的可執行檔相同的目錄。  
   

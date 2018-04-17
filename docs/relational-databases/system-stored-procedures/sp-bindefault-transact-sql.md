@@ -1,16 +1,16 @@
 ---
-title: "sp_bindefault (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_bindefault (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindefault
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindefault
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b3e23435d6c0a2db3809722856b9daa6b2d66505
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   將預設值繫結到資料行或別名資料類型。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]我們建議您在使用 DEFAULT 關鍵字來建立預設定義[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)陳述式改為。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您在使用 DEFAULT 關鍵字來建立預設定義[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)陳述式改為。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@defname=** ] **'***預設***'**  
+ [ **@defname=** ] **'***default***'**  
  這是 CREATE DEFAULT 所建立之預設值的名稱。 *預設*是**nvarchar(776)**，沒有預設值。  
   
- [  **@objname=** ] **'***object_name***'**  
+ [ **@objname=** ] **'***object_name***'**  
  這是預設值將要繫結之資料表和資料行的名稱，或是別名資料類型。 *object_name*是**nvarchar(776)**沒有預設值。 *object_name*不能以定義**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**，或 CLR使用者定義型別。  
   
  如果*object_name*是單部分名稱，它會解析成別名資料類型。 如果它是兩部份或三部份的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，現有的資料行別名資料類型的繼承*預設*，除非預設值已經繫結至資料行直接。 預設值無法繫結至**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**，**varbinary （max)**， **xml**，**時間戳記**，或 CLR 使用者自訂類型資料行、 具有 IDENTITY 屬性的資料行、 計算資料行或資料行，已經有 DEFAULT 條件約束。  
@@ -62,7 +62,7 @@ sp_bindefault [ @defname = ] 'default' ,
 > [!NOTE]  
 >  *object_name*可以包含方括號**[]**作為分隔識別碼。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
- [  **@futureonly=** ] **'***futureonly_flag***'**  
+ [ **@futureonly=** ] **'***futureonly_flag***'**  
  只有將預設值繫結到別名資料類型時，才會使用這個項目。 *futureonly_flag*是**varchar(15)**預設值是 NULL。 當此參數設為**futureonly**，該資料類型的現有資料行無法繼承新的預設值。 當預設值繫結到資料行時，永遠不會使用這個參數。 如果*futureonly_flag*是 NULL，新的預設值繫結至任何資料行的別名資料類型，目前有沒有預設值，或使用現有的預設值的別名資料類型。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -121,11 +121,11 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [卸除預設值 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_unbindefault &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

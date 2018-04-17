@@ -1,31 +1,33 @@
 ---
-title: "初始化測試案例 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 初始化測試案例 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Tester Component,InitializingTest Cases
+helpviewer_keywords:
+- Tester Component,InitializingTest Cases
 ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a62d9803867f6b1d7ea86e027426f28c893b860
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a397b48e4c55cee98fd12cb7f1954ba17100854
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>初始化測試案例 (SybaseToSQL)
 在這個步驟中，您會指定新的測試案例的初始資訊。  
@@ -44,8 +46,8 @@ ms.lasthandoff: 12/21/2017
 輸入任何其他資訊來識別測試案例的目的。  
   
 ## <a name="next-step"></a>下一個步驟  
-[選取並設定測試 &#40; 物件SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[選取並設定測試 &#40;物件SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[測試移轉的資料庫物件 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[測試移轉的資料庫物件 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

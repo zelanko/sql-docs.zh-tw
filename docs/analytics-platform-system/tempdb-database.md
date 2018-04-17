@@ -1,27 +1,27 @@
 ---
-title: "tempdb 資料庫 (SQL Server PDW)"
+title: tempdb 資料庫 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
-caps.latest.revision: "22"
+caps.latest.revision: 22
 ms.workload: not set
-ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a52f21b266d277f3bda205803d38431598545f7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 **tempdb**會儲存使用者資料庫的本機暫存資料表的 SQL Server PDW 系統資料庫。 暫存資料表，通常可用來改善查詢效能。 比方說，您可以使用的暫存資料表，使模組化指令碼，並重複使用計算的資料。  
@@ -81,7 +81,7 @@ SQL Server PDW 會從資料表卸除**tempdb**時：
   
 -   暫存資料表上執行資料庫主控台命令。  
   
--   使用相同的批次內的兩個或多個暫存資料表相同的名稱。 如果批次內使用多個本機暫存資料表，則每一個都必須是唯一的名稱。 如果多個工作階段會執行相同的批次，並且建立了相同的本機暫存資料表，SQL Server PDW 在內部將數值後置詞附加到本機暫存資料表名稱，以維護每個本機暫存資料表的唯一名稱。  
+-   使用相同的批次內的兩個或多個暫存資料表相同的名稱。 如果在批次內使用超過一個本機暫存資料表，每個資料表都必須有唯一的名稱。 如果多個工作階段會執行相同的批次，並且建立了相同的本機暫存資料表，SQL Server PDW 在內部將數值後置詞附加到本機暫存資料表名稱，以維護每個本機暫存資料表的唯一名稱。  
   
 > [!NOTE]  
 > 您*可以*建立和更新暫存資料表上的統計資料。**ALTER INDEX**可用來重建叢集的索引。  
@@ -91,7 +91,7 @@ SQL Server PDW 會從資料表卸除**tempdb**時：
   
 ## <a name="RelatedTasks"></a>相關的工作  
   
-|工作|描述|  
+|工作|Description|  
 |---------|---------------|  
 |中建立資料表**tempdb**。|您可以建立使用者的暫存資料表以 CREATE TABLE 和 CREATE TABLE AS SELECT 陳述式。 如需詳細資訊，請參閱[CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)和[CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)。|  
 |檢視中的現有資料表的清單**tempdb**。|`SELECT * FROM tempdb.sys.tables;`|  

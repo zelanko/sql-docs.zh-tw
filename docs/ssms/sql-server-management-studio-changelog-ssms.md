@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 變更記錄 (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 04/06/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-caps.latest.revision: ''
+caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9865ff96b084d70b3dcd067ad8d57c7cece01a62
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 75e8afe2561b49b2479d7b65d1c7aff9854fa420
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/21/2018
 ## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
 
 版本號碼：17.6<br>
-組建編號︰14.0.17230.0<br>
+組建編號：14.0.17230.0<br>
 發行日期：2018 年 3 月 20 日
 
 ### <a name="whats-new"></a>新功能
@@ -41,7 +41,7 @@ ms.lasthandoff: 03/21/2018
 
 SQL Database 受控執行個體：
 
-- 針對 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)新增支援。 Azure SQL Database 受控執行個體 (預覽) 是 Azure SQL Database 的新功能，以 SQL Server 內部部署提供近 100% 相容性、原生[虛擬網路 (VNet) ](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 實作的常見安全問題、以及[商務模型](https://azure.microsoft.com/pricing/details/sql-database/)有利於內部部署 SQL Server 客戶。
+- 針對 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)新增支援。 Azure SQL Database 受控執行個體 (預覽) 是 Azure SQL Database 的新功能，幾乎達到 100% 的 SQL Server 內部部署相容性、解決常見安全性問題的原生[虛擬網路 (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 實作、以及有利於內部部署 SQL Server 客戶的[商務模型](https://azure.microsoft.com/pricing/details/sql-database/)。
 - 支援常見的管理案例，例如：
    - 建立和改變資料庫。
    - 備份及還原資料庫。
@@ -50,12 +50,12 @@ SQL Database 受控執行個體：
    - 完整的物件總管支援。
    - 撰寫資料庫物件。
    - 支援 SQL 代理程式工作。
-   - 已連線伺服器的支援。
+   - 連結的伺服器支援。
 - 請前往[這裡](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/)深入了解受控執行個體。
 
 
 物件總管：
-- 已新增設定，以便從物件總管拖曳並置放於查詢視窗時，不強制以名稱周圍的括弧來括住。 (使用者建議 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) 和 [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051)。)
+- 新增設定，以便從物件總管拖曳並置放於查詢視窗時，不強制以名稱周圍的括弧來括住。 (使用者建議 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) 和 [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051)。)
 
 資料分類：
 - 一般改善和 Bug 修正。
@@ -109,7 +109,7 @@ Database Mail：
 
 ### <a name="known-issues"></a>已知問題
 
-此版本目前沒有已知的問題。
+- 此為已知的問題：在維護計劃中設定排程時，SSMS 17.6 會損毀。
 
 ## <a name="previous-ssms-releases"></a>舊版 SSMS
 
@@ -685,7 +685,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 修正 DMF 條件 UI 未正確更新其字串常值中有引號的運算式
 - 修正執行自訂報表時可能造成 SSMS 損毀的問題
 - 將 [向外延展中的執行...] 功能表項目 新增到資料夾節點
-- 修正 Azure SQL DB 防火牆白名單 IP 地址功能的問題
+- 修正 Azure SQL DB 防火牆允許清單 IP 地址功能的問題
 - 修正 SSMS 中在編輯 AS 多維磁碟分割來源時，導致物件參考未設定例外狀況的問題
 - 修正 SSMS 中從多維 AS 伺服器刪除客戶組件時，導致物件參考未設定例外狀況的問題
 - 修正重新命名 AS 表格式 1400 資料庫失敗的問題

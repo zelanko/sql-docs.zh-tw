@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="hot-exit"></a>熱結束
 
-SQL 作業 Studio 將檔案記住未儲存的變更，當您結束預設。 這是在 Visual Studio 程式碼中的熱結束功能相同。
+SQL Operations Studio 將檔案記住未儲存的變更，當您結束預設。 這是在 Visual Studio 程式碼中的熱結束功能相同。
 
 根據預設，熱結束已關閉。 啟用作用結束藉由編輯`files.hotExit`設定。 如需詳細資訊，請參閱[（在 Visual Studio 程式碼文件中） 的熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
 

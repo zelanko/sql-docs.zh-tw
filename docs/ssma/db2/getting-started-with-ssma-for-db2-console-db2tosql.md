@@ -1,30 +1,31 @@
 ---
-title: "SSMA for 入門 DB2 主控台 (DB2ToSQL) |Microsoft 文件"
+title: SSMA for 入門 DB2 主控台 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfffdb6df256ed0ee591965b1d1ac98cf3c1d721
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec1529fcf61472119612062819a16190b7fe3dfd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>SSMA for 入門 DB2 主控台 (DB2ToSQL)
 本章節描述的程序啟動並開始使用 DB2 主控台應用程式。 亦會使用的慣例典型的 SSMA 主控台輸出視窗中。  
@@ -41,13 +42,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="procedure-for-using-the-ssma-console"></a>針對使用 SSMA 主控台的程序  
 Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作使用下列步驟：  
   
-1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔案 &#40; DB2ToSQL &#41;](../../ssma/db2/creating-script-files-db2tosql.md) 。  
+1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-script-files-db2tosql.md) 。  
   
-2.  [建立變數值的檔案 &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+2.  [建立變數值的檔案&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   
-3.  [建立伺服器連接檔案 &#40; DB2ToSQL &#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+3.  [建立伺服器連接檔案&#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-4.  [執行 SSMA 主控台 &#40; DB2ToSQL &#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)根據您的專案需求  
+4.  [執行 SSMA 主控台&#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md)根據您的專案需求  
   
 其他功能：  
   
@@ -62,7 +63,7 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
   
 下表中的主控台輸出的色彩解譯：  
   
-|Color|描述|  
+|Color|Description|  
 |---------|---------------|  
 |紅色|執行期間發生嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  
@@ -71,6 +72,6 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
 |綠色|提示使用者輸入|  
 |11：青色|開始、 完成和作業的結果。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [安裝的 SSMA for DB2](http://msdn.microsoft.com/en-us/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

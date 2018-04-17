@@ -1,31 +1,33 @@
 ---
-title: "SSMA 主控台 (SybaseToSQL) 中的命令列選項 |Microsoft 文件"
-ms.custom: 
+title: SSMA 主控台 (SybaseToSQL) 中的命令列選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Sybase Console,Command Line Options
+helpviewer_keywords:
+- Sybase Console,Command Line Options
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eb96fb924a26d691db1ba6577d0b6f9c93e49ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4926712b260fe20dc42518ed1bccb70bb0ab306c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 主控台 (SybaseToSQL) 中的命令列選項
 Microsoft 提供一組強固的執行及控制 SSMA 活動的命令列選項。 這可確保各節詳細說明相同。  
@@ -93,7 +95,7 @@ Microsoft 提供一組強固的執行及控制 SSMA 活動的命令列選項。 
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 輸出選項:-x / xmloutput [xmloutputfile]  
 此命令用來輸出至主控台或至 xml 檔案的 xml 格式的命令輸出訊息。  
   
-有兩個選項可用來 xmloutput，viz。。，：  
+有兩個選項可用來 xmloutput，viz..,:  
   
 -   如果 xmloutput 切換之後提供的檔案路徑，則檔案會重新導向輸出。  
   
@@ -163,21 +165,21 @@ Microsoft 提供一組強固的執行及控制 SSMA 活動的命令列選項。 
   
 `C:\>SSMAforSybaseConsole.EXE -?`  
   
-SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;SybaseToSQL &#41;](../../ssma/sybase/appendix-1-sybasetosql.md).  
+SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword 說明選項:-securepassword-？ / 說明  
 會顯示 SSMA 主控台選項的語法摘要：  
   
 `C:\>SSMAforSybaseConsole.EXE -securepassword -?`  
   
-SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;SybaseToSQL &#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
+SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
   
 ### <a name="next-step"></a>下一個步驟  
 下一個步驟取決於您的專案需求：  
   
--   指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼 &#40;SybaseToSQL &#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼&#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)。  
   
--   產生報告，請參閱[產生報表 &#40;SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   產生報告，請參閱[產生報表&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)。  
   
--   如需疑難排解主控台中的問題，請參閱[疑難排解 &#40;SybaseToSQL &#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   如需疑難排解主控台中的問題，請參閱[疑難排解&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)。  
   

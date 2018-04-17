@@ -1,50 +1,52 @@
 ---
-title: "連接到 Azure SQL DB (AccessToSQL) |Microsoft 文件"
+title: 連接到 Azure SQL DB (AccessToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Connect to SQL Azure dialog box
+helpviewer_keywords:
+- Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f826bd9b4bd2bdec0c7cd79c6faf20b0630639
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 511c652a221ffb3fe4392dd8f4c365de129efe13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>連接到 Azure SQL DB (AccessToSQL)
 使用 [連線到 SQL Azure] 對話方塊中，連接到您想要移轉 SQL Azure 資料庫。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**連接到 SQL Azure**。 如果您之前已連線，則命令是**重新連接到 SQL Azure。**  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **伺服器名稱**  
   
 選取或輸入伺服器名稱來連接到 SQL Azure。  
   
-**[資料庫備份]**  
+**資料庫**  
   
 選取、 輸入或**瀏覽**資料庫名稱。  
   
 > [!IMPORTANT]  
 > SSMA for Access 不支援 SQL Azure 中的 master 資料庫的連接。  
   
-**User name**  
+**使用者名稱**  
   
 輸入 SSMA 將用來連接到 SQL Azure 資料庫的使用者名稱  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 請輸入使用者名稱的密碼。  
   
-**加密**  
+**Encrypt**  
   
 SSMA 會建議加密的連接到 SQL Azure。  
   

@@ -1,27 +1,27 @@
 ---
-title: "高可用性、 災害復原的 SQL Server Native Client 支援 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/16/2017
+title: 高可用性、 災害復原的 SQL Server Native Client 支援 |Microsoft 文件
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd805562b60d37b9988b9afeb84d81e2cb2f5125
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 82c0cd64a3638ad747ca1f4fa88fdc8a2fc5a0e2
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,29 +73,11 @@ ms.lasthandoff: 01/25/2018
  如果您將目前使用資料庫鏡像的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 應用程式升級為多重子網路案例，應該移除 **Failover_Partner** 連接屬性，以設為 **Yes** 的 **MultiSubnetFailover** 取代它，並以可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用 **Failover_Partner** 和 **MultiSubnetFailover=Yes**，驅動程式會發生錯誤。 不過，如果連接字串使用 **Failover_Partner** 和 **MultiSubnetFailover=No** (或 **ApplicationIntent=ReadWrite**)，應用程式就會使用資料庫鏡像。  
   
  如果可用性群組中的主要資料庫使用資料庫鏡像，而且如果在連接到主要資料庫 (而不是可用性群組接聽程式) 的連接字串中使用 **MultiSubnetFailover=Yes**，驅動程式會傳回錯誤。  
-  
-## <a name="specifying-application-intent"></a>指定應用程式意圖  
- 當**ApplicationIntent = ReadOnly**，用戶端會連線到啟用 Always On 的資料庫時要求讀取工作負載。 伺服器會在連接時和在 USE 資料庫陳述式期間，只針對啟用 AlwaysOn 的資料庫強制執行此意圖。  
-  
- **ApplicationIntent** 關鍵字不適用於舊版唯讀資料庫。  
-  
- 資料庫可以允許或不允許目標 Alwayson 資料庫上的讀取工作負載。 (作法是使用 **PRIMARY_ROLE** 和 **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的 **ALLOW_CONNECTIONS** 子句。)  
-  
- **ApplicationIntent** 關鍵字用於啟用唯讀路由。  
-  
-## <a name="read-only-routing"></a>唯讀路由  
- 唯讀路由是可確保資料庫的唯讀複本之可用性的功能。 若要啟用唯讀路由：  
-  
-1.  您必須連接到 AlwaysOn 可用性群組的可用性群組接聽程式。  
-  
-2.  **ApplicationIntent** 連接字串關鍵字必須設為 **ReadOnly**。  
-  
-3.  可用性群組必須由資料庫管理員設定為啟用唯讀路由。  
-  
- 使用唯讀路由的多個連接可能不會連接至相同的唯讀複本。 資料庫同步處理的變更或伺服器路由組態的變更，可能會導致用戶端連接至不同的唯讀複本。 若要確保所有唯讀要求連接至相同的唯讀複本，請勿將可用性群組接聽程式傳遞給 **Server** 連接字串關鍵字。 請改為指定唯讀執行個體的名稱。  
-  
- 唯讀路由可能比連接到主要複本的時間更長，因為唯讀路由先連接到主要複本，再尋找最佳的可讀取次要複本。 因此，您應該增加登入逾時。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc"></a>ODBC  
  已加入兩個 ODBC 連接字串關鍵字來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Native Client 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   

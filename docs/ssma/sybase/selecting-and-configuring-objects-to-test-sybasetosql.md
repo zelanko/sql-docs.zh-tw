@@ -1,15 +1,16 @@
 ---
-title: "選取和設定物件以測試 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 選取和設定物件以測試 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,22 +19,22 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23c5a636c3031fce08294de4640799fde34362d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ee6efee5172d5261c5f8fa5e23507b9bb2b931b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>選取和設定測試 (SybaseToSQL) 的物件
 在這個步驟中選取測試，並設定設定值比較程序和函式的輸出參數，以及函式的傳回值的物件。  
   
 ## <a name="selection-of-objects-to-test"></a>要測試之物件的選取範圍  
-位於視窗左側的 Sybase 物件樹狀目錄，請檢查您想要在測試過程中叫用的物件。 請參閱中的可測試物件的完整清單[測試移轉的資料庫物件 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)主題。  
+位於視窗左側的 Sybase 物件樹狀目錄，請檢查您想要在測試過程中叫用的物件。 請參閱中的可測試物件的完整清單[測試移轉的資料庫物件&#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)主題。  
   
 如果 SSMA Tester 不支援任何測試選取的物件，您會看到標示為連結**有些選取的物件包含錯誤**物件樹狀結構下方。 按一下此連結來檢視的理由為何無法測試這些物件，並清除選取錯誤的物件。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="use-during-comparisons"></a>使用在進行比較  
 使用測試結果比較在所選取的參數來啟用。  
   
--   如果您選擇**True**，SSMA 會比較此參數的輸出值上執行 Sybase 具有對應值的程序之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   如果您選擇**True**，SSMA 會比較此參數的輸出值上執行 Sybase 具有對應值的程序之後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   如果您選擇**False**，驗證結果將會排除參數。  
   
@@ -90,8 +91,8 @@ ms.lasthandoff: 12/21/2017
 您可以指定輸入的參數值在**呼叫值**頁面。 **加入呼叫**按鈕會將新的呼叫，以空的參數值。 **移除呼叫**按鈕會移除目前的呼叫。  
   
 ## <a name="next-step"></a>下一個步驟  
-[選取並設定受影響的物件 &#40;SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[選取並設定受影響的物件 &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[測試移轉的資料庫物件 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[測試移轉的資料庫物件 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

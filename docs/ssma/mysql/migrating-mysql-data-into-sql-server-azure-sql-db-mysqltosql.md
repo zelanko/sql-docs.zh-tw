@@ -1,15 +1,16 @@
 ---
-title: "將 MySQL 資料移轉到 SQL Server-Azure SQL DB (MySQLToSQL) |Microsoft 文件"
+title: 將 MySQL 資料移轉到 SQL Server-Azure SQL DB (MySQLToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Data Migration, server side data migration
 - Data Migration,client side data migration
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0887825cf16986b78cad5d1889a04d73dacf222a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5bef9d72e855f70d520323950b789c1c330bcde4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>將 MySQL 資料移轉到 SQL Server-Azure SQL DB (MySQLToSQL)
 已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您可以移轉的資料從 MySQL 至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
@@ -106,17 +107,17 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > 如果 SQL Server 執行個體上未安裝的 SSMA for MySQL 擴充功能組件，而且**伺服器端資料移轉引擎**已選取，然後同時將資料移轉到目標資料庫，發生下列錯誤: ' SSMA 資料移轉元件找不到 SQL Server 上無法進行伺服器端資料移轉。 請檢查是否已正確安裝延伸模組組件 '。 按一下**取消**終止資料移轉。  
   
-5.  在**連接到 MySQL**對話方塊中，輸入連接的認證，然後按一下**連接**。 如需有關如何連接至 MySQL 的詳細資訊，請參閱[連接到 MySQL &#40;MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+5.  在**連接到 MySQL**對話方塊中，輸入連接的認證，然後按一下**連接**。 如需有關如何連接至 MySQL 的詳細資訊，請參閱[連接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
     如果目標資料庫是 SQL Server，然後輸入中的連接認證**連接到 SQL Server**對話方塊中，然後按一下**連接**。 如需有關如何連接到 SQL Server 的詳細資訊，請參閱[連接到 SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
-    如果目標資料庫是 SQL Azure，然後輸入中的連接認證**連接到 SQL Azure**對話方塊中，然後按一下**連接**。 如需有關如何連接到 SQL Azure 的詳細資訊，請參閱[連接到 Azure SQL DB &#40;MySQLToSQL &#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
+    如果目標資料庫是 SQL Azure，然後輸入中的連接認證**連接到 SQL Azure**對話方塊中，然後按一下**連接**。 如需有關如何連接到 SQL Azure 的詳細資訊，請參閱[連接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
   
     訊息會出現在**輸出**窗格。 移轉完成時，**資料移轉報告**隨即出現。 如果沒有不會移轉任何資料，按一下包含錯誤的資料列，然後按一下**詳細資料**。 當您不再使用的報表時，請按一下 **關閉**。 如需有關資料移轉報告的詳細資訊，請參閱[（SSMA 通用） 的資料移轉報告](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > SQL Express edition 做為目標資料庫使用時，允許只有用戶端端資料移轉，且不支援伺服器端資料移轉。  
   
-## <a name="see-also"></a>請參閱  
-[將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>另請參閱  
+[移轉的 MySQL 資料庫到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -1,19 +1,20 @@
 ---
-title: "尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置 | Microsoft Docs"
-ms.custom: 
+title: 尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: rsSharePoint
+helpviewer_keywords:
+- rsSharePoint
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile

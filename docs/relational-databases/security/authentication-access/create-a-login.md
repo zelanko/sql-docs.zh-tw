@@ -1,16 +1,16 @@
 ---
-title: "建立登入 | Microsoft 文件"
-ms.custom: 
+title: 建立登入 | Microsoft 文件
+ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.login.status.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-login"></a>建立登入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/06/2017
   
  登入做為安全性主體時，可以將權限授與登入。 登入的範圍是整個 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上的特定資料庫，則登入必須對應到資料庫使用者。 資料庫內的權限是對資料庫使用者授與或拒絕，而不是登入。 範圍包含整個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的權限 (例如 **CREATE ENDPOINT** 權限) 可以授與登入。  
   
-> **注意** ：當登入連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，身分識別會在 master 資料庫進行驗證。 使用自主資料庫使用者來驗證 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 資料庫層級的連線。 使用自主資料庫使用者時不需要登入。 「自主資料庫」(Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 執行個體 (以及 master 資料庫) 隔離的資料庫。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者。 當使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]時，結合自主資料庫使用者與資料庫層級防火牆規則。 如需詳細資訊，請參閱 [自主資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+> **注意** ：當登入連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，身分識別會在 master 資料庫進行驗證。 使用自主資料庫使用者來驗證 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 資料庫層級的連線。 使用自主資料庫使用者時不需要登入。 「自主資料庫」(Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 執行個體 (以及 master 資料庫) 隔離的資料庫。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者。 當使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]時，結合自主資料庫使用者與資料庫層級防火牆規則。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ##  <a name="Security"></a> Security  
 
@@ -170,9 +170,9 @@ ms.lasthandoff: 12/06/2017
   
 1.  按一下 **[搜尋]**。  
   
-2.  在 [加入物件] 對話方塊中，選取下列其中一個選項：[特定物件…]、[下列類型的所有物件…] 或 [伺服器*伺服器名稱*]。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  在**加入物件**對話方塊中，選取下列選項之一：**特定物件...**，**所有類型的物件...**，或 **伺服器 * * * server_name*。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **注意**：選取 [伺服器*伺服器名稱*] 會使用該伺服器的所有安全物件自動填滿上層方格。  
+    > **注意：**選取 **伺服器 * * * server_name*使用的所有該伺服器的安全物件自動填滿上方格。  
   
 3.  如果您選取 **[特定物件]**：  
   

@@ -2,7 +2,7 @@
 title: 高可用性、 災害復原的 SQL Server 支援的 OLE DB 驅動程式 |Microsoft 文件
 description: OLE DB 驅動程式的 SQL Server 支援高可用性、 災害復原
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -10,23 +10,23 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05275a1f770ce4a01f583dda768872a26b5e3725
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>高可用性、 災害復原的 SQL Server 支援的 OLE DB 驅動程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主題討論的 SQL Server 支援的 OLE DB 驅動程式 (在中加入[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) 的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+  這篇文章討論的 SQL Server 支援的 OLE DB 驅動程式 (在中加入[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) 的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  您可以在連接字串中指定給定可用性群組的可用性群組接聽程式。 如果 SQL Server 應用程式 OLE DB 驅動程式連接到容錯移轉可用性群組中的資料庫，則原始連接會中斷，和應用程式必須開啟新連接，才能在容錯移轉之後繼續工作。  
   
@@ -72,29 +72,11 @@ ms.lasthandoff: 04/03/2018
 如果您升級 SQL Server 應用程式 OLE DB 驅動程式目前使用資料庫鏡像的多重子網路案例，您應該移除**Failover_Partner**連接屬性並將它取代為**MultiSubnetFailover**設**是**和可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用 **Failover_Partner** 和 **MultiSubnetFailover=Yes**，驅動程式會發生錯誤。 不過，如果連接字串使用 **Failover_Partner** 和 **MultiSubnetFailover=No** (或 **ApplicationIntent=ReadWrite**)，應用程式就會使用資料庫鏡像。  
   
 如果可用性群組中的主要資料庫使用資料庫鏡像，而且如果在連接到主要資料庫 (而不是可用性群組接聽程式) 的連接字串中使用 **MultiSubnetFailover=Yes**，驅動程式會傳回錯誤。  
-  
-## <a name="specifying-application-intent"></a>指定應用程式意圖  
-當**ApplicationIntent = ReadOnly**，用戶端會連線到啟用 Always On 的資料庫時要求讀取工作負載。 伺服器會強制施行此意圖，在連接時間和期間`USE`資料庫陳述式，但只有對 Alwayson 啟用資料庫。  
-  
-**ApplicationIntent** 關鍵字不適用於舊版唯讀資料庫。  
-  
-資料庫可以允許或不允許目標 Alwayson 資料庫上的讀取工作負載。 (作法是使用 **PRIMARY_ROLE** 和 **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的 **ALLOW_CONNECTIONS** 子句。)  
-  
-**ApplicationIntent** 關鍵字用於啟用唯讀路由。  
-  
-## <a name="read-only-routing"></a>唯讀路由  
-唯讀路由是可確保資料庫的唯讀複本之可用性的功能。 若要啟用唯讀路由：  
-  
-1.  您必須連接到 AlwaysOn 可用性群組的可用性群組接聽程式。  
-  
-2.  **ApplicationIntent** 連接字串關鍵字必須設為 **ReadOnly**。  
-  
-3.  若要啟用唯讀路由的資料庫管理員必須設定 Alwayson 可用性群組。  
-  
-使用唯讀路由的多個連接可能不會連接至相同的唯讀複本。 資料庫同步處理的變更或伺服器路由組態的變更，可能會導致用戶端連接至不同的唯讀複本。 若要確保所有唯讀要求連接至相同的唯讀複本，不傳遞 Alwayson 可用性群組接聽程式**伺服器**連接字串關鍵字。 請改為指定唯讀執行個體的名稱。  
-  
-唯讀路由可能比連接到主要複本的時間更長，因為唯讀路由先連接到主要複本，再尋找最佳的可讀取次要複本。 因此，您應該增加登入逾時。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="ole-db"></a>OLE DB  
 SQL Server OLE DB 驅動程式同時支援**ApplicationIntent**和**MultiSubnetFailover**關鍵字。   
   
@@ -113,18 +95,15 @@ SQL Server OLE DB 驅動程式同時支援**ApplicationIntent**和**MultiSubnetF
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-OLE DB 驅動程式的 SQL Server OLE DB 應用程式可以使用其中一個方法來指定應用程式意圖：  
+OLE DB 驅動程式的 SQL Server 應用程式可以使用其中一個方法來指定應用程式意圖：  
   
- **Idbinitialize:: Initialize**  
+ -   **Idbinitialize:: Initialize**  
  **IDBInitialize::Initialize** 會使用之前設定的屬性集合來初始化資料來源及建立資料來源物件。 將應用程式意圖指定為提供者屬性或是擴充屬性字串的一部分。  
   
- **Idatainitialize:: Getdatasource**  
+ -   **Idatainitialize:: Getdatasource**  
  **IDataInitialize::GetDataSource** 會採用可包含 **Application Intent** 關鍵字的輸入連接字串。  
   
- **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties** 會擷取目前在資料來源上設定的屬性值。  您可以透過 DBPROP_INIT_PROVIDERSTRING 屬性和 SSPROP_INIT_APPLICATIONINTENT 屬性擷取 **Application Intent** 值。  
-  
- **IDBProperties::SetProperties**  
+ -   **IDBProperties::SetProperties**  
  若要設定 **ApplicationIntent** 屬性值，請呼叫 **IDBProperties::SetProperties**，其傳入值為 "**ReadWrite**" 或 "**ReadOnly**" 的 **SSPROP_INIT_APPLICATIONINTENT** 屬性，或是值包含 "**ApplicationIntent=ReadOnly**" 或 "**ApplicationIntent=ReadWrite**" 的 **DBPROP_INIT_PROVIDERSTRING** 屬性。  
   
 您可以在 [資料連結屬性] 對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
@@ -133,13 +112,22 @@ OLE DB 驅動程式的 SQL Server OLE DB 應用程式可以使用其中一個方
   
 ### <a name="multisubnetfailover"></a>MultiSubnetFailover
 
-對等連接屬性是：  
+同等的連接屬性如下：  
   
 -   **SSPROP_INIT_MULTISUBNETFAILOVER**  
+  
+-   **DBPROP_INIT_PROVIDERSTRING**  
 
-SSPROP_INIT_MULTISUBNETFAILOVER 屬性是布林類型。 屬性會接受的值為 VARIANT_TRUE 或 VARIANT_FALSE。
+OLE DB 驅動程式的 SQL Server 應用程式可以使用下列方法之一來設定 MultiSubnetFailover 選項：  
 
-若要設定 MultiSubnetFailover 屬性值，呼叫**idbproperties:: Setproperties** SSPROP_INIT_MULTISUBNETFAILOVER 屬性，其值在傳遞**VARIANT_TRUE**或**VARIANT_FALSE**。 
+ -   **Idbinitialize:: Initialize**  
+ **IDBInitialize::Initialize** 會使用之前設定的屬性集合來初始化資料來源及建立資料來源物件。 將應用程式意圖指定為提供者屬性或是擴充屬性字串的一部分。  
+  
+ -   **Idatainitialize:: Getdatasource**  
+ **Idatainitialize:: Getdatasource**採用可包含的輸入的連接字串**MultiSubnetFailover**關鍵字。  
+
+-   **IDBProperties::SetProperties**  
+若要設定**MultiSubnetFailover**屬性值，請呼叫**idbproperties:: Setproperties**傳入**SSPROP_INIT_MULTISUBNETFAILOVER**具有值屬性**VARIANT_TRUE**或**VARIANT_FALSE**或**DBPROP_INIT_PROVIDERSTRING**屬性的值包含"**MultiSubnetFailover = Yes**「 或 」**MultiSubnetFailover = 否**"。
 
 #### <a name="example"></a>範例
 

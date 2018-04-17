@@ -1,16 +1,16 @@
 ---
-title: "XQuery 與靜態輸入 |Microsoft 文件"
-ms.custom: 
+title: XQuery 與靜態輸入 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - checking static types
 - inference [XQuery]
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 41c21d1689e97b3939d4c479395e5af217e39897
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 與靜態類型
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="static-type-inference"></a>靜態類型推斷  
  靜態類型推斷可決定運算式的傳回類型。 它判斷的方法是透過採用靜態類型的輸入參數與靜態語意的運算，並決定靜態類型的結果。 例如，靜態類型的運算式 1 + 2.3 是以下列方式所決定：  
   
--   靜態類型的 1 是**xs: integer**和靜態類型的 2.3 是**xs: decimal**。 根據動態語意，靜態語意 **+** 作業將整數轉換成小數，然後傳回 十進位數。 推斷的靜態類型就會是**xs: decimal**。  
+-   靜態類型的 1 是**xs: integer**和靜態類型的 2.3 是**xs: decimal**。 根據動態語意，靜態語意**+**作業將整數轉換成小數，然後傳回 十進位數。 推斷的靜態類型就會是**xs: decimal**。  
   
  對於不具類型的 XML 執行個體，有特殊類型可指出資料不具類型。 此資訊是在靜態類型檢查中使用並用以執行某些隱含轉換)。  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 02/09/2018
   
  根據子類型規則 (使用 XML 結構描述的限制或延伸模組之衍生) 來定義的子類型。 例如，S 類型是 T 類型的子類型，如果所有含有 S 類型的值都有 T 類型的執行個體的話。  
   
- 除此之外，根據 XML 結構描述類型階層，所有的整數值也是小數值。 然而，並非所有的小數值都是整數。 因此，整數是小數的子類型，但並不是反之亦然。 例如，  **+** 運算只能允許某些類型，例如數值類型的值**xs: integer**， **xs: decimal**， **xs:float**，和**xs: double**。 如果其他類型的值，例如**xs: string**，會傳遞時，作業會引發類型錯誤。 這稱為強式類型。 其他類型的值 (例如用以指出不具類型的 XML 之自動類型) 可隱含轉換為作業可接受的類型值。 這稱為弱式類型。  
+ 除此之外，根據 XML 結構描述類型階層，所有的整數值也是小數值。 然而，並非所有的小數值都是整數。 因此，整數是小數的子類型，但並不是反之亦然。 例如， **+**運算只能允許某些類型，例如數值類型的值**xs: integer**， **xs: decimal**， **xs:float**，和**xs: double**。 如果其他類型的值，例如**xs: string**，會傳遞時，作業會引發類型錯誤。 這稱為強式類型。 其他類型的值 (例如用以指出不具類型的 XML 之自動類型) 可隱含轉換為作業可接受的類型值。 這稱為弱式類型。  
   
- 如果在隱含轉換後需要它，靜態類型檢查可確保只會將具有正確基數的允許類型值傳遞至運算中。 它會辨識為 「 字串 」 + 1，靜態類型的 「 字串 」 是**xs: string**。 因為這不是允許的類型為 **+**  ，就會引發類型錯誤的作業。  
+ 如果在隱含轉換後需要它，靜態類型檢查可確保只會將具有正確基數的允許類型值傳遞至運算中。 它會辨識為 「 字串 」 + 1，靜態類型的 「 字串 」 是**xs: string**。 因為這不是允許的類型為**+** ，就會引發類型錯誤的作業。  
   
- 在將任意運算式 E1 的結果與任意運算式 E2 相加的例子中 (E1 + E2)，靜態類型推斷首先會決定 E1 與 E2 的靜態類型，然後以運算所允許的類型來檢查靜態類型。 例如，如果 E1 的靜態類型可以是**xs: string**或**xs: integer**，靜態類型檢查就會引發類型錯誤，即使某些值在執行的階段可能是整數。 如果 E1 的靜態類型，相同便會發生**xs: integer\***。 因為 **+** 作業只接受一個整數值和 E1 可傳回零或 1 個以上，靜態類型檢查就會引發錯誤。  
+ 在將任意運算式 E1 的結果與任意運算式 E2 相加的例子中 (E1 + E2)，靜態類型推斷首先會決定 E1 與 E2 的靜態類型，然後以運算所允許的類型來檢查靜態類型。 例如，如果 E1 的靜態類型可以是**xs: string**或**xs: integer**，靜態類型檢查就會引發類型錯誤，即使某些值在執行的階段可能是整數。 如果 E1 的靜態類型，相同便會發生**xs: integer\***。 因為**+**作業只接受一個整數值和 E1 可傳回零或 1 個以上，靜態類型檢查就會引發錯誤。  
   
  如稍早所提及，類型推斷經常所推斷的類型，比使用者所知道的傳遞資料類型更為廣泛。 在這些情況下，使用者必須重寫查詢。 有些典型的例子包含下列項目：  
   

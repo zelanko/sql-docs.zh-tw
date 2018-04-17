@@ -1,26 +1,26 @@
 ---
-title: "立即檔案初始化組態 (Analytics Platform System)"
+title: 立即檔案初始化組態 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
-caps.latest.revision: "20"
-ms.openlocfilehash: b7dda4bb925e08f49409ea1950cfe3649b4db3e0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 1e28ff30c727dfe1132b5568bb12a333c51927d5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="instant-file-initialization-configuration"></a>立即檔案初始化組態
 立即檔案初始化是 SQL Server 功能，可讓資料檔案作業更快速地執行。 核取方塊，若要開啟立即檔案初始化會改善 SQL Server PDW 的效能。 不過，如果這會有安全性風險，商務，然後不要選取這個方塊。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>若要開啟或關閉開啟立即檔案初始化  
   
-1.  啟動 Configuration Manager。 如需詳細資訊，請參閱[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+1.  啟動 Configuration Manager。 如需詳細資訊，請參閱[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
 2.  在左窗格的 Configuration Manager 中，按一下 **立即檔案初始化**。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/21/2017
     > [!WARNING]  
     > 當您關閉立即檔案初始化時，上面所討論之功能的安全性考量可能仍然會套用到啟用立即檔案初始化已刪除的檔案。  
   
-4.  按一下 **[套用]**。 下一次應用裝置服務重新啟動時，會透過 SQL Server PDW 上的 SQL Server 執行個體傳播變更。 若要立即重新啟動的應用裝置的服務，請參閱[PDW 服務狀態 &#40;Analytics Platform System &#41;](pdw-services-status.md).  
+4.  按一下 **[套用]**。 下一次應用裝置服務重新啟動時，會透過 SQL Server PDW 上的 SQL Server 執行個體傳播變更。 若要立即重新啟動的應用裝置的服務，請參閱[PDW 服務狀態&#40;Analytics Platform System&#41;](pdw-services-status.md)。  
   
 5.  您可能想要重複上述步驟**加入備份帳戶的權限**移除**執行磁碟區維護工作**權限。  
   

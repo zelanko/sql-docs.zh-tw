@@ -1,30 +1,31 @@
 ---
-title: "SSMA For Sybase (SybaseToSQL) 中的新 GUI 功能 |Microsoft 文件"
-ms.custom: 
+title: SSMA For Sybase (SybaseToSQL) 中的新 GUI 功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c65710ff7ff0a89a326a4c7d5594d23fd660b8cb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 321c8e193c93ba34d15c7f8882d4284d08fabdf3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>SSMA For Sybase (SybaseToSQL) 中的新 GUI 功能
 本章節描述 SSMA 使用者介面的新功能。  
@@ -104,7 +105,7 @@ GUI 物件記錄可讓您下列好處導覽物件時：
   
 -   以滑鼠右鍵按一下快顯功能表中選取 快速諮詢  
   
--   按 Ctrl + Shift + 空格鍵  
+-   Press Ctrl+Shift+Space  
   
 ### <a name="find-declaration"></a>尋找宣告  
 您可以移至的物件，在游標位置，以下列方式宣告：  

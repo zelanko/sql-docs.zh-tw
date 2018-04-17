@@ -1,25 +1,23 @@
 ---
-title: "修改 SQL Server 機器學習的使用者帳戶集區 |Microsoft 文件"
+title: 修改 SQL Server 機器學習的使用者帳戶集區 |Microsoft 文件
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>修改 SQL Server 機器學習的使用者帳戶集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ Windows 帳戶群組由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 如果多個執行個體使用機器學習，電腦會有多個使用者群組。 群組不能在執行個體之間共用。
 
-### <a name = "HowToChangeGroup"></a>如何變更的背景工作帳戶數目
+### <a name = "HowToChangeGroup"> </a>如何變更的背景工作帳戶數目
 
 若要修改帳戶集區中的使用者數目，請依照下列說明，編輯 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服務的屬性。
 

@@ -1,16 +1,16 @@
 ---
-title: "使用 SSMS 還原資料庫備份 | Microsoft 文件"
-ms.custom: 
+title: 使用 SSMS 還原資料庫備份 | Microsoft 文件
+ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.locatebackupfileazure.f1
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-caps.latest.revision: 
+caps.latest.revision: 79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -211,7 +211,7 @@ ms.lasthandoff: 01/18/2018
 6.  在 [目的地] 區段中，按一下 [時間表] 存取 [備份時間表] 對話方塊，手動選取停止復原動作的時間點。
 
 7.  選取 [特定的日期與時間]。
-8.  將 [時間表間隔] 變更為下拉式方塊中的 [小時] (選擇性)。
+8.  將 [時間表間隔] 變更為下拉式方塊中的 [小時] \(選擇性)。
 9.  將滑桿移至想要的時間。
 
 10. 按一下 [確定] 回到 [一般] 頁面。

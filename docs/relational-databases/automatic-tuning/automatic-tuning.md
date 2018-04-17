@@ -1,31 +1,31 @@
 ---
-title: "自動調整 |Microsoft 文件"
-description: "深入了解 SQL Server 和 Azure SQL Database 中的自動調整"
-ms.custom: 
+title: 自動調整 |Microsoft 文件
+description: 深入了解 SQL Server 和 Azure SQL Database 中的自動調整
+ms.custom: ''
 ms.date: 08/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: automatic-tuning
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance tuning [SQL Server]
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04d8ac47233e0556cd54ed9fb2b3d22080b4ee42
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 02/12/2018
 
 您可以依每個資料庫啟用自動調整，並指定只要偵測到某些計畫變更迴歸，就應該強制執行最後一個良好的計畫。 自動調整已使用下列命令啟用：
 
-```   
+```sql   
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
@@ -92,7 +92,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供所有必要的檢視和監視效能及修正問題，查詢存放區中所需的程序。
 
-在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，您可以找到使用查詢存放區系統檢視的計畫選擇迴歸。 在[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]偵測，並顯示可能的計畫選擇迴歸和建議的動作應該套用在[sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)檢視。 檢視會顯示問題的重要性，問題，以及詳細資料，例如識別查詢的迴歸的計劃 ID、 已做為基準進行比較，使用計畫的識別碼的相關資訊和[!INCLUDE[tsql_md](../../includes/tsql_md.md)]可以修正執行陳述式發生問題。
+在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，您可以找到使用查詢存放區系統檢視的計畫選擇迴歸。 在[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]偵測，並顯示可能的計畫選擇迴歸和建議的動作應該套用在[sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)檢視。 檢視會顯示問題的重要性，問題，以及詳細資料，例如識別查詢的迴歸的計劃 ID、 已做為基準進行比較，使用計畫的識別碼的相關資訊和[!INCLUDE[tsql_md](../../includes/tsql_md.md)]可以修正執行陳述式發生問題。
 
 | 型別 | description | datetime | score | 詳細資料 | … |
 | --- | --- | --- | --- | --- | --- |
@@ -104,11 +104,12 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 描述，其中包含的資訊為何[!INCLUDE[ssde_md](../../includes/ssde_md.md)]此計劃變更是潛在的效能變差。
  - 偵測到潛在的迴歸時的日期時間。
  - 這項建議的分數。 
- - 例如識別碼偵測到計劃的迴歸的計劃，若要修正此問題，應該強制的計畫識別碼 ID 的問題詳細資訊[!INCLUDE[tsql_md](../../includes/tsql_md.md)]指令碼，可能已經套用到修正問題，依此類推。詳細資料會儲存在[JSON 格式](../../relational-databases/json/index.md)。
+ - 例如，偵測到計劃的迴歸的計劃，若要修正此問題，應該強制的計畫識別碼識別碼的識別碼問題詳細資訊 [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
+ 若要修正問題等可能會套用的指令碼。詳細資料會儲存在[JSON 格式](../../relational-databases/json/index.md)。
 
 取得使用下列查詢來取得的指令碼，修正的問題和相關的預估的其他資訊：
 
-```   
+```sql   
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
@@ -171,12 +172,12 @@ FROM sys.dm_db_tuning_recommendations
 
 ### <a name="alternative---manual-index-management"></a>別名-手動索引管理
 
-如果沒有自動索引管理功能，使用者必須手動查詢[sys.dm_db_missing_index_details &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)檢視來尋找的索引，可能會改善效能、 建立索引，使用在此檢視中提供的詳細資料及手動監視查詢的效能。 若要尋找應該卸除的索引，使用者應該監視尋找很少使用的索引的索引作業的使用量統計資料。
+如果沒有自動索引管理功能，使用者必須手動查詢[sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)檢視來尋找的索引，可能會改善效能，建立索引使用的詳細資料此檢視，並手動監視效能的查詢中提供。 若要尋找應該卸除的索引，使用者應該監視尋找很少使用的索引的索引作業的使用量統計資料。
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 簡化此程序。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 分析您的工作負載，會識別與新的索引，可能會更快速執行的查詢並找出未使用或重複的索引。 尋找詳細資訊的索引，應該在變更識別[在 Azure 入口網站中尋找的索引建議](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal)。
 
 ## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE SET AUTOMATIC_TUNING &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
  [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   

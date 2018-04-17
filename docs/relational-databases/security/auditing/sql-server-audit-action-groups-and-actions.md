@@ -1,16 +1,16 @@
 ---
-title: "SQL Server Audit 動作群組和動作 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Audit 動作群組和動作 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -24,7 +24,7 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/21/2017
 |SERVER_PERMISSION_CHANGE_GROUP|當發出 GRANT、REVOKE 或 DENY 以取得伺服器範圍的權限 (例如建立登入) 時，就會引發這個事件。 等於＜ [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)＞。|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|當建立、改變或卸除伺服器主體時，就會引發這個事件。 等於＜ [Audit Server Principal Management Event Class](../../../relational-databases/event-classes/audit-server-principal-management-event-class.md)＞。<br /><br /> 每當主體發出 sp_defaultdb 或 sp_defaultlanguage 預存程序或是 ALTER LOGIN 陳述式時，就會引發這個事件。 等於＜ [Audit Addlogin Event Class](../../../relational-databases/event-classes/audit-addlogin-event-class.md)＞。<br /><br /> 這個事件會在 sp_addlogin 和 sp_droplogin 預存程序上引發。 也等於＜ [Audit Login Change Property Event Class](../../../relational-databases/event-classes/audit-login-change-property-event-class.md)＞。<br /><br /> 這個事件會針對 sp_grantlogin 或 sp_revokelogin 預存程序而引發。 等於＜ [Audit Login GDR Event Class](../../../relational-databases/event-classes/audit-login-gdr-event-class.md)＞。|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|當伺服器範圍內有模擬情況 (如 EXECUTE AS \<登入>) 時，就會引發這個事件。 等於＜ [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md)＞。|  
-|SERVER_ROLE_MEMBER_CHANGE_GROUP|每當從固定伺服器角色中加入或移除登入時，就會引發這個事件。 此事件會針對 sp_addsrvrolemember 和 sp_dropsrvrolemember 預存程序而引發。 等於＜ [Audit Add Login to Server Role Event Class](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)＞。|  
+|SERVER_ROLE_MEMBER_CHANGE_GROUP|每當從固定伺服器角色中加入或移除登入時，就會引發這個事件。 此事件會針對 sp_addsrvrolemember 和 sp_dropsrvrolemember 預存程序而引發。 等於＜ [Audit Add Login to Server Role 事件類別](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)＞。|  
 |SERVER_STATE_CHANGE_GROUP|當修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務狀態時，就會引發這個事件。 等於＜ [Audit Server Starts and Stops Event Class](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)＞。|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|表示主體已成功登入自主資料庫。 等於稽核成功資料庫驗證事件類別。|  
 |SUCCESSFUL_LOGIN_GROUP|表示主體已成功登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Login Event Class](../../../relational-databases/event-classes/audit-login-event-class.md)＞。|  

@@ -1,16 +1,16 @@
 ---
-title: "壓縮資料庫 | Microsoft 文件"
-ms.custom: 
+title: 壓縮資料庫 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.shrinkdatabase.f1
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - database shrinking [SQL Server]
 - reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
-caps.latest.revision: 
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 建議  
   
--   檢視資料庫中目前的可用 (未配置) 空間量。 如需相關資訊，請參閱 [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+-   檢視資料庫中目前的可用 (未配置) 空間量。 如需相關資訊，請參閱 [顯示資料庫的資料和記錄空間資訊](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
 -   當您計畫壓縮資料庫時，請考量下列資訊：  
   

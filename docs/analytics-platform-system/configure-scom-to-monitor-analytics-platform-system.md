@@ -1,26 +1,26 @@
 ---
-title: "設定 SCOM 監視 Analytics Platform System"
+title: 設定 SCOM 監視 Analytics Platform System
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4dba9b50-1447-45fc-b219-b9fc99d47d8d
-caps.latest.revision: "10"
-ms.openlocfilehash: 435bbae75548d1959d509b9833bd9a6f7ec658e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 53fc0bce73f2fd30553e2a834122e86cdb0a65fc
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-scom-to-monitor-analytics-platform-system"></a>設定 SCOM 監視 Analytics Platform System
 請遵循下列步驟來設定 Analytics Platform System for System Center Operations Manager (SCOM) 管理組件。 監視從 SCOM Analytics Platform System 所需的管理組件。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 System Center Operations Manager 2007 R2 必須已安裝且正在執行。  
   
-必須安裝和設定管理組件。 請參閱[SCOM 管理組件 &#40; 安裝Analytics Platform System &#41;](install-the-scom-management-packs.md)和[匯入的 PDW &#40; SCOM 管理組件Analytics Platform System &#41;](import-the-scom-management-pack-for-pdw.md).  
+必須安裝和設定管理組件。 請參閱[安裝 SCOM 管理組件&#40;Analytics Platform System&#41; ](install-the-scom-management-packs.md)和[PDW 的 SCOM 管理組件匯入&#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)。  
   
 ## <a name="ConfigureRunAsProfile"></a>在 System Center 設定執行身分設定檔  
 若要設定 System Center 中，您必須執行下列步驟：  
@@ -121,7 +121,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>下一個步驟  
-既然您已設定管理組件，您已準備好要開始監視應用裝置。 如需詳細資訊，請參閱[監視使用 System Center Operations Manager &#40; 應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
+既然您已設定管理組件，您已準備好要開始監視應用裝置。 如需詳細資訊，請參閱[監視使用 System Center Operations Manager 應用裝置&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

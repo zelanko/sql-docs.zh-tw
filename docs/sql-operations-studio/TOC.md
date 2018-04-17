@@ -1,4 +1,4 @@
-# [SQL Operations Studio (預覽)](what-is.md)
+# [SQL Operations Studio (preview)](what-is.md)
 # [安裝](download.md)
 # [版本資訊](release-notes.md)
 # 快速入門
@@ -24,7 +24,7 @@
 ## [使用量資料收集](usage-data-collection.md)
 # 資源
 ## [Transact-SQL 參考](../t-sql/language-reference.md)
-## [SQL Operations Studio (預覽) GitHub 存放庫](https://www.github.com/Microsoft/SqlOpsStudio)
+## [SQL Operations Studio (preview) GitHub 存放庫](https://www.github.com/Microsoft/SqlOpsStudio)
 ## [SQL Server 部落格](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ## [新文章及更新的文章](new-updated-sql-operations-studio.md)
 # [常見問題集](faq.md)

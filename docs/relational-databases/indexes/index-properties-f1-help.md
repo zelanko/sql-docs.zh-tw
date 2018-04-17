@@ -1,16 +1,16 @@
 ---
-title: "索引屬性 F1 說明 | Microsoft Docs"
-ms.custom: 
+title: 索引屬性 F1 說明 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -21,16 +21,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 
+caps.latest.revision: 38
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="index-properties-f1-help"></a>索引屬性 F1 說明
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 02/23/2018
  **允許 NULL**  
  顯示參與索引鍵的資料行是否允許在資料表或檢視資料行中儲存 NULL 值。  
   
- **[加入]**  
+ **加入**  
  將資料行加入索引鍵。 請從您按一下 [新增] 時所出現的 [從 *\<資料表名稱>* 選取資料行] 對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
   
  **移除**  
@@ -178,7 +178,7 @@ ms.lasthandoff: 02/23/2018
 >  此選項不適用於 XML 索引，或索引為已停用的叢集索引時亦不適用。  
   
  **設定最大平行程度**  
- 限制平行計畫執行期間要使用的處理器數目。 預設值 (0) 會使用實際可用的 CPU 數目。 將值設定為 1 會抑制平行計畫的產生；將值設定為大於 1 的數字則會限制單一查詢執行所使用的處理器最大數目。 此選項僅會在對話方塊處於 **[重建]** 或 **[重新建立]** 狀態時可用。 如需詳細資訊，請參閱 [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
+ 限制平行計畫執行期間要使用的處理器數目。 預設值 (0) 會使用實際可用的 CPU 數目。 將值設定為 1 會抑制平行計畫的產生；將值設定為大於 1 的數字則會限制單一查詢執行所使用的處理器最大數目。 此選項僅會在對話方塊處於 **[重建]** 或 **[重新建立]** 狀態時可用。 如需詳細資訊，請參閱 [設定平行處理原則的最大程度選項來取得最佳效能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
   
 > [!NOTE]  
 >  如果指定的數值大於可用的 CPU 數目，就會使用可用 CPU 的實際數目。  

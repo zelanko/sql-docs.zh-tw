@@ -1,54 +1,55 @@
 ---
-title: "全域設定 （記錄） (DB2ToSQL) |Microsoft 文件"
+title: 全域設定 （記錄） (DB2ToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c80030383827cd5086b7bb51dc66f0524acddbea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 376c75f597b88c67caefda45324ba0b330423349
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="global-settings-logging-db2tosql"></a>全域設定 （記錄） (DB2ToSQL)
 使用**通用設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您需要在使用產品支援時，才變更這些設定。  
   
 若要存取此對話方塊，請在**工具**功能表上，選取**通用設定**，然後按一下 **記錄**在左窗格底部的按鈕。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **訊息層級**  
 底下的下列選項可用**訊息層級**:  
   
-|選項|描述|  
+|選項|Description|  
 |----------|---------------|  
 |**[所有類別目錄]**|用來設定下列選項的所有的記錄層級。|  
-|**收集器**|會收集有關來源結構描述的中繼資料，並將它儲存至專案。|  
-|**轉換程式**|將來源資料庫物件，例如資料表和預存程序的結構轉換成對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構。|  
+|**Collector**|會收集有關來源結構描述的中繼資料，並將它儲存至專案。|  
+|**Converter**|將來源資料庫物件，例如資料表和預存程序的結構轉換成對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構。|  
 |**資料遷移程式**|將資料從來源資料庫遷移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
-|**格式器**|產生指令碼轉換子的子元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構描述。|  
+|**Formatter**|產生指令碼轉換子的子元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構描述。|  
 |**圖形化使用者介面**|當您使用 SSMA 工具時出現的訊息。|  
-|**連結器**|解析的 SQL 識別碼，並提供其他元件的資訊。|  
+|**Linker**|解析的 SQL 識別碼，並提供其他元件的資訊。|  
 |**其他**|不在任何其他類別目錄中的所有訊息。|  
-|**剖析器**|剖析來源結構描述。|  
-|**同步器**|載入來源資料庫將物件到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
+|**Parser**|剖析來源結構描述。|  
+|**Synchronizer**|載入來源資料庫將物件到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |**TreeConverter**|將轉換成來源中繼資料中的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料。|  
-|**測試人員**|使用 SSMA Tester 時所顯示的訊息。|  
+|**Tester**|使用 SSMA Tester 時所顯示的訊息。|  
   
 每個選項在**訊息層級**，SSMA 設定下列的記錄層級的其中一個：  
   

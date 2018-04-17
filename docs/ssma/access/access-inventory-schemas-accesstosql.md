@@ -1,15 +1,16 @@
 ---
-title: "存取清查結構描述 (AccessToSQL) |Microsoft 文件"
+title: 存取清查結構描述 (AccessToSQL) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -42,16 +43,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>存取清查結構描述 (AccessToSQL)
 下列章節將說明當您匯出要存取結構描述時所建立的 SSMA 資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -59,13 +60,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="databases"></a>資料庫  
 資料庫中繼資料匯出至**SSMA_Access_InventoryDatabases**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|可唯一識別每個資料庫的 GUID。 此資料行也是資料表的主索引鍵。|  
 |**DatabaseName**|**nvarchar(4000)**|存取資料庫的名稱。|  
 |**ExportTime**|**datetime**|日期和時間的 SSMA 建立此中繼資料。|  
 |**檔案路徑**|**nvarchar(4000)**|存取資料庫的完整路徑和檔案名稱。|  
-|**檔案大小**|**bigint**|存取資料庫，以 kb 為單位的大小。|  
+|**FileSize**|**bigint**|存取資料庫，以 kb 為單位的大小。|  
 |**FileOwner**|**nvarchar(4000)**|指定存取資料庫的擁有者為 Windows 帳戶。|  
 |**DateCreated**|**datetime**|日期和時間所建立的 Access 資料庫中。|  
 |**DateModified**|**datetime**|日期和時間，上次修改的 Access 資料庫中。|  
@@ -84,20 +85,20 @@ ms.lasthandoff: 12/21/2017
 ## <a name="tables"></a>資料表  
 資料表中繼資料匯出至**SSMA_Access_InventoryTables**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此資料表的資料庫。|  
 |**TableId**|**uniqueidentifier**|唯一識別資料表的 GUID。 此資料行也是資料表的主索引鍵。|  
 |**TableName**|**nvarchar(4000)**|資料表的名稱。|  
 |**RowsCount**|**int**|資料表中的資料列數。|  
-|**驗證規則**|**nvarchar(4000)**|定義資料表的有效輸入規則。 如果不有任何驗證規則，此欄位會包含空字串。|  
+|**ValidationRule**|**nvarchar(4000)**|定義資料表的有效輸入規則。 如果不有任何驗證規則，此欄位會包含空字串。|  
 |**LinkedTable**|**nvarchar(4000)**|另一個資料表，如果有的話，與資料表相連結。 連結資料表可允許新增、 刪除及更新的其他資料表使用此資料表。|  
 |**ExternalSource**|**nvarchar(4000)**|資料來源，如果有的話，會與資料表相關聯。 如果資料表有關聯，它會有此欄位中指定外部資料來源。|  
   
-## <a name="columns"></a>[資料行]  
+## <a name="columns"></a>資料行  
 資料行中繼資料匯出至**SSMA_Access_InventoryColumns**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此資料行的資料庫。|  
 |**TableId**|**uniqueidentifier**|識別包含此資料行的資料表。|  
@@ -107,13 +108,13 @@ ms.lasthandoff: 12/21/2017
 |**DataType**|**nvarchar(4000)**|存取資料類型的資料行，例如**文字**或**長**。|  
 |**IsAutoIncrement**|**bit**|指定是否資料行就會自動遞增的整數值。 如果值為 1，會自動遞增的整數。|  
 |**Ordinal**|**smallint**|在資料表中，從零開始的資料行的順序。|  
-|**預設值**|**nvarchar(4000)**|資料行的預設值。|  
-|**驗證規則**|**nvarchar(4000)**|用來驗證資料的規則新增至或更新資料行中。|  
+|**DefaultValue**|**nvarchar(4000)**|資料行的預設值。|  
+|**ValidationRule**|**nvarchar(4000)**|用來驗證資料的規則新增至或更新資料行中。|  
   
 ## <a name="indexes"></a>索引  
 索引中繼資料匯出至**SSMA_Access_InventoryIndexes**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此索引的資料庫。|  
 |**TableId**|**uniqueidentifier**|識別包含此索引的資料表。|  
@@ -127,7 +128,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="foreign-keys"></a>外部索引鍵  
 外部索引鍵的中繼資料匯出至**SSMA_Access_InventoryForeignKeys**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此外部索引鍵的資料庫。|  
 |**TableId**|**uniqueidentifier**|識別包含此外部索引鍵的資料表。|  
@@ -143,7 +144,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="queries"></a>查詢  
 查詢中繼資料匯出至**SSMA_Access_InventoryQueries**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此查詢的資料庫。|  
 |**QueryId**|**int**|識別查詢的遞增整數。 此資料行是資料表的主索引鍵。|  
@@ -156,7 +157,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="forms"></a>表單  
 表單的中繼資料匯出至**SSMA_Access_InventoryForms**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此表單的資料庫。|  
 |**FormId**|**int**|識別表單的遞增整數。 此資料行是資料表的主索引鍵。|  
@@ -165,16 +166,16 @@ ms.lasthandoff: 12/21/2017
 ## <a name="macros"></a>巨集  
 巨集的中繼資料匯出至**SSMA_Access_InventoryMacros**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含巨集的資料庫。|  
 |**MacroId**|**int**|識別巨集的遞增整數。 此資料行是資料表的主索引鍵。|  
-|**巨集名稱**|**nvarchar(4000)**|巨集名稱。|  
+|**MacroName**|**nvarchar(4000)**|巨集名稱。|  
   
 ## <a name="reports"></a>報表  
 報表中繼資料匯出至**SSMA_Access_InventoryReports**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含報表的資料庫。|  
 |**ReportId**|**int**|識別報表的遞增整數。 此資料行是資料表的主索引鍵。|  
@@ -183,12 +184,12 @@ ms.lasthandoff: 12/21/2017
 ## <a name="modules"></a>模組  
 模組中繼資料匯出至**SSMA_Access_InventoryModules**資料表。 此表格包含下列資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含模組的資料庫。|  
 |**ModuleId**|**int**|遞增整數可識別模組。 此資料行是資料表的主索引鍵。|  
-|**模組名稱**|**nvarchar(4000)**|模組的名稱。|  
+|**ModuleName**|**nvarchar(4000)**|模組的名稱。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [匯出 Access 清查](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   

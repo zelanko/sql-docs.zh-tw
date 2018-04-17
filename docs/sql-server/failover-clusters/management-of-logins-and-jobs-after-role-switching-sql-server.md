@@ -1,19 +1,21 @@
 ---
-title: "角色切換後針對登入和作業進行管理 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 角色切換後針對登入和作業進行管理 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: role switching [SQL Server]
+helpviewer_keywords:
+- role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard

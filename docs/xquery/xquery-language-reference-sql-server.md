@@ -1,16 +1,16 @@
 ---
-title: "XQuery 語言參考 (SQL Server) |Microsoft 文件"
-ms.custom: 
+title: XQuery 語言參考 (SQL Server) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - XML [SQL Server], XQuery
 - queries [XML in SQL Server], XQuery
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -82,7 +82,7 @@ WHERE ProductModelID=7
 |-----------|-----------------|  
 |[XQuery 基本概念](../xquery/xquery-basics.md)|提供 XQuery 概念，還有運算式評估 (靜態及動態內容)、不可部分完成、有效布林值、XQuery 類型系統、比對順序類型，以及錯誤處理的基本概觀。|  
 |[XQuery 運算式](../xquery/xquery-expressions.md)|描述 XQuery 主要運算式、路徑運算式、順序運算式、算術比較及邏輯運算式、XQuery 建構、FLWOR 運算式、條件式及量化運算式，以及順序類型的不同運算式。|  
-|[模組和初構 &#40;XQuery &#41;](../xquery/modules-and-prologs-xquery.md)|描述 XQuery 初構。|  
+|[模組和初構&#40;XQuery&#41;](../xquery/modules-and-prologs-xquery.md)|描述 XQuery 初構。|  
 |[針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)|描述可支援之 XQuery 函數的清單。|  
 |[針對 xml 資料類型的 XQuery 運算子](../xquery/xquery-operators-against-the-xml-data-type.md)|描述可支援的 XQuery 運算式。|  
 |[針對 xml 資料類型的其他範例 XQuery](../xquery/additional-sample-xqueries-against-the-xml-data-type.md)|提供其他 XQuery 範例。|  
