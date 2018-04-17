@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server 2017 docker 設定選項 |Microsoft 文件
 description: 瀏覽不同的方式使用，並與其互動在 Docker 中的 SQL Server 2017 容器映像。 這包括複製檔案及疑難排解的保存資料。
 author: rothja

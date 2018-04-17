@@ -1,5 +1,5 @@
----
-title: 啟用或停用使用量資料收集，並損毀報表的 SQL Operations Studio (preview) |Microsoft 文件
+﻿---
+title: "啟用或停用使用量資料收集，並損毀報表的 SQL Operations Studio （預覽） |Microsoft 文件"
 description: 本文說明如何控制如果使用量及損毀報告資料收集並傳送給 Microsoft。
 ms.custom: tools|sos
 ms.date: 11/15/2017

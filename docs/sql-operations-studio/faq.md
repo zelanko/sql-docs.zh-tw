@@ -1,6 +1,6 @@
----
-title: SQL Operations Studio (preview) 常見問題集 |Microsoft 文件
-description: 常見問題集 (FAQ) 的 SQL Operations Studio (preview)。
+﻿---
+title: "SQL Operations Studio （預覽） 常見問題集 |Microsoft 文件"
+description: "常見問題集 (FAQ) 的 SQL Operations Studio （預覽）。"
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]設計可讓您選擇在您選擇的作業系統上的資料庫的 DevOps 生命週期中更具生產力。 如此一來，您一律在控制項中，而且可以降低風險、 速度更快，解決問題和持續提供值超過客戶的期望。
 
 
-## <a name="is-includename-sosincludesname-sos-shortmd-open-source"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]是開放原始碼嗎？ 
+## <a name="is-includename-sosincludesname-sos-shortmd-open-source"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 是開放原始碼嗎？ 
 
 原始碼[!INCLUDE[name-sos](../includes/name-sos-short.md)]且其資料提供者可在 GitHub 上。 「 前端的原始程式碼[!INCLUDE[name-sos](../includes/name-sos-short.md)]（這根據 Visual Studio 程式碼） 位在原始程式碼提供修改及使用軟體，但不是能將其重新散發，或將它裝載於雲端服務的權限的使用者授權合約。 資料提供者的原始程式碼可在 MIT 授權[https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice)。
 
