@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 的 Deprecated Features 物件 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 的 Deprecated Features 物件 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 
+caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a9a674bac91e77945fd7493cee22a11f44639a75
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |------------------------------------------------------|-----------------|  
 |做為暫存資料表和預存程序名稱的 '#' 和 '##'。|遇到一個不包含 # 以外之任何字元的識別碼。 請至少使用一個其他字元。 每次編譯時發生一次。|  
 |'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為 `SELECT column_list FROM` <函數名稱>`()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)` 取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
-|'@' 以及以 '@@' 當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼開頭的名稱|遇到了以 @ 或 @@ 開頭的識別碼。 請勿使用 @ 或 @@ 或是以 @@ 當做識別碼開頭的名稱。 每次編譯時發生一次。|  
+|'\@' 和以 '\@\@' 開頭的名稱作為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼|出現了以 \@ 或 \@\@ 開頭的識別碼。 請勿使用 \@、\@v @ 或是以 \@\@ 開頭的名稱作為識別碼。 每次編譯時發生一次。|  
 |ADDING TAPE DEVICE|遇到已被取代的功能 sp_addumpdevice'**tape**'。 請改用 sp_addumpdevice'**disk**'。 每次使用時發生一次。|  
 |ALL 權限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 語法的總次數。 請修改語法來拒絕特定權限。 每次查詢時發生一次。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|上一次啟動伺服器執行個體之後，已經使用 ALTER DATABASE 的已被取代功能 TORN_PAGE_DETECTION 選項的總次數。 請改用 PAGE_VERIFY 語法。 每次在 DDL 陳述式中使用時發生一次。|  
@@ -193,7 +193,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_defaultlanguage|遇到 sp_defaultlanguage 程序。 請改用 ALTER LOGIN。 每次編譯時發生一次。|  
 |sp_denylogin|遇到 sp_denylogin 程序。 請改用 ALTER LOGIN DISABLE。 每次查詢時發生一次。|  
 |sp_depends|遇到 sp_depends 程序。 請改用 sys.dm_sql_referencing_entities 和 sys.dm_sql_referenced_entities。 每次查詢時發生一次。|  
-|sp_detach_db @keepfulltextindexfile|在 sp_detach_db 陳述式中遇到 @keepfulltextindexfile 引數。 請勿使用這個引數。|  
+|sp_detach_db \@keepfulltextindexfile|在 sp_detach_db 陳述式中出現 \@keepfulltextindexfile 引數。 請勿使用這個引數。|  
 |sp_dropalias|遇到 sp_dropalias 程序。 以使用者帳戶和資料庫角色的組合來取代別名。 請使用 sp_dropalias，在升級的資料庫中移除別名。 每次編譯時發生一次。|  
 |sp_dropapprole|遇到 sp_dropapprole 程序。 請改用 DROP APPLICATION ROLE。 每次查詢時發生一次。|  
 |sp_dropextendedproc|遇到 sp_dropextendedproc 程序。 請改用 CLR。 每次編譯時發生一次。|  
@@ -206,10 +206,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_fulltext_catalog|遇到 sp_fulltext_catalog 程序。 請改用 CREATE/ALTER/DROP FULLTEXT CATALOG。 每次編譯時發生一次。|  
 |sp_fulltext_column|遇到 sp_fulltext_column 程序。 請改用 ALTER FULLTEXT INDEX。 每次編譯時發生一次。|  
 |sp_fulltext_database|遇到 sp_fulltext_database 程序。 請改用 ALTER DATABASE。 每次編譯時發生一次。|  
-|sp_fulltext_service @action=clean_up|遇到 sp_fulltext_service 程序的 clean_up 選項。 每次查詢時發生一次。|  
-|sp_fulltext_service @action=connect_timeout|遇到 sp_fulltext_service 程序的 connect_timeout 選項。 每次查詢時發生一次。|  
-|sp_fulltext_service @action=data_timeout|遇到 sp_fulltext_service 程序的 data_timeout 選項。 每次查詢時發生一次。|  
-|sp_fulltext_service @action=resource_usage|遇到 sp_fulltext_service 程序的 resource_usage 選項。 這個選項沒有函數。 每次查詢時發生一次。|  
+|sp_fulltext_service \@action=clean_up|遇到 sp_fulltext_service 程序的 clean_up 選項。 每次查詢時發生一次。|  
+|sp_fulltext_service \@action=connect_timeout|遇到 sp_fulltext_service 程序的 connect_timeout 選項。 每次查詢時發生一次。|  
+|sp_fulltext_service \@action=data_timeout|遇到 sp_fulltext_service 程序的 data_timeout 選項。 每次查詢時發生一次。|  
+|sp_fulltext_service \@action=resource_usage|遇到 sp_fulltext_service 程序的 resource_usage 選項。 這個選項沒有函數。 每次查詢時發生一次。|  
 |sp_fulltext_table|遇到 sp_fulltext_table 程序。 請改用 CREATE/ALTER/DROP FULLTEXT INDEX。 每次編譯時發生一次。|  
 |sp_getbindtoken|遇到 sp_getbindtoken 程序。 請改用 Multiple Active Result Set (MARS) 或分散式交易。 每次編譯時發生一次。|  
 |sp_grantdbaccess|遇到 sp_grantdbaccess 程序。 請改用 CREATE USER。 每次查詢時發生一次。|  

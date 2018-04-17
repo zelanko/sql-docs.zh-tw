@@ -53,16 +53,16 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: ''
+caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: MikeRay
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4f037130b00871303648aefd3d35553e702091a8
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 679dab613a948419e1407e66ef82b907465e1c2b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,7 +188,7 @@ ms.lasthandoff: 03/22/2018
   
     若要針對 SQL Server 2014 或更新版本使用群組受管理的服務帳戶，作業系統必須是 Windows Server 2012 R2 或更新版本。 Windows Server 2012 R2 的伺服器需要套用 [KB 2998082](http://support.microsoft.com/kb/2998082) ，以便服務可以在變更密碼之後立即登入，不會中斷。  
   
-    如需詳細資訊，請參閱 [群組受管理的服務帳戶](http://technet.microsoft.com/library/hh831782.aspx)。  
+    如需詳細資訊，請參閱[群組受控服務帳戶](http://technet.microsoft.com/library/hh831782.aspx)  
       
     > [!NOTE]  
     >  網域系統管理員必須先在 Active Directory 中建立群組受管理的服務帳戶， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式才能將其用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
