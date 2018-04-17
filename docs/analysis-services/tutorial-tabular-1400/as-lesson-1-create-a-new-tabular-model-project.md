@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 教學課程第 1 課： 建立新的表格式模型專案 |Microsoft 文件"
-description: "描述如何建立新的 Analysis Services 教學課程專案。"
+title: Analysis Services 教學課程第 1 課： 建立新的表格式模型專案 |Microsoft 文件
+description: 描述如何建立新的 Analysis Services 教學課程專案。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 6b8d24a31ade8fe621ef2a71b932e87c13211451
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 72b403297be09f8bee1e78b9f545f279936cfa0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-tabular-model-project"></a>建立表格式模型專案
 
@@ -70,11 +71,11 @@ ms.lasthandoff: 02/23/2018
 
 按一下**方案總管 中** 索引標籤。您可以看到您**Model.bim**檔案。 如果您看不到左 （Model.bim 索引標籤的空視窗），設計工具視窗中**方案總管 中**下**AW Internet Sales 專案**，連按兩下**Model.bim**檔案。 Model.bim 檔案包含您的模型專案的中繼資料。 
 
-![as-lesson1-se](../tutorial-tabular-1400/media/as-lesson1-se.png)
+![做為第 1 課 se](../tutorial-tabular-1400/media/as-lesson1-se.png)
   
 按一下 **方案總管**中建立新的空白表格式模型專案。 在**屬性**視窗中，您會看見模型屬性，最重要的是**DirectQuery 模式**屬性。 此屬性會指定是否在記憶體中模式 （關閉） 或是 DirectQuery 模式 （開啟） 部署模型。 本教學課程，您可以撰寫和部署記憶體中模式的模型。
 
-![as-lesson1-properties](../tutorial-tabular-1400/media/as-lesson1-properties.png)
+![做為第 1 課屬性](../tutorial-tabular-1400/media/as-lesson1-properties.png)
   
 當您建立模型專案時，根據資料模型化，可以指定自動設定某些模型屬性**工具**功能表 >**選項** 對話方塊。 [資料備份]、[工作空間保留] 和 [工作空間伺服器] 屬性會指定備份、在記憶體中保留以及建立工作空間資料庫 (您的模型撰寫資料庫) 的方式和位置。 您可以稍後變更這些設定，如有必要，但現在，這些屬性保持不變。  
 

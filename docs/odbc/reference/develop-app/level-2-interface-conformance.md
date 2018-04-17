@@ -1,31 +1,32 @@
 ---
-title: "層級 2 介面一致性 |Microsoft 文件"
-ms.custom: 
+title: 層級 2 介面一致性 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - level 2 interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4002a7b376a752d4c5d3a2ddd2506bc9357842fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a97e36132b3dc386106f1c48cdb6f2147cf9610
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="level-2-interface-conformance"></a>層級 2 介面一致性
 層級 2 介面一致性層級包含層級 1 介面一致性層級功能以及下列功能：  

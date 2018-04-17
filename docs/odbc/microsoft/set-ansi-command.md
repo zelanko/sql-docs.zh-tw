@@ -2,7 +2,7 @@
 title: SET ANSI 命令 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef87baef7367068b5a22225f3bb9b4c3e1783ca6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 358dceb034106eed23632bf0c08c425a0a98cf9e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-ansi-command"></a>SET ANSI 命令
 判斷如何比較不同長度的字串之間進行與 = Visual FoxPro SQL 命令中的運算子。  
@@ -63,6 +63,6 @@ SET ANSI ON | OFF
 ## <a name="string-order"></a>字串順序  
  SQL 命令中左到右的順序來比較兩個字串是 irrelevantswitching 字串從一端的 = = = 或運算子之間並不會影響比較的結果。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [選取的 SQL 命令](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT 命令](../../odbc/microsoft/set-exact-command.md)

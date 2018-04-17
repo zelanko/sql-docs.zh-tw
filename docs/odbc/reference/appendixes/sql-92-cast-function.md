@@ -1,31 +1,32 @@
 ---
-title: "SQL 92 CAST 函數 |Microsoft 文件"
-ms.custom: 
+title: SQL 92 CAST 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], SQL-92 functions
 - SQL-92 functions [ODBC]
 - CAST function [ODBC]
 ms.assetid: 982f09e5-8205-41b9-98b3-8f898e24743f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0e62a85a53da521710ed4cc61d0260e2182fb26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6223ace47e6e34064f1d99c47323584c730cceda
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-92-cast-function"></a>SQL 92 CAST 函數
 **轉換**以 sql-92 定義的函數即相當於**轉換**ODBC 中定義的函式。 對等函式的語法如下所示：  

@@ -1,15 +1,16 @@
 ---
-title: "Visual FoxPro 命令和函數不支援 |Microsoft 文件"
-ms.custom: 
+title: Visual FoxPro 命令和函數不支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 37231b78815901678b1956d89e9bc3720ae1590d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>不支援 Visual FoxPro 命令與函式 （Visual FoxPro ODBC 驅動程式）
 下表列出 FoxPro 命令與不支援 Visual FoxPro ODBC 驅動程式，但 Microsoft® Visual FoxPro® 所支援的函式。  
@@ -38,9 +39,9 @@ ms.lasthandoff: 12/21/2017
   
 ||||  
 |-|-|-|  
-|#DEFINE...#UNDEF|...#IF #ENDIF 前置處理器指示詞|#IFDEF &#124;#IFNDEF|  
-|#INCLUDE 前置處理器指示詞|:: 範圍解析運算子|! 命令 （請參閱執行 &#124; ！ 命令中）|  
-|? &#124; ?? 命令|??? 命令|\ &#124;\\\ 命令|  
+|#DEFINE...#UNDEF|...#IF #ENDIF 前置處理器指示詞|#IFDEF &AMP;#124; #IFNDEF|  
+|#INCLUDE 前置處理器指示詞|:: 範圍解析運算子|! 命令 (請參閱執行&#124;！ 命令中）|  
+|? &#124; ?? 命令|??? 命令|\ &#124; \\\ 命令|  
 |@ ...方塊命令|@ ...命令類別|@ ...清除命令|  
 |@ ...編輯-編輯方塊命令|@ ...填滿命令|@ ...GET|  
 |@ ...功能表命令|@ ...提示字元命令|@ ...說出命令|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 |_BROWSER 系統記憶體變數|建置應用程式的命令|建置 EXE 命令|  
 |建置專案命令|_BUILDER 系統記憶體變數||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -242,7 +243,7 @@ ms.lasthandoff: 12/21/2017
 |重新命名連線命令|重新命名的資料表 命令|還原命令|  
 |報表命令|重新查詢 > （） 函式|還原 [視窗] 命令|  
 |RESTORE 命令巨集|還原 [螢幕] 命令|RGBSCHEME （） 函式|  
-|RESUME 命令|RGB （） 函式|執行 &#124; ！ 命令|  
+|RESUME 命令|RGB （） 函式|執行&AMP;#124;！ 命令|  
 |RMDIR 命令|資料列 （） 函式||  
 |RUNSCRIPT 命令|RDLEVEL （） 函式||  
   
@@ -296,7 +297,7 @@ ms.lasthandoff: 12/21/2017
 |轉換 （） 函式|_TRANSPORT 系統記憶體變數||  
 |輸入命令|_THROTTLE 系統記憶體變數||  
   
-## <a name="u"></a>u  
+## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  

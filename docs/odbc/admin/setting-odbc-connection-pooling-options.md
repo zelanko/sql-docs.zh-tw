@@ -1,31 +1,32 @@
 ---
-title: "設定 ODBC 連接共用選項 |Microsoft 文件"
-ms.custom: 
+title: 設定 ODBC 連接共用選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection pooling [ODBC]
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 939ac623b62b4b079e81a5c3f12df804e0b6171c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a7c21b511f88b8f26d8cc4bdbff40c37c096dcb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>設定 ODBC 連接共用選項
 連接共用可讓應用程式不需要重新建立每次使用的連接集區使用的連接。 您可以使用**連接共用** 索引標籤**ODBC 資料來源管理員**啟用和停用效能監視 對話方塊。 按兩下要設定連接逾時期限的驅動程式名稱。  

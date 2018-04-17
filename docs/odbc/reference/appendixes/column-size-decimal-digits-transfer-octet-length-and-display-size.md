@@ -1,15 +1,16 @@
 ---
-title: "資料行大小、 十進位數字，傳輸八位元長度，顯示大小 |Microsoft 文件"
-ms.custom: 
+title: 資料行大小、 十進位數字，傳輸八位元長度，顯示大小 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - display size of data types [ODBC]
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - column size of data types [ODBC]
 - data types [ODBC], transfer octet length
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa5322870c92ee8c48d9d4dc49fbc5a50b6b3e7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ce63d73b21d7eee16d0b17100ff9c18cde265d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>資料行大小、 十進位數字，傳送 8 位元長度和顯示大小-ODBC
 資料類型的特性在於其資料行 （或參數） 的大小、 小數位數、 長度和顯示大小。 下列 ODBC 函數會傳回這些屬性中的 SQL 陳述式的參數或 SQL 資料型別上的資料來源。 每個 ODBC 函式會傳回一組不同的這些屬性，如下所示：  

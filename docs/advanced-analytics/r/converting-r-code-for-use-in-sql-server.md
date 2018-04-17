@@ -1,27 +1,19 @@
 ---
-title: 轉換 R 程式碼以在 R Services 中使用 | Microsoft Docs
-ms.date: 12/20/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+title: 將 R 程式碼，以用於 SQL Server 機器學習服務轉換 |Microsoft 文件 」
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 669f52d499b9479e23266af91c04e6bc084bb8ea
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: bf3d272bd4b5c1227aa8a1969727ea17f5b65596
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="converting-r-code-for-execution-in-database"></a>轉換執行資料庫內的 R 程式碼
+# <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>轉換為 SQL Server （資料庫） 執行個體中執行 R 程式碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文章提供有關如何修改工作在 SQL Server 中的 R 程式碼的高階指引。 

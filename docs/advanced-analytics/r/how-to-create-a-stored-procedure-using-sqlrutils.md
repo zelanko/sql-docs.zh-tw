@@ -1,28 +1,19 @@
 ---
-title: 如何使用 sqlrutils 來建立預存程序 | Microsoft Docs
-ms.custom: ''
-ms.date: 12/16/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+title: 如何建立預存程序中使用 sqlrutils |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 8d451a353e9bcd1468b1ebea4920182efaead182
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 82af827d95def976a04ac69073b58e1420cc9130
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-a-stored-procedure-using-sqlrutils"></a>建立預存程序使用的 sqlrutils
+# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>建立預存的 pProcedure 使用 sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章描述轉換為 T-SQL 預存程序中執行 R 程式碼的步驟。 為了獲得最佳的結果，您的程式碼可能需要稍加修改，以確保所有輸入皆可參數化。

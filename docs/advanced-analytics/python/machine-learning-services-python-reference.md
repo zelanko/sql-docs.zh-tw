@@ -1,32 +1,22 @@
 ---
-title: Python | Microsoft Docs
-ms.custom: ''
-ms.date: 04/18/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server 機器學習服務的 Python 應用程式開發介面參考 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: d318f50ebb239afaa7c9e0a3a2a42aff76f5755f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 11b722628bbe46203c9b04464703c6ed3f99fab7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="python"></a>Python
+# <a name="python-api-reference-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的 Python 應用程式開發介面參考
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本節包含在 SQL Server 2017 機器學習服務特定的應用程式開發介面參考的連結。
-
-> [!NOTE]
-> Python 支援是 SQL Server 2017 中的新功能，而且只在發行前版本。 尋找推出的詳細資訊。
 
 **程式庫**
 

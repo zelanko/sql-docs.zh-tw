@@ -1,15 +1,16 @@
 ---
-title: "配置環境控制代碼 |Microsoft 文件"
-ms.custom: 
+title: 配置環境控制代碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], environment handles
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ac926c39f1390431b35b49b27e7302fe789ca4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcbfc5e9a8be2bf1fc543e9d458658a918e40b6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-the-environment-handle"></a>配置環境控制代碼
 任何 ODBC 應用程式的第一個工作是載入驅動程式管理員。方式與作業系統相關。 比方說，在電腦上執行 Microsoft® Windows NT® Server/Windows 2000 Server、 Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows® 95/98，應用程式可能是連結到驅動程式管理員文件庫或呼叫**LoadLibrary**載入驅動程式管理員的 DLL。  

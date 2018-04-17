@@ -1,15 +1,16 @@
 ---
-title: "驅動程式特有的連接資訊 |Microsoft 文件"
-ms.custom: 
+title: 驅動程式特有的連接資訊 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3352a0a31e6bb48be84d72a7da84eb3d7c6100c9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specific-connection-information"></a>驅動程式特有的連接資訊
 **SQLConnect**假設資料來源名稱、 使用者識別碼和密碼是足以連接至資料來源，而所有其他連接資訊，可以儲存在系統上。 這通常不是大小寫。 例如，驅動程式可能需要一位使用者 ID 和密碼登入伺服器以及不同的使用者識別碼和密碼來登入 DBMS。 因為**SQLConnect**接受單一使用者識別碼和密碼，這表示，其他使用者識別碼和密碼必須儲存在系統上的資料來源資訊如果**SQLConnect**使用。 這是潛在的安全性漏洞，而且應該避免使用，除非密碼加密。  

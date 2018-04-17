@@ -1,25 +1,17 @@
 ---
-title: 避免安裝在使用者程式庫中的 R 封裝上的錯誤 |Microsoft 文件
-titleSuffix: SQL Server
-ms.custom: ''
-ms.date: 02/20/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 使用安裝在使用者程式庫中的 R 封裝時，避免發生錯誤 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: a3498ca0940384dacf9f67ac916d78eee939f829
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 4609504044e5ef014c4a73e2c4a64a21040db717
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>避免安裝在使用者程式庫中的 R 封裝上的錯誤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

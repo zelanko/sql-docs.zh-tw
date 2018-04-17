@@ -1,51 +1,35 @@
 ---
-title: "連接字串屬性 (Analysis Services) |Microsoft 文件"
-ms.custom: 
+title: 連接字串屬性 (Analysis Services) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c2daf9234b44f7108339d9a743118373b9b42c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>連接字串屬性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本主題將說明您可能會在某個設計工具或管理工具中設定的連接字串屬性，或是在連接到 Analysis Services 以查詢資料的用戶端應用程式所建立的連接字串中看到的連接字串屬性。 因此，本文內容只涵蓋可用屬性的子集。 完整的清單包含許多伺服器和資料庫屬性，可讓您針對特定應用程式自訂連接，而不必在乎伺服器上設定執行個體或資料庫的方式。  
+  本主題將說明您可能會在某個設計工具或管理工具中設定的連接字串屬性，或是在連接到 Analysis Services 以查詢資料的用戶端應用程式所建立的連接字串中看到的連接字串屬性。 因此，本文內容只涵蓋可用屬性的子集。 完整的清單包含許多伺服器和資料庫屬性，可讓您針對特定應用程式自訂連接，而不必在乎伺服器上設定執行個體或資料庫的方式。  
   
  開發人員若要透過撰寫應用程式的程式碼以建立自訂連接字串，應該檢閱適用於 ADOMD.NET 用戶端的 API 文件以檢視更詳細的清單： <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- 本主題描述的是 Analysis Services 用戶端程式庫 (即 ADOMD.NET、AMO 及 OLE DB Provider for Analysis Services) 所使用的屬性。 大部分的連接字串屬性均可搭配所有三套用戶端程式庫使用。 例外狀況將於描述中提出。  
-  
- 本主題包含下列各節：  
-  
- [常用的連接參數](#bkmk_common)  
-  
- [驗證和安全性](#bkmk_auth)  
-  
- [特殊用途的參數](#bkmk_special)  
-  
- [保留供日後使用](#bkmk_reserved)  
-  
- [範例連接字串](#bkmk_examples)  
-  
- [Analysis Services 中使用的連接字串格式](#bkmk_supportedstrings)  
-  
- [加密連接字串](#bkmk_encrypt)  
+ 本主題描述的是 Analysis Services 用戶端程式庫 (即 ADOMD.NET、AMO 及 OLE DB Provider for Analysis Services) 所使用的屬性。 大部分的連接字串屬性均可搭配所有三套用戶端程式庫使用。 例外狀況將於描述中提出。
   
 > [!NOTE]  
 >  設定屬性時，如果您不慎設定了兩次相同的屬性，則會使用連接字串中的最後一項。  

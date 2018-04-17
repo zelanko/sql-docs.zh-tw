@@ -1,27 +1,28 @@
 ---
-title: "連接到資料來源或驅動程式 |Microsoft 文件"
-ms.custom: 
+title: 連接到資料來源或驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5df6514242930ea23fd08350ccc41e027b431a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 77717667d5be9365a42d0006f47725027b9eb2dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>連接到資料來源或驅動程式
 應用程式可以連接到任何驅動程式和資料來源數目。 這些可以是各種不同的驅動程式和資料來源、 相同的驅動程式與各種資料來源或甚至相同驅動程式與資料來源的多個連接。  

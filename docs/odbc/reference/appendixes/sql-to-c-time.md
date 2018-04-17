@@ -1,31 +1,32 @@
 ---
-title: "SQL 到 c： 時間 |Microsoft 文件"
-ms.custom: 
+title: SQL 到 c： 時間 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], time
 - time data type [ODBC]
 - data conversions from SQL to C types [ODBC], time
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b9879b2a051045fb4ecc6aeb75b92020b187652
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f8db10d126eab69546b2d81eaf4d93743a63238
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-time"></a>SQL 到 c： 時間
 ODBC SQL 資料類型是次識別碼：  
@@ -36,10 +37,10 @@ ODBC SQL 資料類型是次識別碼：
   
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*Columnsize* > 字元位元組長度<br /><br /> *9* <= *Columnsize* < = 字元位元組長度<br /><br /> *Columnsize* < 9|data<br /><br /> 截斷的資料 [a]<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*Columnsize* > 字元長度<br /><br /> *9* <= *Columnsize* < = 字元長度<br /><br /> *Columnsize* < 9|data<br /><br /> 截斷的資料 [a]<br /><br /> 未定義|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|data<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|無 [b]|data|6 [d]|n/a|  
+|SQL_C_CHAR|*Columnsize* > 字元位元組長度<br /><br /> *9* <= *Columnsize* < = 字元位元組長度<br /><br /> *Columnsize* < 9|資料<br /><br /> 截斷的資料 [a]<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*Columnsize* > 字元長度<br /><br /> *9* <= *Columnsize* < = 字元長度<br /><br /> *Columnsize* < 9|資料<br /><br /> 截斷的資料 [a]<br /><br /> 未定義|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|資料<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|無 [b]|資料|6 [d]|n/a|  
 |SQL_C_TYPE_TIMESTAMP|無 [b]|資料 [c]|16 [d]|n/a|  
   
  [a] 會被截斷的小數秒數的時間。  

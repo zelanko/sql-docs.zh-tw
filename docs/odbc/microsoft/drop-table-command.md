@@ -2,7 +2,7 @@
 title: DROP TABLE 命令 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6b38eeeba42f1a24520c176fb2f49caac1712e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd9798d5394f4291b0ff77abba55cb7c780aa4f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-table-command"></a>DROP TABLE 命令
 從指定的資料來源的資料庫中移除資料表，並從磁碟中刪除。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 DROP TABLE TableName | FileName | ?  
 ```  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  *TableName*  
  指定從資料來源所指定的資料庫移除，並從磁碟刪除的資料表。  
   

@@ -1,30 +1,31 @@
 ---
-title: "ODBC Jet SQLConfigDataSource （Excel 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: ODBC Jet SQLConfigDataSource （Excel 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Excel Driver
 - Excel driver [ODBC], SqlConfigDataSource
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16ae2bb0432feaa80b005a5817bd44258829acbe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cd2902618f91dcdf7c9235bcb45258ae978f1fbf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource （Excel 驅動程式）
 > [!NOTE]  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  **SQLConfigDataSource**函式，用於新增、 修改或刪除資料來源以動態方式使用下列關鍵字。  
   
-|關鍵字|描述|  
+|關鍵字|Description|  
 |-------------|-----------------|  
 |DBQ|Microsoft Excel 驅動程式時存取 Microsoft Excel 5.0 或更新版本的檔案，活頁簿檔案的名稱。<br /><br /> 這會設定為相同的選項**資料庫**安裝程式 對話方塊中。|  
 |DEFAULTDIR|要在目錄的路徑規格。<br /><br /> 這會設定為相同的選項**選取目錄**或**選取活頁簿**安裝程式 對話方塊中。|  

@@ -2,7 +2,7 @@
 title: 繫結參數 ODBC |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53c032a38f81b87b596e05f22137c80f5c54853c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fedc7d179a3c40c0859b8b1bed4a9c77f1e8c565
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-parameters-odbc"></a>繫結參數 ODBC
 SQL 陳述式中的每個參數必須有關聯，或*繫結，*給應用程式之前執行的陳述式中的變數。 當應用程式會將變數繫結至參數時，它描述該變數： 位址、 C 資料類型，等等，驅動程式。 它也會描述參數本身，SQL 資料類型、 有效位數，等等。 驅動程式會將此資訊儲存在結構中，它會維持為該陳述式，並使用的資訊來執行陳述式時，從變數擷取值。  

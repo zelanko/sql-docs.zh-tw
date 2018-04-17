@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 教學課程第 13 課： 部署 |Microsoft 文件"
-description: "描述如何部署至 Analysis Services 教學課程專案。"
+title: Analysis Services 教學課程第 13 課： 部署 |Microsoft 文件
+description: 描述如何部署至 Analysis Services 教學課程專案。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 444ba18e2cbbecf87dc259fa56efc130eae204a9
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 874d185c5210da9fd8af7e18d79f1e6eed96f7e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy"></a>部署
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/20/2018
   
 2.  在**AW Internet Sales 屬性頁**對話方塊的 **部署伺服器**，請在**伺服器**屬性中，輸入完整的伺服器名稱。 如果連接到 Azure Analysis Services，則伺服器名稱必須包括完整的 URL。
 
-    ![as-lesson13-deploy-property](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
+    ![做為 lesson13-部署-屬性](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
   
 3.  在**資料庫**屬性中，輸入**Adventure Works Internet Sales**。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 02/20/2018
 ## <a name="conclusion"></a>結論  
 恭喜！ 您完成撰寫和部署您的第一個 Analysis Services 表格式模型。 本教學課程已幫助您完成建立表格式模型最常執行的工作。 現在您已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 管理此模型，並且建立處理序指令碼及備份計畫。 使用者現在也可以連線至使用報表用戶端應用程式，例如 Microsoft Excel 或 Power BI 模型。  
 
-![as-lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
+![做為 lesson13 ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   
   
   

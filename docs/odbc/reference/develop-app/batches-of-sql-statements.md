@@ -1,31 +1,32 @@
 ---
-title: "SQL 陳述式的批次 |Microsoft 文件"
-ms.custom: 
+title: SQL 陳述式的批次 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batches [ODBC]
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d2ae8d60d6e41536bc67bd14f9252c372fdeaa5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e7f0119110e1bc57d106163d2e187bf599a0c596
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="batches-of-sql-statements"></a>批次的 SQL 陳述式
 SQL 陳述式的批次是一組兩個或多個 SQL 陳述式或單一的 SQL 陳述式有兩個或多個 SQL 陳述式群組相同的效果。 在某些實作中，整個批次陳述式才可供任何結果。 這通常會較有效率比個別提交陳述式，因為通常可以降低網路流量，而且資料來源有時可以最佳化的 SQL 陳述式批次的執行。 在其他實作中呼叫**SQLMoreResults**觸發批次中的下一個陳述式執行。 ODBC 支援下列類型的批次：  

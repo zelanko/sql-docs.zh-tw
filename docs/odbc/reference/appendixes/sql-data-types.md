@@ -1,31 +1,32 @@
 ---
-title: "SQL 資料類型 |Microsoft 文件"
-ms.custom: 
+title: SQL 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-data-types"></a>SQL 資料類型
 每個 DBMS 定義自己的 SQL 型別。 每個 ODBC 驅動程式會顯示只有這些 SQL 資料型別相關聯的 DBMS 所定義。 ODBC 定義的 SQL 類型識別項類型的資訊關於如何將驅動程式對應 DBMS SQL 和驅動程式將 DBMS SQL 類型對應至它自己的驅動程式專屬 SQL 類型識別項的方式透過呼叫傳回**SQLGetTypeInfo**。 驅動程式也會傳回 SQL 資料類型描述的資料行及透過呼叫參數的資料型別時**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，和**SQLSpecialColumns**。  
@@ -42,24 +43,24 @@ ms.lasthandoff: 12/21/2017
   
 |SQL 類型識別碼 [1]|一般 SQL 資料<br /><br /> 類型 [2]|一般類型的描述|  
 |------------------------------|------------------------------------|------------------------------|  
-|SQL_CHAR|CHAR (*n*)|字元字串的固定的字串長度 *n* 。|  
-|SQL_VARCHAR|VARCHAR (*n*)|最大字串長度與可變長度的字元字串 *n* 。|  
+|SQL_CHAR|CHAR (*n*)|字元字串的固定的字串長度*n*。|  
+|SQL_VARCHAR|VARCHAR (*n*)|最大字串長度與可變長度的字元字串*n*。|  
 |SQL_LONGVARCHAR|LONG VARCHAR|可變長度的字元資料。 最大長度為資料來源而定。[9]|  
 |SQL_WCHAR|WCHAR (*n*)|固定的字串長度的 Unicode 字元字串*n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|Unicode 可變長度的字元字串的最大字串長度*n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode 可變長度的字元資料。 最大長度是資料來源而定|  
 |SQL_DECIMAL|十進位 (*p*，*s*)|帶正負號，完全、 數字值的有效位數最少*p*和小數位數*s。* （最大有效位數是驅動程式定義）。(1 < = *p* < = 15。*s* <= *p*)。 [4]|  
 |SQL_NUMERIC|數值 (*p*，*s*)|帶正負號，完全、 數字的值，有效位數*p*和小數位數*s* (1 < = *p* < = 15。*s* <= *p*)。 [4]|  
-|SQL_SMALLINT|SMALLINT|確切的數值有效位數 5、 小數點位數為 0 (帶正負號: – 32768 < =  *n*  < = 32767、 不帶正負號： 0 < =  *n*  < = 65535) [3]。|  
-_INTEGER|INTEGER|確切的數值有效位數 10 和小數點位數為 0 (帶正負號: – 2 [31] < =  *n*  < = 2 [31] – 1，而不帶正負號： 0 < =  *n*  < = 2 [32] – 1) [3]。|  
-|SQL_REAL|real|帶正負號，以二進位精確度 24 的近似、 數字值 （零或至 10[38]) 的絕對值 10 [–38]。|  
+|SQL_SMALLINT|SMALLINT|確切的數值有效位數 5、 小數點位數為 0 (帶正負號: – 32768 < = *n* < = 32767、 不帶正負號： 0 < = *n* < = 65535) [3]。|  
+_INTEGER|INTEGER|確切的數值有效位數 10 和小數點位數為 0 (帶正負號: – 2 [31] < = *n* < = 2 [31] – 1，而不帶正負號： 0 < = *n* < = 2 [32] – 1) [3]。|  
+|SQL_REAL|REAL|帶正負號，以二進位精確度 24 的近似、 數字值 （零或至 10[38]) 的絕對值 10 [–38]。|  
 |SQL_FLOAT|FLOAT (*p*)|帶正負號，大約、 數字值具有二進位精確度至少*p*。 （最大有效位數是驅動程式定義）。[5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|帶正負號，以二進位精確度 53 的近似、 數字值 （零或至 10[308]) 的絕對值 10 [–308]。|  
 |SQL_BIT|BIT|單一位元的二進位資料。[8]|  
-|SQL_TINYINT|TINYINT|確切的數字位數為 3 的值、 小數點位數為 0 (帶正負號: – 128 < =  *n*  < = 127，不帶正負號： 0 < =  *n*  < = 255) [3]。|  
-_BIGINT|bigint|確切的數值有效位數為 19 （如果帶正負號） 或 20 （如果不帶正負號）、 小數點位數為 0 (帶正負號: – 2 [63] < =  *n*  < = 2 [63] – 1，而不帶正負號： 0 < =  *n*  < = 2 [64] – 1) [3]，[9]。|  
-|SQL_BINARY|二進位 (*n*)|固定長度的二進位資料 *n* 。 [9]|  
-|SQL_VARBINARY|VARBINARY (*n*)|可變長度二進位資料的最大長度 *n* 。 最大值是由使用者設定。[9]|  
+|SQL_TINYINT|TINYINT|確切的數字位數為 3 的值、 小數點位數為 0 (帶正負號: – 128 < = *n* < = 127，不帶正負號： 0 < = *n* < = 255) [3]。|  
+_BIGINT|bigint|確切的數值有效位數為 19 （如果帶正負號） 或 20 （如果不帶正負號）、 小數點位數為 0 (帶正負號: – 2 [63] < = *n* < = 2 [63] – 1，而不帶正負號： 0 < = *n* < = 2 [64] – 1) [3]，[9]。|  
+|SQL_BINARY|二進位 (*n*)|固定長度的二進位資料*n*。 [9]|  
+|SQL_VARBINARY|VARBINARY (*n*)|可變長度二進位資料的最大長度*n*。 最大值是由使用者設定。[9]|  
 |SQL_LONGVARBINARY|LONG VARBINARY|可變長度二進位資料。 最大長度為資料來源而定。[9]|  
 |SQL_TYPE_DATE [6]|DATE|年、 月和日等欄位，不符合西曆的規則。 (請參閱[西曆的條件約束](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)稍後在本附錄中。)|  
 |SQL_TYPE_TIME [6]|時間 (*p*)|小時、 分鐘和具有 00 到 59 分鐘的 00 到 23，有效的值時的有效值和有效的秒數 00 到 61 值的第二個欄位。 有效位數*p*表示秒數有效位數。|  

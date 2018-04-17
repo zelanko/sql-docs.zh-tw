@@ -1,27 +1,28 @@
 ---
-title: "預存程序 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 預存程序 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea89b9f3e9dafb5c961661be6ad8ef4267df55ab
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1e32660623e28580e298da92e7a04d846c9e11ec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>預存程序 （如 Oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  

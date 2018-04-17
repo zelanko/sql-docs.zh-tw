@@ -1,31 +1,32 @@
 ---
-title: "資料緩衝區位址 |Microsoft 文件"
-ms.custom: 
+title: 資料緩衝區位址 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - address of data buffers [ODBC]
 - buffers [ODBC], data
 - data buffers [ODBC], address
 ms.assetid: f2426d68-71bc-4ef7-a5cb-ee9d6c1c9671
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 863f6dda23748fc2c7c46cee40344f5e7acf4602
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 41cc8c1e8a89c4253578ae4fccf222793ad2c0b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-buffer-address"></a>資料緩衝區的位址
 應用程式會將資料緩衝區的位址傳遞給引數，通常名為的驅動程式*ValuePtr*或類似的名稱。 例如，在下列呼叫**SQLBindCol**，應用程式指定的位址*日期*變數：  

@@ -1,31 +1,32 @@
 ---
-title: "應用程式開發介面函式 （如 Oracle 的 ODBC 驅動程式） 的執行緒安全注意事項 |Microsoft 文件"
-ms.custom: 
+title: 應用程式開發介面函式 （如 Oracle 的 ODBC 驅動程式） 的執行緒安全注意事項 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], threading
 - threading options [ODBC]
 - multiple concurrent statements [ODBC]
 ms.assetid: f0c9bdfd-f79d-4088-9ecb-afcd8ca7fb73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8519d900e9cbb4e9c942fdfcccfb21a63d14705
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 31ac813b6419b75f63ee9c7152f888dd1396238e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="thread-safety-notes-on-api-functions-odbc-driver-for-oracle"></a>執行緒安全附註的 API 函式 （如 Oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  

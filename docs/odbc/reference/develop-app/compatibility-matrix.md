@@ -1,15 +1,16 @@
 ---
-title: "相容性比較表 |Microsoft 文件"
-ms.custom: 
+title: 相容性比較表 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], compatibility matrix
 - upgrading applications [ODBC], compatibility matrix
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3a7fac17ed685680e71b329388e192ec1c9f97
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compatibility-matrix"></a>相容性比較表
 下表描述的相容性的應用程式和驅動程式，本節先前定義的類型。  
@@ -74,5 +75,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>在應用程式與相容的所有驅動程式管理員使用 SQLCancelHandle  
  因為[SQLCancelHandle 函式](../../../odbc/reference/syntax/sqlcancelhandle-function.md)不支援在 Windows 7 之前發行的驅動程式管理員，應用程式無法呼叫在舊版 Windows 中載入**SQLCancelHandle**直接。 若要使用所有版本的驅動程式管理員，並使用**SQLCancelHandle**應用程式應該在新版本的 Windows，呼叫**SQLCancelHandle**利用間接**LoadLibrary**和**GetProcAddress。**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 3.8 的新功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

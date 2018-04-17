@@ -1,15 +1,16 @@
 ---
-title: "擷取的資料類型資訊與 SQLGetTypeInfo |Microsoft 文件"
-ms.custom: 
+title: 擷取的資料類型資訊與 SQLGetTypeInfo |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL data types [ODBC], identifiers
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3ae7606967ce0f77fea638a69a8b44f0e175a48
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7e89297c8fb0cdd7cc048fd19a24810c67b2d271
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>SQLGetTypeInfo 與擷取的資料類型資訊
 ODBC 從基礎 SQL 資料類型對應，以 ODBC 類型識別項是近似值，因為提供的函式 (**SQLGetTypeInfo**) 透過其驅動程式可以完整地描述每個資料來源中的 SQL 資料類型。 此函數會傳回結果集，其中每個資料列描述單一資料類型，例如名稱、 型別識別項、 有效位數、 小數位數和 null 屬性的特性。  

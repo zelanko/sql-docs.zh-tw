@@ -1,15 +1,16 @@
 ---
-title: "錯誤訊息 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 錯誤訊息 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error messages [ODBC], Visual FoxPro ODBC driver
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ec1cbc18c952c4394f16123c76a32330116d5af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0d8bb313af52507b1b14cd085044c334f3e664f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>錯誤訊息 （Visual FoxPro ODBC 驅動程式）
 發生錯誤時，Visual FoxPro 驅動程式會傳回下列資訊：  
@@ -52,10 +53,10 @@ ms.lasthandoff: 12/21/2017
   
  下表中所定義，括號 ([]) 中的前置詞會識別錯誤的來源。  
   
-|資料來源|Prefix|ReplTest1|  
+|資料來源|Prefix|Value|  
 |-----------------|------------|-----------|  
-|驅動程式管理員|[廠商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驅動程式管理員]<br />不適用|  
-|Visual FoxPro 驅動程式|廠商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro 驅動程式]<br />不適用|  
+|驅動程式管理員|[廠商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驅動程式管理員]<br />해당 사항 없음|  
+|Visual FoxPro 驅動程式|廠商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro 驅動程式]<br />해당 사항 없음|  
   
  例如，如果 Visual FoxPro ODBC 驅動程式找不到檔案 employee.dbf，它可能會傳回下列錯誤訊息：  
   

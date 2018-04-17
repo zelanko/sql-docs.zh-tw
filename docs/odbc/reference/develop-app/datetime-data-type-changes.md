@@ -1,15 +1,16 @@
 ---
-title: "日期時間資料類型變更 |Microsoft 文件"
-ms.custom: 
+title: 日期時間資料類型變更 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - time data type [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - compatibility [ODBC], datetime data types
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c81717abdde1a8427df5e20e9241820ab11b5879
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a2033cd5931278c9a05c62d907d7da73473902e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime-data-type-changes"></a>Datetime 資料類型變更
 在 ODBC 3。*x*、 識別項的日期、 時間和時間戳記 SQL 資料類型已從 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP (的執行個體**#define** 9、 10 和 11 的標頭檔中) 以 SQL_TYPE_DATE，SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP (的執行個體**#define** 92 和 93 91 的標頭檔中)，分別。 對應的 C 類型識別碼已從 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，和 SQL_C_TYPE_TIMESTAMP，分別。  

@@ -1,31 +1,32 @@
 ---
-title: "要逸出序列 |Microsoft 文件"
-ms.custom: 
+title: 要逸出序列 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC escape sequences [ODBC], LIKE
 - LIKE escape sequence [ODBC]
 - escape sequences [ODBC], LIKE
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a481e7dc539abc9fa206b7c1dab61de09816cd97
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09602a92bce41b05fe6643ab12013b3e4637a273
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="like-escape-sequence"></a>要逸出序列
 ODBC 會逸出序列使用 LIKE 子句。 此逸出序列語法如下所示：  

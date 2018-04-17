@@ -2,7 +2,7 @@
 title: SET COLLATE 命令 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b8820aed48e6b809d9d6b9c6795c2dcc13c5e270
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-collate-command"></a>SET COLLATE 命令
 指定字元欄位的定序順序中後續索引和排序作業。  
@@ -40,7 +40,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  指定定序序列。 下表將詳述可用的定序序列選項。  
   
-|選項。|語言|  
+|選項|語言|  
 |-------------|--------------|  
 |荷蘭文|荷蘭文|  
 |GENERAL|英文、 法文、 德文、 現代西班牙文、 葡萄牙文和其他西歐語言|  
@@ -80,5 +80,5 @@ SET COLLATE TO cSequenceName
   
  例如，如果索引建立設定定序設定為一般的設定自動分頁稍後在變更設定為西班牙文，索引會保留一般的定序序列。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC Visual FoxPro 設定對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

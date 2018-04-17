@@ -2,7 +2,7 @@
 title: SQLFetchScroll （資料指標程式庫） |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b07be3c354a67a6d27a355383e5550a203a6fe27
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 014ed6202023a87d074faa7a746aa7f06fff04a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll （資料指標程式庫）
 > [!IMPORTANT]  

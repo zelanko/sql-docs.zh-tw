@@ -1,31 +1,32 @@
 ---
-title: "自訂應用程式 |Microsoft 文件"
-ms.custom: 
+title: 自訂應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], custom applications
 - custom applications [ODBC]
 - interoperability [ODBC], levels
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bac0656a0e0de15d216b73b76285d1ddede6e74
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f2a4eab813bc691fd435dc00778cbfe41c8bdcc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-applications"></a>自訂應用程式
 自訂應用程式通常會執行特定工作的幾個 Dbms。 例如，應用程式可能會擷取單一的 DBMS 資料和產生報表，或它可能會傳送數個 Dbms 之間的資料。 什麼這些應用程式有通用是這些 Dbms 已知寫入應用程式之前，不太可能會變更應用程式生命週期。  

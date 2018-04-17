@@ -1,30 +1,31 @@
 ---
-title: "執行批次 |Microsoft 文件"
-ms.custom: 
+title: 執行批次 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 620965b524b6d76d1f1d0a3d7adaf84c05c4540c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ebbba1ef4141ed71a80afa91c28d9b12a6dbacc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-batches"></a>執行批次
 應用程式執行的陳述式批次之前，它應該先檢查是否支援這些功能。 若要這樣做，應用程式會呼叫**SQLGetInfo** SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 選項。 第一個選項就會傳回資料列計數 – 產生以及支援產生集 – 陳述式中明確的批次和程序，後者的兩個選項中設定的可用性相關的資料列計數和結果傳回的資訊時的結果是否化執行。  

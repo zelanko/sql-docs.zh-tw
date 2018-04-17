@@ -1,15 +1,16 @@
 ---
-title: "書籤類型 |Microsoft 文件"
-ms.custom: 
+title: 書籤類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], bookmarks
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - fixed-length bookmarks [ODBC]
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ae130125c99e6ff87fd3b2d6fa8563c75f7e6ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df609d905923200f7eda7477fb5bc941f8af12cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bookmark-types"></a>書籤的型別
 在 ODBC 3 的所有書籤*.x*可變長度的書籤。 這可讓主索引鍵或唯一索引相關聯的資料表來作為書籤。 書籤也可以是 32 位元值，所使用的 ODBC 2。*x*。 若要指定書籤使用與資料指標，而 ODBC 3*.x*應用程式設定 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARK 陳述式屬性。 會自動使用可變長度的書籤。  

@@ -1,30 +1,31 @@
 ---
-title: "支援的資料類型 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 支援的資料類型 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f27ad3bca1f6106c2645823b3e02bf67723dd2a1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9863c45a3667d9c6b211a0a62d7577bb3189644d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>支援的資料類型 （如 Oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  
@@ -36,19 +37,19 @@ ms.lasthandoff: 12/21/2017
 |---------------|----------------|-------------|  
 |BFILE|n/a|不支援|  
 |BLOB|n/a|不支援|  
-|CHAR|支援|支援|  
+|CHAR|Supported|Supported|  
 |CLOB|n/a|不支援|  
-|DATE|支援|支援|  
-|FLOAT|支援|支援|  
-|INTEGER|支援|支援|  
-|LONG|支援|支援|  
-|LONG RAW|支援|支援|  
+|DATE|Supported|Supported|  
+|FLOAT|Supported|Supported|  
+|INTEGER|Supported|Supported|  
+|LONG|Supported|Supported|  
+|LONG RAW|Supported|Supported|  
 |NCHAR|n/a|不支援|  
 |NCLOB|n/a|不支援|  
-|NUMBER|支援|支援|  
+|NUMBER|Supported|Supported|  
 |NVARCHAR2|n/a|不支援|  
-|RAW|支援|支援|  
-|VARCHAR2|支援|支援|  
+|RAW|Supported|Supported|  
+|VARCHAR2|Supported|Supported|  
 |MLSLABEL|不支援。|不支援。|  
   
 > [!NOTE]  

@@ -1,28 +1,22 @@
 ---
-title: 簡介 revoscalepy |Microsoft 文件
-ms.custom: ''
-ms.date: 10/05/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 簡介 revoscalepy Python 封裝，在 SQL Server 機器學習中的 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fc59cbc5a34e79a98a787dea34f5ff1440fbe8c3
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 450aa7cc002da9b42379330141f34ee33eedbde6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="introducing-revoscalepy"></a>介紹 revoscalepy
+# <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>在 SQL Server 機器學習中介紹 revoscalepy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**revoscalepy**是新的程式庫，支援分散式運算環境的 microsoft 遠端計算內容中，與高效能演算法 for Python 提供。
+**revoscalepy**提供來支援分散式運算環境的 microsoft 遠端計算內容中，與高效能演算法 Python 開發人員的是新的 Python 程式庫。
 
 它基礎**RevoScaleR** Microsoft R Server 和 SQL Server R 服務，以及其目的是提供相同的功能中提供的封裝：
 
@@ -53,7 +47,7 @@ MicrosoftML 封裝也會提供 R 和 Python。 如需詳細資訊，請參閱[�
 
 + [python revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
 
-+ [python microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
++ [Python Microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
 ### <a name="data-types-data-sources-and-compute-contexts"></a>資料型別、 資料來源和計算內容
 
@@ -84,12 +78,12 @@ SQL Server，並將 Python 某些情況下使用不同的資料類型。 如需 
 
 | 函數| Description|注意|
 | ------ | ------ |------ |
-|`rx_btrees` | 符合隨機梯度促進式的決策樹|`rx_btrees_ex` in CTP 2.0|
-|`rx_dforest` | 符合分類和迴歸的決策樹系|`rx_dforest_ex` in CTP 2.0|
-|`rx_dtree` | 調整的分類和迴歸樹狀結構 |`rx_dtree_ex` in CTP 2.0|
-|`rx_lin_mod` | 建立線性模型|`rx_lin_mod_ex` in CTP 2.0|
-|`rx_logit` | 建立羅吉斯迴歸模型|`rx_logit_ex` in CTP 2.0|
-|`rx_predict` | 產生從定型模型的預測|`rx_predict_ex` in CTP 2.0|
+|`rx_btrees` | 符合隨機梯度促進式的決策樹|`rx_btrees_ex` 在 CTP 2.0|
+|`rx_dforest` | 符合分類和迴歸的決策樹系|`rx_dforest_ex` 在 CTP 2.0|
+|`rx_dtree` | 調整的分類和迴歸樹狀結構 |`rx_dtree_ex` 在 CTP 2.0|
+|`rx_lin_mod` | 建立線性模型|`rx_lin_mod_ex` 在 CTP 2.0|
+|`rx_logit` | 建立羅吉斯迴歸模型|`rx_logit_ex` 在 CTP 2.0|
+|`rx_predict` | 產生從定型模型的預測|`rx_predict_ex` 在 CTP 2.0|
 |`rx_summary` | 產生模型的摘要||
 
 新的機器學習演算法也會提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):

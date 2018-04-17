@@ -1,23 +1,17 @@
 ---
 title: 使用 Python revoscalepy 建立模型 |Microsoft 文件
-titleSuffix: SQL Server
-ms.date: 02/28/2018
-mms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21d4ea90d5ee29c68161f9cf2d59ed2d31002d0d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d886466d7bf4f0c86c1cd9505480a3fadb6e66ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>使用 Python revoscalepy 建立模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

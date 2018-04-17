@@ -1,31 +1,32 @@
 ---
-title: "識別項引數 |Microsoft 文件"
-ms.custom: 
+title: 識別項引數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - identifier arguments [ODBC]
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a6800d7cb73790c61ec94acaffdeb291fa6b475
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a4aed40268b5e9bb3dd3d4a37d43b45a7b6856ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identifier-arguments"></a>識別項引數
 如果已加上引號的字串識別項引數中，驅動程式會移除開頭和尾端空白，並將常值引號內的字串。 如果字串不加上引號，驅動程式會移除尾端的空白和摺疊成大寫的字串。 設定識別項引數為 null 指標會傳回 SQL_ERROR 並 SQLSTATE HY009 （使用無效的 null 指標），除非引數是目錄名稱，而且不支援類別目錄。  

@@ -1,26 +1,17 @@
 ---
-title: "安裝 SQL Server 2017 機器學習伺服器 （獨立） |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+title: 安裝 SQL Server 2017 機器學習伺服器 （獨立） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 5dcc5ee16f39ac8612106f40f98c4f85a060ec4d
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: ec764a5cb5a6ce011d47f7f185cc05c906fe41d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>安裝 SQL Server 2017 機器學習 Windows 上的伺服器 （獨立）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,7 +82,7 @@ SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺
 |SQL Server 2017 機器學習伺服器 （獨立） |  SQL Server 2017 安裝精靈 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft 的機器學習伺服器 （獨立） |  Windows 的獨立安裝程式 |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
 |SQL Server 2017 機器學習服務 （資料庫） |SQL Server 2017 安裝精靈中，與 R 語言選項|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-|SQL Server 2016 R Server (Standalone) |  SQL Server 2016 安裝程式精靈 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
+|SQL Server 2016 R 伺服器 （獨立） |  SQL Server 2016 安裝程式精靈 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R 服務 （資料庫） |SQL Server 2016 安裝程式精靈|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 
 ## <a name="development-tools"></a>開發工具

@@ -1,38 +1,39 @@
 ---
-title: "附錄 e： 純量函數 |Microsoft 文件"
-ms.custom: 
+title: 附錄 e： 純量函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL-92 functions [ODBC]
 - scalar functions [ODBC]
 - functions [ODBC], scalar
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c622054c6c9d4c2314fe2ae0af9fb8574c338312
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ee9e2ab75f22ae3090d87d5c232f88423df9360
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-e-scalar-functions"></a>附錄 e： 純量函數
 ODBC 會指定下列類型的純量函數，與每個對應的章節，此附錄中提供這些函式類型的詳細資訊。 函式描述包含相關聯的語法。  
   
  本附錄包含下列主題。  
   
--   [字串函式](../../../odbc/reference/appendixes/string-functions.md)  
+-   [字串函數](../../../odbc/reference/appendixes/string-functions.md)  
   
 -   [數值函式](../../../odbc/reference/appendixes/numeric-functions.md)  
   

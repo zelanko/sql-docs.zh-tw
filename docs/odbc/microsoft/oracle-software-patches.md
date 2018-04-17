@@ -1,30 +1,31 @@
 ---
-title: "Oracle 軟體修補程式 |Microsoft 文件"
-ms.custom: 
+title: Oracle 軟體修補程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], Oraclesoftware patches
 - Oracle software patches [ODBC]
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 469bd41600c23058366ba37cec8413dd66306e71
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ea33ee2206867f97816d27a5ae6b9013d7bbe6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="oracle-software-patches"></a>Oracle 軟體修補程式
 > [!IMPORTANT]  

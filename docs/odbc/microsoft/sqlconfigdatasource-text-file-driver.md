@@ -1,30 +1,31 @@
 ---
-title: "SQLConfigDataSource （文字檔案驅動程式） |Microsoft 文件"
-ms.custom: 
+title: SQLConfigDataSource （文字檔案驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], Text File Driver
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b26eba11563baeef77e0fc47597a50776c5dc179
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3afa8094eb945306fcc74e555f18409f98cfb63
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource （文字檔案驅動程式）
 > [!NOTE]  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  **SQLConfigDataSource**函式，用於新增、 修改或刪除資料來源以動態方式使用下列關鍵字。  
   
-|關鍵字|描述|  
+|關鍵字|Description|  
 |-------------|-----------------|  
 |CHARACTERSET|文字驅動程式、 OEM 或 ANSI。|  
 |COLNAMEHEADER|文字驅動程式，則表示資料的第一筆記錄是否將指定的資料行名稱。 TRUE 或 FALSE。|  

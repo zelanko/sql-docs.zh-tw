@@ -2,7 +2,7 @@
 title: 選取的 SQL 命令 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---sql-command"></a>選取的 SQL 命令
 從一或多個資料表中擷取資料。  
@@ -54,7 +54,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A*子查詢*、 下列引數所指、 SELECT 中是選取和必須括在括號。 您可以在相同層級最多兩個的子查詢 （不在巢狀） 的 WHERE 子句中。 （請參閱該區段的引數）。子查詢可以包含多個聯結條件。  
   
- [所有 &#124;相異] [*別名*。]*Select_Item* [AS *Column_Name*] [，[*別名*。]*Select_Item* [AS *Column_Name*]...]  
+ [所有&#124;DISTINCT]  [*別名*。]*Select_Item* [AS *Column_Name*] [，[*別名*。]*Select_Item* [AS *Column_Name*]...]  
  SELECT 子句會指定欄位、 常數和查詢結果中顯示的運算式。  
   
  根據預設，所有查詢結果中顯示了所有資料列。  
@@ -110,7 +110,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias*指定資料表中的暫存名稱*資料表*。 如果您指定本機的別名，您必須使用本機的別名，而非整個 SELECT 陳述式的資料表名稱。 本機的別名不會影響 Visual FoxPro 環境。  
   
- 其中*JoinCondition* [AND *JoinCondition* ...]   [和 &#124;或者*FilterCondition* [AND &#124;或者*FilterCondition* ...]]  
+ 其中*JoinCondition* [AND *JoinCondition* ...]   [AND&#124;或者*FilterCondition* [AND&#124;或者*FilterCondition* ...]]  
  告知 Visual FoxPro 查詢結果中包含特定的記錄。 視需要從多個資料表擷取資料。  
   
  *JoinCondition*指定連結在 FROM 子句中的資料表的欄位。 如果您在查詢中包含多個資料表，您應該指定每個資料表的聯結條件，第一個之後。  
@@ -159,7 +159,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  當篩選條件包含所有時，欄位必須符合其記錄包含在查詢結果之前，子查詢所產生的所有值的比較條件。  
   
- **範例 4** *FieldName 比較*任何 &#124;某些 (*子查詢*)  
+ **範例 4** *FieldName 比較*ANY &#124; SOME (*子查詢*)  
   
  `company < ANY ;`  
   
@@ -265,7 +265,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  預留位置必須是相同的型別所代表的欄位。 如果欄位是日期類型，應該是預留位置 {/ /}。 如果欄位是一個字元欄位，將預留位置應該是空字串 ("")。  
   
- ORDER BY *Order_Item* [ASC &#124;DESC] [， *Order_Item* [ASC &#124;DESC]...]  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [， *Order_Item* [ASC &#124; DESC]...]  
  排序查詢結果根據一個或多個資料行中的資料。 每個*Order_Item*必須對應到查詢結果中的資料行，而且可以是下列其中之一：  
   
 -   也是主要的 SELECT 子句 （不在子查詢） 中的選取項目從資料表中的欄位。  
@@ -287,7 +287,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>驅動程式註解  
  當您的應用程式會將 ODBC SQL 陳述式選取傳送至資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換 Visual FoxPro 選取命令，而不需轉譯除非命令包含 ODBC 逸出序列。 ODBC 逸出序列內的項目會轉換成 Visual FoxPro 語法。 如需有關使用 ODBC 逸出序列，請參閱[時間和日期函數](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)和*Microsoft ODBC 程式設計人員參考*，請參閱[ODBC 中的逸出序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立資料表-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [插入-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   

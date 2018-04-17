@@ -1,31 +1,32 @@
 ---
-title: "設定交易隔離層級 |Microsoft 文件"
-ms.custom: 
+title: 設定交易隔離層級 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - isolation levels [ODBC]
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74c345bb8bdfae60a06576b43b655ef78e4a6dfc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 96fff370bcde4b6cc63c7b9af97c3eced3061d85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-the-transaction-isolation-level"></a>設定交易隔離層級
 若要設定交易隔離等級，應用程式會使用 SQL_ATTR_TXN_ISOLATION 連接屬性。 如果資料來源不支援要求的隔離等級，驅動程式或資料來源就可以設定較高的層級。 若要判斷何種交易隔離層級的資料來源支援並預設隔離等級時，應用程式呼叫**SQLGetInfo**與 SQL_TXN_ISOLATION_OPTION 和 SQL_DEFAULT_TXN_ISOLATION 選項，分別。  

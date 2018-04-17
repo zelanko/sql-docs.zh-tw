@@ -1,30 +1,31 @@
 ---
-title: "可捲動資料指標類型 |Microsoft 文件"
-ms.custom: 
+title: 可捲動資料指標類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85de42e271f937c7a3de1aacba918bb43ea463d4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a777db13717dcd2bda9e308e7d7df27c8edb237e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scrollable-cursor-types"></a>可捲動資料指標類型
 四種類型的可捲動資料指標是靜態、 動態、 索引鍵集驅動和混合。 靜態資料指標偵測少或沒有變更，但是會實作相對低廉。 動態資料指標偵測到的所有變更，但很難實作。 索引鍵集驅動和混合的資料指標居於兩者之間，可以偵測大部份的變更，但是在較少的費用比動態資料指標。  

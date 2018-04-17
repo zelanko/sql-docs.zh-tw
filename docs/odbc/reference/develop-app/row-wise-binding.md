@@ -1,31 +1,32 @@
 ---
-title: "資料列取向繫結 |Microsoft 文件"
-ms.custom: 
+title: 資料列取向繫結 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="row-wise-binding"></a>資料列取向繫結
 當使用資料列取向繫結時，應用程式定義此結構包含一個或兩個，或在某些情況下三個，每個資料行資料所要傳回的項目。 第一個項目會保存資料值，和第二個項目會保存之長度/指標緩衝區。 指標和長度的值可以儲存在個別的緩衝區的 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 的描述項欄位設為不同的值;如果進行此設定，此結構會包含第三個元素。 應用程式接著會配置這些結構的陣列，其中包含資料列集內有資料列的元素。  
@@ -38,7 +39,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size)
   
  其中的資料列會編號為 1 的資料列集大小。 （其中一個會減去的資料列號碼因為陣列在 C 中編製索引以零為起始。）下圖顯示如何以資料列的方式繫結。 一般而言，將繫結資料行包含在結構中。 結構可以包含在結果集資料行不相關的欄位。 資料行可以放在任何順序中的結構，但是為了清楚起見的循序順序顯示。  
   
- ![顯示資料列 &#45; 明智的繫結](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![顯示資料列&#45;明智的繫結](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
  比方說，下列程式碼會建立結構，這是要傳回的訂單、 銷售人員，以及狀態資料行的資料和長度/指標的銷售人員和狀態資料行中的項目。 它會以 10 為這些結構的配置，並繫結至訂單、 銷售人員，以及狀態的資料行。  
   

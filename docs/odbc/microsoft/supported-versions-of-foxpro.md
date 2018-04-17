@@ -1,15 +1,16 @@
 ---
-title: "支援版本的 FoxPro |Microsoft 文件"
-ms.custom: 
+title: 支援版本的 FoxPro |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], supported versions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], supported versions
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1330773f8521b1fc6edcefc6074f77c3579e9051
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a7deef1fe235aa4747d1311c35396efb4afa4c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-versions-of-foxpro"></a>支援的版本的 FoxPro
 您可以使用 Microsoft® Visual FoxPro® ODBC Driver，才能存取 FoxPro 資料表中儲存的資料。 支援下列版本的 FoxPro 資料：  

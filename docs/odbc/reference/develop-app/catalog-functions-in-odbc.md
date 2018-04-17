@@ -1,35 +1,36 @@
 ---
-title: "目錄函數在 ODBC |Microsoft 文件"
-ms.custom: 
+title: 目錄函數在 ODBC |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], listed
 - functions [ODBC], catalog functions
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e38bcf3158ba294d09d6898b4ab55b6ecbd33b10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be530e6bb8f8b9a874d681ca235caa1bf62ce86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="catalog-functions-in-odbc"></a>在 ODBC 目錄函數
 ODBC 包含下列目錄函數：  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |**SQLTables**|傳回資料來源中的類別目錄、 結構描述、 資料表或資料表類型的清單。|  
 |**SQLColumns**|傳回一或多個資料表中的資料行的清單。|  

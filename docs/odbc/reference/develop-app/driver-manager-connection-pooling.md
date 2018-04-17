@@ -1,15 +1,16 @@
 ---
-title: "驅動程式管理員連接共用 |Microsoft 文件"
-ms.custom: 
+title: 驅動程式管理員連接共用 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection pooling [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>驅動程式管理員連接共用
 連接共用可讓應用程式不需要重新建立每次使用的連接集區使用的連接。 一旦已經建立連接，並放在集區中，應用程式可以重複使用該連接，而不執行完整的連線程序。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/21/2017
  改善效能，除了連接共用架構可讓的環境和其相關聯的連接，以供單一處理序中的多個元件。 這表示相同的處理序中的獨立元件，可以不知道彼此的情況下彼此互動。 連接集區中的連線可以重複使用多個元件。  
   
 > [!NOTE]  
->  發生 ODBC 2 的 ODBC 應用程式可以使用連接共用。*x*行為，只要應用程式可以呼叫*SQLSetEnvAttr*。 當使用連接共用時，應用程式必須執行 SQL 陳述式變更資料庫或資料庫，例如變更的內容\<*資料庫**名稱*>，變更資料來源所使用的目錄。  
+>  發生 ODBC 2 的 ODBC 應用程式可以使用連接共用。*x*行為，只要應用程式可以呼叫*SQLSetEnvAttr*。 當使用連接共用時，應用程式必須執行 SQL 陳述式變更資料庫或資料庫，例如變更的內容\<*資料庫 * * 名稱*>，所使用的類別目錄的變更資料來源。  
   
  ODBC 驅動程式必須是完全安全的執行緒，而且連接不能有支援連接共用的執行緒相似性。 這表示驅動程式能夠處理任何執行緒上呼叫，在任何時間，而且可以連線，另一個執行緒上使用的連線，並在第三個執行緒上中斷連線的一個執行緒上。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="driver-aware-connection-pooling"></a>可感知驅動程式的連接共用  
  Windows 8 中從開始，ODBC 驅動程式可以使用連線集區中更有效率。 如需詳細資訊，請參閱[感知驅動程式的連接共用](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接到資料來源或驅動程式](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft Data Access Components 中的共用](http://go.microsoft.com/fwlink/?LinkId=120776)

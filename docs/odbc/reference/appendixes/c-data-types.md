@@ -1,15 +1,16 @@
 ---
-title: "C 資料類型 |Microsoft 文件"
-ms.custom: 
+title: C 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], C data types
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 31de2fc95be1a7ead0b61b2dde493caf8d484fe4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a092b4354da4869b56143d090c3ed114567e58eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-data-types"></a>C 資料類型
 ODBC C 資料類型表示用來將資料儲存在應用程式的 C 緩衝區的資料類型。  
@@ -39,22 +40,22 @@ ODBC C 資料類型表示用來將資料儲存在應用程式的 C 緩衝區的�
   
 |C 類型識別碼|ODBC C typedef|C 類型|  
 |-----------------------|--------------------|------------|  
-|SQL_C_CHAR|SQLCHAR *|不帶正負號 char *|  
+|SQL_C_CHAR|SQLCHAR *|unsigned char *|  
 |SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
 |SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
 |SQL_C_USHORT [j]|SQLUSMALLINT|不帶正負號的 short int|  
 |SQL_C_SLONG [j]|SQLINTEGER|long int|  
 |SQL_C_ULONG [j]|SQLUINTEGER|不帶正負號的 long int|  
-|SQL_C_FLOAT|SQLREAL|FLOAT|  
+|SQL_C_FLOAT|SQLREAL|float|  
 |SQL_C_DOUBLE|SQLDOUBLE SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|不帶正負號的 char|  
 |SQL_C_STINYINT [j]|SQLSCHAR|帶正負號的 char|  
 |SQL_C_UTINYINT [j]|SQLCHAR|不帶正負號的 char|  
 |SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
 |SQL_C_UBIGINT|SQLUBIGINT|不帶正負號的 _int64 [h]|  
-|SQL_C_BINARY|SQLCHAR *|不帶正負號 char *|  
+|SQL_C_BINARY|SQLCHAR *|unsigned char *|  
 |SQL_C_BOOKMARK [i]|書籤|不帶正負號的 long int [d]|  
-|SQL_C_VARBOOKMARK|SQLCHAR *|不帶正負號 char *|  
+|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
 |所有 C 間隔資料型別|SQL_INTERVAL_STRUCT|請參閱[C 間隔結構](../../../odbc/reference/appendixes/c-interval-structure.md)稍後在本附錄 > 一節。|  
   
  **C 類型識別碼**SQL_C_TYPE_DATE [c]  
@@ -161,5 +162,5 @@ struct tagSQLGUID {
   
 -   [64 位元整數結構](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)

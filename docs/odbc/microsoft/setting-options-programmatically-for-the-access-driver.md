@@ -1,15 +1,16 @@
 ---
-title: "設定以程式設計方式存取驅動程式的選項 |Microsoft 文件"
-ms.custom: 
+title: 設定以程式設計方式存取驅動程式的選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], setting options programmatically
@@ -17,24 +18,24 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81ec270afc5c0e845bea829a1851b00bb38fa075
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dfb2dca91198c227f03f494fd47f37b7825bcdb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>以程式設計的方式存取驅動程式的設定選項
-|選項|描述|方法|  
+|選項|Description|方法|  
 |------------|-----------------|------------|  
 |緩衝區大小|內部緩衝區大小，以 kb 為單位，Microsoft Access 所用來傳輸資料磁碟。 預設緩衝區大小是 2048 KB （顯示為 2048年）。 您可以輸入任何 256 整除的整數值。|若要以動態方式設定這個選項，使用的 MAXBUFFERSIZE 關鍵字的呼叫中[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |資料來源名稱|識別資料來源，例如，薪資或人員的名稱。|若要以動態方式設定這個選項，使用**DSN**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
-|[資料庫]|Microsoft Access 資料來源可以設定而不需要選取或建立資料庫。 如果資料庫不提供在安裝程式時，您就會提示使用者選擇連接到資料來源時的資料庫檔案。|若要以動態方式設定這個選項，使用**DBQ**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
-|描述|選擇性的描述資料來源; 中的資料例如，"雇用日期、 薪資記錄以及目前檢視的所有員工。 」|若要以動態方式設定這個選項，使用**描述**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
+|資料庫|Microsoft Access 資料來源可以設定而不需要選取或建立資料庫。 如果資料庫不提供在安裝程式時，您就會提示使用者選擇連接到資料來源時的資料庫檔案。|若要以動態方式設定這個選項，使用**DBQ**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
+|Description|選擇性的描述資料來源; 中的資料例如，"雇用日期、 薪資記錄以及目前檢視的所有員工。 」|若要以動態方式設定這個選項，使用**描述**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |排除|如果**獨佔**方塊已選取，資料庫會以獨佔模式開啟，並只有一位使用者可以存取一次。 以獨佔模式執行時，會增強效能。|若要以動態方式設定這個選項，使用**獨佔**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |ImplicitCommitSync|決定如何在交易外所做的變更會寫入資料庫。 這個值最初是設定為"Yes"，這表示 Microsoft Access 驅動程式將等候中的內部/隱含的交易完成認可。|此選項會包含在**設定進階選項**Microsoft Access 驅動程式 對話方塊。|  
 |頁面逾時|指定一段時間，以毫秒為單位，移除之前頁面 （如果不使用） 會保留在緩衝區中。 Microsoft Access 驅動程式時，預設值是 500 毫秒 （0.5 秒為單位）。 此選項適用於使用 ODBC 驅動程式的所有資料來源。<br /><br /> 由於固有的延遲，頁面逾時不能為 0。 頁面逾時不能早於固有的延遲，即使頁面逾時選項設定低於的值。|若要以動態方式設定這個選項，使用**PAGETIMEOUT**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  

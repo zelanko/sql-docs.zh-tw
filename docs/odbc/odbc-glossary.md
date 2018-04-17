@@ -1,30 +1,31 @@
 ---
-title: "ODBC 詞彙 |Microsoft 文件"
-ms.custom: 
+title: ODBC 詞彙 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bb77308b74a57fa192acf9aba3fa7d88090d93a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 243085e18fc44c0c2f34c29c314b3978163101be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-glossary"></a>ODBC 詞彙
 ## <a name="a"></a>只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/20/2017
  **C 資料類型**  
  C 程式中，在此情況下應用程式中的變數資料類型。  
   
- **類別目錄**  
+ **catalog**  
  描述資料庫的圖形的系統資料表的資料庫中的集合。 也稱為*結構描述*或*資料字典*。  
   
  **目錄函式**  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/20/2017
  **用戶端/伺服器**  
  一或多個用戶端在其中透過伺服器存取資料的資料庫存取策略。 伺服器控制資料庫存取權時，用戶端通常會實作使用者介面。  
   
- **資料行**  
+ **column**  
  資訊的資料列中的單一項目容器。 也稱為*欄位*。  
   
  **認可**  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **資料在執行中參數**  
  參數的資料傳送之後**SQLExecute**或**SQLExecDirect**呼叫。 因為資料會傳送的 SQL 陳述式執行而不是放在參數緩衝區時，如此命名。 Long 資料通常會在執行階段組件中傳送。  
   
- **database**  
+ **資料庫**  
  離散 DBMS 中資料的集合。 也 DBMS。  
   
  **資料庫引擎**  
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/20/2017
  **逸出子句**  
  SQL 陳述式中的子句。  
   
- **執行**  
+ **execute**  
  若要執行 SQL 陳述式。  
   
 ## <a name="f"></a>F  
@@ -213,7 +214,7 @@ ms.lasthandoff: 11/20/2017
  **擷取**  
  若要從結果集內擷取一或多個資料列。  
   
- **欄位**  
+ **field**  
  *請參閱*資料行。  
   
  **以檔案為基礎的驅動程式**  
@@ -275,7 +276,7 @@ ms.lasthandoff: 11/20/2017
  偵測到的可捲動資料指標更新，並使用索引鍵集刪除資料列。  
   
 ## <a name="l"></a>L  
- **常值**  
+ **literal**  
  SQL 陳述式中的實際資料值的字元表示法。  
   
  **鎖定**  
@@ -327,7 +328,7 @@ ms.lasthandoff: 11/20/2017
  資料表的擁有者。  
   
 ## <a name="p"></a>P  
- **參數**  
+ **parameter**  
  SQL 陳述式中的變數會以參數標記或問號 （？） 標示。 參數繫結至應用程式變數與陳述式執行時，擷取其值。  
   
  **參數描述項**  
@@ -357,7 +358,7 @@ ms.lasthandoff: 11/20/2017
  **主索引鍵**  
  資料行或資料行可唯一識別資料表中的資料列。  
   
- **程序**  
+ **procedure**  
  一組一個或多個先行編譯會儲存為具名物件的資料庫中的 SQL 陳述式。  
   
  **程序資料行**  
@@ -414,7 +415,7 @@ ms.lasthandoff: 11/20/2017
  **純量函數**  
  產生單一值從單一值函式。 例如，變更字元資料的大小寫的函式。  
   
- **結構描述**  
+ **schema**  
  *請參閱*類別目錄。  
   
  **可捲動資料指標**  

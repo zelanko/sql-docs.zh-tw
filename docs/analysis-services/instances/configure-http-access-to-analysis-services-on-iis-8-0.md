@@ -1,31 +1,31 @@
 ---
-title: "IIS 8.0 上設定 HTTP 存取 Analysis Services |Microsoft 文件"
-ms.custom: 
+title: IIS 8.0 上設定 HTTP 存取 Analysis Services |Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f178be3c4cdd74d0ea1a5aadbb4106a1bf7b285e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>設定 IIS 8.0 上 Analysis services 的 HTTP 存取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本文說明如何設定 HTTP 端點來存取 Analysis Services 執行個體。 您可以設定 MSMDPUMP.dll (這是在 Internet Information Services (IIS) 中執行的一個 ISAPI 擴充程式，可以在用戶端應用程式與 Analysis Services 伺服器之間來回提取資料) 來啟用 HTTP 存取。 此方法會在您的 BI 方案需要下列功能時，提供連接至 Analysis Services 的替代方式。  
+  本文說明如何設定 HTTP 端點來存取 Analysis Services 執行個體。 您可以設定 MSMDPUMP.dll (這是在 Internet Information Services (IIS) 中執行的一個 ISAPI 擴充程式，可以在用戶端應用程式與 Analysis Services 伺服器之間來回提取資料) 來啟用 HTTP 存取。 此方法會在您的 BI 方案需要下列功能時，提供連接至 Analysis Services 的替代方式。  
   
 -   用戶端存取是透過網際網路或外部網路連接進行，但會限制可啟用的通訊埠。  
   
@@ -42,22 +42,6 @@ ms.lasthandoff: 02/15/2018
  設定 HTTP 存取是安裝後續工作。 必須先安裝 Analysis Services，才能設定其 HTTP 存取。 身為 Analysis Services 系統管理員，您必須授與權限給 Windows 帳戶才能進行 HTTP 存取。 此外，您最好先驗證安裝以確保它可完整運作，然後才進一步設定伺服器。 設定 HTTP 存取之後，您可以透過 TCP/IP 使用 HTTP 端點和一般的伺服器網路名稱。 設定 HTTP 存取並不會讓其他方法就此無法存取資料。  
   
  當您繼續進行 MSMDPUMP 設定時，請記住您有兩種連接可以納入考慮：client-to-IIS、IIS-to-SSAS。 本文中的指示與「IIS 到 SSAS」有關。 用戶端應用程式可能需要先進行其他設定才能連接到 IIS。 決定是否使用 SSL 或如何設定繫結等內容並不在本文的討論範圍。 請參閱 [網頁伺服器 (IIS)](http://technet.microsoft.com/library/hh831725.aspx) ，以取得 IIS 的詳細資訊。  
-  
- 本主題包含下列各節：  
-  
--   [概觀](#bkmk_overview)  
-  
--   [必要條件](#bkmk_prereq)  
-  
--   [將 MSMDPUMP.dll 複製到 Web 伺服器上的資料夾中](#bkmk_copy)  
-  
--   [在 IIS 中建立應用程式集區與虛擬目錄](#bkmk_appPool)  
-  
--   [設定 IIS 驗證並加入延伸模組](#bkmk_auth)  
-  
--   [編輯 MSMDPUMP.INI 檔案來設定目標伺服器](#bkmk_edit)  
-  
--   [測試您的組態](#bkmk_test)  
   
 ##  <a name="bkmk_overview"></a> 概觀  
  MSMDPUMP 是一個 ISAPI 擴充程式，會載入到 IIS 並可重新導向至本機或遠端 Analysis Services 執行個體。 藉由設定此 ISAPI 擴充程式，即可建立 Analysis Services 執行個體的 HTTP 端點。  
@@ -261,7 +245,7 @@ ms.lasthandoff: 02/15/2018
 |-|-|  
 |匿名|將 IIS 的 [編輯匿名驗證認證] 中指定的帳戶加入至 [成員資格] 清單。 如需詳細資訊，請參閱[匿名驗證](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)，|  
 |Windows 驗證|將透過模擬或委派要求 Analysis Services 資料的 Windows 使用者或群組帳戶加入至 [成員資格] 清單。<br /><br /> 假使您使用 Kerberos 限制委派，則只有要求存取的 Windows 使用者和群組帳戶需要權限。 應用程式集區識別不需要權限。|  
-|基本驗證|將要在連接字串中傳遞的 Windows 使用者或群組帳戶加入至 [成員資格] 清單。<br /><br /> 此外，如果您要透過連接字串上的 **EffectiveUserName** 傳遞認證，則應用程式集區識別必須具有 Analysis Services 執行個體的系統管理員權限。 在 SSMS 中，以滑鼠右鍵按一下執行個體 &#124;**屬性**&#124;**安全性**&#124;**新增**。 輸入應用程式集區識別。 如果您使用內建的預設識別，做為指定的帳戶**IIS AppPool\DefaultAppPool**。<br /><br /> ![示範如何輸入授與 AppPoolIdentity 帳戶](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "顯示如何輸入授與 AppPoolIdentity 帳戶")|  
+|基本驗證|將要在連接字串中傳遞的 Windows 使用者或群組帳戶加入至 [成員資格] 清單。<br /><br /> 此外，如果您要透過連接字串上的 **EffectiveUserName** 傳遞認證，則應用程式集區識別必須具有 Analysis Services 執行個體的系統管理員權限。 在 SSMS 中，以滑鼠右鍵按一下執行個體&#124;**屬性** &#124; **安全性** &#124; **新增**。 輸入應用程式集區識別。 如果您使用內建的預設識別，做為指定的帳戶**IIS AppPool\DefaultAppPool**。<br /><br /> ![示範如何輸入授與 AppPoolIdentity 帳戶](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "顯示如何輸入授與 AppPoolIdentity 帳戶")|  
   
  如需關於設定權限的詳細資訊，請參閱 [物件和作業的存取權授權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(英文)。  
   

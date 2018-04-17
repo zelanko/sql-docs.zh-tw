@@ -1,30 +1,31 @@
 ---
-title: "針對 Oracle 的 ODBC 驅動程式所傳回的訊息 |Microsoft 文件"
-ms.custom: 
+title: 針對 Oracle 的 ODBC 驅動程式所傳回的訊息 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error messages [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], error messages
 ms.assetid: 150bde1d-adb6-4e77-90e9-4dc93499a746
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba9f7e11a2897b1ff1842f7597680f6645ff0fad
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 067300b35282b39c63504f6f8e3a16fd3e1a8c00
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="messages-returned-by-the-odbc-driver-for-oracle"></a>針對 Oracle 的 ODBC 驅動程式所傳回的訊息
 > [!IMPORTANT]  

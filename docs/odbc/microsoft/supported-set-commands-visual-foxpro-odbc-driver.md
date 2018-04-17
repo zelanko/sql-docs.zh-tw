@@ -1,15 +1,16 @@
 ---
-title: "支援 SET 命令 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 支援 SET 命令 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - set commands [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver [ODBC], SET commands
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b73d45bc940b47d99cf8777db01dacb12484bf3f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f61f179df3b268edd344019a4a3fdf8ff7feee9e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>支援的 SET 命令 （Visual FoxPro ODBC 驅動程式）
 您的應用程式可以傳送下列 Visual FoxPro**設定**到資料來源的命令：  

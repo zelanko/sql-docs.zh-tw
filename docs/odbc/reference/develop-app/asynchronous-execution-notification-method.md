@@ -1,27 +1,28 @@
 ---
-title: "非同步執行 （通知方法） |Microsoft 文件"
-ms.custom: 
+title: 非同步執行 （通知方法） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea68f33ff231a9fb6f257e1cd681e25b3569721a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 070ef059855d4c95b4225676ab67eddcd9c16ad1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-notification-method"></a>非同步執行 (通知方法)
 ODBC，可讓連接和陳述式作業的非同步執行。 應用程式執行緒可以呼叫 ODBC 函數，在非同步模式中，函式會傳回在作業完成時，允許應用程式執行緒以執行其他工作之前。 在 Windows 7 SDK 中，非同步的陳述式或連接作業，應用程式會判斷非同步作業已完成使用輪詢方法。 如需詳細資訊，請參閱[非同步執行 （輪詢方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)。 從 Windows 8 SDK 開始，您可以判斷非同步作業已完成使用的通知方法。  
@@ -332,7 +333,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  連接屬性 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE 和 SQL_ATTR_ASYNC_DBC_EVENT 決定 ODBC 是否處於非同步模式下執行，以及 ODBC 是否啟用連接控制代碼的通知模式。 SQL_ATTR_ASYNC_ENABLE 和 SQL_ATTR_ASYNC_STMT_EVENT 陳述式屬性決定 ODBC 是否處於非同步模式下執行，以及 ODBC 是否啟用通知模式的陳述式控制代碼。  
   
-|SQL_ATTR_ASYNC_ENABLE 或 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT 或 SQL_ATTR_ASYNC_DBC_EVENT|[模式]|  
+|SQL_ATTR_ASYNC_ENABLE 或 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT 或 SQL_ATTR_ASYNC_DBC_EVENT|模式|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |啟用|非 null|非同步通知|  
 |啟用|null|非同步輪詢|  
