@@ -74,7 +74,7 @@ ms.lasthandoff: 12/21/2017
 
    ![還原](./media/tutorial-backup-restore-sql-server/restore.png)
 
-4. 點選**還原**
+4. 按一下**還原**
 
 5. 若要檢視還原作業的狀態，請按 **CTRL + T** 以開啟**工作歷程記錄**資訊看板。
 
