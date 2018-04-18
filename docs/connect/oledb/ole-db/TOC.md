@@ -1,7 +1,7 @@
-# [OLE DB Driver for SQL Server (OLE DB)](oledb-driver-for-sql-server-ole-db.md)
+# [OLE DB Driver for SQL Server 程式設計](oledb-driver-for-sql-server-programming.md)
 
 # 特定區域
-## [OLE DB Driver for SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
+## [建立 OLE DB Driver for SQL Server 應用程式 +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
 ## [OLE DB 資料來源物件 +](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)
 ## [命令 +](../../oledb/ole-db-commands/commands.md)
 ## [資料列集 +](../../oledb/ole-db-rowsets/rowsets.md)
@@ -15,13 +15,12 @@
 ## [介面 +](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
 ## [操作說明 +](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)
 
-# [FILESTREAM 支援 (OLE DB)](filestream-support-ole-db.md)
-# [大型 CLR 使用者定義型別 (OLE DB)](large-clr-user-defined-types-ole-db.md)
-# [結構描述資料列集支援 (OLE DB)](schema-rowset-support-ole-db.md)
+# [大型 CLR 使用者定義型別](large-clr-user-defined-types-ole-db.md)
+# [結構描述資料列集支援](schema-rowset-support-ole-db.md)
 # [結構描述資料列集 - 分散式查詢支援](schema-rowsets-distributed-query-support.md)
 # [結構描述資料列集 - LINKEDSERVERS 資料列集](schema-rowsets-linkedservers-rowset.md)
-# [用戶端連接中的服務主要名稱 (SPN) (OLE DB)](service-principal-names-spns-in-client-connections-ole-db.md)
-# [疏鬆資料行支援 (OLE DB)](sparse-columns-support-ole-db.md)
+# [用戶端連線中的服務主要名稱 (SPN)](service-principal-names-spns-in-client-connections-ole-db.md)
+# [疏鬆資料行支援](sparse-columns-support-ole-db.md)
 # [預存程序 - 呼叫](stored-procedures-calling.md)
 # [預存程序 - 執行](stored-procedures-running.md)
 # [預存程序](stored-procedures.md)

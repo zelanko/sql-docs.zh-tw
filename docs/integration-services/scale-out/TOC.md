@@ -9,4 +9,5 @@
 # [變更 Scale Out 記錄的帳戶](change-logdb-account.md)
 # [管理相應放大的憑證](deal-with-certificates-in-ssis-scale-out.md)
 # [相應放大的高可用性](scale-out-support-for-high-availability.md)
+# [透過 SQL Server 容錯移轉叢集執行個體的高可用性群組](scale-out-failover-cluster-instance.md)
 # [為相應放大進行疑難排解](troubleshooting-scale-out.md)
