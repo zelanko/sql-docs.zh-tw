@@ -1,36 +1,37 @@
 ---
-title: "陳述式轉換 |Microsoft 文件"
-ms.custom: 
+title: 陳述式轉換 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
 - statement transitions [ODBC]
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50a20cb922b3f608a9d16cd24d5c288b096e01ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statement-transitions"></a>陳述式轉換
 ODBC 陳述式具有下列狀態。  
   
-|State|描述|  
+|State|Description|  
 |-----------|-----------------|  
 |S0|未配置的陳述式。 （C4、 C5 或 C6，必須是連接狀態。 如需詳細資訊，請參閱[連接轉換](../../../odbc/reference/appendixes/connection-transitions.md)。)|  
 |S1|配置陳述式。|  

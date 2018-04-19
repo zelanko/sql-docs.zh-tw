@@ -1,8 +1,8 @@
 ---
-title: sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_sys_info (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -29,11 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d5284112257c5d1c2d23f354ec7690fab6abb90b
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8eece5f005a956b0873abcdc2be653deb430373a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -83,8 +84,8 @@ ms.lasthandoff: 04/05/2018
 |**sql_memory_model_desc**|**nvarchar(120)**|**適用於： [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 且開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1**。<br /><br />指定 SQL Server 用來配置記憶體的記憶體模型。 不可為 Null。<br /><br />**傳統**= SQL Server 是否使用傳統記憶體模型配置記憶體。 當 SQL Server 服務帳戶未具備鎖定分頁記憶體的權限在啟動期間，這是預設 sql 記憶體模型。<br />**LOCK_PAGES** = SQL server 使用記憶體中鎖定分頁配置記憶體。 SQL Server 服務帳戶在 SQL Server 啟動期間記憶體的權限擁有鎖定的分頁時，這是預設 sql 記憶體管理員。<br /> **LARGE_PAGES** = SQL Server 使用大型分頁記憶體中配置記憶體。 SQL Server 會使用大型分頁配置器配置記憶體，只能使用 Enterprise edition 時 SQL Server 服務帳戶會持有記憶體的權限鎖定分頁在伺服器啟動期間與追蹤旗標 834 已開啟。|
 |**pdw_node_id**|**int**|**適用於： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> 此發行版本上的節點識別碼。|  
 |**socket_count** |**int** | **適用於： 開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]** 。<br /><br />在系統上指定可用的處理器插槽的數目。 |  
-|**cores_per_socket** |**int** | **適用於： 開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。**。<br /><br />指定系統上的每個通訊端可用的處理器數目。 |  
-|**numa_node_count** |**int** | **適用於： 開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。**。<br /><br />指定系統上的可用的 numa 節點數目。 此資料行包含實體 numa 節點，以及軟體 numa 節點。 |  
+|**cores_per_socket** |**int** | **適用於： 開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]**。<br /><br />指定系統上的每個通訊端可用的處理器數目。 |  
+|**numa_node_count** |**int** | **適用於： 開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]**。<br /><br />指定系統上的可用的 numa 節點數目。 此資料行包含實體 numa 節點，以及軟體 numa 節點。 |  
   
 ## <a name="permissions"></a>Permissions
 
