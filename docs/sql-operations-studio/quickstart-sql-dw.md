@@ -83,7 +83,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="create-a-table"></a>建立資料表
 
-查詢編輯器仍然會連線到*master*資料庫，但我們想要在*TutorialDB*資料庫中建立的資料表。 
+查詢編輯器仍然會連線到*master*資料庫，但我們想要在*TutorialDB*資料庫中建立資料表。 
 
 1. 變更連接內容為 **TutorialDB**:
 
