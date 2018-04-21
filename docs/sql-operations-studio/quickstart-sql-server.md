@@ -39,7 +39,7 @@ ms.lasthandoff: 03/09/2018
 
    
 1. 啟動 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
-1. 第一次執行 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* **連接** 對話方塊將會開啟。 如果**連接**對話方塊未開啟的，按一下**伺服器**頁面中的**新增連線**圖示：
+1. 第一次執行 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* **連接** 對話方塊將會開啟。 如果**連接**對話方塊未開啟，按一下**伺服器**頁面中的**新增連線**圖示：
    
    ![新的連線圖示](media/quickstart-sql-server/new-connection-icon.png)
 
