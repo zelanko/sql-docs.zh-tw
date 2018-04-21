@@ -30,7 +30,7 @@ ms.lasthandoff: 03/09/2018
 
 - [安裝[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
 
-如果您還沒有 Azure SQL 伺服器，請完成下列 Azure SQL Database 快速入門 （請記住的伺服器名稱和登入認證） ！ 其中：
+如果您還沒有 Azure SQL 伺服器，請完成下列 Azure SQL Database 快速入門 （請記住伺服器名稱和登入認證） ！ 其中：
 
 - [建立資料庫-入口網站](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [建立資料庫-CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
