@@ -1,32 +1,33 @@
 ---
-title: "透過檢視修改資料 | Microsoft Docs"
-ms.custom: 
+title: 透過檢視修改資料 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-views
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data modifications [SQL Server], views
 - views [SQL Server], modifying data through
 - modifying data [SQL Server], views
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8a7a4aa04569d7bb2d375c8ace339551e8d96616
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 29305d5cdd49afa5ef43c6ab86bc84339eb7df92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-data-through-a-view"></a>透過檢視修改資料
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 03/19/2018
   
 #### <a name="to-modify-table-data-through-a-view"></a>透過檢視修改資料表資料  
   
-1.  在 **[物件總管]**中，展開包含檢視的資料庫，然後展開 **[檢視]**。  
+1.  在 **[物件總管]** 中，展開包含檢視的資料庫，然後展開 **[檢視]**。  
   
 2.  以滑鼠右鍵按一下檢視，然後選取 [編輯前 200 個資料列]。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/19/2018
   
 #### <a name="to-update-table-data-through-a-view"></a>透過檢視更新資料表資料  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 03/19/2018
   
 #### <a name="to-insert-table-data-through-a-view"></a>透過檢視插入資料表資料  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

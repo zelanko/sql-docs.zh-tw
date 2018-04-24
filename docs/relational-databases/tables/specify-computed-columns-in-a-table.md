@@ -2,7 +2,7 @@
 title: 指定資料表中的計算資料行 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: tables
@@ -20,11 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d6c2822097b4f900034006a01e70b1c81e977981
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,11 +38,11 @@ ms.lasthandoff: 04/10/2018
   
      [限制事項](#Limitations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要使用下列項目來指定計算資料行：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -55,14 +56,14 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 ###  <a name="NewColumn"></a> 若要加入新的計算資料行  
   
-1.  在 **[物件總管]**中，展開要在其中加入新的計算資料行的資料表。 以滑鼠右鍵按一下 [資料行]，然後選取 [新增資料行]。  
+1.  在 **[物件總管]** 中，展開要在其中加入新的計算資料行的資料表。 以滑鼠右鍵按一下 [資料行]，然後選取 [新增資料行]。  
   
 2.  輸入資料行名稱並接受預設資料類型 (**nchar**(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會判斷計算資料行的資料類型，方法是將資料類型優先順序規則套用至公式中指定的運算式。 例如，如果公式參考 **money** 類型的資料行以及 **int**類型的資料行，則計算資料行會是 **money** 類型，因為該資料類型的優先順序較高。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/10/2018
   
 1.  在物件總管中，以滑鼠右鍵按一下包含您要變更之資料行的資料表，然後展開 [資料行] 資料夾。  
   
-2.  以滑鼠右鍵按一下要指定其計算資料行公式的資料行，然後按一下 [刪除]。 按一下 **[確定]**。  
+2.  以滑鼠右鍵按一下要指定其計算資料行公式的資料行，然後按一下 [刪除]。 按一下 [確定] 。  
   
 3.  加入新的資料行，並依照上述程序加入新的計算料行，藉此指定計算資料行公式。  
   
