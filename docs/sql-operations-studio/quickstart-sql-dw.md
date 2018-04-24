@@ -56,14 +56,14 @@ ms.lasthandoff: 03/09/2018
 
    ![新的連線圖示](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. 如果您的伺服器沒有防火牆規則允許連線，SQL Operations Studio**建立新的防火牆規則**表單將會開啟。 完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果您的伺服器沒有允許 SQL Operations Studio 連線的防火牆規則，便會開啟**建立新的防火牆規則**表單。請完成表單，以建立新的防火牆規則。如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新的防火牆規則](media/quickstart-sql-dw/firewall.png)  
 
-4. 成功連接後，您的伺服器在*伺服器*[資訊看板]中開啟。
+4. 成功連接後，您的伺服器便會在*伺服器*資訊看板中開啟。
 
 ## <a name="create-the-tutorial-data-warehouse"></a>建立教學課程資料倉儲
-1. 以滑鼠右鍵按一下您的伺服器，請在 [物件總管]，然後選取**新增查詢。**
+1. 在 [物件總管] 中以滑鼠右鍵按一下您的伺服器，然後選取**新增查詢。**
 
 1. 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
@@ -93,7 +93,7 @@ ms.lasthandoff: 03/09/2018
 1. 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
    > [!NOTE]
-   > 您可以附加，或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
+   > 您可以將下列程式碼片段附加或覆寫先前編輯器中的查詢。請注意，按一下**執行**只會執行已選取的查詢。如果未選取，按一下**執行**將執行編輯器中所有的查詢。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
