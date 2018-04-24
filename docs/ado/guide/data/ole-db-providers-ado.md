@@ -1,31 +1,31 @@
 ---
-title: "OLE DB 提供者 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: OLE DB 提供者 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d00df80315489c2579646aa4faeafff2b57d8f9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b077e7f0e7ff9a4ac46bab298586cb738850112e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 提供者 (ADO)
 OLE DB 定義一組 COM 介面，可提供應用程式統一存取各種資訊來源中所儲存的資料。 這個方法可讓共用支援的 DBMS 功能至資料來源的適當數量的介面透過其資料的資料來源。 根據設計，高效能架構的 OLE DB 會依據其彈性，以元件為基礎的服務模型的使用情形。 而不是讓應用程式和資料之間的中繼層級低於指定的數目，OLE DB 需求只做為所需的許多元件完成特定工作。  

@@ -1,6 +1,6 @@
 ---
 title: 篩選條件屬性 |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,23 +11,23 @@ ms.date: 03/20/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::Filter
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c3b06134dcf65ead3a97577a6d08fd46ec2f52e
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 7b8e5bfa7cce9bd808dc562a6d702a8cb28727d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-property"></a>篩選屬性
 指出資料中的篩選[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 03/22/2018
   
 -   運算子必須是下列其中之一： \<，>， \<=、 > =、 <>、 =、 或**像**。  
   
--   值是與您將會比較欄位值的值 (例如，'smith '距離，#8/24/&#95; 12.345 或 $50.00)。 使用單引號字串和日期的井字號 （#）。 數字，您可以使用小數位數、 貨幣符號和科學記號標記法。 如果運算子**像**，值可以使用萬用字元。 允許只有星號 （*） 和百分比符號 （%） 萬用字元，以及它們必須是字串中的最後一個字元。 值不可以是 null。  
+-   值是與您將會比較欄位值的值 (例如，'smith '距離，#8/24/95 # 12.345 或 $50.00)。 使用單引號字串和日期的井字號 （#）。 數字，您可以使用小數位數、 貨幣符號和科學記號標記法。 如果運算子**像**，值可以使用萬用字元。 允許只有星號 （*） 和百分比符號 （%） 萬用字元，以及它們必須是字串中的最後一個字元。 值不可以是 null。  
   
 > [!NOTE]
 >  若要篩選器值中包含單引號 （'），使用兩個單引號來代表其中一個。 例如，若要篩選 O'Malley，準則字串應該`"col1 = 'O''Malley'"`。 若要包含在開頭和結尾的篩選值的單一引號，括住的字串以井字符號 （#）。 例如，若要篩選 '1'，準則字串應該`"col1 = #'1'#"`。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 03/22/2018
   
 -   建立多個索引鍵資料表中的任何欄位上進行修改。  
   
-下表摘要說明的效果**adFilterPendingRecords**以不同的篩選和修改的組合。 左欄則顯示可能的修改。 上的任何非索引鍵欄位，在建立單一索引鍵資料表中，索引鍵欄位上或任何為多個索引鍵資料表中的索引鍵欄位，就可以進行修改。 頂端列會顯示篩選準則。 篩選可以根據任何非索引鍵欄位中，建立單一索引鍵的資料表，或任何為多個索引鍵資料表中的索引鍵欄位中的索引鍵欄位。 交集的資料格會顯示結果。 A  **+** 加號表示該套用**adFilterPendingRecords**導致非空白**資料錄集**。 A  **-** 負號表示空**資料錄集**。  
+下表摘要說明的效果**adFilterPendingRecords**以不同的篩選和修改的組合。 左欄則顯示可能的修改。 上的任何非索引鍵欄位，在建立單一索引鍵資料表中，索引鍵欄位上或任何為多個索引鍵資料表中的索引鍵欄位，就可以進行修改。 頂端列會顯示篩選準則。 篩選可以根據任何非索引鍵欄位中，建立單一索引鍵的資料表，或任何為多個索引鍵資料表中的索引鍵欄位中的索引鍵欄位。 交集的資料格會顯示結果。 A **+**加號表示該套用**adFilterPendingRecords**導致非空白**資料錄集**。 A **-**負號表示空**資料錄集**。  
   
 ||非索引鍵|單一索引鍵|多個索引鍵|
 |-|--------------|----------------|-------------------|

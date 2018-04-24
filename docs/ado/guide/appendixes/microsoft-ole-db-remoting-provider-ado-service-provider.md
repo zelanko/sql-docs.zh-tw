@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB 的遠端服務提供者 （ADO 服務提供者） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB 的遠端服務提供者 （ADO 服務提供者） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB remoting provider [ADO]
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 189be564682e59c64a49e7b53dd9e6a763e92cdd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4f132bb8124afecea1b1f7fb519ecf64d1cfe88a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 的遠端服務提供者概觀
 Microsoft OLE DB 遠端服務提供者可讓用戶端電腦上的本機使用者叫用遠端電腦上的資料提供者。 如果您在遠端電腦上的本機使用者一樣，請指定遠端電腦的資料提供者參數。 然後指定遠端服務提供者用來存取遠端電腦的參數。 然後，您可以如同是本機使用者存取遠端電腦。
@@ -53,10 +53,10 @@ Microsoft OLE DB 遠端服務提供者可讓用戶端電腦上的本機使用者
 
 |動態屬性名稱|Description|
 |---------------------------|-----------------|
-|**DFMode**|指出 DataFactory 模式。 字串，指定所需的版本[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)伺服器上的物件。 設定此屬性之前開啟連接要求的特定版本**DataFactory**。 如果無法使用要求的版本，將會嘗試使用前一個版本。 如果沒有先前的版本，則會發生錯誤。 如果**DFMode**小於可用的版本中，會發生錯誤。 這個屬性是唯讀之後進行連線。<br /><br /> 可以是下列有效的字串值的其中一個：<br /><br /> -「 25"，版本 2.5 （預設值）<br />-   "21"—Version 2.1<br />-   "20"—Version 2.0<br />-"15"-1.5 版|
+|**DFMode**|指出 DataFactory 模式。 字串，指定所需的版本[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)伺服器上的物件。 設定此屬性之前開啟連接要求的特定版本**DataFactory**。 如果無法使用要求的版本，將會嘗試使用前一個版本。 如果沒有先前的版本，則會發生錯誤。 如果**DFMode**小於可用的版本中，會發生錯誤。 這個屬性是唯讀之後進行連線。<br /><br /> 可以是下列有效的字串值的其中一個：<br /><br /> -「 25"，版本 2.5 （預設值）<br />-"21"— 2.1 版<br />-"20"-2.0 版<br />-"15"-1.5 版|
 |**命令屬性**|表示將會加入至 MS 遠端提供者傳送到伺服器的命令 （資料列集） 屬性的字串值。 這個字串的預設值為 vt_empty。|
 |**目前 DFMode**|指出實際的版本號碼的**DataFactory**在伺服器上。 檢查這個屬性，請參閱版本是否要求中**DFMode**屬性已被接受。<br /><br /> 可以是下列有效的長整數值的其中一個：<br /><br /> -25-版本 2.5 （預設值）<br />-21-版本 2.1<br />-20-2.0 版<br />-15-1.5 版<br /><br /> 新增 「 DFMode = 20; 」 到您的連接字串時使用**MSRemote**更新資料時，提供者可以改善您的伺服器效能。 使用此設定， **RDSServer.DataFactory**伺服器上的物件會使用大量的資源模式。 不過，下列功能不適用於這項設定：<br /><br /> -使用參數化的查詢。<br />-取得參數或資料行的資訊，然後再呼叫**Execute**方法。<br />-設定**Transact 更新**至**True**。<br />-取得資料列狀態。<br />-呼叫**重新同步處理**方法。<br />重新整理 （明確或自動） 透過**重新同步處理更新**屬性。<br />-設定**命令**或**資料錄集**屬性。<br />-使用**adCmdTableDirect**。|
-|**Handler**|表示延伸功能的伺服器端自訂程式 （或處理常式） 的名稱[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，以及任何處理常式所使用的參數*，*以逗號分隔 （分隔","). A**字串**值。|
+|**處理常式**|表示延伸功能的伺服器端自訂程式 （或處理常式） 的名稱[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，以及任何處理常式所使用的參數*，*以逗號分隔 （分隔","). A**字串**值。|
 |**網際網路逾時**|表示最大傳入及傳出伺服器要求等待的毫秒數。 （預設值為 5 分鐘）。|
 |**遠端提供者**|表示要在遠端伺服器上使用的資料提供者的名稱。|
 |**遠端伺服器**|指出此連接所使用的伺服器名稱和通訊通訊協定。 這個屬性就相當於[.RDSDataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件[伺服器](../../../ado/reference/rds-api/server-property-rds.md)屬性。|

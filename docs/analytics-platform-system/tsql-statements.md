@@ -1,31 +1,21 @@
 ---
-title: T-SQL 陳述式 Analytics Platform System Parallel Data Warehouse |Microsoft 文件
-author: barbkess
-ms.author: barbkess
+title: T-SQL 陳述式的平行處理資料倉儲 |Microsoft 文件
+description: T-SQL 陳述式的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
-documentationcenter: NA
-editor: ''
-ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: 2109e1aaa48fb95da2b4d8b36aee7bbc86ea4ef4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="t-sql-topics"></a>T-SQL 主題
+# <a name="t-sql-statements-for-parallel-data-warehouse"></a>Parallel Data Warehouse 的 T-SQL 陳述式
 TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
 
 ## <a name="data-definition-language-ddl-statements"></a>資料定義語言 (DDL) 陳述式
@@ -35,7 +25,7 @@ TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資�
 * [變更結構描述](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [建立資料行存放區索引](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+* [建立資料庫](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [建立資料庫範圍認證](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [建立外部資料來源](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [建立外部檔案格式](../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -105,7 +95,7 @@ TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資�
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [建立憑證](../t-sql/statements/create-certificate-transact-sql.md)
-* [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)
+* [建立資料庫加密金鑰](../t-sql/statements/create-database-encryption-key-transact-sql.md)
 * [建立登入](../t-sql/statements/create-login-transact-sql.md)
 * [建立主要金鑰](../t-sql/statements/create-master-key-transact-sql.md)
 * [建立角色](../t-sql/statements/create-role-transact-sql.md)

@@ -1,28 +1,21 @@
 ---
-title: 啟動 Configuration Manager (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 啟動 Configuration Manager-Analytics Platform System |Microsoft 文件
+description: 啟動組態管理員工具，Analytics Platform System 應用裝置的指示。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
-caps.latest.revision: 22
-ms.openlocfilehash: 0ea02f539633233b462cc6c4cc3cc7ba5d452da9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d2e7a726386aa64d04f87f30cd22328900b1e5cd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="launch-the-configuration-manager"></a>啟動 Configuration Manager
+# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>啟動 Configuration Manager 中 Analytics Platform System
 本主題提供指示來啟動**Configuration Manager** Analytics Platform System 應用裝置。  
   
 ## <a name="before-you-begin"></a>開始之前  

@@ -1,17 +1,17 @@
 ---
-title: "Find 方法 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Find 方法 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d1e46954ec7a0983927b1d375615fe6e6cbf10ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜尋[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)符合指定之準則的資料列。 （選擇性） 您可以指定搜尋開始的資料列及從起始的資料列位移的方向。 如果符合條件時，所找到的記錄; 上設定目前資料列位置否則，會結束 （或開始） 的設定位置**資料錄集**。  
@@ -45,10 +45,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A**字串**值，包含在搜尋中指定要使用的資料行名稱、 比較運算子和值的陳述式。  
   
  *SkipRows*  
- Optional*.* A**長**值，其預設值為零，會指定從目前資料列的資料列位移或*啟動*來開始搜尋的書籤。 根據預設，搜尋會啟動目前的資料列。  
+ 選擇性*。* A**長**值，其預設值為零，會指定從目前資料列的資料列位移或*啟動*來開始搜尋的書籤。 根據預設，搜尋會啟動目前的資料列。  
   
  *SearchDirection*  
- Optional*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定是否應該開始搜尋在目前的資料列或下一個可用的資料列中搜尋方向。 失敗的搜尋會停止在結尾**資料錄集**如果值為**adSearchForward**。 失敗的搜尋會停止在開頭**資料錄集**如果值為**adSearchBackward**。  
+ 選擇性*。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定是否應該開始搜尋在目前的資料列或下一個可用的資料列中搜尋方向。 失敗的搜尋會停止在結尾**資料錄集**如果值為**adSearchForward**。 失敗的搜尋會停止在開頭**資料錄集**如果值為**adSearchBackward**。  
   
  *啟動*  
  選擇性。 A **Variant**做為搜尋的起始位置的書籤。  
@@ -58,7 +58,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
   
  中的比較運算子*準則*可能是"**>**」 （大於）、"**\<**"（小於）、"="（等於）、"> ="（大於或等於）"< ="（小於或等於）、"<>"（不等於） 或 [讚] （模式比對）。  
   
- 中的值*準則*可能是字串、 浮點數或日期。 字串值會以單引號或"#"（數字符號） 標記分隔 (例如，"狀態 = 'WA'"或"狀態 = #WA #")。 日期值會以"#"（數字符號） 標記分隔 (例如，"start_date > #7/22/&#97;")。 這些值可以包含小時、 分鐘和秒，表示時間戳記，但不是應包含毫秒，或將發生錯誤。  
+ 中的值*準則*可能是字串、 浮點數或日期。 字串值會以單引號或"#"（數字符號） 標記分隔 (例如，"狀態 = 'WA'"或"狀態 = #WA #")。 日期值會以"#"（數字符號） 標記分隔 (例如，"start_date > #7/22/97 #")。 這些值可以包含小時、 分鐘和秒，表示時間戳記，但不是應包含毫秒，或將發生錯誤。  
   
  如果比較運算子是 [讚]，字串值可能會包含星號 （*） 來尋找一個或多個出現的任何字元或子字串。 例如，"類似的狀態是\*'"符合 Maine 和 Massachusetts。 您也可以使用以尋找包含值範圍內的子字串的開頭和尾端的星號。 比方說，「 狀態類似 '\*為\*'"比對阿拉斯加、 阿肯色州和 Massachusetts。  
   

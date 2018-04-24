@@ -1,30 +1,30 @@
 ---
-title: "資料成形概觀 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 資料成形概觀 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5ebd3d67ffc5c3f3aba0f481182c5812f4523a5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 34d9ee09d74ca1907f293dab73189b172db73de0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-shaping-overview"></a>資料成形概觀
 *資料成形*表示要建立兩個或多個查詢中的邏輯實體之間的階層式關聯性。 中的其中一個記錄之間的父子式關聯性，可以看到階層[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，和一或多個記錄 （也稱為章） 的另一個**資料錄集**。 在父子式關聯性，父系**資料錄集**含有子系**資料錄集**。 舉例來說，這類的階層式關聯性是客戶和訂單。 在資料庫中每位客戶，可以有零個或多個訂單。 階層式關聯性可以是遞迴的這表示孫系記錄可以巢狀子記錄中。 原則上，可以任意深度巢狀階層式記錄。 在實務上，ADO 會限制為最多 512 個遞迴**資料錄集**s。  

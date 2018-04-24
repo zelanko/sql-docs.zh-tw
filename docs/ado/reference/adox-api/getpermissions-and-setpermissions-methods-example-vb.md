@@ -1,33 +1,33 @@
 ---
-title: "GetPermissions 和 SetPermissions 方法範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: GetPermissions 和 SetPermissions 方法範例 (VB) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SetPermissions method [ADOX], Visual Basic example
 - GetPermissions method [ADOX], Visual Basic example
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee63ac0feb7a9338dab06020b31594237b26a092
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9687b2af87bbd757751dd70a1001171558e0212e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 和 SetPermissions 方法範例 (VB)
 這個範例會示範[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)和[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 下列程式碼可讓系統管理員使用者 Orders 資料表的完整存取。  

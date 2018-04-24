@@ -1,28 +1,21 @@
 ---
-title: 使用 DNS 轉寄站 dns 名稱解析非應用裝置 (AP)
-author: barbkess
-ms.author: barbkess
+title: DNS 轉寄站用於 Analytics Platform System |Microsoft 文件 」
+description: 使用 DNS 轉寄站 dns 名稱解析非應用裝置中 Analytics Platform System。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: 21
-ms.openlocfilehash: 1d94319bd4d9ad3c25f74ca3393031d7ab916ee2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f707d4c681c695105daf23d5fc640279bb83658
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>使用 DNS 轉寄站 dns 名稱解析非應用裝置
+# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>使用 DNS 轉寄站 dns 名稱解析非應用裝置中 Analytics Platform System
 可以在 Active Directory 網域服務節點上設定 DNS 轉寄站 (***appliance_domain *-AD01**和 ***appliance_domain *-ad02 移**) 允許您 Analytics Platform System 應用裝置指令碼和存取外部伺服器的軟體應用程式。  
   
 ## <a name="ResolveDNS"></a>使用 DNS 轉寄站  

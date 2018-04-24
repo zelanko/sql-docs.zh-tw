@@ -1,15 +1,16 @@
 ---
-title: "SQL Server 的最大容量規格 | Microsoft Docs"
+title: SQL Server 的最大容量規格 | Microsoft Docs
 ms.date: 11/6/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - objects [SQL Server]
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: "88"
+caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9ec628362449c449d26005797e806e47b4614a79
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2b1465f6816523cd057aec54b6685a09141e2d72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/05/2017
 |預存程序之來源文字的位元組數||批次大小或 250 MB 當中較小者||  
 |每個 **varchar(max)**、 **varbinary(max)**、 **xml**、 **text**或 **image** 資料行的位元組數||2^31-1||  
 |每個 **ntext** 或 **nvarchar(max)** 資料行的字元數||2^30-1||  
-|每份資料表的叢集索引數||1||  
+|每份資料表的叢集索引數||@shouldalert||  
 |GROUP BY、ORDER BY 的資料行||僅受限於位元組數||  
 |GROUP BY WITH CUBE 或 WITH ROLLUP 陳述式中的資料行或運算式||10||  
 |每個索引鍵的資料行數||32|如果資料表包含一或多個 XML 索引，則使用者資料表的叢集索引鍵限制為 31 個資料行，因為 XML 資料行會加入主要 XML 索引的叢集索引鍵中。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，您可以在非叢集索引中包含非索引鍵資料行，以避免達到最多 32 個索引鍵資料行的限制。 如需詳細資訊，請參閱 [建立內含資料行的索引](../relational-databases/indexes/create-indexes-with-included-columns.md)。|  
@@ -79,12 +80,12 @@ ms.lasthandoff: 12/05/2017
 |資料庫大小||524,272 TB||  
 |每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
 |每個資料庫的檔案群組數||32,767||  
-|記憶體最佳化資料的每個資料庫檔案群組||1||  
+|記憶體最佳化資料的每個資料庫檔案群組||@shouldalert||  
 |每個資料庫的檔案數||32,767||  
 |檔案大小 (資料)||16 TB||  
 |檔案大小 (記錄檔)||2 TB||  
 |每個資料庫之記憶體最佳化資料的資料檔案||在 [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] 中為 4,096。 更新版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會有這類嚴格的限制。||  
-|記憶體最佳化資料之每個資料檔案的差異檔案||1||  
+|記憶體最佳化資料之每個資料檔案的差異檔案||@shouldalert||  
 |每個資料表的外部索引鍵資料表參考數||外寄 = 253。 內送 = 10,000。|相關限制，請參閱 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)。|  
 |識別碼長度 (字元數)||128||  
 |每部電腦的執行個體數||單機伺服器為 50 個執行個體。<br /><br /> 當使用共用叢集磁碟做為叢集安裝的預存選項時，在容錯移轉叢集上可支援 25 個執行個體，若您選擇 SMB 檔案共用為叢集安裝的儲存選項， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 則可在容錯移轉叢集上支援 50 個執行個體。||  
@@ -121,9 +122,9 @@ ms.lasthandoff: 12/05/2017
 |每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體總數||200*|  
 |每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的使用者資料庫數，包括資料層應用程式||50|  
 |每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式的使用者資料庫總數||1,000|  
-|每個資料庫的檔案群組數||1|  
-|每個檔案群組的資料檔案數||1|  
-|每個資料庫的記錄檔案數||1|  
+|每個資料庫的檔案群組數||@shouldalert|  
+|每個檔案群組的資料檔案數||@shouldalert|  
+|每個資料庫的記錄檔案數||@shouldalert|  
 |每部電腦的磁碟區數||3|  
   
  *由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式所支援的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理之執行個體最大數可能會根據伺服器的硬體組態而有所不同。 如需入門資訊，請參閱 [SQL Server 公用程式的功能與工作](https://msdn.microsoft.com/library/ee210548.aspx)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本都提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](https://msdn.microsoft.com/library/cc645993.aspx)。    
@@ -133,7 +134,7 @@ ms.lasthandoff: 12/05/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 物件||大小/數目上限 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 位元)|  
 |------------------------------------------|-|------------------------------------------------------------------|  
-|每個 DAC 的資料庫數||1|  
+|每個 DAC 的資料庫數||@shouldalert|  
 |每個 DAC 的物件數*||受限於資料庫的物件數或可用的記憶體。|  
   
  *此限制所包括的物件類型為使用者、資料表、檢視表、預存程序、使用者定義函數、使用者定義資料類型、資料庫角色、結構描述和使用者定義資料表類型。  

@@ -1,30 +1,30 @@
 ---
-title: "GetDataProviderDSO 方法 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: GetDataProviderDSO 方法 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - GetDataProviderDSO Method [ADO]
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a5c5ff974b6f99323de04ea274f635c52ca2755
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fca773c6db137999da36daf0151a51a1becf79c6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO 方法
 從 Shape 提供者擷取基礎 OLE DB 資料來源物件。  

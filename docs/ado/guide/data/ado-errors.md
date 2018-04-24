@@ -1,30 +1,30 @@
 ---
-title: "ADO 錯誤 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ADO 錯誤 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06fc6433f6f1d5f00b7b6d619dce9169e1fb67c3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7319f978370134775d7f89593716beac9fb73fab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-run-time-errors"></a>ADO 執行階段錯誤
 ADO 錯誤會回報到您的程式，為執行階段錯誤。 您可以使用您的程式語言的錯誤截取機制來攔截和處理它們。 例如，在 Visual Basic 中使用**On Error**陳述式。 在 Visual c + + 中，它會取決於您用來存取 ADO 文件庫的方法。 使用 #import， **try catch**區塊。 否則，c + + 程式設計人員必須明確地擷取物件時發生錯誤，藉由呼叫**GetErrorInfo**。 下列 Visual Basic sub 程序示範設限 ADO 錯誤：

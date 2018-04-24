@@ -1,17 +1,17 @@
 ---
-title: "程序集合 (ADOX) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 程序集合 (ADOX) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Procedures
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c02ac401065cfb605bcf097b8305d3e5cbb424a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fd5b6499082168b7d66b6a4b053ad96b88057dd9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="procedures-collection-adox"></a>程序集合 (ADOX)
 包含所有[程序](../../../ado/reference/adox-api/procedure-object-adox.md)的目錄物件。  

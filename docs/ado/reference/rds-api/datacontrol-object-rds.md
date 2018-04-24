@@ -1,17 +1,17 @@
 ---
-title: "DataControl 物件 (RDS) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: DataControl 物件 (RDS) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataControl
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7b3e0927f902f52138cdb37091df14652845fa4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 88fa818b04e55e7d6ad8c8c1c8d984e5cd0680bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 物件 (RDS)
 將繫結的資料查詢[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)至一或多個控制項 （例如，文字方塊中，方格控制項或下拉式方塊） 顯示**資料錄集**網頁上的資料。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/09/2018
  中的所有屬性**.RDSDataControl**是選擇性的因為自訂商務物件可取代的功能。  
   
 > [!NOTE]
->  如果您查詢多個結果，只有第一個[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)傳回。 如果需要多個結果集，將每個指派到其自有**DataControl**。 針對多個結果查詢的範例可能包括：`"Select * from Authors, Select * from Topics"`  
+>  如果您查詢多個結果，只有第一個[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)傳回。 如果需要多個結果集，將每個指派到其自有**DataControl**。 針對多個結果查詢的範例可能包括： `"Select * from Authors, Select * from Topics"`  
   
  新增 「 DFMode = 20; 」 到您的連接字串使用時**.RDSDataControl**物件可以改善伺服器效能，當您更新資料。 使用此設定， **RDSServer.DataFactory**伺服器上的物件會使用大量的資源模式。 不過，下列功能不適用於這項設定：  
   

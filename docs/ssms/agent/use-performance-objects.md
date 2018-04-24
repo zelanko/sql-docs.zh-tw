@@ -28,11 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73a727c385ce24f9d1490de52e1e563510d3dfa5
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d5033120057e83f6fd155466a35188be04068ef6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-performance-objects"></a>使用效能物件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,12 +49,12 @@ ms.lasthandoff: 04/10/2018
   
 |執行個體類型|物件名稱|  
 |-----------------|---------------|  
-|預設值|**SQLAgent:***object*:*counter*|  
+|預設|**SQLAgent:***object*:*counter*|  
 |具名|**SQLAgent$**<br /> **&#42;instance_name&#42; :***object*:*counter*|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 的下列效能物件。  
   
-|物件名稱|Description|  
+|物件名稱|描述|  
 |---------------|---------------|  
 |[SQLAgent:Jobs](http://msdn.microsoft.com/en-us/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|有關已啟動作業、成功率及目前狀態的效能資訊|  
 |[SQLAgent:JobSteps](http://msdn.microsoft.com/en-us/44f9983c-1753-4fe0-8475-973aa2460b3a)|作業步驟的狀態資訊|  

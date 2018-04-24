@@ -1,30 +1,30 @@
 ---
-title: "網際網路伺服器錯誤： 拒絕存取 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 網際網路伺服器錯誤： 拒絕存取 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - access denied error in RDS [ADO]
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d5dd778ab543b719f44334bc2d344a38964e05f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fc18bc33357b1115623c07f5adced5e916da56eb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="internet-server-error-access-denied"></a>網際網路伺服器錯誤： 存取遭拒
 如果您收到這個錯誤，通常表示 Microsoft 網際網路資訊服務 (IIS) 會傳回下列狀態：  

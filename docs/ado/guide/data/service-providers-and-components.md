@@ -1,32 +1,32 @@
 ---
-title: "服務提供者和元件 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 服務提供者和元件 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 - service providers [ADO]
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97e738fb4f5bd4635a8a53a87d000b72736edc5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 915b927c1728f5b64ac99b8eb3a43b645e5b500b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="service-providers-and-components"></a>服務提供者和元件
 服務提供者是藉由實作擴充的介面不會原生支援的資料存放區擴充的資料提供者功能的元件。  

@@ -1,17 +1,17 @@
 ---
-title: "Open 方法 （ADO 資料錄集） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Open 方法 （ADO 資料錄集） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Open
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 74e6fc58d5b32313806301467ca48b9f033b083b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a86f84251dca3a76d0e7110c781fea26395fc9d9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法 （ADO 資料錄集）
 開啟資料指標上[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

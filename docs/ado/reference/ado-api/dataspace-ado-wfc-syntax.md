@@ -1,36 +1,36 @@
 ---
-title: "資料空間 (ADO-WFC 語法) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 資料空間 (ADO-WFC 語法) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataSpace collection [ADO], ADO/WFC syntax
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a393ae11d8248bc10c7d9831743426e2687ae76
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 18572b2eb08963b2020808040f8a5a7cc43099f2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>資料空間 (ADO-WFC 語法)
 **CreateObject**方法**DataSpace**類別會指定這兩個商務物件來處理用戶端應用程式要求 (*progid*) 和通訊協定與伺服器 (*連接*)。 **createObject**傳回[ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)代表伺服器的物件。  
   
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
   
 ### <a name="constructor"></a>建構函式  
   

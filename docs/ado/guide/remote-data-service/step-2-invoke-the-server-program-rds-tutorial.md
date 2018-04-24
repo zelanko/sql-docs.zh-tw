@@ -1,30 +1,30 @@
 ---
-title: "步驟 2： 叫用伺服器程式 （RDS 教學課程） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 步驟 2： 叫用伺服器程式 （RDS 教學課程） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], invoking server program
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dcff87b21f9c9c85281d0f5798e3364d15732e9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5a060c77739c8a70fa63b1dce6b909429e4d7a8e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>步驟 2： 叫用伺服器程式 （RDS 教學課程）
 當您叫用用戶端上的方法*proxy*，實際的程式，在伺服器上執行的方法。 在此步驟中，您會在伺服器上執行的查詢。  

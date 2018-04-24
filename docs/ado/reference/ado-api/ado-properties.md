@@ -1,31 +1,31 @@
 ---
-title: "ADO 屬性 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ADO 屬性 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22d01847cb4d2a4bc6e1019fda0d29458af751c8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 919d3573a0d5b1178d24af3befd553a39b3c0d3a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-properties"></a>ADO 屬性
 |||  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|表示欄位值的實際長度。|  
 |[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)|表示物件的一或多個特性。|  
 |[BOF 和 EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF**指出目前的記錄位置是在資料錄集物件中的第一個資料錄之前。<br /><br /> **EOF**表示目前的記錄位置之後的資料錄集物件最後一筆記錄。|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|指出目前的記錄中的唯一識別書籤**資料錄集**物件或設定目前資料錄**資料錄集**有效書籤所識別的記錄中的物件。|  
+|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|指出目前的記錄中的唯一識別書籤**資料錄集**物件或設定目前資料錄**資料錄集**有效書籤所識別的記錄中的物件。|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|表示記錄數目**資料錄集**本機快取在記憶體中的物件。|  
 |[本文章節](../../../ado/reference/ado-api/chapter-property-ado.md)|取得或設定 OLE DB**章**物件上從 / **ADORecordsetConstruction**物件。|  
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|指出字元集所在的文字內容**資料流**應轉譯。|  
@@ -71,9 +71,9 @@ ms.lasthandoff: 02/09/2018
 |[模式](../../../ado/reference/ado-api/mode-property-ado.md)|表示可用的權限中修改資料**連接**，**記錄**，或**資料流**物件。|  
 |[名稱](../../../ado/reference/ado-api/name-property-ado.md)|表示物件的名稱。|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|表示為特定的提供者特有的錯誤程式碼**錯誤**物件。|  
-|[Number](../../../ado/reference/ado-api/number-property-ado.md)|表示唯一識別數字**錯誤**物件。|  
+|[數字](../../../ado/reference/ado-api/number-property-ado.md)|表示唯一識別數字**錯誤**物件。|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|表示中的數值小數位數**參數**或**欄位**物件。|  
-|[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|值會指出**欄位**，存在於記錄中進行任何變更之前。|  
+|[originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|值會指出**欄位**，存在於記錄中進行任何變更之前。|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|表示網頁的資料數量**資料錄集**包含物件。|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|表示記錄數目代表中的每一頁**資料錄集**。|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|設定 OLE DB 的容器**列**物件上**ADORecordConstruction**物件，使資料列的父代會轉換成 ADO**記錄**物件。|  
@@ -84,9 +84,9 @@ ms.lasthandoff: 02/09/2018
 |[提供者](../../../ado/reference/ado-api/provider-property-ado.md)|指出提供者的名稱**連接**物件。|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|表示中的記錄數目**資料錄集**物件。|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|表示的類型**記錄**物件。|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|取得或設定 OLE DB**列**物件上從 / **ADORecordConstruction**物件。|  
+|[資料列](../../../ado/reference/ado-api/row-property-ado.md)|取得或設定 OLE DB**列**物件上從 / **ADORecordConstruction**物件。|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|取得或設定 OLE DB **RowPosition**物件上從 / **ADORecordsetConstruction**物件。|  
-|[資料列集](../../../ado/reference/ado-api/rowset-property-ado.md)|取得或設定 OLE DB**資料列集**物件上從 / **ADORecordsetConstruction**物件。|  
+|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|取得或設定 OLE DB**資料列集**物件上從 / **ADORecordsetConstruction**物件。|  
 |[來源 （ADO 錯誤）](../../../ado/reference/ado-api/source-property-ado-error.md)|表示原始產生錯誤的應用程式之物件的名稱。|  
 |[來源 （ADO 資料錄）](../../../ado/reference/ado-api/source-property-ado-record.md)|指出所代表的實體**記錄**物件。|  
 |[來源 （ADO 資料錄集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)|表示中的資料來源**資料錄集**物件|  

@@ -1,26 +1,19 @@
 ---
-title: 若要從您 IHV (Analytics Platform System) 取得的資訊
-author: barbkess
-ms.author: barbkess
+title: 從 IHV-Analytics Platform System 取得資訊 |Microsoft 文件
+description: 若要取得從您 IHV Analytics Platform System 應用裝置的相關資訊。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2bce301a-704c-4236-a0a1-851bd17e2b6c
-caps.latest.revision: 11
-ms.openlocfilehash: 384a4051df1596dc334a78a751cb7954f512e8d5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 57b61ed7741bc6d36b7531a62416893e7cc10fb7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>若要從您 IHV 取得的資訊
 當您獨立硬體廠商 (IHV) 傳遞至您的新的 SQL Server PDW 應用裝置時，它們也提供它們對您的應用裝置上的應用裝置的硬體和設定資訊。 您將需要這項資訊來管理您的應用裝置。  

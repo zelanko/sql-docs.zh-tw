@@ -1,27 +1,21 @@
 ---
-title: PDW 憑證佈建 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 憑證佈建-Analytics Platform System |Microsoft 文件
+description: Analytics Platform System 中的佈建憑證。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: PDW 憑證佈建頁面 Analytics Platform System Configuration Manager 匯入或移除 PDW 所使用的憑證。
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: 22
-ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82907692bbba3ad92e796e8ecc8bb99e3141cb1a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-certificate-provisioning"></a>PDW 憑證佈建
+# <a name="certificate-provisioning-in-analytics-platform-system"></a>憑證佈建中 Analytics Platform System
 **PDW 憑證佈建**頁面 Analytics Platform System**Configuration Manager**匯入或移除 PDW 所使用的憑證。 
 
 使用，來加密連接的憑證可協助安全的通訊透過 SQL Server 用戶端，可以使用 SQL Server PDW 驅動程式的工具的控制節點到[管理主控台](monitor-the-appliance-by-using-the-admin-console.md)，和 Integration Services 就會載入。 

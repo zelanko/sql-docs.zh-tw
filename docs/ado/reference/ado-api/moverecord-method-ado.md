@@ -1,17 +1,17 @@
 ---
-title: "MoveRecord 方法 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: MoveRecord 方法 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Record::MoveRecord
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a626e6f86d2e44fed972f8043b556d233fdf1d17
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3c6361dca137a27c5b54149fd400ee5cd29d9160
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 方法 (ADO)
 移動所代表的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)到另一個位置。  
@@ -56,7 +56,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *選項。*  
  選擇性。 A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)值，其預設值是**adMoveUnspecified**。 指定此方法的行為。  
   
- *Async*  
+ *非同步*  
  選擇性。 A**布林**值，當**True**，指定此作業應該是非同步。  
   
 ## <a name="return-value"></a>傳回值  

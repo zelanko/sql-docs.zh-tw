@@ -1,31 +1,31 @@
 ---
-title: "參數化命令的作業 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 參數化命令的作業 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d826d5407aabce4baa82b0952cff6c8344944e8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 70049127949ecc4f0e5931339b951620b58784ce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>參數化命令的作業
 如果您正在使用大量子**資料錄集**，特別是相較於父代的大小**資料錄集**，但是需要存取只有少數子章節，可能會發現使用更有效率參數化的命令。  

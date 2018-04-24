@@ -17,11 +17,12 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: e4328da10d2ec51083f3b1dbc23d6b0f5fa5da21
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6de9d9493178689a29cc90e79e228a9cb07aaace
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 安裝和設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,4 +78,4 @@ WideWorldImportersDW 資料庫的安裝和組態指示。
 1. 在 SQL Server Management Studio，連接到 WideWorldImportersDW 資料庫並開啟新的查詢視窗。
 2. 執行下列 T-SQL 命令來啟用資料庫中的 PolyBase:
 
-   EXECUTE [Application].[Configuration_ApplyPolyBase]
+   執行 [應用程式]。[Configuration_ApplyPolyBase]

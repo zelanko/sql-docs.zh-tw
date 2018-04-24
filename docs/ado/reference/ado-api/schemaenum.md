@@ -1,33 +1,33 @@
 ---
-title: SchemaEnum | Microsoft Docs
-ms.prod: sql-non-specified
+title: SchemaEnum |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - SchemaEnum
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc84741e1963b2c484e82eea7bc3de08cf12da13
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a5f76b03c61f1ea8576df0bb74acccbc37f7d811
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的結構描述類型**資料錄集**， [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法擷取。  
@@ -50,8 +50,8 @@ ms.lasthandoff: 02/15/2018
 |**adSchemaCollations**|3|傳回字元的定序在目錄中定義可指定使用者存取。<br /><br /> （定序資料列集）|COLLATION_CATALOG COLLATION_SCHEMA SYS.DATABASES|  
 |**adSchemaColumnPrivileges**|13|傳回可用，或授與的指定使用者在目錄中定義資料表的資料行的權限。<br /><br /> （COLUMN_PRIVILEGES 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
 |**adSchemaColumns**|4|傳回之資料表 （包括檢視） 在目錄中定義的指定使用者存取的資料行。<br /><br /> （資料行資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaColumnsDomainUsage**|11|傳回相依於網域目錄中定義且由指定使用者所擁有的資料行目錄中定義。<br /><br /> (COLUMN_DOMAIN_USAGE Rowset)|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
-|**adSchemaConstraintColumnUsage**|6|傳回由參考條件約束、 唯一條件約束、 check 條件約束，以及判斷提示，在目錄中定義，而且給定使用者所擁有的資料行。<br /><br /> (CONSTRAINT_COLUMN_USAGE Rowset)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaColumnsDomainUsage**|11|傳回相依於網域目錄中定義且由指定使用者所擁有的資料行目錄中定義。<br /><br /> （COLUMN_DOMAIN_USAGE 資料列集）|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
+|**adSchemaConstraintColumnUsage**|6|傳回由參考條件約束、 唯一條件約束、 check 條件約束，以及判斷提示，在目錄中定義，而且給定使用者所擁有的資料行。<br /><br /> （CONSTRAINT_COLUMN_USAGE 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|傳回所使用的參考條件約束、 唯一條件約束、 check 條件約束，以及判斷提示目錄中定義且由指定使用者所擁有的資料表。<br /><br /> （CONSTRAINT_TABLE_USAGE 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|傳回結構描述 （或類別目錄，如果提供者不支援結構描述） 中的可用 cube 的相關資訊。<br /><br /> （CUBE 資料列集 *）|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
 |**adSchemaDBInfoKeywords**|30|傳回提供者特定關鍵字的清單。<br /><br /> (IDBInfo::GetKeywords)|\<無 >|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/15/2018
 |**adSchemaForeignKeys**|27|傳回由指定使用者在目錄中定義的外部索引鍵資料行。<br /><br /> （FOREIGN_KEYS 資料列集）|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|傳回維度中，您可以使用階層的相關資訊。<br /><br /> （階層資料列集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
 |**adSchemaIndexes**|12|傳回定義類別目錄中給定使用者所擁有的索引。<br /><br /> （索引資料列集）|TABLE_CATALOG 排列 TABLE_SCHEMA INDEX_NAME 類型 TABLE_NAME|  
-|**adSchemaKeyColumnUsage**|8|傳回由指定使用者條件約束為索引鍵的資料行目錄中定義。<br /><br /> (KEY_COLUMN_USAGE Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG 排列 TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaKeyColumnUsage**|8|傳回由指定使用者條件約束為索引鍵的資料行目錄中定義。<br /><br /> （KEY_COLUMN_USAGE 資料列集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG 排列 TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaLevels**|35|傳回可用維度中的層級的相關資訊。<br /><br /> （層級資料列集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME L LEVEL_UNIQUE_NAME|  
 |**adSchemaMeasures**|36|傳回可用的量值的相關資訊。<br /><br /> （量值資料列集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|傳回可用的成員相關資訊。<br /><br /> （成員資料列集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE 樹狀運算子。 如需詳細資訊，請參閱 OLE DB 的線上分析處理 (OLAP)。|  
@@ -81,12 +81,12 @@ ms.lasthandoff: 02/15/2018
 |**adSchemaTranslations**|21|傳回指定的使用者可以存取的字元轉譯在目錄中定義。<br /><br /> （轉譯資料列集）|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
 |**adSchemaTrustees**|39|保留供日後使用。||  
 |**adSchemaUsagePrivileges**|15|傳回可用，或授與的指定使用者在目錄中定義物件的使用量權限。<br /><br /> （USAGE_PRIVILEGES 資料列集）|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE 授與者授與者|  
-|**adSchemaViewColumnUsage**|24|傳回用的資料行中檢視資料表、 在目錄中定義，擁有者指定的使用者，是相依。<br /><br /> (VIEW_COLUMN_USAGE Rowset)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
+|**adSchemaViewColumnUsage**|24|傳回用的資料行中檢視資料表、 在目錄中定義，擁有者指定的使用者，是相依。<br /><br /> （VIEW_COLUMN_USAGE 資料列集）|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|傳回定義類別目錄中給定的使用者可以存取的檢視。<br /><br /> （檢視資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaViewTableUsage**|25|傳回所在的資料表中檢視資料表、 在目錄中定義，擁有者指定的使用者，是相依。<br /><br /> （VIEW_TABLE_USAGE 資料列集）|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- Package: **com.ms.wfc.data**  
+ 封裝： **com.ms.wfc.data**  
   
 |常數|  
 |--------------|  

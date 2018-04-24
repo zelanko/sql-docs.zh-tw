@@ -1,30 +1,30 @@
 ---
-title: "ADO 詞彙 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ADO 詞彙 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b27ecc0b3905a12d453cc53d6ac941fc80708f9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d327b5e991127a533d4b599daf8c52cfb2dba1ba
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary-terms"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="b"></a>B
  資料表中的欄位與變數之間的繫結項目 A 對應。 ADO Visual c + + 擴充功能中**資料錄集**欄位會對應至 C/c + + 變數。
 
- 位元遮罩的數字值適用於與其他數值，通常要在參數中的旗標選項或傳回值的位元值比較。 通常這項比較會完成的位元邏輯運算子，例如**和**和**或者**在 Visual Basic 中 **&** 和**&#124;**在 c + +。
+ 位元遮罩的數字值適用於與其他數值，通常要在參數中的旗標選項或傳回值的位元值比較。 通常這項比較會完成的位元邏輯運算子，例如**和**和**或者**在 Visual Basic 中**&**和**&#124;** c + + 中。
 
  例如，ADO **FieldAttributeEnum**值可用來當作位元遮罩來決定欄位的屬性。 假設您想要判斷是否可更新的欄位。 您可以測試這個，與 Visual Basic 中的下列運算式：`Field.Attributes AND adFldUpdatable`
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 02/09/2018
  資料提供者或資料指標服務專用的動態屬性的屬性。 **屬性**自動填入這些物件的集合 （「 動態 」）。 連線到資料來源透過特定的資料提供者之前，物件會有任何動態屬性。 另請參閱資料提供者、 資料指標。
 
 ## <a name="e"></a>E
- 列舉的具名常數的清單。 列舉的值不需要是唯一的。 但是每個值的名稱必須是列舉型別定義所在的範圍內唯一的。 在 ADO 中，列舉型別用於數字參數和傳回值、 加入至 ADO 程式碼的意義，以及可為開發人員之數字的值 （這可能會變更版本）。 例如，若要開啟靜態**資料錄集**，使用**adOpenStatic**列舉值：`Recordset.Open ,,adOpenStatic`
+ 列舉的具名常數的清單。 列舉的值不需要是唯一的。 但是每個值的名稱必須是列舉型別定義所在的範圍內唯一的。 在 ADO 中，列舉型別用於數字參數和傳回值、 加入至 ADO 程式碼的意義，以及可為開發人員之數字的值 （這可能會變更版本）。 例如，若要開啟靜態**資料錄集**，使用**adOpenStatic**列舉值： `Recordset.Open ,,adOpenStatic`
 
  也稱為*列舉的常數*。 另請參閱*常數*。
 

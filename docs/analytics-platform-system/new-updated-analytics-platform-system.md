@@ -1,24 +1,21 @@
 ---
-title: 已更新-SQL Server 文件的 Analytics Platform System |Microsoft 文件
+title: 已更新-Analytics Platform System 文件 |Microsoft 文件
 description: 顯示更新的內容，如需 Analytics Platform System 的 Microsoft SQL Server 中最近變更過的文件的程式碼片段。
+author: mzaman1
 manager: craigg
-author: MightyPen
-ms.author: genemi
-ms.topic: article
-ms.custom: UpdArt.exe
-ms.suite: sql
-ms.prod_service: sql-non-specified
-ms.component: aps-pdw
-ms.date: 02/03/2018
-ms.openlocfilehash: f3a8a14c0c01ff99c8ad613bbc9f5e1e01955e7e
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 94b7666476874e610991ebf838ad259f3d0bb85a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="new-and-recently-updated-analytics-platform-system-for-sql-server"></a>新增和更新最近： Analytics Platform System for SQL Server
-
-
 
 幾乎每日 Microsoft 某些現有發行項上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文件網站。 這篇文章會顯示從最近已更新的發行項的摘錄。 可能也會列出新的文章連結。
 

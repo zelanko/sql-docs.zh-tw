@@ -1,32 +1,32 @@
 ---
-title: "最佳化屬性範例 （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 最佳化屬性範例 （VC + +） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 927448414395ded11b0896b0f0e692ef05c13ce1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e4cceefba08de84b95e7563daeddb32a6c6ecc8d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="optimize-property-example-vc"></a>最佳化屬性範例 （VC + +）
 這個範例會示範[欄位](../../../ado/reference/ado-api/field-object.md)物件動態**最佳化**屬性。 **Zip**欄位**作者**資料表中**Pubs**資料庫未編製索引。 設定[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性**True**上**zip**欄位授權 ADO 來建立可改善效能的索引[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法。  

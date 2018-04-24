@@ -1,28 +1,21 @@
 ---
-title: 了解管理主控台警示 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 管理主控台警示-Analytics Platform System |Microsoft 文件
+description: 了解管理主控台警示 Analytics Platform System (AP)。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: 10
-ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d1473e3ac769cd70c6985e15efdb59dfc1039ef
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="understanding-admin-console-alerts"></a>了解管理主控台警示
+# <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>了解 Analytics Platform System 中的管理主控台警示
 應用裝置中會出現警示**管理主控台**和**System Center Operations Manager** (SCOM)。 使用此警示的清單，找出哪些警示需要進一步調查。  
   
 如需連接到**管理主控台**使用 Internet Explorer，請參閱[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。 如需有關資訊**SCOM**，請參閱[監視使用 System Center Operations Manager 應用裝置&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
@@ -132,7 +125,7 @@ ms.lasthandoff: 04/06/2018
 |SAS 主機匯流排介面卡有失敗狀況。|是|失敗|警告|HBA 的整體狀況處於 failed 狀態，包括由它所控制的實體磁碟機的所有報告 SAS 主機匯流排介面卡。 這將需要為被取代的元件 (廠商狀態： 失敗)。 廠商狀態報告中元件的 「 hba_device_rollup_status"屬性。|檢閱節點的 Windows 事件記錄檔的詳細資訊或連絡裝置製造商。|  
 |SAS 主機匯流排介面卡處於正常狀態。|否|作業|資訊|SAS 主機匯流排介面卡正常運作 (廠商狀態: [確定])。 廠商狀態報告中元件的 「 hba_device_rollup_status"屬性。||  
 |SAS 主機匯流排介面卡具有未知狀態。|是|降級|警告|無法判斷 SAS 主機匯流排介面卡狀態 (廠商狀態： 其他)。 廠商狀態報告中元件的 「 hba_device_status"屬性。|檢閱節點的 Windows 事件記錄檔的詳細資訊或連絡裝置製造商。|  
-|SQL Server 具有重大狀態。|是|NonOperational|錯誤|這項服務處於重大狀態，並已停止運作 (狀態： 已停止)，或者是停止的過渡狀態 (狀態： StopPending)。  狀態報告中元件的 「 sql_server_service_status"屬性。|檢閱節點的 Windows 事件記錄檔以取得詳細資料。|  
+|SQL Server 具有重大狀態。|是|為非作業狀態|錯誤|這項服務處於重大狀態，並已停止運作 (狀態： 已停止)，或者是停止的過渡狀態 (狀態： StopPending)。  狀態報告中元件的 「 sql_server_service_status"屬性。|檢閱節點的 Windows 事件記錄檔以取得詳細資料。|  
 |SQL Server 已正常的狀態。|否|作業|資訊|此服務正常運作 (狀態： 執行)。 狀態報告中元件的 「 sql_server_service_status"屬性。||  
 |存放裝置機箱風扇已降級狀態。|是|降級|警告|存放裝置機箱風扇報告已降級 (廠商狀態： 10,15)。 廠商狀態報告中元件的 「 storage_fan_status"屬性。|檢閱節點的 Windows 事件記錄檔的詳細資訊或連絡裝置製造商。|  
 |存放裝置機箱風扇已失敗狀態。|是|失敗|警告|存放裝置機箱風扇報告它處於失敗狀態。 這將需要為被取代的元件 (廠商狀態： 20,25)。 廠商狀態報告中元件的 「 storage_fan_status"屬性。|檢閱節點的 Windows 事件記錄檔的詳細資訊或連絡裝置製造商。|  

@@ -1,30 +1,33 @@
 ---
-title: "SQL Server Data Tools 的客戶經驗改進計畫 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Data Tools 的客戶經驗改進計畫 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssdt
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 45707ee7bbed4fe4060bcf3134fe98783cb59690
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 58e671eb7e69bbc0487065342b141a5c5bfb1e9a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools 的客戶經驗改進計畫
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 了解客戶經驗改善計畫 (CEIP) 如何協助 Microsoft 找出可讓我們的軟體變得更好的方法。  您隨時都能設定工具來選擇加入或退出。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  了解客戶經驗改進計畫 (CEIP) 如何協助 Microsoft 找出可讓我們的軟體變得更好的方法。  您隨時都能設定工具來選擇加入或退出。  
   
 > [!NOTE]  
 >  如需 Microsoft SQL Server 2016 版本及任何其他產品和服務中使用者資料收集與使用方式的說明，請參閱這份 [Microsoft 提供的隱私權聲明](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)。  
@@ -129,7 +132,7 @@ ms.lasthandoff: 12/05/2017
   
      若要開啟 CEIP，請按一下 [是，我願意參加] 。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
  **使用以登錄為基礎的原則或群組原則**  
   

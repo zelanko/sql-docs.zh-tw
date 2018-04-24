@@ -1,30 +1,30 @@
 ---
-title: "設定 DCOM 資料流的封送處理格式 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 設定 DCOM 資料流的封送處理格式 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - dcom stream marshaling format in rds [ADO]
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29bef8d1d0bf72dbb818a75387eb8c33f7001981
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 15d82c4896fb5c5b74da6e050d7bdf8b1476ddd8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>設定 DCOM 封送處理格式的資料流
 使用元件從 RDS 1.5 或更早版本的用戶端電腦不相容於使用元件從 RDS 2.0 或更新版本的伺服器。 做為基礎的通訊協定使用 DCOM，RDS 2.0 或更新版本的支援時，更有效地進行傳輸[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 如果您的用戶端正在執行元件從 RDS 1.5 或更早版本，您可以設定您的伺服器以使用先前的 RDS 支援 （稱為 RDS 1.0） 或更新版本的 RDS 支援 (2.0 或更新版本呼叫 RDS)。 設定下列登錄項目之一：  

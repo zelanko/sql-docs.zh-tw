@@ -1,27 +1,21 @@
 ---
-title: 備份伺服器容量規劃工作表 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 備份伺服器容量計劃-Parallel Data Warehouse |Microsoft 文件
+description: 這個容量規劃工作表可協助您判斷執行平行處理資料倉儲資料庫備份的備份伺服器的需求和還原作業。 使用此選項來建立您的計劃購買新的或佈建現有備份伺服器。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 這個容量規劃工作表可協助您判斷執行 SQL Server PDW 資料庫備份的備份伺服器的需求和還原作業。
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
-caps.latest.revision: 6
-ms.openlocfilehash: 1548d284f78043e5f878bafe9922480fe762dbfe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 500bebab375a0d0b94032a1855af3844bc2e6fa7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="backup-server-capacity-planning-worksheet"></a>備份伺服器容量規劃工作表
+# <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>備份伺服器容量規劃工作表-Parallel Data Warehouse
 這個容量規劃工作表可協助您判斷執行 SQL Server PDW 資料庫備份的備份伺服器的需求和還原作業。 使用此選項來建立您的計劃購買新的或佈建現有備份伺服器。  
   
 此工作表是中的指示的補充[取得和設定備份伺服器](acquire-and-configure-backup-server.md)。  

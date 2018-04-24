@@ -1,27 +1,21 @@
 ---
-title: dwloader 平行處理資料倉儲的命令列載入器
-author: barbkess
-ms.author: barbkess
+title: dwloader 命令列載入器-Parallel Data Warehouse |Microsoft 文件
+description: dwloader 是 Parallel Data Warehouse (PDW) 的命令列工具，可將資料表資料列中大量載入現有的資料表。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: '**dwloader** Parallel Data Warehouse (PDW) 的命令列工具，可將資料表資料列中大量載入現有的資料表。'
-ms.date: 11/04/2016
-ms.topic: article
-ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 90
-ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d5d8ead82525266148729f9773e47b933def349e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="dwloader-command-line-loader"></a>dwloader 命令列載入器
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 平行處理資料倉儲的命令列載入器
 **dwloader** Parallel Data Warehouse (PDW) 的命令列工具，可將資料表資料列中大量載入現有的資料表。 當載入的資料列，您可以將所有資料列加入到資料表結尾 (*附加模式*或*fastappend 模式*)、 附加新資料列，並更新現有的資料列 (*upsert 模式*)，或刪除所有現有之前載入的資料列，然後再將所有資料列插入空的資料表 (*重新載入模式*)。  
   
 **用於載入資料的程序**  
@@ -161,7 +155,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name。*[*結構描述*]。*table_name*  
 在目的地資料表的三部分名稱。  
   
 **-I***source_data_location*  
@@ -240,7 +234,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 範例:  
   
--t "|"  
+-t"|"  
   
 -t ' '  
   
@@ -284,7 +278,7 @@ LF 的範例包括：
   
 -s 0x22  
   
-< fixed_width_column_options>  
+< fixed_width_column_options >  
 具有固定長度資料行的來源資料檔案的選項。 根據預設， *source_data_file_name*包含可變長度資料行中的 ASCII 字元。  
   
 UTF8 – e 時不支援固定的寬度資料行。  
@@ -402,7 +396,7 @@ dym
 fastappend  
 載入器插入資料列直接管理，而不需要使用暫存資料表時，目的地資料表中的現有資料列的結尾。 fastappend 需要多重交易 (– m) 選項。 使用 fastappend 時無法指定暫存資料庫。 沒有任何與 fastappend，這表示您自己的載入處理序必須處理從失敗或已中止載入復原的復原。  
   
-upsert **-K**  *merge_column* [ ,...*n* ]  
+upsert **-K***merge_column* [，...*n* ]    
 載入器會使用 SQL Server Merge 陳述式來更新現有的資料列，並插入新資料列。  
   
 -K 選項指定要合併的基礎資料行的資料行。 這些資料行形成應該代表唯一的資料列的合併索引鍵。 如果合併索引鍵存在於目的地資料表時，會更新資料列。 如果合併索引鍵不存在於目的地資料表，則會附加資料列。  

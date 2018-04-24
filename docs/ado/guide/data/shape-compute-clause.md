@@ -1,32 +1,32 @@
 ---
-title: "圖形 COMPUTE 子句 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 圖形 COMPUTE 子句 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="shape-compute-clause"></a>圖形 COMPUTE 子句
 圖形 COMPUTE 子句產生父代**資料錄集**，其資料行所組成之子系的參考**資料錄集**; 選擇性資料行內容的章節中，新的、 或導出資料行，或子系上執行彙總函式的結果**資料錄集**或先前形狀**資料錄集**; 以及從子系的任何資料行**資料錄集**中所列選擇性的 BY 子句。  

@@ -1,17 +1,17 @@
 ---
-title: "執行，請重新查詢，並清除方法範例 (VBScript) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 執行，請重新查詢，並清除方法範例 (VBScript) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Clear method [ADO], VBScript example
 - Requery method [ADO], VBScript example
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a6e2075c65913de0bcfd10944de46a74fc60feb7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b5f7a213825b56e212d97ce9b8ab2277da54ce5e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>執行，請重新查詢，並清除方法範例 (VBScript)
 這個範例會示範**Execute**方法執行時同時從[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來擷取目前資料中的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法，以清除的內容[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 ExecuteCommand 和 PrintOutput 程序不需要執行這個程序。  

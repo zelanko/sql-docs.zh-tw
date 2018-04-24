@@ -1,29 +1,22 @@
 ---
-title: 使用系統檢視表 (Analytics Platform System) 監視的應用裝置
-author: barbkess
-ms.author: barbkess
+title: 監視器與系統檢視表-Analytics Platform System |Microsoft 文件
+description: 本文列出您可以使用監視 Analytics Platform system 應用裝置的系統檢視表。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: 8
-ms.openlocfilehash: c6e756946e7ed558d6875bf5b330e1ebc9c35f5d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-views"></a>使用系統檢視表來監視應用裝置
-本主題列出可用於監視 SQL Server PDW 系統檢視表。  
+# <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>監視與系統檢視表-Analytics Platform System 應用裝置
+本文列出您可以用來監視 SQL Server PDW 系統檢視表。  
   
 ## <a name="to-monitor-the-appliance-by-using-system-views"></a>若要使用系統檢視表來監視應用裝置  
 SQL Server PDW 包含完善的系統檢視，可讓您取得有關應用裝置的健全狀況、 狀態和效能的詳細的資訊。 下表提供可用於每個監視功能的系統檢視表的連結。  

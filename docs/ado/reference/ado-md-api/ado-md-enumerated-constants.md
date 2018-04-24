@@ -1,30 +1,30 @@
 ---
-title: "ADO MD 列舉常數 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ADO MD 列舉常數 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADO MD]
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7432aa483a8c47f441538cd9246745e0623c501c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b3258927d884308786b01ffcd72d608e1f5c0722
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 列舉常數
 若要協助偵錯，ADO MD 列舉常數會列出每個常數的值。 不過，這個值只是單純地建議，並從 ADO MD 發行版本可能會變更為另。 您的程式碼應該僅相依於名稱，而不是實際值、 列舉常數。  

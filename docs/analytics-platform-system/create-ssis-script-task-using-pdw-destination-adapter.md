@@ -1,28 +1,22 @@
 ---
-title: 如何建立使用 SSIS PDW 目的地配接器的指令碼工作
-author: barbkess
-ms.author: barbkess
+title: 使用 SSIS PDW 目的地配接器建立指令碼工作 |Microsoft 文件
+desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Integration Services 指令碼工作可讓您在.Net 應用程式內容中的 SSIS 控制流程中執行幾乎任何作業，即可達成。
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: e2a9b254-5a66-44b1-863a-fa831555e7e0
-caps.latest.revision: 8
-ms.openlocfilehash: d10bdf6dc8bd403ea29a928d1a89319cbb19f9f6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter"></a>如何建立使用 SSIS PDW 目的地配接器的指令碼工作
-Integration Services 指令碼工作可讓您在.Net 應用程式內容中的 SSIS 控制流程中執行幾乎任何作業，即可達成。 此 SSIS 封裝的指令碼是使用 SSIS PDW 目的地配接器程式碼範例。  
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>建立使用 SSIS Parallel Data Warehouse 目的地配接器的指令碼工作
+此 SSIS 封裝的指令碼是使用 SSIS PDW 目的地配接器程式碼範例。  Integration Services 指令碼工作可讓您在.Net 應用程式內容中的 SSIS 控制流程中執行幾乎任何作業，即可達成。 
   
 ## <a name="sample-code"></a>範例程式碼  
   

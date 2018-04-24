@@ -1,31 +1,31 @@
 ---
-title: "安裝 Analysis Services |Microsoft 文件"
-ms.custom: 
+title: 安裝 Analysis Services |Microsoft 文件
+ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: cdc4deb033afe212103a80a0e5b8413c13000433
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1810a2de0e4337bfae9a387e98e933dc0a922a4d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>安裝 SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-SQL Server Analysis Services 是裝載表格式模型、 多維度 cube 和資料採礦模型，您可以從報表、 試算表和儀表板存取的分析資料庫伺服器。  
+  SQL Server Analysis Services 是裝載表格式模型、 多維度 cube 和資料採礦模型，您可以從報表、 試算表和儀表板存取的分析資料庫伺服器。  
   
  Analysis Services 是多執行個體，表示您可以在單一電腦上安裝多個複本，或執行新舊版本的並存。 您安裝的任何執行個體都是以三種模式中的其中一種來執行 (在安裝期間決定)︰多維度和資料採礦、表格式或 SharePoint。 如果您想要使用多種模式，則每種模式都需要個別執行個體。  
   
@@ -64,7 +64,7 @@ SQL Server Analysis Services 是裝載表格式模型、 多維度 cube 和資�
   
 ```  
   
-Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
+Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
  **INSTANCENAME** 必須少於 17 個字元。  

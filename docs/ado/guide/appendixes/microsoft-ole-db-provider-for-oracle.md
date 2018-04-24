@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB Provider for Oracle |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB Provider for Oracle |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for Oracle
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 71ce9defd8d06a220da3c3f74c439d8a4a7ecc84
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概觀
 > [!IMPORTANT]
@@ -74,7 +74,7 @@ MSDAORA
 |**視窗控制代碼**|表示要用於提示您輸入其他資訊的視窗控制代碼。|
 |**地區設定識別碼**|表示唯一 32 位元數字 （例如，1033年），指定與使用者的語言喜好設定。 這些喜好設定指出如何格式化日期和時間，依字母順序排序項目，字串比較時，依此類推。|
 |**OLE DB 服務**|表示位元遮罩，指定啟用或停用 OLE DB 服務。|
-|**Prompt**|指出是否要建立連接時提示使用者。|
+|**提示字元**|指出是否要建立連接時提示使用者。|
 |**擴充的屬性**|字串，包含提供者特定、 擴充連接資訊。 這個屬性只用於無法透過屬性機制中所述的提供者特定連接資訊。|
 
 ## <a name="see-also"></a>另請參閱

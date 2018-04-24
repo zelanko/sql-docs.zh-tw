@@ -1,28 +1,21 @@
 ---
-title: 防毒軟體 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 防毒軟體-Analytics Platform System |Microsoft 文件
+description: 如果您的資料中心需要防毒軟體，請使用下列指導方針來分析平台系統上安裝的防毒軟體。 我們建議不要安裝防毒軟體，除非確實需要資料中心。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: 29
-ms.openlocfilehash: 27e3bc7eae50c0418c0dcb4df99565b3f0edeadf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ed050520a53aea596b2f315047c68d593c578f27
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="antivirus-software"></a>防毒軟體
+# <a name="antivirus-software-for-analytics-platform-system"></a>防毒軟體對 Analytics Platform System
 如果您的資料中心需要防毒軟體，請使用下列指導方針來分析平台系統上安裝的防毒軟體。 我們建議不要安裝防毒軟體，除非確實需要資料中心。  
   
 > [!WARNING]  
@@ -37,7 +30,7 @@ ms.lasthandoff: 04/06/2018
   
 **排除這些目錄：**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - Virtual machine configuration directory  
+-   C:\ProgramData\Microsoft\Windows\Hyper-V-虛擬機器設定目錄  
   
 -   C:\Users\Public\Documents\Hyper-V\Virtual 硬碟的虛擬硬碟的預設目錄  
   

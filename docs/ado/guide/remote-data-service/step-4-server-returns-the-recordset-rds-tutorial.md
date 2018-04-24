@@ -1,30 +1,30 @@
 ---
-title: "步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], server returns Recordset
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33d7afeb5912ff46a0f90a30ea1203f2040cb689
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0a951a943a0f6f7e25a1ba555b93b4301085a497
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程）
 > [!IMPORTANT]

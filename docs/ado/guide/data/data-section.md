@@ -1,30 +1,30 @@
 ---
-title: "資料區段 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 資料區段 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8da8004ffc31efb53db196e37f48ae0942a872f6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ea45564e35d9e6bbd3d8cd484f190a4fdd3b88aa
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-section"></a>資料區段
 資料區段定義以及任何暫止的更新、 插入或刪除資料列集的資料。 資料區段可以包含零或多個資料列。 它只能包含一個資料列集結構描述所定義的資料列所在的資料。 此外，如之前所述，就可以省略資料行沒有任何資料。 如果屬性或子元素用於資料區段中，而且尚未在結構描述 」 一節中定義該建構，則會以無訊息模式忽略。  

@@ -1,31 +1,31 @@
 ---
-title: "DataControl 錯誤碼 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: DataControl 錯誤碼 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], DataControl
 - DataControl errors [ADO]
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1933a555212045c157656a0ee46aba77dc9f699d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c2585dea389693001321fb38e2c507a4734df033
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 物件錯誤代碼
 下表列出[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件錯誤代碼。 正數低的兩個位元組十進位轉譯，就會顯示完整的錯誤程式碼和十六進位值負的十進位轉譯。
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/09/2018
 |**IDS_AsyncPending**|4107 -2146824175 0x800A1011|暫止非同步作業時，無法執行作業。|
 |**IDS_BadInlineTablegram**|4105 -2146824183 0x800A1009|不正確的內嵌 tablegram。|
 |**IDS_CantConnect**|4099 -2146824189 0x800A1003|無法連線到伺服器。|
-|**IDS_CantCreateObject**|4100 -2146824188 0x800A1004|無法建立商務物件。|
+|**IDS_CantCreateObject**|4100-2146824188 0x800A1004|無法建立商務物件。|
 |**IDS_CantFindDataspace**|4102 -2146824186 0x800A1006|Dataspace 屬性不是有效的。|
 |**IDS_CantInvokeMethod**|4101 -2146824187 0x800A1005|無法在商務物件上叫用方法。|
 |**IDS_CrossDomainWarning**|4112 -2146824170 0x800A1016|此頁面會存取另一個網域上的資料。 若要允許此嗎？ 若要避免此訊息在 Internet Explorer 中的，您可以加入安全的網站信任的網站區域上**安全性** 索引標籤**網際網路選項** 對話方塊。|

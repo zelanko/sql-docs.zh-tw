@@ -1,17 +1,17 @@
 ---
-title: "Flush 方法 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Flush 方法 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::Flush
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Flush method [ADO]
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94a5e1ced6f0b302253298dcbfb9cd345b9f5bfe
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6353f34a445a7bd999090ef0552233dbefb4abb3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="flush-method-ado"></a>Flush 方法 (ADO)
 強制內容[資料流](../../../ado/reference/ado-api/stream-object-ado.md)基礎物件與其 ADO 緩衝區中剩餘**資料流**相關聯。  

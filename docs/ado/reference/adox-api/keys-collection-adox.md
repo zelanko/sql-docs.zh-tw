@@ -1,17 +1,17 @@
 ---
-title: "索引鍵集合 (ADOX) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 索引鍵集合 (ADOX) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Table::Keys
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31b99b28a878048a59b6fd5b79760a1b70c1cd56
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 803c105d0d91a6826a4c8fbf096d059bbf5070d8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="keys-collection-adox"></a>索引鍵集合 (ADOX)
 包含所有[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件[資料表](../../../ado/reference/adox-api/table-object-adox.md)。  

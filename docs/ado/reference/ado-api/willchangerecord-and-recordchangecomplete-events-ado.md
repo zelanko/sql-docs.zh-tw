@@ -1,17 +1,17 @@
 ---
-title: "WillChangeRecord 和 RecordChangeComplete 事件 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: WillChangeRecord 和 RecordChangeComplete 事件 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - RecordChangeComplete
 - Recordset::WillChangeRecord
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - WillChangeRecord event [ADO]
 - recordchangecomplete event [ADO]
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 314df047b5d155f2605c3fa9c98151687d57c297
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1c20f1af76f7852cf4b91c2ea140ab6135ca6669
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
 **WillChangeRecord**之前一或多個記錄 （列），會呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)變更。 **RecordChangeComplete**一次後，會呼叫事件或變更多個記錄。  

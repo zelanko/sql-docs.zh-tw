@@ -1,33 +1,33 @@
 ---
-title: "篩選器和 RecordCount 屬性範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 篩選器和 RecordCount 屬性範例 (VB) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c0214769a09f0a7a2e572082d7972cd7606c27f4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2a9369d44976f5cc4543277876ded62967a68702
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>篩選器和 RecordCount 屬性範例 (VB)
 此範例中開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)中的 「 發行者 」 資料表上***Pubs***資料庫。 然後它會使用[篩選](../../../ado/reference/ado-api/filter-property.md)屬性來限制要在特定國家/地區中的這些 「 發行者 」 的可見記錄的數目。 **RecordCount**屬性用來顯示篩選和已篩選資料錄集之間的差異。  

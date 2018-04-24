@@ -1,33 +1,33 @@
 ---
-title: "屬性和名稱屬性範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 屬性和名稱屬性範例 (VB) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28506a9073abf5c71a049aec7a651d4896c8ff9b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3149bf0d9514c64aa8c80febbc0cadf2514678aa
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>屬性和名稱屬性範例 (VB)
 此範例會顯示的值[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)，[欄位](../../../ado/reference/ado-api/field-object.md)，和[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。 它會使用[名稱](../../../ado/reference/ado-api/name-property-ado.md)屬性來顯示每個名稱**欄位**和**屬性**物件。  

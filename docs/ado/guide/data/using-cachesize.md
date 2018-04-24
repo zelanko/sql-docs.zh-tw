@@ -1,31 +1,31 @@
 ---
-title: "使用 CacheSize |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 使用 CacheSize |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdce85373638fc8884f50ab7b81abfbbabfe2d47
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 701fd5ff1c5f9fd09eb9827b92c20770cd18612c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-cachesize"></a>使用 CacheSize
 使用**CacheSize**屬性，即可控制要從提供者的本機記憶體，一次擷取記錄數。 例如，如果**CacheSize**為 10 之後的第一個左,**資料錄集**物件，提供者擷取的前 10 個記錄到本機的記憶體。 隨著您瀏覽**資料錄集**物件，提供者傳回的資料從本機記憶體緩衝區。 一旦您跳過快取中的最後一筆記錄，則提供者會擷取從資料來源的接下來的 10 記錄至快取。  

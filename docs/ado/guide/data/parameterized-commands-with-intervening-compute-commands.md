@@ -1,33 +1,33 @@
 ---
-title: "參數化命令與中介計算命令 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 參數化命令與中介計算命令 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18bfbc4a2e18e0232380edf157410fbd4eb3b12c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8e03709adbc901a8f9f365c291e1809ec48e1ed9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>參數化的命令與中介計算命令
 一般的參數化的圖形附加命令有一個子句，會建立父**資料錄集**查詢命令與另一個子句，以建立子系**資料錄集**使用參數化的查詢命令：也就是包含的參數預留位置的命令 (問號，"？")。 產生的形狀**資料錄集**具有父代所佔高層級的兩個層級和子系會佔用較低層級。  

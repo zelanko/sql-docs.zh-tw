@@ -1,31 +1,31 @@
 ---
-title: "ADO 事件處理常式摘要 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ADO 事件處理常式摘要 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9e182d5b1e1b8755250cbf620ac102a7eacde0f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6090b9e4c1bfec3ca6e4dfcd4b8d9291e35faee8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 連接和資料錄集的事件
 兩個 ADO 物件可以引發事件：[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件和[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 **ConnectionEvent**系列相關作業上**連接**物件，而**RecordsetEvent**系列相關作業上**資料錄集**物件。

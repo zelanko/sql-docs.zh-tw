@@ -1,33 +1,33 @@
 ---
-title: "深入了解資料錄集持續性 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 深入了解資料錄集持續性 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
 - data updates [ADO], persisting data
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5dedcc3c1326c8b71844637c24f81835472ae9e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: febf4b165cef77e26ec79de08b14ce97e944526b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="more-about-recordset-persistence"></a>深入了解資料錄集持續性
 ADO 資料錄集物件支援儲存內容**資料錄集**使用檔案中的物件及其[儲存](../../../ado/reference/ado-api/save-method.md)方法。 持續儲存的檔案可能存在於本機磁碟機，伺服器，或做為 URL 在 Web 上站台。 更新版本中，還原檔案，其中一種[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**資料錄集**物件或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  

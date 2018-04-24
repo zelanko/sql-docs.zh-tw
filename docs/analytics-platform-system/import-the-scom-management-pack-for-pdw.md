@@ -1,29 +1,22 @@
 ---
-title: 匯入 PDW (Analytics Platform System) 的 SCOM 管理組件
-author: barbkess
-ms.author: barbkess
+title: 匯入 SCOM 管理組件-Analytics Platform System |Microsoft 文件
+description: 請遵循下列步驟來匯入 System Center Operations Manager (SCOM) 管理組件 Analytics Platform System (AP)。 監視從 SCOM Parallel Data Warehouse 所需的管理組件。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
-caps.latest.revision: 6
-ms.openlocfilehash: d8accd7106cce2274e60793e123779e87b8dfd49
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: e60d87ae58b0804a0a7296f8b489df7441683c5b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="import-the-scom-management-pack-for-pdw"></a>匯入 PDW 的 SCOM 管理組件
-依照下列步驟，針對 SQL Server PDW 匯入 System Center Operations Manager (SCOM) 管理組件。 監視 SQL Server PDW 從 SCOM 所需的管理組件。  
+# <a name="import-the-scom-management-pack---analytics-platform-system"></a>匯入 SCOM 管理組件-Analytics Platform System
+請遵循下列步驟來匯入 System Center Operations Manager (SCOM) 管理組件 Analytics Platform System (AP)。 監視從 SCOM Parallel Data Warehouse 所需的管理組件。 
   
 ## <a name="BeforeBegin"></a>開始之前  
 **必要條件**  

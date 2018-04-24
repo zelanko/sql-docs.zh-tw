@@ -1,37 +1,39 @@
 ---
-title: "檢視叢集仲裁 NodeWeight 設定 | Microsoft Docs"
-ms.custom: 
+title: 檢視叢集仲裁 NodeWeight 設定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e09d6f449b89ea535981bb23ef218df4b33a8e8c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d8b5e9259d1283c1aa7441385ec86b2ecf2d954
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>檢視叢集仲裁 NodeWeight 設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何檢視 Windows Server 容錯移轉叢集 (WSFC) 叢集中每個成員節點的 NodeWeight 設定。 在仲裁投票期間，使用 NodeWeight 設定來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的災害復原和多重子網路案例。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題說明如何檢視 Windows Server 容錯移轉叢集 (WSFC) 叢集中每個成員節點的 NodeWeight 設定。 在仲裁投票期間，使用 NodeWeight 設定來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的災害復原和多重子網路案例。  
   
 -   **開始之前：**  [必要條件](#Prerequisites)、 [安全性](#Security)  
   
--   **使用下列工具檢視仲裁 NodeWeight 設定︰** [使用 TRANSACT-SQL](#TsqlProcedure)、 [使用 Powershell](#PowerShellProcedure)、 [使用 Cluster.exe](#CommandPromptProcedure)  
+-   **To view quorum NodeWeight settings using:** [Using Transact-SQL](#TsqlProcedure), [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  查詢 [sys].[dm_hadr_cluster_members] 檢視表。  
   
-### <a name="example-transact-sql"></a>範例 (Transact-SQL)  
+### <a name="example-transact-sql"></a>範例 &#40;Transact-SQL&#41;  
  下列範例會查詢系統檢視表，以便針對該執行個體叢集中的所有節點傳回值。  
   
 ```tsql  

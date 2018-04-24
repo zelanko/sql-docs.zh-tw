@@ -1,17 +1,17 @@
 ---
-title: "事件處理常式一起運作的方式 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 事件處理常式一起運作的方式 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO], about event handlers
 - unpaired event handlers [ADO]
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c95a748f197469739797fdd34ced0ae4f896c3bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6e8c279565b17cf236223c641a13c23727fd4c00
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-event-handlers-work-together"></a>事件處理常式一起運作的方式
 除非您在 Visual Basic 中，所有的事件處理常式中進行程式設計**連接**和**資料錄集**事件必須實作，不論是否是您實際處理的所有事件。 您只需要實作工作數量取決於您的程式語言。 如需詳細資訊，請參閱[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  

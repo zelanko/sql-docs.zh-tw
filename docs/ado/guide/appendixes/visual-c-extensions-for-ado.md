@@ -1,33 +1,33 @@
 ---
-title: "Visual c + + 延伸模組用於 ADO |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Visual c + + 延伸模組用於 ADO |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2c48eff858219640bf58bcd9abd9b222e48619b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 55f76e23f032f98a4f0ede00660dff62ccd6dec4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 擴充功能
 程式設計 Visual c + + 的 ADO 的慣用的方法使用**#import**指示詞中所述[Microsoft Visual c + + ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 不過，舊版的 ADO 隨附的 Visual c + + 的程式設計替代方法： Visual c + + 擴充功能。 本章節記載這項功能的人員必須維護 Visual c + + 擴充功能的程式碼，但新的 ADO 程式碼應該使用 # 來撰寫**匯入**。

@@ -1,31 +1,31 @@
 ---
-title: "Microsoft OLE DB Provider for ODBC |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB Provider for ODBC |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
 ADO 或 RDS 程式設計人員，理想的世界中就是每個資料來源會公開 OLE DB 介面，可讓 ADO 無法呼叫直接將資料來源。 雖然越來越多個資料庫廠商實作的 OLE DB 介面，但某些資料來源不是尚未公開這種方式。 不過，現今使用的大部分 DBMS 系統可以透過 ODBC 存取。
@@ -185,7 +185,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|唯讀|唯讀|唯讀|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
+|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
@@ -222,8 +222,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|是|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|是|是|是|是|
 |[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|是|是|是|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|是|是|是|是|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|否|否|是|是|
+|[重新查詢](../../../ado/reference/ado-api/requery-method.md)|是|是|是|是|
+|[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|否|否|是|是|
 |[支援](../../../ado/reference/ado-api/supports-method.md)|是|是|是|是|
 |[Update](../../../ado/reference/ado-api/update-method.md)|是|是|是|是|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|是|是|是|是|

@@ -1,17 +1,17 @@
 ---
-title: "移動資料錄集的範例 （VC + +） 的記錄指標 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 移動資料錄集的範例 （VC + +） 的記錄指標 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - MovePrevious method [ADO], VC++ example
 - MoveFirst method [ADO], VC++ example
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4010283346510e1e722e313b324793a1eb383132
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5e56a451d3d78cb4f4560e748b1c1db9b21fa467
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法範例 （VC + +）
 這個範例會使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)，和[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法，移動的記錄指標[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據提供的命令。 若要執行這個範例需要 MoveAny 函式。  

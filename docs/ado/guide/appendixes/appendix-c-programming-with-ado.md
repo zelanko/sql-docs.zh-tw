@@ -1,30 +1,30 @@
 ---
-title: "附錄 c: 使用 ADO 程式設計 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: '附錄 c: 使用 ADO 程式設計 |Microsoft 文件'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce6030b4e039cf88ac22bc85dd5c2aba46ded7b4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1a75d6afc2b8d998b6f7026beda9a8d3be3fe92c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>附錄 c： 使用 ADO 在開發環境中進行程式設計
 ADO 是可以搭配許多程式語言，包括 Microsoft Visual Basic、 VBScript、 JScript 和 Visual c + + COM automation 介面的元件。 ADO 的版本會隨每個這些工具和其他應用程式，例如 Microsoft Office 和 Microsoft SQL Server。

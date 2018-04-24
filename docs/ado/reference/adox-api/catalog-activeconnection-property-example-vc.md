@@ -1,32 +1,32 @@
 ---
-title: "目錄 ActiveConnection 屬性範例 （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 目錄 ActiveConnection 屬性範例 （VC + +） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveConnection property [ADOX], VC++ example
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 743c9a3eb5394b098b21a3957299dd837becd52c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a2bef9da92a6f4a56723ab8d3e8634d902285762
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>目錄 ActiveConnection 屬性範例 （VC + +）
 設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性有效，請開啟連接的 「 開啟 」 目錄。 從開啟的類別目錄，您可以存取該目錄中所包含的結構描述物件。  

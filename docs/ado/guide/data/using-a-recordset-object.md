@@ -1,30 +1,30 @@
 ---
-title: "使用資料錄集物件 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 使用資料錄集物件 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 737b0b01da5f339c1fbda1cf234301dfafad4d19
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c649b61f96913d7c9508e238cb82cf6e9014636f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-a-recordset-object"></a>使用資料錄集物件
 或者，您可以使用**Recordset.Open**隱含建立的連線，透過該連線，在單一作業中發出命令。 例如，在 Visual Basic:  

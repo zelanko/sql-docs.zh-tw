@@ -1,37 +1,39 @@
 ---
-title: "SQL Server 容錯移轉叢集安裝 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 容錯移轉叢集安裝 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 045f941ca5f5de2703bbd315f862ecf2c1985902
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b01ae5041d57ef4f7937c0d1efbb61e8271d104a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 容錯移轉叢集安裝
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式來建立及設定容錯移轉叢集執行個體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  若要安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式來建立及設定容錯移轉叢集執行個體。  
   
 ## <a name="installing-a-failover-cluster"></a>安裝容錯移轉叢集  
  若要安裝容錯移轉叢集，您必須使用具有本機系統管理員權限的網域帳戶，而且在容錯移轉叢集的所有節點上具有權限，能夠登入為服務以及做為作業系統的一部分。 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式安裝容錯移轉叢集，請遵循下列步驟：  
   
 1.  若要安裝、設定和維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，請使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。  
   
-    -   確認建立容錯移轉叢集執行個體 (例如：叢集磁碟資源、IP 位址和網路名稱) 以及可用於容錯移轉之節點所需的資訊。 如需詳細資訊：＜＞  
+    -   確認建立容錯移轉叢集執行個體 (例如：叢集磁碟資源、IP 位址和網路名稱) 以及可用於容錯移轉之節點所需的資訊。 如需詳細資訊：  
   
         -   [安裝容錯移轉叢集之前](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
     -   您必須確定系統符合最低需求。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集之特定需求的詳細資訊，請參閱 [安裝容錯移轉叢集之前](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)。  
   
-2.  新增或移除容錯移轉叢集組態中的節點並不會影響其他叢集節點。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中加入或移除節點 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+2.  新增或移除容錯移轉叢集組態中的節點並不會影響其他叢集節點。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
     -   容錯移轉叢集中的所有節點必須為相同平台 (即 32 位元或 64 位元)，而且必須在相同的作業系統版本上執行。 此外，您必須將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 64 位元版本安裝在執行 Windows 64 位元版本作業系統的 64 位元硬體上。 這一版沒有容錯移轉叢集的 WOW64 支援。  
   

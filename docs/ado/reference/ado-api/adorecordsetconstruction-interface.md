@@ -1,33 +1,33 @@
 ---
-title: "ADORecordsetConstruction 介面 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ADORecordsetConstruction 介面 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ADORecordsetConstruction
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be4c36c5bd69fe6657b57d74e8808259fe602db0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c19ec5d0b2439af92306dc655520a25b7ed5bc51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 介面
 **ADORecordsetConstruction**介面用來建構 ADO**資料錄集**從 OLE DB 物件**資料列集**C/c + + 應用程式中的物件。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
 |-|-|  
 |[本文章節](../../../ado/reference/ado-api/chapter-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**章**物件上此 ADO/從**資料錄集**物件。|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB **RowPosition**物件上此 ADO/從**資料錄集**物件。|  
-|[資料列集](../../../ado/reference/ado-api/rowset-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**資料列集**物件上此 ADO/從**資料錄集**物件。|  
+|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**資料列集**物件上此 ADO/從**資料錄集**物件。|  
   
 ## <a name="methods"></a>方法  
  無。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="requirements"></a>需求  
  **版本：** ADO 2.0 和更新版本  
   
- **Library:** msado15.dll  
+ **程式庫：** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

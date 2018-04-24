@@ -1,17 +1,17 @@
 ---
-title: "EndOfRecordset 事件 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: EndOfRecordset 事件 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - EndOfRecordset
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - EndOfRecordset event [ADO]
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79d37ae42a9c9e607ba4d8dba8917fccd7f20c42
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 62f0b1837765101ca5aa6c45f51e5bd9a1506913
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 事件 (ADO)
 **EndOfRecordset**嘗試將移到超過結尾的資料列時，會呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

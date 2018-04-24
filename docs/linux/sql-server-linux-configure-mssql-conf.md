@@ -1,6 +1,6 @@
 ---
-title: "在 Linux 上的 SQL Server 設定 |Microsoft 文件"
-description: "本文說明如何在 Linux 上設定 SQL Server 2017 設定使用 mssql conf 工具。"
+title: 在 Linux 上的 SQL Server 設定 |Microsoft 文件
+description: 本文說明如何在 Linux 上設定 SQL Server 2017 設定使用 mssql conf 工具。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 8ec5bd425731b296c4e15c56d654f291bd4c511b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>設定 SQL Server on Linux mssql conf 工具
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/21/2018
 | [記憶體限制](#memorylimit) | 設定 SQL Server 的記憶體限制。 |
 | [TCP 連接埠](#tcpport) | 變更 SQL Server 接聽的連接的連接埠。 |
 | [TLS](#tls) | 設定傳輸層級安全性。 |
-| [Traceflags](#traceflags) | 設定服務所要使用的 traceflag。 |
+| [Traceflag](#traceflags) | 設定服務所要使用的 traceflag。 |
 
 > [!TIP]
 > 其中某些設定也可以使用環境變數設定。 如需詳細資訊，請參閱[與環境變數設定 SQL Server 設定](sql-server-linux-configure-environment-variables.md)。
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a id="agent"></a> 啟用 SQL Server 代理程式
 
-**Sqlagent.enabled**設定可讓[SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md)。 根據預設，SQL Server 代理程式已停用。
+**Sqlagent.enabled**設定可讓[SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md)。 根據預設，SQL Server 代理程式已停用。 如果**sqlagent.enabled**不存在於 mssql.conf 設定檔，則 SQL Server 在內部會假設已啟用 SQL Server 代理程式。
 
 若要變更此設定，請使用下列步驟：
 
@@ -357,7 +357,7 @@ ms.lasthandoff: 02/21/2018
 
     | 型別 | Description |
     |-----|-----|
-    | **mini** | 迷你是最小的傾印檔案類型。 它使用 Linux 系統資訊來決定執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
+    | **迷你** | 迷你是最小的傾印檔案類型。 它使用 Linux 系統資訊來決定執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
     | **miniplus** | MiniPlus 迷你，類似，但它包含額外的記憶體。 其了解 SQLPAL 和主機環境中，傾印中加入下列的記憶體區域的內部資訊：</br></br> -各種全域變數</br> -所有以上 64 TB 的記憶體</br> -All 名為區域中找到**/proc/$ pid/對應**</br> 間接記憶體與執行緒堆疊</br> 執行緒的資訊</br> 關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |
     | **filtered** | 減法為基礎的篩選會使用設計程序中的所有記憶體其中都包含除非明確地排除。 設計了解 SQLPAL 和主機環境中，從傾印中排除特定區域的內部資訊。
     | **full** | 完整的完整程序傾印包含所有區域位於**/proc/$ pid/對應**。 這不由控制**coredump.captureminiandfull**設定。 |

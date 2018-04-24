@@ -1,17 +1,17 @@
 ---
-title: "ActiveConnection 屬性 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ActiveConnection 屬性 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Command15::ActiveConnection
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bbd6ba28209df50d8956c784d0ef25f9ac73728
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 00ca9b4b45deb31f3b0f4d233a452b58e9f8e40f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 屬性 (ADO)
 表示要[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件指定[命令](../../../ado/reference/ado-api/command-object-ado.md)，[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[記錄](../../../ado/reference/ado-api/record-object-ado.md)目前所屬的物件。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="remarks"></a>備註  
  使用**ActiveConnection**屬性來判斷**連接**哪些物件指定**命令**物件將會執行或指定**資料錄集**隨即開啟。  
   
-## <a name="command"></a>Command  
+## <a name="command"></a>命令  
  如**命令**物件**ActiveConnection**屬性是讀取/寫入。  
   
  如果您嘗試呼叫[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法**命令**之前將此屬性設定為 開啟物件**連接**有效的連接字串或物件，就會發生錯誤。  

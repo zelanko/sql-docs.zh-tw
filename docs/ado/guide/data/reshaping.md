@@ -1,31 +1,31 @@
 ---
-title: "才可遏制 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 才可遏制 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reshaping previously shaped Recordset [ADO]
 - data shaping [ADO], reshaping
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c15ec2a356fa1d9593de20f301fcdce44585445
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 58a09ecb5ad1828a94bdc5e5b82e59de61396be6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reshaping"></a>才可遏制
 A**資料錄集**建立命令可能會指派 」 圖形的子句*別名*名稱 （通常是使用 AS 關鍵字）。 形狀的別名**資料錄集**可以完全不同的命令中參考。 也就是說，您可以重複使用，或*重繪*，先前形狀**資料錄集**中新的圖形命令。 若要支援這項功能，ADO 提供屬性，[重繪名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  

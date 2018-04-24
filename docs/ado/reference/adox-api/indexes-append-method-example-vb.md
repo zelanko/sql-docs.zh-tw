@@ -1,32 +1,32 @@
 ---
-title: "索引附加方法範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 索引附加方法範例 (VB) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b08bac5f41f071d9a2fba0deb059353a69718bb4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4abb71f0e2f51fa200e3005bd532b91aefaeae79
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="indexes-append-method-example-vb"></a>索引附加方法範例 (VB)
 下列程式碼會示範如何建立新的索引。 索引是在資料表中的兩個資料行。  

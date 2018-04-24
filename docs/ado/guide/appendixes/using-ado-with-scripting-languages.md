@@ -1,31 +1,31 @@
 ---
-title: "使用 ADO 搭配指令碼語言 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 使用 ADO 搭配指令碼語言 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d3187ca8ddc47f4a48e982a5061d429a7f7a5738
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>使用 ADO 搭配指令碼語言
 在指令碼環境中，ADO 可讓您公開資料透過伺服器端指令碼。 在此案例中，ADO 中，基礎 OLE DB 提供者，它使用，而且參考指定的資料存放區所需的其他元件安裝在執行網際網路資訊服務 (IIS) 的伺服器。 ADO 使用 Active Server Pages (ASP)，是可以產生 HTML，例如指令碼中參考的元件。 這個 HTML 內容可以透過 HTTP 傳遞至用戶端 Web 瀏覽器。 使用指令碼，網頁就可以將動作傳送回伺服器端指令碼，可讓您以更新、 周遊，或檢視特定資料。  

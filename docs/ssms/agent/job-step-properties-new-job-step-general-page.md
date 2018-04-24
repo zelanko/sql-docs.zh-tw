@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.job.stepgeneral.f1
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcdf8a1b07293b6d468ded316fb753a873349e74
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cac9488309c176db78e213613785f8f070b15d48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作業步驟屬性 - 新增作業步驟 (一般頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

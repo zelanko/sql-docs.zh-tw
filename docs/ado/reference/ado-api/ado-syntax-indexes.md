@@ -1,31 +1,31 @@
 ---
-title: "ADO 語法索引 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ADO 語法索引 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - syntax indexes [ADO]
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4afdfdae0eb9a461008e26fe5d701862c19aaf8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b61b43238c94958931d73f3abae65a1dc7acab39
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-syntax-indexes"></a>ADO 語法索引
 呼叫 ADO 方法和屬性的語法會因您的開發環境而有所不同。 ADO 語言參考的其餘部分會使用 Microsoft Visual Basic 程式語言來說明 ADO 方法和屬性的語法。 不過，請參閱下列章節，以根據您的程式語言和方法的詳細語法範例：  

@@ -1,17 +1,17 @@
 ---
-title: "將集合 (ADO MD) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 將集合 (ADO MD) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Axis::Positions
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Positions collection [ADO MD]
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07522e8bdf668adaef9760524ecdf51ca8780326
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c70a35b4193c651145c758b27f8f4f9522700ef0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="positions-collection-ado-md"></a>位置集合 (ADO MD)
 包含[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)軸，定義某個點的物件。  

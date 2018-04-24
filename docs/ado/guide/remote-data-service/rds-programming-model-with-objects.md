@@ -1,31 +1,31 @@
 ---
-title: "RDS 程式設計模型與物件 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: RDS 程式設計模型與物件 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46dcfe88b0405eaf34a52f2b25e131b5ba72eafe
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: da0fee3543f3e684f403f11bad5a613e9f4cac21
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 與物件的程式設計模型
 RDS 的目標為存取和更新的媒介，例如 IIS 透過資料來源。 程式設計模型指定的活動所需達成此目標的序列。 物件模型中指定的物件，其方法和屬性會影響的程式設計模型。  

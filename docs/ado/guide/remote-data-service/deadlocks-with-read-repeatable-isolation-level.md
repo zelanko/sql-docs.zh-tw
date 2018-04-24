@@ -1,31 +1,31 @@
 ---
-title: "讀取可重複的隔離層級的死結 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 讀取可重複的隔離層級的死結 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - deadlocks in RDS [ADO]
 - read repeatable in RDS [ADO]
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a77839f99bd14b0a4e689376087943778296bcf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c8d17cbd30e195879fbeb4c7cecdfd8c126b725a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>讀取可重複的隔離層級的死結
 如果自訂的商務物件使用 read repeatable 隔離等級來存取 SQL Server，並由傳送查詢，並在相同交易中更新的兩個用戶端同時呼叫的商務物件時，死結有可能。 遠端資料服務的設計可讓其中一個程序來釋放死結，逾時的時候，但該用戶端將會失敗的更新。  

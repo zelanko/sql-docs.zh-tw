@@ -20,13 +20,13 @@ ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9c4a6ffbba9b0b39477b0ba308d33bbd758670be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>設定多重主目錄電腦進行 SQL Server 存取
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

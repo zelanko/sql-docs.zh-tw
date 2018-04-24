@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bccb8658d5894e20b2a55432093d36b33b40388
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 18cdfd21fecbed78ce6ff31d624e344a542cccd0
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="about-dialog-box"></a>關於對話方塊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [關於] 對話方塊提供產品資訊，並可讓您存取產品所在之機器的相關資訊。 若為評估版，[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 項目會列出安裝到期前的剩餘天數。 您可以從 [說明] 功能表存取此對話方塊。   
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
+[關於] 對話方塊提供產品資訊，並可讓您存取產品所在之機器的相關資訊。 若為評估版，[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 項目會列出安裝到期前的剩餘天數。 您可以從 [說明] 功能表存取此對話方塊。  
   
 ## <a name="options"></a>選項。  
 **元件名稱**  

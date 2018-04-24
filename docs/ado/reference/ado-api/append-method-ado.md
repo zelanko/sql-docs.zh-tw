@@ -1,33 +1,33 @@
 ---
-title: "Append 方法 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Append 方法 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _DynaCollection::Append
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c7007b09de937c013f7da1605ea78093d7a4ce51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 將物件附加至集合。 如果集合是[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，新[欄位](../../../ado/reference/ado-api/field-object.md)可以先建立物件，會附加至集合。  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *collection*  
  集合物件。  
   
- *fields*  
+ *欄位*  
  A**欄位**集合。  
   
  *物件*  
@@ -78,7 +78,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*參數才有效，當加入**欄位**物件[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件時，無法供**資料錄集**物件。 與**記錄**物件，您可以新增欄位，並提供在相同的時間值。 與**資料錄集**物件，您必須建立欄位時**資料錄集**是關閉的狀態，並開啟**資料錄集**並將值指派給欄位。  
   
 > [!NOTE]
->  對於新**欄位**已附加至的物件**欄位**集合**記錄**物件[值](../../../ado/reference/ado-api/value-property-ado.md)屬性必須設定在任何其他**欄位**可以指定屬性。 首先，為特定值**值**指派屬性必須與[更新](../../../ado/reference/ado-api/update-method.md)上**欄位**稱為集合。 然後，其他屬性，例如[類型](../../../ado/reference/ado-api/type-property-ado.md)或[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)可以存取。 **欄位**下列資料類型的物件 (**DataTypeEnum**) 無法附加至**欄位**集合，且會導致發生錯誤： **adArray**， **adChapter**， **adEmpty**， **adPropVariant**，和**adUserDefined**。 此外，下列資料類型不受 ADO: **adIDispatch**， **adIUnknown**，和**adIVariant**。 針對這些類型，不會發生錯誤時附加，但使用方式可能會產生無法預期的結果，包括記憶體流失。  
+>  對於新**欄位**已附加至的物件**欄位**集合**記錄**物件[值](../../../ado/reference/ado-api/value-property-ado.md)屬性必須設定在任何其他**欄位**可以指定屬性。 首先，為特定值**值**指派屬性必須與[更新](../../../ado/reference/ado-api/update-method.md)上**欄位**稱為集合。 然後，其他屬性，例如[類型](../../../ado/reference/ado-api/type-property-ado.md)或[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)可以存取。 **欄位**下列資料類型的物件 (**DataTypeEnum**) 無法附加至**欄位**集合，且會導致發生錯誤： **adArray**，**adChapter**， **adEmpty**， **adPropVariant**，和**adUserDefined**。 此外，下列資料類型不受 ADO: **adIDispatch**， **adIUnknown**，和**adIVariant**。 針對這些類型，不會發生錯誤時附加，但使用方式可能會產生無法預期的結果，包括記憶體流失。  
   
 ## <a name="recordset"></a>資料錄集  
  如果您未設定[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性，然後再呼叫**附加**方法， **CursorLocation**會設定為**adUseClient** ([CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值) 時，自動[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)稱為物件。  

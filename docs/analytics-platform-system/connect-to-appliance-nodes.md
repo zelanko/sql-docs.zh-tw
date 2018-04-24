@@ -1,29 +1,22 @@
 ---
-title: 連接至應用裝置節點 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 連接至應用裝置節點-Analytics Platform System |Microsoft 文件
+description: 這篇文章會說明連接到每個節點，Analytics Platform System 應用裝置中的各種方式。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
-caps.latest.revision: 19
-ms.openlocfilehash: 9b95bc8285625170c9c9b4a91eeae99dcd3907a5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d7d634023c5fc3d0a6f522b5f60933ce3b96272
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="connect-to-appliance-nodes"></a>連接至應用裝置節點
-本主題說明各種不同的方式可連接到 Analytics Platform System 應用裝置中的每個節點。  
+# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>連線至 Analytics Platform System 中的應用裝置節點
+這篇文章會說明連接到每個節點，Analytics Platform System 應用裝置中的各種方式。  
   
 ## <a name="connecting-with-hadoop"></a>使用 Hadoop 連接  
 之前使用 SQL Server PDW Hadoop，詢問您的應用裝置系統管理員，才能安裝到 SQL Server PDW Java Runtime Environment。 如需指示，請參閱[設定外部資料的 PolyBase 連線&#40;Analytics Platform System&#41; ](configure-polybase-connectivity-to-external-data.md)應用裝置操作指南中。  

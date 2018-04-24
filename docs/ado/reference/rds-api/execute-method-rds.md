@@ -1,31 +1,31 @@
 ---
-title: "Execute 方法 (RDS) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Execute 方法 (RDS) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be0dfb94d6681af706d75437143dcde28e63587d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: db01dfef8e751808431b1796ee022060e30a7d17
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-method-rds"></a>Execute 方法 (RDS)
 執行要求，並在 ADO 中建立用於 ADO 資料錄集，2.5 和更新版本。  

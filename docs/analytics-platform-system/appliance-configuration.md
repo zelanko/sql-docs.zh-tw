@@ -1,28 +1,21 @@
 ---
-title: 應用裝置設定 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 設定檢查清單-Analytics Platform System |Microsoft 文件
+description: 檢查清單提供您自己的環境設定 Analytics Platform System 所需的工作。 您可以使用此應用裝置之前，會需要這些組態工作。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 064e7485-7026-4acf-8084-f5d30757d177
-caps.latest.revision: 43
-ms.openlocfilehash: 7500c7e8b0245e1342d97190af8587bf130e6be2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 37d07fe45768d40b74e3b48739590648867efd94
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-configuration"></a>應用裝置組態
+# <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Analytics Platform System 應用裝置組態檢查清單
 檢查清單提供您自己的環境設定 Analytics Platform System 所需的工作。 您可以使用此應用裝置之前，會需要這些組態工作。  
   
 > [!WARNING]  

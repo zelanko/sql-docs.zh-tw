@@ -1,31 +1,31 @@
 ---
-title: "存取階層式資料錄集中的資料列 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 存取階層式資料錄集中的資料列 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 829afb6aecaa50b521a86201351f6c071d934b5f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e7767fdbd933884116c77a67d1930171edf8a878
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>存取資料列中的階層式資料錄集 （範例）
 下列範例說明中的步驟需要存取的資料列階層式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -75,4 +75,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>另請參閱
- [資料成形概觀](../../../ado/guide/data/data-shaping-overview.md)[欄位物件](../../../ado/reference/ado-api/field-object.md)[欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [正式圖形文法](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft 資料成形服務OLE DB （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [資料成形所需提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)[圖形 APPEND 子句](../../../ado/guide/data/shape-append-clause.md) [圖案的一般命令](../../../ado/guide/data/shape-commands-in-general.md)[圖形 COMPUTE 子句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic 應用程式函式](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [資料成形概觀](../../../ado/guide/data/data-shaping-overview.md)[欄位物件](../../../ado/reference/ado-api/field-object.md)[欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [正式圖形文法](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft 資料成形 OLE DB 的服務（ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [資料成形所需提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)[圖形 APPEND 子句](../../../ado/guide/data/shape-append-clause.md)[圖形中的命令一般](../../../ado/guide/data/shape-commands-in-general.md)[圖形 COMPUTE 子句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic 應用程式函式](../../../ado/guide/data/visual-basic-for-applications-functions.md)

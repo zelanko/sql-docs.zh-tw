@@ -1,28 +1,21 @@
 ---
-title: 使用者工作階段 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 使用者工作階段中 Analytics Platform System |Microsoft 文件 」
+description: Analytics Platform System 的平行資料倉儲中的使用者工作階段。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0425cef2-de4d-4f42-91c5-cb1cd4bb1265
-caps.latest.revision: 15
-ms.openlocfilehash: 4ed0fab1fae1fe2d1a5a3ebb961d6c4d4747764f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fc2e759d77953f739d77f6ad4eb371cc9747efdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="user-sessions"></a>使用者工作階段
+# <a name="user-sessions-in-analytics-platform-system"></a>使用者工作階段中 Analytics Platform System
 具有適當的權限的登入可以管理 SQL Server PDW 應用裝置，包括在執行這些動作上的所有登入工作的階段：  
   
 -   檢視目前的工作階段上的應用裝置，包括作用中和閒置工作階段。  

@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 6d53fe64298c22c145be537221aa20425bce0e51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。  
@@ -251,7 +251,7 @@ ms.lasthandoff: 04/03/2018
  ProgID （程式設計識別項）  
  對應至 Windows 登錄的 COM 應用程式的唯一名稱。 ADO 連接的 ProgID 是"ADODB。連接 」。 另請參閱 CLSID、 com。  
   
- proxy  
+ Proxy  
  提供參數封送處理的特定介面的物件和用戶端來呼叫在不同的執行緒或另一個處理序在不同的執行環境中，執行這類的應用程式物件所需的通訊。 Proxy 會位於與用戶端，而且與對應的虛設常式位於與應用程式物件所呼叫之通訊。 另請參閱虛設常式。  
   
 ## <a name="r"></a>R  
@@ -283,10 +283,10 @@ ms.lasthandoff: 04/03/2018
  預存程序  
  先行編譯程式碼，例如 SQL 陳述式和選擇性的流程控制陳述式的名稱下儲存和處理做為一個單位的集合。 預存程序會儲存在資料庫中。它們可以由應用程式的某個呼叫執行，且允許使用者宣告的變數、 條件式執行和其他功能強大的程式設計功能。  
   
- stub  
+ 虛設常式  
  提供參數封送處理的特定介面的物件，而且從不同的執行緒或另一個處理序在不同的執行環境中，執行這類的用戶端接收呼叫的應用程式物件所需的通訊。 虛設常式會位於與應用程式物件，而且會與對應的 proxy 位於與它所呼叫的用戶端進行通訊。 另請參閱 proxy。  
   
- sub-node  
+ 子節點  
  請參閱子系。  
   
  同步作業  

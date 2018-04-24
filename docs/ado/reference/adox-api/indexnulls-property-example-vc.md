@@ -1,32 +1,32 @@
 ---
-title: "IndexNulls 屬性範例 （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: IndexNulls 屬性範例 （VC + +） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IndexNulls property [ADOX], VC++ example
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f95c5468b61a37649a3fd8e11529ac70d76298b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 51b185c22f36a7a878639e1d4871e2f4e1a584a1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls 屬性範例 （VC + +）
 這個範例會示範[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的索引，並將值設定**IndexNulls**根據使用者輸入。 然後，**索引**附加至**員工**[資料表](../../../ado/reference/adox-api/table-object-adox.md)中*Northwind* [目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。 新**索引**套用至[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據**員工**資料表，而**資料錄集**開啟。 若要加入新的記錄**員工**資料表，與**Null**中編製索引欄位的值。 是否要顯示這個新的記錄，取決於設定的**IndexNulls**屬性。  

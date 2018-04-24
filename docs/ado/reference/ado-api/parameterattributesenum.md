@@ -1,33 +1,33 @@
 ---
-title: ParameterAttributesEnum | Microsoft Docs
-ms.prod: sql-non-specified
+title: ParameterAttributesEnum |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ParameterAttributesEnum
 helpviewer_keywords:
 - ParameterAttributesEnum enumeration [ADO]
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 628e359b698b94031df33ef85b27be7731480bde
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 63a8042df5d53a008b411128687fd742897e058d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 指定的屬性[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/09/2018
 |**adParamLong**|128|指出參數接受長的二進位資料。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- Package: **com.ms.wfc.data**  
+ 封裝： **com.ms.wfc.data**  
   
 |常數|  
 |--------------|  

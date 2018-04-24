@@ -1,28 +1,21 @@
 ---
-title: 使用管理主控台 (Analytics Platform System) 監視的應用裝置
-author: barbkess
-ms.author: barbkess
+title: 監視與管理主控台-Analytics Platform System |Microsoft 文件
+description: Analytics Platform System，系統管理員主控台是 web 應用程式，可呈現的應用裝置狀態、 運行狀況和效能資訊。 使用者連線到系統管理員主控台，透過網際網路瀏覽器。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: 26
-ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5f7c6ef68a8f91121a63def8e2153a5c38873aa3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-the-admin-console"></a>使用管理主控台來監視應用裝置
+# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>監視與管理主控台-Analytics Platform System 應用裝置
 系統管理員主控台是 SQL Server PDW web 應用程式，可呈現的應用裝置狀態、 運行狀況和效能資訊。 使用者連線到系統管理員主控台，透過 Internet Explorer。  
   
 ## <a name="About"></a>關於系統管理員主控台  

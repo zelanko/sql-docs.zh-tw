@@ -1,28 +1,21 @@
 ---
-title: 設定 SQL Server PDW 遠端資料表複製 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 遠端資料表複本所需設定平行處理資料倉儲 |Microsoft 文件
+description: 描述如何設定用於遠端資料表複製功能，將資料表複製到非應用裝置的伺服器上的 SMP SQL Server 資料庫的平行資料倉儲。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
-caps.latest.revision: 11
-ms.openlocfilehash: 46fdb88ce3a244946b89f14320229905793564ac
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3f71a0c67639918820bca8f6f8f38b9f354154f3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-sql-server-pdw-for-remote-table-copies"></a>設定為遠端資料表複製的 SQL Server PDW
+# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>遠端資料表複本所需設定平行處理資料倉儲
 描述如何設定用於遠端資料表複製功能，將資料表複製到非應用裝置的伺服器上的 SMP SQL Server 資料庫的 SQL Server PDW。  
   
 本主題說明設定遠端資料表複製的組態步驟的其中一個。 如需所有設定步驟，請參閱[遠端資料表複製](remote-table-copy.md)。  

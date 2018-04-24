@@ -1,15 +1,16 @@
 ---
-title: "被遺棄使用者疑難排解 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 被遺棄使用者疑難排解 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/14/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - orphaned users [SQL Server]
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1780f563d2e4f9533ebe1f82deefe7b785b6ec8c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ba2292c8b8284b78526e0cf3c72c387c793cffab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>被遺棄使用者疑難排解 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的被遺棄使用者，當資料庫中的使用者登入是根據 **master** 資料庫，但登入已不存在於 **master**時就會發生。 當登入遭到刪除，或當資料庫移動到另一個登入不存在的資料庫時，就可能發生。 本主題說明如何尋找被遺棄使用者，並將他們重新對應至登入。  
   
 > [!NOTE]  
->  針對可能會移動的資料庫，使用自主資料庫使用者可減少被遺棄使用者產生的可能性。 如需詳細資訊，請參閱 [自主資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+>  針對可能會移動的資料庫，使用自主資料庫使用者可減少被遺棄使用者產生的可能性。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ## <a name="background"></a>背景  
  若要使用以登入為基礎的安全性主體 (資料庫使用者身分識別) 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫，主體在 **master** 資料庫必須有有效的登入。 此登入適用於驗證程序，可確認主體身份識別並決定主體是否允許連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 伺服器執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入可以在 **sys.server_principals** 目錄檢視和 **sys.sql_logins** 相容性檢視中看到。  

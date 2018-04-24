@@ -1,29 +1,22 @@
 ---
-title: 設定 PolyBase 連線到外部資料 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 設定 PolyBase 連線-Analytics Platform System |Microsoft 文件
+description: 說明如何連接到外部 Hadoop 或 Microsoft Azure 儲存體 blob 資料來源的平行處理資料倉儲設定 PolyBase。 使用 PolyBase 來執行用來整合多個來源資料，包括 Hadoop、 Azure blob 儲存體和平行處理資料倉儲查詢。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 43
-ms.openlocfilehash: 42dc008855ea9de61c67365ac81927808491de13
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d87ea2b126fde6bf0b18f7a777216f04d45d98f6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>設定外部資料的 PolyBase 連線組態
-說明如何在 SQL Server PDW 連接到外部 Hadoop 或 Microsoft Azure 儲存體 blob 資料來源中設定 PolyBase。 使用 PolyBase 來執行用來整合多個來源資料，包括 Hadoop、 Azure blob 儲存體，以及 SQL Server PDW 查詢。  
+說明如何連接到外部 Hadoop 或 Microsoft Azure 儲存體 blob 資料來源的平行處理資料倉儲設定 PolyBase。 使用 PolyBase 來執行用來整合多個來源資料，包括 Hadoop、 Azure blob 儲存體和平行處理資料倉儲查詢。  
   
 ### <a name="to-configure-connectivity"></a>若要設定連線  
   

@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB Provider for Internet 發行 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB Provider for Internet 發行 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f86280c8c9b01e8482500fa174784d6d752b7d9e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 26b77c49d4275ace0bcb95ec1495f0637e5b19f2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 發行概觀
 Microsoft OLE DB Provider for Internet Publishing 可讓 ADO 存取資源，由 Microsoft FrontPage 或 Microsoft Internet Information Server。 資源包括 web 來源檔案，例如 HTML 檔案、 或 Windows 2000 web 資料夾。

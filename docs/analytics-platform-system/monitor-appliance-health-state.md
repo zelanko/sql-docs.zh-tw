@@ -1,29 +1,22 @@
 ---
-title: 監視應用裝置健全狀況狀態 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 監視應用裝置健全狀況-Analytics Platform System
+description: 如何使用管理主控台，或透過直接查詢的平行處理資料倉儲動態管理檢視監視 Analytics Platform System 應用裝置的狀態。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: 12
-ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="monitor-appliance-health-state"></a>監視應用裝置健全狀況狀態
-本主題說明如何使用管理主控台，或透過直接查詢 SQL Server PDW 動態管理檢視監視 SQL Server PDW 應用裝置的狀態。  
+本文說明如何使用管理主控台，或透過直接查詢的平行處理資料倉儲動態管理檢視監視 Analytics Platform System 應用裝置的狀態。 
   
 ## <a name="to-monitor-the-appliance-state"></a>若要監視的應用裝置狀態  
 系統管理員可以使用管理主控台或 SQL Server PDW 動態管理檢視 (Dmv) 來擷取節點、 元件和軟體的完整階層架構。 下圖提供高層級的了解 SQL Server PDW 監視的元件。  

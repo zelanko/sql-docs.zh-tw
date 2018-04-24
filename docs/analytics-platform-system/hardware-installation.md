@@ -1,29 +1,22 @@
 ---
-title: 硬體安裝 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 硬體安裝-Analytics Platform System |Microsoft 文件
+description: 本文說明如何移動，請解除封裝，並安裝您的 SQL Server PDW 應用裝置的硬體。 本文只是參考，並要幫助您了解程序。 應該解除封裝，安裝，而且您開啟之前，檢查您的應用裝置。 客戶參與是必要項目，例如資料中心存取、 電力和乙太網路連線。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f4f612b9-f320-4391-952b-d3696cfbe2e2
-caps.latest.revision: 17
-ms.openlocfilehash: 24236e525efbc96c7e263a293f2a27582d700929
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-installation"></a>硬體安裝
-本主題描述如何移動，請解除封裝，並安裝您的 SQL Server PDW 應用裝置的硬體。 本主題只是參考，並要幫助您了解程序。 應該解除封裝，安裝，而且您開啟之前，檢查您的應用裝置。 客戶參與是必要項目，例如資料中心存取、 電力和乙太網路連線。  
+# <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Analytics Platform System 應用裝置的硬體安裝
+本文說明如何移動，請解除封裝，並安裝您的 SQL Server PDW 應用裝置的硬體。 本文只是參考，並要幫助您了解程序。 應該解除封裝，安裝，而且您開啟之前，檢查您的應用裝置。 客戶參與是必要項目，例如資料中心存取、 電力和乙太網路連線。  
   
 ## <a name="BeforeMoving"></a>在您從裝貨碼頭移動任何元件之前  
 移動、 解除封裝，或機架任何設備元件之前，請執行下列工作。  

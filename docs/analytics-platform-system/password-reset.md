@@ -1,28 +1,21 @@
 ---
-title: 密碼重設 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 密碼重設-Analytics Platform System |Microsoft 文件
+description: 重設密碼 頁面可讓您變更 Analytics Platform System 所用的系統管理員帳戶的密碼。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
-caps.latest.revision: 26
-ms.openlocfilehash: 0574cf85dc4baaf6d92159aa423a0b1771042c59
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="password-reset"></a>密碼重設
+# <a name="password-reset---analytics-platform-system"></a>密碼重設-Analytics Platform System
 **密碼重設**頁面可讓您變更 Analytics Platform System 所用的系統管理員帳戶的密碼。  
   
 > [!WARNING]  
@@ -30,7 +23,7 @@ ms.lasthandoff: 04/06/2018
   
 傳遞應用裝置時，您會獲得 Analytics Platform System 密碼。 當您要負責您的應用裝置，一律變更成新值的密碼。 有三個更新的密碼。 密碼不必與彼此相同。  
   
-**F<*xxxx*>\Administrator**  
+**F <*xxxx*> \Administrator**  
 **管理員**的應用裝置的網域。  
   
 **.\Administrator**  
@@ -58,7 +51,7 @@ ms.lasthandoff: 04/06/2018
   
     您對這些帳戶的變更不會影響任何目前作用中的工作階段，但將在下一次登入嘗試每個使用者套用。  
   
-    ![SQL Server DWConfig Password](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![SQL Server DWConfig 密碼](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## <a name="see-also"></a>另請參閱  
 [在目錄服務還原模式中設定系統管理員密碼來登入 AD 節點&#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  

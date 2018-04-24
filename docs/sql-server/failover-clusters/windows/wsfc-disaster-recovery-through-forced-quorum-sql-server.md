@@ -1,36 +1,38 @@
 ---
-title: "透過強制仲裁執行 WSFC 災害復原 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 透過強制仲裁執行 WSFC 災害復原 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16d17e02c0594f3906651b0f270c8a36e891e69d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 145742e14b82fa992a40ef7ca629e47ada88bce5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>透過強制仲裁執行 WSFC 災害復原 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 仲裁失敗的原因通常是涉及 WSFC 叢集中許多節點的系統損毀、持續性通訊失敗或設定錯誤。  若要從仲裁失敗中復原，您必須進行手動介入。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  仲裁失敗的原因通常是涉及 WSFC 叢集中許多節點的系統損毀、持續性通訊失敗或設定錯誤。  若要從仲裁失敗中復原，您必須進行手動介入。  
   
--   **開始之前：**  [必要條件](#Prerequisites)、 [安全性](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
 -   **透過強制仲裁程序執行 WSFC 災害復原** [透過強制仲裁程序執行 WSFC 災害復原](#Main)  
   

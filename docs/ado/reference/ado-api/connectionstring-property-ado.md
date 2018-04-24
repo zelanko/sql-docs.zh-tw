@@ -1,33 +1,33 @@
 ---
-title: "ConnectionString 屬性 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ConnectionString 屬性 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::ConnectionString
 helpviewer_keywords:
 - ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 68c7a10a4b674b9ff4092c37c332dffd7e5ff199
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 屬性 (ADO)
 表示用來連接到資料來源的資訊。  
@@ -42,10 +42,10 @@ ms.lasthandoff: 02/09/2018
   
 |引數|Description|  
 |--------------|-----------------|  
-|*Provider=*|指定要用於連接的提供者的名稱。|  
+|*提供者 =*|指定要用於連接的提供者的名稱。|  
 |*檔案名稱 =*|指定的提供者特定的檔案 （例如，保存的資料來源物件） 包含預設的連接資訊的名稱。|  
 |*遠端提供者 =*|指定開啟用戶端連接時使用的提供者的名稱。 （僅限遠端資料服務。）|  
-|*Remote Server=*|指定要開啟的用戶端連接時使用的伺服器的路徑名稱。 （僅限遠端資料服務。）|  
+|*遠端伺服器 =*|指定要開啟的用戶端連接時使用的伺服器的路徑名稱。 （僅限遠端資料服務。）|  
 |*URL=*|指定的連接字串，以做為識別的資源，例如檔案或目錄的絕對 URL。|  
   
  設定之後**ConnectionString**屬性，並開啟[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，提供者可能會改變屬性的內容，例如藉由對應至 ADO 定義引數名稱及其對等項目特定的提供者。  

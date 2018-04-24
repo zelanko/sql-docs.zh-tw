@@ -1,6 +1,6 @@
 ---
 title: 如何參與編輯 SQL Server 文件集 | Microsoft Docs
-ms.date: 03/19/2018
+ms.date: 04/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: ''
@@ -15,11 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1885c57cfcf21dcdb877fc4c59b229636b74c137
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 380a7bebec1080f40ec10e3c59e6e1f105a5d2ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a id="githubui"></a> 在瀏覽器中編輯
 
-下列步驟提供在瀏覽器中對 SQL Server 內容進行簡單編輯的概觀。 完整程序記載於[適用於次要或不頻繁變更的 GitHub 參與工作流程](https://docs.microsoft.com/contribute/contribute/light-workflow)一文中。
+下列步驟提供在瀏覽器中對 SQL Server 內容進行簡單編輯的概觀。 完整程序記載於[適用於次要或不頻繁變更的 GitHub 參與工作流程](https://docs.microsoft.com/contribute/light-workflow)一文中。
 
 1. 每篇文章 (包含本篇) 的右側都有一個 [編輯] 按鈕。 找到您想要變更的文章，然後按一下 [編輯] 按鈕即可開始。
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/19/2018
    ![[編輯] 按鈕](./media/sql-server-docs-contribute/edit-button.png)
 
    > [!NOTE]
-   > 您必須登入 GitHub 才能編輯文章。 如果您沒有 GitHub 帳戶，請參閱 [GitHub 帳戶設定](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)。 建立新帳戶後，您也必須向 GitHub 驗證電子郵件地址才可進行編輯。
+   > 您必須登入 GitHub 才能編輯文章。 如果您沒有 GitHub 帳戶，請參閱 [GitHub 帳戶設定](https://docs.microsoft.com/contribute/get-started-setup-github)。 建立新帳戶後，您也必須向 GitHub 驗證電子郵件地址才可進行編輯。
 
 1. 在瀏覽器中編輯文章。 所有文章都是以 Markdown 來撰寫。 如果您需要使用 Markdown 的說明，可以檢閱 [Markdown 基本概念](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)。 您也可以觀察並了解已發佈的文章如何呈現既有的 Markdown。
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/19/2018
 
    ![建立提取要求](./media/sql-server-docs-contribute/create-pull-request2.png)
 
-此時，系統應該會引導您完成提取要求註解程序的其餘部分。 您可以在[參與者指南](https://docs.microsoft.com/contribute/contribute/light-workflow)中找到完整程序和其他詳細資料。
+此時，系統應該會引導您完成提取要求註解程序的其餘部分。 您可以在[參與者指南](https://docs.microsoft.com/contribute/light-workflow)中找到完整程序和其他詳細資料。
 
 ## <a id="tools"></a> 使用工具以在本機編輯
 
@@ -73,10 +74,10 @@ ms.lasthandoff: 03/19/2018
 
 若要使用此方法參與編輯，請參閱下列文章：
 
-- [建立 GitHub 帳戶](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)
-- [安裝內容撰寫工具](https://docs.microsoft.com/contribute/contribute/get-started-setup-tools)
-- [本機設定 Git 存放庫](https://docs.microsoft.com/contribute/contribute/get-started-setup-local)
-- [使用工具來參與編輯](https://docs.microsoft.com/contribute/contribute/full-workflow)
+- [建立 GitHub 帳戶](https://docs.microsoft.com/contribute/get-started-setup-github)
+- [安裝內容撰寫工具](https://docs.microsoft.com/contribute/get-started-setup-tools)
+- [本機設定 Git 存放庫](https://docs.microsoft.com/contribute/get-started-setup-local)
+- [使用工具來參與編輯](https://docs.microsoft.com/contribute/full-workflow)
 
 如果您送出對文件集的重大變更提取要求時，就會收到一個 GitHub 註解，要求您提交線上的**貢獻授權合約 (CLA)**。 您必須填妥線上表單，系統才會接受您的提取要求。
 

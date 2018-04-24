@@ -1,36 +1,36 @@
 ---
-title: "ObjectProxy (ADO-WFC 語法) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ObjectProxy (ADO-WFC 語法) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - ObjectProxy collection [ADO]
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19884e98de3a6ed8070dcd30d3965c7ad9e77a4c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9f30144edb28fb58e6cb2606f24df22fedce613
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO-WFC 語法)
 **ObjectProxy**物件代表伺服器，而且由**createObject**方法[DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件。 ObjectProxy 類別有一個方法，**呼叫**，這可以叫用伺服器上的方法，並傳回所產生的這個引動過程的物件。  
   
- **package com.ms.wfc.data**  
+ **封裝 com.ms.wfc.data**  
   
 ## <a name="methods"></a>方法  
   

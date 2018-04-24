@@ -1,26 +1,19 @@
 ---
-title: 立即檔案初始化組態 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 設定立即檔案初始化-Analytics Platform System |Microsoft 文件
+description: 分析平台系統上設定立即檔案初始化。 立即檔案初始化是 SQL Server 功能，可讓資料檔案作業更快速地執行。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
-caps.latest.revision: 20
-ms.openlocfilehash: 1e28ff30c727dfe1132b5568bb12a333c51927d5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 20498cc4e2c4ad959fce263984b58e3186630cea
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="instant-file-initialization-configuration"></a>立即檔案初始化組態
 立即檔案初始化是 SQL Server 功能，可讓資料檔案作業更快速地執行。 核取方塊，若要開啟立即檔案初始化會改善 SQL Server PDW 的效能。 不過，如果這會有安全性風險，商務，然後不要選取這個方塊。  

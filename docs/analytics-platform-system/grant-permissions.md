@@ -1,26 +1,22 @@
 ---
-title: '[授與權限]'
-author: barbkess
-ms.author: barbkess
+title: 授與 T-SQL 的權限-Parallel Data Warehouse |Microsoft 文件
+description: 授與 T-SQL 的平行處理資料倉儲的資料庫作業的權限。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="grant-permissions"></a>[授與權限]
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>授與 T-SQL 的平行處理資料倉儲的權限
+授與 T-SQL 的平行處理資料倉儲的資料庫作業的權限。
 
 ## <a name="grant-permissions-to-submit-database-queries"></a>授與權限來送出資料庫查詢
 本章節描述如何授與資料庫角色的權限與使用者對 SQL Server PDW 應用裝置上的查詢資料。  

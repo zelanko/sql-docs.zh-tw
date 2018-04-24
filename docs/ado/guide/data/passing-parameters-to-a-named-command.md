@@ -1,31 +1,31 @@
 ---
-title: "傳遞參數至具名命令 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 傳遞參數至具名命令 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f98080e73f2a0eb32450c0bc8e5779471adc74c6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: db51630bf9629920ce91af22fc731f3a5c919fd0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="passing-parameters-to-a-named-command"></a>將參數傳遞至具名的命令
 就像命令的結果會當做傳遞*出*具名命令參數的變數參數化的命令可以針對已做為傳入的*中*具名命令的變數。  

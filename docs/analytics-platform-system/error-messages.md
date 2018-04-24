@@ -1,29 +1,23 @@
 ---
-title: 錯誤訊息 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 錯誤訊息-Parallel Data Warehouse |Microsoft 文件
+description: Parallel Data Warehouse (PDW) 錯誤訊息會報告錯誤和問題發生的 PDW 元件，也可以包含 SQL Server PDW 中顯示的錯誤。 這些錯誤訊息會使用一致的語法來顯示資訊。 了解此語法可讓您識別並修正問題。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e6223cba-2dec-4b8a-bc10-e2ef6a821fe0
-caps.latest.revision: 9
-ms.openlocfilehash: 38512cbdb3f43144ecfdf4c3ca3dc28c4a019e16
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 33bdf11388ae52959d264e2df091e9c9669b159b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="error-messages"></a>錯誤訊息
-SQL Server PDW 錯誤訊息會報告錯誤和問題發生的 SQL Server PDW 元件，也可以包含透過 SQL Server PDW 的 SQL Server 錯誤。 這些錯誤訊息會使用一致的語法來顯示資訊。 了解此語法可讓您識別及更正 SQL Server PDW 上的問題。  
+# <a name="error-messages-in-parallel-data-warehouse"></a>平行處理資料倉儲中的錯誤訊息
+
+Parallel Data Warehouse (PDW) 錯誤訊息會報告錯誤和問題發生的 PDW 元件，也可以包含 SQL Server PDW 中顯示的錯誤。 這些錯誤訊息會使用一致的語法來顯示資訊。 了解此語法可讓您識別及更正 SQL Server PDW 上的問題。  
   
 ## <a name="Basics"></a>錯誤訊息的基本概念  
 傳回的錯誤訊息會遵循相同的語法。  

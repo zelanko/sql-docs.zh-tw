@@ -1,29 +1,22 @@
 ---
-title: 判斷哪一個叢集節點失敗 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 判斷失敗的叢集節點-Analytics Platform System |Microsoft 文件
+description: 本文說明如何判斷 Analytics Platform System (APS) 節點失敗之後發生叢集容錯移轉，且已引發叢集容錯移轉警示的名稱。 疑難排解叢集容錯移轉的一部分，您必須決定無法再連絡 Microsoft，以協助解決問題的節點名稱。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="determine-which-cluster-node-failed"></a>判斷哪一個叢集節點失敗
-本主題描述如何判斷 SQL Server PDW 節點失敗之後發生叢集容錯移轉，且已引發叢集容錯移轉警示的名稱。 疑難排解叢集容錯移轉的一部分，您必須決定無法再連絡 Microsoft，以協助解決問題的節點名稱。  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>判斷哪一個叢集節點失敗 Analytics Platform System
+本主題描述如何判斷 Analytics Platform System (APS) 節點失敗之後發生叢集容錯移轉，且已引發叢集容錯移轉警示的名稱。 疑難排解叢集容錯移轉的一部分，您必須決定無法再連絡 Microsoft，以協助解決問題的節點名稱。  
   
 ## <a name="Background"></a>背景  
 SQL Server PDW 中的高可用性，控制節點和運算節點會設定為主動或被動 Windows 容錯移轉叢集的元件。 當作用中的伺服器無法回應重要的系統要求時，則被動伺服器容錯移轉，而執行失敗的伺服器功能。  

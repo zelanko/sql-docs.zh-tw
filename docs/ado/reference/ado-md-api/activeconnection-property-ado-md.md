@@ -1,17 +1,17 @@
 ---
-title: "ActiveConnection 屬性 (ADO MD) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ActiveConnection 屬性 (ADO MD) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ActiveConnection
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ec51c77b1963832cf101278b5c00bcbfe253093
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9552f02cfb21ed53a703e3b7ddd462b13a94d93c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 屬性 (ADO MD)
 表示要哪些 ADO[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件目前的資料格集或目前所屬的目錄。  

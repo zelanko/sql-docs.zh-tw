@@ -1,31 +1,31 @@
 ---
-title: "OLE DB 的 Microsoft 資料指標服務 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: OLE DB 的 Microsoft 資料指標服務 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursor service for ole db [ADO]
 - cursors [ADO], cursor service for OLE DB
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5dd9f4b279bd38028bb529dcdd0a49f32ffd7cc7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 82b46c5c69210eb6cf23e90434db8f81a4cca130
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>OLE DB 的 Microsoft 指標服務
 當您選取用戶端資料指標，或設定**CursorLocation**屬性**adUseClient**，您會在叫用 Microsoft 資料指標服務的 OLE DB。 您也可能會看到 「 用戶端資料指標引擎 」，也就是基本上相同的動作 ADO 的內容中的參考。 此服務會補充資料提供者的資料指標支援函式。 如此一來，您可以對看待相當一致的功能，從所有資料提供者。  

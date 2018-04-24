@@ -1,30 +1,30 @@
 ---
-title: "連接到資料來源 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 連接到資料來源 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f09a5d0fb07b9af4db1f801252359f8b77039d74
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cc1f10e8ceae959927ab2a7b42db800ef140892f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connecting-to-data-sources"></a>連接到資料來源
 ADO**連接**物件都代表唯一的工作階段與資料來源，包括 DBMS、 檔案存放區中或以逗號分隔的文字檔。 在用戶端/伺服器資料庫系統，ADO 連接可以是實際的網路連線到伺服器。  

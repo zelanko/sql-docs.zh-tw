@@ -1,27 +1,21 @@
 ---
-title: 載入
-author: barbkess
-ms.author: barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: 將資料載入 Parallel Data Warehouse |Microsoft 文件
 description: 您可以載入或使用 Integration Services，bcp 公用程式、 dwloader 或 SQL INSERT 陳述式插入資料至 SQL Server Parallel Data Warehouse (PDW)。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: c7292108-4a48-409e-b0f4-e4ba84dce26f
-caps.latest.revision: 22
-ms.openlocfilehash: 77bb7e3ba6a3377fe63decf06a872872eaa4ee61
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3fed89686683616164132cf0322e3709eab78f32
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-sql-server-pdw"></a>載入 (SQL Server PDW)
+# <a name="loading-data-into-parallel-data-warehouse"></a>將資料載入 Parallel Data Warehouse
 您可以載入或插入資料至 SQL Server Parallel Data Warehouse (PDW) 使用 Integration Services [bcp 公用程式](../tools/bcp-utility.md)， **dwloader**命令列載入器或 SQL INSERT 陳述式。  
 
 ## <a name="loading-environment"></a>載入的環境  

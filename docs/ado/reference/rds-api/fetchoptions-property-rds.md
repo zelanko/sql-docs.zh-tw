@@ -1,31 +1,31 @@
 ---
-title: "FetchOptions 屬性 (RDS) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: FetchOptions 屬性 (RDS) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f53c6be35a4b3035e81653ecd828c52ea0c959db
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 91b6a6c4c40bd3b31a539c42d89a6711953f582b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 屬性 (RDS)
 表示非同步擷取的類型。  

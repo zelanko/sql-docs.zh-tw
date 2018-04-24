@@ -1,28 +1,22 @@
 ---
-title: 工作負載管理 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Analytics Platform System 中的工作負載管理 |Microsoft 文件
+description: Analytics Platform System 中的工作負載管理。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 11
-ms.openlocfilehash: 6dde6c1af7b704e5bd1ed0e03516ad94f191ad9d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management"></a>工作負載管理
+# <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System 中的工作負載管理
+
 SQL Server PDW 的工作負載管理功能可讓使用者和系統管理員將指派到預先設定的記憶體和並行處理設定要求。 使用工作負載管理來改善效能的負載，一致或 mixed 時，允許要求而不會佔用任何要求永遠將適當的資源。  
   
 例如，與在 SQL Server PDW 工作負載管理技術，您可以：  

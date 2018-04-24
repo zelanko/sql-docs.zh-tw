@@ -1,31 +1,31 @@
 ---
-title: "ConvertToString 方法 (RDS) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ConvertToString 方法 (RDS) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95425c734f254bf534eacdad606025fca43c2158
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ec84e0a0816ffab9246aaee4653507ee07dc3dab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 方法 (RDS)
 將轉換[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)MIME 字串，代表資料錄集資料。  

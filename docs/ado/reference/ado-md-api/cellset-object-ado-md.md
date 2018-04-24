@@ -1,33 +1,33 @@
 ---
-title: "資料格集物件 (ADO MD) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 資料格集物件 (ADO MD) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Cellset
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4b4fd5399fc595055f473f30fa97f9f73921f8a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ae855ee5770aec297cabfe41f6a0eaf3c86b9be6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cellset-object-ado-md"></a>資料格集物件 (ADO MD)
 代表多維度查詢的結果。 它是從 cube 或其他資料格集中選取的儲存格的集合。  

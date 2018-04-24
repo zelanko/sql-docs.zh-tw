@@ -1,28 +1,22 @@
 ---
-title: 取得和設定的 APS PDW 備份伺服器
-author: barbkess
-ms.author: barbkess
+title: 取得和設定備份的伺服器-Parallel Data Warehouse |Microsoft 文件
+description: 本文說明如何將非應用裝置的 Windows 系統設定為備份伺服器的備份和還原功能 Analytics Platform System (APS) 以及 Parallel Data Warehouse (PDW) 搭配使用。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 設定非應用裝置的 Windows 系統做為備份的伺服器，用於備份和還原功能 Analytics Platform System (APS) 和 SQL Server Parallel Data Warehouse (PDW)。
-ms.date: 10/20/2016
-ms.topic: article
-caps.latest.revision: 20
-ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4464857e2b1e71a96f87e95d45df0577df987176
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-backup-server"></a>取得和設定備份伺服器
-本主題描述如何將非應用裝置的 Windows 系統設定為與 Analytics Platform System (AP) 的備份和還原功能搭配使用的備份伺服器和 SQL Server Parallel Data Warehouse (PDW)。  
+# <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>取得和設定備份伺服器的平行處理資料倉儲
+本文說明如何將非應用裝置的 Windows 系統設定為備份伺服器的備份和還原功能 Analytics Platform System (APS) 以及 Parallel Data Warehouse (PDW) 搭配使用。  
   
   
 ## <a name="Basics"></a>備份伺服器的基本概念  

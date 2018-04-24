@@ -1,32 +1,32 @@
 ---
-title: "ADO 錯誤參考 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ADO 錯誤參考 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], number reference
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a25f9697d00a234bb98fe65eaaa2cd85520b45db
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5e1b20ffe6165688a438f97c2c23a7ac573ad320
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-errors"></a>ADO 錯誤
 **ErrorValueEnum**常數描述 ADO 錯誤值。 如需完整清單，這些列舉的常數，包括值，請參閱[附錄 b: ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本章節將會檢查一些更有趣的錯誤，並說明某些特定情況下，或若要修正此問題的解決方案，可引發。 這兩個**ErrorValueEnum**列出常數和短正數的十進位數字。

@@ -1,31 +1,31 @@
 ---
-title: "判斷支援的項目 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 判斷支援的項目 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - editing data [ADO], Supports method
 - Supports method [ADO]
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31d9ca56af28416f68555511a3d4a8439d370200
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 94c8f6c2f03fff3706f20982ac43237a52092bad
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="determining-what-is-supported"></a>判斷支援的項目
 **支援**方法用來判斷是否指定**資料錄集**物件支援特定類型的功能。 它有下列語法：  

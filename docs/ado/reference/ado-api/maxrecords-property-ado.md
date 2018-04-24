@@ -1,33 +1,33 @@
 ---
-title: "MaxRecords 屬性 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: MaxRecords 屬性 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::MaxRecords
 helpviewer_keywords:
 - MaxRecords property [ADO]
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d6991928fdf3c284f7039b75f96a95fd93e0be3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1eb073548d3f2b7b9422b416cdcc5c20a7984a56
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords 屬性 (ADO)
 表示要傳回的記錄數目上限[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)從查詢。  

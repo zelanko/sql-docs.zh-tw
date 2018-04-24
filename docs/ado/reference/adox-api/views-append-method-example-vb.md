@@ -1,32 +1,32 @@
 ---
-title: "檢視附加方法範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 檢視附加方法範例 (VB) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 807c6ddff7af0c21f73a71a4457f9aba37e01a97
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a3513431ecfcd9539e2e5e4eb1e1dad7edecd114
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="views-append-method-example-vb"></a>檢視附加方法範例 (VB)
 下列程式碼示範如何使用[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合[附加](../../../ado/reference/adox-api/append-method-adox-views.md)方法基礎資料來源中建立新的檢視。  

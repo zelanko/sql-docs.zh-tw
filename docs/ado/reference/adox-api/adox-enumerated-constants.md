@@ -1,30 +1,30 @@
 ---
-title: "ADOX 列舉常數 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ADOX 列舉常數 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 880c49c4cfda1faf32313ac919939bcba734ced5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b622f8cda931a0c15c1ff97dbf33ffdb9a9441be
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列舉常數
 若要協助偵錯，ADOX 列舉常數會列出每個常數的值。 不過，這個值是單純諮詢，，而且可能會從一個版本 ADOX 變更到另一個。 您的程式碼應該僅相依於名稱，而不是實際值、 列舉常數。  

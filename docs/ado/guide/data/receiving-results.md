@@ -1,31 +1,31 @@
 ---
-title: "接收結果 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 接收結果 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a13be909891455c21b3409ea53072a5f2c9268e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 429a9706d6a751da691812f14142ced5f30aed8f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="receiving-results"></a>接收的結果
 在 ADO 的大部分命令會傳回呼叫端的一些資訊。 傳回資料列集的命令，在收到結果**資料錄集**物件，這是可能最常使用的 ADO 物件。  

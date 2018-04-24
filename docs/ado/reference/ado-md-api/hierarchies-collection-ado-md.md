@@ -1,17 +1,17 @@
 ---
-title: "Hierarchies 集合 (ADO MD) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Hierarchies 集合 (ADO MD) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Dimension::Hierarchies
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchies collection [ADO MD]
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baba9403af996c936c65f102ae769376ccf69311
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 18e8f6199e82fc6c2854c5336343d5d2c67b3089
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies 集合 (ADO MD)
 包含一組[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，從維度中的物件。  

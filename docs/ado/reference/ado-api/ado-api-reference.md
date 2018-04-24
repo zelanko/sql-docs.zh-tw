@@ -1,30 +1,30 @@
 ---
-title: "ADO API 參考 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: ADO API 參考 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ca0e6125f9e6f2288156698a15ec434be5a5ff59
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 43cda7d0301c24d45fc92e5273956a10b02e821e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-api-reference"></a>ADO 應用程式開發介面參考
 ADO 文件的這一節包含每個 ADO 物件、 集合、 屬性、 動態屬性、 方法、 事件和列舉的主題。 此外，它包含一份 ADO 語法索引，以搭配 Microsoft Visual c + + 和 Windows Foundation 類別 (WFC)。  

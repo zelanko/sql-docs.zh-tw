@@ -1,17 +1,17 @@
 ---
-title: "事件參數 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 事件參數 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Error parameter [ADO]
 - Object parameter [ADO]
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 43bea31384f503ea0e98d8e485002135f1cbbf57
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-parameters"></a>事件參數
 每個事件處理常式具有控制事件處理常式的狀態參數。 完成事件，這個參數也用來表示成功或失敗的作業產生事件。 最完整的事件也具有錯誤參數，以提供可能會發生任何錯誤和參考用來執行作業的 ADO 物件的一或多個物件參數的資訊。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包含物件的參數**命令**，**資料錄集**，和**連接**物件與事件相關聯。 在下列的 Microsoft® Visual Basic® 範例中，您可以看到 pCommand、 pRecordset 和 pConnection 物件代表**命令**，**資料錄集**，和**連接**物件所使用的**Execute**方法。  

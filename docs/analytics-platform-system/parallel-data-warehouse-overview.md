@@ -1,28 +1,22 @@
 ---
-title: 平行資料倉儲概觀
-author: barbkess
-ms.author: barbkess
+title: 平行資料倉儲元件-Analytics Platform System |Microsoft 文件
+description: 此文章說明裝置軟體，以及 Analytics Platform System 的非裝置軟體元件。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 本主題說明裝置軟體和 Analytics Platform System 的非裝置軟體元件。
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: 20
-ms.openlocfilehash: 42fb92c30c0487603f2ad8e870886f25b4c1655a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 09813eecdcc933619955de8d94e83079cad0c68f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="parallel-data-warehouse-overview"></a>平行資料倉儲概觀
-本主題說明裝置軟體和 Analytics Platform System 的非裝置軟體元件。  
+# <a name="parallel-data-warehouse-components---analytics-platform-system"></a>平行資料倉儲元件-Analytics Platform System
+此文章說明裝置軟體，以及 Analytics Platform System 的非裝置軟體元件。  
   
 <!-- MISSING LINKS
 

@@ -1,27 +1,21 @@
 ---
-title: 分析平台系統的硬體元件
-author: barbkess
-ms.author: barbkess
+title: 硬體元件-Analytics Platform System |Microsoft 文件
+description: 如此您就可以根據您的業務需求購買適合的處理和儲存體容量，analytics Platform System (APS) 會使用可擴充的元件。 當您訂購 AP 時，您需要這些核心硬體元件的組合。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 如此您就可以根據您的業務需求購買適合的處理和儲存體容量，analytics Platform System (APS) 會使用可擴充的元件。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: aa1cdcc7-cfee-4658-bbce-7d319bfb7483
-caps.latest.revision: 17
-ms.openlocfilehash: 4b972c4b926463a67588c4ee41ed0157da7cdc80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 9bb7b67a896164fe29611da2091e02c700c46970
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="analytics-platform-system-hardware-components"></a>分析平台系統的硬體元件
+# <a name="hardware-components-for-analytics-platform-system"></a>Analytics Platform System 的硬體元件
 
 如此您就可以根據您的業務需求購買適合的處理和儲存體容量，analytics Platform System (APS) 會使用可擴充的元件。 當您訂購 AP 時，您需要這些核心硬體元件的組合。 特定的硬體廠商可能會使用不同的命名慣例，或使用其他元件。  
  

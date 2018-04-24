@@ -1,17 +1,17 @@
 ---
-title: "Save 方法 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Save 方法 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Recordset::Save
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ca1aa95841be1331ad1b214b2a8b377622883d3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 389fdbe66dc8136e50f244e18af523afefb7c463
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="save-method"></a>Save 方法
 將儲存[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)檔案中或[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

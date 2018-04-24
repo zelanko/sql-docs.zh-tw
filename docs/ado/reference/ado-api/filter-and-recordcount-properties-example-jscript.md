@@ -1,33 +1,33 @@
 ---
-title: "篩選器和 RecordCount 屬性範例 (JScript) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 篩選器和 RecordCount 屬性範例 (JScript) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5347f486c516a131f9dc2103ecd5a037a916f8eb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eefb5a795be9a94e5ea0c174423eebf885e7d240
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>篩選器和 RecordCount 屬性範例 (JScript)
 這個範例會開啟**資料錄集**Northwind 資料庫然後再使用的公司資料表[篩選](../../../ado/reference/ado-api/filter-property.md)以限制顯示的記錄為供應商 欄位則是以字母開頭的屬性D.剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**FilterJS.asp**。  

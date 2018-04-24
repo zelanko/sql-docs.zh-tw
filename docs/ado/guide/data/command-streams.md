@@ -1,31 +1,31 @@
 ---
-title: "命令資料流 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 命令資料流 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7564f349c25fda5d39f977320937b2515bb9dfd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 35efef1459e2a44d19602ce77adeacb6b01ff81b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="command-streams"></a>命令資料流
 ADO 有一律支援所指定的字串格式的命令輸入**CommandText**屬性。 或者，使用 ADO 2.7 或更新版本，您也可以使用資訊的資料流命令輸入藉由指定的資料流**CommandStream**屬性。 您可以指派 ADO**資料流**物件或任何支援 COM 的物件**IStream**介面。  

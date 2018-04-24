@@ -1,17 +1,17 @@
 ---
-title: "資料列集屬性 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 資料列集屬性 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ADORecordsetConstruction::PutRowset
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Rowset property [ADO]
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14bbd12c7fe9a5900745cb8056d819b4fff67b4d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 60931973564e129fdc97a7d579302f2106ca4157
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rowset-property-ado"></a>資料列集屬性 (ADO)
 取得或設定 OLE DB**資料列集**物件上從 / **ADORecordsetConstruction**物件。 當您使用 put_Rowset 時，資料列集就會轉換成 ADO**資料錄集**物件。  

@@ -1,33 +1,33 @@
 ---
-title: "方向屬性 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 方向屬性 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Parameter::Direction
 helpviewer_keywords:
 - Direction property
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c4c3c61bef1f9c5ab483d6443eea75eae60b0fa
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1644923b3bd61290a2c6afc407172e8bb9fa7143
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direction-property"></a>方向屬性
 指出是否[參數](../../../ado/reference/ado-api/parameter-object.md)代表輸入的參數、 輸出參數、 輸入和輸出參數，或如果參數是預存程序的傳回值。  

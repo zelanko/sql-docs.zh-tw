@@ -1,30 +1,30 @@
 ---
-title: "步驟 3： 伺服器取得資料錄集 （RDS 教學課程） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 步驟 3： 伺服器取得資料錄集 （RDS 教學課程） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], server obtains Recordset
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6a55083897b680ece362fe734f3f4a4cd97db4d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7c24a84e24498003d5c08af60f81707c43d11091
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步驟 3： 伺服器取得資料錄集 （RDS 教學課程）
 伺服器程式用來查詢所需的資料列的資料來源的連接字串和命令文字。 ADO 通常用來擷取這**資料錄集**，不過其他 Microsoft 資料存取介面，例如 OLE DB，無法使用。  

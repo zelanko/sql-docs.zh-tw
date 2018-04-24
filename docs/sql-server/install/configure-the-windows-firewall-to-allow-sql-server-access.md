@@ -1,16 +1,16 @@
 ---
-title: "設定 Windows 防火牆以允許 SQL Server 存取 | Microsoft Docs"
-ms.custom: 
+title: 設定 Windows 防火牆以允許 SQL Server 存取 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Firewall ports
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -314,7 +314,7 @@ ms.lasthandoff: 02/09/2018
   
     2.  請在命令提示字元之下，輸入 **netstat -n -a**。  
   
-         您可以從 [控制台] 開啟 **-n** 參數會指示 **netstat** 以數值方式顯示使用中 TCP 連線的位址與通訊埠號碼。 **-a** 參數會指示 **netstat** 顯示電腦所接聽之電腦上的 TCP 與 UDP 通訊埠。  
+         **-n** 參數會指示 **netstat** 以數值方式顯示使用中 TCP 連線的位址與通訊埠號碼。 **-a** 參數會指示 **netstat** 顯示電腦所接聽之電腦上的 TCP 與 UDP 通訊埠。  
   
 -   **PortQry** 公用程式可用於將 TCP/IP 通訊埠的狀態回報為接聽中、未接聽或已篩選。 (若為已篩選狀態，表示通訊埠不一定是接聽中。此狀態會指出公用程式未接收到通訊埠的回應)。**PortQry** 公用程式可從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=28590)下載。  
   

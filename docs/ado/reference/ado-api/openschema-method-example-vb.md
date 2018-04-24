@@ -1,32 +1,32 @@
 ---
-title: "OpenSchema 方法範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: OpenSchema 方法範例 (VB) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - OpenSchema method [ADO], Visual Basic example
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 638311bcbfa78b6351cda62ced7aa8743f6edcc7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2aa2261e7698a2a8c9b7f6eb9d6dae6c2b887d90
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema 方法範例 (VB)
 這個範例會使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法顯示的名稱和型別中每個資料表***Pubs***資料庫。  

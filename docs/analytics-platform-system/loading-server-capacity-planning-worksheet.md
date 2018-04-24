@@ -1,27 +1,21 @@
 ---
-title: 載入伺服器容量規劃工作表 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 載入伺服器容量計劃-Analytics Platform System |Microsoft 文件
+description: 這個容量規劃工作表可協助您判斷載入 Analytics Platform System 平行資料倉儲的資料載入伺服器的需求。 」
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 這個容量規劃工作表可協助您判斷資料載入 SQL Server PDW 載入伺服器的需求。
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: df2155be-a624-40ba-9a85-58af708f7ce7
-caps.latest.revision: 9
-ms.openlocfilehash: 73f4b55c82f0b2b5e3c7cb73222a546d3dfc4af6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f0efd7e0688496d5af7887431ca00ae683c874f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="loading-server-capacity-planning-worksheet"></a>載入伺服器容量規劃工作表
+# <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>載入分析平台系統伺服器容量規劃工作表
 這個容量規劃工作表可協助您判斷資料載入 SQL Server PDW 載入伺服器的需求。 使用此選項來建立您的計劃購買或佈建現有載入伺服器。  
   
 ## <a name="worksheet-notes"></a>工作表的資訊

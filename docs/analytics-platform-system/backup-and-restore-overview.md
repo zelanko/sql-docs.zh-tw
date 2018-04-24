@@ -1,28 +1,22 @@
 ---
-title: 備份與還原
-author: barbkess
-ms.author: barbkess
+title: 備份和還原-Parallel Data Warehouse |Microsoft 文件
+description: 說明資料如何備份和還原運作 Parallel Data Warehouse (PDW)。 備份和還原作業可用於災害復原。 備份與還原也可用來將資料庫從一個工具複製到另一部應用裝置。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 說明資料如何備份和還原運作的 SQL Server Parallel Data Warehouse (PDW)。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 50
-ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 118b9ced12e01ac6655d85969bb61717f2b31e0b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="backup-and-restore"></a>備份與還原
-說明資料如何備份和還原運作的 SQL Server Parallel Data Warehouse (PDW)。 備份和還原作業可用於災害復原。 備份與還原也可用來將資料庫從一個工具複製到另一部應用裝置。  
+說明資料如何備份和還原運作 Parallel Data Warehouse (PDW)。 備份和還原作業可用於災害復原。 備份與還原也可用來將資料庫從一個工具複製到另一部應用裝置。  
     
 ## <a name="BackupRestoreBasics"></a>備份和還原的基本概念  
 PDW*資料庫備份*應用裝置資料庫，使其可以用於將原始的資料庫還原至應用裝置的格式儲存的複本。  

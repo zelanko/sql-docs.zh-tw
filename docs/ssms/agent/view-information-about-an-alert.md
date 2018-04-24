@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: edd9053514a593ea946a15d3d3071ad2b6e27093
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a6f1e0be2382e9981886616af207ab94185ee9f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-information-about-an-alert"></a>檢視有關警示的資訊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,11 +43,11 @@ ms.lasthandoff: 04/10/2018
   
 -   **開始之前：**  
   
-    [安全性](#Security)  
+    [Security](#Security)  
   
 -   **若要使用下列項目檢視有關警示的資訊：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- reports information about the Demo: Sev. 25 Errors alert  

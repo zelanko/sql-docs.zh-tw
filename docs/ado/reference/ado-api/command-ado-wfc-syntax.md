@@ -1,34 +1,34 @@
 ---
-title: "命令 (ADO-WFC 語法) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 命令 (ADO-WFC 語法) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Command collection [ADO], ADO/WFC syntax
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 310b7c246fc5d7006cc2e358340d0aa062dc3ab3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 15b045d8f45e9c6c7bcc7ff10430c4b715084c33
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="command-ado---wfc-syntax"></a>命令 (ADO-WFC 語法)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
   
 ### <a name="constructor"></a>建構函式  
   

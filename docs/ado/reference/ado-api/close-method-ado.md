@@ -1,17 +1,17 @@
 ---
-title: "Close 方法 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Close 方法 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::Close
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 693f6adc51682fec4f9890d7d7618aa53e43593d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 996da92c866789b91a317c152449f7ca2540d273
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="close-method-ado"></a>Close 方法 (ADO)
 關閉開啟的物件和任何相依的物件。  

@@ -1,27 +1,21 @@
 ---
-title: With Integration Services 載入資料
-author: barbkess
-ms.author: barbkess
+title: 使用 Integration Services-Parallel Data Warehouse 載入 |Microsoft 文件
+description: 提供用於載入資料到 Parallel Data Warehouse (PDW) 使用 SQL Server Integration Services (SSIS) 封裝的參考和部署資訊。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: 69
-ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-data-with-integration-services"></a>With Integration Services 載入資料
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>載入資料到 Parallel Data Warehouse 的 Integration services
 提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。  
   
 <!-- MISSING LINKS
@@ -156,7 +150,7 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
   
 ## <a name="Examples"></a>範例  
   
-### <a name="Walkthrough"></a>A. 從一般檔案的簡單負載  
+### <a name="Walkthrough"></a>。 從一般檔案的簡單負載  
 下列逐步解說會示範簡單資料載入一般檔案資料載入至 SQL Server PDW 應用裝置中使用 Integration Services。  這個範例假設在用戶端電腦上已安裝 Integration Services，並已安裝 SQL Server PDW 目的地，如上面所述。  
   
 在此範例中，我們將會載入至`Orders`具有下列 DDL 的資料表。 `Orders`資料表屬於`LoadExampleDB`資料庫。  

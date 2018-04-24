@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB 持續性提供者 （ADO 服務提供者） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB 持續性提供者 （ADO 服務提供者） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB persistence provider
 - persistence provider [ADO]
 - OLE DB persistence provider [ADO]
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30df806429167550cdf39f064e349e46dd692502
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d612484c8200a33be44e9b8b8ed230866be9ab95
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 持續性提供者概觀
 Microsoft OLE DB 持續性提供者可讓您儲存[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件到檔案，並稍後還原，**資料錄集**檔案中的物件。 結構描述資訊、 資料，並且保留暫止的變更。

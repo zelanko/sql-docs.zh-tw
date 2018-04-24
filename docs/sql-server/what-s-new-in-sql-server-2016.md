@@ -1,35 +1,35 @@
 ---
-title: "SQL Server 2016 的新功能"
-ms.custom: 
+title: SQL Server 2016 的新功能
+ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "sql server 新功能"
+- sql server 新功能
 helpviewer_keywords:
 - new features [SQL Server]
 - SQL Server, what's new
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 
+caps.latest.revision: 224
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0c8b7cbe768aa6c443bf803f3a4fcf65f50dfeb6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -111,7 +111,9 @@ Microsoft 在此版本中徹底翻新了 Reporting Services。
 - [SQL Server 版本支援的功能](https://msdn.microsoft.com/library/cc645993.aspx)
 - [安裝 SQL Server 2016 的硬體與軟體需求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [從安裝精靈安裝 SQL Server 2016](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [安裝程式和服務安裝](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
+- [安裝程式和服務安裝](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
 - [新的 SQL PowerShell 模組](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

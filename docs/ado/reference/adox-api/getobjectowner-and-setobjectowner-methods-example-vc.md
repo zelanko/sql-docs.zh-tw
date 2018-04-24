@@ -1,33 +1,33 @@
 ---
-title: "GetObjectOwner 和 SetObjectOwner 方法範例 （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: GetObjectOwner 和 SetObjectOwner 方法範例 （VC + +） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - SetObjectOwner method [ADOX], VC++ example
 - GetObjectOwner method [ADOX], VC++ example
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee1b891dd12810e8a54ebb8532a366789f28c957
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 35d6f0bc472aa83c726b8307bb687c77e6b810b4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 和 SetObjectOwner 方法範例 （VC + +）
 這個範例會示範[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)和[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)方法。 此程式碼會假設有群組帳戶處理 (請參閱[群組和使用者附加、 ChangePassword 方法範例 （VC + +）](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)以了解如何將此群組新增到系統)。 類別目錄資料表的擁有者設為 帳戶處理。  

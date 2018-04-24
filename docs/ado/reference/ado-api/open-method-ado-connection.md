@@ -1,17 +1,17 @@
 ---
-title: "Open 方法 （ADO 連接） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Open 方法 （ADO 連接） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::raw_Open
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 980e53611f5c52e0ef426d22f3f8cc4a9294c877
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="open-method-ado-connection"></a>Open 方法 （ADO 連接）
 開啟資料來源的連接。  
@@ -45,7 +45,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  選擇性。 A**字串**包含連接資訊的值。 請參閱[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性，如需有效的設定詳細資料。  
   
- *UserID*  
+ *使用者識別碼*  
  選擇性。 A**字串**包含使用者名稱以建立連接時使用的值。  
   
  *密碼*  

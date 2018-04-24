@@ -1,32 +1,32 @@
 ---
-title: "資料錄集的界限 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 資料錄集的界限 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - EOF property [ADO], boundaries of a Recordset
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96473d512ed586ebdb155e3422f6559294c2616d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: da0eb328f331847d30a5e408369c77646d5a967e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="boundaries-of-a-recordset"></a>資料錄集的界限
 **資料錄集**支援**BOF**和**EOF**區分的開頭和結尾，分別資料集的屬性。 您可以將**BOF**和**EOF**為位於開頭和結尾的 「 虛設 」 記錄**資料錄集**。 計算**BOF**和**EOF**，我們的範例**資料錄集**現在看起來會像這樣：  

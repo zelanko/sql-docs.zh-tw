@@ -1,32 +1,32 @@
 ---
-title: "預計錯誤 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 預計錯誤 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - anticipating errors [ADO]
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3343e525bba78fe0a020208ff35cc620fbf49184
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0fc74732fb812f1b13bcb52b8eda97311ae562d7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="anticipating-errors"></a>預期的錯誤
 錯誤預防為至少和錯誤處理一樣重要。 這最後一節包含您的應用程式可以為了讓比較不可能發生的錯誤採取預防措施的簡短清單。  

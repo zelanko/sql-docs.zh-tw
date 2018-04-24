@@ -1,34 +1,34 @@
 ---
-title: "資料錄集 (ADO-WFC 語法) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 資料錄集 (ADO-WFC 語法) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Recordset collection [ADO], ADO/WFX syntax
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e48ab076eba835f09d9c336fbe7a5b16b95b9c8b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3495ba939ebf105b1b327eaa63386a735eb490e9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recordset-ado---wfc-syntax"></a>資料錄集 (ADO-WFC 語法)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
   
 ### <a name="constructors"></a>建構函式  
   

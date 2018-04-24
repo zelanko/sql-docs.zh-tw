@@ -1,32 +1,32 @@
 ---
-title: "NextRecordset 方法範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: NextRecordset 方法範例 (VB) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bf08a82d23f4fc89539ef87bc52b612a578915e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0270fdaeebba219876a56a7df7ef80397548b9e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 方法範例 (VB)
 這個範例會使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法，以檢視中使用複合命令陳述式組成三個不同的資料錄集的資料**選取**陳述式。  

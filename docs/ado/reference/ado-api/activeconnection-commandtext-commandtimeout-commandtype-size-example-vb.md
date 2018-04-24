@@ -1,17 +1,17 @@
 ---
-title: "預存程序屬性範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 預存程序屬性範例 (VB) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - ActiveConnection property [ADO], Visual Basic example
 - Direction property [ADO], Visual Basic example
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c490f2065ae7118a1bf1807e9d59a871d8d87e2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 21da151084e9cb7332b9ac1ecc44be1b8626fa33
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向屬性範例 (VB)
 這個範例會使用[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)， [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)， [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)，[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)，和[方向](../../../ado/reference/ado-api/direction-property.md)屬性來執行預存程序。  

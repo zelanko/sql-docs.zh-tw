@@ -1,28 +1,21 @@
 ---
-title: 電源 AP 應用裝置開啟或關閉 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 電源應用裝置開啟或關閉-Analytics Platform System |Microsoft 文件
+description: 應用裝置開啟或關閉電源的 Analytics Platform System
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="power-the-aps-appliance-on-or-off"></a>開啟或關閉電源 AP 應用裝置
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>應用裝置開啟或關閉電源的 Analytics Platform System
 本主題描述如何開啟電源，或您正在執行的平行處理資料倉儲，選擇性地執行 HDInsight 區域的分析平台 Systemappliance 關閉電源。 使用本主題當移動 Analytics Platform System 應用裝置時，或電源應用裝置上重大停電後。  
   
 開啟和關閉電源設備不是與啟動和停止應用裝置服務相同。 該主題的資訊，請參閱[PDW 服務狀態&#40;Analytics Platform System&#41;](pdw-services-status.md)。 啟動或關閉 SQL Server 2008 Parallel Data Warehouse 的相關資訊，請參閱 SQL Server 2008 Parallel Data Warehouse 說明檔。 電源開啟或關閉 SQL Server 2012 AU1 或 AU2 Parallel Data Warehouse 的相關資訊，請參閱說明檔的版本。  

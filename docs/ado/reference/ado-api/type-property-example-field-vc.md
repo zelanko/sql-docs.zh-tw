@@ -1,32 +1,32 @@
 ---
-title: "輸入屬性的範例 （欄位） （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 輸入屬性的範例 （欄位） （VC + +） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d50cc9fb72a1ac9ba30bc2903fc553d7574736c2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bf37a8f168579ed4cebfd155503e25dae52498f0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="type-property-example-field-vc"></a>型別屬性範例 （欄位） （VC + +）
 這個範例會示範[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性所顯示的值之常數的對應名稱**類型**屬性的所有[欄位](../../../ado/reference/ado-api/field-object.md)中的物件***員工***資料表。 FieldType 函式，才能執行這個程序。  
@@ -171,7 +171,7 @@ void PrintComError(_com_error &e) {
  **類型： adVarChar**  
  **名稱： job_id**  
  **類型： adSmallInt**  
- **Name: job_lvl**  
+ **名稱： job_lvl**  
  **類型： adUnsignedTinyInt**  
  **名稱： pub_id**  
  **類型： adChar**  

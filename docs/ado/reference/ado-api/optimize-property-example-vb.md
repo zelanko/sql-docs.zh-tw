@@ -1,32 +1,32 @@
 ---
-title: "最佳化屬性範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 最佳化屬性範例 (VB) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cbc84bfbbd4f6f26bf82bc9fe373606c965451a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1f51f4b06cc81464a90c30cfe42737cc971d23a2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="optimize-property-example-vb"></a>最佳化屬性範例 (VB)
 這個範例會示範[欄位](../../../ado/reference/ado-api/field-object.md)物件的動態**最佳化**屬性。 ***Zip***欄位***作者***資料表中***Pubs***資料庫未編製索引。 設定[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性**True**上***zip***欄位授權 ADO 來建立可改善效能的索引[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法。  

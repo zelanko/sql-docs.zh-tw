@@ -1,30 +1,30 @@
 ---
-title: "確保有足夠的 TempDB 空間 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 確保有足夠的 TempDB 空間 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - TempDB space in RDS [ADO]
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b25883b6e0d2b52719b4227d0fbec1abdf31eae
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f71e88ce0d15ac28973850a3af8fd742eea54a18
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>確保有足夠的 TempDB 空間
 如果在處理時所發生的錯誤[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)需要處理在 Microsoft SQL Server 6.5 空間的物件，您可能需要增加 TempDB 的大小。 (某些查詢需要暫存處理空間; 例如，具有 ORDER BY 子句的查詢則需要排序的**資料錄集**，這需要一些暫存空間。)  

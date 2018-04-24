@@ -1,17 +1,17 @@
 ---
-title: "Dimensions 集合 (ADO MD) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Dimensions 集合 (ADO MD) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Dimensions
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Dimensions collection [ADO MD]
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eaa2fa057a2c9cb15be8dfdaa55b598d9fc6755
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7a055f46b067a56c54f06a6f000ab349c2b7d78b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dimensions-collection-ado-md"></a>維度集合 (ADO MD)
 包含[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)構成 cube 物件。  

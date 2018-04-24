@@ -1,36 +1,29 @@
 ---
-title: 應用裝置網路組態 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 應用裝置網路組態 Analytics Platform System |Microsoft 文件
+description: 建置和設定的 IP 位址在所有伺服器和從 IHV 工廠，在適用裝置修正組 Analytics Platform System (APS) 的應用裝置。 一傳遞應用裝置，則必須重新 （乙太網路） 的外部 IP 位址設定為符合特定客戶的資料中心的需求。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: 27
-ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>應用裝置網路組態
-SQL Server PDW 應用裝置會建立並設定 IP 位址在所有伺服器和從 IHV 工廠，在適用裝置修正組。 一傳遞應用裝置，則必須重新 （乙太網路） 的外部 IP 位址設定為符合特定客戶的資料中心的需求。  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System 應用裝置網路組態
+建置和設定的 IP 位址在所有伺服器和從 IHV 工廠，在適用裝置修正組 Analytics Platform System (APS) 的應用裝置。 一傳遞應用裝置，則必須重新 （乙太網路） 的外部 IP 位址設定為符合特定客戶的資料中心的需求。  
   
 > [!NOTE]  
 > PDW V1 需要 8 IP 外部 (*客戶對向*) 位址提供給每個控制項的外部連線能力機架的節點。 PDW 2012 (V2) 增強網路通訊，藉由公開從外部透過 IP 位址應用裝置的每個元件。 此方法提供更強固的設計以減少成本，並增加彈性，和可增強資料移動、 載入資料，與 Hadoop 整合。 所需的 IP 位址數目取決於應用裝置中的節點數目和功能，例如 HDInsight 存在。 為了符合這個較大的 IP 位址區塊，客戶應該設定不同的子網路的 PDW。 此子網路中，會有足夠 IP 位址空間 （最多 250 個位址） 可容納多達 5 PDW 機架的元件。  
   
 **網路組態**頁面可讓您檢視 Analytics Platform System 應用裝置上的節點對外開放的網路設定。 此頁面是唯讀的。  
   
-![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig 應用裝置網路](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>若要更新您的應用裝置上的網路設定  
 藉由編輯變更網狀架構網域、 工作負載網域和 HDInsight 網域的 IP 位址**AplianceInfo.xml**檔案，然後執行安裝程式。 這是一種離線作業。 PDW 和 （如果有的話） 的 HDInsight 區域將 IP 位址變更時自動停止。  

@@ -1,32 +1,32 @@
 ---
-title: "為連線物件上的方法呼叫預存程序 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 為連線物件上的方法呼叫預存程序 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab6ec30a05bed643b032845c6ecf9777e1a14453
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6fc8b02ae7390a4ab86b04a501a2e9902f99c25e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>為連線物件上的方法呼叫預存程序
 您可以呼叫預存程序，就好像在開啟相關聯的原生方法**連接**物件。 這是類似於呼叫上的具名的命令**連接**物件。  

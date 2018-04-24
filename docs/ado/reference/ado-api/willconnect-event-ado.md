@@ -1,17 +1,17 @@
 ---
-title: "WillConnect 事件 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: WillConnect 事件 (ADO) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - WillConnect
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - WillConnect event [ADO]
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f80b08a53784a215d58d7f36697207f4d8c3c942
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e6cbf1f81a692fd7dd2b751a516ff2ad99a79ef8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
 **WillConnect**連線開始前，呼叫事件。  
@@ -46,7 +46,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *ConnectionString*  
  A**字串**，其中包含暫止連線的連接資訊。  
   
- *UserID*  
+ *使用者識別碼*  
  A**字串**，其中包含暫止連線的使用者名稱。  
   
  *密碼*  
