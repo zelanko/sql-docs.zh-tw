@@ -24,7 +24,7 @@ ms.lasthandoff: 03/09/2018
 
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 Azure SQL 資料倉儲，並再使用 TRANSACT-SQL 陳述式來建立、 插入和選取的資料。 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 若要完成本快速入門，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 Azure SQL 資料倉儲。
 
 - [安裝[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
@@ -83,7 +83,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="create-a-table"></a>建立資料表
 
-查詢編輯器仍然會連線到*主要*資料庫，但我們想要建立的資料表中*TutorialDB*資料庫。 
+查詢編輯器仍然會連線到*master*資料庫，但我們想要在*TutorialDB*資料庫中建立資料表。 
 
 1. 變更的連接內容**TutorialDB**:
 
