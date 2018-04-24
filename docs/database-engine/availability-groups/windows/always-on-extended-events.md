@@ -13,12 +13,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 caps.latest.revision: 6
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29966508374b8deec94ac60dd151ab7379ede1e7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: 3c8783a42bc64b340858daa8c84f51633f09ffd4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-availability-groups-extended-events"></a>Always On 可用性群組擴充事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,15 +90,15 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 #### <a name="event-information"></a>事件資訊  
   
-|欄|描述|  
+|「資料行」|描述|  
 |------------|-----------------|  
-|名稱|availability_replica_state_change|  
+|[屬性]|availability_replica_state_change|  
 |類別目錄|alwayson|  
-|通道|作業|  
+|通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  
   
-|名稱|Type_name|描述|  
+|[屬性]|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱。|  
@@ -121,15 +121,15 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|欄|描述|  
+|「資料行」|描述|  
 |------------|-----------------|  
-|名稱|availability_group_lease_expired|  
+|[屬性]|availability_group_lease_expired|  
 |類別目錄|alwayson|  
-|通道|作業|  
+|通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  
   
-|名稱|Type_name|描述|  
+|[屬性]|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱。|  
@@ -149,15 +149,15 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|名稱|描述|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
 |類別目錄|alwayson|  
-|通道|分析|  
+|通路|分析|  
   
 #### <a name="event-fields"></a>事件欄位  
   
-|名稱|Type_name|描述|  
+|[屬性]|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱。|  
@@ -186,11 +186,11 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported (多個錯誤號碼)：適用於傳輸或連線問題  
  每個篩選的事件指出在可用性群組所依賴的傳輸或資料庫鏡像端點中發生的連線問題。  
   
-|欄|描述|  
+|「資料行」|描述|  
 |------------|-----------------|  
-|名稱|error_reported<br /><br /> 要篩選的數字：35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
+|[屬性]|error_reported<br /><br /> 要篩選的數字：35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
 |類別目錄|錯誤|  
-|通道|管理|  
+|通路|管理|  
   
 #### <a name="error-numbers-to-filter"></a>要篩選的錯誤號碼  
   
@@ -249,17 +249,17 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|欄|描述|  
+|「資料行」|描述|  
 |------------|-----------------|  
-|名稱|data_movement_suspend_resume|  
+|[屬性]|data_movement_suspend_resume|  
 |類別目錄|Alwayson|  
-|通道|作業|  
+|通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  
   
 ||||  
 |-|-|-|  
-|名稱|Type_name|描述|  
+|[屬性]|Type_name|描述|  
 |availability_group_id|guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱 (如果有)。|  
 |availability_replica_id|guid|可用性複本的識別碼。|  
@@ -292,15 +292,15 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|欄|描述|  
+|「資料行」|描述|  
 |------------|-----------------|  
-|名稱|alwayson_ddl_execution|  
+|[屬性]|alwayson_ddl_execution|  
 |類別目錄|alwayson|  
-|通道|分析|  
+|通路|分析|  
   
 #### <a name="event-fields"></a>事件欄位  
   
-|名稱|Type_name|描述|  
+|[屬性]|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱。|  
@@ -325,15 +325,15 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|欄|描述|  
+|「資料行」|描述|  
 |------------|-----------------|  
-|名稱|availability_replica_manager_state_change|  
+|[屬性]|availability_replica_manager_state_change|  
 |類別目錄|alwayson|  
-|通道|作業|  
+|通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  
   
-|名稱|Type_name|描述|  
+|[屬性]|Type_name|描述|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|可用性複本管理員的目前狀態。<br /><br /> 線上存取<br /><br /> 離線<br /><br /> WaitingForClusterCommunication|  
   
@@ -356,11 +356,11 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|欄|描述|  
+|「資料行」|描述|  
 |------------|-----------------|  
-|名稱|error_reported<br /><br /> 錯誤號碼 1480：REPLICATION_TYPE_MSG 資料庫 "DATABASE_NAME" 因為 REASON_MSG 從 “OLD_ROLE” 角色變更為 “NEW_ROLE”|  
+|[屬性]|error_reported<br /><br /> 錯誤號碼 1480：REPLICATION_TYPE_MSG 資料庫 "DATABASE_NAME" 因為 REASON_MSG 從 “OLD_ROLE” 角色變更為 “NEW_ROLE”|  
 |類別目錄|錯誤|  
-|通道|管理|  
+|通路|管理|  
   
 #### <a name="alwaysonhealth-session-definition"></a>alwayson_health 工作階段定義  
   

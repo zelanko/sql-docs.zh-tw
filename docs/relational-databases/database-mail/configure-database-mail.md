@@ -2,7 +2,7 @@
 title: 設定 Database Mail | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mail
@@ -47,11 +47,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 258e534b2291712f322cfb1dd611c3fb7a0c876c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,7 +195,7 @@ ms.lasthandoff: 04/10/2018
  **帳戶名稱**  
  選取要檢視、更新或刪除的帳戶。  
   
- **Delete**  
+ **刪除**  
  刪除選取的帳戶。 您必須從相關聯的設定檔移除這個帳戶，或先刪除相關聯的設定檔，再刪除選取的帳戶。  
   
  **說明**  
@@ -225,7 +225,7 @@ ms.lasthandoff: 04/10/2018
  **基本驗證**  
  指定 SMTP 伺服器所需的使用者名稱和密碼。  
   
- **使用者名稱**  
+ **User name**  
  檢視或更新 Database Mail 用來登入 SMTP 伺服器的使用者名稱。 如果 SMTP 伺服器需要基本驗證，則使用者名稱是必要的。  
   
  **密碼**  
@@ -275,7 +275,7 @@ ms.lasthandoff: 04/10/2018
  **設定檔名稱**  
  選取要管理之設定檔的名稱。  
   
- **Delete**  
+ **刪除**  
  刪除選取的設定檔。 系統會提示您選取 [是] 來刪除選取的設定檔，並將任何未送出的郵件設為失敗，或選取 [否]，只有在沒有未送出的郵件時才刪除選取的設定檔。  
   
  **說明**  
@@ -284,7 +284,7 @@ ms.lasthandoff: 04/10/2018
  **SMTP 帳戶**  
  為設定檔選擇一或多個帳戶。 容錯移轉優先權會設定在發生容錯移轉時，Database Mail 使用帳戶的順序。  
   
- **加入**  
+ **[加入]**  
  將帳戶加入至設定檔。  
   
  **移除**  
@@ -296,7 +296,7 @@ ms.lasthandoff: 04/10/2018
  **下移**  
  減少選取之帳戶的容錯移轉優先權。  
   
- **優先順序**  
+ **優先權**  
  檢視帳戶的目前容錯移轉優先權。  
   
  **帳戶名稱**  
@@ -369,7 +369,7 @@ ms.lasthandoff: 04/10/2018
   
  設定檔可能是預設設定檔。 在此情況下，使用者或角色不必明確指定設定檔，就能使用設定檔傳送電子郵件。 如果傳送電子郵件訊息的使用者或角色有預設的私人設定檔，Database Mail 就會使用該設定檔。 如果使用者或角色沒有預設的私人設定檔， **sp_send_dbmail** 會使用 **msdb** 資料庫的預設公用設定檔。 如果沒有使用者或角色的預設私人設定檔，而且沒有資料庫的預設公用設定檔， **sp_send_dbmail** 會傳回錯誤。  
   
- **使用者名稱**  
+ **User name**  
  選取 **msdb** 資料庫中使用者或角色的名稱。  
   
  **存取**  

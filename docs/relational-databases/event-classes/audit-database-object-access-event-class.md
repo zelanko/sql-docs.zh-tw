@@ -1,34 +1,35 @@
 ---
-title: "Audit Database Object Access 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Audit Database Object Access 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Database Object Access event class
 ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68f8d3bc8bacbda28ef027e1fff05e61ceadc7e1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 455295450bd8466cae8ff294f279a2fd307092ee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-database-object-access-event-class"></a>稽核資料庫物件存取事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-存取資料庫物件 (例如：結構描述) 時，會發生 **Audit Database Object Access** 事件類別。  
+  存取資料庫物件 (例如：結構描述) 時，會發生 **Audit Database Object Access** 事件類別。  
   
 ## <a name="audit-database-object-access-event-class-data-columns"></a>Audit Database Object Access 事件類別資料行  
   

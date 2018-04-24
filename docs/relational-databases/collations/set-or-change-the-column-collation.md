@@ -1,35 +1,36 @@
 ---
-title: "設定或變更資料行定序 | Microsoft Docs"
-ms.custom: 
+title: 設定或變更資料行定序 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: collations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4efa74ea16002a35c372d90b9c69fca88fab8aef
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6fd5cd964fa91af1cc5dad294cb413faab0ca40d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-or-change-the-column-collation"></a>設定或變更資料行定序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-您可以透過為資料表中特定資料行指定不同的定序並使用下列其中一種方法，覆寫 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**和 **ntext** 資料的資料庫定序：  
+  您可以透過為資料表中特定資料行指定不同的定序並使用下列其中一種方法，覆寫 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**和 **ntext** 資料的資料庫定序：  
   
 -   [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)的 COLLATE 子句。 例如：  
   

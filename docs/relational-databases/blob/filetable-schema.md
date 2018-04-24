@@ -1,34 +1,34 @@
 ---
-title: "FileTable 結構描述 | Microsoft Docs"
-ms.custom: 
+title: FileTable 結構描述 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e19f00c854bdbc79acc2d83f3d3c8095166ce5a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 117a9e10a07960bc50968d3141e9f5e0294cb7de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filetable-schema"></a>FileTable 結構描述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-描述 FileTable 預先定義且固定的結構描述。  
+  描述 FileTable 預先定義且固定的結構描述。  
   
 |檔案屬性名稱|型別|大小|預設|描述|檔案系統可存取性|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  

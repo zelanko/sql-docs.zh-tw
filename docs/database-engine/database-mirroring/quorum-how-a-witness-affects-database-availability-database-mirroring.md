@@ -1,15 +1,16 @@
 ---
-title: "仲裁：見證如何影響資料庫可用性 (資料庫鏡像) | Microsoft Docs"
-ms.custom: 
+title: 仲裁：見證如何影響資料庫可用性 (資料庫鏡像) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - quorum [SQL Server], database mirroring
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - full quorum [SQL Server]
 - high-availability mode [SQL Server]
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f01ca52594ddf49dc65f48099822b2a61a92f11
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1d5c7ec832be2e7771384c5919ccd9cca06d8859
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：見證如何影響資料庫可用性 (資料庫鏡像)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 每當設定資料庫鏡像工作階段的見證時，就需要「仲裁」。 仲裁是資料庫鏡像工作階段中的多個伺服器執行個體彼此連接時所存在的關係。 一般而言，仲裁涉及三個互連的伺服器執行個體。 設定見證之後，需要有仲裁才能使用資料庫。 仲裁是專為具有自動容錯移轉的高安全性模式而設計，可確保資料庫一次僅能由一個夥伴擁有。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  每當設定資料庫鏡像工作階段的見證時，就需要「仲裁」。 仲裁是資料庫鏡像工作階段中的多個伺服器執行個體彼此連接時所存在的關係。 一般而言，仲裁涉及三個互連的伺服器執行個體。 設定見證之後，需要有仲裁才能使用資料庫。 仲裁是專為具有自動容錯移轉的高安全性模式而設計，可確保資料庫一次僅能由一個夥伴擁有。  
   
  如果特定的伺服器執行個體與鏡像工作階段的連接中斷，該執行個體便會失去仲裁。 如果沒有任何伺服器執行個體是處於連接狀態，則工作階段會失去仲裁，而資料庫也會變成無法使用。 仲裁有三種可能的類型：  
   

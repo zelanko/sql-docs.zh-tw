@@ -1,16 +1,16 @@
 ---
-title: "接聽程式、用戶端連接和應用程式容錯移轉 | Microsoft Docs"
-ms.custom: 
+title: 接聽程式、用戶端連接和應用程式容錯移轉 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 21197cd149762c34f8f44a1050a979458d6f7045
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>接聽程式、用戶端連接和應用程式容錯移轉
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-此主題包含有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用戶端連接和應用程式容錯移轉功能的考量資訊。  
+  此主題包含有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用戶端連接和應用程式容錯移轉功能的考量資訊。  
   
 > [!NOTE]  
 >  對於大多數的一般接聽程式組態，您只需要使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式或 PowerShell 指令程式，就可以建立第一個可用性群組接聽程式。 如需詳細資訊，請參閱本主題稍後的 [相關工作](#RelatedTasks)。  

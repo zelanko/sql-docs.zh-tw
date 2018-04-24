@@ -1,34 +1,33 @@
 ---
-title: "建立 XML 資料行檢視 | Microsoft Docs"
-ms.custom: 
+title: 建立 XML 資料行檢視 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: dbe-xml
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4b8bd242925ef871daa9842bc7489c364ec0b29
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: b0225ca7a583e30cb0e237a90ca69314d5f841ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-views-over-xml-columns"></a>建立 XML 資料行檢視
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-您可以使用 **xml** 類型的資料行建立檢視。 下列範例會建立一個檢視，而在此檢視中會使用 `xml` xml **資料類型的** value() **方法，擷取** 類型資料行中的值。  
+  您可以使用 **xml** 類型的資料行建立檢視。 下列範例會建立一個檢視，而在此檢視中會使用 `xml` xml **資料類型的** value() **方法，擷取** 類型資料行中的值。  
   
 ```  
 -- Create the table.  

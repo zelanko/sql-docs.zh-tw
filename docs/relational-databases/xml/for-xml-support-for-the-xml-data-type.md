@@ -1,35 +1,35 @@
 ---
-title: "XML 資料類型的 FOR XML 支援 | Microsoft Docs"
-ms.custom: 
+title: XML 資料類型的 FOR XML 支援 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db0cb5f5484415cdac27c18bf177f3b06eed8509
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: dc77f2c8e63c28386d05c6430e38dbc5bc2cbd2a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 資料類型的 FOR XML 支援
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-如果 FOR XML 查詢在 SELECT 子句中指定 **xml** 類型的資料行，無論您是否指定 ELEMENTS 指示詞，資料行值都會對應為傳回的 XML 中之元素。 **xml** 類型資料行中的任何 XML 宣告都沒有序列化。  
+  如果 FOR XML 查詢在 SELECT 子句中指定 **xml** 類型的資料行，無論您是否指定 ELEMENTS 指示詞，資料行值都會對應為傳回的 XML 中之元素。 **xml** 類型資料行中的任何 XML 宣告都沒有序列化。  
   
  例如，下列查詢會從 `BusinessEntityID`XML `FirstName`類型的 `LastName` 資料行擷取客戶連絡資訊，例如 `AdditionalContactInfo` 、 **和** 資料行，以及電話號碼。  
   

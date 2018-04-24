@@ -1,31 +1,33 @@
 ---
-title: "Transact-SQL 程式碼片段 | Microsoft 文件"
-ms.custom: 
+title: Transact-SQL 程式碼片段 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eee672ae46777c21a896599d4c3fbf7819e7d9
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d9c533ab350b4d0cc256200b7844754a7921f1c6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 程式碼片段
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或區塊之基本結構的範本。 當您在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中加入陳述式時，您可以使用程式碼片段做為起點。 您可以插入 SQL Server 所提供的預先定義程式碼片段，或是建立您自己的程式碼片段。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]程式碼片段是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或區塊之基本結構的範本。 當您在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中加入陳述式時，您可以使用程式碼片段做為起點。 您可以插入 SQL Server 所提供的預先定義程式碼片段，或是建立您自己的程式碼片段。  
   
 ## <a name="transact-sql-code-snippet-tasks"></a>Transact-SQL 程式碼片段工作  
   

@@ -2,7 +2,7 @@
 title: 建立內含資料行的索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -28,11 +28,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b3f9d4311ad0cf14254e2b5f4efe5930b1a74f51
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -97,13 +98,13 @@ ms.lasthandoff: 04/10/2018
   
 7.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至索引之一或多個資料表資料行的核取方塊。  
   
-8.  按一下 **[確定]**。  
+8.  按一下 [確定] 。  
   
 9. 按一下 **[包含的資料行]** 索引標籤底下的 **[加入]**。  
   
 10. 在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至索引中作為非索引鍵資料行之資料表資料行的核取方塊。  
   
-11. 按一下 **[確定]**。  
+11. 按一下 [確定] 。  
   
 12. 在 **[新增索引]** 對話方塊中，按一下 **[確定]**。  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```sql  
     USE AdventureWorks2012;  

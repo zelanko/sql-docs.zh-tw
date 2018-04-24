@@ -1,16 +1,16 @@
 ---
-title: "伺服器層級角色 | Microsoft Docs"
-ms.custom: 
+title: 伺服器層級角色 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.Security.NT_AUTHORITY.SYSTEM
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - server-level roles [SQL Server]
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a095d9f3e7839a2f3cfa14a2bf49790776f0cd1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7c77f856173a581fbab9d462af15279b5cc983a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -83,18 +84,18 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>處理伺服器層級角色  
  下表將說明可用來處理伺服器層級角色的命令、檢視和函數。  
   
-|功能|型別|描述|  
+|功能|類型|描述|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|中繼資料|傳回伺服器層級角色的清單。|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|中繼資料|傳回伺服器層級角色成員的相關資訊。|  
 |[sp_srvrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)|中繼資料|顯示伺服器層級角色的權限。|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|中繼資料|指出 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入是否為指定之伺服器層級角色的成員。|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)|中繼資料|針對每個伺服器層級角色的每個成員，各傳回一個資料列。|  
-|[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|Command|加入一個登入，做為伺服器層級角色的成員。 已被取代。 請改用 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) 。|  
-|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|Command|從伺服器層級角色移除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入或是 Windows 使用者或群組。 已被取代。 請改用 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) 。|  
-|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-role-transact-sql.md)|Command|建立使用者定義伺服器角色。|  
-|[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)|Command|變更伺服器角色的成員資格或變更使用者定義伺服器角色的名稱。|  
-|[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-role-transact-sql.md)|Command|移除使用者定義伺服器角色。|  
+|[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|命令|加入一個登入，做為伺服器層級角色的成員。 已被取代。 請改用 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) 。|  
+|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|命令|從伺服器層級角色移除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入或是 Windows 使用者或群組。 已被取代。 請改用 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) 。|  
+|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-role-transact-sql.md)|命令|建立使用者定義伺服器角色。|  
+|[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)|命令|變更伺服器角色的成員資格或變更使用者定義伺服器角色的名稱。|  
+|[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-role-transact-sql.md)|命令|移除使用者定義伺服器角色。|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|函數|判斷伺服器角色的成員資格。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae32f75a30f38c3f2c86370afbb49bbf6e6031b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: da4c628ad102eb7115e0cab2e2ed7a73c7ed9c4f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|18456|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -68,9 +68,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="additional-error-information"></a>其他錯誤資訊  
 為增加安全性，傳回用戶端的錯誤訊息會刻意隱藏驗證錯誤的原本形式。 不過，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中，會有對應的錯誤包含對應至驗證失敗狀況的錯誤狀態。 請將錯誤狀態與下列清單做比較，以判斷登入失敗的原因。  
   
-|State|Description|  
+|State|描述|  
 |---------|---------------|  
-|1|無錯誤資訊。 這個狀態通常表示您沒有接收錯誤詳細資料的權限。 如需詳細資訊，請連絡 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員。|  
+|@shouldalert|無錯誤資訊。 這個狀態通常表示您沒有接收錯誤詳細資料的權限。 如需詳細資訊，請連絡 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員。|  
 |2|使用者識別碼無效。|  
 |5|使用者識別碼無效。|  
 |6|嘗試將 Windows 登入名稱用於 SQL Server 驗證。|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>範例  
 在此範例中，驗證錯誤狀態為 8。 這表示密碼不正確。  
   
-|日期|Source|訊息|  
+|date|來源|訊息|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|登入|錯誤: 18456，嚴重性: 14，狀態: 8。|  
 |2007-12-05 20:12:56.34|登入|使用者 '<user_name>' 登入失敗。 [CLIENT: <ip address>]|  

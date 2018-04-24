@@ -2,7 +2,7 @@
 title: 建立、修改及卸除空間索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: spatial
@@ -25,11 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ad9c53df2826c08a96e592e49fc760eb09b8a4a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ ms.lasthandoff: 04/10/2018
   
      如需這些屬性的詳細資訊，請參閱 [索引屬性 F1 說明](../../relational-databases/indexes/index-properties-f1-help.md)。  
   
-12. 按一下 **[確定]**。  
+12. 按一下 [確定] 。  
   
 > [!NOTE]  
 >  若要在相同或不同空間資料行上建立另一個空間索引，請重複上述步驟。  

@@ -1,34 +1,35 @@
 ---
-title: "Audit Add Member to DB Role 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Audit Add Member to DB Role 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Add Member to DB Role event class
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5be4589264cba5226119a1d46145f8cb77d3181e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8686715a9fb970993b5486da33cb4d709d082287
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-當登入加入到資料庫角色或從其中移除時，就會發生 **Audit Add Member to DB Role** 事件類別。 這個事件類別是與 **sp_addrolemember**、 **sp_changegroup**及 **sp_droprolemember** 預存程序搭配使用。  
+  當登入加入到資料庫角色或從其中移除時，就會發生 **Audit Add Member to DB Role** 事件類別。 這個事件類別是與 **sp_addrolemember**、 **sp_changegroup**及 **sp_droprolemember** 預存程序搭配使用。  
   
 ## <a name="audit-add-member-to-db-role-event-class-data-columns"></a>Audit Add Member to DB Role 事件類別資料行  
   

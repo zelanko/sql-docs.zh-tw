@@ -1,37 +1,38 @@
 ---
-title: "SQL Server 稽核記錄 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 稽核記錄 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e9b78d8f726e89b0807ea04bfb52f3732226741c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ee9a108347a7c480ff0986de2e9041e3eb3a5805
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的稽核功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  稽核是由零或多個稽核動作項目所組成，這些項目會記錄到稽核 *「目標」*(Target)。 稽核目標可以是二進位檔案、Windows 應用程式事件記錄檔或 Windows 安全性事件記錄檔。 傳送給目標的記錄包含下表所述的項目：  
   
-|資料行名稱|描述|型別|永遠可使用|  
+|資料行名稱|描述|類型|永遠可使用|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|可稽核的動作引發時的日期/時間。|**datetime2**|是|  
 |**sequence_no**|追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。|**int**|是|  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |**陳述式**|TSQL 陳述式 (如果有的話)|**nvarchar(4000)**|否|  
 |**additional_information**|有關儲存為 XML 之事件的任何其他資訊。|**nvarchar(4000)**|否|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  某些動作不會填入資料行的值，因為它可能不適用於此動作。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會將字元欄位的 4000 個字元資料儲存在稽核記錄中。 當從可稽核的動作傳回的 **additional_information** 和 **statement** 值傳回 4000 個以上的字元時， **sequence_no** 資料行會用來將多筆記錄寫入單一稽核動作的稽核報表中，以記錄這些資料。 此程序如下：  

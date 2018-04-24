@@ -1,33 +1,34 @@
 ---
-title: "檢視 Facet 對話方塊 | Microsoft 文件"
-ms.custom: 
+title: 檢視 Facet 對話方塊 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.viewfacet.f1
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abbe4aa8bc606437662fb92bb25f8d80002e70e8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1c3bc1e8e18bc1e3458b44a19cbbfa5e07c559c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-facets-dialog-box"></a>檢視 Facet 對話方塊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此對話方塊可檢視原則式管理 Facet 的屬性。 建立 Facet 時會定義 Facet 的屬性，而且不能使用這個對話方塊加以變更。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此對話方塊可檢視以原則為基礎之管理 Facet 的屬性。 建立 Facet 時會定義 Facet 的屬性，而且不能使用這個對話方塊加以變更。  
   
 ## <a name="options"></a>選項。  
  **Facet**  

@@ -2,7 +2,7 @@
 title: SQL Server 交易鎖定與資料列版本設定指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -23,11 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a34b0dcdca05996db0990722cbe0456cdab3d50b
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d0c8e2320325a00e0729562c07aa328ef8ddafe0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -443,7 +444,7 @@ GO
 |**共用 (S)**|是|是|是|否|否|否|  
 |**更新 (U)**|是|是|否|否|否|否|  
 |**意圖獨佔 (IX)**|是|否|否|是|否|否|  
-|**以意圖獨佔共用 (SIX)**|是|否|否|否|否|否|  
+|**與意圖獨佔共用 (SIX)**|是|否|否|否|否|否|  
 |**獨占 (X)**|否|否|否|否|否|否|  
   
 > [!NOTE]  
@@ -467,10 +468,10 @@ GO
 -   資料列代表保護索引項的鎖定模式。  
 -   模式代表所使用的合併鎖定模式。 索引鍵範圍鎖定模式由兩個部份組成。 第一個部份代表用來鎖定索引鍵範圍的鎖定類型 (Range*T*)，第二個部份代表用來鎖定特定索引鍵的鎖定類型 (*K*)。 這兩個部份使用連字號 (-) 來連接，例如 Range*T*-*K*。  
   
-    |範圍|資料列|模式|描述|  
+    |範圍|資料列|[模式]|描述|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|共用範圍，共用資源鎖定；可序列化範圍掃描。|  
-    |RangeS|U|RangeS-U|共用範圍，更新資源鎖定；可序列化更新掃描。|  
+    |RangeS|u|RangeS-U|共用範圍，更新資源鎖定；可序列化更新掃描。|  
     |RangeI|Null|RangeI-N|插入範圍，Null 資源鎖定；在插入新的索引鍵到索引之前用來測試範圍。|  
     |RangeX|X|RangeX-X|獨占範圍，獨占資源鎖定；在範圍內更新索引鍵時使用。|  
   

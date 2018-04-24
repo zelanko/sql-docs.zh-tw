@@ -1,34 +1,35 @@
 ---
-title: "Query Notifications 事件類別目錄 | Microsoft Docs"
-ms.custom: 
+title: Query Notifications 事件類別目錄 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event classes [SQL Server], Query Notifications event category
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
-caps.latest.revision: 
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9256c4d3ea467012053a2a6251e465de8a1c3bd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5faf3da1c8770ca04ffa7a92a5502f0f76073f45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-notifications-event-category"></a>查詢通知事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**查詢通知** 事件類別目錄含有會回報資訊的事件類別，而開發人員和管理員可以使用這項資訊來監視並疑難排解查詢通知。  
+  **查詢通知** 事件類別目錄含有會回報資訊的事件類別，而開發人員和管理員可以使用這項資訊來監視並疑難排解查詢通知。  
   
 ## <a name="in-this-section"></a>本節內容  
  [QN:Dynamics 事件類別](../../relational-databases/event-classes/qn-dynamics-event-class.md)  

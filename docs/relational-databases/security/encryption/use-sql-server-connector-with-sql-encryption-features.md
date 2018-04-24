@@ -1,34 +1,36 @@
 ---
-title: "搭配使用 SQL Server 連接器與 SQL 加密功能 | Microsoft 文件"
-ms.custom: 
+title: 搭配使用 SQL Server 連接器與 SQL 加密功能 | Microsoft 文件
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 1a3f616c25da5e01234d6a8d4145783053e8bb11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>搭配使用 SQL Server 連接器與 SQL 加密功能
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] 使用 Azure Key Vault 所保護的非對稱金鑰進行的一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密活動，包括下列三個部分。  
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+  使用 Azure 金鑰保存庫所保護之非對稱金鑰進行的一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密活動，包括下列三個區域。  
   
 -   使用 Azure 金鑰保存庫中的非對稱金鑰進行透明資料加密  
   

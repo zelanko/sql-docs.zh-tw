@@ -1,16 +1,16 @@
 ---
-title: "啟用和停用異動資料擷取 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 啟用和停用異動資料擷取 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c19f08347185ee6ea46977df74d0317041beb020
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 47b7707b2c4b9763066ac3375298f7cbd604bd60
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>啟用和停用異動資料擷取 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-此主題描述如何針對資料庫和資料表啟用及停用異動資料擷取。  
+  此主題描述如何針對資料庫和資料表啟用及停用異動資料擷取。  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>針對資料庫啟用異動資料擷取  
  針對個別資料表建立擷取執行個體之前， **sysadmin** 固定伺服器角色的成員必須先啟用異動資料擷取的資料庫。 這項步驟可透過在資料庫內容中執行 [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) 預存程序完成。 若要判斷資料庫是否已啟用，請查詢 **sys.databases** 目錄檢視中的 **is_cdc_enabled** 資料行。  

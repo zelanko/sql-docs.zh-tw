@@ -1,33 +1,35 @@
 ---
-title: "資料庫物件 (擴充屬性頁面) | Microsoft 文件"
-ms.custom: 
+title: 資料庫物件 (擴充屬性頁面) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a40f19346fe5c40c4c7f6aa1426d2a58081e564a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 17c5e31d67ee1e9f44ae6a2fd24749117f86ecf3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-object-extended-properties-page"></a>資料庫物件 (擴充屬性頁面)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 擴充屬性讓您能夠將自訂屬性新增至資料庫物件。 使用此頁面來檢視或修改選取物件的擴充屬性。 所有資料庫物件類型的 [擴充屬性] 頁面都是相同的。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  擴充屬性讓您能夠將自訂屬性加入資料庫物件中。 使用此頁面來檢視或修改選取物件的擴充屬性。 所有資料庫物件類型的 [擴充屬性] 頁面都是相同的。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **[資料庫備份]**  

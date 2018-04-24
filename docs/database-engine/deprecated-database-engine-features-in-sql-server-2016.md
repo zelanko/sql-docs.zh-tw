@@ -2,7 +2,7 @@
 title: SQL Server 2016 中已取代的資料庫引擎功能 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-engine
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ffe97ae02f04c6ff8df04755d24ea6f771133cc6
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: f062de9b5ace5629a4c6b2a5eb2660727b802092
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中已被取代的 Database Engine 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |遠端伺服器|SET REMOTE_PROC_TRANSACTIONS|使用連結的伺服器取代遠端伺服器。|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Set 選項|用於**SET ROWCOUNT** 、 **INSERT**, **UPDATE**陳述式的 **DELETE** |TOP 關鍵字|SET ROWCOUNT|109|  
 |資料表提示|沒有括號的 HOLDLOCK 資料表提示。|請使用有括號的 HOLDLOCK。|沒有括號的 HOLDLOCK 資料表提示。|167|  
-|工具|sqlmaint 公用程式|請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫功能|無|無|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server 的未來版本不支援的功能  
  下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可支援下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能，但會在更新的版本中移除。 確實的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本尚未決定。  
@@ -158,7 +157,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|當做 DML 陳述式中之資料行名稱的 ROWGUIDCOL。|使用 $rowguid。|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|當做 DML 陳述式中之資料行名稱的 IDENTITYCOL。|使用 $identity。|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 # 和 ## 當做暫存資料表和暫存預存程序名稱。|請至少使用一個其他字元。|做為暫存資料表和預存程序名稱的 '#' 和 '##'。|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 \@、\@\@ 或 \@\@ 作為 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼。|請勿使用 \@ 或 \@\@ 或是以 \@\@ 開頭的名稱，作為識別碼。|'\@' 和以 '\@\@' 開頭的名稱作為 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 \@、\@\@ 或 \@\@ 作為 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼。|請勿使用 \@ 或 \@\@，或是以 \@\@ 開頭的名稱，作為識別碼。|'\@' 和以 '\@\@' 開頭的名稱作為 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 DEFAULT 關鍵字當做預設值。|請勿使用 DEFAULT 字當做預設值。|當做預設值的 DEFAULT 關鍵字|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|使用空格當做資料表提示之間的分隔符號。|使用逗號來分隔資料表提示。|沒有逗號的多個資料表提示|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|在 90 相容性模式中，彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (*)。|請使用 COUNT_BIG (*)。|沒有 COUNT_BIG(*) 的索引檢視表 SELECT 清單|2|  

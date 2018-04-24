@@ -1,16 +1,16 @@
 ---
-title: "使用插入或刪除的資料表 | Microsoft 文件"
-ms.custom: 
+title: 使用插入或刪除的資料表 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inserted tables
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 297a59dd264361ece94525f1f8a046a0cccf2dad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入或刪除的資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-DML 觸發程序陳述式使用兩個特殊的資料表：已刪除的資料表和已插入的資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存、常駐記憶體的資料表來測試某些資料修改的效果，以及設定 DML 觸發程序動作的條件。 您無法直接修改這些資料表的資料，或是在這些資料表上執行資料定義語言 (DDL) 作業，例如 CREATE INDEX。  
+  DML 觸發程序陳述式使用兩個特殊的資料表：已刪除的資料表和已插入的資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存、常駐記憶體的資料表來測試某些資料修改的效果，以及設定 DML 觸發程序動作的條件。 您無法直接修改這些資料表的資料，或是在這些資料表上執行資料定義語言 (DDL) 作業，例如 CREATE INDEX。  
   
  在 DML 觸發程序中，inserted 和 deleted 資料表主要是用來執行下列動作：  
   
@@ -46,7 +47,7 @@ DML 觸發程序陳述式使用兩個特殊的資料表：已刪除的資料表�
   
 -   尋找資料修改前後之資料表狀態的差異，並依據這些差異採取動作。  
   
- deleted 資料表會儲存被 DELETE 及 UPDATE 陳述式影響的資料列副本。 在執行 DELETE 或 UPDATE 陳述式時，資料列會從觸發程序資料表刪除，並傳送到 deleted 資料表。 deleted 資料表及其觸發程序資料表兩者通常不會有相同的資料列。  
+ deleted 資料表會儲存被 DELETE 及 UPDATE 陳述式影響的資料列副本。 在執行 DELETE 或 UPDATE 陳述式時，資料列會從觸發程序資料表刪除，並傳送到 deleted 資料表。 deleted 資料表及其觸發程序資料表兩者通常不會有資料列。  
   
  inserted 資料表會儲存被 INSERT 及 UPDATE 陳述式影響的資料列副本。 在插入或更新交易期間，新的資料列會同時加入 inserted 資料表和觸發程序資料表。 inserted 資料表中的資料列即為觸發程序資料表中新資料列的副本。  
   

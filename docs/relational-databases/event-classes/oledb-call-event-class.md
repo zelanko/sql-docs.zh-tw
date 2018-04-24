@@ -1,34 +1,35 @@
 ---
-title: "OLEDB Call 事件類別 | Microsoft Docs"
-ms.custom: 
+title: OLEDB Call 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5eb28eace8c8aa1e5f37e952207b6cf18543251
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b7b7e2d268710a5df4afeed7bb352fefd41030ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**OLEDB Call** 事件類別會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對分散式查詢和遠端預存程序呼叫 OLE DB 提供者時發生。  
+  **OLEDB Call** 事件類別會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對分散式查詢和遠端預存程序呼叫 OLE DB 提供者時發生。  
   
  將 **OLEDB Call** 事件類別納入追蹤，可僅針對不要求資料或不適用於 **QueryInterface** 方法的呼叫進行監視。 在 **OLEDB Call** 事件類別納入追蹤後，產生的負擔量將取決於追蹤期間 OLE DB 呼叫對於資料庫的發生頻率。 如果時常發生呼叫，追蹤就可能會嚴重地影響效能。  
   

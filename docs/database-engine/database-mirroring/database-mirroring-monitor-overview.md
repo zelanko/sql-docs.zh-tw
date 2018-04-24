@@ -1,36 +1,36 @@
 ---
-title: "資料庫鏡像監視器概觀 | Microsoft Docs"
-ms.custom: 
+title: 資料庫鏡像監視器概觀 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66fcc054ffc20f45534845376c356745581db02d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 3a15bc793ad97e19a80e13d6b79a74f6bf677592
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-monitor-overview"></a>資料庫鏡像監視器概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-如果您擁有正確的權限，就可以使用「資料庫鏡像監視器」來監視伺服器執行個體上的任何鏡像資料庫子集。 監視可以讓您確認資料庫鏡像工作階段中的資料是否有流動，以及資料流動是否順暢。 「資料庫鏡像監視器」對於疑難排解資料流動減緩的原因也很有用。  
+  如果您擁有正確的權限，就可以使用「資料庫鏡像監視器」來監視伺服器執行個體上的任何鏡像資料庫子集。 監視可以讓您確認資料庫鏡像工作階段中的資料是否有流動，以及資料流動是否順暢。 「資料庫鏡像監視器」對於疑難排解資料流動減緩的原因也很有用。  
   
  您可以註冊任何鏡像資料庫，以便在各容錯移轉夥伴上個別進行監視。 當您註冊資料庫時，「資料庫鏡像監視器」會快取下列有關資料庫的資訊：  
   

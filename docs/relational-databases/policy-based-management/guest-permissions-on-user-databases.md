@@ -1,33 +1,34 @@
 ---
-title: "使用者資料庫的 Guest 權限 | Microsoft Docs"
-ms.custom: 
+title: 使用者資料庫的 Guest 權限 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dcfa237b26d7a2bf27598483bb4b8889111f7255
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3f60f2892375b18623924a0dcefe57f18d66b8a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guest-permissions-on-user-databases"></a>使用者資料庫的 Guest 權限
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此規則會判斷來賓使用者是否有權存取資料庫。 此規則只適用於使用者資料庫。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此規則會判斷 guest 使用者是否有權存取資料庫。 此規則只適用於使用者資料庫。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  
  撤銷 guest 使用者存取資料庫的權限 (如果不需要的話)。  

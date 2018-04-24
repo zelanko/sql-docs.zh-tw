@@ -1,30 +1,32 @@
 ---
-title: "微調可用性群組的壓縮 | Microsoft Docs"
-ms.custom: 
+title: 微調可用性群組的壓縮 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/22/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36179f5848f1e5bd78176fc4dd508de5c31f70bd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3e1915f1cde69cf309c602cd4782056b4e083853
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tune-compression-for-availability-group"></a>微調可用性群組的壓縮
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 依預設，SQL Server 會適合可用性群組的時機壓縮資料流。 壓縮會減少網路流量、增加 CPU 負載，並可能誘使延遲。 您必須是系統管理員 (sysadmin) 固定伺服器角色的成員，才能啟用壓縮。 下表顯示 SQL Server 針對可用性群組記錄資料流使用壓縮的時機︰
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+依預設，SQL Server 會適合可用性群組的時機壓縮資料流。 壓縮會減少網路流量、增加 CPU 負載，並可能誘使延遲。 您必須是系統管理員 (sysadmin) 固定伺服器角色的成員，才能啟用壓縮。 下表顯示 SQL Server 針對可用性群組記錄資料流使用壓縮的時機︰
 
 | 狀況 | 壓縮設定
 | ---- | ----

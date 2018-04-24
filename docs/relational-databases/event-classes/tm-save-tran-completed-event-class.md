@@ -1,34 +1,35 @@
 ---
-title: "TM: Save Tran Completed 事件類別 | Microsoft 文件"
-ms.custom: 
+title: 'TM: Save Tran Completed 事件類別 | Microsoft 文件'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Save Tran Completed event class'
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 778d2c82a46ce093abd4de7826e1676535c661d7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 04b6487c1690462639bc3e9be1b391857f4ac528
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-TM: Save Tran Completed 事件類別指出已完成 SAVE TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  
+  TM: Save Tran Completed 事件類別指出已完成 SAVE TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  
   
 ## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM: Save Tran Completed 事件類別資料行  
   

@@ -1,27 +1,28 @@
 ---
-title: "Analysis Services 與 AlwaysOn 可用性群組 | Microsoft Docs"
-ms.custom: 
+title: Analysis Services 與 AlwaysOn 可用性群組 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f6c3afd409b4c1d7ddf2ad5e099078dfa5238f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4340ed907ffac7f4f0e53540061907a391362ed2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  這些步驟摘錄自[設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)，文中提供執行這項工作的其他資訊和替代指示。  
   
-2.  依序展開 [AlwaysOn 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
 3.  按一下要變更複本的可用性群組。 展開 **[可用性複本]**。  
   
@@ -201,7 +202,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中，連接至次要複本。  
   
-5.  依序展開 [AlwaysOn 高可用性] 節點和 [可用性群組] 節點。  
+5.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
 6.  以滑鼠右鍵按一下要容錯移轉的可用性群組，然後選取 [容錯移轉] 命令。 這會啟動 [容錯移轉可用性群組精靈]。 使用精靈選擇複本，以做為新的主要複本。  
   

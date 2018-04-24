@@ -1,34 +1,35 @@
 ---
-title: "CursorUnprepare 事件類別 | Microsoft Docs"
-ms.custom: 
+title: CursorUnprepare 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorUnprepare event class
 ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24953577a1b3b9ce071b5462dd7db4f8f255b65d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 281d6c3e3c327179e976dc663bdfc1f5e91fcfe1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**CursorUnprepare** 事件類別提供應用程式開發介面 (API) 資料指標中所發生之資料指標取消準備 (Cursor Unprepare) 事件的相關資訊。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 捨棄執行計畫時，便會發生資料指標取消準備事件。  
+  **CursorUnprepare** 事件類別提供應用程式開發介面 (API) 資料指標中所發生之資料指標取消準備 (Cursor Unprepare) 事件的相關資訊。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 捨棄執行計畫時，便會發生資料指標取消準備事件。  
   
  可將 **CursorUnprepare** 事件類別包含在記錄資料指標效能的追蹤當中， 當追蹤包含 **CursorUnprepare** 事件類別時，所造成的負擔量是依追蹤期間針對資料庫使用資料指標的頻率而定。 如果大量使用資料指標，追蹤可能會明顯地降低效能。  
   

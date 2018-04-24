@@ -1,34 +1,35 @@
 ---
-title: "SQL:FullTextQuery 事件類別 | Microsoft Docs"
-ms.custom: 
+title: SQL:FullTextQuery 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL:FullTextQuery event class
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae236f30c9fb0f2cc3c35e694ccab3f4f081109d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e52a1e85ae123f26631f67e5be279a78181a9a58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SQL:FullTextQuery 事件類別是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行全文檢索查詢時發生。 請將此事件類別加入到監視全文檢索目錄問題的追蹤。  
+  SQL:FullTextQuery 事件類別是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行全文檢索查詢時發生。 請將此事件類別加入到監視全文檢索目錄問題的追蹤。  
   
  加入 SQL:FullTextQuery 事件類別之後，額外負擔將偏高。 如果這類事件時常發生，追蹤可能會嚴重妨礙效能。 為了將額外負擔降到最低，請將此事件類別限於用在短暫監視特定問題的追蹤。  
   

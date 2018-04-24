@@ -1,31 +1,32 @@
 ---
-title: "監視 SQL Server 元件 | Microsoft Docs"
-ms.custom: 
+title: 監視 SQL Server 元件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e42a68231284071a38797fa76085123ab89e92fe
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 98a13e1b94edad10f54f21e1028521696d450f64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-sql-server-components"></a>監視 SQL Server 元件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在動態環境下提供服務，所以監視很重要。 應用程式中的資料會變更。 使用者需要的存取類型會變更。 使用者的連接方式會變更。 甚至存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式類型也可能變更，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動管理系統層級的資源，例如記憶體和磁碟空間，以便將系統層級的密集手動微調需求降到最低。 監視可讓管理員識別效能趨勢，以決定是否需要變更。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在動態環境下提供服務，所以監視很重要。 應用程式中的資料會變更。 使用者需要的存取類型會變更。 使用者的連接方式會變更。 甚至存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式類型也可能變更，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動管理系統層級的資源，例如記憶體和磁碟空間，以便將系統層級的密集手動微調需求降到最低。 監視可讓管理員識別效能趨勢，以決定是否需要變更。  
   
  若要有效監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何元件：  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 01/18/2018
   
 4.  建立包含指定設定的追蹤範本來擷取事件。  
   
-     追蹤範本中包含事件本身、事件資料和用來擷取資料的篩選等相關規格。 這些範本稍後可以用來監視特定的事件組合，而不需重新定義事件、事件資料與篩選。 例如，如果您要時常監視死結的數目與陷入死結的使用者數目，您可以建立一個定義這些事件、事件資料與事件篩選的範本、儲存範本，然後在下次要監視死結時重新套用此篩選。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會針對這個目的使用追蹤範本。 如需詳細資訊，請參閱[設定追蹤定義預設值 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) 和[建立追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)。  
+     追蹤範本中包含事件本身、事件資料和用來擷取資料的篩選等相關規格。 這些範本稍後可以用來監視特定的事件組合，而不需重新定義事件、事件資料與篩選。 例如，如果您要時常監視死結的數目與陷入死結的使用者數目，您可以建立一個定義這些事件、事件資料與事件篩選的範本、儲存範本，然後在下次要監視死結時重新套用此篩選。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會針對這個目的使用追蹤範本。 如需詳細資訊，請參閱[設定追蹤定義預設值 &#40;SQL Server Profiler & #41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) 和[建立追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)。  
   
 5.  分析擷取的事件資料。  
   

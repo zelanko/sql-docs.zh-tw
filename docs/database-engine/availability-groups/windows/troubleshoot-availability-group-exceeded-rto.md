@@ -13,12 +13,12 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 caps.latest.revision: 7
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a70d141800d9d8d43d47f0703d64e03505015aa4
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: f3dbec12b9603be028459bfc2b5d3affae8e5b67
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>疑難排解：可用性群組超過 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

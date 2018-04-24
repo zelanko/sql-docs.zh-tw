@@ -1,34 +1,36 @@
 ---
-title: "資料庫鏡像和資料庫快照集 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 資料庫鏡像和資料庫快照集 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - snapshots [SQL Server database snapshots], database mirroring
 - database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db1c0902b2de0a761e1a7558e9bbb71c946afe5b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b51e1ad9f6789480165ece1d97f43d447a5b7a65
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>資料庫鏡像和資料庫快照集 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以利用為了提供可用性而維護的鏡像資料庫卸載報表。 若要對報表使用鏡像資料庫，請在鏡像資料庫上建立資料庫快照集，然後將用戶端連接要求導向最近一次的快照集。 資料庫快照集是其來源資料庫的一個靜態、唯讀、交易一致的快照集，存在於快照集建立時。 若要在鏡像資料庫上建立資料庫快照集，資料庫必須處於同步處理的鏡像狀態。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您可以利用為了提供可用性而維護的鏡像資料庫卸載報表。 若要對報表使用鏡像資料庫，請在鏡像資料庫上建立資料庫快照集，然後將用戶端連接要求導向最近一次的快照集。 資料庫快照集是其來源資料庫的一個靜態、唯讀、交易一致的快照集，存在於快照集建立時。 若要在鏡像資料庫上建立資料庫快照集，資料庫必須處於同步處理的鏡像狀態。  
   
  不像鏡像資料庫，用戶端可以存取資料庫快照集。 只要鏡像伺服器仍與主體伺服器進行通訊，就可以將報表用戶端導向連接到快照集。 請注意，因為資料庫快照集是靜態的，所以不會有新的資料可用。 若要使較新的資料可供使用者使用，您必須定期建立新的資料庫快照集，並使應用程式與最新快照集之間有直接傳入用戶端的連接。  
   

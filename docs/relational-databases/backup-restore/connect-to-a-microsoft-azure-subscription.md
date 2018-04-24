@@ -1,31 +1,32 @@
 ---
-title: "連接至 Microsoft Azure 訂用帳戶 | Microsoft Docs"
-ms.custom: 
+title: 連接至 Microsoft Azure 訂用帳戶 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
-caps.latest.revision: 
+caps.latest.revision: 4
 author: dagiro
 ms.author: v-dagir
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4bcc3df84094ff17bf2239e278f559458a7a568
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2a8214dd7acb01dee7b66b7aae65cdd2e3a03f7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>連接至 Microsoft Azure 訂用帳戶
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [連線至 Microsoft 訂用帳戶] 向 SQL Server 執行個體註冊現有的 Azure blob 容器。  對話方塊會在 Azure blob 容器上建立共用的存取簽章和預存的存取原則，再建立 SQL Server 認證。  從 SQL Server Management Studio 使用 [備份或還原] 工作，且作業牽涉到 URL 裝置時，就會出現此對話方塊。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用 [連接至 Microsoft 訂用帳戶] 向 SQL Server 執行個體註冊現有的 Azure blob 容器。  對話方塊會在 Azure blob 容器上建立共用的存取簽章和預存的存取原則，再建立 SQL Server 認證。  從 SQL Server Management Studio 使用 [備份或還原] 工作，且作業牽涉到 URL 裝置時，就會出現此對話方塊。
 
 ## <a name="limitation"></a>限制
 [連接至 Microsoft 訂用帳戶] 只適用於透過服務管理 (傳統) 部署模型建立的 Azure 儲存體帳戶。  如需有關 Azure 部署模型的詳細資訊，請參閱 [Azure Resource Manager vs. 傳統部署：了解資源的部署模型和狀態](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/)。

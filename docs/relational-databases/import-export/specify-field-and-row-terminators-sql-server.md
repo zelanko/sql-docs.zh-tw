@@ -2,7 +2,7 @@
 title: 指定欄位與資料列結束字元 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: ''
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ce4a92bea3af9709fadfbf4ba9b4dc356afd9fb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,13 +47,13 @@ ms.lasthandoff: 03/20/2018
 |新行字元 (Newline Character)|\n<br /><br /> 這是預設資料列結束字元。|  
 |歸位字元/換行字元|\r|  
 |反斜線*|\\\|  
-|Null 結束字元 (看不見的結束字元)\*\*|\0|  
+|Null 結束字元 (看不見的結束字元)**|\0|  
 |任何可列印的字元 (除了 Null 值、定位點、新行字元和 Return 鍵外，控制字元均無法列印)|(*、A、t、l 等等)|  
-|最多包含 10 個可列印字元的字串，包括先前所列的一些或所有結束字元|(\*\*\t\*\*、end、!!!!!!!!!!、\t—\n 等等)|  
+|最多包含 10 個可列印字元的字串，包括先前所列的一些或所有結束字元|(**\t\*\*、end、!!!!!!!!!!、\t—\n 等等)|  
   
  *只有 t、n、r、0 和 '\0' 字元可以與反斜線逸出字元搭配使用，以產生控制字元。  
   
- \*\*雖然列印時看不到 null 控制字元 (\0)，這個字元仍是資料檔中的個別字元。 這表示使用 null 控制字元做為欄位或資料列結束字元，和完全沒有欄位或資料列結束字元不同。  
+ **雖然列印時看不到 null 控制字元 (\0)，這個字元仍是資料檔中的個別字元。 這表示使用 null 控制字元做為欄位或資料列結束字元，和完全沒有欄位或資料列結束字元不同。  
   
 > [!IMPORTANT]  
 >  如果在資料內發現結束字元，它會當作結束字元而非當作資料來解譯，而該字元之後的資料則會解譯為屬於下一個欄位或記錄。 因此，請小心選擇結束字元，確定這些結束字元絕不會出現在您的資料中。 例如，如果資料中包含低 Surrogate，此低 surrogate 欄位結束字元就不是欄位結束字元的好選項。  
@@ -133,7 +134,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      您可以使用下表所示的限定詞，針對格式檔案中的個別欄位或整個資料檔指定結束字元。  
   
-    |Qualifier|Description|  
+    |Qualifier|描述|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|指定要用於字元和 Unicode 字元資料檔中的欄位結束字元。<br /><br /> 預設值是 \t (定位字元)。|  
     |ROWTERMINATOR **='***row_terminator***'**|指定要用於字元和 Unicode 字元資料檔中的資料列結束字元。<br /><br /> 預設值是 \n (新行字元)。|  
@@ -174,7 +175,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. 使用 BULK INSERT 以互動方式指定結束字元  
  下列範例會使用 `Department-c-t.txt` 陳述式 (其中使用下表所示的限定詞)，大量匯入 `BULK INSERT` 資料檔。  
   
-|選項|Attribute|  
+|選項|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='**char**'**|指定以字元資料載入資料欄位。|  
 |FIELDTERMINATOR **='**`,`**'**|指定逗號 (`,`) 作為欄位結束字元。|  

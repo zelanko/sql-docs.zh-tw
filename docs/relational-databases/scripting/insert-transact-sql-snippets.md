@@ -1,35 +1,37 @@
 ---
-title: "插入 Transact-SQL 程式碼片段 | Microsoft Docs"
-ms.custom: 
+title: 插入 Transact-SQL 程式碼片段 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - IntelliSense [SQL Server], snippets
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0086861b57793457f8a8d2bd735f808b1587759e
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f864b1f63aed79bc925ff061ef42b53f356bd5ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 程式碼片段
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段是範本，當您在[!INCLUDE[ssDE](../../includes/ssde-md.md)]查詢編輯器中撰寫新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時可將它作為起點。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段是範本，當您在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中撰寫新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 陳述式時可將它做為起點。  
   
 ## <a name="inserting-snippets"></a>插入程式碼片段  
  您可以使用 [插入程式碼片段] 功能表開啟分類的程式碼片段清單，從中選擇。  

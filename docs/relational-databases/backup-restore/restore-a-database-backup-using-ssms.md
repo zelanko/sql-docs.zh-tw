@@ -2,7 +2,7 @@
 title: 使用 SSMS 還原資料庫備份 | Microsoft 文件
 ms.custom: ''
 ms.date: 11/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: backup-restore
@@ -27,11 +27,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d51837413865aedb9b4610b045355556634ea6df
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a02973a198043163ce6ece5d3bc490f05048f7e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/18/2018
   
 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級程序就會根據 [全文檢索升級選項] 伺服器屬性的設定，匯入、重設或重建這些索引。 如果您將升級選項設定為 [匯入] 或 [重建]，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建將需要十倍以上的時間。     
     
-當您將升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需檢視或變更 [全文檢索升級選項] 屬性設定的資訊，請參閱[管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。    
+當您將升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。    
 
 如需從 Microsoft Azure Blob 儲存體服務還原 SQL Server 的資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
 
@@ -211,7 +211,7 @@ ms.lasthandoff: 01/18/2018
 6.  在 [目的地] 區段中，按一下 [時間表] 存取 [備份時間表] 對話方塊，手動選取停止復原動作的時間點。
 
 7.  選取 [特定的日期與時間]。
-8.  將 [時間表間隔] 變更為下拉式方塊中的 [小時] \(選擇性)。
+8.  將 [時間表間隔] 變更為下拉式方塊中的 [小時] (選擇性)。
 9.  將滑桿移至想要的時間。
 
 10. 按一下 [確定] 回到 [一般] 頁面。

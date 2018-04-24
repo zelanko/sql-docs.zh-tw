@@ -1,31 +1,33 @@
 ---
-title: "啟動 sqlcmd 公用程式 | Microsoft Docs"
-ms.custom: 
+title: 啟動 sqlcmd 公用程式 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-caps.latest.revision: 
+caps.latest.revision: 41
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f7e35bb04d5ff169800d837b05a63320640adeff
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d50eea710cfe23ff59c018b0e1154bab17ba3183
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - 啟動公用程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可利用 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)在命令提示字元處、於 SQLCMD 模式的 [查詢編輯器] 中、在 Windows 指令檔中，或是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的作業系統 (Cmd.exe) 作業步驟中，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、系統程序與指令檔。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  您可利用 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md) 在命令提示字元處、於 SQLCMD 模式的 [查詢編輯器] 中、在 Windows 指令碼檔案中，或是在 [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent 作業的作業系統 (Cmd.exe) 作業步驟中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式、系統程序與指令碼檔案。
 > [!NOTE]  
 >  **sqlcmd**的預設驗證模式為 Windows 驗證。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，必須使用 **-U** 和 **-P** 選項來指定使用者名稱及密碼。  
   

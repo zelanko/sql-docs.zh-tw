@@ -1,34 +1,35 @@
 ---
-title: "RPC 輸出參數事件類別 | Microsoft 文件"
-ms.custom: 
+title: RPC 輸出參數事件類別 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - RPC Output Parameter event class
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3b324de1b0c5dd10d6db95257838339bd6b6e17
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2ac782a1cc2d60d78fb7219550e32a6fa13b850d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-RPC Output Parameter 事件類別會追蹤遠端程序呼叫 (RPC) 執行之後的輸出參數值。  
+  RPC Output Parameter 事件類別會追蹤遠端程序呼叫 (RPC) 執行之後的輸出參數值。  
   
  請使用此類別來檢查預存程序傳回的輸出值。 例如，假設應用程式在執行遠端程序呼叫之後未產生預期的輸出值，您可以藉助這個事件類別來將問題侷限在用戶端程式碼和伺服器程式碼之間。  
   

@@ -1,16 +1,16 @@
 ---
-title: "針對 IntelliSense 進行疑難排解 (SQL Server Management Studio) | Microsoft 文件"
-ms.custom: 
+title: 針對 IntelliSense 進行疑難排解 (SQL Server Management Studio) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - unavailable options [IntelliSense]
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], unavailable options
 - troubleshooting [IntelliSense]
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3af61af6c19439e59ff055a5a0de325c8f278b61
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bd611eb89ce4ce3429927b7ac9cde2892ae36653
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-intellisense"></a>針對 IntelliSense 進行疑難排解
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在某些情況下，IntelliSense 選項的運作可能會不符合您的預期。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  在某些情況下，IntelliSense 選項的運作可能會不符合您的預期。  
   
 ## <a name="conditions-that-affect-intellisense"></a>影響 IntelliSense 的條件  
  下列條件可能會影響 IntelliSense 的行為：  

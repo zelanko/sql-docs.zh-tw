@@ -1,36 +1,37 @@
 ---
-title: "OLE Automation 傳回碼與錯誤資訊 | Microsoft Docs"
-ms.custom: 
+title: OLE Automation 傳回碼與錯誤資訊 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-ole
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - return codes [SQL Server]
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2621860c2090c3c3efe1fa72bbd4c9e4315c68d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 80a4fd9b2c929d54158c39e06635818ec95b8d30
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 傳回碼與錯誤資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-OLE Automation 系統預存程序將傳回 **int** 傳回碼，這是基礎 OLE Automation 作業所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 為十六進位形式 0x800*nnnnn*的 OLE 錯誤碼，但若以預存程序傳回碼內的 **int** 值傳回，它的形式將為 214*nnnnnnn*。  
+  OLE Automation 系統預存程序將傳回 **int** 傳回碼，這是基礎 OLE Automation 作業所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 為十六進位形式 0x800*nnnnn*的 OLE 錯誤碼，但若以預存程序傳回碼內的 **int** 值傳回，它的形式將為 214*nnnnnnn*。  
   
  例如，若將無效的物件名稱 (SQLDMO.Xyzzy) 傳給 sp_OACreate 將導致該程序傳回 2147221005 的 **int** HRESULT，若採十六進位形式則為 0x800401f3。  
   

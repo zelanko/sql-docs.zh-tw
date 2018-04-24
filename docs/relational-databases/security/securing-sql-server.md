@@ -1,16 +1,16 @@
 ---
-title: "保護 SQL Server 的安全 | Microsoft Docs"
-ms.custom: 
+title: 保護 SQL Server 的安全 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Security [SQL Server]
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - security [SQL Server], planning
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24936f55d153d046b775ddbbf4188fc4a81c583d
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 07ab7d7c420d1b0c9809f58476d2bf8f6b4b0260
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-維護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全可視為一系列的步驟，與下列四個方面有關：平台、驗證、物件 (包括資料) 和存取系統的應用程式。 下列主題將會引導您逐步建立及實施有效的安全性計畫。  
+  維護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全可視為一系列的步驟，與下列四個方面有關：平台、驗證、物件 (包括資料) 和存取系統的應用程式。 下列主題將會引導您逐步建立及實施有效的安全性計畫。  
   
  您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [網站上找到有關](http://go.microsoft.com/fwlink/?LinkID=31629) 安全性的詳細資訊。 這包括最佳作法指南和安全性檢查清單。 該網站也提供了最新的 Service Pack 資訊和下載檔。  
   
@@ -132,7 +132,7 @@ GO
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
 |連接、設定與控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[使用 SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
-|從命令提示字元連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並執行查詢|[sqlcmd 工用程式](../../tools/sqlcmd-utility.md)|  
+|從命令提示字元連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並執行查詢|[sqlcmd 公用程式](../../tools/sqlcmd-utility.md)|  
 |網路組態和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)|  
 |使用以原則為基礎的管理來啟用及停用功能|[使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |管理報表伺服器的對稱金鑰|[rskeymgmt 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  

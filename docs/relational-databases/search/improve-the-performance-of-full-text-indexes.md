@@ -1,16 +1,16 @@
 ---
-title: "改善全文檢索索引的效能 | Microsoft Docs"
-ms.custom: 
+title: 改善全文檢索索引的效能 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance [SQL Server], full-text search
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a3255ca28229a171f65a0e64ef553d7d0a80333f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ ms.lasthandoff: 02/13/2018
 以下是編目記錄檔名稱的變動部分。
 -   <**DatabaseID**> - 資料庫的識別碼。 <**dbid**> 是開頭為零的五位數數字。  
 -   <**FullTextCatalogID**> - 全文檢索目錄識別碼。 <**catid**> 是開頭為零的五位數數字。  
--   <**n**> - 是一個整數，指示相同全文檢索目錄的編目記錄數目。  
+-   <**n**> - 是一個整數，指示相同全文檢索目錄的編目記錄檔數目。  
   
  例如，`SQLFT0000500008.2` 是指資料庫識別碼 = 5 而且全文檢索目錄識別碼 = 8 之資料庫的編目記錄檔。 位於檔案名稱結尾的 2 表示此資料庫/目錄組有兩個搜耙記錄檔。  
 

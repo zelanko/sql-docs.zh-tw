@@ -1,36 +1,37 @@
 ---
-title: "Objects 事件類別目錄 | Microsoft Docs"
-ms.custom: 
+title: Objects 事件類別目錄 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server event classes, Objects event category
 - Objects event category [SQL Server]
 - event classes [SQL Server], Objects event category
 ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 437518c019f8b32ec49189b92c1964f555be8f1b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bf48356c1feb51668cdaa38b704af7f74af21d0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="objects-event-category"></a>Objects 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Objects** 事件類別目錄包含一般物件事件。  
+  **Objects** 事件類別目錄包含一般物件事件。  
   
 ## <a name="in-this-section"></a>本節內容  
   

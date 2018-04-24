@@ -1,28 +1,29 @@
 ---
-title: "記憶體內部 OLTP 不支援的 Transact-SQL 建構 | Microsoft 文件"
-ms.custom: 
+title: 記憶體內部 OLTP 不支援的 Transact-SQL 建構 | Microsoft 文件
+ms.custom: ''
 ms.date: 11/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 572486311385af37057641e6f2371791bcfe70f8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b739085a61fea5537f91954e0e75981fd7709688
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,12 +60,12 @@ ms.lasthandoff: 02/12/2018
 |----------|----------|----------------|  
 |功能|ON|記憶體最佳化資料表不可放置在檔案群組或分割區配置上。 請從 **CREATE TABLE** 陳述式中移除 ON 子句。<br /><br /> 所有記憶體最佳化資料表都會對應到記憶體最佳化檔案群組。|  
 |資料類型|*資料類型名稱*|不支援所指的資料類型。 請用其中一種支援的資料類型取代該類型。 如需詳細資訊，請參閱 [記憶體內部 OLTP 支援的資料類型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。|  
-|功能|計算資料行|**適用於：** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>記憶體最佳化資料表中不支援計算資料行。 請從 **CREATE TABLE** 陳述式中移除計算資料行。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 起) 支援經記憶體最佳化之資料表和索引中的計算資料行。|  
+|功能|計算資料行|**適用於：**[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>記憶體最佳化資料表中不支援計算資料行。 請從 **CREATE TABLE** 陳述式中移除計算資料行。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 起)，即開始支援經記憶體最佳化的資料表和索引中的計算資料行。|  
 |功能|複寫|記憶體最佳化資料表不支援複寫。|  
 |功能|FILESTREAM|FILESTREAM 儲存體不是記憶體最佳化資料表支援的資料行。 請從資料行定義中移除 **FILESTREAM** 關鍵字。|  
 |功能|SPARSE|記憶體最佳化資料表的資料行不可定義為 SPARSE。 請從資料行定義中移除 **SPARSE** 關鍵字。|  
 |功能|ROWGUIDCOL|ROWGUIDCOL 選項不是記憶體最佳化資料表支援的資料行。 請從資料行定義中移除 **ROWGUIDCOL** 關鍵字。|  
-|功能|FOREIGN KEY|**適用於：** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>若是經記憶體最佳化的資料表，FOREIGN KEY 條件約束只支援參考其他經記憶體最佳化資料表之主索引鍵的外部索引鍵。 如果外部索引鍵參考的是唯一條件約束，請移除資料表定義的條件約束。<br/><br/>在 [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 中，經記憶體最佳化的資料表不支援 FOREIGN KEY 條件約束。|  
+|功能|FOREIGN KEY|**適用於：**[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 起)<br/>若是經記憶體最佳化的資料表，FOREIGN KEY 條件約束只支援參考其他經記憶體最佳化資料表之主索引鍵的外部索引鍵。 如果外部索引鍵參考的是唯一條件約束，請移除資料表定義的條件約束。<br/><br/>在 [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 中，經記憶體最佳化的資料表不支援 FOREIGN KEY 條件約束。|  
 |功能|叢集索引|指定非叢集索引。 對於主索引鍵索引，請務必指定 **PRIMARY KEY NONCLUSTERED**。|  
 |功能|交易內的 DDL|記憶體最佳化資料表和原生編譯預存程序無法在使用者交易內容中建立或卸除。 請不要啟動交易，並確認工作階段設定 IMPLICIT_TRANSACTIONS 為 OFF，再執行 CREATE 或 DROP 陳述式。|  
 |功能|DDL 觸發程序|如果該 DDL 作業有伺服器或資料庫觸發程序，則無法建立或卸除記憶體最佳化資料表和原生編譯預存程序。 請移除 CREATE/DROP TABLE 和 CREATE/DROP PROCEDURE 上的伺服器和資料庫觸發程序。|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 02/12/2018
 |功能|SELECT INTO|不支援 **INTO** 子句與 **SELECT** 陳述式一起使用。 請將查詢重新撰寫為 **INSERT INTO** *Table* **SELECT**。|  
 |功能|不完整的插入資料行清單|一般而言，在 INSERT 陳述式中，必須為資料表中的所有資料行指定值。<br /><br /> 不過，我們支援記憶體最佳化資料表上的 DEFAULT 條件約束和 IDENTITY(1,1) 資料行。 INSERT 資料行清單中可以省略這些資料行，但 IDENTITY 資料行必須省略這些資料行。|  
 |功能|*函數*|原生編譯預存程序中不支援某些內建函數。 請從預存程序中移除拒絕的函數。 如需所支援內建函數的詳細資訊，請參閱<br />[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
-|功能|CASE|**適用於：** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>原生編譯的預存程序不支援 **CASE** 運算式。 請為每個案例建立查詢。 如需詳細資訊，請參閱 [在原生編譯的預存程序中實作 CASE 運算式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起) 支援 CASE 運算式。|  
+|功能|CASE|**適用於：**[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 起)<br/>原生編譯的預存程序不支援 **CASE** 運算式。 請為每個案例建立查詢。 如需詳細資訊，請參閱 [在原生編譯的預存程序中實作 CASE 運算式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起) 可支援 CASE 運算式。|  
 |功能|INSERT EXECUTE|移除參考。|  
 |功能|執行 CREATE 陳述式之前，請先執行|僅支援執行原生編譯預存程序和使用者定義函數。|  
 |功能|使用者定義彙總|使用者定義彙總函式不可在原生編譯預存程序中使用。 請從程序中移除函式的參考。|  
@@ -144,7 +145,7 @@ ms.lasthandoff: 02/12/2018
 |運算子|OFFSET|不支援此運算子。 請從原生編譯預存程序中移除 **OFFSET** 。|  
 |運算子|INTERSECT|不支援此運算子。 請從原生編譯預存程序中移除 **INTERSECT** 。 在某些情況下，可以使用 INNER JOIN 獲得相同結果。|  
 |運算子|EXCEPT|不支援此運算子。 請從原生編譯預存程序中移除 **EXCEPT** 。|  
-|運算子|APPLY|**適用於：** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>不支援此運算子。 請從原生編譯預存程序中移除 **APPLY** 。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起) 在原生編譯模組中支援 APPLY 運算子。|  
+|運算子|APPLY|**適用於：**[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 起)<br/>不支援此運算子。 請從原生編譯預存程序中移除 **APPLY** 。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起) 可支援原生編譯模組中的 APPLY 運算子。|  
 |運算子|PIVOT|不支援此運算子。 請從原生編譯預存程序中移除 **PIVOT** 。|  
 |運算子|UNPIVOT|不支援此運算子。 請從原生編譯預存程序中移除 **UNPIVOT** 。|  
 |運算子|CONTAINS|不支援此運算子。 請從原生編譯預存程序中移除 **CONTAINS** 。|  
@@ -162,7 +163,7 @@ ms.lasthandoff: 02/12/2018
 |聯結提示|HASH、MERGE|原生編譯預存程序僅支援巢狀迴圈聯結。 不支援雜湊和合併聯結。 請移除聯結提示。|  
 |查詢提示|*查詢提示*|此查詢提示不在原生編譯預存程序內。 如需支援的查詢提示，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。|  
 |選項|PERCENT|**TOP** 子句不支援此選項。 請從原生編譯預存程序的查詢中移除 **PERCENT** 。|  
-|選項|WITH TIES|**適用於：** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**TOP** 子句不支援此選項。 請從原生編譯預存程序的查詢中移除 **WITH TIES** 。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起) 支援 **TOP WITH TIES**。|  
+|選項|WITH TIES|**適用於：**[!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**TOP** 子句不支援此選項。 請從原生編譯預存程序的查詢中移除 **WITH TIES** 。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起) 可支援 **TOP WITH TIES**。|  
 |彙總函式|*彙總函式*|並非所有彙總函式都受支援。 如需原生編譯 T-SQL 模組中支援的彙總函式詳細資訊，請參閱[原生編譯 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。|  
 |排名函數|*次序函數*|原生編譯預存程序中不支援排名函數。 請從程序定義中將它們移除。|  
 |函數|*函數*|不支援此函數。 如需原生編譯 T-SQL 模組中支援的函式詳細資訊，請參閱[原生編譯 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。|  
@@ -177,7 +178,7 @@ ms.lasthandoff: 02/12/2018
 |功能|內嵌資料表變數宣告。|資料表變數必須明確參考定義的記憶體最佳化資料表類型。 您應該建立記憶體最佳化資料表的類型，並使用該類型宣告變數，而不要指定內嵌類型。|  
 |功能|磁碟型資料表|磁碟型資料表無法從原生編譯的預存程序中存取。 從原生編譯的預存程序移除磁碟型資料表類型的參考。 或是將磁碟型資料表移轉至經過最佳化的記憶體。|  
 |功能|檢視|檢視無法從原生編譯的預存程序中存取。 請參考基底資料表，而不要使用檢視。|  
-|功能|資料表值函式|**適用於**：[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>您無法透過原生編譯的預存程序來存取多重陳述式資料表函式。 系統支援內嵌資料表值函式，但您必須使用 NATIVE_COMPILATION 來建立。<br/><br/>**適用於**： [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>您無法透過原生編譯的 T-SQL 模組來參考資料表值函式。|  
+|功能|資料表值函式|**適用於：**[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 起)<br/>您無法透過原生編譯的預存程序來存取多重陳述式資料表函式。 系統支援內嵌資料表值函式，但您必須使用 NATIVE_COMPILATION 來建立。<br/><br/>**適用於**：[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>您無法透過原生編譯的 T-SQL 模組來參考資料表值函式。|  
 |選項|PRINT|移除參考|  
 |功能|DDL|原生編譯 T-SQL 模組內不支援任何 DDL。|  
 |選項|STATISTICS XML|不支援。 當您執行查詢時，只要啟用了 STATISTICS XML，就會傳回沒有原生編譯預存程序這部分的 XML 內容。|  

@@ -2,7 +2,7 @@
 title: 從舊版 SQL Server 匯入原生與字元格式資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - data formats [SQL Server], earlier versions
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b80ad93883e5ef5d1fa907116e2c4fa5b4a264f5
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e37b412b3cbb435c6e037472b6286ac3261039b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>從舊版 SQL Server 匯入原生與字元格式資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,11 +54,11 @@ ms.lasthandoff: 03/20/2018
 |**nvarchar(max)**|**ntext**|**ntext**|**ntext**|  
 |**varbinary(max)**|**image**|**image**|**image**|  
 |XML|**ntext**|**ntext**|**ntext**|  
-|UDT\*\*|**image**|**image**|**image**|  
+|UDT**|**image**|**image**|**image**|  
   
  *這是原本就支援的類型。  
   
- \*\*UDT 表示使用者定義類型。  
+ **UDT 表示使用者定義類型。  
   
 ## <a name="exporting-using-v-80"></a>使用 –V 80 匯出  
  當您使用 **–V80** 參數大量匯出資料時，處於原生模式的 **nvarchar(max)**、 **varchar(max)**、 **varbinary(max)**、XML 和 UDT 資料會與 4 位元組前置詞一起儲存，就像 **text**、 **image**和 **ntext** 資料一樣，而不是與 8 位元組前置詞一起儲存 (這是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的預設值)。  
