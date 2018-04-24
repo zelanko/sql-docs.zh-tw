@@ -1,33 +1,35 @@
 ---
-title: "課程 1：建立資料庫物件 | Microsoft Docs"
-ms.custom: 
+title: 課程 1：建立資料庫物件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53bfe761519a6c497f384b7f2541b88c18df70a6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 62ad1e807fd9e5c93b12d98be85d2fa2abcdc7be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-creating-database-objects"></a>第 1 課：建立資料庫物件
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 這一課會示範如何建立資料庫、在資料庫中建立資料表，然後存取及變更資料表中的資料。 因為這一課是使用 [!INCLUDE[tsql](../includes/tsql-md.md)]的簡介，所以並不會使用或描述這些陳述式所能使用的許多選項。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+這一課會示範如何建立資料庫、在資料庫中建立資料表，然後在資料表中存取和變更資料。 因為這一課是使用 [!INCLUDE[tsql](../includes/tsql-md.md)]的簡介，所以並不會使用或描述這些陳述式所能使用的許多選項。  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 撰寫陳述式並且提交給 [!INCLUDE[ssDE](../includes/ssde-md.md)] 可以採用下列方式：  
   

@@ -2,7 +2,7 @@
 title: 修改外部索引鍵關聯性 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: tables
@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b667598024f6df19d7543cf9e59f4c646706c776
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 86e25333f1ea21d1500bdef3a61b2c10bd013cd7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,11 +42,11 @@ ms.lasthandoff: 04/10/2018
   
      [限制事項](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **使用下列方法修改外部索引鍵：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -62,14 +63,14 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>若要修改外部索引鍵  
   
-1.  在 **[物件總管]**中，展開含有外部索引鍵的資料表，然後展開 **[索引鍵]**。  
+1.  在 **[物件總管]** 中，展開含有外部索引鍵的資料表，然後展開 **[索引鍵]**。  
   
 2.  以滑鼠右鍵按一下您要修改的外部索引鍵，然後選取 [修改]。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/10/2018
      **選取的關聯性**  
      列出現有的關聯性。 選取關聯性，在右邊方格中顯示其屬性。 如果清單是空的，表示此資料表沒有定義關聯性。  
   
-     **加入**  
+     **[加入]**  
      建立新的關聯性。 [ **資料表及資料行規格** ] 必須在關聯性生效之前設定。  
   
      **Delete**  
@@ -111,7 +112,7 @@ ms.lasthandoff: 04/10/2018
      **名稱**  
      顯示關聯性的名稱。 在建立新的關聯性時，會根據 [ **資料表設計工具**] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
-     **描述**  
+     **說明**  
      描述關聯性。 若要撰寫更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊的省略符號 **(...)**。 如此便可提供較大的區域以寫入文字。  
   
      **資料表設計工具類別目錄**  

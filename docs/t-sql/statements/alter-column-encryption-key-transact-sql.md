@@ -1,16 +1,16 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER COLUMN ENCRYPTION
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6bc70a7cafdbf69549435b44099b903cfc60327
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5e935d564613ad65e1ea8762cafb2b8e66dce9a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,10 +66,10 @@ ALTER COLUMN ENCRYPTION KEY key_name
  使用指定主要加密金鑰加密的 CEK BLOB。 執行個體時提供 SQL Server 登入。 在卸除資料行加密金鑰值時，此引數無效。  
   
 > [!WARNING]  
->  絕對不要在此陳述式中傳遞純文字的 CEK 值。 這麼做會影響此功能的優點。  
+>  絕對不要在此陳述式中傳遞純文字的 CEK 值。 這麼做會影響此功能的優。  
   
 ## <a name="remarks"></a>Remarks  
- 一般來說，資料行加密金鑰建立時只會使用一個加密值。 當資料行主要金鑰必須輪替 (目前資料行主要金鑰必須更換成新的資料行主要金鑰) 時，您可以新增資料行加密金鑰值，並以新的資料行主要金鑰加密。 這可讓您確保用戶端應用程式可以存取由資料行加密金鑰加密的資料，同時新的資料行主要金鑰亦可供用戶端應用程式使用。 如果用戶端應用程式中的驅動程式已啟用 Always Encrypted，但沒有新的主要金鑰存取權，其可使用以舊資料行主要金鑰加密的資料行加密金鑰值來存取敏感性資料。 Always Encrypted 支援的加密演算法需要使用 256 位元純文字值。 您應該使用金鑰存放區提供者來產生加密的值；金鑰存放區提供者可封裝保存資料行主要金鑰的金鑰存放區。  
+ 一般來說，資料行加密金鑰建立時只會使用一個加密值。 當資料行主要金鑰必須輪替時 (目前資料行主要金鑰必須換成新的資料行主要金鑰)，您可以新增資料行加密金鑰值，並以新的資料行主要金鑰來加密。 這可讓您確保用戶端應用程式可以存取由資料行加密金鑰加密的資料，同時新的資料行主要金鑰亦可供用戶端應用程式使用。 如果用戶端應用程式中的驅動程式已啟用 Always Encrypted，但沒有新的主要金鑰存取權，其可使用以舊資料行主要金鑰加密的資料行加密金鑰值來存取敏感性資料。 Always Encrypted 支援的加密演算法需要使用 256 位元純文字值。 您應該使用金鑰存放區提供者來產生加密的值；金鑰存放區提供者可封裝保存資料行主要金鑰的金鑰存放區。  
   
  使用 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 來檢視資料行加密金鑰的相關資訊。  
   

@@ -1,33 +1,36 @@
 ---
-title: "導覽存取權 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 導覽存取權 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - navigational access [Master Data Services]
 - security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
-caps.latest.revision: 
+caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bfd67e93fe716b75ff2b210f357295daa07edb93
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 144a1183baf014e91d8177878d5e30a47b43f80a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   導覽存取權會套用至模型物件安全性 (在 **[模型]** 索引標籤上指派)。  
   
  導覽存取權就是比您已指派安全性之層級還高的層級存取權。  

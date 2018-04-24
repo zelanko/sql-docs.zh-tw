@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c50acf0eb9546a56063ed0e6732f651432d80bbd
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 8d2b62c96f00c9d95ae79c9b213431061e56dbce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>將清理專案值匯入定義域中
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以將清理程序期間，於資料品質清理專案或 Integration Services 封裝 (包含 DQS 清理元件) 中所收集的資料品質知識，匯入定義域中。 如此可確保可靠的知識不會遺失，而且會持續改良知識庫。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -69,7 +72,7 @@ ms.lasthandoff: 03/22/2018
   
 7.  取消選取 **[只顯示新值]** ，顯示定義域中的所有值。  
   
-8.  選取 **[正確]**、 **[錯誤]**或 **[無效]** ，只顯示所選類型的值。  
+8.  選取 **[正確]**、 **[錯誤]** 或 **[無效]** ，只顯示所選類型的值。  
   
 9. 若要搜尋特定字串，請在 **[尋找]** 文字方塊中輸入此字串。 按一下向上或向下箭號，逐步瀏覽符合搜尋準則的值。 這些值將會以黃色反白顯示。  
   
@@ -86,7 +89,7 @@ ms.lasthandoff: 03/22/2018
   
 -   只有字串值會匯入定義域。  
   
--   只會匯入 **[清理]**活動的 **[管理和檢視結果]**頁面上，位於 **[正確]** 、 **[更正]** 和 **[新增]** 索引標籤中的值。 **[新增]** 索引標籤中的值只有已在 **[匯入專案值]** 對話方塊中選取 **[加入 [新增] 索引標籤中的值]** 核取方塊時才會匯入。  
+-   只會匯入 **[清理]** 活動的 **[管理和檢視結果]** 頁面上，位於 **[正確]** 、 **[更正]** 和 **[新增]** 索引標籤中的值。 **[新增]** 索引標籤中的值只有已在 **[匯入專案值]** 對話方塊中選取 **[加入 [新增] 索引標籤中的值]** 核取方塊時才會匯入。  
   
 -   值將會以正確值或是包含更正的錯誤形式匯入。 只會匯入包含更正值的錯誤值。  
   

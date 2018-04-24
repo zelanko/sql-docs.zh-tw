@@ -2,7 +2,7 @@
 title: ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -44,16 +44,17 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: ''
+caps.latest.revision: 61
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef66eef5192d18cb2a443f0ed45f2b29a018c883
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5d4c3718788b0bf4cc3d61dff127fe1233b3e8ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項 
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

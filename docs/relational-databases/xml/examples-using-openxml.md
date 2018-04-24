@@ -1,16 +1,16 @@
 ---
-title: "範例：使用 OPENXML | Microsoft Docs"
-ms.custom: 
+title: 範例：使用 OPENXML | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -29,20 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0e9a46da6f60eeefced877db413a54f5f900ebb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="examples-using-openxml"></a>範例：使用 OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-在此主題下的範例將說明如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
+  在此主題下的範例將說明如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
 ## <a name="examples"></a>範例  
  在擷取資料時， *rowpattern* 是用來識別 XML 文件中決定資料列的節點。 另外， *rowpattern* 是以 XPath 模式語言表示，該語言使用於 MSXML XPath 實作中。 例如，如果模式結尾是元素或屬性，則會為 *rowpattern*所選取的每一個元素或屬性節點建立一個資料列。  
@@ -302,7 +302,7 @@ LILAS      Carlos Gonzlez
   
 -   *flags* 參數值設為 **1**，表示屬性中心的對應。 因此，XML 屬性對應至 *SchemaDeclaration*中所定義的資料列集資料行。  
   
--   在 WITH 子句內的 *SchemaDeclaration* 中，資料列集資料行名稱 **oid** 和 **amount** 符合相對應的 XML 屬性名稱。 因此未指定 *ColPattern* 參數。 針對資料列集中的 **comment** 資料行， XPath 函數 **text()**指定為 *ColPattern*。 這將會覆寫 *flags*中所指定之屬性中心的對應，而資料行將包含元素內容的分葉值字串。  
+-   在 WITH 子句內的 *SchemaDeclaration* 中，資料列集資料行名稱 **oid** 和 **amount** 符合相對應的 XML 屬性名稱。 因此未指定 *ColPattern* 參數。 針對資料列集中的 **comment** 資料行， XPath 函數 **text()** 指定為 *ColPattern*。 這將會覆寫 *flags*中所指定之屬性中心的對應，而資料行將包含元素內容的分葉值字串。  
   
  然後，SELECT 陳述式擷取由 OPENXML 所提供之資料列集內的所有資料行。  
   
@@ -531,7 +531,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 指定含有多個文字節點的 XML 文件  
- 若在 XML 文件中具有多個文字節點，含有 *ColPattern* **text()**的 SELECT 陳述式將只傳回第一個文字節點，而不是所有節點。 例如：  
+ 若在 XML 文件中具有多個文字節點，含有 *ColPattern* **text()** 的 SELECT 陳述式將只傳回第一個文字節點，而不是所有節點。 例如：  
   
 ```  
 DECLARE @h int  

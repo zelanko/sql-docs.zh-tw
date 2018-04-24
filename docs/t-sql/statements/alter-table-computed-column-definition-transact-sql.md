@@ -1,32 +1,32 @@
 ---
 title: computed_column_definition (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - ALTER TABLE statement
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: faff7cbb4f4eec1cf68601805d0dbbe1a3a84b3e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2ca7c9fb5f326f8813b2ed62e1d3463a3752b5c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ CONSTRAINT
  指定開始定義 PRIMARY KEY 或 UNIQUE 條件約束。  
   
 *constraint_name*  
- 這是新的條件約束。 條件約束名稱必須遵循[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，不過，名稱開頭不能是數字符號 (#)。 如果未提供 *constraint_name*，就會將系統產生的名稱指派給條件約束。  
+ 這是新的條件約束。 條件約束名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，不過，名稱開頭不能是數字符號 (#)。 如果未提供 *constraint_name*，就會將系統產生的名稱指派給條件約束。  
   
 PRIMARY KEY  
  這是一個條件約束，它會利用唯一索引來強制執行一個或多個指定之資料行的實體完整性。 每份資料表都只能建立一個 PRIMARY KEY 條件約束。  
@@ -101,7 +101,7 @@ WITH FILLFACTOR =*fillfactor*
  指定用來儲存索引資料的每個索引頁面，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所應加以填滿的程度。 使用者指定的 *fillfactor* 可以是從 1 到 100 的值。 如果未指定值，預設值為 0。  
   
 > [!IMPORTANT]  
->  為了與舊版相容，我們保持將 WITH FILLFACTOR = *fillfactor* 記載為適用於 PRIMARY KEY 或 UNIQUE 條件約束的唯一索引選項，但未來版本的文件不會再遵循這個方式來說明。 您可以在 ALTER TABLE 的 [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md) 子句中，指定其他索引選項。  
+>  為了與舊版相容，我們保持將 WITH FILLFACTOR = *fillfactor* 記載為適用於 PRIMARY KEY 或 UNIQUE 條件約束的唯一索引選項，但未來版本的文件不會再依照這個方式來說明。 您可以在 ALTER TABLE 的 [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md) 子句中，指定其他索引選項。  
   
 FOREIGN KEY REFERENCES  
  這是一個條件約束，它提供一個或多個資料行中之資料的參考完整性。 FOREIGN KEY 條件約束要求資料行中的每個值存在於所參考之資料表中的一個或多個對應的被參考資料行中。 FOREIGN KEY 條件約束所參考的資料行，必須是所參考的資料表中的 PRIMARY KEY 或 UNIQUE 條件約束，或是所參考的資料表之 UNIQUE INDEX 中所參考的資料行。 計算資料行的外部索引鍵也必須標示為 PERSISTED。  
@@ -145,7 +145,7 @@ CHECK
 ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定條件約束所建立之索引的儲存位置。 如果指定 *partition_scheme_name*，索引就會進行資料分割，這些資料分割會對應於 *partition_scheme_name* 所指定的檔案群組。 如果指定 *filegroup*，就會在具名檔案群組中建立索引。 如果指定了 "default"，或完全未指定 ON，索引就會建立在資料表的相同檔案群組中。 如果加入 PRIMARY KEY 或 UNIQUE 條件約束的叢集索引時指定了 ON，則建立叢集索引時，會將整份資料表移到指定的檔案群組中。  
+ 指定條件約束所建立之索引的儲存位置。 如果指定 *partition_scheme_name*，索引就會進行資料分割，這些資料分割會對應於 *partition_scheme_name* 所指定的檔案群組。 如果指定了 *filegroup*，就會在具名檔案群組中建立索引。 如果指定了 "default"，或完全未指定 ON，索引就會建立在資料表的相同檔案群組中。 如果加入 PRIMARY KEY 或 UNIQUE 條件約束的叢集索引時指定了 ON，則建立叢集索引時，會將整份資料表移到指定的檔案群組中。  
   
 > [!NOTE]  
 >  在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，例如 ON "default" 或 ON [default]。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  

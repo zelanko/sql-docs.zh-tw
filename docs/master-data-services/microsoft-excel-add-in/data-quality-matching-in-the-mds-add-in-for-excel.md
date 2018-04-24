@@ -1,30 +1,33 @@
 ---
-title: "適用於 Excel 的 MDS 增益集中的資料品質比對 | Microsoft Docs"
-ms.custom: 
+title: 適用於 Excel 的 MDS 增益集中的資料品質比對 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6630871f9fd5104db43e11017b6b14a92d1cded3
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: fbb510e5c7035a8b6247bf1098951f5dec276f26
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>適用於 Excel 的 MDS 增益集中的資料品質比對
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 在加入資料之前，比較新資料與已在 MDS 中管理的資料，有助於確保不會加入重複或不精準的資料。  
   
  MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Data Quality Services (DQS) 功能，比較相似資料。 當您使用增益集的比對功能時，相似記錄會群組在一起，而且會顯示代表結果精確度的分數。 如需有關 DQS 所提供之比對功能的詳細資訊，請參閱＜ [Data Matching](../../data-quality-services/data-matching.md)＞。  

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54a1d2f72e65b054336f27cf629a40fec7abaa15
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 69b7f5a369330a6dd961926189f465f6eea7e81a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中將 .dqs 檔案中的定義域匯入現有的知識庫中。 .dqs 資料檔的建立方式是從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式匯出定義域或知識庫。 .dqs 資料檔已加密，所以無法檢視。  
   
  使用 .dqs 資料檔匯出某個知識庫中的定義域，然後將它匯入另一個知識庫將會簡化知識產生程序，以節省時間與精力。 這樣可讓您將定義域和定義域的知識與其他人分享，以節省他們的時間。 您可以匯入一個單一定義域或一個複合定義域 (包含多個單一定義域)。 包含單一定義域的 .dqs 檔案包括所有定義域資料，其中包括定義域屬性、值和規則資料，但不包括對應的參考資料資訊。 含有複合定義域的 .dqs 檔案包括所有複合定義域資料，其中包括複合定義域內所容納之單一定義域的所有定義域資料，以及複合定義域屬性、值關聯和 CD 規則，但不包括對應的參考資料。 已發行和未發行的資料都將匯入。  

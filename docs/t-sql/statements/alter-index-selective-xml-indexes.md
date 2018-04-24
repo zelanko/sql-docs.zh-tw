@@ -1,30 +1,30 @@
 ---
-title: "ALTER INDEX (選擇性 XML 索引) | Microsoft Docs"
-ms.custom: 
+title: ALTER INDEX (選擇性 XML 索引) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f875f7d34c568bc1156c5f8bce60d893fce8039
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4f50fa906dafd66a66ed86067dae071e072abd74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選擇性 XML 索引)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ identifier
 -   `table_name`  
   
  [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
- 這是要索引之路徑使用的命名空間清單。 如需有關 WITH XMLNAMESPACES 子句語法的詳細資訊，請參閱 [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)。  
+ 這是要索引之路徑使用的命名空間清單。 如需有關 WITH XMLNAMESPACES 子句語法的相關資訊，請參閱 [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)。  
   
  FOR **(** \<promoted_node_path_action_list> **)**  
  這是要加入或移除的索引路徑清單。  

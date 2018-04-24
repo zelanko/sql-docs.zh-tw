@@ -1,30 +1,33 @@
 ---
-title: "系統管理功能區域 (主資料管理員) | Microsoft Docs"
-ms.custom: 
+title: 系統管理功能區域 (主資料管理員) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72cb92630ce2777887929deaa46bfc57eecca837
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: ed7a2faa6496d1f9f0a4b5a06074ca33f5996c9e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系統管理功能區域 (主資料管理員)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [系統管理] 功能區域中，管理員可以建立模型及其所有物件， 也可以建立商務規則，並建立及部署模型封裝。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="model"></a>[模型]  

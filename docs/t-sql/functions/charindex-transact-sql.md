@@ -1,16 +1,16 @@
 ---
 title: CHARINDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHARINDEX
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ed2f5334c0c76288ca31cf07857a87f2d1c72033
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b0da42fc1b6a06c0a17f758bf692f065c1e3866c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

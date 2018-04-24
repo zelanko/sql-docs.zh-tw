@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8060994f8f7da132b848150f1c005140b9eba2c6
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 4145ef8b52e5d1a2c0610550ffe7cf40766a2906
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   若為 DQS 的現有安裝，您可以在 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中將所有知識庫一次匯出到 DQS 備份檔案 (.dqsb)，然後從命令提示字元執行 DQSInstaller.exe 檔案，即可使用此 .dqsb 檔案一次將所有知識庫匯入不同的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。 如需有關從命令提示字元執行 DQSInstaller.exe 的詳細資訊，請參閱＜ [Run DQSInstaller.exe from Command Prompt](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) ＞中的＜ [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)＞。  
   
  這項功能可讓您在 *中一次備份所有*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 知識庫，而不必個別使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]將每一個知識庫匯出到 .dqs 檔案。 同樣地，您可以從備份檔案一次將所有  知識庫匯入另一個 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，而不必使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]從 .dqs 檔案個別匯入每一個知識庫。 當您在電腦上解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，然後將它重新安裝在另一部電腦上時，這對於備份和還原知識庫特別有用處。 您可以在現有的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝中輕鬆將所有知識庫匯出到 DQS 備份檔案 (.dqsb)，然後在另一部電腦上安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 之後從備份檔案匯入所有知識庫。  

@@ -1,16 +1,16 @@
 ---
 title: SUSER_SNAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SUSER_SNAME_TSQL
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - names [SQL Server], logins
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 177c7802c3a9c7ca7fadbb279c0be35fd57af820
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 974c880a2d8d99c1a8f37d3b2af0b13b41efebc3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +55,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="arguments"></a>引數  
  *server_user_sid*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  這是選擇性的登入安全性識別碼。 *server_user_sid* 為 **varbinary(85)**。 *server_user_sid* 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組的安全性識別碼。 如果未指定 *server_user_sid*，就會傳回目前使用者的相關資訊。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
@@ -84,7 +85,7 @@ GO
 ### <a name="b-using-susersname-with-a-windows-user-security-id"></a>B. 搭配 Windows 使用者安全性識別碼使用 SUSER_SNAME  
  下列範例會傳回與 Windows 安全性識別碼相關聯的登入名稱。  
   
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
@@ -111,7 +112,7 @@ GO
 ### <a name="d-calling-susersname-in-combination-with-execute-as"></a>D. 結合 EXECUTE AS 呼叫 SUSER_SNAME  
  當從模擬內容中呼叫 SUSER_SNAME 時，這個範例會顯示 SUSER_SNAME 的行為。  
   
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME();  

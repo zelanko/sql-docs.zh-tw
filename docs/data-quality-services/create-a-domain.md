@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f4473d85c67071ce862915a16d48ac14a2a6e02
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 91d23c2a47abceb095e8784839ff9121f450ff97
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-domain"></a>建立定義域
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立定義域。 定義域中的值是欄位中資料的語意表示法。 如需定義域的詳細資訊，請參閱[管理定義域](../data-quality-services/managing-a-domain.md)。  
   
  建立新的定義域的方式有兩種。 第一種方式是在知識探索活動的對應步驟期間，當您正在分析資料取樣，將知識加入至新的知識庫或現有知識庫時。 第二種方式是在定義域管理活動期間，當您建立新的定義域，而不是變更現有定義域時。  
@@ -68,7 +71,7 @@ ms.lasthandoff: 03/22/2018
     > [!NOTE]  
     >  如需有關定義域屬性的詳細資訊，請參閱＜ [Set Domain Properties](../data-quality-services/set-domain-properties.md)＞。  
   
-2.  為定義域中的值，從 **[資料類型]** 清單選取資料類型。 資料類型可以是 **[字串]** (預設值)、 **[日期]**、 **[整數]**或 **[十進位]**。  
+2.  為定義域中的值，從 **[資料類型]** 清單選取資料類型。 資料類型可以是 **[字串]** (預設值)、 **[日期]**、 **[整數]** 或 **[十進位]**。  
   
 3.  選取 **[使用前置值]** 指定一組同義字中的前置值將會是輸出，而不是與其同義的值。 取消選取 **[使用前置值]** ，指定每一個同義字值都是正確或更正形式的輸出，而且不會由其群組的前置值加以取代。  
   

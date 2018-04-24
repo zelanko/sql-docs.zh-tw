@@ -1,30 +1,33 @@
 ---
-title: "以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
-ms.custom: 
+title: 以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbc5fe44566779dae76d3bb314c97a126630fd87
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 00d51ace2c2e5bb86acae6ccd18994c9a8de749c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您想要確定其他人跟您使用的資料相同時，請將捷徑查詢檔案以電子郵件傳送給其他人。 您應該共用查詢，而不是儲存工作表並以電子郵件傳送。  
   
 ## <a name="prerequisites"></a>Prerequisites  

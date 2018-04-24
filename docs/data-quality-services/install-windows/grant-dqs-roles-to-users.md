@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b70697a0d52711db29d9e9f8c8588d86126aace3
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 2a9bc901465e2b329cf1491e84e8f3dd87f66923
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="grant-dqs-roles-to-users"></a>對使用者授與 DQS 角色
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主題描述如何根據 Windows 主體建立 SQL 登入，並在 DQS_MAIN 資料庫上授與 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 角色。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -41,7 +44,7 @@ ms.lasthandoff: 03/22/2018
   
 3.  以滑鼠右鍵按一下 [安全性] 資料夾，並指向 [新增]，然後按一下 [登入]。  
   
-4.  在 **[登入 - 新增]** 對話方塊的 **[登入名稱]** 方塊中，指定 Windows 使用者的名稱，指定 **[Windows 驗證]**做為驗證類型，然後按一下 **[搜尋]** 驗證使用者。  
+4.  在 **[登入 - 新增]** 對話方塊的 **[登入名稱]** 方塊中，指定 Windows 使用者的名稱，指定 **[Windows 驗證]** 做為驗證類型，然後按一下 **[搜尋]** 驗證使用者。  
   
 5.  使用者驗證完成後，按一下左窗格中的 **[使用者對應]** 頁面。  
   

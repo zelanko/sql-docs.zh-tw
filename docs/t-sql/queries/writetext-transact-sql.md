@@ -1,16 +1,16 @@
 ---
 title: WRITETEXT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WRITETEXT_TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - overwriting data
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda340750c555d7e6e858ddac1a87401e215891e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f2a5eb2808bf0f438adbe606f2d59e39b4ec3c55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
   允許以記錄最少資訊的互動方式，更新現有的 **text**、**ntext** 或 **image** 資料行。 WRITETEXT 會覆寫它所影響之資料行中的任何現有資料。 WRITETEXT 不能用在檢視表中的 **text**、**ntext** 及 **image** 資料行上。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用大數值資料類型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式的 **.**WRITE 子句。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用大數值資料類型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式的 **.** WRITE 子句。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

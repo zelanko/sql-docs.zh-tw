@@ -1,16 +1,16 @@
 ---
 title: COLUMNPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COLUMNPROPERTY
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - parameters [SQL Server], properties
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61ac858e029848ef59978669112de3db7c068f67
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c26df937a654289c6a5313631a612bfbd386cc6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ COLUMNPROPERTY ( id , column , property )
 |**GeneratedAlwaysType**|由系統產生的資料行值。 對應到 **sys.columns.generated_always_type**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0 = 不一律產生<br /><br /> 1 = 一律作為資料列開頭產生<br /><br /> 2 – 一律作為資料列結尾產生|  
 |**IsHidden**|由系統產生的資料行值。 對應至 **sys.columns.is_hidden**|**適用於**： [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0 = 不隱藏<br /><br /> 1 = 隱藏|  
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回類型
  **int**  
   
 ## <a name="exceptions"></a>例外狀況  

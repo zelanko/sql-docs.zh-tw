@@ -2,7 +2,7 @@
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4738a706c6f6d717a4346e8dc67169d1f795e74
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: 39a03b6b5f087305db6a5e795a532392bdd668a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 *Key_ID*  
 資料庫中非對稱金鑰的 Key_ID。 如果您只知道金鑰名稱，請使用 ASYMKEY_ID 來尋找 Key_ID。 *Key_ID* 的資料型別為 **int**。
   
-**'**algorithm_desc**'**  
+**'** algorithm_desc **'**  
 指定輸出會傳回非對稱金鑰的演算法描述。 僅適用於根據 EKM 模組所建立的非對稱金鑰。
   
-**'**string_sid**'**  
+**'** string_sid **'**  
 指定輸出以 **nvarchar()** 格式傳回非對稱金鑰的 SID。
   
-**'**sid**'**  
+**'** sid **'**  
 指定輸出會以二進位格式傳回非對稱金鑰的 SID。
   
 ## <a name="return-types"></a>傳回類型  

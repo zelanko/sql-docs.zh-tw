@@ -1,16 +1,16 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_WORKLOAD_GROUP_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > 指定的數量僅參考查詢執行授與記憶體。  
   
- *value* 必須是 0 或正整數。 *value* 允許的範圍從 0 至 100。 *value* 的預設值為 25。  
+ *value* 必須是 0 或正整數。 *value* 允許的範圍從 0 至 100。 *value* 的預設設定為 25。  
   
  請注意下列事項：  
   
@@ -102,7 +102,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >  請注意，如果伺服器沒有足夠的實體記憶體，這兩種情況都會受限於逾時錯誤 8645。  
   
  REQUEST_MAX_CPU_TIME_SEC =*value*  
- 指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *value* 必須是 0 或正整數。 *value* 的預設值為 0，這代表沒有限制。  
+ 指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *value* 必須是 0 或正整數。 *value* 的預設設定為 0，這代表沒有限制。  
   
 > [!NOTE]  
 > 根據預設，Resource Governor 不會在超過最大時間時，阻止要求繼續執行。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[超過 CPU 閾值事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。 
@@ -140,7 +140,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  DOP 經過設定後，在授與記憶體不足的壓力下，僅能將其降低。 在授與記憶體佇列中等候時，看不到工作負載群組的重新組態。  
   
  GROUP_MAX_REQUESTS =*value*  
- 指定在工作負載群組中可允許執行的最大同時要求數。 *value* 必須是 0 或正整數。 *value* 的預設值 0 允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。  
+ 指定在工作負載群組中可允許執行的最大同時要求數。 *value* 必須是 0 或正整數。 *value* 的預設設定 0 允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。  
   
  USING { *pool_name* | "**default**" }  
  將工作負載群組與 *pool_name* 所識別的使用者定義資源集區產生關聯，實際上會將工作負載群組放入資源集區中。 如果未提供 *pool_name* 或未使用 USING 引數，工作負載群組會放入預先定義的資源管理員預設集區。  

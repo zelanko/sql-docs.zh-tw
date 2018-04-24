@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.administration.configuration.createDirectRDS.f1
 - sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d83e0d7cee787614832c94c75f6948ab0c00c84
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: feeff52bb17b6b5012047233eaf594c2fe07f091
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>設定 DQS 使用參考資料
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何設定 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 來使用參考資料清理您的資料。 您可以使用 Windows Azure Marketplace 所提供的參考資料，以及直接線上協力廠商參考資料提供者所提供的參考資料。  
   
 ## <a name="before-you-begin"></a>開始之前  
@@ -45,7 +48,7 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[管理]**底下的 **[組態]**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[管理]** 底下的 **[組態]**。  
   
 3.  在 **[參考資料]** 索引標籤的 **[網路設定]** 區域底下，於 **[Proxy 伺服器]** 和 **[通訊埠]** 方塊中輸入適當的值 (如果您或您的組織使用 Proxy 伺服器連接至網際網路)。  
   
@@ -57,7 +60,7 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[管理]**底下的 **[組態]**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[管理]** 底下的 **[組態]**。  
   
 3.  在 **[參考資料]** 索引標籤的 **[網路設定]** 區域底下，於 **[Proxy 伺服器]** 和 **[通訊埠]** 方塊中輸入適當的值 (如果您或您的組織使用 Proxy 伺服器連接至網際網路)。  
   

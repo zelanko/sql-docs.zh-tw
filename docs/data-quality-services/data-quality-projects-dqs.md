@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: ''
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97ee117319697d817f760a25332728648fa565f9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 9a3de4de88c543c4d20cfa05cf07e85fa72eb6b3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-projects-dqs"></a>資料品質專案 (DQS)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的資料品質專案是使用知識庫改善來源資料品質的一種工具，其方式是執行 *資料清理* 和 *資料比對* 活動，然後將產生的資料匯出到 SQL Server 資料庫或 .csv 檔案。 您可以建立資料品質專案當做清理專案或比對專案，以執行各自的活動。 清理專案和比對專案可以使用相同的知識庫執行，因為用於資料清理和比對的知識可以內建到相同的知識庫中。  
   
  資料品質專案具有以下優點：  

@@ -1,30 +1,33 @@
 ---
-title: "套用及更新變更集 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 套用及更新變更集 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e6f059a5ac85fce47256ae2b75f170017186e14
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: dc25a322c654cb1d6408a5927957b41e14aeb022
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>套用及更新變更集 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   變更集是對主要資料所做的暫止變更集合。 您可以在本機套用變更集，以檢視、新增、更新及刪除變更集中的暫止變更。  
   
 ## <a name="prerequisites"></a>Prerequisites  

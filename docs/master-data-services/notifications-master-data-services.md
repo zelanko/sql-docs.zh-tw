@@ -1,16 +1,16 @@
 ---
-title: "通知 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 通知 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - notifications [Master Data Services]
@@ -18,18 +18,21 @@ helpviewer_keywords:
 - e-mail [Master Data Services]
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-caps.latest.revision: 
+caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa5fd134e53be86c371427f396443f89e6c0e68e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 258ed1c5e362cc3188775719bca8e2a65a2421d5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 可設定為在商務規則驗證失敗、模型版本狀態變更或變更集狀態變更時，傳送電子郵件通知。  
   
 ## <a name="how-notifications-are-sent"></a>通知的傳送方式  

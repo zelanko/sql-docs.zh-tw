@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.cdvaluerelations.f1
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa0df2009e849773eed84a0ce7a7d3fbf6302d73
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 7bf9cd8c216f822a9ebb8197451ced359fda78af
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>使用複合定義域中的值關聯
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何檢視在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知識探索程序期間針對複合定義域找到的值組合。 這個頁面會顯示值組合出現的次數。 複合定義域不支援值管理，所以您無法針對這些值執行任何作業。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  

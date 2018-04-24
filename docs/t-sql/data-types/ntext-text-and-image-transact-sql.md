@@ -1,16 +1,16 @@
 ---
-title: "ntext、text 和 image (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ntext、text 和 image (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ntext_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - ntext data type, about ntext data type
 - image data type, about image data type
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 43acc9a88b483aa119e7b8b0c7d00039fd33e8a2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2e60348cdf1407c653dcadf70a626c5fba8ecaac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext、text 和 image (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>另請參閱
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[資料類型轉換 &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  

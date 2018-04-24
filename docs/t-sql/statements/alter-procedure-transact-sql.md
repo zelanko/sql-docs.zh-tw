@@ -1,16 +1,16 @@
 ---
 title: ALTER PROCEDURE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_PROCEDURE_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - modifying stored procedures
 - stored procedures [SQL Server], modifying
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e37551d9e5a2d33a7b5ab3a4ab29c028cce0d2c4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c07ffc325c78302ac3cc2098f37dc7cf07a5add4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,7 +124,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  ENCRYPTION  
  **適用於**：SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 透過 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- 指出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 ALTER PROCEDURE 陳述式的原始文字轉換為混亂格式。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，無法直接從任何目錄檢視中看見混亂格式的輸出。 對系統資料表或資料庫檔案沒有存取權的使用者，無法擷取混亂格式的文字。 不過，可透過 [DAC 連接埠](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)存取系統資料表或直接存取資料庫檔案的具特殊權限使用者，則可使用該文字。 另外，可將偵錯工具附加至伺服器處理序的使用者，可以在執行階段從記憶體擷取原始程序。 如需有關存取系統中繼資料的詳細資訊，請參閱[中繼資料可見性組態](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 指出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 ALTER PROCEDURE 陳述式的原始文字轉換為混亂格式。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，無法直接從任何目錄檢視中看見混亂格式的輸出。 對系統資料表或資料庫檔案沒有存取權的使用者，無法擷取混亂格式的文字。 不過，可透過 [DAC 連接埠](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)存取系統資料表或直接存取資料庫檔案的具特殊權限使用者，則可使用該文字。 另外，可將偵錯工具附加至伺服器處理序的使用者，可以在執行階段從記憶體擷取原始程序。 如需如何存取系統中繼資料的詳細資訊，請參閱[中繼資料可見性組態](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
  使用這個選項建立的程序，不能發行為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫的一部分。  
   
@@ -148,12 +149,12 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  包含程序主體的一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 您可以使用選用的 BEGIN 和 END 關鍵字來括住陳述式。 如需詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md) 中的＜最佳作法＞、＜一般備註＞以及＜限制事項＞這幾節。  
   
- EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
+ EXTERNAL NAME *assembly_name ***.*** class_name ***.*** method_name*  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定 CLR 預存程序所要參考之 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件的方法。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是組件中的類別。 如果該類別的名稱符合命名空間規定，且該名稱利用句點 (**.**) 來分隔命名空間的各個部分，您就必須使用方括號 (**[]**) 或引號 (**""**) 來分隔類別名稱。 指定的方法必須是類別的靜態方法。  
   
- 依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能執行 CLR 程式碼。 您可以建立、修改和卸除參考通用語言執行平台模組的資料庫物件；不過，必須等到您啟用 [CLR 已啟用選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之後，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中執行這些參考。 若要啟用這個選項，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
+ 依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能執行 CLR 程式碼。 您可以建立、修改和卸除參考通用語言執行平台模組的資料庫物件；不過，必須等到您啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之後，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行這些參考。 若要啟用這個選項，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
 > [!NOTE]  
 >  自主資料庫不支援 CLR 程序。  

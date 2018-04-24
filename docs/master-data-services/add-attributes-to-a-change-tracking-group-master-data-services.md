@@ -1,34 +1,37 @@
 ---
-title: "將屬性新增至變更追蹤群組 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 將屬性新增至變更追蹤群組 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d78aac171188b056145eb0e6eaa08a1e3153a135
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 473a77831274216a69948fef964f3199f6be5dfc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>將屬性加入至變更追蹤群組 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   當您想要追蹤屬性值變更時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中將屬性新增至變更追蹤群組。  
   
 > [!NOTE]  

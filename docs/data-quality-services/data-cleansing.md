@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2932ba3a3eeb2c043745486c536d4e0a04bcc496
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 624f72be359452bd80c3d68a7a8487dbe06be6b0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-cleansing"></a>Data Cleansing
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   資料清理是分析資料來源中的資料品質、手動核准/拒絕系統的建議，藉以對資料進行變更的程序。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的資料清理包含電腦輔助的程序，以分析資料符合知識庫中知識的方式，同時也包含一個互動式程序，讓資料管理人檢閱並修改電腦輔助的程序結果，以確保資料清理完全符合其希望的執行方式。  
   
  資料管理人也可以在 Integration Services 封裝程序中執行資料清理。 在此情況下，資料管理人會使用 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]，透過現有的知識庫自動執行資料清理。 如需詳細資訊，請參閱 [DQS 清理轉換](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)。  
@@ -81,7 +84,7 @@ ms.lasthandoff: 03/22/2018
 -   **正確**：找到正確的值。 例如，值符合定義域值。 如有需要，您可以覆寫 DQS 清理，方法是，透過拒絕此索引標籤下的值，或透過在 **[更正為]** 資料行中指定替代字，然後按一下 **[接受]** 資料行中的選項按鈕。 此索引標籤也將包含使用者在互動式清理期間，透過按一下 **[新的]** 或 **[無效]** 索引標籤中， **[核准]** 資料行內的選項按鈕核准的值。  
   
 > [!NOTE]  
->  在 **[建議]**、 **[更正]**和 **[正確]** 索引標籤中，DQS 會針對個別的定義域值，在 **[更正為]** 資料行中顯示定義域的前置值 (如果適用)。  
+>  在 **[建議]**、 **[更正]** 和 **[正確]** 索引標籤中，DQS 會針對個別的定義域值，在 **[更正為]** 資料行中顯示定義域的前置值 (如果適用)。  
   
  資料管理人會使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 查看 DQS 建議的變更，以及決定是否實作變更。 他可以確認 DQS 已指定為正確的值，實際上是正確的。 他可以確認應該進行 DQS 以高信賴等級所做的變更。 他可以決定是否核准自動建議的變更。 而且他可以檢閱尚未變更的值，以便進行電腦輔助程序未發現的變更。  
   

@@ -1,16 +1,16 @@
 ---
 title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENDPOINT
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: 
+caps.latest.revision: 135
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ec23f963b501a6067d7884de378eee8260ca96ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_PORT **=***listenerPort*  
  指定 Service Broker TCP/IP 通訊協定用來接聽連接時所用的通訊埠編號。 依慣例會使用 4022，但介於 1024 和 32767 之間的任何數字都有效。  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
  指定端點將接聽的 IP 位址。 預設值是 ALL。 這表示接聽程式會接受與任何有效 IP 位址的連接。  
   
  如果您使用 IP 位址來設定資料庫鏡像，而不是使用完整網域名稱 (`ALTER DATABASE SET PARTNER = partner_IP_address` 或 `ALTER DATABASE SET WITNESS = witness_IP_address`)，則當您建立鏡像端點時，您必須指定 `LISTENER_IP =IP_address` 而非 `LISTENER_IP=ALL`。  

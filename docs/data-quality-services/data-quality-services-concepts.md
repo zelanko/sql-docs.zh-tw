@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94ff21036d6ed3dfa98170a9566818820fe5171e
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 52f7170e217a0a9083f007b4105d13ddde805d7d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主題將提供知識管理、資料品質專案和資料品質管理中 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念的簡短摘要。  
   
 ##  <a name="Knowledge"></a> 知識管理概念  

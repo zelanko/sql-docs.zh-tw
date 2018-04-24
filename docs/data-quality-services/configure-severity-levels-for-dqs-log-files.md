@@ -21,18 +21,21 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51bcf4a7d0654cd0fc6c665e0614e4ceb21e83d2
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 3e05246f4d15335333a2e43b95a85a2b9e3d3abf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>為 DQS 記錄檔設定嚴重性層級
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 來針對 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) 中的各種不同活動和模組設定嚴重性層級。 嚴重性層級會定義 DQS 中發生之事件的強度。 DQS 事件具有以下的嚴重性層級 (依照嚴重性的遞減順序排列)：  
   
 -   **嚴重錯誤**：可能會造成嚴重/非預期結果的嚴重執行階段錯誤。  
@@ -63,7 +66,7 @@ ms.lasthandoff: 03/22/2018
   
 3.  接下來，按一下 **[記錄檔設定]** 索引標籤。以下列出您可以選取嚴重性層級的 DQS 活動：[定義域管理]、[知識探索]**、[清理專案 (例如RDS)]、[比對原則和比對專案]** 和 [RDS]。  
   
-4.  如果是 DQS 活動，請選取您想要記錄的嚴重性層級。 您可以選取下列其中一項： **[嚴重錯誤]**、 **[錯誤]**、 **[警告]**、 **[資訊]**和 **[偵錯]**。 例如，如果您希望在知識探索活動中，只將嚴重訊息寫入 DQS 記錄檔，請針對 **[知識探索]** 活動於下拉式清單中選取 **[嚴重錯誤]** 。  
+4.  如果是 DQS 活動，請選取您想要記錄的嚴重性層級。 您可以選取下列其中一項： **[嚴重錯誤]**、 **[錯誤]**、 **[警告]**、 **[資訊]** 和 **[偵錯]**。 例如，如果您希望在知識探索活動中，只將嚴重訊息寫入 DQS 記錄檔，請針對 **[知識探索]** 活動於下拉式清單中選取 **[嚴重錯誤]** 。  
   
     > [!NOTE]  
     >  預設會針對每一個活動選取 **[錯誤]** 。 這表示，預設會針對每一個活動將錯誤和嚴重訊息寫入 DQS 記錄檔中。  
@@ -87,7 +90,7 @@ ms.lasthandoff: 03/22/2018
   
 2.  在出現的方格中，從 **[模組]** 資料行的下拉式清單中選取模組名稱。  
   
-3.  接下來，從 **[嚴重性]** 資料行的下拉式清單中選取模組的嚴重性層級。 您可以選取下列其中一項： **[嚴重錯誤]**、 **[錯誤]**、 **[警告]**、 **[資訊]**和 **[偵錯]**。  
+3.  接下來，從 **[嚴重性]** 資料行的下拉式清單中選取模組的嚴重性層級。 您可以選取下列其中一項： **[嚴重錯誤]**、 **[錯誤]**、 **[警告]**、 **[資訊]** 和 **[偵錯]**。  
   
      例如在定義域管理活動中，您可以為定義域規則定義功能設定與定義域管理活動不同的資料粒度層級，方法是選取 **Microsoft.Ssdqs.DomainRules.Define** 模組，並選取不同的記錄嚴重性層級。 同樣地，您可以針對跨定義域規則功能設定不同的資料粒度層級，方法是選取 **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** 模組，並選取不同的記錄嚴重性層級。  
   

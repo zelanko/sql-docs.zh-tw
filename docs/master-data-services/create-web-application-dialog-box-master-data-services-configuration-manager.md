@@ -1,32 +1,35 @@
 ---
-title: "建立 Web 應用程式對話方塊 (Master Data Services 組態管理員) | Microsoft Docs"
-ms.custom: 
+title: 建立 Web 應用程式對話方塊 (Master Data Services 組態管理員) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f25f7c253baa48c67a1316412c98e5ca84ad83e8
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: f116aa8441922d497fe0b4d60be5d695ee85eef6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>建立 Web 應用程式對話方塊 (Master Data Services 組態管理員)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   使用 [建立 Web 應用程式] 對話方塊可建立 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 這個 Web 應用程式會建立在您於 [Web 組態] 頁面上所選取的網站中。  
   
 ## <a name="web-application"></a>Web 應用程式  

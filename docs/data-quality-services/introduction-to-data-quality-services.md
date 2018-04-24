@@ -15,18 +15,21 @@ ms.topic: article
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: ''
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2b0004068581d06c516c711565d811cc1736b55
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 84373ec49b5342a4e975f26ab474d4420190a686
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的資料品質方案可讓資料管理人或 IT 專業人員維護其資料的品質，並確保資料適合其商業用途。 DQS 是知識驅動方案，可同時提供電腦輔助和互動式方法來管理資料來源的完整性和品質。 DQS 可讓您探索、建立以及管理資料的相關知識。 然後您可以使用該知識執行資料清理、比對和分析。 您也可以在 DQS 資料品質專案中使用參考資料提供者的雲端式服務。  
   
 ##  <a name="BusinessNeed"></a> DQS 的商務需求  

@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.browseforservers.f1
 - sql13.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67aac939d1dcbdd657fab1934445782af5c9f52a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 220f642af8fc1c7b00f9a30027e69a380c414e1a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="run-the-data-quality-client-application"></a>執行 Data Quality Client 應用程式
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   執行 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]並登入 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  

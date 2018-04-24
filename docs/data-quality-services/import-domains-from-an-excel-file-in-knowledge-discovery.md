@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bf3c6cad727ffb358dacfd2f2f401ca1902e806
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 1aa1472f24c510c15e98bd50718f4297a25951ce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>在知識探索中匯入 Excel 檔案中的定義域
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知識探索活動中匯入 Excel 檔案中的一個或多個定義域。 此匯入程序會簡化知識產生程序，以節省時間和精力。 此程序可讓擁有 Excel 檔案或文字檔資料的人建立包含該資料的知識庫 (如需將值匯入現有知識庫定義域的詳細資訊，請參閱[將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md))。匯出至 Excel 檔案不受支援。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  

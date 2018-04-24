@@ -1,16 +1,16 @@
 ---
-title: "建立索引檢視表 | Microsoft Docs"
-ms.custom: 
+title: 建立索引檢視表 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-views
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 
+caps.latest.revision: 79
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 505c016f769a76c2908f607617db99a04e857ef1
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2212ab366b387a5382b37624964b14b96ebf1de7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +95,7 @@ ms.lasthandoff: 03/19/2018
   
 -   當您建立索引時，`IGNORE_DUP_KEY` 選項必須設定為 OFF (預設值)。    
   
--   在檢視表定義中，兩部分名稱 *schema***.***tablename* 必須參考資料表。    
+-   在檢視表定義中，兩部分名稱 *schema ***.*** tablename* 必須參考資料表。    
   
 -   檢視表中所參考的使用者定義函式，必須使用 `WITH SCHEMABINDING` 選項來建立。    
   
@@ -168,7 +169,7 @@ ms.lasthandoff: 03/19/2018
   
 #### <a name="to-create-an-indexed-view"></a>建立索引檢視表  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

@@ -2,7 +2,7 @@
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|statements
@@ -36,11 +36,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 96716c0089734ddb038ae117211fcade0d810689
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -173,7 +174,7 @@ ON
    *filegroup_name*  
    指定用以儲存叢集資料行存放區索引的檔案群組。 如果未指定位置，且資料表未分割，則索引會使用與基礎資料表或檢視相同的檔案群組。 此檔案群組必須已存在。  
 
-   **"**default**"**  
+   **"** default **"**  
    若要在預設的檔案群組上建立索引，請使用 "default" 或 [ default ]。  
   
    如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 QUOTED_IDENTIFIER 的預設值是 ON。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
@@ -257,10 +258,10 @@ ON
 *filegroup_name*  
    指定索引建立所在的檔案群組名稱。 如果未指定 *filegroup_name* 且資料表未分割，則索引會使用與基礎資料表相同的檔案群組。 此檔案群組必須已存在。  
  
-**"**default**"**  
+**"** default **"**  
 在預設的檔案群組上建立指定的索引。  
   
-在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"**default**"** 或 ON **[**default**]**。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
+在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"** default **"** 或 ON **[** default **]**。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
 ##  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  

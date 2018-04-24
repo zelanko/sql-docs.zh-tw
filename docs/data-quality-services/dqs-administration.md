@@ -17,18 +17,21 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40418a443d88ac0c7be4b7aec6569ca70a6ef09d
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: f19e7c40be1328f1cae85b7492c047ae8e1eff30
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dqs-administration"></a>dqs 管理
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 可讓您管理在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上執行的各種 DQS 活動、設定與 DQS 活動相關的伺服器層級屬性、設定 Reference Data Service 設定，以及設定 DQS 記錄設定。 這些操作是透過 **中的** [管理] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]功能完成。 根據您在 DQS 中的安全性存取權 (角色) 而定，您會被授與/拒絕對此區域中某些功能的存取。  
   
  除了這些管理活動之外，本主題也提供不使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]執行管理活動、備份與還原 DQS 資料庫的相關資訊。  

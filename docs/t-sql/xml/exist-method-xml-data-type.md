@@ -1,16 +1,16 @@
 ---
-title: "exist() 方法 (xml 資料類型) | Microsoft Docs"
-ms.custom: 
+title: exist() 方法 (xml 資料類型) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74fc65730d0c46858c282b9625c86d1ab651ec49
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3d0c4bf029fe2f5ed930c18b86ae5d6d2153b300
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

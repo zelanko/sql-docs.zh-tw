@@ -1,16 +1,16 @@
 ---
 title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_SHOWCONTIG_TSQL
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ebc23e00ed03e4e4cca50b4a1655c373816d563e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ DBCC SHOWCONTIG
 |**掃描頁數**|資料表或索引中的頁數。|  
 |**掃描範圍**|資料表或索引中的範圍數目。|  
 |**範圍切換**|當 DBCC 陳述式往返資料表或索引頁面時，在各範圍之間的移動次數。|  
-|**每個範圍平均頁數**|在頁面鏈結中，每個範圍的頁數。|  
+|**平均範圍平均頁數**|在頁面鏈結中，每個範圍的頁數。|  
 |**掃描密度 [Best Count:Actual Count]**|這是一個百分比。 它是**最佳次數**與**實際次數**的比例。 如果每個項目都是連續的，這個值就是 100；如果這個值小於 100，就會有某些片段存在。<br /><br /> **最佳次數**是每個項目都連續連結時，理想的範圍變更數目。 **實際次數**是實際的範圍變更數目。|  
 |**邏輯掃描片段**|掃描索引分葉頁時所傳回失序頁面的百分比。 這個數字與堆積無關。 失序頁面是指配置給索引之下一個實體頁面的頁面，而不是目前分葉頁中下一頁指標所指向的頁面。|  
 |**範圍掃描片段**|掃描索引分葉頁時之失序範圍的百分比。 這個數字與堆積無關。 失序範圍是索引目前頁面所在之範圍，實際上不是索引上一頁所在範圍之下一範圍的範圍。<br /><br /> 注意：當索引跨越許多檔案時，這個數目將沒有意義。|  
-|**平均可用位元組**|掃描頁面的平均可用位元組數。 數目愈大，頁面的飽和度愈低。 如果索引沒有許多隨機的插入，數目低會比較好。 這個數目也受到資料列大小的影響；資料列愈大，這個數目也愈大。|  
+|**平均平均可用位元組**|掃描頁面的平均可用位元組數。 數目愈大，頁面的飽和度愈低。 如果索引沒有許多隨機的插入，數目低會比較好。 這個數目也受到資料列大小的影響；資料列愈大，這個數目也愈大。|  
 |**平均頁面密度 (全滿)**|平均頁面密度，這是一個百分比。 這個值將資料列大小考慮在內。 因此，這個值是更精確的頁面飽和度指示。 百分比愈大，愈好。|  
   
 指定 *table_id* 和 FAST 時，DBCC SHOWCONTIG 會傳回只含下列資料行的結果集。
@@ -174,7 +174,7 @@ DBCC SHOWCONTIG 會判斷資料表是否嚴重片段化。 資料表的片段化
 -   重建索引。  
      請利用 ALTER INDEX 和 REBUILD 重建索引。 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-結果集中的**每頁平均可用位元組**和**平均頁面密度 (全滿)** 統計資料能指出索引頁面的飽和度。 **每頁平均可用位元組**的數目應該很小，而**平均頁面密度 (全滿)** 的數目數應該很大，這樣索引才不會有許多隨機的插入。 指定 FILLFACTOR 選項來卸除和重建索引，可以改進統計資料。 另外，設定 REORGANIZE 的 ALTER INDEX 也會壓縮索引，將它的 FILLFACTOR 考量在內，可以改進統計資料。
+**每個平均可用位元組**和**平均頁面密度 (全滿)** 統計資料能指出索引頁面的飽和度。 **每個平均可用位元組**的數目應該很小，而**平均頁面密度 (全滿)** 的數目數應該很大，這樣索引才不會有許多隨機的插入。 指定 FILLFACTOR 選項來卸除和重建索引，可以改進統計資料。 另外，設定 REORGANIZE 的 ALTER INDEX 也會壓縮索引，將它的 FILLFACTOR 考量在內，可以改進統計資料。
   
 > [!NOTE]  
 >  有許多隨機插入且非常飽和的頁面之索引，頁面分割數會增加。 這會造成更多的片段。  

@@ -1,31 +1,34 @@
 ---
-title: "建立主資料管理員 Web 服務 Proxy 類別 | Microsoft Docs"
-ms.custom: 
+title: 建立主資料管理員 Web 服務 Proxy 類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: develop
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6810bec24c6070e1336dc653206d6d0757ae687
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 32d2966e966d9f2b9f774fc3fae0f8618700ec3b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>建立主資料管理員 Web 服務 Proxy 類別
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服務可讓您以程式設計的方式，從可以存取 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 網站的任何電腦使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的功能。 在您可以開始撰寫程式碼以存取 Web 服務之前，必須先產生 Proxy 類別。 您用來執行 Web 服務作業的主要 Proxy 類別為 <xref:Microsoft.MasterDataServices.ServiceClient> 類別，此類別會實作 <xref:Microsoft.MasterDataServices.IService> 介面。  
   
 ## <a name="enable-web-service-metadata-publishing"></a>啟用 Web 服務中繼資料發佈  

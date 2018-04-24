@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a362ebc450559580430a952b99fb0aebe93e97a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 7a8e9efc399d840f56b92162ad557863f4a4fa66
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼字檢查
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 拼字檢查會檢查定義域中字串值的語法、拼字和句子結構。 拼字檢查是一種獨立的用戶端功能，它並未與伺服器端引擎整合，也不涉及目前的流程或狀態。 拼字檢查會識別它視為潛在錯誤的字串值，然後在您對定義域值進行其他手動變更的相同位置中，以紅色底線標示這些值。 這些位置包括：  
   
 -   **[知識探索]** 活動的 **[管理定義域值]** 頁面  
@@ -47,7 +50,7 @@ ms.lasthandoff: 03/22/2018
   
 ##  <a name="Enable"></a> 啟用拼字檢查  
   
-1.  若要在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中啟用拼字檢查，請在 **[定義域管理]** 活動中開啟知識庫，並選取所要的定義域，然後按一下 **[定義域屬性]** 頁面上的 **[啟用拼字檢查]** 。 在 **[語言]**中，選取要與拼字檢查一起使用的語言。  
+1.  若要在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中啟用拼字檢查，請在 **[定義域管理]** 活動中開啟知識庫，並選取所要的定義域，然後按一下 **[定義域屬性]** 頁面上的 **[啟用拼字檢查]** 。 在 **[語言]** 中，選取要與拼字檢查一起使用的語言。  
   
 2.  在定義域屬性中啟用拼字檢查時，便會在 **[管理定義域值]** 頁面、 **[定義域值]** 頁面或 **[以詞彙為主的關聯]** 頁面和 **[管理和檢視結果]** 頁面上啟用拼字檢查。 若要在這些頁面上停用拼字檢查，請按一下 **[啟用/停用拼字檢查]** 圖示。 按一下此圖示將會在頁面上變更拼字檢查的狀態。 同樣地，如果已停用定義域的 **[啟用拼字檢查]** 屬性，按一下 **[啟用/停用拼字檢查]** 圖示會在頁面上啟用拼字檢查。 如果您結束頁面然後返回頁面，按鈕狀態會再次由 **[啟用拼字檢查]** 定義域屬性所決定。  
   

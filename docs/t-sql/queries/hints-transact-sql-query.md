@@ -2,7 +2,7 @@
 title: 查詢提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|queries
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: ''
+caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: d937872a3c00b453a58932dd127c3e3acc99c9f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -291,7 +291,7 @@ ms.lasthandoff: 03/15/2018
 > [!IMPORTANT] 
 > 一些 USE HINT 提示可能會與在全域或工作階段層級啟用的追蹤旗標發生衝突，或與資料庫範圍設定的設定發生衝突。 在此情況下，查詢層級提示 (USE HINT) 一律優先。 如果 USE HINT 與其他查詢提示或在查詢層級啟用的追蹤旗標 (例如由 QUERYTRACEON 啟用) 發生衝突，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在嘗試執行查詢時會產生錯誤。 
 
- USE PLAN N**'***xml_plan***'**     
+ USE PLAN N **'***xml_plan***'**     
  強制查詢最佳化工具針對 **'***xml_plan***'** 所指定的查詢使用現有的查詢計劃。 USE PLAN 無法搭配 INSERT、UPDATE、MERGE 或 DELETE 陳述式一起使用。  
   
 TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** 會將指定的資料表提示套用至與 *exposed_object_name* 對應的資料表或檢視。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  

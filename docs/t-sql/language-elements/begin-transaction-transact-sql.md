@@ -1,16 +1,16 @@
 ---
 title: BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BEGIN_TRANSACTION_TSQL
@@ -32,16 +32,17 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-caps.latest.revision: 
+caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 260399c0964afeeafc0f8a221de13169ef277496
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a084c264195d48e0f0d8a5aae538c0a50e75c23c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -91,13 +92,13 @@ BEGIN { TRAN | TRANSACTION }
 ## <a name="general-remarks"></a>一般備註
 BEGIN TRANSACTION 會遞增 @@TRANCOUNT，遞增量是 1。
   
-BEGIN TRANSACTION 代表連線所參考的資料在邏輯和實體上都一致的點。 如果發生錯誤，可以回復 BEGIN TRANSACTION 之後的所有資料修正，使資料返回這個已知的一致狀態。 每個交易都會持續到它完成無誤，且發出 COMMIT TRANSACTION 使修正成為資料庫的永久部分為止，或持續到發生錯誤，且利用 ROLLBACK TRANSACTION 陳述式來清除所有修正為止。  
+BEGIN TRANSACTION 代表連接所參考的資料在邏輯和實體上都一致的點。 如果發生錯誤，可以回復 BEGIN TRANSACTION 之後的所有資料修正，使資料返回這個已知的一致狀態。 每項交易都會持續到它完成無誤，且發出 COMMIT TRANSACTION 使修正成為資料庫的永久部分為止，或持續到發生錯誤，且利用 ROLLBACK TRANSACTION 陳述式來清除所有修正為止。  
   
-BEGIN TRANSACTION 會針對發出陳述式的連線啟動一個本機交易。 依照目前的交易隔離等級設定而定，此時會取得許多資源來支援交易鎖定的連線所發出的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，直到利用 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式來完成它為止。 交易長時間未完成會使其他使用者無法存取這些鎖定的資源，也會使記錄無法截斷。  
+BEGIN TRANSACTION 會針對發出陳述式的連接來啟動一項本機交易。 依照目前的交易隔離等級設定而定，此時會取得許多資源來支援交易鎖定的連接所發出的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，直到利用 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式來完成它為止。 交易長時間未完成會使其他使用者無法存取這些鎖定的資源，也會使記錄無法截斷。  
   
- 雖然 BEGIN TRANSACTION 會啟動一個本機交易，但它並不會記錄在交易記錄中，直到應用程式後來執行必須記錄的動作 (如執行 INSERT、UPDATE 或 DELETE 陳述式) 為止。 應用程式可以執行取得鎖定來保護 SELECT 陳述式的交易隔離等級之類的動作，但在應用程式執行修改動作之前，不會在記錄檔案留下任何記錄。  
+ 雖然 BEGIN TRANSACTION 會啟動一項本機交易，但它並不會記錄在交易記錄中，直到應用程式後來執行必須記錄的動作 (如執行 INSERT、UPDATE 或 DELETE 陳述式) 為止。 應用程式可以執行取得鎖定來保護 SELECT 陳述式的交易隔離等級之類的動作，但在應用程式執行修改動作之前，不會在記錄檔案留下任何記錄。  
   
- 利用交易名稱在一系列巢狀交易中命名多個交易對交易的影響不大。 系統只會登錄第一個 (最外層) 交易名稱。 回復任何其他名稱 (不是有效的儲存點名稱) 都會產生錯誤。 事實上在發生這個錯誤時，並不會回復在回復之前所執行的任何陳述式。 只有當外部交易回復時，才會回復陳述式。  
+ 利用交易名稱在一系列巢狀交易中命名多項交易對交易的影響不大。 系統只會登錄第一個 (最外層) 交易名稱。 回復任何其他名稱 (不是有效的儲存點名稱) 都會產生錯誤。 事實上在發生這個錯誤時，並不會回復在回復之前所執行的任何陳述式。 只有當外部交易回復時，才會回復陳述式。  
   
  如果在認可或回復陳述式之前執行下列動作，BEGIN TRANSACTION 陳述式所啟動的本機交易會擴大到分散式交易：  
   
@@ -145,7 +146,7 @@ COMMIT TRAN T1;
   
  "已忽略選項。"  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>Permissions  
  需要 public 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

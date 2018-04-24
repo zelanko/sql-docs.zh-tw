@@ -1,16 +1,16 @@
 ---
-title: "使用 FOR XML 的 RAW 模式 | Microsoft 文件"
-ms.custom: 
+title: 使用 FOR XML 的 RAW 模式 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FOR XML RAW mode
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5685122225199dcd3d4bd1602fde8e1c9e937bdb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 069f859f9067fbb7c2168228469854f7722a6a8e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-raw-mode-with-for-xml"></a>搭配 FOR XML 使用 RAW 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-RAW 模式會將查詢結果集的每一個資料列轉換成具有泛用識別碼 \<資料列> 的 XML 項目，或選擇性提供的項目名稱。 依預設，資料列集內每一個非 NULL 的資料行值，都會對應到一個 \<資料列> 項目的屬性。 若將 ELEMENTS 指示詞加入 FOR XML 子句，則每一個資料行值都會對應到一個 \<資料列> 項目的子項目。 您還可以搭配 ELEMENTS 指示詞，選擇性地指定 XSINIL 選項，將結果集的 NULL 資料行值對應到具有 xsi:nil=`"`true`"`屬性的元素。  
+  RAW 模式會將查詢結果集的每一個資料列轉換成具有泛用識別碼 \<資料列> 的 XML 項目，或選擇性提供的項目名稱。 依預設，資料列集內每一個非 NULL 的資料行值，都會對應到一個 \<資料列> 項目的屬性。 若將 ELEMENTS 指示詞加入 FOR XML 子句，則每一個資料行值都會對應到一個 \<資料列> 項目的子項目。 您還可以搭配 ELEMENTS 指示詞，選擇性地指定 XSINIL 選項，將結果集的 NULL 資料行值對應到具有 xsi:nil=`"`true`"`屬性的元素。  
   
  您可以要求結果 XML 傳回結構描述。 指定 XMLDATA 選項可傳回內嵌 XDR 結構描述。 指定 XMLSCHEMA 選項則可傳回內嵌 XSD 結構描述。 結構描述會出現在資料的開頭。 在結果中，結構描述命名空間參考會在每個最上層的元素重複出現。  
   

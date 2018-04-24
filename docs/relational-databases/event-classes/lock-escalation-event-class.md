@@ -1,35 +1,36 @@
 ---
-title: "Lock:Escalation 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Lock:Escalation 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Escalation event class
 - lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90a86e21ca421d50bc94035fb57505630738fbb0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 399af418d43ec95ab6335c7bc76f677525f4db97
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Lock:Escalation** 事件類別指出細粒鎖定已經轉換成粗粒鎖定；例如，轉換成物件鎖定的資料列鎖定。 擴大事件類別是事件識別碼 60。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **Lock:Escalation** 事件類別指出細粒鎖定已經轉換成粗粒鎖定；例如，轉換成物件鎖定的資料列鎖定。 擴大事件類別是事件識別碼 60。  
   
 ## <a name="lockescalation-event-class-data-columns"></a>Lock:Escalation 事件類別資料行  
   

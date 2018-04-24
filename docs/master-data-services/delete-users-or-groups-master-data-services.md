@@ -1,16 +1,16 @@
 ---
-title: "刪除使用者或群組 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 刪除使用者或群組 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deleting groups [Master Data Services]
@@ -18,18 +18,21 @@ helpviewer_keywords:
 - users [Master Data Services], deleting
 - deleting users [Master Data Services]
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23f33792f899a61c95f2fd05e1875facfe27690d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 71ff251f225794c383a5c1d2406f80d422891dea
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>刪除使用者或群組 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   當您不再希望使用者或群組存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]時，可以刪除他們。  
   
  在刪除使用者和群組時，請注意下列行為：  

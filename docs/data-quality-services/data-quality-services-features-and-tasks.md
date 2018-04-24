@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cec57e97ff2a78fe977c3385b748eb4efdffef54
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 3eed1bd6c3ca4dd3a381dac65bceb507ec92fc54
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能及工作
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   尋找任何人 (資料監管、Data Quality Services 管理員或 SQL Server 管理員) 準備及執行資料品質專案所需的資訊。  
   
  ![小型檔案資料夾圖示](../analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")**設計和實作資料品質方案**  

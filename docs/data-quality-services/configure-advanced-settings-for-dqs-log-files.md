@@ -16,18 +16,21 @@ helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2a545e26c56dac47cafbbdf3c5ff114e5ec4620
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: db40c8c5102e941bfbf7138b4c80653c6ab4feed
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主題描述如何設定 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄檔的進階設定，例如設定記錄檔的輪替檔案大小限制、設定事件的時間戳記模式等等。  
   
 > [!NOTE]  

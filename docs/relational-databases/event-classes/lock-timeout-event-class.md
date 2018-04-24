@@ -1,34 +1,35 @@
 ---
-title: "Lock:Timeout 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Lock:Timeout 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f50705fbc3639cc5301a1c2c4c621cff1e14ef94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 65d461f49ea49245fd050a004162f1c3dafb36f1
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Lock:Timeout 事件類別指出資源 (例如分頁) 上的鎖定要求已逾時，因為其他交易在所需資源上已有封鎖的鎖定。 逾時由 @@LOCK_TIMEOUT 系統函式決定，且可使用 SET LOCK_TIMEOUT 陳述式來設定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Lock:Timeout 事件類別指出資源 (例如分頁) 上的鎖定要求已逾時，因為其他交易在所需資源上已有封鎖的鎖定。 逾時由 @@LOCK_TIMEOUT 系統函式決定，且可使用 SET LOCK_TIMEOUT 陳述式來設定。  
   
  請使用 Lock:Timeout 事件類別來監視發生逾時狀況的時間。 此資訊有助於判斷逾時是否會明顯影響應用程式的效能及包含哪些物件。 您可以檢查修改這些物件的應用程式碼，以判斷是否可以變更來減少逾時。  
   

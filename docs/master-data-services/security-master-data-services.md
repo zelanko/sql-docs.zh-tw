@@ -1,30 +1,33 @@
 ---
-title: "安全性 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 安全性 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0768294a9e8d555e8405e642c7cda3ecc639c5b2
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 200e7f97e0356fae1505bf3786ab11e483f839f8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]在  中，使用安全性可確保使用者具有執行工作所需之特定主要資料的存取權，並避免使用者存取不應使用的資料。  
   
  您也可以使用安全性讓某位使用者成為特定模型和功能區域的管理員 (例如，讓某位使用者建立 Customer 模型的版本，或提供某位使用者設定安全性權限的能力)。  

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59530f7015035368b0cd917c832f64a0f61d7d87
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 576bade05cc4f5c0f6a4b25300fab6d0081cd1c3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在之前設定的 DQS 執行個體上安裝 SQL Server 更新 (修補、Hotfix 或累計更新) 之後，您可能必須使用 **upgrade** 命令列參數執行 DQSInstaller.exe 檔案來升級 DQS 資料庫結構描述。 否則，當您嘗試使用 Data Quality Client 連接至資料品質伺服器時，您可能會收到以下錯誤：  
   
 ```  

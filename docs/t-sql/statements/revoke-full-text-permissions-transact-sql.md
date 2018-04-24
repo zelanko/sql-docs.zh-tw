@@ -1,16 +1,16 @@
 ---
-title: "REVOKE 全文檢索權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE 全文檢索權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], permissions
 - full-text stoplist [SQL Server], permissions
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d6101f3b7e4c21914dd959e08f1453d70568228
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0bd3cc33ca095e8efc3c6e0ed0f796c7e2f3c89f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE 全文檢索權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  這是權限的名稱。 安全性實體權限的有效對應描述於本主題後面的「備註」一節中。  
   
  ON FULLTEXT CATALOG **::***full-text_catalog_name*  
- 指定正在撤銷權限的全文檢索目錄。 範圍限定詞 **::** 是必要的。  
+ 指定正在撤銷權限的全文檢索目錄。 範圍限定詞 **::** 為必要項目。  
   
  ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
- 指定正在撤銷權限的全文檢索停用字詞表。 範圍限定詞 **::** 是必要的。  
+ 指定正在撤銷權限的全文檢索停用字詞表。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
  指定要撤銷其權限的主體。 它有下列幾種：  

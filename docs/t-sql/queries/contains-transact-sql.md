@@ -1,16 +1,16 @@
 ---
 title: CONTAINS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONTAINS_TSQL
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 
+caps.latest.revision: 117
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 81b231ce95ae1b87bbda2f2fd786d12cb709e9fe
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 98c8cd2ed884b6cdacb569920b75b7e87ed46375
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -231,7 +231,7 @@ WHERE CONTAINS(Description, @SearchWord);
  INFLECTIONAL  
  在指定的簡單詞彙上，指定所用之特定語言的字幹分析器。 字幹分析器的行為是以每種特定語言的詞幹分析規則來定義的。 中性語言並沒有相關聯的字幹分析器。 系統會利用查詢之資料行的資料行語言來參考所需的字幹分析器。 如果有指定 *language_term*，便會使用對應於這個語言的字幹分析器。  
   
- 位於 *\<generation_term>*內的指定 *\<simple_term>* 將不會同時符合名詞和動詞。  
+ 位於 *\<generation_term>* 內的指定 *\<simple_term>* 將不會同時符合名詞和動詞。  
   
  THESAURUS  
  指定使用對應於資料行全文檢索語言或查詢指定之語言的同義字。 系統會利用 *\<simple_term>* 中最長的模式來比對這些同義字，且會產生其他詞彙來擴充或取代原始模式。 如果針對所有或部分 *\<simple_term>* 找不到相符項目，就會將不相符的部分當做 *simple_term* 來處理。 如需全文檢索搜尋同義字的詳細資訊，請參閱[設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  

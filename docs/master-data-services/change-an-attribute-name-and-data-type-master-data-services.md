@@ -1,32 +1,35 @@
 ---
-title: "變更屬性名稱和資料類型 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 變更屬性名稱和資料類型 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attributes [Master Data Services], changing name
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9811d14dff86ed16ec207f47625ee151b6eda959
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 4b45e25cc6905f2612f7a394be9bcf42f2f67b2a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>變更屬性名稱和資料類型 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更屬性的名稱。  
   
 ## <a name="prerequisites"></a>Prerequisites  

@@ -1,16 +1,16 @@
 ---
 title: INDEX_COL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - INDEX_COL_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - column names [SQL Server]
 - names [SQL Server], columns
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23e6016fb918009652ec176ef9daa816736f0837
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3e0124190076b777ac814d375359cb2081747a62
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexcol-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +61,10 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  這是資料表或索引檢視的名稱。 *table_or_view_name* 必須以單引號分隔，而且可以用資料庫名稱和結構描述名稱完整限定。  
   
  *index_id*  
- 這是索引的識別碼。 *index_ID* 為 **int**。  
+ 這是索引的識別碼。 *index_ID* 是 **int**。  
   
  *key_id*  
- 這是索引鍵資料行位置。 *key_ID* 為 **int**。  
+ 這是索引鍵資料行位置。 *key_ID* 是 **int**。  
   
 ## <a name="return-types"></a>傳回類型  
  **nvarchar (128** **)**  
@@ -101,7 +101,7 @@ SalesOrderID        SalesOrderDetailID
   
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [中繼資料函數 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

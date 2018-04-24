@@ -1,30 +1,33 @@
 ---
-title: "驗證 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 驗證 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
-caps.latest.revision: 
+caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15e07de71806198f83264033f6b65ff1f8a1fef1
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 51cd2182820113030bdeb060ddc17997d93c2fda
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="validation-master-data-services"></a>驗證 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，會驗證資料以確保其正確性。 其中一部分驗證會自動發生，而另外一部分驗證則會根據管理員建立的商務規則。  
   
 ## <a name="when-data-validation-occurs"></a>當資料驗證發生時  
@@ -34,7 +37,7 @@ ms.lasthandoff: 03/05/2018
 |---------------------|-----------------------------|--------------------|---------------------------------------------------|-------------------------------------------|------------------------------------------|  
 |商務規則驗證|MDS 管理員|使用者加入或編輯資料時自動發生。<br /><br /> 使用者套用商務規則時手動發生。<br /><br /> 管理員在 **Web 應用程式的** [版本管理] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 功能區域中，根據商務規則驗證版本時手動發生。|驗證錯誤|ValidationStatus|是|  
 |資料類型和內容驗證|MDS 管理員，建立模型物件時 (例如，屬性的長度或資料類型)|使用者加入或編輯資料時自動發生|輸入錯誤|InputStatus|否|  
-|資料類型和內容驗證|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的多個 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|使用者加入或編輯資料時自動發生|輸入錯誤|InputStatus|否|  
+|資料類型和內容驗證|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|使用者加入或編輯資料時自動發生|輸入錯誤|InputStatus|否|  
   
 ## <a name="related-tasks"></a>相關工作  
   

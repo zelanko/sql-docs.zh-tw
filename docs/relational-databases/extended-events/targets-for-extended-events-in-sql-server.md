@@ -1,8 +1,8 @@
 ---
 title: SQL Server 中的擴充事件目標 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -16,11 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06ac9f1d58fef9a2c8344de8e56e9bccb7024a31
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 90dc83f080a2b2b64771ccb48e5cc3839e0a67e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中的擴充事件目標
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -154,11 +155,14 @@ CREATE EVENT SESSION [event_counter_1]
 
 - 系統會使用您選擇的檔案名稱作為附加日期時間型 long 整數的前置詞，並且後接 .xel 副檔名。
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+
 > [!NOTE]
 > Azure SQL Database 支援 **event_file** 目標，但只能使用 Azure 儲存體中的 Blob 進行輸出。 SQL Database 無法將事件輸出儲存在您本機硬碟的檔案中。
+>
 > 如需 SQL Database (以及 SQL Database 受控執行個體) 專屬之 **event_file** 程式碼範例，請參閱 [SQL Database 中擴充事件的事件檔案目標代碼](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)。
 
-<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
+::: moniker-end
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>含 **event_file** 目標的 CREATE EVENT SESSION

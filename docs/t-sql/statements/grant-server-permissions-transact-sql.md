@@ -1,16 +1,16 @@
 ---
-title: "GRANT 伺服器權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: GRANT 伺服器權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - granting permissions [SQL Server], servers
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 424bb9cf8db72c399a733d1e4ffe3eb55bd14427
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3239f78d4e3114d652892e7de9ab3dfe1adb93e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT 伺服器權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ GRANT permission [ ,...n ]
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中已加入下列三個伺服器權限。  
   
  **CONNECT ANY DATABASE** 權限  
- 針對必須連線到目前存在之所有資料庫與未來可能建立之新資料庫的登入，授與 **CONNECT ANY DATABASE**。 不要在任何資料庫中授與超出連接的任何權限。 結合 **SELECT ALL USER SECURABLES** 或 **VIEW SERVER STATE**，以讓稽核程序檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料或所有資料庫狀態。  
+ 將 **CONNECT ANY DATABASE** 授與登入，該登入必須連線到目前存在的所有資料庫，以及可能於日後建立的任何新資料庫。 不要在任何資料庫中授與超出連接的任何權限。 結合 **SELECT ALL USER SECURABLES** 或 **VIEW SERVER STATE**，以讓稽核程序檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料或所有資料庫狀態。  
   
  **IMPERSONATE ANY LOGIN** 權限  
  授與此權限時，可讓中間層程序在連接到資料庫時模擬連接的用戶端帳戶。 拒絕此權限時，高權限登入可能遭到封鎖，而無法模擬其他登入。 例如，具有 **CONTROL SERVER** 權限的登入可能遭到封鎖，而無法模擬其他登入。  

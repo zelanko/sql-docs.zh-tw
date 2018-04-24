@@ -1,16 +1,16 @@
 ---
-title: "&lt;&gt; (不等於) (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: '&lt;&gt; (不等於) (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - <>
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - not equal to operator (<>)
 - <> (not equal to operator)
 ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ffacad3e57cd9c9ab1331e0dbe52335ae1d6ddf1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: be21f3d66d4bf5fd13a35506e9b84a3c4e0a5b52
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>不等於 (Transact SQL) - 傳統
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -1,16 +1,16 @@
 ---
-title: "!&gt;(不大於) (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: '!&gt;(不大於) (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - '!> (not greater than)'
 - not greater than operator (!>)
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4879f8ed9fe2a0ac66f04ec5de6692de96f0d388
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e14c1892d07fa1d64f7083dc33b0801edab66089
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt;(不大於) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

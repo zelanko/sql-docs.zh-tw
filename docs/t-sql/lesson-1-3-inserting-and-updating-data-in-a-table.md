@@ -1,35 +1,37 @@
 ---
-title: "在資料表中插入及更新資料 (教學課程) | Microsoft Docs"
-ms.custom: 
+title: 在資料表中插入及更新資料 (教學課程) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - inserting and updating data
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c64d3f2835e7c63b8c8e86946545641015188e29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 407b1c470f691de3c6165cddfe1252afc6e44da9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>課程 1-3 - 在資料表中插入及更新資料
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 既然您現在已建立 **Products** 資料表，就可以準備使用 INSERT 陳述式，將資料插入資料表。 在插入資料後，您將使用 UPDATE 陳述式來變更資料列的內容。 您將使用 UPDATE 陳述式的 WHERE 子句，限制對單一資料列進行更新。 接下來所述的四個陳述式將輸入下面資料。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+既然您現在建立好 **Products** 資料表，就可以準備使用 INSERT 陳述式，將資料插入資料表。 在插入資料後，您將使用 UPDATE 陳述式來變更資料列的內容。 您將使用 UPDATE 陳述式的 WHERE 子句，限制對單一資料列進行更新。 接下來所述的四個陳述式將輸入下面資料。  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  

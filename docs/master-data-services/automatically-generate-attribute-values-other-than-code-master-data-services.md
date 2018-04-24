@@ -1,30 +1,33 @@
 ---
-title: "自動產生 Code 以外的屬性值 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 自動產生 Code 以外的屬性值 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
-caps.latest.revision: 
+caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 695be709ff4d3b33c62db2c02114cec1c200d8bf
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 39f47fa4de85e8873db31ddc6700d43d945c049c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>自動產生 Code 以外的屬性值 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您希望每次套用商務規則時，自動將整數指派為值，請自動為實體的屬性自動產生值。  
   
 ## <a name="prerequisites"></a>Prerequisites  

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bacefa46d021d0dc1795e1556b5f88d72d42e2c1
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: ac7c39a9085d74fd5d101cd226f7cab192605ab9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dqs-security"></a>DQS 安全性
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 安全性基礎結構是根據 SQL Server 安全性基礎結構。 資料庫管理員會將使用者與 DQS 角色產生關聯，將一組權限授與該使用者。 這樣做會決定使用者可存取的 DQS 資源以及允許使用者執行的功能活動。  
   
 ## <a name="dqs-roles"></a>DQS 角色  

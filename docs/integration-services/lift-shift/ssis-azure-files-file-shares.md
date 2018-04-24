@@ -1,19 +1,20 @@
 ---
-title: "將檔案儲存至內部部署和 Azure 檔案共用並從中擷取 | Microsoft Docs"
-description: "本文描述如何透過 SSIS 在內部部署和 Azure 中使用檔案系統和檔案共用"
+title: 將檔案儲存至內部部署和 Azure 檔案共用並從中擷取 | Microsoft Docs
+description: 本文描述如何透過 SSIS 在內部部署和 Azure 中使用檔案系統和檔案共用
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.technology: integration-services
+ms.prod: sql
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b9fb260101c1f814c85360d3fe5998b6e9234101
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>透過 SSIS 將檔案儲存至內部部署和 Azure 檔案共用並從中擷取
 本文描述當您將使用本機檔案系統的套件隨即轉移至 Azure 中的 SQL Server Integration Services (SSIS) 時，如何更新 SSIS 套件。

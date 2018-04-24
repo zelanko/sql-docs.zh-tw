@@ -1,35 +1,35 @@
 ---
-title: "萬用字元元件和內容驗證 | Microsoft Docs"
-ms.custom: 
+title: 萬用字元元件和內容驗證 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - wildcard components [XML]
 - content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48b9aa7f4ed8182d094b5240481b32b12c6f4d6a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4cb328cdea4c76e45fea1f25e20a9d5d0e727439
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wildcard-components-and-content-validation"></a>萬用字元元件和內容驗證
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-萬用字元元件可用以增加可出現在內容模型中的內容彈性。 在 XSD 語言中，可透過下列方式支援這些元件：  
+  萬用字元元件可用以增加可出現在內容模型中的內容彈性。 在 XSD 語言中，可透過下列方式支援這些元件：  
   
 -   元素萬用字元元件。 這些是以 **\<xsd:any>** 項目表示。  
   

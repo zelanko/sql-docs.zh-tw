@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e07762d37b8e18abd96a4976c636752588774f8
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 9b3656ddd9a9c5016e3e404f5a803f4bdc25d7c8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>將知識庫匯出到 .dqs 檔案
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何將整個知識庫匯出到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的 .dqs 資料檔。 您可以將定義域或整個知識庫匯出到資料檔。 如需匯出定義域的資訊，請參閱[將定義域匯出為 .dqs 檔案](../data-quality-services/export-a-domain-to-a-dqs-file.md)。  
   
  將知識庫匯出到 .dqs 檔，然後將此檔案當做另一個知識庫匯入將會簡化知識產生程序，以節省時間與精力。 這樣可讓您將知識庫和其知識與其他人分享。 .dqs 檔將包含所有知識庫資訊，包括定義域和比對原則，但不包括附加的參考資料資訊。 匯入 .dqs 檔之後，如有必要，您必須將必要的定義域再次附加至適當的參考資料服務。 知識庫中已發行和未發行的資料都會匯出。  
@@ -47,7 +50,7 @@ ms.lasthandoff: 03/22/2018
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，於 [定義域管理] 活動中開啟知識庫。  
   
-3.  在 [定義域管理] 頁面中 (包含任何選取的索引標籤)，按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出知識庫]**。 另外，您也可以用滑鼠右鍵按一下 **[定義域]** 清單，將游標移到 **[匯出]**上方，然後按一下 **[匯出知識庫]**。  
+3.  在 [定義域管理] 頁面中 (包含任何選取的索引標籤)，按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出知識庫]**。 另外，您也可以用滑鼠右鍵按一下 **[定義域]** 清單，將游標移到 **[匯出]** 上方，然後按一下 **[匯出知識庫]**。  
   
 4.  在 [匯出到資料檔] 對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留知識庫名稱、將 [DQS 資料檔 (\*.dqs)] 保留為 [另存新檔] 類型，然後按一下 [儲存]。  
   

@@ -1,32 +1,35 @@
 ---
-title: "建立自訂工作流程 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 建立自訂工作流程 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: develop
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7b982bce7e48811dbfa9874fba2a3084374ff5e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: e9068bb0564b0b4f0635175efb1a1805bcd2f4e5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>建立自訂工作流程 (Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用商務規則建立基本工作流程解決方案，以便根據您指定的條件自動更新與驗證資料，並傳送電子郵件通知。 當您需要做的處理比內建工作流程動作所提供的處理還要複雜時，請使用自訂工作流程。 自訂工作流程是您所建立的 .NET 組件。 呼叫您的工作流程組件時，程式碼會採取您的情況所需的任何動作。 例如，如果您的工作流程需要自訂的事件處理 (例如多層審核或複雜決策樹)，可以設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 啟動一個自訂工作流程，這個工作流程會分析資料並決定將該資料傳送至何處以待審核。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用商務規則建立基本工作流程解決方案，以便根據您所指定的條件，自動更新與驗證資料，並傳送電子郵件通知。 當您需要做的處理比內建工作流程動作所提供的處理還要複雜時，請使用自訂工作流程。 自訂工作流程是您所建立的 .NET 組件。 呼叫您的工作流程組件時，程式碼會採取您的情況所需的任何動作。 例如，如果您的工作流程需要自訂的事件處理 (例如多層審核或複雜決策樹)，可以設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 啟動一個自訂工作流程，這個工作流程會分析資料並決定將該資料傳送至何處以待審核。  
   
 ## <a name="how-custom-workflows-are-processed"></a>如何處理自訂工作流程  
  與處理自訂工作流程有關的主要元件有三個：[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式、SQL Server MDS 工作流程整合服務，以及工作流程處理常式組件。 這些元件處理自訂工作流程的方式如下：  

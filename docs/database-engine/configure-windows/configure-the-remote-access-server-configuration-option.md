@@ -2,7 +2,7 @@
 title: 設定 remote access 伺服器組態選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 45fc01fd25218d47bc110acd659ca27480d195a6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c56dd8d2d882befbfc3cc55a0d5ab68f0fb489f2
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>設定 remote access 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/18/2018
  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote access [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote access** 選項會控制本機或遠端伺服器 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的執行所在) 上執行的預存程序。 這個選項的預設值是 1。 這會授與權限以從遠端伺服器執行本機預存程序，或從本機伺服器執行遠端預存程序。 若要防止在遠端伺服器上執行本機預存程序，或在本機伺服器上執行遠端預存程序，請將此選項設定為 0。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 請改用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。 <br />當遠端存取未啟用時，如果使用四部分命名 (例如 `EXEC SQL01.TestDB.dbo.proc_test;` 語法)，在連結伺服器上執行預存程序會失敗。 請改用 `EXECUTE ... AT` 語法，例如 `EXEC(N'TestDB.dbo.proc_test') AT [SQL01];`。
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 請改用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。
   
  **本主題內容**  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/18/2018
   
 2.  按一下 **[連接]** 節點。  
   
-3.  在 **[遠端伺服器連接]**下，選取或清除 **[允許此伺服器的遠端連接]** 核取方塊。  
+3.  在 **[遠端伺服器連接]** 下，選取或清除 **[允許此伺服器的遠端連接]** 核取方塊。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

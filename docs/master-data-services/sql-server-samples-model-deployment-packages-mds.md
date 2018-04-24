@@ -1,33 +1,36 @@
 ---
-title: "SQL Server 範例：模型部署套件 (MDS) | Microsoft Docs"
-ms.custom: 
+title: SQL Server 範例：模型部署套件 (MDS) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - Master Data Services
-- "範例"
+- 範例
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
-caps.latest.revision: 
+caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b37258b7d39b022bb6982c54a9ed14b557af86cc
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: c1d5201a98f20b2f3ada815a622b66a46a052bd1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 範例：模型部署套件 (MDS)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   當您安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時，可取得包含資料的範例模型套件。 這些套件檔案的預設位置是 \<磁碟機\Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages。  
   
  如需如何部署範例模型套件的指示，請參閱 [部署範例模型和資料](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。 您可以使用 [MDSModelDeploy 工具](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)來部署範例模型套件。  

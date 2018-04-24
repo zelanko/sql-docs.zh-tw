@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-caps.latest.revision: ''
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d0052007846b4edf4a399fa831011982c344dd5
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: fdb613954e8e2aefcb4c806c3253a2a79b75da8d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   若要完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝，您必須在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，執行 DQSInstaller.exe 檔案。 本主題描述如何從 **[開始]** 畫面、 **[開始]** 功能表、Windows [檔案總管] 或 [命令提示字元] 執行 DQSInstaller.exe。您可以任選一種方法執行 DQSInstaller.exe 檔案。  
   
 ##  <a name="Prerequisites"></a> 必要條件  

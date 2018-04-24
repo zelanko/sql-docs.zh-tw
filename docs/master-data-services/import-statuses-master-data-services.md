@@ -1,30 +1,33 @@
 ---
-title: "匯入狀態 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 匯入狀態 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1427dc1d936f950b57755d6992d0b80553a3046
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 5a4860fac5035d7c24b552d11895842b78254f52
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-statuses-master-data-services"></a>匯入狀態 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 **[整合管理]** 功能區域的 **[暫存批次]** 頁面上，可能會出現下列狀態。  
   
 |[狀態]|描述|Status_ID|  

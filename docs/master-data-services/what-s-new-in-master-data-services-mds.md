@@ -1,30 +1,33 @@
 ---
-title: "Master Data Services (MDS) 的新功能 | Microsoft Docs"
-ms.custom: 
+title: Master Data Services (MDS) 的新功能 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: 
+caps.latest.revision: 85
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 583d8f49803b7a9d527583644540c7d93e103cf6
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8f48092fa22f540805feefda03b02389e6544300
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   本主題摘要 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本中變更及更新。 

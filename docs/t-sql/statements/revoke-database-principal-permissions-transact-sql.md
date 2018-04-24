@@ -1,16 +1,16 @@
 ---
-title: "REVOKE 資料庫主體權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE 資料庫主體權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - REVOKE statement, users
 - application roles [SQL Server], permissions
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c02242a5428a6ae7c2426efd517809f8e374da4e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 245ed94d998e7240734f8f4f032a4c871aee877f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,15 +69,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  指定可以撤銷的資料庫主體權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  USER ::*database_user*  
- 指定撤銷其權限之使用者的類別和名稱。 範圍限定詞 (**::**) 為必要項目。  
+ 指定撤銷其權限之使用者的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
   
  ROLE ::*database_role*  
- 指定撤銷其權限之角色的類別和名稱。 範圍限定詞 (**::**) 為必要項目。  
+ 指定撤銷其權限之角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
   
  APPLICATION ROLE ::*application_role*  
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- 指定撤銷其權限之應用程式角色的類別和名稱。 範圍限定詞 (**::**) 為必要項目。  
+ 指定撤銷其權限之應用程式角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
   
  GRANT OPTION  
  指出會撤銷對其他主體授與指定權限的權限。 不會撤銷權限本身。  
@@ -91,7 +91,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
- AS \<database_principal> 指定主體，執行這項查詢的主體會從這個主體衍生權限來撤銷權限。  
+ AS \<database_principal> 指定主體，執行這項查詢的主體就是從這個主體衍生權限來撤銷權限。  
   
  *Database_user*  
  指定資料庫使用者。  
@@ -105,22 +105,22 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  指定應用程式角色。  
   
  *Database_user_mapped_to_Windows_User*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定對應至 Windows 使用者的資料庫使用者。  
   
  *Database_user_mapped_to_Windows_Group*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定對應至 Windows 群組的資料庫使用者。  
   
  *Database_user_mapped_to_certificate*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定對應至憑證的資料庫使用者。  
   
  *Database_user_mapped_to_asymmetric_key*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定對應至非對稱金鑰的資料庫使用者。  
   
@@ -161,7 +161,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="permissions"></a>Permissions  
  需要指定主體的 CONTROL 權限，或需要隱含 CONTROL 權限的更高權限。  
   
- 資料庫之 CONTROL 權限的被授與者 (例如 **db_owner** 固定資料庫角色的成員)，可以授與資料庫中任何安全性實體的任何權限。  
+ 資料庫 CONTROL 權限的承授者 (例如 **db_owner** 固定資料庫角色的成員) 可以授與資料庫中任何安全性實體的任何權限。  
   
 ## <a name="examples"></a>範例  
   

@@ -17,18 +17,21 @@ helpviewer_keywords:
 - log files
 - dqs log files
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72881f3b184c14b682990c012daa4e2aba5a8465
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 1214dcef9c0fb095becb3cb1f80986df28b709de
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="manage-dqs-log-files"></a>管理 DQS 記錄檔
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 記錄檔可幫助您診斷及排除 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]和 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]的疑難問題。 系統會針對 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]和 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]產生個別記錄檔。  
   
  您可以使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 來設定 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 功能和模組的記錄嚴重性設定。 此外，您也可以針對 DQS 記錄檔設定一些其他 (進階) 設定，方法是手動變更 DQS_MAIN 資料庫中的 DQS 記錄組態設定及 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 電腦上的 XML 檔案。  

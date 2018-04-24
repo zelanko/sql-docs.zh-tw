@@ -1,16 +1,16 @@
 ---
 title: WITH common_table_expression (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITH common_table_expression
@@ -29,16 +29,17 @@ helpviewer_keywords:
 - MAXRECURSION hint
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8c77e9c97fd3d31b63e6e3938cbdab134554dd1c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ec065b641cf024fbfa1bd3f63bb8cdb085461ffa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/25/2018
   
  如果定義了多個 *CTE_query_definition*，就必須以下列其中一個設定運算子來聯結查詢定義：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>建立和使用通用資料表運算式的方針  
  下列方針適用於非遞迴的通用資料表運算式。 如需適用於遞迴通用資料表運算式的方針，請參閱下面的「定義和使用遞迴通用資料表運算式的方針」。  

@@ -1,34 +1,35 @@
 ---
-title: "Lock:Timeout (timeout &gt; 0) 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Lock:Timeout (timeout &gt; 0) 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30cd2031c1ebe36385f4a7f99fea9461ef5d6a48
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cf56ffc92a8e144945120fe9a821eae7f3d97dbf
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Lock:Timeout (逾時 > 0)** 事件類別表示資源 (例如分頁) 上的鎖定要求已逾時，原因是其他交易在所需資源上已有封鎖的鎖定。 此事件類別與 **Lock:Timeout** 事件類別的操作方式相同，差別在於不包括逾時值為 0 的事件。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **Lock:Timeout (逾時 > 0)** 事件類別表示資源 (例如分頁) 上的鎖定要求已逾時，原因是其他交易在所需資源上已有封鎖的鎖定。 此事件類別與 **Lock:Timeout** 事件類別的操作方式相同，差別在於不包括逾時值為 0 的事件。  
   
  如果追蹤使用鎖定探查或逾時值為 0 的其他處理序，請在追蹤中包含 **Lock:Timeout (逾時 > 0)** 事件類別。 這可讓您查看實際逾時發生的地方，但不查看 0 的逾時值。  
   

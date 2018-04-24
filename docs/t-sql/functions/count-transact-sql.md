@@ -1,16 +1,16 @@
 ---
 title: COUNT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COUNT_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0342e593b0bf13b5e5a9b53600aae5f3c39ae59d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9872e4754e375168a3ba3d2687018cc32157c71f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,9 +81,9 @@ DISTINCT
 指定應該計算所有資料列，以傳回資料表中的資料列總數。 COUNT(\*) 沒有參數，無法與 DISTINCT 搭配使用。 COUNT(\*) 不需要 *expression* 參數，因為依照定義，它不會使用任何特定資料行的相關資訊。 COUNT(*) 會傳回指定資料表中不迴避複製的資料列數。 它會個別計算每個資料列。 其中包括含有 Null 值的資料列。
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-*partition_by_clause* 會將 FROM 子句產生的結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
+*partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回類型
  **int**  
   
 ## <a name="remarks"></a>Remarks  

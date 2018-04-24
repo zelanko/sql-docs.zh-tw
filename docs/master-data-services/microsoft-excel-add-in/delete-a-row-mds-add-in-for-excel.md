@@ -1,30 +1,33 @@
 ---
-title: "刪除資料列 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
-ms.custom: 
+title: 刪除資料列 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 749dbb3a46d57ac62e84298d07fe709c5a062fa9
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: c6691111b168fc526db8be9a0cb393e9e7ba868d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>刪除資料列 (適用於 Excel 的 MDS 增益集)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您不再想要讓使用者使用某個資料列 (成員) 時，請從 MDS 存放庫中刪除它。  
   
 > [!NOTE]  

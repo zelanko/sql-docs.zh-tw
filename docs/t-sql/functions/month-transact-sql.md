@@ -1,16 +1,16 @@
 ---
 title: MONTH (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MONTH_TSQL
@@ -27,16 +27,17 @@ helpviewer_keywords:
 - dates [SQL Server], MONTH
 - MONTH function [SQL Server]
 ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9fff55128e9e5eda2d78646826ddeca2a25e6b56
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 826346dd6fa9aecd66f48856a7eec21ac83fb032
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +56,7 @@ MONTH ( date )
   
 ## <a name="arguments"></a>引數  
  *date*  
- 為可解析成 **time**、**date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset** 值的運算式。 *date* 引數可以是運算式、資料行運算式、使用者自訂變數或字串常值。  
+ 這是可解析成 **time**、**date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset** 值的運算式。 *date* 引數可以是運算式、資料行運算式、使用者自訂變數或字串常值。  
   
 ## <a name="return-type"></a>傳回類型  
  **int**  

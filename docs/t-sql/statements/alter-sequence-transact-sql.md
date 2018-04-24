@@ -1,16 +1,16 @@
 ---
 title: ALTER SEQUENCE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SEQUENCE_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sequence number object, altering
 - ALTER SEQUENCE statement
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66960ed0ae27cb7ecbe2d39d0e30d1ec12dcc3cb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ba1b939e4ca20e4fb191296ad0d5f49be5c4380e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  RESTART [ WITH \<常數> ]  
  順序物件會傳回的下一個值。 如果提供的話，RESTART WITH 值必須是小於或等於順序物件最大值，而且大於或等於最小值的整數。 如果省略 WITH 值，順序編號會依據原始 CREATE SEQUENCE 選項重新啟動。  
   
- INCREMENT BY \<常數>  
+ INCREMENT BY \<constant>  
  每次呼叫 NEXT VALUE FOR 函數時，用來遞增順序物件基底值的值 (如果是負數則遞減)。 如果增量是負值，則會遞減順序物件，否則會遞增。 增量不能為 0。  
   
  [ MINVALUE \<常數> | NO MINVALUE ]  

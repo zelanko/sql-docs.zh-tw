@@ -1,16 +1,16 @@
 ---
-title: "GRANT XML 結構描述集合權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: GRANT XML 結構描述集合權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9bd3cf031a884da51cd15b0e78c8d2c242c3f9e4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8d898b732a5d5a6fdfdcf629bb7f1b81f8f6cb0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT XML 結構描述集合權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ GRANT permission  [ ,...n ] ON
  指定可以授與的 XML 結構描述集合權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ON XML SCHEMA COLLECTION :: [ *schema_name*. ] *XML_schema_collection_name*  
- 指定要授與其權限的 XML 結構描述集合。 需要範圍限定詞 (::)。 如果未指定 *schema_name*，則將會使用預設結構描述。 如果指定 *schema_name*，則需要結構描述範圍限定詞 (.)。  
+ 指定要授與其權限的 XML 結構描述集合。 需要範圍限定詞 (::)。 如果未指定 *schema_name*，則會使用預設結構描述。 如果指定 *schema_name*，則需要結構描述範圍限定詞 (.)。  
   
  \<database_principal> 指定要對其授與權限的主體。  
   
  WITH GRANT OPTION  
  指出主體也有權授與指定權限給其他主體。  
   
- AS \<database_principal> 指定主體，執行這項查詢的主體就是從這個主體衍生權限來授與權限。  
+ AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從該主體衍生授與權限的權力。  
   
  *Database_user*  
  指定資料庫使用者。  

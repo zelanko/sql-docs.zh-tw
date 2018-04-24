@@ -1,16 +1,16 @@
 ---
-title: "XML 系統預存程序 | Microsoft Docs"
-ms.custom: 
+title: XML 系統預存程序 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - system stored procedures [SQL Server], XML
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_xml_preparedocument
 - XML [SQL Server], system stored procedures
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44e9f0a98ed9238a8c914aa0a5f696fe5a5942e5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: bb10c2ec9a81ca3c52d0c461c04c4c3714a1025d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-system-stored-procedures"></a>XML 系統預存程序
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-SQL Server 提供以下系統預存程序，可與 OPENXML 一起使用：  
+  SQL Server 提供以下系統預存程序，可與 OPENXML 一起使用：  
   
 -   [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)  
   

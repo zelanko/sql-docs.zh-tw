@@ -1,33 +1,36 @@
 ---
-title: "資料庫物件安全性 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 資料庫物件安全性 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff125a02dced7c074ee04dcdbf501d964a579b4e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 6f1860afff1e4311deac446756a69514c1a5d084
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中，資料儲存在多個資料庫資料表並且顯示在檢視表中。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中受到保護的資訊，對具有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫存取權的使用者是可見的。  
   
  具體來說，員工薪資資訊可能包含在 Employee 模型中，公司財務資訊可能包含在 Account 模型中。 您可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面中拒絕使用者存取這些模型，但具有資料庫存取權的使用者可以檢視此資料。  

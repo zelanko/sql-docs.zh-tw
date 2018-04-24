@@ -1,35 +1,35 @@
 ---
-title: "具有 XPath 節點測試名稱的資料行 | Microsoft 文件"
-ms.custom: 
+title: 具有 XPath 節點測試名稱的資料行 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - names [SQL Server], columns with
 - XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb54d4957ef3c876aecd2f02d0524f0577c96d35
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f55ea3da6b7f81e22fa9192f451e489cf48125c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>具有 XPath 節點測試名稱的資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-如果資料行名稱是其中一個 XPath 節點測試，將會對應內容，如下表所示。 如果資料行名稱是 XPath 節點測試，會將內容對應至對應的節點。 如果資料行的 SQL 類型是 **xml**，就會傳回錯誤。  
+  如果資料行名稱是其中一個 XPath 節點測試，將會對應內容，如下表所示。 如果資料行名稱是 XPath 節點測試，會將內容對應至對應的節點。 如果資料行的 SQL 類型是 **xml**，就會傳回錯誤。  
   
 |資料行名稱|行為|  
 |-----------------|--------------|  

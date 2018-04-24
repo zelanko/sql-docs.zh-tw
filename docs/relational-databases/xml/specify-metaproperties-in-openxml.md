@@ -1,16 +1,16 @@
 ---
-title: "在 OPENXML 中指定中繼屬性 | Microsoft Docs"
-ms.custom: 
+title: 在 OPENXML 中指定中繼屬性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - overflow in XML document [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 968f1a5b32bbc6c2e6f2f955083e8fd247e3fc82
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 69c23031657fd8c3ae75e49e1942b6a3828a59fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定中繼屬性
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-XML 文件的中繼屬性 (Metaproperty) 之屬性 (Attribute)，是描述 XML 項目 (例如元素、屬性或任何其他 DOM 節點) 屬性 (Property) 的屬性 (Attribute)。 這些屬性實際上不存在於 XML 文件文字中。 不過，OPENXML 會提供這些中繼屬性給所有的 XML 項目。 這些中繼屬性可讓您擷取 XML 節點的資訊，例如本機定位和命名空間資訊。 此資訊可提供您所呈現文字以外更詳細的資料。  
+  XML 文件的中繼屬性 (Metaproperty) 之屬性 (Attribute)，是描述 XML 項目 (例如元素、屬性或任何其他 DOM 節點) 屬性 (Property) 的屬性 (Attribute)。 這些屬性實際上不存在於 XML 文件文字中。 不過，OPENXML 會提供這些中繼屬性給所有的 XML 項目。 這些中繼屬性可讓您擷取 XML 節點的資訊，例如本機定位和命名空間資訊。 此資訊可提供您所呈現文字以外更詳細的資料。  
   
  您可以使用 *ColPattern* 參數，將這些中繼屬性對應至 OPENXML 陳述式的資料列集資料行。 這些資料行將會包括其所對應的中繼屬性值。 如需 OPENXML 語法的詳細資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。  
   

@@ -1,30 +1,33 @@
 ---
-title: "結合資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
-ms.custom: 
+title: 結合資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb01501ae0612025b9a986b015c35b7607da8494
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 2b8f90f8dc5403e24d2519a6e34afc55f1897218
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>結合資料 (適用於 Excel 的 MDS 增益集)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您要在發行前比較資料時，可以結合兩個工作表的資料。 在此程序中，將兩個工作表中的資料結合為一個工作表。 然後可以進一步進行比較，並判斷哪些資料 (如果有) 將發行到 MDS 儲存機制。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -45,7 +48,7 @@ ms.lasthandoff: 03/05/2018
   
 5.  在 **[結合資料]** 對話方塊中，按一下圖示。 此對話方塊會展開。  
   
-6.  對於為 MDS 實體列出的資料行，選取 **[對應資料行]**底下的資料行。 並不是所有 MDS 資料行都需要對應資料行。  
+6.  對於為 MDS 實體列出的資料行，選取 **[對應資料行]** 底下的資料行。 並不是所有 MDS 資料行都需要對應資料行。  
   
 7.  按一下 **[合併]**。 **SOURCE** 資料行將顯示，表示資料來自 MDS 或外部來源。  
   

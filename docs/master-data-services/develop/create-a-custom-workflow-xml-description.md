@@ -1,31 +1,34 @@
 ---
-title: "自訂工作流程 XML 描述 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 自訂工作流程 XML 描述 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: develop
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 139d625926cea26c46d7e6a833f0b1680f170fd8
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: a00591d12472508f82bace61068070acacee5980
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>建立自訂工作流程 - XML 描述
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，當工作流程啟動時，SQL Server MDS 工作流程整合服務會呼叫 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法。 此方法會收到有關觸發工作流程商務規則之項目的中繼資料和資料，做為 XML 的區塊。 如需實作工作流程處理常式的範例程式碼，請參閱[自訂工作流程範例 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)。  
   
  以下範例顯示傳送至工作流程處理常式之 XML 的可能外觀：  

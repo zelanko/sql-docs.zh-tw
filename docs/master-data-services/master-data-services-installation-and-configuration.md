@@ -18,13 +18,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: debbf608daac6d95527939808b620d34fe1e4c31
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: c958dfa6d3ba94a1d17835876d8de6b26dea1943
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本文說明如何在 Windows Server 2012 R2 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 、設定 MDS 資料庫與網站，以及部署範例模型和資料。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 可讓您的組織管理受信任的資料版本。   
   
 > [!NOTE] 
@@ -39,7 +42,7 @@ ms.lasthandoff: 04/06/2018
   
 > **下載**  
 >-   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**。  
->-   有 Azure 帳戶嗎？  接著前往**[這裡](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**來啟動已安裝 SQL Server 的虛擬機器。  
+>-   有 Azure 帳戶嗎？  接著前往**[這裡](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 來啟動已安裝 SQL Server 的虛擬機器。  
  
 > **無法建立 MDS 網站？**
 >>如需如何解決此問題的指示，請參閱這份 Microsoft 技術支援文件。
@@ -47,7 +50,7 @@ ms.lasthandoff: 04/06/2018
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer 和 Silverlight
 - 當您在 Windows Server 2012 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 時，可能需要設定 Internet Explorer 增強式安全性，以允許 Web 應用程式網站的指令碼。 否則，瀏覽至伺服器電腦上的網站將會失敗。
-- 若要在 Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5。 如果您沒有必要的 Silverlight 版本，系統將會在您巡覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從**[這裡](https://www.microsoft.com/silverlight/)**安裝 Silverlight 5。
+- 若要在 Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5。 如果您沒有必要的 Silverlight 版本，系統將會在您巡覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從**[這裡](https://www.microsoft.com/silverlight/)** 安裝 Silverlight 5。
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 虛擬機器上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 根據預設，當您啟動已安裝 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 的 Azure 虛擬機器時，也會一併安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。 

@@ -1,34 +1,37 @@
 ---
-title: "刪除階層成員權限 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 刪除階層成員權限 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deleting member permissions [Master Data Services]
 - members [Master Data Services], deleting permissions
 - permissions [Master Data Services], deleting member permissions
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1222ae04408dcfa2ee63951d613cbb864d548e52
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: a9459852e50ac7bf6f57f580790828bc388e8821
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>刪除階層成員權限 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
   
 ## <a name="prerequisites"></a>Prerequisites  

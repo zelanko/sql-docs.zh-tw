@@ -1,16 +1,16 @@
 ---
 title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE_PRINCIPAL_ID_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - DATABASE_PRINCIPAL_ID function
 - IDs [SQL Server], principals
 ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44f4bd65c93fc0c6ed0fd069946fabaedd1e0943
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cb61b1a056c273ff663c96d20bd7224ddf012751
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 為代表主體，類型為 **sysname** 的運算式。  
 若省略 *principal_name*，則會傳回目前使用者的識別碼。 它必須用括號括住。
   
-## <a name="return-types"></a>傳回型
+## <a name="return-types"></a>傳回類型
 **int**  
 當資料庫主體不存在時為 NULL。
   

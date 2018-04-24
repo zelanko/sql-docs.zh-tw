@@ -1,30 +1,33 @@
 ---
-title: "暫存預存程序 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 暫存預存程序 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07e6138eec62bff8ed53fb00f22182b99e1eb901
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: f8aad9892a09f00528d9cd6cdd66372f8653c3f0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>暫存預存程序 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]起始暫存處理序時，可以使用下列三個預存程序其中之一：  
   
 -   stg.udp_\<名稱>_Leaf  

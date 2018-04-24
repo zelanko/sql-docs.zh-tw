@@ -1,33 +1,36 @@
 ---
-title: "部署模型 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 部署模型 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-caps.latest.revision: 
+caps.latest.revision: 24
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e93dfc5f3aca9d372b166bf703e160106ce1065
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: f2aa5a325718b7b16ae2cf3f02e79630ca04be09
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的套件是一個 XML 檔案，其中包含可部署的模型結構，以及模型中的資料 (選擇性)。 使用模型封裝將模型的副本從一個 MDS 環境移到另一個 MDS 環境，或在現有的 MDS 環境中建立新的模型。  
   
 > [!IMPORTANT]  

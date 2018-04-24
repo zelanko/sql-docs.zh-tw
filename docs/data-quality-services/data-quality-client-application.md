@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b86461302e64c244deb9dfd1da7b431fcb89685
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 8b3e7ccdbcd056acfb0a49a1eb06a1280508a770
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client 應用程式
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式可讓您使用獨立的工具執行資料品質作業。 此應用程式可讓您建立知識庫、建立並執行資料品質專案，以及執行管理工作。  
   
  負責管理資料資產與維護高標準資料品質的資料管理人、資料專家或 IT 專業人員可以透過以下任一種角色使用用戶端應用程式：可以編輯並執行資料品質專案的 DQS KB 操作員；可以執行專案功能，以及建立並編輯知識庫的 DQS KB 編輯者；以及可以執行專案與知識庫功能並管理系統的 DQS 系統管理員。 如需詳細資訊，請參閱 [DQS Security](../data-quality-services/dqs-security.md)。  

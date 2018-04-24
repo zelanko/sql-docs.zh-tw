@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0003fa4b17f1246592bf7362dc11cf4b3bd6cab
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 00681146b4fb237686dad8d3580e079ff750b046
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>將定義域或複合定義域附加至參考資料
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何將資料品質知識庫中的定義域/複合定義域附加至 Windows Azure Marketplace 中的參考資料服務，以便針對高品質參考資料建立知識。 每一項參考資料服務都包含結構描述 (資料行)。 將定義域或複合定義域附加至參考資料服務之後，您必須將附加的複合定義域內的附加定義域或個別定義域對應至參考資料服務結構描述中的適當資料行。 將複合定義域附加至參考資料服務可讓您只將一個定義域附加至參考資料服務，然後將複合定義域中的個別定義域對應至參考資料服務結構描述中的適當資料行。  
   
 > [!WARNING]  
@@ -35,7 +38,7 @@ ms.lasthandoff: 03/22/2018
   
  參考資料服務結構描述可以擁有強制性資料行，假設您選擇使用此參考資料服務，該資料行必須與適當的定義域對應。 參考資料結構描述中的強制性資料行會使用 "(M)" 來向資料行名稱識別。 例如， **AddressLine** 是 **Melissa Data – Address Data** 中的強制性結構描述資料行，而 **CompanyName** 是 **Digital Trowel Inc. – Us companies and professional data for SQL users**中的強制性結構描述資料行。  
   
- 本主題中，我們將建立四個定義域： **[地址行]**、 **[縣/市]**、 **[州/省]**和 **[郵遞區號]**，在複合定義域 **[地址驗證]**下，將複合定義域附加至 **Melissa Data – Address Check** 參考資料服務，然後將複合定義域內的個別定義域對應至參考資料服務結構描述中適當的資料行。  
+ 本主題中，我們將建立四個定義域： **[地址行]**、 **[縣/市]**、 **[州/省]** 和 **[郵遞區號]**，在複合定義域 **[地址驗證]** 下，將複合定義域附加至 **Melissa Data – Address Check** 參考資料服務，然後將複合定義域內的個別定義域對應至參考資料服務結構描述中適當的資料行。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
@@ -51,11 +54,11 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面的 **[知識庫管理]**底下，按一下 **[新增知識庫]**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面的 **[知識庫管理]** 底下，按一下 **[新增知識庫]**。  
   
 3.  在 **[新增知識庫]** 畫面中，輸入新知識庫的名稱，並按一下 **[定義域管理]** 活動，然後按一下 **[建立]**。  
   
-4.  在 **[定義域管理]** 畫面中，按一下 **[建立定義域]** 圖示建立定義域。 建立以下四個定義域： **[地址行]**、 **[縣/市]**、 **[省/市]**和 **[郵遞區號]**。  
+4.  在 **[定義域管理]** 畫面中，按一下 **[建立定義域]** 圖示建立定義域。 建立以下四個定義域： **[地址行]**、 **[縣/市]**、 **[省/市]** 和 **[郵遞區號]**。  
   
 5.  按一下 **[建立複合定義域]** 圖示，建立複合定義域。 在 **[建立複合定義域]** 對話方塊中，於 **[複合定義域名稱]** 方塊中輸入 **地址驗證** ，並在複合定義域中包含步驟 3 所建立的所有定義域。 按一下 [確定] 。  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 03/22/2018
   
 8.  在 **[線上參考資料提供者目錄]** 對話方塊中：  
   
-    1.  在 **[DataMarket Data Quality Services]**底下，選取 **[Melissa Data – 地址檢查]** 方塊。  
+    1.  在 **[DataMarket Data Quality Services]** 底下，選取 **[Melissa Data – 地址檢查]** 方塊。  
   
     2.  將 [Melissa Data – Address Check] 參考資料服務與適當的定義域 ([地址行]、[縣/市]、[州/省] 和 [郵遞區號]) 相對應。 若要對應資料行，請在 **[RDS 結構描述]** 資料行中選取參考資料服務資料行，然後在 **[定義域]** 資料行中選取適當的定義域。 若要在資料表中加入其他資料列，請按一下 **[加入結構描述項目]** 圖示。  
   

@@ -1,16 +1,16 @@
 ---
 title: EXECUTE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EXEC
@@ -33,16 +33,17 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: 
+caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e974faeb95631f73cd8f902194329c6eb54e825f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5246803f6ef63d130a0af894fb4230fad8644ae9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -214,7 +215,7 @@ Execute a character string
  已在另一個資料庫建立的模組，如果執行它的使用者擁有它，或者具有適當的權限可以在該資料庫執行它，就可以執行這個模組。 如果執行某個模組的使用者，具有適當的權限可以使用該伺服器 (遠端存取)，以及在該資料庫中執行該模組，就可以在另一個執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器上執行該模組。 如果指定了伺服器名稱，但沒有指定資料庫名稱，則 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會在該使用者的預設資料庫中尋找該模組。  
   
  ;*number*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  這是用來將同名程序分組的選擇性整數。 這個參數不用於擴充預存程序。  
   
@@ -271,7 +272,7 @@ Execute a character string
  指定執行陳述式的內容。  
   
  登入  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定您要模擬的內容是登入。 模擬範圍是伺服器。  
   
@@ -459,7 +460,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. 使用 EXECUTE 與遠端預存程序  
  下列範例會在遠端伺服器 `uspGetEmployeeManagers` 中執行 `SQLSERVER1` 預存程序，並且儲存傳回狀態，指出 `@retstat` 是成功還是失敗。  
   
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 DECLARE @retstat int;  
@@ -518,7 +519,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### <a name="g-using-execute-with-at-linkedservername"></a>G. 使用 EXECUTE 與 AT linked_server_name  
  下列範例會傳遞一個命令字串到遠端伺服器。 它會建立一個連結伺服器 `SeattleSales`，指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一個執行個體，然後針對該連結伺服器執行 DDL 陳述式 (`CREATE TABLE`)。  
   
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -550,7 +551,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. 使用 EXECUTE 查詢連結伺服器上的 Oracle 資料庫  
  下列範例會執行遠端 Oracle 伺服器上的幾個 `SELECT` 陳述式。 這個範例一開始就加入 Oracle 伺服器當做連結伺服器，並且建立連結伺服器登入。  
   
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 -- Setup the linked server.  
@@ -593,7 +594,7 @@ GO
 ### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>L. 使用 EXECUTE 與 AT linked_server_name  
  下列範例會使用問號 (`?`) 預留位置代表參數，將命令字串傳遞至遠端伺服器。 它會建立一個連結伺服器 `SeattleSales`，指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一個執行個體，然後對該連結伺服器執行 `SELECT` 陳述式。 `SELECT` 陳述式會使用問號當做 `ProductID` 參數 (`952`) 的預留位置，而這會在陳述式之後提供。  
   
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 -- Setup the linked server.  

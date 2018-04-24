@@ -19,18 +19,21 @@ helpviewer_keywords:
 - cleansing threshold values
 - matching,threshold value
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f204a5e85961751edf1e81313817a282a8a7c2f
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 8c02f423251529e2b298e49f83c4f057f1f5fc7c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>設定清理和比對的臨界值
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何設定臨界值，該值將會在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的電腦輔助的清理和比對活動期間使用。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  

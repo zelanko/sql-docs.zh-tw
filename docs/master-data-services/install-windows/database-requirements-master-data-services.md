@@ -1,30 +1,33 @@
 ---
-title: "資料庫需求 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 資料庫需求 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
-caps.latest.revision: 
+caps.latest.revision: 18
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16df94eab250efe3cd5be1a3576b63d5184fac1d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3d7427f8c3969e050750f7e82ee4b4334e5555ab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="database-requirements-master-data-services"></a>資料庫需求 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   所有主要資料都儲存在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫中。 裝載這個資料庫的電腦必須執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
  使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可在本機或遠端電腦上建立及設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 如果您將資料庫從某個環境移到另一個環境，就可以將 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務和 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 關聯至位於新位置的資料庫，藉以在新的環境中維護資訊。  
@@ -36,7 +39,7 @@ ms.lasthandoff: 03/05/2018
  建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫之前，請確定是否符合下列需求。  
   
 ### <a name="sql-server-edition"></a>SQL Server 版本  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫可以裝載在下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上：  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫可以裝載在下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本上：  
   
  
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Enterprise (64 位元) x64  
@@ -68,7 +71,7 @@ ms.lasthandoff: 03/05/2018
   
 |類型|描述|  
 |----------|-----------------|  
-|使用者帳戶|在 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]中，您可以使用 Windows 帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，來主控 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 此使用者帳戶必須屬於  執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 如需有關**系統管理員**角色的詳細資訊，請參閱[伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
+|使用者帳戶|在 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]中，您可以使用 Windows 帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，來主控 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 此使用者帳戶必須屬於  執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 如需有關 **系統管理員** 角色的詳細資訊，請參閱 [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 系統管理員帳戶|當您建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫時，必須指定要成為 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 系統管理員的網域使用者帳戶。 對於所有與這個資料庫有關聯的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式，這位使用者都可以更新所有功能區域中的所有模型和所有資料。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。|  
   
 ### <a name="database-backup"></a>資料庫備份  

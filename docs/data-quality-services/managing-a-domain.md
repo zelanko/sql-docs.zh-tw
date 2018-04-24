@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e988d58dc4f160ae85273762173d129c2cc9c2c
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 53bd688bc68e8715409e663c7e2977a74e891989
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managing-a-domain"></a>管理定義域
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用定義域。 定義域包含要分析之資料來源中特定欄位內之資料的語意表示法。 定義域是您為資料來源建立之知識庫的一部分，而且您藉由分析取樣資料來源或匯入資料所建立的知識會加入至知識庫中所定義的定義域。 之後會使用這些定義域中的知識，於資料品質專案中執行清理和比對。 定義域位於 Data Quality Services 中所有活動的核心。  
   
  定義域會對應至資料來源欄位，而且會在知識探索、定義域管理和比對活動中擴展。 定義域屬性中會定義要如何從資料來源及報表中的輸出資料載入資料。 當您使用參考資料提供者來清理資料時，您會將參考資料服務附加至單一或複合定義域。 您會在定義域中建立要套用至資料的規則，而且您可以為定義域建立以詞彙為主的關聯。 您可以檢視及更正定義域中的資料。  
@@ -42,7 +45,7 @@ ms.lasthandoff: 03/22/2018
   
 -   如果資料類型是字串，從資料來源將此字串載入定義域時，您可以移除特殊字元來將此字串標準化。  
   
--   如果資料類型是字串，您可以執行 DQS 拼字檢查來檢查字串的語法、拼字和句子結構，並在 **[定義域管理]** 的 **[定義域值]**頁面中指示任何潛在錯誤。 其中包括指定執行拼字檢查所使用的語言。  
+-   如果資料類型是字串，您可以執行 DQS 拼字檢查來檢查字串的語法、拼字和句子結構，並在 **[定義域管理]** 的 **[定義域值]** 頁面中指示任何潛在錯誤。 其中包括指定執行拼字檢查所使用的語言。  
   
 -   如果資料類型是字串，當您知道語法錯誤不會出現在字串中時，您可以指定 DQS 不會識別語法錯誤。  
   

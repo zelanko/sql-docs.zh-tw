@@ -1,16 +1,16 @@
 ---
-title: "伺服器上 XML 結構描述集合的需求與限制 | Microsoft 文件"
-ms.custom: 
+title: 伺服器上 XML 結構描述集合的需求與限制 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - identifiers [XML schema collections]
@@ -27,29 +27,29 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: 
+caps.latest.revision: 84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e60de9c75202dc0c5c02a8765a1c2f8d4c631498
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 572dfdb21216110b62f9b8ddcd88d21cdb2fce4e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>伺服器上 XML 結構描述集合的需求與限制
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-XML 結構描述定義語言 (XSD) 驗證對於使用 **xml** 資料類型的 SQL 資料行具有某些相關限制。 下表提供這些限制的詳細資料以及修改 XSD 結構描述以便讓它可以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的指導方針。 本章節的主題提供有關特定限制的其他資訊，以及處理這些限制的指導方針。  
+  XML 結構描述定義語言 (XSD) 驗證對於使用 **xml** 資料類型的 SQL 資料行具有某些相關限制。 下表提供這些限制的詳細資料以及修改 XSD 結構描述以便讓它可以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的指導方針。 本章節的主題提供有關特定限制的其他資訊，以及處理這些限制的指導方針。  
   
 |項目|限制|  
 |----------|----------------|  
 |**minOccurs** 與 **maxOccurs**|**minOccurs** 與 **maxOccurs** 屬性值必須符合 4 位元組的整數。 伺服器將會拒絕不符合的結構描述。|  
-|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕具有缺乏子系之 **\<xsd:choice>** 粒子的結構描述，除非以零的 **minOccurs** 屬性值定義該粒子。|  
+|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕沒有子系的 **\<xsd:choice>** 物件之結構描述，除非以零的 **minOccurs** 屬性值定義該物件。|  
 |**\<xsd:include>**|目前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。<br /><br /> 若要解決此問題，您可以預先處理包含**\<xsd:include>** 指示詞的 XML 結構描述，將任何所包含的結構描述內容複製並合併成單一結構描述，以便上傳至伺服器。 如需詳細資訊，請參閱 [前置處理結構描述以合併包含的結構描述](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)。|  
 |**\<xsd:key>**、**\<xsd:keyref>** 和 **\<xsd:unique>**|目前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這些以 XSD 為基礎的條件約束，以強制執行唯一性或建立索引鍵及索引鍵參考。 無法註冊包含這些元素的 XML 結構描述。|  
-|**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 如需更新結構描述之其他做法的資訊，請參閱 [&#60;xsd:redefine&#62; 元素](../../relational-databases/xml/the-xsd-redefine-element.md)使用的指導方針。|  
-|**\<xsd:simpleType>** 值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援具有 **xs:time** 和 **xs:dateTime** 以外之第二個元件的簡單類型毫秒有效位數，以及 **xs:time** 和 **xs:dateTime** 100 奈秒的有效位數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會對所有可辨識的 XSD 簡單類型列舉做出限制。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援在 **\<xsd:simpleType>** 宣告中使用 "NaN" 值。<br /><br /> 如需詳細資訊，請參閱[&#60;xsd:simpleType&#62; 宣告的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)使用的指導方針。|  
+|**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這個元素。 如需更新結構描述之其他做法的資訊，請參閱 [&#60;xsd:redefine&#62; 元素](../../relational-databases/xml/the-xsd-redefine-element.md)使用的指導方針。|  
+|**\<xsd:simpleType>** 值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援具有 **xs:time** 和 **xs:dateTime**以外之第二個元件的簡單類型毫秒有效位數，以及 **xs:time** 和 **xs:dateTime**100 奈秒的有效位數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會對所有可辨識的 XSD 簡單類型列舉做出限制。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援在 **\<xsd:simpleType>** 宣告中使用 "NaN" 值。<br /><br /> 如需詳細資訊，請參閱[&#60;xsd:simpleType&#62; 宣告的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)使用的指導方針。|  
 |**xsi:schemaLocation** 與 **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果這些屬性出現在插入 **xml** 資料類型之資料行或變數的 XML 執行個體資料中，將會略過這些屬性。|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援使用 XML 結構描述限制元素且從 **xs:QName** 衍生的類型。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 **xs:QName** 為成員元素的聯集類型。<br /><br /> 如需詳細資訊，請參閱 [xs:QName 類型](../../relational-databases/xml/the-xs-qname-type.md)。|  
 |將成員加入現有替代群組|您無法在 XML 結構描述集合中將成員加入現有的替代群組。 在 XML 結構描述中的替代群組是限制成標頭元素，而且所有其成員元素都必須定義在相同的 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 陳述式中。|  

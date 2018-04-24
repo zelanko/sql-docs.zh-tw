@@ -1,16 +1,16 @@
 ---
 title: datetime (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - datetime_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - datetime data type [SQL Server]
 - data types [SQL Server], date and time
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4493e165efbc0410d444f34fc41e30cc08e90307
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 84a5d0f57019067307995784a84fbcfb82e8578f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 定義日期，並結合了以 24 小時制為基礎的當日時間和小數秒數。
   
 > [!NOTE]  
->  對新工作使用 **time**、**date**、**datetime2** 和 **datetimeoffset** 資料類型。 這些類型符合 SQL 標準。 它們具有方便移植的特性。 **time**、**datetime2** 和 **datetimeoffset** 提供更多秒數有效位數。 **datetimeoffset** 可對全域部署的應用程式提供時區支援。  
+>  對新工作使用 **time**、**date**、**datetime2** 和 **datetimeoffset** 資料類型。 這些類型符合 SQL 標準。 它們具有方便移植的特性。 **time**、**datetime2** 和 **datetimeoffset** 提供更多秒數有效位數。 **datetimeoffset** 可為全域部署的應用程式提供時區支援。  
   
 ## <a name="datetime-description"></a>datetime 描述  
   
@@ -176,7 +177,7 @@ SELECT @datetime AS '@datetime', @datetime2 AS '@datetime2';
 ```  
   
 ## <a name="examples"></a>範例  
-下列範例會比較將字串轉換成各種 **date** 與 **time** 資料類型的結果。
+下列範例會比較將字串轉換成各種 **date** 和 **time** 資料類型的結果。
   
 ```sql
 SELECT   
@@ -195,11 +196,11 @@ SELECT
   
 |資料類型|輸出|  
 |---|---|
-|**time**|12:35:29。 1234567|  
+|**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
-|**datetime2**|2007-05-08 12:35:29。 1234567|  
+|**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ## <a name="see-also"></a>另請參閱

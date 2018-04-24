@@ -2,7 +2,7 @@
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|statements
@@ -66,11 +66,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 41908f6d675e60fb5e188cd739f8e8833e4f4d07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -571,13 +572,13 @@ WITH CHECK | WITH NOCHECK
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- MOVE TO { *partition_scheme_name***(***column_name* [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
+ MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定目前在叢集索引分葉層級中之資料列所要移往的位置。 資料表會移至新位置。 此選項只適用於建立叢集索引的條件約束。  
   
 > [!NOTE]  
->  在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 MOVE TO **"**default**"** 或 MOVE TO **[**default**]**。 如果指定了 **"**default**"**，則目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
+>  在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 MOVE TO **"** default **"** 或 MOVE TO **[** default **]**。 如果指定了 **"** default **"**，則目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
  { CHECK | NOCHECK } CONSTRAINT  
  指定 *constraint_name* 為已啟用或已停用。 這個選項只能搭配 FOREIGN KEY 和 CHECK 條件約束使用。 當指定 NOCHECK 時，會停用條件約束，且不會依照條件約束條件來驗證未來資料行的插入或更新作業。 不能停用 DEFAULT、PRIMARY KEY 及 UNIQUE 條件約束。  
@@ -637,7 +638,7 @@ WITH CHECK | WITH NOCHECK
   
  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  CTP1 以及 SQL Database V12 之前版本 建立的非叢集資料行存放區索引是唯讀格式。 執行任何 PARTITION 作業之前，必須將非叢集資料行存放區索引重建成最新的格式 (可以更新的格式)。  
   
- SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"**default**"** | **"**NULL**"** }**)**  
+ SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
  **適用於**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
   
  指定 FILESTREAM 資料存放的位置。  
@@ -648,9 +649,9 @@ WITH CHECK | WITH NOCHECK
   
  *filestream_filegroup_name* 會指定 FILESTREAM 檔案群組的名稱。 檔案群組必須要有一個使用 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式針對此檔案群組定義的檔案，否則會引發錯誤。  
   
- **"**default**"**會使用 DEFAULT 屬性集指定 FILESTREAM 檔案群組。 如果沒有任何 FILESTREAM 檔案群組，就會引發錯誤。  
+ **"** default **"** 會使用 DEFAULT 屬性集指定 FILESTREAM 檔案群組。 如果沒有任何 FILESTREAM 檔案群組，就會引發錯誤。  
   
- **"**NULL**"** 會指定將資料表的 FILESTREAM 檔案群組的所有參考移除。 首先必須卸除所有的 FILESTREAM 資料行。 您必須使用 SET FILESTREAM_ON**="**NULL**"** 來刪除與資料表相關聯的所有 FILESTREAM 資料。  
+ **"** NULL **"** 會指定將資料表的 FILESTREAM 檔案群組的所有參考移除。 首先必須卸除所有的 FILESTREAM 資料行。 您必須使用 SET FILESTREAM_ON **="** NULL **"** 來刪除與資料表相關聯的所有 FILESTREAM 資料。  
   
  SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  

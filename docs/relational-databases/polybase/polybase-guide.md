@@ -1,16 +1,16 @@
 ---
-title: "PolyBase 指南 | Microsoft Docs"
+title: PolyBase 指南 | Microsoft Docs
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
 - PolyBase
@@ -18,24 +18,24 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 - PolyBase, overview
-- "Hadoop import ×"
+- Hadoop import ×
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: 
+caps.latest.revision: 26
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d5aa107a95505e4132f24aa2cf20952a4d7fcf10
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="polybase-guide"></a>PolyBase 指南
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-PolyBase 是一種技術，可透過 t-sql 語言存取資料庫外部的資料。  在 SQL Server 2016 中，它可讓您對 Hadoop 中的外部資料執行查詢，或從 Azure Blob 儲存體匯入/匯出資料。 查詢已最佳化，可將計算推送到 Hadoop。 在 Azure SQL 資料倉儲中，您可以從 Azure Blob 儲存體和 Azure Data Lake Store 中匯入/匯出資料。
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+  PolyBase 是一種技術，可透過 t-sql 語言存取資料庫外部的資料。  在 SQL Server 2016 中，它可讓您對 Hadoop 中的外部資料執行查詢，或從 Azure Blob 儲存體匯入/匯出資料。 查詢已最佳化，可將計算推送到 Hadoop。 在 Azure SQL 資料倉儲中，您可以從 Azure Blob 儲存體和 Azure Data Lake Store 中匯入/匯出資料。
   
   
  若要使用 PolyBase，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)。  
@@ -59,7 +59,7 @@ PolyBase 是一種技術，可透過 t-sql 語言存取資料庫外部的資料�
   
 -   **與 BI 工具整合。** 使用 PolyBase 搭配 Microsoft 的商務智慧和分析堆疊，或使用與 SQL Server 相容的任何協力廠商工具。  
   
-## <a name="performance"></a>[效能]  
+## <a name="performance"></a>效能  
   
 -   **將計算推送到 Hadoop。**查詢最佳化工具會做出成本型決策，以將計算推送到 Hadoop，而這麼做可以改善查詢效能。  它使用外部資料表上的統計資料來做出成本型決策。 推送計算會建立 MapReduce 工作，並利用 Hadoop 的分散式運算資源。  
   

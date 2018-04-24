@@ -1,16 +1,16 @@
 ---
 title: insert (XML DML) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - insert keyword [XML DML]
 - insert XML DML statement
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d3acf76573d2c9c2b84e54acf9ebd43e0a42271d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: eb4082d4b14c0287571dd620021444f2ad290aa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

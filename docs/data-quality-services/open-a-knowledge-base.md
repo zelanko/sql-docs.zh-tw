@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cf7aa8e7fe21b83ee28a2bf2212823897fef9eb
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 93d0460b267cbd7bea229a774da0b4cf9cb21ced
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="open-a-knowledge-base"></a>開啟知識庫
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中開啟現有的知識庫，並預備此知識庫進行定義域管理、知識探索或是加入比對原則。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -50,7 +53,7 @@ ms.lasthandoff: 03/22/2018
     > [!NOTE]  
     >  您可以在資料表中按一下滑鼠右鍵，對知識庫執行作業。 您可以開啟知識庫、以另一個名稱儲存、解除鎖定、捨棄工作、重新命名或顯示其屬性。  
   
-4.  在 **[選取活動]**中，選取您想要在知識庫上執行的活動：  
+4.  在 **[選取活動]** 中，選取您想要在知識庫上執行的活動：  
   
     -   選取 **[定義域管理]** ，進入用來修改知識庫內之定義域的畫面。  
   
@@ -86,7 +89,7 @@ ms.lasthandoff: 03/22/2018
   
 -   **\<空白>**：知識庫的 [狀態] 欄位空白的條件如下：已在 [定義域管理] 活動中按一下 [發行]，然後按一下 [是 - 發行知識庫並結束] 來發行知識庫。  
   
--   **工作中**：已在 [定義域管理] 活動中按一下 **[發行]** ，然後按一下 **[否 - 儲存知識庫工作並結束]**來儲存知識庫工作。  
+-   **工作中**：已在 [定義域管理] 活動中按一下 **[發行]** ，然後按一下 **[否 - 儲存知識庫工作並結束]** 來儲存知識庫工作。  
   
 -   **定義域管理**：已輸入知識庫的定義域資料，但尚未發行知識庫，而且工作仍在 [定義域管理] 活動中。 知識探索活動無法使用。 當您在 **[定義域管理]** 畫面中按一下 **[關閉]** 時，就會發生這種狀況。  
   

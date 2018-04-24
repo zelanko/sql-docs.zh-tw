@@ -1,16 +1,16 @@
 ---
-title: "ORDER BY 子句 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ORDER BY 子句 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ORDER_TSQL
@@ -41,16 +41,17 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ef72a4ee2dd0ec18eef502820fe289696589776
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -552,7 +553,7 @@ ORDER BY LastName, FirstName;
  [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [次序函數 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [次序函式 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [EXCEPT 和 INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   

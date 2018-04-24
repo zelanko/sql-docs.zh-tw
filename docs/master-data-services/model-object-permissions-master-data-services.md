@@ -1,33 +1,36 @@
 ---
-title: "模型物件權限 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 模型物件權限 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions [Master Data Services], model objects
 - models [Master Data Services], object permissions
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 571d4b79ea8847a365219aeab6fc2646ebfdfa20
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 9e3a46b104bd17c2eedccbc27c7b8c2581125319
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="model-object-permissions-master-data-services"></a>模型物件權限 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   模型物件權限是強制性的。 這些權限會決定使用者可以在此 UI 的 [總管] 功能區域中存取的屬性。  
   
  例如，如果您將 Product 實體的**更新**權限指派給某個使用者，該使用者就可以更新 Product 實體的所有屬性。 如果您指派單一屬性的 **更新** 權限，使用者僅能更新該屬性。  

@@ -1,16 +1,16 @@
 ---
-title: "STDifference (geometry 資料類型) | Microsoft Docs"
-ms.custom: 
+title: STDifference (geometry 資料類型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STDifference_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STDifference (geometry Data Type)
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec7f7f1f8b1314c92060749fcdf39f49516c12f8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cf5f9e22b51ac3580ebc5108826b6fdc0abbf19d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一定會傳回 Null。   只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。  
+ 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。   只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。  
   
 ## <a name="examples"></a>範例  
   

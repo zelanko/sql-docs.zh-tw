@@ -1,16 +1,16 @@
 ---
-title: "DENY 伺服器權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 伺服器權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - DENY statement, servers
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5cabf58a9136324602af30f9b8fa6b85e3ee346
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cd98b968624b6eb879503da4f3e1665fab172bed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY 伺服器權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ DENY permission [ ,...n ]
 ## <a name="remarks"></a>Remarks  
  只有在目前資料庫是 master 的情況下，才能夠拒絕伺服器範圍的權限。  
   
- 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中檢視有關伺服器權限的資訊，在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中檢視有關伺服器主體的資訊。 您可以在 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目錄檢視中檢視有關伺服器角色成員資格的資訊。  
+ 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中檢視伺服器權限的資訊，而在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中檢視伺服器主體的資訊。 您可以在 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目錄檢視中檢視伺服器角色成員資格的資訊。  
   
  伺服器是最高層級的權限階層。 下表所列的是可以拒絕之最特定且最有限的伺服器權限。  
   
@@ -140,7 +140,7 @@ DENY permission [ ,...n ]
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中已加入下列三個伺服器權限。  
   
  **CONNECT ANY DATABASE** 權限  
- 將 **CONNECT ANY DATABASE** 授與登入，該登入必須連線到目前存在的所有資料庫，以及可能於日後建立的任何新資料庫。 不要在任何資料庫中授與超出連接的任何權限。 與 **SELECT ALL USER SECURABLES** 或 **VIEW SERVER STATE** 結合可讓稽核程序檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料或所有資料庫狀態。  
+ 將 **CONNECT ANY DATABASE** 授與登入，該登入必須連線到目前存在的所有資料庫，以及可能於日後建立的任何新資料庫。 不要在任何資料庫中授與超出連接的任何權限。 結合 **SELECT ALL USER SECURABLES** 或 **VIEW SERVER STATE**，以讓稽核程序檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料或所有資料庫狀態。  
   
  **IMPERSONATE ANY LOGIN** 權限  
  授與此權限時，可讓中間層程序在連接到資料庫時模擬連接的用戶端帳戶。 拒絕此權限時，高權限登入可能遭到封鎖，而無法模擬其他登入。 例如，具有 **CONTROL SERVER** 權限的登入可能遭到封鎖，而無法模擬其他登入。  

@@ -1,16 +1,16 @@
 ---
-title: "DENY 可用性群組權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 可用性群組權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - DENY statement, availability groups
 - denying permissions, [SQL Server], availability groups
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4c51420215c7de26caea8a3feed66d67bb2ba07
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9013c8027cb23433ca63fec4bad71cbc70a2455b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>拒絕可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  指定可以拒絕的可用性群組權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ON AVAILABILITY GROUP **::***availability_group_name*  
- 指定要拒絕其權限的可用性群組。 範圍限定詞 (**::**) 為必要項目。  
+ 指定要拒絕其權限的可用性群組。 範圍限定詞 (**::**) 是必要項。  
   
  TO \<server_principal>  
  指定要拒絕其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
@@ -85,7 +85,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="remarks"></a>Remarks  
  只有在目前資料庫是 **master** 的情況下，才能夠拒絕伺服器範圍的權限。  
   
- 可用性群組的相關資訊顯示於 [sys.availability_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到有關伺服器權限的資訊，且可以在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
+ 可用性群組的相關資訊顯示於 [sys.availability_groups & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到伺服器權限的資訊，並在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
   
  可用性群組是伺服器層級的安全性實體。 下表所列的是可以拒絕之最特定且最有限的可用性群組權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
@@ -123,7 +123,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [REVOKE 可用性群組權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)   
- [ 可用性群組權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
+ [GRANT 可用性群組權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性群組目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   

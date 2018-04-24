@@ -1,16 +1,16 @@
 ---
-title: "DENY 資料庫主體權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 資料庫主體權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - denying permissions [SQL Server], application roles
 - application roles [SQL Server], permissions
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f2934637cf18a1188de37c0aba40dac171cd0e9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f19f37a3d291c0461424a011729f0792f0c3ccb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,15 +77,15 @@ DENY permission [ ,...n ]
  指定可拒絕的資料庫主體權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  USER ::*database_user*  
- 指定拒絕其權限之使用者的類別和名稱。 範圍限定詞 (**::**) 是必要的。  
+ 指定拒絕其權限之使用者的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
   
  ROLE ::*database_role*  
- 指定拒絕其權限之角色的類別和名稱。 範圍限定詞 (**::**) 是必要的。  
+ 指定拒絕其權限之角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
   
  APPLICATION ROLE ::*application_role*  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 指定拒絕其權限之應用程式角色的類別和名稱。 範圍限定詞 (**::**) 是必要的。  
+ 指定拒絕其權限之應用程式角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
   
  CASCADE  
  指出目前受到拒絕的權限，也為這個主體曾授與此權限的其他主體所拒絕。  

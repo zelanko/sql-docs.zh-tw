@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efa8807737e6c307b51b5edc9da2a048096285ef
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 515bcfaebccd6d2da63fe4d351e5b1569c933286
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="building-a-knowledge-base"></a>建立知識庫
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫是有關資料的知識儲存機制，可讓您了解資料及維護資料的完整性。 知識庫是由定義域所組成，每一個定義域都代表資料欄位中的資料。 DQS 會使用知識庫來執行資料庫的資料清理及刪除重複。 若要準備知識庫進行資料清理，您可以執行資料取樣的電腦輔助分析，並以互動方式管理定義域中的值。 DQS 可讓您匯入知識、建立規則和關聯性、直接變更資料值，並充分利用預設資料庫。  
   
 ## <a name="in-this-section"></a>本節內容  

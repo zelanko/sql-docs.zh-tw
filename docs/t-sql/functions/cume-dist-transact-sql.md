@@ -1,16 +1,16 @@
 ---
 title: CUME_DIST (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CUME_DIST
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - CUME_DIST function
 - analytic functions, CUME_DIST
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dadae05fa8556b403c6cba436647203b30452559
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cc8aa5d921d0d72dc32453143c42a29c28a553b3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -49,9 +50,9 @@ CUME_DIST( )
   
 ## <a name="arguments"></a>引數  
 OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* 會將 FROM 子句產生的結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 CUME_DIST 函式不可指定 OVER 語法的 \<資料列或範圍子句>。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
+*partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 CUME_DIST 函式不可指定 OVER 語法的 \<資料列或範圍子句>。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回類型
 **float(53)**
   
 ## <a name="remarks"></a>Remarks  

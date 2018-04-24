@@ -1,16 +1,16 @@
 ---
 title: DROP FUNCTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_FUNCTION_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - dropping user-defined functions
 - deleting user-defined functions
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c0768b2a24a939bc2e646fb4cc7173762eae7679
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 75e7395703cc048790fb8cab52e39daeeb21f03c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -82,7 +83,7 @@ DROP FUNCTION [ schema_name. ] function_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-function"></a>A. 卸除函數  
- 下列範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的 `Sales` 結構描述，卸除 `fn_SalesByStore` 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-function-transact-sql.md)。  
+ 下列範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的 `Sales` 結構描述，卸除 `fn_SalesByStore` 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-function-transact-sql.md)。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

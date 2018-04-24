@@ -1,16 +1,16 @@
 ---
-title: "成員 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 成員 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - leaf members [Master Data Services]
@@ -20,18 +20,21 @@ helpviewer_keywords:
 - leaf members [Master Data Services], about leaf members
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026efa6fe3e44bdfa50e300296bfe6df7d773bbc
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 502942c22f426ba01d22bc0d02a0e13bcc55d7a3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="members-master-data-services"></a>成員 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，成員是指實體主要資料。 例如，成員可以是 Product 實體中的 Road-150 bike，或是 Customer 實體中的特定客戶。  
   
 ## <a name="how-members-relate-to-other-model-objects"></a>成員如何與其他的模型物件相關聯  

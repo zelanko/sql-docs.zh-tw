@@ -1,16 +1,16 @@
 ---
-title: "GRANT 全文檢索權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: GRANT 全文檢索權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - full-text stoplist [SQL Server], permissions
 - GRANT statement, full-text permissions
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 673092fc5f3523d0448e477ceda10ea491224982
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 51c14ec41b0f636d8fee54f0721e337d5d169c9f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT 全文檢索權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +61,10 @@ GRANT permission [ ,...n ] ON
  這是權限的名稱。 安全性實體權限的有效對應描述於本主題後面的「備註」一節中。  
   
  ON FULLTEXT CATALOG **::***full-text_catalog_name*  
- 指定正在授與權限的全文檢索目錄。 範圍限定詞 **::** 是必要的。  
+ 指定正在授與權限的全文檢索目錄。 範圍限定詞 **::** 為必要項目。  
   
  ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
- 指定正在授與權限的全文檢索停用字詞表。 範圍限定詞 **::** 是必要的。  
+ 指定正在授與權限的全文檢索停用字詞表。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
  指定要對其授與權限的主體。 它有下列幾種：  

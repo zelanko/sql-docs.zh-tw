@@ -2,7 +2,7 @@
 title: 授與可用性群組權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - granting permissions, [SQL Server], availability groups
 - permissions [SQL Server], availability group
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc8e7f098645e78145c48ce8b1984946e80a9ebb
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 2001630068b0d60dbd2e7967b8041e2386d39da5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>授與可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="remarks"></a>Remarks  
  只有在目前資料庫是 **master** 的情況下，才能夠授與伺服器範圍的權限。  
   
- 可用性群組的相關資訊顯示於 [sys.availability_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到伺服器權限的資訊，並在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
+ 可用性群組的相關資訊顯示於 [sys.availability_groups & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到伺服器權限的資訊，並在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
   
  可用性群組是伺服器層級的安全性實體。 下表所列的是可以授與之最特定且最有限的可用性群組權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   

@@ -1,28 +1,29 @@
 ---
-title: "ALTER DATABASE (平行處理資料倉儲) | Microsoft Docs"
-ms.custom: 
+title: ALTER DATABASE (平行處理資料倉儲) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
-caps.latest.revision: 
+caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7db44d9c9f02618e4d95a9d3eb9dfc581438dea5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0dd532ce7001c52d9fef2f3fd030fd6cf53e8a77
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -84,7 +85,7 @@ ALTER DATABASE database_name
 ## <a name="locking-behavior"></a>鎖定行為  
  在 DATABASE 物件上採取共用鎖定。 您無法改變有另一個使用者正在讀取或寫入的資料庫。 這包括已在資料庫上發出 [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) \(英文\) 陳述式的工作階段。  
   
-## <a name="performance"></a>[效能]  
+## <a name="performance"></a>效能  
  根據資料庫內實際資料的大小及磁碟上的片段程度而定，壓縮資料庫可能需要大量的時間與系統資源。 例如，壓縮資料庫可能需要數小時以上的時間。  
   
 ## <a name="determining-encryption-progress"></a>判斷加密進度  

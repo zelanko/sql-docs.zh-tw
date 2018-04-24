@@ -2,7 +2,7 @@
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -53,11 +53,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad21db12a4d147f8d999c7774a773082cbc6b1b5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e49f7f6f0849382ba7558c106c339c331679a5b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -212,7 +213,7 @@ LOG **適用於：**SQL Server
   
  如需詳細資訊，請參閱[完整檔案備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 與[備份檔案和檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)。  
   
- READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...*n* ] ]  
+ READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...* n* ] ]  
  指定部分備份。 部分備份包含資料庫中所有的讀取/寫入檔案：主要檔案群組和任何一種讀取/寫入次要檔案群組，以及任何指定的唯讀檔案或檔案群組。  
   
  READ_WRITE_FILEGROUPS  
@@ -233,7 +234,7 @@ TO \<backup_device> [ **,**...*n* ] 指出隨附的[備份裝置](../../relation
   
 \<backup_device> **適用於：**SQL Server 指定要針對備份作業使用的邏輯或實體備份裝置。  
   
- { *logical_device_name* | **@***logical_device_name_var* } **適用於：**SQL Server 是用來備份資料庫之備份裝置的邏輯名稱。邏輯名稱必須遵照識別碼的規則。如果備份裝置名稱是以變數 (@*logical_device_name_var*) 提供，就可將它指定為字串常數 (@*logical_device_name_var***=**) 或任何字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+ { *logical_device_name* | **@***logical_device_name_var* } **適用於：**SQL Server 是用來備份資料庫之備份裝置的邏輯名稱。邏輯名稱必須遵照識別碼的規則。如果備份裝置名稱是以變數 (@* logical_device_name_var *) 提供，就可將它指定為字串常數 (@* logical_device_name_var***=**) 或任何字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
  { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **適用於：**磁碟、磁帶和 URL 適用於 SQL Server。 只有 URL 適用於 SQL Database 受控執行個體。指定磁碟檔案或磁帶裝置，或是 Windows Azure Blob 儲存體服務。 URL 格式可用來建立備份至 Windows Azure 儲存體服務。 如需詳細資訊和範例，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教學課程，請參閱[教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
 
@@ -358,7 +359,7 @@ NAME **=** { *backup_set_name* | **@***backup_set_var* }
 > [!IMPORTANT]  
 > 這些選項只會防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 覆寫檔案。 您可以利用其他方法來清除磁帶，並利用作業系統來刪除磁碟檔案。 如需有關期限驗證的詳細資訊，請參閱這個主題中的 SKIP 和 FORMAT。  
   
-EXPIREDATE **=** { **'***date***'** | **@***date_var* } 指定備份組到期且可加以覆寫的時間。如果這個日期是以變數 (@*date_var*) 提供，則它必須遵照所設定的系統 **datetime** 格式，且必須指定為下列其中一項：  
+EXPIREDATE **=** { **'***date***'** | **@***date_var* } 指定備份組到期且可加以覆寫的時間。如果這個日期是以變數 (@* date_var*) 提供，則它必須遵照所設定的系統 **datetime** 格式，且必須指定為下列其中一項：  
   
 -   字串常數 (@*date_var* **=** date)  
 -   字元字串資料類型的變數 (**ntext** 或 **text** 資料類型除外)  

@@ -1,34 +1,35 @@
 ---
-title: "Deadlock Graph 事件類別 | Microsoft 文件"
-ms.custom: 
+title: Deadlock Graph 事件類別 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Deadlock Graph event class
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2377c7a4cf36637dc88a2575ed01b37206bb00c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0fb74b61eba2aa30010834f38f18be3d3077513f
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Deadlock Graph** 事件類別提供死結的 XML 描述。 此事件與 **Lock:Deadlock** 事件會同時發生。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **Deadlock Graph** 事件類別提供死結的 XML 描述。 此事件與 **Lock:Deadlock** 事件會同時發生。  
   
 ## <a name="deadlock-graph-event-class-data-columns"></a>Deadlock Graph 事件類別資料行  
   

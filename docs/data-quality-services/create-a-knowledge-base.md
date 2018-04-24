@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.kb.selectkb.f1
 - sql13.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 998e96279b7538ab516ee2546586a022043fab67
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 228c1fafe286aed263fe8093f8a7b739918c1dee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-knowledge-base"></a>建立知識庫
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立知識庫，並預備此知識庫進行定義域管理、知識探索或是加入比對原則。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -48,7 +51,7 @@ ms.lasthandoff: 03/22/2018
   
 3.  輸入新知識庫的名稱和描述。  
   
-4.  在 **[建立知識庫來源]**中，選取要做為知識庫基礎的來源：  
+4.  在 **[建立知識庫來源]** 中，選取要做為知識庫基礎的來源：  
   
     -   如果您不想要使用現有的知識庫或資料檔案做為新知識庫的基礎，請選取 **[無]** 。  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 03/22/2018
   
     -   選取 **[從 DQS 檔案匯入]** ，即可使用 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上的 DQS 檔案做為新知識庫的基礎。 按一下 **[瀏覽]**、選取副檔名為 .dqs 的 DQS 資料檔案，然後按一下 **[確定]**。  
   
-5.  在 **[選取活動]**中，選取您想要在新知識庫上執行的活動：  
+5.  在 **[選取活動]** 中，選取您想要在新知識庫上執行的活動：  
   
     -   選取 **[定義域管理]** 建立知識庫，並且進入用來修改知識庫中定義域的畫面。  
   

@@ -1,16 +1,16 @@
 ---
 title: ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_RESOURCE_POOL_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-caps.latest.revision: 
+caps.latest.revision: 47
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c6b9a6c43d61573ca5bc895ac5f9ef8d0ee9715f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  當 CPU 出現競爭時，為在資源集區中的所有要求，指定保證平均 CPU 頻寬。 *value* 是預設值為 0 的整數。 允許的 *value* 範圍從 0 至 100。  
   
  MAX_CPU_PERCENT =*value*  
- 當出現 CPU 競爭時，指定所有要求在資源集區中將會接收的最大平均 CPU 頻寬。 *value* 是預設值為 100 的整數。 允許的 *value* 範圍從 1 至 100。  
+ 當出現 CPU 競爭時，指定所有要求在資源集區中將會接收的最大平均 CPU 頻寬。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。  
   
  CAP_CPU_PERCENT =*value*  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -109,7 +109,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
  指定為此資源集區所保留的最小記憶體數量 (不與其他資源集區共享)。 *value* 是預設值為 0 的整數。 允許的 *value* 範圍從 0 至 100。  
   
  MAX_MEMORY_PERCENT =*value*  
- 指定在此資源集區中，可供要求所用的伺服器記憶體總量。 *value* 是預設值為 100 的整數。 允許的 *value* 範圍從 1 至 100。  
+ 指定在此資源集區中，可供要求所用的伺服器記憶體總量。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。  
   
  MIN_IOPS_PER_VOLUME =*value*  
  **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

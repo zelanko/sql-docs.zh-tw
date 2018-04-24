@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da3b93c059c363d1690a614c7c61e1947559580e
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 7dfd8c89dc12f19a9397b3a9053e4a7c979ad12e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="change-domain-values"></a>變更定義域值
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中變更及增加知識庫內的中繼資料。 在您藉由知識探索產生知識、將知識匯入知識庫或定義域，或是讓知識庫根據另一個知識庫之後，您可以互動方式變更資料值。 知識庫產生不但會利用電腦輔助程序，也會提供您使用自己知識的方式，依照以下方式驗證資料值並加以變更：  
   
 -   將定義域值加入至值清單中，或是從清單中選取值並加以刪除。  
@@ -111,7 +114,7 @@ ms.lasthandoff: 03/22/2018
  在您變更定義域值之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Meaning"></a> 正確值、錯誤值和無效值的意義  
- **[定義域值]** 頁面上 **[值]** 資料表中的每一個值都會被指派 **[正確]** 、 **[錯誤]**或 **[無效]**的 **[類型]**設定。 值的類型最初是由知識探索活動所產生，之後您可以適當地加以變更。 根據探索和互動式變更的最終類型則是由清理活動產生。 這些設定具有以下意義：  
+ **[定義域值]** 頁面上 **[值]** 資料表中的每一個值都會被指派 **[正確]** 、 **[錯誤]** 或 **[無效]** 的 **[類型]** 設定。 值的類型最初是由知識探索活動所產生，之後您可以適當地加以變更。 根據探索和互動式變更的最終類型則是由清理活動產生。 這些設定具有以下意義：  
   
 -   **正確：** 這個值屬於定義域，而且沒有任何語法錯誤。 例如，“Chicago” 在城市定義域中是正確的。  
   
@@ -126,9 +129,9 @@ ms.lasthandoff: 03/22/2018
 ##  <a name="Display"></a> How to Display the Appropriate Values  
  您可以依照以下方式修改顯示：  
   
--   選取**[篩選]** 下拉式清單中的狀態，在資料表中 **[篩選]** 您想要的結果 (根據結果的狀態)。  
+-   選取 **[篩選]** 下拉式清單中的狀態，在資料表中 **[篩選]** 您想要的結果 (根據結果的狀態)。  
   
--   在**[尋找]** 文字方塊中輸入要搜尋的一個或多個字，以 **[尋找]** 您想要檢查或修改的資料。 如此一來，當任何顯示的值中出現這些字時，就會反白顯示這些字。  
+-   在 **[尋找]** 文字方塊中輸入要搜尋的一個或多個字，以 **[尋找]** 您想要檢查或修改的資料。 如此一來，當任何顯示的值中出現這些字時，就會反白顯示這些字。  
   
 -   按一下 **[只顯示新值]** ，資料表中顯示的值將僅限為目前工作階段已探索的值，而不是之前工作階段已探索的值。  
   

@@ -1,34 +1,35 @@
 ---
-title: "Lock:Acquired 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Lock:Acquired 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Acquired event class
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c2afa0dfd180073e91cbe541ae25687448ccaa1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 17b1ccc7a297560d2e0d9dc94f12fdb7ec3011e8
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Lock:Acquired 事件類別指出已完成對資源 (例如資料頁) 取得鎖定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Lock:Acquired 事件類別指出已完成對資源 (例如資料頁) 取得鎖定。  
   
  Lock:Acquired 與 Lock:Released 事件類別可用來監視物件何時鎖定、採用的鎖定類型以及鎖定已保留多久的時間。 長期保留的鎖定可能會造成競爭問題，應該加以調查。 例如，某個應用程式可能取得資料表中資料列的鎖定，然後等候使用者輸入。 由於使用者可能要很長時間來輸入，因此鎖定可能會封鎖其他使用者。 在這個例子中，應重新設計應用程式，只在需要時才提出鎖定要求，而且取得鎖定後不需要使用者輸入。  
   

@@ -1,16 +1,16 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_BIG
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c8228f0db3e37fe3bf6425d60fd4f9067e92220
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 173daacfd95ec63789dde878e960d5a8b820a27c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 傳回跨越指定 *startdate* 和 *enddate* 之 *datepart* 界限的計數 (帶正負號的整數)。
   
-如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函數的概觀，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,7 +52,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 ## <a name="arguments"></a>引數  
 *datepart*  
-這是指定所跨越之界限類型的 *startdate* 和 *enddate* 部分。 下表列出所有有效的 *datepart* 引數。 使用者自訂變數對等項目無效。
+這是指定所跨越之界限類型的 *startdate* 和 *enddate* 的一部分。 下表列出所有有效的 *datepart* 引數。 使用者自訂變數對等項目無效。
   
 |*datepart*|縮寫|  
 |---|---|
@@ -70,11 +70,11 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |**nanosecond**|**ns**|  
   
 *startdate*  
-為可解析成 **time**、**date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset** 值的運算式。 *date* 可以是運算式、資料行運算式、使用者自訂變數或字串常值。 *startdate* 會從 *enddate* 減去。  
-若要避免模糊不清，請使用四位數年份。 如需兩位數年份的詳細資訊，請參閱[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
+這是可解析成 **time**、**date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset** 值的運算式。 *date* 可以是運算式、資料行運算式、使用者定義的變數或字串常值。 *startdate* 會從 *enddate* 減去。  
+若要避免模糊不清，請使用四位數年份。 如需兩位數年份的詳細資訊，請參閱[設定 two digit year cutoff 伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
   
 *enddate*  
-請參閱 *startdate*。
+請參閱＜*startdate*＞。
   
 ## <a name="return-type"></a>傳回類型  
  已簽署   
@@ -92,7 +92,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 由於 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 的精確度只有到分鐘，因此當 **smalldatetime** 值用於 *startdate* 或 *enddate* 時，秒和毫秒就一律會在傳回值中設定為 0。
   
-如果您只有將時間值指派給日期資料類型的變數，則遺漏日期部分的值就會設定為預設值：1900-01-01。 如果您只有將日期值指派給時間或日期資料類型的變數，則遺漏時間部分的值就會設定為預設值：00:00:00。 若 *startdate* 或 *enddate* 其中之一只有時間部分，而且另一個項目只有日期部分，則遺漏的時間和日期部分都會設定為預設值。
+如果您只有將時間值指派給日期資料類型的變數，則遺漏日期部分的值就會設定為預設值：1900-01-01。 如果您只有將日期值指派給時間或日期資料類型的變數，則遺漏時間部分的值就會設定為預設值：00:00:00。 如果 *startdate* 或 *enddate* 其中之一只有時間部分，而另一個只有日期部分，則遺漏的時間和日期部分都會設定為預設值。
   
 如果 *startdate* 和 *enddate* 具有不同的日期資料類型，而且其中一個項目的時間部分或小數秒數有效位數超過另一個項目，則另一個項目的遺漏部分就會設定為 0。
   

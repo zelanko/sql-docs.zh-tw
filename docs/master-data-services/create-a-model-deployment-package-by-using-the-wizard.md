@@ -1,34 +1,37 @@
 ---
-title: "使用精靈建立模型部署套件 | Microsoft Docs"
-ms.custom: 
+title: 使用精靈建立模型部署套件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deployment packages [Master Data Services], creating
 - models [Master Data Services], creating a deployment package
 - creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca0360bf0eef8c7cf8480164ee132fcb4f499000
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: e5c23d47b558aec6cb99e203d737b6d84a06bc90
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用精靈建立模型部署封裝
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署精靈僅建立模型物件的封裝。 如果您需要在套件中包含資料，請參閱 [使用 MDSModelDeploy 建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
 ## <a name="prerequisites"></a>Prerequisites  

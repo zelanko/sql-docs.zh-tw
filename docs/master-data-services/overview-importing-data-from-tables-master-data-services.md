@@ -1,34 +1,37 @@
 ---
-title: "概觀：從資料表匯入資料 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 概觀：從資料表匯入資料 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
-caps.latest.revision: 
+caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5fc895f4b84fd96a3ed2b1ec28c61233ac070525
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: e662f71f05e3c44637a2209f57535e1a797a7928
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>概觀：從資料表匯入資料 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中為資料建立模型之後，即可開始新增資料，並對資料進行變更。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。  
   
  如需如何新增和修改資料的指示，請參[從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)。  
