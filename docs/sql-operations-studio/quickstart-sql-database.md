@@ -30,7 +30,7 @@ ms.lasthandoff: 03/09/2018
 
 - [安裝[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
 
-如果您還沒有 Azure SQL 伺服器，請完成下列 Azure SQL Database 快速入門 （請記住伺服器名稱和登入認證） ！ 其中：
+如果您還沒有 Azure SQL 伺服器，請完成下列 Azure SQL Database 快速入門 (請記住伺服器名稱和登入認證！)：
 
 - [建立資料庫-入口網站](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [建立資料庫-CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
@@ -41,11 +41,11 @@ ms.lasthandoff: 03/09/2018
 
 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)] 連接 Azure SQL Database 伺服器。
 
-1. 第一次執行[!INCLUDE[name-sos](../includes/name-sos-short.md)]時應該會開啟**連接**頁面。 如果您沒有看到**連接**頁面上，按一下**加入連接**，或**伺服器**資訊看板中的**新增連線**圖示：
+1. 第一次執行[!INCLUDE[name-sos](../includes/name-sos-short.md)]時應該會開啟**連接**頁面。 如果您沒有看到**連接**頁面，請按一下**加入連接**或**伺服器**資訊看板中的**新增連線**圖示：
    
    ![新的連線圖示](media/quickstart-sql-database/new-connection-icon.png)
 
-2. 本文使用*SQL 登入*，但也支援*Windows 驗證*。 如下表所示，填入您的 Azure SQL server 所使用的伺服器名稱、使用者名稱和密碼:
+2. 本文使用 *SQL 登入*，但也支援 *Windows 驗證*。如下表所示，填入您的 Azure SQL server 所使用的伺服器名稱、使用者名稱和密碼：
 
    | 設定       | 建議值 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -59,17 +59,17 @@ ms.lasthandoff: 03/09/2018
 
    ![新的連線圖示](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 如果您的伺服器沒有防火牆規則允許連線，SQL Operations Studio**建立新的防火牆規則**表單將會開啟。 完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果您的伺服器沒有允許 SQL Operations Studio 連線的防火牆規則，**建立新的防火牆規則**表單將會開啟。請完成表單，以建立新的防火牆規則。如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新的防火牆規則](media/quickstart-sql-database/firewall.png)  
 
-4. 成功連接後，您的伺服器在*伺服器*[資訊看板]中開啟。
+4. 成功連接後，您的伺服器會在*伺服器*資訊看板中開啟。
 
 ## <a name="create-the-tutorial-database"></a>建立教學課程的資料庫
 
 下列章節將建立*TutorialDB*資料庫，可用於各個[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。
 
-1.  在 [資訊看板] 上滑鼠右鍵按一下您的 Azure SQL 伺服器，然後選取**新增查詢。**
+1. 在伺服器資訊看板上以滑鼠右鍵按一下您的 Azure SQL 伺服器，然後選取**新增查詢。**
 
 1. 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
@@ -101,7 +101,7 @@ ms.lasthandoff: 03/09/2018
 1. 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
    > [!NOTE]
-   > 您可以附加，或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
+   > 您可以將程式碼片段附加或覆寫先前編輯器中的查詢。請注意，按一下**執行**只會執行已選取的查詢。如果未選取，按一下**執行**將執行編輯器中所有的查詢。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
