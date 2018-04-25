@@ -1,32 +1,33 @@
 ---
-title: "Azure Active Directory |Microsoft 文件"
+title: Azure Active Directory |Microsoft 文件
 ms.date: 07/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
-ms.openlocfilehash: eb13c1a57c63ce013a3b546572994106b8b1ffc0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 462b141c365e0140236c78af451c73b110911765
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證進行連接
+# <a name="connect-using-azure-active-directory-authentication"></a>如何：使用 Azure Active Directory 驗證進行連線
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) 是做為替代運作中央使用者識別碼管理技術[SQL Server 驗證](../../connect/php/how-to-connect-using-sql-server-authentication.md)。 Azure AD 可讓連線到 Microsoft Azure SQL Database 和 SQL 資料倉儲具有同盟識別身分在 Azure AD 中使用使用者名稱和密碼、 Windows 整合式驗證或 Azure AD 存取權杖。SQL Server 的 PHP 驅動程式提供這些功能的部分支援。
 
 若要使用 Azure AD，**驗證**關鍵字。 值，**驗證**可能需要在下表中說明。
 
-|關鍵字|值|Description|
+|關鍵字|值|描述|
 |-|-|-|
 |**驗證**|未設定 （預設值）|驗證模式取決於其他關鍵字。 如需詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。 |
 ||`SqlPassword`|SQL Server 執行個體 （這可能是 Azure 的執行個體） 直接驗證使用者名稱和密碼。 使用者名稱和密碼必須傳遞至連接字串使用**UID**和**PWD**關鍵字。 |
@@ -130,5 +131,5 @@ ms.lasthandoff: 11/18/2017
 
     ?>
 ```
-## <a name="see-also"></a>請參閱＜  
-[使用 Azure Active Directory 的 ODBC 驅動程式](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
+## <a name="see-also"></a>另請參閱  
+[搭配 ODBC 驅動程式使用 Azure Active Directory](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)

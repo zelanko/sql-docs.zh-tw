@@ -2,7 +2,7 @@
 title: Node.js Driver for SQL Server |Microsoft 文件
 ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: node-js
 ms.reviewer: ''
@@ -12,27 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5cf72af4ebd9b00c06b80a64cd6f3017d9cd4a63
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: MT
+ms.openlocfilehash: 66682188467eaac9305a991765166532877f0050
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js Driver for SQL Server
 
 ![下載 DownArrow Circled](../../ssdt/media/download.png)[若要下載 Node.js SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-冗長的模組是受到所有現代化版本的 SQL Server 的 TDS 通訊協定的 javascript 實作。 驅動程式是開放原始碼專案，可在 Github 上取得。  
+JDBC SQL 驅動程式是以 Java 撰寫的 TDS 通訊協定，所有現代化版本的 SQL Server 皆予支援。 驅動程式是開放原始碼專案，可在 Github 上取得。  
   
 您可以連接到在 Windows、 Linux 或 mac 上使用 Node.js SQL 資料庫  
   
 ## <a name="getting-started"></a>使用者入門  
-* [步驟 1： 設定適用於 Node.js 開發的開發環境](step-1-configure-development-environment-for-node-js-development.md)  
+* [步驟 1︰設定 Node.js 開發的開發環境](step-1-configure-development-environment-for-node-js-development.md)  
 * [步驟 2︰建立 Node.js 開發的 SQL 資料庫](step-2-create-a-sql-database-for-node-js-development.md)  
 * [步驟 3︰使用 Node.js 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
   

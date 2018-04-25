@@ -1,29 +1,29 @@
 ---
-title: "建立使用共用的記憶體通訊協定有效連接字串 |Microsoft 文件"
-ms.custom: 
+title: 使用共用記憶體通訊協定建立有效的連接字串
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection strings [Database Engine], shared memory
 - aliases [SQL Server], shared memory
 ms.assetid: 5fff42e8-377f-4b40-b0c8-b02393f8a1af
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 74a28bc30fd179e22b362ad4cfd1e77fa2a54bfa
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---
@@ -63,8 +63,8 @@ WHERE session_id = @@SPID;
 >  在 [伺服器] 方塊中指定 IP 位址會建立 TCP/IP 連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立有效的連接字串使用 TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [建立有效的連接字串使用具名的管道](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
+ [Creating a Valid Connection String Using TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [使用具名管道建立有效的連接字串](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
  [選擇網路通訊協定](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

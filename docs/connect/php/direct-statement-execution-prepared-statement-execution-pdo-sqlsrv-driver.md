@@ -2,7 +2,7 @@
 title: 陳述式的備妥的陳述式執行 PDO_SQLSRV 驅動程式的直接 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,23 +13,23 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7967e4f2c888ccdb90c56ac3b1504187b77b48a
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: ca5e180f38ad82621880e1e6aaab9cdc4b43cfc2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主題討論使用 pdo:: SQLSRV_ATTR_DIRECT_QUERY 屬性來指定直接陳述式執行，而不是預設值，已備妥的陳述式執行。 使用備妥的陳述式可能導致更好的效能，如果超過一次使用 參數繫結來執行陳述式。  
+討論如何使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 屬性來指定直接陳述式執行，而不是預設值 ─ 備妥的陳述式執行。 使用備妥的陳述式可能導致更好的效能，如果超過一次使用 參數繫結來執行陳述式。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 如果您想要傳送[!INCLUDE[tsql](../../includes/tsql_md.md)]直接至伺服器的未經由驅動程式的陳述式準備的陳述式，您可以設定的 pdo:: SQLSRV_ATTR_DIRECT_QUERY 屬性[pdo:: setattribute](../../connect/php/pdo-setattribute.md) （或驅動程式選項傳遞給[Pdo:: __construct](../../connect/php/pdo-construct.md)) 或當您呼叫[pdo:: prepare](../../connect/php/pdo-prepare.md)。 根據預設，pdo:: SQLSRV_ATTR_DIRECT_QUERY 的值為 False （使用備妥的陳述式執行）。  
   
 如果您使用[pdo:: query](../../connect/php/pdo-query.md)，您可以直接執行。 然後再呼叫[pdo:: query](../../connect/php/pdo-query.md)，呼叫[pdo:: setattribute](../../connect/php/pdo-setattribute.md)和 pdo:: SQLSRV_ATTR_DIRECT_QUERY 設為 True。  每次呼叫[pdo:: query](../../connect/php/pdo-query.md) pdo:: SQLSRV_ATTR_DIRECT_QUERY 可以為執行與不同的設定。  

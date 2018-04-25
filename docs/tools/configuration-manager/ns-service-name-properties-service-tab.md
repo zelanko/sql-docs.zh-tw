@@ -1,30 +1,30 @@
 ---
-title: "NS$&lt;服務名稱&gt;屬性 （服務索引標籤） |Microsoft 文件"
-ms.custom: 
+title: NS$&lt;服務名稱&gt;屬性 （服務索引標籤） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
-caps.latest.revision: 
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 59203f010913252abf05201df0f92a2d1b639c18
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---
-# <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;服務名稱&gt;屬性 （服務索引標籤）
+# <a name="nsltservice-namegt-properties-service-tab"></a>NS$<service name> 屬性 (服務索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 這個服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服務。 淺灰色的屬性值不得以此應用程式加以變更。  
   

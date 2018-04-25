@@ -1,29 +1,30 @@
 ---
-title: "步驟 1： 設定適用於拼音開發的開發環境 |Microsoft 文件"
-ms.custom: 
+title: 步驟 1︰設定 Ruby 開發的開發環境
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ruby
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f50042c6ae0233b5bc39ce2879391d1d5340741
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 30a38b0a73eae053b36ccc8c2f3c30b9c8e21319
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-1-configure-development-environment-for-ruby-development"></a>步驟 1： 設定適用於拼音開發的開發環境
+# <a name="step-1-configure-development-environment-for-ruby-development"></a>步驟 1︰設定 Ruby 開發的開發環境
 您必須設定開發環境的必要條件，才能開發使用 SQL Server 的 Ruby 驅動程式的應用程式。    
   
 請注意 Ruby 驅動程式會使用 TDS 通訊協定，SQL Server 和 Azure SQL Database 中的預設會啟用。  不需要進行其他組態設定。  
@@ -36,8 +37,8 @@ ms.lasthandoff: 11/18/2017
   
 2.  **安裝 Ruby**  
 安裝程式下載後，執行下列作業：  
-a. 按兩下檔案以啟動安裝程式。  
-b. 選取語言，並同意這些條款。  
+A. 按兩下檔案以啟動安裝程式。  
+B. 選取語言，並同意這些條款。  
 c.  在 [安裝設定] 畫面中，選取這兩個新增 Ruby 可執行檔路徑和關聯需要.rb 和.rbw 檔案這拼音項安裝旁邊的核取方塊。  
   
 3.  **下載拼音 DevKit**  
@@ -45,8 +46,8 @@ c.  在 [安裝設定] 畫面中，選取這兩個新增 Ruby 可執行檔路徑
   
 4.  **安裝拼音 DevKit**  
 下載完成之後，執行下列作業：  
-a. 按兩下該檔案。 將會要求您解壓縮檔案的位置。  
-b. 按一下"..."按鈕，然後選取 「 C:\DevKit"。 您可能必須先建立這個資料夾，依序按一下 建立新資料夾 」。  
+A. 按兩下該檔案。 將會要求您解壓縮檔案的位置。  
+B. 按一下"..."按鈕，然後選取 「 C:\DevKit"。 您可能必須先建立這個資料夾，依序按一下 建立新資料夾 」。  
 c. 按一下 [確定]，並接著 「 擷取 」，請將檔案解壓縮。  
   
 5. **開啟 cmd.exe**  

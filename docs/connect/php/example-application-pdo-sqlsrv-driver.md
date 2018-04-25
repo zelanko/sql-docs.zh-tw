@@ -2,7 +2,7 @@
 title: 範例應用程式 （PDO_SQLSRV 驅動程式） |Microsoft 文件
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,21 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dd0cdfbc217900ae4a4bfb618bafc9307e9e0c5
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: d3ba9dd02a4ef49202d16a8f03ff1f6bdfde6b43
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="example-application-pdosqlsrv-driver"></a>範例應用程式 （PDO_SQLSRV 驅動程式）
+# <a name="example-application-pdosqlsrv-driver"></a>範例應用程式 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-AdventureWorks Product Reviews 範例應用程式是使用 PDO_SQLSRV 驅動程式的 Web 應用程式[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 此應用程式可讓使用者經由輸入關鍵字來搜尋產品、查看所選產品的評論、撰寫所選產品的評論，以及上傳所選產品的影像。  
+AdventureWorks Product Reviews 範例應用程式是使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]之 SQLSRV 驅動程式的 Web 應用程式。 此應用程式可讓使用者經由輸入關鍵字來搜尋產品、查看所選產品的評論、撰寫所選產品的評論，以及上傳所選產品的影像。  
   
 ### <a name="running-the-example-application"></a>執行範例應用程式  
   
@@ -41,7 +41,7 @@ AdventureWorks Product Reviews 範例應用程式是使用 PDO_SQLSRV 驅動程�
   
 -   您的系統符合 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的需求。 如需詳細資訊，請參閱[Microsoft Drivers for PHP for SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
  -   adventureworks_demo.php 和 photo.php 檔案位於您的 Web 伺服器的根目錄中。 這些檔案必須包含本文件稍後所列的程式碼。  
--   SQL Server 2005 或 SQL Server 2008 與[AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)附加的資料庫安裝在本機電腦上。  
+-   本機電腦上已安裝 SQL Server 2005 或 SQL Server 2008，並附加 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。  
 -   已安裝網頁瀏覽器。  
   
 ## <a name="demonstrates"></a>示範  
@@ -55,7 +55,7 @@ AdventureWorks Product Reviews 範例應用程式會示範下列工作：
 ## <a name="example"></a>範例  
 AdventureWorks Product Reviews 範例應用程式會針對名稱包含使用者所輸入字串的產品，從資料庫傳回產品資訊。 在傳回的產品清單中，使用者可以查看評論、查看影像、上傳影像，以及撰寫所選產品的評論。  
   
-下列程式碼置於名為 adventureworks_demo_pdo.php 的檔案：  
+將下列程式碼放入名為 adventureworks_demo.php 的檔案中：  
   
 ```  
 <!--=============  
@@ -461,7 +461,7 @@ function PopulateProductsTable( $values )
 ## <a name="example"></a>範例  
 photo.php 指令碼針對指定的 **ProductID**傳回產品相片。 此指令碼是從 adventureworks_demo.php 指令碼呼叫。  
   
-下列程式碼置於名為 photo_pdo.php 的檔案：  
+將下列程式碼放入名為 photo.php 的檔案中：  
   
 ```  
 <?php  

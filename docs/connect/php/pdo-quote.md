@@ -1,8 +1,8 @@
 ---
-title: PDO::quote | Microsoft Docs
+title: 'Pdo:: quote |Microsoft 文件'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f01bccbf722566a35116c1baa21629b84c809883
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: da05a66c4ec449ef34174825dea6488e236b49da
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,12 +39,12 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>參數  
 $*string*：要加上引號的字串。  
   
-$*p*: 選用 （整數） 符號，指出資料類型。  預設值是 PDO::PARAM_STR。  
+$parameter*type*：指出資料類型的選擇性 整數 符號。  預設值是 PDO::PARAM_STR。  
   
 ## <a name="return-value"></a>傳回值  
 可以傳遞至 SQL 陳述式的加上引號的字串，如果失敗則傳回 false。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

@@ -1,29 +1,30 @@
 ---
-title: "步驟 1： 設定 pymssql Python 開發環境 |Microsoft 文件"
-ms.custom: 
+title: 步驟 1： 設定 pymssql Python 開發環境 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 91916f56a4bbdad46c7fc391257c4575886c28dc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 73ebcc99421ef0afcc15d13241c6fb6ffffd10c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>步驟 1： 設定 pymssql Python 開發的開發環境
+# <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>步驟 1︰設定 pymssql Python 開發的開發環境
 您必須設定開發環境的必要條件，才能開發使用 Python Driver for SQL Server 的應用程式。    
   
 請注意，Python SQL 驅動程式會使用 TDS 通訊協定，SQL Server 和 Azure SQL Database 中的預設會啟用。  不需要進行其他組態設定。  
@@ -31,8 +32,8 @@ ms.lasthandoff: 11/18/2017
 ## <a name="windows"></a>Windows  
   
 1. **安裝 Python 執行階段以及 pip 封裝管理員**  
-a. 移至[python.org](https://www.python.org/downloads/)  
-b. 按一下適當的 Windows 安裝程式 msi 連結。   
+A. 移至[python.org](https://www.python.org/downloads/)  
+B. 按一下適當的 Windows 安裝程式 msi 連結。   
 c. 下載一次執行的 msi 安裝 Python 執行階段  
   
 2. **下載模組說明 pymssql**從[這裡](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
@@ -68,8 +69,8 @@ c. 下載一次執行的 msi 安裝 Python 執行階段
 ## <a name="mac"></a>Mac  
   
 1. **安裝 Python 執行階段以及 pip 封裝管理員**  
-a. 移至[python.org](https://www.python.org/downloads/)  
-b. 按一下適當的 Mac installer byok-kek-pkg 連結。   
+A. 移至[python.org](https://www.python.org/downloads/)  
+B. 按一下適當的 Mac installer byok-kek-pkg 連結。   
 c. 下載一次執行安裝 Python 執行階段版本  
   
 2.  **開啟終端機**  

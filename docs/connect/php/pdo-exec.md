@@ -1,8 +1,8 @@
 ---
-title: PDO::exec | Microsoft Docs
+title: 'Pdo:: exec |Microsoft 文件'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3708ab788738ea523f2f879efbcac5eb584614e
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: ac5a2f7b4411b38e3986e8d547a2959cdb5d6278
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoexec"></a>PDO::exec
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ int PDO::exec ($statement)
 ## <a name="return-value"></a>傳回值  
 一個整數，報告受影響的資料列數目。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 如果 *$statement* 包含多個 SQL 陳述式，則只會針對最後一個陳述式報告受影響的資料列計數。  
   
 PDO::exec 不會傳回 SELECT 陳述式的結果。  

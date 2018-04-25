@@ -1,29 +1,30 @@
 ---
-title: "步驟 3： 連接到使用 Node.js SQL 的概念證明 |Microsoft 文件"
-ms.custom: 
+title: 步驟 3︰使用 Node.js 連接到 SQL 的概念證明
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 664c786e36fc9938fca34f71cffb9b50d3c2e1c5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 87a0721ba0ca4448ad6f47670f315ea0877f0a71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步驟 3： 連接到使用 Node.js SQL 的概念證明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步驟 3︰使用 Node.js 連接到 SQL 的概念證明
 
 ![下載 DownArrow Circled](../../ssdt/media/download.png)[若要下載 Node.js SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -51,10 +52,10 @@ ms.lasthandoff: 11/18/2017
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>步驟 2： 執行查詢  
+## <a name="step-2--execute-a-query"></a>執行查詢。  
   
   
-所有 SQL 陳述式會都執行使用**新 request （)**函式。 如果陳述式會傳回資料列，例如 select 陳述式，則您可以取回使用**request.on()**函式。 如果有任何資料列，request.on() 函式會傳回空的清單。  
+所有 SQL 陳述式會都執行使用**新 request （)** 函式。 如果陳述式會傳回資料列，例如 select 陳述式，則您可以取回使用**request.on()** 函式。 如果有任何資料列，request.on() 函式會傳回空的清單。  
   
   
 ```javascript  

@@ -1,6 +1,6 @@
-﻿---
-title: "快速入門： 使用 SQL Operations Studio （預覽）連接及查詢 SQL Server  |Microsoft 文件"
-description: "本快速入門示範如何使用 SQL Operations Studio （預覽） 來連接到 SQL Server 和執行查詢"
+---
+title: 快速入門： 使用 SQL Operations Studio （預覽）連接及查詢 SQL Server |Microsoft 文件
+description: 本快速入門示範如何使用 SQL Operations Studio (preview) 來連接到 SQL Server 和執行查詢
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/09/2018
    
    ![新的連線圖示](media/quickstart-sql-server/new-connection-icon.png)
 
-1. 本文使用*SQL 登入*，但也支援*Windows 驗證*。 填妥欄位，如下所示：
+1. 本文使用*SQL 登入*，但也支援*Windows 驗證*。 填妥欄位，如下所示： 填妥欄位，如下所示：
  
     - **伺服器名稱：** localhost
     - **驗證類型：** SQL 登入  
@@ -84,7 +84,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="create-a-table"></a>建立資料表
 
-查詢編輯器仍然會連線到*master*資料庫，但我們想要在*TutorialDB*資料庫中建立資料表。 
+查詢編輯器仍然會連線到*master*資料庫，但我們想要在*TutorialDB*資料庫中建立資料表。  
 
 1. 變更連接內容為**TutorialDB**:
 
@@ -95,7 +95,7 @@ ms.lasthandoff: 03/09/2018
 1. 下列程式碼片段貼到查詢視窗，然後按一下**執行**:
 
    > [!NOTE]
-   > 您可以將程式碼片段附加或覆寫先前編輯器中的查詢。請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
+   > 您可以將程式碼片段附加或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'

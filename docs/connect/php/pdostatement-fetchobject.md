@@ -1,8 +1,8 @@
 ---
-title: PDOStatement::fetchObject | Microsoft Docs
+title: PDOStatement::fetchObject |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cd17e076c98a8ed9a14b388b1badb2330a9d68d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: b215ca5237230d497aad4d8779c3ec23ce3e4bea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,14 +37,14 @@ mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )
 ```  
   
 #### <a name="parameters"></a>參數  
-$*class_name*： 一個選用字串，指定要建立之類別的名稱。 預設值為 stdClass。  
+$class*name*：一個選擇性字串，指定要建立之類別的名稱。 預設值為 stdClass。  
   
-$*ctor_args*： 選擇性內含自訂類別建構函式的引數陣列。  
+$ctor*args*：一個選擇性陣列，內含自訂類別建構函式的引數。  
   
 ## <a name="return-value"></a>傳回值  
 如果成功，會傳回具有類別執行個體的物件。 屬性會對應至資料行。 如果失敗，會傳回 false。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

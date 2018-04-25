@@ -2,7 +2,7 @@
 title: 轉換資料類型 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,31 +13,31 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5caf6c4e807b734bae6705a1777f6889f571be9d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 43d8b34fc03761d84803cea49a57bd6954dbe0a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="converting-data-types"></a>轉換資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可讓您指定當您將資料傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或從中擷取資料時的資料類型。 指定資料類型是選擇性的。 如果未指定資料類型，則會使用預設類型。 本節中的主題將說明如何指定資料類型，並提供預設資料類型的詳細資料。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可讓您指定當您將資料傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或從中擷取資料時的資料類型。 指定資料類型是選擇性的。 如果未指定資料類型，將會使用預設類型。 本節中的主題將說明如何指定資料類型，並提供預設資料類型的詳細資料。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 |[預設 SQL Server 資料類型](../../connect/php/default-sql-server-data-types.md)|提供將資料傳送至伺服器時的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型的相關資訊。|  
 |[預設 PHP 資料類型](../../connect/php/default-php-data-types.md)|提供從伺服器擷取資料時的預設 PHP 資料類型的相關資訊。|  
 |[如何：指定 SQL Server 資料類型](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|示範如何指定將資料傳送至伺服器時的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型。|  
 |[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)|示範如何指定從伺服器擷取資料時的 PHP 資料類型。|  
-|[如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|示範如何使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 utf-8 資料的內建支援。<br /><br />1.1 版中已加入支援 utf-8 字元[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。|  
+|[如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|示範如何使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 對於 UTF-8 資料的內建支援。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 1.1 版已加入 UTF-8 字元的支援。|  
 |[如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|示範如何使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的支援在 Linux 或 macOS ASCII 資料。<br /><br />在非 Windows 環境中的 ASCII 字元的支援已加入的 5.2 版[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。|
   
 ## <a name="see-also"></a>另請參閱  

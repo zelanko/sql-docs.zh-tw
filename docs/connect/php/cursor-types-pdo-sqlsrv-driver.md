@@ -1,29 +1,30 @@
 ---
-title: "資料指標類型 （PDO_SQLSRV 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 資料指標類型 （PDO_SQLSRV 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d9757631940208f0f3ded1fe90eec8fbfd1b061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: fef4910ae38fba0d101e95e9f7ad0c73d4541b72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="cursor-types-pdosqlsrv-driver"></a>資料指標類型 （PDO_SQLSRV 驅動程式）
+# <a name="cursor-types-pdosqlsrv-driver"></a>資料指標類型 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 PDO_SQLSRV 驅動程式可讓您建立具有數個資料指標的其中一個可捲動的結果集。  
@@ -35,9 +36,9 @@ PDO_SQLSRV 驅動程式可讓您建立具有數個資料指標的其中一個可
   
 您可以使用 pdo:: prepare 或 pdostatement:: Setattribute 來選取其中一種資料指標類型，表示伺服器端資料指標的類型：  
   
--   PDO:: ATTR_CURSOR = > PDO:: CURSOR_FWDONLY  
+-   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_FWDONLY  
   
--   PDO:: ATTR_CURSOR = > PDO:: CURSOR_SCROLL  
+-   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_SCROLL  
   
 要求 keyset 或 dynamic 資料指標，您可以指定 pdo:: ATTR_CURSOR = > pdo:: CURSOR_SCROLL，然後再傳遞適當的值以 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE。 您可以將它傳遞至 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE 的可能值為：  
   
@@ -98,6 +99,6 @@ print_r($row);
 ?>  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)  
   
