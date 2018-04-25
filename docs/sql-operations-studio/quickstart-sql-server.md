@@ -32,7 +32,7 @@ ms.lasthandoff: 03/09/2018
 如果您沒有 SQL Server 存取權，請從下列連結選取平台 （請確定您記得您的 SQL 登入和密碼 ！）：
 - [Windows-下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS-下載 SQL Server 2017 docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux-下載 SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -您只需要按照*建立及查詢資料*的步驟操作即可。
+- [Linux - 下載 SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -您只需要按照步驟操作，直到*建立及查詢資料*即可。
 
 
 ## <a name="connect-to-a-sql-server"></a>連接到 SQL Server
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="create-a-database"></a>建立資料庫
 
-下列步驟會建立一個名為**TutorialDB**資料庫:
+下列步驟會建立一個名為 **TutorialDB** 的資料庫：
 
 1. 以滑鼠右鍵按一下您的伺服器，**localhost**，然後選取**新增查詢。**
 1. [查詢] 視窗中貼入下列程式碼片段： 
@@ -95,7 +95,7 @@ ms.lasthandoff: 03/09/2018
 1. 下列程式碼片段貼到查詢視窗，然後按一下**執行**:
 
    > [!NOTE]
-   > 您可以附加，或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
+   > 您可以將程式碼片段附加或覆寫先前編輯器中的查詢。請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
