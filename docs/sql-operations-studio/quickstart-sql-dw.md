@@ -1,4 +1,4 @@
----
+﻿---
 title: 快速入門： 使用 SQL Operations Studio (preview) 連接並查詢 Azure SQL 資料倉儲 |Microsoft 文件
 description: 本快速入門示範如何使用 SQL Operations Studio (preview) 連接到 SQL 資料庫並執行查詢
 ms.custom: tools|sos
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/09/2018
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 Azure SQL 資料倉儲，然後使用 TRANSACT-SQL 陳述式來建立、插入和選取資料。 
 
 ## <a name="prerequisites"></a>必要條件
-若要完成本快速入門，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 Azure SQL 資料倉儲。
+若要完成本快速入門，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]和 Azure SQL 資料倉儲。
 
 - [安裝[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/09/2018
    
    ![新的連線圖示](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. 本文使用*SQL 登入*，但也支援*Windows 驗證*。 如下表所示，填入*您*的 Azure SQL server 所使用的伺服器名稱、使用者名稱和密碼:
+2. 本文使用*SQL 登入*，但也支援*Windows 驗證*。 如下表所示，填入您的 Azure SQL server 所使用的伺服器名稱、使用者名稱和密碼:
 
    | 設定       | 建議值 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -56,7 +56,7 @@ ms.lasthandoff: 03/09/2018
 
    ![新的連線圖示](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. 如果您的伺服器沒有允許 SQL Operations Studio 連線的防火牆規則，便會開啟**建立新的防火牆規則**表單。 請完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果您的伺服器沒有允許 SQL Operations Studio 連線的防火牆規則，便會開啟**建立新的防火牆規則**表單。請完成表單，以建立新的防火牆規則。如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新的防火牆規則](media/quickstart-sql-dw/firewall.png)  
 
@@ -85,7 +85,7 @@ ms.lasthandoff: 03/09/2018
 
 查詢編輯器仍然會連線到*master*資料庫，但我們想要在*TutorialDB*資料庫中建立資料表。 
 
-1. 變更連接內容為**TutorialDB**:
+1. 變更連接內容為 **TutorialDB**:
 
    ![變更內容](media/quickstart-sql-database/change-context.png)
 
@@ -93,7 +93,7 @@ ms.lasthandoff: 03/09/2018
 1. 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
    > [!NOTE]
-   > 您可以將下列程式碼片段附加或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
+   > 您可以將下列程式碼片段附加或覆寫先前編輯器中的查詢。請注意，按一下**執行**只會執行已選取的查詢。如果未選取，按一下**執行**將執行編輯器中所有的查詢。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -143,7 +143,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="clean-up-resources"></a>清除資源
 
-在此系列文章中其他的文章建立在本快速入門之上。 如果您打算繼續實作後續的快速入門，請勿清除本快速入門中建立的資源。  如果您不打算繼續，請使用下列步驟刪除本快速入門在 Azure 入口網站所建立的資源。
+在此系列文章中其他的文章建立在本快速入門之上。 如果您打算繼續實作後續的快速入門，請勿清除本快速入門中建立的資源。 如果您不打算繼續，請使用下列步驟刪除本快速入門在 Azure 入口網站所建立的資源。
 刪除您不再需要的資源群組來清除資源。 如需詳細資訊，請參閱[清除資源](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
 
 
