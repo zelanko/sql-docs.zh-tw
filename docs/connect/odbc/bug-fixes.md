@@ -2,7 +2,7 @@
 title: 已修正的 bug 清單 |Microsoft 文件
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 58da69ed6c4b7b046f8d1bc1ddf4e23b71b99a29
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="list-of-bugs-fixed"></a>已修正的 bug 的清單
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/08/2018
 - 修正錯誤 22003 損毀時傳入緩衝區的大小較小的 SQLGetData 然後所擷取的資料 (Windows)
 - 固定截斷 ADAL 的錯誤訊息
 - 32 位元 Windows 上固定極少數的 bug，當轉換浮點數到整數
-- 修正的問題，其中會插入 double with Always Encrypted 十進位欄位上沒有傳回資料截斷錯誤
+- 已修正下列問題其中 double 插入 with Always Encrypted 上十進位欄位將會傳回資料截斷錯誤
 - 固定 MacOS 安裝程式警告
 - 修正不正確的狀態時傳送給 SQL Server 工作階段復原嘗試期間連接恢復功能和連線集區都已啟用，導致工作階段卸除的伺服器
 
