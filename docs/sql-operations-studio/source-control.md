@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="open-an-existing-git-repository"></a>開啟現有的 Git 儲存庫
 
 1. 在**檔案**功能表下，選取**開啟資料夾...**
-2. 瀏覽至包含 git 追蹤檔案的資料夾，然後按一下 **選取資料夾**。 在這裡，本機儲存庫的子資料夾是可以選取的。
+2. 瀏覽至包含 git 追蹤檔案的資料夾，然後按一下 **選取資料夾**。在這裡可以選取本機儲存庫的子資料夾。
 
 
 ## <a name="initialize-a-new-git-repository"></a>初始化新的 git 儲存機制
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="working-with-git-repositories"></a>使用 Git 儲存庫
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]VS Code 會繼承其 Git 實作，但目前不支援其他 SCM 提供者。 在您開啟或初始化儲存庫之後，如需使用 Git 的詳細資訊，請參閱[VS Code 中的 Git 支援](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 會從 VS Code 繼承其 Git 實作，但目前不支援其他 SCM 提供者。在您開啟或初始化儲存庫之後，如需使用 Git 的詳細資訊，請參閱 [VS Code 中的 Git 支援](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)。
 
 
 ## <a name="additional-resources"></a>其他資源
