@@ -1,25 +1,26 @@
 ---
-title: "使用解譯的 Transact-SQL 存取記憶體最佳化資料表 | Microsoft Docs"
-ms.custom: 
+title: 使用解譯的 Transact-SQL 存取記憶體最佳化資料表 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.suite: 
+ms.prod: sql
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b683df32e55631bd4a896ec14dcf05c2f264f7c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2048bb08b0f367ca7f96b6e1669ee5480c1eb92e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.lasthandoff: 02/12/2018
   
 - 指定 [隔離等級資料表提示](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md) ，如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE。  
   
-- 將 [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) 資料庫選項設定為 [ON]。  
+- 將 [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT] [](../../t-sql/statements/alter-database-transact-sql-set-options.md) 資料庫選項設定為 [ON]。  
   
 在 [自動認可模式](http://msdn.microsoft.com/en-us/c8de5b60-d147-492d-b601-2eeae8511d00)下執行之查詢所存取的記憶體最佳化資料表不需要隔離等級資料表提示。  
   

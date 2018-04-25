@@ -1,26 +1,26 @@
 ---
-title: "SQL Server 屬性 （啟動參數 索引標籤） |Microsoft 文件"
-ms.custom: 
+title: SQL Server 屬性 （啟動參數 索引標籤） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/03/2018
  若要移除參數，請選取參數，然後按一下 [移除]。  
   
 ## <a name="parameter-format"></a>參數格式  
- 請勿在參數之間輸入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會自動加入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員會強制執行下列參數需求。  
+ 請勿在參數之間輸入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會自動加入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會強制執行下列參數需求。  
   
 -   修剪任何啟動參數中的開頭和尾端空白。  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
   
 |參數|簡短描述|  
 |---------------|-----------------------|  
-|-m|在單一使用者模式中啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
+|-M|在單一使用者模式中啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
 |-T1204|傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。|  
 |-T1224|停用以鎖定個數為基礎的鎖定擴大。|  
 |-T3608|防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動啟動並復原任何資料庫，但 master 資料庫除外。|  

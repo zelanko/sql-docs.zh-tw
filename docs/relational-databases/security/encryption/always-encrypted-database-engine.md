@@ -1,16 +1,16 @@
 ---
-title: "Always Encrypted (資料庫引擎) | Microsoft Docs"
-ms.custom: 
+title: Always Encrypted (資料庫引擎) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - encryption [SQL Server], Always Encrypted
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 
+caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d56c906c87ef69e444ee1424324cc99e3fa05ed8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9852b7f0bba5e1cb589403a1f0b43d74d1aa7aac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
 
 ## <a name="getting-started-with-always-encrypted"></a>開始使用 [永遠加密]
 
-使用 [永遠加密的精靈](../../../relational-databases/security/encryption/always-encrypted-wizard.md) 來快速開始使用 Always Encrypted。 精靈將會佈建必要的金鑰，並針對所選的資料行設定加密。 如果您要設定加密的資料行已經包含一些資料，則精靈會加密這些資料。 下列範例會示範加密資料行的程序。
+使用 [永遠加密的精靈] [](../../../relational-databases/security/encryption/always-encrypted-wizard.md) 來快速開始使用 Always Encrypted。 精靈將會佈建必要的金鑰，並針對所選的資料行設定加密。 如果您要設定加密的資料行已經包含一些資料，則精靈會加密這些資料。 下列範例會示範加密資料行的程序。
 
 > [!NOTE]  
 >  如需使用精靈的影片，請參閱 [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)(搭配 SSMS 開始使用永遠加密)。

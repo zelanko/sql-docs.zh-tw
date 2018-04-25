@@ -1,26 +1,26 @@
 ---
-title: "SQL Server 屬性 （進階索引標籤） |Microsoft 文件"
-ms.custom: 
+title: SQL Server 屬性 （進階索引標籤） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0a0b573dcb4b68c8becf86c8e847b10d5df5ed1a
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/03/2018
  **存貨保持單元**  
  顯示產品存貨保持單元 (SKU) 號碼。  
   
- **版本**  
+ **版本(Version)**  
  顯示這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的版本號碼。  
   
  **虛擬伺服器名稱**  
