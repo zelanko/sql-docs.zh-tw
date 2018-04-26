@@ -1,16 +1,16 @@
 ---
 title: TRY_PARSE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TRY_PARSE_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b26f46431909dd4fbfaa820db8c3869333f555d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 21e0b8b9219abca64ba0f2e802b627b4c7cb9271
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
  **data_type 參數的詳細資訊**  
   
- *date_type* 的參數值僅適用於下表所示的類型與樣式。 此處所提供的樣式資訊可以協助您決定所要允許的模式類型。 如需關於樣式的詳細資訊，請參閱 **System.Globalization.NumberStyles** 和 **DateTimeStyles** 列舉的 .NET Framework 文件。  
+ *date_type* 的參數值僅適用於下表所示的類型與樣式。 此處所提供的樣式資訊可以協助您決定所要允許的模式類型。 如需樣式的詳細資訊，請參閱說明 **System.Globalization.NumberStyles** 和 **DateTimeStyles** 列舉的 .NET Framework 文件。  
   
 |類別目錄|類型|.NET 類型|使用的樣式|  
 |--------------|----------|---------------|-----------------|  
