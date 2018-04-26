@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75bc2c0256697c030fa369487407483de63c0c62
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: aeab15ee29bcc56e0814d4976bcb2e5239f818ff
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,12 +54,12 @@ ms.lasthandoff: 04/16/2018
 |user_object_reserved_page_count|**bigint**|從一致範圍中配置給資料庫使用者物件的總頁數。 這個計數不包括已配置範圍中的未使用頁面。<br /><br /> 不包含 IAM 頁面，因為它們一律從混合範圍中配置。 如果 PFS 頁面是從一致範圍配置，則會包含它們。<br /><br /> 您可以使用中的 total_pages 資料行[sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)目錄檢視以傳回使用者物件中的每一個配置單位的保留的頁數。 不過請注意，total_pages 資料行包含 IAM 頁面。|  
 |internal_object_reserved_page_count|**bigint**|配置給檔案中內部物件之一致範圍中的總頁數。 這個計數不包括已配置範圍中的未使用頁面。<br /><br /> 不包含 IAM 頁面，因為它們一律從混合範圍中配置。 如果 PFS 頁面是從一致範圍配置，則會包含它們。<br /><br /> 沒有目錄檢視或動態管理物件可傳回每一個內部物件的頁數。|  
 |mixed_extent_page_count|**bigint**|檔案中已配置混合範圍的已配置和未配置總頁數。 混合範圍包含已配置給不同物件的頁面。 這個計數包含檔案中的所有 IAM 頁面。|
-|modified_extent_page_count|**bigint**|**開頭為**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]<br /><br />總頁數中修改自上次完整資料庫備份之後配置檔案的範圍。已修改的頁面計數可用來追蹤資料庫中的差異式變更上次完整備份，來決定是否有幫助差異備份。|
+|modified_extent_page_count|**bigint**|**適用於**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />總頁數中修改自上次完整資料庫備份之後配置檔案的範圍。 已修改的頁面計數可用來追蹤資料庫中的差異式變更數量上次完整備份的詳細資訊，決定如果需要進行差異備份。|
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
 |distribution_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與發佈相關聯的唯一數值識別碼。|  
   
 ## <a name="remarks"></a>備註  
- 頁數一律在範圍層級上產生。 因此，頁數值一定是 8 的倍數。 包含 Global Allocation Map (GAM) 和 Shared Global Allocation Map (SGAM) 配置頁的範圍就是已配置的一致範圍。 上述頁數並不包含它們。  
+ 頁數一律在範圍層級上產生。 因此，頁數值一定是 8 的倍數。 包含 Global Allocation Map (GAM) 和 Shared Global Allocation Map (SGAM) 配置頁的範圍就是已配置的一致範圍。 上述頁數並不包含它們。 如需頁面與範圍的詳細資訊，請參閱[頁面與範圍架構指南](../../relational-databases/pages-and-extents-architecture-guide.md)。 
   
  目前的版本存放區的內容是在[sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)。 版本存放區頁面是在檔案層級上追蹤，而不是工作階段和工作層級，因為它們是全域資源。 工作階段可產生版本，但工作階段結束時無法移除版本。 版本存放區清除必須考慮需要存取特定版本之執行最久的交易。 可以藉由檢視 elapsed_time_seconds 資料行中的探索與版本存放區清除相關執行最久的交易[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)。  
   

@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: ado
 ms.date: 02/03/2018
-ms.openlocfilehash: 0461584c0d82027994d452c2b20db4f4330492f2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 29f8318eebdeb34f571a0ec605bda8bae12f5c1a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-activex-data-objects-ado-for-sql-server"></a>新增和更新最近： ActiveX Data Objects (ADO) for SQL Server
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 04/08/2018
 - [新 + 更新 (0 + 0):**多維度運算式 (MDX) 的 SQL**文件](../mdx/new-updated-mdx.md)
 - [新 + 更新 (0 + 0): **ODBC （開放式資料庫連接） 的 SQL**文件](../odbc/new-updated-odbc.md)
 - [新 + 更新 (0 + 0):**範例 sql**文件](../samples/new-updated-samples.md)
-- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)**文件](../ssma/new-updated-ssma.md)
+- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新 + 更新 (0 + 0): **sql XQuery**文件](../xquery/new-updated-xquery.md)
 

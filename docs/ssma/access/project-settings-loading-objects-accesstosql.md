@@ -1,6 +1,6 @@
 ---
 title: 專案 （載入物件） 的設定 (AccessToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16d21bbe8cb2d3bc2e2d069c12fe53607774373e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ddfa41712c37e9c829c934a302ef8c33f038c4da
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>專案 （載入物件） 的設定 (AccessToSQL)
 載入物件的專案設定可讓您設定如何存取資料庫物件同步處理與 SQL Server 資料庫物件。  

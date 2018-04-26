@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 04/06/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 69b56cf027a1c7d8f536b4d9ad80e5ef3b627469
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
 
@@ -65,15 +65,15 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 | **處理器核心** | 2 核心 |
 | **處理器類型** | 只有 x64-相容 |
 
-如果您使用**網路檔案系統 (NFS)**遠端共用實際執行環境，請注意下列的支援需求：
+如果您使用**網路檔案系統 (NFS)** 遠端共用實際執行環境，請注意下列的支援需求：
 
 - 使用 NFS 版本**4.2 或更新版本**。 NFS 的舊版本不支援必要的功能，例如 fallocate 和通用的現代的檔案系統的疏鬆檔案建立。
-- 只尋找**/var/opt/mssql**上 NFS 掛接的目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔。
+- 只尋找 **/var/opt/mssql**上 NFS 掛接的目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔。
 - 確定 NFS 用戶端在掛接的遠端共用時，會使用 'nolock' 選項。
 
 ## <a id="repositories"></a> 設定來源儲存機制
 
-當您安裝或升級 SQL Server 時，您會從您設定 Microsoft 儲存機制取得最新版的 SQL Server 2017。 快速入門使用**累計更新 (CU)**儲存機制。 但您可以改為設定**GDR**儲存機制。 如需有關儲存機制和設定方式的詳細資訊，請參閱[儲存機制設定 SQL Server on Linux](sql-server-linux-change-repo.md)。
+當您安裝或升級 SQL Server 時，您會從您設定 Microsoft 儲存機制取得最新版的 SQL Server 2017。 快速入門使用**累計更新 (CU)** 儲存機制。 但您可以改為設定**GDR**儲存機制。 如需有關儲存機制和設定方式的詳細資訊，請參閱[儲存機制設定 SQL Server on Linux](sql-server-linux-change-repo.md)。
 
 > [!IMPORTANT]
 > 如果您先前安裝 CTP 或 RC 版本的 SQL Server 2017，您必須移除預覽儲存機制，並註冊通用版本上市 (GA) 其中一個。 如需詳細資訊，請參閱[儲存機制設定 SQL Server on Linux](sql-server-linux-change-repo.md)。

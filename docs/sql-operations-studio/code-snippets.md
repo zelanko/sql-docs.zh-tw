@@ -1,10 +1,10 @@
-﻿---
-title: "建立程式碼片段中 SQL Operations Studio （預覽） |Microsoft 文件"
-description: "了解如何建立和使用 SQL Operations Studio （預覽） 中的 SQL 程式碼片段"
+---
+title: 建立程式碼片段中 SQL Operations Studio （預覽） |Microsoft 文件
+description: 了解如何建立和使用 SQL Operations Studio （預覽） 中的 SQL 程式碼片段
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4670c824b1e52776c3d81d097beeb4ccd9e62e2d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f51c14d2c3824baa1b2730d352b94d9cfdc097bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>建立並快速地建立 TRANSACT-SQL (T-SQL) 指令碼中的使用程式碼片段[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>建立並快速地建立 TRANSACT-SQL (T-SQL) 指令碼中的使用程式碼片段 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 程式碼片段中的[!INCLUDE[name-sos](../includes/name-sos-short.md)]是範本，讓您更輕鬆地建立資料庫和資料庫物件。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]提供數個的 T-SQL 程式碼片段以協助您進行快速產生適當的語法。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供數個的 T-SQL 程式碼片段以協助您進行快速產生適當的語法。 
 
 您也可以建立使用者定義的程式碼片段。
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 1. 選取**SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]從 Visual Studio 程式碼繼承其功能的程式碼片段，因此這份文件特別說明如何使用 SQL 程式碼片段。 如需詳細資訊，請參閱[建立您自己的程式碼片段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)Visual Studio 程式碼文件中。 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] 從 Visual Studio 程式碼繼承其功能的程式碼片段，因此這份文件特別說明如何使用 SQL 程式碼片段。 如需詳細資訊，請參閱[建立您自己的程式碼片段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)Visual Studio 程式碼文件中。 
 
    ![取代範本欄位](media/code-snippets/select-sql.png)
 

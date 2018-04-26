@@ -1,25 +1,25 @@
 ---
-title: "設定記錄傳送的 SQL Server on Linux |Microsoft 文件"
-description: "本教學課程會示範如何使用記錄傳送次要執行個體複寫在 Linux 上的 SQL Server 執行個體的基本範例。"
+title: 設定記錄傳送的 SQL Server on Linux |Microsoft 文件
+description: 本教學課程會示範如何使用記錄傳送次要執行個體複寫在 Linux 上的 SQL Server 執行個體的基本範例。
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.date: 04/19/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: Inactive
-ms.openlocfilehash: af88c21dc246238274ab66b47bb76302f0a86f06
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e2c893dac95b63431ac8ea6260e4769b98444bd9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 

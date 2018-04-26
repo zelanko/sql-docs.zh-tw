@@ -1,9 +1,9 @@
-﻿---
-title: "教學課程： 啟用資料表空間使用方式範例深入了解 widget 中 SQL Operations Studio （預覽） |Microsoft 文件"
-description: "本教學課程會示範如何啟用的資料表空間使用方式範例深入了解 widget SQL Operations Studio （預覽） 資料庫儀表板上。"
+---
+title: 教學課程： 啟用資料表空間使用方式範例深入了解 widget 中 SQL Operations Studio （預覽） |Microsoft 文件
+description: 本教學課程會示範如何啟用的資料表空間使用方式範例深入了解 widget SQL Operations Studio （預覽） 資料庫儀表板上。
 ms.custom: tools|sos
 ms.date: 03/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09a1ebe6fda1baf546923887f28b51d416a80b59
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: 6ec260eb6c82bfcac0e38251375fc9b58af55db1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教學課程： 使用情況下啟用資料表的空間使用方式範例深入了解 widget [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -31,9 +31,9 @@ ms.lasthandoff: 03/20/2018
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列快速入門的其中一個：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
-- [連接及查詢 SQL Server 使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [連接及查詢使用 Azure SQL Database [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 

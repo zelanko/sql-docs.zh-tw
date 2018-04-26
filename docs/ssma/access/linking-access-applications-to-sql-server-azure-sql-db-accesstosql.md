@@ -1,15 +1,16 @@
 ---
-title: "連結至 SQL Server-Azure SQL DB 存取應用程式 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 連結至 SQL Server-Azure SQL DB 存取應用程式 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a1b658217a8d18642daca9028ae01334b22395c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>連結到 SQL Server-Azure SQL DB (AccessToSQL) 存取應用程式
 如果您想要使用您現有的 Access 應用程式搭配[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以將原始的 Access 資料表連結至移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 的資料表。 連結，讓您查詢、 表單、 報表和資料存取頁面使用中的資料會修改您的 Access 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫，而非 Access 資料庫中的資料。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  以滑鼠右鍵按一下**資料表**，然後選取**連結**。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 的存取會備份原始的 Access 資料表，並建立連結的資料表。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) 的存取會備份原始的 Access 資料表，並建立連結的資料表。  
   
 連結資料表之後，SSMA 這些資料表會顯示一個小型的連結圖示。 在 Access 中，這些資料表會顯示 「 連結 」 的圖示，即箭號指向它的地球。  
   
@@ -153,7 +154,7 @@ Recordset.LastModified
 **解決方式：**修改資料表結構描述使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]，然後更新中存取的連結。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>超連結功能，在移轉之後會遺失資料  
-**原因：**之後移轉資料，資料行中的超連結失去其功能，而變得簡單**nvarchar （max)**資料行。  
+**原因：**之後移轉資料，資料行中的超連結失去其功能，而變得簡單**nvarchar （max)** 資料行。  
   
 **解決方式：** None。  
   

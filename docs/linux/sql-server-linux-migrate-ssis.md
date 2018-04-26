@@ -1,25 +1,25 @@
 ---
-title: "擷取、 轉換和載入資料上使用 SSIS Linux |Microsoft 文件"
-description: "本文說明的 Linux 電腦的 SQL Server Integration Services (SSIS)"
+title: 擷取、 轉換和載入資料上使用 SSIS Linux |Microsoft 文件
+description: 本文說明的 Linux 電腦的 SQL Server Integration Services (SSIS)
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 01/09/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 87c28ec845a59ea13acce0585bc9b249f100a4a5
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 08f4b4870e604d1e8ce601594c63920a320d5911
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>擷取、 轉換和載入與 SSIS Linux 上的資料
 
@@ -75,7 +75,7 @@ ms.lasthandoff: 03/02/2018
     or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
     ```
 
-## <a name="design-packages"></a>設計封裝
+## <a name="design-packages"></a>設計套件
 
 **連接至 ODBC 資料來源**。 在重新整理 Linux CTP 2.1 和更新版本的 SSIS，SSIS 封裝可以使用 ODBC 連接 on Linux。 這項功能經過測試可與 SQL Server 及 MySQL ODBC 驅動程式，但也應該使用 ODBC 規格會觀察到的任何 Unicode ODBC 驅動程式。 在設計階段，您可以提供 DSN 或連接字串連接至 ODBC 資料;您也可以使用 Windows 驗證。 如需詳細資訊，請參閱[部落格文章發表的 ODBC 支援在 Linux 上](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
 

@@ -1,6 +1,6 @@
 ---
 title: 疑難排解 (AccessToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 465ef6af52de9f1de95f3bd6c77e458a213ed59a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 1981f96ccae81ba59f42bd7da581861c07af5378
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-accesstosql"></a>疑難排解 (AccessToSQL)
 不是屢見不鮮主控台指令碼或命令執行的移轉問題入該值。  

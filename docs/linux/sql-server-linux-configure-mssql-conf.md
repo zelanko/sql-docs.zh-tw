@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 8ec5bd425731b296c4e15c56d654f291bd4c511b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 7ff775907a9f34d635c7ecf23965ce2ef96179f6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>設定 SQL Server on Linux mssql conf 工具
 
@@ -120,7 +120,7 @@ ms.lasthandoff: 04/19/2018
 
 **Filelocation.defaultdatadir**和**filelocation.defaultlogdir**設定變更會建立新的資料庫和記錄檔的位置。 根據預設，這個位置是 /var/opt/mssql/data。 若要變更這些設定，請使用下列步驟：
 
-1. 建立新資料庫的目標目錄資料和記錄檔。 下列範例會建立新**/tmp/資料**目錄：
+1. 建立新資料庫的目標目錄資料和記錄檔。 下列範例會建立新 **/tmp/資料**目錄：
 
    ```bash
    sudo mkdir /tmp/data
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/19/2018
 
 若要變更這些設定，請使用下列步驟：
 
-1. 建立新的錯誤記錄檔的目標目錄。 下列範例會建立新**/tmp/masterdatabasedir**目錄：
+1. 建立新的錯誤記錄檔的目標目錄。 下列範例會建立新 **/tmp/masterdatabasedir**目錄：
 
    ```bash
    sudo mkdir /tmp/masterdatabasedir
@@ -241,7 +241,7 @@ ms.lasthandoff: 04/19/2018
 
 若要設定這個新的位置，請使用下列命令：
 
-1. 建立新的傾印檔案的目標目錄。 下列範例會建立新**/tmp/傾印**目錄：
+1. 建立新的傾印檔案的目標目錄。 下列範例會建立新 **/tmp/傾印**目錄：
 
    ```bash
    sudo mkdir /tmp/dump
@@ -272,7 +272,7 @@ ms.lasthandoff: 04/19/2018
 
 若要變更這些設定：
 
-1. 建立新的錯誤記錄檔的目標目錄。 下列範例會建立新**/tmp/logs**目錄：
+1. 建立新的錯誤記錄檔的目標目錄。 下列範例會建立新 **/tmp/logs**目錄：
 
    ```bash
    sudo mkdir /tmp/logs
@@ -304,7 +304,7 @@ ms.lasthandoff: 04/19/2018
 
 若要設定這個新的位置，請使用下列命令：
 
-1. 建立新的備份檔案的目標目錄。 下列範例會建立新**/tmp/備份**目錄：
+1. 建立新的備份檔案的目標目錄。 下列範例會建立新 **/tmp/備份**目錄：
 
    ```bash
    sudo mkdir /tmp/backup
@@ -358,9 +358,9 @@ ms.lasthandoff: 04/19/2018
     | 型別 | Description |
     |-----|-----|
     | **迷你** | 迷你是最小的傾印檔案類型。 它使用 Linux 系統資訊來決定執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
-    | **miniplus** | MiniPlus 迷你，類似，但它包含額外的記憶體。 其了解 SQLPAL 和主機環境中，傾印中加入下列的記憶體區域的內部資訊：</br></br> -各種全域變數</br> -所有以上 64 TB 的記憶體</br> -All 名為區域中找到**/proc/$ pid/對應**</br> 間接記憶體與執行緒堆疊</br> 執行緒的資訊</br> 關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |
+    | **miniplus** | MiniPlus 迷你，類似，但它包含額外的記憶體。 其了解 SQLPAL 和主機環境中，傾印中加入下列的記憶體區域的內部資訊：</br></br> -各種全域變數</br> -所有以上 64 TB 的記憶體</br> -All 名為區域中找到 **/proc/$ pid/對應**</br> 間接記憶體與執行緒堆疊</br> 執行緒的資訊</br> 關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |
     | **filtered** | 減法為基礎的篩選會使用設計程序中的所有記憶體其中都包含除非明確地排除。 設計了解 SQLPAL 和主機環境中，從傾印中排除特定區域的內部資訊。
-    | **full** | 完整的完整程序傾印包含所有區域位於**/proc/$ pid/對應**。 這不由控制**coredump.captureminiandfull**設定。 |
+    | **full** | 完整的完整程序傾印包含所有區域位於 **/proc/$ pid/對應**。 這不由控制**coredump.captureminiandfull**設定。 |
 
 ## <a id="dbmail"></a> 設定 SQL Server 的預設資料庫郵件設定檔，在 Linux 上
 
@@ -387,7 +387,7 @@ sudo systemctl restart mssql-server
 
 **Telemetry.userrequestedlocalauditdirectory**設定可讓本機稽核，並建立可讓您設定本機的稽核記錄，其中的目錄。
 
-1. 建立新的本機稽核記錄檔的目標目錄。 下列範例會建立新**/tmp/稽核**目錄：
+1. 建立新的本機稽核記錄檔的目標目錄。 下列範例會建立新 **/tmp/稽核**目錄：
 
    ```bash
    sudo mkdir /tmp/audit
@@ -539,7 +539,7 @@ sudo cat /var/opt/mssql/mssql.conf
 
 ## <a name="mssqlconf-format"></a>mssql.conf format
 
-下列**/var/opt/mssql/mssql.conf**每個設定檔提供的範例。 您可以使用此格式，以手動方式進行變更以**mssql.conf**檔案所需。 如果您不要手動變更的檔案，必須套用變更之前，先重新啟動 SQL Server。 若要使用**mssql.conf**檔案使用 Docker 時，您必須擁有 Docker[保存您的資料](sql-server-linux-configure-docker.md)。 第一次加入完整**mssql.conf**檔至主應用程式目錄，然後再執行容器。 沒有在這個範例[客戶的意見反應](sql-server-linux-customer-feedback.md)。
+下列 **/var/opt/mssql/mssql.conf**每個設定檔提供的範例。 您可以使用此格式，以手動方式進行變更以**mssql.conf**檔案所需。 如果您不要手動變更的檔案，必須套用變更之前，先重新啟動 SQL Server。 若要使用**mssql.conf**檔案使用 Docker 時，您必須擁有 Docker[保存您的資料](sql-server-linux-configure-docker.md)。 第一次加入完整**mssql.conf**檔至主應用程式目錄，然後再執行容器。 沒有在這個範例[客戶的意見反應](sql-server-linux-customer-feedback.md)。
 
 ```ini
 [EULA]

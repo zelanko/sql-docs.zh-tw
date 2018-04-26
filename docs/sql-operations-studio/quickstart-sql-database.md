@@ -1,9 +1,9 @@
 ---
-title: 快速入門： 連接及查詢 Azure SQL database 使用 SQL Operations Studio (preview) |Microsoft 文件
-description: 本快速入門示範如何使用連接到 SQL 資料庫並執行查詢的 SQL Operations Studio (preview)
+title: 快速入門： 連接及查詢 Azure SQL database 使用 SQL Operations Studio （預覽） |Microsoft 文件
+description: 本快速入門示範如何使用連接到 SQL 資料庫並執行查詢的 SQL Operations Studio （預覽）
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82fbe7376d762940815c7739311e69672b7fbff6
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: 5ecee0879282a31f08fb98bceb0241a5faf0ca2f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入門： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接並查詢 Azure SQL database
 
@@ -41,16 +41,16 @@ ms.lasthandoff: 03/09/2018
 
 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]來連接到 Azure SQL Database 伺服器。
 
-1. 第一次執行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**連接**頁面應該會開啟。 如果您沒有看到**連接**頁面上，按一下**加入連接**，或**新連線**中的圖示**伺服器**資訊看板：
+1. 第一次執行[!INCLUDE[name-sos](../includes/name-sos-short.md)]時應該會開啟**連接**頁面。 如果您沒有看到**連接**頁面，按一下**加入連接**，或**伺服器**資訊看板中的**新增連線**圖示：
    
    ![新的連線圖示](media/quickstart-sql-database/new-connection-icon.png)
 
-2. 本文使用*SQL 登入*，但*Windows 驗證*也支援。 填妥欄位，如下所示使用 伺服器名稱、 使用者名稱和密碼*您*Azure SQL server:
+2. 本文使用*SQL 登入*，但也支援*Windows 驗證*。 如下表所示，填入*您*的 Azure SQL server 所使用的伺服器名稱、使用者名稱和密碼:
 
    | 設定       | 建議值 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器名稱** | 完整伺服器名稱 | 此名稱應該像下面這樣： **servername.database.windows.net** |
-   | **驗證** | SQL 登入| 本教學課程中，使用 SQL 驗證。 |
+   | **驗證** | SQL 登入| 本教學課程中使用 SQL 驗證。 |
    | **使用者名稱** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
    | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時指定的密碼。 |
    | **儲存密碼嗎？** | [是] 或 [否] | 如果您不想每次輸入密碼，請選取 [是]。 |
@@ -59,11 +59,11 @@ ms.lasthandoff: 03/09/2018
 
    ![新的連線圖示](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 如果您的伺服器不需要的防火牆規則允許連線，SQL Operations Studio**建立新的防火牆規則**表單隨即開啟。 完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果您的伺服器沒有允許 SQL Operations Studio 連線的防火牆規則，便會開啟**建立新的防火牆規則**表單。 請完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新的防火牆規則](media/quickstart-sql-database/firewall.png)  
 
-4. 已成功連接您的伺服器在中開啟後*伺服器*[資訊看板]。
+4. 成功連接後，您的伺服器便會在*伺服器*資訊看板中開啟。
 
 ## <a name="create-the-tutorial-database"></a>建立教學課程的資料庫
 
@@ -92,7 +92,7 @@ ms.lasthandoff: 03/09/2018
 
 查詢編輯器仍然會連線到*master*資料庫，但我們想要在*TutorialDB*資料庫中建立資料表。 
 
-1. 變更的連接內容**TutorialDB**:
+1. 變更連接內容為**TutorialDB**:
 
    ![變更內容](media/quickstart-sql-database/change-context.png)
 
@@ -101,7 +101,7 @@ ms.lasthandoff: 03/09/2018
 1. 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
    > [!NOTE]
-   > 您可以附加，或覆寫先前的查詢編輯器中。 請注意，按一下**執行**執行所選取的查詢。 如果未選取，按一下**執行**執行所有的查詢編輯器中。
+   > 您可以將下列程式碼片段附加或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -153,7 +153,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="clean-up-resources"></a>清除資源
 
-在此集合中的其他文章是根據本快速入門。 如果您打算在繼續處理後續的快速入門，請勿清除本快速入門中建立的資源。 如果您不打算繼續，請使用下列步驟刪除本快速入門在 Azure 入口網站所建立的資源。
+在此系列文章中其他的文章建立在本快速入門之上。 如果您打算繼續實作後續的快速入門，請勿清除本快速入門中建立的資源。  如果您不打算繼續，請使用下列步驟刪除本快速入門在 Azure 入口網站所建立的資源。
 刪除您不再需要的資源群組來清除資源。 如需詳細資訊，請參閱[清除資源](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
 
 ## <a name="next-steps"></a>後續的步驟

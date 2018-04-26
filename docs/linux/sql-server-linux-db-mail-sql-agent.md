@@ -1,25 +1,25 @@
 ---
-title: "DB 郵件和電子郵件警示，在 Linux 上的 SQL 代理程式與 |Microsoft 文件"
-description: "本文說明如何使用 SQL Server on Linux 的 DB 郵件和電子郵件警示"
+title: DB 郵件和電子郵件警示，在 Linux 上的 SQL 代理程式與 |Microsoft 文件
+description: 本文說明如何使用 SQL Server on Linux 的 DB 郵件和電子郵件警示
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: Inactive
-ms.openlocfilehash: 69d1ff539d2e488030f32b9246f1ccf40d92bdd8
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 4d05f3b9a0af56e640cdb3176a5114183410ccef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB 郵件和電子郵件警示，在 Linux 上的 SQL 代理程式
 

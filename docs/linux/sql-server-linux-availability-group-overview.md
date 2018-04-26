@@ -1,25 +1,25 @@
 ---
-title: "Alwayson 可用性群組的 SQL Server on Linux |Microsoft 文件"
-description: 
+title: Alwayson 可用性群組的 SQL Server on Linux |Microsoft 文件
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 54fec5a177d5edf463853d230a56c28eeb1b0f7c
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 9d442c41adaec7148b3eb0259f851fee3fd2b683
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性群組
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 03/15/2018
 
 叢集類型會儲存在[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]動態管理檢視 (DMV) `sys.availability_groups`，資料行中`cluster_type`和`cluster_type_desc`。
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
+## <a name="requiredsynchronizedsecondariestocommit"></a>需要\_同步\_次要\_至\_認可
 
 新手[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是設定，可由呼叫 Ag `required_synchronized_secondaries_to_commit`。 這會告訴 AG 必須與主要 lockstep 的次要複本的數目。 這可讓之類的自動容錯移轉 （只有在與叢集類型為外部 Pacemaker 整合），並控制的主要可用性之類的行為，如果正確的次要複本的數目是線上或離線。 若要了解有關其運作方式的詳細資訊，請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。 `required_synchronized_secondaries_to_commit`值是預設設定和維護的 Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 您可以手動覆寫此值。
 

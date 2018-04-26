@@ -1,6 +1,6 @@
 ---
 title: 建立變數值檔案 (DB2ToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,18 +21,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41ddf64fdad160c1467903c41e40c5968bea2399
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 7aac7ffe4217cc299dfd24a74e77d33664f0b34b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>建立變數值檔案 (DB2ToSQL)
 變數值的檔案是 XML 檔案中所包含的參數值經常變更從一部伺服器移轉到另一個來源或目的地伺服器名稱類似命令。 大量的資料庫移轉發生時，多個變數的檔案，以儲存每個來源伺服器的值時會建立及參考的主版的指令碼檔案中**– v**在命令列參數。 這有助於維護幾個指令碼檔案中的多個變數的檔案中的變數值的靜態值。  
   
 > [!NOTE]  
 > 1.  變數名稱會做為前置詞和後置字元為 $ （美元） 符號。 如果變數不會指派變數值檔案中的值，您會導致一主控台執行程序的指令碼檔剖析期間發生錯誤。  
-> 2.  The escape character for **$** is **$$**. 如果變數或靜態值的參數值包含**$** （美元） 符號，然後**$$**必須指定以將其視為一個字元，而不是變數。  
+> 2.  The escape character for **$** is **$$**. 如果變數或靜態值的參數值包含**$** （美元） 符號，然後**$$** 必須指定以將其視為一個字元，而不是變數。  
 > 3.  為了可維護性，變數可以宣告內`‘variable-group’`元素的邏輯隔離的使用者定義變數。  使用這個項目不是強制性。  
   
 **範例:**  

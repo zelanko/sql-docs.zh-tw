@@ -1,9 +1,9 @@
-﻿---
-title: "SQL Operations Studio（預覽）的原始碼控制  |Microsoft 文件"
-description: "學習如何設定 SQL Operations Studio （預覽）的原始碼控制。"
+---
+title: 原始檔控制中 SQL Operations Studio （預覽） |Microsoft 文件
+description: 了解如何設定 SQL Operations Studio （預覽） 中的原始檔控制。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,27 +14,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f28199262b087ad5362da0ddf56827216aec748
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73fec13868004469b02f3117b9b8d70e1ec26ff3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用原始碼控制
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>使用原始檔控制中 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]支援 Git 版本/原始碼控制。
-
-
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的 Git 支援
-
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 內附 Git 原始碼控制管理員 (SCM)，但是在使用功能之前，您仍然需要[安裝 Git (2.0.0 版或更新版本)](https://git-scm.com/download)。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 版本/原始檔控制中支援 Git。
 
 
+## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>中的 Git 支援 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-## <a name="open-an-existing-git-repository"></a>開啟現有的 Git 儲存庫
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 隨附 Git 原始檔控制管理員 (SCM)，但是您仍然需要[安裝 Git (2.0.0 版或更新版本)](https://git-scm.com/download)之前可提供下列功能。 
 
-1. 在**檔案**功能表下，選取**開啟資料夾...**
-2. 瀏覽至包含 git 追蹤檔案的資料夾，然後按一下 **選取資料夾**。在這裡可以選取本機儲存庫的子資料夾。
+
+
+## <a name="open-an-existing-git-repository"></a>開啟現有的 Git 儲存機制
+
+1. 在下**檔案**功能表上，選取**開啟資料夾...**
+2. 瀏覽至包含由 git，追蹤檔案的資料夾，然後按一下 **選取資料夾**。 在本機儲存機制中的子資料夾是可以在這裡選取的。
 
 
 ## <a name="initialize-a-new-git-repository"></a>初始化新的 git 儲存機制
@@ -43,13 +43,13 @@ ms.lasthandoff: 12/21/2017
 
    ![原始檔控制 git 圖示](media/source-control/source-control.png)
 
-1. 輸入您想要初始化為 Git 儲存庫的資料夾路徑然後按下**Enter**。
+1. 輸入您想要初始化為 Git 儲存機制和按下的資料夾路徑**Enter**。
 
    ![初始化 Git 儲存機制](media/source-control/initialize-git-repository.png)
 
-## <a name="working-with-git-repositories"></a>使用 Git 儲存庫
+## <a name="working-with-git-repositories"></a>使用 Git 儲存機制
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 會從 VS Code 繼承其 Git 實作，但目前不支援其他 SCM 提供者。在您開啟或初始化儲存庫之後，如需使用 Git 的詳細資訊，請參閱 [VS Code 中的 Git 支援](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] VS Code 會繼承其 Git 實作，但目前不支援其他 SCM 提供者。 如需使用 Git 之後您開啟或初始化儲存機制, 的詳細資訊，請參閱[VS 程式碼中的 Git 支援](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)。
 
 
 ## <a name="additional-resources"></a>其他資源

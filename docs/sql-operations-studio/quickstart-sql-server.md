@@ -1,9 +1,9 @@
 ---
 title: 快速入門： 使用 SQL Operations Studio （預覽）連接及查詢 SQL Server |Microsoft 文件
-description: 本快速入門示範如何使用 SQL Operations Studio (preview) 來連接到 SQL Server 和執行查詢
+description: 本快速入門示範如何使用 SQL Operations Studio （預覽） 來連接到 SQL Server 和執行查詢
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: a1820cd0a69313afa2a57b6d96721f375307cb71
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門： 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連接及查詢 SQL Server 
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 SQL Server，然後使用 TRANSACT-SQL (T-SQL) 陳述式來建立*TutorialDB*，並用於[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。
@@ -30,15 +30,15 @@ ms.lasthandoff: 03/09/2018
 - [安裝[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
 
 如果您沒有 SQL Server 存取權，請從下列連結選取平台 （請確定您記得您的 SQL 登入和密碼 ！）：
-- [Windows-下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS-下載 SQL Server 2017 docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- [Windows - 下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [macOS - 下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 - [Linux - 下載 SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -您只需要按照步驟操作，直到*建立及查詢資料*即可。
 
 
-## <a name="connect-to-a-sql-server"></a>連接到 SQL Server
+## <a name="connect-to-a-sql-server"></a>連線到 SQL Server
 
    
-1. 啟動 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
+1. 啟動**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
 1. 第一次執行 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* **連接** 對話方塊將會開啟。 如果**連接**對話方塊未開啟，按一下**伺服器**頁面中的**新增連線**圖示：
    
    ![新的連線圖示](media/quickstart-sql-server/new-connection-icon.png)
@@ -84,7 +84,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="create-a-table"></a>建立資料表
 
-查詢編輯器仍然會連線到*master*資料庫，但我們想要在*TutorialDB*資料庫中建立資料表。  
+查詢編輯器仍然會連線到*master*資料庫，但我們想要在*TutorialDB*資料庫中建立資料表。 
 
 1. 變更連接內容為**TutorialDB**:
 

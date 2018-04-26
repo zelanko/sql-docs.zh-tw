@@ -1,24 +1,24 @@
 ---
-title: "針對高可用性設定 SQL Server 容器中 Kubernetes |Microsoft 文件"
-description: "本教學課程會示範如何部署與 Kubernetes Azure 容器服務上的 SQL Server 高可用性解決方案。"
+title: 針對高可用性設定 SQL Server 容器中 Kubernetes |Microsoft 文件
+description: 本教學課程會示範如何部署與 Kubernetes Azure 容器服務上的 SQL Server 高可用性解決方案。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 9e9925268f46007155c3a6851b250a57d9b02298
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>SQL Server 容器 Kubernetes 中設定高可用性
 
@@ -161,7 +161,7 @@ El comando siguiente crea SA 帳戶的密碼：
 
 在此步驟中，建立資訊清單，以描述 SQL Server 基礎容器[mssql-伺服器-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 映像。 資訊清單參考`mssql-server`永續性磁碟區的宣告，而`mssql`已經套用到 Kubernetes 叢集的密碼。 資訊清單也會描述[服務](http://kubernetes.io/docs/concepts/services-networking/service/)。 此服務是負載平衡器。 負載平衡器可保證復原 SQL Server 執行個體之後，仍然存在的 IP 位址。 
 
-1. 建立要說明部署資訊清單 （YAML 檔案）。 下列範例說明的部署，包括容器，根據 [SQL Server 的容器映像。
+1. 建立要說明部署資訊清單 （YAML 檔案）。 下列範例說明的部署，包括容器，根據 SQL Server 的容器映像。
 
    ```yaml
    apiVersion: apps/v1beta1

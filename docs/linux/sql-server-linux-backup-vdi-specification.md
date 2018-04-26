@@ -1,25 +1,25 @@
 ---
-title: "VDI 備份規格 SQL Server on Linux |Microsoft 文件"
-description: "SQL Server 備份的虛擬裝置介面規格。"
+title: VDI 備份規格 SQL Server on Linux |Microsoft 文件
+description: SQL Server 備份的虛擬裝置介面規格。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 52792f4ef8734afbc45d491277e8671af19b234c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 用戶端 SDK 規格上的 SQL Server
 
@@ -146,7 +146,7 @@ ms.lasthandoff: 02/13/2018
 | |**VD_E_INVALID** |裝置名稱無效。 它不是其中一個已知組成集合的名稱。
 
 **註解**VD_E_OPEN 可能會傳回沒有問題。 用戶端可以呼叫 OpenDevice，透過迴圈，直到這段程式碼會傳回。
-如果多個裝置設定，例如 *n* 裝置，將會傳回虛擬裝置組 *n* 唯一裝置介面。
+如果多個裝置設定，例如*n*裝置，將會傳回虛擬裝置組*n*唯一裝置介面。
 
 `GetConfiguration`函式可用來等候可以開啟裝置。
 如果此函式不成功，則會傳回透過 ppVirtualDevice null 值。

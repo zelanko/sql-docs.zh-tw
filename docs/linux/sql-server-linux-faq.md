@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 03/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 6fdf6679230141dd2dedb35a9ae7e9cc0fb1b9cb
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 4d59b7f4d2c88640f3f925949f8938e689d1e029
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux 常見問題集 (FAQ)
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/22/2018
 
 1. **是否有這類工具會在 Linux 執行的 SSMS？**
 
-   新的 Microsoft SQL 作業 Studio （預覽） 是用來管理 SQL Server 的跨平台工具。 如需詳細資訊，請參閱[什麼是 Microsoft SQL 作業 Studio （預覽）](../sql-operations-studio/what-is.md)。
+   新的 Microsoft SQL Operations Studio (preview) 是用來管理 SQL Server 的跨平台工具。 如需詳細資訊，請參閱[什麼是 Microsoft SQL 作業 Studio （預覽）](../sql-operations-studio/what-is.md)。
 
 1. **可用等 sqlcmd 和 bcp 命令在 Linux 上？**
 

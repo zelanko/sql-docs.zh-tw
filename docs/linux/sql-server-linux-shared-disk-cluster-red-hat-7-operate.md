@@ -1,25 +1,25 @@
 ---
-title: "Red Hat Enterprise Linux 共用的叢集運作的 SQL Server |Microsoft 文件"
-description: "藉由設定 Red Hat Enterprise Linux 共用的磁碟叢集的 SQL Server 實作高可用性。"
+title: Red Hat Enterprise Linux 共用的叢集運作的 SQL Server |Microsoft 文件
+description: 藉由設定 Red Hat Enterprise Linux 共用的磁碟叢集的 SQL Server 實作高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 9a879ea8b915ef75c683e62bc80fcadde114b21a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>適用於 SQL Server 運作 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -265,7 +265,7 @@ pacemaker: active/enabled
 
     下列連接埠必須開啟 Pacemaker 能夠進行通訊的所有節點上。
     
-    - **TCP: 2224, 3121, 21064
+    - * * TCP: 2224年 3121、 21064
 
 - **Pacemaker 或 Corosync 服務執行**
 

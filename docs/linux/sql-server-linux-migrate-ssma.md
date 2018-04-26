@@ -1,25 +1,25 @@
 ---
-title: "自動化資料庫移轉至 SQL Server on Linux |Microsoft 文件"
-description: 
+title: 自動化資料庫移轉至 SQL Server on Linux |Microsoft 文件
+description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: a59b3f20018c7dfff63cd716b6c838efef650437
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fe765ba6c1cf09c69a9de9ceef99807cb802a331
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>自動化與 SQL Server 移轉小幫手的資料庫移轉至 Linux
 

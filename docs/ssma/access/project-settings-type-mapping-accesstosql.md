@@ -1,6 +1,6 @@
 ---
 title: 專案設定 （型別對應） (AccessToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -28,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30586710c156ffe14028e8395b0e887419a36584
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ea7789abd2395615471ecde8934104e85780ae6a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>專案設定 （型別對應） (AccessToSQL)
 型別對應的專案設定可讓您設定的 SSMA 專案的預設型別對應。 您也可以指定個別的資料庫物件的型別對應。 如需詳細資訊，請參閱[對應來源和目標資料型別](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
@@ -56,16 +56,16 @@ ms.lasthandoff: 04/06/2018
 |--------------------|------------------------|  
 |**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
-|**byte**|**tinyint**|  
+|**位元組**|**tinyint**|  
 |**currency**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**guid**|**uniqueidentifier**|  
+|**Guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**long**|**int**|  
+|**長**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**memo**|**nvarchar(max)**|  
+|**附註**|**nvarchar(max)**|  
 |**備忘**： 適用於 Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**text[\*..\*]**|**nvarchar[\*]**|  

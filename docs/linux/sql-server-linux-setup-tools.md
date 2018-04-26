@@ -1,25 +1,25 @@
 ---
-title: "Linux 上安裝 SQL Server 命令列工具 |Microsoft 文件"
-description: "本文說明如何在 Linux 上安裝 SQL Server 工具。"
+title: Linux 上安裝 SQL Server 命令列工具 |Microsoft 文件
+description: 本文說明如何在 Linux 上安裝 SQL Server 工具。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: c64ea611cabe9169b5073d20b47f5f5235174608
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 和 bcp 的 SQL Server 命令列工具 Linux 上安裝
 
@@ -83,13 +83,13 @@ ms.lasthandoff: 02/23/2018
 
 1. **選擇性**： 新增`/opt/mssql-tools/bin/`到您**路徑**bash 殼層中的環境變數。
 
-   若要讓**sqlcmd/bcp** bash 殼層登入工作階段，從存取修改您**路徑**中**~/.bash_profile**檔案使用下列命令：
+   若要讓**sqlcmd/bcp** bash 殼層登入工作階段，從存取修改您**路徑**中 **~/.bash_profile**檔案使用下列命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   若要讓**sqlcmd/bcp** bash 殼層互動式/非登入工作階段，從存取修改**路徑**中**~/.bashrc**檔案使用下列命令：
+   若要讓**sqlcmd/bcp** bash 殼層互動式/非登入工作階段，從存取修改**路徑**中 **~/.bashrc**檔案使用下列命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -128,13 +128,13 @@ ms.lasthandoff: 02/23/2018
 
 1. **選擇性**： 新增`/opt/mssql-tools/bin/`到您**路徑**bash 殼層中的環境變數。
 
-   若要讓**sqlcmd/bcp** bash 殼層登入工作階段，從存取修改您**路徑**中**~/.bash_profile**檔案使用下列命令：
+   若要讓**sqlcmd/bcp** bash 殼層登入工作階段，從存取修改您**路徑**中 **~/.bash_profile**檔案使用下列命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   若要讓**sqlcmd/bcp** bash 殼層互動式/非登入工作階段，從存取修改**路徑**中**~/.bashrc**檔案使用下列命令：
+   若要讓**sqlcmd/bcp** bash 殼層互動式/非登入工作階段，從存取修改**路徑**中 **~/.bashrc**檔案使用下列命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -167,13 +167,13 @@ ms.lasthandoff: 02/23/2018
 
 1. **選擇性**： 新增`/opt/mssql-tools/bin/`到您**路徑**bash 殼層中的環境變數。
 
-   若要讓**sqlcmd/bcp** bash 殼層登入工作階段，從存取修改您**路徑**中**~/.bash_profile**檔案使用下列命令：
+   若要讓**sqlcmd/bcp** bash 殼層登入工作階段，從存取修改您**路徑**中 **~/.bash_profile**檔案使用下列命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   若要讓**sqlcmd/bcp** bash 殼層互動式/非登入工作階段，從存取修改**路徑**中**~/.bashrc**檔案使用下列命令：
+   若要讓**sqlcmd/bcp** bash 殼層互動式/非登入工作階段，從存取修改**路徑**中 **~/.bashrc**檔案使用下列命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc

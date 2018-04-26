@@ -1,16 +1,16 @@
 ---
-title: "數字函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 數字函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - number function
 - fn:number function
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85882cd83303223917300175059f0905a2d6ad2d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 56823502e5c01068d25bbef7cee16d18dca26916
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-nodes---number"></a>節點的數目上的函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回所指定之節點的數字的值*$arg*。  
+  傳回所指定之節點的數字的值 *$arg*。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ fn:number($arg as node()?) as xs:double?
  節點值將以數字傳回。  
   
 ## <a name="remarks"></a>備註  
- 如果*$arg*是未指定，會傳回內容節點，並轉換為 double 的數字值。 在 SQL Server， **fn:number()**不只可以在內容相依述詞的內容中使用的引數。 具體而言，它只能在括號 ([ ]) 內使用。 例如，下列運算式會傳回 <`ROOT`> 元素。  
+ 如果 *$arg*是未指定，會傳回內容節點，並轉換為 double 的數字值。 在 SQL Server， **fn:number()** 不只可以在內容相依述詞的內容中使用的引數。 具體而言，它只能在括號 ([ ]) 內使用。 例如，下列運算式會傳回 <`ROOT`> 元素。  
   
 ```  
 declare @x xml  
@@ -83,7 +83,7 @@ WHERE ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   **Number （)**函式不是必要項目，針對查詢所示**LotSizeA**屬性。 這是 XPath 1.0 函數，主要是基於回溯相容性而包含它。  
+-   **Number （)** 函式不是必要項目，針對查詢所示**LotSizeA**屬性。 這是 XPath 1.0 函數，主要是基於回溯相容性而包含它。  
   
 -   針對 XQuery **LotSizeB**指定數目的函式，且是重複。  
   
@@ -103,9 +103,9 @@ ProductModelID   Result
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Number （)**函式只接受節點。 它不接受不可部份完成值。  
+-   **Number （)** 函式只接受節點。 它不接受不可部份完成值。  
   
--   當無法傳回值，表示為數字， **number （)**函式會傳回空白時序而不是 NaN。  
+-   當無法傳回值，表示為數字， **number （)** 函式會傳回空白時序而不是 NaN。  
   
 ## <a name="see-also"></a>另請參閱  
  [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  

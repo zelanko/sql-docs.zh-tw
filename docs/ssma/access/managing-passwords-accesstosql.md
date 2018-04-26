@@ -1,6 +1,6 @@
 ---
 title: 管理密碼 (AccessToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52b9f120a7025905630ffcf9762f4ce46b6abf52
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b2da363ed7fdb7ed8efc2d3a3497f6bb487bd711
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="managing-passwords-accesstosql"></a>管理密碼 (AccessToSQL)
 本節是關於保護資料庫的密碼和匯入或將它們匯出到伺服器的程序：  

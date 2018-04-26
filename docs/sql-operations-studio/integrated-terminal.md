@@ -1,9 +1,9 @@
-﻿---
-title: "SQL Operations Studio （預覽） 中的整合式終端機 |Microsoft 文件"
-description: "深入了解 SQL Operations Studio （預覽） 中的整合式終端機。"
+---
+title: SQL Operations Studio （預覽） 中的整合式終端機 |Microsoft 文件
+description: 深入了解 SQL Operations Studio （預覽） 中的整合式終端機。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b55e86314dd075b61dac5751b29fc541fdf1e2c4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61d74e7d8818391ca01c45ad8f9a7b2897751712
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integrated-terminal"></a>整合式終端機
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/21/2017
 
 若要開啟 終端機：
 
-* 使用**Ctrl +'**倒單引號字元的鍵盤快速鍵。
+* 使用**Ctrl +'** 倒單引號字元的鍵盤快速鍵。
 * 使用**檢視** | **整合的終端機**功能表命令。
 * 從**命令選擇區**(**Ctrl + Shift + P**)，使用**切換檢視： 整合式終端機**命令。
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="managing-multiple-terminals"></a>管理多個終端機
 
-您可以建立多個終端機開放給不同的位置，並輕鬆地巡覽其間。 您可以加入終端機的執行個體叫用的右上方的加號圖示**終端機** 面板，或藉由觸發**Ctrl + Shift +'**命令。 這會建立另一個項目可用於切換的下拉式清單。
+您可以建立多個終端機開放給不同的位置，並輕鬆地巡覽其間。 您可以加入終端機的執行個體叫用的右上方的加號圖示**終端機** 面板，或藉由觸發**Ctrl + Shift +'** 命令。 這會建立另一個項目可用於切換的下拉式清單。
 
 ![多個終端機](media/integrated-terminal/terminal-multiple-instances.png)
 
@@ -92,7 +92,7 @@ Shell 會使用預設值為`$SHELL`Linux 及 macOS，在 Windows 10 上的 Power
 
 ## <a id="key-bindings"></a>終端機的金鑰繫結
 
-**檢視： 整合式切換終端機**命令繫結至**Ctrl +'**快速切換進入和離開檢視的整合式終端機的面板。
+**檢視： 整合式切換終端機**命令繫結至**Ctrl +'** 快速切換進入和離開檢視的整合式終端機的面板。
 
 以下是快速瀏覽的整合式終端機中的鍵盤快速鍵：
 

@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 04/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 786153cf6d3f9cee30a01d3b6e3a94646a75eecc
-ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
+ms.openlocfilehash: e5c8cc35d7cd539b5b00a077cf0468aac533f897
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
@@ -305,10 +305,10 @@ sudo systemctl start mssql-server
 1. 藉由移除啟用 ipv6 環境中，核心`ipv6.disable=1`從開機 cmdline。 若要這樣做的方式取決於 Linux 散發套件和開機載入器，例如幼蟲。 如果您想要停用 IPv6，您仍可停用它藉由設定`net.ipv6.conf.all.disable_ipv6 = 1`中`sysctl`組態 (例如`/etc/sysctl.conf`)。 這仍會避免系統的網路介面卡 IPv6 位址，但是允許 sqlservr 功能運作。
 
 #### <a name="network-file-system-nfs"></a>Network File System (NFS)
-如果您使用**網路檔案系統 (NFS)**遠端共用實際執行環境，請注意下列的支援需求：
+如果您使用**網路檔案系統 (NFS)** 遠端共用實際執行環境，請注意下列的支援需求：
 
 - 使用 NFS 版本**4.2 或更新版本**。 NFS 的舊版本不支援必要的功能，例如 fallocate 和通用的現代的檔案系統的疏鬆檔案建立。
-- 只尋找**/var/opt/mssql**上 NFS 掛接的目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔。
+- 只尋找 **/var/opt/mssql**上 NFS 掛接的目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔。
 - 確定 NFS 用戶端在掛接的遠端共用時，會使用 'nolock' 選項。
 
 #### <a name="localization"></a>當地語系化

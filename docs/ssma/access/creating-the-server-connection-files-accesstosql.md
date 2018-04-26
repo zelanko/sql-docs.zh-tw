@@ -1,6 +1,6 @@
 ---
 title: 建立伺服器連接檔案 (AccessToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10cdd1a711d23d8934631c30a317aca4ca247a10
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 02a337c32f3dcea132edb7ae60559b7edfd467d7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>建立伺服器連接檔案 (AccessToSQL)
 伺服器的資訊可以是指定的指令碼檔案的 [伺服器] 區段中。 伺服器的資訊也可以指定不同的伺服器連接檔案中。 伺服器連接檔案的命令列參數是`-c <serverconnectionfile>`。 如果指令碼和伺服器的連接檔案中出現相同的伺服器識別碼，則會被視為指令碼檔案中的伺服器定義。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/06/2018
 ```  
   
 ## <a name="server-connection-file-validation"></a>伺服器連接檔案驗證  
-使用者可輕鬆地驗證其伺服器連線檔之結構描述定義檔**'A2SSConsoleScriptServersSchema.xsd'**可用 '結構描述' 資料夾中。  
+使用者可輕鬆地驗證其伺服器連線檔之結構描述定義檔 **'A2SSConsoleScriptServersSchema.xsd'** 可用 '結構描述' 資料夾中。  
   
 ## <a name="next-step"></a>下一步  
 在操作主控台的下一個步驟是[執行 SSMA 主控台&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  

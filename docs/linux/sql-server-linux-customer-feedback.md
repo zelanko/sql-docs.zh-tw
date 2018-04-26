@@ -1,24 +1,24 @@
 ---
-title: "SQL Server on Linux 的客戶意見反應 |Microsoft 文件"
-description: "描述如何收集並在 Linux 上設定 SQL Server 客戶回函。"
+title: SQL Server on Linux 的客戶意見反應 |Microsoft 文件
+description: 描述如何收集並在 Linux 上設定 SQL Server 客戶回函。
 author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 25772bd0ad7b2994e732e97fd264bef0e951eea9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 0cc16f093a04876a07cbc4566138861f268453ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>SQL Server on Linux 的客戶意見反應
 
@@ -88,7 +88,7 @@ Microsoft SQL Server 2017 包含網際網路通訊功能，收集，並將您的
 
 此選項可讓本機稽核，並可讓您設定目錄建立本機的稽核記錄檔的位置。
 
-1. 建立新的本機稽核記錄檔的目標目錄。 下列範例會建立新**/tmp/稽核**目錄：
+1. 建立新的本機稽核記錄檔的目標目錄。 下列範例會建立新 **/tmp/稽核**目錄：
 
    ```bash
    sudo mkdir /tmp/audit
@@ -116,7 +116,7 @@ Microsoft SQL Server 2017 包含網際網路通訊功能，收集，並將您的
 ### <a name="on-docker"></a>Docker
 若要啟用本機稽核 docker，您必須擁有 Docker[保存您的資料](sql-server-linux-configure-docker.md)。 
 
-1. 新的本機稽核記錄檔的目標目錄會在容器中。 在您的電腦上的主機目錄建立新的本機稽核記錄檔的目標目錄。 下列範例會建立新**/稽核**目錄：
+1. 新的本機稽核記錄檔的目標目錄會在容器中。 在您的電腦上的主機目錄建立新的本機稽核記錄檔的目標目錄。 下列範例會建立新 **/稽核**目錄：
 
    ```bash
    sudo mkdir <host directory>/audit

@@ -1,25 +1,25 @@
 ---
-title: "管理可用性群組容錯移轉的 SQL Server on Linux |Microsoft 文件"
-description: 
+title: 管理可用性群組容錯移轉的 SQL Server on Linux |Microsoft 文件
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: Inactive
-ms.openlocfilehash: 086cf16e243810452a3bace411abdc3689e74ff8
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 83cb4a3493534c568a44e7f2ec478cf6ca7df9e2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>在 Linux 上的 alwayson 可用性群組容錯移轉
 

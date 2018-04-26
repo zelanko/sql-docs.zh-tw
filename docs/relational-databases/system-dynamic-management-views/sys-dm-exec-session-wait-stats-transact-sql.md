@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_session_wait_stats (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -25,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ddca79ef78b42c06488f8c103b655d280418f7a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd87b3a99f965d60c4d02f2149a1fe33cbf9e5b9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   傳回每個工作階段中執行的執行緒所遇到的所有等候的相關資訊。 您可以使用此檢視來診斷效能問題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工作階段以及特定查詢和批次。  此檢視會傳回工作階段會針對彙總的相同資訊[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)但提供**session_id**以及數字。  
   

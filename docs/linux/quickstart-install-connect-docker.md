@@ -1,25 +1,25 @@
-﻿---
-title: "開始使用 Docker 上的 SQL Server 2017 | Microsoft Docs"
-description: "本快速入門會示範如何使用 Docker 來執行 SQL Server 2017 容器映像。 您隨後便可使用 sqlcmd 來建立及查詢資料庫。"
+---
+title: 開始使用 Docker 上的 SQL Server 2017 | Microsoft Docs
+description: 本快速入門會示範如何使用 Docker 來執行 SQL Server 2017 容器映像。 您隨後便可使用 sqlcmd 來建立及查詢資料庫。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 8c3f8bc09ef8c3b6838912027024a3feb97cea5d
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d422a4a755061837c08a6f4f8de4e1889768ac5d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>快速入門： 執行 SQL Server 2017 容器映像使用 Docker
 
@@ -99,7 +99,7 @@ ms.lasthandoff: 03/08/2018
 
    ![Docker ps 命令輸出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-1. 如果**STATUS** 資料行顯示狀態為 **Up**，表示 SQL Server 正在容器中執行，且正接聽著 **PORTS** 資料行中所指定的通訊埠。如果 SQL Server 容器的 **STATUS** 資料行顯示為**Exited**，請參閱[設定指南的疑難排解一節](sql-server-linux-configure-docker.md#troubleshooting)。
+1. 如果**狀態**資料行會顯示狀態為**向上**、 然後 SQL Server 正在執行中容器和接聽的通訊埠中指定**連接埠**資料行。 如果**狀態**資料行的 SQL Server 容器節目**Exited**，請參閱[疑難排解 > 一節的設定指南](sql-server-linux-configure-docker.md#troubleshooting)。
 
 `-h` (主機名稱) 參數也相當實用，但為求簡明因此未在本教學課程中使用。 此參數可將容器的內部名稱變更為自訂值。 這是您在下列 Transact-SQL 查詢中會看到的傳回名稱：
 

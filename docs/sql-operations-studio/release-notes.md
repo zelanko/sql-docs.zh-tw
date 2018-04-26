@@ -1,9 +1,9 @@
-﻿---
-title: "Microsoft SQL Operations Studio （預覽） 版本資訊 |Microsoft 文件"
-description: "Microsoft SQL Operations Studio （預覽） 版本資訊"
+---
+title: Microsoft SQL Operations Studio (preview) 版本資訊 |Microsoft 文件
+description: Microsoft SQL Operations Studio (preview) 版本資訊
 ms.custom: tools|sos
-ms.date: 03/28/2018
-ms.prod: sql-non-specified
+ms.date: 04/25/2018
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,31 +14,80 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: 233572c87f785e10a0cde4ac78a7c8ee75c5a801
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (preview) 版本資訊
 
-**[下載 2 月公開預覽](download.md)**
+**[下載公用年 4 月預覽](download.md)**
 
-## <a name="february-2018-february-public-preview"></a> 2018 年 2 月版 （ 2 月公開預覽）
+
+## <a name="april-2018-april-public-preview"></a>年 4 月 2018 （年 4 月公用預覽）
+
+發行日期： 2018 年 4 月 25，  
+版本： 0.28.6
+
+*年 4 月公用預覽*包含 bug 修正和增強功能。 
+
+- SQL 代理程式預覽擴充功能的增強功能。
+- 改善大型和受保護的檔案來儲存受保護的系統管理員的支援和 > 在 SQL 作業 Studio 256 M 檔案。
+- 若要同時使用多個開啟的終端機分割整合式的終端機。
+- 降低的安裝磁碟上檔案計數呎列印更快的安裝和啟動時間。
+- 繼續以修正 GitHub 問題：
+   - 修正[發出 37](https://github.com/Microsoft/sqlopsstudio/issues/37)： 當圖表檢視器擲回錯誤時，就會發生未預期的行為。
+   - 修正[發出 462](https://github.com/Microsoft/sqlopsstudio/issues/462)： 功能要求： 根據預設展開伺服器群組的選項。
+   - 修正[發出 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense-'update' 命令的錯誤提供建議。
+   - 修正[發出 967](https://github.com/Microsoft/sqlopsstudio/issues/967)： 預期的查詢計劃當結果方格中選取 XML 顯示計畫。
+   - 修正[發出 1023年](https://github.com/Microsoft/sqlopsstudio/issues/1023)： 從 flyfishingdba 新增 ms_foreachdb 呼叫的方括號。
+   - 修正[發出 1048年](https://github.com/Microsoft/sqlopsstudio/issues/1048)： 登入前 SSL/TLS 信號交換時發生錯誤。
+   - 修正[發出 1050年](https://github.com/Microsoft/sqlopsstudio/issues/1050)： 清除 insights 檢視之前顯示錯誤。
+   - 修正[發出 1057年](https://github.com/Microsoft/sqlopsstudio/issues/1057)： 還原和檔案總管 widget 中的新查詢動作已中斷。
+   - 修正[發出 1068年](https://github.com/Microsoft/sqlopsstudio/issues/1068)： 儀表板輸出 windows 快顯上使用 Azure SQL Database 的錯誤訊息。
+   - 修正[發出 1069年](https://github.com/Microsoft/sqlopsstudio/issues/1069)： 連接對話方塊顯示時最初顯示的所需的伺服器錯誤。
+   - 修正[發出 1070年](https://github.com/Microsoft/sqlopsstudio/issues/1070)： 伺服器群組現在需要按兩下以展開。
+   - 修正[發出 1072年](https://github.com/Microsoft/sqlopsstudio/issues/1072)： 選取控制項的背景是半透明效果。
+   - 修正[發出 1115年](https://github.com/Microsoft/sqlopsstudio/issues/1115)： 修正所有的高對比 SQL 作業 Studio 中的協助工具問題。
+   - 修正[發出 1101年](https://github.com/Microsoft/sqlopsstudio/issues/1101)： 擴充功能無法升級 」 下載手動"連結會移至錯誤的位置。
+   - 修正[發出 1103年](https://github.com/Microsoft/sqlopsstudio/issues/1103)： 無法在 [首頁] 索引標籤上運作的 V 捲軸。
+   - 修正[發出 1104年](https://github.com/Microsoft/sqlopsstudio/issues/1104): SQL 延伸模組索引標籤停止運作。
+
+
+對於年 4 月公開預覽的重要反白顯示為 Visual Studio 程式碼 1.21 平台來源的程式碼重新整理。 這會帶中的多個更新的核心編輯器和工作臺從先前的 1.19 同步處理點。 一些範例包括下列各項：
+
+- [新的通知 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) -輕鬆地管理與檢閱 SQL 作業 Studio 通知。
+- [整合終端機分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)-一次使用多個開啟的終端機。
+- [儲存大型和受保護的檔案](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges)-儲存受保護的系統管理員和 > 在 SQL 作業 Studio 256 M 檔案。
+- [改善大型檔案支援](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements)-大型檔案的文字緩衝區最佳化。
+- [改善的設定搜尋](https://code.visualstudio.com/updates/v1_20#_settings-search)-輕鬆地找出使用自然語言搜尋正確的設定。
+- [全域程式碼片段](https://code.visualstudio.com/updates/v1_20#_global-snippets)層建立程式碼片段，您可以跨所有檔案類型使用。
+- [總管 中複選](https://code.visualstudio.com/updates/v1_20#_multi-select-in-the-explorer)-多個檔案上一次執行的動作。
+- [錯誤和警告，在 [總管]](https://code.visualstudio.com/updates/v1_20#_error-indicators-in-the-explorer) -可以快速地瀏覽至您的程式碼基底中的錯誤。
+- [拖曳和卸除、 複製和貼上整個 windows](https://code.visualstudio.com/updates/v1_21#_better-drag-and-drop-support) -在開啟的 SQL 作業 Studio 視窗之間移動檔案。
+- [Git 子模組支援](https://code.visualstudio.com/updates/v1_20#_git-submodules)-巢狀的 Git 儲存機制上的執行 Git 作業。
+- [終端機螢幕讀取器支援](https://code.visualstudio.com/updates/v1_20#_screen-reader-support)-整合式終端機現在有 「 螢幕的讀取器最佳化 」 模式。
+- [置中的編輯器配置](https://code.visualstudio.com/updates/v1_21#_centered-editor-layout)-將您的程式碼檢視螢幕面積最大化。
+- [水平的搜尋結果 （預覽）](https://code.visualstudio.com/updates/v1_21#_horizontal-search) -您可以在水平台中現在檢視搜尋結果。
+
+如需詳細資訊，簽出[Visual Studio 程式碼年 2 月版本資訊](https://code.visualstudio.com/updates/v1_21)，而[Visual Studio 程式碼年 1 月版本資訊](https://code.visualstudio.com/updates/v1_20)。
+
+如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)。
+
+## <a name="march-2018-march-public-preview"></a>年 3 月 2018 （年 3 月公開預覽）
 
 發行日期： 2018 年 3 月 28，  
-version: 0.27.3
+版本： 0.27.3
 
 *年 3 月公用預覽*繼續處理最上層的 GitHub 問題而重點在於提升擴充性故事。 特別啟用擴充功能管理員，改善儀表板管理，並提供 SQL 代理程式和 insights 擴充功能。 此版本包含下列增強功能：
 
 - 增強的支援索引標籤式的深入資訊和組態窗格的儀表板擴充性模型。
    - 擴充管理員可讓簡單擷取的延伸模組。
    - 儀表板延伸從 sp_whoisactive [whoisactive.com](http://www.whoisactive.com)。
-   - 如需詳細資訊，請參閱[擴充功能的 SQL Operations Studio](extensions.md)。
+   - 如需詳細資訊，請參閱[擴充功能的 SQL 作業 Studio](extensions.md)。
 - 請加入更多[連線和物件總管 中的擴充性 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API)管理。
 - 若要修正重要影響的客戶繼續[GitHub 問題](https://github.com/Microsoft/sqlopsstudio/issues)。
-
-如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)。
 
 
 ## <a name="february-2018-february-public-preview"></a>2018 年 2 月版 （ 2 月公開預覽）
@@ -65,12 +114,12 @@ version: 0.27.3
 - 更新拾取幾項查詢計劃檢視器改良 JustinPealing/html-查詢計劃元件。
 
 
-## <a name="january-2018-january-public-preview"></a> 2018 年 1 月 （ 1 月公開預覽）
+## <a name="january-2018-january-public-preview"></a>2018 年 1 月 （ 1 月公開預覽）
 
-發行日期： 2018 年 1 月 17 日，   
+發行日期： 2018 年 1 月 17 日，  
 版本： 0.25.4
 
-* 1 月公用預覽*含有一些功能建議和高優先順序的 bug 修正。 此版本包含下列增強功能：
+*1 月公用預覽*含有一些功能建議和高優先順序的 bug 修正。 此版本包含下列增強功能：
 
 - 在 [連接] 對話方塊中可使用儲存的伺服器連接。
 - 啟用熱結束。 根據預設，若要啟用，請參閱熱結束已關閉[熱結束設定](settings.md#hot-exit)。
@@ -84,10 +133,10 @@ version: 0.27.3
 
 ## <a name="december-2017-december-public-preview"></a>2017 年 12 月（12 月公開預覽）
 
-發行日期： 2017 年 12 月 19 日，  
+發行日期： 2017 年 12 月 19，  
 版本： 0.24.1
 
-* 12 月公用預覽*跨所有功能區域，以及下列增強功能包括數個 bug 修正：
+*年 12 月公用預覽*跨所有功能區域，以及下列增強功能包括數個 bug 修正：
 
 - 建立防火牆規則 對話方塊現在是可以協助您連接到 Azure SQL Database 和 Azure SQL 資料倉儲。
 - 加入的 Windows 安裝程式，以及 Linux DEB 和 RPM 安裝封裝。
@@ -101,7 +150,7 @@ version: 0.27.3
 
 ## <a name="november-2017"></a>2017 年 11 月
 
-發行日期： 2017 年 11 月 15 日，  
+發行日期： 2017 年 11 月 15 日，  
 版本： 0.23.6
 
 - 初始版本的[!INCLUDE[name-sos](../includes/name-sos-short.md)]。

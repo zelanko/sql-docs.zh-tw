@@ -1,7 +1,7 @@
 ---
 title: 安裝和設定 WideWorldImporters 範例資料庫 SQL |Microsoft 文件
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 3b2a1c4f6fc6045a25a86ea8d49290fafbc29b57
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 04fe03ecffa717de838642006764c9b82f2341d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-and-configuration"></a>安裝和組態
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Wide World Importers OLTP 資料庫安裝和組態指示。
 
 1. 開啟 SQL Server Management Studio 並連接到目標 SQL Server 執行個體。
 2. 以滑鼠右鍵按一下**資料庫**節點，然後選取**Restore Database**。
-3. 選取**裝置**和按一下按鈕**...**
+3. 選取**裝置**和按一下按鈕 **...**
 4. 在對話方塊中**選取備份裝置**，按一下 **新增**、 瀏覽至伺服器的檔案系統中的資料庫備份，以及選取的備份。 按一下 **[確定]**。
 5. 視需要變更資料的目標位置，然後在記錄檔，**檔案**窗格。 請注意，則最佳做法是將資料和記錄檔，在不同的磁碟機上。
 6. 按一下 **[確定]**。 這會起始資料庫還原。 完成之後，您必須安裝在您的 SQL Server 執行個體上的 WideWorldImporters 的資料庫。
