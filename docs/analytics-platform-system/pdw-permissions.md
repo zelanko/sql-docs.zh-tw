@@ -1,29 +1,22 @@
 ---
-title: PDW 權限 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 平行資料倉儲中的權限 |Microsoft 文件
+description: 本文說明的需求和選項管理平行處理資料倉儲的資料庫權限。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: 23
-ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16ed81d3349cd1e641a66a95d9993e2a86ca4098
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-permissions"></a>PDW 權限
-本主題說明的需求和選項，來管理 SQL Server PDW 的資料庫權限。  
+# <a name="managing-permissions-in-parallel-data-warehouse"></a>平行處理資料倉儲的管理權限
+本文說明的需求和選項，來管理 SQL Server PDW 的資料庫權限。  
   
 ## <a name="BackupRestoreBasics"></a>資料庫引擎權限的基本概念  
 伺服器層級透過登入，以及資料庫使用者與使用者定義資料庫角色的資料庫層級管理 SQL Server PDW 上的資料庫引擎權限。  
@@ -68,7 +61,7 @@ ms.lasthandoff: 04/06/2018
   
 -   當登入由 using **CREATE LOGIN**陳述式中，登入會收到**CONNECT SQL**允許登入的權限連接到 SQL Server PDW。  
   
--   使用建立資料庫使用者時**CREATE USER**陳述式中，使用者會收到 **CONNECT ON DATABASE:: * * * < 資料庫名稱 >*權限，允許連接至該資料庫登入為使用者。  
+-   使用建立資料庫使用者時**CREATE USER**陳述式中，使用者會收到 **CONNECT ON DATABASE:: * * * < 資料庫名稱 >* 權限，允許連接至該資料庫登入為使用者。  
   
 -   所有的主體，包括公用角色中，依預設有沒有明確或隱含的權限，因為隱含權限繼承自明確權限。 因此，當沒有明確的權限時，可以也沒有隱含的權限。  
   
