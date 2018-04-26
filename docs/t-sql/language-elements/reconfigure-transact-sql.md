@@ -1,16 +1,16 @@
 ---
 title: RECONFIGURE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RECONFIGURE
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - RECONFIGURE
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-caps.latest.revision: 
+caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 432e5157969a10f36273db3bbd8990fa9e332b68
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a2aa82bf7e34fb4ed7a2dcc083055d49e64c14a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,25 +52,25 @@ RECONFIGURE [ WITH OVERRIDE ]
     
 ## <a name="arguments"></a>引數    
  RECONFIGURE    
- 指定如果組態設定不需要停止再重新啟動伺服器，便應該更新目前在執行的值。 另外，RECONFIGURE 也會檢查新的設定值中是否存有無效值 (例如，不存在於 **syscharsets** 的排列順序值) 或非建議值。 當使用不需要停止再重新啟動伺服器的設定選項時，在指定 RECONFIGURE 之後，設定選項目前在執行的值和目前已設定的值應該相同。    
+ 指定如果組態設定不需要停止再重新啟動伺服器，便應該更新目前在執行的值。 另外，RECONFIGURE 也會檢查新的設定值中是否存有無效值 (例如，不存在於 **syscharsets** 的排列順序值) 或非建議值。 當使用不需要停止再重新啟動伺服器的組態選項時，在指定 RECONFIGURE 之後，組態選項目前在執行的值和目前已設定的值應該相同。    
     
  WITH OVERRIDE    
  停用 **recovery interval** 進階設定選項的設定值檢查 (用以找出無效值或非建議值)。    
     
  幾乎所有設定選項都可使用 WITH OVERRIDE 選項重新設定，不過，仍要避免一些嚴重錯誤。 例如，您無法將 **min server memory** 設定選項的值設為大於 **max server memory** 設定選項所指定的值。
       
-## <a name="remarks"></a>備註    
+## <a name="remarks"></a>Remarks    
  **sp_configure** 不接受針對各個設定選項，使用超出所記載之有效範圍的新設定選項值。    
     
  在明確或隱含的交易中，不允許使用 RECONFIGURE。 當您同時重新設定數個選項時，若有任何重新設定作業失敗，則所有重新設定作業都不會生效。    
     
  重新設定 Resource Governor 時，請參閱 [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md) 的 RECONFIGURE 選項。    
     
-## <a name="permissions"></a>權限    
+## <a name="permissions"></a>Permissions    
  RECONFIGURE 權限預設給 ALTER SETTINGS 權限的被授與者。 **sysadmin** 和 **serveradmin** 固定伺服器角色會隱含地持有這個權限。    
     
 ## <a name="examples"></a>範例    
- 下列範例將 `recovery interval` 設定選項的上限設為 `75` 分鐘，並利用 `RECONFIGURE WITH OVERRIDE` 來安裝它。 不建議您使用超出 60 分鐘的復原間隔，依預設，不會接受這個值。 不過，由於指定了 `WITH OVERRIDE` 選項，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會檢查指定的值 (`90`) 是否為 `recovery interval` 設定選項的有效值。    
+ 下列範例將 `recovery interval` 組態選項的上限設為 `75` 分鐘，並利用 `RECONFIGURE WITH OVERRIDE` 來安裝它。 不建議您使用超出 60 分鐘的復原間隔，依預設，不會接受這個值。 不過，由於指定了 `WITH OVERRIDE` 選項，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會檢查指定的值 (`90`) 是否為 `recovery interval` 組態選項的有效值。    
     
 ```    
 EXEC sp_configure 'recovery interval', 75'    
@@ -79,7 +79,7 @@ GO
 ```    
     
 ## <a name="see-also"></a>另請參閱    
- [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
+ [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
     
   

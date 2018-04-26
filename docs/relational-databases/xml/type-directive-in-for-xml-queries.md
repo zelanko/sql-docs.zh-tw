@@ -1,31 +1,31 @@
 ---
-title: "FOR XML 查詢中的 TYPE 指示詞 | Microsoft 文件"
-ms.custom: 
+title: FOR XML 查詢中的 TYPE 指示詞 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 20d3894f0f2eecbf491e20f10b0258686848b401
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2552660cf0500a5274095765f0540e9ddcee6701
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  在 `value()` 方法中的 XQuery 路徑運算式會擷取客戶連絡人之 `BusinessEntityID` 為 `1` 的第一個客戶電話號碼。  
   
 > [!NOTE]  
->  由於未指定 TYPE 指示詞，因此 FOR XML 查詢結果會以 **nvarchar(max)**類型傳回。  
+>  由於未指定 TYPE 指示詞，因此 FOR XML 查詢結果會以 **nvarchar(max)** 類型傳回。  
   
 ### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>使用 INSERT、UPDATE 及 DELETE 中的 FOR XML 查詢結果 (Transact-SQL DML)  
  下列範例示範如何在「資料管理語言」(DML) 陳述式中使用 FOR XML 查詢。 在下列範例中， `FOR XML` 會傳回 **xml** 類型的執行個體。 `INSERT` 陳述式會將此 XML 插入資料表中。  

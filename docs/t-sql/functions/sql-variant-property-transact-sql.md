@@ -1,16 +1,16 @@
 ---
 title: SQL_VARIANT_PROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL_VARIANT_PROPERTY_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - SQL_VARIANT_PROPERTY function
 - sql_variant data type
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5947528f4e8959de1b8b4ee3679d4e3e058476d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d9220a64ada2045691b631935aca5593ef913f64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +51,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
  為 **sql_variant** 類型的運算式。  
   
  *property*  
- 包含要為其提供資訊的 **sql_variant** 屬性名稱。 *property* 為 **varchar(**128**)**，可以是下列值中的任何一個：  
+ 包含要為其提供資訊的 **sql_variant** 屬性名稱。 *property* 為 **varchar(** 128 **)**，可以是下列值中的任何一個：  
   
 |ReplTest1|描述|傳回的 sql_variant 的基底類型|  
 |-----------|-----------------|----------------------------------------|  
@@ -59,7 +60,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
 |**小數位數**|數值基底資料型別小數點右側的位數：<br /><br /> **decimal** (p,s) 和 **numeric** (p,s) = s<br /><br /> **money** 和 **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> 其他所有類型 = 0|**int**<br /><br /> NULL = 輸入無效。|  
 |**TotalBytes**|存放值的中繼資料和資料所需要的位元組數。 在檢查 **sql_variant** 資料行中資料的最大值一端時，這項資訊非常有用。 如果值大於 900，建立索引會失敗。|**int**<br /><br /> NULL = 輸入無效。|  
 |**定序**|代表特定 **sql_variant** 值的定序。|**sysname**<br /><br /> NULL = 輸入無效。|  
-|**MaxLength**|最大資料類型長度 (以位元組為單位)。 例如，**nvarchar(**50**)** 的 **MaxLength** 為 100，**int** 的 **MaxLength** 為 4。|**int**<br /><br /> NULL = 輸入無效。|  
+|**MaxLength**|最大資料類型長度 (以位元組為單位)。 例如，**nvarchar(** 50 **)** 的 **MaxLength** 為 100，**int** 的 **MaxLength** 為 4。|**int**<br /><br /> NULL = 輸入無效。|  
   
 ## <a name="return-types"></a>傳回類型  
  **sql_variant**  

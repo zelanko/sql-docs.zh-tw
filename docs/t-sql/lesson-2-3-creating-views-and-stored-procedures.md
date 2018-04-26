@@ -1,35 +1,37 @@
 ---
-title: "建立檢視和預存程序 | Microsoft Docs"
-ms.custom: 
+title: 建立檢視和預存程序 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - creating views and stored procedures
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b246171441ba9eedb213fd2baef55d8dc7668d26
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e817319391983356c52b63f76b99e1228aa69f45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-3---creating-views-and-stored-procedures"></a>課程 2-3 - 建立檢視和預存程序
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 現在 Mary 能存取 **TestData** 資料庫後，您或許想要建立一些資料庫物件 (例如檢視和預存程序)，然後授與 Mary 存取這些物件的權限。 檢視是預存的 SELECT 陳述式，而預存程序是一個或多個批次執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+既然 Mary 現在能存取 **TestData** 資料庫，您或許想要建立一些資料庫物件，如檢視和預存程序，然後授與 Mary 存取這些物件。 檢視是預存的 SELECT 陳述式，而預存程序是一個或多個批次執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。  
   
 檢視的查詢方式就跟資料表一樣，而且不接受參數。 預存程序就比檢視還要複雜。 預存程序能有輸出和輸入參數，而且還能包含控制程式碼流程的陳述式，如 IF 和 WHILE 陳述式。 對於所有在資料庫中的重複動作，使用預存程序是一個不錯的程式設計方法。  
   
