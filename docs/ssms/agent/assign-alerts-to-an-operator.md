@@ -2,7 +2,7 @@
 title: 指派警示給操作員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 09fb35ceb8e43d55aae7dfec125632edf90f9642
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 20f1be2ba3b9c26a78e5700bb0414ee00949a2ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="assign-alerts-to-an-operator"></a>指派警示給操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-assign-alerts-to-an-operator"></a>若要指派警示給操作員  
   
-1.  在 **[物件總管]**中，按一下加號展開伺服器，此伺服器包含您要指派警示的操作員。  
+1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含您要指派警示的操作員。  
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  在 [<操作員名稱> 屬性] 對話方塊中，選取 [選取頁面] 底下的 [通知]。  
   
-6.  在 **[檢視傳送給這名使用者的通知來源]**下選取 **[警示]** ，以檢視傳送給這名操作員的警示清單；或選取 **[作業]** ，以檢視會傳送通知給這名操作員的作業清單。 選取下列一個或多個核取方塊，視需要定義每個通知的通知方法：[電子郵件]、[呼叫器] 或 [Net send]。  
+6.  在 **[檢視傳送給這名使用者的通知來源]** 下選取 **[警示]** ，以檢視傳送給這名操作員的警示清單；或選取 **[作業]** ，以檢視會傳送通知給這名操作員的作業清單。 選取下列一個或多個核取方塊，視需要定義每個通知的通知方法：[電子郵件]、[呼叫器] 或 [Net send]。  
   
 7.  完成後，請按一下 **[確定]**。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-assign-alerts-to-an-operator"></a>若要指派警示給操作員  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

@@ -2,7 +2,7 @@
 title: Visual Database Tools F1 說明 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5c1404c4f5dceb9ca5ef5b6a9be5c8a64a24dd7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ae151529619af34a8d801ef0efa1f82818e4d977
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools F1 說明
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這些主題討論 Visual Database Tools 項目之對話方塊和屬性視窗 (例如 [資料表屬性] 視窗以及 [資料行屬性] 索引標籤) 中的命令和選項。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+這些主題討論 Visual Database Tools 元素之對話方塊和屬性視窗 (例如 [資料表屬性] 視窗以及 [資料行屬性] 索引標籤) 中的命令和選項。  
   
 若要存取對話方塊主題，請在對話方塊開啟並取得焦點時按 F1。 若要存取屬性視窗主題，請在 [屬性] 視窗中按一下，再按 F1。  
   

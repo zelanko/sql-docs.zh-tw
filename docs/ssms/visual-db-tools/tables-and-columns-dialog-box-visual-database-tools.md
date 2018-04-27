@@ -2,7 +2,7 @@
 title: 資料表和資料行對話方塊 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0be03d94210fc596bb0902ea130af731b1dadf92
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 09b1256e39fa2b2fa464391ecb993a7409ff78f3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>資料表和資料行對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此對話方塊將一個資料表中的主索引鍵對應至另一個資料表中的外部索引鍵。 若要存取此對話方塊，請從 [資料表設計工具] 功能表按一下 [關聯性]。 在 [外部索引鍵關聯性] 對話方塊中，按一下 [資料表及資料行規格] 欄位，然後按一下屬性右邊的省略符號 (**…**)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用此對話方塊將一個資料表中的主索引鍵對應至另一個資料表中的外部索引鍵。 若要存取此對話方塊，請從 [資料表設計工具] 功能表按一下 [關聯性]。 在 [外部索引鍵關聯性] 對話方塊中，按一下 [資料表及資料行規格] 欄位，然後按一下屬性右邊的省略符號 (**…**)。  
   
 > [!NOTE]  
 > 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  

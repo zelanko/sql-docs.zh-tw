@@ -1,15 +1,16 @@
 ---
-title: "SQL 編輯器 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: SQL 編輯器 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdt.sqleditor
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], SQL Editor
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 94b11dc5e05e50c0f0982d2d5c66a61f63594c6c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 008839bdbed40f179687d1adea3876cce465bbbb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 編輯器 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 SQL 編輯器可編輯現有的預存程序、函式、觸發程序和 SQL 指令碼。 在開啟上述任一物件時，此視窗會開啟。 若要建立針對資料來源執行的新 SQL 陳述式，請使用查詢設計工具的 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用 [SQL 編輯器] 可編輯現有的預存程序、函數、觸發程序和 SQL 指令碼。 在開啟上述任一物件時，此視窗會開啟。 若要建立針對資料來源執行的新 SQL 陳述式，請使用查詢設計工具的 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 。  
   
 SQL 編輯器提供許多實用的 SQL 文字編輯功能，包括：  
   

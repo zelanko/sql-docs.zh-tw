@@ -1,15 +1,16 @@
 ---
-title: "物件總管詳細資料窗格 | Microsoft Docs"
-ms.custom: 
+title: 物件總管詳細資料窗格 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.summary.general.f1
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8798c67cc730cef471e28de51ae27213bc04565d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 6bebbdf9c7827c135321b38caff9512d5efcea25
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-explorer-details-pane"></a>物件總管詳細資料窗格
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [物件總管詳細資料] 是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的元件，它會提供伺服器中所有物件的表格式檢視，並且呈現可管理這些物件的使用者介面。 物件總管的功能會隨著伺服器的類型而稍有不同，不過，它通常會包括資料庫的開發功能，以及所有伺服器類型的管理功能。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[物件總管詳細資料] 是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的元件，它會提供伺服器中所有物件的表格式檢視，並且呈現可管理這些物件的使用者介面。 物件總管的功能會隨著伺服器的類型而稍有不同，不過，它通常會包括資料庫的開發功能，以及所有伺服器類型的管理功能。  
   
 根據預設，[物件總管詳細資料] 窗格會顯示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中。 如果您看不到物件總管，請在 [檢視] 功能表上，按一下 [物件總管詳細資料] 或按下 **F7**。  
   

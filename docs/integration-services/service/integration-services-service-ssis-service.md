@@ -1,16 +1,16 @@
 ---
-title: "Integration Services 服務 (SSIS 服務) | Microsoft Docs"
-ms.custom: 
+title: Integration Services 服務 (SSIS 服務) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssiseditserverregistration.connectionproperties.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 06b632de9ef477e31de110f98a8fca4295144bb9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c3c2ac5cb5ddc17e7bbec10904b86d6af3c30e0b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
   本節中的主題討論 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務 (用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務)。 若要建立、儲存及執行 Integration Services 封裝，則不需要這項服務。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支援 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務能與舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]回溯相容。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>使用 SQL Server 組態管理員來設定 Integration Services 服務的屬性  
   
-1.  在 **[開始]** 功能表上，依序指向 **[所有程式]**、 **[Microsoft SQL Server]**和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。  
+1.  在 **[開始]** 功能表上，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。  
   
 2.  在 [SQL Server 組態管理員] 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]，以滑鼠右鍵按一下 [SQL Server Integration Services]，然後按一下 [屬性]。  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>使用服務來設定 Integration Services 服務的屬性  
   
-1.  在 **[控制台]**中，如果您使用「一般檢視」，請按一下 **[系統管理工具]**，如果您使用「類別檢視」，請按一下 **[效能及維護]** ，然後按一下 **[系統管理工具]**。  
+1.  在 **[控制台]** 中，如果您使用「一般檢視」，請按一下 **[系統管理工具]**，如果您使用「類別檢視」，請按一下 **[效能及維護]** ，然後按一下 **[系統管理工具]**。  
   
 2.  按一下 **[服務]**。  
   

@@ -2,7 +2,7 @@
 title: 設定作業步驟成功或失敗的流程 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 237a790dd637debc99054ca449a199b6ced7f615
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fd70b5e434285864ae705fb1c5f8e8544d2d7bc9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>設定作業步驟成功或失敗的流程
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>若要設定作業步驟成功或失敗的流程  
   
-1.  在 **[物件總管]**中，展開 **[SQL Server Agent]**，然後展開 **[作業]**。  
+1.  在 **[物件總管]** 中，展開 **[SQL Server Agent]**，然後展開 **[作業]**。  
   
 2.  以滑鼠右鍵按一下要刪除的作業，然後按一下 [屬性]。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 04/16/2018
   
     -   在 **[輸出檔]** 方塊中，輸入要寫入指令碼輸出的輸出檔名稱。 根據預設，每次執行作業步驟時都會覆寫此檔案。 如果您不想要覆寫輸出檔，請選取 **[將輸出附加至現有檔案]**。  
   
-    -   若要將作業步驟記錄至資料庫資料表，請選取 **[記錄至資料表]** 。 根據預設，每次執行作業步驟時都會覆寫此資料表內容。 如果您不想要覆寫資料表內容，請選取 **[將輸出附加至資料表的現有項目]**。 作業步驟執行之後，您可以按一下 **[檢視]**以檢視這個資料表的內容。  
+    -   若要將作業步驟記錄至資料庫資料表，請選取 **[記錄至資料表]** 。 根據預設，每次執行作業步驟時都會覆寫此資料表內容。 如果您不想要覆寫資料表內容，請選取 **[將輸出附加至資料表的現有項目]**。 作業步驟執行之後，您可以按一下 **[檢視]** 以檢視這個資料表的內容。  
   
     -   如果您希望步驟的記錄中包含輸出，請選取 **[包含步驟輸出於記錄中]** 。 只有無錯誤時，才會顯示輸出。 另外，輸出可能被截斷。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>若要設定作業步驟成功或失敗的流程  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

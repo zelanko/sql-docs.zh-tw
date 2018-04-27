@@ -1,15 +1,16 @@
 ---
-title: "更新結果的規則 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 更新結果的規則 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - View Designer, Results pane
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ab1925f265eb27a6c0efd1b55b4770e4be7cf3d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c936e25b0382e48047e1e0497c47dcc13389c202
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新結果的規格 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 大多數的情形下，您可以更新[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)所顯示的結果集。 不過也有些情形無法更新。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+大多數的情形下，您可以更新 [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)所顯示的結果集。 不過也有些情形無法更新。  
   
 一般說來，為了更新結果， [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 必須要有足夠的資訊才能唯一識別資料表中的資料列。 一個例子是輸出清單中的查詢包含主索引鍵。 此外，也必須要有足夠的使用權限可更新資料庫。  
   

@@ -1,15 +1,15 @@
 ---
-title: "新增自訂工作中的偵錯支援 | Microsoft Docs"
-ms.custom: 
+title: 新增自訂工作中的偵錯支援 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f8aa78d097e2e0810c62d45189ca6959b194504
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4da70a6878c027d9a8946b4fad47877f562a1d04
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>新增自訂工作中的偵錯支援
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎允許在執行期間，使用中斷點暫停封裝、工作和其他類型的容器。 使用中斷點可讓您檢閱和修正妨礙應用程式或工作正確執行的錯誤。 中斷點架構可讓用戶端在定義的執行點暫停工作處理，以評估封裝中物件的執行階段值。  

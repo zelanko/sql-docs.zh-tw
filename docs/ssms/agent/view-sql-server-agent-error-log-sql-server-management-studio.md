@@ -2,7 +2,7 @@
 title: 檢視 SQL Server Agent 錯誤記錄檔 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8e1eb95043170578901bb3860db87f2ed1ab8997
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cccff0d92ffc1edfc7ba15a04eb0bb93ec531649
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-view-the-includessnoversionincludesssnoversionmdmd-agent-error-log"></a>若要檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 錯誤記錄檔  
   
-1.  在 **[物件總管]**中，按一下加號展開伺服器，此伺服器包含要檢視的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 錯誤記錄檔。  
+1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含要檢視的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 錯誤記錄檔。  
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   

@@ -1,30 +1,30 @@
 ---
-title: "步驟 1：建立新的 Integration Services 專案 | Microsoft Docs"
-ms.custom: 
+title: 步驟 1：建立新的 Integration Services 專案 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 771c956d5e33dfc6b91ff70acfc387244d2513d6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: aba53d99a7b7bbf299b5487cc6d6e31d8497d2de
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>課程 1-1 - 建立新的 Integration Services 專案
 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝的第一步就是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這個專案包含物件的範本 — 資料來源、資料來源檢視和封裝 — 您在資料轉換方案中會用到它們。  
@@ -38,11 +38,11 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-create-a-new-integration-services-project"></a>若要建立新的 Integration Services 專案  
   
-1.  在 **[開始]** 功能表上，依序指向 **[所有程式]**和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Data Tools]**。  
+1.  在 **[開始]** 功能表上，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Data Tools]**。  
   
 2.  在 **[檔案]** 功能表上，指向 **[新增]**，然後按一下 **[專案]** 來建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-3.  在 **[新增專案]** 對話方塊中，展開 **[已安裝的範本]** 底下的 **[商業智慧]**節點，然後選取 **[範本]** 窗格中的 **[Integration Services 專案]** 。  
+3.  在 **[新增專案]** 對話方塊中，展開 **[已安裝的範本]** 底下的 **[商業智慧]** 節點，然後選取 **[範本]** 窗格中的 **[Integration Services 專案]** 。  
   
 4.  在 **[名稱]** 方塊中，將預設名稱變更為 **SSIS 教學課程**。 您可以選擇性地清除 **[建立方案的目錄]** 核取方塊。  
   

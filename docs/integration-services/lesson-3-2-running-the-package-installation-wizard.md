@@ -1,30 +1,30 @@
 ---
-title: "步驟 2：執行套件安裝精靈 | Microsoft Docs"
-ms.custom: 
+title: 步驟 2：執行套件安裝精靈 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 953c78b59eeaf059a828964f26681cbbf28b89a7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 39d8b83d8cac317648cbc1d1ec24635c399432f9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>課程 3-2 - 執行套件安裝精靈
 在這項工作中，您會執行「封裝安裝精靈」，將「部署教學課程」專案中的封裝部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體上。 只有封裝可以安裝在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的 sysssispackages 資料表中，部署配套所包含的支援檔案則會部署到檔案系統中。  

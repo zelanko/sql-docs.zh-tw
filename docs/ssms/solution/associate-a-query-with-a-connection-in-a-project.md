@@ -1,15 +1,16 @@
 ---
-title: "在專案中建立查詢與連接的關聯性 | Microsoft Docs"
-ms.custom: 
+title: 在專案中建立查詢與連接的關聯性 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connections [SQL Server Management Studio], query associations
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9fa0a1e4dd4528d34b6fd6c7b89cd74397c6287
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fa45e4067b5801f47865d299b7c9b02e7bb1b9a6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>在專案中建立查詢與連接的關聯性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果建立不含連線的查詢，或在專案之間移動查詢，這項查詢都不會與目前專案中的連線建立關聯。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+如果建立不含連接的查詢，或在專案之間移動查詢，這項查詢都不會與目前專案中的連接相關聯。  
   
 ### <a name="to-associate-a-query-with-a-connection-in-a-project"></a>若要建立查詢與專案中連接的關聯性  
   

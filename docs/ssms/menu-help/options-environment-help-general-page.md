@@ -2,7 +2,7 @@
 title: 選項 (環境 - 說明 - 一般頁面) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5b9be182f2af8ab60469591d63fb847da20f244
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: dc0345c6f41952682df010ed9f643a21e8c49829
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-environment---help---general-page"></a>選項 (環境 - 說明 - 一般頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [選項] 對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中顯示主題，或是在不同的視窗中顯示。 若要存取此對話方塊，請按一下 [工具] 功能表上的 [選項]，展開 [環境] 節點中的 [說明]，然後按一下 [一般]。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用 [選項] 對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中顯示主題，或是在不同的視窗中顯示。 若要存取此對話方塊，請按一下 [工具] 功能表上的 [選項]，展開 [環境] 節點中的 [說明]，然後按一下 [一般]。  
   
 > [!NOTE]  
 > 一直到重新啟動環境之後，在此頁面上對選項所做的變更才會生效。  

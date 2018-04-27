@@ -2,7 +2,7 @@
 title: 選項 (設計工具 - 資料表和資料庫設計工具頁面) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 391a1d60a36b479ae8ead0e6ba2679a8c8a339ff
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c65543f8babf73764a1eca5eba5e61690e0cd910
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>選項 (設計工具 - 資料表和資料庫設計工具頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此頁面來決定設計工具的預設行為。 若要存取設定，請在 [工具] 功能表上按一下 [選項]、展開 [設計工具] 資料夾，然後按一下 [資料表設計工具]。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具] 功能表上按一下 [選項]、展開 [設計工具] 資料夾，然後按一下 [資料表設計工具]。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **覆寫資料表設計師更新的連接字串逾時值**  

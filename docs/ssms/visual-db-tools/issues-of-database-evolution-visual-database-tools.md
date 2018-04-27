@@ -1,33 +1,35 @@
 ---
-title: "資料庫演進問題 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 資料庫演進問題 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [SQL Server], multuser database changes
 - database evolution [SQL Server]
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 045f97b1914339665b2f507ee3f04bd8a6346918
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 91b191ae088eca7f79b3b66d8075a5fdc59f7e5f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>資料庫演進問題 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果您變更了某部署資料庫的結構，您必須特別注意您的變更是否與現有資料和資料庫結構相容。 進行下列修改時您可能必須採取特殊步驟：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+如果您變更了某部署資料庫的結構，您必須特別注意您的變更是否與現有資料和資料庫結構相容。 進行下列修改時您可能必須採取特殊步驟：  
   
 -   **新增條件約束**：如果您新增某樣條件約束，該資料庫可能已含有無法滿足該條件約束的資料。 當您儲存新的條件約束時，[儲存後告知對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md) 將通知您資料庫伺服器無法建立該條件約束。 若要強制資料庫接受新的條件約束，您可以清除 [建立時立即檢查現有資料] 核取方塊。  
   

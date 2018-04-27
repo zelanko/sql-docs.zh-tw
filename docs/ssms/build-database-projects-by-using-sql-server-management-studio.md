@@ -1,15 +1,16 @@
 ---
-title: "使用 SQL Server Management Studio 建置資料庫專案 | Microsoft Docs"
-ms.custom: 
+title: 使用 SQL Server Management Studio 建置資料庫專案 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scripts [SQL Server], database projects
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], about projects
 - projects [SQL Server Management Studio]
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6675e06a7045b201af5259d2324540ea200fd338
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 151b8fa37cf8a2b8ef15880226193e9919fed8a3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 建置資料庫專案
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 資料庫指令碼專案是一組有組織的指令碼、連線資訊及範本，而且全都與資料庫或資料庫某一部分建立關聯。 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 提供 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ，用以在指令碼專案的內容中管理及設計 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 資料庫。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 包含設計工具、編輯器、指南及精靈，可協助使用者開發、部署及維護資料庫。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+資料庫指令碼專案是一組有組織的指令碼、連接資訊及範本，而且全都與資料庫或資料庫某一部分有所關聯。 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 提供 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ，用以在指令碼專案的內容中管理及設計 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 資料庫。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 包含設計工具、編輯器、指南及精靈，可協助使用者開發、部署及維護資料庫。  
   
 ## <a name="sql-server-management-studio"></a>Transact-SQL  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 是一套系統管理工具，用以管理屬於 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]的元件。 這個整合式環境可讓使用者執行各種工作，如備份資料、編輯查詢，以及自動執行單一介面內的一般功能。  

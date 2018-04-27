@@ -1,15 +1,16 @@
 ---
-title: "將衍生資料表加入查詢 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 將衍生資料表加入查詢 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - table joins [SQL Server]
 - derived tables
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 785774a5caa5409fcedee6c28bc326cf724c9ffa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0025f7f02fdeff1e2f509764dbfa3ddfb207aa29
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>將衍生資料表加入查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 衍生資料表是用作查詢中資料表來源的結果集。 您可以加入衍生資料表至 [圖表窗格] 中的查詢。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+衍生資料表是用作查詢中資料表來源的結果集。 您可以加入衍生資料表至 [圖表窗格] 中的查詢。  
   
 ### <a name="to-add-a-derived-table-to-a-query"></a>將衍生資料表加入查詢  
   

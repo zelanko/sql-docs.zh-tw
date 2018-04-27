@@ -2,7 +2,7 @@
 title: 建立 SQL Server Agent Proxy | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 49b650a15fffd6fdb99eb096c3a3b2c26ce99d13
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0e23c0afe1c33411e53b9e072625b84c6a19431c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>建立 SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>若要建立 SQL Server Agent Proxy  
   
-1.  在 **[物件總管]**中，按一下加號展開要建立 SQL Server Agent Proxy 的伺服器。  
+1.  在 **[物件總管]** 中，按一下加號展開要建立 SQL Server Agent Proxy 的伺服器。  
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  在 **[說明]** 方塊中，輸入 Proxy 帳戶的說明。  
   
-7.  在 **[對下列子系統有效]**下，選取此 Proxy 的適當子系統。  
+7.  在 **[對下列子系統有效]** 下，選取此 Proxy 的適當子系統。  
   
 8.  在 **[主體]** 頁面上，加入或移除登入或角色，藉此授與或移除 Proxy 帳戶的存取。  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>若要建立 SQL Server Agent Proxy  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

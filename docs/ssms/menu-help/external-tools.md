@@ -2,7 +2,7 @@
 title: 外部工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc1b7128bfc81f1a30b520e47455e24ec30649a7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 637dab95cdddd42ada39b7b05f62d9fc17cc4b5b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="external-tools"></a>外部工具
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此對話方塊可將外部工具 (例如 SQL Server 設定管理員或記事本) 新增到 [工具] 功能表。 加入外部工具可以讓您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 除此之外，某些工具的輸出也可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊列在 [工具] 功能表中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用此對話方塊可將外部工具 (例如 SQL Server 組態管理員或記事本) 新增到 [工具] 功能表。 加入外部工具可以讓您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 除此之外，某些工具的輸出也可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊列在 [工具] 功能表中。  
   
 ## <a name="options"></a>選項。  
 **功能表內容**  

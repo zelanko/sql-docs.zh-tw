@@ -1,16 +1,16 @@
 ---
-title: "套件執行的疑難排解工具 | Microsoft Docs"
-ms.custom: 
+title: 套件執行的疑難排解工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ac15ea4e6c42c5f299303a9d2335563e819cc98c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的功能與工具，可讓您在完成及部署封裝之後，用以疑難排解封裝的執行問題。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **啟用記錄功能**。 您可以只選取想要擷取其資訊的事件與項目，藉以精簡記錄輸出。 如需詳細資訊，請參閱 [Integration Services (SSIS) 記錄](../performance/integration-services-ssis-logging.md)。  
   
--   **選取封裝的 [診斷] 事件以疑難排解提供者問題。** 現在有可幫助您疑難排解封裝與外部資料來源之間互動的記錄訊息。 如需詳細資訊，請參閱 [疑難排解工具封裝連接](troubleshooting-tools-for-package-connectivity.md)。  
+-   **選取封裝的 [診斷] 事件以疑難排解提供者問題。** 現在有可幫助您疑難排解封裝與外部資料來源之間互動的記錄訊息。 如需詳細資訊，請參閱 [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md)。  
   
 -   **增強預設的記錄輸出**。 每次執行封裝時，記錄功能通常會將資料列附加至記錄目的地。 雖然記錄輸出的每一個資料列都會以封裝的名稱和唯一識別碼來識別封裝，並且以唯一的 ExecutionID 來識別封裝的執行，但單一清單中若有大量記錄輸出，分析就會變得很困難。  
   

@@ -1,16 +1,16 @@
 ---
-title: "設定套件屬性 | Microsoft Docs"
-ms.custom: 
+title: 設定套件屬性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17db392a965b35d668404127d778bf7ef7ecc875
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 89564adcf11f815413fefaeb2701431c37b898c4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-package-properties"></a>設定封裝屬性
   當您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 所提供的圖形介面，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝時，可以在 [屬性] 視窗中設定封裝物件的屬性。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  下表會依類別列出封裝屬性。  
   
 ###  <a name="Checkpoints"></a> 檢查點  
- 您可以使用此類別中的屬性，從封裝控制流程中的失敗點重新啟動封裝，而不用從控制流程的開頭重新執行封裝。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+ 您可以使用此類別中的屬性，從封裝控制流程中的失敗點重新啟動封裝，而不用從控制流程的開頭重新執行封裝。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 |屬性|描述|  
 |--------------|-----------------|  

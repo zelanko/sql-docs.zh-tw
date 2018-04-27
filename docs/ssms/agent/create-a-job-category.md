@@ -2,7 +2,7 @@
 title: 建立作業類別目錄 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eeeb066b7d8daeef9c22ccfffe5514cab8502e64
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 73923c0acedc25bfe0c792feede2b60492161467
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-job-category"></a>建立作業類別目錄
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-job-category"></a>若要建立作業類別目錄  
   
-1.  在 **[物件總管]**中，按一下加號展開要建立作業類別目錄所在的伺服器。  
+1.  在 **[物件總管]** 中，按一下加號展開要建立作業類別目錄所在的伺服器。  
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-job-category"></a>若要建立作業類別目錄  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

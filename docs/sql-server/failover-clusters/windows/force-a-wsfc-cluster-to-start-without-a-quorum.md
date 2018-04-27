@@ -2,7 +2,7 @@
 title: 在無仲裁情況下強制啟動 WSFC 叢集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a63f46adf399e2a96d7b6f03a1fefeff6ba55a0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1dc0a48eda49aaa40b9e40339975bb8f1c1f21f3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在無仲裁情況下強制啟動 WSFC 叢集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>若要在無仲裁情況下強制啟動叢集  
   
-1.  透過 **[以系統管理員身分執行]**來啟動更高權限的 Windows PowerShell。  
+1.  透過 **[以系統管理員身分執行]** 來啟動更高權限的 Windows PowerShell。  
   
 2.  匯入 `FailoverClusters` 模組來啟用叢集指令程式。  
   
@@ -96,7 +96,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 1.  使用遠端桌面連接到所需的叢集節點，以強制連線。  
   
-2.  透過 **[以系統管理員身分執行]**來啟動更高權限的命令提示字元。  
+2.  透過 **[以系統管理員身分執行]** 來啟動更高權限的命令提示字元。  
   
 3.  使用 **net.exe** 來確定本機叢集服務已停止。  
   

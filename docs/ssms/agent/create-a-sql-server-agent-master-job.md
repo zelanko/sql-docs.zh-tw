@@ -2,7 +2,7 @@
 title: 建立 SQL Server Agent 主要作業 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 192a6186dc995c7e5516ccb561992ab32fd73a86
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e80c921b851e80b11783bd4fb04bf3d6f0b3e42e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>建立 SQL Server Agent 主要作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-master-sql-server-agent-job"></a>若要建立 SQL Server Agent 的主要作業  
   
-1.  在 **[物件總管]**中，按一下加號展開要建立 SQL Server Agent 作業的伺服器。  
+1.  在 **[物件總管]** 中，按一下加號展開要建立 SQL Server Agent 作業的伺服器。  
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-master-sql-server-agent-job"></a>若要建立 SQL Server Agent 的主要作業  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

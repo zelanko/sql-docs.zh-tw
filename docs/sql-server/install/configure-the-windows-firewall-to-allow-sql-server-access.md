@@ -2,7 +2,7 @@
 title: 設定 Windows 防火牆以允許 SQL Server 存取 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -31,11 +31,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64e8f497247a0c670c4091dca5c0531ed5715cb6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -266,7 +266,7 @@ ms.lasthandoff: 04/16/2018
   
     -   **只有我的網路 (子網路)**  
   
-         這是比 **[任何電腦]**更安全的設定。 只有位於網路之區域子網路的電腦才能連接至程式或通訊埠。  
+         這是比 **[任何電腦]** 更安全的設定。 只有位於網路之區域子網路的電腦才能連接至程式或通訊埠。  
   
     -   **自訂清單:**  
   
@@ -293,7 +293,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>使用新增規則精靈來建立新的防火牆規則  
   
-1.  在 [開始] 功能表上、按一下 **[執行]**輸入 **WF.msc**，然後按一下 **[確定]**。  
+1.  在 [開始] 功能表上、按一下 **[執行]** 輸入 **WF.msc**，然後按一下 **[確定]**。  
   
 2.  在 [具有進階安全性的 Windows 防火牆] 的左窗格中，以滑鼠右鍵按一下 [輸入規則]，然後按一下 [新增規則]。  
   

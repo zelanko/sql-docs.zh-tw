@@ -1,15 +1,16 @@
 ---
-title: "屬性視窗 (Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 屬性視窗 (Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - viewing properties
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a96f9d9eb04873cd18219a65c73e0ae705a5096
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4f36e8ff5c8aefa17371e11164ab45b52e8d5e27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="properties-window-management-studio"></a>屬性視窗 (Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此視窗來檢視所選項目的屬性。 您也可以利用 [屬性] 視窗來檢視檔案、專案和方案屬性。 按一下 [檢視] 功能表上的 [屬性視窗]，就可以使用 [屬性] 視窗。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+請利用這個視窗來檢視所選元素的屬性。 您也可以利用 [屬性] 視窗來檢視檔案、專案和方案屬性。 按一下 [檢視] 功能表上的 [屬性視窗]，就可以使用 [屬性] 視窗。  
   
 [屬性] 視窗會顯示不同類型的編輯欄位，這會隨著特定屬性的需求而不同。 以灰色顯示的屬性是唯讀屬性。  
   

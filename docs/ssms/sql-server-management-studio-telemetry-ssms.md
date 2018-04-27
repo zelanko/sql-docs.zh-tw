@@ -1,30 +1,32 @@
 ---
-title: "SQL Server Management Studio - 遙測 (SSMS) | Microsoft Docs"
-ms.custom: 
+title: SQL Server Management Studio - 遙測 (SSMS) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a960b0862617027d77f28a7acc247312f461a78f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f11f205a4a0baf5db2344ed7b365b0bc2fde4dd9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用意見收集的本機稽核
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功能，可收集匿名的功能使用方式資料並傳送給 Microsoft。 SSMS 可能會收集標準的電腦資訊以及關於使用方式和效能的資訊，這些資訊可能會傳送給 Microsoft，並基於改善 SSMS 的品質、安全性和可靠性的目的加以分析。 我們不會收集　貴用戶的姓名、地址或是其他連絡資訊等資料。 如需詳細資訊，請參閱 [SQL Server 隱私權聲明](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx)。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功能，可收集匿名的功能使用方式資料並傳送給 Microsoft。 SSMS 可能會收集標準的電腦資訊以及關於使用方式和效能的資訊，這些資訊可能會傳送給 Microsoft，並基於改善 SSMS 的品質、安全性和可靠性的目的加以分析。 我們不會收集　貴用戶的姓名、地址或是其他連絡資訊等資料。 如需詳細資訊，請參閱 [SQL Server 隱私權聲明](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx)。
 
 ## <a name="audit-feature-usage-data"></a>稽核功能的使用方式資料
 

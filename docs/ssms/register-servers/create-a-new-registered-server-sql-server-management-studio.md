@@ -2,7 +2,7 @@
 title: 建立新的已註冊伺服器 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-registration
@@ -23,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fa26a8ce5bc17a2c1f0528321f01129b7d861782
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 868fb4c21b994e1cdccc1a9dda60d2844c613996
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>建立新的已註冊伺服器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何藉由在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的「已註冊的伺服器」元件中註冊伺服器，來儲存您經常存取之伺服器的連線資訊。 您可以在連接之前或在連接時從 [物件總管] 註冊伺服器。 有一個特定的功能表選項，可用來註冊本機電腦上的伺服器執行個體。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  本主題描述如何藉由在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的「已註冊的伺服器」元件中註冊伺服器，來儲存您經常存取之伺服器的連接資訊。 您可以在連接之前或在連接時從 [物件總管] 註冊伺服器。 有一個特定的功能表選項，可用來註冊本機電腦上的伺服器執行個體。  
   
  已註冊的伺服器有兩種：  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/17/2018
 1.  如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中看不到「已註冊的伺服器」，請在 **[檢視]** 功能表上按一下 **[已註冊的伺服器]**。  
   
      **伺服器類型**  
-     從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型] 方塊是唯讀的，且會與 [已註冊的伺服器] 窗格中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請在 **[已註冊的伺服器]**工具列上按一下 **[Database Engine]**、 **[Analysis Server]**、 **[Reporting Services]** 或 **[Integration Services]** ，然後再開始註冊新的伺服器。  
+     從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型] 方塊是唯讀的，且會與 [已註冊的伺服器] 窗格中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請在 **[已註冊的伺服器]** 工具列上按一下 **[Database Engine]**、 **[Analysis Server]**、 **[Reporting Services]** 或 **[Integration Services]** ，然後再開始註冊新的伺服器。  
   
      **伺服器名稱**  
      選取要以下列格式註冊的伺服器執行個體：\<伺服器名稱>[\\\<執行個體名稱>]。  

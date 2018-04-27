@@ -2,7 +2,7 @@
 title: 設定叢集仲裁 NodeWeight 設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e7cd9f636d0e522c2733df802619cf9a650dbe57
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 75d81e8e19e2ee1cf4efe62da164caf0e337e5ab
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>設定叢集仲裁 NodeWeight 設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
 ##### <a name="to-configure-nodeweight-settings"></a>若要設定 NodeWeight 設定  
   
-1.  透過 **[以系統管理員身分執行]**來啟動更高權限的 Windows PowerShell。  
+1.  透過 **[以系統管理員身分執行]** 來啟動更高權限的 Windows PowerShell。  
   
 2.  匯入 `FailoverClusters` 模組來啟用叢集指令程式。  
   
@@ -87,7 +87,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ##### <a name="to-configure-nodeweight-settings"></a>若要設定 NodeWeight 設定  
   
-1.  透過 **[以系統管理員身分執行]**來啟動更高權限的命令提示字元。  
+1.  透過 **[以系統管理員身分執行]** 來啟動更高權限的命令提示字元。  
   
 2.  使用 **cluster.exe** 設定 `NodeWeight` 值。  
   

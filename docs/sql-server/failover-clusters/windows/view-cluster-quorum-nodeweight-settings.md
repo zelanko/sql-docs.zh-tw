@@ -2,7 +2,7 @@
 title: 檢視叢集仲裁 NodeWeight 設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d8b5e9259d1283c1aa7441385ec86b2ecf2d954
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9d842b2eb488818295ce228b8694a7515086f376
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>檢視叢集仲裁 NodeWeight 設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 ##### <a name="to-view-nodeweight-settings"></a>若要檢視 NodeWeight 設定  
   
-1.  透過 **[以系統管理員身分執行]**來啟動更高權限的 Windows PowerShell。  
+1.  透過 **[以系統管理員身分執行]** 來啟動更高權限的 Windows PowerShell。  
   
 2.  匯入 `FailoverClusters` 模組來啟用叢集指令程式。  
   
@@ -98,7 +98,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ##### <a name="to-view-nodeweight-settings"></a>若要檢視 NodeWeight 設定  
   
-1.  透過 **[以系統管理員身分執行]**來啟動更高權限的命令提示字元。  
+1.  透過 **[以系統管理員身分執行]** 來啟動更高權限的命令提示字元。  
   
 2.  使用 **cluster.exe** 傳回節點狀態和 NodeWeight 值  
   

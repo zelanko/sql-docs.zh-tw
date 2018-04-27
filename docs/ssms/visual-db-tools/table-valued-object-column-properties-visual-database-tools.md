@@ -2,7 +2,7 @@
 title: 資料表值物件 (資料行) 屬性 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72f33dceec5940d9b34aa9f7e2c44b4b903d4211
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 76843a03de3223aa1f64ccb1ab012f4b9093a157
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>資料表值物件 (資料行) 屬性 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在查詢和檢視表設計工具的 [圖表] 窗格中，選取資料表值物件中的資料行時，就會出現這些屬性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在查詢和檢視表設計工具的 [圖表] 窗格中，選取資料表值物件中的資料行時，就會出現這些屬性。  
   
 > [!NOTE]  
 > 此主題中的屬性，是依類別目錄的順序排列，而非依字母排列。  

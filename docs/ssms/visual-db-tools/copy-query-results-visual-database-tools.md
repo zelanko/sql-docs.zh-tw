@@ -2,7 +2,7 @@
 title: 複製查詢結果 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02f030c6336cb90de2d5adf040f9ee170e24187e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c6dd8e3fd1f01c95a138ad2b78ab591595cd0fab
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="copy-query-results-visual-database-tools"></a>複製查詢結果 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以從 [結果] 窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以從 [結果] 窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>若要從 [結果] 窗格複製結果集文字  
   

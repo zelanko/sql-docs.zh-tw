@@ -2,7 +2,7 @@
 title: 使用資料庫圖表 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -25,14 +25,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d1e2aa0e2e1c3ff69319e4183f6d68352f5937ea
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b46ab578e647c885dec4d99cb390786bef0cf897
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>使用資料庫圖表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用資料庫設計工具建立您資料庫的視覺化圖表。 下列主題包含了使用設計工具設計資料庫圖表的基本概念。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以使用 [資料庫設計工具] 建立您資料庫的視覺化圖表。 下列主題包含了使用設計工具設計資料庫圖表的基本概念。  
   
 ## <a name="in-this-section"></a>本節內容  
 [建立新資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md)  

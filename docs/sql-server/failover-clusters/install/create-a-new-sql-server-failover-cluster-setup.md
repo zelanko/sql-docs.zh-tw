@@ -2,7 +2,7 @@
 title: 建立新的 SQL Server 容錯移轉叢集 (安裝程式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a1553c7584ec6d90bcefbbdabf7c44788830740d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cb04ac3b919170098906007d9a6d0524e0bee8e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>建立新的 SQL Server 容錯移轉叢集 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,13 +96,13 @@ ms.lasthandoff: 04/16/2018
   
 2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要建立新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集安裝，請在安裝頁面上按一下 新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [容錯移轉叢集安裝]。  
   
-3.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+3.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 4.  若要繼續進行，請按 **[下一步]**。  
   
 5.  在 [安裝程式支援檔案] 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。  
   
-6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 7.  在 [產品金鑰] 頁面上，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本，還是您擁有產品之實際執行版本的 PID 金鑰。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
@@ -245,11 +245,11 @@ ms.lasthandoff: 04/16/2018
   
 3.  安裝必要元件之後，安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要準備要建立叢集的節點，請移到 **[進階]** 頁面，然後按一下 **[進階叢集準備]**。  
   
-4.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+4.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 5.  在 [安裝程式支援檔案] 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。  
   
-6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 7.  如果您在當地語系化的作業系統上安裝，而且安裝媒體包含英文以及與作業系統對應之語言的語言套件，您便可以在 [語言選擇] 頁面上指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的語言。 如需跨語言支援和安裝考量的詳細資訊，請參閱 [SQL Server 中的地區語言版本](../../../sql-server/install/local-language-versions-in-sql-server.md)。  
   
@@ -333,11 +333,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  在依照 [準備步驟](#prepare)中所述的內容來準備所有節點之後，請在其中一個備妥的節點上執行安裝程式，最好是在擁有共用磁碟的節點上執行。 在  安裝中心的 [進階] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 頁面上，按一下 **[進階叢集完成]**。  
   
-2.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+2.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 3.  在 [安裝程式支援檔案] 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。  
   
-4.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+4.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 5.  如果您在當地語系化的作業系統上安裝，而且安裝媒體包含英文以及與作業系統對應之語言的語言套件，您便可以在 [語言選擇] 頁面上指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的語言。 如需跨語言支援和安裝考量的詳細資訊，請參閱 [SQL Server 中的地區語言版本](../../../sql-server/install/local-language-versions-in-sql-server.md)。  
   

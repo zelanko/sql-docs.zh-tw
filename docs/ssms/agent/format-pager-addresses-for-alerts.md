@@ -2,7 +2,7 @@
 title: 設定警示呼叫器號碼的格式 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 144289ca2e0ff9d3279224c06d1168225e58554b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: caa9d2f08b96e9acda2f330b933416e21970ac27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-format-pager-addresses"></a>若要格式化呼叫器號碼  
   
-1.  在 **[物件總管]**中，按一下加號展開伺服器，此伺服器包含要傳送至呼叫器的警示。  
+1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含要傳送至呼叫器的警示。  
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 **[選取頁面]**底下，選取 **[警示系統]**。  
+3.  在 **[選取頁面]** 底下，選取 **[警示系統]**。  
   
 4.  在 [呼叫器電子郵件位址格式] 欄位的 [收件者] 和 [副本] 方塊中，輸入呼叫器號碼的前置詞和後置詞。 當傳送通知時，就會插入操作員的實際呼叫器號碼。  
   

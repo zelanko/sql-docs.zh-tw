@@ -2,7 +2,7 @@
 title: 設定使用者可建立及管理 SQL Server Agent 作業 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f5978050e90b80e2aba76b33abc8b7a0f29f8b0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 65bd04bf5391eb91e3364d55b994caab5c26c8c5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
 **若要將 SQL 登入或 msdb 角色加入 SQL Server Agent 固定資料庫角色中**  
   
-1.  在 **[物件總管]**中展開伺服器。  
+1.  在 **[物件總管]** 中展開伺服器。  
   
 2.  展開 **[安全性]**，再展開 **[登入]**。  
   
@@ -63,11 +63,11 @@ ms.lasthandoff: 04/16/2018
   
 4.  在 **[登入屬性]** 對話方塊的 **[使用者對應]** 頁面上，選取包含 **msdb**的資料列。  
   
-5.  在 **[資料庫角色成員資格對象: msdb]**底下，核取適當的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 固定資料庫角色。  
+5.  在 **[資料庫角色成員資格對象: msdb]** 底下，核取適當的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 固定資料庫角色。  
   
 **若要設定 Proxy 帳戶來建立及管理 SQL Server Agent 作業步驟**  
   
-1.  在 **[物件總管]**中展開伺服器。  
+1.  在 **[物件總管]** 中展開伺服器。  
   
 2.  展開 **[SQL Server Agent]**。  
   

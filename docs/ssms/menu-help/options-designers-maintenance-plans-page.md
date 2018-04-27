@@ -2,7 +2,7 @@
 title: 選項 (設計工具 - 維護計畫頁面) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bacc1904e7a509c98653683211b9d0cbeda86d7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4e8bf6ef84c42eb27a53af1d2371385303e118b3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-designers---maintenance-plans-page"></a>選項 (設計工具 - 維護計畫頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [選項] 對話方塊以決定將新形狀新增至設計介面時，設計工具的預設行為。 在 [工具] 功能表上按一下 [選項]，展開 [設計工具]，然後選取 [維護計畫]。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用 [選項] 對話方塊以決定將新形狀新增至設計介面時，設計工具的預設行為。 在 [工具] 功能表上按一下 [選項]，展開 [設計工具]，然後選取 [維護計畫]。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **依預設，會將新形狀連接到選取的形狀**  

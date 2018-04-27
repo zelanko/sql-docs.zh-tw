@@ -1,15 +1,16 @@
 ---
-title: "在彙總查詢中使用資料行 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 在彙總查詢中使用資料行 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HAVING clause, query summary results
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - aggregate queries [SQL Server]
 - WHERE clause, query summary results
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0baf031eb2757f9df899c871f983e231b3f96e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 87611561dda34af615da24a7879d6390916d06cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在彙總查詢中使用資料行 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當您建立彙總查詢時，[查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會做出特定假設，以便建構有效的查詢。 例如，如果您要建立彙總查詢並標記某資料行進行輸出，查詢和檢視設計師會自動將該資料行變成 GROUP BY 子句的一部分，如此一來您便不會不慎在摘要中顯示個別資料列的內容。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+當您建立彙總查詢時， [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 會做出特定假設，以便建構有效的查詢。 例如，如果您要建立彙總查詢並標記某資料行進行輸出，查詢和檢視設計師會自動將該資料行變成 GROUP BY 子句的一部分，如此一來您便不會不慎在摘要中顯示個別資料列的內容。  
   
 ## <a name="using-group-by"></a>使用群組依據  
 查詢和檢視設計師根據下列規則使用資料行：  

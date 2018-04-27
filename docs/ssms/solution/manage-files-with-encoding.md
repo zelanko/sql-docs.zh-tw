@@ -1,34 +1,36 @@
 ---
-title: "利用編碼管理檔案 | Microsoft Docs"
-ms.custom: 
+title: 利用編碼管理檔案 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - files [SQL Server Management Studio]
 - encoding [SQL Server Management Studio]
 - files [SQL Server Management Studio], encoding
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76e453879de3505e2a7234d8b6ae69b7627dda4e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 85b742ed21875161aa48cee0146d68707a567a10
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-files-with-encoding"></a>利用編碼管理檔案
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 為了有助於在特定語言和特定平台中顯示您的程式碼，您可以建立檔案與特定字元編碼的關聯。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+為了有助於在特定語言和特定平台中顯示您的程式碼，您可以建立檔案與特定字元編碼的關聯。  
   
 ## <a name="opening-files"></a>開啟檔案  
 您可以選擇用來編輯檔案的編輯器。  

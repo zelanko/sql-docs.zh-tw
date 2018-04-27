@@ -1,15 +1,16 @@
 ---
-title: "在查詢和檢視表設計工具中巡覽 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 在查詢和檢視表設計工具中巡覽 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - View Designer, navigating
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], navigating
 - keyboard shortcuts [Visual Database Tools]
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9336d8387ac7ff764821eee47405203672a31fe
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 597f6b5bc6291aae9079587ac402116f23613e17
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查詢和檢視表設計工具中巡覽 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在查詢和檢視表設計工具中，您可以使用鍵盤或滑鼠來工作。 各種特定的方法請參考以下各表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在 [查詢和檢視設計師] 中，您可以使用鍵盤或滑鼠來工作。 各種特定的方法請參考以下各表。  
   
 ## <a name="any-pane"></a>任何窗格  
   

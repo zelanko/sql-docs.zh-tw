@@ -2,7 +2,7 @@
 title: 變更操作員的可用性 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -31,11 +31,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22375b35cae3e2c26c199777cb96c7b4987bfa84
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 25325f269256891945db8983af42cfedb6eccfd1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="change-an-operator39s-availability"></a>變更操作員的可用性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-change-an-operators-availability"></a>若要變更操作員的可用性  
   
-1.  在 **[物件總管]**中，按一下加號，展開包含您要啟用或停用操作員的伺服器。  
+1.  在 **[物件總管]** 中，按一下加號，展開包含您要啟用或停用操作員的伺服器。  
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-change-an-operators-availability"></a>若要變更操作員的可用性  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

@@ -2,7 +2,7 @@
 title: 開始使用這個匯入和匯出精靈的簡單範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a684f719495083d5ca4e79a2fbc0213ab83a95a6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e84e1bf87d657f3b72786c19d662b0f664a78d74
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>開始使用這個匯入和匯出精靈的簡單範例
 逐步執行將資料從 Excel 試算表匯入至 SQL Server 資料庫的這個常見案例，以了解 [SQL Server 匯入和匯出精靈] 中的預期作業。 即使您要使用不同的來源和不同的目的地，本主題還是會示範您執行精靈時所需知道的大部分內容。

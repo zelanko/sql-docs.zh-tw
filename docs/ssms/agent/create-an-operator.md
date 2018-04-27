@@ -2,7 +2,7 @@
 title: 建立操作員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d834b0805082c9d6737e3e7f5253e8a3a98fbc43
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 192d0a6c93a19c86d853492624a8fda40378be90
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-an-operator"></a>建立操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-an-operator"></a>若要建立操作員  
   
-1.  在 **[物件總管]**中，按一下加號展開要建立 SQL Server Agent 操作員的伺服器。  
+1.  在 **[物件總管]** 中，按一下加號展開要建立 SQL Server Agent 操作員的伺服器。  
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-an-operator"></a>若要建立操作員  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

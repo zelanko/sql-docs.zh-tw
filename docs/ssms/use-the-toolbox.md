@@ -1,15 +1,16 @@
 ---
-title: "使用工具箱 | Microsoft Docs"
-ms.custom: 
+title: 使用工具箱 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding controls
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44ad54ed01f16b55f4930292348d0277655c137c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 671a8ece500ec0a83ae18c131eb621c2edc32d53
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以從 [工具箱] 中選取項目、文字和控制項，將它們拖曳到表單、頁面和設計工具中；也可以從這些來源中，將項目拖回 [工具箱] 中，以便日後重複使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中，您可以將工作拖回 [維護計畫] 中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以從 [工具箱] 中選取項目、文字和控制項，將它們拖曳到表單、頁面和設計師中；也可以從這些來源中，將項目拖回 [工具箱] 中，以便日後重複使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中，您可以將工作拖回 [維護計畫] 中。  
   
 [工具箱] 中的項目分組成若干稱為「索引標籤」的區段。 以下是常用的 [工具箱] 工作及其執行方式的參考清單：  
   

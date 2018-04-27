@@ -2,7 +2,7 @@
 title: 選擇搜尋資料夾對話方塊 (Visual Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b0bddd8bb76fa236f84cc4229b6da5ff979b2aa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8777f992c6081b13c86a3f916d65ccc6be9be571
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>選擇搜尋資料夾對話方塊 (Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 允許您組合、儲存和修訂您個人之搜尋資料夾的命名集，並指定要搜尋的順序。 若要顯示此對話方塊，請選取位於 [檔案中尋找] 或 [檔案中取代]，[尋找和取代] 視窗上之 [查詢] 下拉式清單旁的 [瀏覽 (...)] 按鈕。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+允許您組合、儲存和修訂您個人之搜尋資料夾的命名集，並指定要搜尋的順序。 若要顯示此對話方塊，請選取位於 [檔案中尋找] 或 [檔案中取代]，[尋找和取代] 視窗上之 [查詢] 下拉式清單旁的 [瀏覽 (...)] 按鈕。  
   
 在 [選取的資料夾] 清單中新增資料夾，在 [資料夾集] 欄位中鍵入此資料夾集的名稱，並按一下 [套用] 以便儲存。 之後可以從 [檔案中尋找] 和 [檔案中取代] 的 [查詢] 下拉式清單中，依名稱選擇此自訂搜尋範圍。 若要從 [查詢] 清單中移除自訂資料夾集，請在 [資料夾集] 欄位中選取其名稱，並按一下 [刪除]。  
   

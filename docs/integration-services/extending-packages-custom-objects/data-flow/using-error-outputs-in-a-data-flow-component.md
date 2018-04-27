@@ -1,15 +1,15 @@
 ---
-title: "在資料流程元件中使用錯誤輸出 | Microsoft Docs"
-ms.custom: 
+title: 在資料流程元件中使用錯誤輸出 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 
+caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f51b9d3dfcfab48a18536be0d15ff28ef7833b03
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4d25ac8261d5b605fa4dc8fc1c7f7c4d8b71733e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>使用資料流程元件中的錯誤輸出
   您可以將呼叫錯誤輸出的特殊 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 物件加入元件，讓元件將無法在執行期間處理的資料列重新導向。 元件可能遇到的問題通常會歸類為錯誤或是截斷，而且是每個元件特有的。 提供錯誤輸出的元件透過從結果集篩選出錯誤資料列、當問題發生時讓元件失敗，以及忽略錯誤並繼續，讓元件的使用者有處理錯誤狀況的彈性。  

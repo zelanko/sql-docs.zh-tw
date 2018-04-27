@@ -1,34 +1,36 @@
 ---
-title: "複製方案中的項目 | Microsoft Docs"
-ms.custom: 
+title: 複製方案中的項目 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - copying items
 - projects [SQL Server Management Studio], copying
 - solutions [SQL Server Management Studio], item copying
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8698de1d3a70ef122800367b1090a62eef683832
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 79af37eba7fcb984fa77a7b1b2ff94d44cce397c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="copy-items-in-a-solution"></a>複製方案中的項目
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以利用方案總管或 Windows 的檔案總管來複製項目。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以利用 [方案總管] 或 Windows 的 [檔案總管] 來複製項目。  
   
 ### <a name="to-copy-items-within-solution-explorer"></a>在方案總管內複製項目  
   

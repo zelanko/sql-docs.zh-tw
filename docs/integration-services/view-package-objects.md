@@ -1,16 +1,16 @@
 ---
-title: "檢視套件物件 | Microsoft Docs"
-ms.custom: 
+title: 檢視套件物件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd8ac9e0e21ac4d0bc575cff199f827d4bef76ad
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 507ec523ca3a3ea1a485b0dd146c783cc32b65f7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="view-package-objects"></a>檢視封裝物件
   在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中，[封裝總管] 索引標籤提供封裝的總管檢視。 此檢視反映 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 架構的容器階層。 封裝容器位於階層的頂端，您可以展開封裝以檢視其中的連接、可執行檔、事件處理常式、記錄提供者、優先順序條件約束和變數。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  按一下 **[封裝總管]** 索引標籤。  
   
-3.  若要檢視 **[變數]**、 **[優先順序條件約束]**、 **[事件處理常式]**、 **[連接管理員]**、 **[記錄提供者]**或 **[可執行檔]** 資料夾的內容，請展開各個資料夾。  
+3.  若要檢視 **[變數]**、 **[優先順序條件約束]**、 **[事件處理常式]**、 **[連接管理員]**、 **[記錄提供者]** 或 **[可執行檔]** 資料夾的內容，請展開各個資料夾。  
   
 4.  視封裝結構而定，展開任何下一層級資料夾。  
   

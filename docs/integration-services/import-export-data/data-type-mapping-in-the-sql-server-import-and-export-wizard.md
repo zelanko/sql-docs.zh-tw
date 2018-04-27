@@ -2,7 +2,7 @@
 title: SQL Server 匯入和匯出精靈中的資料類型對應 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1796ece3b0fb24b0fb5a4026ce12a085d4744a77
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 984beda9e79c525d45334959f0a866fcb2868080
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server 匯入和匯出精靈的資料類型對應
  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 中，您可以在新的目的地資料表和檔案中設定資料行的名稱、資料類型和資料類型屬性，但無法針對資料行值指定自訂轉換。 所以，從來源到目的地的資料類型內建對應極為重要。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/10/2018
  如果您編輯現有的對應檔案，或將新的對應檔案加入資料夾，就必須關閉再重新開啟 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，才能載入新的或變更後的對應檔案。  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>您可以變更現有的對應檔案
-如果貴公司在資料類型間需要不同的對應，您可以更新對應檔案，變更精靈使用的對應。 例如，將資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  nchar **資料類型對應到 DB2** GRAPHIC **VAR資料類型對應到 DB2** VARGRAPHIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，請在  對應檔中變更 **nchar** 對應，以便使用 **資料類型對應到 DB2** 取代 **VAR資料類型對應到 DB2.**傳送到 DB2 時，如果您想讓  
+如果貴公司在資料類型間需要不同的對應，您可以更新對應檔案，變更精靈使用的對應。 例如，將資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  nchar **資料類型對應到 DB2** GRAPHIC **VAR資料類型對應到 DB2** VARGRAPHIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，請在  對應檔中變更 **nchar** 對應，以便使用 **資料類型對應到 DB2** 取代 **VAR資料類型對應到 DB2.** 傳送到 DB2 時，如果您想讓  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>您可以加入新的對應檔案
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝多種來源和目的地常用之組合的對應。 您也可以在 **MappingFiles** 目錄中加入新的對應檔案，支援其他的來源與目的地。 新的對應檔必須符合已發行的 XSD 結構描述，也必須對應來源和目的地的唯一組合。 對應檔案結構描述 **DataTypeMapping.xsd**的發行位置在 [這裡](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)。

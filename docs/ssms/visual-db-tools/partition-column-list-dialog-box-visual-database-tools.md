@@ -2,7 +2,7 @@
 title: 資料分割資料行清單對話方塊 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f01884482a43f1aff3a6d833bdae0a431f284d01
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 13e2c797ff53f14aebfdaa2aaf2801c5279c23fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>資料分割資料行清單對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果資料表有相關資料分割配置，您可以使用此對話方塊選擇資料分割函式要套用到哪個或哪些資料行。 為了讓資料函數運作，您所切換的資料行資料類型必須與在資料分割函數中定義的資料行資料類型相同。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+如果資料表有相關資料分割配置，您可以使用此對話方塊選擇資料分割函數要套用到哪個或哪些資料行。 為了讓資料函數運作，您所切換的資料行資料類型必須與在資料分割函數中定義的資料行資料類型相同。  
   
 如需資料分割配置和函數的詳細資訊，請參閱《SQL Server 線上叢書》。  
   

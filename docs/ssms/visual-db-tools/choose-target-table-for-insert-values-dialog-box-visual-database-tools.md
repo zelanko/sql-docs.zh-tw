@@ -1,33 +1,35 @@
 ---
-title: "選擇插入值的目標資料表對話方塊 | Microsoft Docs"
-ms.custom: 
+title: 選擇插入值的目標資料表對話方塊 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:69649
 - vdt.dlgbox.insertinto
 ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69f5728462ca8df633618be59fbcf1eb6f4272ff
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 628a7669a2c27fc3ddcee05eadeb7f5cb257c746
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>選擇插入值的目標資料表對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這個對話方塊可讓您使用 INSERT VALUES 查詢指定要更新的資料表。 當您將查詢類型變更為 INSERT VALUES 查詢時，若 [圖表窗格] 中顯示了多個資料表，此對話方塊便會出現。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+這個對話方塊可讓您使用 INSERT VALUES 查詢指定要更新的資料表。 當您將查詢類型變更為 INSERT VALUES 查詢時，若 [圖表窗格] 中顯示了多個資料表，此對話方塊便會出現。  
   
 請選取要新增資料的資料表，然後按一下 [確定]。  
   

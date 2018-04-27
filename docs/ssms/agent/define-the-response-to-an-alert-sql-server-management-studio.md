@@ -2,7 +2,7 @@
 title: 定義對警示的回應 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d4a8d4185ee116041bd5ac9d758517d47b52f4c0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2adcc296467ab8a3d631e33b0bb610303fad6c58
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>定義對警示的回應 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-define-the-response-to-an-alert"></a>若要定義對警示的回應  
   
-1.  在 **[物件總管]**中，按一下加號展開伺服器，此伺服器包含您要定義回應的警示。  
+1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含您要定義回應的警示。  
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
@@ -80,9 +80,9 @@ ms.lasthandoff: 04/16/2018
   
 5.  在 [<警示名稱> 警示屬性] 對話方塊的 [選取頁面] 底下，選取 [回應]。  
   
-6.  選取 **[執行作業]** 核取方塊，然後從 **[執行作業]** 核取方塊底下的清單中選取發生警示時要執行的作業。 您可以按一下 **[新增作業]**來建立新作業。 您可以按一下 **[檢視作業]**檢視作業的詳細資訊。 如需可以在 [新增作業] 與 [作業屬性 <作業名稱>] 對話方塊中使用的選項詳細資訊，請參閱[建立作業](../../ssms/agent/create-a-job.md)及[檢視作業](../../ssms/agent/view-a-job.md)。  
+6.  選取 **[執行作業]** 核取方塊，然後從 **[執行作業]** 核取方塊底下的清單中選取發生警示時要執行的作業。 您可以按一下 **[新增作業]** 來建立新作業。 您可以按一下 **[檢視作業]** 檢視作業的詳細資訊。 如需可以在 [新增作業] 與 [作業屬性 <作業名稱>] 對話方塊中使用的選項詳細資訊，請參閱[建立作業](../../ssms/agent/create-a-job.md)及[檢視作業](../../ssms/agent/view-a-job.md)。  
   
-7.  如果您要在啟動警示時通知操作員，請選取 **[通知操作員]** 核取方塊。 在**運算子清單**中，選取下列一或多種方法通知操作員：[電子郵件]、[呼叫器] 或 [Net Send]。 您可以按一下 **[新增操作員]**來建立新操作員。 您可以按一下 **[檢視操作員]**檢視操作員的詳細資訊。 如需有關 **[新增操作員]** 和 **[檢視操作員屬性]** 對話方塊中之可用選項的詳細資訊，請參閱＜ [Create an Operator](../../ssms/agent/create-an-operator.md) ＞和＜ [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)＞。  
+7.  如果您要在啟動警示時通知操作員，請選取 **[通知操作員]** 核取方塊。 在**運算子清單**中，選取下列一或多種方法通知操作員：[電子郵件]、[呼叫器] 或 [Net Send]。 您可以按一下 **[新增操作員]** 來建立新操作員。 您可以按一下 **[檢視操作員]** 檢視操作員的詳細資訊。 如需有關 **[新增操作員]** 和 **[檢視操作員屬性]** 對話方塊中之可用選項的詳細資訊，請參閱＜ [Create an Operator](../../ssms/agent/create-an-operator.md) ＞和＜ [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)＞。  
   
 8.  完成後，請按一下 **[確定]**。  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-define-the-response-to-an-alert"></a>若要定義對警示的回應  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

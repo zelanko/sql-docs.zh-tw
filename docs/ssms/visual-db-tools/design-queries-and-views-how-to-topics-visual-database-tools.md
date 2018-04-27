@@ -1,18 +1,19 @@
 ---
-title: "設計查詢和檢視操作說明主題 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 設計查詢和檢視操作說明主題 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
-- "• vs.solutionexplorer.file.query"
+- • vs.solutionexplorer.file.query
 - vs.solutionexplorer.file.query
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], about Query Designer
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33b5f17a28639d750e1c3df36c5619d33740c3db
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b5a5a89ba59156316ed448215a58abcc833b2591
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>設計查詢和檢視操作說明主題 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查詢和檢視表設計工具可以協助您建立與維護應用程式的資料擷取和資料操作部分。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+查詢和檢視設計師可以協助您建立與維護應用程式的資料擷取和資料操作部分。  
   
 ## <a name="in-this-section"></a>本節內容  
 [開啟查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  

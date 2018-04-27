@@ -1,15 +1,16 @@
 ---
-title: "方案 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 方案 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - solutions [SQL Server Management Studio]
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], projects
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbaa02918eb4d30e7fc9f58b69a3665c0a3296a2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 750f883102935cee98018c899860073341df259e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="solutions-sql-server-management-studio"></a>方案 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 解決方案是一或多個相關專案的集合。 專案是開發人員用來組織相關檔案 (例如常用管理指令碼的集合) 的容器。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 方案是一個或多個相關專案的集合。 專案是開發人員用來組織相關檔案 (例如常用管理指令碼的集合) 的容器。  
   
 ## <a name="solution-overview"></a>方案概觀  
 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 做為 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]的指令碼開發平台。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 程式碼編輯器可用來開發關聯式和多維資料庫的指令碼和查詢，以及將相關指令碼和查詢都收集至專案中。  

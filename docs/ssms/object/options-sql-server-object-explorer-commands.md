@@ -2,7 +2,7 @@
 title: 選項 (SQL Server 物件總管 - 命令) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ce2864c359c33efe354de4f85fd347f51047874
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 69908f55cac6eb7088763798fd7b984c3a493890
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>選項 (SQL Server 物件總管 - 命令)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當您以滑鼠右鍵按一下物件總管中的資料表或檢視時，即會出現可用來顯示資料表資料列的以下兩個選項：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+當您以滑鼠右鍵按一下 [物件總管] 中的資料表或檢視時，即會出現可用來顯示資料表資料列的以下兩個選項：  
   
 -   **選取前 1000 個資料列**  
   

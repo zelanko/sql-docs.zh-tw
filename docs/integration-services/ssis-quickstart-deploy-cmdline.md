@@ -1,23 +1,24 @@
 ---
-title: "從命令提示字元中部署 SSIS 專案 | Microsoft Docs"
+title: 從命令提示字元中部署 SSIS 專案 | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a753aa1418e935604148d0d42afa22716dec1b17
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a94a74659cefdb1fbed508836d45cacff1cf65
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>從命令提示字元中使用 ISDeploymentWizard.exe 部署 SSIS 專案
 本快速入門教學課程示範如何執行 Integration Servicess 部署精靈 `ISDeploymentWizard.exe`，從命令提示字元中部署 SSIS 專案。

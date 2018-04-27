@@ -2,7 +2,7 @@
 title: 選取來源資料表和檢視 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2424f3f7ad290a3ae81c7b97a39abf55f52e771
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d54bc394abb518238e6c00eb65e7b8121d9f2410
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
   指定要複製整個資料表或提供查詢之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [選取來源資料表和檢視表] 。 在此頁面上，您可以選取想要複製的現有資料表和檢視。 接著，將來源資料表對應到新的或現有目的資料表。 您也可以選擇檢閱個別資料行的對應，以及預覽範例資料。
@@ -74,7 +74,7 @@ ms.lasthandoff: 04/04/2018
 ## <a name="select-source-and-destination-tables-for-excel"></a>選取 Excel 的來源和目的地資料表
 
 > [!IMPORTANT]
-> 如需連線至 Excel 檔案，以及對 Excel 檔案載入資料進出的限制與已知問題之詳細資訊，請參閱[利用 SQL Server Integration Services (SSIS) 對 Excel 載入資料進出](../load-data-to-from-excel-with-ssis.md)。
+> 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。
 
 ### <a name="excel-source-tables"></a>Excel 來源資料表
 Excel 資料來源的來源資料表和檢視表清單包含兩種類型的 Excel 物件。
@@ -97,7 +97,7 @@ Excel 資料來源的來源資料表和檢視表清單包含兩種類型的 Exce
  
  ## <a name="see-also"></a>另請參閱
 [透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
-[利用 SQL Server Integration Services (SSIS) 對 Excel 載入資料進出](../load-data-to-from-excel-with-ssis.md)
+[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)
 
 
 

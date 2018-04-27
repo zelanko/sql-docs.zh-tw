@@ -1,16 +1,16 @@
 ---
-title: "安全性概觀 (Integration Services) | Microsoft Docs"
-ms.custom: 
+title: 安全性概觀 (Integration Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SSIS packages, security
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 234895749b48f44601cddb76e4ca95783602a6e4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1bff92603483a8f2120dac95412d388c752dffbd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
@@ -126,7 +126,7 @@ ms.lasthandoff: 01/25/2018
  如需詳細資訊，請參閱 [封裝組態](../../integration-services/packages/package-configurations.md)、 [建立封裝組態](../../integration-services/packages/create-package-configurations.md)和 [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
   
 ### <a name="checkpoint-files"></a>檢查點檔案  
- 同樣地，如果封裝使用的檢查點檔案包含機密資訊，應使用存取控制清單 (ACL) 來保護儲存檔案之位置或資料夾的安全。 檢查點檔案儲存有關封裝進度和目前變數值的目前狀態資訊。 例如，封裝可能包括含有電話號碼的自訂變數。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+ 同樣地，如果封裝使用的檢查點檔案包含機密資訊，應使用存取控制清單 (ACL) 來保護儲存檔案之位置或資料夾的安全。 檢查點檔案儲存有關封裝進度和目前變數值的目前狀態資訊。 例如，封裝可能包括含有電話號碼的自訂變數。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ### <a name="log-files"></a>記錄檔  
  寫入檔案系統的記錄項目也應使用存取控制清單 (ACL) 保護其安全。 記錄項目還可以儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性進行保護。 記錄項目可能包含機密資訊，例如，如果封裝包含建構參考電話號碼之 SQL 陳述式的「執行 SQL」工作，SQL 陳述式的記錄項目便會包含電話號碼。 SQL 陳述式可能還顯示有關資料庫中資料表與資料行名稱的私用資訊。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  

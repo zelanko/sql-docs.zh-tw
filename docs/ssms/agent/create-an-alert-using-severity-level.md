@@ -2,7 +2,7 @@
 title: 使用嚴重性層級來建立警示 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 04d25cc5ec3b49f570c5e01a81c984df7b440f50
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b9c88d897b6306fa4f5004057e247fa7192947bd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -81,11 +81,11 @@ ms.lasthandoff: 04/16/2018
   
 5.  在 **[類型]** 清單中，選取 **[SQL Server 事件警示]**。  
   
-6.  在 **[事件警示定義]**下，從 **[資料庫名稱]** 清單中選取資料庫，將警示限制在特定資料庫。  
+6.  在 **[事件警示定義]** 下，從 **[資料庫名稱]** 清單中選取資料庫，將警示限制在特定資料庫。  
   
-7.  在 **[將根據下列條件引發警示]**下，按一下 **[嚴重性]** ，然後選取將會引發警示的特定嚴重性。  
+7.  在 **[將根據下列條件引發警示]** 下，按一下 **[嚴重性]** ，然後選取將會引發警示的特定嚴重性。  
   
-8.  核取對應到 **[訊息包含下列內容時引發警示]** 核取方塊，將警示限制在特定字元順序，然後在 **[訊息文字]**中輸入關鍵字或字元字串。 最大字元數為 100。  
+8.  核取對應到 **[訊息包含下列內容時引發警示]** 核取方塊，將警示限制在特定字元順序，然後在 **[訊息文字]** 中輸入關鍵字或字元字串。 最大字元數為 100。  
   
 9. 按一下 [確定] 。  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-an-alert-using-severity-level"></a>若要使用嚴重性層級建立警示  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

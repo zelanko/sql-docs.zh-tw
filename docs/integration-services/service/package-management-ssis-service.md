@@ -1,16 +1,16 @@
 ---
-title: "套件管理 (SSIS 服務) | Microsoft Docs"
-ms.custom: 
+title: 套件管理 (SSIS 服務) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.dtsserver.importpackage.f1
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0ef5f56d09d34fa2688fe46fdf6d7983af4e9e1f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
   套件管理包含監視、管理、匯入和匯出套件。  
@@ -78,12 +78,12 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-connect-to-integration-services"></a>連接到 Integration Services  
   
-1.  按一下 **[開始]**，依序指向 **[所有程式]**和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Management Studio]**。  
+1.  按一下 **[開始]**，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Management Studio]**。  
   
 2.  在 [連接到伺服器] 對話方塊中，選取 [伺服器類型] 清單中的 [Integration Services]，在 [伺服器名稱] 方塊中提供伺服器名稱，然後按一下 [連接]。  
   
     > [!IMPORTANT]  
-    >  如果您無法連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務目前可能沒有執行。 若要了解此服務的狀態，請按一下 **[開始]**，依序指向 **[所有程式]**、 **[Microsoft SQL Server]**和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。 在左窗格中，按一下 **[SQL Server 服務]**。 在右窗格中，尋找 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 如果此服務尚未執行，請將它啟動。  
+    >  如果您無法連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務目前可能沒有執行。 若要了解此服務的狀態，請按一下 **[開始]**，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。 在左窗格中，按一下 **[SQL Server 服務]**。 在右窗格中，尋找 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 如果此服務尚未執行，請將它啟動。  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 隨即開啟。 依預設，[物件總管] 視窗會在 Studio 左下角開啟並定位。 如果 [物件總管] 未開啟，請按一下 **[檢視]** 功能表上的 **[物件總管]** 。  
   

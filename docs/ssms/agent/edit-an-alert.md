@@ -2,7 +2,7 @@
 title: 編輯警示 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 90df1aa5f52541ed9f84945514d390c99530da7b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ddbabbeeb4e326eec7f06be71a9f4da422480914
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  以滑鼠右鍵按一下要編輯的警示，並且選取 [屬性]。  
   
-5.  更新 **[一般]**、 **[回應]**和 **[選項]** 頁面上的警示屬性。  
+5.  更新 **[一般]**、 **[回應]** 和 **[選項]** 頁面上的警示屬性。  
   
 6.  完成後，請按一下 **[確定]**。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-edit-an-alert"></a>若要編輯警示  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

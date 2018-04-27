@@ -1,33 +1,35 @@
 ---
-title: "查詢屬性 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 查詢屬性 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:69636
 - vdt.ppg.querydesigner.query
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 310d9c728820be6bc8f31b24cc979dea6ad1f7ec
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 96f152b0cc39d70ce702b46fc428bd6fbb9c01dd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-properties-visual-database-tools"></a>查詢屬性 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在查詢和檢視表設計工具中開啟查詢時，這些屬性會顯示在 [屬性] 視窗中。 除非另有註明，否則您可以在 [屬性] 視窗中編輯這些屬性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在 [查詢和檢視設計師] 中開啟查詢時，這些屬性會顯示在 [屬性] 視窗中。 除非另有註明，否則您可以在 [屬性] 視窗中編輯這些屬性。  
   
 > [!NOTE]  
 > 此主題中的屬性是依分類排列，而非依字母順序排列。  

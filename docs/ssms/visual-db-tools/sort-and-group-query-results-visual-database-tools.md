@@ -1,15 +1,16 @@
 ---
-title: "排序及群組查詢結果 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 排序及群組查詢結果 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - View Designer, Results pane
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - Results pane
 - sorting query results [SQL Server]
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1151b57f590a184c1152a6504949fadd1caeca3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 47df4ee8a5d9dfc6de201b4a25e7c882ee90ea51
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>排序及群組查詢結果 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以建立一種查詢結果，其中各結果資料列對應至原始資料的完整資料列群組。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+可以建立一種查詢結果，其中各結果資料列對應至原始資料的完整資料列群組。  
   
 如需認識建立此種查詢的詳細資訊，請參閱下列表格所列的主題。  
   

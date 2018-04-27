@@ -2,7 +2,7 @@
 title: Management Studio 中的自訂報表 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be381dfcba80135f5c76694ab2f19f2942e0f5a8
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e7e82988bfac7bc479f699f9c8a4db97ec73b99c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自訂報表
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中，許多物件總管節點會顯示一組由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 建立的標準報表。 這些報表會摘要列出經常要求的伺服器資訊。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 開始，管理員就可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 執行在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]中建立的自訂報表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]中，許多物件總管節點會顯示一組由 [!INCLUDE[msCoName](../../includes/msconame_md.md)]建立的標準報表。 這些報表會摘要列出經常要求的伺服器資訊。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 開始，管理員就可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 執行在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]中建立的自訂報表。  
   
 ## <a name="implementation"></a>實作  
 自訂報表會儲存成報表定義 (.rdl) 檔案，而且這些檔案是使用報表定義語言 (RDL) 所建立的。 RDL 會包含 XML 格式之報表的資料擷取和配置資訊。 RDL 是一種開放式結構描述。 開發人員可以使用其他屬性和元素來擴充 RDL。 報表可以執行報表內的任何有效 [!INCLUDE[tsql](../../includes/tsql_md.md)] 陳述式。  

@@ -2,7 +2,7 @@
 title: 儲存圖表上所選的資料表 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8aeb2b008412f8e9f40ba1879047c5f0e0b280b9
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 2de3ff773317f29fffb72c2b32f33dfdea5d6668
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>儲存圖表上所選的資料表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果不要儲存對資料庫圖表所做的所有變更，可以儲存特定的資料表或一組資料表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+如果不要儲存對資料庫圖表所做的所有變更，可以儲存特定的資料表或一組資料表。  
   
 ### <a name="to-save-selected-tables"></a>若要儲存選取的資料表  
   

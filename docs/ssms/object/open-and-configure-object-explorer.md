@@ -1,30 +1,32 @@
 ---
-title: "開啟和設定物件總管 | Microsoft Docs"
-ms.custom: 
+title: 開啟和設定物件總管 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b771f013b84cd5252c66ee20a804d2a3bb764acf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fdf342637da64664787e264dcfe516fb3cf9fe35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="open-and-configure-object-explorer"></a>開啟和設定物件總管
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中使用 [檢視] 功能表來開啟物件總管。 使用 [工具] 功能表上的 [選項] 來設定物件總管選項。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中使用 [檢視] 功能表來開啟物件總管。 使用 [工具] 功能表上的 [選項] 來設定物件總管選項。  
   
 ## <a name="viewing-object-explorer"></a>檢視物件總管  
 依預設，您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中看到物件總管。 如果您看不到物件總管，請在 [檢視] 功能表上，按一下 [物件總管]。  

@@ -2,7 +2,7 @@
 title: 使用錯誤號碼來建立警示 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d133c187d476926d4a4b58cd7c279ea39116f76d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 80c7651cec2f5eed7f113511b7f8c485a31a872e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-an-alert-using-an-error-number"></a>使用錯誤號碼建立警示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,11 +80,11 @@ ms.lasthandoff: 04/16/2018
   
 6.  在 **[類型]** 清單中，選取 **[SQL Server 事件警示]**。  
   
-7.  在 **[事件警示定義]**下，從 **[資料庫名稱]** 清單中選取資料庫，將警示限制在特定資料庫。  
+7.  在 **[事件警示定義]** 下，從 **[資料庫名稱]** 清單中選取資料庫，將警示限制在特定資料庫。  
   
-8.  在 **[將根據下列條件引發警示]**下，按一下 **[錯誤號碼]**，然後為警示輸入有效的錯誤號碼。 或者，按一下 **[嚴重性]** ，然後選取將會引發警示的特定嚴重性。  
+8.  在 **[將根據下列條件引發警示]** 下，按一下 **[錯誤號碼]**，然後為警示輸入有效的錯誤號碼。 或者，按一下 **[嚴重性]** ，然後選取將會引發警示的特定嚴重性。  
   
-9. 核取對應到 **[訊息包含下列內容時引發警示]** 核取方塊，將警示限制在特定字元順序，然後在 **[訊息文字]**中輸入關鍵字或字元字串。 最大字元數為 100。  
+9. 核取對應到 **[訊息包含下列內容時引發警示]** 核取方塊，將警示限制在特定字元順序，然後在 **[訊息文字]** 中輸入關鍵字或字元字串。 最大字元數為 100。  
   
 10. 按一下 [確定] 。  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-an-alert-using-an-error-number"></a>若要使用錯誤號碼建立警示  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

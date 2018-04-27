@@ -1,33 +1,35 @@
 ---
-title: "發生 SQL 語法錯誤對話方塊 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 發生 SQL 語法錯誤對話方塊 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdt.dlgbox.sqlsyntaxerrorsencountered
 - vdtsql.chm:69641
 ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e262ce93a610c0e0e184a0083eedcc1326499fd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d2d04147eabb0b26095e37295038a5dd7047d0d4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>發生 SQL 語法錯誤對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這個對話方塊會通知您，設計工具無法在 [SQL] 窗格中剖析 SQL 陳述式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+這個對話方塊會通知您，設計工具無法在 [SQL] 窗格中剖析 SQL 陳述式。  
   
 當您在 [SQL] 窗格中輸入或編輯 SQL 陳述式，然後切換至另一個窗格、驗證查詢或嘗試執行查詢時，如果發生下列情況，此對話方塊便會出現：  
   

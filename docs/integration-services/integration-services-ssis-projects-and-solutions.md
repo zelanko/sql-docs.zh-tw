@@ -1,16 +1,16 @@
 ---
-title: "Integration Services (SSIS) 專案和方案 | Microsoft Docs"
-ms.custom: 
+title: Integration Services (SSIS) 專案和方案 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.importprojectwizard.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b1d5948bbcd6531b5a69cc85699cbdf06d87c662
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 57dd62cdd59b3ec571f2e9705e15ca64f3f18124
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 專案及解決方案
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 以用於開發 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
@@ -111,7 +111,7 @@ ms.lasthandoff: 01/25/2018
   
 6.  如果電腦上安裝了原始檔控制軟體，請選取 **[加入至原始檔控制]**  以將專案與原始檔控制相關聯。  
   
-7.  如果原始檔控制軟體是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe，則 **[Visual SourceSafe 登入]** 對話方塊會開啟。 請在 **[Visual SourceSafe 登入]**中，提供使用者名稱、密碼，以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 資料庫的名稱。 按一下 **[瀏覽]** 找出資料庫。  
+7.  如果原始檔控制軟體是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe，則 **[Visual SourceSafe 登入]** 對話方塊會開啟。 請在 **[Visual SourceSafe 登入]** 中，提供使用者名稱、密碼，以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 資料庫的名稱。 按一下 **[瀏覽]** 找出資料庫。  
   
     > **注意**：若要檢視和變更選取的原始檔控制外掛程式，以及設定原始檔控制環境，請按一下 [工具] 功能表上的 [選項]，然後展開 [原始檔控制] 節點。  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 01/25/2018
   
 9. 如果您要從 **.ispac** 檔匯入，請在 **[路徑]** 文字方塊中輸入路徑，包括檔案名稱。 按一下 **[瀏覽]** 導覽到您希望儲存方案的資料夾，並在 **[檔案名稱]** 文字方塊中輸入檔案名稱，然後按一下 **[開啟]**。  
   
-     如果您要從 **[Integration Services 目錄]**匯入，請在 **[伺服器名稱]** 文字方塊中輸入資料庫執行個體名稱，或按一下 **[瀏覽]** ，然後選取包含該目錄的資料庫執行個體。  
+     如果您要從 **[Integration Services 目錄]** 匯入，請在 **[伺服器名稱]** 文字方塊中輸入資料庫執行個體名稱，或按一下 **[瀏覽]** ，然後選取包含該目錄的資料庫執行個體。  
   
      按一下 **[路徑]** 文字方塊旁的 **[瀏覽]** 、展開目錄中的資料夾、選取您要匯入的專案，然後按一下 **[確定]**。  
   

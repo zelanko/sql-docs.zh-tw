@@ -1,15 +1,16 @@
 ---
-title: "在條件窗格中合併搜尋條件的慣例 | Microsoft Docs"
-ms.custom: 
+title: 在條件窗格中合併搜尋條件的慣例 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - AND, Criteria pane
 - multiple AND clauses
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d99326f7d045aff95bf753d7f1ff68826f313af
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 410f2e6428629e6466c4906287cb12a3015aaf20
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在條件窗格中合併搜尋條件的慣例 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以建立使用任意多個 AND 和 OR 運算子連結，包含任何搜尋條件的查詢。 查詢中如有使用 AND 與 OR 子句組合比較複雜，因此建議能夠先了解這類查詢在您執行時的解譯方式，以及這類查詢在 [[準則窗格]](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 及 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中的表示方式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以建立使用任意多個 AND 和 OR 運算子連結，包含任何搜尋條件的查詢。 查詢中如有使用 AND 與 OR 子句組合比較複雜，因此建議能夠先了解這類查詢在您執行時的解譯方式，以及這類查詢在 [[準則窗格]](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 及 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中的表示方式。  
   
 > [!NOTE]  
 > 如需只包含 AND 或 OR 運算子之搜尋條件的詳細資料，請參閱[指定單一資料行的多重搜尋條件 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md) 及[指定多重資料行的多重搜尋條件 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md)。  

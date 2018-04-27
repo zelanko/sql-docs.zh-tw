@@ -1,28 +1,28 @@
 ---
-title: "SQL Server 匯入和匯出精靈中的步驟 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 匯入和匯出精靈中的步驟 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1f3defee5da1c6cc98e985cf6f8eb6bc30479b0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ee4c73983462222bf92517f9571fa51316c9d81a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server 匯入和匯出精靈中的步驟
 本主題描述使用 [SQL Server 匯入和匯出精靈] 匯入和匯出資料的一系列步驟。 它也會包含個別文件頁面的連結，而這些頁面描述您在精靈中看到的每個頁面或對話方塊。

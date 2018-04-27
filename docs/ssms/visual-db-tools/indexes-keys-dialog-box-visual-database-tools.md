@@ -1,33 +1,35 @@
 ---
-title: "索引 - 索引鍵對話方塊 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 索引 - 索引鍵對話方塊 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:65539
 - vdt.ppg.indexeskeys
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 342d284b458c1eacb6ba358e51a502630268bc67
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 27861d4430c389dce3f7ce06f519942aea09f69a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>索引 - 索引鍵對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此對話方塊可建立或修改索引、主索引鍵和唯一鍵。 若要存取此對話方塊，請開啟具有索引或索引鍵之資料表的資料表定義，在資料表定義方格上按一下滑鼠右鍵，再按一下 [索引/索引鍵]。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用此對話方塊可建立或修改索引、主索引鍵和唯一鍵。 若要存取此對話方塊，請開啟具有索引或索引鍵之資料表的資料表定義，在資料表定義方格上按一下滑鼠右鍵，再按一下 [索引/索引鍵]。  
   
 > [!NOTE]  
 > 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  

@@ -1,30 +1,30 @@
 ---
-title: "步驟 4：新增一般檔案目的地 | Microsoft Docs"
-ms.custom: 
+title: 步驟 4：新增一般檔案目的地 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9024e237d159c37b18a89be62b0982149c81253
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 14c1880091d572808ce8b20df1ec0627e19f6f65
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-4-4---adding-a-flat-file-destination"></a>課程 4-4 - 新增一般檔案目的地
 [查閱貨幣索引鍵] 轉換的錯誤輸出，將使得查閱作業失敗的任何資料列重新導向至 [指令碼] 轉換。 為了加強所發生錯誤的相關資訊，[指令碼] 轉換執行一個取得錯誤描述的指令碼。  
@@ -35,21 +35,21 @@ ms.lasthandoff: 01/25/2018
   
 1.  按一下 **[資料流程]** 索引標籤。  
   
-2.  在 **[SSIS 工具箱]**中，展開 **[其他]**，然後將 **[一般檔案目的地]** 拖曳至 [資料流程] 設計介面中。 將 **[一般檔案目的地]** 直接放在 **[取得錯誤描述]** 轉換之下。  
+2.  在 **[SSIS 工具箱]** 中，展開 **[其他]**，然後將 **[一般檔案目的地]** 拖曳至 [資料流程] 設計介面中。 將 **[一般檔案目的地]** 直接放在 **[取得錯誤描述]** 轉換之下。  
   
 3.  按一下 [ **取得錯誤描述** ] 轉換，然後將綠色箭頭拖曳至新的 [ **一般檔案目的地**]。  
   
 4.  在 **[資料流程]** 設計介面中，於新加入的 **[一般檔案目的地]** 轉換中按一下 **[一般檔案目的地]** ，並將名稱變更為 **「失敗的資料列」**。  
   
-5.  以滑鼠右鍵按一下 **[失敗的資料列]** 轉換，然後按一下 **[編輯]**，再按一下 **[一般檔案目的地編輯器]**中的 **[新增]**。  
+5.  以滑鼠右鍵按一下 **[失敗的資料列]** 轉換，然後按一下 **[編輯]**，再按一下 **[一般檔案目的地編輯器]** 中的 **[新增]**。  
   
 6.  在 **[一般檔案格式]** 對話方塊中，確認已選取 **[使用分隔符號]** ，然後按一下 **[確定]**。  
   
-7.  在 **[一般檔案連接管理員編輯器]**的 **[連接管理員名稱]** 方塊中輸入 **Error Data**。  
+7.  在 **[一般檔案連接管理員編輯器]** 的 **[連接管理員名稱]** 方塊中輸入 **Error Data**。  
   
 8.  在 **[一般檔案連接管理員編輯器]** 對話方塊中，按一下 **[瀏覽]**，並尋找儲存該檔案的資料夾。  
   
-9. 在 **[開啟]** 對話方塊的 **[檔案名稱]**中，輸入 **ErrorOutput.txt**，然後按一下 **[開啟]**。  
+9. 在 **[開啟]** 對話方塊的 **[檔案名稱]** 中，輸入 **ErrorOutput.txt**，然後按一下 **[開啟]**。  
   
 10. 在 **[一般檔案連接管理員編輯器]** 對話方塊中，確認 **[地區設定]** 方塊包含 [英文 (美國)]， **[字碼頁]** 包含 1252 [ANSI - 拉丁文 1]。  
   
@@ -59,11 +59,11 @@ ms.lasthandoff: 01/25/2018
   
 12. 按一下 [確定] 。  
   
-13. 在 **[一般檔案目的地編輯器]**中，清除 **[覆寫檔案中的資料]** 核取方塊。  
+13. 在 **[一般檔案目的地編輯器]** 中，清除 **[覆寫檔案中的資料]** 核取方塊。  
   
     清除這個核取方塊可保存多次封裝執行的錯誤。  
   
-14. 在 **[一般檔案目的地編輯器]**中，按一下 **[對應]** 來確認所有資料行都正確。 您可以選擇性地重新命名目的地的資料行。  
+14. 在 **[一般檔案目的地編輯器]** 中，按一下 **[對應]** 來確認所有資料行都正確。 您可以選擇性地重新命名目的地的資料行。  
   
 15. 按一下 [確定] 。  
   

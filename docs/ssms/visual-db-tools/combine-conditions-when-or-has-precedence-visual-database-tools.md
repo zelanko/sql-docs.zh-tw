@@ -1,15 +1,16 @@
 ---
-title: "在 OR 具有優先權時結合條件 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 在 OR 具有優先權時結合條件 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - combining search conditions
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85774366530b325149474e2dbb527fdc33b01cad
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 17cb6e548f7a28d1c1403318aaca0d79f8763035
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>在 OR 具有優先權時結合條件 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 若要使用 OR 來連結條件，並使其優先權超越使用 AND 連結的條件，則必須在每個 OR 條件中重複 AND 條件。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+若要使用 OR 來連結條件，並使其優先權超越使用 AND 連結的條件，則必須在每個 OR 條件中重複 AND 條件。  
   
 例如，假設您想要尋找已經在公司工作超過五年，而且在低階工作或已退休的員工。 這一查詢需要三個條件，其中一個條件連結至兩個具有 AND 的其他條件：  
   

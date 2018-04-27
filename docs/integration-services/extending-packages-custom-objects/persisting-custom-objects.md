@@ -1,31 +1,31 @@
 ---
-title: "保存自訂物件 | Microsoft Docs"
-ms.custom: 
+title: 保存自訂物件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 helpviewer_keywords:
 - custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22ebbf55dbe6fb9a1e63e8a7cfae9fb6674c62ed
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 77eda582035d85413031b9304fac253a2a38d0b2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="persisting-custom-objects"></a>保存自訂物件
   只要您建立的自訂物件其屬性只有使用簡單的資料類型，例如 **integer** 與 **string**，就不需要為這些自訂物件實作自訂持續性。 預設的持續性實作可以儲存物件的中繼資料，及其所有屬性值。  

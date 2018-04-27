@@ -1,16 +1,16 @@
 ---
-title: "Integration Services 回溯相容性 | Microsoft Docs"
-ms.custom: 
+title: Integration Services 回溯相容性 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [Integration Services]
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-caps.latest.revision: 
+caps.latest.revision: 84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a68afe88221975bd616c96976684e42640e6884
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 22da54c67e33e3987ca5e25f078f3ea6b8c40727
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 回溯相容性
   本主題說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]版本之間的變更。 它涵蓋不能再使用或已排程在未來版本中移除的功能。 此外，也將描述產品的變更，已知這些變更會中斷或變更包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能之現有應用程式的行為。  

@@ -1,33 +1,35 @@
 ---
-title: "聯結對話方塊 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 聯結對話方塊 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdt.ppg.joinline
 - vdtsql.chm:69638
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65ee5adf9736860cd9cd9e8e75d6ff387af84348
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d5ff1feb944acaa0e7a41f3528e6fa7b0e6e8b67
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>聯結對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此對話方塊來指定聯結資料表的選項。 若要存取此對話方塊，請在 [設計] 窗格中選取聯結線 (Join Line)。 然後，在 [屬性] 視窗中按一下 [聯結條件及類型]，並按一下顯示在屬性右邊的省略符號 (**…**)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用此對話方塊可指定聯結資料表的選項。 若要存取此對話方塊，請在 [設計] 窗格中選取聯結線 (Join Line)。 然後，在 [屬性] 視窗中按一下 [聯結條件及類型]，並按一下顯示在屬性右邊的省略符號 (**…**)。  
   
 依照預設，是使用根據包含聯結資料行中符合資訊資料列來建立結果集的內部聯結，將關聯資料表聯結在一起。 藉由設定 [聯結] 對話方塊中的選項，可以根據不同的運算子指定聯結，也可以指定外部聯結。  
   

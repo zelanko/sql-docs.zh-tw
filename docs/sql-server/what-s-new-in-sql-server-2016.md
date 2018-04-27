@@ -2,8 +2,8 @@
 title: SQL Server 2016 的新功能
 ms.custom: ''
 ms.date: 07/21/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -25,11 +25,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0c8b7cbe768aa6c443bf803f3a4fcf65f50dfeb6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d6ac83721d53902cca28f109056c140836054c0c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/18/2018
 請參閱[資料庫引擎](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services 針對以「1200 (含) 相容性層級」為基礎的表格式模型資料庫，能提供更佳的效能、撰寫功能、資料庫管理、篩選、處理及其他優化。
-- **[SQL Server R 服務](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)**能將用於統計分析的 R 程式設計語言整合到 SQL Server 中。 
+- **[SQL Server R 服務](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** 能將用於統計分析的 R 程式設計語言整合到 SQL Server 中。 
 - 新的「資料庫一致性檢查程式 (DBCC)」會在內部執行，以偵測可能的資料損毀問題。
 - 可即時查詢外部資料而不需事先匯入的「直接查詢」功能，現已支援更多資料來源，包括 Azure SQL、Oracle 和 Teradata。 
 - 許多新的「DAX (資料存取運算式) 函式」。

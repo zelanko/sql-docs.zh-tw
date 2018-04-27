@@ -1,22 +1,23 @@
 ---
-title: "驗證部署到 Azure 的 SSIS 套件 | Microsoft Docs"
+title: 驗證部署到 Azure 的 SSIS 套件 | Microsoft Docs
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15f838e93a5473a2d2345ae8c297f9b92eb2a23e
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 6e2bf8f48751d819293edbaa0e40a85e74b0c513
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>驗證部署到 Azure 的 SSIS 套件
 當您將 SQL Server Integration Services (SSIS) 專案部署到 Azure 伺服器上的 SSIS 目錄資料庫 (SSISDB) 時，[套件部署精靈] 會在 [檢視] 頁面之後新增額外的驗證步驟。 此驗證步驟會檢查專案中的套件，尋找是否存在可能會導致套件無法在 Azure SSIS Integration Runtime 中如期般執行的已知問題。 精靈隨後會在 [驗證] 頁面上顯示任何相關的警告。
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/28/2017
 | Ado                | ✓        |           |     | ✓         | ✓                 |
 | AdoNet             | ✓        |           |     | ✓         | ✓                 |
 | Cache              |          | ✓         | ✓   |           |                   |
-| Excel              |          | ✓         | ✓   |           |                   |
+| [匯出]              |          | ✓         | ✓   |           |                   |
 | 檔案               |          | ✓         | ✓   |           |                   |
 | FlatFile           |          | ✓         | ✓   |           |                   |
 | Ftp                |          |           |     | ✓         |                   |
@@ -79,5 +80,5 @@ ms.lasthandoff: 11/28/2017
 
 在 HDFS 目的地與 Azure Data Lake Store 目的地中不支援 Orc 格式。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 若要了解如何在 Azure 上排程套件執行時間，請參閱[在 Azure 上排程 SSIS 套件的執行](ssis-azure-schedule-packages.md)。

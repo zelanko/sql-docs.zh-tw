@@ -1,15 +1,16 @@
 ---
-title: "建立插入值查詢 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 建立插入值查詢 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inserting values
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - adding rows
 - table values [SQL Server]
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb5a3a45b0f0b115cb57f455f408dcf0cdf617f7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 37a6f78a0c24055ac9423a7369568405b95d3ab8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>建立插入值查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可使用 [插入值] 查詢在目前的資料表中建立新資料列。 當建立 [插入值] 查詢時，您指定：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可使用 [插入值] 查詢在目前的資料表中建立新資料列。 當建立 [插入值] 查詢時，您指定：  
   
 -   要加入資料列的資料庫資料表。  
   

@@ -2,7 +2,7 @@
 title: 解除安裝現有的 SQL Server 執行個體 (安裝程式) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 10072edb413c472780b714ca8241703557058265
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: b437615e33ff0a30a253c399ad9d8473e85dfd66
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/06/2018
   
 5.  在 **[準備移除]** 頁面上，檢閱即將解除安裝之元件和功能的清單。 按一下 **[移除]** 開始解除安裝  
   
-6.  解除安裝最後一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [程式和功能] **的程式清單中仍會顯示與**相關聯的其他程式。 不過，如果您關閉 **[程式和功能]**，下次再開啟 **[程式和功能]**時，就會重新整理程式清單，只顯示實際上仍安裝的程式。  
+6.  解除安裝最後一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [程式和功能] **的程式清單中仍會顯示與**相關聯的其他程式。 不過，如果您關閉 **[程式和功能]**，下次再開啟 **[程式和功能]** 時，就會重新整理程式清單，只顯示實際上仍安裝的程式。  
   
 ### <a name="if-the-uninstallation-fails"></a>如果解除安裝失敗  
   

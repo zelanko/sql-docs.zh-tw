@@ -1,33 +1,35 @@
 ---
-title: "指定群組條件 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 指定群組條件 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HAVING clause, query groups
 - group query conditions [SQL Server]
 ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 643aa62419885e2708a084cb37d23c95b38305ae
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1e3faecddf1e0ae130870eb5e5a75086878fd3d8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>指定群組條件 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以指定套用至整體群組的條件 (即 HAVING 子句)，以限制出現在查詢結果中的群組。 在資料經過分組及彙總 (Aggregate) 之後，便會套用 HAVING 子句中的條件。 只有符合條件的群組才會出現在查詢結果中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以指定套用至整體群組的條件 (即 HAVING 子句)，以限制出現在查詢結果中的群組。 在資料經過分組及彙總 (Aggregate) 之後，便會套用 HAVING 子句中的條件。 只有符合條件的群組才會出現在查詢結果中。  
   
 例如，您可能想查看 `titles` 資料表中每個發行者的所有書籍的平均價格，但是只限於平均價格超過 $10.00。 在此情況下，您可以指定包含 `AVG(price) > 10`之類條件的 HAVING 子句。  
   

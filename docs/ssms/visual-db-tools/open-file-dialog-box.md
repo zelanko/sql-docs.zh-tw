@@ -1,33 +1,35 @@
 ---
-title: "開啟檔案對話方塊 | Microsoft Docs"
-ms.custom: 
+title: 開啟檔案對話方塊 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b410bc86b35e2cacc83e9a367a9609e271c34290
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 64e6cada38ed4c4c91579ca372f298d0ee0f28fc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="open-file-dialog-box"></a>開啟檔案對話方塊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [開啟檔案] 對話方塊來開啟磁碟中的現有檔案。 您也可以使用這個對話方塊，以不同的語言編碼選項來開啟已開啟的檔案。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用 [開啟檔案] 對話方塊來開啟磁碟中的現有檔案。 您也可以使用這個對話方塊，以不同的語言編碼選項來開啟已開啟的檔案。  
   
 若要存取這個對話方塊，請從 [檔案] 功能表選取 [開啟]，然後再選擇 [檔案]。 從其他元素 (例如 [外部工具] 對話方塊) 開啟檔案時，也會出現這個對話方塊。 從 [檔案] 功能表選取 [開啟]，然後選擇 [專案/方案] 以開啟相同的 [開啟專案] 對話方塊。  
   

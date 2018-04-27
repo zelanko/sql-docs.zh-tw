@@ -1,31 +1,32 @@
 ---
-title: "SQL Server PowerShell 授權條款 | Microsoft Docs"
-ms.custom: 
+title: SQL Server PowerShell 授權條款 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: powershell
-ms.tgt_pltfrm: 
+ms.technology:
+- powershell
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8c9bce29-1971-47c9-bdaa-375088301313
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3880c26dc3f460254e8563c73a079b8e0cff7c43
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: bc9d65889a1cef3ea4174eb55da5926ba46eb88f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-powershell-license-terms"></a>SQL Server PowerShell 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**MICROSOFT 軟體授權條款**
+**Microsoft 軟體授權條款**
 
 **MICROSOFT WINDOWS POWERSHELL EXTENSIONS FOR MICROSOFT SQL SERVER**
 

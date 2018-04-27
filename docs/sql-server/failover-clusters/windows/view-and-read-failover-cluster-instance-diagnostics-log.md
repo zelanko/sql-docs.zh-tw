@@ -2,7 +2,7 @@
 title: 檢視及閱讀容錯移轉叢集執行個體診斷記錄檔 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bda925a4330ccd5a53e6176d8aaae4ca74c04412
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0bc941b9bf25dd263f247b15d6c559e709a58eb1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>檢視及閱讀容錯移轉叢集執行個體診斷記錄檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要檢視診斷記錄檔：**  
   
-1.  從 **[檔案]** 功能表中，依序選取 **[開啟]**和 **[檔案]**，然後選擇想要檢視的診斷記錄檔。  
+1.  從 **[檔案]** 功能表中，依序選取 **[開啟]** 和 **[檔案]**，然後選擇想要檢視的診斷記錄檔。  
   
-2.  事件在右窗格中會顯示為資料列，而且依預設只會顯示 **[name]**和 **[timestamp]** 這兩個資料行。  
+2.  事件在右窗格中會顯示為資料列，而且依預設只會顯示 **[name]** 和 **[timestamp]** 這兩個資料行。  
   
      這也會啟動 **[ExtendedEvents]** 功能表。  
   
