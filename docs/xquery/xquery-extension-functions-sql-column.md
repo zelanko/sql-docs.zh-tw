@@ -2,8 +2,8 @@
 title: ': column （) 函數 (XQuery) |Microsoft 文件'
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -25,18 +25,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8571d05ccf90fc9e51a16c10ff279f26ad987dda
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4d68443b225f0b24a69ac4bd310a58a2d6a2991c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 擴充函數-: column （）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  主題中所述[繫結關聯式資料在 XML](../t-sql/xml/binding-relational-data-inside-xml-data.md)，您可以使用**sql:column(()**函式，當您使用[XML 資料類型方法](../t-sql/xml/xml-data-type-methods.md)來公開的關聯式值XQuery 內。  
+  主題中所述[繫結關聯式資料在 XML](../t-sql/xml/binding-relational-data-inside-xml-data.md)，您可以使用**sql:column(()** 函式，當您使用[XML 資料類型方法](../t-sql/xml/xml-data-type-methods.md)來公開的關聯式值XQuery 內。  
   
- 例如， [query （） 方法 （XML 資料類型）](../t-sql/xml/query-method-xml-data-type.md)用來指定對儲存在變數或資料行的 XML 執行個體的查詢**xml**型別。 有時，您可能會想要讓查詢使用另一個非 XML 資料行的值，以同時查詢關聯式資料與 XML 資料。 若要這樣做，您使用**: column （)**函式。  
+ 例如， [query （） 方法 （XML 資料類型）](../t-sql/xml/query-method-xml-data-type.md)用來指定對儲存在變數或資料行的 XML 執行個體的查詢**xml**型別。 有時，您可能會想要讓查詢使用另一個非 XML 資料行的值，以同時查詢關聯式資料與 XML 資料。 若要這樣做，您使用 **: column （)** 函式。  
   
  SQL 值將會對應到一個相對應的 XQuery 值，且其類型會是等同於相對應 SQL 類型的 XQuery 基底類型。  
   
@@ -48,11 +48,11 @@ sql:column("columnName")
 ```  
   
 ## <a name="remarks"></a>備註  
- 請注意該資料行中指定的參考**: column （)** XQuery 內的函式參考正在處理的資料列中的資料行。  
+ 請注意該資料行中指定的參考 **: column （)** XQuery 內的函式參考正在處理的資料列中的資料行。  
   
  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，您只能參考**xml**內容中執行個體的來源運算式的 XML DML 插入陳述式; 否則您不能參考類型的資料行**xml**或 CLR使用者定義型別。  
   
- **: Column （)**聯結作業中不支援函式。 可改為使用 APPLY 作業。  
+ **: Column （)** 聯結作業中不支援函式。 可改為使用 APPLY 作業。  
   
 ## <a name="examples"></a>範例  
   
@@ -101,7 +101,7 @@ sql:column("columnName")
   
 -   **命名空間**關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義 XML 命名空間前置詞"pd"，在查詢主體中使用。 請注意資料表別名 "P" 與 "PM" 是定義在查詢本身的 FROM 子句中。  
   
--   **: Column （)**函式用來將 XML 內的非 XML 值。  
+-   **: Column （)** 函式用來將 XML 內的非 XML 值。  
   
  以下是部份結果：  
   

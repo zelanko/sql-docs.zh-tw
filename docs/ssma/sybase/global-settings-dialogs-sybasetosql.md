@@ -2,7 +2,7 @@
 title: 全域設定 （對話方塊） (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9688410b2b5768bcc5cb323d986d949f8a16f67
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 90807867579bc47877ec662f166cc3d77caf5234
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>全域設定 （對話方塊） (SybaseToSQL)
 使用的對話方塊頁面**通用設定**對話方塊來指定的預設使用者動作和 SSMA 的警告設定。  

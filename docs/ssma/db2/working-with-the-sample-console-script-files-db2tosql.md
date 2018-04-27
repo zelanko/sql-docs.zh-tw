@@ -1,6 +1,6 @@
 ---
 title: 使用範例主控台指令碼檔案 (DB2ToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5d7a127cb350c8cb95c84ebe43795212986274b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 209333cfd06ae2049865a9ebf1494c6eacafc591
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用範例主控台指令碼檔案 (DB2ToSQL)
 幾個範例檔案與產品一起提供給使用者參考和使用方式。 本章節描述的方式，輕鬆地自訂這些指令碼，以符合使用者需求。  
@@ -51,11 +51,11 @@ ms.lasthandoff: 04/06/2018
   
     -   如需有關如何連接到來源和目標伺服器的詳細資訊，請參閱[伺服器連線檔案建立&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-the-server-connection-files-db2tosql.md) 。  
   
-2.  **VariableValueFileSample.xml:**已經用於範例主控台的所有變數指令都碼檔案和`ServersConnectionFileSample.xml`有這個檔案中已定序。 若要執行使用者具有取代範例變數的範例主控台指令碼值與使用者定義的並將此檔案傳遞做為其他命令列引數，以及指令碼檔案。  
+2.  **VariableValueFileSample.xml:** 已經用於範例主控台的所有變數指令都碼檔案和`ServersConnectionFileSample.xml`有這個檔案中已定序。 若要執行使用者具有取代範例變數的範例主控台指令碼值與使用者定義的並將此檔案傳遞做為其他命令列引數，以及指令碼檔案。  
   
     如需有關變數的值檔案的詳細資訊，請參閱[建立變數值的檔案&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)。  
   
-3.  **AssessmentReportGenerationSample.xml:**此範例可讓使用者產生的 xml 評估報表可由使用者進行分析他開始轉換並移轉資料之前。  
+3.  **AssessmentReportGenerationSample.xml:** 此範例可讓使用者產生的 xml 評估報表可由使用者進行分析他開始轉換並移轉資料之前。  
   
     在`generate-assessment-report`命令 mandatorily 變更變數的值，使用者必須 (請參閱**VariableValueFileSample.xml**) 中`object-name`屬性加入資料庫名稱會出現在使用者使用。 根據指定的物件類型`object-type`值也必須變更。  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/06/2018
   
     請確認伺服器連線檔命令列引數會傳遞給主控台應用程式，然後 ServersConnectionFileSample.xml 的正確的伺服器參數值來更新。  
   
-4.  **SqlStatementConversionSample.xml:**此範例可讓使用者以產生對應`t-sql`來源資料庫的指令碼`sql`提供做為輸入的命令。  
+4.  **SqlStatementConversionSample.xml:** 此範例可讓使用者以產生對應`t-sql`來源資料庫的指令碼`sql`提供做為輸入的命令。  
   
     中`convert-sql-statement`命令，使用者必須 mandatorily 變更變數的值 (請參閱**VariableValueFileSample.xml**) 中`context`屬性設定為要由使用者所使用的資料庫名稱。 使用者也必須變更`sql`屬性值的來源資料庫`sql`最初轉換所需的命令。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/06/2018
     > [!NOTE]  
     > 請確認變數值檔命令列引數會傳遞給主控台應用程式，然後 VariableValueFileSample.xml 會更新為指定的使用者值。  
   
-5.  **ConversionAndDataMigrationSample.xml:**此範例可讓使用者從資料移轉至轉換執行端對端移轉。 強制屬性值，它們將會需要變更清單如下：  
+5.  **ConversionAndDataMigrationSample.xml:** 此範例可讓使用者從資料移轉至轉換執行端對端移轉。 強制屬性值，它們將會需要變更清單如下：  
   
     |命令名稱|Description|Attribute|  
     |----------------|---------------|-------------|  

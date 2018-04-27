@@ -2,7 +2,7 @@
 title: 連接到 Sybase ASE (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ab617555d71bb2067b1c2d2c8e073e74af6e908
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 3c663218b700acb40892a763db93d02629388d27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>連接到 Sybase ASE (SybaseToSQL)
 若要將 Sybase Adaptive Server Enterprise (ASE) 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您必須連接到自動調整的伺服器，其中包含您想要移轉的資料庫。 當您連線時，SSMA 會取得自動調整的伺服器上的所有資料庫的相關中繼資料和 Sybase 中繼資料總管 窗格中顯示資料庫中繼資料。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  

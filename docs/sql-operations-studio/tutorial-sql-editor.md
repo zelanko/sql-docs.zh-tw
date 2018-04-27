@@ -1,9 +1,9 @@
 ---
-title: 教學課程： 使用 SQL Operations Studio (preview) 的 TRANSACT-SQL 編輯器來建立資料庫物件 |Microsoft 文件
-description: 本教學課程示範簡化使用 T-SQL SQL Operations Studio (preview) 中的主要功能。
+title: 教學課程： 使用 SQL Operations Studio （預覽） 的 TRANSACT-SQL 編輯器來建立資料庫物件 |Microsoft 文件
+description: 本教學課程示範簡化使用 T-SQL SQL Operations Studio （預覽） 中的主要功能。
 ms.custom: tools|sos
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9cc8185742980b649f9fcc11eced5687201464
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教學課程： 使用 TRANSACT-SQL 編輯器來建立資料庫物件， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 03/15/2018
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
-- [連接及查詢 SQL Server 使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [連接及查詢使用 Azure SQL Database [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>使用 T-SQL 程式碼片段建立預存程序
 
-SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，快速建立陳述式。
+SQL 作業 Studio 提供許多內建的 T-SQL 程式碼片段，快速建立陳述式。
 
 
 1. 按下 **Ctrl + N** 開啟新的查詢編輯器。

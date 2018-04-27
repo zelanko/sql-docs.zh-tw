@@ -1,6 +1,6 @@
 ---
 title: 專案設定 （轉換） (DB2ToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 389d5da7b3940464150ca52618595fd8bd518fb8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5ad3409125f4e6862304e02f05b03bcf821923ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-db2tosql"></a>專案設定 （轉換） (DB2ToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何轉換 DB2 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]語法。  

@@ -6,7 +6,7 @@ ms.author: edmacauley
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: ''
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: aadea44e433473384c12472c93ec287aec5c0323
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: db5b4d2d97be21a889257ad990472ee6460ee17a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>將 Oracle 結構描述移轉至 SQL Server 2017 on Linux 與 SQL Server 移轉小幫手
 
@@ -110,7 +110,7 @@ SSMA for Oracle 不使用預設的 Oracle 範例結構描述。 若要啟用 HR 
 
 接下來，同步處理您的資料庫。
 
-1. 在轉換完成時，使用**SQL Server 中繼資料總管]**您先前步驟中，前往 [資料庫建立。
+1. 在轉換完成時，使用**SQL Server 中繼資料總管]** 您先前步驟中，前往 [資料庫建立。
 
 1. 以滑鼠右鍵按一下您在資料庫上，選取**同步處理資料庫**，然後按一下 [確定]。
 

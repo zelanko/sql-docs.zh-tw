@@ -1,6 +1,6 @@
 ---
 title: 對應 DB2 與 SQL Server 資料類型 (DB2ToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb4f2a1e09861a701a83ef4cd66c6a5e979bc0fa
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ceea978b85ee0a914a963a793f6d328a2bba3337
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>對應 DB2 與 SQL Server 資料類型 (DB2ToSQL)
 DB2 資料庫類型的不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫類型。 當您轉換至 DB2 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件，您必須指定如何對應到 DB2 中的資料類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以接受預設資料類型對應，或您可以自訂對應，如下列各節中所示。  

@@ -2,7 +2,7 @@
 title: 連接到 SQL Server (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b45f4df847ac7fee3b69c147040355cea514587
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 84e93a4745b264d504fc4c543a4c8208bbb255e9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>連接到 SQL Server (SybaseToSQL)
 若要將 Sybase Adaptive Server Enterprise (ASE) 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您必須連接到任何目標執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 SSMA 連線時，取得執行個體中的所有資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]並顯示資料庫中繼資料中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管。 SSMA 會儲存有關哪一個執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您已連線，但不會儲存密碼。  

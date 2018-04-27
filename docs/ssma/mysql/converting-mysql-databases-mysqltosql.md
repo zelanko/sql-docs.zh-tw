@@ -1,6 +1,6 @@
 ---
 title: 將 MySQL 資料庫 (MySQLToSQL) 轉換 |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b1bbf54f4b8ddfa33b10d0aa1f5cb7cdbc139a6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2f5784f994169d8a43752b7e935cc06ae4aaacea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>將 MySQL 資料庫 (MySQLToSQL) 轉換
 您已經連接到 MySQL 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 及設定專案和對應的資料選項，您可以將轉換至的 MySQL 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫物件。  

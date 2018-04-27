@@ -1,38 +1,39 @@
 ---
-title: "建立指令碼檔案 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 建立指令碼檔案 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Script File Creation, Configuring Oracle Console Settings
 - Script File Creation, Non-Configurable option
 - Script File Creation, Script File Validation
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 469802e908d287d5612697b77711aa5ef4f01455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 087bde0aca02a1101cb1914a69e0d5982d294732
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-oracletosql"></a>建立指令碼檔案 (OracleToSQL)
 第一個步驟之前啟動 SSMA 主控台應用程式。 若要建立指令碼檔案，並在必要時建立的變數值的檔案和伺服器連接檔案。  
   
-指令碼檔案可以分成三個區段，viz。。，：  
+指令碼檔案可以分成三個區段，viz..,:  
   
-1.  **config:**可讓使用者設定的主控台應用程式的組態參數。  
+1.  **config:** 可讓使用者設定的主控台應用程式的組態參數。  
   
 2.  **伺服器：**可讓使用者設定來源/目標伺服器定義。 這也可以在不同的伺服器連接檔案中。  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <…All commands…>  
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <migrate-data>  
@@ -125,11 +126,11 @@ ms.lasthandoff: 12/21/2017
   
     模式包括：  
   
-    -   **詢問使用者-**會提示使用者 continue('yes') 或 out ('no') 的錯誤。  
+    -   **詢問使用者-** 會提示使用者 continue('yes') 或 out ('no') 的錯誤。  
   
-    -   **錯誤-**主控台會顯示錯誤並暫停執行。  
+    -   **錯誤-** 主控台會顯示錯誤並暫停執行。  
   
-    -   **繼續-**主控台會繼續執行。  
+    -   **繼續-** 主控台會繼續執行。  
   
     預設模式是**錯誤**。  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -175,7 +176,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <!--synchronization-->  
@@ -186,7 +187,7 @@ ms.lasthandoff: 12/21/2017
   
     </synchronize-target>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <!--data migration-->  
@@ -221,7 +222,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -243,9 +244,9 @@ ms.lasthandoff: 12/21/2017
     </output-providers>  
     ```  
   
-7.  **停止作業：**中間作業期間，如果使用者想要停止作業，然後**' Ctrl + C'**快速鍵可用。 SSMA for Oracle 主控台將會等到作業完成，並終止主控台執行。  
+7.  **停止作業：**中間作業期間，如果使用者想要停止作業，然後 **' Ctrl + C'** 快速鍵可用。 SSMA for Oracle 主控台將會等到作業完成，並終止主控台執行。  
   
-    如果使用者想要停止執行，然後**' Ctrl + C'**快速鍵可以按下一次的 SSMA 主控台應用程式突然終止。  
+    如果使用者想要停止執行，然後 **' Ctrl + C'** 快速鍵可以按下一次的 SSMA 主控台應用程式突然終止。  
   
 8.  **進度的提供者：**通知每個主控台命令的進度。 預設為停用。 進度報告的屬性組成：  
   
@@ -274,7 +275,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <…All commands…>  
@@ -316,7 +317,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <…All commands…>  
@@ -349,14 +350,14 @@ ms.lasthandoff: 12/21/2017
 -   **重新連接嘗試次數上限：**時建立的連接逾時或因網路失敗而中斷，則需要重新連線的伺服器。 最多允許重新連線嘗試**5**重試次數之後，主控台會自動執行重新連線。 自動重新連線功能會減少您在重新執行指令碼的工作。  
   
 ## <a name="server-connection-parameters"></a>伺服器連接參數  
-伺服器連接參數可以在指令碼檔案或伺服器連接檔案中定義。 請參閱[建立伺服器連接檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) > 一節以取得詳細資料。  
+伺服器連接參數可以在指令碼檔案或伺服器連接檔案中定義。 請參閱[伺服器連線檔案建立&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) > 一節以取得詳細資料。  
   
 ## <a name="script-commands"></a>指令碼命令  
 指令碼檔案包含一連串的移轉工作流程命令，以 XML 格式。 SSMA 主控台應用程式會處理指令碼檔案中出現的命令順序移轉。  
   
 例如，Oracle 資料庫中特定資料表的一般資料移轉如下的階層： 結構描述-&gt;資料表。  
   
-當指令碼檔案中的所有命令都執行成功時，SSMA 主控台應用程式結束，並將控制權傳回給使用者。 指令碼檔案的內容會更多或較少的靜態變數的資訊包含在[建立變數值的檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)或變數值的指令碼檔案中的個別區段中。  
+當指令碼檔案中的所有命令都執行成功時，SSMA 主控台應用程式結束，並將控制權傳回給使用者。 指令碼檔案的內容會更多或較少的靜態變數的資訊包含在[建立變數值的檔案&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md)或變數值的指令碼檔案中的個別區段中。  
   
 **範例：**  
   
@@ -397,14 +398,14 @@ ms.lasthandoff: 12/21/2017
   
 在變更參數，其中顯示的資訊之後，您可以執行範本 （檔案）。  
   
-指令碼命令的完整清單位於[執行 SSMA 主控台 &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+指令碼命令的完整清單位於[執行 SSMA 主控台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="script-file-validation"></a>指令碼檔案驗證  
-使用者可以輕鬆地驗證自己的指令碼檔案對結構描述定義檔**'O2SSConsoleScriptSchema.xsd'**可用 '結構描述' 資料夾中。  
+使用者可以輕鬆地驗證自己的指令碼檔案對結構描述定義檔 **'O2SSConsoleScriptSchema.xsd'** 可用 '結構描述' 資料夾中。  
   
 ## <a name="next-step"></a>下一個步驟  
-在操作主控台的下一個步驟是[建立變數值的檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
+在操作主控台的下一個步驟是[建立變數值的檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
   
-## <a name="see-also"></a>請參閱  
-[建立變數值的檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[建立變數值的檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   

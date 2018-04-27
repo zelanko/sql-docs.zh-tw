@@ -2,7 +2,7 @@
 title: 管理備份 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 122cc3c70f69a6c6037484b499a85480b16792ef
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f941f1cf34e2c4f00ce847b47863190a4355addf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="managing-backups-sybasetosql"></a>管理備份 (SybaseToSQL)
 Sybase 備份管理可讓您備份和還原之前或之後執行測試的表格資料。 您也可以管理與管理備份的內容對話方塊的備份內容。  

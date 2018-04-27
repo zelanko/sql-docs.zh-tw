@@ -1,6 +1,6 @@
 ---
 title: 將 MySQL 資料庫對應至 SQL Server 結構描述 (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1369b509f815950fb1d6401e0b835a55d6263f19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 79cbcae3c7c272f871b18ff0fc9b5a5c1acce57f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>將 MySQL 資料庫對應至 SQL Server 結構描述 (MySQLToSQL)
 根據預設，SSMA for MySQL 移轉至 MySQL 結構描述中的所有物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫命名的結構描述。 不過，您可以自訂 MySQL 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫。  
@@ -67,7 +67,7 @@ SSMA，在您可以將 MySQL 結構描述對應到任何可用[!INCLUDE[ssNoVers
   
 -   對應至 SQL Azure  
   
-您可以將來源資料庫對應至連接的目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫或連接的目標中的任何結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 如果您將來源結構描述對應至連接的目標資料庫底下的任何非現有結構描述，則系統將提示您使用訊息**」 結構描述不存在於目標中繼資料。它會建立同步處理期間。您要繼續嗎？"**按一下 [是]。  
+您可以將來源資料庫對應至連接的目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫或連接的目標中的任何結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 如果您將來源結構描述對應至連接的目標資料庫底下的任何非現有結構描述，則系統將提示您使用訊息**」 結構描述不存在於目標中繼資料。它會建立同步處理期間。您要繼續嗎？"** 按一下 [是]。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>還原成預設的資料庫和結構描述  
 如果您自訂 MySQL 結構描述和 SQL Server 結構描述之間的對應，您可以還原回預設值的對應。  

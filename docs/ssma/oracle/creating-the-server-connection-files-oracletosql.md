@@ -1,30 +1,31 @@
 ---
-title: "建立伺服器連接檔案 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 建立伺服器連接檔案 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Server Connection File Creation
 - Server Connection File, Server Connection File Validation
 ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: cc717c74747da43ac9f2f76e55db9750b4052661
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b892d709b936af8206d75a549ccbbd152970ed79
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>建立伺服器連接檔案 (OracleToSQL)
 指令碼檔案的 [伺服器] 區段中或在不同的伺服器連接檔案中，可以指定伺服器的資訊。 伺服器連接檔案的命令列參數即`-c <serverconnectionfile>`。 如果指令碼檔案和伺服器連接檔案中存在相同的伺服器識別碼，則會被視為指令碼檔案中的伺服器定義。  
@@ -109,8 +110,8 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="next-step"></a>下一個步驟  
-在操作主控台的下一個步驟是[執行 SSMA 主控台 &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+在操作主控台的下一個步驟是[執行 SSMA 主控台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [執行 SSMA 主控台](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

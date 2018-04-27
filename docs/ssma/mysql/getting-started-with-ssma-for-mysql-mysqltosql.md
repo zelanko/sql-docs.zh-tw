@@ -1,6 +1,6 @@
 ---
 title: 開始使用 SSMA for MySQL (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efe3b32103e655213cecedbc9312233d5fd2c2d9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: eac1a3e0b45669194dc78c34fbe28526f17c005b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>開始使用 SSMA for MySQL (MySQLToSQL)
 SQL Server 移轉小幫手 (SSMA) 的 MySQL 可讓您快速將 MySQL 資料庫結構描述轉換成 SQL Server 或 Azure SQL DB 結構描述，將產生的結構描述上傳到 SQL Server 或 Azure SQL DB、 和資料從 MySQL 移轉至 SQL Server 或 Azure SQL DB。  
@@ -107,7 +107,7 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
   
 |||  
 |-|-|  
-|**Button**|**函數**|  
+|**按鈕**|**函數**|  
 |**建立報表**|將選取的 MySQL 物件轉換成 SQL Server 或 Azure SQL DB 物件，並接著會建立會顯示如何成功轉換的報表。<br /><br />此命令會停用，除非 MySQL 中繼資料總管 中選取的物件。|  
 |**轉換結構描述**|將選取的 MySQL 物件轉換成 SQL Server 或 Azure SQL DB 物件。<br /><br />此命令會停用，除非 MySQL 中繼資料總管 中選取的物件。|  
 |**將資料移轉**|將資料從 MySQL 資料庫移轉至 SQL Server 或 Azure SQL DB。 在執行此命令之前，您必須將 MySQL 結構描述轉換成 SQL Server 或 Azure SQL DB 結構描述，然後物件載入入 SQL Server 或 Azure SQL DB。<br /><br />此命令會停用，除非 MySQL 中繼資料總管 中選取的物件。|  

@@ -1,28 +1,28 @@
 ---
-title: "專案設定 （型別對應） (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 專案設定 （型別對應） (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 84d47276324b7616a30aff3d14949230595194c4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>專案設定 （型別對應） (OracleToSQL)
 類型對應 頁面**專案設定**對話方塊包含自訂 SSMA 如何轉換到 Oracle 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
@@ -67,8 +67,8 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |Oracle 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |binary_integer|int|  
 |blob|varbinary(max)|  
 |boolean|bit|  
@@ -79,14 +79,14 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |Clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
-|decimal|float[53]|  
-|雙精度|float[53]|  
-|float|float[53]|  
+|decimal|float [53]|  
+|雙精度|float [53]|  
+|float|float [53]|  
 |int|int|  
 |integer|int|  
 |long|varchar(max)|  
 |長資料列|varbinary(max)|  
-|long raw[\*..8000]<sup>*</sup>|varbinary[*]|  
+|長資料列 [\*..8000]<sup>*</sup>|varbinary[*]|  
 |長資料列 [8001..\*]<sup>*</sup>|varbinary(max)|  
 |國家 （地區) 的 char|nvarchar(max)|  
 |不同國家 （地區) 的 char|nvarchar(max)|  
@@ -95,12 +95,12 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |不同的國家字元集<sup>*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|number|float[53]|  
-|numeric|float[53]|  
+|number|float [53]|  
+|numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
 |未經處理的|varbinary(max)|  
-|real|float[53]|  
+|real|float [53]|  
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |smallint|smallint|  
@@ -123,8 +123,8 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |Oracle 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
 |char varying [*..\*]|varchar[*]|  
@@ -140,10 +140,10 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |decimal|decimal[38][0]|  
 |小數 [*..\*]|decimal[*][0]|  
 |小數 [*..\*][\*..\*]|decimal[*][\*]|  
-|雙精度|float[53]|  
-|float|float[53]|  
+|雙精度|float [53]|  
+|float|float [53]|  
 |float [*..53]|float[*]|  
-|float[54..*]|float[53]|  
+|float[54..*]|float [53]|  
 |int|int|  
 |integer|int|  
 |long|varchar(max)|  
@@ -162,7 +162,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |NCHAR|NCHAR|  
 |nchar[*]|nchar[*]|  
 |Nclob|nvarchar(max)|  
-|number|float[53]|  
+|number|float [53]|  
 |數字 [*..\*]|numeric[*]|  
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |numeric|numeric|  
@@ -170,7 +170,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |nvarchar2 [*..\*]|nvarchar[*]|  
 |原始 [*..\*]|varbinary[*]|  
-|real|float[53]|  
+|real|float [53]|  
 |Rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
@@ -191,19 +191,19 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |Oracle 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |binary_interger|int|  
 |Blob|varbinary(max)|  
 |布林|bit|  
 |Char|char|  
 |char varying [*..8000]|varchar[*]|  
-|char varying[8001..*]|varchar(max)|  
+|char varying [8001..*]|varchar(max)|  
 |char [*..8000]|char[*]|  
 |char[8001..*]|varchar(max)|  
 |字元|char|  
 |可變長度字元 [*..8000]|varchar[*]|  
-|character varying[8001..*]|varchar(max)|  
+|可變長度字元 [8001..*]|varchar(max)|  
 |字元 [*..8000]|char[*]|  
 |character[8001..*]|varchar(max)|  
 |Clob|varchar(max)|  
@@ -214,10 +214,10 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |decimal|decimal[38][0]|  
 |小數 [*..\*]|decimal[*][0]|  
 |小數 [*..\*][\*..\*]|decimal[*][\*]|  
-|雙精度|float[53]|  
-|Float|float[53]|  
+|雙精度|float [53]|  
+|Float|float [53]|  
 |float [*..53]|float[*]|  
-|float[54..*]|float[53]|  
+|float[54..*]|float [53]|  
 |整數|int|  
 |Integer|int|  
 |整數 [*..\*]|numeric[*][0]|  
@@ -232,7 +232,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |國家 （地區) 的 char [4001..*]|nvarchar(max)|  
 |國家字元集|NCHAR|  
 |國家字元集 [*..4000]|nvarchar[*]|  
-|national character[4001..*]|nvarchar(max)|  
+|國家字元集 [4001..*]|nvarchar(max)|  
 |不同的國家字元集 [*..4000]|nvarchar[*]|  
 |不同的國家字元集 [4001..*]|nvarchar(max)|  
 |Nchar|NCHAR|  
@@ -241,7 +241,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |nchar 變動 [*..4000]|nvarchar[*]|  
 |nchar 變動 [4001..*]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|Number|float[53]|  
+|Number|float [53]|  
 |數字 [*..\*]|numeric[*]|  
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |數值|numeric[38][0]|  
@@ -252,7 +252,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |pls_integer|int|  
 |原始 [*..8000]|varbinary[*]|  
 |raw[8001..*]|varbinary(max)|  
-|Real|float[53]|  
+|Real|float [53]|  
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |Smallint|smallint|  
@@ -273,5 +273,5 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |Xmltype|xml|  
   
 ## <a name="see-also"></a>另請參閱  
-[使用者介面參考 &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
+[使用者介面參考&#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

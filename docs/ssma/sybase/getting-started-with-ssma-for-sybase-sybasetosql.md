@@ -2,7 +2,7 @@
 title: SSMA for 入門 SAP ASE (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 09/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34910ce2592f765d5fac0decaadfc48f5f173ed0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2b502bd5cfe2c1a7df2129294b279a2b7b3a407a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SSMA for 入門 SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) 的 SAP ASE 可讓您快速 SAP Adaptive Server Enterprise (ASE) 資料庫將結構描述轉換至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database 的結構描述上傳到產生的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database，並將資料從若要 SAP ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。  
@@ -109,7 +109,7 @@ SSMA 會包含下列功能表：
 |**編輯**|包含用來尋找及處理的詳細資料頁面中，例如，將複製的文字命令[!INCLUDE[tsql](../../includes/tsql_md.md)]從 [SQL 詳細資料] 窗格。 也包含**管理書籤**選項，您可以在其中看到現有的書籤的清單。 您可以使用對話方塊右側的按鈕，來管理這些書籤。|  
 |**檢視**|包含**同步處理中繼資料瀏覽器**命令。 這會同步處理的物件之間 Sybase 中繼資料總管和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 中繼資料總管。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**來管理配置。|  
 |**工具**|包含命令來建立報表、 匯出資料，以及將物件和資料移轉。 也提供存取**通用設定**和**專案設定**對話方塊。|  
-|**Tester**|包含建立測試案例、 檢視測試結果和資料庫備份的管理命令的命令。|  
+|**測試人員**|包含建立測試案例、 檢視測試結果和資料庫備份的管理命令的命令。|  
 |**說明**|提供存取至 SSMA 協助和**有關** 對話方塊。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>輸出窗格和 [錯誤清單] 窗格  

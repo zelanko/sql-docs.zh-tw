@@ -1,6 +1,6 @@
 ---
 title: 設定專案選項 (DB2ToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2688a05f0875bc279d993c500a48ca7b6d9f4894
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 62acd40362ce92d8d67ce761768f9a4e09bbaf40
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="setting-project-options-db2tosql"></a>設定專案選項 (DB2ToSQL)
 針對每個 SSMA 專案中，您可以設定專案層級選項。 這些選項會指定物件轉換、 載入物件、 使用者介面和資料移轉的設定。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或移轉將資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，確認組態選項都適用於專案。  

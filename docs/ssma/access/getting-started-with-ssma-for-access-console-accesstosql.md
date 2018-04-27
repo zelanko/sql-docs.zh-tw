@@ -1,6 +1,6 @@
 ---
 title: SSMA for 入門存取主控台 (AccessToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad49cf3dacefb44e86d7b752382dca62baf35827
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: abb34d1b0d6656b251c23e209af1f58b9fdb4c6b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>SSMA for 入門存取主控台 (AccessToSQL)
 本章節描述的程序啟動並開始使用存取主控台應用程式。 亦會使用的慣例典型的 SSMA 主控台輸出視窗中。  

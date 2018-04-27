@@ -1,16 +1,16 @@
 ---
-title: "資料存取子函式 |Microsoft 文件"
-ms.custom: 
+title: 資料存取子函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - data-accessor functions [XQuery]
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a6b3cc974ae32047d88e1355a870cc97806c22d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f70f14b553182c4f52d9c27ec0972fd3d5978026
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-accessor-functions"></a>Data Accessor 函數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/09/2018
   本節中的主題討論並提供 data-accessor 函數的範例程式碼。  
   
 ## <a name="understanding-fndata-fnstring-and-text"></a>了解 fn:data()、fn:string() 與 text()  
- XQuery 有一個函數**fn:data()**節點，節點測試中擷取純量、 具類型值**text （)**傳回文字節點和函式**fn: string**傳回節點的字串值。 它們的用法很容易混淆。 以下是在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中正確使用它們的指導方針。 XML 執行個體\<age > 12 \< /age > 用來舉例說明。  
+ XQuery 有一個函數**fn:data()** 節點，節點測試中擷取純量、 具類型值**text （)** 傳回文字節點和函式**fn: string**傳回節點的字串值。 它們的用法很容易混淆。 以下是在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中正確使用它們的指導方針。 XML 執行個體\<age > 12 \< /age > 用來舉例說明。  
   
 -   不具類型的 XML：路徑運算式 /age/text() 會傳回文字節點 "12"。 函數 fn:data(/age) 會傳回字串值 "12"，而 fn:string(/age) 也是。  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [字串函數 &#40;XQuery &#41;](../xquery/data-accessor-functions-string-xquery.md)  
+-   [字串函式&#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)  
   
--   [data 函數 &#40;XQuery &#41;](../xquery/data-accessor-functions-data-xquery.md)  
+-   [data 函數&#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [路徑運算式 &#40;XQuery &#41;](../xquery/path-expressions-xquery.md)  
+ [路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
   
   

@@ -2,7 +2,7 @@
 title: Sybase ASE 結構描述對應至 SQL Server 結構描述 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e06a6710b85621f9b0df66f38c42a0b8ebc05ce
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: fd5d975a3dced6f19cf867c453469d25f727912a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE 結構描述對應至 SQL Server 結構描述 (SybaseToSQL)
 在 Sybase Adaptive Server Enterprise (ASE)，每個資料庫有一或多個結構描述。 根據預設，SSMA，請移轉到相同的資料庫和結構描述中的資料庫和結構描述中的所有物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 不過，您可以自訂 ASE 之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫和結構描述。  
@@ -62,7 +62,7 @@ SSMA，在您可以將 ASE 結構描述對應到任何可用[!INCLUDE[ssNoVersio
   
 -   對應至 SQL Azure  
   
-若要連接的目標 SQL Azure 資料庫或連接的目標 SQL Azure 資料庫中任何結構描述，您可以對應來源資料庫。 如果您將來源結構描述對應至連接的目標資料庫底下的任何非現有結構描述，則系統將提示您使用訊息**」 結構描述不存在於目標中繼資料。它會建立同步處理期間。您要繼續嗎？"**按一下 [是]。  
+若要連接的目標 SQL Azure 資料庫或連接的目標 SQL Azure 資料庫中任何結構描述，您可以對應來源資料庫。 如果您將來源結構描述對應至連接的目標資料庫底下的任何非現有結構描述，則系統將提示您使用訊息**」 結構描述不存在於目標中繼資料。它會建立同步處理期間。您要繼續嗎？"** 按一下 [是]。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>還原成預設的資料庫和結構描述  
 如果您自訂 ASE 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 的結構描述，您可以還原回預設值的對應。  

@@ -1,16 +1,16 @@
 ---
-title: "sum 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: sum 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sum function [XQuery]
 - fn:sum function
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 599080605291b48f30a40c85354ea5bb2f2320c6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 87f8e3859f8a487a56ff9c1874ad98772af210b8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions---sum"></a>彙總函式-加總
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  將計算其總和之不可部份完成值的順序。  
   
 ## <a name="remarks"></a>備註  
- 所有類型的不可部份完成值傳遞至**sum （)**必須是相同的基底類型的子類型。 可接受的基底類型為三個內建的數值基底類型或 xdt:untypedAtomic。 xdt:untypedAtomic 類型的值會轉換為 xs:double。 如果沒有混用這些類型，或其他類型的其他值會傳遞，就會引發靜態錯誤。  
+ 所有類型的不可部份完成值傳遞至**sum （)** 必須是相同的基底類型的子類型。 可接受的基底類型為三個內建的數值基底類型或 xdt:untypedAtomic。 xdt:untypedAtomic 類型的值會轉換為 xs:double。 如果沒有混用這些類型，或其他類型的其他值會傳遞，就會引發靜態錯誤。  
   
- 結果**sum （)**接收傳入的類型，例如 xdt，xs: double 的基底類型，即使輸入選擇性是空的序列。 如果輸入在靜態上是空的，則結果是 0，並具有靜態和動態的 xs:integer 類型。  
+ 結果**sum （)** 接收傳入的類型，例如 xdt，xs: double 的基底類型，即使輸入選擇性是空的序列。 如果輸入在靜態上是空的，則結果是 0，並具有靜態和動態的 xs:integer 類型。  
   
- **Sum （)**函式會傳回數字值的總和。 如果 xdt: untypedatomic 值無法轉換成 xs: double，值會忽略輸入序列中*$arg*。 如果輸入是動態計算出的空序列，則會傳回所用基底類型的值 0。  
+ **Sum （)** 函式會傳回數字值的總和。 如果 xdt: untypedatomic 值無法轉換成 xs: double，值會忽略輸入序列中 *$arg*。 如果輸入是動態計算出的空序列，則會傳回所用基底類型的值 0。  
   
  發生溢位或超出範圍的例外狀況時，此函數會傳回執行階段錯誤。  
   
@@ -114,13 +114,13 @@ ProductModelID Name                 TotalLaborHours
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   只有單一引數版本**sum （)**支援。  
+-   只有單一引數版本**sum （)** 支援。  
   
 -   如果輸入是動態計算出的空序列，則會傳回所用基底類型的值 0，而不是 xs:integer 類型。  
   
--   **Sum （)**函式會將所有整數都對應至 xs: decimal。  
+-   **Sum （)** 函式會將所有整數都對應至 xs: decimal。  
   
--   **Sum （)**不支援的 xs: duration 類型值的函數。  
+-   **Sum （)** 不支援的 xs: duration 類型值的函數。  
   
 -   不支援跨越基底類型界限的混合類型。  
   

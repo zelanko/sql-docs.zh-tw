@@ -1,6 +1,6 @@
 ---
 title: 轉換存取資料庫物件 (AccessToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -41,11 +41,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c05d0dd92d0802260f59f86fef13e617f6eea899
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: adf6b62a0cddd53eaebd3cacc33ef05730bc08a6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>轉換 (AccessToSQL) 來存取資料庫物件
 您已加入 Access 資料庫，並連接到之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure、 SSMA 顯示中繼資料存取和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫物件。 您可以現在選取 存取資料庫物件，然後再轉換成結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 結構描述。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/06/2018
 |查詢|檢視<br /><br />大部份的 SELECT 查詢會轉換至檢視。 其他查詢，例如更新查詢，不會移轉。<br /><br />選取會採用參數的查詢不會轉換，也不是交叉分析查詢。|  
 |報表|不會轉換|  
 |表單|不會轉換|  
-|macro|不會轉換|  
+|巨集|不會轉換|  
 |module|不會轉換|  
 |預設值|預設值|  
 |允許在零長度資料行屬性|檢查條件約束|  

@@ -2,7 +2,7 @@
 title: 執行測試案例 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687fa8b221a31e0c1c447b5c5cbee85cc31d1702
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 321a4f0dfdadc1209cf480448e72d68cfa4fe7ed
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="running-test-cases-sybasetosql"></a>執行測試案例 (SybaseToSQL)
 當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果兩個平台上相同的結果，測試成功。 Sybase 之間物件的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
@@ -57,19 +57,19 @@ SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所
   
 |名稱|型別|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
+|USER_TABLE$ Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
 |USER_TABLE$ 則|Table|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$AudID|Table|儲存新和已變更的資料列的資料表。|  
+|USER_TABLE$ AudID|Table|儲存新和已變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
 |新的 USER_TABLE $|檢視|簡化的插入和覆寫的資料列的表示法。|  
-|USER_TABLE$new_id|檢視|插入和已變更資料列的識別。|  
-|USER_TABLE$old|檢視|簡化的已刪除和覆寫的資料列的表示法。|  
+|USER_TABLE$ new_id|檢視|插入和已變更資料列的識別。|  
+|舊的 USER_TABLE $|檢視|簡化的已刪除和覆寫的資料列的表示法。|  
   
 已驗證的 Sybase 資料表的資料庫中建立下列物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 |名稱|型別|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
+|USER_TABLE$ Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
   
 ### <a name="test-object-calls"></a>測試物件呼叫  
 在此步驟中，SSMA 測試人員會叫用每個測試選取的物件、 比較結果，並顯示的報表。  

@@ -1,16 +1,16 @@
 ---
-title: "運算式內容和查詢評估 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 運算式內容和查詢評估 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b387ebe6649cca113e4974b3275498bb9b3b970e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aa51ff95256dde4ed6d750a2dbfab5c2c44c2d41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>運算式內容和查詢評估 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  解析運算式中所指定的函數和類型名稱。  
   
-3.  查詢的靜態類型 (Static Typing)。 這可確定查詢為安全類型。 例如，下列查詢會傳回靜態錯誤，因為 **+** 運算子需要數值基本類型引數：  
+3.  查詢的靜態類型 (Static Typing)。 這可確定查詢為安全類型。 例如，下列查詢會傳回靜態錯誤，因為**+** 運算子需要數值基本類型引數：  
   
     ```  
     declare @x xml  
@@ -136,7 +136,7 @@ ms.lasthandoff: 02/09/2018
     SELECT @x.query('"x" + 4')  
     ```  
   
-     在下列範例中， **value （)**運算子需要單一值。 中所指定的 XML 結構描述，可以有多個\<Elem > 項目。 運算式的靜態分析判斷它不是安全類型，而傳回靜態錯誤。 若要解決此錯誤，必須將運算式重寫為明確指定單一值 (`data(/x:Elem)[1]`)。  
+     在下列範例中， **value （)** 運算子需要單一值。 中所指定的 XML 結構描述，可以有多個\<Elem > 項目。 運算式的靜態分析判斷它不是安全類型，而傳回靜態錯誤。 若要解決此錯誤，必須將運算式重寫為明確指定單一值 (`data(/x:Elem)[1]`)。  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  
@@ -169,9 +169,9 @@ ms.lasthandoff: 02/09/2018
   
 -   不支援基本 URI 功能。  
   
--   **fn:doc()**不支援。  
+-   **fn:doc()** 不支援。  
   
--   **fn:collection()**不支援。  
+-   **fn:collection()** 不支援。  
   
 -   不提供 XQuery Static Flagger。  
   
@@ -195,9 +195,9 @@ ms.lasthandoff: 02/09/2018
   
 -   **隱含時區**固定為 UTC + 0，且無法變更。  
   
--   **Fn:doc()**函式不支援。 所有的查詢會針對執行**xml**類型資料行或變數。  
+-   **Fn:doc()** 函式不支援。 所有的查詢會針對執行**xml**類型資料行或變數。  
   
--   **Fn:collection()**函式不支援。  
+-   **Fn:collection()** 函式不支援。  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)   

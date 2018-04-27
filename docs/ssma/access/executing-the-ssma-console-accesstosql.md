@@ -1,6 +1,6 @@
 ---
 title: 執行 SSMA 主控台 (AccessToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4400ab959c61b23c3a98c817c03506631a4d61af
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5f754441a32346c616e381f8d7f8929354589dcf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>執行 SSMA 主控台 (AccessToSQL)
 Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以執行及控制 SSMA 活動。 這可確保各節詳細說明相同。  
@@ -228,7 +228,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+連接目標資料庫  
   
 -   連接到目標 SQL Server 或 SQL Azure 資料庫，並完全載入目標資料庫的高的層級中繼資料，但不是中繼資料。  
   
@@ -541,7 +541,7 @@ convert-schema
   
 **Command**  
   
-synchronize-target  
+同步處理目標  
   
 1.  目標物件會同步處理目標資料庫。  
   
@@ -557,11 +557,11 @@ synchronize-target
   
 3.  `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 在錯誤的可用選項：  
   
-    -   report-total-as-warning  
+    -   報表-總計-為-警告  
   
-    -   report-each-as-warning  
+    -   報表-每個-為-警告  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 4.  `report-errors-to:` 同步處理作業 （選擇性的屬性） 如果只指定資料夾路徑，然後檔案依名稱指定的錯誤報表位置**TargetSynchronizationReport.XML**建立。  
   
@@ -606,7 +606,7 @@ synchronize-target
 ```  
 **Command**  
   
-refresh-from-database  
+從資料庫重新整理  
   
 -   重新整理資料庫中的來源物件。  
   
@@ -622,11 +622,11 @@ refresh-from-database
   
 3.  `on-error:` 指定是否要指定重新整理錯誤視為警告或錯誤。 在錯誤的可用選項：  
   
-    -   report-total-as-warning  
+    -   報表-總計-為-警告  
   
-    -   report-each-as-warning  
+    -   報表-每個-為-警告  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 4.  `report-errors-to:` 重新整理作業 （選擇性的屬性） 如果只指定資料夾路徑，然後檔案依名稱指定的錯誤報表位置**SourceDBRefreshReport.XML**建立。  
   

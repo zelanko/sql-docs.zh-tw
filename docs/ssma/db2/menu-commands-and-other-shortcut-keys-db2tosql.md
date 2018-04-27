@@ -1,6 +1,6 @@
 ---
 title: 功能表命令和其他的快速鍵 (DB2ToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b81e9aae756b94302d2a70db4b66a2c3933e10c7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 43b92985f3423defe6ef2c5a2e6a62d032474829
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>功能表命令和其他的快速鍵 (DB2ToSQL)
 下列章節說明的鍵盤快速鍵，來存取功能表命令和其他在不同的對話方塊中的 SSMA 用於 DB2 應用程式的快速鍵。  

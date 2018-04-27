@@ -1,6 +1,6 @@
 ---
 title: 專案設定 （型別對應） (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f184eda88079ddcee91f93f0c34f43c4c2062ec
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b7db7307f7266bb49483d00a370c712c138b5c6f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 （型別對應） (MySQLToSQL)
 型別對應的專案設定可讓您設定的 SSMA 專案的預設型別對應。  
@@ -64,34 +64,34 @@ ms.lasthandoff: 04/06/2018
 |**MySQL 資料類型**|**SQL Server 資料類型**|  
 |bigint|bigint|  
 |bigint [*..255]|bigint|  
-|BINARY|binary[1]|  
-|binary[0..1]|binary[1]|  
+|BINARY|二進位 [1]|  
+|binary[0..1]|二進位 [1]|  
 |binary[2..255]|binary[*]|  
-|bit|binary[1]|  
-|bit[0..8]|binary[1]|  
-|bit[17..24]|binary[3]|  
-|bit[25..32]|binary[4]|  
-|bit[33..40]|binary[5]|  
-|bit[41..48]|binary[6]|  
-|bit[49..56]|binary[7]|  
-|bit[57..64]|binary[8]|  
-|bit[9..16]|binary[2]|  
+|bit|二進位 [1]|  
+|bit[0..8]|二進位 [1]|  
+|bit[17..24]|二進位 [3]|  
+|bit[25..32]|二進位 [4]|  
+|bit[33..40]|二進位 [5]|  
+|bit[41..48]|二進位 [6]|  
+|bit[49..56]|二進位 [7]|  
+|bit[57..64]|二進位 [8]|  
+|bit[9..16]|二進位檔 [2]|  
 |blob|varbinary(max)|  
-|blob[0..1]|varbinary[1]|  
+|blob[0..1]|varbinary [1]|  
 |blob[2..8000]|varbinary[*]|  
 |blob[8001..*]|varbinary(max)|  
 |bool|bit|  
 |boolean|bit|  
-|char|nchar[1]|  
-|char 位元組|binary[1]|  
-|char 位元組 [0..1]|binary[1]|  
+|char|nchar [1]|  
+|char 位元組|二進位 [1]|  
+|char 位元組 [0..1]|二進位 [1]|  
 |char 位元組 [2..255]|binary[*]|  
-|char[0..1]|nchar[1]|  
+|char[0..1]|nchar [1]|  
 |char[2..255]|nchar[*]|  
-|character|nchar[1]|  
-|字元不同 [0..1]|nvarchar[1]|  
+|character|nchar [1]|  
+|字元不同 [0..1]|nvarchar [1]|  
 |字元不同 [2..255]|nvarchar|  
-|character[0..1]|nchar[1]|  
+|character[0..1]|nchar [1]|  
 |character[2..255]|nchar[*]|  
 |date|date|  
 |datetime|datetime2[0]|  
@@ -101,15 +101,15 @@ ms.lasthandoff: 04/06/2018
 |decimal|decimal|  
 |小數 [*..65]|decimal[*][0]|  
 |小數 [*..65][\*..30]|decimal[*][\*]|  
-|double|float[53]|  
-|雙精度|float[53]|  
+|double|float [53]|  
+|雙精度|float [53]|  
 |雙精確度 [*..255][\*..30]|數字 [*][\*]|  
 |double [*..255][\*..30]|數字 [*][\*]|  
 |修正|numeric|  
 |修正 [*..65][\*..30]|數字 [*][\*]|  
 |float|float[24]|  
 |float [*..255][\*..30]|數字 [*][\*]|  
-|float [*..53]|float[53]|  
+|float [*..53]|float [53]|  
 |int|int|  
 |int [*..255]|int|  
 |integer|int|  
@@ -120,46 +120,46 @@ ms.lasthandoff: 04/06/2018
 |mediumint|int|  
 |mediumint [*..255]|int|  
 |mediumtext|nvarchar(max)|  
-|國家 （地區) 的 char|nchar[1]|  
-|國家 （地區) 的 char [0..1]|nchar[1]|  
+|國家 （地區) 的 char|nchar [1]|  
+|國家 （地區) 的 char [0..1]|nchar [1]|  
 |國家 （地區) 的 char [2..255]|nchar[*]|  
-|國家字元集|nchar[1]|  
-|不同的國家字元集|nvarchar[1]|  
-|國家字元集變動 [0..1]|nvarchar[1]|  
+|國家字元集|nchar [1]|  
+|不同的國家字元集|nvarchar [1]|  
+|國家字元集變動 [0..1]|nvarchar [1]|  
 |國家字元集變動 [2..4000]|nvarchar[*]|  
 |不同的國家字元集 [4001..*]|nvarchar(max)|  
-|國家字元集 [0..1]|nchar[1]|  
+|國家字元集 [0..1]|nchar [1]|  
 |國家字元集 [2..255]|nchar[*]|  
-|國家 （地區) 的 varchar|nvarchar[1]|  
-|國家 （地區) 的 varchar [0..1]|nvarchar[1]|  
-|national varchar[2..4000]|nvarchar[*]|  
-|national varchar[4001..*]|nvarchar(max)|  
-|NCHAR|nchar[1]|  
-|nchar varchar|nvarchar[1]|  
-|nchar varchar [0..1]|nvarchar[1]|  
-|nchar varchar[2..4000]|nvarchar[*]|  
-|nchar varchar[4001..*]|nvarchar(max)|  
-|nchar[0..1]|nchar[1]|  
+|國家 （地區) 的 varchar|nvarchar [1]|  
+|國家 （地區) 的 varchar [0..1]|nvarchar [1]|  
+|國家 （地區) 的 varchar [2..4000]|nvarchar[*]|  
+|國家 （地區) 的 varchar [4001..*]|nvarchar(max)|  
+|NCHAR|nchar [1]|  
+|nchar varchar|nvarchar [1]|  
+|nchar varchar [0..1]|nvarchar [1]|  
+|nchar varchar [2..4000]|nvarchar[*]|  
+|nchar varchar [4001..*]|nvarchar(max)|  
+|nchar[0..1]|nchar [1]|  
 |nchar[2..255]|nchar[*]|  
 |numeric|numeric|  
 |數字 [*..65]|numeric[*][0]|  
 |數字 [*..65][\*..30]|數字 [*][\*]|  
-|nvarchar|nvarchar[1]|  
-|nvarchar[0..1]|nvarchar[1]|  
+|nvarchar|nvarchar [1]|  
+|nvarchar[0..1]|nvarchar [1]|  
 |nvarchar[2..4000]|nvarchar[*]|  
 |nvarchar[4001..*]|nvarchar(max)|  
-|real|float[53]|  
+|real|float [53]|  
 |實際 [*..255][\*..30]|數字 [*][\*]|  
 |序列|bigint|  
 |smallint|smallint|  
 |smallint [*..255]|smallint|  
 |text|nvarchar(max)|  
-|text[0..1]|nvarchar[1]|  
+|text[0..1]|nvarchar [1]|  
 |text[2..4000]|nvarchar[*]|  
 |text[4001..*]|nvarchar(max)|  
 |time|time|  
 |timestamp|datetime|  
-|tinyblob|varbinary[255]|  
+|tinyblob|varbinary [255]|  
 |tinyint|smallint|  
 |tinyint [*..255]|smallint|  
 |tinytext|nvarchar[255]|  
@@ -171,15 +171,15 @@ ms.lasthandoff: 04/06/2018
 |不帶正負號的十進位|decimal|  
 |不帶正負號的十進位 [*..65]|decimal[*][0]|  
 |不帶正負號的十進位 [*..65][\*..30]|decimal[*][\*]|  
-|不帶正負號的雙|float[53]|  
-|不帶正負號的雙精度|float[53]|  
+|不帶正負號的雙|float [53]|  
+|不帶正負號的雙精度|float [53]|  
 |不帶正負號雙精確度 [*..255][\*..30]|數字 [*][\*]|  
 |不帶正負號 double [*..255][\*..30]|數字 [*][\*]|  
 |不帶正負號固定|numeric|  
 |不帶正負號固定 [*..65][\*..30]|數字 [*][\*]|  
 |不帶正負號的浮點數|float[24]|  
 |不帶正負號的浮點數 [*..255][\*..30]|數字 [*][\*]|  
-|不帶正負號的浮點數 [*..53]|float[53]|  
+|不帶正負號的浮點數 [*..53]|float [53]|  
 |不帶正負號的整數|bigint|  
 |不帶正負號的 int [*..255]|bigint|  
 |不帶正負號的整數|bigint|  
@@ -189,16 +189,16 @@ ms.lasthandoff: 04/06/2018
 |不帶正負號的數字|numeric|  
 |不帶正負號的數字 [*..65]|numeric[*][0]|  
 |不帶正負號的數字 [*..65][\*..30]|數字 [*][\*]|  
-|未簽署的真實|float[53]|  
+|未簽署的真實|float [53]|  
 |未簽署的真實 [*..255[[\*..30]|數字 [*][\*]|  
 |不帶正負號的 smallint|int|  
 |不帶正負號的 smallint [*..255]|int|  
 |不帶正負號的 tinyint|tinyint|  
 |不帶正負號的 tinyint [*..255]|tinyint|  
-|varbinary[0..1]|varbinary[1]|  
+|varbinary[0..1]|varbinary [1]|  
 |varbinary[2..8000]|varbinary[*]|  
 |varbinary[8001..*]|varbinary(max)|  
-|varchar[0..1]|nvarchar[1]|  
+|varchar[0..1]|nvarchar [1]|  
 |varchar[2..4000]|nvarchar[*]|  
 |varchar[4001..*]|nvarchar(max)|  
 |year|smallint|  

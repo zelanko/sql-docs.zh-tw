@@ -1,34 +1,35 @@
 ---
-title: "連接到 Oracle (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 連接到 Oracle (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 04f87810ef02030a95c06870012972f307c41f33
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4bdc57425eb43b6d310f393cfc4d3ccbea447b34
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-oracle-oracletosql"></a>連接到 Oracle (OracleToSQL)
 使用**Connect to Oracle**對話方塊連接到您想要移轉的 Oracle 資料庫。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**Connect to Oracle**。 如果您之前已連線，則命令是**重新連接到 Oracle**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **提供者**  
 選取您連接到 Oracle 資料庫的資料存取提供者。 可用的提供者是 Oracle 用戶端提供者和 OLE DB 提供者。 預設為 Oracle 用戶端提供者。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
 這是標準模式選項。  
   
-**User name**  
+**使用者名稱**  
 輸入 SSMA 將用來連接到 Oracle 資料庫的使用者名稱。  
   
 **密碼**  

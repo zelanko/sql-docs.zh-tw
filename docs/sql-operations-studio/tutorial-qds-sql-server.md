@@ -1,9 +1,9 @@
-﻿---
-title: "教學課程： 啟用 5 名最慢的查詢範例 widget-SQL Operations Studio （預覽） |Microsoft 文件"
+---
+title: 教學課程： 啟用 5 名最慢的查詢範例 widget-SQL Operations Studio （預覽） |Microsoft 文件
 description: 本教學課程會示範如何啟用資料庫儀表板上的五個最慢的查詢範例 widget。
 ms.custom: tools|sos
 ms.date: 03/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78c6ad929a3eea55669e9ebdcef149e605d594ef
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 4c0597adca9897d69503bba3d08d9cdafd859c1c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程： 將*5 名最慢的查詢*範例資料庫儀表板的小工具
 
@@ -32,11 +32,11 @@ ms.lasthandoff: 03/17/2018
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 包含數個深入了解 widget--現成。 本教學課程示範如何加入*查詢的資料-存放區-db-深入解析* widget 中，但步驟都基本上是相同的新增任何小工具。
 
-## <a name="prerequisites"></a> 必要條件
+## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列快速入門的其中一個：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
-- [連接及查詢 SQL Server 使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [連接及查詢使用 Azure SQL Database [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
@@ -142,7 +142,7 @@ ms.lasthandoff: 03/17/2018
 
 ## <a name="view-the-query-plan"></a>檢視查詢計劃 
 
-1. 按下開啟新的查詢編輯器**Ctrl + N**。
+1. 按下 **Ctrl + N** 開啟新的查詢編輯器。
 
 2. 將先前步驟中的查詢文字貼到編輯器。
 
@@ -166,7 +166,7 @@ ms.lasthandoff: 03/17/2018
 
 4. 將複製的計劃貼到編輯器。
 
-5. 按**Ctrl + S**儲存檔案，並變更的檔案副檔名*.sqlplan*。 *.sqlplan*未出現的檔案副檔名下拉式清單中，因此只要輸入中。 此教學課程中，將檔案命名*slowquery.sqlplan*。
+5. 按**Ctrl + S**儲存檔案，並變更的檔案副檔名 *.sqlplan*。 *.sqlplan*未出現的檔案副檔名下拉式清單中，因此只要輸入中。 此教學課程中，將檔案命名*slowquery.sqlplan*。
 
 6. 在中開啟的查詢計劃[!INCLUDE[name-sos](../includes/name-sos-short.md)]的查詢計劃檢視器：
 

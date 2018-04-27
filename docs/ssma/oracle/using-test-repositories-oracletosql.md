@@ -1,30 +1,31 @@
 ---
-title: "使用測試儲存機制 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 使用測試儲存機制 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Test Cases Repository
 - Test Results Repository
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4412d7de5cd86071f2d1c25354e85266f33bccc7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 451567181f1963dd049b5dac6bb0177583993e78
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-test-repositories-oracletosql"></a>使用測試儲存機制 (OracleToSQL)
 SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供稍後使用。 儲存機制資料會儲存在 SQL Server 資料表**TestCaseRepository**和**RunTestCaseResultRepository**結構描述中**ssma_oracle_utilities**的**ssmatesterdb**資料庫。  
@@ -77,11 +78,11 @@ SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供�
   
 下列按鈕，可在測試結果 頁面上：  
   
--   按一下**檢視** 按鈕以開啟[檢視測試案例報表 &#40; OracleToSQL &#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)的目前的測試案例結果。  
+-   按一下**檢視** 按鈕以開啟[檢視測試案例報表&#40;OracleToSQL&#41; ](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)的目前的測試案例結果。  
   
 -   按一下**刪除**按鈕，即可刪除選取的測試結果  
   
-## <a name="see-also"></a>請參閱  
-[執行測試案例 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[測試移轉的資料庫物件 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[執行測試案例&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[測試移轉的資料庫物件&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

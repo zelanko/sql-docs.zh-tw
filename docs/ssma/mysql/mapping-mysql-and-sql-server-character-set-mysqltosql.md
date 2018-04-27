@@ -1,6 +1,6 @@
 ---
 title: MySQL 及 SQL Server 字元對應設定 (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: affbdb7f6e6015f440bda1b6e7aa10e22d321048
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL 及 SQL Server 字元對應設定 (MySQLToSQL)
 字元集 (Charset) 可以指定之 MySQL 字元資料類型、 運算式和常值。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/06/2018
   
 -   與一般 SQL Server 字元類型 (CHAR/VARCHAR)  
   
-1.  **國家 （地區)**目標資料庫字元資料類型為：  
+1.  **國家 （地區)** 目標資料庫字元資料類型為：  
   
     1.  **nchar**  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/06/2018
     |gb2312|GB2312 簡體中文|NCHAR/NVARCHAR （預設值）|  
     |希臘文|ISO 8859-7 希臘文|CHAR/VARCHAR （預設值）|  
     |cp 1250|Windows 中歐語系|CHAR/VARCHAR （預設值）|  
-    |gbk|GBK 簡體中文|NCHAR/NVARCHAR （預設值）|  
+    |（gbk)|GBK 簡體中文|NCHAR/NVARCHAR （預設值）|  
     |latin5|ISO 8859-9 土耳其文|CHAR/VARCHAR （預設值）|  
     |armscii8|ARMSCII 8 亞美尼亞文|CHAR/VARCHAR （預設值）|  
     |utf8|Utf-8 Unicode|NCHAR/NVARCHAR （預設值）|  
@@ -118,12 +118,12 @@ ms.lasthandoff: 04/06/2018
     |macce|Mac 中歐語系|CHAR/VARCHAR （預設值）|  
     |macroman|Mac 西方語系|CHAR/VARCHAR （預設值）|  
     |cp852|DOS 中央歐語系|CHAR/VARCHAR （預設值）|  
-    |latin7|ISO 8859-13 Baltic|CHAR/VARCHAR （預設值）|  
-    |cp 1251|Windows Cyrillic|CHAR/VARCHAR （預設值）|  
+    |latin7|ISO 8859-13 波羅的海文|CHAR/VARCHAR （預設值）|  
+    |cp 1251|Windows 斯拉夫文|CHAR/VARCHAR （預設值）|  
     |cp 1256|Windows 阿拉伯文|CHAR/VARCHAR （預設值）|  
     |cp 1257|Windows 波羅的海文|CHAR/VARCHAR （預設值）|  
     |BINARY|二進位虛擬字元集|CHAR/VARCHAR （預設值）|  
-    |geostd8|GEOSTD8 Georgian|CHAR/VARCHAR （預設值）|  
+    |geostd8|GEOSTD8 喬治亞文|CHAR/VARCHAR （預設值）|  
     |cp932|對於 Windows 日文 SJIS|NCHAR/NVARCHAR （預設值）|  
     |eucjpms|對於 Windows 日文 UJIS|NCHAR/NVARCHAR （預設值）|  
   

@@ -1,16 +1,16 @@
 ---
-title: "路徑運算式步驟中指定述詞 |Microsoft 文件"
-ms.custom: 
+title: 路徑運算式步驟中指定述詞 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - qualifiers [XQuery]
 - path expressions [XQuery]
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9eafae8a2834073ef6e6db380d074b7e0290f1ee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b44c3202e4e64f96ded4a615232405ab8d5bc4cc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-predicates"></a>路徑運算式-指定述詞
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ WHERE ProductModelID=7
   
      此查詢中的路徑運算式只會傳回那些指定了 LotSize 屬性的 <`Location`> 元素節點。 若述詞針對特定的 <`Location`> 傳回空的序列，則結果中就不會傳回該工作中心位置。  
   
-2.  述詞值只能是 xs: integer、 xs: boolean 或節點\*。 節點\*，述詞評估為任何節點，如果為 True 和 False 空的序列。 任何其他數值類型 (例如 Double 和浮點類型) 都會產生靜態類型錯誤。 只有當產生的整數等於內容位置的值時，運算式的述詞真值才是 True。 此外，只有整數常值和**last （)**函數減少為 1 的已篩選之步驟運算式的基數。  
+2.  述詞值只能是 xs: integer、 xs: boolean 或節點\*。 節點\*，述詞評估為任何節點，如果為 True 和 False 空的序列。 任何其他數值類型 (例如 Double 和浮點類型) 都會產生靜態類型錯誤。 只有當產生的整數等於內容位置的值時，運算式的述詞真值才是 True。 此外，只有整數常值和**last （)** 函數減少為 1 的已篩選之步驟運算式的基數。  
   
      例如，下列查詢會擷取 <`Features`> 元素的第三個子元素節點。  
   
@@ -226,9 +226,9 @@ WHERE CatalogDescription.exist('
   
 -   WHERE 子句會指定[exist （） 方法 （XML 資料類型）](../t-sql/xml/exist-method-xml-data-type.md)。  
   
--   內的路徑運算式**exist （)**方法在第二個步驟中指定述詞。 如果述詞運算式傳回至少有一項功能的序列，則這個述詞運算式的真值為 True。 在此情況下，因為**exist （)**方法會傳回 True，因此會傳回 ProductModelID。  
+-   內的路徑運算式**exist （)** 方法在第二個步驟中指定述詞。 如果述詞運算式傳回至少有一項功能的序列，則這個述詞運算式的真值為 True。 在此情況下，因為**exist （)** 方法會傳回 True，因此會傳回 ProductModelID。  
   
 ## <a name="static-typing-and-predicate-filters"></a>靜態類型及述詞篩選  
- 述詞也可能會影響運算式的靜態推斷類型。 整數常值和**last （)**函數最多一個已篩選之步驟運算式的基數減少。  
+ 述詞也可能會影響運算式的靜態推斷類型。 整數常值和**last （)** 函數最多一個已篩選之步驟運算式的基數減少。  
   
   

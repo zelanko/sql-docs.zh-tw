@@ -2,7 +2,7 @@
 title: 連接到 Sybase (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85cc0d5c5dbea4526afd86fb4efb4b4ec65d7ac9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 8aad8b895c7a66dd31f537f6129598b05a8933a4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>連接到 Sybase (SybaseToSQL)
 使用**連接到 Sybase**對話方塊連接到您想要移轉的 Sybase Adaptive Server Enterprise (ASE) 執行個體。  

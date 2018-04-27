@@ -2,8 +2,8 @@
 title: XQuery 語言參考 (SQL Server) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c242348870d6b6862e02cc8d14ec1fdc184d62e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e9ac63fb610743e540979271dd9ebac32fd6c873
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-language-reference-sql-server"></a>Xquery 語言參考 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
   
  XQuery 是以現有的 XPath 查詢語言為基礎，加上額外支援以獲取更佳的反覆運算、更好的排序結果，以及建構必要 XML 的能力。 XQuery 可在 XQuery 資料模型上運作。 這是 XML 文件與已指定類型及不具類型之 XQuery 結果的摘要。 類型資訊是以 W3C XML 結構描述語言提供的類型為依據。 如果沒有類型資訊可用，XQuery 會將資料處理為不具類型。 這與 XPath 1.0 版處理 XML 的方式相似。  
   
- 若要查詢之變數或資料行中儲存 XML 執行個體**xml**型別，使用[xml 資料類型方法](../t-sql/xml/xml-data-type-methods.md)。 例如，您可以在此宣告的變數**xml**輸入，並查詢它使用**query （)**方法**xml**資料型別。  
+ 若要查詢之變數或資料行中儲存 XML 執行個體**xml**型別，使用[xml 資料類型方法](../t-sql/xml/xml-data-type-methods.md)。 例如，您可以在此宣告的變數**xml**輸入，並查詢它使用**query （)** 方法**xml**資料型別。  
   
 ```  
 DECLARE @x xml  
@@ -74,7 +74,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  本章節的組織是以 World Wide Web Consortium (W3C) XQuery Working Draft 規格為依據。 本章節中提供的部分圖表即採自上述規格。 本章節會比較 Microsoft XQuery 實作與 W3C 規格，描述 Microsoft XQuery 跟 W3C 的不同之處，以及指出不支援的 W3C 功能。 W3C 規格將會位於[http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846)。  
+>  本章節的組織是以 World Wide Web Consortium (W3C) XQuery Working Draft 規格為依據。 本章節中提供的部分圖表即採自上述規格。 本章節會比較 Microsoft XQuery 實作與 W3C 規格，描述 Microsoft XQuery 跟 W3C 的不同之處，以及指出不支援的 W3C 功能。 W3C 規格將會位於[ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

@@ -2,7 +2,7 @@
 title: 專案設定 (Azure SQL DB) (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb155079bc318e9b23944fb2830a64454d3a76de
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 741c45fb95faee927129d073b7132b32c8ecc83d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>專案設定 (Azure SQL DB) (SybaseToSQL)
 Azure SQL 資料庫專案設定可讓您設定 新增連接對話方塊中，而且也允許 活動訊號機制實作 Azure SQL DB 連接中的 Azure SQL DB 資料庫尾碼。  
@@ -45,7 +45,7 @@ Azure SQL DB 窗格位於**專案設定**和**預設專案設定**對話方塊�
   
 應該指定的值在我： ss 的格式 (例如，' 4:45 '或' 0:50 ')。  
   
-**Azure SQL DB Server Suffix**  
+**Azure SQL DB 伺服器後置詞**  
   
 指定 Azure SQL DB 伺服器後置詞  
   

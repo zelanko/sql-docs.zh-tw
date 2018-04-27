@@ -1,16 +1,16 @@
 ---
-title: "count 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: count 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - fn:count function
 - count function [XQuery]
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33f4a34f7c4310fa1513bd90d3dabb9438d1fcb4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5638070e925f018d1865c80da81855543ccf23f2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions---count"></a>彙總函式的計數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回所指定的時序中所包含的項目數目*$arg*。  
+  傳回所指定的時序中所包含的項目數目 *$arg*。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,7 +48,7 @@ fn:count($arg as item()*) as xs:integer
  要計數的項目  
   
 ## <a name="remarks"></a>備註  
- 傳回 0，如果*$arg*是空的序列。  
+ 傳回 0，如果 *$arg*是空的序列。  
   
 ## <a name="examples"></a>範例  
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
@@ -75,7 +75,7 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   該查詢建構包含 <`NoOfWorkStations`> 元素的 XML。  
   
--   **Count （)**函式在 XQuery 主體計數數目 <`Location`> 項目。  
+-   **Count （)** 函式在 XQuery 主體計數數目 <`Location`> 項目。  
   
  以下是結果：  
   

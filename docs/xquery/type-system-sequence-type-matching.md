@@ -1,16 +1,16 @@
 ---
-title: "序列類型比對 |Microsoft 文件"
-ms.custom: 
+title: 序列類型比對 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9cdde5fe0d26b6e3be5645377df17d7d04e8dcd0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>類型系統的序列類型比對
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ ms.lasthandoff: 02/09/2018
   
 -   您可能想知道運算式是傳回 XML 元素或是特定名稱和類型的屬性節點。  
   
- 您可以在序列類型比對中使用 `instance of` 布林運算子。 如需有關`instance of`運算式，請參閱[SequenceType 運算式 &#40;XQuery &#41;](../xquery/sequencetype-expressions-xquery.md).  
+ 您可以在序列類型比對中使用 `instance of` 布林運算子。 如需有關`instance of`運算式，請參閱[SequenceType 運算式&#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)。  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>比較運算式傳回的不可部份完成值類型  
  如果運算式傳回含有不可部份完成值的序列，則您必須尋找序列中值的類型。 下列範例說明如何使用序列類型語法，來評估運算式傳回的不可部份完成值類型。  
   
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>範例：判斷序列是否為空  
- **Empty （)**順序類型可以在序列類型運算式中用來判斷指定的運算式所傳回的序列是否是空的序列。  
+ **Empty （)** 順序類型可以在序列類型運算式中用來判斷指定的運算式所傳回的序列是否是空的序列。  
   
  在下列範例中，XML 結構描述允許 <`root`> 元素為 Nilled：  
   
@@ -239,7 +239,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
   
 -   **d**語法不支援內容類型。  
   
--   **processing-instruction （name)**語法不受支援。  
+-   **processing-instruction （name)** 語法不受支援。  
   
 ## <a name="element-tests"></a>元素測試  
  元素測試是用來比對運算式傳回的元素節點與具有特定名稱和類型的元素節點。 您可以使用這些元素測試：  
@@ -315,7 +315,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>範例 B  
- 下列範例說明如何判斷運算式傳回的節點是否為具有特定名稱的元素節點。 它會使用**element()**測試。  
+ 下列範例說明如何判斷運算式傳回的節點是否為具有特定名稱的元素節點。 它會使用**element()** 測試。  
   
  在下列範例中，XML 執行個體中所要查詢的兩個 <`Customer`> 元素分別為兩種不同類型：`CustomerType` 和 `SpecialCustomerType`。 假設您想要知道運算式傳回的 <`Customer`> 元素的類型。 下列 XML 結構描述集合定義了 `CustomerType` 與 `SpecialCustomerType` 類型。  
   
@@ -433,15 +433,15 @@ RETURN
   
 -   **element （ElementName，TypeName）**不支援。  
   
--   **項目 (\*，TypeName)**不支援。  
+-   **項目 (\*，TypeName)** 不支援。  
   
--   **schema-element()**不支援。  
+-   **schema-element()** 不支援。  
   
--   **schema-attribute(AttributeName)**不支援。  
+-   **schema-attribute(AttributeName)** 不支援。  
   
 -   明確查詢**xsi: type**或**xsi: nil**不支援。  
   
 ## <a name="see-also"></a>另請參閱  
- [型別系統 &#40;XQuery &#41;](../xquery/type-system-xquery.md)  
+ [類型系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

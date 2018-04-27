@@ -1,6 +1,6 @@
 ---
 title: 進階物件選取項目 (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d12981f71960a727557247daafc8f098c061ed2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: fc89e8ef8a6e0bf8d1157bbfae42f9bccf05d49d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>進階的物件選取項目 (MySQLToSQL)
 **進階物件部分**對話方塊可讓您篩選資料庫物件，使用字串和子字串中的物件名稱，然後選取或取消選取這些物件。 SSMA 會執行轉換並移轉作業選取的物件。  

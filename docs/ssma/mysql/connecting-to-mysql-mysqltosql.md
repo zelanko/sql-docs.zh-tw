@@ -1,6 +1,6 @@
 ---
 title: 連接至 MySQL (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b36b626d611896a5af496a0ae02d25dcf44ac83
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 888989c8dbbf7715695f0203e80dcdd768a44a2e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>連接至 MySQL (MySQLToSQL)
 若要移轉至 SQL Server 或 SQL Azure 的 MySQL 資料庫，您必須連接到您想要移轉的 MySQL 資料庫。 當您連線時，SSMA 會取得所有 MySQL 結構描述的相關中繼資料中，然後顯示 MySQL 中繼資料總管 窗格中。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
@@ -72,7 +72,7 @@ MySQL 資料庫的相關中繼資料不會自動更新。 相反地，如果您�
   
     3.  在**密碼**方塊中，指定的使用者名稱輸入的密碼。  
   
-5.  **SSL:**如果您想要安全地連接到 MySQL，請檢查使用的安全通訊端層 (SSL) **SSL**核取方塊。  
+5.  **SSL:** 如果您想要安全地連接到 MySQL，請檢查使用的安全通訊端層 (SSL) **SSL**核取方塊。  
   
 6.  **設定：** ，提供設定 MySQL 透過安全通訊端層 (SSL) 連線的選項。  
   

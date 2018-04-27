@@ -1,16 +1,16 @@
 ---
-title: "position 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: position 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - position function
 - fn:position function
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00ac65b0e0468cb1b4985af92e29cdd0376ea250
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6c7ec3c4bcd0d330d69956d47f3a92c30ed4957
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="context-functions---position-xquery"></a>內容函數的位置 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>備註  
- 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， **fn:position()**只能用於內容相依述詞的內容。 具體而言，它只能用於括號 ([ ]) 內。針對此函數所做的比較不會在靜態類型推斷期間減少基數。  
+ 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， **fn:position()** 只能用於內容相依述詞的內容。 具體而言，它只能用於括號 ([ ]) 內。針對此函數所做的比較不會在靜態類型推斷期間減少基數。  
   
 ## <a name="examples"></a>範例  
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
@@ -78,7 +78,7 @@ WHERE CatalogDescription is not null
   
 -   查詢主體建構的 XML\<產品 > 項目**ProductModelID**和**ProductModelName**屬性，且具有以子元素傳回的產品功能。  
   
--   **Position （)**函式用於述詞中決定的位置\<功能 > 子元素內容中的。 如果它是第一個或第二個功能，就會傳回它。  
+-   **Position （)** 函式用於述詞中決定的位置\<功能 > 子元素內容中的。 如果它是第一個或第二個功能，就會傳回它。  
   
 -   如果陳述式加入\<該處是更 / > 元素加入結果中，如果產品目錄中有兩個以上的功能。  
   

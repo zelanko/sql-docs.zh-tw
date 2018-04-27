@@ -1,6 +1,6 @@
 ---
 title: SSMA 安裝 Oracle 用戶端 (OracleToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 90e1f2b745ef0a093fb7a5b2ebf662aa969154f1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bfbc8486c74a6bd90832ab86ec3fee7cf236275d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>安裝的 SSMA for Oracle 用戶端 (OracleToSQL)
 SSMA 用戶端包含的程式檔案，執行下列工作：  
@@ -41,22 +41,22 @@ SSMA 用戶端包含的程式檔案，執行下列工作：
   
 本主題提供的安裝必要條件和安裝 SSMA 的指示。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
 SSMA 設計成使用 Oracle 9 或更新版本以及所有版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 SSMA 安裝之前，請確定電腦符合下列需求：  
   
 -   Windows 7 或更新版本中，或 Windows Server 2008 或更新版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 或更新版本。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版或更新版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版位於[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]產品媒體。 您也可以取得從[.NET Framework 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=48882)。  
   
 -   Oracle 用戶端 9.0 或更新版本，並連線到您想要移轉的 Oracle 資料庫。 Oracle 用戶端版本必須是相同的版本或 Oracle 資料庫版本比更新的版本。  
   
-    從 Oracle 產品媒體或從 Oracle 網站，您可以安裝 Oracle 用戶端。 如需連線資訊，請參閱[連接到 Oracle 資料庫 &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
+    從 Oracle 產品媒體或從 Oracle 網站，您可以安裝 Oracle 用戶端。 如需連線資訊，請參閱[連接到 Oracle 資料庫&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
   
--   存取和裝載目標執行個體的電腦上有足夠的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或其中您將會資料庫物件和資料移轉的 Azure SQL DB。 如需詳細資訊，請參閱[連接到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)。  
+-   存取和裝載目標執行個體的電腦上有足夠的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或其中您將會資料庫物件和資料移轉的 Azure SQL DB。 如需詳細資訊，請參閱[連接到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)。  
   
 -   4 GB RAM，建議使用。  
   
@@ -67,7 +67,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 **SSMA 用戶端安裝**  
   
-1.  按兩下 SSMA for Oracle  *n* 。Install.exe 其中 *n* 是組建編號。  
+1.  按兩下 SSMA for Oracle *n*。Install.exe 其中*n*是組建編號。  
   
 2.  在 歡迎使用 頁面上，按一下 **下一步**。  
   
@@ -84,9 +84,9 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 預設安裝位置是 C:\Program Files\Microsoft SQL Server 移轉小幫手 for Oracle。  
   
-SSMA 程式除了檔案之外，您也必須安裝 SSMA for Oracle 延伸模組組件上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[安裝 SQL Server &#40; OracleToSQL &#41; 的 SSMA 元件](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)。  
+SSMA 程式除了檔案之外，您也必須安裝 SSMA for Oracle 延伸模組組件上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[安裝 SQL Server 上的 SSMA 元件&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)。  
   
-## <a name="see-also"></a>請參閱  
-[SSMA 元件安裝 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
-[將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[安裝 SQL Server 上的 SSMA 元件&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[SQL server 資料庫移轉 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

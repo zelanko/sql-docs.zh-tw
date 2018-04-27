@@ -1,6 +1,6 @@
 ---
 title: 存取清查結構描述 (AccessToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -48,11 +48,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a279ed084f4d7dc3b2574ed71332acf9bfe61c8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>存取清查結構描述 (AccessToSQL)
 下列章節將說明當您匯出要存取結構描述時所建立的 SSMA 資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 04/06/2018
 |**TableId**|**uniqueidentifier**|唯一識別資料表的 GUID。 此資料行也是資料表的主索引鍵。|  
 |**TableName**|**nvarchar(4000)**|資料表的名稱。|  
 |**RowsCount**|**int**|資料表中的資料列數。|  
-|**ValidationRule**|**nvarchar(4000)**|定義資料表的有效輸入規則。 如果不有任何驗證規則，此欄位會包含空字串。|  
+|**驗證規則**|**nvarchar(4000)**|定義資料表的有效輸入規則。 如果不有任何驗證規則，此欄位會包含空字串。|  
 |**LinkedTable**|**nvarchar(4000)**|另一個資料表，如果有的話，與資料表相連結。 連結資料表可允許新增、 刪除及更新的其他資料表使用此資料表。|  
 |**ExternalSource**|**nvarchar(4000)**|資料來源，如果有的話，會與資料表相關聯。 如果資料表有關聯，它會有此欄位中指定外部資料來源。|  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 04/06/2018
 |**IsAutoIncrement**|**bit**|指定是否資料行就會自動遞增的整數值。 如果值為 1，會自動遞增的整數。|  
 |**Ordinal**|**smallint**|在資料表中，從零開始的資料行的順序。|  
 |**DefaultValue**|**nvarchar(4000)**|資料行的預設值。|  
-|**ValidationRule**|**nvarchar(4000)**|用來驗證資料的規則新增至或更新資料行中。|  
+|**驗證規則**|**nvarchar(4000)**|用來驗證資料的規則新增至或更新資料行中。|  
   
 ## <a name="indexes"></a>索引  
 索引中繼資料匯出至**SSMA_Access_InventoryIndexes**資料表。 此表格包含下列資料行：  
@@ -188,7 +188,7 @@ ms.lasthandoff: 04/06/2018
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含模組的資料庫。|  
 |**ModuleId**|**int**|遞增整數可識別模組。 此資料行是資料表的主索引鍵。|  
-|**ModuleName**|**nvarchar(4000)**|模組的名稱。|  
+|**模組名稱**|**nvarchar(4000)**|模組的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
 [匯出 Access 清查](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  

@@ -1,6 +1,6 @@
 ---
 title: 全域設定 （記錄） (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c0014fc222c045a0a35766f1d20225c3bf68866
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 07b857c7fbd9d303eb100e6bf7df5785f1ec3f6c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging--mysqltosql"></a>全域設定 （記錄） (MySQLToSQL)
 使用**通用設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您需要在使用產品支援時，才變更這些設定。  
@@ -40,14 +40,14 @@ ms.lasthandoff: 04/06/2018
 |----------|---------------|  
 |**[所有類別目錄]**|用來設定下列選項的所有的記錄層級。|  
 |**Collector**|會收集有關來源結構描述的中繼資料，並將它儲存至專案。|  
-|**Converter**|將來源資料庫物件，例如資料表和預存程序的結構轉換成對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構。|  
+|**轉換程式**|將來源資料庫物件，例如資料表和預存程序的結構轉換成對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構。|  
 |**資料遷移程式**|將資料從來源資料庫遷移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
-|**Formatter**|產生指令碼轉換子的子元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構描述。|  
+|**格式器**|產生指令碼轉換子的子元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構描述。|  
 |**圖形化使用者介面**|當您使用 SSMA 工具時出現的訊息。|  
-|**Linker**|解析的 SQL 識別碼，並提供其他元件的資訊。|  
+|**連結器**|解析的 SQL 識別碼，並提供其他元件的資訊。|  
 |**其他**|不在任何其他類別目錄中的所有訊息。|  
-|**Parser**|剖析來源結構描述。|  
-|**Synchronizer**|載入來源資料庫將物件到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
+|**剖析器**|剖析來源結構描述。|  
+|**同步器**|載入來源資料庫將物件到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |**TreeConverter**|將轉換成來源中繼資料中的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料。|  
   
 每個選項在**訊息層級**，SSMA 設定下列的記錄層級的其中一個：  

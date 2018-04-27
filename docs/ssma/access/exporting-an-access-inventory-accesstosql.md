@@ -1,6 +1,6 @@
 ---
 title: 匯出存取清查 (AccessToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 834b8d2b1be548a8be1114d6b536475eb52d4441
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 4d3968104ed7e9dec525afa3bd3e0cd7b8dcbb96
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>匯出存取清查 (AccessToSQL)
 如果您有多個存取資料庫，而且您不確定要將移轉至哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以匯出專案中的所有存取資料庫的清查。 您可以檢閱，然後查詢來判斷哪一個資料庫並移轉這些資料庫中的物件的清查中繼資料。 這個清查可讓您快速尋找問題解答，如下所示：  

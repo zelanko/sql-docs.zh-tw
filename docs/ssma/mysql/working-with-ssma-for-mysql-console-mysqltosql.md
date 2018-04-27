@@ -1,6 +1,6 @@
 ---
 title: 使用 SSMA for MySQL 主控台 (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c14c4bcbe30c99794673ed4a08389e451765885
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a0419c361f32b2f57068abdbebda8b7689a46431
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>使用 SSMA for MySQL 主控台 (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 現在可透過在命令列主控台應用程式存取移轉小幫手 (SSMA) 的 MySQL。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式，SSMA 啟用指令碼層級互動、 減少移轉循環和縮放移轉作業。  

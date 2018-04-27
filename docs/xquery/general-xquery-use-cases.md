@@ -1,16 +1,16 @@
 ---
-title: "一般 XQuery 使用案例 |Microsoft 文件"
-ms.custom: 
+title: 一般 XQuery 使用案例 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - XQuery, general usage cases
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
-caps.latest.revision: 
+caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13b88814a7d0d9b0d0154b8e010b6aa76c85c6e6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 33527421daf7f474615f29b905921d7526a6483b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="general-xquery-use-cases"></a>一般 XQuery 使用案例
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ WHERE CatalogDescription is not null
   
 -   此查詢主體建構所需的 XML。  
   
--   在 WHERE 子句中， **exist （)**方法用來尋找包含產品目錄描述的資料列。 也就是包含 <`ProductDescription`> 元素的 XML。  
+-   在 WHERE 子句中， **exist （)** 方法用來尋找包含產品目錄描述的資料列。 也就是包含 <`ProductDescription`> 元素的 XML。  
   
  以下是結果：  
   
@@ -80,7 +80,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- 下列查詢擷取相同資訊，但只針對目錄描述中的規格 (<`Specifications`> 元素) 有包含重量 (<`Weight`> 元素) 的那些產品型號。 此範例使用 WITH XMLNAMESPACES 來宣告 pd 前置詞及其命名空間繫結。 如此一來，繫結都不描述**query （)**方法和**exist （)**方法。  
+ 下列查詢擷取相同資訊，但只針對目錄描述中的規格 (<`Specifications`> 元素) 有包含重量 (<`Weight`> 元素) 的那些產品型號。 此範例使用 WITH XMLNAMESPACES 來宣告 pd 前置詞及其命名空間繫結。 如此一來，繫結都不描述**query （)** 方法和**exist （)** 方法。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -95,7 +95,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- 在上述查詢中， **exist （)**方法**xml**資料型別中的 WHERE 子句會檢查以查看是否有 <`Weight`> 中的項目 <`Specifications`> 項目。  
+ 在上述查詢中， **exist （)** 方法**xml**資料型別中的 WHERE 子句會檢查以查看是否有 <`Weight`> 中的項目 <`Specifications`> 項目。  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. 尋找其目錄描述中含有正面角度和小圖片之產品型號的產品型號識別碼  
  XML 產品目錄描述包含產品圖片，即 <`Picture`> 元素。 每一張圖片有數個屬性。 這些屬性包括圖片角度 (<`Angle`> 元素) 和大小 (<`Size`> 元素)。  
@@ -126,9 +126,9 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
  請注意下列項目是從上一個查詢而來：  
   
--   在 WHERE 子句中， **exist （)**方法用來擷取包含產品目錄描述與資料列 <`Picture`> 項目。  
+-   在 WHERE 子句中， **exist （)** 方法用來擷取包含產品目錄描述與資料列 <`Picture`> 項目。  
   
--   WHERE 子句使用**value （)**方法兩次，來比較的值 <`Size`> 和 <`Angle`> 項目。  
+-   WHERE 子句使用**value （)** 方法兩次，來比較的值 <`Size`> 和 <`Angle`> 項目。  
   
  以下是部份結果：  
   
@@ -258,7 +258,7 @@ WHERE CatalogDescription is not NULL
   
  請注意下列項目是從上一個查詢而來：  
   
--   FOR ...RETURN 迴圈結構擷取前兩個產品功能。 **Position （)**函數用來尋找序列中項目的位置。  
+-   FOR ...RETURN 迴圈結構擷取前兩個產品功能。 **Position （)** 函數用來尋找序列中項目的位置。  
   
 ### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>F. 從產品目錄描述中尋找結尾是 "ons" 的元素名稱  
  下列查詢搜尋目錄描述，並傳回其名稱結尾是 "ons" 之 <`ProductDescription`> 元素中的所有元素。  
@@ -304,15 +304,15 @@ WHERE CatalogDescription.value('
      contains( string( (/pd:ProductDescription/pd:Summary)[1] ),"Aerodynamic")','bit') = 1  
 ```  
   
- 請注意，SELECT 查詢指定**query （)**和**value （)**方法**xml**資料型別。 因此，不在兩個不同的查詢初構中重複命名空間宣告兩次，而是在查詢中使用前置詞 pd，並且只使用 WITH XMLNAMESPACES 定義一次。  
+ 請注意，SELECT 查詢指定**query （)** 和**value （)** 方法**xml**資料型別。 因此，不在兩個不同的查詢初構中重複命名空間宣告兩次，而是在查詢中使用前置詞 pd，並且只使用 WITH XMLNAMESPACES 定義一次。  
   
  請注意下列項目是從上一個查詢而來：  
   
 -   WHERE 子句用來只擷取其目錄描述的 <`Summary`> 元素中包含 "Aerodynamic" 一字的資料列。  
   
--   **Contains （)**函式用來查看文字，是否要包含在文字。  
+-   **Contains （)** 函式用來查看文字，是否要包含在文字。  
   
--   **Value （)**方法**xml**資料型別會比較所傳回的值**contains （)**設為 1。  
+-   **Value （)** 方法**xml**資料型別會比較所傳回的值**contains （)** 設為 1。  
   
  以下是結果：  
   
@@ -343,7 +343,7 @@ AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft
   
  請注意下列項目是從上一個查詢而來：  
   
--   如果**exist （)**方法中的 WHERE 子句會傳回 False (0)，傳回產品型號識別碼。 否則，不傳回它。  
+-   如果**exist （)** 方法中的 WHERE 子句會傳回 False (0)，傳回產品型號識別碼。 否則，不傳回它。  
   
 -   因為所有產品描述都包含 <`Picture`> 元素，所以此案例中的結果集是空的。  
   

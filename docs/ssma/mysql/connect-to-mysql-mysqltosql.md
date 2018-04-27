@@ -1,6 +1,6 @@
 ---
 title: 連接到 MySQL (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5ed12698026172f7ef2ef080fd8e68d64cf51c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 4b0a3565b466d132f829000d519195d2fedb27dc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>連接到 MySQL (MySQLToSQL)
 使用**連接到 MySQL**對話方塊連接到您想要移轉的 MySQL 資料庫。  

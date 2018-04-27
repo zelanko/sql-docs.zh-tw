@@ -1,6 +1,6 @@
 ---
 title: 移除 SSMA for MySQL 元件 (MySQLToSql) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adf008b1a6bbcd584c0d3c0ee90dcb4345cf1819
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a62a3f9a3fdb5e6876cb6ac27d4f9f1fb2500cc5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>移除 SSMA for MySQL 元件 (MySQLToSql)
 當您完成將資料庫移轉至 MySQL 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可能想要解除安裝 SSMA 元件。 您可以在任何時間，以解除安裝用戶端元件。 不過，如果您解除安裝延伸模組組件從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然後 SSMA 將不再支援使用伺服器端資料移轉引擎與目標資料庫 (SQL Server/SQL Azure) 的資料從 MySQL 移轉。  

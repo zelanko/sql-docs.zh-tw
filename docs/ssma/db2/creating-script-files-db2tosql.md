@@ -1,6 +1,6 @@
 ---
 title: 建立指令碼檔案 (DB2ToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,18 +21,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c07c232e22ba41899846f6e9cb5e6ecfa5783be
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f56d975aa2826c5e35465489d78a7bc193dc8295
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-db2tosql"></a>建立指令碼檔案 (DB2ToSQL)
 第一個步驟之前啟動 SSMA 主控台應用程式。 若要建立指令碼檔案，並在必要時建立的變數值的檔案和伺服器連接檔案。  
   
 指令碼檔案可以分成三個區段，viz..,:  
   
-1.  **config:**可讓使用者設定的主控台應用程式的組態參數。  
+1.  **config:** 可讓使用者設定的主控台應用程式的組態參數。  
   
 2.  **伺服器：**可讓使用者設定來源/目標伺服器定義。 這也可以在不同的伺服器連接檔案中。  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/06/2018
   
     -   來源-使用-上次使用 ="true"（預設值） 或來源伺服器 ="source_servername"  
   
-    -   target-use-last-used="true" (default) or target-server="target_servername"  
+    -   目標為使用-上次使用 ="true"（預設值） 或目標伺服器 ="target_servername"  
   
     **範例：**  
   
@@ -125,11 +125,11 @@ ms.lasthandoff: 04/06/2018
   
     模式包括：  
   
-    -   **詢問使用者-**會提示使用者 continue('yes') 或 out ('no') 的錯誤。  
+    -   **詢問使用者-** 會提示使用者 continue('yes') 或 out ('no') 的錯誤。  
   
-    -   **錯誤-**主控台會顯示錯誤並暫停執行。  
+    -   **錯誤-** 主控台會顯示錯誤並暫停執行。  
   
-    -   **繼續-**主控台會繼續執行。  
+    -   **繼續-** 主控台會繼續執行。  
   
     預設模式是**錯誤**。  
   
@@ -243,9 +243,9 @@ ms.lasthandoff: 04/06/2018
     </output-providers>  
     ```  
   
-7.  **停止作業：**中間作業期間，如果使用者想要停止作業，然後**' Ctrl + C'**快速鍵可用。 SSMA DB2 主控台將會等到作業完成，並終止主控台執行。  
+7.  **停止作業：**中間作業期間，如果使用者想要停止作業，然後 **' Ctrl + C'** 快速鍵可用。 SSMA DB2 主控台將會等到作業完成，並終止主控台執行。  
   
-    如果使用者想要停止執行，然後**' Ctrl + C'**快速鍵可以按下一次的 SSMA 主控台應用程式突然終止。  
+    如果使用者想要停止執行，然後 **' Ctrl + C'** 快速鍵可以按下一次的 SSMA 主控台應用程式突然終止。  
   
 8.  **進度的提供者：**通知每個主控台命令的進度。 預設為停用。 進度報告的屬性組成：  
   
@@ -400,7 +400,7 @@ ms.lasthandoff: 04/06/2018
 指令碼命令的完整清單位於[執行 SSMA 主控台&#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="script-file-validation"></a>指令碼檔案驗證  
-使用者可以輕鬆地驗證自己的指令碼檔案對結構描述定義檔**'O2SSConsoleScriptSchema.xsd'**可用 '結構描述' 資料夾中。  
+使用者可以輕鬆地驗證自己的指令碼檔案對結構描述定義檔 **'O2SSConsoleScriptSchema.xsd'** 可用 '結構描述' 資料夾中。  
   
 ## <a name="next-step"></a>下一個步驟  
 在操作主控台的下一個步驟是[建立變數值的檔案&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)。  

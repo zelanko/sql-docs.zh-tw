@@ -2,7 +2,7 @@
 title: SSMA 主控台 (SybaseToSQL) 中的命令列選項 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4926712b260fe20dc42518ed1bccb70bb0ab306c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b76d8debc23900a72945e6cf0a37d8d54d012e64
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 主控台 (SybaseToSQL) 中的命令列選項
 Microsoft 提供一組強固的執行及控制 SSMA 活動的命令列選項。 這可確保各節詳細說明相同。  

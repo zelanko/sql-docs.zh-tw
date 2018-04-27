@@ -1,6 +1,6 @@
 ---
 title: 專案設定 （轉換） (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 47bb86d67219dd5656a6864a4603adc382a36128
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>專案設定 （轉換） (MySQLToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何將 MySQL 語法轉換為 SQL Server 或 SQL Azure 的語法的設定。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/06/2018
 |||  
 |-|-|  
 |**詞彙**|**[定義]**|  
-|**週框方塊的預設 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 空間索引**|定義預設值為 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 的週框方塊用於空間索引的參數。<br /><br />**預設模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**開放式模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**完整模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**週框方塊的預設 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 空間索引**|定義預設值為 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 的週框方塊用於空間索引的參數。<br /><br />**預設模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**開放式模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**完整模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**預設為空間索引的的方格密度**|為 LEVEL_1、 LEVEL_2、 LEVEL_3，以及用於空間索引的方格密度的 LEVEL_4 定義預設值。<br /><br />**預設模式**<br /><br />LEVEL_1： 預設值<br /><br />LEVEL_2： 預設值<br /><br />LEVEL_3： 預設值<br /><br />LEVEL_4： 預設值<br /><br />**開放式模式**<br /><br />LEVEL_1： 預設值<br /><br />LEVEL_2： 預設值<br /><br />LEVEL_3： 預設值<br /><br />LEVEL_4： 預設值<br /><br />**完整模式**<br /><br />LEVEL_1： 預設值<br /><br />LEVEL_2： 預設值<br /><br />LEVEL_3： 預設值<br /><br />LEVEL_4： 預設值|  
   
 ### <a name="transactions"></a>交易  

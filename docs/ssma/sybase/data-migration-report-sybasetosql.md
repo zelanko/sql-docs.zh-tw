@@ -2,7 +2,7 @@
 title: 資料移轉報告 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdb74aa52f1af141078bd63f1b688a02a91b6862
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 8d8f7b30261bd8b7540a16701b09fcd9cb32511b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-migration-report-sybasetosql"></a>資料移轉報告 (SybaseToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

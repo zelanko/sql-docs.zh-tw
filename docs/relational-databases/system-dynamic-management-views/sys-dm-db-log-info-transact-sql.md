@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_log_info (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -27,15 +27,15 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c19ffdd3cdee50b12d43b70fbbb0e8f95c150bab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e180bf8257f97bbdab086b485bea0425453462c5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 傳回[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)交易記錄的資訊。 請注意，所有交易記錄檔會都併入資料表輸出。 在輸出中的每個資料列代表 VLF 中的交易記錄檔，並提供該記錄檔中的 VLF 的相關資訊。
 
@@ -43,7 +43,8 @@ ms.lasthandoff: 04/16/2018
   
 ```  
 sys.dm_db_log_info ( database_id )  
-```  
+``` 
+
 ## <a name="arguments"></a>引數  
  *database_id* |NULL |預設值  
  資料庫的識別碼。 *database_id* 為 **int**。有效輸入如下的資料庫、 NULL 或預設的識別碼。 預設值是 NULL。 NULL 和 DEFAULT 是目前資料庫內容中的對等值。
@@ -68,10 +69,10 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar(48)** |[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)記錄檔的記錄建立[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
 
 ## <a name="remarks"></a>備註
- `sys.dm_db_log_info`動態管理函數會取代`DBCC LOGINFO`陳述式。 
+`sys.dm_db_log_info`動態管理函數會取代`DBCC LOGINFO`陳述式。    
  
 ## <a name="permissions"></a>Permissions  
- 需要`VIEW DATABASE STATE`資料庫的權限。  
+需要`VIEW DATABASE STATE`資料庫的權限。  
   
 ## <a name="examples"></a>範例  
   

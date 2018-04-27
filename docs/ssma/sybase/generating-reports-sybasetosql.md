@@ -2,7 +2,7 @@
 title: 產生報表 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -25,18 +25,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53dc69221ad1fff391db85987628e14f798c73e7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 4855e73b947c46c21cdb4c966d93c406a9e6fe46
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-sybasetosql"></a>產生報表 (SybaseToSQL)
 使用命令來執行特定活動的報表會在物件樹狀目錄層級的 SSMA 主控台產生。  
   
 使用下列程序來產生報表：  
   
-1.  指定**寫入摘要的報表-對**參數。 （如果有指定），將會儲存為檔案名稱的相關的報表，或在您指定的資料夾中。 檔案名稱是系統預先定義的位置下, 表中所述**&lt;n&gt;**是唯一的檔案數目與每個執行的相同命令的數字遞增。  
+1.  指定**寫入摘要的報表-對**參數。 （如果有指定），將會儲存為檔案名稱的相關的報表，或在您指定的資料夾中。 檔案名稱是系統預先定義的位置下, 表中所述**&lt;n&gt;** 是唯一的檔案數目與每個執行的相同命令的數字遞增。  
   
     報表 vis-à-vis 命令如下：  
   
@@ -45,10 +45,10 @@ ms.lasthandoff: 04/06/2018
     |**Sl。[否]。**|**Command**|**報表標題**|  
     |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|移轉資料|DataMigrationReport&lt;n&gt;.XML|  
+    |3|移轉資料|DataMigrationReport&lt;n&gt;。XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |5|同步處理目標|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |6|從資料庫重新整理|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > 輸出報表與不同評估報表項目。 前者是一種報表執行的命令時的效能，後者是以程式設計方式使用的 XML 報表。  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/06/2018
 ```  
   
 ### <a name="synchronize-target"></a>同步處理目標：  
-命令**同步處理目標**具有**報告錯誤至**參數，指定同步處理作業的錯誤報表的位置。 然後，名稱的檔案**TargetSynchronizationReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;**是唯一的檔案數目與每個執行的相同命令的數字遞增。  
+命令**同步處理目標**具有**報告錯誤至**參數，指定同步處理作業的錯誤報表的位置。 然後，名稱的檔案**TargetSynchronizationReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目與每個執行的相同命令的數字遞增。  
   
 **注意：**如果指定的資料夾路徑，則 '報告錯誤-對' 參數就會變成命令 '同步處理目標' 的選用屬性。  
   
@@ -119,14 +119,14 @@ ms.lasthandoff: 04/06/2018
   
 **-錯誤：**指定是否要指定同步處理錯誤視為警告或錯誤。 在錯誤的可用選項：  
   
--   report-total-as-warning  
+-   報表-總計-為-警告  
   
--   report-each-as-warning  
+-   報表-每個-為-警告  
   
--   fail-script  
+-   失敗指令碼  
   
 ### <a name="refresh-from-database"></a>重新整理從-資料庫：  
-命令**從資料庫重新整理**具有**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;**是唯一的檔案數目與每個執行的相同命令的數字遞增。  
+命令**從資料庫重新整理**具有**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目與每個執行的相同命令的數字遞增。  
   
 **注意：**如果指定的資料夾路徑，則 '報告錯誤-對' 參數就會變成命令 '同步處理目標' 的選用屬性。  
   
@@ -149,11 +149,11 @@ ms.lasthandoff: 04/06/2018
   
 **-錯誤：**指定是否要指定重新整理錯誤視為警告或錯誤。 在錯誤的可用選項：  
   
--   report-total-as-warning  
+-   報表-總計-為-警告  
   
--   report-each-as-warning  
+-   報表-每個-為-警告  
   
--   fail-script  
+-   失敗指令碼  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SSMA 主控台 (Sybase)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  

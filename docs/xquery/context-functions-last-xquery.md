@@ -1,16 +1,16 @@
 ---
-title: "last 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: last 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - last function [XQuery]
 - fn:last function
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c42eec0fbfe511613dbb7b1d5a7b5cf0178a391c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c461c100d9b282158c4ca7379d78ecb88de84bf1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="context-functions---last-xquery"></a>內容函數的最後一個 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ fn:last() as xs:integer
 ```  
   
 ## <a name="remarks"></a>備註  
- 在 SQL Server， **fn:last()**只能用於內容相依述詞的內容。 具體而言，它只能在括號 (`[ ]`) 內使用。  
+ 在 SQL Server， **fn:last()** 只能用於內容相依述詞的內容。 具體而言，它只能在括號 (`[ ]`) 內使用。  
   
 ## <a name="examples"></a>範例  
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. 使用 last() XQuery 函數以擷取最後兩個製造步驟  
- 下列查詢會擷取特定產品型號的最後兩個製造步驟。 值，則製造步驟所傳回的數目**last （)**此查詢中使用函數以擷取最後兩個製造步驟。  
+ 下列查詢會擷取特定產品型號的最後兩個製造步驟。 值，則製造步驟所傳回的數目**last （)** 此查詢中使用函數以擷取最後兩個製造步驟。  
   
 ```  
 SELECT ProductModelID, Instructions.query('   
@@ -68,7 +68,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 在上述查詢中， **last （)**函式在 /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]`傳回製造步驟數目。 此值是用以擷取工作中心位置的最後一個製造步驟。  
+ 在上述查詢中， **last （)** 函式在 /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]`傳回製造步驟數目。 此值是用以擷取工作中心位置的最後一個製造步驟。  
   
  以下是結果：  
   

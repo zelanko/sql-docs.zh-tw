@@ -1,6 +1,6 @@
 ---
 title: 載入已轉換成 SQL Server (DB2ToSQL) 資料庫物件 |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3997b2e1284513d92c76aefbb582f6cbebb81c7b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f1b3aac2fad273e8df34828c1ceba9ed9b3a3b3f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>載入已轉換成 SQL Server (DB2ToSQL) 資料庫物件
 DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以載入到產生的資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以讓 SSMA 建立物件，或您可以編寫物件指令碼，並自行執行指令碼。 此外，SSMA 可讓您更新目標中繼資料的實際內容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。  

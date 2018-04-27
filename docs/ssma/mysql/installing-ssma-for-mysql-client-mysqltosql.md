@@ -1,6 +1,6 @@
 ---
 title: SSMA 安裝 MySQL 用戶端 (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19e2fe3b9358ca1056a89cc7a801254cf87381fc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: cb87569f9d3eb2cddfcc3953eba80fe03eae6296
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安裝的 SSMA for MySQL 用戶端 (MySQLToSQL)
 SSMA for MySQL 用戶端包含的程式檔案，執行下列工作：  

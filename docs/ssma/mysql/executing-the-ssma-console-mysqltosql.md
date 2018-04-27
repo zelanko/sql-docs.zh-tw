@@ -1,6 +1,6 @@
 ---
 title: 執行 SSMA 主控台 (MySQLToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fb0022b9e4dd222fd3d19ed4dc3e6d03fc740bb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b8946a6abdce48e55624965d1dea8b17c40760ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>執行 SSMA 主控台 (MySQLToSQL)
 Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活動。  
@@ -115,7 +115,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
 ```  
 **Command**  
   
-close-project  
+關閉專案  
                   ： 關閉移轉專案。  
   
 **指令碼**  
@@ -127,7 +127,7 @@ close-project
 ```  
 **Command**  
   
-close-project  
+關閉專案  
                   ： 關閉移轉專案。  
   
 **指令碼**  
@@ -209,7 +209,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+連接目標資料庫  
   
 1.  連接到目標 SQL Server 或 SQL Azure 資料庫，並完全載入目標資料庫的高的層級中繼資料，但不是中繼資料。  
   
@@ -449,7 +449,7 @@ convert-schema
   
 **Command**  
   
-map-schema  
+對應結構描述  
   
 目標結構描述的來源資料庫的結構描述對應。  
   
@@ -477,7 +477,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+同步處理目標  
   
 1.  目標物件會同步處理目標資料庫。  
   
@@ -493,11 +493,11 @@ synchronize-target
   
 3.  `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 在錯誤的可用選項：  
   
-    -   report-total-as-warning  
+    -   報表-總計-為-警告  
   
-    -   report-each-as-warning  
+    -   報表-每個-為-警告  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 4.  `report-errors-to:` 同步處理作業 （選擇性的屬性） 如果只指定資料夾路徑，然後檔案依名稱指定的錯誤報表位置**TargetSynchronizationReport.XML**建立。  
   
@@ -542,7 +542,7 @@ synchronize-target
 ```  
 **Command**  
   
-refresh-from-database  
+從資料庫重新整理  
   
 1.  重新整理資料庫中的來源物件。  
   
@@ -556,11 +556,11 @@ refresh-from-database
   
 3.  `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 在錯誤的可用選項：  
   
-    -   report-total-as-warning  
+    -   報表-總計-為-警告  
   
-    -   report-each-as-warning  
+    -   報表-每個-為-警告  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 4.  `report-errors-to:` 同步處理作業 （選擇性的屬性） 如果只指定資料夾路徑，然後檔案依名稱指定的錯誤報表位置**SourceDBRefreshReport.XML**建立。  
   

@@ -1,16 +1,16 @@
 ---
-title: "在路徑運算式步驟中指定節點測試 |Microsoft 文件"
-ms.custom: 
+title: 在路徑運算式步驟中指定節點測試 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - axis step [XQuery]
 - node test [XQuery]
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fd2f4955285cec9ba0569ac39138088b8015df5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3ff610c579553847dc82193cff9a28b474f0b433
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-node-test"></a>路徑運算式的指定節點測試
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [零或多個步驟限定詞 （選擇性）](../xquery/path-expressions-specifying-predicates.md)  
   
- 如需詳細資訊，請參閱[路徑運算式 &#40;XQuery &#41;](../xquery/path-expressions-xquery.md).  
+ 如需詳細資訊，請參閱[路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。  
   
  節點測試是一種條件，而且是路徑運算式中軸步的第二個部份。 步驟所選取的所有節點必須符合此條件。 對於路徑運算式 `/child::ProductDescription`，節點測試是 `ProductDescription`。 此步驟只會擷取名稱是 ProductDescription 的元素節點子系。  
   

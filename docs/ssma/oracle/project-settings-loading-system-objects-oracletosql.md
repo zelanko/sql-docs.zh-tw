@@ -1,27 +1,28 @@
 ---
-title: "專案設定 （載入系統物件） (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 專案設定 （載入系統物件） (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 28736a939c3ad2a73c0924901b79ce8f9954982b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 598f7726c2bb01b2b57cc98817716821b9112ca1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>專案設定 （載入系統物件） (OracleToSQL)
 [載入系統物件] 頁面的**專案設定** 對話方塊可讓您指定哪些 Oracle 系統物件 SSMA 會將轉換和載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -35,21 +36,21 @@ ms.lasthandoff: 12/21/2017
 ## <a name="default-settings"></a>預設值  
 系統物件的轉換會耗用系統資源，並花的時間。 若要改善效能，SSMA 只選取最常使用的系統物件，如下列清單所示：  
   
--   SYS。DBMS_OUTPUT  
+-   SYS.DBMS_OUTPUT  
   
--   SYS。DBMS_PIPE  
+-   SYS.DBMS_PIPE  
   
--   SYS。DBMS_UTILITY  
+-   SYS.DBMS_UTILITY  
   
 -   SYS。標準  
   
--   SYS。UTL_FILE  
+-   SYS.UTL_FILE  
   
--   SYS。DBMS_LOB  
+-   SYS.DBMS_LOB  
   
--   SYS。DBMS_SQL  
+-   SYS.DBMS_SQL  
   
--   SYS。DBMS_SESSION  
+-   SYS.DBMS_SESSION  
   
 如果 Oracle 物件參考其他系統物件，您應該選取這些物件。 如果您未選取 Oracle 資料庫物件所參考的系統物件，SSMA 會報告轉換錯誤。 如果您收到因遺漏的系統物件的轉換錯誤，請在此對話方塊中選取遺漏的物件。 接著，您可以重複視需要轉換。  
   

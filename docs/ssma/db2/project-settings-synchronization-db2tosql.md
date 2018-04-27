@@ -1,6 +1,6 @@
 ---
 title: 專案 Settings(Synchronization) (DB2ToSQL) |Microsoft 文件
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da4be629e37646b10011c76f5a78a2cde246865e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9416a0162eb08f40f8fced7434d1bf965dfe20bb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>專案 Settings(Synchronization) (DB2ToSQL)
 同步處理頁面**專案設定**對話方塊包含自訂如何 SSMA 載入並重新整理資料庫物件，例如資料表和預存程序，到設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

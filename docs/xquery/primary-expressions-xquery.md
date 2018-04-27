@@ -1,16 +1,16 @@
 ---
-title: "主要運算式 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 主要運算式 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - literals [XQuery]
 - context item expressions [XQuery]
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 339cb237a14869c2d747d81e32bc572ba003a5e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6ee901d54e5cf68eb5de1e20c448289eab83dbfb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="primary-expressions-xquery"></a>主要運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
  字串常也可以包含字元參考、Unicode 字元的 XML 樣式參考，是由十進位或十六進位的字碼指標所識別。 歐元符號，例如由字元參考 」 （& s)\#8364;"。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用為基礎進行剖析的 XML 1.0 版。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 XML 1.0 版做為剖析的基礎。  
   
 ### <a name="examples"></a>範例  
  下列範例說明常值的用途以及實體與字元的參考。  
@@ -102,7 +102,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 內建布林函數， **true （)**和**false （)**，可用來代表布林值，如下列範例所示。  
+ 內建布林函數， **true （)** 和**false （)**，可用來代表布林值，如下列範例所示。  
   
 ```  
 DECLARE @var XML  
@@ -191,6 +191,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
 -   不支援函數匯入。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 建構 &#40;XQuery &#41;](../xquery/xml-construction-xquery.md)  
+ [XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

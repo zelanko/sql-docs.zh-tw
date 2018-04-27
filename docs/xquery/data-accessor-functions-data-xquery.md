@@ -1,16 +1,16 @@
 ---
-title: "data 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: data 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - fn:data function
 - data function [XQuery]
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc544e5f0c1f735f0a4b174a67416e52efae1da1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 126fb280c3fec43ee1cf882834460bfc3be62d6d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-accessor-functions---data-xquery"></a>資料存取子函式的資料 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回指定的每個項目的具類型的值*$arg*。  
+  傳回指定的每個項目的具類型的值 *$arg*。  
   
 ## <a name="syntax"></a>語法  
   
@@ -70,13 +70,13 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
  下列規定適用於具類型的元素節點：  
   
--   如果項目具有簡單內容型別**data （)**傳回項目的具類型的值。  
+-   如果項目具有簡單內容型別**data （)** 傳回項目的具類型的值。  
   
--   如果節點是複雜類型，包括 xs: anytype， **data （)**傳回靜態錯誤。  
+-   如果節點是複雜類型，包括 xs: anytype， **data （)** 傳回靜態錯誤。  
   
- 雖然使用**data （)**函式通常是選擇性的如下列範例中，指定所示**data （)**函式可明確增加查詢可讀性。 如需詳細資訊，請參閱[XQuery 基本概念](../xquery/xquery-basics.md)。  
+ 雖然使用**data （)** 函式通常是選擇性的如下列範例中，指定所示**data （)** 函式可明確增加查詢可讀性。 如需詳細資訊，請參閱[XQuery 基本概念](../xquery/xquery-basics.md)。  
   
- 您無法指定**data （)**上建構的 XML，如下列所示：  
+ 您無法指定**data （)** 上建構的 XML，如下列所示：  
   
 ```  
 declare @x xml  
@@ -88,7 +88,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. 使用 data() XQuery 函數擷取節點的具類型值  
- 下列查詢說明如何**data （)**函式用來擷取屬性、 元素和文字節點的值：  
+ 下列查詢說明如何**data （)** 函式用來擷取屬性、 元素和文字節點的值：  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -113,7 +113,7 @@ WHERE ProductModelID = 19
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- 如前所述， **data （)**函式是選擇性的當您建構屬性時。 如果您未指定**data （)**函式，它會隱含假設。 下列查詢產生與上一個查詢相同的結果：  
+ 如前所述， **data （)** 函式是選擇性的當您建構屬性時。 如果您未指定**data （)** 函式，它會隱含假設。 下列查詢產生與上一個查詢相同的結果：  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -132,9 +132,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 下列範例說明中的執行個體**data （)**功能是必要的。  
+ 下列範例說明中的執行個體**data （)** 功能是必要的。  
   
- 在下列查詢中， **$pd / p1: specifications / Material**傳回 <`Material`> 項目。 此外，**資料 ($pd/p1: specifications/Material)**傳回的字元資料類型為 xdt: untypedatomic，因為 <`Material`> 不具類型。 當輸入是不具型別、 結果**data （)**型別為**xdt: untypedatomic**。  
+ 在下列查詢中， **$pd / p1: specifications / Material**傳回 <`Material`> 項目。 此外，**資料 ($pd/p1: specifications/Material)** 傳回的字元資料類型為 xdt: untypedatomic，因為 <`Material`> 不具類型。 當輸入是不具型別、 結果**data （)** 型別為**xdt: untypedatomic**。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -158,7 +158,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- 在下列查詢中， **data($pd/p1:Features/wm:Warranty)**傳回靜態錯誤，因為 <`Warranty`> 是複雜類型的項目。  
+ 在下列查詢中， **data($pd/p1:Features/wm:Warranty)** 傳回靜態錯誤，因為 <`Warranty`> 是複雜類型的項目。  
   
 ```  
 WITH XMLNAMESPACES (  

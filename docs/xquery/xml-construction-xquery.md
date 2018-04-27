@@ -2,8 +2,8 @@
 title: XML 建構 (XQuery) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 542ab45094806cd59c6f80038e38b73c1efa338f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-construction-xquery"></a>XML 建構 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- 下列查詢與上一個查詢相似。 不過，在大括號運算式指定**data （)**函式可擷取的不可部份完成值 <`root`> 項目並將它指派給建構元素 <`e`>。  
+ 下列查詢與上一個查詢相似。 不過，在大括號運算式指定**data （)** 函式可擷取的不可部份完成值 <`root`> 項目並將它指派給建構元素 <`e`>。  
   
 ```  
 DECLARE @x xml;  
@@ -251,7 +251,7 @@ This is product model catalog description.
   
  當您建構屬性時，您可以在大括號中指定值與運算式。 在此情況下，將以屬性值傳回運算式的結果。  
   
- 在下列範例中， **data （)**函式不是絕對必要。 您的運算式值指派給屬性，因為**data （)**隱含地套用至擷取指定之運算式的具類型的值。  
+ 在下列範例中， **data （)** 函式不是絕對必要。 您的運算式值指派給屬性，因為**data （)** 隱含地套用至擷取指定之運算式的具類型的值。  
   
 ```  
 DECLARE @x xml;  
@@ -353,7 +353,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     如果您套用**data （)**函式，查詢運作，因為它會擷取運算式，不可部份完成值`/x`，這與字串串連。 下列是不可部份完成值的時序：  
+     如果您套用**data （)** 函式，查詢運作，因為它會擷取運算式，不可部份完成值`/x`，這與字串串連。 下列是不可部份完成值的時序：  
   
     ```  
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
