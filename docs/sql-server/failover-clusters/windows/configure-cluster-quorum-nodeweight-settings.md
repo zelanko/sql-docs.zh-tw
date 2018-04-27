@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75d81e8e19e2ee1cf4efe62da164caf0e337e5ab
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d5d6abe02569642c60023da0977af3c4e87ada8c
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>設定叢集仲裁 NodeWeight 設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/26/2018
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “Always OnSrv1”  
+$node = “AlwaysOnSrv1”  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -95,7 +95,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
  下列範例會變更 NodeWeight 值，以便在 “Cluster001” 叢集中移除 “AlwaysOnSrv1” 節點的仲裁投票。  
   
 ```ms-dos  
-cluster.exe Cluster001 node Always OnSrv1 /prop NodeWeight=0  
+cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  
 ```  
   
 ##  <a name="RelatedContent"></a> 相關內容  

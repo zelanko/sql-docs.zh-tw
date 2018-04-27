@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d4beafc3c5dcb19c1b46b53d727f36733884daad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>什麼是 SQL Server 機器學習服務？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ SQL Server 機器學習服務是內嵌、 預測分析和資料科學引擎，�
 | [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | 無 | 讓 T-SQL 的 R 指令碼的函式預存程序，預存程序註冊資料庫，並從 R 開發環境中執行預存程序。
 | [mrsdeploy](operationalization-with-mrsdeploy.md) | 無 | 主要是用在非 SQL 安裝的機器學習 Server，例如[（獨立） 版本](r/r-server-standalone.md)。 使用此封裝來部署和裝載 web 服務、 建立向外延展拓撲與專用的 web 和計算節點、 本機和遠端工作階段，執行診斷，以及其他的之間切換。 （資料庫） 安裝，請使用此套件中用戶端容量： 例如，若要存取遠端伺服器上的 web 服務專用於執行只機器學習服務工作負載。 |
 
-自訂 R，並將 Python 程式碼的可攜性是透過套件發佈和多項產品內建解譯器來定址。 隨附於 SQL Server 相同的封裝也會提供數個其他 Microsoft 產品和服務，包括呼叫非 SQL 版本中[Microsoft Machine Learning 伺服器](https://docs.microsoft.com/machine-learning-server/)。 可用的用戶端，包括我們的 R 和 Pyton 直譯器包括[Microsoft R 用戶端](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)和[Python 程式庫](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
+自訂 R，並將 Python 程式碼的可攜性是透過套件發佈和多項產品內建解譯器來定址。 隨附於 SQL Server 相同的封裝也會提供數個其他 Microsoft 產品和服務，包括呼叫非 SQL 版本中[Microsoft Machine Learning 伺服器](https://docs.microsoft.com/machine-learning-server/)。 可用的用戶端，包括我們的 R，並將 Python 解譯器包括[Microsoft R 用戶端](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)和[Python 程式庫](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
 
 封裝和解譯器也會提供數項[Azure 虛擬機器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)，Azure Machine Learning 中，與 Azure 的服務，像是[HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)。 
 
@@ -90,15 +90,15 @@ SQL Server 文件的最新版本與版本無關。 SQL Server 機器學習服務
 
 ## <a name="next-steps"></a>後續的步驟
 
-**步驟 1:**安裝及設定軟體。 
+**步驟 1:** 安裝及設定軟體。 
 
 + [安裝 SQL Server 2017 機器學習服務 （資料庫）](install/sql-machine-learning-services-windows-install.md)
 
-**步驟 2:**開始使用這些教學課程的其中一個程式碼使用：
+**步驟 2:** 開始使用這些教學課程的其中一個程式碼使用：
 
 + [教學課程： 在 T-SQL 中執行 Python](tutorials/run-python-using-t-sql.md)
 + [教學課程： 在 T-SQL 中執行 R](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 
-**步驟 3:**加入您最愛的 R，並將 Python 封裝，並使用它們，以及 Microsoft 所提供的封裝
+**步驟 3:** 加入您最愛的 R，並將 Python 封裝，並使用它們，以及 Microsoft 所提供的封裝
 
 + [SQL Server 的 R 封裝管理](r/r-package-management-for-sql-server-r-services.md)
