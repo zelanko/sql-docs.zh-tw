@@ -1,16 +1,16 @@
 ---
 title: LIKE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ESCAPE
@@ -33,16 +33,17 @@ helpviewer_keywords:
 - matching patterns [SQL Server]
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-caps.latest.revision: 
+caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4fa2299a1efade9f44de85d02c60286a25aad8d0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bccf5f43b12cd31a393d6723be9e860df451f1f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,12 +84,12 @@ match_expression [ NOT ] LIKE pattern
  這是放在萬用字元前面的字元，用來指示應該將萬用字元解譯成正規字元，而不是萬用字元。 *escape_character* 是沒有預設值的字元運算式，且只能得出一個字元。  
   
 ## <a name="result-types"></a>結果類型  
- **布林值**  
+ **布林**  
   
 ## <a name="result-value"></a>結果值  
  如果 *match_expression* 符合指定的 *pattern*，LIKE 就會傳回 TRUE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當您利用 LIKE 來執行字串比較時，模式字串中的所有字元都很重要。 其中包括開頭或尾端空格。 如果查詢中的某個比較會傳回具有字串 LIKE 'abc' (abc 後面跟著一個空格) 的所有資料列，則該資料行的值是 abc (abc 後面沒有空格) 的資料列就不會被傳回。 不過，在要比對模式的運算式中，會忽略尾端空白。 如果查詢中的某個比較會傳回具有字串 LIKE 'abc' (abc 後面沒有空格) 的所有資料列，則開頭為 abc，不管是否有尾端空格的資料列都會被傳回。  
   
  使用模式包含 **char** 和 **varchar** 資料的字串比較，可能會因為資料的儲存方式而無法通過 LIKE 比較。 您應該了解每個資料類型的儲存體以及 LIKE 比較可能失敗的情況。 下列範例會將 **char** 區域變數傳遞給預存程序，然後使用模式比對來尋找姓氏開頭為一組指定字元的所有員工。  
@@ -308,7 +309,7 @@ WHERE FirstName LIKE '[CS]heryl';
 GO  
 ```  
   
- 下列範例會在 `Person` 資料表中尋找姓氏為 `Zheng` 或 `Zhang` 的員工。  
+ 下列範例會在 `Person` 資料表上尋找姓氏為 `Zheng` 或 `Zhang` 的員工。  
   
 ```sql  
 -- Uses AdventureWorks  
