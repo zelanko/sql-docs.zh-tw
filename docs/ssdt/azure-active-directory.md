@@ -1,26 +1,27 @@
 ---
-title: "SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 14a6ae78a0ed5969ce3ab65dbd09b81680076fdb
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 7ea6a2c1a0617eaa7855470f8f8edf87308c9d22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援
 
@@ -64,7 +65,7 @@ Active Directory 互動式驗證支援互動式驗證，允許使用 Azure Activ
 - 當連線到 Azure SQL 資料庫時，才支援「Active Directory 互動式驗證」。 它不支援 SQL Server (內部部署或在 VM 上)，或 Azure SQL 資料倉儲。
 - 在 [伺服器總管] 中的連線對話方塊中不支援「Active Directory 互動式驗證」，您必須搭配使用 SSDT 和「SQL Server 物件總管」來連線。
 - 與目前登入 Visual Studio 帳戶的單一登入整合不支援 SSDT。
-- 在 Visual Studio 安裝期間安裝到 Extensions 目錄的 SQLPackage.exe，並不是要從該位置使用。 若要搭配使用 SQLpackage.exe 和 AAD，請移至 https://www.microsoft.com/en-us/download/details.aspx?id=55088 
+- 在 Visual Studio 安裝期間安裝到 Extensions 目錄的 SQLPackage.exe，並不是要從該位置使用。 若要以 AAD 使用 SQLpackage.exe，請前往 https://www.microsoft.com/en-us/download/details.aspx?id=55088 
 - 「SSDT 資料比較」不支援包含新驗證方法的 AAD 驗證。  
 
 

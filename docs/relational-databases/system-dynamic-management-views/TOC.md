@@ -28,7 +28,7 @@
 ## [sys.dm_clr_properties](sys-dm-clr-properties-transact-sql.md)  
 ## [sys.dm_clr_tasks](sys-dm-clr-tasks-transact-sql.md)  
 
-# [資料庫](database-related-dynamic-management-views-transact-sql.md)  
+# [[資料庫]](database-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_db_file_space_usage](sys-dm-db-file-space-usage-transact-sql.md)  
 ## [sys.dm_db_fts_index_physical_stats](sys-dm-db-fts-index-physical-stats-transact-sql.md)  
 ## [sys.dm_db_log_info](sys-dm-db-log-info-transact-sql.md)  
@@ -255,6 +255,7 @@
 ## [sys.dm_os_dispatcher_pools](sys-dm-os-dispatcher-pools-transact-sql.md)  
 ## [sys.dm_os_host_info](sys-dm-os-host-info-transact-sql.md)  
 ## [sys.dm_os_hosts](sys-dm-os-hosts-transact-sql.md)  
+## [sys.dm_os_job_object](sys-dm-os-job-object-transact-sql.md)
 ## [sys.dm_os_latch_stats](sys-dm-os-latch-stats-transact-sql.md)  
 ## [sys.dm_os_loaded_modules](sys-dm-os-loaded-modules-transact-sql.md)  
 ## [sys.dm_os_memory_brokers](sys-dm-os-memory-brokers-transact-sql.md)  

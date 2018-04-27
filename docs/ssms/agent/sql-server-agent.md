@@ -16,16 +16,17 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54d2642817bfb96f29a87535c6eda004e6a2d777
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4d074c9d90df6065326e30de581c7b512d7affdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -132,7 +133,7 @@ ms.lasthandoff: 03/22/2018
 **msdb**中 **SQLAgentUserRole**、 **SQLAgentReaderRole** 與 **SQLAgentOperatorRole**固定資料庫角色的成員，以及 **系統管理員 (sysadmin)** 固定伺服器角色的成員，都具有存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 的權限。 不屬於以上任一角色的成員，都無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 所使用角色的詳細資訊，請參閱 [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ### <a name="subsystems"></a>子系統  
-子系統是預先定義的物件，代表作業步驟可用的功能。 每個 Proxy 都具有一或多個子系統的存取權。 子系統可提供安全性，因為它們會將 Proxy 可用的功能存取加以分隔。 每種作業步驟都可在 Proxy 的內容中執行，除了 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作業步驟以外； [!INCLUDE[tsql](../../includes/tsql_md.md)] 作業步驟使用 EXECUTE AS 命令來設定安全性內容。  
+子系統是預先定義的物件，代表作業步驟可用的功能。 每個 Proxy 都具有一或多個子系統的存取權。 子系統可提供安全性，因為它們會將 Proxy 可用的功能存取加以分隔。 每種作業步驟都可在 Proxy 的內容中執行，除了 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作業步驟以外； [!INCLUDE[tsql](../../includes/tsql_md.md)] 作業步驟使用 EXECUTE AS 命令來設定作業擁有者的安全性內容。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 定義了下表所列的子系統：  
   

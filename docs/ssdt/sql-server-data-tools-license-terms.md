@@ -1,27 +1,29 @@
 ---
-title: "SQL Server Data Tools - 授權條款 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Data Tools - 授權條款 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssdt
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0ac5aa53-cdc3-4ced-9ab9-690be02aa951
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 97241e3e51f4abf174e57e579933a6001316858e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4283b5dc957857301c3b1a3475012d1f5eaac92b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools - 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +82,7 @@ ms.lasthandoff: 12/21/2017
 &nbsp;&nbsp;**a.  SQL Server Reporting Services 地圖報表項目。** 本軟體可能包含透過 Bing 地圖服務 (或後續品牌) 應用程式開發介面 (以下稱 「Bing 地圖服務 API」) 擷取地圖、影像和其他資料等內容的功能。 這些功能的用途是建立顯示地圖、空照圖和混合影像套疊資料的報表， 如果包含這些功能，您可以建立及檢視動態或靜態文件， 其使用僅限於與本軟體一併使用或透過軟體整合式內建存取方法。 　貴用戶不得以其他方式複製、儲存、封存或建立透過 Bing 地圖服務 API 提供之內容的資料庫。 　貴用戶不得將下列項目用於任何用途，即使可透過 Bing 地圖服務 API 取得亦然：  
 * Bing 地圖服務 API 用於提供以感應器為基礎的導航/行程，或者  
 * 任何道路交通資料或鳥瞰影像 (或相關中繼資料)。  
-　貴用戶對於 Bing 地圖服務的使用方式也會受到 Bing 地圖服務使用者的使用條款 (網址 http://go.microsoft.com/?linkid=9710837) 和 Bing 地圖服務隱私權聲明 (網址 http://go.microsoft.com/fwlink/?LinkID=248686) 所規範。  
+貴用戶對於 Bing 地圖服務的使用方式也會受到 Bing 地圖服務使用者的使用條款 (http://go.microsoft.com/?linkid=9710837) 和 Bing 地圖服務隱私權聲明 (http://go.microsoft.com/fwlink/?LinkID=248686) 所規範。  
   
 &nbsp;&nbsp;**b.**  本軟體的設計目的是允許 SQL Server Integration Services (SSIS) 的使用者能夠 (a) 在內部部署資料存放區和 Microsoft 線上服務之間移動資料，以及 (b) 觸發 Microsoft 線上服務中的特定動作。 為了執行此動作，軟體會使用網際網路通訊協定，來 (i) 將資料 (包括您自己指定的特定資料與軟體設定相關資料) 傳送給這些服務，以及 (ii) 向這些服務要求資料 (包括您自己指定的特定資料與 Microsoft 線上服務的性質與設定)。 一旦設定軟體來與這些服務通訊之後，　貴用戶可能不會在軟體連線到這些服務時收到個別通知。  
   

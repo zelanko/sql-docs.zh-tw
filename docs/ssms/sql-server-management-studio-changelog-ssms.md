@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 變更記錄 (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 75e8afe2561b49b2479d7b65d1c7aff9854fa420
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d44dda667b1b3cb22a1f3612132905f4cc520648
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,6 @@ SQL Database 受控執行個體：
    - 支援 SQL 代理程式工作。
    - 連結的伺服器支援。
 - 請前往[這裡](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/)深入了解受控執行個體。
-
 
 物件總管：
 - 新增設定，以便從物件總管拖曳並置放於查詢視窗時，不強制以名稱周圍的括弧來括住。 (使用者建議 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) 和 [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051)。)
@@ -109,7 +108,8 @@ Database Mail：
 
 ### <a name="known-issues"></a>已知問題
 
-- 此為已知的問題：在維護計劃中設定排程時，SSMS 17.6 會損毀。
+> [!WARNING]
+> 已知問題：當使用[維護計劃](../relational-databases/maintenance-plans/maintenance-plans.md)時，SSMS 17.6 會變得不穩定且會當機的問題。 若您使用維護計劃，請勿安裝 SSMS 17.6。 若您已經安裝 17.6 且有這項問題的影響，請降級至 SSMS 17.5。 
 
 ## <a name="previous-ssms-releases"></a>舊版 SSMS
 
@@ -685,7 +685,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 修正 DMF 條件 UI 未正確更新其字串常值中有引號的運算式
 - 修正執行自訂報表時可能造成 SSMS 損毀的問題
 - 將 [向外延展中的執行...] 功能表項目 新增到資料夾節點
-- 修正 Azure SQL DB 防火牆允許清單 IP 地址功能的問題
+- 修正 Azure SQL DB 防火牆白名單 IP 地址功能的問題
 - 修正 SSMS 中在編輯 AS 多維磁碟分割來源時，導致物件參考未設定例外狀況的問題
 - 修正 SSMS 中從多維 AS 伺服器刪除客戶組件時，導致物件參考未設定例外狀況的問題
 - 修正重新命名 AS 表格式 1400 資料庫失敗的問題

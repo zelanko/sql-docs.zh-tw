@@ -29,8 +29,10 @@
 #### [Web 同步處理的拓撲](topologies-for-web-synchronization.md)  
 ### [設定 Web 同步處理的 IIS](configure-iis-for-web-synchronization.md)  
 ### [設定 Web 同步處理的 IIS 7](configure-iis-7-for-web-synchronization.md)  
+
 ## [設定散發](configure-distribution.md)  
 ### [設定發行和散發](configure-publishing-and-distribution.md)  
+### [設定 AG 中的散發](configure-distribution-availability-group.md)
 ### [檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)  
 ### [停用發行和散發](disable-publishing-and-distribution.md)  
 ### [啟用用於複寫的資料庫 (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [指定預設快照集位置 (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [設定交易式發行集的散發保留週期 (SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [設定記錄保留週期 (SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [訂閱發行集](subscribe-to-publications.md)  
 ### [建立提取訂閱](create-a-pull-subscription.md)  
 ### [Create a Push Subscription](create-a-push-subscription.md)  
