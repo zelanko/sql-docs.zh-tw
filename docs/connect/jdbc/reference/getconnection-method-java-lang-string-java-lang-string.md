@@ -1,30 +1,33 @@
 ---
-title: "getConnection 方法 （java.lang.String，java.lang.String） |Microsoft 文件"
-ms.custom: 
+title: getConnection 方法 （java.lang.String，java.lang.String） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSource.getConnection (java.lang.String, java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSource.getConnection (java.lang.String, java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff4d2cc222f5440f25fcb9e5b0c06570ebc377e0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6aee1b8785ade7b3fc1a9c286357bdbc82338ddc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,11 +43,11 @@ public java.sql.Connection getConnection(java.lang.String username,
 ```  
   
 #### <a name="parameters"></a>參數  
- *使用者名稱*  
+ *username*  
   
  A**字串**，其中包含使用者名稱。  
   
- *密碼*  
+ *password*  
   
  A**字串**其中包含的密碼。  
   
@@ -62,8 +65,8 @@ public java.sql.Connection getConnection(java.lang.String username,
 > [!NOTE]  
 >  使用者名稱和密碼所使用的呼叫在 URL 內設定[setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md)方法不會在此情況下變更。  
   
-## <a name="see-also"></a>請參閱＜  
- [getConnection 方法 &#40;SQLServerDataSource &#41;](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)   
+## <a name="see-also"></a>另請參閱  
+ [getConnection 方法&#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)   
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

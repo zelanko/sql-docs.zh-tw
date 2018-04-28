@@ -1,30 +1,33 @@
 ---
-title: "getBigDecimal 方法 (SQLServerCallableStatement) |Microsoft 文件"
-ms.custom: 
+title: getBigDecimal 方法 (SQLServerCallableStatement) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getBigDecimal
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getBigDecimal
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: bc81b9a3-96ae-4c9c-b6c4-abd7b83175e9
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddce953aefd462a0b67124e751f5c32722a5dd64
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e1d351a0a58322494ddae259a4f1128695ba66c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getbigdecimal-method-sqlservercallablestatement"></a>getBigDecimal 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/18/2017
 |[getBigDecimal (java.lang.String)](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string.md)|配合給定的參數名稱來擷取指定之參數的值當做 java.math.BigDecimal (具有完整有效位數)。|  
 |[getBigDecimal （java.lang.String，int）](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-int.md)|(已被取代) 配合給定的參數名稱和小數位數來擷取指定之參數的值當做 java.math.BigDecimal。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

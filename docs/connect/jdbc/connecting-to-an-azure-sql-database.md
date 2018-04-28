@@ -1,27 +1,28 @@
 ---
-title: "連接到 Azure SQL database |Microsoft 文件"
-ms.custom: 
+title: 連接到 Azure SQL database |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc0a49d5758b4e7160ecf5e9e374d4c460755161
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7e7452a001f96b38b8e2a6047a144a82b5f957a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="details"></a>詳細資料  
  當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，您應該連接至 master 資料庫，才能呼叫**SQLServerDatabaseMetaData.getCatalogs**。  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs**使用 sys.databases 檢視取得目錄。 中的權限討論內容，請參閱[sys.databases （SQL Azure 資料庫）](http://go.microsoft.com/fwlink/?LinkId=217396)來了解**SQLServerDatabaseMetaData.getCatalogs**行為[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]。  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs**使用 sys.databases 檢視取得目錄。 中的權限討論內容，請參閱[sys.databases （SQL Azure 資料庫）](http://go.microsoft.com/fwlink/?LinkId=217396)來了解**SQLServerDatabaseMetaData.getCatalogs**行為[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]。  
   
  連接中斷  
  當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，在一段時間後網路元件 （例如防火牆） 可能會終止閒置連接。 在此內容中，有兩種閒置連接類型：  
@@ -91,7 +92,7 @@ shutdown /r /t 1
 jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

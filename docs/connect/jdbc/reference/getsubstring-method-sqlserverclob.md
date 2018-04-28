@@ -1,30 +1,33 @@
 ---
-title: "getSubString 方法 (SQLServerClob) |Microsoft 文件"
-ms.custom: 
+title: getSubString 方法 (SQLServerClob) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerClob.getSubString
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerClob.getSubString
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7492c21386b833d335cc898d997afdb3e04f3b97
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 57bfbc4553d33005a81ee71864551c1b91b481f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>getSubString 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public java.lang.String getSubString(long pos,
   
  要從子字串中擷取的第一個字元。 第一個字元落在位置 1。  
   
- *length*  
+ *長度*  
   
  要複製的連續字元數目。  
   
@@ -59,7 +62,7 @@ public java.lang.String getSubString(long pos,
   
  嘗試從 null 或零長度 CLOB 中取得零個字元時，將會傳回空字串。 嘗試在零長度 CLOB 中的位置 1 以外之任何位置取得任何長度的字元時，將會擲回位置例外狀況。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerClob 方法](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob 成員](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob 類別](../../../connect/jdbc/reference/sqlserverclob-class.md)  

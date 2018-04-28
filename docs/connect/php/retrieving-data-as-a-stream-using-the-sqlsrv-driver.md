@@ -2,7 +2,7 @@
 title: 使用 SQLSRV 驅動程式以資料流的形式擷取資料 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa2d15dde596b9fb8ccd4d170281ef6fa4b2646f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: c76d31e89b0335ecef272c44e6fd55553e5e81d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>使用 SQLSRV 驅動程式以資料流形式擷取資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/28/2018
   
 2.  使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 移至結果集內的下一個資料列。  
   
-3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 擷取資料列中的欄位。 指定的資料是使用資料流的形式擷取**SQLSRV_PHPTYPE_STREAM (<encoding>)**做為函數呼叫中的第三個參數。 下表列出用來指定編碼及其描述的常數：  
+3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 擷取資料列中的欄位。 指定的資料是使用資料流的形式擷取**SQLSRV_PHPTYPE_STREAM (<encoding>)** 做為函數呼叫中的第三個參數。 下表列出用來指定編碼及其描述的常數：  
   
     |SQLSRV 常數|Description|  
     |-------------------|---------------|  

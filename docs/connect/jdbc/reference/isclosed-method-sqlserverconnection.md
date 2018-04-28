@@ -1,30 +1,33 @@
 ---
-title: "isClosed 方法 (SQLServerConnection) |Microsoft 文件"
-ms.custom: 
+title: isClosed 方法 (SQLServerConnection) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerConnection.isClosed
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerConnection.isClosed
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f8c264171a4e91c4dd449f1ea8fa19830fb4ca1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6c503df8443c4ec08631660f4f144c77f97a0ed9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isclosed-method-sqlserverconnection"></a>isClosed 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +52,7 @@ public boolean isClosed()
   
  驗證呼叫的 SQLServerConnection 物件的狀態。 如果關閉連線[關閉](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)已經呼叫方法，或發生某些嚴重錯誤。 這個方法會傳回**true**只有當呼叫它呼叫 close 方法之後。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

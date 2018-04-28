@@ -1,30 +1,33 @@
 ---
-title: "getXAConnection 方法 （java.lang.String，java.lang.String） |Microsoft 文件"
-ms.custom: 
+title: getXAConnection 方法 （java.lang.String，java.lang.String） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerXADataSource.getXAConnection (java.lang.String, java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerXADataSource.getXAConnection (java.lang.String, java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b9cb48cab11159a3494f785921368010144bbe8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8c321e6462c30591210c6f366d4a201cc90ee2f4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>getXAConnection 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,11 +43,11 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
 ```  
   
 #### <a name="parameters"></a>參數  
- *使用者*  
+ *user*  
   
  A**字串**，其中包含使用者名稱。  
   
- *密碼*  
+ *password*  
   
  A**字串**其中包含的密碼。  
   
@@ -60,8 +63,8 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
 > [!NOTE]  
 >  這個方法通常是由 XA 連接集區實作所呼叫，而不是由一般的 JDBC 應用程式碼所呼叫。  
   
-## <a name="see-also"></a>請參閱＜  
- [getXAConnection 方法 &#40;SQLServerXADataSource &#41;](../../../connect/jdbc/reference/getxaconnection-method-sqlserverxadatasource.md)   
+## <a name="see-also"></a>另請參閱  
+ [getXAConnection 方法&#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/getxaconnection-method-sqlserverxadatasource.md)   
  [SQLServerXADataSource 方法](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
  [SQLServerXADataSource 成員](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [SQLServerXADataSource 類別](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  

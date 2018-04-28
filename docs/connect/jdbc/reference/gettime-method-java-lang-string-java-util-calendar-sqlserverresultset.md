@@ -1,30 +1,33 @@
 ---
-title: "getTime 方法 （java.lang.String，java.util.Calendar） |Microsoft 文件"
-ms.custom: 
+title: getTime 方法 （java.lang.String，java.util.Calendar） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getTime (java.lang.String, java.util.Calendar)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getTime (java.lang.String, java.util.Calendar)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 13b51f77-cec9-45fc-862e-3d2bb2d718d7
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 186b07d3ab60bdd384b57af8bb4cc93bcedda66f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 088c56afd797fd1ce8871303fff76cba5ae8e08b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getTime 方法 （java.lang.String，java.util.Calendar） (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +43,7 @@ public java.sql.Time getTime(java.lang.String colName,
 ```  
   
 #### <a name="parameters"></a>參數  
- *colName*  
+ *ColName*  
   
  A**字串**，其中包含資料行名稱。  
   
@@ -59,8 +62,8 @@ public java.sql.Time getTime(java.lang.String colName,
   
  這個方法傳回的有效時間部分[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]datetime 或 smalldatetime 資料型別，以及日期部分是設定成 Java 基準日期 1970年/01/01 中提供的月曆時區。  
   
-## <a name="see-also"></a>請參閱＜  
- [getTime 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+## <a name="see-also"></a>另請參閱  
+ [getTime 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

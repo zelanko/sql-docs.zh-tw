@@ -1,30 +1,33 @@
 ---
-title: "deletesAreDetected 方法 (SQLServerDatabaseMetaData) |Microsoft 文件"
-ms.custom: 
+title: deletesAreDetected 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.deletesAreDetected
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.deletesAreDetected
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2556d8866102f2921c1e17a07f67687a710edf26
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ca58a443f5606cacf9c400895136e53243689478
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -73,9 +76,9 @@ public boolean deletesAreDetected(int type)
  這個 deletesAreDetected 方法是由 java.sql.DatabaseMetaData 介面中 deletesAreDetected 方法指定。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]會偵測所有可更新的資料指標類型，已刪除的資料列，雖然偵測作業屬於暫時順向和動態資料指標。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 會偵測所有可更新的資料指標類型，已刪除的資料列，雖然偵測作業屬於暫時順向和動態資料指標。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

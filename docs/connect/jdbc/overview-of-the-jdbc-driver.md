@@ -1,28 +1,28 @@
 ---
-title: "JDBC 驅動程式的概觀 |Microsoft 文件"
-ms.custom: 
+title: JDBC 驅動程式的概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/18/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 
+caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3783933de0579de9c0da9f227280656b3583b7b7
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 6ac8d19b9bc3147fd661b4911c970d950252e556
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC Driver 概觀
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/02/2018
 |[轉散發 Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|說明如何註冊以轉散發 Microsoft JDBC Driver。|  
 |[尋找其他 JDBC Driver 資訊](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|說明何處可以找到 Microsoft JDBC Driver 的其他資源，包括外部資源的連結。|  
 |[Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft JDBC Driver for SQL Server 的支援對照表與支援週期原則。|  
-|[常見問題集問題 &#40;常見問題集 &#41;JDBC 驅動程式](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver 的常見問題集。|  
+|[常見問題集&#40;常見問題集&#41;JDBC 驅動程式](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver 的常見問題集。|  
 |[Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server 的功能相依性。|
 
 ## <a name="see-also"></a>另請參閱  

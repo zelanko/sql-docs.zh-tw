@@ -1,30 +1,33 @@
 ---
-title: "prepareCall 方法 （java.lang.String，int，int） |Microsoft 文件"
-ms.custom: 
+title: prepareCall 方法 （java.lang.String，int，int） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerConnection.prepareCall (java.lang.String, int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerConnection.prepareCall (java.lang.String, int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3549eb02cdef8284ebc0c2df949d85dc97c054e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0ed9e69d1f7eb914bf26e7da859dc691f8009807
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="preparecall-method-javalangstring-int-int"></a>prepareCall 方法 (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,8 +65,8 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 ## <a name="remarks"></a>備註  
  這個 prepareCall 方法是由 java.sql.Connection 介面中的 prepareCall 方法指定。  
   
-## <a name="see-also"></a>請參閱＜  
- [prepareCall 方法 &#40;SQLServerConnection &#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   
+## <a name="see-also"></a>另請參閱  
+ [prepareCall 方法&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

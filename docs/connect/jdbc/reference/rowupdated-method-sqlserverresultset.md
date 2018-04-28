@@ -1,30 +1,33 @@
 ---
-title: "rowUpdated 方法 (SQLServerResultSet) |Microsoft 文件"
-ms.custom: 
+title: rowUpdated 方法 (SQLServerResultSet) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.rowUpdated
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.rowUpdated
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 29303550-294e-4d43-b892-312b42e21271
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0adc297c74a700312d3d0ffdc9640dd7b25595e8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9aa74dd84ecfc3f96ab11dd0b9379f4a2939994e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>rowUpdated 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,9 +53,9 @@ public boolean rowUpdated()
  傳回的值取決於結果集是否可以偵測到更新而定。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]不會偵測任何資料指標類型的更新資料列。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 不會偵測任何資料指標類型的更新資料列。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

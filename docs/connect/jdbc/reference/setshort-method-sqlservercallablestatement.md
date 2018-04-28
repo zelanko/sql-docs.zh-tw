@@ -1,30 +1,33 @@
 ---
-title: "setShort 方法 (SQLServerCallableStatement) |Microsoft 文件"
-ms.custom: 
+title: setShort 方法 (SQLServerCallableStatement) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.setShort
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.setShort
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: d7031a89-e964-4ffd-87b7-63825799435d
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5c9b510ed694ed0cf84b57f8958c32166b8c7a4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d183c69005cec81782b77de60bed30c757522300
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setshort-method-sqlservercallablestatement"></a>setShort 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public void setShort(java.lang.String sCol,
   
  A**字串**，其中包含參數名稱。  
   
- *s*  
+ *S*  
   
  A**簡短**值。  
   
@@ -54,7 +57,7 @@ public void setShort(java.lang.String sCol,
 ## <a name="remarks"></a>備註  
  SetShort 方法 java.sql.CallableStatement 介面中所指定此 setShort 方法。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

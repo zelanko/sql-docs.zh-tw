@@ -1,28 +1,28 @@
 ---
-title: "JDBC 驅動程式的系統需求 |Microsoft 文件"
-ms.custom: 
+title: JDBC 驅動程式的系統需求 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
-caps.latest.revision: 
+caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6a4aa824e50fd10add0b40c483b74b674e56a6e
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: a7ad308b0ca7ea617ab9f6e2882f800e6aa92d58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驅動程式的系統需求
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,8 +32,8 @@ ms.lasthandoff: 03/02/2018
 -   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]  
   
      您可以從 Microsoft 下載中心取得下列連結，下載 Microsoft JDBC 驅動程式： 
-     * [Microsoft JDBC Driver 6.4 for SQL Server](http://go.microsoft.com/fwlink/?linkid=868290)
-     * [Microsoft JDBC Driver 6.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=852460)
+     * [Microsoft JDBC Driver for SQL Server 6.4](http://go.microsoft.com/fwlink/?linkid=868290)
+     * [Microsoft JDBC Driver for SQL Server 6.2](http://go.microsoft.com/fwlink/?linkid=852460)
      * [Microsoft JDBC Driver 6.0 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841535)
      * [Microsoft JDBC Driver 4.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841534) 
      * [Microsoft JDBC Driver 4.1 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 

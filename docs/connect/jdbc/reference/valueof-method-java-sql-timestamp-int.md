@@ -1,27 +1,28 @@
 ---
-title: "valueOf 方法 （java.sql.Timestamp，int） |Microsoft 文件"
-ms.custom: 
+title: valueOf 方法 （java.sql.Timestamp，int） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c79a5f486377bc86264377a898a9f908bbc7153
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5818dc4dd30ffc0833dc548110fd84cbbc3f5997
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>valueOf 方法 (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
 ## <a name="return-value"></a>傳回值  
  傳回 DateTimeOffset 物件中指定的時間所指定的位移，java.sql.Timestamp 物件分鐘，從 GMT 中表示的點。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset 成員](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

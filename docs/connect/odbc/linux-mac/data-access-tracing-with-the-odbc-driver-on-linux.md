@@ -1,30 +1,31 @@
 ---
-title: "資料存取追蹤與 ODBC Driver on Linux 及 macOS |Microsoft 文件"
-ms.custom: 
+title: 資料存取追蹤與 ODBC Driver on Linux 及 macOS |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data access tracing
 - tracing
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a8c00866759a3cc9732083891e911eea9c2677b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4fadd1ddbcf4004b3a6652975c2495db9007d433
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>使用 ODBC Driver on Linux 及 macOS 的資料存取追蹤
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,5 +75,5 @@ SQLSETPOSIROW Size.: 8
   
 - 系統 Dsn---這些名稱 （dsn） 可供系統上每個使用者連接使用，但可以只加入、 修改，並已由系統管理員移除。 如果使用者具有相同名稱做為系統 DSN 的使用者 DSN，將在連接時使用使用者 DSN，該使用者。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)

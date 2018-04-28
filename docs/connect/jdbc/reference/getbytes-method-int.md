@@ -1,30 +1,33 @@
 ---
-title: "getBytes 方法 (int) |Microsoft 文件"
-ms.custom: 
+title: getBytes 方法 (int) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getBytes (int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getBytes (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8c2973e6-d57f-4f64-b812-350ce4098ce6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3256c21ba46ce61808971b7af8af2d3fedc6a045
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d71d293200ec47598e20520a335d702c1e6987f5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getbytes-method-int"></a>getBytes 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,8 +57,8 @@ public byte[] getBytes(int index)
   
  GetBytes 方法 java.sql.CallableStatement 介面中所指定這個 getBytes 方法。  
   
-## <a name="see-also"></a>請參閱＜  
- [getBytes 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [getBytes 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

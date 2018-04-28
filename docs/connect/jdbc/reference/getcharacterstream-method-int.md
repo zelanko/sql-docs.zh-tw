@@ -1,30 +1,33 @@
 ---
-title: "getCharacterStream 方法 (int) |Microsoft 文件"
-ms.custom: 
+title: getCharacterStream 方法 (int) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getCharacterStream (int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getCharacterStream (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f345dc0fe0c52b4c70d280fbbd6c893095dbf36c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3fdbab059ec30a55882e4ebba1b45a738b91ae83
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcharacterstream-method-int"></a>getCharacterStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,8 +57,8 @@ public java.io.Reader getCharacterStream(int columnIndex)
   
  這個方法只會讀取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Unicode 字元資料類型，例如 nchar、 nvarchar、 nvarchar （max） 和 ntext。 所有其他資料型別 (包括 ASCII 字元型別) 將擲回例外狀況。 若要讀取 ASCII 資料型別，使用[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)方法。  
   
-## <a name="see-also"></a>請參閱＜  
- [getCharacterStream 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
+## <a name="see-also"></a>另請參閱  
+ [getCharacterStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

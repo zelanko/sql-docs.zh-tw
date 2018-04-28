@@ -1,30 +1,33 @@
 ---
-title: "isSigned 方法 (SQLServerResultSetMetaData) |Microsoft 文件"
-ms.custom: 
+title: isSigned 方法 (SQLServerResultSetMetaData) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.isSigned
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.isSigned
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1d16672f-1515-4255-8b20-e7911c999f60
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 015cdf33b8dcf02c9e9d214ff6a6f1acd12e99ba
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d7a491dd1810f9b1d259db8f17ce8b3792ed9f8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="issigned-method-sqlserverresultsetmetadata"></a>isSigned 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public boolean isSigned(int column)
 ```  
   
 #### <a name="parameters"></a>參數  
- *資料行*  
+ *column*  
   
  **Int** ，指出資料行索引。  
   
@@ -52,7 +55,7 @@ public boolean isSigned(int column)
 ## <a name="remarks"></a>備註  
  這個 isSigned 方法是由 java.sql.ResultSetMetaData 介面中 isSigned 方法指定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerResultSetMetaData 方法](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [SQLServerResultSetMetaData 成員](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData 類別](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

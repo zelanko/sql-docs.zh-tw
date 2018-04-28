@@ -1,27 +1,28 @@
 ---
-title: "使用陳述式及結果集 |Microsoft 文件"
-ms.custom: 
+title: 使用陳述式及結果集 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce65afcf2086b4b3383f45fd6f0174668eeb1e1a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 15eba10e7e0bdace764ed176a4d4b941b0afcd6a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-statements-and-result-sets"></a>使用陳述式及結果集
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="use-streams-for-large-in-parameters"></a>對大型 IN 參數使用資料流  
  使用資料流或以遞增方式具體化的 BLOB 和 CLOB，處理更新大型資料行值或傳送大型 IN 參數。 JDBC 驅動程式會多次往返將這些項目「大量」送至伺服器，容許您設定及更新的值大於記憶體可包含的值。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [善 JDBC Driver 的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

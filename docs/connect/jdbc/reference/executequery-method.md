@@ -1,30 +1,33 @@
 ---
-title: "executeQuery 方法 （) |Microsoft 文件"
-ms.custom: 
+title: executeQuery 方法 （) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPreparedStatement.executeQuery ()
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.executeQuery ()
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1d90407f-16df-4ba2-b4a5-47d5751e1d7c
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 486ec51ec9bf9254d8ce2acc6bafb92c01d3b74c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7dc62ce3c849d67f4ed28480a95ec6c90da55b60
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executequery-method-"></a>executeQuery 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,8 +51,8 @@ public java.sql.ResultSet executeQuery()
 ## <a name="remarks"></a>備註  
  這個 executeQuery 方法是由 java.sql.PreparedStatement 介面中的 executeQuery 方法來指定。  
   
-## <a name="see-also"></a>請參閱＜  
- [executeQuery 方法 &#40;SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [executeQuery 方法&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement 類別](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

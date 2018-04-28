@@ -1,34 +1,35 @@
 ---
-title: "步驟 1： 設定適用於 Node.js 開發的開發環境 |Microsoft 文件"
-ms.custom: 
+title: 步驟 1： 設定適用於 Node.js 開發的開發環境 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7d723913fbc63e65a28031421da004e942f49f6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8d64b53947882f1883d034fde8da24f1b83dabfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>步驟 1： 設定適用於 Node.js 開發的開發環境
 您必須設定開發環境的必要條件，才能開發使用 Node.js Driver for SQL Server 的應用程式。  最常見的方法是使用 node 封裝管理員 (npm) 安裝冗長的模組，但是您可以下載冗長的模組，直接在[Github](https://github.com/pekim/tedious)如果您偏好。  
   
 請注意 Node.js 驅動程式會使用 TDS 通訊協定，SQL Server 和 Azure SQL Database 中的預設會啟用。  不需要進行其他組態設定。  
   
-## <a name="windows"></a>Windows  
+## <a name="windows"></a>視窗  
   
 1. **安裝 Node.js 執行階段及 npm 封裝管理員**  
 a. 移至[Node.js](https://nodejs.org/en/download/)  

@@ -1,27 +1,28 @@
 ---
-title: "getFunctionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文件"
-ms.custom: 
+title: getFunctionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88606f2a53f3f276529feb6b780279fdd3c96323
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8e9e3d78c17b4c2fe44ce80b6baf0eb8e4294339
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>參數  
- *類別目錄*  
+ *catalog*  
   
  A**字串**，其中包含目錄名稱。 如果它是空字串 ""，結果就會包含函數而不包含目錄。 如果是**null**，目錄名稱不會用於搜尋。  
   
@@ -74,14 +75,14 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |FUNCTION_SCHEM|**字串**|函數的結構描述。|  
 |FUNCTION_NAME|**字串**|函數的名稱。|  
 |COLUMN_NAME|**字串**|參數或資料行的名稱。|  
-|COLUMN_TYPE|**短**|**資料行的類型。它可以是下列值之一：**<br /><br /> functionColumnUnknown (0)：未知的類型。<br /><br /> functionColumnIn (1)：輸入參數。<br /><br /> functionColumnInOut (2)：輸入/輸出參數。<br /><br /> functionColumnOut (3)：輸出參數。<br /><br /> functionReturn (4)：函數傳回值。<br /><br /> functionColumnResult (5)：參數或資料行是結果集中的資料行。|  
+|COLUMN_TYPE|**short**|**資料行的類型。它可以是下列值之一：**<br /><br /> functionColumnUnknown (0)：未知的類型。<br /><br /> functionColumnIn (1)：輸入參數。<br /><br /> functionColumnInOut (2)：輸入/輸出參數。<br /><br /> functionColumnOut (3)：輸出參數。<br /><br /> functionReturn (4)：函數傳回值。<br /><br /> functionColumnResult (5)：參數或資料行是結果集中的資料行。|  
 |DATA_TYPE|**smallint**|SQL 資料類型從 Java.sql.Types 的值。|  
 |TYPE_NAME|**字串**|資料類型的名稱。|  
 |PRECISION|**int**|有效位數的總數。|  
 |LENGTH|**int**|資料長度 (以位元組為單位)。|  
-|SCALE|**短**|小數點右側的位數。|  
-|RADIX|**短**|數值類型的基底。|  
-|NULLABLE|**短**|指出是否可以包含參數或傳回值**null**值。<br /><br /> **它可以是下列值之一：**<br /><br /> functionNoNulls (0)：不允許 NULL 值。<br /><br /> functionNullable (1)：允許 NULL 值。<br /><br /> functionNullableUnknown (2)：未知。|  
+|SCALE|**short**|小數點右側的位數。|  
+|RADIX|**short**|數值類型的基底。|  
+|NULLABLE|**short**|指出是否可以包含參數或傳回值**null**值。<br /><br /> **它可以是下列值之一：**<br /><br /> functionNoNulls (0)：不允許 NULL 值。<br /><br /> functionNullable (1)：允許 NULL 值。<br /><br /> functionNullableUnknown (2)：未知。|  
 |REMARKS|**字串**|資料行或參數的相關註解。|  
 |COLUMN_DEF|**字串**|資料行的預設值。<br /><br /> **注意：**這項資訊適用於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是 JDBC 驅動程式專屬。|  
 |SQL_DATA_TYPE|**smallint**|此資料行等同於**DATA_TYPE**資料行，除了**datetime**和 ISO**間隔**資料型別。<br /><br /> **注意：**這項資訊適用於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是 JDBC 驅動程式專屬。|  
@@ -99,7 +100,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |SS_XML_SCHEMACOLLECTION_NAME|**字串**|包含使用者定義型別 (UDT) 的結構描述名稱。|  
 |SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料型別，由擴充預存程序。<br /><br /> **請注意**如需有關所傳回的資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，請參閱中的 < 資料類型 (TRANSACT-SQL) >[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   

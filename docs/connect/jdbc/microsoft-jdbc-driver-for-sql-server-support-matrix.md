@@ -1,28 +1,28 @@
 ---
-title: "Microsoft JDBC Driver for SQL Server 支援對照表 |Microsoft 文件"
-ms.custom: 
+title: Microsoft JDBC Driver for SQL Server 支援對照表 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30e750a2f69b52c04907c91aa0d47f2a3a60be91
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 84c06f5153d47c82a268a0b5e20e74b4e32d6685
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支援對照表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -88,7 +88,7 @@ ms.lasthandoff: 03/02/2018
   
 |JDBC 驅動程式版本|JRE 版本|JDBC API 版本| 
 |-|-|-|  
-|6.4|1.7, 1.8, 1.9|4.1、 4.2、 4.3 （部分）|  
+|6.4|1.7、 1.8、 1.9|4.1、 4.2、 4.3 （部分）|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  
