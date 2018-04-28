@@ -3,7 +3,7 @@ title: 執行命令 |Microsoft 文件
 description: 執行命令
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb-driver-for-sql-server
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, command execution
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48e6fd74fcf6468be92aac9d70a1c4b8ab3a967d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 0ea3bc38c8a209758bcc2f0bd6ab34fa62f5ccd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-a-command"></a>執行命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  建立資料來源的連接之後，取用者會呼叫**:: Createsession**方法來建立工作階段。 此工作階段會當做命令、資料列集或交易 Factory 運作。  
+  建立資料來源的連接之後，取用者會呼叫 **:: Createsession**方法來建立工作階段。 此工作階段會當做命令、資料列集或交易 Factory 運作。  
   
  若要直接使用個別的資料表或索引，取用者要求**IOpenRowset**介面。 **Iopenrowset:: Openrowset**方法開啟，並傳回包含單一基底資料表或索引的所有資料列的資料列集。  
   

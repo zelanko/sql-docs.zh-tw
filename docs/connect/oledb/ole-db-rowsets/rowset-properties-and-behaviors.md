@@ -3,7 +3,7 @@ title: 資料列集屬性和行為 |Microsoft 文件
 description: 資料列集屬性和 OLE DB 驅動程式的 SQL Server 中的行為
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6724a1f7123be2040fd87d4a14ca4b45b7eb99ee
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 09b5ad3e392be5ae28511a94068d030eb6c50aaf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>資料列集屬性和行為
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/06/2018
 |DBPROP_MEMORYUSAGE|這個資料列集屬性未實作的 OLE DB 驅動程式適用於 SQL Server。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_NOTIFICATIONGRANULARITY|這個資料列集屬性未實作的 OLE DB 驅動程式適用於 SQL Server。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_NOTIFICATIONPHASES|R/W：唯讀<br /><br /> 預設值： DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> 描述： SQL Server 的 OLE DB 驅動程式支援所有告知階段。|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/W：唯讀<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> 描述： SQL Server 告知階段，OLE DB 驅動程式會嘗試執行指定的資料列集修改前取消。 在嘗試完成之後，SQL Server OLE DB 驅動程式不支援取消階段。|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/W：唯讀<br /><br /> 預設值： DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO<br /><br /> 描述： SQL Server 告知階段，OLE DB 驅動程式會嘗試執行指定的資料列集修改前取消。 在嘗試完成之後，SQL Server OLE DB 驅動程式不支援取消階段。|  
 |DBPROP_ORDEREDBOOKMARKS|這個資料列集屬性未實作的 OLE DB 驅動程式適用於 SQL Server。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 設定變更可視性屬性會導致 SQL Server 以使用 OLE DB 驅動程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標來支援資料列集。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。|  
 |DBPROP_QUICKRESTART|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 設定為 VARIANT_TRUE 時，SQL Server OLE DB 驅動程式會嘗試使用伺服器資料指標的資料列集。|  

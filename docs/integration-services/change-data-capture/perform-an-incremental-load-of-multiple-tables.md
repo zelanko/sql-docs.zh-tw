@@ -1,30 +1,30 @@
 ---
-title: "執行多個資料表的累加式載入 | Microsoft Docs"
-ms.custom: 
+title: 執行多個資料表的累加式載入 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ab0d346d48abf673dc783f0ff18ae781190fcae
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8965e5a3c3f2e2c0628469d6fd7d9d3a64a0e8c2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>執行多個資料表的累加式載入
   在 [利用異動資料擷取改善累加式載入](../../integration-services/change-data-capture/change-data-capture-ssis.md)主題中，圖表會說明只在一個資料表上執行累加式載入的基本封裝。 不過，載入一個資料表不如必須執行多個資料表的累加式載入那麼常見。  

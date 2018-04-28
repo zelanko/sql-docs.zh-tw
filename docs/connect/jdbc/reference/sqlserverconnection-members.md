@@ -1,28 +1,28 @@
 ---
-title: "SQLServerConnection 成員 |Microsoft 文件"
-ms.custom: 
+title: SQLServerConnection 成員 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 181df7c774bdf48b87bfb139d4fcaa272ba25a87
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 15e9af6857ca3a7f4c6695835d19e4900dfbf319
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,9 +49,9 @@ ms.lasthandoff: 03/02/2018
 |名稱|Description|  
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|清除這個報告所有警告[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
-|[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|釋放這個資料庫[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件和 JDBC 資源，立即而非等待它們由系統自動釋放。|  
+|[關閉](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|釋放這個資料庫[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件和 JDBC 資源，立即而非等待它們由系統自動釋放。|  
 |[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|強制解除-準備的任何未完成捨棄備妥陳述式執行的要求。| 
-|[commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|使所有變更成為上一次認可或回復之後永久狀態，並釋放由此目前保留的任何資料庫鎖定[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
+|[認可](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|使所有變更成為上一次認可或回復之後永久狀態，並釋放由此目前保留的任何資料庫鎖定[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
 |[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|建立**java.sql.Blob**物件而不將任何資料。|  
 |[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|建立**java.sql.Clob**物件而不將任何資料。|  
 |[createNClob](../../../connect/jdbc/reference/createnclob-method-sqlserverconnection.md)|建立**java.sql.NClob**物件而不將任何資料。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/02/2018
 |[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|建立**java.sql.SQLXML**物件而不將任何資料。|  
 |[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|擷取此目前自動認可模式[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|擷取目前的目錄名稱，這個[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
-|[getClientConnectionID 方法 &#40;SQLServerConnection &#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|取得最新連接嘗試的連接識別碼，不論嘗試成功或失敗。|  
+|[getClientConnectionID 方法&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|取得最新連接嘗試的連接識別碼，不論嘗試成功或失敗。|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|擷取有關 JDBC 驅動程式所支援之用戶端資訊屬性的資訊。|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|傳回的值**disableStatementPooling**連接屬性。 此設定會控制是否會啟用共用陳述式或不適用於此連線。|
 |[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|傳回的目前未完成已備妥陳述式取消準備動作。|
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/02/2018
 |[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|這會擷取目前的交易隔離等級[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
 |[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|擷取與此相關聯的對應物件[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|擷取由呼叫報告上的第一個警告[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
-|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverconnection.md)|指出是否此[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件已遭關閉。|  
+|[IsClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverconnection.md)|指出是否此[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件已遭關閉。|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverconnection.md)|指出是否此[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件處於唯讀模式。|  
 |[isStatementPoolingEnabled](../../../connect/jdbc/reference/isstatementpoolingenabled-method-sqlserverconnection.md)|傳回是否會啟用共用陳述式或不適用於此連線。|  
 |[isValid](../../../connect/jdbc/reference/isvalid-method-sqlserverconnection.md)|指出是否此[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件尚未關閉，而且仍然有效。|  
@@ -80,7 +80,7 @@ ms.lasthandoff: 03/02/2018
 |[prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)|建立[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)物件，以便呼叫資料庫預存程序。|  
 |[prepareStatement](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)|建立[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)物件以傳送參數化資料庫的 SQL 陳述式。|  
 |[releaseSavepoint](../../../connect/jdbc/reference/releasesavepoint-method-sqlserverconnection.md)|移除指定[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)物件從目前的交易。|  
-|[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)|復原目前交易中所做的所有變更，並釋放目前由這個保留的任何資料庫鎖定[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
+|[復原](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)|復原目前交易中所做的所有變更，並釋放目前由這個保留的任何資料庫鎖定[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
 |[setAutoCommit](../../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md)|設定這個自動認可模式[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)處於指定狀態的物件。|  
 |[setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md)|設定指定的目錄名稱來選取這個子[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)中用來工作的物件的資料庫。|  
 |[setClientInfo](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)|設定用戶端資訊屬性的值。|  

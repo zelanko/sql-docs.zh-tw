@@ -1,32 +1,32 @@
 ---
-title: "連接到 SQL Server |Microsoft 文件"
-ms.custom: 
+title: 連接到 SQL Server |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data source names
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: aff97d687a4519d2451895772ba33f2a2ec3c4f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-sql-server"></a>連線到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/11/2018
 
 -   要用來安裝驅動程式的範本.ini 檔案中指定的驅動程式程式庫的路徑。  
 
-若要建立 DSN，建立 （如有必要），並編輯檔案**~/.odbc.ini** (`.odbc.ini`主目錄中) 與目前的使用者只能存取使用者 dsn 或`/etc/odbc.ini`系統 dsn （需要管理權限。）以下是範例檔案，其中顯示 dsn 的最少的必要項目：  
+若要建立 DSN，建立 （如有必要），並編輯檔案 **~/.odbc.ini** (`.odbc.ini`主目錄中) 與目前的使用者只能存取使用者 dsn 或`/etc/odbc.ini`系統 dsn （需要管理權限。）以下是範例檔案，其中顯示 dsn 的最少的必要項目：  
 
 ```  
 [MSSQLTest]  
@@ -67,7 +67,7 @@ Server = [protocol:]server[,port]
  - **odbcinst-i-f-s** *template_file*  
  
 您可以確認您的驅動程式正在使用`isql`來測試連接，或者您可以使用此命令：
- - **bcp master.INFORMATION_SCHEMA.TABLES 出 OutFile.dat-S <server> -U <name> -P<password>**  
+ - **bcp master.INFORMATION_SCHEMA.TABLES 出 OutFile.dat-S <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>使用安全通訊端層 (SSL)  
 您可以使用安全通訊端層 (SSL) 加密連線[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 SSL 會保護[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用者名稱和透過網路的密碼。 SSL 也會驗證伺服器的身分識別，以防止攔截式 (MITM) 攻擊。  

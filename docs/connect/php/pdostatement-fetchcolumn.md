@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2bea66627882dc61cce0b82ab69788a3c4178cf5
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,12 +37,12 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>參數  
-$$：一個選用整數，表示以零起始的資料行編號。 預設值為 0 (資料列中的第一個資料行)。  
+$*r1c1*： 一個選擇性的整數，表示以零為起始的資料行數目。 預設值為 0 (資料列中的第一個資料行)。  
   
 ## <a name="return-value"></a>傳回值  
 一個資料行，如果沒有更多資料列則為 false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

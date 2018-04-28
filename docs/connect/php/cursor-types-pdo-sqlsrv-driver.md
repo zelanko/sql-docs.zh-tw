@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: fef4910ae38fba0d101e95e9f7ad0c73d4541b72
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="cursor-types-pdosqlsrv-driver"></a>資料指標類型 (PDO_SQLSRV 驅動程式)
+# <a name="cursor-types-pdosqlsrv-driver"></a>資料指標類型 （PDO_SQLSRV 驅動程式）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 PDO_SQLSRV 驅動程式可讓您建立具有數個資料指標的其中一個可捲動的結果集。  

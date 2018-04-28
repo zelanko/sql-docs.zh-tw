@@ -1,30 +1,33 @@
 ---
-title: "setIntegratedSecurity 方法 (SQLServerDataSource) |Microsoft 文件"
-ms.custom: 
+title: setIntegratedSecurity 方法 (SQLServerDataSource) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSource.setIntegratedSecurity
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSource.setIntegratedSecurity
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c82fad6b2fe56afe748b22ea8c131e8aff0e25d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 320db4baa925a55039623180d092dd3845e0d691
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>setIntegratedSecurity 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public void setIntegratedSecurity(boolean enable)
 ```  
   
 #### <a name="parameters"></a>參數  
- *啟用*  
+ *enable*  
   
  **true**如果已啟用 integratedsecurity 則。 否則為 **false**。  
   
@@ -51,7 +54,7 @@ public void setIntegratedSecurity(boolean enable)
   
  如需有關如何使用整合式的驗證的詳細資訊，請參閱[建立連接 URL](../../../connect/jdbc/building-the-connection-url.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

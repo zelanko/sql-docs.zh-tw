@@ -1,5 +1,5 @@
 ---
-title: Windows ODBC 驅動程式中的連接恢復功能
+title: Connection Resiliency in the Windows ODBC Driver |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,19 +20,19 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f74ff01124e9efdb855f356f1951f29e531944f1
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驅動程式中的連接恢復功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  若要確保應用程式仍然連接到 [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)]，Windows 上的 ODBC 驅動程式可以還原閒置的連接。  
+  若要確保應用程式仍然連接到[!INCLUDE[ssAzure](../../../includes/ssazure_md.md)]，在 Windows 上的 ODBC 驅動程式可以還原閒置的連接。  
   
 > [!IMPORTANT]  
 >  Microsoft Azure SQL Database 和 SQL Server 2014 (和更新版本) 伺服器版本都支援連接恢復功能。  
   
- 如需閒置連接恢復功能的詳細資訊，請參閱 [技術文章 – 閒置連接恢復功能](http://go.microsoft.com/fwlink/?LinkId=393996)。  
+ 如需閒置連接恢復功能的詳細資訊，請參閱[技術文章 – 閒置連接恢復功能](http://go.microsoft.com/fwlink/?LinkId=393996)。  
   
  為了控制重新連接的行為，ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows 有兩個選項：  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/16/2018
   
     -   使用 **ConnectRetryCount** 連接字串關鍵字。  
   
-     若要擷取連接重試的嘗試次數，請使用 SQL_COPT_SS_CONNECT_RETRY_COUNT** (唯讀) 連接屬性。 如果應用程式連接到不支援連接恢復功能的伺服器，SQL_COPT_SS_CONNECT_RETRY_COUNT** 會傳回 0。  
+     若要擷取連接重試次數，請使用**SQL_COPT_SS_CONNECT_RETRY_COUNT** （唯讀） 連接屬性。 如果應用程式連接到伺服器不支援連接恢復功能， **SQL_COPT_SS_CONNECT_RETRY_COUNT**傳回 0。  
   
 -   連接重試間隔。  
   
@@ -58,13 +58,13 @@ ms.lasthandoff: 04/16/2018
   
     -   使用 **ConnectRetryInterval** 連接字串關鍵字。  
   
-     若要擷取連接重試間隔的長度，請使用 SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (唯讀) 連接屬性。  
+     若要擷取連接重試間隔的長度，請使用**SQL_COPT_SS_CONNECT_RETRY_INTERVAL** （唯讀） 連接屬性。  
   
  如果應用程式透過 SQL_DRIVER_COMPLETE_REQUIRED 建立連接，且後續嘗試透過中斷的連接執行陳述式，ODBC 驅動程式將不會再次顯示對話方塊。 此外，在復原進行期間，  
   
--   在復原期間，任何對 SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD) **的呼叫，都必須傳回 SQL_CD_TRUE**。  
+-   在復原期間，呼叫**sqlgetconnectattr （sql_copt_ss_connection_dead)**，必須傳回**SQL_CD_FALSE**。  
   
--   如果復原失敗，任何對 SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD) **的呼叫，都必須傳回 SQL_CD_FALSE**。  
+-   如果復原失敗，任何呼叫**sqlgetconnectattr （sql_copt_ss_connection_dead)**，必須傳回**SQL_CD_TRUE**。  
   
  以下是在伺服器上執行命令的任何函數皆可能傳回的狀態碼：  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/16/2018
 |IMC06|連接中斷，且無法復原。 用戶端驅動程式將連接標示為無法復原。 未嘗試還原連接。|  
   
 ## <a name="example"></a>範例  
- 下列範例包含兩個函數。 **func1** 說明如何連接使用 Windows 版 ODBC Driver for  的資料來源名稱 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]DSN。 DSN 會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 驗證，而且它會指定使用者識別碼。 **func1**接著會擷取與連接重試次數**SQL_COPT_SS_CONNECT_RETRY_COUNT**。  
+ 下列範例包含兩個函數。 **func1**示範如何連接資料來源名稱 (DSN)，會使用 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows 上。 DSN 會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 驗證，而且它會指定使用者識別碼。 **func1**接著會擷取與連接重試次數**SQL_COPT_SS_CONNECT_RETRY_COUNT**。  
   
  **func2** 會使用 **SQLDriverConnect**、 **ConnectRetryCount** 連接字串關鍵字和連接屬性來擷取連接重試與重試間隔的設定。  
   

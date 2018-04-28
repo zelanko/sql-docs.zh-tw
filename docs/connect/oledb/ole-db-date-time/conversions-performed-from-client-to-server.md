@@ -3,7 +3,7 @@ title: 執行轉換，因此從用戶端到伺服器 |Microsoft 文件
 description: 從用戶端到伺服器執行的轉換
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21f80f7066527026d7da138690fd46f16f0a2c21
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 81ad7b1c2fd339923d2ba9d2604a1d683742b11f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,19 +37,19 @@ ms.lasthandoff: 04/06/2018
   
 |目標 -><br /><br /> 來源|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
-|DATE|1, 2|1, 3, 4|4, 12|1, 12|1, 12|1, 12|1, 5, 12|1, 12|1, 12|1, 12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1, 6|1, 6|1, 6|1, 5, 6|1, 10|1, 10|1<br /><br /> date|  
-|DBTIME|-|1|1|1, 7|1, 7|1, 7|1, 5, 7|1, 10|1, 10|1<br /><br /> Time(0)|  
-|DBTIME2|-|1, 3|1|1, 7, 10, 14|1, 7, 10, 15|1, 7, 10|1, 5, 7, 10|1, 10, 11|1, 10, 11|1<br /><br /> Time(7)|  
-|DBTIMESTAMP|1, 2|1, 3, 4|1, 4, 10|1, 10, 14|1, 10, 15|1, 10|1, 5, 10|1, 10,11|1, 10, 11|1, 10<br /><br /> datetime2(7)|  
-|DBTIMESTAMPOFFSET|1, 2, 8|1, 3, 4, 8|1, 4, 8, 10|1, 8, 10, 14|1, 8, 10, 15|1, 8, 10|1, 10|1, 10, 11|1, 10, 11|1, 10<br /><br /> datetimeoffset(7)|  
-|FILETIME|1, 2|1, 3, 4|1, 4, 13|1, 13|1, 13|1, 13|1, 5, 13|1, 13|1, 10|1, 13<br /><br /> datetime2(3)|  
+|DATE|1, 2|1、 3、 4|4, 12|1, 12|1, 12|1, 12|1、 5、 12|1, 12|1, 12|1, 12<br /><br /> datetime2(0)|  
+|DBDATE|1|-|-|1, 6|1, 6|1, 6|1、 5、 6|1, 10|1, 10|1<br /><br /> date|  
+|DBTIME|-|1|1|1, 7|1, 7|1, 7|1、 5、 7|1, 10|1, 10|1<br /><br /> Time(0)|  
+|DBTIME2|-|1, 3|1|1、 7、 10、 14|1、 7、 10、 15|1，7 10|1、 5、 7、 10|1、 10、 11|1、 10、 11|1<br /><br /> Time(7)|  
+|DBTIMESTAMP|1, 2|1、 3、 4|1、 4、 10|1、 10、 14|1、 10、 15|1, 10|1、 5、 10|1 10,11|1、 10、 11|1, 10<br /><br /> datetime2(7)|  
+|DBTIMESTAMPOFFSET|1, 2, 8|1、 3、 4、 8|1、 4、 8、 10|1、 8、 10、 14|1、 8、 10、 15|1、 8、 10|1, 10|1、 10、 11|1、 10、 11|1, 10<br /><br /> datetimeoffset(7)|  
+|FILETIME|1, 2|1、 3、 4|1、 4、 13|1, 13|1, 13|1, 13|1、 5、 13|1, 13|1, 10|1, 13<br /><br /> datetime2(3)|  
 |BYTES|-|-|-|-|-|-|-|해당 사항 없음|不適用|해당 사항 없음|  
 |VARIANT|1|1|1|1, 10|1, 10|1, 10|1, 10|해당 사항 없음|해당 사항 없음|1, 10|  
-|SSVARIANT|1, 16|1, 16|1, 16|1, 10, 16|1, 10, 16|1, 10, 16|1, 10, 16|해당 사항 없음|해당 사항 없음|1, 16|  
-|BSTR|1, 9|1, 9|1, 9, 10|1, 9, 10|1, 9, 10|1, 9, 10|1, 9, 10|해당 사항 없음|不適用|해당 사항 없음|  
-|STR|1, 9|1, 9|1, 9, 10|1, 9, 10|1, 9, 10|1, 9, 10|1, 9, 10|해당 사항 없음|不適用|해당 사항 없음|  
-|WSTR|1, 9|1, 9|1, 9, 10|1, 9, 10|1, 9, 10|1, 9, 10|1, 9, 10|해당 사항 없음|不適用|N/A|  
+|SSVARIANT|1 16|1 16|1 16|1、 10、 16|1、 10、 16|1、 10、 16|1、 10、 16|해당 사항 없음|해당 사항 없음|1 16|  
+|BSTR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|해당 사항 없음|不適用|해당 사항 없음|  
+|STR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|해당 사항 없음|不適用|해당 사항 없음|  
+|WSTR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|해당 사항 없음|不適用|N/A|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   

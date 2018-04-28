@@ -1,30 +1,30 @@
 ---
-title: "Integration Services 封裝中的 MERGE | Microsoft Docs"
-ms.custom: 
+title: Integration Services 封裝中的 MERGE | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: abce78012965130235001f74f541940a7ae0b218
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5df41c86f2d1eb8daa0fa29f066e16f6b0dc5e73
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   目前版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之「執行 SQL」工作中的 SQL 陳述式可能會包含 MERGE 陳述式。 這個 MERGE 陳述式可讓您在單一陳述式中完成多項 INSERT、UPDATE 及 DELETE 作業。  

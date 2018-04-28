@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ac5a2f7b4411b38e3986e8d547a2959cdb5d6278
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -42,7 +42,7 @@ int PDO::exec ($statement)
 ## <a name="return-value"></a>傳回值  
 一個整數，報告受影響的資料列數目。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果 *$statement* 包含多個 SQL 陳述式，則只會針對最後一個陳述式報告受影響的資料列計數。  
   
 PDO::exec 不會傳回 SELECT 陳述式的結果。  

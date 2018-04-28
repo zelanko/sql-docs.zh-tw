@@ -1,27 +1,28 @@
 ---
-title: "SQLXML 資料類型範例 |Microsoft 文件"
-ms.custom: 
+title: SQLXML 資料類型範例 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58873e18be5d042c74eea1a6de0708243b8468e3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a88c102ff38b522850d333c671c37df5af3cfbe2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML 資料類型範例
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/18/2017
   
  [!code[JDBC#UsingSQLXML1](../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]  
   
-## <a name="see-also"></a>請參閱＜  
- [使用資料類型 &#40;JDBC &#41;](../../connect/jdbc/working-with-data-types-jdbc.md)  
+## <a name="see-also"></a>另請參閱  
+ [使用資料型別&#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   

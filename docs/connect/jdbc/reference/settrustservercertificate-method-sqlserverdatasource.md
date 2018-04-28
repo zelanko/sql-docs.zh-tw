@@ -1,30 +1,33 @@
 ---
-title: "setTrustServerCertificate 方法 (SQLServerDataSource) |Microsoft 文件"
-ms.custom: 
+title: setTrustServerCertificate 方法 (SQLServerDataSource) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: setTrustServerCertificate Method (SQLServerDataSource)
-apilocation: setTrustServerCertificate Method (SQLServerDataSource)
+apiname:
+- setTrustServerCertificate Method (SQLServerDataSource)
+apilocation:
+- setTrustServerCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b0248cec1f5ba4fd760fe8ef3b641d0f346783a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2b4a1788fc4e4578cf8b80893d6d1f2c80fa6e3e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>setTrustServerCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
 ```  
   
 #### <a name="parameters"></a>參數  
- *trustServerCertificate*  
+ *TrustServerCertificate*  
   
  **true** ，當使用 SSL 加密通訊層時如果伺服器安全通訊端層 (SSL) 憑證應該要自動信任。 否則為 **false**。  
   
@@ -48,7 +51,7 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
   
  如果 trustServerCertificate 屬性設定為**false**、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]會驗證伺服器 SSL 憑證。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

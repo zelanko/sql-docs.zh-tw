@@ -22,7 +22,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b17dd2bb8df3f7274cb8eea36faf3ee5f320f983
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -33,16 +33,16 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-connect-on-a-specified-port"></a>在指定的通訊埠上連接  
   
-1.  驗證伺服器設定為接受連接的通訊埠。 如需將伺服器設定為在指定的通訊埠上接受連接的資訊，請參閱[如何：設定伺服器接聽特定 TCP 通訊埠 ](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)SQL Server 組態管理員。  
+1.  驗證伺服器設定為接受連接的通訊埠。 如需設定伺服器，以接受指定的連接埠上連接資訊，請參閱[How to： 設定伺服器接聽特定 TCP 通訊埠 （SQL Server 組態管理員）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
-2.  將所需的通訊埠加入 *$serverName* parameter of the [sqlsrv](../../connect/php/sqlsrv-connect.md)connect 函數。 請以逗號分隔伺服器名稱和通訊埠。 例如，下列程式碼行會使用 SQLSRV 驅動程式示範如何在通訊埠 1521 上連接到名為 *myServer* 的伺服器：  
+2.  加入所需的連接埠 *$serverName*參數[sqlsrv_connect](../../connect/php/sqlsrv-connect.md)函式。 請以逗號分隔伺服器名稱和通訊埠。 例如，下列程式碼行會使用 SQLSRV 驅動程式示範如何在通訊埠 1521 上連接到名為 *myServer* 的伺服器：  
   
     ```  
     $serverName = "myServer, 1521";  
     sqlsrv_connect( $serverName );  
     ```  
   
-    下列程式碼行會使用 PDO*SQLSRV 驅動程式示範如何在通訊埠 1521 上連接到名為* myServer 的伺服器：  
+    下列程式碼使用 PDO_SQLSRV 驅動程式示範如何連接到伺服器，名稱為*myServer*通訊埠 1521年上：  
   
     ```  
     $serverName = "(local), 1521";  

@@ -3,7 +3,7 @@ title: 建立 OLE DB 驅動程式適用於 SQL Server 的應用程式 |Microsoft
 description: 使用 OLE DB 驅動程式的 SQL Server 的建立應用程式
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -22,14 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bc33a78bc0f2782a7f41ff6242bc3fdcc3a7525
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b64ce2fbf1be2537ddf5a2f5c3ed91b63cd9431b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>使用 OLE DB 驅動程式的 SQL Server 的建立應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   在開發時使用的 SQL Server 文件庫的 OLE DB 驅動程式的應用程式，有一些遇到的問題。 本節中的主題將討論許多問題，包括從 MDAC 升級到 OLE DB 驅動程式的 SQL Server，使用 OLE DB 驅動程式的 SQL Server 標頭和程式庫檔，以及可以搭配 OLE DB 驅動程式為 S 的各種連接字串的概觀QL Server。  
 
@@ -59,5 +61,5 @@ ms.lasthandoff: 04/06/2018
  討論如何各種資料存取元件可以與不同版本的 OLE DB 驅動程式用於 SQL Server。  
 
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 程式設計的 OLE DB 驅動程式](../../oledb/oledb-driver-for-sql-server-programming.md)     
+ [SQL Server 的 OLE DB 驅動程式](../../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB 的使用說明主題](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

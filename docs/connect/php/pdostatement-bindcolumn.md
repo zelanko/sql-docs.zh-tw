@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f77fdb089f83d1d8d8f866be4a0a7ef99b9fa155
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,20 +37,20 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>參數  
-$$：結果集內資料行的 (混合) 號碼 (以 1 為基準的索引) 或資料行的名稱。  
+$*資料行*: （混合） 的數字之資料行 （以 1 為基底的索引） 的結果集中的資料行名稱。  
   
-&$param*：資料行將繫結之 PHP 變數的* 混合 名稱。  
+&$*param*： 資料行都會繫結之 PHP 變數的 （混合） 名稱。  
   
-$type*：參數的選擇性資料類型 (以 PDO::PARAM* 常數表示)。  
+$*型別*: pdo:: PARAM_ * 常數所代表之參數的選擇性資料類型。  
   
 $*maxLen*：選擇性整數 (不是由 Microsoft Drivers for PHP for SQL Server 使用)。  
   
-$driverdata*：驅動程式的選擇性混合參數。 例如，您可以指定 PDO::SQLSRV_ENCODING_UTF8，以 UTF-8 編碼的字串形式將資料行繫結至變數。  
+$*driverdata*： 選擇性混合參數驅動程式。 例如，您可以指定 PDO::SQLSRV_ENCODING_UTF8，以 UTF-8 編碼的字串形式將資料行繫結至變數。  
   
 ## <a name="return-value"></a>傳回值  
 如果成功，傳回 TRUE，否則傳回 FALSE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

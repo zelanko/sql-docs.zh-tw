@@ -1,33 +1,33 @@
 ---
-title: "建立新的 InfoObject | Microsoft Docs"
-ms.custom: 
+title: 建立新的 InfoObject | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50f319341ba89890f67b77f698ff3411c9ab820e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5035b20e22bd4d24ac4f5cd930fd6a32467a3f97
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-new-infoobject"></a>建立新的 InfoObject
   使用 **[建立新的 InfoObject]** 對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoObject。  
   
- 您可以從 **[SAP BW 目的地編輯器]** 的 **[連接管理員]** 頁面開啟 **[建立 InfoObject]**對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
+ 您可以從 **[SAP BW 目的地編輯器]** 的 **[連接管理員]** 頁面開啟 **[建立 InfoObject]** 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
   
-3.  在 **[SAP BW 目的地編輯器]**中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
+3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
 4.  在 **[連接管理員]** 頁面的 **[建立 SAP BW 物件]** 群組方塊中，執行下列其中一個步驟以建立 InfoObject：  
   

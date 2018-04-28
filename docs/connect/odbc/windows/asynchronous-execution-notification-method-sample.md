@@ -1,5 +1,5 @@
 ---
-title: 非同步執行 (通知方法) 範例
+title: 非同步執行 （通知方法） 範例 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e971ee6725f27afcd8f8b9c8accdd37176f1cf6c
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>非同步執行 (通知方法) 範例
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  本主題中的程式碼範例示範如何使用[非同步執行 ](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)通知方法。  
+  本主題中的程式碼範例示範如何使用[非同步執行 （通知方法）](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)。  
   
- 此函數會使用非同步通知開啟五個連接，並且對每個連接的陳述式執行一個查詢。  
+ 此函數會使用非同步通知開啟五個連接，並對每個連接的陳述式執行一個查詢。  
   
 ```  
   

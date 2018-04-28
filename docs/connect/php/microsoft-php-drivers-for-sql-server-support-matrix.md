@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP for SQL Server 支援矩陣 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -12,16 +12,16 @@ ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: ''
+caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
 ms.workload: On Demand
-ms.openlocfilehash: 23159425e45fdc8974e0047859072654c5c77959
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 95b8e0ad1b69431e6f2266babd42f88ea2f4bfcc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP 驅動程式供 SQL Server 支援對照表
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/28/2018
 
 |驅動程式名稱|驅動程式套件版本|結束主流支援|
 |-|-|-|
-|Microsoft PHP Drivers 5.2 for SQL Server|5.2|2023 年 2 月 9 日|
+|SQL Server 的 Microsoft PHP 驅動程式 5.2|5.2|2023 年 2 月 9 日|
 |SQL Server 的 Microsoft PHP 驅動程式 4.3|4.3|2022 年 7 月 6 日|
 |Microsoft PHP 驅動程式 4.0 for SQL Server|4.0|2021 年 7 月 11 日|
 |Microsoft PHP Drivers 3.2 for SQL Server|3.2|2020 年 3 月 9 日|
@@ -48,8 +48,8 @@ ms.lasthandoff: 03/28/2018
 |驅動程式名稱|驅動程式套件版本|結束主流支援|
 |-|-|-|
 |Microsoft PHP Drivers 3.0 for SQL Server|3.0|2017 年 3 月 6 日|
-|Microsoft PHP Drivers 2.0 for SQL Server|2.0|2015 年 8 月 10日日|
-|Microsoft PHP Drivers 1.0 for SQL Server|1.0|2014 年 4 月 28日日|
+|SQL Server 的 Microsoft PHP 驅動程式 2.0|2.0|2015 年 8 月 10日日|
+|SQL Server 的 Microsoft PHP 驅動程式 1.0|1.0|2014 年 4 月 28日日|
 
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server 版本通過相容性
  下列矩陣會列出已測試與認證與對應的驅動程式版本相容的 SQL Server 版本。 我們致力於維護回溯相容性之前的驅動程式版本，但只有最新支援的驅動程式會測試及認證使用新的 SQL Server 版本中，SQL Server 會在釋放。

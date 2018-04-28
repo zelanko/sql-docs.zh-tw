@@ -1,30 +1,30 @@
 ---
-title: "選取 Oracle 資料表來擷取變更 | Microsoft Docs"
-ms.custom: 
+title: 選取 Oracle 資料表來擷取變更 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 983338ce51799c8a2d36cc87404f4b6f477e590c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b1cfa2240ebb8c6b14e82fea34afe64020043188
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>選取 Oracle 資料表來擷取變更
   使用此對話方塊來選取 CDC 執行個體中所包含的資料表。 選取的資料表會加入至新增執行個體精靈中 **[選取資料表和資料行]** 頁面的清單中。 您可以在此對話方塊中執行下列動作。  

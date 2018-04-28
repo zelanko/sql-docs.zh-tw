@@ -2,7 +2,7 @@
 title: 擷取日期和時間，以字串類型使用 SQLSRV 驅動程式 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -18,13 +18,13 @@ ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43517dce78fe7303c1b4e687b4d3e786fc627a20
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e89f3df43a8a3f5327c86c792cc3425e75aede50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式，以字串的形式擷取日期和時間類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

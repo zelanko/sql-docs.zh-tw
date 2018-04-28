@@ -1,28 +1,28 @@
 ---
-title: "資料來源精靈畫面 3 （適用於 SQL Server ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 資料來源精靈畫面 3 （適用於 SQL Server ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: 02b09a88240fad6cd4b6e4bea41cf26e71e4a080
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>資料來源精靈畫面 3
 

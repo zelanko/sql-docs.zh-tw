@@ -2,7 +2,7 @@
 title: 如何： 使用 SQLSRV 驅動程式時，指定 SQL Server 資料類型 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f88116134641d955c886bdee840982fa7710b934
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: f7e10688144a78d7ab897d0d4354e49b7bb2e26e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式指定 SQL Server 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/28/2018
   
 3.  建構在準備或執行查詢時要使用的 *$params* 陣列。 請注意， *$params* 陣列的每個元素，在您指定 SQL Server 資料類型時也必須是陣列。  
   
-4.  指定所需的 SQL Server 資料類型，使用適當的**SQLSRV_SQLTYPE_\*** 常數中的每個子陣列的第四個參數為*$params*陣列。 如需完整的清單**SQLSRV_SQLTYPE_\*** 常數，請參閱 Sqltype 」 一節的[常數&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 例如，在下方的程式碼中， *$changeDate*、 *$rate*和 *$payFrequency* 分別指定為 **$params**陣列中的 SQL Server 類型 **datetime**、 **money** 和 *tinyint* 。 由於未指定 *$employeeId* 的 SQL Server 類型，而且它初始化為整數，因此會使用預設的 SQL Server 類型 **integer** 。  
+4.  指定所需的 SQL Server 資料類型，使用適當的**SQLSRV_SQLTYPE_\*** 常數中的每個子陣列的第四個參數為 *$params*陣列。 如需完整的清單**SQLSRV_SQLTYPE_\*** 常數，請參閱 Sqltype 」 一節的[常數&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 例如，在下方的程式碼中， *$changeDate*、 *$rate*和 *$payFrequency* 分別指定為 **$params**陣列中的 SQL Server 類型 **datetime**、 **money** 和 *tinyint* 。 由於未指定 *$employeeId* 的 SQL Server 類型，而且它初始化為整數，因此會使用預設的 SQL Server 類型 **integer** 。  
   
     ```  
     $employeeId = 5;  

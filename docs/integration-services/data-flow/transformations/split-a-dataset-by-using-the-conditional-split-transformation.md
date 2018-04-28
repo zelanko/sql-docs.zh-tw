@@ -1,32 +1,32 @@
 ---
-title: "使用條件式分割轉換來分割資料集 | Microsoft Docs"
-ms.custom: 
+title: 使用條件式分割轉換來分割資料集 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Conditional Split transformation
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dfc5673dca0a8109e02b76107ad85e8e19324cb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 89be5a0f280d5cc2bc698fd469c0c980a7eb03df
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用條件式分割轉換來分割資料集
   若要加入及設定「條件式分割」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
@@ -37,13 +37,13 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 **[資料流程]** 索引標籤，然後從 **[工具箱]**拖曳「條件式分割」轉換至設計介面。  
+3.  按一下 **[資料流程]** 索引標籤，然後從 **[工具箱]** 拖曳「條件式分割」轉換至設計介面。  
   
 4.  從來源或先前的轉換將連接子拖曳到「條件式分割」轉換，以便將「條件式分割」轉換連接到資料流程。  
   
 5.  按兩下「條件式分割」轉換。  
   
-6.  在 **[條件式分割轉換編輯器]**中，拖曳變數、資料行、函數和運算子到方格中的 **[條件]** 資料行，以建立要當作條件使用的運算式。 或者，您也可以在 **[條件]** 資料行中輸入運算式。  
+6.  在 **[條件式分割轉換編輯器]** 中，拖曳變數、資料行、函數和運算子到方格中的 **[條件]** 資料行，以建立要當作條件使用的運算式。 或者，您也可以在 **[條件]** 資料行中輸入運算式。  
   
     > [!NOTE]  
     >  變數或資料行可以用在多個運算式中。  

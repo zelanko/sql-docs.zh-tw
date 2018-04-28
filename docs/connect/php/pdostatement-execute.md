@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 223ca5d155b140f12e2397b67dbb9878d2e0582e
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,12 +37,12 @@ bool PDOStatement::execute ([ $input ] );
 ```  
   
 #### <a name="parameters"></a>參數  
-*$input*：選擇性 包含參數標記值的關聯陣列。  
+*$input*: （選擇性） 包含參數標記值的關聯陣列。  
   
 ## <a name="return-value"></a>傳回值  
 成功時傳回 true，否則傳回 false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 以 PDOStatement::execute 執行的陳述式必須先使用 [PDO::prepare](../../connect/php/pdo-prepare.md)準備。 如需如何指定直接或已備妥陳述式執行的資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) 。  
   
 輸入參數陣列的所有值都會被視為 PDO::PARAM_STR 值。  

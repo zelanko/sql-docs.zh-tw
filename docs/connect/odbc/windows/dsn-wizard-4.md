@@ -1,33 +1,34 @@
 ---
-title: "資料來源精靈畫面 4 (ODBC Driver for SQL Server) |Microsoft 文件"
-ms.custom: 
+title: 資料來源精靈畫面 4 (ODBC Driver for SQL Server) |Microsoft 文件
+ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a4cd1c0e7d86a51e1278e8c3f44f43a8854be13
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f1c02859900f2ca5aeecd6d485809762ad6a7d2a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-wizard-screen-4"></a>資料來源精靈畫面 4
 
 指定要用於 SQL Server 訊息的語言、 字元集轉譯，以及 ODBC driver for SQL Server 是否應使用的地區設定。 您也可以控制長期執行查詢及驅動程式統計資料設定的記錄。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>變更 SQL Server 系統訊息的語言為
 

@@ -1,27 +1,28 @@
 ---
-title: "使用資料類型 (JDBC) |Microsoft 文件"
-ms.custom: 
+title: 使用資料類型 (JDBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e01edbc1cb5bfebafc5bd5b04b786a5e38818d6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b6047257837dfc4c21122bc9577d2a7bf061c870
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-data-types-jdbc"></a>使用資料類型 (JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/18/2017
 |[基本資料類型範例](../../connect/jdbc/basic-data-types-sample.md)|描述如何使用結果集 getter 方法擷取基本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型值，以及如何使用結果集 update 方法更新那些值。|  
 |[SQLXML 資料類型範例](../../connect/jdbc/sqlxml-data-type-sample.md)|描述如何在關聯式資料庫中儲存 XML 資料、 如何從資料庫擷取 XML 資料以及如何剖析具有 XML 資料**SQLXML** Java 資料類型。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [範例 JDBC 驅動程式應用程式](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   

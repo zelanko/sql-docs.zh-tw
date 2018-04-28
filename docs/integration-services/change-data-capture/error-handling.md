@@ -1,27 +1,27 @@
 ---
-title: "錯誤處理 | Microsoft Docs"
-ms.custom: 
+title: 錯誤處理 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93a8df11a73ebb9abc21e94147c5ba2fbc0abd87
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 95594b1b733db7c1bf96fa9e803ee11b00f1cbb7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-handling"></a>錯誤處理
   Oracle CDC 執行個體會針對單一 Oracle 來源資料庫中的變更進行採礦處理 (Oracle RAC 叢集會視為單一資料庫)，並將認可的變更寫入目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 CDC 資料庫內的變更資料表。  

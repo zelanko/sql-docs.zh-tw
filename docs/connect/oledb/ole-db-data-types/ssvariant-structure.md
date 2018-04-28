@@ -3,7 +3,7 @@ title: SSVARIANT 結構 |Microsoft 文件
 description: OLE DB 驅動程式中的 SQL Server 的 SSVARIANT 結構
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-data-types
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 797c10dfeabd1361395c5416f65c88a0d6c82176
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: 1d960b83b4ad000af919c76e98b30476fb2a9ec2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 結構
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,8 +64,8 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |------------|---------------------------|------------------------|--------------|--------------|  
 |vt|SSVARTYPE|||指定值中包含的型別**SSVARIANT**結構。|  
 |bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|支援**tinyint** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。|  
-|sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|支援**smallint** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。|  
-|lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|支援**int** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。|  
+|sShortIntVal|DBTYPE_I2|**短**|**VT_SS_I2**|支援**smallint** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。|  
+|lIntVal|DBTYPE_I4|**長**|**VT_SS_I4**|支援**int** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|支援**bigint** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|支援**真實**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。|  
 |dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|支援**float** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。|  
@@ -80,11 +80,11 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|支援**datetimeoffset** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**位元組**) 指定的小數位數*tsoDateTimeOffsetVal*值。|  
 |NCharVal|沒有對應的 OLE DB 類型指標。|**結構 _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|支援**nchar**和**nvarchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**簡短**) 指定之字串的實際長度*pwchNCharVal*點。 不包括結尾的零。<br /><br /> *sMaxLength* (**簡短**) 指定之字串的最大長度*pwchNCharVal*點。<br /><br /> *pwchNCharVal* (**WCHAR** \*) 字串的指標。<br /><br /> 未使用的成員︰ *rgbReserved*， *dwReserved*，和*pwchReserved*。|  
 |CharVal|沒有對應的 OLE DB 類型指標。|**結構 _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|支援**char**和**varchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**簡短**) 指定之字串的實際長度*pchCharVal*點。 不包括結尾的零。<br /><br /> *sMaxLength* (**簡短**) 指定之字串的最大長度*pchCharVal*點。<br /><br /> *pchCharVal* (**CHAR** \*) 字串的指標。<br /><br /> 未使用的成員：<br /><br /> *rgbReserved*， *dwReserved*，和*pwchReserved*。|  
-|BinaryVal|沒有對應的 OLE DB 類型指標。|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|支援**二進位**和**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**簡短**) 指定之資料的實際長度*prgbBinaryVal*點。<br /><br /> *sMaxLength* (**簡短**) 指定之資料的最大長度*prgbBinaryVal*點。<br /><br /> *prgbBinaryVal* (**位元組** \*) 的二進位資料的指標。<br /><br /> 未使用的成員︰ *dwReserved*。|  
+|BinaryVal|沒有對應的 OLE DB 類型指標。|**結構 _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|支援**二進位**和**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**簡短**) 指定之資料的實際長度*prgbBinaryVal*點。<br /><br /> *sMaxLength* (**簡短**) 指定之資料的最大長度*prgbBinaryVal*點。<br /><br /> *prgbBinaryVal* (**位元組** \*) 的二進位資料的指標。<br /><br /> 未使用的成員︰ *dwReserved*。|  
 |UnknownType|未使用|未使用|未使用|未使用|  
 |BLOBType|未使用|未使用|未使用|未使用|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料類型 &#40; OLE DB &#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [資料類型 & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

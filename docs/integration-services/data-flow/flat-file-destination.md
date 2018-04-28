@@ -1,16 +1,16 @@
 ---
-title: "一般檔案目的地 | Microsoft Docs"
-ms.custom: 
+title: 一般檔案目的地 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfiledest.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 
+caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f793d3da885afc7a0b344e3f020cf455fee130a4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c649a4d31129d3719a3a648547b2139c767b6e61
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="flat-file-destination"></a>一般檔案目的地
   「一般檔案」目的地會將資料寫入文字檔。 該文字檔的格式可以是使用分隔符號、固定寬度、具有資料列分隔符號的固定寬度，或不齊右。  
@@ -94,7 +94,7 @@ ms.lasthandoff: 01/25/2018
  檢視可用的目的地資料行清單。 使用拖放作業，即可將可用的目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]**清單來變更對應。 選取 [\<忽略>] 即可從輸出中將資料行排除。  
+ 檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]** 清單來變更對應。 選取 [\<忽略>] 即可從輸出中將資料行排除。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  

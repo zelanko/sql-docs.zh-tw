@@ -1,16 +1,16 @@
 ---
-title: "快取轉換 | Microsoft Docs"
-ms.custom: 
+title: 快取轉換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83d157914c7090273a213a7f2ed4b6e5ea7f2fa5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 819aa38bc5c974b4d6f295ad99e1224a4aae9369
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cache-transform"></a>快取轉換
   「快取轉換」轉換會藉由將資料從資料流程中連接的資料來源寫入至快取連接管理員的方式，產生「查閱轉換」的參考資料集。 「查閱轉換」會藉由聯結已連接資料來源輸入資料行中的資料與參考資料庫中的資料行來執行查閱。  

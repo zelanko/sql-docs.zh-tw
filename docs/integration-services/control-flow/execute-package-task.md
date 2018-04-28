@@ -1,16 +1,16 @@
 ---
-title: "執行套件工作 | Microsoft Docs"
-ms.custom: 
+title: 執行套件工作 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executepackagetask.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 703f8c2dbcc954c4603ec0ff73b0928c6afaf70c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 04950be3b6cdff9b21a78be007dcdf4dd5a04858
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="execute-package-task"></a>執行封裝工作
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/25/2018
  如需詳細資訊，請參閱 [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/legacy-package-deployment-ssis.md#child)(在子封裝中使用變數和參數的值)。  
   
 ### <a name="accessing-parent-package-variables"></a>存取父封裝變數  
- 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 **[指令碼工作編輯器]** 的 **[指令碼]**頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。  
+ 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。  
   
 ## <a name="configuring-the-execute-package-task"></a>設定執行封裝工作  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  

@@ -2,7 +2,7 @@
 title: 如何： 使用 SQL Server 驗證連接 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: ''
+caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7885d3d2be29b2ad8de9c4f576c7441b43b37726
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 3ffb7af751cac606ab258a9ea926d025aadbdb42
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -143,7 +143,7 @@ sqlsrv_close( $conn);
 
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+[SUSER_SNAME (TRANSACT-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
 [如何： 建立 SQL Server 登入](../../relational-databases/security/authentication-access/create-a-login.md)
 

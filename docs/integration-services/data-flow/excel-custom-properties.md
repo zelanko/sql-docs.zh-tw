@@ -2,7 +2,7 @@
 title: Excel 自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1278f45d93266ccdb5f33361af83bfdf66d4ed7
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 0e88cd2865ef3582fb91ffd6753822d8a25145b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="excel-custom-properties"></a>Excel 自訂屬性
   **來源自訂屬性**  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/04/2018
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|用來存取資料庫的模式。 可能的值包括 **[開啟資料列集]**、 **[來自變數的開啟資料列集]**、 **[SQL 命令]**和 **[來自變數的 SQL 命令]**。 預設值為 **[開啟資料列集]**。|  
+|AccessMode|Integer|用來存取資料庫的模式。 可能的值包括 **[開啟資料列集]**、 **[來自變數的開啟資料列集]**、 **[SQL 命令]** 和 **[來自變數的 SQL 命令]**。 預設值為 **[開啟資料列集]**。|  
 |CommandTimeout|Integer|命令逾時之前的秒數。值為 0 表示無限逾時。<br /><br /> **注意**：雖然您無法在 [Excel 來源編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
 |[OpenRowset]|String|用來開啟資料列集之資料庫物件的名稱。|  
 |OpenRowsetVariable|String|變數，其中包含用來開啟資料列集之資料庫物件的名稱。|  

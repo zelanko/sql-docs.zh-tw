@@ -2,7 +2,7 @@
 title: ODBC Driver on Linux 及 macOS-高可用性和災害復原 |Microsoft 文件
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -16,13 +16,13 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 60f3022334ca505f5ae2d3ddadba623de292f418
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>在 Linux 和 macOS 高可用性和災害復原的支援上的 ODBC 驅動程式
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -48,7 +48,7 @@ Linux 和 macOS 上的 ODBC 驅動程式循序逐一查看所有與 DNS 主機�
 
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接
 
-請務必指定**MultiSubnetFailover = Yes** (或**= True**) 時，連線到[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]可用性群組接聽程式或[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]容錯移轉叢集執行個體。 **MultiSubnetFailover**啟用更快速的容錯移轉的所有可用性群組和容錯移轉叢集執行個體中的[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]。 **MultiSubnetFailover**也會大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會嘗試平行連接。 子網路容錯移轉期間，此驅動程式會積極重試 TCP 連接。
+請務必指定**MultiSubnetFailover = Yes** (或 **= True**) 時，連線到[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]可用性群組接聽程式或[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]容錯移轉叢集執行個體。 **MultiSubnetFailover**啟用更快速的容錯移轉的所有可用性群組和容錯移轉叢集執行個體中的[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]。 **MultiSubnetFailover**也會大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會嘗試平行連接。 子網路容錯移轉期間，此驅動程式會積極重試 TCP 連接。
 
 **MultiSubnetFailover** 連接屬性表示應用程式正在可用性群組或容錯移轉叢集執行個體中部署。 驅動程式會嘗試連接到主要資料庫[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]執行個體來嘗試連接到所有 IP 位址。 使用連接時**MultiSubnetFailover = Yes**，用戶端重試 TCP 連接的速度比作業系統的預設 TCP 重新傳輸間隔快。 **MultiSubnetFailover=Yes** 可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快速地重新連接。 **MultiSubnetFailover = Yes**適用於單一-和多重子網路可用性群組和容錯移轉叢集執行個體。  
 

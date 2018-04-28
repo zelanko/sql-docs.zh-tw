@@ -3,7 +3,7 @@ title: 將資料傳送到 FILESTREAM-ISequentialStream Bound to ICommandText |Mi
 description: 檔案資料流的繫結至 ICommandText ISequentialStream 傳送資料
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,20 +15,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3443fc79379538d3bdd3ad8794477923cd645fd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b793bfcb5fd8024c3fcf229ef6b390c58be059fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>將資料傳送到 FILESTREAM-ISequentialStream Bound to ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   此範例會使用繫結至 ICommandText 參數的 ISequentialStream 介面，將介於 4MB 與 4GB 之間的資料傳送到 Filestream 資料行。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[FILESTREAM 支援&#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱[FILESTREAM 支援](../../../oledb/features/filestream-support.md)。  
   
 ## <a name="example"></a>範例  
  在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  

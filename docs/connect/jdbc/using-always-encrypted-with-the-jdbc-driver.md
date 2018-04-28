@@ -2,7 +2,7 @@
 title: JDBC 驅動程式搭配使用一律加密 |Microsoft 文件
 ms.custom: ''
 ms.date: 3/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: jdbc
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: ''
+caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 02a0be7375eafcd3ba54dbdf83f3e55e73b13a91
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC 驅動程式搭配使用永遠加密
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -107,7 +107,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 >  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [azure-activedirectory-程式庫-如-java 文件庫](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > 如需如何 Maven 專案中包含這些相依性的範例，請參閱[下載 ADAL4J 和保存的相依性使用 Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -143,11 +143,11 @@ JDBC 驅動程式隨附內建金鑰存放區提供者實作 Java 金鑰存放區
 
 有三個連接字串屬性可讓用戶端應用程式，可指定驅動程式必須向 Java 金鑰存放區的認證。 驅動程式初始化提供者，根據連接字串中這三個屬性的值。
 
-**keyStoreAuthentication:**識別要使用的 Java 金鑰存放區。 Microsoft JDBC driver 6.0 和更新版本的 SQL Server，您可以驗證這個屬性只能透過 Java 金鑰存放區。 Java 金鑰存放區中，這個屬性的值必須是`JavaKeyStorePassword`。
+**keyStoreAuthentication:** 識別要使用的 Java 金鑰存放區。 Microsoft JDBC driver 6.0 和更新版本的 SQL Server，您可以驗證這個屬性只能透過 Java 金鑰存放區。 Java 金鑰存放區中，這個屬性的值必須是`JavaKeyStorePassword`。
 
-**keyStoreLocation:**儲存資料行主要金鑰的 Java 金鑰存放區檔案的路徑。 路徑中包含的金鑰存放區檔案名稱。
+**keyStoreLocation:** 儲存資料行主要金鑰的 Java 金鑰存放區檔案的路徑。 路徑中包含的金鑰存放區檔案名稱。
 
-**keyStoreSecret:**密碼/密碼用於 keystore 和索引鍵。 使用 Java 金鑰存放區，金鑰存放區和金鑰的密碼必須相同。
+**keyStoreSecret:** 密碼/密碼用於 keystore 和索引鍵。 使用 Java 金鑰存放區，金鑰存放區和金鑰的密碼必須相同。
 
 提供這些認證連接字串中的範例如下：
 

@@ -3,7 +3,7 @@ title: SQL Server 錯誤詳細資料 |Microsoft 文件
 description: SQL Server 錯誤詳細資料
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-errors
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9d23ec9cdc323f80f7a65a6221eff0ac2bdc9ef
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 88e0fe59415372b9fba4fcf0d2079716fbcfb56d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 錯誤詳細資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤訊息。 在傳回的字串相同**ierrorinfo:: Getdescription**。|  
 |*pwszServer*|工作階段的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |*pwszProcedure*|如果適用，則為發生錯誤之程序的名稱， 否則便為空字串。|  
-|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生錯誤號碼。 在傳回的值相同*isqlerrorinfo:: Getsqlinfo*參數**:: Getsqlinfo<**。|  
+|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生錯誤號碼。 在傳回的值相同*isqlerrorinfo:: Getsqlinfo*參數 **:: Getsqlinfo<**。|  
 |*bState*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤訊息的狀態。|  
 |*bClass*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤訊息的嚴重性。|  
 |*wLineNumber*|在適用時，這是發生錯誤之預存程序的行號。|  

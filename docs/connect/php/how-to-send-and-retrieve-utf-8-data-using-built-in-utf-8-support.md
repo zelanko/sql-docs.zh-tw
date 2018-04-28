@@ -1,5 +1,5 @@
 ---
-title: 如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料
+title: 如何： 傳送及接收 utf-8 資料使用內建的 utf-8 支援 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -24,7 +24,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: bfa4082a1911eb2b423c62ba0d2cbceedd58fbdc
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -43,12 +43,12 @@ ms.lasthandoff: 04/16/2018
   
     當您將字元集指定為連接選項的一部分時，驅動程式會假設其他連接選項字串使用這個相同的字元集。 此外也會假設伺服器名稱和查詢字串使用相同的字元集。  
   
-請注意，您可以將 UTF-8 或 SQLSRV_ENC_CHAR 傳遞至 CharacterSet** (您無法傳遞 SQLSRV_ENC_BINARY)。 預設編碼為 SQLSRV_ENC_CHAR。  
+您可以傳遞 utf-8 或 sqlsrv_enc_char 傳遞至**CharacterSet**，但您無法傳遞 SQLSRV_ENC_BINARY。 預設編碼為 SQLSRV_ENC_CHAR。  
   
 ## <a name="example"></a>範例  
-下列範例在建立連接時，如何藉由指定 UTF-8 字元集來傳送及擷取 UTF-8 編碼資料。 此範例會更新 Production.ProductReview 資料表中指定的檢閱識別碼的「註解」資料行。 此範例也會擷取新的更新資料，並加以顯示。 請注意，「註解」資料行屬於 nvarcahr(3850)** 類型。 同時請注意，資料在傳送到伺服器之前，會使用 PHP utf8_encode** 函數轉換成 UTF-8 編碼。 此作業僅供示範使用。 在實際的應用程式案例中，您會從 UTF-8 編碼資料著手。  
+下列範例在建立連接時，如何藉由指定 UTF-8 字元集來傳送及擷取 UTF-8 編碼資料。 此範例會更新 Production.ProductReview 資料表中指定的檢閱識別碼的「註解」資料行。 此範例也會擷取新的更新資料，並加以顯示。 請注意，註解的資料行是類型**nvarchar （3850)。** 也請注意，資料會傳送到伺服器之前將它轉換成 utf-8 編碼使用 PHP **utf8_encode**函式。 此作業僅供示範使用。 在實際的應用程式案例中，您會從 utf-8 編碼資料。  
   
-此範例假設本機電腦上已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
+此範例假設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-如需儲存 Unicode 資料的相關資訊，請參閱 [使用 Unicode 資料](https://msdn.microsoft.com/library/ms175180.aspx)。  
+如需儲存 Unicode 資料的相關資訊，請參閱[使用 Unicode 資料](https://msdn.microsoft.com/library/ms175180.aspx)。  
   
 ## <a name="example"></a>範例  
 下列範例類似於第一個範例，但此範例不會在連接上指定 UTF-8 字元集，而會說明如何在資料行上指定 UTF-8 字元集。  

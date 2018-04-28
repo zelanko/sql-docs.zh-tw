@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e48e995b973851db469b267bdbe7b250b60ec187
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,14 +37,14 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>參數  
-$*name*：一個選擇性字串，可讓您指定資料表。 
+$*名稱*： 可讓您指定順序名稱的選擇性字串。 
   
 ## <a name="return-value"></a>傳回值  
 如果沒有順序提供名稱，最新加入的資料列的識別碼字串。
 提供順序名稱，如果最新加入的順序識別項字串。
 如果方法呼叫失敗，則會傳回空字串。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
 版本 2.0 和 4.3 之間選擇性的參數是資料表名稱，並傳回值是最近新增到所提供的資料表資料列的識別碼。
 從 5.0 開始，選擇性的參數會被視為序列名稱，並傳回值是提供的序列名稱的最新加入的順序。

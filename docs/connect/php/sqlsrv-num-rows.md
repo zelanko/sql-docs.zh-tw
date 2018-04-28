@@ -23,7 +23,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0548f10588754fcf5e9ffbc973118737e50869ec
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -45,8 +45,8 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="return-value"></a>傳回值  
 如果計算資料列數目時發生錯誤，則會傳回**false** 。 否則會傳回結果集內的資料列數目。  
   
-## <a name="remarks"></a>Remarks  
-**需要用戶端、靜態或索引鍵集資料指標，而如果您使用順向資料指標或動態資料指標，則會傳回 false** (預設值為順向資料指標)。如需資料指標的詳細資訊，請參閱 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 和[資料指標類型 &#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
+## <a name="remarks"></a>備註  
+sqlsrv_num_rows 需要用戶端、 靜態或索引鍵集資料指標，且會傳回**false**如果您使用順向資料指標或動態資料指標。 (預設值為順向資料指標)。如需資料指標的詳細資訊，請參閱[sqlsrv_query](../../connect/php/sqlsrv-query.md)和[資料指標類型&#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>範例  
   

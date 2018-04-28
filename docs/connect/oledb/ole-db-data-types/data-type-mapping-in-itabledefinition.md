@@ -3,7 +3,7 @@ title: ITableDefinition 中的資料類型對應 |Microsoft 文件
 description: ITableDefinition 中的資料類型對應
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-data-types
@@ -23,13 +23,13 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4cdcbbc5fdb0ac5efc6e8090213dd06475695b3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 1ef0aa17d3229188fe4b52780d9c894126d8e7f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的資料類型對應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,22 +43,24 @@ ms.lasthandoff: 04/06/2018
 |DBTYPE_BOOL|**bit**||  
 |DBTYPE_BYTES|**二進位**， **varbinary**，**映像，**或**varbinary （max)**|SQL Server OLE DB 驅動程式會檢查*ulColumnSize* DBCOLUMNDESC 結構的成員。 根據值和新版[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體，OLE DB 驅動程式的 SQL Server 將對應的型別**映像**。<br /><br /> 如果值*ulColumnSize*小於最大長度**二進位**資料類型資料行，則 SQL Server OLE DB 驅動程式會檢查 DBCOLUMNDESC *rgPropertySets*成員。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE，SQL Server OLE DB 驅動程式會將對應的型別**二進位**。 如果屬性的值是 VARIANT_FALSE，SQL Server OLE DB 驅動程式會對應至型別**varbinary**。 在任一情況，DBCOLUMNDESC *ulColumnSize*成員會決定建立的 SQL Server 資料行的寬度。|  
 |DBTYPE_CY|**money**||  
-|DBTYPE_DBTIMESTAMP|**datetime**||  
+|DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
 |DBTYPE_I2|**smallint**||  
 |DBTYPE_I4|**int**||  
+|DBTYPE_I8|**bigint**||
 |DBTYPE_NUMERIC|**numeric**|SQL Server OLE DB 驅動程式會檢查 DBCOLUMDESC *bPrecision*和*bScale*成員來決定有效位數及縮放的**數值**資料行。|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
 |DBTYPE_STR|**char**， **varchar**，**文字**或**varchar （max)**|SQL Server OLE DB 驅動程式會檢查*ulColumnSize* DBCOLUMNDESC 結構的成員。 根據值和版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體，OLE DB 驅動程式的 SQL Server 將對應的型別**文字**。<br /><br /> 如果值*ulColumnSize*小於多位元組字元資料類型資料行，則 OLE DB 驅動程式的最大長度為 SQL Server 就會檢查 DBCOLUMNDESC *rgPropertySets*成員。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE，SQL Server OLE DB 驅動程式會將對應的型別**char**。 如果屬性的值是 VARIANT_FALSE，SQL Server OLE DB 驅動程式會對應至型別**varchar**。 在任一情況，DBCOLUMNDESC *ulColumnSize*成員決定的寬度[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立資料行。|  
 |DBTYPE_UDT|**UDT**|下列資訊用於**DBCOLUMNDESC**結構由**itabledefinition:: Createtable**需要 UDT 資料行時：<br /><br /> *pwSzTypeName*會被忽略。<br /><br /> *rgPropertySets*必須包含**DBPROPSET_SQLSERVERCOLUMN**屬性設定為上一節中所述**DBPROPSET_SQLSERVERCOLUMN**，請在[Using User-Defined 類型](../../oledb/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
+|DBTYPE_VARIANT|**sql_variant**||
 |DBTYPE_WSTR|**nchar**， **nvarchar**， **ntext**或**nvarchar （max)**|SQL Server OLE DB 驅動程式會檢查*ulColumnSize* DBCOLUMNDESC 結構的成員。 根據值，SQL Server OLE DB 驅動程式將此類型對應至**ntext**。<br /><br /> 如果值*ulColumnSize*小於 Unicode 字元資料類型資料行，則 OLE DB 驅動程式的最大長度為 SQL Server 就會檢查 DBCOLUMNDESC *rgPropertySets*成員。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE，SQL Server OLE DB 驅動程式會將對應的型別**nchar**。 如果屬性的值是 VARIANT_FALSE，SQL Server OLE DB 驅動程式會對應至型別**nvarchar**。 在任一情況，DBCOLUMNDESC *ulColumnSize*成員決定的寬度[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立資料行。|  
 |DBTYPE_XML|**XML**||  
-  
+
 > [!NOTE]  
 >  當建立新的資料表，SQL Server OLE DB 驅動程式對應只 OLE DB 資料類型列舉值指定在上表中。 嘗試建立含有任何其他 OLE DB 資料類型之資料行的資料表都會產生錯誤。  
-  
+
 ## <a name="see-also"></a>另請參閱  
  [資料類型 & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   

@@ -1,8 +1,8 @@
 ---
-title: PDO::query | Microsoft Docs
+title: 'Pdo:: query |Microsoft 文件'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0ca9c3ffb50dc24d70f4db143d665a20794f65d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 93485e84b2e65ecbf7ab28ee23d8422e889b4554
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,8 +57,8 @@ Pdo:: SQLSRV_ATTR_QUERY_TIMEOUT 也會影響 pdo:: exec; 行為如需詳細資�
 |style|Description|  
 |---------|---------------|  
 |Pdo:: FETCH_COLUMN， *num*|指定的資料行中資料的查詢。 資料表中的第一個資料行是資料行 0。|  
-|PDO::FETCH_CLASS, '*classname*', array( *arglist* )|建立類別執行個體並將資料行名稱指派給類別中的屬性。 如果類別建構函式採用一或多個參數，您也可以傳遞 *arglist*。|  
-|PDO::FETCH_CLASS, '*classname*'|將資料行名稱指派給現有類別中的屬性。|  
+|Pdo:: FETCH_CLASS，'*classname*'，陣列 (*引數清單*)|建立類別執行個體並將資料行名稱指派給類別中的屬性。 如果類別建構函式採用一或多個參數，您也可以傳遞 *arglist*。|  
+|Pdo:: FETCH_CLASS，'*classname*'|將資料行名稱指派給現有類別中的屬性。|  
   
 呼叫 PDOStatement::closeCursor，以便於再次呼叫 PDO::query 之前，釋放與 PDOStatement 物件相關聯的資料庫資源。  
   

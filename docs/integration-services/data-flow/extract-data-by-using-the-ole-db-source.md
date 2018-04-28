@@ -1,32 +1,32 @@
 ---
-title: "使用 OLE DB 來源擷取資料 | Microsoft Docs"
-ms.custom: 
+title: 使用 OLE DB 來源擷取資料 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extracting data [Integration Services]
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06c12224a9117d26d10149698289508edc63567f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a0e655eb9b724fb568e15745dcf3b490cb575fdf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 來源來擷取資料
   若要加入及設定 OLE DB 來源，封裝必須已包含至少一個「資料流程」工作。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 **[資料流程]** 索引標籤，然後將 OLE DB 來源從 **[工具箱]**拖曳到設計介面。  
+3.  按一下 **[資料流程]** 索引標籤，然後將 OLE DB 來源從 **[工具箱]** 拖曳到設計介面。  
   
 4.  按兩下 OLE DB 來源。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
     -   **資料表名稱或檢視名稱變數** ：選取包含 OLE DB 連接管理員連接之資料庫中資料表或檢視名稱的使用者自訂變數。  
   
-    -   **SQL 命令** ：輸入 SQL 命令，或按一下 **[建立查詢]** ，以使用 **[查詢產生器]**撰寫 SQL 命令。  
+    -   **SQL 命令** ：輸入 SQL 命令，或按一下 **[建立查詢]** ，以使用 **[查詢產生器]** 撰寫 SQL 命令。  
   
         > [!NOTE]  
         >  命令可以包含參數。 如需詳細資訊，請參閱 [在資料流程元件中將查詢參數對應至變數](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)。  

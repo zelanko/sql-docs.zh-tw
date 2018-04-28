@@ -1,8 +1,8 @@
 ---
-title: sqlsrv_fetch_object | Microsoft Docs
+title: sqlsrv_fetch_object |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch_object
 - retrieving data, as an object
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87477c1d30607d71e49729f73105905a2f64767a
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2c90f8f636e249a4b1689d8b8c80946097cb6f74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,9 +48,9 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *$className* [選用]: 指定要具現化類別名稱的字串。 如果未指定 *$className* 參數的值，則會具現化 PHP **stdClass** 的執行個體。  
   
-*$ctorParams* [選用]: 包含值的陣列傳遞至具有指定之類別的建構函式*$className*參數。 如果指定類別的建構函式接受參數值，則在呼叫 *$ctorParams* object **sqlsrv_fetch_object**參數。  
+*$ctorParams* [選用]: 包含值的陣列傳遞至具有指定之類別的建構函式 *$className*參數。 如果指定類別的建構函式接受參數值，則在呼叫 *$ctorParams* object **sqlsrv_fetch_object**參數。  
   
-*資料列*[選用]: 下列的值，指定要在使用可捲動資料指標結果集內存取的資料列的其中一個。 (如果*列*指定，則*$className*和*$ctorParams*必須明確指定，即使您必須指定 null *$className*和*$ctorParams*。)  
+*資料列*[選用]: 下列的值，指定要在使用可捲動資料指標結果集內存取的資料列的其中一個。 (如果*列*指定，則 *$className*和 *$ctorParams*必須明確指定，即使您必須指定 null *$className*和 *$ctorParams*。)  
   
 -   SQLSRV_SCROLL_NEXT  
   

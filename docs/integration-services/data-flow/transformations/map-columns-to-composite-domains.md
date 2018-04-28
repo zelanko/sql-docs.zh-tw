@@ -1,28 +1,28 @@
 ---
-title: "將資料行對應到複合定義域 | Microsoft Docs"
-ms.custom: 
+title: 將資料行對應到複合定義域 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8fb2e38ea252928a84dfaa8404d1b29b0bb6f33
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4db874af0599526ceca5f7a8648436ec88b7f074
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="map-columns-to-composite-domains"></a>將資料行對應到複合定義域
   複合定義域是由兩個以上的單一定義域所組成。 您可以將多個資料行對應到定義域，也可將具有分隔值的單一資料行對應到定義域。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  針對 **[輸入資料行]** 欄位中所列的每一個資料行，從 **[定義域]** 欄位中選取個別的單一定義域。 務必只選取位於複合定義域內的單一定義域。  
   
-5.  視需要修改 **[來源別名]**、 **[輸出別名]**和 **[狀態別名]** 欄位中所顯示的名稱。  
+5.  視需要修改 **[來源別名]**、 **[輸出別名]** 和 **[狀態別名]** 欄位中所顯示的名稱。  
   
 6.  視需要在 **[進階]** 索引標籤上設定屬性。如需這些屬性的詳細資訊，請參閱＜ [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)＞。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  針對 **[輸入資料行]** 欄位中所列的資料行，從 **[定義域]** 欄位中選取複合定義域。  
   
-5.  視需要修改 **[來源別名]**、 **[輸出別名]**和 **[狀態別名]** 欄位中所顯示的名稱。  
+5.  視需要修改 **[來源別名]**、 **[輸出別名]** 和 **[狀態別名]** 欄位中所顯示的名稱。  
   
 6.  視需要在 **[進階]** 索引標籤上設定屬性。如需這些屬性的詳細資訊，請參閱＜ [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)＞。  
   

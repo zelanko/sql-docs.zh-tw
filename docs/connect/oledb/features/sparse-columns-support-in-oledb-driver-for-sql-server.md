@@ -3,7 +3,7 @@ title: SQL Server 的 OLE DB 驅動程式中的疏鬆資料行支援 |Microsoft 
 description: SQL Server 的 OLE DB 驅動程式中的疏鬆資料行支援
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08de456a687ffdde2889cb3bd26bd5dbfa39a5dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>SQL Server 的 OLE DB 驅動程式中的疏鬆資料行支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 04/06/2018
 |決定資料行是否為疏鬆。|查閱 DBSCHEMA_COLUMNS 結構描述資料列集 (OLE DB) 的 SS_IS_SPARSE 資料行。|  
 |判斷資料行是否為**column_set**。|查閱 DBSCHEMA_COLUMNS 結構描述資料列集的 SS_IS_COLUMN_SET 資料行。 或者，查閱*dwFlags* icolumnsinfo:: Getcolumninfo 或 DBCOLUMNFLAGS 中 icolumnsrowset:: Getcolumnsrowset 所傳回的資料列集傳回。 如**column_set**資料行，將會設定 DBCOLUMNFLAGS_SS_ISCOLUMNSET。|  
 |匯入和匯出不含資料表在 bcp 的疏鬆資料行**column_set**。|SQL Server 的先前版本的 OLE DB 驅動程式行為沒有異動。|  
-|匯入和匯出的資料表在 bcp 的疏鬆資料行**column_set**。|**Column_set**是匯入和匯出成 XML; 相同的方式也就是為**varbinary （max)**如果繫結為二進位的型別，或**nvarchar （max)**如果繫結為**char**或**wchar**型別。<br /><br /> 成員的疏鬆資料行**column_set**不會匯出為不同的資料行; 它們只匯出的值中**column_set**。|  
+|匯入和匯出的資料表在 bcp 的疏鬆資料行**column_set**。|**Column_set**是匯入和匯出成 XML; 相同的方式也就是為**varbinary （max)** 如果繫結為二進位的型別，或**nvarchar （max)** 如果繫結為**char**或**wchar**型別。<br /><br /> 成員的疏鬆資料行**column_set**不會匯出為不同的資料行; 它們只匯出的值中**column_set**。|  
 |**queryout** BCP 的行為。|在 SQL server 的明確命名的資料行從舊版的 OLE DB 驅動程式處理的任何變更。<br /><br /> 與包含不同結構描述之資料表間匯入和匯出相關的案例可能需要特殊處理。<br /><br /> 如需有關 BCP 的詳細資訊，請參閱本主題稍後的「疏鬆資料行的大量複製 (BCP) 支援」。|  
   
 ## <a name="down-level-client-behavior"></a>下層用戶端行為  
@@ -60,13 +60,13 @@ ms.lasthandoff: 04/06/2018
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>疏鬆資料行的大量複製 (BCP) 支援  
  有 OLE DB 中的 BCP api 的疏鬆資料行沒有變更或**column_set**功能。  
   
- 如果資料表有**column_set**，疏鬆資料行不當做不同的資料行處理。 值中包含的所有疏鬆資料行值**column_set**，其匯出方式與相同的 XML 資料行; 也就是做為**varbinary （max)**如果繫結為二進位的型別，或**nvarchar （max)**如果繫結為**char**或**wchar**類型)。 在匯入時， **column_set**值必須符合的結構描述**column_set**。  
+ 如果資料表有**column_set**，疏鬆資料行不當做不同的資料行處理。 值中包含的所有疏鬆資料行值**column_set**，其匯出方式與相同的 XML 資料行; 也就是做為**varbinary （max)** 如果繫結為二進位的型別，或**nvarchar （max)** 如果繫結為**char**或**wchar**類型)。 在匯入時， **column_set**值必須符合的結構描述**column_set**。  
   
  如**queryout**作業，以處理明確參考之資料行的方式沒有變更。 **column_set**資料行有相同的行為與 XML 資料行而且疏鬆度對於不會影響處理的具名疏鬆資料行。  
   
- 不過，如果**queryout**使用的匯出，而且您參考疏鬆資料行成員的疏鬆資料行依名稱設定，您不能執行直接匯入結構類似的資料表。 這是因為 BCP 會使用與一致的中繼資料**選取\***匯入作業，且無法符合**column_set**成員資料行與此中繼資料。 若要匯入**column_set**成員資料行必須定義的檢視參考所需的資料表上的個別**column_set**資料行，而且您必須執行匯入作業使用的檢視。  
+ 不過，如果**queryout**使用的匯出，而且您參考疏鬆資料行成員的疏鬆資料行依名稱設定，您不能執行直接匯入結構類似的資料表。 這是因為 BCP 會使用與一致的中繼資料**選取\*** 匯入作業，且無法符合**column_set**成員資料行與此中繼資料。 若要匯入**column_set**成員資料行必須定義的檢視參考所需的資料表上的個別**column_set**資料行，而且您必須執行匯入作業使用的檢視。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB Driver for SQL Server 程式設計](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_server_info |Microsoft 文件
+title: sqlsrv_server_info | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d65fd337b3d3eec851bfa7d3bd43ec108be7286d
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -48,7 +48,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>傳回值  
 具有下列索引鍵的關聯陣列：  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
 |CurrentDatabase|目前做為目標的資料庫。|  
 |SQLServerVersion|SQL Server 的版本。|  

@@ -3,7 +3,7 @@ title: OLE DB 的使用說明主題 |Microsoft 文件
 description: OLE DB 的使用說明主題
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - OLE DB, how-to topics
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e956d2a9f74b3670596c6984c559116f810b761
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 9a59c714f908d747a66fd6b7e71cb142bf3ee360
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 的使用說明主題
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,6 +65,6 @@ ms.lasthandoff: 04/06/2018
 -   [使用資料表值參數 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB Driver for SQL Server 程式設計](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

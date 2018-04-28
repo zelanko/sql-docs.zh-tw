@@ -1,16 +1,16 @@
 ---
-title: "傳送電子郵件工作 | Microsoft Docs"
-ms.custom: 
+title: 傳送電子郵件工作 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sendmailtask.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d3cacac1c13700c1416b6365ec6bb03f650fa31
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a3956724b6ac5c6230222f1247b52fd6f7e5399f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
   傳送郵件工作會傳送電子郵件訊息。 藉由使用傳送郵件工作，封裝即可在封裝工作流程中的工作成功或失敗時傳送訊息，或傳送回應封裝在執行階段所引發事件的訊息。 例如，工作可通知資料庫管理員「備份資料庫」工作成功或失敗。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="related-content"></a>相關內容  
   
--   shareourideas.com 上的技術文章： [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)  
+-   shareourideas.com 上的技術文件： [如何在 C# 中傳送包含傳遞通知的電子郵件](http://go.microsoft.com/fwlink/?LinkId=237625)(如何在 C# 中傳送包含傳遞通知的電子郵件)  
   
 ## <a name="send-mail-task-editor-general-page"></a>傳送郵件工作編輯器 (一般頁面)
   使用 [傳送郵件工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送郵件工作。  

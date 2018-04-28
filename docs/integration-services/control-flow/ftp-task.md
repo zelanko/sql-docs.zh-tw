@@ -1,16 +1,16 @@
 ---
-title: "FTP 工作 | Microsoft Docs"
-ms.custom: 
+title: FTP 工作 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: e2ea750295bdd55129ec59eacf9a0563575e513d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ftp-task"></a>FTP 工作
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/20/2018
 ## <a name="predefined-ftp-operations"></a>預先定義的 FTP 作業  
  FTP 工作包括一組預先定義的作業。 下表描述這些作業。  
   
-|運算|Description|  
+|作業|描述|  
 |---------------|-----------------|  
 |傳送檔案|從本機電腦將檔案傳送到 FTP 伺服器。|  
 |接收檔案|從 FTP 伺服器將檔案儲存到本機電腦。|  
@@ -71,13 +71,13 @@ ms.lasthandoff: 03/20/2018
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 工作上可用的自訂記錄項目  
  下表列出 FTP 工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|指出工作已經起始與 FTP 伺服器的連接。|  
 |**FTPOperation**|報告工作執行之 FTP 作業的開始及其類型。|  
   
 ## <a name="related-tasks"></a>相關工作  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 03/20/2018
 ## <a name="ftp-task-editor-general-page"></a>FTP 工作編輯器 (一般頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可指定 FTP 連接管理員，以連接到工作進行通訊的 FTP 伺服器。 您也可以命名和描述 FTP 工作。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **FtpConnection**  
  選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
   
@@ -110,11 +110,11 @@ ms.lasthandoff: 03/20/2018
 ## <a name="ftp-task-editor-file-transfer-page"></a>FTP 工作編輯器 (檔案傳輸頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[檔案傳輸]** 頁面，來設定工作執行的 FTP 作業。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **IsRemotePathVariable**  
  指出遠端路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]**。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[RemotePath]**。|  
@@ -125,7 +125,7 @@ ms.lasthandoff: 03/20/2018
  **IsLocalPathVariable**  
  指出本機路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]**。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[LocalPath]**。|  
@@ -133,7 +133,7 @@ ms.lasthandoff: 03/20/2018
  **運算**  
  選取要執行的 FTP 作業。 這個屬性具有下表中所列的選項。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**傳送檔案**|傳送檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
 |**接收檔案**|接收檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
@@ -159,7 +159,7 @@ ms.lasthandoff: 03/20/2018
  **[RemotePath]**  
  選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
   
- **相關主題**：[FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相關主題** [FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 動態選項  
   

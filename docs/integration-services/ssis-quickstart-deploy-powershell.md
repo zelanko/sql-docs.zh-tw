@@ -1,23 +1,24 @@
 ---
-title: "使用 PowerShell 部署 SSIS 專案 | Microsoft Docs"
+title: 使用 PowerShell 部署 SSIS 專案 | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d23639aa98492228fdec5d45799718f59b809425
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f8fb15163a39255434c7d5a98fbae8d86c3d97e3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>使用 PowerShell 部署 SSIS 專案
 本快速入門教學課程示範如何使用 PowerShell 指令碼連線至資料庫伺服器，並將 SSIS 專案部署到 SSIS 目錄。

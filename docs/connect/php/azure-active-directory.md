@@ -16,18 +16,18 @@ manager: v-hakaka
 ms.workload: Inactive
 ms.openlocfilehash: 462b141c365e0140236c78af451c73b110911765
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="connect-using-azure-active-directory-authentication"></a>如何：使用 Azure Active Directory 驗證進行連線
+# <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證進行連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) 是做為替代運作中央使用者識別碼管理技術[SQL Server 驗證](../../connect/php/how-to-connect-using-sql-server-authentication.md)。 Azure AD 可讓連線到 Microsoft Azure SQL Database 和 SQL 資料倉儲具有同盟識別身分在 Azure AD 中使用使用者名稱和密碼、 Windows 整合式驗證或 Azure AD 存取權杖。SQL Server 的 PHP 驅動程式提供這些功能的部分支援。
 
 若要使用 Azure AD，**驗證**關鍵字。 值，**驗證**可能需要在下表中說明。
 
-|關鍵字|值|描述|
+|關鍵字|值|Description|
 |-|-|-|
 |**驗證**|未設定 （預設值）|驗證模式取決於其他關鍵字。 如需詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。 |
 ||`SqlPassword`|SQL Server 執行個體 （這可能是 Azure 的執行個體） 直接驗證使用者名稱和密碼。 使用者名稱和密碼必須傳遞至連接字串使用**UID**和**PWD**關鍵字。 |

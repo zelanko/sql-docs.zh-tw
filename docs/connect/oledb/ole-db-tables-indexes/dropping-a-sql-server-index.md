@@ -3,7 +3,7 @@ title: 卸除 SQL Server 索引 |Microsoft 文件
 description: 卸除 sql server 索引，使用適用於 SQL Server 的 OLE DB 驅動程式
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-tables-indexes
@@ -22,17 +22,17 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b16b3ece0b28951beee1800216897468e21e87ab
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: cb7ae86dd4b4398a8fc683158bc92ff03f3872f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dropping-a-sql-server-index"></a>卸除 SQL Server 索引
 
-  SQL Server OLE DB 驅動程式會公開**:: Dropindex<**函式。 這可讓取用者移除從索引[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。  
+  SQL Server OLE DB 驅動程式會公開 **:: Dropindex<** 函式。 這可讓取用者移除從索引[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。  
   
  SQL Server OLE DB 驅動程式會公開某些[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PRIMARY KEY 和 UNIQUE 條件約束當做索引。 資料表擁有者、 資料庫擁有者，以及某些系統管理角色成員可以修改[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表，卸除條件約束。 根據預設，只有資料表擁有者可以卸除現有的索引。 因此， **DropIndex**不是只在應用程式使用者的存取權限，但也在所指出之索引的類型上相依的成功或失敗。  
   

@@ -1,31 +1,32 @@
 ---
-title: "步驟 1： 設定 pyodbc Python 開發環境 |Microsoft 文件"
-ms.custom: 
+title: 步驟 1： 設定 pyodbc Python 開發環境 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 886cf420228b622fb9c269423ce9a71c2c25ecaa
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 64ce99a11d0942efaaaee2ba70831cd0f5e6b236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步驟 1： 設定 pyodbc Python 開發的開發環境
 
-## <a name="windows"></a>Windows  
+## <a name="windows"></a>視窗  
 使用 Python-pyodbc Windows 上，以連接到 SQL 資料庫：
   
 1. **下載 Python 安裝程式**  

@@ -1,30 +1,30 @@
 ---
-title: "SAP BW 來源編輯器 (資料行頁面) | Microsoft Docs"
-ms.custom: 
+title: SAP BW 來源編輯器 (資料行頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33b0ea8d0c8774aa128ff4698cad163fd08d9645
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d349d00572029ebe7c32634b0643433dd191bff1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 來源編輯器 (資料行頁面)
   使用 [SAP BW 來源編輯器] 的 [資料行] 頁面可以將輸出資料行對應至每個外部 (來源) 資料行。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
   
-3.  在 **[SAP BW 來源編輯器]**中，按一下 **[資料行]** 開啟編輯器的 **[資料行]** 頁面。  
+3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[資料行]** 開啟編輯器的 **[資料行]** 頁面。  
   
 ## <a name="options"></a>選項。  
   

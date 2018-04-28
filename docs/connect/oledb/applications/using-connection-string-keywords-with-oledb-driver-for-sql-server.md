@@ -3,7 +3,7 @@ title: 使用 OLE DB 驅動程式中的連接字串關鍵字，適用於 SQL Ser
 description: 使用 OLE DB 驅動程式中的連接字串關鍵字，適用於 SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -22,16 +22,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, connection string keywords
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3607b4a5476a85c839e3a6d2e3801a0b378bef15
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: f4ac4a2231ea983e93c9c418bdd309cf45ed6cc2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>使用 OLE DB 驅動程式中的連接字串關鍵字，適用於 SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server Api 有些 OLE DB 驅動程式會使用連接字串來指定連接屬性。 連接字串是關鍵字和關聯值的清單，每一個關鍵字都會識別特定的連接屬性。  
   
@@ -81,8 +83,8 @@ ms.lasthandoff: 04/06/2018
 |關鍵字|初始化屬性|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|"Address" 的同義字。|  
-|**位址**|SSPROP_INIT_NETWORKADDRESS|執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之伺服器的網路位址。 **位址**通常是伺服器的網路名稱，但可以是其他名稱，例如管道、 IP 位址或 TCP/IP 通訊埠和通訊端位址。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> 值**位址**傳遞給的值的優先順序高於**伺服器**時使用的 SQL Server 的 OLE DB 驅動程式的連接字串中。 也請注意，`Address=;`會連線到伺服器中指定**伺服器**關鍵字，而`Address= ;, Address=.;`， `Address=localhost;`，和`Address=(local);`all 導致本機伺服器的連接。<br /><br /> 完整語法**位址**關鍵字如下所示：<br /><br /> [*通訊協定 ***:**]*位址*[* *，* * * 連接埠&#124;\pipe\pipename*]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。 如需通訊協定的詳細資訊，請參閱[Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果沒有*通訊協定*和**網路**指定關鍵字，OLE DB 驅動程式的 SQL Server 將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *連接埠*是連接、 指定的伺服器上的連接埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。|   
-|**APP**|SSPROP_INIT_APPNAME|識別應用程式的字串。|  
+|**位址**|SSPROP_INIT_NETWORKADDRESS|執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之伺服器的網路位址。 **位址**通常是伺服器的網路名稱，但可以是其他名稱，例如管道、 IP 位址或 TCP/IP 通訊埠和通訊端位址。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> 值**位址**傳遞給的值的優先順序高於**伺服器**時使用的 SQL Server 的 OLE DB 驅動程式的連接字串中。 也請注意，`Address=;`會連線到伺服器中指定**伺服器**關鍵字，而`Address= ;, Address=.;`， `Address=localhost;`，和`Address=(local);`all 導致本機伺服器的連接。<br /><br /> 完整語法**位址**關鍵字如下所示：<br /><br /> [*通訊協定 ***:**]* 位址 *[* *，* * * 連接埠&#124;\pipe\pipename*]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。 如需通訊協定的詳細資訊，請參閱[Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果沒有*通訊協定*和**網路**指定關鍵字，OLE DB 驅動程式的 SQL Server 將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *連接埠*是連接、 指定的伺服器上的連接埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。|   
+|**應用程式**|SSPROP_INIT_APPNAME|識別應用程式的字串。|  
 |**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|宣告連接到伺服器時的應用程式工作負載類型。 可能的值為**ReadOnly**和**ReadWrite**。<br /><br /> 預設值是**ReadWrite**。 如需 OLE DB 驅動程式的 SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[OLE DB 驅動程式的高可用性、 災害復原的 SQL Server 支援](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|可附加資料庫的主要檔案名稱，包括完整路徑名稱。 若要使用**AttachDBFileName**，您也必須使用提供者字串 Database 關鍵字指定資料庫名稱。 如果之前已附加資料庫，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它 (它會使用附加的資料庫當做連接的預設值)。|  
 |**自動轉譯**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" 的同義字。|  
@@ -95,13 +97,13 @@ ms.lasthandoff: 04/06/2018
 |**語言**|SSPROPT_INIT_CURRENTLANGUAGE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 語言。|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|當伺服器為 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本時，啟用或停用連接上的 Multiple Active Result Sets (MARS)。 可能的值為 "yes" 和 "no"。 預設值為 "no"。|  
 |**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|請務必指定**MultiSubnetFailover = Yes**連接到可用性群組接聽程式時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性群組或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容錯移轉叢集執行個體。 **MultiSubnetFailover = Yes**設定 OLE DB 驅動程式提供更快速偵測與連接 （目前） 使用中伺服器的 SQL server。 可能的值為 [是] 和 [否]。 預設值是**否**。 例如：<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 如需 OLE DB 驅動程式的 SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[OLE DB 驅動程式的高可用性、 災害復原的 SQL Server 支援](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
-|**Net**|SSPROP_INIT_NETWORKLIBRARY|"Network" 的同義字。|  
+|**net**|SSPROP_INIT_NETWORKLIBRARY|"Network" 的同義字。|  
 |**網路**|SSPROP_INIT_NETWORKLIBRARY|用來建立組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之連接的網路程式庫。|  
 |**網路程式庫**|SSPROP_INIT_NETWORKLIBRARY|"Network" 的同義字。|  
 |**PacketSize**|SSPROP_INIT_PACKETSIZE|網路封包大小。 預設值為 4096。|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|接受的值為 "yes" 和 "no" 字串。 當為 "no" 時，不允許使用資料來源物件來保存敏感性驗證資訊。|  
 |**PWD**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入密碼。|  
-|**Server**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此值必須是網路上的伺服器名稱、IP 位址，或是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員別名的名稱。<br /><br /> 如果沒有指定，就會連接至本機電腦上的預設執行個體。<br /><br /> **位址**關鍵字會覆寫**伺服器**關鍵字。<br /><br /> 您可藉由指定下列其中一個項目，連接到本機伺服器上的預設執行個體：<br /><br /> **Server=;**<br /><br /> **Server=.;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> 如需有關 LocalDB 支援的詳細資訊，請參閱[OLE DB 驅動程式為 localdb 的 SQL Server 支援](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)。<br /><br /> 若要指定的具名執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，附加 **\\ ***InstanceName*。<br /><br />如果未不指定任何伺服器，會連接到本機電腦上預設執行個體。<br /><br />如果您指定的 IP 位址，請確定中已啟用 TCP/IP 或具名的管道通訊協定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br />完整語法**伺服器**關鍵字如下：<br /> <br /> **Server =**[*通訊協定***:**]*伺服器*[**，* * * 連接埠*]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。<br /><br /> 下列是指定具名管道的範例：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此程式碼行指定具名管道通訊協定、本機電腦上的具名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱 (`MSSQL$MYINST01`) 以及具名管道的預設名稱 (`sql/query`)。<br /><br /> 如果沒有*通訊協定*和**網路**指定關鍵字，OLE DB 驅動程式的 SQL Server 將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *連接埠*是連接、 指定的伺服器上的連接埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。<br /><br /> 傳遞給的值開頭的空格會被忽略**伺服器**時使用的 SQL Server 的 OLE DB 驅動程式的連接字串中。|   
+|**Server**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此值必須是網路上的伺服器名稱、IP 位址，或是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員別名的名稱。<br /><br /> 如果沒有指定，就會連接至本機電腦上的預設執行個體。<br /><br /> **位址**關鍵字會覆寫**伺服器**關鍵字。<br /><br /> 您可藉由指定下列其中一個項目，連接到本機伺服器上的預設執行個體：<br /><br /> **Server=;**<br /><br /> **Server=.;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> 如需有關 LocalDB 支援的詳細資訊，請參閱[OLE DB 驅動程式為 localdb 的 SQL Server 支援](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)。<br /><br /> 若要指定的具名執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，附加 **\\ ***InstanceName*。<br /><br />如果未不指定任何伺服器，會連接到本機電腦上預設執行個體。<br /><br />如果您指定的 IP 位址，請確定中已啟用 TCP/IP 或具名的管道通訊協定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br />完整語法**伺服器**關鍵字如下：<br /> <br /> **Server =**[* 通訊協定***:**]*伺服器*[**，* * * 連接埠*]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。<br /><br /> 下列是指定具名管道的範例：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此程式碼行指定具名管道通訊協定、本機電腦上的具名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱 (`MSSQL$MYINST01`) 以及具名管道的預設名稱 (`sql/query`)。<br /><br /> 如果沒有*通訊協定*和**網路**指定關鍵字，OLE DB 驅動程式的 SQL Server 將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *連接埠*是連接、 指定的伺服器上的連接埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。<br /><br /> 傳遞給的值開頭的空格會被忽略**伺服器**時使用的 SQL Server 的 OLE DB 驅動程式的連接字串中。|   
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|伺服器的 SPN。 預設值為空字串。 空字串會讓 OLE DB 驅動程式的 SQL Server 使用預設值，提供者產生的 SPN。|  
 |**逾時**|DBPROP_INIT_TIMEOUT|等候資料來源初始化完成的時間量 (以秒為單位)。|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|當"yes"時，會指示 SQL Server 使用 Windows 驗證模式進行登入驗證，OLE DB 驅動程式。 否則會指示 SQL Server 以使用 OLE DB 驅動程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]必須指定使用者名稱和密碼登入驗證，以及 UID 和 PWD 關鍵字。|  

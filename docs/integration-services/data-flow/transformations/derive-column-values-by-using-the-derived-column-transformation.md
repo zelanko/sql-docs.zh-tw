@@ -1,16 +1,16 @@
 ---
-title: "使用衍生的資料行轉換來衍生資料行值 | Microsoft Docs"
-ms.custom: 
+title: 使用衍生的資料行轉換來衍生資料行值 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - columns [Integration Services]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80c5df3dec8351c6ab47e596081a5c4f8f7fd3fb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6d000e5e4886efe6299c70141e8c46b87a1b6504
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
   若要加入及設定「衍生的資料行」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 **[資料流程]** 索引標籤，然後從 **[工具箱]**拖曳「衍生的資料行」轉換至設計介面。  
+3.  按一下 **[資料流程]** 索引標籤，然後從 **[工具箱]** 拖曳「衍生的資料行」轉換至設計介面。  
   
 4.  從來源或先前的轉換將連接子拖曳到「衍生的資料行」轉換，以便將「衍生的資料行」轉換連接到資料流程。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
      如果您選擇使用新資料行， **[衍生的資料行轉換編輯器]** 對話方塊就會依據資料類型、長度、有效位數、小數位數和字碼頁，評估運算式並指派資料類型到資料行。  
   
-8.  如果使用新的資料行，請在 **[資料類型]** 清單中選取資料類型。 根據選取的資料類型而定，選擇性地更新 **[長度]**、 **[有效位數]**、 **[小數位數]**和 **[字碼頁]** 資料行中的值。 現有資料行的中繼資料無法變更。  
+8.  如果使用新的資料行，請在 **[資料類型]** 清單中選取資料類型。 根據選取的資料類型而定，選擇性地更新 **[長度]**、 **[有效位數]**、 **[小數位數]** 和 **[字碼頁]** 資料行中的值。 現有資料行的中繼資料無法變更。  
   
 9. (選擇性) 修改 **[衍生的資料行名稱]** 資料行中的值。  
   

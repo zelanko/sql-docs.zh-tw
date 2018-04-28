@@ -1,31 +1,31 @@
 ---
-title: "REVERSE (SSIS 運算式) | Microsoft Docs"
-ms.custom: 
+title: REVERSE (SSIS 運算式) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f34128df8045d69fd6e783dd3ec1a91170ed5beb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1daa8f608a6b99c384f6c8f2c9b6b657a30333c7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 運算式)
   傳回反向順序的字元運算式。  

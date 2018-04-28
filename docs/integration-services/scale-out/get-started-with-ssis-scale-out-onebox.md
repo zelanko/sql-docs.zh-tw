@@ -1,27 +1,28 @@
 ---
-title: "在單一電腦上開始使用 SSIS Scale Out| Microsoft Docs"
+title: 在單一電腦上開始使用 SSIS Scale Out| Microsoft Docs
 ms.description: This article shows you everything you need to know to get started with SSIS Scale Out on a single computer
-ms.custom: 
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology: integration-services
-ms.tgt_pltfrm: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed813ca6ea9775c6aeb3c40dac63d7ec5b630ee5
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: b6b392bac743f1817f731693c0f89e85c152b52c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>在單一電腦上開始使用 Integration Services (SSIS) Scale Out
 本節提供在單一電腦環境中使用預設設定來設定 Integration Services Scale Out 的指引。

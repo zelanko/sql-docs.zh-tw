@@ -1,27 +1,28 @@
 ---
-title: "setAsciiStream 方法來輸入資料流位元組-長時間） |Microsoft 文件"
-ms.custom: 
+title: setAsciiStream 方法來輸入資料流位元組-長時間） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b88fa63c77014702fe3328e049bffe96da81e67
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b320b7f27aefc4605fc4936aa6435df79360f606
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream-long"></a>setAsciiStream 方法 (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +47,7 @@ public final void setAsciiStream(java.lang.String parameterName,
   
  InputStream 物件。  
   
- *length*  
+ *長度*  
   
  A**長**，指出位元組數目。  
   
@@ -60,8 +61,8 @@ public final void setAsciiStream(java.lang.String parameterName,
   
  如果資料流長度未知，*長度*參數可能會設定為-1，指出驅動程式應該接受資料流，無論其長度為何。 針對 sqljdbc4.jar，我們建議您使用 JDBC 4.0 方法[setAsciiStream 方法 （java.lang.String，java.io.InputStream）](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md)應用程式要從長度未知的資料流的資料行的更新。  
   
-## <a name="see-also"></a>請參閱＜  
- [setAsciiStream &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [setAsciiStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

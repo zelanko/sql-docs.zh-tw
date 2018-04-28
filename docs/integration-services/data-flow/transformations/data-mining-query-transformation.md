@@ -1,16 +1,16 @@
 ---
-title: "資料採礦查詢轉換 | Microsoft Docs"
-ms.custom: 
+title: 資料採礦查詢轉換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytrans.f1
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddf1b1f53156a44589dfe6eb62f7468a08559769
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3f2af2899c629f0f9b215f8523dccfb2acb7cb6c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-mining-query-transformation"></a>資料採礦查詢轉換
   「資料採礦查詢」轉換會對資料採礦模型執行預測查詢。 這項轉換包含用來建立「資料採礦延伸模組」(DMX) 查詢的查詢產生器。 查詢產生器可讓您建立自訂陳述式，以便使用 DMX 語言對照現有採礦模型評估轉換輸入資料。 如需詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](../../../dmx/data-mining-extensions-dmx-reference.md)。  

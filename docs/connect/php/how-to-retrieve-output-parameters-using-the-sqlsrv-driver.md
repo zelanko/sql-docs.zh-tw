@@ -1,8 +1,8 @@
 ---
 title: 如何： 使用 SQLSRV 驅動程式擷取輸出參數 |Microsoft 文件
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.date: 04/11/2018
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e1bd65cb80407049d7fe5518b1f687481aa6515
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 1a2b1f2e0a01456065ffc6af03d4e05a55492b2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -105,7 +105,7 @@ $lastName = "Blythe";
 $salesYTD = 0.0;  
 $params = array(   
                  array($lastName, SQLSRV_PARAM_IN),  
-                 array($salesYTD, SQLSRV_PARAM_OUT)  
+                 array(&$salesYTD, SQLSRV_PARAM_OUT)  
                );  
   
 /* Execute the query. */  
@@ -126,7 +126,37 @@ sqlsrv_free_stmt( $stmt3);
 sqlsrv_close( $conn);  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> 當繫結 output 參數至 bigint 值，如果此值可能最後範圍之外的[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，您必須指定為 SQLSRV_SQLTYPE_BIGINT 它 SQL 的欄位類型。 否則，它可能會導致 「 超出範圍的值 」 例外狀況。
+
+## <a name="example"></a>範例  
+此程式碼範例示範如何將大型的 bigint 值做為輸出參數繫結。  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"testDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+
+// Assume the stored procedure spTestProcedure exists, which retrieves a bigint value of some large number
+// e.g. 9223372036854
+$bigintOut = 0;
+$outSql = "{CALL spTestProcedure (?)}";
+$stmt = sqlsrv_prepare($conn, $outSql, array(array(&$bigintOut, SQLSRV_PARAM_OUT, null, SQLSRV_SQLTYPE_BIGINT)));
+sqlsrv_execute($stmt);
+echo "$bigintOut\n";   // Expect 9223372036854
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
 ## <a name="see-also"></a>另請參閱  
 [如何：使用 SQLSRV 驅動程式指定參數方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 

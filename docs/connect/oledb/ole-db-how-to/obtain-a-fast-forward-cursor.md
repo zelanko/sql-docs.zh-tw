@@ -3,7 +3,7 @@ title: 取得 FAST_FORWARD 資料指標 |Microsoft 文件
 description: 取得 FAST_FORWARD 資料指標使用的 SQL Server 的 OLE DB 驅動程式
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eef788de7efd7c17b3e8f6c31235f9e82f6458f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 7cf7cce990980ee2838ce30659921de17ea7f330
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="obtain-a-fastforward-cursor"></a>取得 FAST_FORWARD 資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

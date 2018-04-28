@@ -2,7 +2,7 @@
 title: 安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS |Microsoft 文件
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,20 +18,20 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44afb66dfdc98ea2160f54d394f48e1ce03df1cd
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 9819122fd8a0ca50a31d3a97465aaa2f32e37b56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS (在 Linux 及 macOS 上安裝 Microsoft ODBC Driver for SQL Server)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 這篇文章說明如何安裝[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux 及 macOS，以及選擇性的命令列工具，適用於 SQL Server (`bcp`和`sqlcmd`) 和 unixODBC 開發標頭。
 
-## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
+## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver for SQL Server 17 
 
 > [!IMPORTANT]
 > 如果您已安裝 v17`msodbcsql`簡短可用的封裝，您應該將它移除之前安裝`msodbcsql17`封裝。 這樣可避免衝突。 `msodbcsql17`可以並存安裝套件`msodbcsql`v13 封裝。
@@ -519,7 +519,7 @@ ODBC Driver on Linux 及 MacOS 包含下列元件：
 
 |元件|Description|  
 |---------------|-----------------|  
-|libmsodbcsql.17.dylib or libmsodbcsql.13.dylib|動態程式庫 (`dylib`) 檔案，其中包含的所有驅動程式的功能。 這個檔案安裝在`/usr/local/lib/`。|  
+|libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|動態程式庫 (`dylib`) 檔案，其中包含的所有驅動程式的功能。 這個檔案安裝在`/usr/local/lib/`。|  
 |`msodbcsqlr17.rll`或`msodbcsqlr13.rll`|隨附驅動程式程式庫的資源檔。 這個檔案安裝在`[driver .dylib directory]../share/msodbcsql17/resources/en_US/`驅動程式 17 和`[driver .dylib directory]../share/msodbcsql/resources/en_US/`Driver 13。 | 
 |msodbcsql.h|包含新的定義，使用驅動程式所需的所有標頭檔。<br /><br /> **注意**  ：您無法在相同的程式中參考 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 會安裝在`/usr/local/include/msodbcsql17/`驅動程式 17 和`/usr/local/include/msodbcsql/`Driver 13。 |
 |LICENSE.txt|包含的使用者授權合約條款的文字檔案。 這個檔案放在`/usr/local/share/doc/msodbcsql17/`驅動程式 17 和`/usr/local/share/doc/msodbcsql/`Driver 13。 |

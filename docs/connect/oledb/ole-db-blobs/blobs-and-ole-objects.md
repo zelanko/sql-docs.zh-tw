@@ -3,7 +3,7 @@ title: Blob 與 OLE 物件 |Microsoft 文件
 description: BLOB 與 OLE 物件
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-blobs
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bc3707dca715ec5b6bee83d181c4792aea6c949
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 2b3e367533e8e3c4ad4fcedbc9c15d49ecd19518
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/06/2018
   
  對於大數值資料類型，SQL Server OLE DB 驅動程式會檢查是否有型別中的大小假設**IRowset**和 DDL 介面。 具有資料行**varchar**， **nvarchar**，和**varbinary**資料類型和設定為無限制的大小上限會表示為 ISLONG 透過結構描述資料列，而傳回資料行資料類型的介面。  
   
- SQL Server OLE DB 驅動程式會公開**varchar （max)**， **varbinary （max)**和**nvarchar （max)**類型分別為 DBTYPE_STR、 DBTYPE_BYTES 和 DBTYPE_WSTR。  
+ SQL Server OLE DB 驅動程式會公開**varchar （max)**， **varbinary （max)** 和**nvarchar （max)** 類型分別為 DBTYPE_STR、 DBTYPE_BYTES 和 DBTYPE_WSTR。  
   
  為了使用這些類型，應用程式具有下列選項：  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/06/2018
 -   [BLOB 輸出參數的串流支援](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 的 OLE DB 驅動程式&#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)        
+ [SQL Server 程式設計的 OLE DB 驅動程式](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
  [使用大型值型別](../../oledb/features/using-large-value-types.md)  
   
   

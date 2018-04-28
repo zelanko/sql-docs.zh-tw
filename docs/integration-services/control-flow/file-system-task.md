@@ -1,16 +1,16 @@
 ---
-title: "檔案系統工作 | Microsoft Docs"
-ms.custom: 
+title: 檔案系統工作 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: 
+caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 176f39cf7a5df57fad08a464212815f41affb1a6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f0bbb8deb2fd3a9ba529d846dd9a56df035b80fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="file-system-task"></a>檔案系統工作
   「檔案系統」工作會在檔案系統中的檔案和目錄上執行作業。 例如，封裝可使用「檔案系統」工作建立、移動或刪除目錄和檔案。 您也可以使用「檔案系統」工作設定檔案和目錄的屬性。 例如，「檔案系統」工作可將檔案設為隱藏或唯讀。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/25/2018
   
  「檔案系統」工作會在單一檔案或目錄上運作。 因此，這項工作不支援使用萬用字元在多個檔案上執行相同的作業。 為了要讓「檔案系統」工作在多個檔案或目錄上重複作業，請將「檔案系統」工作放入 Foreach 迴圈容器內，如以下步驟所述：  
   
--   **設定 Foreach 迴圈容器** ：在 [Foreach 迴圈編輯器] 的 **[集合]** 頁面上，將列舉值設定為 **[Foreach 檔案列舉值]** 然後輸入萬用字元運算式，做為 **[檔案]**的列舉值組態。 在 [Foreach 迴圈編輯器] 的 **[變數對應]** 頁面上，對應您要使用的變數，以便將檔案名稱傳遞到 [檔案系統] 工作，一次一個。  
+-   **設定 Foreach 迴圈容器** ：在 [Foreach 迴圈編輯器] 的 **[集合]** 頁面上，將列舉值設定為 **[Foreach 檔案列舉值]** 然後輸入萬用字元運算式，做為 **[檔案]** 的列舉值組態。 在 [Foreach 迴圈編輯器] 的 **[變數對應]** 頁面上，對應您要使用的變數，以便將檔案名稱傳遞到 [檔案系統] 工作，一次一個。  
   
 -   **加入和設定檔案系統工作** ：將「檔案系統」工作加入到「Foreach 迴圈」容易。 在「檔案系統工作編輯器」的 **[一般]** 頁面上，將 **[SourceVariable]** 或 **[DestinationVariable]** 屬性設定為您在「Foreach 迴圈」容器中定義的變數。  
   

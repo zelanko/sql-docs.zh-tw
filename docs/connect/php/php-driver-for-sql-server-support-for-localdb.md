@@ -19,7 +19,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 34fe16235f924c020c69b4e58cb485e0c7ff1e4b
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
 LocalDB 是輕量版[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]其中已經提供自[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。 本主題將討論如何連接到 LocalDB 執行個體中的資料庫。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 如需有關 LocalDB，包括如何安裝 LocalDB 和設定 LocalDB 執行個體，請參閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]上的線上叢書 》 主題[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]Express LocalDB。
 
@@ -37,9 +37,9 @@ LocalDB 是輕量版[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]其
 
 -   使用**sqllocaldb.exe 我**探索預設執行個體的名稱。
 
--   使用 ** 連接字串關鍵字來指定伺服器應該附加的資料庫檔案。 使用  **時，如果您沒有使用** 連接字串關鍵字來指定資料庫的名稱，系統就會在應用程式關閉時從 LocalDB 執行個體中移除資料庫。
+-   使用**AttachDBFilename**應該附加至指定的資料庫檔案伺服器的連接字串關鍵字。 使用時**AttachDBFilename**，如果您未指定的資料庫名稱**資料庫**連接字串關鍵字，資料庫會移除的 LocalDB 執行個體時應用程式會關閉。
 
--   在連接字串中指定 LocalDB 執行個體： 例如，以下是範例 SQLSRV 連接字串：
+-   在連接字串中指定的 LocalDB 執行個體。 例如，以下是範例 SQLSRV 連接字串：
 
     ```php
     $conn = sqlsrv_connect( '(localdb)\\v11.0',

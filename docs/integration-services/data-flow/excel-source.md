@@ -2,7 +2,7 @@
 title: Excel 來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d275a24264a3ac174908f364c99975d4a0ec0014
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="excel-source"></a>Excel 來源
   Excel 來源會從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍擷取資料。  
@@ -113,7 +113,7 @@ ms.lasthandoff: 04/04/2018
   使用 **[Excel 來源編輯器]** 對話方塊的 **[連接管理員]** 節點，以選取來源要使用的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 活頁簿。 Excel 來源會從工作表或現有活頁簿的具名範圍中讀取資料。  
   
 > [!NOTE]  
->  在 **[Excel 來源編輯器]** 中無法使用 Excel 來源的 **CommandTimeout**屬性，但可使用 **[進階編輯器]**來設定這個屬性。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)＞的＜Excel 來源＞一節。  
+>  在 **[Excel 來源編輯器]** 中無法使用 Excel 來源的 **CommandTimeout**屬性，但可使用 **[進階編輯器]** 來設定這個屬性。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)＞的＜Excel 來源＞一節。  
   
 ### <a name="static-options"></a>靜態選項  
  **[無快取]**  

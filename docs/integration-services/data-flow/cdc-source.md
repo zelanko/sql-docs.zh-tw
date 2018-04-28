@@ -2,7 +2,7 @@
 title: CDC 來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: f0552a81beb1bce6a578b058953236453bc8e47f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-source"></a>CDC 來源
   CDC 來源會從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 變更資料表中讀取變更資料的範圍，並將這些變更向下游傳遞至其他 SSIS 元件。  
@@ -109,9 +109,9 @@ use <cdc-enabled-database-name>
   
 -   [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [CDC 來源編輯器 & #40;資料行頁面 & #41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [CDC 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
--   [CDC 來源編輯器 & #40;錯誤輸出頁面 & #41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  **[進階編輯器]** 對話方塊包含可以程式設計方式設定的屬性。  
   
@@ -173,7 +173,7 @@ use <cdc-enabled-database-name>
 >  對於所有淨變更選項而言，來源資料表必須具有主索引鍵或唯一索引。 如果資料表沒有主索引鍵或唯一索引，您就必須使用 [全部] 選項。  
   
  **包含 CDC 狀態的變數**  
- 選取針對目前 CDC 內容維護 CDC 狀態的 SSIS 字串封裝變數。 如需 CDC 狀態變數的詳細資訊，請參閱[定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。  
+ 選取針對目前 CDC 內容維護 CDC 狀態的 SSIS 字串封裝變數。 如需 CDC 狀態變數的詳細資訊，請參閱 [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。  
   
  **包含重新處理指標資料行**  
  選取此核取方塊即可建立名為 **__$reprocessing**的特殊輸出資料行。  
@@ -192,7 +192,7 @@ use <cdc-enabled-database-name>
   
 2.  在 [資料流程] 索引標籤中，按兩下 CDC 來源。  
   
-3.  在 **[CDC 來源編輯器]**中，按一下 **[資料行]**。  
+3.  在 **[CDC 來源編輯器]** 中，按一下 **[資料行]**。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  

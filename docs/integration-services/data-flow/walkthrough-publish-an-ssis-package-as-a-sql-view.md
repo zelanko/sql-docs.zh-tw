@@ -1,30 +1,30 @@
 ---
-title: "逐步解說︰將 SSIS 套件發佈為 SQL 檢視 | Microsoft Docs"
-ms.custom: 
+title: 逐步解說︰將 SSIS 套件發佈為 SQL 檢視 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9677c3e5b4985006371a89544842383029431335
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a4aca75d9495d628c314c1382a73dc889cdcc367
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
   本逐步解說提供詳細的步驟來發行 SSIS 封裝，以做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 SQL 檢視。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>步驟 1︰建置 SSIS 專案並部署至 SSIS 目錄  
  在此步驟中，您會建立 SSIS 封裝，從 SSIS 支援的資料來源 (在此範例中，我們使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫) 擷取資料，並使用資料流目的地元件輸出資料。 然後您會建置 SSIS 專案並部署至 SSIS 目錄。  
   
-1.  啟動 **SQL Server Data Tools**。 在 **[開始]** 功能表上，依序指向 **[所有程式]**和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Data Tools]**。  
+1.  啟動 **SQL Server Data Tools**。 在 **[開始]** 功能表上，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Data Tools]**。  
   
 2.  建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   

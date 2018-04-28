@@ -1,30 +1,33 @@
 ---
-title: "setQueryTimeout 方法 (SQLServerStatement) |Microsoft 文件"
-ms.custom: 
+title: setQueryTimeout 方法 (SQLServerStatement) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerStatement.setQueryTimeout
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerStatement.setQueryTimeout
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0c513265-cd0c-4b38-9494-94458c17a16d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b9d48ed5202a55c8713811ee9746805d84ef92c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7944c3da3cb156e6bba8b4f0ce59f10ca63cf629
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setquerytimeout-method-sqlserverstatement"></a>setQueryTimeout 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +52,7 @@ public final void setQueryTimeout(int seconds)
 ## <a name="remarks"></a>備註  
  這個 setQueryTimeout 方法是由 java.sql.Statement 介面中的 setQueryTimeout 方法指定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

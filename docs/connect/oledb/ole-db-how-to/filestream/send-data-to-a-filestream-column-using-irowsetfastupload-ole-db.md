@@ -1,6 +1,6 @@
 ---
-title: 如何：使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 (OLE DB)
-description: 使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 (OLE DB)
+title: 將資料傳送到 FILESTREAM 資料行使用 IRowsetFastUpload (OLE DB) |Microsoft 文件
+description: 將資料傳送到 FILESTREAM 資料行使用 IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -19,7 +19,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7fcf8b4a4b7f6f70b4f537b1e018158b1d9e4332
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="example"></a>範例  
  在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
   
  伺服器必須擁有一個稱為 C:\DBFsa 的目錄，這是範例將產生資料庫的位置。 您的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體必須擁有這個位置的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
   

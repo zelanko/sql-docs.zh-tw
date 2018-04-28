@@ -1,32 +1,32 @@
 ---
-title: "運算式產生器 | Microsoft Docs"
-ms.custom: 
+title: 運算式產生器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.expressionbuilder.f1
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18364f265be288c9e1cb4be8d97731086c993c4f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: be743102bdebe8d30b612f58df606f7d20412f00
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-builder"></a>運算式產生器
   使用 [運算式產生器] 對話方塊，即可藉由使用圖形化使用者介面列出變數以及提供函數的內建參考、類型轉換和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言所包含的運算子，來建立和編輯屬性運算式或撰寫可設定變數值的運算式。  

@@ -1,28 +1,28 @@
 ---
-title: "如何使用 CDC 服務 | Microsoft Docs"
-ms.custom: 
+title: 如何使用 CDC 服務 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f3d5ba79da0e39806ba9ad9e3d36cb726802efb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a1ad2d49ca33b4f4903a13b4d4ff217f4baa0bbb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服務
   這個程序描述如何使用 CDC 服務組態主控台來準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，以便使用 Oracle CDC 服務及建立新的 CDC 服務。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]**。  
   
-2.  從左窗格選取 [本機 CDC 服務]\ (根層級)。  
+2.  從左窗格選取 [本機 CDC 服務] (根層級)。  
   
 3.  您會執行下列其中一項或兩項工作：  
   

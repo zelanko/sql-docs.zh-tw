@@ -1,9 +1,9 @@
 ---
-title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
+title: Ibcpsession2 |Microsoft 文件
 description: 使用 Ibcpsession2 查詢或資料表建立任何大量複製
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-interfaces
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - BCPSetBulkMode function
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ead348eeeb717f6d0581ab3fb4095dc99552f48b
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: f71f77faff7e457ba3c6283ac504719952f6f2d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Ibcpsession2 提供替代[ibcpsession:: Bcpcolfmt &#40; OLE DB &#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)來指定資料行格式。 與不同的是，它可以設定個別的資料行格式屬性，ibcpsession:: Bcpcolfmt Ibcpsession2 設定的所有屬性。  
+  Ibcpsession2 提供替代[ibcpsession:: Bcpcolfmt & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)來指定資料行格式。 與不同的是，它可以設定個別的資料行格式屬性，ibcpsession:: Bcpcolfmt Ibcpsession2 設定的所有屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -367,6 +367,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [IBCPSession2 &#40; OLE DB &#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
+ [IBCPSession2 & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

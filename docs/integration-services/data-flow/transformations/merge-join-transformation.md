@@ -1,16 +1,16 @@
 ---
-title: "合併聯結轉換 | Microsoft Docs"
-ms.custom: 
+title: 合併聯結轉換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergejointrans.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c9532a91cf1113b91e43a35e57db6cfebf66da8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b464b8c9d5c2cb73daa8accbb64532cc1d6be0d1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   合併聯結轉換提供藉由使用 FULL、LEFT 或 INNER 聯結，來聯結兩個已排序資料集所產生的輸出。 例如，您可以使用 LEFT 聯結來聯結包含產品資訊的資料表，以及列出製造產品的國家/地區的資料表。 此結果為列出所有產品及其原產國家/地區的資料表。  

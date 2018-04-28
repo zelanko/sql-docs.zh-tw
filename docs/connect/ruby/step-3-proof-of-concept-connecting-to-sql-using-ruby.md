@@ -1,27 +1,28 @@
 ---
-title: "步驟 3： 連接到使用 Ruby SQL 的概念證明 |Microsoft 文件"
-ms.custom: 
+title: 步驟 3： 連接到使用 Ruby SQL 的概念證明 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ruby
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 481061c2d37bd4b6c6cf0c5c131f2c8a24f3025f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 925c3385ce112d8aa86381e8d5ea6924e4173a3b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步驟 3： 連接到使用 Ruby SQL 的概念證明
 

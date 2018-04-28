@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: de023c9bdd452a4611d28493b37f2a2046d485fe
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -39,8 +39,8 @@ bool PDOStatement::closeCursor();
 ## <a name="return-value"></a>傳回值  
 如果成功，則為 true，否則為 false。  
   
-## <a name="remarks"></a>Remarks  
-當 MultipleActiveResultSets 連接選項設為 false 時，closeCursor 會有效用。  如需 MultipleActiveResultSets 連接選項的詳細資訊，請參閱[如何：停用 Multiple Active Resultsets ](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)MARS。  
+## <a name="remarks"></a>備註  
+當 MultipleActiveResultSets 連接選項設為 false 時，closeCursor 會有效用。  如需 MultipleActiveResultSets 連接選項的詳細資訊，請參閱[如何： 停用 Multiple Active Resultsets (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)。  
   
 您也可以不要呼叫 closeCursor，而僅將陳述式控制代碼設為 Null。  
   

@@ -1,28 +1,28 @@
 ---
-title: "在執行階段提供 OData 來源查詢 | Microsoft Docs"
-ms.custom: 
+title: 在執行階段提供 OData 來源查詢 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 457e4f5b8d52be56aa82f854e5a87caae72ebd99
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 190cbebff69d08424e62ec82b70ea9759d13a96c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>在執行階段提供 OData 來源查詢
  您可以在執行階段修改 OData 來源查詢，修改的方式是將「運算式」加入資料流程工作的 **[OData Source].[Query]** 屬性。  

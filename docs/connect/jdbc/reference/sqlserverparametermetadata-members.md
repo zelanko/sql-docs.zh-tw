@@ -1,27 +1,28 @@
 ---
-title: "SQLServerParameterMetaData 成員 |Microsoft 文件"
-ms.custom: 
+title: SQLServerParameterMetaData 成員 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f9ebb203-2013-4feb-94f5-494b7f098f9a
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a08e8540e387cf9b7bc5d75b9e98bbb8bbf1a27
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 39cac09a68bb9cbac3b207abd7d35a9f7981159e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverparametermetadata-members"></a>SQLServerParameterMetaData 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 |[getParameterTypeName](../../../connect/jdbc/reference/getparametertypename-method-sqlserverparametermetadata.md)|擷取指定之參數的資料庫特有型別名稱。|  
 |[getPrecision](../../../connect/jdbc/reference/getprecision-method-sqlserverparametermetadata.md)|擷取所指定參數的小數位數。|  
 |[getScale](../../../connect/jdbc/reference/getscale-method-sqlserverparametermetadata.md)|擷取所指定之參數的小數點右邊的位數。|  
-|[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverparametermetadata.md)|擷取值，此值指出指定的參數中是否允許使用 Null 值。|  
+|[IsNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverparametermetadata.md)|擷取值，此值指出指定的參數中是否允許使用 Null 值。|  
 |[isSigned](../../../connect/jdbc/reference/issigned-method-sqlserverparametermetadata.md)|擷取值，此值指出指定之參數的值是否可以為帶正負號的數值。|  
   
 ## <a name="inherited-methods"></a>繼承的方法  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/18/2017
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerParameterMetaData 類別](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  
   
   

@@ -1,27 +1,28 @@
 ---
-title: "SQLServerXAResource 成員 |Microsoft 文件"
-ms.custom: 
+title: SQLServerXAResource 成員 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e61b22a719ea74b1097a50f811a4e1bde85db54
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b4d0dd8ffe48528b439447a59e2540950c34527d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/18/2017
 |[復原 (recover)](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|從資源管理員取得備妥的交易分支清單。|  
 |[復原](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|要求資源管理員回復之前代表交易分支所完成的工作。|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|設定這個目前的交易逾時值[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)物件。|  
-|[啟動](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|代表 Xid 物件中指定的交易分支開始工作。|  
+|[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|代表 Xid 物件中指定的交易分支開始工作。|  
   
 ## <a name="inherited-methods"></a>繼承的方法  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/18/2017
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerXAResource 類別](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 連接共用 (Microsoft Drivers for PHP for SQL Server)
+title: 連接共用 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文件
 ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2a332153e4e2651079198dac5b4390c3b56d550d
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -33,19 +33,19 @@ ms.lasthandoff: 04/16/2018
   
 -   [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會使用 ODBC 連接共用。  
   
--   依預設會啟用連接共用。 在 Linux 和 Mac OS X 中，只有當 ODBC 連接共用已啟用共用連接。 當連接共用已啟用，連線到伺服器，此驅動程式會嘗試使用共用連接，然後再建立一個新。 如果在集區中找不到等同的連接，則會建立新連接，並加入至集區。 驅動程式會根據連接字串的比較，來判斷連接是否相等。  
+-   根據預設，在 Windows 中啟用連接共用。 在 Linux 和 Mac OS X 中，只有當 ODBC 連接共用已啟用共用連接。 當連接共用已啟用，連線到伺服器，此驅動程式會嘗試使用共用連接，然後再建立一個新。 如果在集區中找不到等同的連接，則會建立新連接，並加入至集區。 驅動程式會根據連接字串的比較，來判斷連接是否相等。  
   
 -   使用來自集區的連接時，連接狀態會重設。  
   
 -   關閉連接會將連接傳回集區。  
   
-如需連接共用的詳細資訊，請參閱 [驅動程式管理員連接共用](../../odbc/reference/develop-app/driver-manager-connection-pooling.md)。  
+如需連接共用的詳細資訊，請參閱[驅動程式管理員連接共用](../../odbc/reference/develop-app/driver-manager-connection-pooling.md)。  
   
 ## <a name="enablingdisabling-connection-pooling"></a>啟用/停用連接共用
-### <a name="windows"></a>Windows
-您可以將連接字串中的 **ConnectionPooling** 屬性值設為 false 或 0，以強制驅動程式建立新連接 *而不是在連接集區中尋找相同的連接*。  
+### <a name="windows"></a>視窗
+您可以強制驅動程式所設定的值建立新的連接 （而不是相同的連接，連接集區中尋找） *ConnectionPooling*中的連接字串屬性**false** （或 0）。  
   
-如果在連接字串中省略 *ConnectionPooling* 屬性，或是將該屬性設為 **true** 或 1，則只有在連接集區中沒有相同的連接存在時，驅動程式才會建立新的連接。  
+如果*ConnectionPooling*省略從連接字串屬性，或者如果它設定為**true** （或 1） 驅動程式只會建立新的連接中沒有相同的連接連接集區。  
   
 如需其他連接屬性的相關資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
 ### <a name="linux-and-mac-os-x"></a>Linux 和 Mac OS X

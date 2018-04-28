@@ -3,7 +3,7 @@ title: 支援本機交易 |Microsoft 文件
 description: OLE DB 驅動程式中的 SQL Server 的本機交易
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-transactions
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - local transactions [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5076c62a7c6553c0474585960da74af2f392b019
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 54866788608e778ea294e69472f5d4ead91cdaf4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supporting-local-transactions"></a>支援本機交易
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/06/2018
   
 |매개 변수|Description|  
 |---------------|-----------------|  
-|*isoLevel*[in]|與此交易搭配使用的隔離等級。 在本機交易中，SQL Server OLE DB 驅動程式支援以下功能：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意︰ 開頭[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，ISOLATIONLEVEL_SNAPSHOT 都是有效的*isoLevel*是否啟用資料庫的版本控制的引數。 不過，如果使用者嘗試執行執行陳述式，而未啟用版本控制且/或資料庫不是唯讀的，則會發生錯誤。 此外，如果 ISOLATIONLEVEL_SNAPSHOT 指定為將會發生 XACT_E_ISOLATIONLEVEL 錯誤*isoLevel*連線到的版本時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]早於[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。|  
+|*isoLevel*[in]|與此交易搭配使用的隔離等級。 在本機交易中，SQL Server OLE DB 驅動程式支援以下功能：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE 的情況下**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意︰ 開頭[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，ISOLATIONLEVEL_SNAPSHOT 都是有效的*isoLevel*是否啟用資料庫的版本控制的引數。 不過，如果使用者嘗試執行執行陳述式，而未啟用版本控制且/或資料庫不是唯讀的，則會發生錯誤。 此外，如果 ISOLATIONLEVEL_SNAPSHOT 指定為將會發生 XACT_E_ISOLATIONLEVEL 錯誤*isoLevel*連線到的版本時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]早於[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。|  
 |*isoFlags*[in]|SQL Server OLE DB 驅動程式會傳回錯誤的任何非零的值。|  
 |*pOtherOptions*[in]|如果不是 NULL，SQL Server OLE DB 驅動程式會從介面要求選項物件。 SQL Server OLE DB 驅動程式會傳回 XACT_E_NOTIMEOUT 如果選項物件*ulTimeout*成員不是零。 SQL Server OLE DB 驅動程式會略過的值*szDescription*成員。|  
 |*pulTransactionLevel*[out]|如果不是 NULL，SQL Server OLE DB 驅動程式傳回交易的巢狀層級。|  

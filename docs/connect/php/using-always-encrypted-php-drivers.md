@@ -1,7 +1,7 @@
 ---
 title: 使用 SQL Server 的一律加密的 PHP 驅動程式與 |Microsoft 文件
 ms.date: 01/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,17 +14,17 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.workload: Inactive
-ms.openlocfilehash: 588a0471866b1b33a3e485b321193edfd0c9187d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2896e0d2d121219fae926bd6304cd4415e0a6214
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>使用 SQL Server 的一律加密與 PHP 驅動程式
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 ## <a name="applicable-to"></a>適用於
- -   Microsoft Drivers 5.2 for PHP for SQL Server
+ -   Microsoft Drivers for PHP for SQL Server 5.2
  
 ## <a name="introduction"></a>簡介
 
@@ -96,10 +96,10 @@ CREATE TABLE [dbo].[Patients](
    -   明確設定的 SQL 型別。
   -   PDO_SQLSRV 驅動程式的使用者沒有以明確地設定參數的 SQL 類型的選項。 PDO_SQLSRV 驅動程式會自動在協助使用者決定 SQL 型別時將參數繫結。
  -   若要判斷 SQL 類型的驅動程式，某些限制適用於：
-  -   SQLSRV Driver:
+  -   SQLSRV 驅動程式：
    -   如果使用者想要判斷已加密的資料行的 SQL 類型的驅動程式，則使用者必須使用`sqlsrv_prepare`和`sqlsrv_execute`。
    -   如果`sqlsrv_query`是慣用，使用者必須負責指定對所有參數的 SQL 類型。 指定的 SQL 類型必須包含字串類型的字串長度和小數位數和有效位數十進位型別。
-  -   PDO_SQLSRV Driver:
+  -   PDO_SQLSRV 驅動程式：
    -   陳述式屬性`PDO::SQLSRV_ATTR_DIRECT_QUERY`不支援參數化查詢。
    -   陳述式屬性`PDO::ATTR_EMULATE_PREPARES`不支援參數化查詢。
    

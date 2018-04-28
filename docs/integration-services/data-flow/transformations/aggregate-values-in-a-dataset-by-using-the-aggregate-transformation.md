@@ -1,32 +1,32 @@
 ---
-title: "使用彙總轉換來彙總資料集中的值 | Microsoft Docs"
-ms.custom: 
+title: 使用彙總轉換來彙總資料集中的值 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 985f5cd2a2ed1d93df3d164a34bbeb4428b97df9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b1aa6a99fd0e3109e244cdaeb9988ba75793d005
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值
   若要加入及設定「彙總」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 **[資料流程]** 索引標籤，然後從 **[工具箱]**拖曳「彙總」轉換至設計介面。  
+3.  按一下 **[資料流程]** 索引標籤，然後從 **[工具箱]** 拖曳「彙總」轉換至設計介面。  
   
 4.  從來源或先前的轉換將連接子拖曳到彙總轉換，以便將彙總轉換連接到資料流程。  
   

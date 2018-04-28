@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8431546d6a92ec8e3e2814c851603280bddcb234
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,12 +37,12 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>參數  
-*：(整數) 您要擷取其中繼資料的資料行號碼 (以零為基底)。  
+*$conn*: （整數） 您想要擷取其中繼資料的資料行以零為起始的數目。  
   
 ## <a name="return-value"></a>傳回值  
 包含資料行中繼資料的關聯陣列 (索引鍵和值)。 如需陣列中欄位的描述，請參閱＜備註＞一節。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 下表將描述 getColumnMeta 所傳回陣列中的欄位。  
   
 |NAME|VALUES|  
@@ -51,7 +51,7 @@ array PDOStatement::getColumnMeta ( $column );
 |driver:decl_type|指定用來表示資料庫中的資料行值的 SQL 類型。 如果結果集內的資料行是函數的結果，則此值不是由 PDOStatement::getColumnMeta 傳回。|  
 |flags|指定為此資料行設定的旗標。 一律是 0。|  
 |NAME|指定資料庫中資料行的名稱。|  
-|資料表|指定包含資料庫中資料行的資料表名稱。 永遠為空白。|  
+|table|指定包含資料庫中資料行的資料表名稱。 永遠為空白。|  
 |len|指定資料行長度。|  
 |有效位數|指定此資料行的數值有效位數。|  
 |pdo_type|指定此資料行的類型 (以 PDO::PARAM_* 常數表示)。 一律是 PDO::PARAM_STR (2)。|  

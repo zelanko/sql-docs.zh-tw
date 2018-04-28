@@ -3,7 +3,7 @@ title: SQL Server 資料表中加入一個資料行 |Microsoft 文件
 description: 使用 SQL Server 的 OLE DB 驅動程式的 SQL Server 資料表中加入一個資料行
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-tables-indexes
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e386383c6274ce018ee8b77e2c93242c14cdce08
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: f9c66f780c23548e1aab73888e6db14a4af9469c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>將資料行加入至 SQL Server 資料表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  SQL Server OLE DB 驅動程式會公開**:: Addcolumn**函式。 這可讓取用者加入至資料行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。  
+  SQL Server OLE DB 驅動程式會公開 **:: Addcolumn**函式。 這可讓取用者加入至資料行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。  
   
  當您將加入的資料行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表、 OLE DB 驅動程式的 SQL Server 取用者會受到限制，如下所示：  
   

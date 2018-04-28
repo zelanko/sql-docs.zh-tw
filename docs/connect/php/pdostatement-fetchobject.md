@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b215ca5237230d497aad4d8779c3ec23ce3e4bea
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,14 +37,14 @@ mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )
 ```  
   
 #### <a name="parameters"></a>參數  
-$class*name*：一個選擇性字串，指定要建立之類別的名稱。 預設值為 stdClass。  
+$*class_name*： 一個選用字串，指定要建立之類別的名稱。 預設值為 stdClass。  
   
-$ctor*args*：一個選擇性陣列，內含自訂類別建構函式的引數。  
+$*ctor_args*： 選擇性內含自訂類別建構函式的引數陣列。  
   
 ## <a name="return-value"></a>傳回值  
 如果成功，會傳回具有類別執行個體的物件。 屬性會對應至資料行。 如果失敗，會傳回 false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

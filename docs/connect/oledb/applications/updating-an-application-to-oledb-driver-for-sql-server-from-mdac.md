@@ -3,7 +3,7 @@ title: OLE DB 驅動程式將應用程式更新 SQL server 的 MDAC |Microsoft �
 description: 更新 MDAC 從 SQL Server 的 OLE DB 驅動程式的應用程式
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -21,16 +21,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61056a6951176b4257856b114a512f6f81dfc33e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>更新 MDAC 從 SQL Server 的 OLE DB 驅動程式的應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   有一些與 OLE DB 驅動程式的 SQL Server 和 Microsoft Data Access Components (MDAC); 之間的差異從 Windows Vista 開始，資料存取元件現在稱為 Windows Data Access Components （或 Windows DAC）。 雖然這兩者都提供原生資料存取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫、 OLE DB 驅動程式的 SQL Server 特別設計來公開的新功能[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，而同時維護與舊版的回溯相容性。   
 
@@ -96,7 +98,7 @@ ms.lasthandoff: 04/06/2018
 
 -   當 MDAC 應用程式連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入的資料類型將會以 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 相容的資料類型形式出現，如下表所示。  
 
-    |SQL Server 2005 類型|SQL Server 2000 type|  
+    |SQL Server 2005 類型|SQL Server 2000 型別|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
@@ -104,7 +106,7 @@ ms.lasthandoff: 04/06/2018
     |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
 
-     此類型對應會影響資料行中繼資料傳回的值。 例如，**文字**資料行有大小上限為 2147483647，但是 OLE DB 驅動程式的 SQL Server 報告的大小上限**varchar （max)**為 2,147,483,647 或-1，根據平台的資料行。  
+     此類型對應會影響資料行中繼資料傳回的值。 例如，**文字**資料行有大小上限為 2147483647，但是 OLE DB 驅動程式的 SQL Server 報告的大小上限**varchar （max)** 為 2,147,483,647 或-1，根據平台的資料行。  
 
 -   OLE DB 驅動程式的 SQL Server 允許模稜兩可的連接字串 （例如，某些關鍵字可能會指定一次以上，和依據位置或優先順序解析可能會允許衝突的關鍵字） 回溯相容性的原因。 OLE DB 驅動程式的 SQL Server 的未來版本可能不允許模稜兩可的連接字串。 修改用來消除連接字串模稜兩可的相依性的 OLE DB 驅動程式的 SQL Server 的應用程式時，它會是很好的作法。  
 

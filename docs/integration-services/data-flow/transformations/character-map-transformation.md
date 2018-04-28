@@ -1,16 +1,16 @@
 ---
-title: "字元對應轉換 | Microsoft Docs"
-ms.custom: 
+title: 字元對應轉換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.charactertrans.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: 
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ad5ceb9c851baab0ddb229787afc23568239325
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 97c8e8e90cfb89a680fa9c0683b1e4dc3d5f3b31
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
   「字元對應」轉換會套用字串函數，例如從小寫轉換成大寫、字元資料。 此轉換只能在字串資料類型的資料行資料上操作。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
-|新增資料行|將資料儲存在新的資料行中。 在 **[輸出別名]**之下指派資料行名稱。|  
+|新增資料行|將資料儲存在新的資料行中。 在 **[輸出別名]** 之下指派資料行名稱。|  
 |就地變更|將修改的資料儲存在現有的資料行中。|  
   
  **運算**  

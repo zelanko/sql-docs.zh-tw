@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: da05a66c4ec449ef34174825dea6488e236b49da
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -39,12 +39,12 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>參數  
 $*string*：要加上引號的字串。  
   
-$parameter*type*：指出資料類型的選擇性 整數 符號。  預設值是 PDO::PARAM_STR。  
+$*p*: 選用 （整數） 符號，指出資料類型。  預設值是 PDO::PARAM_STR。  
   
 ## <a name="return-value"></a>傳回值  
 可以傳遞至 SQL 陳述式的加上引號的字串，如果失敗則傳回 false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

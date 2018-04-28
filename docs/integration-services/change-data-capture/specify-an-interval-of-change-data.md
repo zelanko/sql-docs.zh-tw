@@ -1,30 +1,30 @@
 ---
-title: "指定變更資料的間隔 | Microsoft Docs"
-ms.custom: 
+title: 指定變更資料的間隔 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 262f93736e963785054686dd573389670d44bc46
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6691390fea6e32f050e9a2b08d6cfc91773f1196
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定變更資料的間隔
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第一個工作是計算變更間隔的端點。 這些端點是 **datetime** 值，而且將會以封裝變數儲存，以便稍後在封裝中使用。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  在「 **設計師」的** [控制流程] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤上，將「執行 SQL」工作加入到封裝中。  
   
-2.  開啟 **[執行 SQL 工作編輯器]**然後在編輯器的 **[一般]** 頁面上，選取下列選項：  
+2.  開啟 **[執行 SQL 工作編輯器]** 然後在編輯器的 **[一般]** 頁面上，選取下列選項：  
   
     1.  針對 **[ResultSet]**，選取 **[單一資料列]**。  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
   
         ```  
   
-3.  在 **[執行 SQL 工作編輯器]** 的 **[結果集]**頁面上，將 ExtractStartTime 結果對應到 ExtractStartTime 封裝變數，並將 ExtractEndTime 結果對應到 ExtractEndTime 封裝變數。  
+3.  在 **[執行 SQL 工作編輯器]** 的 **[結果集]** 頁面上，將 ExtractStartTime 結果對應到 ExtractStartTime 封裝變數，並將 ExtractEndTime 結果對應到 ExtractEndTime 封裝變數。  
   
     > [!NOTE]  
     >  當您使用運算式設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 變數的值時，每次存取變數的值時，就會評估該運算式。  

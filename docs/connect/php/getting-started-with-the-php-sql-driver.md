@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c829a111b86430a8deaa71bdbda0c5a6a5d7ead4
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
 本節提供使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]以及將驅動程式載入 PHP 程序空間中的系統需求相關資訊。  
   
-## <a name="getting-started"></a>使用者入門  
+## <a name="getting-started"></a>快速入門  
 * [步驟 1︰設定 PHP 開發的開發環境](../../connect/php/step-1-configure-development-environment-for-php-development.md)  
 * [步驟 2︰建立 PHP 開發的資料庫](../../connect/php/step-2-create-a-sql-database-for-php-development.md)  
 * [步驟 3︰使用 PHP 連接到 SQL 的概念證明](../../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md)  

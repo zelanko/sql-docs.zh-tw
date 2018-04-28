@@ -1,30 +1,30 @@
 ---
-title: "SAP BW 來源編輯器 (連線管理員頁面) | Microsoft Docs"
-ms.custom: 
+title: SAP BW 來源編輯器 (連線管理員頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0373c0142f2b466b12dd6c2ff1619f09b2b8b26f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: acd283582acdde38989b893306534d2f4e7e051f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 來源編輯器 (連接管理員頁面)
   使用 **[SAP BW 來源編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 來源的 SAP BW 連接管理員。 在這個頁面上，您也可以選取執行模式以及從 SAP Netweaver BW 系統中擷取資料所用的參數。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
   
-3.  在 **[SAP BW 來源編輯器]**中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
+3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
 ## <a name="static-options"></a>靜態選項  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 > [!IMPORTANT]  
 >  [SAP BW 來源編輯器] 之 **[連接管理員]** 頁面上提供的 **[預覽]** 選項會實際擷取資料。 如果您已將 SAP Netweaver BW 設定為僅擷取自從上次擷取以來已變更的資料，則選取 **[預覽]** 將會從下次擷取中排除已預覽的資料。  
   
- 當您按一下 **[預覽]**時，也會開啟 **[要求記錄檔]** 對話方塊。 您可以使用此對話方塊來檢視對 SAP Netweaver BW 系統提出資料取樣要求期間記錄的事件。 如需詳細資訊，請參閱 [Request Log](../../integration-services/data-flow/request-log.md)。  
+ 當您按一下 **[預覽]** 時，也會開啟 **[要求記錄檔]** 對話方塊。 您可以使用此對話方塊來檢視對 SAP Netweaver BW 系統提出資料取樣要求期間記錄的事件。 如需詳細資訊，請參閱 [Request Log](../../integration-services/data-flow/request-log.md)。  
   
 ## <a name="execution-mode-dynamic-options"></a>執行模式動態選項  
   

@@ -20,26 +20,26 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c95beace96484b53d6786f8df24b55878a1ab8e2
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="cursor-types-sqlsrv-driver"></a>資料指標類型 (SQLSRV 驅動程式)
+# <a name="cursor-types-sqlsrv-driver"></a>資料指標類型 （SQLSRV 驅動程式）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-您可以根據資料指標類型，建立可讓您以任何順序存取資料列的結果集。  本主題將討論用戶端 （緩衝） 和伺服器端 （無緩衝） 資料指標。  
+SQLSRV 驅動程式可讓您建立資料列結果集，您可以存取以任何順序，根據資料指標類型。  本主題將討論用戶端 （緩衝） 和伺服器端 （無緩衝） 資料指標。  
   
 ## <a name="cursor-types"></a>資料指標類型  
 當您建立的結果集[sqlsrv_query](../../connect/php/sqlsrv-query.md)或[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)，您可以指定資料指標的類型。 根據預設，會使用順向資料指標，可讓您開始第一列的結果集，直到您到達結果集的結尾一次移動一個資料列。  
   
 您可以建立含有可捲動資料指標，可讓您存取結果集中，依照任何順序中的任何資料列的結果集。 下表列出的值可以傳遞至**Scrollable** sqlsrv_query 或 sqlsrv_prepare 中的選項。  
   
-|選項|描述|  
+|選項|Description|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|可讓您開始第一列的結果集，直到您到達結果集的結尾一次移動一個資料列。<br /><br />這是預設資料指標類型。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md)會傳回錯誤與此資料指標類型所建立之結果集。<br /><br />**向前**是 SQLSRV_CURSOR_FORWARD 縮寫的形式。|  
 |SQLSRV_CURSOR_STATIC|可讓您以任何順序存取資料列，但不是會反映資料庫中的變更。<br /><br />**靜態**是 SQLSRV_CURSOR_STATIC 縮寫的形式。|  
 |SQLSRV_CURSOR_DYNAMIC|可讓您以任何順序存取資料列，且會反映資料庫中的變更。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md)會傳回錯誤與此資料指標類型所建立之結果集。<br /><br />**動態**是 SQLSRV_CURSOR_DYNAMIC 縮寫的形式。|  
-|SQLSRV_CURSOR_KEYSET|可讓您存取任何順序中的資料列。 如果資料列已從資料表中刪除，則索引鍵集資料指標不會更新資料列計數 已刪除的資料列傳回時不會有值。<br /><br />**索引鍵集**是 SQLSRV_CURSOR_KEYSET 縮寫的形式。|  
+|SQLSRV_CURSOR_KEYSET|可讓您存取任何順序中的資料列。 不過，索引鍵集資料指標不會更新資料列計數，如果資料列已刪除資料表 （已刪除的資料列會傳回任何值）。<br /><br />**索引鍵集**是 SQLSRV_CURSOR_KEYSET 縮寫的形式。|  
 |SQLSRV_CURSOR_CLIENT_BUFFERED|可讓您存取任何順序中的資料列。 建立用戶端資料指標查詢。<br /><br />**緩衝處理**是 SQLSRV_CURSOR_CLIENT_BUFFERED 縮寫的形式。|  
   
 如果查詢會產生多個結果集， **Scrollable**選項會套用至所有結果集。  
@@ -49,11 +49,11 @@ ms.lasthandoff: 04/16/2018
   
 下表描述您可以在指定的值*列*參數。  
   
-|參數|描述|  
+|매개 변수|Description|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|指定下一個資料列。 這是預設值，如果您未指定*列*可捲動的結果集的參數。|  
 |SQLSRV_SCROLL_PRIOR|指定的資料列目前資料列之前。|  
-|SQLSRV_SCROLL_FIRST|指定結果中的第一個資料列。|  
+|SQLSRV_SCROLL_FIRST|指定結果集中的第一個資料列。|  
 |SQLSRV_SCROLL_LAST|指定結果集中的最後一個資料列。|  
 |SQLSRV_SCROLL_ABSOLUTE|指定與指定的資料列*位移*參數。|  
 |SQLSRV_SCROLL_RELATIVE|指定與指定的資料列*位移*從目前資料列的參數。|  

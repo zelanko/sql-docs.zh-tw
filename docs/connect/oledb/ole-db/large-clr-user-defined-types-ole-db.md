@@ -3,7 +3,7 @@ title: 大型 CLR 使用者定義型別 (OLE DB) |Microsoft 文件
 description: 大型 CLR 使用者定義型別 (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f4ba8559525b2b0b7a174a7160e7d3daf138f30
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: e3aaddc3ac658c0a7d713933b6594c1c3a27e88f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 使用者定義型別 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.lasthandoff: 04/06/2018
   
 |SQL Server 資料類型|OLE DB 資料類型|記憶體配置|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR UDT|DBTYPE_UDT|BYTE[](byte array\)|132 (oledb.h)|  
+|CLR UDT|DBTYPE_UDT|BYTE [] （位元組陣列\)|132 (oledb.h)|  
   
- UDT 值會表示為位元組陣列。 支援與十六進位字串之間的來回轉換。 常值會表示為具有 "0x" 前置詞的十六進位字串。 十六進位字串是基底 16 的二進位資料文字表示法。 一個範例就是從伺服器類型轉換**varbinary(10)**至 DBTYPE_STR，這會導致 20 個字元，其中每一組字元都代表單一位元組的十六進位表示法。  
+ UDT 值會表示為位元組陣列。 支援與十六進位字串之間的來回轉換。 常值會表示為具有 "0x" 前置詞的十六進位字串。 十六進位字串是基底 16 的二進位資料文字表示法。 一個範例就是從伺服器類型轉換**varbinary(10)** 至 DBTYPE_STR，這會導致 20 個字元，其中每一組字元都代表單一位元組的十六進位表示法。  
   
 ## <a name="parameter-properties"></a>參數屬性  
  DBPROPSET_SQLSERVERPARAMETER 屬性集會透過 OLE DB 支援 UDT。 如需詳細資訊，請參閱[Using User-Defined 類型](../../oledb/features/using-user-defined-types.md)。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/06/2018
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  傳回以 DBPARAMINFO 結構透過資訊**prgParamInfo**如下所示：  
   
-|參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*將 dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|"DBTYPE_UDT"|*n*|未定義|未定義|清除|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|"DBTYPE_UDT"|~0|未定義|未定義|集合|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/06/2018
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  以 DBPARAMBINDINFO 結構所提供的資訊必須與下列相符：  
   
-|參數類型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|參數類型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*將 dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|忽略|忽略|如果要使用 DBTYPE_IUNKNOWN 傳遞此參數，則必須設定。|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|忽略|忽略|忽略|  

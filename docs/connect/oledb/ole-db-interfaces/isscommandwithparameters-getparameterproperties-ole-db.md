@@ -3,7 +3,7 @@ title: Getparameterinfo (OLE DB) |Microsoft 文件
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-interfaces
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - GetParameterProperties method
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dcd93da8a4a40af97284ea787ebf359490ebd0c1
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: 5c16b7902010a4030abc4166aab8ac9749e3cab5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ HRESULT GetParameterProperties(
  **GetParameterProperties**方法會傳回相同的錯誤碼與核心 OLE DB **icommandproperties:: Getproperties**無法方法，除了 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 之外引發。  
   
 ## <a name="remarks"></a>備註  
- **Getparameterinfo**方法行為一致相對於**GetParameterInfo**。 如果[isscommandwithparameters::](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo**尚未呼叫或呼叫 cparams 等於零， **GetParameterInfo**衍生參數資訊，並傳回它。 如果**isscommandwithparameters::**或**SetParameterInfo**至少一個參數，在呼叫**Getparameterinfo**方法會傳回這些參數的屬性為其**isscommandwithparameters::**已呼叫。 如果**isscommandwithparameters::**之後呼叫**Getparameterinfo**或**GetParameterInfo**，後續呼叫**Getparameterinfo**覆寫這些參數的值傳回的**isscommandwithparameters::**呼叫方法。  
+ **Getparameterinfo**方法行為一致相對於**GetParameterInfo**。 如果[isscommandwithparameters::](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo**尚未呼叫或呼叫 cparams 等於零， **GetParameterInfo**衍生參數資訊，並傳回它。 如果**isscommandwithparameters::** 或**SetParameterInfo**至少一個參數，在呼叫**Getparameterinfo**方法會傳回這些參數的屬性為其**isscommandwithparameters::** 已呼叫。 如果**isscommandwithparameters::** 之後呼叫**Getparameterinfo**或**GetParameterInfo**，後續呼叫**Getparameterinfo**覆寫這些參數的值傳回的**isscommandwithparameters::** 呼叫方法。  
   
  SSPARAMPROPS 結構定義如下：  
   
@@ -74,6 +74,6 @@ HRESULT GetParameterProperties(
 |*rgPropertySets*|藉其傳回 DBPROPSET 結構陣列的記憶體指標。|  
   
 ## <a name="see-also"></a>另請參閱  
- [ISSCommandWithParameters &#40; OLE DB &#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

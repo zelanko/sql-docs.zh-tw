@@ -3,7 +3,7 @@ title: '提取資料行使用 irow:: Getcolumns （或 irow:: Open） 和 ISeque
 description: '提取資料行使用 irow:: Getcolumns （或 irow:: Open） 和 ISequentialStream'
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 518d974fcb16598e664fb484d03106e2e869ca6d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 71f353f0d37e4f36b72fc63a206c4c6b726d1485
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,15 +39,15 @@ ms.lasthandoff: 04/06/2018
   
 1.  建立資料來源的連接。  
   
-2.  執行命令 (在此範例中， **ICommandExecute::Execute()**呼叫使用 iid_irow 呼叫)。  
+2.  執行命令 (在此範例中， **ICommandExecute::Execute()** 呼叫使用 iid_irow 呼叫)。  
   
 3.  擷取資料行的資料使用**Open**或**IRow::GetColumns()**。  
   
     -   **Open**可以用來開啟**ISequentialStream**資料列。 指定 DBGUID_STREAM，表示資料行包含二進位資料的資料流 (**IStream**或**ISequentialStream**然後可以用來從資料行讀取的資料)。  
   
-    -   如果**IRow::GetColumns()**使用時， **pData** DBCOLUMNACCESS 結構中的元素設定為指向資料流物件。  
+    -   如果**IRow::GetColumns()** 使用時， **pData** DBCOLUMNACCESS 結構中的元素設定為指向資料流物件。  
   
-4.  使用**ISequentialStream::Read()**重複到指定的位元組數目讀入取用者緩衝區。  
+4.  使用**ISequentialStream::Read()** 重複到指定的位元組數目讀入取用者緩衝區。  
   
 ## <a name="example"></a>範例  
  此範例會示範如何使用 IRow 提取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會說明 IRow::Open() 以及 IRow::GetColumns() 的使用方式。 為了讀取資料行的資料，此範例會使用 ISequentialStream::Read。  

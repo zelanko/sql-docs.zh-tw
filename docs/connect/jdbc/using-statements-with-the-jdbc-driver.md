@@ -1,27 +1,28 @@
 ---
-title: "JDBC 驅動程式搭配使用陳述式 |Microsoft 文件"
-ms.custom: 
+title: JDBC 驅動程式搭配使用陳述式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a900a32cbaca2337930f7bb84aafcb634dcb508e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1a70518f53772a37ca9ad2354876a1ec57bea255
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用陳述式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/18/2017
 |[執行批次作業](../../connect/jdbc/performing-batch-operations.md)|描述如何使用 JDBC 驅動程式來執行批次作業。|  
 |[處理複雜陳述式](../../connect/jdbc/handling-complex-statements.md)|描述如何使用 JDBC 驅動程式來執行複雜陳述式，這類陳述式可執行各種不同的工作，並可能傳回不同類型的資料。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,28 +1,28 @@
 ---
-title: "SAP 認證 | Microsoft Docs"
-ms.custom: 
+title: SAP 認證 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9f4c4328c1a9862c3f9c5c0d4417f1a709ce5cb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bd63f7a2c508f8089e2e71607f3e1bf844a7b1f9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="certification-by-sap"></a>SAP 認證
   Microsoft Connector 1.1 for SAP BW 已獲得 SAP 的認證，認可為能夠和 SAP NetWeaver 整合。  

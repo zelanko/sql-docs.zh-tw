@@ -1,30 +1,33 @@
 ---
-title: "getColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文件"
-ms.custom: 
+title: getColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0df43a82b288f475c1325c66670cf6290933
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>參數  
- *類別目錄*  
+ *catalog*  
   
  A**字串**，其中包含目錄名稱。  
   
- *結構描述*  
+ *schema*  
   
  A**字串**，包含結構描述名稱模式。  
   
@@ -82,7 +85,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|資料行的小數位數。|  
 |NUM_PREC_RADIX|**smallint**|資料行的基數。|  
 |NULLABLE|**smallint**|指出資料行是否可為 Null。 它可能是下列其中一個值：<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**字串**|與資料行相關聯的註解。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]一定會傳回 null，此資料行。|  
+|REMARKS|**字串**|與資料行相關聯的註解。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]一定會傳回 null，此資料行。  |  
 |COLUMN_DEF|**字串**|資料行的預設值。|  
 |SQL_DATA_TYPE|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 除了 datetime 和 SQL-92 interval 資料類型，這個資料行與 DATA_TYPE 資料行相同。 這個資料行一律會傳回值。|  
 |SQL_DATETIME_SUB|**smallint**|datetime 和 SQL-92 interval 資料類型的子類型代碼。 其他資料類型的這個資料行都會傳回 NULL。|  
@@ -110,7 +113,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  DATA_TYPE 資料行有下列變更：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料類型|JDBC 驅動程式 2.0 中的傳回類型 (或者，如果連接到[!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) 和相關聯的數值常數|當連接到 JDBC 驅動程式 3.0 中的傳回類型[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]或更新版本|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型|JDBC 驅動程式 2.0 中的傳回類型 (或者，如果連接到[!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) 和相關聯的數值常數|當連接到 JDBC 驅動程式 3.0 中的傳回類型[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]或更新版本|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |大於 8 kB 的使用者定義型別|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |地理位置|LONGVARBINARY (-4)|VARBINARY (-3)|  
@@ -125,7 +128,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  COLUMN_SIZE 資料行有下列變更：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料類型|JDBC Driver 2.0 中的傳回類型|JDBC Driver 3.0 中的傳回類型|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型|JDBC Driver 2.0 中的傳回類型|JDBC Driver 3.0 中的傳回類型|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (資料庫中繼資料)|  
 |xml|1073741823|2147483647 (資料庫中繼資料)|  
@@ -137,13 +140,13 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  BUFFER_LENGTH 資料行有下列變更：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料類型|JDBC Driver 2.0 中的傳回類型|JDBC Driver 3.0 中的傳回類型|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型|JDBC Driver 2.0 中的傳回類型|JDBC Driver 3.0 中的傳回類型|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |大於 8 kB 的使用者定義型別||2147483647|  
   
  TYPE_NAME 資料行有下列變更：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料類型|JDBC Driver 2.0 中的傳回類型|JDBC Driver 3.0 中的傳回類型|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型|JDBC Driver 2.0 中的傳回類型|JDBC Driver 3.0 中的傳回類型|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
 |varbinary(max)|image|varbinary|  
@@ -159,7 +162,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  SQL_DATA_TYPE 資料行有下列變更：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料類型|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]2008 JDBC 驅動程式 2.0 中的資料值。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]2008 JDBC 驅動程式 3.0 中的資料值。|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 JDBC 驅動程式 2.0 中的資料值。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 JDBC 驅動程式 3.0 中的資料值。|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|-9|  
 |nvarchar(max)|-1|-9|  
@@ -208,7 +211,7 @@ public class c1 {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

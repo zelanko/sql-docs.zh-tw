@@ -2,7 +2,7 @@
 title: Excel 目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 794d9041bc3057d2737c88e2815d98a9d441beb3
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: ccce46386f5b797cef005aeed9ebd1eb65724034
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="excel-destination"></a>Excel 目的地
   Excel 目的地會將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 04/04/2018
   使用 **[Excel 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定資料來源資訊，以及預覽結果。 Excel 目的地會將資料載入 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 活頁簿中的工作表或具名範圍。  
   
 > [!NOTE]  
->  在 **[Excel 目的地編輯器]** 中無法使用 Excel 目的地的 **CommandTimeout**屬性，但可使用 **[進階編輯器]**來設定這個屬性。 此外， **[進階編輯器]**中只會有特定的快速載入選項。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)＞的＜Excel 目的地＞一節。  
+>  在 **[Excel 目的地編輯器]** 中無法使用 Excel 目的地的 **CommandTimeout**屬性，但可使用 **[進階編輯器]** 來設定這個屬性。 此外， **[進階編輯器]** 中只會有特定的快速載入選項。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)＞的＜Excel 目的地＞一節。  
   
 ### <a name="static-options"></a>靜態選項  
  **Excel 連接管理員**  
@@ -88,7 +88,7 @@ ms.lasthandoff: 04/04/2018
  從下拉式清單中選取 Excel 目的地。 如果此清單為空，請按一下 **[新增]**。  
   
  **新增**  
- 按一下 [新增] 以啟動 [建立工資料表] 對話方塊。 按一下 **[確定]**時，對話方塊會建立 **[Excel 連接管理員]** 指向的 Excel 檔案。  
+ 按一下 [新增] 以啟動 [建立工資料表] 對話方塊。 按一下 **[確定]** 時，對話方塊會建立 **[Excel 連接管理員]** 指向的 Excel 檔案。  
   
  **檢視現有的資料**  
  使用 [預覽查詢結果] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
@@ -127,7 +127,7 @@ ms.lasthandoff: 04/04/2018
  檢視可用的目的地資料行清單。 使用拖放作業，即可將資料表中的可用目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 從上述資料表檢視選取的輸入資料行。 您可以使用 **[可用的輸入資料行]**清單來變更對應。  
+ 從上述資料表檢視選取的輸入資料行。 您可以使用 **[可用的輸入資料行]** 清單來變更對應。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  

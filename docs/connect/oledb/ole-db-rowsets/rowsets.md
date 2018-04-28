@@ -3,7 +3,7 @@ title: 資料列集 |Microsoft 文件
 description: SQL Server 的 OLE DB 驅動程式中資料列集
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - rowsets [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc869e7b45716113c529c7ae1194e47464907d23
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 417514258d1300b14af81ba65628a342a57e9a56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowsets"></a>資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   資料列集是一組資料列，其中包含資料的資料行。 資料列集是能讓所有 OLE DB 資料提供者公開表格形式結果集資料的核心物件。  
   
- 取用者使用建立工作階段之後**:: Createsession**方法中，取用者可以使用**IOpenRowset**或**IDBCreateCommand**上要建立資料列集的工作階段的介面。 SQL Server 的 OLE DB 驅動程式支援這兩種介面。 此處描述這兩種方法。  
+ 取用者使用建立工作階段之後 **:: Createsession**方法中，取用者可以使用**IOpenRowset**或**IDBCreateCommand**上要建立資料列集的工作階段的介面。 SQL Server 的 OLE DB 驅動程式支援這兩種介面。 此處描述這兩種方法。  
   
 -   建立資料列集呼叫**iopenrowset:: Openrowset**方法。  
   
@@ -71,6 +71,6 @@ ms.lasthandoff: 04/06/2018
 -   [更新資料集中的資料列集](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 的 OLE DB 驅動程式&#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

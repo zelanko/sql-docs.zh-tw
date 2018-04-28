@@ -1,30 +1,30 @@
 ---
-title: "編輯進階屬性 | Microsoft Docs"
-ms.custom: 
+title: 編輯進階屬性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c5aa4c97c3b90a290c93a82ab23b486d16106e8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 167228fe83cc2ba0e37dc42ec479ddf37a2054b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-the-advanced-properties"></a>編輯進階屬性
   使用 **[進階]** 索引標籤，將特殊屬性加入至 CDC 執行個體。  

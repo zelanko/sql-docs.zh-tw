@@ -1,31 +1,31 @@
 ---
-title: "YEAR (SSIS 運算式) | Microsoft Docs"
-ms.custom: 
+title: YEAR (SSIS 運算式) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40c62cf02371f9bf1888c3df4f8d7c588aea6ab6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d5b60cf8e9ff920dc282cbff469f3c13efa5379e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 運算式)
   傳回代表日期之年份部分的整數。  

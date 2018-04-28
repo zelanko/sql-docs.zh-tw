@@ -3,7 +3,7 @@ title: 大量複製變更對增強的日期和時間類型 (OLE DB) |Microsoft �
 description: 增強型的日期和時間類型 (OLE DB) 的大量複製變更
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61d04588991764edb1d470f190ebd9b3ce08636c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: bebddc7a9ad8dc7d59f60fab73bcdca8b1192dab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>增強型的日期和時間類型 (OLE DB) 的大量複製變更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 04/06/2018
 |檔案儲存類型|主檔案資料類型|輸入用於 ibcpsession:: Bcpcolfmt msoledbsql.h|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
-|Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
+|Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
 |日期|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
@@ -103,33 +103,33 @@ ms.lasthandoff: 04/06/2018
   
 |目標 --><br /><br /> 來源|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|日期|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
-|Time|해당 사항 없음|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  
-|Smalldatetime|1, 2|1, 4, 10|1|1|1, 10|1, 5, 10|1, 11|1, 11|  
-|Datetime|1, 2|1, 4, 10|1, 12|1|1, 10|1, 5, 10|1, 11|1, 11|  
-|Datetime2|1, 2|1, 4, 10|1, 12|1, 10|1, 10|1, 5, 10|1, 3|1, 3|  
-|Datetimeoffset|1, 2, 8|1, 4, 8, 10|1, 8, 10|1, 8, 10|1, 8, 10|1, 10|1, 3|1, 3|  
-|Char/wchar (date)|9|-|9, 6, 12|9, 6, 12|9, 6|9, 5, 6|해당 사항 없음|해당 사항 없음|  
-|Char/wchar (time)|-|9, 10|9, 7, 10, 12|9, 7, 10, 12|9, 7, 10|9, 5, 7, 10|해당 사항 없음|해당 사항 없음|  
-|Char/wchar (datetime)|9, 2|9, 4, 10|9, 10, 12|9, 10, 12|9, 10|9, 5, 10|해당 사항 없음|해당 사항 없음|  
-|Char/wchar (datetimeoffset)|9, 2, 8|9, 4, 8, 10|9, 8, 10, 12|9, 8, 10, 12|9, 8, 10|9, 10|해당 사항 없음|N/A|  
+|日期|1|-|1, 6|1, 6|1, 6|1、 5、 6|1, 3|1, 3|  
+|Time|해당 사항 없음|1, 10|1，7 10|1，7 10|1，7 10|1、 5、 7、 10|1, 3|1, 3|  
+|Smalldatetime|1, 2|1、 4、 10|1|1|1, 10|1、 5、 10|1, 11|1, 11|  
+|Datetime|1, 2|1、 4、 10|1, 12|1|1, 10|1、 5、 10|1, 11|1, 11|  
+|Datetime2|1, 2|1、 4、 10|1, 12|1, 10|1, 10|1、 5、 10|1, 3|1, 3|  
+|Datetimeoffset|1, 2, 8|1、 4、 8、 10|1、 8、 10|1、 8、 10|1、 8、 10|1, 10|1, 3|1, 3|  
+|Char/wchar (date)|9|-|9、 6、 12|9、 6、 12|9、 6|9、 5、 6|해당 사항 없음|해당 사항 없음|  
+|Char/wchar (time)|-|9, 10|9、 7、 10、 12|9、 7、 10、 12|9、 7、 10|9、 5、 7、 10|해당 사항 없음|해당 사항 없음|  
+|Char/wchar (datetime)|9, 2|9、 4、 10|9、 10、 12|9、 10、 12|9, 10|9、 5、 10|해당 사항 없음|해당 사항 없음|  
+|Char/wchar (datetimeoffset)|9, 2, 8|9、 4、 8、 10|9、 8、 10、 12|9、 8、 10、 12|9、 8、 10|9, 10|해당 사항 없음|N/A|  
   
 #### <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
 |-|不支援轉換。<br />|  
-|1|如果提供的資料無效，就會產生含有 SQLSTATE 22007 和訊息「無效的 datetime 格式」的 ODBC 診斷記錄。 對於 datetimeoffset 值，即使沒有要求轉換為 UTC，此時間部分在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，正規化時間。 因此，用戶端必須確認時間元件在轉換為 UTC 之後，仍然位於支援的範圍內。|  
+|1|如果提供的資料不是有效的就會發佈錯誤。 對於 datetimeoffset 值，即使沒有要求轉換為 UTC，此時間部分在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，正規化時間。 因此，用戶端必須確認時間元件在轉換為 UTC 之後，仍然位於支援的範圍內。|  
 |2|忽略時間元件。|  
-|3|對於 ODBC，如果截斷時發生資料遺失，就會產生包含 SQLSTATE 22001 和訊息「字串資料，右邊已截斷」的診斷記錄。系統會根據下表，從目的地資料行的大小決定小數秒位數 (小數位數)。 對於大於資料表中範圍的資料行大小，就會隱含小數位數 7。 此轉換應該最多允許九個小數秒位數，也就是 ODBC 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含的小數位數 0** 8<br /><br /> **隱含的小數位數 1..7** 10,16<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含的小數位數 0:** 19<br /><br /> **隱含的小數位數 1..7:** 21..27<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數位數 0:** 26<br /><br /> **隱含的小數位數 1..7:** 28..34<br /><br /> 對於 OLE DB，如果截斷時發生資料損失，則會發佈錯誤。 對於 datetime2，小數秒的位數 (小數位數) 會根據下表，從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含的小數位數 0** 8<br /><br /> **隱含的小數位數 1..9** 1..9<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含的小數位數 0:** 19<br /><br /> **隱含的小數位數 1..9:** 21..29<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數位數 0:** 26<br /><br /> **隱含的小數位數 1..9:** 28..36|  
+|3|如果發生資料遺失的截斷，就會發佈錯誤。 對於 datetime2，小數秒的位數 (小數位數) 會根據下表，從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含的小數位數 0** 8<br /><br /> **隱含的小數位數 1..9** 1..9<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含的小數位數 0:** 19<br /><br /> **隱含的小數位數 1..9:** 21..29<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數位數 0:** 26<br /><br /> **隱含的小數位數 1..9:** 28..36|  
 |4|忽略日期元件。|  
 |5|時區會設定為 UTC (例如，00:00)。|  
 |6|時間會設定為零。|  
 |7|日期會設定為 1900-01-01。|  
 |8|忽略時區位移。|  
-|9|根據出現的第一個標點符號字元以及剩餘的元件是否存在，字串會經過剖析，並轉換為 date、datetime、datetimeoffset 或 time 值。 接著，將此字串轉換成目標類型，依照此程序探索來源類型的這篇文章結尾處資料表中的規則。 如果剖析提供的資料時一定會發生錯誤，或如果任何元件部分超出允許的範圍之外，或如果沒有從常值類型轉換為目標類型，就會發佈錯誤 (OLE DB)，會產生包含 SQLSTATE 22018 和訊息「轉換規格的字元值無效」的 ODBC 診斷記錄。 對於 datetime 和 smalldatetime 參數，如果年份超出這些類型支援的範圍，就會發佈錯誤 (OLE DB)，或產生含有 SQLSATE 22007 和訊息「無效的 datetime 格式」的 ODBC 診斷記錄。<br /><br /> 對於 datetimeoffset，即使沒有要求轉換為 UTC，此值在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，將時間正規化，因此用戶端必須在轉換成 UTC 之後，確認時間元件位於支援的範圍內。 如果此值不在支援的 UTC 範圍內，就會發佈錯誤 (OLE DB)，或產生含有 SQLSTATE 22007 和訊息「無效的 datetime 格式」的 ODBC 診斷記錄。|  
-|10|如果在從用戶端轉換為伺服器時發生資料遺失的截斷，就會發佈錯誤 (OLE DB)，或產生包含 SQLSTATE 22008 以及「日期時間欄位溢位」訊息的 ODBC 診斷記錄。 如果此值落在伺服器使用之 UTC 範圍所代表的範圍外，也可能發生這個錯誤。 如果在從伺服器轉換為用戶端時發生秒或小數秒的截斷，只會有一個警告。|  
-|11|如果截斷時發生資料損失，則會產生診斷記錄。<br /><br /> 在伺服器轉換為用戶端時，這是一個警告 (ODBC SQLSTATE S1000)。<br /><br /> 在用戶端轉換為伺服器時，這是一個錯誤 (ODBC SQLSTATE 22001)。|  
+|9|根據出現的第一個標點符號字元以及剩餘的元件是否存在，字串會經過剖析，並轉換為 date、datetime、datetimeoffset 或 time 值。 接著，將此字串轉換成目標類型，依照此程序探索來源類型的這篇文章結尾處資料表中的規則。 如果無法剖析提供的資料，而沒有錯誤，或如果任何元件部分超出允許的範圍，或如果沒有從常值類型轉換成目標型別，就會發佈錯誤。 對於 datetime 和 smalldatetime 參數，如果年份超出這些類型支援，範圍會發佈錯誤。<br /><br /> 對於 datetimeoffset，即使沒有要求轉換為 UTC，此值在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，將時間正規化，因此用戶端必須在轉換成 UTC 之後，確認時間元件位於支援的範圍內。 如果值不是支援的 UTC 範圍內，就會發佈錯誤。|  
+|10|用戶端與伺服器之間的轉換中，如果截斷時發生資料遺失就會發佈錯誤。 如果此值落在伺服器使用之 UTC 範圍所代表的範圍外，也可能發生這個錯誤。 如果在從伺服器轉換為用戶端時發生秒或小數秒的截斷，只會有一個警告。|  
+|11|用戶端與伺服器之間的轉換中，如果截斷時發生資料遺失就會發佈錯誤。|
 |12|秒數會設定為零，而小數秒會遭到捨棄。 不可能發生截斷錯誤。|  
 |해당 사항 없음|系統會維持現有 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和舊有的行為。|  
   

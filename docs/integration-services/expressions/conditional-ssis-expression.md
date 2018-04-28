@@ -1,31 +1,31 @@
 ---
-title: "? : (條件) (SSIS 運算式) | Microsoft Docs"
-ms.custom: 
+title: '? : (條件) (SSIS 運算式) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-caps.latest.revision: 
+caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e31c28e72bfcb23cc6f571ef38f85345c28e060e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c544da84a56d0f43b683a02b51ef65a08baa19c9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="--conditional-ssis-expression"></a>? : (條件) (SSIS 運算式)
   依據布林運算式的評估傳回兩個運算式的其中一個。 如果布林運算式的評估結果為 TRUE，則會評估第一個運算式，且結果為運算式的結果。 如果布林運算式的評估結果為 FALSE，則會評估第二個運算式，且其結果為運算式的結果。  

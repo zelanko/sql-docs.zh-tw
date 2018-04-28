@@ -3,7 +3,7 @@ title: 資料表值參數 （OLE DB for SQL Server 的驅動程式） |Microsoft
 description: 資料表值參數 (OLE DB Driver for SQL Server)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB Driver for SQL Server)
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d39f900235beb8a92009eaf7f132899758606d43
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 49b4aaaff6f87a21773939b30a9cebb8c403eff0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>資料表值參數 (OLE DB Driver for SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -2,7 +2,7 @@
 title: 預設 PHP 資料類型 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac611fe1d08c157dd9f6b4a67298ba318b62053f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 7229fe738950549fb6089ba8481658228397afa6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-php-data-types"></a>預設 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,12 +65,12 @@ ms.lasthandoff: 03/28/2018
 |smallint|Integer|8 位元字元<sup>1</sup>|  
 |smallmoney|字串|8 位元字元<sup>1</sup>|  
 |sql_variant<sup>7</sup>|字串|8 位元字元<sup>1</sup>|  
-|text<sup>8</sup>|資料流<sup>2</sup>|8 位元字元<sup>1</sup>|  
+|文字<sup>8</sup>|資料流<sup>2</sup>|8 位元字元<sup>1</sup>|  
 |time<sup>4</sup>|Datetime|不適用|  
 |timestamp|字串|8 位元字元<sup>1</sup>|  
 |tinyint|Integer|8 位元字元<sup>1</sup>|  
 |UDT|資料流<sup>2</sup>|二進位<sup>3</sup>|  
-|uniqueidentifier|String<sup>9</sup>|8 位元字元<sup>1</sup>|  
+|uniqueidentifier|字串<sup>9</sup>|8 位元字元<sup>1</sup>|  
 |varbinary|資料流<sup>2</sup>|二進位<sup>3</sup>|  
 |varbinary(MAX)|資料流<sup>2</sup>|二進位<sup>3</sup>|  
 |varchar|字串|8 位元字元<sup>1</sup>|  
@@ -121,7 +121,7 @@ ms.lasthandoff: 03/28/2018
 
 [PHP 類型](http://php.net/manual/en/language.types.php)
 
-[Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+[資料類型 (TRANSACT-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
   

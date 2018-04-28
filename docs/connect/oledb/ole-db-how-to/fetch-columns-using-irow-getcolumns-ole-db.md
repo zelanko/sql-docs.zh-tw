@@ -3,7 +3,7 @@ title: '使用 irow:: Getcolumns (OLE DB) 提取資料行 |Microsoft 文件'
 description: '使用 irow:: Getcolumns (OLE DB) 提取資料行'
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1da2025f53d6edda881fa80bbc1d3a3e2d05a62
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: a75f879b646e0c2abecec09a575d2b626386772c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/06/2018
   
 -   如何提取資料行的群組 (依序)。  
   
--   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果**pData** unll 和**cbMaxLen**為 0，呼叫**IRow**-**> GetColumns()**傳回實際的資料行長度。 在此情況下， **IRow]-> [GetColumns()**可以再次呼叫相同的資料行，擷取實際的資料上。  
+-   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果**pData** unll 和**cbMaxLen**為 0，呼叫**IRow**-**> GetColumns()** 傳回實際的資料行長度。 在此情況下， **IRow]-> [GetColumns()** 可以再次呼叫相同的資料行，擷取實際的資料上。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  

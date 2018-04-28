@@ -1,28 +1,28 @@
 ---
-title: "使用新增執行個體精靈 | Microsoft Docs"
-ms.custom: 
+title: 使用新增執行個體精靈 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e6e92aa871347938f49c0a5e1d345e4a8d98377
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 01bf2921f9ae8bbe43c925726a3819ac9bfd18b6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新增執行個體精靈
   新增執行個體精靈是用來建立 CDC 服務的新執行個體。 您會從 CDC 設計工具主控台開啟 [建立 Oracle CDC 執行個體] 精靈。 您可以在新增執行個體精靈中執行以下動作。  

@@ -3,7 +3,7 @@ title: OUTPUT 子句使用適用於 SQL Server 的 OLE DB 驅動程式中的 OLE
 description: 使用 OLE DB 驅動程式中的 OLE DB 中的 OUTPUT 子句，適用於 SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb-driver-for-sql-server
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f253352e2cd014cda9d88144dd01795b0d048de0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 5c6fa6d4dcd1b567df5e763c42501aaa82bb280f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>OUTPUT 子句使用適用於 SQL Server 的 OLE DB 驅動程式中的 OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

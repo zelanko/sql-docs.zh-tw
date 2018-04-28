@@ -1,32 +1,32 @@
 ---
-title: "程式設計指導方針 (ODBC Driver for SQL Server) |Microsoft 文件"
-ms.custom: 
+title: 程式設計指導方針 (ODBC Driver for SQL Server) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd8952f28f389fa5f1b8f82072998676c5a4196e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: e30ed328931cc33b62dd9d65301dee8921e1cc3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-程式設計功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS 和 Linux 為基礎中的 ODBC[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]原生用戶端 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]原生用戶端以 Windows Data Access Components 中的 ODBC 為基礎 ([ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkID=45250))。  
+程式設計功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS 和 Linux 為基礎中的 ODBC[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]原生用戶端 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 原生用戶端以 Windows Data Access Components 中的 ODBC 為基礎 ([ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkID=45250))。  
 
 ODBC 應用程式可以使用 Multiple Active Result Sets (MARS) 和其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]所包括的特定功能`/usr/local/include/msodbcsql.h`之後 unixODBC 標頭 (`sql.h`， `sqlext.h`， `sqltypes.h`，和`sqlucode.h`)。 然後使用相同的符號名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Windows ODBC 應用程式會使用您的特定項目。
 
@@ -119,7 +119,7 @@ SQLWCHAR 資料必須是 UTF-16LE (Little Endian)。
 
 如需有關定序和編碼方式的詳細資訊，請參閱[Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)。
 
-有一些 Windows 與 Linux 及 macOS 上的 iconv 程式庫的數個版本之間的編碼轉換差異。 文字資料的字碼頁 1255年 （希伯來文） 有一個字碼元素 0xca ()，在轉換成 Unicode 時的行為方式。 在 Windows 中，此字元會將 0x05BA 的 utf-16 字碼指標。 在 macOS 和 libiconv 版本早於 1.15 Linux，會將轉換成 0x00CA。 On Linux 不支援 Big5/CP950 2003 修訂的 iconv 程式庫 (名為`BIG5-2003`)，加上該修訂的字元不會正確轉換。
+有一些 Windows 與 Linux 及 macOS 上的 iconv 程式庫的數個版本之間的編碼轉換差異。 文字資料的字碼頁 1255年 （希伯來文） 有一個字碼元素 0xca ()，在轉換成 Unicode 時的行為方式。 在 Windows 中，此字元會將 0x05BA 的 utf-16 字碼指標。 在 macOS 和 libiconv 版本早於 1.15 Linux，會將轉換成 0x00CA。 On Linux 不支援 Big5/CP950 2003 修訂的 iconv 程式庫 (名為`BIG5-2003`)，加上該修訂的字元不會正確轉換。 在字碼頁 932 （日文、 Shift JIS），不是原本定義編碼標準的字元解碼的結果也各不相同。 比方說，0x80 的位元組將轉換為 U + 0080 Windows 上，但可能會變成 U + 30FB Linux 及 macOS，視 iconv 版本而定。
 
 在 ODBC Driver 13 和 13.1，當 utf-8 多位元組字元或 utf-16 surrogate SQLPutData 緩衝區間分散，分割會導致資料損毀。 對於最後不是部分字元編碼的串流 SQLPutData，請使用緩衝區。 已移除這項限制與 ODBC 驅動程式 17。
 
