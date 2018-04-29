@@ -1,32 +1,32 @@
 ---
-title: "資料分析工作編輯器 (設定檔要求頁面) | Microsoft Docs"
-ms.custom: 
+title: 資料分析工作編輯器 (設定檔要求頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.profilerequests.f1
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6883b8ec802392c0ae4d3a92a41f54433d403f8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e851690a9961916c5aa73ae94338a168fb809e7c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   您可以使用 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面來選取並設定想要計算的設定檔。 在單一「資料分析」工作中，您可以針對多個資料表或檢視表中的多個資料行或資料行組合計算多個設定檔。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [控制流程] 索引標籤中，按兩下資料分析工作。  
   
-3.  在 **[資料分析工作編輯器]**中，按一下 **[設定檔要求]**。  
+3.  在 **[資料分析工作編輯器]** 中，按一下 **[設定檔要求]**。  
   
 ## <a name="using-the-requests-pane"></a>使用要求窗格  
  要求窗格是指顯示在頁面頂端的窗格。 這個窗格會列出已經針對目前資料分析工作設定的所有設定檔。 如果尚未設定任何設定檔，此要求窗格就是空的。 若要加入新的設定檔，請在 **[設定檔類型]** 資料行底下的任何區域中按一下，然後從清單中選取設定檔類型。 若要設定設定檔，請在要求窗格中選取設定檔，然後在 **[要求屬性]** 窗格中設定設定檔的屬性。  
@@ -57,13 +57,13 @@ ms.lasthandoff: 01/25/2018
   
 -   如果您選取檢視 **[所有要求]**，要求窗格就會有兩個資料行： **[設定檔類型]** 和 **[要求識別碼]**。  
   
--   如果您選取檢視五個資料行設定檔的其中一個，要求窗格就會有四個資料行： **[設定檔類型]**、 **[資料表或檢視表]**、 **[資料行]**和 **[要求識別碼]**。  
+-   如果您選取檢視五個資料行設定檔的其中一個，要求窗格就會有四個資料行： **[設定檔類型]**、 **[資料表或檢視表]**、 **[資料行]** 和 **[要求識別碼]**。  
   
 -   如果您選取檢視候選索引鍵設定檔，要求窗格就會有四個資料行：[設定檔類型]、[資料表或檢視表]、[索引鍵資料行] 和 [要求識別碼]。  
   
--   如果您選取檢視功能相依性設定檔，要求窗格就會有五個資料行： **[設定檔類型]**、 **[資料表或檢視表]**、 **[行列式資料行]**、 **[相依資料行]**和 **[要求識別碼]**。  
+-   如果您選取檢視功能相依性設定檔，要求窗格就會有五個資料行： **[設定檔類型]**、 **[資料表或檢視表]**、 **[行列式資料行]**、 **[相依資料行]** 和 **[要求識別碼]**。  
   
--   如果您選取檢視值包含設定檔，要求窗格就會有六個資料行： **[設定檔類型]**、 **[子集資料表或檢視表]**、 **[超集資料表或檢視表]**、 **[子集資料行]**、 **[超集資料行]**和 **[要求識別碼]**。  
+-   如果您選取檢視值包含設定檔，要求窗格就會有六個資料行： **[設定檔類型]**、 **[子集資料表或檢視表]**、 **[超集資料表或檢視表]**、 **[子集資料行]**、 **[超集資料行]** 和 **[要求識別碼]**。  
   
  下列各節會分別描述每個資料行。  
   
