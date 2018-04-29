@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d6753d2ea8943cc00123dfd7f56328fc5fbe998
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1df3d126c25ab02e5d6be4f9f73347500b3607c4
+ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/29/2018
 ---
 # <a name="transactional-replication"></a>異動複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,6 @@ ms.lasthandoff: 04/16/2018
 -   發行者或訂閱者為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫，如 Oracle。  
   
  依預設，交易式發行集的訂閱者應當成唯讀處理，因為變更並不會傳播回發行者。 不過，異動複寫的確有提供選項讓訂閱者更新。  
-  
- **本主題內容**  
-  
- [異動複寫的運作方式](#HowWorks)  
-  
- [初始資料集](#Dataset)  
-  
- [快照集代理程式](#SnapshotAgent)  
-  
- [記錄讀取器代理程式](#LogReaderAgent)  
-  
- [散發代理程式](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> 異動複寫的運作方式  
  異動複寫是由「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照集代理程式」、「記錄讀取器代理程式」及「散發代理程式」實作。 「快照集代理程式」會準備快照集檔案，內含結構描述及已發行資料表與資料庫物件的資料、將檔案儲存在快照集資料夾內，然後將同步作業記錄至散發者的散發資料庫中。  
