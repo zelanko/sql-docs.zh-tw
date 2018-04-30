@@ -26,11 +26,13 @@
 ## [SQL Server 2012 資訊](sql-server-2012-release-notes.md)
 ## [SQL Server 2008 R2 SP2 資訊](sql-server-2008-r2-sp2-release-notes.md)
 
+# [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)
 # [Analysis Services (英文)](../analysis-services/analysis-services.md)
 # [資料庫引擎](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [容錯移轉叢集](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
-# [安裝](../sql-server/install/planning-a-sql-server-installation.md)
+# [安裝 (Windows)](../sql-server/install/planning-a-sql-server-installation.md)
+# [安裝 (Linux)](../linux/sql-server-linux-setup.md)
 # [Integration Services](../integration-services/sql-server-integration-services.md)
 # [Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
@@ -38,6 +40,7 @@
 # [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [適用於 SQL Server 的教學課程](tutorials-for-sql-server-2016.md)
+# [SQL Server 工具](../tools/overview-sql-tools.md)
 
 # 資源
 

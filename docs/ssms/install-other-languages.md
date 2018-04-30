@@ -1,23 +1,24 @@
 ---
-title: "安裝非英文語言版本的 SQL Server Management Studio (SSMS) | Microsoft Docs"
-description: "安裝非英文語言版本的 SQL Server Management Studio (SSMS)"
-ms.custom: 
+title: 安裝非英文語言版本的 SQL Server Management Studio (SSMS) | Microsoft Docs
+description: 安裝非英文語言版本的 SQL Server Management Studio (SSMS)
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae38d56a3faee88fa688a0b027482713ac07b59
-ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
+ms.openlocfilehash: 336b26d502d6cb40ab7c3be5de35d52f3d019b8a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>安裝非英文語言版本的 SQL Server Management Studio (SSMS) 
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/11/2017
 2. 現在按一下剛剛安裝的語言，然後選取 [設為預設值]，以便將系統地區設定設為使用先前步驟中所安裝的語言套件。 
 3. 當作業系統以您所要的語言執行之後，請[安裝相同語言的 SSMS 版本](download-sql-server-management-studio-ssms.md#available-languages)。 第一次安裝新的 SSMS 語言時，請使用完整的套件。 針對後續安裝，您可以使用升級套件。
 4. 針對您想要安裝但不符合已安裝初版 SSMS 語言的每種語言，請安裝對應的 Visual Studio 2015 Shell (獨立模式) 語言套件：
-   - 請瀏覽至 [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (您可能需要登入並完成 [連線註冊] 程序)。
+   - 瀏覽至 [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (您可能需要登入並完成「連線註冊」程序)。
    - 下載所需的 Visual Studio 2015 Shell (獨立模式) 語言套件並加以安裝。
 
    > [!IMPORTANT]
@@ -51,6 +52,6 @@ ms.lasthandoff: 12/11/2017
    - [工具] | [選項] | [國際設定]
 1. 關閉並重新啟動 SSMS。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 - [教學課程：SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)

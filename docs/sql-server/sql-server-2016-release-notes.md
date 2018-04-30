@@ -1,8 +1,8 @@
 ---
 title: SQL Server 2016 版本資訊 | Microsoft Docs
-ms.date: 03/14/2018
+ms.date: 04/24/2018
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -18,24 +18,29 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Active
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 20cd775d23caae5f4f833b95e9a4bc7c1a257612
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3e8962771c634f3cf606606beaac1b0604623e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   本文描述 SQL Server 2016 版 (包括 Service Pack) 的限制和問題。 如需新功能的相關資訊，請參閱 [SQL Server 2016 的新功能](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)。
 
-> [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
->
-> [![Azure 虛擬機器小型](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 擁有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 來啟動已安裝 SQL Server 2016 SP1 的虛擬機器。
->
-> [![下載 SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 如要取得最新版的 SQL Server Management Studio，請參閱**[下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**。
+- [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+- [![Azure 虛擬機器小型](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 擁有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 來啟動已安裝 SQL Server 2016 SP1 的虛擬機器。
+- [![下載 SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 如要取得最新版的 SQL Server Management Studio，請參閱**[下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**。
+
+## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
+
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 包含 2016 SP1 之後發行的所有累計更新，截至並且包含 CU8。 
+
+- [![Microsoft 下載中心](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [下載 SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- 如需完整的更新清單，請參閱 [SQL Server 2016 Service Pack 2 版本資訊](https://support.microsoft.com/en-us/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 包含截至 SQL Server 2016 RTM CU3 的所有修正，包括安全性更新 MS16-136。 它包含 SQL Server 2016 累積更新提供的解決方案彙總，截至並且包含最新的累積更新 - CU3 和 2016 年 11 月 8 日發行的安全性更新 MS16-136。 
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 包含截至 SQL Server 2016 RTM CU3 的所有累計更新，包括安全性更新 MS16-136。 它包含 SQL Server 2016 累積更新提供的解決方案彙總，截至並且包含最新的累積更新 - CU3 和 2016 年 11 月 8 日發行的安全性更新 MS16-136。
 
 SQL Server SP1 Standard、Web、Express 和 Local DB 版本提供下列功能 (除非另有附註)：
 - Always Encrypted
@@ -159,24 +164,22 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
 -   使用選項 [選擇線上或本機說明]  ，並設定「我想要使用線上說明」的說明。    
     
 -   使用選項 [從線上安裝內容]  ，並下載 SQL Server 2014 內容。    
-    
+
  **F1 說明︰**依設計，當您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按下 F1 時，瀏覽器即會顯示 F1 說明文章的線上版本。 此問題是以瀏覽器為基礎的說明，即使您已設定並安裝本機說明也是一樣。 
-     
-**更新內容︰**    
-在 SQL Server Management Studio 和 Visual Studio 中，加入文件程序期間可能會凍結 (擱置) 說明檢視器應用程式。 若要解決此問題，請完成下列步驟。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](https://msdn.microsoft.com/library/mt654096.aspx)。    
+
+**更新內容︰**在 SQL Server Management Studio 和 Visual Studio 中，新增文件程序期間可能會凍結 (擱置) 說明檢視器應用程式。 若要解決此問題，請完成下列步驟。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](https://msdn.microsoft.com/library/mt654096.aspx)。    
     
-* 以 [記事本] 開啟 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings 檔案，將下列程式碼中的日期變更為未來的日期。    
-    
-     
-```    
+* 以 [記事本] 開啟 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings 檔案，將下列程式碼中的日期變更為未來的日期。
+
      Cache LastRefreshed="12/31/2017 00:00:00"    
-``` 
+```
 
-## <a name="additional-information"></a>其他資訊
-+ [SQL Server 2016 安裝](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server 更新中心 - 所有已支援版本的連結和資訊](https://msdn.microsoft.com/library/ff803383.aspx)
+## Additional Information
++ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]    
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
-![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")
