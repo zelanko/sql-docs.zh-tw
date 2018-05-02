@@ -2,7 +2,7 @@
 title: dta 公用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -28,14 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 7e9849894a011294f63f9e50a0b79eff3ce10897
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dta-utility"></a>dta 公用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **dta** 公用程式是 Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **dta** 公用程式是 Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
   
  如同 Database Engine Tuning Advisor， **dta** 公用程式也會分析工作負載，並提供實體設計結構的建議，以增進該工作負載的伺服器效能。 工作負載可能是計畫快取、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤檔或資料表，也可能是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 實體設計結構包括索引、索引檢視表及資料分割。 分析工作負載之後， **dta** 公用程式會產生資料庫實體設計的建議，且能夠產生必要的指令碼來實作建議。 您可以從命令提示字元，搭配 **-if** 或 **-it** 引數來指定工作負載。 您也可以從命令提示字元，搭配 **-ix** 引數來指定 XML 輸入檔。 在這個情況之下，工作負載指定在 XML 輸入檔中。  
   

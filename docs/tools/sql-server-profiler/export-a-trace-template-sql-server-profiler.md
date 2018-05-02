@@ -2,7 +2,7 @@
 title: 匯出追蹤範本 (SQL Server Profiler) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11a382d4256d99321a305137952a0ecee1d50145
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 7d7a2d85e30057ad1c1c79cc5833d04be55bea4f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>匯出追蹤範本 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來匯出現有的追蹤範本，並且另存為範本檔 (.tdf)。 當您匯出追蹤範本，並且另存成檔案，即可以另一個 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]的執行個體來使用該範本。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來匯出現有的追蹤範本，並且另存為範本檔 (.tdf)。 當您匯出追蹤範本，並且另存成檔案，即可以另一個 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]的執行個體來使用該範本。  
   
 ### <a name="to-export-a-trace-template"></a>若要匯出追蹤範本  
   

@@ -2,7 +2,7 @@
 title: 執行 SQL Server Profiler 所需的權限 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -24,14 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0746ac193588e1d2a19bb65097ade1c56cf24fc5
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 2c57d40f366b40de050085ca3950ad6a5baf1e8b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>執行 SQL Server Profiler 所需的權限
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 根據預設，執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 時，所需的使用者權限與用來建立追蹤的 Transact-SQL 預存程序相同。 若要執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，使用者必須被授與 ALTER TRACE 權限。 如需詳細資訊，請參閱 [GRANT 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  根據預設，執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 時，所需的使用者權限與用來建立追蹤的 Transact-SQL 預存程序相同。 若要執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，使用者必須被授與 ALTER TRACE 權限。 如需詳細資訊，請參閱 [GRANT 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  具有 SHOWPLAN、ALTER TRACE 或 VIEW SERVER STATE 權限的使用者可以檢視執行程序表輸出中所擷取的查詢。 這些查詢可能會包含類似密碼的敏感資訊。 因此，我們建議您只能將這些權限授與給有權檢視敏感資訊的使用者，例如 db_owner 固定資料庫角色的成員或是 sysadmin 固定伺服器角色的成員。 此外，我們也建議您只將執行程序表檔案或是包含與執行程序表相關之事件的追蹤檔案儲存到使用 NTFS 檔案系統的位置，並建議您將存取權限制為有權檢視敏感資訊的使用者。  

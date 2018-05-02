@@ -2,7 +2,7 @@
 title: SQL Server 網路設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4e132c7b1ea975d2d4c896531265b09b346ddf6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: 6a8f689bc3c2c2e35eaac2291fd03b9766052d11
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-network-configuration"></a>SQL Server 網路組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-本節包含「SQL Server 組態管理員」中 **[伺服器網路組態]** 對話方塊的 F1 說明主題。  
+  本節包含「SQL Server 組態管理員」中 **[伺服器網路組態]** 對話方塊的 F1 說明主題。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 組態管理員說明](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  

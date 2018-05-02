@@ -2,7 +2,7 @@
 title: NS$&lt;服務名稱&gt;屬性 （登入索引標籤） |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 512d1281ca516256631845d0283b50f8f58f82d5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: bfe2aa22e110339e84403c6bbef2807ff0275076
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;服務名稱&gt; 屬性 ([登入] 索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-您可以使用 **[Notification Services 屬性]** 對話方塊的 **[登入]** 索引標籤，來指定要供 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服務使用的帳戶，以及啟動和停止該服務。  
+  您可以使用 **[Notification Services 屬性]** 對話方塊的 **[登入]** 索引標籤，來指定要供 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服務使用的帳戶，以及啟動和停止該服務。  
   
 ## <a name="options"></a>選項。  
  **本機系統帳戶**  

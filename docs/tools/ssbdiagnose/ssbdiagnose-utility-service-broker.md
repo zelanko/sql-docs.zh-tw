@@ -2,7 +2,7 @@
 title: ssbdiagnose 公用程式 (Service Broker) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssbdiagnose
@@ -33,14 +33,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: b4cbf56d010afd4d97b6449fc35281baa44819de
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **ssbdiagnose** 公用程式會報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務設定中的問題。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **ssbdiagnose** 公用程式會報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務組態中的問題。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。  
   
 ## <a name="syntax"></a>語法  
   

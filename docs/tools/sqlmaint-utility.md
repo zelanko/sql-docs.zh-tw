@@ -2,7 +2,7 @@
 title: sqlmaint 公用程式 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sqlmaint
@@ -26,14 +26,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 156c72955c93e5ecd699136e9b49df3d63dd1cb1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 如果 **sqlmaint** 公用程式會在一或多個資料庫上，執行一組指定的維護作業。 利用 **sqlmaint** 來執行 DBCC 檢查、備份資料庫及其交易記錄、更新統計資料，以及重建索引。 所有資料庫維護活動都會產生一份可傳給指定文字檔、HTML 檔或電子郵件帳戶的報表。 **sqlmaint** 會執行舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。 若要從命令提示字元執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫，請使用 [dtexec 公用程式](../integration-services/packages/dtexec-utility.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  如果**sqlmaint** 公用程式會在一或多個資料庫上，執行一組指定的維護作業。 利用 **sqlmaint** 來執行 DBCC 檢查、備份資料庫及其交易記錄、更新統計資料，以及重建索引。 所有資料庫維護活動都會產生一份可傳給指定文字檔、HTML 檔或電子郵件帳戶的報表。 **sqlmaint** 會執行舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。 若要從命令提示字元執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫，請使用 [dtexec 公用程式](../integration-services/packages/dtexec-utility.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] 請改用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫功能。 如需維護計畫的詳細資訊，請參閱 [維護計畫](../relational-databases/maintenance-plans/maintenance-plans.md)。  

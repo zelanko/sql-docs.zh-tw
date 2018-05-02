@@ -2,7 +2,7 @@
 title: 準備輸入的追蹤資料 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: distributed-replay
@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cda1a0a932a914e85618359cb067b2e4da2a0f7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 1299f489029125695ad920022120ba8da1fdf30d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="prepare-the-input-trace-data"></a>準備輸入追蹤資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您必須先從 Distributed Replay 管理工具起始前置處理階段，準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您必須先從 Distributed Replay 管理工具起始前置處理階段，準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
   
  ![Distributed replay 前置處理階段](../../tools/distributed-replay/media/preprocess.gif "Distributed replay 前置處理階段")  
   

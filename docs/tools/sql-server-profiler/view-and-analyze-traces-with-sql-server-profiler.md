@@ -2,7 +2,7 @@
 title: 使用 SQL Server Profiler 檢視和分析追蹤 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -27,14 +27,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b15547e2d5d49a9709d118f69ea8d4590e5ff1c0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 526eb2b2fbe378c542789665ee6f2fb73f14899b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 檢視和分析追蹤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來檢視追蹤中擷取的事件資料。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會根據定義的追蹤屬性來顯示資料。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的方法之一，是將資料複製到另一個程式，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如果追蹤內包含 **Text** 資料行，則 Tuning Advisor 可以使用包含了 SQL 批次和遠端程序呼叫 (RPC) 事件的追蹤檔案。 為了確保能擷取正確的事件和資料行，以便用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]隨附的預先定義「微調」範本。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來檢視追蹤中擷取的事件資料。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會根據定義的追蹤屬性來顯示資料。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的方法之一，是將資料複製到另一個程式，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如果追蹤內包含 **Text** 資料行，則 Tuning Advisor 可以使用包含了 SQL 批次和遠端程序呼叫 (RPC) 事件的追蹤檔案。 為了確保能擷取正確的事件和資料行，以便用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]隨附的預先定義「微調」範本。  
   
  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]開啟追蹤時，如果檔案是由 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或「SQL 追蹤」系統預存程序建立，則追蹤檔案的副檔名不需要是 .trc。  
   

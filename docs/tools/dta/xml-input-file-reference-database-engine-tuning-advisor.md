@@ -2,7 +2,7 @@
 title: XML 輸入檔參考 (Database Engine Tuning Advisor) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -24,14 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d507c858f2103af6521e57ffca3385a23c913cd2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: e866ab32829c985c94896b501735cdc07fe063de
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 輸入檔參考 (Database Engine Tuning Advisor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 可以使用 XML 輸入檔來微調資料庫。 這個 XML 檔會指定微調工作階段要使用哪些資料庫、資料表、工作負載檔或資料表，以及微調選項。 您也可以利用這個檔案來指定使用者指定的組態，以執行「假設」分析。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 可以利用 XML 輸入檔來微調資料庫。 這個 XML 檔會指定微調工作階段要使用哪些資料庫、資料表、工作負載檔或資料表，以及微調選項。 您也可以利用這個檔案來指定使用者指定的組態，以執行「假設」分析。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 輸入檔包含 XML 元素的階層，每個元素都包含指定微調工作階段設定的文字或其他元素。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 輸入檔必須符合格式正確之 XML 的標準，因此，所有元素名稱都會區分大小寫。 元素利用 Pascal 案例來指定，這表示第一個字元是大寫，任何後續串連單字的第一個字母也是大寫。  
   

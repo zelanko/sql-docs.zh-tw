@@ -2,7 +2,7 @@
 title: sqlservr 應用程式 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sqlservr
@@ -30,14 +30,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2c3a63c23d2a7ecdb374269af72861c16638984
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 61727cc06d6406864c864e7923a901a1b4c6b6c1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **sqlservr** 應用程式會在命令提示字元之下，啟動、停止、暫停和繼續執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **sqlservr** 應用程式會在命令提示字元之下，啟動、停止、暫停和繼續執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -77,7 +78,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  指出要啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的單一使用者模式。 啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的單一使用者模式時，只能連接單一使用者。 不會啟動「保證從磁碟快取中，將已完成的交易定期寫入資料庫裝置」的 CHECKPOINT 機制。 (一般而言，如果系統資料庫發生需要修復的問題，便會使用這個選項。)這個選項會啟用 **sp_configure allow updates** 選項。 預設會停用 **allow updates** 。  
   
  **-n**  
- 可讓您啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的具名執行個體。 如果沒有設定 **-s** 參數，就會嘗試啟動預設執行個體。 您必須先在命令提示字元處切換至該執行個體的適當 BINN 目錄，才能啟動 **sqlservr.exe**。 例如，如果 Instance1 原先為二進位編碼檔案使用 \mssql$Instance1，使用者就必須位於 \mssql$Instance1\binn 目錄中，才能啟動 **sqlservr.exe -s instance1**。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **-n** 的執行個體，建議您也要使用 **-e** 選項，否則不會記錄 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。  
+ 可讓您啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的具名執行個體。 如果沒有設定 **-s** 參數，就會嘗試啟動預設執行個體。 您必須先在命令提示字元處切換至該執行個體的適當 BINN 目錄，才能啟動 **sqlservr.exe**。 例如，如果 Instance1 原先為二進位編碼檔案使用 \mssql$Instance1，使用者就必須位於 \mssql$Instance1\binn 目錄中，才能啟動 **sqlservr.exe -s instance1**。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **選項啟動** 的執行個體，建議您也要使用 **-e** 選項，否則不會記錄 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。  
   
  **-T** *trace#*  
  指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#*)。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  

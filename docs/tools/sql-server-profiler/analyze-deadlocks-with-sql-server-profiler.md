@@ -2,7 +2,7 @@
 title: 使用 SQL Server Profiler 分析死結 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -27,14 +27,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2fc7e2adc786982611e58ca4083c575902e5aca3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 7b4d3aa4c583a32fc84570900e79624380b97748
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死結
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可識別死結的原因。 SQL Server 中有兩個或兩個以上的執行緒 (或處理序)，因為某些資源集而產生循環相依性時，就會發生死結。 利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以建立一個用來記錄、重新執行和顯示死結事件的追蹤，以便進行分析。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可識別死結的原因。 SQL Server 中有兩個或兩個以上的執行緒 (或處理序)，因為某些資源集而產生循環相依性時，就會發生死結。 利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以建立一個用來記錄、重新執行和顯示死結事件的追蹤，以便進行分析。  
   
  若要追蹤死結事件，請將 **Deadlock graph** 事件類別加入追蹤。 此事件類別會用死結相關處理序和物件的 XML 資料來擴展追蹤中的 **TextData** 資料行。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可將 XML 文件擷取至死結 XML (.xdl) 檔案，您稍後可在 SQL Server Management Studio 中檢視該檔案。 您可以設定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，將 **Deadlock graph** 事件擷取到單一檔案 (其中包含所有的 **Deadlock graph** 事件)，或將各個事件擷取到不同的檔案。 這種擷取可以利用下列任一方法來完成：  
   

@@ -2,7 +2,7 @@
 title: SQLdiag 公用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sqldiag
@@ -37,14 +37,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd4a4a1627a4a92a6d2f1942cfd9ad618105422d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 1ffe7e5295013d49615c068d6705cce649ffd771
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLdiag** 公用程式是一種可當作主控台應用程式或服務加以執行的一般用途診斷集合公用程式。 您可以使用 **SQLdiag** ，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視一段時間的伺服器，或對伺服器的特定問題進行疑難排解。 **SQLdiag** 的用途是為了加速及簡化 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務的診斷資訊收集工作。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **SQLdiag** 公用程式是一種可當做主控台應用程式或服務加以執行的一般用途診斷集合公用程式。 您可以使用 **SQLdiag** ，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視一段時間的伺服器，或對伺服器的特定問題進行疑難排解。 **SQLdiag** 的用途是為了加速及簡化 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務的診斷資訊收集工作。  
   
 > [!NOTE]  
 >  此公用程式可能會變更，而且依賴其命令列引數或行為的應用程式或指令碼，在未來版本中可能無法正確運作。  

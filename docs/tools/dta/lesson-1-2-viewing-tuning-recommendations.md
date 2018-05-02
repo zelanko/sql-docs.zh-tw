@@ -2,7 +2,7 @@
 title: 檢視微調建議 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 634534fb9fa7f97e61431a481ab847bd87e2806a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: fe49d0959cdeb89b40e953cf0600ffc0675e74bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>課程 1-2 - 檢視調整建議
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 這項工作使用您先前在[微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)中所建立的微調工作階段。 利用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼微調好 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之後，[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會在 [建議] 索引標籤中顯示其結果。下列工作將介紹 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 圖形化使用者介面 (GUI) 的 [建議] 索引標籤，並引導您探索它針對微調工作階段結果所提供的相關資訊。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+這項工作使用您先前在 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)中所建立的微調工作階段。 利用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼微調好 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之後，[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會在 [建議] 索引標籤中顯示其結果。下列工作將介紹 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 圖形化使用者介面 (GUI) 的 [建議] 索引標籤，並引導您探索它針對微調工作階段結果所提供的相關資訊。  
   
 ### <a name="view-tuning-recommendations"></a>檢視微調建議  
   

@@ -2,7 +2,7 @@
 title: Configuration 元素 (DTA) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9e3fbf76ffab1eea6baf7ea5cc8d2f6972379a5
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 4b432704f674d514d602b19f72a1a6b1f928a7d2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuration-element-dta"></a>Configuration 元素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 指定由現有的實體設計結構和假設的實體設計結構所組成，供 Database Engine Tuning Advisor 在微調工作負載時進行分析的使用者指定設定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  指定由現有的實體設計結構和假設的實體設計結構所組成，供 Database Engine Tuning Advisor 在微調工作負載時進行分析的使用者指定組態。  
   
 ## <a name="syntax"></a>語法  
   

@@ -2,7 +2,7 @@
 title: TCP/IP 屬性 （IP 位址索引標籤） |Microsoft 文件
 ms.custom: ''
 ms.date: 08/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -21,15 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: ef4d05834601df38670a7a7fa3d8c6fea70b5421
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 屬性 (IP 位址索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-您可以使用 [TCP/IP 屬性 (IP 位址索引標籤)] 對話方塊，設定特定 IP 位址的 TCP/IP 通訊協定選項。 您只能透過選取 **[IPAll]** ，一次設定所有位址的 **[TCP 動態通訊埠]** 和 **[TCP 通訊埠]**。  
+  您可以使用 [TCP/IP 屬性 (IP 位址索引標籤)] 對話方塊，設定特定 IP 位址的 TCP/IP 通訊協定選項。 您只能透過選取 **[IPAll]** ，一次設定所有位址的 **[TCP 動態通訊埠]** 和 **[TCP 通訊埠]**。  
   
  重新啟動 SQL Server 之後，變更才會生效。 如需啟動和停止 SQL Server Browser 服務的資訊，請參閱[啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   

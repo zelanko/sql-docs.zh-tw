@@ -2,7 +2,7 @@
 title: MSSQLSERVER 屬性的通訊協定 ([進階] 索引標籤) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a1cfb458983a017352384f4074be455ee4994c5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: 4aeaeb623e10074a22d3712e460dcca7d4ce5993
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 的通訊協定內容 (進階索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-您可以使用 [MSSQLSERVER 的通訊協定內容] 對話方塊的 [進階] 索引標籤來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [驗證擴充保護]。 [擴充保護] 是作業系統實作的網路元件功能。 [擴充保護] 可在 Windows 7 和 Windows Server 2008 R2 中使用，而且會包含在舊版作業系統的 Service Pack 中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。 [擴充保護] 的某些優點需要在 [旗標] 索引標籤上選取 [強制加密]。  
+  您可以使用 [MSSQLSERVER 的通訊協定內容] 對話方塊的 [進階] 索引標籤來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [驗證擴充保護]。 [擴充保護] 是作業系統實作的網路元件功能。 [擴充保護] 可在 Windows 7 和 Windows Server 2008 R2 中使用，而且會包含在舊版作業系統的 Service Pack 中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。 [擴充保護] 的某些優點需要在 [旗標] 索引標籤上選取 [強制加密]。  
   
 > [!IMPORTANT]  
 >  Windows 預設不會啟用 **[擴充保護]** 。 如需如何在 Windows 中啟用 [擴充保護] 的資訊，請參閱知識庫文章：[驗證擴充保護](http://go.microsoft.com/fwlink/?LinkId=178431)。  

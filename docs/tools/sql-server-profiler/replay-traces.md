@@ -2,7 +2,7 @@
 title: 重新執行追蹤 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -27,14 +27,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eca1952d968ef9ca864f69f48b17ed20cfa45938
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 756953ef6b0c9f474da304bca89104cb8dd05028
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="replay-traces"></a>重新執行追蹤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 重新執行是重現追蹤中已擷取之活動的能力。 建立或編輯追蹤時，您可以將追蹤儲存至檔案，稍後重新執行它。 您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，從單一電腦重新執行追蹤活動。 如果是大型工作負載，請使用 Distributed Replay Utility，從多部電腦重新執行追蹤資料。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  重新執行是重現追蹤中已擷取之活動的能力。 建立或編輯追蹤時，您可以將追蹤儲存至檔案，稍後重新執行它。 您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，從單一電腦重新執行追蹤活動。 如果是大型工作負載，請使用 Distributed Replay Utility，從多部電腦重新執行追蹤資料。  
   
  本節描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]的重新執行功能。 如需有關 Distributed Replay Utility 的詳細資訊，請參閱 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
   

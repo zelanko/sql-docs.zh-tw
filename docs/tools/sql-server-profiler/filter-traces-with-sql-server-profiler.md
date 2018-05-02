@@ -2,7 +2,7 @@
 title: 使用 SQL Server Profiler 篩選追蹤 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -25,14 +25,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac087c079ca461875d148a9c9bedcab77fe7852b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 13dcd642f65cc2896efdd160151985e486216cde
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 篩選追蹤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以為 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤事件的資料行定義篩選，以便只擷取您感興趣的事件資訊。 追蹤篩選可降低追蹤對系統效能的影響，因為擷取的追蹤事件減少了。 透過篩選，也能讓追蹤輸出較容易讀取，因為需進行搜尋的事件數目也比較少。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您可以為 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤事件的資料行定義篩選，以便只擷取您感興趣的事件資訊。 追蹤篩選可降低追蹤對系統效能的影響，因為擷取的追蹤事件減少了。 透過篩選，也能讓追蹤輸出較容易讀取，因為需進行搜尋的事件數目也比較少。  
   
  **若要使用 SQL Server Profiler 篩選追蹤**  
   

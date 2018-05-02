@@ -2,7 +2,7 @@
 title: SQL Server Integration Services 屬性 ([登入] 索引標籤) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9f0024d74d44cafaa46f03571f74bf644d0f63e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: cd0f59372e51e597a09651fa817ac61d03c387c1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>SQL Server Integration Services 屬性 (登入索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-您可以使用 **[屬性]** 對話方塊的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **[登入]** 索引標籤，指定要供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務使用的帳戶，以及啟動和停止該服務。  
+  您可以使用 **[屬性]** 對話方塊的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **[登入]** 索引標籤，指定要供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務使用的帳戶，以及啟動和停止該服務。  
   
 ## <a name="options"></a>選項。  
  **本機系統帳戶**  

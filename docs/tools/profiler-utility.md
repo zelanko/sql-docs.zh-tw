@@ -2,7 +2,7 @@
 title: Profiler 公用程式 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: profiler
@@ -24,14 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: fc52d2950d0d1567771dd80330812bebdd08c039
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="profiler-utility"></a>Profiler 公用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **profiler** 公用程式會啟動 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 這個主題稍後列出的選擇性引數可讓您控制應用程式啟動的方式。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **profiler** 公用程式會啟動 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 這個主題稍後列出的選擇性引數可讓您控制應用程式啟動的方式。  
   
 > [!NOTE]  
 >  **profiler** 公用程式的用途不在於編寫追蹤的指令碼。 如需詳細資訊，請參閱 [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)。  

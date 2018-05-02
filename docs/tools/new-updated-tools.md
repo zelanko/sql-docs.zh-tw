@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: tools
 ms.date: 02/03/2018
-ms.openlocfilehash: 6527348b7ad1fb6f5443d45fd3e251654c80d5f5
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: HT
+ms.openlocfilehash: 7c5dfb7f4dff3559b673ab1a28cb865bd99602dc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-tools-for-sql-server"></a>新增和更新最近： Tools for SQL Server
 
