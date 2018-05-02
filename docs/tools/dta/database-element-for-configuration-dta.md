@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 02fc044ef6ce1e015743ee503ed77ea843b0e182
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-element-for-configuration-dta"></a>組態的 Database 元素 (DTA)
-指定 Database Engine Tuning Advisor 評估假設性組態 ( [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Configuration** 元素所指定) 時所針對的資料庫。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 指定 Database Engine Tuning Advisor 評估假設性設定 (**Configuration** 項目所指定) 時所針對的資料庫。  
   
 ## <a name="syntax"></a>語法  
   

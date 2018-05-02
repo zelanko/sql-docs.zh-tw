@@ -1,5 +1,5 @@
 ---
-title: 第 1 課： 在資料庫中的基本導覽 Engine Tuning Advisor |Microsoft 文件
+title: 課程 1：Database Engine Tuning Advisor 中的基本導覽 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ce3acbca50968e72a1890f554c239d30e3632445
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>第 1 課：Database Engine Tuning Advisor 中的基本導覽
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Database Engine Tuning Advisor 提供了圖形化使用者介面 (GUI) 為基礎的方法來檢視微調工作階段和微調建議報表。 這個課程將為您示範如何啟動這個工具，以及如何設定顯示畫面。 在這個課程結束時，您會知道多種啟動工具的方法，以及如何設定它的顯示畫面來支援您定期執行的微調工作。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Database Engine Tuning Advisor 提供一種以圖形化使用者介面 (GUI) 為基礎的方法，供您檢視微調工作階段和微調建議報表。 這個課程將為您示範如何啟動這個工具，以及如何設定顯示畫面。 在這個課程結束時，您會知道多種啟動工具的方法，以及如何設定它的顯示畫面來支援您定期執行的微調工作。  
   
 這個課程包含下列主題：  
   

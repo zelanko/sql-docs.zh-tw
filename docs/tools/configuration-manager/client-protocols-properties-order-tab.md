@@ -22,13 +22,13 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b00026954339af65d3730c91a24ec4f16505c682
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---
 # <a name="client-protocols-properties-order-tab"></a>用戶端通訊協定屬性 (順序索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-您可以使用 [用戶端通訊協定內容]** 對話方塊上的 [順序] 頁面來檢視與啟用用戶端通訊協定。  
+您可以使用 [用戶端通訊協定內容] 對話方塊上的 [順序] 頁面來檢視與啟用用戶端通訊協定。  
   
  按一下通訊協定，然後按一下 [啟用] 或 [停用]，將選取的通訊協定移到 [停用通訊協定] 或 [啟用通訊協定] 清單中。  
   

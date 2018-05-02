@@ -22,12 +22,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6a830b25f8719953dec13a2ad43d0d7db275ee8a
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>設定全域追蹤選項 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題描述如何設定套用至所建立的特定執行個體的所有追蹤選項[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何設定適用於使用特定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 執行個體而建立之所有追蹤的選項。  
   
 ### <a name="to-set-global-trace-options"></a>若要設定全域追蹤選項  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/17/2018
   
     -   [預設重新執行執行緒數目] 控制重新執行期間要使用的處理器執行緒數目。 執行緒數目較多可使重新執行更快速完成，但會導致重新執行期間的伺服器效能降低。 建議設定是 **4**。 下表列出可用選項：  
   
-        |值|描述|  
+        |ReplTest1|描述|  
         |-----------|-----------------|  
         |**2**|最小值。 使用兩個執行緒重新執行。|  
         |**4**|預設值。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/17/2018
   
     -   [預設健全狀況監視器等候間隔 (秒)] 設定重新執行的執行緒可封鎖其他處理序的最長時間量 (以秒為單位)。 下表會說明這些值。  
   
-        |值|描述|  
+        |ReplTest1|描述|  
         |-----------|-----------------|  
         |**0**|最小值。 設為 **0** 代表 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永遠不會停止封鎖處理序。|  
         |**3600**|預設值。 允許封鎖處理序，封鎖時間不超過 **3600** 秒或一小時。|  
@@ -67,14 +67,14 @@ ms.lasthandoff: 01/17/2018
   
     -   [預設健全狀況監視器輪詢間隔 (秒)] 設定輪詢重新執行的執行緒是否有封鎖處理序的頻率。 下表會說明這些值。  
   
-        |值|描述|  
+        |ReplTest1|描述|  
         |-----------|-----------------|  
         |**1**|最小值。 設為 **1** 代表 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會每秒輪詢封鎖處理序一次。|  
         |**60**|預設值。 每分鐘輪詢封鎖處理序一次。|  
         |**86400**|最大值。 每 **86400** 秒或每日輪詢封鎖處理序一次。|  
   
 ## <a name="see-also"></a>另請參閱  
- [設定追蹤顯示預設值 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [設定追蹤顯示預設值 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

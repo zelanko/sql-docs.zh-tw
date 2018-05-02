@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bba801b3dbeee9c21c371187b4a82b9d9a77f617
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定以分鐘為單位的微調工作階段的最大長度。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 指定微調工作階段的最長時間 (分鐘)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**unsignedInt**，沒有長度限制。|  
 |**預設值**|480 分鐘 (8 小時)。|  
@@ -53,12 +53,12 @@ ms.lasthandoff: 01/17/2018
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素 &#40; Dta& &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子元素**|無|  
   
 ## <a name="example"></a>範例  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  下列程式碼範例顯示如何設定 12 小時作為最大微調時間：  
   
 ## <a name="code"></a>程式碼  
@@ -74,6 +74,6 @@ ms.lasthandoff: 01/17/2018
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

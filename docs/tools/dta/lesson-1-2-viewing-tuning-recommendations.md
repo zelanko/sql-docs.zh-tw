@@ -24,20 +24,20 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 634534fb9fa7f97e61431a481ab847bd87e2806a
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-1-2---viewing-tuning-recommendations"></a>課程 1-2-檢視微調建議
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此工作會使用您在中建立的微調工作階段[微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)。 利用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼微調好 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之後，[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會在 [建議] 索引標籤中顯示其結果。下列工作將介紹 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 圖形化使用者介面 (GUI) 的 [建議] 索引標籤，並引導您探索它針對微調工作階段結果所提供的相關資訊。  
+# <a name="lesson-1-2---viewing-tuning-recommendations"></a>課程 1-2 - 檢視調整建議
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 這項工作使用您先前在[微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)中所建立的微調工作階段。 利用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼微調好 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之後，[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會在 [建議] 索引標籤中顯示其結果。下列工作將介紹 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 圖形化使用者介面 (GUI) 的 [建議] 索引標籤，並引導您探索它針對微調工作階段結果所提供的相關資訊。  
   
 ### <a name="view-tuning-recommendations"></a>檢視微調建議  
   
 1.  啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor。 請參閱 [啟動 Database Engine Tuning Advisor](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md)。 請確定您連接[微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)練習所用的相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  在 [工作階段監視器] 窗格中，按兩下 [MySession]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]Tuning Advisor 會從先前的微調工作階段中載入工作階段資訊，並顯示**建議** 索引標籤。請注意，[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 不會提供任何 [資料分割建議]，因為您接受所有微調選項預設值，而且在 [微調選項] 索引標籤中選取 [沒有資料分割]。  
+2.  在 [工作階段監視器] 窗格中，按兩下 [MySession]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會從先前的微調工作階段中載入工作階段資訊，而且會顯示 [建議] 索引標籤。請注意，[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 不會提供任何 [資料分割建議]，因為您接受所有微調選項預設值，而且在 [微調選項] 索引標籤中選取 [沒有資料分割]。  
   
-3.  在 [建議] 索引標籤上，利用索引標籤頁面底端的捲軸來檢視所有 [索引建議] 資料行。 每個資料列都代表一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 建議要卸除或建立的資料庫物件 (索引或索引檢視表)。 捲到最右側資料行，按一下 [定義]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]Tuning Advisor 會顯示**SQL 指令碼預覽**視窗中，您可以在其中檢視[!INCLUDE[tsql](../../includes/tsql-md.md)]建立或卸除該資料列上的資料庫物件的指令碼。 按一下 [關閉] 來關閉預覽視窗。  
+3.  在 [建議] 索引標籤上，利用索引標籤頁面底端的捲軸來檢視所有 [索引建議] 資料行。 每個資料列都代表一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 建議要卸除或建立的資料庫物件 (索引或索引檢視表)。 捲到最右側資料行，按一下 [定義]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會顯示一個 [SQL 指令碼預覽] 視窗，供您檢視在這個資料列上建立或卸除資料庫物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 按一下 [關閉] 來關閉預覽視窗。  
   
     如果您在尋找包含連結的 [定義] 時遇到困難，請按一下索引標籤式頁面底端的 [顯示現有的物件] 核取方塊加以清除，以減少顯示的資料列數。 當您清除這個核取方塊時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 只會顯示它已產生建議的物件。 選取 [顯示現有的物件] 核取方塊，以檢視 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫目前已存在的所有資料庫物件。 請利用索引標籤頁面右側的捲軸來檢視所有物件。  
   

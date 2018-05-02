@@ -1,33 +1,34 @@
 ---
-title: "SQL Server Profiler 範本和權限 |Microsoft 文件"
-ms.custom: 
+title: SQL Server Profiler 範本和權限 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
 - SQL Server Profiler, about SQL Server Profiler
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: fe9d9cbe084c3e721f41ab6f0546c6cf52b9fe1a
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 範本和權限
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]示範如何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在內部解析查詢。 這可讓系統管理員確切地查看哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或「多維度運算式」已提交給伺服器，以及伺服器如何存取資料庫或 Cube，以傳回結果集。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何在內部解析查詢。 這可讓系統管理員確切地查看哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或「多維度運算式」已提交給伺服器，以及伺服器如何存取資料庫或 Cube，以傳回結果集。  
   
  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以執行下列動作：  
   

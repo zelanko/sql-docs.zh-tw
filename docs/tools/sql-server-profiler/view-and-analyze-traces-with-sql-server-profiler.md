@@ -1,15 +1,16 @@
 ---
-title: "檢視和分析使用 SQL Server Profiler 追蹤 |Microsoft 文件"
-ms.custom: 
+title: 使用 SQL Server Profiler 檢視和分析追蹤 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
@@ -21,24 +22,24 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b15547e2d5d49a9709d118f69ea8d4590e5ff1c0
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 檢視和分析追蹤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來檢視追蹤中擷取的事件資料。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會根據定義的追蹤屬性來顯示資料。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的方法之一，是將資料複製到另一個程式，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如果追蹤內包含 **Text** 資料行，則 Tuning Advisor 可以使用包含了 SQL 批次和遠端程序呼叫 (RPC) 事件的追蹤檔案。 為了確保能擷取正確的事件和資料行，以便用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]隨附的預先定義「微調」範本。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來檢視追蹤中擷取的事件資料。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會根據定義的追蹤屬性來顯示資料。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的方法之一，是將資料複製到另一個程式，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如果追蹤內包含 **Text** 資料行，則 Tuning Advisor 可以使用包含了 SQL 批次和遠端程序呼叫 (RPC) 事件的追蹤檔案。 為了確保能擷取正確的事件和資料行，以便用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]隨附的預先定義「微調」範本。  
   
  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]開啟追蹤時，如果檔案是由 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或「SQL 追蹤」系統預存程序建立，則追蹤檔案的副檔名不需要是 .trc。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]也可以讀取 SQL 追蹤 」 的.log 檔案與泛用 SQL 指令碼檔案。 開啟副檔名不是 .log 的「SQL 追蹤」 .log 檔 (例如 trace.txt) 時，請將檔案格式指定成 **SQLTrace_Log** 。  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也可以讀取「SQL 追蹤」的 .log 檔案與泛用的 SQL 指令碼檔案。 開啟副檔名不是 .log 的「SQL 追蹤」 .log 檔 (例如 trace.txt) 時，請將檔案格式指定成 **SQLTrace_Log** 。  
   
  您可以設定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 日期和時間的顯示格式，以協助追蹤分析。  
   
@@ -75,7 +76,7 @@ AND     CPU < (Duration * 1000)
   
 2.  找出目標事件。  
   
-    -   開啟追蹤檔案或資料表，然後展開想要的事件類別節點；例如， **Deadlock Chain**。 如需詳細資訊，請參閱[開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或[開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)。  
+    -   開啟追蹤檔案或資料表，然後展開想要的事件類別節點；例如， **Deadlock Chain**。 如需詳細資訊，請參閱 [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或 [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)隨附的預先定義「微調」範本。  
   
     -   搜尋整個追蹤資料直到您找到要查看的事件為止 (請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 之 [編輯] 功能表上的 [尋找] 命令來協助您在追蹤中尋找值)。 請注意位於追蹤事件之 **ClientProcessID** 與 **Start Time** 資料行的值。  
   
@@ -90,9 +91,9 @@ AND     CPU < (Duration * 1000)
 ## <a name="see-also"></a>另請參閱  
  [檢視已儲存的追蹤 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [檢視篩選資訊 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
- [檢視篩選資訊 &#40;TRANSACT-SQL &#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
- [開啟追蹤檔案 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [檢視篩選資訊 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
+ [檢視篩選資訊 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
+ [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
   

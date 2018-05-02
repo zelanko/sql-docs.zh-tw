@@ -1,36 +1,39 @@
 ---
-title: "sqlps 公用程式 |Microsoft 文件"
-ms.custom: 
+title: sqlps 公用程式 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sqlps
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6fe8cb156ab8b1fbe6f72d4a91498d313f4674b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlps-utility"></a>sqlps 公用程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Sqlps**公用程式會啟動 Windows PowerShell 工作階段[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]PowerShell 提供者和 cmdlet 載入和註冊。 您可以輸入 PowerShell 命令或指令碼，以便使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 元件來處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體及其物件。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **sqlps** 公用程式會啟動 Windows PowerShell 工作階段並且載入和註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者與 Cmdlet。 您可以輸入 PowerShell 命令或指令碼，以便使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 元件來處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體及其物件。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]使用**sqlps** PowerShell 模組改為。 如需有關 **sqlps** 模組的詳細資訊，請參閱 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 請改用 **sqlps** PowerShell 模組。 如需有關 **sqlps** 模組的詳細資訊，請參閱 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -75,12 +78,12 @@ sqlps
  指定要執行的 PowerShell 命令區塊，此區塊必須以大括號 {} 括住。 只有當*Script_block* 或其他 **Script_block** 公用程式工作階段呼叫了 **Script_block** 公用程式時，才可指定 **Script_block** 。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block*中 PowerShell 命令的引數。  
   
  *string* [ *command_parameters* ]  
- 指定包含要執行之 PowerShell 命令的字串。 使用格式**"& {***命令***}"**。 引號表示字串，而叫用運算子 (&) 會讓 **sqlps** 公用程式執行此命令。  
+ 指定包含要執行之 PowerShell 命令的字串。 使用 **"&{***command***}"** 格式。 引號表示字串，而叫用運算子 (&) 會讓 **sqlps** 公用程式執行此命令。  
   
  [ **-?** | **-Help** ]  
  顯示 **sqlps** 公用程式選項的語法摘要。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **sqlps** 公用程式會啟動 PowerShell 環境 (PowerShell.exe) 並載入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 模組。 此模組 (也稱為 **sqlps**) 會載入及註冊以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元：  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -106,19 +109,19 @@ sqlps
  **和** 中的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] sqlps [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 公用程式版本實作為 Windows PowerShell 1.0 迷你 Shell。 迷你 Shell 有一些限制，例如不允許使用者載入迷你 Shell 所載入之嵌入式管理單元以外的嵌入式管理單元。 這些限制不適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本的公用程式，這些版本已經變更為使用 **sqlps** 模組。  
   
 ## <a name="examples"></a>範例  
- **A.Sqlps 中執行公用程式預設不顯示著作權橫幅的互動模式**  
+ **A.在不顯示著作權橫幅的預設互動模式中執行 sqlps 公用程式**  
   
 ```  
 sqlps -NoLogo  
 ```  
   
- **B.從命令提示字元中執行的 SQL Server PowerShell 指令碼**  
+ **B.從命令提示字元處執行 SQL Server PowerShell 指令碼**  
   
 ```  
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C.從命令提示字元中，執行 SQL Server PowerShell 指令碼和指令碼完成之後維持執行狀態**  
+ **C.從命令提示字元處執行 SQL Server PowerShell 指令碼，並在指令碼完成之後維持執行狀態**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  

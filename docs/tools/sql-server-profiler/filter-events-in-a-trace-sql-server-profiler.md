@@ -1,29 +1,30 @@
 ---
-title: "篩選事件追蹤 (SQL Server Profiler) |Microsoft 文件"
-ms.custom: 
+title: 篩選事件追蹤 (SQL Server Profiler) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e6d6716cfcdf8bd6ce495f8aefe0e0df34fddb1c
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
@@ -40,11 +41,11 @@ ms.lasthandoff: 01/17/2018
   
 2.  按一下 [資料行篩選]。  
   
-     [編輯篩選] 對話方塊隨即顯示。 **編輯篩選**對話方塊包含的比較運算子可用來篩選追蹤中的事件清單。  
+     [編輯篩選] 對話方塊隨即顯示。 您可以使用 [編輯篩選] 對話方塊包含的比較運算子清單，篩選追蹤中的事件。  
   
 3.  若要套用篩選，請按一下比較運算子，再輸入篩選要用的值。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
  **考量因素：**  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/17/2018
   
          -或-  
   
-    -   已在**[一般選項]** 對話方塊中，核取 **[使用地區設定來顯示日期和時間值]** 。 若要檢視 **[一般選項]** 對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[工具]** 功能表上，按一下 **[選項]**。  
+    -   已在 **[一般選項]** 對話方塊中，核取 **[使用地區設定來顯示日期和時間值]** 。 若要檢視 **[一般選項]** 對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[工具]** 功能表上，按一下 **[選項]**。  
   
          -且-  
   

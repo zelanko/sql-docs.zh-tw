@@ -1,15 +1,16 @@
 ---
-title: "Profiler 公用程式 |Microsoft 文件"
-ms.custom: 
+title: Profiler 公用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="profiler-utility"></a>Profiler 公用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Profiler**公用程式會啟動[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]工具。 這個主題稍後列出的選擇性引數可讓您控制應用程式啟動的方式。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **profiler** 公用程式會啟動 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 這個主題稍後列出的選擇性引數可讓您控制應用程式啟動的方式。  
   
 > [!NOTE]  
 >  **profiler** 公用程式的用途不在於編寫追蹤的指令碼。 如需詳細資訊，請參閱 [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)。  
@@ -123,7 +124,7 @@ profiler
  **/Z** <檔案大小>  
  指定追蹤檔的大小 (以 MB 為單位)。 預設大小是 5 MB。 如果啟用換用，所有換用檔案都不能超出這個引數所指定的值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  若要利用特定範本啟動追蹤，請同時使用 **/S** 和 **/T** 選項。 例如，若要利用 MyServer\MyInstance 上的 Standard 範本啟動追蹤，請在命令提示字元之下輸入下列命令：  
   
 ```  

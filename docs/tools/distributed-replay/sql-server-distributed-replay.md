@@ -1,33 +1,34 @@
 ---
-title: "SQL Server Distributed Replay |Microsoft 文件"
-ms.custom: 
+title: SQL Server Distributed Replay |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9672fa8ab5fd84c3b9526f24838c192a7ff170e1
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能可協助您評估未來影響[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]升級。 您也可以使用它來協助評估硬體和作業系統升級以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 微調的影響。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能可協助您評估未來 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級的影響。 您也可以使用它來協助評估硬體和作業系統升級以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 微調的影響。  
   
 ## <a name="benefits-of-distributed-replay"></a>Distributed Replay 的優點  
  與 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]相似之處在於，您可以使用 Distributed Replay，針對已升級的測試環境重新執行擷取的追蹤。 而與 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]不同的是，Distributed Replay 不限於從單一電腦重新執行工作負載。  

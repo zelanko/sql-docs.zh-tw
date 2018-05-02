@@ -28,12 +28,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
-如果[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]sqlmaint** 公用程式會在一或多個資料庫上，執行一組指定的維護作業。 利用 **sqlmaint** 來執行 DBCC 檢查、備份資料庫及其交易記錄、更新統計資料，以及重建索引。 所有資料庫維護活動都會產生一份可傳給指定文字檔、HTML 檔或電子郵件帳戶的報表。 **sqlmaint** 會執行舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。 若要從命令提示字元執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫，請使用 [dtexec 公用程式](../integration-services/packages/dtexec-utility.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 如果 **sqlmaint** 公用程式會在一或多個資料庫上，執行一組指定的維護作業。 利用 **sqlmaint** 來執行 DBCC 檢查、備份資料庫及其交易記錄、更新統計資料，以及重建索引。 所有資料庫維護活動都會產生一份可傳給指定文字檔、HTML 檔或電子郵件帳戶的報表。 **sqlmaint** 會執行舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。 若要從命令提示字元執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫，請使用 [dtexec 公用程式](../integration-services/packages/dtexec-utility.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] 請改用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫功能。 如需維護計畫的詳細資訊，請參閱 [維護計畫](../relational-databases/maintenance-plans/maintenance-plans.md)。  
@@ -86,8 +86,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  指定傳回 **sqlmaint** 的語法圖。 這個參數必須單獨使用。  
   
- **-S** *server_name*[ *\\* instance_name]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 *server_name***\\****[!INCLUDE[ssDE](../includes/ssde-md.md)]instance_name ，即可連接至該伺服器上之  的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
+ **-S** *server_name*[ **\\***instance_name*]  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 *server_name***\\*** instance_name*，即可連線到該伺服器之 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
   
  **-U** *login_ID*  
  指定連接伺服器時所用的登入識別碼。 如果未提供， **sqlmaint** 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。 如果 *login_ID* 包含特殊字元，則必須以雙引號 (") 括住；否則可省略雙引號。  
@@ -136,7 +136,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  當 *sqlmaint* 存取遠端伺服器時，需要 **html_file** 的完整 UNC 檔案名稱。  
   
  **-DelHtmlRpt** \<*time_period*>  
- 指定如果建立報表檔之後的時間間隔超出 <\<time_period *>，便刪除報表目錄中的任何 HTML 報表。 **-DelHtmlRpt** 會尋找名稱符合 *html_file* 參數所產生之模式的檔案。 如果 *html_file* 是 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，則 **-DelHtmlRpt** 會導致 **sqlmaint** 刪除名稱符合 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 模式，以及比指定的 <\<time_period *> 還舊的所有檔案。  
+ 指定如果建立報表檔之後的時間間隔超出 \<*time_period*>，便刪除報表目錄中的任何 HTML 報表。 **-DelHtmlRpt** 會尋找名稱符合 *html_file* 參數所產生之模式的檔案。 如果 *html_file* 是 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，則 **-DelHtmlRpt** 會導致 **sqlmaint** 刪除名稱符合 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 模式，以及比指定的 \<*time_period*> 還舊的所有檔案。  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  指定從 **-D**指定的資料庫中移除未使用的空間。 這個選項只適用於定義成自動成長的資料庫。 *Threshold_percent* 會以 MB 為單位來指定大小，一旦資料庫到達此大小之後， **sqlmaint** 便會嘗試移除未使用的資料空間。 在資料庫大小小於 *threshold_percent*時，則不會採取任何動作。 *Free_percent* 會指定必須保留在資料庫中的未使用空間大小，指定的方式是資料庫最終大小的百分比。 例如，如果 200 MB 資料庫包含 100 MB 的資料， *free_percent* 指定 10 會使最終資料庫大小成為 110 MB。 請注意，如果資料庫小於 *free_percent* 加上資料庫中的資料量，就不會擴充資料庫。 例如，如果 108 MB 的資料庫包含 100 MB 的資料， *free_percent* 指定 10 並不會將資料庫擴充成 110 MB；它會保持 108 MB。  
@@ -206,7 +206,7 @@ dbname_log_yyyymmddhhmm.BAK
  指定備份媒體是磁碟。  
   
  **-DelBkUps**< *time_period* >  
- 對於磁碟備份，指定如果建立備份之後的時間間隔超出 <\<time_period *>，便會刪除備份目錄中的任何備份檔案。  
+ 對於磁碟備份，指定如果建立備份之後的時間間隔超出 \<*time_period*>，便會刪除備份目錄中的任何備份檔案。  
   
  **-CrBkSubDir**  
  對於磁碟備份，指定如果也指定了 *-UseDefDir*，便會在 [ **backup_path** ] 目錄或預設備份目錄中建立一個子目錄。 子目錄的名稱是從 **-D**指定的資料庫名稱所產生。 **-CrBkSubDir** 提供一種簡單的方式，讓您不需要變更 *backup_path* 參數，就能將不同資料庫的所有備份放在個別子目錄中。  

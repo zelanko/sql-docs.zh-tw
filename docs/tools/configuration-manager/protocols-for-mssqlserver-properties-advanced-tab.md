@@ -1,5 +1,5 @@
 ---
-title: MSSQLSERVER 屬性的通訊協定 (進階索引標籤)
+title: MSSQLSERVER 屬性的通訊協定 ([進階] 索引標籤) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2a1cfb458983a017352384f4074be455ee4994c5
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---

@@ -1,30 +1,31 @@
 ---
-title: "Distributed Replay 安全性 |Microsoft 文件"
-ms.custom: 
+title: Distributed Replay 安全性 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 安全性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您安裝及使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能，您應該檢閱本主題中的重要安全性資訊。 本主題描述的是使用 Distributed Replay 之前必須進行的安裝後安全性設定步驟。 本主題亦描述與資料保護和重要移除步驟有關的重要考量。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 安裝和使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，您應該先檢閱本主題中的重要安全性資訊。 本主題描述的是使用 Distributed Replay 之前必須進行的安裝後安全性設定步驟。 本主題亦描述與資料保護和重要移除步驟有關的重要考量。  
   
 ## <a name="user-and-service-accounts"></a>使用者和服務帳戶  
  下表描述用於 Distributed Replay 的帳戶。 安裝 Distributed Replay 之後，您必須指派用以執行 Controller 和 Client 服務帳戶的安全性主體。 因此，我們建議您在安裝 Distributed Replay 功能之前設定對應的網域使用者帳戶。  
@@ -135,7 +136,7 @@ ms.lasthandoff: 01/17/2018
 -   刪除用於測試的任何追蹤、中繼、分派和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檔案。 中繼和分派檔案會分別儲存在 Controller 和 Client 的工作目錄中。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Distributed 的 Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [安裝 Distributed Replay - 概觀](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

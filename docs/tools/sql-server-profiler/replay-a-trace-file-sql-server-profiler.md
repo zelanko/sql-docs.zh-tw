@@ -1,33 +1,34 @@
 ---
-title: "重新執行追蹤檔案 (SQL Server Profiler) |Microsoft 文件"
-ms.custom: 
+title: 重新執行追蹤檔案 (SQL Server Profiler) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 4f3f19c69cae22987767cd7b65ca8dc9718faa4e
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>重新執行追蹤檔案 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]重新執行是開啟儲存的追蹤並重新執行它的能力。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的多執行緒播放引擎功能，可以模擬使用者連接及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 重新執行在排解應用程式或處理序的疑難問題時很有用。 您識別問題並實作更正時，針對更正的應用程式或處理序執行發現可能問題的追蹤。 然後，重新執行原始追蹤並比較結果。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 重新執行是開啟儲存的追蹤並重新執行該追蹤的能力。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 具有多執行緒播放引擎的功能，可以模擬使用者連線及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 重新執行在排解應用程式或處理序的疑難問題時很有用。 您識別問題並實作更正時，針對更正的應用程式或處理序執行發現可能問題的追蹤。 然後，重新執行原始追蹤並比較結果。  
   
  除了您要監視的其他任何事件類別以外，還必須擷取特定的事件類別以便重新執行。 依預設，如果您使用 **TSQL_Replay** 追蹤範本，就會擷取這些事件。 如需詳細資訊，請參閱 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="see-also"></a>另請參閱  
  [執行 SQL Server Profiler 所需的權限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)   
- [開啟追蹤檔案 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

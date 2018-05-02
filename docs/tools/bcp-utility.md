@@ -1,16 +1,16 @@
 ---
-title: "bcp 公用程式 |Microsoft 文件"
-ms.custom: 
+title: bcp 公用程式 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: bcp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -30,21 +30,22 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 
+caps.latest.revision: 222
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57dc975f2307a4f05afc3e71a8a9514d2aa84302
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 923792950506280346163a39ebb05a8bf1af84bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > 如需舊版的 SQL Server 相關的內容，請參閱[bcp 公用程式](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱 [bcp 公用程式](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)。
 
  > Bcp 公用程式最新版本，請參閱[for SQL Server 的 Microsoft 命令列公用程式 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/24/2018
 
   **b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定格式，在 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
   
- ![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示")如需語法慣例用於**bcp**語法，請參閱[TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") 如需用於 **bcp** 語法的語法慣例，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 > [!NOTE]
 > 若您使用 **bcp** 備份資料，請建立格式檔案以記錄資料格式。 **bcp** 資料檔案 **不包含** 任何結構描述或格式資訊，所以如果資料表或檢視表遭到卸除，而您又沒有格式檔案，即可能就無法匯入資料。  
@@ -98,12 +99,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 ## <a name="arguments"></a>引數  
  ***data_file***<a name="data_file"></a>  
- 這是資料檔案的完整路徑。 當資料大量匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，資料檔案會包含要複製到指定資料表或檢視表的資料。 當從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]大量匯出資料時，資料檔案會包含從資料表或檢視表複製的資料。 路徑可以有 1 至 255 個字元。 資料檔案最多可以包含 2^63 - 1 個資料列。  
+ 這是資料檔案的完整路徑。 當資料大量匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]時，資料檔案會包含要複製到指定資料表或檢視表的資料。 當從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]大量匯出資料時，資料檔案會包含從資料表或檢視表複製的資料。 路徑可以有 1 至 255 個字元。 資料檔案最多可以包含 2^63 - 1 個資料列。  
   
  ***database_name***<a name="db_name"></a>  
  這是指定之資料表或檢視表所在的資料庫名稱。 若未指定，這就是使用者的預設資料庫。  
   
- 您也可以使用 **d-**明確指定資料庫名稱。  
+ 您也可以使用 **d-** 明確指定資料庫名稱。  
   
  **in** *data_file* | **out** *data_file* | **bcp** *data_file* | **format nul**  
  請依照下列方式指定大量複製的方向：  
@@ -117,9 +118,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 -   **format**<a name="format"></a> 會依據指定的選項 (**-n**、 **-c**、 **-w**或 **-N**) 及資料表或檢視分隔符號建立格式檔案。 大量複製資料時， **bcp** 命令可以參考格式檔案，您不需要以互動方式重新輸入格式資訊。 **format** 選項需要 **-f** 選項；建立 XML 格式檔案也需要 **-x** 選項。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。 您必須將 **nul** 指定為值 (**format nul**)。  
   
  ***owner***<a name="schema"></a>  
- 這是資料表或檢視表的擁有者名稱。 如果執行該作業的使用者擁有指定的資料表或檢視表，則可選擇是否要使用*owner* 。 如果未指定 *owner*，且執行作業的使用者並不擁有指定的資料表或檢視表，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會傳回錯誤訊息，並取消作業。  
+ 這是資料表或檢視表的擁有者名稱。 如果執行該作業的使用者擁有指定的資料表或檢視表，則可選擇是否要使用*owner* 。 如果未指定 *owner* ，且執行作業的使用者並不擁有指定的資料表或檢視表，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會傳回錯誤訊息，並取消作業。  
   
-**「** ***查詢*** **"** <a name="query"> </a>是[!INCLUDE[tsql](../includes/tsql-md.md)]傳回結果集的查詢。 如果查詢傳回多個結果集，則只會將第一個結果集複製到資料檔案中，並會忽略接下來的結果集。 請利用雙引號括住查詢，利用單引號括住內嵌在查詢中的任何項目。 從查詢中複製大量資料時，也必須指定**queryout** 。  
+**"** ***query*** **"**<a name="query"> </a>是一個傳回結果集的 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢。 如果查詢傳回多個結果集，則只會將第一個結果集複製到資料檔案中，並會忽略接下來的結果集。 請利用雙引號括住查詢，利用單引號括住內嵌在查詢中的任何項目。 從查詢中複製大量資料時，也必須指定**queryout** 。  
   
  只要在預存程序內參考的所有資料表在 bcp 陳述式執行之前就已存在，查詢就可以參考預存程序。 例如，如果預存程序產生暫存資料表，則 **bcp** 陳述式會失敗，這是因為暫存資料表只可在執行階段使用，而無法在陳述式執行階段使用。 在此種情況下，請考慮將預存程序的結果插入資料表中，然後使用 **bcp** 將資料表的資料複製到資料檔案。  
   
@@ -137,7 +138,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-b** ***batch_size***<a name="b"></a>  
  指定每一批次匯入資料的資料列數。 每一批次會以個別交易的方式 (在認可之前匯入整個批次) 匯入及記錄。 根據預設，資料檔案中的所有資料列是以一個批次匯入。 若要在多個批次之間分散資料列，請指定小於資料檔案之資料列數目的 *batch_size* 。 如果有任何批次的交易失敗，只回復目前批次的插入項。 之後的失敗不會影響已認可的交易所匯入的批次。  
   
- 請勿使用此選項配合**-h"**ROWS_PER_BATCH  **= ***bb***"**選項。  
+ 請勿同時使用此選項與 **-h "** ROWS_PER_BATCH **=***bb***"** 選項。  
  
  **-c**<a name="c"></a>  
  利用字元資料類型來執行作業。 並非每個欄位都有這個選項的提示。它使用 **char** 作為儲存類型 (沒有前置詞)、欄位分隔符號是 **\t** (定位字元)，且資料列結束字元是 **\r\n** (新行字元)。 **-c** 與 **-w** 不相容。  
@@ -158,7 +159,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|特定字碼頁編號；如 850。<br /><br /> 13 版之前的版本 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) 不支援字碼頁 65001 (UTF-8 編碼)。 從 13 版開始，可以將 UTF-8 編碼匯入舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。|  
   
  **-d** ***database_name***<a name="d"></a>   
- 指定要連接的資料庫。 根據預設，bcp.exe 會連接到使用者的預設資料庫。 如果指定 **-d** *database_name* 和三部分名稱 (*database_name.schema.table*，當做第一個參數傳遞給 bcp.exe)，就會發生錯誤，因為資料庫名稱不能指定兩次。如果 *database_name* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-d** 與資料庫名稱之間加上空格。  
+ 指定要連接的資料庫。 根據預設，bcp.exe 會連接到使用者的預設資料庫。 如果指定 **-d** *database_name* 和三部分名稱 (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.如果指定 *database_name* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-d** 與資料庫名稱之間加上空格。  
   
  **-e** ***err_file***<a name="e"></a>  
  指定錯誤檔的完整路徑，該錯誤檔用來儲存 **bcp** 公用程式無法從檔案傳送至資料庫的任何資料列。 **bcp** 命令所產生的錯誤訊息，會送往使用者的工作站。 如果未使用這個選項，就不會建立錯誤檔。  
@@ -166,7 +167,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  如果 *err_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-e** 與 *err_file* 值之間加上空格。  
   
  **-E**<a name="E"></a>   
- 指定識別欄位要使用匯入之資料檔案中的一個或多個識別值。 如果未提供 **-E**，就會略過匯入的資料檔案中此資料行的識別值，且 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會根據建立資料表期間所指定的初始值與遞增值，自動指派唯一值。  
+ 指定識別欄位要使用匯入之資料檔案中的一個或多個識別值。 如果未提供 **-E** ，就會略過匯入的資料檔案中此資料行的識別值，且 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會根據建立資料表期間所指定的初始值與遞增值，自動指派唯一值。  
   
  如果資料檔案中沒有資料表或檢視表中之識別欄位的值，請利用格式檔指定，在匯入資料時，應該略過資料表或檢視表中的識別欄位；[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會自動指派資料行的唯一值。 如需詳細資訊，請參閱 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。  
   
@@ -190,7 +191,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* 可以是值高達 2^63-1 的正整數。 **-F** *first_row* 是以 1 為基底。  
 
 **-G**<a name="G"></a>  
- 這個參數是用戶端使用連接到 Azure SQL Database 或 Azure SQL 資料倉儲時，指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要[14.0.3008.27 版本或更新版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp-v。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證的驗證的 SQL 資料庫或 SQL 資料倉儲](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
+ 這個參數在連線到 Azure SQL Database 或 Azure SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要[14.0.3008.27 版本或更新版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp -v。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證的驗證的 SQL 資料庫或 SQL 資料倉儲](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
 
 > [!TIP]
 >  若要檢查您的 bcp 版本是否包含 Azure Active Directory 驗證 (AAD) 類型的支援**bcp-** (bcp\<空間 >\<虛線 >\<虛線 >)，並確認您看到-G 的清單中提供的引數。
@@ -213,7 +214,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 整合式** 
  
-    對於 Azure Active Directory 整合式驗證，提供**-G**選項但沒有使用者名稱或密碼。 此設定會假設目前的 Windows 使用者帳戶 （帳戶下執行的 bcp 命令） 會與 Azure AD 同盟： 
+    若是 Azure Active Directory 整合式驗證，請提供 **-G** 選項，但不提供使用者名稱或密碼。 此設定會假設目前的 Windows 使用者帳戶 （帳戶下執行的 bcp 命令） 會與 Azure AD 同盟： 
 
     下列範例會匯出資料，使用 Azure AD 整合的帳戶。 此範例會將匯出資料表`bcptest`從資料庫`testdb`使用從 Azure 伺服器的 Azure AD 整合式驗證`aadserver.database.windows.net`，並將資料儲存在檔案中`c:\last\data2.dat`:
 
@@ -228,7 +229,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     ```
 
   
-**-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> 指定要在資料大量匯入資料表或檢視之中的期間使用的提示。  
+**-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> Specifies the hint or hints to be used during a bulk import of data into a table or view.  
   
 * **ORDER**(***column*[ASC | DESC] [**,**...*n*]**)**  
 資料檔案中之資料的排序順序。 如果匯入資料時是依照資料表的叢集索引來排序，將可提升大量匯入的效能。 如果不是依照叢集索引鍵的順序排序資料檔案，或是資料表沒有叢集索引，便會忽略 ORDER 子句。 提供的資料行名稱必須是目的地資料表中的有效資料行名稱。 根據預設， **bcp** 會假設資料檔案沒有排序。 為了達到最佳的大量匯入效果， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 也會驗證匯入的資料是否已排序。  
@@ -265,7 +266,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 利用 **in** 引數加以指定，任何定義於目的地資料表上的插入觸發程序，都會在大量複製作業期間執行。 如果未指定 FIRE_TRIGGERS，就不會執行任何插入觸發程序。 **out**、 **queryout**和 **format** 引數會略過 FIRE_TRIGGERS。  
   
  **-i** ***input_file***<a name="i"></a>  
- 指定回應檔的名稱，回應檔包含利用互動模式 (未指定**-n**、 **-c**、 **-w**或 **-N** ) 執行大量複製時，在命令提示字元處對於每個資料欄位問題的回應。  
+ 指定回應檔的名稱，回應檔包含利用互動模式 (未指定 **-n**、 **-c**、 **-w**或 **-N** ) 執行大量複製時，在命令提示字元處對於每個資料欄位問題的回應。  
   
  如果 *input_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-i** 與 *input_file* 值之間加上空格。  
   
@@ -300,7 +301,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  當您要使用 bcp.exe 搭配 **-N** 匯出資料後再將該資料匯入相同的資料表結構描述時，如果有固定長度的非 Unicode 字元資料行 (例如 **char(10)**)，可能會看到一個截斷警告。  
   
- 可以忽略此警告。 解決這個警告的其中一種方式是使用 **-n** 取代 **-N**方面的知識。  
+ 可以忽略此警告。 解決這個警告的其中一種方式是使用 **-n** 取代 **-N**。  
   
  **-o** ***output_file***<a name="o"></a>  
  指定接收來自命令提示字元重新導向之輸出的檔案名稱。  
@@ -327,7 +328,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  如需詳細資訊，請參閱本主題稍後的 [備註](#remarks)一節。  
   
  **-r** ***row_term***<a name="r"></a>  
- 指定資料列結束字元。 預設值是 **\n**  （換行字元）。 請利用這個參數來覆寫預設的資料列結束字元。 如需詳細資訊，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
+ 指定資料列結束字元。 預設值是 **\n** (新行字元)。 請利用這個參數來覆寫預設的資料列結束字元。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中使用十六進位表示法來指定資料列結束字元，該值將會在 0x00 處截斷。 例如，如果您指定 0x410041，將會使用 0x41。  
   
@@ -336,10 +337,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-R**<a name="R"></a>  
  指定要使用定義給用戶端電腦地區設定的區域格式，將貨幣、日期和時間資料大量複製到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中。 依預設，會忽略地區設定。  
   
- **-S** ***server_name*** [\\***instance_name***]<a name="S"> </a>指定執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]要進行連接。 如果未指定任何伺服器， **bcp** 公用程式會連接至本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 透過網路上的遠端電腦或本機具名執行個體執行 **bcp** 指令時，此選項為必要選項。 若要連接到伺服器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體，只要指定 *server_name*。 若要連接到具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，指定*server_name***\\***instance_name*。  
+ **-S** ***server_name*** [\\***instance_name***]<a name="S"></a> 指定要連線的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果未指定任何伺服器， **bcp** 公用程式會連接至本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 透過網路上的遠端電腦或本機具名執行個體執行 **bcp** 指令時，此選項為必要選項。 若要連接到伺服器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體，只要指定 *server_name*。 若要連線到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的具名執行個體，請指定 *server_name***\\*** instance_name*。  
   
  **-t** ***field_term***<a name="t"></a>  
- 指定欄位結束字元。 預設值是 **\t** (定位字元)。 請利用這個參數來覆寫預設的欄位結束字元。 如需詳細資訊，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
+ 指定欄位結束字元。 預設值是 **\t** (定位字元)。 請利用這個參數來覆寫預設的欄位結束字元。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中使用十六進位表示法來指定欄位結束字元，該值將會在 0x00 處截斷。 例如，如果您指定 0x410041，將會使用 0x41。  
   
@@ -349,13 +350,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 網路使用者的安全性認證、 *login_id*及 *password* 不是必要的選項。 如果未指定 **–T** ，則必須指定 **–U** 與 **–P** ，才能順利登入。
  
 > [!IMPORTANT]
-> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非 *「使用者名稱」*和 *「密碼」*的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。 
+> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」和「密碼」的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。 
   
  **-P** ***login_id***<a name="U"></a>  
- 指定用來連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的登入識別碼。  
+ 指定用來連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的登入識別碼。  
   
 > [!IMPORTANT]
-> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非 *「使用者名稱」*和 *「密碼」*的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。
+> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」和「密碼」的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。
   
  **-v**<a name="v"></a>  
  報告 **bcp** 公用程式版本號碼和著作權。  
@@ -367,7 +368,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **90** = [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]  
   
- **100**  =  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+ **100** = [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
   
  **110** = [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
@@ -375,12 +376,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **130** = [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
- 例如，若要產生 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] 不支援但在新版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中所引入的資料類型，請使用 -V80 選項。  
+ 例如，若要產生 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]不支援但在新版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中所引入的資料類型，請使用 -V80 選項。  
   
  如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  **-w**<a name="w"></a>  
- 利用 Unicode 字元執行大量複製作業。 並非每個欄位都有這個選項的提示。它使用 **nchar** 作為儲存類型 (沒有前置詞)、欄位分隔字元是 **\t** (定位字元)，而且資料列結束字元是 **\n** (新行字元)。 **-w** 與 **-c**不相容。  
+ 利用 Unicode 字元執行大量複製作業。 並非每個欄位都有這個選項的提示。它會使用 **nchar** 作為儲存類型 (沒有前置詞)、欄位分隔字元是 **\t** (定位字元)，而且資料列結束字元是 **\n** (新行字元)。 **-w** 與 **-c** 不相容。  
   
  如需詳細資訊，請參閱 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
@@ -399,7 +400,7 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
   
  如需準備資料進行大量匯入或匯出作業的資訊，請參閱[準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。  
   
- 如需大量匯入所執行的資料列插入作業於何時記錄到交易記錄的資訊，請參閱[大量匯入採用最低限度記錄的必要條件](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+ 如需大量匯入所執行的資料列插入作業於何時記錄到交易記錄的資訊，請參閱 [大量匯入採用最低限度記錄的必要條件](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
 ## <a name="native-data-file-support"></a>原生資料檔案支援  
  在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， **bcp** 公用程式可支援與 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]相容的原生資料檔案。  
@@ -464,12 +465,12 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
 -   您利用 **-E** 選項，從資料檔案匯入識別值。  
   
 > [!NOTE]
-> 在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中，目標資料表的 ALTER TABLE 權限是一項新的需求。 如果使用者帳戶沒有目標資料表的 ALTER 資料表權限，這項新的需求可能會讓不會強制進行觸發程序和條件約束檢查的 **bcp** 指令碼失敗。
+> 在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]中，目標資料表的 ALTER TABLE 權限是一項新的需求。 如果使用者帳戶沒有目標資料表的 ALTER 資料表權限，這項新的需求可能會讓不會強制進行觸發程序和條件約束檢查的 **bcp** 指令碼失敗。
   
 ## <a name="character-mode--c-and-native-mode--n-best-practices"></a>字元模式 (-c) 與原生模式 (-n) 最佳做法  
  本節具有字元模式 (-c) 與原生模式 (-n) 的建議事項。  
   
--   (管理員/使用者) 盡可能使用原生格式 (-n) 來避免分隔符號問題。 您可以使用原生格式，透過 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯出和匯入。 如果資料將匯入非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫，請使用 -c 或 -w 選項，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯出資料。  
+-   (管理員/使用者) 盡可能使用原生格式 (-n) 來避免分隔符號問題。 您可以使用原生格式，透過 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]匯出和匯入。 如果資料將匯入非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫，請使用 -c 或 -w 選項，從[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯出資料。  
   
 -   (管理員) 使用 BCP OUT 時確認資料。 例如，當您依序使用 BCP OUT、BCP IN 和 BCP OUT 時，請確認資料正確匯出，而且結束字元值並未當做某些資料值的一部分使用。 請考慮使用隨機十六進位值來覆寫預設結束字元 (使用 -t 和 -r 選項)，避免結束字元值與資料值之間發生衝突。  
   
@@ -498,7 +499,7 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
 
 
 ### <a name="example-test-conditions"></a>**範例測試條件**
-以下範例針對 SQL Server (從 2016 開始) 和 Azure SQL Database 利用 `WideWorldImporters` 範例資料庫。  `WideWorldImporters` 可以從 [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)下載。  如需還原範例資料庫的語法，請參閱 [RESTORE (TRANSACT-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 。  除非另有指定，否則範例假設您使用 Windows 驗證，且有信任連接通往您在執行 **bcp** 命令的伺服器執行個體。  名為 `D:\BCP` 的目錄將用於許多範例。
+以下範例針對 SQL Server (從 2016 開始) 和 Azure SQL Database 利用 `WideWorldImporters` 範例資料庫。  `WideWorldImporters` 您可以從下載[ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0 ](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)。  如需還原範例資料庫的語法，請參閱 [RESTORE (TRANSACT-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 。  除非另有指定，否則範例假設您使用 Windows 驗證，且有信任連接通往您在執行 **bcp** 命令的伺服器執行個體。  名為 `D:\BCP` 的目錄將用於許多範例。
 
 下面的指令碼會建立 `WideWorldImporters.Warehouse.StockItemTransactions` 資料表的空複本，然後新增主索引鍵條件約束。  在 SQL Server Management Studio (SSMS) 中執行下列 T-SQL 指令碼
 
@@ -534,7 +535,7 @@ bcp -v
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. 將資料表資料列複製到資料檔案中 (使用信任連接)  
 下列範例說明 `WideWorldImporters.Warehouse.StockItemTransactions` 資料表上的 **out** 選項。
 
-- **Basic**  
+- **基本**  
 這個範例會建立一個名稱為 `StockItemTransactions_character.bcp` 的資料檔案，且會利用 **字元** 格式，將資料表的資料複製到這個資料檔案中。
 
   請在命令提示字元之下，輸入下列命令：
@@ -659,12 +660,12 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
 |大量匯入或大量匯出的資料格式 (SQL Server)<br />&emsp;&#9679;&emsp;[使用原生格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用字元格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 原生格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 字元格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[指定欄位與資料列結束字元 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[大量匯入期間保留 Null 或使用預設值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[大量匯入資料時保留識別值 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />匯入或匯出資料的格式檔案 (SQL Server)<br />&emsp;&#9679;&emsp;[建立格式檔案 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案大量匯入資料 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案略過資料表資料行 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案略過資料欄位 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[大量匯入與匯出 XML 文件的範例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## <a name="see-also"></a>另請參閱  
- [準備大量匯出或匯入 &#40; 的資料SQL Server &#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
+ [準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
- [SET QUOTED_IDENTIFIER &#40;TRANSACT-SQL &#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_tableoption &#40;TRANSACT-SQL &#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   

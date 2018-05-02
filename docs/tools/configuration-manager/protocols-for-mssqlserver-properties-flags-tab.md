@@ -1,5 +1,5 @@
 ---
-title: MSSQLSERVER 屬性的通訊協定 (旗標索引標籤)
+title: MSSQLSERVER 屬性的通訊協定 ([旗標] 索引標籤) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -22,7 +22,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: eeca5f9ce24cd9ff24663a05344bd8543b1141b7
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/03/2018
  登入過程一律加密。 當 **[ForceEncryption]** 設為 **[是]** 時，所有用戶端/伺服器通訊都會加密，且連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的用戶端必須設定為信任伺服器憑證的根授權單位。 如需詳細資訊，請參閱《 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 線上叢書》中的＜如何：啟用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密連接 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員)＞。  
   
 ## <a name="cluster-servers"></a>叢集伺服器  
- 如果您想要對容錯移轉叢集使用加密，請務必使用容錯移轉叢集中，所有節點之虛擬伺服器的完整 DNS 名稱來安裝伺服器憑證。 例如，假設您有一個雙節點的叢集，節點的名稱分別為 "test1.<您的公司\<.com" 與 "test2.<您的公司\<.com"，而且您有一個名為 "virtsql" 的虛擬伺服器，則將會需要在兩個節點上都安裝 "virtsql.<您的公司\<.com" 的憑證。 接著，您可以選取 **[SQL Server 組態管理員]** 中的 **[ForceEncryption]** 核取方塊，設定要執行加密的容錯移轉叢集。  
+ 如果您想要對容錯移轉叢集使用加密，請務必使用容錯移轉叢集中，所有節點之虛擬伺服器的完整 DNS 名稱來安裝伺服器憑證。 例如，假設您有一個雙節點的叢集，節點的名稱分別為 "test1.*\<貴公司>*.com" 和 "test2.*\<貴公司>*.com"，而且您有一個名為 "virtsql" 的虛擬伺服器，則將會需要在兩個節點上都安裝 "virtsql.*\<貴公司>*.com" 的憑證。 接著，您可以選取 **[SQL Server 組態管理員]** 中的 **[ForceEncryption]** 核取方塊，設定要執行加密的容錯移轉叢集。  
   
 ## <a name="options"></a>選項。  
  **[ForceEncryption]**  

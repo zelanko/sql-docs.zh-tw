@@ -1,28 +1,28 @@
 ---
-title: "SQL Server 組態管理員說明 |Microsoft 文件"
-ms.custom: 
+title: SQL Server 設定管理員說明 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Configuration Manager, help
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0730840b194e6ae4d172dcf822f78a86aa6f9c33
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/03/2018
  本節包含關於「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中對話方塊的 F1 說明主題。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 無法設定版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早於[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員無法設定早於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
   
 ## <a name="services"></a>服務  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」可用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 雖然大部分的工作可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [Windows 服務] 對話方塊來完成，但請特別注意，「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」可對其所管理的服務執行其他作業，如在服務帳戶變更時套用正確的權限。 使用一般的 [Windows 服務] 對話方塊來設定任一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務可能會導致服務異常。  
@@ -76,18 +76,18 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="to-open-sql-server-configuration-manager"></a>若要開啟 SQL Server 組態管理員  
   
--   在 [開始] 功能表上，依序指向 [所有程式]、[Microsoft SQL Server] \(版本) 和 [組態工具]，然後按一下 [SQL Server 組態管理員]。  
+-   在 [開始] 功能表上，依序指向 [所有程式]、[Microsoft SQL Server] (版本) 和 [組態工具]，然後按一下 [SQL Server 組態管理員]。  
   
   
- **若要存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager 使用[!INCLUDE[win8](../../includes/win8-md.md)]**  
+ **使用 [!INCLUDE[win8](../../includes/win8-md.md)] 存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員**  
   
- 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../../includes/win8-md.md)] 組態管理員這樣的應用程式。 若要開啟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager，請在**搜尋**快速鍵**應用程式**，型別**SQLServerManager12.msc** (如[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 或**SQLServerManager11.msc** (如[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，然後按下**Enter**。  
+ 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../../includes/win8-md.md)] 組態管理員這樣的應用程式。 若要開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員，請在 [搜尋] 常用鍵的 [應用程式] 下，鍵入 **SQLServerManager12.msc** (適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 或鍵入 **SQLServerManager11.msc** (適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，然後按 **Enter**。  
   
 
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 服務](../../tools/configuration-manager/sql-server-services.md)   
- [SQL Server 網路組態](../../tools/configuration-manager/sql-server-network-configuration.md)   
- [SQL Native Client 11.0 組態](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
+ [SQL Server 網路設定](../../tools/configuration-manager/sql-server-network-configuration.md)   
+ [SQL Native Client 11.0 設定](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
  [選擇網路通訊協定](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

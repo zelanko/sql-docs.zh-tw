@@ -1,15 +1,16 @@
 ---
-title: "SQL Server Profiler |Microsoft 文件"
-ms.custom: 
+title: SQL Server Profiler |Microsoft 文件
+ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -27,19 +28,19 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8a6f1151141c3f0641ba35b92d8c9cd8b1639a14
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是建立和管理追蹤和分析，並重新執行追蹤結果的介面。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一個介面，您可以使用它來建立和管理追蹤，以及分析和重新執行追蹤結果。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。  
   
 >**重要！！**  
 > 我們宣佈適用於 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤擷取和追蹤重新執行的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已被取代。 SQL Server 2016 **可以使用** 這些功能，但是之後的版本會移除這些功能。
@@ -51,19 +52,19 @@ ms.lasthandoff: 01/17/2018
 
  ## <a name="where-is-the-profiler"></a>Profiler 位於何處？
  
- 您可以從 SSMS 內以數種方式啟動 Profiler。 [以下是列出啟動分析工具的方式的主題。](start-sql-server-profiler.md)
+ 您可以從 SSMS 內以數種方式啟動 Profiler。 [以下主題將列出各種啟動 Profiler 的方式。](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>擷取並重新執行追蹤資料 
 下表顯示我們建議在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中用來擷取和重新執行追蹤資料的功能。
   
 ||||  
 |-|-|-|  
-|**功能 \ 目標工作負載**|**關聯式引擎**|**Analysis Services (英文)**|  
+|**功能\目標工作負載**|**關聯式引擎**|**Analysis Services (英文)**|  
 |**追蹤擷取**|SQL Server Management Studio 中的[擴充事件](../../relational-databases/extended-events/extended-events.md) 圖形化使用者介面|SQL Server Profiler|  
-|**重新執行追蹤**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|  
+|**追蹤重新執行**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
- Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是「SQL 追蹤」的圖形化使用者介面，可用來監視 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 Analysis Services 的執行個體。 您可以擷取每一個事件的相關資料，並將資料儲存至檔案或資料表，以供稍後分析。 例如，您可以監視生產環境，查看哪些預存程序由於執行速度過慢而影響效能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]用於活動例如：  
+ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是「SQL 追蹤」的圖形化使用者介面，可用來監視 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 Analysis Services 的執行個體。 您可以擷取每一個事件的相關資料，並將資料儲存至檔案或資料表，以供稍後分析。 例如，您可以監視生產環境，查看哪些預存程序由於執行速度過慢而影響效能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可用於下列活動：  
   
 -   逐步執行問題查詢來找出問題原因。  
   
@@ -116,9 +117,9 @@ ms.lasthandoff: 01/17/2018
   
 -   **稽核登出**  
   
--   **Lock： 取得**  
+-   **Lock:Acquired**  
   
--   **Lock： 發行**  
+-   **Lock:Released**  
   
  **EventCategory**  
  事件類別目錄用來定義事件在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中的分組方式。 例如，所有的鎖定事件類別都會在 **Locks** 事件類別目錄中予以分組。 然而，事件類別目錄僅存在於 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中。 這個詞彙無法反映 Engine 事件的分組方式。  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/17/2018
   
  SQL Server 提供兩種方式來追蹤 SQL Server 的執行個體：您可以透過 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤，或是使用系統預存程序追蹤。  
   
- **篩選器**  
+ **篩選**  
  建立追蹤或範本時，您可以定義條件來篩選由事件所收集的資料。 若不想讓追蹤變得太大，您可加以篩選，只收集某些事件資料的子集。 例如，您可以在追蹤中將 Microsoft Windows 使用者名稱限制在特定的使用者，進而減少輸出資料。  
   
  如果沒有設定篩選條件，選定事件類別的所有事件都會傳回到追蹤輸出。  
@@ -201,7 +202,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="see-also"></a>另請參閱  
  [Locks 事件類別目錄](../../relational-databases/event-classes/locks-event-category.md)   
  [Sessions 事件類別目錄](../../relational-databases/event-classes/sessions-event-category.md)   
- [Stored 的 Procedures 事件類別目錄](../../relational-databases/event-classes/stored-procedures-event-category.md)   
+ [Stored Procedures 事件類別目錄](../../relational-databases/event-classes/stored-procedures-event-category.md)   
  [TSQL 事件類別目錄](../../relational-databases/event-classes/tsql-event-category.md)   
  [伺服器效能與活動監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   

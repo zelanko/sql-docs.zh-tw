@@ -1,5 +1,5 @@
 ---
-title: SQL Server 屬性 (FILESTREAM 頁面) | Microsoft Docs
+title: SQL Server 屬性 ([FILESTREAM] 索引標籤) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ebf783640f2701dc575eb4086782d8ae0684a852
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---

@@ -1,15 +1,16 @@
 ---
-title: "SQL Server Profiler 範本 |Microsoft 文件"
-ms.custom: 
+title: SQL Server Profiler 範本 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - default SQL Server Profiler templates
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b02daf16a7cb1be9d7b0f12d1b75c217575a5e4b
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 範本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]建立範本，以定義要在追蹤中包含的事件類別和資料行。 定義並儲存範本之後，即可執行追蹤，記錄您選取的每一個事件類別的資料。 您可將範本用在許多追蹤上；範本本身並不會執行。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 建立範本，用來定義追蹤中要包含的事件類別和資料行。 定義並儲存範本之後，即可執行追蹤，記錄您選取的每一個事件類別的資料。 您可將範本用在許多追蹤上；範本本身並不會執行。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 提供預先定義的追蹤範本，可讓您輕鬆設定在特定追蹤上最需要的事件類別。 例如，Standard 範本可協助您建立用於記錄登入、登出、已完成批次及連接資訊的一般追蹤。 此範本不需修改即可用來執行追蹤，或者也可以做為範本建立起點，用來建立具有不同事件組態的其他範本。  
   
@@ -60,15 +61,15 @@ ms.lasthandoff: 01/17/2018
 ## <a name="default-template"></a>預設範本  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會自動指定 **標準** 範本作為新追蹤套用的預設範本。 不過，您可以將預設範本變更為其他任何預先定義的或使用者自訂的範本。 若要變更預設範本，請在您建立或編輯範本時，使用 [追蹤範本屬性] 對話方塊中的 [一般] 索引標籤，選取 [作為所選取伺服器類型的預設範本] 核取方塊。  
   
- 若要瀏覽至**追蹤範本屬性**對話方塊中，於[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**檔案**功能表上，選擇**範本**，然後按一下**新範本**或**編輯範本**。  
+ 若要巡覽至 [追蹤範本屬性] 對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [檔案] 功能表上選擇 [範本]，然後按一下 [新增範本] 或 [編輯範本]。  
   
 > [!NOTE]  
 >  預設範本是特定伺服器類型專用的範本。 變更一種伺服器類型的預設範本，並不會影響其他伺服器類型的預設範本。 如需針對特定伺服器來設定預設範本的詳細資訊，請參閱[設定追蹤定義預設值 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立追蹤範本 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [修改追蹤範本 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
- [匯出追蹤範本 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
+ [建立追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [修改追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [匯出追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [匯入追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

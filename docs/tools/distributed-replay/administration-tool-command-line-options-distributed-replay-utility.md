@@ -1,32 +1,33 @@
 ---
-title: "系統管理工具命令列選項 (Distributed 的 Replay Utility) |Microsoft 文件"
-ms.custom: 
+title: 管理工具命令列選項 (Distributed Replay 公用程式) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ac0fe5fe3686e60ef16d95899c69ecd72742e850
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令列選項 (Distributed Replay Utility)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， **DReplay.exe**，命令列工具與 distributed 的 replay controller 通訊。 您可以使用管理工具來起始、監視及取消控制器上的作業。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 **DReplay.exe** 是命令列工具，可與 Distributed Replay Controller 通訊。 您可以使用管理工具來起始、監視及取消控制器上的作業。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示")更多系統管理工具語法所使用之語法慣例的詳細資訊，請參閱[TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") 如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,7 +49,7 @@ Usage:
   dreplay cancel [-m controller] [-q]   
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  您可以使用 **DReplay.exe**發出下列命令列選項：  
   
  **preprocess**  
@@ -65,13 +66,13 @@ Usage:
   
  如需包含命令引數和範例的詳細語法資訊，請參閱下列主題：  
   
--   [前置處理選項 &#40; Distributed 的 Replay 管理工具 &#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
+-   [前置處理選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
   
--   [重新執行選項 &#40; Distributed 的 Replay 管理工具 &#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
+-   [重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
   
--   [狀態選項 &#40; Distributed 的 Replay 管理工具 &#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
+-   [狀態選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
   
--   [取消選項 &#40; Distributed 的 Replay 管理工具 &#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
+-   [取消選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
   
  RPC 以 RPC 形式重新執行，而不是以語言事件的形式重新執行。  
   

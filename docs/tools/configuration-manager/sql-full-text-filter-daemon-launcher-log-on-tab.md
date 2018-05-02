@@ -1,5 +1,5 @@
 ---
-title: SQL 全文檢索篩選精靈啟動器 (登入索引標籤)
+title: SQL 全文檢索篩選精靈啟動器 ([登入] 索引標籤) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9f54e45734a06030f3a216eea5247a555a94673c
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---

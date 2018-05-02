@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 59203f010913252abf05201df0f92a2d1b639c18
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
 ---
-# <a name="nsltservice-namegt-properties-service-tab"></a>NS$<service name> 屬性 (服務索引標籤)
+# <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;屬性名稱&gt; 屬性 ([服務] 索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 這個服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服務。 淺灰色的屬性值不得以此應用程式加以變更。  
   

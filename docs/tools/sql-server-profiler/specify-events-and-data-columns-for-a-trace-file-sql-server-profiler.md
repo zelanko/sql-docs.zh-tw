@@ -1,15 +1,16 @@
 ---
-title: "指定追蹤檔案 (SQL Server Profiler) 的事件及資料行 |Microsoft 文件"
-ms.custom: 
+title: 指定追蹤檔案的事件及資料行 (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding events
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - removing events
 - traces [SQL Server], events
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 45184a8741296f43b29029776741def6704a6aaf
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>指定追蹤檔案的事件及資料行 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題描述如何指定追蹤的事件類別和資料行使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來指定追蹤的事件類別及資料行。  
   
 ### <a name="to-specify-events-and-data-columns-for-a-trace"></a>若要指定追蹤的事件及資料行  
   

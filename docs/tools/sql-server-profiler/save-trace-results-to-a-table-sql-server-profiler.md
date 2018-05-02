@@ -1,42 +1,43 @@
 ---
-title: "將追蹤結果儲存至資料表 (SQL Server Profiler) |Microsoft 文件"
-ms.custom: 
+title: 將追蹤結果儲存至資料表 (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - saving traces
 - traces [SQL Server], saving
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f411639ced17e80acca493e7e0cd23de6ed5bc8c
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>將追蹤結果儲存到資料表 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題描述如何將追蹤結果儲存至資料庫資料表中，使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 將追蹤結果儲存到資料庫資料表。  
   
 ### <a name="to-save-trace-results-to-a-table"></a>若要將追蹤結果儲存至資料表  
   
 1.  在 [檔案] 功能表上，按一下 [新增追蹤]，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
-     會出現 [追蹤屬性] **[追蹤屬性]**對話方塊。  
+     會出現 [追蹤屬性] **[追蹤屬性]** 對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 在 [工具] 功能表，按一下 [選項]，並清除 [進行連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
+    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 於 [工具] 功能表，按一下 [選項]，並清除 [連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
   
 2.  在 [追蹤名稱] 方塊中，輸入追蹤的名稱，然後按一下 [儲存至資料表]。  
   

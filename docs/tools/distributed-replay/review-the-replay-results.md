@@ -1,30 +1,31 @@
 ---
-title: "檢閱重新執行結果 |Microsoft 文件"
-ms.custom: 
+title: 檢閱重新執行結果 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="review-the-replay-results"></a>檢閱重新執行結果
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]之後[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能完成分散式重新執行，可以擷取每個用戶端重新執行活動，並儲存在每個用戶端的結果追蹤檔案。 若要擷取此活動，您必須在以 **replay** 選項執行管理工具時使用 **-o** 參數。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能完成分散式重新執行之後，即可擷取每個用戶端的重新執行活動，並將其儲存在每個用戶端的結果追蹤檔案中。 若要擷取此活動，您必須在以 **replay** 選項執行管理工具時使用 **-o** 參數。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
   
  結果追蹤檔案的儲存位置是由每個用戶端上用戶端組態檔 `<ResultDirectory>` 中的 `DReplayClient.xml` XML 元素所指定。 每次重新執行時都會覆寫用戶端結果目錄中的追蹤檔案。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/17/2018
   
 |資料行名稱|資料類型|描述|資料行識別碼|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|**nvarchar**|事件類別的名稱。|1|  
+|EventClass|**nvarchar**|事件類別的名稱。|@shouldalert|  
 |EventSequence|**bigint**|針對提供者錯誤以及內部錯誤和警告，這是對應於錯誤或警告的擷取事件順序。<br /><br /> 針對所有其他事件類別，這是原始追蹤資料中的事件順序。|2|  
 |ReplaySequence|**bigint**|針對提供者錯誤以及內部錯誤和警告，這是對應於錯誤或警告的重新執行事件順序。<br /><br /> 針對所有其他事件類別，這是重新執行期間指派的事件順序。|3|  
 |TextData|**ntext**|TextData 的內容取決於 EventClass。<br /><br /> 針對 Audit Login 和 ExistingConnection，這是連接的設定選項。<br /><br /> 針對 SQL:BatchStarting，這是批次要求的主體。<br /><br /> 針對 RPC:Starting，這是呼叫的預存程序。<br /><br /> 針對 Replay Settings Event，此資料行包含重新執行組態檔中所定義的設定。<br /><br /> 針對 Replay Statistics Event，這包含下列資訊：<br /><br /> -重新執行目標 SQL Server<br /><br /> -可重新執行的事件總數<br /><br /> -提供者錯誤數目<br /><br /> -內部錯誤數目<br /><br /> -內部警告<br /><br /> -錯誤總數<br /><br /> -整體成功率<br /><br /> -重新執行時間 (HH:MM:SS:MMM)<br /><br /> 針對 Replay Result Set Event，這會顯示傳回結果資料行標頭的清單。<br /><br /> 針對 Replay Result Row Event，這會顯示該資料列所有資料行的傳回值。<br /><br /> 針對 Replay Internal Warning 和 Replay Provider Error，此資料行包含提供者警告或錯誤。|4|  
@@ -83,9 +84,9 @@ ms.lasthandoff: 01/17/2018
 |ApplicationName|**nvarchar**|擷取期間建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線的用戶端應用程式名稱。|17|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Distributed 的 Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed 的 Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令列選項 &#40; Distributed 的 Replay 公用程式 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [設定 Distributed 的 Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
