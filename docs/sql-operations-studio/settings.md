@@ -1,9 +1,9 @@
-﻿---
-title: "SQL Operations Studio （預覽） 使用者和工作區設定 |Microsoft 文件"
-description: "如何修改 SQL Operations Studio （預覽） 使用者和工作區設定。"
+---
+title: SQL Operations Studio （預覽） 使用者和工作區設定 |Microsoft 文件
+description: 如何修改 SQL Operations Studio （預覽） 使用者和工作區設定。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-and-workspace-settings"></a>使用者和工作區設定
 
 所以可以輕鬆地設定[!INCLUDE[name-sos](../includes/name-sos-short.md)]透過設定您自己的需要。 幾乎所有屬於[!INCLUDE[name-sos](../includes/name-sos-short.md)]的編輯器、 使用者介面和功能的行為有選項可修改。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]提供兩個不同的範圍的設定：
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供兩個不同的範圍的設定：
 
 * **使用者**這些設定會全域套用至任何執行個體[!INCLUDE[name-sos](../includes/name-sos-short.md)]開啟。
 * **工作區**工作地區設定是您的電腦上的資料夾特有的設定，只能用於在檔案總管 [資訊看板] 中開啟資料夾時。 定義領域上設定覆寫使用者領域。
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="hot-exit"></a>熱結束
 
-SQL Operations Studio 將檔案記住未儲存的變更，當您結束預設。 這是在 Visual Studio 程式碼中的熱結束功能相同。
+SQL 作業 Studio 將檔案記住未儲存的變更，當您結束預設。 這是在 Visual Studio 程式碼中的熱結束功能相同。
 
 根據預設，熱結束已關閉。 啟用作用結束藉由編輯`files.hotExit`設定。 如需詳細資訊，請參閱[（在 Visual Studio 程式碼文件中） 的熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
 
