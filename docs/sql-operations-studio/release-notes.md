@@ -55,7 +55,7 @@ ms.lasthandoff: 04/26/2018
    - 修正[發出 1104年](https://github.com/Microsoft/sqlopsstudio/issues/1104): SQL 延伸模組索引標籤停止運作。
 
 
-對於 4 月公開預覽的重要反白顯示為 Visual Studio Code 1.21 平台來源的程式碼重新整理。 這會帶中的多個更新的核心編輯器和工作臺從先前的 1.19 同步處理點。 一些範例包括下列各項：
+4 月公開預覽的重點為 Visual Studio Code 1.21 平台來源程式碼重新整理。這會從先前的 1.19 同步處理點帶入多項更新至核心編輯器和工作臺。以下為部分範例：
 
 - [新的通知 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) -輕鬆地管理與檢閱 SQL 作業 Studio 通知。
 - [整合終端機分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)-一次使用多個開啟的終端機。
