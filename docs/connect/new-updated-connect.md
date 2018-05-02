@@ -12,7 +12,7 @@ ms.component: connect
 ms.date: 02/03/2018
 ms.openlocfilehash: da7ff58d5930acb084220c8d0364147ae93ed963
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/08/2018
 ---
@@ -128,20 +128,20 @@ SQL server ODBC 驅動程式 17 加密之前使用 SQLGetData 組件中無法擷
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
 
-- [新文章 + 更新文章 (1+3)：&nbsp;**Advanced Analytics for SQL** 文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (1+3)：&nbsp;**Advanced Analytics for SQL **文件](../advanced-analytics/new-updated-advanced-analytics.md)
 - [新文章 + 更新文章 (0+1)：&nbsp;**Analytics Platform System for SQL** 文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新文章 + 更新文章 (0+1)：&nbsp;**連線到 SQL** 文件](../connect/new-updated-connect.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**Database Engine for SQL** 文件](../database-engine/new-updated-database-engine.md)
-- [新文章 + 更新文章 (12+1)：**Integration Services for SQL**  文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (0+1)：&nbsp;**Database Engine for SQL **文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (12+1)：**Integration Services for SQL ** 文件](../integration-services/new-updated-integration-services.md)
 - [新文章 + 更新文章 (6+2)：&nbsp;**Linux for SQL** 文件](../linux/new-updated-linux.md)
 - [新文章 + 更新文章 (15+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
-- [新文章 + 更新文章 (2+9)：&nbsp;**Relational Databases for SQL** 文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (2+9)：&nbsp;**Relational Databases for SQL **文件](../relational-databases/new-updated-relational-databases.md)
 - [新文章 + 更新文章 (1+0)：&nbsp;**Reporting Services for SQL** 文件](../reporting-services/new-updated-reporting-services.md)
 - [新文章 + 更新文章 (1+1)：&nbsp;**SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
 - [新文章 + 更新文章 (1+1)：&nbsp;**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
 - [新文章 + 更新文章 (0+1)：&nbsp;**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新文章 + 更新文章 (1+2)：&nbsp;**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新文章 + 更新文章 (0+2)：&nbsp;**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (1+2)：&nbsp;**SQL Server Management Studio (SSMS) **文件](../ssms/new-updated-ssms.md)
+- [新文章 + 更新文章 (0+2)：&nbsp;**Transact-SQL **文件](../t-sql/new-updated-t-sql.md)
 
 
 
@@ -157,7 +157,7 @@ SQL server ODBC 驅動程式 17 加密之前使用 SQLGetData 組件中無法擷
 - [新 + 更新 (0 + 0):**多維度運算式 (MDX) 的 SQL**文件](../mdx/new-updated-mdx.md)
 - [新 + 更新 (0 + 0): **ODBC （開放式資料庫連接） 的 SQL**文件](../odbc/new-updated-odbc.md)
 - [新 + 更新 (0 + 0):**範例 sql**文件](../samples/new-updated-samples.md)
-- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)**文件](../ssma/new-updated-ssma.md)
+- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新 + 更新 (0 + 0): **sql XQuery**文件](../xquery/new-updated-xquery.md)
 
