@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 78e3660935d5969e2a67afed85f295998e496153
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,13 +108,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > 根據預設，Resource Governor 不會在超過最大時間時，阻止要求繼續執行。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[超過 CPU 閾值事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。 
 
 > [!IMPORTANT]
-> 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始 (並使用[追蹤旗標 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md))，Resource Governor 將在超過時間上限時中止要求。
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始，並使用[追蹤旗標 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，Resource Governor 將在超過時間上限時中止要求。
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  指定查詢能夠等待記憶體授權 (工作緩衝區記憶體) 變成可用的最大時間 (以秒為單位)。  
   
 > [!NOTE]  
->  到達記憶體授權的逾時值時，查詢不一定會失敗。 只有當有太多並行的查詢正在執行時，查詢才會失敗。 否則，查詢可能只會得到最小的記憶體授權，導致查詢效能降低。  
+> 到達記憶體授權的逾時值時，查詢不一定會失敗。 只有當有太多並行的查詢正在執行時，查詢才會失敗。 否則，查詢可能只會得到最小的記憶體授權，導致查詢效能降低。  
   
  *value* 必須為正整數。 *value* 的預設值 0 會根據查詢成本使用內部計算來判斷最大時間。  
   
@@ -122,10 +122,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  為平行要求指定平行處理原則的最大程度 (DOP)。 *value* 必須是 0 或正整數 (1 到 255)。 當 *value* 為 0 時，伺服器會選擇平行處理原則的最大程度。 這是預設值且為建議的設定。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 針對 MAX_DOP 所設定的實際值可能會小於指定的值。 最終的值是由公式 min(255, *CPU 的數目)* 所決定。  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 針對 MAX_DOP 所設定的實際值可能會小於指定的值。 最終的值是由公式 min(255, *CPU 的數目)* 所決定。  
   
 > [!CAUTION]  
->  變更 MAX_DOP 可能會對伺服器的效能造成不良影響。 如果您必須變更 MAX_DOP，我們建議您將它設定為小於或等於存在單一 NUMA 節點中之最大硬體排程器數目的值。 我們建議您不要將 MAX_DOP 設定為大於 8 的值。  
+> 變更 MAX_DOP 可能會對伺服器的效能造成不良影響。 如果您必須變更 MAX_DOP，我們建議您將它設定為小於或等於存在單一 NUMA 節點中之最大硬體排程器數目的值。 我們建議您不要將 MAX_DOP 設定為大於 8 的值。  
   
  MAX_DOP 會以下列方式處理：  
   
@@ -148,7 +148,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  搭配 ALTER WORKLOAD GROUP 使用時，"default" 選項必須加上引號 ("") 或方括號 ([]) 才能避免與系統保留字 DEFAULT 產生衝突。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
 > [!NOTE]  
->  "default" 選項會區分大小寫。  
+> "default" 選項會區分大小寫。  
   
 ## <a name="remarks"></a>Remarks  
  在預設群組中允許使用 ALTER WORKLOAD GROUP。  
@@ -160,7 +160,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 -   如果您將 MAX_DOP 從 1 變更為 0 或大於 1 的值，則不需要執行 DBCC FREEPROCCACHE。 不過，序列計畫無法以平行方式執行，因此清除個別的快取將會允許新計劃有可能使用平行處理原則進行編譯。  
   
 > [!CAUTION]  
->  從與超過一個工作負載群組相關聯的資源集區清除已快取的計劃，會影響包含以 *pool_name* 所識別使用者定義資源集區的所有工作負載群組。  
+> 從與超過一個工作負載群組相關聯的資源集區清除已快取的計劃，會影響包含以 *pool_name* 所識別使用者定義資源集區的所有工作負載群組。  
   
  當您要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
@@ -176,7 +176,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ## <a name="examples"></a>範例  
  下列範例顯示如何將預設群組中的要求重要性從 `MEDIUM` 變更為 `LOW`。  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP "default"  
 WITH (IMPORTANCE = LOW);  
 GO  
@@ -186,7 +186,7 @@ GO
   
  下列範例顯示如何將工作負載群組從所屬集區移到預設集區。  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP adHoc  
 USING [default];  
 GO  

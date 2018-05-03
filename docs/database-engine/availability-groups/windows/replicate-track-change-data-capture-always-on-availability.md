@@ -1,7 +1,7 @@
 ---
 title: 複寫、變更追蹤和異動資料擷取 - 可用性群組 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 04/25/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 39f67dedc8724fdff327229fc39d0985e4843cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1036f577a72aa66fd2e91a9ac956fb8d30cbbd35
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>複寫、變更追蹤和異動資料擷取 - AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 04/16/2018
   
      下列範例會建立擷取作業。  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 04/16/2018
   
      為了確保新的主要資料庫會進行適當的清除，一定要建立本機清除作業。 下列範例會建立清除作業。  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 04/16/2018
   
      請使用下列查詢來判斷是否已針對裝載 CDC 資料庫的可用性群組定義了可用性群組接聽程式名稱。 如果已建立可用性群組接聽程式名稱，查詢會傳回它。  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -153,7 +153,7 @@ ms.lasthandoff: 04/16/2018
   
      您可以使用下列查詢，以判斷是否需要唯讀意圖以連接到可讀取次要複本。  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -165,7 +165,7 @@ ms.lasthandoff: 04/16/2018
   
      當 **sp_addlinkedserver** 用於建立連結的伺服器以存取次要複本時， *@datasrc* 參數會用於可用性群組接聽程式名稱或明確伺服器名稱，而 *@provstr* 參數會用於指定唯讀意圖。  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
@@ -207,8 +207,6 @@ ms.lasthandoff: 04/16/2018
   
     -   提取訂閱：發行者、散發者和訂閱者資料庫必須至少是在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 這是因為訂閱者的合併代理程式必須知道可用性群組如何容錯移轉到次要複本。  
   
--   不支援將散發資料庫放置到可用性群組上。  
-  
 -   發行者執行個體必須滿足參與 AlwaysOn 可用性群組所需的所有必要條件。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
   
 ### <a name="restrictions"></a>限制  
@@ -224,7 +222,7 @@ ms.lasthandoff: 04/16/2018
   
  *容錯移轉至複本資料庫是手動程序。 沒有提供自動容錯移轉。  
   
- **散發者資料庫不支援搭配 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像使用。  
+ **散發者資料庫不支援與資料庫鏡像搭配使用。  
   
 ### <a name="considerations"></a>考量  
   

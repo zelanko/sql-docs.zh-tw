@@ -1,7 +1,7 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -28,11 +28,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4331e2c3e4b68a3c439ed72a16f0941068b76802
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b003969b1b42ded9cc0abc86efdc5d9f83b57a3b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +70,10 @@ DATABASEPROPERTYEX ( database , property )
 |IsArithmeticAbortEnabled|在查詢執行期間，當發生溢位或除以零的錯誤時，會停止查詢。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
 |IsAutoClose|在最後一個使用者結束之後，資料庫完整關機並釋出資源。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
 |IsAutoCreateStatistics|查詢最佳化工具會視需要建立單一資料行統計資料來改善查詢效能。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
-|IsAutoCreateStatisticsIncremental|自動建立的單一資料行統計資料會累加 (如果可能)。|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
+|IsAutoCreateStatisticsIncremental|自動建立的單一資料行統計資料會累加 (如果可能)。|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
 |IsAutoShrink|資料庫檔案是自動定期壓縮的候選項。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
 |IsAutoUpdateStatistics|當查詢使用現有的統計資料而且這些統計資料可能已過期時，查詢最佳化工具就會更新這些統計資料。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|
-|IsClone|資料庫僅為使用者資料庫的結構描述及統計資料複本。|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**| 
+|IsClone|資料庫僅為使用 DBCC CLONEDATABASE 所建立之使用者資料庫的結構描述和統計資料複本。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/help/3177838)。|**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**| 
 |IsCloseCursorsOnCommitEnabled|關閉認可交易時在開啟狀態的資料指標。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
 |IsFulltextEnabled|資料庫已啟用全文檢索和語意索引。|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**<br /><br /> **注意：**此屬性的值沒有任何作用。 使用者資料庫一定會啟用全文檢索搜尋。 未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將移除這個資料行。 請勿在新的開發工作中使用此資料行，並且儘速修改目前使用任何一個資料行的應用程式。|  
 |IsInStandBy|資料庫在線上唯讀，允許還原記錄。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
@@ -88,8 +88,10 @@ DATABASEPROPERTYEX ( database , property )
 |IsRecursiveTriggersEnabled|啟用觸發程序的遞迴引發。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
 |IsSubscribed|將資料庫訂閱到發行集中。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
 |IsSyncWithBackup|該資料庫是已發行的資料庫或散發資料庫，並且能在不干擾異動複寫的情況下被還原。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
-|IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 偵測到因為斷電或其他系統失效所造成的不完全 I/O 作業。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**|  
-|IsXTPSupported|指出資料庫是否支援記憶體內部 OLTP，即建立及使用記憶體最佳化資料表和原生編譯模組。<br /><br /> 特定於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 是獨立於任何建立記憶體內部 OLTP 物件所必須之 MEMORY_OPTIMIZED_DATA 檔案群組的存在之外。|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br /> **適用對象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效、發生錯誤或不適用<br /><br /> 基底資料類型：**int**|  
+|IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 偵測到因為斷電或其他系統失效所造成的不完全 I/O 作業。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**| 
+|IsVerifiedClone|資料庫僅為使用 DBCC CLONEDATABASE 之 WITH VERIFY_CLONEDB 選項所建立之使用者資料庫的結構描述和統計資料複本。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/help/3177838)。|**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效<br /><br /> 基底資料類型：**int**| 
+|IsXTPSupported|指出資料庫是否支援記憶體內部 OLTP，即建立及使用記憶體最佳化資料表和原生編譯模組。<br /><br /> 特定於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 是獨立於任何建立記憶體內部 OLTP 物件所必須之 MEMORY_OPTIMIZED_DATA 檔案群組的存在之外。|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 輸入無效、發生錯誤或不適用<br /><br /> 基底資料類型：**int**|  
+|LastGoodCheckDbTime|最後一個成功 DBCC CHECKDB 在指定的資料庫上執行的日期和時間。|**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始。<br /><br /> NULL = 輸入無效<br /><br /> 基底資料型別：**datetime**| 
 |LCID|Windows 的定序地區設定識別碼 (LCID)。|LCID 值 (十進位格式)。<br /><br /> 基底資料類型：**int**|  
 |MaxSizeInBytes|資料庫的大小上限 (以位元組為單位)。|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL = 資料庫未啟動<br /><br /> 基底資料型別：**bigint**|  
 |復原|資料庫的復原模式。|FULL = 完全復原模式<br /><br /> BULK_LOGGED = 大量記錄模式<br /><br /> SIMPLE = 簡單復原模式<br /><br /> 基底資料型別：**nvarchar(128)**|  

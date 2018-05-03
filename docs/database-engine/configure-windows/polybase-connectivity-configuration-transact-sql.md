@@ -21,11 +21,11 @@ ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e2e898fcfce83f0d9d4472271c4eae7fc46bd72
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9317c064d5d083cbe2cf41f3ecd936f16c128277
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 連接組態 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -79,7 +79,7 @@ RECONFIGURE
   
 -   選項 5：Linux 上的 Hortonworks HDP 2.0  
   
--   選項 6：Linux 上的 Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11 及 5.12  
+-   選項 6：Linux 上的 Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11、5.12 和 5.13  
   
 -   選項 7：Linux 上的 Hortonworks 2.1、2.2、2.3、2.4、2.5 和 2.6  
   

@@ -29,16 +29,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b0da42fc1b6a06c0a17f758bf692f065c1e3866c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9ac0d0a9cd8af41eddf90a0aeea85bcf7013ee27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-在運算式中搜尋另一個運算式，並在找到時傳回它的開始位置。
+此函式會在第二個字元運算式內搜尋一個字元運算式，並傳回第一個運算式的開始位置 (如果找到的話)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,25 +50,25 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
   
 ## <a name="arguments"></a>引數  
 *expressionToFind*  
-這是字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，其中包含要尋找的順序。 *expressionToFind* 限制為 8000 個字元。
+包含要尋找之順序的字元 [expression](../../t-sql/language-elements/expressions-transact-sql.md)。 *expressionToFind* 具有 8000 字元限制。
   
 *expressionToSearch*  
-這是要搜尋的字元運算式。
+要搜尋的字元運算式。
   
 *start_location*  
-這是搜尋開始的**整數**或 **bigint** 運算式。 如果未指定 *start_location*，或者它是負數或 0，搜尋就會從 *expressionToSearch* 開頭開始。
+搜尋開始的 **integer** 或 **bigint** 運算式。 如果未指定 *start_location*，或者它是負數或零 (0) 值，則搜尋會從 *expressionToSearch* 開頭開始。
   
 ## <a name="return-types"></a>傳回類型
-若 *expressionToSearch* 的資料類型為 **varchar(max)**、**nvarchar(max)**，或 **varbinary(max)**，則為 **bigint**，否則為 **int**。
+如果 *expressionToSearch* 具有 **nvarchar(max)**、**varbinary(max)** 或 **varchar(max)** 資料類型，則為 **bigint**；否則為 **int**。
   
 ## <a name="remarks"></a>Remarks  
-如果 *expressionToFind* 或 *expressionToSearch* 是 Unicode 資料類型 (**nvarchar** 或 **nchar**)，而其他的不是，則其他的會轉換為 Unicode 資料類型。 CHARINDEX 不得與 **text****ntext**和 **image** 資料類型一起使用。
+如果 *expressionToFind* 或 *expressionToSearch* 運算式具有 Unicode 資料類型 (**nchar** 或 **nvarchar**)，但另一個運算式沒有，則 CHARINDEX 函式會將這個其他運算式轉換成 Unicode 資料類型。 CHARINDEX 不得與 **image**、**ntext** 或 **text** 資料類型搭配使用。
   
-如果 *expressionToFind* 或 *expressionToSearch* 為 NULL，則 CHARINDEX 會傳回 NULL。
+如果 *expressionToFind* 或 *expressionToSearch* 運算式具有 NULL 值，則 CHARINDEX 會傳回 NULL。
   
-如果在 *expressionToSearch*內找不到 *expressionToFind*，則 CHARINDEX 會傳回 0。
+如果在 *expressionToSearch* 內找不到 *expressionToFind*，則 CHARINDEX 會傳回 0。
   
-CHARINDEX 會以輸入的定序為基礎來執行比較。 若要執行指定定序的比較，您可以利用 COLLATE，將明確定序套用至輸入。
+CHARINDEX 會根據輸入定序來執行比較。 若要執行指定定序的比較，請使用 COLLATE，將明確定序套用至輸入。
   
 傳回的開始位置是以 1 為基準，而不是以 0 為基準。
   
@@ -80,7 +80,7 @@ CHARINDEX 會以輸入的定序為基礎來執行比較。 若要執行指定定
 ## <a name="examples"></a>範例  
   
 ### <a name="a-returning-the-starting-position-of-an-expression"></a>A. 傳回運算式的開始位置  
-下列範例會傳回 `bicycle` 字元序列在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `DocumentSummary` 資料表 `Document` 資料行中的起始位置。
+此範例會在已搜尋字串值變數 `@document` 中搜尋 `bicycle`。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ### <a name="b-searching-from-a-specific-position"></a>B. 從特定位置執行搜尋  
-下列範例會利用選擇性的 *start_location* 參數，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `DocumentSummary` 資料行的第五個字元開始搜尋 `vital`。
+此範例會使用選擇性 *start_location* 參數，在已搜尋字串值變數 `@document` 的第五個字元開始搜尋 `vital`。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -119,7 +119,7 @@ GO
 ```  
   
 ### <a name="c-searching-for-a-nonexistent-expression"></a>C. 搜尋不存在的運算式  
-下列範例會顯示當 *expressionToSearch* 內找不到 *expressionToFind* 時的結果集。
+此範例會顯示 CHARINDEX 在 *expressionToSearch* 內找不到 *expressionToFind* 時的結果集。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -140,7 +140,7 @@ GO
 ```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>D. 執行區分大小寫的搜尋  
-下列範例會在 `'This is a Test``'` 中，以區分大小寫的方式搜尋 `'TEST'` 字串。
+此範例會顯示已搜尋字串 `'This is a Test``'` 中字串 `'TEST'` 的區分大小寫搜尋。
   
 ```sql
 USE tempdb;  
@@ -158,7 +158,7 @@ SELECT CHARINDEX ( 'TEST',
 0
 ```  
   
-下列範例會在 `'This is a Test'` 中，以區分大小寫的方式搜尋 `'Test'` 字串。
+此範例會顯示 `'This is a Test'` 中字串 `'Test'` 的區分大小寫搜尋。
   
 ```sql
   
@@ -173,11 +173,11 @@ SELECT CHARINDEX ( 'Test',
   
 ```
 -----------
-13
+11
 ```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>E. 執行不區分大小寫的搜尋  
-下列範例會在 `'TEST'` 中，以不區分大小寫的方式搜尋 `'This is a Test'` 字串。
+此範例會顯示 `'This is a Test'` 中字串 `'TEST'` 的不區分大小寫搜尋。
   
 ```sql
   
@@ -199,7 +199,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-searching-from-the-start-of-a-string-expression"></a>F. 從字串運算式的開頭搜尋  
-下列範例會傳回 `This is a string` 中 `is` 字串的第一個位置，從字串中的位置 1 (第一個字元) 開始。
+此範例會傳回 `This is a string` 字串中 `is` 字串的第一個位置，並且從 `This is a string` 的位置 1 (第一個字元) 開始進行。
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string');  
@@ -213,7 +213,7 @@ SELECT CHARINDEX('is', 'This is a string');
 ```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. 從第一個位置以外的位置執行搜尋  
-下列範例會傳回 `This is a string` 中 `is` 字串的第一個位置，從第四個位置開始。
+此範例會傳回 `This is a string` 字串中 `is` 字串的第一個位置，並從位置 4 開始搜尋。
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string', 4);  
@@ -227,7 +227,7 @@ SELECT CHARINDEX('is', 'This is a string', 4);
  ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>H. 找不到字串時的結果  
-下列範例會顯示在搜尋字串中找不到 *string_pattern* 時的傳回值。
+此範例會顯示 CHARINDEX 在已搜尋字串中找不到 *string_pattern* 字串時的傳回值。
   
 ```sql
 SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;  

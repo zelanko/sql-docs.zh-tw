@@ -26,20 +26,20 @@ ms.author: edmaca
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 750bb88b8446858f4253d072fef829623e70511f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e376fccb023a862a71e61a1437a19028758ad200
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions-transact-sql"></a>彙總函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-彙總函式會根據一組值來執行計算，再傳回單一值。 除了 COUNT，彙總函式會忽略 Null 值。 彙總函式經常用來搭配 SELECT 陳述式的 GROUP BY 子句使用。
+彙總函式會根據一組值來執行計算，並傳回單一值。 除了 `COUNT` 之外，彙總函式會忽略 Null 值。 彙總函式經常用來搭配 SELECT 陳述式的 GROUP BY 子句使用。
   
-所有彙總函式都具有決定性。 這表示每當彙總函式是使用一組特定輸入值來進行呼叫時，它們都會傳回相同的值。 如需函數確定性的詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可能會遵照所有的彙總函式，但是 GROUPING 和 GROUPING_ID 除外。
+所有彙總函式都具有決定性。 換句話說，使用一組特定輸入值呼叫時，彙總函式會在每次呼叫時傳回相同的值。 如需函式確定性的詳細資訊，請參閱[決定性和非決定性函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可能會遵循所有彙總函式，但 GROUPING 和 GROUPING_ID 函式除外。
   
-只有下列情況才能利用彙總函式來作為運算式：
+只有在下列情況下，才能使用彙總函式作為運算式：
 -   SELECT 陳述式的選取清單 (子查詢或外部查詢)。  
 -   HAVING 子句。  
   

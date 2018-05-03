@@ -29,16 +29,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4438a86353a8fdbc6174a718d401656bf05df4fe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 47991654f3d73645737872b0dda53ecc1c5c4052
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-從指定的對應資料表識別碼和資料行識別碼傳回資料行的名稱。
+此函式會根據資料表資料行的資料表識別碼和資料行識別碼值來傳回該資料表資料行的名稱。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,18 +50,18 @@ COL_NAME ( table_id , column_id )
   
 ## <a name="arguments"></a>引數  
 *table_id*  
-這是包含資料行之資料表的識別碼。 *table_id* 的類型為 **int**。
+包含該資料行之資料表的識別碼。 *table_id* 引數具有 **int** 資料類型。
   
 *column_id*  
-這是資料行的識別碼。 *column_id* 參數的類型為 **int**。
+資料行的識別碼。 *column_id* 引數具有 **int** 資料類型。
   
 ## <a name="return-types"></a>傳回類型
 **sysname**
   
 ## <a name="exceptions"></a>例外狀況  
-當發生錯誤，或呼叫端沒有檢視物件的權限時，便會傳回 NULL。
+發生錯誤或呼叫端沒有檢視物件的正確權限時，會傳回 NULL。
   
-使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，COL_NAME) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示，如果使用者沒有物件的正確權限，則發出中繼資料的內建函式 (例如 `COL_NAME`) 可能會傳回 NULL。 如需詳細資訊，請參閱[中繼資料可見性設定](../../relational-databases/security/metadata-visibility-configuration.md)。
   
 ## <a name="remarks"></a>Remarks  
 *table_id* 和 *column_id* 參數會共同產生一個資料行名稱字串。
@@ -69,7 +69,7 @@ COL_NAME ( table_id , column_id )
 如需取得資料表和資料行識別碼的詳細資訊，請參閱 [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
-下列範例會傳回範例 `Employee` 資料表中第一個資料行的名稱。
+此範例會傳回範例 `Employee` 資料表中第一個資料行的名稱。
   
 ```sql
 -- Uses AdventureWorks  

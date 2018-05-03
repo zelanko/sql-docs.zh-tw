@@ -32,11 +32,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75aab8f9b1035e94b65d96319f8589b11e032ecb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b95dfbeb0bc22dd992c4157d35c911c01d2317e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 這是**字元****二進位****文字****ntext**或 **影像**[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是 **character**、**binary**、**text**、**ntext** 或 **image** [expression](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *start*  
  這是指定傳回之字元開始的整數或 **bigint** 運算式。 (編號是以 1 為基礎，這表示運算式中的第一個字元為 1)。 如果 *start* 小於 1，傳回的運算式將會從 *expression* 內指定的第一個字元開始。 在此情況下，傳回的字元數會是 *start* + *length* 的總和 -1 或是 0 (以最大值為準)。 如果 *start* 大於值運算式中的字元數，則會傳回長度為零的運算式。  

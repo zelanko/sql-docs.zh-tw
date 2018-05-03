@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2bf3df5733c9b427f7c34459b95404768d4520d5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bee373167ee406e9383053af0f312925441b8895
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ WAITFOR
  這是在繼續執行批次、預存程序或交易之前，必須經過的指定時段，最多 24 小時。  
   
  '*time_to_pass*'  
- 這是要等待的時間週期。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_pass*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。  
+ 這是要等待的時間週期。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_pass*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。 這會格式化為 hh:mm[[:ss].mss]。
   
  TIME  
  此時執行批次、預存程序或交易時的指定時間。  
   
  '*time_to_execute*'  
- 這是 WAITFOR 陳述式完成的時間。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_execute*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。  
+ 這是 WAITFOR 陳述式完成的時間。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_execute*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。 這會格式化為 hh:mm[[:ss].mss]，而且可以選擇性的包含日期 1900-01-01。
   
  *receive_statement*  
  這是有效的 RECEIVE 陳述式。  

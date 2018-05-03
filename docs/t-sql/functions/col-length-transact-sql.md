@@ -28,16 +28,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0342940a8fb5155439d7ea58640666aa1c5bf85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9e7ff86386eac4bdc30680cc763a2b11e522076c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回資料行的定義長度 (以位元組為單位)。
+此函式傳回資料行的定義長度 (以位元組為單位)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,24 +49,24 @@ COL_LENGTH ( 'table' , 'column' )
   
 ## <a name="arguments"></a>引數  
 **'** *table* **'**  
-這是要判斷資料行長度資訊的資料表名稱。 *table* 是類型為 **nvarchar** 的運算式。
+我們要判斷其資料行長度資訊的資料表名稱。 *table* 是類型為 **nvarchar** 的運算式。
   
 **'** *column* **'**  
-這是要判斷長度的資料行名稱。 *column* 是類型為 **nvarchar** 的運算式。
+我們要判斷其長度的資料行名稱。 *column* 是類型為 **nvarchar** 的運算式。
   
 ## <a name="return-type"></a>傳回類型
 **smallint**
   
 ## <a name="exceptions"></a>例外狀況  
-當發生錯誤，或呼叫端沒有檢視物件的權限時，便會傳回 NULL。
+發生錯誤或呼叫端沒有檢視物件的正確權限時，會傳回 NULL。
   
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，COL_LENGTH) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示，如果使用者沒有物件的正確權限，則發出中繼資料的內建函式 (例如 COL_LENGTH) 可能會傳回 NULL。 如需詳細資訊，請參閱[中繼資料可見性設定](../../relational-databases/security/metadata-visibility-configuration.md)。
   
 ## <a name="remarks"></a>Remarks  
-對於使用 **max** 規範 (**varchar(max)**) 來宣告的 **varchar** 類型資料行，COL_LENGTH 會傳回 -1。
+對於使用 **max** 規範 (**varchar(max)**) 來宣告的 **varchar** 資料行，COL_LENGTH 會傳回值 -1。
   
 ## <a name="examples"></a>範例  
-下列範例會顯示 `varchar(40)` 類型之資料行和 `nvarchar(40)` 類型之資料行的傳回值。
+此範例顯示 `varchar(40)` 類型之資料行以及 `nvarchar(40)` 類型之資料行的傳回值：
   
 ```sql
 USE AdventureWorks2012;  

@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76baefbaf0fc156d782c705e8a81683770bedc68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 041b1bdcc190980d471b48e7525da0fa035d087a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>定序函式 - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中所指定定序的屬性。
+此函式會傳回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中所指定定序的屬性。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,17 +48,17 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>引數  
 *collation_name*  
-這是定序的名稱。 *collation_name* 為沒有預設值的 **nvarchar(128)**。
+定序的名稱。 *collation_name* 引數具有 **nvarchar(128)** 資料類型，而且沒有預設值。
   
 *property*  
-這是定序的屬性。 *property* 為 **varchar(128)**，可以是下列值中的任何一個：
+定序屬性。 *property* 引數具有 **varchar(128)** 資料類型，而且可以有下列任何一個值：
   
 |屬性名稱|描述|  
 |---|---|
-|**CodePage**|定序的非 Unicode 字碼頁。 請參閱 [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx) (附錄 G DBCS/Unicode 對應資料表) 及 [Appendix H Code Pages](https://msdn.microsoft.com/en-us/library/cc195051.aspx) (附錄 H 字碼頁)，以翻譯這些值並查看他們的字元對應。|  
+|**CodePage**|定序的非 Unicode 字碼頁。 請參閱 [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx) (附錄 G DBCS/Unicode 對應資料表) 和 [Appendix H Code Pages](https://msdn.microsoft.com/en-us/library/cc195051.aspx) (附錄 H 字碼頁) 來翻譯這些值，以及查看其字元對應。|  
 |**LCID**|定序的 Windows LCID。 請參閱 [LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx) (LCID 結構)，以翻譯這些值 (您必須先轉換成 **varbinary**)。|  
-|**ComparisonStyle**|Windows 的定序比較樣式。 針對所有二進位定序傳回 0，包括 (\_BIN) 和 (\_BIN2)，以及當所有屬性都區分時。 位元遮罩值：<br /><br /> 忽略大小寫：1<br /><br /> 忽略腔調字：2<br /><br /> 忽略假名：65536<br /><br /> 忽略寬度：131072<br /><br /> 注意：即使它會影響比較行為，variation-selector-sensitive (\_VSS) 選項仍不會在此值中表示。|  
-|**版本(Version)**|定序的版本，衍生自定序識別碼的版本欄位。 傳回 0 到 3 之間的整數值。<br /><br /> 名稱含有 "140" 的定序) 都會傳回 3。<br /><br /> 名稱含有 "100" 的定序) 都會傳回 2。<br /><br /> 名稱含有 "90" 的定序) 都會傳回 1。<br /><br /> 所有其他定序都會傳回 0。|  
+|**ComparisonStyle**|Windows 的定序比較樣式。 針對所有二進位定序，以及所有屬性都區分大小寫時，傳回 0 ((\_BIN) 和 (\_BIN2))。 位元遮罩值：<br /><br /> 忽略大小寫：1<br /><br /> 忽略腔調字：2<br /><br /> 忽略假名：65536<br /><br /> 忽略寬度：131072<br /><br /> 注意：variation-selector-sensitive (\_VSS) 選項仍不會在此值中表示，即使它會影響比較行為也是一樣。|  
+|**版本(Version)**|定序的版本，衍生自定序識別碼版本欄位。 傳回 0 到 3 之間的整數值。<br /><br /> 名稱含有 "140" 的定序) 都會傳回 3。<br /><br /> 名稱含有 "100" 的定序) 都會傳回 2。<br /><br /> 名稱含有 "90" 的定序) 都會傳回 1。<br /><br /> 所有其他定序都會傳回 0。|  
   
 ## <a name="return-types"></a>傳回類型
 **sql_variant**

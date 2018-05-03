@@ -1,7 +1,7 @@
 ---
 title: 動態資料遮罩 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2016
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
@@ -19,11 +19,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a261930d257f4c787a5f28af59d82ee75a7af7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 453399db3852ff7165bfd569a255b16797675fc5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-data-masking"></a>動態資料遮罩
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
 -   使用 `SELECT INTO` 或 `INSERT INTO` 將資料從遮罩的資料行複製到另一個資料表，會讓資料在目標資料表中也有遮罩。  
   
--   執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入與匯出時會套用動態資料遮罩。 包含遮罩資料行的資料庫會導致備份檔案含有遮罩資料 (假設檔案是由不具 **UNMASK** 權限的使用者所匯出)，匯入的資料庫則會包含靜態遮罩的資料。  
+-   執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入與匯出時會套用動態資料遮罩。 包含遮罩資料行的資料庫會導致匯出的資料檔案包含遮罩資料 (假設檔案是由不具 **UNMASK** 權限的使用者所匯出)，而匯入的資料庫則會包含靜態遮罩的資料。  
   
 ## <a name="querying-for-masked-columns"></a>查詢遮罩的資料行  
  使用 **sys.masked_columns** 檢視來查詢已套用遮罩函數的資料表資料行。 此檢視繼承自 **sys.columns** 檢視。 它會傳回 **sys.columns** 檢視中的所有資料行，加上 **is_masked** 和 **masking_function** 資料行，指出資料行是否已遮罩，若已遮罩，則指出定義了哪個遮罩函數。 此檢視只會顯示已套用遮罩函數的資料行。  
