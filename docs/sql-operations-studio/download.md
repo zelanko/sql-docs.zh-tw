@@ -28,7 +28,7 @@ ms.lasthandoff: 04/26/2018
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-|視窗|[安裝程式](https://go.microsoft.com/fwlink/?linkid=872717)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=872718)|2018 年 4 月 25 日 |0.28.6|
+|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=872717)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=872718)|2018 年 4 月 25 日 |0.28.6|
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=872719)|2018 年 4 月 25 日 |0.28.6|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=872722)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=872721)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=872720)|2018 年 4 月 25 日 |0.28.6|
 
@@ -137,8 +137,8 @@ ms.lasthandoff: 04/26/2018
 - Windows Server 2008 R2 (64 位元)
 
 ### <a name="macos"></a>macOS
-- macOS 10.13 高利也
-- macOS 10.12 利也
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
 - Red Hat Enterprise Linux 7.4
