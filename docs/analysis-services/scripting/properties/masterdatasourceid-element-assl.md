@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,9 +26,9 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 1aa8d850bb77b4bba7ff3bcb0d08a8cb231e4b06
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 868bd8d56553f976915728c3ef59260f8c338cf0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

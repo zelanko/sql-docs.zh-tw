@@ -3,13 +3,10 @@ title: 修改結果集資料範例 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
@@ -17,9 +14,9 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e4ac751149738d25e84a3a6da81ba8a4bc7811b2
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 6538e5019f13d5f69b9b2606d051b916cc9145e8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -33,13 +30,13 @@ ms.lasthandoff: 05/03/2018
  \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \samples\resultsets  
   
 ## <a name="requirements"></a>需求  
- 若要執行此範例應用程式，您必須將 Classpath 設定為包含 sqljdbc.jar 檔案或 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc.jar 或 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 您也會需要存取[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。  
+ 若要執行此範例應用程式，您必須將 Classpath 設定為包含 sqljdbc.jar 檔案或 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc.jar 或 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 您也需要擁有 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的存取權。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供 sqljdbc.jar 和 sqljdbc4.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 sqljdbc.jar 和 sqljdbc4.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定使用。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="example"></a>範例  
- 在下列範例中，範例程式碼會連接到[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫。 然後，使用 SQL 陳述式與[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)物件，然後執行 SQL 陳述式，並將它傳回成為可更新的 SQLServerResultSet 物件的資料放。  
+ 在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的連線。 然後，使用 SQL 陳述式與[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)物件，然後執行 SQL 陳述式，並將它傳回成為可更新的 SQLServerResultSet 物件的資料放。  
   
  接著，範例程式碼會使用[moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)方法來移動的結果集資料指標來插入資料列中，使用一系列的[updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)方法，以將資料插入新的資料列，然後再呼叫[insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md)方法，將新的回資料庫的資料列。  
   

@@ -28,13 +28,12 @@ caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a6b6cb757e2944df8a0e50e6e63a1f58cedda11
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 82efa511456eb0340ba2bb717ff9d15acbfbd8f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -83,9 +82,9 @@ ms.lasthandoff: 04/26/2018
 |**sql_memory_model**|**int**|**適用於：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />指定所使用的記憶體模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置記憶體。 不可為 Null。<br /><br />1 = 傳統記憶體模型<br />2 = 鎖定記憶體分頁<br /> 3 = 記憶體中的大型分頁|
 |**sql_memory_model_desc**|**nvarchar(120)**|**適用於：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />指定所使用的記憶體模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置記憶體。 不可為 Null。<br /><br />**傳統** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置的記憶體使用傳統記憶體模式。 這是預設 sql 記憶體模型時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶中並沒有鎖定的分頁記憶體的權限在啟動期間。<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用鎖定分頁記憶體中配置記憶體。 SQL Server 服務帳戶在 SQL Server 啟動期間記憶體的權限擁有鎖定的分頁時，這是預設 sql 記憶體管理員。<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用大型分頁記憶體中配置記憶體。 SQL Server 會使用大型分頁配置器配置記憶體，只能使用 Enterprise edition 時 SQL Server 服務帳戶會持有記憶體的權限鎖定分頁在伺服器啟動期間與追蹤旗標 834 已開啟。|
 |**pdw_node_id**|**int**|**適用於：** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
-|**socket_count** |**int** | **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />在系統上指定可用的處理器插槽的數目。 |  
-|**cores_per_socket** |**int** | **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />指定系統上的每個通訊端可用的處理器數目。 |  
-|**numa_node_count** |**int** | **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />指定系統上的可用的 numa 節點數目。 此資料行包含實體 numa 節點，以及軟體 numa 節點。 |  
+|**socket_count** |**int** | **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />在系統上指定可用的處理器插槽的數目。 |  
+|**cores_per_socket** |**int** | **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />指定系統上的每個通訊端可用的處理器數目。 |  
+|**numa_node_count** |**int** | **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />指定系統上的可用的 numa 節點數目。 此資料行包含實體 numa 節點，以及軟體 numa 節點。 |  
   
 ## <a name="permissions"></a>Permissions
 

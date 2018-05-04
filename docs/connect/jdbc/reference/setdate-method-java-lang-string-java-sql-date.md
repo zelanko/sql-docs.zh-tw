@@ -3,13 +3,10 @@ title: setDate 方法 setDate 方法的日期值的字串 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e84290b6cfb3462e94e6a47b29e032e5cbf992aa
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 8a06dc5093726c43075a4a9bd2c59c9a5843c710
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -44,7 +41,7 @@ public void setDate(java.lang.String sCol,
 #### <a name="parameters"></a>參數  
  *sCol*  
   
- A**字串**，其中包含參數名稱。  
+ 包含參數名稱的**字串**。  
   
  *D*  
   

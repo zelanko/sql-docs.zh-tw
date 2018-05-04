@@ -1,11 +1,9 @@
 ---
 title: 索引鍵集資料指標 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88772fa9ede31acdf5b719cec7cb9311b15cb864
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6abebe52390c8c3423cd3c41f212236e051e1972
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keyset-cursors"></a>索引鍵集資料指標
 索引鍵集資料指標偵測變更的能力提供靜態和動態資料指標之間的功能。 類似靜態資料指標，它不一定偵測的變更的成員資格和順序的結果集。 動態資料指標，例如它沒有在結果集中偵測變更的資料列的值。  

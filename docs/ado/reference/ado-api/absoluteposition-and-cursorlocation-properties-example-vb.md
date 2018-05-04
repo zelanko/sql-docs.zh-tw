@@ -1,11 +1,9 @@
 ---
 title: AbsolutePosition 和 CursorLocation 屬性範例 (VB) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c9124f0ec3b45541efc2c550d96208109f6d5ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4df1c4c4555c03b87b7cb4e8de37846fb41e76d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 和 CursorLocation 屬性範例 (VB)
 這個範例會示範如何[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)屬性可以追蹤列舉的所有記錄迴圈的進度[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它會使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性來啟用**AbsolutePosition**屬性，方法是將資料指標設定為用戶端資料指標。  

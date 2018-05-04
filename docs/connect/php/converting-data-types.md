@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 43d8b34fc03761d84803cea49a57bd6954dbe0a8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8130e90e5320489acb79bd8351986564f8fa95c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-types"></a>轉換資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -25,12 +25,11 @@ caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d4e4e80e84c0231b083120dd5bf462a926869787
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d7e36df67db10b423557384576f39a751531656e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +55,12 @@ sp_detach_db [ @dbname= ] 'database_name'
  這是要卸離的資料庫名稱。 *database_name*是**sysname**值，預設值是 NULL。  
   
  [ **@skipchecks =** ] **'***skipchecks***'**  
- 指定要跳過或執行 UPDATE STATISTIC。 *skipchecks*是**nvarchar （10)**值，預設值是 NULL。 若要略過 UPDATE STATISTICS，指定**true**。 若要明確執行 UPDATE STATISTICS，請指定**false**。  
+ 指定要跳過或執行 UPDATE STATISTIC。 *skipchecks*是**nvarchar （10)** 值，預設值是 NULL。 若要略過 UPDATE STATISTICS，指定**true**。 若要明確執行 UPDATE STATISTICS，請指定**false**。  
   
  根據預設，系統會執行 UPDATE STATISTICS 來更新資料表和索引之資料的相關資訊。 對於要移至唯讀媒體的資料庫而言，執行 UPDATE STATISTICS 很有用。  
   
  [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- 指定在資料庫卸離作業期間，將不卸除與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*是**nvarchar （10)**值預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的全文檢索索引的所有檔案和全文檢索索引的中繼資料會卸除，除非資料庫為唯讀。 如果是 NULL 或**true**，全文檢索相關中繼資料會保留。  
+ 指定在資料庫卸離作業期間，將不卸除與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*是**nvarchar （10)** 值預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的全文檢索索引的所有檔案和全文檢索索引的中繼資料會卸除，除非資料庫為唯讀。 如果是 NULL 或**true**，全文檢索相關中繼資料會保留。  
   
 > [!IMPORTANT]  
 >  **@keepfulltextindexfile**的未來版本將移除參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  

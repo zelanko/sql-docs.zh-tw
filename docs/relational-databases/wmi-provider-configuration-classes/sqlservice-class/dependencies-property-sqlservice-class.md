@@ -24,12 +24,11 @@ caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e86c35b30e25dfdd5388352337842a1e24585e3f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 76534d5d3803ba8b17d8cca57538d266e5fdf73c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

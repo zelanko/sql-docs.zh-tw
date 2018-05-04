@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: ffa983a749245022d0815906fe8e17850f9aabdf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f628360e5396bfa8ad46085ed668b59557e0371b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Set_Expression2*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
- *計數*  
+ *Count*  
  有效的數值運算式，會指定要傳回的集合數目。  
   
 ## <a name="remarks"></a>備註  
@@ -59,7 +58,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
 > [!IMPORTANT]  
 >  這個函數已被取代，您不應該使用它；僅供回溯相容性予以保留。 相反地，您應該使用[Exists (MDX)](../mdx/exists-mdx.md)與量值群組名稱引數的函式或[NonEmpty (MDX)](../mdx/nonempty-mdx.md)函式。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

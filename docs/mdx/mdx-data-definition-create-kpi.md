@@ -1,15 +1,15 @@
 ---
-title: "CREATE KPI 陳述式 (MDX) |Microsoft 文件"
-ms.custom: 
+title: CREATE KPI 陳述式 (MDX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE KPI
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - CREATE KPI statement
 - key performance indicators [MDX]
 ms.assetid: 87618fef-95e5-4dd0-a650-aeb60ccbddcb
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6a97fbc894a0b88511ab551aa231fcfb3746d52c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b3174d2be856d3d2956ced0d8ee34aaeb0a872d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 資料定義-建立 KPI
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -96,22 +95,22 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |圖形的用法|KPI 圖形的名稱|狀態的數目|  
 |--------------------|-------------------------|----------------------|  
-|[狀態]|圖形|3|  
-|[狀態]|號誌燈|3|  
-|[狀態]|道路標誌|3|  
-|[狀態]|量測計|3|  
-|[狀態]|反向量測計|5|  
-|[狀態]|溫度計|3|  
-|[狀態]|圓柱|3|  
-|[狀態]|笑臉|3|  
-|[狀態]|變異箭頭|3|  
+|狀態|圖形|3|  
+|狀態|號誌燈|3|  
+|狀態|道路標誌|3|  
+|狀態|量測計|3|  
+|狀態|反向量測計|5|  
+|狀態|溫度計|3|  
+|狀態|圓柱|3|  
+|狀態|笑臉|3|  
+|狀態|變異箭頭|3|  
 |趨勢|標準箭頭|3|  
 |趨勢|狀態箭頭|3|  
 |趨勢|反向狀態箭頭|5|  
 |趨勢|笑臉|3|  
   
-## <a name="see-also"></a>請參閱  
- [DROP KPI 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-kpi.md)   
- [MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [DROP KPI 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
+ [MDX 資料定義陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

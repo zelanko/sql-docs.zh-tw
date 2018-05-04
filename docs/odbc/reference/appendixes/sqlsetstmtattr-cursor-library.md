@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8dd285982ff1483a38673a6e06ecb3293e503782
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 625766f464013c9b116df77dbc6298b72e00058f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr （資料指標程式庫）
 > [!IMPORTANT]  

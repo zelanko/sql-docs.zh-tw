@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e3329d1f5990edae9805538d6e9c5e4c563b028
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f057dd64e65a60fd168acc72903e45e604967621
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlbindcol"></a>使用 SQLBindCol
 藉由呼叫應用程式繫結的資料行**SQLBindCol**。 此函式會將一個資料行繫結一次。 有了它，應用程式指定下列工作：  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
   
  例如，下列程式碼會繫結變數的銷售人員和 CustID 資料行。 資料行的資料將會傳回*業務員*和*CustID*。 因為*業務員*是字元緩衝區中，應用程式指定的位元組長度 (11)，讓驅動程式可以判斷是否要截斷的資料。 傳回的位元組長度的標題，或是否為 NULL，將會傳回*SalesPersonLenOrInd*。  
   
- 因為*CustID*整數變數，且具有固定長度，不需要指定其位元組長度，則驅動程式會假設它是**sizeof (**SQLUINTEGER**)**。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為位元組長度一律為**sizeof (**SQLUINTEGER**)**。  
+ 因為*CustID*整數變數，且具有固定長度，不需要指定其位元組長度，則驅動程式會假設它是**sizeof (** SQLUINTEGER **)**。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為位元組長度一律為**sizeof (** SQLUINTEGER **)**。  
   
 ```  
 SQLCHAR       SalesPerson[11];  

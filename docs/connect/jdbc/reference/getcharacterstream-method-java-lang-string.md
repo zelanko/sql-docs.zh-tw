@@ -3,13 +3,10 @@ title: getCharacterStream 方法 (java.lang.String) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba664e17502528c530ee5bc866e0c1e42c3fa8df
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 52cdfa3a4fdc594d03692e6cd8befa4bbc95a40a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
 #### <a name="parameters"></a>參數  
  *columnName*  
   
- A**字串**，其中包含資料行名稱。  
+ 包含資料行名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
  讀取器物件。  

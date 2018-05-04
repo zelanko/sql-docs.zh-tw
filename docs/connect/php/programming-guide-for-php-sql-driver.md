@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d930c8764225543ac5659f7cb791d309119e7661
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bdf45719cbb7b2fe8bd23535674e2e1a0d66cb2d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

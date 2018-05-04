@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arguments in catalog functions [ODBC]
 - catalog functions [ODBC], arguments
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f46b286a929d261b1cf1c608fefccd5f266b92b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 81eb0874d8737ec76736bf4caffb8e646bee29cb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arguments-in-catalog-functions"></a>目錄函數中的引數
 所有類別目錄函式接受引數與應用程式可以限制傳回的資料範圍。 例如，第一個和第二個呼叫**SQLTables**在下列程式碼會傳回包含所有的資料表的相關資訊，而第三個呼叫會傳回 Orders 資料表的相關資訊的結果集：  

@@ -3,26 +3,22 @@ title: 尋找其他 JDBC 驅動程式的資訊 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a081b0f7e45b4842af5af9fa2ac194935ffc7d49
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 98894a9fc311f115eb0b7a9d3ccf9583b2037631
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>尋找其他 JDBC 驅動程式資訊
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c0b56bfd04724c8506b5ba0fe7b5fd01a57a02e7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6c0e8e41468636254288186c5b9f810514c7fdee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>釋放陳述式控制代碼 ODBC
 如先前所述，會重複使用比卸除它們並配置新的陳述式更有效率。 然後再執行新的 SQL 陳述式的陳述式，應該確定目前的陳述式設定適合應用程式。 這些包括陳述式屬性、參數繫結，以及結果集繫結。 一般來說，參數和舊的 SQL 陳述式的結果集必須為未繫結 (藉由呼叫**SQLFreeStmt** SQL_RESET_PARAMS 和 SQL_UNBIND 選項) 和重新繫結為新的 SQL 陳述式。  

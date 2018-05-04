@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8461d1d883bde3315a11861b9951c477c797ce93
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56a51063d97ae2f5ac2c528f594c11938b18310
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
  [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  這是您要更新之原則類別目錄訂閱的識別碼。 *policy_category_subscription_id*是**int**，而且需要。  
   
- [ **@target_type=** ] **'**target_type**'**  
+ [ **@target_type=** ] **'** target_type **'**  
  這是類別目錄訂閱的目標類型。 *target_type*是**sysname**，預設值是 NULL。  
   
  如果您指定*target_type*，值必須設定為 'DATABASE'。  
   
- [ **@target_object=** ] **'**target_object**'**  
+ [ **@target_object=** ] **'** target_object **'**  
  是將要訂閱原則類別目錄資料庫的名稱。 *target_object*是**sysname**，預設值是 NULL。  
   
- [ **@policy_category=** ] **'**policy_category**'**  
+ [ **@policy_category=** ] **'** policy_category **'**  
  這是您希望資料庫訂閱的原則類別目錄名稱。 *policy_category*是**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

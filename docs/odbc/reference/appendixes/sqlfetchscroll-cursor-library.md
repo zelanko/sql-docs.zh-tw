@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLFetchScroll function [ODBC], Cursor Library
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
@@ -19,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 014ed6202023a87d074faa7a746aa7f06fff04a7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c25dea43ebc36b5ab3ec0f941083695de2674928
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll （資料指標程式庫）
 > [!IMPORTANT]  

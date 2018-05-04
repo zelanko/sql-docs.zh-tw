@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL grammar [ODBC], about SQL grammar
 ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 930786258b532262eb6d00a2d2c3583e304b34b0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: df0229c2fbea0b16a1df2d50192e1643c9164620
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-c-sql-grammar"></a>附錄 c: SQL 文法
 本附錄包含下列主題。  

@@ -9,16 +9,15 @@ ms.suite: sql
 ms.custom: ''
 ms.technology:
 - drivers
-ms.topic: article
+ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.workload: Inactive
-ms.openlocfilehash: a736fc5dafc3c58401c54ab51d1a11d1753f3479
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ba55069430198661a4454269afd12db6c21bd24d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idle-connection-resiliency"></a>閒置連接恢復功能
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

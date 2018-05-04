@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - importing data [ODBC]
 - FoxPro ODBC driver [ODBC], Excel
@@ -23,12 +23,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0fac6cd5b43f83f447f7ad1c8082243f5bc9491f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fa6da8abaca5b3b14c48bc4324a50301d5a36d87
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Visual FoxPro 資料庫中的 Microsoft Excel 將資料匯入
 如果您已經為它定義的資料來源，您可以 Visual FoxPro 資料匯入您的 Microsoft Excel 工作表。 建立 Visual FoxPro 資料來源的相關資訊，請參閱[從 Microsoft Excel 中存取 Visual FoxPro 資料來源](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)。  

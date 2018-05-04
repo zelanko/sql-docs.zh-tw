@@ -24,12 +24,11 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 223065b249eee4d6468e965f7626c7febe656011
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 290c794ac4800800c3abef1263cd0e8717163ead
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +66,10 @@ sp_add_log_shipping_secondary_primary
  這是主要伺服器的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
  [ **@backup_source_directory** = ] '*backup_source_directory*'  
- 用於儲存主要伺服器之交易記錄備份檔的目錄。 *backup_source_directory*是**nvarchar （500)**不能是 NULL。  
+ 用於儲存主要伺服器之交易記錄備份檔的目錄。 *backup_source_directory*是**nvarchar （500)** 不能是 NULL。  
   
  [ **@backup_destination_directory** =] '*backup_destination_directory*'  
- 備份檔要複製到其中的次要伺服器目錄。 *backup_destination_directory*是**nvarchar （500)**不能是 NULL。  
+ 備份檔要複製到其中的次要伺服器目錄。 *backup_destination_directory*是**nvarchar （500)** 不能是 NULL。  
   
  [ **@copy_job_name** = ] '*copy_job_name*'  
  用於將交易記錄備份複製到次要伺服器中，所建立之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業所用的名稱。 *copy_job_name*是**sysname**不能是 NULL。  

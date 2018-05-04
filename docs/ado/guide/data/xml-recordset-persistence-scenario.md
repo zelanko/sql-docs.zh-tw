@@ -1,11 +1,9 @@
 ---
 title: XML 資料錄集持續性案例 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4aa455c004305f1350fef0006ba1986932ea692c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0676644c7429d73d551b65fa56c2203025734b38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-recordset-persistence-scenario"></a>持續性案例中 XML 資料錄集
 在此案例中，您將建立資料錄集物件的內容直接將 ASP 回應物件的 Active Server Pages (ASP) 應用程式。  

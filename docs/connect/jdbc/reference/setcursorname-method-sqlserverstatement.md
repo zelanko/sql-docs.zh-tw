@@ -3,13 +3,10 @@ title: setCursorName 方法 (SQLServerStatement) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 432684c052faff1ea79c1976f8c0792be9ec70d5
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 884228f5c98eb1a451a73936401bfa2135c710c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -34,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   將 SQL 資料指標名稱設定為給定的字串，此字串將由後續 execute 方法使用。  
   
 > [!NOTE]  
->  這個方法目前不支援由[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 呼叫這個方法無效。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支援這個方法。 呼叫這個方法無效。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +43,7 @@ public final void setCursorName(java.lang.String name)
 #### <a name="parameters"></a>參數  
  *name*  
   
- A**字串**，其中包含資料指標名稱。  
+ 包含資料指標的**字串**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

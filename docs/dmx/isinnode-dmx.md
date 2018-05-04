@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 60957fe0ef3afde1734b3945b197f961f844c0a9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5db634f9fdffc8792ab72523f59f886ddb37b442
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ IsInNode(<NodeID>)
  Boolean 類型。  
   
 ## <a name="remarks"></a>備註  
- **IsInNode**僅用於[SELECT FROM &#60; 模式 &#62;。案例 &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)和[SELECT FROM &#60; 模式 &#62;。SAMPLE_CASES &#40; DMX &#41;](../dmx/select-from-model-sample-cases-dmx.md)查詢。  
+ **IsInNode**僅用於[SELECT FROM&#60;模型&#62;。案例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)和[SELECT FROM&#60;模型&#62;。SAMPLE_CASES &#40;DMX&#41; ](../dmx/select-from-model-sample-cases-dmx.md)查詢。  
   
 ## <a name="examples"></a>範例  
  下列範例根據 IsInNode 函數中指定的節點相關聯的模型，傳回建立此模型的案例。  
@@ -55,9 +54,9 @@ Select * from [TM Decision Tree].Cases
 WHERE IsInNode('0')  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

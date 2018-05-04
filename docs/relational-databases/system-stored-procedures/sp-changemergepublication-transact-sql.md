@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e17a010a96c669e7f8363634a135bdaa9e7be892
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,8 +104,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|同步處理未最佳化，而當資料分割的資料有了改變時，就會驗證傳給訂閱者的資料分割。 變更這個屬性需要新的快照集。|  
 |**max_concurrent_merge**||這是**int**表示可以針對發行集執行的並行合併處理序的數目上限。 如果這個值是 0，表示沒有限制。如果排程同時執行的合併處理超出這個數目，超出的作業便會放在佇列中，等到目前的合併處理完成為止。|  
 |**max_concurrent_dynamic_snapshots**||這是**int** ，代表產生已篩選的資料快照集工作階段的最大數目的快照集可同時執行針對合併式發行集使用參數化資料列篩選器。 如果**0**，沒有任何限制。 如果排程同時執行的快照集處理超出這個數目，超出的作業便會放在佇列中，等到目前的合併處理完成為止。|  
-|**post_snapshot_script**||指定指向**.sql**檔案位置。 在初始同步處理期間，散發代理程式或合併代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。 變更這個屬性需要新的快照集。|  
-|**pre_snapshot_script**||指定指向**.sql**檔案位置。 當在訂閱者端套用快照集時，合併代理程式會在任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。 變更這個屬性需要新的快照集。|  
+|**post_snapshot_script**||指定指向 **.sql**檔案位置。 在初始同步處理期間，散發代理程式或合併代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。 變更這個屬性需要新的快照集。|  
+|**pre_snapshot_script**||指定指向 **.sql**檔案位置。 當在訂閱者端套用快照集時，合併代理程式會在任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。 變更這個屬性需要新的快照集。|  
 |**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 ||**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**publish_to_activedirectory**|**true**|這個參數已被取代，支援它的目的，只是為了與舊版的指令碼相容。 您不能再將發行集資訊加入 Active Directory 中。|  

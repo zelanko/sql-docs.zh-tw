@@ -1,10 +1,9 @@
 ---
-title: '&gt;（大於）(MDX) |Microsoft 文件'
+title: '&gt; （大於）(MDX) |Microsoft 文件'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,14 +22,13 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f60f464114d9ff0c2bf51257d03ec9e0952a7a7f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6d82e6fb8d2c10c88ba8e8a7945f93b3278f9656
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="gt-greater-than-mdx"></a>&gt;（大於）(MDX)
+# <a name="gt-greater-than-mdx"></a>&gt; （大於）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   執行比對作業，判定某個多維度運算式 (MDX) 運算式的值是否大於另一個 MDX 運算式的值。  
@@ -76,7 +74,7 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

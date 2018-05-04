@@ -3,7 +3,6 @@ title: 資料表屬性 |Microsoft 文件
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -18,9 +17,9 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 8a7d8a364f34aef91042679d4f83cb6dbec8a5b7
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 93428051e5d3c38281be540a44d0413e965bfc0b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

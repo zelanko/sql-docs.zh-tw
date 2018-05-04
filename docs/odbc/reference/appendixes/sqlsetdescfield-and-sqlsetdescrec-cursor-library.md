@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
@@ -20,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2129b4dffc162eb342bf18de345943146a34c633
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 822e6c0e2d71c24261372224d3832e3c001e616f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField 和 SQLSetDescRec （資料指標程式庫）
 > [!IMPORTANT]  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
  資料指標程式庫執行呼叫**SQLSetDescRec**書籤資料行。  
   
- 當使用的 ODBC 2。*x*驅動程式，資料指標程式庫會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度） 時**SQLSetDescField**或**SQLSetDescRec**呼叫以設定 SQL_DESC_OCTET_值不等於 4 ARD 的書籤記錄的長度欄位。 使用 ODBC 3 時*.x*驅動程式，資料指標程式庫會允許任何大小的緩衝區。  
+ 當使用的 ODBC 2。*x*驅動程式，資料指標程式庫會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度） 時**SQLSetDescField**或**SQLSetDescRec**呼叫以設定 SQL_DESC_OCTET_值不等於 4 ARD 的書籤記錄的長度欄位。 使用 ODBC 3 時 *.x*驅動程式，資料指標程式庫會允許任何大小的緩衝區。  
   
  資料指標程式庫執行**SQLSetDescField**當呼叫它來傳回 SQL_DESC_BIND_OFFSET_PTR、 SQL_DESC_BIND_TYPE、 SQL_DESC_ROW_ARRAY_SIZE 或 SQL_DESC_ROW_STATUS_PTR 欄位的值。 這些欄位可傳回的任何資料列，而不只是書籤的資料列。  
   

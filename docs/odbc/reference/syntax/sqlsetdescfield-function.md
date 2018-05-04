@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetDescField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee9cd8b485584d863e7eac942a7c81792bb22bd7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函數
 **一致性**  
@@ -99,7 +98,7 @@ SQLRETURN SQLSetDescField(
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
 |HY016|無法修改實作資料列描述項|*DescriptorHandle*引數以前是相關聯的 IRD 和*FieldIdentifier*引數不是 SQL_DESC_ARRAY_STATUS_PTR 或 SQL_DESC_ROWS_PROCESSED_PTR。|  
 |HY021|不一致的描述項資訊|SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位並非來自有效的 ODBC SQL 類型的有效驅動程式專屬 SQL 型別 （Ipd) 或有效的 ODBC C 類型 （適用於 Apd 或 ARDs）。<br /><br /> 檢查一致性檢查期間的描述項資訊不一致。 (請參閱中的 「 一致性檢查 」 **SQLSetDescRec**。)|  
-|HY090|字串或緩衝區長度無效|(DM)  *\*ValuePtr*是字元字串，並*Columnsize*小於零，但不是等於 SQL_NTS。<br /><br /> (DM) 驅動程式為 ODBC 2*.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，而且指定的引數的值*Columnsize*已不等於 4。|  
+|HY090|字串或緩衝區長度無效|(DM)  *\*ValuePtr*是字元字串，並*Columnsize*小於零，但不是等於 SQL_NTS。<br /><br /> (DM) 驅動程式為 ODBC 2 *.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，而且指定的引數的值*Columnsize*已不等於 4。|  
 |HY091|無效的描述項欄位識別碼|指定的值*FieldIdentifier*引數不是 ODBC 定義的欄位，且不實作定義的值。<br /><br /> *FieldIdentifier*引數無效*DescriptorHandle*引數。<br /><br /> *FieldIdentifier*引數以前是唯讀、 ODBC 定義的欄位。|  
 |HY092|屬性/選項識別碼無效|中的值 *\*ValuePtr*對無效*FieldIdentifier*引數。<br /><br /> *FieldIdentifier*引數以前是 SQL_DESC_UNNAMED，和*ValuePtr*已 SQL_NAMED。|  
 |HY105|無效的參數類型|(DM) 指定 SQL_DESC_PARAMETER_TYPE 欄位的值無效。 (如需詳細資訊，請參閱 「*了*引數 」 一節中**SQLBindParameter**。)|  
@@ -422,7 +421,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_LENGTH [All]**  
  這個 SQLULEN 記錄欄位是以字元為單位的字元字串的最大或實際長度或二進位資料類型，以位元組為單位。 它是固定長度的資料類型的最大長度或可變長度資料類型的實際長度。 其值永遠不包括結束的字元字串的 null 終止字元。 型別是 SQL_TYPE_DATE、 SQL_TYPE_TIME、 SQL_TYPE_TIMESTAMP，或其中一個 SQL 間隔資料類型的值，此欄位會有以字元為單位的字元字串表示法，將日期時間或間隔值的長度。  
   
- 此欄位中的值可能會與 「 長度 」 做為 ODBC 2 中定義的值不同*.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能會與 「 長度 」 做為 ODBC 2 中定義的值不同 *.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
  這個唯讀 SQLCHAR * 記錄欄位包含驅動程式會辨識為此資料類型的常值的前置詞的字元。 此變數包含空字串資料類型的常值前置詞不適用。  
@@ -468,7 +467,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_PRECISION [All]**  
  此 SQLSMALLINT 記錄欄位包含的是精確數值類型，（二進位精確度） 的近似數值類型，則表示尾數的位元數目或 SQL_TYPE_TIME SQL_TYPE 的小數秒數元件中的數字的數字的位數_TIMESTAMP 或 SQL_INTERVAL_SECOND 資料型別。 這個欄位是未定義的所有其他資料類型。  
   
- 此欄位中的值可能是"precision"做為 ODBC 2 中定義的值不同*.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能是"precision"做為 ODBC 2 中定義的值不同 *.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_ROWVER [實作描述元]**  
  這個 SQLSMALLINTrecord 欄位會指示是否修改資料行是自動由 DBMS 時 （例如，類型"timestamp"SQL Server 中的資料行） 更新資料列。 此記錄欄位的值會設定為 SQL_TRUE，如果資料行是資料列版本設定資料行，以及 SQL_FALSE 否則。 這個資料行屬性是類似於呼叫**SQLSpecialColumns** IdentifierType 的 SQL_ROWVER 來判斷是否會自動更新的資料行使用。  
@@ -476,7 +475,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **[All] SQL_DESC_SCALE**  
  此 SQLSMALLINT 記錄欄位包含 decimal 和 numeric 資料類型的定義小數位數。 此欄位是未定義的所有其他資料類型。  
   
- 此欄位中的值可能會與 「 刻度 」 ODBC 2 中所定義的值不同*.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能會與 「 刻度 」 ODBC 2 中所定義的值不同 *.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
  這個唯讀 SQLCHAR * 記錄欄位包含基底資料表包含資料行的結構描述名稱。 傳回值是驅動程式而定，如果資料行是運算式或資料行是檢視的一部分。 如果資料來源不支援結構描述，或無法判斷結構描述名稱，此變數包含空字串。  
@@ -484,11 +483,11 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_SEARCHABLE [IRDs]**  
  這個唯讀 SQLSMALLINT 記錄欄位設定為下列值之一：  
   
--   如果資料行不能在 SQL_PRED_NONE**其中**子句。 (這是 ODBC 2 SQL_UNSEARCHABLE 值相同*.x*。)  
+-   如果資料行不能在 SQL_PRED_NONE**其中**子句。 (這是 ODBC 2 SQL_UNSEARCHABLE 值相同 *.x*。)  
   
--   如果資料行可以用於 SQL_PRED_CHAR**其中**子句只與**像**述詞。 (這是 ODBC 2 SQL_LIKE_ONLY 值相同*.x*。)  
+-   如果資料行可以用於 SQL_PRED_CHAR**其中**子句只與**像**述詞。 (這是 ODBC 2 SQL_LIKE_ONLY 值相同 *.x*。)  
   
--   如果資料行可以用於 SQL_PRED_BASIC**其中**子句以外的所有比較運算子搭配**像**。 (這是 ODBC 2 SQL_EXCEPT_LIKE 值相同*.x*。)  
+-   如果資料行可以用於 SQL_PRED_BASIC**其中**子句以外的所有比較運算子搭配**像**。 (這是 ODBC 2 SQL_EXCEPT_LIKE 值相同 *.x*。)  
   
 -   如果資料行可以用於 SQL_PRED_SEARCHABLE**其中**子句搭配任何比較運算子。  
   

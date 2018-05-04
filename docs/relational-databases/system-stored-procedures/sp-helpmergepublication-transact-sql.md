@@ -24,12 +24,11 @@ caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d5005db95a4153259dd000cda87823368255a722
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 078bdbd13ee0a7bf9f846779b41aa71cabbf590d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +53,10 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [ @publication **=** ] **'***發行集***'**  
  發行集的名稱。 *發行集*是**sysname**，預設值是**%**，傳回目前資料庫中所有合併式發行集的相關資訊。  
   
- [ @found **=** ] **'***找到***'**輸出  
+ [ @found **=** ] **'***找到***'** 輸出  
  這是指示傳回資料列的旗標。 *找到*是**int**和一個 OUTPUT 參數，預設值是 NULL。 **1**表示找到發行集。 **0**指出找不到發行集。  
   
- [ @publication_id **=**] **'***publication_id***'**輸出  
+ [ @publication_id **=**] **'***publication_id***'** 輸出  
  這是發行集識別碼。 *publication_id*是**uniqueidentifier**和一個 OUTPUT 參數，預設值是 NULL。  
   
  [ @reserved **=**] **'***保留***'**  
@@ -93,8 +92,8 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |has_subscription|**bit**|指示發行集是否有任何訂閱。 **0**表示目前沒有任何訂閱這個發行集。|  
 |snapshot_in_default_folder|**bit**|指定是否將快照集檔案儲存在預設資料夾中。<br /><br /> 如果**1**，可以在預設資料夾中找到快照集檔案。<br /><br /> 如果**0**，快照集檔案會儲存在所指定的替代位置**alt_snapshot_folder**。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。<br /><br /> 注意： 這個參數可以是 true，仍有位置**alt_snapshot_folder**參數。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。|  
 |alt_snapshot_folder|**nvarchar(255)**|指定快照集替代資料夾的位置。|  
-|pre_snapshot_script|**nvarchar(255)**|指定指向**.sql**套用訂閱者端快照集時，指令碼檔案合併代理程式之前，執行任何複寫的物件。|  
-|post_snapshot_script|**nvarchar(255)**|指定指向**.sql**檔案，合併代理程式會執行在所有其他複寫物件指令碼和資料的初始同步處理期間，套用。|  
+|pre_snapshot_script|**nvarchar(255)**|指定指向 **.sql**套用訂閱者端快照集時，指令碼檔案合併代理程式之前，執行任何複寫的物件。|  
+|post_snapshot_script|**nvarchar(255)**|指定指向 **.sql**檔案，合併代理程式會執行在所有其他複寫物件指令碼和資料的初始同步處理期間，套用。|  
 |compress_snapshot|**bit**|指定可寫入快照集**alt_snapshot_folder**位置壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。|  
 |ftp_address|**sysname**|這是散發者之 FTP 服務的網路位址。 指定發行集快照集檔案所在的位置，以便合併代理程式能夠加以收取。|  
 |ftp_port|**int**|這是散發者的 FTP 服務通訊埠編號。 **ftp_port**具有預設值是**21**。 指定發行集快照集檔案所在的位置，以便合併代理程式能夠加以收取。|  

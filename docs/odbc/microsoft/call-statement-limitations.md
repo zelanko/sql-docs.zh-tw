@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CALL statement limitations [ODBC]
 - ODBC SQL grammar, CALL statement limitations
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cd9dfffc0ada1cfde10246cc1c8cc51279ce0dff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2f1890d68d6c2a93c2039c642cb9910e83ac22f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="call-statement-limitations"></a>呼叫陳述式的限制
 （這項限制適用於 Microsoft Access 驅動程式只）。  

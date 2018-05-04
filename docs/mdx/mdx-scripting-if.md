@@ -20,12 +20,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 67376067c26a3eae41d0c090a141367fcf5cc396
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0a46aa0480b83727aeb0a9882745ff9221b992c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---if"></a>MDX 指令碼-如果
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ IF expression THEN assignment END IF
  將值指派給 Subcube 或導出屬性的 MDX 運算式。  
   
 ## <a name="remarks"></a>備註  
- 使用 IF 陳述式的控制流程中，這是與不同的是[IIf &#40;MDX &#41;](../mdx/iif-mdx.md)函式和[CASE 陳述式 &#40;MDX &#41;](../mdx/case-statement-mdx.md) ，只可用來傳回值或物件。  
+ 使用 IF 陳述式的控制流程中，這是與不同的是[IIf &#40;MDX&#41; ](../mdx/iif-mdx.md)函式和[CASE 陳述式&#40;MDX&#41; ](../mdx/case-statement-mdx.md) ，只可用來傳回值或物件。  
   
 ## <a name="examples"></a>範例  
  在下列範例中，範圍限制在 Customers 維度之 Customers Geography 階層的 Country 層級。 如果目前的量值是 Internet Sales Amount，則 Internet Sales Amount 會設定為 10：  
@@ -58,7 +57,7 @@ IF expression THEN assignment END IF
   
  `END SCOPE`;  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

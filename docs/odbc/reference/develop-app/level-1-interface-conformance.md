@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: faae1bf56dd28f83fa3fec5c340bcf67c302def3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 522476043c86b26bc617f13a0704d07c7990e1cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="level-1-interface-conformance"></a>層級 1 介面一致性
 層級 1 介面一致性層級包含核心介面一致性層級功能，以及其他功能，例如 OLTP 關聯式 DBMS 中通常可用的交易。 層級 1 介面標準驅動程式可讓應用程式執行下列作業，除了核心介面的一致性層級中的功能：  

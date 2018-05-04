@@ -3,13 +3,10 @@ title: setAsciiStream 方法來輸入資料流位元組-長時間） |Microsoft 
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
@@ -17,9 +14,9 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc27260a8052dddbb167eeba110945d00e80a200
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5e1fc8cd3b54ad78bdfea395f7fd6c7b6724a429
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -40,7 +37,7 @@ public final void setAsciiStream(java.lang.String parameterName,
 #### <a name="parameters"></a>參數  
  *參數名稱*  
   
- A**字串**，其中包含參數名稱。  
+ 包含參數名稱的**字串**。  
   
  *x*  
   

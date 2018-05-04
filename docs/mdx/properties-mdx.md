@@ -22,12 +22,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1931694b7054dec03c45617867ccf4a68575fd09
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ebfef6e411c6360212251460a9d8fc51e20d9173
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  成員屬性名稱的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- **屬性**函式會傳回指定的成員屬性的指定成員的值。 成員屬性可以是任何內建成員屬性，例如**名稱**，**識別碼**，**金鑰**，或**標題**，也可以是使用者自訂成員屬性。 如需詳細資訊，請參閱[內建成員屬性 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)和[使用者自訂成員屬性 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ **屬性**函式會傳回指定的成員屬性的指定成員的值。 成員屬性可以是任何內建成員屬性，例如**名稱**，**識別碼**，**金鑰**，或**標題**，也可以是使用者自訂成員屬性。 如需詳細資訊，請參閱[內建成員屬性&#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)和[使用者自訂成員屬性&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)。  
   
  依預設，值會強制轉型成字串。 如果**具型別**指定，則傳回值強型別。  
   
@@ -118,8 +117,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [使用成員屬性 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [使用成員屬性 & #40;MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

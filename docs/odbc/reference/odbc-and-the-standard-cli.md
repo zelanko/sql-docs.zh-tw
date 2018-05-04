@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], CLI
 - CLI [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef863329a0f0c8a7c7b8aaef6f55717fbbc1f638
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4d1b9654979f7c71ce1b3c8d238e62e056e75264
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 和標準 CLI
 ODBC 對齊下列規格和處理的呼叫層級介面 (CLI) 標準。 （ODBC 功能是每個這些標準的超集）。  
@@ -41,7 +40,7 @@ ODBC 對齊下列規格和處理的呼叫層級介面 (CLI) 標準。 （ODBC �
   
 -   若要開啟 群組和 ISO CLI 規格所撰寫的應用程式將會使用 ODBC 3。*x*驅動程式或標準相容的驅動程式編譯時與 ODBC 3。*x*標頭檔，並連結到 ODBC 3。*x*程式庫，以及當它所獲得的存取權的驅動程式透過 ODBC 3。*x*驅動程式管理員。  
   
--   寫入的 Open Group 和 ISO CLI 規格的驅動程式將會使用 ODBC 3*.x*應用程式或標準相容的應用程式編譯時與 ODBC 3*.x*標頭檔和連結ODBC 3*.x*文件庫和應用程式時取得存取權的驅動程式透過 ODBC 3*.x*驅動程式管理員。 (如需詳細資訊，請參閱[符合標準的應用程式和驅動程式](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
+-   寫入的 Open Group 和 ISO CLI 規格的驅動程式將會使用 ODBC 3 *.x*應用程式或標準相容的應用程式編譯時與 ODBC 3 *.x*標頭檔和連結ODBC 3 *.x*文件庫和應用程式時取得存取權的驅動程式透過 ODBC 3 *.x*驅動程式管理員。 (如需詳細資訊，請參閱[符合標準的應用程式和驅動程式](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
   
  核心介面的一致性層級包含 ISO CLI 中的所有功能以及在開啟 CLI 中群組的所有 nonoptional 功能。 開啟群組 CLI 個選擇性功能會出現在較高的介面一致性層級。 因為所有的 ODBC 3。*x*驅動程式所需的核心介面的一致性層級中支援的功能，下列條件成立：  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1ba90a54159f126e49148de8a8425e74d02e148d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bb9f4ec6fbc2e6aecff8d78ff562f35f9a546405
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interoperability-of-sql-statements"></a>SQL 陳述式的互通性
 應用程式的其餘部分，如同互通或 DBMS 專屬，可以是 SQL 陳述式。 和應用程式的其餘部分，例如選擇的方式可互通的 SQL 陳述式必須為應用程式類型而定。 自訂應用程式不太可能使用互通的 SQL 陳述式，因為它們通常設計為利用一個或兩個可能的 Dbms 功能。 泛型應用程式使用互通的 SQL 陳述式，因為它們設計來搭配各種不同的 Dbms。 和垂直應用程式通常落在某處之間，要求特定層級的功能，但其他方式使用互通的 SQL 陳述式。  

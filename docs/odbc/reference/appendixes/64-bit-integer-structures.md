@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], 64-bit integer structures
 - data types [ODBC], C data types
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8760b771b4ef44f2728c0947504c46a3f7d28910
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a0f228bcaa8ec51491e2dad169e9e4cee88481f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="64-bit-integer-structures"></a>64 位元整數的結構
 SQL_C_SBIGINT 和 SQL_C_UBIGINT 資料類型識別項在 Microsoft C 編譯器的 C 類型是 _int64。 使用其他比 Microsoft （) C 編譯器的編譯器時，C 類型可能會不同。 如果編譯器原生支援 64 位元整數，驅動程式或應用程式應該定義 ODBCINT64 原生 64 位元整數型別。 編譯器不原生支援 64 位元整數，如果應用程式或驅動程式可以定義下列的結構，以確定它擁有這項資料的存取：  

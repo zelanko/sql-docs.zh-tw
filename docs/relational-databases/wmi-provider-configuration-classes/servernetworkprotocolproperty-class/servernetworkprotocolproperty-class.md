@@ -23,12 +23,11 @@ caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cb3f4f60e655bcaf8a9beb43b28ff87b48fb9c2e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f827ff6bc96d019f1500073822af9c1736df1396
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

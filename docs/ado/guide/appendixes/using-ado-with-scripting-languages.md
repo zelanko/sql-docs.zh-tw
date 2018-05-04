@@ -1,11 +1,9 @@
 ---
 title: 使用 ADO 搭配指令碼語言 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d3187ca8ddc47f4a48e982a5061d429a7f7a5738
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 070cfacfad680fbf0664ad5dc6bc3a01aed99520
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>使用 ADO 搭配指令碼語言
 在指令碼環境中，ADO 可讓您公開資料透過伺服器端指令碼。 在此案例中，ADO 中，基礎 OLE DB 提供者，它使用，而且參考指定的資料存放區所需的其他元件安裝在執行網際網路資訊服務 (IIS) 的伺服器。 ADO 使用 Active Server Pages (ASP)，是可以產生 HTML，例如指令碼中參考的元件。 這個 HTML 內容可以透過 HTTP 傳遞至用戶端 Web 瀏覽器。 使用指令碼，網頁就可以將動作傳送回伺服器端指令碼，可讓您以更新、 周遊，或檢視特定資料。  

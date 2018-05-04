@@ -23,12 +23,11 @@ caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05731087009d1f1ab444c7f740889ee441bb99a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 777d035c3b37f3e8f8eb5e329fe6d19152cced6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>搭配伺服器事件的 WMI 提供者使用 WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ WHERE where_condition
   
  WMI Provider for Server Events 會使用由下而上 (Bottom-Up)、最先合適 (First-Fit) 演算法，針對基礎 EVENT NOTIFICATION 產生最小的可能範圍。 此種演算法會嘗試將伺服器上的內部活動以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和 WMI 主機處理序之間的網路傳輸量降至最低。 提供者會檢查*event_type*指定在 FROM 子句中，在 WHERE 子句條件，並嘗試使用最少的可能範圍註冊基礎事件通知。 如果提供者不能以最窄的範圍註冊，就會嘗試以連續的較高範圍註冊，直到註冊終於成功為止。 如果在達到最高的範圍 (伺服器層級) 時仍舊失敗，就會對取用者傳回錯誤。  
   
- 例如，如果 DatabaseName =**'**AdventureWorks**'**在 WHERE 子句中，提供者會嘗試註冊事件通知中的指定[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。 如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫存在，而且呼叫用戶端具有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中建立事件通知的必要權限，註冊作業就會成功， 否則系統會嘗試在伺服器層級註冊事件通知。 如果 WMI 用戶端擁有必要的權限，註冊就會成功。 不過，在此種情況下，在建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之前，不會對用戶端傳回事件。  
+ 例如，如果 DatabaseName =**'** AdventureWorks **'** 在 WHERE 子句中，提供者會嘗試註冊事件通知中的指定[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。 如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫存在，而且呼叫用戶端具有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中建立事件通知的必要權限，註冊作業就會成功， 否則系統會嘗試在伺服器層級註冊事件通知。 如果 WMI 用戶端擁有必要的權限，註冊就會成功。 不過，在此種情況下，在建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之前，不會對用戶端傳回事件。  
   
  *Where_condition*也可以當做篩選，將此外限制到特定的資料庫、 結構描述或物件查詢。 例如，請看下列的 WQL 查詢：  
   

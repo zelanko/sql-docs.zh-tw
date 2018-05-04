@@ -24,13 +24,12 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8d8e8616e919f3d457572aced700b65ea0a21ec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4b66d18d3d367620f8a09934b80298ffa14601ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,18 +51,18 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 ## <a name="arguments"></a>引數  
  [ @pktable_name=] '*b l e _*'  
- 這是用來傳回目錄資訊的資料表名稱，含主索引鍵。 *b l e _*是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*fktable_name*必須提供參數，或兩者。  
+ 這是用來傳回目錄資訊的資料表名稱，含主索引鍵。 *b l e _* 是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*fktable_name*必須提供參數，或兩者。  
   
  [ @pktable_owner=] '*pktable_owner*'  
  是用來傳回目錄資訊之資料表 （含主索引鍵） 的擁有者名稱。 *pktable_owner*是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*pktable_owner*未指定，套用基礎 dbms 的預設資料表可見性規則。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*pktable_owner*未指定目前使用者並未擁有含有指定的資料表和*b l e _*，程序會尋找具有指定的資料表*ble_*資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*pktable_owner*未指定目前使用者並未擁有含有指定的資料表和*b l e _*，程序會尋找具有指定的資料表*ble_* 資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
   
  [ @pktable_qualifier =] '*pktable_qualifier*'  
  這是資料表 (含主索引鍵) 限定詞的名稱。 *pktable_qualifier*是 sysname，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*q*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [ @fktable_name=] '*fktable_name*'  
- 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的名稱。 *fktable_name*是 sysname，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*b l e _*必須提供參數，或兩者。  
+ 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的名稱。 *fktable_name*是 sysname，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*b l e _* 必須提供參數，或兩者。  
   
  [ @fktable_owner =] '*fktable_owner*'  
  這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的擁有者名稱。 *fktable_owner*是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*fktable_owner*未指定，套用基礎 dbms 的預設資料表可見性規則。  

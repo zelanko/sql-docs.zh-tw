@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 02a337c32f3dcea132edb7ae60559b7edfd467d7
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 2abdbca69149765402415f2af8d1165119172e8d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>建立伺服器連接檔案 (AccessToSQL)
 伺服器的資訊可以是指定的指令碼檔案的 [伺服器] 區段中。 伺服器的資訊也可以指定不同的伺服器連接檔案中。 伺服器連接檔案的命令列參數是`-c <serverconnectionfile>`。 如果指令碼和伺服器的連接檔案中出現相同的伺服器識別碼，則會被視為指令碼檔案中的伺服器定義。  

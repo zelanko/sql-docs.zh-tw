@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLInstallDriverEx
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 85c6bcc740743473e8563fc3c3c25e967caff095
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 427a72ebdf63df7bb8d3d1ef93f306c9167782d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 函式
 **一致性**  
@@ -106,9 +105,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>註解  
  *LpszDriver*引數是一份關鍵字-值組表單中的屬性。 每一對 null 位元組，以終止，並將整個清單終止 null 位元組。 （也就是兩個 null 位元組標記清單的結尾）。此清單的格式如下所示：  
   
- *驅動程式 desc* **\\**0Driver**=***驅動程式 DLL-檔名***\\**0 [安裝程式**=***安裝程式-DLL filename***\\**0]  
+ *驅動程式 desc* **\\** 0Driver**=***驅動程式 DLL-檔名***\\** 0 [安裝程式**=***安裝程式-DLL filename***\\** 0]  
   
- [*驅動程式-attr-keyword1***=***value1 ***\\**0] [*驅動程式-attr-keyword2***=***value2 ***\\**0]...**\\**0  
+ [*驅動程式-attr-keyword1***=*** value1 ***\\** 0] [* 驅動程式-attr-keyword2***=*** value2 ***\\** 0]...**\\** 0  
   
  \0 所在 null 位元組和*驅動程式-attr-keywordn*任何驅動程式屬性的關鍵字。 關鍵字必須出現在指定的順序。 例如，假設格式化的文字檔案的驅動程式具有不同的驅動程式和安裝程式的 Dll，而且可以使用.txt 和.csv 副檔名的檔案。 *LpszDriver*引數，此驅動程式的可能，如下所示：  
   

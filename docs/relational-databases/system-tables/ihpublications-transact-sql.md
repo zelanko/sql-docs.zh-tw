@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8041914733509d89ed6d17084ae30df5817e3505
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5c1f28e6a594a97882bb122f310d77f857414fc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ ms.lasthandoff: 04/16/2018
 |**autogen_sync_procs**|**bit**|指定是否在發行者端產生立即更新訂閱的同步處理預存程序。 **1**表示在發行者端產生它。 *不支援非 SQL 發行者。*|  
 |**snapshot_in_defaultfolder**|**bit**|指定是否將快照集檔案儲存在預設資料夾中。 如果**0**，快照集檔案已儲存在所指定的替代位置*alternate_snapshot_folder*。 如果**1**，可以在預設資料夾中找到快照集檔案。|  
 |**alt_snapshot_folder**|**nvarchar(510)**|指定快照集替代資料夾的位置。|  
-|**pre_snapshot_script**|**nvarchar(510)**|指定指向**.sql**檔案位置。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。|  
-|**post_snapshot_script**|**nvarchar(510)**|指定指向**.sql**檔案位置。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。|  
+|**pre_snapshot_script**|**nvarchar(510)**|指定指向 **.sql**檔案位置。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。|  
+|**post_snapshot_script**|**nvarchar(510)**|指定指向 **.sql**檔案位置。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。|  
 |**compress_snapshot**|**bit**|指定可寫入快照集*alt_snapshot_folder*位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 **0**指定不壓縮快照集。|  
 |**ftp_address**|**sysname**|散發者之 FTP 服務的網路位址。 指定發行集快照集檔案所在的位置，以便散發代理程式能夠加以收取。|  
 |**ftp_port**|**int**|散發者的 FTP 服務通訊埠編號。 指定發行集快照集檔案所在的位置，以便散發代理程式能夠加以收取|  

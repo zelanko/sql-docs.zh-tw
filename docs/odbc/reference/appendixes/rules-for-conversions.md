@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], literals
 - conversions with numeric literals [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0e1feb5f75561d95d65cde069f135b9d24c53186
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 38d4fa50d82cf81b47dc50c44410d9e47ca3dfe5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rules-for-conversions"></a>轉換規則
 本節中的規則適用於包含數值常值轉換。 這些規則的目的，會定義下列詞彙：  
@@ -36,13 +35,13 @@ ms.lasthandoff: 04/16/2018
   
 -   *擷取指派：*若干應用程式緩衝區，從資料庫擷取資料時。 呼叫期間發生此錯誤**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，和**SQLSetPos**。 在擷取指派 「 目標 」 是指應用程式緩衝區和 「 來源 」 是指資料庫資料行。  
   
--   *CS:*字元來源中的值。  
+-   *CS:* 字元來源中的值。  
   
--   *NT:*數值目標中的值。  
+-   *NT:* 數值目標中的值。  
   
--   *NS:*數值來源中的值。  
+-   *NS:* 數值來源中的值。  
   
--   *CT:*字元目標中的值。  
+-   *CT:* 字元目標中的值。  
   
 -   確切的數值常值的有效位數： 它所包含的位數。  
   

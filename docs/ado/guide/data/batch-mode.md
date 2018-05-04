@@ -1,11 +1,9 @@
 ---
 title: 批次模式 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9fadf4744517b2de4e756e6e6167d8615419a25
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 941c331c28cf5d1469b063b882bad23610a5605d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="batch-mode"></a>批次模式
 批次模式就是作用中時**LockType**屬性設定為**Adlockpessimistic**和提供者所支援批次更新。 無法使用資料指標位置根據特定鎖定類型的設定。 比方說，封閉式鎖定就無法使用類型時**CursorLocation**設**adUseClient**。 相反地，當游標位置是在伺服器上的提供者無法支援批次的開放式鎖定。 您應該使用批次使用索引鍵集或靜態資料指標更新。  

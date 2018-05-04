@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -22,12 +21,11 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a984e654c14f4ee5b65d49a88dc911b082682581
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: eec542f62d71f8d5974e7eae2d703b6e49646559
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>尋找資料庫精靈 （選取檔案） (AccessToSQL)
 [尋找資料庫精靈] 的 [選取檔案] 頁面上會列出在搜尋中找到的檔案。 若要選取要加入至 SSMA 檔案，請選取包含檔案名稱的資料列。 當您完成選取的檔案，請按一下**下一步**若要檢視 [確認選取] 頁面。  

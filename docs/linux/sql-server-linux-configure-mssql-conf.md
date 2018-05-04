@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.workload: On Demand
-ms.openlocfilehash: 7ff775907a9f34d635c7ecf23965ce2ef96179f6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: a4fb6b68c0e52fc6728ed5483cbae1c8742a6d6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>設定 SQL Server on Linux mssql conf 工具
 

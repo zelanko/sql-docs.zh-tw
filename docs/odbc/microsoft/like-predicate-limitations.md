@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LIKE predicate limitations [ODBC]
 - ODBC SQL grammar, LIKE predicate limitations
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 73e4ec1b4177b02869939628cb408df500958694
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cff5bf10c05a85baeb9ad6f36b620785e8e8bab8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="like-predicate-limitations"></a>像述詞限制
 如果資料行中的長度超過 255 個字元，LIKE 比較會根據只有前 255 個字元。  

@@ -26,20 +26,19 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fd0986b83ee1f4fa98408e15b500330060c7f254
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e863fa532fab1baa07e5a95b37ca127404176589
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對每一個排程要非同步 (背景) 執行的查詢處理器作業，各傳回一個資料列。  
   
-> **注意！！** 若要呼叫從**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]**或**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**，使用名稱**sys.dm_pdw_nodes_exec_background_job_queue**。  
+> **注意！！** 若要呼叫從**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** 或**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**，使用名稱**sys.dm_pdw_nodes_exec_background_job_queue**。  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  

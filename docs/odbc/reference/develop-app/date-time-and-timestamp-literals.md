@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
@@ -19,17 +19,16 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9b9102d2c54c308304ea326d5a3a710a7703f275
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 19cc77adb85cca9aa2c273c02f3090bc2ae0ae19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、 時間和時間戳記常值
 日期、 時間和時間戳記常值的逸出序列是  
   
- **{***-類型* **'** *值* **'}**   
+ **{***-類型* **'** *值* **'}**  
   
  其中*常值型別*其中一個值列於下表。  
   

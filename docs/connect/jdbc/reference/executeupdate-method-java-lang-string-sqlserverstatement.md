@@ -3,13 +3,10 @@ title: executeUpdate 方法 (java.lang.String) (SQLServerStatement) |Microsoft �
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e5a05bc78ec035352c7784ecdb5a24da89d354b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 148f2887e01d5238ac7461f4922eea77af599bdd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -46,7 +43,7 @@ public int executeUpdate(java.lang.String sql)
  A**字串**，其中包含 SQL 陳述式。  
   
 ## <a name="return-value"></a>傳回值  
- **Int** ，指出資料列受到影響或 0 的數目，如果使用 DDL 陳述式。  
+ **int** 會指出受影響的資料列數目，如果是使用 DDL 陳述式，則為 0。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -54,10 +51,10 @@ public int executeUpdate(java.lang.String sql)
 ## <a name="remarks"></a>備註  
  這個 executeUpdate 方法是由 java.sql.Statement 介面中的 executeUpdate 方法指定。  
   
- 如果執行預存程序會導致更新計數大於一，或是產生多個結果集，使用[執行](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)方法才能執行預存程序。  
+ 如果執行預存程序產生的更新計數大於一或是產生一個以上的結果集，請使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法執行預存程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [executeUpdate 方法&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
+ [executeUpdate 方法 &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
