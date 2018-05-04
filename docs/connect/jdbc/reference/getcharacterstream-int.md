@@ -3,13 +3,10 @@ title: getCharacterStream (int) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3686731ffe8545f764f984d19666d4ad3207fc13
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 18a17cf39c0ef058bcd250d1b6f4d2af4c09843a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public final java.io.Reader getCharacterStream(int paramIndex)
 #### <a name="parameters"></a>參數  
  *paramIndex*  
   
- **Int** ，指出參數索引。  
+ 指出參數索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
  讀取器物件。  

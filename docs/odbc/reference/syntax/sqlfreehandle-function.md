@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeHandle
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 41ed0af53844edfe55203e8310ce326fb2c4e2b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 函數
 **一致性**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLFreeHandle**釋出特定的環境、 連接、 陳述式或描述項控制代碼相關聯的資源。  
   
 > [!NOTE]  
->  此函式會釋放控制代碼的泛型函式。 它會取代 ODBC 2.0 函式**SQLFreeConnect** （適用於釋放連接控制代碼） 和**SQLFreeEnv** （適用於釋放環境控制代碼）。 **SQLFreeConnect**和**SQLFreeEnv**都不再支援的 ODBC 3*.x*。 **SQLFreeHandle**也會取代 ODBC 2.0 函式**SQLFreeStmt** (與 SQL_DROP*選項*) 釋放陳述式控制代碼。 如需詳細資訊，請參閱 「 註解。 」 如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3*.x*應用程式使用 ODBC 2*.x*驅動程式，請參閱[向後的對應取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
+>  此函式會釋放控制代碼的泛型函式。 它會取代 ODBC 2.0 函式**SQLFreeConnect** （適用於釋放連接控制代碼） 和**SQLFreeEnv** （適用於釋放環境控制代碼）。 **SQLFreeConnect**和**SQLFreeEnv**都不再支援的 ODBC 3 *.x*。 **SQLFreeHandle**也會取代 ODBC 2.0 函式**SQLFreeStmt** (與 SQL_DROP*選項*) 釋放陳述式控制代碼。 如需詳細資訊，請參閱 「 註解。 」 如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3 *.x*應用程式使用 ODBC 2 *.x*驅動程式，請參閱[向後的對應取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -90,7 +89,7 @@ SQLRETURN SQLFreeHandle(
 |HY017|使用自動配置描述項控制代碼無效。|(DM)*處理*引數設定為自動配置描述項的控制代碼。|  
 |HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|連接逾時過期|連接逾時期限過期之前對要求回應資料來源。 連接逾時期限透過設定**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此函式|(DM) *HandleType*引數是 SQL_HANDLE_DESC，且驅動程式的 ODBC 2*.x*驅動程式。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT，且驅動程式不是有效的 ODBC 驅動程式。|  
+|IM001|驅動程式不支援此函式|(DM) *HandleType*引數是 SQL_HANDLE_DESC，且驅動程式的 ODBC 2 *.x*驅動程式。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT，且驅動程式不是有效的 ODBC 驅動程式。|  
   
 ## <a name="comments"></a>註解  
  **SQLFreeHandle**用來釋放控制代碼的環境、 連接、 陳述式，以及描述元，如下列各節中所述。 如需控制代碼的一般資訊，請參閱[控點](../../../odbc/reference/develop-app/handles.md)。  
@@ -116,7 +115,7 @@ SQLRETURN SQLFreeHandle(
  呼叫**SQLFreeHandle**與*HandleType* SQL_HANDLE_DESC 的釋放中的描述項控制代碼*處理*。 若要呼叫**SQLFreeHandle**不會釋放任何可能由指標欄位 （包括 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 參考的應用程式所配置任何記憶體描述項記錄的*處理*。 非指標欄位的欄位的驅動程式所配置的記憶體釋放控制代碼已釋放時。 當使用者配置描述項控制代碼已釋放時，釋放控制代碼必須與相關聯的所有陳述式會還原成其各自的自動配置描述項控制代碼。  
   
 > [!NOTE]  
->  ODBC 2*.x*驅動程式不會支援釋放描述項控制代碼，就如同它們不支援配置描述項控制代碼。  
+>  ODBC 2 *.x*驅動程式不會支援釋放描述項控制代碼，就如同它們不支援配置描述項控制代碼。  
   
  請注意， **SQLDisconnect**會自動在連接上卸除任何陳述式與開啟的描述。 當應用程式會釋放陳述式控制代碼時，驅動程式會釋放該控制代碼相關聯的所有自動產生描述元。  
   

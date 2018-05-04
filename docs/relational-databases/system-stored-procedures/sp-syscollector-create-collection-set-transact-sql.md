@@ -25,12 +25,11 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1e2aa88ff030e3fb938fdd00808d10c3c8b6cac9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3b958d236f24d36bddca9ed9e51d4cac92aef29e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_syscollector_create_collection_set
  *名稱*必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
   
  [  **@target =** ] '*目標*'  
- 保留供日後使用。 *名稱*是**nvarchar （128)**預設值是 NULL。  
+ 保留供日後使用。 *名稱*是**nvarchar （128)** 預設值是 NULL。  
   
  [ **@collection_mode =** ] *collection_mode*  
  指定收集資料和儲存資料的方式。 *collection_mode*是**smallint** ，而且可以有下列值之一：  
@@ -120,7 +119,7 @@ sp_syscollector_create_collection_set
  預設值為*logging_level*為 1。  
   
  [  **@description =** ] '*描述*'  
- 這是收集組的描述。 *描述*是**nvarchar （4000)**預設值是 NULL。  
+ 這是收集組的描述。 *描述*是**nvarchar （4000)** 預設值是 NULL。  
   
  [ **@collection_set_id =** ] *collection_set_id*  
  這是收集組的唯一本機識別碼。 *collection_set_id*是**int**與輸出，且需要。  

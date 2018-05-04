@@ -24,12 +24,11 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d88193ced1dede073870ff319dedd8c63066ec48
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b99de3d2329479fa190336c25d53e201f77d8cb9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangepublicationsnapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +133,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  這是排程停止快照集代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*是**int**，預設值是 NULL。  
   
  [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
- 這是在使用現有作業時，現有快照集代理程式作業的名稱。 *snapshot_agent_name*是**nvarchar （100)**預設值是 NULL。  
+ 這是在使用現有作業時，現有快照集代理程式作業的名稱。 *snapshot_agent_name*是**nvarchar （100)** 預設值是 NULL。  
   
  [  **@publisher_security_mode =** ] *publisher_security_mode*  
  這是當連接到發行者時使用的安全性模式。 *publisher_security_mode*是**smallint**，預設值是 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，以及**1**指定 Windows 驗證。 值為**0**必須指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  

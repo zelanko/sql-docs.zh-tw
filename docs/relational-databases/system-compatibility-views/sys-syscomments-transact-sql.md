@@ -27,12 +27,11 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 375c289c67f951b68255d67d4092a02f343587b1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9cb69062f30a60a95d2aa844ed05a9a5af4082c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/16/2018
 |**語言**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**加密**|**bit**|指出程序定義是否會模糊化。<br /><br /> 0 = 不模糊化<br /><br /> 1 = 模糊化<br /><br /> **\*\* 重要\* \*** 模糊化預存程序定義，請使用 CREATE PROCEDURE 搭配 ENCRYPTION 關鍵字。|  
 |**compressed**|**bit**|永遠傳回 0。 這表示程序已經壓縮。|  
-|**text**|**nvarchar(4000)**|SQL 定義陳述式的實際文字。<br /><br /> 已解碼運算式的語意相當於原始文字，但是不能保證語法相同。 例如，空白字元會從已解碼的運算式移除。<br /><br /> 這[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-相容檢視會從目前取得資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構，並可傳回多個下列字元**nvarchar （4000)**定義。 **sp_help**傳回**nvarchar （4000)**做為文字資料行資料類型。 當使用**syscomments**請考慮使用**nvarchar （max)**。 新的開發工作，請勿使用**syscomments**。|  
+|**text**|**nvarchar(4000)**|SQL 定義陳述式的實際文字。<br /><br /> 已解碼運算式的語意相當於原始文字，但是不能保證語法相同。 例如，空白字元會從已解碼的運算式移除。<br /><br /> 這[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-相容檢視會從目前取得資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構，並可傳回多個下列字元**nvarchar （4000)** 定義。 **sp_help**傳回**nvarchar （4000)** 做為文字資料行資料類型。 當使用**syscomments**請考慮使用**nvarchar （max)**。 新的開發工作，請勿使用**syscomments**。|  
   
 ## <a name="see-also"></a>另請參閱  
  [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

@@ -1,11 +1,9 @@
 ---
 title: 傳回一個資料錄集的 JScript 程式碼範例 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da6823bb218311000b8e3ca58d28cc412e8d51fd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 72710505bbe435ab7ddc52eef45b51c3dea886fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>JScript 程式碼範例會傳回一個資料錄集
 ## <a name="jscript-code-rsjs"></a>JScript 程式碼 (rs.js)  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], selecting driver
 - connecting to data source [ODBC], selecting data source
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e2bc882cce58654e45f803972820e2ef6615783
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ea84e234291056901c9d759e9aa206301a24641
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-a-data-source-or-driver"></a>選擇資料來源或驅動程式
 資料來源或應用程式所使用的驅動程式是有時候硬式編碼應用程式中。 比方說，自訂撰寫的應用程式所要傳送 MIS 部門會包含這些資料來源的名稱，到另一個資料來源資料，應用程式只會無法搭配任何其他資料來源。 另一個範例是垂直應用程式，例如其中一個用於訂單項目。 這類應用程式一律使用相同的資料來源，具有預先定義的結構描述的應用程式知道。  

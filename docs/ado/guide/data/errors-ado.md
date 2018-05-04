@@ -1,11 +1,9 @@
 ---
 title: 錯誤 (ADO) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 66503a0a42e9b7c88899b9d0008b464f04bab1dd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d34a1e8a51c3843c3df73aefa620bec1d7f43f95
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-ado"></a>錯誤 (ADO)
 任何作業，涉及 ADO 物件可能會產生一或多個提供者錯誤。 當每個錯誤發生時，一或多個**錯誤**物件置於**錯誤**集合**連接**物件。 如需處理警告和 ADO 應用程式中的錯誤的詳細資訊，請參閱[錯誤處理](../../../ado/guide/data/error-handling.md)。  

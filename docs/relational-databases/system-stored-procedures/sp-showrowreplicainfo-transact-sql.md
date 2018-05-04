@@ -24,12 +24,11 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87857390035273ca2350f90175cc4254f182bb7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 80e50ddc736ee63c893fdd3b6a785503c2f17c7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
  這是資料列的唯一識別碼。 *rowguid*是**uniqueidentifier**，沒有預設值。  
   
  [ **@show**=] **'***顯示***'**  
- 決定結果集所傳回的資訊量。 *顯示*是**nvarchar （20)**兩者的預設值。 如果**列**，就會傳回資料列版本資訊。 如果**資料行**，就會傳回資料行版本資訊。 如果**兩者**，資料列，並傳回資料行資訊。  
+ 決定結果集所傳回的資訊量。 *顯示*是**nvarchar （20)** 兩者的預設值。 如果**列**，就會傳回資料列版本資訊。 如果**資料行**，就會傳回資料行版本資訊。 如果**兩者**，資料列，並傳回資料行資訊。  
   
 ## <a name="result-sets-for-row-information"></a>資料列資訊的結果集  
   

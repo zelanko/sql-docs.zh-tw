@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c698585ef0fa584f855cc768a67295b5b942eef3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6e647374b9c313be9b19aa81325fa4fb85bd8ffc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvsetcollen-extended-stored-procedure-api"></a>srv_setcollen (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ len
 ## <a name="returns"></a>傳回值  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  資料列的每個資料行必須先用 **srv_describe** 定義。 資料行的資料長度是由對 **srv_describe** 或 **srv_setcollen** 的最後呼叫所設定。 如果資料列的可變長度資料 (以 Null 結束的資料) 變更，則必須先使用 **srv_setcollen** 來將它設定為新長度，再呼叫 **srv_sendrow**。 如果是允許 Null 值的資料行，則必須以 *desttype* 設定為允許 Null 的資料類型 (例如 SRVINTN) 來呼叫 **srv_describe**，而且以設定為 0 的 *len* 呼叫 **srv_setcollen** 來指定 Null 資料。 零長度的資料不能使用擴充預存程序 API 指定。  
   
  請注意，當資料行的資料類型是可變長度時，就不會檢查 *len*。 如果針對固定長度資料行呼叫此函數，此函數會傳回 FAIL。  

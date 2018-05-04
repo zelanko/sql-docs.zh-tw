@@ -1,7 +1,7 @@
 ---
 title: 將一般檔案匯入 SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 09/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
@@ -19,11 +19,11 @@ ms.author: alayu
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c018165f4e64605efc0b22b6fa2a3f566787453b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 874f49dd654ad1f52079a3d9ba2fbfb1c5497e58
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>將一般檔案匯入 SQL 精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,11 +94,6 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 此頁面會指出匯入是否成功。 若出現綠色核取記號就表示成功，否則可能需要檢閱設定或輸出檔，以了解錯誤。
 
 ![精靈結果](media/import-flat-file-wizard/importffresults.png)
-
-## <a name="reporting-import-flat-file-failures"></a>回報匯入一般檔案失敗
-如果您遇到任何失敗，請將電子郵件傳送給 sqltoolsprosesupport@microsoft.com
-
-如需詳細資訊，[請參閱這些指示](reporting-import-flat-file-failures.md)。
 
 ## <a name="learn-more"></a>深入了解
 

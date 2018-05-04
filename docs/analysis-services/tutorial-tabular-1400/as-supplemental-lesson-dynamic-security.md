@@ -14,15 +14,14 @@ ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
-ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 268ead0e43a0223e66eeb85f803e86e70f4c237b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ffd58456ee40741792ac7ce409c97e064a92ba43
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>補充課程-動態安全性
 
@@ -54,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  在 導覽器中，選取  **DimSalesTerritory**資料表，然後按一下 **確定**。    
   
-3.  在 [查詢編輯器] 中，按一下**DimSalesTerritory**查詢，然後再移除**[salesterritoryalternatekey]**資料行。  
+3.  在 [查詢編輯器] 中，按一下**DimSalesTerritory**查詢，然後再移除 **[salesterritoryalternatekey]** 資料行。  
   
 7.  **가져오기**를 클릭합니다.  
   

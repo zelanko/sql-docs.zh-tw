@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f158146f98334b82cbfe3c92a061ee927c57c551
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 31af213a3dd2da336150f9aa3f05fcb641ad361e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
   
 ## <a name="arguments"></a>引數  
  [  **@profile_id=**] *profile_id*  
- 已從設定檔識別碼[MSagent_parameters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)資料表。 *profile_id*是**int**，預設值是**-1**，它會傳回所有參數。  
+ 已從設定檔識別碼[MSagent_parameters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)資料表。 *profile_id*是**int**，預設值是 **-1**，它會傳回所有參數。  
   
 ## <a name="result-sets"></a>結果集  
   

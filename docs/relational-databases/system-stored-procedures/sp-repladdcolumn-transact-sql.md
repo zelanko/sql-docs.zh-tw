@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7457c7829662d5716db9e794836f12e3a785564
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9cf625ec15b26743f956ee94ce39c9facbd7b803
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  這是複寫要加入之資料表中的資料行名稱。 *資料行*是**sysname**，沒有預設值。  
   
  [ @typetext =] '*typetext*'  
- 這是要加入之資料行的定義。 *typetext*是**nvarchar （3000)**，沒有預設值。 例如，如果要加入資料行，而且它是單一字元欄位時，不是 NULL，且預設值為**N**，order_filled 就是*資料行*參數，而的定義資料行， **char （1) NOT NULL CONSTRAINT constraint_name DEFAULT 'n'**會*typetext*參數值。  
+ 這是要加入之資料行的定義。 *typetext*是**nvarchar （3000)**，沒有預設值。 例如，如果要加入資料行，而且它是單一字元欄位時，不是 NULL，且預設值為**N**，order_filled 就是*資料行*參數，而的定義資料行， **char （1) NOT NULL CONSTRAINT constraint_name DEFAULT 'n'** 會*typetext*參數值。  
   
  [ @publication_to_add =] '*publication_to_add*'  
  這是新資料行要加入其中的發行集名稱。 *publication_to_add*是**nvarchar （4000)**，預設值是**所有**。 如果**所有**，則所有發行集包含此資料表會受到影響。 如果*publication_to_add*指定，則此發行集已加入新的資料行。  

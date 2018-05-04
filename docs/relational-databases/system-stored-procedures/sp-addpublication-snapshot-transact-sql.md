@@ -24,12 +24,11 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6a04d94d0a650eb0349e599814fc2f1f614d4732
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 45d063b3926e48e51cbc54266aa96ccb11f9e1eb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  這是排程停止快照集代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*是**int**，預設值是 235959，表示下午 11:59:59 。  
   
  [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
- 這是在使用現有作業時，現有快照集代理程式作業的名稱。 *snapshot_agent_name*是**nvarchar （100)**預設值是 NULL。 這個參數供內部使用，當建立新的發行集時，不應指定。 如果*snapshot_agent_name*不指定，則*job_login*和*job_password*必須是 NULL。  
+ 這是在使用現有作業時，現有快照集代理程式作業的名稱。 *snapshot_agent_name*是**nvarchar （100)** 預設值是 NULL。 這個參數供內部使用，當建立新的發行集時，不應指定。 如果*snapshot_agent_name*不指定，則*job_login*和*job_password*必須是 NULL。  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
  這是當連接到發行者時使用的安全性模式。 *publisher_security_mode*是**smallint**，預設值是 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，以及**1**指定 Windows 驗證。 值為**0**必須指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

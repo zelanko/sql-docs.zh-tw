@@ -25,12 +25,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 310840a228c61b2e7fd8234c38e4a5198a9c3706
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a5833eae71a8d26f9f03d78a02581be9d11c3f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keycolumnusage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ ms.lasthandoff: 04/16/2018
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar(**128**)**|條件約束限定詞。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|包含條件約束之結構描述的名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
-|**CONSTRAINT_NAME**|**nvarchar(**128**)**|條件約束名稱。|  
-|**TABLE_CATALOG 排列**|**nvarchar(**128**)**|資料表限定詞。|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|包含資料表的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
-|**TABLE_NAME**|**nvarchar(**128**)**|資料表名稱。|  
-|**COLUMN_NAME**|**nvarchar(**128**)**|資料行名稱。|  
+|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|條件約束限定詞。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含條件約束之結構描述的名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**CONSTRAINT_NAME**|**nvarchar(** 128 **)**|條件約束名稱。|  
+|**TABLE_CATALOG 排列**|**nvarchar(** 128 **)**|資料表限定詞。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_NAME**|**nvarchar(** 128 **)**|資料表名稱。|  
+|**COLUMN_NAME**|**nvarchar(** 128 **)**|資料行名稱。|  
 |**ORDINAL_POSITION**|**int**|資料行序數位置。|  
   
 ## <a name="see-also"></a>另請參閱  

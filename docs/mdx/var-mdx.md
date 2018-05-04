@@ -22,17 +22,16 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 871720eafb0d0b166789491e576d56dbcc5f33ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 359fb827d4ce4c7e0915fbaf2021f0c754b6ea1d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="var-mdx"></a>Var (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  傳回的樣本變異數的數值運算式，評估集合，使用非偏誤的母體公式 (除以 *n* )。  
+  傳回的樣本變異數的數值運算式，評估集合，使用非偏誤的母體公式 (除以*n*)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +52,7 @@ Var(Set_Expression [ ,Numeric_Expression ] )
   
  **Var**函式使用非偏誤的母體公式，而[VarP](../mdx/varp-mdx.md)函數使用偏誤的母體公式。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

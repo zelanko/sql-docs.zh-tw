@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 01fbcd4402d54bb86018d9f4fed9547ac5778e59
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9d52dfc8be41dc8a86fc87803a50939f03558691
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 ## <a name="arguments"></a>引數  
  [  **@database=**] **'***database_name***'**  
- 這是要傳回屬性的資料庫名稱。 *database_name*是**sysname**，預設值是**%**與散發者，並在其上相關聯的所有資料庫的使用者有權限。  
+ 這是要傳回屬性的資料庫名稱。 *database_name*是**sysname**，預設值是**%** 與散發者，並在其上相關聯的所有資料庫的使用者有權限。  
   
 ## <a name="result-sets"></a>結果集  
   

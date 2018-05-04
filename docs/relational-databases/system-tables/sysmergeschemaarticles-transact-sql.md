@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be0e14898e488592e8c0dcdbf40b53b6e678a6a2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6901f0676f6c7dbbd3770389d212026b166e7de3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**objid**|**int**|發行項基底物件的物件識別碼。 它可以是程序、檢視、索引檢視或使用者定義函數的物件識別碼。|  
 |**artid**|**uniqueidentifier**|發行項識別碼。|  
 |**描述**|**nvarchar(255)**|發行項的描述。|  
-|**pre_creation_command**|**tinyint**|當在訂閱資料庫中建立發行項時，所採取的預設動作。<br /><br /> **0 =**無-如果 「 訂閱者 」 端已有資料表會採取任何動作。<br /><br /> **1** = drop-卸除再重新建立它的資料表。<br /><br /> **2** = 刪除-發出一項刪除根據子集篩選中的 WHERE 子句。<br /><br /> **3** = 截斷-與相同**2**，但是會刪除頁面而不是資料列。 不過，它不用 WHERE 子句。|  
+|**pre_creation_command**|**tinyint**|當在訂閱資料庫中建立發行項時，所採取的預設動作。<br /><br /> **0 =** 無-如果 「 訂閱者 」 端已有資料表會採取任何動作。<br /><br /> **1** = drop-卸除再重新建立它的資料表。<br /><br /> **2** = 刪除-發出一項刪除根據子集篩選中的 WHERE 子句。<br /><br /> **3** = 截斷-與相同**2**，但是會刪除頁面而不是資料列。 不過，它不用 WHERE 子句。|  
 |**pubid**|**uniqueidentifier**|發行集的唯一識別碼。|  
 |**status**|**tinyint**|指出僅限結構描述的發行項之狀態，它可以是下列項目之一：<br /><br /> **1** = 未同步-下次執行發行資料表的下次執行快照集代理程式的初始處理指令碼。<br /><br /> **2** = active-已執行發行資料表的初始處理指令碼。<br /><br /> **5** = New_inactive-加入。<br /><br /> **6** = New_active-加入。|  
 |**creation_script**|**nvarchar(255)**|用來建立目標資料表的選擇性發行項結構描述預先建立指令碼的路徑和名稱。|  

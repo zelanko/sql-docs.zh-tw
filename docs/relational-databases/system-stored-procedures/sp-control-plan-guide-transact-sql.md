@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9f1e9e78020787bcec4f6b3a04efbdc4ba466023
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  啟用所指定的計畫指南*plan_guide_name*。 計畫指南在啟用之後，可以符合適合的查詢。 依預設，在建立計畫指南時，會啟用計畫指南。  
   
  ENABLE ALL  
- 啟用目前資料庫中的所有計畫指南。 **N'***plan_guide_name***'**不能指定當指定 ENABLE ALL。  
+ 啟用目前資料庫中的所有計畫指南。 **N'***plan_guide_name***'** 不能指定當指定 ENABLE ALL。  
   
 ## <a name="remarks"></a>備註  
  試圖卸除或修改計畫指南所參考的函數、預存程序或 DML 觸發程序，不論是已啟用或已停用，都會造成錯誤。  
@@ -86,7 +85,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  並非每個版本都可使用計畫指南[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 不過，您可以執行**sp_control_plan_guide**使用 DROP 或 DROP ALL 選項，在任何版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="permissions"></a>Permissions  
- 若要執行**sp_control_plan_guide**上類型為 OBJECT 的計畫指南 (建立指定 **@type ='**物件**'** ) 需要 ALTER 權限的物件，計畫指南所參考。 所有其他計畫指南都需要 ALTER DATABASE 權限。  
+ 若要執行**sp_control_plan_guide**上類型為 OBJECT 的計畫指南 (建立指定 **@type ='** 物件 **'** ) 需要 ALTER 權限的物件，計畫指南所參考。 所有其他計畫指南都需要 ALTER DATABASE 權限。  
   
 ## <a name="examples"></a>範例  
   

@@ -28,12 +28,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d4364f6cba3a5eb28cfac72e4f5f727ddf1bd1ef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 58c7e6bf72656b83f3fc43b35bd5d27dce43178b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sys.sp_cdc_disable_table
   
  *source_name*必須存在於目前的資料庫。  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'**所有**'**  
+ [  **@capture_instance=** ] **'***capture_instance***'** | **'** 所有 **'**  
  這是要針對指定之來源資料表停用的擷取執行個體名稱。 *capture_instance*是**sysname**不能是 NULL。  
   
  指定 'all' 時，所有擷取執行個體定義*source_name*會停用。  

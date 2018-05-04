@@ -6,10 +6,9 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - libraries [ADO]
@@ -20,15 +19,14 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 986367a4ad578c893cb7f9b13fc1272c038f6ae9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9f5bd59675d24810ddef02a790cb3464ede168ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="referencing-the-ado-libraries"></a>ADO 程式庫的參考
-ADO 的最新版本會封裝為*msado15.dll*。 ADO MD 與 ADOX 的最新版本會封裝為*msadom.dll*和*msadox.dll*分別。 根據預設，在安裝這些程式庫*$installDir*，其中*$installDir*代表在 ADO 程式庫具有您的電腦安裝的目錄的路徑。 若要使用應用程式中的 ADO 程式庫，您也必須在應用程式專案中明確參考它們。  
+ADO 的最新版本會封裝為*msado15.dll*。 ADO MD 與 ADOX 的最新版本會封裝為*msadom.dll*和*msadox.dll*分別。 根據預設，在安裝這些程式庫 *$installDir*，其中 *$installDir*代表在 ADO 程式庫具有您的電腦安裝的目錄的路徑。 若要使用應用程式中的 ADO 程式庫，您也必須在應用程式專案中明確參考它們。  
   
  ADO 程式庫的參考時可採取的步驟如下：  
   

@@ -24,13 +24,12 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ba0a2d4ccfe5250e75b113acd3b407fc4b50c9b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0f10122f44768dd19f08f17ca9b2a12136be754f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 ## <a name="arguments"></a>引數  
  [ **@resample** =] **'resample'**  
- 指定**sp_updatestats**將使用的 RESAMPLE 選項[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)陳述式。 如果**'resample'**未指定， **sp_updatestats**會使用預設取樣來更新統計資料。 **重新取樣**是**varchar(8)**預設值為 [否]。  
+ 指定**sp_updatestats**將使用的 RESAMPLE 選項[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)陳述式。 如果 **'resample'** 未指定， **sp_updatestats**會使用預設取樣來更新統計資料。 **重新取樣**是**varchar(8)** 預設值為 [否]。  
   
 ## <a name="remarks"></a>備註  
  **sp_updatestats**藉由指定 ALL 關鍵字，在資料庫中的所有使用者定義和內部資料表上執行 UPDATE STATISTICS。 sp_updatestats 會顯示進度訊息。 當更新完成時，它會報告已更新所有資料表的統計資料。  

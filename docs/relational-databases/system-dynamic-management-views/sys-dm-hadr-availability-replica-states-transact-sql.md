@@ -27,12 +27,11 @@ caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2d5e82f9da96f1831d7f0b76b92f469ec567a508
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 49ed5ae45fcd3f5c760481a4dce85f8a5bd8e5a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmhadravailabilityreplicastates-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.lasthandoff: 04/16/2018
 |FAILED|嘗試從 WSFC 叢集中擷取資訊時發生讀取失敗。|  
 |FAILED_NO_QUORUM|本機 WSFC 節點沒有仲裁。 這是推斷的狀態。|  
   
- **PRIMARY:**當可用性複本正在扮演主要角色時，它目前是主要複本。 可能的操作狀態會在下表所示。  
+ **PRIMARY:** 當可用性複本正在扮演主要角色時，它目前是主要複本。 可能的操作狀態會在下表所示。  
   
 |操作狀態|Description|  
 |-----------------------|-----------------|  

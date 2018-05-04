@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetData
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba5edc5dc4bfe9ea0deeb40cd5c96e14480ee27b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函數
 **一致性**  
@@ -124,10 +123,10 @@ SQLRETURN SQLGetData(
 |HY009|無效的 null 指標使用|(DM) 引數*TargetValuePtr*為 null 指標。|  
 |HY010|函數順序錯誤|(DM) 指定*StatementHandle*不處於執行狀態。 呼叫此函式時未先呼叫**SQLExecDirect**， **SQLExecute**或類別目錄函式。<br /><br /> (DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*StatementHandle*。 此非同步函式還在執行時**SQLGetData**呼叫函式。<br /><br /> 以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *StatementHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) *StatementHandle*目前處於執行狀態，但任何結果集與*StatementHandle*。<br /><br /> 呼叫**SQLExeceute**， **SQLExecDirect**，或**SQLMoreResults**傳回 SQL_PARAM_DATA_AVAILABLE，但**SQLGetData**呼叫而不是**SQLParamData**。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
-|HY090|字串或緩衝區長度無效|(DM) 引數指定的值*Columnsize*小於 0。<br /><br /> 指定的引數的值*Columnsize*為小於 4 *Col_or_Param_Num*引數設定為 0，且驅動程式為 ODBC 2*.x*驅動程式。|  
+|HY090|字串或緩衝區長度無效|(DM) 引數指定的值*Columnsize*小於 0。<br /><br /> 指定的引數的值*Columnsize*為小於 4 *Col_or_Param_Num*引數設定為 0，且驅動程式為 ODBC 2 *.x*驅動程式。|  
 |HY109|無效的資料指標位置|指標置於 (由**SQLSetPos**， **SQLFetch**， **SQLFetchScroll**，或**SQLBulkOperations**) 都已刪除的資料列或無法讀取。<br /><br /> 資料指標是順向資料指標，但大於一的資料列集大小。|  
 |HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未實作選擇性功能|驅動程式或資料來源不支援使用**SQLGetData**中的多個資料列與**SQLFetchScroll**。 傳回 SQL_GD_BLOCK 位元遮罩 SQL_GETDATA_EXTENSIONS 選項中的驅動程式則不適用這項描述**SQLGetInfo**。<br /><br /> 驅動程式或資料來源不支援的組合所指定的轉換*TargetType*引數，而對應的資料行的 SQL 資料類型。 SQL 資料類型的資料行對應至驅動程式專屬 SQL 資料類型時，才會發生這個錯誤。<br /><br /> 此驅動程式支援 ODBC 2 只*.x*，引數和*TargetType*是下列其中之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 任何間隔 C 資料類型會列在[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d： 資料型別中。<br /><br /> 此驅動程式只支援 3.50 和引數之前的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
+|HYC00|未實作選擇性功能|驅動程式或資料來源不支援使用**SQLGetData**中的多個資料列與**SQLFetchScroll**。 傳回 SQL_GD_BLOCK 位元遮罩 SQL_GETDATA_EXTENSIONS 選項中的驅動程式則不適用這項描述**SQLGetInfo**。<br /><br /> 驅動程式或資料來源不支援的組合所指定的轉換*TargetType*引數，而對應的資料行的 SQL 資料類型。 SQL 資料類型的資料行對應至驅動程式專屬 SQL 資料類型時，才會發生這個錯誤。<br /><br /> 此驅動程式支援 ODBC 2 只 *.x*，引數和*TargetType*是下列其中之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 任何間隔 C 資料類型會列在[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d： 資料型別中。<br /><br /> 此驅動程式只支援 3.50 和引數之前的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
 |HYT01|連接逾時過期|連接逾時期限過期之前對要求回應資料來源。 連接逾時期限透過設定**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驅動程式不支援此函式|(DM) 對應的驅動程式*StatementHandle*不支援此函式。|  
 |IM017|中的非同步通知模式已停用輪詢|每當通知模型使用時，會停用輪詢。|  
@@ -153,14 +152,14 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_BOUND。 如果傳回此選項，則**SQLGetData**可以呼叫繫結資料行，以及未繫結的資料行。  
   
- 有兩個例外狀況，這些限制和放寬這些驅動程式的能力。 首先， **SQLGetData**永遠不可叫用順向資料指標資料列集大小大於 1 時。 其次，如果驅動程式支援書籤，它必須一律支援能夠呼叫**SQLGetData**資料行 0，即使不允許應用程式呼叫**SQLGetData**最後一個以外的其他資料行繫結的資料行。 (當應用程式使用 ODBC 2*.x*驅動程式， **SQLGetData**已成功將會傳回呼叫時的書籤*Col_or_Param_Num*等於 0 後呼叫**SQLFetch**，因為**SQLFetch**對應的 ODBC 3*.x*驅動程式管理員**SQLExtendedFetch** 與*Sqlfetchscroll*的 SQL_FETCH_NEXT，和**SQLGetData**與*Col_or_Param_Num*為 0 會對應由 ODBC 3*.x*驅動程式管理員**SQLGetStmtOption**與*fOption*的 SQL_GET_BOOKMARK。)  
+ 有兩個例外狀況，這些限制和放寬這些驅動程式的能力。 首先， **SQLGetData**永遠不可叫用順向資料指標資料列集大小大於 1 時。 其次，如果驅動程式支援書籤，它必須一律支援能夠呼叫**SQLGetData**資料行 0，即使不允許應用程式呼叫**SQLGetData**最後一個以外的其他資料行繫結的資料行。 (當應用程式使用 ODBC 2 *.x*驅動程式， **SQLGetData**已成功將會傳回呼叫時的書籤*Col_or_Param_Num*等於 0 後呼叫**SQLFetch**，因為**SQLFetch**對應的 ODBC 3 *.x*驅動程式管理員**SQLExtendedFetch** 與*Sqlfetchscroll*的 SQL_FETCH_NEXT，和**SQLGetData**與*Col_or_Param_Num*為 0 會對應由 ODBC 3 *.x*驅動程式管理員**SQLGetStmtOption**與*fOption*的 SQL_GET_BOOKMARK。)  
   
  **SQLGetData**無法用來擷取藉由呼叫只插入一個資料列的書籤**SQLBulkOperations**帶有 SQL_ADD 選項，因為資料指標沒有定位的資料列。 應用程式可以擷取繫結資料行 0 之前先呼叫這類資料列的書籤**SQLBulkOperations** SQL_ADD，在此情況下使用**SQLBulkOperations**傳回繫結緩衝區中的書籤。 **SQLFetchScroll**然後可以使用 SQL_FETCH_BOOKMARK 重新定位資料指標，該資料列上呼叫。  
   
  如果*TargetType*引數是在的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 欄位中所設定的間隔資料類型，則預設間隔開頭有效位數 (2) 和預設間隔秒數有效位數 (6)，ARD，分別是針對資料使用。 如果*TargetType*引數 SQL_C_NUMERIC 資料型別，則預設有效位數 （驅動程式定義） 和預設小數位數 (0)，在 ARD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 欄位中所設定，可用的資料。 如果任何預設有效位數或小數位數不適用，應用程式應該明確設定適當的描述項欄位呼叫**SQLSetDescField**或**SQLSetDescRec**。 它可以設 SQL_C_NUMERIC 和呼叫 SQL_DESC_CONCISE_TYPE 欄位**SQLGetData**與*TargetType* SQL_ARD_TYPE，會導致的描述項欄位中的有效位數和小數位數的值的引數若要使用。  
   
 > [!NOTE]  
->  ODBC 2*.x*，應用程式會設定*TargetType* SQL_C_DATE、 SQL_C_TIME，或 SQL_C_TIMESTAMP 表示\* *TargetValuePtr*是日期、 時間，或時間戳記結構。 在 ODBC 3*.x*，應用程式會設定*TargetType* SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，或 SQL_C_TYPE_TIMESTAMP。 驅動程式管理員會建立適當的對應如果需要，根據的應用程式和驅動程式版本。  
+>  ODBC 2 *.x*，應用程式會設定*TargetType* SQL_C_DATE、 SQL_C_TIME，或 SQL_C_TIMESTAMP 表示\* *TargetValuePtr*是日期、 時間，或時間戳記結構。 在 ODBC 3 *.x*，應用程式會設定*TargetType* SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，或 SQL_C_TYPE_TIMESTAMP。 驅動程式管理員會建立適當的對應如果需要，根據的應用程式和驅動程式版本。  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>擷取組件中的可變長度資料  
  **SQLGetData**可用來從包含組件中的可變長度資料的資料行擷取資料，亦即，當資料行的 SQL 資料類型的識別項是 SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_WCHAR、 SQL_WVARCHAR、 SQL_WLONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY、 SQL_LONGVARBINARY、 或可變長度類型的驅動程式特定識別項。  

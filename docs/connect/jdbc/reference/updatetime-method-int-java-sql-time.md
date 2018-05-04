@@ -3,13 +3,10 @@ title: updateTime 方法 （int，java.sql.Time） |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28fab2d52dd060f678d7db1cd8e5e3ae8204cf35
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: f3346953370023322c7b62a2bdfea2166108845e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -44,7 +41,7 @@ public void updateTime(int index,
 #### <a name="parameters"></a>參數  
  *索引*  
   
- **Int** ，指出資料行索引。  
+ 指出資料行索引的 **int**。  
   
  *x*  
   

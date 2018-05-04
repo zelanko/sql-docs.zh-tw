@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b9ccc8c9b51de0b2c6c4d86acc107c9073efbfb1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 05769a0a060de4a78bdcf425e20d004ef9ae9099
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  這是錯誤的嚴重性層級。 *嚴重性*是**smallint**預設值是 NULL。 有效的層級範圍是 1 到 25。 如需有關嚴重性的詳細資訊，請參閱 [Database Engine 錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
   
  [ **@msgtext =** ] **'***msg***'**  
- 這是錯誤訊息的文字。 *msg*是**nvarchar （255)**預設值是 NULL。  
+ 這是錯誤訊息的文字。 *msg*是**nvarchar （255)** 預設值是 NULL。  
   
  [  **@lang =** ] **'***語言***'**  
  這是此訊息的語言。 *語言*是**sysname**預設值是 NULL。 因為可以在相同的伺服器上安裝多種語言*語言*指定用來撰寫每個訊息的語言。 當*語言*已省略，語言是預設語言工作階段。  
   
- [  **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
- 這是指當訊息出現時，是否將訊息寫入 Windows 應用程式記錄檔中。 **@with_log** 是**varchar(5)**預設值是 FALSE。 如果是 TRUE，錯誤一律會寫入 Windows 應用程式記錄檔中。 如果是 FALSE，錯誤就不一定會寫入 Windows 應用程式記錄檔中，但隨著錯誤的產生方式而不同，也可能會寫入。 只有成員**sysadmin**伺服器角色可以使用此選項。  
+ [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
+ 這是指當訊息出現時，是否將訊息寫入 Windows 應用程式記錄檔中。 **@with_log** 是**varchar(5)** 預設值是 FALSE。 如果是 TRUE，錯誤一律會寫入 Windows 應用程式記錄檔中。 如果是 FALSE，錯誤就不一定會寫入 Windows 應用程式記錄檔中，但隨著錯誤的產生方式而不同，也可能會寫入。 只有成員**sysadmin**伺服器角色可以使用此選項。  
   
 > [!NOTE]  
 >  如果訊息寫入 Windows 應用程式記錄檔中，它也會寫入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤記錄檔中。  
   
  [ **@replace** *=* ] **'***取代***'**  
- 如果指定為字串*取代*，新訊息文字和嚴重性層級覆寫現有的錯誤訊息。 *取代*是**varchar(7)**預設值是 NULL。 必須指定這個選項，如果*msg_id*已經存在。 如果您取代 U.S. English 訊息，嚴重性層級會取代所有具有相同的其他語言中的所有訊息*msg_id*。  
+ 如果指定為字串*取代*，新訊息文字和嚴重性層級覆寫現有的錯誤訊息。 *取代*是**varchar(7)** 預設值是 NULL。 必須指定這個選項，如果*msg_id*已經存在。 如果您取代 U.S. English 訊息，嚴重性層級會取代所有具有相同的其他語言中的所有訊息*msg_id*。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

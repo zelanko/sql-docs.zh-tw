@@ -24,12 +24,11 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2c2a84992bdc1cce94bdc997ce017825c0a2fb8e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0205838a057a563d703e9aff0d3461c3d727b163
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
  這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是**%**。  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- 指出是否要顯示提取訂閱。 *subscription_type*是**nvarchar （10)**，預設值是**'pull'**。 有效值為**'push'**， **'pull'**，或**'both'**。  
+ 指出是否要顯示提取訂閱。 *subscription_type*是**nvarchar （10)**，預設值是 **'pull'**。 有效值為 **'push'**， **'pull'**，或 **'both'**。  
   
 ## <a name="result-sets"></a>結果集  
   

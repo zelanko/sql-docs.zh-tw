@@ -24,13 +24,12 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a455bfe51ac57408c075a20128054574b86962f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_describe_undeclared_parameters
   
 ## <a name="arguments"></a>引數  
  [ **@tsql =** ] **'***Transact-SQL_batch***'**  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar （max)**。  
+ 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
   
  [  **@params =** ] **N'***參數***'**  
- @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於方式 sp_executesql 運作方式。 *參數*可能**nvarchar (***n***)**或**nvarchar （max)**。  
+ @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於方式 sp_executesql 運作方式。 *參數*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
   
  是一個字串，包含的所有參數都已內嵌在定義*Transact SQL_batch*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 n 是指出其他參數定義的預留位置。 如果 Transact-SQL 陳述式或批次陳述式中的不包含參數，@params並非必要。 這個參數的預設值是 NULL。  
   
@@ -188,7 +187,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE c1 > @p  
     ```  
   
-     在第一個案例中，類型推算演算法會推算**char （30)**的資料類型為@p依據稍早在本主題中的規則。 在第二個案例中，類型推算演算法會推算**varchar(8000)**根據下一節中的一般推算規則。  
+     在第一個案例中，類型推算演算法會推算**char （30)** 的資料類型為@p依據稍早在本主題中的規則。 在第二個案例中，類型推算演算法會推算**varchar(8000)** 根據下一節中的一般推算規則。  
   
 -   一般推算  
   
@@ -202,9 +201,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **數值 （38，19）** -不考慮其他數值或十進位資料類型。  
   
-    -   **varchar(8000)**， **varchar （max)**， **nvarchar （4000)**，和**nvarchar （max)** -其他字串資料類型 (例如**文字**， **char （8000)**， **nvarchar （30)**等等) 不會被視為。  
+    -   **varchar(8000)**， **varchar （max)**， **nvarchar （4000)**，和**nvarchar （max)** -其他字串資料類型 (例如**文字**， **char （8000)**， **nvarchar （30)** 等等) 不會被視為。  
   
-    -   **varbinary （8000)**和**varbinary （max)** -不考慮其他二進位資料類型 (例如**映像**， **binary(8000)**， **varbinary(30)**等。)。  
+    -   **varbinary （8000)** 和**varbinary （max)** -不考慮其他二進位資料類型 (例如**映像**， **binary(8000)**， **varbinary(30)** 等。)。  
   
     -   **日期**， **time （7)**， **smalldatetime**， **datetime**， **datetime2 （7)**， **datetimeoffset(7)** -其他日期和時間類型，例如**time(4)**，不列入考慮。  
   
@@ -239,7 +238,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      只有在依據規則 1 每個候選資格相同的資料類型與具有最高優先順序的資料類型之間發生隱含轉換時，才會套用此規則。 如果沒有隱含轉換，資料類型推算會失敗並出現錯誤。 例如在查詢中`SELECT @p FROM t`，資料類型推算會失敗，因為任何資料類型@p同樣良好。 例如，沒有隱含轉換從**int**至**xml**。  
   
-3.  如果兩個類似的資料類型將依據規則 1，例如**varchar(8000)**和**varchar （max)**越小，資料類型 (**varchar(8000)**) 選擇。 相同原則適用於**nvarchar**和**varbinary**資料型別。  
+3.  如果兩個類似的資料類型將依據規則 1，例如**varchar(8000)** 和**varchar （max)** 越小，資料類型 (**varchar(8000)**) 選擇。 相同原則適用於**nvarchar**和**varbinary**資料型別。  
   
 4.  為執行規則 1，類型推算演算法會偏好特定轉換。 從最佳到最差的轉換順序如下：  
   
@@ -251,7 +250,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  任何其他轉換。  
   
- 例如，針對查詢`SELECT * FROM t WHERE [Col_varchar(30)] > @p`， **varchar(8000)**因為轉換 (a) 是最佳選擇。 查詢`SELECT * FROM t WHERE [Col_char(30)] > @p`， **varchar(8000)**仍然會選擇，因為它會導致類型 (b) 轉換，另一個選擇 (例如**varchar(4000)**) 會導致類型 (d) 轉換。  
+ 例如，針對查詢`SELECT * FROM t WHERE [Col_varchar(30)] > @p`， **varchar(8000)** 因為轉換 (a) 是最佳選擇。 查詢`SELECT * FROM t WHERE [Col_char(30)] > @p`， **varchar(8000)** 仍然會選擇，因為它會導致類型 (b) 轉換，另一個選擇 (例如**varchar(4000)**) 會導致類型 (d) 轉換。  
   
  最後一個範例中，指定查詢`SELECT NULL + @p`， **int**會選擇@p因為它會產生型別 (c) 轉換。  
   

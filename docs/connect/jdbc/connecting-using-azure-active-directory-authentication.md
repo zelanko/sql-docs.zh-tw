@@ -6,20 +6,17 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8ee49e767d8d0b92b1c8a6548b8870822460fa6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d6df50936da3d8b31ec3bc7ecd62212fa6987c4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -221,9 +218,9 @@ You have successfully logged on as: <your user name>
     7. 按一下底部的 [建立]。
     9. 仍在 Azure 入口網站中，按一下您的應用程式的 [設定] 索引標籤，開啟 [屬性] 索引標籤。
     10. 找出 「 應用程式識別碼 」 （也稱為用戶端識別碼） 值，並將它複製擱置在一旁，您稍後設定您的應用程式 (例如，1846943b-ad04-4808-aa13-4702d908b5c1) 時。 請參閱下列快照集。
-    11. 找出 「 應用程式識別碼 URL 」 值，並將它複製擱置在一旁，這是 STS 的 URL。
-    12. 下一節 「 金鑰 」，建立一個機碼 [名稱] 欄位中填入、 選取金鑰的持續時間和儲存設定 （將保留空白的 [值] 欄位）。 [值] 欄位應該是在儲存之後，自動填入，複製產生的值。 這是用戶端密碼。
-
+    11. 下一節 「 金鑰 」，建立一個機碼 [名稱] 欄位中填入、 選取金鑰的持續時間和儲存設定 （將保留空白的 [值] 欄位）。 [值] 欄位應該是在儲存之後，自動填入，複製產生的值。 這是用戶端密碼。
+    12. 按一下左側面板上的 Azure Active Directory。 在 「 應用程式註冊 」 到 「 結束點 」 索引標籤。複製下 「 OATH 2.0 權杖端點 」 的 URL，這是您 STS 的 URL。
+    
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. 登入您 Azure SQL Server 使用者資料庫，做為 Azure Active Directory 系統管理員，以及使用 T-SQL 命令佈建應用程式主體之自主的資料庫使用者。 請參閱[連接到 SQL Database 或 SQL 資料倉儲使用 Azure Active Directory 驗證](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)如需有關如何建立 Azure Active Directory 系統管理員 」 和 「 自主的資料庫使用者。
 
@@ -254,7 +251,7 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 

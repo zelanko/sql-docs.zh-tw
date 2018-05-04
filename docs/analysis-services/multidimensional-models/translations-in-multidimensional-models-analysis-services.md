@@ -1,32 +1,23 @@
 ---
 title: 多維度模型 (Analysis Services) 中的翻譯 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
-ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0f767ae138a66bd1237bcac1cfc64ce5998a824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cc30acc4714029cd91a4c35028835ae99d561140
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多維度模型中的翻譯 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以定義中的翻譯[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用適當的設計工具的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]来轉譯的物件。 定義翻譯會建立 **Translation** 物件，並與適當的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件相關聯，其中會以指定的語言和指定的明確常值，來設定相關聯之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中定義翻譯，方法是針對要翻譯的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件使用適當的設計師。 定義翻譯會建立 **Translation** 物件，並與適當的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件相關聯，其中會以指定的語言和指定的明確常值，來設定相關聯之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的屬性。  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>多語言資料模型的元素  
  多語系方案中所使用的資料模型不只需要翻譯的標籤 (欄位名稱和描述)， 也必須提供以各種字集表示的資料值。 您必須具有繫結至外部資料庫中資料行並傳回資料的個別屬性，才能取得多語系方案。  
@@ -125,8 +116,8 @@ ms.lasthandoff: 01/08/2018
   
 -   針對所有其他指定的語言識別碼， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會擷取 (extract) 所指定之語言識別碼的主要語言，並擷取 (retrieve) Windows 所指出的語言識別碼作為主要語言的最符合項目。 如果找不到最符合之語言識別碼的翻譯，或指定的語言識別碼是主要語言的最符合項目，則使用預設語言。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 的全球化案例](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [語言和定序 &#40;Analysis Services &#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [語言和定序&#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

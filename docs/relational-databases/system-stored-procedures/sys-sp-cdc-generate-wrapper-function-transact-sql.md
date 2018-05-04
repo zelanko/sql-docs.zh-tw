@@ -27,12 +27,11 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a8049558f764d0d135984ec7d00cab06dbb5abd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3b2d86105f6ebe44865a0a31d3eedfefe4838bfe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sys.sp_cdc_generate_wrapper_function
  這是旗標位元，它會指出認可時間等於高端點的變更是否要由產生的程序包含在擷取間隔中。 *high_end_pt_flag*是**元**且具有預設值是 1，表示應該包含端點。 值為 0 表示所有認可時間都將確實小於高端點。  
   
  [ @column_list=] '*column_list*'  
- 這是即將包含在包裝函數所傳回之結果集中的已擷取資料行清單。 *column_list*是**nvarchar （max)**且具有預設值是 NULL。 當您指定了 NULL 時，就會包含所有已擷取的資料行。  
+ 這是即將包含在包裝函數所傳回之結果集中的已擷取資料行清單。 *column_list*是**nvarchar （max)** 且具有預設值是 NULL。 當您指定了 NULL 時，就會包含所有已擷取的資料行。  
   
  [ @update_flag_list=] '*update_flag_list*'  
- 這是更新旗標包含在包裝函數所傳回之結果集中的已包含資料行清單。 *update_flag_list*是**nvarchar （max)**且具有預設值是 NULL。 當您指定了 NULL 時，就不會包含任何更新旗標。  
+ 這是更新旗標包含在包裝函數所傳回之結果集中的已包含資料行清單。 *update_flag_list*是**nvarchar （max)** 且具有預設值是 NULL。 當您指定了 NULL 時，就不會包含任何更新旗標。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

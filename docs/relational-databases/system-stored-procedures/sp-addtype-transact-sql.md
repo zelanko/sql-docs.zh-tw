@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92d6cdbd458a32ce0280e60551e5eff2f1fda810
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 754fbef75a1cfd1f3948ccc6c89210b15f780293
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_addtype [ @typename = ] type,
  這是一個非負數整數值，它指出小數點右側所能儲存的最大十進位數，且它必須小於或等於有效位數。 如需詳細資訊，請參閱 [decimal 和 numeric &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
  [  **@nulltype =** ] **'***null_type***'**  
- 指出別名資料型別處理 Null 值的方式。 *null_type*是**varchar (**8**)**，預設值是 NULL，而且必須用單引號 （'NULL'、 'NOT NULL' 或 'NONULL'）。 如果*null_type*未明確定義**sp_addtype**，此選項設定為目前的預設 null 屬性。 您可以利用 GETANSINULL 系統函數來決定目前的預設 Null 屬性。 您可以利用 SET 陳述式或 ALTER DATABASE來調整這項作業。 Null 屬性應明確定義。 如果**@phystype**是**元**，和**@nulltype**未指定，預設值不是 NULL。  
+ 指出別名資料型別處理 Null 值的方式。 *null_type*是**varchar (** 8 **)**，預設值是 NULL，而且必須用單引號 （'NULL'、 'NOT NULL' 或 'NONULL'）。 如果*null_type*未明確定義**sp_addtype**，此選項設定為目前的預設 null 屬性。 您可以利用 GETANSINULL 系統函數來決定目前的預設 Null 屬性。 您可以利用 SET 陳述式或 ALTER DATABASE來調整這項作業。 Null 屬性應明確定義。 如果**@phystype**是**元**，和**@nulltype**未指定，預設值不是 NULL。  
   
 > [!NOTE]  
 >  *Null_type*參數只會定義此資料類型的預設 null 屬性。 如果在使用別名資料型別時 (在資料表建立期間) 明確定義 Null 屬性，它的優先順序高於定義的 Null 屬性。 如需詳細資訊，請參閱[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)和[CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
@@ -101,7 +100,7 @@ sp_addtype [ @typename = ] type,
 > [!IMPORTANT]  
 >  基於回溯相容性，**公用**資料庫角色會自動授與 REFERENCES 權限會藉由建立別名資料型別**sp_addtype**。 請注意，利用 CREATE TYPE 陳述式，而不是建立別名資料型別時**sp_addtype**，就會發生任何這類自動授與。  
   
- 別名資料類型無法定義利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**時間戳記**，**資料表**， **xml**， **varchar （max)**， **nvarchar （max)**或**varbinary （max)**資料型別。  
+ 別名資料類型無法定義利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**時間戳記**，**資料表**， **xml**， **varchar （max)**， **nvarchar （max)** 或**varbinary （max)** 資料型別。  
   
 ## <a name="permissions"></a>Permissions  
  需要的成員資格**db_owner**或**db_ddladmin**固定的資料庫角色。  

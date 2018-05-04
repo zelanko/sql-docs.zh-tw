@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
 - backward compatibility [ODBC], mapping deprecated functions
@@ -24,21 +24,20 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cfa4d8cd2a21363e1b3aa0588ae4def8ed011005
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ddde5411238efb7104931e05f34752ab6f52e014
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-deprecated-functions"></a>對應已被取代的函式
-本章節描述如何已被取代的函式會對應由 ODBC 3*.x*驅動程式管理員，以保證與舊版相容的 ODBC 3*.x*搭配 ODBC 2 的驅動程式。*x*應用程式。 驅動程式管理員會執行此應用程式的版本不限的對應。 因為每個 ODBC 2。*x*下列清單中的函式會對應至對應的 ODBC 3*.x*函式呼叫在 ODBC 3 時*.x*驅動程式，而 ODBC 3*.x*驅動程式不需要實作 ODBC 2。*x*函式。  
+本章節描述如何已被取代的函式會對應由 ODBC 3 *.x*驅動程式管理員，以保證與舊版相容的 ODBC 3 *.x*搭配 ODBC 2 的驅動程式。*x*應用程式。 驅動程式管理員會執行此應用程式的版本不限的對應。 因為每個 ODBC 2。*x*下列清單中的函式會對應至對應的 ODBC 3 *.x*函式呼叫在 ODBC 3 時 *.x*驅動程式，而 ODBC 3 *.x*驅動程式不需要實作 ODBC 2。*x*函式。  
   
- 在清單中的對應時的驅動程式是 ODBC 3 觸發*.x*驅動程式和驅動程式不支援對應函式。  
+ 在清單中的對應時的驅動程式是 ODBC 3 觸發 *.x*驅動程式和驅動程式不支援對應函式。  
   
- 下表列出所有重複的功能而引進在 ODBC 3*.x*。  
+ 下表列出所有重複的功能而引進在 ODBC 3 *.x*。  
   
-|ODBC 2。*x*函式|ODBC 3*.x*函式|  
+|ODBC 2。*x*函式|ODBC 3 *.x*函式|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 04/16/2018
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 即使此函式不存在於 ODBC 2*.x*，它是 Open Group 和 ISO 標準中。  
+ [1] 即使此函式不存在於 ODBC 2 *.x*，它是 Open Group 和 ISO 標準中。  
   
  [2] 這是 ODBC 1.0 函式。  
   

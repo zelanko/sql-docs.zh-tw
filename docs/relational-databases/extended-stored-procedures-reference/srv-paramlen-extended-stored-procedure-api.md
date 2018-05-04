@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ee85bd0792b31ea3d1dd759ad9effc96b0b2195b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7ee434712db9ab3ac89bc78a80173c2d353c4852
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ n
  這指出參數的數目。 第一個參數是 1。  
   
 ## <a name="returns"></a>傳回值  
- 這是參數資料的實際長度 (以位元組為單位)。 如果沒有任何*n*個參數或者沒有遠端預存程序，則傳回-1。 如果*n*個參數為 NULL，它會傳回 0。  
+ 這是參數資料的實際長度 (以位元組為單位)。 如果沒有第 *n* 個參數或是沒有任何遠端預存程序，其會傳回 -1。 如果第 *n* 個參數為 NULL，其會傳回 0。  
   
  如果參數是下列其中一個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系統資料類型，此函式會傳回下列值。  
   
@@ -79,7 +77,7 @@ n
   
  \*   實際 *len* = 多位元組字元字串 (cch) 的長度  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  每個遠端預存程序參數都具有實際和最大的資料長度。 對於不允許 null 值的標準固定長度資料類型，實際和最大的長度是相同的。 對於可變長度資料類型，長度則可以有所不同。 例如，宣告為 **varchar(30)** 的參數可能擁有只有 10 個位元組長的資料。 參數的實際長度為 10，而其最大長度為 30。 **srv_paramlen** 函式會取得遠端預存程序的實際資料長度 (以位元組為單位)。 若要取得參數的最大資料長度，請使用 **srv_parammaxlen**。  
   
  當遠端預存程序呼叫是用參數產生時，該參數可以依名稱或位置 (未命名) 傳遞。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 雖然仍會呼叫 SRV_RPC 處理常式，但是看起來好像沒有參數，而且 **srv_rpcparams** 會傳回 0。  

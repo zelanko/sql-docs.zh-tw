@@ -24,13 +24,12 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6bfbbed0bdb29be74871fcc62a76fce2f3555d5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f74c1bac2175c89abffb717e2ae382d165fab81f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 04/16/2018
   設定使用者定義資料表的選項值。 sp_tableoption 可以用來控制資料表的 in-row 行為**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**，**文字**， **ntext**，**映像**，或大型使用者定義型別資料行。  
   
 > [!IMPORTANT]  
->  未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將移除 text in row 功能。 若要儲存大數值資料，我們建議您使用的**varchar （max)**， **nvarchar （max)**和**varbinary （max)**資料型別。  
+>  未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將移除 text in row 功能。 若要儲存大數值資料，我們建議您使用的**varchar （max)**， **nvarchar （max)** 和**varbinary （max)** 資料型別。  
   
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

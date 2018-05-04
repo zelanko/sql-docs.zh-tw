@@ -1,11 +1,9 @@
 ---
 title: 編輯現有記錄 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 43faf0a4bd21513bd03f89814cdb03fd55347bc4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 64c3514b47a6fed7435967b48e9c2141eb9b61a3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editing-existing-records"></a>編輯現有的資料錄
 若要編輯現有的記錄，請移至您想要編輯並變更的資料列**值**您想要變更的欄位的屬性。 如需有關**欄位**物件的**值**屬性，請參閱[檢查資料](../../../ado/guide/data/examining-data.md)。 根據您的資料指標類型，您將使用**更新**或**UpdateBatch**將變更傳送回資料來源。 如需詳細資訊，請參閱[正在更新及保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  

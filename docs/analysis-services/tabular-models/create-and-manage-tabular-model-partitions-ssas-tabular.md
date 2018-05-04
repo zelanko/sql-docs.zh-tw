@@ -1,27 +1,26 @@
 ---
-title: "建立及管理表格式模型資料分割 |Microsoft 文件"
-ms.custom: 
+title: 建立及管理表格式模型資料分割 |Microsoft 文件
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1dfe0ae7dd1ee92cd365a34cf6502d8358c474cb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 04c42b9b5542b67742cca0e1382cccadd463a398
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>建立及管理表格式模型資料分割
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 02/23/2018
   
 1.  在 [資料分割] 對話方塊中，按一下 [新增] 按鈕。  
   
-2.  在 **[資料分割名稱]**中，輸入資料分割的名稱。 依預設，每個新資料分割的預設資料分割名稱是以累加的方式進行編號。  
+2.  在 **[資料分割名稱]** 中，輸入資料分割的名稱。 依預設，每個新資料分割的預設資料分割名稱是以累加的方式進行編號。  
   
 3.  在**查詢陳述式**、 輸入或貼上資料行和任何您想要加入資料分割到查詢視窗的子句會定義 SQL 或 M 查詢陳述式。  
   
@@ -49,7 +48,7 @@ ms.lasthandoff: 02/23/2018
   
 1.  在 [資料分割] 對話方塊的 [資料分割] 清單中，選取您要複製的資料分割，然後按一下 [複製] 按鈕。  
   
-2.  在 **[資料分割名稱]**中，輸入資料分割的新名稱。  
+2.  在 **[資料分割名稱]** 中，輸入資料分割的新名稱。  
   
 3.  在**查詢陳述式**，編輯查詢陳述式。  
   

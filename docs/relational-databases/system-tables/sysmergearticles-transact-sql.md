@@ -26,12 +26,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 28bf9e7ecfe802087fc2eebd775a9dc537ccb763
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fb4d6d761c0c15f686e0967dfcc3e8bea78a240c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 |**view_type**|**tinyint**|檢視的類型：<br /><br /> **0** = 不是檢視; 使用所有基底物件。<br /><br /> **1** = 永久檢視。<br /><br /> **2** = 暫存檢視。|  
 |**artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
 |**描述**|**nvarchar(255)**|發行項的簡要描述。|  
-|**pre_creation_command**|**tinyint**|當在訂閱資料庫中建立發行項時，所採取的預設動作。<br /><br /> **0 =**無-如果 「 訂閱者 」 端已有資料表會採取任何動作。<br /><br /> **1** = drop-卸除再重新建立它的資料表。<br /><br /> **2** = 刪除-發出一項刪除根據子集篩選中的 WHERE 子句。<br /><br /> **3** = 截斷-與相同**2**，但是會刪除頁面而不是資料列。 不過，它不用 WHERE 子句。|  
+|**pre_creation_command**|**tinyint**|當在訂閱資料庫中建立發行項時，所採取的預設動作。<br /><br /> **0 =** 無-如果 「 訂閱者 」 端已有資料表會採取任何動作。<br /><br /> **1** = drop-卸除再重新建立它的資料表。<br /><br /> **2** = 刪除-發出一項刪除根據子集篩選中的 WHERE 子句。<br /><br /> **3** = 截斷-與相同**2**，但是會刪除頁面而不是資料列。 不過，它不用 WHERE 子句。|  
 |**pubid**|**uniqueidentifier**|目前發行項所屬發行集的識別碼。|  
 |**別名**|**int**|發行項識別的暱稱對應。|  
 |**column_tracking**|**int**|指出是否實作發行項的資料行追蹤。|  
@@ -83,7 +82,7 @@ ms.lasthandoff: 04/16/2018
 |**verify_resolver_signature**|**int**|指定在合併式複寫中使用解析程式之前，是否要驗證數位簽章：<br /><br /> **0** = 不驗證簽章。<br /><br /> **1** = 驗證簽章來查看它是否來自信任的來源。|  
 |**allow_interactive_resolver**|**bit**|指定是否啟用發行項的互動式解析程式。 **1**指定發行項上使用互動式解析程式。|  
 |**fast_multicol_updateproc**|**bit**|指定是否已啟用合併代理程式，以在 UPDATE 陳述式中，將變更套用相同資料列的多個資料行中。<br /><br /> **0** = 變更為個別更新每個資料行的問題。<br /><br /> **1** = 發出 UPDATE 陳述式，它會使多個資料行在單一陳述式的更新。|  
-|**check_permissions**|**int**|這是合併代理程式將變更套用在發行者時，所驗證之資料表層級權限的點陣圖。 *check_permissions*可以有下列值之一：<br /><br /> **0x00 =**不檢查權限。<br /><br /> **0x10 =**可上傳在訂閱者端進行的 Insert 先檢查在發行者端的權限。<br /><br /> **0x20 =**在上傳在訂閱者端進行更新之前，會檢查在發行者端的權限。<br /><br /> **0x40 =**在上傳在訂閱者端所作的刪除之前，會檢查在發行者端的權限。|  
+|**check_permissions**|**int**|這是合併代理程式將變更套用在發行者時，所驗證之資料表層級權限的點陣圖。 *check_permissions*可以有下列值之一：<br /><br /> **0x00 =** 不檢查權限。<br /><br /> **0x10 =** 可上傳在訂閱者端進行的 Insert 先檢查在發行者端的權限。<br /><br /> **0x20 =** 在上傳在訂閱者端進行更新之前，會檢查在發行者端的權限。<br /><br /> **0x40 =** 在上傳在訂閱者端所作的刪除之前，會檢查在發行者端的權限。|  
 |**maxversion_at_cleanup**|**int**|清除中繼資料的最高層代 (Generation)。|  
 |**processing_order**|**int**|指出合併式發行集; 集中之發行項的處理順序值**0**指出發行項並未排序，，和發行項的處理順序從最低到最高的值。 如果兩個發行項有相同的值，就會同時處理它們。 如需詳細資訊，請參閱[指定合併發行項的處理順序](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。|  
 |**upload_options**|**tinyint**|定義客訂閱在訂閱者端進行的更新之限制，它可以是下列值之一。<br /><br /> **0** = 客訂閱的訂閱者端進行的更新沒有限制; 所有的變更會上傳到 「 發行者 」。<br /><br /> **1** = 允許客訂閱，訂閱者端進行變更，但未上傳到 「 發行者 」。<br /><br /> **2** = 不允許客訂閱的訂閱者端進行變更。<br /><br /> 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。|  

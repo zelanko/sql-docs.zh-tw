@@ -20,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a1d81e91edfcab8b6938f5898ae4fd46cc38b67
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: b3e4509aa15755839c9b199427a9026d86dbf8d0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>重繪名稱屬性動態 (ADO)
 指定的名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

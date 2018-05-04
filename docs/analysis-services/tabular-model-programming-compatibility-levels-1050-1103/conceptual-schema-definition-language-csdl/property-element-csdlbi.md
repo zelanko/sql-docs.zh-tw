@@ -1,33 +1,31 @@
 ---
-title: "屬性元素 (CSDLBI) |Microsoft 文件"
-ms.custom: 
+title: 屬性元素 (CSDLBI) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e559d3d8bd56012472d94f0e2fb63067fa08560b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-element-csdlbi"></a>Property 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-CSDLBI 中的 Property 元素是複雜類型，它為 CSDL Property 元素提供了新增功能，以支援商業智慧資料模型。  
+  CSDLBI 中的 Property 元素是複雜類型，它為 CSDL Property 元素提供了新增功能，以支援商業智慧資料模型。  
   
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 CSDLBI Property 元素的元素和屬性。  

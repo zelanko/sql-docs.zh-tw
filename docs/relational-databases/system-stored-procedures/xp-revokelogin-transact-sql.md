@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9edf410ce4ffb8fee8b1130770bd27c0e2ca160
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5a46e6f0ed688931250b41a51f244694c5baa2a8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ xp_revokelogin {[@loginame=] 'login'}
   
 ## <a name="arguments"></a>引數  
  [ **@loginame =** ] **'***login***'**  
- 這是要從中撤銷存取權之 Windows 使用者或群組的名稱。 *登入*必須包含網域名稱，例如**[ADVWKS\sylvester1]**。 *登入*是**sysname**，沒有預設值。  
+ 這是要從中撤銷存取權之 Windows 使用者或群組的名稱。 *登入*必須包含網域名稱，例如 **[ADVWKS\sylvester1]**。 *登入*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

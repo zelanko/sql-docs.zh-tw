@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518e72a5ad45147bc9cdf3316c7bd2eba07e7fb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 81911e04266abf51f28a8906910290bf3d0179f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  刪除以前的日期和時間做為提供的電子郵件*sent_before*引數。 *sent_before*是**datetime**但做為預設值是 NULL。 NULL 表示所有日期。  
   
  [ **@sent_status=** ] **'***sent_status***'**  
- 刪除所指定之類型的電子郵件*sent_status*。 *sent_status*是**varchar(8)**沒有預設值。 有效的項目是**傳送**，**未傳送**，**重試**，和**失敗**。 NULL 表示所有狀態。  
+ 刪除所指定之類型的電子郵件*sent_status*。 *sent_status*是**varchar(8)** 沒有預設值。 有效的項目是**傳送**，**未傳送**，**重試**，和**失敗**。 NULL 表示所有狀態。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

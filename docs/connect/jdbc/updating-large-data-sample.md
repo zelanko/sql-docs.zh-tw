@@ -3,13 +3,10 @@ title: 更新大型資料範例 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
@@ -17,9 +14,9 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc64e76d59b2d6957685c40c09d64e2c1a3d0dec
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 8ff0d903d9e4f47580fbce5b4c117a2a339dd22c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -33,13 +30,13 @@ ms.lasthandoff: 05/03/2018
  \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \samples\adaptive  
   
 ## <a name="requirements"></a>需求  
- 若要執行此範例應用程式，您將需要存取[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫。 您也必須將 Classpath 設定為包含 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。  
+ 若要執行此範例應用程式，您必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 您也必須將 Classpath 設定為包含 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供 sqljdbc.jar、 sqljdbc4.jar、 sqljdbc41.jar 或 sqljdbc42.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定。 這個範例會使用[isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)和[unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)導入了 JDBC 4.0 API 來存取驅動程式特有的回應緩衝方法的方法。 若要編譯並執行此範例，您將需要使用 sqljdbc4.jar 類別庫，以便提供 JDBC 4.0 的支援。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="example"></a>範例  
- 在下列範例中，範例程式碼會連接到[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]資料庫。 然後，範例程式碼會建立陳述式物件，並使用[isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)方法，檢查陳述式的物件是否為指定的包裝函式[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)類別。 [Unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)方法用來存取驅動程式特有的回應緩衝方法。  
+ 在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 資料庫的連線。 然後，範例程式碼會建立陳述式物件，並使用[isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)方法，檢查陳述式的物件是否為指定的包裝函式[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)類別。 [Unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)方法用來存取驅動程式特有的回應緩衝方法。  
   
  接下來，範例程式碼中設定的回應緩衝模式為"**適應性**」 使用[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)類別以及示範如何取得適應性緩衝模式。  
   

@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c31ae66112acc5cf1831573e436995c68c5d7ff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 574f0e4e829bfbe92761992e51fd3c3ffd5ef852
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,8 +75,8 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**COLUMN_NAME**|**sysname**|每個資料行的資料行名稱**TABLE_NAME**傳回。 這個欄位一律會傳回值。|  
 |**授與者**|**sysname**|已授與此權限的資料庫使用者名稱**COLUMN_NAME**與列出**被授與者**。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此資料行一律是相同**TABLE_OWNER**。 這個欄位一律會傳回值。<br /><br /> **授與者**資料行可以是資料庫擁有者 (**TABLE_OWNER**) 或其他人對資料庫擁有者授與權限的 GRANT 陳述式中使用 WITH GRANT OPTION 子句。|  
 |**被授與者**|**sysname**|已授與此權限的資料庫使用者名稱**COLUMN_NAME**列出的**授與者**。 這個欄位一律會傳回值。|  
-|**權限**|**varchar(**32**)**|可用的資料行權限之一。 資料行權限可以是下列值之一 (或定義實作時，資料來源所支援的其他值)：<br /><br /> 選取 =**被授與者**可以擷取資料行的資料。<br /><br /> INSERT =**被授與者**插入新資料列時，可以提供資料給這個資料行 (由**被授與者**) 到資料表。<br /><br /> UPDATE =**被授與者**可以修改資料行中的現有資料。<br /><br /> 參考 =**被授與者**可以參考外部資料表中主索引鍵/外部索引鍵關聯性中的資料行。 主索引鍵/外部索引鍵關聯性是利用資料表條件約束來定義的。|  
-|**IS_GRANTABLE**|**varchar (**3**)**|指出是否**被授與者**允許權限授與其他使用者 （通常稱為"grant with grant"權限）。 它可以是 YES、NO 或 NULL。 未知 (或 NULL) 值是指不適用 "grant with grant" 的資料來源。|  
+|**權限**|**varchar(** 32 **)**|可用的資料行權限之一。 資料行權限可以是下列值之一 (或定義實作時，資料來源所支援的其他值)：<br /><br /> 選取 =**被授與者**可以擷取資料行的資料。<br /><br /> INSERT =**被授與者**插入新資料列時，可以提供資料給這個資料行 (由**被授與者**) 到資料表。<br /><br /> UPDATE =**被授與者**可以修改資料行中的現有資料。<br /><br /> 參考 =**被授與者**可以參考外部資料表中主索引鍵/外部索引鍵關聯性中的資料行。 主索引鍵/外部索引鍵關聯性是利用資料表條件約束來定義的。|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|指出是否**被授與者**允許權限授與其他使用者 （通常稱為"grant with grant"權限）。 它可以是 YES、NO 或 NULL。 未知 (或 NULL) 值是指不適用 "grant with grant" 的資料來源。|  
   
 ## <a name="permissions"></a>Permissions  
  需要結構描述的 SELECT 權限。  

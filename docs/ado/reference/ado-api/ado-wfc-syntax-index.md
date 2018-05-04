@@ -1,7 +1,6 @@
 ---
 title: ADO-WFC 語法索引 |Microsoft 文件
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -20,11 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da1bb017eb98b63fa4fa6a3e445c9e95f9a812c7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 128e34bad797477fdeadbb18e241fc4d5981e3a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO-WFC 語法索引
 ADO 語言參考會使用 Microsoft Visual Basic 程式語言來說明 ADO 方法和屬性的語法。 此索引是 ADO 語言參考主題，ADO 的 Windows Foundation Classes (ADO/WFC) 為基礎的交互參考。 語法差異，則會發生時使用函式簽章在這個索引中，而不是語法中的清單語言參考主題。  

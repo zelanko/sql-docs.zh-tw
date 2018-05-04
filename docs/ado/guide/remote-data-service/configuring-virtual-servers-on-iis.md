@@ -1,11 +1,9 @@
 ---
 title: 在 IIS 上設定虛擬伺服器 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a482169a963f5ca878ca892cf85c9c3a334596cb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: de284d33acce415472b0526e1f6bde52bac5e829
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>在 IIS 上設定虛擬伺服器
 在建立虛擬伺服器在網際網路資訊服務 4.0 中，設定才能使用 RDS 虛擬伺服器所需下列兩個額外的步驟：  

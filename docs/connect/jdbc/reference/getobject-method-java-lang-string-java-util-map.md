@@ -3,13 +3,10 @@ title: getObject 方法 （java.lang.String，java.util.Map） |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4a20a5362cc6f3d929111fa64271cca910ea47c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 2ef8e694e3d03f314f6985276218ee15dcf88e9d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -34,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   擷取指定之參數的值為給定的參數名稱，使用指定的對應物件的 Java 程式語言中的物件。  
   
 > [!NOTE]  
->  這個方法目前不支援由[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 因此，使用這個方法時一定會傳回預設對應。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支援這個方法。 因此，使用這個方法時一定會傳回預設對應。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +44,7 @@ public java.lang.Object getObject(java.lang.String sCol,
 #### <a name="parameters"></a>參數  
  *sCol*  
   
- A**字串**，其中包含參數名稱。  
+ 包含參數名稱的**字串**。  
   
  *m*  
   

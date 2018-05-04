@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 231e911d1438a16d4b1a2db234e895f8652ea375
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 81ecc4cba94db62ff6f7fb6960d989a205ca8eae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**size**|**nvarchar(18)**|檔案大小 (以 MB 為單位)。|  
 |**maxsize**|**nvarchar(18)**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
 |**成長**|**nvarchar(18)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。|  
-|**使用方式**|**varchar(9)**|檔案的使用方式。 對於資料檔中，這個值是**'僅限資料'**和記錄檔的值是**僅限記錄'**。|  
+|**使用方式**|**varchar(9)**|檔案的使用方式。 對於資料檔中，這個值是 **'僅限資料'** 和記錄檔的值是**僅限記錄'**。|  
   
 ## <a name="remarks"></a>備註  
  **狀態**結果中的資料行集的選項已設定為 ON 的資料庫中的報表。 所有資料庫選項不會都報告**狀態**資料行。 若要查看目前的資料庫選項設定的完整清單，請使用**sys.databases**目錄檢視。  

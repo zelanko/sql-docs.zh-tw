@@ -32,13 +32,12 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cdd9b448d0d8e6a6c57a6bae2c9c52a94952f380
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d55eb614a9041322db2e4ddfeb03f64e6cff9e29
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ fn_listextendedproperty (
  這是所指定之層級 0 物件類型的名稱。 *level0_object_name*是**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
   
  {預設 |'*level1_object_type*' |NULL}  
- 這是層級 1 物件的類型。 *level1_object_type*是**varchar （128)**預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ 這是層級 1 物件的類型。 *level1_object_type*是**varchar （128)** 預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
 > [!NOTE]  
 >  預設值對應到 NULL，'default' 對應到物件類型 DEFAULT。  
@@ -86,7 +85,7 @@ fn_listextendedproperty (
  這是所指定之層級 1 物件類型的名稱。 *level1_object_name*是**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
   
  {預設 |'*level2_object_type*' |NULL}  
- 這是層級 2 物件的類型。 *level2_object_type*是**varchar （128)**預設值是 NULL。 有效輸入有 DEFAULT、預設值 (對應到 NULL) 和 NULL。 有效輸入*level2_object_type*是資料行、 條件約束、 EVENT NOTIFICATION、 INDEX、 參數、 觸發程序和 NULL。  
+ 這是層級 2 物件的類型。 *level2_object_type*是**varchar （128)** 預設值是 NULL。 有效輸入有 DEFAULT、預設值 (對應到 NULL) 和 NULL。 有效輸入*level2_object_type*是資料行、 條件約束、 EVENT NOTIFICATION、 INDEX、 參數、 觸發程序和 NULL。  
   
  {預設 |'*level2_object_name*' |NULL}  
  這是所指定之層級 2 物件類型的名稱。 *level2_object_name*是**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  

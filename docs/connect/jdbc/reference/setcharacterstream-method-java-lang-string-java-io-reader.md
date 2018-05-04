@@ -3,13 +3,10 @@ title: setCharacterStream 方法 （java.lang.String，java.io.Reader） |Micros
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 43acac5b-5a8a-4685-bee6-7194d2d03a52
@@ -17,9 +14,9 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 735877f38cca2d6a5ce43f12b2e3ee347bc9b7c6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 185d42ca1c9ded260ffe59b7f225ded72edb2984
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -39,9 +36,9 @@ public final void setCharacterStream(java.lang.String parameterName,
 #### <a name="parameters"></a>參數  
  *參數名稱*  
   
- A**字串**，其中包含參數名稱。  
+ 包含參數名稱的**字串**。  
   
- *讀取器*  
+ *reader*  
   
  包含 Unicode 資料的讀取器物件。  
   

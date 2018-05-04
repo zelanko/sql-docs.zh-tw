@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - ConfigDSN
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dec94050079f41415983a63eac0669070145b2fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2d7ae36927ef95bcfb96846b5f266da56e5f3bec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configdsn-function"></a>ConfigDSN 函式
 **一致性**  
@@ -88,7 +87,7 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>註解  
  **ConfigDSN**為關鍵字-值組表單中的屬性清單，安裝程式 DLL 的接收連接資訊。 每一對 null 位元組，以終止，並將整個清單終止 null 位元組。 （也就是兩個 null 位元組標記清單的結尾）。關鍵字-值配對中的等號前後不能有空格。 **ConfigDSN**可以接受關鍵字不是有效的關鍵字**SQLBrowseConnect**和**SQLDriverConnect**。 **ConfigDSN**並不一定支援所有的關鍵字是有效的關鍵字**SQLBrowseConnect**和**SQLDriverConnect**。 (**ConfigDSN**不接受**驅動程式**關鍵字。)所用的關鍵字**ConfigDSN**函式必須支援重新建立資料來源使用安裝程式的自動安裝程式功能所需的所有選項。 當使用**ConfigDSN**值和連接字串值相同，應該使用相同的關鍵字。  
   
- 在**SQLBrowseConnect**和**SQLDriverConnect**，這些關鍵字，而且其值不應該包含**[] {} （)，;？\*= ！ @**字元和值**DSN**關鍵字不能只包含空格。 因為登錄文法中，關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
+ 在**SQLBrowseConnect**和**SQLDriverConnect**，這些關鍵字，而且其值不應該包含 **[]{}（)，;？\*= ！ @** 字元和值**DSN**關鍵字不能只包含空格。 因為登錄文法中，關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
   
  **ConfigDSN**應該呼叫**SQLValidDSN**以檢查資料來源名稱的長度，並驗證確定名稱中包含任何無效字元。 如果資料來源名稱長度超過 SQL_MAX_DSN_LENGTH 或包含無效的字元， **SQLValidDSN**會傳回錯誤和**ConfigDSN**會傳回錯誤。 也會檢查資料來源名稱的長度所**SQLWriteDSNToIni**。  
   

@@ -1,11 +1,9 @@
 ---
 title: HelloData： 簡單的 ADO 應用程式 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7516198dba64e9567b39abecfe31948d38e846e1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3fbc270a27350160933019c16c3b354270beb64f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData： 簡單的 ADO 應用程式
 這個簡單的應用程式逐步執行每四個主要的 ADO 作業： 取得、 檢視、 編輯和更新的資料。 這些作業將會對 Microsoft® SQL Server 隨附 Northwind 範例資料庫。 若要將焦點放在 ADO 的基本概念，並防止程式碼雜亂，此範例中的錯誤處理是最小。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 04/18/2018
   
 2.  建立四個命令按鈕上方的表單，並設定**名稱**和**標題**屬性在本主題結尾的資料表中所顯示的值。  
   
-3.  下方的按鈕，加入**Microsoft DataGrid 控制項**(Msdatgrd.ocx)。 Msdatgrd.ocx 檔案隨附於 Visual Basic，而且位於 \windows\system32 或 \winnt\system32 目錄中。 若要加入 Visual Basic 的 [工具箱] 窗格中的 DataGrid 控制項，請選取**元件...**從**專案**功能表。 旁邊核取方塊"Microsoft DataGrid 控制項 6.0 (SP3) (OLEDB) 」，然後按一下 **確定**。 若要將控制項加入至專案，DataGrid 控制項從工具箱拖曳至 Visual Basic 表單。  
+3.  下方的按鈕，加入**Microsoft DataGrid 控制項**(Msdatgrd.ocx)。 Msdatgrd.ocx 檔案隨附於 Visual Basic，而且位於 \windows\system32 或 \winnt\system32 目錄中。 若要加入 Visual Basic 的 [工具箱] 窗格中的 DataGrid 控制項，請選取**元件...** 從**專案**功能表。 旁邊核取方塊"Microsoft DataGrid 控制項 6.0 (SP3) (OLEDB) 」，然後按一下 **確定**。 若要將控制項加入至專案，DataGrid 控制項從工具箱拖曳至 Visual Basic 表單。  
   
 4.  建立**文字方塊**表單下方方格上並設定其屬性，如下表所示。 當您完成時，表單應該類似下圖。  
   

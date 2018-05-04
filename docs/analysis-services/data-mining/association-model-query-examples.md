@@ -1,37 +1,23 @@
 ---
-title: "關聯模型查詢範例 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 關聯模型查詢範例 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- itemsets [Analysis Services]
-- association algorithms [Analysis Services]
-- rules [Data Mining]
-- association rules
-- content queries [DMX]
-ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1313c2933ba37f161edd4980a6b931388f60e13b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 965faf24b55fb206746076d5773c158fa20375de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="association-model-query-examples"></a>關聯模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在您針對資料採礦模型建立查詢時，可以建立內容查詢以提供有關在分析期間所發現的規則和項目集的詳細資料，或建立預測查詢以使用在資料中發現的關聯來進行預測。 對關聯模型而言，預測通常會以規則為基礎，而且可以用來進行推薦，而對內容所做的查詢則通常會探索項目集之間的關聯性。 您也可以擷取有關模型的中繼資料。  
+  在您針對資料採礦模型建立查詢時，可以建立內容查詢以提供有關在分析期間所發現的規則和項目集的詳細資料，或建立預測查詢以使用在資料中發現的關聯來進行預測。 對關聯模型而言，預測通常會以規則為基礎，而且可以用來進行推薦，而對內容所做的查詢則通常會探索項目集之間的關聯性。 您也可以擷取有關模型的中繼資料。  
   
  本節說明如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法為基礎的模型來建立此類查詢。  
   
@@ -232,19 +218,19 @@ ORDER BY NODE_SUPPORT DESC
 |||  
 |-|-|  
 |預測函數|使用方式|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|確定某個節點是否為類神經網路圖中另一個節點的子系。|  
-|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|指示指定的節點是否包含目前案例。|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|傳回加權機率。|  
-|[[Predictassociation] &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|預測關聯資料集的成員資格。|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|傳回與目前預測值相關之值的資料表。|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|傳回每個案例的 Node_ID。|  
-|[[Predictprobability] &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|傳回預測值的機率。|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|傳回預測值的變異數。|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|確定某個節點是否為類神經網路圖中另一個節點的子系。|  
+|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|指示指定的節點是否包含目前案例。|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|傳回加權機率。|  
+|[[Predictassociation] & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|預測關聯資料集的成員資格。|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|傳回與目前預測值相關之值的資料表。|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|傳回每個案例的 Node_ID。|  
+|[[Predictprobability] & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|傳回預測值的機率。|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|傳回預測值的變異數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 關聯分析演算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft 關聯分析演算法技術參考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [關聯模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [關聯模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

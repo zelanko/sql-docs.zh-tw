@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 64a669e37edf07ff897c94122e7e49d5899c1b6c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c3b6f74567092fbfeb2aad99d9e6c0f7384c35d4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +137,7 @@ sp_update_alert
  已保留。  
   
  [ **@performance_condition =**] **'***performance_condition***'**  
- 值，表示格式**'***itemcomparatorvalue***'**。 *performance_condition*是**nvarchar （512)**，預設值是 NULL，這些元素組成。  
+ 值，表示格式 **'***itemcomparatorvalue***'**。 *performance_condition*是**nvarchar （512)**，預設值是 NULL，這些元素組成。  
   
 |格式元素|Description|  
 |--------------------|-----------------|  

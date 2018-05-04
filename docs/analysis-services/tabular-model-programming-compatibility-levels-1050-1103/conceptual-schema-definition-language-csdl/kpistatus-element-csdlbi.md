@@ -1,33 +1,31 @@
 ---
-title: "KpiStatus 元素 (CSDLBI) |Microsoft 文件"
-ms.custom: 
+title: KpiStatus 元素 (CSDLBI) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 6fee5b82-caa8-46a1-ad68-bbce3e11e01e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: af4c2fd061dcfcce4316fd16dd0272bbac45c6c9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8895d3fce311650e60de08304abe211ba5306c96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpistatus-element-csdlbi"></a>KpiStatus 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-KpiStatus 元素會定義包含在關鍵效能指標 (KPI) 中當做狀態指標使用之值的資料行參考。  
+  KpiStatus 元素會定義包含在關鍵效能指標 (KPI) 中當做狀態指標使用之值的資料行參考。  
   
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 KpiStatus 元素的元素和屬性。  
@@ -88,6 +86,6 @@ KpiStatus 元素會定義包含在關鍵效能指標 (KPI) 中當做狀態指標
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [KPI 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
+ [KPI 元素 & #40;CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
   
   

@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a0e49b1156817f720b0c7db3205a8d1697ae6b8f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 06d75379d786c134f96743ccd3cb6271bc552710
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Usage 元素 (MiningModelColumn) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述如何與父系相關聯的資料行[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  描述如何與父系相關聯的資料行[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|無|  
@@ -66,17 +66,17 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |*索引鍵*|此資料行為索引鍵資料行。|  
 |*輸入*|此資料行為輸入資料行。|  
 |*Predict*|此資料行為預測資料行。|  
 |*PredictOnly*|此資料行只能為預測資料行。|  
-|*無*|模型不會使用此資料行。<br /><br /> **\*\*警告\* \*** 時使用的值是"None"，Analysis Services 不會將傳送的任何值到伺服器預設值; 因此，使用方式 屬性不包含要求/回應中。|  
+|*無*|模型不會使用此資料行。<br /><br /> **\*\* 警告\* \*** 時使用的值是"None"，Analysis Services 不會將傳送的任何值到伺服器預設值; 因此，使用方式 屬性不包含要求/回應中。|  
   
  列舉型別對應至允許的值**使用量**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

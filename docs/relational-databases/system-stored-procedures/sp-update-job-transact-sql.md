@@ -24,12 +24,11 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f9b2702c847457fec32085efec94b0d25e840fa8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 52afd45e6458db3cc39dc62d882c7d741d76fc7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  作業的類別目錄。 *類別*是**nvarchar （128)**。  
   
  [  **@owner_login_name =**] **'***登入***'**  
- 擁有作業的登入名稱。 *登入*是**nvarchar （128)**只有**sysadmin**固定的伺服器角色可以變更作業擁有權。  
+ 擁有作業的登入名稱。 *登入*是**nvarchar （128)** 只有**sysadmin**固定的伺服器角色可以變更作業擁有權。  
   
  [  **@notify_level_eventlog =**] *eventlog_level*  
  指定將項目放在這項作業的 Microsoft Windows 應用程式記錄中的時機。 *eventlog_level*是**int**，而且可以是下列值之一。  

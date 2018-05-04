@@ -24,12 +24,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cfd25167cda521390395940b77a2f6a8b79a0000
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 641dd06193b6897a703067f24ce7aa5392abe929
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,26 +57,26 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@distributor=**] **'***散發者***'**輸出  
+ [  **@distributor=**] **'***散發者***'** 輸出  
  這是散發者的名稱。 散發者是**sysname**，預設值是**%**，這是唯一會傳回結果集的值。  
   
- [  **@distribdb=**] **'***distribdb***'**輸出  
+ [  **@distribdb=**] **'***distribdb***'** 輸出  
  這是散發資料庫的名稱。 *distribdb*是**sysname**，預設值是**%**，這是唯一會傳回結果集的值。  
   
- [  **@directory=**] **'***目錄***'**輸出  
+ [  **@directory=**] **'***目錄***'** 輸出  
  這是工作目錄。 *目錄*是**nvarchar （255)**，預設值是**%**，這是唯一會傳回結果集的值。  
   
  [  **@account=**] **'***帳戶***' 輸出**  
  這是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者帳戶。 *帳戶*是**nvarchar （255)**，預設值是**%**，這是唯一會傳回結果集的值。  
   
  [  **@min_distretention=**] *min_distretention * * * 輸出**  
- 這是最小散發保留期限 (以小時為單位)。 *min_distretention*是**int**，預設值是**-1**。  
+ 這是最小散發保留期限 (以小時為單位)。 *min_distretention*是**int**，預設值是 **-1**。  
   
  [  **@max_distretention=**] *max_distretention * * * 輸出**  
- 這是最大散發保留期限 (以小時為單位)。 *max_distretention*是**int**，預設值是**-1**。  
+ 這是最大散發保留期限 (以小時為單位)。 *max_distretention*是**int**，預設值是 **-1**。  
   
  [  **@history_retention=**] *history_retention * * * 輸出**  
- 這是記錄保留期限 (以小時為單位)。 *history_retention*是**int**，預設值是**-1**。  
+ 這是記錄保留期限 (以小時為單位)。 *history_retention*是**int**，預設值是 **-1**。  
   
  [  **@history_cleanupagent=**] **'***history_cleanupagent***' 輸出**  
  這是記錄清除代理程式的名稱。 *history_cleanupagent*是**nvarchar （100)**，預設值是**%**，這是唯一會傳回結果集的值。  

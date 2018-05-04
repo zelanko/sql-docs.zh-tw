@@ -1,11 +1,9 @@
 ---
 title: 使用 ADO 的網際網路發行 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 642f4eb6f145b7488766688c758660521c74fa8f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4adf31cd66246cd078bb31dc99ac5e8025f04636
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 的網際網路發行
 [OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)顯示存取使用 ADO 的異質資料的特定範例。 雖然本節中的範例將會是適用於使用網際網路發行的提供者，示範的原則類似時應該使用 ADO 與其他異質資料，例如提供者的電子郵件存放區提供者。  

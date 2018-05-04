@@ -25,13 +25,12 @@ caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d74da1d1b45cfa7c9bf3185ee216303b10b4591
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5a3014753cf48c66c63e28f0e551358c40a0fb51
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,29 +41,29 @@ ms.lasthandoff: 04/16/2018
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG 排列**|**nvarchar(**128**)**|資料表限定詞。|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|包含資料表的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
-|**TABLE_NAME**|**nvarchar(**128**)**|資料表名稱。|  
-|**COLUMN_NAME**|**nvarchar(**128**)**|資料行名稱。|  
+|**TABLE_CATALOG 排列**|**nvarchar(** 128 **)**|資料表限定詞。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_NAME**|**nvarchar(** 128 **)**|資料表名稱。|  
+|**COLUMN_NAME**|**nvarchar(** 128 **)**|資料行名稱。|  
 |**ORDINAL_POSITION**|**int**|資料行識別碼。|  
-|**COLUMN_DEFAULT**|**nvarchar (**4000**)**|資料行的預設值。|  
-|**IS_NULLABLE**|**varchar (**3**)**|資料行的 Null 屬性。 如果這個資料行允許 NULL，這個資料行就會傳回 YES。 否則，它就會傳回 NO。|  
-|**DATA_TYPE**|**nvarchar(**128**)**|系統提供的資料類型。|  
+|**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|資料行的預設值。|  
+|**IS_NULLABLE**|**varchar (** 3 **)**|資料行的 Null 屬性。 如果這個資料行允許 NULL，這個資料行就會傳回 YES。 否則，它就會傳回 NO。|  
+|**DATA_TYPE**|**nvarchar(** 128 **)**|系統提供的資料類型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|二進位資料、字元資料，或文字和影像資料的最大長度 (以字元為單位)。<br /><br /> -1 代表**xml**和大數值類型資料。 否則，就傳回 NULL。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
 |**CHARACTER_OCTET_LENGTH**|**int**|二進位資料、字元資料，或文字和影像資料的最大長度 (以位元組為單位)。<br /><br /> -1 代表**xml**和大數值類型資料。 否則，就傳回 NULL。|  
 |**NUMERIC_PRECISION**|**tinyint**|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數。 否則，就傳回 NULL。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數基數。 否則，就傳回 NULL。|  
 |**NUMERIC_SCALE**|**int**|近似數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，就傳回 NULL。|  
 |**DATETIME_PRECISION**|**smallint**|子類型代碼**datetime**和 ISO**間隔**資料型別。 如果是其他資料類型，就傳回 NULL。|  
-|**CHARACTER_SET_CATALOG**|**nvarchar(**128**)**|傳回**主要**。 這表示的資料庫中的字元集所在，如果資料行是字元資料或**文字**資料型別。 否則，就傳回 NULL。|  
-|**CHARACTER_SET_SCHEMA**|**nvarchar(**128**)**|一律傳回 NULL。|  
-|**CHARACTER_SET_NAME**|**nvarchar(**128**)**|如果此資料行是字元資料的字元集的唯一名稱會傳回或**文字**資料型別。 否則，就傳回 NULL。|  
-|**COLLATION_CATALOG**|**nvarchar(**128**)**|一律傳回 NULL。|  
-|**COLLATION_SCHEMA**|**nvarchar(**128**)**|一律傳回 NULL。|  
-|**SYS.DATABASES**|**nvarchar(**128**)**|傳回定序的唯一名稱，如果資料行是字元資料或**文字**資料型別。 否則，就傳回 NULL。|  
-|**DOMAIN_CATALOG**|**nvarchar(**128**)**|如果資料行是別名資料類型，這個資料行就是建立使用者自訂資料類型的資料庫名稱。 否則，就傳回 NULL。|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|如果資料行是一個使用者自訂資料類型，這個資料行會傳回使用者自訂資料類型的結構描述名稱。 否則，就傳回 NULL。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷資料類型的結構描述。 尋找類型之結構描述的唯一可靠方式就是使用 TYPEPROPERTY 函數。|  
-|**網域名稱**|**nvarchar(**128**)**|如果資料行是一個使用者自訂資料類型，這個資料行就是使用者自訂資料類型的名稱。 否則，就傳回 NULL。|  
+|**CHARACTER_SET_CATALOG**|**nvarchar(** 128 **)**|傳回**主要**。 這表示的資料庫中的字元集所在，如果資料行是字元資料或**文字**資料型別。 否則，就傳回 NULL。|  
+|**CHARACTER_SET_SCHEMA**|**nvarchar(** 128 **)**|一律傳回 NULL。|  
+|**CHARACTER_SET_NAME**|**nvarchar(** 128 **)**|如果此資料行是字元資料的字元集的唯一名稱會傳回或**文字**資料型別。 否則，就傳回 NULL。|  
+|**COLLATION_CATALOG**|**nvarchar(** 128 **)**|一律傳回 NULL。|  
+|**COLLATION_SCHEMA**|**nvarchar(** 128 **)**|一律傳回 NULL。|  
+|**SYS.DATABASES**|**nvarchar(** 128 **)**|傳回定序的唯一名稱，如果資料行是字元資料或**文字**資料型別。 否則，就傳回 NULL。|  
+|**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|如果資料行是別名資料類型，這個資料行就是建立使用者自訂資料類型的資料庫名稱。 否則，就傳回 NULL。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|如果資料行是一個使用者自訂資料類型，這個資料行會傳回使用者自訂資料類型的結構描述名稱。 否則，就傳回 NULL。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷資料類型的結構描述。 尋找類型之結構描述的唯一可靠方式就是使用 TYPEPROPERTY 函數。|  
+|**網域名稱**|**nvarchar(** 128 **)**|如果資料行是一個使用者自訂資料類型，這個資料行就是使用者自訂資料類型的名稱。 否則，就傳回 NULL。|  
   
 ## <a name="remarks"></a>備註  
  **ORDINAL_POSITION**資料行**INFORMATION_SCHEMA。資料行**檢視不相容於 COLUMNS_UPDATED 函數所傳回的資料行的位元模式。 若要取得相容於 COLUMNS_UPDATED 的位元模式，您必須參考**ColumnID** COLUMNPROPERTY 系統函數，當您查詢的屬性**INFORMATION_SCHEMA。資料行**檢視。 例如：  

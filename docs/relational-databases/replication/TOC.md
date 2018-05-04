@@ -293,3 +293,6 @@
 ## [設定異動複寫](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [設定合併式複寫](tutorial-replicating-data-with-mobile-clients.md)  
 
+# 疑難排解程式
+## [異動複寫發生錯誤](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+

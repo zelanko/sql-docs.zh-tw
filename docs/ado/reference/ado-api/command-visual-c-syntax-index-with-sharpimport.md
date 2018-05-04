@@ -1,11 +1,9 @@
 ---
 title: '命令 （Visual c + + 語法索引與 #import） |Microsoft 文件'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e8fbc6ad300f64125a4cc718ed3c9b6a951be7cb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8339dbcd8a4971f9b979114620ef9aaa2a0d6b24
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>命令 （Visual c + + 語法索引與 #import）
 ## <a name="methods"></a>方法  

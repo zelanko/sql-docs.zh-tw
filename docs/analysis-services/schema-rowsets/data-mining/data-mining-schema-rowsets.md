@@ -1,15 +1,15 @@
 ---
-title: "資料採礦結構描述資料列 |Microsoft 文件"
-ms.custom: 
+title: 資料採礦結構描述資料列 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - rowsets [Analysis Services], data mining
 - data mining [Analysis Services], schema rowsets
 ms.assetid: bd7d5df5-500b-4159-8467-880e141bc043
-caps.latest.revision: 
+caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: de34fa80e547b38216ca83458501347888488774
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c4fdc126f135ce1a84c6a727a7fc374ef63c4ed9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-schema-rowsets"></a>資料採礦結構描述資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-正在執行的伺服器[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下列資料採礦結構描述資料列集。 若要檢查特定 XML/A 提供者是否支援特定的資料列集，請使用[DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)含有資料列集[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
+  正在執行的伺服器[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下列資料採礦結構描述資料列集。 若要檢查特定 XML/A 提供者是否支援特定的資料列集，請使用[DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)含有資料列集[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
   
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，資料採礦結構描述資料列集會以 Transact-SQL 語言中的資料表格式，在 $SYSTEM 結構描述中公開。 例如，在 Analysis Services 執行個體上的下列查詢會傳回在目前執行個體上可用的結構描述清單。  
   
@@ -59,6 +58,6 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 結構描述資料列集](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
- [資料採礦結構描述資料列集 &#40;Ssas&#41;](../../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)  
+ [資料採礦結構描述資料列集&#40;SSAs&#41;](../../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)  
   
   

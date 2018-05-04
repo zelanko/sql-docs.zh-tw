@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0e8cf90524c833f1bca5563ea43ede9cf84a1a27
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3fa02d526bcd4042efa92032551d950b5f553932
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ ms.lasthandoff: 04/16/2018
 |**datatype_mapping_id**|**int**|識別每個唯一的資料類型對應。|  
 |**msdbms_datatype_mapping**|**int**|識別來源資料類型。|  
 |**dest_datatype_id**|**int**|識別目的地資料類型。|  
-|**dest_precision**|**bigint**|定義目的地資料類型，其中 NULL 值表示不使用有效位數的有效位數和值為**-1**表示使用來源資料類型的有效位數。|  
-|**dest_scale**|**int**|定義標尺的目的地資料類型，其中 NULL 值表示不使用 小數位數，而值為**-1**表示使用來源資料類型的小數位數。|  
-|**dest_length**|**bigint**|定義長度的目的地資料類型，其中 NULL 值表示不使用長度，而值為**-1**表示使用來源資料類型的長度。|  
+|**dest_precision**|**bigint**|定義目的地資料類型，其中 NULL 值表示不使用有效位數的有效位數和值為 **-1**表示使用來源資料類型的有效位數。|  
+|**dest_scale**|**int**|定義標尺的目的地資料類型，其中 NULL 值表示不使用 小數位數，而值為 **-1**表示使用來源資料類型的小數位數。|  
+|**dest_length**|**bigint**|定義長度的目的地資料類型，其中 NULL 值表示不使用長度，而值為 **-1**表示使用來源資料類型的長度。|  
 |**dest_nullable**|**bit**|指出對應中的目的地資料行是否允許 NULL 值，其中 NULL 值表示不需要這個目的地。|  
 |**dest_createparams**|**int**|用來描述每個資料類型所適用之長度、有效位數和小數位數組合的點陣圖，其中包括：<br /><br /> **0x1** = 有效位數。<br /><br /> **0x2** = 小數位數。<br /><br /> **0x4** = 長度。|  
   

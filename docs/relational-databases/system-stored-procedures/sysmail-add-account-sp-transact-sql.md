@@ -24,12 +24,11 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0387b4dac0a8d0419b5ffccb8ac8520a0bc1bd0c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 32283e740f6b9e206e629ed4ac8cb2bcfeb60ac4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  這個帳戶要用的 SMTP 郵件伺服器的名稱或 IP 位址。 執行的電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須能夠解析*server_name*為 IP 位址。 *server_name*是**sysname**，沒有預設值。  
   
  [ **@mailserver_type** = ] '*server_type*'  
- 電子郵件伺服器的類型。 *server_type*是**sysname**，預設值是**'SMTP'**...  
+ 電子郵件伺服器的類型。 *server_type*是**sysname**，預設值是 **'SMTP'**...  
   
  [ **@port** = ] *port_number*  
  電子郵件伺服器的通訊埠編號。 *port_number*是**int**，預設值為 25。  
@@ -103,7 +102,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="remarks"></a>備註  
  Database Mail 提供不同的參數**@email_address**， **@display_name**，和**@replyto_address**。 **@email_address**參數是傳送訊息的位址。 **@display_name**參數是顯示的名稱**從：**電子郵件訊息的欄位。 **@replyto_address**參數是位址將會傳送回覆的電子郵件訊息。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所用的帳戶，可以從只供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用的電子郵件地址傳送電子郵件訊息。 這個地址所送出的訊息應該會顯示易記名稱，使收件者能夠輕鬆判斷是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 送出訊息。 如果收件者回應訊息，這個回應應該會送給資料庫管理員，而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所用的地址。 此案例中，此帳戶會使用**SqlAgent@Adventure-Works.com**為電子郵件地址。 顯示名稱設定為**SQL Server Agent Automated Mailer**。 此帳戶會使用**danw@Adventure-Works.com**當做回應地址，因此回覆給由這個帳戶傳送的郵件移至資料庫管理員，而不是電子郵件地址[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。 Database Mail 分別提供這三個參數的獨立設定，因此，您可以依照需要來設定訊息。  
   
- **@mailserver_type**參數支援值**'SMTP'**。  
+ **@mailserver_type**參數支援值 **'SMTP'**。  
   
  當**@use_default_credentials**是 1 時，郵件會傳送到 SMTP 伺服器使用的認證[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 當**@use_default_credentials**為 0 和**@username**和**@password**指定帳戶時，此帳戶會使用 SMTP 驗證。 **@username**和**@password**是此帳戶會使用 SMTP 伺服器，而沒有認證的認證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或網路上的電腦。  
   

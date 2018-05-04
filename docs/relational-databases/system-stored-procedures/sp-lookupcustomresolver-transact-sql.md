@@ -24,12 +24,11 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad45f26fbd1c6b7f9488497333f5ba44a2b5fa8c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 02de3e99a2cb322d59e7303abe3701e3acf4e33b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +53,16 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [  **@article_resolver =** ] **'***article_resolver***'**  
  指定要取消註冊之自訂商務邏輯的名稱。 *article_resolver*是**nvarchar （255)**，沒有預設值。 如果移除的商務邏輯是 COM 元件，這個參數就是元件的易記名稱。 如果商務邏輯是一個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件，這個參數就是組件的名稱。  
   
- [ **@resolver_clsid**=] **'***resolver_clsid***'**輸出  
+ [ **@resolver_clsid**=] **'***resolver_clsid***'** 輸出  
  指定的自訂商務邏輯的名稱相關聯之 COM 物件的 CLSID 值*article_resolver*參數。 *resolver_clsid*是**nvarchar （50)**，預設值是 NULL。  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'**輸出  
+ [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'** 輸出  
  指定要登錄之自訂商務邏輯的類型。 *is_dotnet_assembly*是**元**，預設值是 0。 **1**表示要登錄的自訂商務邏輯是商務邏輯處理常式組件。**0**表示它是 COM 元件。  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'**輸出  
+ [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'** 輸出  
  這是實作商務邏輯處理常式的組件名稱。 *dotnet_assembly_name*是**nvarchar （255)**，預設值是 NULL。  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name***'**輸出  
+ [  **@dotnet_class_name=** ] **'***dotnet_class_name***'** 輸出  
  這是覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 來實作商務邏輯處理常式的類別名稱。 *dotnet_class_name*是**nvarchar （255)**，預設值是 NULL。  
   
  [  **@publisher=** ] **'***發行者***'**  

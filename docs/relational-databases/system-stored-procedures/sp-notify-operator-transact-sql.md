@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dcfa1cd158e0e853315c57581b48a1abfffd4bdf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: db32f3bf2f6c70bb300852c5f1b994e0896c8c6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +65,10 @@ sp_notify_operator
 > **注意：**電子郵件地址必須定義運算子，才能接收訊息。  
   
  [ **@subject=** ] **'***subject***'**  
- 電子郵件訊息的主旨。 *主旨*是**nvarchar （256)**沒有預設值。  
+ 電子郵件訊息的主旨。 *主旨*是**nvarchar （256)** 沒有預設值。  
   
  [ **@body=** ] **'***message***'**  
- 電子郵件的本文。 *訊息*是**nvarchar （max)**沒有預設值。  
+ 電子郵件的本文。 *訊息*是**nvarchar （max)** 沒有預設值。  
   
  [  **@file_attachments=** ] **'***附件***'**  
  這是要附加至電子郵件訊息的檔案名稱。 *附件*是**nvarchar （512)**，沒有預設值。  

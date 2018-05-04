@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e104407394925f5deb8d7d11a55fe8e979934df
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e5e6b1f9ab0d4cbd42e88ae4480d55625ba434e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.lasthandoff: 04/16/2018
 |**sync_method**|**int**|同步處理方法：<br /><br /> **0** = 的 native （產生所有資料表的原生模式大量複製輸出）。<br /><br /> **1** = 的 character （產生所有資料表的字元模式大量複製輸出）。<br /><br /> **3** = concurrent （產生的所有原生模式大量複製輸出資料表，但在快照集期間，不鎖定資料表）。<br /><br /> **4** = Concurrent_c （產生的字元模式大量複製輸出所有的資料表，但在快照集期間，不鎖定資料表）<br /><br /> 值**3**和**4**可針對異動複寫和合併式複寫，但不適用於快照式複寫。|  
 |**allow_subscription_copy**|**bit**|啟用或停用複製訂閱這個發行集之訂閱資料庫的能力。 **0**表示，已停用複製，以及**1**表示它已啟用。|  
 |**thirdparty_options**|**int**|指定是否將發行集的複寫資料夾中顯示[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]隱藏：<br /><br /> **0** = 中的 Replication 資料夾中，顯示異質性發行集[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。<br /><br /> **1** = 抑制顯示異質性發行集的複寫資料夾中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。|  
-|**allow_queued_tran**|**bit**|指定發行集是否允許佇列更新：<br /><br /> **0 =**發行集是非排入佇列。<br /><br /> **1** = 發行集使用佇列。|  
+|**allow_queued_tran**|**bit**|指定發行集是否允許佇列更新：<br /><br /> **0 =** 發行集是非排入佇列。<br /><br /> **1** = 發行集使用佇列。|  
 |**options**|**int**|這個版本沒有可用的資訊。|  
   
 ## <a name="see-also"></a>另請參閱  

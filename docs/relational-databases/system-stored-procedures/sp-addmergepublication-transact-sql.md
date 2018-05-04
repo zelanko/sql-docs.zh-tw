@@ -24,12 +24,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 26eb846b1744fcf8616228ca1bf95b80c4e4d33c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,10 +131,10 @@ sp_addmergepublication [ @publication = ] 'publication'
  指定快照集替代資料夾的位置。 *alternate_snapshot_folder*是**nvarchar （255)**，預設值是 NULL。  
   
  [  **@pre_snapshot_script =** ] **'***pre_snapshot_script***'**  
- 指定指向**.sql**檔案位置。 *pre_snapshot_script*是**nvarchar （255)**，預設值是 NULL。 在訂閱者端套用快照集時，合併代理程式會在任何複寫的物件指令碼之前，先執行前快照集 (Pre-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在合併代理程式所用的安全性內容中執行。 前快照集指令碼並非執行於[!INCLUDE[ssEW](../../includes/ssew-md.md)]「 訂閱者 」。  
+ 指定指向 **.sql**檔案位置。 *pre_snapshot_script*是**nvarchar （255)**，預設值是 NULL。 在訂閱者端套用快照集時，合併代理程式會在任何複寫的物件指令碼之前，先執行前快照集 (Pre-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在合併代理程式所用的安全性內容中執行。 前快照集指令碼並非執行於[!INCLUDE[ssEW](../../includes/ssew-md.md)]「 訂閱者 」。  
   
  [  **@post_snapshot_script =** ] **'***post_snapshot_script***'**  
- 指定指向**.sql**檔案位置。 *post_snapshot_script*是**nvarchar （255)**，預設值是 NULL。 在初始同步處理期間，合併代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (Post-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在合併代理程式所用的安全性內容中執行。 後快照集指令碼並非執行於[!INCLUDE[ssEW](../../includes/ssew-md.md)]「 訂閱者 」。  
+ 指定指向 **.sql**檔案位置。 *post_snapshot_script*是**nvarchar （255)**，預設值是 NULL。 在初始同步處理期間，合併代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (Post-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在合併代理程式所用的安全性內容中執行。 後快照集指令碼並非執行於[!INCLUDE[ssEW](../../includes/ssew-md.md)]「 訂閱者 」。  
   
  [  **@compress_snapshot =** ] **'***compress_snapshot***'**  
  指定可寫入快照**@alt_snapshot_folder**位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar （5)**，預設值是 FALSE。 **false**指定，將不壓縮快照集;**true**指定壓縮快照集。 超出 2GB 的快照集檔案無法壓縮。 壓縮的快照集檔案是在執行合併代理程式的位置進行解壓縮；提取訂閱通常會搭配使用壓縮的快照集，因此，會在訂閱者端將檔案解壓縮。 預設資料夾中的快照集無法壓縮。 若要支援[!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者，您必須指定**false**。  
@@ -172,7 +171,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  指定在無法使用預先計算的分割區時，是否啟用分割區變更最佳化。 *keep_partition_changes*是**nvarchar （5)**，預設值是 TRUE。 **false**表示資料分割變更沒有最佳化，而且資料分割中的資料變更時，不使用預先計算資料分割時，會驗證傳送給所有訂閱者的分割區。 **true**表示資料分割變更最佳化，而且只有中訂閱者資料列已變更的資料分割會受到影響。 預先計算資料分割時，設定*use_partition_groups*至**true**並設定*keep_partition_changes*至**false**。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
 > [!NOTE]  
->  如果您指定的值**true**如*keep_partition_changes*，指定其值為**1**快照集代理程式參數**-MaxNetworkOptimization**. 如需有關此參數的詳細資訊，請參閱[複寫快照集代理程式](../../relational-databases/replication/agents/replication-snapshot-agent.md)。 如需如何指定代理程式參數資訊，請參閱[複寫代理程式管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
+>  如果您指定的值**true**如*keep_partition_changes*，指定其值為**1**快照集代理程式參數 **-MaxNetworkOptimization**. 如需有關此參數的詳細資訊，請參閱[複寫快照集代理程式](../../relational-databases/replication/agents/replication-snapshot-agent.md)。 如需如何指定代理程式參數資訊，請參閱[複寫代理程式管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
   
  與[!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者， *keep_partition_changes*必須設定為 true，以確保正確傳播刪除。 設為 false 時，訂閱者所擁有的資料列可能比預期多。  
   

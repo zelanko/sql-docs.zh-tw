@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2730a5ceb1f976605f4a784b71194f4b9caceea5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3bc468a1f26c8919951420a2155c031ba2fb5a25
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +128,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**128**|重複執行|  
   
 > [!NOTE]  
->  指定的值是**64**會導致散發代理程式以連續模式執行。 這會對應至設定**-連續**代理程式的參數。 如需詳細資訊，請參閱 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
+>  指定的值是**64**會導致散發代理程式以連續模式執行。 這會對應至設定 **-連續**代理程式的參數。 如需詳細資訊，請參閱 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  若要設定的頻率所套用的值*frequency_type*。 *frequency_interval*是**int**，預設值是 1。  

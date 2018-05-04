@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 39e640d539dad66402d90fc450b5c22a1e338f89
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 876394cf1f70aec14898a329d24504b1dc1f5878
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [**@failover_mode=**] **'***failover_mode***'**  
- 這是訂閱的容錯移轉模式。 *failover_mode*是**nvarchar （10)**而且可以是下列值之一。  
+ 這是訂閱的容錯移轉模式。 *failover_mode*是**nvarchar （10)** 而且可以是下列值之一。  
   
 |Value|Description|  
 |-----------|-----------------|  

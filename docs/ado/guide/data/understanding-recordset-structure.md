@@ -1,11 +1,9 @@
 ---
 title: 了解資料錄集結構 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 97c118a40e0fb6952f170050bb4b0f3d218363a4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: fb889e2f907e1158819997f2f6ba85e4c7ce80c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-recordset-structure"></a>了解資料錄集的結構
 每個**資料錄集**具有**欄位**集合組成的一或多個**欄位**物件。 A**欄位**物件通常代表資料表資料行。 下列主題將說明如何瀏覽**欄位**每個欄位的集合，以及如何取得資訊。 然後他們將會討論是可供您透過使用何種資訊**欄位**物件，以及如何使用它。  

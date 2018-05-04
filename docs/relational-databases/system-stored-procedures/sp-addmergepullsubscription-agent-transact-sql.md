@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a4034453646cc75c41ac2dd0f2bd7661778e65c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8d57f9f136ad2e11648d039c1b29e46b4a2e1455
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -189,7 +188,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |NULL (預設值)||  
   
 > [!NOTE]  
->  指定的值是**64**會導致合併代理程式，以連續模式執行。 這會對應至設定**-連續**代理程式的參數。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+>  指定的值是**64**會導致合併代理程式，以連續模式執行。 這會對應至設定 **-連續**代理程式的參數。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  合併代理程式的執行日期。 *frequency_interval*是**int**，而且可以是下列值之一。  

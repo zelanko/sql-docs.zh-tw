@@ -28,17 +28,16 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0e0dd4c6f3a5fe6fddf538389581f1554704691c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a6ed1613fdb2d0b6f77cbbf0724bfdf74d5249cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 資料定義-建立全域 CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  根據伺服器上 Cube 的 Subcube，建立和擴展本機保存的 Cube。 連接到本機保存的 Cube 不需要連接伺服器。 如需有關本機 cube 的詳細資訊，請參閱[本機 Cube &#40;Analysis Services-多維度資料 &#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  根據伺服器上 Cube 的 Subcube，建立和擴展本機保存的 Cube。 連接到本機保存的 Cube 不需要連接伺服器。 如需有關本機 cube 的詳細資訊，請參閱[本機 Cube &#40;Analysis Services-多維度資料&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -216,8 +215,8 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [建立工作階段 CUBE 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 資料定義陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [CREATE SESSION CUBE 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

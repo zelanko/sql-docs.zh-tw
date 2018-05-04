@@ -26,13 +26,12 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d6d384e280defcef14dd93b64ae47b604ecc6466
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sys.dm_sql_referenced_entities (
  *< Referencing_class >* :: = {物件 |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
  這是指定之參考實體的類別。 每個陳述式只能指定一個類別。  
   
- *< referencing_class >*是**nvarchar （60)**。  
+ *< referencing_class >* 是**nvarchar （60)**。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -103,7 +102,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 在 SELECT * 子句中使用此物件 (只限物件層級)。|  
 |is_all_columns_found|**bit**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 可以找到物件的所有資料行相依性。<br /><br /> 0 = 無法找到物件的資料行相依性。|
 |is_insert_all|**bit**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 物件用於 INSERT 陳述式沒有資料行清單 （只限物件層級）。|  
-|is_incomplete|**bit**|**適用於**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 物件或資料行繫結錯誤，且不完整。|
+|is_incomplete|**bit**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 物件或資料行繫結錯誤，且不完整。|
   
 ## <a name="exceptions"></a>例外狀況  
  在下列任何情況下，都會傳回空的結果集：  

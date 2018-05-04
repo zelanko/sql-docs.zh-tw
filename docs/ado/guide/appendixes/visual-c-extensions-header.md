@@ -1,11 +1,9 @@
 ---
 title: Visual c + + 擴充功能的標頭 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b4b2563ea21fa749a7ccb6aec797fee7f688d706
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6bc42c7ca15c94a6b1ac9acc9711f9b755610ba2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-extensions-header"></a>Visual c + + 擴充功能的標頭
 下列標頭， **icrsint.h**，詳細資料的介面可讓用戶端擷取欄位從**資料錄集**到衍生自的類別中定義的變數**CADORecordBinding**. 您必須指定您想要存取每個欄位 ADO 繫結巨集。  

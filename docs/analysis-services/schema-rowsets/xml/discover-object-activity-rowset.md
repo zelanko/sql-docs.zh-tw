@@ -20,20 +20,20 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 573b41cb848ee7a8e93bfdc4625b8a05857f2d61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 158813efe442c094cd4c0aca343636f8c6a94af0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]自服務啟動後提供每個物件的資源使用狀況。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供每個物件自從服務啟動之後的資源使用量資訊。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_OBJECT_ACTIVITY**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**OBJECT_AGGREGATION_HIT**|**DBTYPE_I8**||自從服務開始之後，物件之彙總叫用的次數。|  
 |**OBJECT_AGGREGATION_MISS**|**DBTYPE_I8**||自從服務開始之後，物件之現有彙總尚未遺漏 (也就是，尚未使用) 的次數。|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 01/08/2018
 |OBJECT_PARENT_PATH|DBTYPE_WSTR|選擇性。|  
 |OBJECT_ID|DBTYPE_WSTR|選擇性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

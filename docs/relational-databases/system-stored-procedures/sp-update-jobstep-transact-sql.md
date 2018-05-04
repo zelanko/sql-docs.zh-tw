@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 196ef988c33ad6b039af73e498ffba85bc1b2f7e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f6de1a82fc185c5c6824ff318d93f06b9f677646
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ sp_update_jobstep
  [ **@output_file_name =**] **'***file_name***'**  
  儲存此步驟之輸出的檔案名稱。 *file_name*是**nvarchar(200)**，預設值是 NULL。 這個參數只對在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CmdExec 子系統中執行的命令有效。  
   
- 若要將 output_file_name 設為 NULL，您必須設定*output_file_name*為空字串 (' ') 或字串中的空白字元，但您無法使用**CHAR(32)**函式。 例如，依照下列方式，將這個引數設為空字串：  
+ 若要將 output_file_name 設為 NULL，您必須設定*output_file_name*為空字串 (' ') 或字串中的空白字元，但您無法使用**CHAR(32)** 函式。 例如，依照下列方式，將這個引數設為空字串：  
   
  **@output_file_name = ' '**  
   

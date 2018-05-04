@@ -3,13 +3,10 @@ title: updateNClob 方法 （int，java.io.Reader，long） |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2bdbb539-0cb9-4047-98e3-7d6906af68f8
@@ -17,9 +14,9 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1202e13bedf202af8b688efce47bb3dfe66470ae
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 2d22275e38f7f63533b1faadfed0687ef76fb6ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -40,9 +37,9 @@ public void updateNClob(int columnIndex,
 #### <a name="parameters"></a>參數  
  *columnIndex*  
   
- **Int** ，指出資料行索引。  
+ 指出資料行索引的 **int**。  
   
- *讀取器*  
+ *reader*  
   
  讀取器物件。  
   

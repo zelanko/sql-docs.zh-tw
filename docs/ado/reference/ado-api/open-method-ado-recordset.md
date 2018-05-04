@@ -23,12 +23,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a86f84251dca3a76d0e7110c781fea26395fc9d9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8aded01fb6fa5bb8c84f21379d10f9b3c76ce731
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法 （ADO 資料錄集）
 開啟資料指標上[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

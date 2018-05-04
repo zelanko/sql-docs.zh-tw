@@ -1,11 +1,9 @@
 ---
 title: 預計錯誤 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0fc74732fb812f1b13bcb52b8eda97311ae562d7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 5978768e515f4fc6cf6986dc23e7cec1379c69c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="anticipating-errors"></a>預期的錯誤
 錯誤預防為至少和錯誤處理一樣重要。 這最後一節包含您的應用程式可以為了讓比較不可能發生的錯誤採取預防措施的簡短清單。  

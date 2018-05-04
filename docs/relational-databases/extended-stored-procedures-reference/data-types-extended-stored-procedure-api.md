@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -20,12 +19,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c7fd67d6b49aef0c3977b544a114d42c22751af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0e703c80db732560a45db72d8f8c0bf2a2ce21fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>資料類型 (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
  若要使用擴充預存程序 API 資料類型，請在程式中包含 Srv.h 標頭檔案。  
   
-|資料類型|SQL Server 資料類型|Description|  
+|資料類型|SQL Server 資料類型|描述|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binary**|**binary** 資料類型，長度為 0 到 8000 個位元組。|  
 |SRVBIGCHAR|**char**|**character** 資料類型，長度為 0 到 8000 個位元組。|  
@@ -52,15 +50,15 @@ ms.lasthandoff: 04/16/2018
 |SRVDECIMALN|**decimal null**|**decimal** 資料類型，允許 Null 值。|  
 |SRVFLT4|**real**|4-byte **real** 資料類型。|  
 |SRVFLT8|**float**|8-byte **float** 資料類型。|  
-|SRVFLTN|**real** &#124;**浮動 null**|**real** 或 **float** 資料類型，允許 Null 值。|  
+|SRVFLTN|**real** &#124; **float null**|**real** 或 **float** 資料類型，允許 Null 值。|  
 |SRVIMAGE|**image**|**image** 資料類型。|  
 |SRVINT1|**tinyint**|1-byte **tinyint** 資料類型。|  
 |SRVINT2|**smallint**|2-byte **smallint** 資料類型。|  
 |SRVINT4|**int**|4-byte **int** 資料類型。|  
-|SRVINTN|**tinyint** &#124;**smallint** &#124;**int null**|**tinyint**、**smallint** 或 **int** 資料類型，允許 Null 值。|  
+|SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|**tinyint**、**smallint** 或 **int** 資料類型，允許 Null 值。|  
 |SRVMONEY4|**smallmoney**|4-byte **smallmoney** 資料類型。|  
 |SRVMONEY|**money**|8-byte **money** 資料類型。|  
-|SRVMONEYN|**money** &#124;**smallmoney null**|**smallmoney** 或 **money** 資料類型，允許 Null 值。|  
+|SRVMONEYN|**money** &#124; **smallmoney null**|**smallmoney** 或 **money** 資料類型，允許 Null 值。|  
 |SRVNCHAR|**nchar**|Unicode **character** 資料類型。|  
 |SRVNTEXT|**ntext**|Unicode **text** 資料類型。|  
 |SRVNUMERIC|**numeric**|**numeric** 資料類型。|  

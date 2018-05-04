@@ -3,13 +3,10 @@ title: updateBlob 方法 （int，java.io.InputStream） |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0263018-d326-4a7b-bf6f-5f508db899d4
@@ -17,9 +14,9 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c59cc4c6c96bdcce18815c63ee29c85629349b97
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 190269911011e132450dc44abc4148c0620db340
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -39,7 +36,7 @@ public void updateBlob(int columnIndex,
 #### <a name="parameters"></a>參數  
  *columnIndex*  
   
- **Int** ，指出資料行索引。  
+ 指出資料行索引的 **int**。  
   
  *inputStream*  
   
