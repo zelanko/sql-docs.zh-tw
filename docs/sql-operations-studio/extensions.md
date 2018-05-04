@@ -22,9 +22,9 @@ ms.lasthandoff: 04/26/2018
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>擴充功能 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 擴充模組提供一個簡單的方式，可以新增更多功能至基礎 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝。。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 擴充模組提供一個簡單的方式，可以新增更多功能至基礎 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝。
 
-擴充功能由 SQL Operations Studio 團隊 (Microsoft) 以及第 3 方社群（您 ！）提供。 如需有關建立擴充功能的詳細資訊，請參閱[開始使用擴充性](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)。
+擴充功能由 SQL Operations Studio 團隊 (Microsoft) 以及第 3 方社 (您 ！) 提供。 如需有關建立擴充功能的詳細資訊，請參閱[開始使用擴充性](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)。
 
 
 ## <a name="add-sql-operations-studio-extensions"></a>加入 SQL Operations Studio 擴充功能
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/26/2018
    ![擴充管理員](media/extensions/extension-manager.png)
 
 1. 選取您想要的擴充功能和**安裝**它。
-2. 選取**重新載入**啟用該擴充功能 （只有第一次安裝擴充功能時需要）。
+2. 選取**重新載入**以啟用該擴充功能 (只有第一次安裝擴充功能時需要)。
 1. 透過滑鼠右鍵點選伺服器或資料庫並點選**管理**，瀏覽您的管理儀表板。
 2. 已安裝的擴充功能會以索引標籤方式顯示在您的管理儀表板上：
 
