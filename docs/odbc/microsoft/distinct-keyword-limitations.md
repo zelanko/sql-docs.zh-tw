@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DISTINCT keyword limitations [ODBC]
 - ODBC SQL grammar, DISTINCT keyword limitations
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7d4cc5f7f47b127cb7ef4e96bfa368e14632f0a7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5ff2b6b9043f87bd5c293ed0027499433961b4dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distinct-keyword-limitations"></a>DISTINCT 關鍵字的限制
 不支援長文字欄位 (Microsoft Access) 或附註欄位 (dBASE)。

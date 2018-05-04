@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -21,19 +21,18 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05a8ce31caf23a29a51cd9329c2c85950e15580e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 815dcb47a34d2e0729111b2a34693f1e6f4de557
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types-in-odbc"></a>在 ODBC C 資料類型
 ODBC 定義應用程式變數和其相對應的類型識別項所使用的 C 資料類型。 會使用這些繫結至結果集資料行和陳述式的參數緩衝區。 例如，假設應用程式想要擷取成字元格式的結果集資料行的資料。 它會宣告一個變數以 SQLCHAR * 資料類型，並將此變數繫結至類型識別碼為 SQL_C_CHAR 的結果集資料行。 C 資料類型和類型識別碼的完整清單，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  ODBC 也已經定義成 C 資料類型從每個 SQL 資料類型的預設對應。 例如，資料來源中的 2 位元組的整數會對應至應用程式中的 2 位元組的整數。 若要使用預設對應，應用程式會指定 SQL_C_DEFAULT 類型識別項。 不過，不建議使用這個識別碼，基於互通性考量。  
   
- ODBC 1 中定義的所有整數 C 資料類型*.x*所簽署。 不帶正負號的 C 資料類型和其相對應的類型識別項已加入 ODBC 2.0 中。 因此，應用程式和驅動程式必須要特別小心處理 1 時*.x*版本。  
+ ODBC 1 中定義的所有整數 C 資料類型 *.x*所簽署。 不帶正負號的 C 資料類型和其相對應的類型識別項已加入 ODBC 2.0 中。 因此，應用程式和驅動程式必須要特別小心處理 1 時 *.x*版本。  
   
 ## <a name="c-data-type-extensibility"></a>C 資料類型擴充性  
  在 ODBC 3.8，您可以指定特定驅動程式的 C 資料類型。 這可讓您以在 ODBC 應用程式的驅動程式專屬 C 類型繫結 SQL 類型，當您呼叫[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)， [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)，或[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)。 這可能是適用於支援新的伺服器類型，因為現有的 C 資料類型可能無法正確呈現新的伺服器資料類型。 使用特定驅動程式的 C 類型可以增加驅動程式可以執行轉換的數目。  

@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5e6e3755c3f043a446301092ff948e31910547cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b990707ad5df6379651ac698b14c309d5bef5610
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="designaggregations-element-xmla"></a>DesignAggregations 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]針對建立的彙總設計的彙總[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  針對建立的彙總設計的彙總[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -69,12 +69,12 @@ ms.lasthandoff: 01/08/2018
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|子元素|[具體化](../../../analysis-services/xmla/xml-elements-properties/materialize-element-xmla.md)，[物件](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)，[最佳化](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md)，[查詢](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)，[步驟](../../../analysis-services/xmla/xml-elements-properties/steps-element-xmla.md)，[儲存體](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md)，[時間](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)|  
+|子元素|[具體化](../../../analysis-services/xmla/xml-elements-properties/materialize-element-xmla.md)，[物件](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)，[最佳化](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md)，[查詢](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)，[步驟](../../../analysis-services/xmla/xml-elements-properties/steps-element-xmla.md)，[儲存體](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md)[時間](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
  **DesignAggregations**命令用來產生彙總設計所儲存的彙總定義。 然後，彙總設計可以用來具體化分割區的彙總而且可以在分割區之間重複使用。  
   
-## <a name="see-also"></a>請參閱  
- [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另請參閱  
+ [命令 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

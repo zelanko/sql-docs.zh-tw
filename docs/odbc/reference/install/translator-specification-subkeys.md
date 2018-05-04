@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translator subkey [ODBC]
 - registry entries for components [ODBC], translator specification subkeys
@@ -22,12 +22,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: de1d072bf36203fd8755726f5a06edbb786d7eb5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fbba8b7f6b89b891a0537a212a460995b2398e32
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translator-specification-subkeys"></a>轉譯器規格子機碼
 ODBC 轉譯子機碼中所列每個轉譯器都有自己的子機碼。 這個子機碼具有 ODBC 轉譯子機碼下的對應值相同的名稱。 這個子機碼下的值清單之轉譯器轉譯程式安裝 Dll 並使用計數的完整路徑。 值的格式是下表所示。  

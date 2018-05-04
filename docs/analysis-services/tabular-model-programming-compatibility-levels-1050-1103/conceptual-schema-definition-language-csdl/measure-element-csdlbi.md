@@ -1,40 +1,39 @@
 ---
-title: "量值元素 (CSDLBI) |Microsoft 文件"
-ms.custom: 
+title: 量值元素 (CSDLBI) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd9dfea18c7b201dfcf5838b43d59ae0f5b942a7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8d8f2029694d8520590d372281d729b9ed86b8a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measure-element-csdlbi"></a>Measure 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Measure 元素是以 CSDL Property 元素為基礎的複雜類型。 CSDLBI 註解會加入支援複雜公式定義的屬性，以便在商業智慧資料模型中使用。  
+  Measure 元素是以 CSDL Property 元素為基礎的複雜類型。 CSDLBI 註解會加入支援複雜公式定義的屬性，以便在商業智慧資料模型中使用。  
   
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 Measure 元素的元素和屬性，以及適用於 Property 元素的所有屬性。  
   
 |名稱|是否必要|說明|  
 |----------|-----------------|-----------------|  
-|Kpi|否|僅為做為 KPI 使用的量值所需。 並非所有量值都是 KPI，但是所有 KPI 都必須以量值的定義為基礎。<br /><br /> [KPI 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)|  
+|Kpi|否|僅為做為 KPI 使用的量值所需。 並非所有量值都是 KPI，但是所有 KPI 都必須以量值的定義為基礎。<br /><br /> [KPI 元素 & #40;CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)|  
 |IsSimpleMeasure|否|True/false 值，指出用於量值的公式是否為其中一個簡單彙總 (SUM、COUNT、MIN、MAX、AVG、DistinctCount)。<br /><br /> 預設為 true。|  
   
 ## <a name="example"></a>範例  

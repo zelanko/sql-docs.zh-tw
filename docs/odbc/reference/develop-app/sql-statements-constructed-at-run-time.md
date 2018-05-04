@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - run time constructed SQL statements [ODBC]
 - SQL statements [ODBC], constructing
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 976c70eca55b34eccf5e06282eed67aeaa7e550a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 74ac852c583a45d0ccf15f80cbbaf29c0cad4292
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>在執行階段建構 SQL 陳述式
 通常執行臨機操作分析的應用程式在執行階段建立 SQL 陳述式。 例如，試算表可能會允許使用者選取要從中擷取資料的資料行：  

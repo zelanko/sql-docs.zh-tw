@@ -11,17 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a202f518bb743eb8a97369bc19c2f892b006a8cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ed3859ffb78d33af4d3310c655711891712b6486
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-large-data-sample"></a>更新大型資料範例
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

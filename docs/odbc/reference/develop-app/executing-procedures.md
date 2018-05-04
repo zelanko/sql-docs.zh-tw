@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2f0e289a395aba599afabf07d17416f126d75ce7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c3eb4c4106eebe3fc63207f7029518df6afc457f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-procedures"></a>執行程序
 ODBC 定義的標準逸出序列執行程序。 如需此順序和使用它的程式碼範例的語法，請參閱[程序呼叫](../../../odbc/reference/develop-app/procedure-calls.md)。  

@@ -27,12 +27,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5d373c62b61469835ed8a6c41e9231c5eff67fd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 895b90d5bad14747355182a42cdcfd1b937009fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +58,7 @@ FROM <existing model>
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
   
  *expression*  
- 在定型資料上，評估為有效篩選條件的運算式。 如需可用來當做篩選條件的運算式的詳細資訊，請參閱[篩選採礦模型 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ 在定型資料上，評估為有效篩選條件的運算式。 如需可用來當做篩選條件的運算式的詳細資訊，請參閱[採礦模型的篩選&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
  *現有的模型*  
  要複製之現有模型的名稱。  
@@ -92,9 +91,9 @@ FROM [TM Clustering]
 > [!NOTE]  
 >  套用到案例資料表的篩選器可以使用 SELECT INTO 陳述式進行變更，如此範例所示，不過，如果原始模型在巢狀資料表上包含篩選器，則無法使用此語法變更或移除巢狀資料表篩選器，但是會從原始模型，以原樣複製。 若要利用巢狀資料表上的不同篩選器建立模型，請使用 ALTER STRTUCTURE...ADD MODEL 語法。  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

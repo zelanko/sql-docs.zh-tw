@@ -23,12 +23,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b849cf1a9c87e91c2104217d8b435adfeef6efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators-mdx-syntax"></a>運算子 (MDX 語法)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
 -   DISTINCT  
   
--   所解碼的字元：  
+-   :  
   
 -   ^  
   
@@ -90,14 +89,14 @@ ms.lasthandoff: 01/08/2018
   
 -   XOR  
   
--   或  
+-   OR  
   
- 如需 MDX 運算子的詳細資訊，請參閱[MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md).  
+ 如需 MDX 運算子的詳細資訊，請參閱[MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)。  
   
 ### <a name="determining-results"></a>決定結果  
  當您將簡單的運算式組合成複雜的運算式時，結合了資料類型優先順序規則的運算子規則，即可決定結果值的資料類型。  
   
- 如果結果是字元或 Unicode 值， 結合運算子的規則與定序優先順序的規則，就可以決定結果的定序。 如需有關定序的詳細資訊，請參閱[語言和定序 &#40;Analysis Services &#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+ 如果結果是字元或 Unicode 值， 結合運算子的規則與定序優先順序的規則，就可以決定結果的定序。 如需有關定序的詳細資訊，請參閱[語言和定序&#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)。  
   
  另外也有一些規則，根據簡單運算式的有效位數、小數位數與長度，決定結果的有效位數、小數位數與長度。  
   
@@ -106,14 +105,14 @@ ms.lasthandoff: 01/08/2018
   
 |原始類型|所需類型|轉換|  
 |-------------------|-----------------|----------------|  
-|層級|將|\<層級 >.members|  
+|Level|將|\<層級 >.members|  
 |階層|成員|\<階層 >.defaultmember|  
 |成員|Tuple|(\<成員 >)|  
 |Tuple|成員|\<tuple >.item(0)|  
 |Tuple|純量|\<tuple >.value|  
   
-## <a name="see-also"></a>請參閱  
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [MDX 語法元素 &#40;MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [MDX 語法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

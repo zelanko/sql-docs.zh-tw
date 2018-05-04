@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 01de3dc02acbb47c472025f6ed2c856a6571832b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4d22e996ef9779c3986a018e3f8b445ee165755b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], architecture
 - ODBC desktop database drivers [ODBC], architecture
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b2b68b735a278fd00b4d472eb881594c0bf4245
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 975e70038bc78962691ea30f885dd0050e508753
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面資料庫驅動程式架構
 這些驅動程式專為使用 Microsoft Windows 95 上或更新版本中，或 Windows NT 4.0 和 Windows 2000。 只有 32 位元應用程式支援 Windows 95 或更新版本。16 位元和 32 位元應用程式都支援 Windows NT 4.0 和 Windows 2000。  

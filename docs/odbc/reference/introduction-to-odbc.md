@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5889e86149ab13576d4b5a50af2d4df5c7bee516
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f9203c7b78947a5619e9b8c0e6a96048632064bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-odbc"></a>ODBC 的簡介
 本節提供簡短的結構化查詢語言和 ODBC，歷程記錄，並包含 ODBC 介面的概念性資訊。  

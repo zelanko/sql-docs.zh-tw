@@ -1,30 +1,30 @@
 ---
-title: "列出現有的資料庫，在表格式伺服器 (Analysis Services AMO-TOM) |Microsoft 文件"
-ms.custom: 
+title: 列出現有的資料庫，在表格式伺服器 (Analysis Services AMO-TOM) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ab5eb4b8-6254-442d-a42e-2372c346d260
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3864da736ccdeca7ffa9d6c024748e5cd60b7a5a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ec4718f826815217b13c7b27acfd3b51ec148fe4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>列出在表格式伺服器 (Analysis Services AMO-TOM) 上的現有資料庫
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]當您有**伺服器**物件連接到 Analysis Services 執行個體，您可以反覆查看**Server.Databases**列出分析會服務執行個體所裝載的所有資料庫的集合。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+當您有**伺服器**物件連接到 Analysis Services 執行個體，您可以反覆查看**Server.Databases**列出分析會服務執行個體所裝載的所有資料庫的集合。 
 
 **Server.Databases**集合會包含一個**資料庫**裝載在伺服器上，不論伺服器模式 （Multidimensional 或 Tabular） 或資料庫類型 （多維度，每個資料庫物件表格式的前 1200 或表格式 1200年或更高版本）。 
 
@@ -119,7 +119,7 @@ switch(obj.ObjectType)
 } 
 ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 了解如何[建立及部署的空白資料庫](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-and-deploy-an-empty-database-analysis-services-amo-tom.md)使用 TOM API。
 

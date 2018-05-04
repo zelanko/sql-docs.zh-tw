@@ -27,15 +27,15 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8f6fa2a178bc1d8f9722a101d7305cedfa248663
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8d536d67738872ba070217d934a1b47be7857398
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="foldingparameters-element-assl"></a>FoldingParameters 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定所使用的參數[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]伺服器執行採礦模型的交叉驗證時。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  指定當 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器執行採礦模型的交叉驗證時所用的參數。  
   
 > [!NOTE]  
 >  這些參數僅供內部使用。 這裡提供的資訊僅供參考。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|Description|  
 |--------------------|-----------------|  
 |*FoldIndex*|指示用於交叉驗證之資料分割起始位置的整數。|  
 |*FoldCount*|指示交叉驗證之後在模型中之資料分割數目的整數。|  
@@ -76,9 +76,9 @@ ms.lasthandoff: 01/08/2018
   
  如需有關如何使用中的交叉驗證資訊[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]，請參閱[交叉驗證報表中的量值](../../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  
   
- 如需有關如何使用執行交叉驗證資訊[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]預存程序，請參閱[資料採礦預存程序 &#40;Analysis Services-資料採礦 &#41;](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
+ 如需有關如何使用執行交叉驗證資訊[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]預存程序，請參閱[資料採礦預存程序&#40;Analysis Services-Data Mining&#41;](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

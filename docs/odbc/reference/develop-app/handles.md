@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - handles [ODBC]
 - driver handles [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef9fe627d79c0a2040500cd2894dcd90a83bee73
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac96dc4ab020d94449d9106038890d5e61fbbe0a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handles"></a>處理
 控制代碼是不透明，32 位元值，識別特定的項目。在 ODBC 中，這個項目可以是環境、 連接、 陳述式或描述元。 當應用程式呼叫**SQLAllocHandle**、 驅動程式管理員或驅動程式會建立指定類型的新項目和其控制代碼傳回至應用程式。 更新版本的應用程式會使用控制代碼，以便識別該項目時呼叫 ODBC 函數。 驅動程式與驅動程式管理員使用控點來尋找相關項目資訊。  

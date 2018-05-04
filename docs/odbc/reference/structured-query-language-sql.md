@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC]
 - SQL [ODBC], about SQL
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: babb38e88d471cedceaa94e3c6696f9b5b59dcce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b3d26d6d32499d02db46762f6ce66b865a5b403c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-query-language-sql"></a>結構化查詢語言 (SQL) (Structured Query Language (SQL))
 一般 DBMS 可讓使用者儲存、 存取及組織且有效率的方式修改資料。 一開始的 Dbms 使用者是程式設計人員。 存取儲存的資料需要 COBOL 之類的程式設計語言中撰寫程式。 這些程式通常已寫入來向非技術性使用者容易使用的介面，同時存取資料本身所需的經驗豐富的程式設計人員的服務。 不會隨便被存取的資料不太實用。  

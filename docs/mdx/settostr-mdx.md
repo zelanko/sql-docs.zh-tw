@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1443875129e9376210032e3431c4f77b70b35c8c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c07337023c90e9ac3c2dd9ec04da276b0c891641
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="settostr-mdx"></a>SetToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +45,7 @@ SetToStr(Set_Expression)
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 這個函數是用來將集合的字串表示傳送至外部函數，以進行剖析。 所傳回的字串以大括號 {} 括住並以逗號分隔集合中的每個項目。  
+ 這個函數是用來將集合的字串表示傳送至外部函數，以進行剖析。 所傳回的字串括在大括弧{}，每個項目以逗號分隔集合中。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回包含 Geography.Country 屬性階層之所有成員的字串。  
@@ -57,7 +56,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

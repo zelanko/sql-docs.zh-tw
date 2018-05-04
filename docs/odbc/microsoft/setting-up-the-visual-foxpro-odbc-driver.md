@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing Visual FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], installing
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4d8b03fc60c850176b6f83048790601296bd10be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 501a1226d99ef631d19a87127bf57365f1fdb64d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 驅動程式設定
 下載並安裝 Visual FoxPro ODBC 驅動程式的相關資訊，請參閱[Visual FoxPro ODBC 驅動程式](http://go.microsoft.com/fwlink/?LinkId=121318)上 MSDN 下載。  

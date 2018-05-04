@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 389ab8cc4c25b586b75abce440ee985bcdff4d01
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 5200aff9d34bd45074e8e2c8e6b61c979e1aed56
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步驟 3： 連接到使用 pyodbc SQL 的概念證明
 

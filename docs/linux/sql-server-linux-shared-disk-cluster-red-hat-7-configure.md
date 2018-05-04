@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.workload: On Demand
-ms.openlocfilehash: 69f0953d6a03231b86ba9fb7a13bbddea2a48a22
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: bfe1f55959d3c2d174cbcc4e031b04e2937d2d04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 

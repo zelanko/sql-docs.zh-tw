@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 11984905bb11448216e56476f07ef2e04bf6c64c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 04a72dad6abb8cb36ac6585937957a7b61d217dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-element-xmla"></a>Language 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含父代的地區設定識別碼 (LCID)[轉譯](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含父代的地區設定識別碼 (LCID)[轉譯](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|Integer|  
 |預設值|無|  
@@ -68,10 +68,10 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  **語言**項目會指定父系所使用的 LCID**轉譯**指派的項目**名稱**父元素之**轉譯**屬性成員，針對指定的語言項目期間**插入**或**更新**命令。  
   
-## <a name="see-also"></a>請參閱  
- [插入項目 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Name 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)   
- [Update 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱  
+ [插入項目 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [名稱元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)   
+ [Update 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

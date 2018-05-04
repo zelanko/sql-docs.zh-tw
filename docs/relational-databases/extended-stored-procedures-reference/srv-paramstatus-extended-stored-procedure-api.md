@@ -26,12 +26,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f091544fe79d09664350a312973e9d26a1a90cab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d24024156d54b6db4b74331861fa316618dc74fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +61,9 @@ n
  這指出參數的數目。 第一個參數是數字 1。  
   
 ## <a name="returns"></a>傳回值  
- 包含參數之狀態旗標的 **int**。 目前只有一個旗標：如果位元 0 設定為 1，參數為傳回參數。 如果沒有任何*n*個參數或沒有遠端預存程序，則傳回-1。  
+ 包含參數之狀態旗標的 **int**。 目前只有一個旗標：如果位元 0 設定為 1，參數為傳回參數。 如果沒有第 *n* 個參數或是沒有任何遠端預存程序，其會傳回 -1。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  此常式會傳回遠端預存程序呼叫參數的狀態旗標。  
   
  參數包含了在用戶端和應用程式之間傳遞的資料，其中包含遠端預存程序。 用戶端可以將某些參數指定為傳回參數。 這些傳回參數可包含應用程式傳回給用戶端的值。  

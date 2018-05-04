@@ -1,31 +1,23 @@
 ---
-title: "建立 BI 語意模型連接到表格式模型資料庫 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 建立 BI 語意模型連接到表格式模型資料庫 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 9141a382cf30157849de3cb0d54bff882790b48d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>建立與表格式模型資料庫的 BI 語意模型連接
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-使用本主題的資訊可設定 BI 語意模型連接，重新導向至 SharePoint 伺服器陣列外部的 Analysis Services 執行個體上執行的表格式模型資料庫。  
+  使用本主題的資訊可設定 BI 語意模型連接，重新導向至 SharePoint 伺服器陣列外部的 Analysis Services 執行個體上執行的表格式模型資料庫。  
   
  在您建立 BI 語意模型連接並且設定 SharePoint 和 Analysis Services 權限之後，人們可以將其當做 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表的資料來源使用。  
   

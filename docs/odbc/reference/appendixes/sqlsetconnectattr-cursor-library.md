@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectAttr function [ODBC], Cursor Library
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 00509c103ff59bda9db6d5ec629158e9ff0c21c0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 018dda61f53c133ce0f9f646e944e839551450a5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr （資料指標程式庫）
 > [!IMPORTANT]  

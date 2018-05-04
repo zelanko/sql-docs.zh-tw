@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindCol function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8aee47341fa0c20db8e17b0a2b7713de78eebfc5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dbadbd6e23f8fc695b19330fe167b5db6304fdee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol-visual-foxpro-odbc-driver"></a>SQLBindCol （Visual FoxPro ODBC 驅動程式）
 > [!NOTE]  

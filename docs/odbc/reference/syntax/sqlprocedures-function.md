@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLProcedures
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5420d0adf427a95dec7cbfe224d4b77621c9a5d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: daec499cca74ef63978b3eede0216e192435bdaa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 函數
 **一致性**  
@@ -121,9 +120,9 @@ SQLRETURN SQLProcedures(
 > [!NOTE]  
 >  **SQLProcedures**可能不會傳回所有程序。 應用程式可以使用任何有效的程序，不論是否由傳回**SQLProcedures**。  
   
- 下列資料行已重新命名為 ODBC 3*.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
+ 下列資料行已重新命名為 ODBC 3 *.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
-|ODBC 2.0 資料行|ODBC 3*.x*資料行|  
+|ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
 |---------------------|-----------------------|  
 |PROCEDURE_QUALIFIER|PROCEDURE_CAT|  
 |程序 _OWNER|程序 _SCHEM|  

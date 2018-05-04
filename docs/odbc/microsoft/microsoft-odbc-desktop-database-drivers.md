@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - Jet-based ODBC drivers [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d1d35ce2ec2ebd37cf9718a85e07e27ec1348ca2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c21c46ca8c9171ad33894f2f63c53a5009fe06c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 桌面資料庫驅動程式
 ODBC 是應用程式開發介面使用結構化查詢語言 (SQL) 資料庫存取語言。 您可以存取各種資料庫管理系統 (Dbms) 具有相同 ODBC 來源的程式碼直接併入應用程式的原始程式碼。 Microsoft ODBC 桌面資料庫驅動程式，可以開啟，查詢中，並更新透過 ODBC 介面的桌面資料庫啟用 ODBC 的應用程式的使用者。  

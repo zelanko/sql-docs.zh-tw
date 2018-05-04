@@ -1,27 +1,26 @@
 ---
-title: "Instr (MDX) |Microsoft 文件"
-ms.custom: 
+title: Instr (MDX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 5638c358-47da-40ad-b988-1a5214c05492
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7a6b5a1a987662fbe4ec0bcab4241ac0d6ff3109
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d269dbaed6c3adc208d4b81b3cbf3af30c3de26d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +34,7 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>引數  
- *啟動*  
+ *start*  
  (選擇性) 數值運算式，設定每次搜尋的開始位置。 如果省略此值，則會在第一個字元位置開始搜尋。 如果 start 是 null，則函數傳回值未定義。  
   
  *searched_string*  
@@ -110,7 +109,7 @@ from [Adventure Works]
 |小寫字串中找到大寫|16|  
 |搜尋的字串是空的|0|  
 |搜尋的字串是 Null|未定義|  
-|搜尋的字串是空的|@shouldalert|  
+|搜尋的字串是空的|1|  
 |搜尋字串從 10 開始處為空的|10|  
 |搜尋字串是 Null|未定義|  
 |從 10 開始處找到|16|  

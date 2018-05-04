@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
 - Paradox driver [ODBC], setting options programmatically
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8b74f549b8950c2395ead577d96c15ad3e35a82f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5f97de4ea57604b3f36984feea8ef942497017d4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>以程式設計的方式 Paradox 驅動程式的設定選項
 |選項|Description|方法|  

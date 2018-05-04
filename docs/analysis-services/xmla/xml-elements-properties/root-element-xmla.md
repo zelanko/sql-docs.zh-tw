@@ -29,15 +29,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 402d03a39b1eb4711b338c8e3bc0ff29de11437a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cc8dfbd3309d19fb54bc1246cd7430863268686c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="root-element-xmla"></a>root 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含所傳回的結果[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法或 XML for Analysis (XMLA) 命令，使用執行[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含所傳回的結果[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法或 XML for Analysis (XMLA) 命令，使用執行[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|請參閱下表。|  
 |預設值|無|  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  **根**項目包含在傳回的資訊[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)傳回單一項目**探索**方法呼叫，或在[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)單一所執行的單一 XMLA 命令所傳回的項目**Execute**方法呼叫。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ac122c9cb4403ee90c20961b1b4d8fad624bf80
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f501b72dad1f0e21bc59ffa6b83dc8e04bf55182
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ n
  這是參數的數目。 第一個參數是數字 1。  
   
 ## <a name="returns"></a>傳回值  
- 參數值的指標。 如果*n*個參數為 NULL，則沒有*n*個參數，或沒有遠端預存程序，則傳回 NULL。 如果參數值為字串，則可能不會以 Null 結束。 請使用 **srv_paramlen** 來判斷字串的長度。  
+ 參數值的指標。 如果第 *n* 個參數為 NULL、沒有第 *n* 個參數，或是沒有任何遠端預存程序，會傳回 NULL。 如果參數值為字串，則可能不會以 Null 結束。 請使用 **srv_paramlen** 來判斷字串的長度。  
   
  如果參數是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的一種，則此函式會傳回下列值。 指標資料包含資料類型的指標是否為有效 (VP)、NULL 或不適用 (N/A)，以及資料所指向的內容。  
   
@@ -79,7 +78,7 @@ n
   
  \*   資料不是以 Null 結束；在截斷 >255 個字元的資料時，不會發出警告。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果您知道參數名稱，可以使用 **srv_paramnumber** 來取得參數數目。 若要判斷參數是否為 NULL，請使用 **srv_paramlen**。  
   
  當遠端預存程序呼叫是用參數進行時，可以依名稱或位置 (未命名) 傳遞參數。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 如果發生錯誤，則仍會呼叫 SRV_RPC 處理常式，但會看來好像沒有參數一般，而且 **srv_rpcparams** 會傳回 0。  

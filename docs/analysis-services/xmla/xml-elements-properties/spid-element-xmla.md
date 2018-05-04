@@ -29,15 +29,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1b79ade1f52a35082992d9ebaa48ed06dada16ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8a029d4b62472ea943f53d1fec86ee008743c8b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spid-element-xmla"></a>SPID 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]識別要在上面執行父代的作用中的伺服器處理序識別碼 (SPID)[取消](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  識別要在上面執行父代的作用中的伺服器處理序識別碼 (SPID)[取消](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|Integer|  
 |預設值|無|  
@@ -62,16 +62,16 @@ ms.lasthandoff: 01/08/2018
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[取消](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|  
+|父元素|[[取消]](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
  **SPID**元素代表伺服器處理序識別碼 (SPID) 指定的工作階段的執行個體上使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
-## <a name="see-also"></a>請參閱  
- [CancelAssociated 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)   
- [ConnectionID 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md)   
- [SessionID 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)   
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱  
+ [CancelAssociated 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)   
+ [ConnectionID 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md)   
+ [SessionID 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)   
+ [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

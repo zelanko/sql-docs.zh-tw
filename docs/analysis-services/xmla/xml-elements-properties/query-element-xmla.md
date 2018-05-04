@@ -29,15 +29,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 230141d3a6fd5d3b2e02c1dce8e397d3f9bdce3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: eb9a015347bf0edccedecd59fe1d66785a1c613f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-element-xmla"></a>Query 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含查詢內[查詢](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)集合所使用[DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)命令在基於使用方式的最佳化。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含查詢內[查詢](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)集合所使用[DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)命令在基於使用方式的最佳化。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,9 +52,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
-|資料類型和長度|String|  
+|資料類型和長度|字串|  
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- **DesignAggregations** 命令會在命令的 **Query** 集合中包含一個或多個 **Queries** 元素，藉以支援基於使用方式的最佳化。 每個 **Query** 元素都代表一個目標查詢，而且設計處理序會使用此查詢來定義以最常用查詢為目標的彙總。 您可以指定您自己的目標查詢，或者您可以使用執行個體所儲存的資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]擷取有關最常用的資訊的查詢記錄中使用查詢。  
+ **DesignAggregations** 命令會在命令的 **Query** 集合中包含一個或多個 **Queries** 元素，藉以支援基於使用方式的最佳化。 每個 **Query** 元素都代表一個目標查詢，而且設計處理序會使用此查詢來定義以最常用查詢為目標的彙總。 您可以指定自己的目標查詢，也可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體在查詢記錄中儲存的資訊來擷取有關最常用查詢的資訊。  
   
  如果您反覆設計彙總，您只需要將目標查詢傳入第一個**DesignAggregations**指令，因為[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體儲存這些目標查詢，並在後續期間使用這些查詢**DesignAggregations**命令。 當您將目標查詢傳入反覆處理序的第一個 **DesignAggregations** 命令之後，任何在 **DesignAggregations** 屬性中包含目標查詢的後續 **Queries** 命令就會產生錯誤。  
   
@@ -83,12 +83,12 @@ ms.lasthandoff: 01/08/2018
  例如，字串 "011" 是指涉及含有三個屬性之維度的查詢，其中第二和第三個屬性包含在查詢中。  
   
 > [!NOTE]  
->  某些屬性會從資料集的考量中排除。 如需有關排除屬性的詳細資訊，請參閱[屬性 (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)。  
+>  某些屬性會從資料集的考量中排除。 如需有關排除屬性的詳細資訊，請參閱＜ [Properties (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)＞。  
   
  量值群組中包含彙總設計的每個維度是由 *Query* 元素中的 **Dataset** 值代表。 *Dataset* 值的順序必須與量值群組中包含維度的順序相符。  
   
-## <a name="see-also"></a>請參閱  
- [設計彙總 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱  
+ [設計彙總 & #40;XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
+ [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
