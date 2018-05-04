@@ -1,16 +1,16 @@
 ---
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION SCHEME
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.openlocfilehash: e3f3c52b3fca1326d9cc73203ff46285a2da2b76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,16 +69,16 @@ AS PARTITION partition_function_name
  這是使用資料分割結構描述的資料分割函數名稱。 資料分割函數所建立的資料分割會對應至資料分割結構描述所指定的檔案群組。 *partition_function_name* 必須已存在於資料庫中。 單一資料分割無法同時包含 FILESTREAM 和非 FILESTREAM 檔案群組。  
   
  ALL  
- 指定所有分割區都對應至 *file_group_name* 所提供的檔案群組，如果指定了 **[**PRIMARY**]**，便是對應至主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。  
+ 指定所有分割區都對應至 *file_group_name* 所提供的檔案群組，如果指定了 **[** PRIMARY **]**，便是對應至主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。  
   
  *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
  指定用來存放 *partition_function_name* 所指定之分割區的檔案群組名稱。 *file_group_name* 必須已存在於資料庫中。  
   
- 如果指定了 **[**PRIMARY**]**，就會將分割區儲存在主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。 分割區是從分割區 1 開始，依照 [**,***...n*] 中列出檔案群組的順序來指派給各個檔案群組。 在 [**,***...n*] 中，可以重複指定相同的 *file_group_name*。 如果 *n* 不足以存放 *partition_function_name* 所指定的分割區數目，CREATE PARTITION SCHEME 便會失敗，且會出現一則錯誤。  
+ 如果指定了 **[** PRIMARY **]**，就會將分割區儲存在主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。 資料分割是從資料分割 1 開始，依照 [**,***...n*] 中列出檔案群組的順序來指派給各個檔案群組。在 [**,***...n*] 中，可以重複指定相同的 *file_group_name*。 如果 *n* 不足無法存放 *partition_function_name* 中所指定的資料分割數目，則 CREATE PARTITION SCHEME 會失敗，並會出現一則錯誤。  
   
  如果 *partition_function_name* 產生的分割區數目比檔案群組少，第一個未指派的檔案群組會標示為 NEXT USED，且會出現一則命名 NEXT USED 檔案群組的參考訊息。 如果指定 ALL，唯一的 *file_group_name* 會維護它的 NEXT USED 屬性，以用於這個 *partition_function_name*。 如果在 ALTER PARTITION FUNCTION 陳述式中建立資料分割，NEXT USED 檔案群組便會收到其他資料分割。 若要建立其他未指派的檔案群組來存放新的資料分割，請使用 ALTER PARTITION SCHEME。  
   
- 當您指定 *file_group_name* [ 1**,***...n*] 中的主要檔案群組時，必須依照 **[**PRIMARY**]** 中的相同方式來分隔 PRIMARY，因為它是一個關鍵字。  
+ 當您指定 *file_group_name* [ 1 **,***...n*] 中的主要檔案群組時，必須依照 **[** PRIMARY**]** 中的相同方式來分隔 PRIMARY，因為它是一個關鍵字。  
   
  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]只支援使用 PRIMARY。 請參閱以下的範例 E。 
   

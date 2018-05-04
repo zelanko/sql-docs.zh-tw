@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 296a54187b415d79a4cc036f9111091cb6b1b415
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f0f667c71bd1e67b311aad2d8da93b48e605ca79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -172,19 +171,19 @@ sp_addpublication [ @publication = ] 'publication'
  這是訂閱活動的保留週期 (以小時為單位)。 *保留*是**int**，預設值為 336 小時。 如果在保留期限內，訂閱不在使用中，它便會到期，且會被移除。 這個值可以大於發行者所用的散發資料庫的最大保留期限。 如果**0**，已知發行集的訂閱永遠不會過期，過期的訂閱清除代理程式所移除。  
   
  [  **@allow_queued_tran=** ] **'***allow_queued_updating***'**  
- 啟用或停用在訂閱者端將變更放入佇列中，直到可以在發行者端套用這些變更為止。 *allow_queued_updating*是**nvarchar （5)**預設值是 FALSE。 如果**false**，「 訂閱者 」 端的變更不會排入佇列。 **true**是*不支援 Oracle 發行者*。  
+ 啟用或停用在訂閱者端將變更放入佇列中，直到可以在發行者端套用這些變更為止。 *allow_queued_updating*是**nvarchar （5)** 預設值是 FALSE。 如果**false**，「 訂閱者 」 端的變更不會排入佇列。 **true**是*不支援 Oracle 發行者*。  
   
  [  **@snapshot_in_defaultfolder=** ] **'***snapshot_in_default_folder***'**  
- 指定是否將快照集檔案儲存在預設資料夾中。 *snapshot_in_default_folder*是**nvarchar （5)**預設值是 TRUE。 如果**true**，可以在預設資料夾中找到快照集檔案。 如果**false**，快照集檔案已儲存在所指定的替代位置*alternate_snapshot_folder*。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。 請注意，這個參數可以是 true，仍有位置**@alt_snapshot_folder**參數。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。  
+ 指定是否將快照集檔案儲存在預設資料夾中。 *snapshot_in_default_folder*是**nvarchar （5)** 預設值是 TRUE。 如果**true**，可以在預設資料夾中找到快照集檔案。 如果**false**，快照集檔案已儲存在所指定的替代位置*alternate_snapshot_folder*。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。 請注意，這個參數可以是 true，仍有位置**@alt_snapshot_folder**參數。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。  
   
  [  **@alt_snapshot_folder=** ] **'***alternate_snapshot_folder***'**  
- 指定快照集替代資料夾的位置。 *alternate_snapshot_folder*是**nvarchar （255)**預設值是 NULL。  
+ 指定快照集替代資料夾的位置。 *alternate_snapshot_folder*是**nvarchar （255)** 預設值是 NULL。  
   
  [  **@pre_snapshot_script=** ] **'***pre_snapshot_script***'**  
- 指定指向**.sql**檔案位置。 *pre_snapshot_script*是**nvarchar （255)，**預設值是 NULL。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
+ 指定指向 **.sql**檔案位置。 *pre_snapshot_script*是**nvarchar （255)，**預設值是 NULL。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
   
  [  **@post_snapshot_script=** ] **'***post_snapshot_script***'**  
- 指定指向**.sql**檔案位置。 *post_snapshot_script*是**nvarchar （255)**，預設值是 NULL。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
+ 指定指向 **.sql**檔案位置。 *post_snapshot_script*是**nvarchar （255)**，預設值是 NULL。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
   
  [  **@compress_snapshot=** ] **'***compress_snapshot***'**  
  指定可寫入快照集**@alt_snapshot_folder**位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar （5)**，預設值是 FALSE。 **false**指定，將不壓縮快照集;**true**指定壓縮快照集。 超出 2 GB 的快照集檔案無法壓縮。 壓縮的快照集檔案是在執行散發代理程式的位置進行解壓縮；提取訂閱通常會搭配使用壓縮的快照集，因此，會在訂閱者端將檔案解壓縮。 預設資料夾中的快照集無法壓縮。  
@@ -213,7 +212,7 @@ sp_addpublication [ @publication = ] 'publication'
  啟用或停用複製訂閱這個發行集之訂閱資料庫的能力。 *allow_subscription_copy*是**nvarchar （5)**，預設值是 FALSE。  
   
  [  **@conflict_policy =** ] **'***conflict_policy***'**  
- 指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 *conflict_policy*是**nvarchar （100)**預設值是 NULL，而且可以是下列值之一。  
+ 指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 *conflict_policy*是**nvarchar （100)** 預設值是 NULL，而且可以是下列值之一。  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -310,7 +309,7 @@ sp_addpublication [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@enabled_for_het_sub=** ] **'***enabled_for_het_sub***'**  
- 啟用發行集以支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 *enabled_for_het_sub*是**nvarchar （5)**預設值是 FALSE。 值為**true**表示發行集支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「 訂閱者 」。 當*enabled_for_het_sub*是**true**，適用下列限制：  
+ 啟用發行集以支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 *enabled_for_het_sub*是**nvarchar （5)** 預設值是 FALSE。 值為**true**表示發行集支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「 訂閱者 」。 當*enabled_for_het_sub*是**true**，適用下列限制：  
   
 -   *allow_initialize_from_backup*必須**false**。  
   
@@ -351,22 +350,22 @@ sp_addpublication [ @publication = ] 'publication'
  如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
  [  **@p2p_conflictdetection=** ] **'***p2p_conflictdetection***'**  
- 如果發行集啟用點對點複寫，便讓散發代理程式偵測衝突。 *p2p_conflictdetection*是**nvarchar （5)**預設值為 true。 如需詳細資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
+ 如果發行集啟用點對點複寫，便讓散發代理程式偵測衝突。 *p2p_conflictdetection*是**nvarchar （5)** 預設值為 true。 如需詳細資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
   
  [  **@p2p_originator_id=** ] *p2p_originator_id*  
  針對點對點拓撲中的節點指定識別碼。 *p2p_originator_id*是**int**，預設值是 NULL。 此識別碼用於衝突偵測，如果*p2p_conflictdetection*設為 TRUE。 請指定拓撲中從未使用過的非零正數識別碼。 對於已經使用的識別碼清單，請執行[sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)。  
   
  [  **@p2p_continue_onconflict=** ] **'***p2p_continue_onconflict***'**  
- 決定散發代理程式在偵測到衝突之後是否會繼續處理變更。 *p2p_continue_onconflict*是**nvarchar （5)**預設值是 FALSE。  
+ 決定散發代理程式在偵測到衝突之後是否會繼續處理變更。 *p2p_continue_onconflict*是**nvarchar （5)** 預設值是 FALSE。  
   
 > [!CAUTION]  
 >  我們建議您使用預設值 FALSE。 當這個選項設定為 TRUE 時，散發代理程式會套用具有最高訂閱者識別碼之節點的衝突資料列，藉以嘗試聚合拓撲中的資料。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。  
   
  [  **@allow_partition_switch=** ] **'***allow_partition_switch***'**  
- 指定 ALTER TABLE…SWITCH 陳述式是否可以針對發行的資料庫來執行。 *allow_partition_switch*是**nvarchar （5)**預設值是 FALSE。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。  
+ 指定 ALTER TABLE…SWITCH 陳述式是否可以針對發行的資料庫來執行。 *allow_partition_switch*是**nvarchar （5)** 預設值是 FALSE。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。  
   
  [  **@replicate_partition_switch=** ] **'***replicate_partition_switch***'**  
- 指定針對發行資料庫執行的 ALTER TABLE…SWITCH 陳述式是否應該複寫到訂閱者。 *replicate_partition_switch*是**nvarchar （5)**預設值是 FALSE。 這個選項才有效才*allow_partition_switch*設為 TRUE。  
+ 指定針對發行資料庫執行的 ALTER TABLE…SWITCH 陳述式是否應該複寫到訂閱者。 *replicate_partition_switch*是**nvarchar （5)** 預設值是 FALSE。 這個選項才有效才*allow_partition_switch*設為 TRUE。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

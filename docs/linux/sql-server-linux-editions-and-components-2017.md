@@ -10,7 +10,7 @@ ms.reviewer: ''
 ms.suite: sql
 ms.technology: sql-linux
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
 - Developer Edition [SQL Server]
@@ -33,11 +33,11 @@ caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 34cbe09cba95cd6f41da3bd5c4be0cbed5eab57c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 8e9cc52b1bc459d058c05bbe9e8cd5c570586b51
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>版本和支援的功能的 SQL Server 2017 on Linux
 

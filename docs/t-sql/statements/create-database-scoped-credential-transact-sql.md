@@ -1,15 +1,16 @@
 ---
-title: "建立 DATABASE SCOPED CREDENTIAL (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
-ms.date: 02/27/2017
-ms.prod: sql-non-specified
+title: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 02/28/2018
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE SCOPED CREDENTIAL
@@ -23,21 +24,22 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6b0cb350ffccb7ad61335de314765f2b85dc0821
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fed9bd89f0e1fbabb42458aa8901f0530dfaa859
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-database-scoped-credential-transact-sql"></a>建立 DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
+# <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  建立資料庫的認證。 資料庫認證未對應至伺服器登入或資料庫使用者。 認證可由資料庫來存取外部的位置，每當資料庫正在執行需要存取的作業。  
+  建立資料庫認證。 資料庫認證未對應到伺服器登入或資料庫使用者。 每當資料庫執行需要存取權的作業時，資料庫就會使用該認證存取外部位置。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,46 +55,46 @@ WITH IDENTITY = 'identity_name'
   
 ## <a name="arguments"></a>引數  
  *credential_name*  
- 指定所要建立資料庫範圍認證的名稱。 *credential_name*不能以數字 （#） 符號開頭。 系統認證必須以 ## 為開頭。  
+ 指定要建立之資料庫範圍認證的名稱。 *credential_name* 的開頭不可以是編號 (#) 符號。 系統認證必須以 ## 為開頭。  
   
- 識別**='***identity_name***'**  
- 指定連接到伺服器外部時所要使用的帳戶名稱。 若要匯入檔案，以從 Azure Blob 儲存體，身分識別名稱必須是`SHARED ACCESS SIGNATURE`。  如需有關共用的存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。  
+ IDENTITY **='***identity_name***'**  
+ 指定連接到伺服器外部時所要使用的帳戶名稱。 若要使用共用金鑰從 Azure Blob 儲存體匯入檔案，身分識別名稱必須為 `SHARED ACCESS SIGNATURE`。 若要將資料載入 SQL DW，可以將任何有效值用於身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。  
   
- 密碼**='***密碼***'**  
- 指定外寄驗證所需的秘密。 `SECRET`需要從 Azure Blob 儲存體匯入檔案。   
+ SECRET **='***secret***'**  
+ 指定外寄驗證所需的秘密。 從 Azure Blob 儲存體匯入檔案需要 `SECRET`。 若要從 Azure Blob 儲存體載入 SQL DW，「祕密」必須是「Azure 儲存體金鑰」。  
 >  [!WARNING]
->  SAS 金鑰值可能會開始使用 '？ '（問號）。 當您使用 SAS 金鑰時，您必須移除前置字元 '？ '。 否則可能會封鎖您的工作。  
+>  SAS 金鑰值的開頭可能是 '?' (問號)。 當您使用 SAS 金鑰時，您必須移除前置字元 '?'。 否則您的工作可能會受阻。  
   
-## <a name="remarks"></a>備註  
- 資料庫範圍認證是包含才能連接至外部資源的驗證資訊的記錄[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 大部分認證都包含 Windows 使用者和密碼。  
+## <a name="remarks"></a>Remarks  
+ 資料庫範圍認證是包含驗證資訊的資料列，該資訊是連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部資源時所需的資訊。 大部分認證都包含 Windows 使用者和密碼。  
   
- 建立資料庫範圍認證之前，資料庫必須有主要金鑰來保護認證。 如需詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)。  
+ 在建立資料庫範圍認證之前，資料庫必須具有保護認證的主要金鑰。 如需詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)。  
   
  當 IDENTITY 是 Windows 使用者時，秘密可以是密碼。 秘密是利用服務主要金鑰來加密的。 如果重新產生服務主要金鑰，便會利用新的服務主要金鑰來重新加密秘密。  
    
- 資料庫範圍認證的相關資訊會顯示在[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)目錄檢視。  
+ 資料庫範圍認證的相關資訊顯示在 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 目錄檢視中。  
   
  
- Hereare 資料庫的某些應用程式範圍的認證：  
+ 下列是一些資料庫範圍認證的應用：  
   
-- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]您可以使用資料庫範圍認證來存取非公用 Azure blob 儲存體或含有 PolyBase 的 Kerberos 保護的 Hadoop 叢集。 若要進一步了解，請參閱[CREATE EXTERNAL DATA SOURCE (TRANSACT-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
+- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 使用資料庫範圍認證來存取非公開 Azure Blob 儲存體或含 PolyBase 受 Kerberos 保護的 Hadoop 叢集。 若要深入了解，請參閱 [CREATE EXTERNAL DATA SOURCE (TRANSACT-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
 
-- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]PolyBase 會使用資料庫範圍認證以存取非公用 Azure blob 儲存體。 若要進一步了解，請參閱[CREATE EXTERNAL DATA SOURCE (TRANSACT-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 使用資料庫範圍認證來存取含 PolyBase 的非公開 Azure Blob 儲存體。 若要深入了解，請參閱 [CREATE EXTERNAL DATA SOURCE (TRANSACT-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)。
   
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用資料庫範圍的認證的全域查詢功能。 這是資料庫的多個分區進行查詢的能力。  
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 針對其全域查詢功能使用資料庫範圍認證。 這是跨多個資料庫分區查詢的功能。  
   
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]要寫入 Azure blob 儲存體擴充的事件檔案，會使用資料庫範圍認證。  
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用資料庫範圍認證將擴充事件檔案寫入 Azure Blob 儲存體。  
   
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用資料庫範圍的認證的彈性集區。 如需詳細資訊，請參閱[有效駕馭爆炸性成長的彈性資料庫](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)  
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 將資料庫範圍認證用於彈性集區。 如需詳細資訊，請參閱[彈性集區可協助您管理及調整多個 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)  
 
-- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)和[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)使用資料庫範圍的認證來存取 Azure blob 儲存體的資料。 如需詳細資訊，請參閱[範例的大量資料的存取 Azure Blob 儲存體](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。 
+- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 使用資料庫範圍認證存取 Azure Blob 儲存體的資料。 如需詳細資訊，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。 
   
 ## <a name="permissions"></a>Permissions  
- 需要**控制項**資料庫的權限。  
+ 需要資料庫上的 **CONTROL** 權限。  
   
 ## <a name="examples"></a>範例  
-### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. 建立資料庫範圍認證您的應用程式。
- 下列範例會建立資料庫範圍認證呼叫`AppCred`。 資料庫範圍認證包含 Windows 使用者`Mary5`和密碼。  
+### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. 為您的應用程式建立資料庫範圍認證。
+ 下列範例會建立稱為 `AppCred` 的資料庫範圍認證。 該資料庫範圍認證包含 Windows 使用者 `Mary5` 和密碼。  
   
 ```sql  
 -- Create a db master key if one does not already exist, using your own password.  
@@ -104,19 +106,19 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 GO  
 ```  
 
-### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 建立資料庫範圍認證的共用的存取簽章。   
-下列範例會建立可以用來建立資料庫範圍認證[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md)，可以執行大量作業，例如[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)和[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). 共用的存取簽章不能使用 PolyBase，SQL Server、 AP 或 SQL DW 中。
+### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 建立共用存取簽章的資料庫範圍認證。   
+下列範例會建立可用於建立[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md)的資料庫範圍認證，可進行 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 等大量作業。 「共用存取簽章」不能在 SQL Server、APS 或 SQL DW 中與 PolyBase 搭配使用。
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 ```
   
-### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. 建立資料庫範圍認證 PolyBase 連線到 Azure 資料湖存放區。  
-下列範例會建立可以用來建立資料庫範圍認證[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md)，這可以由在 Azure SQL 資料倉儲 PolyBase。
+### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. 建立可讓 PolyBase 連線到 Azure Data Lake Store 的資料庫範圍認證。  
+下列範例會建立可以用於建立[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md) (可在 Azure SQL 資料倉儲中供 PolyBase 使用) 的資料庫範圍認證。
 
-Azure 資料湖存放區會進行服務驗證使用 Azure Active Directory 應用程式。
-請[建立 AAD 應用程式](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)和記錄 client_id、 OAuth_2.0_Token_EndPoint，與索引鍵，再重新建立資料庫範圍認證。
+Azure Data Lake Store 將 Azure Active Directory 應用程式用於「服務對服務驗證」。
+請先[建立 AAD 應用程式](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)並記錄您的 client_id、OAuth_2.0_Token_EndPoint 和金鑰，然後再嘗試建立資料庫範圍認證。
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
@@ -129,9 +131,9 @@ WITH
   
   
 ## <a name="more-information"></a>詳細資訊  
- [認證 &#40; Database engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [ALTER DATABASE SCOPED CREDENTIAL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
- [DROP DATABASE SCOPED CREDENTIAL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [認證 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  

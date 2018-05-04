@@ -1,43 +1,23 @@
 ---
-title: "瀏覽模型，使用 Microsoft 貝氏機率分類檢視器 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 瀏覽模型，使用 Microsoft 貝氏機率分類檢視器 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- discrimination [Analysis Services]
-- naive bayes model [Analysis Services]
-- Bayesian classifiers
-- mining model content, viewing
-- predictive modeling [Analysis Services]
-- Naive Bayes Viewer [Analysis Services]
-- data mining [Analysis Services], predictive modeling
-- Microsoft Naive Bayes Viewer
-- histograms [Analysis Services]
-- mining models [Analysis Services], predictive modeling
-- dependencies [Analysis Services]
-ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77b9857488d3574338f7eaee0815082ea3ac690c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1e501269dfea1c72416236f750f451122b36dc40
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>使用 Microsoft 貝氏機率分類檢視器瀏覽模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是可高度適應預測模型工作的分類演算法。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)＞。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是可高度適應預測模型工作的分類演算法。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)＞。  
   
  由於貝氏機率分類模型的主要用途之一是要提供一個方式來快速瀏覽資料集內的資料，因此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器會提供數個方法，來顯示可預測屬性和輸入屬性之間的互動。  
   
@@ -65,7 +45,7 @@ ms.lasthandoff: 02/15/2018
  [回到頁首](#BKMK_ViewerTabs)  
   
 ##  <a name="BKMK_Profiles"></a> 屬性設定檔  
- **[屬性設定檔]** 索引標籤會在方格中顯示長條圖。 您可以使用這個方格，來比較您在 **[可預測]** 方塊中選取的可預測屬性與模型中的所有其他屬性。 索引標籤中的每一個資料行代表可預測屬性的狀態。 如果可預測屬性有許多狀態，您可以調整 **[長條圖列]**來變更會出現在長條圖中的狀態數目。 如果您選擇的數目小於屬性中的狀態總數，狀態就會依支援的順序列出，剩餘狀態則收集到單一灰色值區內。  
+ **[屬性設定檔]** 索引標籤會在方格中顯示長條圖。 您可以使用這個方格，來比較您在 **[可預測]** 方塊中選取的可預測屬性與模型中的所有其他屬性。 索引標籤中的每一個資料行代表可預測屬性的狀態。 如果可預測屬性有許多狀態，您可以調整 **[長條圖列]** 來變更會出現在長條圖中的狀態數目。 如果您選擇的數目小於屬性中的狀態總數，狀態就會依支援的順序列出，剩餘狀態則收集到單一灰色值區內。  
   
  若要顯示使長條圖色彩與屬性狀態相關的採礦圖例，請按一下 **[顯示圖例]** 核取方塊。 採礦圖例也會針對您所選取的每個屬性值組顯示案例的分佈情況。  
   
@@ -79,7 +59,7 @@ ms.lasthandoff: 02/15/2018
  [回到頁首](#BKMK_ViewerTabs)  
   
 ##  <a name="BKMK_Discrimination"></a> 屬性辨識  
- 若要使用 **[屬性辨識]** 索引標籤，請從 **[屬性]**、 **[值 1]**和 **[值 2]** 清單中選取可預測屬性和它的兩個狀態。 接著， **[屬性辨識]** 索引標籤上的方格會在資料行中顯示下列資訊：  
+ 若要使用 **[屬性辨識]** 索引標籤，請從 **[屬性]**、 **[值 1]** 和 **[值 2]** 清單中選取可預測屬性和它的兩個狀態。 接著， **[屬性辨識]** 索引標籤上的方格會在資料行中顯示下列資訊：  
   
  **[屬性]**  
  列出資料集內的其他屬性，這些屬性包含一個非常喜好可預測屬性之其中一個狀態的狀態。  

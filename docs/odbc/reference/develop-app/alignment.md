@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f0368a42e1f6238e151dd14de03012237f9c20cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ede36175f606b28c742e72bb005cf5fa7563bfc0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment"></a>Alignment
 ODBC 應用程式中的對齊問題通常與並無不同它們位於其他任何應用程式。 也就是說，大部分的 ODBC 應用程式有少數或沒有對齊問題。 未將對齊位址罰款因為硬體和作業系統而不同，而且可能效能稍微降低做為次要或成嚴重執行階段錯誤。 因此，ODBC 應用程式和可攜式的 ODBC 應用程式特別的是，應該小心正確對齊的資料。  

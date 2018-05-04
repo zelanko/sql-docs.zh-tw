@@ -17,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b7f82e92cc9293781992eccdbb04a46f8ac788fa
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c108fd8a94e871ed8bf1edee391c87d2c1571bdb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>步驟 3： 擴展欄位的清單方塊
 若要填入欄位 清單方塊中，插入下列程式碼的 Click 事件處理常式`lstMain`:  

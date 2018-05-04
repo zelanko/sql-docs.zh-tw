@@ -1,34 +1,23 @@
 ---
-title: "工具和方法來處理 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 工具和方法來處理 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- process [Analysis Services]
-- processing [Analysis Services]
-ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2cf9e507347a28aa36f96b1d2499ec0ff0ee741f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 57600dd49938217fa3bf65cff86f64e03bb16b52
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>處理的工具和方式 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-處理是 Analysis Services 查詢關聯式資料來源，然後使用該資料來擴展 Analysis Services 物件的作業。  
+  處理是 Analysis Services 查詢關聯式資料來源，然後使用該資料來擴展 Analysis Services 物件的作業。  
   
  身為 Analysis Services 系統管理員的您，可以使用這些方法執行及監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的處理：  
   
@@ -53,7 +42,7 @@ ms.lasthandoff: 02/23/2018
  處理是可高度設定的作業，由決定在物件層級上發生完整處理或累加式處理的一組處理選項所控制。 如需處理選項和物件的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) 和[處理 Analysis Services 物件](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
   
 > [!NOTE]  
->  此主題描述用於處理多維度模型的工具和方法。 如需有關處理表格式模型的詳細資訊，請參閱[處理資料庫、 資料表或分割區 &#40;Analysis Services &#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)和[處理資料](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
+>  此主題描述用於處理多維度模型的工具和方法。 如需有關處理表格式模型的詳細資訊，請參閱[處理資料庫、 資料表或資料分割&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)和[處理資料](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中處理物件  
   
@@ -75,7 +64,7 @@ ms.lasthandoff: 02/23/2018
   
      Analysis Services 物件是階層式。 如果您選擇資料庫，資料庫中包含的所有物件都可以進行處理。 實際上是否進行處理會依您選取的處理選項和物件的狀態而有所不同。 明確地說，如果物件未經過處理，處理其父系將會導致該物件進行處理。 如需有關物件相依性的詳細資訊，請參閱＜ [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)＞。  
   
-3.  在 **[處理]** 對話方塊的 **[處理選項]**中，使用提供的預設值或從清單選取不同的選項。 如需每個選項的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
+3.  在 **[處理]** 對話方塊的 **[處理選項]** 中，使用提供的預設值或從清單選取不同的選項。 如需每個選項的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
 4.  如果 [處理] 對話方塊中所列出的物件已經處理，請按一下 **[影響分析]** 來識別及選擇性地處理受影響的相依物件。  
   
@@ -93,7 +82,7 @@ ms.lasthandoff: 02/23/2018
   
 3.  以滑鼠右鍵按一下維度，然後按一下 [處理]。 您可以用滑鼠右鍵按一下多個維度，一次處理多個物件。 如需詳細資訊，請參閱[批次處理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)。  
   
-4.  在 **[處理維度]** 對話方塊中，於 **[物件清單]** 下的 **[處理選項]**資料行中，確認這個資料行的選項是 **[完整處理]**。 如果不是，請在 [處理選項] 之下，按一下選項，然後從下拉式清單中選取 [完整處理]。  
+4.  在 **[處理維度]** 對話方塊中，於 **[物件清單]** 下的 **[處理選項]** 資料行中，確認這個資料行的選項是 **[完整處理]**。 如果不是，請在 [處理選項] 之下，按一下選項，然後從下拉式清單中選取 [完整處理]。  
   
 5.  按一下 **[執行]**。  
   
@@ -149,7 +138,7 @@ ms.lasthandoff: 02/23/2018
   
     -   **[錯誤]** 以擷取任何錯誤  
   
-    -   **[進度報表開始]**、 **[目前的進度報表]**和 **[進度報表結束]** 以報告處理狀態並顯示用來擷取資料的 SQL 查詢  
+    -   **[進度報表開始]**、 **[目前的進度報表]** 和 **[進度報表結束]** 以報告處理狀態並顯示用來擷取資料的 SQL 查詢  
   
     -   **[執行 MDX 指令碼開始]** 和 **[執行 MDX 指令碼結束]** 以顯示 Cube 計算  
   

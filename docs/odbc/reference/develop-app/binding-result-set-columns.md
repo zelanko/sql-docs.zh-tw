@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 107a89aeca70d7b28958c475994e3c41f417fa26
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56b3a9757089bae9da3341ba3649d8579f8d663
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-result-set-columns"></a>繫結結果集資料行
 應用程式可以做為多或較少的資料行結果集選擇，包括完全沒有資料行繫結的繫結。 時擷取資料的資料列，驅動程式會傳回至應用程式的繫結的資料行的資料。 是否應用程式中的繫結的所有資料行的結果集取決於應用程式。 比方說，通常是產生報告的應用程式有固定的格式。這類應用程式建立結果集包含所有在報表中使用的資料行和再繫結，以及擷取所有這些資料行的資料。 有時候顯示螢幕的資料完整的應用程式可讓使用者決定要顯示的資料行這類應用程式會建立包含使用者可能會想，但繫結，並只為這些使用者選擇的資料行擷取資料的所有資料行的結果集。  

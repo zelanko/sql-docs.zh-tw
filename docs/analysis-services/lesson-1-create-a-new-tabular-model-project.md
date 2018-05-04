@@ -1,29 +1,28 @@
 ---
-title: "第 1 課： 建立新的表格式模型專案 |Microsoft 文件"
-ms.custom: 
+title: 第 1 課： 建立新的表格式模型專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: 
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: e2803d1fa5be03957ad7a200eaa3f4c151d28494
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 課：建立新的表格式模型專案
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 02/23/2018
 完成本課程的估計時間：**10 分鐘**  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
-本主題是表格式模型撰寫教學課程的第一課。 若要完成這一課，您必須使用 SQL Server 執行個體上安裝 AdventureWorksDW 範例資料庫。 若要進一步了解，請參閱[表格式模型化 &#40;Adventure Works 教學課程 &#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
+本主題是表格式模型撰寫教學課程的第一課。 若要完成這一課，您必須使用 SQL Server 執行個體上安裝 AdventureWorksDW 範例資料庫。 若要進一步了解，請參閱[表格式模型化&#40;Adventure Works 教學課程&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)。  
   
 ## <a name="create-a-new-tabular-model-project"></a>建立新的表格式模型專案  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 02/23/2018
   
 讓我們看看模型屬性。 按一下 **方案總管**中建立新的空白表格式模型專案。 在**屬性**視窗中，您會看到[模型屬性的](../analysis-services/tabular-models/model-properties-ssas-tabular.md)、 最重要的是**DirectQuery 模式**屬性。 此屬性指定模型是以 In-Memory 模式 (關閉) 或是 DirectQuery 模式 (開啟) 部署。 在本教學課程中，您將撰寫及部署記憶體中模式的模型。
 
-![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
+![做為表格式-第 1 課的屬性](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 當您建立新的模型時，根據資料模型化，可以指定自動設定某些模型屬性**工具** > **選項** 對話方塊。 [資料備份]、[工作空間保留] 和 [工作空間伺服器] 屬性會指定備份、在記憶體中保留以及建立工作空間資料庫 (您的模型撰寫資料庫) 的方式和位置。 您稍後可以視需要變更這些設定，但目前讓這些屬性保持不變。  
 

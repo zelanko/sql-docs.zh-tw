@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1a2ed3efb39a681e2f3cb4e935e7b7e6d8d41a75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4679437d3c520d8e53fbbe79725e8efd340c42a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_OAMethod objecttoken , methodname
  *方法名稱*  
  這是要呼叫之 OLE 物件的方法名稱。  
   
- *returnvalue***輸出**   
+ *returnvalue***輸出**  
  這是 OLE 物件的方法傳回值。 如果指定的話，它必須是適當資料類型的本機變數。  
   
  如果此方法傳回單一值，也可以指定一個本機變數*returnvalue*，它會傳回此方法傳回值，在本機變數，或不指定*returnvalue*，它會傳回方法會傳回做為單一資料行、 單一資料列結果集給用戶端的值。  

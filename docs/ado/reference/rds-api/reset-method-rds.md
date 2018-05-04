@@ -19,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 91361c96b797e82b242372b667676eafffbc7c55
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 3b32cf80181e9e6f9bf1c0d6511e4526943ccda9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reset-method-rds"></a>Reset 方法 (RDS)
 用戶端上執行排序或篩選**資料錄集**根據指定的排序和篩選屬性。  

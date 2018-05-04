@@ -1,27 +1,19 @@
 ---
 title: 將 Power Pivot 移轉至 SharePoint 2013 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: 18
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6d14c449823f55d5c400c9f17ba73724d3ea43a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 308b69e4da122bd409c4cbd12ec9196cb2da8317
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>將 Power Pivot 移轉至 SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
     3.  按一下資料庫的名稱。  
   
-    4.  在 **[管理內容資料庫設定]**上，將 **[資料庫狀態]** 設定為 **[離線]**。  
+    4.  在 **[管理內容資料庫設定]** 上，將 **[資料庫狀態]** 設定為 **[離線]**。  
   
     5.  選取 **[移除內容資料庫]**。 請注意，此時會顯示一則警告，表示儲存在內容資料庫中的網站將無法再存取。  
   
@@ -114,7 +106,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  尋找 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式，例如「預設的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式」，按一下服務應用程式的名稱，然後按一下 SharePoint 功能區中的 [屬性]。  
   
-3.  將資料庫伺服器名稱-執行個體以及資料庫名稱更新為 您所備份、複製和還原的正確資料庫名稱。 一旦您按一下 **[確定]**之後，就會升級服務應用程式資料庫。 錯誤將列在 ULS 記錄中。  
+3.  將資料庫伺服器名稱-執行個體以及資料庫名稱更新為 您所備份、複製和還原的正確資料庫名稱。 一旦您按一下 **[確定]** 之後，就會升級服務應用程式資料庫。 錯誤將列在 ULS 記錄中。  
   
  **升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 排程**  
   

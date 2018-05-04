@@ -1,4 +1,4 @@
-﻿---
+---
 title: SQL Server 2017 docker 設定選項 |Microsoft 文件
 description: 瀏覽不同的方式使用，並與其互動在 Docker 中的 SQL Server 2017 容器映像。 這包括複製檔案及疑難排解的保存資料。
 author: rothja
@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: c0e602345be28c9740cae9cd610899b8b2d372f6
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
-ms.translationtype: MT
+ms.openlocfilehash: 7212b1a0a5e6322a33046d09edd091c257ff6b44
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>設定 SQL Server 2017 容器映像 docker
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/27/2018
 
    1. 接著，您必須取得免費的開發人員 Docker 存放區上的容器映像。 移至[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)，按一下 **繼續簽出**，並遵循指示。
 
-   1. 檢閱需求，並執行程序[快速入門](quickstart-install-connect-docker.md)。 但是，有兩個差異。 您必須先提取映像**存放區/microsoft/mssql-伺服器-linux:\<標記名稱\>**從 Docker 存放區。 您必須指定與您生產環境版本**MSSQL_PID**環境變數。 下列範例會示範如何執行 Enterprise edition 的最新的 SQL Server 2017 容器映像：
+   1. 檢閱需求，並執行程序[快速入門](quickstart-install-connect-docker.md)。 但是，有兩個差異。 您必須先提取映像**存放區/microsoft/mssql-伺服器-linux:\<標記名稱\>** 從 Docker 存放區。 您必須指定與您生產環境版本**MSSQL_PID**環境變數。 下列範例會示範如何執行 Enterprise edition 的最新的 SQL Server 2017 容器映像：
 
       ```bash
       docker run --name sqlenterprise \
@@ -351,7 +351,7 @@ sudo systemctl start docker
 
 如果執行 SQL Server 容器失敗，請嘗試下列測試：
 
-- 如果您收到錯誤，例如**' 無法建立端點 CONTAINER_NAME 上網路橋接器。啟動 proxy 時發生錯誤： 接聽 tcp 0.0.0.0:1433 繫結： 已經在使用中的位址。 '**，則您嘗試對應到已在使用連接埠的容器連接埠 1433。 如果您在主機電腦，在本機執行 SQL Server，也可能會發生。 它也可會發生，如果您啟動兩個 SQL Server 容器，並嘗試將其同時對應到相同的主機連接埠。 如果發生這種情況，使用`-p`參數對應到不同的主機連接埠的容器連接埠 1433。 例如： 
+- 如果您收到錯誤，例如 **' 無法建立端點 CONTAINER_NAME 上網路橋接器。啟動 proxy 時發生錯誤： 接聽 tcp 0.0.0.0:1433 繫結： 已經在使用中的位址。 '**，則您嘗試對應到已在使用連接埠的容器連接埠 1433。 如果您在主機電腦，在本機執行 SQL Server，也可能會發生。 它也可會發生，如果您啟動兩個 SQL Server 容器，並嘗試將其同時對應到相同的主機連接埠。 如果發生這種情況，使用`-p`參數對應到不同的主機連接埠的容器連接埠 1433。 例如： 
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.
@@ -411,7 +411,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 ### <a id="errorlogs"></a> SQL Server 安裝程式和錯誤記錄檔
 
-您可以查看 SQL Server 安裝程式和錯誤記錄檔**/var/opt/mssql/log**。 如果容器未在執行中，第一次啟動容器。 若要檢查記錄檔，然後使用互動式命令提示字元。
+您可以查看 SQL Server 安裝程式和錯誤記錄檔 **/var/opt/mssql/log**。 如果容器未在執行中，第一次啟動容器。 若要檢查記錄檔，然後使用互動式命令提示字元。
 
 ```bash
 docker start e69e056c702d
@@ -427,7 +427,7 @@ cat errorlog
 ```
 
 > [!TIP]
-> 如果掛接主機目錄**/var/opt/mssql**當您建立您的容器，您可以改為查看**記錄**主機上的對應路徑的子目錄。
+> 如果掛接主機目錄 **/var/opt/mssql**當您建立您的容器，您可以改為查看**記錄**主機上的對應路徑的子目錄。
 
 ## <a name="next-steps"></a>後續的步驟
 

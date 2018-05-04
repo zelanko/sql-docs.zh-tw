@@ -1,15 +1,15 @@
 ---
-title: "OLE DB for OLAP 結構描述資料列 |Microsoft 文件"
-ms.custom: 
+title: OLE DB for OLAP 結構描述資料列 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - schema rowsets [OLE DB for OLAP]
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
-caps.latest.revision: 
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75bdb07bd24f44fd42cf257a1e365c101329060f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f50d262a2572e356d578661a021c3752841bc90c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLE DB for OLAP 結構描述資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者支援下列的 OLE DB for OLAP 結構描述資料列集。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者支援下列的 OLE DB for OLAP 結構描述資料列集。  
   
 > [!NOTE]  
 >  若要檢查特定資料來源提供者是否支援資料列集，請使用**DISCOVER_ENUMERATIONS**含有資料列集[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 02/15/2018
 |結構描述資料列<sup>1</sup>|Description|  
 |-------------------------------|-----------------|  
 |[DISCOVER_INSTANCES 資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|描述伺服器上的執行個體。|  
-|[DISCOVER_KEYWORDS 資料列集 &#40; OLE DB for OLAP &#41;](../../../analysis-services/schema-rowsets/ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md)|列舉提供者所保留字詞的清單。|  
+|[DISCOVER_KEYWORDS 資料列集 & #40; OLE DB for OLAP & #41;](../../../analysis-services/schema-rowsets/ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md)|列舉提供者所保留字詞的清單。|  
 |[MDSCHEMA_ACTIONS 資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)|描述可用於用戶端應用程式的動作。|  
 |[MDSCHEMA_CUBES 資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|描述資料庫內 Cube 的結構。|  
 |[MDSCHEMA_DIMENSIONS 資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|描述資料庫內的共用和私人維度。|  

@@ -1,33 +1,32 @@
 ---
-title: "從 Powerpivot 還原 |Microsoft 文件"
-ms.custom: 
+title: 從 Powerpivot 還原 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ab75dfb620c3d0fc41799f2f59a88b6e741440ea
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: a35f1ddb32a5adf8e422154fea0a56feb1010061
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-from-power-pivot"></a>從 PowerPivot 還原
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-您可以在 SQL Server Management Studio 中使用 [從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 還原] 功能，於 Analysis Services 執行個體上建立新的表格式模型資料庫 (以表格式模式執行)，或是從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿 (.xlsx) 還原到現有的資料庫。  
+  您可以在 SQL Server Management Studio 中使用 [從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 還原] 功能，於 Analysis Services 執行個體上建立新的表格式模型資料庫 (以表格式模式執行)，或是從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿 (.xlsx) 還原到現有的資料庫。  
   
 > [!NOTE]  
 >  SQL Server Data Tools 中的 [從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 匯入] 專案範本提供了類似的功能。 如需詳細資訊，請參閱[從 Power Pivot 匯入](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)。  

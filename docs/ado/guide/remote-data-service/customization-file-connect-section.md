@@ -20,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc00af717ef3161f414525f109236b0aba0c442e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0835a305ce4e7c748c4b7a8c931a586f70d2bafa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案連接 > 一節
 此處理常式的預設行為是拒絕所有連線。 **連接**區段會指定該行為的例外狀況。 例如，如果所有**連接**區段已不存在或空的則預設無法建立任何連線。  

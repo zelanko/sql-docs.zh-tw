@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1481e3e8bd8076cfb18107d60cbbca78dc7da60
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6bd018a74b39e644710ede5e5f002d543dac3f2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datasource-property-ado"></a>資料來源屬性 (ADO)
 表示物件，包含表示為資料[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

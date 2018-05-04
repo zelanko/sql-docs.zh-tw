@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7aa94520c72183f4aaf619d252ce7c99f35f2c96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 67c53bb07cfb9144869ce759af25b42b12478107
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="targettype-element-assl"></a>TargetType 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]識別項目類型中所識別的項目[目標](../../../analysis-services/scripting/properties/target-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  識別項目類型中所識別的項目[目標](../../../analysis-services/scripting/properties/target-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|無|  
@@ -66,12 +66,12 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |*Cube*|此動作的目標是 Cube。|  
 |*資料格*|此動作的目標是 Subcube。|  
 |*設定*|此動作的目標是集合。|  
-|*Hierarchy*|此動作的目標是階層。|  
+|*階層架構*|此動作的目標是階層。|  
 |*Level*|此動作的目標是層級。|  
 |*DimensionMembers*|此動作的目標是維度的成員。|  
 |*HierarchyMembers*|此動作的目標是階層的成員。|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
  對應目的父代的項目**TargetType**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Action>。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

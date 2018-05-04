@@ -1,30 +1,30 @@
 ---
-title: "資料分割物件 (TMSL) |Microsoft 文件"
-ms.custom: 
+title: 資料分割物件 (TMSL) |Microsoft 文件
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bc820929603cadb400bd19f3afa4d04a6222fb89
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-object-tmsl"></a>資料分割物件 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定義資料分割或資料表資料列集的邏輯分割。 資料分割是由 SQL 查詢，用來匯入資料，範例資料在模型化環境中，或做為完整的資料查詢，透過 DirectQuery 透過查詢執行階段所組成。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  定義資料分割或資料表資料列集的邏輯分割。 資料分割是由 SQL 查詢，用來匯入資料，範例資料在模型化環境中，或做為完整的資料查詢，透過 DirectQuery 透過查詢執行階段所組成。  
   
  磁碟分割上的屬性會決定資料來源資料表的方式。  在物件階層中，資料分割的父物件是資料表物件。  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |-|-|  
 |**匯入**|表示要求針對儲存匯入的資料的記憶體中分析引擎發出的查詢。|  
 |**DirectQuery**|傳遞至外部關聯式資料庫的查詢執行。 DirectQuery 模式會使用資料分割來提供模型設計期間使用的範例資料。 部署在實際伺服器上，則應該切換回完整資料檢視。 前文提過，DirectQuery 模式需要一個磁碟分割，每個資料表，且每個模型的一個資料來源。|  
-|**預設值**|如果您想要切換模式高的層級物件樹狀目錄中，在模型或資料庫層級，請將此選項。 當您選擇預設值時，查詢模式會匯入或 DirectQuery。|  
+|**default**|如果您想要切換模式高的層級物件樹狀目錄中，在模型或資料庫層級，請將此選項。 當您選擇預設值時，查詢模式會匯入或 DirectQuery。|  
   
  來源  
  識別要查詢之資料的位置。 有效值為**查詢中，計算**，或**無**。 這是必要的值。  
@@ -55,14 +55,14 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |**無**|用於匯入模式，已經載入及儲存在記憶體中資料。|  
-|**查詢**|若為 DirectQuery 模式中，則針對模型中所指定的關聯式資料庫執行 SQL 查詢**DataSource**。 請參閱[資料來源物件 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
+|**查詢**|若為 DirectQuery 模式中，則針對模型中所指定的關聯式資料庫執行 SQL 查詢**DataSource**。 請參閱[資料來源物件&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)。|  
 |**計算**|導出的資料表的來源資料表建立時指定的運算式。 這個運算式會被視為，建立導出資料表的資料分割的來源。|  
   
  dataview  
  對於 DirectQuery 資料分割，進一步其他 dataView 屬性會指定是否擷取資料的查詢是範例還是完整資料集。 有效值為**完整**，**範例**，或**預設**（繼承）。 如前所述，範本會用只在資料模型和測試。 請參閱[將範例資料加入 DirectQuery 模型中設計模式](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md)如需詳細資訊。  
   
 ## <a name="usage"></a>使用方式  
- 會使用資料分割物件[Alter 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[建立命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)，[刪除命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)，[重新整理命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)，和[MergePartitions 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ 會使用資料分割物件[Alter 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[建立命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)， [delete 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)，[重新整理命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)，和[MergePartitions 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  建立時，取代或改變分割區的物件，指定物件定義的所有讀寫屬性。 省略的讀 / 寫屬性會被視為刪除。 讀寫屬性包括名稱、 描述、 模式和來源。  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 01/08/2018
 ]  
 ```  
   
-## <a name="full-syntax"></a>完整的語法  
+## <a name="full-syntax"></a>完整語法  
  以下是磁碟分割物件的結構描述表示法。  
   
 ```  
@@ -242,7 +242,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

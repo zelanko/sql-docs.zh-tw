@@ -26,12 +26,11 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1feb6b6071958b6bbf73bcb2b50d785dffc1a87e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 351f81e36bcadbefda71086ed0873aa5bdcdf0c0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ destlen
 ## <a name="returns"></a>傳回值  
  如果資料類型轉換成功，則為轉換之資料的長度 (以位元組為單位)。 當 **srv_convert** 遇到所不支援的轉換要求時，它會呼叫開發人員提供的錯誤處理常式 (如果有的話)、設定全域錯誤號碼，並傳回 -1。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **srv_willconvert** 函式會決定是否允許特定的轉換。  
   
  轉換成近似的數值資料類型 SRVFLT4 或 SRVFLT8 可能會造成部分有效位數遺失。 從近似的數值資料類型 SRVFLT4 或 SRVFLT8 轉換成 SRVCHAR 或 SRVTEXT 可能會造成部分有效位數遺失。  

@@ -28,15 +28,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bb0538869453af24bd432a1d7f995e0007e79ec7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d04a9d7def676122ea3ae64aa5e170b36b4ae5aa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axis-element-xmla"></a>Axis 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含一組用來代表多維度資料集中所包含之單一軸的 tuple[座標軸](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)項目，會使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含一組用來代表多維度資料集中所包含之單一軸的 tuple[座標軸](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)項目，會使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="examples"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  下列範例說明結構**軸**時用戶端指定的項目*TupleFormat*或*CustomFormat*如**AxisFormat** XMLA 屬性，假設軸具有下列成員：  
   
 |||||  
@@ -133,7 +133,7 @@ ms.lasthandoff: 01/08/2018
 </Axes>  
 ```  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  下列範例說明結構**軸**時用戶端指定的項目*ClusterFormat*如**AxisFormat**指定下列的 XMLA 屬性軸的成員：  
   
 ||||||  
@@ -188,7 +188,7 @@ ms.lasthandoff: 01/08/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

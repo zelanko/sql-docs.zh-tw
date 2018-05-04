@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e63c8026b31140f5ad1f94c99f143670d31c5c78
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c827972d0d4478431f085a6aa4d69f70f020be89
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-based-drivers"></a>以檔案為基礎的驅動程式
 以檔案為基礎的驅動程式會搭配等 dBASE 不提供驅動程式使用的獨立資料庫引擎的資料來源。 這些驅動程式會直接存取實體的資料，而且必須實作資料庫引擎處理序的 SQL 陳述式。 標準作法是以檔案為基礎的驅動程式中的資料庫引擎會實作最小 SQL 一致性層級; 所定義的 ODBC SQL 子集如需此一致性層級中的 SQL 陳述式的清單，請參閱[附錄 c: SQL 文法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  

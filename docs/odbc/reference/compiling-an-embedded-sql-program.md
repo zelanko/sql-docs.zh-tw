@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], embedded SQL
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e1c71b9e9dd0aba9631cfb276baa1f88072a8960
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 92c464cb751bccc4393c219f0312ec8a89691df1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiling-an-embedded-sql-program"></a>編譯內嵌的 SQL 程式
 內嵌的 SQL 程式包含 SQL 和主機語言陳述式混用，因為它無法直接提交給主機語言的編譯器。 相反地，它會編譯到包含多個步驟的程序。 雖然這個程序不同的產品，但步驟都大致上相同的所有產品。  

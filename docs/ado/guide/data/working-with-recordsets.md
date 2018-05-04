@@ -19,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: cc7b4230144836d2d01f95b60bd730e3a942e1ad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-recordsets"></a>使用資料錄集
 **資料錄集**物件具有內建功能，可讓您重新整理結果集中資料的順序，來搜尋特定的記錄，根據您提供的準則，並且甚至最佳化使用索引搜尋作業。 這些功能是否可供使用取決於提供者，以及在某些情況下，例如的[索引](../../../ado/reference/ado-api/index-property.md)屬性 — 資料來源本身的結構。  
@@ -69,7 +68,7 @@ ms.lasthandoff: 04/18/2018
  星號可以使用只在準則字串結尾或一起開頭和結尾準則字串，如先前所示。 您無法使用星號做為前置萬用字元 ('* str') 或內嵌萬用字元 ('s\*r')。 這會導致錯誤。  
   
 ### <a name="seek-and-index"></a>搜尋和編製索引  
- 使用**搜尋**方法並搭配**索引**如果基礎提供者在支援索引屬性**資料錄集**物件。 使用[支援](../../../ado/reference/ado-api/supports-method.md)**(adSeek)**方法，以判斷基礎提供者是否支援**搜尋**，而**Supports(adIndex)**若要判斷提供者是否支援索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支援**搜尋**和**索引**。)  
+ 使用**搜尋**方法並搭配**索引**如果基礎提供者在支援索引屬性**資料錄集**物件。 使用[支援](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 方法，以判斷基礎提供者是否支援**搜尋**，而**Supports(adIndex)** 若要判斷提供者是否支援索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支援**搜尋**和**索引**。)  
   
  如果**搜尋**找不到所需的資料列，沒有任何錯誤發生時，會和資料列位於結尾**資料錄集**。 設定**索引**所要的索引，然後再執行這個方法的屬性。  
   
@@ -99,7 +98,7 @@ ms.lasthandoff: 04/18/2018
 -   *值*是與您將會比較欄位值的值 (例如， `'Smith'`， `#8/24/95#`， `12.345`，或`$50.00`)。 字串中使用單引號 （'） 與井字符號 (`#`) 的日期。 數字，您可以使用小數位數、 貨幣符號和科學記號標記法。 如果*運算子*是**像**，*值*可以使用萬用字元。 只有星號 (\*) 和百分比符號 （%） 萬用字元所允許的字元，而且它們必須是字串中的最後一個字元。 *值*不可為 null。  
   
     > [!NOTE]
-    >  若要在篩選中包含單引號 （'）*值*，使用兩個單引號來代表其中一個。 例如，若要篩選*O'Malley*，準則字串應該`"col1 = 'O''Malley'"`。 若要包含在開頭和結尾的篩選值單引號，請將字串括以井字號 （#）。 例如，若要篩選*'1'*，準則字串應該`"col1 = #'1'#"`。  
+    >  若要在篩選中包含單引號 （'）*值*，使用兩個單引號來代表其中一個。 例如，若要篩選*O'Malley*，準則字串應該`"col1 = 'O''Malley'"`。 若要包含在開頭和結尾的篩選值單引號，請將字串括以井字號 （#）。 例如，若要篩選 *'1'*，準則字串應該`"col1 = #'1'#"`。  
   
  沒有任何優先順序之間**AND**和**或**。 子句可加以群組括號內。 不過，您無法群組子句聯結**或**然後將群組加入 AND，與另一個子句，如下所示。  
   

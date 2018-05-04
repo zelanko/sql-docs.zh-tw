@@ -18,12 +18,11 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 13855f4f485386dacf52c9a37c4d686cefbf1877
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 21d0f351214f51d7bbea9ab53921a8ac4e2f549c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-security-design-features"></a>ADO 安全性設計功能
 下列各節會說明安全性設計功能中 ActiveX Data Objects (ADO) 2.8 和更新版本。 在 ADO 中 2.8 已進行這些變更，以提升安全性。 ADO 6.0 中，隨附於 Windows Vista 中的 Windows DAC 6.0，在功能上等於 ADO 2.8，包含在 Windows XP 和 Windows Server 2003 中的 MDAC 2.8 中。 本主題提供如何最安全的 ADO 2.8 或更新版本中的您應用程式的相關資訊。

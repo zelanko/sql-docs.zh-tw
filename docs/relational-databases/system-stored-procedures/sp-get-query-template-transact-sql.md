@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 06a5b21c4ee2fef1191b8521f2201891d5b82811
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8b2fa1cef78164bf13dd1ca7373376cea1fda1f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ sp_get_query_template
  這是要產生參數化版本的查詢。 '*query_text*' 必須括在單引號中，且前面必須有 N Unicode 規範。 N'*query_text*' 的值指派給@querytext參數。 這屬於類型**nvarchar （max)**。  
   
  @templatetext  
- 這是輸出參數的型別**nvarchar （max)**指示，以接收的參數化的形式提供*query_text*字串常值。  
+ 這是輸出參數的型別**nvarchar （max)** 指示，以接收的參數化的形式提供*query_text*字串常值。  
   
  @parameters  
- 這是輸出參數的型別**nvarchar （max)**指示，以接收中已參數化之參數名稱和資料類型的字串常值提供@templatetext。  
+ 這是輸出參數的型別**nvarchar （max)** 指示，以接收中已參數化之參數名稱和資料類型的字串常值提供@templatetext。  
   
 ## <a name="remarks"></a>備註  
  當發生下列情況時，sp_get_query_template 會傳回錯誤：  

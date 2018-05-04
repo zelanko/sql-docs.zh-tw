@@ -23,20 +23,20 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 62ee9e17d9f53d981e5e44918ec690c9abceddbb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bbdc0a38b1c29176d68469966e008911fecf3291
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>MDSCHEMA_MEASUREGROUP_DIMENSIONS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]列舉量值群組維度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  列舉量值群組的維度。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **MDSCHEMA_MEASUREGROUP_DIMENSIONS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||此量值群組所屬目錄的名稱。 **NULL**如果提供者不支援類別目錄。|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||不支援。|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 |**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|(選擇性) 具有下列其中一個有效值的點陣圖：<br /><br /> 1 可見<br /><br /> 2 不可見<br /><br /> 預設限制為值 1。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

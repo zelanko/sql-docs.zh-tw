@@ -26,12 +26,11 @@ caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: bdffb139f9a2870a454c3cdec1318df9dcf4070f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 03143000dd2ca4563f6d60d6945e3934ecf5283a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 資料定義-建立成員
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,9 +64,9 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  定義導出成員屬性值的有效純量運算式。  
   
 ## <a name="remarks"></a>備註  
- CREATE MEMBER 陳述式定義的導出成員可在整個工作階段中使用，因此，亦可用於工作階段期間的多個查詢。 如需詳細資訊，請參閱[Creating Session-Scoped 導出成員 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ CREATE MEMBER 陳述式定義的導出成員可在整個工作階段中使用，因此，亦可用於工作階段期間的多個查詢。 如需詳細資訊，請參閱[Creating Session-Scoped 導出成員&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)。  
   
- 您也可以定義供單一查詢使用的導出成員。 若要定義受限於單一查詢的導出成員，您可以在 SELECT 陳述式中使用 WITH 子句。 如需詳細資訊，請參閱[Creating Query-Scoped 導出成員 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
+ 您也可以定義供單一查詢使用的導出成員。 若要定義受限於單一查詢的導出成員，您可以在 SELECT 陳述式中使用 WITH 子句。 如需詳細資訊，請參閱[Creating Query-Scoped 導出成員&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)。  
   
  *Property_Name*可以指向其中一個標準或選擇性導出的成員屬性。 本主題稍後會列出標準成員屬性。 導出成員使用 CREATE MEMBER 而建立**工作階段**值有工作階段範圍。 此外，導出成員定義內的字串會以雙引號分隔。 這跟以 OLE DB 定義的方法不同，以 OLE DB 定義的方法指定以單引號來分隔字串。  
   
@@ -75,11 +74,11 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  如需 OLE DB 定義之成員屬性的詳細資訊，請參閱 OLE DB 文件集。  
   
-## <a name="scope"></a>範圍。  
+## <a name="scope"></a>범위  
  導出成員可發生在下表列出的其中一個範圍內。  
   
  查詢範圍  
- 導出成員的可見性與存留期間受限於查詢。 導出成員是在個別查詢中定義。 查詢範圍可覆寫工作階段範圍。 如需詳細資訊，請參閱[Creating Query-Scoped 導出成員 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
+ 導出成員的可見性與存留期間受限於查詢。 導出成員是在個別查詢中定義。 查詢範圍可覆寫工作階段範圍。 如需詳細資訊，請參閱[Creating Query-Scoped 導出成員&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)。  
   
  工作階段範圍  
  導出成員的可見性與存留期間受限於其建立所在的工作階段。 (如果 DROP MEMBER 陳述式是在導出成員上發出，存留期間就會比工作階段期間短)。CREATE MEMBER 陳述式會以工作階段範圍建立導出成員。  
@@ -132,14 +131,14 @@ WHERE ProfitRatio
 |SOLVE_ORDER|當導出成員參考另一個導出成員 (亦即，導出成員彼此交叉) 時，解析導出成員的順序。|  
 |FORMAT_STRING|用戶端應用程式可在顯示資料格值時使用的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 樣式格式字串。|  
 |VISIBLE|指出是否可以看見結構描述資料列集中導出成員的值。 可見的導出成員可以加入至一組與[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函式。 非零的值代表可以看見導出成員。 這個屬性的預設值是*看得見*。<br /><br /> 不可見的導出成員 (此值會設為零) 一般會在較為複雜的導出成員中作為中間步驟。 其他成員類型 (例如，量值) 也可以參考這些導出成員。|  
-|NON_EMPTY_BEHAVIOR|解析空白資料格時，用以決定導出成員行為的量值或集合。<br /><br /> **\*\*警告\* \*** 這個屬性已被取代。 請勿設定。 如需詳細資訊，請參閱 [SQL Server 2016 中已被取代的 Analysis Services 功能](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)。|  
+|NON_EMPTY_BEHAVIOR|解析空白資料格時，用以決定導出成員行為的量值或集合。<br /><br /> **\*\* 警告\* \*** 這個屬性已被取代。 請勿設定。 如需詳細資訊，請參閱 [SQL Server 2016 中已被取代的 Analysis Services 功能](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)。|  
 |CAPTION|用戶端應用程式當做成員標題使用的字串。|  
 |DISPLAY_FOLDER|識別用戶端應用程式用於顯示成員之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 工具和用戶端所提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜線 (\\) 為層級分隔符號。 若要針對已定義的成員提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾。|  
 |ASSOCIATED_MEASURE_GROUP|與此成員建立關聯之量值群組的名稱。|  
   
-## <a name="see-also"></a>請參閱  
- [DROP MEMBER 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-member.md)   
- [UPDATE MEMBER 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-update-member.md)   
- [MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [DROP MEMBER 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [UPDATE MEMBER 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
+ [MDX 資料定義陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

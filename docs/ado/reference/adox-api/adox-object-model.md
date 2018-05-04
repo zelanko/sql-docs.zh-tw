@@ -19,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fdefd4a38405f8bc3b4237de463415d26b913d6d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ea7a304795e312168580ca3a7f7fd3a6dcd28ef1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-object-model"></a>ADOX 物件模型
 下圖說明如何表示和關聯性 ADOX 物件。 如需特定物件或集合的詳細資訊，請參閱特定的參考主題，或[ADOX 物件](../../../ado/reference/adox-api/adox-objects.md)和[ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)。  

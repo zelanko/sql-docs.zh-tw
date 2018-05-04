@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
@@ -19,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88b8ea3a21f7b2d0bd5790aad934e784b4ca3e87
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b0e41f775ef6640f4f82aa16cea038becc305bf5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-parameter-values"></a>設定參數值
 若要設定參數的值，應用程式只會設定繫結至參數之變數的值。 它並不重要時設定此值，只要執行陳述式之前，它會設定。 應用程式可以設定的值之前或之後繫結變數，並可能會變更的值，它想要的次數。 當執行陳述式時，驅動程式只會擷取變數的目前值。 一次以上。 執行已備妥的陳述式時，這會特別有用應用程式會設定新值的部分或所有變數的每次執行陳述式時。 這個範例，請參閱[已備妥執行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)稍早在本章節中。  

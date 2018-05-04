@@ -1,31 +1,23 @@
 ---
-title: "資料定義查詢 （資料採礦） |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 資料定義查詢 （資料採礦） |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 286d7cbe5d6dbb2fb0b05b937fbd1a304f89aa1e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8db4090f4d8970cd06a8daee7382903a160898c0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-definition-queries-data-mining"></a>資料定義查詢 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-如果是資料採礦， *「資料定義查詢」* (Data Definition Query) 類別目錄表示執行以下作業的 DMX 陳述式或 XMLA 命令：  
+  如果是資料採礦， *「資料定義查詢」* (Data Definition Query) 類別目錄表示執行以下作業的 DMX 陳述式或 XMLA 命令：  
   
 -   建立、更改或操作資料採礦物件，例如模型。  
   
@@ -66,7 +58,7 @@ ms.lasthandoff: 02/15/2018
   
 -   搭配資料來源查詢 (例如 OPENROWSET) 一起使用 [INSERT INTO &#40;DMX&#41;](../../dmx/insert-into-dmx.md)，以定義用於定型模型的資料集。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供可幫助您建立資料定義查詢的查詢範本。 如需詳細資訊，請參閱 [在 SQL Server Management Studio 中使用 Analysis Services 範本](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供可幫助您建立資料定義查詢的查詢範本。 如需詳細資訊，請參閱[在 SQL Server Management Studio 中使用 Analysis Services 範本](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)。  
   
  一般來說， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中針對 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所提供的範本只包含一般語法定義，您必須在 **[查詢]** 視窗中輸入或是使用為了輸入參數所提供的對話方塊來自訂這些語法定義。  
   
@@ -91,11 +83,11 @@ ms.lasthandoff: 02/15/2018
 |處理 DMX 查詢的範本。|[在 SQL Server Management Studio 中使用 Analysis Services 範本](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |使用預測查詢產生器來設計所有種類的查詢。|[建立預測查詢使用預測查詢產生器](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
 |使用 SQL Server Profiler 來擷取查詢定義，並使用追蹤來監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|[使用 SQL Server Profiler 監視 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|深入了解針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所提供的指令碼語言和程式語言。|[XML for Analysis &#40;XMLA &#41;參考](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [使用分析管理物件 &#40; 開發AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|了解如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中管理模型。|[匯出和匯入資料採礦物件](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [匯出 &#40; DMX &#41;](../../dmx/export-dmx.md)<br /><br /> [匯入 &#40; DMX &#41;](../../dmx/import-dmx.md)|  
+|深入了解針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所提供的指令碼語言和程式語言。|[XML for Analysis & #40;XMLA & #41;參考](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [使用分析管理物件 & #40; 開發AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|了解如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中管理模型。|[匯出和匯入資料採礦物件](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [匯出 & #40; DMX & #41;](../../dmx/export-dmx.md)<br /><br /> [匯入 & #40; DMX & #41;](../../dmx/import-dmx.md)|  
 |深入了解 OPENROWSET 及查詢外部資料的其他方式。|[&#60;來源資料查詢&#62;](../../dmx/source-data-query.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦精靈 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ [資料採礦精靈 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

@@ -1,31 +1,23 @@
 ---
-title: "Analysis Services 的高可用性與延展性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services 的高可用性與延展性 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3eb3d358f22c22472185c61baebc4197792f6353
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services 的高可用性與延展性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本文說明提高 Analysis Services 資料庫可用性與延展性的最常用技術。 雖然您可以個別達成每個目標，但實際上這兩個目標經常相互關聯︰可針對大型查詢或處理工作負載擴充的部署通常預期要有高可用性。  
+  本文說明提高 Analysis Services 資料庫可用性與延展性的最常用技術。 雖然您可以個別達成每個目標，但實際上這兩個目標經常相互關聯︰可針對大型查詢或處理工作負載擴充的部署通常預期要有高可用性。  
   
  不過反之則不一定。 當任務關鍵性但中等的查詢工作負載有嚴格的服務等級協定時，可以將不含延展性的高可用性當做唯一的目標。  
   

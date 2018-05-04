@@ -1,6 +1,6 @@
 ---
 title: 將 SQL Server Integration Services 工作負載隨即轉移至雲端 | Microsoft Docs
-ms.date: 10/31/2017
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 8fb064a5efe77b9b273234f8ccd4f9760a128d92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>將 SQL Server Integration Services 工作負載隨即轉移至雲端
 您現在可以將 SQL Server Integration Services (SSIS) 套件和工作負載移至 Azure 雲端。
@@ -85,7 +85,7 @@ Data Factory 也支援其他類型的 Integration Runtime。 若要深入了解 
 
 當您佈建 SQL Database 執行個體來裝載 SSISDB 時，也會安裝 Azure Feature Pack for SSIS 以及 Access 可轉散發套件。 除了內建元件所支援的資料來源之外，這些元件還會提供與各種 **Azure** 資料來源及 **Excel 和 Access** 檔案的連線。
 
-您目前無法安裝或使用 SSIS 的**協力廠商元件** (包含來自 Microsoft 的協力廠商元件，例如 Attunity 的 Oracle 及 Teradata 元件，以及 SAP BI 元件)。
+您也可以安裝其他元件。 如需詳細資訊，請參閱[自訂 Azure-SSIS 整合執行階段的安裝程式](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md)。
 
 ## <a name="deploy-and-run-packages"></a>部署和執行套件
 當您將您專案部署至 Azure 上的 SSISDB 時，必須使用**專案部署模型**，而非套件部署模型。

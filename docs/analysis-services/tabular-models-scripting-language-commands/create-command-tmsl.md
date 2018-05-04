@@ -1,35 +1,35 @@
 ---
-title: "建立命令 (TMSL) |Microsoft 文件"
-ms.custom: 
+title: 建立命令 (TMSL) |Microsoft 文件
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e3024f89-ebfa-47e4-9893-708f379fd9b8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 98af912235d950e787a925ce751fc1df5d1fa6bf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 09e7b9665aa2b441a4863ae96f6c2f9a135393eb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-command-tmsl"></a>建立命令 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]建立指定的物件和所有子系物件所指定。 如果物件已存在，命令就會引發錯誤。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  建立指定的物件和所有子系物件所指定。 如果物件已存在，命令就會引發錯誤。  
   
 ## <a name="request"></a>要求  
  要求的結構會根據物件而異。 父系物件必須包含所有子系，雖然不需要同層級和父系的完整物件定義。  
   
- [資料庫物件 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)將資料庫加入至伺服器。  
+ [資料庫物件&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)將資料庫加入至伺服器。  
   
 ```  
 {   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [資料來源物件 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
+ [資料來源物件&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
   
 ```  
 {  
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Tables 物件 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)資料行加入資料表。  
+ [Tables 物件&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)資料行加入資料表。  
   
 ```  
 {   
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 }   
 ```  
   
- [資料分割物件 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)將分割新增到父資料表物件。  
+ [資料分割物件&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)將分割新增到父資料表物件。  
   
 ```  
 {  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [角色物件 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)最低限度將角色加入至資料庫，但沒有成員資格或篩選。  
+ [角色物件&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)最低限度將角色加入至資料庫，但沒有成員資格或篩選。  
   
 ```  
 {  
@@ -170,7 +170,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>使用方式 （端點）  
- 這個命令項目用在陳述式的[Execute Method &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)呼叫透過 XMLA 端點，以下列方式公開：  
+ 這個命令項目用在陳述式的[Execute Method &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md)呼叫透過 XMLA 端點，以下列方式公開：  
   
 -   以 XMLA 視窗中 SQL Server Management Studio (SSMS)  
   
@@ -180,9 +180,9 @@ ms.lasthandoff: 01/08/2018
   
  您可以從 SSMS 產生現成的指令碼，此命令。  例如，您可以以滑鼠右鍵按一下現有的資料庫 >**指令碼** > **指令碼資料庫做為** > **CREATE 至**。  
   
- [ \[MS-SSAS T\]: QL Server Analysis Services 表格式 （SQL Server 技術通訊協定）](http://go.microsoft.com/fwlink/p/?LinkId=784855)文件包含區段 3.1.5.2.2 描述結構的 JSON 表格式中繼資料命令和物件。 目前，該文件涵蓋命令和功能尚未實作用於 TMSL 指令碼。 請參閱主題 ([表格式模型指令碼語言 &#40;TMSL &#41;參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) 以釐清支援的項目。  
+ [ \[MS-SSAS T\]: QL Server Analysis Services 表格式 （SQL Server 技術通訊協定）](http://go.microsoft.com/fwlink/p/?LinkId=784855)文件包含區段 3.1.5.2.2 描述結構的 JSON 表格式中繼資料命令和物件。 目前，該文件涵蓋命令和功能尚未實作用於 TMSL 指令碼。 請參閱主題 ([表格式模型指令碼語言&#40;TMSL&#41;參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) 以釐清支援的項目。  
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

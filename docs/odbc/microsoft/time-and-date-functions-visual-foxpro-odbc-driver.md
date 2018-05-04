@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
 - Visual FoxPro ODBC driver [ODBC], time and date functions
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5ba661df5c57c9611164889126eab9572743c8e4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b47cd46b93878b6b394d302ff4493a6ec5bbd032
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時間和日期函式 （Visual FoxPro ODBC 驅動程式）
 下表列出 Visual FoxPro ODBC 驅動程式; 支援 ODBC 時間和日期函數當相同的函式的 Visual FoxPro 文法與 ODBC 語法，會列出 Visual FoxPro 相等。  
@@ -38,22 +37,22 @@ ms.lasthandoff: 04/16/2018
 |------------------|---------------------------|  
 |CURDATE*（)*|日期*（)*|  
 |CURTIME*（)*|時間*（)*|  
-|DAYNAME*(date_exp)*|CDOW*(date_exp)*|  
+|DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
 |DAYOFMONTH (*date_exp)*|天*（)*|  
-|小時*(time_exp)*||  
-|分鐘*(time_exp)*||  
-|月份*(time_exp)*||  
-|MONTHNAME*(date_exp)*|CMONTH*(date_exp)*|  
+|小時 *(time_exp)*||  
+|分鐘 *(time_exp)*||  
+|月份 *(time_exp)*||  
+|MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
 |現在*（)*|DATETIME*（)*|  
-|第二個*(time_exp)*|秒*(time_exp)*|  
-|週*(date_exp)*||  
-|年份*(date_exp)*||  
+|第二個 *(time_exp)*|秒 *(time_exp)*|  
+|週 *(date_exp)*||  
+|年份 *(date_exp)*||  
   
  不支援下列日期和時間函數：  
   
  DAYOFYEAR *(date_exp)*  
   
- 季*(date_exp)*  
+ 季 *(date_exp)*  
   
  TIMESTAMPADD*間隔、 integer_exp (timestamp_exp）*  
   

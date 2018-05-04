@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9419a3e242510a0c65ac87f2c1601c59fdafbd8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 647efb94415c056ea091791e3f789fdbc3ce05f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructing-interoperable-sql-statements"></a>建構可互通的 SQL 陳述式
 如先前章節中所述，互通的應用程式應使用 ODBC SQL 文法。 不過，超過使用此文法，產生了一些額外的問題正面臨互通的應用程式。 例如，應用程式的作用為何想要使用的功能，例如外部聯結中，不支援的所有資料來源？  

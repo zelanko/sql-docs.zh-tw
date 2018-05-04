@@ -20,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8aea80d0bd512d75e46686722242d4955baa4769
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ca5a8ba0492e93fb886e86233d4bab4a5f84f4ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-connection-properties"></a>指定連接屬性
 您可以提供許多所指定的資訊[連接字串](../../../ado/guide/data/creating-a-connection-string.md)設定屬性的屬性**連接**之前開啟連接物件。 例如，您可以達到相同的效果所述的連接字串[建立的連接字串](../../../ado/guide/data/creating-a-connection-string.md)使用下列程式碼。  

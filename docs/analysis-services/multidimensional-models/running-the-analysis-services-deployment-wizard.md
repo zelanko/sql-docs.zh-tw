@@ -1,29 +1,19 @@
 ---
 title: 執行 Analysis Services 部署精靈 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/27/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services Deployment Wizard, running
-ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
-caps.latest.revision: ''
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 61a2c558fca710d9fa6df37b998cddca6125c3c6
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: 1513ad2da9e60bb6ab6841a32251952f82cea674
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>執行 Analysis Services 部署精靈
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -58,17 +48,17 @@ ms.lasthandoff: 03/28/2018
  **回應檔案模式**  
  在回應檔案模式中，精靈可讓您以互動方式修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立時原先產生的輸入檔。 精靈會儲存這些修改輸入的檔，才能產生部署指令碼。 下次執行精靈時，已修改的輸入檔會變成新的起點。  
   
- 若要在回應檔案模式中執行精靈時，使用**/a**切換。  
+ 若要在回應檔案模式中執行精靈時，使用 **/a**切換。  
   
  **無訊息模式**  
  在無訊息模式中，精靈會依據輸入檔的資訊來執行無訊息自動部署。  
   
- 若要執行精靈時以無訊息模式，使用**/s**切換。 當您在無訊息模式中執行精靈時，訊息會輸出到主控台，或是所提供的記錄檔。  
+ 若要執行精靈時以無訊息模式，使用 **/s**切換。 當您在無訊息模式中執行精靈時，訊息會輸出到主控台，或是所提供的記錄檔。  
   
  **輸出模式**  
  在輸出模式中，精靈會產生部署指令碼供稍後執行，依據輸入檔。  
   
- 若要在輸出模式下執行精靈時，使用**/o**切換，並提供輸出檔名稱。  
+ 若要在輸出模式下執行精靈時，使用 **/o**切換，並提供輸出檔名稱。  
   
  如需關於這些命令列參數的詳細資訊，請參閱 [使用部署公用程式的部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)。  
   

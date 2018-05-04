@@ -20,20 +20,20 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d93f7d578defe5aa10aaa8e1a5f7ac94c3cc05ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在伺服器上提供目前永久性鎖定的相關資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供有關伺服器上目前永久性鎖定的資訊。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_LOCKS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**LOCK_CREATION_TIME**|**DBTYPE_DBTIMESTAMP**||要求鎖定時的 UTC 伺服器時間。|  
 |**LOCK_GRANT_TIME**|**DBTYPE_DBTIMESTAMP**||在資源上授與鎖定時的 UTC 伺服器時間。|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="lock-types"></a>鎖定類型  
   
-|鎖定名稱|ReplTest1|描述|  
+|鎖定名稱|Value|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|沒有鎖定。|  
 |LOCK_SESSION_LOCK|0x0000001|非使用中工作階段，不會干擾其他鎖定。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 |LOCK_COMMIT_INPROGRESS|0x0000040|在進度中認可。|  
 |LOCK_INVALID|0x0000080|無效的鎖定。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

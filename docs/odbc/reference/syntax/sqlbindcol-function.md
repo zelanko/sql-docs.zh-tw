@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBindCol
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 23df3fff2ff88ecf62b332f0fca752f608894ef6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函數
 **一致性**  
@@ -247,7 +246,7 @@ SQLRETURN SQLBindCol(
 |*繫結位址*|使用指定的資料緩衝區的位址*TargetValuePtr*引數中的**SQLBindCol**。<br /><br /> 使用指定的長度/指標緩衝區的位址*StrLen_or_IndPtr*引數中的**SQLBindCol**。 如需詳細資訊，請參閱 」 描述元和 SQLBindCol 」 一節中的 [其他意見]。<br /><br /> 如果繫結的位址會是 0，會傳回任何資料值，即使先前公式計算出來的位址不是零。|  
 |*繫結位移*|如果使用資料列取向的繫結時，儲存在位址的值指定 SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性。<br /><br /> 如果使用資料行取向的繫結或 SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性的值是 null 指標，*繫結位移*為 0。|  
 |*資料列數目*|1 為基底的資料列集中的資料列數目。 單一資料列擷取，也就是預設值，這會是 1。|  
-|*項目大小*|繫結的陣列中項目的大小。<br /><br /> 如果使用資料行取向的繫結時，這是**sizeof(SQLINTEGER)**長度/指標緩衝區。 它是在資料緩衝區的值*Columnsize*引數中的**SQLBindCol**如果資料類型是可變長度，以及資料類型的大小的資料類型為固定長度。<br /><br /> 如果使用資料列取向的繫結時，這是資料和長度/指標緩衝區的 SQL_ATTR_ROW_BIND_TYPE 陳述式屬性的值。|  
+|*項目大小*|繫結的陣列中項目的大小。<br /><br /> 如果使用資料行取向的繫結時，這是**sizeof(SQLINTEGER)** 長度/指標緩衝區。 它是在資料緩衝區的值*Columnsize*引數中的**SQLBindCol**如果資料類型是可變長度，以及資料類型的大小的資料類型為固定長度。<br /><br /> 如果使用資料列取向的繫結時，這是資料和長度/指標緩衝區的 SQL_ATTR_ROW_BIND_TYPE 陳述式屬性的值。|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>描述項和 SQLBindCol  
  下列章節說明如何**SQLBindCol**互動描述元。  

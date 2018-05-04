@@ -23,12 +23,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3156c9110567763d1566de58b6d08304b464e094
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b79237879b2e23682bfdd89dcf1d2ba59824aa1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;來源資料查詢&gt;-圖形
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +72,7 @@ APPEND ({ <child table query> }
  您必須根據會建立父資料表與子資料表之關聯性的資料行來排序查詢。  
   
 ## <a name="examples"></a>範例  
- 您可以使用下列範例中的[INSERT INTO &#40; DMX &#41;](../dmx/insert-into-dmx.md)陳述式來定型包含巢狀的資料表的模型。 兩個資料表內**圖形**透過陳述式相關聯**OrderNumber**資料行。  
+ 您可以使用下列範例中的[INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md)陳述式來定型包含巢狀的資料表的模型。 兩個資料表內**圖形**透過陳述式相關聯**OrderNumber**資料行。  
   
 ```  
 SHAPE {  
@@ -85,10 +84,10 @@ SHAPE {
   RELATE OrderNumber to OrderNumber)   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [&#60; 來源資料查詢 &#62;](../dmx/source-data-query.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [&#60;來源資料查詢&#62;](../dmx/source-data-query.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

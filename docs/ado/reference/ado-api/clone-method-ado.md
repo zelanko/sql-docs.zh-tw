@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6b3914edd6127a76903f52c0c186c28e533ce4b1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: eccbb6bea59ff2b99712479bb90cdfb0f0c963a1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clone-method-ado"></a>Clone 方法 (ADO)
 建立複本[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)從現有物件**資料錄集**物件。 選擇性地指定複製處於唯讀模式。  

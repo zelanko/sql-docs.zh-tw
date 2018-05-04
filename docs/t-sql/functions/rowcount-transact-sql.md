@@ -1,16 +1,16 @@
 ---
 title: '@@ROWCOUNT (Transact-SQL) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@ROWCOUNT_TSQL'
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - counting rows
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd23d2af2f35dd0d76557723639f1870ee22e0ee
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 78ffb0d32bb5f87b31f3dd24fa51dfcbeb36889d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  例如 USE、SET \<option>、DEALLOCATE CURSOR、CLOSE CURSOR、BEGIN TRANSACTION 或 COMMIT TRANSACTION 等陳述式，會將 ROWCOUNT 值重設為 0。  
   
- 原生編譯的預存程序會保留上一個 @@ROWCOUNT。 原生編譯預存程序中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式不會設定 @@ROWCOUNT。 如需詳細資訊，請參閱[建立原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+ 原生編譯的預存程序會保留上一個 @@ROWCOUNT。 原生編譯預存程序中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式不會設定 @@ROWCOUNT。 如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會執行 `UPDATE` 陳述式，並且使用 `@@ROWCOUNT` 來偵測是否有任何資料列變更。  

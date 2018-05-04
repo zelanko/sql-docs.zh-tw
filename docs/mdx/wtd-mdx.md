@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: dd738d665a8dd94758d665828174b244622a3190
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 83fc733e36f6e68674d3f32b47087090499cf7cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,10 +49,10 @@ Wtd( [ Member_Expression ] )
   
  **Wtd**函式是的捷徑函數[PeriodsToDate](../mdx/periodstodate-mdx.md)函式之層級設定為*週*。 也就是說，`Wtd(Member_Expression)` 相當於 `PeriodsToDate(Week_Level_Expression,Member_Expression)`。  
   
-## <a name="see-also"></a>請參閱  
- [Qtd &#40;MDX &#41;](../mdx/qtd-mdx.md)   
- [Mtd &#40;MDX &#41;](../mdx/mtd-mdx.md)   
- [Ytd &#40;MDX &#41;](../mdx/ytd-mdx.md)   
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)   
+ [Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
+ [Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)   
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

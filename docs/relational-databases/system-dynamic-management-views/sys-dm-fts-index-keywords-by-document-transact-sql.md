@@ -28,13 +28,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 51026e420e509cfe4af315dfaee767c45f04bcbb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f27298a3d92df9092d6b18cf5a9c11112bccd37e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -97,7 +96,7 @@ sys.dm_fts_index_keywords_by_document
   
  當全文檢索索引鍵資料行為整數資料類型時，建議您將 document_id 直接對應到基底資料表內的全文檢索索引鍵值。  
   
- 相反地，當全文檢索索引鍵資料行使用非整數資料類型時，document_id 就不表示基底資料表內的全文檢索索引鍵。 在此情況下，若要識別 dm_fts_index_keywords_by_document 所傳回的基底資料表中的資料列，您需要聯結此檢視與所傳回的結果[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)。 在您可以聯結之前，必須先將預存程序的輸出儲存到暫存資料表。 然後您可以將 dm_fts_index_keywords_by_document 的 document_id 資料行聯結到此預存程序所傳回的 DocId 資料行。 請注意，**時間戳記**資料行無法接收值在插入時，因為它們是由自動產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，**時間戳記**資料行必須轉換成**varbinary （8)**資料行。 下列範例會示範這些步驟。 在此範例中， *table_id*是您的資料表識別碼*database_name*是您的資料庫名稱和*table_name*是資料表的名稱。  
+ 相反地，當全文檢索索引鍵資料行使用非整數資料類型時，document_id 就不表示基底資料表內的全文檢索索引鍵。 在此情況下，若要識別 dm_fts_index_keywords_by_document 所傳回的基底資料表中的資料列，您需要聯結此檢視與所傳回的結果[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)。 在您可以聯結之前，必須先將預存程序的輸出儲存到暫存資料表。 然後您可以將 dm_fts_index_keywords_by_document 的 document_id 資料行聯結到此預存程序所傳回的 DocId 資料行。 請注意，**時間戳記**資料行無法接收值在插入時，因為它們是由自動產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，**時間戳記**資料行必須轉換成**varbinary （8)** 資料行。 下列範例會示範這些步驟。 在此範例中， *table_id*是您的資料表識別碼*database_name*是您的資料庫名稱和*table_name*是資料表的名稱。  
   
 ```  
 USE database_name;  

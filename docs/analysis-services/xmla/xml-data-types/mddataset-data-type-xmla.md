@@ -29,15 +29,15 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 382c3badf6b31e99c707c9adce011c278df82280
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 135ed88d4b0bd3d7dc5db79a840ad1f8342764dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mddataset-data-type-xmla"></a>MDDataSet 資料類型 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]定義代表多維度資料所傳回的衍生的資料類型[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  定義代表多維度資料所傳回的衍生的資料類型[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
  **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-xml-analysis: mddataset  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>資料類型特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |基底資料類型|[結果集](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
 |衍生資料類型|無|  
@@ -70,11 +70,11 @@ ms.lasthandoff: 01/08/2018
 |衍生的元素|無|  
   
 ## <a name="remarks"></a>備註  
- **MDDataSet**資料類型提供的 OLAP 導向資料列集 （或資料集） 表示在 XML 中的 OLAP 資料所需。 此資料列集的內容有所不同的值**內容**和**格式**提供的內容[屬性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)集合**執行**方法。 如需有關**內容**和**格式**屬性，請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ **MDDataSet**資料類型提供的 OLAP 導向資料列集 （或資料集） 表示在 XML 中的 OLAP 資料所需。 此資料列集的內容有所不同的值**內容**和**格式**提供的內容[屬性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)集合**執行**方法。 如需有關**內容**和**格式**屬性，請參閱[支援 XMLA 屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。  
   
  如需有關 OLE DB for OLAP 資料集結構的基本資訊，請參閱 XML for Analysis 1.1 規格中的＜對應至 OLE DB 的 MDDataSet 資料類型＞。 針對完整的 XML 結構描述定義語言 (XSD) 範例**MDDataSet**資料類型，請參閱 「 附錄 D:mddataset 範例 > 的 XML for Analysis 1.1 規格。  
   
-## <a name="see-also"></a>請參閱  
- [XML 資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+## <a name="see-also"></a>另請參閱  
+ [XML 資料型別&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

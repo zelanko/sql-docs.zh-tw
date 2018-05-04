@@ -22,12 +22,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2f34566a3b97a1cfaf85e24966e897ae51ca6bfc
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 666ef87c68a7b05644f245a33df0624d9b43c7f0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-errors-in-jscript"></a>在 JScript 中的錯誤處理
 您的 Microsoft® JScript® 程式碼必須檢查**計數**屬性**連接**物件的**錯誤**集合。 如果值為大於 0，逐一查看集合，並列印在任何其他語言中一樣的值。  

@@ -20,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a84f2ca532bd4913eb8c6de384ce2284fef7103f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 57c7b028ae2cfa738b2a96e1557af6f961d888bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-object-model-summary"></a>RDS 物件模型摘要
 > [!IMPORTANT]
@@ -35,7 +34,7 @@ ms.lasthandoff: 04/18/2018
 |------------|-----------------|  
 |[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|此物件包含方法，以取得伺服器 proxy。 Proxy 可能是預設或自訂伺服器的程式 （商務物件）。 伺服器程式可在網際網路、 內部網路、 區域網路上，叫用，或者是本機的動態連結程式庫。<br /><br /> **DataSpace**物件而言是安全的指令碼。|  
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|這個物件代表的預設伺服器程式。 它會執行預設 RDS 資料擷取和更新行為。<br /><br /> **DataFactory**物件不是安全的。|  
-|[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|這個物件可以自動叫用**.RDSDataSpace**和**RDSServer.DataFactory**物件。<br /><br /> 使用此物件來叫用預設 RDS 資料擷取或更新的行為。<br /><br /> 這個物件也會提供的方式來存取傳回的視覺控制項**資料錄集**物件。<br /><br /> **DataControl**物件而言是安全的指令碼。|  
+|[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|這個物件可以自動叫用 **.RDSDataSpace**和**RDSServer.DataFactory**物件。<br /><br /> 使用此物件來叫用預設 RDS 資料擷取或更新的行為。<br /><br /> 這個物件也會提供的方式來存取傳回的視覺控制項**資料錄集**物件。<br /><br /> **DataControl**物件而言是安全的指令碼。|  
   
 ## <a name="see-also"></a>另請參閱  
  [RDS 的基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot 驗證和授權 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot 驗證和授權 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 710db3b55eb8e3bd1e885dfd71e2bde15360092c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>PowerPivot 驗證及授權
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 SharePoint 2010 伺服陣列中執行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署會使用 SharePoint 伺服器所提供的驗證子系統和授權模型。 由於所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相關的內容都儲存在 SharePoint 內容資料庫中，而且 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相關的所有作業都在伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共用服務上執行，因此 SharePoint 安全性基礎結構會延伸到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 內容和作業。 使用者若要求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的活頁簿，就會使用以其 Windows 使用者識別為基礎的 SharePoint 使用者識別進行驗證。 活頁簿上的檢視權限會決定授與或拒絕要求。  
+  在 SharePoint 2010 伺服陣列中執行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署會使用 SharePoint 伺服器所提供的驗證子系統和授權模型。 由於所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相關的內容都儲存在 SharePoint 內容資料庫中，而且 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相關的所有作業都在伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共用服務上執行，因此 SharePoint 安全性基礎結構會延伸到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 內容和作業。 使用者若要求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的活頁簿，就會使用以其 Windows 使用者識別為基礎的 SharePoint 使用者識別進行驗證。 活頁簿上的檢視權限會決定授與或拒絕要求。  
   
  由於自助式資料分析必須與 Excel Services 整合，所以您也必須了解 Excel Services 安全性，才能保護 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器的安全。 當使用者查詢具有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之資料連接的樞紐分析表時，Excel Services 會轉送資料連接要求到伺服陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器以載入資料。 您必須了解如何設定這兩部伺服器的安全性設定，才能進行伺服器間的互動。  
   

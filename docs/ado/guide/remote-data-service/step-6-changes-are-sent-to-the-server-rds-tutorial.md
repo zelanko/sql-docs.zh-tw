@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 585d16d19f26bca19acb62b16cf6c48f52515677
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6be2159907d58f6799a2ca7b4ffb685f524baacc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步驟 6： 變更傳送到伺服器 （RDS 教學課程）
 如果**資料錄集**物件編輯，可以傳送至伺服器 （也就是資料列會加入、 變更或刪除） 的任何變更。  
@@ -41,7 +40,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **組件 A**您只能使用此案例假設[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)而且**資料錄集**物件現在與相關聯**.RDSDataControl**。 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法的任何變更，以更新資料來源**資料錄集**物件，如果[伺服器](../../../ado/reference/rds-api/server-property-rds.md)和[連接](../../../ado/reference/rds-api/connect-property-rds.md)仍會設定屬性。  
+ **組件 A**您只能使用此案例假設[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)而且**資料錄集**物件現在與相關聯 **.RDSDataControl**。 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法的任何變更，以更新資料來源**資料錄集**物件，如果[伺服器](../../../ado/reference/rds-api/server-property-rds.md)和[連接](../../../ado/reference/rds-api/connect-property-rds.md)仍會設定屬性。  
   
 ```  
 Sub RDSTutorial6A()  

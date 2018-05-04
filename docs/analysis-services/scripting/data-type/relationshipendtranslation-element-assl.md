@@ -1,33 +1,32 @@
 ---
-title: "RelationshipEndTranslation 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
+title: RelationshipEndTranslation 元素 (ASSL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8d679235d66f38366dc4fe1a5aad03e360e15fc9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0f66b78114eb0976ec7f31fb8035d4f7c231ce33
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relationshipendtranslation-element-assl"></a>RelationshipEndTranslation 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-定義代表當地語系化的翻譯的基本資料類型[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)項目。  
+  定義代表當地語系化的翻譯的基本資料類型[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,6 +60,6 @@ ms.lasthandoff: 02/15/2018
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Translation>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services 指令碼語言 XML 資料類型 & #40;ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

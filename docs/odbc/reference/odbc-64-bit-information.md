@@ -11,25 +11,24 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c61f0177f6f4634c5ab3a68eb7bfbd267f4ee84a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 77449f6077adbad3eabf9ca928b2ce19b47c79b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位元資訊
-從 Windows Server 2003 開始，Microsoft 作業系統必須支援 64 位元 ODBC 程式庫。 ODBC 標頭和程式庫最初隨附於 MDAC 2.7 SDK 包含讓程式設計人員輕鬆地撰寫新的 64 位元平台程式碼的變更。 透過確定您的程式碼會使用下面所列的 ODBC 定義類型，您可以編譯相同 64 位元和 32 位元平台為基礎的原始程式碼**_WIN64**或**WIN32**巨集。  
+從 Windows Server 2003 開始，Microsoft 作業系統必須支援 64 位元 ODBC 程式庫。 ODBC 標頭和程式庫最初隨附於 MDAC 2.7 SDK 包含讓程式設計人員輕鬆地撰寫新的 64 位元平台程式碼的變更。 透過確定您的程式碼會使用下面所列的 ODBC 定義類型，您可以編譯相同 64 位元和 32 位元平台為基礎的原始程式碼 **_WIN64**或**WIN32**巨集。  
   
  有幾個重點適用於 64 位元處理器進行程式設計時請記住以下幾點：  
   
--   雖然指標的大小已從 4 個位元組到 8 個位元組，整數和長整數相除仍是 4 位元組值。 型別**INT64**和**UINT64**已定義的 8 位元組的整數。 新的 ODBC 類型**SQLLEN**和**SQLULEN**為 ODBC 標頭檔中定義**INT64**和**UINT64**時**_WIN64**已定義。  
+-   雖然指標的大小已從 4 個位元組到 8 個位元組，整數和長整數相除仍是 4 位元組值。 型別**INT64**和**UINT64**已定義的 8 位元組的整數。 新的 ODBC 類型**SQLLEN**和**SQLULEN**為 ODBC 標頭檔中定義**INT64**和**UINT64**時 **_WIN64**已定義。  
   
 -   在 ODBC 中的幾個函式會宣告為接受指標參數。 在 32 位元 ODBC 中，參數會定義為指標經常用來將整數或指標傳遞至緩衝區，以根據呼叫的內容。 這是，當然，可能因為，指標和整數有相同的大小。 在 64 位元 Windows 中，這不是大小寫。  
   

@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea6da80de3845f87d3e8bef7757e13bb71c8b737
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c127d8cf7e27872d946a350c3e5d53e900145805
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ xp_sqlmaint 'switch_string'
  無。 如果傳回錯誤**sqlmaint**公用程式會失敗。  
   
 ## <a name="remarks"></a>備註  
- 如果使用者登入使用 SQL Server 驗證時，會呼叫此程序**-U"***login_id***"**和**-P"***密碼***"**參數前面加上了*switch_string*之前執行。 如果使用者以 Windows 驗證登入*switch_string*傳遞不會變更至**sqlmaint**。  
+ 如果使用者登入使用 SQL Server 驗證時，會呼叫此程序 **-U"***login_id***"** 和 **-P"***密碼***"** 參數前面加上了*switch_string*之前執行。 如果使用者以 Windows 驗證登入*switch_string*傳遞不會變更至**sqlmaint**。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  

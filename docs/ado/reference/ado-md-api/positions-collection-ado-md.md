@@ -24,12 +24,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c70a35b4193c651145c758b27f8f4f9522700ef0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 03e19ffd0454cb8858528326492010ce1b85c3d7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="positions-collection-ado-md"></a>位置集合 (ADO MD)
 包含[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)軸，定義某個點的物件。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], Excel driver
 - Excel data types [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6abe6c885c29eef089e64d6f28a750d1498ecdfe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 204c507e42a429a098c480605da697a6a095f27e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 資料類型
 下表顯示如何將 Microsoft Excel 驅動程式資料類型對應至 ODBC SQL 資料類型。 Microsoft Excel 驅動程式會將這些資料類型指派給資料行中的資料為基礎的 Microsoft Excel 資料表中資料行。  

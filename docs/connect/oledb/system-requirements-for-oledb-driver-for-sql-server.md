@@ -21,12 +21,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c465001d1e09ac229b0dc8cfd16124df3143e3d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 346e5d331e9d96f23d1dd0ff2b93722b145bf3d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>適用於 SQL Server 的 OLE DB 驅動程式的系統需求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,16 +72,16 @@ ms.lasthandoff: 04/16/2018
 
 |資料類型|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SQL Server 的 OLE DB 驅動程式|Windows Data Access Components、MDAC 和<br /><br /> OLE DB 驅動程式的 SQL Server OLE DB 應用程式與 DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8 Kb)|udt|Udt|Udt|Varbinary|  
+|CLR UDT (\<= 8 Kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|Text|  
 |nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|udt|varbinary|varbinary|image|  
-|date|date|varchar|varchar|Varchar|  
-|datetime2|datetime2|varchar|varchar|Varchar|  
-|datetimeoffset|datetimeoffset|varchar|varchar|Varchar|  
-|time|time|varchar|varchar|Varchar|  
+|CLR UDT (> 8Kb)|varbinary|udt|udt|image|  
+|date|varchar|date|date|Varchar|  
+|datetime2|varchar|datetime2|datetime2|Varchar|  
+|datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
+|time|varchar|time|time|Varchar|  
 
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的 OLE DB 驅動程式](../oledb/oledb-driver-for-sql-server.md)   

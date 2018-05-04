@@ -23,22 +23,22 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 07f3e7e80b36f2739bf5d4df23404e5ab396ec72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]列舉目前目錄中的資料採礦模型。 **DMSCHEMA_MINING_MODELS**資料列集包含模型名稱、 處理日期，以及與每個採礦模型相關聯的採礦演算法等資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  列舉目前目錄中的資料採礦模型。 **DMSCHEMA_MINING_MODELS**資料列集包含模型名稱、 處理日期，以及與每個採礦模型相關聯的採礦演算法等資訊。  
   
- 執行個體時提供 SQL Server 登入。 **DMSCHEMA_MINING_MODELS**結構描述資料列集是非常類似於[DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md)結構描述資料列集，可以使用相同的方式。  
+ 。 **DMSCHEMA_MINING_MODELS**結構描述資料列集是非常類似於[DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md)結構描述資料列集，可以使用相同的方式。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DMSCHEMA_MINING_MODELS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|描述|  
+|資料行名稱|類型指標|Description|  
 |-----------------|--------------------|-----------------|  
 |**MODEL_CATALOG**|**DBTYPE_WSTR**|目錄的名稱。 以模型所屬的資料庫名稱來擴展。|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**|不合格的結構描述名稱。 不支援此資料行[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 它一律包含**NULL**。|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/08/2018
   
  如需如何查詢此資料列集的範例，請參閱[查詢參數用來建立採礦模型](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料採礦結構描述資料列集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

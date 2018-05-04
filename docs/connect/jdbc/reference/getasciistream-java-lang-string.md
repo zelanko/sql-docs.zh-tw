@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="getasciistream-javalangstring"></a>getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取指定參數的值來當做資料流**ASCII**給定的參數名稱的字元。  
+  透過指定的參數名稱，擷取指定之參數的值來當作 **ASCII** 字元資料流。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ public final java.io.InputStream getAsciiStream(java.lang.String paramName)
 #### <a name="parameters"></a>參數  
  *paramName*  
   
- A**字串**，指出參數名稱。  
+ 指出參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
  InputStream 物件。  
@@ -53,7 +53,7 @@ public final java.io.InputStream getAsciiStream(java.lang.String paramName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [getAsciiStream 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)   
+ [getAsciiStream 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

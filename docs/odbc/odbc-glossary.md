@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 243085e18fc44c0c2f34c29c314b3978163101be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: eee22f6b4845abb0cc9a3afb68b7dc89c87a2c69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-glossary"></a>ODBC 詞彙
 ## <a name="a"></a>只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="b"></a>B  
  **行為變更**  
- 某些功能，從 ODBC 3 中的變更*.x* ODBC 2 的行為。*x*行為，反之亦然。 因 SQL_ATTR_ODBC_VERSION 環境屬性變更。  
+ 某些功能，從 ODBC 3 中的變更 *.x* ODBC 2 的行為。*x*行為，反之亦然。 因 SQL_ATTR_ODBC_VERSION 環境屬性變更。  
   
  **二進位大型物件 (BLOB)**  
  任何透過特定數目的位元組為單位，例如 255 的二進位資料。 通常更長時間。 這類資料通常會傳送至，並從組件中的資料來源擷取。 也稱為*long 資料*。  

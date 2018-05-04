@@ -1,8 +1,8 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -27,16 +27,17 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: ''
+caps.latest.revision: 130
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ee158cdc30d1c083151bc07c58ba7ddea515a308
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 79de823fc3e413bff1b8538f2641a741c4524e9c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -132,7 +133,10 @@ OPENROWSET
   
  CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }  
  指定資料檔案中之資料的字碼頁。 只有當資料包含字元值大於 127 或小於 32 的 **char****varchar**或 **text** 資料行時，CODEPAGE 才會相關。  
-  
+
+> [!IMPORTANT]
+> 在 Linux 上，CODEPAGE 不是支援的選項。
+
 > [!NOTE]  
 >  除非您希望 65001 選項的優先順序高於定序/字碼頁指定值，否則建議您在格式檔案中指定每個資料行的定序名稱。  
   
@@ -230,7 +234,7 @@ FIELDQUOTE **=** 'field_quote'
   
  存取遠端 OLE DB 資料來源時，用戶端連接到將進行查詢之伺服器所在的伺服器上，不會自動委派信任連接的登入識別。 此時必須設定驗證委派。  
   
- 如果 OLE DB 提供者支援指定之資料來源中的多個目錄和結構描述，則需要用到目錄和結構描述名稱。 如果 OLE DB 提供者不支援 *catalog* 和 *schema* 的值，就可以將它們省略。 如果提供者只支援結構描述名稱，就必須指定 *schema***.***object* 格式的兩部分名稱。 如果提供者只支援目錄名稱，則必須指定 *catalog***.***schema***.***object* 格式的三部分名稱。 您必須為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的通過查詢指定三部分的名稱。 如需詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ 如果 OLE DB 提供者支援指定之資料來源中的多個目錄和結構描述，則需要用到目錄和結構描述名稱。 如果 OLE DB 提供者不支援 *catalog* 和 *schema* 的值，就可以將它們省略。 如果提供者只支援結構描述名稱，就必須指定 *schema ***.*** object* 格式的兩部分名稱。 如果提供者只支援目錄名稱，則必須指定 *catalog ***.*** schema ***.*** object* 格式的三部分名稱。 您必須為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的通過查詢指定三部分的名稱。 如需詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
  `OPENROWSET` 不接受變數作為其引數。  
   

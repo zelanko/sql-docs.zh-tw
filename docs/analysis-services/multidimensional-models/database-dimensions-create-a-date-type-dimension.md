@@ -1,38 +1,23 @@
 ---
-title: "建立日期類型維度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 建立日期類型維度 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- dimensions [Analysis Services], time
-- adding time intelligence
-- server time dimensions [Analysis Services]
-- calendars [Analysis Services]
-- time intelligence [Analysis Services]
-ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2e42e3d8a3a3f33840d1004119b84fbe4a247888
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>資料庫維度-建立日期類型維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，時間維度是其屬性代表時間週期的維度類型，例如年、學期、季、月和日。 時間維度中的週期，會為分析和報表提供時間層級的資料粒度。 屬性會組織在階層中，而時間維度的資料粒度多半取決於記錄資料的商務和報表需求。 例如，商業智慧應用程式中的大部份財務和商務資料，都使用每月或每季的資料粒度。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，時間維度是其屬性代表時間週期的維度類型，例如年、學期、季、月和日。 時間維度中的週期，會為分析和報表提供時間層級的資料粒度。 屬性會組織在階層中，而時間維度的資料粒度多半取決於記錄資料的商務和報表需求。 例如，商業智慧應用程式中的大部份財務和商務資料，都使用每月或每季的資料粒度。  
   
  通常， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 Cube 會將時間維度併入某個表單或其他表單中。 Cube 可能會包含多個時間維度，或來自相同時間維度的數個階層，視資料的資料粒度和報表需求而定。 不過，並非所有 Cube 都需要時間維度。 因為活動式維度的成本估計是根據活動，而非時間，所以有些 OLAP 應用程式 (例如活動式成本估計) 並不需要時間維度。  
   

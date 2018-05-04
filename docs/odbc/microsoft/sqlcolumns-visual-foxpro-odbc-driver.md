@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLColumns function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: b588a875-0153-43a0-9b76-f89e728cfa65
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e992dca8e0ff3d14620ad4b044db70ea674feef8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 91b5af9a3709c45f21fc77327ba98a904aa279d7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolumns-visual-foxpro-odbc-driver"></a>SQLColumns （Visual FoxPro ODBC 驅動程式）
 > [!NOTE]  

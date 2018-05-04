@@ -1,16 +1,16 @@
 ---
 title: DATEPART (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
@@ -29,23 +29,24 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: af3b28322a1d0080202cfc42c3381f8d82d0f535
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 傳回整數，代表指定 *date* 的指定 *datepart*。
   
-如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函數的概觀，請參閱 [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) (日期和時間資料類型與函數 &#40;Transact-SQL&#41;)。
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函數的概觀，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -61,16 +62,16 @@ DATEPART ( datepart , date )
   
 |*datepart*|縮寫|  
 |---|---|
-|**year**|**yy**、**yyyy**|  
-|**quarter**|**qq**、**q**|  
-|**month**|**mm**、**m**|  
-|**dayofyear**|**dy**、**y**|  
-|**day**|**dd**、**d**|  
-|**week**|**wk**、**ww**|  
+|**year**|**yy**, **yyyy**|  
+|**quarter**|**qq**, **q**|  
+|**month**|**mm**, **m**|  
+|**dayofyear**|**dy**, **y**|  
+|**day**|**dd**, **d**|  
+|**week**|**wk**, **ww**|  
 |**weekday**|**dw**|  
 |**hour**|**hh**|  
-|**minute**|**mi、n**|  
-|**second**|**ss**、**s**|  
+|**minute**|**mi, n**|  
+|**second**|**ss**, **s**|  
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
@@ -89,7 +90,7 @@ DATEPART ( datepart , date )
   
 傳回值會取決於使用 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 及登入的[設定 default language 伺服器組態選項](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)而設定的語言環境，而有所不同。 如果 *date* 是某些格式的字串常值，則傳回值會以使用 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 所指定的格式為依據。 當 date 是日期或時間資料類型的資料行運算式時，SET DATEFORMAT 並不會影響傳回值。
   
-下表針對陳述式 `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` 列出所有 *datepart* 引數和對應的傳回值。 *date* 引數的資料類型是 **datetimeoffset(7)**。 **nanosecond***datepart* 傳回值具有 9 個小數位數 (.123456700)，而且最後兩位一定是 00。
+下表針對陳述式 `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` 列出所有 *datepart* 引數和對應的傳回值。 *date* 引數的資料類型是 **datetimeoffset(7)**。 **nanosecond***datepart* 傳回值具有 9 位數的小數位數 (.123456700)，而且最後兩個位數一定是 00。
   
 |*datepart*|傳回值|  
 |---|---|
@@ -99,9 +100,9 @@ DATEPART ( datepart , date )
 |**dayofyear、dy、y**|303|  
 |**day、dd、d**|30|  
 |**week、wk、ww**|45|  
-|**weekday、dw、w**|@shouldalert|  
+|**weekday、dw**|@shouldalert|  
 |**hour、hh**|12|  
-|**Minute、n**|15|  
+|**minute、n**|15|  
 |**second、ss、s**|32|  
 |**millisecond、ms**|123|  
 |**microsecond、mcs**|123456|  
@@ -111,7 +112,7 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>Week 和 weekday datepart 引數
 當 *datepart* 是 **week** (**wk**、**ww**) 或 **weekday** (**dw**) 時，傳回值就會取決於使用 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) 所設定的值。
   
-任何一年的 1 月 1 日都定義了 **week***datepart* 的起始數字，例如：DATEPART (**wk**、'Jan 1、*xxx*x') = 1，其中 *xxxx* 是任何一年。
+任何一年的 1 月 1 日都定義 **week***datepart* 的起始數字，例如：DATEPART (** wk**, 'Jan 1, *xxx*x') = 1，其中 *xxxx* 是任何一年。
   
 下表針對每個 SET DATEFIRST 引數的 '2007-04-21'，列出 **week** 和 **weekday***datepart* 的傳回值。 2007 年的 1 月 1 日是星期一。 2007 年的 4 月 21 日是星期六。 SET DATEFIRST 7 (星期日) 是美國的預設值。英國)」。
   

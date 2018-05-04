@@ -28,12 +28,11 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d71ed7405b896a4e8542a66f445a7b6ed9376092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c4c86f019ed7b34ceab785c8f78205c5aed2d709
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>資料庫鏡像-sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**database_id**|**int**|這個資料列所對應的資料庫識別碼。|  
 |**file_id**|**int**|頁面所在之檔案的識別碼。|  
 |**page_id**|**bigint**|檔案中頁面的識別碼。|  
-|**error_type**|**int**|錯誤的類型。 其值可能是：<br /><br /> **-**1 = 所有硬體 823 錯誤<br /><br /> 1 = 824 錯誤的總和檢查碼或損毀的頁 （例如，頁面識別碼不正確） 以外的錯誤<br /><br /> 2 = 總和檢查碼錯誤<br /><br /> 3 = 頁面損毀|  
+|**error_type**|**int**|錯誤的類型。 其值可能是：<br /><br /> **-** 1 = 所有硬體 823 錯誤<br /><br /> 1 = 824 錯誤的總和檢查碼或損毀的頁 （例如，頁面識別碼不正確） 以外的錯誤<br /><br /> 2 = 總和檢查碼錯誤<br /><br /> 3 = 頁面損毀|  
 |**page_status**|**int**|修復頁面嘗試行為的狀態：<br /><br /> 2 = 已將夥伴的要求排入佇列。<br /><br /> 3 = 要求已傳送給夥伴。<br /><br /> 4 = 已將自動修復頁面 (從夥伴收到的回應) 排入佇列。<br /><br /> 5 = 自動修復頁面成功，而且頁面應該可用。<br /><br /> 6 = 無法修復。 這表示在進行修復頁面嘗試行為時發生錯誤，因為該頁面在夥伴上也損毀、夥伴已中斷連線，或者發生網路問題。 這種狀態並非終端狀態。如果頁面上再次遇到損毀情況，就會再次向夥伴要求此頁面。|  
 |**modification_time**|**datetime**|上次變更頁面狀態的時間。|  
   

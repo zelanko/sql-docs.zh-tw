@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetFunctions
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 698e78ca1cbb0d6396c6319ef8618d813191c67e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函數
 **一致性**  
@@ -55,16 +54,16 @@ SQLRETURN SQLGetFunctions(
  [輸入]連接控制代碼。  
   
  *FunctionId*  
- [輸入]A **#define**識別感興趣; 的 ODBC 函數的值**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**。 **SQL_API_ODBC3_ALL_FUNCTIONS**由 ODBC 3*.x*應用程式來判斷支援的 ODBC 3*.x*和先前的函式。 **SQL_API_ALL_FUNCTIONS**由 ODBC 2*.x*應用程式來判斷支援的 ODBC 2*.x*和先前的函式。  
+ [輸入]A **#define**識別感興趣; 的 ODBC 函數的值**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**。 **SQL_API_ODBC3_ALL_FUNCTIONS**由 ODBC 3 *.x*應用程式來判斷支援的 ODBC 3 *.x*和先前的函式。 **SQL_API_ALL_FUNCTIONS**由 ODBC 2 *.x*應用程式來判斷支援的 ODBC 2 *.x*和先前的函式。  
   
- 取得一份**#define**可識別 ODBC 函數的值，請參閱 「 註解。 」 中的資料表  
+ 取得一份 **#define**可識別 ODBC 函數的值，請參閱 「 註解。 」 中的資料表  
   
  *SupportedPtr*  
  [輸出] 如果*FunctionId*識別單一的 ODBC 函數， *SupportedPtr*指向單一 SQLUSMALLINT 值，這是 SQL_TRUE 驅動程式，和 SQL_FALSE 支援指定的函式，則為如果不是支援。  
   
- 如果*FunctionId*是 SQL_API_ODBC3_ALL_FUNCTIONS， *SupportedPtr*會指向以數字的項目等於 SQL_API_ODBC3_ALL_FUNCTIONS_SIZE SQLSMALLINT 陣列。 這個陣列會被視為 4000 位元點陣圖，可用來判斷是否 ODBC 3 的驅動程式管理員*.x*或 earlier 函數支援。 若要判斷函式支援稱為 SQL_FUNC_EXISTS 巨集。 （請參閱 「 註解。"）ODBC 3*.x*應用程式可以呼叫**SQLGetFunctions**與針對其中一個 ODBC 3 SQL_API_ODBC3_ALL_FUNCTIONS*.x*或 ODBC 2*.x*驅動程式。  
+ 如果*FunctionId*是 SQL_API_ODBC3_ALL_FUNCTIONS， *SupportedPtr*會指向以數字的項目等於 SQL_API_ODBC3_ALL_FUNCTIONS_SIZE SQLSMALLINT 陣列。 這個陣列會被視為 4000 位元點陣圖，可用來判斷是否 ODBC 3 的驅動程式管理員 *.x*或 earlier 函數支援。 若要判斷函式支援稱為 SQL_FUNC_EXISTS 巨集。 （請參閱 「 註解。"）ODBC 3 *.x*應用程式可以呼叫**SQLGetFunctions**與針對其中一個 ODBC 3 SQL_API_ODBC3_ALL_FUNCTIONS *.x*或 ODBC 2 *.x*驅動程式。  
   
- 如果*FunctionId*是 SQL_API_ALL_FUNCTIONS， *SupportedPtr*指向 SQLUSMALLINT 100 元素的陣列。 陣列編製索引**#define**所使用的值*FunctionId*來識別每個 ODBC 函式; 陣列的某些項目是未使用和保留供未來使用。 項目是 SQL_TRUE，如果它會識別 ODBC 2*.x*或舊版驅動程式支援的函式。 如果識別驅動程式不支援 ODBC 函式，或者在不會識別 ODBC 函數，所以 SQL_FALSE。  
+ 如果*FunctionId*是 SQL_API_ALL_FUNCTIONS， *SupportedPtr*指向 SQLUSMALLINT 100 元素的陣列。 陣列編製索引 **#define**所使用的值*FunctionId*來識別每個 ODBC 函式; 陣列的某些項目是未使用和保留供未來使用。 項目是 SQL_TRUE，如果它會識別 ODBC 2 *.x*或舊版驅動程式支援的函式。 如果識別驅動程式不支援 ODBC 函式，或者在不會識別 ODBC 函數，所以 SQL_FALSE。  
   
  陣列中傳回 **SupportedPtr*使用以零為起始的索引。  
   
@@ -135,7 +134,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] 時使用的 ODBC 2*.x*驅動程式， **SQLBulkOperations**會傳回只支援下列兩個為真： ODBC 2*.x*驅動程式支援**SQLSetPos**，和資訊類型 SQL_POS_OPERATIONS 傳回所設定的 SQL_POS_ADD 位元。  
+ [1] 時使用的 ODBC 2 *.x*驅動程式， **SQLBulkOperations**會傳回只支援下列兩個為真： ODBC 2 *.x*驅動程式支援**SQLSetPos**，和資訊類型 SQL_POS_OPERATIONS 傳回所設定的 SQL_POS_ADD 位元。  
   
  下列是有效值的清單*FunctionId*導入在 ODBC 3.8 或更新版本的函式：  
   
@@ -146,10 +145,10 @@ SQLRETURN SQLGetFunctions(
  [2] **SQLCancelHandle**會傳回只支援此驅動程式支援同時**SQLCancel**和**SQLCancelHandle**。 如果**SQLCancel**支援但**SQLCancelHandle**不是，應用程式仍然可以呼叫**SQLCancelHandle**上陳述式控制代碼，因為它會對應到**SQLCancel**。  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 巨集  
- SQL_FUNC_EXISTS (*SupportedPtr*， *FunctionID*) 巨集用來判斷支援的 ODBC 3*.x*或先前的函式之後**SQLGetFunctions**已使用呼叫*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS 引數。 應用程式呼叫具有 SQL_FUNC_EXISTS *SupportedPtr*引數設定為*SupportedPtr*傳入*SQLGetFunctions*，與*FunctionID*引數設定為**#define**函式。 SQL_FUNC_EXISTS 否則會傳回支援的函式，則為 SQL_TRUE 和 SQL_FALSE。  
+ SQL_FUNC_EXISTS (*SupportedPtr*， *FunctionID*) 巨集用來判斷支援的 ODBC 3 *.x*或先前的函式之後**SQLGetFunctions**已使用呼叫*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS 引數。 應用程式呼叫具有 SQL_FUNC_EXISTS *SupportedPtr*引數設定為*SupportedPtr*傳入*SQLGetFunctions*，與*FunctionID*引數設定為 **#define**函式。 SQL_FUNC_EXISTS 否則會傳回支援的函式，則為 SQL_TRUE 和 SQL_FALSE。  
   
 > [!NOTE]  
->  使用 ODBC 2 時*.x*驅動程式，而 ODBC 3*.x*驅動程式管理員會傳回 SQL_TRUE 的**SQLAllocHandle**和**SQLFreeHandle**因為**SQLAllocHandle**對應至**SQLAllocEnv**， **SQLAllocConnect**，或**SQLAllocStmt**，和因為**SQLFreeHandle**對應至**SQLFreeEnv**， **SQLFreeConnect**，或**SQLFreeStmt**。 **SQLAllocHandle**或**SQLFreeHandle**與*HandleType* SQL_HANDLE_DESC 引數不支援，不過，即使函式中，會傳回 SQL_TRUE，因為沒有任何ODBC 2*.x*函式對應至在此情況下。  
+>  使用 ODBC 2 時 *.x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會傳回 SQL_TRUE 的**SQLAllocHandle**和**SQLFreeHandle**因為**SQLAllocHandle**對應至**SQLAllocEnv**， **SQLAllocConnect**，或**SQLAllocStmt**，和因為**SQLFreeHandle**對應至**SQLFreeEnv**， **SQLFreeConnect**，或**SQLFreeStmt**。 **SQLAllocHandle**或**SQLFreeHandle**與*HandleType* SQL_HANDLE_DESC 引數不支援，不過，即使函式中，會傳回 SQL_TRUE，因為沒有任何ODBC 2 *.x*函式對應至在此情況下。  
   
 ## <a name="code-example"></a>程式碼範例  
  下列三個範例顯示如何使用應用程式**SQLGetFunctions**決定驅動程式是否支援**SQLTables**， **SQLColumns**，和**SQLStatistics**。 如果驅動程式不支援這些函式，應用程式中斷連線的驅動程式。 第一個範例會呼叫**SQLGetFunctions**一次是針對每個函式。  

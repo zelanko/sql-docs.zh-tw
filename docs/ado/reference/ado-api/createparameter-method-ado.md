@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 46300d338a5c98e5f2c2bd722b0079f5a3fbb95a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: b67abec7ab37d16ed6a444d5355412dd4dff5e03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
 建立新[參數](../../../ado/reference/ado-api/parameter-object.md)具有指定之屬性的物件。  

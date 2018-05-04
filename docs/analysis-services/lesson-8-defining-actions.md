@@ -1,29 +1,28 @@
 ---
-title: "第 8 課： 定義動作 |Microsoft 文件"
-ms.custom: 
+title: 第 8 課： 定義動作 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c34913be54a2eb74401d602f1ecafee25d5921c6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0a7c280b5473873c51345cc203dccbae6b5c198c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-8-defining-actions"></a>第 8 課：定義動作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +62,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另請參閱  
 [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)  
 [多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[動作 &#40;Analysis Services-多維度資料 &#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
+[動作 & #40;Analysis Services-多維度資料 & #41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [多維度模型中的動作](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

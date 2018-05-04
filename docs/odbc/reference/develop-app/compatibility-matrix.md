@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -25,12 +25,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce98e3471f3bf14ada77fcbb67291ba8a4dff166
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility-matrix"></a>相容性比較表
 下表描述的相容性的應用程式和驅動程式，本節先前定義的類型。  
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/16/2018
   
  [3] 這項設定可能無法運作，因為 ODBC 2 沒有功能。*x*所沒有的標準，例如書籤。  
   
- [4] 這項設定可能無法運作，因為在 ODBC 3 的功能*.x*所沒有的標準，例如書籤。  
+ [4] 這項設定可能無法運作，因為在 ODBC 3 的功能 *.x*所沒有的標準，例如書籤。  
   
  [5] 這項設定可能會因為未在 ODBC 2.x 或 3.x 驅動程式，例如驅動程式專屬 ODBC 3.8 功能[ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   

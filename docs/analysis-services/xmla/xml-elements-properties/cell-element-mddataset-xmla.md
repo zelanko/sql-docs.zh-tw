@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d6c59b1833e211e43c9429e6bf4aeb265325d76d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 560ed0b86a29cffaa3b9a0969b2ae5f8783e26b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell 元素 (MDDataSet) (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含父代所包含的單一資料格的相關資訊[CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含父代所包含的單一資料格的相關資訊[CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>屬性  
   
-|attribute|描述|  
+|Attribute|說明|  
 |---------------|-----------------|  
 |CellOrdinal|需要**unsignedInt**屬性。 資料格在多維度資料集中的序數位置。|  
   
@@ -145,8 +145,8 @@ ms.lasthandoff: 01/08/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDDataSet 資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDDataSet 資料類型 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

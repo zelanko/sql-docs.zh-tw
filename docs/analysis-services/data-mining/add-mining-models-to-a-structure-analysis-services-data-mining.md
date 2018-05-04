@@ -1,35 +1,23 @@
 ---
-title: "將採礦模型加入結構 (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 將採礦模型加入結構 (Analysis Services-資料採礦) |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], creating
-- mining models [Analysis Services], creating
-- mining models [Analysis Services], modifying
-ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 42ae87b14d6ddff90b78bb3c23a7d536750d8317
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 46207c91d6bfbbb122f42213b779841c91ac996a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>將採礦模型加入至結構 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-採礦結構是為了支援多個採礦模型。 因此在您完成此精靈之後，您可以開啟此結構，並加入新的採礦模型。 每當您建立模型時，您都可以使用不同的演算法、變更參數，或是將篩選套用到不同的資料子集。  
+  採礦結構是為了支援多個採礦模型。 因此在您完成此精靈之後，您可以開啟此結構，並加入新的採礦模型。 每當您建立模型時，您都可以使用不同的演算法、變更參數，或是將篩選套用到不同的資料子集。  
   
 ## <a name="adding-new-mining-models"></a>加入新的採礦模型  
  當您使用資料採礦精靈建立新的採礦模型時，預設一定要先建立採礦結構。 然後此精靈會提供您將初始採礦模型加入至結構中的選項。 不過，您不需要立刻建立模型。 如果您只建立結構，則不需要決定要使用哪個資料行做為可預測屬性，或者如何在特定模型中使用資料， 只需要設定將來要用的一般資料結構，稍後您可以使用 [資料採礦設計師](../../analysis-services/data-mining/data-mining-designer.md) 來加入以該結構為基礎的新採礦模型。  
@@ -65,7 +53,7 @@ ms.lasthandoff: 02/15/2018
  對某些資料行而言，您可能也需要指定「資料行內容」。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦中，每個資料行的內容類型屬性都會告訴演算法它該如何處理該資料行中的資料。 例如，如果資料有「收入」資料行，則您必須將內容類型設定為「連續」，指定該資料行包含連續的數字。 不過，您也可以將內容類型設定為「離散」並選擇性地指定確切的值區數，以指定將「收入」資料行中的數字分組為值區。 您可以建立以不同方式處理資料行的不同模型：例如，您可以嘗試將客戶區分為三個年齡群組值區的模型，也可以使用另一個將客戶區分為 10 個年齡群組值區的模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [建立關聯式採礦結構](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [採礦模型屬性](../../analysis-services/data-mining/mining-model-properties.md)   
  [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)  

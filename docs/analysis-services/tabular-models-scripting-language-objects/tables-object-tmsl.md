@@ -1,30 +1,30 @@
 ---
-title: "Tables 物件 (TMSL) |Microsoft 文件"
-ms.custom: 
+title: Tables 物件 (TMSL) |Microsoft 文件
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7c266fba0a8218ff7fb18c08f0b5432bef2bf15f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-object-tmsl"></a>Tables 物件 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定義模型中所包含的資料表。 在模型中的資料表可能是繫結至外部資料庫從中匯入或查詢，資料中的資料表或從 DAX 運算式建構導出的資料表。 在資料表中，一或多個**分割**物件描述的資料來源。  資料表之間**關聯性**物件會指定基數、 篩選方向和關聯性的其他屬性。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  定義模型中所包含的資料表。 在模型中的資料表可能是繫結至外部資料庫從中匯入或查詢，資料中的資料表或從 DAX 運算式建構導出的資料表。 在資料表中，一或多個**分割**物件描述的資料來源。  資料表之間**關聯性**物件會指定基數、 篩選方向和關聯性的其他屬性。  
   
 ## <a name="object-definition"></a>物件定義  
  所有物件都具有一組常用的屬性，包括名稱、 類型、 描述、 屬性集合，以及註解。 **資料表**物件也有下列屬性。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
  代表層級的集合，該集合提供用戶端應用程式的邏輯階層式向下鑽研路徑。 它是 Table 物件的子節點。  
   
 ## <a name="usage"></a>使用方式  
- 會使用資料表物件[Alter 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[建立命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)，[刪除命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)，[重新整理命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)，和[MergePartitions 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ 會使用資料表物件[Alter 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[建立命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)， [delete 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)，[重新整理命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)，和[MergePartitions 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  建立時，取代或改變資料表的物件，指定物件定義的所有讀寫屬性。 省略的讀 / 寫屬性會被視為刪除。  
   
@@ -70,8 +70,8 @@ ms.lasthandoff: 01/08/2018
               "hierarchies": {  },  
 ```  
   
-## <a name="full-syntax"></a>完整的語法  
- 以下是模型的資料表物件的結構描述表示法。 若要減少此定義的大小，資料分割的物件會描述其他位置。 請參閱[物件 &#40; 資料分割TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md).  
+## <a name="full-syntax"></a>完整語法  
+ 以下是模型的資料表物件的結構描述表示法。 若要減少此定義的大小，資料分割的物件會描述其他位置。 請參閱[資料分割物件&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)。  
   
 ```  
 "tables": {  
@@ -815,7 +815,7 @@ ms.lasthandoff: 01/08/2018
         }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

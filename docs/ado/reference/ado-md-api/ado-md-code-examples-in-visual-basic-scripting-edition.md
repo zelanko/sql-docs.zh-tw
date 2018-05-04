@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82dd2d7a3754023bc9fea14c8e8c9f676a1aa300
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ed28920c5185684848a42c0dda86ec8253de44b0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>在 Visual Basic，Scripting Edition ADO MD 程式碼範例
 此範例需要 Microsoft 網際網路資訊伺服器 4.0 的 Microsoft Active Server Pages (ASP)。  

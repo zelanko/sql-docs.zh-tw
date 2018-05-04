@@ -22,12 +22,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7b990b0c695e0502924796ce51ec6bd0bab26814
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a05c1ebc10f7f4ad5751a1ece0a6f9cc64003e85
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  如果省略預測狀態，就會使用機率最高的狀態，遺漏狀態值區除外。 若要包含遺漏狀態值區，設定\<預測狀態 > 至**INCLUDE_NULL**。 若要傳回遺漏狀態的機率，請設定\<預測狀態 > 為 NULL。  
   
 > [!NOTE]  
->  有些採礦模型不提供機率值，因此無法使用此函數。 此外，任何特定目標值的機率值會以不同的方式計算，或者根據您要查詢的模型類型而有不同的解譯。 如需有關如何針對特定模型類型而計算機率的詳細資訊，請參閱中的個別演算法主題[採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  有些採礦模型不提供機率值，因此無法使用此函數。 此外，任何特定目標值的機率值會以不同的方式計算，或者根據您要查詢的模型類型而有不同的解譯。 如需有關如何針對特定模型類型而計算機率的詳細資訊，請參閱中的個別演算法主題[採礦模型內容&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例根據 TM Decision Tree 採礦模型，使用自然預測聯結以判斷個人是否可能成為腳踏車買主，也判斷預測的機率。 在此範例中有兩個 PredictProbability 函數，其中一個用於每個可能的值。 如果您省略這個引數，函數會傳回最可能之值的機率。  
@@ -74,11 +73,11 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|Bike Buyer = Yes|Bike Buyer = No|  
 |----------------|-----------------------|----------------------|  
-|@shouldalert|0.867074195848097|0.132755556974282|  
+|1|0.867074195848097|0.132755556974282|  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

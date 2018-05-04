@@ -24,12 +24,11 @@ caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7160c358f0969c967cb0995e410f7e75427285bc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9c9a1709d788ac12e927de909af3ea3a00574e90
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  [ **@publication =** ] **'***publication***'**  
  這是要檢視的發行集名稱。 *發行集*是 sysname，預設值是**%**，它會傳回有關所有發行集的資訊。  
   
- [  **@found =** ] **'***找到***'**輸出  
+ [  **@found =** ] **'***找到***'** 輸出  
  這是表示傳回資料列的旗標。 *找到*是**int**和一個 OUTPUT 參數，預設值是**23456**。 **1**表示找到發行集。 **0**指出找不到發行集。  
   
  [ **@publisher** = ] **'***publisher***'**  
@@ -87,8 +86,8 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |allow_queued_tran|**bit**|指定是否停用在訂閱者端將變更放入佇列中，直到可以在發行者端套用這些變更為止。 如果**0**，「 訂閱者 」 端的變更不會排入佇列。|  
 |snapshot_in_defaultfolder|**bit**|指定是否將快照集檔案儲存在預設資料夾中。 如果**0**，快照集檔案已儲存在所指定的替代位置*alternate_snapshot_folder*。 如果**1**，可以在預設資料夾中找到快照集檔案。|  
 |alt_snapshot_folder|**nvarchar(255)**|指定快照集替代資料夾的位置。|  
-|pre_snapshot_script|**nvarchar(255)**|指定指向**.sql**檔案位置。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。|  
-|post_snapshot_script|**nvarchar(255)**|指定指向**.sql**檔案位置。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。|  
+|pre_snapshot_script|**nvarchar(255)**|指定指向 **.sql**檔案位置。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。|  
+|post_snapshot_script|**nvarchar(255)**|指定指向 **.sql**檔案位置。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。|  
 |compress_snapshot|**bit**|指定可寫入快照集*alt_snapshot_folder*位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 **0**指定不壓縮快照集。|  
 |ftp_address|**sysname**|散發者之 FTP 服務的網路位址。 指定發行集快照集檔案所在的位置，以便訂閱者的散發代理程式或合併代理程式能夠加以收取。|  
 |ftp_port|**int**|散發者的 FTP 服務通訊埠編號。|  

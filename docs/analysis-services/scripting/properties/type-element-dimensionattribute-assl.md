@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9cd0db2e914ffba09e7e2e3831b5815be8288e10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 652e0ca8726ba1e5b6ddfec11225929ea6416675
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 元素 (DimensionAttribute) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含屬性的型別。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  包含屬性的類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,10 +50,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
-|預設值|*規則*|  
+|預設值|*一般*|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |*帳戶*|此屬性代表帳戶的名稱。|  
 |*AccountNumber*|此屬性代表帳戶的號碼。|  
@@ -85,11 +85,11 @@ ms.lasthandoff: 01/08/2018
 |*AddressStreet*|此屬性代表地址的街道名稱。|  
 |*AddressZip*|此屬性代表地址的郵遞區號。|  
 |*BOMResource*|此屬性代表用料表 (BOM) 的資源。|  
-|*標題*|屬性代表標題。|  
+|*Caption*|屬性代表標題。|  
 |*CaptionAbbreviation*|屬性代表縮寫。|  
 |*CaptionDescription*|屬性代表描述。|  
 |*通路*|屬性代表通道。|  
-|*縣 （市)*|屬性代表縣 (市)。|  
+|*City*|屬性代表縣 (市)。|  
 |*公司*|屬性代表公司。|  
 |*大陸*|屬性代表大陸。|  
 |*國家/地區*|屬性代表國家或地區。|  
@@ -160,7 +160,7 @@ ms.lasthandoff: 01/08/2018
 |*HalfYears*|屬性代表半年度。|  
 |*HalfYearsOfYear*|屬性代表年中的半年度序數。|  
 |*小時*|此屬性代表小時。|  
-|*識別碼*|此屬性代表識別碼或索引鍵。|  
+|*Id*|此屬性代表識別碼或索引鍵。|  
 |*IsHoliday*|此屬性會指出日期是否為假日。|  
 |*ISO8601DayOfWeek*|此屬性代表 ISO 8601 日曆中之週的日序數。|  
 |*ISO8601DayOfYear*|屬性代表 ISO 8601 日曆中之年的日序數。|  
@@ -202,7 +202,7 @@ ms.lasthandoff: 01/08/2018
 |*MonthOfTrimester*|屬性代表每四個月的月序數。|  
 |*MonthOfYear*|屬性代表年中的月序數。|  
 |*幾個月*|此屬性代表月數。|  
-|*OrganizationalUnit*|此屬性代表組織單位。|  
+|*organizationalUnit*|此屬性代表組織單位。|  
 |*OrgTitle*|此屬性代表組織標題。|  
 |*PercentOwnership*|此屬性代表擁有權的百分比。|  
 |*PercentVoteRight*|此屬性代表投票權的百分比。|  
@@ -221,8 +221,8 @@ ms.lasthandoff: 01/08/2018
 |*PhysicalVolume*|屬性代表體積。|  
 |*PhysicalWeight*|屬性代表重量。|  
 |*PhysicalWidth*|屬性代表寬度。|  
-|*點*|屬性代表點。|  
-|*郵遞區號*|屬性代表郵遞區號。|  
+|*Point*|屬性代表點。|  
+|*PostalCode*|屬性代表郵遞區號。|  
 |*產品*|屬性代表產品。|  
 |*ProductBrand*|此屬性代表產品品牌。|  
 |*ProductCategory*|此屬性代表產品類別目錄。|  
@@ -233,17 +233,17 @@ ms.lasthandoff: 01/08/2018
 |*ProjectEnddate*|此屬性代表專案結束日期。|  
 |*專案名稱*|此屬性代表專案名稱。|  
 |*ProjectStartDate*|此屬性代表專案開始日期。|  
-|*升級*|屬性代表促銷。|  
+|*促銷*|屬性代表促銷。|  
 |*QtyRangeHigh*|屬性代表數量範圍的最大值。|  
 |*QtyRangeLow*|屬性代表數量範圍的最小值。|  
-|*量化*|屬性代表數量的屬性。|  
+|*數量*|屬性代表數量的屬性。|  
 |*QuarterOfHalfYear*|屬性代表半年中的季序數。|  
 |*QuarterOfYear*|屬性代表年中的季序數。|  
 |*數個季度*|屬性代表季數。|  
 |*速率*|屬性代表比率。|  
 |*RateType*|屬性代表比率類型。|  
 |*區域*|屬性代表客戶自訂的區域。|  
-|*規則*|屬性代表一般屬性。|  
+|*一般*|屬性代表一般屬性。|  
 |*RelationToParent*|屬性代表與父系的關聯性。|  
 |*ReportingDay*|屬性代表報表日曆中的天數。|  
 |*ReportingDayOfHalfYears*|屬性代表報表日曆中之半年的日序數。|  
@@ -274,7 +274,7 @@ ms.lasthandoff: 01/08/2018
 |*代表*|此屬性表示代表。|  
 |*案例*|此屬性代表狀況。|  
 |*秒*|此屬性代表秒數。|  
-|*序列*|屬性代表順序屬性。|  
+|*順序*|屬性代表順序屬性。|  
 |*ShortCaption*|屬性代表簡短標題。|  
 |*StateOrProvince*|屬性代表省份。|  
 |*TenDayOfHalfYears*|屬性代表半年的十天週期序數。|  
@@ -304,9 +304,9 @@ ms.lasthandoff: 01/08/2018
   
  對應目的父代的項目**類型**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
-## <a name="see-also"></a>請參閱  
- [Attributes 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Dimension 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性項目&#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Dimension 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

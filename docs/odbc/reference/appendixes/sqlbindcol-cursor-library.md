@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eeca90b8de3ce65e8da68d6aabac89b2181ed047
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a877b6cade18e59f12abfe807d8efa04363b3dcb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol （資料指標程式庫）
 > [!IMPORTANT]  
@@ -36,8 +35,8 @@ ms.lasthandoff: 04/16/2018
   
  應用程式可以呼叫**SQLBindCol**重新繫結結果集資料行之後又稱為**SQLExtendedFetch**， **SQLFetch**，或**SQLFetchScroll**，只要 C 資料類型、 資料行大小和小數位數的繫結的資料行維持不變。 應用程式不需要關閉資料指標重新繫結至不同位址的資料行。  
   
- 資料指標程式庫支援的設定，若要使用繫結位移 SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性。 (**SQLBindCol**並沒有發生重新繫結呼叫。)如果資料指標程式庫會使用 ODBC 3*.x*驅動程式，繫結位移不是使用當**SQLFetch**呼叫。 如果使用繫結位移**SQLFetch**稱為資料指標程式庫搭配 ODBC 2。*x*驅動程式因為**SQLFetch**接著會對應到**SQLExtendedFetch**。  
+ 資料指標程式庫支援的設定，若要使用繫結位移 SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性。 (**SQLBindCol**並沒有發生重新繫結呼叫。)如果資料指標程式庫會使用 ODBC 3 *.x*驅動程式，繫結位移不是使用當**SQLFetch**呼叫。 如果使用繫結位移**SQLFetch**稱為資料指標程式庫搭配 ODBC 2。*x*驅動程式因為**SQLFetch**接著會對應到**SQLExtendedFetch**。  
   
  資料指標程式庫支援呼叫**SQLBindCol**繫結的書籤資料行。  
   
- 當使用的 ODBC 2。*x*驅動程式，資料指標程式庫會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度） 時**SQLBindCol**呼叫以設定為值的書籤資料行的緩衝區長度不等於 4。 使用 ODBC 3 時*.x*驅動程式，資料指標程式庫會允許任何大小的緩衝區。
+ 當使用的 ODBC 2。*x*驅動程式，資料指標程式庫會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度） 時**SQLBindCol**呼叫以設定為值的書籤資料行的緩衝區長度不等於 4。 使用 ODBC 3 時 *.x*驅動程式，資料指標程式庫會允許任何大小的緩衝區。

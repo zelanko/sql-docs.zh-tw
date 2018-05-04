@@ -20,15 +20,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bf2bc5ab8c0419260049d8e588fd491a50099135
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d62d02d1019ee95067829a581d16596e0fc8a69d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbstoragelocation-element"></a>DbStorageLocation 元素
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]指定的資料夾位置[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]建立和管理所有資料庫資料和中繼資料檔案。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  指定的資料夾位置[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]建立和管理所有資料庫資料和中繼資料檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
-|資料類型和長度|String|  
+|資料類型和長度|字串|  
 |預設值|""|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[[資料庫]](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
+|父元素|[資料庫](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
@@ -61,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
  此外， **DbStorageLocation**資料庫屬性無法設定為指向伺服器資料夾或其任何子資料夾。 執行時，如果此位置指向伺服器資料夾或其任何子資料夾中，會引發錯誤**建立**，**附加**，或**Alter**命令。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [附加和卸離 Analysis Services 資料庫](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   

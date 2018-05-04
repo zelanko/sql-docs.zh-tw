@@ -24,12 +24,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bdd58a6d59574f4782a5e29761ea29c77328e6a8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 66f90b5df3397f809716ea2c843832a36b201c11
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-collection-ado"></a>錯誤集合 (ADO)
 包含所有[錯誤](../../../ado/reference/ado-api/error-object.md)為了回應單一提供者相關的失敗所建立的物件。  

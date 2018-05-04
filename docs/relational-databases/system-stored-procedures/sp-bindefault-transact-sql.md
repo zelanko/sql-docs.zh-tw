@@ -24,13 +24,12 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7a01ab44ac03ae5782f5983e781d21c9d32f8f0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67d46825f0da450707710c600cacb549d370082c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,15 +55,15 @@ sp_bindefault [ @defname = ] 'default' ,
  這是 CREATE DEFAULT 所建立之預設值的名稱。 *預設*是**nvarchar(776)**，沒有預設值。  
   
  [ **@objname=** ] **'***object_name***'**  
- 這是預設值將要繫結之資料表和資料行的名稱，或是別名資料類型。 *object_name*是**nvarchar(776)**沒有預設值。 *object_name*不能以定義**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**，或 CLR使用者定義型別。  
+ 這是預設值將要繫結之資料表和資料行的名稱，或是別名資料類型。 *object_name*是**nvarchar(776)** 沒有預設值。 *object_name*不能以定義**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**，或 CLR使用者定義型別。  
   
  如果*object_name*是單部分名稱，它會解析成別名資料類型。 如果它是兩部份或三部份的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，現有的資料行別名資料類型的繼承*預設*，除非預設值已經繫結至資料行直接。 預設值無法繫結至**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**，**varbinary （max)**， **xml**，**時間戳記**，或 CLR 使用者自訂類型資料行、 具有 IDENTITY 屬性的資料行、 計算資料行或資料行，已經有 DEFAULT 條件約束。  
   
 > [!NOTE]  
->  *object_name*可以包含方括號**[]**作為分隔識別碼。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
+>  *object_name*可以包含方括號 **[]** 作為分隔識別碼。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- 只有將預設值繫結到別名資料類型時，才會使用這個項目。 *futureonly_flag*是**varchar(15)**預設值是 NULL。 當此參數設為**futureonly**，該資料類型的現有資料行無法繼承新的預設值。 當預設值繫結到資料行時，永遠不會使用這個參數。 如果*futureonly_flag*是 NULL，新的預設值繫結至任何資料行的別名資料類型，目前有沒有預設值，或使用現有的預設值的別名資料類型。  
+ 只有將預設值繫結到別名資料類型時，才會使用這個項目。 *futureonly_flag*是**varchar(15)** 預設值是 NULL。 當此參數設為**futureonly**，該資料類型的現有資料行無法繼承新的預設值。 當預設值繫結到資料行時，永遠不會使用這個參數。 如果*futureonly_flag*是 NULL，新的預設值繫結至任何資料行的別名資料類型，目前有沒有預設值，或使用現有的預設值的別名資料類型。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

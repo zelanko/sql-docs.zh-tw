@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc4f312a8c8f9db4322539a61a532ac0803c4c66
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 620b1a926de9039ec3c9edc8c479d69f0b3c3eef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、 ConnectionTimeout 和 State 屬性範例 （VC + +）
 這個範例示範如何使用的不同方式[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性可開啟[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 它也會使用[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)屬性來設定連接逾時期限和[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性檢查連線的狀態。 若要執行此程序需要 GetState 函式。  

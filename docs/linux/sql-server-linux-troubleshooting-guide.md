@@ -4,7 +4,7 @@ description: 提供在 Linux 上使用 SQL Server 2017 疑難排解秘訣。
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.workload: On Demand
-ms.openlocfilehash: 2be739569e240bfecd7e18fecae52a6f15d24e0f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: e699d921a6100c3f8381b4a5ad1ba3054c258961
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 
@@ -160,6 +159,41 @@ SQL 傾印
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
+## <a name="rebuild-system-databases"></a>重建系統資料庫
+作為最後的方法，您可以選擇重建 master 和模型資料庫會回到預設版本。
+
+> [!WARNING]
+> 這些步驟將**刪除所有的 SQL Server 系統資料**您設定 ！ 這包括使用者資料庫 （但不是在使用者資料庫本身） 的相關資訊。 它也會刪除儲存在系統資料庫，包括下列其他資訊： 主要金鑰資訊，請在 master、 SA 登入密碼，與工作相關的資訊，從 msdb、 msdb 和 sp_configure 選項從 DB 郵件資訊載入任何憑證。 只有當您了解影響使用 ！
+
+1. 停止 SQL Server。
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. 執行**sqlservr**與**強制安裝**參數。 
+
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
+   ```
+   
+   > [!WARNING]
+   > 請參閱先前的警告 ！ 此外，您必須執行此方法做**mssql**如下所示的使用者。
+
+1. 您會看到訊息 「 復原 」 完成之後，請按 CTRL + C。 這將會關閉 SQL Server
+
+1. 重新設定 SA 的密碼。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set-sa-password
+   ```
+   
+1. 啟動 SQL Server，然後重新設定伺服器。 這包括還原或重新附加任何使用者資料庫。
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
 ## <a name="common-issues"></a>常見的問題
 
 1. 您無法連接到遠端的 SQL Server 執行個體。
@@ -186,7 +220,7 @@ SQL 傾印
 
 4. 密碼中使用特殊字元。
 
-   如果您在 SQL Server 登入密碼中使用某些字元您可能需要將其逸出 Linux 終端機中使用它們時。 您必須逸出 $ 隨時使用反斜線字元會使用終端機的命令/殼層指令碼中：
+   如果您使用某些字元在 SQL Server 登入密碼時，您可能需要使用 Linux 命令，在終端機中時以反斜線逸出。 比方說，您必須逸出錢幣符號 （$） 每當您使用它在終端機的命令/殼層指令碼：
 
    無法:
 

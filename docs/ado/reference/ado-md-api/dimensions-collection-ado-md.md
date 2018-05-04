@@ -23,12 +23,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7a055f46b067a56c54f06a6f000ab349c2b7d78b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 64ed90a2879b855d083bbc9986948ac4d21b868e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensions-collection-ado-md"></a>維度集合 (ADO MD)
 包含[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)構成 cube 物件。  

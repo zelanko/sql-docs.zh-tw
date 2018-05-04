@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 78133ee0-1e2f-4dc8-81f6-3bac8eb21332
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5f89c91d3b58ca2fbc19eccfc979be17d175993d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 88e595ad98f2f478dc1304de4ca65caf80c8a521
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-statements"></a>SQL 陳述式
 ODBC 應用程式來執行幾乎所有資料庫存取執行 SQL 陳述式。 這些陳述式的形式 — 硬式編碼或建構在執行的階段，互通性或資料來源專用，依此類推，取決於應用程式的需求。  

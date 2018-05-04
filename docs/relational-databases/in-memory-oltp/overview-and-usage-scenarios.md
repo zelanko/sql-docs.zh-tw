@@ -1,28 +1,29 @@
 ---
-title: "概觀和使用案例 | Microsoft Docs"
-ms.custom: 
+title: 概觀和使用案例 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: 
+caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75f077fc93196e07bdada34924a2edbd2b02d6ab
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2bbf55de6f63d6d78165e9c7a57685bb7fdea4ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ ms.lasthandoff: 02/12/2018
 
 - [Quorum 利用 Azure SQL Database 中的記憶體內部 OLTP，將主要資料庫的工作負載加倍，同時降低 70% 的使用率](http://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，提升了批次資料載入的效能，並移除了維護中層快取的需求：[資料服務公司利用記憶體內部技術，即時存取產品資料](https://customers.microsoft.com/en-us/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅提升網域控制站的資料擷取率，並處理尖峰工作負載：[https://customers.microsoft.com/en-us/story/strengthening-data-security-and-creating-more-time-for]
+- Beth Israel Deaconess Medical Center 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅改善網域控制站的資料擷取率，並處理尖峰工作負載：[https://customers.microsoft.com/en-us/story/strengthening-data-security-and-creating-more-time-for]
 
 ### <a name="caching-and-session-state"></a>快取和工作階段狀態
 

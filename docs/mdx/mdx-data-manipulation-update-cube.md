@@ -28,12 +28,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77ca2c4e3a63db80ff21a91309f5fc531e5ba3ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e27b11836c0619c1415718cce3e38029ac8359d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 資料操作 UPDATE CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -79,14 +78,14 @@ UPDATE [ CUBE ] Cube_Name
   
  以下是配置方法的描述。  
   
- **USE_EQUAL_ALLOCATION:**提供給更新資料格每個分葉資料格會指派相等的值根據以下運算式。  
+ **USE_EQUAL_ALLOCATION:** 提供給更新資料格每個分葉資料格會指派相等的值根據以下運算式。  
   
 ```  
 <leaf cell value> =   
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:**將根據以下運算式變更每個分葉資料格，提供給更新資料格。  
+ **USE_EQUAL_INCREMENT:** 將根據以下運算式變更每個分葉資料格，提供給更新資料格。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -94,13 +93,13 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:**提供給更新資料格每個分葉資料格會指派相等的值，取決於下列運算式。  
+ **USE_WEIGHTED_ALLOCATION:** 提供給更新資料格每個分葉資料格會指派相等的值，取決於下列運算式。  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
 ```  
   
- **USE_WEIGHTED_INCREMENT:**將根據以下運算式變更每個分葉資料格，提供給更新資料格。  
+ **USE_WEIGHTED_INCREMENT:** 將根據以下運算式變更每個分葉資料格，提供給更新資料格。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -126,8 +125,8 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!IMPORTANT]  
 >  當更新的資料格未重疊時， **Update Isolation Level** 連接字串屬性可用來增強 UPDATE CUBE 的效能。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [MDX 資料操作陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [MDX 資料操作陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

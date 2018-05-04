@@ -19,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 93b71f926a6a9e073ae1bbc46c9bb645f572f82b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e629d62040328955be875d9dcc1027fcadf6bbff
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-with-ado-md"></a>使用 ADO MD 程式設計
 若要使用 ADO MD 與開發工具，您應該建立 ADO MD 類型程式庫的參考。 ADO MD 程式庫的描述是 Microsoft ActiveX Data Objects （多維度） 的程式庫。 ADO MD 程式庫檔案名稱 msadomd.dll，且程式識別碼 (ProgID) 是 「 ADOMD"。 如需如何建立程式庫的參考的詳細資訊，請參閱您的開發工具的文件。  

@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
 caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d32e976e355cdf0a610e5704fb9a2e02e70e7735
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b2087b0caaf0225bc2cd0de158fb34d4f9f7e12
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pdosqlsrv-driver-reference"></a>PDO_SQLSRV 驅動程式參考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 6ca6baab6e4bb3332d48cb2e50129713aab24817
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f9296b1ff21ee5412aa83f7a5edc2736793777f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>引數  
  **'** *command_string* **'**  
- 這是包含要傳送至作業系統之命令的字串。 *command_string*是**varchar(8000)**或**nvarchar （4000)**，沒有預設值。 *command_string*不能包含多組雙引號括住。 如果檔案路徑中有任何空格，或參考的程式名稱，則需要一對引號*command_string*。 如果使用內嵌空格會出錯，請考慮改用 FAT 8.3 檔案名稱作為因應措施。  
+ 這是包含要傳送至作業系統之命令的字串。 *command_string*是**varchar(8000)** 或**nvarchar （4000)**，沒有預設值。 *command_string*不能包含多組雙引號括住。 如果檔案路徑中有任何空格，或參考的程式名稱，則需要一對引號*command_string*。 如果使用內嵌空格會出錯，請考慮改用 FAT 8.3 檔案名稱作為因應措施。  
   
  **no_output**  
  這是選擇性參數，用來指定不應將輸出傳回用戶端。  
@@ -63,7 +62,7 @@ EXEC xp_cmdshell 'dir *.exe';
 GO  
 ```  
   
- 資料列的傳回**nvarchar （255)**資料行。 如果**no_output**使用選項，只有下列將會傳回：  
+ 資料列的傳回**nvarchar （255)** 資料行。 如果**no_output**使用選項，只有下列將會傳回：  
   
 ```  
 The command(s) completed successfully.  

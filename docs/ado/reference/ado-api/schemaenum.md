@@ -22,12 +22,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a5f76b03c61f1ea8576df0bb74acccbc37f7d811
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 1d2904852d7e44e28eb4ad1331f1276f3ef45234
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的結構描述類型**資料錄集**， [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法擷取。  

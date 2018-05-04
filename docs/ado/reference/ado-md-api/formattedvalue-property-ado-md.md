@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ee4d44027b4bf6ec5a71efd98d8e4bd71ff6b103
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7060739d8f7185af775274af4694db56d8b60871
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue 屬性 (ADO MD)
 表示格式化的顯示[儲存格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)值。  

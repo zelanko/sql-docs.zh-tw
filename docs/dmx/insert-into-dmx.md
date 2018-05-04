@@ -32,17 +32,16 @@ caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9ee2a89f60504719b74eb340f9399b8622d06500
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  處理指定的資料採礦物件。 如需有關處理採礦模型與採礦結構的詳細資訊，請參閱[處理需求及考量 &#40; 資料採礦 &#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
+  處理指定的資料採礦物件。 如需有關處理採礦模型與採礦結構的詳細資訊，請參閱[處理需求和考量&#40;資料採礦&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
   
  如果指定採礦結構，則陳述式會處理採礦結構及其所有相關聯的採礦模型。 如果指定採礦模型，陳述式就只會處理採礦模型。  
   
@@ -72,7 +71,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  使用第二種語法形式，INSERT INTO*\<物件 >*。COLUMN_VALUES，您可以將資料直接插入的模型資料行不必定型模型。 這種方法以精簡、已排序的方式提供模型的資料行資料，當您處理包含階層或已排序資料行的資料集時很有用。  
   
- 如果您使用**INSERT INTO**與採礦模型或採礦結構，並保持關閉\<對應模型資料行 > 和\<來源資料查詢 > 引數，陳述式的行為類似**ProcessDefault**，使用已存在的繫結。 如果繫結不存在，陳述式就會傳回錯誤。 如需有關**ProcessDefault**，請參閱[處理選項和設定 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). 下列範例會顯示語法：  
+ 如果您使用**INSERT INTO**與採礦模型或採礦結構，並保持關閉\<對應模型資料行 > 和\<來源資料查詢 > 引數，陳述式的行為類似**ProcessDefault**，使用已存在的繫結。 如果繫結不存在，陳述式就會傳回錯誤。 如需有關**ProcessDefault**，請參閱[處理選項和設定&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。 下列範例會顯示語法：  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -88,7 +87,7 @@ INSERT INTO [MINING MODEL] <model>
 ||不處理採礦結構。|處理採礦模型與採礦結構。|  
 ||採礦結構包含其他的採礦模型。|處理失敗。 您必須重新處理結構與相關聯的採礦模型。|  
 |INSERT INTO MINING STRUCTURE*\<結構 >*|處理或不處理採礦結構。|處理採礦結構與相關聯的採礦模型。|  
-|INSERT INTO MINING MODEL*\<模型 >* （包含來源查詢）<br /><br /> 中的多個<br /><br /> INSERT INTO MINING STRUCTURE*\<結構 >* （包含來源查詢）|結構或模型早已包含內容。|處理失敗。 您必須先使用執行此作業中，清除物件[DELETE &#40; DMX &#41;](../dmx/delete-dmx.md)。|  
+|INSERT INTO MINING MODEL*\<模型 >* （包含來源查詢）<br /><br /> 或<br /><br /> INSERT INTO MINING STRUCTURE*\<結構 >* （包含來源查詢）|結構或模型早已包含內容。|處理失敗。 您必須先使用執行此作業中，清除物件[刪除&#40;DMX&#41;](../dmx/delete-dmx.md)。|  
   
 ## <a name="mapped-model-columns"></a>對應的模型資料行  
  使用\<對應模型資料行 > 項目，您可以在採礦模型中對應資料來源的資料行的資料行。 \<對應模型資料行 > 項目具有下列格式：  
@@ -114,7 +113,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   傳回資料列集的任何 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查詢  
   
- 如需有關資料來源類型的詳細資訊，請參閱[&#60; 來源資料查詢 &#62;](../dmx/source-data-query.md)。  
+ 如需有關資料來源類型的詳細資訊，請參閱[&#60;來源資料查詢&#62;](../dmx/source-data-query.md)。  
   
 ## <a name="basic-example"></a>基本範例  
  下列範例會使用**OPENQUERY**來定型貝氏機率分類模型中的目標郵寄資料為基礎[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料庫。  
@@ -143,9 +142,9 @@ SHAPE {
 AS [Models]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 43bea31384f503ea0e98d8e485002135f1cbbf57
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5351c36af4082c40be10b451122ca04101cf4b3d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-parameters"></a>事件參數
 每個事件處理常式具有控制事件處理常式的狀態參數。 完成事件，這個參數也用來表示成功或失敗的作業產生事件。 最完整的事件也具有錯誤參數，以提供可能會發生任何錯誤和參考用來執行作業的 ADO 物件的一或多個物件參數的資訊。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包含物件的參數**命令**，**資料錄集**，和**連接**物件與事件相關聯。 在下列的 Microsoft® Visual Basic® 範例中，您可以看到 pCommand、 pRecordset 和 pConnection 物件代表**命令**，**資料錄集**，和**連接**物件所使用的**Execute**方法。  

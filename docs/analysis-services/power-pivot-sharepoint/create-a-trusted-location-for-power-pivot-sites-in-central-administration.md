@@ -1,31 +1,23 @@
 ---
-title: "在管理中心建立 Power Pivot 網站的信任的位置 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 在管理中心建立 Power Pivot 網站的信任的位置 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3dabb6a62434ce2956a0c11a62f3b383104df698
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>在管理中心建立 Power Pivot 網站的信任位置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Excel Services 可讓您指定哪些位置對於在 SharePoint 伺服器上開啟的活頁簿而言是有效的儲存機制。 這些位置稱為「信任位置」，而且您可以針對每個建立的信任位置使用不同的組態設定。 對於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署，您可以考慮針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的網站建立信任位置，讓您可以套用最適合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的設定，同時針對其餘的伺服器陣列保留預設值。  
+  Excel Services 可讓您指定哪些位置對於在 SharePoint 伺服器上開啟的活頁簿而言是有效的儲存機制。 這些位置稱為「信任位置」，而且您可以針對每個建立的信任位置使用不同的組態設定。 對於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署，您可以考慮針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的網站建立信任位置，讓您可以套用最適合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的設定，同時針對其餘的伺服器陣列保留預設值。  
   
   
 ## <a name="prerequisites"></a>필수 구성 요소  

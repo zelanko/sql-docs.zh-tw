@@ -1,32 +1,23 @@
 ---
 title: 不完全階層 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- ragged hierarchies [Analysis Services]
-ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: 16
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c1a8c252af66d893a6fe540da71d05fcb09ad8e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8def84c48c3764d81b9510c1ccf6f244e8efeec8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>使用者定義階層-不完全階層
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]不完全的階層是使用者定義階層層級中以不平均的數目。 常見範例包括組織圖 (高階主管同時擁有部門主管級和非主管級直屬員工)，或由國家/地區-區域-城市組成的地理階層 (其中部分城市缺少父州或省，例如華盛頓特區、梵蒂岡或新德里)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  不完全階層是所含層級數目不平均的使用者定義階層。 常見範例包括組織圖 (高階主管同時擁有部門主管級和非主管級直屬員工)，或由國家/地區-區域-城市組成的地理階層 (其中部分城市缺少父州或省，例如華盛頓特區、梵蒂岡或新德里)。  
   
  維度中大多數階層每一個層級的上一層級，其成員數與相同層級的任何其他成員相同。 不完全階層的不同之處在於，至少一個成員的邏輯父成員不在成員的上一層級內。 若發生此情形，階層會向下延伸至不同層級的不同鑽研路徑。 在用戶端應用程式中，這會使得向下鑽研路徑變得很複雜。  
   
@@ -60,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]。 將 **HideMemberIf** 設定為底下描述的其中一個值。  
   
-    |HideMemberIf 設定|描述|  
+    |HideMemberIf 設定|Description|  
     |--------------------------|-----------------|  
     |**永不**|永不隱藏層級成員。 這是預設值。|  
     |**OnlyChildWithNoName**|當層級成員是父系的唯一子系，且其名稱是 Null 或空白字串時，會隱藏層級成員。|  
@@ -71,15 +62,15 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_Mdx"></a> 設定 MDX 相容性以決定如何在用戶端應用程式中表示預留位置  
  在階層層級上設定 **HideMemberIf** 之後，您也應該在從用戶端應用程式傳送的連接字串中設定 **MDX Compatibility** 屬性。 **MDX Compatibility** 設定決定是否使用 **HideMemberIf** 。  
   
-|MDX 相容性設定|描述|使用方式|  
+|MDX 相容性設定|Description|使用方式|  
 |-------------------------------|-----------------|-----------|  
 |**1**|顯示預留位置的值。|這是 Excel、SSDT 和 SSMS 使用的預設值。 它會指示伺服器在不完全階層中向下鑽研空的層級時，傳回預留位置的值。 如果您按一下預留位置的值，您可以繼續往下前往子節點 (分葉節點)。<br /><br /> Excel 擁有用來連接到 Analysis Services 的連接字串，而且它永遠都會針對每個新的連接將 **MDX Compatibility** 設定為 1。 這個行為會保留回溯相容性。|  
 |**2**|隱藏預留位置的值 (Null 值或父層級的重複)，但是會顯示具有相關值的其他層級和節點。|就不完全階層而言，**MDX Compatibility**=2 通常會視為慣用設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和某些協力廠商用戶端應用程式可以保留這項設定。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立使用者定義階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [使用者階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [父子式維度](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
- [連接字串屬性 &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [連接字串屬性 & #40;Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

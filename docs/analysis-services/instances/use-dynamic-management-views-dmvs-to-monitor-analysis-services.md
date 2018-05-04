@@ -1,30 +1,23 @@
 ---
-title: "使用動態管理檢視 (Dmv) 監視 Analysis Services |Microsoft 文件"
-ms.custom: 
-ms.date: 12/15/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 使用動態管理檢視 (Dmv) 監視 Analysis Services |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
-caps.latest.revision: "16"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 07565f6092a8f4e642234038c05a0f83024ce6a4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ee7347ae48a73a7c24caf3b2fbf188a9ebb827fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用動態管理檢視 (DMV) 監視 Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 動態管理檢視 (DMV) 是公開本機伺服器作業和伺服器健全狀況的相關資訊的查詢結構。 查詢結構是傳回 Analysis Services 執行個體中繼資料和監視資訊之結構描述資料列集的介面。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Analysis Services 動態管理檢視 (DMV) 是公開本機伺服器作業和伺服器健全狀況相關資訊的查詢結構。 查詢結構是傳回 Analysis Services 執行個體中繼資料和監視資訊之結構描述資料列集的介面。  
   
  對於大多數 DMV 查詢，都是將 **SELECT** 陳述式和 **$System** 結構描述搭配 XML/A 結構描述資料列集使用。  
   
@@ -34,12 +27,12 @@ SELECT * FROM $System.<schemaRowset>
   
  DMV 查詢傳回查詢執行當時的伺服器狀態資訊。 若要即時監視作業，請改用追蹤。 如需詳細資訊，請參閱 [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
   
-##  <a name="bkmk_ben"></a>使用 DMV 查詢的優勢  
+##  <a name="bkmk_ben"></a> 使用 DMV 查詢的優勢  
  DMV 查詢所傳回的作業和資源耗用資訊，無法透過其他方式提供。  
   
  DMV 查詢是執行 XML/A Discover 命令的替代方法。 對於大多數系統管理員，撰寫 DMV 查詢比較簡單，因為查詢語法以 SQL 為基礎。 此外，結果集是以表格格式傳回，更易於讀取和複製。  
   
-##  <a name="bkmk_ex"></a>範例和案例  
+##  <a name="bkmk_ex"></a> 範例和案例  
  DMV 查詢有助於回答有關使用中工作階段和連接的問題，以及哪些物件在特定時間點耗用最多 CPU 或記憶體的問題。 本節提供最常使用 DMV 查詢的案例範例。 您也可以檢閱＜ [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) ＞，以取得使用 DMV 查詢監視伺服器執行個體的其他見解。  
   
  `Select * from $System.discover_object_activity` /** 此查詢報告自上次啟動服務後的物件活動。 如需以此 DMV 為基礎的範例查詢，請參閱 [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)。  
@@ -50,7 +43,7 @@ SELECT * FROM $System.<schemaRowset>
   
  `Select * from $System.discover_locks` /** 此查詢傳回在特定時間點所用鎖定的快照集。  
   
-##  <a name="bkmk_syn"></a>查詢語法  
+##  <a name="bkmk_syn"></a> 查詢語法  
  DMV 的查詢引擎是資料採礦剖析器。 DMV 查詢語法以 [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md) 陳述式為基礎。  
   
  雖然 DMV 查詢語法以 SQL SELECT 陳述式為基礎，但不支援 SELECT 陳述式的完整語法。 特別是，JOIN、GROUP BY、LIKE、CAST 和 CONVERT 也不受支援。  
@@ -75,14 +68,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a>工具和權限  
+##  <a name="bkmk_tools"></a> 工具和權限  
  您必須具有 Analysis Services 執行個體的系統管理員權限，才能查詢 DMV。  
   
  您可以使用任何支援 MDX 或 DMX 查詢的用戶端應用程式，包括 SQL Server Management Studio、Reporting Services 報表或 PerformancePoint 儀表板。  
   
  若要從 Management Studio 執行 DMV 查詢，請連接到您要查詢的執行個體，然後按一下 **[新增查詢]**。 可從 MDX 或 DMX 查詢視窗執行查詢。  
   
-##  <a name="bkmk_ref"></a>DMV 參考  
+##  <a name="bkmk_ref"></a> DMV 參考  
  並不是所有結構描述資料列集都有 DMV 介面。 若要傳回可透過 DMV 查詢之所有結構描述資料列集的清單，請使用下列查詢。  
   
 ```  
@@ -94,7 +87,7 @@ ORDER BY TABLE_NAME ASC
 > [!NOTE]  
 >  如果 DMV 不適用於給定的資料列集，伺服器會傳回下列錯誤:" \<schemarowset > 伺服器無法辨識要求類型 」。 所有其他錯誤都指向語法問題。  
   
-|資料列集|描述|  
+|資料列集|說明|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS 資料列集](../../analysis-services/schema-rowsets/ole-db/dbschema-catalogs-rowset.md)|傳回目前連接上 Analysis Services 資料庫的清單。|  
 |[DBSCHEMA_COLUMNS 資料列集](../../analysis-services/schema-rowsets/ole-db/dbschema-columns-rowset.md)|傳回目前資料庫中所有資料行的清單。 您可以使用此清單來建構 DMV 查詢。|  
@@ -110,7 +103,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_ENUMERATORS 資料列集](../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|傳回有關特定資料來源所支援之列舉值的中繼資料。|  
 |[DISCOVER_INSTANCES 資料列集](../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|傳回指定之執行個體的相關資訊。<br /><br /> 需要加入 SYSTEMRESTRICTSCHEMA 和其他參數。|  
 |[DISCOVER_JOBS 資料列集](../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|傳回目前作業的相關資訊。|  
-|[DISCOVER_KEYWORDS 資料列集 &#40;XMLA&#41;](../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|傳回保留關鍵字的清單。|  
+|[DISCOVER_KEYWORDS 資料列集 & #40;XMLA & #41;](../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|傳回保留關鍵字的清單。|  
 |[DISCOVER_LITERALS 資料列集](../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|傳回 XMLA 所支援常值的清單，包括資料類型和值。|  
 |[DISCOVER_LOCKS 資料列集](../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|傳回在特定時間點所用鎖定的快照集。|  
 |[DISCOVER_MEMORYGRANT 資料列集](../../analysis-services/schema-rowsets/xml/discover-memorygrant-rowset.md)|傳回 Analysis Services 在啟動時所配置記憶體的相關資訊。|  
@@ -158,6 +151,6 @@ ORDER BY TABLE_NAME ASC
   
 ## <a name="see-also"></a>另請參閱   
  [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [限制資料列集和 Dmv 的新 SYSTEMRESTRICTEDSCHEMA 函數](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [限制資料列集和 DMV 的新 SYSTEMRESTRICTEDSCHEMA 函數](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

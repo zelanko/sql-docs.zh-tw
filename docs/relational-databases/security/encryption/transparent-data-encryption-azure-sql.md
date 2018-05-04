@@ -15,16 +15,17 @@ ms.custom: ''
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 08/07/2017
+ms.date: 04/10/2018
 ms.author: rebeccaz
-ms.openlocfilehash: 45e4c702e2f08ce6e7c39463ac49c98701646f37
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: fd5186e4a069b76108ad0c8cd4e91497e618a195
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>SQL Database 和資料倉儲的透明資料加密
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 透明資料加密可協助 Azure SQL Database 和 Azure 資料倉儲防範惡意活動所帶來的威脅。 它可即時執行資料庫、相關聯備份及交易記錄檔的即時加密與解密，完全無須變更應用程式。
 
@@ -44,9 +45,9 @@ Microsoft 也會順暢地移動和管理金鑰，以滿足異地複寫和還原�
 > 根據預設，所有新建立的 SQL 資料庫會以受控服務的透明資料加密來加密。 現有的資料庫和 2017 年 5 月以前透過還原、異地複寫和資料庫複本建立的資料庫，則預設為不加密。
 >
 
-## <a name="bring-your-own-key-preview"></a>攜帶您自己的金鑰 (預覽)
+## <a name="bring-your-own-key"></a>自行管理金鑰
 
-透過攜帶您自己的金鑰 (預覽) 支援，可讓您充分掌控透明資料加密金鑰，並控制存取的人員與時間。 Key Vault 是 Azure 的雲端式外部金鑰管理系統，也是透明資料加密與「攜帶您自己的金鑰」支援整合的第一項金鑰管理服務。 使用「攜帶您自己的金鑰」支援，資料庫加密金鑰即受到儲存在 Key Vault 的非對稱金鑰保護。 非對稱金鑰永遠不會離開 Key Vault。 伺服器擁有 Key Vault 的權限之後，伺服器就會透過 Key Vault，將基本金鑰的作業要求傳送給它。 請在伺服器層級設定非對稱金鑰，因此歸屬於該伺服器底下的所有資料庫都會繼承此金鑰。
+透過攜帶您自己的金鑰支援，可讓您充分掌控透明資料加密金鑰，並控制存取的人員與時間。 Key Vault 是 Azure 的雲端式外部金鑰管理系統，也是透明資料加密與「攜帶您自己的金鑰」支援整合的第一項金鑰管理服務。 使用「攜帶您自己的金鑰」支援，資料庫加密金鑰即受到儲存在 Key Vault 的非對稱金鑰保護。 非對稱金鑰永遠不會離開 Key Vault。 伺服器擁有 Key Vault 的權限之後，伺服器就會透過 Key Vault，將基本金鑰的作業要求傳送給它。 請在伺服器層級設定非對稱金鑰，因此歸屬於該伺服器底下的所有資料庫都會繼承此金鑰。
 
 利用「攜帶您自己的金鑰」支援，您現在可以控制金鑰管理工作，例如金鑰輪替和 Key Vault 權限。 您也可以刪除金鑰，以及對所有加密金鑰啟用稽核/報告功能。 Key Vault 提供集中式金鑰管理，並且使用受嚴密監視的硬體安全性模組。 Key Vault 促使分開管理金鑰和資料，以協助符合法規相符性。 若要深入了解 Key Vault，請參閱 [Key Vault 文件頁面](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)。
 

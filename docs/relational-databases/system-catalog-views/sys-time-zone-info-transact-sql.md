@@ -28,13 +28,12 @@ caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d2eff1feb09046d592f88f63d3d12ad734eb930
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6c652ad6e9db451d490d8803f9689e9e82b1c231
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Windows 標準格式的時區名稱。 例如， **cen。澳大利亞標準時間**或**歐洲中部標準時間**。|  
-|**current_utc_offset**|**nvarchar(12)**|目前的 UTC 的位移。 例如， **+ 01:00**或**-07:00**。|  
+|**current_utc_offset**|**nvarchar(12)**|目前的 UTC 的位移。 例如， **+ 01:00**或 **-07:00**。|  
 |**is_currently_dst**|**bit**|如果目前觀察日光節約時間，則為 true。|  
   
 ## <a name="see-also"></a>另請參閱  

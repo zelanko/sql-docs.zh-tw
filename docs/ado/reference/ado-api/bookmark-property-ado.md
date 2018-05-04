@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 97bf0ae26c06ee25b5a41e43fb2fa0c026ae6540
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4bf6ae9d0ca300aa6db2665a52a27aace52b6bcc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bookmark-property-ado"></a>書籤 屬性 (ADO)
 指出目前的記錄中的唯一識別書籤[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件或設定目前資料錄**資料錄集**有效書籤所識別的記錄中的物件。  

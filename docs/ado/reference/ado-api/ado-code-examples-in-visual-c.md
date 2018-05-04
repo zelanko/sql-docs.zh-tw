@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 222e2a54890fd44f98d6a4c0085dcad5b6022eb9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4a27956d89b96a9da44fa7e546e25b4c9681aba9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual c + + 中的 ADO 程式碼範例
 若要了解如何使用 ADO 方法、 屬性和事件時寫入 Microsoft Visual c + + 中使用下列程式碼範例。  

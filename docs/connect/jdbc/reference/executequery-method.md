@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="executequery-method-"></a>executeQuery 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在這個執行 SQL 查詢[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)物件並傳回[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)查詢所產生的物件。  
+  在這個 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件中執行 SQL 查詢，並傳回此查詢所產生的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,11 +48,11 @@ public java.sql.ResultSet executeQuery()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 executeQuery 方法是由 java.sql.PreparedStatement 介面中的 executeQuery 方法來指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [executeQuery 方法&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   
+ [executeQuery 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement 類別](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b352fe818402cbad25af99a4ca336704b331a4f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -118,7 +117,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>字串  
  下列範例示範使用**產生**傳回的字串：  
   
 ```  
@@ -138,9 +137,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  這種形式的**產生**函式有助於進行偵錯計算，因為它可讓您傳回一個字串來顯示集合中所有成員的名稱。 這可能是一組的嚴格 MDX 表示比閱讀， [SetToStr &#40;MDX &#41;](../mdx/settostr-mdx.md)函式會傳回。  
+>  這種形式的**產生**函式有助於進行偵錯計算，因為它可讓您傳回一個字串來顯示集合中所有成員的名稱。 這可能是一組的嚴格 MDX 表示比閱讀， [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)函式會傳回。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

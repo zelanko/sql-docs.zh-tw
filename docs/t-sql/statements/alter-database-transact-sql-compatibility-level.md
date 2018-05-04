@@ -1,8 +1,8 @@
 ---
 title: ALTER DATABASE 相容性層級 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/30/2018
-ms.prod: sql-non-specified
+ms.date: 04/18/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: ''
+caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d22ee796f75c4c4736c983801a63293b8a44e7cb
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 4fba23a746773bf24f8d2e130bd7e445f8f796df
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,13 +73,11 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 |SQL Server 2000|8|80|80|  
   
 > [!NOTE]  
-> **Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** V12 已在 2014 年 12 月發行。 該版本的其中一個層面為新建立資料庫的相容性層級會設為 120。 SQL Database 於 2015 年開始支援層級 130，雖然預設值保持為 120。  
+> 從 **2018 年 1 月**開始，在 SQL Database 中，新建資料庫的預設相容性層級是 140。 我們不會更新現有資料庫的資料庫相容性層級。 這是由客戶自己決定。 不過，強烈建議客戶規劃移至最新相容性層級，以利用最新的增強功能。
 > 
-> 從 **2016 年 6 月中旬**在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，**新建立**資料庫的預設相容性層級為 130，而不是 120。 在 2016 年 6 月中旬之前建立的現有資料庫不會受到影響，並且會維持其目前的相容性層級 (100、110 或 120)。 
-> 
-> 如果您一般想要讓資料庫為層級 130，但有理由偏好使用層級 110 **基數估計**演算法，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特別是它的關鍵字 `LEGACY_CARDINALITY_ESTIMATION = ON`。  
+> 如果您一般想要讓資料庫具有層級 140，則有理由偏好使用層級 110 **基數估計**演算法，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特別是它的關鍵字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
 >  
->  如需有關如何評估您 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]最重要查詢的效能差異，請參閱[在 Azure SQL Database 中使用相容性層級 130 改善查詢效能](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
+>  如需有關如何評估您 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]最重要查詢的效能差異，請參閱[在 Azure SQL Database 中使用相容性層級 130 改善查詢效能](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。 請注意，本文是指相容性層級 130 和 SQL Server，但 SQL Server 和 Azure SQL DB 使用相同的方法移至 140。
 
 
  請執行以下查詢已判斷您所連線的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本。  
@@ -99,6 +97,9 @@ SELECT name, compatibility_level FROM sys.databases;
   
 ## <a name="remarks"></a>Remarks  
 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有安裝，預設相容性層級設定為 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。 資料庫會設定為這個層級，除非 **model** 資料庫具有更低的相容性層級。 當資料庫從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級時，資料庫會保留其現有的相容性層級 (如果它至少為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體所允許的最低層級)。 升級相容性層級低於所允許層級的資料庫時，請將資料庫設定為允許的最低相容性層級。 這同樣適用於系統和使用者資料庫。 使用 **ALTER DATABASE** 可變更資料庫的相容性層級。 若要檢視資料庫目前的相容性層級，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 **compatibility_level** 資料行。  
+
+> [!NOTE]  
+> 舊版 SQL Server 所建立並升級至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 或 Service Pack 1 的[散發資料庫](../../relational-databases/replication/distribution-database.md)具有相容性層級 90，其他資料庫則不予支援。 這不會影響複寫功能。 升級至更新版本的 Service Pack 和 SQL Server 版本會增加散發資料庫的相容性層級，以符合 **master** 資料庫的相容性層級。
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>使用相容性層級來提供回溯相容性  
  相容性層級只會影響指定之資料庫的行為，而不會影響整個伺服器的行為。 相容性層級只會提供與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的部分回溯相容性。 從相容性模式 130 開始，任何會影響功能的新查詢計畫都只新增到新的相容性模式。 這種作法是為了將升級期間因查詢計畫變更導致效能降低而產生的風險降到最低。 從應用程式觀點而言，目標仍是使用最新的相容性層級，以繼承一些新功能，以及在查詢最佳化工具空間中完成的效能改進，但以受控制的方式進行。 請使用相容性層級做為暫時移轉協助，協助您解決相關相容性層級設定所控制之行為的版本差異。 如需詳細資訊，請參閱位於文章中較後面位置的升級最佳作法。  

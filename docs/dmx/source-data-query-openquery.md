@@ -22,12 +22,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6e8c250b96c2da83e6dd34263ccddeb622a67050
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ed189fdef9d1d2d96d8100276d3a97779a08ac7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;來源資料查詢&gt;-OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  傳回資料列集的查詢語法。  
   
 ## <a name="remarks"></a>備註  
- **OPENQUERY**提供更安全的方式來存取外部資料支援資料來源權限。 因為連接字串儲存在資料來源中，所以管理員可以使用資料來源的屬性管理資料的存取。 如需有關資料來源的詳細資訊，請參閱[支援資料來源 &#40;SSAS-多維度 &#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ **OPENQUERY**提供更安全的方式來存取外部資料支援資料來源權限。 因為連接字串儲存在資料來源中，所以管理員可以使用資料來源的屬性管理資料的存取。 如需有關資料來源的詳細資訊，請參閱[支援資料來源&#40;SSAS-多維度&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
   
  您可以取得一份藉由查詢可用的伺服器的資料來源**MDSCHEMA_INPUT_DATASOURCES**結構描述資料列。 如需有關使用**MDSCHEMA_INPUT_DATASOURCES**，請參閱[MDSCHEMA_INPUT_DATASOURCES 資料列集](../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)。  
   
@@ -64,9 +63,9 @@ OPENQUERY(<named datasource>, <query syntax>)
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [&#60; 來源資料查詢 &#62;](../dmx/source-data-query.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [&#60;來源資料查詢&#62;](../dmx/source-data-query.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

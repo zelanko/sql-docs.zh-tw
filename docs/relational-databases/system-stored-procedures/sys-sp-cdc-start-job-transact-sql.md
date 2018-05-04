@@ -26,12 +26,11 @@ caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f6da7580ac6d1b36c07c7de2f96a0b8deae0c00c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e6f1ea5ab32f17ca3d6a75f0683d23fb5b3038f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>引數  
  [[  **@job_type=** ] **'***job_type***'** ]  
- 要加入的作業類型。 *job_type*是**nvarchar （20)**預設值是**擷取**。 有效輸入如下：**擷取**和**清除**。  
+ 要加入的作業類型。 *job_type*是**nvarchar （20)** 預設值是**擷取**。 有效輸入如下：**擷取**和**清除**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

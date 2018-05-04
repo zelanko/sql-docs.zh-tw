@@ -22,13 +22,12 @@ caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b5163ef5cea7268824b8b9f5e0fe35911ab4a2f8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e186f21502f29572b5de457a021485a212dc767e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>從 MDAC 將應用程式更新至 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -110,7 +109,7 @@ ms.lasthandoff: 04/16/2018
     |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
   
-     此類型對應會影響資料行中繼資料傳回的值。 比方說，**文字**資料行有大小上限為 2147483647，但是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 報告的最大大小**varchar （max)**資料行做為 SQL_SS_LENGTH_UNLIMITED 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 報告的最大大小**varchar （max)**為 2,147,483,647 或-1，根據平台的資料行。  
+     此類型對應會影響資料行中繼資料傳回的值。 比方說，**文字**資料行有大小上限為 2147483647，但是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 報告的最大大小**varchar （max)** 資料行做為 SQL_SS_LENGTH_UNLIMITED 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 報告的最大大小**varchar （max)** 為 2,147,483,647 或-1，根據平台的資料行。  
   
 -   基於回溯相容性的理由，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 允許模稜兩可的連接字串 (例如，某些關鍵字可能會指定一次以上，而且可能會允許衝突的關鍵字，好讓解決方法以位置或優先順序為根據)。 未來的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 版本可能不允許模稜兩可的連接字串。 當修改應用程式，以便使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 來移除對於模稜兩可之連接字串的任何相依性時，這就是很好的作法。  
   

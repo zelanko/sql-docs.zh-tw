@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - SQLSetPos function [ODBC], long data and SQLBulkOperations
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82a51c05c5f40c2f4b2fb24f8b3e43e09d6d4514
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e19c9d7c61960e61455cee6a589dc5bcd6de0e22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long 資料和 SQLSetPos SQLBulkOperations
 更新資料列時，使用 SQL 陳述式中的參數案例一樣，可以傳送長資料**SQLBulkOperations**或**SQLSetPos**或插入資料列時**SQLBulkOperations**. 資料會使用多個呼叫的組件，以傳送**SQLPutData**。 在執行階段資料會傳送的資料行稱為*資料在執行中資料行*。  

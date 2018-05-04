@@ -1,35 +1,23 @@
 ---
-title: "將帳戶智慧加入維度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 將帳戶智慧加入維度 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], Business Intelligence enhancements
-- Business Intelligence enhancements [Analysis Services], account intelligence
-- account intelligence [Analysis Services]
-ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6f8d62ccc2fe1a5ec8983c406f7c47153744eeed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 精靈-將帳戶智慧加入維度中
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-將帳戶智慧增強功能加入至 Cube 或維度中，以便將標準會計科目分類 (例如收益與費用) 指派給帳戶屬性的成員。 此增強功能也會識別科目類型 (例如資產和負債)，並對每一個科目類型指派適當的彙總。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可使用彙總科目分類經過一段時間。  
+  將帳戶智慧增強功能加入至 Cube 或維度中，以便將標準會計科目分類 (例如收益與費用) 指派給帳戶屬性的成員。 此增強功能也會識別科目類型 (例如資產和負債)，並對每一個科目類型指派適當的彙總。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可使用彙總科目分類經過一段時間。  
   
 > [!NOTE]  
 >  只有以現有的資料來源為基礎的維度才可使用帳戶智慧。 對於沒有使用資料來源建立的維度，在加入帳戶智慧之前，您必須執行結構描述產生精靈來建立資料來源檢視。  
@@ -43,7 +31,7 @@ ms.lasthandoff: 02/15/2018
  在精靈的 **[設定維度屬性]** 頁面上，您可以指定已選取之帳戶維度中的帳戶屬性。 首先，在 **[包含]** 資料行中，選取您要對應到維度中之維度資料表每一個帳戶屬性類型旁邊的核取方塊。 然後，在 [維度屬性] 資料行中，展開下拉式清單，並在維度中選取對應到所選取之屬性類型的屬性。 從清單中選取屬性，會設定帳戶屬性的 **Type** 屬性。  
   
 ## <a name="mapping-account-types"></a>對應帳戶類型  
- 第二個 **[定義帳戶智慧]** 頁面將維度資料表中的帳戶類型值，對應到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所辨識的帳戶類型。 唯有當您在維度中包含 **[帳戶類型]** 維度屬性時，這個頁面才會出現。 若要包含 **[帳戶類型]** 維度，請在精靈的 **[定義帳戶智慧設定]** 頁面上，選取 **[帳戶類型]**旁邊的核取方塊，然後選取適當的屬性。  
+ 第二個 **[定義帳戶智慧]** 頁面將維度資料表中的帳戶類型值，對應到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所辨識的帳戶類型。 唯有當您在維度中包含 **[帳戶類型]** 維度屬性時，這個頁面才會出現。 若要包含 **[帳戶類型]** 維度，請在精靈的 **[定義帳戶智慧設定]** 頁面上，選取 **[帳戶類型]** 旁邊的核取方塊，然後選取適當的屬性。  
   
  在第二個 **[定義帳戶智慧]** 頁面上，有兩個資料行：  
   
@@ -68,7 +56,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  在方案總管中，以滑鼠右鍵按一下 Analysis Services 專案，然後按一下 [編輯資料庫]。  
   
-2.  在 **[帳戶類型對應]** 方塊中，於 **[名稱]**中選取帳戶類型。  
+2.  在 **[帳戶類型對應]** 方塊中，於 **[名稱]** 中選取帳戶類型。  
   
 3.  在 **[別名]** 文字方塊中，輸入此帳戶類型的別名。  
   

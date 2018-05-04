@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLColAttribute function [ODBC], and SQLDescribeCol
 - SQLDescribeCol function [ODBC], and SQLColAttribute
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f3e09d40f81753029de94a480519540ebe6ef07
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4a46107b85766a528fece7968fe812362fddc2de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol 和 SQLColAttribute
 **SQLDescribeCol**和**SQLColAttribute**用來擷取結果集中繼資料。 這兩個函數之間的差異在於**SQLDescribeCol**一律會傳回相同的五項時的資訊 （資料行的名稱、 資料類型、 有效位數、 小數位數和 null 屬性）， **SQLColAttribute**傳回單一的應用程式要求的資訊。 不過， **SQLColAttribute**可以傳回更豐富的選取範圍的中繼資料，包括資料行的區分大小寫，顯示大小、 可更新性，以及搜尋能力。  

@@ -1,35 +1,34 @@
 ---
-title: "決策樹模型的採礦模型內容 |Microsoft 文件"
-ms.custom: 
+title: 決策樹模型的採礦模型內容 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9ae8003c36f844598eb31798ec4b93092193474d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。 請務必記住，Microsoft 決策樹演算法是一種混合式演算法，可以建立功能非常不同的模型：決策樹可以代表關聯、規則，甚至線性迴歸。 樹狀結構基本上相同，但是您解譯資訊的方式將取決於建立模型的目的。  
+  本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。 請務必記住，Microsoft 決策樹演算法是一種混合式演算法，可以建立功能非常不同的模型：決策樹可以代表關聯、規則，甚至線性迴歸。 樹狀結構基本上相同，但是您解譯資訊的方式將取決於建立模型的目的。  
   
 ##  <a name="bkmk_Top"></a> 了解決策樹模型的結構  
  決策樹模型擁有代表模型及其中繼資料的單一父節點。 父節點下為獨立的樹狀結構，代表您選取的可預測屬性。 例如，如果您設定決策樹模型來預測客戶是否會購買某樣東西，而且提供性別和收入的輸入，此模型就會建立購買屬性的單一樹狀結構，其中包含針對性別和收入相關條件分類的許多分支。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 02/15/2018
  不過，如果您接著要加入個別的可預測屬性來參與顧客獎勵計畫，此演算法將會在父節點下建立兩個個別的樹狀結構。 其中一個樹狀結構包含購買的分析，而另一個樹狀結構則包含顧客獎勵計畫的分析。  如果您使用決策樹演算法來建立關聯模型，此演算法會為每個要進行預測的產品建立一個個別的樹狀結構，而且該樹狀結構會包含可選取之目標屬性的其他所有產品組合。  
   
 > [!NOTE]  
->  如果您的模型包含多個樹狀結構，可以在 **[Microsoft 樹狀檢視器]**中，一次僅檢視一個樹狀結構。 不過，在 **[一般內容樹狀檢視器]** 中，相同模型中的所有樹狀結構會同時顯示出來。  
+>  如果您的模型包含多個樹狀結構，可以在 **[Microsoft 樹狀檢視器]** 中，一次僅檢視一個樹狀結構。 不過，在 **[一般內容樹狀檢視器]** 中，相同模型中的所有樹狀結構會同時顯示出來。  
   
  ![決策樹模型內容結構](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "的決策樹模型內容結構")  
   
@@ -213,7 +212,7 @@ ms.lasthandoff: 02/15/2018
  以 XML 片段表示的屬性可以很簡單，也可以很複雜。 簡單的屬性包含模型資料行的名稱以及屬性的值。 如果模型資料行包含巢狀資料表，巢狀資料表屬性會以資料表名稱、索引鍵值和屬性的串連表示。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援 2.0 版的 PMML 標準，其擴充模組支援巢狀資料表使用。 如果您的資料包含巢狀資料表，而且您要產生 PMML 版本的模型，模型中包含預測的所有元素都會標示為闊重模組。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援 2.0 版的 PMML 標準，其擴充模組支援巢狀資料表的使用。 如果您的資料包含巢狀資料表，而且您要產生 PMML 版本的模型，模型中包含預測的所有元素都會標示為闊重模組。  
   
  [頂端](#bkmk_Top)  
   
@@ -301,7 +300,7 @@ ms.lasthandoff: 02/15/2018
  如需迴歸節點的詳細資訊，請參閱[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [採礦模型內容 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 決策樹演算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

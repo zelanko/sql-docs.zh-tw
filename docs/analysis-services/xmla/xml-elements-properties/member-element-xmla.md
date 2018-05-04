@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82690ec66dfcb96787ea592a8d32c3826ee8776f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 13e83f71155ed71c29f51b14109ca055badf1721
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-element-xmla"></a>Member 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]表示父系中的單一成員[成員](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)或[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  表示父系中的單一成員[成員](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)或[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -81,18 +81,18 @@ ms.lasthandoff: 01/08/2018
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[成員](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)， [Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)|  
-|子元素|[標題](../../../analysis-services/xmla/xml-elements-properties/caption-element-xmla.md)， [DisplayInfo](../../../analysis-services/xmla/xml-elements-properties/displayinfo-element-xmla.md)， [LName](../../../analysis-services/xmla/xml-elements-properties/lname-element-xmla.md)， [LNum](../../../analysis-services/xmla/xml-elements-properties/lnum-element-xmla.md)， [UName](../../../analysis-services/xmla/xml-elements-properties/uname-element-xmla.md)|  
+|子元素|[Caption](../../../analysis-services/xmla/xml-elements-properties/caption-element-xmla.md), [DisplayInfo](../../../analysis-services/xmla/xml-elements-properties/displayinfo-element-xmla.md), [LName](../../../analysis-services/xmla/xml-elements-properties/lname-element-xmla.md), [LNum](../../../analysis-services/xmla/xml-elements-properties/lnum-element-xmla.md), [UName](../../../analysis-services/xmla/xml-elements-properties/uname-element-xmla.md)|  
   
 ## <a name="attributes"></a>屬性  
   
-|attribute|描述|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |階層|需要**字串**屬性 (父**Tuple**僅元素)。 代表由之成員的階層名稱**成員**所屬項目。|  
   
 ## <a name="remarks"></a>備註  
  **成員**元素包含找出並顯示指定的階層內的成員所需的資訊。 父**成員**項目，由已指定階層**階層**父項目的屬性。 父**Tuple**項目，使用指定的階層**階層**屬性**成員**項目。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

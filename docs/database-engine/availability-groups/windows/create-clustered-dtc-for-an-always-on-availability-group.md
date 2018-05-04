@@ -1,30 +1,32 @@
 ---
-title: "建立 AlwaysOn 可用性群組的叢集 DTC | Microsoft Docs"
-ms.custom: 
+title: 建立 AlwaysOn 可用性群組的叢集 DTC | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c766dd57d08e1673c4fb3231a6a7ba86af26886f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>建立 AlwaysOn 可用性群組的叢集 DTC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題將逐步引導您完成 SQL Server AlwaysOn 可用性群組之叢集 DTC 資源的設定。 完整組態最多可能需要一小時才能完成。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主題將逐步引導您完成 SQL Server AlwaysOn 可用性群組之叢集 DTC 資源的組態。 完整組態最多可能需要一小時才能完成。 
 
 本逐步解說會配合[針對 SQL Server 可用性群組叢集化 DTC](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) 中的需求，來建立叢集 DTC 資源和 SQL Server 可用性群組。
 
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/18/2018
   - DTC IP 資源：`DTCIP1`
 
 ## <a name="1-check-operating-system"></a>1.檢查作業系統
-針對支援的分散式交易，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必須在 Windows Server 2016 或 Windows Server 2012 R2 上執行。  針對 Windows Server 2012 R2，您必須安裝 [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)上所提供 KB3090973 中的更新。  此指令碼會檢查作業系統版本，以及是否必須安裝 Hotfix 3090973。  在 `SQLNODE1` 上執行下列 PowerShell 指令碼。
+針對支援的分散式交易，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必須在 Windows Server 2016 或 Windows Server 2012 R2 上執行。  針對 Windows Server 2012 R2，您必須安裝 [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) 上所提供 KB3090973 中的更新。  此指令碼會檢查作業系統版本，以及是否必須安裝 Hotfix 3090973。  在 `SQLNODE1` 上執行下列 PowerShell 指令碼。
 
 ```powershell  
 # A few OS checks

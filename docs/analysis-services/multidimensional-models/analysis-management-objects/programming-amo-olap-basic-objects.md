@@ -1,34 +1,19 @@
 ---
-title: "程式設計 AMO OLAP 基本物件 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 
-author: Minewiskan
+title: 程式設計 AMO OLAP 基本物件 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6df874fb1819f2360991d19557090aa30dec1a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>設計 AMO OLAP 基本物件的程式
   建立複雜的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件既簡單又直接，但是需要注意細節。 本主題說明 OLAP 基本物件的程式設計詳細資料。 本主題包含下列幾節：  
@@ -168,7 +153,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>處理維度  
  處理維度就像使用 <xref:Microsoft.AnalysisServices.Dimension> 物件的 Process 方法一樣簡單。  
   
- 處理維度有可能會影響所有使用維度的 Cube。 如需有關處理選項的詳細資訊，請參閱[處理多維度模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 處理維度有可能會影響所有使用維度的 Cube。 如需有關處理選項的詳細資訊，請參閱[處理多維度模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  下列程式碼在提供的資料庫之所有維度中執行累加式更新：  
   
@@ -255,7 +240,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>處理 Cube  
  處理 Cube 就像使用 <xref:Microsoft.AnalysisServices.Cube> 物件的 Process 方法一樣簡單。 處理 Cube 也會處理 Cube 中的所有量值群組，以及量值群組中的所有資料分割。 在 Cube 中，資料分割是可以處理的唯一物件，就處理的目的而言，量值群組只是資料分割的容器。 處理 Cube 的指定類型會傳播到資料分割。 在內部處理 Cube 和量值群組會解析成維度與資料分割的處理。  
   
- 如需有關處理選項的詳細資訊，請參閱[處理物件 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)，和[處理多維度模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 如需有關處理選項的詳細資訊，請參閱[處理物件&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)，和[處理多維度模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  下列程式碼將會在指定資料庫中的所有 Cube 上執行完整的處理：  
   
@@ -422,7 +407,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### <a name="processing-a-measure-group"></a>處理量值群組  
  處理量值群組就像使用 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件的 Process 方法一樣簡單。 處理量值群組將處理所有屬於量值群組的資料分割。 在內部處理量值群組會解析成處理維度與資料分割。 請參閱[處理資料分割](#ProcPart)本文件中。  
   
- 如需有關處理選項的詳細資訊，請參閱[處理物件 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)，和[處理多維度模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 如需有關處理選項的詳細資訊，請參閱[處理物件&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)，和[處理多維度模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  下列程式碼將在提供之 Cube 的所有量值群組中執行完整的處理。  
   
@@ -434,7 +419,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part">分割區物件</a>  
+##  <a name="Part"></a>分割區物件  
  若要管理或是處理資料分割，請設計 <xref:Microsoft.AnalysisServices.Partition> 物件的程式。  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>建立、卸除和尋找資料分割  
@@ -488,7 +473,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> 處理資料分割  
  處理資料分割就像使用 <xref:Microsoft.AnalysisServices.Partition> 物件的 Process 方法一樣簡單。  
   
- 如需有關處理選項的詳細資訊，請參閱[處理物件 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)和[處理多維度模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 如需有關處理選項的詳細資訊，請參閱[處理物件&#40;XMLA&#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)和[處理多維度模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  下列程式碼範例在指定量值群組的所有資料分割中執行完整的處理。  
   
@@ -533,7 +518,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD">Aggregation 物件</a>  
+##  <a name="AD"></a>Aggregation 物件  
  若要設計彙總並將它套用至一或多個資料分割，請設計 <xref:Microsoft.AnalysisServices.Aggregation> 物件的程式。  
   
 ### <a name="creating-and-dropping-aggregations"></a>建立和捨棄彙總  
@@ -573,9 +558,9 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP 類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [邏輯架構 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [資料庫物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [處理多維度模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [邏輯架構 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [資料庫物件 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [處理多維度模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [安裝 Analysis services 多維度模型化教學課程的範例資料和專案](../../../analysis-services/install-sample-data-and-projects.md)  
   
   

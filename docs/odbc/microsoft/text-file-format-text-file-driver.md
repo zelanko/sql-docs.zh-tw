@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - delimited text lines
 - fixed-width text files
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 32de9cd4d9f471f53735dae1251494121d034188
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 582860c2972f205244fd3d4e9f9cae45673df66f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="text-file-format-text-file-driver"></a>文字檔案格式 （文字檔案驅動程式）
 ODBC 文字驅動程式支援分隔和固定寬度文字檔。 文字檔案是由選擇性標頭行，零或多個文字行所組成。  
@@ -49,7 +48,7 @@ ODBC 文字驅動程式支援分隔和固定寬度文字檔。 文字檔案是�
 |非斜體|必須依照顯示輸入的字元|  
 |*斜體*|在文法中其他地方定義的引數|  
 |括號 ([])|選擇性項目|  
-|大括號 （{}）|互斥的選項清單|  
+|大括號 ({})|互斥的選項清單|  
 |分隔號 (&#124;)|個別互斥的選項|  
 |省略符號 （...）|可以重複一次以上的項目|  
   

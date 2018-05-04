@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], column size
 - size of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2178697aef549d86fedfa3d4bb70c8b45ba1f68e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5c0f4111b758421dd03be3489e7da82d78e8f181
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-size"></a>資料行大小
 數值資料類型的資料行 （或參數） 的大小被定義為資料行或參數的資料類型或資料的精確度所使用的最大位數。 字元類型，這是以字元為單位的資料; 長度二進位資料類型資料行大小被定義為資料的長度以位元組為單位。 針對時間、 時間戳記和所有間隔資料型別，這是中的這項資料的字元表示法的字元數。 下表顯示每個簡潔的 SQL 資料類型所定義的資料行大小。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 |所有二進位型別 [a]、 [b]。|定義或最大長度以位元組為單位的資料行或參數。 例如，定義為 binary （10） 的資料行的長度為 10。|  
 |SQL_TYPE_DATE [c]|10 (中的字元數*yyyy-mm-dd*格式)。|  
 |SQL_TYPE_TIME [c]|8 (中的字元數*時分秒*格式)，或 9 + *s* (中的字元數*hh: mm:*[.fff …] 格式，其中*的*的秒數有效位數)。|  
-|SQL_TYPE_TIMESTAMP|16 (中的字元數*yyyy-mm-dd hh: mm*格式)<br /><br /> 19 (中的字元數*yyyy-mm-dd* *hh: mm:*格式)<br /><br /> 或<br /><br /> 20 + *s* (中的字元數*yyyy-mm-dd hh: mm:*[.fff …] 格式，其中*s*的秒數有效位數)。|  
+|SQL_TYPE_TIMESTAMP|16 (中的字元數*yyyy-mm-dd hh: mm*格式)<br /><br /> 19 (中的字元數*yyyy-mm-dd* *hh: mm:* 格式)<br /><br /> 或<br /><br /> 20 + *s* (中的字元數*yyyy-mm-dd hh: mm:*[.fff …] 格式，其中*s*的秒數有效位數)。|  
 |SQL_INTERVAL_SECOND|其中*p*是間隔開頭有效位數和*s*的秒數有效位數， *p* (如果*s*= 0) 或*p* + *s*+ 1 (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|其中*p*是間隔開頭有效位數和*s*是秒數有效位數 9 +*p* (如果*s*= 0)，或 10 +*p*+ *s* (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|其中*p*是間隔開頭有效位數和*s*是秒數有效位數 6 +*p* (如果*s*= 0) 或 7 +*p* + *s* (如果*s*> 0)。 [d]|  

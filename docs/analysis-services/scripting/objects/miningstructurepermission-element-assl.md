@@ -27,15 +27,15 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aef87c52834015311cc5302c46fd539be89e172d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7002a55d6ba81c76bb7b1bf3d96ccd2e5b4d6f7d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="miningstructurepermission-element-assl"></a>MiningStructurePermission 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義的權限的成員[角色](../../../analysis-services/scripting/objects/role-element-assl.md)針對個別的項目有[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義的權限的成員[角色](../../../analysis-services/scripting/objects/role-element-assl.md)針對個別的項目有[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|[權限](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
 |預設值|無|  
@@ -86,9 +86,9 @@ SELECT StructureColumn('<structure column name>' FROM <model>.CASES
   
  如需詳細資訊，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices.MiningModel.AllowDrillThrough%2A>   
  <xref:Microsoft.AnalysisServices.AdomdClient.MiningModel.AllowDrillThrough%2A>   
- [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [物件 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

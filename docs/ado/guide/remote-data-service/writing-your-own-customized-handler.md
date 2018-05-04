@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2aebf16b3fea3933b1ef9b565b7f76b17d8c2b71
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 77825744ef9967f030def2942170637a133163d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-your-own-customized-handler"></a>撰寫您自己的自訂處理常式
 您可能想要撰寫您自己的處理常式，您是否想要支援 RDS，預設的 IIS 伺服器系統管理員，但更充分掌控使用者的要求和存取權限。  

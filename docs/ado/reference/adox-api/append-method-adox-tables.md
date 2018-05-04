@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b0895a9f1d3a55845b746fa4e0adb37b84952047
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e6c474330f68993f41a83b0f34313fe0f7ed4f76
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="append-method-adox-tables"></a>Append 方法 （ADOX 資料表）
 將新[資料表](../../../ado/reference/adox-api/table-object-adox.md)物件[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)集合。  

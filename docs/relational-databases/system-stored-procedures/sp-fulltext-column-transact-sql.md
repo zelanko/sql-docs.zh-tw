@@ -24,13 +24,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f50c57b18d249b7f9e988b55e68338ba558aa6b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e5b40c23fb1e5ca20b97431c3f99e45603fe32ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,10 +57,10 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  這是一或兩部分的資料表名稱。 資料表必須在目前的資料庫中。 資料表必須具有全文檢索索引。 *qualified_table_name*是**nvarchar （517)**，沒有預設值。  
   
  [ **@colname=** ] **'***column_name***'**  
- 中的資料行名稱*qualified_table_name*。 這個資料行必須是 character、 **varbinary （max)**或**映像**資料行，不能是計算資料行。 *column_name*是**sysname**，沒有預設值。  
+ 中的資料行名稱*qualified_table_name*。 這個資料行必須是 character、 **varbinary （max)** 或**映像**資料行，不能是計算資料行。 *column_name*是**sysname**，沒有預設值。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以建立全文檢索索引中的資料行所儲存之文字資料**varbinary （max)**或**映像**資料型別。 影像和圖片沒有索引。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以建立全文檢索索引中的資料行所儲存之文字資料**varbinary （max)** 或**映像**資料型別。 影像和圖片沒有索引。  
   
  [  **@action=** ] **'***動作***'**  
  這是要執行的動作。 *動作*是**varchar （20)**，沒有預設值，它可以是下列值之一。  
@@ -78,7 +77,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 >  當資料行包含的資料有多種語言或不受支援的語言時，請使用「中性」語言。 [預設全文檢索語言] 組態選項指定這個預設值。  
   
  [ **@type_colname =** ] **'***type_column_name***'**  
- 中的資料行名稱*qualified_table_name*保存的文件類型*column_name*。 此資料行必須是**char**， **nchar**， **varchar**，或**nvarchar**。 它時才會使用的資料類型*column_name*的型別**varbinary （max)**或**映像**。 *type_column_name*是**sysname**，沒有預設值。  
+ 中的資料行名稱*qualified_table_name*保存的文件類型*column_name*。 此資料行必須是**char**， **nchar**， **varchar**，或**nvarchar**。 它時才會使用的資料類型*column_name*的型別**varbinary （max)** 或**映像**。 *type_column_name*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

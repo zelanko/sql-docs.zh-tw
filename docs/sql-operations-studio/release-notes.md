@@ -16,7 +16,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 233572c87f785e10a0cde4ac78a7c8ee75c5a801
 ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/26/2018
 ---
@@ -27,10 +27,10 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="april-2018-april-public-preview"></a>2018 年 4 月版 （ 4 月公用預覽）
 
-發行日期： 2018 年 4 月 25 日，  
+發行日期： 2018 年 4 月 25 日，  
 版本： 0.28.6
 
-* 4 月公用預覽版*包含 bug 修正和增強功能。 
+*4 月公用預覽版*包含 bug 修正和增強功能。 
 
 - SQL 代理程式預覽擴充功能的增強功能。
 - 改善大型和受保護的檔案來儲存受保護的系統管理員的支援和 > 在 SQL 作業 Studio 256 M 檔案。
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/26/2018
    - 修正[發出 1104年](https://github.com/Microsoft/sqlopsstudio/issues/1104): SQL 延伸模組索引標籤停止運作。
 
 
-4 月公開預覽的重點為 Visual Studio Code 1.21 平台來源程式碼重新整理。這會從先前的 1.19 同步處理點帶入多項更新至核心編輯器和工作臺。以下為部分範例：
+4 月公開預覽的重點為 Visual Studio Code 1.21 平台來源程式碼重新整理。 這會從先前的 1.19 同步處理點帶入多項更新至核心編輯器和工作臺。 以下為部分範例：
 
 - [新的通知 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) -輕鬆地管理與檢閱 SQL 作業 Studio 通知。
 - [整合終端機分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)-一次使用多個開啟的終端機。
@@ -75,12 +75,12 @@ ms.lasthandoff: 04/26/2018
 
 如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)。
 
-## <a name="march-2018-march-public-preview"></a>2018 年 3 月版  （3 月公開預覽）
+## <a name="march-2018-march-public-preview"></a>2018 年 3 月版 （3 月公開預覽）
 
-發行日期： 2018 年 3 月 28 日，  
+發行日期： 2018 年 3 月 28 日，  
 版本： 0.27.3
 
-* 3 月公用預覽版*繼續處理最上層的 GitHub 問題而重點在於提升擴充性故事。 特別啟用擴充功能管理員，改善儀表板管理，並提供 SQL 代理程式和 insights 擴充功能。 此版本包含下列增強功能：
+*3 月公用預覽版*繼續處理最上層的 GitHub 問題而重點在於提升擴充性故事。 特別啟用擴充功能管理員，改善儀表板管理，並提供 SQL 代理程式和 insights 擴充功能。 此版本包含下列增強功能：
 
 - 增強的支援索引標籤式的深入資訊和組態窗格的儀表板擴充性模型。
    - 擴充管理員可讓簡單擷取的延伸模組。
@@ -92,10 +92,10 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="february-2018-february-public-preview"></a>2018 年 2 月版 （ 2 月公開預覽）
 
-發行日期： 2018 年 2 月 15 日，  
+發行日期： 2018 年 2 月 15 日，  
 版本： 0.26.7
 
-* 2 月公用預覽*含有一些功能建議和高優先順序的 bug 修正。 此版本包含下列增強功能：
+*2 月公用預覽*含有一些功能建議和高優先順序的 bug 修正。 此版本包含下列增強功能：
 
 - 簡介安裝自動更新，這樣會提供通知可用於下載新版本時 
 - 連接對話方塊 'Database' 欄位現在是以動態方式填入的下拉式清單將包含從指定的伺服器填入資料庫清單。

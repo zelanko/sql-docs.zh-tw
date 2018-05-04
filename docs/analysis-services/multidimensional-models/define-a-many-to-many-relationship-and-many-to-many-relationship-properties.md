@@ -1,32 +1,23 @@
 ---
 title: 定義多對多關聯性及多對多關聯性屬性 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- many-to-many relationships [Analysis Services]
-ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
-caps.latest.revision: 13
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5377557da99938446a0746e0183e2adcf321dab3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f0a8ee2b6ee9bb7d53234b6b21974978543bc4c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定義多對多關聯性及多對多關聯性屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題說明多對多維度 Analysis Services，包括使用時機，以及如何建立它們。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  本主題說明 Analysis Services 中的多對多維度，包括何時使用這些維度以及如何建立這些維度。  
   
 ## <a name="introduction"></a>簡介  
  Analysis Services 支援多對多維度，其允許的分析方式比典型星形結構描述中所描述的分析方式更為複雜許多。 在典型星形結構描述中，所有維度都有包含事實資料表的一對多關聯性。 每個事實只會聯結到一個維度成員，單一維度成員會與多個事實產生關聯。  
@@ -107,7 +98,7 @@ ms.lasthandoff: 01/08/2018
   
      ![銷售訂單維度顯示屬性清單](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "銷售訂單維度的顯示屬性清單")  
   
-6.  將維度重新命名為 **維度銷售訂單**，好讓您擁有一致的維度命名慣例。  
+6.  將維度重新命名為**維度銷售訂單**，好讓您擁有一致的維度命名慣例。  
   
      ![顯示維度重新命名的精靈頁面](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "顯示維度重新命名的精靈頁面")  
   
@@ -189,10 +180,10 @@ ms.lasthandoff: 01/08/2018
   
  [教學課程：SQL Server Analysis Services 的多對多維度範例](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [維度關聯性](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [安裝 Analysis services 多維度模型化教學課程的範例資料和專案](../../analysis-services/install-sample-data-and-projects.md)   
- [部署 Analysis Services 專案 &#40;SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [部署 Analysis Services 專案 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [多維度模型中的檢視方塊](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

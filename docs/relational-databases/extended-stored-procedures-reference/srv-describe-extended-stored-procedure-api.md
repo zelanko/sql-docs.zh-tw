@@ -26,12 +26,11 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 184061f0637aa5f4f17921623c02886fde1c58e3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6b868e123baba52f4de0cddd38fa2180a03ba8b4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ srcdata
 ## <a name="returns"></a>傳回值  
  所描述之資料行的編號。 第一個資料行為資料行 1。 若發生錯誤，就會傳回 0。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在第一次呼叫 **srv_sendrow** 之前，必須針對資料列中的每一個資料行呼叫 **srv_describe** 函式一次。 資料列的資料行可以依照任何順序來描述。  
   
  若要在傳送完整結果集之前變更資料行資料列中來源資料的位置和長度，請分別使用 **srv_setcoldata** 和 **srv_setcollen**。  

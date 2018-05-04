@@ -22,12 +22,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a7bc4b283d3874b68c4bbe532bc32dcf4014896f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9be6ad404ade5784ab86845b90cda51b2b939bdf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---calculate"></a>MDX 指令碼-計算
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,14 +46,14 @@ CALCULATE
 ## <a name="remarks"></a>備註  
  當您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立 Cube 時，CALCULATE 陳述式會自動包含在 Cube 的 MDX 指令碼中，做為第一個陳述式。 CALCULATE 陳述式會告知 Cube 中的每個資料格，從較低資料粒度的資料格彙總。 在彙總資料格之後，如果您隨後使用運算式擴展較低資料粒度的資料格，則會影響較高資料粒度資料格的彙總值。 大部分的狀況下，您可能希望發生此彙總，但您也可以移除它，或在這個陳述式前先執行其他陳述式。  
   
- CALCULATE 陳述式不能包含在 MDX 指令碼內的巢狀 Subcube。 使用 SCOPE 陳述式定義巢狀 Subcube。 如需有關 SCOPE 陳述式的詳細資訊，請參閱[SCOPE 陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-scope.md).  
+ CALCULATE 陳述式不能包含在 MDX 指令碼內的巢狀 Subcube。 使用 SCOPE 陳述式定義巢狀 Subcube。 如需有關 SCOPE 陳述式的詳細資訊，請參閱[SCOPE 陳述式&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)。  
   
 > [!NOTE]  
 >  導出成員不會被彙總。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 指令碼陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [MDX 指令碼基礎觀念 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+## <a name="see-also"></a>另請參閱  
+ [MDX 指令碼陳述式&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [MDX 指令碼基礎觀念 & #40;Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [定義指派和其他指令碼命令](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   

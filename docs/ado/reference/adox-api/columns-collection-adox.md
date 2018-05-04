@@ -25,12 +25,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 55a18cf99276b50cf623944a2318d1484f50ea3f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 83325e8e0771c67dbfcb8e11bc90da2156687417
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columns-collection-adox"></a>資料行集合 (ADOX)
 包含所有[資料行](../../../ado/reference/adox-api/column-object-adox.md)資料表、 索引或索引鍵的物件。  

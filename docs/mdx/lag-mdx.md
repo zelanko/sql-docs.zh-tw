@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a219e0b8455ff3a66d20a8c670bb8675481498e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7dce14ac4d98d3fd75da42ace8327115eefafd1e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ Member_Expression.Lag(Index)
   
  如果指定的落後是負數，**延隔**函式會傳回後續成員。  
   
- `Lag(1)`相當於[PrevMember](../mdx/prevmember-mdx.md)函式。 `Lag(-1)`相當於[NextMember](../mdx/nextmember-mdx.md)函式。  
+ `Lag(1)` 相當於[PrevMember](../mdx/prevmember-mdx.md)函式。 `Lag(-1)` 相當於[NextMember](../mdx/nextmember-mdx.md)函式。  
   
  **延隔**函數很相似[導致](../mdx/lead-mdx.md)函式中，不同處在於**導致**函式會以相反的方向，以尋找**延隔**函式。 也就是說，`Lag(n)` 相當於 `Lead(-n)`。  
   
@@ -76,7 +75,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

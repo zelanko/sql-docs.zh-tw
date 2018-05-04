@@ -1,35 +1,27 @@
 ---
-title: "使用資料摘要 (Power Pivot for SharePoint) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 使用資料摘要 (Power Pivot for SharePoint) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8f0b6c60d3f68d7a643264d3e850b7ce6cd56c22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用資料摘要 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
+  資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
   
  您使用資料摘要的方式，取決於您是使用支援 Atom 資料摘要之應用程式中的內建匯出功能，還是建立並使用自訂資料服務。 能夠發行並讀取 Atom XML 資料的應用程式提供完美的資料傳輸，隱藏資料摘要與資料服務的機制，讓使用者看不到。 對使用者來說，只是將資料從一個應用程式移到另一個。  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Microsoft SharePoint 2010 提供的資料摘要，可用於[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿。 您可以使用本主題中的資訊來了解如何從您已經擁有的報表與清單中存取資料摘要。  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Microsoft SharePoint 2010 提供可用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的資料摘要。 您可以使用本主題中的資訊來了解如何從您已經擁有的報表與清單中存取資料摘要。  
   
  本主題包含下列幾節：  
   

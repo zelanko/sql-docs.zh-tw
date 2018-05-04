@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c62b78264a5dbd715cc79e1f07515350d8c6cd3e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 38dc5fb0ed2286b3077e6198bc978808063b5d2f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-of-parameter-values"></a>參數值的陣列
 通常會很有用的應用程式，以傳遞的參數陣列。 例如，使用參數和參數化的陣列**插入**陳述式中，應用程式可以一次插入的資料列數目。 有數個優點，以使用陣列。 首先，因為在單一封包中傳送多個陳述式的資料 （如果資料來源原生支援的參數陣列） 可以降低網路流量。 第二，某些資料來源可執行速度比執行相同數目的不同的 SQL 陳述式使用陣列的 SQL 陳述式。 最後，當資料儲存在陣列中，通常都是螢幕資料的情況時，應用程式可以繫結所有資料列的單一呼叫之特定資料行中**SQLBindParameter**並執行單一陳述式來加以更新。  

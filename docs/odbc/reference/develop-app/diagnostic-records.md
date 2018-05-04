@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic records
 - handles [ODBC], diagnostic records
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 191be40ee4d85cc3dcb0915887aa4ef734f67e04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3ba25e3f2c67146cb845f26abcef09b7fc956ae4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-records"></a>診斷記錄
 與每個環境產生關聯，連接、 陳述式和描述項控制代碼會*診斷記錄*。 這些記錄會包含最後一個呼叫的函式，使用特定的控制代碼的診斷資訊。 另一個函式呼叫使用該控制代碼時，會取代記錄。 可以一次儲存的診斷記錄的數目沒有限制。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], backward compatibility
@@ -23,17 +23,16 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e25e546b359dd7178739e074664c3239fcfbdba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c22ef4ebf761b647f4b0e6bb8c65ccd3457fe694
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>區塊資料指標，可捲動的資料指標和回溯相容性
 兩者的存在**SQLFetchScroll**和**SQLExtendedFetch**代表分割 ODBC 之間應用程式設計介面 (API)，這是集合的函式中的第一個清除應用程式呼叫和服務提供者介面 (SPI)，這是集合的函式的驅動程式實作。 這種分割是必要的讓 ODBC 3。*x*，它會使用**SQLFetchScroll**，bealigned 標準，也必須相容於 ODBC 2。*x*，它會使用**SQLExtendedFetch**。  
   
- ODBC 3*.x*應用程式開發介面，這是一組、 函式應用程式會呼叫包含**SQLFetchScroll**和相關的陳述式屬性。 ODBC 3*.x* SPI，這是集合的函式的驅動程式實作，包括**SQLFetchScroll**， **SQLExtendedFetch**，以及相關的陳述式屬性。 ODBC 不會正式強制此應用程式開發介面和 SPI 之間分割，所以針對 ODBC 3*.x*應用程式呼叫**SQLExtendedFetch**和相關的陳述式屬性。 不過，沒有理由 ODBC 3*.x*應用程式，若要這樣做。 如需應用程式開發介面和 Spi 的詳細資訊，請參閱簡介[ODBC 架構](../../../odbc/reference/odbc-architecture.md)。  
+ ODBC 3 *.x*應用程式開發介面，這是一組、 函式應用程式會呼叫包含**SQLFetchScroll**和相關的陳述式屬性。 ODBC 3 *.x* SPI，這是集合的函式的驅動程式實作，包括**SQLFetchScroll**， **SQLExtendedFetch**，以及相關的陳述式屬性。 ODBC 不會正式強制此應用程式開發介面和 SPI 之間分割，所以針對 ODBC 3 *.x*應用程式呼叫**SQLExtendedFetch**和相關的陳述式屬性。 不過，沒有理由 ODBC 3 *.x*應用程式，若要這樣做。 如需應用程式開發介面和 Spi 的詳細資訊，請參閱簡介[ODBC 架構](../../../odbc/reference/odbc-architecture.md)。  
   
  如需哪些函式和陳述式屬性 ODBC 3。*x*應用程式應該使用與區塊和可捲動資料指標，請參閱[區塊資料指標，可捲動資料指標，ODBC 3.x 應用程式的回溯相容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)。  
   

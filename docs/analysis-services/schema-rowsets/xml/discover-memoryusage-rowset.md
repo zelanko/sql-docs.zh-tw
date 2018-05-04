@@ -1,33 +1,32 @@
 ---
-title: "DISCOVER_MEMORYUSAGE 資料列集 |Microsoft 文件"
-ms.custom: 
+title: DISCOVER_MEMORYUSAGE 資料列集 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 832017b2efa7d1d788a74a20332160cffea63764
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-傳回伺服器所配置之各種物件的 DISCOVER_MEMORYUSAGE 統計資料。  
+  傳回伺服器所配置之各種物件的 DISCOVER_MEMORYUSAGE 統計資料。  
   
 > [!WARNING]  
 >  這個資料列集可能會產生非常龐大的結果集。 如果結果由於所需的顯示記憶體超過 SQL Server Management Studio 允許的記憶體而無法顯示，這些結果就會寫入位於下列預設位置的暫存檔案：  
@@ -51,7 +50,7 @@ ms.lasthandoff: 02/15/2018
 |**MemoryAllocBase**|**DBTYPE_UI8**||一開始配置給物件本身的位元組 (不含物件內容的其他配置)。|  
 |**MemoryAllocFromAlloc**|**DBTYPE_UI8**||配置給此物件內容的記憶體。|  
 |**ElementCount**|**DBTYPE_UI4**||對於容器物件而言，這是該物件所包含的物件數目。|  
-|**Shrinkable**|**DBTYPE_BOOL**|是|布林值，這個值會指出記憶體是否可壓縮 (可能會由於記憶體不足的壓力而收回)。 如果為 true，就表示記憶體可壓縮。如果為 false，就表示記憶體不可壓縮。|  
+|**壓縮**|**DBTYPE_BOOL**|是|布林值，這個值會指出記憶體是否可壓縮 (可能會由於記憶體不足的壓力而收回)。 如果為 true，就表示記憶體可壓縮。如果為 false，就表示記憶體不可壓縮。|  
 |**ObjectParentPath**|**DBTYPE_WSTR**||識別此物件之完整路徑的字串。|  
 |**Exchange Spill**|**DBTYPE_WSTR**||識別物件的字串。 此物件的完整路徑由字串: (ObjectParentPath + '。 ' + ObjectId)。|  
   

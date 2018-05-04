@@ -1,39 +1,23 @@
 ---
-title: "資料採礦查詢工具 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 資料採礦查詢工具 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- predictions [Analysis Services], DMX prediction queries
-- predictions [DMX]
-- DMX [Analysis Services], prediction queries
-- prediction queries [DMX]
-- predictions [Analysis Services]
-- queries [DMX], prediction queries
-- mining models [Analysis Services], DMX
-ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 23aba314c819afa8eac6f62f2db70012967f842a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-query-tools"></a>資料採礦查詢工具
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-所有資料採礦查詢都使用資料採礦延伸模組 (DMX) 語言。 DMX 可以用來建立各種機器學習工作的模型，包括分類、風險分析、產生建議及線性迴歸。 您也可以撰寫 DMX 查詢，來取得在處理模型時所產生之模式和統計資料的相關資訊。  
+  所有資料採礦查詢都使用資料採礦延伸模組 (DMX) 語言。 DMX 可以用來建立各種機器學習工作的模型，包括分類、風險分析、產生建議及線性迴歸。 您也可以撰寫 DMX 查詢，來取得在處理模型時所產生之模式和統計資料的相關資訊。  
   
  您可以自行撰寫 DMX，或是使用工具，例如預測查詢產生器，建立基本 DMX 然後加以修改。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 都提供協助您建立 DMX 預測查詢的工具。 此主題描述如何使用這些工具來建立及執行資料採礦查詢。  
   
@@ -56,7 +40,7 @@ ms.lasthandoff: 02/15/2018
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查詢編輯器也可讓您建立及執行 DMX 查詢。 您可以連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，然後選取資料庫、採礦結構資料行和採礦模型。 中繼資料總管包含您可以瀏覽的預測函數清單。  
   
 ##  <a name="bkmk_Templates"></a> DMX 範本  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供互動式的 DMX 查詢範本，可用來建立 DMX 查詢。 如果您看不到範本清單，請按一下工具列上的 [檢視]，然後選取 [範本總管]。 若要查看所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 範本 (包括 DMX、MDX 及 XMLA 的範本)，請按一下 Cube 圖示。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]提供互動式的 DMX 查詢範本，可用來建立 DMX 查詢。 如果您看不到範本清單，請按一下工具列上的 [檢視]，然後選取 [範本總管]。 若要查看所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 範本 (包括 DMX、MDX 及 XMLA 的範本)，請按一下 Cube 圖示。  
   
  若要使用範本建立查詢，您可以將範本拖曳到開啟的查詢視窗，也可以按兩下範本，開啟新的連接和新的查詢窗格。  
   
@@ -83,7 +67,7 @@ ms.lasthandoff: 02/15/2018
 -   若要擷取**模型內容**和**模型中繼資料** (例如叢集數、決策樹中所使用的屬性、模型上次處理的日期及建立模型時所使用的演算法參數)，您可以使用 [Discover 方法 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) 方法，並在 [RequestType 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 標頭中指定其中一個資料採礦結構描述資料列集。 若要縮小查詢範圍，請輸入準則作為 [RestrictionList 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) 元素內的限制。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;參考](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;參考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)   
  [了解 DMX Select 陳述式](../../dmx/understanding-the-dmx-select-statement.md)   
  [結構和使用方式的 DMX 預測查詢](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

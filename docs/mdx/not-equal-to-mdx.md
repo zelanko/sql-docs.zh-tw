@@ -1,5 +1,5 @@
 ---
-title: '&lt;&gt;（不等於）(MDX) |Microsoft 文件'
+title: '&lt;&gt; （不等於）(MDX) |Microsoft 文件'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -23,14 +23,13 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f515685f01b1795c361b38f031fa9e8d871dbb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dea54629c9a1e1d5add6659e0eaaca2dc9d91c92
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt;（不等於）(MDX)
+# <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt; （不等於）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   執行比對作業，判定某個多維度運算式 (MDX) 運算式的值是否不等於另一個 MDX 運算式的值。  
@@ -55,7 +54,7 @@ MDX_Expression <> MDX_Expression
   
 -   Null，如果有一個參數或兩個參數都評估為 Null 值。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -1,31 +1,23 @@
 ---
-title: "設定 Power Pivot Service Accounts |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 設定 Power Pivot Service Accounts |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c4e46bb4981da0f4c68e9f6ce1d00b0b02d4908c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>設定 Power Pivot 服務帳戶
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  
   
  此外，您必須針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式指定第二個帳戶，此服務應用程式是一種共用 Web 服務，其會以 SharePoint 伺服器陣列中的應用程式集區身分識別執行。 此帳戶是在使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]組態工具或 PowerShell 來設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝時所指定。  
   
@@ -77,13 +69,13 @@ ms.lasthandoff: 02/15/2018
   
 2.  選取 **[Windows 服務 - SQL Server Analysis Services]** ，以變更 Analysis Services 服務帳戶。  
   
-3.  在 **[選取此服務的帳戶]**中，選擇現有的 Managed 帳戶或建立新的 Managed 帳戶。 此帳戶必須是網域使用者帳戶。  
+3.  在 **[選取此服務的帳戶]** 中，選擇現有的 Managed 帳戶或建立新的 Managed 帳戶。 此帳戶必須是網域使用者帳戶。  
   
 4.  選取 [服務應用程式集區 - SharePoint Web 服務系統]，以變更預設 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式的應用程式集區身分識別。 依據設定安裝的方式，服務可能會在已針對 SharePoint 服務建立的現有服務應用程式集區之中執行。 依預設，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具會將此服務登錄為**預設的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式 ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式)**。  
   
      若此服務由 SharePoint 管理員手動設定，則此服務極可能會擁有自己的服務應用程式集區。  
   
-5.  在 **[選取此服務的帳戶]**中，選擇現有的 Managed 帳戶或建立新的 Managed 帳戶。 此帳戶必須是網域使用者帳戶。  
+5.  在 **[選取此服務的帳戶]** 中，選擇現有的 Managed 帳戶或建立新的 Managed 帳戶。 此帳戶必須是網域使用者帳戶。  
   
 6.  按一下 **[確定]**。  
   

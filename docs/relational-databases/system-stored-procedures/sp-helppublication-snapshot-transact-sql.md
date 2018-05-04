@@ -24,12 +24,11 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1598b35bf6fc7148c288d61fba959ac6360903d3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7640049d84ae20da08c8f3218e93c476a6de2edc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**name**|**nvarchar(100)**|快照集代理程式的名稱。|  
 |**publisher_security_mode**|**smallint**|這是連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證。|  
 |**publisher_login**|**sysname**|當連接到發行者時所用的登入。|  
-|**publisher_password**|**nvarchar （524)**|基於安全性理由，值為**\* \* \* \* \* \* \* \* \* \***一律是傳回。|  
+|**publisher_password**|**nvarchar （524)**|基於安全性理由，值為**\* \* \* \* \* \* \* \* \* \*** 一律是傳回。|  
 |**job_id**|**uniqueidentifier**|代理程式作業的唯一識別碼。|  
 |**job_login**|**nvarchar(512)**|Windows 帳戶下執行快照集代理程式，這傳回的格式如下*網域*\\*username*。|  
-|**job_password**|**sysname**|基於安全性理由，值為**\* \* \* \* \* \* \* \* \* \***一律是傳回。|  
+|**job_password**|**sysname**|基於安全性理由，值為**\* \* \* \* \* \* \* \* \* \*** 一律是傳回。|  
 |**schedule_name**|**sysname**|這個代理程式作業所用的排程名稱。|  
 |**frequency_type**|**int**|這是排程執行代理程式的頻率，它可以是下列值之一。<br /><br /> **1** = 一次<br /><br /> **2** = 視需要<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月相對<br /><br /> **64** = 自動啟動<br /><br /> **128** = 重複執行|  
 |**frequency_interval**|**int**|代理程式執行的天數，它可以是下列值之一。<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 日<br /><br /> **9** = 工作日<br /><br /> **10** = 週末|  

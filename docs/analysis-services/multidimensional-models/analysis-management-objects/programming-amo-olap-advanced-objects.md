@@ -1,34 +1,19 @@
 ---
-title: "設計 AMO OLAP 進階物件 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: 
-author: Minewiskan
+title: 設計 AMO OLAP 進階物件 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c07ee6b4289c015b0c42a1bc9981bec29cd49483
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>設計 AMO OLAP 進階物件的程式
   本主題說明 OLAP 進階物件的分析管理物件 (AMO) 程式設計詳細資料。 本主題包含下列幾節：  
@@ -64,7 +49,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  將動作加入 Cube 集合並更新 Cube。 動作不是可更新的物件。  
   
- 測試這個動作需要不同的程式應用程式。 您可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中測試動作。 首先，您必須安裝[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]範例，請參閱[處理多維度模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 測試這個動作需要不同的程式應用程式。 您可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中測試動作。 首先，您必須安裝[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]範例，請參閱[處理多維度模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  下列範例程式碼將會從 Adventure Works Analysis Services 專案範例複寫三種不同的動作。 您可以區分這些動作，因為使用下列範例所介紹的這些動作，是以 "My" 開頭。  
   
@@ -191,7 +176,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI">Kpi 物件</a>  
+##  <a name="KPI"></a> Kpi 物件  
  關鍵效能指標 (KPI) 是用來評估商務成就的計算集合，這些計算與 Cube 中的量值群組相關聯。 <xref:Microsoft.AnalysisServices.Kpi> 物件可以使用 AMO 來定義，但是是從瀏覽資料的用戶端應用程式來使用這些物件。  
   
  建立 <xref:Microsoft.AnalysisServices.Kpi> 物件需要下列步驟：  
@@ -493,9 +478,9 @@ static public void CreateTranslations(Database db)
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP 類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [邏輯架構 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [資料庫物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [處理多維度模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [邏輯架構 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [資料庫物件 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [處理多維度模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [安裝 Analysis services 多維度模型化教學課程的範例資料和專案](../../../analysis-services/install-sample-data-and-projects.md)  
   
   

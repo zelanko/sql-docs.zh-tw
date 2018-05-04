@@ -19,13 +19,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a6b114e0c6c4c962642ffa7ae5a3328a3590131d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b21a37e658b03b0fd3c6b518373dd9d682d291f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
  開發人員可以繫結至資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特有的 C 資料類型，使用*TargetType*值**SQL_C_BINARY**。 繫結至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有之類型的資料行無法移植。 已定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有 ODBC C 資料類型符合 DB-Library 的類型定義，而移植應用程式的 DB-Library 開發人員可能會想要利用這項功能。  
   
- 報告資料截斷是費時的程序的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式。 您可以確保所有繫結的資料緩衝區都夠寬而足以傳回資料，藉此來避免資料遭到截斷。 如果是字元資料，當使用字串結束的預設驅動程式行為時，寬度應該包括字串結束字元的空格。 例如，繫結[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)**陣列的五個字元的結果中擷取每個值的截斷的資料行。 將相同的資料行繫結至六個字元的陣列可藉由提供字元元素來儲存 Null 結束字元，以避免截斷的情況發生。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)可用來有效率地擷取長的字元和二進位資料，而不會截斷。  
+ 報告資料截斷是費時的程序的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式。 您可以確保所有繫結的資料緩衝區都夠寬而足以傳回資料，藉此來避免資料遭到截斷。 如果是字元資料，當使用字串結束的預設驅動程式行為時，寬度應該包括字串結束字元的空格。 例如，繫結[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)** 陣列的五個字元的結果中擷取每個值的截斷的資料行。 將相同的資料行繫結至六個字元的陣列可藉由提供字元元素來儲存 Null 結束字元，以避免截斷的情況發生。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)可用來有效率地擷取長的字元和二進位資料，而不會截斷。  
   
  大數值資料類型，如果使用者提供的緩衝區不夠大，無法以保存整個值的資料行， **SQL_SUCCESS_WITH_INFO**傳回和 「 字串資料;右邊截斷 」 警告。 **StrLen_or_IndPtr**引數將會包含儲存在緩衝區內的字元/位元組數目。  
   

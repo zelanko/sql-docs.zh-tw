@@ -1,36 +1,23 @@
 ---
-title: "建立交叉驗證報表 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 建立交叉驗證報表 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- validating data mining models
-- mining structures [Analysis Services], how-to topics
-- cross-validation [data mining]
-- statistical standard deviation
-ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b8b5dad234adf73717b5785fc0f3b06becaebce
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 747b327fb58103afe188d7d136c2d79c9b1c6811
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-cross-validation-report"></a>建立交叉驗證報表
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-此主題逐步解說如何在資料採礦設計師中使用 [精確度圖表] 索引標籤來建立交叉驗證報表。 如需交叉驗證報表外觀及其所含統計量值的一般資訊，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。  
+  此主題逐步解說如何在資料採礦設計師中使用 [精確度圖表] 索引標籤來建立交叉驗證報表。 如需交叉驗證報表外觀及其所含統計量值的一般資訊，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。  
   
  交叉驗證報表在本質上不同於增益圖或分類矩陣之類的精確度圖表。  
   
@@ -58,24 +45,24 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="set-cross-validation-options"></a>設定交叉驗證選項  
   
-1.  在 **[交叉驗證]** 索引標籤上，針對 **[摺疊計數]**按一下向下箭頭，選取 1 到 10 之間的數字。 預設值是 10。  
+1.  在 **[交叉驗證]** 索引標籤上，針對 **[摺疊計數]** 按一下向下箭頭，選取 1 到 10 之間的數字。 預設值是 10。  
   
      **[摺疊計數]** 表示將會在原始資料集內建立的資料分割數目。 如果您將 [摺疊計數] 設定為 1，將會使用定型集而不加以分割。  
   
-2.  針對 **[目標屬性]**按一下向下箭頭，然後從清單中選取資料行。 如果此模型為叢集模型，請選取 [#Cluster] 來指示此模型沒有可預測屬性。 請注意，只有在採礦結構不支援其他類型的可預測屬性時，值 **#Cluster** 才可供使用。  
+2.  針對 **[目標屬性]** 按一下向下箭頭，然後從清單中選取資料行。 如果此模型為叢集模型，請選取 [#Cluster] 來指示此模型沒有可預測屬性。 請注意，只有在採礦結構不支援其他類型的可預測屬性時，值 **#Cluster** 才可供使用。  
   
      每一個報表只能選取一個可預測屬性。 根據預設，具有相同可預測屬性的所有相關模型都會包含在報表中。  
   
-3.  在 **[最大案例數]**中，輸入一個夠大的數字來提供當資料分割成指定的摺疊數時的代表性資料樣本。 如果此數字大於模型定型集內的案例計數，將會使用所有的案例。  
+3.  在 **[最大案例數]** 中，輸入一個夠大的數字來提供當資料分割成指定的摺疊數時的代表性資料樣本。 如果此數字大於模型定型集內的案例計數，將會使用所有的案例。  
   
      如果訓練資料集非常大，則設定 **[最大案例數]** 的值會限制處理的總案例數，並讓報表更快完成。 但是，您不應該將 [最大案例數] 設定為太低的值，否則將不會有足夠的資料來進行交叉驗證。  
   
-4.  選擇性地針對 **[目標狀態]**輸入您想要模型化之可預測屬性的值。 例如，如果 [Bike Buyer] 資料行有兩個可能的值：1 (是) 和 2 (否)，您可以輸入 1 的值，只針對所需結果評估此模型的精確度。  
+4.  選擇性地針對 **[目標狀態]** 輸入您想要模型化之可預測屬性的值。 例如，如果 [Bike Buyer] 資料行有兩個可能的值：1 (是) 和 2 (否)，您可以輸入 1 的值，只針對所需結果評估此模型的精確度。  
   
     > [!NOTE]  
     >  如果您不輸入值，[目標臨界值] 選項將無法使用，而且將會針對可預測屬性的所有可能值來評估此模型。  
   
-5.  選擇性地針對 **[目標臨界值]**輸入一個介於 0 和 1 之間的小數值，以指定要將預測算為精確時，所必須擁有的最小機率。  
+5.  選擇性地針對 **[目標臨界值]** 輸入一個介於 0 和 1 之間的小數值，以指定要將預測算為精確時，所必須擁有的最小機率。  
   
      如需如何設定機率臨界值的更多提示，請參閱 [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  
   

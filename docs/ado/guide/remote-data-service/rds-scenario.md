@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8260049ad0bd4022cfd9ff3382d04cbb16c5dfac
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: d1fef484f86a7558ab77159b4273c4d2065892fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-scenario"></a>RDS 案例
 > [!IMPORTANT]
@@ -48,9 +47,9 @@ ms.lasthandoff: 04/18/2018
   
 -   HTML 命令按鈕，建立查詢，清除搜尋欄位，請更新資料庫中 「 員工 」 資訊、 取消暫止的變更，並瀏覽的方格中顯示的資料列。  
   
--   DHTML 資料繫結來顯示資料查詢所傳回的比對後端資料庫 (透過**.RDSDataControl**資料繫結物件) 資料表中。  
+-   DHTML 資料繫結來顯示資料查詢所傳回的比對後端資料庫 (透過 **.RDSDataControl**資料繫結物件) 資料表中。  
   
--   VBScript 常式連接每個先前所述的元素，並允許它們互動。 VBScript 程式碼也會用來初始化**.RDSDataControl**物件，並以動態方式在 HTML 表格的名稱建立資料行標題**.RDSDataControl**資料錄集欄位。  
+-   VBScript 常式連接每個先前所述的元素，並允許它們互動。 VBScript 程式碼也會用來初始化 **.RDSDataControl**物件，並以動態方式在 HTML 表格的名稱建立資料行標題 **.RDSDataControl**資料錄集欄位。  
   
  請從步驟的連結，步驟來設定和執行案例，以及深入了解案例的運作方式。  
   

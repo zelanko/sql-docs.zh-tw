@@ -1,36 +1,23 @@
 ---
-title: "重新命名 Analysis Services 執行個體 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 重新命名 Analysis Services 執行個體 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- instances of Analysis Services, renaming
-- renaming instances of Analysis Services
-- names [Analysis Services], renaming instances
-- names [Analysis Services]
-ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bc7c79c56282f662a6392f966364ae7f38bc4395
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 48729d35a5c5c5e0e0808862f1317877b1ee3be6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以重新命名現有的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，方法是使用與 Management Studio (Web 安裝) 一起安裝的 **Instance Rename** Tool。  
+  您可以重新命名現有的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，方法是使用與 Management Studio (Web 安裝) 一起安裝的 **Instance Rename** Tool。  
   
 > [!IMPORTANT]  
 >  重新命名執行個體時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool 會以更高的權限執行，並更新與該執行個體相關聯的 Windows 服務名稱、安全性帳戶，以及登錄項目。 為確保執行這些動作，請務必以本機系統管理員身分執行此工具。  
@@ -66,7 +53,7 @@ ms.lasthandoff: 02/15/2018
   
      下列範例提供說明。 假設您使用預設虛擬帳戶，以名稱為 “Tabular” 的執行個體安裝表格式模式伺服器，導致下列設定：  
   
-    1.  Instance name = \<server>\TABULAR  
+    1.  執行個體名稱 =\<伺服器 > \TABULAR  
   
     2.  服務名稱 = MSOLAP$TABULAR  
   
@@ -74,7 +61,7 @@ ms.lasthandoff: 02/15/2018
   
      現在，假設您將執行個體重新命名為 “TAB2”。 名稱變更之後，您的設定現在看起來如下：  
   
-    1.  Instance name = \<server>\TAB2  
+    1.  執行個體名稱 =\<伺服器 > \TAB2  
   
     2.  服務名稱 = MSOLAP$TAB2  
   

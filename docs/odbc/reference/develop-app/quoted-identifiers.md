@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], quoted identifiers
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d91e7eb44bbdec36a3b1411e90f33e118fda2035
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3af402bd63bf1892b1906da34114d5515e6dfa30
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quoted-identifiers"></a>引號的識別碼
 SQL 陳述式中包含特殊字元或相符的關鍵字的識別項必須括在*識別碼引號字元*; 這類字元括住的識別項稱為*引號識別項*(也稱為*分隔識別碼*以 sql-92)。 比方說，在下列引用 Accounts Payable 識別碼**選取**陳述式：  

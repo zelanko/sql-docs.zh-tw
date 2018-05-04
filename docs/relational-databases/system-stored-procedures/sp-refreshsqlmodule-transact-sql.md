@@ -32,13 +32,12 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0a5979dd6b797ced4b4785fedd068671ae9e05f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3fb52b0144caea217557cc8abcf7af052ee1569a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
  這是預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *適於*不能在 common language runtime (CLR) 預存程序或 CLR 函數。 *適於*無法結構描述繫結。 *適於*是**nvarchar**，沒有預設值。 *適於*可以是多重部分識別碼，但只能參考目前資料庫中的物件。  
   
  [ **，** @**命名空間**=] **'** \<類別 > **'**  
- 這是指定之模組的類別。 當*適於*DDL 觸發程序，\<類別 > 為必要。 *\<類別 >*是**nvarchar**(20)。 有效輸入包括：  
+ 這是指定之模組的類別。 當*適於*DDL 觸發程序，\<類別 > 為必要。 *\<類別 >* 是**nvarchar**(20)。 有效輸入包括：  
   
 |||  
 |-|-|  

@@ -1,27 +1,19 @@
 ---
 title: 在 SQL Server Management Studio 中使用 Analysis Services 範本 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d2f4f817acd9c83264ea1cb472bf9d39d898b120
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b7781ece8d5bd9feb014ebbaf7d067654a56d23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Analysis Services 範本
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -65,13 +57,13 @@ ms.lasthandoff: 04/16/2018
   
 3.  使用中繼資料總管，將下列欄位和量值拖曳至查詢範本：  
   
-    1.  取代\<o w s，mdx_set> > 與**[Product Category]。 [Product Category Name]**。  
+    1.  取代\<o w s，mdx_set> > 與 **[Product Category]。 [Product Category Name]**。  
   
-    2.  取代\<column_axis，mdx_set> > 與**[日期]。 [Calendar Year]。[Calendar Year]**.  
+    2.  取代\<column_axis，mdx_set> > 與 **[日期]。 [Calendar Year]。[Calendar Year]**.  
   
-    3.  取代\<from_clause，mdx_name> > 與**[網際網路銷售]**。  
+    3.  取代\<from_clause，mdx_name> > 與 **[網際網路銷售]**。  
   
-    4.  取代\<where_clause，mdx_set> > 與**[Measures]。 [Internet Total Sales]**。  
+    4.  取代\<where_clause，mdx_set> > 與 **[Measures]。 [Internet Total Sales]**。  
   
 4.  您可以直接執行原有的查詢，但可能要進行某些變更，例如加入函數以傳回特定成員。 例如，在 **[Product Category].[Product Category Name]** 後面輸入 **.members**。 如需詳細資訊，請參閱 [使用成員運算式](../../mdx/using-member-expressions.md)。  
   
@@ -164,8 +156,8 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |類別目錄|項目範本|Description|  
 |--------------|-------------------|-----------------|  
 |DMX\模型內容|內容查詢|示範如何使用 DMX SELECT FROM *\<模型 >*。內容的陳述式來擷取指定之採礦模型的採礦模型結構描述資料列集的內容。|  
-||連續資料行值|示範如何使用 DMX SELECT DISTINCT FROM *\<模型 >*陳述式及 DMX **RangeMin**和**RangeMax**函式來擷取一組從指定的採礦模型中的連續資料行在指定範圍中的值。|  
-||離散資料行值|示範如何使用 DMX SELECT DISTINCT FROM *\<模型 >*陳述式中指定之採礦模型的離散資料行中擷取一組完整的值。|  
+||連續資料行值|示範如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 陳述式及 DMX **RangeMin**和**RangeMax**函式來擷取一組從指定的採礦模型中的連續資料行在指定範圍中的值。|  
+||離散資料行值|示範如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 陳述式中指定之採礦模型的離散資料行中擷取一組完整的值。|  
 ||鑽研查詢|示範如何搭配 DMX IsInNode 函數使用 DMX SELECT * FROM Model.CASES 陳述式來執行鑽研查詢。|  
 ||模型屬性|示範如何使用 DMX System.GetModelAttributes 函數來傳回模型所用的屬性清單。|  
 ||PMML 內容|示範如何使用 DMX SELECT \* FROM *\<模型 >*。PMML 陳述式來擷取採礦模型，支援這項功能的演算法的預測模型標記語言 (PMML) 表示。|  

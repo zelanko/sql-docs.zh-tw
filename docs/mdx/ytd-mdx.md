@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 8f9d95aca057801c924ceec962f818c7e6f27869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b647c31febd5ef06b8cb2e6f808e296518f98af6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +66,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **Ytd**經常在組合中沒有指定參數，表示[CurrentMember &#40;MDX &#41;](../mdx/currentmember-mdx.md)函式會顯示累計的年度迄今總計在報表中，下列查詢中所示：  
+ **Ytd**經常在組合中沒有指定參數，表示[CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md)函式會顯示累計的年度迄今總計在報表中，如下所示下列查詢：  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -79,7 +78,7 @@ WHERE
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

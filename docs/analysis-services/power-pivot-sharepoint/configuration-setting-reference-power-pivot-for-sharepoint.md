@@ -1,31 +1,23 @@
 ---
-title: "組態設定參考 (Power Pivot for SharePoint) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 組態設定參考 (Power Pivot for SharePoint) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b66f1bb71a185be8663e1fab732a208a0ca99d87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4c3c7b19acab1757f8f691c6a32afdb96445b83a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>組態設定參考 (PowerPivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本主題提供 SharePoint 伺服器陣列中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式所使用的組態設定參考文件。 如果您使用 PowerShell 指令碼來設定伺服器，或者，如果想查閱特定設定的資訊，本主題中的資訊提供詳細的說明。  
+  本主題提供 SharePoint 伺服器陣列中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式所使用的組態設定參考文件。 如果您使用 PowerShell 指令碼來設定伺服器，或者，如果想查閱特定設定的資訊，本主題中的資訊提供詳細的說明。  
   
  組態設定是為每個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式設定。 在伺服陣列中，您可以建立多個服務應用程式，做為設定相同實體服務執行個體之獨立邏輯執行個體的一種方式。 組態設定會儲存在為您所設定每個服務應用程式建立的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 應用程式資料庫中。  
   

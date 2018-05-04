@@ -27,15 +27,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fd84d0426afa9ee1272c26c8ca7ac302972748b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0e24717a24d7e8dde9ee90280ff05c564554a3fa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discretizationmethod-element-assl"></a>DiscretizationMethod 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義用於進行離散化方法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義用於進行離散化的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|*無*|  
@@ -64,21 +64,21 @@ ms.lasthandoff: 01/08/2018
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 值**DiscretizationMethod**元素會決定如何值**DimensionAttribute**或**ScalarMiningStructureColumn**是離散化或組織成一組特定的群組。 如需有關離散化方法的詳細資訊，請參閱[離散化方法 &#40; 資料採礦 &#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md)。  
+ 值**DiscretizationMethod**元素會決定如何值**DimensionAttribute**或**ScalarMiningStructureColumn**是離散化或組織成一組特定的群組。 如需有關離散化方法的詳細資訊，請參閱[離散化方法&#40;資料採礦&#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md)。  
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|Value|描述|  
 |-----------|-----------------|  
-|*自動*|相當於採礦結構資料行的 AUTOMATIC 離散化方法。|  
+|*Automatic*|相當於採礦結構資料行的 AUTOMATIC 離散化方法。|  
 |*EqualAreas*|相當於採礦結構資料行的 EQUAL_AREAS 離散化方法。|  
-|*叢集*|相當於採礦結構資料行的 CLUSTERS 離散化方法。|  
+|*群集*|相當於採礦結構資料行的 CLUSTERS 離散化方法。|  
 |*臨界值*|相當於採礦結構資料行的 THRESHOLDS 離散化方法。|  
 |*EqualRanges*|相當於採礦結構資料行的 EQUAL_RANGES 離散化方法。|  
   
  列舉型別對應至允許的值**DiscretizationMethod**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DiscretizationMethod>。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

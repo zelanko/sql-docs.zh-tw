@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +22,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7261e153c988a0764327e3d247a3da31d7463af3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e433aea6a3ecc401ba85080d1c1b25d053ce3089
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路徑 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **相對位置路徑**  
   
-     相對位置路徑會從文件中的內容節點開始。 位置路徑包含一或多個位置步驟的序列，而且每個位置步驟都以斜線 (/) 分隔。 每個步驟都會選取相對於內容節點的一組節點。 步驟的初始序列會選取一組相對於內容節點的節點。 該集合中的每個節點都會當做下列步驟的內容節點使用。 系統會加入由該步驟識別的節點集合。 例如， **child:: order/child:: orderdetail**選取 **\<OrderDetail >**元素子系**\<順序 >**項目內容節點的子系。  
+     相對位置路徑會從文件中的內容節點開始。 位置路徑包含一或多個位置步驟的序列，而且每個位置步驟都以斜線 (/) 分隔。 每個步驟都會選取相對於內容節點的一組節點。 步驟的初始序列會選取一組相對於內容節點的節點。 該集合中的每個節點都會當做下列步驟的內容節點使用。 系統會加入由該步驟識別的節點集合。 例如， **child:: order/child:: orderdetail**選取 **\<OrderDetail >** 元素子系**\<順序 >** 項目內容節點的子系。  
   
     > [!NOTE]  
     >  在 XPath 的 SQLXML 4.0 實作中，即使 XPath 明顯地不是絕對的，每個 XPath 查詢都會從根內容開始。 例如，系統會將 "Customer" 開頭的 XPath 查詢視為 "/Customer"。 在 XPath 查詢中**Customer [Order]**，客戶根內容開始，但順序從 Customer 內容開始。 如需詳細資訊，請參閱[使用 XPath 查詢簡介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
@@ -60,13 +58,13 @@ ms.lasthandoff: 04/16/2018
   
      節點測試會指定位置步驟所選取的節點類型。 每個軸 (**子**，**父**，**屬性**，和**自我**) 有一個主體節點類型。 如**屬性**軸，主要節點類型是**\<屬性 >**。 如**父**，**子**，和**自我**軸，主要節點類型是**\<項目 >**。  
   
-     例如，如果指定的位置路徑**child:: customer**、 **\<客戶 >**選取內容節點的項目子系。 因為**子**軸具有**\<項目 >**做為主要節點類型，節點測試 Customer 為 TRUE 如果 Customer 是**\<項目 >**節點。  
+     例如，如果指定的位置路徑**child:: customer**、 **\<客戶 >** 選取內容節點的項目子系。 因為**子**軸具有**\<項目 >** 做為主要節點類型，節點測試 Customer 為 TRUE 如果 Customer 是**\<項目 >** 節點。  
   
 -   **選取述詞 （零個或以上）**  
   
      述詞會針對軸篩選節點集。 在 XPath 運算式中指定選取述詞類似於在 SELECT 陳述式中指定 WHERE 子句。 並指定在方括號之間。 套用在選取述詞中指定的測試會篩選由節點測試傳回的節點。 對於節點集內要篩選的每一個節點，該節點會當做內容節點，而且節點集內的節點數目會當做內容大小，然後評估述詞運算式。 如果述詞運算式評估該節點為 TRUE，則產生的節點集會包含該節點。  
   
-     位置步驟的語法是軸名稱之後加上雙冒號 (::)、接著是節點測試，最後是零或其他述詞，每個述詞都會以方括弧括起來。 例如，XPath 運算式 （位置路徑） **child:: customer [@CustomerID= 'ALFKI']**選取所有**\<客戶 >**內容節點的項目子系。 述詞中的測試會套用至節點集，只會傳回**\<客戶 >**項目節點具有屬性值 'ALFKI' 其**CustomerID**屬性。  
+     位置步驟的語法是軸名稱之後加上雙冒號 (::)、接著是節點測試，最後是零或其他述詞，每個述詞都會以方括弧括起來。 例如，XPath 運算式 （位置路徑） **child:: customer [@CustomerID= 'ALFKI']** 選取所有**\<客戶 >** 內容節點的項目子系。 述詞中的測試會套用至節點集，只會傳回**\<客戶 >** 項目節點具有屬性值 'ALFKI' 其**CustomerID**屬性。  
   
 ## <a name="in-this-section"></a>本節內容  
  [指定軸&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  

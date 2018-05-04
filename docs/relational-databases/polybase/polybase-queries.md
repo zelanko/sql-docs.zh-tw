@@ -1,16 +1,16 @@
 ---
-title: "PolyBase 巢狀 | Microsoft Docs"
-ms.custom: 
+title: PolyBase 巢狀 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - PolyBase
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: b6544e06a8b0d07e4a2eda1f8371cd0440c172f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  下文提供使用 SQL Server 2016 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 功能的查詢範例。 使用這些範例之前，您也必須了解設定 PolyBase 所需的 T-SQL 陳述式 (請參閱 [PolyBase T-SQL 物件](../../relational-databases/polybase/polybase-t-sql-objects.md))。
+  下文提供使用 SQL Server (從 2016 版開始) [PolyBase](../../relational-databases/polybase/polybase-guide.md) 功能的查詢範例。 使用這些範例之前，您也必須了解設定 PolyBase 所需的 T-SQL 陳述式 (請參閱 [PolyBase T-SQL 物件](../../relational-databases/polybase/polybase-t-sql-objects.md))。
   
 ## <a name="queries"></a>查詢  
  對外部資料表執行 Transact-SQL 陳述式，或使用 BI 工具來查詢外部資料表。
@@ -156,9 +156,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 將資料從 SQL Server 匯出至 Hadoop 或 Azure 儲存體。 
 
-首先，將 'allow polybase export' 的 `sp_configure` 值設定成 1，以啟用匯出功能。 接下來，建立指向目的地目錄的外部資料表。 然後，使用 INSERT INTO 將資料從本機 SQL Server 資料表匯出至外部資料來源。 
+首先，將 'allow polybase export' 的 `sp_configure` 值設定成 1，以啟用匯出功能。 接下來，建立指向目的地目錄的外部資料表。 CREATE EXTERNAL TABLE 陳述式會建立目的地目錄，如果它尚未存在。 然後，使用 INSERT INTO 將資料從本機 SQL Server 資料表匯出至外部資料來源。 
 
-如果目的地目錄不存在，INSERT INTO 陳述式就會加以建立，並將 SELECT 陳述式的結果以指定檔案格式匯出至指定位置。 外部檔案命名為 *QueryID_date_time_ID.format*，其中 *ID* 是累加識別碼，而 *format* 是匯出的資料格式。 例如，某個檔案的名稱可能是 QID776_20160130_182739_0.orc。
+SELECT 陳述式的結果會以指定的檔案格式匯出到指定的位置。 外部檔案命名為 *QueryID_date_time_ID.format*，其中 *ID* 是累加識別碼，而 *format* 是匯出的資料格式。 例如，某個檔案的名稱可能是 QID776_20160130_182739_0.orc。
+
 
 > [!NOTE]
 > 當透過 PolyBase 將檔案匯出到 Hadoop 或 Azure Blob 儲存體時，會如 CREATE EXTERNAL TABLE 命令中所定義，只有資料會被匯出，而不含資料行名稱 (中繼資料)。

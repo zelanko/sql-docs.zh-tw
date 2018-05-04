@@ -1,31 +1,32 @@
 ---
-title: "使用查詢存放區監視效能 | Microsoft Docs"
-ms.custom: 
+title: 使用查詢存放區監視效能 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 29ba7f266a86e53f95668b8bf8ca4ce879bb62f8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5451f613900a420aa681ce076cf2c94e59057a98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
   
 -   強制執行先前的查詢計劃，快速找出並修正計劃效能低下。 修正因為執行計劃變更而最近出現的效能低下。  
 -   判斷在指定的時段執行查詢的次數、協助 DBA 疑難排解資源的效能問題。  
--   識別過去 *n* 小時內的前 *n* 項查詢 (依據執行時間、記憶體耗用量等等)。  
+-   識別過去 *x* 小時內的前 *n* 項查詢 (依據執行時間、記憶體耗用量等等)。  
 -   稽核指定的查詢之查詢計劃記錄。  
 -   分析特定資料庫的資源 (CPU、I/O 及記憶體) 使用模式。  
 -   識別前 n 項等候資源的查詢。 
@@ -108,7 +109,7 @@ INNER JOIN sys.query_store_query_text AS Txt
  若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] 。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。  
 ##  <a name="Waiting"></a>尋找等候查詢
 
-從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 開始，可在查詢存放區中使用每個查詢經過一段時間的等候統計資料。 在查詢存放區中，等候類型會合併到**等候類別**。 [sys.query_store_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) 可將等候類別對應至等候類型。
+從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 開始，可在查詢存放區中使用每個查詢經過一段時間的等候統計資料。 在查詢存放區中，等候類型會合併到**等候類別**。 [sys.query_store_wait_stats & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) 可將等候類別對應至等候類型。
 
 **等候類別**會將不同的等候類型合併到本質類似的貯體中。 不同的等候類別需要不同的後續操作分析來解決問題，但同類別的等候類型會導致非常類似的疑難排解體驗，而提供受影響的前幾項查詢可能就是順利完成大部分這類調查所缺少的片段。
 
@@ -315,7 +316,7 @@ DEALLOCATE adhoc_queries_cursor;
 ###  <a name="Peformance"></a> 效能稽核及疑難排解  
  查詢存放區會保留整個查詢執行過程當中的編譯和執行階段度量歷程記錄，以讓您詢問關於工作負載的問題。  
   
- 資料庫執行了**後 *n* 項查詢嗎？**  
+ **前 *n* 個在資料庫上執行的查詢？**  
   
 ```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   

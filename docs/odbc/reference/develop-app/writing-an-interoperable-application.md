@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], feature support and variability
 - interoperability [ODBC], writing interoperable applications
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a0b70251acdfebbe05bb0900af8be7ea25b6fa6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7623f9e2674564a13061d144f599f974a3020a95
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-interoperable-application"></a>撰寫可互通的應用程式
 每當應用程式使用多個驅動程式針對相同的程式碼，該程式碼必須在這些驅動程式之間的互通。 在大部分情況下，這是容易的工作。 例如，擷取使用順向資料指標的資料列的程式碼也適用於所有的驅動程式。 在某些情況下，這可能會比較困難。 例如，建構 SQL 陳述式中使用的識別項的程式碼需要考慮識別碼案例中，用引號括住，和一段、 兩部分和三部分命名慣例。  

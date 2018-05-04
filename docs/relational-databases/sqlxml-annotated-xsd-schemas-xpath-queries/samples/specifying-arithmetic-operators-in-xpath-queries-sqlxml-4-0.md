@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +21,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3d789ff36cb20074a1dbb70a2175aa0c28e5966
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e2352f373be56877f7a55af7fa9daeed2655678a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定算術運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +35,13 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. 指定 * 算術運算子  
- 此 XPath 查詢會傳回 **\<OrderDetail >**滿足指定的述詞的項目：  
+ 此 XPath 查詢會傳回 **\<OrderDetail >** 滿足指定的述詞的項目：  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查詢中，`child`是軸和`OrderDetail`是節點測試 (TRUE 如果**OrderDetail**是**\<項目節點 >**，因為 **\<項目 >**節點是主要節點**子**軸)。 所有 **\<OrderDetail >**元素節點套用述詞中的測試，並且會傳回只在符合條件的節點。  
+ 在查詢中，`child`是軸和`OrderDetail`是節點測試 (TRUE 如果**OrderDetail**是**\<項目節點 >**，因為 **\<項目 >** 節點是主要節點**子**軸)。 所有 **\<OrderDetail >** 元素節點套用述詞中的測試，並且會傳回只在符合條件的節點。  
   
 > [!NOTE]  
 >  XPath 中的數字為雙精確度浮點數，而且在範例中比較浮點數會造成四捨五入。  

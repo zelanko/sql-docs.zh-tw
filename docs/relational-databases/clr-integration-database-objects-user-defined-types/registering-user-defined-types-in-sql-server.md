@@ -39,12 +39,11 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58838ffa846a8b7e6ebaf18e155817c64cf0cb9c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1b44d371f11795b5184b6aa76e197994ee751019
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中註冊使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.lasthandoff: 04/16/2018
   
  請遵循下列步驟，使用 Visual Studio 建立及部署 UDT：  
   
-1.  建立新**資料庫**專案中**Visual Basic**或**Visual C#**語言節點。  
+1.  建立新**資料庫**專案中**Visual Basic**或**Visual C#** 語言節點。  
   
 2.  加入將包含 UDT 之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的參考。  
   
@@ -85,7 +84,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式註冊組件使用*< assembly_bits >* FROM 子句中的引數。 這**varbinary**值代表檔案的位元組資料流的形式。  
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式註冊組件使用 *< assembly_bits >* FROM 子句中的引數。 這**varbinary**值代表檔案的位元組資料流的形式。  
   
 ```  
 USE AdventureWorks;  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetEnvAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11c2b83057291f04e7476abddc63c0ccb9954b85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 010a47003b044a400abaaaef5cd7ffd3c80d94d3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 函式
 **一致性**  
@@ -92,10 +91,10 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="comments"></a>註解  
  如需屬性的清單，請參閱[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。 沒有驅動程式專屬環境屬性。 如果*屬性*指定屬性會傳回字串， *ValuePtr*必須是要傳回的字串緩衝區的指標。 將會包含 null 結束位元組的字串的最大長度*Columnsize*位元組。  
   
- **SQLGetEnvAttr**可以在任何時間之間配置和釋放環境控制代碼的呼叫。 已成功設定應用程式環境的所有環境屬性會一直都保存到**SQLFreeHandle**上呼叫*EnvironmentHandle*與*HandleType*利用 SQL_HANDLE_ENV。 可以同時配置一個以上的環境控制代碼，在 ODBC 3*.x*。 已配置另一個環境時，不會影響在一個環境的環境屬性。  
+ **SQLGetEnvAttr**可以在任何時間之間配置和釋放環境控制代碼的呼叫。 已成功設定應用程式環境的所有環境屬性會一直都保存到**SQLFreeHandle**上呼叫*EnvironmentHandle*與*HandleType*利用 SQL_HANDLE_ENV。 可以同時配置一個以上的環境控制代碼，在 ODBC 3 *.x*。 已配置另一個環境時，不會影響在一個環境的環境屬性。  
   
 > [!NOTE]  
->  符合標準的應用程式支援 SQL_ATTR_OUTPUT_NTS 環境屬性。 當**SQLGetEnvAttr**呼叫時，ODBC 3*.x*驅動程式管理員一律會傳回 SQL_TRUE 這個屬性。 SQL_ATTR_OUTPUT_NTS 可以設定為 SQL_TRUE，只能由呼叫**SQLSetEnvAttr**。  
+>  符合標準的應用程式支援 SQL_ATTR_OUTPUT_NTS 環境屬性。 當**SQLGetEnvAttr**呼叫時，ODBC 3 *.x*驅動程式管理員一律會傳回 SQL_TRUE 這個屬性。 SQL_ATTR_OUTPUT_NTS 可以設定為 SQL_TRUE，只能由呼叫**SQLSetEnvAttr**。  
   
 ## <a name="related-functions"></a>相關函數  
   

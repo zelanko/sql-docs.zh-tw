@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fdda088594fcad53b1d53093e2ef4a39adb5cf75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f63bbab9dd5b74c23f3f76b2c851e49a7094e9dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="block-cursors"></a>區塊資料指標
 許多應用程式花費大量時間將資料匯聚在網路上。 此時間部分所花費的實際將資料匯聚透過網路，以及它的組件所花費網路額外負荷，例如驅動程式對要求的資料列的呼叫。 如果應用程式會有效率地使用，就可以降低後者的時間*區塊，*或*fat、* *資料指標，*可以一次傳回多個資料列。  

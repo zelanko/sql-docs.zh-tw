@@ -21,12 +21,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 37b91bc83640a10c9905726fdabb49c7816d77a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 92920642feb9d517067b41206e3cdb7c15f8302b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-empty-values"></a>使用空白值
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +60,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 -   [IsEmpty](../mdx/isempty-mdx.md)函式會傳回**TRUE**如果且只有在函式中指定的 tuple 所識別的資料格是空的。 否則，函數會傳回**FALSE**。  
   
     > [!NOTE]  
-    >  **IsEmpty**函式無法判斷成員運算式是否會傳回 null 值。 若要判斷是否要從運算式傳回 null 成員，請使用[IS](../mdx/is-mdx.md)運算子。  
+    >  **IsEmpty** 函式無法判斷成員運算式是否會傳回 null 值。 若要判斷是否要從運算式傳回 null 成員，請使用[IS](../mdx/is-mdx.md)運算子。  
   
 -   當空白資料格值是任一個數值運算子 (+、-、*、/) 的運算元時，如果其他運算元不是空值，就會將空白資料格值視為零。 如果兩個運算元都是空的，則數值運算子會傳回空白資料格值。  
   
@@ -126,7 +125,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- 如需詳細資訊，請參閱[NonEmpty &#40;MDX &#41;](../mdx/nonempty-mdx.md).  
+ 如需詳細資訊，請參閱[NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)。  
   
 ## <a name="empty-values-and-comparison-operators"></a>空白值及比較運算子  
  當資料中有空白值時，邏輯與比較運算子可能會傳回第三種結果 EMPTY，而非只有 TRUE 或 FALSE。 這種三重數值邏輯的需要是造成應用程式錯誤的來源。 下表大致說明導入空白值比較的結果。  
@@ -135,15 +134,15 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |與|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
-|**為 TRUE**|TRUE|FALSE|FALSE|  
+|**TRUE**|TRUE|FALSE|FALSE|  
 |**空白**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  這個表格會顯示將 OR 運算子套用到兩個布林運算元的結果。  
   
-|或|TRUE|FALSE|  
+|OR|TRUE|FALSE|  
 |--------|----------|-----------|  
-|**為 TRUE**|TRUE|TRUE|  
+|**TRUE**|TRUE|TRUE|  
 |**空白**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
@@ -155,9 +154,9 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |EMPTY|EMPTY|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [運算式 &#40;MDX &#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

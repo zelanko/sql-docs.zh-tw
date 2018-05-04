@@ -44,18 +44,18 @@ public int getColumnType(int column)
 #### <a name="parameters"></a>參數  
  *column*  
   
- **Int** ，指出資料行索引。  
+ 指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- **Int** ，指出 java.sql.Types 內定義的 JDBC 型別。  
+ 指出 java.sql.Types 內定義之 JDBC 類型的 **int**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getColumnType 方法是由 java.sql.ResultSetMetaData 介面中 getColumnType 方法指定。  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC 驅動程式 3.0 在 DATA_TYPE 資料行中有行為變更。 請參閱[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)如需詳細資訊。  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC 驅動程式 3.0 在 DATA_TYPE 資料行中有行為變更。 如需詳細資訊，請參閱 [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSetMetaData 成員](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

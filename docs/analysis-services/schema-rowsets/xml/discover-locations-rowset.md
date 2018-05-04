@@ -1,33 +1,32 @@
 ---
-title: "DISCOVER_LOCATIONS 資料列集 |Microsoft 文件"
-ms.custom: 
+title: DISCOVER_LOCATIONS 資料列集 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 61f69caeab165c4d6822f8f25667ad544d6014ec
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b58cba508faeb566f1ddb5f19bf24ef19d1e8d95
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverlocations-rowset"></a>DISCOVER_LOCATIONS 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-傳回備份檔案的內容資訊。 您必須擁有存取備份檔案位置的權限。  
+  傳回備份檔案的內容資訊。 您必須擁有存取備份檔案位置的權限。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_LOCATIONS**資料列集包含下列資料行。  

@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 89b23ac70a1d698dccac9b12d4f578664c149e19
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6246bfebac2cba917d04a5d585083b1a78544816
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|所稽核之實體的類別類型。 對應到寫入稽核記錄檔，且傳回的 class_type **get_audit_file （)**函式。 不可為 Null。|  
+|**class_type**|**char(2)**|所稽核之實體的類別類型。 對應到寫入稽核記錄檔，且傳回的 class_type **get_audit_file （)** 函式。 不可為 Null。|  
 |**class_type_desc**|**nvarchar(120)**|可稽核的實體名稱。 不可為 Null。|  
 |**securable_class_desc**|**nvarchar(120)**|對應到正在稽核之 class_type 的安全性實體物件。 如果 class_type 未對應到安全性實體物件，則為 NULL。 可以與 sys.dm_audit_actions 中的 class_desc 產生關聯。|  
   

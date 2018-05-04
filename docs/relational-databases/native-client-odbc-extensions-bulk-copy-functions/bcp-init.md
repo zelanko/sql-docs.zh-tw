@@ -24,13 +24,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 180de02b710c11b2998d2f09b74e1d5542418219
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: de7e90d1dd26d32d1a8980d5936b7f79cea4662d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +81,7 @@ RETCODE bcp_init (
   
 -   指定的資料類型為資料行在資料庫資料表、檢視或 SELECT 結果集中的資料類型。 資料類型會由 sqlncli.h 中所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料類型列舉。 資料本身會以其電腦格式表示。 也就是資料的資料行從**整數**大的四個位元組序列所代表的資料類型-或由小到大根據建立資料檔的電腦。  
   
--   如果資料庫資料類型的長度是固定的，資料檔案資料的長度也是固定的。 處理資料的大量複製函數 (例如， [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)) 剖析資料列所要的資料庫資料表、 檢視或 SELECT 資料行清單中指定的資料長度相同的資料檔案中的資料長度。 例如，定義為資料庫資料行的資料**char （13)**必須以 13 個字元，針對每個檔案中的資料列表示。 如果資料庫資料行允許使用 Null 值，固定長度的資料前置詞可以是 Null 指標。  
+-   如果資料庫資料類型的長度是固定的，資料檔案資料的長度也是固定的。 處理資料的大量複製函數 (例如， [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)) 剖析資料列所要的資料庫資料表、 檢視或 SELECT 資料行清單中指定的資料長度相同的資料檔案中的資料長度。 例如，定義為資料庫資料行的資料**char （13)** 必須以 13 個字元，針對每個檔案中的資料列表示。 如果資料庫資料行允許使用 Null 值，固定長度的資料前置詞可以是 Null 指標。  
   
 -   定義結束字元位元組順序時，結束字元位元組順序的長度會設定為 0。  
   

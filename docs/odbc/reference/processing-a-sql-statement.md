@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sending SQL statements to DBMS [ODBC]
 - SQL statements [ODBC], processing
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6ad96aa66a68d83677b85ca28cf1f6d0a1fefccf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3da40899e3c2289ef53908723642bd5be8e11db8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-a-sql-statement"></a>處理 SQL 陳述式
 之前討論的技術以程式設計方式使用 SQL 時，就必須討論 SQL 陳述式的處理方式。 所需的步驟通用於所有三種技術，雖然每個技術執行它們在不同的時間。 下圖顯示的步驟涉及在處理 SQL 陳述式，在這個章節的其餘部分將會討論。  

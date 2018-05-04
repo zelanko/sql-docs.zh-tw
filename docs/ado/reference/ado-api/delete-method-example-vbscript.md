@@ -21,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 91f399394373b7fac5972653575d95037767b1d5
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 20dc9cb9adcfce786165c70b9b6b3bd733448d22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-method-example-vbscript"></a>刪除方法的範例 (VBScript)
 這個範例會使用[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法中移除指定的記錄從[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

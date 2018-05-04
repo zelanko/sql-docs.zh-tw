@@ -1,27 +1,19 @@
 ---
-title: "Backup-asdatabase 指令程式 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Backup-asdatabase 指令程式 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 03d58a82-021c-4e13-b265-c084f42a8bb2
-caps.latest.revision: "13"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c4b8975c64d8fecd6227368ee0147e94496cb1df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3fabe81584debdafa73f04c1915a00f947dacad6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-asdatabase-cmdlet"></a>Backup-ASDatabase 指令程式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +28,7 @@ ms.lasthandoff: 01/08/2018
   
  `Backup-ASDatabase –Database <Microsoft.AnalysisServices.Database> [-AllowOverwrite <SwitchParameter>] [-BackupRemotePartitions <SwitchParameter>] [-ApplyCompression <SwitchParameter>] [-FilePassword <SecureString>] [-Locations <Microsoft.AnalysisServices.BackupLocation[]>] [-Server <string>] [-Credential <PSCredential>] [<CommonParameters>]`  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  讓 Analysis Services 系統管理員能夠將多維度或表格式資料庫備份至備份檔案。 如果未指定位置，則會使用在安裝期間指定的預設備份位置。  
   
  備份的檔案可以加密。 使用 –FilePassword 來加密檔案。 稍後在還原檔案時，必須提供指定用來加密的相同密碼。  
@@ -56,13 +48,13 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-name-string"></a>-名稱\<字串 >  
+### <a name="-name-string"></a>-Name \<string>  
  指定要備份的 Analysis Services 資料庫。 如果要以字串方式傳入資料庫名稱，您可以使用 -Database 參數或 -Name 參數指定資料庫。  
   
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
@@ -122,7 +114,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-server-string"></a>伺服器\<字串 >  
+### <a name="-server-string"></a>-Server \<string>  
  指定指令程式將會連接並執行的 Analysis Services 執行個體。 如果沒有提供伺服器名稱，將會建立 localhost 的連接。 若為預設執行個體，請單獨指定伺服器名稱。 若為具名執行個體，請使用格式 servername\instancename。 若為 HTTP 連接，請使用格式 http[s]://server[:port]/virtualdirectory/msmdpump.dll。  
   
 |||  

@@ -2,16 +2,16 @@
 title: 什麼&#39;的新功能 SQL Server 機器學習服務 |Microsoft 文件
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 405e4636525898268c54f1a3d603c9e5da3dc14d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>新功能 SQL Server 機器學習服務 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,9 @@ ms.lasthandoff: 04/16/2018
 此版也導入了**SQL Server 機器學習伺服器 （獨立）**完全獨立的 SQL Server R，並將 Python 您想要在專用的系統上執行的工作負載。 與獨立伺服器，您可以發佈並調整 R 或 Python 的解決方案，而不需要使用 SQL Server。
 
 | 版本 | 功能更新 |
-|---------|---------------|
+|---------|----------------|
+| CU 6 | Bug 修正和封裝重新整理，但不是新增功能的公告。 修正方法包括 DateTime 資料類型的支援 SPEES 查詢中的 Python 和改良的錯誤訊息中 microsoftml 預先定型的模型遺失時。 |
+| CU 5 | Bug 修正和封裝重新整理，但不是新增功能的公告。 修正方法包括轉換函式和變數 revoscalepy，更正長路徑中的相關錯誤 rxInstallPackages，修正在回送連接，RxExec 和 rx_exec 函式，和警告訊息的修訂中的增強功能。 |
 | CU 4 | Bug 修正和封裝重新整理，但不是新增功能的公告。 |
 | CU 3 | Python 模型 revoscalepy 中的序列化使用[rx_serialize_model 函式](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)。<br/><br/>[原生計分](sql-native-scoring.md)再加上的增強功能[即時計分](real-time-scoring.md)。 使用中資料庫計分，輸送量為每百萬個資料列使用 R 模型的第二個。 在此更新中，即時計分，和原生計分提供更佳的效能，在單一資料列和批次計分。 計分會使用原生快速計分的 T-SQL 函式可以執行的 SQL Server，即使在 Linux 上的任何版本。 此函式不需要安裝的 R 或額外的設定。 這表示您可以定型模型的其他位置，將它儲存在 SQL Server，然後再執行 計分而不需曾經呼叫。如需有關計分方法的詳細資訊，請參閱[如何執行即時計分或原生計分](r/how-to-do-realtime-scoring.md)。 |
 | CU 2 | Bug 修正和封裝重新整理，但不是新增功能的公告。 |

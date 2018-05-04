@@ -1,28 +1,28 @@
 ---
-title: "第 2 課： 將資料加入 |Microsoft 文件"
-ms.custom: 
+title: 第 2 課： 將資料加入 |Microsoft 文件
+ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 05a93e001f4b5deb7be0aa3367ad74278e90d70a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5976c7113de52fa34611d0809f525ddd74c1a861
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-add-data"></a>第 2 課：加入資料
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,9 +31,9 @@ ms.lasthandoff: 01/08/2018
   
 使用 [資料表匯入精靈] 可讓您從各種關聯式來源匯入資料：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 以及其他來源。 從每一個關聯式來源匯入資料的步驟非常類似以下所述內容。 資料也可以選取使用預存程序。 若要了解有關匯入資料，您可以從匯入的資料來源的不同類型的詳細資訊，請參閱[資料來源](../analysis-services/tabular-models/data-sources-ssas-tabular.md)。  
   
-完成本課程的估計時間： **20 分鐘**  
+完成本課程的估計時間：**20 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課程的工作之前，您應已完成上一課： [第 1 課：建立新的表格式模型專案](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>建立連接  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/08/2018
     
     **DimDate**
     
-      |「資料行」|  
+      |資料行|  
       |--------|  
       |**DateKey**|  
       |**SpanishDayNameOfWeek**|  
@@ -103,7 +103,7 @@ ms.lasthandoff: 01/08/2018
   
     **DimGeography**
   
-      |「資料行」|  
+      |資料行|  
       |-------------|  
       |**SpanishCountryRegionName**|  
       |**FrenchCountryRegionName**|  
@@ -111,7 +111,7 @@ ms.lasthandoff: 01/08/2018
   
     **DimProduct**
   
-      |「資料行」|  
+      |資料行|  
       |-----------|  
       |**SpanishProductName**|  
       |**FrenchProductName**|  
@@ -126,21 +126,21 @@ ms.lasthandoff: 01/08/2018
   
     **DimProductCategory**
   
-      |「資料行」|  
+      |資料行|  
       |--------------------|  
       |**SpanishProductCategoryName**|  
       |**FrenchProductCategoryName**|  
   
     **DimProductSubcategory**
   
-      |「資料行」|  
+      |資料行|  
       |-----------------------|  
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
     **FactInternetSales**
   
-      |「資料行」|  
+      |資料行|  
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  

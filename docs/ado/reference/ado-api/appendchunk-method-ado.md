@@ -23,12 +23,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 092419c105249df56e4258ccc3555e504c2e6b57
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: cd71f62bacdb56385c79eb8dc09f336f3f026aca
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 將資料附加至大型文字或二進位資料[欄位](../../../ado/reference/ado-api/field-object.md)，或[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  

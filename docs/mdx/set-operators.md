@@ -20,12 +20,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 612312b3c295e2b9b3f45c4fdba9049036fd7b19
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 860a95d1e16a2404a13812ca77cf0c0a46ae7ead
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-operators"></a>設定運算子
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,16 +33,16 @@ ms.lasthandoff: 01/08/2018
   
  MDX 支援下表中列出的集合運算子。  
   
-|運算子|描述|  
+|運算子|Description|  
 |--------------|-----------------|  
 |[- (排除)](../mdx/except-mdx-operator.md)|傳回兩個集合間的差異，同時移除重複的成員。<br /><br /> 這個運算子在功能上等於[除了](../mdx/except-mdx-function.md)函式。|  
 |[* (交叉聯結)](../mdx/crossjoin-mdx-operator-reference.md)|傳回兩個集合的交叉產品(Cross Product)。<br /><br /> 這個運算子在功能上等於[Crossjoin](../mdx/crossjoin-mdx.md)函式。|  
 |[: (範圍)](../mdx/range-mdx.md)|傳回一個自然順序的集合，以兩個指定成員作為端點，而介於這兩個成員之間的所有成員都會被併入為集合的成員。|  
-|[(聯集)](../mdx/union-mdx-operator-reference.md)|傳回兩個集合的聯集，同時排除重複成員。<br /><br /> 這個運算子在功能上等於[聯集 &#40;MDX &#41;](../mdx/union-mdx.md)函式。|  
+|[(聯集)](../mdx/union-mdx-operator-reference.md)|傳回兩個集合的聯集，同時排除重複成員。<br /><br /> 這個運算子在功能上等於[Union &#40;MDX&#41; ](../mdx/union-mdx.md)函式。|  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [運算子 &#40;MDX 語法 &#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [運算子&#40;MDX 語法&#41;](../mdx/operators-mdx-syntax.md)  
   
   

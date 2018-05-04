@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - variable-length bookmarks [ODBC]
@@ -22,16 +22,15 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: df609d905923200f7eda7477fb5bc941f8af12cc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a9a8f6fb698e55e2a5de623bfa4252468ba655ee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bookmark-types"></a>書籤的型別
-在 ODBC 3 的所有書籤*.x*可變長度的書籤。 這可讓主索引鍵或唯一索引相關聯的資料表來作為書籤。 書籤也可以是 32 位元值，所使用的 ODBC 2。*x*。 若要指定書籤使用與資料指標，而 ODBC 3*.x*應用程式設定 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARK 陳述式屬性。 會自動使用可變長度的書籤。  
+在 ODBC 3 的所有書籤 *.x*可變長度的書籤。 這可讓主索引鍵或唯一索引相關聯的資料表來作為書籤。 書籤也可以是 32 位元值，所使用的 ODBC 2。*x*。 若要指定書籤使用與資料指標，而 ODBC 3 *.x*應用程式設定 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARK 陳述式屬性。 會自動使用可變長度的書籤。  
   
  應用程式可以呼叫**SQLColAttribute**與*FieldIdentifier*引數設定為 SQL_DESC_OCTET_LENGTH 以取得的書籤的長度。 可變長度的書籤可以是 long 值，因為應用程式應繫結至資料行 0 除非它會使用許多資料列集中的資料列的書籤。  
   
- 僅為回溯相容性支援固定長度的書籤。 如果 ODBC 2。*x*應用程式使用 ODBC 3*.x*驅動程式呼叫**SQLSetStmtOption** SQL_USE_BOOKMARKS 設 SQL_UB_ON，它會對應至 SQL_UB_VARIABLE 中驅動程式管理員. 使用可變長度的書籤，即使只有 32 位元就會填入。 如果驅動程式支援固定長度的書籤，則會支援可變長度的書籤。 如果 ODBC 3*.x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLSetStmtAttr** SQL_ATTR_USE_BOOKMARKS 設 SQL_UB_VARIABLE，它會對應至 SQL_UB_ON 中驅動程式管理員和 32 位元固定長度書籤。 SQL_ATTR_FETCH_BOOKMARK_PTR 陳述式屬性然後必須指向 32 位元書籤。 如果書籤使用超過 32 位元，例如資料指標時主索引鍵會當做書籤使用，必須對應到 32 位元值的實際值。 它可以比方說，來建置它們的雜湊資料表。 當 ODBC 3*.x*應用程式使用 ODBC 2。*x*驅動程式將繫結的書籤，緩衝區長度必須是 4。
+ 僅為回溯相容性支援固定長度的書籤。 如果 ODBC 2。*x*應用程式使用 ODBC 3 *.x*驅動程式呼叫**SQLSetStmtOption** SQL_USE_BOOKMARKS 設 SQL_UB_ON，它會對應至 SQL_UB_VARIABLE 中驅動程式管理員. 使用可變長度的書籤，即使只有 32 位元就會填入。 如果驅動程式支援固定長度的書籤，則會支援可變長度的書籤。 如果 ODBC 3 *.x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLSetStmtAttr** SQL_ATTR_USE_BOOKMARKS 設 SQL_UB_VARIABLE，它會對應至 SQL_UB_ON 中驅動程式管理員和 32 位元固定長度書籤。 SQL_ATTR_FETCH_BOOKMARK_PTR 陳述式屬性然後必須指向 32 位元書籤。 如果書籤使用超過 32 位元，例如資料指標時主索引鍵會當做書籤使用，必須對應到 32 位元值的實際值。 它可以比方說，來建置它們的雜湊資料表。 當 ODBC 3 *.x*應用程式使用 ODBC 2。*x*驅動程式將繫結的書籤，緩衝區長度必須是 4。

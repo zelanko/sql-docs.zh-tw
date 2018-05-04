@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 81cc3f4ce5fcfdaa9ba36828b3ba1133c3825ed4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9a571ce63cd2870185109aeeb96ee4dd12548ee3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="remarks"></a>備註  
  現在，您可以在作業之外，獨立管理作業排程。 若要從作業移除排程，請使用**sp_detach_schedule**。 若要刪除排程，請使用**sp_delete_schedule**。  
   
-> **注意：****sp_delete_jobschedule**不支援附加至多項作業的排程。   如果現有的指令碼呼叫**sp_delete_jobschedule**若要移除附加到多個作業的排程，程序會傳回錯誤。  
+> **注意：****sp_delete_jobschedule**不支援附加至多項作業的排程。 如果現有的指令碼呼叫**sp_delete_jobschedule**若要移除附加到多個作業的排程，程序會傳回錯誤。  
   
 ## <a name="permissions"></a>Permissions  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  

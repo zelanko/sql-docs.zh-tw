@@ -1,35 +1,23 @@
 ---
-title: "資料行加入採礦結構 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 資料行加入採礦結構 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], columns
-- columns [data mining], mining structure columns
-- adding columns
-ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5dfeade08192456bae474b633af9bd401dfa0fde
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 53b88835bc2efbc009c6d4e667ae585568a7f2d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-columns-to-a-mining-structure"></a>將資料行加入至採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師，即可將資料行加入至您在資料採礦精靈中定義的採礦結構。 您可以加入已存在於用來定義採礦結構之資料來源檢視中的任何資料行。  
+  使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師，即可將資料行加入至您在資料採礦精靈中定義的採礦結構。 您可以加入已存在於用來定義採礦結構之資料來源檢視中的任何資料行。  
   
 > [!NOTE]  
 >  您可以將資料行的多份複本加入採礦結構；不過應該避免在同一模型中使用一個以上的資料行執行個體，以避免在來源及衍生的資料行之間產生錯誤的關聯。  
@@ -42,9 +30,9 @@ ms.lasthandoff: 02/15/2018
   
      就會開啟 **[選取資料行]** 對話方塊。  
   
-3.  在 **[來源資料表]**之下，選取資料來源檢視中該資料行所在的資料表。  
+3.  在 **[來源資料表]** 之下，選取資料來源檢視中該資料行所在的資料表。  
   
-4.  在 **[來源資料行]**之下，選取您要加入至採礦結構的資料行。  
+4.  在 **[來源資料行]** 之下，選取您要加入至採礦結構的資料行。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

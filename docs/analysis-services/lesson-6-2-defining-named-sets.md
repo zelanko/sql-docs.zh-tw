@@ -1,29 +1,28 @@
 ---
-title: "定義命名集 |Microsoft 文件"
-ms.custom: 
+title: 定義命名集 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 427d414c5b0545815dac427bb791c4767cfe975d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>課程 6-2-定義命名集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -142,7 +141,7 @@ ms.lasthandoff: 02/15/2018
     ![設定篩選 窗格包含兩個名為](../analysis-services/media/l6-named-set-05.gif "篩選 窗格包含兩個名為設定")  
   
 ## <a name="next-lesson"></a>下一課  
-[第 7 課： 定義關鍵效能指標 &#40;Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[第 7 課： 定義關鍵效能指標 & #40;Kpi & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [[新增命名集]](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

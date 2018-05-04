@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 179b5a84d4e0dc3e28ea3b1c23741c1e69f76c52
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 568de1f39474cfdd783d64eafb22ea67162e2d1e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
 載入到現有的檔案內容[資料流](../../../ado/reference/ado-api/stream-object-ado.md)。  

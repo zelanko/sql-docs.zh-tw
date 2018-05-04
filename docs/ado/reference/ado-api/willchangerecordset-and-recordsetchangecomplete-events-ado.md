@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d6695b7b7b2f6d750c1291c4fdea02de76a5e303
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 9cacdf90f02fed37f15b5c76cfef9feb9275f5ff
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO)
 **WillChangeRecordset**事件被呼叫之前暫止的作業會變更[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **RecordsetChangeComplete**事件之後，就會呼叫**資料錄集**已變更。  

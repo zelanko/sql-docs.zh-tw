@@ -21,12 +21,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e591f000488220b9d1db784c39b82a991837401d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fff3b831a076ad4c6d2dfb5f2cdeb134bd3341cb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-stored-procedures-mdx"></a>使用預存程序 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +52,7 @@ WHERE [Measures].[Reseller Freight Cost]
 > [!NOTE]  
 >  Microsoft Visual Basic for Applications (VBA) COM 組件會自動註冊。  
   
-## <a name="see-also"></a>請參閱  
- [函式 &#40;MDX 語法 &#41;](../mdx/functions-mdx-syntax.md)  
+## <a name="see-also"></a>另請參閱  
+ [函式&#40;MDX 語法&#41;](../mdx/functions-mdx-syntax.md)  
   
   

@@ -1,35 +1,34 @@
 ---
-title: "時間序列模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
+title: 時間序列模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f68c5aa0af3130b58f196a33cadf66404b964ee5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>時間序列模型的採礦模型內容 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-所有採礦模型都會使用相同的結構來儲存其內容。 這個結構是根據資料採礦內容結構描述資料列集所定義。 不過，在該標準結構內，包含資訊的節點會以不同的方式排列，以便代表各種樹狀結構。 本主題描述如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法為基礎的採礦模型組織節點，以及每個節點的意義。  
+  所有採礦模型都會使用相同的結構來儲存其內容。 這個結構是根據資料採礦內容結構描述資料列集所定義。 不過，在該標準結構內，包含資訊的節點會以不同的方式排列，以便代表各種樹狀結構。 本主題描述如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法為基礎的採礦模型組織節點，以及每個節點的意義。  
   
  如需適用於所有模型類型之一般採礦模型內容的說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
@@ -253,7 +252,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="elements-of-the-artxp-time-series-formula"></a>ARTXP 時間序列公式的元素  
  若要檢視 ARTXP 樹狀結構或分支的完整公式，我們建議您使用 [Microsoft 時間序列檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)的 [採礦圖例]，這項功能會以可讀取的格式呈現所有常數。  
   
--   [檢視時間序列公式模式 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [檢視時間序列公式模式 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  以下章節將呈現範例方程式並說明基本詞彙。  
   
@@ -314,7 +313,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> 了解 ARIMA 樹狀結構  
  ARIMA 模型中的每個結構都會對應至「週期性」或「週期結構」。 週期結構是在整個資料序列中重複的資料模式。 在統計限制內，允許此模式產生某些次要變化。 週期性是根據培訓資料內使用的預設時間單位所測量。 例如，如果培訓資料提供每天的銷售資料，預設時間單位就是一天，而且所有週期結構都會定義成指定的天數。  
   
- 此演算法所偵測的每個期間都會取得自己的結構節點。 例如，如果您要分析每日銷售資料，此模型可能會偵測代表週的週期結構。 在此情況下，演算法將會在完成的模型中建立兩個週期結構：一個代表預設每日期間 (以 {1} 表示)，而另一個則代表週 (以 {7} 表示)。  
+ 此演算法所偵測的每個期間都會取得自己的結構節點。 例如，如果您要分析每日銷售資料，此模型可能會偵測代表週的週期結構。 在此情況下，演算法將會在完成的模型中建立兩個週期結構：一個代表預設每日期間，表示成 {1}，而另一個則代表週，由 {7} 指定。  
   
  例如，下列查詢會從採礦模型中傳回所有 ARIMA 結構。  
   
@@ -378,7 +377,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>ARIMA 的時間序列公式  
  若要檢視任何 ARIMA 節點的完整公式，我們建議您使用 [Microsoft 時間序列檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)的 [採礦圖例]，這項功能會以一致的格式呈現已經撰寫之方程式的自動迴歸順序、移動平均和其他元素。  
   
--   [檢視時間序列公式模式 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [檢視時間序列公式模式 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  本章節將呈現範例方程式並說明基本詞彙。  
   
@@ -389,7 +388,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 `ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889`  
   
- 這個方程式是冗長的 ARIMA 格式，其中包括係數和攔截的值。 這個方程式的簡短形式為 {1,0,7}，其中 1 表示作為時間配量計數的期間，0 表示差異順序，而 7 表示係數數目。  
+ 這個方程式是冗長的 ARIMA 格式，其中包括係數和攔截的值。 這個方程式的簡短形式為{1,0,7}，其中 1 表示的時間配量計數的期間，0 表示差異順序，而 7 表示係數數目。  
   
 > [!NOTE]  
 >  雖然 Analysis Services 會計算常數以便求出變異數，但是此常數本身不會顯示在使用者介面中的任何位置。 不過，如果您在 [圖表] 檢視中選取了 [顯示偏差]，就可以將數列中任何一點的變異數當做這個常數的函數進行檢視。 每個資料序列的工具提示都會顯示特定預測點的變異數。  
@@ -444,7 +443,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  從 ARTXP 樹狀結構中擷取資訊可能會很困難，因為每個分割的資訊都位於樹狀結構內的不同位置。 因此，您必須透過 ARTXP 模型取得所有片段，然後進行某些處理，才能重新組成完整的公式。 從 ARIMA 模型中擷取方程式會比較方便，因為您在整個樹狀結構中都可以使用此公式。 如需如何建立查詢來擷取這項資訊的資訊，請參閱 [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [採礦模型內容 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  

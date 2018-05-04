@@ -25,17 +25,16 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47bdba77b79b49011bbd6b48547ffe9cc34aa270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  在資料庫中建立新的採礦結構，並選擇性地定義培訓和測試資料分割。 在建立採礦結構之後，您可以使用[ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)陳述式，將模型加入採礦結構。  
+  在資料庫中建立新的採礦結構，並選擇性地定義培訓和測試資料分割。 在建立採礦結構之後，您可以使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)陳述式，將模型加入採礦結構。  
   
 ## <a name="syntax"></a>語法  
   
@@ -112,18 +111,18 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  如需可用於定義結構資料行之資料類型、內容類型、資料行散發，以及模型旗標的清單，請參閱下列主題：  
   
--   [資料類型 &#40; 資料採礦 &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [資料類型 & #40; 資料採礦 & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [內容類型 &#40; 資料採礦 &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [內容類型 & #40; 資料採礦 & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [資料行散發 &#40; 資料採礦 &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [資料行散發&#40;資料採礦&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [模型旗標 &#40; 資料採礦 &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [模型旗標 & #40; 資料採礦 & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  您可以為一個資料行定義多個模型旗標值。 不過，對於一個資料行，您僅能擁有一個內容類型和一個資料類型。  
   
 ### <a name="column-relationships"></a>資料行關聯性  
- 您可以在任何資料行定義陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援下列使用\<資料行關聯性 > 子句。  
+ 您可以在任何資料行定義陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列使用\<資料行關聯性 > 子句。  
   
  **與**  
  表示階層。 RELATED TO 資料行的目標可以是巢狀資料表中的索引鍵資料行、案例資料列中的分隔值資料行，或者使用 RELATED TO 子句的另一個資料行 (表示更深的階層)。  
@@ -154,7 +153,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  下列範例示範如何使用 DMX 建立包含鑑效組的採礦結構。  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>範例 1：加入沒有培訓集的結構  
- 下列範例建立稱為 `New Mailing` 的新採礦結構，但不建立任何相關聯的採礦模型，也不使用鑑效組。 若要了解如何將採礦模型加入結構，請參閱[ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)。  
+ 下列範例建立稱為 `New Mailing` 的新採礦結構，但不建立任何相關聯的採礦模型，也不使用鑑效組。 若要了解如何將採礦模型加入結構，請參閱[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -194,9 +193,9 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

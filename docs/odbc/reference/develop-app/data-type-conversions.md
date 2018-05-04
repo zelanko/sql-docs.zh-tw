@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], conversions
 - SQL data types [ODBC], conversions
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2af1af29f9fa9f4d43b5b56e9dfe55c8c67fcea8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 04dd1614247067e3920958f9d1733a3ef91d792c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-conversions"></a>資料類型轉換
 資料可以從一個類型中轉換到另一個，其中一個四次： 當資料傳送從一個應用程式變數到另一個 (C 到 C)，當應用程式變數中的資料傳送至陳述式參數 (C to SQL) 中傳回結果集資料行中的資料時應用程式變數 (SQL 到 C)，並將資料時從一個資料來源資料行轉移至另一個 (SQL to SQL)。  

@@ -16,15 +16,16 @@ ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 04/03/2018
+ms.date: 04/19/2018
 ms.author: aliceku
-ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 77dee541f04218f8e84fc0428a0d8e34001e829a
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰 (PREVIEW) 支援
+# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 攜帶您自己的金鑰 (BYOK) 支援[透明資料加密 (TDE)](transparent-data-encryption.md)，可讓您使用名為 TED 保護裝置的非對稱金鑰來加密資料庫加密金鑰 (DEK)。  TDE 保護裝置儲存於 Azure 的雲端式外部金鑰管理系統 [Azure Key Valut](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) 之中，可供您自行控制。 Azure Key Vault 是首款整合 TDE 與 BYOK 支援的金鑰管理服務。 TDE DEK 會儲存於資料庫的啟動頁面，由 TDE 保護裝置予以加密及解密。 TDE 保護裝置會儲存於 Azure Key Valut 並永遠留在此金鑰保存庫。 如果撤銷了伺服器對金鑰保存庫的存取權，資料庫即無法解密或讀入記憶體中。  TDE 保護裝置設置於邏輯伺服器層級，已與該伺服器建立關聯的所有資料庫均會加以繼承。 
@@ -65,9 +66,9 @@ ms.lasthandoff: 04/08/2018
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>設定 Azure Key Vault 的指導方針
 
-- 使用已啟用[虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的金鑰保存庫，萬一意外刪除金鑰或是金鑰保存庫時可防止資料遺失：  
-  - 虛刪除的資源會保留一段時間，除非復原或清除，否則保留 90 天。
-  - **復原**和**清除**動作本身的權限已在金鑰保存庫的存取原則中建立關聯。 
+- 設定已啟用[虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的金鑰保存庫，萬一意外或惡意刪除金鑰或是金鑰保存庫時可防止資料遺失。  這是使用 BYOK 之 TDE 的**硬碟需求**：  
+  - 虛刪除的資源除非復原或清除，否則會保留 90 天。
+  - **復原**和**清除**動作本身的權限定義在金鑰保存庫存取原則中。 
 - 使用邏輯伺服器的 Azure Active Directory (Azure AD) 身分識別，對其授與金鑰保存庫的存取權。  使用入口網站 UI 時，Azure AD 身分識別會自動建立，而金鑰保存庫的存取權限會授與伺服器。  必須建立 AAD 身分識別，且應驗證完成，才能使用 PowerShell 來設定具 BYOK 的 TDE。 如需使用 PowerShell 時的詳細逐步指示，請參閱[使用 BYOK 設定 TDE](transparent-data-encryption-byok-azure-sql-configure.md)。
 
   >[!NOTE]
@@ -122,7 +123,8 @@ ms.lasthandoff: 04/08/2018
 ### <a name="azure-key-vault-configuration-steps"></a>Azure Key Vault 設定步驟
 
 - 安裝 [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 
-- 使用 [PowerShell 在兩個不同的區域建立兩個 Azure Key Vault，以在金鑰保存庫上啟用「虛刪除」屬性](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) (目前從 AKV 入口網站還無法使用此選項 – 但 SQL 需要它) 
+- 使用 [PowerShell 在兩個不同的區域建立兩個 Azure Key Vault，以在金鑰保存庫上啟用「虛刪除」屬性](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) (目前從 AKV 入口網站還無法使用此選項 - 但 SQL 需要它)。
+- 這兩個 Azure Key Vault 必須位於相同 Azure 地理的兩個區域中，才能備份和還原金鑰。  如果您需要這兩個金鑰保存庫位於不同地理才能符合 SQL Geo-DR 需求，請遵循 [BYOK 程序](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-hsm-protected-keys)，允許從內部部署 HSM 匯入金鑰。
 - 在第一個金鑰保存庫中建立新的金鑰：  
   - RSA/RSA-HSA 2048 金鑰 
   - 無任何到期日 
@@ -138,7 +140,7 @@ ms.lasthandoff: 04/08/2018
 - 選取邏輯伺服器 TDE 窗格，且為每個邏輯 SQL 伺服器：  
    - 選取相同區域中的 AKV 
    - 選取要用作為 TDE 保護裝置的金鑰 – 每部伺服器都會使用 TED 保護裝置的本機複本。 
-   - 在入口網站中執行此作業，將會建立邏輯 SQL 伺服器的 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)，其可用於指派存取金鑰保存庫的邏輯 SQL Server 權限 - 請勿刪除此身分識別。  改為在 Azure Key Vault 中移除權限，即可撤銷存取權。 對於邏輯 SQL 伺服器來說，其可用於指派存取金鑰保存庫的邏輯 SQL Server 權限 - 請勿刪除此身分識別。  改為在 Azure Key Vault 中移除權限，即可撤銷存取權。 
+   - 在入口網站中執行此作業，將會建立邏輯 SQL 伺服器的 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)，其可用於指派存取金鑰保存庫的邏輯 SQL Server 權限 - 請勿刪除此身分識別。  改為在 Azure Key Vault 中移除權限，即可撤銷存取權。 對於邏輯 SQL Server 來說，其可用於指派存取金鑰保存庫的邏輯 SQL Server 權限。
 - 建立主要資料庫。 
 - 請遵循[作用中地理複寫指引](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)完成該案例，這個步驟將會建立次要資料庫。
 

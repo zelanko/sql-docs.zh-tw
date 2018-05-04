@@ -27,15 +27,15 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f9d0cd4dc1e60a59af3b8d3e976eeff888d24aa1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b3cdcb3eef5de54ad1b83495708e710473f0ee5c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="content-element-assl"></a>Content 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]說明內容中的資料行的[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  說明內容中的資料行的[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|無|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
  下表所列的值通常受到所有採礦演算法提供者支援。  
   
-|ReplTest1|描述|  
+|Value|Description|  
 |-----------|-----------------|  
 |*離散*|此資料行包含離散值。|  
 |*連續*|此資料行的值會定義一組連續的數值資料。|  
@@ -85,17 +85,17 @@ ms.lasthandoff: 01/08/2018
   
  除了這些標準值時，採礦演算法提供者隨附[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下表中的值。  
   
-|ReplTest1|描述|  
+|Value|Description|  
 |-----------|-----------------|  
 |*索引鍵的順序*|此資料行為索引鍵資料行，而且資料行的值代表事件序列。<br /><br /> 注意： 此內容類型是僅適用於索引鍵資料行，其中**IsKey**元素設定為**True**。|  
 |*Key Time*|此資料行為索引鍵資料行，而且資料行的值代表時間測量單位。<br /><br /> 注意： 此內容類型是僅適用於索引鍵資料行，其中**IsKey**元素設定為**True**。|  
-|*序列*|此資料行的值代表事件序列。|  
+|*順序*|此資料行的值代表事件序列。|  
 |*Time*|此資料行的值代表時間測量單位。|  
   
  列舉型別對應至允許的值**內容**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
-## <a name="see-also"></a>請參閱  
- [ClassifiedColumns 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/classifiedcolumns-element-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [ClassifiedColumns 元素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/classifiedcolumns-element-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

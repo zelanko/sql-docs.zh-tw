@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c53f5c6c240404975318764716a1b6a333064536
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8fee382cd27de7bbe1435b4c509dc38a5c068423
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ Member_Expression.Lead( Index )
   
  如果指定的開頭是負數，**導致**函式傳回之前的成員。  
   
- `Lead(1)`相當於[NextMember](../mdx/nextmember-mdx.md)函式。 `Lead(-1)`相當於[PrevMember](../mdx/prevmember-mdx.md)函式。  
+ `Lead(1)` 相當於[NextMember](../mdx/nextmember-mdx.md)函式。 `Lead(-1)` 相當於[PrevMember](../mdx/prevmember-mdx.md)函式。  
   
  **導致**函數很相似[延隔](../mdx/lag-mdx.md)函式中，不同處在於**延隔**函式會以相反的方向，以尋找**導致**函式。 也就是說，`Lead(n)` 相當於 `Lag(-n)`。  
   
@@ -76,7 +75,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

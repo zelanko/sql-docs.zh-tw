@@ -1,6 +1,6 @@
 ---
-title: 在 SQL Operations Studio （預覽）中建立程式碼片段  |Microsoft 文件
-description: 學習如何在SQL Operations Studio（預覽）中建立和使用 SQL 程式碼片段
+title: 建立程式碼片段中 SQL Operations Studio （預覽） |Microsoft 文件
+description: 了解如何建立和使用 SQL Operations Studio （預覽） 中的 SQL 程式碼片段
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
@@ -9,20 +9,19 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f51c14d2c3824baa1b2730d352b94d9cfdc097bc
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 02090dad07927fb51c12bd73ac85c87f58378117
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>透過建立與使用程式碼片段，在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 內快速地建立 TRANSACT-SQL (T-SQL) 指令碼 
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>建立並快速地建立 TRANSACT-SQL (T-SQL) 指令碼中的使用程式碼片段 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 的程式碼片段是範本，讓您更輕鬆地建立資料庫和資料庫物件。 
+程式碼片段中的[!INCLUDE[name-sos](../includes/name-sos-short.md)]是範本，讓您更輕鬆地建立資料庫和資料庫物件。 
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供數個的 T-SQL 程式碼片段以協助您進行快速產生適當的語法。 
 
@@ -30,38 +29,38 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="using-built-in-t-sql-code-snippets"></a>使用內建的 T-SQL 程式碼片段
 
-1. 若要存取可用的程式碼片段，請在查詢編輯器中輸入 *sql* 以開啟清單：
+1. 若要存取可用的程式碼片段，請輸入*sql*在查詢編輯器中開啟清單：
 
    ![程式碼片段](media/code-snippets/sql-snippets.png)
 
-1. 選取您要使用的程式碼片段，並產生 T-SQL 指令碼。 例如，選取*sqlCreateTable*:
+1. 選取您要使用的程式碼片段，並在產生 T-SQL 指令碼。 例如，選取*sqlCreateTable*:
 
    ![建立資料表的程式碼片段](media/code-snippets/create-table.png)
 
-1. 將反白顯示的欄位更新為特定值。 例如，依據您的資料庫，取代 *TableName* 和 *Schema* 值：
+1. 更新的特定值的反白顯示的欄位。 例如，取代*TableName*和*結構描述*資料庫的值：
 
    ![取代範本欄位](media/code-snippets/table-from-snippet.png)
 
-   如果您想要變更的欄位不再反白顯示 (當您在編輯器周圍移動游標時)，請以滑鼠右鍵按一下您想要變更文字，並選取**變更所有相符項目**：
+   如果您想要變更的欄位不會再反白顯示 （這樣當您移動游標周圍編輯器），以滑鼠右鍵按一下您想要變更，並選取的 word**變更所有相符項目**:
 
    ![取代範本欄位](media/code-snippets/change-all.png)
 
-1. 針對選取的程式碼片段，依據您的需求更新或加入任何額外 T-SQL。例如，更新 *Column1*、*Column2*，並加入更多的資料欄位。
+1. 更新或新增選取的程式碼片段所需任何額外 T-SQL。 例如，更新*Column1*， *Column2*，並加入更多的資料行。
 
 
  
 ## <a name="creating-sql-code-snippets"></a>建立 SQL 程式碼片段 
 
-您可以定義您自己的程式碼片段。 開啟 SQL 程式碼片段檔案進行編輯：
+您可以定義您自己的程式碼片段。 若要開啟 SQL 程式碼片段檔案進行編輯：
 
-1. 開啟*命令選擇區* (**Shift + Ctrl + P**)，然後輸入 *snip* 並選取**喜好設定: 開啟使用者程式碼片段**：
+1. 開啟*命令選擇區*(**Shift + Ctrl + P**)，然後輸入*剪取*，然後選取**喜好設定： 開啟使用者程式碼片段**:
 
    ![取代範本欄位](media/code-snippets/user-snippets.png)
 
 1. 選取**SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] 從 Visual Studio Code 繼承其程式碼片段的功能，因此這份文件特別說明如何使用 SQL 程式碼片段。如需詳細資訊，請參閱 Visual Studio 程式碼文件中的[建立您自己的程式碼片段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)。 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] 從 Visual Studio 程式碼繼承其功能的程式碼片段，因此這份文件特別說明如何使用 SQL 程式碼片段。 如需詳細資訊，請參閱[建立您自己的程式碼片段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)Visual Studio 程式碼文件中。 
 
    ![取代範本欄位](media/code-snippets/select-sql.png)
 
@@ -96,10 +95,10 @@ ms.lasthandoff: 04/26/2018
    ```
 
 1. 儲存 sql.json 檔案。
-1. 透過按一下 **Ctrl + N** 以開啟新的 [查詢編輯器] 視窗。
-2. 輸入 **sql**，然後您會看到您剛加入的兩個使用者程式碼片段：*sqlCreateTable2* 和 *sqlSelectTop5*。
+1. 開啟新的 [查詢編輯器] 視窗，依序按一下**Ctrl + N**。
+2. 型別**sql**，而且您會看到您剛才加入; 兩個使用者程式碼片段*sqlCreateTable2*和*sqlSelectTop5*。
 
-選取其中一個新的程式碼片段，並進行測試 ！
+選取其中一個新的程式碼片段，並為它提供的測試回合 ！
 
 
 ## <a name="additional-resources"></a>其他資源

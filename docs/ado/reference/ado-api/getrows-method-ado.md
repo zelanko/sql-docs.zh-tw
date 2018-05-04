@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9ba89fccb177566a6f130b4c8b0afa5ea5176b63
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 75d22d4bc26da9b9b4d58f925d3bfaebf60e9064
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
 擷取的多筆記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件陣列。  

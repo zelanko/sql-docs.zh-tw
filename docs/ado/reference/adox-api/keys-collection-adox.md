@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 803c105d0d91a6826a4c8fbf096d059bbf5070d8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 72fcaa05a7b1949589bd2874d4202e8529d8c0af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keys-collection-adox"></a>索引鍵集合 (ADOX)
 包含所有[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件[資料表](../../../ado/reference/adox-api/table-object-adox.md)。  

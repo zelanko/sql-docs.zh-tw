@@ -22,12 +22,11 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: ba59d13932b4d93f7d4992b8f26b6830ba67b395
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 26ebed881d32bb9d550ae9630ee7b60cb15cd153
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-set-expressions"></a>使用集合運算式
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  是由三個 tuple 所組成，每一個 tuple 都包含 Product 維度之 Product Category 階層上之成員及 Date 維度之 Calendar 階層上之成員的兩個明確參考。  
   
- 如需傳回集合之函數的範例，請參閱[使用成員、 Tuple 及集合 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ 如需傳回集合之函數的範例，請參閱[使用成員、 Tuple 和集合&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。  
   
-## <a name="see-also"></a>請參閱  
- [運算式 &#40;MDX &#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

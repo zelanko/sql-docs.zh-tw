@@ -1,31 +1,23 @@
 ---
-title: "啟用網站集合，在 CA 中的 Power Pivot 整合 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 啟用網站集合，在 CA 中的 Power Pivot 整合 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 52fb43ddd40e432cb174c9d0794a3919fc48ff7a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 976ad94b2c58d86a1b7731bfd3a9aa74097f3b29
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>啟用網站集合，在 CA 中的 Power Pivot 整合
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-如果您使用 [現有的伺服陣列] 安裝選項來安裝 SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，就需要為特定的網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合。 如果您已使用 [新的伺服器] 選項來安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，您可以略過這項工作，因為 SQL Server 安裝程式已經在設定部署時，針對根網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合。  
+  如果您使用 [現有的伺服陣列] 安裝選項來安裝 SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，就需要為特定的網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合。 如果您已使用 [新的伺服器] 選項來安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，您可以略過這項工作，因為 SQL Server 安裝程式已經在設定部署時，針對根網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合。  
   
  網站集合層級的功能啟用對於將應用程式頁面和範本提供給網站使用 (包括排程資料重新整理的組態頁面，以及 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫和資料摘要文件庫的應用程式頁面) 是必要的。  
   

@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b72bb15c70e419ae94f9d1d96ab12a374375933c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: b78fe75314e6e2aacf5c6f0d9c599f5cb6db6292
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="definedsize-property"></a>DefinedSize 屬性
 表示的資料容量[欄位](../../../ado/reference/ado-api/field-object.md)物件。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 04/18/2018
 ## <a name="return-value"></a>傳回值  
  傳回**長**值，反映所定義的大小的欄位，這取決於資料類型的欄位物件，請參閱 <<c4> [ 類型](../../../ado/reference/ado-api/type-property-ado.md)如需詳細資訊。 使用的固定長度資料類型的欄位，傳回值會是資料類型，以位元組為單位的大小。 使用可變長度資料類型的欄位，這是下列其中一項：  
   
-1.  以字元為單位的欄位的最大長度 (如**adVarChar**和**adVarWChar**) 或以位元組為單位 (如**adVarBinary**，和**adVarNumeric**) 如果欄位有定義的長度。 例如， **adVarChar(5)**欄位的最大長度為 5。  
+1.  以字元為單位的欄位的最大長度 (如**adVarChar**和**adVarWChar**) 或以位元組為單位 (如**adVarBinary**，和**adVarNumeric**) 如果欄位有定義的長度。 例如， **adVarChar(5)** 欄位的最大長度為 5。  
   
 2.  以字元為單位的資料類型的最大長度 (如**adChar**和**adWChar**) 或以位元組為單位 (如**adBinary**和**adNumeric**) 如果欄位沒有定義的長度。  
   

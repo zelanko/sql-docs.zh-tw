@@ -21,12 +21,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f132bb8124afecea1b1f7fb519ecf64d1cfe88a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 125ec1708c93abf78b4d4fa4663b287579d45f5e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 的遠端服務提供者概觀
 Microsoft OLE DB 遠端服務提供者可讓用戶端電腦上的本機使用者叫用遠端電腦上的資料提供者。 如果您在遠端電腦上的本機使用者一樣，請指定遠端電腦的資料提供者參數。 然後指定遠端服務提供者用來存取遠端電腦的參數。 然後，您可以如同是本機使用者存取遠端電腦。
@@ -79,7 +78,7 @@ cn.Properties("Internet Timeout") = 5000
 ## <a name="remarks"></a>備註
  在 ADO 2.0 中，OLE DB 遠端服務提供者只可指定之*ActiveConnection*參數[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件**開啟**方法。 從 ADO 2.1 開始，提供者也可以指定在*ConnectionString*參數[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件**開啟**方法。
 
- 相當於**.RDSDataControl**物件[SQL](../../../ado/reference/rds-api/sql-property.md)便無法使用屬性。 [資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件**開啟**方法*來源*改為使用引數。
+ 相當於 **.RDSDataControl**物件[SQL](../../../ado/reference/rds-api/sql-property.md)便無法使用屬性。 [資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件**開啟**方法*來源*改為使用引數。
 
  **請注意**"...; 指定遠端提供者 = MS 遠端;...」 會建立四個層案例。 案例三個層級尚未經過測試，並不需要。
 

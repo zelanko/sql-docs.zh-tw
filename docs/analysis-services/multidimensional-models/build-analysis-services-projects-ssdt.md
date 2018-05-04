@@ -1,34 +1,23 @@
 ---
-title: "建立 Analysis Services 專案 (SSDT) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 建立 Analysis Services 專案 (SSDT) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- projects [Analysis Services], building
-- Business Intelligence Development Studio, project building [Analysis Services]
-ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 634586ccc56d55a8678bc63a7ed4eb381f619e02
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a6895d06c363cd63833cb27450faef33af13d1bb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>建立多個 Analysis Services 專案 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的方式就像是在 Visual Studio 中建立任何程式設計專案。 當您建立此專案時，會在輸出目錄中建立一組 XML 檔案， 這些 XML 檔案會使用 Analysis Services 指令碼語言 (ASSL)，這種語言是用戶端應用程式 (包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ) 為了建立或修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件而與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體溝通所用的 XML 用語； 這些 XML 檔案是用來將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件定義部署到指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的方式就像是在 Visual Studio 中建立任何程式設計專案。 當您建立此專案時，會在輸出目錄中建立一組 XML 檔案， 這些 XML 檔案會使用 Analysis Services 指令碼語言 (ASSL)，這種語言是用戶端應用程式 (包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ) 為了建立或修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件而與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體溝通所用的 XML 用語； 這些 XML 檔案是用來將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件定義部署到指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
 ## <a name="building-a-project"></a>建立專案  
  當您建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 將會在輸出資料夾中建立一組完整的 XML 檔案，其中包括建立專案中所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫物件所需的所有必要 ASSL 命令。 如果之前已建立此專案，而且已針對使用中的組態指定累加部署，則 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 也將會建立包含 ASSL 命令的 XML 檔案，以便對已部署的物件執行累加更新； 此 XML 檔案會寫入到 ..\obj\\<使用中的組態\> 資料夾中。 當部署及處理極大的專案或資料庫時，累加建立的方式可以節省時間。  
@@ -54,7 +43,7 @@ ms.lasthandoff: 02/15/2018
 |*Projectname*.configsettings|包含部署期間可用來直接修改或在 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 中使用的組態設定 (例如，資料來源的連接字串)。|  
 |*Projectname*.deploymenttargets|包含部署期間可用來直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 「部署精靈」中使用的目的地設定 (例如，伺服器和資料庫名稱)。|  
 |*Projectname*.deploymentoptions|包含部署期間可用來直接修改或在 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 中使用的各種選項設定 (例如，儲存位置)|  
-|*Assemblyname*/*dllname.*dll|每一個參考之組件的個別資料夾；每一個資料夾都包含該組件的 DLL、任何參考的組件，以及輸出偵錯資訊的所有關聯 .pdb 檔案。|  
+|*Assemblyname*/*dllname.* dll|每一個參考之組件的個別資料夾；每一個資料夾都包含該組件的 DLL、任何參考的組件，以及輸出偵錯資訊的所有關聯 .pdb 檔案。|  
   
 |檔案 (在 obj 資料夾中)|Description|  
 |-----------------------------|-----------------|  

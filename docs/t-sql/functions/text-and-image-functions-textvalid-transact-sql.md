@@ -1,16 +1,16 @@
 ---
 title: TEXTVALID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTVALID_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d64916b441c65dc00e0e387e08c2967124721514
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5ab9180b4699314a2fe8dce24779b5742665a826
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Text 和 Image 函式 - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,8 +73,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |函數或陳述式|描述|  
 |---------------------------|-----------------|  
-|PATINDEX**(**'*%pattern%**'***,** *expression***)**|傳回指定字元字串在 **text** 和 **ntext** 資料行中的字元位置。|  
-|DATALENGTH**(***expression***)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
+|PATINDEX **(**'*%pattern%**'***,** *expression***)**|傳回指定字元字串在 **text** 和 **ntext** 資料行中的字元位置。|  
+|DATALENGTH **(***expression***)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
 |SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
   
 ## <a name="examples"></a>範例  

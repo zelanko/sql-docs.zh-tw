@@ -1,5 +1,5 @@
 ---
-title: '&lt;（小於）(MDX) |Microsoft 文件'
+title: '&lt; （小於）(MDX) |Microsoft 文件'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -23,14 +23,13 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 99be3c9f3896f84dbee770859c14725f299b63ff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4f1b4b0698461f04c3bddd7ce60195cbba2a7508
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lt-less-than-mdx"></a>&lt;（小於）(MDX)
+# <a name="lt-less-than-mdx"></a>&lt; （小於）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   執行比對作業，判定某個多維度運算式 (MDX) 運算式的值是否小於另一個 MDX 運算式的值。  
@@ -75,7 +74,7 @@ WHERE
     ([Measures].[LowGPM])  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

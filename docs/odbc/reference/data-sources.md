@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
@@ -20,11 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b16699f67a74232730b2b96a2fdeeb4545d1fe46
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 13f39771ed48501e4ab90494bdff9d3253219bba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-sources"></a>資料來源
 A*資料來源*是資料的來源。 它可以是檔案時，DBMS 或甚至即時資料摘要上特定資料庫。 資料可能會位於與程式，相同的電腦或網路上的某個地方的另一部電腦上。 例如，資料來源可能是 OS/2® 作業系統，透過 Novell® Netware; 上執行 Oracle DBMS透過閘道; 存取 IBM DB2 DBMS伺服器目錄中; Xbase 檔案的集合或本機的 Microsoft® Access 資料庫檔案。  

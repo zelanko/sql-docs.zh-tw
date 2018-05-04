@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +21,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3d3bd65ad512d3e6802754cb6ad1e80ec4cae7fe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 17e6efeab07a4955ac115ef8a8a986e170e66330
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定明確轉換函數 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +35,9 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>範例  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 明確轉換函數  
- **Number （)**函式會將引數轉換為數字。  
+ **Number （)** 函式會將引數轉換為數字。  
   
- 假設的值**ContactID**是數值，下列查詢會將**ContactID**成數字並比較它與 4 這個值。 然後查詢會傳回所有**\<員工 >**的內容節點的項目子系**ContactID**具有數值 4 屬性：  
+ 假設的值**ContactID**是數值，下列查詢會將**ContactID**成數字並比較它與 4 這個值。 然後查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID**具有數值 4 屬性：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -86,9 +84,9 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 明確轉換函數  
- **String （)**函式會將引數轉換為字串。  
+ **String （)** 函式會將引數轉換為字串。  
   
- 下列查詢會將**ContactID**成字串並比較它與字串值"4"。 此查詢會傳回所有**\<員工 >**的內容節點的項目子系**ContactID** "4"的字串值：  
+ 下列查詢會將**ContactID**成字串並比較它與字串值"4"。 此查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID** "4"的字串值：  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

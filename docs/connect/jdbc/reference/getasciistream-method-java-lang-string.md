@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="getasciistream-method-javalangstring"></a>getAsciiStream 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取值，這個目前的資料列內指定之資料行名稱的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)當做 ASCII 字元資料流的物件。  
+  擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列內指定之資料行名稱的值來當作 ASCII 字元資料流。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
 #### <a name="parameters"></a>參數  
  *columnName*  
   
- A**字串**，其中包含資料行名稱。  
+ 包含資料行名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
  InputStream 物件。  
@@ -52,11 +52,11 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  GetAsciiStream 方法 java.sql.ResultSet 介面中所指定此 getAsciiStream 方法。  
   
 ## <a name="see-also"></a>另請參閱  
- [getAsciiStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   
+ [getAsciiStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

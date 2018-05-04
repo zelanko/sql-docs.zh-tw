@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - sending SQL statements to DBMS [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1e7d51d8ae632f30528510448e52fc6c363d066d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dd31890b353d335872e857f8b0e4daf581783cd8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="embedded-sql"></a>內嵌的 SQL
 第一種技術，將 SQL 陳述式傳送至 DBMS 內嵌 SQL。 SQL 不使用變數和流程控制陳述式，因為它通常作為資料庫次語言，可以加入至傳統的程式設計語言，例如 C 或 COBOL 中撰寫的程式。 這是內嵌式 SQL 的中心概念： 放置在主機中程式設計語言撰寫的程式中的 SQL 陳述式。 簡言之，下列技術可用於主機語言中嵌入 SQL 陳述式：  

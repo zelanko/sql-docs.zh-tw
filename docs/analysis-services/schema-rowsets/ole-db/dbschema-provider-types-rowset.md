@@ -23,27 +23,27 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bea7c78fddb8aa56f1ccae47b9a3964d81e1d115
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: caf9cc5b0c178c70889be608d4622b4469f798c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]識別資料提供者所支援的 （基底） 的資料類型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  識別資料提供者所支援的 (基底) 資料類型。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DBSCHEMA_PROVIDER_TYPES**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|描述|  
+|資料行名稱|類型指標|Description|  
 |-----------------|--------------------|-----------------|  
 |**TYPE_NAME**|**DBTYPE_WSTR**|提供者特定的資料類型名稱。|  
 |**DATA_TYPE**|**DBTYPE_UI2**|資料類型的指標。|  
 |**COLUMN_SIZE**|**DBTYPE_UI4**|非數值資料行或參數的長度，指提供者為此類型定義的最大值或長度。 如果是字元資料，這是最大長度或定義的長度 (以字元為單位)。 如果是 DateTime 資料類型，則此為表示字串的長度 (假設最大值可以容納分數秒元件的有效位數)。<br /><br /> 如果資料類型為數值，此為資料類型最大有效位數的上限。|  
 |**LITERAL_PREFIX**|**DBTYPE_WSTR**|在文字命令中做為此類型之常值前置詞的字元。|  
 |**LITERAL_SUFFIX**|**DBTYPE_WSTR**|在文字命令中做為此類型之常值後置詞的字元。|  
-|**CREATE_PARAMS**|**DBTYPE_WSTR**|建立此資料類型的資料行時，取用者所指定的建立參數。 例如，SQL 資料類型，**小數、**需要精確度及小數位數。 在此情況下，建立參數可能為字串 "precision,scale"。 若要建立文字命令中**十進位**10 位有效位數與小數位數為 2，值的資料行**TYPE_NAME**資料行可能是**DECIMAL()**和完整的型別規格則為**DECIMAL(10,2)**。<br /><br /> 建立參數會顯示為以逗號分隔的值清單，按提供時的順序列出且不放在括號中。 如果建立參數為長度、最大長度、有效位數、小數位數、種子或增量，請分別使用 "length"、"max length"、"precision"、"scale"、"seed" 和 "increment"。 如果建立參數為其他某值，則提供者會決定要使用什麼文字來描述建立參數。<br /><br /> 如果資料類型需要建立參數，則類型名稱通常會顯示 "()"。 這代表要插入建立參數的位置。 如果類型名稱不包含 "()"，則建立參數會包含在引號中並附加到資料類型名稱。|  
+|**CREATE_PARAMS**|**DBTYPE_WSTR**|建立此資料類型的資料行時，取用者所指定的建立參數。 例如，SQL 資料類型，**小數、**需要精確度及小數位數。 在此情況下，建立參數可能為字串 "precision,scale"。 若要建立文字命令中**十進位**10 位有效位數與小數位數為 2，值的資料行**TYPE_NAME**資料行可能是**DECIMAL()** 和完整的型別規格則為**DECIMAL(10,2)**。<br /><br /> 建立參數會顯示為以逗號分隔的值清單，按提供時的順序列出且不放在括號中。 如果建立參數為長度、最大長度、有效位數、小數位數、種子或增量，請分別使用 "length"、"max length"、"precision"、"scale"、"seed" 和 "increment"。 如果建立參數為其他某值，則提供者會決定要使用什麼文字來描述建立參數。<br /><br /> 如果資料類型需要建立參數，則類型名稱通常會顯示 "()"。 這代表要插入建立參數的位置。 如果類型名稱不包含 "()"，則建立參數會包含在引號中並附加到資料類型名稱。|  
 |**IS_NULLABLE**|**DBTYPE_BOOL**|布林值，指出資料類型是否可為 Null。<br /><br /> **VARIANT_TRUE**指出資料類型可為 null。<br /><br /> **VARIANT_FALSE**指出資料類型不可為 null。<br /><br /> **NULL**— 表示，不知道資料型別是否可為 null。|  
 |**CASE_SENSITIVE**|**DBTYPE_BOOL**|布林值，指出資料類型是否為字元類型且區分大小寫。<br /><br /> **VARIANT_TRUE**指出資料類型是字元類型且區分大小寫。<br /><br /> **VARIANT_FALSE**表示資料型別不是字元類型，或不區分大小寫。|  
 |**可搜尋**|**DBTYPE_UI4**|整數，指出資料類型如何可以用於在搜尋中如果提供者支援**ICommandText**，否則**NULL**。 此資料行可以有下列的值：<br /><br /> **DB_UNSEARCHABLE**指出的資料類型不能在**其中**子句。<br /><br /> **DB_LIKE_ONLY**表示資料型別可以在中使用**其中**子句只能搭配**像**述詞。<br /><br /> **DB_ALL_EXCEPT_LIKE**表示資料型別可以在中使用**其中**子句以外的所有比較運算子搭配**像**。<br /><br /> **DB_SEARCHABLE**表示資料型別可以在中使用**其中**子句搭配任何比較運算子。|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 |**DATA_TYPE**|**DBTYPE_UI2**|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

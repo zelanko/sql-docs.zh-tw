@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling [ODBC]
 - pooled connections [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69736f00cc4d357da0f6da7d4fbf3886144d1553
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>驅動程式管理員連接共用
 連接共用可讓應用程式不需要重新建立每次使用的連接集區使用的連接。 一旦已經建立連接，並放在集區中，應用程式可以重複使用該連接，而不執行完整的連線程序。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
   
  驅動程式管理員會決定是否應該根據傳入的引數使用特定的連接集區中**SQLConnect**或**SQLDriverConnect**，並根據連接屬性配置連接之後設定。  
   
- 當驅動程式管理員會共用連接時，它必須能夠判斷連線是否仍正常才能送出連線。 否則，驅動程式管理員會保留在送出應用程式的無作用連接發生暫時性網路失敗時。 新的連接屬性已經定義在 ODBC 3*.x*: SQL_ATTR_CONNECTION_DEAD。 這是傳回 sql_cd_true; 或 SQL_CD_FALSE 唯讀連接屬性。 Sql_cd_true; 的值表示 SQL_CD_FALSE 的值表示連接仍在作用中時，連接到已遺失。 （符合較早版本的 ODBC 驅動程式也可以支援此屬性）。  
+ 當驅動程式管理員會共用連接時，它必須能夠判斷連線是否仍正常才能送出連線。 否則，驅動程式管理員會保留在送出應用程式的無作用連接發生暫時性網路失敗時。 新的連接屬性已經定義在 ODBC 3 *.x*: SQL_ATTR_CONNECTION_DEAD。 這是傳回 sql_cd_true; 或 SQL_CD_FALSE 唯讀連接屬性。 Sql_cd_true; 的值表示 SQL_CD_FALSE 的值表示連接仍在作用中時，連接到已遺失。 （符合較早版本的 ODBC 驅動程式也可以支援此屬性）。  
   
  驅動程式必須有效地實作這個選項，或者它會影響到使用連接共用的效能。 具體而言，呼叫以取得此連接屬性應該不會造成伺服器往返。 相反地，驅動程式應該只會傳回連線的最後已知的狀態。 無作用，如果最後一個往返於伺服器失敗，而不失效，如果最後一個路線成功連線。  
   

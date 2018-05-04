@@ -1,27 +1,26 @@
 ---
-title: "Analysis Services 的新功能 |Microsoft 文件"
-ms.custom: 
+title: Analysis Services 的新功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 
+caps.latest.revision: 97
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 75d2f8519d66ca80b90477711fd5b41dbc1f5100
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services 的新功能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -89,7 +88,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>平行處理表格式模型中的多個資料表資料分割    
  此版本為具有兩個或多個資料分割的資料表提供新的平行處理功能，以提高處理效能。 此功能沒有任何組態設定。 如需有關設定分割和處理資料表的詳細資訊，請參閱[表格式模型資料分割](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)。    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>在 SSMS 中將電腦帳戶新增為系統管理員    
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 系統管理員現在可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 將電腦帳戶設定為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrators 群組的成員。 在 [選取使用者或群組]  對話方塊中，設定電腦網域的 [位置]  ，然後新增 [電腦]  物件類型。 如需詳細資訊，請參閱 [將伺服器系統管理員權限授與 Analysis Services 執行個體](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 系統管理員現在可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 將電腦帳戶設定為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Administrators 群組的成員。 在 [選取使用者或群組]  對話方塊中，設定電腦網域的 [位置]  ，然後新增 [電腦]  物件類型。 如需詳細資訊，請參閱 [將伺服器系統管理員權限授與 Analysis Services 執行個體](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。    
  ### <a name="dbcc-for-analysis-services"></a>DBCC for Analysis Services    
  Database Consistency Checker (DBCC) 會在內部執行，以偵測資料庫負載的潛在資料損毀問題，但如果您懷疑您的資料或模型有問題，也可以視需要執行。 DBCC 會依據模型為表格式或多維度模型而執行不同的檢查。 如需詳細資訊，請參閱 [Database Consistency Checker &#40;DBCC&#41; for Analysis Services 表格式和多維度資料庫](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md)。    
  ### <a name="extended-events-updates"></a>擴充事件更新    

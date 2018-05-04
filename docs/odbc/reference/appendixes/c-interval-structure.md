@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval data type [ODBC], structure
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 359facef0aecb21eabfd931970d41b3ea3f5d9c9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72caeafe09b823f2f00be6a93048d659de452994
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-interval-structure"></a>C 間隔結構
 每個 C 間隔資料類型中所列[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)區段包含間隔資料使用相同的結構。 當**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**是呼叫，此驅動程式傳回的資料到 SQL_INTERVAL_STRUCT 結構，會使用所指定的值應用程式的 C 資料類型 (在呼叫**SQLBindCol**， **SQLGetData**，或**SQLBindParameter**) 來解譯 SQL_INTERVAL_STRUCT 的內容並於其中填入*interval_type*欄位具有結構*列舉*對應到 C 類型的值。 請注意，驅動程式不會讀取*interval_type*欄位來決定的間隔類型; 它們會擷取 SQL_DESC_CONCISE_TYPE 描述項欄位的值。 參數資料的使用結構時，驅動程式會使用 APD SQL_DESC_CONCISE_TYPE 欄位中的應用程式所指定的值解譯內容 SQL_INTERVAL_STRUCT，即使應用程式設定的值*interval_type*欄位設為不同的值。  

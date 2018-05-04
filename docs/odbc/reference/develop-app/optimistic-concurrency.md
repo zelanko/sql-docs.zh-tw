@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 756775900c04ff501095f95fda95fa4f184e8833
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 01076f3f9167af8b67153abf9f3458a63bed1bf3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimistic-concurrency"></a>開放式並行存取
 *開放式並行存取*是它的名稱衍生自在開放式假設，很少會發生交易之間發生衝突，衝突稱為時發生另一個交易中更新或刪除資料列之間的時間會在讀取的資料它是由目前的交易和時間來更新或刪除。 它是相反的*封閉式並行存取，*鎖定，或在其應用程式開發人員認為這類衝突很常見。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - trace files [ODBC]
 - tracing options [ODBC], trace files
@@ -20,16 +20,15 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb72a0fb16c53ebc3627284855bc442bf0b7bd14
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a5c6c58e297e862d0e2241fe216dc7eb82bd4238
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trace-file"></a>追蹤檔案
 應用程式指定追蹤檔所設定的其中一種**TraceFile**關鍵字在 Odbc.ini 的登錄項目，或藉由呼叫**SQLSetConnectAttr** SQL_ATTR_TRACEFILE 連接屬性。 如果檔案不存在，當啟用追蹤時，驅動程式管理員會建立檔案。 每個應用程式應該有自己專用的追蹤檔案，以避免競爭。 應用程式可以使用多個追蹤檔案;追蹤檔案的各種使用者時，可以提供應用程式的安裝程式。 如果以動態方式啟用追蹤，應用程式也可以顯示追蹤結果，而不是記錄至追蹤檔案。  
   
  追蹤檔案提供的資料類型的每個 ODBC 函數呼叫的記錄檔和所有引數的值。 它會記錄所有輸入函式，並使用傳回碼和錯誤狀態來記錄所有傳回的函式。  
   
- 在 ODBC 3*.x*，來追蹤 DLL 未提供連線函式的參數。
+ 在 ODBC 3 *.x*，來追蹤 DLL 未提供連線函式的參數。

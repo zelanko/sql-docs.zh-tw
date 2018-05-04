@@ -27,15 +27,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e05f3c2fb94529e7b338f359e1ca809d034706cb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1ec9794240be52465c633c2b4fa02eecb5cb020d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-element-assl"></a>Name 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含父元素的名稱。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  包含父元素的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (最多 100 個字元)|  
 |預設值|非固定|  
@@ -97,12 +97,12 @@ ms.lasthandoff: 01/08/2018
 |父元素|無效字元|  
 |--------------------|------------------------|  
 |[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|此名稱必須依照 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 電腦名稱的規則。 IP 位址無效。|  
-|[資料來源](../../../analysis-services/scripting/objects/datasource-element-assl.md)|:/\\*&#124;?"()[]{}<>|  
-|[層級](../../../analysis-services/scripting/objects/level-element-assl.md)，[屬性項目](../../../analysis-services/scripting/objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"&%$!+=[]{}<>|  
-|所有其他的父元素。|.,;'`:/\\*&#124;?"&%$!+=()[]{}<>|  
+|[DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md)|:/\\*&#124;?"（) []{}<>|  
+|[層級](../../../analysis-services/scripting/objects/level-element-assl.md)，[屬性項目](../../../analysis-services/scripting/objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"& %$！ + = []{}<>|  
+|所有其他的父元素。|.,;'`:/\\*&#124;?"& %$！ + = （) []{}<>|  
   
-## <a name="see-also"></a>請參閱  
- [ID 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/id-element-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [ID 元素&#40;ASSL&#41;](../../../analysis-services/scripting/properties/id-element-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], bookmark C data type
 - pseudo-type identifiers [ODBC], bookmark C data type
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 43a9c02694e121eb653d70693587d5728931f747
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 599085e0182aa548bc6e597258cc203eb0f8b85d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bookmark-c-data-type"></a>書籤 C 資料類型
 書籤 C 資料類型可讓應用程式擷取書籤。 書籤 C 類型只能用於擷取書籤的值可以是可變長度。它們不應該轉換成其他資料型別。 應用程式擷取從資料行 0 的結果集的書籤**SQLBulkOperations** （與 SQL_ADD 的作業）， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。 如需詳細資訊，請參閱[書籤](../../../odbc/reference/develop-app/bookmarks-odbc.md)。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 04/16/2018
  下表列出的值*CType*書籤 C 資料類型，可實作書籤 C 資料類型，與這項資料的定義的 ODBC C 資料類型則是從 SQL 類型。H.  
   
 > [!NOTE]  
->  SQL_C_BOOKMARK 資料型別已被取代。 ODBC 3*.x*應用程式不應該使用 SQL_C_BOOKMARK。 ODBC 3*.x*驅動程式需要他們想要使用的 ODBC 2 時，才支援 SQL_C_BOOKMARK。*x*使用它的應用程式。 驅動程式管理員會將 SQL_C_VARBOOKMARK 對應至 SQL_C_BOOKMARK 中，當應用程式搭配 ODBC 2。*x*驅動程式。  
+>  SQL_C_BOOKMARK 資料型別已被取代。 ODBC 3 *.x*應用程式不應該使用 SQL_C_BOOKMARK。 ODBC 3 *.x*驅動程式需要他們想要使用的 ODBC 2 時，才支援 SQL_C_BOOKMARK。*x*使用它的應用程式。 驅動程式管理員會將 SQL_C_VARBOOKMARK 對應至 SQL_C_BOOKMARK 中，當應用程式搭配 ODBC 2。*x*驅動程式。  
   
 |C 類型識別碼|ODBC C typedef|C 類型|  
 |-----------------------|--------------------|------------|  

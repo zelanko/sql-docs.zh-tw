@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90ca5c097080d09276bc66754264fcf6ada658ea
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 303c3396bb41aa4211d84ca740df375a08e71b6f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="forward-only-cursors"></a>順向資料指標
 典型的預設資料指標類型，稱為 「 順向 （或非可捲動） 資料指標，可僅向前移動的結果集。 順向資料指標不支援捲動 （向前及向後移動結果集中的能力）。它只支援從一開始提取資料列結果集的結尾。 與某些順向資料指標 (例如與 SQL Server 資料指標程式庫)，則所有 insert、 update 和 delete 陳述式所做的目前使用者 （或其他使用者所認可），會影響結果集中的資料列都是可見的提取資料列。 因為無法逆向捲動資料指標，不過，提取資料列之後，資料庫中的資料列所做的變更都無法看見透過資料指標。  

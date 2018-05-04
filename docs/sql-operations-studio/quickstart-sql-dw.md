@@ -13,12 +13,11 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5bfa47c53b0810e5ec9002543717fbc4899dfbb5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: eeb496f814546034ac4e7d90cb0f1f734bf5bb47
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入門： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接並查詢 Azure SQL 資料倉儲中的資料
 
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/26/2018
    
    ![新的連線圖示](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. 本文使用*SQL 登入*，但也支援*Windows 驗證*。 如下表所示，填入*您*的 Azure SQL server 所使用的伺服器名稱、使用者名稱和密碼:
+2. 本文使用 *SQL 登入*，但也支援 *Windows 驗證*。 如下表所示，填入*您*的 Azure SQL server 所使用的伺服器名稱、使用者名稱和密碼:
 
    | 設定       | 建議值 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -56,7 +55,7 @@ ms.lasthandoff: 04/26/2018
 
    ![新的連線圖示](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. 如果您的伺服器沒有允許 SQL Operations Studio 連線的防火牆規則，便會開啟**建立新的防火牆規則**表單。 請完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果您的伺服器沒有允許 SQL Operations Studio 連線的防火牆規則，**建立新的防火牆規則**表單將會開啟。 請完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新的防火牆規則](media/quickstart-sql-dw/firewall.png)  
 
@@ -93,7 +92,7 @@ ms.lasthandoff: 04/26/2018
 1. 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
    > [!NOTE]
-   > 您可以將下列程式碼片段附加或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
+   > 您可以將程式碼片段附加或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'

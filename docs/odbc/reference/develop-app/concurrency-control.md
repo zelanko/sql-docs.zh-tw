@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca6003893c767cf7fe3a5649097d816c96b6f064
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3d0a9065248139fe3d2e369062301b76b4839955
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concurrency-control"></a>並行存取控制
 *並行*是兩筆交易能夠使用相同的資料在相同的時間，並增加了交易的隔離通常會降低的並行。 這是因為交易隔離通常實作鎖定的資料列，而且因為多個資料列已鎖定，而不會至少暫時封鎖的鎖定資料列已較少的交易完成。 並行性降低通常會獲接受成為維護資料庫的完整性需要高交易隔離等級的取捨，而會變得與使用資料指標的高的讀取/寫入活動的互動式應用程式中的問題。  

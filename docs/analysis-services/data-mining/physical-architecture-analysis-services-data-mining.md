@@ -1,34 +1,33 @@
 ---
-title: "實體架構 (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
+title: 實體架構 (Analysis Services-資料採礦) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - server architecture [Analysis Services]
 - architecture [Analysis Services]
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a8a4319e77588c13a06a6c648bcfafa11fb7c92b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 034f28cb159aad73e1d7b18201971eb514d4fce3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>實體架構 (Analysis Services – 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用伺服器和用戶端元件，為商業智慧應用程式提供資料採礦功能：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會使用伺服器和用戶端元件提供商業智慧應用程式的資料採礦功能：  
   
 -   伺服器元件是以 Microsoft Windows 服務的形式實作。 同一部電腦上可以有多個執行個體，每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體都實作為個別的 Windows 服務執行個體。  
   
@@ -58,6 +57,6 @@ ms.lasthandoff: 02/15/2018
  用戶端與 Analysis Services 伺服器之間的所有通訊都會使用 XMLA，這是一種與平台和語言無關的通訊協定。 從用戶端收到要求時，Analysis Services 就會判斷此要求是否與 OLAP 或資料採礦有關，然後適當地路由傳送此要求。 如需詳細資訊，請參閱 [OLAP 引擎伺服器元件](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [邏輯架構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [邏輯架構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

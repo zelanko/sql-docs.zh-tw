@@ -18,23 +18,23 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42af9f992c293f9872080a69cf6a7a4890ff205f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d9cbf7499236daba8ab87e46a6f7cea39016e672
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>連線至 Excel 資料來源 (SQL Server 匯入和匯出精靈)
-本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft Excel** 資料來源。
+本文示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft Excel** 資料來源。
 
 下列螢幕擷取畫面顯示 Microsoft Excel 活頁簿的連接範例。
 
 ![Excel 連接](../../integration-services/import-export-data/media/excel-connection.png) 
 
-您可能必須下載並安裝其他檔案，才能連線至 Excel 檔案。 如需詳細資訊，請參閱[取得連線至 Excel 所需的檔案](../load-data-to-from-excel-with-ssis.md#get-the-files-you-need-to-connect-to-excel)。
+您可能必須下載並安裝其他檔案，才能連線至 Excel 檔案。 如需詳細資訊，請參閱[取得連線至 Excel 所需的檔案](../load-data-to-from-excel-with-ssis.md#files-you-need)。
 
 > [!IMPORTANT]
-> 如需連線至 Excel 檔案，以及對 Excel 檔案載入資料進出的限制與已知問題之詳細資訊，請參閱[利用 SQL Server Integration Services (SSIS) 對 Excel 載入資料進出](../load-data-to-from-excel-with-ssis.md)。
+> 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。
 
 ## <a name="options-to-specify"></a>要指定的選項
 
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/04/2018
 > 若要使用 64 位元版本的 [SQL Server 匯入和匯出精靈]，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，而且只會安裝 32 位元檔案 (包含 32 位元版本的精靈)。
 
 ## <a name="see-also"></a>另請參閱
-[利用 SQL Server Integration Services (SSIS) 對 Excel 載入資料進出](../load-data-to-from-excel-with-ssis.md)  
+[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)  
 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

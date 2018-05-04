@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5c67ec5e08939d5f66b9d9a984eebb2010b809ff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 153b53346f045252c59c86faf08044ab3fd6e1d9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="double-slash-comment-dmx"></a>雙斜線 （註解） (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,12 +49,12 @@ ms.lasthandoff: 01/08/2018
   
  註解沒有長度上限。  
   
- 如需如何在 DMX 中使用不同類型的註解的詳細資訊，請參閱[註解 &#40; DMX &#41;](../dmx/comments-dmx.md)。  
+ 如需如何在 DMX 中使用不同類型的註解的詳細資訊，請參閱[註解&#40;DMX&#41;](../dmx/comments-dmx.md)。  
   
-## <a name="see-also"></a>請參閱  
- [斜線星狀 &#40;註解 &#41;&#40; DMX &#41;](../dmx/slash-star-comment-dmx.md)   
- [-&#40;註解 &#41;&#40; DMX &#41;摘要](../dmx/comment-dmx-summary.md)   
- [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [運算子 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [斜線星狀&#40;註解&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
+ [-&#40;註解&#41; &#40;DMX&#41;摘要](../dmx/comment-dmx-summary.md)   
+ [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

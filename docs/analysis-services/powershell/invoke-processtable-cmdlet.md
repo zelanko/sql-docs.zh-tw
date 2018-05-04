@@ -1,31 +1,23 @@
 ---
-title: "Invoke-processtable cmdlet |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Invoke-processtable cmdlet |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 865e6d06-b99a-41f3-9d6f-c3c97b529b23
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e2a7f1392931ec5edd41803f6df6d98aa95403dd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 560d7eec3587b3ee4802db0511dc1f04cac0ee16
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processtable-cmdlet"></a>Invoke-ProcessTable Cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在具有特定 **RefreshType** 的 **Table** 上進行 **Process**作業。  
+  在具有特定 **RefreshType** 的 **Table** 上進行 **Process**作業。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -48,7 +40,7 @@ ms.lasthandoff: 02/15/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-databasename-string"></a>-DatabaseName \<string>  
+### <a name="-databasename-string"></a>-DatabaseName\<字串 >  
  指定資料表所屬的資料庫。  
   
 |||  

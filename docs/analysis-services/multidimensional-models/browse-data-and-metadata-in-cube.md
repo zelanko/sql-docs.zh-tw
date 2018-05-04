@@ -1,31 +1,23 @@
 ---
-title: "瀏覽資料和中繼資料在 Cube 中的 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 瀏覽資料和中繼資料在 Cube 中的 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0159070eb0405e49f9813828aa82b1483008b61f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 433cd1af6480cc01df2da2e0a0e80f514c714adf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>瀏覽 Cube 中的資料和中繼資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-使用 Cube 設計師的 [瀏覽器] 索引標籤瀏覽 Cube 資料。 您可以使用此檢視檢查 Cube 的結構，並檢查資料庫物件的資料、計算、格式及安全性。 您可以像是使用者在報表工具或其他用戶端應用程式檢視 Cube 一樣，快速檢查 Cube。 當您瀏覽 Cube 資料時，您可以檢視不同的維度、向下鑽研至成員，以及配量維度。  
+  使用 Cube 設計師的 [瀏覽器] 索引標籤瀏覽 Cube 資料。 您可以使用此檢視檢查 Cube 的結構，並檢查資料庫物件的資料、計算、格式及安全性。 您可以像是使用者在報表工具或其他用戶端應用程式檢視 Cube 一樣，快速檢查 Cube。 當您瀏覽 Cube 資料時，您可以檢視不同的維度、向下鑽研至成員，以及配量維度。  
   
  在瀏覽 Cube 之前，您必須對其進行處理及重新連接。 處理後，請開啟 Cube 設計師的 [瀏覽器] 索引標籤。 按一下工具列上的 [重新連接] 按鈕，重新整理連接。  
   
@@ -64,7 +56,7 @@ ms.lasthandoff: 02/15/2018
   
      \- 或 -  
   
--   在**維度**資料行**篩選**] 窗格中，按一下 [ **\<選取維度 >**並從清單中，選取維度，然後按一下**\<選取階層 >**中**階層**資料行，然後選取清單中的階層。  
+-   在**維度**資料行**篩選**] 窗格中，按一下 [ **\<選取維度 >** 並從清單中，選取維度，然後按一下**\<選取階層 >** 中**階層**資料行，然後選取清單中的階層。  
   
  指定階層之後，請指定運算子和篩選運算式。 下表描述運算子和篩選運算式。  
   

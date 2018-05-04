@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], dynamic SQL
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d0dab9c38b5fe567664455462f0d229a8235ba99
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9804e42182f691702e379e48cc2e445daa24351d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-sql"></a>動態 SQL
 靜態 SQL 都適用於許多情況下，雖然還有無法事先判斷資料存取的應用程式類別。 例如，假設試算表可讓使用者輸入的查詢，試算表然後傳送給 DBMS 來擷取資料。 此查詢的內容很明顯地不知道程式設計人員寫入試算表程式時。  

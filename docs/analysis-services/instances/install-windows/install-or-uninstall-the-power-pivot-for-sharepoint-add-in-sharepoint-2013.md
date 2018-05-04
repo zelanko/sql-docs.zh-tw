@@ -1,27 +1,19 @@
 ---
-title: "安裝或解除安裝 Powerpivot for SharePoint 增益集 (SharePoint 2013) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 安裝或解除安裝 Powerpivot for SharePoint 增益集 (SharePoint 2013) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7066ed9aafe287f5ed4a2bb5ed2981d27bd0e35f
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dc528f442d908d344ba1200d3681438dc183ddda
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +31,7 @@ ms.lasthandoff: 02/12/2018
   
 -   **應用程式伺服器：** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能包括使用活頁簿做為資料來源、排程的資料重新整理與 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板。  
   
-     [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 是部署 Analysis Services 用戶端程式庫和複製 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 安裝檔案到電腦上的**Windows 安裝程式封裝 (**spPowerpivot.msi [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] )。 此安裝程式不會在 SharePoint 中部署或設定 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能。 預設會安裝下列元件：  
+     [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 是部署 Analysis Services 用戶端程式庫和複製 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 安裝檔案到電腦上的**Windows 安裝程式封裝 (** spPowerpivot.msi [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] )。 此安裝程式不會在 SharePoint 中部署或設定 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能。 預設會安裝下列元件：  
   
     -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013.此元件包含 PowerShell 指令碼 (.ps1 檔案)、SharePoint 方案套件 (.wsp)，以及在 SharePoint 2013 伺服器陣列中部署 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 2013 組態工具。  
   

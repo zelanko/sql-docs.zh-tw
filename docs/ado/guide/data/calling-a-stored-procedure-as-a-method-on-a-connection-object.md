@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6fc8b02ae7390a4ab86b04a501a2e9902f99c25e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8d6ac7b62c2b8cb589eb77137dad11f7d370fbd6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>為連線物件上的方法呼叫預存程序
 您可以呼叫預存程序，就好像在開啟相關聯的原生方法**連接**物件。 這是類似於呼叫上的具名的命令**連接**物件。  

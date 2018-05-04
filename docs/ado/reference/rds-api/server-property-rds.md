@@ -21,12 +21,11 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae8ddff340e42428db9fe852bbcd2b9d2bba4d34
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c6b8c76a74473de4a043bba19b979e923097b9ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-property-rds"></a>伺服器屬性 (RDS)
 指出 Internet Information Services (IIS) 名稱與通訊的通訊協定。  
@@ -120,10 +119,10 @@ DataControl.Server=""
  選擇性。 用來連接到執行 IIS 的伺服器連接埠。 在 Internet Explorer 中設定的連接埠號碼 (上**檢視**功能表上，按一下**選項**，然後選取**連接** 索引標籤) 或在 IIS 中。  
   
  *DataControl*  
- 物件變數，表示**.RDSDataControl**物件。  
+ 物件變數，表示 **.RDSDataControl**物件。  
   
 ## <a name="remarks"></a>備註  
- 伺服器是位置其中**.RDSDataControl**處理要求 （亦即，查詢或更新）。 根據預設，所有處理要求的[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件[MSDFMAP。處理常式](../../../ado/guide/remote-data-service/datafactory-customization.md)元件，和[MSDFMAP。INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)指定的伺服器上的檔案。 請記住，變更要協調設定中的舊和新的伺服器時**MSDFMAP。INI**檔案。 不相容，可能會失敗，在另一部伺服器上造成成功的要求。 如果 [伺服器] 屬性設定為空字串""，這些物件會使用本機電腦上。  
+ 伺服器是位置其中 **.RDSDataControl**處理要求 （亦即，查詢或更新）。 根據預設，所有處理要求的[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件[MSDFMAP。處理常式](../../../ado/guide/remote-data-service/datafactory-customization.md)元件，和[MSDFMAP。INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)指定的伺服器上的檔案。 請記住，變更要協調設定中的舊和新的伺服器時**MSDFMAP。INI**檔案。 不相容，可能會失敗，在另一部伺服器上造成成功的要求。 如果 [伺服器] 屬性設定為空字串""，這些物件會使用本機電腦上。  
   
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

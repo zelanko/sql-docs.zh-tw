@@ -19,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3258927d884308786b01ffcd72d608e1f5c0722
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 22fbfb7f64f136b59f773e13caa60ed17a610380
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 列舉常數
 若要協助偵錯，ADO MD 列舉常數會列出每個常數的值。 不過，這個值只是單純地建議，並從 ADO MD 發行版本可能會變更為另。 您的程式碼應該僅相依於名稱，而不是實際值、 列舉常數。  

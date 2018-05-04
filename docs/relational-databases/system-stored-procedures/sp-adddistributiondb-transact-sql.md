@@ -1,7 +1,7 @@
 ---
 title: sp_adddistributiondb (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a91a41c1d0ca2df23f48bc6144fc185a9e9725f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2ad675b3330585ff791c72bf1c4faafd4502bf04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,9 @@ sp_adddistributiondb [ @database= ] 'database'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @createmode= ] createmode ]  
-    [ , [ @from_scripting = ] from_scripting ]  
+    [ , [ @from_scripting = ] from_scripting ] 
+    [ , [ @deletebatchsize_xact = ] deletebatchsize_xact ] 
+    [ , [ @deletebatchsize_cmd = ] deletebatchsize_cmd ] 
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -110,6 +111,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
  [  **@from_scripting =** ] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ 
+ [  **@deletebatchsize_xact=**] *deletebatchsize_xact*  
+ 指定批次大小來清理過期的交易從 MSRepl_Transactions 資料表的期間。 *deletebatchsize_xact*是**int**，預設值為 5000。 SQL Server 2017，後面接著會在 SQL Server 2012 SP4 和 SQL Server 2016 SP2 中引進這個參數。  
+
+ [  **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
+ 指定批次大小來清理過期的命令，從 MSRepl_Commands 資料表的期間。 *deletebatchsize_cmd*是**int**，預設值是 2000年。 SQL Server 2017，後面接著會在 SQL Server 2012 SP4 和 SQL Server 2016 SP2 中引進這個參數。 
+ 
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

@@ -1,27 +1,19 @@
 ---
-title: "Power Pivot Management Dashboard and Usage Data |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot Management Dashboard and Usage Data |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 86abcef9066cbe153ef30441cb7034cb4b924650
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理儀表板和使用量資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +47,7 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="open-the-dashboard-from-a-power-pivot-service-application"></a>從 Power Pivot 服務應用程式開啟儀表板  
   
-1.  在 [管理中心] 的 **[應用程式管理]**中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 **[應用程式管理]** 中，按一下 **[管理服務應用程式]**。  
   
 2.  按一下 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式的名稱。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板就會顯示目前服務應用程式的作業資料。  
   
@@ -102,7 +94,7 @@ ms.lasthandoff: 02/15/2018
   
 5.  在文字編輯器中開啟 .odc 檔。  
   
-6.  在 **\<odc:ConnectionString >**元素中，捲動至行尾並移除結尾**內嵌資料 = False**，然後再移除**編輯模式 = 0**。 如果字串中的最後一個字元是分號，請將它移除。  
+6.  在 **\<odc:ConnectionString >** 元素中，捲動至行尾並移除結尾**內嵌資料 = False**，然後再移除**編輯模式 = 0**。 如果字串中的最後一個字元是分號，請將它移除。  
   
 7.  儲存檔案。 其餘步驟取決於您所使用的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 與 Excel 版本。  
   

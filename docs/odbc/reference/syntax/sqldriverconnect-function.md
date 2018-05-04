@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDriverConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 367a265c33f3c4520b4885524627fca4261829a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函數
 **一致性**  
@@ -163,11 +162,11 @@ SQLRETURN SQLDriverConnect(
   
  其中*字元字串*有零個或多個字元。*識別碼*有一或多個字元。*屬性關鍵字*不區分大小寫。*屬性值*可能會區分大小寫，以及值**DSN**關鍵字並沒有包含單獨的空白個數。  
   
- 因為連接字串和初始設定檔案文法、 關鍵字和屬性值包含字元**[] {} （)，;？\*= ！ @**不括在大括號應予以避免。 值**DSN**關鍵字不能只包含空格，且不能包含前置的空白。 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
+ 因為連接字串和初始設定檔案文法、 關鍵字和屬性值包含字元 **[]{}（)，;？\*= ！ @** 不括在大括號應予以避免。 值**DSN**關鍵字不能只包含空格，且不能包含前置的空白。 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
   
  應用程式不需要將大括號括住屬性值之後,**驅動程式**關鍵字屬性包含分號 （;），除非這種情況下在大括號是必要。 如果驅動程式收到的屬性值包含大括號，驅動程式不應該移除它們，但它們應該傳回的連接字串的一部分。  
   
- 括在大括號 （{}） 包含任何字元的 DSN 或連接字串值**[] {} （)，;？\*= ！ @**便會傳遞至驅動程式。 不過，當關鍵字中使用這些字元，驅動程式管理員使用檔案名稱 （dsn） 會傳回錯誤，但將連接字串傳遞至規則的連接字串的驅動程式。 請避免使用內嵌的大括號中關鍵字值。  
+ 括在大括號 DSN 或連接字串值 ({}) 包含任何字元 **[]{}（)，;？\*= ！ @** 便會傳遞至驅動程式。 不過，當關鍵字中使用這些字元，驅動程式管理員使用檔案名稱 （dsn） 會傳回錯誤，但將連接字串傳遞至規則的連接字串的驅動程式。 請避免使用內嵌的大括號中關鍵字值。  
   
  連接字串可能包含任意數目的驅動程式定義的關鍵字。 因為**驅動程式**關鍵字不會使用系統資訊的資訊，此驅動程式必須定義足夠的關鍵字，讓驅動程式可以連接到資料來源連接字串中使用的資訊。 （如需詳細資訊，請參閱 < 驅動程式指導方針，> 本節後面）。驅動程式會定義哪些關鍵字，才能連接到資料來源。  
   

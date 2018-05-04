@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca6f7bda4d6d9e0387dcbd98a09040be4d0a0d0a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1c2d31df834b2809612604d1392f860b222da73c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +148,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 >  請勿使用空白密碼。 請使用增強式密碼。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
  [  **@optional_command_line=**] **'***optional_command_line***'**  
- 這是提供給散發代理程式的選擇性命令提示字元。 例如， **-DefinitionFile** C:\Distdef.txt 或**-CommitBatchSize** 10。 *optional_command_line*是**nvarchar （4000)**，預設值為空字串。  
+ 這是提供給散發代理程式的選擇性命令提示字元。 例如， **-DefinitionFile** C:\Distdef.txt 或 **-CommitBatchSize** 10。 *optional_command_line*是**nvarchar （4000)**，預設值為空字串。  
   
  [  **@frequency_type=**] *frequency_type*  
  這是排程散發代理程式所採用的頻率。 *frequency_type*是**int**，而且可以是下列值之一。  
@@ -166,7 +165,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**128**|重複執行|  
   
 > [!NOTE]  
->  指定的值是**64**會導致散發代理程式以連續模式執行。 這會對應至設定**-連續**代理程式的參數。 如需詳細資訊，請參閱 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
+>  指定的值是**64**會導致散發代理程式以連續模式執行。 這會對應至設定 **-連續**代理程式的參數。 如需詳細資訊，請參閱 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
  [  **@frequency_interval=**] *frequency_interval*  
  若要設定的頻率所套用的值*frequency_type*。 *frequency_interval*是**int**，預設值是 1。  

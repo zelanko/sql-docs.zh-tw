@@ -20,12 +20,11 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 23af14ed67fb78fc24873528dddf4b67197f4be0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 796494ac0d73b6dfaf955da58ed79b8b51b54638
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-tuple-functions"></a>使用 Tuple 函數
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/08/2018
   
  Tuple 函數跟成員函數和集合函數一樣，對於交涉 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中找到的多維度結構而言不可或缺。  
   
- 在 MDX 中，有三個 tuple 函數[目前 &#40;MDX &#41;](../mdx/current-mdx.md)，[項目 &#40;Tuple &#41;&#40;MDX &#41;](../mdx/item-tuple-mdx.md)和[StrToTuple &#40;MDX &#41;](../mdx/strtotuple-mdx.md). 下列範例查詢會示範如何使用每一個函數：  
+ 在 MDX 中，有三個 tuple 函數[目前&#40;MDX&#41;](../mdx/current-mdx.md)，[項目&#40;Tuple&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md)和[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). 下列範例查詢會示範如何使用每一個函數：  
   
  `WITH`  
   
@@ -58,8 +57,8 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>請參閱  
- [函式 &#40;MDX 語法 &#41;](../mdx/functions-mdx-syntax.md)   
+## <a name="see-also"></a>另請參閱  
+ [函式&#40;MDX 語法&#41;](../mdx/functions-mdx-syntax.md)   
  [使用成員函式](../mdx/using-member-functions.md)   
  [使用集合函式](../mdx/using-set-functions.md)  
   

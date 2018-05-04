@@ -1,16 +1,16 @@
 ---
 title: CERTPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPROPERTY
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - schemas [SQL Server], names
 - CERTPROPERTY function
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d63968d8b07a37ea49662bd0727632a1675b3913
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c393479727eae943a512b0e2953028a90a3dd123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,42 +52,42 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>引數  
 *Cert_ID*  
-這是憑證的識別碼。 *Cert_ID* 為 int。
+int 資料類型的憑證識別碼值。
   
 *Expiry_Date*  
-這是憑證的到期日。
+憑證到期日期。
   
 *Start_Date*  
-這是憑證生效的日期。
+憑證生效的日期。
   
 *Issuer_Name*  
-這是憑證的簽發者名稱。
+憑證簽發者名稱。
   
 *Cert_Serial_Number*  
-這是憑證序號。
+憑證序號。
   
 *主旨*  
-這是憑證的主旨。
+憑證主體。
   
  *SID*  
-這是憑證的 SID。 這也是對應至這個憑證之任何登入或使用者的 SID。
+憑證 SID。 這也是對應至這個憑證之任何登入或使用者的 SID。
   
 *String_SID*  
-這是字元字串格式的憑證 SID。 這也是對應至憑證之任何登入或使用者的 SID。
+字元字串格式的憑證 SID。 這也是對應至憑證之任何登入或使用者的 SID。
   
-## <a name="return-types"></a>傳回型
-屬性規格必須括在單引號中。
+## <a name="return-types"></a>傳回類型
+必須使用單引號括住屬性規格。
   
-傳回類型會隨著函數呼叫中指定的屬性而不同。 所有傳回值都會以 **sql_variant** 的傳回型別包裝。
+傳回類型取決於函式呼叫中所指定的屬性。 傳回類型 **sql_variant** 會包裝所有傳回值。
 -   *Expiry_Date* 及 *Start_Date* 會傳回 **datetime**。  
--   *Cert_Serial_Number*、*Issuer_Name*、*Subject*，及 *String_SID* 會傳回 **nvarchar**。  
+-   *Cert_Serial_Number*、*Issuer_Name*、*String_SID* 和 *Subject* 全部會傳回 **nvarchar**。  
 -   *SID* 會傳回 **varbinary**。  
   
 ## <a name="remarks"></a>Remarks  
-您可以在 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目錄檢視中，看到有關憑證的資訊。
+請在 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目錄檢視中查看憑證資訊。
   
 ## <a name="permissions"></a>Permissions  
-需要憑證的部份權限，且呼叫端尚未拒絕憑證的 VIEW DEFINITION 權限。
+需要憑證的適當權限，並且需要呼叫端尚未拒絕憑證的 VIEW 權限。 如需憑證權限的詳細資訊，請參閱 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md) 和 [GRANT CERTIFICATE PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
 下列範例會傳回憑證主旨。
@@ -96,7 +96,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 -- First create a certificate.  
 CREATE CERTIFICATE Marketing19 WITH   
     START_DATE = '04/04/2004' ,  
-    EXPIRY_DATE = '07/07/2007' ,  
+    EXPIRY_DATE = '07/07/2040' ,  
     SUBJECT = 'Marketing Print Division';  
 GO  
   

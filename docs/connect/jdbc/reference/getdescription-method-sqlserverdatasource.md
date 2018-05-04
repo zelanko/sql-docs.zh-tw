@@ -42,7 +42,7 @@ public java.lang.String getDescription()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**包含 null 的資料來源描述如果未不設定任何值。  
+ 包含資料來源描述的**字串**，如果未設定任何值，則為 null。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

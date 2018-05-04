@@ -1,33 +1,32 @@
 ---
-title: "從 Power Pivot 匯入 |Microsoft 文件"
-ms.custom: 
+title: 從 Power Pivot 匯入 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cf23e21dfa0a87af7702bf07961d71184e6a59c2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 30c5b268d5d15376fe8e29d1de88f6b7067e0842
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-from-power-pivot"></a>從 Power Pivot 匯入 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本文說明如何建立新的表格式模型專案匯入中繼資料和資料從[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用從匯入活頁簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中的專案範本[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+  本文說明如何建立新的表格式模型專案匯入中繼資料和資料從[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用從匯入活頁簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中的專案範本[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>從 Power Pivot for Excel 檔案建立新的表格式模型  
  從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿匯入來建立新的表格式模型專案時，會使用定義活頁簿結構的中繼資料來建立及定義 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中表格式模型專案的結構。 資料表、資料行、量值和關聯性等物件會保留，並以其在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的顯示方式出現在表格式模型專案中。 .xlsx 活頁簿檔案將不會做任何變更。  

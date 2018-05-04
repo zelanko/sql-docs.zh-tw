@@ -24,13 +24,12 @@ caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73a6c088b2d33c77877cadf6a80f030f8faeeaef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5059547366dbc167c4c73e3c8cabac53d0007382
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 ## <a name="arguments"></a>引數  
  [  **@triggername=** ] **'**[ *triggerschema ***。**]*triggername * * * '**  
- 這是要設定或變更順序的觸發程序及所屬結構描述 (如果適用) 的名稱。 [*triggerschema ***。**]*triggername * 是**sysname**。 如果名稱未對應於觸發程序，或名稱對應於 INSTEAD OF 觸發程序，程序會傳回錯誤。 *triggerschema*不能指定 DDL 或登入觸發程序。  
+ 這是要設定或變更順序的觸發程序及所屬結構描述 (如果適用) 的名稱。 [*triggerschema ***。**]* triggername * 是**sysname**。 如果名稱未對應於觸發程序，或名稱對應於 INSTEAD OF 觸發程序，程序會傳回錯誤。 *triggerschema*不能指定 DDL 或登入觸發程序。  
   
  [ **@order=** ] **'***value***'**  
- 這是觸發程序的新順序設定。 *值*是**varchar （10)**和它可以是下列值之一。  
+ 這是觸發程序的新順序設定。 *值*是**varchar （10)** 和它可以是下列值之一。  
   
 > [!IMPORTANT]  
 >  **第一個**和**最後**觸發程序必須是兩個不同的觸發程序。  
@@ -66,7 +65,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |**無**|觸發程序的引發，沒有任何既定順序。|  
   
  [  **@stmttype=** ] **'***statement_type***'**  
- 指定可以引發觸發程序的 SQL 陳述式。 *statement_type*是**varchar （50)**而且可以是 INSERT、 UPDATE、 DELETE、 登入，或任何[!INCLUDE[tsql](../../includes/tsql-md.md)]中所列的陳述式事件[DDL 事件](../../relational-databases/triggers/ddl-events.md)。 您不能指定事件群組。  
+ 指定可以引發觸發程序的 SQL 陳述式。 *statement_type*是**varchar （50)** 而且可以是 INSERT、 UPDATE、 DELETE、 登入，或任何[!INCLUDE[tsql](../../includes/tsql-md.md)]中所列的陳述式事件[DDL 事件](../../relational-databases/triggers/ddl-events.md)。 您不能指定事件群組。  
   
  觸發程序可以指定為**第一個**或**最後**該觸發程序已定義為該陳述式類型的觸發程序之後，才陳述式類型的觸發程序。 例如，觸發**TR1**可指定**第一個**資料表上的插入**T1**如果**TR1**定義為 INSERT 觸發程序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果傳回錯誤**TR1**，其中已定義為 INSERT 觸發程序，只會設定為**第一個**，或**最後**，UPDATE 陳述式的觸發程序。 如需詳細資訊，請參閱＜備註＞一節。  
   

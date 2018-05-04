@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
 - data conversions from SQL to C types [ODBC], about converting
@@ -27,19 +27,18 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe89608061d82cf54a16394e5ce1a8f901e23523
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72fa649a1c894109557c58f79b1590466020c156
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>將資料從 SQL 轉換成 C 資料類型
 當應用程式呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**，驅動程式會從資料來源擷取資料。 如果有需要，它會將資料轉換中的驅動程式擷取它所指定之資料類型的資料型別*TargetType*引數中的**SQLBindCol**或**SQLGetData。** 最後，它將資料儲存在所指位置*TargetValuePtr*引數中的**SQLBindCol**或**SQLGetData** （和 ARD 的 SQL_DESC_DATA_PTR 欄位）。  
   
  下表顯示從 ODBC SQL 的支援的轉換成 ODBC C 資料類型的資料類型。 填滿的圓圈會指示 SQL 資料類型的預設轉換 (C 資料類型的資料將會轉換時的值*TargetType*是 SQL_C_DEFAULT)。 空心圓圈表示是支援的轉換。  
   
- ODBC 3*.x*應用程式使用 ODBC 2。*x*驅動程式，從驅動程式特定資料可能不支援類型轉換。  
+ ODBC 3 *.x*應用程式使用 ODBC 2。*x*驅動程式，從驅動程式特定資料可能不支援類型轉換。  
   
  已轉換資料的格式不受 Windows® 國家/地區設定。  
   

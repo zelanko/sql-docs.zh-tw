@@ -1,41 +1,23 @@
 ---
-title: "彙總和彙總設計 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- aggregations [Analysis Services], about aggregations
-- storage [Analysis Services], aggregations
-- Storage Design Wizard
-- data summary [Analysis Services]
-- data storage [Analysis Services]
-- storing data [Analysis Services], aggregations
-- aggregations [Analysis Services]
-ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
-caps.latest.revision: 
-author: Minewiskan
+title: 彙總和彙總設計 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f88fe2a55b2c6e56cd36db492d56893319c6bed5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 632c327685222260ea4648ceabf828b7d9a06591
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregations-and-aggregation-designs"></a>彙總和彙總設計
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-<xref:Microsoft.AnalysisServices.AggregationDesign> 物件會定義可在多個資料分割之間共用的一組彙總定義。  
+  <xref:Microsoft.AnalysisServices.AggregationDesign> 物件會定義可在多個資料分割之間共用的一組彙總定義。  
   
  <xref:Microsoft.AnalysisServices.Aggregation> 物件表示在維度的某個資料粒度上之量值群組資料的摘要。  
   

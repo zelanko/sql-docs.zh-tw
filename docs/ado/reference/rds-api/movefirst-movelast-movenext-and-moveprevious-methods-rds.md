@@ -23,12 +23,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a8a6e449e9d3765c0b1bb5df289c2eb7eb6a5bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: db7953e67e5ad7ed7cda0d4ba4afe077256cafc0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (RDS)
 移至 [first、 last、 在指定的下一步]，或上一個記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -48,7 +47,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  物件變數，表示[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
 ## <a name="remarks"></a>備註  
- 您可以使用**移動**方法**.RDSDataControl**來瀏覽資料記錄，在網頁上的資料繫結控制項中的物件。 例如，假設您顯示**資料錄集**繫結至方格中**.RDSDataControl**物件。 接著，您可以加入 First、 Last、 下一步及上一步 按鈕讓使用者可以按一下以移至第一個、 最後一個、 下一步，或在顯示上一筆記錄**資料錄集**。 您可以呼叫**MoveFirst**， **MoveLast**， **MoveNext**，和**MovePrevious**方法**.RDSDataControl**分別物件存放至 First、 Last、 下一步及上一步按鈕的 onClick 程序。 [通訊錄範例](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)示範如何執行這項操作。  
+ 您可以使用**移動**方法 **.RDSDataControl**來瀏覽資料記錄，在網頁上的資料繫結控制項中的物件。 例如，假設您顯示**資料錄集**繫結至方格中 **.RDSDataControl**物件。 接著，您可以加入 First、 Last、 下一步及上一步 按鈕讓使用者可以按一下以移至第一個、 最後一個、 下一步，或在顯示上一筆記錄**資料錄集**。 您可以呼叫**MoveFirst**， **MoveLast**， **MoveNext**，和**MovePrevious**方法 **.RDSDataControl**分別物件存放至 First、 Last、 下一步及上一步按鈕的 onClick 程序。 [通訊錄範例](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)示範如何執行這項操作。  
   
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -1,32 +1,23 @@
 ---
 title: 建立增益圖、 收益圖或分類矩陣 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services], mining structures
-ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
-caps.latest.revision: 20
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b16770ad1bf8ca0052f7b8b6af22df02d4e4392f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a136b9e3fe14b742a6c73c20ea0cd354bba3a106
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>建立增益圖、收益圖或分類矩陣
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以建立精確度圖表[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料採礦模型中五個基本步驟：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  您可以使用五個基本步驟，為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦模型建立精確度圖表：  
   
 -   選取包含您要比較之採礦模型的採礦結構。  
   
@@ -94,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
      在 [收益圖設定] 對話方塊中輸入下列設定。  
   
-     **母體**  
+     **母體擴展**  
      當您建立增益圖時，想要使用之資料集內的案例數。  
   
      此模型一定會依據遞減機率的順序來選擇案例；也就是說，如果您要評估潛在的客戶，並選擇只代表客戶資料庫中一半記錄的數目，此模型將會針對最適合模型的案例子集來測量精確度。  
@@ -116,8 +107,8 @@ ms.lasthandoff: 01/08/2018
      **每個別營收**  
      與每一次成功銷售相關聯的營收金額。  
   
-## <a name="see-also"></a>請參閱  
- [增益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另請參閱  
+ [增益圖 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [分類矩陣 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

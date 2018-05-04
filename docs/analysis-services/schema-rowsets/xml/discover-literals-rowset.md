@@ -23,22 +23,22 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ae4dfbe2c5f7d9ce9281dd483b7544fb358dd1df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dc239de2abb609aa035880c0cf9dd9217343c08c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverliterals-rowset"></a>DISCOVER_LITERALS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回常值，包括資料類型和所支援的值的相關資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XML for Analysis (XMLA) 提供者。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  傳回 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者所支援常值的相關資訊，包括資料類型和值。  
   
  如果您呼叫[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法**DISCOVER_LITERALS**中的列舉值[RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)項目，**探索**方法會傳回**DISCOVER_LITERALS**資料列集。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_LITERALS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**LiteralName**|**DBTYPE_WSTR**||資料列中所描述常值的名稱。<br /><br /> 例如： **DBLITERAL_LIKE_PERCENT**|  
 |**LiteralValue**|**DBTYPE_WSTR**||實際的常值。<br /><br /> 例如，如果**LiteralName**是**DBLITERAL_LIKE_PERCENT**和百分比字元 (**%**) 比對零個或多個字元，在 LIKE 子句中，值**LiteralValue**資料行是"**%**"。|  
@@ -56,8 +56,8 @@ ms.lasthandoff: 01/08/2018
 |-----------------|--------------------|-----------------------|  
 |**LiteralName**|**DBTYPE_WSTR**|選擇性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
- [DISCOVER_KEYWORDS 資料列集 &#40;XMLA &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)  
+ [DISCOVER_KEYWORDS 資料列集 & #40;XMLA & #41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)  
   
   

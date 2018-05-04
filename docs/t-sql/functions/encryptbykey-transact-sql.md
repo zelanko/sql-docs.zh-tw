@@ -1,16 +1,16 @@
 ---
 title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENCRYPTBYKEY_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], ENCRYPTBYKEY function
 - ENCRYPTBYKEY function
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe0267020c4100794593731c0f0651b35ea30395
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c648c37fc0f8446b4b3f4908a5d633b5f803cd54
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,6 +76,8 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  **varbinary**，大小上限為 8,000 位元組。  
   
  如果索引鍵不是開啟、不存在、或索引鍵是已被取代的 RC4 索引鍵，且資料庫不在相容性層級 110 以上的話，則傳回 NULL。  
+ 
+ 如果 *cleartext* 值為 NULL，則傳回 NULL。
   
 ## <a name="remarks"></a>Remarks  
  EncryptByKey 會使用對稱金鑰。 因此必須開啟此金鑰。 如果目前的工作階段已經開啟對稱金鑰，即無須在查詢內容中再開啟一次。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
 - connecting to driver [ODBC], SQLConnect
@@ -27,12 +27,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcb591c8fb9e3921ad3788669f47290384c302e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1dbb9c58b69fbec426fb203e47c355348f089b0b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-with-sqlconnect"></a>使用 SQLConnect 的連接
 **SQLConnect**是最簡單的連線函式。 它需要資料來源名稱，並接受選擇性的使用者識別碼和密碼。 它適用於應用程式的硬式編碼的資料來源名稱，且不需要使用者識別碼或密碼。 它也可以運作良好的應用程式想要控制自己 」 外觀及操作 」 或不有任何使用者介面。 這類應用程式可以建立一份使用資料來源**SQLDataSources**、 提示使用者輸入資料來源、 使用者識別碼和密碼，然後再呼叫**SQLConnect**。  

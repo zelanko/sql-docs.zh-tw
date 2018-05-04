@@ -1,38 +1,19 @@
 ---
-title: "執行批次作業 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- multiple projects
-- XML for Analysis, batches
-- parallel batch execution [XMLA]
-- transactional batches
-- serial batch execution [XMLA]
-- XMLA, batches
-- batches [XML for Analysis]
-- nontransactional batches
-ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 
-author: Minewiskan
+title: 執行批次作業 (XMLA) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f2730fb8396f63e123bf8d896ea9a648ad22016d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7fcf1074de0d233c3df24ddf1696e26a8d3bd84a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>執行批次作業 (XMLA)
   您可以使用[批次](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML for Analysis (XMLA) 執行多個 XMLA 命令使用的單一 XMLA 命令[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 您可以執行多個命令中包含**批次**命令視為單一交易或個別的交易，每個命令中、 以序列或是平行。 您也可以指定-單行繫結和其他內容**批次**命令處理多個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件。  
@@ -45,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
  如果交易式批次中的任何命令失敗[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中回復任何命令**批次**失敗命令前執行的命令和**批次**命令會立即結束。 中的任何命令**批次**尚未執行的命令不會執行。 之後**批次**命令結束，**批次**命令會報告任何錯誤發生的失敗的命令。  
   
- **Nontransactional**  
+ **非交易式**  
  如果**交易**屬性設定為 false，**批次**命令執行所包含的每個命令**批次**命令不同的異動中 — *非交易式*批次。 如果非交易式批次中的任何命令失敗**批次**命令會繼續執行命令之後的命令失敗。 之後**批次**命令嘗試執行的所有命令，**批次**命令包含，**批次**命令會報告發生任何錯誤。  
   
  中的命令所傳回的所有結果**批次**命令會傳回相同的順序中所含的命令**批次**命令。 所傳回的結果**批次**命令異**批次**命令是交易式或非交易式。  
@@ -128,8 +109,8 @@ ms.lasthandoff: 02/15/2018
     >  A**程序**命令不能包含**繫結**， **DataSource**， **DataSourceView**，或**ErrorConfiguration**屬性，如果**程序**命令包含在**批次**命令。 如果您必須指定這些屬性**程序**命令，提供必要的資訊中的對應屬性**批次**命令，以包含**程序**命令。  
   
 ## <a name="see-also"></a>另請參閱  
- [批次元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Process 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
+ [批次元素 & #40;XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [處理項目&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

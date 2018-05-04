@@ -1,31 +1,23 @@
 ---
-title: "Verify a Power Pivot for SharePoint 安裝 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Verify a Power Pivot for SharePoint 安裝 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1b715cf65001514acbd033800d6ae9807337c0ee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>驗證 PowerPivot for SharePoint 安裝
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-您在 SharePoint 伺服器陣列中安裝的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 執行個體是透過 SharePoint 管理中心進行管理。 您至少可以檢查管理中心和 SharePoint 網站上的頁面，以驗證 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器元件和功能可用。 但為了完整驗證安裝，您必須擁有可以發行至 SharePoint 並從文件庫存取的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿。 如需進行測試，您可發行已經包含 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的範例活頁簿，並用其確認 SharePoint 整合已正確設定。  
+  您在 SharePoint 伺服器陣列中安裝的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 執行個體是透過 SharePoint 管理中心進行管理。 您至少可以檢查管理中心和 SharePoint 網站上的頁面，以驗證 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器元件和功能可用。 但為了完整驗證安裝，您必須擁有可以發行至 SharePoint 並從文件庫存取的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿。 如需進行測試，您可發行已經包含 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的範例活頁簿，並用其確認 SharePoint 整合已正確設定。  
 
   
 ##  <a name="verifyinstall"></a> 確認管理中心整合  
@@ -96,7 +88,7 @@ ms.lasthandoff: 02/15/2018
   
 7.  在 [伺服器類型] 中，選取 [Analysis Services]。  
   
-8.  在 伺服器名稱輸入**\<伺服器名稱 > \powerpivot**，其中**\<伺服器名稱 >**是具有的電腦名稱[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint安裝。  
+8.  在 伺服器名稱輸入**\<伺服器名稱 > \powerpivot**，其中**\<伺服器名稱 >** 是具有的電腦名稱[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint安裝。  
   
 9. 按一下 **[連接]**。 這樣會確認可以使用 Analysis Services 伺服器。  
   

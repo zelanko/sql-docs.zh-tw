@@ -18,12 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1039464f1523ddfc2c80446e87a158c87692017f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: bfd51ec21eba67edaeb173a72115d0f5f4606d3e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="products-and-technologies-table"></a>產品和技術的資料表
 下表列出 Microsoft 產品、 工具和 ADO 程式設計人員指南中所討論的技術。 它會提供連結，可能的情況下，本指南中的相關主題。

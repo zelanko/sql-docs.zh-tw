@@ -28,12 +28,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cd5a5be13f87b1922cf211f8d673bb36ef66668e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 74b6cab9fdd337bef8b36da027abbd7d7d87bb57
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext，HelpFile 屬性
 表示說明檔和相關聯的主題[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  

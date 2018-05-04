@@ -1,43 +1,23 @@
 ---
-title: "安全性角色 (Analysis Services-多維度資料) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], roles
-- Analysis Services objects, roles
-- security [Analysis Services], roles
-- roles [Analysis Services], about roles
-- server roles [Analysis Services]
-- database roles [Analysis Services]
-- roles [Analysis Services]
-- storing data [Analysis Services], roles
-- access rights [Analysis Services], roles
-ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: 
-author: Minewiskan
+title: 安全性角色 (Analysis Services-多維度資料) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9dfdaaf55bb4bf5eb71f15177985f0240ff95065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>安全性角色 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-角色用於[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]要管理的安全性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件和資料。 基本上，角色產生關聯的 Microsoft Windows 使用者和群組具有特定存取權限和定義的執行個體所管理之物件的權限的安全性識別碼 (Sid) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 中提供兩種角色類型[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+  角色用於[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]要管理的安全性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件和資料。 基本上，角色產生關聯的 Microsoft Windows 使用者和群組具有特定存取權限和定義的執行個體所管理之物件的權限的安全性識別碼 (Sid) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 中提供兩種角色類型[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   伺服器角色，這是一種固定角色，提供對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體的管理員存取權。  
   
@@ -93,7 +73,7 @@ ms.lasthandoff: 02/15/2018
 |Administer<br /><br /> 注意： 只有在資料庫權限|{**true**, **false**}<br /><br /> 預設值=**false**|指定成員是否可以管理資料庫。<br /><br /> **true** 會授與資料庫中所有物件的存取權。<br /><br /> 成員可以具有特定資料庫的管理權限，但不包含其他資料庫。|  
   
 ## <a name="see-also"></a>另請參閱  
- [權限和存取權限 &#40;Analysis Services-多維度資料 &#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
- [授權的存取權的物件和作業 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+ [權限和存取權限 & #40;Analysis Services-多維度資料 & #41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
+ [授權的存取權的物件和作業 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   

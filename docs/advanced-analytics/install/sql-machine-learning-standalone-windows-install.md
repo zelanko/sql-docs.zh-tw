@@ -7,18 +7,18 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ec764a5cb5a6ce011d47f7f185cc05c906fe41d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1c56d3cb9420d8d0e48ec936008d0351d5d32eb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>安裝 SQL Server 2017 機器學習 Windows 上的伺服器 （獨立）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺服器的選項。 這個選項可能會很有用，如果您需要開發高效能的機器學習解決方案，可以使用遠端計算內容，交換切換本機伺服器和遠端機器學習伺服器上的 Spark 叢集，或另一個 SQL Server 上執行個體。
   
-這篇文章描述如何使用 SQL Server 安裝程式安裝單機版**SQL Server 2017 機器學習伺服器**。 如果您有 Enterprise Edition 或軟體保證，安裝獨立的機器學習 server 是免費的。
+這篇文章描述如何使用 SQL Server 安裝程式安裝單機版**SQL Server 2017 機器學習伺服器**。 
 
 ## <a name="bkmk_prereqs"> </a> 預先安裝檢查清單
 

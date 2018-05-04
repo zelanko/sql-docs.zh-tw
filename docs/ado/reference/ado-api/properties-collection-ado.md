@@ -24,12 +24,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ff2263878757708306f4eca0f2475cc77f7ac04a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 9e63578b5d01860b290ee7d208c30a75e0621782
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-collection-ado"></a>屬性集合 (ADO)
 包含所有[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的特定執行個體的物件。  

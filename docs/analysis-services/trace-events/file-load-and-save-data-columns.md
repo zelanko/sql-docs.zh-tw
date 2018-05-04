@@ -1,31 +1,30 @@
 ---
-title: "檔案載入及儲存資料行 |Microsoft 文件"
-ms.custom: 
+title: 檔案載入及儲存資料行 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8f10d93cf8670da5e14d2fb65193c43398ad1c6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b5fb352769c94efd9d65933df8ac60900cc6970b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-load-and-save-data-columns"></a>檔案載入及儲存資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-檔案載入和儲存事件類別目錄具有下列事件類別：  
+  檔案載入和儲存事件類別目錄具有下列事件類別：  
   
 |**事件識別碼**|**事件名稱**|**事件描述**|  
 |------------------|--------------------|---------------------------|  

@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9f1a53821f6a8e0354b992b8110d300e96633b03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用大量複製
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -873,7 +872,7 @@ public class Program
   
 5.  選取**撰寫查詢來指定要傳送的資料**和**下一步**。  輸入您**SQL 陳述式**選取 ProductID，Name，ProductNumber FROM Production.Product 和**下一步**  
   
-6.  檢查設定：您可以將資料列分隔符號保留為 {CR} {LF}，將資料行分隔符號您留為逗號 {,}。  選取**編輯對應**... 並檢查資料**類型**是正確的每個資料行 （例如 ProductID 和 Unicode 字串，對於其餘的整數）。  
+6.  請檢查組態： 您可以保留為 {CR} {LF} 的資料列分隔符號和資料行分隔符號為逗號{,}。  選取**編輯對應**... 並檢查資料**類型**是正確的每個資料行 （例如 ProductID 和 Unicode 字串，對於其餘的整數）。  
   
 7.  跳到**完成**並執行匯出。  
   

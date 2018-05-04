@@ -24,12 +24,11 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ef468f7ea427e2e7226bccf45e1192c9a6abcc4b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 62b73908bc65698cc6f84124a76214398f75fa4a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
  這是登入對應所套用的連結伺服器名稱。 *v*是**sysname**，沒有預設值。  
   
- [ @useself **=** ] **'**TRUE**'** | 'FALSE' | 'NULL'  
- 決定是否連接到*v*模擬本機登入或明確提交登入和密碼。 資料類型是**varchar (**8**)**，預設值是 TRUE。  
+ [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
+ 決定是否連接到*v*模擬本機登入或明確提交登入和密碼。 資料類型是**varchar (** 8 **)**，預設值是 TRUE。  
   
  TRUE 值，指定登入使用他們自己的認證連接到*v*，與*rmtuser*和*rmtpassword*被略過的引數。 FALSE 指定*rmtuser*和*rmtpassword*引數會用來連接到*v*指定*locallogin*. 如果*rmtuser*和*rmtpassword*也會設為 NULL、 沒有登入或密碼用來連接到連結的伺服器。  
   

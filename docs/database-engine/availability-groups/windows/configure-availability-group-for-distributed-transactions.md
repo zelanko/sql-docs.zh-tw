@@ -1,15 +1,16 @@
 ---
-title: "設定分散式交易的可用性群組 | Microsoft Docs"
-ms.custom: 
+title: 設定分散式交易的可用性群組 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transactions [database mirroring]
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
-ms.assetid: 
-caps.latest.revision: "33"
+ms.assetid: ''
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9faba068fd3712b2ada9dbe3260795d4ecd19a6c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b6812a199583fee5cff0ce90c0a0e7f72f9b7645
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>設定分散式交易的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/18/2018
 
 * 所有參與分散式交易的 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體都必須是 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更新版本。
 
-* 可用性群組必須在 Windows Server 2016 或 Windows Server 2012 R2 上執行。 針對 Windows Server 2012 R2，您必須安裝 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)上所提供 KB3090973 中的更新。  
+* 可用性群組必須在 Windows Server 2016 或 Windows Server 2012 R2 上執行。 針對 Windows Server 2012 R2，您必須安裝 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) 上所提供 KB3090973 中的更新。  
 
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>建立分散式交易的可用性群組
 

@@ -24,13 +24,12 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fed82c2cfb21efa75278847716e90f546e64eb3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 38a5082b32a2b05f8400cfc3ba3d716397bfabf8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-usage"></a>資料類型使用方式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +51,7 @@ ms.lasthandoff: 04/16/2018
 |**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Tinyint**資料類型是不帶正負號。 A **tinyint**資料行繫結到 SQL_C_UTINYINT 資料類型的變數預設值。|  
 |別名資料類型|當連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.2*x*，ODBC 驅動程式會將 NULL 加入至資料行定義中，未明確宣告資料行的 null 屬性。 因此會忽略儲存在別名資料類型定義中的 Null 屬性。<br /><br /> 當連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.2*x*，具有別名資料類型具有基底資料的資料行類型**char**或**二進位**並沒有 null 屬性是宣告會建立資料類型為**varchar**或**varbinary**。 [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)， [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)，和[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)傳回 SQL_VARCHAR 或 SQL_VARBINARY 當做資料輸入這些資料行。 從這些資料行所擷取的資料不會進行填補。<br /><br /> 注意： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]6.5 及更早版本。|  
 |LONG 資料類型|*資料在執行*參數則都限制為 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 資料類型。|  
-|大型值類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會公開**varchar （max)**， **varbinary （max)**，和**nvarchar （max)**為 SQL_VARCHAR、 SQL_VARBINARY 和 SQL_ 類型WVARCHAR （分別） 在應用程式開發介面，接受或傳回 ODBC SQL 資料類型。|  
+|大型值類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會公開**varchar （max)**， **varbinary （max)**，和**nvarchar （max)** 為 SQL_VARCHAR、 SQL_VARBINARY 和 SQL_ 類型WVARCHAR （分別） 在應用程式開發介面，接受或傳回 ODBC SQL 資料類型。|  
 |使用者定義型別 (UDT)|UDT 資料行會對應為 SQL_SS_UDT。 如果 UDT 資料行使用 UDT 的 ToString() 或 ToXMLString() 方法或是透過 CAST/CONVERT 函數而明確地對應到 SQL 陳述式中的其他類型，則結果集內的資料行類型會反映出此資料行轉換成的實際類型。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式只能繫結到 UDT 資料行，為二進位。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援 SQL_SS_UDT 和 SQL_C_BINARY 資料類型之間的轉換。|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動將 XML 轉換為 Unicode 文字。 XML 類型會對應為 SQL_SS_XML。|  
   

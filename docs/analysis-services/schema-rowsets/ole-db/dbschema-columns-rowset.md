@@ -23,20 +23,20 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ad15c20b68b3ccc69dee5b39c839f9f8dd0b2fab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>DBSCHEMA_COLUMNS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供符合提供之限制準則的所有資料行的資料行資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  為所有符合提供之限制準則的資料行提供資料行資訊。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DBSCHEMA_COLUMNS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**TABLE_CATALOG 排列**|**DBTYPE_WSTR**||資料庫的名稱。|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**||不支援。|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/08/2018
 |**COLUMN_NAME**|**DBTYPE_WSTR**|選擇性|  
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|選擇性|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

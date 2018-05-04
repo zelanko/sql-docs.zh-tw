@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a05aebcf49e5abbaea244010ad8608a18126e4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函數
 **一致性**  
@@ -161,7 +160,7 @@ SQLRETURN SQLGetDiagField(
   
  驅動程式可以定義驅動程式特定標頭和記錄欄位中的診斷資料結構。  
   
- ODBC 3*.x*應用程式使用 ODBC 2*.x*驅動程式將無法呼叫**SQLGetDiagField**只能搭配*Sqlgetdiagfield*SQL_DIAG_CLASS_ORIGIN、 SQL_DIAG_CLASS_SUBCLASS_ORIGIN、 SQL_DIAG_CONNECTION_NAME、 SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_NUMBER、 SQL_DIAG_RETURNCODE、 SQL_DIAG_SERVER_NAME 或 SQL_DIAG_SQLSTATE 的引數。 所有其他診斷欄位將會傳回 SQL_ERROR。  
+ ODBC 3 *.x*應用程式使用 ODBC 2 *.x*驅動程式將無法呼叫**SQLGetDiagField**只能搭配*Sqlgetdiagfield*SQL_DIAG_CLASS_ORIGIN、 SQL_DIAG_CLASS_SUBCLASS_ORIGIN、 SQL_DIAG_CONNECTION_NAME、 SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_NUMBER、 SQL_DIAG_RETURNCODE、 SQL_DIAG_SERVER_NAME 或 SQL_DIAG_SQLSTATE 的引數。 所有其他診斷欄位將會傳回 SQL_ERROR。  
   
 ## <a name="header-fields"></a>標頭欄位  
  下表所列的標頭欄位可以包含在*Sqlgetdiagfield*引數。  
@@ -240,7 +239,7 @@ n 層定義 *|「 建立網域 」|SQL_DIAG_CREATE_DOMAIN|
 -   屬於特定的資料列的所有記錄，記錄會依照 SQL_DIAG_ROW_NUMBER 欄位中的值。 列出所有錯誤和警告的第一個資料列受到影響，，然後所有錯誤和警告的下一個資料都列受影響，依此類推。  
   
 > [!NOTE]  
->  ODBC 3*.x*驅動程式管理員不會排序狀態記錄診斷的佇列中如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC 2*.x*驅動程式或如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC3*.x*驅動程式時**SQLExtendedFetch**稱為或**SQLSetPos**已被使用定位資料指標上呼叫**SQLExtendedFetch**.  
+>  ODBC 3 *.x*驅動程式管理員不會排序狀態記錄診斷的佇列中如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC 2 *.x*驅動程式或如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC3 *.x*驅動程式時**SQLExtendedFetch**稱為或**SQLSetPos**已被使用定位資料指標上呼叫**SQLExtendedFetch**.  
   
  內每個資料列，或所有未對應的資料列或資料列號碼是未知，這些記錄或資料列數等於 SQL_NO_ROW_NUMBER 所有這些記錄，第一個列出的記錄是由使用一組的排序規則決定。 第一筆記錄之後, 會影響資料列的其他記錄的順序是未定義。 應用程式不能假設錯誤之前的警告之後第一筆記錄。 應用程式應該掃描完成診斷資料結構，以取得失敗呼叫的函式的完整資訊。  
   

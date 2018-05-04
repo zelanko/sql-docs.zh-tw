@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindParameter function [ODBC], describing parameters
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f746b7df2ac3ef4de73e54c6d78df02e0c64ec34
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 629241f2385eeb3059800d35288b9c71d1d0ac97
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="describing-parameters"></a>描述參數
 **SQLBindParameter**包含描述參數的引數： 其 SQL 類型、 有效位數和小數位數。 驅動程式會使用這項資訊，或*中繼資料，*將參數值轉換成所需的資料來源類型。 第一眼看起來，看起來的驅動程式是較佳位置知道參數中繼資料，以比應用程式。畢竟，驅動程式可以輕鬆地探索中繼資料的結果集資料行。 結果顯示，但這不是大小寫。 首先，大部分的資料來源未提供的驅動程式來探索參數中繼資料的方式。 第二個，大部分的應用程式已經知道中繼資料。  

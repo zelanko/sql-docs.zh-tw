@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f386bd758a9b8c247197418448914904560cd1b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 函數
 **一致性**  
@@ -64,10 +63,10 @@ SQLRETURN SQLFetch(
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|字串或資料行所傳回的二進位資料會導致非空白的字元或二進位資料為非 NULL 的截斷。 如果是字串值，它就是向右截斷。|  
-|01S01|資料列中的錯誤|擷取一或多個資料列時發生錯誤。<br /><br /> (如果 ODBC 3 時，會傳回此 SQLSTATE*.x*應用程式使用 ODBC 2*.x*驅動程式，可以忽略它。)|  
+|01S01|資料列中的錯誤|擷取一或多個資料列時發生錯誤。<br /><br /> (如果 ODBC 3 時，會傳回此 SQLSTATE *.x*應用程式使用 ODBC 2 *.x*驅動程式，可以忽略它。)|  
 |01S07|小數位數截斷|傳回資料行的資料已遭截斷。 數值資料類型已截斷的數字的小數部分。 時間、 時間戳記，和間隔資料型別包含時間元件，已截斷的小數部分的時間。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07006|受限制的資料類型屬性違規|結果集中的資料行的資料值無法轉換成資料類型所指定*TargetType*中**SQLBindCol**。<br /><br /> 資料類型為 SQL_C_BOOKMARK，繫結資料行 0，並且 SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_VARIABLE。<br /><br /> 資料類型為 SQL_C_VARBOOKMARK，繫結資料行 0 和 SQL_ATTR_USE_BOOKMARKS 陳述式屬性未設定為 SQL_UB_VARIABLE。|  
-|07009|無效的描述元索引|驅動程式為 ODBC 2*.x*不支援的驅動程式**SQLExtendedFetch**，和資料行繫結中指定的資料行編號為 0。<br /><br /> 資料行 0 已繫結，且 SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_OFF。|  
+|07009|無效的描述元索引|驅動程式為 ODBC 2 *.x*不支援的驅動程式**SQLExtendedFetch**，和資料行繫結中指定的資料行編號為 0。<br /><br /> 資料行 0 已繫結，且 SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_OFF。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |22001|字串資料，右邊遭截斷|可變長度的書籤，傳回的資料行已截斷。|  
 |22002|需要指標變數，但是未提供|NULL 的資料提取到資料行的*StrLen_or_IndPtr*設定**SQLBindCol** (或所設定的 SQL_DESC_INDICATOR_PTR **SQLSetDescField**或**SQLSetDescRec**) 為 null 指標。|  
@@ -97,7 +96,7 @@ SQLRETURN SQLFetch(
 ## <a name="comments"></a>註解  
  **SQLFetch**傳回結果集中的下一個資料列集。 您可以呼叫時才會存在結果集： 也就是在呼叫之後，建立結果集和資料指標之前關閉結果集的移轉。 如果任何資料行繫結，它會傳回這些資料行中的資料。 如果應用程式具有指定資料列狀態陣列或其傳回的擷取，資料列數目的緩衝區的指標**SQLFetch**也會傳回這項資訊。 呼叫**SQLFetch**可以混合與呼叫**SQLFetchScroll**但不能混合呼叫**SQLExtendedFetch**。 如需詳細資訊，請參閱[提取資料列](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)。  
   
- 如果 ODBC 3*.x*應用程式搭配 ODBC 2*.x*驅動程式，驅動程式管理員會將對應**SQLFetch**呼叫**SQLExtendedFetch**的ODBC 2*.x*驅動程式支援**SQLExtendedFetch**。 如果 ODBC 2*.x*驅動程式不支援**SQLExtendedFetch**，驅動程式管理員會將對應**SQLFetch**呼叫**SQLFetch** ODBC 2*.x*驅動程式，可以擷取單一資料列。  
+ 如果 ODBC 3 *.x*應用程式搭配 ODBC 2 *.x*驅動程式，驅動程式管理員會將對應**SQLFetch**呼叫**SQLExtendedFetch**的ODBC 2 *.x*驅動程式支援**SQLExtendedFetch**。 如果 ODBC 2 *.x*驅動程式不支援**SQLExtendedFetch**，驅動程式管理員會將對應**SQLFetch**呼叫**SQLFetch** ODBC 2 *.x*驅動程式，可以擷取單一資料列。  
   
  如需詳細資訊，請參閱[區塊資料指標，可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中附錄 g： 驅動程式的指導方針回溯相容性。  
   

@@ -1,16 +1,16 @@
 ---
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE SYMMETRIC KEY
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 - symmetric keys [SQL Server]
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5604a0c32049d274610a600ebf1a2174c40d088
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 1bd64184c79c7a9f240450323dada3d4d413daf7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ CREATE SYMMETRIC KEY key_name
  IDENTITY_VALUE **='***identity_phrase***'**  
  指定要從中產生 GUID 來標記利用暫時金鑰加密的資料之識別片語。  
   
- PROVIDER_KEY_NAME**='***key_name_in_provider***'**  
+ PROVIDER_KEY_NAME **='***key_name_in_provider***'**  
  指定在可延伸金鑰管理提供者中所參考的名稱。  
   
 > [!NOTE]  
@@ -140,7 +140,7 @@ CREATE SYMMETRIC KEY key_name
 > [!IMPORTANT]  
 >  不建議您使用 RC4 和 RC4_128 資料流加密保護機密資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會對使用這類金鑰進一步執行加密編碼。  
   
- 您可以在 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目錄檢視中，看到對稱金鑰的相關資訊。  
+ 您可以在 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目錄檢視中，看到有關對稱金鑰的資訊。  
   
  您無法利用從加密提供者所建立的對稱金鑰，加密對稱金鑰。  
   

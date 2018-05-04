@@ -26,12 +26,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 60931973564e129fdc97a7d579302f2106ca4157
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7efdbc685602e4d8a758e07fc6beb514f077b113
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowset-property-ado"></a>資料列集屬性 (ADO)
 取得或設定 OLE DB**資料列集**物件上從 / **ADORecordsetConstruction**物件。 當您使用 put_Rowset 時，資料列集就會轉換成 ADO**資料錄集**物件。  

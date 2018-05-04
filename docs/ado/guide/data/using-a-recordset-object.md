@@ -19,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c649b61f96913d7c9508e238cb82cf6e9014636f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2377c2bf7d6825c8395893b35350b48dab53167e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-a-recordset-object"></a>使用資料錄集物件
 或者，您可以使用**Recordset.Open**隱含建立的連線，透過該連線，在單一作業中發出命令。 例如，在 Visual Basic:  

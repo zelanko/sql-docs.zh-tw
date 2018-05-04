@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], pseudo-type identifiers
 - pseudo-type identifiers [ODBC], SQL_ARD_TYPE
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e021086561f0af45ddab1bd9ab777267ae515dd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a9e02377c4f192e9cbf5f6a41ab62ef5345ba4ab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 SQL_ARD_TYPE 類型識別碼用來表示緩衝區中的資料將會於 ARD SQL_DESC_CONCISE_TYPE 欄位中指定的型別。 SQL_ARD_TYPE 進入*TargetType*引數呼叫**SQLGetData**而不是特定資料類型，而且可讓您變更資料的應用程式的緩衝區輸入的描述元欄位。 這個值會繫結的資料型別 *\*TargetValuePtr*緩衝區描述項欄位。 (SQL_ARD_TYPE 尚未進入的呼叫**SQLBindCol**或**SQLBindParameter**因為繫結的緩衝區類型已經繫結至 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 欄位，而且可以變更在任何時間變更這些欄位。）  

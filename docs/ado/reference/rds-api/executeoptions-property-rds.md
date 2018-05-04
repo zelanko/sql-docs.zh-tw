@@ -20,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 398e5f911baf4ef63dcec790f046da3784983964
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 70477b9fe2da521c28e0ab21f970c7eaf2f63c72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 屬性 (RDS)
 指出是否已啟用非同步執行。  
@@ -49,7 +48,7 @@ ms.lasthandoff: 04/18/2018
   
  如果您嘗試呼叫[重設](../../../ado/reference/rds-api/reset-method-rds.md)，[重新整理](../../../ado/reference/rds-api/refresh-method-rds.md)， [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)， [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)，或[資料錄集](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)而另一項非同步作業，可能會變更[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件的**資料錄集**正在執行時，發生錯誤。  
   
- 如果非同步作業期間，發生錯誤**.RDSDataControl**物件的[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)值變更從**adcReadyStateLoaded**至**adcReadyStateComplete**，而**資料錄集**屬性值仍然維持*Nothing*。  
+ 如果非同步作業期間，發生錯誤 **.RDSDataControl**物件的[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)值變更從**adcReadyStateLoaded**至**adcReadyStateComplete**，而**資料錄集**屬性值仍然維持*Nothing*。  
   
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -19,12 +19,11 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf5a3a4c62b8ba11aecd5b62f38bec9913816402
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 68886b32ce13f712430c3117c30ad07953e9eb96
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filestream-support"></a>FILESTREAM 支援
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +64,11 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下層相容性  
- 如果您的用戶端使用的版本所編譯[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所隨附的原生用戶端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，和應用程式連接到[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]， **varbinary （max)**行為會與相容[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. 也就是說，傳回之資料的大小最大值受限於 2 GB。 結果值大於 2 GB，就會進行截斷，將會傳回 「 字串資料右邊截斷 」 警告。  
+ 如果您的用戶端使用的版本所編譯[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所隨附的原生用戶端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，和應用程式連接到[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]， **varbinary （max)** 行為會與相容[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. 也就是說，傳回之資料的大小最大值受限於 2 GB。 結果值大於 2 GB，就會進行截斷，將會傳回 「 字串資料右邊截斷 」 警告。  
   
  當資料類型相容性設定為 80 時，用戶端行為將會與下層用戶端行為一致。  
   
- 使用 SQLOLEDB 或其他前發行的提供者的用戶端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client， **varbinary （max)**會對應至映像。  
+ 使用 SQLOLEDB 或其他前發行的提供者的用戶端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client， **varbinary （max)** 會對應至映像。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

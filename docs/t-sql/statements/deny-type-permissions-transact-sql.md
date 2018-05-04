@@ -1,16 +1,16 @@
 ---
-title: "DENY 類型權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 類型權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - type permissions [SQL Server]
 - denying permissions [SQL Server], types
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 369d9bbce84881936d8c77f52807121cbb763b18
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a51a1d4f7c463b082baf13c6cf120f65b8c3ff4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY 類型權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  指定可以拒絕的類型權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ON TYPE **::** [ *schema_name***.** ] *type_name*  
- 指定要拒絕其權限的類型。 範圍限定詞 (**::**) 是必要項。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則需要結構描述範圍限定詞 (**.**)。  
+ 指定要拒絕其權限的類型。 範圍限定詞 (**::**) 是必要項。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 (**.**) 為必要項目。  
   
  TO \<database_principal>  
  指定要拒絕其權限的主體。  
@@ -106,7 +106,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  類型是一個由結構描述所包含的結構描述層級安全性實體，在權限階層中，此結構描述為該安全性實體的父系。  
   
 > [!IMPORTANT]  
->  **GRANT**、**DENY** 和 **REVOKE** 權限不適用於系統類型。 使用者定義類型可以被授與權限。 如需使用者定義類型的詳細資訊，請參閱 [Working with User-Defined Types in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md) (在 SQL Server 中使用使用者定義類型)。  
+>  **GRANT**、**DENY** 和 **REVOKE** 權限不適用於系統類型。 使用者定義類型可以被授與權限。 如需使用者定義型別的詳細資訊，請參閱[在 SQL Server 中使用使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)。  
   
  下表所列的是可以拒絕之最特定且最有限的類型權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetCursorName
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2501a747df22295cd42b9820e7b80b1ee9716333
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2c9c8ffbcd8c53054bfc3ce1638aa0f5f1bec8c4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函數
 **一致性**  
@@ -86,7 +85,7 @@ SQLRETURN SQLSetCursorName(
 ## <a name="comments"></a>註解  
  資料指標名稱只用於定位的 update 和 delete 陳述式 (例如，**更新***資料表名稱*...**WHERE CURRENT OF** *資料指標名稱*)。 如需詳細資訊，請參閱[定位的更新和刪除陳述式](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果應用程式不會呼叫**SQLSetCursorName**來定義資料指標名稱，在執行查詢陳述式，此驅動程式產生的名稱以字母 SQL_CUR 開頭，而且不會超過 18 個字元的長度。  
   
- 在連接中的所有資料指標名稱必須是唯一的。 資料指標名稱的最大長度是驅動程式所定義。 最大的互通性，建議應用程式限制為不超過 18 個字元的資料指標名稱。 在 ODBC 3*.x*，如果資料指標名稱會加上引號識別項視為區分大小寫的方式，它可以包含字元的 SQL 語法會允許或態度特殊，例如空格或保留的關鍵字。 如果資料指標名稱必須區分大小寫的方式來處理，它必須傳遞做為引號識別項。  
+ 在連接中的所有資料指標名稱必須是唯一的。 資料指標名稱的最大長度是驅動程式所定義。 最大的互通性，建議應用程式限制為不超過 18 個字元的資料指標名稱。 在 ODBC 3 *.x*，如果資料指標名稱會加上引號識別項視為區分大小寫的方式，它可以包含字元的 SQL 語法會允許或態度特殊，例如空格或保留的關鍵字。 如果資料指標名稱必須區分大小寫的方式來處理，它必須傳遞做為引號識別項。  
   
  會設明確或隱含地維持資料指標名稱設定，直到與相關聯的陳述式卸除，則使用**SQLFreeHandle**。 **SQLSetCursorName**可以呼叫以重新命名的資料指標陳述式，只要游標位於未配置或已備妥狀態。  
   

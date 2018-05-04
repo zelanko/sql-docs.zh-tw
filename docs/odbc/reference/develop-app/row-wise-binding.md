@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 61839fe1cad32bc9daf0acdc1bb43a2d793bf5b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-wise-binding"></a>資料列取向繫結
 當使用資料列取向繫結時，應用程式定義此結構包含一個或兩個，或在某些情況下三個，每個資料行資料所要傳回的項目。 第一個項目會保存資料值，和第二個項目會保存之長度/指標緩衝區。 指標和長度的值可以儲存在個別的緩衝區的 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 的描述項欄位設為不同的值;如果進行此設定，此結構會包含第三個元素。 應用程式接著會配置這些結構的陣列，其中包含資料列集內有資料列的元素。  

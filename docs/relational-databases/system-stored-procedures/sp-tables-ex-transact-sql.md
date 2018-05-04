@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ffe5cadca156137608904aade40adba47ca83a7e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 982c266206ef6fe2e2f182a6f2234ae12c57846f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**VIEW**|檢視表的名稱。|  
   
  [  **@fUsePattern=** ] **'***fUsePattern***'**  
- 決定是否字元**_**， **%**， **[**，和**]**解譯成萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern*是**元**，預設值是 1。  
+ 決定是否字元 **_**， **%**， **[**，和 **]** 解譯成萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern*是**元**，預設值是 1。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  無  

@@ -42,7 +42,7 @@ public java.sql.InputStream getAsciiStream()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  GetAsciiStream 方法 java.sql.SQLServerNClob 介面中所指定此 getAsciiStream 方法。  
   
 ## <a name="see-also"></a>另請參閱  

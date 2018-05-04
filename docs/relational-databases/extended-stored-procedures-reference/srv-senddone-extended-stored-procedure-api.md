@@ -26,12 +26,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a334ba98f72d6ef645ba38794a0df810417439b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: caa20ec045434c6851eb1ce9809aa88ced9a3031
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ count
  *status*  
  這是各種 *status* 旗標的 2 位元組欄位。 可以搭配 *status* 旗標值使用 AND 和 OR 邏輯運算子來設定多個旗標。 下表列出可能的 *status* 旗標。  
   
-|狀態旗標|Description|  
+|狀態旗標|描述|  
 |-----------------|-----------------|  
 |SRV_DONE_COUNT|*count* 參數包含有效的計數。|  
 |SRV_DONE_ERROR|目前的用戶端命令收到錯誤。|  
@@ -82,7 +81,7 @@ count
 ## <a name="returns"></a>傳回值  
  SUCCEED 或 FAIL  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  用戶端要求會造成伺服器執行一些命令，並傳回一些結果集。 **srv_senddone** 必須針對每一個結果集傳回結果完成訊息給用戶端。  
   
  *count* 欄位指出受到命令影響的資料列數。 如果 *count* 欄位包含計數，就應該在 *status* 欄位中設定 SRV_DONE_COUNT 旗標。 此設定可讓用戶端區分 0 的 *count* 值及未使用的 *count* 欄位。  

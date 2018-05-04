@@ -21,12 +21,11 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9fcd1cd05485a7b03590cc01da1ef7b755a87a37
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3c877e2e55e5db9b88b3cf78376b181a86c964c6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-multiply-dmx"></a>* (乘) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,9 +49,9 @@ Numeric_Expression * Numeric_Expression
 ## <a name="remarks"></a>備註  
  兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。 如果一個運算式評估為 Null 值，運算子就會傳回 Null 值。  
   
-## <a name="see-also"></a>請參閱  
- [算術運算子 &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [運算子 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [算術運算子&#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

@@ -21,12 +21,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e10d1b994594cbab9ae6197a9681ddc8c56196b9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: daa7caa4677c33469250e77a1e58e77e697e08c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 教學課程 (VBScript)
 這是 RDS 教學課程中，以撰寫的 Microsoft Visual Basic Scripting Edition。 如需本教學課程的用途的說明，請參閱[RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)。  
@@ -65,14 +64,14 @@ Set DC = Server.CreateObject("RDS.DataControl")
  不過，此教學課程中，使用虛數的伺服器，您的 「 伺服器 」。  
   
 > [!NOTE]
->  請注意的資料型別**ByRef**引數。 VBScript 不會讓您指定變數的型別，所以您永遠必須傳遞**Variant**。 使用 HTTP，RDS 可讓您將變數傳遞給必須有非 Variant，如果您叫用其與方法**.RDSDataSpace**物件[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法。 使用 DCOM 或同處理序伺服器時，您必須符合參數類型，用戶端和伺服器端，或您會收到 「 型別不符 」 的錯誤。  
+>  請注意的資料型別**ByRef**引數。 VBScript 不會讓您指定變數的型別，所以您永遠必須傳遞**Variant**。 使用 HTTP，RDS 可讓您將變數傳遞給必須有非 Variant，如果您叫用其與方法 **.RDSDataSpace**物件[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法。 使用 DCOM 或同處理序伺服器時，您必須符合參數類型，用戶端和伺服器端，或您會收到 「 型別不符 」 的錯誤。  
   
 ```  
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "http://yourServer")  
 ```  
   
 ## <a name="step-2a--invoke-the-server-program-with-rdsdatacontrol"></a>步驟 2a： 叫用的 RDS 伺服器程式DataControl  
- 這個範例是只擊發的註解的預設行為**.RDSDataControl**是執行指定的查詢。  
+ 這個範例是只擊發的註解的預設行為 **.RDSDataControl**是執行指定的查詢。  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="DC1">  
@@ -109,7 +108,7 @@ DC1.SourceRecordset = RS
 ```  
   
 ## <a name="step-6a--changes-are-sent-to-the-server-with-rdsdatacontrol"></a>步驟 6a，變更會傳送至 RDS 的伺服器DataControl  
- 這個範例是註解只需示範如何**.RDSDataControl**執行更新。  
+ 這個範例是註解只需示範如何 **.RDSDataControl**執行更新。  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="DC1">  

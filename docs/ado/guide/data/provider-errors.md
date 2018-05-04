@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14f79d299850bf6163fb328b0dd54be9d84f9a7b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ddc3e887e15b856e0caddc9b97f4bb1e1f6078d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-errors"></a>提供者錯誤
 發生提供者錯誤時，會傳回-2147467259 的執行階段錯誤。 當您收到這個錯誤時，請檢查**錯誤**作用中的集合**連接**物件，會包含一個或多個描述所發生的錯誤。  

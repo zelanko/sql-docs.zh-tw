@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 564e0dddd4d1d5c3ea417b9b8a4f1f01404219d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 821c13f6a0d6e695249d873477a5145fc64b1b4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>資料採礦延伸模組 (DMX) 語法慣例
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 01/08/2018
 |`[ ]` (方括弧)|包含選擇性語法項目。 不要輸入方括號。|  
 |{ } (大括號)|包含必要的語法項目。 不要鍵入大括號。|  
 |, ...|指出逗號之前的項目可以重複任意多次。 項目是以逗號分隔。|  
-|\<標籤 >:: =|語法區塊的名稱。 這個慣例可用來分組與標示冗長語法的區段，或分組與標示可用於陳述式中之多個位置的語法單位。 在您可以使用語法區塊的每個位置以 > 形箭號，例如住的標籤表示\<標籤 >。|  
+|\<label> ::=|語法區塊的名稱。 這個慣例可用來分組與標示冗長語法的區段，或分組與標示可用於陳述式中之多個位置的語法單位。 在您可以使用語法區塊的每個位置以 > 形箭號，例如住的標籤表示\<標籤 >。|  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組 & #40; DMX & #41;參考](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

@@ -13,12 +13,11 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: 9e9925268f46007155c3a6851b250a57d9b02298
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: e32e15da21bf9da2a16fc221ac8f8342d844036b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>SQL Server 容器 Kubernetes 中設定高可用性
 

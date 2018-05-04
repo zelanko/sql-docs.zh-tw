@@ -1,31 +1,30 @@
 ---
-title: "在 Analysis Services 表格式模型中的模擬 |Microsoft 文件"
-ms.custom: 
+title: 在 Analysis Services 表格式模型中的模擬 |Microsoft 文件
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 20728b8ff7ecc4a4124f5fc292366d565781186f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="impersonation"></a>模擬 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本文章提供表格式模型作者了解如何登入認證 Analysis services 連接時使用的資料來源匯入和處理 （重新整理） 資料。  
+  本文章提供表格式模型作者了解如何登入認證 Analysis services 連接時使用的資料來源匯入和處理 （重新整理） 資料。  
 
 ##  <a name="bkmk_conf_imp_info"></a> 設定模擬  
  其中，而在有哪些內容可讓您決定設定模擬資訊的方式。 建立新的模型專案時，模擬被設定在 SQL Server Data Tools (SSDT)，當您連接到資料來源匯入資料。 一旦部署模型時，可以設定模擬模型資料庫連接字串屬性中使用 SQL Server Management Studio (SSMS)。 Azure Analysis Services 中的表格式模型，您可以使用 SSMS 或**以檢視： 指令碼**瀏覽器為基礎的設計工具在編輯 JSON Model.bim 檔案中的模式。

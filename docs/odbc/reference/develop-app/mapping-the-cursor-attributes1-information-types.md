@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], mapping cursor attributes1 information types
 - application upgrades [ODBC], mapping cursor attributes1 information types
@@ -23,15 +23,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2d40ff95acc4011e7cc3dc12785ea6cef7340e35
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 90f5913eef381d2130fbe0c7eeeaa225a2587c6c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>對應的資料指標 Attributes1 資訊類型
-當 ODBC 3。*x*應用程式會呼叫**SQLGetInfo** ODBC 2*.x* SQL_XXXX_CURSOR_ATTRIBUTES1 資訊類型的驅動程式 (如動態、 順向的索引鍵集驅動程式，或靜態資料指標） 驅動程式管理員傳回的位元設定取決於 ODBC 2。*x*驅動程式會傳回對應的 ODBC 2。*x*資訊類型。 下表所示，會設定位元。  
+當 ODBC 3。*x*應用程式會呼叫**SQLGetInfo** ODBC 2 *.x* SQL_XXXX_CURSOR_ATTRIBUTES1 資訊類型的驅動程式 (如動態、 順向的索引鍵集驅動程式，或靜態資料指標） 驅動程式管理員傳回的位元設定取決於 ODBC 2。*x*驅動程式會傳回對應的 ODBC 2。*x*資訊類型。 下表所示，會設定位元。  
   
 |位元<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|資料指標類型|ODBC 2。*x*資訊<br /><br /> 型別|  
 |-----------------------------------------------|-----------------|-------------------------------------|  

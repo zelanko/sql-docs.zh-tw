@@ -21,12 +21,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f84d13fa3f4e2da728c914f2228233a04e64643f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 08a2ef17e048c66b32b0d3af77e5172ef93350cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服務概觀
 Microsoft OLE DB Provider for Microsoft 索引服務提供以程式設計方式唯讀存取檔案系統和 Web 資料由 Microsoft 索引服務編製索引。 ADO 應用程式可以發出 SQL 查詢來擷取內容和檔案屬性資訊。
@@ -34,7 +33,7 @@ Microsoft OLE DB Provider for Microsoft 索引服務提供以程式設計方式�
  提供者是無限制執行緒，啟用 UNICODE。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
- 若要連接到此提供者，設定**提供者 =**引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
+ 若要連接到此提供者，設定**提供者 =** 引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
 
 ```
 MSIDXS

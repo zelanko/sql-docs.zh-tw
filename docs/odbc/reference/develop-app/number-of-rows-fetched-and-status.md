@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row status array [ODBC]
 - number of rows fetched [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7d4925e42b7039564096be578b02df8f8fcd036c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e699cc8c0272a1221b0148a8d7b2c65da9e3e6c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="number-of-rows-fetched-and-status"></a>提取的資料列的數目和狀態
 如果已設定 SQL_ATTR_ROWS_FETCHED_PTR 陳述式屬性，它會指定傳回的呼叫所提取的資料列數目的緩衝區**SQLFetch**或**SQLFetchScroll**，和錯誤資料列。 （這個號碼是沒有狀態 SQL_ROW_NO_ROWS 的所有資料列計數）。若要在呼叫之後**SQLBulkOperations**或**SQLSetPos**，緩衝區會包含由函式執行的大量作業所影響的資料列數目。 如果已設定 SQL_ATTR_ROW_STATUS_PTR 陳述式屬性， **SQLFetch**或**SQLFetchScroll**傳回*資料列狀態陣列，*這樣會提供每個狀態傳回的資料列。 這些欄位所指向之緩衝區兩者都是由應用程式所配置，而且驅動程式所填入。 應用程式必須確定這些指標保持有效，直到關閉資料指標。  

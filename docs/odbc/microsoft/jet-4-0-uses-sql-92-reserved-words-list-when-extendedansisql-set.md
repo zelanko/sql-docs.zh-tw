@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extendedANSISQL [ODBC], reserved words
 ms.assetid: 7645187e-7777-4c07-9686-0a80d5c5834d
@@ -19,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 07924c05cf566925785cb94bcf0e9ce6192c3a1a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f7eb68eb67e1bac0441a9130824d6f79e1497076
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Jet 4.0 使用 sql-92 保留的字清單時 ExtendedAnsiSQL_Set
 當開啟 ExtendedAnsiSQL 旗標時，Jet 4.0 會使用 sql-92 保留的字清單。 嘗試使用 SQL 92 保留字，不具引號的物件名稱會造成語法錯誤。 ExtendedAnsiSQL 旗標為關閉時，新的保留的字可用來當作與之前的物件名稱。

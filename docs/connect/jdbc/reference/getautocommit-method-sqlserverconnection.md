@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取此目前自動認可模式[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。  
+  擷取這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件的目前自動認可模式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ public boolean getAutoCommit()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getAutoCommit 方法是由 java.sql.Connection 介面中的 getAutoCommit 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

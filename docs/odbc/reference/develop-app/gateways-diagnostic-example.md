@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - gateway diagnostic [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8c8e7edec0e2af7c7c2645e2e9fbc021acf8ceab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5ddc6c8f9b484c2ae133d077b234a7fc35a8fc40
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gateways-diagnostic-example"></a>閘道診斷範例
 在閘道架構中，驅動程式會將要求傳送到支援 ODBC 的閘道。 閘道會將要求傳送至 DBMS。 因為它是介面的驅動程式管理員元件，驅動程式格式，並傳回引數**SQLGetDiagRec**。  

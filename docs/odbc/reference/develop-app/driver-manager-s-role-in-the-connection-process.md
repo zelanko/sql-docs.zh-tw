@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
 - connecting to data source [ODBC], driver manager
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 85839606036b56f058f6347b57d45ca296e23b96
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>驅動程式管理員&#39;s 角色在連線程序
 請記住，應用程式不驅動程式函式會直接呼叫。 相反地，它們呼叫驅動程式管理員函式具有相同名稱和驅動程式管理員呼叫驅動程式函式。 通常，這是幾乎立即。 例如，應用程式呼叫**SQLExecute**驅動程式管理員在驅動程式管理員及完成後一些錯誤檢查，呼叫**SQLExecute**驅動程式中。  

@@ -21,12 +21,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53f3822a7d2e87c3bac0777998c65ffab5debeea
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2a62ce5844cc38be834132b59ac267d12e9ec9c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getstring-method-example-vc"></a>GetString 方法範例 （VC + +）
 這個範例會示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  

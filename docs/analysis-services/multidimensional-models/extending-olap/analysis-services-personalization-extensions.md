@@ -1,34 +1,23 @@
 ---
 title: Analysis Services 個人化延伸模組 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
-ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd55cabe877554254b63ba31e80a504117d2cf36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d06db85a9d9e75238c2aa2c4e25e0feb28a9daf1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 個人化延伸模組
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組是實作外掛程式架構的概念的基礎。 在外掛程式架構中，您可以動態開發新的 Cube 物件和功能，並輕鬆地與其他開發人員共用。 因此，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組提供的功能可讓您能夠達成以下目標：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組是概念的實作外掛程式架構的基礎。 在外掛程式架構中，您可以動態開發新的 Cube 物件和功能，並輕鬆地與其他開發人員共用。 因此，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組提供的功能可讓您能夠達成以下目標：  
   
 -   **動態設計和部署**您設計及部署之後，立即[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組，使用者可以存取這些物件和功能的下一個使用者工作階段開頭。  
   
@@ -40,7 +29,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組有許多用途。 例如，假設貴公司的銷售使用不同的貨幣。 您建立一個導出成員，該成員會使用存取此 Cube 之人員所用的當地貨幣來傳回合併的銷售量。 您會將這個成員建立為個人化延伸模組， 然後您可以將這個導出成員與一組使用者共用。 一旦共用之後，這些使用者就可以在連接伺服器之後立刻存取此導出成員。 即使這些使用者所使用的介面與當初建立此導出成員所用的介面不同，他們還是可以存取。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組是現有 managed 組件架構簡單且精緻的修改，並會公開整個[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]<xref:Microsoft.AnalysisServices.AdomdServer>物件模型、 多維度運算式 (MDX) 語法和結構描述資料列。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組是現有 managed 組件架構簡單且精緻的修改，並會公開整個[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]<xref:Microsoft.AnalysisServices.AdomdServer>物件模型、 多維度運算式 (MDX) 語法和結構描述資料列。  
   
 ## <a name="logical-architecture"></a>邏輯架構  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組的架構是根據 Managed 組件架構，而且具有以下四個基本元素：  
@@ -123,19 +112,19 @@ ms.lasthandoff: 01/08/2018
 #### <a name="adomdcommand-class"></a>AdomdCommand 類別  
  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 類別現在支援下列 MDX 命令：  
   
--   [CREATE MEMBER 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)  
+-   [建立 MEMBER 陳述式 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)  
   
--   [UPDATE MEMBER 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-update-member.md)  
+-   [UPDATE MEMBER 陳述式&#40;MDX&#41;](../../../mdx/mdx-data-definition-update-member.md)  
   
--   [DROP MEMBER 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-drop-member.md)  
+-   [DROP MEMBER 陳述式&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-member.md)  
   
--   [CREATE SET 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)  
+-   [建立 SET 陳述式 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-set.md)  
   
--   [DROP SET 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-drop-set.md)  
+-   [DROP SET 陳述式&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-set.md)  
   
--   [建立 KPI 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
+-   [CREATE KPI 陳述式&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
   
--   [DROP KPI 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
+-   [DROP KPI 陳述式&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
   
 ### <a name="mdx-extensions-and-enhancements"></a>MDX 延伸模組和增強功能  
  CREATE MEMBER 命令已增強式**標題**屬性， **display_folder**屬性，而**associated_measure_group**屬性。  

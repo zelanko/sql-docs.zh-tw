@@ -1,31 +1,30 @@
 ---
-title: "匯入資料採礦專案，使用 Analysis Services 匯入精靈 |Microsoft 文件"
-ms.custom: 
+title: 匯入資料採礦專案，使用 Analysis Services 匯入精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9ac94cfcd17842f118ea6bda19af830d8d737b94
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: df2f9fe81a733448d232129475fc9eb6cc2ed0c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 匯入精靈匯入資料採礦專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本主題描述如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用 [從伺服器匯入 (多維度和資料採礦)] 範本，從另一部伺服器上的現有資料採礦專案匯入中繼資料來建立新的資料採礦專案。  
+  本主題描述如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用 [從伺服器匯入 (多維度和資料採礦)] 範本，從另一部伺服器上的現有資料採礦專案匯入中繼資料來建立新的資料採礦專案。  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>從現有的資料採礦專案匯入資料來源、採礦結構和採礦模型  
  當您使用 [從伺服器匯入 (多維度和資料採礦)] 範本時，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會建立新的資料採礦專案，然後從指定的資料採礦專案複製中繼資料。 新的專案所包含的資料來源、資料來源檢視、採礦結構和採礦模型與您匯入的來源 ssASnoversion 資料庫相同。 但是，要等到您依照以下所述的內容更新某些屬性及處理物件之後，才能使用專案：  
@@ -38,7 +37,7 @@ ms.lasthandoff: 02/23/2018
   
 -   根據預設，當您匯入專案時，工作空間資料庫會設定為 localhost，或是預設執行個體會在 **中設定為** [預設的目標伺服器] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 若要設定這個屬性，請從 **[選項]** 功能表選取 **[商業智慧設計師]**，再選取 **[Analysis Services]**，然後選取 **[一般]**。  
   
-     請注意在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可設定另一個單獨的選項來設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型專案的預設部署伺服器。 **[預設部署伺服器]**設定會決定表格式模型專案的預設工作空間資料庫。 您不能使用可支援資料採礦專案之表格式模型的執行個體。  
+     請注意在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可設定另一個單獨的選項來設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型專案的預設部署伺服器。 **[預設部署伺服器]** 設定會決定表格式模型專案的預設工作空間資料庫。 您不能使用可支援資料採礦專案之表格式模型的執行個體。  
   
      如果您無法變更預設部署資料庫來使用在多維度或資料採礦模式中執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，您可以隨時使用 **[專案屬性]** 對話方塊來指定部署資料庫。  
   
@@ -48,20 +47,20 @@ ms.lasthandoff: 02/23/2018
   
 2.  在 [新增專案] 對話方塊的 [已安裝的範本] 底下，按一下 [商業智慧]，再按一下 [Analysis Services]，然後按一下 [從伺服器匯入 (多維度和資料採礦)]。  
   
-3.  在 **[名稱]**中，輸入專案的名稱，並指定位置和方案名稱，然後按一下 **[確定]**。  
+3.  在 **[名稱]** 中，輸入專案的名稱，並指定位置和方案名稱，然後按一下 **[確定]**。  
   
      **[匯入 Analysis Services 資料庫精靈]** 隨即啟動。 在歡迎頁面上按一下 [確定]，繼續進行。  
   
-4.  在 **[選取來源資料庫]**頁面上，針對 **[伺服器]**指定包含您想要匯入之方案的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
+4.  在 **[選取來源資料庫]** 頁面上，針對 **[伺服器]** 指定包含您想要匯入之方案的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
-     針對 **[資料庫]**選擇包含您想要匯入之資料採礦物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
+     針對 **[資料庫]** 選擇包含您想要匯入之資料採礦物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
     > [!WARNING]  
     >  您不能指定您想要匯入的物件；當您選擇現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫時，所有多維度和資料採礦物件都會匯入。  
   
      按一下 **[下一步]**。  
   
-5.  **[正在完成精靈]**頁面會顯示匯入作業的進度。 您不能取消此作業或是變更正在匯入的物件。 完成時按一下 **[完成]** 。  
+5.  **[正在完成精靈]** 頁面會顯示匯入作業的進度。 您不能取消此作業或是變更正在匯入的物件。 完成時按一下 **[完成]** 。  
   
      隨即使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]自動開啟新的專案。  
   

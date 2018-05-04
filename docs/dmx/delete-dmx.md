@@ -27,12 +27,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 566ae835ad06e99edbf624ab6d25611c0a8427f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e35257cd784ed2ed9778a66742b73e8e3821fb35
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,11 +60,11 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |引數|結果|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<結構 >*<br /><br /> 中的多個<br /><br /> DELETE FROM MINING STRUCTURE*\<結構 >*。內容|在採礦結構上執行 ProcessClear。 清除採礦結構及其相關聯的採礦模型中所有的內容。|  
+|DELETE FROM MINING STRUCTURE*\<結構 >*<br /><br /> 或<br /><br /> DELETE FROM MINING STRUCTURE*\<結構 >*。內容|在採礦結構上執行 ProcessClear。 清除採礦結構及其相關聯的採礦模型中所有的內容。|  
 |DELETE FROM MINING STRUCTURE*\<結構 >*。案例|在採礦結構上執行 ProcessClearStructureOnly。 清除採礦結構中所有的內容，但是相關聯的採礦模型則保持不變。 清除採礦結構之後，在相關聯之採礦模型上的鑽研將會失敗。|  
-|從採礦模型 刪除*\<模型 >*<br /><br /> 中的多個<br /><br /> 從採礦模型 刪除*\<模型 >*。內容|採礦模型上執行 ProcessClear，但會保留資料庫中的狀態值。 狀態值是資料行的可能狀態。 例如，性別資料行的狀態值為男性與女性。|  
+|從採礦模型 刪除*\<模型 >*<br /><br /> 或<br /><br /> 從採礦模型 刪除*\<模型 >*。內容|採礦模型上執行 ProcessClear，但會保留資料庫中的狀態值。 狀態值是資料行的可能狀態。 例如，性別資料行的狀態值為男性與女性。|  
   
- 如需有關處理類型的詳細資訊，請參閱[Type 元素 &#40;XMLA &#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
+ 如需有關處理類型的詳細資訊，請參閱[型別項目&#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會移除 NB_Sample 模型中的所有內容。  
@@ -74,9 +73,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 DELETE FROM NB_Sample.CONTENT  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

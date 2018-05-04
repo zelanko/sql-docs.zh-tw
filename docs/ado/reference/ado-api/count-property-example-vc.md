@@ -21,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c137bfef9b93300dff91423200b5d4dadabf2a85
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f1a62e7600fc4d0d9e17a0dbb85366a277b86fc3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-property-example-vc"></a>計數屬性範例 （VC + +）
 這個範例會示範[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性中的兩個集合與***員工***資料庫。 此屬性會取得中的每個集合的物件數目，並設定列舉這些集合的迴圈的上限。  

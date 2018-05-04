@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: afa07f4452bb7815ae30f2be3e8cccab6319eb9e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fae01d4d3cbfed139eb4a283f229af7afc57b953
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="readdefinition-element-assl"></a>ReadDefinition 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]決定成員是否可以讀取資料庫定義的資料庫中物件的定義。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  決定成員是否可以讀取資料庫的定義或資料庫中物件的定義。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|*無*|  
@@ -66,16 +66,16 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*無*|不允許對物件定義進行存取。|  
-|*基本*|允許對物件定義進行基本存取。<br /><br /> 附註： 此權限，才能建立本機 cube、 連結量值群組和連結維度。|  
+|*Basic*|允許對物件定義進行基本存取。<br /><br /> 附註： 此權限，才能建立本機 cube、 連結量值群組和連結維度。|  
 |*允許*|允許對物件定義進行完整存取。<br /><br /> 請注意： 此權限就必須執行[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)XML for Analysis (XMLA) 呼叫使用 DISCOVER_XML_METADATA 參數。|  
   
  對應至父系的項目**ReadDefinition**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CubePermission>， <xref:Microsoft.AnalysisServices.DatabasePermission>， <xref:Microsoft.AnalysisServices.DimensionPermission>， <xref:Microsoft.AnalysisServices.MiningModelPermission>， <xref:Microsoft.AnalysisServices.MiningStructurePermission>，和<xref:Microsoft.AnalysisServices.Permission>.  
   
-## <a name="see-also"></a>請參閱  
- [Role 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Role 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -1,31 +1,23 @@
 ---
-title: "無法重新整理活頁簿中的資料連接 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 
-author: Minewiskan
+title: 無法重新整理活頁簿中的資料連接 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c1961c883a5e38c56acf65def83272aa1e5adb8d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>無法重新整理活頁簿中資料連接的資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-如果是包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 活頁簿，Excel Services 會在提交連接要求至 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器而且該要求失敗時，傳回這個錯誤。  
+  如果是包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 活頁簿，Excel Services 會在提交連接要求至 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器而且該要求失敗時，傳回這個錯誤。  
   
 ## <a name="details"></a>詳細資料  
   
@@ -67,7 +59,7 @@ ms.lasthandoff: 02/15/2018
   
  若要解決此問題，請將電腦加入至與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器相同的網域，或在本機電腦上安裝網域控制站。 第二個解決方案「安裝網域控制站」將需要您為所有服務和使用者建立本機網域帳戶。 您將需要為您定義的帳戶設定服務帳戶和 SharePoint 權限。  
   
- 如果您的目標是在離線狀態下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，在電腦上安裝網域控制站相當實用。 如需如何離線使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的詳細指示，請參閱 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241) 上的＜讓您的伺服器離線＞ 部落格內容。  
+ 如果您的目標是在離線狀態下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，在電腦上安裝網域控制站相當實用。 如需有關如何使用的詳細指示[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]離線，請參閱部落格文章，以"採取您[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]離線的伺服器 」 上[ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241)。  
   
  **案例 4：伺服器不穩定**  
   

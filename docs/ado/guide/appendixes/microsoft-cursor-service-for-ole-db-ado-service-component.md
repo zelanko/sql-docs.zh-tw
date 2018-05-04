@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17bf332ec692bbcaaafaaf5a491d47b360064f56
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 838c1b75d93c6a357f6b8ce706f8d444f6054703
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft 資料指標服務的 OLE DB 概觀
 OLE DB 的資料指標審查補充資料提供者的資料指標支援函數。 如此一來，使用者會感知相當一致的功能，從所有資料提供者。

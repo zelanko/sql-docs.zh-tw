@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetConnectAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 52fe25460bc4eafa3c415cbf926aa8e016d1fad0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 函數
 **一致性**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLSetConnectAttr**設定屬性，以管理連線的層面。  
   
 > [!NOTE]  
->  如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3*.x*應用程式使用 ODBC 2*.x*驅動程式，請參閱[向後的對應取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
+>  如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3 *.x*應用程式使用 ODBC 2 *.x*驅動程式，請參閱[向後的對應取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -126,9 +125,9 @@ SQLRETURN SQLSetConnectAttr(
  本節稍後; 資料表中會顯示目前定義的屬性和其功能的 ODBC 版本預期的是，將會利用不同的資料來源中定義更多屬性。 ODBC; 保留範圍的屬性驅動程式開發人員必須保留自己從開啟 群組的特定驅動程式使用的值。  
   
 > [!NOTE]  
->  能夠在連接層級設定陳述式屬性，藉由呼叫**SQLSetConnectAttr**已被取代，在 ODBC 3*.x*。 ODBC 3*.x*應用程式應該永遠不會設定在連接層級的陳述式屬性。 ODBC 3*.x*陳述式屬性不能在連接層級，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 屬性，這些屬性為連接屬性和陳述式屬性，可能會設定在連接層級或陳述式層級設定。  
+>  能夠在連接層級設定陳述式屬性，藉由呼叫**SQLSetConnectAttr**已被取代，在 ODBC 3 *.x*。 ODBC 3 *.x*應用程式應該永遠不會設定在連接層級的陳述式屬性。 ODBC 3 *.x*陳述式屬性不能在連接層級，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 屬性，這些屬性為連接屬性和陳述式屬性，可能會設定在連接層級或陳述式層級設定。  
 >   
->  ODBC 3*.x*驅動程式只需要支援這項功能，如果應使用 ODBC 2*.x*應用程式，設定 ODBC 2*.x*連接層級的陳述式選項。 如需詳細資訊，請參閱[SQLSetConnectOption 對應](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)中附錄 g： 驅動程式的指導方針回溯相容性。  
+>  ODBC 3 *.x*驅動程式只需要支援這項功能，如果應使用 ODBC 2 *.x*應用程式，設定 ODBC 2 *.x*連接層級的陳述式選項。 如需詳細資訊，請參閱[SQLSetConnectOption 對應](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)中附錄 g： 驅動程式的指導方針回溯相容性。  
   
  應用程式可以呼叫**SQLSetConnectAttr**在任何時間的時間之間配置和釋放連接。 已成功設定連線的應用程式的所有連接和陳述式屬性會一直都保存到**SQLFreeHandle**連接上呼叫。 比方說，如果應用程式呼叫**SQLSetConnectAttr**屬性保存之前連接到資料來源，即使**SQLSetConnectAttr**時應用程式連接到在驅動程式會失敗資料來源;如果應用程式來設定驅動程式特有屬性，即使應用程式連接到不同的驅動程式在連接上持續發生的屬性。  
   
@@ -172,7 +171,7 @@ SQLRETURN SQLSetConnectAttr(
   
  在中設定的資訊格式\* *ValuePtr*取決於指定的緩衝區*屬性*。 **SQLSetConnectAttr**會接受屬性中有兩種不同格式的資訊： null 結尾字元字串或整數值。 每個格式註屬性的描述中。 字元字串所指向*ValuePtr*引數的**SQLSetConnectAttr**長度為*StringLength*位元組。  
   
- *StringLength*會忽略引數如果長度定義屬性，在本例中為 ODBC 2 中引入的所有屬性*.x*或更早版本。  
+ *StringLength*會忽略引數如果長度定義屬性，在本例中為 ODBC 2 中引入的所有屬性 *.x*或更早版本。  
   
 |*屬性*|*ValuePtr*內容|  
 |-----------------|-------------------------|  

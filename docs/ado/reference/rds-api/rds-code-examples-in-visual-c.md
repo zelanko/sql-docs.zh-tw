@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d6105f873d19af36fc5e60d1ca35d909bf5bead
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: cdf6aef81b0daab0b66eed9e7de3bbeb066e48ce
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-code-examples-in-visual-c"></a>RDS Visual c + + 的程式碼範例
 使用下列程式碼範例以了解如何在 Microsoft Visual c + + 中撰寫時，使用 RDS 屬性。  

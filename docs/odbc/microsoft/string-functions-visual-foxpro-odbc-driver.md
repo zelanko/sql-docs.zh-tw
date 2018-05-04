@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC string functions [ODBC]
 - string functions [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 482c21b4c9f872490ac9a2d36165fdc3fc9d8246
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a5f201eee732fa316873919deaabc4d07610a015
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>字串函式 （Visual FoxPro ODBC 驅動程式）
 下表列出 Visual FoxPro ODBC 驅動程式; 支援 ODBC 字串操作函數當相同的函式的 Visual FoxPro 文法與 ODBC 語法，會列出 Visual FoxPro 相等。  
@@ -37,17 +36,17 @@ ms.lasthandoff: 04/16/2018
 |ASCII *(string_exp)*|ASC *(string_exp)*|  
 |CHAR *（程式碼）*|CHR *(string_exp)*|  
 |CONCAT *(string_exp1 string_exp2)*|*string_exp1 + string_exp2*|  
-|差異*(string_exp1 string_exp2)*||  
-|插入*(string_exp1，開始、 長度、 string_exp2)*|STUFF *(string_exp1，開始、 長度、 string_exp2)*|  
-|LCASE *(string_exp)*|較低*(string_exp)*|  
-|左*(string_exp 計數)*||  
-|長度*(string_exp)*|LEN *(string_exp)*|  
+|差異 *(string_exp1 string_exp2)*||  
+|插入 *(string_exp1，開始、 長度、 string_exp2)*|STUFF *(string_exp1，開始、 長度、 string_exp2)*|  
+|LCASE *(string_exp)*|較低 *(string_exp)*|  
+|左 *(string_exp 計數)*||  
+|長度 *(string_exp)*|LEN *(string_exp)*|  
 |LTRIM *(string_exp)*||  
-|重複*(string_exp 計數)*|複寫*(string_exp 計數)*|  
-|取代*(string_exp1，string_exp2，string_exp3)*|STRTRAN *(string_exp1，string_exp2，string_exp3)*|  
-|右*(string_exp 計數)*||  
+|重複 *(string_exp 計數)*|複寫 *(string_exp 計數)*|  
+|取代 *(string_exp1，string_exp2，string_exp3)*|STRTRAN *(string_exp1，string_exp2，string_exp3)*|  
+|右 *(string_exp 計數)*||  
 |RTRIM *(string_exp)*||  
 |SOUNDEX *(string_exp)*||  
 |空間*（計數）*||  
-|子字串*(string_exp，開始時，長度)*|SUBSTR *(string_exp，開始時，長度)*|  
-|UCASE *(string_exp)*|上方*(string_exp)*|
+|子字串 *(string_exp，開始時，長度)*|SUBSTR *(string_exp，開始時，長度)*|  
+|UCASE *(string_exp)*|上方 *(string_exp)*|

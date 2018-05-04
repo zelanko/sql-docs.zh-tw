@@ -1,30 +1,31 @@
 ---
-title: "CREATE TABLE (Azure SQL 資料倉儲) | Microsoft Docs"
-ms.custom: 
+title: CREATE TABLE (Azure SQL 資料倉儲) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 
+caps.latest.revision: 59
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ec342637bfea8b611fb79800da9f04f58a621bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -203,14 +204,14 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *n* 的預設值是 `7`。  
   
  `float` [ ( *n* ) ]  
- 用來搭配浮點數值資料使用的近似數字資料類型。 浮點數資料是近似的，這表示並非資料類型範圍內的所有值都能夠精確地表示。 *n* 會指定用來以科學記號標記法儲存 `float` 之尾數的位元數。 因此，*n* 可決定有效位數和儲存體大小。 若指定 *n*，則其值必須介於 `1` 和 `53` 之間。 *n* 的預設值為 `53`。  
+ 用來搭配浮點數值資料使用的近似數字資料類型。 浮點數資料是近似的，這表示並非資料類型範圍內的所有值都能夠精確地表示。 *n* 指定用來以科學記號標記法儲存 `float` 之尾數的位元數。 因此，*n* 規定有效位數和儲存體大小。 如果指定 *n*，則其值必須介於 `1` 與 `53` 之間。 *n* 的預設值是 `53`。  
   
 | *n* 值 | 有效位數 | 儲存體大小 |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 位數  | 4 個位元組      |  
 | 25-53  | 15 位數 | 8 個位元組      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會將 *n* 當做兩個可能值的其中一個進行處理。 如果 `1`<= *n* <= `24`，便將 *n* 當作 `24` 來處理。 如果 `25` <= *n* <= `53`，便將 *n* 當作 `53` 來處理。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會將 *n* 當做兩個可能值的其中一個來處理。 如果 `1`<= *n* <= `24`，則將 *n* 當作 `24` 來處理。 如果 `25` <= *n* <= `53`，則將 *n* 當作 `53` 來處理。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` 資料類型從 `1` 到 `53` 的所有 *n* 值都符合 ISO 標準。 double precision 的同義字是 `float(53)`。  
   
@@ -220,7 +221,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `decimal` [ ( *precision* [ *, scale* ] ) ] | `numeric` [ ( *precision* [ *, scale* ] ) ]  
  儲存固定有效位數和小數位數的數字。  
   
- *precision*  
+ *有效位數*  
  可儲存的最大十進位數總數，小數點左右兩側都包括在內。 有效位數必須是從 `1` 到最大有效位數 `38` 之間的值。 預設有效位數是 `18`。  
   
  *scale*  
@@ -254,19 +255,19 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `bit`  
  一種整數資料類型，其值有 `1`、`0` 或 NULL 幾種。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 可將 bit 資料行的儲存體最佳化。 如果資料表中的 bit 資料行小於或等於 8 個，這些資料行會儲存為 1 個位元組。 如果有 9 到 16 個 bit 資料行，則儲存為 2 個位元組，依此類推。  
   
- `nvarchar` [ ( *n* | `max` ) ]  -- `max` 僅適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+ `nvarchar` [ ( *n* | `max` ) ] -- `max` 僅適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
  可變長度的 Unicode 字元資料。 *n* 可以是從 1 到 4000 之間的值。 `max` 表示儲存體大小上限是 2^31-1 個位元組 (2 GB)。 儲存體大小 (以位元組為單位) 是輸入字元數的兩倍再加上 2 位元組。 輸入的資料長度可以是 0 個字元。  
   
  `nchar` [ ( *n* ) ]  
- 長度為 *n* 個字元的固定長度 Unicode 字元資料。 *n* 必須是從 `1` 到 `4000` 之間的值。 儲存體大小是 *n* 位元組的兩倍。  
+ 長度為 *n* 個字元的固定長度 Unicode 字元資料。 *n* 必須是從 `1` 到 `4000` 之間的值。 儲存體大小是 *n* 個位元組的兩倍。  
   
- `varchar` [ ( *n*  | `max` ) ]  -- `max` 僅適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。   
+ `varchar` [ ( *n*  | `max` ) ] -- `max` 僅適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。   
  長度為 *n* 位元組的可變長度非 Unicode 字元資料。 *n* 必須是從 `1` 到 `8000` 之間的值。 `max` 表示儲存體大小上限是 2^31-1 個位元組 (2 GB)。儲存體大小是輸入資料的實際長度再加上 2 位元組。  
   
  `char` [ ( *n* ) ]  
- 長度為 *n* 位元組的固定長度非 Unicode 字元資料。 *n* 必須是從 `1` 到 `8000` 之間的值。 儲存體大小是 *n* 位元組。 *n* 的預設值為 `1`。  
+ 長度為 *n* 位元組的固定長度非 Unicode 字元資料。 *n* 必須是從 `1` 到 `8000` 之間的值。 儲存體大小是 *n* 位元組。 *n* 的預設值是 `1`。  
   
- `varbinary` [ ( *n*  | `max` ) ]  -- `max` 僅適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+ `varbinary` [ ( *n*  | `max` ) ] -- `max` 僅適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
  可變長度的二進位資料。 *n* 可以是從 `1` 到 `8000` 之間的值。 `max` 表示儲存體大小上限是 2^31-1 個位元組 (2 GB)。 儲存體大小是輸入資料的實際長度再加上 2 位元組。 *n* 的預設值是 7。  
   
  `binary` [ ( *n* ) ]  

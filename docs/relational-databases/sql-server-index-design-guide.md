@@ -1,8 +1,8 @@
 ---
-title: SQL Server 索引設計指南 | Microsoft Docs
+title: SQL Server 索引架構和設計指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -29,18 +29,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 405482e0cc8fdf8e545ee8fffab9edc678d1612e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="sql-server-index-design-guide"></a>SQL Server 索引設計指南
+# <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-設計不良的索引與不足的索引是資料庫應用程式瓶頸的主要原因。 設計有效的索引是達到良好資料庫和應用程式效能最重要的一點。 本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 索引設計指南包含的資訊和最佳做法，可以協助您設計符合應用程式需求的有效索引。  
+設計不良的索引與不足的索引是資料庫應用程式瓶頸的主要原因。 設計有效的索引是達到良好資料庫和應用程式效能最重要的一點。 本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 索引設計指南包含索引架構的資訊和最佳做法，可協助您設計符合應用程式需求的有效索引。  
     
-本指南假設讀者對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引類型有概略的認識。 如需索引類型的一般描述，請參閱[索引類型](../relational-databases/indexes/indexes.md)。  
+本指南假設讀者對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引類型有概略的認識。 如需索引類型的一般描述，請參閱 [Index Types](../relational-databases/indexes/indexes.md)(索引類型)。  
 
 本指南涵蓋以下類型的索引：
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/05/2018
 ##  <a name="Basics"></a> 索引設計基本概念  
  索引是一種與資料表或檢視有關的磁碟內存或記憶體內部結構，它會加快從該資料表或檢視中擷取資料列的速度。 索引中包含從資料表或檢視中一或多個資料行建出的索引鍵。 若為磁碟內存索引，這些索引鍵儲存在結構 (B 型樹狀結構) 中，讓 SQL Server 可以快速有效地尋找與索引鍵值相關的一或多個資料列。  
 
- 索引會將資料儲存為以資料列和資料行按邏輯組織的資料表，實際儲存為*資料列存放區* <sup>1</sup>　的資料列取向資料格式，或*[資料行存放區](#columnstore_index)*的資料行取向資料格式。  
+ 索引會將資料儲存為以資料列和資料行按邏輯組織的資料表，實際儲存為*資料列存放區* <sup>1</sup>　的資料列取向資料格式，或*[資料行存放區](#columnstore_index)* 的資料行取向資料格式。  
     
  為資料庫選擇正確的索引及工作負載時，往往很難在查詢速度與更新成本之間取得平衡。 範圍較小的索引，或是索引的索引鍵中包含較少的資料行，所需的磁碟空間與維護負擔相對較小。 相反的，如果索引範圍較大，能涵蓋的查詢就更多。 在找到最有效率的索引之前，可能需要先試過數種不同的設計。 索引可以新增、修改和卸除，不會影響資料庫結構描述或應用程式的設計。 所以，不要吝於嘗試各種不同的索引。  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 04/05/2018
 4.  建立或維護索引時，決定可能會提升效能的索引選項。 例如，`ONLINE` 索引選項對於在現有的大型資料表上建立叢集索引就有幫助。 ONLINE 選項會在建立或重建索引的同時，允許繼續進行基礎資料上的並行活動。 如需詳細資訊，請參閱 [設定索引選項](../relational-databases/indexes/set-index-options.md)。  
   
 5.  決定最理想的索引儲存位置。 非叢集索引可以作為基礎資料表儲存在相同的檔案群組中，或儲存在不同的檔案群組中。 藉由增加磁碟 I/O 效能，索引的儲存位置可提升查詢效能。 例如，將非叢集索引儲存在不同磁碟機上 (與資料表檔案群組不同的磁碟機) 的檔案群組中，可以同時讀取多部磁碟機，所以可提升效能。  
-     此外，叢集和非叢集索引可跨多個檔案群組使用資料分割結構描述。 資料分割使大型資料表或索引的管理更為容易，這是因為您可以快速有效地存取或管理資料的子集，同時維持整體集合的完整性。 如需相關資訊，請參閱[資料分割資料表與索引](../relational-databases/partitions/partitioned-tables-and-indexes.md)。 當您考慮使用分割時，請決定是否應該校準索引，也就是說，使用分割資料表相同的方法進行分割，或獨立進行分割。   
+     此外，叢集和非叢集索引可跨多個檔案群組使用資料分割結構描述。 資料分割使大型資料表或索引的管理更為容易，這是因為您可以快速有效地存取或管理資料的子集，同時維持整體集合的完整性。 如需相關資訊，請參閱 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。 當您考慮使用分割時，請決定是否應該校準索引，也就是說，使用分割資料表相同的方法進行分割，或獨立進行分割。   
 
 ##  <a name="General_Design"></a> 一般索引設計指導方針  
  經驗豐富的資料庫管理員可以設計出一組數量適中的索引，但即使是普通複雜的資料庫與工作量，這都是一件非常複雜、費時，且容易出錯的工作。 了解資料庫、查詢和資料行的特性可以協助您設計最佳化的索引。  
@@ -121,7 +122,7 @@ ms.lasthandoff: 04/05/2018
   
 -   讓叢集索引保持短小的索引鍵。 此外，對唯一或非 Null 資料行建立叢集索引，會有幫助。  
   
--   **ntext**、 **text**、 **image**、 **varchar(max)**、 **nvarchar(max)**或 **varbinary(max)** 資料類型的資料行無法指定為索引鍵資料行。 但是， **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**和 **xml** 資料類型則可參與非叢集索引，作為非索引鍵之索引資料行。 如需詳細資訊，請參閱本指南中的 [內含資料行的索引](#Included_Columns)一節。  
+-   **ntext**、 **text**、 **image**、 **varchar(max)**、 **nvarchar(max)** 或 **varbinary(max)** 資料類型的資料行無法指定為索引鍵資料行。 但是， **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 和 **xml** 資料類型則可參與非叢集索引，作為非索引鍵之索引資料行。 如需詳細資訊，請參閱本指南中的 [內含資料行的索引](#Included_Columns)一節。  
   
 -   **xml** 資料類型只可以是 XML 索引的索引鍵資料行。 如需詳細資訊，請參閱 [XML 索引 &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md)。 SQL Server 2012 SP1 導入了新的 XML 索引類型，稱為「選擇性 XML 索引」。 這個新索引可改善 SQL Server 中儲存為 XML 之資料的查詢效能，讓大型 XML 資料工作負載的索引編製更快速，並透過降低索引本身的儲存成本，改善延展性。 如需詳細資訊，請參閱[選擇性 XML 索引 &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
@@ -456,7 +457,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   頁面上可以放入的索引資料列變少。 這將使得 I/O 的作業增加而降低快取的效率。  
   
--   必須有更多磁碟空間才能儲存索引。 尤其是，新增 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**或 **xml** 資料類型作為非索引鍵之索引資料行，將大幅增加磁碟空間的需求。 這是因為資料行的值複製到索引的分葉層級。 因此，它們會同時存在於索引與基底資料表中。  
+-   必須有更多磁碟空間才能儲存索引。 尤其是，新增 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 或 **xml** 資料類型作為非索引鍵之索引資料行，將大幅增加磁碟空間的需求。 這是因為資料行的值複製到索引的分葉層級。 因此，它們會同時存在於索引與基底資料表中。  
   
 -   維護索引時，會增加修改、插入、更新或刪除基礎資料表或索引檢視的時間。  
   
@@ -882,7 +883,7 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 > 當非叢集索引索引鍵資料行中的某個資料行有許多重複的值時，效能會因為更新、插入及刪除而降低。 在此情況下，改善效能的其中一種方法就是在非叢集索引中加入其他資料行。
 
 ##  <a name="Additional_Reading"></a> 其他閱讀資料  
-[使用 SQL Server 2008 索引檢視提升效能](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[＜使用 SQL Server 2008 索引檢視提升效能＞](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [建立主索引鍵](../relational-databases/tables/create-primary-keys.md)    
 [記憶體最佳化資料表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  

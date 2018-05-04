@@ -22,12 +22,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 00259604fe891a21f6f52835b1844762a751f09a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4321a81e2b823ca6ce38f11a0a04cfef2e745f8c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-mdx-syntax"></a>函數 (MDX 語法)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,11 +34,11 @@ ms.lasthandoff: 01/08/2018
   多維度運算式 (MDX) 有數個內建函數類別，以執行特定作業。 下表列出 MDX 中可用的函數類別。  
   
 > [!NOTE]  
->  如需個別函數的詳細資訊，請參閱[MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md).  
+>  如需個別函數的詳細資訊，請參閱[MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)。  
   
-|函數類別|描述|  
+|函數類別|Description|  
 |-----------------------|-----------------|  
-|陣列函數|提供可在預存程序中使用的陣列。<br /><br /> 如需詳細資訊，請參閱[使用預存程序 &#40;MDX &#41;](../mdx/using-stored-procedures-mdx.md).|  
+|陣列函數|提供可在預存程序中使用的陣列。<br /><br /> 如需詳細資訊，請參閱[使用預存程序&#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)。|  
 |維度函數|傳回階層、層級或成員維度的參考。<br /><br /> 如需詳細資訊，請參閱[使用維度、 階層和層級函數](../mdx/using-dimension-hierarchy-and-level-functions.md)。|  
 |階層函數|傳回層級或成員階層的參考。<br /><br /> 如需詳細資訊，請參閱[使用維度、 階層和層級函數](../mdx/using-dimension-hierarchy-and-level-functions.md)。|  
 |層級函數|傳回成員、維度、階層層級的參考，或字串運算式的參考。<br /><br /> 如需詳細資訊，請參閱[使用維度、 階層和層級函數](../mdx/using-dimension-hierarchy-and-level-functions.md)。|  
@@ -53,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="uses-of-functions"></a>函數的使用  
  任何 MDX 運算式中都可以使用或包括函數： 函數也可以為巢狀 (將一函數置於另一個函數中)。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 語法元素 &#40;MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 語法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

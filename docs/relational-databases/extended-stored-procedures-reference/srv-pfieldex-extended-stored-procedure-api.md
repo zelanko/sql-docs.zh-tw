@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b2e3e72b30ff57270372bfaca3180447963940a4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 76e8d3991b4154e929b6b05a96e1b3f816c61b3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ len
  *field*  
  指定要傳回的 *srvproc* 欄位。  
   
-|欄位|Description|傳回類型|  
+|欄位|描述|傳回類型|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|目前的工作階段訊息 LCID。|ULONG*|  
 |SRV_INSTANCENAME|執行個體名稱 (如果是具名的)；否則，傳回 NULL。|WCHAR*|  
@@ -75,7 +74,7 @@ len
 > [!IMPORTANT]  
 >  從伺服器傳回的緩衝區應該是唯讀的。 否則，伺服器狀態可能會損毀。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **安全性注意事項**：您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
   
   

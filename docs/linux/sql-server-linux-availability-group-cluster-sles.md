@@ -4,7 +4,7 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 05/17/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.workload: Inactive
-ms.openlocfilehash: 4fa3cd388fc1f4d22ee781721145d0fc4c465682
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: a32854d6619cc053d9dc9cfc28a9f17cba479f34
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
@@ -189,16 +188,31 @@ ms.lasthandoff: 04/26/2018
 
 加入所有節點之後, 檢查是否您需要調整沒有仲裁原則中的全域叢集選項。 這是特別重要的雙節點叢集。 如需詳細資訊，請參閱節 4.1.2，選項沒有仲裁原則。 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>開始失敗-是-嚴重叢集屬性設定為 false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>設定叢集屬性叢集重新檢查間隔
 
-`Start-failure-is-fatal` 指出是否在節點上啟動資源失敗可防止進一步該節點上的啟動嘗試。 當設定為`false`，叢集會決定是否要嘗試再次根據資源的目前失敗計數和移轉臨界值的相同節點上啟動。 因此，容錯移轉發生後，Pacemaker 重試啟動可用性群組上先前的主要資源可使用的 SQL 執行個體後。 Pacemaker 負責降級為次要複本，並自動重新加入可用性群組。 此外，如果`start-failure-is-fatal`設`false`，叢集會回復為使用移轉臨界值設定的設定的 failcount 限制。 請確定移轉臨界值的預設值也會一併更新。
+`cluster-recheck-interval` 指出的輪詢間隔的叢集檢查有變更的資源參數、 條件約束或其他叢集的選項。 如果複本關閉，叢集會嘗試重新啟動的時間間隔是由繫結的複本`failure-timeout`值和`cluster-recheck-interval`值。 例如，如果`failure-timeout`設為 60 秒及`cluster-recheck-interval`設定為 120 秒，超過 60 秒，但小於 120 秒的間隔嘗試重新啟動。 我們建議您將失敗逾時設定為 60 秒及叢集重新檢查的間隔為大於 60 秒的值。 建議您不要將叢集重新檢查間隔設定為較小的值。
 
-若要更新屬性值為 false 的執行：
+若要更新的屬性值`2 minutes`執行：
+
 ```bash
-sudo crm configure property start-failure-is-fatal=false
-sudo crm configure rsc_defaults migration-threshold=5000
+crm configure property cluster-recheck-interval=2min
 ```
-如果屬性的預設值`true`需要時，若要啟動資源失敗，使用者介入的第一次嘗試之後清除資源失敗計數，以及重設設定，使用自動容錯移轉：`sudo crm resource cleanup <resourceName>`命令。
+
+> [!IMPORTANT] 
+> 如果您已經有由 Pacemaker 叢集管理可用性群組資源，請注意使用最新可用 Pacemaker 封裝 1.1.18-11.el7 的所有分佈都造成啟動失敗-是-嚴重的叢集設定時的行為變更其值為 false。 這項變更會影響容錯移轉工作流程。 如果主要複本發生中斷，叢集必須容錯移轉至其中一個可用的次要複本。 相反地，使用者會發現，叢集會嘗試啟動失敗的主要複本。 如果該主永遠不會上線時 （因為在永久中斷），叢集絕不會容錯移轉至另一個可用的次要複本。 由於此項變更，先前建議的設定，來設定開始失敗-是-嚴重已不再有效，此設定需要還原為其預設值`true`。 此外，必須更新，以包含 AG 資源`failover-timeout`屬性。 
+>
+>若要更新的屬性值`true`執行：
+>
+>```bash
+>crm configure property start-failure-is-fatal=true
+>```
+>
+>更新您現有的 AG 資源屬性`failure-timeout`至`60s`執行 (取代`ag1`具有可用性群組資源的名稱): 
+>
+>```bash
+>crm configure edit ag1
+># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
+>```
 
 如需有關 Pacemaker 叢集內容的詳細資訊，請參閱[設定叢集資源](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html)。
 
@@ -239,22 +253,23 @@ sudo crm configure property stonith-enabled=true
 1. 在 crm 提示字元中，執行下列命令來設定資源內容。
 
    ```bash
-primitive ag_cluster \
-   ocf:mssql:ag \
-   params ag_name="ag1" \
-   op start timeout=60s \
-   op stop timeout=60s \
-   op promote timeout=60s \
-   op demote timeout=10s \
-   op monitor timeout=60s interval=10s \
-   op monitor timeout=60s interval=11s role="Master" \
-   op monitor timeout=60s interval=12s role="Slave" \
-   op notify timeout=60s
-ms ms-ag_cluster ag_cluster \
-   meta master-max="1" master-node-max="1" clone-max="3" \
-  clone-node-max="1" notify="true" \
-commit
-   ```
+   primitive ag_cluster \
+      ocf:mssql:ag \
+      params ag_name="ag1" \
+      meta failure-timeout=60s \
+      op start timeout=60s \
+      op stop timeout=60s \
+      op promote timeout=60s \
+      op demote timeout=10s \
+      op monitor timeout=60s interval=10s \
+      op monitor timeout=60s interval=11s role="Master" \
+      op monitor timeout=60s interval=12s role="Slave" \
+      op notify timeout=60s
+   ms ms-ag_cluster ag_cluster \
+      meta master-max="1" master-node-max="1" clone-max="3" \
+     clone-node-max="1" notify="true" \
+   commit
+      ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

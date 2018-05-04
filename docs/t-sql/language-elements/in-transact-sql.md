@@ -1,16 +1,16 @@
 ---
 title: IN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IN_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - IN keyword
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 86d03b96015869efb8ff2ab873b1c838c50387f8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b582a9aa97e1e8647a0e5e747dc765c474640a85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +63,7 @@ test_expression [ NOT ] IN
  這是要進行相符測試的運算式清單。 所有運算式的類型都必須與 *test_expression* 相同。  
   
 ## <a name="result-types"></a>結果類型  
- **布林值**  
+ **布林**  
   
 ## <a name="result-value"></a>結果值  
  如果 *test_expression* 的值等於 *subquery* 所傳回的任何值，或等於以逗號分隔清單中的任何 *expression*，結果值就是 TRUE；否則，結果值就是 FALSE。  
@@ -72,7 +73,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  相較於使用 IN 或 NOT IN 的 *test_expression*，*subquery* 或 *expression* 所傳回的任何 Null 值都會傳回 UNKNOWN。 將 Null 值與 IN 或 NOT IN 一起使用可能會產生非預期的結果。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在 IN 子句中明確包括極大量的值 (數千個以逗號分隔的值) 會耗用資源，並傳回錯誤 8623 或 8632。 若要解決此問題，請將項目儲存在資料表的 IN 清單中，並在 IN 子句內使用 SELECT 子查詢。  
   
  錯誤 8623：  
@@ -114,7 +115,7 @@ WHERE e.JobTitle IN ('Design Engineer', 'Tool Designer', 'Marketing Assistant');
 GO  
 ```  
   
- 以下是任何一個查詢的結果集。  
+ 以下是任何一項查詢的結果集。  
   
 ```  
 FirstName   LastName      Title  

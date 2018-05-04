@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f7c137f5b555dca6711ad46ae4c20ac1f6d5805d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 671a56b9117ea77b479d1a0fff78729ca9c3f5ab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis 屬性 (ADO MD)
 指出目前的篩選器資訊[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  

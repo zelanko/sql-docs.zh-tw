@@ -26,12 +26,11 @@ caps.latest.revision: 56
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b1b631ab035bf4c444aa1c6b449eaa87e3305c91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6adc5668f43a6db002c3622cc65b7ea1f09dee78
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +58,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  指定要預測之資料行的名稱。 此資料行可以包含純量或表格式資料。  
   
  *n*  
- 指定要預測之後續步驟的數目。 如果未指定值 *n* ，預設值為 1。  
+ 指定要預測之後續步驟的數目。 如果未指定值*n*，預設值為 1。  
   
  *n*不能為 0。 如果您沒有至少進行一次預測，此函數會傳回錯誤。  
   
@@ -88,7 +87,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="remarks"></a>備註  
  使用 PREDICTION JOIN 陳述式加入新資料時，[!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法不支援歷程記錄預測。  
   
- 在 PREDICTION JOIN 中，預測程序永遠會在原始定型序列一結束之後的時間步驟開始。 即使您加入新資料也是如此。 因此，  *n* 參數和*n 開始*參數值必須是大於 0 的整數。  
+ 在 PREDICTION JOIN 中，預測程序永遠會在原始定型序列一結束之後的時間步驟開始。 即使您加入新資料也是如此。 因此， *n*參數和*n 開始*參數值必須是大於 0 的整數。  
   
 > [!NOTE]  
 >  新資料的長度不會影響預測的起點。 因此，如果您要加入新資料，也想進行新預測，請確認有將預測的起始點設定為大於新資料長度的值，或按照新資料的長度擴充預測的結束點。  
@@ -102,7 +101,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   第三個範例示範如何使用 EXTEND_MODEL_CASES 參數，以全新的資料更新採礦模型。  
   
- 若要深入了解使用時間序列模型，請參閱資料採礦教學課程中，[第 2 課： 建立預測的案例 &#40; 中繼資料採礦教學課程 &#41;](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)和[時間序列預測 DMX 教學課程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 若要深入了解使用時間序列模型，請參閱資料採礦教學課程中，[第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)和[時間序列預測 DMX教學課程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
   
 > [!NOTE]  
 >  您可能會從模型中取得不同的結果；提供底下範例的結果只是為了說明結果格式。  
@@ -136,7 +135,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>範例 2：加入新資料並使用 REPLACE_MODEL_CASES  
  假設您發現特定地區的資料不正確，而且您想要使用模型中的模式，但是要調整預測來符合新的資料。 或者，您可能會尋找具有更可靠之趨勢的另一個地區，而且想要將最可靠的模型套用到另一個地區的資料。  
   
- 在這類情況下，您可以使用 REPLACE_MODEL_CASES 參數，並指定新的資料集當做歷程記錄資料使用。 這樣一來，將會根據指定之模型內的模式來做預測，但是將會從新資料點的結尾繼續順利進行。 如需完整的逐步解說此案例中，請參閱[進階時間序列預測 &#40; 中繼資料採礦教學課程 &#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)。  
+ 在這類情況下，您可以使用 REPLACE_MODEL_CASES 參數，並指定新的資料集當做歷程記錄資料使用。 這樣一來，將會根據指定之模型內的模式來做預測，但是將會從新資料點的結尾繼續順利進行。 如需完整的逐步解說此案例中，請參閱[進階時間序列預測&#40;中繼資料採礦教學課程&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)。  
   
  下列 PREDICTION JOIN 查詢說明取代資料以及做出新預測的語法。 如果是取代資料，此範例會擷取 Amount 和 Quantity 資料行的值，並將每一個乘以二：  
   
@@ -269,9 +268,9 @@ OR [Model Region] = 'M200 North America'
 > [!NOTE]  
 >  此範例使用 FLATTENED 關鍵字，讓結果更容易呈現在資料表中，不過，如果您的提供者支援階層式資料列集，可以省略 FLATTENED 關鍵字。 如果您省略 FLATTENED 關鍵字，查詢會傳回兩個資料行：第一個資料行包含識別 `[Model Region]` 資料數列的值，而第二個資料行則包含統計資料的巢狀資料表。  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [時間序列模型查詢範例](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [預測 &#40; DMX &#41;](../dmx/predict-dmx.md)  
+ [預測 & #40; DMX & #41;](../dmx/predict-dmx.md)  
   
   

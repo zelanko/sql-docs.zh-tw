@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4dfd5e5dc612813bd97722a3ce9f7ca49c5044bd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 63e9dde8ff2e26b3a9167e4da71279a9177b2213
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 屬性範例 (VB)
 這個範例會示範[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)，已附加至[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)集合[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼中的國家/地區資料行附加遞增索引**員工**然後資料表顯示的記錄。 然後程式碼中的國家/地區資料行附加遞減索引**員工**資料表，並會顯示記錄一次。 遞增和遞減索引之間的差異會顯示。  

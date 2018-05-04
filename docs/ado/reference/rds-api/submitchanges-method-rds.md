@@ -19,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a297a6f41fe3a191742ef6e92f84ecbc2e971eae
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 79b827d3288af7abcc59f063f80ff5e66e99d392
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 提交暫止的變更在本機快取和可更新的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)中指定的資料來源[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性或[URL](../../../ado/reference/rds-api/url-property-rds.md)屬性。  
@@ -47,7 +46,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  物件變數，表示[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件。  
   
  *連接*  
- A**字串**值，表示與所建立的連接**.RDSDataControl**物件的[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性。  
+ A**字串**值，表示與所建立的連接 **.RDSDataControl**物件的[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性。  
   
  *Recordset*  
  物件變數，表示**資料錄集**物件。  

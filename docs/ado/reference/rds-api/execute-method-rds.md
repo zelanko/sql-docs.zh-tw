@@ -20,12 +20,11 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db01dfef8e751808431b1796ee022060e30a7d17
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 78b53e3f48c8229e652a1044ca5c0157441ec86a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-method-rds"></a>Execute 方法 (RDS)
 執行要求，並在 ADO 中建立用於 ADO 資料錄集，2.5 和更新版本。  

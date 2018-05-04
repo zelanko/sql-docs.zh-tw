@@ -24,13 +24,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db0bf2f1fdfc57a1f92aa7fce8bd27c29e99003a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9715a6addb6d5983bcc8bf07fbb6829940c699e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +71,7 @@ RETCODE bcp_moretext (
   
  如果複製的資料列都包含一個以上的長型、 變動長度資料行， **bcp_moretext**第一個傳送資料到最低序數編號的資料行，接著是最低序數編號的資料行，以此類推。 更正預期資料的總長度設定是很重要的一件事。 除了使用長度設定以外，沒有任何方法可以指示大量複製已經收到資料行的所有資料。  
   
- 當**var(max)**值都會傳送到使用 bcp_sendrow 和 bcp_moretext 伺服器，則不需要呼叫 bcp_collen 設定資料行的長度。 相反地，僅限這些類型的值便會終止呼叫 bcp_sendrow 長度為零。  
+ 當**var(max)** 值都會傳送到使用 bcp_sendrow 和 bcp_moretext 伺服器，則不需要呼叫 bcp_collen 設定資料行的長度。 相反地，僅限這些類型的值便會終止呼叫 bcp_sendrow 長度為零。  
   
  應用程式通常會呼叫**bcp_sendrow**和**bcp_moretext**內傳送的資料列數目的迴圈。 以下是如何執行此動作包含兩個資料表的外框**文字**資料行：  
   

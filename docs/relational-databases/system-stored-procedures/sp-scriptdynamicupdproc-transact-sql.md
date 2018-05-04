@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b548223d520696f7c7a2b48f4010247666d41597
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5c40ea324f16fa299364659d0cb3090502bae243
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
  這是發行項識別碼。 *artid*是**int**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
- 傳回的結果集包含單一**nvarchar （4000)**資料行。 這個結果集形成用來建立自訂預存程序的完整 CREATE PROCEDURE 陳述式。  
+ 傳回的結果集包含單一**nvarchar （4000)** 資料行。 這個結果集形成用來建立自訂預存程序的完整 CREATE PROCEDURE 陳述式。  
   
 ## <a name="remarks"></a>備註  
  **sp_scriptdynamicupdproc**用於異動複寫中。 預設 MCALL 指令碼邏輯包括 UPDATE 陳述式內的所有資料行，且利用點陣圖來判斷已變更的資料行。 如果資料行並未變更，資料行會重設為其本身，這通常不會有問題。 如果資料行已建立索引，就會進行額外的處理。 動態方法只包括已變更的資料行，這會提供最佳的 UPDATE 字串。 不過，當建立動態 UPDATE 陳述式時，會在執行階段進行額外的處理。 我們建議您測試動態和靜態方法，然後再選擇最佳方案。  

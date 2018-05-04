@@ -20,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0641b18cc77a0f7e913014ac6669f82d85a68b77
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5ae807573775648268f415fe6ee855b1c78c187a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-usage-and-security"></a>RDS 提供使用量與安全性
 使用本節中的資訊，設定您的伺服器，並使用 RDS 快速。 本節包含您可能需要實作 RDS，描述一些 RDS 和其他技術之間的索引鍵關聯性時應採取的特定設定步驟，並有助於識別設定時，可能會遇到的問題的解決方案RDS 的方案。  

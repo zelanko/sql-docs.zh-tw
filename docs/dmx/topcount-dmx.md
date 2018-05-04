@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 412c741e3f48c23f65eafa2a998a257f07034dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cd3ed46a927a40804b09e674fe6d814d2b085ab1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,9 +49,9 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="remarks"></a>備註  
  所提供的值\<排名運算式 > 引數會決定遞減次序順序中提供的資料列\<資料表運算式 > 引數，以及中所指定的最高的資料列數目\<計數 > 引數會傳回。  
   
- TopCount 函數原本引進為了啟用關聯預測，而且通常會產生與包含的陳述式相同的結果**選取前**和**ORDER BY**子句。 如果您使用，您將會得到關聯預測的較佳效能**預測 (DMX)**函式，以支援要傳回之預測數目的指定。  
+ TopCount 函數原本引進為了啟用關聯預測，而且通常會產生與包含的陳述式相同的結果**選取前**和**ORDER BY**子句。 如果您使用，您將會得到關聯預測的較佳效能**預測 (DMX)** 函式，以支援要傳回之預測數目的指定。  
   
- 不過，有很多情況下，您可能仍然需要使用 TopCount。 例如，不支援 DMX**頂端**子 select 陳述式中的辨識符號。 [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md)函式也不支援新增**頂端**。  
+ 不過，有很多情況下，您可能仍然需要使用 TopCount。 例如，不支援 DMX**頂端**子 select 陳述式中的辨識符號。 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函式也不支援新增**頂端**。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用您建立的關聯模型的預測查詢[基本資料採礦教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查詢會傳回相同的結果，但是第一個範例會使用 TopCount，而且第二個範例使用預測函數。  
@@ -72,7 +71,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  範例結果：  
   
-|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -108,7 +107,7 @@ NATURAL PREDICTION JOIN
   
  範例結果：  
   
-|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29…|0.25…|  
 |Water Bottle|2866|0.19…|0.17…|  
@@ -116,7 +115,7 @@ NATURAL PREDICTION JOIN
   
  但是，這種類型的查詢可能會影響實際設定的效能。 這是因為此查詢會從演算法傳回所有預測的集合、排序這些預測，並傳回前三個。  
   
- 下列範例會提供替代陳述式，此陳述式會傳回相同的結果，但是執行速度則快得多。 此範例會使用預測函數，可接受之預測數目當做引數取代 TopCount。 此範例也會使用**$SUPPORT**關鍵字，直接擷取巢狀的資料表資料行。  
+ 下列範例會提供替代陳述式，此陳述式會傳回相同的結果，但是執行速度則快得多。 此範例會使用預測函數，可接受之預測數目當做引數取代 TopCount。 此範例也會使用 **$SUPPORT**關鍵字，直接擷取巢狀的資料表資料行。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
@@ -124,11 +123,11 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
   
  結果包含了根據支援值所排序的前三項預測。 您可以使用 $PROBABILITY 或 $ADJUSTED_PROBABILITY 來取代 $SUPPORT，以傳回根據機率或調整過的機率所排名的預測。 如需詳細資訊，請參閱**預測 (DMX)**。  
   
-## <a name="see-also"></a>請參閱  
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)   
- [TopPercent &#40; DMX &#41;](../dmx/toppercent-dmx.md)   
- [TopSum &#40; DMX &#41;](../dmx/topsum-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
+ [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
+ [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
   
   

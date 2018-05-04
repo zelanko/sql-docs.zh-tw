@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3eeec3e44c07d8f2d53ab3b954c07304200f6341
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7692f214c38d4d1925b96390f99fa9d86675f8ca
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dp_increased_partitions
  這是資料庫的名稱。 *dbname*是**sysname**預設值是 NULL。 如果*dbname*未指定，會使用目前的資料庫。  
   
  [ @increased_partitions=] '*increased_partitions*'  
- 啟用或停止對於指定資料庫之 15,000 個資料分割上限的支援。 *increased_partitions*是**varchar(6)**預設值是 NULL。 接受的值如果是 'ON' 或 'TRUE'，表示啟用支援，如果是 'OFF' 或 'FALSE'，即表示停用支援。 如果*increased_partitions*未指定，此程序會傳回 1，指出指定的資料庫已啟用支援，或 0，表示支援已停用。  
+ 啟用或停止對於指定資料庫之 15,000 個資料分割上限的支援。 *increased_partitions*是**varchar(6)** 預設值是 NULL。 接受的值如果是 'ON' 或 'TRUE'，表示啟用支援，如果是 'OFF' 或 'FALSE'，即表示停用支援。 如果*increased_partitions*未指定，此程序會傳回 1，指出指定的資料庫已啟用支援，或 0，表示支援已停用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

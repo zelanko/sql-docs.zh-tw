@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLStatistics function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e8a3a669b9e355ae635314efa5bf4cfe26c7c932
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 13b0d52ebe5e611b9188fdc61fdac11eb7623037
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstatistics-visual-foxpro-odbc-driver"></a>SQLStatistics （Visual FoxPro ODBC 驅動程式）
 > [!NOTE]  

@@ -1,28 +1,28 @@
 ---
-title: "第 10 課： 建立階層 |Microsoft 文件"
-ms.custom: 
+title: 第 10 課： 建立階層 |Microsoft 文件
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7a09f05b8e508205f3e2a8863627c12afdec9c64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 24624bd54030819ef543997d79f70ec213d39ed2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-9-create-hierarchies"></a>第 9 課： 建立階層
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,9 +31,9 @@ ms.lasthandoff: 01/08/2018
   
 若要建立階層，您將使用模型設計師中的*圖表檢視*。 資料檢視中不支援建立及管理階層。  
   
-完成本課程的估計時間： **20 分鐘**  
+完成本課程的估計時間：**20 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 本主題是表格式模型教學課程的一部分，必須依序完成。 然後再執行工作，在這一課，您應已完成上一課：[第 8 課： 建立檢視方塊](../analysis-services/lesson-8-create-perspectives.md)。  
   
 ## <a name="create-hierarchies"></a>建立階層  
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  按一下並拖曳**ProductSubcategoryName**欄**類別**階層。 將它重新命名**Subcategory**。 
   
-5.  以滑鼠右鍵按一下**ModelName**資料行 >**將加入階層**，然後選取**類別**。 執行相同**[englishproductname]**。 重新命名階層中的這些資料行**模型**和**產品**。  
+5.  以滑鼠右鍵按一下**ModelName**資料行 >**將加入階層**，然後選取**類別**。 執行相同 **[englishproductname]**。 重新命名階層中的這些資料行**模型**和**產品**。  
 
     ![做為表格式-lesson9-類別](../analysis-services/media/as-tabular-lesson9-category.png)
   

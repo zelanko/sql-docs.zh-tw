@@ -23,12 +23,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87e78e81a7e3885c78d7d30bbfdff732b5de5920
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e7afb92c9c435650e4e3a2199420ffeb6a5adad4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-collection-adox"></a>資料表集合 (ADOX)
 包含所有[資料表](../../../ado/reference/adox-api/table-object-adox.md)的目錄物件。  

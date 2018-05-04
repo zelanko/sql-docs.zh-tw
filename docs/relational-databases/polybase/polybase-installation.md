@@ -1,16 +1,16 @@
 ---
-title: "PolyBase 安裝 | Microsoft Docs"
-ms.custom: 
+title: PolyBase 安裝 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4aefc608d16245a2cb28245a87beb6b165489fab
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: fbb861dda4b837bc3f3003edf357c89efaa4eb88
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="polybase-installation"></a>安裝 PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,17 +31,23 @@ ms.lasthandoff: 02/24/2018
   
 ## <a name="prerequisites"></a>Prerequisites  
   
--   64 位元 SQL Server 評估版  
+- 64 位元 SQL Server 評估版  
   
--   Microsoft .NET Framework 4.5。  
+- Microsoft .NET Framework 4.5。  
+
+- Oracle Java SE Runtime Environment (JRE)。 支援第 7 版 (從 7.51 開始) 和 8 ([JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 或 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 將會運作)。 前往 [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Java SE 下載)。 如果 JRE 不存在，安裝程式將會失敗。 不支援 JRE9 和 JRE10。
+    
+- 最小記憶體︰4 GB  
   
--   Oracle Java SE RunTime Environment (JRE) 7.51 或 8 版 (64 位元) ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 或 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 皆適用)。 前往 [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Java SE 下載)。 如果 JRE 不存在，安裝程式將會失敗。 JRE 9 或更新版本不適用，除非您具有 SQL Server 2017 累積更新 4 或更新版本。 您可以安裝 JRE 8、安裝 PolyBase，然後升級至 JRE 9。 
+- 最小硬碟空間︰2 GB  
   
--   最小記憶體︰4 GB  
-  
--   最小硬碟空間︰2 GB  
-  
--   必須啟用 TCP/IP，Polybase 才能正常運作。 預設會在 SQL Server Developer 和 Express 版本以外的所有 SQL Server 版本上啟用 TCP/IP。 若要讓 Polybase 在 Developer 和 Express 版本上正常運作，您必須啟用 TCP/IP 連線 (請參閱[啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md))。
+- 必須啟用 TCP/IP，Polybase 才能正常運作。 預設會在 SQL Server Developer 和 Express 版本以外的所有 SQL Server 版本上啟用 TCP/IP。 若要讓 Polybase 在 Developer 和 Express 版本上正常運作，您必須啟用 TCP/IP 連線 (請參閱[啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md))。
+
+- 外部資料來源 (Azure Blob 或 Hadoop 叢集)。 如需支援的 Hadoop 版本，請參閱[設定 PolyBase](#supported)。  
+
+
+> [!NOTE]
+>   如果您要針對 Hadoop 使用計算下推功能，則需要確定目標 Hadoop 叢集具有 HDFS 的核心元件：啟用 Jobhistory 伺服器的 Yarn/MapReduce。 PolyBase 透過 MapReduce 來提交下推查詢，並從 JobHistory Server 提取狀態。 如果沒有其中一個元件，則查詢會失敗。 
   
  **注意**  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetParam
 - SQLSetParam function [ODBC], mapping
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a784ec60a7b88f3ace601a8ce18ff05263803441
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5445dec93df24b0337da938750534b6becc18210
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetparam-mapping"></a>SQLSetParam 對應
 **SQLSetParam**最上層的對應會繼續**SQLBindParameter**如 ODBC 2 所示。*x*。 即使在概念上類似於**SQLBindParam**，驅動程式管理員未對應**SQLSetParam**至**SQLBindParam**。 這是因為某些現有的 ODBC 2。*x*驅動程式使用的特殊值*Columnsize* (SQL_SETPARAM_VALUE_MAX)，則會對應時，驅動程式管理員會產生**SQLSetParam**最上層的**SQLBindParameter**判斷呼叫 1 時。*x* ODBC 應用程式。  

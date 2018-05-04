@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4f659af9b6ba2ea785d344311c9d7471dc25a26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  這是發行集的名稱。 *發行集*是**sysname**，預設值是**%**。 如果指定發行集的話，就會傳回發行集所限定的所有衝突。 例如，如果**MSmerge_conflict_Customers**資料表有衝突資料列**WA**和**CA**發行集，發行集名稱中傳遞**CA**擷取相關衝突**CA**發行集。  
   
  [  **@conflict_table=**] **'***conflict_table***'**  
- 這是衝突資料表的名稱。 *conflict_table*是**sysname**，沒有預設值。 中[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本中，衝突資料表的命名格式名稱具有 **MSmerge_conflict_*發行集*_*文章 * * *，使用針對每個發行一份資料表發行項。  
+ 這是衝突資料表的名稱。 *conflict_table*是**sysname**，沒有預設值。 中[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本中，衝突資料表的命名格式名稱具有 **MSmerge_conflict_* 發行集 *_* 文章 * * *，使用針對每個發行一份資料表發行項。  
   
  [ **@publisher=**] **'***publisher***'**  
  這是發行者的名稱。 *發行者*是**sysname**，預設值是 NULL。  

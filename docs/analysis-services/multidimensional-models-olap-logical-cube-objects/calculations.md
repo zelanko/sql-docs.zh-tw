@@ -1,39 +1,23 @@
 ---
-title: "計算 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- calculations [Analysis Services]
-- OLAP objects [Analysis Services], calculations
-- MDX [Analysis Services], calculations
-- calculations [Analysis Services], about calculations
-- cubes [Analysis Services], calculations
-ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 
-author: Minewiskan
+title: 計算 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dd006ee1a6896e4b9bdd6264d16a8406786f8d39
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c71a931814e28a28ccfffd810deff15d7f126f6f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculations"></a>計算
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-計算是多維度運算式 (MDX) 運算式或指令碼，用來定義 cube 中的導出的成員、 命名的集或範圍的指派[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 計算可讓您加入的物件不是由 Cube 之資料所定義，而是由參考 Cube 之其他部分、其他 Cube 甚至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫外部之資訊的運算式所定義。 計算可讓您擴充 Cube 的功能，以在商業智慧應用程式中加入彈性和強大功能。 如需指令碼計算的詳細資訊，請參閱[簡介 Microsoft SQL Server 2005 中 MDX 指令碼](http://go.microsoft.com/fwlink/?LinkId=81892)。 如需有關 MDX 查詢和計算相關效能問題的詳細資訊，請參閱[SQL Server 2005 Analysis Services 效能指南](http://go.microsoft.com/fwlink/?LinkId=81621)。  
+  計算是多維度運算式 (MDX) 運算式或指令碼，用來定義 cube 中的導出的成員、 命名的集或範圍的指派[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 計算可讓您加入的物件不是由 Cube 之資料所定義，而是由參考 Cube 之其他部分、其他 Cube 甚至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫外部之資訊的運算式所定義。 計算可讓您擴充 Cube 的功能，以在商業智慧應用程式中加入彈性和強大功能。 如需指令碼計算的詳細資訊，請參閱[簡介 Microsoft SQL Server 2005 中 MDX 指令碼](http://go.microsoft.com/fwlink/?LinkId=81892)。 如需有關 MDX 查詢和計算相關效能問題的詳細資訊，請參閱[SQL Server 2005 Analysis Services 效能指南](http://go.microsoft.com/fwlink/?LinkId=81621)。  
   
 ## <a name="calculated-members"></a>導出成員  
  導出成員是使用您在定義導出成員時指定的多維度運算式 (MDX) 運算式，以在執行階段計算出其值的成員。 與其他任何成員一樣，商業智慧應用程式也可以使用導出成員。 因為在 Cube 中只會儲存定義，所以導出成員並不會增加 Cube 的大小；需要回答查詢時才會在記憶體中計算出值。  

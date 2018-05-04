@@ -1,27 +1,26 @@
 ---
-title: "SQL Server 資料採礦增益集，適用於 Office |Microsoft 文件"
-ms.custom: 
+title: SQL Server 資料採礦增益集，適用於 Office |Microsoft 文件
+ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ea4c810eb5c3dfca0588efc02407cf5a5729f68e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 582aafff3c10b5ec20ef791106074f7511577bd4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>適用於 Office 的 SQL Server 資料採礦增益集
 
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
      如果您還不熟悉資料採礦，則可以從 **[查詢]** 精靈取得建立預測查詢的協助。  
   
-     進階使用者則可以使用具有拖放功能的 **[進階查詢編輯器]**來建立自訂 DMX 查詢，或使用 Excel VBA 來將預測自動化。  
+     進階使用者則可以使用具有拖放功能的 **[進階查詢編輯器]** 來建立自訂 DMX 查詢，或使用 Excel VBA 來將預測自動化。  
   
 -   **記載和管理。** 建立了資料集以及一些模型之後，就可以透過產生資料的統計摘要和模型參數來記載您的工作與您的見解。  
   
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
      進階使用者還可使用 **[追蹤]** 功能查看傳送至伺服器的 XMLA 和 DMX 陳述式。  
   
-## <a name="getting-started"></a>使用者入門  
+## <a name="getting-started"></a>快速入門  
  如需詳細資訊，請參閱 [適用於 Office 的資料採礦增益集包含的內容](http://go.microsoft.com/fwlink/p/?LinkId=616849)  
   
 ## <a name="support-and-requirements"></a>支援與需求  
@@ -85,6 +84,6 @@ ms.lasthandoff: 01/08/2018
   
  根據您連接的 SQL Server Analysis Services 版本而定，某些進階演算法可能會無法使用。 如需詳細資訊，請參閱 [Features Supported by the Editions of SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)(SQL Server 2016 版本支援的功能)。  
   
- 如需安裝的其他說明，請參閱下載中心的這個頁面： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ 其他安裝的說明，請參閱下載中心上的此頁面： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

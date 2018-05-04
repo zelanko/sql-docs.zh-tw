@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC], examples
 - SQLGetTypeInfo function [ODBC], examples
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c0960798cf388e3968c4a7f093d8187f85116d88
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 113dfa21be16df908280d896638acd30fcd0d0e5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>範例 SQLGetTypeInfo 結果集
 應用程式呼叫**SQLGetTypeInfo**判斷哪些資料類型是否支援資料來源，這些資料類型的特性。 下表顯示範例結果集所傳回**SQLGetTypeInfo**如 SQL_CHAR、 SQL_LONGVARCHAR、 SQL_DECIMAL、 SQL_REAL、 SQL_DATETIME SQL_INTERVAL_YEAR 和 SQL_INTERVAL_DAY_TO_SECOND 所支援的資料來源。  

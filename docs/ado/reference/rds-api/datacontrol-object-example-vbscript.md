@@ -21,12 +21,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53ae4e8ab5a0dcf7af1e0e1e20ca17a9b4a62cdb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6e9856073d1e638df9bad76fe7333332a1d86cc0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl 物件範例 (VBScript)
 > [!IMPORTANT]
@@ -99,7 +98,7 @@ BODY {
 <!-- EndDataControlDesignVBS -->  
 ```  
   
- 下列範例示範如何設定必要的參數**.RDSDataControl**在執行階段。 若要測試此範例中，剪下並貼上這段程式碼之間\<主體 > 和\</b > 標記以標準 HTML 文件並將其命名**DataControlRuntimeVBS.asp**。 ASP 指令碼會找出您的伺服器。  
+ 下列範例示範如何設定必要的參數 **.RDSDataControl**在執行階段。 若要測試此範例中，剪下並貼上這段程式碼之間\<主體 > 和\</b > 標記以標準 HTML 文件並將其命名**DataControlRuntimeVBS.asp**。 ASP 指令碼會找出您的伺服器。  
   
 ```  
 <!-- BeginDataControlRuntimeVBS -->  

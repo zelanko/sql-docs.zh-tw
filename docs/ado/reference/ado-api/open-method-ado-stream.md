@@ -23,12 +23,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 12d39ecbeaf22785ab20e488787e2a5350160d18
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0f751a6e2c910453a402a0f6a7b71ab2a9548d12
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-method-ado-stream"></a>Open 方法 （ADO 資料流）
 開啟[資料流](../../../ado/reference/ado-api/stream-object-ado.md)來操作二進位或文字資料流的物件。  

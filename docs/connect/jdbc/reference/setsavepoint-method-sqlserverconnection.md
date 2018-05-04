@@ -32,14 +32,14 @@ ms.lasthandoff: 04/16/2018
 # <a name="setsavepoint-method-sqlserverconnection"></a>setSavepoint 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在目前交易中建立未命名的儲存點，並傳回新[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)物件，代表它。  
+  在目前交易中建立未命名的儲存點，並傳回表示該儲存點的新 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 物件。  
   
 ## <a name="overload-list"></a>多載清單  
   
-|名稱|Description|  
+|[屬性]|描述|  
 |----------|-----------------|  
-|[setSavepoint （)](../../../connect/jdbc/reference/setsavepoint-method.md)|在目前交易中建立未命名的儲存點，並傳回新[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)物件，代表它。|  
-|[setSavepoint (java.lang.String)](../../../connect/jdbc/reference/setsavepoint-method-java-lang-string.md)|具有指定名稱，在目前交易中建立儲存點，並傳回新[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)物件，代表它。|  
+|[setSavepoint ()](../../../connect/jdbc/reference/setsavepoint-method.md)|在目前交易中建立未命名的儲存點，並傳回表示該儲存點的新 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 物件。|  
+|[setSavepoint (java.lang.String)](../../../connect/jdbc/reference/setsavepoint-method-java-lang-string.md)|使用指定名稱，在目前交易中建立儲存點，並傳回表示該儲存點的新 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

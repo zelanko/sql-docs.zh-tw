@@ -1,32 +1,19 @@
 ---
-title: "使用 連接和 ADOMD.NET 中的工作階段 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- sessions [ADOMD.NET]
-- connections [ADOMD.NET]
-ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
-caps.latest.revision: 
-author: Minewiskan
+title: 使用 連接和 ADOMD.NET 中的工作階段 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a4f51a9e0939612e490ed96c93c06a6931fa3f21
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 857a9c40d423b082b968506229b1e255139b346f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>Connections in ADOMD.NET-使用連接與工作階段
   在 XML for Analysis (XMLA) 中，工作階段可支援分析資料存取期間可設定狀態的作業。 工作階段會為分析資料來源界定命令與交易的範圍和內容。 用來管理工作階段的 XMLA 元素[BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)，[工作階段](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)，和[EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)。  

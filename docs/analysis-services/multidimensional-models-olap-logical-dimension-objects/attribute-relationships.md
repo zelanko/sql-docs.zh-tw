@@ -1,47 +1,23 @@
 ---
-title: "屬性關聯性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- member properties [Analysis Services], attribute relationships
-- security [Analysis Services], properties
-- PROPERTIES keyword
-- storage [Analysis Services], attribute relationships
-- natural hierarchies [Analysis Services]
-- dimensions [Analysis Services], member properties
-- queries [MDX], attribute relationships
-- user-defined hierarchies [Analysis Services]
-- attributes [Analysis Services], relationships
-- member properties [Analysis Services]
-- members [Analysis Services], attribute relationships
-- storing data [Analysis Services], attribute relationships
-- relationships [Analysis Services], attributes
-ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
-caps.latest.revision: 
-author: Minewiskan
+title: 屬性關聯性 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e687d64d3ba36bee4cffab7e81d401081b57eaa2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 903f66edbe7c296c4f4c02526e87944d5738e0ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-relationships"></a>中，使用 [維度設計師] 的
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度內的屬性會一律直接或間接與相關的索引鍵屬性。 當您根據所有維度屬性都是衍生自相同關聯式資料表的星狀結構描述來定義維度時，便會在索引鍵屬性和維度的每個非索引鍵屬性之間，自動定義屬性關聯性。 而根據維度屬性是衍生自多個相關資料表的雪花式結構描述來定義維度時，便會自動定義下列的屬性關聯性：  
+  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度內的屬性會一律直接或間接與相關的索引鍵屬性。 當您根據所有維度屬性都是衍生自相同關聯式資料表的星狀結構描述來定義維度時，便會在索引鍵屬性和維度的每個非索引鍵屬性之間，自動定義屬性關聯性。 而根據維度屬性是衍生自多個相關資料表的雪花式結構描述來定義維度時，便會自動定義下列的屬性關聯性：  
   
 -   索引鍵屬性和繫結到主維度資料表之資料行的每個非索引鍵屬性之間。  
   
@@ -99,7 +75,7 @@ ms.lasthandoff: 02/15/2018
  當您建立屬性關聯性時，其主要條件約束是要確定屬性關聯性所參考的屬性，在屬性關聯性所屬的屬性中，任何成員只有一個值。 例如，如果您在城市屬性與省份屬性間定義關聯性，每個城市就只能和單一省份相關。  
   
 ## <a name="attribute-relationship-queries"></a>屬性關聯性查詢  
- 您可以使用 MDX 查詢擷取資料的成員屬性形式屬性關聯性，從**屬性**MDX 關鍵字**選取**陳述式。 如需如何使用 MDX 來擷取成員屬性的詳細資訊，請參閱[使用成員屬性 &#40;MDX &#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
+ 您可以使用 MDX 查詢擷取資料的成員屬性形式屬性關聯性，從**屬性**MDX 關鍵字**選取**陳述式。 如需如何使用 MDX 來擷取成員屬性的詳細資訊，請參閱[使用成員屬性&#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

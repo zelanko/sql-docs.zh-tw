@@ -23,12 +23,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4bc79c9a1c641f625a6a0dae11c17aba4188b5e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5c1cef419c1c53426f403a8758df396f622ed2ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributions-dmx"></a>散發 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,19 +45,19 @@ ms.lasthandoff: 01/08/2018
  **統一**  
  連續資料行的值形成平坦曲線，其中所有值的機率都相當之。  
   
- 如需有關[!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦演算法，請參閱[資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). 協力廠商演算法提供者可能支援其他的散發類型。 若要判斷哪一個發佈類型演算法支援，請使用**SUPPORTED_DISTRIBUTION_FLAGS**結構描述資料列。  
+ 如需有關[!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦演算法，請參閱[資料採礦演算法&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。 協力廠商演算法提供者可能支援其他的散發類型。 若要判斷哪一個發佈類型演算法支援，請使用**SUPPORTED_DISTRIBUTION_FLAGS**結構描述資料列。  
   
- 如需有關散發類型的詳細資訊，請參閱[資料行散發 &#40; 資料採礦 &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)。  
+ 如需有關散發類型的詳細資訊，請參閱[資料行散發&#40;資料採礦&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)。  
   
-## <a name="see-also"></a>請參閱  
- [內容類型 &#40; 資料採礦 &#41;](../analysis-services/data-mining/content-types-data-mining.md)   
- [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
- [資料採礦延伸模組 &#40; DMX &#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
- [資料採礦延伸模組 &#40; DMX &#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>另請參閱  
+ [內容類型 & #40; 資料採礦 & #41;](../analysis-services/data-mining/content-types-data-mining.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [資料採礦延伸模組&#40;DMX&#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [結構和使用方式的 DMX 預測查詢](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   

@@ -1,30 +1,30 @@
 ---
-title: "在 DirectQuery 模式中測試模型 |Microsoft 文件"
-ms.custom: 
+title: 在 DirectQuery 模式中測試模型 |Microsoft 文件
+ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 11260792-ff8b-4d0e-b845-ca210dd3fced
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ad389541ba4bb964df0c3a0ca7cb08277d1bd1d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b4663cf910a776fd7ce87005b604a2782377b041
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="test-a-model-in-directquery-mode"></a>在 DirectQuery 模式中測試模型
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]檢閱測試的表格式模型在 DirectQuery 模式中，程式開發，從設計開始著手的每個階段的選項。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  從設計開始著手，在每個開發階段的 DirectQuery 模式中，檢閱測試表格式模型的選項。  
   
 ## <a name="test-in-excel"></a>在 Excel 中進行測試 
   

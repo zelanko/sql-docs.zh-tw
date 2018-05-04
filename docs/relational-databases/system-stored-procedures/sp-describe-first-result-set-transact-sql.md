@@ -24,13 +24,12 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8860d9b24731b311b3161ccdfca0f163ba3204d9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: acb21fb540012216aec4477193cf836bb7c19153
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,10 +49,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ## <a name="arguments"></a>引數  
  [ **@tsql =** ] **'***Transact-SQL_batch***'**  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar （max)**。  
+ 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
   
  [  **@params =** ] **N'***參數***'**  
- @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可以是**nvarchar （n)**或**nvarchar （max)**。  
+ @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可以是**nvarchar （n)** 或**nvarchar （max)**。  
   
  是一個字串，包含的所有參數都已內嵌在定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 指定陳述式中每個參數必須定義在@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次陳述式中的不包含參數，@params並非必要。 這個參數的預設值是 NULL。  
   
@@ -147,17 +146,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   如果資料類型不同，將會擲回錯誤，且不會傳回任何結果，除非遇到下列情況：  
   
-    -   **varchar(a)**至**varchar(a')**其中 ' >。  
+    -   **varchar(a)** 至**varchar(a')** 其中 ' >。  
   
-    -   **varchar(a)**至**varchar （max)**  
+    -   **varchar(a)** 至**varchar （max)**  
   
-    -   **nvarchar(a)**至**nvarchar(a')**其中 ' >。  
+    -   **nvarchar(a)** 至**nvarchar(a')** 其中 ' >。  
   
-    -   **nvarchar(a)**至**nvarchar （max)**  
+    -   **nvarchar(a)** 至**nvarchar （max)**  
   
-    -   **varbinary(a)**至**varbinary(a')**其中 ' >。  
+    -   **varbinary(a)** 至**varbinary(a')** 其中 ' >。  
   
-    -   **varbinary(a)**至**varbinary （max)**  
+    -   **varbinary(a)** 至**varbinary （max)**  
   
  **sp_describe_first_result_set**不支援間接遞迴。  
   
@@ -307,7 +306,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 結果： 錯誤，類型不相符 (**varchar （10)**與**nvarchar （10)**)。  
+ 結果： 錯誤，類型不相符 (**varchar （10)** 與**nvarchar （10)**)。  
   
 #### <a name="result-set-can-return-an-error"></a>結果集可以傳回錯誤  
  第一個結果集為錯誤或結果集。  

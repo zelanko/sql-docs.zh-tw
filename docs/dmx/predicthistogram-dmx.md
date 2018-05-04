@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b967498b2ea2cf742eca67c8557230ed80c78055
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2c06d117d2abd0fc988f5d5b497e588910bd744a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,11 +60,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]不支援資料採礦演算法**$ProbabilityVariance**。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] 不支援資料採礦演算法 **$ProbabilityVariance**。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]不支援資料採礦演算法**$ProbabilityStdev**。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] 不支援資料採礦演算法 **$ProbabilityStdev**。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
   
 -   **$AdjustedProbability**  
   
@@ -97,17 +96,17 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [叢集 &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
- [PredictAdjustedProbability &#40; DMX &#41;](../dmx/predictadjustedprobability-dmx.md)   
- [[Predictprobability] &#40; DMX &#41;](../dmx/predictprobability-dmx.md)   
- [PredictStdev &#40; DMX &#41;](../dmx/predictstdev-dmx.md)   
- [PredictSupport &#40; DMX &#41;](../dmx/predictsupport-dmx.md)   
- [PredictVariance &#40; DMX &#41;](../dmx/predictvariance-dmx.md)   
+## <a name="see-also"></a>另請參閱  
+ [叢集&#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
+ [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
+ [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
+ [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
+ [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
  [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

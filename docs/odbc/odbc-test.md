@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC test [ODBC]
 - ODBC drivers [ODBC], testing
@@ -25,12 +25,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 525f0f4dc401455272fcda3630551f35b48bf3ec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6952e9c62d0350943c369749b96944d74435dab0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-test"></a>ODBC 測試
 Microsoft® ODBC 測試是 ODBC 的應用程式可讓您測試 ODBC 驅動程式和 ODBC 驅動程式管理員。 ODBC 3.51 包含 ANSI 和 unicode 版本的 ODBC 測試。 對應檔案如下所示：  

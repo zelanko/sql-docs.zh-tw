@@ -1,31 +1,30 @@
 ---
-title: "使用 SSMS 管理角色 |Microsoft 文件"
-ms.custom: 
+title: 使用 SSMS 管理角色 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9472bef0e1971c3f8868902b5cd91189256e860d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: e4dba7abd73af31bc6b845c89caf066eaf56cbc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-roles-by-using-ssms"></a>使用 SSMS 管理角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-對於部署的表格式模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立、編輯和管理角色。  
+  對於部署的表格式模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立、編輯和管理角色。  
   
  本主題的工作：  
   
@@ -65,9 +64,9 @@ ms.lasthandoff: 02/23/2018
   
 6.  在成員資格設定視窗中，按一下 [加入]，然後在 [選取使用者或群組] 對話方塊中，加入您要當做成員加入的 Windows 使用者或群組。  
   
-7.  如果您建立的角色具有「讀取」權限，您可以使用 DAX 公式加入任何資料表的資料列篩選。 在中加入資料列篩選，**角色屬性- \<rolename >**對話方塊中，於**選取頁面**，按一下**資料列篩選器**。  
+7.  如果您建立的角色具有「讀取」權限，您可以使用 DAX 公式加入任何資料表的資料列篩選。 在中加入資料列篩選，**角色屬性- \<rolename >** 對話方塊中，於**選取頁面**，按一下**資料列篩選器**。  
   
-8.  在 [資料列篩選] 視窗中，選取資料表，然後按一下 [ **DAX 篩選**] 欄位中，然後在**DAX 篩選- \<tablename >**欄位中，輸入 DAX 公式。  
+8.  在 [資料列篩選] 視窗中，選取資料表，然後按一下 [ **DAX 篩選**] 欄位中，然後在**DAX 篩選- \<tablename >** 欄位中，輸入 DAX 公式。  
   
     > [!NOTE]  
     >  [DAX 篩選- \<tablename >] 欄位不包含自動完成查詢編輯器或插入函數功能。 若要在撰寫 DAX 公式時使用自動完成功能，您必須在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中使用 DAX 公式編輯器。  

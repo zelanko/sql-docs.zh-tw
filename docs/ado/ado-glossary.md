@@ -19,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d327b5e991127a533d4b599daf8c52cfb2dba1ba
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 853f20765770afa691717adebe8ef501a15d1ec3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-glossary-terms"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。
@@ -47,7 +46,7 @@ ms.lasthandoff: 04/18/2018
 ## <a name="b"></a>B
  資料表中的欄位與變數之間的繫結項目 A 對應。 ADO Visual c + + 擴充功能中**資料錄集**欄位會對應至 C/c + + 變數。
 
- 位元遮罩的數字值適用於與其他數值，通常要在參數中的旗標選項或傳回值的位元值比較。 通常這項比較會完成的位元邏輯運算子，例如**和**和**或者**在 Visual Basic 中**&**和**&#124;** c + + 中。
+ 位元遮罩的數字值適用於與其他數值，通常要在參數中的旗標選項或傳回值的位元值比較。 通常這項比較會完成的位元邏輯運算子，例如**和**和**或者**在 Visual Basic 中**&** 和 **&#124;** c + + 中。
 
  例如，ADO **FieldAttributeEnum**值可用來當作位元遮罩來決定欄位的屬性。 假設您想要判斷是否可更新的欄位。 您可以測試這個，與 Visual Basic 中的下列運算式：`Field.Attributes AND adFldUpdatable`
 

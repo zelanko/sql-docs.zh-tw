@@ -1,15 +1,16 @@
 ---
-title: "建立 Windows 驗證的資料庫鏡像端點 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 建立 Windows 驗證的資料庫鏡像端點 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
-caps.latest.revision: "61"
+caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 212e131c50570b14ef574b4ea24371fd6ae0b048
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6043d585b7b402ba51bf22693b871215572c4932
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>建立 Windows 驗證的資料庫鏡像端點 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立使用 Windows 驗證的資料庫鏡像端點。 若要支援資料庫鏡像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個執行個體都需要一個資料庫鏡像端點。 伺服器執行個體只可有一個資料庫鏡像端點，而這個端點具有單一通訊埠。 建立資料庫鏡像端點後，該資料庫鏡像端點即可使用本機系統上的任何可用通訊埠。 伺服器執行個體上的所有資料庫鏡像工作階段都會接聽該通訊埠，且資料庫鏡像的所有內送連接也都會使用該通訊埠。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立使用 Windows 驗證的資料庫鏡像端點。 若要支援資料庫鏡像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個執行個體都需要一個資料庫鏡像端點。 伺服器執行個體只可有一個資料庫鏡像端點，而這個端點具有單一通訊埠。 建立資料庫鏡像端點後，該資料庫鏡像端點即可使用本機系統上的任何可用通訊埠。 伺服器執行個體上的所有資料庫鏡像工作階段都會接聽該通訊埠，且資料庫鏡像的所有內送連接也都會使用該通訊埠。  
   
 > [!IMPORTANT]  
 >  若資料庫鏡像端點存在且已在使用中，我們建議您使用該端點。 卸除使用中端點會中斷現有工作階段。  
@@ -101,7 +103,7 @@ ms.lasthandoff: 01/18/2018
   
     -   STARTED 指定要啟動及要開始接聽連接的端點。 資料庫鏡像端點通常是在 STARTED 狀態下建立。 您也可以在 STOPPED 狀態 (預設值) 或 DISABLED 狀態下啟動工作階段。  
   
-    -   \<接聽程式通訊埠清單> 是您想要伺服器用來接聽資料庫鏡像訊息的單一通訊埠編號 (*nnnn*)。 只允許 TCP；指定任何其他通訊協定將造成錯誤。  
+    -   *\<接聽程式通訊埠清單* 是您想要伺服器用來接聽資料庫鏡像訊息的單一通訊埠編號 (*nnnn*)。 只允許 TCP；指定任何其他通訊協定將造成錯誤。  
   
          每個電腦系統僅能使用某個通訊埠編號一次。 建立資料庫鏡像端點後，該資料庫鏡像端點即可使用本機系統上的任何可用通訊埠。 若要識別系統上 TCP 端點目前使用的通訊埠，請使用下列 Transact-SQL 陳述式：  
   

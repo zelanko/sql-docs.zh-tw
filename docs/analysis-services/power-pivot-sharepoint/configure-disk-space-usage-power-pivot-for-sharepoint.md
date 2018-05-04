@@ -1,31 +1,23 @@
 ---
-title: "設定磁碟空間使用量 (Power Pivot for SharePoint) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 設定磁碟空間使用量 (Power Pivot for SharePoint) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7388a8f44b3dc60729674a6cd14014d4bbfa15f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>設定磁碟空間使用量 (PowerPivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署會使用主機電腦的磁碟空間來快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫，讓重新載入更快速。 在記憶體中載入的每個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫都會先快取至磁碟中，因此稍後可以快速重新載入該資料庫來服務新的要求。 依預設， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用所有可用磁碟空間來快取其資料庫，但是您可以藉由設定限制磁碟空間使用量的屬性來修改這個行為。  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署會使用主機電腦的磁碟空間來快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫，讓重新載入更快速。 在記憶體中載入的每個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫都會先快取至磁碟中，因此稍後可以快速重新載入該資料庫來服務新的要求。 依預設， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用所有可用磁碟空間來快取其資料庫，但是您可以藉由設定限制磁碟空間使用量的屬性來修改這個行為。  
   
  本主題說明如何設定磁碟空間使用量的限制。  
   
@@ -49,7 +41,7 @@ ms.lasthandoff: 02/15/2018
   
  [Backup] 資料夾會針對載入本機電腦上之記憶體中的任何 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫提供一般快取儲存。 如果您在伺服器陣列中定義多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式，任何一個都可以使用本機伺服器載入並於隨後快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料。 資料載入和快取都是 Analysis Services 伺服器作業。 因此，總磁碟空間使用量會在 Analysis Services 執行個體層級的 Backup 資料夾上進行管理。 因此，限制磁碟空間使用量的組態設定會在 SharePoint 應用程式伺服器上執行的單一 SQL Server Analysis Services 執行個體上設定。  
   
- 快取只包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫存放在單一父資料夾 ([Backup] 資料夾) 下的多個檔案中。 由於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫打算當作 Excel 活頁簿的內部資料使用，因此，資料庫名稱是以 GUID 為基礎，而非描述性的。 下的 GUID 資料夾**\<服務應用程式名稱 >**是父資料夾的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料庫。 當 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫在伺服器上載入時，系統會針對每個資料庫建立其他資料夾。  
+ 快取只包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫存放在單一父資料夾 ([Backup] 資料夾) 下的多個檔案中。 由於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫打算當作 Excel 活頁簿的內部資料使用，因此，資料庫名稱是以 GUID 為基礎，而非描述性的。 下的 GUID 資料夾**\<服務應用程式名稱 >** 是父資料夾的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料庫。 當 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫在伺服器上載入時，系統會針對每個資料庫建立其他資料夾。  
   
  由於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料可能會在伺服器陣列中的任何 Analysis Services 執行個體上載入，因此在伺服器陣列中的多部電腦上也可能會快取相同的資料。 這個作法是效能優先於磁碟空間使用量，但如果磁碟上已經有可用的資料，權衡取捨便是使用者可以更快速地存取資料。  
   
@@ -57,11 +49,11 @@ ms.lasthandoff: 02/15/2018
   
  您可以在系統層級建立磁碟空間不足時通知您的電子郵件警示。 Microsoft System Center 包含電子郵件警示功能。 您也可以使用「檔案伺服器資源管理員」、「工作排程器」或 PowerShell 指令檔來設定警示。 下列連結提供實用的資訊來設定有關磁碟空間不足的通知：  
   
--   [檔案伺服器資源管理員的新功能](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx)。  
+-   [在檔案伺服器資源管理員的新](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)。  
   
--   [File Server Resource Manager Step-by-Step Guide for Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (Windows Server 2008 R2 的檔案伺服器資源管理員逐步指南) (http://go.microsoft.com/fwlink/?LinkID=204875)。  
+-   [Windows Server 2008 R2 的檔案伺服器資源管理員逐步指南](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)。  
   
--   [Setting low disk space alerts on Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) (在 Windows Server 2008 上設定磁碟空間不足的警示) (http://go.microsoft.com/fwlink/?LinkID=204870)。  
+-   [Windows Server 2008 上設定低磁碟空間警示](http://go.microsoft.com/fwlink/?LinkID=204870)( http://go.microsoft.com/fwlink/?LinkID=204870)。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>如何限制儲存快取檔案所使用的磁碟空間量  
   

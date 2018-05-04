@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a216202893e40bfd4a3c1e960fba9db1c08f809c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: f9436c530275cc55a4906204ddce3c960fa562cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>建立變數值檔案 (AccessToSQL)
 變數的值，檔案是 XML 檔案中所包含的參數值經常變更整個伺服器移轉的命令 （例如來源或目的地伺服器名稱）。 大量的資料庫移轉發生時，建立並與主要指令碼檔案中參考多個變數的檔案，以儲存每個來源伺服器的值**– v**在命令列參數。 這個行為有助於維護幾個指令碼檔案中的多個變數的檔案中的變數值的靜態值。  

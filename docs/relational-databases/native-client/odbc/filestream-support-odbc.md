@@ -19,12 +19,11 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 02292cffead70858e8a965afe6adb719ac7fb742
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5324e139c4a92abd0004184c6a215305bd31340c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 支援 (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支援增強型 FILESTREAM 功能。 如需有關這項功能的詳細資訊，請參閱[FILESTREAM 支援](../../../relational-databases/native-client/features/filestream-support.md)。 如需示範 ODB 對於 FILESTREAM 之支援的範例，請參閱[傳送和接收資料以累加方式與 FILESTREAM &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  
   
- 傳送和接收**varbinary （max)**值大於 2 GB，應用程式必須使用繫結參數與 SQLBindParameter *ColumnSize*設**SQL_SS_LENGTH_UNLIMITED**，並將設定的內容*StrLen_or_IndPtr*至**SQL_DATA_AT_EXEC** SQLExecDirect 或 SQLExecute 之前。  
+ 傳送和接收**varbinary （max)** 值大於 2 GB，應用程式必須使用繫結參數與 SQLBindParameter *ColumnSize*設**SQL_SS_LENGTH_UNLIMITED**，並將設定的內容*StrLen_or_IndPtr*至**SQL_DATA_AT_EXEC** SQLExecDirect 或 SQLExecute 之前。  
   
  做為與任何資料在執行中參數，資料會提供使用 SQLParamData 和 SQLPutData。  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 04/16/2018
  如果您在繫結的資料行上呼叫 SQLFetch，您會收到 「 資料截斷 」 警告，如果緩衝區不夠大到足以包含完整的值。 忽略此警告，並更新使用 SQLParamData 和 SQLPutData 呼叫這個繫結的資料行中的資料。 您可以使用 SQLSetPos，如果它已繫結與 SQLBindCol 更新 FILESTREAM 資料。  
   
 ## <a name="example"></a>範例  
- FILESTREAM 資料行的行為完全一樣**varbinary （max)**資料行，但是沒有大小限制。 它們繫結為 SQL_VARBINARY  (SQL_LONGVARBINARY 會搭配 image 資料行使用，而且此類型有一些限制。 例如，SQL_LONGVARBINARY 無法當做輸出參數使用)。下列範例會示範 NTFS 對於 FILESTREAM 資料行的直接存取。 這些範例會假設下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式碼已在資料庫中執行：  
+ FILESTREAM 資料行的行為完全一樣**varbinary （max)** 資料行，但是沒有大小限制。 它們繫結為 SQL_VARBINARY  (SQL_LONGVARBINARY 會搭配 image 資料行使用，而且此類型有一些限制。 例如，SQL_LONGVARBINARY 無法當做輸出參數使用)。下列範例會示範 NTFS 對於 FILESTREAM 資料行的直接存取。 這些範例會假設下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式碼已在資料庫中執行：  
   
 ```  
 CREATE TABLE fileStreamDocs(  

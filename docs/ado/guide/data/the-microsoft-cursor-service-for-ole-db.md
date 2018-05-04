@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82b46c5c69210eb6cf23e90434db8f81a4cca130
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 00d31441a5b9a00f2666bff006cebc39cfb112d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>OLE DB 的 Microsoft 指標服務
 當您選取用戶端資料指標，或設定**CursorLocation**屬性**adUseClient**，您會在叫用 Microsoft 資料指標服務的 OLE DB。 您也可能會看到 「 用戶端資料指標引擎 」，也就是基本上相同的動作 ADO 的內容中的參考。 此服務會補充資料提供者的資料指標支援函式。 如此一來，您可以對看待相當一致的功能，從所有資料提供者。  

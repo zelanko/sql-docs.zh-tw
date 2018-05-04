@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
@@ -19,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69b3d6bd8330ff5a1ba85ba1da1a7b6f3a3cc26a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select---sql-command"></a>選取的 SQL 命令
 從一或多個資料表中擷取資料。  
@@ -120,7 +119,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   如果您在查詢中包含兩個資料表，而且未指定聯結條件，第一個資料表中的每一筆記錄會加入第二個資料表中的每一筆記錄，只要符合篩選條件。 這類查詢會產生執行時間較長的結果。  
   
--   當聯結資料表的空白欄位，因為 Visual FoxPro 符合空白欄位，請務必小心。 例如，如果您加入 CUSTOMER 上。ZIP 及發票。壓縮，並在查詢輸出如果客戶包含 100 空的郵遞區號，發票包含 400 空的郵遞區號包含 40,000 所得到的空白欄位的額外記錄。 使用**空的 （)**消除空記錄從查詢輸出的函式。  
+-   當聯結資料表的空白欄位，因為 Visual FoxPro 符合空白欄位，請務必小心。 例如，如果您加入 CUSTOMER 上。ZIP 及發票。壓縮，並在查詢輸出如果客戶包含 100 空的郵遞區號，發票包含 400 空的郵遞區號包含 40,000 所得到的空白欄位的額外記錄。 使用**空的 （)** 消除空記錄從查詢輸出的函式。  
   
 -   您必須使用 AND 運算子來連接多個聯結條件。 每個 join 條件具有下列格式：  
   
@@ -141,7 +140,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  當您使用 = 運算子與字串，其運作方式會不同，根據設定的 ANSI 設定。 當設定 ANSI 設定為 OFF 時，Visual FoxPro Xbase 使用者熟悉的方式處理字串比較。 當設定 ANSI 設定設為 ON 時，Visual FoxPro 遵循 ANSI 標準的字串比較。 請參閱[設定 ANSI](../../odbc/microsoft/set-ansi-command.md)和[確切設定](../../odbc/microsoft/set-exact-command.md)如需有關 Visual FoxPro 執行字串比較的方式。  
   
- *FilterCondition*指定記錄必須符合包含在查詢結果的準則。 您可以包含篩選條件查詢中的所要使用 AND 或 OR 運算子。 您也可以使用 NOT 運算子，若要反轉的邏輯運算式的值，或者您可以使用**空的 （)**檢查的空白欄位。 *FilterCondition*可能需要在下列範例中任何一種格式：  
+ *FilterCondition*指定記錄必須符合包含在查詢結果的準則。 您可以包含篩選條件查詢中的所要使用 AND 或 OR 運算子。 您也可以使用 NOT 運算子，若要反轉的邏輯運算式的值，或者您可以使用**空的 （)** 檢查的空白欄位。 *FilterCondition*可能需要在下列範例中任何一種格式：  
   
  **範例 1** *FieldName1 比較 FieldName2*  
   

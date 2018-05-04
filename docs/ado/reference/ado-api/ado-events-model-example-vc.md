@@ -21,17 +21,16 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 51cd8fc601b8ecb14f680ee7af8d4f3879647985
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8511d6a6f5ab625e78d1c86c79cce87122a4ed13
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型範例 （VC + +）
-Visual c + + 部分[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)如何具現化 ADO 事件模型的一般說明。 以下是具現化所建立的環境內的事件模型的特定範例**#import**指示詞。  
+Visual c + + 部分[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)如何具現化 ADO 事件模型的一般說明。 以下是具現化所建立的環境內的事件模型的特定範例 **#import**指示詞。  
   
- 使用的一般描述**adoint.h**方法簽章的參考。 不過，少數的詳細資料中的一般描述變更稍微使用**#import**指示詞：  
+ 使用的一般描述**adoint.h**方法簽章的參考。 不過，少數的詳細資料中的一般描述變更稍微使用 **#import**指示詞：  
   
 -   **#Import**指示詞解析**typedef**的方法簽章資料類型和修飾詞，以其基本形式。  
   
@@ -45,7 +44,7 @@ Visual c + + 部分[ADO 事件具現化語言](../../../ado/guide/data/ado-event
   
 -   您可以在程式碼更強固的 QueryInterface、 AddRef 及發行的實作。  
   
--   **__Uuidof()**指示詞會廣泛地用來取得介面識別碼。  
+-   **__Uuidof()** 指示詞會廣泛地用來取得介面識別碼。  
   
  最後，此範例包含一些運作的程式碼。  
   

@@ -1,16 +1,16 @@
 ---
-title: "邏輯架構 (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
+title: 邏輯架構 (Analysis Services-資料採礦) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], about mining structures
 - logical architecture [Data Mining]
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3f6e0b1540d9dc1072e7370b50cfa8736894b712
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 259f79dd8ba277eb6fb469efe2334632c3710ff3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>邏輯架構 (Analysis Services – 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料採礦是涉及多個元件互動的程序。  
+  資料採礦是涉及多個元件互動的程序。  
   
 -   您可以存取 SQL Server 資料庫或任何其他資料來源中的資料來源，以供定型、測試或預測使用。  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 02/15/2018
  此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也包含許多系統預存程序，可在內部用來進行資料採礦。 雖然系統預存程序供內部使用，但是您可能會發現這些是非常實用的捷徑。 Microsoft 保留視需要變更這些預存程序的權利；因此在實際使用上，我們建議您最好使用 DMX、AMO 或 XMLA 建立查詢。  
   
  **建立外掛程式演算法**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一個機制讓您建立自己的演算法，然後將演算法當做新的資料採礦服務加入伺服器執行個體。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一個機制來建立您自己的演算法，及將演算法當做新的資料採礦服務的伺服器執行個體。  
   
  Analysis Services 會使用 COM 介面與外掛程式演算法通訊。 若要深入了解如何實作新的演算法，請參閱 [外掛程式演算法](../../analysis-services/data-mining/plugin-algorithms.md)。  
   
@@ -114,6 +113,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [資料採礦延伸模組 &#40; DMX &#41;參考](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [資料採礦延伸模組 & #40; DMX & #41;參考](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dc70c1ade4dcf55d6c66f4e6e44279dcc384fc25
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bb5ce0df72f4616f89fc3ab52b7b96036e96436b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-handles"></a>連接控制代碼
 A*連接*驅動程式和資料來源所組成。 連接控制代碼識別每個連接。 連接控制代碼會定義要使用哪一個驅動程式不僅要使用該驅動程式與資料來源。 在區段程式碼會實作 ODBC （驅動程式管理員或驅動程式） 中，在連接控制代碼識別結構，其中包含連接資訊，如下所示：  

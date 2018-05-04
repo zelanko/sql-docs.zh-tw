@@ -23,12 +23,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e192e0eacd926cde2c6548392b1523cfc3d0af12
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a510ca656d7a17bc80878c49bab20fb3254c81e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>交叉聯結的 MDX 運算子參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 Set_Expression * Set_Expression  
 ```  
   
-## <a name="parameter"></a>參數  
+## <a name="parameter"></a>매개 변수  
  *Set_Expression*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
@@ -50,7 +49,7 @@ Set_Expression * Set_Expression
  包含兩個指定參數的交叉乘積的集合。  
   
 ## <a name="remarks"></a>備註  
-  **\* (Crossjoin)**運算子在功能上等於[Crossjoin](../mdx/crossjoin-mdx.md)函式。  
+ **\* (Crossjoin)** 運算子在功能上等於[Crossjoin](../mdx/crossjoin-mdx.md)函式。  
   
 ## <a name="examples"></a>範例  
  以下範例示範此運算子的用法。  
@@ -68,7 +67,7 @@ WHERE
     ([Measures].[Gross Profit Margin])  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

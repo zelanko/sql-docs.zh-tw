@@ -20,12 +20,11 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 139a1f2cf77ef6d38ce6dd90275912af32fa0ff2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b5d74b4146944245fd26dd4f44241aef3b9323be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-the-current-transaction"></a>存取目前交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ The context transaction which was active before entering user defined routine, t
  這項例外狀況也在預期中，而且您必須在執行引發觸發程序之動作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式前後設有 try/catch 區塊，才能繼續執行。 儘管會擲回兩項例外狀況，交易仍會回復，而且不會認可變更。  
   
 ### <a name="example"></a>範例  
- 下列是回復交易從受管理的程序所使用的範例**Transaction.Rollback**方法。 請注意周圍的 try/catch 區塊**Transaction.Rollback** managed 程式碼中的方法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼會建立組件和 Managed 預存程序。 請注意， **EXEC Usprollbackfromproc<**陳述式會包裝在 try/catch 區塊中，如此才能捕捉 managed 程序完成執行時，會擲回的例外狀況。  
+ 下列是回復交易從受管理的程序所使用的範例**Transaction.Rollback**方法。 請注意周圍的 try/catch 區塊**Transaction.Rollback** managed 程式碼中的方法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼會建立組件和 Managed 預存程序。 請注意， **EXEC Usprollbackfromproc<** 陳述式會包裝在 try/catch 區塊中，如此才能捕捉 managed 程序完成執行時，會擲回的例外狀況。  
   
 ```csharp  
 using System;  

@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a34e3c3c862443b8b3c28c1583110524c6e55fae
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f0b72bbc923346cde531661141dfebca4ca0c56a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getchunk-method-ado"></a>GetChunk 方法 (ADO)
 傳回全部或部分，大型文字或二進位資料的內容[欄位](../../../ado/reference/ado-api/field-object.md)物件。  

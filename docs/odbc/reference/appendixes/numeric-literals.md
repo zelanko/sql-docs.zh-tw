@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], numeric data types
 - numeric data type [ODBC], literals
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 33b180e63bf3f0c38c930f46e3b4a74a7ab66754
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b4b5a40b9cda29b528280b6bb873a8fda747d9ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-literals"></a>數值常值
 數值資料值會儲存在字元字串時，會使用數值常值。 為 SQL_C_CHAR 字串，數值 SQL 資料的轉換或轉換的數字的 C 資料設為 SQL_CHAR 或 SQL_VARCHAR 字串，數值常值的語法用來指定目標中儲存的內容。 轉換的數字儲存為 SQL_C_CHAR 字串為數值的 SQL 資料或儲存為 SQL_CHAR 字串至數值的 C 資料數值，此語法用來驗證來源中儲存的內容。  

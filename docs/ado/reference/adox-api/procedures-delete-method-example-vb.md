@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8698054698acc9617986bb909551472b5cb2548c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: d4bf17efacbcc9c0523e402a870bf5c430fe013e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="procedures-delete-method-example-vb"></a>程序刪除方法的範例 (VB)
 下列程式碼示範如何刪除程序使用[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  

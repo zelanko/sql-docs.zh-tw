@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -31,13 +30,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fbef6a043fb1132da098541724a47d01d77d6a08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 807d4a2289cef978c888414a712a37af4f95e177
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 來隱藏元素和屬性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,9 +47,9 @@ ms.lasthandoff: 04/16/2018
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 針對屬性指定 sql:hide  
- 在此範例中的 XSD 結構描述包含 **\<Person.Contact >**具有項目**ContactID**， **FirstName**，和**LastName**屬性。  
+ 在此範例中的 XSD 結構描述包含 **\<Person.Contact >** 具有項目**ContactID**， **FirstName**，和**LastName**屬性。  
   
-  **\<Person.Contact >**元素屬於複雜類型，因此，會對應到相同的名稱 （預設對應） 的資料表。 所有屬性 **\<Person.Contact >**元素都屬於簡單類型，並將對應至 AdventureWorks 資料庫中 Person.Contacttable 中相同名稱的資料行。 結構描述， **sql: hide**上指定註解**ContactID**屬性。 針對此結構描述指定 XPath 查詢時**ContactID**不會傳回 XML 文件中。  
+ **\<Person.Contact >** 元素屬於複雜類型，因此，會對應到相同的名稱 （預設對應） 的資料表。 所有屬性 **\<Person.Contact >** 元素都屬於簡單類型，並將對應至 AdventureWorks 資料庫中 Person.Contacttable 中相同名稱的資料行。 結構描述， **sql: hide**上指定註解**ContactID**屬性。 針對此結構描述指定 XPath 查詢時**ContactID**不會傳回 XML 文件中。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -98,7 +96,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- 當**sql: hide**上指定的項目，項目和其屬性或子項目不會出現在產生的 XML 文件。 以下是另一個 XSD 結構描述，其中**sql: hide**上指定 **\<OD >**項目：  
+ 當**sql: hide**上指定的項目，項目和其屬性或子項目不會出現在產生的 XML 文件。 以下是另一個 XSD 結構描述，其中**sql: hide**上指定 **\<OD >** 項目：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -153,7 +151,7 @@ ms.lasthandoff: 04/16/2018
 </xsd:schema>  
 ```  
   
- 當 XPath 查詢 (例如`/Customers[@CID="1"]`) 針對此結構描述，產生的 XML 文件不包含指定 **\<OD >**元素和其子系中這個部分結果所示：  
+ 當 XPath 查詢 (例如`/Customers[@CID="1"]`) 針對此結構描述，產生的 XML 文件不包含指定 **\<OD >** 元素和其子系中這個部分結果所示：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 535cf75969963c8b94992fa267034bf4f73c9735
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3b47f7bdedcd87b5dc90de314e4d03dc883b9928
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationdesign-element-assl"></a>AggregationDesign 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義一組可以橫跨多個資料分割資料庫中的彙總定義。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義可在資料庫中多個分割區之間共用之彙總定義的集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -73,10 +73,10 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AggregationDesign>。  
   
-## <a name="see-also"></a>請參閱  
- [Partition 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
- [Aggregation 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
- [Aggregations 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
- [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [分割項目&#40;ASSL&#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
+ [Aggregation 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
+ [Aggregations 元素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
+ [物件 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

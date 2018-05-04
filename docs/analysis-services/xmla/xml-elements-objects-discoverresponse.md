@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75ec613cd716e4d7d0b34c83ca8f9870321d0553
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6a2ebf97cf355ad906f0f90f35924fa1767ed666
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-elements---objects---discoverresponse"></a>XML 項目物件-DiscoverResponse
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]包含執行個體所傳回的資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]回應[探索](../../analysis-services/xmla/xml-elements-methods-discover.md)方法呼叫。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含執行個體所傳回的資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]回應[探索](../../analysis-services/xmla/xml-elements-methods-discover.md)方法呼叫。  
   
  **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -68,8 +68,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  **DiscoverResponse**項目是最上層的項目之 SOAP 回應的主體內**探索**方法。  
   
-## <a name="see-also"></a>請參閱  
- [ExecuteResponse 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)   
- [物件 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-objects.md)  
+## <a name="see-also"></a>另請參閱  
+ [ExecuteResponse 元素&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)   
+ [物件&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   
   

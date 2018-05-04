@@ -42,12 +42,12 @@ public java.lang.String getDatabaseProductVersion()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**其中包含資料庫產品版本號碼。  
+ 包含資料庫產品版本號碼的**字串**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getDatabaseProductVersion 方法是由 java.sql.DatabaseMetaData 介面中 getDatabaseProductVersion 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

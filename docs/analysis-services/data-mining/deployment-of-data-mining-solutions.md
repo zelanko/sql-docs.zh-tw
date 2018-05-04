@@ -1,37 +1,23 @@
 ---
-title: "資料採礦方案部署 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 資料採礦方案部署 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], deploying
-- deploying [Analysis Services], production environments
-- deploying [Analysis Services - data mining]
-- solutions [Analysis Services], deploying
-- models [Analysis Services], data mining
-ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bfbfd44f7acd1b029d0b841ef2e291e5b26b6c07
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 192601b35384308e4c75e8a62294cf383c75f29c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署資料採礦方案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料採礦程序的最後一個步驟就是將模型部署到實際執行環境。 部署作業非常重要，因為可將模型提供給使用者，好讓您可以執行以下任何工作：  
+  資料採礦程序的最後一個步驟就是將模型部署到實際執行環境。 部署作業非常重要，因為可將模型提供給使用者，好讓您可以執行以下任何工作：  
   
 -   使用模型來建立預測，並做出商業決策。 如需您可用來建立查詢之工具的詳細資訊，請參閱 [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
   
@@ -91,6 +77,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另請參閱  
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [處理需求及考量 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [處理需求及考量 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

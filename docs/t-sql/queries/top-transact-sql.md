@@ -2,7 +2,7 @@
 title: TOP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|queries
@@ -28,11 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38b365674914575ab9bc25706fe5b9b3d0c012cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +235,7 @@ GO
 ###  <a name="DML"></a> 限制受 DELETE、INSERT 或 UPDATE 影響的資料列  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. 使用 TOP 限制刪除的資料列數目  
- 當 TOP (*n*) 子句與 DELETE 一起，則未定義的系列上執行刪除作業*n*個資料列。 也就是說，DELETE 陳述式會選擇任何 (*n*) 數目符合 WHERE 子句中定義之準則的資料列。 下列範例會從 `20` 資料表刪除到期日早於 2002 年 7 月 1 日的 `PurchaseOrderDetail` 個資料列。  
+ 當 TOP (*n*) 子句與 DELETE 一起使用時，會以未定義的方式選取 *n* 個資料列來執行刪除作業。 也就是說，DELETE 陳述式會選擇符合 WHERE 子句中所定義準則的任意 (*n*) 數目資料列。 下列範例會從 `20` 資料表刪除到期日早於 2002 年 7 月 1 日的 `PurchaseOrderDetail` 個資料列。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +301,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. 使用 TOP 限制更新的資料列數目  
- 下列範例會利用 TOP 子句來更新資料表中的資料列。 當 TOP (*n*) 子句與 UPDATE，則未定義的資料列數目上執行更新作業。 也就是說，UPDATE 陳述式會選擇任何 (*n*) 數目符合 WHERE 子句中定義之準則的資料列。 下列範例會從某位銷售人員指派 10 位客戶給另一位銷售人員。  
+ 下列範例會利用 TOP 子句來更新資料表中的資料列。 當 TOP (*n*) 子句與 UPDATE 一起使用時，更新作業會在未定義的資料列數目上執行。 也就是說，UPDATE 陳述式會選擇符合 WHERE 子句中所定義準則的任意 (*n*) 數目資料列。 下列範例會從某位銷售人員指派 10 位客戶給另一位銷售人員。  
   
 ```sql  
 USE AdventureWorks2012;  

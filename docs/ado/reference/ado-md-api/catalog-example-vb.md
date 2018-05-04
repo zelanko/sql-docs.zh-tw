@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2a322d7d732fceb8df38ad3fedeaa0734129e08
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 020b04464b2081a0c067f8f6b8cec1d17fa0310e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-example-vb"></a>目錄 (VB) 範例
 這個 Visual Basic 專案中建立新的 cube 使用 MDX。 然後，並說明 Microsoft Word 文件中之 cube 的結構。  

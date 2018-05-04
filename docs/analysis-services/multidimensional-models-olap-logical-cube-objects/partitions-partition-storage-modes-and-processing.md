@@ -1,44 +1,23 @@
 ---
-title: "資料分割儲存模式及處理 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- hybrid OLAP
-- data storage [Analysis Services]
-- relational OLAP
-- multidimensional OLAP
-- partitions [Analysis Services], storage
-- storing data [Analysis Services], partitions
-- HOLAP
-- MOLAP
-- ROLAP
-ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 
-author: Minewiskan
+title: 資料分割儲存模式及處理 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3792cc06fc1fd679f5b708d5e1eec618038951af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>資料分割-磁碟分割儲存模式及處理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料分割的儲存模式會影響查詢及處理效能、儲存需求，以及此資料分割的儲存位置及其父量值群組和 Cube。 儲存模式的選擇也會影響處理選擇。  
+  資料分割的儲存模式會影響查詢及處理效能、儲存需求，以及此資料分割的儲存位置及其父量值群組和 Cube。 儲存模式的選擇也會影響處理選擇。  
   
  資料分割可以使用三種基本儲存模式之一：  
   
@@ -53,7 +32,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="molap"></a>MOLAP  
  MOLAP 儲存模式會產生資料分割的彙總，並在處理此資料分割時，將其來源資料的副本儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的多維度結構中； 這個 MOLAP 結構會高度最佳化，以發揮最大的查詢效能。 儲存位置可以在定義資料分割的電腦上，或是在執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的另一部電腦上。 由於來源資料的副本會位於多維度結構中，所以可以在不存取資料分割之來源資料的情況下解析查詢； 查詢回應時間會因為使用彙總而大幅縮減。 此資料分割之 MOLAP 結構中的資料只會維持在與此資料分割的最新處理一樣的最新狀態。  
   
- 隨著來源資料的變更，必須要定期處理 MOLAP 儲存中的物件，以便納入這些變更，並將這些變更提供給使用者。 處理時會更新 MOLAP 結構中的資料 (完整更新或累加更新)。 某一個處理和下一個處理之間的時間，會產生一段延遲期間，在這段期間內，OLAP 物件中的資料可能會與來源資料不相符。 您可以用累加或完整方式來更新 MOLAP 儲存中的物件，而不用讓資料分割或 Cube 離線工作； 但是在一些情況下，您可能需要讓 Cube 離線工作，才能夠處理對 OLAP 物件的某些結構性變更。 您可以在臨時伺服器上更新和處理 Cube，並使用資料庫同步處理，將處理好的物件複製到實際伺服器，以減少更新 MOLAP 儲存所需的停機時間。 您也可以使用主動式快取，來減少延遲並提高可用性，同時還保持 MOLAP 儲存的大部分效能優點。 如需詳細資訊，請參閱[主動式快取 &#40;分割區 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)，[同步處理 Analysis Services 資料庫](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)，和[處理多維度模型 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 隨著來源資料的變更，必須要定期處理 MOLAP 儲存中的物件，以便納入這些變更，並將這些變更提供給使用者。 處理時會更新 MOLAP 結構中的資料 (完整更新或累加更新)。 某一個處理和下一個處理之間的時間，會產生一段延遲期間，在這段期間內，OLAP 物件中的資料可能會與來源資料不相符。 您可以用累加或完整方式來更新 MOLAP 儲存中的物件，而不用讓資料分割或 Cube 離線工作； 但是在一些情況下，您可能需要讓 Cube 離線工作，才能夠處理對 OLAP 物件的某些結構性變更。 您可以在臨時伺服器上更新和處理 Cube，並使用資料庫同步處理，將處理好的物件複製到實際伺服器，以減少更新 MOLAP 儲存所需的停機時間。 您也可以使用主動式快取，來減少延遲並提高可用性，同時還保持 MOLAP 儲存的大部分效能優點。 如需詳細資訊，請參閱[主動式快取&#40;分割&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)，[同步處理 Analysis Services 資料庫](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)，和[處理多維度模型&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
 ## <a name="rolap"></a>ROLAP  
  ROLAP 儲存模式會將資料分割的彙總儲存在關聯式資料庫內的索引檢視中 (這個關聯式資料庫是指定於資料分割的資料來源中)。 與 MOLAP 儲存模式不同，ROLAP 並不會在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料夾中儲存來源資料的副本。 而是在無法從查詢快取中衍生結果時，存取資料來源中的索引檢視來回答查詢。 使用 ROLAP 儲存模式的查詢回應通常會比使用 MOLAP 或 HOLAP 儲存模式的查詢回應慢。 使用 ROLAP 的處理時間通常也比較慢。 但是，ROLAP 會讓使用者即時檢視資料，而且當您在使用不常被查詢的大型資料集 (例如，純綷的記錄資料) 時，可以節省儲存空間。  
@@ -93,8 +72,8 @@ ms.lasthandoff: 02/15/2018
  因為儲存為 HOLAP 的資料分割不包含來源資料，所以會比同等的 MOLAP 資料分割還小，而且針對涉及摘要資料之查詢的回應速度也會比 ROLAP 資料分割還快。 HOLAP 儲存模式一般是適用於 Cube 中的資料分割，而這類資料分割需要根據大量來源資料以快速回應摘要查詢。 但是，如果使用者產生必須接觸分葉層級資料的查詢 (例如計算中間值)，MOLAP 通常是較好的選擇。  
   
 ## <a name="see-also"></a>另請參閱  
- [主動式快取 &#40;分割區 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
+ [主動式快取 & #40;分割區 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [同步處理 Analysis Services 資料庫](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [分割區 &#40;Analysis Services-多維度資料 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分割區 & #40;Analysis Services-多維度資料 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

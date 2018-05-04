@@ -1,29 +1,28 @@
 ---
-title: "部署 Analysis Services 專案 |Microsoft 文件"
-ms.custom: 
+title: 部署 Analysis Services 專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d121b687b68b778edcb23079ebbc5ae25332d13c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>課程 2-5-部署 Analysis Services 專案
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 02/15/2018
     檢閱專案的部署屬性。 依預設， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案範本設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案以累加方式將所有專案部署到本機電腦上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 預設執行個體中，建立與專案相同名稱的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，以及在部署之後使用預設處理選項來處理物件。 如需詳細資訊，請參閱[設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
     > [!NOTE]  
-    > 如果您想要將專案部署到的具名執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]本機電腦上或遠端伺服器上的執行個體，變更**伺服器**適當的執行個體的屬性名稱，例如\< *ServerName**>\\<**InstanceName * * >*。  
+    > 如果您想要將專案部署到的具名執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]本機電腦上或遠端伺服器上的執行個體，變更**伺服器**適當的執行個體的屬性名稱，例如\< *ServerName**>\\<** InstanceName * * >*。  
   
 3.  按一下 **[確定]**。  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 02/15/2018
     > [!NOTE]  
     > 如果部署期間遇到錯誤，請使用 SQL Server Management Studio 檢查資料庫權限。 您為資料來源連接所指定的帳戶必須有 SQL Server 執行個體的登入。 按兩下登入以檢視 [使用者對應] 屬性。 此帳戶必須有 **AdventureWorksDW2012** 資料庫的 db_datareader 權限。  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會先建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案，然後使用部署指令碼將該專案部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 部署的進度會顯示在兩個視窗中：[輸出] 視窗和 [部署進度 - Analysis Services Tutorial] 視窗。  
+    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會先建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案，然後利用部署指令碼將該專案部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 部署的進度會顯示在兩個視窗中：[輸出] 視窗和 [部署進度 - Analysis Services Tutorial] 視窗。  
   
     如有必要，請按一下 [檢視] 功能表上的 [輸出]，開啟 [輸出] 視窗。 [輸出] 視窗會顯示整體部署進度。 [部署進度 – Analysis Services Tutorial] 視窗會顯示部署期間所執行之每個步驟的詳細資料。 如需詳細資訊，請參閱[建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md) 和[部署 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)。  
   

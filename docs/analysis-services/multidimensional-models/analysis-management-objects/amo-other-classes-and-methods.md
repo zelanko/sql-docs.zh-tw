@@ -1,38 +1,19 @@
 ---
 title: AMO 其他類別和方法 |Microsoft 文件
-ms.custom: ''
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- AmoException class [AMO]
-- Analysis Management Objects, backup and restore
-- assembly objects [AMO]
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 28
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5ae261375e96cf6bfa322262b0b13653b9534331
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9923daa4b7cb9b504fde047f073579279b3d05e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 其他類別和方法
   本節包含一般類別不是 OLAP 或資料採礦特有以及屬於管理或管理中的物件時很有幫助[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這些類別涵蓋如預存程序、追蹤、例外狀況以及備份與還原等功能。  

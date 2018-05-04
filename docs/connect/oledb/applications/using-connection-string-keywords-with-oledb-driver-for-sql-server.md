@@ -23,12 +23,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f4ac4a2231ea983e93c9c418bdd309cf45ed6cc2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 128b31d8ed9b541d47882ace6f9898056c0c4c2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>使用 OLE DB 驅動程式中的連接字串關鍵字，適用於 SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +125,7 @@ ms.lasthandoff: 04/16/2018
   
  `quote ::= " | '`  
   
- 屬性的使用必須符合其範圍內所允許的語法。  例如， **WSID**使用大括號 (**{}**) 引號字元和**應用程式名稱**會使用單引號 (**'**) 或雙引號 (**"**) 引號字元。 只有字串屬性可以加上引號。 嘗試將整數或列舉屬性加上引號將會產生「連接字串沒有符合 OLE DB 規格」錯誤。  
+ 屬性的使用必須符合其範圍內所允許的語法。  例如， **WSID**使用大括號 (**{}**) 引號字元和**應用程式名稱**會使用單引號 (**'**) 或double (**"**) 引號字元。 只有字串屬性可以加上引號。 嘗試將整數或列舉屬性加上引號將會產生「連接字串沒有符合 OLE DB 規格」錯誤。  
   
  您可以選擇用單引號或雙引號括住屬性值，這樣是很好的作法。 如此可在值包含非英數字元時避免問題發生。 使用的引號字元也可出現在值當中，但前提必須是雙引號字元。  
   

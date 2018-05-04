@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0d513dc324fe6f1efc857a03bf231d06481c10c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 95adf11f3582f58a9d8ba76072d3d99bdaaf1bb9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="error-element-xmla"></a>Error 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含有關錯誤的執行個體所傳回的資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體所傳回之錯誤的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -83,22 +83,22 @@ ms.lasthandoff: 01/08/2018
 |Ancestor|子元素|  
 |--------------|--------------------|  
 |[訊息](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|無|  
-|[資料格](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)，[資料列](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[描述](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md)， [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md)， [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md)，[來源](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
+|[Cell](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)、 [row](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[Description](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md)、 [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md)、 [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md)、 [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>屬性  
   
-|attribute|描述|  
+|Attribute|說明|  
 |---------------|-----------------|  
 |ErrorCode|需要**UnsignedInt**屬性 (只有當**訊息**是父項目。)包含錯誤的數值傳回碼。|  
 |Severity|選擇性**字串**屬性 (只有當**訊息**是父項目。)包含錯誤的嚴重性。|  
-|描述|選擇性**字串**屬性 (只有當**訊息**是父項目。)包含錯誤的描述性文字。|  
-|來源|選擇性**字串**屬性 (只有當**訊息**是父項目。)包含產生錯誤之元件的名稱。|  
+|Description|選擇性**字串**屬性 (只有當**訊息**是父項目。)包含錯誤的描述性文字。|  
+|Source|選擇性**字串**屬性 (只有當**訊息**是父項目。)包含產生錯誤之元件的名稱。|  
 |HelpFile|選擇性**字串**屬性 (只有當**訊息**是父項目。)包含描述錯誤之說明檔或主題的路徑或 URL。|  
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱  
- [Warning 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)   
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱  
+ [Warning 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)   
+ [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

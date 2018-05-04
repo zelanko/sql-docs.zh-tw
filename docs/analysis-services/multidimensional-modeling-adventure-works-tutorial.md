@@ -1,15 +1,15 @@
 ---
-title: "多維度模型化 （Adventure Works 教學課程） |Microsoft 文件"
-ms.custom: 
+title: 多維度模型化 （Adventure Works 教學課程） |Microsoft 文件
+ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - tutorials [Analysis Services]
 - Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
-caps.latest.revision: 
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: af9371e71223eedc44b7b7ec8cbeb3ab20423da8
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
-ms.translationtype: MT
+ms.openlocfilehash: b008b05e3695d77f1f8feb1aa6b52917290d3a62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多維度模型化 (Adventure Works 教學課程)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +65,7 @@ ms.lasthandoff: 02/19/2018
 |[第 4 課： 定義進階的屬性和維度屬性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分鐘|  
 |[第 5 課： 定義維度與量值群組之間的關聯性](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分鐘|  
 |[第 6 課： 定義計算](../analysis-services/lesson-6-defining-calculations.md)|45 分鐘|  
-|[第 7 課： 定義關鍵效能指標 &#40;Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30 分鐘|  
+|[第 7 課： 定義關鍵效能指標 & #40;Kpi & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30 分鐘|  
 |[第 8 課： 定義動作](../analysis-services/lesson-8-defining-actions.md)|30 分鐘|  
 |[第 9 課： Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)|30 分鐘|  
 |[第 10 課： 定義管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)|15 分鐘|  

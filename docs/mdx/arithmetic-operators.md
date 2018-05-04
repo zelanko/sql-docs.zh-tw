@@ -20,12 +20,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6e835905fb1d51d4918c3d382ad6268925d469e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 26f2d5f1f3b14dc073176c2e317586fcb26d7a39
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arithmetic-operators"></a>算術運算子
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,10 +33,10 @@ ms.lasthandoff: 01/08/2018
   
  MDX 支援下表中列出的算術運算子。  
   
-|運算子|描述|  
+|運算子|Description|  
 |--------------|-----------------|  
 |[+ (加)](../mdx/add-mdx.md)|兩個數字相加。|  
-|[/ （除法）](../mdx/divide-mdx-operator-reference.md)|以一個數目除以另一個數目。|  
+|[/ (Divide)](../mdx/divide-mdx-operator-reference.md)|以一個數目除以另一個數目。|  
 |[* (乘)](../mdx/multiply-mdx.md)|兩個數目相乘。|  
 |[- (減)](../mdx/subtract-mdx.md)|兩個數字相減。|  
 |^ (乘冪)|計算某一個數字的次方數。|  
@@ -54,8 +53,8 @@ ms.lasthandoff: 01/08/2018
   
 -   先計算括號中的運算式，再計算其他所有運算。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [運算子 &#40;MDX 語法 &#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [運算子&#40;MDX 語法&#41;](../mdx/operators-mdx-syntax.md)  
   
   

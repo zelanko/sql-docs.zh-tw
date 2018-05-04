@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 353e086d8350364a07486eba2334c76b470237db
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4c5945e4f8e89bd60a90da3a9901075b08faa9bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="address-book-data-binding-object"></a>通訊錄資料繫結物件
 通訊錄應用程式會使用[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)繫結至資料的 SQL Server 資料庫 （在這個情況下，DHTML 資料表） 的視覺物件在應用程式的用戶端 HTML 網頁中的物件。 事件驅動的 VBScript 程式邏輯會使用[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)至：  
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/18/2018
   
 -   允許使用者移動，第一種，接下來上, 一個或最後一筆記錄，在資料格中。  
   
- 下列程式碼定義**.RDSDataControl**元件：  
+ 下列程式碼定義 **.RDSDataControl**元件：  
   
 ```  
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
@@ -48,11 +47,11 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 </OBJECT>  
 ```  
   
- OBJECT 標記定義**.RDSDataControl**元件程式中。 標記包含兩種類型的參數：  
+ OBJECT 標記定義 **.RDSDataControl**元件程式中。 標記包含兩種類型的參數：  
   
 -   泛型物件標記相關聯。  
   
--   這些特定**.RDSDataControl**物件。  
+-   這些特定 **.RDSDataControl**物件。  
   
 ## <a name="generic-object-tag-parameters"></a>泛用物件標記參數  
  下表描述與物件標籤相關聯的參數。  
@@ -63,12 +62,12 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |***識別碼***|定義用來識別程式碼中的內嵌物件的整個文件的識別項。|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDSDataControl 標記參數  
- 下表描述的特定參數**.RDSDataControl**物件。 (如需完整的清單**.RDSDataControl**物件參數，以及何時實作它們，請參閱[.RDSDataControl 物件](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)  
+ 下表描述的特定參數 **.RDSDataControl**物件。 (如需完整的清單 **.RDSDataControl**物件參數，以及何時實作它們，請參閱[.RDSDataControl 物件](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)  
   
 |매개 변수|Description|  
 |---------------|-----------------|  
 |[伺服器](../../../ado/reference/rds-api/server-property-rds.md)|如果您使用 HTTP，值是前面加上的伺服器電腦的名稱`http://`。|  
-|[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|會提供必要的連接資訊給**.RDSDataControl**連接到 SQL Server。|  
+|[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|會提供必要的連接資訊給 **.RDSDataControl**連接到 SQL Server。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|設定或傳回用來擷取查詢字串[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
   
 ## <a name="see-also"></a>另請參閱  

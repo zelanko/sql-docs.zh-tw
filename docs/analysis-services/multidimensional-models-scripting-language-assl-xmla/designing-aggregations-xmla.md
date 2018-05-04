@@ -1,37 +1,19 @@
 ---
-title: "設計彙總 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- statistical information [XML for Analysis]
-- batches [XML for Analysis]
-- aggregations [Analysis Services], XML for Analysis
-- XMLA, aggregations
-- queries [XMLA]
-- XML for Analysis, aggregations
-- iterative aggregation process [XMLA]
-ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 
-author: Minewiskan
+title: 設計彙總 (XMLA) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f020d4b154ecfef556b13be45fced0fa6095f17e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="designing-aggregations-xmla"></a>設計彙總 (XMLA)
   彙總設計會與特定量值群組的資料分割關聯，以確保資料分割在儲存彙總時會使用相同的結構。 資料分割使用相同的儲存體結構可讓您輕鬆地定義合併資料分割可以稍後使用[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 如需彙總設計的詳細資訊，請參閱[彙總和彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
@@ -74,7 +56,7 @@ ms.lasthandoff: 02/15/2018
  例如，字串 "011" 是指涉及含有三個屬性之維度的查詢，其中第二和第三個屬性包含在查詢中。  
   
 > [!NOTE]  
->  某些屬性會從資料集的考量中排除。 如需有關排除屬性的詳細資訊，請參閱[查詢元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
+>  某些屬性會從資料集的考量中排除。 如需有關排除屬性的詳細資訊，請參閱[查詢項目&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)。  
   
  量值群組中包含彙總設計的每個維度是由 *Query* 元素中的 **Dataset** 值代表。 *Dataset* 值的順序必須與量值群組中包含維度的順序相符。  
   
@@ -85,7 +67,7 @@ ms.lasthandoff: 02/15/2018
  若要反覆設計彙總，您傳送多個**DesignAggregations**命令來提供設計程序的良好控制。 「彙總設計精靈」使用這個相同的方法來提供設計程序的良好控制。 如需詳細資訊，請參閱[彙總設計精靈 F1 說明](http://msdn.microsoft.com/library/39e23cf1-6405-4fb6-bc14-ba103314362d)。  
   
 > [!NOTE]  
->  需要明確的工作階段，以反覆設計彙總。 如需有關明確工作階段的詳細資訊，請參閱[管理連接和工作階段 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+>  需要明確的工作階段，以反覆設計彙總。 如需有關明確工作階段的詳細資訊，請參閱[管理連接和工作階段&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)。  
   
  若要開始反覆程序，您必須先傳送**DesignAggregations**命令，以包含下列資訊：  
   
@@ -104,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="designing-aggregations-using-a-batch-process"></a>使用批次程序來設計彙總  
  您也可以透過傳送單一設計批次程序中的彙總**DesignAggregations**命令，以包含**步驟**，**時間**，**儲存體**，和**最佳化**目標和有限的整個設計程序的屬性值。 如果您想要基於使用方式的最佳化，設計程序為目標的目標查詢也應該包含在**查詢**屬性。 也請確定**具體化**屬性設為 true，這樣設計程序會儲存到彙總設計定義彙總在命令完成時。  
   
- 您可以在隱含或明確的工作階段中使用批次程序來設計彙總。 如需有關隱含和明確工作階段的詳細資訊，請參閱[管理連接和工作階段 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+ 您可以在隱含或明確的工作階段中使用批次程序來設計彙總。 如需有關隱含和明確工作階段的詳細資訊，請參閱[管理連接和工作階段&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)。  
   
 ## <a name="returning-design-statistics"></a>傳回設計統計資料  
  當**DesignAggregations**命令會將控制權還給用戶端應用程式，此命令會傳回包含單一資料列代表命令的設計統計資料的資料列集。 資料列集包含下表中列出的資料行。  

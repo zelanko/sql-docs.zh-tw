@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transfer octet length of data types [ODBC]
 - size of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5cb7bde54dd58d874e2ef7d994afc6372d9591c6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 59b790845ee6360edcb5c5ea796e9ad910c397a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transfer-octet-length"></a>傳輸八位元長度
 傳輸八位元長度的資料行是資料轉送到其預設 C 資料類型時，應用程式傳回的位元組數目上限。 字元資料傳輸八位元長度不包含 null 結束字元的空間。 資料行的傳輸八位元長度可能不同於資料儲存在資料來源上所需的位元組數目。  

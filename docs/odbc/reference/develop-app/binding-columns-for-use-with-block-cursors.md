@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - row-wise binding [ODBC]
@@ -25,12 +25,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbe734fa37ece0609a24527162c061298294d4ac
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9bc72bbffc1518e5c2a93adbb8fac75ba555159b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>繫結區塊資料指標搭配使用的資料行
 區塊資料指標會傳回多個資料列，因為它們使用的應用程式必須繫結變數的陣列，每個資料行，而不是單一的變數。 這些陣列統稱為*緩衝區資料列集*。 以下是繫結的兩種樣式：  

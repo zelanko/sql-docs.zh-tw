@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eefb5a795be9a94e5ea0c174423eebf885e7d240
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 9efda98175454cca040668efb73272cd5dee9c25
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>篩選器和 RecordCount 屬性範例 (JScript)
 這個範例會開啟**資料錄集**Northwind 資料庫然後再使用的公司資料表[篩選](../../../ado/reference/ado-api/filter-property.md)以限制顯示的記錄為供應商 欄位則是以字母開頭的屬性D.剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**FilterJS.asp**。  

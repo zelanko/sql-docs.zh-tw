@@ -23,12 +23,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f442f13a9958c1d407e386cdf427740339fad379
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4dc65afbe1a51781f2f52fe1a8d245676701e3a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 事件 (ADO)
 **FetchComplete**冗長的非同步作業中的所有記錄到都擷取之後，呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

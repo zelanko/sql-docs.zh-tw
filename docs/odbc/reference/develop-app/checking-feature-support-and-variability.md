@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], feature support and variability
 - interoperability [ODBC], writing interoperable applications
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 43e2a044237f1aeb9c63bcac4bc0aa9733f4c9ea
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 82b8a0c2c50e557e055ef14a4ac34a486611304d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checking-feature-support-and-variability"></a>檢查功能的支援和變化
 若要檢查功能的支援和變化，應用程式通常會呼叫**SQLGetInfo**， **SQLGetFunctions**，和**SQLGetTypeInfo**。 好的起點是驅動程式的 API 和 SQL 文法一致性層級。 其中說明功能支援廣泛的層的級。 應用程式可以接著呼叫**SQLGetInfo**與其他選項來判斷其所需的功能的變化性的支援**SQLGetFunctions**來判斷是否超過傳回需要函數支援的一致性層級，以及**SQLGetTypeInfo**以判斷支援哪些 SQL 資料型別。  

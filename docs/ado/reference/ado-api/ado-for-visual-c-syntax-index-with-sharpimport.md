@@ -24,21 +24,20 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d878875f2e7f9002e00acef81fafaa89153b933
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 3aea8b9242a6b4d4c62562fa04567b1d407a1d20
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>Visual c + + 語法索引 #import ADO
-此索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照和**#import**指示詞。  
+此索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照和 **#import**指示詞。  
   
- 這個特定的索引已編譯的程式衍生**#import**指示詞針對此 ADO.dll 檔，然後重新格式化 *.tlh 檔案所產生。 只有方法、 屬性和事件的相關資訊時保留。 替代語法宣告每個屬性會列出由相對應為"`__declspec(property...)`"指示詞。  
+ 這個特定的索引已編譯的程式衍生 **#import**指示詞針對此 ADO.dll 檔，然後重新格式化 *.tlh 檔案所產生。 只有方法、 屬性和事件的相關資訊時保留。 替代語法宣告每個屬性會列出由相對應為"`__declspec(property...)`"指示詞。  
   
  強烈建議您使用讀取[Visual c + + ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md)如需詳細資訊。  
   
- 使用 Visual c + + 中的方法和屬性語法**#import**指示詞會針對下列項目列出：  
+ 使用 Visual c + + 中的方法和屬性語法 **#import**指示詞會針對下列項目列出：  
   
 -   [ADO 集合](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   

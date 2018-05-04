@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a060c77739c8a70fa63b1dce6b909429e4d7a8e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 1f3164426a5ad1fdd2570e96fefafa8194c31027
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>步驟 2： 叫用伺服器程式 （RDS 教學課程）
 當您叫用用戶端上的方法*proxy*，實際的程式，在伺服器上執行的方法。 在此步驟中，您會在伺服器上執行的查詢。  
@@ -34,9 +33,9 @@ ms.lasthandoff: 04/18/2018
   
  **組件 A**如果您沒有使用[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)在本教學課程中，執行此步驟最方便的方式就是使用[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。 **.RDSDataControl**結合上述步驟來建立 proxy、 使用此步驟中，發出查詢。  
   
- 設定**.RDSDataControl**物件[伺服器](../../../ado/reference/rds-api/server-property-rds.md)屬性，以找出其中的伺服器程式應該具現化;[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性來指定連接字串來存取資料來源; 和[SQL](../../../ado/reference/rds-api/sql-property.md)屬性來指定查詢命令文字。 接著發出[重新整理](../../../ado/reference/rds-api/refresh-method-rds.md)方法會導致伺服器程式連接到資料來源，擷取查詢，所指定的資料列，並傳回**資料錄集**用戶端的物件。  
+ 設定 **.RDSDataControl**物件[伺服器](../../../ado/reference/rds-api/server-property-rds.md)屬性，以找出其中的伺服器程式應該具現化;[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性來指定連接字串來存取資料來源; 和[SQL](../../../ado/reference/rds-api/sql-property.md)屬性來指定查詢命令文字。 接著發出[重新整理](../../../ado/reference/rds-api/refresh-method-rds.md)方法會導致伺服器程式連接到資料來源，擷取查詢，所指定的資料列，並傳回**資料錄集**用戶端的物件。  
   
- 本教學課程不會使用**.RDSDataControl**，但這是如何起來會像這樣如果：  
+ 本教學課程不會使用 **.RDSDataControl**，但這是如何起來會像這樣如果：  
   
 ```  
 Sub RDSTutorial2A()  

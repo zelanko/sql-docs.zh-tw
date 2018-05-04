@@ -20,12 +20,11 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a4dbcc7ab42a0e044be0c7561adff4049fd8d1b9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7bf874dfda3e4e76c9e519c375349fced839fa58
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="case-statement-mdx"></a>CASE 陳述式 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -117,7 +116,7 @@ FROM [Adventure Works]
 WHERE [Measures].x  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 指令碼陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 指令碼陳述式 & #40;MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

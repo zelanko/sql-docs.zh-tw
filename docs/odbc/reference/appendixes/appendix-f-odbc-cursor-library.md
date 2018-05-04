@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], about cursor library
 - ODBC cursor library [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b7152428dc38f2310cbda7cc70a8a2e4435c5182
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ab6ea0ba91b8d62c094a965faaa522b033e05336
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>附錄 f: ODBC 資料指標程式庫
 > [!IMPORTANT]  
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
  資料指標程式庫是位於驅動程式管理員與驅動程式之間的動態連結程式庫 (DLL)。 當應用程式呼叫函式時，驅動程式管理員會呼叫函式中的資料指標程式庫，可執行的函式，或者指定的驅動程式中呼叫它。 針對指定的連接，應用程式會指定資料指標程式庫會一律使用、 驅動程式不支援可捲動資料指標，如果使用或從未使用過。  
   
- 資料指標程式庫會顯示為驅動程式管理員的驅動程式。 如果資料指標程式庫位於驅動程式管理員和 ODBC 2 之間。*x*驅動程式，資料指標程式庫會顯示為 ODBC 2。*x*驅動程式。 如果資料指標程式庫位於驅動程式管理員和 ODBC 3 之間*.x*驅動程式，資料指標程式庫會顯示為 ODBC 3*.x*驅動程式。 資料指標程式庫所展現的行為取決於驅動程式，使用繫結的位移，除了這兩個 ODBC 2 支援的版本。*x*和 ODBC 3。*x*驅動程式。  
+ 資料指標程式庫會顯示為驅動程式管理員的驅動程式。 如果資料指標程式庫位於驅動程式管理員和 ODBC 2 之間。*x*驅動程式，資料指標程式庫會顯示為 ODBC 2。*x*驅動程式。 如果資料指標程式庫位於驅動程式管理員和 ODBC 3 之間 *.x*驅動程式，資料指標程式庫會顯示為 ODBC 3 *.x*驅動程式。 資料指標程式庫所展現的行為取決於驅動程式，使用繫結的位移，除了這兩個 ODBC 2 支援的版本。*x*和 ODBC 3。*x*驅動程式。  
   
  若要實作中的區塊資料指標**SQLFetch**和**SQLFetchScroll**，資料指標程式庫重複呼叫**SQLFetch**驅動程式中。 若要實作捲動，它會快取在記憶體和磁碟檔案中擷取的資料。 當應用程式要求新的資料列集時，資料指標程式庫會擷取它在必要時從驅動程式或快取。  
   

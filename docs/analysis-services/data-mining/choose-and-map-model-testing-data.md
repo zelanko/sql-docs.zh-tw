@@ -1,36 +1,23 @@
 ---
-title: "選擇和對應模型測試資料 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 選擇和對應模型測試資料 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- columns [data mining], mining accuracy charts
-- Mining Accuracy Chart [Analysis Services], column mappings
-- input column mapping [Analysis Services]
-- mapping input columns [Analysis Services]
-ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d74352fcb3564eda40257430ff442f622fcec89e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>選擇和對應模型測試資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立精確度圖表，您必須選擇將用來測試模型的資料，並將資料對應至模型。  
+  若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立精確度圖表，您必須選擇將用來測試模型的資料，並將資料對應至模型。  
   
  根據預設，只要您在建立採礦結構時建立了鑑效組資料集， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會使用採礦模型測試資料。 建立鑑效組測試集是測試根據相同採礦結構之模型的最簡單方式，因為資料行名稱和資料類型永遠符合模型，並且您可以合理地確定資料分佈是相似的。 此外，設計工具將自動建立輸入和模型資料行之間的關聯性。  
   

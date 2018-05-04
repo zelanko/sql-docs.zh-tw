@@ -1,16 +1,16 @@
 ---
-title: "REVOKE 資料庫範圍認證 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE 資料庫範圍認證 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - REVOKE DATABASE SCOPED CREDENTIAL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - REVOKE statements, database scoped credentials
 - revoking permissions [SQL Server], database scoped credentials
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
-caps.latest.revision: 
+caps.latest.revision: 2
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 074fe713de6116e2ba07ee9c5fedf7e34789cf4b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 538d3ec0a0ff403bb0647b9b4a1fb6c57307ea23
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 資料庫範圍認證 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 -   未對應至伺服器主體的資料庫使用者  
   
 ## <a name="remarks"></a>Remarks  
- 資料庫範圍認證是一個資料庫層級的安全性實體，其包含在權限階層的父系資料庫中。 下方列出的資料庫範圍認證權限，是可以撤銷的最明確與最有限權限，以及隱含包括這些權限的一般權限。  
+ 資料庫範圍認證是包含在資料庫內的資料庫層級安全性實體，在權限階層中，該資料庫為其父系。 下方列出的資料庫範圍認證權限，是可以撤銷的最明確與最有限權限，以及隱含包括這些權限的一般權限。  
   
 |資料庫範圍認證權限|資料庫範圍認證權限所隱含|資料庫權限所隱含|  
 |----------------------------|---------------------------------------|------------------------------------|  
@@ -124,7 +125,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="see-also"></a>另請參閱  
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
  [GRANT 資料庫範圍認證 (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [DENY 資料庫範圍認證 (TRANSACT-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
+ [DENY 資料庫範圍認證 (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  

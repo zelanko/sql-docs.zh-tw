@@ -22,12 +22,11 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 22201d4c387a5f76d2ec66066d8bdd767a036fc2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a271c129cee1549d74732d879eed82f5169ca106
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-reserved-words"></a>MDX 保留字
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |BASC|DROP|MEMBERTOSTR|STRTOVAL|  
 |BDESC|EMPTY|MIN|STRTOVALUE|  
 |BEFORE|END|MTD|SUBSET|  
-|BEFORE_AND_AFTER|error|NAME|SUM|  
+|BEFORE_AND_AFTER|ERROR|NAME|SUM|  
 |BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
 |BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
 |BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
@@ -66,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |CALCULATIONPASSVALUE|FREEZE|NULL|TRUE|  
 |CALCULATIONS|FROM|ON|TUPLETOSTR|  
 |CALL|GENERATE|OPENINGPERIOD|TYPE|  
-|CELL|GLOBAL|或|UNION|  
+|CELL|GLOBAL|OR|UNION|  
 |CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
 |CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
 |CHILDREN|HEAD|PARENT|UPDATE|  
@@ -76,9 +75,9 @@ ms.lasthandoff: 01/08/2018
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|COUNT|INDEX|PROPERTY|Value|  
+|COUNT|INDEX|PROPERTY|VALUE|  
 |COUSIN|INTERSECT|QTD|VAR|  
-|COVARIANCE|IS|RANK|variance|  
+|COVARIANCE|IS|RANK|VARIANCE|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
 |CREATE|ISEMPTY|RELATIVE|VARP|  
 |CREATEPROPERTYSET|ISGENERATION|ROLLUPCHILDREN|VISUAL|  
@@ -91,8 +90,8 @@ ms.lasthandoff: 01/08/2018
 |DEFAULT_MEMBER|LASTSIBLING|SELF_AND_AFTER||  
 |DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
   
-## <a name="see-also"></a>請參閱  
- [保留的關鍵字 &#40;MDX 語法 &#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [MDX 語言參考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [保留的關鍵字&#40;MDX 語法&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
+ [MDX 語言參考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
   
   

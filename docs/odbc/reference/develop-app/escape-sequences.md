@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - escape sequences [ODBC], determining if supported
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3779fc33ef11cd89339aacf0e87cc3805c8864e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e9bb389cba92f45373e7fc693c9c4477d50a702a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="escape-sequences"></a>逸出序列
 ODBC 定義逸出序列，其中包含日期、 時間、 時間戳記和日期時間間隔常值的純量函式呼叫，標準文法**像**述詞的逸出字元、 外部聯結，以及程序呼叫。 互通的應用程式應該使用盡可能這些順序。  

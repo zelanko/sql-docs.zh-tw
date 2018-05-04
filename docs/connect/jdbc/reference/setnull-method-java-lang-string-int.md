@@ -45,7 +45,7 @@ public void setNull(java.lang.String sCol,
 #### <a name="parameters"></a>參數  
  *sCol*  
   
- A**字串**，其中包含參數名稱。  
+ 包含參數名稱的**字串**。  
   
  *n*  
   
@@ -54,11 +54,11 @@ public void setNull(java.lang.String sCol,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- SetNull 方法 java.sql.CallableStatement 介面中所指定此 setNull 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setNull 方法由 java.sql.CallableStatement 介面中的 setNull 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [setNull 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
+ [setNull 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

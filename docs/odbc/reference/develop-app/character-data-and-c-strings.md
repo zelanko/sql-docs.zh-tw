@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - data buffers [ODBC], character data
@@ -27,12 +27,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef94062373af41fe662194b707dbdde1d85b438d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d8bdba6134e53a7e3913c0255fe709a8a891eeae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="character-data-and-c-strings"></a>字元資料，而且 C 字串
 參考 （例如資料行名稱、 動態參數和字串屬性值） 的可變長度的字元資料的輸入的參數都有相關聯的長度參數。 如果應用程式終止的 null 字元，跟一般的 C 字串，它會提供做為引數是以位元組為單位 （不包括 null 結束字元） 字串的長度或 SQL_NTS （Null-Terminated 字串）。 非負數長度的引數指定相關聯的字串的實際長度。 長度引數可能是 0，表示指定零長度字串，也就是不同的 NULL 值。 負值 SQL_NTS 會指示驅動程式尋找 null 結束字元，判斷字串的長度。  

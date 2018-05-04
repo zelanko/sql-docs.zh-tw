@@ -1,16 +1,16 @@
 ---
 title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 2/20/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 
+caps.latest.revision: 25
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fadf030c271888e071ab05e7289c87db57269449
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 790c3bdce51c2359a9cc34aad4a51b4b2f199fd1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -127,16 +128,16 @@ WITH (
    -   DELIMITEDTEXT 指定具有欄分隔符號的文字格式，也稱為欄位結束字元。
   
  FIELD_TERMINATOR = *field_terminator*  
-僅適用於分隔符號文字檔。 欄位結束字元會指定一或多個字元，在文字分隔檔案中標記每個欄位 (欄) 的結尾。 預設值是管道字元 |。 若要保證支援，我們建議使用一或多個 ASCII 字元。
+僅適用於分隔符號文字檔。 欄位結束字元會指定一或多個字元，在文字分隔檔案中標記每個欄位 (欄) 的結尾。 預設值是管道字元 ꞌ|ꞌ。 若要保證支援，我們建議使用一或多個 ASCII 字元。
   
   
- 範例：  
+ 範例:  
   
 -   FIELD_TERMINATOR = '|'  
   
 -   FIELD_TERMINATOR = ' '  
   
--   FIELD_TERMINATOR = \t  
+-   FIELD_TERMINATOR = ꞌ\tꞌ  
   
 -   FIELD_TERMINATOR = '~|~'  
   
@@ -144,7 +145,7 @@ WITH (
 針對文字分隔檔案中類型字串的資料指定欄位結束字元。 字串分隔符號的長度為一或多個字元，且要以單引號括起來。 預設值為空字串 ""。 若要保證支援，我們建議使用一或多個 ASCII 字元。
  
   
- 範例：  
+ 範例:  
 
 -   STRING_DELIMITER = '"'
 
@@ -152,7 +153,7 @@ WITH (
   
 -   STRING_DELIMITER = '*'  
   
--   STRING_DELIMITER = ,  
+-   STRING_DELIMITER = ꞌ,ꞌ  
   
 -   STRING_DELIMITER = '0x7E0x7E' -- 兩個波狀符號 (例如 ~~)
  
@@ -204,7 +205,7 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
   
  所有支援的日期格式：
   
-|DATETIME|smalldatetime|date|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|日期|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
@@ -277,7 +278,7 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>Permissions  
  需要 ALTER ANY EXTERNAL FILE FORMAT 權限。
   
 ## <a name="general-remarks"></a>一般備註

@@ -19,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 29839e451deb37b1c4b9bac4a963dda36cf5b597
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: d7af69efdded481d076ea4f44c3e0b028addf8d9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-tutorial"></a>RDS 教學課程
 本教學課程說明如何使用查詢及更新資料來源的 RDS 程式設計模型。 首先，它會描述完成這項工作所需的步驟。 本教學課程會重複在 Microsoft® Visual Basic Scripting Edition （包括 ADO 的 Windows Foundation Classes (ADO/WFC)）。  

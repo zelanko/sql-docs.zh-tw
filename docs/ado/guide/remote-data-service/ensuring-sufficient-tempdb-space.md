@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f71e88ce0d15ac28973850a3af8fd742eea54a18
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0b80874fcb1f6be96e6e8c7f1a87916ac69f2517
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>確保有足夠的 TempDB 空間
 如果在處理時所發生的錯誤[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)需要處理在 Microsoft SQL Server 6.5 空間的物件，您可能需要增加 TempDB 的大小。 (某些查詢需要暫存處理空間; 例如，具有 ORDER BY 子句的查詢則需要排序的**資料錄集**，這需要一些暫存空間。)  
@@ -54,7 +53,7 @@ ms.lasthandoff: 04/18/2018
   
 6.  在下**大小**群組中，按一下**展開**。 下圖會顯示在每個實體裝置上的可用和已配置的空間。 中 暗紅色色彩的長條表示可用的空間。  
   
-7.  選取**記錄裝置**，例如 Master，若要顯示在可用的大小**大小 (MB)**方塊。  
+7.  選取**記錄裝置**，例如 Master，若要顯示在可用的大小**大小 (MB)** 方塊。  
   
 8.  按一下**現在展開**酃 TempDB 資料庫。  
   

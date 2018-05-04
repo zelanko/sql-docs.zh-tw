@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application parameter descriptor [ODBC]
 - automatically allocated descriptors [ODBC]
@@ -30,12 +30,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c597d1b4505550c8fed6a551720246d706c53923
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8af53ab1826f2e7a6ee634ec70c4badb20ef6c96
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="descriptor-handles"></a>描述項控制代碼
 A*描述元*偵測到的應用程式或驅動程式會描述 SQL 陳述式的參數或結果集的資料行的中繼資料集合 (也稱為*實作*)。 因此，描述元可以填滿任何四個角色：  

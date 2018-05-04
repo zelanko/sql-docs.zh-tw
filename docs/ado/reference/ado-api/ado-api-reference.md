@@ -19,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 43cda7d0301c24d45fc92e5273956a10b02e821e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: a1df6a9ebccdc7dc084206cd2d3a5b9a14d8d08d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-api-reference"></a>ADO 應用程式開發介面參考
 ADO 文件的這一節包含每個 ADO 物件、 集合、 屬性、 動態屬性、 方法、 事件和列舉的主題。 此外，它包含一份 ADO 語法索引，以搭配 Microsoft Visual c + + 和 Windows Foundation 類別 (WFC)。  

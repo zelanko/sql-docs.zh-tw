@@ -27,17 +27,16 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e52b312871dd76ee1e72f515ce83a2e7269d5ab3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b269d7e574e27de90ff4854cde1233312d444dd9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  建立以現有採礦結構為基礎的新採礦模型。  當您使用**ALTER MINING STRUCTURE**陳述式來建立新的採礦模型，此結構必須已經存在。 相反地，當您使用這個陳述式， [CREATE MINING MODEL &#40; DMX &#41;](../dmx/create-mining-model-dmx.md)，您建立模型，並自動產生其基礎採礦結構在相同的時間。  
+  建立以現有採礦結構為基礎的新採礦模型。  當您使用**ALTER MINING STRUCTURE**陳述式來建立新的採礦模型，此結構必須已經存在。 相反地，當您使用這個陳述式， [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)，您建立模型，並自動產生其基礎採礦結構在相同的時間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -130,10 +129,10 @@ USING <algorithm> [(<parameter list>)]
 |||  
 |-|-|  
 |詞彙|定義|  
-|**REGRESSOR**|指示演算法可以在迴歸演算法的迴歸公式中使用指定的資料行。|  
+|**迴歸輸入變數**|指示演算法可以在迴歸演算法的迴歸公式中使用指定的資料行。|  
 |**MODEL_EXISTENCE_ONLY**|指出屬性資料行的值是否比屬性的存在更重要。|  
   
- 您可以為一個資料行定義多個模型旗標。 如需如何使用模型旗標的詳細資訊，請參閱[模型旗標 &#40; DMX &#41;](../dmx/modeling-flags-dmx.md)。  
+ 您可以為一個資料行定義多個模型旗標。 如需如何使用模型旗標的詳細資訊，請參閱[模型旗標&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)。  
   
 ### <a name="prediction-clause"></a>預測子句  
  預測子句描述如何使用預測資料行。 下表列出可能的子句。  
@@ -148,7 +147,7 @@ USING <algorithm> [(<parameter list>)]
   
  篩選準則運算式是經過簡化的 DMX 述詞，與 WHERE 子句類似。 篩選運算式限於使用基本數學運算子、純量和資料行名稱的公式。 EXISTS 運算子則是例外；如果子查詢至少傳回一個資料列，該運算子就會評估為 True。 述詞可以使用常見的邏輯運算子 AND、OR 和 NOT 等來結合。  
   
- 如需有關搭配採礦模型的篩選器的詳細資訊，請參閱[篩選採礦模型 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ 如需有關搭配採礦模型的篩選器的詳細資訊，請參閱[採礦模型的篩選&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
 > [!NOTE]  
 >  篩選中的資料行必須是採礦結構資料行。 您無法在模型資料行或別名資料行上建立篩選。  
@@ -156,7 +155,7 @@ USING <algorithm> [(<parameter list>)]
  如需有關 DMX 運算子和語法的詳細資訊，請參閱[採礦模型資料行](../analysis-services/data-mining/mining-model-columns.md)。  
   
 ## <a name="parameter-definition-list"></a>參數定義清單  
- 您可以將演算法參數加入至參數清單，以調整模型的效能和功能。 可以使用的參數是依照您在 USING 子句中指定的演算法而定。 如需每一種演算法相關聯的參數，請參閱[資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ 您可以將演算法參數加入至參數清單，以調整模型的效能和功能。 可以使用的參數是依照您在 USING 子句中指定的演算法而定。 如需每一種演算法相關聯的參數，請參閱[資料採礦演算法&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
  參數清單的語法如下：  
   
@@ -219,9 +218,9 @@ WITH FILTER (EXISTS (SELECT * FROM [v Assoc Seq Line Items] WHERE
 USING Microsoft_Decision Trees  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

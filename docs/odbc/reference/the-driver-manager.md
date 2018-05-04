@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver manager [ODBC]
 - ODBC architecture [ODBC], driver manager
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f33e9b5ebd9ae699240170990b7daeeaefbea8e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4d9a9c70743ee59ef347426fdac54e1e8667b33a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-driver-manager"></a>驅動程式管理員
 *驅動程式管理員*是管理應用程式和驅動程式之間通訊的程式庫。 例如，Microsoft® Windows® 平台上，驅動程式管理員是動態連結程式庫 (DLL) 由 Microsoft 所撰寫，且使用者的可轉散發套件的 MDAC 2.8 SP1 sdk 可轉散發。  

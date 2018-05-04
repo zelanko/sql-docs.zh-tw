@@ -1,38 +1,19 @@
 ---
-title: "Analysis Services 資料庫的備份和還原 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services 資料庫的備份和還原 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.ssmsimbi.Restore.f1
-- sql13.asvs.ssmsimbi.Backup.f1
-helpviewer_keywords:
-- backing up databases [Analysis Services]
-- encryption [Analysis Services]
-- databases [Analysis Services], restoring
-- cryptography [Analysis Services]
-- databases [Analysis Services], backing up
-- restoring databases [Analysis Services]
-- recovery [Analysis Services]
-ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d744fbed12ab9231e044d879db2e168ab23fa22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>備份與還原 Analysis Services 資料庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +55,7 @@ ms.lasthandoff: 02/15/2018
  系統管理員可以將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫備份至單一 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份檔 (.abf)，而不用考慮資料庫的大小。 如需逐步指示，請參閱 [如何備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 和 [自動備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)](用來在 SharePoint 環境中載入和查詢 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型) 會從 SharePoint 內容資料庫載入其模型。 這些內容資料庫為關聯式，而且會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫引擎上執行。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型沒有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 備份和還原策略。 如果您已經針對 SharePoint 內容設定災害復原計畫，此計畫會包含內容資料庫中所儲存的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型。  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]用於載入和查詢[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料模型，在 SharePoint 環境中，從 SharePoint 內容資料庫載入其模型。 這些內容資料庫為關聯式，而且會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫引擎上執行。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型沒有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 備份和還原策略。 如果您已經針對 SharePoint 內容設定災害復原計畫，此計畫會包含內容資料庫中所儲存的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型。  
   
  **遠端資料分割**  
   

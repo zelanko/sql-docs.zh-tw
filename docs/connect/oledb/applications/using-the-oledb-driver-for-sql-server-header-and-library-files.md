@@ -26,12 +26,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ed2d5385806ee439cc67111c83cc08ea786e160
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>使用 OLE DB 驅動程式的 SQL Server 標頭和程式庫檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
  SQL Server 標頭檔 (msoledbsql.h) OLE DB 驅動程式可用來將 SQL Server 資料存取功能的 OLE DB 驅動程式新增到自訂應用程式。 SQL Server 標頭檔，OLE DB 驅動程式包含定義、 屬性、 屬性、 與充分利用新功能所需的介面中導入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
   
- OLE DB 驅動程式的 SQL Server 標頭檔，除了沒有也是匯出程式庫的 msoledbsql.lib 程式庫檔案的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]大量複製程式 (BCP) 功能。  
+ OLE DB 驅動程式的 SQL Server 標頭檔，除了沒有也是匯出程式庫的 msoledbsql.lib 程式庫檔案的[OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)功能。  
   
  SQL Server 標頭檔，OLE DB 驅動程式與 sqloledb.h 標頭檔使用的 Microsoft 資料存取元件 (MDAC)，向後相容，但是未包含 SQLOLEDB 的 Clsid (OLE DB 提供者[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]MDAC 隨附) 或符號的XML 功能 （這是驅動程式不支援 OLE DB for SQL Server）。    
   

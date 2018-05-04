@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef59162739835fa2e6bdd0cba6bb4f4c648901cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e1e75f97ded8f999d5fa945e0aafb04322d51540
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-gateway"></a>標準的閘道
 A*閘道*是一種會使看起來像是另一個 DBMS 的軟體。 也就是說，閘道可接受的程式設計介面、 SQL 文法資料流的單一 DBMS 的通訊協定，並將它轉譯程式設計介面，也就是 SQL 文法和資料流通訊協定的隱藏 DBMS。 例如，若要使用 Microsoft® SQL Server 撰寫的應用程式也可以存取 DB2 資料透過微 Decisionware DB2 閘道;這項產品會導致 DB2 看起來像是 SQL Server。 當使用閘道時，必須是針對每個目標資料庫撰寫不同的閘道。  

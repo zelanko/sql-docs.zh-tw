@@ -18,12 +18,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53cbc9dd9fe0f2043026345e3385bdcdb2075f39
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7d460cdf5d5e7ab02b8f51ffe6201013a691b0b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-features-for-each-release"></a>每個版本的 ADO 功能
 本主題列出每個版本的 ADO、 ADO MD 和 ADOX 所引進的新功能。

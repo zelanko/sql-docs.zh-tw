@@ -27,21 +27,21 @@ ms.lasthandoff: 04/16/2018
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-一直持續不斷地致力於互通性，Microsoft 會提供搭配 SQL Server 和 Azure SQL Database 的 Java Database Connectivity (JDBC) 驅動程式。 此驅動程式完全免費，可以從任何 Java 應用程式、應用程式伺服器，或啟用 Java 的小程式連接到 Java 資料庫。 此驅動程式是 Type 4 的 JDBC 驅動程式，透過標準的 JDBC 應用程式介面 (API) 即可連接到資料庫。
+為達成互通性的目標，Microsoft 提供 Java 資料庫連線 (JDBC) 驅動程式供 SQL Server 和 Azure SQL Database 使用。 此驅動程式完全免費，可以從任何 Java 應用程式、應用程式伺服器，或啟用 Java 的小程式連接到 Java 資料庫。 此驅動程式是 Type 4 的 JDBC 驅動程式，透過標準的 JDBC 應用程式介面 (API) 即可連接到資料庫。
 
 Microsoft JDBC Driver for SQL Server 已在主要的應用程式伺服器上經過測試，例如 IBM WebSphere 及 SAP NetWeaver。
   
-## <a name="getting-started"></a>快速入門  
+## <a name="getting-started"></a>使用者入門  
 * [步驟 1︰設定 Java 開發的開發環境](step-1-configure-development-environment-for-java-development.md)  
 * [步驟 2︰建立 Java 開發的 SQL 資料庫](step-2-create-a-sql-database-for-java-development.md)  
 * [步驟 3︰使用 Java 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>文件集  
-* [使用者入門](getting-started-with-the-jdbc-driver.md)
+* [快速入門](getting-started-with-the-jdbc-driver.md)
 * [概觀](overview-of-the-jdbc-driver.md)  
 * [程式設計指南](programming-guide-for-jdbc-sql-driver.md)
-* [安全性](securing-jdbc-driver-applications.md)  
-* [效能和可靠性](improving-performance-and-reliability-with-the-jdbc-driver.md)  
+* [Security](securing-jdbc-driver-applications.md)  
+* [效能與可靠性](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [疑難排解](diagnosing-problems-with-the-jdbc-driver.md)
 * [程式碼範例](sample-jdbc-driver-applications.md) 
 * [相容性和法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  

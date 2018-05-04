@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="createstatement-method-int-int-int"></a>createStatement 方法 (int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  建立[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件，可產生[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件與指定的型別、 並行和保留性。  
+  建立 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件，它會產生具有指定類型、並行和保留性的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,15 +46,15 @@ public java.sql.Statement createStatement(int nType,
 #### <a name="parameters"></a>參數  
  *resultSetType*  
   
- **Int**值，表示結果集類型。  
+ 表示結果集類型的 **int** 值。  
   
  *nConcur*  
   
- **Int**值，表示結果集並行類型。  
+ 表示結果集並行類型的 **int** 值。  
   
  *nHold*  
   
- **Int**值，表示保留性。  
+ 表示保留性的 **int** 值。  
   
 ## <a name="return-value"></a>傳回值  
  陳述式物件。  
@@ -62,11 +62,11 @@ public java.sql.Statement createStatement(int nType,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 createStatement 方法是由 java.sql.Connection 介面中的 createStatement 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [createStatement 方法&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   
+ [createStatement 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05c3a221f32b7c9921746a13cc3c20d8244a3ff8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 949c1503ad0218ddfaba0073c5e669b0513e36ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="address-book-command-buttons"></a>地址通訊錄命令按鈕
 通訊錄應用程式包含下列的命令按鈕：  
@@ -58,7 +57,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  如果查詢成功，所有的人員姓氏包含文字"淑真 」 （例如淑真和 Berger） 與包含文字 「 程式管理員 」 （例如，程式管理員、 進階技術） 的標題會顯示在 HTML 資料格。  
   
 ## <a name="preparing-and-sending-the-query"></a>準備和傳送查詢  
- Find_OnClick Sub 程序的最後一個部分是由兩個陳述式所組成。 第一個陳述式會指派[SQL](../../../ado/reference/rds-api/sql-property.md)屬性[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)等於動態建立 SQL 查詢的物件。 第二個陳述式會導致**.RDSDataControl**物件 (`DC1`) 以查詢資料庫，並在方格中顯示新查詢的結果。  
+ Find_OnClick Sub 程序的最後一個部分是由兩個陳述式所組成。 第一個陳述式會指派[SQL](../../../ado/reference/rds-api/sql-property.md)屬性[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)等於動態建立 SQL 查詢的物件。 第二個陳述式會導致 **.RDSDataControl**物件 (`DC1`) 以查詢資料庫，並在方格中顯示新查詢的結果。  
   
 ```  
 Sub Find_OnClick  

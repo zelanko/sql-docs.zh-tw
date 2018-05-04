@@ -1,27 +1,19 @@
 ---
 title: 以 Power Pivot 模式安裝 Analysis Services |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: setup-install
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2f7c09094c0a55337e2bb64b58e2ea14d6f2973f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 24bf58f255e20188b17ec53f0b75762a5e89a0b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>以 Power Pivot 模式安裝 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -96,7 +88,7 @@ ms.lasthandoff: 04/06/2018
   
      ![SQL 安裝程式-登陸頁面的執行個體組態](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL 安裝程式-登陸頁面的執行個體組態")  
   
-13. 在 **[伺服器組態]** 頁面上，將所有服務的 **[啟動類型]**設定為 [自動]。 指定 **SQL Server Analysis Services**的所需網域帳戶和密碼，即下圖中的 **(1)** 。  
+13. 在 **[伺服器組態]** 頁面上，將所有服務的 **[啟動類型]** 設定為 [自動]。 指定 **SQL Server Analysis Services**的所需網域帳戶和密碼，即下圖中的 **(1)** 。  
   
     -   針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，您可以使用 **網域使用者** 帳戶或 **NetworkService** 帳戶。 請勿使用 LocalSystem 或 LocalService 帳戶。  
   
@@ -199,7 +191,7 @@ ms.lasthandoff: 04/06/2018
   
 2.  按一下您的服務應用程式名稱，預設為 **[Excel Services 應用程式]**。  
   
-3.  在 **[管理 Excel Services 應用程式]**頁面上，按一下 **[資料模型設定]**。  
+3.  在 **[管理 Excel Services 應用程式]** 頁面上，按一下 **[資料模型設定]**。  
   
 4.  按一下 **[加入伺服器]**。  
   
@@ -209,7 +201,7 @@ ms.lasthandoff: 04/06/2018
   
 6.  按一下 **[確定]**。  
   
-7.  變更在數分鐘內就會生效，您也可以 **[停止]** 和 **[啟動]** **[Excel Calculation Services]**服務。 若要  
+7.  變更在數分鐘內就會生效，您也可以 **[停止]** 和 **[啟動]** **[Excel Calculation Services]** 服務。 若要  
   
      另一個選項是使用系統管理權限來開啟命令提示字元，並輸入 `iisreset /noforce`。  
   

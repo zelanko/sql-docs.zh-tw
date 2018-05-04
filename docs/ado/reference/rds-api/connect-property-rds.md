@@ -20,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 20c4b01b2ba88ee4d38954d7f89886cf602d54ea
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f30b087323ddfc26297844209d7293ea40ed5604
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-property-rds"></a>屬性 (RDS) 連接
 表示要從中執行的查詢和更新作業的資料庫名稱。  
@@ -48,10 +47,10 @@ Run time: DataControl.Connect = "ConnectionString"
  有效的連接字串。 一般連接字串的詳細資訊，請參閱[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性或您的提供者文件。  
   
 > [!NOTE]
->  指定做為提供者的 MS 遠端**.RDSDataControl**會建立四個層案例。 案例三個層級大於尚未經過測試，並不需要。  
+>  指定做為提供者的 MS 遠端 **.RDSDataControl**會建立四個層案例。 案例三個層級大於尚未經過測試，並不需要。  
   
  *DataControl*  
- 物件變數，表示**.RDSDataControl**物件。  
+ 物件變數，表示 **.RDSDataControl**物件。  
   
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

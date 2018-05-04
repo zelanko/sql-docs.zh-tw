@@ -27,15 +27,15 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92fab692a95d928088fbe62a8006db034651ced8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 09295db73608fa040960a709271f1c72816848b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationattribute-data-type-assl"></a>AggregationAttribute 資料類型 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義代表之間的關聯的基本資料類型[彙總](../../../analysis-services/scripting/objects/aggregation-element-assl.md)元素和屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義代表之間的關聯的基本資料類型[彙總](../../../analysis-services/scripting/objects/aggregation-element-assl.md)元素和屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>資料類型特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |基底資料類型|無|  
 |衍生資料類型|無|  
@@ -65,8 +65,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  在「分析管理物件」(AMO) 物件模型中的對應類別是 <xref:Microsoft.AnalysisServices.AggregationAttribute>。  
   
-## <a name="see-also"></a>請參閱  
- [Aggregation 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
- [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Aggregation 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
+ [Analysis Services 指令碼語言 XML 資料類型 & #40;ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: COMPRESS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - COMPRESS
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - COMPRESS function
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 01500cd6560fd60dda2cb9060c2968d7c010d8e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 51324f00da71597a8a2dd37d8f0077c4b3bc8b55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>引數  
 *expression*  
-為 **nvarchar(***n***)**、**nvarchar(max)**、**varchar(***n***)**、**varchar(max)**、**varbinary(***n***)**、**varbinary(max)**、**char(***n***)**、**nchar(***n***)**，或 **binary(***n***)** 運算式。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。
+是 **nvarchar(***n***)**、**nvarchar(max)**、**varchar(***n***)**、**varchar(max)**、**varbinary(***n***)**、**varbinary(max)**、**char(***n***)**、**nchar(***n***)** 或 **binary(***n***)** 運算式。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回類型
 傳回表示輸入壓縮內容的 **varbinary(max)** 資料類型。
   
 ## <a name="remarks"></a>Remarks  
@@ -79,7 +79,7 @@ INTO dbo.inactivePlayers ;
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[字串函式 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+[字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 [DECOMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/decompress-transact-sql.md)
   
   

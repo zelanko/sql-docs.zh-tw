@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBindParameter
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c6dabf41f117227830cdf536f4d17f32b71a2d09
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函數
 **一致性**  
@@ -135,20 +134,20 @@ SQLRETURN SQLBindParameter(
   
  *了*引數可以是下列值之一：  
   
--   SQL_PARAM_INPUT。 參數標記中不會是程序，例如呼叫的 SQL 陳述式的參數**插入**陳述式，或它將標記中的程序的輸入的參數。 例如，在參數**插入到員工值 (？，？，？)**會輸入的參數，而不包含在參數**{呼叫 AddEmp (？，？，？)}**可以但不一定，輸入的參數。  
+-   SQL_PARAM_INPUT。 參數標記中不會是程序，例如呼叫的 SQL 陳述式的參數**插入**陳述式，或它將標記中的程序的輸入的參數。 例如，在參數**插入到員工值 (？，？，？)** 會輸入的參數，而不包含在參數 **{呼叫 AddEmp (？，？，？)}** 可以但不一定，輸入的參數。  
   
      當執行陳述式時，驅動程式會將參數資料傳送至資料來源;\* *ParameterValuePtr*緩衝區必須包含有效的輸入的值，或 **StrLen_or_IndPtr*緩衝區必須包含 SQL_NULL_DATA、 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT 結果_EXEC 巨集。  
   
      如果應用程式無法判斷程序呼叫中參數的類型，它會設定*了*至 SQL_PARAM_INPUT; 如果資料來源傳回參數的值驅動程式就會捨棄它。  
   
--   SQL_PARAM_INPUT_OUTPUT。 參數標記的程序中的輸入/輸出參數。 例如，在參數**{呼叫 GetEmpDept(?)}**是輸入/輸出參數會接受員工的名稱，並傳回員工的部門名稱。  
+-   SQL_PARAM_INPUT_OUTPUT。 參數標記的程序中的輸入/輸出參數。 例如，在參數 **{呼叫 GetEmpDept(?)}** 是輸入/輸出參數會接受員工的名稱，並傳回員工的部門名稱。  
   
      當執行陳述式時，驅動程式會將參數資料傳送至資料來源;\* *ParameterValuePtr*緩衝區必須包含有效的輸入的值，或\* *StrLen_or_IndPtr*緩衝區必須包含 SQL_NULL_DATA、 SQL_DATA_AT_EXEC 或結果SQL_LEN_DATA_AT_EXEC 巨集。 陳述式之後，驅動程式會傳回至應用程式，參數的資料資料來源不會傳回輸入/輸出參數的值，此驅動程式會將 **StrLen_or_IndPtr*緩衝區為 SQL_NULL_DATA。  
   
     > [!NOTE]  
     >  當 ODBC 1.0 應用程式呼叫**SQLSetParam** ODBC 2.0 驅動程式中驅動程式管理員將此呼叫**SQLBindParameter**所在*了*引數會設定為 SQL_PARAM_INPUT_OUTPUT。  
   
--   SQL_PARAM_OUTPUT。 參數標記的程序或輸出參數的程序; 中的傳回值在任一情況下，這些值稱為*輸出參數*。 例如，在參數**{？ = 呼叫 GetNextEmpID}**是輸出參數傳回下一步的員工識別碼。  
+-   SQL_PARAM_OUTPUT。 參數標記的程序或輸出參數的程序; 中的傳回值在任一情況下，這些值稱為*輸出參數*。 例如，在參數 **{？ = 呼叫 GetNextEmpID}** 是輸出參數傳回下一步的員工識別碼。  
   
      陳述式之後，驅動程式會傳回參數資料應用程式，除非*ParameterValuePtr*和*StrLen_or_IndPtr*引數都是 null 指標，在此情況下驅動程式會捨棄的輸出值。 資料來源未傳回輸出參數的值，此驅動程式會將 **StrLen_or_IndPtr*緩衝區為 SQL_NULL_DATA。  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC numeric functions [ODBC]
 - Visual FoxPro ODBC driver [ODBC], numeric functions
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 91c5e11ea258dc70b6d527259bf938119317861e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 42d494823cf1792bbec78ff3de1d70d4f8f75046
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>數值的函式 （Visual FoxPro ODBC 驅動程式）
 下表描述 Visual FoxPro ODBC 驅動程式; 支援的 ODBC 數值函數當相同的函式的 Visual FoxPro 文法與 ODBC 語法，會列出 Visual FoxPro 相等。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |度*（則 numeric_exp 就）*|RTOD *（則 numeric_exp 就）*|  
 |EXP *(float_exp)*||  
 |FLOOR *（則 numeric_exp 就）*||  
-|記錄*(float_exp)*||  
+|記錄 *(float_exp)*||  
 |LOG10 *(float_exp)*||  
 |MOD *(integer_exp1 integer_exp2)*||  
 |PI *（)*||  

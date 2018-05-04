@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f0ff45d215ea7e4165bf12c0cd69a5ebc69860a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 00fdd8f76a48f7e56d59db651e00d2aca0bf8967
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[狀態](../../../ado/reference/ado-api/status-property-ado-field.md)的[欄位物件](../../../ado/reference/ado-api/field-object.md)。  

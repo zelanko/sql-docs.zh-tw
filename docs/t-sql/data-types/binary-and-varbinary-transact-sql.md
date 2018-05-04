@@ -1,16 +1,16 @@
 ---
-title: "binary 和 varbinary (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: binary 和 varbinary (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 8/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - binary_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - varbinary data type
 - binary [SQL Server], about binary data type
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4ad5bce3cacc0f892f7087df785da8cedcb4e932
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2a214ab3c50af81bf38dbb6f7adaf6f95226d82e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 和 varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,9 +41,9 @@ ms.lasthandoff: 11/21/2017
 固定長度或可變長度的二進位資料類型。
   
 ## <a name="arguments"></a>引數  
-**binary** [ ( *n* ) ] 固定長度的二進位資料，其長度為 *n* 位元組，其中 *n* 代表 1 到 8,000 的值。 儲存體大小是 *n* 位元組。
+**binary** [ ( *n* ) ] 固定長度的二進位資料，其長度為 *n* 位元組，其中 *n* 是 1 到 8,000 的值。 儲存體大小是 *n* 位元組。
   
-**varbinary** [ ( *n* | **max**) ] 可變長度的二進位資料。 *n* 可以是 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組。 儲存體大小是輸入資料的實際長度再加上 2 位元組。 輸入的資料有可能是 0 位元組。 **varbinary** 的 ANSI SQL 同義字是 **binary varying**。
+**varbinary** [ ( *n* | **max**) ] 可變長度的二進位資料。 *n* 可以是從 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組。 儲存體大小是輸入資料的實際長度再加上 2 位元組。 輸入的資料有可能是 0 位元組。 **varbinary** 的 ANSI SQL 同義字是 **binary varying**。
   
 ## <a name="remarks"></a>Remarks  
 當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 當 *n* 不是由 CAST 函式指定時，預設長度為 30。

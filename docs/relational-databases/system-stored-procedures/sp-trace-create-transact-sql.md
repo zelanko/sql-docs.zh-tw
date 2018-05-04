@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 39bdde1095f5780fac2f27a9da1e834e6c3af968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4f01f1bb50323ec68860df15594a4d3688e5aebd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +68,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |TRACE_PRODUCE_BLACKBOX|**8**|指定伺服器將所產生最後 5 MB 的追蹤資訊記錄儲存起來。 TRACE_PRODUCE_BLACKBOX 與所有其他選項不相容。|  
   
  [ **@tracefile=** ] *'**trace_file**'*  
- 指定將寫入追蹤的位置和檔案名稱。 *trace_file*是**nvarchar(245)**沒有預設值。 *trace_file*可以是本機目錄 （如 N 'C:\MSSQL\Trace\trace.trc') 或共用或路徑的 UNC (N'\\\\*Servername*\\*Sharename*\\*目錄*\trace.trc')。  
+ 指定將寫入追蹤的位置和檔案名稱。 *trace_file*是**nvarchar(245)** 沒有預設值。 *trace_file*可以是本機目錄 （如 N 'C:\MSSQL\Trace\trace.trc') 或共用或路徑的 UNC (N'\\\\*Servername*\\*Sharename*\\*目錄*\trace.trc')。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會附加**.trc**延伸至所有的追蹤檔名稱。 如果 TRACE_FILE_ROLLOVER 選項和*max_file_size*都有指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原始追蹤檔成長到其大小上限時，會建立新的追蹤檔案。 新的檔案具有相同名稱的原始檔案，但 _*n*附加以指出其順序，從**1**。 例如，如果第一個追蹤檔案名為**filename.trc**，第二個追蹤檔案名為**filename_1.trc**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會附加 **.trc**延伸至所有的追蹤檔名稱。 如果 TRACE_FILE_ROLLOVER 選項和*max_file_size*都有指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原始追蹤檔成長到其大小上限時，會建立新的追蹤檔案。 新的檔案具有相同名稱的原始檔案，但 _*n*附加以指出其順序，從**1**。 例如，如果第一個追蹤檔案名為**filename.trc**，第二個追蹤檔案名為**filename_1.trc**。  
   
  如果使用了 TRACE_FILE_ROLLOVER 選項，建議您不要在原始追蹤檔名稱中使用底線字元。 若您使用底線字元，便會發生下列行為：  
   

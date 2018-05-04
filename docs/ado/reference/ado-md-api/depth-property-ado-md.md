@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f79c7a2efa207ef018c342382c7882fa7fccdb16
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: fa4e3e3c0c9ae887beee3d5ae97fda64ad9bcbc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="depth-property-ado-md"></a>深度屬性 (ADO MD)
 表示層級之間的數字[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)和階層的根。  

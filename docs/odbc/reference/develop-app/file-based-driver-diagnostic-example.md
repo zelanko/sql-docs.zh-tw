@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file-based driver diagnostic [ODBC]
 - diagnostic information [ODBC], examples
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8dd8323e268ec31c33db3b850ee2b449264ed3f1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2b1b05e575530b09f2f17fa707d73d2ae86b9141
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-based-driver-diagnostic-example"></a>以檔案為基礎的驅動程式診斷的範例
 以檔案為基礎的驅動程式可同時作為 ODBC 驅動程式和資料來源。 它可因此產生錯誤和警告同時做為元件中的 ODBC 連接，並做為資料來源。 它也是介面的驅動程式管理員元件，因為格式化，並傳回引數**SQLGetDiagRec**。  

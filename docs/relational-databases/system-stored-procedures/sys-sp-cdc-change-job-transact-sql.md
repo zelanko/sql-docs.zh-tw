@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 48ea42d122c0b7431279ec53b384d400ea5f9de8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4878eeca70732ed5a7ab19e220eac60260e71ee9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>引數  
  [  **@job_type=** ] **'***job_type***'**  
- 要修改的作業類型。 *job_type*是**nvarchar （20)**預設值是 'capture'。 有效的輸入是 'capture' 和 'cleanup'。  
+ 要修改的作業類型。 *job_type*是**nvarchar （20)** 預設值是 'capture'。 有效的輸入是 'capture' 和 'cleanup'。  
   
  [ **@maxtrans** ] **= * * * max_trans*  
  每個掃描循環中要處理的交易數目上限。 *max_trans*是**int** ，預設值是 NULL，代表此參數沒有異動。 如果已指定，該值必須是正整數。  

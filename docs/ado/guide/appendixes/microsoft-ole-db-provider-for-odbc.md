@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 965316983f7ef425d068253c6770beecfa2afe41
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
 ADO 或 RDS 程式設計人員，理想的世界中就是每個資料來源會公開 OLE DB 介面，可讓 ADO 無法呼叫直接將資料來源。 雖然越來越多個資料庫廠商實作的 OLE DB 介面，但某些資料來源不是尚未公開這種方式。 不過，現今使用的大部分 DBMS 系統可以透過 ODBC 存取。
@@ -39,7 +38,7 @@ ADO 或 RDS 程式設計人員，理想的世界中就是每個資料來源會�
  這是預設的提供者的 ADO 中，並支援所有的提供者相關的 ADO 屬性和方法。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
- 若要連接到此提供者，設定**提供者 =**引數的[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
+ 若要連接到此提供者，設定**提供者 =** 引數的[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
 
 ```
 MSDASQL
@@ -64,14 +63,14 @@ MSDASQL
 |**PWD**|指定的使用者密碼。|
 |**URL**|指定的檔案或目錄已發佈的 Web 資料夾中的 URL。|
 
- 因為這是預設的提供者的 ADO 中，如果您省略**提供者 =**從 ADO 連接字串參數，將會嘗試連接到此提供者。
+ 因為這是預設的提供者的 ADO 中，如果您省略**提供者 =** 從 ADO 連接字串參數，將會嘗試連接到此提供者。
 
 > [!NOTE]
 >  如果您要連接至資料來源提供者支援 Windows 驗證，您應該指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是使用者識別碼和密碼連接字串中的資訊。
 
  提供者不支援任何特定的連接參數，除了由 ADO 所定義。 不過，提供者會將任何非 ADO 連接參數傳遞至 ODBC 驅動程式管理員。
 
- 因為您可以省略**提供者**參數，您可以因此構成等同於相同的資料來源的 ODBC 連接字串的 ADO 連接字串。 使用相同的參數名稱 (**驅動程式 =**，**資料庫 =**， **DSN =**等等)，值，以及與您的語法會撰寫為 ODBC 連接字串時。 您可以在使用或不在預先定義的資料來源名稱 (DSN) 或 FileDSN 連接。
+ 因為您可以省略**提供者**參數，您可以因此構成等同於相同的資料來源的 ODBC 連接字串的 ADO 連接字串。 使用相同的參數名稱 (**驅動程式 =**，**資料庫 =**， **DSN =** 等等)，值，以及與您的語法會撰寫為 ODBC 連接字串時。 您可以在使用或不在預先定義的資料來源名稱 (DSN) 或 FileDSN 連接。
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>與資料來源名稱或 FileDSN 語法：
 

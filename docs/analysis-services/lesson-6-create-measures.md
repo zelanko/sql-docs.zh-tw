@@ -1,28 +1,28 @@
 ---
-title: "第 7 課： 建立量值 |Microsoft 文件"
-ms.custom: 
+title: 第 7 課： 建立量值 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f3eaadefd65c49f86e4081ba0547f5ca05ae0514
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e20348d3d51be53bc68d5d035c3d739a12ee4e6c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-create-measures"></a>第 6 課： 建立量值
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
 完成本課程的估計時間：**30 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
 本主題是表格式模型教學課程的一部分，必須依序完成。 然後再執行工作，在這一課，您應已完成上一課：[第 5 課： 建立導出資料行](../analysis-services/lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>建立量值  
@@ -92,7 +92,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  使用 [自動加總] 功能建立並命名下列量值：  
   
-    |[量值名稱]|「資料行」|自動加總 (∑)|公式|  
+    |[量值名稱]|資料行|自動加總 (∑)|公式|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
     |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  

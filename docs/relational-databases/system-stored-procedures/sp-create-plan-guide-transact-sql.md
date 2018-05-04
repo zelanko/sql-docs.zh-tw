@@ -24,12 +24,11 @@ caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 09c1ccc4ba5b01b434ee4794a058ccfae4ccfa61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  要比對從應用程式，提交的批次的計畫指南*batch_tex*t 必須提供相同的格式，字元逐字元，若要提交[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不會執行內部轉換來簡化這個比對作業。 如需詳細資訊，請參閱＜備註＞一節。  
   
- [*schema_name*。]*object_name*指定名稱的[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序、 純量函數、 多重陳述式資料表值函式或[!INCLUDE[tsql](../../includes/tsql-md.md)]DML 觸發程序包含*statement_text*. 如果*schema_name*未指定， *schema_name*會使用目前使用者的結構描述。 如果指定了 NULL 和@type= 'SQL'，值@module_or_batch設定的值為@stmt。如果@type= '範本**'**，@module_or_batch必須是 NULL。  
+ [*schema_name*。]*object_name*指定名稱的[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序、 純量函數、 多重陳述式資料表值函式或[!INCLUDE[tsql](../../includes/tsql-md.md)]DML 觸發程序包含*statement_text*. 如果*schema_name*未指定， *schema_name*會使用目前使用者的結構描述。 如果指定了 NULL 和@type= 'SQL'，值@module_or_batch設定的值為@stmt。如果@type= '範本 **'**，@module_or_batch必須是 NULL。  
   
  [ @params =] {N' *@parameter_name data_type* [，*...n* ]' |NULL}  
  指定之所有參數的內嵌在定義*statement_text*。 @params 適用於僅當下列其中一項成立：  
@@ -123,11 +122,11 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  @type = 'SQL' 且 @module_or_batch 設定為 NULL 時，@module_or_batch 的值會設定為值 @stmt。這表示的值*statement_text*必須以完全相同的格式，提供字元的字元，與提交至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不會執行內部轉換來簡化這個比對作業。  
   
- 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]符合值的*statement_text*至*batch_text*和 *@parameter_name data_type* [，*...n* ]，或如果@type= **'**物件 '，內之對應查詢的文字*object_name*，則不考量下列字串元素：  
+ 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]符合值的*statement_text*至*batch_text*和 *@parameter_name data_type* [，*...n* ]，或如果@type= **'** 物件 '，內之對應查詢的文字*object_name*，則不考量下列字串元素：  
   
 -   字串內部的空白字元 (定位字元、空格字元、歸位字元或換行字元)。  
   
--   註解 (**--**或**/ \* \* /**)。  
+-   註解 (**--** 或**/ \* \* /**)。  
   
 -   行尾的分號。  
   

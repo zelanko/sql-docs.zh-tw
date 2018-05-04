@@ -1,37 +1,23 @@
 ---
-title: "定義屬性關聯性的關聯性類型 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 定義屬性關聯性的關聯性類型 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- removing member properties
-- deleting member properties
-- member properties [Analysis Services], adding
-- adding member properties
-- member properties [Analysis Services], removing
-ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 158e22518b67117f830ba019860bacb95454a73a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2a066e637570a7ba9252591fdca8936ebf75b7cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-relationships---define-the-relationship-type"></a>屬性關聯性-定義關聯性類型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 存取 [維度設計師] 的 [屬性關聯性] 索引標籤，定義屬性關聯性的關聯性類型。  
+  您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 存取 [維度設計師] 的 [屬性關聯性] 索引標籤，定義屬性關聯性的關聯性類型。  
   
 ### <a name="to-set-the-relationship-type-of-an-attribute-relationship"></a>設定屬性關聯性的關聯性類型  
   

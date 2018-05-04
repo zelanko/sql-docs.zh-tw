@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cf4f6c78b5dd6c93dfcb0ae43a5fa1b271c64c2d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: af8e93d110f2cdfafa6dd4bd0ae82dca25b47cc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="item-property-example-vb"></a>項目屬性範例 (VB)
 這個範例會示範如何[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性存取集合的成員。 範例會開啟***作者***資料表***Pubs***使用參數化命令的資料庫。  

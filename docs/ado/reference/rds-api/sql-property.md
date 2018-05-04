@@ -19,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 967d1176417a0f8acbdbdfbcea7aad24b804fade
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 9d28a6f127b222c03faa9c287522945999da809e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-property"></a>SQL 屬性
 表示用來擷取查詢字串[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -47,7 +46,7 @@ Run time: DataControl.SQL = "QueryString"
  A**字串**包含有效的 SQL 資料要求的值。  
   
  *DataControl*  
- 物件變數，表示**.RDSDataControl**物件。  
+ 物件變數，表示 **.RDSDataControl**物件。  
   
 ## <a name="remarks"></a>備註  
  一般情況下，這是 SQL 陳述式 （使用的方言的資料庫伺服器），例如`"Select * from NewTitles"`。 若要確保記錄會比對，並正確地更新，可更新的查詢必須包含二進位長的欄位或計算的欄位以外的欄位。  

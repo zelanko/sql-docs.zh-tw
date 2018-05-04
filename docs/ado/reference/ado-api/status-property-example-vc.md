@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fa5dcd9c68fce287a4b274ccf68c9f260909792b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 45389b5e0f7bcbe225d443ee4423b16c0b5e3cf4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="status-property-example-vc"></a>狀態屬性範例 （VC + +）
 這個範例會使用[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性來顯示哪一筆記錄中修改過批次作業之前發生的批次更新。  

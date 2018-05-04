@@ -32,10 +32,10 @@ ms.lasthandoff: 04/16/2018
 # <a name="getcursorname-method-sqlserverresultset"></a>getCursorName 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取 SQL 資料指標，這由名稱[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+  擷取 SQL 資料指標的名稱，此資料指標由這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件使用。  
   
 > [!NOTE]  
->  這個方法目前不支援由[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 如果呼叫這個方法，將擲回例外狀況。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支援這個方法。 如果呼叫這個方法，將擲回例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,12 +45,12 @@ public java.lang.String getCursorName()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**，其中包含資料指標名稱。  
+ 包含資料指標的**字串**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getCursorName 方法是由 java.sql.ResultSet 介面中的 getCursorName 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

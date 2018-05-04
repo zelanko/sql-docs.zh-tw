@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], allocating and freeing
 - explicitly allocated descriptors [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5f92ad0615047da9fd775ec8faa491e8d9a4ba79
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1f09c3d7817fdb3d7f992255a7c2242c515e9748
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicitly-allocated-descriptors"></a>明確配置描述元
 應用程式可以明確地配置隨時連線到資料庫的連接上的應用程式描述元。 藉由指定該描述元控制代碼，以在陳述式的屬性可讓您處理使用**SQLSetStmtAttr**，應用程式會引導驅動程式使用該描述元取代對應的隱含地配置應用程式描述元。 應用程式無法指定替代的實作描述元。  

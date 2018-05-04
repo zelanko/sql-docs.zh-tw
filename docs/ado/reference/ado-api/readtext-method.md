@@ -23,12 +23,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2557106f3a4560181465dbd6f21fcb65bd5db0b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8f211e55e62c4fc2c411a732fa86523ebf572ce1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="readtext-method"></a>ReadText 方法
 讀取指定文字的字元數[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

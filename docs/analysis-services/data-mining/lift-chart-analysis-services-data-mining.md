@@ -1,16 +1,16 @@
 ---
-title: "增益圖 (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
+title: 增益圖 (Analysis Services-資料採礦) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 
+caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e48a0c54ba3c771faf31f71d4e3d9ea3653071c4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-「增益圖」以圖形表示與隨機猜測相較下採礦模型所提供的改進，並測量「增益」分數的相關變更。 藉由比較不同模型的增益分數，您可以判斷哪一個模型是最佳選擇。 您也可以判斷模型的預測在哪個點變得較沒有用。 例如，藉由檢閱增益圖，您了解到促銷活動可能只對 30% 的客戶有效，並使用該圖來限制行銷活動的範圍。  
+  「增益圖」以圖形表示與隨機猜測相較下採礦模型所提供的改進，並測量「增益」分數的相關變更。 藉由比較不同模型的增益分數，您可以判斷哪一個模型是最佳選擇。 您也可以判斷模型的預測在哪個點變得較沒有用。 例如，藉由檢閱增益圖，您了解到促銷活動可能只對 30% 的客戶有效，並使用該圖來限制行銷活動的範圍。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦中，增益圖可以比較多個具有相同可預測屬性之模型的精確度。 您也可以評估單一結果 (可預測屬性的單一值) 或所有結果 (指定屬性的所有值) 的預測精確度。  
   

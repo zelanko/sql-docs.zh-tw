@@ -1,28 +1,28 @@
 ---
-title: "第 4 課： 標記為日期資料表 |Microsoft 文件"
-ms.custom: 
+title: 第 4 課： 標記為日期資料表 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e463f148b07d8fbe7061dca0eed66bba1b0fee94
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 48157197ad00974b87d8f8709116020296ab179d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-mark-as-date-table"></a>第 3 課： 標記為日期資料表
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
 完成本課程的估計時間： **3 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
 本主題是表格式模型教學課程的一部分，必須依序完成。 然後再執行工作，在這一課，您應已完成上一課：[第 2 課： 將資料加入](../analysis-services/lesson-2-add-data.md)。 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>若要重新命名 FullDateAlternateKey 資料行
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  依序按一下 [資料表] 功能表、[日期] 和 [標記為日期資料表]。  
   
-3.  在 [標記為日期資料表] 對話方塊的 [日期] 清單方塊中，選取 [日期] 資料行當作唯一識別碼。 它通常會選取預設的。 按一下 [確定] 。 
+3.  在 [標記為日期資料表] 對話方塊的 [日期] 清單方塊中，選取 [日期] 資料行當作唯一識別碼。 它通常會選取預設的。 按一下 **[確定]**。 
 
     ![做為表格式-lesson3-日期的資料表](../analysis-services/media/as-tabular-lesson3-date-table.png)
   

@@ -1,37 +1,23 @@
 ---
-title: "設定屬性關聯性屬性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 設定屬性關聯性屬性 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- flexible relationships (Analysis Services)
-- attributes [Analysis Services], relationships
-- relationships [Analysis Services], attributes
-- properties [Analysis Services], attribute relationships
-- rigid relationships (Analysis Services)
-ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bcc42c8bcd73c52851f3ed7fae5f4f7a4915b450
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8212466893274d354acfb02ac1ae191bed1c761f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-relationships---configure-attribute-properties"></a>屬性關聯性-設定屬性的屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-下表列出及描述屬性 (Attribute) 關聯性的屬性 (Property)。  
+  下表列出及描述屬性 (Attribute) 關聯性的屬性 (Property)。  
   
 |屬性|說明|  
 |--------------|-----------------|  

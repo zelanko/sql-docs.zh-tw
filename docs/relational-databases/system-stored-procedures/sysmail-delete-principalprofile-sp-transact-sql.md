@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a0ac22fd71b80aa973d3e114a76e1f1bd192fc1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ccfc4bfd03b7a7fba693bfd9e6eb86494057a665
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
   
 ## <a name="arguments"></a>引數  
  [ **@principal_id** = ] *principal_id*  
- 這是資料庫使用者或角色中的識別碼**msdb**要刪除之關聯的資料庫。 *principal_id*是**int**，預設值是 NULL。 若要使公用設定檔進入私人設定檔，提供主體識別碼**0**或主體名稱**'public'**。 任一*principal_id*或*principal_name*必須指定。  
+ 這是資料庫使用者或角色中的識別碼**msdb**要刪除之關聯的資料庫。 *principal_id*是**int**，預設值是 NULL。 若要使公用設定檔進入私人設定檔，提供主體識別碼**0**或主體名稱 **'public'**。 任一*principal_id*或*principal_name*必須指定。  
   
  [ **@principal_name** = ] **'***principal_name***'**  
- 這是資料庫使用者或角色中的名稱**msdb**要刪除之關聯的資料庫。 *principal_name*是**sysname**，預設值是 NULL。 若要使公用設定檔進入私人設定檔，提供主體識別碼**0**或主體名稱**'public'**。 任一*principal_id*或*principal_name*必須指定。  
+ 這是資料庫使用者或角色中的名稱**msdb**要刪除之關聯的資料庫。 *principal_name*是**sysname**，預設值是 NULL。 若要使公用設定檔進入私人設定檔，提供主體識別碼**0**或主體名稱 **'public'**。 任一*principal_id*或*principal_name*必須指定。  
   
  [ **@profile_id** =] *profile_id*  
  這是要刪除之關聯的設定檔識別碼。 *profile_id*是**int**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
@@ -63,7 +62,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 若要使公用設定檔進入私人設定檔，提供**'public'**主體名稱或**0**主體的識別碼。  
+ 若要使公用設定檔進入私人設定檔，提供 **'public'** 主體名稱或**0**主體的識別碼。  
   
  當移除使用者預設私人設定檔的權限，或移除預設公用設定檔的權限時，請特別小心。 可用的沒有預設設定檔時**sp_send_dbmail**需要做為引數的設定檔的名稱。 因此，移除預設的設定檔可能會導致呼叫**sp_send_dbmail**失敗。 如需詳細資訊，請參閱[sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。  
   

@@ -1,31 +1,23 @@
 ---
-title: "排程資料重新整理與資料來源-沒有 Windows 驗證 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 排程資料重新整理與資料來源-沒有 Windows 驗證 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9dadc46f53cff296a0332069165a9faa876e6180
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 176195215c71de1f51fbf6665742e3b71689fc12
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>排程資料重新整理與資料來源-沒有 Windows 驗證
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本主題描述 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 排程資料重新整理的工作流程，而且這項作業可以使用「不」  支援 Windows 驗證的資料來源。 例如，Oracle 或 IDM DB2 資料來源。 雖然本主題的圖例和步驟參考的是 Oracle 資料來源，但是相同的工作流程也適用於其他資料來源。  
+  本主題描述 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 排程資料重新整理的工作流程，而且這項作業可以使用「不」  支援 Windows 驗證的資料來源。 例如，Oracle 或 IDM DB2 資料來源。 雖然本主題的圖例和步驟參考的是 Oracle 資料來源，但是相同的工作流程也適用於其他資料來源。  
   
 ||  
 |-|  
@@ -121,7 +113,7 @@ ms.lasthandoff: 02/15/2018
   
 11. 輸入 Oracle 使用者識別碼和 Oracle 密碼，然後按一下 [確定]。  
   
- 如需詳細資訊，請參閱 [Use Secure Store with SQL Server Authentication (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (搭配 SQL Server 驗證使用 Secure Store (SharePoint Server 2013)) (http://technet.microsoft.com/library/gg298949.aspx) 中的＜To Create a target application for SQL Server Authentication＞ (建立 SQL Server 驗證的目標應用程式) 一節。  
+ 如需詳細資訊，請參閱 < 建立目標應用程式的 SQL Server 驗證 」 一節中[使用 Secure Store 搭配 SQL Server 驗證 (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)。  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>設定 Power Pivot 服務應用程式  
   

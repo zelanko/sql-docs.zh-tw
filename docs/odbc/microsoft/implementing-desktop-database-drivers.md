@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], implementing
 - ODBC desktop database drivers [ODBC], implementing
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2698be76ef5be6a4b890a1c2d9f2900ed4412cc8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b0e964f21efe4647792ff636da369ed6a7176f05
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-desktop-database-drivers"></a>實作桌面資料庫驅動程式
 ODBC 資料來源管理員線上說明中可以找到指示和有關如何實作和設定 Microsoft ODBC 桌面資料庫驅動程式的技術提示。 可以存取此檔案，從驅動程式安裝常式期間[Microsoft ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)。  

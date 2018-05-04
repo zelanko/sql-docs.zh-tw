@@ -1,7 +1,7 @@
 ---
 title: 使用 SSIS 將資料從 Excel 載入或載入至 Excel | Microsoft Docs
 ms.description: Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations.
-ms.date: 03/27/2018
+ms.date: 04/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: ''
@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d7cb51f585055eefa1deff52b8cb25469bdb9ca
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 00e3c7b22555404654a381911a7812af666a03cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="load-data-from-or-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel
 
@@ -28,7 +28,20 @@ ms.lasthandoff: 04/04/2018
 
 您可以藉由建立 SSIS 套件，並使用 Excel 連線管理員和 Excel 來源或 Excel 目的地，從 Excel 匯入資料，或將資料匯出至 Excel。 您也可以使用建立在 SSIS 上的 [SQL Server 匯入和匯出精靈]。
 
-## <a name="get-the-files-you-need-to-connect-to-excel"></a>取得連接至 Excel 所需的檔案
+本文包含成功從 SSIS 使用 Excel，或要了解及針對常見問題進行疑難排解所需的三組資訊：
+-   [您需要的檔案](#files-you-need)。
+-   當您使用 Excel 載入或取出資料時，您必須提供的資訊。
+    -   [指定 Excel](#specify-excel) 作為資料來源。
+    -   提供 [Excel 檔案名稱和路徑](#excel-file)。
+    -   選取 [Excel 版本](#excel-version)。
+    -   指定是否在[第一個資料列包含資料行名稱](#first-row)。
+    -   提供[包含資料的工作表或範圍](#sheets-ranges)。
+-   已知問題和限制。
+    -   [資料類型](#issues-types)的問題。
+    -   [匯入](#issues-importing)的問題。
+    -   [匯出](#issues-exporting)的問題。
+
+## <a name="files-you-need"></a> 取得連線至 Excel 所需的檔案
 
 您可能必須下載適用於 Excel 的連線元件，如果它們尚未安裝的話，然後才能從 Excel 匯入資料，或將資料匯出至 Excel。 預設不會安裝適用於 Excel 的連線元件。
 
@@ -46,7 +59,7 @@ ms.lasthandoff: 04/04/2018
 
 如果您無法安裝 2016 可轉散發套件，請改為從這裡安裝 2010 可轉散發套件：[Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) (Microsoft Access 資料庫引擎 2010 可轉散發套件)。 (沒有任何適用於 Excel 2013 的可轉散發套件。)
 
-## <a name="get-started"></a>開始使用
+## <a name="specify-excel"></a> 開始使用
 
 第一個步驟是指出您想要連接至 Excel。
 
@@ -64,7 +77,7 @@ ms.lasthandoff: 04/04/2018
 
 如果您在資料來源清單中看不到 Excel，請確定是否執行 32 位元精靈。 Excel 連線元件均通常是 32 位元檔案，在 64 位元精靈中不會顯示。
 
-## <a name="excel-file-and-file-path"></a>Excel 檔案和檔案路徑
+## <a name="excel-file"></a> Excel 檔案和檔案路徑
 
 要提供資訊的第一項資訊是 Excel 檔案的路徑和檔案名稱。 提供此資訊的方式是使用 [Excel 連線管理員編輯器] 中的 SSIS 套件，或在 [匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面。
 
@@ -79,7 +92,7 @@ ms.lasthandoff: 04/04/2018
 > [!IMPORTANT]
 > 您不能連接至受密碼保護的 Excel 檔案。
 
-## <a name="excel-version"></a>Excel 版本
+## <a name="excel-version"></a> Excel 版本
 
 要提供的第二項資訊是 Excel 檔案的版本。 提供此資訊的方式是使用 [Excel 連線管理員編輯器] 中的 SSIS 套件，或在 [匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面。
 
@@ -87,7 +100,7 @@ ms.lasthandoff: 04/04/2018
 
 如果您只安裝了較舊版本的連線元件，可能無法選取清單中的較新 Excel 版本。 **Excel 版本**清單包含 SSIS 支援的所有 Excel 版本。 這份清單中的項目存在並不表示已安裝必要的連線元件。 例如，即使您尚未安裝 2016 連線元件，**Microsoft Excel 2016** 也會出現在清單中。
 
-## <a name="first-row-has-column-names"></a>第一個資料列有資料行名稱
+## <a name="first-row"></a> 第一個資料列具有資料行名稱
 
 如果您從 Excel 匯入資料，下一個步驟就是指出資料的第一個資料列是否包含資料行名稱。 提供此資訊的方式是使用 [Excel 連線管理員編輯器] 中的 SSIS 套件，或在 [匯入和匯出精靈] 的 [選擇資料來源] 頁面上。
 
@@ -97,7 +110,7 @@ ms.lasthandoff: 04/04/2018
 
 如果您要從 Excel 匯出資料，且啟用了此選項，則匯出資料的第一列會包含資料行名稱。
 
-## <a name="worksheets-and-ranges"></a>工作表和範圍
+## <a name="sheets-ranges"></a> 工作表和範圍
 
 有三種 Excel 物件可以作為資料的來源或目的地：工作表、您指定位址的資料格具名範圍或未具名範圍。
 
@@ -146,7 +159,7 @@ ms.lasthandoff: 04/04/2018
 
 -   預覽範例資料，選取 [預覽] 以確定它如您的預期。
 
-## <a name="issues-with-data-types"></a>資料類型的問題
+## <a name="issues-types"></a> 資料類型的問題
 
 ### <a name="data-types"></a>資料類型
 
@@ -179,7 +192,7 @@ SSIS 不會隱含地轉換資料類型。 因此，您可能必須使用衍生�
 > [!TIP]
 > 如果您使用 [匯入和匯出精靈]，且您的資料需要這其中的某些轉換，精靈會為您設定所需的轉換。 因此，即使是您想要使用 SSIS 套件時，使用 [匯入和匯出精靈] 來建立初始套件可能會很實用。 讓精靈為您建立並設定連線管理員、來源、轉換和目的地。
 
-## <a name="issues-with-importing"></a>匯入的問題
+## <a name="issues-importing"></a> 匯入的問題
 
 ### <a name="empty-rows"></a>空的資料列
 
@@ -209,7 +222,7 @@ Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
 | | |
 
-## <a name="issues-with-exporting"></a>匯出的問題
+## <a name="issues-exporting"></a> 匯出的問題
 
 ### <a name="create-a-new-destination-file"></a>建立新的目的地檔案
 

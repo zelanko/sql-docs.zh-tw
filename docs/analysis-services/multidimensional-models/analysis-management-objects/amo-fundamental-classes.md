@@ -1,38 +1,19 @@
 ---
-title: "AMO 基礎類別 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data sources [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-- AMO, data sources
-- Analysis Management Objects, data sources
-ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: 
-author: Minewiskan
+title: AMO 基礎類別 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd2d58e6791a7dd576523f3400264e538ac01307
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ffa7973757ce41a3975bcbb70170679109527e42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-fundamental-classes"></a>AMO 基礎類別
   基礎類別是使用分析管理物件 (AMO) 的起點。 透過這些類別，就可以為應用程式內將使用的其餘物件建立環境。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。  
@@ -73,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Database>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   
-##  <a name="DSandDSV">DataSource 與 DataSourceView 物件</a>  
+##  <a name="DSandDSV"></a> DataSource 與 DataSourceView 物件  
  透過從資料庫類別使用 <xref:Microsoft.AnalysisServices.DataSourceCollection> 來管理資料來源。 可以使用 <xref:Microsoft.AnalysisServices.DataSource> 物件的 Add 方法來建立 <xref:Microsoft.AnalysisServices.DataSourceCollection> 的執行個體。 可以使用 <xref:Microsoft.AnalysisServices.DataSource> 物件的 Remove 方法來刪除 <xref:Microsoft.AnalysisServices.DataSourceCollection> 的執行個體。  
   
  <xref:Microsoft.AnalysisServices.DataSourceView> 物件是從資料庫類別中的 <xref:Microsoft.AnalysisServices.DataSourceViewCollection> 物件來管理。  

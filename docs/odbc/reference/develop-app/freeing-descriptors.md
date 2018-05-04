@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeHandle function [ODBC]
 - descriptors [ODBC], allocating and freeing
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e99c394521bf6f733503e2d5e2f8794d5412cc94
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0977ba814841ab2fa445a1009262e4a2bfd3a5b3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="freeing-descriptors"></a>釋放描述元
 明確配置描述元可以是明確地釋放是藉由呼叫**SQLFreeHandle**與*HandleType* SQL_HANDLE_DESC，或隱含的當連接控制代碼已釋放。 明確配置描述項會釋出，隱含地配置給它們的描述元釋放自動套用的描述元將還原的所有陳述式控制代碼。  

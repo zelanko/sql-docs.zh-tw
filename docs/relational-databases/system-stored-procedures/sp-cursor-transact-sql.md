@@ -24,12 +24,11 @@ caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ff58f474c565d10a57505dce5019bca5ddafb34
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a6e55691bc045a8de84084498a501983bcc5a11a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +164,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  如果插入*\<資料表名稱 >*指定，則指定的任何值*資料表*參數將會被忽略。  
+>  如果插入*\<資料表名稱 >* 指定，則指定的任何值*資料表*參數將會被忽略。  
   
  當使用多個參數時，第一個參數必須是以下格式的字串：  
   
@@ -175,7 +174,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 除非在指定 VALUES 的情況下，此時最後一個運算式後面必須有尾端 ")"。 在此情況下， *\<資料表名稱 >*中建構的 UDPATE 陳述式是一個指定或預設要由*資料表*參數。  
+ 除非在指定 VALUES 的情況下，此時最後一個運算式後面必須有尾端 ")"。 在此情況下， *\<資料表名稱 >* 中建構的 UDPATE 陳述式是一個指定或預設要由*資料表*參數。  
   
 > [!NOTE]  
 >  可以將一個參數當做具名參數來提交，也就是 "`@VALUES`"。 在此情況下，無法使用其他具名參數。  

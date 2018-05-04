@@ -22,19 +22,18 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 332a19096035fc271062c8138351197316f46377
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8cca3873b45fc39eb0df3521ba9ca20941b7cdde
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 指定的格式，擷取時[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)做為字串。  
   
 |常數|Value|Description|  
 |--------------|-----------|-----------------|  
-|**adClipString**|2|用來分隔列*[rowdelimiter]*，資料行*[columndelimiter]*，和 null 值*NullExpr*。 這三個參數的[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法會有效只能搭配*StringFormat*的**adClipString**。|  
+|**adClipString**|2|用來分隔列 *[rowdelimiter]*，資料行 *[columndelimiter]*，和 null 值*NullExpr*。 這三個參數的[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法會有效只能搭配*StringFormat*的**adClipString**。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
  封裝： **com.ms.wfc.data**  

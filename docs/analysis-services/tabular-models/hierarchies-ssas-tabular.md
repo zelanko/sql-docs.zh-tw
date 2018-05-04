@@ -1,30 +1,30 @@
 ---
-title: "階層 |Microsoft 文件"
-ms.custom: 
+title: 階層 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0a881f97fc071d0921a8829c8bb70d4f50197c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 54ea595a8d310ffaa009f32a3b060728b4241346
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchies"></a>階層
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表格式模型中的階層會定義兩個或多個資料表中的資料行之間的關聯性的中繼資料。 在報表用戶端欄位清單中，階層可以與其他資料行分開顯示，讓用戶端使用者更易於導覽及包含在報表中。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  表格式模型中的階層是中繼資料，可定義資料表中兩個 (含) 以上的資料行之間的關聯性。 在報表用戶端欄位清單中，階層可以與其他資料行分開顯示，讓用戶端使用者更易於導覽及包含在報表中。  
   
 ##  <a name="bkmk_benefits"></a> 優點  
  資料表可以包含數十個或甚至數百個具有不常見資料行名稱的資料行，且沒有明顯的順序。 這可能會導致未排序的報表用戶端欄位清單外觀，讓使用者很難在報表中尋找及包含資料。 階層可以針對複雜的資料結構，提供簡單直覺式的檢視。  
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|工作|描述|  
+|工作|Description|  
 |----------|-----------------|  
 |[建立及管理階層](../../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md)|描述如何在 [圖表檢視] 中，使用模型設計師建立及管理階層。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型設計師](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)  

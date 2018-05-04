@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
 - precision [ODBC], numeric data types
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56b6c9d61c811517ccc089f424622967c81cd123
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67b017d17566fd19d6d4938bf8ef72d49b7c7bc0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>覆寫預設有效位數和小數位數值資料類型
 當 ARD 中的 SQL_DESC_TYPE 欄位設定為 SQL_C_NUMERIC，藉由呼叫**SQLBindCol**或**SQLSetDescField**、 ARD SQL_DESC_SCALE 欄位設定為 0，而且設定 SQL_DESC_PRECISION 欄位至驅動程式定義的預設有效位數。 這也是如此當 APD 中的 SQL_DESC_TYPE 欄位設為 SQL_C_NUMERIC，藉由呼叫**SQLBindParameter**或**SQLSetDescField**。 這是輸入、 輸入/輸出或輸出參數，則為 true。  

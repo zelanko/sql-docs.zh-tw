@@ -1,39 +1,23 @@
 ---
 title: 新增或移除資料表或檢視表中的資料來源檢視 (Analysis Services) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dsvdesigner.tablespane.f1
-helpviewer_keywords:
-- deleting tables
-- tables [Analysis Services]
-- removing tables
-- adding tables
-- data source views [Analysis Services], tables
-- tables [Analysis Services], data source views
-ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
-caps.latest.revision: 34
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fe054e5e7378c7b779164961aaa46f1c4e6377d5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ae4ec99ca380c0405056ac6e1ca0a296f4563dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>在資料來源檢視中加入或移除資料表或檢視 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在建立資料來源檢視 (DSV) 之後[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，修改資料來源檢視設計工具中新增或移除資料表和資料行，包括資料表和其他資料來源的資料行。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立資料來源檢視 (DSV) 之後，即可在資料來源檢視設計工具中，透過加入或移除資料表和資料行 (包括其他資料來源中的資料表和資料行) 來進行修改。  
   
  若要在資料來源檢視設計工具中開啟 DSV，請在 [方案總管] 中按兩下 DSV。 開啟 DSV 之後，即可使用按鈕列或功能表上的 [加入/移除資料表] 命令，修改或擴充 DSV。 您也可以使用圖表中的物件。 例如，您可以選取物件，然後使用鍵盤上的 Delete 鍵移除物件。  
   
@@ -50,8 +34,8 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  在資料來源檢視中加入或移除物件不會影響基礎資料來源。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [在資料來源檢視設計工具 & #40; 中使用圖表Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90a71416548b92480826c61979f98a3948527b4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0b385ddfdb140f38614e4082b45ada8a8140e4f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_helpserver [ [ @server = ] 'server' ]
  這是報告之資訊的相關伺服器。 當*伺服器*未指定，則報告中的所有伺服器**master.sys.servers**。 *伺服器*是**sysname**，預設值是 NULL。  
   
  [  **@optname =** ] **'***選項***'**  
- 這是描述伺服器的選項。 *選項*是**varchar (**35**)**，預設值是 NULL，而且必須是下列值之一。  
+ 這是描述伺服器的選項。 *選項*是**varchar (** 35 **)**，預設值是 NULL，而且必須是下列值之一。  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -69,7 +68,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**使用遠端定序**|利用遠端資料行的定序來取代本機伺服器的定序。|  
   
  [  **@show_topology =** ] **'***show_topology***'**  
- 這是指定伺服器與其他伺服器的關聯性。 *show_topology*是**varchar (**1**)**，預設值是 NULL。 如果*show_topology*不等於**t**或為 NULL， **sp_helpserver**傳回結果集 」 一節中所列的資料行。 如果*show_topology*等於**t**，列出結果集中的資料行除了**sp_helpserver**也會傳回**topx**和**topy**資訊。  
+ 這是指定伺服器與其他伺服器的關聯性。 *show_topology*是**varchar (** 1 **)**，預設值是 NULL。 如果*show_topology*不等於**t**或為 NULL， **sp_helpserver**傳回結果集 」 一節中所列的資料行。 如果*show_topology*等於**t**，列出結果集中的資料行除了**sp_helpserver**也會傳回**topx**和**topy**資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)。  
@@ -80,8 +79,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|伺服器名稱。|  
 |**network_name**|**sysname**|伺服器的網路名稱。|  
-|**status**|**varchar (**70**)**|伺服器狀態。|  
-|**id**|**char (**4**)**|伺服器的識別碼。|  
+|**status**|**varchar (** 70 **)**|伺服器狀態。|  
+|**id**|**char (** 4 **)**|伺服器的識別碼。|  
 |**collation_name**|**sysname**|伺服器的定序。|  
 |**connect_timeout**|**int**|連接到連結伺服器的逾時值。|  
 |**query_timeout**|**int**|針對連結伺服器進行查詢的逾時值。|  

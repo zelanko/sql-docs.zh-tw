@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic messages messages
 - error messages [ODBC], diagnostic messages
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d8820ce1c437d4bb5012a84ced5db6040cd1b552
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 829d6528f9743d8b5dab5d378eb798a40a994631
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-messages"></a>診斷訊息
 診斷訊息會傳回包含每個的 SQLSTATE。 一些不同的訊息通常會傳回相同的 SQLSTATE。 例如，SQLSTATE 42000 （語法錯誤或存取違規） 會傳回 SQL 語法中的大部分錯誤。 不過，每個語法錯誤很可能透過不同的訊息描述。  

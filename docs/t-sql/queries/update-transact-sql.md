@@ -1,16 +1,16 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -40,16 +40,17 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 
+caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4e9de41bb284045477426e6044f2449f62f1d58b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -146,7 +147,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  這是資料表或檢視表所屬的結構描述名稱。  
   
  *table_or view_name*  
- 這是要更新資料列之資料表或檢視表的名稱。 *table_or_view_name* 所參考的檢視必須能夠更新，而且必須只參考該檢視之 FROM 子句中的單一基底資料表。 如需有關可更新檢視的詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
+ 這是要更新資料列之資料表或檢視表的名稱。 *table_or_view_name* 所參考的檢視必須能夠更新，而且只能參考該檢視 FROM 子句中的單一基底資料表。 如需有關可更新檢視的詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
   
  *rowset_function_limited*  
  依提供者功能而定，這是 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函數。  
@@ -192,7 +193,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  這是 *udt_column_name* 有一或多個引數的非靜態公用 mutator 方法。  
   
- **.**WRITE **(***expression***,***@Offset***,***@Length***)**  
+ **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
  指定要修改 *column_name* 的值區段。 *expression* 會取代從 *column_name* 的 *@Offset* 算起的 *@Length* 個單位。 使用這個子句只能指定 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 的資料行。 *column_name* 不能是 NULL，也不能用資料表名稱或資料表別名來限定。  
   
  *expression* 是複製到 *column_name* 的值。 *expression* 必須評估為或能夠隱含轉換成 *column_name* 類型。 如果 *expression* 設定為 NULL，系統就會忽略 *@Length*，而且會在指定的 *@Offset* 截斷 *column_name* 中的值。  
@@ -240,7 +241,7 @@ GLOBAL
  指定 *cursor_name* 是全域資料指標。  
   
 *cursor_name*  
- 這是應該從中提取的開啟資料指標名稱。 如果名稱為 *cursor_name* 的全域和本機資料指標同時存在，當指定 GLOBAL 時，這個引數是全域資料指標，否則是區域資料指標。 這個資料指標必須允許更新。  
+ 這是應該從中提取的開啟資料指標名稱。 如果名稱為 *cursor_name* 的全域和本機資料指標同時存在，當指定 GLOBAL 時，這個引數會參考全域資料指標；否則，它會參考區域資料指標。 這個資料指標必須允許更新。  
   
 *cursor_variable_name*  
  這是資料指標變數的名稱。 *cursor_variable_name*必須參考允許更新的資料指標。  
@@ -249,7 +250,7 @@ OPTION **(** \<query_hint> [ **,**... *n* ] **)**
  指定利用最佳化工具提示來自訂 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳作法  
- 您可以使用 @@ROWCOUNT 函數，將插入的資料列數目傳回給用戶端應用程式。 如需詳細資訊，請參閱 [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)。  
+ 您可以使用 @@ROWCOUNT 函式，將插入的資料列數目傳回給用戶端應用程式。 如需詳細資訊，請參閱 [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)。  
   
  UPDATE 陳述式可以利用變數名稱來顯示受影響的舊值和新值，但這只適用於 UPDATE 陳述式會影響單一記錄的情況。 如果 UPDATE 陳述式會影響多筆記錄，若要傳回各個記錄的舊值和新值，請使用 [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)。  
   
@@ -336,21 +337,21 @@ GO
 >  未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將會移除 **ntext**、**text** 和 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ### <a name="updating-large-value-data-types"></a>更新大數值資料類型  
- 使用 **.**WRITE (*expression***,** *@Offset***,***@Length*) 子句可執行 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料類型的部分或完整更新。 例如，部分更新 **varchar(max)** 資料行可能只刪除或修改資料行的前 200 個字元，完整更新則會刪除或修改資料行中的所有資料。 如果資料庫復原模式設為大量記錄或簡單模式，插入或附加新資料的 **.**WRITE 更新就會採用最低限度記錄。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ 使用 **.** WRITE (*expression***,** *@Offset ***,***@Length*) 子句可執行 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料類型的部分或完整更新。 例如，部分更新 **varchar(max)** 資料行可能只刪除或修改資料行的前 200 個字元，完整更新則會刪除或修改資料行中的所有資料。 如果資料庫復原模式設為大量記錄或簡單模式，插入或附加新資料的 **.** WRITE 更新就會採用最低限度記錄。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  當 UPDATE 陳述式造成下列情況時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將部分更新轉換成完整更新：  
 -   變更資料分割檢視或資料表的索引鍵資料行。  
 -   修改多個資料列，同時也將不是唯一的叢集索引之索引鍵更新成非常數值。  
   
-您不能利用 **.**WRITE 子句來更新 NULL 資料行，或將 *column_name* 的值設成 NULL。  
+您不能利用 **.** WRITE 子句來更新 NULL 資料行，或將 *column_name* 的值設成 NULL。  
   
 **varbinary** 和 **varchar** 資料類型的 *@Offset* 和 *@Length* 是以位元組來指定，**nvarchar** 資料類型則是以字元來指定。 雙位元組字集 (DBCS) 定序會計算適當的位移。  
   
 若要有最佳效能，建議您以 8040 個位元組倍數的片段大小來插入或更新資料。  
   
-如果在 OUTPUT 子句中參考 **.**WRITE 子句所修改的資料行，就會將資料行的完整值 (不論是在 **deleted.***column_name* 中的影像之前，或在 **inserted.***column_name* 中的影像之後) 傳回資料表變數中的指定資料行。 請參閱下面的 R 範例。  
+如果在 OUTPUT 子句中參考 **.** WRITE 子句所修改的資料行，就會將資料行的完整值 (不論是在 **deleted.***column_name* 中的影像之前，或在 **inserted.***column_name* 中的影像之後) 傳回資料表變數中的指定資料行。 請參閱下面的 R 範例。  
   
-若要利用其他字元或二進位資料類型來完成 **.**WRITE 的相同功能，請使用 [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)。  
+若要利用其他字元或二進位資料類型來完成 **.** WRITE 的相同功能，請使用 [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)。  
   
 ### <a name="updating-user-defined-type-columns"></a>更新使用者定義型別資料行  
  您可以利用下列方式之一來完成使用者定義型別資料行值的更新：  
@@ -397,10 +398,10 @@ GO
 ## <a name="interoperability"></a>互通性  
  只有當所修改的資料表是一個資料表變數時，才能在使用者定義函數的主體中使用 UPDATE 陳述式。  
   
- 當定義資料表之 UPDATE 動作的 INSTEAD OF 觸發程序時，會執行觸發程序，而不是 UPDATE 陳述式。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援 UPDATE 及其他資料修改陳述式所定義的 AFTER 觸發程序。 在直接或間接參考定義了 INSTEAD OF 觸發程序的檢視表之 UPDATE 陳述式中，不能指定 FROM 子句。 如需有關 INSTEAD OF 觸發程序的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ 當定義資料表之 UPDATE 動作的 INSTEAD OF 觸發程序時，會執行觸發程序，而不是 UPDATE 陳述式。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援 UPDATE 及其他資料修改陳述式所定義的 AFTER 觸發程序。 在直接或間接參考定義了 INSTEAD OF 觸發程序的檢視表之 UPDATE 陳述式中，不能指定 FROM 子句。 如需 INSTEAD OF 觸發程序的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- 在直接或間接參考定義了 INSTEAD OF 觸發程序之檢視表的 UPDATE 陳述式中，不能指定 FROM 子句。 如需有關 INSTEAD OF 觸發程序的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ 在直接或間接參考定義了 INSTEAD OF 觸發程序之檢視表的 UPDATE 陳述式中，不能指定 FROM 子句。 如需 INSTEAD OF 觸發程序的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  當通用資料表運算式 (CTE) 是 UPDATE 陳述式的目標時，陳述式中所有 CTE 的參考都必須相符。 例如，如果 CTE 被指派 FROM 子句中的別名，此別名就必須用於 CTE 的所有其他參考。 因為 CTE 沒有物件識別碼，可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來辨識物件與其別名之間的隱含關聯性，所以需要使用不模稜兩可的 CTE 參考。 如果沒有這個關聯性，查詢計畫可能會產生無法預期的聯結行為和不想要的查詢結果。 下列範例將示範當 CTE 是更新作業的目標物件時，指定 CTE 的正確與不正確方法。  
   
@@ -464,7 +465,7 @@ ID     Value
  UPDATE 陳述式永遠都會取得它所修改之資料表的獨佔 (X) 鎖定，並保留該鎖定直到交易完成為止。 使用獨佔鎖定時，任何其他交易都無法修改資料。 您可以指定資料表提示，透過指定其他鎖定方法來覆寫 UPDATE 陳述式持續時間的這個預設行為，但是，我們建議僅將提示做為由資深開發人員及資料庫管理員採取的最後手段。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
 ## <a name="logging-behavior"></a>記錄行為  
- 記錄 UPDATE 陳述式；不過，利用 **.**WRITE 子句來進行大數值資料類型的部分更新，只會有最低限度記錄。 如需詳細資訊，請參閱前面＜資料類型＞一節中的＜更新大數值資料類型＞。  
+ 記錄 UPDATE 陳述式；不過，利用 **.** WRITE 子句來進行大數值資料類型的部分更新，只會有最低限度記錄。 如需詳細資訊，請參閱前面＜資料類型＞一節中的＜更新大數值資料類型＞。  
   
 ## <a name="security"></a>Security  
   
@@ -800,7 +801,7 @@ SET GroupName = 'Sales and Marketing';
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. 使用 OPENDATASOURCE 函數來更新遠端資料表中的資料  
- 下列範例會藉由指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 資料列集函數將資料列插入遠端資料表。 使用 *server_name* 或 *server_name\instance_name* 格式，為資料來源指定有效的伺服器名稱。 您可能必須針對特定分散式查詢設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱[特定分散式查詢伺服器設定選項](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)。  
+ 下列範例會指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 資料列集函式，以將資料列插入至遠端資料表。 使用 *server_name* 或 *server_name\instance_name* 格式，為資料來源指定有效的伺服器名稱。 您可能必須針對特定分散式查詢設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱[特定分散式查詢伺服器設定選項](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)。  
   
 ```sql  
 UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   

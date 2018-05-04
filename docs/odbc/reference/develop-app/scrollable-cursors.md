@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d337edea514a796a2d7525f7a01e3607e8ba7423
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a6e779d551385c62ae8cddc5a2e7612b88095497
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scrollable-cursors"></a>可捲動資料指標
 在現代螢幕應用程式中，使用者捲動向前和向後的資料。 這類應用程式中，返回先前擷取的資料列是一個問題。 一個可能的原因是關閉並重新開啟游標然後提取資料列，直到游標達到所需的資料列。 另一個可能性是讀取結果集、 快取在本機，並實作應用程式中捲動。 這兩種可能性也僅適用於小型結果集，和第二個可能的原因是難以實作。 更好的解決方案是使用*可捲動資料指標，*其可以向後移動，並在結果集中轉寄。  

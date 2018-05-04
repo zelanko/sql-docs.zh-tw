@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
@@ -19,17 +19,16 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba961f17cf244cd013f7c62b6cec411a0f642882
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scalar-function-calls"></a>純量函式呼叫
 純量函數會傳回每個資料列的值。 比方說，絕對值純量函數會採用數字的資料行做為引數和傳回的資料行中的每個值的絕對值。 是逸出序列呼叫純量函式  
   
- **{fn***純量函數* **}**   
+ **{fn***純量函數* **}**  
   
  其中*純量函數*是所列出的函數的其中一個[附錄 e： 純量函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。 如需純量函數逸出序列的詳細資訊，請參閱[純量函數逸出序列](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)附錄 c: SQL 文法中。  
   
@@ -51,7 +50,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  **轉換 (** *value_exp* **，** *data_type * * *)**  
   
- 其中*value_exp*資料行名稱，另一個純量函數或常值的結果和*data_type*是符合關鍵字**#define**所使用的名稱SQL 資料類型識別項中所定義[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。 例如，下列 SQL 陳述式會使用**轉換**，確定函式的輸出**CURDATE**函式是日期，而不是時間戳記或字元資料：  
+ 其中*value_exp*資料行名稱，另一個純量函數或常值的結果和*data_type*是符合關鍵字 **#define**所使用的名稱SQL 資料類型識別項中所定義[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。 例如，下列 SQL 陳述式會使用**轉換**，確定函式的輸出**CURDATE**函式是日期，而不是時間戳記或字元資料：  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  

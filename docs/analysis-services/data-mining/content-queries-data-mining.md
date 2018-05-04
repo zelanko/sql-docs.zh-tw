@@ -1,31 +1,23 @@
 ---
-title: "內容查詢 （資料採礦） |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 內容查詢 （資料採礦） |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cae138336afe7590bf23f42532096dc910010848
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 057134e35d748c49a535fb32070484d7d228c5d3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="content-queries-data-mining"></a>內容查詢 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-內容查詢是一種擷取採礦模型之內部統計資料和結構相關資訊的方法。 內容查詢有時候可以提供檢視器中無法隨時取得的詳細資料。 您也可以使用內容查詢的結果，以程式設計的方式擷取其他用途的資訊。  
+  內容查詢是一種擷取採礦模型之內部統計資料和結構相關資訊的方法。 內容查詢有時候可以提供檢視器中無法隨時取得的詳細資料。 您也可以使用內容查詢的結果，以程式設計的方式擷取其他用途的資訊。  
   
  本節提供有關可使用內容查詢擷取之資訊類型，以及內容查詢之一般 DMX 語法的一般資訊。  
   

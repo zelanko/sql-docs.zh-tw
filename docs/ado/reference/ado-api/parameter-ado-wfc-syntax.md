@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 675fbf3f2b94fa5f93dde4a6197fe084b7c4c9dd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4d69301e3ddb6ac55f56c8021b0b9c6c6521c752
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameter-ado---wfc-syntax"></a>參數 (ADO-WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  

@@ -20,20 +20,20 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: daa1e2d464283fa3e2cb37733bb2a705454e50dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 25272b0fe9689bfdb76d427fe7a92a44278978a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoversessions-rowset"></a>DISCOVER_SESSIONS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在伺服器上，提供有關目前開啟的工作階段的資源使用量與活動資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供伺服器上目前已開啟的工作階段之資源使用量與活動的有關資訊。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_SESSIONS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||工作階段開始之後開始執行的命令數目。|  
 |**SESSION_CONNECTION_ID**|**DBTYPE_I4**||工作階段的連接識別碼。|  
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 |SESSION_IDLE_TIME_MS|DBTYPE_UI8|選擇性。|  
 |SESSION_STATUS|DBTYPE_I4|選擇性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

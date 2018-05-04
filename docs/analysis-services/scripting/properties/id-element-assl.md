@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 14a72899497437068d87c7fae658808d0cffe6f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8d01b4de46aadcea6bc996062755b291a3a10a31
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="id-element-assl"></a>ID 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含父元素的唯一識別碼 (ID)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  包含父元素的唯一識別碼 (ID)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (最多 100 個字元)|  
 |預設值|無|  
@@ -66,9 +66,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  在每個主要物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]具有**識別碼**元素當做屬性。 值**識別碼**項目具有下列限制：  
   
--   此值不得包含開頭或尾端空格。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]將會隱含地移除開頭或尾端空格的值從**識別碼**項目。  
+-   此值不得包含開頭或尾端空格。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 將會隱含地移除開頭或尾端空格的值從**識別碼**項目。  
   
--   此值不得包含控制字元。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]將會隱含地移除控制字元的值從**識別碼**項目。  
+-   此值不得包含控制字元。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 將會隱含地移除控制字元的值從**識別碼**項目。  
   
 -   下列保留的值不可使用：  
   
@@ -91,12 +91,12 @@ ms.lasthandoff: 01/08/2018
 |父元素|字元|  
 |--------------------|----------------|  
 |[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|此值必須依照 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 電腦名稱的規則 (IP 位址無效)。|  
-|[資料來源](../../../analysis-services/scripting/objects/datasource-element-assl.md)|:/\\*&#124;?"()[]{}<>|  
-|[層級](../../../analysis-services/scripting/objects/level-element-assl.md)，[屬性項目](../../../analysis-services/scripting/objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"&%$!+=[]{}<>|  
-|所有其他的父元素。|.,;'`:/\\*&#124;?"&%$!+=()[]{}<>|  
+|[DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md)|:/\\*&#124;?"（) []{}<>|  
+|[層級](../../../analysis-services/scripting/objects/level-element-assl.md)，[屬性項目](../../../analysis-services/scripting/objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"& %$！ + = []{}<>|  
+|所有其他的父元素。|.,;'`:/\\*&#124;?"& %$！ + = （) []{}<>|  
   
-## <a name="see-also"></a>請參閱  
- [Name 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/name-element-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [名稱元素&#40;ASSL&#41;](../../../analysis-services/scripting/properties/name-element-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

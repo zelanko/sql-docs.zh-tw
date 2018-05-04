@@ -1,32 +1,32 @@
 ---
-title: "將資料來源加入至表格式模型 (Analysis Services AMO-TOM) |Microsoft 文件"
-ms.custom: 
+title: 將資料來源加入至表格式模型 (Analysis Services AMO-TOM) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3892601961f95b0d4dd4f0de0d3767eff01186d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>將資料來源加入至表格式模型 (Analysis Services AMO-TOM)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]**DataSource** Microsoft.AnalysisServices.Tabular 命名空間中的類別是在資料重新整理作業期間的指定類型的表格式模型的資料來源的抽象概念和匯入資料的位置。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+**DataSource** Microsoft.AnalysisServices.Tabular 命名空間中的類別是在資料重新整理作業期間的指定類型的表格式模型的資料來源的抽象概念和匯入資料的位置。 
 
-可以藉由執行個體化的類別，衍生自物件將資料來源加入至表格式模型**DataSource**，然後將它新增到**DataSources**模型物件的集合。 若要變更認可到伺服器，呼叫**Model.SaveChanges()**或**Database.Update(UpdateOptions.ExpandFull)**。 
+可以藉由執行個體化的類別，衍生自物件將資料來源加入至表格式模型**DataSource**，然後將它新增到**DataSources**模型物件的集合。 若要變更認可到伺服器，呼叫**Model.SaveChanges()** 或**Database.Update(UpdateOptions.ExpandFull)**。 
 
 在 SQL Server 2016 中，Analysis Services 支援資料匯入，只會從關聯式資料庫，其中的資料提供者會公開形式的資料表和資料行的資料。 因此，表格式物件模型會使用 ProviderDataSource 類別 （衍生自資料來源） 來公開此功能。 
 

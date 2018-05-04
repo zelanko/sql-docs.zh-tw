@@ -24,12 +24,11 @@ caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e3e466fe12371b18f11e8746f2649d0272e9114
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,19 +54,19 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  這是您要建立的連結伺服器名稱。 *server* 是 **sysname**，沒有預設值。  
   
  [  **@srvproduct=** ] **'***product_name***'**  
- 這是要當做連結伺服器加入的 OLE DB 資料來源產品名稱。 *product_name*是**nvarchar (**128**)**，預設值是 NULL。 如果**SQL Server**， *provider_name*， *data_source*，*位置*， *provider_string*，和*目錄*不需要指定。  
+ 這是要當做連結伺服器加入的 OLE DB 資料來源產品名稱。 *product_name*是**nvarchar (** 128 **)**，預設值是 NULL。 如果**SQL Server**， *provider_name*， *data_source*，*位置*， *provider_string*，和*目錄*不需要指定。  
   
  [  **@provider=** ] **'***provider_name***'**  
- 這是對應於這個資料來源之 OLE DB 提供者的唯一程式化識別碼 (PROGID)。 *provider_name*必須是唯一的安裝目前電腦上指定的 OLE DB 提供者。 *provider_name*是**nvarchar (**128**)**，預設值是 NULL; 但是，如果*provider_name*已省略，就使用 SQLNCLI。 (使用 SQLNCLI 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會重新導向至最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者)。OLE DB 提供者預期要登錄在登錄中的指定 PROGID。  
+ 這是對應於這個資料來源之 OLE DB 提供者的唯一程式化識別碼 (PROGID)。 *provider_name*必須是唯一的安裝目前電腦上指定的 OLE DB 提供者。 *provider_name*是**nvarchar (** 128 **)**，預設值是 NULL; 但是，如果*provider_name*已省略，就使用 SQLNCLI。 (使用 SQLNCLI 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會重新導向至最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者)。OLE DB 提供者預期要登錄在登錄中的指定 PROGID。  
   
  [  **@datasrc=** ] **'***data_source***'**  
- 這是資料來源的名稱，如 OLE DB 提供者所解譯。 *data_source*是**nvarchar (**4000**)**。 *data_source*被當做 DBPROP_INIT_DATASOURCE 屬性，以初始化 OLE DB 提供者。  
+ 這是資料來源的名稱，如 OLE DB 提供者所解譯。 *data_source*是**nvarchar (** 4000 **)**。 *data_source*被當做 DBPROP_INIT_DATASOURCE 屬性，以初始化 OLE DB 提供者。  
   
  [  **@location=** ] **'***位置***'**  
- 這是 OLE DB 提供者解譯的資料庫位置。 *位置*是**nvarchar (**4000**)**，預設值是 NULL。 *位置*作為 DBPROP_INIT_LOCATION 屬性，以初始化 OLE DB 提供者傳遞。  
+ 這是 OLE DB 提供者解譯的資料庫位置。 *位置*是**nvarchar (** 4000 **)**，預設值是 NULL。 *位置*作為 DBPROP_INIT_LOCATION 屬性，以初始化 OLE DB 提供者傳遞。  
   
  [  **@provstr=** ] **'***provider_string***'**  
- 這是 OLE DB 提供者特定的連接字串，用來識別唯一資料來源。 *provider_string*是**nvarchar (**4000**)**，預設值是 NULL。 *provstr*傳遞至 IDataInitialize，或設定為 DBPROP_INIT_PROVIDERSTRING 屬性以初始化 OLE DB 提供者。  
+ 這是 OLE DB 提供者特定的連接字串，用來識別唯一資料來源。 *provider_string*是**nvarchar (** 4000 **)**，預設值是 NULL。 *provstr*傳遞至 IDataInitialize，或設定為 DBPROP_INIT_PROVIDERSTRING 屬性以初始化 OLE DB 提供者。  
   
  針對建立連結的伺服器時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，可以使用 「 SERVER 關鍵字做為伺服器指定的執行個體 =*servername*\\*instancename*指定的特定執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *servername*所在電腦的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在執行，並*instancename*是特定執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者連接。  
   

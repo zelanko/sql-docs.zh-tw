@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1a4e48c3c66aab602ed8f76f39da952aa85f9a9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: caa220a7ca7f3fc66f90f7a44d5780343659e78c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="namingtemplate-element-assl"></a>NamingTemplate 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義從建構的父子式階層中如何命名層級[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)父項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義從建構的父子式階層中如何命名層級[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)父項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
-|資料類型和長度|String|  
+|資料類型和長度|字串|  
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
@@ -76,13 +76,13 @@ ms.lasthandoff: 01/08/2018
   
  清單中的每個名稱都會被視為範本，以便確保層級名稱的唯一性。 例如，使用 `Manager;Team Lead;Manager;Team Lead;Worker *` 就會產生 `Manager`、`Team Lead`、`Manager 01`、`Team Lead 01`、`Worker 05`、`Worker 06` 等層級名稱。  
   
- 請使用兩個星號 （*） 來包含星號 (\*) 層級命名範本的一部分名稱中的字元。  
+ 使用兩個星號 (**) 包含星號 (\*) 層級命名範本的一部分名稱中的字元。  
   
  對應目的父代的項目**NamingTemplate**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
-## <a name="see-also"></a>請參閱  
- [NamingTemplateTranslations 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/namingtemplatetranslations-element-assl.md)   
- [DimensionAttribute 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [NamingTemplateTranslations 元素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/namingtemplatetranslations-element-assl.md)   
+ [DimensionAttribute 資料類型&#40;ASSL&#41;](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

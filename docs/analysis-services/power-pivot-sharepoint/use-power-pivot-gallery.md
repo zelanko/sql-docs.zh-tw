@@ -1,27 +1,19 @@
 ---
-title: "使用 Power Pivot 圖庫 |Microsoft 文件"
-ms.custom: 
-ms.date: 08/31/2015
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 使用 Power Pivot 圖庫 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c6397bfd177a5d5901fdda29f4b34c9f6b7ffa7d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2369362b366e19886ff0e5c99fed97f033c67427
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-power-pivot-gallery"></a>使用 Power Pivot 圖庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -104,7 +96,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  在文件庫功能區中，按一下 **[文件]**。  
   
-3.  在 **[上載文件]**中，選取上傳選項，然後輸入您要上傳之檔案的名稱和位置。 文件庫設定會決定文件出現的位置。 您可能需要重新整理瀏覽器視窗來檢視最新加入的文件。  
+3.  在 **[上載文件]** 中，選取上傳選項，然後輸入您要上傳之檔案的名稱和位置。 文件庫設定會決定文件出現的位置。 您可能需要重新整理瀏覽器視窗來檢視最新加入的文件。  
   
 ##  <a name="newdocs"></a> 根據發行的 Power Pivot 活頁簿來建立新的報表或活頁簿  
  對於您發行到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，可以建立使用發行的活頁簿做為連接的資料來源之其他活頁簿或 Reporting Services 報表。  

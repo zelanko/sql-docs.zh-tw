@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d36bccdf210523924ef82b699add6b4c70b6d9a3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 9b0f79d4c783103493d9554d59161e8e16ed3229
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-property-example-property-vb"></a>型別屬性範例 （屬性） (VB)
 這個範例會示範[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性。 它是一種模型的公用程式清單的名稱和類型的集合，例如[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)，[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)等等。  

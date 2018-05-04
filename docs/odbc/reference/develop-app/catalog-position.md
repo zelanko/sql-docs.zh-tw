@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], catalog position
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8691e7a8f8e9f015f6c468f3deeb06973d017ab3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e68869d46c9b4470f3eb89500c36af5bfbc5de19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-position"></a>目錄位置
 識別項和分隔識別碼的其他方式中的目錄名稱位置到資料來源不同資料來源。 比方說，Xbase 資料來源中的目錄名稱是一個目錄，在 Microsoft® Windows®，資料表名稱 （這是檔案名稱） 來隔開反斜線 (\\)。 下圖示範這種狀況。  

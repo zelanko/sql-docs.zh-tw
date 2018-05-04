@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e44bdedd485fa212dc94e5d2eeece51317c56507
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6426eecd018a4e4fd143e6dcc48812571c3b26f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="source-property-ado-md"></a>來源屬性 (ADO MD)
 表示中的資料來源[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  

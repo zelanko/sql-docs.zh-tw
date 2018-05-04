@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e065f912b468091ee84201247fc9acbeb546b5e9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: b2b0998c905e286063cdec6fce3c98f8be2b6937
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-commands-in-general"></a>在一般的圖形命令
 資料成形定義的資料行的形狀**資料錄集**，資料行中的方式所表示的實體之間的關聯性**資料錄集**已填入資料。  

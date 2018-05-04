@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 27d719a9ab41bfa7594231462ea5c6318d95247d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附錄 b: ODBC 狀態轉換表
 本附錄的表格會顯示如何 ODBC 函數會造成的環境、 連接、 陳述式，以及描述項狀態的轉換。 環境、 連接、 陳述式或描述元的狀態通常會規定使用控制代碼 （環境、 連接、 陳述式或描述元） 的對應類型的函式可以呼叫時。 環境、 連接、 陳述式，以及描述項狀態重疊大約在下圖所示。 例如，完全重疊的連線狀態 C5 和 C6 且陳述式說明 S1 S12 透過資料來源而定，因為交易在不同的時間開始，針對不同的資料來源，並描述項狀態 D1i （隱含地配置描述元） 而定陳述式與描述項相關聯的狀態，而 state D1e （明確配置描述項） 是獨立狀態的任何陳述式。 如需每個狀態的說明，請參閱[環境轉換](../../../odbc/reference/appendixes/environment-transitions.md)，[連接轉換](../../../odbc/reference/appendixes/connection-transitions.md)，[陳述式轉換](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述元轉換](../../../odbc/reference/appendixes/descriptor-transitions.md)稍後在本附錄中。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **NS** -下一個狀態。 陳述式轉換會與相同的陳述式有尚未通過的非同步狀態。 例如，假設建立結果集的陳述式便會進入狀態 S11 從狀態 S1 因為**SQLExecDirect**傳回 SQL_STILL_EXECUTING。 在狀態 S11 NS 標記法表示陳述式轉換相同狀態 S1 中的陳述式來建立結果集。 如果**SQLExecDirect**傳回錯誤，陳述式維持狀態 S1 陳述式如果成功，會移至狀態 S5; 它需要資料時，如果陳述式會移至狀態 S8; 而如果它仍在執行中，它會維持狀態 S11。  
   
--   ***XXXXX***或**(*XXXXX*)** — SQLSTATE 是與 [轉換] 資料表中。Sqlstate 偵測到驅動程式管理員會放在括號。 函式會傳回 SQL_ERROR，並指定的 SQLSTATE，但不會變更狀態。 例如，如果**SQLExecute**之前，會呼叫**SQLPrepare**，它會傳回 SQLSTATE HY010 （函數順序錯誤）。  
+-   ***XXXXX***或 **(*XXXXX*)** — SQLSTATE 是與 [轉換] 資料表中。Sqlstate 偵測到驅動程式管理員會放在括號。 函式會傳回 SQL_ERROR，並指定的 SQLSTATE，但不會變更狀態。 例如，如果**SQLExecute**之前，會呼叫**SQLPrepare**，它會傳回 SQLSTATE HY010 （函數順序錯誤）。  
   
 > [!NOTE]  
 >  資料表不會顯示不會變更狀態的轉換資料表不相關的錯誤。 例如，當**SQLAllocHandle**環境狀態 E1 中呼叫，並傳回 SQLSTATE HY001 （記憶體配置錯誤），環境會維持狀態 E1; 這不會顯示在環境轉換資料表**SQLAllocHandle**。  

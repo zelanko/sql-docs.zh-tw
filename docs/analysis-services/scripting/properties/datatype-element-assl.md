@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34e1e88cef7b608bef7995849a170d8ce6ec8e70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c9a45fa75f92d38ab707e31c792cd7e388e1fab2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatype-element-assl"></a>DataType 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義資料類型相關聯的項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義相關聯元素的資料類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|無|  
@@ -66,10 +66,10 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  值**DataType**中定義**System.Data.OleDb.OleDbType**列舉型別。 不過，只有下表中的列舉值中的有效值**DataType**項目。  
   
-|ReplTest1|描述|  
+|Value|Description|  
 |-----------|-----------------|  
 |*BigInt*|64 位元帶正負號的整數。 此資料類型會對應至**Int64**中的資料類型[!INCLUDE[msCoName](../../../includes/msconame-md.md)]OLE DB 中的.NET Framework 和的 DBTYPE_I8 資料類型。|  
-|*Bool*|布林值。 此資料類型會對應至**布林**.NET Framework 和 OLE DB 中的 DBTYPE_BOOL 資料類型中的資料型別。|  
+|*bool*|布林值。 此資料類型會對應至**布林**.NET Framework 和 OLE DB 中的 DBTYPE_BOOL 資料類型中的資料型別。|  
 |*貨幣*|貨幣值，範圍從-2<sup>63</sup> （或-922,337,203,685,477.5808） 到 2<sup>63</sup>-1 （或 + 922337203685，477.5807），正確率為貨幣單位的千分之十。 此資料類型會對應至**十進位**.NET Framework 和 OLE DB 中的 DBTYPE_CY 資料類型中的資料型別。|  
 |*日期*|儲存成雙精確度浮點數的日期資料。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 此資料類型會對應至**DateTime** .NET Framework 和 OLE DB 中的 DBTYPE_DATE 資料類型中的資料型別。|  
 |*Double*|在 -1.79E +308 到 1.79E +308 範圍中的雙精確度浮點數。 此資料類型會對應至**Double** .NET Framework 和 OLE DB 中的 DBTYPE_R8 資料類型中的資料型別。|  
@@ -78,12 +78,12 @@ ms.lasthandoff: 01/08/2018
 |*SmallInt*|16 位元帶正負號的整數。 此資料類型會對應至**Int16** .NET Framework 和 OLE DB 中的 DBTYPE_I2 資料類型中的資料型別。|  
 |*TinyInt*|8 位元帶正負號的整數。 此資料類型會對應至**SByte** .NET Framework 和 OLE DB 中的 DBTYPE_I1 資料類型中的資料型別。|  
 |*UnsignedBigInt*|64 位元不帶正負號的整數。 此資料類型會對應至**UInt64** .NET Framework 和 OLE DB 中的 DBTYPE_UI8 資料類型中的資料類型。|  
-|*UnsignedInt*|32 位元不帶正負號的整數。 此資料類型會對應至**UInt32** .NET Framework 和 OLE DB 中的 DBTYPE_UI4 資料類型中的資料型別。|  
+|*unsignedInt*|32 位元不帶正負號的整數。 此資料類型會對應至**UInt32** .NET Framework 和 OLE DB 中的 DBTYPE_UI4 資料類型中的資料型別。|  
 |*UnsignedSmallInt*|16 位元不帶正負號的整數。 此資料類型會對應至**UInt16** .NET Framework 和 OLE DB 中的 DBTYPE_UI2 資料類型中的資料型別。|  
 |*WChar*|Unicode 字元的以 Null 結束資料流。 此資料類型會對應至**字串**.NET Framework 和 OLE DB 中的 DBTYPE_WSTR 資料類型中的資料型別。|  
 |*繼承*|資料型別**DataItem**中包含[來源](../../../analysis-services/scripting/properties/source-element-measure-assl.md)元素**量值**項目。<br /><br /> 注意： 僅適用於**量值**項目。|  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

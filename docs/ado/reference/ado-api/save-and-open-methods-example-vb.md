@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34428a67a557043e33b82eae1babb2122b6610bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: aee4dc09317ec7b1b2cb6f800e622f5330d10730
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-and-open-methods-example-vb"></a>儲存並開啟方法的範例 (VB)
 這三個範例示範如何[儲存](../../../ado/reference/ado-api/save-method.md)和[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法可以一起使用。  

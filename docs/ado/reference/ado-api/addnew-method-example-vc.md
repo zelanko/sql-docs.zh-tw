@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ee204cdcd73fcd5d7311454e4258c5f07a3ceac
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5cf7c65a5b0886c38cd8483b4d7172b43eb78e5e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="addnew-method-example-vc"></a>AddNew 方法範例 （VC + +）
 這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法來建立具有指定名稱的新記錄。  

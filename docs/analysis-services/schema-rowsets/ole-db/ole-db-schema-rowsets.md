@@ -1,15 +1,15 @@
 ---
-title: "OLE DB 結構描述資料列集 |Microsoft 文件"
-ms.custom: 
+title: OLE DB 結構描述資料列集 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - OLE DB schema rowsets
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: 
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 59d17cb1345f7ba32a2cbaac27f5ec002aadfa40
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ca56d8c065f45b308b7c22e1ad951b8cfec8583e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 結構描述資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者支援下列 OLE DB 結構描述資料列集。 使用**DISCOVER_ENUMERATORS**含有資料列集[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法來檢查特定資料來源提供者是否支援資料列集。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者支援下列 OLE DB 結構描述資料列集。 使用**DISCOVER_ENUMERATORS**含有資料列集[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法來檢查特定資料來源提供者是否支援資料列集。  
   
  您也可以在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 網站上於 MSDN® Library 的「OLE DB 程式設計人員參考」部分中，藉由搜尋「結構描述資料列集」主題，來尋找有關這些資料列集的詳細資訊。  
   
@@ -66,7 +65,7 @@ ms.lasthandoff: 02/15/2018
 |**DBSCHEMA_TABLE_CONSTRAINTS**|識別在目錄中所定義且由指定使用者所擁有的資料表條件約束。|  
 |**DBSCHEMA_TABLE_PRIVILEGES**|識別在目錄中所定義資料表之資料行上的權限，並由指定使用者取得或授與這些權限。|  
 |**DBSCHEMA_TABLE_STATISTICS**|描述在提供者中可用之資料表上的統計資料集。<br /><br /> 此資料列集不相關**統計資料**資料列集。|  
-|[DBSCHEMA_TABLES Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) <sup>1</sup>|識別的量值群組和維度內公開為資料表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
+|[DBSCHEMA_TABLES 資料列集](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) <sup>1</sup>|識別的量值群組和維度內公開為資料表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
 |**DBSCHEMA_TABLES_INFO** <sup>1</sup>|識別在目錄中所定義且可由指定使用者存取的資料表 (包括檢視表)。|  
 |**DBSCHEMA_TRANSLATIONS**|識別在目錄中所定義且可由指定使用者存取的字元翻譯。|  
 |**DBSCHEMA_TRUSTEE**|列舉資料來源的信任項。|  

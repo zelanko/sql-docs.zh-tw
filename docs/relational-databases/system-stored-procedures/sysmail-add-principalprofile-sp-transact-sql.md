@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8811ab095afe55a43b9b018e083d97f51525c2df
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 177f6ea8ab1fa62c61b56b8e020fbb8288aad7c5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  資料庫使用者或角色中的識別碼**msdb**之關聯的資料庫。 *principal_id*是**int**，預設值是 NULL。 任一*principal_id*或*principal_name*必須指定。 A *principal_id*的**0** ，這個設定檔的公用設定檔，在資料庫中的所有主體授與存取權。  
   
  [ **@principal_name** = ] **'***principal_name***'**  
- 資料庫使用者或角色中的名稱**msdb**之關聯的資料庫。 *principal_name*是**sysname**，預設值是 NULL。 任一*principal_id*或*principal_name*必須指定。 A *principal_name*的**'public'** ，這個設定檔的公用設定檔，在資料庫中的所有主體授與存取權。  
+ 資料庫使用者或角色中的名稱**msdb**之關聯的資料庫。 *principal_name*是**sysname**，預設值是 NULL。 任一*principal_id*或*principal_name*必須指定。 A *principal_name*的 **'public'** ，這個設定檔的公用設定檔，在資料庫中的所有主體授與存取權。  
   
  [ **@profile_id** =] *profile_id*  
  這是關聯的設定檔識別碼。 *profile_id*是**int**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  

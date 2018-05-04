@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>什麼是 SQL Server 機器學習服務？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server 機器學習服務是內嵌、 預測分析和資料科學引擎，�
 有兩個 SQL Server 中使用機器學習功能的選項： 
 
 + [**SQL Server 機器學習服務 （資料庫）** ](r/sql-server-r-services.md) database engine 執行個體，計算引擎完全整合與 database engine 中運作。 大部分安裝都將此選項。
-+ [**SQL Server 機器學習伺服器 （獨立）** ](r/r-server-standalone.md)為非 SQL 安裝。 雖然您可以使用 SQL Server 安裝程式來安裝伺服器，它就完全分開 SQL Server。 在功能上，它相當於非 SQL [Microsoft 機器學習 Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
++ [**SQL Server 機器學習伺服器 （獨立）** ](r/r-server-standalone.md)是機器學習 Server for Windows 的執行與 database engine 無關。 雖然您可以使用 SQL Server 安裝程式來安裝伺服器，此功能不是執行個體感知的。 在功能上，它相當於非 SQL-Server [Microsoft 機器學習 Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
 
 ## <a name="r-and-python-packages"></a>R 和 Python 封裝
 

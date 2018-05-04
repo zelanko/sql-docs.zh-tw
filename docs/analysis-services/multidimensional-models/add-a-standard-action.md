@@ -1,31 +1,23 @@
 ---
-title: "加入標準動作 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 加入標準動作 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e19398c0e1507273abf218b4a49255bd8ce910dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-standard-action"></a>加入標準動作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以使用 Cube 設計師的 [動作] 檢視將動作加入資料庫。 該檢視可透過 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取。 在建立動作之後，您必須先重新處理相關的 Cube，使用者才能使用動作。 如需相關資訊，請參閱 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
+  您可以使用 Cube 設計師的 [動作] 檢視將動作加入資料庫。 該檢視可透過 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取。 在建立動作之後，您必須先重新處理相關的 Cube，使用者才能使用動作。 如需相關資訊，請參閱 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
   
 ### <a name="to-create-an-action"></a>建立動作  
   
@@ -33,9 +25,9 @@ ms.lasthandoff: 02/15/2018
   
 2.  在工具列上，按一下 **[新增動作]** 圖示，然後在運算式窗格中執行下列動作：  
   
-    -   在 **[名稱]**中，輸入動作的名稱。  
+    -   在 **[名稱]** 中，輸入動作的名稱。  
   
-    -   從 [目標類型] 下拉式清單中，選取您要附加動作的物件類型。 您在 **[目標類型]** 中選取的物件決定 **[目標物件]**中可用的物件，以及您可以選取的類型。 下表列出每種目標類型的有效 **[目標物件]** 選項。  
+    -   從 [目標類型] 下拉式清單中，選取您要附加動作的物件類型。 您在 **[目標類型]** 中選取的物件決定 **[目標物件]** 中可用的物件，以及您可以選取的類型。 下表列出每種目標類型的有效 **[目標物件]** 選項。  
   
         |如果您選取下列目標類型|可在 [目標物件] 中選取下列項目|  
         |---------------------------------------------|---------------------------------------------------|  
@@ -48,9 +40,9 @@ ms.lasthandoff: 02/15/2018
         |Level|選取單一層級。 此動作只會與層級物件相關聯。|  
         |層級成員|選取單一層級。 此動作會與所選層級的所有成員相關聯。|  
   
-    -   在 **[目標物件]**中，按一下文字方塊右邊的箭號，然後在開啟的樹狀檢視中，按一下您要附加動作的物件，再按一下 **[確定]**   
+    -   在 **[目標物件]** 中，按一下文字方塊右邊的箭號，然後在開啟的樹狀檢視中，按一下您要附加動作的物件，再按一下 **[確定]**   
   
-    -   (選擇性)。在 **[條件]**中，建立 MDX 運算式以限制動作的目標。 您可以手動輸入運算式，或從 **[中繼資料]** 和 **[函數]** 索引標籤拖曳項目  
+    -   (選擇性)。在 **[條件]** 中，建立 MDX 運算式以限制動作的目標。 您可以手動輸入運算式，或從 **[中繼資料]** 和 **[函數]** 索引標籤拖曳項目  
   
     -   從 [類型] 下拉式清單中，選取您要建立的動作類型。 下表列出可用的動作類型。  
   
@@ -62,7 +54,7 @@ ms.lasthandoff: 02/15/2018
         |Statement|執行 OLE DB 命令。|  
         |URL|在網際網路瀏覽器中顯示網頁。|  
   
-    -   在 **[動作運算式]**中，建立定義動作的運算式。 運算式必須評估為字串。 您可以手動輸入運算式，或從 **[中繼資料]** 和 **[函數]** 索引標籤拖曳項目  
+    -   在 **[動作運算式]** 中，建立定義動作的運算式。 運算式必須評估為字串。 您可以手動輸入運算式，或從 **[中繼資料]** 和 **[函數]** 索引標籤拖曳項目  
   
 3.  (選擇性)。展開 **[其他屬性]**，然後執行下列其中一個步驟：  
   
@@ -74,16 +66,16 @@ ms.lasthandoff: 02/15/2018
         |批次|此動作會以批次作業執行。|  
         |開啟時|此動作會在使用者開啟 Cube 時執行。|  
   
-    -   在 **[應用程式]**中，輸入與動作相關聯的應用程式名稱。 例如，如果您建立將使用者導向特定網站的動作，與動作相關聯的應用程式應該是 Microsoft Internet Explorer 或其他網頁瀏覽器。  
+    -   在 **[應用程式]** 中，輸入與動作相關聯的應用程式名稱。 例如，如果您建立將使用者導向特定網站的動作，與動作相關聯的應用程式應該是 Microsoft Internet Explorer 或其他網頁瀏覽器。  
   
         > [!NOTE]  
         >  除非用戶端應用程式明確限制結構描述資料列集僅傳回與在 [應用程式]中指定的名稱相符的動作，否則不會將專屬動作傳回給伺服器。  
   
-    -   在 [動作內容] 中，如果您使用 URL 類型，請以引號括住網際網路位址，例如 "http://www.adventure-works.com" 。  
+    -   在**動作內容**，如果您使用 URL 類型，引號括住網際網路位址，例如，"http://www.adventure-works.com"。  
   
-    -   在 **[描述]**中，輸入動作的描述。  
+    -   在 **[描述]** 中，輸入動作的描述。  
   
-    -   在 **[標題]**中，輸入標題或評估為標題的 MDX 運算式。 起始動作時，會向使用者顯示此標題。 如果您沒有指定標題，就會改用動作的名稱。  
+    -   在 **[標題]** 中，輸入標題或評估為標題的 MDX 運算式。 起始動作時，會向使用者顯示此標題。 如果您沒有指定標題，就會改用動作的名稱。  
   
     -   從 [標題是 MDX] 下拉式清單中，指定標題是否為 MDX。 此欄位會向伺服器指出是否要將 **[標題]** 的內容評估為 MDX 運算式。  
   

@@ -1,40 +1,19 @@
 ---
-title: "處理物件 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- errors [XML for Analysis]
-- objects [XML for Analysis]
-- XML for Analysis, objects
-- XMLA, partitions
-- partitions [Analysis Services], XML for Analysis
-- XML for Analysis, partitions
-- writeback [Analysis Services], XML for Analysis
-- out-of-line bindings
-- processing objects [XML for Analysis]
-- XMLA, objects
-ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: 
-author: Minewiskan
+title: 處理物件 (XMLA) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 58150b6b74fd3a58fb09f44818b724214a64b8b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-objects-xmla"></a>處理物件 (XMLA)
   在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 處理是在步驟或一系列的步驟將資料轉換成供商務分析資訊。 處理會因物件類型而異，但是處理永遠都是將資料轉換為資訊的一部分。  
@@ -75,14 +54,14 @@ ms.lasthandoff: 02/15/2018
 |*ProcessClearStructureOnly*|採礦結構|  
 |*ProcessScriptCache*|Cube|  
   
- 如需有關處理[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件，請參閱[處理多維度模型 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 如需有關處理[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件，請參閱[處理多維度模型&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
 ## <a name="specifying-objects-to-be-processed"></a>指定要處理的物件  
  [物件](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)屬性**程序**命令包含要處理之物件的物件識別碼。 中，可以指定只有一個物件**程序**命令，但是處理物件也會處理任何子物件。 例如，在 Cube 處理序中處理量值群組會處理該量值群組的所有資料分割，然而處理資料庫處理序則會處理資料庫包含的所有物件，包括 Cube、維度和採礦結構。  
   
  如果您設定**ProcessAffectedObjects**屬性**程序**命令為 true 時，任何相關的處理指定的物件所影響的物件也會處理。 例如，如果維度以累加方式更新使用*ProcessUpdate*處理中的選項**程序**命令時，其彙總都會變成無效，因為成員的任何磁碟分割正在加入或刪除也會處理[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如果**ProcessAffectedObjects**設為 true。 在這個情況下，單一**程序**命令可以處理多個物件上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體，但[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]決定哪些物件中指定的單一物件除了**程序**也必須處理命令。  
   
- 不過，您可以使用多個同時處理多個物件，例如維度、**程序**命令中**批次**命令。 批次作業進行更細微的層級控制的序列或平行處理的物件上提供[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]比使用的執行個體**ProcessAffectedObjects**屬性，並讓您調整您的處理方法更大[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 如需有關執行批次作業的詳細資訊，請參閱[執行批次作業 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
+ 不過，您可以使用多個同時處理多個物件，例如維度、**程序**命令中**批次**命令。 批次作業進行更細微的層級控制的序列或平行處理的物件上提供[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]比使用的執行個體**ProcessAffectedObjects**屬性，並讓您調整您的處理方法更大[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 如需有關執行批次作業的詳細資訊，請參閱[執行批次作業&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)。  
   
 ## <a name="specifying-out-of-line-bindings"></a>指定非正規繫結  
  如果**程序**命令未包含**批次**命令，您可以選擇性地指定-單行中的繫結[繫結](../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md)， [資料來源](../../analysis-services/xmla/xml-elements-properties/datasource-element-xmla.md)，和[DataSourceView](../../analysis-services/xmla/xml-elements-properties/datasourceview-element-xmla.md)屬性**程序**命令處理物件。 單行繫結就是資料來源、 資料來源檢視，以及繫結只會在執行期間的存在其他物件的參考**程序**命令，而且會覆寫任何現有的繫結相關聯正在處理的物件。 如果未指定非正規 (out-of-line) 繫結，會使用與要處理的物件目前關聯的繫結。  
@@ -93,7 +72,7 @@ ms.lasthandoff: 02/15/2018
   
 -   使用資料流程工作中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]處理維度、 採礦模型或資料分割時提供資料。  
   
- 非正規繫結 (out-of-line) 是以 Analysis Services 指令碼語言 (ASSL) 的一部分來描述。 如需有關 ASSL 中-單行繫結的詳細資訊，請參閱[資料來源和繫結 &#40;SSAS 多維度 &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ 非正規繫結 (out-of-line) 是以 Analysis Services 指令碼語言 (ASSL) 的一部分來描述。 如需有關 ASSL 中-單行繫結的詳細資訊，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ### <a name="incrementally-updating-partitions"></a>以累加方式更新資料分割  
  以累加方式更新已經處理的資料分割通常需要非正規繫結 (out-of-line)，因為針對資料分割所指定的繫結，會參考已經在資料分割中彙總的事實資料表資料。 以累加方式更新已經處理的分割區使用時**程序**命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行下列動作：  
@@ -104,7 +83,7 @@ ms.lasthandoff: 02/15/2018
   
 -   以現有選取的資料分割，合併暫存資料分割。  
   
- 如需有關合併資料分割使用 XML for Analysis (XMLA) 的詳細資訊，請參閱[合併分割區 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
+ 如需有關合併資料分割使用 XML for Analysis (XMLA) 的詳細資訊，請參閱[合併資料分割&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)。  
   
 ## <a name="handling-processing-errors"></a>處理在處理時發生的錯誤  
  [ErrorConfiguration](../../analysis-services/xmla/xml-elements-properties/errorconfiguration-element-xmla.md)屬性**程序**命令可讓您指定如何處理在處理物件時發生錯誤。 例如，處理維度時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在索引鍵屬性的索引鍵資料行中遇到重複的值。 由於屬性索引鍵必須是唯一的，所以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會捨棄重複的記錄。 根據[KeyDuplicate](../../analysis-services/scripting/properties/keyduplicate-element-assl.md)屬性**ErrorConfiguration**，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]無法：  

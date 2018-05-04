@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11fe64054cef55d1098c293f5acc0ade4540f74c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4b83428984f79f625b6b49bcce288710787239b0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="seek-method"></a>搜尋方法
 搜尋的索引[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)來快速找出符合指定的值，並變更該資料列目前資料列位置的資料列。  
@@ -48,7 +47,7 @@ recordset.Seek KeyValues, SeekOption
  A [SeekEnum](../../../ado/reference/ado-api/seekenum.md)值，指定要對索引資料行和對應的比較類型*Parentkeyvalue*。  
   
 ## <a name="remarks"></a>備註  
- 使用**搜尋**方法搭配[索引](../../../ado/reference/ado-api/index-property.md)如果基礎提供者在支援索引屬性**資料錄集**物件。 使用[支援](../../../ado/reference/ado-api/supports-method.md)**(adSeek)**方法，以判斷基礎提供者是否支援**搜尋**，而**Supports(adIndex)**若要判斷提供者是否支援索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支援**搜尋**和**索引**。)  
+ 使用**搜尋**方法搭配[索引](../../../ado/reference/ado-api/index-property.md)如果基礎提供者在支援索引屬性**資料錄集**物件。 使用[支援](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 方法，以判斷基礎提供者是否支援**搜尋**，而**Supports(adIndex)** 若要判斷提供者是否支援索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支援**搜尋**和**索引**。)  
   
  如果**搜尋**找不到所需的資料列，沒有任何錯誤發生時，會和資料列位於結尾**資料錄集**。 設定**索引**所要的索引，然後再執行這個方法的屬性。  
   

@@ -27,7 +27,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="setclob-method-int-javaioreader-long"></a>setClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定的參數設定到指定的讀取器物件，這是給定的字元數。  
+  設定指定的參數為指定的 Reader 物件，該物件長度為指定的字元數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,24 +41,24 @@ public final void setClob(int parameterIndex,
 #### <a name="parameters"></a>參數  
  *parameterIndex*  
   
- **Int** ，指出參數索引。  
+ 指出參數索引的 **int**。  
   
- *讀取器*  
+ *reader*  
   
  讀取器物件。  
   
- *長度*  
+ *length*  
   
- A**長**，指出參數值中的字元數目。  
+ 指出參數值中字元數的 **long**。  
   
-## <a name="remarks"></a>備註  
- SetClob 方法 java.sql.PreparedStatement 介面中所指定此 setClob 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 setClob 方法由 java.sql.PreparedStatement 介面中的 setClob 方法指定。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [setClob 方法&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
+ [setClob 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

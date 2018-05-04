@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2022f1a0e034741a7259cef2613ce69361285a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types"></a>SQL 資料類型
 每個 DBMS 定義自己的 SQL 型別。 每個 ODBC 驅動程式會顯示只有這些 SQL 資料型別相關聯的 DBMS 所定義。 ODBC 定義的 SQL 類型識別項類型的資訊關於如何將驅動程式對應 DBMS SQL 和驅動程式將 DBMS SQL 類型對應至它自己的驅動程式專屬 SQL 類型識別項的方式透過呼叫傳回**SQLGetTypeInfo**。 驅動程式也會傳回 SQL 資料類型描述的資料行及透過呼叫參數的資料型別時**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，和**SQLSpecialColumns**。  
@@ -92,7 +91,7 @@ _INTERVAL_MINUTE_TO_SECOND [7]|INTERVAL MINUTE (*p*) 第二個 (*q*)|分鐘/之�
   
  [5] 取決於實作 SQL_FLOAT 的有效位數可以是 24 或 53： 如果它是 24，SQL_FLOAT 資料型別等同於 SQL_REAL;如果是 53，SQL_FLOAT 資料型別是 SQL_DOUBLE 相同。  
   
- [6] 在 ODBC 3*.x*，SQL 日期、 時間和時間戳記資料類型是 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，分別; 在 ODBC 2。*x*，資料類型為 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP。  
+ [6] 在 ODBC 3 *.x*，SQL 日期、 時間和時間戳記資料類型是 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，分別; 在 ODBC 2。*x*，資料類型為 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP。  
   
  [7] 如需有關間隔 SQL 資料類型的詳細資訊，請參閱[間隔資料型別](../../../odbc/reference/appendixes/interval-data-types.md)稍後在本附錄 > 一節。  
   

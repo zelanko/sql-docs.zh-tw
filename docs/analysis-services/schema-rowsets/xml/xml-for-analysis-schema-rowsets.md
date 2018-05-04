@@ -1,15 +1,15 @@
 ---
-title: "XML for Analysis 結構描述資料列 |Microsoft 文件"
-ms.custom: 
+title: XML for Analysis 結構描述資料列 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0bc51b8f70f768cab5415c60023411c6b744ce6a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis 結構描述資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者所含的結構描述資料列集會傳回有關伺服器狀態、活動和物件的中繼資料。 如果您要開發連接到有可變結構和特性之 Analysis Services 模型的用戶端應用程式，需要擷取中繼資料。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者所含的結構描述資料列集會傳回有關伺服器狀態、活動和物件的中繼資料。 如果您要開發連接到有可變結構和特性之 Analysis Services 模型的用戶端應用程式，需要擷取中繼資料。  
   
  結構描述資料列集還提供內部處理序和作業的洞察能力，可協助您監視伺服器並解決問題。 若要加強支援特定管理工作，您可以對大多數的結構描述資料列集執行動態管理檢視 (DMV) 查詢。 DMV 查詢會以可讀取、表格格式傳回結果，您可以在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中檢視它們。  
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 02/15/2018
 |[DISCOVER_DIMENSION_STAT 資料列集](../../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|傳回指定之維度的統計資料。|  
 |[DISCOVER_ENUMERATORS 資料列集](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|針對特定的資料來源，傳回 XMLA 所支援之列舉值 (Enumerator) 的名稱、資料類型和列舉 (Enumeration) 值的清單。|  
 |[DISCOVER_JOBS 資料列集](../../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|提供在伺服器上執行之作用中作業的相關資訊。|  
-|[DISCOVER_KEYWORDS 資料列集 &#40;XMLA &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|傳回 XMLA 提供者所保留關鍵字的相關資訊。|  
+|[DISCOVER_KEYWORDS 資料列集 & #40;XMLA & #41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|傳回 XMLA 提供者所保留關鍵字的相關資訊。|  
 |[DISCOVER_LITERALS 資料列集](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|傳回 XMLA 提供者所支援常值的相關資訊，包括資料類型和值。|  
 |[DISCOVER_LOCATIONS 資料列集](../../../analysis-services/schema-rowsets/xml/discover-locations-rowset.md)|傳回備份檔案的內容資訊。|  
 |[DISCOVER_LOCKS 資料列集](../../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|提供有關伺服器上目前永久性鎖定的資訊。|  
@@ -80,7 +79,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Analysis Services 中的 XMLA 進行開發](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [使用動態管理檢視 &#40; Dmv &#41;監視 Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [使用動態管理檢視&#40;Dmv&#41;監視 Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [從分析資料來源擷取中繼資料](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

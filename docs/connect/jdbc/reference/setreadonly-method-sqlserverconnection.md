@@ -32,10 +32,10 @@ ms.lasthandoff: 04/16/2018
 # <a name="setreadonly-method-sqlserverconnection"></a>setReadOnly 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將這[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)在唯讀模式下，當做 JDBC 驅動程式，啟用資料庫最佳化提示的物件。  
+  切換這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件成為唯讀模式，當作 JDBC 驅動程式啟用資料庫最佳化的提示。  
   
 > [!NOTE]  
->  這個方法不支援[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支援這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,14 +45,14 @@ public void setReadOnly(boolean readOnly)
 ```  
   
 #### <a name="parameters"></a>參數  
- *ReadOnly*  
+ *readOnly*  
   
- **true**連線是否處於唯讀模式。 否則為 **false**。  
+ 如果連線應處於唯讀模式則為 **true**。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  SetReadOnly 方法 java.sql.Connection 介面中所指定此 setReadOnly 方法。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a158bbcdd77e4a7e1e026db793b46e306d8c6fbe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-mdx"></a>運算式 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
  在 MDX 中，純量函數會傳回評估內容內的單一值。 因為不只會在單一資料元素上，也會反覆在一群資料元素 (例如，資料格或成員) 上評估大部份的 MDX 運算式、陳述式及指令碼，所以此特性對了解 MDX 如何解析純量函數很重要。 但是，在評估純量函數時，此函數一般會檢閱單一資料元素。  
   
  物件識別碼  
- 因為多維度資料的本質，所以 MDX 是物件導向的。 物件識別碼在 MDX 中視為簡單運算式。 如需有關識別碼的詳細資訊，請參閱[識別碼 &#40;MDX &#41;](../mdx/identifiers-mdx.md).  
+ 因為多維度資料的本質，所以 MDX 是物件導向的。 物件識別碼在 MDX 中視為簡單運算式。 如需有關識別碼的詳細資訊，請參閱[識別碼&#40;MDX&#41;](../mdx/identifiers-mdx.md)。  
   
  複雜運算式可以從上述項目利用運算子聯結的組合來建立。  
   
@@ -89,7 +88,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[使用 Cube 及 Subcube 運算式](../mdx/using-cube-and-subcube-expressions.md)|描述 Cube 及 Subcube 運算式。|  
 |[使用維度運算式](../mdx/using-dimension-expressions.md)|定義維度運算式。|  
@@ -99,8 +98,8 @@ WHERE [Product].[Category].[Bikes]
 |[使用純量運算式](../mdx/using-scalar-expressions.md)|定義純量運算式。|  
 |[使用空白值](../mdx/working-with-empty-values.md)|描述什麼是空白值，以及如何處理這類的值。|  
   
-## <a name="see-also"></a>請參閱  
- [MDX 語言參考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 語言參考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查詢基礎觀念 & #40;Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

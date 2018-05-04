@@ -1,16 +1,16 @@
 ---
 title: EXP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EXP_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 401560f260064a7d09ab2e34dde01a21aa655d9c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab4474d580a8722f44459ff7f2c753e4588f1a3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +58,7 @@ EXP ( float_expression )
   
  數字的指數，是提升為數字乘冪的常數 **e**。 例如，EXP(1.0) = e^1.0 = 2.71828182845905 和 EXP(10) = e^10 = 22026.4657948067。  
   
- 一個數字之自然對數的指數，就是該數字本身：EXP (LOG (*n*)) = *n*。 數字之指數的自然對數就是該數字本身：LOG (EXP (*n*)) = *n*。  
+ 數字之自然對數的指數就是該數字本身：EXP (LOG (*n*)) = *n*。 數字之指數的自然對數就是該數字本身：LOG (EXP (*n*)) = *n*。  
   
 ## <a name="examples"></a>範例  
   
@@ -127,7 +128,7 @@ SELECT EXP( LOG(20)), LOG( EXP(20));
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)   
  [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
   

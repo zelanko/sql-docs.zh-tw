@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], serialization
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aa983da3ad05b6f4c4ac29fbdf986a7a8a350e34
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7262105a1f6911affb56464bf4bc410cceabf71f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="serializability"></a>可序列化能力
 在理想情況下，應該是交易*序列化*。 交易都稱為是否同時執行交易的結果相同的循序執行這些結果可序列化 — 也就是一個接著一個。 它並不重要交易第一次，執行只有該結果並不會反映任何混用的交易。  

@@ -19,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b622f8cda931a0c15c1ff97dbf33ffdb9a9441be
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f8c8fdcbbaab14a09114a435895a0ef2a2b79757
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列舉常數
 若要協助偵錯，ADOX 列舉常數會列出每個常數的值。 不過，這個值是單純諮詢，，而且可能會從一個版本 ADOX 變更到另一個。 您的程式碼應該僅相依於名稱，而不是實際值、 列舉常數。  

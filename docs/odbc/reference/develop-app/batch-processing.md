@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], batch processing
 - batches [ODBC], interoperable applications
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 57c1b3be6f0a2ff82a56001b7e2c405301e27c6a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bc676647466f65fcbf0b8b8728d40cb84b76acf0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="batch-processing"></a>批次處理
 支援的 SQL 陳述式的批次不廣泛，，因此可互通的應用程式的使用方式有條件地或完全無法執行。 如需詳細資訊，請參閱[執行批次](../../../odbc/reference/develop-app/executing-batches.md)。

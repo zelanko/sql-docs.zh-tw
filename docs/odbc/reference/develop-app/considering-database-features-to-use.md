@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a980d3f10b95af3f75945ad945bd5afd78ed5edf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dcffea5ac03b79a6eb861cdf5a05b864e4a6e534
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="considering-database-features-to-use"></a>考慮要使用的資料庫功能
 已知的互通性的基本層級之後，您必須考量應用程式所使用的資料庫功能。 例如，哪些 SQL 陳述式將應用程式執行？ 應用程式會使用可捲動資料指標？ 交易嗎？ 程序？ Long 資料嗎？ 如需所有 Dbms 可能不都支援哪些功能的想法，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，和[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函式描述，以及[附錄 c: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 應用程式所需的功能可能會排除某些 Dbms 從目標 Dbms 的清單。 它們也可能會顯示應用程式可以輕鬆地目標許多 Dbms。  

@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d1529314e0e14f1cae6de34196961a22b9e4bef4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 662a8104c52d3f9b0053e2a75e880dbf4dd7472b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>提供者和 DefaultDatabase 屬性範例 （VC + +）
 這個範例會示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)開啟三個屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，使用不同的提供者。 它也會使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)屬性來設定的預設資料庫的 Microsoft ODBC 提供者。  

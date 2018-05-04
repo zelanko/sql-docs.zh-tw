@@ -22,12 +22,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e6654a9cad20616f0affc93548b3506718d85426
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 21ba08660b51b64542535ad8c37a4cf8a16a9e25
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>資料空間物件和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LIKE predicate [ODBC]
 - escape sequences [ODBC], LIKE predicate
@@ -20,12 +20,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6b47a12dbb25eaea1455a928892d6a1cd4f380c9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4a5615fc4d38f4b74ffa1805576fe836ad9eb2fb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="like-predicate-escape-character"></a>像述詞的逸出字元
 在**像**述詞，百分比符號 （%） 比對零個或多個任意字元和底線 (_) 符合任何一個字元。 符合實際的百分比符號或底線中**像**述詞，逸出字元必須放在之前的百分比符號或底線。 定義的逸出序列**像**述詞的逸出字元是：  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf8654f4851f2d0ed93437be884057112c26a968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a38b4c3ce271661373fb7b809fdf8c80e7ff19ec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>字串函數
 下表列出字串操作函數。 應用程式就可以判斷驅動程式支援的字串函式呼叫**SQLGetInfo**與*資訊類型*SQL_STRING_FUNCTIONS。  
@@ -64,5 +63,5 @@ ms.lasthandoff: 04/16/2018
 |**RTRIM (** *string_exp* **)** (ODBC 1.0)|傳回的字元*string_exp*使用尾端空格移除。|  
 |**SOUNDEX (** *string_exp* **)** (ODBC 2.0)|傳回資料來源 – 相關的字元字串，代表文字中的音效*string_exp*。 例如，SQL Server 會傳回 4 個數字的 SOUNDEX 代碼。Oracle 會傳回每個字的注音標示表示。|  
 |**空間 (** *計數* **)** (ODBC 2.0)|傳回字元字串，其中包含*計數*空格。|  
-|**子字串 (** *string_exp*，*啟動*，長度**)** (ODBC 1.0)|傳回字元字串，衍生自*string_exp*所指定的字元位置開始*啟動*如*長度*字元。|  
+|**子字串 (** *string_exp*，*啟動*，長度 **)** (ODBC 1.0)|傳回字元字串，衍生自*string_exp*所指定的字元位置開始*啟動*如*長度*字元。|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|傳回字串中的相等*string_exp*，所有小寫字元轉換成大寫。|

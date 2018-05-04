@@ -25,13 +25,12 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3abbb6f6ac82cfba212f168fd4697f8c20c7f9d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b7e340764f55d8ec8de435a0b61caf42f9d5d963
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- Proxy 認證將稱為**# # xp_cmdshell_proxy_account # #**。  
+ Proxy 認證將稱為 **# # xp_cmdshell_proxy_account # #**。  
   
  使用 NULL 選項執行時**sp_xp_cmdshell_proxy_account**刪除 proxy 認證。  
   

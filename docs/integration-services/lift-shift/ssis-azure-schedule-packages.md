@@ -1,30 +1,31 @@
 ---
-title: "排程 Azure 上的 SSIS 套件執行 | Microsoft Docs"
-ms.date: 01/16/2018
+title: 排程 Azure 上的 SSIS 套件執行 | Microsoft Docs
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 94d0bb3462fe2dac81194e881521299f2b8c6e38
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>排程 Azure 上的 SSIS 套件執行
 您可以選擇下列其中一個排程選項，來排程執行 Azure SQL Database 伺服器的 SSISDB 目錄資料庫上所儲存的套件：
 -   [SQL Server Agent](#agent)
 -   [SQL Database 彈性作業](#elastic)
--   [Azure Data Factory SQL Server 預存程序活動](#sproc)
+-   [Azure Data Factory 執行 SSIS 套件活動](#activities)
+-   [Azure Data Factory SQL Server 預存程序活動](#activities)
 
 ## <a name="agent"></a> 使用 SQL Server Agent 排程套件
 
@@ -142,13 +143,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a> 使用 Azure Data Factory SQL Server 預存程序活動來排程套件
+## <a name="activities"></a> 使用 Azure Data Factory 排定套件
 
-如需如何使用 Azure Data Factory 預存程序活動排定 SSIS 套件的資訊，請參閱下列文章：
+如需如何使用 Azure Data Factory 活動排定 SSIS 套件的資訊，請參閱下列文章：
 
--   針對 Data Factory 第 2 版：[使用 Azure Data Factory 中的預存程序活動來叫用 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+-   針對 Data Factory 第 2 版：[在 Azure Data Factory 中使用 SSIS 活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
--   針對 Data Factory 第 1 版：[使用 Azure Data Factory 中的預存程序活動來叫用 SSIS 套件](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
+-   針對 Data Factory 第 2 版：[在 Azure Data Factory 中使用預存程序活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+-   針對 Data Factory 第 1 版：[在 Azure Data Factory 中使用預存程序活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>後續步驟
 如需 SQL Server Agent 的詳細資訊，請參閱[套件的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。

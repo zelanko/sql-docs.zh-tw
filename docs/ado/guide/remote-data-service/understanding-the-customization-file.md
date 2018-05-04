@@ -19,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72d44f46f3f6f1a349a2dabf7a0c7576d55fdfe7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e80dc4615803b840f285033bd75186561dc21ddf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔
 方括號所組成的自訂檔案中的每個區段標頭 (**[]**) 包含型別和參數。 四個區段類型以常值字串**連接**， **sql**， **userlist**，或**記錄**。 常值字串、 預設值，指定使用者的識別項，或不提供參數。  
@@ -61,7 +60,7 @@ identifier
   
  在下列情況下，請使用特定區段：  
   
--   A**連接**區段的用戶端的值部分連接字串關鍵字，如果使用"**資料來源 = * * * 值*"，符合**連接**區段識別項*.*  
+-   A**連接**區段的用戶端的值部分連接字串關鍵字，如果使用"**資料來源 = * * * 值*"，符合**連接**區段識別項 *.*  
   
 -   **Sql**區段用戶端命令字串包含符合的字串，如果**sql**區段識別項。  
   

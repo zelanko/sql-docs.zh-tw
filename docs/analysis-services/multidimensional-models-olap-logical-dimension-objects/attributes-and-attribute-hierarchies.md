@@ -1,48 +1,26 @@
 ---
-title: "屬性和屬性階層 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- regular attributes [Analysis Services]
-- parent attributes [Analysis Services]
-- hierarchies [Analysis Services], attribute
-- attributes [Analysis Services], about attributes
-- account attributes [Analysis Services]
-- dimensions [Analysis Services], attributes
-- key attributes [Analysis Services]
-- OLAP objects [Analysis Services], attributes
-- attributes [Analysis Services], relationships
-- attributes [Analysis Services]
-- relationships [Analysis Services], attributes
-ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 
-author: Minewiskan
+title: 屬性和屬性階層 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 009b5857470b106cb5c68301537dceb438ec4406
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>屬性和屬性階層
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-維度是屬性的集合，這些屬性會繫結至資料來源檢視中資料表或檢視內的一或多個資料行。  
+  維度是屬性的集合，這些屬性會繫結至資料來源檢視中資料表或檢視內的一或多個資料行。  
   
 ## <a name="key-attribute"></a>索引鍵屬性  
- 每一個維度都有包含索引鍵屬性， 每一個屬性已繫結至維度資料表中的一或多個資料行。 索引鍵屬性是維度中的一個屬性，它會識別維度主資料表中，用於外部索引鍵與事實資料表之關聯性的資料行。 通常，索引鍵屬性會代表維度資料表中的主索引鍵資料行。 您可以在資料來源檢視中的資料表上定義邏輯主索引鍵，只要其基礎資料來源中沒有實體主索引鍵。 **如需詳細資訊**，請參閱[定義邏輯主索引鍵中資料來源檢視 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). 定義索引鍵屬性時，Cube 精靈和維度精靈會嘗試使用資料來源檢視中，維度資料表的主索引資料行。 如果維度資料表沒有定義邏輯主索引鍵或實體主索引鍵，精靈就無法正確地定義維度的索引鍵屬性。  
+ 每一個維度都有包含索引鍵屬性， 每一個屬性已繫結至維度資料表中的一或多個資料行。 索引鍵屬性是維度中的一個屬性，它會識別維度主資料表中，用於外部索引鍵與事實資料表之關聯性的資料行。 通常，索引鍵屬性會代表維度資料表中的主索引鍵資料行。 您可以在資料來源檢視中的資料表上定義邏輯主索引鍵，只要其基礎資料來源中沒有實體主索引鍵。 **如需詳細資訊**，請參閱[定義邏輯主索引鍵的資料來源檢視中&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)。 定義索引鍵屬性時，Cube 精靈和維度精靈會嘗試使用資料來源檢視中，維度資料表的主索引資料行。 如果維度資料表沒有定義邏輯主索引鍵或實體主索引鍵，精靈就無法正確地定義維度的索引鍵屬性。  
   
 ## <a name="binding-an-attribute-to-columns-in-data-source-view-tables-or-views"></a>將屬性繫結到資料來源檢視資料表或檢視中的資料行  
  屬性會繫結到一或多個資料來源檢視資料表或檢視中的資料行， 屬性一定會繫結到一或多個索引鍵資料行，這些索引鍵資料行會決定該屬性所包含的成員。 依預設，這會是屬性所繫結到的唯一資料行。 屬性也可以針對特定用途而繫結到一或多個其他資料行。 例如，屬性的**NameColumn**屬性決定向使用者顯示每個屬性成員的名稱-這個屬性的屬性可以繫結至特定維度資料行透過資料來源檢視，或可以是繫結至資料來源檢視中的導出資料行。 如需詳細資訊，請參閱[Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)。  

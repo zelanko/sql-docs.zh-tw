@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], stored procedures
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -35,12 +35,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c7e7c1794d2caa3a6b76a4b8075bd7d0a07323a0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 710cd2eb0be42a455fda1dc48d9877f28b8bd9d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>規則、 觸發程序，預設值和預存程序 （Visual FoxPro ODBC 驅動程式） 支援
 您無法建立 Visual FoxPro 規則、 觸發程序、 預設值或使用 Visual FoxPro ODBC 驅動程式的預存程序。 不過，您的應用程式可能會與互動現有的規則、 觸發程序、 預設值或預存程序，因為它會將插入、 更新或刪除儲存在資料庫中的 Visual FoxPro 資料。  
@@ -50,7 +49,7 @@ ms.lasthandoff: 04/16/2018
  如果您的應用程式會與資料互動，其規則、 觸發程序、 預設值，或任何其他 Visual FoxPro 命令或函式，呼叫預存程序，驅動程式會產生錯誤。 請參閱[不支援 Visual FoxPro 命令和函數](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)命令和函數不支援的驅動程式的清單。  
   
 > [!TIP]  
->  如果您想要將條件式程式碼插入您的規則、 觸發程序或預存程序會決定要由驅動程式呼叫時執行的命令，您可以使用**版本 （)**函式。 **版本 （)**函式會傳回 「 Visual FoxPro ODBC 驅動程式*\<版本 >*「 驅動程式呼叫時。  
+>  如果您想要將條件式程式碼插入您的規則、 觸發程序或預存程序會決定要由驅動程式呼叫時執行的命令，您可以使用**版本 （)** 函式。 **版本 （)** 函式會傳回 「 Visual FoxPro ODBC 驅動程式*\<版本 >*「 驅動程式呼叫時。  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro 命令和函數中規則、 觸發程序，預設值，以及預存程序支援  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading applications [ODBC], affected components
 - application upgrades [ODBC], affected components
@@ -23,23 +23,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cb58971a193a210f927d1b0a38f2be671b749468
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a35f04a2e4cf540c5e2419f9bb1616b3ff02d8f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="affected-odbc-components"></a>受影響的 ODBC 元件
 回溯相容性會描述如何影響所引進的新版本的驅動程式管理員中的應用程式、 驅動程式管理員，以及驅動程式。 這會影響應用程式和驅動程式時一個或兩個它們留在舊版本。 有，因此，三種類型的回溯相容性，需要考慮下表所示。  
   
 |型別|資料採礦的版本|應用程式版本|驅動程式版本|  
 |----------|-------------------|----------------------------|-----------------------|  
-|為了與舊版相容的驅動程式管理員|3*.x*|2。*x*|2。*x*|  
-|[1] 的驅動程式的回溯相容性|3*.x*|2。*x*|3。*x*|  
+|為了與舊版相容的驅動程式管理員|3 *.x*|2。*x*|2。*x*|  
+|[1] 的驅動程式的回溯相容性|3 *.x*|2。*x*|3。*x*|  
 |應用程式的回溯相容性|3。*x*|3。*x*|2。*x*|  
   
  [1] 的驅動程式的回溯相容性主要述附錄 g： 驅動程式的指導方針的回溯相容性。  
   
 > [!NOTE]  
->  符合標準的應用程式 — 例如，已寫入根據 Open Group 或 ISO CLI 標準的應用程式 — 保證可以運作 ODBC 3*.x*驅動程式透過 ODBC 3*.x*驅動程式管理員。 它會假設應用程式使用的功能是可用的驅動程式中。 同時也假設符合標準的應用程式，已編譯 ODBC 3*.x*標頭檔。
+>  符合標準的應用程式 — 例如，已寫入根據 Open Group 或 ISO CLI 標準的應用程式 — 保證可以運作 ODBC 3 *.x*驅動程式透過 ODBC 3 *.x*驅動程式管理員。 它會假設應用程式使用的功能是可用的驅動程式中。 同時也假設符合標準的應用程式，已編譯 ODBC 3 *.x*標頭檔。

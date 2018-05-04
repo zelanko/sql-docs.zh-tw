@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a36b24c0a8af4ddbd459161f4370e0b0fa056a1b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f458091055cd734eb380055aa9dc93f0a33bf411
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 指定要從擷取記錄數[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

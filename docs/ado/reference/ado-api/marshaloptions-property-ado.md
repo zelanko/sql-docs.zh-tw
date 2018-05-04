@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5c840992cc83c3237359f40d372bfc05b1f8f21c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ae6a344b170053dec48878e4f7988cb6408ee318
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions 屬性 (ADO)
 指出哪一筆記錄的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)是要封送處理至伺服器。  

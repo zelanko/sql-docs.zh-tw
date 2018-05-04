@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="getconnection-method-sqlserverpooledconnection"></a>getConnection 方法 (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  建立實體連接的物件控制代碼，這[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)物件表示。  
+  建立這個 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 物件所代表之實體連線的物件控制代碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,12 +42,12 @@ public java.sql.Connection getConnection()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 連接物件。  
+ 連線物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  GetConnection 方法，這是由 javax.sql.PooledConnection 介面中的 getConnection 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

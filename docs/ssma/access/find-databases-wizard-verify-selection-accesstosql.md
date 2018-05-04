@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -22,12 +21,11 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 18da6d0d9961d5dc0d4a4d8ad92bcd3705ed0665
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 124b3466549a553618e240f442de05121ad82931
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>尋找資料庫精靈 （確認選取項目） (AccessToSQL)
 尋找資料庫精靈的 確認選取 頁面會列出要加入至 SSMA 的檔案。 如果不正確的檔案清單，請按一下**回**修改的清單。 否則，請按一下**完成**新增檔案。  

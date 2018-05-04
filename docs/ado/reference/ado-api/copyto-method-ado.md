@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3164fbdffe9bad363a09f6ff7accf8cf6d55d751
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 368385864bf9cb5e0497e9acd3bf40e6e468b8bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 複製指定的字元或位元組數 (取決於[類型](../../../ado/reference/ado-api/type-property-ado-stream.md)) 中[資料流](../../../ado/reference/ado-api/stream-object-ado.md)到另一個**資料流**物件。  

@@ -27,13 +27,12 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2572940f9e8d243839311d78267083217218ec84
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 20a87dee817fe59d715b793a457749ee2a885ece
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**plan_id**|**bigint**|主索引鍵。|  
 |**query_id**|**bigint**|外部索引鍵。 加入[sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)。|  
 |**plan_group_id**|**bigint**|計劃群組的識別碼。 資料指標查詢通常需要多個 （填入和 fetch） 計畫。 填入並一起編譯的 fetch 計畫是在相同的群組。<br /><br /> 0 表示計畫不在群組中。|  
-|**engine_version**|**nvarchar(32)**|用來編譯的計畫中的引擎版本**'的 major.minor.build.revision'**格式。|  
+|**engine_version**|**nvarchar(32)**|用來編譯的計畫中的引擎版本 **'的 major.minor.build.revision'** 格式。|  
 |**compatibility_level**|**smallint**|在查詢中參考之資料庫的資料庫相容性層級。|  
 |**query_plan_hash**|**binary(8)**|個別的計劃的 MD5 雜湊。|  
 |**query_plan**|**nvarchar(max)**|Showplan XML 查詢計劃。|  

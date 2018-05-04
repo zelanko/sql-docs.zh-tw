@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
 - auto-commit mode [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 046b9a0ec140404418b7b868f2061cbabf7b0d3e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4236a5545c435c1652eb07b32ddad9ddf14e2181
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="auto-commit-mode"></a>自動認可模式
 *在自動認可模式下，*每個資料庫作業若未執行時未認可的交易。 此模式是適用於單一 SQL 陳述式所組成的許多實際的交易。 它不需要分隔或指定這些交易完成。 在資料庫中沒有交易支援，自動認可模式是唯一支援的模式。 在這類資料庫中，陳述式時，會認可它們執行而沒有任何方法，將其復原;它們因此一律會在自動認可模式。  

@@ -26,12 +26,11 @@ caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b9911bf2fb1184412cb7b66765f3502e656c82d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1b3840bebc367e1733b38a74a4bbb8ef04233cd3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +70,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- 結果**SELECT DISTINCT FROM\<模型 >**陳述式而有所不同，視資料行類型而定。 下表說明支援的資料行類型與陳述式的輸出。  
+ 結果**SELECT DISTINCT FROM\<模型 >** 陳述式而有所不同，視資料行類型而定。 下表說明支援的資料行類型與陳述式的輸出。  
   
 |資料行類型|輸出|  
 |-----------------|------------|  
@@ -151,9 +150,9 @@ FROM [TM Decision Tree]
 > [!NOTE]  
 >  最小值區的最小值與最大值區的最大值剛好分別是最高與最低的觀察值。 系統會假設超出此觀察範圍的任何值都屬於最小和最大值區。  
   
-## <a name="see-also"></a>請參閱  
- [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

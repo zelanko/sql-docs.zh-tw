@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a972760985e93f61ffa813043ad6c4e58f7d1a28
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9b24f49594003f453f3258c431881bd0ddda0f70
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="divide-dmx"></a>（除法）(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,11 +54,11 @@ Dividend / Divisor
   
  兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。 如果除數評估為 Null 值，運算子就會引發錯誤。 如果除數與被除數都評估為 Null 值，運算子就會傳回 Null 值。  
   
-## <a name="see-also"></a>請參閱  
- [算術運算子 &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [運算子 &#40; DMX &#41;](../dmx/operators-dmx.md)   
- [除以 &#40;SSIS 運算式 &#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40; 除以 &#41;&#40;TRANSACT-SQL &#41;](../t-sql/language-elements/divide-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [算術運算子&#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [分割&#40;SSIS 運算式&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;分割&#41; &#40;Transact SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - forward-only cursors [ODBC]
 - scrollable cursors [ODBC]
@@ -25,12 +25,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c0c6ae5b9bda276bcd1296fcb475063fea6db204
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e83efd6239d49af2066bd39d244665a50fa7030
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursors"></a>資料指標
 應用程式提取資料與*游標*。 資料指標是不同的結果集： 結果集的資料列集，顯示符合特定搜尋條件，而游標位於軟體的應用程式傳回的資料列。 名稱*資料指標，*套用至資料庫時，可能是來自終端機的電腦上閃爍的游標。 就像該資料指標會指出目前的位置，在螢幕上的具類型的文字會出現 下一步，結果集的資料指標會指出目前的位置，在結果集中，以及哪些資料列將會傳回下一步。  

@@ -31,15 +31,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c7825925accedb8a32ab05af2f67efc02e5ae94b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 166488c54434cc68005ec06e7247bdb023690d05
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-elements---methods---discover"></a>XML 項目-方法-探索
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]擷取執行個體中的資訊，例如可用的資料庫或有關特定物件的詳細資料清單[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 與擷取的資料**探索**方法取決於參數傳遞給它的值。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  擷取執行個體中的資訊，例如可用的資料庫或有關特定物件的詳細資料清單[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 與擷取的資料**探索**方法取決於參數傳遞給它的值。  
   
  **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/08/2018
  **探索**方法會要求有關的中繼資料[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體和物件。 使用 XMLA 來傳回中繼資料[資料列集](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)資料型別。  
  
 > [!TIP] 
-> 如果您不熟悉 XML 命令，請按一下 XMLA 查詢範本**查詢**在 Management Studio，來建立查詢，以及將參數加入工具列。 如需詳細資訊，請參閱 [在 SQL Server Management Studio 中使用 Analysis Services 範本](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)。 
+> 如果您不熟悉 XML 命令，請按一下 XMLA 查詢範本**查詢**在 Management Studio，來建立查詢，以及將參數加入工具列。 如需詳細資訊，請參閱[在 SQL Server Management Studio 中使用 Analysis Services 範本](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)。 
   
 ## <a name="example"></a>範例  
  在下列程式碼範例中，用戶端會傳送**探索**要求一份 cube 與呼叫[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]範例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫：  
@@ -98,11 +98,11 @@ ms.lasthandoff: 01/08/2018
 </Discover>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [XML 資料類型 &#40;XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [執行方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
- [方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods.md)   
- [XML 項目 &#40;XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+## <a name="see-also"></a>另請參閱  
+ [XML 資料類型 & #40;XMLA & #41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+ [Execute 方法&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
+ [方法&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   
+ [XML 項目 & #40;XMLA & #41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [Analysis Services 結構描述資料列集](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 指令碼語言 XML 元素階層 (ASSL) |Microsoft 文件"
-ms.custom: 
+title: Analysis Services 指令碼語言 XML 元素階層 (ASSL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - Analysis Services Scripting Language XML Element Hierarchy
@@ -25,20 +25,19 @@ helpviewer_keywords:
 - objects [Analysis Services Scripting Language]
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
-caps.latest.revision: 
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b45f5737bacd5b86d10584f8c6e0b131e1e658cf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0c85ffa3efb4d0ea955806960e0d178b40944a64
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-scripting-language-xml-element-hierarchy-assl"></a>Analysis Services 指令碼語言 XML 元素階層 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-下表顯示「Analysis Services 指令碼語言」(ASSL) 中物件的階層。  
+  下表顯示「Analysis Services 指令碼語言」(ASSL) 中物件的階層。  
   
 ## <a name="syntax"></a>語法  
   
@@ -1943,8 +1942,8 @@ ms.lasthandoff: 02/15/2018
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 指令碼語言 XML 元素 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-elements-assl.md)   
- [Analysis Services 指令碼語言 XML 資料類型階層 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)   
- [Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services 指令碼語言 XML 元素 & #40;ASSL & #41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-elements-assl.md)   
+ [Analysis Services 指令碼語言 XML 資料類型階層 & #40;ASSL & #41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)   
+ [Analysis Services 指令碼語言&#40;ASSL xmla&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
