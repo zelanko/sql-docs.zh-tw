@@ -3,13 +3,10 @@ title: getTableName 方法 (SQLServerResultSetMetaData) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1883c8500191ace66a6f7e0237e6d4f4692c1673
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 941b9cbf8b8d3dff56713b570e838bcf8bd499c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public java.lang.String getTableName(int column)
 #### <a name="parameters"></a>參數  
  *column*  
   
- **Int** ，指出資料行索引。  
+ 指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
  A**字串**，其中包含資料表名稱。  

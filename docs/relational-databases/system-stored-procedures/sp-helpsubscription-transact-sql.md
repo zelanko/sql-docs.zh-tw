@@ -22,12 +22,11 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 695442f30d62a651521dc5b90027a4d43daa7dde
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 08acc168c60295b499097e7fb211cd6b05ad31be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  [  **@destination_db=** ] **'***destination_db***'**  
  這是目的地資料庫的名稱。 *destination_db*是**sysname**，預設值是**%**。  
   
- [  **@found=** ] **'***找到***'**輸出  
+ [  **@found=** ] **'***找到***'** 輸出  
  這是表示傳回資料列的旗標。 *找到*是**int**和一個 OUTPUT 參數，預設值是 23456。  
   
  **1**表示找到發行集。  

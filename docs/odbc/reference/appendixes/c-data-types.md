@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -22,12 +22,11 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a092b4354da4869b56143d090c3ed114567e58eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 08f5738d39c862184d989ed8581e488adb5da1c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types"></a>C 資料類型
 ODBC C 資料類型表示用來將資料儲存在應用程式的 C 緩衝區的資料類型。  
@@ -140,9 +139,9 @@ struct tagSQLGUID {
   
  [c] 的 ODBC 2。*x*，C date、 time 以及 timestamp 資料類型為 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP。  
   
- [d] ODBC 3*.x*應用程式應該使用 SQL_C_VARBOOKMARK，不 SQL_C_BOOKMARK。 當 ODBC 3*.x*應用程式搭配 ODBC 2。*x*驅動程式，而 ODBC 3*.x*驅動程式管理員會將 SQL_C_VARBOOKMARK 對應至 SQL_C_BOOKMARK。  
+ [d] ODBC 3 *.x*應用程式應該使用 SQL_C_VARBOOKMARK，不 SQL_C_BOOKMARK。 當 ODBC 3 *.x*應用程式搭配 ODBC 2。*x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會將 SQL_C_VARBOOKMARK 對應至 SQL_C_BOOKMARK。  
   
- [e] 的號碼儲存在*val* SQL_NUMERIC_STRUCT 結構為縮放的整數，以小的位元組由小到大模式 （最小顯著性位元組的最左邊位元組） 的欄位。 例如，數字 10.001 基底 10，小數位數為 4，會調整為 100010 的整數。 因為這是 186AA 以十六進位格式，SQL_NUMERIC_STRUCT 中的值會是 AA 86 01 00 00...00"，具有的 SQL_MAX_NUMERIC_LEN 所定義的位元組數**#define**。  
+ [e] 的號碼儲存在*val* SQL_NUMERIC_STRUCT 結構為縮放的整數，以小的位元組由小到大模式 （最小顯著性位元組的最左邊位元組） 的欄位。 例如，數字 10.001 基底 10，小數位數為 4，會調整為 100010 的整數。 因為這是 186AA 以十六進位格式，SQL_NUMERIC_STRUCT 中的值會是 AA 86 01 00 00...00"，具有的 SQL_MAX_NUMERIC_LEN 所定義的位元組數 **#define**。  
   
  如需有關**SQL_NUMERIC_STRUCT**，請參閱[如何： 擷取數值資料的 SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md)。  
   
@@ -152,9 +151,9 @@ struct tagSQLGUID {
   
  [某些編譯器可能會不提供 h] _int64。  
   
- [i] _SQL_C_BOOKMARK 已被取代，在 ODBC 3*.x*。  
+ [i] _SQL_C_BOOKMARK 已被取代，在 ODBC 3 *.x*。  
   
- [j] _SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT 已取代 ODBC 中的帶正負號和不帶正負號型別： SQL_C_SSHORT 和 SQL_C_USHORT、 SQL_C_SLONG 然後 SQL_C_ULONG、 SQL_C_STINYINT 並 SQL_C_UTINYINT。 ODBC 3*.x*驅動程式可以使用的 ODBC 2。*x*應用程式應該支援 SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT，，因為它們呼叫時，驅動程式管理員將其傳遞到驅動程式。  
+ [j] _SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT 已取代 ODBC 中的帶正負號和不帶正負號型別： SQL_C_SSHORT 和 SQL_C_USHORT、 SQL_C_SLONG 然後 SQL_C_ULONG、 SQL_C_STINYINT 並 SQL_C_UTINYINT。 ODBC 3 *.x*驅動程式可以使用的 ODBC 2。*x*應用程式應該支援 SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT，，因為它們呼叫時，驅動程式管理員將其傳遞到驅動程式。  
   
  [k] SQL_C_GUID 只轉為 SQL_CHAR 或 SQL_WCHAR。  
   

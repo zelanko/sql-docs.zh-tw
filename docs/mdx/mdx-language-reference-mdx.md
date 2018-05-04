@@ -21,12 +21,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: e5cf88778cdd78c7119d94754d246dbba3709adb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f92c8a0da17a08423efd04b3cb74b4854a2e1460
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-language-reference-mdx"></a>MDX 語言參考 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,15 +34,15 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
-|[MDX 語法慣例 &#40;MDX &#41;](../mdx/mdx-syntax-conventions-mdx.md)|簡短描述「MDX 語言參考」中使用的語法慣例。|  
-|[MDX 陳述式參考 &#40;MDX &#41;](../mdx/mdx-statement-reference-mdx.md)|描述 MDX 語言中可用的指定碼、資料定義與資料管理陳述式。|  
-|[MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)|列出 MDX 語言中可用的運算子。|  
-|[MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)|描述 MDX 語言中可用的函數。|  
+|[MDX 語法慣例&#40;MDX&#41;](../mdx/mdx-syntax-conventions-mdx.md)|簡短描述「MDX 語言參考」中使用的語法慣例。|  
+|[MDX 陳述式參考&#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)|描述 MDX 語言中可用的指定碼、資料定義與資料管理陳述式。|  
+|[MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)|列出 MDX 語言中可用的運算子。|  
+|[MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)|描述 MDX 語言中可用的函數。|  
 |[MDX 保留字](../mdx/mdx-reserved-words.md)|提供由 MDX 語言使用的保留字清單 。|  
   
-## <a name="see-also"></a>請參閱  
- [多維度運算式 &#40;MDX &#41;參考](../mdx/multidimensional-expressions-mdx-reference.md)  
+## <a name="see-also"></a>另請參閱  
+ [多維度運算式 & #40;MDX & #41;參考](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 759b8e15635d31df3319db51b5ad860e4b15cc32
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 96da0677c94c6d337a428ca9aa612688d33b84ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="arguments"></a>引數  
  [ **@agent_name** =] **'***agent_name***'**  
- 這是代理程式的名稱。 *agent_name*是**nvarchar （100)**沒有預設值。  
+ 這是代理程式的名稱。 *agent_name*是**nvarchar （100)** 沒有預設值。  
   
  [ **@hours** =]*小時*  
  這是傳回歷程代理程式工作階段資訊的時間範圍 (以小時為單位)。 *小時*是**int**，它可以是下列範圍之一。  

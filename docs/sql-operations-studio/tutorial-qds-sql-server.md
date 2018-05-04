@@ -13,12 +13,11 @@ ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4c0597adca9897d69503bba3d08d9cdafd859c1c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d06bd752b0cdd07d87d8e5816a74d6e2d43d31ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程： 將*5 名最慢的查詢*範例資料庫儀表板的小工具
 

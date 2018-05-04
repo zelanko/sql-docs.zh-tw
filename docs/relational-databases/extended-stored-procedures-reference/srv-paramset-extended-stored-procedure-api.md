@@ -26,12 +26,11 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c76f1dc82a04ae14150833df75fd23db83b7fecc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4a11636b22de7e54b070b1a43ae795664e5c35e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ len
  指定要傳回之資料的實際長度。 如果參數的資料類型具有固定長度，而且不允許 null 值 (例如 *srvbit* 或 *srvint1*)，則會忽略 *len*。  
   
 ## <a name="returns"></a>傳回值  
- 如果參數值設定成功則會傳回 SUCCEED，否則會傳回 FAIL。 會傳回 FAIL，當目前沒有遠端預存程序，沒有任何*n*個遠端預存程序參數、 參數不是傳回參數而且*len*引數不是合法的。  
+ 如果參數值設定成功則會傳回 SUCCEED，否則會傳回 FAIL。 目前沒有任何遠端預存程序、沒有第 *n* 個遠端預存程序參數、此參數並非傳回參數，以及 *len* 引數不合法時，會傳回 FAIL。  
   
  如果 *len* 是 0，它會傳回 NULL。 將 *len* 設定為 0 是將 NULL 傳回給用戶端的唯一方法。  
   
@@ -94,7 +93,7 @@ len
 |IG = 值將會被略過||  
 |valid = 資料的任何有效指標||  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  參數包含了在用戶端和應用程式之間傳遞的資料，其中包含遠端預存程序。 用戶端可以將某些參數指定為傳回參數。 這些傳回參數可包含「開放式資料服務」伺服器應用程式傳回給用戶端的值。 使用傳回參數類似於依參考方式傳遞參數。  
   
  您不能針對未當做傳回參數叫用的參數來設定傳回值。 您可以使用 **srv_paramstatus** 來決定要如何叫用此參數。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeStmt
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72f3924b668750030329e118e7201cbc0ea835d8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 77392dff0f22fcabd26b54cad700bb5cebcde2bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 對應
-當應用程式呼叫**SQLFreeStmt**與*選項*引數到 ODBC 3 SQL_DROP*.x*驅動程式，會呼叫  
+當應用程式呼叫**SQLFreeStmt**與*選項*引數到 ODBC 3 SQL_DROP *.x*驅動程式，會呼叫  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   

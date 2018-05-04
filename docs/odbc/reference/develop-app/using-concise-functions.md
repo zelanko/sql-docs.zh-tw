@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concise functions [ODBC]
 - functions [ODBC], concise functions
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 84e1a884406e4060b957279078b8bfb106b92661
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a79b8f55f05e273f91635409a2a0f39d973a884a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-concise-functions"></a>使用精簡函式
 某些 ODBC 函數隱含存取描述元。 應用程式撰寫者可能會發現它們比撥號更方便**SQLSetDescField**或**SQLGetDescField**。 這些函式的呼叫*精簡*函式，因為它們執行的函式，包括設定或取得描述項欄位的數字。 某些精簡函式可讓應用程式設定或擷取單一函式呼叫中的數個相關的描述項欄位。  

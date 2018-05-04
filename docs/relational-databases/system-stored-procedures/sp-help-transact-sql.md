@@ -24,13 +24,12 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: be83dee5f8f4fa4f9e5893bc71964dd3a8df4e3c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 337e2f9f66c4fefb678248c97f5b109ec195a8d0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="arguments"></a>引數  
  [ **@objname=**] **'***name***'**  
- 處於之任何物件名稱**sysobjects**或任何使用者定義資料類型中**systypes**資料表。 *名稱*是**nvarchar (**776**)**，預設值是 NULL。 不接受資料庫名稱。  兩個或三個部分的名稱必須加以分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
+ 處於之任何物件名稱**sysobjects**或任何使用者定義資料類型中**systypes**資料表。 *名稱*是**nvarchar (** 776 **)**，預設值是 NULL。 不接受資料庫名稱。  兩個或三個部分的名稱必須加以分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
    
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -62,31 +61,31 @@ sp_help [ [ @objname = ] 'name' ]
   
     |資料行名稱|資料類型|Description|  
     |-----------------|---------------|-----------------|  
-    |**名稱**|**nvarchar(**128**)**|物件名稱|  
-    |**擁有者**|**nvarchar(**128**)**|物件擁有者 (這是擁有物件的資料庫主體， 預設為包含物件之結構描述的擁有者)。|  
-    |**object_type**|**nvarchar (**31**)**|物件類型|  
+    |**名稱**|**nvarchar(** 128 **)**|物件名稱|  
+    |**擁有者**|**nvarchar(** 128 **)**|物件擁有者 (這是擁有物件的資料庫主體， 預設為包含物件之結構描述的擁有者)。|  
+    |**object_type**|**nvarchar (** 31 **)**|物件類型|  
   
 2.  如果*名稱*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別或使用者定義資料類型， **sp_help**傳回下列結果集。  
   
     |資料行名稱|資料類型|Description|  
     |-----------------|---------------|-----------------|  
-    |**type_name**|**nvarchar(**128**)**|資料類型名稱。|  
-    |**Storage_type**|**nvarchar(**128**)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型名稱。|  
+    |**type_name**|**nvarchar(** 128 **)**|資料類型名稱。|  
+    |**Storage_type**|**nvarchar(** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型名稱。|  
     |**長度**|**smallint**|資料類型的實際長度 (以位元組為單位)。|  
     |**Prec**|**int**|有效位數 (總位數)。|  
     |**小數位數**|**int**|小數點右側的位數。|  
-    |**可為 Null**|**varchar (**35**)**|指出是否允許 NULL 值：[是] 或 [否]。|  
-    |**default_name**|**nvarchar(**128**)**|與這個類型繫結的預設值名稱。<br /><br /> NULL = 未繫結預設值。|  
-    |**rule_name**|**nvarchar(**128**)**|與這個類型繫結的規則名稱。<br /><br /> NULL = 未繫結預設值。|  
+    |**可為 Null**|**varchar (** 35 **)**|指出是否允許 NULL 值：[是] 或 [否]。|  
+    |**default_name**|**nvarchar(** 128 **)**|與這個類型繫結的預設值名稱。<br /><br /> NULL = 未繫結預設值。|  
+    |**rule_name**|**nvarchar(** 128 **)**|與這個類型繫結的規則名稱。<br /><br /> NULL = 未繫結預設值。|  
     |**定序**|**sysname**|資料類型的定序。 非字元資料類型是 NULL。|  
   
 3.  如果*名稱*是資料類型以外的任何資料庫物件**sp_help**傳回這個結果設定，也有其他結果集，根據指定的物件類型。  
   
     |資料行名稱|資料類型|Description|  
     |-----------------|---------------|-----------------|  
-    |**名稱**|**nvarchar(**128**)**|資料表名稱|  
-    |**擁有者**|**nvarchar(**128**)**|資料表擁有者|  
-    |**型別**|**nvarchar (**31**)**|資料表類型|  
+    |**名稱**|**nvarchar(** 128 **)**|資料表名稱|  
+    |**擁有者**|**nvarchar(** 128 **)**|資料表擁有者|  
+    |**型別**|**nvarchar (** 31 **)**|資料表類型|  
     |**Created_datetime**|**datetime**|資料表的建立日期|  
   
      根據指定的資料庫物件**sp_help**傳回其他結果集。  
@@ -97,22 +96,22 @@ sp_help [ [ @objname = ] 'name' ]
   
         |資料行名稱|資料類型|Description|  
         |-----------------|---------------|-----------------|  
-        |**column_name**|**nvarchar(**128**)**|資料行名稱。|  
-        |**型別**|**nvarchar(**128**)**|資料行資料類型。|  
-        |**計算**|**varchar (**35**)**|指出是否計算資料行中的值：[是] 或 [否]。|  
+        |**column_name**|**nvarchar(** 128 **)**|資料行名稱。|  
+        |**型別**|**nvarchar(** 128 **)**|資料行資料類型。|  
+        |**計算**|**varchar (** 35 **)**|指出是否計算資料行中的值：[是] 或 [否]。|  
         |**長度**|**int**|資料行長度 (以位元組為單位)。<br /><br /> 注意： 如果資料行資料類型是大數值類型 (**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**)，將值顯示為-1。|  
-        |**Prec**|**char (**5**)**|資料行有效位數。|  
-        |**小數位數**|**char (**5**)**|資料行小數位數。|  
-        |**可為 Null**|**varchar (**35**)**|指出資料行是否允許 NULL 值：[是] 或 [否]。|  
-        |**TrimTrailingBlanks**|**varchar (**35**)**|修剪尾端空白。 傳回 [是] 或 [否]。|  
-        |**FixedLenNullInSource**|**varchar (**35**)**|只是為了與舊版相容。|  
+        |**Prec**|**char (** 5 **)**|資料行有效位數。|  
+        |**小數位數**|**char (** 5 **)**|資料行小數位數。|  
+        |**可為 Null**|**varchar (** 35 **)**|指出資料行是否允許 NULL 值：[是] 或 [否]。|  
+        |**TrimTrailingBlanks**|**varchar (** 35 **)**|修剪尾端空白。 傳回 [是] 或 [否]。|  
+        |**FixedLenNullInSource**|**varchar (** 35 **)**|只是為了與舊版相容。|  
         |**定序**|**sysname**|資料行的定序。 非字元資料類型是 NULL。|  
   
     -   在識別欄位上傳回的其他結果集：  
   
         |資料行名稱|資料類型|Description|  
         |-----------------|---------------|-----------------|  
-        |**識別**|**nvarchar(**128**)**|資料類型宣告為識別的資料行名稱。|  
+        |**識別**|**nvarchar(** 128 **)**|資料類型宣告為識別的資料行名稱。|  
         |**種子**|**numeric**|識別欄位的起始值。|  
         |**[遞增]**|**numeric**|這個資料行的值所用的遞增。|  
         |**不可複寫**|**int**|識別屬性不會強制執行時複寫登入，例如**sqlrepl**，將資料插入資料表：<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -127,40 +126,40 @@ sp_help [ [ @objname = ] 'name' ]
   
         |資料行名稱|資料類型|Description|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(**128**)**|資料所在的檔案群組：「主要」、「次要」或「交易記錄」。|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|資料所在的檔案群組：「主要」、「次要」或「交易記錄」。|  
   
     -   在索引上傳回的其他結果集：  
   
         |資料行名稱|資料類型|Description|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|索引名稱。|  
-        |**index_description**|**varchar (**210**)**|索引的描述。|  
-        |**index_keys**|**nvarchar (**2078年**)**|建立索引的資料行名稱。 如果是 xVelocity 記憶體最佳化的資料行存放區索引，則傳回 NULL。|  
+        |**index_description**|**varchar (** 210 **)**|索引的描述。|  
+        |**index_keys**|**nvarchar (** 2078年 **)**|建立索引的資料行名稱。 如果是 xVelocity 記憶體最佳化的資料行存放區索引，則傳回 NULL。|  
   
     -   在條件約束上傳回的其他結果集：  
   
         |資料行名稱|資料類型|Description|  
         |-----------------|---------------|-----------------|  
-        |**其中**|**nvarchar (**146**)**|條件約束的類型。|  
-        |**constraint_name**|**nvarchar(**128**)**|條件約束的名稱。|  
-        |**delete_action**|**nvarchar (**9**)**|指出 DELETE 動作是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 只適用於 FOREIGN KEY 條件約束。|  
-        |**update_action**|**nvarchar (**9**)**|指出 UPDATE 動作是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 只適用於 FOREIGN KEY 條件約束。|  
-        |**status_enabled**|**varchar (**8**)**|指出是否啟用條件約束：已啟用、已停用或 N/A。<br /><br /> 只適用於 CHECK 和 FOREIGN KEY 條件約束。|  
-        |**status_for_replication**|**varchar (**19**)**|指出條件約束是否針對複寫。<br /><br /> 只適用於 CHECK 和 FOREIGN KEY 條件約束。|  
-        |**constraint_keys**|**nvarchar (**2078年**)**|組成條件約束的資料行名稱，如果是預設值和規則，便是定義預設值或規則的文字。|  
+        |**其中**|**nvarchar (** 146 **)**|條件約束的類型。|  
+        |**constraint_name**|**nvarchar(** 128 **)**|條件約束的名稱。|  
+        |**delete_action**|**nvarchar (** 9 **)**|指出 DELETE 動作是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 只適用於 FOREIGN KEY 條件約束。|  
+        |**update_action**|**nvarchar (** 9 **)**|指出 UPDATE 動作是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 只適用於 FOREIGN KEY 條件約束。|  
+        |**status_enabled**|**varchar (** 8 **)**|指出是否啟用條件約束：已啟用、已停用或 N/A。<br /><br /> 只適用於 CHECK 和 FOREIGN KEY 條件約束。|  
+        |**status_for_replication**|**varchar (** 19 **)**|指出條件約束是否針對複寫。<br /><br /> 只適用於 CHECK 和 FOREIGN KEY 條件約束。|  
+        |**constraint_keys**|**nvarchar (** 2078年 **)**|組成條件約束的資料行名稱，如果是預設值和規則，便是定義預設值或規則的文字。|  
   
     -   在進行參考的物件上傳回的其他結果集：  
   
         |資料行名稱|資料類型|Description|  
         |-----------------|---------------|-----------------|  
-        |**資料表的參考者**|**nvarchar (**516**)**|識別參考資料表的其他資料庫物件。|  
+        |**資料表的參考者**|**nvarchar (** 516 **)**|識別參考資料表的其他資料庫物件。|  
   
     -   在預存程序、函數或擴充預存程序上傳回的其他結果集。  
   
         |資料行名稱|資料類型|Description|  
         |-----------------|---------------|-----------------|  
-        |**parameter_name**|**nvarchar(**128**)**|預存程序參數名稱。|  
-        |**型別**|**nvarchar(**128**)**|預存程序參數的資料類型。|  
+        |**parameter_name**|**nvarchar(** 128 **)**|預存程序參數名稱。|  
+        |**型別**|**nvarchar(** 128 **)**|預存程序參數的資料類型。|  
         |**長度**|**smallint**|最大的實體儲存體長度 (以位元組為單位)。|  
         |**Prec**|**int**|有效位數或總位數。|  
         |**小數位數**|**int**|小數點右側的位數。|  

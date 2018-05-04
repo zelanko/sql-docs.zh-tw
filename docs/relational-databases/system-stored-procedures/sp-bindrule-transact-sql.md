@@ -24,13 +24,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af3a7f2e9d0c891cd416db9eb5449e21e3b8aa06
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3aec507212896d9ed03cdb7053b320743b2236c9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,16 +57,16 @@ sp_bindrule [ @rulename = ] 'rule' ,
  [  **@objname=**] **'***object_name***'**  
  這是規則將繫結的資料表和資料行或別名資料類型。 規則無法繫結到 **text**、**ntext****image**、**varchar (max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
   
- *object_name*是**nvarchar(776)**沒有預設值。 如果*object_name*是單部分名稱，它會解析成別名資料類型。 如果它是兩部分或三部分的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，現有的資料行別名資料類型的繼承*規則*除非規則有直接繫結資料行。  
+ *object_name*是**nvarchar(776)** 沒有預設值。 如果*object_name*是單部分名稱，它會解析成別名資料類型。 如果它是兩部分或三部分的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，現有的資料行別名資料類型的繼承*規則*除非規則有直接繫結資料行。  
   
 > [!NOTE]  
->  *object_name*可以包含在括號**[**和**]**字元分隔的識別項字元。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
+>  *object_name*可以包含在括號 **[** 和 **]** 字元分隔的識別項字元。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
 > [!NOTE]  
 >  雖然在使用別名資料類型的運算式上建立的規則可以繫結到資料行或別名資料類型，但在參考它們時，會無法編譯它們。 請避免使用在別名資料類型上建立的規則。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- 只有將規則繫結到別名資料類型時，才會使用這個項目。 *future_only_flag*是**varchar(15)**預設值是 NULL。 當設定為此參數**futureonly**防止別名資料類型的現有資料行會繼承新規則。 如果*futureonly_flag*是 NULL，新規則繫結至任何資料行的別名資料類型，目前有任何規則，或使用別名資料類型現有規則。  
+ 只有將規則繫結到別名資料類型時，才會使用這個項目。 *future_only_flag*是**varchar(15)** 預設值是 NULL。 當設定為此參數**futureonly**防止別名資料類型的現有資料行會繼承新規則。 如果*futureonly_flag*是 NULL，新規則繫結至任何資料行的別名資料類型，目前有任何規則，或使用別名資料類型現有規則。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

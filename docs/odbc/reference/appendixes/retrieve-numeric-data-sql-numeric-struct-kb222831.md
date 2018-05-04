@@ -12,17 +12,16 @@ ms.component: odbc
 ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.devlang: C++
-ms.topic: article
+ms.topic: conceptual
 ms.custom: ''
 ms.tgt_pltfrm: NA
-ms.workload: Inactive
 ms.date: 07/13/2017
 ms.author: genemi
-ms.openlocfilehash: 93ad9a2ba28414134f271060eef2c142ce5ba16a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 59a4307080db54015b23c8f529109e4fb0d0f69e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>擷取數值資料的 SQL\_數值\_結構
 

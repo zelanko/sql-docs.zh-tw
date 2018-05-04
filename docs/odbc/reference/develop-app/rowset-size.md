@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rowset size [ODBC]
 - cursors [ODBC], block
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 42870c60bfec0911b1a676b090a7d94bd5f42d1a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 92e6bb887ce8e489df431b4ef464a162d0495574
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowset-size"></a>資料列集大小
 若要使用哪一個資料列集大小取決於應用程式。 螢幕型應用程式通常會遵循兩種策略的其中一個。 第一個方法是將資料列集大小設定為顯示在畫面上的資料列數目如果使用者調整螢幕，應用程式據以變更資料列集大小。 第二個是資料列集大小設定為較大數目，例如 100，這會減少呼叫到資料來源數目。 應用程式會集中的資料列時可能在本機捲動，然後只在它捲動外部資料列集時，才會擷取新資料列。  

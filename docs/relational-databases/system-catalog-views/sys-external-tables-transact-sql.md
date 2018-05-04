@@ -19,13 +19,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bf4bceb7932cb5f8a5f4f891015efb4e540d6cf9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 53e30403430eed3786d815d604ed5ba3b7c2768c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
 |file_format_id|**int**|HADOOP 的外部資料來源的外部資料表，這是外部檔案格式的物件識別碼。||  
 |location|**nvarchar(4000)**|透過 HADOOP 的外部資料來源的外部資料表，這是在 HDFS 中的外部資料的路徑。||  
 |reject_type|**tinyint**|對於透過 HADOOP 的外部資料來源的外部資料表，這是查詢外部資料時，會計算已拒絕的資料列的方式。|值 – 已拒絕的資料列數目。<br /><br /> 百分比 – 已拒絕的資料列百分比。|  
-|reject_value|**float**|透過 HADOOP 的外部資料來源的外部資料表：<br /><br /> 如*reject_type =*值，這是資料列之拒絕的查詢失敗之前，先允許的數目。<br /><br /> 如*reject_type* = 百分比，這是查詢失敗之前，先允許的資料列之拒絕的百分比。||  
+|reject_value|**float**|透過 HADOOP 的外部資料來源的外部資料表：<br /><br /> 如*reject_type =* 值，這是資料列之拒絕的查詢失敗之前，先允許的數目。<br /><br /> 如*reject_type* = 百分比，這是查詢失敗之前，先允許的資料列之拒絕的百分比。||  
 |reject_sample_value|**int**|如*reject_type* = 百分比，這是要載入，成功或失敗，然後再計算已拒絕的資料列百分比的資料列數目。|如果 reject_type = VALUE。|  
 |distribution_type|**int**|透過對包含 SHARD_MAP_MANAGER 外部資料來源的外部資料表，這是基底資料表的資料列的資料分佈。|0 – Sharded<br /><br /> 1 – 複寫<br /><br /> 2 – 循環配置資源|  
 |distribution_desc|**nvarchar(120)**|透過對包含 SHARD_MAP_MANAGER 外部資料來源的外部資料表，這是顯示為字串的散發類型。||  

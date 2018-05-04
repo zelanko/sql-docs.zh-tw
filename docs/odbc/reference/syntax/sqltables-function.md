@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLTables
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a318503cfc5efb5aa39dd93de76f3811b0a65aa4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ca0e5379079c735b7dd0f5b6770818e5f930f51d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqltables-function"></a>SQLTables 函數
 **一致性**  
@@ -129,7 +128,7 @@ SQLRETURN SQLTables(
   
  否則，應用程式必須能夠處理的情況下，使用者在選取資料表的**選取**不授與權限。  
   
- *SchemaName*和*TableName*引數接受搜尋模式。 *CatalogName* SQL_ODBC_VERSION 環境屬性是否為 sql_ov_odbc3 時，引數會接受搜尋模式; 如果設定 SQL_OV_ODBC2 不接受搜尋模式。 如果 sql_ov_odbc3 時設定，ODBC 3*.x*驅動程式會要求該萬用字元字串中字元*CatalogName*逸出常值視為引數。 如需有效的搜尋模式的詳細資訊，請參閱[模式值引數](../../../odbc/reference/develop-app/pattern-value-arguments.md)。  
+ *SchemaName*和*TableName*引數接受搜尋模式。 *CatalogName* SQL_ODBC_VERSION 環境屬性是否為 sql_ov_odbc3 時，引數會接受搜尋模式; 如果設定 SQL_OV_ODBC2 不接受搜尋模式。 如果 sql_ov_odbc3 時設定，ODBC 3 *.x*驅動程式會要求該萬用字元字串中字元*CatalogName*逸出常值視為引數。 如需有效的搜尋模式的詳細資訊，請參閱[模式值引數](../../../odbc/reference/develop-app/pattern-value-arguments.md)。  
   
 > [!NOTE]  
 >  如需一般用途、 引數和 ODBC 目錄函數的傳回的資料的詳細資訊，請參閱[目錄函數](../../../odbc/reference/develop-app/catalog-functions.md)。  
@@ -148,9 +147,9 @@ SQLRETURN SQLTables(
   
  若要判斷 TABLE_CAT、 再依據 table_schem 排列和 TABLE_NAME 的資料行的實際長度，應用程式可以呼叫**SQLGetInfo** SQL_MAX_CATALOG_NAME_LEN、 SQL_MAX_SCHEMA_NAME_LEN 和 SQL_MAX_TABLE_NAME_LEN 資訊型別。  
   
- 下列資料行已重新命名為 ODBC 3*.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
+ 下列資料行已重新命名為 ODBC 3 *.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
-|ODBC 2.0 資料行|ODBC 3*.x*資料行|  
+|ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

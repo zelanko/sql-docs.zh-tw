@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLRemoveDefaultDataSource
 apilocation:
@@ -26,19 +26,18 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5b3a37cf0b0f42567d4a787b9c090f8298f74ca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ed9d4bbed89bc4ed9330e8e857dcf1a0b9a3c149
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlremovedefaultdatasource-function"></a>SQLRemoveDefaultDataSource 函式
 **一致性**  
  版本引進了： ODBC 1.0，已被取代  
   
  **摘要**  
- 在 ODBC 3.0 **SQLRemoveDefaultDataSource**函式已由呼叫取代[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)與*常見*ODBC_REMOVE_DEFAULT_DSN 引數。 如果 ODBC 2*.x*安裝程式會呼叫此函式，ODBC 安裝程式會將它對應至下列**SQLConfigDataSource**呼叫：  
+ 在 ODBC 3.0 **SQLRemoveDefaultDataSource**函式已由呼叫取代[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)與*常見*ODBC_REMOVE_DEFAULT_DSN 引數。 如果 ODBC 2 *.x*安裝程式會呼叫此函式，ODBC 安裝程式會將它對應至下列**SQLConfigDataSource**呼叫：  
   
 ```  
 SQLConfigDataSource (NULL, ODBC_REMOVE_DEFAULT_DSN, NULL, NULL)  

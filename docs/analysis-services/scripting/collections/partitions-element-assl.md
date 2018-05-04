@@ -27,15 +27,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5455c69f19250bc31f0707dbcb619a442789ebf8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 13b6a867ae06302b224d6f657912072c84201860
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-element-assl"></a>Partitions 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含集合[分割](../../../analysis-services/scripting/objects/partition-element-assl.md)元素所使用[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)項目或組成的行外的資料分割繫結的集合[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  包含集合[分割](../../../analysis-services/scripting/objects/partition-element-assl.md)元素所使用[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)項目或組成的行外的資料分割繫結的集合[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PartitionCollection>。  
   
-## <a name="see-also"></a>請參閱  
- [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [集合 & #40;ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

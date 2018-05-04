@@ -22,12 +22,11 @@ caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c3f885ecf4b30e573ba7f0140ad48c69c744d9db
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -135,16 +134,16 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [PeriodsToDate &#40;MDX &#41;](../mdx/periodstodate-mdx.md)   
- [子系 &#40;MDX &#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40;MDX &#41;](../mdx/hierarchize-mdx.md)   
- [計數 &#40;設定 &#41;&#40;MDX &#41;](../mdx/count-set-mdx.md)   
- [篩選 &#40;MDX &#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX &#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX &#41;](../mdx/drilldownlevel-mdx.md)   
- [屬性 &#40;MDX &#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX &#41;](../mdx/prevmember-mdx.md)   
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
+ [子系&#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Hierarchize & #40;MDX & #41;](../mdx/hierarchize-mdx.md)   
+ [計數 & #40;設定 & #41;& #40;MDX & #41;](../mdx/count-set-mdx.md)   
+ [篩選 & #40;MDX & #41;](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers & #40;MDX & #41;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel & #40;MDX & #41;](../mdx/drilldownlevel-mdx.md)   
+ [屬性 & #40;MDX & #41;](../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

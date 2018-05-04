@@ -22,12 +22,11 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 331f4e7d67524bb6fc4d3af706f9a28ef9dabb95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb0c2586ba5ba25c7a5791e8f1ec9418f9079ec9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX 陳述式參考 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,13 +35,13 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
-|[MDX 指令碼陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)|包含 MDX 指令碼陳述式管理 MDX 指令碼內的查詢內容、範圍與流程控制的資訊。|  
-|[MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)|包含 MDX 資料定義陳述式建立、卸除和管理多維度物件的資訊。|  
-|[MDX 資料操作陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|包含 MDX資料管理陳述式從多維度物件擷取和管理資料的資訊。|  
+|[MDX 指令碼陳述式 & #40;MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)|包含 MDX 指令碼陳述式管理 MDX 指令碼內的查詢內容、範圍與流程控制的資訊。|  
+|[MDX 資料定義陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|包含 MDX 資料定義陳述式建立、卸除和管理多維度物件的資訊。|  
+|[MDX 資料操作陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|包含 MDX資料管理陳述式從多維度物件擷取和管理資料的資訊。|  
   
-## <a name="see-also"></a>請參閱  
- [MDX 語言參考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 語言參考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
   
   

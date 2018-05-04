@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - display size of data types [ODBC]
 - size of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f0cd835b31863fa8427f4cb175c66ded5f7e308
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9a4735e4e05c4ffe3b9f22f94149c027c1da1034
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-size"></a>顯示大小
 資料行的顯示大小是以字元格式顯示資料所需字元的數目上限。 下表定義每個 ODBC SQL 資料類型的顯示大小。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
 |所有二進位型別 [a]|定義或 （適用於變數類型） 的最大逾 2 的資料行的長度。 （每個二進位位元組的 2 位數的十六進位數字所表示）。|  
 |SQL_TYPE_DATE|10 (日期格式的日期*yyyy-mm-dd*)。|  
 |SQL_TYPE_TIME|8 (時間格式*hh: mm:*)<br /><br /> - 或 -<br /><br /> 9 + *s* (時間格式*hh: mm:*[.fff...]，其中*s*小數秒數有效位數)。|  
-|SQL_TYPE_TIMESTAMP|19 (如時間戳記在*yyyy-mm-dd hh: mm:*格式)<br /><br /> - 或 -<br /><br /> 20 + *s* (如時間戳記在*yyyy-mm-dd hh: mm:*[.fff …] 格式，其中*s*小數秒數有效位數)。|  
+|SQL_TYPE_TIMESTAMP|19 (如時間戳記在*yyyy-mm-dd hh: mm:* 格式)<br /><br /> - 或 -<br /><br /> 20 + *s* (如時間戳記在*yyyy-mm-dd hh: mm:*[.fff …] 格式，其中*s*小數秒數有效位數)。|  
 |所有的間隔資料型別|請參閱[間隔資料類型長度](../../../odbc/reference/appendixes/interval-data-type-length.md)。|  
 |SQL_GUID|36 (中的字元數*aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*格式|  
   

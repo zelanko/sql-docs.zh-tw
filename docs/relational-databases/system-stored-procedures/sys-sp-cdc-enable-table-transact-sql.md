@@ -28,12 +28,11 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9a60ff831a77a5b557d22d00b79d4b936167a628
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1cc9100153d04de7820c210142ae425801cccf95
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,13 +93,13 @@ sys.sp_cdc_enable_table
  要用來唯一識別來源資料表中之資料列的唯一索引名稱。 *index_name*是**sysname**而且可以是 NULL。 如果指定， *index_name*必須是有效的唯一索引，來源資料表上。 如果*index_name*指定，則識別的索引資料行的優先順序高於任何定義的主索引鍵資料行做為資料表的唯一資料列識別碼。  
   
  [  **@captured_column_list =** ] **'***captured_column_list***'**  
- 識別要包含在變更資料表中的來源資料表資料行。 *captured_column_list*是**nvarchar （max)**而且可以是 NULL。 如果是 NULL，則所有資料行都會包含在變更資料表中。  
+ 識別要包含在變更資料表中的來源資料表資料行。 *captured_column_list*是**nvarchar （max)** 而且可以是 NULL。 如果是 NULL，則所有資料行都會包含在變更資料表中。  
   
  資料行名稱必須是來源資料表中的有效資料行。 主索引鍵索引中定義的資料行或資料行中所參考之索引定義*index_name*必須包含在內。  
   
  *captured_column_list*是以逗號分隔清單的資料行名稱。 清單內的個別資料行名稱可以選擇性地使用雙引號 ("") 或方括號 ([]) 括住。 如果資料行名稱包含內嵌逗號，資料行名稱就必須括住。  
   
- *captured_column_list*不能包含下列保留的資料行名稱： **__ $start_lsn**， **__ $end_lsn**， **__ $seqval**， **__ $作業**，和**__ $update_mask**。  
+ *captured_column_list*不能包含下列保留的資料行名稱： **__ $start_lsn**， **__ $end_lsn**， **__ $seqval**， **__ $作業**，和 **__ $update_mask**。  
   
  [  **@filegroup_name =** ] **'***filegroup_name***'**  
  這是要用於針對擷取執行個體所建立之變更資料表的檔案群組。 *filegroup_name*是**sysname**而且可以是 NULL。 如果指定， *filegroup_name*必須定義目前的資料庫。 如果是 NULL，就會使用預設的檔案群組。  

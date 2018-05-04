@@ -3,13 +3,10 @@ title: getObject 方法 （int，java.util.Map） |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a930694e239e62a45f26ba46aa3d821aa83cd987
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: edaea99a49f6c6230cd03a8060c02140ae036475
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -34,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   擷取指定之參數的值為 Java 程式語言中使用給定的參數索引，並透過給定的 Map 物件中的物件。  
   
 > [!NOTE]  
->  這個方法目前不支援由[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 因此，使用這個方法時一定會傳回預設對應。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支援這個方法。 因此，使用這個方法時一定會傳回預設對應。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +44,7 @@ public java.lang.Object getObject(int index,
 #### <a name="parameters"></a>參數  
  *索引*  
   
- **Int** ，指出參數索引。  
+ 指出參數索引的 **int**。  
   
  *對應*  
   

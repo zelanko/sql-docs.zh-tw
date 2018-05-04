@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], retrieving output parameters
 - output parameters [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92903e38c31af40c7d2cf375cad6695a23acb010
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f31b3056612f2cc6ece4ef0d8aeb52d61ffb3296
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>使用 SQLGetData 擷取輸出參數
 ODBC 3.8 之前應用程式可以只擷取繫結的輸出緩衝區的查詢的輸出參數。 不過，很難配置大型緩衝區，參數值的大小很大 （例如，大型影像） 時。 ODBC 3.8 導入了新的方式擷取組件中的輸出參數。 應用程式現在可以呼叫**SQLGetData**使用小型緩衝區多次，以便擷取大型參數值。 這是類似於擷取大型資料行資料。  

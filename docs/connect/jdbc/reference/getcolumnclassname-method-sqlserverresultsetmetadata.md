@@ -3,13 +3,10 @@ title: getColumnClassName 方法 (SQLServerResultSetMetaData) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b303af6ee5436636e262ade3c568e1c5fd6584c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1b847b1556324bb9a85cfb965a9f5b188e756952
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public java.lang.String getColumnClassName(int column)
 #### <a name="parameters"></a>參數  
  *column*  
   
- **Int** ，指出資料行索引。  
+ 指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
  A**字串**其中包含完整類別名稱。  

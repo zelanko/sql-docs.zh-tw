@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC level 2 API functions [ODBC]
 - functions [ODBC], ODBC driver for Oracle
@@ -24,12 +24,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b2058d8ff3c20ad60fb53bff69ffb566b733b16f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 08850dd2311d40e740a033bafb935db8d3890822
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>層級 2 應用程式開發介面函式 （如 Oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  

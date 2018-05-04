@@ -20,12 +20,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c256882453ca3536a21babb2d87b774e9aab3d6d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4b90a4c3d80dda985865e66e8bb92d8da4137ec4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators---arithmetic"></a>運算子的算術運算
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,12 +33,12 @@ ms.lasthandoff: 01/08/2018
   
  下表會識別 DMX 支援的算術運算子。  
   
-|運算子|描述|  
+|運算子|Description|  
 |--------------|-----------------|  
-|[+ &#40;新增 &#41;&#40; DMX &#41;](../dmx/add-dmx.md)|將兩個數目相加。|  
-|[-&#40;減去 &#41;&#40; DMX &#41;](../dmx/subtract-dmx.md)|從一個數目減掉另一個數目。|  
-|[&#42;&#40;Multiply &#41;&#40; DMX &#41;](../dmx/multiply-dmx.md)|以一個數目乘上另一個數目。|  
-|[&#40; 除以 &#41;&#40; DMX &#41;](../dmx/divide-dmx.md)|以一個數目除以另一個數目。|  
+|[+&#40;新增&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|將兩個數目相加。|  
+|[-&#40;減去&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|從一個數目減掉另一個數目。|  
+|[&#42;&#40;乘&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|以一個數目乘上另一個數目。|  
+|[&#40;分割&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|以一個數目除以另一個數目。|  
   
  下列規則決定算術運算子在 DMX 運算式中的優先順序：  
   
@@ -49,16 +48,16 @@ ms.lasthandoff: 01/08/2018
   
 -   括號中的運算式優先於其他所有運算。  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
- [資料採礦延伸模組 &#40; DMX &#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [資料採礦延伸模組 &#40; DMX &#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [運算式 &#40; DMX &#41;](../dmx/expressions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [運算子 &#40; DMX &#41;](../dmx/operators-dmx.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組 & #40; DMX & #41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [資料採礦延伸模組&#40;DMX&#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [資料採礦延伸模組&#40;DMX&#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [運算式&#40;DMX&#41;](../dmx/expressions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)   
  [結構和使用方式的 DMX 預測查詢](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   

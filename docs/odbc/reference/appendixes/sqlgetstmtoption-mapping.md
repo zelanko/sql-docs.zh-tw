@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce6b64f9151808e8b02f3036638d7322d3012938
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ceb6213d6e10195cff663d4206d21a62f3e2fc75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption 對應
-當應用程式呼叫**SQLGetStmtOption** ODBC 3*.x*不支援呼叫它的驅動程式  
+當應用程式呼叫**SQLGetStmtOption** ODBC 3 *.x*不支援呼叫它的驅動程式  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
@@ -58,6 +57,6 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
   
  針對 ODBC 定義的字串連接選項，設定驅動程式管理員*Columnsize*引數在呼叫**SQLGetConnectAttr**預先定義的最大長度 (SQL_MAX_OPTION_STRING_LENGTH);將非字串的連接選項，如*Columnsize*設為 0。  
   
- SQL_GET_BOOKMARK 陳述式選項已被取代，在 ODBC 3*.x*。 ODBC 3*.x*驅動程式，才能使用 ODBC 2。*x*使用 SQL_GET_BOOKMARK，應用程式，就必須支援 SQL_GET_BOOKMARK。 ODBC 3*.x*驅動程式，才能使用 ODBC 2。*x*應用程式，就必須支援 SQL_USE_BOOKMARKS 設 SQL_UB_ON 和應該公開 （expose） 的固定長度的書籤。 如果 ODBC 3*.x*驅動程式支援只可變長度的書籤，不會在固定長度的書籤，它必須傳回 SQLSTATE HYC00 （未實作的選擇性功能） 如果 ODBC 2。*x* SQL_USE_BOOKMARKS 設 SQL_UB_ON 嘗試應用程式。  
+ SQL_GET_BOOKMARK 陳述式選項已被取代，在 ODBC 3 *.x*。 ODBC 3 *.x*驅動程式，才能使用 ODBC 2。*x*使用 SQL_GET_BOOKMARK，應用程式，就必須支援 SQL_GET_BOOKMARK。 ODBC 3 *.x*驅動程式，才能使用 ODBC 2。*x*應用程式，就必須支援 SQL_USE_BOOKMARKS 設 SQL_UB_ON 和應該公開 （expose） 的固定長度的書籤。 如果 ODBC 3 *.x*驅動程式支援只可變長度的書籤，不會在固定長度的書籤，它必須傳回 SQLSTATE HYC00 （未實作的選擇性功能） 如果 ODBC 2。*x* SQL_USE_BOOKMARKS 設 SQL_UB_ON 嘗試應用程式。  
   
- ODBC 3*.x*驅動程式，驅動程式管理員不會再檢查以查看是否*選項*之間 SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，或大於 SQL_CONNECT_OPT_DRVR_START。 驅動程式必須檢查。
+ ODBC 3 *.x*驅動程式，驅動程式管理員不會再檢查以查看是否*選項*之間 SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，或大於 SQL_CONNECT_OPT_DRVR_START。 驅動程式必須檢查。
