@@ -30,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="using-built-in-t-sql-code-snippets"></a>使用內建的 T-SQL 程式碼片段
 
-1. 若要存取可用的程式碼片段，請輸入在查詢編輯器中*sql*以開啟清單：
+1. 若要存取可用的程式碼片段，請在查詢編輯器中輸入 *sql* 以開啟清單：
 
    ![程式碼片段](media/code-snippets/sql-snippets.png)
 
@@ -42,11 +42,11 @@ ms.lasthandoff: 04/26/2018
 
    ![取代範本欄位](media/code-snippets/table-from-snippet.png)
 
-   如果您想要變更的欄位不再反白顯示 （當您在編輯器周圍移動游標時），以滑鼠右鍵按一下您想要變更文字，並選取 **變更所有相符項目**:
+   如果您想要變更的欄位不再反白顯示 (當您在編輯器周圍移動游標時)，請以滑鼠右鍵按一下您想要變更文字，並選取**變更所有相符項目**：
 
    ![取代範本欄位](media/code-snippets/change-all.png)
 
-1. 選取程式碼片段，依據您的需求更新或加入任何額外 T-SQL。 例如，更新*Column1*， *Column2*，並加入更多的資料欄位。
+1. 針對選取的程式碼片段，依據您的需求更新或加入任何額外 T-SQL。例如，更新 *Column1*、*Column2*，並加入更多的資料欄位。
 
 
  
@@ -54,14 +54,14 @@ ms.lasthandoff: 04/26/2018
 
 您可以定義您自己的程式碼片段。 開啟 SQL 程式碼片段檔案進行編輯：
 
-1. 開啟*命令選擇區*(**Shift + Ctrl + P**)，然後輸入 *snip*，然後選取**喜好設定： 開啟使用者程式碼片段**:
+1. 開啟*命令選擇區* (**Shift + Ctrl + P**)，然後輸入 *snip* 並選取**喜好設定: 開啟使用者程式碼片段**：
 
    ![取代範本欄位](media/code-snippets/user-snippets.png)
 
 1. 選取**SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] 從 Visual Studio Code 繼承其程式碼片段的功能，因此這份文件特別說明如何使用 SQL 程式碼片段。 如需詳細資訊，請參閱[建立您自己的程式碼片段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)Visual Studio 程式碼文件中。 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] 從 Visual Studio Code 繼承其程式碼片段的功能，因此這份文件特別說明如何使用 SQL 程式碼片段。如需詳細資訊，請參閱 Visual Studio 程式碼文件中的[建立您自己的程式碼片段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)。 
 
    ![取代範本欄位](media/code-snippets/select-sql.png)
 
@@ -96,8 +96,8 @@ ms.lasthandoff: 04/26/2018
    ```
 
 1. 儲存 sql.json 檔案。
-1. 透過**Ctrl + N** 開啟新的 [查詢編輯器] 視窗。
-2. 輸入**sql**，然後您會看到您剛加入的兩個使用者程式碼片段; *sqlCreateTable2*和*sqlSelectTop5*。
+1. 透過按一下 **Ctrl + N** 以開啟新的 [查詢編輯器] 視窗。
+2. 輸入 **sql**，然後您會看到您剛加入的兩個使用者程式碼片段：*sqlCreateTable2* 和 *sqlSelectTop5*。
 
 選取其中一個新的程式碼片段，並進行測試 ！
 
