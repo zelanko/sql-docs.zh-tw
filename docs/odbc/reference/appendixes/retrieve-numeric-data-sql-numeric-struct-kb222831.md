@@ -6,9 +6,7 @@ authors: MightyPen
 manager: craigg
 editor: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.devlang: C++
@@ -17,9 +15,9 @@ ms.custom: ''
 ms.tgt_pltfrm: NA
 ms.date: 07/13/2017
 ms.author: genemi
-ms.openlocfilehash: 59a4307080db54015b23c8f529109e4fb0d0f69e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 57bd5ffbe1adb9c0ecbefda8d99434767ed6c3e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

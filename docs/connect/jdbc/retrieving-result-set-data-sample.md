@@ -3,13 +3,10 @@ title: 擷取結果集資料範例 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
@@ -17,31 +14,31 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7ca77e399277f48d481f916c90387473cdc7d4d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d4d073fb21077bc5873dcb55be452e32ee5a0af3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-result-set-data-sample"></a>擷取結果集資料範例
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  這[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]範例應用程式示範如何擷取一組資料從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫，然後再顯示該資料。  
+  此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫擷取資料集，然後顯示該資料。  
   
  此範例的程式碼檔案名稱為 retrieveRS.java，可以在下列位置找到它：  
   
  \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \samples\resultsets  
   
 ## <a name="requirements"></a>需求  
- 若要執行此範例應用程式，您必須將 Classpath 設定為包含 sqljdbc.jar 檔案或 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc.jar 或 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 您也會需要存取[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。  
+ 若要執行此範例應用程式，您必須將 Classpath 設定為包含 sqljdbc.jar 檔案或 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc.jar 或 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 您也需要擁有 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的存取權。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供 sqljdbc.jar 和 sqljdbc4.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 sqljdbc.jar 和 sqljdbc4.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定使用。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="example"></a>範例  
- 在下列範例中，範例程式碼會連接到[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫。 然後，使用 SQL 陳述式與[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)物件，然後執行 SQL 陳述式，並將它傳回的資料放[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ 在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的連線。 接著，使用 SQL 陳述式與 [SQLServerStatement 物件搭配](../../connect/jdbc/reference/sqlserverstatement-class.md)，它會執行 SQL 陳述式，並將其傳回的資料放入 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中。  
   
- 接下來，範例程式碼呼叫自訂 displayRow 方法來逐一查看的結果集中包含的資料列，並使用[getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)方法以顯示一些它所包含的資料。  
+ 接著，範例程式碼會呼叫自訂的 displayRow 方法，重複執行結果集中包含的資料列，並使用 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法來顯示其包含的部份資料。  
   
 ```java
 import java.sql.*;  
