@@ -3,13 +3,10 @@ title: getTimestamp 方法 (java.lang.String) (SQLServerResultSet) |Microsoft �
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d92ce9acd27c3e654fce28ee041f32938f6f0c27
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 0f109d4c5e7a5d816e728d6e39ecd6a10d2fa2c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String columnName)
 #### <a name="parameters"></a>參數  
  *columnName*  
   
- A**字串**，其中包含資料行名稱。  
+ 包含資料行名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
  時間戳記的物件。  
