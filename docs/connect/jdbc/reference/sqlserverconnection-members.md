@@ -3,13 +3,10 @@ title: SQLServerConnection 成員 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
@@ -17,9 +14,9 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5017a12a97da6c2207301667d4fb7db6f22bbcfb
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5a0d90e2b6b6c0faaa1dd8d6376b11b95a2ad523
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -56,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |[createNClob](../../../connect/jdbc/reference/createnclob-method-sqlserverconnection.md)|建立**java.sql.NClob**物件而不將任何資料。|  
 |[createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)|建立[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件傳送至資料庫的 SQL 陳述式。|  
 |[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|建立**java.sql.SQLXML**物件而不將任何資料。|  
-|[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|擷取此目前自動認可模式[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
+|[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|擷取這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件的目前自動認可模式。|  
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|擷取目前的目錄名稱，這個[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。|  
 |[getClientConnectionID 方法&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|取得最新連接嘗試的連接識別碼，不論嘗試成功或失敗。|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|擷取有關 JDBC 驅動程式所支援之用戶端資訊屬性的資訊。|  
@@ -86,8 +83,8 @@ ms.lasthandoff: 05/03/2018
 |[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverconnection.md)|設定為 true 或 false 的陳述式集區。|  
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|指定的新值**enablePrepareOnFirstPreparedStatementCall**連接屬性。|  
 |[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|變更的保留性[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)建立使用此物件[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)給定的保留性的物件。|  
-|[setReadOnly](../../../connect/jdbc/reference/setreadonly-method-sqlserverconnection.md)|將這[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)在唯讀模式下，當做 JDBC 驅動程式，啟用資料庫最佳化提示的物件。|  
-|[setSavepoint](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)|在目前交易中建立未命名的儲存點，並傳回新[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)物件，代表它。|  
+|[setReadOnly](../../../connect/jdbc/reference/setreadonly-method-sqlserverconnection.md)|切換這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件成為唯讀模式，當作 JDBC 驅動程式啟用資料庫最佳化的提示。|  
+|[setSavepoint](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)|在目前交易中建立未命名的儲存點，並傳回表示該儲存點的新 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 物件。|  
 |[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|設定的新值**serverPreparedStatementDiscardThreshold**連接屬性。|  
 |[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverconnection.md)|設定此連線的已備妥的陳述式快取的大小。|  
 |[setTransactionIsolation](../../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md)|嘗試將交易隔離等級變更這個[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)一個指定的物件。|  
