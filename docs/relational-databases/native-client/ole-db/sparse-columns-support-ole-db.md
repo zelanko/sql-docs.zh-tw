@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
@@ -16,13 +15,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: acde7986c28b409bd72785883f37f4230674f3d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: de135d6d4e172045e7841197c79d86eea9397c9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sparse-columns-support-ole-db"></a>疏鬆資料行支援 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +62,7 @@ ms.lasthandoff: 04/16/2018
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS 會傳回兩個新的資料行：SS_IS_COLUMN_SET 和 SS_IS_SPARSE。<br /><br /> DBSCHEMA_COLUMNS 會傳回不是成員的資料行**column_set**。<br /><br /> 已加入兩個新的結構描述資料列集： DBSCHEMA_COLUMNS_EXTENDED 將會傳回所有資料行的疏鬆度不論**column_set**成員資格。 DBSCHEMA_SPARSE_COLUMN_SET 傳回成員的資料行**column_set**。 這些新的資料列集與 DBSCHEMA_COLUMNS 的資料行和限制相同。|  
 |IDBSchemaRowset::GetSchemas|Idbschemarowset:: Getschemas 可用結構描述資料列集的清單中包含新的資料列集 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的 Guid。|  
 |ICommand::Execute|如果**選取\*從***資料表*是它使用，會傳回所有資料行不屬於疏鬆**column_set**，再加上包含的所有值的 XML 資料行非 null 資料行成員的疏鬆**column_set**，如果有的話。|  
-|IOpenRowset::OpenRowset|傳回與 icommand:: Execute，相同的資料行的資料列集 iopenrowset:: Openrowset**選取\***相同資料表上的查詢。|  
+|IOpenRowset::OpenRowset|傳回與 icommand:: Execute，相同的資料行的資料列集 iopenrowset:: Openrowset**選取\*** 相同資料表上的查詢。|  
 |ITableDefinition|沒有任何變更，此介面為疏鬆資料行或**column_set**資料行。 需要修改結構描述的應用程式必須直接執行適當的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  
   
 ## <a name="see-also"></a>另請參閱  

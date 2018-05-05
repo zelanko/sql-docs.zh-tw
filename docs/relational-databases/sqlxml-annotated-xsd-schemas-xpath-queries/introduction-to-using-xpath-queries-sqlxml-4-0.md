@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,13 +19,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 628efe2628353992667474d8c5cff2b9eb88e228
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e620b704f7678a9af8510e7b1d81321aec6ba061
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,9 +51,9 @@ ms.lasthandoff: 04/16/2018
 </root>  
 ```  
   
- 本文件**\<客戶 >**是元素節點， **cid**是屬性節點，和**「 重要 」**是文字節點。  
+ 本文件**\<客戶 >** 是元素節點， **cid**是屬性節點，和**「 重要 」**是文字節點。  
   
- XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，提供一組**\<客戶 >**節點，XPath 可以選取所有**\<順序 >**節點**日期**屬性值為**"7/14/1999"**。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
+ XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，提供一組**\<客戶 >** 節點，XPath 可以選取所有**\<順序 >** 節點**日期**屬性值為 **"7/14/1999"**。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
   
  全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會實作 W3C XPath 規格中，位於子集http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
   
@@ -64,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **根目錄查詢**  
   
-     SQLXML 4.0 不支援根目錄查詢 (/)。 每個 XPath 查詢必須開始於最上層 **\<ElementType >**結構描述中。  
+     SQLXML 4.0 不支援根目錄查詢 (/)。 每個 XPath 查詢必須開始於最上層 **\<ElementType >** 結構描述中。  
   
 -   **報告錯誤**  
   

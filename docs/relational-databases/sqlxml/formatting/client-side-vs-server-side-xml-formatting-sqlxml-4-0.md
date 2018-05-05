@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,20 +23,19 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 95088fe868d8e9e392613a147f61438e1818e643
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4d36a49c44ea4dfb7ca89c9598ccaf74b1a32ba8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>用戶端和伺服器端 XML 格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主題描述 SQLXML 中用戶端與伺服器端 XML 格式化之間的一般差異。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>用戶端格式中不支援多個資料列集查詢  
- 當您使用用戶端 XML 格式化時，不支援會產生多個資料列集的查詢。 例如，假設您有一個虛擬目錄，您已在其中指定用戶端格式。 此範例範本會有兩個 SELECT 陳述式，請考慮在 **\<sql:query >**區塊：  
+ 當您使用用戶端 XML 格式化時，不支援會產生多個資料列集的查詢。 例如，假設您有一個虛擬目錄，您已在其中指定用戶端格式。 此範例範本會有兩個 SELECT 陳述式，請考慮在 **\<sql:query >** 區塊：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -49,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- 您可以在應用程式的程式碼中執行這個範本，而且會傳回錯誤，因為用戶端 XML 格式化不支援多個資料列集的格式。 如果您在兩個指定的查詢來區隔 **\<sql:query >**區塊，就會想要的結果。  
+ 您可以在應用程式的程式碼中執行這個範本，而且會傳回錯誤，因為用戶端 XML 格式化不支援多個資料列集的格式。 如果您在兩個指定的查詢來區隔 **\<sql:query >** 區塊，就會想要的結果。  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>時間戳記在用戶端與伺服器端格式中的對應不同  
  在伺服器端 XML 格式化中，資料庫資料行的**時間戳記**類型會對應到 i8 XDR 類型 （當查詢中指定 XMLDATA 選項）。  
@@ -219,7 +216,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   當您指定**用戶端端 xml ="0"** (false) 在範本中，您會要求伺服器端 XML 格式化。 因此，您無法指定 FOR XML NESTED，因為伺服器無法辨識 NESTED 選項。 這樣會產生錯誤。 您必須使用伺服器可辨識的 AUTO、RAW 或 EXPLICIT 模式。  
   
--   當您指定**用戶端端 xml ="1"** (true) 在範本中，您會要求用戶端 XML 格式化。 在此情況下，您可以指定 FOR XML NESTED。 如果您指定 FOR XML AUTO，XML 格式，就會發生在伺服器端雖然**用戶端端 xml ="1"**範本中指定。  
+-   當您指定**用戶端端 xml ="1"** (true) 在範本中，您會要求用戶端 XML 格式化。 在此情況下，您可以指定 FOR XML NESTED。 如果您指定 FOR XML AUTO，XML 格式，就會發生在伺服器端雖然**用戶端端 xml ="1"** 範本中指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [FOR XML 安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   

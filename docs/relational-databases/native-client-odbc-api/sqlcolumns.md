@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
@@ -19,13 +18,12 @@ caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e48fa527d745b920e2a664f8e8982b18cc53038
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e735efbd7aa155d8f4618afffc203cf4558fe9ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,11 +44,11 @@ ms.lasthandoff: 04/16/2018
   
 |資料行名稱|Description|  
 |-----------------|-----------------|  
-|DATA_TYPE|傳回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 如**varchar （max)**資料型別。|  
-|TYPE_NAME|傳回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，和**nvarchar （max)**資料型別。|  
-|COLUMN_SIZE|傳回為 SQL_SS_LENGTH_UNLIMITED **varchar （max)**資料類型表示資料行的大小沒有限制。|  
-|BUFFER_LENGTH|傳回為 SQL_SS_LENGTH_UNLIMITED **varchar （max)**資料類型表示的緩衝區大小沒有限制。|  
-|SQL_DATA_TYPE|傳回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 如**varchar （max)**資料型別。|  
+|DATA_TYPE|傳回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 如**varchar （max)** 資料型別。|  
+|TYPE_NAME|傳回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，和**nvarchar （max)** 資料型別。|  
+|COLUMN_SIZE|傳回為 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 資料類型表示資料行的大小沒有限制。|  
+|BUFFER_LENGTH|傳回為 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 資料類型表示的緩衝區大小沒有限制。|  
+|SQL_DATA_TYPE|傳回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 如**varchar （max)** 資料型別。|  
 |CHAR_OCTET_LENGTH|傳回 char 或 binary 資料行的最大長度。 傳回 0 表示大小不受限制。|  
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|傳回定義 XML 結構描述集合名稱所在目錄的名稱。 如果找不到目錄名稱，則此變數包含空字串。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|傳回定義 XML 結構描述集合名稱所在結構描述的名稱。 如果找不到結構描述名稱，則此變數包含空字串。|  

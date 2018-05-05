@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,13 +18,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 24abfe07598e3bac0502189204fadf7ca0e9b349
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4b0796f498bd70f5b16ceb50b82843cc891652bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 大量載入的指導方針和限制 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
      XML 大量載入會忽略之前和之後的所有資訊\<根目錄 > XML 文件中的項目。 例如，XML 大量載入會忽略任何 XML 宣告、內部 DTD 定義、外部 DTD 參考、註解等等。  
   
--   如果您擁有的對應結構描述會定義兩個資料表之間 (例如 Customer 和 CustOrder 之間) 的主索引鍵/外部索引鍵關聯性，則必須先在結構描述中描述具有主索引鍵的資料表。 包含外部索引鍵資料行的資料表稍後必須出現在結構描述中。 這是結構描述中所識別的資料表的順序是用來載入資料庫中的順序。例如，下列 XDR 結構描述會產生錯誤時它用於 XML 大量載入因為**\<順序 >**元素的之前描述**\<客戶 >**項目。 在 CustOrder 中的 CustomerID 資料行是外部索引鍵資料行，它會參考在 Cust 資料表中的 CustomerID 主索引鍵資料行。  
+-   如果您擁有的對應結構描述會定義兩個資料表之間 (例如 Customer 和 CustOrder 之間) 的主索引鍵/外部索引鍵關聯性，則必須先在結構描述中描述具有主索引鍵的資料表。 包含外部索引鍵資料行的資料表稍後必須出現在結構描述中。 這是結構描述中所識別的資料表的順序是用來載入資料庫中的順序。例如，下列 XDR 結構描述會產生錯誤時它用於 XML 大量載入因為**\<順序 >** 元素的之前描述**\<客戶 >** 項目。 在 CustOrder 中的 CustomerID 資料行是外部索引鍵資料行，它會參考在 Cust 資料表中的 CustomerID 主索引鍵資料行。  
   
     ```  
     <?xml version="1.0" ?>  
@@ -86,7 +83,7 @@ ms.lasthandoff: 04/16/2018
   
 -   如果結構描述不會指定溢位資料行使用**sql: overflow-field-欄位**註釋，XML 大量載入會忽略任何存在於 XML 文件中，但不是會在對應結構描述中描述的資料。  
   
-     每當 XML 大量載入在 XML 資料流中碰到已知的標記時，會套用您所指定的對應結構描述。 它會忽略顯示在 XML 文件中的資料，但是不會在結構描述中描述。 例如，假設您有對應的結構描述，描述**\<客戶 >**項目。 XML 資料檔案具有 **\<AllCustomers >**根標記 （這不在結構描述） 圍住所有**\<客戶 >**項目：  
+     每當 XML 大量載入在 XML 資料流中碰到已知的標記時，會套用您所指定的對應結構描述。 它會忽略顯示在 XML 文件中的資料，但是不會在結構描述中描述。 例如，假設您有對應的結構描述，描述**\<客戶 >** 項目。 XML 資料檔案具有 **\<AllCustomers >** 根標記 （這不在結構描述） 圍住所有**\<客戶 >** 項目：  
   
     ```  
     <AllCustomers>  
@@ -96,9 +93,9 @@ ms.lasthandoff: 04/16/2018
     </AllCustomers>  
     ```  
   
-     在此情況下，XML 大量載入會忽略 **\<AllCustomers >**項目，並開始在對應**\<客戶 >**項目。 XML 大量載入會忽略結構描述中沒有描述但是顯示在 XML 文件中的元素。  
+     在此情況下，XML 大量載入會忽略 **\<AllCustomers >** 項目，並開始在對應**\<客戶 >** 項目。 XML 大量載入會忽略結構描述中沒有描述但是顯示在 XML 文件中的元素。  
   
-     請考慮其他 XML 來源的資料檔案，其中包含**\<順序 >**項目。 這些元素不會在對應的結構描述中描述：  
+     請考慮其他 XML 來源的資料檔案，其中包含**\<順序 >** 項目。 這些元素不會在對應的結構描述中描述：  
   
     ```  
     <AllCustomers>  
@@ -114,11 +111,11 @@ ms.lasthandoff: 04/16/2018
     </AllCustomers>  
     ```  
   
-     XML 大量載入會忽略這些**\<順序 >**項目。 但是，如果您使用**sql: overflow-field-欄位**註解結構描述識別為溢位資料行，XML 大量載入的資料行中儲存此資料行中的所有未耗用的資料。  
+     XML 大量載入會忽略這些**\<順序 >** 項目。 但是，如果您使用**sql: overflow-field-欄位**註解結構描述識別為溢位資料行，XML 大量載入的資料行中儲存此資料行中的所有未耗用的資料。  
   
 -   CDATA 區段和實體參考會在儲存在資料庫之前，先轉譯成其對等字串。  
   
-     在此範例中，CDATA 區段包裝的值**\<縣 （市) >**項目。 XML 大量載入會擷取字串值 ("NY") 之前它會插入, **\<縣 （市) >**到資料庫的項目。  
+     在此範例中，CDATA 區段包裝的值**\<縣 （市) >** 項目。 XML 大量載入會擷取字串值 ("NY") 之前它會插入, **\<縣 （市) >** 到資料庫的項目。  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -151,7 +148,7 @@ ms.lasthandoff: 04/16/2018
     </Schema>  
     ```  
   
-     在此 XML 資料， **HireDate**屬性是在第二個遺失**\<客戶 >**項目。 當 XML 大量載入將第二個**\<客戶 >**到資料庫的項目，它會使用預設值，指定結構描述中。  
+     在此 XML 資料， **HireDate**屬性是在第二個遺失**\<客戶 >** 項目。 當 XML 大量載入將第二個**\<客戶 >** 到資料庫的項目，它會使用預設值，指定結構描述中。  
   
     ```  
     <ROOT>  

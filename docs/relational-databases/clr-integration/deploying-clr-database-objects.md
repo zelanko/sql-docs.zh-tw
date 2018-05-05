@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -21,12 +20,11 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cf30e76dfebac337ed92e1cc88a1da7cbca35353
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 353aef3aac9f39217bb98bd551843eb1b69ae885
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
  `vbc /target:library C:\helloworld.vb`  
   
- 這些命令會啟動 Visual C# 或 Visual Basic 編譯器使用**/目標**選項來指定要建立的程式庫 DLL。  
+ 這些命令會啟動 Visual C# 或 Visual Basic 編譯器使用 **/目標**選項來指定要建立的程式庫 DLL。  
   
 1.  解決所有建立錯誤和警告，然後再將組件部署至測試伺服器。  
   
@@ -93,15 +91,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並連接至已註冊要部署之 Managed 組件或資料庫物件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  在**物件總管 中**，依序展開**\<伺服器名稱 >**和**資料庫**樹狀結構。 以滑鼠右鍵按一下 已註冊，請選取 managed 的資料庫物件的所在之資料庫**工作**，然後選取**產生指令碼**。 指令碼精靈隨即開啟。  
+2.  在**物件總管 中**，依序展開**\<伺服器名稱 >** 和**資料庫**樹狀結構。 以滑鼠右鍵按一下 已註冊，請選取 managed 的資料庫物件的所在之資料庫**工作**，然後選取**產生指令碼**。 指令碼精靈隨即開啟。  
   
 3.  從清單方塊中選取資料庫，然後按一下**下一步**。  
   
 4.  在**選擇指令碼選項**] 窗格中，按一下 [**下一步**，或變更的選項，然後按一下**下一步**。  
   
-5.  在**[選擇物件類型**] 窗格中，選擇要部署的資料庫物件的類型。 按一下 **[下一步]**。  
+5.  在 **[選擇物件類型**] 窗格中，選擇要部署的資料庫物件的類型。 按一下 **[下一步]**。  
   
-6.  在選取每個物件類型**[選擇物件類型**] 窗格中，**選擇\<類型 >**窗格會顯示。 在這個窗格中，您可以從該資料庫物件類型 (已在指定的資料庫中註冊) 的所有執行個體中選擇。 選取一個或多個物件，然後按一下**下一步**。  
+6.  在選取每個物件類型 **[選擇物件類型**] 窗格中，**選擇\<類型 >** 窗格會顯示。 在這個窗格中，您可以從該資料庫物件類型 (已在指定的資料庫中註冊) 的所有執行個體中選擇。 選取一個或多個物件，然後按一下**下一步**。  
   
 7.  **輸出選項**窗格時，就全部所需的資料庫物件已選取型別。 選取**指令碼至檔案**並指定指令碼的檔案路徑。 選取 **[下一步]**。 檢閱您的選擇，然後按一下**完成**。 此時，部署指令碼就會儲存至指定的檔案路徑。  
   

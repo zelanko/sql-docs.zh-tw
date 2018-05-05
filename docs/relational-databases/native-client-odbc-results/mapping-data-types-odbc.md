@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
@@ -25,13 +24,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cf59cc129d6442d08154df95ff9b02f5d417c405
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2fa9ef65906c70a3542fbdd617661c59a64bbad9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-data-types-odbc"></a>對應資料類型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至 ODBC SQL 資料類型的 SQL 資料類型。 下列章節討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 資料類型和它們所對應的 ODBC SQL 資料類型。 這些章節也討論 ODBC SQL 資料類型及其對應的 ODBC C 資料類型，以及支援的和預設的轉換。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**時間戳記**資料類型與 SQL_BINARY 或 SQL_VARBINARY ODBC 資料類型，因為中的值**時間戳記**資料行不是**datetime**值，但**binary （8)**或**varbinary （8)**值，指出一連串[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料列上的活動。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式遇到奇數位元組的 SQL_C_WCHAR (Unicode) 值，則尾端的奇數位元組會被截斷。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**時間戳記**資料類型與 SQL_BINARY 或 SQL_VARBINARY ODBC 資料類型，因為中的值**時間戳記**資料行不是**datetime**值，但**binary （8)** 或**varbinary （8)** 值，指出一連串[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料列上的活動。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式遇到奇數位元組的 SQL_C_WCHAR (Unicode) 值，則尾端的奇數位元組會被截斷。  
   
 ## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>處理 ODBC 中的 sql_variant 資料類型  
  **Sql_variant**資料類型資料行可以包含任何資料類型，在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除了大型物件 (Lob)，例如**文字**， **ntext**，和**映像**。 例如，資料行可能包含**smallint**某些資料列的值**float**其他資料列，值和**char/nchar**其餘部分中的值。  

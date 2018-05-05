@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
@@ -21,13 +20,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4153097e55d2cdcf77fcfdf880ec7a0181e3d9e2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 88d1c839c460395b80b69f417c50a65dd9319c19
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>使用 ADO 搭配 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 04/16/2018
  為了讓 ADO 使用最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的新功能，我們已經對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者新增了一些增強功能，以便擴充 OLE DB 的核心功能。 這些增強功能可讓 ADO 應用程式使用較新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能，並使用兩個資料型別中導入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml**和**udt**。 這些增強功能也會利用增強功能**varchar**， **nvarchar**，和**varbinary**資料型別。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會將 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化屬性加入至 DBPROPSET_SQLSERVERDBINIT 屬性集，以便使用由 ADO 應用程式與 ADO 相容的方式來公開新的資料類型。 此外， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者也會定義新的連接字串關鍵字，名為**DataTypeCompatibility**設定連接字串中。  
   
 > [!NOTE]  
->  現有的 ADO 應用程式可以使用 SQLOLEDB 提供者來存取並更新 XML、UDT 和大數值文字與二進位欄位值。 新的較大**varchar （max)**， **nvarchar （max)**，和**varbinary （max)**資料類型會傳回成 ADO 類型**adLongVarChar**，**adLongVarWChar**和**adLongVarBinary**分別。 會傳回 XML 資料行，做為**adLongVarChar**，並會傳回 UDT 資料行，做為**adVarBinary**。 不過，如果您使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者 (SQLNCLI11) 來取代 SQLOLEDB，您必須確定設定**DataTypeCompatibility**關鍵字為"80"，讓新的資料類型會正確對應至 ADO 資料型別。  
+>  現有的 ADO 應用程式可以使用 SQLOLEDB 提供者來存取並更新 XML、UDT 和大數值文字與二進位欄位值。 新的較大**varchar （max)**， **nvarchar （max)**，和**varbinary （max)** 資料類型會傳回成 ADO 類型**adLongVarChar**，**adLongVarWChar**和**adLongVarBinary**分別。 會傳回 XML 資料行，做為**adLongVarChar**，並會傳回 UDT 資料行，做為**adVarBinary**。 不過，如果您使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者 (SQLNCLI11) 來取代 SQLOLEDB，您必須確定設定**DataTypeCompatibility**關鍵字為"80"，讓新的資料類型會正確對應至 ADO 資料型別。  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>從 ADO 啟用 SQL Server Native Client  
  若要啟用的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client，ADO 應用程式必須在其連接字串中實作下列關鍵字：  

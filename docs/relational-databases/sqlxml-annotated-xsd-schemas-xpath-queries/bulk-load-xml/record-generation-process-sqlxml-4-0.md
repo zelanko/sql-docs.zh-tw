@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +26,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 59ec68c1c2c321f45940eace9ef1f6a3dc9be9c8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>記錄產生處理序 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +82,7 @@ ms.lasthandoff: 04/16/2018
 </xsd:schema>  
 ```  
   
- 結構描述指定**\<客戶 >**具有項目**CustomerID**和**CompanyName**屬性。 **Sql: relation**註解 maps **\<客戶 >**至 Customers 資料表的項目。  
+ 結構描述指定**\<客戶 >** 具有項目**CustomerID**和**CompanyName**屬性。 **Sql: relation**註解 maps **\<客戶 >** 至 Customers 資料表的項目。  
   
  請考慮這個 XML 文件的片段：  
   
@@ -97,13 +94,13 @@ ms.lasthandoff: 04/16/2018
   
  當 XML 大量載入是由結構描述提供，而該結構描述在前面段落和 XML 資料中是描述為輸入時，則 XML 大量載入會在來源資料中處理節點 (元素和屬性)，如下所示：  
   
--   開始標記的第一個**\<客戶 >**項目帶入範圍內的項目。 這個節點會對應到「客戶」資料表。 因此，XML 大量載入會產生「客戶」資料表的記錄。  
+-   開始標記的第一個**\<客戶 >** 項目帶入範圍內的項目。 這個節點會對應到「客戶」資料表。 因此，XML 大量載入會產生「客戶」資料表的記錄。  
   
--   中的結構描述的所有屬性**\<客戶 >**元素會對應到 「 客戶 」 資料表的資料行。 當這些屬性進入範圍內時，XML 大量載入會將屬性值複製到已由父範圍產生的客戶記錄中。  
+-   中的結構描述的所有屬性**\<客戶 >** 元素會對應到 「 客戶 」 資料表的資料行。 當這些屬性進入範圍內時，XML 大量載入會將屬性值複製到已由父範圍產生的客戶記錄中。  
   
--   當 XML 大量載入到達結束標記**\<客戶 >**項目，項目超出範圍。 這會造成 XML 大量載入將記錄視為已完成並將之傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   當 XML 大量載入到達結束標記**\<客戶 >** 項目，項目超出範圍。 這會造成 XML 大量載入將記錄視為已完成並將之傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- XML 大量載入都會遵循這個程序針對每個後續**\<客戶 >**項目。  
+ XML 大量載入都會遵循這個程序針對每個後續**\<客戶 >** 項目。  
   
 > [!IMPORTANT]  
 >  在這個模型中，因為在到達結束標記時 (或節點離開範圍時) 會插入記錄，所以您必須定義與在節點範圍內之記錄相關聯的所有資料。  
@@ -119,7 +116,7 @@ ms.lasthandoff: 04/16/2018
   
  在 CustOrder 資料表中的 CustomerID 是外部索引鍵，會參考在 Cust 資料表中的 CustomerID 主要索引鍵。  
   
- 現在，請將 XML 檢視視為是在下列註解式 XSD 結構描述中所指定。 這個結構描述使用 **\<sql: relationship >**指定 Cust 和 CustOrder 資料表之間的關聯性。  
+ 現在，請將 XML 檢視視為是在下列註解式 XSD 結構描述中所指定。 這個結構描述使用 **\<sql: relationship >** 指定 Cust 和 CustOrder 資料表之間的關聯性。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -155,19 +152,19 @@ ms.lasthandoff: 04/16/2018
   
  範例 XML 資料和建立工作範例的步驟如下。  
   
--   當**\<客戶 >** XML 資料檔中的元素節點進入範圍內時，XML 大量載入會產生 Cust 資料表的記錄。 然後從複製所需的資料行值 （CustomerID、 CompanyName 和 City） 的 XML 大量載入 **\<CustomerID >**，  **\<CompanyName >**，而**\<縣 （市) >**做為這些項目子元素進入範圍內。  
+-   當**\<客戶 >** XML 資料檔中的元素節點進入範圍內時，XML 大量載入會產生 Cust 資料表的記錄。 然後從複製所需的資料行值 （CustomerID、 CompanyName 和 City） 的 XML 大量載入 **\<CustomerID >**，  **\<CompanyName >**，而**\<縣 （市) >** 做為這些項目子元素進入範圍內。  
   
--   當**\<順序 >**元素節點進入範圍內時，XML 大量載入會產生 CustOrder 資料表的記錄。 XML 大量載入會將值複製**OrderID**屬性這筆記錄。 值所需的 CustomerID 資料行取自 **\<CustomerID >**子項目**\<客戶 >**項目。 XML 大量載入會使用指定的資訊 **\<sql: relationship >**取得的 CustomerID 外部索引鍵值的這筆記錄，除非**CustomerID**屬性指定在**\<順序 >**項目。 一般規則是，如果子元素明確指定外部索引鍵屬性的值，XML 大量載入會使用該值，並不會取得使用指定的從父項目值 **\<sql: relationship >**. 與這個**\<順序 >**項目節點超出範圍時，XML 大量載入會傳送到記錄[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]然後再處理所有後續**\<順序 >**元素節點相同的方式。  
+-   當**\<順序 >** 元素節點進入範圍內時，XML 大量載入會產生 CustOrder 資料表的記錄。 XML 大量載入會將值複製**OrderID**屬性這筆記錄。 值所需的 CustomerID 資料行取自 **\<CustomerID >** 子項目**\<客戶 >** 項目。 XML 大量載入會使用指定的資訊 **\<sql: relationship >** 取得的 CustomerID 外部索引鍵值的這筆記錄，除非**CustomerID**屬性指定在**\<順序 >** 項目。 一般規則是，如果子元素明確指定外部索引鍵屬性的值，XML 大量載入會使用該值，並不會取得使用指定的從父項目值 **\<sql: relationship >**. 與這個**\<順序 >** 項目節點超出範圍時，XML 大量載入會傳送到記錄[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]然後再處理所有後續**\<順序 >** 元素節點相同的方式。  
   
--   最後， **\<客戶 >**元素節點離開範圍。 這時候，XML 大量載入會傳送客戶記錄到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 對於 XML 資料流中的所有後續客戶，XML 大量載入都會遵循這個處理序。  
+-   最後， **\<客戶 >** 元素節點離開範圍。 這時候，XML 大量載入會傳送客戶記錄到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 對於 XML 資料流中的所有後續客戶，XML 大量載入都會遵循這個處理序。  
   
  以下是有關對應結構描述的兩個觀察：  
   
--   當結構描述符合 「 內含項目 」 規則 (例如，與客戶和訂單相關聯的所有資料都定義相關聯的範圍內時**\<客戶 >**和 **\<順序 >**項目節點)，大量載入會成功。  
+-   當結構描述符合 「 內含項目 」 規則 (例如，與客戶和訂單相關聯的所有資料都定義相關聯的範圍內時**\<客戶 >** 和 **\<順序 >** 項目節點)，大量載入會成功。  
   
--   在描述**\<客戶 >**項目，其子元素來指定適當的順序。 在此情況下，  **\<CustomerID >**之前指定子元素**\<順序 >**子項目。 這表示，在輸入 XML 資料檔案中，  **\<CustomerID >**項目值可做為外部索引鍵的值時**\<順序 >**元素進入範圍內。 根據「關鍵識別碼順序規則」，要先指定索引鍵屬性。  
+-   在描述**\<客戶 >** 項目，其子元素來指定適當的順序。 在此情況下，  **\<CustomerID >** 之前指定子元素**\<順序 >** 子項目。 這表示，在輸入 XML 資料檔案中，  **\<CustomerID >** 項目值可做為外部索引鍵的值時**\<順序 >** 元素進入範圍內。 根據「關鍵識別碼順序規則」，要先指定索引鍵屬性。  
   
-     如果您指定 **\<CustomerID >**之後的子項目**\<順序 >**子元素，此值時，不使用 **\<順序 >**元素進入範圍內。 當 **\</>**然後讀取結束標記時，就會被視為 CustOrder 資料表的記錄，並不是所要的結果 CustomerID 資料行的 NULL 值的 CustOrder 資料表中插入。  
+     如果您指定 **\<CustomerID >** 之後的子項目**\<順序 >** 子元素，此值時，不使用 **\<順序 >** 元素進入範圍內。 當 **\</>** 然後讀取結束標記時，就會被視為 CustOrder 資料表的記錄，並不是所要的結果 CustomerID 資料行的 NULL 值的 CustOrder 資料表中插入。  
   
 #### <a name="to-create-a-working-sample"></a>建立工作範例  
   
@@ -225,9 +222,9 @@ ms.lasthandoff: 04/16/2018
     ```  
   
 ## <a name="exceptions-to-the-record-generation-rule"></a>記錄產生規則的例外狀況  
- 當 XML 大量載入進入範圍內時，不會產生節點記錄 (如果該節點是 IDREF 或 IDREFS 類型的話)。 您必須確定完整的記錄描述會出現在結構描述中的某個地方。 **Dt: type ="nmtokens"**註解會被忽略，就像 IDREFS 類型也被忽略。  
+ 當 XML 大量載入進入範圍內時，不會產生節點記錄 (如果該節點是 IDREF 或 IDREFS 類型的話)。 您必須確定完整的記錄描述會出現在結構描述中的某個地方。 **Dt: type ="nmtokens"** 註解會被忽略，就像 IDREFS 類型也被忽略。  
   
- 例如，請考慮下列 XSD 結構描述，描述**\<客戶 >**和**\<順序 >**項目。 **\<客戶 >**元素包含**OrderList** IDREFS 類型的屬性。  **\<Sql: relationship >**標記指定客戶和訂單清單之間的一對多關聯性。  
+ 例如，請考慮下列 XSD 結構描述，描述**\<客戶 >** 和**\<順序 >** 項目。 **\<客戶 >** 元素包含**OrderList** IDREFS 類型的屬性。 **\<Sql: relationship >** 標記指定客戶和訂單清單之間的一對多關聯性。  
   
  這是結構描述：  
   
@@ -268,9 +265,9 @@ ms.lasthandoff: 04/16/2018
 </xsd:schema>  
 ```  
   
- 因為大量載入會忽略 IDREFS 類型的節點，所以不會產生記錄時**OrderList**屬性節點進入範圍內。 因此，如果您希望訂單記錄加入「訂單」資料表中，您必須描述那些在結構描述某處的訂單。 在這個結構描述中，指定**\<順序 >**元素可確保，XML 大量載入會將訂單記錄加入 「 訂單 」 資料表。 **\<順序 >**元素會描述填滿 CustOrder 資料表的記錄所需的所有屬性。  
+ 因為大量載入會忽略 IDREFS 類型的節點，所以不會產生記錄時**OrderList**屬性節點進入範圍內。 因此，如果您希望訂單記錄加入「訂單」資料表中，您必須描述那些在結構描述某處的訂單。 在這個結構描述中，指定**\<順序 >** 元素可確保，XML 大量載入會將訂單記錄加入 「 訂單 」 資料表。 **\<順序 >** 元素會描述填滿 CustOrder 資料表的記錄所需的所有屬性。  
   
- 您必須確定**CustomerID**和**OrderID**值**\<客戶 >**項目中的值相符 **\<順序 >**項目。 您必須負責維護參考完整性。  
+ 您必須確定**CustomerID**和**OrderID**值**\<客戶 >** 項目中的值相符 **\<順序 >** 項目。 您必須負責維護參考完整性。  
   
 #### <a name="to-test-a-working-sample"></a>測試工作範例  
   

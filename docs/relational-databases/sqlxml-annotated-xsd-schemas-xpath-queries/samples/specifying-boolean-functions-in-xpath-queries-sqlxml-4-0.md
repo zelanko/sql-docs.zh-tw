@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +21,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e5b395a49f69ed83acedde1dc8e70cc00db78b63
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9366a70d31e286ec69610f3551642ec24b1e2cad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林函數 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>範例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布林函數  
- 此查詢會傳回所有**\<客戶 >**內容節點的子項目沒有**\<順序 >**子項目：  
+ 此查詢會傳回所有**\<客戶 >** 內容節點的子項目沒有**\<順序 >** 子項目：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -86,7 +83,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布林函數  
- 此查詢會傳回所有**\<客戶 >**元素子系內容節點沒有**\<順序 >**子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
+ 此查詢會傳回所有**\<客戶 >** 元素子系內容節點沒有**\<順序 >** 子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
   
 ```  
 /child::Customer[child::Order=false()]  

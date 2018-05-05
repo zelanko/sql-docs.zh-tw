@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +21,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1852a8ee9c0c96a58c5ad71e25eafa1730d0ec49
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d89d8d78b2d9f2439711756ae97f5fae5220724d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>將參數傳遞至 Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.lasthandoff: 04/16/2018
  Updategrams 可讓您將 NULL 當做參數值來傳遞。 若要傳遞 NULL 參數值，指定**nullvalue**屬性。 值指派給**nullvalue**當做參數值然後提供屬性。 Updategrams 將此值視為 NULL。  
   
 > [!NOTE]  
->  在 **\<sql:header >**和 **\<updg:header >**，您應該指定**nullvalue**為不合格; 但是，請在**\<updg:sync >**，您指定**nullvalue**為合格 (例如， **updg: nullvalue**)。  
+>  在 **\<sql:header >** 和 **\<updg:header >**，您應該指定**nullvalue**為不合格; 但是，請在**\<updg:sync >**，您指定**nullvalue**為合格 (例如， **updg: nullvalue**)。  
   
 ## <a name="examples"></a>範例  
  若要建立工作範例使用下列範例，您必須符合指定的需求[執行 SQLXML 範例的需求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  

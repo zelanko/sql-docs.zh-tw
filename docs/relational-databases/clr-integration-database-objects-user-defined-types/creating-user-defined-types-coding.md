@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -37,12 +36,11 @@ caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d39df3bcadebc8c6433d11563c6d628ca439f061
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 69a07f7537b1b5e35e1ff576ba47993ada7a4ce7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>建立使用者定義型別-撰寫程式碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +65,7 @@ using Microsoft.SqlServer.Server;
  **Microsoft.SqlServer.Server**命名空間包含各種屬性的 UDT，所需的物件和**System.Data.SqlTypes**命名空間包含的類別代表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用組件的原生資料類型。 若要能夠正確運作，您的組件還需要其他的命名空間。 **點**UDT 也使用**System.Text**命名空間來處理字串。  
   
 > [!NOTE]  
->  Visual c + + 資料庫物件，例如 Udt，以編譯**/clr: pure**不支援執行。  
+>  Visual c + + 資料庫物件，例如 Udt，以編譯 **/clr: pure**不支援執行。  
   
 ## <a name="specifying-attributes"></a>指定屬性  
  屬性會決定如何使用序列化來建構 UDT 的儲存表示，並將 UDT 以傳值方式傳輸到用戶端。  
@@ -99,7 +97,7 @@ public struct Point : INullable
   
  您必須建立一個名為屬性**IsNull**，需要該資料行來判斷值是否為 null 的 CLR 程式碼中。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找到 UDT 的 Null 執行個體時，便會使用正常的 Null 處理方法來保存 UDT。 除非必要，否則伺服器不會浪費時間來序列化或還原序列化 UDT，而且它也不會浪費空間來儲存 Null UDT。 每次從 CLR 引入 UDT 時都會執行 Null 檢查，這表示使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL 建構來檢查 Null UDT 的作業一定都可運作。 **IsNull**屬性也伺服器用來測試例項是否為 null。 伺服器一旦判定 UDT 為 Null，就可以使用其原生的 Null 處理。  
   
- **Get （)**方法**IsNull**不是特殊案例，以任何方式。 如果**點**變數**@p**是**Null**，然後**@p.IsNull**會依預設，會評估為"NULL"，非"1"。 這是因為**SqlMethod(OnNullCall)**屬性**IsNull get （)**方法預設為 false。 因為這個物件是**Null**，當物件不會還原序列化，不會呼叫方法，並預設值是"NULL"傳回要求的屬性。  
+ **Get （)** 方法**IsNull**不是特殊案例，以任何方式。 如果**點**變數**@p**是**Null**，然後**@p.IsNull**會依預設，會評估為"NULL"，非"1"。 這是因為**SqlMethod(OnNullCall)** 屬性**IsNull get （)** 方法預設為 false。 因為這個物件是**Null**，當物件不會還原序列化，不會呼叫方法，並預設值是"NULL"傳回要求的屬性。  
   
 ### <a name="example"></a>範例  
  在下列範例中，`is_Null` 變數為私用，而且會針對 UDT 執行個體保留 Null 狀態。 您的程式碼必須維護對 `is_Null` 適當的值。 UDT 也必須擁有名為的靜態屬性**Null**傳回 UDT 的 null 值執行個體。 如果執行個體在資料庫中實際上為 Null，這可讓 UDT 傳回 Null 值。  

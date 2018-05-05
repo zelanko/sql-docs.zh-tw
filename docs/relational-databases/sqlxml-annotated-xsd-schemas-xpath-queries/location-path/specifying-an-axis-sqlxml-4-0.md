@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -27,13 +25,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6265d47c51238b70c394d8f6dba1a9006cde4451
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8659d8187042b0c40d2890e5a4feaf367efc7203
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定軸 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.lasthandoff: 04/16/2018
   
      包含內容節點的子系。  
   
-     下列的 XPath 運算式 （位置路徑） 從目前所有的內容節點選取**\<客戶 >**子系：  
+     下列的 XPath 運算式 （位置路徑） 從目前所有的內容節點選取**\<客戶 >** 子系：  
   
     ```  
     child::Customer  
@@ -54,7 +51,7 @@ ms.lasthandoff: 04/16/2018
   
      包含內容節點的父系。  
   
-     下列 XPath 運算式會選取所有**\<客戶 >**父系**\<順序 >**子系：  
+     下列 XPath 運算式會選取所有**\<客戶 >** 父系**\<順序 >** 子系：  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -76,7 +73,7 @@ ms.lasthandoff: 04/16/2018
   
      包含內容節點本身。  
   
-     下列 XPath 運算式選取目前的節點，如果它是**\<順序 >**節點：  
+     下列 XPath 運算式選取目前的節點，如果它是**\<順序 >** 節點：  
   
     ```  
     self::Order  

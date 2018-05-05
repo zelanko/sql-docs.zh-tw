@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: ''
 ms.suite: sql
@@ -22,13 +21,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c5ef54d6c9d0eee2481941f8dc6c77fab737d3fc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bc8072a1bd0f0e3a097a01696c9d034e0acb33c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>從 DB-Library 轉換成 ODBC 大量複製
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +55,7 @@ ms.lasthandoff: 04/16/2018
   
      資料程式庫中*varlen*值-1 表示的可變長度資料所提供，而在 ODBC *cbData*則解譯成表示提供只有 NULL 值。 變更任何 Db-library *varlen*規格為-1 為 SQL_VARLEN_DATA 以及任何*varlen* 0 為 SQL_NULL_DATA 的規格。  
   
--   Db-library  **bcp_colfmt * * * file_collen*和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * 有相同的問題 **bcp_bind * * * varlen*和*cbData*先前所述的參數。 變更任何 Db-library *file_collen*規格為-1 為 SQL_VARLEN_DATA 以及任何*file_collen* 0 為 SQL_NULL_DATA 的規格。  
+-   Db-library  **bcp_colfmt * * * file_collen*和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * 有相同的問題 **bcp_bind * * * varlen*和*cbData*先前所述的參數。 變更任何 Db-library *file_collen*規格為-1 為 SQL_VARLEN_DATA 以及任何*file_collen* 0 為 SQL_NULL_DATA 的規格。  
   
 -   *IValue* ODBC 參數[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)函式是 void 指標。 資料程式庫中*iValue*是整數。 值轉換為 ODBC *iValue* void *。  
   

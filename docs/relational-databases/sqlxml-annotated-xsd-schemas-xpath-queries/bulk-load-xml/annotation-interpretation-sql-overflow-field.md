@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +20,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a19fe5f83a23f48a48ab780edb9baf60e1ffeda
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5f4527068d0fd0f83987f5e145226c091a7913c0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>註解的解譯-sql: overflow-field-欄位
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
  當它將資料儲存在溢位資料行時，XML 大量載入也會儲存開頭和結尾標記的父項目為其**sql: overflow-field-欄位**定義。  
   
- 例如，下列結構描述會描述**\<客戶 >**和 **\<CustOrder >**項目。 每一個元素都可識別溢位資料行：  
+ 例如，下列結構描述會描述**\<客戶 >** 和 **\<CustOrder >** 項目。 每一個元素都可識別溢位資料行：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -82,9 +79,9 @@ ms.lasthandoff: 04/16/2018
 </xsd:schema>  
 ```  
   
- 結構描述， **\<客戶 >**元素會對應到 Cust 資料表和**\<順序 >**元素會對應到 CustOrder 資料表。  
+ 結構描述， **\<客戶 >** 元素會對應到 Cust 資料表和**\<順序 >** 元素會對應到 CustOrder 資料表。  
   
- 這兩個**\<客戶 >**和**\<順序 >**項目會識別溢位資料行。 因此，XML 大量載入會將儲存所有未耗用的子元素和屬性**\<客戶 >** Cust 資料表的溢位資料行中的項目及所有未耗用的子元素和屬性的**\<順序 >** CustOrder 資料表的溢位資料行中的項目。  
+ 這兩個**\<客戶 >** 和**\<順序 >** 項目會識別溢位資料行。 因此，XML 大量載入會將儲存所有未耗用的子元素和屬性**\<客戶 >** Cust 資料表的溢位資料行中的項目及所有未耗用的子元素和屬性的**\<順序 >** CustOrder 資料表的溢位資料行中的項目。  
   
 ### <a name="to-test-a-working-sample"></a>測試工作範例  
   

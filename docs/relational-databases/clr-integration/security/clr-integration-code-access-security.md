@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -23,12 +22,11 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ebe23e9aa58308e404f8cf748abe3e903471cb11
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8b71c017161b2f696872c6d2dd2ba7843a474bdc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 整合程式碼存取安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ ms.lasthandoff: 04/16/2018
 |權限|值/描述|  
 |----------------|-----------------------------|  
 |**SecurityPermission**|**執行：**執行 managed 程式碼的權限。|  
-|**SqlClientPermission**|**內容連接 = true**，**內容連接 = yes**： 只可以使用內容連接，連接字串只能指定值為"內容連接 = true"或"內容連接 = yes"。<br /><br /> **AllowBlankPassword = false:**不允許空白密碼。|  
+|**SqlClientPermission**|**內容連接 = true**，**內容連接 = yes**： 只可以使用內容連接，連接字串只能指定值為"內容連接 = true"或"內容連接 = yes"。<br /><br /> **AllowBlankPassword = false:** 不允許空白密碼。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS 組件具有相同的權限**安全**組件，包含要存取外部系統資源，例如檔案、 網路、 環境變數和登錄的額外功能。  
@@ -82,7 +80,7 @@ ms.lasthandoff: 04/16/2018
 |**KeyContainerPermission**|**不受限制的：**完整允許對金鑰容器存取。|  
 |**NetworkInformationPermission**|**存取：** Pinging 被允許。|  
 |**RegistryPermission**|允許讀取權限**HKEY_CLASSES_ROOT**， **HKEY_LOCAL_MACHINE**， **HKEY_CURRENT_USER**， **HKEY_CURRENT_CONFIG**，和**HKEY_USERS。**|  
-|**SecurityPermission**|**判斷提示：**可判斷提示這個程式碼的所有呼叫端具有操作的必要權限的能力。<br /><br /> **ControlPrincipal:**操作主體物件的能力。<br /><br /> **執行：**執行 managed 程式碼的權限。<br /><br /> **SerializationFormatter:**能夠提供序列化服務。|  
+|**SecurityPermission**|**判斷提示：**可判斷提示這個程式碼的所有呼叫端具有操作的必要權限的能力。<br /><br /> **ControlPrincipal:** 操作主體物件的能力。<br /><br /> **執行：**執行 managed 程式碼的權限。<br /><br /> **SerializationFormatter:** 能夠提供序列化服務。|  
 |**SmtpPermission**|**存取：**允許的 SMTP 主機連接埠 25 的傳出連接。|  
 |**SocketPermission**|**連接：**允許傳輸位址上的傳出連接 （所有連接埠、 所有通訊協定）。|  
 |**SqlClientPermission**|**不受限制的：**完整允許存取資料來源。|  

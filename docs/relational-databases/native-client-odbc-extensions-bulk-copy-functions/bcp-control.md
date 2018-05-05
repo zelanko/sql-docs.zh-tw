@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
@@ -24,13 +23,12 @@ caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 53ed8a1b6af16e36fe431a56dc32dee78c1ccf2c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 31efad83f947d774b6602fe4da85046ad6b9e198
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +76,7 @@ RETCODE bcp_control (
  BCPFILE_RAW：檔案中的資料位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的字碼頁。  
   
  BCPFILEFMT  
- 資料檔案格式的版本號碼。 這個號碼可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是預設值。 這個值在使用舊版伺服器支援的格式匯出和匯入資料時非常實用。 例如，若資料來自文字資料行中的匯入要[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]伺服器**varchar （max)**中的資料行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更新版本的伺服器，您應該指定 80。 同樣地，如果匯出資料時，指定 80 **varchar （max)**資料行，它會儲存文字資料行中儲存如同[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]格式，然後可以匯入的文字資料行[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]伺服器。  
+ 資料檔案格式的版本號碼。 這個號碼可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是預設值。 這個值在使用舊版伺服器支援的格式匯出和匯入資料時非常實用。 例如，若資料來自文字資料行中的匯入要[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]伺服器**varchar （max)** 中的資料行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更新版本的伺服器，您應該指定 80。 同樣地，如果匯出資料時，指定 80 **varchar （max)** 資料行，它會儲存文字資料行中儲存如同[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]格式，然後可以匯入的文字資料行[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]伺服器。  
   
  BCPFIRST  
  這是要複製的檔案或資料表的第一個資料列。 預設值為 1，小於 1 的值會將這個選項重設為預設。  

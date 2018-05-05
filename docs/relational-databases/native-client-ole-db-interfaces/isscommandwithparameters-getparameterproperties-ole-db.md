@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
@@ -22,13 +21,12 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 298237ddd8f4f211873efd7ee932ec901f9d9444
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 713169c273466260872ba29d65ab9c691dc5baf6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +54,7 @@ HRESULT GetParameterProperties(
  **GetParameterProperties**方法會傳回相同的錯誤碼與核心 OLE DB **icommandproperties:: Getproperties**無法引發 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 之外除外的方法。  
   
 ## <a name="remarks"></a>備註  
- **Getparameterinfo**行為一致，相對於**GetParameterInfo**。 如果[isscommandwithparameters::](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo**尚未呼叫或呼叫 cparams 等於零， **GetParameterInfo**衍生參數資訊，並傳回此。 如果**isscommandwithparameters::**或**SetParameterInfo**至少一個參數，在呼叫**Getparameterinfo**傳回這些參數的屬性為其**isscommandwithparameters::**已呼叫。 如果**isscommandwithparameters::**之後呼叫**Getparameterinfo**或**GetParameterInfo**，後續呼叫**Getparameterinfo**覆寫這些參數的值傳回的**isscommandwithparameters::**已呼叫。  
+ **Getparameterinfo**行為一致，相對於**GetParameterInfo**。 如果[isscommandwithparameters::](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo**尚未呼叫或呼叫 cparams 等於零， **GetParameterInfo**衍生參數資訊，並傳回此。 如果**isscommandwithparameters::** 或**SetParameterInfo**至少一個參數，在呼叫**Getparameterinfo**傳回這些參數的屬性為其**isscommandwithparameters::** 已呼叫。 如果**isscommandwithparameters::** 之後呼叫**Getparameterinfo**或**GetParameterInfo**，後續呼叫**Getparameterinfo**覆寫這些參數的值傳回的**isscommandwithparameters::** 已呼叫。  
   
  SSPARAMPROPS 結構定義如下：  
   

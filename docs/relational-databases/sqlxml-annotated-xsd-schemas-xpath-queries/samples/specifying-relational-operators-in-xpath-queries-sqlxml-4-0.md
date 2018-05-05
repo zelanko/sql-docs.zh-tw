@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b360fb33ecbee395519f39a14b5be5bf0a023857
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 71d17e2b77670ec02e345bfd30211d92ca3ab556
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定關係運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +34,13 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定關係運算子  
- 此 XPath 查詢傳回的子系的項目**\<客戶 >**元素其中**CustomerID**屬性值是"1"，其中任何子系**\<順序>**元素包含 **\<OrderDetail >**子系**OrderQty**屬性值大於 3:  
+ 此 XPath 查詢傳回的子系的項目**\<客戶 >** 元素其中**CustomerID**屬性值是"1"，其中任何子系**\<順序>** 元素包含 **\<OrderDetail >** 子系**OrderQty**屬性值大於 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 指定在方括號篩選條件的述詞**\<客戶 >**項目。 只有**\<客戶 >**至少有一個項目 **\<OrderDetail >**孫系包含 OrderQty 屬性值大於 3 會傳回。  
+ 指定在方括號篩選條件的述詞**\<客戶 >** 項目。 只有**\<客戶 >** 至少有一個項目 **\<OrderDetail >** 孫系包含 OrderQty 屬性值大於 3 會傳回。  
   
  **子**軸是預設值。 因此，此查詢可以指定為：  
   
@@ -88,7 +85,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查詢中指定關係運算子並使用布林函數來比較結果  
- 此查詢會傳回所有**\<順序 >**元素子系內容節點具有**SalesPersonID**屬性為小於 270 的值：  
+ 此查詢會傳回所有**\<順序 >** 元素子系內容節點具有**SalesPersonID**屬性為小於 270 的值：  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
@@ -18,13 +17,12 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d24c9e652e5971757f93976b951b26989c7e5562
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d1e307f12de6f298381e1e314a343eaece6353ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime 資料類型從 C 轉換成 SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 
   本主題列出當您從 C 類型轉換成應該考量的問題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/時間類型。  
   
- 下表描述的轉換會套用到用戶端上進行的轉換。 在用戶端上指定的參數與不同伺服器上定義的小數秒有效位數的情況下，用戶端轉換可能會成功，但伺服器會傳回錯誤時**SQLExecute**或**SQLExecuteDirect**呼叫。 特別是，ODBC 會將任何截斷的小數秒視為錯誤，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行為會捨去，例如四捨五入時，就會從**datetime2(6)**至**datetime2(2)**. Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
+ 下表描述的轉換會套用到用戶端上進行的轉換。 在用戶端上指定的參數與不同伺服器上定義的小數秒有效位數的情況下，用戶端轉換可能會成功，但伺服器會傳回錯誤時**SQLExecute**或**SQLExecuteDirect**呼叫。 特別是，ODBC 會將任何截斷的小數秒視為錯誤，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行為會捨去，例如四捨五入時，就會從**datetime2(6)** 至**datetime2(2)**. Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  

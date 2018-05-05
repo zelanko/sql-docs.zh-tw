@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +21,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e181cfbcdee2313872c032f2f6c6feb70c1394e7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a5cad9cb9284353aa856b45bad2fa6a14ad126d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>執行 XPath 查詢 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **對應結構描述**  
   
- 在這個範例 ADO 應用程式中，已針對 XSD 對應結構描述 (MySchema.xml) 指定了 XPath 查詢 (root)。 結構描述有**\<連絡人 >**具有項目**ContactID**， **FirstName**，和**LastName**屬性。 在此結構描述中，系統會進行預設對應：元素名稱會對應至具有相同名稱的資料表，而且屬於簡單類型的屬性會對應至具有相同名稱的資料行。  
+ 在這個範例 ADO 應用程式中，已針對 XSD 對應結構描述 (MySchema.xml) 指定了 XPath 查詢 (root)。 結構描述有**\<連絡人 >** 具有項目**ContactID**， **FirstName**，和**LastName**屬性。 在此結構描述中，系統會進行預設對應：元素名稱會對應至具有相同名稱的資料表，而且屬於簡單類型的屬性會對應至具有相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

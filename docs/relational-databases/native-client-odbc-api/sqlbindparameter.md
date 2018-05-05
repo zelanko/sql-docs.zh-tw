@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
@@ -19,13 +18,12 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da47b1493fc0892b19c468cf421aa58c7c9907f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3c078adc30fee659d87e58a1ea6ac44e25e68236
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 字元類型的繫結參數  
  如果傳入的 SQL 資料類型是字元類型， *ColumnSize*是以字元為單位 （而不是個位元組） 的大小。 如果以位元組為單位的資料字串的長度大於 8000， *ColumnSize*應該設定為**SQL_SS_LENGTH_UNLIMITED**，表示為 SQL 類型的大小沒有限制。  
   
- 比方說，如果 SQL 資料類型是**SQL_WVARCHAR**， *ColumnSize*不能超過 4000。 如果實際資料長度大於 4000，然後*ColumnSize*應該設定為**SQL_SS_LENGTH_UNLIMITED**以便**nvarchar （max)**將驅動程式所使用。  
+ 比方說，如果 SQL 資料類型是**SQL_WVARCHAR**， *ColumnSize*不能超過 4000。 如果實際資料長度大於 4000，然後*ColumnSize*應該設定為**SQL_SS_LENGTH_UNLIMITED**以便**nvarchar （max)** 將驅動程式所使用。  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter 和資料表值參數  
  如同其他參數類型，資料表值參數是由 SQLBindParameter 繫結。  

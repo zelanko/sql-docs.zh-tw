@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -23,12 +22,11 @@ caps.latest.revision: 81
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 250b86d882caab50c5c7862ee55c358f4ff06c2e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 739a6face41bc0f99b0f21567dee6192392e13fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 純量值函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +136,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library` 表示應該產生程式庫，而不是可執行檔。 可執行檔無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊。  
   
 > [!NOTE]  
->  使用 visual c + + 資料庫物件編譯**/clr: pure**上不支援執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，這類資料庫物件包括純量值函式。  
+>  使用 visual c + + 資料庫物件編譯 **/clr: pure**上不支援執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，這類資料庫物件包括純量值函式。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢及註冊組件和 UDF 的範例引動過程為：  
   

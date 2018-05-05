@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -34,19 +32,18 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2d52d84c175b7f7f3975645c385934a3c89be0d8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7762ba02f4368b64fc4073936cb04c293029e9d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 資料類型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 結構描述 (XSD) 所擁有的資料類型非常不同。 例如，XPath 沒有整數或日期資料類型，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 則有許多。 XSD 會將奈秒的有效位數用於時間值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則至多使用 1/300 秒的有效位數。 因此，並非永遠都能將一個資料類型對應到另一個。 如需有關對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型轉換成 XSD 資料型別，請參閱[資料類型強制型轉和 sql: datatype 註解&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
   
- XPath 具備三種資料類型：**字串**，**數目**，和**布林**。 **數目**資料類型一定是 IEEE 754 雙精確度浮點數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float(53)**資料類型是最接近 XPath**數目**。 不過， **float(53)**不完全是 IEEE 754。 例如，不會使用 NaN (非數字的值)，也不會使用無限。 嘗試將非數字字串來轉換**數目**並嘗試除以零會導致錯誤。  
+ XPath 具備三種資料類型：**字串**，**數目**，和**布林**。 **數目**資料類型一定是 IEEE 754 雙精確度浮點數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float(53)** 資料類型是最接近 XPath**數目**。 不過， **float(53)** 不完全是 IEEE 754。 例如，不會使用 NaN (非數字的值)，也不會使用無限。 嘗試將非數字字串來轉換**數目**並嘗試除以零會導致錯誤。  
   
 ## <a name="xpath-conversions"></a>XPath 轉換  
  當您使用 XPath 查詢 (例如，`OrderDetail[@UnitPrice > "10.0"]`) 時，隱含和明確的資料類型轉換可能會以明顯的方式變更查詢的意義。 因此，了解如何實作 XPath 資料類型相當重要。 在 XPath 語言規格中，XML 路徑語言 (XPath) 1.0 版，W3C 提出的建議 1999 年 8，請參閱 W3C 網站上http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
@@ -87,7 +84,7 @@ ms.lasthandoff: 04/16/2018
  通常，屬性或對應至資料行的元素存在資料庫中的該資料行的值不是**null**。 如果任何資料列的子系存在，則對應到那些資料列的元素存在。  
   
 > [!NOTE]  
->  項目將附註**is-constant<**永遠存在。 因此，XPath 述詞不能在**is-constant<**項目。  
+>  項目將附註**is-constant<** 永遠存在。 因此，XPath 述詞不能在**is-constant<** 項目。  
   
  當節點集轉換成**字串**或**數目**註解式結構描述中檢查其 XDR 類型 （如果有的話），該類型用來判斷所需的轉換。  
   
@@ -159,7 +156,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. 在 XPath 查詢中執行數個資料類型轉換  
  請考慮使用針對註解式 XSD 結構描述指定的這個 XPath 查詢：`OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- 此 XPath 查詢會傳回所有 **\<OrderDetail >**符合述詞的項目`@UnitPrice * @OrderQty > 98`。 如果**UnitPrice**附註**fixed14.4**資料型別註解式結構描述，此述詞相當於 SQL 運算式：  
+ 此 XPath 查詢會傳回所有 **\<OrderDetail >** 符合述詞的項目`@UnitPrice * @OrderQty > 98`。 如果**UnitPrice**附註**fixed14.4**資料型別註解式結構描述，此述詞相當於 SQL 運算式：  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
@@ -169,7 +166,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 CONVERT(money, OrderDetail.UnitPrice))   
 ```  
   
- 算術運算子會轉換其運算元，所以**數目**XPath 資料類型，第二個 （一個 XPath 資料類型轉換成另一個 XPath 資料類型） 會套用的值轉換為**float(53)** (**float(53)**接近 XPath**數目**資料類型):  
+ 算術運算子會轉換其運算元，所以**數目**XPath 資料類型，第二個 （一個 XPath 資料類型轉換成另一個 XPath 資料類型） 會套用的值轉換為**float(53)** (**float(53)** 接近 XPath**數目**資料類型):  
   
 ```  
 CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice))   

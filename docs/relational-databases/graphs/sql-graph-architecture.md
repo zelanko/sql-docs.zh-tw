@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: graphs
 ms.reviewer: ''
 ms.suite: sql
@@ -21,9 +20,9 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 255d99003dbd37a6edee538e92ef3849f69dc8c0
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 7cfba1fc79e44bb28a433c3b31fe5f4236037d6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

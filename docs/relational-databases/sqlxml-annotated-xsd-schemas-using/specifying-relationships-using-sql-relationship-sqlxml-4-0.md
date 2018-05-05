@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -35,19 +33,18 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 048b90bb17952147d254e0dc89a28dc58fe9532c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5d9846c90dc6b95d83c3e647aaee1f388cd0ea86
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定關聯性 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 文件中的元素可以是相關聯的。 元素可以是巢狀階層，而且在元素之間可以指定 ID、IDREF 或 IDREFS 關聯性。  
   
- 例如，在 XSD 結構描述， **\<客戶 >**元素包含**\<順序 >**子項目。 當結構描述對應到 AdventureWorks 資料庫中， **\<客戶 >**元素會對應到 Sales.Customer 資料表和**\<順序 >**元素會對應到Sales.SalesOrderHeader 資料表。 Sales.Customer 和 Sales.SalesOrderHeader 這些基礎資料表是相關聯的，因為客戶下了訂單。 Sales.SalesOrderHeader 資料表中的 CustomerID 是外部索引鍵，參考 Sales.Customer 資料表中的 CustomerID 主索引鍵。 您可以建立使用對應結構描述元素之間的關聯性**sql: relationship**註解。  
+ 例如，在 XSD 結構描述， **\<客戶 >** 元素包含**\<順序 >** 子項目。 當結構描述對應到 AdventureWorks 資料庫中， **\<客戶 >** 元素會對應到 Sales.Customer 資料表和**\<順序 >** 元素會對應到Sales.SalesOrderHeader 資料表。 Sales.Customer 和 Sales.SalesOrderHeader 這些基礎資料表是相關聯的，因為客戶下了訂單。 Sales.SalesOrderHeader 資料表中的 CustomerID 是外部索引鍵，參考 Sales.Customer 資料表中的 CustomerID 主索引鍵。 您可以建立使用對應結構描述元素之間的關聯性**sql: relationship**註解。  
   
  註解式 XSD 結構描述中**sql: relationship**註解用來以階層方式，巢狀結構描述項目，根據主要索引鍵和基礎元素所對應的資料表之間的外部索引鍵關聯性。 在指定**sql: relationship**註釋，您必須識別下列：  
   
@@ -57,13 +54,13 @@ ms.lasthandoff: 04/16/2018
   
  這項資訊用於產生適當的階層。  
   
- 若要提供資料表名稱和必要的聯結資訊，在上指定下列屬性**sql: relationship**註解。 這些屬性都是有效只能搭配 **\<sql: relationship >**項目：  
+ 若要提供資料表名稱和必要的聯結資訊，在上指定下列屬性**sql: relationship**註解。 這些屬性都是有效只能搭配 **\<sql: relationship >** 項目：  
   
  **名稱**  
  指定關聯性的唯一名稱。  
   
  **父系**  
- 指定父關聯 (資料表)。 這是選用的屬性；如果未指定此屬性，會從文件之子階層中的資訊取得父資料表名稱。 如果結構描述指定使用相同的兩個父子式階層 **\<sql: relationship >**但不同的父項目，您沒有指定的父屬性 **\<sql:關聯性 >**。 這項資訊是從結構描述的階層中取得。  
+ 指定父關聯 (資料表)。 這是選用的屬性；如果未指定此屬性，會從文件之子階層中的資訊取得父資料表名稱。 如果結構描述指定使用相同的兩個父子式階層 **\<sql: relationship >** 但不同的父項目，您沒有指定的父屬性 **\<sql:關聯性 >**。 這項資訊是從結構描述的階層中取得。  
   
  **parent-key**  
  指定父系的父索引鍵。 如果父索引鍵由多個資料行所組成，值就會用資料行之間的空格指定。 在指定給多重資料行索引鍵和其對應之子索引鍵的值之間有位置性對應。  
@@ -75,9 +72,9 @@ ms.lasthandoff: 04/16/2018
  在參考父系中之 parent-key 的子系中指定子索引鍵。 如果子索引鍵由多個屬性 (資料行) 所組成，則 child-key 的值就會用屬性或資料行之間的空格指定。 在指定給多重資料行索引鍵和其對應之父索引鍵的值之間有位置性對應。  
   
  **反向**  
- 這個屬性上指定 **\<sql: relationship >**由 updategrams 所使用。 如需詳細資訊，請參閱[sql: relationship 指定 sql: inverse 屬性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
+ 這個屬性上指定 **\<sql: relationship >** 由 updategrams 所使用。 如需詳細資訊，請參閱[sql: relationship 指定 sql: inverse 屬性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
- **Sql: key-fields-欄位**註解必須指定在項目中包含子元素，具有 **\<sql: relationship >**定義元素與子系，且會提供在父元素中指定之資料表的主索引鍵。 即使未指定結構描述 **\<sql: relationship >**，您必須指定**sql: key-fields-欄位**來產生適當的階層。 如需詳細資訊，請參閱[使用 sql: key-fields 來識別索引鍵資料行的欄位](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  
+ **Sql: key-fields-欄位**註解必須指定在項目中包含子元素，具有 **\<sql: relationship >** 定義元素與子系，且會提供在父元素中指定之資料表的主索引鍵。 即使未指定結構描述 **\<sql: relationship >**，您必須指定**sql: key-fields-欄位**來產生適當的階層。 如需詳細資訊，請參閱[使用 sql: key-fields 來識別索引鍵資料行的欄位](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  
   
  若要產生適當的巢狀結果，建議**sql: key-fields-欄位**所有結構描述中指定。  
   
@@ -85,11 +82,11 @@ ms.lasthandoff: 04/16/2018
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 在元素上指定 sql:relationship 註解  
- 下列註解式的 XSD 結構描述包含**\<客戶 >**和**\<順序 >**項目。 **\<順序 >**元素是子元素**\<客戶 >**項目。  
+ 下列註解式的 XSD 結構描述包含**\<客戶 >** 和**\<順序 >** 項目。 **\<順序 >** 元素是子元素**\<客戶 >** 項目。  
   
- 結構描述， **sql: relationship**上指定註解**\<順序 >**子項目。 此關聯性本身中定義 **\<xsd:appinfo >**項目。  
+ 結構描述， **sql: relationship**上指定註解**\<順序 >** 子項目。 此關聯性本身中定義 **\<xsd:appinfo >** 項目。  
   
- **\<關聯性 >**元素 Sales.SalesOrderHeader 資料表中 CustomerID 識別為參考 Sales.Customer 資料表中的 CustomerID 主要索引鍵的外部索引鍵。 因此，客戶的訂單顯示為的子元素**\<客戶 >**項目。  
+ **\<關聯性 >** 元素 Sales.SalesOrderHeader 資料表中 CustomerID 識別為參考 Sales.Customer 資料表中的 CustomerID 主要索引鍵的外部索引鍵。 因此，客戶的訂單顯示為的子元素**\<客戶 >** 項目。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -205,11 +202,11 @@ ms.lasthandoff: 04/16/2018
 ...  
 ```  
   
- Sales.SalesOrderHeader 資料表中每筆訂單，XML 文件有一個**\<順序 >**項目。 每一次和**\<順序 >**項目有一份**\<產品 >**子項目，一個用於每個產品的訂單中要求。  
+ Sales.SalesOrderHeader 資料表中每筆訂單，XML 文件有一個**\<順序 >** 項目。 每一次和**\<順序 >** 項目有一份**\<產品 >** 子項目，一個用於每個產品的訂單中要求。  
   
  若要指定產生此階層的 XSD 結構描述，您必須指定兩個關聯性：OrderOD 和 ODProduct。 OrderOD 關聯性會在 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 資料表之間指定父子式關聯性。 ODProduct 關聯性會在 Sales.SalesOrderDetail 和 Production.Product 資料表之間指定關聯性。  
   
- 下列的結構描述， **msdata: relationship**上的註解**\<產品 >**項目會指定兩個值： OrderOD 和 ODProduct。 指定這些值的順序很重要。  
+ 下列的結構描述， **msdata: relationship**上的註解**\<產品 >** 項目會指定兩個值： OrderOD 和 ODProduct。 指定這些值的順序很重要。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -391,11 +388,11 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. 在多重元素中指定 sql:relationship  
- 在此範例中，註解式的 XSD 結構描述包含**\<客戶 >**， **\<順序 >**，和 **\<OrderDetail >**項目。  
+ 在此範例中，註解式的 XSD 結構描述包含**\<客戶 >**， **\<順序 >**，和 **\<OrderDetail >** 項目。  
   
- **\<順序 >**元素是子元素**\<客戶 >**項目。 **\<sql: relationship >**上指定**\<順序 >**子元素; 因此，客戶的訂單顯示為的子元素**\<客戶 >**.  
+ **\<順序 >** 元素是子元素**\<客戶 >** 項目。 **\<sql: relationship >** 上指定**\<順序 >** 子元素; 因此，客戶的訂單顯示為的子元素**\<客戶 >**.  
   
- **\<順序 >**元素包含 **\<OrderDetail >**子項目。 **\<sql: relationship >**上指定 **\<OrderDetail >**子元素，因此訂單的訂單詳細資料會顯示為子元素， **\<順序 >**項目。  
+ **\<順序 >** 元素包含 **\<OrderDetail >** 子項目。 **\<sql: relationship >** 上指定 **\<OrderDetail >** 子元素，因此訂單的訂單詳細資料會顯示為子元素， **\<順序 >** 項目。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -492,14 +489,14 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>E. 指定\<sql: relationship > 沒有 parent 屬性  
- 此範例說明如何指定 **\<sql: relationship >**沒有**父**屬性。 例如，假設您有下列員工資料表：  
+ 此範例說明如何指定 **\<sql: relationship >** 沒有**父**屬性。 例如，假設您有下列員工資料表：  
   
 ```  
 Emp1(SalesPersonID, FirstName, LastName, ReportsTo)  
 Emp2(SalesPersonID, FirstName, LastName, ReportsTo)  
 ```  
   
- 下列 XML 檢視 **\<Emp1 >**和 **\<Emp2 >**對應到 Sales.Emp1 和 Sales.Emp2 資料表的項目：  
+ 下列 XML 檢視 **\<Emp1 >** 和 **\<Emp2 >** 對應到 Sales.Emp1 和 Sales.Emp2 資料表的項目：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -533,7 +530,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 結構描述，同時 **\<Emp1 >**項目和 **\<Emp2 >**元素屬於類型**EmpType**。 型別**EmpType**描述**\<順序 >**子項目和對應 **\<sql: relationship >**。 在此情況下，沒有可以中識別的單一父 **\<sql: relationship >**使用**父**屬性。 在此情況下，您不指定**父**屬性 **\<sql: relationship >**;**父**從取得屬性資訊結構描述中的階層。  
+ 結構描述，同時 **\<Emp1 >** 項目和 **\<Emp2 >** 元素屬於類型**EmpType**。 型別**EmpType**描述**\<順序 >** 子項目和對應 **\<sql: relationship >**。 在此情況下，沒有可以中識別的單一父 **\<sql: relationship >** 使用**父**屬性。 在此情況下，您不指定**父**屬性 **\<sql: relationship >**;**父**從取得屬性資訊結構描述中的階層。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>針對結構描述測試範例 XPath 查詢  
   

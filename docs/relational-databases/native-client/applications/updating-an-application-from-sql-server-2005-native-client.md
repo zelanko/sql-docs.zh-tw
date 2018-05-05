@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
@@ -18,13 +17,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2181b027627e89b14c774185fa15a8cec2c3444
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32ebeaefe034128943f081251cc9c40e34e88ee7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>從 SQL Server 2005 Native Client 更新應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB 只會填補至定義的小數位數。|轉換的轉換後的資料傳送到伺服器， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (從[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 之資料的最大長度只限尾端零填補**datetime**值。 SQL Server Native Client 9.0 則會填滿至 9 位數。|  
 |如 ICommandWithParameter::SetParameterInfo 驗證 DBTYPE_DBTIMESTAMP。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (從[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 實作的 OLE DB 需求*bScale*中 ICommandWithParameter::SetParameterInfo 針對 DBTYPE_DBTIMESTAMP 設定為小數的秒數有效位數。|  
-|**Sp_columns**預存程序現在會傳回**"NO"**而不是**"NO"** IS_NULLABLE 資料行。|從開始[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])， **sp_columns**預存程序現在會傳回**"NO"**而不是**"NO"** IS_NULLABLE 資料行.|  
+|**Sp_columns**預存程序現在會傳回 **"NO"** 而不是 **"NO"** IS_NULLABLE 資料行。|從開始[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])， **sp_columns**預存程序現在會傳回 **"NO"** 而不是 **"NO"** IS_NULLABLE 資料行.|  
 |SQLSetDescRec、 SQLBindParameter 等和 SQLBindCol 現在執行一致性檢查。|之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 中，設定 sql_desc_data_ptr 並不會造成任何描述項類型的一致性檢查 SQLSetDescRec、 SQLBindParameter 等或 SQLBindCol 中。|  
 |SQLCopyDesc 現在會描述項一致性檢查。|之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0，SQLCopyDesc 一致性檢查時未在特定記錄上設定 SQL_DESC_DATA_PTR 欄位。|  
 |SQLGetDescRec 不再不描述項一致性檢查。|之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 中，設定 SQL_DESC_DATA_PTR 欄位時，SQLGetDescRec 執行描述項一致性檢查。 這不是 ODBC 規格所需，而且在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 和更新版本中，將不再執行這項一致性檢查。|  

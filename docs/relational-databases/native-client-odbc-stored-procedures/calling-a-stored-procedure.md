@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -24,13 +23,12 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b1dfc08ad0ff42c5a7e5409d729b6f62a4f4d36
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b06c46a9043c13b60d65117b3418b807107f3764
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-a-stored-procedure"></a>呼叫預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 04/16/2018
   
  用來呼叫程序的 ODBC CALL 逸出序列為：  
   
- {[**?=**]**call***procedure_name*[([*parameter*][**,**[*parameter*]]...)]}  
+ {[**?=**]**call***procedure_name*[([*parameter*][**,**[* parameter*]]...)]}  
   
  其中*procedure_name*指定程序的名稱和*參數*指定程序參數。 只有使用 ODBC CALL 逸出序列的陳述式才會支援具名參數。  
   
@@ -80,7 +78,7 @@ ms.lasthandoff: 04/16/2018
 { CALL "master"."dbo"."sp_who" }  
 ```  
   
- 不過，利用預設值執行時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援使用引號識別碼的形式與包含 ISO 標準未指定為合法識別碼之字元的識別碼。 例如，此驅動程式無法存取名為預存程序**"My.Proc"**使用 CALL 陳述式與引號識別項：  
+ 不過，利用預設值執行時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援使用引號識別碼的形式與包含 ISO 標準未指定為合法識別碼之字元的識別碼。 例如，此驅動程式無法存取名為預存程序 **"My.Proc"** 使用 CALL 陳述式與引號識別項：  
   
 ```  
 { CALL "MyDB"."MyOwner"."My.Proc" }  

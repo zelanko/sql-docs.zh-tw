@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -20,12 +19,11 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 285df1ab327617437fa9edf32f21b84b2499e0ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ad749572b54e76c751002db3516fdf46ce31f729
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 整合架構效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ ms.lasthandoff: 04/16/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元資料，例如**varchar**，可以是 managed 函數中 SqlString 或 SqlChars 類型。 SqlString 變數會在記憶體中建立整個值的執行個體。 SqlChars 變數會提供資料流介面，不需要透過在記憶體中建立整個值的執行個體，就可以用於達到更好的效能與延展性。 這對於大型物件 (LOB) 資料而言，變得特別重要。 此外，伺服器 XML 資料可以透過所傳回的資料流介面來存取**SqlXml.CreateReader()**。  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 與擴充預存程序  
- 允許 Managed 程序將結果集傳回用戶端之 Microsoft.SqlServer.Server 應用程式開發介面 (API) 的執行效能比擴充預存程序所使用的開放式資料服務 (ODS) API 更好。 此外，System.Data.SqlServer Api 支援資料類型例如**xml**， **varchar （max)**， **nvarchar （max)**，和**varbinary （max)**中導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，而 ODS Api 尚未擴充為支援新的資料類型。  
+ 允許 Managed 程序將結果集傳回用戶端之 Microsoft.SqlServer.Server 應用程式開發介面 (API) 的執行效能比擴充預存程序所使用的開放式資料服務 (ODS) API 更好。 此外，System.Data.SqlServer Api 支援資料類型例如**xml**， **varchar （max)**， **nvarchar （max)**，和**varbinary （max)** 中導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，而 ODS Api 尚未擴充為支援新的資料類型。  
   
  利用 Managed 程式碼，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可管理資源的使用，例如，記憶體、執行緒和同步處理。 這是因為公開這些資源的 Managed API 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員頂端實作。 相反地，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法檢視或控制擴充預存程序的資源使用量。 例如，如果擴充預存程序耗用太多 CPU 或記憶體資源，就無法利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 偵測或控制這個擴充預存程序。 不過，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以利用 Managed 程式碼偵測到給定的執行緒已經很長一段時間沒有產生，然後強制工作產生，如此就可以排程其他工作。 因此，使用 Managed 程式碼可以提供較佳的延展性與系統資源使用量。  
   
