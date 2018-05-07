@@ -3,13 +3,10 @@ title: getSQLXML 方法 (java.lang.String) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f56b192a-3255-4215-b552-8e494fbca083
@@ -17,9 +14,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a38bc61dcdcafe3d790fdb76aa477b2cd27320b0
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 7f5df92fdb7c315d002203f31da1b049e9eeb64e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -38,7 +35,7 @@ public final java.sql.SQLXML getSQLXML(java.lang.String parameterName)
 #### <a name="parameters"></a>參數  
  *參數名稱*  
   
- A**字串**，指出參數名稱。  
+ 指出參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
  ASQLXMLobject。  

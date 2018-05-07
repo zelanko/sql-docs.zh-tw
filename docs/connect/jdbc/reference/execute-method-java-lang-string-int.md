@@ -3,13 +3,10 @@ title: execute 方法 (java.lang.String，int[]) |Microsoft 文件
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 046bcaa04b4bbc84faf7d8499618059dc5ed42af
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: afe080df57157ae62e604ff8057027a45df39fc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public final boolean execute(
 #### <a name="parameters"></a>參數
 *sql*
 
-A**字串**，其中包含 SQL 陳述式。
+包含 SQL 陳述式的**字串**。
 
 *columnIndexes*
 

@@ -44,6 +44,7 @@
 #### [[發行者屬性]](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
 ### [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
 ### [Service Broker](service-broker-with-always-on-availability-groups-sql-server.md)  
+## [租用、 叢集及健康情況檢查逾時](availability-group-lease-healthcheck-timeout.md)
 ## [接聽程式、用戶端與容錯移轉](listeners-client-connectivity-application-failover.md)  
 ## [登入與作業](logins-and-jobs-for-availability-group-databases.md)  
 ## [工作階段期間複本之間可能發生的失敗](possible-failures-during-sessions-between-availability-replicas-sql-server.md)  

@@ -1,11 +1,9 @@
 ---
 title: 解決活頁簿的瀏覽按鈕 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ffad07e0672672bef56ff1d4914219a44b50b2f1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3162bb0a7bd7ed54812848df214658980dc6ec8f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="address-book-navigation-buttons"></a>解決活頁簿的瀏覽按鈕
 通訊錄應用程式底部的網頁上顯示瀏覽按鈕。 第一個或最後一個資料列的資料或目前的選取範圍中相鄰的資料列，您可以使用瀏覽按鈕來選取導覽中的 HTML 方格顯示的資料。  

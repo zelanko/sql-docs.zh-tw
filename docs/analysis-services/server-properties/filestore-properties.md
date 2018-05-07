@@ -1,40 +1,19 @@
 ---
 title: Filestore 屬性 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-helpviewer_keywords:
-- Income property
-- InitialBonus property
-- PercentScanPerPrice property
-- FileStore properties
-- BackgroundTrimCost property
-- Tax property
-- PerformanceTrace property
-- MinimumBalance property
-- UnbufferedThreshold property
-- BackgroundTrimAmount property
-- MaximumBalance property
-- MemoryLimitMin property
-- MemoryLimit property
-ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
-caps.latest.revision: 19
-author: Minewiskan
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1dd89fa18dfae50fa2a42e08aa522e4f4b728f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: ec29a17677032a764ae4604368ccc8cec243c11c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filestore-properties"></a>FileStore 屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

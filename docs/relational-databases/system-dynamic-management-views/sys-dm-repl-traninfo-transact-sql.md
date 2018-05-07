@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,11 +24,11 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a86541edb4b3d72d0210db7b6679da9e292c53f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 2023d6171154026b813aff9501d54b9763825f17
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |**begin_lsn**|**nvarchar(64)**|交易之開始記錄的記錄序號 (LSN)。|  
 |**commit_lsn**|**nvarchar(64)**|交易之認可記錄的 LSN。|  
 |**dbid**|**smallint**|資料庫識別碼。|  
-|**資料列**|**int**|交易內的複寫命令識別碼。|  
+|**rows**|**int**|交易內的複寫命令識別碼。|  
 |**xdesid**|**nvarchar(64)**|交易識別碼。|  
 |**artcache_table_address**|**varbinary(8)**|上次用於這項交易之快取發行項資料表結構的記憶體中位址。|  
 |**伺服器**|**nvarchar(514)**|伺服器名稱。|  

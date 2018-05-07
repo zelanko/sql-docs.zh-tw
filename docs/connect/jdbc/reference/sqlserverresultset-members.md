@@ -3,13 +3,10 @@ title: SQLServerResultSet 成員 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
@@ -17,9 +14,9 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8b89a2fa6131229470720120decaf9587456007
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: cf318137b6d3f23a2161de97999df29b7f29ed8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -119,7 +116,7 @@ ms.lasthandoff: 05/03/2018
 |[rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md)|擷取值，此值指出目前資料列是否具有插入。|  
 |[RowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)|擷取值，此值指出目前資料列是否已遭更新。|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md)|提供提示，當做方向中的資料列在這個[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件將會處理。|  
-|[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|提供 JDBC 驅動程式提示，當做這個需要更多的資料列時應該從資料庫提取的資料列數目[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。|  
+|[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|提供提示給 JDBC Driver，作為當這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件需要多個資料列時應從資料庫中提取的資料列數目。|  
 |[updateArray](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)|陣列物件更新指定的資料行。|  
 |[updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)|使用 ASCII 資料流值，更新指定的資料行。|  
 |[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|BigDecimal 物件更新指定的資料行。|  

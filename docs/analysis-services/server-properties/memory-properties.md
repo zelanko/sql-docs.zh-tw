@@ -1,39 +1,19 @@
 ---
 title: 記憶體屬性 |Microsoft 文件
-ms.custom: ''
-ms.date: 01/23/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-helpviewer_keywords:
-- LowMemoryLimit property
-- MinimumAllocatedMemory property
-- MidMemoryPrice property
-- MemoryHeapType property
-- memory [Analysis Services]
-- DefaultPagesCountToReuse property
-- TotalMemoryLimit property
-- SessionMemoryLimit property
-- VirtualMemoryLimit property
-- WaitCountIfHighMemory property
-- HighMemoryPrice property
-- HeapTypeForObjects property
-ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
-caps.latest.revision: 26
-author: Minewiskan
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 05627e07106b92a6bb43afc381dfe1d2ef07ce81
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: e538c44e636fcc3c6928fdb485671491de028bd0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-properties"></a>記憶體屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

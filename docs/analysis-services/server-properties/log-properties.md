@@ -1,69 +1,18 @@
 ---
-title: 記錄屬性 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-helpviewer_keywords:
-- QueryLogFileSize property
-- QueryLogTableName property
-- TraceBackgroundDistributionPeriod property
-- TraceMaxRowsetSize property
-- NullKeyConvertedToUnknown property
-- CrashReportsFolder property
-- TraceDefinitionFile property
-- SQLDumperFlagsOn property
-- KeyErrorLimit property
-- SnapshotDefinitionFile property
-- MinidumpErrorList property
-- ErrorLogFileName property
-- KeyDuplicate property
-- IgnoreDataTruncation property
-- logs [Analysis Services]
-- Enabled property
-- FileSizeMB property
-- TraceFileWriteTrailerPeriod property
-- TraceQueryResponseTextChunkSize property
-- File property
-- FileBufferSize property
-- TraceRowsetBackgroundFlushPeriod property
-- ErrorLogFileSize property
-- TraceRequestParameters property
-- KeyErrorLimitAction property
-- CreateQueryLogTable property
-- LogDir property
-- TraceBackgroundFlushPeriod property
-- TraceFileBufferSize property
-- SQLDumperFlagsOff property
-- QueryLogConnectionString property
-- KeyNotFound property
-- KeyErrorLogFile property
-- TraceReportFQDN property
-- KeyErrorAction property
-- QueryLogFileName property
-- MessageLogs property
-- MiniDumpFlagsOn property
-- SnapshotFrequencySec property
-- QueryLogSampling property
-- CreateAndSendCrashReports property
-- LogDurationSec property
-ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
-caps.latest.revision: 23
-author: Minewiskan
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: b76b9011d6c138669d75fb9ff3caebf6f74bc00a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1f22d08c5b6f0c89b254fa6189fcfe1eb6be7083
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="log-properties"></a>記錄屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

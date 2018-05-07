@@ -6,10 +6,9 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
@@ -18,11 +17,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d53fe64298c22c145be537221aa20425bce0e51
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: bdb021c9d036a3daab6b0e5c3f4912c0da4059eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 04/18/2018
  資料表中的欄位和變數之間的對應。 ADO Visual c + + 擴充功能中**資料錄集**欄位會對應至 C/c + + 變數。  
   
  位元遮罩  
- 數字的值適用於搭配其他數值的位元值比較通常加上旗標參數或傳回值中的選項。 通常這項比較會完成的位元邏輯運算子，例如**和**和**或者**在 Visual Basic 中**&**和**&#124;** c + + 中。  
+ 數字的值適用於搭配其他數值的位元值比較通常加上旗標參數或傳回值中的選項。 通常這項比較會完成的位元邏輯運算子，例如**和**和**或者**在 Visual Basic 中**&** 和 **&#124;** c + + 中。  
   
  例如，ADO **FieldAttributeEnum**值可用來當作位元遮罩來決定欄位的屬性。 假設您想要判斷是否可更新的欄位。 您可以測試這個，與 Visual Basic 中的下列運算式：`Field.Attributes AND adFldUpdatable`  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 94696a2975436669567db926b3d66020dd29ab5b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-transitions"></a>陳述式轉換
 ODBC 陳述式具有下列狀態。  
@@ -330,7 +329,7 @@ ODBC 陳述式具有下列狀態。
   
  [1] 這個資料列會顯示轉換時*選項*已 SQL_CLOSE。  
   
- [2] 這個資料列會顯示轉換時*選項*SQL_UNBIND 或 SQL_RESET_PARAMS。 如果*選項*引數以前是 SQL_DROP 與基礎驅動程式的 ODBC 3*.x*驅動程式，驅動程式管理員對應到呼叫**SQLFreeHandle**與*HandleType*設定為 SQL_HANDLE_STMT。 如需詳細資訊，請參閱轉換資料表[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ [2] 這個資料列會顯示轉換時*選項*SQL_UNBIND 或 SQL_RESET_PARAMS。 如果*選項*引數以前是 SQL_DROP 與基礎驅動程式的 ODBC 3 *.x*驅動程式，驅動程式管理員對應到呼叫**SQLFreeHandle**與*HandleType*設定為 SQL_HANDLE_STMT。 如需詳細資訊，請參閱轉換資料表[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
@@ -495,9 +494,9 @@ ODBC 陳述式具有下列狀態。
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(KARTRIS)|S2 [s] 和 [編號] S3 [s] 和 [r2] S11 [x]|-[s] 或 ([e] 和 [1]) S1 [e] 和 [2] S11 [x]|S1 [e] [3] S2 和 [s]，[編號]，[3] S3 和 [s]，[r] 和 [3] S11 [x] 和 [3] 24000 [4]|請參閱下一個資料表|HY010|NS [c] HY010 [o]|  
   
- [1] 的準備工作失敗，由於驗證陳述式以外的原因 (SQLSTATE 已 HY009 [無效的引數的值] 或 HY090 [無效的字串或緩衝區長度])。  
+ [1] 的準備工作失敗，由於驗證陳述式以外的原因 (SQLSTATE 已 HY009 [無效的引數的值] 或 [HY090 [無效的字串或緩衝區長度])。  
   
- [2] 的準備工作失敗時驗證該陳述式 (SQLSTATE 未 HY009 [無效的引數的值] 或 HY090 [無效的字串或緩衝區長度])。  
+ [2] 的準備工作失敗時驗證該陳述式 (SQLSTATE 未 HY009 [無效的引數的值] 或 [HY090 [無效的字串或緩衝區長度])。  
   
  [3] 的目前結果的最後一個或只有結果，或沒有目前的結果。 如需多個結果的詳細資訊，請參閱[多個結果](../../../odbc/reference/develop-app/multiple-results.md)。  
   

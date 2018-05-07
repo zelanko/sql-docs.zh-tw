@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,13 +18,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 530cd1e4fef24d925af9a6079b6afeeb07ec463d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 68cb00ced8f77b5921be07a3f6383d4436f0bade
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>xml 資料類型在 SQLXML 4.0 中的支援
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="guidelines-and-limitations"></a>指導方針與限制  
   
--   **\<xsd： 任何 >**無法對應至資料行，包括**xml**資料型別。 這種情況下透過提供的 SQLXML 中支援**sql: overflow-field-欄位**註解。 另一個解決方法是將對應**xml**做為項目資料類型欄位**具有 xsd: anytype**。 此因應措施會在上述資料表中參考之「將 XML 元素對應至 XML 資料類型資料行」範例中示範。  
+-   **\<xsd： 任何 >** 無法對應至資料行，包括**xml**資料型別。 這種情況下透過提供的 SQLXML 中支援**sql: overflow-field-欄位**註解。 另一個解決方法是將對應**xml**做為項目資料類型欄位**具有 xsd: anytype**。 此因應措施會在上述資料表中參考之「將 XML 元素對應至 XML 資料類型資料行」範例中示範。  
   
 -   XPath 查詢的內容**xml**不支援資料類型資料行。  
   

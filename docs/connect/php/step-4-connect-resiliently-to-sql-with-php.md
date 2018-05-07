@@ -3,13 +3,11 @@ title: 步驟 4： 彈性地連接到 SQL 搭配 PHP |Microsoft 文件
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
@@ -17,9 +15,9 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdd7cc7f1be86c30c05c9e024d8eff0fe67431f4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 07394d39ca6a6544cc45fc99a1601874230345f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

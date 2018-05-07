@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
@@ -25,9 +24,9 @@ caps.latest.revision: 5
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 4186c338facb6c36a1f0ef993500606fb0b32bc0
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d3b8ff8bf463c7f03d370d681f0efbd86830e688
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

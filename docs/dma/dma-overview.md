@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/15/2018
 ms.prod: sql
 ms.prod_service: dma
-ms.service: ''
-ms.component: ''
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-dma
+ms.technology: dma
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
@@ -20,9 +17,9 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: d7349e266f1d16310bf32c3b4c0307ba5c46bf27
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 16550b6c195f426d914f5a4b4d521cbd739765ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

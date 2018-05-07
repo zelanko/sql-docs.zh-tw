@@ -1,54 +1,19 @@
 ---
 title: 一般屬性 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-helpviewer_keywords:
-- IdleConnectionTimeout property
-- InstanceVisible property
-- TempDir property
-- AdminTimeout property
-- MinIdleSessionTimeout property
-- MaxIdleSessionTimeout property
-- IdleOrphanSessionTimeout property
-- BackupDir property
-- CommitTimeout property
-- ExternalCommandTimeout property
-- Enabled property
-- ForceCommitTimeout property
-- Port property
-- CoordinatorShutdownMode property
-- ServerTimeout property
-- AllowedBrowsingFolders property
-- CoordinatorCancelCount property
-- DataDir property
-- CoordinatorQueryMaxThreads property
-- CoordinatorExecutionMode property
-- ExternalConnectionTimeout property
-- CollationName property
-- EnableFast1033Locale property
-- CoordinatorBuildMaxThreads property
-- Language property
-- StatisticsStoreSize property
-- RepositoryConnectionString property
-ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
-caps.latest.revision: 31
-author: Minewiskan
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0fd01d77983e217a0eee67241707ace648ddced1
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: e406ba37723e370cb84994e22634c4cc66cf93bd
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-properties"></a>一般屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

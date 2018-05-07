@@ -3,13 +3,10 @@ title: SQL Server 登入對話方塊 (ODBC) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
@@ -17,9 +14,9 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: e60be85d872ec3fd6cfce59d7be689b0e03587c7
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 3dcd7f9d5d3807858ae13a9ded3a2164eca20b45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

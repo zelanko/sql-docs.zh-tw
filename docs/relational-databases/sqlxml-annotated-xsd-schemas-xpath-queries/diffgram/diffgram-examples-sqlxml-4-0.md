@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +20,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e9d54edb652ab38ff92de8d439507555b1401d9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1ad818de46852201fc2bc111684b461d5c15ada3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram 範例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +105,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- 在**\<之前 >**封鎖，所以在**\<順序 >**元素 (**diffgr: id ="Order1"**) 和 **\<客戶 >**元素 (**diffgr: id ="Customer1"**)。 這些項目代表資料庫中的現有記錄。  **\<DataInstance >**項目沒有對應的記錄 (具有相同**diffgr: id**)。 這表示刪除作業。  
+ 在**\<之前 >** 封鎖，所以在**\<順序 >** 元素 (**diffgr: id ="Order1"**) 和 **\<客戶 >** 元素 (**diffgr: id ="Customer1"**)。 這些項目代表資料庫中的現有記錄。 **\<DataInstance >** 項目沒有對應的記錄 (具有相同**diffgr: id**)。 這表示刪除作業。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
@@ -175,7 +172,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- 在這個 DiffGram 中**\<之前 >**並未指定區塊 （沒有現有的資料庫記錄識別）。 有兩個記錄的執行個體 (由**\<客戶 >**和**\<順序 >**中的項目 **\<DataInstance >**區塊)，分別對應到 Cust 和 Ord 資料表。 這兩個元素指定**diffgr: haschanges**屬性 (**hasChanges ="inserted"**)。 這表示插入作業。 在這個 DiffGram 中，如果您指定**hasChanges ="modified"**，表示您想要修改的記錄不存在，會導致錯誤。  
+ 在這個 DiffGram 中**\<之前 >** 並未指定區塊 （沒有現有的資料庫記錄識別）。 有兩個記錄的執行個體 (由**\<客戶 >** 和**\<順序 >** 中的項目 **\<DataInstance >** 區塊)，分別對應到 Cust 和 Ord 資料表。 這兩個元素指定**diffgr: haschanges**屬性 (**hasChanges ="inserted"**)。 這表示插入作業。 在這個 DiffGram 中，如果您指定**hasChanges ="modified"**，表示您想要修改的記錄不存在，會導致錯誤。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
@@ -247,7 +244,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- **\<之前 >**區塊包含**\<客戶 >**元素 (**diffgr: id ="Customer1"**)。  **\<DataInstance >**區塊包含對應**\<客戶 >**具有相同的項目**識別碼**。**\<客戶 >**中的項目 **\<NewDataSet >**也會指定**diffgr: haschanges ="modified"**。 這表示更新作業，而且中的客戶記錄**Cust**資料表也會一併更新。 請注意，如果**diffgr: haschanges**未指定屬性，DiffGram 處理邏輯會忽略這個項目會執行任何更新。  
+ **\<之前 >** 區塊包含**\<客戶 >** 元素 (**diffgr: id ="Customer1"**)。 **\<DataInstance >** 區塊包含對應**\<客戶 >** 具有相同的項目**識別碼**。**\<客戶 >** 中的項目 **\<NewDataSet >** 也會指定**diffgr: haschanges ="modified"**。 這表示更新作業，而且中的客戶記錄**Cust**資料表也會一併更新。 請注意，如果**diffgr: haschanges**未指定屬性，DiffGram 處理邏輯會忽略這個項目會執行任何更新。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
@@ -348,15 +345,15 @@ ms.lasthandoff: 04/16/2018
   
  DiffGram 邏輯會處理這個 DiffGram，如下所示：  
   
--   根據 DiffGram 處理邏輯中的所有最上層元素**\<之前 >**封鎖對應至對應的資料表，因為對應結構描述中所述。  
+-   根據 DiffGram 處理邏輯中的所有最上層元素**\<之前 >** 封鎖對應至對應的資料表，因為對應結構描述中所述。  
   
--   **\<之前 >**區塊都具有**\<順序 >**元素 (**dffgr:id ="Order1"**) 和**\<客戶>**元素 (**diffgr: id ="Customer1"**) 針對其沒有對應的項目中 **\<DataInstance >** （具有相同的識別碼） 的區塊。 這表示刪除作業，而且會從 Cust 和 Ord 資料表中刪除記錄。  
+-   **\<之前 >** 區塊都具有**\<順序 >** 元素 (**dffgr:id ="Order1"**) 和**\<客戶>** 元素 (**diffgr: id ="Customer1"**) 針對其沒有對應的項目中 **\<DataInstance >** （具有相同的識別碼） 的區塊。 這表示刪除作業，而且會從 Cust 和 Ord 資料表中刪除記錄。  
   
--   **\<之前 >**區塊都具有**\<客戶 >**元素 (**diffgr: id ="Customer2"**) 有是對應**\<客戶 >**中的項目 **\<DataInstance >** （具有相同的識別碼） 的區塊。 中的項目 **\<DataInstance >**區塊指定**diffgr: haschanges ="modified"**。 這是更新作業，在對客戶 anatr 而言，使用指定的值在 Cust 資料表中更新 CompanyName 和 ContactName 資訊 **\<DataInstance >**區塊。  
+-   **\<之前 >** 區塊都具有**\<客戶 >** 元素 (**diffgr: id ="Customer2"**) 有是對應**\<客戶 >** 中的項目 **\<DataInstance >** （具有相同的識別碼） 的區塊。 中的項目 **\<DataInstance >** 區塊指定**diffgr: haschanges ="modified"**。 這是更新作業，在對客戶 anatr 而言，使用指定的值在 Cust 資料表中更新 CompanyName 和 ContactName 資訊 **\<DataInstance >** 區塊。  
   
--    **\<DataInstance >**區塊都具有**\<客戶 >**元素 (**diffgr: id ="Customer3"**) 和 **\<順序 >**元素 (**diffgr: id ="Order3"**)。 這些項目都不指定**diffgr: haschanges**屬性。 因此，DiffGram 處理邏輯會忽略這些元素。  
+-   **\<DataInstance >** 區塊都具有**\<客戶 >** 元素 (**diffgr: id ="Customer3"**) 和 **\<順序 >** 元素 (**diffgr: id ="Order3"**)。 這些項目都不指定**diffgr: haschanges**屬性。 因此，DiffGram 處理邏輯會忽略這些元素。  
   
--    **\<DataInstance >**區塊都具有**\<客戶 >**元素 (**diffgr: id ="Customer4"**) 和 **\<順序 >**元素 (**diffgr: id ="Order4"**) 的其中有中的沒有對應項目\<之前 > 區塊。 這些項目 **\<DataInstance >**區塊指定**diffgr: haschanges ="inserted"**。 因此，新的記錄會加入 Cust 資料表和 Ord 資料表中。  
+-   **\<DataInstance >** 區塊都具有**\<客戶 >** 元素 (**diffgr: id ="Customer4"**) 和 **\<順序 >** 元素 (**diffgr: id ="Order4"**) 的其中有中的沒有對應項目\<之前 > 區塊。 這些項目 **\<DataInstance >** 區塊指定**diffgr: haschanges ="inserted"**。 因此，新的記錄會加入 Cust 資料表和 Ord 資料表中。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
@@ -420,6 +417,6 @@ ms.lasthandoff: 04/16/2018
 </diffgr:diffgram>  
 ```  
   
- 這個 DiffGram 會指定刪除作業，因為只有**\<之前 >**區塊。 在此 DiffGram 中， **parentID**註解用來指定訂單與訂單詳細資料之間的父子式關聯性。 當 SQLXML 刪除記錄時，它會從這個關聯性所識別的子資料表中刪除記錄，然後從對應的父資料表中刪除記錄。  
+ 這個 DiffGram 會指定刪除作業，因為只有**\<之前 >** 區塊。 在此 DiffGram 中， **parentID**註解用來指定訂單與訂單詳細資料之間的父子式關聯性。 當 SQLXML 刪除記錄時，它會從這個關聯性所識別的子資料表中刪除記錄，然後從對應的父資料表中刪除記錄。  
   
   

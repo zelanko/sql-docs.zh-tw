@@ -1,11 +1,8 @@
 ---
 title: 歡迎使用 Microsoft ODBC Driver 13 for SQL Server on Windows |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,9 +14,9 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ed6ade0987daa6301e28309ca0ea5d02b3f68b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 6f7cc9d202877345ba1d304fb3179efbe631468d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

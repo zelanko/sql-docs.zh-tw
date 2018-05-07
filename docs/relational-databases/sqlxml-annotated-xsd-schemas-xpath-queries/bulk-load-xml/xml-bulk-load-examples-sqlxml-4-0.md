@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -38,13 +36,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 91eaa0eecdab4b6994aaa32dec8f2dc761005555
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4527b1c3fb4e3573bad5b34a3c4743da16d94487
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 大量載入範例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +205,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 將 XML 資料大量載入到多個資料表中  
- 在此範例中，XML 文件所組成**\<客戶 >**和**\<順序 >**項目。  
+ 在此範例中，XML 文件所組成**\<客戶 >** 和**\<順序 >** 項目。  
   
 ```xml  
 <ROOT>  
@@ -239,7 +236,7 @@ End Function
   
 -   CustOrder （訂單編號、 客戶編號）  
   
- 下列 XSD 結構描述會定義這些資料表的 XML 檢視。 結構描述指定之間的父子式關聯性**\<客戶 >**和**\<順序 >**項目。  
+ 下列 XSD 結構描述會定義這些資料表的 XML 檢視。 結構描述指定之間的父子式關聯性**\<客戶 >** 和**\<順序 >** 項目。  
   
 ```xml  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -278,7 +275,7 @@ End Function
 </xsd:schema>  
 ```  
   
- XML 大量載入會使用主索引鍵/外部索引鍵關聯性之間使用上述指定 **\<Cust >**和 **\<CustOrder >**大量項目會將資料載入至兩個資料表.  
+ XML 大量載入會使用主索引鍵/外部索引鍵關聯性之間使用上述指定 **\<Cust >** 和 **\<CustOrder >** 大量項目會將資料載入至兩個資料表.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>測試大量載入範例  
   
@@ -391,7 +388,7 @@ End Function
 </xsd:schema>  
 ```  
   
- 結構描述指定**\<順序 >**具有項目**\<產品 >**子項目。 **\<順序 >**元素會對應到 Ord 資料表和**\<產品 >**元素會對應到資料庫中的 Product 資料表。 在指定的鏈結關聯性**\<產品 >**元素會識別 OrderDetail 資料表所代表的 M:N 關聯性。 (一個訂單可以包含許多產品，而一個產品可以包含在許多訂單中)。  
+ 結構描述指定**\<順序 >** 具有項目**\<產品 >** 子項目。 **\<順序 >** 元素會對應到 Ord 資料表和**\<產品 >** 元素會對應到資料庫中的 Product 資料表。 在指定的鏈結關聯性**\<產品 >** 元素會識別 OrderDetail 資料表所代表的 M:N 關聯性。 (一個訂單可以包含許多產品，而一個產品可以包含在許多訂單中)。  
   
  當您要使用此結構描述大量載入 XML 文件時，會將記錄加入到 Ord、Product 和 OrderDetail 資料表中。  
   
@@ -853,10 +850,10 @@ End Sub
 </xsd:schema>  
 ```  
   
- 此結構描述會識別 Cust 資料表的溢位資料行 (OverflowColumn)。 如此一來，所有未 XML 資料消耗每個**\<客戶 >**元素會加入至這個資料行。  
+ 此結構描述會識別 Cust 資料表的溢位資料行 (OverflowColumn)。 如此一來，所有未 XML 資料消耗每個**\<客戶 >** 元素會加入至這個資料行。  
   
 > [!NOTE]  
->  所有抽象元素 (其項目**抽象 ="true"**指定) 以及所有禁止的屬性 (屬性**禁止 ="true"**指定) 會被視為 XML 大量溢位負載和都加入至溢位資料行中，如果指定。 (否則便會予以忽略)。  
+>  所有抽象元素 (其項目**抽象 ="true"** 指定) 以及所有禁止的屬性 (屬性**禁止 ="true"** 指定) 會被視為 XML 大量溢位負載和都加入至溢位資料行中，如果指定。 (否則便會予以忽略)。  
   
 #### <a name="to-test-a-working-sample"></a>測試工作範例  
   
@@ -1251,9 +1248,9 @@ End Sub
 ```  
   
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. 大量載入到 xml 資料類型資料行  
- 如果對應結構描述指定[xml 資料型別](../../../t-sql/xml/xml-transact-sql.md)所使用的資料行**sql: datatype ="xml"**註釋，XML 大量載入可以到這個從來源文件中複製的對應欄位的 XML 子項目資料行。  
+ 如果對應結構描述指定[xml 資料型別](../../../t-sql/xml/xml-transact-sql.md)所使用的資料行**sql: datatype ="xml"** 註釋，XML 大量載入可以到這個從來源文件中複製的對應欄位的 XML 子項目資料行。  
   
- 請考慮使用下列 XSD 結構描述，該結構描述會對應 AdventureWorks 範本資料庫中的 Production.ProductModel 資料表檢視。 下表中的 CatalogDescription 欄位**xml**資料類型對應至 **\<Desc >**項目使用**sql: field**和**sql:datatype ="xml"**註解。  
+ 請考慮使用下列 XSD 結構描述，該結構描述會對應 AdventureWorks 範本資料庫中的 Production.ProductModel 資料表檢視。 下表中的 CatalogDescription 欄位**xml**資料類型對應至 **\<Desc >** 項目使用**sql: field**和**sql:datatype ="xml"** 註解。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
