@@ -1,34 +1,35 @@
 ---
-title: "將 TDE 保護的資料庫移至另一個 SQL Server | Microsoft Docs"
-ms.custom: 
+title: 將 TDE 保護的資料庫移至另一個 SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df6d9dfb912e4a425f44008a982b8c18fdc54f7c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c7cf3c269522f35f2ba64bb7e81c9910bdd95869
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 **master** 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[tsql](../../../includes/tsql-md.md)]執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 **master** 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
    
 ##  <a name="Restrictions"></a> 限制事項  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設會將此處建立的檔案儲存在 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** 。 您的檔案名稱和位置可能會不同。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
   
 -   需要 **master** 資料庫的 **CONTROL DATABASE** 權限，才能建立資料庫主要金鑰。  
   
@@ -84,11 +85,11 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="TsqlCreate"></a> 使用 Transact-SQL  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```sql  
     -- Create a database master key and a certificate in the master database.  
@@ -178,11 +179,11 @@ ms.lasthandoff: 11/21/2017
   
     -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]**。  
   
-    -   當資料庫有一個或多個使用中的連接時，[狀態]為 [未就緒]且 [訊息] 資料行顯示 [*<使用中連接數目>* 個使用中的連接] - 例如：[1 個使用中的連接]。 您必須選取 **[卸除連接]**中斷任何使用中的連接之後，才能卸離資料庫。  
+    -   當資料庫有一或多個使用中的連線時，[狀態]為 [未就緒]且 [訊息] 資料行顯示 [<使用中連線數目> 個使用中的連線線] - 例如：[1 個使用中的連線]。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
   
      若要取得有關訊息的詳細資訊，請按一下超連結文字，以開啟活動監視器。  
   
-2.  按一下 **[確定]**。  
+2.  按一下 [確定] 。  
   
 3.  使用 [Windows 檔案總管]，將資料庫檔案從來源伺服器移動或複製到目的地伺服器上相同的位置。  
   
@@ -194,9 +195,9 @@ ms.lasthandoff: 11/21/2017
   
 7.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]的 [物件總管] 中，以滑鼠右鍵按一下 **[資料庫]** 資料夾，然後選取 **[附加]**。  
   
-8.  在 **[附加資料庫]** 對話方塊中，按一下 **[要附加的資料庫]**底下的 **[加入]**。  
+8.  在 **[附加資料庫]** 對話方塊中，按一下 **[要附加的資料庫]** 底下的 **[加入]**。  
   
-9. 在 [尋找資料庫檔案 - *伺服器名稱*] 對話方塊中，選取要附加至新伺服器的資料庫檔案，然後按一下 [確定]。  
+9. 在 [尋找資料庫檔案 –*server_name*]**** 對話方塊中，選取要附加至新伺服器的資料庫檔案，然後按一下 [確定]。  
   
      **[附加資料庫]** 對話方塊有下列選項。  
   
@@ -221,13 +222,13 @@ ms.lasthandoff: 11/21/2017
      **狀態**  
      根據下表顯示資料庫的狀態。  
   
-    |圖示|狀態文字|說明|  
+    |圖示|狀態文字|描述|  
     |----------|-----------------|-----------------|  
     |(無圖示)|(沒有文字)|附加作業尚未啟動或是針對此物件進行暫止。 當對話方塊開啟時，這是預設的動作。|  
     |綠色、指向右方的三角形|進行中|附加作業已啟動，但尚未完成。|  
     |綠色的核取記號|成功|已順利附加物件。|  
     |包含白色十字的紅色圓圈|錯誤|附加作業發生錯誤，且未順利完成。|  
-    |包含兩個黑色的象限 (在左方和右方) 以及兩個白色的象限 (在上方和下方)|Stopped|附加作業未順利完成，因為使用者已停止作業。|  
+    |包含兩個黑色的象限 (在左方和右方) 以及兩個白色的象限 (在上方和下方)|已停止|附加作業未順利完成，因為使用者已停止作業。|  
     |包含指向逆時針方向之彎曲箭頭的圓圈|已回復|附加作業已順利完成，但是因為在附加其他物件的期間發生了錯誤，所以已將其回復。|  
   
      **訊息**  
@@ -259,11 +260,11 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="TsqlMove"></a> 使用 Transact-SQL  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```sql  
     -- Detach the TDE protected database from the source server.   

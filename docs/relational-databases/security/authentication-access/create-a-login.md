@@ -2,7 +2,7 @@
 title: 建立登入 | Microsoft 文件
 ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03a4f993deace5c4714e17667b00eee99b4811a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-login"></a>建立登入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,15 +68,15 @@ ms.lasthandoff: 04/10/2018
   
      如果您按一下 **[搜尋]**：  
   
-    1.  按一下 **[選取此物件類型]**底下的 **[物件類型]** 開啟 [物件類型] 對話方塊並選取下列任何一個或所有選項：[內建安全性主體]、[群組] 和 [使用者]。 預設會選取 [內建安全性主體] 和 [使用者]。 完成後，請按一下 **[確定]**。  
+    1.  按一下 **[選取此物件類型]** 底下的 **[物件類型]** 開啟 [物件類型] 對話方塊並選取下列任何一個或所有選項：[內建安全性主體]、[群組] 和 [使用者]。 預設會選取 [內建安全性主體] 和 [使用者]。 完成後，請按一下 **[確定]**。  
   
-    2.  按一下 **[從這個位置]**底下的 **[位置]** 開啟 **[位置]** 對話方塊並選取其中一個可用的伺服器位置。 完成後，請按一下 **[確定]**。  
+    2.  按一下 **[從這個位置]** 底下的 **[位置]** 開啟 **[位置]** 對話方塊並選取其中一個可用的伺服器位置。 完成後，請按一下 **[確定]**。  
   
     3.  在 [輸入要選取的物件名稱 (範例)] 底下，輸入要尋找的使用者或群組名稱。 如需詳細資訊，請參閱＜ [選擇使用者、電腦或群組對話方塊](http://technet.microsoft.com/library/cc771712.aspx)＞。  
   
     4.  如需其他進階搜尋選項，請按一下 **[進階]** 。 如需詳細資訊，請參閱 [選擇使用者、電腦或群組對話方塊 - 進階頁面](http://technet.microsoft.com/library/cc733110.aspx)。  
   
-    5.  按一下 **[確定]**。  
+    5.  按一下 [確定] 。  
   
 4.  若要建立以 Windows 主體為基礎的登入，請選取 **[Windows 驗證]**。 這是預設選項。  
   
@@ -87,9 +88,9 @@ ms.lasthandoff: 04/10/2018
   
     3.  若要強制執行複雜性和強制執行的密碼原則選項，請選取 **[強制執行密碼原則]**。 如需詳細資訊，請參閱＜ [Password Policy](../../../relational-databases/security/password-policy.md)＞。 這是已選取 **[SQL Server 驗證]** 時的預設選項。  
   
-    4.  若要強制執行逾期的密碼原則選項，請選取 **[強制執行密碼逾期]**。 必須選取**[強制執行密碼原則]** 才能啟用此核取方塊。 這是已選取 **[SQL Server 驗證]** 時的預設選項。  
+    4.  若要強制執行逾期的密碼原則選項，請選取 **[強制執行密碼逾期]**。 必須選取 **[強制執行密碼原則]** 才能啟用此核取方塊。 這是已選取 **[SQL Server 驗證]** 時的預設選項。  
   
-    5.  若要強制使用者必須在第一次使用登入後建立新的密碼，請選取 **[使用者必須在下次登入時變更密碼]**。 必須選取**[強制執行密碼逾期]** 才能啟用此核取方塊。 這是已選取 **[SQL Server 驗證]** 時的預設選項。  
+    5.  若要強制使用者必須在第一次使用登入後建立新的密碼，請選取 **[使用者必須在下次登入時變更密碼]**。 必須選取 **[強制執行密碼逾期]** 才能啟用此核取方塊。 這是已選取 **[SQL Server 驗證]** 時的預設選項。  
   
 6.  若要將登入與獨立安全性憑證建立關聯，請選取 [已對應到憑證]，然後從清單中選取現有憑證的名稱。  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/10/2018
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- **[登入 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[伺服器角色]**、 **[使用者對應]**、 **[安全性實體]**和 **[狀態]**。  
+ **[登入 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[伺服器角色]**、 **[使用者對應]**、 **[安全性實體]** 和 **[狀態]**。  
   
 ### <a name="server-roles"></a>[伺服器角色]  
  **[伺服器角色]** 頁面列出所有可指派給新登入的可能角色。 下列是可以使用的選項：  
@@ -145,7 +146,7 @@ ms.lasthandoff: 04/10/2018
  **對應**  
  允許登入存取下列資料庫。  
   
- **資料庫**  
+ **[資料庫備份]**  
  列出伺服器上可用的資料庫。  
   
  **使用者**  
@@ -170,15 +171,15 @@ ms.lasthandoff: 04/10/2018
   
 1.  按一下 **[搜尋]**。  
   
-2.  在**加入物件**對話方塊中，選取下列選項之一：**特定物件...**，**所有類型的物件...**，或 **伺服器 * * * server_name*。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  在 [新增物件] 對話方塊中，選取下列其中一個選項：[特定物件…]、[下列類型的所有物件…] 或 [伺服器*server_name*]****。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **注意：**選取 **伺服器 * * * server_name*使用的所有該伺服器的安全物件自動填滿上方格。  
+    > **注意**：選取 [伺服器*server_name*]**** 會使用該伺服器的所有安全物件自動填滿上層方格。  
   
 3.  如果您選取 **[特定物件]**：  
   
-    1.  在 **[選取物件]** 對話方塊中，按一下 **[選取下列物件類型]**底下的 **[物件類型]**。  
+    1.  在 **[選取物件]** 對話方塊中，按一下 **[選取下列物件類型]** 底下的 **[物件類型]**。  
   
-    2.  在 **[選取物件類型]** 對話方塊中，選取下列任何一個或所有物件類型： **[端點]**、 **[登入]**、 **[伺服器]**、 **[可用性群組]**和 **[伺服器角色]**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  在 **[選取物件類型]** 對話方塊中，選取下列任何一個或所有物件類型： **[端點]**、 **[登入]**、 **[伺服器]**、 **[可用性群組]** 和 **[伺服器角色]**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  按一下 [輸入要選取的物件名稱 (範例)] 底下的 [瀏覽…]。  
   
@@ -186,12 +187,12 @@ ms.lasthandoff: 04/10/2018
   
     5.  在 **[選取物件]** 對話方塊中，按一下 **[確定]**。  
   
-4.  如果您選取 **[下列類型的所有物件]**，請在 **[選取物件類型]** 對話方塊中，選取下列任何一個或所有物件類型： **[端點]**、 **[登入]**、 **[伺服器]**、 **[可用性群組]**和 **[伺服器角色]**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  如果您選取 **[下列類型的所有物件]**，請在 **[選取物件類型]** 對話方塊中，選取下列任何一個或所有物件類型： **[端點]**、 **[登入]**、 **[伺服器]**、 **[可用性群組]** 和 **[伺服器角色]**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **名稱**  
  加入此方格的每一個主體或安全性實體名稱。  
   
- **類型**  
+ **型別**  
  描述每個項目的類型。  
   
  **明確索引標籤**  
@@ -235,11 +236,11 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="TsqlProcedure"></a> 透過 T-SQL 建立使用 Windows 驗證的登入  
   
  
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- Create a login for SQL Server by specifying a server name and a Windows domain account name.  
@@ -251,11 +252,11 @@ ms.lasthandoff: 04/10/2018
   
 ## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>透過 SSMS 建立使用 SQL Server 驗證的登入  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- Creates the user "shcooper" for SQL Server using the security credential "RestrictedFaculty"   
