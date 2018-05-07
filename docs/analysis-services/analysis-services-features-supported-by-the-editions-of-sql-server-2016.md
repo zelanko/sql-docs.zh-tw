@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: multidimensional-tabular
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -16,11 +15,11 @@ caps.latest.revision: 4
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 64dc653bb76225f00bed96da4b0e44ad49263807
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: e79ca3b24ec8ef92f677044795ede8303a3b4062
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="analysis-services-features-supported-by-sql-server-editions"></a>SQL Server 版本所支援的 analysis Services 功能
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]

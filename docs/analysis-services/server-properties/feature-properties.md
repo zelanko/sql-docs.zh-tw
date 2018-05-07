@@ -1,35 +1,19 @@
 ---
 title: 功能屬性 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-helpviewer_keywords:
-- SQMSupportEnabled property
-- ComUdfEnabled property
-- LinkToOtherInstanceEnabled property
-- ManagedCodeEnabled property
-- ConnStringEncryptionEnabled property
-- LinkFromOtherInstanceEnabled property
-- LinkInsideInstanceEnabled property
-- UseCachedPageAllocators property
-ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
-caps.latest.revision: 21
-author: Minewiskan
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: d543570a6e18b8f2b50fcc39593da4849892aa0f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d21bda0977eb28299007f72fc695d08dd97e7605
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="feature-properties"></a>功能屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

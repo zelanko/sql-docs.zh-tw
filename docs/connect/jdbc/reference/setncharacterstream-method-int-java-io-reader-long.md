@@ -3,13 +3,10 @@ title: setNCharacterStream 方法 java.io.Reader 物件-長 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
@@ -17,9 +14,9 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7b05c69b5f4f7652f09f003cf25a8649487570
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1b8cdaeb1d1cb00f3bd41f8f813f53eedfa23abd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -40,7 +37,7 @@ public final void setNCharacterStream(int parameterIndex,
 #### <a name="parameters"></a>參數  
  *parameterIndex*  
   
- **Int** ，指出參數索引。  
+ 指出參數索引的 **int**。  
   
  *value*  
   
@@ -48,7 +45,7 @@ public final void setNCharacterStream(int parameterIndex,
   
  *長度*  
   
- A**長**，指出參數值中的字元數目。  
+ 指出參數值中字元數的 **long**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

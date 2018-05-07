@@ -1,35 +1,19 @@
 ---
 title: 安全性屬性 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-helpviewer_keywords:
-- security [Analysis Services], properties
-- SecurityPackageList property
-- BuiltinAdminsAreServerAdmins property
-- DisableClientImpersonation property
-- ErrorMessageMode property
-- RequiredProtectionLevel property
-- ServiceAccountIsServerAdmin property
-- RequireClientAuthentication property
-ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
-caps.latest.revision: 15
-author: Minewiskan
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: f1857b8cba9f789a7f3ef470dee0e1f728e4ae3d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 8c587bbe18f99779889960a94f68ad43bde59b76
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-properties"></a>安全性屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

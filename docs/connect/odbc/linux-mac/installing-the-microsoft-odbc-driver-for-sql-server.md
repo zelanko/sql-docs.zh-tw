@@ -3,13 +3,10 @@ title: 安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS |Micros
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,9 +16,9 @@ caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48397442b628be54f0d25d545dacc6c494a00d75
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 8b601c52db4dae0a7d103cee09ca231fc4d058d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
