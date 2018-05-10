@@ -8,15 +8,14 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 9f6d63674253171bdb21519af0604502c2e61f9e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: aa024a467207b884b111b9b356465ec0e1df2089
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

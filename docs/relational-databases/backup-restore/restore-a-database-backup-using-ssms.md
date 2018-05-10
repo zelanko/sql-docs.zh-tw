@@ -3,15 +3,12 @@ title: 使用 SSMS 還原資料庫備份 | Microsoft 文件
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.locatebackupfileazure.f1
 - sql13.swb.specifybackup.f1
@@ -26,12 +23,11 @@ caps.latest.revision: 79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a02973a198043163ce6ece5d3bc490f05048f7e7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 01e55085d117541e2ecb8d8c4ee585afec205b03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ ms.lasthandoff: 04/16/2018
     
 ### <a name="a-restore-a-full-database-backup"></a>**A.還原完整資料庫備份**    
     
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
     
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]    
     
@@ -142,7 +138,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>**B.以覆蓋現有資料庫的方式還原先前的磁碟備份**    
 下列範例會還原先前對 `Sales` 執行的磁碟備份，並覆寫現有的 `Sales` 資料庫。
 
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
     
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]  
 
@@ -172,7 +168,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>**C.在原始資料庫仍存在的情況下，使用新的資料庫名稱還原先前的磁碟備份**
 下列範例會還原先前對 `Sales` 執行的磁碟備份，並建立新的資料庫 `SalesTest`。  原始的資料庫 `Sales`仍存在於伺服器上。
 
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
     
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]  
 
@@ -198,7 +194,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>**D.將先前的磁碟備份還原至某個時間點**
 下列範例會將資料庫還原至 2016 年 5 月 30 日下午 1:23:17 時的狀態，並顯示含有多個記錄備份的還原作業。  資料庫目前不在伺服器上。
 
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
     
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]  
 

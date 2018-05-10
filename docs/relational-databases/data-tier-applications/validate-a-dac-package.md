@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], validate
 - data-tier application [SQL Server], compare
@@ -24,12 +23,11 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ba3545d31259d2eb27b63f871b2cfbdfee9ad3ee
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 909fa2d13ac8cceab6127409bfd770dd00606359
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +47,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  開啟 **[檔案]** 功能表，並選取 **[開新檔案]**，然後選取 **[專案]**。  
   
-2.  選取 **[SQL Server]** 專案範本，並指定 **[名稱]**、 **[位置]**及 **[方案名稱]**。  
+2.  選取 **[SQL Server]** 專案範本，並指定 **[名稱]**、 **[位置]** 及 **[方案名稱]**。  
   
-3.  在 **[方案總管]**中，以滑鼠右鍵按一下專案節點，並選取 **[屬性]**。  
+3.  在 **[方案總管]** 中，以滑鼠右鍵按一下專案節點，並選取 **[屬性]**。  
   
 4.  在 [專案設定] 索引標籤的 [輸出類型] 區段中，選取 [資料層應用程式 (.dacpac 檔案)] 核取方塊，然後關閉屬性對話方塊。  
   

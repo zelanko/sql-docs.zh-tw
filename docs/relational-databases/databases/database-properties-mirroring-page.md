@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
@@ -19,12 +18,11 @@ caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d706b8cdb3ee366aa60a7324f949132a0acaa7bd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a14e748959ca5553dc6a8e2af6d26700ab418e7d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-properties-mirroring-page"></a>資料庫屬性 (鏡像頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +123,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |**不具有自動容錯移轉的高安全性 (同步)**|否|保證會將所有已認可的交易都寫入鏡像伺服器上的磁碟。<br /><br /> 夥伴互相連接時才可以執行手動容錯移轉。<br /><br /> 夥伴的遺失將具有下列結果：<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> 如果主體伺服器執行個體變成無法使用，鏡像就會停止，但是會以暖待命方式保持可使用狀態；資料庫擁有者可以對鏡像伺服器執行個體強制服務 (有遺失資料的可能)。|  
 |**具有自動容錯移轉的高安全性 (同步)**|是 (必要)|藉由納入見證伺服器執行個體來支援自動容錯移轉，而發揮最大的可用性。 請注意，您必須先指定見證伺服器位址，才能選取 [具有自動容錯移轉的高安全性 (同步)] 選項。<br /><br /> 每當夥伴互相連接時才可以執行手動容錯移轉。<br /><br /> **\*\* 重要事項 \*\*** 如果見證中斷連接，則必須將夥伴相互連接，才能使用資料庫。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。<br /><br /> 在同步作業模式中，保證會將所有已認可的交易都寫入鏡像伺服器上的磁碟。 在有見證的情況下，夥伴的遺失將具有下列結果：<br /><br /> 如果主體伺服器執行個體已無法使用，將發生自動容錯移轉。 鏡像伺服器執行個體將切換到主體的角色，並且提供它的資料庫做為主體資料庫。<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。|  
   
- 在鏡像開始後，您可以變更作業模式，並且按一下 **[確定]**以儲存變更。  
+ 在鏡像開始後，您可以變更作業模式，並且按一下 **[確定]** 以儲存變更。  
   
  如需作業模式的詳細資訊，請參閱 [資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   

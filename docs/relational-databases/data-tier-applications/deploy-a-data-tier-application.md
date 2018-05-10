@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.deploydacwizard.introduction.f1
 - sql13.swb.deploydacwizard.deploydac.f1
@@ -29,12 +28,11 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b2fd672802745041f161282821f21cef040c3581
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eaf008f10525d45c79345dbf9db5fd146097590a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="deploy-a-dac-using-the-wizard"></a>使用精靈部署 DAC  
   
-1.  在 **[物件總管]**中，展開您要部署 DAC 之執行個體的節點。  
+1.  在 **[物件總管]** 中，展開您要部署 DAC 之執行個體的節點。  
   
 2.  以滑鼠右鍵按一下 [資料庫] 節點，然後選取 [部署資料層應用程式…]  
   
@@ -92,7 +90,7 @@ ms.lasthandoff: 04/16/2018
  **描述** - 當撰寫 DAC 或是從資料庫擷取 DAC 時，顯示撰寫之描述的唯讀方塊。  
   
 ### <a name="validating-the-dac-package"></a>驗證 DAC 封裝  
- 將進度列顯示為確認選定檔案為有效 DAC 封裝的精靈。 如果此 DAC 封裝已經驗證，此精靈會繼續回到最後一版的 **[選取封裝]** 頁面，您可以在此頁面上檢閱驗證的結果。 如果檔案不是有效的 DAC 封裝，精靈會停留在 **[選取 DAC 封裝]**上。 請選取另一個有效的 DAC 封裝，或是取消精靈並產生新的 DAC 封裝。  
+ 將進度列顯示為確認選定檔案為有效 DAC 封裝的精靈。 如果此 DAC 封裝已經驗證，此精靈會繼續回到最後一版的 **[選取封裝]** 頁面，您可以在此頁面上檢閱驗證的結果。 如果檔案不是有效的 DAC 封裝，精靈會停留在 **[選取 DAC 封裝]** 上。 請選取另一個有效的 DAC 封裝，或是取消精靈並產生新的 DAC 封裝。  
   
   ### <a name="review-policy-page"></a>檢閱原則頁面  
  檢閱評估 DAC 伺服器選取原則的結果 (如果使用的話)。 DAC 伺服器選取原則為選擇性，而且當它在 Visual Studio 中建立時會指派給 DAC。 此原則會使用伺服器選取原則 Facet 來指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體主控 DAC 所應該符合的條件。  

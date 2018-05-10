@@ -7,11 +7,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>從命令列安裝 SQL Server 機器學習服務元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/16/2018
 
 若要檢視沒有互動式的進度資訊螢幕上的提示，請使用 /qs 引數。
 
-> [!Important]
+> [!IMPORTANT]
 > 安裝之後，維持兩個額外的設定步驟。 整合不完整，直到執行這些工作。 請參閱[後置安裝工作](#post-install)如需相關指示。
 
 ### <a name="sql-server-2017-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server 2017： 資料庫引擎，進階分析 Python 和 R
