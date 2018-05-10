@@ -1,27 +1,25 @@
 ---
-title: "使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 61671ec12c54b1d1cc91dab4e6349df3cf4b5de9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f96460a280bd11f59ffd0e042eefbbc9be0b0188
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS)
   雖然瀏覽器是最常用來檢視報表的用戶端應用程式，但瀏覽器的列印功能在列印報表時並不理想。 瀏覽器的列印功能是為了列印網頁而設計的。 通常，您從瀏覽器列印的頁面會包括網頁上的所有視覺化元素，以及識別網頁或網站的頁首和頁尾資訊。 從瀏覽器列印時會列印現行視窗的內容。 若為多頁報表．瀏覽器最多只會列印第一頁，如果報表頁面延伸到列印頁面範圍之外，則列印出來的可能更少。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/09/2018
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="print-options"></a>列印選項  
- 若要在 **[列印]** 對話方塊中設定報表的列印屬性，請按一下 **[屬性]** 按鈕。 **[紙張大小]** 會由報表定義中所定義之報表頁面大小的預設高度和寬度來決定。 可用的值將視印表機類型及其功能而定。 [寬度] 和 [高度] 會顯示電腦上已設定之列印驅動程式的預設值。 變更這些值會導致報表使用新的尺寸來列印。 頁寬和頁高會由 **[方向]**決定，方向會設為 **[縱向]** 或 **[橫向]**。 所顯示的預設方向會視報表的頁寬和頁高而定。  
+ 若要在 **[列印]** 對話方塊中設定報表的列印屬性，請按一下 **[屬性]** 按鈕。 **[紙張大小]** 會由報表定義中所定義之報表頁面大小的預設高度和寬度來決定。 可用的值將視印表機類型及其功能而定。 [寬度] 和 [高度] 會顯示電腦上已設定之列印驅動程式的預設值。 變更這些值會導致報表使用新的尺寸來列印。 頁寬和頁高會由 **[方向]** 決定，方向會設為 **[縱向]** 或 **[橫向]**。 所顯示的預設方向會視報表的頁寬和頁高而定。  
   
 > [!NOTE]  
 >  **[列印]** 對話方塊和預設的印表機設定 (頁寬、頁高及頁面方向等)，會由報表定義來決定。  

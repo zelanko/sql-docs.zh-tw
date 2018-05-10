@@ -1,27 +1,25 @@
 ---
-title: "將超連結新增到 URL (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 將超連結新增到 URL (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: bfecbec1812a15ec582c8e5d91afb8e471f8de3d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 80fb8d9b4f416933e19931aeb29fdb33f533e9f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
 了解如何將文字方塊、影像、圖表和量測計的超連結動作加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  分頁報表。 這些連結可以移至其他報表、移至報表中的書籤，或是移至靜態或動態 URL。 
@@ -79,7 +77,7 @@ ms.lasthandoff: 01/09/2018
   
 1. 在 [動作] 索引標籤上，選取 [移至 URL]。 此對話方塊中會出現這個選項的其他區段。  
   
-4.  在 **[選取 URL]**中，輸入或選取 URL 或是評估為 URL 的運算式，或者按下拉式箭號，再按一下含有 URL 之欄位的名稱。 
+4.  在 **[選取 URL]** 中，輸入或選取 URL 或是評估為 URL 的運算式，或者按下拉式箭號，再按一下含有 URL 之欄位的名稱。 
 
     對於發行到設定為原生模式之報表伺服器的項目，請使用完整或相對路徑， 例如， `http://<servername>/images/image1.jpg`。 
     

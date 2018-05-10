@@ -1,16 +1,15 @@
 ---
-title: "報表產生器中運算式的自訂程式碼及組件參考 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: 報表產生器中運算式的自訂程式碼及組件參考 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: "77"
+caps.latest.revision: 77
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e17e5820a54eb2328edc9efe31239ca31a1fef09
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 03cc0727e6f545f37ebccb716877b89f29f02d09
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>報表產生器中運算式的自訂程式碼及組件參考 (SSRS)
   您可以加入內嵌於報表之自訂程式碼的參考，或是建置並儲存至電腦以及部署至報表伺服器之自訂組件的參考。 請將內嵌程式碼用在自訂常數、複雜函數或在單一報表內重複使用的函數上。 請使用自訂程式碼組件，將程式碼維護在單一位置並共用程式碼，讓多份報表使用。 自訂程式碼可能會包含新的自訂常數、變數、函數或副程式。 您可以包含內建集合 (例如 Parameters 集合) 的唯讀參考， 但是不能將報表資料值集傳遞至自訂函數 (尤其是不支援自訂彙總)。  
@@ -58,7 +56,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="Common"></a> 包含常用函數的參考  
  **[運算式]** 對話方塊可用來檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一般內建函數的分類清單。 當您展開 **[一般函數]** 並按一下類別目錄時， **[項目]** 窗格就會顯示您包含在運算式中的函數清單。 一般函數包含 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空間的類別以及 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫函數。 為了方便起見，您可以在 **[運算式]** 對話方塊中檢視最常用的函數，這些函數會依類別目錄列出：文字、日期和時間、數學、檢閱、程式流程、彙總、財務、轉換和其他。 較不常用的函數則不會顯示在清單中，但仍可用於運算式。  
   
- 若要使用內建函數，請在 [項目] 窗格中的函數名稱上按兩下。 函數的描述會顯示在 [描述] 窗格中，函數呼叫的範例則顯示在 [範例] 窗格中。 當您在程式碼窗格中輸入函數名稱，且其後接著左括號 **(**時，IntelliSense 會協助顯示該函數呼叫的每個有效語法。 例如，若要計算資料表中名為 `Quantity` 欄位的最大值，請將簡單運算式 `=Max(` 加入至 [程式碼] 窗格，然後使用智慧標籤來檢視該函數呼叫的所有有效語法。 若要完成此範例，請輸入 `=Max(Fields!Quantity.Value)`。  
+ 若要使用內建函數，請在 [項目] 窗格中的函數名稱上按兩下。 函數的描述會顯示在 [描述] 窗格中，函數呼叫的範例則顯示在 [範例] 窗格中。 當您在程式碼窗格中輸入函數名稱，且其後接著左括號 **(** 時，IntelliSense 會協助顯示該函數呼叫的每個有效語法。 例如，若要計算資料表中名為 `Quantity` 欄位的最大值，請將簡單運算式 `=Max(` 加入至 [程式碼] 窗格，然後使用智慧標籤來檢視該函數呼叫的所有有效語法。 若要完成此範例，請輸入 `=Max(Fields!Quantity.Value)`。  
   
  如需每個函數的詳細資訊，請參閱 <xref:System.Math>、 <xref:System.Convert>以及 MSDN 上的 [Visual Basic 執行階段程式庫成員](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
   

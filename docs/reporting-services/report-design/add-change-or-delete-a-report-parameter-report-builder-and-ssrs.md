@@ -1,27 +1,25 @@
 ---
-title: "新增、變更或刪除報表參數 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 新增、變更或刪除報表參數 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 89e9878b39d78abd4983bbf49df0c6d9ae157a15
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5cba98e1d3aacddfe191dfec324d664e905fc1f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>加入、變更或刪除報表參數 (報表產生器及 SSRS)
   報表參數可讓您選擇報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 您可以提供預設值和可用值的清單，而且使用者可以變更選取範圍。  
@@ -37,11 +35,11 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 內，[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 或報表設計師中的 [報表資料] 窗格中，以滑鼠右鍵按一下 [參數] 節點，然後按一下 [新增參數]。 **[報表參數屬性]** 對話方塊隨即開啟。  
   
-2.  在 **[名稱]**中，輸入參數的名稱或接受預設的名稱。  
+2.  在 **[名稱]** 中，輸入參數的名稱或接受預設的名稱。  
   
-3.  在 **[提示]**中，輸入使用者執行報表時，在參數文字方塊旁邊顯示的文字。  
+3.  在 **[提示]** 中，輸入使用者執行報表時，在參數文字方塊旁邊顯示的文字。  
   
-4.  在 **[資料類型]**中，選取參數值的資料類型。  
+4.  在 **[資料類型]** 中，選取參數值的資料類型。  
   
 5.  如果參數可以包含空白值，請選取 **[允許空白值]**。  
   

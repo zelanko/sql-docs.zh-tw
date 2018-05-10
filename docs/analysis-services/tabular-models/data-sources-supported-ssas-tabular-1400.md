@@ -1,19 +1,19 @@
 ---
 title: 支援 SQL Server Analysis Services 表格式 1400年模型中的資料來源 |Microsoft 文件
-ms.date: 03/26/2018
-ms.prod: analysis-services
-ms.suite: pro-bi
-ms.topic: conceptual
-ms.assetid: ''
-author: Minewiskan
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f2ae9498b0d177234fd75bb0de9ea0b61d15746
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 1b511ac6d9cf4d75faddf569fcc2391317f19629
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>支援 SQL Server Analysis Services 中表格式 1400年模型的資料來源
 

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -29,12 +28,11 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e7aef21b01ebfefb3db99af9e982eda72d1c0eb
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c7c524e2d6d6f6aa12b4299b95ed6307c044ba4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="selecting-input-columns-programmatically"></a>以程式設計方式選取輸入資料行
   在您以程式設計方式連接元件之後，請從您要轉換或是傳遞到下游元件的上游元件中選取資料行。 如果您不為元件選取輸入資料行，元件不會從資料流程工作收到任何資料列。  

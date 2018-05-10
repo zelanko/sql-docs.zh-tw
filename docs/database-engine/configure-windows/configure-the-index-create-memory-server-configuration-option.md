@@ -3,15 +3,12 @@ title: 設定 index create memory 伺服器組態選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index create memory option
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
@@ -19,12 +16,11 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 453a1bd741739d6606e7f67799e09eafaa1d2c87
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5fe7481737a1f57391a3d9c06e9f3086ebccdfdf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>設定 index create memory 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +76,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  按一下 **[記憶體]** 節點。  
   
-3.  在 **[索引建立記憶體]**之下，輸入或選取所要的索引建立記憶體選項值。  
+3.  在 **[索引建立記憶體]** 之下，輸入或選取所要的索引建立記憶體選項值。  
   
      **index create memory** 選項可用來控制索引建立排序所使用的記憶體大小。 [索引建立記憶體] 屬於自我設定的選項，而且不需調整即可適用於大部份情況。 然而，如果無法建立索引，請考慮增加這個選項的執行值。 查詢排序是透過 **min memory per query** 選項來控制。  
   

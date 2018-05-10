@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: tables
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], deleting
 - removing foreign keys
@@ -21,13 +18,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc3d1c666c55b6439bd9ea4de1f6b16a56c3bb9d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: aaf9de608215811dd6cbdec740cf1f5f3cfa6ae8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-foreign-key-relationships"></a>刪除外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>若要刪除外部索引鍵條件約束  
   
-1.  在 **[物件總管]**中，展開含有條件約束的資料表，然後展開 **[索引鍵]**。  
+1.  在 **[物件總管]** 中，展開含有條件約束的資料表，然後展開 **[索引鍵]**。  
   
 2.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]。  
   
@@ -67,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>若要刪除外部索引鍵條件約束  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

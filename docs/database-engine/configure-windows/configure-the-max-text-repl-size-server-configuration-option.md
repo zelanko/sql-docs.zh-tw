@@ -3,15 +3,12 @@ title: 設定 max text repl size 伺服器組態選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - max text repl size option
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
@@ -19,12 +16,11 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cc87f0eb16265a9196a6bc324069d5062d70b525
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1e09b3b342100446a97d3421376fc6a64504df6d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>設定 max text repl size 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  按一下 **[進階]** 節點。  
   
-3.  在 **[其他]**下，將 **[文字複寫大小上限]** 選項變更為所要的值。  
+3.  在 **[其他]** 下，將 **[文字複寫大小上限]** 選項變更為所要的值。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

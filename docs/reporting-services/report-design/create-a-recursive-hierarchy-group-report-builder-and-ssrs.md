@@ -1,27 +1,25 @@
 ---
-title: "建立遞迴階層群組 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 建立遞迴階層群組 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 55996678941459c5f6797e02bfc30d82331a718f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 00af8f5e46f2423714d396cb462dd81fde7f9dd6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>建立遞迴階層群組 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，遞迴階層群組會組織包含多個階層層級之單一報表資料集內的資料，例如組織階層內經理-員工關聯性的報告結構。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  以滑鼠右鍵按一下資料表中的任何地方，即可選取它。 [群組] 窗格會顯示選定資料表的詳細資料群組。 在 [資料列群組] 窗格中，以滑鼠右鍵按一下 [詳細資料]，然後按一下 [編輯群組]。 **[群組屬性]** 對話方塊隨即開啟。  
   
-3.  在 **[群組運算式]**中，按一下 **[加入]**。 新的資料列會出現在方格中。  
+3.  在 **[群組運算式]** 中，按一下 **[加入]**。 新的資料列會出現在方格中。  
   
 4.  在 [群組對象] 清單中，鍵入或選取要分組的欄位。  
   

@@ -1,30 +1,28 @@
 ---
-title: "列印報表 (SharePoint 模式的 Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: 列印報表 (SharePoint 模式的 Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 69ce18de1901a873a4eaf0f39854af2512122e72
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 07e50f3dcc37738206fe396b8a68105fd4ac1c87
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>列印報表 (SharePoint 模式的 Reporting Services)
   當報表伺服器以 SharePoint 模式執行時，您可以使用下列三種方法從 SharePoint Web 應用程式列印報表：  
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]  
 >  若要列印報表，您必須擁有檢視報表的權限。  
   
- 從網頁列印報表時，為求最佳效果，請使用 **[動作]** 功能表上的 **[列印]** 選項。 **[列印]** 動作是由下載自報表伺服器的用戶端列印控制項提供。 您只需下載此控制項一次；系統會在您第一次選取 **[列印]**時進行下載。  
+ 從網頁列印報表時，為求最佳效果，請使用 **[動作]** 功能表上的 **[列印]** 選項。 **[列印]** 動作是由下載自報表伺服器的用戶端列印控制項提供。 您只需下載此控制項一次；系統會在您第一次選取 **[列印]** 時進行下載。  
   
  報表作者可以特別針對列印輸出或特定應用程式格式來設計報表。 由於不同應用程式格式實作的分頁方式有所不同，您可能無法使每一份報表的每一種匯出格式達到最佳列印輸出結果。 相對於針對列印輸出所設計的報表，畫面上的報表頁面是為了容納不同資料量而設計的。 例如，根據您擴充資料列和資料行的方式而定，包括矩陣的報表可能會造成頁面的水平與垂直成長。 列印大小變動的報表時，未展開矩陣的使用者與將矩陣展開的使用者將會得到不同的列印結果。 就大部分的匯出報表而言，報表列印輸出會包括報表上顯示的所有內容，如使用者在電腦螢幕上看到的一樣。  
   

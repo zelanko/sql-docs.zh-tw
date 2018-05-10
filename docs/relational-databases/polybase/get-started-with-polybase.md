@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c406a55361eb8a948f385f3bf7e76257c216720
-ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
+ms.openlocfilehash: d566b0870e104280fdde8d089bfdb5f1fcba3ffd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-polybase"></a>開始使用 PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Linux 上的 Cloudera CDH 4.3  
   
--   Linux 上的 Cloudera CDH 5.1 - 5.5、5.9 - 5.12  
+-   Linux 上的 Cloudera CDH 5.1 - 5.5、5.9 - 5.13  
   
 -   Azure Blob 儲存體  
  

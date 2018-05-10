@@ -3,15 +3,13 @@ title: 監視資料庫鏡像 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
@@ -20,12 +18,11 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 96e9a421b1ec2ffd0e8b02cd24a9142fbc3fea07
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cca36cb11728e9a50f37d0d9e9945535e327e971
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>監視資料庫鏡像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 04/16/2018
   
  您可以在鏡像工作階段期間監視鏡像資料庫，以便確認資料流程是否正常。 若要針對伺服器執行個體上的一個或多個鏡像資料庫設定並管理監視作業，您可以使用「資料庫鏡像監視器」或 **sp_dbmmonitor** 系統預存程序。  
   
- 資料庫鏡像監視作業 **[資料庫鏡像監視器作業]**是在背景中獨立運作，不受 [資料庫鏡像監視器] 影響。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會按一定的間隔呼叫 **[資料庫鏡像監視器作業]** ，預設為每分鐘一次，而這項作業則呼叫更新鏡像狀態的預存程序。 如果您使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來啟動鏡像工作階段，便會自動建立 **[資料庫鏡像監視器作業]** 。 不過，如果您只使用 ALTER DATABASE *<資料庫名稱>* SET PARTNER 來啟動鏡像，則必須執行預存程序才能建立作業。  
+ 資料庫鏡像監視作業 **[資料庫鏡像監視器作業]** 是在背景中獨立運作，不受 [資料庫鏡像監視器] 影響。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會按一定的間隔呼叫 **[資料庫鏡像監視器作業]** ，預設為每分鐘一次，而這項作業則呼叫更新鏡像狀態的預存程序。 如果您使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來啟動鏡像工作階段，便會自動建立 **[資料庫鏡像監視器作業]** 。 不過，如果您只使用 ALTER DATABASE *<資料庫名稱>* SET PARTNER 來啟動鏡像，則必須執行預存程序才能建立作業。  
   
  **本主題內容：**  
   
@@ -116,7 +113,7 @@ ms.lasthandoff: 04/16/2018
 >  除非「資料庫鏡像監視器」目前正由**系統管理員**固定伺服器角色的成員使用，否則只有當 **[資料庫鏡像監視器作業]** 存在且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行時，才會自動更新狀態資料表。  
   
 #### <a name="database-mirroring-monitor-job"></a>資料庫鏡像監視器作業  
- 資料庫鏡像監視作業 **[資料庫鏡像監視器作業]**是獨立於 [資料庫鏡像監視器] 運作的。 只有當**是用來啟動鏡像工作階段時，才會自動建立** [資料庫鏡像監視器作業] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 如果一律使用 ALTER DATABASE *資料庫名稱* SET PARTNER 命令來啟動鏡像，則只有當系統管理員執行 **sp_dbmmonitoraddmonitoring** 預存程序時，此作業才會存在。  
+ 資料庫鏡像監視作業 **[資料庫鏡像監視器作業]** 是獨立於 [資料庫鏡像監視器] 運作的。 只有當**是用來啟動鏡像工作階段時，才會自動建立** [資料庫鏡像監視器作業] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 如果一律使用 ALTER DATABASE *資料庫名稱* SET PARTNER 命令來啟動鏡像，則只有當系統管理員執行 **sp_dbmmonitoraddmonitoring** 預存程序時，此作業才會存在。  
   
  建立 **[資料庫鏡像監視器作業]** 之後，假設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行，則預設會每分鐘呼叫此作業一次。 然後，此作業就會呼叫 **sp_dbmmonitorupdate** 系統預存程序。  
   
@@ -143,7 +140,7 @@ ms.lasthandoff: 04/16/2018
  **dbm_monitor** 固定資料庫角色的成員會仰賴 [資料庫鏡像監視器作業]  來定期更新狀態資料表。 如果此作業不存在或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 已停止，狀態就會逐漸成為過時，而且不再反映鏡像工作階段的組態。 例如，在容錯移轉之後，夥伴可能看起來像是共用相同的角色 (主體或鏡像)，或者目前的主體伺服器可能會顯示為鏡像，而目前的鏡像伺服器則顯示為主體。  
   
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>卸除資料庫鏡像監視器作業  
- 資料庫鏡像監視器作業 **[資料庫鏡像監視器作業]**會維持到卸除為止。 此監視作業必須由系統管理員管理。 若要卸除 [資料庫鏡像監視器作業] ，請使用 **sp_dbmmonitordropmonitoring**。 如需詳細資訊，請參閱 [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)。  
+ 資料庫鏡像監視器作業 **[資料庫鏡像監視器作業]** 會維持到卸除為止。 此監視作業必須由系統管理員管理。 若要卸除 [資料庫鏡像監視器作業] ，請使用 **sp_dbmmonitordropmonitoring**。 如需詳細資訊，請參閱 [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)。  
   
 ###  <a name="perf_metrics_of_dbm_monitor"></a> 資料庫鏡像監視器顯示的狀態  
  [資料庫鏡像監視器] 的 **[狀態]** 頁面會描述夥伴，還有鏡像工作階段的狀態。 狀態會包括效能標準，如交易記錄狀態和其他資訊，目的是要在工作階段沒有同步時，協助您估計目前完成容錯移轉所需的時間以及遺失資料的可能性。 此外， **[狀態]** 頁面還會顯示鏡像工作階段的一般狀態和相關資訊。  

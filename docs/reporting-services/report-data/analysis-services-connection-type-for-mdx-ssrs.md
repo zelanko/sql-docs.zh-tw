@@ -1,27 +1,25 @@
 ---
-title: "MDX 的 Analysis Services 連線類型 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: MDX 的 Analysis Services 連線類型 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8287b0b4435ef518682e7dc116c72d69a5681b01
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 553fb7ac9b7346330a3fed798eba0d1e039fe267
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Analysis Services Connection Type for MDX (SSRS)
   若要在報表中包含來自 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 的資料，您必須擁有以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]類型的報表資料來源為基礎的資料集。 此內建資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料延伸模組為基礎。 您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 擷取有關維度、階層、層級、關鍵效能指標 (KPI)、量值和屬性的中繼資料，用來做為報表資料。  
@@ -81,7 +79,7 @@ data source=<server name>;initial catalog=<database name>
 ##  <a name="Parameters"></a> 參數  
  若要包含查詢參數，請在查詢設計工具的篩選區域中建立篩選，然後再將該篩選標示成參數。 系統會針對每一個篩選自動建立一個資料集，以提供可用的值。 根據預設，這些資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱[在 Analysis Services 的 MDX 查詢設計工具中定義參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md) 和[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
- 根據預設，每個報表參數都具有 **[文字]**資料類型。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
+ 根據預設，每個報表參數都具有 **[文字]** 資料類型。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
   
 ##  <a name="Remarks"></a> 備註  

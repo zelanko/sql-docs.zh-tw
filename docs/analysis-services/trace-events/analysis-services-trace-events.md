@@ -1,33 +1,19 @@
 ---
 title: Analysis Services 追蹤事件 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
 ms.topic: reference
-helpviewer_keywords:
-- SQL Server Profiler, Analysis Services
-- monitoring Analysis Services [SQL Server]
-- performance [Analysis Services], SQL Server Profiler
-- events [Analysis Services]
-- event classes [Analysis Services], about event classes
-- Profiler [SQL Server Profiler], Analysis Services
-- event classes [Analysis Services]
-ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: 37
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: c912673dd15b45c2d217b9d146d5edfe3e956cea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 69d7e1a435a6e2d5e0d831802680aeb9a8ad60f1
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services 追蹤事件
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

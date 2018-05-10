@@ -3,15 +3,12 @@ title: 使用物件總管詳細資料監視可用性群組 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.OEdetails.f1
 helpviewer_keywords:
@@ -23,12 +20,11 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ca1b9266bd24bd8b6a276fa1ca85f90d0d2893f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d5525a27e67c6096713f4487ee3e5f4aae898190
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用物件總管詳細資料監視可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **監視可用性群組、可用性複本和可用性資料庫**  
   
-1.  在 [檢視] 功能表上，按一下 **[物件總管詳細資料]**或按 **F7** 鍵。  
+1.  在 [檢視] 功能表上，按一下 **[物件總管詳細資料]** 或按 **F7** 鍵。  
   
 2.  在 [物件總管] 中，連接到您要監視可用性群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，然後按一下伺服器名稱以展開伺服器樹狀目錄。  
   

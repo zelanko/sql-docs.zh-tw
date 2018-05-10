@@ -1,27 +1,25 @@
 ---
-title: "共用資料集設計檢視 (報表產生器) | Microsoft Docs"
-ms.custom: 
+title: 共用資料集設計檢視 (報表產生器) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1301fbcb05441ea09d6eb6e7450ce0d050aaa65
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7348789d794cb10892ed4a6c7f22c68b1bfb75cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共用資料集設計檢視 (報表產生器)
   在報表中，資料集代表在外部資料來源上執行查詢時所傳回的報表資料。 共用資料集是在報表伺服器上發行，可供多個報表使用。 您可以建立資料集，以與其他人共用。 在 [Shared Dataset Design (共用資料集設計)] 視窗中，您可以選取共用資料來源、指定共用資料集的屬性，以及在查詢設計工具中建立查詢。  

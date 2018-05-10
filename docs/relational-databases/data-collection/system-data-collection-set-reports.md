@@ -3,15 +3,11 @@ title: 系統資料收集組報表 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: data-collection
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], server activity
 - server activity [SQL Server]
@@ -24,15 +20,14 @@ helpviewer_keywords:
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a7edb1ffcbc2a1679bdae6f01ff0fed50562704
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5c859efbcfd431ee2a88f25746debb85ff21746e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-data-collection-set-reports"></a>系統資料收集組報表
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +98,7 @@ ms.lasthandoff: 04/16/2018
 #### <a name="query-details-subreport"></a>查詢詳細資料子報表  
  [查詢詳細資料] 子報表會提供整個查詢文字。 查詢旁邊有一個 **[編輯查詢文字]** 超連結。 您可以按一下此連結，以便在查詢編輯器中開啟查詢。 查詢下方的資料表會提供查詢執行統計資料，例如每個查詢執行的平均持續時間。  
   
- 此時會顯示查詢計畫和每個執行之平均持續時間的圖表。 若要顯示相對查詢計畫成本的不同檢視，請按一下圖表下面所顯示的任何一個超連結： **[持續時間]**、 **[實體讀取]**或 **[邏輯寫入]**。 其圖表線條處於作用中狀態，而且您可以按一下任何一點，以便開啟 [查詢計畫詳細資料] 子報表。  
+ 此時會顯示查詢計畫和每個執行之平均持續時間的圖表。 若要顯示相對查詢計畫成本的不同檢視，請按一下圖表下面所顯示的任何一個超連結： **[持續時間]**、 **[實體讀取]** 或 **[邏輯寫入]**。 其圖表線條處於作用中狀態，而且您可以按一下任何一點，以便開啟 [查詢計畫詳細資料] 子報表。  
   
  圖表下方的資料表會根據每次執行的 CPU 使用量顯示前 10 個查詢計畫。 [計劃號碼] 資料行中的每個號碼都是作用中連結，而且您可以按一下此連結，以便開啟 [查詢計劃詳細資料] 子報表。  
   

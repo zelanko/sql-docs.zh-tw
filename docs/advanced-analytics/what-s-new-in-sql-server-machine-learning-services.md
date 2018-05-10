@@ -7,11 +7,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 405e4636525898268c54f1a3d603c9e5da3dc14d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>新功能 SQL Server 機器學習服務 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 
 | 版本 |功能更新 |
 |---------|----------------|
-| CU | [**即時計分**](real-time-scoring.md)依賴原生 c + + 程式庫，以讀取以最佳化的二進位格式，儲存的模型，並不必呼叫 R 執行階段產生預測。 這可讓更快的計分作業。 使用即時計分，您可以執行預存程序，或執行即時計分的 R 程式碼。 還有適用於 SQL Server 2016 中，如果執行個體升級為最新版的即時計分[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]。 |
+| CU 新增項目 | [**即時計分**](real-time-scoring.md)依賴原生 c + + 程式庫，以讀取以最佳化的二進位格式，儲存的模型，並不必呼叫 R 執行階段產生預測。 這可讓更快的計分作業。 使用即時計分，您可以執行預存程序，或執行即時計分的 R 程式碼。 還有適用於 SQL Server 2016 中，如果執行個體升級為最新版的即時計分[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]。 |
 | 最初發行 | [**分析資料庫中的 R 整合**](r/sql-server-r-services.md)。 <br/><br/> 在 T-SQL，反之亦然，函式呼叫 R 的 R 封裝。 RevoScaleR 函數提供大規模的 R 分析區塊資料處理成元件部分，協調和管理分散式處理和彙總結果。 SQL Server 2016 R 服務 （資料庫），RevoScaleR 引擎整合資料庫引擎執行個體，brining 資料與分析一起放在相同的處理內容。 <br/><br/>透過 T-SQL 和 R 整合[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)。 您可以呼叫任何使用此預存程序的 R 程式碼。 這個安全的基礎結構可讓企業級部署 Rn 模型和可從使用簡單的預存程序的應用程式呼叫的指令碼。 從 SQL R 處理序和 MPI 環形平行處理的資料流資料可達到其他效能提升。 <br/><br/>您可以使用 T-SQL[預測](../t-sql/queries/predict-transact-sql.md)函式來執行[原生計分](sql-native-scoring.md)上預先定型的模型之前已儲存過所需的二進位格式。|
 
 ## <a name="linux-support-roadmap"></a>Linux 支援藍圖
@@ -55,6 +55,12 @@ ms.lasthandoff: 05/03/2018
 使用 R 或 Python 資料庫內的機器學習服務目前不支援在 SQL Server on Linux。 尋找下一個版本的公告。
 
 不過，在 Linux 上您可以執行[原生計分](sql-native-scoring.md)使用 T-SQL 的預測函數。 原生計分，可讓您從預先定型的模型非常快速，分數，而不需要呼叫，或甚至 R 執行階段。 這表示您可以使用 SQL Server on Linux 來產生預測的速度非常快，來服務用戶端應用程式。
+
+<a name="azure-sql-database-roadmap"></a>
+
+## <a name="azure-sql-database-roadmap"></a>Azure SQL Database 的藍圖
+
+Azure SQL Database 中的有限的支援： 只能在中央美國西部、 在 Premium 層建立的服務中。 展開的涵蓋範圍，包括 Python 支援是容易遵循未來的版本。 不過，這次沒有版本預計的日期。  
 
 ## <a name="next-steps"></a>後續的步驟
 

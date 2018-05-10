@@ -3,15 +3,12 @@ title: 啟用資料庫引擎的加密連接 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -27,12 +24,11 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 491c65b05dd19806d1d8c6baf2598f210fc9f50e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 761913c563b27ea0447b6b104d2d05b441aa70b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.lasthandoff: 04/16/2018
  用戶端必須可確認伺服器所使用之憑證的擁有權。 如果用戶端具有已簽署伺服器憑證之憑證授權單位的公開金鑰憑證，則不需要進一步進行組態設定。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 包含許多憑證授權單位的公開金鑰憑證。 如果伺服器憑證是由用戶端沒有公開金鑰憑證的公開或私人憑證授權單位所簽署，則您必須安裝已簽署伺服器憑證之憑證授權單位的公開金鑰憑證。  
   
 > [!NOTE]  
->  若要在容錯移轉叢集中使用加密功能，請務必在容錯移轉叢集中的所有節點上，對於虛擬伺服器使用完整的 DNS 名稱來安裝伺服器憑證。 例如，假設您有一個雙節點的叢集，節點的名稱分別為 test1.\<您的公司>.com 和 test2.\<您的公司>.com，而且您有一個名為 virtsql 的虛擬伺服器，則兩個節點上都需要安裝 virtsql.\<您的公司>.com 的憑證。 您可以將 [[ForceEncryption]] **[ForceEncryption]**選項的值設為 [是] **[是]**。  
+>  若要在容錯移轉叢集中使用加密功能，請務必在容錯移轉叢集中的所有節點上，對於虛擬伺服器使用完整的 DNS 名稱來安裝伺服器憑證。 例如，假設您有一個雙節點的叢集，節點的名稱分別為 test1.\<您的公司>.com 和 test2.\<您的公司>.com，而且您有一個名為 virtsql 的虛擬伺服器，則兩個節點上都需要安裝 virtsql.\<您的公司>.com 的憑證。 您可以將 [[ForceEncryption]] **[ForceEncryption]** 選項的值設為 [是] **[是]**。  
 
 > [!NOTE]
 > 在 Azure VM 上建立 Azure 搜尋服務索引子到 SQL Server 的加密連線時，請參閱 [在 Azure VM 上設定從 Azure 搜尋服務索引子到 SQL Server 的連線](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)。 
@@ -73,7 +69,7 @@ ms.lasthandoff: 04/16/2018
 
 9. 以滑鼠右鍵按一下匯入的憑證，並指向 [所有工作]，然後按一下 [管理私密金鑰]。 在 [安全性] 對話方塊中，新增 SQL Server 服務帳戶所使用之使用者帳戶的讀取權限。  
   
-10. 完成 **[憑證匯入精靈]**以加入憑證至電腦中，然後關閉 MMC 主控台。 如需新增憑證至電腦的詳細資訊，請參閱 Windows 文件集。  
+10. 完成 **[憑證匯入精靈]** 以加入憑證至電腦中，然後關閉 MMC 主控台。 如需新增憑證至電腦的詳細資訊，請參閱 Windows 文件集。  
   
 ##  <a name="Export"></a> 若要匯出伺服器憑證  
   

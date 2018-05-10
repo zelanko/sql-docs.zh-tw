@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -21,12 +19,11 @@ caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ca7c9fb5f326f8813b2ed62e1d3463a3752b5c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 00ed2233653ea5a98fdc389bbfc470f65c817f3f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +73,8 @@ column_name AS computed_column_expression
     >  因為對於計算資料行所涉及的資料行，資料表中的每個資料列都可能有不同的值，所以每個資料列的計算資料行可能各有不同的結果。  
   
 PERSISTED  
- 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會實際將計算值儲存在資料表中，以及在計算資料行所依賴的任何其他資料行有了更新時，也會更新這些值。 將計算資料行標示為 PERSISTED，可讓您在具決定性但不精確的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 任何用為分割資料表之分割資料行的計算資料行，都必須明確標示為 PERSISTED。 指定 PERSISTED 時，*computed_column_expression* 必須具決定性。  
+ 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會實際將計算值儲存在資料表中，以及在計算資料行所依賴的任何其他資料行有了更新時，也會更新這些值。 將計算資料行標示為 PERSISTED，可讓您在具決定性但不精確的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 任何用為分割資料表之分割資料行的計算資料行，都必須明確標示為 PERSISTED。 指定 PERSISTED 時，*computed_column_expression* 必須具決定性。 
+
 NULL | NOT NULL  
  指定資料行是否允許使用 Null 值。 NULL 並不是嚴格的條件約束，但您也可以依照 NOT NULL 的相同方式來指定它。 只有在也指定了 PERSISTED 時，計算資料行才能指定 NOT NULL。  
   
@@ -116,7 +114,8 @@ ON DELETE { **NO ACTION** | CASCADE }
  指定如果資料表中之資料列有參考關聯性，且在父資料表中刪除了所參考的資料列，資料表中之資料列會發生什麼動作。 預設值是 NO ACTION。  
   
 NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復父資料表中之資料列的刪除動作。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復父資料表中之資料列的刪除動作。
+
 CASCADE  
  如果從父資料表中刪除資料列，便會從進行參考的資料表中刪除對應的資料列。  
   
@@ -155,5 +154,3 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
-  

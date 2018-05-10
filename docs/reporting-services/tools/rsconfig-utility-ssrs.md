@@ -1,16 +1,15 @@
 ---
-title: "rsconfig 公用程式 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: rsconfig 公用程式 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - rsconfig utility
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a7af70640cf19ddeb205a5cc345ce2c45d8a73fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 公用程式 (SSRS)
   **rsconfig.exe** 公用程式會加密連接和帳戶值，並會將它們儲存在 RSReportServer.config 檔中。 加密的值包括自動處理報表的程序所用的報表伺服器資料庫連接資訊和帳戶值。  
@@ -54,7 +52,7 @@ rsconfig {-?}
 |詞彙|選擇性/必要|定義|  
 |----------|------------------------|----------------|  
 |**-?**|選擇性。|顯示 Rsconfig.exe 引數的語法。|  
-|**-c**|如果未使用 **-e** 引數，這就是必要的。|指定用來將報表伺服器連接到報表伺服器資料庫的連接字串、認證和資料來源值。<br /><br /> 此引數沒有取得值。 不過，您也必須指定其他引數來搭配它，以便提供所有必要的連接值。<br /><br /> 您可以搭配 **-c** 來指定的引數，包括 **-m**、 **-s**、 **-i**、**-d**、**-a**、**-u**、**-p**和**-t**。|  
+|**-c**|如果未使用 **-e** 引數，這就是必要的。|指定用來將報表伺服器連接到報表伺服器資料庫的連接字串、認證和資料來源值。<br /><br /> 此引數沒有取得值。 不過，您也必須指定其他引數來搭配它，以便提供所有必要的連接值。<br /><br /> 您可以搭配 **-c** 來指定的引數，包括 **-m**、 **-s**、 **-i**、**-d**、**-a**、**-u**、**-p**和 **-t**。|  
 |**-e**|如果未使用 **-c** 引數，這就是必要的。|指定自動報表執行帳戶。<br /><br /> 此引數沒有取得值。 不過，命令列必須包括其他引數，以便指定組態檔中所加密的值。<br /><br /> 您可以搭配 **-e** 來指定的引數，包括 **-u** 和 **-p**。 您也可以設定 **-t**。|  
 |**-m** <電腦名稱>|如果您在設定遠端報表伺服器執行個體，這就是必要的。|指定主控報表伺服器的電腦名稱。 如果省略這個引數，預設值就是 **localhost**。|  
 |**-s**  <伺服器名稱>|必要。|指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  

@@ -1,19 +1,20 @@
 ---
-title: SQL Server 上安裝其他的 R 封裝 |Microsoft 文件
+title: SQL Server 機器學習服務上安裝新的 R 封裝 |Microsoft 文件
+description: 將新的 R 封裝加入至 SQL Server 2016 R Services 或 SQL Server 2017 機器學習服務 （資料庫）
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0ac316f4870482b15700395eb44b3adef934f2ad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 57c5d4b9c3584a4aa556b1f4b6f7541a14f91a00
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="install-additional-r-packages-on-sql-server"></a>SQL Server 上安裝其他的 R 封裝
+# <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安裝新的 R 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明如何安裝新的 R 封裝在已啟用機器學習的 SQL Server 執行個體。

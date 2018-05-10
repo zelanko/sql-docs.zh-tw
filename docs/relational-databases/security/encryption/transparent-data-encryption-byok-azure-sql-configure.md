@@ -16,14 +16,14 @@ ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.devlang: azurecli, powershell
 ms.topic: article
-ms.date: 03/15/2018
+ms.date: 04/24/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: eed635cc4b58c5ec975f0b77f8e3b69f87fd65ff
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b86f427c1efe7ef36eef3be7944bd1ecd3ec8ed1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell 與 CLI：使用 Azure Key Vault 中您自己的金鑰來啟用透明資料加密
 
@@ -39,6 +39,9 @@ ms.lasthandoff: 04/18/2018
 - 建立 Azure Key Vault 和金鑰以用於 TDE。
    - [Key Vault 中的 PowerShell 指示](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [使用硬體安全性模組 (HSM) 與 Key Vault 的指示](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - 金鑰保存庫必須具有以下屬性才能供 TDE 使用：
+   - [虛刪除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
+   - [如何透過 PowerShell 使用金鑰保存庫虛刪除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) 
 - 若要用於 TDE，金鑰必須具有下列屬性：
    - 無到期日
    - 未停用
@@ -202,35 +205,38 @@ ms.lasthandoff: 04/18/2018
 - 建立 Azure Key Vault 和金鑰以用於 TDE。
    - [使用 CLI 2.0 管理 Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
    - [使用硬體安全性模組 (HSM) 與 Key Vault 的指示](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - 金鑰保存庫必須具有以下屬性才能供 TDE 使用：
+   - [虛刪除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
+   - [如何透過 CLI 使用金鑰保存庫虛刪除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli) 
 - 若要用於 TDE，金鑰必須具有下列屬性：
    - 無到期日
    - 未停用
    - 能夠執行「取得」、「包裝金鑰」和「解除包裝金鑰」作業
    
 ## <a name="step-1-create-a-server-and-assign-an-azure-ad-identity-to-your-server"></a>步驟 1： 建立伺服器並將 Azure AD 身分識別指派給您的伺服器
-      ```cli
+      cli
       # create server (with identity) and database
       az sql server create -n "ServerName" -g "ResourceGroupName" -l "westus" -u "cloudsa" -p "YourFavoritePassWord99@34" -I 
       az sql db create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
-      ```
+      
 
  
 ## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>步驟 2： 授與伺服器 Key Vault 權限
-      ```cli
+      cli
       # create key vault, key and grant permission
       az keyvault create -n "VaultName" -g "ResourceGroupName" 
       az keyvault key create -n myKey -p software --vault-name "VaultName" 
       az keyvault set-policy -n "VaultName" --object-id "ServerIdentityObjectId" -g "ResourceGroupName" --key-permissions wrapKey unwrapKey get list 
-      ```
+      
 
  
 ## <a name="step-3-add-the-key-vault-key-to-the-server-and-set-the-tde-protector"></a>步驟 3： 將 Key Vault 金鑰新增至伺服器，並設定 TDE 保護裝置
   
-     ```cli
+     cli
      # add server key and update encryption protector
       az sql server key create -g "ResourceGroupName" -s "ServerName" -t "AzureKeyVault" -u "FullVersionedKeyUri 
       az sql server tde-key update -g "ResourceGroupName" -s "ServerName" -t AzureKeyVault -u "FullVersionedKeyUri" 
-      ```
+      
   
   > [!Note]
 > Key Vault 名稱和金鑰名稱的組合長度不能超過 94 個字元。
@@ -241,20 +247,19 @@ ms.lasthandoff: 04/18/2018
 >
   
 ## <a name="step-4-turn-on-tde"></a>步驟 4： 開啟 TDE 
-      ```cli
+      cli
       # enable encryption
       az sql db tde create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" --status Enabled 
-      ```
+      
 
 目前，資料庫或資料倉儲都已啟用 TDE，並具有 Key Vault 加密金鑰。
 
 ## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>步驟 5： 檢查加密狀態與加密活動
 
-     ```cli
+     cli
       # get encryption scan progress
       az sql db tde show-activity -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
 
       # get whether encryption is on or off
       az sql db tde show-configuration -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
 
-      ```

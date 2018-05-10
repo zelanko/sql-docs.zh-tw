@@ -19,11 +19,11 @@ ms.topic: article
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 77dee541f04218f8e84fc0428a0d8e34001e829a
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 1ca79d0f6c4bc501e7b03cd0c5b710eba2b50adf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,9 +66,10 @@ ms.lasthandoff: 04/20/2018
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>設定 Azure Key Vault 的指導方針
 
-- 設定已啟用[虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的金鑰保存庫，萬一意外或惡意刪除金鑰或是金鑰保存庫時可防止資料遺失。  這是使用 BYOK 之 TDE 的**硬碟需求**：  
-  - 虛刪除的資源除非復原或清除，否則會保留 90 天。
-  - **復原**和**清除**動作本身的權限定義在金鑰保存庫存取原則中。 
+- 建立已啟用[虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的金鑰保存庫，萬一意外刪除金鑰或是金鑰保存庫時可防止資料遺失。  您必須[使用 PowerShell 以在金鑰保存庫上啟用「虛刪除」屬性](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) (目前從 AKV 入口網站還無法使用此選項 - 但對 SQL 為必要項)：  
+  - 虛刪除的資源會保留一段時間，除非復原或清除，否則保留 90 天。
+  - **復原**和**清除**動作本身的權限已在金鑰保存庫的存取原則中建立關聯。 
+
 - 使用邏輯伺服器的 Azure Active Directory (Azure AD) 身分識別，對其授與金鑰保存庫的存取權。  使用入口網站 UI 時，Azure AD 身分識別會自動建立，而金鑰保存庫的存取權限會授與伺服器。  必須建立 AAD 身分識別，且應驗證完成，才能使用 PowerShell 來設定具 BYOK 的 TDE。 如需使用 PowerShell 時的詳細逐步指示，請參閱[使用 BYOK 設定 TDE](transparent-data-encryption-byok-azure-sql-configure.md)。
 
   >[!NOTE]

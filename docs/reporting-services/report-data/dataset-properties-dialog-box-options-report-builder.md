@@ -1,31 +1,29 @@
 ---
-title: "資料集屬性對話方塊、選項 (報表產生器) | Microsoft Docs"
-ms.custom: 
+title: 資料集屬性對話方塊、選項 (報表產生器) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - "10020"
 - sql13.rtp.rptdesigner.datasetproperties.options.f1
 - "10130"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 842012b19e26041065ef6adbd42cf6dc5e5990cd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 411fe1b3d55ec8ad34120fd69ee129910e75a6b0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>資料集屬性對話方塊、選項 (報表產生器)
   選取 [資料集屬性] 對話方塊上的 [選項] 來變更查詢的資料選項，例如定序選項以及將小計視為詳細資料。 如需定序的詳細資訊，請參閱《 [SQL Server 線上叢書](../../relational-databases/collations/collation-and-unicode-support.md) 》中的 [定序與 Unicode 支援](http://go.microsoft.com/fwlink/?linkid=98335)。  
@@ -41,16 +39,16 @@ ms.lasthandoff: 01/09/2018
  選取決定排序資料所用之定序順序的地區設定。 **[預設值]** 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果無法衍生此值，則從電腦的地區設定衍生預設值。  
   
  **區分大小寫**  
- 選取決定區分大小寫的值。 此選項指出資料是否區分大小寫。 您可以將 **[區分大小寫]** 設定為 **[True]**、 **[False]**或 **[Auto]**。預設值 [Auto] 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果資料提供者不支援區分大小寫類型，報表會以該值為 **False**來執行。 如果您知道值，而且知道系統支援該值，選擇 **[True]**。  
+ 選取決定區分大小寫的值。 此選項指出資料是否區分大小寫。 您可以將 **[區分大小寫]** 設定為 **[True]**、 **[False]** 或 **[Auto]**。預設值 [Auto] 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果資料提供者不支援區分大小寫類型，報表會以該值為 **False**來執行。 如果您知道值，而且知道系統支援該值，選擇 **[True]**。  
   
  **區分腔調字**  
- 選取決定區分腔調字的值。 **[區分腔調字]** 指出資料是否區分腔調字，而且可以設定為 **[True]**、 **[False]**或 **[Auto]**。預設值 [Auto] 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果資料提供者不支援區分腔調字類型，報表會以該值為 **[False]**來執行。 如果您知道值，而且知道系統支援該值，選擇 **[True]**。  
+ 選取決定區分腔調字的值。 **[區分腔調字]** 指出資料是否區分腔調字，而且可以設定為 **[True]**、 **[False]** 或 **[Auto]**。預設值 [Auto] 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果資料提供者不支援區分腔調字類型，報表會以該值為 **[False]** 來執行。 如果您知道值，而且知道系統支援該值，選擇 **[True]**。  
   
  **區分假名**  
- 選取決定區分假名的值。 此選項指出資料是否區分假名；它可以設定為 **[True]**、 **[False]**或 **[Auto]**。預設值 [Auto] 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果資料提供者不支援區分假名類型，報表會以該值為 **[False]**來執行。 如果您知道值，而且知道系統支援該值，選擇 **[True]**。  
+ 選取決定區分假名的值。 此選項指出資料是否區分假名；它可以設定為 **[True]**、 **[False]** 或 **[Auto]**。預設值 [Auto] 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果資料提供者不支援區分假名類型，報表會以該值為 **[False]** 來執行。 如果您知道值，而且知道系統支援該值，選擇 **[True]**。  
   
  **區分全半形**  
- 選取決定區分全半形的值。 此選項指出資料是否區分全半形，而且可以設定為 **True**、 **False**或 **Auto**。預設值 [Auto] 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果資料提供者不支援區分全半形類型，報表會以該值為 **[False]**來執行。 如果您知道值，而且知道系統支援該值，選擇 **[True]**。  
+ 選取決定區分全半形的值。 此選項指出資料是否區分全半形，而且可以設定為 **True**、 **False**或 **Auto**。預設值 [Auto] 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果資料提供者不支援區分全半形類型，報表會以該值為 **[False]** 來執行。 如果您知道值，而且知道系統支援該值，選擇 **[True]**。  
   
  **將小計當做詳細資料列**  
  選取一個值，指出您是否要讓小計資料列當做詳細資料列而非彙總資料列。 如果報表不使用 **Aggregate**() 函數來存取資料集中的任何欄位，預設值 **Auto**表示小計資料列應視為詳細資料列。 如果您要讓小計資料列當做彙總資料列，選擇 **[False]**。 如果您要讓小計資料列當作詳細資料列，而且您知道它們不使用 **Aggregate**() 函數，請選擇 **True**。  

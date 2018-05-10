@@ -3,15 +3,12 @@ title: 建立或設定可用性群組接聽程式 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -22,12 +19,11 @@ caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: Active
-ms.openlocfilehash: 746cdda3b75aee4f15f7c03f9754614f15c68434
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b1106913af5e7b6c2e9cd4a2e8b329efa0d596a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>建立或設定可用性群組接聽程式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,8 +148,8 @@ ms.lasthandoff: 04/16/2018
   
  如需詳細資訊，請參閱本主題前文中的＜ [可用性群組接聽程式之 DNS 名稱的需求](#DNSnameReqs)＞。  
   
- **[通訊埠]**  
- 此接聽程式所使用的 TPC 通訊埠。  
+ **通訊埠**  
+ 此接聽程式所使用的 TCP 通訊埠。  
   
  **網路模式**  
  指出接聽程式所使用的 TCP 通訊協定，其中一個：  
@@ -167,7 +163,7 @@ ms.lasthandoff: 04/16/2018
  **靜態 IP**  
  接聽程式將使用一個或多個靜態 IP 位址。 其他 IP 位址為選擇性。 若要建立跨多個子網路的可用性群組接聽程式，您必須在接聽程式組態中，針對每個子網路指定一個靜態 IP 位址。 請連絡您的網路系統管理員以取得這些靜態 IP 位址。  
   
- 如果您選取 **[靜態 IP]** ，就會在 **[網路模式]** 欄位底下出現一個子網路方格。 此方格會顯示這個可用性群組接聽程式可存取之每個子網路的相關資訊。 在您按一下 **[加入]**來加入靜態 IP 位址之前，此方格是空的。  
+ 如果您選取 **[靜態 IP]** ，就會在 **[網路模式]** 欄位底下出現一個子網路方格。 此方格會顯示這個可用性群組接聽程式可存取之每個子網路的相關資訊。 在您按一下 **[加入]** 來加入靜態 IP 位址之前，此方格是空的。  
   
  資料行如下：  
   

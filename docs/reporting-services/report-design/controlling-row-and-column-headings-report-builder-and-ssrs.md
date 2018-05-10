@@ -1,27 +1,25 @@
 ---
-title: "控制資料列和資料行標題 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 控制資料列和資料行標題 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 566c20ee25fca7362bb3a625725dfe90d9776e27
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: dd1680801406071d501a299ed687453deb115935
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>控制資料列和資料行標題 (報表產生器及 SSRS)
   資料表、矩陣或清單資料區可以用垂直或水平方式跨越多個頁面。 您可以指定是否要在每一頁重複資料列標題或資料行標題。 在報表管理員或報表預覽等互動式轉譯器中，您也可以指定是否要凍結資料列或資料行標題，以便在橫向捲動或向下捲動報表時讓它們保持可見狀態。 在資料表或矩陣中，第一個資料列通常包含標示每個資料行中之資料的資料行標題；第一個資料行通常包含標示每個資料列中之資料的資料列標題。 對於巢狀群組，您可能會想要重複包含群組標籤的初始資料列和資料行標題集合。 根據預設，清單資料區域並不包含標題。  

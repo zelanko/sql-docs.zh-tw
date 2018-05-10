@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: import-export
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
 - field terminators [SQL Server]
@@ -23,13 +21,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ce4a92bea3af9709fadfbf4ba9b4dc356afd9fb3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9d0890d79f2277b5f1ea1676bed9f4c9b20e6590
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -177,7 +174,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |選項|attribute|  
 |------------|---------------|  
-|DATAFILETYPE **='**char**'**|指定以字元資料載入資料欄位。|  
+|DATAFILETYPE **='** char **'**|指定以字元資料載入資料欄位。|  
 |FIELDTERMINATOR **='**`,`**'**|指定逗號 (`,`) 作為欄位結束字元。|  
 |ROWTERMINATOR **='**`\n`**'**|指定資料列結束字元為新行字元。|  
   

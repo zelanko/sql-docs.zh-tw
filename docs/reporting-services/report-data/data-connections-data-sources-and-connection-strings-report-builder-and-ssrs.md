@@ -1,25 +1,23 @@
 ---
-title: "資料連線、資料來源、連接字串-報表產生器-SSRS | Microsoft Docs"
-ms.custom: 
+title: 資料連線、資料來源、連接字串-報表產生器-SSRS | Microsoft Docs
+ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 697a387240a9e2e0edafeac45b68264187c2a3f8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>資料連接、資料來源及連接字串 (報表產生器和 SSRS)
 
@@ -125,7 +123,7 @@ ms.lasthandoff: 01/09/2018
 |SAP NetWeaver BI 資料來源|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|將資料來源類型設為 **SAP NetWeaver BI**。 如需詳細資訊，請參閱 [SAP NetWeaver BI 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)。|  
 |Hyperion Essbase 資料來源|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|將資料來源類型設為 **Hyperion Essbase**。 如需詳細資訊，請參閱 [Hyperion Essbase 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)。|  
 |Teradata 資料來源|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|將資料來源類型設為 **Teradata**。 連接字串是四個欄位形式的網際網路通訊協定 (IP) 位址，其中每個欄位都可以是 1 到 3 位數。 如需詳細資訊，請參閱 [Teradata 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。|  
-|Teradata 資料來源|`Database=` \<資料庫名稱> `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|與前述範例類似，將資料來源類型設為 **Teradata**。 請只使用在 Database 標記中指定的預設資料庫，而不要自動探索資料關聯性。|  
+|Teradata 資料來源|`Database=` \<資料庫名稱> `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|與前述範例類似，將資料來源類型設為 **Teradata**。 請只使用在 Database 標記中指定的預設資料庫，而不要自動探索資料關聯性。|  
 |XML 資料來源, Web 服務|`data source=http://adventure-works.com/results.aspx`|將資料來源類型設為 **XML**。 連接字串是支援 Web 服務定義語言 (WSDL) 之 Web 服務的 URL。 如需詳細資訊，請參閱 [XML 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)。|  
 |XML 資料來源、XML 文件|`http://localhost/XML/Customers.xml`|將資料來源類型設為 **XML**。 連接字串是 XML 文件的 URL。|  
 |XML 資料來源, 內嵌 XML 文件|*Empty*|將資料來源類型設為 **XML**。 XML 資料內嵌在報表定義中。|  

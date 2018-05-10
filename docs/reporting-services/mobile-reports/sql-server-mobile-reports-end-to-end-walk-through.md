@@ -1,27 +1,25 @@
 ---
-title: "SQL Server 行動報表：完整逐步解說 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 行動報表：完整逐步解說 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表：完整逐步解說
 逐步解說在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 入口網站透過 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 建立適用於任何螢幕大小的行動報表，並在 Power BI 行動應用程式中檢視它們。
@@ -31,7 +29,7 @@ ms.lasthandoff: 02/15/2018
 本文將逐步引導您完成︰   
   
 - 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站上建立共用資料來源和資料集，並使用 AdventureWorks 資料庫做為範例資料來源。  
-- 建立 Reporting Services 行動報表於 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]中建立 Reporting Services 行動報表  
 - 將行動報表發佈至 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站。  
 - 在 Power BI 行動應用程式中檢視行動報表。  
   
@@ -151,7 +149,7 @@ ms.lasthandoff: 02/15/2018
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
-   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會在主要配置方格中開啟。  
+   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會開啟到主要的配置方格。  
   
 2. 在 [配置] 索引標籤上，往下捲動到 [圖表] 區段。  
   

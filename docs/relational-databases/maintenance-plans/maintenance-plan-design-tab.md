@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.optimizations.f1
 - sql13.swb.maint.planeditor.f1
@@ -21,12 +20,11 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e61f2613526c4528fdfafa1791b9bdcee925d402
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2459b8508cc7b69225b21aef96148978897d3ff7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maintenance-plan-design-tab"></a>維護計畫 (設計索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +64,7 @@ ms.lasthandoff: 04/16/2018
  **設計師介面**  
  設計維護計畫並予以維護。 使用設計師介面即可將維護工作加入計畫、從計畫中移除工作、指定工作間的優先順序連結以及指出工作分支和平行處理原則。  
   
- 兩個工作間的優先順序連結會建立工作間的關聯性。 只有在第一個工作 (「前導工作」) 的執行結果符合指定的準則時，才會執行第二個工作 (「相依工作」)。 一般而言，指定的執行結果會是 **[成功]**、 **[失敗]**或 **[完成]**。 維護計畫設計師介面是以 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師介面為基礎。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
+ 兩個工作間的優先順序連結會建立工作間的關聯性。 只有在第一個工作 (「前導工作」) 的執行結果符合指定的準則時，才會執行第二個工作 (「相依工作」)。 一般而言，指定的執行結果會是 **[成功]**、 **[失敗]** 或 **[完成]**。 維護計畫設計師介面是以 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師介面為基礎。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
   
  例如，只有先前的 [檢查資料庫完整性] 工作順利完成之後，才能指定執行 [重組索引工作]。 工作優先順序連結功能，也可以在計畫中處理錯誤或失敗的狀況。 例如，如果 [檢查資料庫完整性] 工作失敗，[通知操作員] 工作可將失敗通知使用者或操作員。  
   

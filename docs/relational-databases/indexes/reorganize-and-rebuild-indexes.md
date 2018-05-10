@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: indexes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.index.rebuild.f1
 - sql13.swb.indexproperties.fragmentation.f1
@@ -34,16 +31,15 @@ helpviewer_keywords:
 - clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 caps.latest.revision: 70
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e340dfc5c9ae6f24a98f23f2262e49fb58285bc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 30666f6ae9a4949b25e8d82074e2f0539bab61d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新組織與重建索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,7 +109,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  以滑鼠右鍵按一下要檢查其片段的索引，然後選取 **[屬性]**。  
   
-6.  在 **[選取頁面]**底下，選取 **[片段]**。  
+6.  在 **[選取頁面]** 底下，選取 **[片段]**。  
   
      **[片段]** 頁面上提供下列資訊：  
   
@@ -136,7 +132,7 @@ ms.lasthandoff: 04/16/2018
      標示為刪除但尚未移除的資料列數目。 這些資料列將由清除執行緒在伺服器不忙碌時移除。 這個值不包含因未處理的快照集隔離交易而保留的資料列。  
   
      **索引類型**  
-     索引的類型。 可能的值為 **[叢集索引]**、 **[非叢集索引]**以及 **[主要 XML]**。 資料表也可以儲存為堆積 (無索引)，但是無法開啟此 [索引屬性] 頁面。  
+     索引的類型。 可能的值為 **[叢集索引]**、 **[非叢集索引]** 以及 **[主要 XML]**。 資料表也可以儲存為堆積 (無索引)，但是無法開啟此 [索引屬性] 頁面。  
   
      **分葉層級資料列**  
      分葉層級資料列的數目。  
@@ -160,7 +156,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>若要檢查索引的片段  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -226,7 +222,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  以滑鼠右鍵按一下 **[索引]** 資料夾，並選取 **[全部重新組織]**。  
   
-5.  在 **[重新組織索引]** 對話方塊中，確認 **[要重新組織的索引]**方格中有正確索引。 若要從 **[要重新組織的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
+5.  在 **[重新組織索引]** 對話方塊中，確認 **[要重新組織的索引]** 方格中有正確索引。 若要從 **[要重新組織的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
   
 6.  選取 **[壓縮大型物件資料行資料]** 核取方塊，可指定一併壓縮包含大型物件 (LOB) 資料的所有頁面。  
   
@@ -254,7 +250,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-reorganize-a-fragmented-index"></a>若要重新組織片段索引  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -274,7 +270,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>若要重新組織資料表中的所有索引  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -291,7 +287,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-rebuild-a-fragmented-index"></a>若要重建片段索引  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -301,7 +297,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-rebuild-all-indexes-in-a-table"></a>若要重建資料表中全部的索引  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
