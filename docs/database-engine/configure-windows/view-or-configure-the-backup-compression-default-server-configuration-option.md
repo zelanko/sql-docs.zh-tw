@@ -3,15 +3,12 @@ title: 檢視或設定 backup compression default 伺服器組態選項 | Micros
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], backup compression default option
 - backup compression [SQL Server], backup compression default Option
@@ -20,12 +17,11 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 579d088bf574e989686e1b97fb5e30a734bfc9fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ae83b4a7df944cc0e2b7576a2297e120bd2305a3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>檢視或設定 backup compression default 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  按一下 **[資料庫設定]** 節點。  
   
-3.  在 **[備份與還原]**底下， **[壓縮備份]** 會顯示 **backup compression default** 選項的目前設定。 這項設定會決定壓縮備份的伺服器層級預設值，如下所示：  
+3.  在 **[備份與還原]** 底下， **[壓縮備份]** 會顯示 **backup compression default** 選項的目前設定。 這項設定會決定壓縮備份的伺服器層級預設值，如下所示：  
   
     -   如果 **[壓縮備份]** 方塊是空的，新備份預設不會進行壓縮。  
   

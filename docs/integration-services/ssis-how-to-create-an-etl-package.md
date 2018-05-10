@@ -2,7 +2,7 @@
 title: SSIS 如何建立 ETL 套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: non-specific
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 83e51e583e0c83d8d0cbc8dbd213a78baa766ffb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b35b1f9ac19d76f9c78165a973044c67c4aab7d4
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何建立 ETL 封裝
 
@@ -40,9 +40,6 @@ ms.lasthandoff: 04/18/2018
 在此教學課程中，您將學會如何使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計工具來建立簡單的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件。 您建立的封裝會從一般檔案取用資料，重新格式化資料，然後將重新格式化之後的資料插入到事實資料表中。 在下列課程中，將會擴充套件以示範迴圈、套件設定、記錄和錯誤流程。  
   
 當您安裝了教學課程使用的範例資料時，也會安裝您在教學課程每一課中所建立套件的完整版本。 利用完整封裝，您可以三級跳，從教學課程後面的課程開始。 如果本教學課程是您初次使用套件或新開發環境，我們建議您從第 1 課開始。  
-
-> [!IMPORTANT]
-> 最近執行本教學課程所需的範例檔案無法再於先前的位置線上使用。 造成您的不便，深感抱歉。 我們已將檔案放在新的位置，並更新本文中的連結。
 
 ## <a name="what-is-sql-server-integration-services-ssis"></a>什麼是 SQL Server Integration Services (SSIS)？
 
@@ -53,12 +50,15 @@ ms.lasthandoff: 04/18/2018
   
 ## <a name="requirements"></a>需求  
 這個教學課程的主要對象是熟悉基本資料庫作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可用的新功能較為陌生的使用者。  
-  
+
+> [!IMPORTANT]
+> 最近執行本教學課程所需的範例檔案無法再於先前的位置線上使用。 我們很抱歉造成您的不便。 我們已在新的位置提供檔案，且更新了本文中的下載連結。
+
 若要使用這個教學課程，系統上必須已安裝下列元件：  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的 **資料庫的** 。 若要下載 **AdventureWorksDW2012** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorksDW2012.bak`，並還原備份。  
 
--   範例資料。 範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要將範例資料和課程套件下載為 Zip 檔案，請[按一下這裡](http://download.microsoft.com/download/3/1/4/314A4169-D540-4E9E-9776-585BFBFC2CC5/Creating a Simple ETL Package.zip)。  
+-   範例資料。 範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services 教學課程 - 建立簡易 ETL 套件](https://www.microsoft.com/download/details.aspx?id=56827)。  
 
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程  
 [第 1 課：使用 SSIS 建立專案和基本套件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  

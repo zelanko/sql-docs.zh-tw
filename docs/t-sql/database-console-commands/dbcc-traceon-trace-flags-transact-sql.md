@@ -28,11 +28,11 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1b0500c39e158f07c7371f853be7262ee9b82930
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 64ec9fcd7b4a8411d665a96614ee99f2dacddcd6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/20/2018
 |**2371**|將固定自動更新統計資料閾值變更為動態自動更新統計資料閾值。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/2754171) \(機器翻譯\)。<br /><br />**注意：**從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始及根據[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130，此行為由引擎控制，追蹤旗標 2371 沒有任何作用。<br /><br />**範圍**：只限全域|
 |**2389**|針對遞增值啟用自動產生的快速統計資料 (長條圖修正)。 如果設定追蹤旗標 2389，且前置統計資料資料行標示為遞增，則在查詢編譯時將調整用來預估基數的長條圖。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/2801413) \(機器翻譯\)。<br /><br />**注意：**請確定您已徹底測試此選項後再部署到生產環境。<br /><br />**注意：**此追蹤旗標不適用於 CE 120 版本或更新版本。 請改用追蹤旗標 4139。<br /><br />**範圍**：全域或工作階段或查詢|
 |**2390**|針對遞增或不明值啟用自動產生的快速統計資料 (長條圖修正)。 如果設定追蹤旗標 2390，且前置統計資料資料行標示為遞增或不明，則在查詢編譯時將調整用來預估基數的長條圖。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/2801413) \(機器翻譯\)。<br /><br />**注意：**請確定您已徹底測試此選項後再部署到生產環境。<br /><br />**注意：**此追蹤旗標不適用於 CE 120 版本或更新版本。 請改用追蹤旗標 4139。<br /><br />**範圍**：全域或工作階段或查詢|
-|**2422**|超過 Resource Governor REQUEST_MAX_CPU_TIME_SEC 設定所設定的時間上限時，啟用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以中止要求。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/help/4038419) \(機器翻譯\)。<br /><br />**注意：**此追蹤旗標適用於 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和更新版本組建。<br /><br />**範圍**：全域|
+|**2422**|超過 Resource Governor REQUEST_MAX_CPU_TIME_SEC 設定所設定的時間上限時，啟用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以中止要求。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/help/4038419) \(機器翻譯\)。<br /><br />**注意：**此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3，和更新的組建。<br /><br />**範圍**：全域|
 |**2430**|啟用其他鎖定類別清除作業。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/2754301) \(英文\)。<br /><br />**範圍**：只限全域| 
 |**2453**|變更足夠數目的資料列時，允許資料表變數觸發重新編譯。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/2952444) \(機器翻譯\)。<br /><br />**注意：**請確定您已徹底測試此選項後再部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢|
 |**2469**|在 `INSERT INTO ... SELECT` 和磁碟分割資料行存放區索引之間啟用其他交換。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/3204769) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段或查詢|
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/20/2018
 |**10204**|在資料行存放區索引重組期間停用合併/重新壓縮。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，當重新組織資料行存放區索引時，新功能會自動將任何小型的壓縮資料列群組合併成較大的壓縮資料列群組，並重新壓縮有大量已刪除資料列的任何資料列群組。<br /><br />**注意：**追蹤旗標 10204 不適用於在記憶體最佳化資料表上建立的資料行存放區索引。<br /><br />**範圍**：全域或工作階段|   
 |**10316**|在[內部記憶體最佳化暫存時態表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)上建立預設索引和額外的索引。 如果您有特定的查詢模式，而其中包含預設索引未涵蓋的資料行，您可以考慮加入額外的索引。<br /><br />**注意：**記憶體最佳化資料表的系統建立版本時態表，是專為提供高交易輸送量所設計。 請留意，對負責更新或刪除目前資料表資料列的 DML 作業來說，建立額外的索引可能會造成額外負荷。 使用額外的索引，您的目標應該是在時態性查詢和 DML 額外負荷之間尋求適當的平衡。<br /><br />**範圍**：全域或工作階段|
 |**11023**|針對未在 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 陳述式中明確指定採樣速率的所有後續統計資料更新，停用上次保存的採樣速率。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/4039284) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段|    
-|**11024**|當任何分割區的修改次數超過總[閾值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)時，使自動更新統計資料功能觸發。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/4041811) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段| 
+|**11024**|當任何分割區的修改次數超過總[閾值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)時，使自動更新統計資料功能觸發。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/4041811) \(機器翻譯\)。<br /><br />**注意：**此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3，和更新的組建。<br /><br />**範圍**：全域或工作階段| 
   
 ## <a name="remarks"></a>Remarks  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有三種類型的追蹤旗標：查詢、工作階段和全域。 查詢追蹤旗標可用於特定查詢的內容。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。 某些旗標只能啟用為全域旗標，某些則可以啟用為全域或工作階段範圍。  

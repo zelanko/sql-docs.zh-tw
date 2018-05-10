@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.toolboxfavorites.F1
 - sql13.dts.designer.toolbox.F1
@@ -21,12 +20,11 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ce420ba44f9ce86aba7ef26fd90f639537556996
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c689bc362d704bd4c8ea8ea997afebc4035fb4ba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
   所有自動安裝在本機電腦上的元件，都會列在 **SSIS 工具箱**中。 當您安裝其他元件時，在此工具箱內按一下滑鼠右鍵，然後按一下 [重新整理工具箱] 即可加入元件。  

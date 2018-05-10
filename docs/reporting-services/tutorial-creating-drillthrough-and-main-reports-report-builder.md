@@ -1,28 +1,27 @@
 ---
-title: "教學課程：建立鑽研及主報表 (報表產生器) | Microsoft Docs"
-ms.custom: 
+title: 教學課程：建立鑽研及主報表 (報表產生器) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 32ff76d9fd8d90b780d66ed1e12c5a4d33deca7f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a2a0eb1662a79095be0d0e3fd727d993b217a0bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
 本教學課程將教導您如何建立兩種 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表：鑽研報表和主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/09/2018
 如需一般需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="DMatrixAndDataset"></a>1.從資料表或矩陣精靈建立鑽研報表  
-從 [使用者入門] 對話方塊中，使用 **[資料表或矩陣精靈]**建立矩陣報表。 精靈中可用的模式有兩種：報表設計和共用資料集設計。 在本教學課程中，您將使用報表設計模式。  
+從 [使用者入門] 對話方塊中，使用 **[資料表或矩陣精靈]** 建立矩陣報表。 精靈中可用的模式有兩種：報表設計和共用資料集設計。 在本教學課程中，您將使用報表設計模式。  
   
 #### <a name="to-create-a-new-report"></a>建立新的報表  
   
@@ -68,13 +67,13 @@ ms.lasthandoff: 01/09/2018
   
 2.  按一下 **[新增]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
-3.  在 **[名稱]**中輸入 **Online and Reseller Sales Detail** 做為資料來源的名稱。  
+3.  在 **[名稱]** 中輸入 **Online and Reseller Sales Detail** 做為資料來源的名稱。  
   
-4.  在 **[選取連接類型]**中，選取 **[Microsoft SQL Server Analysis Services]**，然後按一下 **[建立]**。  
+4.  在 **[選取連接類型]** 中，選取 **[Microsoft SQL Server Analysis Services]**，然後按一下 **[建立]**。  
   
-5.  在 **[資料來源]**中，確認資料來源為 **[Microsoft SQL Server Analysis Services (AdomdClient)]**。  
+5.  在 **[資料來源]** 中，確認資料來源為 **[Microsoft SQL Server Analysis Services (AdomdClient)]**。  
   
-6.  在 **[伺服器名稱]**中，輸入安裝 Analysis Services 執行個體所在伺服器的名稱。  
+6.  在 **[伺服器名稱]** 中，輸入安裝 Analysis Services 執行個體所在伺服器的名稱。  
   
 7.  在 [選取或輸入資料庫名稱] 中，選取 [Contoso] Cube。  
   
@@ -110,7 +109,7 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
-1.  在 **[設計查詢]** 頁面的 [中繼資料] 窗格中，按一下 **(…)**按鈕。  
+1.  在 **[設計查詢]** 頁面的 [中繼資料] 窗格中，按一下 **(…)** 按鈕。  
   
 2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   
@@ -127,7 +126,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  若要開啟 **[篩選運算式]** 清單，按一下 **[篩選運算式]** 資料行。  
   
-5.  在篩選運算式清單中，展開 **[所有通道]**，然後依序按一下 **[線上]**、 **[轉售商]**和 **[確定]**。  
+5.  在篩選運算式清單中，展開 **[所有通道]**，然後依序按一下 **[線上]**、 **[轉售商]** 和 **[確定]**。  
   
     此查詢現在包含一個僅內含下列通道的篩選：線上和轉售商。  
   
@@ -205,7 +204,7 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-add-subtotals-and-totals"></a>加入小計和總計  
   
-1.  在 **[選擇配置]** 頁面的 **[選項]**下方，確定已選取 **[顯示小計和總計]** 。  
+1.  在 **[選擇配置]** 頁面的 **[選項]** 下方，確定已選取 **[顯示小計和總計]** 。  
   
     精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  
   
@@ -237,7 +236,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  在矩陣的 [總計] 群組中，以滑鼠右鍵按一下 **[銷售量]** 資料行，按一下 **[插入資料行]**，然後按一下 **[右方]**。  
   
-    空白資料行就會加入至 **[銷售量]**的右方。  
+    空白資料行就會加入至 **[銷售量]** 的右方。  
   
 3.  在功能區上，按一下 [矩形]，然後按一下 [Product_Subcategory] 資料列群組中 `[Sum(Sales_Amount)]` 資料格右側的空資料格。  
   
@@ -345,7 +344,7 @@ ms.lasthandoff: 01/09/2018
 7.  按一下 **[儲存]**。  
   
 ## <a name="MMatrixAndDataset"></a>1.從資料表或矩陣精靈建立主報表  
-從 **[使用者入門]** 對話方塊中，使用 **[資料表或矩陣精靈]**建立矩陣報表。  
+從 **[使用者入門]** 對話方塊中，使用 **[資料表或矩陣精靈]** 建立矩陣報表。  
   
 #### <a name="to-create-the-main-report"></a>建立主報表  
   
@@ -366,13 +365,13 @@ ms.lasthandoff: 01/09/2018
   
 2.  按一下 **[新增]**。  
   
-3.  在 **[名稱]**中輸入 **Online and Reseller Sales Main** 做為資料來源的名稱。  
+3.  在 **[名稱]** 中輸入 **Online and Reseller Sales Main** 做為資料來源的名稱。  
   
-4.  在 **[選取連接類型]**中，選取 **[Microsoft SQL Server Analysis Services]**，然後按一下 **[建立]**。  
+4.  在 **[選取連接類型]** 中，選取 **[Microsoft SQL Server Analysis Services]**，然後按一下 **[建立]**。  
   
-5.  在 **[資料來源]**中，確認資料來源為 **[Microsoft SQL Server Analysis Services (AdomdClient)]**。  
+5.  在 **[資料來源]** 中，確認資料來源為 **[Microsoft SQL Server Analysis Services (AdomdClient)]**。  
   
-6.  在 **[伺服器名稱]**中，輸入安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體所在伺服器的名稱。  
+6.  在 **[伺服器名稱]** 中，輸入安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體所在伺服器的名稱。  
   
 7.  在 [選取或輸入資料庫名稱] 中，選取 [Contoso] Cube。  
   
@@ -418,7 +417,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  若要開啟 **[篩選運算式]** 清單，按一下 **[篩選運算式]** 資料行。  
   
-5.  在篩選運算式清單中，展開 **[所有通道]**，然後依序按一下 **[線上]** 、 **[轉售商]**和 **[確定]**。  
+5.  在篩選運算式清單中，展開 **[所有通道]**，然後依序按一下 **[線上]** 、 **[轉售商]** 和 **[確定]**。  
   
     此查詢現在包含一個僅內含下列通道的篩選：線上和轉售商。  
   
@@ -518,7 +517,7 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>若要加入小計和總計  
   
-1.  在 **[選擇配置]** 頁面的 **[選項]**下方，確定已選取 **[顯示小計和總計]** 。  
+1.  在 **[選擇配置]** 頁面的 **[選項]** 下方，確定已選取 **[顯示小計和總計]** 。  
   
     精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  當您執行報表時，每個資料列都會以下列方式顯示：第一個資料列是資料行群組、第二個資料列包含資料行標題、第三個資料列包含產品類別目錄資料 (`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`，而第四個資料列包含總計。  
   
@@ -552,13 +551,13 @@ ms.lasthandoff: 01/09/2018
   
 4.  選取 **[移至報表]**。  
   
-5.  在 **[指定報表]**中，按一下 **[瀏覽]**，然後找出名稱為 ResellerVSOnlineDrillthrough 的鑽研報表。  
+5.  在 **[指定報表]** 中，按一下 **[瀏覽]**，然後找出名稱為 ResellerVSOnlineDrillthrough 的鑽研報表。  
   
 6.  若要加入參數以執行鑽研報表，按一下 **[加入]**。  
   
 7.  在 [名稱] 清單中，選取 ProductProductCategoryName。  
   
-8.  在 **[值]**中，輸入 `[Product_Category_Name.UniqueName]`。  
+8.  在 **[值]** 中，輸入 `[Product_Category_Name.UniqueName]`。  
   
     Product_Category_Name 是資料集中的欄位。  
   
@@ -596,7 +595,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  按一下 **[三記號]** 類型，然後按一下 **[確定]**。  
   
-5.  以滑鼠右鍵按一下指標，然後在 [量測計資料] 窗格中，按一下 **[(未指定)]**旁邊的向下鍵。 選取 `Net_QTY`。  
+5.  以滑鼠右鍵按一下指標，然後在 [量測計資料] 窗格中，按一下 **[(未指定)]** 旁邊的向下鍵。 選取 `Net_QTY`。  
   
 6.  在 `[Sum(Net QTY)]` [總計] `[Product_Category_Name]` 內，針對 **資料列群組中的**資料格，重複步驟 2 到 5。  
   
@@ -608,7 +607,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  按一下 **[三記號]** 類型，然後按一下 **[確定]**。  
   
-4.  以滑鼠右鍵按一下指標，然後在 [量測計資料] 窗格中，按一下 **[(未指定)]**旁邊的向下鍵。 選取 `Net_Sales`。  
+4.  以滑鼠右鍵按一下指標，然後在 [量測計資料] 窗格中，按一下 **[(未指定)]** 旁邊的向下鍵。 選取 `Net_Sales`。  
   
 5.  在 `[Sum(Net_Sales)]` [總計] `[Product_Category_Name]` 內，針對 **資料列群組中的**資料格，重複步驟 1 到 4。  
   
@@ -663,7 +662,7 @@ ms.lasthandoff: 01/09/2018
   
 5.  導覽到您要儲存報表的文件庫。  
   
-6.  在 **[名稱]**中，將預設名稱取代成 **ResellerVSOnlineMain**。  
+6.  在 **[名稱]** 中，將預設名稱取代成 **ResellerVSOnlineMain**。  
   
     > [!IMPORTANT]  
     > 將主報表儲存到儲存鑽研報表的相同位置。 若要將主報表和鑽研報表儲存到不同的網站或文件庫，請確認主報表中的 **[移至報表]** 動作指向鑽研報表的正確路徑。  

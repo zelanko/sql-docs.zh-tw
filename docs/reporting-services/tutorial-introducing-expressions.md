@@ -1,29 +1,27 @@
 ---
-title: "教學課程：運算式簡介 | Microsoft Docs"
-ms.custom: 
+title: 教學課程：運算式簡介 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a75e3eb0532359a4528af38270820126e14f4b36
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e2b42df295abda51349793a4db8697ab03cb3cd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您將使用含有一般函數和運算子的運算式，來建立功能強大且靈活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。 
@@ -61,7 +59,7 @@ ms.lasthandoff: 02/15/2018
   
 4.  在 [選擇資料集] 頁面上，按一下 [建立資料集] > [下一步]。  
   
-6.  在 **[選擇與資料來源的連接]** 頁面上，選取類型為 **[SQL Server]**的資料來源。 請從清單中選取資料來源，或者瀏覽到報表伺服器再進行選取。  
+6.  在 **[選擇與資料來源的連接]** 頁面上，選取類型為 **[SQL Server]** 的資料來源。 請從清單中選取資料來源，或者瀏覽到報表伺服器再進行選取。  
 
     > [!NOTE]  
     > 只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -99,7 +97,7 @@ ms.lasthandoff: 02/15/2018
     ```  
 
   
-10. 在查詢設計工具工具列上，按一下 **[執行]**\(**!**)。 結果集會顯示 23 個資料列，包括下列資料行：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 和 LastPurchase。  
+10. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。 結果集會顯示 23 個資料列，包括下列資料行：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 和 LastPurchase。  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -355,7 +353,7 @@ ms.lasthandoff: 02/15/2018
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. 按一下 **[執行]**\(**!**) 來執行查詢。  
+9. 按一下 **[執行]** \(**!**) 來執行查詢。  
   
     查詢結果為國家/地區識別碼和名稱。  
   
@@ -379,7 +377,7 @@ ms.lasthandoff: 02/15/2018
   
 6.  在 [類別目錄] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [CountryRegionID]。  
   
-8.  將游標放在緊接 `CountryRegionID.Value`, and type **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**之後  
+8.  將游標放在緊接 `CountryRegionID.Value`, and type **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")** 之後  
   
     完成的運算式為： `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   

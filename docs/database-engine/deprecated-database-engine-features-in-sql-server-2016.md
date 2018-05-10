@@ -3,15 +3,14 @@ title: SQL Server 2016 中已取代的資料庫引擎功能 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-engine
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
@@ -21,12 +20,11 @@ caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f062de9b5ace5629a4c6b2a5eb2660727b802092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5daaf2d0fadd131799cfa0c14244fbe576cafcdd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中已被取代的 Database Engine 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +76,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |資料類型|**timestamp** 資料類型的 **rowversion** 語法|**rowversion** 資料類型語法|timestamp|158|  
 |資料類型|能夠將 null 值插入 **timestamp** 資料行中。|請改用 DEFAULT。|INSERT NULL 到 TIMESTAMP 資料行中|179|  
 |資料類型|'text in row' 資料表選項|使用 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料類型。 如需詳細資訊，請參閱 [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|Text in row 資料表選項|9|  
-|資料類型|資料類型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|使用 **varchar(max)**、 **nvarchar(max)**和 **varbinary(max)** 資料類型。|資料類型： **text**、 **ntext** 或 **image**|4|  
+|資料類型|資料類型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|使用 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)** 資料類型。|資料類型： **text**、 **ntext** 或 **image**|4|  
 |資料庫管理|sp_attach_db<br /><br /> sp_attach_single_file_db|具有 FOR ATTACH 選項的 CREATE DATABASE 陳述式。 當一個或多個記錄檔有新位置時，若要重建多個記錄檔，請使用 FOR ATTACH_REBUILD_LOG 選項。|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |資料庫物件|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE 和 ALTER TABLE 中的 DEFAULT 關鍵字|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |資料庫物件|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE 和 ALTER TABLE 中的 CHECK 關鍵字|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
