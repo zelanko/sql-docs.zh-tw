@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbdeployment.settings.f1
 - sql13.swb.dbdeployment.progress.f1
@@ -26,12 +25,11 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 576cfec0d53ea575f1a8ad70ad2b5b36dc17e5aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d87f60bc73ff969aa2f3f6ef42264ea8cb93b23c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  連接至您要部署的資料庫位置。 您可以指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器。  
   
-2.  在 **[物件總管]**中，展開含有資料庫的執行個體的節點。  
+2.  在 **[物件總管]** 中，展開含有資料庫的執行個體的節點。  
   
 3.  展開 **[資料庫]** 節點。  
   

@@ -1,28 +1,27 @@
 ---
-title: "教學課程：建立矩陣報表 (報表產生器) | Microsoft Docs"
-ms.custom: 
+title: 教學課程：建立矩陣報表 (報表產生器) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d20db364a19a96b40ac1087485978604c24012dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 274a385ad25081cdd4db13b9a46e1557db15ac70
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 (報表產生器)
 本教學課程會引導您建立 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，其中具有巢狀資料列和資料行群組的範例銷售資料矩陣。 
@@ -327,7 +326,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
-2.  按一下 **[桌面]**、 **[我的文件]**或 **[我的電腦]**，然後瀏覽到您要儲存報表的資料夾。  
+2.  按一下 **[桌面]**、 **[我的文件]** 或 **[我的電腦]**，然後瀏覽到您要儲存報表的資料夾。  
   
 3.  在 [名稱] 中，將預設名稱取代為 **SalesByTerritorySubcategory**。  
   

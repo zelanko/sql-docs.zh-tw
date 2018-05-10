@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
 - disaster recovery [SQL Server], moving database files
@@ -34,12 +33,11 @@ caps.latest.revision: 62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a9b177196b7b97b07aafc79095328e1b4f4c9067
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 96f8d859d0ff673cc459e4d7bd81307334ee6971
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-system-databases"></a>移動系統資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +149,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="master"></a> 移動 master 資料庫  
  若要移動 master 資料庫，請遵循下列步驟。  
   
-1.  從 **[開始]** 功能表上，依序指向 **[程式集]**、 **[Microsoft SQL Server]**和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
+1.  從 **[開始]** 功能表上，依序指向 **[程式集]**、 **[Microsoft SQL Server]** 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
 2.  在 **[SQL Server 服務]** 節點中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體 (例如 **[SQL Server (MSSQLSERVER)]**)，然後選擇 **[屬性]**。  
   
@@ -219,7 +217,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  在 **[伺服器屬性]** 對話方塊中，選取 **[資料庫設定]**。  
   
-3.  在 **[資料庫預設位置]**底下，瀏覽至資料和記錄檔的新位置。  
+3.  在 **[資料庫預設位置]** 底下，瀏覽至資料和記錄檔的新位置。  
   
 4.  停止 SQL Server 服務然後啟動它來完成變更。  
   

@@ -1,16 +1,15 @@
 ---
-title: "建立、修改和刪除共用排程 | Microsoft Docs"
-ms.custom: 
+title: 建立、修改和刪除共用排程 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
 - shared schedules [Reporting Services]
@@ -24,16 +23,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6d89557d71739545d4f119363273951a20953429
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 560b4fff1069b2e29ca5847d5bf00f1a363976a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   使用本主題可讓您了解如何建立、修改和刪除 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共用排程。  若要管理原生模式的共用排程，請使用 Web 入口網站中的 [排程] 頁面或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的 [共用排程] 資料夾。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  
@@ -72,7 +70,7 @@ ms.lasthandoff: 01/09/2018
 3.  按一下 **[排程]**。  
 4.  按一下 **[新增排程]**。 若要修改現有的排程，請按一下排程的名稱。  
 5.  輸入排程的描述性名稱。  
-6.  選取 **[小時]**、 **[天]**、 **[週]**或 **[月]**。 按 **[一次]** ，即可建立只執行一次的排程。 當您指定排程的基礎時，其他選項會出現。  
+6.  選取 **[小時]**、 **[天]**、 **[週]** 或 **[月]**。 按 **[一次]** ，即可建立只執行一次的排程。 當您指定排程的基礎時，其他選項會出現。  
 7.  選擇性地選取排程的開始日期。 預設值是目前的日期。 您也可以選擇較晚的日期，來延後排程的開始時間。  
 8.  選擇性地選取結束排程的日期。 排程會在此日期停止執行，但不會遭到刪除。  
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
@@ -99,7 +97,7 @@ ms.lasthandoff: 01/09/2018
 4.  輸入排程的描述性名稱。  
 5.  選擇性地選取排程的開始日期。 預設值是目前的日期。  
 6.  選擇性地選取排程的結束日期。 排程會在此日期停止執行，但不會遭到刪除。  
-7.  若要設定重複執行排程，請選取 **[小時]**、 **[天]**、 **[週]**或 **[月]**。 就會顯示其他選項。 請根據您偏好的小時、天、週或月，使用這些選項來設定排程頻率。  
+7.  若要設定重複執行排程，請選取 **[小時]**、 **[天]**、 **[週]** 或 **[月]**。 就會顯示其他選項。 請根據您偏好的小時、天、週或月，使用這些選項來設定排程頻率。  
   
      若要指定單次 (非重複執行) 排程，請選取 [一次]，然後指定 [開始時間]。  
   

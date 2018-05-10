@@ -1,27 +1,25 @@
 ---
-title: "保護共用資料集項目的安全 | Microsoft Docs"
-ms.custom: 
+title: 保護共用資料集項目的安全 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f167edb4e9391a14682e46c3a7e839c48bc43396
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: dff365e2bee4f15ef72892d2a80fa7759161644d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-shared-dataset-items"></a>保護共用資料集項目的安全
   在報表伺服器上，共用資料集項目可由多個報表使用。 您可以保護共用資料集來控制使用者能夠存取的程度。 依預設，只有屬於 **管理員** 內建群組成員的使用者才可以檢視共用資料集、修改屬性、啟用快取、建立快取重新整理計劃，以及刪除項目。 其他所有使用者都必須具有針對他們所建立的角色指派，才能存取共用資料集。  

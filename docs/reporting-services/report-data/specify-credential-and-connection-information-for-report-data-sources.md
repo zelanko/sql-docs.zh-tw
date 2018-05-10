@@ -1,16 +1,15 @@
 ---
-title: "指定報表資料來源的認證及連線資訊 | Microsoft Docs"
-ms.custom: 
+title: 指定報表資料來源的認證及連線資訊 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - impersonation [Reporting Services]
@@ -30,16 +29,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: "61"
+caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9cea8af15340bcc5cbf744e59678e04d6ab6e8b6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 444cfe13b05a60b3b2a7017f98100f6ecf093140
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>指定報表資料來源的認證及連接資訊
   報表伺服器使用認證以連接到外部資料來源，其中提供內容給報表或提供收件者資訊給資料驅動訂閱。 您可以指定認證來使用 Windows 驗證、資料庫驗證、無驗證或自訂驗證。 透過網路傳送連接要求時，報表伺服器會模擬使用者帳戶或自動執行帳戶。 如需安全性內容 (連接要求會在其底下進行) 的詳細資訊，請參閱本主題之後的 [資料來源組態和網路連接](#DataSourceConfigurationConnections) 。  
@@ -152,7 +150,7 @@ ms.lasthandoff: 01/09/2018
  在這些狀況下，報表伺服器會使用您必須事先定義的自動執行帳戶連接到遠端資料來源。 報表伺服器未利用它的服務認證連接到遠端伺服器，因此，您必須指定帳戶，讓報表伺服器能夠用於進行連接。 如需建立此帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="user-name-and-password-login"></a>使用者名稱和密碼登入  
- 當您選取 **[使用此使用者名稱和密碼]**時，必須提供使用者名稱和密碼才能存取資料來源。 若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，這些認證可能會用於資料庫登入。 認證將會傳遞至資料來源以供驗證。  
+ 當您選取 **[使用此使用者名稱和密碼]** 時，必須提供使用者名稱和密碼才能存取資料來源。 若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，這些認證可能會用於資料庫登入。 認證將會傳遞至資料來源以供驗證。  
   
 ##  <a name="DataSourceConfigurationConnections"></a> 資料來源組態和網路連接  
  下表顯示如何為認證類型和資料處理延伸模組的特定組合進行連接。 如果您要使用自訂資料處理延伸模組，請參閱 [為自訂資料處理延伸模組指定連接](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md)。  

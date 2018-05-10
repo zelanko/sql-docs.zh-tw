@@ -1,30 +1,28 @@
 ---
-title: "將互動式排序新增至資料表或矩陣 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 將互動式排序新增至資料表或矩陣 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10121"
 - sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 07726f5c911579650bbd73a9973841ebfeb482e6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: bd4c0edc746c0bc72652343d986ecb1d9f34ce59
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>將互動式排序加入至資料表或矩陣 (報表產生器及 SSRS)
   加入互動式排序按鈕，讓使用者變更資料表和矩陣中資料列和資料行的排序次序。 系統僅能以支援使用者互動的轉譯格式支援此功能，例如 HTML。  
@@ -58,9 +56,9 @@ ms.lasthandoff: 01/09/2018
   
 3.  選取 **[啟用此文字方塊上的互動式排序]**。  
   
-4.  在 **[選擇排序依據]**中，按一下 **[詳細資料列]**。  
+4.  在 **[選擇排序依據]** 中，按一下 **[詳細資料列]**。  
   
-5.  在 **[排序依據]**中，指定排序運算式。 從下拉式清單中，選取對應至您要定義排序動作之資料行的欄位 (例如，資料行標題名稱若是 "Title"，請選擇 `[Title]`)。 您必須指定排序運算式。  
+5.  在 **[排序依據]** 中，指定排序運算式。 從下拉式清單中，選取對應至您要定義排序動作之資料行的欄位 (例如，資料行標題名稱若是 "Title"，請選擇 `[Title]`)。 您必須指定排序運算式。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  選取 **[啟用此文字方塊上的互動式排序]**。  
   
-4.  在 **[選擇排序依據]**中，按一下 **[群組]**。  
+4.  在 **[選擇排序依據]** 中，按一下 **[群組]**。  
   
 5.  從下拉式清單中，選取您要排序之群組的名稱。 針對以單一群組運算式為基礎的群組， **[排序依據]** 值會以群組運算式擴展。  
   
@@ -105,7 +103,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  選取 **[啟用此文字方塊上的互動式排序]**。  
   
-4.  在 **[選擇排序依據]**中，按一下下列其中一個選項：  
+4.  在 **[選擇排序依據]** 中，按一下下列其中一個選項：  
   
     -   **詳細資料** ：按一下 **[詳細資料]** 來排序詳細資料列。 從下拉式清單中，選取排序所依據的欄位。 針對此選項，您必須指定排序所依據的值。  
   
@@ -136,7 +134,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  在 [資料列群組] 窗格中，以滑鼠右鍵按一下預設資料列群組，然後按一下 [編輯群組]。 **[群組屬性]** 對話方塊隨即開啟。  
   
-5.  在 **[名稱]**中，將預設名稱取代成指定您分組所依據之多個群組的名稱。  
+5.  在 **[名稱]** 中，將預設名稱取代成指定您分組所依據之多個群組的名稱。  
   
 6.  在 [群組運算式] 的 [群組對象] 中，按一下 [運算式]\(**fx**) 按鈕，開啟 [運算式] 對話方塊。  
   
@@ -160,7 +158,7 @@ ms.lasthandoff: 01/09/2018
   
 12. 選取 **[啟用此文字方塊上的互動式排序]**。  
   
-13. 在 **[選擇排序依據]**中，按一下 **[群組]**。  
+13. 在 **[選擇排序依據]** 中，按一下 **[群組]**。  
   
 14. 從下拉式清單中，選取您在步驟 5 中建立之群組的名稱。 群組運算式會自動複製到 **[排序依據]** 文字方塊中。  
   
@@ -211,7 +209,7 @@ ms.lasthandoff: 01/09/2018
   
 14. 選取 **[啟用此文字方塊上的互動式排序]**。  
   
-15. 在 **[選擇排序依據]**中，按一下 **[群組]**。  
+15. 在 **[選擇排序依據]** 中，按一下 **[群組]**。  
   
 16. 從 [群組] 底下的下拉式清單中，選取您要排序的群組名稱。 此群組的群組運算式會針對 **[排序依據]** 值自動設定。  
   

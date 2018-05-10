@@ -3,7 +3,6 @@ title: Reporting Services (SSRS) 中的新功能 | Microsoft Docs
 ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: reporting-services
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -14,12 +13,11 @@ ms.topic: get-started-article
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: ecbce2bb1fa67b2a3db6bd01f5a4a371486cf531
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: a279a399575f6272b3cefc22a2a319637de6c7b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
@@ -31,7 +29,7 @@ ms.lasthandoff: 03/22/2018
 
  **下載** ![download](../analysis-services/media/download.png "download")
 
-- 請前往 **[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)**下載 SQL Server 2017 Reporting Services。
+- 請前往 **[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)** 下載 SQL Server 2017 Reporting Services。
 
 如需取得目前的版本資訊，請參閱 [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)。 
 

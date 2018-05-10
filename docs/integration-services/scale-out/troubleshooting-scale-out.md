@@ -5,24 +5,22 @@ ms.custom: ''
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e3d2408a91ed36358ab3683163dae47ff09b0f1c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 5baceaa51a0e4f4b1059bce5e19a0fd79fa3a71d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-scale-out"></a>針對 Scale Out 進行疑難排解
 

@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: import-export
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SINGLE_NCLOB option
 - bulk rowset providers [SQL Server]
@@ -26,12 +24,11 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e309875d56367c83a638fd8cea76b579125f607
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 26bc96e244f71ae6dd716c09baccd3566d9a4754
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider"></a>使用 OPENROWSET BULK 資料列集提供者大量匯入大型物件資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +43,13 @@ ms.lasthandoff: 04/16/2018
  OPENROWSET BULK 子句支援三個選項，以單一資料列、單一資料行的資料列集匯入資料檔案的內容。 您可以指定其中一個大型物件選項，而不使用格式檔案。 這些選項如下：  
   
  SINGLE_BLOB  
- 將 *data_file* 內容讀取為單一資料列，並以 **varbinary(max)**類型的單一資料行資料列集的形式傳回內容。  
+ 將 *data_file* 內容讀取為單一資料列，並以 **varbinary(max)** 類型的單一資料行資料列集的形式傳回內容。  
   
  SINGLE_CLOB  
- 將指定的資料檔案內容讀取為字元，並使用目前資料庫的定序，以 **varchar(max)**類型的單一資料列、單一資料行資料列集的形式傳回內容；例如文字或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文件。  
+ 將指定的資料檔案內容讀取為字元，並使用目前資料庫的定序，以 **varchar(max)** 類型的單一資料列、單一資料行資料列集的形式傳回內容；例如文字或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文件。  
   
  SINGLE_NCLOB  
- 將指定的資料檔案內容讀取為 Unicode，並使用目前資料庫的定序，以 **nvarchar(max)**類型的單一資料列、單一資料行資料列集的形式傳回內容。  
+ 將指定的資料檔案內容讀取為 Unicode，並使用目前資料庫的定序，以 **nvarchar(max)** 類型的單一資料列、單一資料行資料列集的形式傳回內容。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   

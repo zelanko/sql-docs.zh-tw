@@ -15,15 +15,15 @@ dev_langs:
 - TSQL
 ms.assetid: e713365e-d44c-4b66-84c9-81a1bcc32414
 caps.latest.revision: 9
-author: barbkess
-ms.author: barbkess
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b94c6e262f0d76b56119af04b761bf42a9a01570
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: afeff559cb3d8338191f9b1647fdab937cf2f721
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL 和 Parallel Data Warehouse 動態管理檢視
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
