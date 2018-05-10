@@ -3,15 +3,12 @@ title: AlwaysOn 可用性群組的 Transact-SQL 陳述式 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], Transact-SQL statements
@@ -20,12 +17,11 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 912a50e191e363c3570a68a3064b386ba82d85b9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a5ef4a3f3c578041c5c1595048e82a981a0435e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的 Transact-SQL 陳述式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  
  [DROP AVAILABILITY GROUP](../../../t-sql/statements/drop-availability-group-transact-sql.md) 可移除指定的可用性群組及其所有複本。 DROP AVAILABILITY GROUP 可從 WSFC 容錯移轉叢集中的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 節點執行。  
   
-##  <a name="Restrictions"></a> Restrictions on the AVAILABILITY GROUP Transact-SQL Statements  
+##  <a name="Restrictions"></a> AVAILABILITY GROUP Transact-SQL 陳述式的限制  
  CREATE AVAILABILITY GROUP、ALTER AVAILABILITY GROUP 及 DROP AVAILABILITY GROUP [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式具有下列限制：  
   
 -   除了 DROP AVAILABILITY GROUP 之外，執行這些陳述式需要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上啟用 HADR 服務。 如需詳細資訊，請參閱[啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  

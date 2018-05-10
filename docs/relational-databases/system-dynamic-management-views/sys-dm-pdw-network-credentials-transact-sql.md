@@ -14,15 +14,15 @@ dev_langs:
 - TSQL
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 caps.latest.revision: 8
-author: barbkess
-ms.author: barbkess
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 511474f73a6bc6c1a1f2310a4fa2615f43847e77
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: f782d832dc5f3d962fcfc7aa72b1fa196159312d
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sysdmpdwnetworkcredentials-transact-sql"></a>sys.dm_pdw_network_credentials (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

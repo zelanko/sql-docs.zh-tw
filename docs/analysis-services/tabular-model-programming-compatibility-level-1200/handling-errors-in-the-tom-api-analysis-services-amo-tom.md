@@ -1,25 +1,19 @@
 ---
 title: TOM API (Analysis Services AMO-TOM) 中的錯誤處理 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
 ms.topic: reference
-ms.assetid: ec44daa0-a90e-42ad-b70d-6a7a7a4e4b7b
-caps.latest.revision: 4
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5b023664cb70997b9aee688178a5c72eb2c06e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d13c9318acbc70b2024d2f4f6b901d39e716e747
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="handling-errors-in-the-tom-api-analysis-services-amo-tom"></a>TOM API (Analysis Services AMO-TOM) 中的錯誤處理
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

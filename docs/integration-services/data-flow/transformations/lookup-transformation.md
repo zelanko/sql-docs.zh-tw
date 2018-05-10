@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
 - sql13.dts.designer.lookuptransformation.general.f1
@@ -30,12 +29,11 @@ caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4c4f5d687472d9ca5933d13cae4c0e6cd55634f0
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0681beed559734ecaee000a45be3bc19447d9eeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lookup-transformation"></a>查閱轉換
   「查閱」轉換會藉由聯結輸入資料行中的資料與參考資料集中的資料行來執行查閱。 您可以使用查閱在相關資料表中存取以通用資料行中的值為基礎的其他資訊。  

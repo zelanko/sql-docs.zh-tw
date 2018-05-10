@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.registerdacwizard.summary.f1
 - sql13.swb.registerdacwizard.introduction.f1
@@ -27,12 +26,11 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c80a09793bae9691c25590b1c929a76f0da4e4b0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d14994b4e90429cdd4d3e8a9b58c2b3998492b3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +54,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="UsingRegisterDACWizard"></a> 使用註冊資料層應用程式精靈  
  **使用精靈註冊 DAC**  
   
-1.  在 **[物件總管]**中，展開含有要註冊為 DAC 的資料庫之執行個體的節點。  
+1.  在 **[物件總管]** 中，展開含有要註冊為 DAC 的資料庫之執行個體的節點。  
   
 2.  展開 **[資料庫]** 節點。  
   
@@ -117,7 +115,7 @@ ms.lasthandoff: 04/16/2018
  [使用註冊資料層應用程式精靈](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>驗證物件  
- **正在檢查**  *SchemaName* **＞。** *ObjectName* **＞。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 *SchemaName***.***ObjectName* 識別目前正在驗證哪一個物件。  
+ **正在檢查**  *SchemaName* **＞。** *ObjectName* **＞。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 *SchemaName ***.*** ObjectName* 識別目前正在驗證哪一個物件。  
   
  **< 上一步** - 回到 [設定屬性] 頁面來變更輸入。  
   

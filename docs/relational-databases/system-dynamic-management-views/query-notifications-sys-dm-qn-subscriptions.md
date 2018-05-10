@@ -24,11 +24,11 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de53e6020ea492c203fd2affea47bc1136c199bc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: ec68c23879f441065bf12e8c73fd81af544f555f
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>查詢通知-sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

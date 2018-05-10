@@ -1,10 +1,9 @@
 ---
 title: 驗證部署到 Azure 的 SSIS 套件 | Microsoft Docs
 ms.date: 11/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
@@ -13,11 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e2bf8f48751d819293edbaa0e40a85e74b0c513
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>驗證部署到 Azure 的 SSIS 套件
 當您將 SQL Server Integration Services (SSIS) 專案部署到 Azure 伺服器上的 SSIS 目錄資料庫 (SSISDB) 時，[套件部署精靈] 會在 [檢視] 頁面之後新增額外的驗證步驟。 此驗證步驟會檢查專案中的套件，尋找是否存在可能會導致套件無法在 Azure SSIS Integration Runtime 中如期般執行的已知問題。 精靈隨後會在 [驗證] 頁面上顯示任何相關的警告。

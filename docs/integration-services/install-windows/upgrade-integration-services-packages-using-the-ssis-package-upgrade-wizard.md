@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
@@ -20,12 +19,11 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1ac83c874d6acd08fce41b4020009b58621ff171
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 240bf9c891a118a4eca4c12218f8cf2b7a61fcf0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 封裝升級精靈來升級 Integration Services 封裝
   您可以升級以舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所建立的封裝，至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 格式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈] 協助完成此程序。 因為您可以將精靈設定成備份原始封裝，所以如果您遇到升級問題，就可以繼續使用原始封裝。  

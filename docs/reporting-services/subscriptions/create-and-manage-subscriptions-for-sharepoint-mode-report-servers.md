@@ -1,31 +1,29 @@
 ---
-title: "建立及管理 SharePoint 模式報表伺服器的訂用帳戶 | Microsoft Docs"
-ms.custom: 
+title: 建立及管理 SharePoint 模式報表伺服器的訂用帳戶 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], creating
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 31d672c16ed9cf4854be7b64507daaf381a6a175
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 67991ac7def0691b3d2df38ce54ea34766dbd574
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>建立及管理 SharePoint 模式報表伺服器的訂閱
   您可以建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱，傳遞以 SharePoint 模式報表伺服器整合的 SharePoint Web 應用程式報表。 訂閱可以將報表傳遞至文件庫、檔案資料夾，或以電子郵件傳送。 本主題摘要說明建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱的需求與步驟。  
@@ -80,21 +78,21 @@ ms.lasthandoff: 01/09/2018
   
 3.  按一下 **[加入訂閱]**。  
   
-4.  在 **[傳遞延伸模組]**中，選取 **[SharePoint 文件庫]**。  
+4.  在 **[傳遞延伸模組]** 中，選取 **[SharePoint 文件庫]**。  
   
-5.  在 **[文件庫]**中，選取相同網站內的文件庫。  
+5.  在 **[文件庫]** 中，選取相同網站內的文件庫。  
   
-6.  在 **[檔案選項]**中，指定訂閱將建立之文件的檔案名稱和標題。  
+6.  在 **[檔案選項]** 中，指定訂閱將建立之文件的檔案名稱和標題。  
   
-7.  在 **[輸出格式]**中，選取應用程式格式。  
+7.  在 **[輸出格式]** 中，選取應用程式格式。  
   
      網頁封存 (MHTML) 是預設值，因為它會產生獨立的 HTML 檔案，但是它將不會保留原始報表中可能存在的互動式報表功能。  
   
-8.  在 **[覆寫選項]**中，指定可決定後續傳遞項目是否會覆寫檔案的選項。 如果您要保留之前的傳遞項目，可以選取 **[使用唯一的名稱建立檔案]**。 如此就會將數字附加至新的檔案，以便建立唯一的檔案名稱。  
+8.  在 **[覆寫選項]** 中，指定可決定後續傳遞項目是否會覆寫檔案的選項。 如果您要保留之前的傳遞項目，可以選取 **[使用唯一的名稱建立檔案]**。 如此就會將數字附加至新的檔案，以便建立唯一的檔案名稱。  
   
-9. 在 **[傳遞事件]**中，指定導致訂閱執行的排程或事件。 每當使用快照集資料執行之報表的資料重新整理時，您就可以建立自訂排程、選取共用排程 (如果可用的話) 或執行訂閱。 如需排程和資料處理的詳細資訊，請參閱[設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
+9. 在 **[傳遞事件]** 中，指定導致訂閱執行的排程或事件。 每當使用快照集資料執行之報表的資料重新整理時，您就可以建立自訂排程、選取共用排程 (如果可用的話) 或執行訂閱。 如需排程和資料處理的詳細資訊，請參閱[設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-10. 在 **[參數]**中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如果您選取的報表不包含參數，表示在此頁面上看不到報表區段。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
+10. 在 **[參數]** 中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如果您選取的報表不包含參數，表示在此頁面上看不到報表區段。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_subscription_for_sharedfolder"></a> 若要建立共用資料夾傳遞的訂閱  
   
@@ -104,23 +102,23 @@ ms.lasthandoff: 01/09/2018
   
 3.  按一下 **[加入訂閱]**。  
   
-4.  在 **[傳遞延伸模組]**中，選取 **[Windows 檔案共用]**。  
+4.  在 **[傳遞延伸模組]** 中，選取 **[Windows 檔案共用]**。  
   
-5.  在 **[檔案名稱]**中，輸入將在共用資料夾中建立之檔案的名稱。  
+5.  在 **[檔案名稱]** 中，輸入將在共用資料夾中建立之檔案的名稱。  
   
 6.  在 [路徑] 中，以統一命名慣例 (UNC) 格式輸入包含電腦網路名稱的資料夾路徑。 資料夾路徑中不要包含尾端的反斜線。 範例路徑可能是 `\\ComputerName01\Public\MyReports`，其中 Public 和 MyReports 都是共用資料夾。  
   
-7.  在 **[轉譯格式]**中，選取報表的應用程式格式。  
+7.  在 **[轉譯格式]** 中，選取報表的應用程式格式。  
   
-8.  在 **[寫入模式]**中，選擇 **[無]**、 **[自動遞增]**或 **[覆寫]**。 這些選項會決定後續傳遞項目是否會覆寫檔案。 如果要保留之前的傳遞項目，可以選擇 **[自動遞增]**。 如此就會將數字附加至新的檔案，以便建立唯一的檔案名稱。 如果選擇 **[無]**，而且目標位置中已存在相同名稱的檔案，就不會進行任何傳遞。  
+8.  在 **[寫入模式]** 中，選擇 **[無]**、 **[自動遞增]** 或 **[覆寫]**。 這些選項會決定後續傳遞項目是否會覆寫檔案。 如果要保留之前的傳遞項目，可以選擇 **[自動遞增]**。 如此就會將數字附加至新的檔案，以便建立唯一的檔案名稱。 如果選擇 **[無]**，而且目標位置中已存在相同名稱的檔案，就不會進行任何傳遞。  
   
-9. 在 **[副檔名]**中，選擇 **[True]** 加入對應至應用程式檔案格式的副檔名，或 [False] 建立不含副檔名的檔案。  
+9. 在 **[副檔名]** 中，選擇 **[True]** 加入對應至應用程式檔案格式的副檔名，或 [False] 建立不含副檔名的檔案。  
   
-10. 在 **[使用者名稱]** 和 **[密碼]**中，輸入在共用資料夾上具有寫入權限的認證。  
+10. 在 **[使用者名稱]** 和 **[密碼]** 中，輸入在共用資料夾上具有寫入權限的認證。  
   
-11. 在 **[傳遞事件]**中，指定導致訂閱執行的排程或事件。 每當使用快照集資料執行之報表的資料重新整理時，您就可以建立自訂排程、選取共用排程 (如果可用的話) 或執行訂閱。 如需排程和資料處理的詳細資訊，請參閱[設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
+11. 在 **[傳遞事件]** 中，指定導致訂閱執行的排程或事件。 每當使用快照集資料執行之報表的資料重新整理時，您就可以建立自訂排程、選取共用排程 (如果可用的話) 或執行訂閱。 如需排程和資料處理的詳細資訊，請參閱[設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-12. 在 **[參數]**中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
+12. 在 **[參數]** 中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_subscription_for_email"></a> 建立報表伺服器電子郵件傳遞的訂閱  
   
@@ -138,13 +136,13 @@ ms.lasthandoff: 01/09/2018
   
 7.  如果要在訊息主體中內嵌報表 URL，請選擇 **[包含這個報表的連結]** 。  
   
-8.  在 **[報表內容]**中，指定您是否想要在訊息主體中內嵌實際的報表。  
+8.  在 **[報表內容]** 中，指定您是否想要在訊息主體中內嵌實際的報表。  
   
      轉譯格式和瀏覽器會決定是否要內嵌或附加報表。 如果您的瀏覽器支援 HTML 4.0 與 MHTML，而且您選取網頁封存轉譯格式，則報表會內嵌為訊息的一部分。 所有其他轉譯格式 (CSV、PDF 等等) 均以附加檔案傳遞報表。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在傳送報表之前，不會檢查附加檔案或訊息的大小。 如果附加檔案或訊息超過郵件伺服器所允許的上限，將不會傳遞報表。 如果是大型報表，請選擇其中一個傳遞選項 (例如 URL 或通知)。  
   
-9. 在 **[傳遞事件]**中，指定導致訂閱執行的排程或事件。 每當使用快照集資料執行之報表的資料重新整理時，您就可以建立自訂排程、選取共用排程 (如果可用的話) 或執行訂閱。 如需排程和資料處理的詳細資訊，請參閱[設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
+9. 在 **[傳遞事件]** 中，指定導致訂閱執行的排程或事件。 每當使用快照集資料執行之報表的資料重新整理時，您就可以建立自訂排程、選取共用排程 (如果可用的話) 或執行訂閱。 如需排程和資料處理的詳細資訊，請參閱[設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-10. 在 **[參數]**中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
+10. 在 **[參數]** 中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_to_modify_subscription"></a> 檢視或修改訂閱  
   

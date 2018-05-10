@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
@@ -19,12 +18,11 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a4aca75d9495d628c314c1382a73dc889cdcc367
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 2f9ea549c18c576498ae0d1c7f4d49a52d8b1c2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
   本逐步解說提供詳細的步驟來發行 SSIS 封裝，以做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 SQL 檢視。  

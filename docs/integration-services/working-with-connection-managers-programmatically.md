@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
@@ -20,12 +19,11 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ead5897d36527de5e566f469f7dc7f1aef2d36e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: ab2f56402a7b6a257a464af9093d5f2fb2c84360
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以程式設計方式使用連接管理員
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，當您在受控碼使用連線管理員時，最常呼叫的方法是相關聯之連線管理員類別的 AcquireConnection 方法。 當您撰寫受控碼時，必須呼叫 AcquireConnection 方法才能使用連線管理員的功能。 不論是在指令碼工作、指令碼元件、自訂物件或是自訂應用程式中撰寫 Managed 程式碼，都必須呼叫這個方法。  

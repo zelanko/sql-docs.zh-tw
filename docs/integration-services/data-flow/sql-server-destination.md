@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
 - sql13.dts.designer.sqlserverdestadapter.connection.f1
@@ -28,12 +27,11 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: abc13529e3883faad8fd3e4191faec1a37162bed
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c14666aa8257ee1cd59668e8b4d9d7a216709669
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-destination"></a>SQL Server 目的地
   SQL Server 目的地會連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，並大量載入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表和檢視中。 如果封裝會存取遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，您就無法在這種封裝中使用 SQL Server 目的地。 反之，這種封裝應該使用 OLE DB 目的地。 如需詳細資訊，請參閱 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  

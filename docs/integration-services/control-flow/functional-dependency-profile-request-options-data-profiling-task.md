@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
@@ -19,12 +18,11 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c428b05a8258081efc6d1b36458256367fe4c88b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a1117cc82dee86fa845dc817a7c98eaefe7e4548
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>功能相依性設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [功能相依性設定檔要求] 設定選項。 功能相依性設定檔會報告某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了「郵遞區號」資料行與「美國州名」資料行之間的相依性。 在這個設定檔中，相同的郵遞區號應該永遠具有相同的州名，但是此設定檔卻發現了相依性的違規。  

@@ -1,25 +1,19 @@
 ---
 title: 物件定義的表格式模型指令碼語言 (TMSL) |Microsoft 文件
-ms.custom: ''
-ms.date: 05/30/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
 ms.topic: reference
-ms.assetid: 486f0507-cec6-4672-b947-0bb61d1cbc46
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7433ce926f37bac67fe8ba50e14c4e7324bb218
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e15849ec1e6e262e23fd46d74e1ee366fbc3914f
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="tmsl-reference---tabular-objects"></a>TMSL 參考-表格式物件
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

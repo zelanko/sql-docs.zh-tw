@@ -2,23 +2,22 @@
 title: Always On 可用性群組等候類型 (SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 06/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b74bcf7846c296a7d3d9f1e559712da9f46fc68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1eee6003c8697be620fd69a0dc137d12c14620b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-on-availability-groups-wait-types"></a>Always On 可用性群組等候類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

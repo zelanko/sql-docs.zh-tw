@@ -1,10 +1,9 @@
 ---
 title: 連線至 Azure 上的 SSISDB 目錄資料庫 | Microsoft Docs
 ms.date: 09/25/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
@@ -13,12 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9316c291ac650628bff880303c49822eca99700
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: b34e28dca32da44b60f65f92934373d1f7a42f12
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>連線至 Azure 上的 SSISDB 目錄資料庫
 

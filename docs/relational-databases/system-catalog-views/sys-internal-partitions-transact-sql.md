@@ -17,15 +17,15 @@ dev_langs:
 - TSQL
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 caps.latest.revision: 13
-author: barbkess
-ms.author: barbkess
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fc307f50fd2ea16837cce9f0eba2ff4c3957f201
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: 9d0321089336774e4303418b776eec8a1608613b
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

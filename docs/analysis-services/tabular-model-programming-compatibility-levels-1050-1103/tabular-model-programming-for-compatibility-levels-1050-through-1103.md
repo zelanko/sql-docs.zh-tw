@@ -1,25 +1,19 @@
 ---
 title: 表格式模型設計程式的相容性層級 1050 透過 1103年 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: conceptual
-ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
-caps.latest.revision: 16
-author: Minewiskan
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: reference
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 99d03c35c9f50d0d232814300f5a07bed289d47e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: db96c4344841212fe2992c7f84836b6a562cec02
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>表格式模型設計程式的相容性層級 1050年透過 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
