@@ -3,15 +3,12 @@ title: 容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組) | Microsoft 
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -22,12 +19,11 @@ caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1efc39104eb2b7f9840da16ffffeda16cabb4c53
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 195dd7358a432bccd94c1916176fa0a35b728cca
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +88,7 @@ ms.lasthandoff: 04/16/2018
 |已規劃的手動容錯移轉|否|是|是|  
 |強制容錯移轉|是|是|是**\***|  
   
- **\***如果您在已同步處理的次要複本上發出強制容錯移轉命令，次要複本的行為會與手動容錯移轉時相同。  
+ **\*** 如果您在已同步處理的次要複本上發出強制容錯移轉命令，次要複本的行為會與手動容錯移轉時相同。  
   
  在容錯移轉期間，資料庫無法使用的時間量將依容錯移轉的類型及其原因而定。  
   

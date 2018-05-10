@@ -1,28 +1,27 @@
 ---
-title: "教學課程：地圖報表 (報表產生器) | Microsoft Docs"
-ms.custom: 
+title: 教學課程：地圖報表 (報表產生器) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 85c22b39e27a6e7f00773a6fcee0b5ac900cbb42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您會了解在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表的地理背景上，可用來顯示資料的地圖功能。 
@@ -175,7 +174,7 @@ ms.lasthandoff: 01/09/2018
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. 在查詢設計工具工具列上，按一下 **[執行]**\(**!**)。  
+9. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。  
   
     結果集包含七個資料行，代表一組販賣消費品的紐約州商店。 以下是清單，以及對於較不明顯者的說明︰ 
     *   **StoreKey**︰商店識別碼。  
@@ -276,7 +275,7 @@ ms.lasthandoff: 01/09/2018
   
 12. 在 **[選擇地圖視覺效果]** 頁面上，按一下 **[基本線條地圖]**，然後按 **[下一步]**。  
   
-13. 在 **[選擇色彩主題和資料視覺效果]**上，選取 **[單一色彩地圖]**選項。 路徑會根據所選主題的單一色彩顯示。  
+13. 在 **[選擇色彩主題和資料視覺效果]** 上，選取 **[單一色彩地圖]** 選項。 路徑會根據所選主題的單一色彩顯示。  
   
 14. 按一下 **[完成]**。  
 
@@ -375,7 +374,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  選取 **[使用色彩範圍將資料視覺化]**。 開始色彩、中間色彩和結束色彩選項會取代調色盤選項。  
   
-4.  定義每個郡銷售額的範圍值。 從 **[資料欄位]**的下拉式清單中，選取 [ `[Sum(Sales)]`]。  
+4.  定義每個郡銷售額的範圍值。 從 **[資料欄位]** 的下拉式清單中，選取 [ `[Sum(Sales)]`]。  
   
 5.  若要改變格式，以千為單位顯示貨幣，則將運算式變更如下： `=Sum(Fields!Sales.Value)/1000`  
   
@@ -395,9 +394,9 @@ ms.lasthandoff: 01/09/2018
   
 11. 按一下 **[圖例]**。  
   
-12. 在 **[色階選項]**中，確認已選取 **[在色階中顯示]** 。  
+12. 在 **[色階選項]** 中，確認已選取 **[在色階中顯示]** 。  
   
-13. 在 **[在此圖例中顯示]**的下拉式清單中，選取空行。 現在您只能以色階顯示色彩範圍。  
+13. 在 **[在此圖例中顯示]** 的下拉式清單中，選取空行。 現在您只能以色階顯示色彩範圍。  
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -486,7 +485,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  在 [標籤] 索引標籤的 [標籤文字] 中，鍵入**新門市**。  
   
-5.  在 **[位置]**中，按一下 **[上方]**。  
+5.  在 **[位置]** 中，按一下 **[上方]**。  
 
 13. 在 [字型] 索引標籤上，將字型大小設為 **10pt** 和**粗體**。
 
@@ -535,7 +534,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視或 [預覽] 中，在 [檔案] 功能表 > [另存新檔]。
  
-3.  在 **[名稱]**中輸入 **紐約的商店銷售額**。  
+3.  在 **[名稱]** 中輸入 **紐約的商店銷售額**。  
 
 3. 將它儲存到本機電腦上，或 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 伺服器。
   

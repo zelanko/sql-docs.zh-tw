@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.userdefineddatatype.general.f1
 - sql13.swb.new.datatype.properties.general.f1
@@ -22,13 +21,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 435137451447ffa28f95befc098e1a1eb9358571
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 411b717866ff137b498d12aff3994e2a7436101d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>建立使用者定義資料類型別名
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 04/16/2018
      **長度/有效位數**  
      顯示適用之資料類型的長度或有效位數。 [長度] 適用於字元為主的使用者定義資料類型；[有效位數] 只適用於數值為主的使用者定義資料類型。 標籤會根據稍早選取的資料類型而變更。 如果選取之資料類型的長度或有效位數是固定的，則無法編輯此方塊。  
   
-     **nvarchar(max)**、 **varchar(max)**或 **varbinary(max)** 資料類型不會顯示長度。  
+     **nvarchar(max)**、 **varchar(max)** 或 **varbinary(max)** 資料類型不會顯示長度。  
   
      **名稱**  
      如果您正在建立新的使用者定義資料類型別名，請輸入跨資料庫使用以代表使用者定義資料類型的唯一名稱。 最大字元數必須與系統 **sysname** 資料類型相符。 無法編輯現有的使用者定義資料類型別名的名稱。  
@@ -111,7 +109,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  在 **[資料類型]** 方塊中，選取將做為新資料類型別名基礎的資料類型。  
   
-5.  依該資料類型的情況，完成 **[長度]**、 **[有效位數]**和 **[小數位數]** 方塊。  
+5.  依該資料類型的情況，完成 **[長度]**、 **[有效位數]** 和 **[小數位數]** 方塊。  
   
 6.  若新的資料類型別名可允許 NULL 值，請選取 **[允許 NULL]** 。  
   

@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-design
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
@@ -18,12 +17,11 @@ caps.latest.revision: 59
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: bc3cfbff325d163ca9ddde120ecc17db97e91c03
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d3f8432e1e1ce62e37d2f875eb071db76afd685f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>報表中的運算式用法 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，整個報表定義中都會使用運算式來指定或計算參數、查詢、篩選、報表項目屬性、群組和排序定義、文字方塊屬性、書籤、文件引導模式、動態頁首和頁尾內容、影像及動態資料來源定義的值。 本主題提供的範例將說明您可以在許多地方使用運算式來將報表的內容或外觀差異化。 這份清單並不是完整的清單。 您可以在顯示運算式 (**fx**) 按鈕的對話方塊中或在顯示 **\<運算式...>** 的下拉式清單中，為任何屬性設定運算式。  
@@ -64,12 +62,12 @@ ms.lasthandoff: 01/09/2018
 |計算不同範圍內資料集的彙總值。|放置在 Tablix 群組之文字方塊內的預留位置值。 使用 **[預留位置屬性對話方塊、一般]**。|`=Max(Fields!Total.Value,"DataSet2)`|  
 |根據值格式化文字方塊內的資料。|Tablix 的詳細資料資料列中，文字方塊內的預留位置色彩。 使用 **[文字方塊屬性對話方塊、字型]**。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |計算值一次，以便在整個報表中參考。|報表變數的值。 使用 **[報表屬性對話方塊、變數]**。|`=Variables!MyCalculation.Value`|  
-|從資料集中併入一個以上欄位的特定值。|Tablix 中群組的篩選方程式。 使用 **[Tablix 屬性對話方塊、篩選]**。|選取 **[布林值]**做為資料類型。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
+|從資料集中併入一個以上欄位的特定值。|Tablix 中群組的篩選方程式。 使用 **[Tablix 屬性對話方塊、篩選]**。|選取 **[布林值]** 做為資料類型。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
 |隱藏設計介面上的文字方塊，使用者可以使用名為 *Show*的布林參數進行切換。|文字方塊上的 Hidden 屬性。 使用 **[文字方塊屬性對話方塊、可見性]**。|`=Not Parameters!`*顯示\<布林參數>*`.Value`|  
 |指定動態頁首或頁尾內容。|放置在頁首或頁尾之文字方塊內的預留位置值。|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |使用參數動態指定資料來源。|資料來源上的連接字串。 使用 **[資料來源屬性對話方塊、一般]**。|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |識別使用者選擇之多值參數的所有值。|文字方塊內的預留位置值。 使用 **[Tablix 屬性對話方塊、篩選]**。|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
-|在沒有其他群組的 Tablix 內，每 20 個資料列指定分頁符號。|Tablix 內群組的群組運算式。 使用 **[群組屬性對話方塊、分頁符號]**。 選取 **[在群組的每個執行個體之間]**選項。|`=Ceiling(RowNumber(Nothing)/20)`|  
+|在沒有其他群組的 Tablix 內，每 20 個資料列指定分頁符號。|Tablix 內群組的群組運算式。 使用 **[群組屬性對話方塊、分頁符號]**。 選取 **[在群組的每個執行個體之間]** 選項。|`=Ceiling(RowNumber(Nothing)/20)`|  
 |根據參數指定條件式可見性。|Tablix 的 Hidden 屬性。 使用 **[Tablix 屬性對話方塊、可見性]**。|`=Not Parameters!<` *布林值參數* `>.Value`|  
 |指定針對特定文化特性格式化的日期。|資料區中文字方塊內的預留位置值。 使用 **[文字方塊屬性對話方塊、一般]**。|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |串連字串及數字 (該數字格式化成兩個小數位數的百分比)。|資料區中文字方塊內的預留位置值。 使用 **[文字方塊屬性對話方塊、一般]**。|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  

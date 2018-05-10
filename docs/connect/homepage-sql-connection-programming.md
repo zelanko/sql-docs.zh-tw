@@ -4,19 +4,17 @@ description: 註解式連結來下載和文件的語言和作業系統，連線�
 author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: connect
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: 234ce07b25a0d120e72d8972b8e7b05f32c88201
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: f281fff6085048bb5918901a9e12af702b71b3e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---

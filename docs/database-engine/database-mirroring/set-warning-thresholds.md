@@ -3,15 +3,13 @@ title: 設定警告臨界值 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
@@ -19,12 +17,11 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 68e3835e69e5091d8fefd570035cadb0ba5b6d17
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 51f4f099935d92f95be67b0964e9ed3a52bc764f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-warning-thresholds"></a>設定警告臨界值
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="options"></a>選項。  
  *伺服器執行個體及其連接狀態*  
- 以 *SYSTEM***\\***INSTANCE_NAME* 格式顯示的夥伴伺服器執行個體名稱。 如果是預設伺服器執行個體，則只會顯示系統名稱。  
+ 以 *SYSTEM***\\*** INSTANCE_NAME* 格式顯示的夥伴伺服器執行個體名稱。 如果是預設伺服器執行個體，則只會顯示系統名稱。  
   
  這個欄位也會指出監視器目前是否已連接到這個伺服器執行個體。 可能的連接狀態如下：  
   
