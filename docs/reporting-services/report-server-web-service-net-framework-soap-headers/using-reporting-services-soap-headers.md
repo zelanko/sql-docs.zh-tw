@@ -1,17 +1,17 @@
 ---
-title: "使用 Reporting Services SOAP 標頭 | Microsoft Docs"
-ms.custom: 
+title: 使用 Reporting Services SOAP 標頭 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service-net-framework-soap-headers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
 - Report Server Web service, SOAP
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - SOAP [Reporting Services], headers
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cce2217f03e945bc9b3c8eb3667792b7d1d078e3
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9c07ce717a26e4a65f40ce651608c10adeccd3cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-reporting-services-soap-headers"></a>使用 Reporting Services SOAP 標頭
   使用 SOAP 與 Web 服務方法通訊需要遵循標準格式。 這個格式的一部分是編碼於 XML 文件中的資料。 XML 文件是由根 **Envelope** 項目所組成，該項目則是由必要的 **Body** 項目和選擇性的 **Header** 項目組成。 **Body** 項目包含訊息特定的資料。 選擇性的 **Header** 項目可能包含其他與特定訊息沒有直接關聯的資訊。 **Header** 項目的每個子項目都稱為 SOAP 標頭。  

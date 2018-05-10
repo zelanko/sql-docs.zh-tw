@@ -1,27 +1,25 @@
 ---
-title: "將書籤新增至報表 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 將書籤新增至報表 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4a59e7381ed6df7fbc9be2d8e8f82224f75f9ef7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d5d6793414c277a770f18ada2342d6bb538d4f03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>將書籤加入至報表 (報表產生器及 SSRS)
   當您想要在報表中提供自訂內容資料表或是提供自訂內部導覽連結時，請將書籤或書籤連結加入到報表中。 一般來說，您會在報表中想要引導使用者的位置上加入書籤，例如每一個資料表或圖表的書籤，或是資料表或矩陣內顯示之唯一群組值的標籤。 您可以建立自己的字串當做書籤使用，或是針對群組設定群組運算式的標籤。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [報表設計] 檢視中，選取您想要加入書籤的文字方塊、影像、圖表或其他報表項目。 選定項目的屬性會顯示在 [屬性] 窗格中。  
   
-2.  在 **[書籤]**旁邊的文字方塊內，輸入一個字串當做此書籤的標籤。 例如，您可以輸入 **BikePhoto** 做為報表中影像的書籤。 另外，您也可以按一下運算式 (**fx**) 按鈕開啟 [運算式] 對話方塊，以指定評估為標籤的運算式。 如果是群組，您所輸入的運算式應該是群組運算式。  
+2.  在 **[書籤]** 旁邊的文字方塊內，輸入一個字串當做此書籤的標籤。 例如，您可以輸入 **BikePhoto** 做為報表中影像的書籤。 另外，您也可以按一下運算式 (**fx**) 按鈕開啟 [運算式] 對話方塊，以指定評估為標籤的運算式。 如果是群組，您所輸入的運算式應該是群組運算式。  
   
     > [!NOTE]  
     >  書籤可以是任何字串，但它在報表內必須是唯一的。 如果此書籤不是唯一的，書籤的連結會尋找第一個相符的書籤。  

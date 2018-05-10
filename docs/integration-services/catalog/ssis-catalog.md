@@ -1,17 +1,16 @@
 ---
 title: SSIS 目錄 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: service
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
@@ -21,12 +20,11 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   **SSISDB** 目錄是處理您已部署至 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器之 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 專案的中心點。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -619,9 +617,7 @@ ms.lasthandoff: 04/26/2018
   
 提供您在 [新增可用性群組] 精靈的 [選取資料庫]  頁面中建立 SSIS 目錄時指定的密碼。
 
-當系統提示您 [選取您的資料同步處理喜好設定] 時，請選取 [略過初始資料同步處理]。
-  
- ![新增可用性群組](../../integration-services/service/media/ssis-newavailabilitygroup.png "新增可用性群組")  
+![新增可用性群組](../../integration-services/service/media/ssis-newavailabilitygroup.png "新增可用性群組")  
   
 ####  <a name="Step3"></a> 步驟 3：啟用適用於 AlwaysOn 的 SSIS 支援  
  建立 Integration Services 目錄之後，以滑鼠右鍵按一下 [Integration Services 目錄] 節點，然後按一下 [啟用 Always On 支援]。 您應該會看到下列 [啟用 AlwaysOn 支援]  對話方塊。 如果這個功能表項目已停用，請確認您已安裝的所有必要條件，然後按一下 [重新整理] 。  

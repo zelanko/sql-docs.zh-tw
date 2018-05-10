@@ -10,11 +10,13 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: fe8d438d95e994438df565013eaf79da92ccf9b3
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.prod: sql
+ms.technology: ssms
+ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教學課程：透過使用 SQL Server Management Studio 來連線至及查詢 SQL Server 執行個體
 本教學課程將教導您如何使用 SQL Server Management Studio (SSMS) 連線到 SQL Server 執行個體，並執行一些基本的 Transact-SQL (T-SQL) 命令。 本文會示範如何執行下列操作：
@@ -49,8 +51,6 @@ ms.lasthandoff: 04/03/2018
 
     - 針對**伺服器類型**，選取 [資料庫引擎] (通常為預設選項)。
     - 針對**伺服器名稱**，輸入您 SQL Server 執行個體的名稱。 (本文使用了主機名稱 NODE5 [NODE5\SQL2016ST] 上的執行個體名稱 SQL2016ST)。若您不確定如何判斷 SQL Server 執行個體名稱，請參閱[使用 SSMS 的其他提示與祕訣](ssms-tricks.md#determine-sql-server-name)。  
-
-    ![[伺服器名稱] 欄位與範例執行個體名稱](media/connect-query-sql-server/connection.png)
 
     ![[伺服器名稱] 欄位與使用 SQL Server 執行個體的選項](media/connect-query-sql-server/connection2.png)
 

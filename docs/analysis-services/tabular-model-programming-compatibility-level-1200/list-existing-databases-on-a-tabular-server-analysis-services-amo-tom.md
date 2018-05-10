@@ -1,25 +1,19 @@
 ---
 title: 列出現有的資料庫，在表格式伺服器 (Analysis Services AMO-TOM) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
 ms.topic: reference
-ms.assetid: ab5eb4b8-6254-442d-a42e-2372c346d260
-caps.latest.revision: 2
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5386b96d66de38d29909eb4fbf5fb3498c01daec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: db8ab4fac3f86c40f78ede78b365707745e79fe7
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>列出在表格式伺服器 (Analysis Services AMO-TOM) 上的現有資料庫
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

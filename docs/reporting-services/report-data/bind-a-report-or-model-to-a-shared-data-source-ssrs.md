@@ -1,30 +1,28 @@
 ---
-title: "將報表或模型繫結至共用資料來源 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: 將報表或模型繫結至共用資料來源 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 44809cf12df1fac42a99882672fa945800a9f5f4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 708cfa2d2a587ab9990f1b5a1c4a28691229fa88
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>將報表或模型繫結至共用資料來源 (SSRS)
   在某些情況下 (例如，將報表或模型從測試伺服器移到實際伺服器時)，您可能想先將檔案儲存在本機電腦，然後再上傳到不同報表伺服器。 當您將報表或模型上傳到新伺服器時，您必須將它重新繫結至新報表伺服器上儲存的共用資料來源。 如果不重新繫結報表或模型，從新報表伺服器存取該報表或模型時將無法正常運作。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>將報表或模型繫結至以原生模式執行之報表伺服器上的共用資料來源  
   
-1.  在 **[報表管理員]**中，按一下要上傳至伺服器的報表或模型名稱。  
+1.  在 **[報表管理員]** 中，按一下要上傳至伺服器的報表或模型名稱。  
   
      [屬性] 索引標籤隨即開啟。  
   

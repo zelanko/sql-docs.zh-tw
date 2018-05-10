@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: database-mail
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - external programs [Database Mail]
 - DatabaseMail90.exe
@@ -21,12 +20,11 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 098c28db5a23c6e7cc7acdb178a0a2a8cf7dfc78
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 59c82e2d33cd83cebfda711c8116a1bdea8a6268
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mail-external-program"></a>Database Mail 外部程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="ComponentsAndConcepts"></a> Database Mail 外部程式概念  
  外部程式啟動時，程式會使用「Windows 驗證」連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並開始處理電子郵件訊息。 若在指定的逾時期限內沒有訊息需要傳送，程式就會結束。 您可以使用「Database Mail 組態精靈」或 Database Mail 預存程序，來設定程式結束前需等待的時間長度。 如需詳細資訊，請參閱 [sysmail_configure_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)服務帳戶的安全性內容中執行。  
   
- 外部程式會將資訊儲存在 **msdb** 資料庫的系統資料表中。 若外部程式無法與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通訊，程式會將錯誤記錄到 Microsoft Windows 應用程式事件記錄檔中。 當您將 **[Database Mail 組態精靈]** 中 **[設定系統參數]** 對話方塊中的記錄層級設定為 **[詳細資訊]**時，會提供額外的訊息記錄。  
+ 外部程式會將資訊儲存在 **msdb** 資料庫的系統資料表中。 若外部程式無法與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通訊，程式會將錯誤記錄到 Microsoft Windows 應用程式事件記錄檔中。 當您將 **[Database Mail 組態精靈]** 中 **[設定系統參數]** 對話方塊中的記錄層級設定為 **[詳細資訊]** 時，會提供額外的訊息記錄。  
   
  請注意，外部程式會為了提高效率而快取帳戶與設定檔資訊， 因此，對帳戶與設定檔的組態變更，可能要在幾分鐘後才會反映在外部程式中。  
   

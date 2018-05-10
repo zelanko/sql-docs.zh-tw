@@ -1,27 +1,25 @@
 ---
-title: "在資料區域中設定沒有資料的訊息 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 在資料區域中設定沒有資料的訊息 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3e2253b0c7c90ebfbec9214023f50d768b37740
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e9504050aa1cd4923e03121615b525dbb3a08365
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>在資料區域中設定沒有資料的訊息 (報表產生器及 SSRS)
   當您想要指定要在轉譯報表中顯示的文字來取代沒有資料的資料區時，請為資料表、矩陣或清單資料區域設定 NoRowsMessage 屬性，為圖表資料區設定 NoDataMessage，並為地圖的色階設定 NoDataText。 在執行階段，報表處理器會針對報表中的每一個資料集來執行查詢，而且資料集查詢可能不會產生任何結果集。 如果是繫結至空資料集的資料區，您可以指定要顯示的文字，而不是顯示空的資料區。 執行階段時如果子報表中的資料集都沒有資料，您也可以為子報表設定 NoRowsMessage 屬性。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  在 [屬性] 窗格中，展開 **NoDataMessage**的節點。  
   
-3.  在 **[屬性]**窗格中，輸入您想要在 **[NoDataMessage]** 屬性欄位中顯示為訊息的文字。  
+3.  在 **[屬性]** 窗格中，輸入您想要在 **[NoDataMessage]** 屬性欄位中顯示為訊息的文字。  
   
      另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖上的色階加以選取。 [屬性] 窗格會顯示所選取項目的屬性。  
   
-2.  在 [屬性] 窗格的 **[NoDataText]**中，輸入您要顯示成色彩標籤的文字 (不含資料值)。  
+2.  在 [屬性] 窗格的 **[NoDataText]** 中，輸入您要顯示成色彩標籤的文字 (不含資料值)。  
   
      另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
   

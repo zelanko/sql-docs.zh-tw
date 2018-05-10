@@ -1,30 +1,19 @@
 ---
 title: 設定預設資料模型和部署屬性 |Microsoft 文件
-ms.custom: ''
-ms.date: 02/21/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: conceptual
-f1_keywords:
-- VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
-- sql13.asvs.bidtoolset.deployment.f1
-- sql13.asvs.bidtoolset.asoptions.f1
-- VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
-ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1d499f04939ed3db6d308ad5bbbd8fee893ba991
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d6ac366301da0758e731f602d46b82f3ec3bf153
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties"></a>設定預設資料模型和部署屬性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -3,15 +3,12 @@ title: 使用容錯移轉可用性群組精靈 (SQL Server Management Studio) | 
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.failoverwizard.connecttoreplicas.f1
 - sql13.swb.failoverwizard.progress.f1
@@ -27,12 +24,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2581521a6bad67cf0f0556eb56975a47c904e498
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 60787866e1f26cb577c210c2c8b1a67e996ca871
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用容錯移轉可用性群組精靈 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +61,9 @@ ms.lasthandoff: 04/16/2018
   
 3.  若要啟動 [容錯移轉可用性群組精靈]，請以滑鼠右鍵按一下您要容錯移轉的可用性群組，然後選取 [容錯移轉] 。  
   
-4.  **[簡介]** 頁面所呈現的資訊主要取決於任何次要複本是否符合規劃容錯移轉的資格。 如果此頁面顯示**[執行這個可用性群組的計劃的容錯移轉]**，表示您可以在不遺失資料的情況下容錯移轉可用性群組。  
+4.  **[簡介]** 頁面所呈現的資訊主要取決於任何次要複本是否符合規劃容錯移轉的資格。 如果此頁面顯示 **[執行這個可用性群組的計劃的容錯移轉]**，表示您可以在不遺失資料的情況下容錯移轉可用性群組。  
   
-5.  在 [選取新的主要複本]  頁面上，您可以在選擇將成為新主要複本的次要複本 (「容錯移轉目標」 ) 之前，檢視目前主要複本和 WSFC 仲裁的狀態。 若為規劃的手動容錯移轉，請務必選取 **[容錯移轉整備]** 值為**[無資料遺失]**的次要複本。 若為強制容錯移轉，則對於所有可能的容錯移轉目標而言，這個值都是「**資料遺失，警告(***#***)**」，其中 *#* 表示指定次要複本所存在的警告數目。 若要檢視給定容錯移轉目標的警告，請按一下其 [容錯移轉整備] 值。  
+5.  在 [選取新的主要複本]  頁面上，您可以在選擇將成為新主要複本的次要複本 (「容錯移轉目標」 ) 之前，檢視目前主要複本和 WSFC 仲裁的狀態。 若為規劃的手動容錯移轉，請務必選取 **[容錯移轉整備]** 值為 **[無資料遺失]** 的次要複本。 若為強制容錯移轉，則對於所有可能的容錯移轉目標而言，這個值都是「**資料遺失，警告(***#***)**」，其中 *#* 表示指定次要複本所存在的警告數目。 若要檢視給定容錯移轉目標的警告，請按一下其 [容錯移轉整備] 值。  
   
      如需詳細資訊，請參閱本主題稍後的＜ [選取新的主要複本頁面](#SelectNewPrimaryReplica)＞。  
   
@@ -187,7 +183,7 @@ ms.lasthandoff: 04/16/2018
  顯示將裝載可用性複本的伺服器執行個體名稱。  
   
  **連線方式**  
- 顯示在建立連接後連接到伺服器執行個體的帳戶。 如果此資料行對於給定的伺服器執行個體顯示**[未連接]**，您就必須按一下 **[連接]** 按鈕。  
+ 顯示在建立連接後連接到伺服器執行個體的帳戶。 如果此資料行對於給定的伺服器執行個體顯示 **[未連接]**，您就必須按一下 **[連接]** 按鈕。  
   
  **[連接]**  
  如果這個伺服器執行個體是在與其他需要連接的伺服器執行個體不同的帳戶下執行，請按一下此按鈕。  

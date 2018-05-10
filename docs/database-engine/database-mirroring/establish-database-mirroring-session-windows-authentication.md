@@ -3,15 +3,13 @@ title: 建立資料庫鏡像工作階段 - Windows 驗證 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
@@ -19,12 +17,11 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0c8403912f2d64cfdaa9f911bc765789ea1e5ecc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 676250b166ea109432e1c4328039b9ce31940b03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>建立資料庫鏡像工作階段 - Windows 驗證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     >  在資料庫鏡像工作階段中，您只能使用這個精靈來加入或變更見證伺服器執行個體。  
   
-5.  「設定資料庫鏡像安全性精靈」會自動在每個伺服器執行個體上建立資料庫鏡像端點 (如果沒有端點的話)，並在伺服器執行個體角色 (**[主體]**、 **[鏡像]**或 **[見證]**) 的對應欄位中輸入其伺服器網路位址。  
+5.  「設定資料庫鏡像安全性精靈」會自動在每個伺服器執行個體上建立資料庫鏡像端點 (如果沒有端點的話)，並在伺服器執行個體角色 (**[主體]**、 **[鏡像]** 或 **[見證]**) 的對應欄位中輸入其伺服器網路位址。  
   
     > [!IMPORTANT]  
     >  建立端點時，「設定資料庫鏡像安全性精靈」一定會使用 Windows 驗證。 鏡像端點必須已經設定成使用每個伺服器執行個體的憑證，然後您才能使用此精靈搭配以憑證為基礎的驗證。 此外，精靈之 **[服務帳戶]** 對話方塊中的所有欄位都必須保持空白。 如需建立資料庫鏡像端點以便使用憑證的相關資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)。  
@@ -81,7 +78,7 @@ ms.lasthandoff: 04/16/2018
   
     -   如果作業模式設定為 **[具有自動容錯移轉的高安全性 (同步)]**，也會指定見證伺服器執行個體的完整 TCP 位址。  
   
-8.  在鏡像開始後，您可以變更作業模式，並且按一下 **[確定]**以儲存變更。 請注意，您必須先指定見證伺服器位址，才能透過自動容錯移轉切換到高安全性模式。  
+8.  在鏡像開始後，您可以變更作業模式，並且按一下 **[確定]** 以儲存變更。 請注意，您必須先指定見證伺服器位址，才能透過自動容錯移轉切換到高安全性模式。  
   
     > [!NOTE]  
     >  若要移除見證，請從 **[見證]** 欄位刪除其伺服器網路位址。 如果從具有自動容錯移轉的高安全性模式切換到高效能模式，則會自動清除 [見證] 欄位。  

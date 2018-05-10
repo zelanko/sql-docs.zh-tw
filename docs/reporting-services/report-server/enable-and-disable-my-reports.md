@@ -1,16 +1,15 @@
 ---
-title: "啟用與停用我的報表 | Microsoft Docs"
-ms.custom: 
+title: 啟用與停用我的報表 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - deactivated My Reports folder
 - folders [Reporting Services], My Reports
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c874fc87e5f388b7b52fde156291f4357be2e06d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: cbeea5fc6c8f8b162471d9afd758f5d740ab97e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-and-disable-my-reports"></a>啟用與停用我的報表
   [我的報表] 功能會配置報表伺服器資料庫中的個人儲存區，讓使用者能夠將自己的報表儲存在私人資料夾內。 身為報表伺服器管理員，您可以啟用或停用此功能，或修改安全性設定 (此設定會控制使用者可以在其工作空間執行哪些動作) 來變更此功能的運作方式。  

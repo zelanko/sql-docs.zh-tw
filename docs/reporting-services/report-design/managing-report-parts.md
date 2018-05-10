@@ -1,27 +1,25 @@
 ---
-title: "管理報表組件 | Microsoft Docs"
-ms.custom: 
+title: 管理報表組件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4209c0fd93e8a0c9a2702971e114a4cbb7cfaadd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-report-parts"></a>管理報表組件
   報表組件可以由多個使用者在分頁報表中重複使用，也可以在多個報表中重複使用。 使用者可以搜尋伺服器上的報表組件，並將其加入至報表中。  使用者也可以收到伺服器上報表組件更新的通知，然後重新發行新版本的報表組件。 這些報表撰寫動作可能會受報表服務安全性權限影響及控制。  本主題會檢閱報表組件位於伺服器上之後的屬性和行為。  

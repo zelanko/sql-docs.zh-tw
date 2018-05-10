@@ -3,15 +3,12 @@ title: 升級複寫的資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
 - replication [SQL Server], upgrading
@@ -23,11 +20,11 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 670b4f90c0461de12718fcf5a8cf2dfc97817b4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b5f722972c9d552c94a65985bd180d6d097972c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
 
@@ -46,7 +43,7 @@ ms.lasthandoff: 04/16/2018
     -   合併式發行集的訂閱者可以是小於或等於發行者版本的任何版本。  
   
 > [!NOTE]  
->  如需本文，參閱「安裝說明」文件和《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。 「安裝說明」文件中以粗體文字表示的文章連結，表示僅可於《線上叢書》取得的文章。 **您可以使用本[文章](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**中所述的選項來設計「發行者」、「訂閱者」和「散發者」的升級策略。 
+>  如需本文，參閱「安裝說明」文件和《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。 「安裝說明」文件中以粗體文字表示的文章連結，表示僅可於《線上叢書》取得的文章。 **您可以使用本[文章](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)** 中所述的選項來設計「發行者」、「訂閱者」和「散發者」的升級策略。 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>在升級之前執行異動複寫的記錄讀取器代理程式  
  升級 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 之前，您必須確定所有來自已發行資料表的認可交易都已經由記錄讀取器代理程式處理過。 若要確定已經處理過所有交易，請針對每個包含交易式發行集的資料庫執行下列步驟：  

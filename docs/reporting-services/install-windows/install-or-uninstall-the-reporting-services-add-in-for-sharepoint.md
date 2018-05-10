@@ -1,27 +1,25 @@
 ---
-title: "安裝或解除安裝 SharePoint 的 Reporting Services 增益集 | Microsoft Docs"
-ms.custom: 
+title: 安裝或解除安裝 SharePoint 的 Reporting Services 增益集 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7c5db49ed18a5c025b1f237b59ca78ca5fbdbf71
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6e8fd7999efdba906376abb35c0ae5d1db042b67
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>安裝或解除安裝 SharePoint 的 Reporting Services 增益集
 
@@ -75,7 +73,7 @@ ms.lasthandoff: 01/09/2018
 Rssharepoint.msi /?  
 ```  
   
-1.  下載**增益集的安裝程式 (**rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] )。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+1.  下載**增益集的安裝程式 (** rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] )。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 2.  以管理員的身分執行 **rsSharepoint.msi** ，執行安裝精靈。 此精靈會顯示 [歡迎使用] 頁面、軟體授權合約和註冊資訊頁面。 安裝程式會在下列路徑下建立資料夾，並將檔案複製到資料夾：  
   

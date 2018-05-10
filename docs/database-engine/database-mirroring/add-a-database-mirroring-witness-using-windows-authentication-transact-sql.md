@@ -3,15 +3,13 @@ title: 使用 Windows 驗證新增資料庫鏡像見證 (Transact-SQL) | Microso
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - Windows authentication [SQL Server]
@@ -21,12 +19,11 @@ caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac2992afd40c4890c5fe54da83d2a8528aedd4b9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ca7ab8872d8205ae7120913a7c481b3422f05f3b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-establish-a-witness"></a>若要建立見證  
   
-1.  在見證伺服器執行個體上，確定資料庫鏡像有端點存在。 不管要支援的鏡像工作階段有多少個，伺服器執行個體都必須只有一個資料庫鏡像端點。 如果您打算將這個伺服器執行個體專門作為資料庫鏡像工作階段中的見證，請指派見證角色給端點 (ROLE**=**WITNESS)。 如果您打算使用這個伺服器執行個體，作為一或多個其他資料庫鏡像工作階段中的夥伴，請將端點的角色指派為 ALL。  
+1.  在見證伺服器執行個體上，確定資料庫鏡像有端點存在。 不管要支援的鏡像工作階段有多少個，伺服器執行個體都必須只有一個資料庫鏡像端點。 如果您打算將這個伺服器執行個體專門作為資料庫鏡像工作階段中的見證，請指派見證角色給端點 (ROLE**=** WITNESS)。 如果您打算使用這個伺服器執行個體，作為一或多個其他資料庫鏡像工作階段中的夥伴，請將端點的角色指派為 ALL。  
   
      若要執行 SET WITNESS 陳述式，資料庫鏡像工作階段必須已經啟動 (在夥伴之間)，而且見證端點的 STATE 必須設為 STARTED。  
   
@@ -66,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
      伺服器網路位址的語法如下：  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP **://**\<*system-address>***:**\<* port>*  
   
      其中 \<系統位址> 是清楚識別目的地電腦系統的字串，\<通訊埠> 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   

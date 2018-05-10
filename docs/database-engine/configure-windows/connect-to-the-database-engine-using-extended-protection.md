@@ -3,15 +3,12 @@ title: 使用擴充保護連接至資料庫引擎 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
 - service binding
@@ -24,16 +21,15 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbcd2fcb55fabd3c8b9f4828f205c6017547e151
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f0eae05397ebe6ce2c73841e9c27746e9a946dfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用擴充保護連接至 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 **驗證擴充保護** 是作業系統實作的網路元件功能。 Windows 7 和 Windows Server 2008 R2 上可支援**[擴充保護]** 。 Service Pack 中內含**擴充保護** ，可供舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 作業系統使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。  
+  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 **驗證擴充保護** 是作業系統實作的網路元件功能。 Windows 7 和 Windows Server 2008 R2 上可支援 **[擴充保護]** 。 Service Pack 中內含**擴充保護** ，可供舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 作業系統使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。  
   
 > [!IMPORTANT]  
 >  Windows 預設不會啟用 **[擴充保護]** 。 如需有關如何在 Windows 中啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](http://support.microsoft.com/kb/968389)。  
@@ -59,7 +55,7 @@ ms.lasthandoff: 04/16/2018
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 資料提供者支援 TLS 1.0 和 SSL 3.0。 如果您以在作業系統 SChannel 層級中進行變更的方式，強制執行不同的通訊協定 (例如 TLS 1.1 或 TLS 1.2)，您與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線可能會失敗。  
   
 ### <a name="operating-system-support"></a>作業系統支援  
- 下列連結提供有關 Windows 如何支援 **[擴充保護]**的詳細資訊：  
+ 下列連結提供有關 Windows 如何支援 **[擴充保護]** 的詳細資訊：  
   
 -   [具有擴充保護的整合式 Windows 驗證](http://msdn.microsoft.com/library/dd639324.aspx)  
   
@@ -74,21 +70,21 @@ ms.lasthandoff: 04/16/2018
   
 -   **擴充保護**  
   
-     可能的值是 **[關閉]**、 **[允許]**和 **[必要]**。 
+     可能的值是 **[關閉]**、 **[允許]** 和 **[必要]**。 
               **[擴充保護]** 變數可讓使用者設定每個 **執行個體的** 擴充保護層級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **[擴充保護]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
-    -   當設定為 **[關閉]**時，便會停用 **[擴充保護]** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體將會接受來自任何用戶端的連接，不論用戶端是否受到保護。 **[關閉]** 與舊版及未修補的作業系統相容，但是比較不安全。 當您知道用戶端作業系統不支援擴充保護時，請使用這個設定。  
+    -   當設定為 **[關閉]** 時，便會停用 **[擴充保護]** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體將會接受來自任何用戶端的連接，不論用戶端是否受到保護。 **[關閉]** 與舊版及未修補的作業系統相容，但是比較不安全。 當您知道用戶端作業系統不支援擴充保護時，請使用這個設定。  
   
-    -   當設定為 **[允許]**時，支援 **[擴充保護]** 之作業系統的連接便需要 **[擴充保護]**。 如果是不支援**[擴充保護]** 之作業系統所做的連接，便會忽略 **[擴充保護]**。 如果未受保護的用戶端應用程式在受保護的用戶端作業系統上執行，則會拒絕來自該應用程式的連接。 這個設定要比 **[關閉]**安全，但不是最安全的設定。 請在某些作業系統支援 **[擴充保護]** 但某些不支援的混合式環境中使用這個設定。  
+    -   當設定為 **[允許]** 時，支援 **[擴充保護]** 之作業系統的連接便需要 **[擴充保護]**。 如果是不支援 **[擴充保護]** 之作業系統所做的連接，便會忽略 **[擴充保護]**。 如果未受保護的用戶端應用程式在受保護的用戶端作業系統上執行，則會拒絕來自該應用程式的連接。 這個設定要比 **[關閉]** 安全，但不是最安全的設定。 請在某些作業系統支援 **[擴充保護]** 但某些不支援的混合式環境中使用這個設定。  
   
-    -   當設定為 **[必要]**時，只會接受來自受保護之作業系統上的受保護應用程式的連接。 這個設定最安全，但是不支援 **[擴充保護]** 之作業系統或應用程式的連接將無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+    -   當設定為 **[必要]** 時，只會接受來自受保護之作業系統上的受保護應用程式的連接。 這個設定最安全，但是不支援 **[擴充保護]** 之作業系統或應用程式的連接將無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 -   **接受的 NTLM SPN**  
   
-     當一個以上的 SPN 知道伺服器時，便需要 **[接受的 NTLM SPN]** 變數。 當用戶端嘗試使用伺服器不知道的有效 SPN 連接到伺服器時，服務繫結將會失敗。 若要避免這個問題，使用者可以使用 **[接受的 NTLM SPN]**來指定代表伺服器的數個 SPN。 **[接受的 NTLM SPN]** 是以分號分隔的一系列 SPN。 例如，若要允許 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，請在 **[接受的 NTLM SPN]** 方塊中輸入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 此變數的最大長度為 2,048 個字元。 **[接受的 NTLM SPN]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     當一個以上的 SPN 知道伺服器時，便需要 **[接受的 NTLM SPN]** 變數。 當用戶端嘗試使用伺服器不知道的有效 SPN 連接到伺服器時，服務繫結將會失敗。 若要避免這個問題，使用者可以使用 **[接受的 NTLM SPN]** 來指定代表伺服器的數個 SPN。 **[接受的 NTLM SPN]** 是以分號分隔的一系列 SPN。 例如，若要允許 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，請在 **[接受的 NTLM SPN]** 方塊中輸入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 此變數的最大長度為 2,048 個字元。 **[接受的 NTLM SPN]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>啟用 Database Engine 的擴充保護  
- 若要使用 **[擴充保護]**，伺服器和用戶端都必須擁有支援 **[擴充保護]**的作業系統，而且必須在作業系統上啟用 **[擴充保護]** 。 如需有關如何針對作業系統啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](http://support.microsoft.com/kb/968389)。  
+ 若要使用 **[擴充保護]**，伺服器和用戶端都必須擁有支援 **[擴充保護]** 的作業系統，而且必須在作業系統上啟用 **[擴充保護]** 。 如需有關如何針對作業系統啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](http://support.microsoft.com/kb/968389)。  
   
  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 某些舊版**的未來更新中將可以使用** [擴充保護] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在伺服器電腦上啟用 **[擴充保護]** 之後，請使用下列步驟來啟用 **[擴充保護]**：  
   

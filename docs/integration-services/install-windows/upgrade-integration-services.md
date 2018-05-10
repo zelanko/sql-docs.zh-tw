@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
 - SSIS, upgrading
@@ -22,12 +21,11 @@ caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 5c86e29ad22c13612cb203ddc1858f07fcfa8995
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: b22da94c6d94532fdf12eba1399008254e533de9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
   如果您的電腦上目前安裝有 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更新版本，您可以升級到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
