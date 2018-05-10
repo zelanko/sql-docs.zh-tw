@@ -3,26 +3,22 @@ title: 微調可用性群組的壓縮 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3e1915f1cde69cf309c602cd4782056b4e083853
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9576b598e4bbdbab86708691540c1bae2b238b24
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tune-compression-for-availability-group"></a>微調可用性群組的壓縮
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

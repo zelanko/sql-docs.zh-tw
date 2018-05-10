@@ -3,15 +3,12 @@ title: 設定 remote proc trans 伺服器組態選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote proc trans option
 - distributed transactions [SQL Server], enforcing
@@ -20,12 +17,11 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 733959478941ad81fc30258a3cd896d322f13590
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6ca7d2614e609e79a0d5576766f880cab6e93d92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>設定 remote proc trans 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +74,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  按一下 **[連接]** 節點。  
   
-3.  在 **[遠端伺服器連接]**之下，選取 **[需要伺服器對伺服器通訊的分散式交易]** 核取方塊。  
+3.  在 **[遠端伺服器連接]** 之下，選取 **[需要伺服器對伺服器通訊的分散式交易]** 核取方塊。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

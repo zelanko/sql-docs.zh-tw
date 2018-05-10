@@ -1,27 +1,25 @@
 ---
-title: "報表疑難排解：地圖報表 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 報表疑難排解：地圖報表 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: 
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6c59854aa8fc9f976e52f9c9f678563be0174b44
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 7487c6e219f6e12b61ad6b1b5a93b012dbcb262f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
   當您將地圖或地圖圖層加入至報表時、自訂報表中現有的地圖或地圖圖層時、預覽報表中的地圖時，或發行包含地圖的報表時，在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中可能會發生與地圖相關的問題。 您可以使用本主題來協助疑難排解這些問題。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  將 ESRI .shp 和 .dbf 檔案上傳或發行至報表伺服器。  
   
-2.  在報表之 [設計] 檢視的 [地圖] 窗格中，選取包含內嵌資料的圖層，然後開啟 **[圖層資料]** 屬性。 在 **[使用以下來源的空間資料]**中，選取 **[連結到 ESRI 形狀檔 (.shp)]**，然後瀏覽到報表伺服器上包含 ESRI 形狀檔的資料夾來選取它，然後按一下 [確定]。  
+2.  在報表之 [設計] 檢視的 [地圖] 窗格中，選取包含內嵌資料的圖層，然後開啟 **[圖層資料]** 屬性。 在 **[使用以下來源的空間資料]** 中，選取 **[連結到 ESRI 形狀檔 (.shp)]**，然後瀏覽到報表伺服器上包含 ESRI 形狀檔的資料夾來選取它，然後按一下 [確定]。  
   
 3.  儲存報表。 您變更之圖層的內嵌資料已從報表定義中移除。  
   

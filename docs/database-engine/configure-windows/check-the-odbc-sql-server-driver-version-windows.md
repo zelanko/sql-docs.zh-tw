@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 11/07/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: configure-windows
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver version number [ODBC]
 - ODBC drivers, version number
@@ -20,13 +17,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1012d97082fe975a4e5eea7e0003df703ad32bc0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c7e602687a8f677af5a3160a7e3e1c5b0c2f900d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>檢查 ODBC SQL Server 驅動程式版本 (Windows)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-check-the-odbc-sql-server-driver-version-32-bit-odbc"></a>若要檢查 ODBC SQL Server 驅動程式版本 (32 位元 ODBC)  
   
--   在 **[ODBC 資料來源管理員]**中，按一下 **[驅動程式]** 索引標籤。  
+-   在 **[ODBC 資料來源管理員]** 中，按一下 **[驅動程式]** 索引標籤。  
   
      在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [版本] **欄位中會顯示 Microsoft** 項目的資訊。  
 

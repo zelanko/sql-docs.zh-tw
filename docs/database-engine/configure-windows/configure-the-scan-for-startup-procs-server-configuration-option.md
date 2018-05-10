@@ -3,15 +3,12 @@ title: 設定 scan for startup procs 伺服器組態選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scan for startup procs option
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
@@ -19,12 +16,11 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1e96ff0767f4c7fd2e1e58b1212f480b1f36eae5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a5352a71b8580d7dbce9c124a1cbc6f7a62cadf9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>設定 scan for startup procs 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  按一下 **[進階]** 節點。  
   
-3.  在 **[其他]**下方，從下拉式清單方塊中選取所需的值，將 **[掃描啟動程序]** 選項的值變更為 True 或 False。  
+3.  在 **[其他]** 下方，從下拉式清單方塊中選取所需的值，將 **[掃描啟動程序]** 選項的值變更為 True 或 False。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

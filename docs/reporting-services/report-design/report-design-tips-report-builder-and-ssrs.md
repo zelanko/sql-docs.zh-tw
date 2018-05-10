@@ -1,27 +1,25 @@
 ---
-title: "報表設計提示 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 報表設計提示 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6310daa382072ae5125f0f3cff1913548a0801fb
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 41cedb83e24fecb71089487df2a868b104a1783c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>報表設計提示 (報表產生器及 SSRS)
   請採用下列秘訣協助設計您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/09/2018
   
 -   為減少報表中混亂的情形，請考慮使用特定報表項目的條件式可見性，並且讓使用者選擇是否要顯示這些項目。 您可以根據參數或文字方塊切換設定可見性。 您可以加入有條件隱藏的文字方塊，以便顯示暫時運算式結果。 當報表顯示非預期的資料時，您就可以顯示這些暫時結果來協助偵錯運算式。  
   
--   在 Tablix 資料格或矩形中使用巢狀項目時，您可以針對容器和包含的項目設定不同的背景色彩。 依預設，背景色彩為 **[無色彩]**。 具有特定背景色彩的項目會穿透背景色彩設定為 **[無色彩]**的項目而顯示。 這種技巧可協助您選取正確的項目來設定顯示屬性，例如 Tablix 資料格上的框線可見性。  
+-   在 Tablix 資料格或矩形中使用巢狀項目時，您可以針對容器和包含的項目設定不同的背景色彩。 依預設，背景色彩為 **[無色彩]**。 具有特定背景色彩的項目會穿透背景色彩設定為 **[無色彩]** 的項目而顯示。 這種技巧可協助您選取正確的項目來設定顯示屬性，例如 Tablix 資料格上的框線可見性。  
   
  如需設計報表時應考慮之事項的詳細資訊，請參閱[規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
   

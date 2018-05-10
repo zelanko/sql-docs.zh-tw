@@ -3,15 +3,12 @@ title: 設定 recovery interval 伺服器組態選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring recovery interval [SQL Server]
 - checkpoints [SQL Server]
@@ -26,12 +23,11 @@ caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 02f5d23de260516e09cdca66db2ede49d35f5b10
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e6d64f240f0840eb3a21072f1a70dadce24b4b56
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>設定 recovery interval 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  按一下 **[資料庫設定]** 節點。  
   
-3.  於 **[復原間隔 (分鐘)]**方塊的 **[復原]** 下，輸入或選取介於 0 到 32767 之間的任一數值 (以分鐘為單位)，設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時，回復每個資料庫所花費的時間上限。 預設值是 0，指出由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動組態。 實務上，這表示復原時間小於一分鐘，而且使用中資料庫幾乎每分鐘有一次檢查點。  
+3.  於 **[復原間隔 (分鐘)]** 方塊的 **[復原]** 下，輸入或選取介於 0 到 32767 之間的任一數值 (以分鐘為單位)，設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時，回復每個資料庫所花費的時間上限。 預設值是 0，指出由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動組態。 實務上，這表示復原時間小於一分鐘，而且使用中資料庫幾乎每分鐘有一次檢查點。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

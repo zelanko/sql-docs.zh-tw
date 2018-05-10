@@ -15,7 +15,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f195a7877a93cba53cab77a3d3b8726bee29666
 ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -23,11 +23,11 @@ ms.lasthandoff: 05/03/2018
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
-下載並安裝最新版本中，*年 4 月公用預覽*:
+下載並安裝最新版本，*4 月公用預覽*:
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-|視窗|[安裝程式](https://go.microsoft.com/fwlink/?linkid=872717)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=872718)|2018 年 4 月 25 日 |0.28.6|
+|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=872717)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=872718)|2018 年 4 月 25 日 |0.28.6|
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=872719)|2018 年 4 月 25 日 |0.28.6|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=872722)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=872721)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=872720)|2018 年 4 月 25 日 |0.28.6|
 
@@ -136,8 +136,8 @@ ms.lasthandoff: 05/03/2018
 - Windows Server 2008 R2 (64 位元)
 
 ### <a name="macos"></a>macOS
-- macOS 10.13 高利也
-- macOS 10.12 利也
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
 - Red Hat Enterprise Linux 7.4

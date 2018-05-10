@@ -3,15 +3,12 @@ title: 備份資料庫 (一般頁面) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
@@ -19,12 +16,11 @@ caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: aaccb17dbf576074ac482092ae0ab4a2216f8ddd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1715f116d875a0037a926ab36900e52701b7bf98
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +78,7 @@ ms.lasthandoff: 04/16/2018
 |||  
 |-|-|  
 |**[資料庫備份]**|指定備份整個資料庫。|  
-|**檔案與檔案群組**|指定備份指定的檔案和 (或) 檔案群組。<br /><br /> 選取這個選項會開啟 **[選取檔案與檔案群組]** 對話方塊。 在選取了要備份的檔案群組或檔案，並按一下 **[確定]**之後，選取項目就會出現在 **[檔案群組與檔案]** 方塊中。|  
+|**檔案與檔案群組**|指定備份指定的檔案和 (或) 檔案群組。<br /><br /> 選取這個選項會開啟 **[選取檔案與檔案群組]** 對話方塊。 在選取了要備份的檔案群組或檔案，並按一下 **[確定]** 之後，選取項目就會出現在 **[檔案群組與檔案]** 方塊中。|  
   
 ### <a name="destination"></a>目的地  
  **[目的地]** 面板的選項可讓您指定備份作業的備份裝置類型，並尋找現有的邏輯或實體備份裝置。  

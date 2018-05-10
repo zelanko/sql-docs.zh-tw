@@ -9,16 +9,15 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbabb96b46a7054ed22daf034413df05c903e553
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
-ms.translationtype: HT
+ms.openlocfilehash: 93dd73b9ba77e45f284062e8a768c3f035bcac1b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-and-workspace-settings"></a>使用者和工作區設定
 

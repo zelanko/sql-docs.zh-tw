@@ -3,15 +3,12 @@ title: SQL Server 使用意見收集的本機稽核 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
@@ -19,12 +16,11 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f69dfadfb4de412794beba72f69b22fdc8a39287
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2600f74d31b7daa6587575cdaf070417956f8817
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用意見收集的本機稽核
 
@@ -66,7 +62,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
  
 1. 啟動**服務** - 按一下 [Windows] 按鈕並輸入 [services.msc]。 
 
-2. 瀏覽至適當的服務。 例如，若為 Database Engine，便找出 **SQL Server CEIP 服務 \<執行個體名稱\>**建立機碼。 若為 Analysis Services，找出 **SQL Server Analysis Services CEIP \<執行個體名稱\>**。 若為 Integration Services，則請找出 **SQL Server Integration Services 服務 13**。
+2. 瀏覽至適當的服務。 例如，若為 Database Engine，便找出 **SQL Server CEIP 服務 \<執行個體名稱\>** 建立機碼。 若為 Analysis Services，找出 **SQL Server Analysis Services CEIP \<執行個體名稱\>**。 若為 Integration Services，則請找出 **SQL Server Integration Services 服務 13**。
 
 3. 以滑鼠右鍵按一下服務並選擇 [屬性]。 
 

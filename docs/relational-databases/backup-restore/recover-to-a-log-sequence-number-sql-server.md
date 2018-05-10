@@ -3,15 +3,12 @@ title: 復原到記錄序號 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log sequence numbers [SQL Server]
 - STOPBEFOREMARK option [RESTORE statement]
@@ -28,12 +25,11 @@ caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a4f7bf02ef09eb623afc88d4c36da3cbc31056d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 441daeb74bcc141c148edef396b04bf75aff3f0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>復原到記錄序號 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,11 +67,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>還原至 LSN 所用的 Transact-SQL 語法  
  使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式，您可以在 LSN 上或剛好就在它之前停止，如下所述：  
   
--   使用 WITH STOPATMARK **='**lsn:*<lsn_number>***'** 子句，其中 lsn:*\<lsnNumber>* 是會指定包含所指定的 LSN 的記錄檔記錄為復原點的字串。  
+-   使用 WITH STOPATMARK **='** lsn:*<lsn_number>***'** 子句，其中 lsn:*\<lsnNumber>* 是會指定包含所指定的 LSN 的記錄檔記錄為復原點的字串。  
   
      STOPATMARK 會向前復原到 LSN，並且將該筆記錄納入向前復原中。  
   
--   使用 WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'** 子句，其中 lsn:*\<lsnNumber>* 是會指定緊接在包含指定的 LSN 號碼的記錄檔記錄之前的記錄檔記錄為復原點的字串。  
+-   使用 WITH STOPBEFOREMARK **='** lsn:*<lsn_number>***'** 子句，其中 lsn:*\<lsnNumber>* 是會指定緊接在包含指定的 LSN 號碼的記錄檔記錄之前的記錄檔記錄為復原點的字串。  
   
      STOPBEFOREMARK 會向前復原到 LSN，並且從向前復原中排除該筆記錄。  
   

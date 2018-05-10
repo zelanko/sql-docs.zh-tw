@@ -3,15 +3,12 @@ title: SQL Server 2016 Express LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user instances
 - LocalDB, described
@@ -23,12 +20,11 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 40ae45c73e45cc9ee040b4d6fadd4469f9f0c3be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +85,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 是 [SQL Server Express](https://m
 ## <a name="starting-localdb-and-connecting-to-localdb"></a>啟動 LocalDB 以及連接到 LocalDB  
   
 ### <a name="connecting-to-the-automatic-instance"></a>連接到自動執行個體  
- 使用 **LocalDB** 最簡單的方式是透過連接字串 **"Server=(localdb)\MSSQLLocalDB;Integrated Security=true"**連接到目前使用者所擁有的自動執行個體。 若要使用檔案名稱來連接到特定的資料庫，請使用類似於 **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf"**的連接字串進行連接。  
+ 使用 **LocalDB** 最簡單的方式是透過連接字串 **"Server=(localdb)\MSSQLLocalDB;Integrated Security=true"** 連接到目前使用者所擁有的自動執行個體。 若要使用檔案名稱來連接到特定的資料庫，請使用類似於 **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf"** 的連接字串進行連接。  
   
 > [!NOTE]  
 >  電腦使用者初次嘗試連接至 **LocalDB**時，自動執行個體必須已建立及啟動。 建立執行個體所需的額外時間可能會導致連接嘗試失敗並顯示逾時訊息。 發生這種情況時，請等候幾秒鐘，讓建立程序完成，然後再重新連接。  

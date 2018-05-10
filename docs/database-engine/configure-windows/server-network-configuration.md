@@ -3,15 +3,12 @@ title: 伺服器網路組態 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
 - connections [SQL Server], server network configuration
@@ -25,12 +22,11 @@ caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 72b4b52a2977bf5770c9e8a11e5e27fc32ab0396
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 43467af34ad8e6fde2fc8874ace1e6f7f2fa17e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-network-configuration"></a>伺服器網路組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.lasthandoff: 04/16/2018
  設定為動態通訊埠時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次啟動時可能會變更所使用的通訊埠。 透過防火牆連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，您必須開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的通訊埠。 請設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用特定的通訊埠，讓您可以設定防火牆來允許對伺服器的通訊。 如需詳細資訊，請參閱[設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
 ### <a name="changing-a-named-pipe"></a>變更具名管道  
- 您可以設定具名管道通訊協定來接聽指定的具名管道。 依預設，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的預設執行個體會接聽管道 \\\\.\pipe\sql\query (對於預設執行個體) 和 \\\\.\pipe\MSSQL$*\<執行個體名稱>*\sql\query (對於具名執行個體)。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只能接聽一個具名管道，但您可以視需要將該管道變更為其他名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務可協助用戶端識別所連接的管道。 如需詳細資訊，請參閱[設定接聽替代管道的伺服器 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)。  
+ 您可以設定具名管道通訊協定來接聽指定的具名管道。 依預設，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的預設執行個體會接聽管道 \\\\.\pipe\sql\query (對於預設執行個體) 和 \\\\.\pipe\MSSQL$*\<執行個體名稱>* \sql\query (對於具名執行個體)。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只能接聽一個具名管道，但您可以視需要將該管道變更為其他名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務可協助用戶端識別所連接的管道。 如需詳細資訊，請參閱[設定接聽替代管道的伺服器 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)。  
   
 ## <a name="force-encryption"></a>強制加密  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以設定為和用戶端應用程式通訊時需要加密。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  

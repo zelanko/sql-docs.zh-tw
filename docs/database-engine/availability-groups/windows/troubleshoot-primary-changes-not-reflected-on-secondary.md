@@ -2,23 +2,22 @@
 title: 疑難排解：對主要複本的變更未反映在次要複本上 (Always On 可用性群組 - SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 06/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 caps.latest.revision: 9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f700fc08614bb9c63579eaff16244723d257f349
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2d5d93ccd17abadaf702316fbad2a382ebc6495
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-changes-on-the-primary-replica-are-not-reflected-on-the-secondary-replica"></a>疑難排解：對主要複本的變更未反映在次要複本上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

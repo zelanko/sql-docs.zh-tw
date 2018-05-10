@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.addcopyexistingpackage.f1
 helpviewer_keywords:
@@ -21,12 +20,11 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8077138dddd7b6c9e366fce4cf91d47cd3530710
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 9d717a87c0b031fa072bf6a0060c80e93a9b3239
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-copy-of-existing-package"></a>加入現有封裝的副本
   使用 **[加入現有封裝的副本]** 對話方塊，即可將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、檔案系統，或 SSIS 封裝存放區中所儲存之封裝的副本，加入至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  

@@ -1,16 +1,15 @@
 ---
-title: "將快照集新增至報表記錄 (報表管理員) | Microsoft Docs"
-ms.custom: 
+title: 將快照集新增至報表記錄 (報表管理員) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], adding snapshots
 - historical data [Reporting Services]
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - adding snapshots to report history
 - report snapshots [Reporting Services], adding
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77af3abf53f81bf7dd85ec763981ef177f27e72c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3cf4f07b6070cc0cc0dc364292a285c51f9e2787
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>將快照集加入報表記錄 (報表管理員)
   報表記錄是您在經過一段時間後建立之報表快照集的集合。 報表快照集是一種報表，它包含在特定時間點擷取的配置資訊和查詢結果。 報表快照集和視需要報表不同，視需要報表會在您選取報表時取得最新的查詢結果，而報表快照集是依排程處理，並儲存至報表伺服器。 您選取報表快照集以供檢視時，報表伺服器會從報表伺服器資料庫擷取儲存的報表，並顯示建立快照集當時的資料與配置。  
@@ -57,7 +55,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  按一下 **[快照集選項]**。  
   
-5.  選取 **[將所有報表執行快照集儲存在記錄中]**的核取方塊。  
+5.  選取 **[將所有報表執行快照集儲存在記錄中]** 的核取方塊。  
   
 6.  按一下 **[套用]**。  
   
@@ -69,7 +67,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  按一下 **[快照集選項]**。  
   
-4.  選取 **[使用下列排程將快照集加入至報表記錄]**的核取方塊。 執行下列其中之一：  
+4.  選取 **[使用下列排程將快照集加入至報表記錄]** 的核取方塊。 執行下列其中之一：  
   
     -   選取 [報表特定排程]。 填入排程詳細資料，選取排程的開始和結束日期，然後按一下 **[確定]**。  
   

@@ -3,15 +3,12 @@ title: 設定 media retention 伺服器組態選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup retention duration [SQL Server]
 - backup sets [SQL Server], retention duration
@@ -21,12 +18,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 54fa0bee65e8dff4b0d709651259830e143fe2f6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1542361217e54fa1fb7a5826c79e9c173bde3756
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>設定 media retention 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +72,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  按一下 **[資料庫設定]** 節點。  
   
-3.  在 **[備份/還原]**的 **[預設備份媒體保留]** 方塊中，輸入或選取 0 到 365 間的任一數值，以設定進行資料庫或交易記錄備份之後，備份媒體的保留天數。  
+3.  在 **[備份/還原]** 的 **[預設備份媒體保留]** 方塊中，輸入或選取 0 到 365 間的任一數值，以設定進行資料庫或交易記錄備份之後，備份媒體的保留天數。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

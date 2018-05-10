@@ -1,27 +1,25 @@
 ---
-title: "在資料區中排序資料 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 在資料區中排序資料 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1da42cb79882fc496f8c02a219746861199e62a9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 642d8f6d08c21daa478bbc159b2fe71461ba0391
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>在資料區中排序資料 (報表產生器及 SSRS)
   若要在資料區域中變更報表第一次執行時資料的排序次序，您必須針對資料區域或群組設定排序運算式。 根據預設，群組的排序運算式會自動設定為與群組運算式相同的值。  
@@ -83,7 +81,7 @@ ms.lasthandoff: 01/09/2018
   
     1.  按一下 **[加入]**。  
   
-    2.  選取符合您群組欄位的運算式。 您可以按一下 **[群組]**來驗證群組欄位的運算式。  
+    2.  選取符合您群組欄位的運算式。 您可以按一下 **[群組]** 來驗證群組欄位的運算式。  
   
     3.  從 **Order** 資料行下拉式清單中，選擇每個運算式的排序方向。 [A-Z] 會以字母的遞增順序排序運算式。 [Z-A] 會以字母的遞減順序排序運算式。  
   
@@ -111,9 +109,9 @@ ms.lasthandoff: 01/09/2018
   
 2.  必要時，在 [量測計面板群組屬性] 對話方塊中，按一下 [一般]。  
   
-3.  在 **[群組運算式]**中，按一下 **[加入]**。  
+3.  在 **[群組運算式]** 中，按一下 **[加入]**。  
   
-4.  在 **[群組對象]**中，輸入或選取用來分組資料的運算式。  
+4.  在 **[群組對象]** 中，輸入或選取用來分組資料的運算式。  
   
 5.  重複步驟 3 和 4，直到加入您要使用的所有群組運算式為止。  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 01/09/2018
   
     1.  按一下 **[加入]**。  
   
-    2.  選取符合您群組欄位的運算式。 您可以按一下 **[群組]**來驗證群組欄位的運算式。  
+    2.  選取符合您群組欄位的運算式。 您可以按一下 **[群組]** 來驗證群組欄位的運算式。  
   
     3.  從 **Order** 資料行下拉式清單中，選擇每個運算式的排序方向。 **A-Z** 會以遞增順序排序運算式。 **Z-A** 會以遞減順序排序運算式。  
   

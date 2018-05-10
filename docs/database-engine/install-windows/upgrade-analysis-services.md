@@ -3,14 +3,12 @@ title: 升級 Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [Analysis Services], upgrading
@@ -26,11 +24,11 @@ caps.latest.revision: 79
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 1b3c0f95c9456d84d1a17af5cbe7ccf5431693f5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a337d1d86133c2ff441afa17c65ce783273fc3d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
 

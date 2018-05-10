@@ -1,25 +1,23 @@
 ---
-title: "Reporting Services SharePoint 服務和服務應用程式 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services SharePoint 服務和服務應用程式 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d9eb45bb1f33cb781907e8c2c39fc9a9b2b4e524
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d1db1758c979ae3582d562c47690e12af72171cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服務和服務應用程式
 
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>修改服務應用程式與 Proxy 群組的關聯
 
- 建立服務應用程式的 [新增] 頁面包含 **[Web 應用程式關聯]**區段。 此區段可讓您在建立服務應用程式時產生關聯。 使用下列步驟變更關聯並將客戶組態指派至服務應用程式。 您也可以使用相同的一般程序將 Proxy 加入至預設群組，而不是將服務應用程式的關聯變更為自訂群組。  
+ 建立服務應用程式的 [新增] 頁面包含 **[Web 應用程式關聯]** 區段。 此區段可讓您在建立服務應用程式時產生關聯。 使用下列步驟變更關聯並將客戶組態指派至服務應用程式。 您也可以使用相同的一般程序將 Proxy 加入至預設群組，而不是將服務應用程式的關聯變更為自訂群組。  
   
 1.  在 [SharePoint 管理中心] 的 [應用程式管理] 中，按一下 **[設定服務應用程式關聯]**。  
   

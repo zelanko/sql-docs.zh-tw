@@ -1,25 +1,23 @@
 ---
-title: "在 SharePoint 啟動報表伺服器檔案同步處理功能 | Microsoft Docs"
-ms.custom: 
+title: 在 SharePoint 啟動報表伺服器檔案同步處理功能 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f441444beb07b700910a00c3e64ac3db81da217e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0ee22d38c2b15a8b2527d2c83be447133aba82f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>在 SharePoint 啟動報表伺服器檔案同步處理功能
 
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/09/2018
 
  必須安裝適用於 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集。 如果未安裝此增益集，網站功能清單中將不會顯示檔案同步處理功能。  
   
- 若要確認安裝，請檢視在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows **[控制台]**中已安裝應用程式的清單。 如果已安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集，請遵循本主題的指示來啟用報表伺服器同步處理功能。  
+ 若要確認安裝，請檢視在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows **[控制台]** 中已安裝應用程式的清單。 如果已安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集，請遵循本主題的指示來啟用報表伺服器同步處理功能。  
   
 ### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>在網站上啟用或停用報表伺服器檔案同步處理功能
   

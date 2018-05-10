@@ -1,27 +1,25 @@
 ---
-title: "設定文字方塊方向 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 設定文字方塊方向 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9635769283ed34f997b0a16b4240e69ae37d3709
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: bf2588b4e5c958a15eefd0c8745489005799a842
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>設定文字方塊方向 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，您可以將文字方塊旋轉到不同方向︰   
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
     > [!NOTE]  
     >  當 [屬性] 窗格中的屬性組織成類別目錄時，WritingMode 會位於 [當地語系化] 類別目錄中。  
   
-5.  在清單方塊中，選取 **[Horizontal]**、 **[Vertical]**或 **[Rotate270]**。  
+5.  在清單方塊中，選取 **[Horizontal]**、 **[Vertical]** 或 **[Rotate270]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [文字方塊 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   

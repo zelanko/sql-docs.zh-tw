@@ -1,33 +1,32 @@
 ---
-title: "識別執行狀態 | Microsoft Docs"
-ms.custom: 
+title: 識別執行狀態 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service-net-framework-soap-headers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b3d94c2de26ebdb1256812b4aad40f8a2c1f1653
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8982468d41b93dd669005011e22d2765d06b0083
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-execution-state"></a>識別執行狀態
   超文字傳輸協定 (HTTP) 是一種無連接且沒有狀態 (Stateless) 的通訊協定，也就是說它不會自動指出不同的要求是否全都來自相同的用戶端，也不會自動指出某個特定瀏覽器執行個體是否仍在主動檢視網頁或網站。 工作階段會建立邏輯連接以透過 HTTP 維護伺服器與用戶端之間的狀態。 與特定工作階段相關的使用者特定資訊又稱為工作階段狀態。  

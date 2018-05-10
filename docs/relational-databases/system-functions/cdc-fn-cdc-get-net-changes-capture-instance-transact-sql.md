@@ -21,11 +21,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27ad3ba5560be3fa547975d0d86099b3f4ab1450
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: d4f66b0608afcfa883f4e12d0e3dfe39e8bf7512
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。 若為所有其他使用者，則需要來源資料表中所有擷取資料行的 SELECT 權限，而且如果定義了擷取執行個體的控制角色，便需要該資料庫角色的成員資格。 當呼叫端沒有檢視來源資料的權限時，此函數就會傳回錯誤 208 (無效的物件名稱)。  
   
 ## <a name="remarks"></a>備註  
- 如果指定的 LSN 範圍不在擷取執行個體的變更追蹤時間表內，此函數就會傳回錯誤 208 (無效的物件名稱)。  
+ 如果指定的 LSN 範圍不在擷取執行個體的變更追蹤時間表內，此函數就會傳回錯誤 208 (無效的物件名稱)。
+
+ 資料列的唯一識別項修改會導致 fn_cdc_get_net_changes 顯示初始更新命令以刪除，然後改為插入命令。  若要追蹤的索引鍵，同時變更之前和之後必須這種行為。
   
 ## <a name="examples"></a>範例  
  下列範例使用函式`cdc.fn_cdc_get_net_changes_HR_Department`報告對來源資料表所做的淨變更`HumanResources.Department`期間特定時間間隔。  

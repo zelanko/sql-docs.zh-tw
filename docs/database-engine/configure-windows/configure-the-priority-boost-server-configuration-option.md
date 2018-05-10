@@ -3,15 +3,12 @@ title: 設定 priority boost 伺服器組態選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - priority boost option
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
@@ -19,12 +16,11 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 993f47ac87af3be8dfbbda4d26941a0fbcb1a657
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 11e36e7d1a4bdb1492bb978d0334604e941f2458
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>設定 priority boost 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +65,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  按一下 **[處理器]** 節點。  
   
-3.  在 **[執行緒]**下，選取 **[提高 SQL Server 優先權]** 核取方塊。  
+3.  在 **[執行緒]** 下，選取 **[提高 SQL Server 優先權]** 核取方塊。  
   
 4.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並重新啟動。  
   

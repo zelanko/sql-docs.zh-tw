@@ -3,15 +3,12 @@ title: 開啟 ODBC 資料來源管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/07/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC Data Source Administrator
 - opening ODBC Data Source Administrator
@@ -20,12 +17,11 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 7e133f5fd5239cd18aa4328f32f3dc91516456f5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cd3fe488c2ae6bff1b94a11996bc67a88fd72691
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>開啟 ODBC 資料來源管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +39,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  在 **[開始]** 功能表上，按一下 **[控制台]**。  
   
-2.  在 **[控制台]**中，按一下 **[系統管理工具]**。  
+2.  在 **[控制台]** 中，按一下 **[系統管理工具]**。  
   
 3.  在 [系統管理工具] 中，按一下 [資料來源 (ODBC)]。  
 

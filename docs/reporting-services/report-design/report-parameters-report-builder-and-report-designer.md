@@ -1,16 +1,15 @@
 ---
-title: "報表參數 (報表產生器和報表設計師) | Microsoft Docs"
-ms.custom: 
+title: 報表參數 (報表產生器和報表設計師) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
 - sql13.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -19,16 +18,15 @@ f1_keywords:
 - "10073"
 - "10070"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
   本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 和報表設計師中建立的分頁報表中，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
@@ -152,7 +150,7 @@ ms.lasthandoff: 01/09/2018
 |資料類型|報表參數的資料類型必須是下列其中一種：<br /><br /> **布林**。 使用者會從選項按鈕中選取 True 或 False。<br /><br /> **日期時間**： 使用者會從日曆控制項中選取日期。<br /><br /> **整數**： 使用者會在文字方塊中輸入值。<br /><br /> **浮點數**： 使用者會在文字方塊中輸入值。<br /><br /> **文字**： 使用者會在文字方塊中輸入值。<br /><br /> 請注意，針對某個參數定義了可用的值之後，使用者就可以從下拉式清單中選擇值，即使資料類型是 **DateTime**也一樣。<br /><br /> 如需有關報表資料類型的詳細資訊，請參閱＜ [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)＞。|  
 |允許空白值|如果參數值可為空字串或空白，則選取此選項。<br /><br /> 如果您為參數指定有效值，而且希望空白值是其中一個有效值，則必須將它納入做為您指定的其中一個有效值。 選取此選項並不會自動將空白納入做為可用的值。|  
 |允許 null 值|如果參數值可為 null，則選取此選項。<br /><br /> 如果您為參數指定有效值，而且希望 null 是其中一個有效值，則必須將 null 納入做為您指定的其中一個有效值。 選取此選項並不會自動將 null 納入做為可用的值。|  
-|允許多個值|提供可用的值，建立可供使用者選擇的下拉式清單。 這是確保資料集查詢中只會提交有效值的好方法。<br /><br /> 如果參數值可以是顯示在下拉式清單中的多個值，則選取此選項。 不允許 Null 值。 選取此選項時，系統會將核取方塊加入到參數下拉式清單內可用值的清單中。 清單的頂端包含 **[全選]**核取方塊。 使用者可以檢查想要的值。<br /><br /> 如果提供值的資料迅速改變，則使用者看見的清單可能不是最新的。|  
+|允許多個值|提供可用的值，建立可供使用者選擇的下拉式清單。 這是確保資料集查詢中只會提交有效值的好方法。<br /><br /> 如果參數值可以是顯示在下拉式清單中的多個值，則選取此選項。 不允許 Null 值。 選取此選項時，系統會將核取方塊加入到參數下拉式清單內可用值的清單中。 清單的頂端包含 **[全選]** 核取方塊。 使用者可以檢查想要的值。<br /><br /> 如果提供值的資料迅速改變，則使用者看見的清單可能不是最新的。|  
 |Visible|選取此選項可顯示報表執行時，位於報表頂端的報表參數。 此選項可讓使用者在執行階段選取參數值。|  
 |Hidden|選取此選項來隱藏已發行報表中的報表參數。 您仍然可以在報表 URL、訂閱定義或報表伺服器上設定報表參數值。|  
 |內部|選取此選項來隱藏報表參數。 已發行報表中的報表參數只能在報表定義中檢視。|  
