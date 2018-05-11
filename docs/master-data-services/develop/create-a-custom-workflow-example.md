@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.service: ''
 ms.component: develop
 ms.reviewer: ''
 ms.suite: sql
@@ -18,12 +17,11 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ded7eed0aae613af59b4eea7b2bc4e892607bc54
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 4d7f5e1e4ab34f066ce0f0db8d42d01d9c6da662
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-custom-workflow---example"></a>建立自訂工作流程 - 範例
 

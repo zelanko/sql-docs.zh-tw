@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: douglasl
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 18
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a3f1fd830bf81f9110f40e4623e49fb64356fc76
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9bbd4dd23c4c536fa70f679ceabf6d96ddde121c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
