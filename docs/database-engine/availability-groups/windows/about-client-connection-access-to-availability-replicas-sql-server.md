@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
  僅讀取意圖連接  
  次要資料庫僅適用於其 **Application Intent** 連接屬性設為 **ReadOnly** 的連接 (「讀取意圖連接」)。  
   
- 如需有關此連接屬性的詳細資訊，請參閱＜ [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)＞。  
+ 如需有關此連接屬性的詳細資訊，請參閱＜ [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)＞。  
   
  允許任何唯讀連接  
  次要資料庫全部適用於讀取連接。 此選項允許較低版本的用戶端進行連接。  
