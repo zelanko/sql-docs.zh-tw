@@ -121,7 +121,7 @@ ms.lasthandoff: 05/03/2018
   
  若要控制圖例顯示的位置，使用 [圖例屬性] 對話方塊來指定相對於地圖檢視區的位置。 如需詳細資訊，請參閱 [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
- 圖例會自動展開來顯示圖例標題或圖例文字。 若要格式化圖例項目的文字，使用地圖圖例關鍵字與自訂格式。 如需相關資訊，請參閱 [To change the format of content in a legend](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems)。  
+ 圖例會自動展開來顯示圖例標題或圖例文字。 若要格式化圖例項目的文字，使用地圖圖例關鍵字與自訂格式。 如需相關資訊，請參閱 [變更圖例中的內容格式](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems)。  
   
  下表顯示您可以使用之不同格式的範例。  
   
